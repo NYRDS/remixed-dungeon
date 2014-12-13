@@ -1,9 +1,11 @@
+Russian translation of Pixel dungeon
+
 Translating Pixel Dungeon
 =============
 
 > **It was a great mission, but with much effort, all texts, phrases, words and other strings were copied all the source code of the game and grouped into a single file. The ```string.xml``` file.**
 
-By grouping all the strings of the game, it becomes possible to take advantage of translation support android as described in [Andoid Guide](http://developer.android.com/training/basics/supporting-devices/languages.html).
+By grouping all the strings of the game, it becomes possible to take advantage of translation support android as described in [Android Guide](http://developer.android.com/training/basics/supporting-devices/languages.html).
 
 #####To translate the game you simply do the following:
 
