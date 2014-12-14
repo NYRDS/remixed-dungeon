@@ -22,7 +22,7 @@ import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;

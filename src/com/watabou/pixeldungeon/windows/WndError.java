@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ui.Icons;
 
 public class WndError extends WndTitledMessage {

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 
 public class RingOfSatiety extends Ring {
 	{

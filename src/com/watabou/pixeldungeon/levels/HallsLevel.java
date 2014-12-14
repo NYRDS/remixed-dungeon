@@ -28,7 +28,7 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;

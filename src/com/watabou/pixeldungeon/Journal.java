@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import java.util.ArrayList;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
