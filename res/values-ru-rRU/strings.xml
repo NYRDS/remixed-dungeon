@@ -82,7 +82,7 @@
    <string name="Char_YouMissed">%1$s %2$s your attack</string>
    <string name="Char_SmbMissed">%1$s %2$s %3$s\'s attack</string>
    <string name="Char_OutParalysis">Боль пробудила %s от паралича</string>
-   <string name="Char_StaDodged">уклонился</string>
+   <string name="Char_StaDodged">уклонился от</string>
    <string name="Char_StaPoisoned">отравлен</string>
    <string name="Char_StaAmok">amok</string>
    <string name="Char_StaSlowed">замедлен</string>
@@ -102,7 +102,7 @@
    <string name="Hero_Leave">Нельзя просто так взять и выйти из Pixel Dungeon.</string>
    <string name="Hero_LevelUp">новый уровень!</string>
    <string name="Hero_NewLevel">Добро пожаловать на уровень %d! Теперь ты здоровее и сосредоточенее. Тебе стало проще попадать по врагам и уклоняться от их атак.</string>
-   <string name="Hero_YouNowHave">Теперь у тебя %s</string>
+   <string name="Hero_YouNowHave">Теперь у тебя есть %s</string>
    <string name="Hero_SomethingElse">Здесь есть что-то ещё</string>
    <string name="Hero_LockedChest">Сундук закрыт и у тебя нету верного ключа</string>
    <string name="Hero_LockedDoor">У тебя нету верного ключа</string>
@@ -117,7 +117,7 @@
    <string name="Hero_StaWeakness">Ты ослаб!</string>
    <string name="Hero_StaBlindness">Тебя ослепили!</string>
    <string name="Hero_StaFury">Ты впал в ярость!</string>
-   <string name="Hero_StaFurious">ярость</string>
+   <string name="Hero_StaFurious">яростный</string>
    <string name="Hero_StaCharm">Ты зачарован!</string>
    <string name="Hero_StaCripple">Ты получил травму!</string>
    <string name="Hero_StaBleeding">У тебя кровотечение!</string>
@@ -137,7 +137,7 @@
        <item >Зелья Силы распознаны с самого начала.</item>
    </string-array>
    <string-array name="HeroClass_MagPerks">
-       <item >Маги начинают с уникальной Палочкой Волшебных Снарядов. Которую в дальнейшем можно \"переколдовать\" для улучшения другой палочки.</item>
+       <item >Маги начинают с уникальной Палочкой Волшебных Снарядов. Которую в дальнейшем можно \"расколдовать\" для улучшения другой палочки.</item>
        <item >Маги быстрее восполняют заряды палочек.</item>
        <item >Во время еды, любая пища востонавливает 1 заряд для каждой палочки в инвентаре.</item>
        <item >Маги могут использовать палочки в ближнем бою.</item>
@@ -724,10 +724,10 @@
 
    <!--  STRINGS OF WarriorArmor CLASS  -->
    <string name="WarriorArmor_Name">боевой доспех</string>
-   <string name="WarriorArmor_Desc">Не смотря на кажущуюся тяжесть, эта броня позволяет воину осуществлять скачок в указанное место, оглушая ближайший врагов ударной волной.</string>
-   <string name="WarriorArmor_ACSpecial">БОГАТЫРСКИЙ СКАЧОК</string>
+   <string name="WarriorArmor_Desc">Не смотря на кажущуюся тяжесть, эта броня позволяет воину осуществлять рывок в указанное место, оглушая ближайший врагов ударной волной.</string>
+   <string name="WarriorArmor_ACSpecial">БОГАТЫРСКИЙ РЫВОК</string>
    <string name="WarriorArmor_NotWarrior">Этот доспех доступен лишь воину!</string>
-   <string name="WarriorArmor_Prompt">Выбери направлеие скачка</string>
+   <string name="WarriorArmor_Prompt">Выбери направлеие рывка</string>
 
 
 <!--  PACKAGE /armor/Gyphs  -->
@@ -1135,208 +1135,208 @@
 
 
    <!--  STRINGS OF ScrollOfTeleportation CLASS  -->
-   <string name="ScrollOfTeleportation_Name">Scroll of Teleportation</string>
-   <string name="ScrollOfTeleportation_Info">The spell on this parchment instantly transports the reader to a random location on the dungeon level. It can be used to escape a dangerous situation, but the unlucky reader might find himself in an even more dangerous place.</string>
-   <string name="ScrollOfTeleportation_Teleport">In a blink of an eye you were teleported to another location of the level.</string>
-   <string name="ScrollOfTeleportation_NoTeleport">Strong magic aura of this place prevents you from teleporting!</string>
+   <string name="ScrollOfTeleportation_Name">Свиток Телепортации</string>
+   <string name="ScrollOfTeleportation_Info">Этот свиток перенесёт заклинателя в случайную точку текущего уровня. Это может помочь сбежать из опасных ситуаций, хотя невезение может привести в место и похуже.</string>
+   <string name="ScrollOfTeleportation_Teleport">В мгновение ока, ты переместился в другую область уровня.</string>
+   <string name="ScrollOfTeleportation_NoTeleport">Могучая магическая аура этого места не позволяет тебе телепортироваться!</string>
 
 
    <!--  STRINGS OF ScrollOfTerror CLASS  -->
-   <string name="ScrollOfTerror_Name">Scroll of Terror</string>
-   <string name="ScrollOfTerror_Info">A flash of red light will overwhelm all creatures in your field of view with terror, and they will turn and flee. Attacking a fleeing enemy will dispel the effect.</string>
-   <string name="ScrollOfTerror_Info1">The scroll emits a brilliant flash of red light</string>
-   <string name="ScrollOfTerror_Info2">The scroll emits a brilliant flash of red light and the %s flees!</string>
-   <string name="ScrollOfTerror_Info3">The scroll emits a brilliant flash of red light and the monsters flee!</string>
+   <string name="ScrollOfTerror_Name">Свиток Ужаса</string>
+   <string name="ScrollOfTerror_Info">Красная вспышка повергнет всех видимых сущевств в ужас, обращая их в бегство. Атакуя убегающего врага ты снимешь с него заклятие.</string>
+   <string name="ScrollOfTerror_Info1">Свиток испускает яркую вспышку красного света</string>
+   <string name="ScrollOfTerror_Info2">Свиток испускает яркую вспышку красного света и %s спасается бегством!</string>
+   <string name="ScrollOfTerror_Info3">Свиток испускает яркую вспышку красного света и монстры спасаются бегством!</string>
 
 
    <!--  STRINGS OF ScrollOfUpgrade CLASS  -->
-   <string name="ScrollOfUpgrade_Name">Scroll of Upgrade</string>
-   <string name="ScrollOfUpgrade_Info">This scroll will upgrade a single item, improving its quality. A wand will increase in power and in number of charges; a weapon will inflict more damage or find its mark more frequently; a suit of armor will deflect additional blows; the effect of a ring on its wearer will intensify. Weapons and armor will also require less strength to use, and any curses on the item will be lifted.</string>
-   <string name="ScrollOfUpgrade_InvTitle">Select an item to upgrade</string>
-   <string name="ScrollOfUpgrade_LooksBetter">your %s certainly looks better now</string>
+   <string name="ScrollOfUpgrade_Name">Свиток Улучшения</string>
+   <string name="ScrollOfUpgrade_Info">Этот свиток улучшить единственную вещь, повышая её качество. Сила и ёмкость палочки возрастёт; ружие получит больший урон или увеличит меткость; броня получит большую защиту; возможности кольца возрастут. Оружие и броня, также, потребуют меньше силы для использования, а любой проклятый предмет будет очищен.</string>
+   <string name="ScrollOfUpgrade_InvTitle">Выбери предмет для улучшения</string>
+   <string name="ScrollOfUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
 
 
    <!--  STRINGS OF ScrollOfWeaponUpgrade CLASS  -->
-   <string name="ScrollOfWeaponUpgrade_Name">Scroll of Weapon Upgrade</string>
-   <string name="ScrollOfWeaponUpgrade_Info">This scroll will upgrade a melee weapon, improving its quality. In contrast to a regular Scroll of Upgrade, this specialized version will never destroy an enchantment on a weapon. On the contrary, it is able to imbue an unenchanted weapon with a random enchantment.</string>
-   <string name="ScrollOfWeaponUpgrade_InvTitle">Select an weapon to upgrade</string>
-   <string name="ScrollOfWeaponUpgrade_LooksBetter">your %s certainly looks better now</string>
+   <string name="ScrollOfWeaponUpgrade_Name">Свиток Улучшения Оружия</string>
+   <string name="ScrollOfWeaponUpgrade_Info">Этот свиток улучшить оружие ближнего боя, повысив его качество. В отличии от простого Свитка Улучшения, эта версия не разрушит чары наложенные на предмет. Даже наоборот, он сможет наделить случайным эффектом незачарованный предмет.</string>
+   <string name="ScrollOfWeaponUpgrade_InvTitle">Выбери предмет для улучшения</string>
+   <string name="ScrollOfWeaponUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
 
 
 <!--  PACKAGE /items/Wands  -->
    <!--  STRINGS OF Wand CLASS  -->
-   <string name="Wand_Name">%s wand</string>
-   <string name="Wand_ACZap">ZAP</string>
-   <string name="Wand_Wood">This thin %s wand is warm to the touch. Who knows what it will do when used?</string>
-   <string name="Wand_Damage">When this wand is used as a melee weapon, its average damage is %d points per hit.</string>
-   <string name="Wand_Weapon">You can use this wand as a melee weapon.</string>
-   <string name="Wand_Fizzles">your wand fizzles; it must be out of charges for now</string>
-   <string name="Wand_SelfTarget">You can\'t target yourself</string>
-   <string name="Wand_Prompt">Choose direction to zap</string>
+   <string name="Wand_Name">%s волшебная палочка</string>
+   <string name="Wand_ACZap">ВЗМАХНУТЬ</string>
+   <string name="Wand_Wood">Эта тонкая %s палочка тепла на ощуп. Кто знает, на что она способна?</string>
+   <string name="Wand_Damage">Используя эту пвлочку в качестве оружия ближнего боя, она нанесёт %d урона за удар.</string>
+   <string name="Wand_Weapon">Ты можешь использовать это палочку как оружие ближнего боя.</string>
+   <string name="Wand_Fizzles">твоя палочка издаёт потрескивание; наверное в ней кончились заряды</string>
+   <string name="Wand_SelfTarget">Ты не можешь нацелится на себя</string>
+   <string name="Wand_Prompt">Выбери направление взмаха</string>
    <string-array name="Wand_Wood">
-       <item >holly</item>
-       <item >yew</item>
-       <item >ebony</item>
-       <item >cherry</item>
-       <item >teak</item>
-       <item >rowan</item>
-       <item >willow</item>
-       <item >mahogany</item>
-       <item >bamboo</item>
-       <item >purpleheart</item>
-       <item >oak</item>
-       <item >birch</item>
+       <item >освящённая</item>
+       <item >тисовая</item>
+       <item >эбоновая</item>
+       <item >вишнёвая</item>
+       <item >тиковая</item>
+       <item >рябиновая</item>
+       <item >ивовая</item>
+       <item >красная</item>
+       <item >бамбуковая</item>
+       <item >лиловая</item>
+       <item >дубовая</item>
+       <item >берёзовая</item>
    </string-array> 
 
 
    <!--  STRINGS OF WandOfAmok CLASS  -->
-   <string name="WandOfAmok_Name">Wand of Amok</string>
-   <string name="WandOfAmok_Info">The purple light from this wand will make the target run amok attacking random creatures in its vicinity.</string>
-   <string name="WandOfAmok_Info1">nothing happened</string>
+   <string name="WandOfAmok_Name">Палочка Буйства</string>
+   <string name="WandOfAmok_Info">Лиловый свет, испускаемый этой палочкой, заставит цель впасть в буйство и, без разбора, атаковать любое существо в зоне досигаемости.</string>
+   <string name="WandOfAmok_Info1">ничего не произошло</string>
 
 
    <!--  STRINGS OF WandOfAvalanche CLASS  -->
-   <string name="WandOfAvalanche_Name">Wand of Avalanche</string>
-   <string name="WandOfAvalanche_Info">When a discharge of this wand hits a wall (or any other solid obstacle) it causes an avalanche of stones, damaging and stunning all creatures in the affected area.</string>
-   <string name="WandOfAvalanche_Info1">You killed yourself with your own Wand of Avalanche...</string>
+   <string name="WandOfAvalanche_Name">Палочка Камнепада</string>
+   <string name="WandOfAvalanche_Info">Когда разряд палочки ударяет в стену (или другое твёрдое препятствие) он вызывает обвал камней, нанося урон и оглушая всех существ в области действия.</string>
+   <string name="WandOfAvalanche_Info1">Ты убился об собственную Палочку Камнепада...</string>
 
 
    <!--  STRINGS OF WandOfBlink CLASS  -->
-   <string name="WandOfBlink_Name">Wand of Blink</string>
-   <string name="WandOfBlink_Info">This wand will allow you to teleport in the chosen direction. Creatures and inanimate obstructions will block the teleportation.</string>
+   <string name="WandOfBlink_Name">Палочка Скачка</string>
+   <string name="WandOfBlink_Info">Эта палочка позволит тебе телепортироваться в выбранное место. Существа и неодушевлённые предметы помешают телепортации.</string>
 
 
    <!--  STRINGS OF WandOfDisintegration CLASS  -->
-   <string name="WandOfDisintegration_Name">Wand of Disintegration</string>
-   <string name="WandOfDisintegration_Info">This wand emits a beam of destructive energy, which pierces all creatures in its way. The more targets it hits, the more damage it inflicts to each of them.</string>
+   <string name="WandOfDisintegration_Name">Палочка Дезинтеграции</string>
+   <string name="WandOfDisintegration_Info">Эта палочка извергает луч разрушительной энергии, пронзающий всех существ на пути. Чем бошльше целей он поразит, тем больше урона получит каждая из них.</string>
 
 
    <!--  STRINGS OF WandOfFirebolt CLASS  -->
-   <string name="WandOfFirebolt_Name">Wand of Firebolt</string>
-   <string name="WandOfFirebolt_Info">This wand unleashes bursts of magical fire. It will ignite flammable terrain, and will damage and burn a creature it hits.</string>
-   <string name="WandOfFirebolt_Info1">You killed yourself with your own Wand of Firebolt...</string>
+   <string name="WandOfFirebolt_Name">Палочка Огнеплюя</string>
+   <string name="WandOfFirebolt_Info">Эта палочка выпускает сгусток волшебного пламени. Который может поджечь воспламеняющуюся среду, а также нанести урон и поджечь целевое существо.</string>
+   <string name="WandOfFirebolt_Info1">Ты погорел от собственной Палочки Огнеплюя...</string>
 
 
    <!--  STRINGS OF WandOfFlock CLASS  -->
-   <string name="WandOfFlock_Name">Wand of Flock</string>
-   <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>
-   <string name="WandOfFlock_SheepName">sheep</string>
-   <string name="WandOfFlock_SheepInfo">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
+   <string name="WandOfFlock_Name">Палочка Стада</string>
+   <string name="WandOfFlock_Info">Взмах этой палочки призовёт стадо волшебных овец, которые образуют временное непреодолимое препятсвие.</string>
+   <string name="WandOfFlock_SheepName">овца</string>
+   <string name="WandOfFlock_SheepInfo">Это волшебная овца. Что в ней такого волшебного? Ты не сможешь её убить. Она будет стоять на месте, пока, волшебным образом, не испарится, сосредоточенно что-то пережёвывая.</string>
    <string-array name="WandOfFlock_SheepBaa">
-       <item >Baa!</item>
-       <item >Baa?</item>
-       <item >Baa.</item>
-       <item >Baa...</item>
-       <item >Bee...</item>
-       <item >Ble...</item>
+       <item >Бее!</item>
+       <item >Бее?</item>
+       <item >Бее.</item>
+       <item >Бее...</item>
+       <item >Бээ...</item>
+       <item >Бваа...</item>
    </string-array> 
 
 
    <!--  STRINGS OF WandOfLightning CLASS  -->
-   <string name="WandOfLightning_Name">Wand of Lightning</string>
-   <string name="WandOfLightning_Info">This wand conjures forth deadly arcs of electricity, which deal damage to several creatures standing close to each other.</string>
-   <string name="WandOfLightning_Info1">You killed yourself with your own Wand of Lightning...</string>
+   <string name="WandOfLightning_Name">Палочка Молний</string>
+   <string name="WandOfLightning_Info">Эта палочка испускает разряд молний поражающий несколько целей, стоящих рядом.</string>
+   <string name="WandOfLightning_Info1">Ты спалился на собственной Палочке Молний...</string>
 
 
    <!--  STRINGS OF WandOfMagicMissile CLASS  -->
-   <string name="WandOfMagicMissile_Name">Wand of Magic Missile</string>
-   <string name="WandOfMagicMissile_Info">This wand launches missiles of pure magical energy, dealing moderate damage to a target creature.</string>
-   <string name="WandOfMagicMissile_ACDisenchant">DISENCHANT</string>
-   <string name="WandOfMagicMissile_Info1">You killed yourself with your own Wand of Magic Missile...</string>
-   <string name="WandOfMagicMissile_SelectWand">Select a wand to upgrade</string>
-   <string name="WandOfMagicMissile_Desinchanted">you disenchanted the Wand of Magic Missile and used its essence to upgrade your %s</string>
+   <string name="WandOfMagicMissile_Name">Палочка Волшебных Снарядов</string>
+   <string name="WandOfMagicMissile_Info">Эта палочка выпускает снаряд волшебной энергии, нанося средний урон целевому существу.</string>
+   <string name="WandOfMagicMissile_ACDisenchant">РАСКОЛДОВАТЬ</string>
+   <string name="WandOfMagicMissile_Info1">Ты пришлёпнул себя, своей собственной Палочкой Волшебных Снарядов...</string>
+   <string name="WandOfMagicMissile_SelectWand">Выбери палочку для улучшения</string>
+   <string name="WandOfMagicMissile_Desinchanted">ты расколдовал Палочку Волшебных Снарядов, использовав её энергию для улучшения предмета %s</string>
 
 
    <!--  STRINGS OF WandOfPoison CLASS  -->
-   <string name="WandOfPoison_Name">Wand of Poison</string>
-   <string name="WandOfPoison_Info">The vile blast of this twisted bit of wood will imbue its target with a deadly venom. A creature that is poisoned will suffer periodic damage until the effect ends. The duration of the effect increases with the level of the staff.</string>
-   <string name="WandOfPoison_Info1">nothing happened</string>
+   <string name="WandOfPoison_Name">Палочка Яда</string>
+   <string name="WandOfPoison_Info">Это порочный кусок древесины извергает сгусток яда, отравляющий твою цель. Отравленное существо получает периодический урон вплоть до окончания действия эффекта. Продолжительность эффекта возврастает с уровнем палочки.</string>
+   <string name="WandOfPoison_Info1">ничего не произошло</string>
 
 
    <!--  STRINGS OF WandOfRegrowth CLASS  -->
-   <string name="WandOfRegrowth_Name">Wand of Regrowth</string>
-   <string name="WandOfRegrowth_Info">\"When life ceases new life always begins to grow... The eternal cycle always remains!\"</string>
-   <string name="WandOfRegrowth_Info1">nothing happened</string>
+   <string name="WandOfRegrowth_Name">Палочка Роста</string>
+   <string name="WandOfRegrowth_Info">\"В окончании одной жизни, новая жизнь берёт своё начало... Бесконечный цикл нерушим!\"</string>
+   <string name="WandOfRegrowth_Info1">ничего не произошло</string>
 
 
    <!--  STRINGS OF WandOfSlowness CLASS  -->
-   <string name="WandOfSlowness_Name">Wand of Slowness</string>
-   <string name="WandOfSlowness_Info">This wand will cause a creature to move and attack at half its ordinary speed until the effect ends</string>
-   <string name="WandOfSlowness_Info1">nothing happened</string>
+   <string name="WandOfSlowness_Name">Палочка Замедления</string>
+   <string name="WandOfSlowness_Info">Эта палочка наложит на цель временный эффект, ополовинивающий скорость атаки и движения</string>
+   <string name="WandOfSlowness_Info1">ничего не произошло</string>
 
 
    <!--  STRINGS OF WandOfTelekinesis CLASS  -->
-   <string name="WandOfTelekinesis_Name">Wand of Telekinesis</string>
-   <string name="WandOfTelekinesis_Info">Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, opening closed doors and closing open ones. They also push back monsters.</string>
-   <string name="WandOfTelekinesis_YouNowHave">You have magically transported %s into your backpack</string>
+   <string name="WandOfTelekinesis_Name">Палочка Телекинеза</string>
+   <string name="WandOfTelekinesis_Info">Волна магической силы окажет воздействие на всё, что попадётся ей на пути. Разряжая ловушки, сминая высокие растения, открывая закрытые двери и наоборот. А также оттолкнёт монстров назад.</string>
+   <string name="WandOfTelekinesis_YouNowHave">Ты волшебным образом переместил %s в свой рюкзак</string>
 
 
    <!--  STRINGS OF WandOfTeleportation CLASS  -->
-   <string name="WandOfTeleportation_Name">Wand of Teleportation</string>
-   <string name="WandOfTeleportation_Info">A blast from this wand will teleport a creature against its will to a random place on the current level.</string>
-   <string name="WandOfTeleportation_Info1">%1$s teleported %2$s to somewhere</string>
-   <string name="WandOfTeleportation_Info2">nothing happened</string>
+   <string name="WandOfTeleportation_Name">Палочка Телепортации</string>
+   <string name="WandOfTeleportation_Info">Разряд этой палочки перенесёт целевое существо в случайную точку текущего уровня, хочет оно того или нет.</string>
+   <string name="WandOfTeleportation_Info1">%1$s куда-то телепортировал %2$s</string>
+   <string name="WandOfTeleportation_Info2">ничего не произошло</string>
 
 
 <!--  PACKAGE /items/weapon  -->
    <!--  STRINGS OF Weapon CLASS  -->
-   <string name="Weapon_Identify">You are now familiar enough with your %1$s to identify it. It is %2$s.</string>
-   <string name="Weapon_Incompatible">Interaction of different types of magic has negated the enchantment on this weapon!</string>
+   <string name="Weapon_Identify">Ты достаточно хорошо знаком с предметом %1$s чтобы его опознать. Это %2$s.</string>
+   <string name="Weapon_Incompatible">Взаимодействие несовместимых типов магии разрушили чары, наложенные на это оружие!</string>
 
 
 <!--  PACKAGE /weapon/Enchantment  -->
    <!--  STRINGS OF Death CLASS  -->
-   <string name="Death_Name">Grim %s</string>
+   <string name="Death_Name">Мрачный %s</string>
    <!--  STRINGS OF Fire CLASS  -->
-   <string name="Fire_Name">Blazing %s</string>
+   <string name="Fire_Name">Искроносный %s</string>
    <!--  STRINGS OF Horror CLASS  -->
-   <string name="Horror_Name">Eldritch %s</string>
+   <string name="Horror_Name">Жуткий %s</string>
    <!--  STRINGS OF Instability CLASS  -->
-   <string name="Instability_Name">Unstable %s</string>
+   <string name="Instability_Name">Нестабильный %s</string>
    <!--  STRINGS OF Leech CLASS  -->
-   <string name="Leech_Name">Vampiric %s</string>
+   <string name="Leech_Name">Вампирический %s</string>
    <!--  STRINGS OF Luck CLASS  -->
-   <string name="Luck_Name">Lucky %s</string>
+   <string name="Luck_Name">Счастливый %s</string>
    <!--  STRINGS OF Paralysis CLASS  -->
-   <string name="Paralysis_Name">Stunning %s</string>
+   <string name="Paralysis_Name">Ошеломляющий %s</string>
    <!--  STRINGS OF Piercing CLASS  -->
-   <string name="Piercing_Name">Piercing %s</string>
+   <string name="Piercing_Name">Пронзающий %s</string>
    <!--  STRINGS OF Poison CLASS  -->
-   <string name="Poison_Name">Venomous %s</string>
+   <string name="Poison_Name">Отравленный %s</string>
    <!--  STRINGS OF Slow CLASS  -->
-   <string name="Slow_Name">Chilling %s</string>
+   <string name="Slow_Name">Морозный %s</string>
    <!--  STRINGS OF Swing CLASS  -->
-   <string name="Swing_Name">Wild %s</string>
+   <string name="Swing_Name">Дикий %s</string>
 
 
 <!--  PACKAGE /weapon/melee  -->
    <!--  STRINGS OF MeleeWeapon CLASS  -->
-   <string name="MeleeWeapon_Info1a">This %1$s is %2$s tier-%3$d melee weapon.</string>
-   <string name="MeleeWeapon_Info1b">a</string>
-   <string name="MeleeWeapon_Info1c">a upgraded</string>
-   <string name="MeleeWeapon_Info1d">an degraded</string>
-   <string name="MeleeWeapon_Info2a">Its average damage is %d points per hit.</string>
-   <string name="MeleeWeapon_Info2b">Its typical average damage is %1$d points per hit and usually it requires %2$d points of strength.</string>
-   <string name="MeleeWeapon_Info2c">Probably this weapon is too heavy for you.</string>
-   <string name="MeleeWeapon_Info3a">This is a rather %s weapon.</string>
-   <string name="MeleeWeapon_Info3b">fast</string>
-   <string name="MeleeWeapon_Info3c">slow</string>
-   <string name="MeleeWeapon_Info3d">and</string>
-   <string name="MeleeWeapon_Info3e">but</string>
-   <string name="MeleeWeapon_Info3f">accurate</string>
-   <string name="MeleeWeapon_Info3g">inaccurate</string>
-   <string name="MeleeWeapon_Info4a">It was balanced to make it faster.</string>
-   <string name="MeleeWeapon_Info4b">It was balanced to make it more accurate.</string>
-   <string name="MeleeWeapon_Info5">It is enchanted.</string>
-   <string name="MeleeWeapon_Info6a">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
-   <string name="MeleeWeapon_Info6b">Because of your excess strength the damage of your attack with this %s is increased.</string>
-   <string name="MeleeWeapon_Info7a">You hold the %1$s at the ready%2$s.</string>
-   <string name="MeleeWeapon_Info7b">, and because it is cursed, you are powerless to let go</string>
-   <string name="MeleeWeapon_Info7c">You can feel a malevolent magic lurking within %s.</string>
+   <string name="MeleeWeapon_Info1a">Этот %1$s %2$s оружие ближнего боя %3$d ранга.</string>
+   <string name="MeleeWeapon_Info1b">это</string>
+   <string name="MeleeWeapon_Info1c">улучшенное</string>
+   <string name="MeleeWeapon_Info1d">ослабленное</string>
+   <string name="MeleeWeapon_Info2a">Средний урон %d единиц за удар.</string>
+   <string name="MeleeWeapon_Info2b">Типичный средний урон состовляет %1$d единицы за удар и, как правило, требует %2$d очков силы.</string>
+   <string name="MeleeWeapon_Info2c">Судя по всему это оружие слишком тяжело для тебя.</string>
+   <string name="MeleeWeapon_Info3a">Это довольно %s оружие.</string>
+   <string name="MeleeWeapon_Info3b">быстрое</string>
+   <string name="MeleeWeapon_Info3c">медленное</string>
+   <string name="MeleeWeapon_Info3d">и</string>
+   <string name="MeleeWeapon_Info3e">но</string>
+   <string name="MeleeWeapon_Info3f">меткое</string>
+   <string name="MeleeWeapon_Info3g">неточное</string>
+   <string name="MeleeWeapon_Info4a">Оно было сбалансировано для повышения скорости.</string>
+   <string name="MeleeWeapon_Info4b">Оно было сбалансировано для повышения точности.</string>
+   <string name="MeleeWeapon_Info5">Оно зачарованно.</string>
+   <string name="MeleeWeapon_Info6a">Из-за твоей недостаточной силы, скорость и точность атаки оружием %s сниженны.</string>
+   <string name="MeleeWeapon_Info6b">За счёт более чем достаточной силы, количетсво урона, от оружия %s, увеличено.</string>
+   <string name="MeleeWeapon_Info7a">Ты держишь %1$s на готове %2$s.</string>
+   <string name="MeleeWeapon_Info7b">, посокльку оружие проклято ты не в силах выпустить его из рук</string>
+   <string name="MeleeWeapon_Info7c">Ты чувствуешь зловещую магию затаившуюся в оружии %s.</string>
 
 
    <!--  STRINGS OF BattleAxe CLASS  -->
-   <string name="BattleAxe_Name">battle axe</string>
+   <string name="BattleAxe_Name">боевой топор</string>
    <string name="BattleAxe_Info">The enormous steel head of this battle axe puts considerable heft behind each stroke.</string>
 
 
