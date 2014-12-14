@@ -14,9 +14,14 @@
    <!--  STRINGS OF AboutScene CLASS  -->
    <string name="AboutScene_Txt">Программирование &amp; графика: Watabou\nМузыка: Cube_Code\n\nРазработчики этой игры вдохновлялись Brogue от Brian Walker. Вы можете сыграть в неё на Windows, Mac OS или Linux - она классная! ;)\n\nПосетите официальный сайт игры для дополнительной информации:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
-   <string name="AboutScene_Translate">Languages Create: rodriformiga</string>
+   <string name="AboutScene_Translate">Механизм переводов: rodriformiga</string>
    <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string>
-   <string name="AboutScene_TranslateSnd">Send E-Mail</string>
+   <string name="AboutScene_TranslateSnd">Отправить E-Mail</string>
+   <string name="AboutScene_TranslateRusSup">Поддержка русского языка Mikhael-Danilov</string>
+   <string name="AboutScene_TranslateRusSupLnk">mikhael.danilov@gmail.com</string>
+   <string name="AboutScene_TranslateRus">Перевод на русский язык DeadDie44</string>
+   <string name="AboutScene_TranslateRusLnk">deaddie44@gmail.com</string>
+   
 
 
    <!--  STRINGS OF RankingsScene CLASS  -->
