@@ -82,7 +82,7 @@
    <string name="Char_YouMissed">%1$s %2$s your attack</string>
    <string name="Char_SmbMissed">%1$s %2$s %3$s\'s attack</string>
    <string name="Char_OutParalysis">Боль пробудила %s от паралича</string>
-   <string name="Char_StaDodged">уворот</string>
+   <string name="Char_StaDodged">уклонился</string>
    <string name="Char_StaPoisoned">отравлен</string>
    <string name="Char_StaAmok">amok</string>
    <string name="Char_StaSlowed">замедлен</string>
@@ -312,7 +312,7 @@
    <string-array name="Challenges_Names">
        <item >Без еды</item>
        <item >Без брони</item>
-       <item >Без зелий здоровья</item>
+       <item >Без зелий исцеления</item>
        <item >Без росы и семян</item>
        <item >Коллективный разум</item>
        <item >Тьма</item>
@@ -320,7 +320,7 @@
  
 
    <!--  STRINGS OF Journal CLASS  -->
-   <string name="Journal_WellHealt">Колодец Здоровья</string>
+   <string name="Journal_WellHealt">Колодец Исцеления</string>
    <string name="Journal_WellAwareness">Колодец Чутья</string>
    <string name="Journal_WellTransmut">Колодец Трансмутации</string>
    <string name="Journal_Alchemy">Алхимический котёл</string>
@@ -820,242 +820,242 @@
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
    <string name="GoldemKey_Name">золотой ключ</string>
-   <string name="GoldemKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
+   <string name="GoldemKey_Info">Засечки на этом ключе имеют миниатюрную, замысловатую форму. Наверное он подойдёт к какому-нибудь сундуку?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->
-   <string name="IronKey_Name">iron key</string>
-   <string name="IronKey_Info">The notches on this ancient iron key are well worn; its leather lanyard is battered by age. What door might it open?</string>
-   <string name="IronKey_FromDepth">iron key from depth %d</string>
+   <string name="IronKey_Name">железный ключ</string>
+   <string name="IronKey_Info">Засечки на этом древнем ключе износились; продетый в него кожанный ремень давно потрескался. Какую дверь им можно открыть?</string>
+   <string name="IronKey_FromDepth">железный ключ с %d этажа</string>
 
 
    <!--  STRINGS OF SkeletonKey CLASS  -->
-   <string name="SkeletonKey_Name">skeleton key</string>
-   <string name="SkeletonKey_Info">This key looks serious: its head is shaped like a skull. Probably it can open some serious door.</string>
+   <string name="SkeletonKey_Name">ключ-скелет</string>
+   <string name="SkeletonKey_Info">Весьма внушительный ключ: с головкой в форме черепа. Пожалуй он смог бы открыть некую внушительную дверь.</string>
    
 
 <!--  PACKAGE /items/potions  -->
    <!--  STRINGS OF Potion CLASS  -->
-   <string name="Potion_Name">%s potion</string>
-   <string name="Potion_Info">This flask contains a swirling %s liquid. Who knows what it will do when drunk or thrown?</string>
-   <string name="Potion_ACDrink">DRINK</string>
-   <string name="Potion_Harmfull">Harmful potion!</string>
-   <string name="Potion_Beneficial">Beneficial potion</string>
-   <string name="Potion_Yes">Yes, I know what I\'m doing</string>
-   <string name="Potion_No">No, I changed my mind</string>
-   <string name="Potion_SureDrink">Are you sure you want to drink it? In most cases you should throw such potions at your enemies.</string>
-   <string name="Potion_SureThrow">Are you sure you want to throw it? In most cases it makes sense to drink it.</string>
-   <string name="Potion_Shatter">The flask shatters and %s liquid splashes harmlessly</string>
+   <string name="Potion_Name">%s зелье</string>
+   <string name="Potion_Info">В этом флаконе содержится неоднородная %s жидкость. Кто знает, что станется, если её выпить или швырнуть?</string>
+   <string name="Potion_ACDrink">ВЫПИТЬ</string>
+   <string name="Potion_Harmfull">Вредное зелье!</string>
+   <string name="Potion_Beneficial">Полезное зелье</string>
+   <string name="Potion_Yes">Да, я знаю на что иду</string>
+   <string name="Potion_No">Нет, я передумал</string>
+   <string name="Potion_SureDrink">Ты уверен, что стоит это пить? Обычно такие зелья кидают во врагов.</string>
+   <string name="Potion_SureThrow">Ты уверен, что стоит это кидать? Как правило подобные зелья выпивают.</string>
+   <string name="Potion_Shatter">Флакон разбивается и %s жидкость безвредно растекается</string>
    <string-array name="Potion_Colors">
-       <item >turquoise</item>
-       <item >crimson</item>
-       <item >azure</item>
-       <item >jade</item>
-       <item >golden</item>
-       <item >magenta</item>
-       <item >charcoal</item>
-       <item >ivory</item>
-       <item >amber</item>
-       <item >bistre</item>
-       <item >indigo</item>
-       <item >silver</item>
+       <item >голубая</item>
+       <item >алая</item>
+       <item >синяя</item>
+       <item >зелёная</item>
+       <item >золотая</item>
+       <item >лиловая</item>
+       <item >чёрная</item>
+       <item >белесая</item>
+       <item >янтарная</item>
+       <item >коричневая</item>
+       <item >фиолетовая</item>
+       <item >серебрянная</item>
    </string-array>
 
 
    <!--  STRINGS OF PotionOfExperience CLASS  -->
-   <string name="PotionOfExperience_Name">Potion of Experience</string>
-   <string name="PotionOfExperience_Info">The storied experiences of multitudes of battles reduced to liquid form, this draught will instantly raise your experience level.</string>
+   <string name="PotionOfExperience_Name">Зелье Опыта</string>
+   <string name="PotionOfExperience_Info">Опыт накопленный в неисчислимых битвах преобразован в форму зелья, такой напиток моментально повысит твой уровень опыта.</string>
 
 
    <!--  STRINGS OF PotionOfFrost CLASS  -->
-   <string name="PotionOfFrost_Name">Potion of Frost</string>
-   <string name="PotionOfFrost_Info">Upon exposure to open air this chemical will evaporate into a freezing cloud, causing any creature that contacts it to be frozen in place unable to act and move.</string>
+   <string name="PotionOfFrost_Name">Зелье Мороза</string>
+   <string name="PotionOfFrost_Info">При контакте с воздухом этот химикат испарится, образуя леденящее облачко, примораживающее к месту всякое существо, которое его коснётся, лишая того возможности пошевелится.</string>
 
 
    <!--  STRINGS OF PotionOfHealing CLASS  -->
-   <string name="PotionOfHealing_Name">Potion of Healing</string>
-   <string name="PotionOfHealing_Info">An elixir that will instantly return you to full health and cure poison.</string>
-   <string name="PotionOfHealing_Apply">Your wounds heal completely.</string>
+   <string name="PotionOfHealing_Name">Зелье Исцеления</string>
+   <string name="PotionOfHealing_Info">Эликсир мгноенно востановит твоё здоровье и излечит от яда.</string>
+   <string name="PotionOfHealing_Apply">Твои раны полностью затянулись.</string>
 
 
    <!--  STRINGS OF PotionOfInvisibility CLASS  -->
-   <string name="PotionOfInvisibility_Name">Potion of Invisibility</string>
-   <string name="PotionOfInvisibility_Info">Drinking this potion will render you temporarily invisible. While invisible, enemies will be unable to see you. Attacking an enemy, as well as using a wand or a scroll before enemy\'s eyes, will dispel the effect.</string>
-   <string name="PotionOfInvisibility_Apply">You see your hands turn invisible!</string>
+   <string name="PotionOfInvisibility_Name">Зелье Невидимости</string>
+   <string name="PotionOfInvisibility_Info">Выпив это зелье ты станешь временно невидимым. Враги не смогут увидеть тебя, но нападение на врага, также как использование палочки или свитка у них на глазах, сделает тебя видимым.</string>
+   <string name="PotionOfInvisibility_Apply">Ты становишься невидимым!</string>
 
 
    <!--  STRINGS OF PotionOfLevitation CLASS  -->
-   <string name="PotionOfLevitation_Name">Potion of Levitation</string>
-   <string name="PotionOfLevitation_Info">Drinking this curious liquid will cause you to hover in the air, able to drift effortlessly over traps. Flames and gases fill the air, however, and cannot be bypassed while airborne.</string>
-   <string name="PotionOfLevitation_Apply">You float into the air!</string>
+   <string name="PotionOfLevitation_Name">Зелье Левитации</string>
+   <string name="PotionOfLevitation_Info">Выпив эту занятную супстанцию ты обретёшь способность парить над поверхностью, минуя ловушки. Но, поскольку огонь и газ заполняют воздух, их ты облететь не сможешь.</string>
+   <string name="PotionOfLevitation_Apply">Ты воспарил над землёй!</string>
 
 
    <!--  STRINGS OF PotionOfLiquidFlame CLASS  -->
-   <string name="PotionOfLiquidFlame_Name">Potion of Liquid Flame</string>
-   <string name="PotionOfLiquidFlame_Info">This flask contains an unstable compound which will burst violently into flame upon exposure to open air.</string>
+   <string name="PotionOfLiquidFlame_Name">Зелье Жидкого Пламени</string>
+   <string name="PotionOfLiquidFlame_Info">Эта фляга содержит мощный реагент, который мнгновенно воспламенится при уонтакте с воздухом.</string>
 
 
    <!--  STRINGS OF PotionOfMight CLASS  -->
-   <string name="PotionOfMight_Name">Potion of Might</string>
-   <string name="PotionOfMight_Info">This powerful liquid will course through your muscles, permanently increasing your strength by one point and health by five points.</string>
-   <string name="PotionOfMight_Apply">Newfound strength surges through your body.</string>
-   <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
+   <string name="PotionOfMight_Name">Зелье Могущества</string>
+   <string name="PotionOfMight_Info">Это сильнодействующее средство нальёт твои мышцы, перманентно повышая твою силу на 1, а здоровье на 5 очков.</string>
+   <string name="PotionOfMight_Apply">Новообретённая сила пульсирует в твоём теле.</string>
+   <string name="PotionOfMight_StaApply">+1 сила, +5 здоровье</string>
 
 
    <!--  STRINGS OF PotionOfMindVision CLASS  -->
-   <string name="PotionOfMindVision_Name">Potion of Mind Vision</string>
-   <string name="PotionOfMindVision_Info">After drinking this, your mind will become attuned to the psychic signature of distant creatures, enabling you to sense biological presences through walls. Also this potion will permit you to see through nearby walls and doors.</string>
-   <string name="PotionOfMindVision_Apply1">You can somehow feel the presence of other creatures\' minds!</string>
-   <string name="PotionOfMindVision_Apply2">You can somehow tell that you are alone on this level at the moment.</string>
+   <string name="PotionOfMindVision_Name">Зелье Экстрасенсорики</string>
+   <string name="PotionOfMindVision_Info">Выпив это ты обретёшь способность улавливать мозговые волны удалённых существ, что позволит тебе чувствовать живые организмы сквозь стены. Также это зелье позволит тебе видеть сквозь ближайшие стены и двери.</string>
+   <string name="PotionOfMindVision_Apply1">Ты каким-то образом почувствовал присутствие других разумных существ!</string>
+   <string name="PotionOfMindVision_Apply2">Что-то тебе подсказывает, что ты единственное живое существо на этом уровне.</string>
 
 
    <!--  STRINGS OF PotionOfParalyticGas CLASS  -->
-   <string name="PotionOfParalyticGas_Name">Potion of Paralytic Gas</string>
-   <string name="PotionOfParalyticGas_Info">Upon exposure to open air, the liquid in this flask will vaporize into a numbing yellow haze. Anyone who inhales the cloud will be paralyzed instantly, unable to move for some time after the cloud dissipates. This item can be thrown at distant enemies to catch them within the effect of the gas.</string>
+   <string name="PotionOfParalyticGas_Name">Зелье Парализующего Газа</string>
+   <string name="PotionOfParalyticGas_Info">При контакте с воздухом эта жидкость испарится, образуя желтоватую дымку. Любой вдохнувший его будет мгновенно парализован и сможет двинуться лишь спустя некоторое время после испарения дымки. Этот предмет можно швырнуть в удалёных врагов, чтобы поместить их под влияние газа.</string>
 
 
    <!--  STRINGS OF PotionOfPurity CLASS  -->
-   <string name="PotionOfPurity_Name">Potion of Purification</string>
-   <string name="PotionOfPurity_Info">This reagent will quickly neutralize all harmful gases in the area of effect. Drinking it will give you a temporary immunity to such gases.</string>
-   <string name="PotionOfPurity_Freshness">You feel uncommon freshness in the air.</string>
-   <string name="PotionOfPurity_NoSmell">You\'ve stopped sensing any smells!</string>
+   <string name="PotionOfPurity_Name">Зелье Очищения</string>
+   <string name="PotionOfPurity_Info">Этот реагент мгновенно нейтрализует все вредоносные газы в помещении. Выпив его ты временно получишь иммунитет к подобным газам.</string>
+   <string name="PotionOfPurity_Freshness">Воздух внезапно посвежел.</string>
+   <string name="PotionOfPurity_NoSmell">Ты потерял обоняние!</string>
 
 
    <!--  STRINGS OF PotionOfStrength CLASS  -->
-   <string name="PotionOfStrength_Name">Potion of Strength</string>
-   <string name="PotionOfStrength_Info">This powerful liquid will course through your muscles, permanently increasing your strength by one point.</string>
-   <string name="PotionOfStrength_Apply">Newfound strength surges through your body.</string>
-   <string name="PotionOfStrength_StaApply">+1 str</string>
+   <string name="PotionOfStrength_Name">Зелье Силы</string>
+   <string name="PotionOfStrength_Info">Это сильнодействующее средство нальёт твои мышцы, перманентно повышая твою силу на 1.</string>
+   <string name="PotionOfStrength_Apply">Новообретённая сила пульсирует в твоём теле.</string>
+   <string name="PotionOfStrength_StaApply">+1 сила</string>
 
 
    <!--  STRINGS OF PotionOfToxicGas CLASS  -->
-   <string name="PotionOfToxicGas_Name">Potion of Toxic Gas</string>
-   <string name="PotionOfToxicGas_Info">Uncorking or shattering this pressurized glass will cause its contents to explode into a deadly cloud of toxic green gas. You might choose to fling this potion at distant enemies instead of uncorking it by hand.</string>
+   <string name="PotionOfToxicGas_Name">Зелье Токсичного Газа</string>
+   <string name="PotionOfToxicGas_Info">При малейшом повреждении или попытке открыть этот сосуд, заполненый под давлением, приведёт к взрыву токсичного газа. Тебе стоит предпочесть метнуть его во врага, нежели пытаться это открыть.</string>
 
 
 <!--  PACKAGE /items/quest  -->
    <!--  STRINGS OF CorpseDust CLASS  -->
-   <string name="CorpseDust_Name">corpse dust</string>
-   <string name="CorpseDust_Info">The ball of corpse dust doesn\'t differ outwardly from a regular dust ball. However, you know somehow that it\'s better to get rid of it as soon as possible.</string>
+   <string name="CorpseDust_Name">трупная пыль</string>
+   <string name="CorpseDust_Info">Горстка трупной пыли малоотличима от пыли обыкновенной. Хотя тебя не покидает чувство, что лучше от этого избавится, как можно скорее.</string>
 
 
    <!--  STRINGS OF DarkGold CLASS  -->
-   <string name="DarkGold_Name">dark gold ore</string>
-   <string name="DarkGold_Info">This metal is called dark not because of its color (it doesn\'t differ from the normal gold), but because it melts under the daylight, making it useless on the surface.</string>
+   <string name="DarkGold_Name">самородок мракозлата</string>
+   <string name="DarkGold_Info">Этот металл зовётся мрачным не из-за его цвета (он не отличим от простого золота), а из-за того что он плавится от солнечного света, в связи с чем, его невозможно использовать на поверхности.</string>
 
 
    <!--  STRINGS OF DriedRose CLASS  -->
-   <string name="DriedRose_Name">dried rose</string>
-   <string name="DriedRose_Info">The rose has dried long ago, but it has kept all its petals somehow.</string>
+   <string name="DriedRose_Name">сухая роза</string>
+   <string name="DriedRose_Info">Эта роза иссохла много лет тому назад, но, не смотря на это, сохранила каждый лепесток.</string>
 
 
    <!--  STRINGS OF DwarfToken CLASS  -->
-   <string name="DwarfToken_Name">dwarf token</string>
-   <string name="DwarfToken_Info">Many dwarves and some of their larger creations carry these small pieces of metal of unknown purpose. Maybe they are jewelry or maybe some kind of ID. Dwarves are strange folk.</string>
+   <string name="DwarfToken_Name">дворфийский жетон</string>
+   <string name="DwarfToken_Info">Многие дворфы и их наиболее массивные творения, носили эти маленькие метллические штучки. Для чего они нужны, остаётся загадкой . Может это были украшения или свое рода удостоверения. Дворфы - странный народец.</string>
 
 
    <!--  STRINGS OF Pickaxe CLASS  -->
-   <string name="Pickaxe_Name">pickaxe</string>
-   <string name="Pickaxe_Info">This is a large and sturdy tool for breaking rocks. Probably it can be used as a weapon.</string>
-   <string name="Pickaxe_ACMine">MINE</string>
-   <string name="Pickaxe_NoVein">There is no dark gold vein near you to mine</string>
+   <string name="Pickaxe_Name">кирка</string>
+   <string name="Pickaxe_Info">Это крупное, крепкое орудие используется для раскалывания камней. Как простое оружие оно тоже может сгодится.</string>
+   <string name="Pickaxe_ACMine">ДОБЫВАТЬ</string>
+   <string name="Pickaxe_NoVein">Ты не видишь ни одного месторождения мракозлата в зоне досигаемости</string>
 
 
    <!--  STRINGS OF RatSkull CLASS  -->
-   <string name="RatSkull_Name">giant rat skull</string>
-   <string name="RatSkull_Info">It could be a nice hunting trophy, but it smells too bad to place it on a wall.</string>
+   <string name="RatSkull_Name">череп гигансткой крысы</string>
+   <string name="RatSkull_Info">Это могло бы стать неплохим трофеем, о не хотелось бы вешать на стену нечто столь зловонное.</string>
 
 
 <!--  PACKAGE /items/rings  -->
    <!--  STRINGS OF Ring CLASS  -->
-   <string name="Ring_Name">%s ring</string>
-   <string name="Ring_Info">This metal band is adorned with a large %s gem that glitters in the darkness. Who knows what effect it has when worn?</string>
-   <string name="Ring_Identify">you are now familiar enough with your %1$s to identify it. It is %2$s.</string>
+   <string name="Ring_Name">кольцо с %s</string>
+   <string name="Ring_Info">Это металическое колечко украшенно %s переливающимся на свету. Кто знает какой эффект оно может оказать при надевании?</string>
+   <string name="Ring_Identify">ты достаточно хорошо знаком с пердметом %1$s чтобы его опознать. Это %2$s.</string>
    <string-array name="Ring_Gems">
-       <item >diamond</item>
-       <item >opal</item>
-       <item >garnet</item>
-       <item >ruby</item>
-       <item >amethyst</item>
-       <item >topaz</item>
-       <item >onyx</item>
-       <item >tourmaline</item>
-       <item >emerald</item>
-       <item >sapphire</item>
-       <item >quartz</item>
-       <item >agate</item>
+       <item >бриллиантом</item>
+       <item >опалом</item>
+       <item >гранатом</item>
+       <item >рубином</item>
+       <item >аметистом</item>
+       <item >топазом</item>
+       <item >ониксом</item>
+       <item >турмалином</item>
+       <item >изумрудом</item>
+       <item >сапфиром</item>
+       <item >кварцем</item>
+       <item >агатом</item>
    </string-array>
-   <string name="Ring_Info1">You can only wear 2 rings at a time</string>
-   <string name="Ring_Info2">Your %s tightens around your finger painfully</string>
-   <string name="Ring_Info3a">%1$s\n\nThe %2$s is on your finger %3$s.</string>
-   <string name="Ring_Info3b">, and because it is cursed, you are powerless to remove it</string>
-   <string name="Ring_Info4">%1$s\n\nYou can feel a malevolent magic lurking within the %2$s.</string>
-   <string name="Ring_BuffKnown">This is a %s</string>
+   <string name="Ring_Info1">Ты можешь носить максимум 2 кольца</string>
+   <string name="Ring_Info2">Твоё %s болезненно сжимает палец</string>
+   <string name="Ring_Info3a">%1$s\n\n%2$s на твоём пальце %3$s.</string>
+   <string name="Ring_Info3b">, поскольку оно проклято, ты не в силах его снять</string>
+   <string name="Ring_Info4">%1$s\n\nТы чувствуешь зловещую магию затаившуюся внутри предмета %2$s.</string>
+   <string name="Ring_BuffKnown">Это %s</string>
 
 
    <!--  STRINGS OF RingOfAccuracy CLASS  -->
-   <string name="RingOfAccuracy_Name">Ring of Accuracy</string>
-   <string name="RingOfAccuracy_Info">This ring increases your chance to hit the enemy.</string>
+   <string name="RingOfAccuracy_Name">Кольцо Меткости</string>
+   <string name="RingOfAccuracy_Info">Это кольцо повысит твой шанс попадания по врагу.</string>
 
 
    <!--  STRINGS OF RingOfDetection CLASS  -->
-   <string name="RingOfDetection_Name">Ring of Detection</string>
-   <string name="RingOfDetection_Info">Wearing this ring will allow the wearer to notice hidden secrets - traps and secret doors - without taking time to search. Degraded rings of detection will dull your senses, making it harder to notice secrets even when actively searching for them.</string>
+   <string name="RingOfDetection_Name">Кольцо Обнаружения</string>
+   <string name="RingOfDetection_Info">Это кольцо позволит тебе замечать такие секреты, как тайные двери и ловушки, не тратя время на поиски. Ослабленное кольцо обнаружения наоборот притупит твои чувства, усложнив поиск секретов.</string>
 
 
    <!--  STRINGS OF RingOfElements CLASS  -->
-   <string name="RingOfElements_Name">Ring of Elements</string>
-   <string name="RingOfElements_Info">This ring provides resistance to different elements, such as fire, electricity, gases etc. Also it decreases duration of negative effects.</string>
+   <string name="RingOfElements_Name">Кольцо Стихий</string>
+   <string name="RingOfElements_Info">Это кольцо обеспечит тебя сопротивляемостью к воздействию стихий, таких как огонь, электричество, газы и т.д. Также оно снизит время влияния негативных эффектов</string>
 
 
    <!--  STRINGS OF RingOfEvasion CLASS  -->
-   <string name="RingOfEvasion_Name">Ring of Evasion</string>
-   <string name="RingOfEvasion_Info">This ring increases your chance to dodge enemy attack.</string>
+   <string name="RingOfEvasion_Name">Кольцо Уклонения</string>
+   <string name="RingOfEvasion_Info">Это кольцо повысит твой шанс уклонится от вражеской атаки.</string>
 
 
    <!--  STRINGS OF RingOfHaggler CLASS  -->
-   <string name="RingOfHaggler_Name">Ring of Haggler</string>
-   <string name="RingOfHaggler_Info">In fact this ring doesn\'t provide any magic effect, but it demonstrates to shopkeepers and vendors, that the owner of the ring is a member of The Thieves\' Guild. Usually they are glad to give a discount in exchange for temporary immunity guarantee. Upgrading this ring won\'t give any additional bonuses.</string>
+   <string name="RingOfHaggler_Name">Кольцо Торгаша</string>
+   <string name="RingOfHaggler_Info">Это кольцо не имеет волшебных эффектов, но торговцы и дельцы в курсе, что его может носить лишь член Гильдии Воров. Как правило они котовы предложить скидку, чтобы избежать проблем. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
 
 
    <!--  STRINGS OF RingOfHaste CLASS  -->
-   <string name="RingOfHaste_Name">Ring of Haste</string>
-   <string name="RingOfHaste_Info">This ring accelerates the wearer\'s flow of time, allowing one to perform all actions a little faster.</string>
+   <string name="RingOfHaste_Name">Кольцо Стремительности</string>
+   <string name="RingOfHaste_Info">Это кольцо ускорит течение времени своего владельца, в связи с чем от начнёт быстрее справлятся со всевозможными задачами.</string>
 
 
    <!--  STRINGS OF RingOfHerbalism CLASS  -->
-   <string name="RingOfHerbalism_Name">Ring of Herbalism</string>
-   <string name="RingOfHerbalism_Info">This ring increases your chance to gather dew and seeds from trampled grass.</string>
+   <string name="RingOfHerbalism_Name">Кольцо Травничества</string>
+   <string name="RingOfHerbalism_Info">Это кольцо увеличт шанс собрать орсы и семена с вытоптоной травы.</string>
 
 
    <!--  STRINGS OF RingOfMending CLASS  -->
-   <string name="RingOfMending_Name">Ring of Mending</string>
-   <string name="RingOfMending_Info">This ring increases the body\'s regenerative properties, allowing one to recover lost health at an accelerated rate. Degraded rings will decrease or even halt one\'s natural regeneration.</string>
+   <string name="RingOfMending_Name">Кольцо Заживления</string>
+   <string name="RingOfMending_Info">Это кольцо увеличит регенеративные способности владельца, позволяю ему быстрее восполнять здоровье. Ослабленное кольцо снизит или может целиком остановить регенерацию организма.</string>
 
 
    <!--  STRINGS OF RingOfPower CLASS  -->
-   <string name="RingOfPower_Name">Ring of Power</string>
-   <string name="RingOfPower_Info">Your wands will become more powerful in the energy field that radiates from this ring. Degraded rings of power will instead weaken your wands.</string>
+   <string name="RingOfPower_Name">Кольцо Власти</string>
+   <string name="RingOfPower_Info">Мощь этого кольца усилит волшебные палочки владельца. Ослабленное кольцо окажет обратный эффект.</string>
 
 
    <!--  STRINGS OF RingOfSatiety CLASS  -->
-   <string name="RingOfSatiety_Name">Ring of Satiety</string>
-   <string name="RingOfSatiety_Info">Wearing this ring you can go without food longer. Degraded rings of satiety will cause the opposite effect.</string>
+   <string name="RingOfSatiety_Name">Кольцо Сытости</string>
+   <string name="RingOfSatiety_Info">Носитель кольца сможет дольше продержаться без еды. Ослабленное кольцо подстегнёт голод.</string>
 
 
    <!--  STRINGS OF RingOfShadows CLASS  -->
-   <string name="RingOfShadows_Name">Ring of Shadows</string>
-   <string name="RingOfShadows_Info">Enemies will be less likely to notice you if you wear this ring. Degraded rings of shadows will alert enemies who might otherwise not have noticed your presence.</string>
+   <string name="RingOfShadows_Name">Кольцо Теней</string>
+   <string name="RingOfShadows_Info">Враги имеют меньший шанся заметить носителя этого кольца. Ослабленное кольцо наоборот привлечёт внимание врагов, которые в простой ситуации могли тебя и не заметить.</string>
    
 
    <!--  STRINGS OF RingOfThorns CLASS  -->
-   <string name="RingOfThorns_Name">Ring of Thorns</string>
-   <string name="RingOfThorns_Info">Though this ring doesn\'t provide real thorns, an enemy that attacks you will itself be wounded by a fraction of the damage that it inflicts. Upgrading this ring won\'t give any additional bonuses.</string>
+   <string name="RingOfThorns_Name">Кольцо Колючек</string>
+   <string name="RingOfThorns_Info">Хоть само кольцо и не обладает колючками, всякий атакующий враг ощутит на своей шкуре часть нанесённого тебе урона. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
 
 
 <!--  PACKAGE /items/scrolls  -->
    <!--  STRINGS OF Scroll CLASS  -->
-   <string name="Scroll_Name">scroll \"%s\"</string>
+   <string name="Scroll_Name">свиток \"%s\"</string>
    <string name="Scroll_Info">This parchment is covered with indecipherable writing, and bears a title of rune %s. Who knows what it will do when read aloud?</string>
    <string name="Scroll_ACRead">READ</string>
    <string name="Scroll_Blinded">You can\'t read a scroll while blinded</string>
