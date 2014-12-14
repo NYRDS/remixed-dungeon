@@ -60,7 +60,7 @@
 
    <!--  STRINGS OF AmuletScene CLASS  -->
    <string name="AmuletScene_Exit">Думаю, с меня хватит</string>
-   <string name="AmuletScene_Stay">Я пожалуй ещё осматрюсь</string>
+   <string name="AmuletScene_Stay">Я, пожалуй, ещё осматрюсь</string>
    <string name="AmuletScene_Txt">Наконец-то он в твоих руках, Амулет Эндора. Благодаря его могущество ты можешь покорить весь мир или подарить человечеству мир и процветание, или что-то типа того. В любом случае, твоя жизнь изменится на всегда, а игра на этом завершится. С другой стороны, ты можешь побыть жалким смертным ещё немного.</string>
 
 
@@ -228,8 +228,8 @@
    <string name="Badges_LevelReached4">Уровень 24 достигнут</string>
    <string name="Badges_AllPotions">Все зелья распознаны</string>
    <string name="Badges_AllScrolls">Все свитки распознаны</string>
-   <string name="Badges_AllRings">Все кольца распознаны</string>
-   <string name="Badges_AllWands">Все палочки распознаны</string>
+   <string name="Badges_AllRings">Все кольца распознаны"</string>
+   <string name="Badges_AllWands">Все палочки распознаны"</string>
    <string name="Badges_AllItems">Все зелья, свитки, кольца &amp; палочки распознаны</string>
    <!-- <string name="Badges_BagSeed"></string> -->
    <!-- <string name="Badges_BagSroll"></string> -->
@@ -462,7 +462,7 @@
    <string name="WndSettings_ZoomOut">-</string>
    <string name="WndSettings_ZoomDef">Масштаб по условию</string>
    <string name="WndSettings_ScaleUp">Отмаштабировать ГУИ</string>
-   <string name="WndSettings_Immersive">Режим "погружение"</string>
+   <string name="WndSettings_Immersive">Режим \"погружение\"</string>
    <string name="WndSettings_Music">Музыка</string>
    <string name="WndSettings_Sound">Звуковые эффекты</string>
    <string name="WndSettings_Brightness">Яркость</string>
@@ -760,66 +760,66 @@
 
 
    <!--  STRINGS OF ScrollHolder CLASS  -->
-   <string name="ScrollHolder_Name">scroll holder</string>
-   <string name="ScrollHolder_Info">You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.</string>
+   <string name="ScrollHolder_Name">держатель свитков</string>
+   <string name="ScrollHolder_Info">В этот контейнер может поместиться любое количство свитков. Он освободит место в твоём рюкзаке и защитит свитки от огня.</string>
 
 
    <!--  STRINGS OF SeedPouch CLASS  -->
-   <string name="SeedPouch_Name">seed pouch</string>
-   <string name="SeedPouch_Info">This small velvet pouch allows you to store any number of seeds in it. Very convenient.</string>   
+   <string name="SeedPouch_Name">мешочек для семян</string>
+   <string name="SeedPouch_Info">Этот маленький бархатный мешочек вмещает любое количество семян. Полезная вещь.</string>   
 
 
    <!--  STRINGS OF WandHolster CLASS  -->
-   <string name="WandHolster_Name">wand holster</string>
-   <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to " + size + " wands.</string>  
+   <string name="WandHolster_Name">чехол для палочек</string>
+   <string name="WandHolster_Info">Изящное изделие, сработанное из кожи экзотического зверя, уместит в себе волшебные палочки в количестве до " + size + ".</string>  
 
 
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
-   <string name="Food_Name">ration of food</string>
-   <string name="Food_Info">Nothing fancy here: dried meat, some biscuits - things like that.</string>
-   <string name="Food_ACEat">EAT</string>
-   <string name="Food_Message">That food tasted delicious!</string>
+   <string name="Food_Name">сухпаёк</string>
+   <string name="Food_Info">Дёшево и сердито: вяленное мясо, немного печенек - и так далее.</string>
+   <string name="Food_ACEat">СЪЕСТЬ</string>
+   <string name="Food_Message">Вкуснечка!</string>
 
 
    <!--  STRINGS OF ChargrilledMeat CLASS  -->
-   <string name="ChargrilledMeat_Name">chargrilled meat</string>
-   <string name="ChargrilledMeat_Info">It looks like a decent steak.</string>
+   <string name="ChargrilledMeat_Name">мясо приготовленное на углях</string>
+   <string name="ChargrilledMeat_Info">Выглядит достойно.</string>
 
 
    <!--  STRINGS OF FrozenCarpaccio CLASS  -->
-   <string name="FrozenCarpaccio_Name">frozen carpaccio</string>
-   <string name="FrozenCarpaccio_Info">It\'s a piece of frozen raw meat. The only way to eat it is by cutting thin slices of it. And this way it\'s surprisingly good.</string>
-   <string name="FrozenCarpaccio_Info1">You see your hands turn invisible!</string>
-   <string name="FrozenCarpaccio_Info2">You feel your skin hardens!</string>
-   <string name="FrozenCarpaccio_Info3">Refreshing!</string>
-   <string name="FrozenCarpaccio_Info4">You feel better!</string>
+   <string name="FrozenCarpaccio_Name">замороженный карпаччо</string>
+   <string name="FrozenCarpaccio_Info">Кусок сырого промороженного мяса. Съесть его можно лишь отрезая тоненькие ломтики. Которые получаются на удивление вкусными.</string>
+   <string name="FrozenCarpaccio_Info1">Твои руки стнавоятся невидмыми!</string>
+   <string name="FrozenCarpaccio_Info2">Ты чувствуешь как твоя кожа крепчает!</string>
+   <string name="FrozenCarpaccio_Info3">Освежает!</string>
+   <string name="FrozenCarpaccio_Info4">Тебе похорошело!</string>
 
 
    <!--  STRINGS OF MysteryMeat CLASS  -->
-   <string name="MysteryMeat_Name">mystery meat</string>
-   <string name="MysteryMeat_Info">Eat at your own risk!</string>
-   <string name="MysteryMeat_Info1">Oh it\'s hot!</string>
-   <string name="MysteryMeat_Info2">You can\'t feel your legs!</string>
-   <string name="MysteryMeat_Info3">You are not feeling well.</string>
-   <string name="MysteryMeat_Info4">You are stuffed.</string>
-   <string name="MysteryMeat_Message">That food tasted... strange.</string>
+   <string name="MysteryMeat_Name">подозрительное мясо</string>
+   <string name="MysteryMeat_Info">Съешь на свой страх и риск!</string>
+   <string name="MysteryMeat_Info1">Оу, остренько!</string>
+   <string name="MysteryMeat_Info2">У тебя отнялись ноги!</string>
+   <string name="MysteryMeat_Info3">Что-то тебе не хорошо.</string>
+   <string name="MysteryMeat_Info4">Ты объелся.</string>
+   <string name="MysteryMeat_Message">Какой... подозрительный вкус.</string>
 
 
    <!--  STRINGS OF OverpricedRation CLASS  -->
-   <string name="OverpricedRation_Name">overpriced food ration</string>
-   <string name="OverpricedRation_Info">It looks exactly like a standard ration of food but smaller.</string>
-   <string name="OverpricedRation_Message">That food tasted good.</string>
+   <string name="OverpricedRation_Name">дорогущий сухпаёк</string>
+   <string name="OverpricedRation_Info">От просто сухпайка отличается только меньшим размером.</string>
+   <string name="OverpricedRation_Message">Достаточно вкусно.</string>
 
 
    <!--  STRINGS OF Pasty CLASS  -->
-   <string name="Pasty_Name">pasty</string>
-   <string name="Pasty_Info">This is authentic Cornish pasty with traditional filling of beef and potato.</string>
+   <string name="Pasty_Name">пирог</string>
+   <string name="Pasty_Info">Традиционный Корнуоллский пирог с начинкой из говядины и картофеля.</string>
 
 
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">golden key</string>
+   <string name="GoldemKey_Name">золотой ключ</string>
    <string name="GoldemKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
 
 
