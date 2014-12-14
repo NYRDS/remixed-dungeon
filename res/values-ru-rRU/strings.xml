@@ -1316,7 +1316,7 @@
 
 <!--  PACKAGE /weapon/melee  -->
    <!--  STRINGS OF MeleeWeapon CLASS  -->
-   <string name="MeleeWeapon_Info1a">Этот %1$s %2$s оружие ближнего боя %3$d ранга.</string>
+   <string name="MeleeWeapon_Info1a">%1$s %2$s является оружием ближнего боя %3$d порядка.</string>
    <string name="MeleeWeapon_Info1b">это</string>
    <string name="MeleeWeapon_Info1c">улучшенное</string>
    <string name="MeleeWeapon_Info1d">ослабленное</string>
@@ -1335,236 +1335,236 @@
    <string name="MeleeWeapon_Info5">Оно зачарованно.</string>
    <string name="MeleeWeapon_Info6a">Из-за твоей недостаточной силы, скорость и точность атаки оружием %s сниженны.</string>
    <string name="MeleeWeapon_Info6b">За счёт более чем достаточной силы, количетсво урона, от оружия %s, увеличено.</string>
-   <string name="MeleeWeapon_Info7a">Ты держишь %1$s на готове %2$s.</string>
+   <string name="MeleeWeapon_Info7a">Ты держишь %1$s наготове %2$s.</string>
    <string name="MeleeWeapon_Info7b">, посокльку оружие проклято ты не в силах выпустить его из рук</string>
    <string name="MeleeWeapon_Info7c">Ты чувствуешь зловещую магию затаившуюся в оружии %s.</string>
 
 
    <!--  STRINGS OF BattleAxe CLASS  -->
    <string name="BattleAxe_Name">боевой топор</string>
-   <string name="BattleAxe_Info">The enormous steel head of this battle axe puts considerable heft behind each stroke.</string>
+   <string name="BattleAxe_Info">Вес огромного стального наконечника этого грозного оружия чувствуется в каждом взмахе.</string>
 
 
    <!--  STRINGS OF Dagger CLASS  -->
-   <string name="Dagger_Name">dagger</string>
-   <string name="Dagger_Info">A simple iron dagger with a well worn wooden handle.</string>
+   <string name="Dagger_Name">кинжал</string>
+   <string name="Dagger_Info">Простейший железный кинжал с удобной деревянной рукоятью.</string>
 
 
    <!--  STRINGS OF Glaive CLASS  -->
-   <string name="Glaive_Name">glaive</string>
-   <string name="Glaive_Info">A polearm consisting of a sword blade on the end of a pole.</string>
+   <string name="Glaive_Name">меч-копьё</string>
+   <string name="Glaive_Info">Копьё с лезвием от меча на конце.</string>
 
 
    <!--  STRINGS OF Knuckles CLASS  -->
-   <string name="Knuckles_Name">knuckleduster</string>
-   <string name="Knuckles_Info">A piece of iron shaped to fit around the knuckles.</string>
+   <string name="Knuckles_Name">кастет</string>
+   <string name="Knuckles_Info">Железная скоба, плотно охватывающая пальцы.</string>
 
 
    <!--  STRINGS OF Longsword CLASS  -->
-   <string name="Longsword_Name">longsword</string>
-   <string name="Longsword_Info">This towering blade inflicts heavy damage by investing its heft into every cut.</string>
+   <string name="Longsword_Name">длинный меч</string>
+   <string name="Longsword_Info">Массивный клинок наносит огромный урон обрушивая на врага свой вес.</string>
 
 
    <!--  STRINGS OF Mace CLASS  -->
-   <string name="Mace_Name">mace</string>
-   <string name="Mace_Info">The iron head of this weapon inflicts substantial damage.</string>
+   <string name="Mace_Name">булава</string>
+   <string name="Mace_Info">Железный наконечник этого оружия способен наносить существенный урон.</string>
 
 
    <!--  STRINGS OF Quarterstaff CLASS  -->
-   <string name="Quarterstaff_Name">quarterstaff</string>
-   <string name="Quarterstaff_Info">A staff of hardwood, its ends are shod with iron.</string>
+   <string name="Quarterstaff_Name">боевой посох</string>
+   <string name="Quarterstaff_Info">Посох из твёрдого дерева, его концы оуованы железом.</string>
 
 
    <!--  STRINGS OF ShortSword CLASS  -->
-   <string name="ShortSword_Name">short sword</string>
-   <string name="ShortSword_Info">It is indeed quite short, just a few inches longer, than a dagger.</string>
-   <string name="ShortSword_ACReforge">REFORGE</string>
-   <string name="ShortSword_Select">Select a weapon to upgrade</string>
-   <string name="ShortSword_Reforged">you reforged the short sword to upgrade your %s</string>
-   <string name="ShortSword_NotBoomerang">you can\'t upgrade a boomerang this way</string>
+   <string name="ShortSword_Name">короткий меч</string>
+   <string name="ShortSword_Info">Действительно короткий, буквально на несколько сантиметров длинее кинжала.</string>
+   <string name="ShortSword_ACReforge">ПЕРЕКОВАТЬ</string>
+   <string name="ShortSword_Select">Выбери оружие для улучшения</string>
+   <string name="ShortSword_Reforged">ты перековал короткий меч для улучшения оружия %s</string>
+   <string name="ShortSword_NotBoomerang">ты не сможешь улучшить бумеранг таким образом</string>
 
 
    <!--  STRINGS OF Spear CLASS  -->
-   <string name="Spear_Name">spear</string>
-   <string name="Spear_Info">A slender wooden rod tipped with sharpened iron.</string>
+   <string name="Spear_Name">копьё</string>
+   <string name="Spear_Info">Тонкое древко с острым железным наконечником.</string>
 
 
    <!--  STRINGS OF Sword CLASS  -->
-   <string name="Sword_Name">sword</string>
-   <string name="Sword_Info">The razor-sharp length of steel blade shines reassuringly.</string>
+   <string name="Sword_Name">меч</string>
+   <string name="Sword_Info">Отблеск бритвенно-острого клинка внушает уверенность.</string>
 
 
    <!--  STRINGS OF WarHammer CLASS  -->
-   <string name="WarHammer_Name">war hammer</string>
-   <string name="WarHammer_Info">Few creatures can withstand the crushing blow of this towering mass of lead and steel, but only the strongest of adventurers can use it effectively.</string>
+   <string name="WarHammer_Name">боевой молот</string>
+   <string name="WarHammer_Info">Очень не многие существа могут пережить удар такого оружия, но не каждому путешественнику под силу его использовать .</string>
 
 
 <!--  PACKAGE /weapon/missiles  -->
    <!--  STRINGS OF MissileWeapon CLASS  -->
-   <string name="MissileWeapon_Missiles">Missile weapon</string>
-   <string name="MissileWeapon_Yes">Yes, I know what I\'m doing</string>
-   <string name="MissileWeapon_No">No, I changed my mind</string>
-   <string name="MissileWeapon_Sure">Do you really want to equip it as a melee weapon?</string>
-   <string name="MissileWeapon_Info1">\n\nAverage damage of this weapon equals to %d points per hit.</string>
-   <string name="MissileWeapon_Info2">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
-   <string name="MissileWeapon_Info3">Because of your excess strength the damage of your attack with this %s is increased.</string>
-   <string name="MissileWeapon_Info4">\n\nYou hold the %s at the ready.</string>
+   <string name="MissileWeapon_Missiles">Оружие дальнего боя</string>
+   <string name="MissileWeapon_Yes">Да, я знаю, что делаю</string>
+   <string name="MissileWeapon_No">Нет, я передумал</string>
+   <string name="MissileWeapon_Sure">Ты уверен что хочешь использовать это в качестве оружия ближнего боя?</string>
+   <string name="MissileWeapon_Info1">\n\nСредний урон от этого оружия состовляет %d единиц за удар.</string>
+   <string name="MissileWeapon_Info2">Из-за твоей недостаточной силы, скорость и точность атаки оружием %s сниженны.</string>
+   <string name="MissileWeapon_Info3">За счёт более чем достаточной силы, количетсво урона, от оружия %s, увеличено.</string>
+   <string name="MissileWeapon_Info4">\n\nТы держишь %s наизготове.</string>
 
 
    <!--  STRINGS OF Boomerang CLASS  -->
-   <string name="Boomerang_Name">boomerang</string>
-   <string name="Boomerang_Info">Thrown to the enemy this flat curved wooden missile will return to the hands of its thrower.</string>
+   <string name="Boomerang_Name">бумеранг</string>
+   <string name="Boomerang_Info">Брошенное во врага, это изогнутое деревянное оружие, вернётся в руку владельца.</string>
 
 
    <!--  STRINGS OF CurareDart CLASS  -->
-   <string name="CurareDart_Name">curare dart</string>
-   <string name="CurareDart_Info">These little evil darts don\'t do much damage but they can paralyze the target leaving it helpless and motionless for some time.</string>
+   <string name="CurareDart_Name">дротик кураре</string>
+   <string name="CurareDart_Info">Эти маленькие зловещи дротики наносят немного урона, но они способны временно парализовать цель.</string>
 
 
    <!--  STRINGS OF Dart CLASS  -->
-   <string name="Dart_Name">dart</string>
-   <string name="Dart_Info">These simple metal spikes are weighted to fly true and sting their prey with a flick of the wrist.</string>
+   <string name="Dart_Name">дротик</string>
+   <string name="Dart_Info">Эти простенькие металлические шипы идеально выверены, для того чтобы точно вонзиться в свою жертву.</string>
 
 
    <!--  STRINGS OF IncendiaryDart CLASS  -->
-   <string name="IncendiaryDart_Name">incendiary dart</string>
-   <string name="IncendiaryDart_Info">The spike on each of these darts is designed to pin it to its target while the unstable compounds strapped to its length burst into brilliant flames.</string>
+   <string name="IncendiaryDart_Name">воспламеняющий дротик</string>
+   <string name="IncendiaryDart_Info">Кончик дротика расчитан на то, чтобы надёжно впится в цель, в то время, как, состав которым он обработан, вспыхнет, окутывая жертву пламенем.</string>
 
 
    <!--  STRINGS OF Javelin CLASS  -->
-   <string name="Javelin_Name">javelin</string>
-   <string name="Javelin_Info">This length of metal is weighted to keep the spike at its tip foremost as it sails through the air.</string>
+   <string name="Javelin_Name">метательное копьё</string>
+   <string name="Javelin_Info">Это металическое копьё тщательно сбалансированно, чтобы его острый наконечник неизменно стремился в цель, на протяжении всего полёта.</string>
 
 
    <!--  STRINGS OF Shuriken CLASS  -->
-   <string name="Shuriken_Name">shuriken</string>
-   <string name="Shuriken_Info">Star-shaped pieces of metal with razor-sharp blades do significant damage when they hit a target. They can be thrown at very high rate.</string>
+   <string name="Shuriken_Name">сюрикен</string>
+   <string name="Shuriken_Info">Бритвенно-острые металлические звёздочки наносят существенный урон своим целям. Их можно метать с большой скоростью.</string>
 
 
    <!--  STRINGS OF Tamahawk CLASS  -->
-   <string name="Tamahawk_Name">tomahawk</string>
-   <string name="Tamahawk_Info">This throwing axe is not that heavy, but it still requires significant strength to be used effectively.</string>
+   <string name="Tamahawk_Name">томагавк</string>
+   <string name="Tamahawk_Info">Хоть этот метательный топор не столь тяжёл, но, тем не менее, для обращения с ним требуется ощутимая сила.</string>
 
 
 <!--  PACKAGE /actors/blobs  -->
    <!--  STRINGS OF MissileWeapon CLASS  -->
-   <string name="ConfusionGas_Info">A cloud of confusion gas is swirling here.</string>
+   <string name="ConfusionGas_Info">Здесь витает облако дурманящего газа.</string>
    <!--  STRINGS OF Fire CLASS  -->
-   <string name="Fire_Info">A fire is raging here.</string>
+   <string name="Fire_Info">Здесь бушует пламя.</string>
    <!--  STRINGS OF Foliage CLASS  -->
-   <string name="Foliage_Info">Shafts of light pierce the gloom of the underground garden.</string>
+   <string name="Foliage_Info">Столб света пронзает мрак подземного сада.</string>
    <!--  STRINGS OF ParalyticGas CLASS  -->
-   <string name="ParalyticGas_Info">A cloud of paralytic gas is swirling here.</string>
+   <string name="ParalyticGas_Info">Здесь витает облако паралитического газа.</string>
    <!--  STRINGS OF ToxicGas CLASS  -->
-   <string name="ToxicGas_Info">A greenish cloud of toxic gas is swirling here.</string>
-   <string name="ToxicGas_Info1">You died from a toxic gas..</string>
+   <string name="ToxicGas_Info">Здесь витает зеленоватое облако токсичного газа.</string>
+   <string name="ToxicGas_Info1">Ты захлебнулся токсичным газом..</string>
    <!--  STRINGS OF WaterOfAwareness CLASS  -->
-   <string name="WaterOfAwareness_Info">As you take a sip, you feel the knowledge pours into your mind. Now you know everything about your equipped items. Also you sense all items on the level and know all its secrets.</string>
-   <string name="WaterOfAwareness_Procced">Power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of equipped items.</string>
+   <string name="WaterOfAwareness_Info">Сделав глоток, ты чувствуешь как знания насыщают твой разум. Теперь ты знаешь всё о надетых на тебя предметах. Ты также чувствуешь все предметы на этом уровне и знаешь всего его секреты.</string>
+   <string name="WaterOfAwareness_Procced">Вода этого источника излучает силу знаний. Сделай глоток чтобы раскрыть все секреты своей экипировки.</string>
    <!--  STRINGS OF WaterOfHealth CLASS  -->
-   <string name="WaterOfHealth_Info">Power of health radiates from the water of this well. Take a sip from it to heal your wounds and satisfy hunger.</string>
-   <string name="WaterOfHealth_Procced">As you take a sip, you feel your wounds heal completely.</string>
+   <string name="WaterOfHealth_Info">Вода этого источника излучает силу здоровья. Сделай глоток чтобы залечить свои раны и утолить голод.</string>
+   <string name="WaterOfHealth_Procced">Сделав глоотк, ты чувствуешь как твои раны исцеляются.</string>
    <!--  STRINGS OF WaterOfTransmutation CLASS  -->
-   <string name="WaterOfTransmutation_Info">Power of change radiates from the water of this well. Throw an item into the well to turn it into something else.</string>
+   <string name="WaterOfTransmutation_Info">Вода этого источника излучает силу перемен. Брось в воду предмет, чтобы он превратился в нечто иное.</string>
    <!--  STRINGS OF Web CLASS  -->
-   <string name="Web_Info">Everything is covered with a thick web here.</string>
+   <string name="Web_Info">Здесь всё покрыто паутиной.</string>
 
 
 <!--  PACKAGE /actors/buffs  -->
    <!--  STRINGS OF Amok CLASS  -->
-   <string name="Amok_Info">Amok</string>
+   <string name="Amok_Info">Амок</string>
    <!--  STRINGS OF Barkskin CLASS  -->
-   <string name="Barkskin_Info">Barkskin</string>
+   <string name="Barkskin_Info">Кожа-кора</string>
    <!--  STRINGS OF Bleeding CLASS  -->
-   <string name="Bleeding_Info">Bleeding</string>
-   <string name="Bleeding_Death">You bled to death...</string>
+   <string name="Bleeding_Info">Кровотечение</string>
+   <string name="Bleeding_Death">Ты истёк кровью...</string>
    <!--  STRINGS OF Blindness CLASS  -->
-   <string name="Blindness_Info">Blinded</string>
+   <string name="Blindness_Info">Ослеплён</string>
    <!--  STRINGS OF Burning CLASS  -->
-   <string name="Burning_Info">Burning</string>
-   <string name="Burning_Burns">%s burns up!</string>
-   <string name="Burning_Death">You burned to death...</string>
+   <string name="Burning_Info">В огне</string>
+   <string name="Burning_Burns">%s в огне!</string>
+   <string name="Burning_Death">Ты сгорел заживо...</string>
    <!--  STRINGS OF Charm CLASS  -->
-   <string name="Charm_Info">Charmed</string>
+   <string name="Charm_Info">Зачарован</string>
    <!--  STRINGS OF Combo CLASS  -->
-   <string name="Combo_Info">Combo</string>
-   <string name="Combo_Combo">%d hit combo!</string>
+   <string name="Combo_Info">Комбо</string>
+   <string name="Combo_Combo">%d-ударное комбо!</string>
    <!--  STRINGS OF Cripple CLASS  -->
-   <string name="Cripple_Info">Crippled</string>
+   <string name="Cripple_Info">Травмирован</string>
    <!--  STRINGS OF Frost CLASS  -->
-   <string name="Frost_Info">Frozen</string>
+   <string name="Frost_Info">Заморожен</string>
    <!--  STRINGS OF Fury CLASS  -->
-   <string name="Fury_Info">Fury</string>
+   <string name="Fury_Info">В ярости</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
-   <string name="GasesImmunity_Info">Immune to gases</string>
+   <string name="GasesImmunity_Info">Иммунитет к газам</string>
    <!--  STRINGS OF Hunger CLASS  -->
-   <string name="Hunger_Hungry">You are hungry.</string>
-   <string name="Hunger_Starving">You are starving!</string>
-   <string name="Hunger_Death">You starved to death...</string>
-   <string name="Hunger_Info1">Hungry</string>
-   <string name="Hunger_Info2">Starving</string>
+   <string name="Hunger_Hungry">Ты голоден.</string>
+   <string name="Hunger_Starving">Ты голодаешь!</string>
+   <string name="Hunger_Death">Ты умер с голоду...</string>
+   <string name="Hunger_Info1">Голоден</string>
+   <string name="Hunger_Info2">Голодает</string>
    <!--  STRINGS OF Invisibility CLASS  -->
-   <string name="Invisibility_Info">Invisible</string>
+   <string name="Invisibility_Info">Невидимый</string>
    <!--  STRINGS OF Levitation CLASS  -->
-   <string name="Levitation_Info">Levitating</string>
+   <string name="Levitation_Info">Левитирующий</string>
    <!--  STRINGS OF Light CLASS  -->
-   <string name="Light_Info">Illuminated</string>
+   <string name="Light_Info">Светящийся</string>
    <!--  STRINGS OF MindVision CLASS  -->
-   <string name="MindVision_Info">Mind vision</string>
+   <string name="MindVision_Info">Экстрасенсорика</string>
    <!--  STRINGS OF Ooze CLASS  -->
-   <string name="Ooze_Info">Caustic ooze</string>
-   <string name="Ooze_Death">%s killed you...</string>
+   <string name="Ooze_Info">Едкая слизь</string>
+   <string name="Ooze_Death">%s сожрала тебя...</string>
    <!--  STRINGS OF Paralysis CLASS  -->
-   <string name="Paralysis_Info">Paralysed</string>
+   <string name="Paralysis_Info">Параллизован</string>
    <!--  STRINGS OF Poison CLASS  -->
-   <string name="Poison_Info">Poisoned</string>
-   <string name="Poison_Death">You died from poison...</string>
+   <string name="Poison_Info">Отравлен</string>
+   <string name="Poison_Death">Ты умер от яда...</string>
    <!--  STRINGS OF Roots CLASS  -->
-   <string name="Roots_Info">Rooted</string>
+   <string name="Roots_Info">Спутан</string>
    <!--  STRINGS OF Shadows CLASS  -->
-   <string name="Shadows_Info">Shadowmelded</string>
+   <string name="Shadows_Info">Слился с тенью</string>
    <!--  STRINGS OF Slow CLASS  -->
-   <string name="Slow_Info">Slowed</string>
+   <string name="Slow_Info">Замедлен</string>
    <!--  STRINGS OF SnipersMark CLASS  -->
-   <string name="SnipersMark_Info">Sniper\'s mark</string>
+   <string name="SnipersMark_Info">Метка снайпера</string>
    <!--  STRINGS OF Vertigo CLASS  -->
-   <string name="Vertigo_Info">Vertigo</string>
+   <string name="Vertigo_Info">Завихрение</string>
    <!--  STRINGS OF Weakness CLASS  -->
-   <string name="Weakness_Info">Weakened</string>
+   <string name="Weakness_Info">Ослаблен</string>
 
 
 <!--  PACKAGE /actors/hero  -->
    <!--  STRINGS OF Belongings CLASS  -->
-   <string name="Belongings_Name">backpack</string>
+   <string name="Belongings_Name">рюкзак</string>
 
 
 <!--  PACKAGE /actors/mobs  -->
    <!--  STRINGS OF Mob CLASS  -->
-   <string name="Mob_Desc">Real description is coming soon!</string>
-   <string name="Mob_Died">You hear something died in the distance</string>
+   <string name="Mob_Desc">Настоящее описание скоро появится!</string>
+   <string name="Mob_Died">Что-то умерло в дали</string>
    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
-   <string name="Mob_StaSleepingStatus">This %s is sleeping</string>
-   <string name="Mob_StaWanderingStatus">This %s is wandering</string>
-   <string name="Mob_StaHuntingStatus">This %s is hunting</string>
-   <string name="Mob_StaFleeingStatus">This %s is fleeing</string>
-   <string name="Mob_StaPassiveStatus">This %s is passive</string>
+   <string name="Mob_StaSleepingStatus">Этот %s спит</string>
+   <string name="Mob_StaWanderingStatus">Этот %s слоняется</string>
+   <string name="Mob_StaHuntingStatus">Этот %s охотится</string>
+   <string name="Mob_StaFleeingStatus">Этот %s спасается бегством</string>
+   <string name="Mob_StaPassiveStatus">Этот %s пассивен</string>
    <!--  STRINGS OF Acidic CLASS  -->
-   <string name="Acidic_Name">acidic scorpio</string>
+   <string name="Acidic_Name">кислотный скорпион</string>
    <!--  STRINGS OF Albino CLASS  -->
-   <string name="Albino_Name">albino rat</string>
+   <string name="Albino_Name">крыса-альбинос</string>
    <!--  STRINGS OF Bandit CLASS  -->
-   <string name="Bandit_Name">crazy bandit</string>
+   <string name="Bandit_Name">рехнувшийся бандит</string>
    <!--  STRINGS OF Bat CLASS  -->
-   <string name="Bat_Name">vampire bat</string>
-   <string name="Bat_Desc">These brisk and tenacious inhabitants of cave domes may defeat much larger opponents by replenishing their health with each successful attack.</string>
-   <string name="Bat_Defense">evaded</string>
+   <string name="Bat_Name">летучая мышь-вампир</string>
+   <string name="Bat_Desc">Эти шустрые, настойчивые обитатели пещер, способны одолеть более крупного соперника, за счёт того, что с каждым успешным ударом, они восполняют часть своего здоровья.</string>
+   <string name="Bat_Defense">увернулась</string>
    <!--  STRINGS OF Brute CLASS  -->
-   <string name="Brute_Name">gnoll brute</string>
-   <string name="Brute_Desc">Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, they go berserk, inflicting even more damage to their enemies.</string>
-   <string name="Brute_Enraged">%s becomes enraged!</string>
-   <string name="Brute_StaEnraged">enraged</string>
+   <string name="Brute_Name">гнолл-громила</string>
+   <string name="Brute_Desc">Громилы - самые большие, сильные и выносливые из всех гноллов. Будучи изранеными, они впадают в неистовство, нанося увеличенный урон.</string>
+   <string name="Brute_Enraged">%s впал в неистовство!</string>
+   <string name="Brute_StaEnraged">неистовый</string>
    <!--  STRINGS OF Crab CLASS  -->
-   <string name="Crab_Name">sewer crab</string>
+   <string name="Crab_Name">сточный краб</string>
    <string name="Crab_Desc">These huge crabs are at the top of the food chain in the sewers. They are extremely fast and their thick exoskeleton can withstand heavy blows.</string>
    <string name="Crab_Defense">parried</string>
    <!--  STRINGS OF DM300 CLASS  -->
