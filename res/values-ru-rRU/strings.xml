@@ -1056,82 +1056,82 @@
 <!--  PACKAGE /items/scrolls  -->
    <!--  STRINGS OF Scroll CLASS  -->
    <string name="Scroll_Name">свиток \"%s\"</string>
-   <string name="Scroll_Info">This parchment is covered with indecipherable writing, and bears a title of rune %s. Who knows what it will do when read aloud?</string>
-   <string name="Scroll_ACRead">READ</string>
-   <string name="Scroll_Blinded">You can\'t read a scroll while blinded</string>
+   <string name="Scroll_Info">Этот свиток покрыт непонятными письменами и озаглавлен рунной %s. Кто знает, что случится если его прочесть вслух?</string>
+   <string name="Scroll_ACRead">ЧИТАТЬ</string>
+   <string name="Scroll_Blinded">Ты не можешь прочесть свиток, будучи ослеплённым</string>
    <string-array name="Scroll_Runes">
-       <item >KAUNAN</item>
-       <item >SOWILO</item>
-       <item >LAGUZ</item>
-       <item >YNGVI</item>
-       <item >GYFU</item>
-       <item >RAIDO</item>
-       <item >ISAZ</item>
-       <item >MANNAZ</item>
-       <item >NAUDIZ</item>
-       <item >BERKANAN</item>
-       <item >ODAL</item>
-       <item >TIWAZ</item>
+       <item >КАУНАН</item>
+       <item >СОВИЛОУ</item>
+       <item >ЛАГУЗ</item>
+       <item >ВАЙНДЖИ</item>
+       <item >ГАЙФУ</item>
+       <item >РАЙДО</item>
+       <item >ИЗАС</item>
+       <item >МАННАЗ</item>
+       <item >НАУДИЗ</item>
+       <item >БЕРКАНАН</item>
+       <item >ОДАЛ</item>
+       <item >ТИВАЗ</item>
    </string-array>
 
 
    <!--  STRINGS OF InventoryScroll CLASS  -->
-   <string name="InventoryScroll_Title">Select an item</string>
-   <string name="InventoryScroll_Warning">Do you really want to cancel this scroll usage? It will be consumed anyway.</string>
-   <string name="InventoryScroll_Yes">Yes, I\'m positive</string>
-   <string name="InventoryScroll_No">No, I changed my mind</string>
+   <string name="InventoryScroll_Title">Выбери предмет</string>
+   <string name="InventoryScroll_Warning">Ты уверен что хочешь отменить использование свитка? Он пропадёт в любом случае.</string>
+   <string name="InventoryScroll_Yes">Да, пусть так</string>
+   <string name="InventoryScroll_No">Нет, я передумал</string>
 
 
    <!--  STRINGS OF ScrollOfChallenge CLASS  -->
-   <string name="ScrollOfChallenge_Name">Scroll of Challenge</string>
-   <string name="ScrollOfChallenge_Info">When read aloud, this scroll will unleash a challenging roar that will awaken all monsters and alert them to the reader\'s location.</string>
-   <string name="ScrollOfChallenge_Info1">The scroll emits a challenging roar that echoes throughout the dungeon!</string>
+   <string name="ScrollOfChallenge_Name">Свиток Вызова</string>
+   <string name="ScrollOfChallenge_Info">При прочтении вслух этот свиток издаст бросающий вызов рёв, указывая место твоего положения всем монстрам на уровне.</string>
+   <string name="ScrollOfChallenge_Info1">Свиток испспускает бросающий вызов рёв, эхом проносящийся по подземелью!</string>
 
 
    <!--  STRINGS OF ScrollOfIdentify CLASS  -->
-   <string name="ScrollOfIdentify_Name">Scroll of Identify</string>
-   <string name="ScrollOfIdentify_Info">Permanently reveals all of the secrets of a single item.</string>
-   <string name="ScrollOfIdentify_InvTitle">Select an item to identify</string>
-   <string name="ScrollOfIdentify_Info1">It is %s</string>
+   <string name="ScrollOfIdentify_Name">Свиток Опознания</string>
+   <string name="ScrollOfIdentify_Info">Раскрывает все секреты одного предмета.</string>
+   <string name="ScrollOfIdentify_InvTitle">Выбери предмет для опознания</string>
+   <string name="ScrollOfIdentify_Info1">Это %s</string>
 
 
    <!--  STRINGS OF ScrollOfLullaby CLASS  -->
-   <string name="ScrollOfLullaby_Name">Scroll of Lullaby</string>
-   <string name="ScrollOfLullaby_Info">A soothing melody will put all creatures in your field of view into a deep sleep, giving you a chance to flee or make a surprise attack on them.</string>
-   <string name="ScrollOfLullaby_Info1">The scroll utters a soothing melody.</string>
-   <string name="ScrollOfLullaby_Info2">The scroll utters a soothing melody and the %s falls asleep!</string>
-   <string name="ScrollOfLullaby_Info3">The scroll utters a soothing melody and the monsters fall asleep!</string>
+   <string name="ScrollOfLullaby_Name">Свиток Колыбельной</string>
+   <string name="ScrollOfLullaby_Info">Убаюкивающая мелодия, создаваемая свитком, усыпить всех существ в поле зрения, позволяя тебе сбежать или давая возможность нанести неожиданный удар.</string>
+   <string name="ScrollOfLullaby_Info1">Свиток испускает убаюкивающую мелодию.</string>
+   <string name="ScrollOfLullaby_Info2">Свиток испускает убаюкивающую мелодию и %s засыпает!</string>
+   <string name="ScrollOfLullaby_Info3">Свиток испускает убаюкивающую мелодию и монстры засыпают!</string>
 
 
    <!--  STRINGS OF ScrollOfMagicMapping CLASS  -->
-   <string name="ScrollOfMagicMapping_Name">Scroll of Magic Mapping</string>
-   <string name="ScrollOfMagicMapping_Info">When this scroll is read, an image of crystal clarity will be etched into your memory, alerting you to the precise layout of the level and revealing all hidden secrets. The locations of items and creatures will remain unknown.</string>
-   <string name="ScrollOfMagicMapping_Layout">You are now aware of the level layout.</string>
+   <string name="ScrollOfMagicMapping_Name">Свиток Волшебной Разметки</string>
+   <string name="ScrollOfMagicMapping_Info">При прочтении свитка, в твоей памяти отчётливо выстроится картина, показывающая карту уровня и все его секреты. Но, расположение предметов и существ останется неизвестным.</string>
+   <string name="ScrollOfMagicMapping_Layout">Теперь ты знаешь план уровня.</string>
 
 
    <!--  STRINGS OF ScrollOfMirrorImage CLASS  -->
-   <string name="ScrollOfMirrorImage_Name">Scroll of Mirror Image</string>
-   <string name="ScrollOfMirrorImage_Info">The incantation on this scroll will create illusionary twins of the reader, which will chase his enemies.</string>
+   <string name="ScrollOfMirrorImage_Name">Свиток Двойника</string>
+   <string name="ScrollOfMirrorImage_Info">Прочтение свитка создаст твоего юллюзорного близнеца, который устремится в погоню за врагами.</string>
 
 
    <!--  STRINGS OF ScrollOfPsionicBlast CLASS  -->
-   <string name="ScrollOfPsionicBlast_Name">Scroll of Psionic Blast</string>
-   <string name="ScrollOfPsionicBlast_Info">This scroll contains destructive energy, that can be psionically channeled to inflict a massive damage to all creatures within a field of view. An accompanying flash of light will temporarily blind everybody in the area of effect including the reader of the scroll.</string>
+   <string name="ScrollOfPsionicBlast_Name">Свиток Ментального Удара</string>
+   <string name="ScrollOfPsionicBlast_Info">Этот свиток содержит разрушительную энергию, которая, по воле владельца, устремится ко всем врагам, в поле зрения, нанося им непомерный урон. Этот эффект сопровождается сильнейшей вспышкой, которая ослепит всех присутствующих, включая владельца.</string>
 
 
    <!--  STRINGS OF ScrollOfRecharging CLASS  -->
-   <string name="ScrollOfRecharging_Name">Scroll of Recharging</string>
-   <string name="ScrollOfRecharging_Info">The raw magical power bound up in this parchment will, when released, recharge all of the reader\'s wands to full power.</string>
-   <string name="ScrollOfRecharging_Info1a">a surge of energy courses through your pack, recharging your wand</string>
-   <string name="ScrollOfRecharging_Info1b">a surge of energy courses through your pack, recharging your wands</string>
-   <string name="ScrollOfRecharging_Info2">a surge of energy courses through your pack, but nothing happens</string>
+   <string name="ScrollOfRecharging_Name">Свиток перезарядки</string>
+   <string name="ScrollOfRecharging_Info">Сырая магическая энергия, заточённая в этом свитке востановит заряд всех волшебных палочек того, кто его прочтёт.</string>
+   <string name="ScrollOfRecharging_Info1a">поток энергии пробежал по твоему рюкзаку, перезарядив волшебную палочку</string>
+   <string name="ScrollOfRecharging_Info1b">поток энергии пробежал по твоему рюкзаку, перезарядив волшебные палочки</string>
+   <string name="ScrollOfRecharging_Info2">поток энергии пробежал по твоему рюкзаку, но ничего не изменилось</string>
 
 
    <!--  STRINGS OF ScrollOfRemoveCurse CLASS  -->
-   <string name="ScrollOfRemoveCurse_Name">Scroll of Remove Curse</string>
-   <string name="ScrollOfRemoveCurse_Info">The incantation on this scroll will instantly strip from the reader\'s weapon, armor, rings and carried items any evil enchantments that might prevent the wearer from removing them.</string>
-   <string name="ScrollOfRemoveCurse_Proced">Your pack glows with a cleansing light, and a malevolent energy disperses.</string>
-   <string name="ScrollOfRemoveCurse_NoProced">Your pack glows with a cleansing light, but nothing happens.</string>
+   <string name="ScrollOfRemoveCurse_Name">Свиток Снятия Проклятия</string>
+   <string name="ScrollOfRemoveCurse_Info">Прочитав этот свиток ты призовёшь волшебную силу, которая развеить проклятья со всех предметов, позволяя тебе их снять.</string>
+   <string name="ScrollOfRemoveCurse_Proced">Очистительный свет пробежал по твоему рюкзаку, изгоняю зловещую силу.</string>
+   <string name="ScrollOfRemoveCurse_NoProced">Очистительный свет пробежал по твоему рюкзаку, но ничего не изменилось.</string>
 
 
    <!--  STRINGS OF ScrollOfTeleportation CLASS  -->
