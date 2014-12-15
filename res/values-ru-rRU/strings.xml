@@ -17,9 +17,9 @@
    <string name="AboutScene_Translate">Механизм переводов: rodriformiga</string>
    <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string>
    <string name="AboutScene_TranslateSnd">Отправить E-Mail</string>
-   <string name="AboutScene_TranslateRusSup">Поддержка русского языка Mikhael-Danilov</string>
+   <string name="AboutScene_TranslateRusSup">Поддержка русского языка: Mikhael-Danilov</string>
    <string name="AboutScene_TranslateRusSupLnk">mikhael.danilov@gmail.com</string>
-   <string name="AboutScene_TranslateRus">Перевод на русский язык DeadDie44</string>
+   <string name="AboutScene_TranslateRus">Перевод на русский язык: DeadDie44</string>
    <string name="AboutScene_TranslateRusLnk">deaddie44@gmail.com</string>
    
 
@@ -60,22 +60,22 @@
 
 
    <!--  STRINGS OF IntroScene CLASS  -->
-   <string name="IntroScene_Txt">Множество самых разных героев спускались в Подземелье до тебя. Некоторые возвращались наделённые богатствами и волшебными артефактами, но большинство попусту сгинуло. Но никому не удалось заполучить Амулет Эндора, согласно легендам сокрытый в глубинах Подземелья.\n\nТы чувствуешь что готов к этому испытанию, а важнее всего, веришь что удача на твоей стороне. Пришло время начать своё приключение!</string>
+   <string name="IntroScene_Txt">Многие искатели приключений и путешественники спускались в Подземелье до тебя. Некоторые возвращались, наделённые несметными богатствами и волшебными артефактами, но большинство, попусту, сгинуло. Но, никому не удалось заполучить Амулет Эндора, согласно легендам, сокрытый в глубинах Подземелья.\n\nТы чувствуешь, что готов к этому испытанию и, что немаловажно, веришь, что удача на твоей стороне. Пришло время начать своё приключение!</string>
 
 
    <!--  STRINGS OF AmuletScene CLASS  -->
-   <string name="AmuletScene_Exit">Думаю, с меня хватит</string>
-   <string name="AmuletScene_Stay">Я, пожалуй, ещё осматрюсь</string>
-   <string name="AmuletScene_Txt">Наконец-то он в твоих руках, Амулет Эндора. Благодаря его могущество ты можешь покорить весь мир или подарить человечеству мир и процветание, или что-то типа того. В любом случае, твоя жизнь изменится на всегда, а игра на этом завершится. С другой стороны, ты можешь побыть жалким смертным ещё немного.</string>
+   <string name="AmuletScene_Exit">Моё дело, здесь, сделано</string>
+   <string name="AmuletScene_Stay">Я, пожалуй, ещё осмотрюсь</string>
+   <string name="AmuletScene_Txt">Наконец-то, он в твоих руках, Амулет Эндора. Ты обретёшь могущество, позволяющее покорить всех и вся, или подаришь человечеству мир и процветание, или что-то типа того. В любом случае, твоя жизнь изменится навсегда, а игра на этом завершится. С другой стороны, ты можешь побыть жалким смертным ещё немного.</string>
 
 
    <!--  STRINGS OF GameScene CLASS  -->
    <string name="GameScene_Welcome">Добро пожаловать на %d уровень Pixel Dungeon!</string>
    <string name="GameScene_WelcomeBack">С возвращением на %d уровень Pixel Dungeon!</string>
-   <string name="GameScene_NightMode">Будь начеку, ведь ночью подземелья куда опаснее!</string>
-   <string name="GameScene_Chasm">Каждый твой шаг эхом разносится по подземлью.</string>
+   <string name="GameScene_NightMode">Будь начеку, ведь ночью подземелье куда опаснее!</string>
+   <string name="GameScene_Chasm">Каждый твой шаг раздаётся эхом по всему подземелью.</string>
    <string name="GameScene_Water">Ты слышишь плеск воды поблизости.</string>
-   <string name="GameScene_Grass">В воздухе витает аромат растений.</string>
+   <string name="GameScene_Grass">В воздухе витает растительный аромат.</string>
    <string name="GameScene_Secrets">Атмосфера таинственности окутывает этот уровень, он полон секретов.</string>
 
 
@@ -84,21 +84,22 @@
    <string name="Char_Hit">%1$s ударил %2$s</string>
    <string name="Char_Kill">%s убил тебя...</string>
    <string name="Char_Defeat">%1$s одолел %2$s</string>
-   <string name="Char_YouMissed">%1$s %2$s your attack</string>
-   <string name="Char_SmbMissed">%1$s %2$s %3$s\'s attack</string>
+   <string name="Char_YouMissed">%1$s %2$s от твоей атаки</string>
+   <string name="Char_SmbMissed">%1$s %2$s от атаки монстра %3$s</string>
    <string name="Char_OutParalysis">Боль пробудила %s от паралича</string>
-   <string name="Char_StaDodged">уклонился от</string>
+   <string name="Char_StaDodged">уклонился</string>
    <string name="Char_StaPoisoned">отравлен</string>
-   <string name="Char_StaAmok">amok</string>
+   <string name="Char_StaAmok">буйствует</string>
    <string name="Char_StaSlowed">замедлен</string>
-   <string name="Char_StaMind">разум</string>
-   <string name="Char_StaVision">зрение</string>
+   <string name="Char_StaMindVision">экстрасенсорика</string>
+   <string name="Char_StaMind">экстрасенсорика</string>
+   <string name="Char_StaVision"></string>
    <string name="Char_StaParalysed">парализован</string>
    <string name="Char_StaFrightened">испуган</string>
    <string name="Char_StaRooted">скован</string>
-   <string name="Char_StaCrippled">травма</string>
+   <string name="Char_StaCrippled">травмирован</string>
    <string name="Char_StaBleeding">кровотечение</string>
-   <string name="Char_StaDizzy">контужен</string>
+   <string name="Char_StaDizzy">ошеломлён</string>
    <string name="Char_StaInvisible">невидимый</string>
 
 
