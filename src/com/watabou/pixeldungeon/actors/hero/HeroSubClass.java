@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.utils.Bundle;
 
 public enum HeroSubClass {

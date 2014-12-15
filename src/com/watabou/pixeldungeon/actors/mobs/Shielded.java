@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.sprites.ShieldedSprite;
 
 public class Shielded extends Brute {

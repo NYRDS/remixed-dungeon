@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite;

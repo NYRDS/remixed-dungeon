@@ -193,7 +193,9 @@ public class PixelScene extends Scene {
 			scale = Math.max( 1, (int)(pt / 7) );
 			
 		}
-		
+
+		font = font25x;
+
 		scale /= defaultZoom;
 	}
 	

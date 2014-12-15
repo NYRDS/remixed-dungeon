@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.utils;
 
 import java.util.Locale;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 
 public class Utils {
 

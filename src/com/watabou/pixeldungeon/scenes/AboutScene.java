@@ -27,7 +27,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.R;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
@@ -42,26 +42,57 @@ public class AboutScene extends PixelScene {
 	private static final String TRANSLATE_LNK = Game.getVar(R.string.AboutScene_TranslateLnk);
 	private static final String TRANSLATE_SND = Game.getVar(R.string.AboutScene_TranslateSnd);
 	
+	private BitmapTextMultiline createTouchEmail(final String address, BitmapTextMultiline upper)
+	{
+		BitmapTextMultiline text = createText(address);
+		text.hardlight( Window.TITLE_COLOR );
+		placeBellow(text, upper);
+		
+		TouchArea area = new TouchArea( text ) {
+			@Override
+			protected void onClick( Touch touch ) {
+				Intent intent = new Intent( Intent.ACTION_SEND);
+				intent.setType("message/rfc822");
+				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{address} );
+				intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name) );
+
+				Game.instance.startActivity( Intent.createChooser(intent, TRANSLATE_SND) );
+			}
+		};
+		add(area);
+		return text;
+	}
+	
+	private void placeBellow(BitmapTextMultiline elem, BitmapTextMultiline upper)
+	{
+		elem.x = upper.x;
+		elem.y = upper.y + upper.height();
+	}
+
+	private BitmapTextMultiline createText(String text)
+	{
+		BitmapTextMultiline multiline = createMultiline( text, 8 );
+		multiline.maxWidth = Math.min( Camera.main.width, 120 );
+		multiline.measure();
+		add( multiline );
+		
+		return multiline;
+	}
+	
 	@Override
 	public void create() {
 		super.create();
 		
-		BitmapTextMultiline text = createMultiline( TXT, 8 );
-		text.maxWidth = Math.min( Camera.main.width, 120 );
-		text.measure();
-		add( text );
+		BitmapTextMultiline text = createText( TXT );
 		
 		text.x = align( (Camera.main.width - text.width()) / 2 );
-		text.y = align( (Camera.main.height - text.height()) / 2 );
+		text.y = align( (Camera.main.height - text.height()) / 3 );
 		
-		BitmapTextMultiline link = createMultiline( LNK, 8 );
-		link.maxWidth = Math.min( Camera.main.width, 120 );
-		link.measure();
-		link.hardlight( Window.TITLE_COLOR );
+		BitmapTextMultiline link = createText( LNK );
 		add( link );
+		link.hardlight( Window.TITLE_COLOR );
 		
-		link.x = text.x;
-		link.y = text.y + text.height();
+		placeBellow(link,text);
 		
 		TouchArea hotArea = new TouchArea( link ) {
 			@Override
@@ -73,36 +104,31 @@ public class AboutScene extends PixelScene {
 		add( hotArea );
 
 
-		BitmapTextMultiline txtTra = createMultiline( TRANSLATE, 8 );
-		txtTra.maxWidth = Math.min( Camera.main.width, 120 );
-		txtTra.measure();
-		add( txtTra );
+		BitmapTextMultiline txtTra = createText(TRANSLATE);		
+		placeBellow(txtTra,link);
 		
-		txtTra.x = link.x;
-		txtTra.y = link.y + link.height()+txtTra.height();
+		BitmapTextMultiline lnkTra = createTouchEmail(TRANSLATE_LNK, txtTra);
 		
-		BitmapTextMultiline lnkTra = createMultiline( TRANSLATE_LNK, 8 );
-		lnkTra.maxWidth = Math.min( Camera.main.width, 120 );
-		lnkTra.measure();
-		lnkTra.hardlight( Window.TITLE_COLOR );
-		add( lnkTra );
+		String lang = java.util.Locale.getDefault().getLanguage();
 		
-		lnkTra.x = txtTra.x;
-		lnkTra.y = txtTra.y + txtTra.height();
-		TouchArea traArea = new TouchArea( lnkTra ) {
-			@Override
-			protected void onClick( Touch touch ) {
-				Intent intent = new Intent( Intent.ACTION_SEND);
-				intent.setType("message/rfc822");
-				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{TRANSLATE_LNK} );
-				intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name) );
-
-				Game.instance.startActivity( Intent.createChooser(intent, TRANSLATE_SND) );
-			}
-		};
-		add( traArea );
-		
-		
+		if("ru".equals(lang)){
+			
+			String TRANSLATE_RUS_SUP     = Game.getVar(R.string.AboutScene_TranslateRusSup);
+			String TRANSLATE_RUS_SUP_LNK = Game.getVar(R.string.AboutScene_TranslateRusSupLnk);
+			
+			String TRANSLATE_RUS         = Game.getVar(R.string.AboutScene_TranslateRus);
+			String TRANSLATE_RUS_LNK     = Game.getVar(R.string.AboutScene_TranslateRusLnk);
+			
+			BitmapTextMultiline txtTraRusSup = createText( TRANSLATE_RUS_SUP);		
+			placeBellow(txtTraRusSup,lnkTra);
+			
+			BitmapTextMultiline traRusSupLnk = createTouchEmail(TRANSLATE_RUS_SUP_LNK, txtTraRusSup);
+			
+			BitmapTextMultiline txtTraRus = createText( TRANSLATE_RUS);	
+			placeBellow(txtTraRus, traRusSupLnk);
+			createTouchEmail(TRANSLATE_RUS_LNK, txtTraRus);
+		}
+			
 		Image wata = Icons.WATA.get();
 		wata.x = align( text.x + (text.width() - wata.width) / 2 );
 		wata.y = text.y - wata.height - 8;
