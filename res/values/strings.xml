@@ -75,8 +75,17 @@
 
 
    <!--  STRINGS OF Char CLASS  -->
-   <string name="Char_Name">mob</string>
-   <string name="Char_Hit">%1$s hit %2$s</string>
+   <string-array name="Char_Name">
+       <item>mob</item>
+       <item>mob</item>>
+   </string-array>
+
+   <string-array name="Char_Hit">
+       <item>%1$s hit %2$s</item>
+       <item>%1$s hit %2$s</item>
+       <item>%1$s hit %2$s</item>
+   </string-array>
+   
    <string name="Char_Kill">%s killed you...</string>
    <string name="Char_Defeat">%1$s defeated %2$s</string>
    <string name="Char_YouMissed">%1$s %2$s your attack</string>

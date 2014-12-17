@@ -62,7 +62,11 @@ import com.watabou.utils.Random;
 
 public abstract class Char extends Actor {
 
-	protected static final String TXT_HIT		= Game.getVar(R.string.Char_Hit);
+	public static final int UNDEFINED = 0;
+	public static final int MALE      = 1;
+	public static final int FEMALE    = 2;
+	
+	protected static final String TXT_HIT[]		= Game.getVars(R.array.Char_Hit);
 	protected static final String TXT_KILL		= Game.getVar(R.string.Char_Kill);
 	protected static final String TXT_DEFEAT	= Game.getVar(R.string.Char_Defeat);
 	
@@ -75,7 +79,13 @@ public abstract class Char extends Actor {
 	
 	public CharSprite sprite;
 	
-	public String name = Game.getVar(R.string.Char_Name);
+	public String nameVariants[]  = Game.getVars(R.array.Char_Name);
+	
+	public String name            = nameVariants[0];
+	public String name_objective  = nameVariants[1];
+	
+	public boolean haveObjective  = false;
+	public int     gender         = UNDEFINED;
 	
 	public int HT;
 	public int HP;
@@ -137,7 +147,7 @@ public abstract class Char extends Actor {
 		if (hit( this, enemy, false )) {
 			
 			if (visibleFight) {
-				GLog.i( TXT_HIT, name, enemy.name );
+				GLog.i( TXT_HIT[gender], name, enemy.haveObjective ? enemy.name_objective : enemy.name );
 			}
 			
 			// FIXME
