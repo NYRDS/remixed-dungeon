@@ -99,6 +99,7 @@
 
    <!--  STRINGS OF Hero CLASS  -->
    <string name="Hero_Name">you</string>
+   <string name="Hero_Name_Objective">you</string>
    <string name="Hero_Leave">One does not simply leave Pixel Dungeon.</string>
    <string name="Hero_LevelUp">level up!</string>
    <string name="Hero_NewLevel">Welcome to level %d! Now you are healthier and more focused. It\'s easier for you to hit enemies and dodge their attacks.</string>

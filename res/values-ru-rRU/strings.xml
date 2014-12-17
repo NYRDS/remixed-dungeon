@@ -105,6 +105,7 @@
 
    <!--  STRINGS OF Hero CLASS  -->
    <string name="Hero_Name">ты</string>
+   <string name="Hero_Name_Objective">тебя</string>
    <string name="Hero_Leave">Нельзя просто так взять и выйти из Pixel Dungeon.</string>
    <string name="Hero_LevelUp">новый уровень!</string>
    <string name="Hero_NewLevel">Твой уровень поднялся до %d! Ты окрепчал, а может даже поумнел. Тебе стало проще попадать по врагам и уклоняться от их атак.</string>
