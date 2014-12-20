@@ -50,6 +50,8 @@ public class Scorpio extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.125f;
+		
+		gender = MALE;
 	}
 	
 	@Override

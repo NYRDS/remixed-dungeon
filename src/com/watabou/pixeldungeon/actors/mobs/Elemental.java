@@ -49,6 +49,8 @@ public class Elemental extends Mob {
 		
 		loot = new PotionOfLiquidFlame();
 		lootChance = 0.1f;
+		
+		gender = MALE;
 	}
 	
 	@Override

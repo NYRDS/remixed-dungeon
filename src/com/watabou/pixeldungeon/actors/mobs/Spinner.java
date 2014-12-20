@@ -49,6 +49,8 @@ public class Spinner extends Mob {
 		lootChance = 0.125f;
 		
 		FLEEING = new Fleeing();
+		
+		gender = MALE;
 	}
 	
 	@Override

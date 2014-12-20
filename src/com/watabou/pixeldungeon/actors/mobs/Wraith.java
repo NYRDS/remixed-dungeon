@@ -48,6 +48,8 @@ public class Wraith extends Mob {
 		EXP = 0;
 		
 		flying = true;
+		
+		gender = MALE;
 	}
 	
 	private static final String LEVEL = "level";

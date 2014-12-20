@@ -60,6 +60,8 @@ public class King extends Mob {
 		defenseSkill = 25;
 		
 		Undead.count = 0;
+		
+		gender = MALE;
 	}
 	
 	private boolean nextPedestal = true;
@@ -244,6 +246,8 @@ public class King extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			gender = MALE;
 		}
 		
 		@Override

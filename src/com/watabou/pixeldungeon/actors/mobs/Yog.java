@@ -65,6 +65,8 @@ public class Yog extends Mob {
 		EXP = 50;
 		
 		state = PASSIVE;
+		
+		gender = MALE;
 	}
 	
 	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);	
@@ -193,6 +195,8 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			gender = MALE;
 		}
 		
 		public RottingFist() {
@@ -286,6 +290,8 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			gender = MALE;
 		}
 		
 		public BurningFist() {
@@ -403,6 +409,8 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = HUNTING;
+			
+			gender = FEMALE;
 		}
 		
 		@Override

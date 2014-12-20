@@ -48,6 +48,8 @@ public class Skeleton extends Mob {
 		
 		EXP = 5;
 		maxLvl = 10;
+		
+		gender = MALE;
 	}
 	
 	@Override

@@ -39,6 +39,8 @@ public class Gnoll extends Mob {
 		
 		loot = Gold.class;
 		lootChance = 0.5f;
+		
+		gender = MALE;
 	}
 	
 	@Override

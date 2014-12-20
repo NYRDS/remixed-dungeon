@@ -341,6 +341,8 @@ public class Ghost extends NPC {
 			maxLvl = 5;	
 			
 			state = WANDERING;
+			
+			gender = FEMALE;
 		}
 		
 		@Override

@@ -55,6 +55,8 @@ public class Tengu extends Mob {
 		HP = HT = 120;
 		EXP = 20;
 		defenseSkill = 20;
+		
+		gender = MALE;
 	}
 	
 	private int timeToJump = JUMP_DELAY;

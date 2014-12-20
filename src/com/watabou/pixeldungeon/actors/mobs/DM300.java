@@ -58,6 +58,8 @@ public class DM300 extends Mob {
 		
 		loot = new RingOfThorns().random();
 		lootChance = 0.333f;
+		
+		gender = MALE;
 	}
 	
 	@Override

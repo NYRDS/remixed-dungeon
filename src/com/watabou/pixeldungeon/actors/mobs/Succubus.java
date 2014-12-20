@@ -57,6 +57,8 @@ public class Succubus extends Mob {
 		
 		loot = new ScrollOfLullaby();
 		lootChance = 0.05f;
+		
+		gender = FEMALE;
 	}
 	
 	@Override

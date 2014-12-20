@@ -41,6 +41,8 @@ public class Golem extends Mob {
 		
 		EXP = 12;
 		maxLvl = 22;
+		
+		gender = MALE;
 	}
 	
 	@Override
