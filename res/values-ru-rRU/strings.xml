@@ -225,6 +225,9 @@
        <item >Этот текст написан на языке демонов</item>
    </string-array>
 
+   <!--  STRINGS OF Assets CLASS  -->
+   <string name="Assets_Prefix">"rus_"</string>
+   
 
    <!--  STRINGS OF Badges CLASS  -->
    <string name="Badges_Info1">Значок заработан: %s</string>

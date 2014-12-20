@@ -218,7 +218,9 @@
        <item >The text is written in demonic language.</item>
        <item >The text is written in demonic language.</item>
    </string-array>
-
+   
+   <!--  STRINGS OF Assets CLASS  -->
+   <string name="Assets_Prefix">""</string>
 
    <!--  STRINGS OF Badges CLASS  -->
    <string name="Badges_Info1">Badge endorsed: %s</string>
