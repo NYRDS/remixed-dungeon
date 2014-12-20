@@ -663,8 +663,8 @@
    
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
-   <string name="Sorrowmoss_Name">Лишайник Скорби</string>
-   <string name="Sorrowmoss_Desc">Лишайник Скорби это цветок (а не лишайник) с бритвенно-острыми лепестками, покрытыми смертельным ядом.</string>
+   <string name="Sorrowmoss_Name">Грустномох</string>
+   <string name="Sorrowmoss_Desc">Грустномох это цветок (а не мох) с бритвенно-острыми лепестками, покрытыми смертельным ядом.</string>
    
 
    <!--  STRINGS OF Sungrass CLASS  -->
@@ -784,8 +784,8 @@
 
 
    <!--  STRINGS OF ScrollHolder CLASS  -->
-   <string name="ScrollHolder_Name">держатель свитков</string>
-   <string name="ScrollHolder_Info">В этот контейнер может поместиться любое количество свитков. Он освободит место в твоём рюкзаке и защитит свитки от огня.</string>
+   <string name="ScrollHolder_Name">футляр для свитков</string>
+   <string name="ScrollHolder_Info">В этот футляр может поместиться любое количество свитков. Он освободит место в твоём рюкзаке и защитит свитки от огня.</string>
 
 
    <!--  STRINGS OF SeedPouch CLASS  -->
