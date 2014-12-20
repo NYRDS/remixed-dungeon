@@ -1144,7 +1144,7 @@
 
 
    <!--  STRINGS OF ScrollOfRecharging CLASS  -->
-   <string name="ScrollOfRecharging_Name">Свиток перезарядки</string>
+   <string name="ScrollOfRecharging_Name">Свиток Перезарядки</string>
    <string name="ScrollOfRecharging_Info">Сырая магическая энергия, заточённая в этом свитке восстановит заряд всех волшебных палочек того, кто его прочтёт.</string>
    <string name="ScrollOfRecharging_Info1a">поток энергии пробежал по твоему рюкзаку, перезарядив волшебную палочку</string>
    <string name="ScrollOfRecharging_Info1b">поток энергии пробежал по твоему рюкзаку, перезарядив волшебные палочки</string>
@@ -1268,7 +1268,7 @@
    <string name="WandOfMagicMissile_ACDisenchant">РАСКОЛДОВАТЬ</string>
    <string name="WandOfMagicMissile_Info1">Ты пришлёпнул себя, своей собственной Палочкой Волшебных Снарядов...</string>
    <string name="WandOfMagicMissile_SelectWand">Выбери палочку для улучшения</string>
-   <string name="WandOfMagicMissile_Desinchanted">ты расколдовал Палочку Волшебных Снарядов, использовав её энергию для улучшения предмета %s</string>
+   <string name="WandOfMagicMissile_Desinchanted">ты развоплотил Палочку Волшебных Снарядов, использовав её энергию для улучшения предмета %s</string>
 
 
    <!--  STRINGS OF WandOfPoison CLASS  -->
@@ -1370,7 +1370,7 @@
 
 
    <!--  STRINGS OF Glaive CLASS  -->
-   <string name="Glaive_Name">меч-копьё</string>
+   <string name="Glaive_Name">глефа</string>
    <string name="Glaive_Info">Копьё с лезвием от меча на конце.</string>
 
 
@@ -1562,11 +1562,11 @@
    <string name="Mob_Desc">Настоящее описание скоро появится!</string>
    <string name="Mob_Died">Что-то умерло в дали</string>
    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
-   <string name="Mob_StaSleepingStatus">Монстр %s спит</string>
-   <string name="Mob_StaWanderingStatus">Монстр %s рыщет</string>
-   <string name="Mob_StaHuntingStatus">Монстр %s охотится</string>
-   <string name="Mob_StaFleeingStatus">Монстр %s спасается бегством</string>
-   <string name="Mob_StaPassiveStatus">Монстр %s пассивен</string>
+   <string name="Mob_StaSleepingStatus">%s спит</string>
+   <string name="Mob_StaWanderingStatus">%s рыщет</string>
+   <string name="Mob_StaHuntingStatus">%s охотится</string>
+   <string name="Mob_StaFleeingStatus">%s спасается бегством</string>
+   <string name="Mob_StaPassiveStatus">%s бездельничает</string>
    <!--  STRINGS OF Acidic CLASS  -->
    <string name="Acidic_Name">кислотный скорпион</string>
    <!--  STRINGS OF Albino CLASS  -->
@@ -1650,7 +1650,7 @@
    <string name="Skeleton_Name">скелет</string>
    <string name="Skeleton_Desc">Скелеты, состоящие из костей павших путешественников, восстали под воздействием отголосков зловещей магии таящейся в глубине подземелья. Будучи достаточно повреждёнными, они разлетаются на костяные осколки.</string>
    <string name="Skeleton_Defense">заблокировал</string>
-   <string name="Skeleton_Killed">Тебе пробило костяным осколком...</string>
+   <string name="Skeleton_Killed">Тебя пробило костяным осколком...</string>
    <!--  STRINGS OF Spinner CLASS  -->
    <string name="Spinner_Name">пещерный паук</string>
    <string name="Spinner_Desc">Эти пушистые зелёные пауки стараются избегать прямых столкновений, предпочитая выжидать в дали, пока их жертва, запутанная в паутине, медленно гибнет от яда.</string>
@@ -1667,7 +1667,7 @@
    <!--  STRINGS OF Tengu CLASS  -->
    <string name="Tengu_Name">Тенгу</string>
    <string name="Tengu_Desc">Тенгу, это члены древнего клана наёмных убийц, который также зовётся Тенгу. Они известны страстью к сюрикенам и ловушкам.</string>
-   <string name="Tengu_Info1">Наконец, свобода...</string>
+   <string name="Tengu_Info1">Наконец-то, свобода...</string>
    <string name="Tengu_Info2">Попался, %s!</string>
    <!--  STRINGS OF Thief CLASS  -->
    <string name="Thief_Name">свихнувшийся вор</string>
