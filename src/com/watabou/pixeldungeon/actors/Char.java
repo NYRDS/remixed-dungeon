@@ -67,7 +67,7 @@ public abstract class Char extends Actor {
 	public static final int FEMALE    = 2;
 	
 	protected static final String TXT_HIT[]		= Game.getVars(R.array.Char_Hit);
-	protected static final String TXT_KILL		= Game.getVar(R.string.Char_Kill);
+	protected static final String TXT_KILL[]    = Game.getVars(R.array.Char_Kill);
 	protected static final String TXT_DEFEAT	= Game.getVar(R.string.Char_Defeat);
 	
 	private static final String TXT_YOU_MISSED	= Game.getVar(R.string.Char_YouMissed);
@@ -178,7 +178,7 @@ public abstract class Char extends Actor {
 					if (Dungeon.hero.killerGlyph != null) {
 						
 						Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, Dungeon.hero.killerGlyph.name(), Dungeon.depth ) );
-						GLog.n( TXT_KILL, Dungeon.hero.killerGlyph.name() );
+						GLog.n( TXT_KILL[MALE], Dungeon.hero.killerGlyph.name() );
 						
 					} else {
 						if (Bestiary.isUnique( this )) {
@@ -188,7 +188,7 @@ public abstract class Char extends Actor {
 								Utils.indefinite( name ), Dungeon.depth ) );
 						}
 						
-						GLog.n( TXT_KILL, name );
+						GLog.n( TXT_KILL[gender], name );
 					}
 					
 				} else {

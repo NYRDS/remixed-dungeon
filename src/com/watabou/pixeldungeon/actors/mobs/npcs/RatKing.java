@@ -32,6 +32,7 @@ public class RatKing extends NPC {
 		spriteClass = RatKingSprite.class;
 		
 		state = SLEEPEING;
+		gender = MALE;
 	}
 	
 	@Override
