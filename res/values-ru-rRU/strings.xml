@@ -861,7 +861,7 @@
 <!--  PACKAGE /items/potions  -->
    <!--  STRINGS OF Potion CLASS  -->
    <string name="Potion_Name">%s зелье</string>
-   <string name="Potion_Info">В этом флаконе содержится неоднородная %s зелье. Кто знает, что станется, если её выпить или швырнуть?</string>
+   <string name="Potion_Info">В этом флаконе содержится  %s зелье. Кто знает, что станется, если её выпить или швырнуть?</string>
    <string name="Potion_ACDrink">ВЫПИТЬ</string>
    <string name="Potion_Harmfull">Вредное зелье!</string>
    <string name="Potion_Beneficial">Полезное зелье</string>
