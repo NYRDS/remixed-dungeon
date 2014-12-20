@@ -22,6 +22,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Food;
@@ -112,6 +113,8 @@ public enum HeroClass {
 		Dungeon.quickslot = Dart.class;
 		
 		new PotionOfStrength().setKnown();
+		
+		hero.gender = Char.MALE;
 	}
 	
 	private static void initMage( Hero hero ) {	
@@ -123,6 +126,8 @@ public enum HeroClass {
 		Dungeon.quickslot = wand;
 		
 		new ScrollOfIdentify().setKnown();
+		
+		hero.gender = Char.MALE;
 	}
 	
 	private static void initRogue( Hero hero ) {
@@ -135,6 +140,8 @@ public enum HeroClass {
 		Dungeon.quickslot = Dart.class;
 		
 		new ScrollOfMagicMapping().setKnown();
+		
+		hero.gender = Char.MALE;
 	}
 	
 	private static void initHuntress( Hero hero ) {
@@ -146,6 +153,8 @@ public enum HeroClass {
 		boomerang.identify().collect();
 		
 		Dungeon.quickslot = boomerang;
+		
+		hero.gender = Char.FEMALE;
 	}
 	
 	public String title() {
