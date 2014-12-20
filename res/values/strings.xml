@@ -86,7 +86,12 @@
        <item>%1$s hit %2$s</item>
    </string-array>
    
-   <string name="Char_Kill">%s killed you...</string>
+  <string-array name="Char_Kill">
+       <item>%s killed you...</item>
+       <item>%s killed you...</item>
+       <item>%s killed you...</item>
+   </string-array>
+   
    <string name="Char_Defeat">%1$s defeated %2$s</string>
    <string name="Char_YouMissed">%1$s %2$s your attack</string>
    <string name="Char_SmbMissed">%1$s %2$s %3$s\'s attack</string>

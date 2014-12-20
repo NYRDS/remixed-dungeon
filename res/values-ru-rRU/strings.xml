@@ -90,8 +90,13 @@
        <item>%1$s ударил %2$s</item>
        <item>%1$s ударила %2$s</item>
    </string-array>
+
+   <string-array name="Char_Kill">
+       <item>%s убило тебя</item>
+       <item>%s убил тебя</item>
+       <item>%s убила тебя</item>
+   </string-array>
    
-   <string name="Char_Kill">%s убил тебя...</string>
    <string name="Char_Defeat">%1$s одолел %2$s</string>
    <string name="Char_YouMissed">%1$s %2$s от твоей атаки</string>
    <string name="Char_SmbMissed">%1$s %2$s от атаки монстра %3$s</string>
