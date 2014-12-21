@@ -17,13 +17,16 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+
 public class Assets {
 
 	public static final String ARCS_BG		= "arcs1.png";
 	public static final String ARCS_FG		= "arcs2.png";
 	public static final String DASHBOARD	= "dashboard.png";
 	
-	public static final String BANNERS	= "banners.png";
+	public static final String BANNERS	= Game.getVar(R.string.Assets_Prefix)+"banners.png";
 	public static final String BADGES	= "badges.png";
 	public static final String AMULET	= "amulet.png";
 	

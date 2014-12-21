@@ -53,6 +53,8 @@ public class Thief extends Mob {
 		loot = RingOfHaggler.class;
 		lootChance = 0.01f;
 		
+		gender = MALE;
+		
 		FLEEING = new Fleeing();
 	}
 	

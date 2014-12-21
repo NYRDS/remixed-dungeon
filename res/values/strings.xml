@@ -75,10 +75,29 @@
 
 
    <!--  STRINGS OF Char CLASS  -->
-   <string name="Char_Name">mob</string>
-   <string name="Char_Hit">%1$s hit %2$s</string>
-   <string name="Char_Kill">%s killed you...</string>
-   <string name="Char_Defeat">%1$s defeated %2$s</string>
+   <string-array name="Char_Name">
+       <item>mob</item>
+       <item>mob</item>>
+   </string-array>
+
+   <string-array name="Char_Hit">
+       <item>%1$s hit %2$s</item>
+       <item>%1$s hit %2$s</item>
+       <item>%1$s hit %2$s</item>
+   </string-array>
+   
+  <string-array name="Char_Kill">
+       <item>%s killed you...</item>
+       <item>%s killed you...</item>
+       <item>%s killed you...</item>
+   </string-array>
+
+    <string-array name="Char_Defeat">
+       <item>%1$s defeated %2$s</item>
+       <item>%1$s defeated %2$s</item>
+       <item>%1$s defeated %2$s</item>
+   </string-array>
+
    <string name="Char_YouMissed">%1$s %2$s your attack</string>
    <string name="Char_SmbMissed">%1$s %2$s %3$s\'s attack</string>
    <string name="Char_OutParalysis">The pain snapped %s out of paralysis</string>
@@ -99,6 +118,7 @@
 
    <!--  STRINGS OF Hero CLASS  -->
    <string name="Hero_Name">you</string>
+   <string name="Hero_Name_Objective">you</string>
    <string name="Hero_Leave">One does not simply leave Pixel Dungeon.</string>
    <string name="Hero_LevelUp">level up!</string>
    <string name="Hero_NewLevel">Welcome to level %d! Now you are healthier and more focused. It\'s easier for you to hit enemies and dodge their attacks.</string>
@@ -208,7 +228,9 @@
        <item >The text is written in demonic language.</item>
        <item >The text is written in demonic language.</item>
    </string-array>
-
+   
+   <!--  STRINGS OF Assets CLASS  -->
+   <string name="Assets_Prefix">""</string>
 
    <!--  STRINGS OF Badges CLASS  -->
    <string name="Badges_Info1">Badge endorsed: %s</string>

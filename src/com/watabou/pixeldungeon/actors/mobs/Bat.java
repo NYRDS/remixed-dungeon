@@ -45,6 +45,8 @@ public class Bat extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.125f;
+		
+		gender = FEMALE;
 	}
 	
 	@Override

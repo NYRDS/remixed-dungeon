@@ -161,7 +161,9 @@ public class Hero extends Char {
 	public Hero() {
 		super();
 		
-		name = Game.getVar(R.string.Hero_Name);
+		name           = Game.getVar(R.string.Hero_Name);
+		name_objective = Game.getVar(R.string.Hero_Name_Objective);
+		haveObjective  = true;
 		
 		HP = HT = 20;
 		STR = STARTING_STR;

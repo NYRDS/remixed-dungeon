@@ -34,6 +34,8 @@ public class Rat extends Mob {
 		defenseSkill = 3;
 		
 		maxLvl = 5;
+		
+		gender = FEMALE;
 	}
 	
 	@Override

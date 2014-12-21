@@ -45,6 +45,8 @@ public class Statue extends Mob {
 
 		EXP = 0;
 		state = PASSIVE;
+		
+		gender = FEMALE;
 	}
 	
 	private Weapon weapon;

@@ -44,6 +44,8 @@ public class Piranha extends Mob {
 		baseSpeed = 2f;
 		
 		EXP = 0;
+		
+		gender = FEMALE;
 	}
 	
 	public Piranha() {

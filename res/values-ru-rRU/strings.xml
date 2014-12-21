@@ -80,10 +80,29 @@
 
 
    <!--  STRINGS OF Char CLASS  -->
-   <string name="Char_Name">монстр</string>
-   <string name="Char_Hit">%1$s ударил %2$s</string>
-   <string name="Char_Kill">%s убил тебя...</string>
-   <string name="Char_Defeat">%1$s одолел %2$s</string>
+   <string-array name="Char_Name">
+       <item>монстр</item>
+       <item>монстра</item>>
+   </string-array>
+   
+   <string-array name="Char_Hit">
+       <item>%1$s ударило %2$s</item>
+       <item>%1$s ударил %2$s</item>
+       <item>%1$s ударила %2$s</item>
+   </string-array>
+
+   <string-array name="Char_Kill">
+       <item>%s убило тебя</item>
+       <item>%s убил тебя</item>
+       <item>%s убила тебя</item>
+   </string-array>
+
+   <string-array name="Char_Defeat">
+       <item>%1$s одолело %2$s</item>
+       <item>%1$s одолел %2$s</item>
+       <item>%1$s одолела %2$s</item>
+   </string-array>
+   
    <string name="Char_YouMissed">%1$s %2$s от твоей атаки</string>
    <string name="Char_SmbMissed">%1$s %2$s от атаки монстра %3$s</string>
    <string name="Char_OutParalysis">Боль пробудила %s от паралича</string>
@@ -105,6 +124,7 @@
 
    <!--  STRINGS OF Hero CLASS  -->
    <string name="Hero_Name">ты</string>
+   <string name="Hero_Name_Objective">тебя</string>
    <string name="Hero_Leave">Нельзя просто так взять и выйти из Pixel Dungeon.</string>
    <string name="Hero_LevelUp">новый уровень!</string>
    <string name="Hero_NewLevel">Твой уровень поднялся до %d! Ты окрепчал, а может даже поумнел. Тебе стало проще попадать по врагам и уклоняться от их атак.</string>
@@ -215,6 +235,9 @@
        <item >Этот текст написан на языке демонов</item>
    </string-array>
 
+   <!--  STRINGS OF Assets CLASS  -->
+   <string name="Assets_Prefix">"rus_"</string>
+   
 
    <!--  STRINGS OF Badges CLASS  -->
    <string name="Badges_Info1">Значок заработан: %s</string>
@@ -477,7 +500,7 @@
 
 
    <!--  STRINGS OF WndStory CLASS  -->
-   <string name="WndStory_Sewers">Подземелье расположено точно под городом, верхние уровни фактически являются канализацией города. Будучи, условно, частью города, эти уровни не столь опасны. Конечно безопасными их тоже не назовёшь, но по крайней мере здесь не приходится волноваться о зловещей магии.</string>
+   <string name="WndStory_Sewers">Подземелье расположено точно под городом, верхние уровни фактически являются канализацией города. Будучи условно частью города, эти уровни не столь опасны. Конечно безопасными их тоже не назовёшь, но по крайней мере, здесь не приходится волноваться о зловещей магии.</string>
    <string name="WndStory_Prision">Много лет назад на этом месте возвели подземную тюрьму для содержания опаснейших преступников. Тогда это оказалось весьма недурственной идеей, поскольку побег оттуда был воистину проблематичен. Но вскоре чёрные испарения стали сочиться из глубин, лишая рассудка стражников и заключённых. В конце концов тюрьму забросили, оставив некоторых заключённых взаперти.</string>
    <string name="WndStory_Caves">Пещеры, протянувшиеся под тюрьмой, вряд ли можно назвать обитаемыми. Они слишком глубоко, вне досягаемости Города и слишком бедны минералами, чтобы заинтересовать дворфов. В прошлом здесь располагалась торговая точка, на пути соединяющим две стороны, но она сгинула вместе с падением Дворфийской Метрополии. Теперь здесь есть лишь вездесущие гноллы и подземные твари.</string>
    <string name="WndStory_Metropolis">Дворфийская Метрополия была когда-то величайшим городом-государством подземного народа. В дни его расцвета механизированная армия дворфов смогла отбиться от вторжения старого бога и его армии демонов. Говорится, что вернувшиеся воины несли с собой семя разрушения, и что эта победа лишь ознаменовала кончину подземного царства.</string>
@@ -645,8 +668,8 @@
    
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
-   <string name="Sorrowmoss_Name">Лишайник Скорби</string>
-   <string name="Sorrowmoss_Desc">Лишайник Скорби это цветок (а не лишайник) с бритвенно-острыми лепестками, покрытыми смертельным ядом.</string>
+   <string name="Sorrowmoss_Name">Грустномох</string>
+   <string name="Sorrowmoss_Desc">Грустномох это цветок (а не мох) с бритвенно-острыми лепестками, покрытыми смертельным ядом.</string>
    
 
    <!--  STRINGS OF Sungrass CLASS  -->
@@ -766,8 +789,8 @@
 
 
    <!--  STRINGS OF ScrollHolder CLASS  -->
-   <string name="ScrollHolder_Name">держатель свитков</string>
-   <string name="ScrollHolder_Info">В этот контейнер может поместиться любое количество свитков. Он освободит место в твоём рюкзаке и защитит свитки от огня.</string>
+   <string name="ScrollHolder_Name">футляр для свитков</string>
+   <string name="ScrollHolder_Info">В этот футляр может поместиться любое количество свитков. Он освободит место в твоём рюкзаке и защитит свитки от огня.</string>
 
 
    <!--  STRINGS OF SeedPouch CLASS  -->
@@ -843,7 +866,7 @@
 <!--  PACKAGE /items/potions  -->
    <!--  STRINGS OF Potion CLASS  -->
    <string name="Potion_Name">%s зелье</string>
-   <string name="Potion_Info">В этом флаконе содержится неоднородная %s жидкость. Кто знает, что станется, если её выпить или швырнуть?</string>
+   <string name="Potion_Info">В этом флаконе содержится  %s зелье. Кто знает, что станется, если её выпить или швырнуть?</string>
    <string name="Potion_ACDrink">ВЫПИТЬ</string>
    <string name="Potion_Harmfull">Вредное зелье!</string>
    <string name="Potion_Beneficial">Полезное зелье</string>
@@ -851,20 +874,20 @@
    <string name="Potion_No">Нет, я передумал</string>
    <string name="Potion_SureDrink">Ты уверен, что стоит это пить? Обычно такие зелья кидают во врагов.</string>
    <string name="Potion_SureThrow">Ты уверен, что стоит это кидать? Как правило подобные зелья выпивают.</string>
-   <string name="Potion_Shatter">Флакон разбивается и %s жидкость безвредно растекается</string>
+   <string name="Potion_Shatter">Флакон разбивается и %s зелье безвредно растекается</string>
    <string-array name="Potion_Colors">
-       <item >голубая</item>
-       <item >алая</item>
-       <item >синяя</item>
-       <item >зелёная</item>
-       <item >золотая</item>
-       <item >лиловая</item>
-       <item >чёрная</item>
-       <item >белесая</item>
-       <item >янтарная</item>
-       <item >коричневая</item>
-       <item >фиолетовая</item>
-       <item >серебряная</item>
+       <item >голубое</item>
+       <item >алое</item>
+       <item >синее</item>
+       <item >зелёное</item>
+       <item >золотое</item>
+       <item >лиловое</item>
+       <item >чёрное</item>
+       <item >белесое</item>
+       <item >янтарное</item>
+       <item >коричневое</item>
+       <item >фиолетовое</item>
+       <item >серебряное</item>
    </string-array>
 
 
@@ -1126,7 +1149,7 @@
 
 
    <!--  STRINGS OF ScrollOfRecharging CLASS  -->
-   <string name="ScrollOfRecharging_Name">Свиток перезарядки</string>
+   <string name="ScrollOfRecharging_Name">Свиток Перезарядки</string>
    <string name="ScrollOfRecharging_Info">Сырая магическая энергия, заточённая в этом свитке восстановит заряд всех волшебных палочек того, кто его прочтёт.</string>
    <string name="ScrollOfRecharging_Info1a">поток энергии пробежал по твоему рюкзаку, перезарядив волшебную палочку</string>
    <string name="ScrollOfRecharging_Info1b">поток энергии пробежал по твоему рюкзаку, перезарядив волшебные палочки</string>
@@ -1250,7 +1273,7 @@
    <string name="WandOfMagicMissile_ACDisenchant">РАСКОЛДОВАТЬ</string>
    <string name="WandOfMagicMissile_Info1">Ты пришлёпнул себя, своей собственной Палочкой Волшебных Снарядов...</string>
    <string name="WandOfMagicMissile_SelectWand">Выбери палочку для улучшения</string>
-   <string name="WandOfMagicMissile_Desinchanted">ты расколдовал Палочку Волшебных Снарядов, использовав её энергию для улучшения предмета %s</string>
+   <string name="WandOfMagicMissile_Desinchanted">ты развоплотил Палочку Волшебных Снарядов, использовав её энергию для улучшения предмета %s</string>
 
 
    <!--  STRINGS OF WandOfPoison CLASS  -->
@@ -1352,7 +1375,7 @@
 
 
    <!--  STRINGS OF Glaive CLASS  -->
-   <string name="Glaive_Name">меч-копьё</string>
+   <string name="Glaive_Name">глефа</string>
    <string name="Glaive_Info">Копьё с лезвием от меча на конце.</string>
 
 
@@ -1544,11 +1567,11 @@
    <string name="Mob_Desc">Настоящее описание скоро появится!</string>
    <string name="Mob_Died">Что-то умерло в дали</string>
    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
-   <string name="Mob_StaSleepingStatus">Монстр %s спит</string>
-   <string name="Mob_StaWanderingStatus">Монстр %s рыщет</string>
-   <string name="Mob_StaHuntingStatus">Монстр %s охотится</string>
-   <string name="Mob_StaFleeingStatus">Монстр %s спасается бегством</string>
-   <string name="Mob_StaPassiveStatus">Монстр %s пассивен</string>
+   <string name="Mob_StaSleepingStatus">%s спит</string>
+   <string name="Mob_StaWanderingStatus">%s рыщет</string>
+   <string name="Mob_StaHuntingStatus">%s охотится</string>
+   <string name="Mob_StaFleeingStatus">%s спасается бегством</string>
+   <string name="Mob_StaPassiveStatus">%s бездельничает</string>
    <!--  STRINGS OF Acidic CLASS  -->
    <string name="Acidic_Name">кислотный скорпион</string>
    <!--  STRINGS OF Albino CLASS  -->
@@ -1632,7 +1655,7 @@
    <string name="Skeleton_Name">скелет</string>
    <string name="Skeleton_Desc">Скелеты, состоящие из костей павших путешественников, восстали под воздействием отголосков зловещей магии таящейся в глубине подземелья. Будучи достаточно повреждёнными, они разлетаются на костяные осколки.</string>
    <string name="Skeleton_Defense">заблокировал</string>
-   <string name="Skeleton_Killed">Тебе пробило костяным осколком...</string>
+   <string name="Skeleton_Killed">Тебя пробило костяным осколком...</string>
    <!--  STRINGS OF Spinner CLASS  -->
    <string name="Spinner_Name">пещерный паук</string>
    <string name="Spinner_Desc">Эти пушистые зелёные пауки стараются избегать прямых столкновений, предпочитая выжидать в дали, пока их жертва, запутанная в паутине, медленно гибнет от яда.</string>
@@ -1649,7 +1672,7 @@
    <!--  STRINGS OF Tengu CLASS  -->
    <string name="Tengu_Name">Тенгу</string>
    <string name="Tengu_Desc">Тенгу, это члены древнего клана наёмных убийц, который также зовётся Тенгу. Они известны страстью к сюрикенам и ловушкам.</string>
-   <string name="Tengu_Info1">Наконец, свобода...</string>
+   <string name="Tengu_Info1">Наконец-то, свобода...</string>
    <string name="Tengu_Info2">Попался, %s!</string>
    <!--  STRINGS OF Thief CLASS  -->
    <string name="Thief_Name">свихнувшийся вор</string>
@@ -1875,5 +1898,5 @@
    <!--  STRINGS OF Utils CLASS  -->
    <!-- 1: Execute Indefinite Function to Language -->
    <!-- 0: NO Execute Indefinite Function to Language -->
-   <string name="Utils_IsIndefinte">1</string>
+   <string name="Utils_IsIndefinte">0</string>
 </resources>

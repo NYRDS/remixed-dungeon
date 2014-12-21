@@ -31,6 +31,8 @@ public abstract class NPC extends Mob {
 	
 		hostile = false;
 		state = PASSIVE;
+		
+		gender = MALE;
 	}
 	
 	protected void throwItem() {

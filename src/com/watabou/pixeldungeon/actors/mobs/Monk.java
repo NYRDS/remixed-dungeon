@@ -50,6 +50,8 @@ public class Monk extends Mob {
 		
 		loot = new Food();
 		lootChance = 0.083f;
+		
+		gender = MALE;
 	}
 	
 	@Override

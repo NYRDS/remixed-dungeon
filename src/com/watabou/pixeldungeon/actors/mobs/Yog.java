@@ -65,6 +65,8 @@ public class Yog extends Mob {
 		EXP = 50;
 		
 		state = PASSIVE;
+		
+		gender = MALE;
 	}
 	
 	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);	
@@ -193,6 +195,8 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			gender = MALE;
 		}
 		
 		public RottingFist() {
@@ -286,6 +290,8 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			gender = MALE;
 		}
 		
 		public BurningFist() {
@@ -335,7 +341,7 @@ public class Yog extends Mob {
 					
 					if (!enemy.isAlive() && enemy == Dungeon.hero) {
 						Dungeon.fail( Utils.format( ResultDescriptions.BOSS, name, Dungeon.depth ) );
-						GLog.n( TXT_KILL, name );
+						GLog.n( TXT_KILL[gender], name );
 					}
 					return true;
 					
@@ -403,6 +409,8 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = HUNTING;
+			
+			gender = FEMALE;
 		}
 		
 		@Override

@@ -49,6 +49,8 @@ public class Swarm extends Mob {
 		maxLvl = 10;
 		
 		flying = true;
+		
+		gender = MALE;
 	}
 	
 	private static final float SPLIT_DELAY	= 1f;
