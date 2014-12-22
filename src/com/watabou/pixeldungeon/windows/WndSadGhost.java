@@ -34,10 +34,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSadGhost extends Window {
 	
-	private static final String TXT_ROSE   = Game.getVar(R.string.WndSadGhost_Rose);
-	private static final String TXT_RAT    = Game.getVar(R.string.WndSadGhost_Rat);;
-	private static final String TXT_WEAPON = Game.getVar(R.string.WndSadGhost_Wepon);
-	private static final String TXT_ARMOR  = Game.getVar(R.string.WndSadGhost_Armor);
+	private static final String TXT_ROSE     = Game.getVar(R.string.WndSadGhost_Rose);
+	private static final String TXT_RAT      = Game.getVar(R.string.WndSadGhost_Rat);;
+	private static final String TXT_WEAPON   = Game.getVar(R.string.WndSadGhost_Wepon);
+	private static final String TXT_ARMOR    = Game.getVar(R.string.WndSadGhost_Armor);
+	private static final String TXT_FAREWELL = Game.getVar(R.string.WndSadGhost_Farewell);
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
@@ -92,7 +93,7 @@ public class WndSadGhost extends Window {
 			Dungeon.level.drop( reward, ghost.pos ).sprite.drop();
 		}
 		
-		ghost.yell( "Farewell, adventurer!" );
+		ghost.yell( TXT_FAREWELL );
 		ghost.die( null );
 		
 		Ghost.Quest.complete();

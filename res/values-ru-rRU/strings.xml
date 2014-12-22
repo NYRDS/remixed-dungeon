@@ -482,8 +482,9 @@
    <!--  STRINGS OF WndSadGhost CLASS  -->
    <string name="WndSadGhost_Rose">Да! Да!!! То что нужно! Прошу, отдай её мне! И можешь взять любой из этих предметов, они могут тебе пригодится...</string>
    <string name="WndSadGhost_Rat">Да! Мерзкое создание пало, наконец-то я могу упокоиться с миром... Прошу возьми любой их этих предметов, они могут тебе пригодится...</string>
-   <string name="WndSadGhost_Wepon">Призрачное оружие</string>
-   <string name="WndSadGhost_Armor">Призрачная броня</string>
+   <string name="WndSadGhost_Wepon">Оружие призрака</string>
+   <string name="WndSadGhost_Armor">Доспехи призрака</string>
+   <string name="WndSadGhost_Farewell">Счастливого пути!</string>
 
 
    <!--  STRINGS OF WndSettings CLASS  -->
