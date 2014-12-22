@@ -35,7 +35,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class WndSadGhost extends Window {
 	
 	private static final String TXT_ROSE     = Game.getVar(R.string.WndSadGhost_Rose);
-	private static final String TXT_RAT      = Game.getVar(R.string.WndSadGhost_Rat);;
+	private static final String TXT_RAT      = Game.getVar(R.string.WndSadGhost_Rat);
 	private static final String TXT_WEAPON   = Game.getVar(R.string.WndSadGhost_Wepon);
 	private static final String TXT_ARMOR    = Game.getVar(R.string.WndSadGhost_Armor);
 	private static final String TXT_FAREWELL = Game.getVar(R.string.WndSadGhost_Farewell);
