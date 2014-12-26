@@ -491,7 +491,7 @@
    <string name="WndSettings_ZoomIn">+</string>
    <string name="WndSettings_ZoomOut">-</string>
    <string name="WndSettings_ZoomDef">Масштаб по условию</string>
-   <string name="WndSettings_ScaleUp">Отмаштабировать ГУИ</string>
+   <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
    <string name="WndSettings_Immersive">Режим \"погружение\"</string>
    <string name="WndSettings_Music">Музыка</string>
    <string name="WndSettings_Sound">Звуковые эффекты</string>
@@ -590,7 +590,7 @@
 
 
    <!--  STRINGS OF LloidsBeacon CLASS  -->
-   <string name="LloidsBeacon_Name">маяк ллойда</string>
+   <string name="LloidsBeacon_Name">маяк Ллойда</string>
    <string name="LloidsBeacon_ACSet">УСТАНОВКА</string>
    <string name="LloidsBeacon_ACReturn">ВОЗВРАТ</string>
    <string name="LloidsBeacon_Info">Маяк Ллойда это интерактивное волшебное устройство, которое позволят вернутся в место где ты уже был.</string>
@@ -670,7 +670,7 @@
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
    <string name="Sorrowmoss_Name">Грустномох</string>
-   <string name="Sorrowmoss_Desc">Грустномох это цветок (а не мох) с бритвенно-острыми лепестками, покрытыми смертельным ядом.</string>
+   <string name="Sorrowmoss_Desc">Грустномох это цветок (а не мох) с лепестками острыми как бритва, покрытыми смертельным ядом.</string>
    
 
    <!--  STRINGS OF Sungrass CLASS  -->
@@ -933,7 +933,7 @@
 
 
    <!--  STRINGS OF PotionOfMindVision CLASS  -->
-   <string name="PotionOfMindVision_Name">Зелье Экстрасенсорики</string>
+   <string name="PotionOfMindVision_Name">Зелье Ясновидения</string>
    <string name="PotionOfMindVision_Info">Выпив это ты обретёшь способность улавливать мозговые волны удалённых существ, что позволит тебе чувствовать живые организмы сквозь стены. Также это зелье позволит тебе видеть сквозь ближайшие стены и двери.</string>
    <string name="PotionOfMindVision_Apply1">Ты каким-то образом почувствовал присутствие других разумных существ!</string>
    <string name="PotionOfMindVision_Apply2">Что-то тебе подсказывает, что ты единственное живое существо на этом уровне.</string>
@@ -941,7 +941,7 @@
 
    <!--  STRINGS OF PotionOfParalyticGas CLASS  -->
    <string name="PotionOfParalyticGas_Name">Зелье Парализующего Газа</string>
-   <string name="PotionOfParalyticGas_Info">При контакте с воздухом эта жидкость испарится, образуя желтоватую дымку. Любой вдохнувший его будет мгновенно парализован и сможет двинуться лишь спустя некоторое время после испарения дымки. Этот предмет можно швырнуть в удалённых врагов, чтобы поместить их под влияние газа.</string>
+   <string name="PotionOfParalyticGas_Info">При контакте с воздухом эта жидкость испарится, образуя желтоватую дымку. Любой вдохнувший его будет мгновенно парализован и сможет двинуться лишь спустя некоторое время после испарения дымки. Этот предмет можно швырнуть во врагов, чтобы парализовать их.</string>
 
 
    <!--  STRINGS OF PotionOfPurity CLASS  -->
@@ -1134,7 +1134,7 @@
 
 
    <!--  STRINGS OF ScrollOfMagicMapping CLASS  -->
-   <string name="ScrollOfMagicMapping_Name">Свиток Волшебной Разметки</string>
+   <string name="ScrollOfMagicMapping_Name">Свиток Волшебной Карты</string>
    <string name="ScrollOfMagicMapping_Info">При прочтении свитка, в твоей памяти отчётливо выстроится картина, показывающая карту уровня и все его секреты. Но, расположение предметов и существ останется неизвестным.</string>
    <string name="ScrollOfMagicMapping_Layout">Теперь ты знаешь план уровня.</string>
 
@@ -1204,9 +1204,9 @@
    <string name="Wand_SelfTarget">Ты не можешь нацелится на себя</string>
    <string name="Wand_Prompt">Выбери направление взмаха</string>
    <string-array name="Wand_Wood">
-       <item >освящённая</item>
+       <item >ясеневая</item>
        <item >тисовая</item>
-       <item >эбоновая</item>
+       <item >эбеновая</item>
        <item >вишнёвая</item>
        <item >тиковая</item>
        <item >рябиновая</item>
@@ -1269,12 +1269,12 @@
 
 
    <!--  STRINGS OF WandOfMagicMissile CLASS  -->
-   <string name="WandOfMagicMissile_Name">Палочка Волшебных Снарядов</string>
-   <string name="WandOfMagicMissile_Info">Эта палочка выпускает снаряд волшебной энергии, нанося средний урон целевому существу.</string>
-   <string name="WandOfMagicMissile_ACDisenchant">РАСКОЛДОВАТЬ</string>
-   <string name="WandOfMagicMissile_Info1">Ты пришлёпнул себя, своей собственной Палочкой Волшебных Снарядов...</string>
+   <string name="WandOfMagicMissile_Name">Палочка Волшебных Зарядов</string>
+   <string name="WandOfMagicMissile_Info">Эта палочка выпускает заряд волшебной энергии, нанося средний урон целевому существу.</string>
+   <string name="WandOfMagicMissile_ACDisenchant">РАЗВОПЛОТИТЬ</string>
+   <string name="WandOfMagicMissile_Info1">Ты пришлёпнул себя, своей собственной Палочкой Волшебных Зарядов...</string>
    <string name="WandOfMagicMissile_SelectWand">Выбери палочку для улучшения</string>
-   <string name="WandOfMagicMissile_Desinchanted">ты развоплотил Палочку Волшебных Снарядов, использовав её энергию для улучшения предмета %s</string>
+   <string name="WandOfMagicMissile_Desinchanted">ты развоплотил Палочку Волшебных Зарядов, использовав её энергию для улучшения предмета %s</string>
 
 
    <!--  STRINGS OF WandOfPoison CLASS  -->
@@ -1318,7 +1318,7 @@
    <!--  STRINGS OF Death CLASS  -->
    <string name="Death_Name">Мрачный %s</string>
    <!--  STRINGS OF Fire CLASS  -->
-   <string name="Fire_Name">Искроносный %s</string>
+   <string name="Fire_Name">Искрящий %s</string>
    <!--  STRINGS OF Horror CLASS  -->
    <string name="Horror_Name">Жуткий %s</string>
    <!--  STRINGS OF Instability CLASS  -->
@@ -1397,12 +1397,12 @@
 
    <!--  STRINGS OF Quarterstaff CLASS  -->
    <string name="Quarterstaff_Name">боевой посох</string>
-   <string name="Quarterstaff_Info">Посох из твёрдого дерева, его концы оуованы железом.</string>
+   <string name="Quarterstaff_Info">Посох из твёрдого дерева, его концы окованы железом.</string>
 
 
    <!--  STRINGS OF ShortSword CLASS  -->
    <string name="ShortSword_Name">короткий меч</string>
-   <string name="ShortSword_Info">Действительно короткий, буквально на несколько сантиметров длинее кинжала.</string>
+   <string name="ShortSword_Info">Действительно короткий, буквально на несколько сантиметров длиннее кинжала.</string>
    <string name="ShortSword_ACReforge">ПЕРЕКОВАТЬ</string>
    <string name="ShortSword_Select">Выбери оружие для улучшения</string>
    <string name="ShortSword_Reforged">ты перековал короткий меч для улучшения оружия %s</string>
@@ -1416,7 +1416,7 @@
 
    <!--  STRINGS OF Sword CLASS  -->
    <string name="Sword_Name">меч</string>
-   <string name="Sword_Info">Отблеск бритвенно-острого клинка внушает уверенность.</string>
+   <string name="Sword_Info">Отблеск острого как бритва клинка внушает уверенность.</string>
 
 
    <!--  STRINGS OF WarHammer CLASS  -->
@@ -1448,7 +1448,7 @@
 
    <!--  STRINGS OF Dart CLASS  -->
    <string name="Dart_Name">дротик</string>
-   <string name="Dart_Info">Эти простенькие металлические шипы идеально выверены, для того чтобы точно вонзиться в свою жертву.</string>
+   <string name="Dart_Info">Эти простые металлические шипы идеально выверены, для того чтобы точно вонзиться в свою жертву.</string>
 
 
    <!--  STRINGS OF IncendiaryDart CLASS  -->
@@ -1535,7 +1535,7 @@
    <!--  STRINGS OF Light CLASS  -->
    <string name="Light_Info">Светящийся</string>
    <!--  STRINGS OF MindVision CLASS  -->
-   <string name="MindVision_Info">Экстрасенсорика</string>
+   <string name="MindVision_Info">Ясновидение</string>
    <!--  STRINGS OF Ooze CLASS  -->
    <string name="Ooze_Info">Едкая слизь</string>
    <string name="Ooze_Death">%s сожрала тебя...</string>
