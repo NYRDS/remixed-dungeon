@@ -41,7 +41,7 @@
    <string name="StartScene_Erase">Стереть текущую игру</string>
    <string name="StartScene_Depth">Глубина: %1$d, уровень: %2$d</string>
    <string name="StartScene_Really">Вы точно хотите начать новую игру?</string>
-   <string name="StartScene_Warning">Прогресс текущей игры будет стёрт.</string>
+   <string name="StartScene_Warning">Прогресс текущей игры будет потерян.</string>
    <string name="StartScene_Yes">Да, начать новую игру</string>
    <string name="StartScene_No">Нет, вернуться в меню</string>
    <string name="StartScene_Unlock">Чтобы открыть этот класс персонажа, убейте 3-го босса любым другим классом</string>
@@ -110,8 +110,8 @@
    <string name="Char_StaPoisoned">отравлен</string>
    <string name="Char_StaAmok">буйствует</string>
    <string name="Char_StaSlowed">замедлен</string>
-   <string name="Char_StaMindVision">экстрасенсорика</string>
-   <string name="Char_StaMind">экстрасенсорика</string>
+   <string name="Char_StaMindVision">ясновидение</string>
+   <string name="Char_StaMind">ясновидение</string>
    <string name="Char_StaVision"></string>
    <string name="Char_StaParalysed">парализован</string>
    <string name="Char_StaFrightened">испуган</string>
@@ -202,7 +202,7 @@
    <string name="HeroSubClass_NameSnip">снайпер</string>
    <string name="HeroSubClass_DescSnip">_Снайперы_ способны заметить прорехи в броне противника, практически игнорируя её при использовании оружия дальнего боя.</string>
    <string name="HeroSubClass_NameWard">блюститель</string>
-   <string name="HeroSubClass_DescWard">За счёт своей близости к природе, _Блюститель_ имеет способность собирать капли росы и семена с растений. Также вытаптывание высокой травы даёт им временный бонус к броне.</string>
+   <string name="HeroSubClass_DescWard">За счёт своей близости к природе, _Блюститель_ может лучше собирать капли росы и семена с растений. Также контакт с высокой травой даёт им временный бонус к броне.</string>
 
 
    <!--  STRINGS OF Dungeon CLASS  -->
