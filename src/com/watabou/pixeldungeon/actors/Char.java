@@ -232,7 +232,7 @@ public abstract class Char extends Actor {
 	}
 	
 	public String defenseVerb() {
-		return Game.getVar(R.string.Char_StaDodged);
+		return Game.getVars(R.array.Char_StaDodged)[gender];
 	}
 	
 	public int dr() {

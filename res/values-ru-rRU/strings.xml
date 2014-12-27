@@ -106,13 +106,18 @@
    <string name="Char_YouMissed">%1$s %2$s от твоей атаки</string>
    <string name="Char_SmbMissed">%1$s %2$s от атаки монстра %3$s</string>
    <string name="Char_OutParalysis">Боль пробудила %s от паралича</string>
-   <string name="Char_StaDodged">уклонился</string>
+   
+   <string-array name="Char_StaDodged">
+      <item>уклонилось</item>
+      <item>уклонился</item>
+      <item>уклонилась</item>
+   </string-array>
+   
    <string name="Char_StaPoisoned">отравлен</string>
    <string name="Char_StaAmok">буйствует</string>
    <string name="Char_StaSlowed">замедлен</string>
-   <string name="Char_StaMindVision">ясновидение</string>
-   <string name="Char_StaMind">ясновидение</string>
-   <string name="Char_StaVision"></string>
+   <string name="Char_StaMind">ясно</string>
+   <string name="Char_StaVision">видение</string>
    <string name="Char_StaParalysed">парализован</string>
    <string name="Char_StaFrightened">испуган</string>
    <string name="Char_StaRooted">скован</string>

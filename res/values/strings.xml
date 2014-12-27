@@ -101,7 +101,13 @@
    <string name="Char_YouMissed">%1$s %2$s your attack</string>
    <string name="Char_SmbMissed">%1$s %2$s %3$s\'s attack</string>
    <string name="Char_OutParalysis">The pain snapped %s out of paralysis</string>
-   <string name="Char_StaDodged">dodged</string>
+   
+   <string-array name="Char_StaDodged">
+      <item>dodged</item>
+      <item>dodged</item>
+      <item>dodged</item>
+   </string-array>
+   
    <string name="Char_StaPoisoned">poisoned</string>
    <string name="Char_StaAmok">amok</string>
    <string name="Char_StaSlowed">slowed</string>
