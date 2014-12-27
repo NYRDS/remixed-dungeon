@@ -46,6 +46,8 @@ public class Eye extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Eye_Name);
+		name_objective = Game.getVar(R.string.Eye_Name_Objective);
+		
 		spriteClass = EyeSprite.class;
 		
 		HP = HT = 100;

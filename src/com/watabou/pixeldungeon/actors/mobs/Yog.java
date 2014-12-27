@@ -58,6 +58,8 @@ public class Yog extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Yog_Name);
+		name_objective = Game.getVar(R.string.Yog_Name_Objective);
+		
 		spriteClass = YogSprite.class;
 		
 		HP = HT = 300;
@@ -187,6 +189,8 @@ public class Yog extends Mob {
 		
 		{
 			name = Game.getVar(R.string.Yog_NameRottingFist);
+			name_objective = Game.getVar(R.string.Yog_NameRottingFist_Objective);
+			
 			spriteClass = RottingFistSprite.class;
 			
 			HP = HT = 300;
@@ -282,6 +286,8 @@ public class Yog extends Mob {
 		
 		{
 			name = Game.getVar(R.string.Yog_NameBurningFist);
+			name_objective = Game.getVar(R.string.Yog_NameBurningFist_Objective);
+			
 			spriteClass = BurningFistSprite.class;
 			
 			HP = HT = 200;
@@ -401,6 +407,8 @@ public class Yog extends Mob {
 		
 		{
 			name = Game.getVar(R.string.Yog_NameLarva);
+			name_objective = Game.getVar(R.string.Yog_NameLarva_Objective);
+			
 			spriteClass = LarvaSprite.class;
 			
 			HP = HT = 25;

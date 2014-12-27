@@ -41,6 +41,8 @@ public class Swarm extends Mob {
 
 	{
 		name = Game.getVar(R.string.Swarm_Name);
+		name_objective = Game.getVar(R.string.Swarm_Name_Objective);
+		
 		spriteClass = SwarmSprite.class;
 		
 		HP = HT = 80;

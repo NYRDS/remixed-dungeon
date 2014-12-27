@@ -37,6 +37,8 @@ public class Brute extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Brute_Name);
+		name_objective = Game.getVar(R.string.Brute_Name_Objective);
+		
 		spriteClass = BruteSprite.class;
 		
 		HP = HT = 40;

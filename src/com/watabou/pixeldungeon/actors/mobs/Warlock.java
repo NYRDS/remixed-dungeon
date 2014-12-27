@@ -45,6 +45,8 @@ public class Warlock extends Mob implements Callback {
 	
 	{
 		name = Game.getVar(R.string.Warlock_Name);
+		name_objective = Game.getVar(R.string.Warlock_Name_Objective);
+		
 		spriteClass = WarlockSprite.class;
 		
 		HP = HT = 70;

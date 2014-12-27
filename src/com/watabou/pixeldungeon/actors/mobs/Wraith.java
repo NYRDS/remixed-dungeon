@@ -42,6 +42,8 @@ public class Wraith extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Wraith_Name);
+		name_objective = Game.getVar(R.string.Wraith_Name_Objective);
+		
 		spriteClass = WraithSprite.class;
 		
 		HP = HT = 1;

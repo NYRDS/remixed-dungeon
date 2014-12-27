@@ -50,6 +50,8 @@ public class DM300 extends Mob {
 	
 	{
 		name = Game.getVar(R.string.DM300_Name);
+		name_objective = Game.getVar(R.string.DM300_Name_Objective);
+		
 		spriteClass = DM300Sprite.class;
 		
 		HP = HT = 200;

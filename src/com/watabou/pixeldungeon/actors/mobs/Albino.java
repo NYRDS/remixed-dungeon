@@ -30,6 +30,7 @@ public class Albino extends Rat {
 
 	{
 		name = Game.getVar(R.string.Albino_Name);
+		name_objective = Game.getVar(R.string.Albino_Name_Objective);
 		spriteClass = AlbinoSprite.class;
 		
 		HP = HT = 15;

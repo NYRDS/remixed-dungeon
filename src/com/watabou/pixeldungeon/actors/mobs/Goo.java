@@ -47,6 +47,8 @@ public class Goo extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Goo_Name);
+		name_objective = Game.getVar(R.string.Goo_Name_Objective);
+		
 		HP = HT = 80;
 		EXP = 10;
 		defenseSkill = 12;

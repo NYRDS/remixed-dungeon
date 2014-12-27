@@ -34,6 +34,8 @@ public class Golem extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Golem_Name);
+		name_objective = Game.getVar(R.string.Golem_Name_Objective);
+		
 		spriteClass = GolemSprite.class;
 		
 		HP = HT = 85;

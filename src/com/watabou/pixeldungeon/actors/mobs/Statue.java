@@ -41,6 +41,8 @@ public class Statue extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Statue_Name);
+		name_objective = Game.getVar(R.string.Statue_Name_Objective);
+		
 		spriteClass = StatueSprite.class;
 
 		EXP = 0;

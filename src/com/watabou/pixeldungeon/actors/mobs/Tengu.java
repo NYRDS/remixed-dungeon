@@ -50,6 +50,8 @@ public class Tengu extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Tengu_Name);
+		name_objective = Game.getVar(R.string.Tengu_Name_Objective);
+		
 		spriteClass = TenguSprite.class;
 		
 		HP = HT = 120;

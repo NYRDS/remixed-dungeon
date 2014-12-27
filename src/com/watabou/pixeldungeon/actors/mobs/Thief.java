@@ -42,6 +42,8 @@ public class Thief extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Thief_Name);
+		name_objective = Game.getVar(R.string.Thief_Name_Objective);
+		
 		spriteClass = ThiefSprite.class;
 		
 		HP = HT = 20;

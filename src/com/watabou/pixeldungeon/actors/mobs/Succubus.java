@@ -46,6 +46,8 @@ public class Succubus extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Succubus_Name);
+		name_objective = Game.getVar(R.string.Succubus_Name_Objective);
+		
 		spriteClass = SuccubusSprite.class;
 		
 		HP = HT = 80;

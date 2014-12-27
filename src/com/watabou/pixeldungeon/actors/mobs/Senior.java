@@ -30,6 +30,8 @@ public class Senior extends Monk {
 
 	{
 		name = Game.getVar(R.string.Senior_Name);
+		name_objective = Game.getVar(R.string.Senior_Name_Objective);
+		
 		spriteClass = SeniorSprite.class;
 	}
 	

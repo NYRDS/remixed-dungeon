@@ -29,6 +29,8 @@ public class Crab extends Mob {
 
 	{
 		name = Game.getVar(R.string.Crab_Name);
+		name_objective = Game.getVar(R.string.Crab_Name_Objective);
+		
 		spriteClass = CrabSprite.class;
 		
 		HP = HT = 15;

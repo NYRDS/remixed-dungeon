@@ -40,6 +40,8 @@ public class Monk extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Monk_Name);
+		name_objective = Game.getVar(R.string.Monk_Name_Objective);
+		
 		spriteClass = MonkSprite.class;
 		
 		HP = HT = 70;

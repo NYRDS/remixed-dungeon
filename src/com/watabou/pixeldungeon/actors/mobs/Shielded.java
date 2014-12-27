@@ -26,6 +26,8 @@ public class Shielded extends Brute {
 
 	{
 		name = Game.getVar(R.string.Shielded_Name);
+		name_objective = Game.getVar(R.string.Shielded_Name_Objective);
+		
 		spriteClass = ShieldedSprite.class;
 		
 		defenseSkill = 20;

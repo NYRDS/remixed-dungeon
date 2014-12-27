@@ -39,6 +39,8 @@ public class Scorpio extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Scorpio_Name);
+		name_objective = Game.getVar(R.string.Scorpio_Name_Objective);
+		
 		spriteClass = ScorpioSprite.class;
 		
 		HP = HT = 95;

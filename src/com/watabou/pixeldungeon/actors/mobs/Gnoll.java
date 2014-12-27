@@ -29,6 +29,8 @@ public class Gnoll extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Gnoll_Name);
+		name_objective = Game.getVar(R.string.Gnoll_Name_Objective);
+		
 		spriteClass = GnollSprite.class;
 		
 		HP = HT = 12;

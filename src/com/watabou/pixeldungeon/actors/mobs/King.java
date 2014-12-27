@@ -53,6 +53,8 @@ public class King extends Mob {
 	
 	{
 		name = Game.getVar(R.string.King_Name);
+		name_objective = Game.getVar(R.string.King_Name_Objective);
+		
 		spriteClass = KingSprite.class;
 		
 		HP = HT = 300;
@@ -238,6 +240,8 @@ public class King extends Mob {
 		
 		{
 			name = Game.getVar(R.string.King_UndeadName);
+			name_objective = Game.getVar(R.string.King_UndeadName_Objective);
+			
 			spriteClass = UndeadSprite.class;
 			
 			HP = HT = 28;

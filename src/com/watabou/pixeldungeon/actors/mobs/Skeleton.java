@@ -41,6 +41,8 @@ public class Skeleton extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Skeleton_Name);
+		name_objective = Game.getVar(R.string.Skeleton_Name_Objective);
+		
 		spriteClass = SkeletonSprite.class;
 		
 		HP = HT = 25;

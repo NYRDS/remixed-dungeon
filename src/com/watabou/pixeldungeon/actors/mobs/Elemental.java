@@ -37,6 +37,8 @@ public class Elemental extends Mob {
 
 	{
 		name = Game.getVar(R.string.Elemental_Name);
+		name_objective = Game.getVar(R.string.Elemental_Name_Objective);
+		
 		spriteClass = ElementalSprite.class;
 		
 		HP = HT = 65;

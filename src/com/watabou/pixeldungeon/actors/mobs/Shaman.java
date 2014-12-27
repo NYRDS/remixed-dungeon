@@ -45,6 +45,8 @@ public class Shaman extends Mob implements Callback {
 	
 	{
 		name = Game.getVar(R.string.Shaman_Name);
+		name_objective = Game.getVar(R.string.Shaman_Name_Objective);
+		
 		spriteClass = ShamanSprite.class;
 		
 		HP = HT = 18;

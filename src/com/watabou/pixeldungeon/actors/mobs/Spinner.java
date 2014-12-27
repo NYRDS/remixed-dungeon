@@ -37,6 +37,8 @@ public class Spinner extends Mob {
 	
 	{
 		name = Game.getVar(R.string.Spinner_Name);
+		name_objective = Game.getVar(R.string.Spinner_Name_Objective);
+		
 		spriteClass = SpinnerSprite.class;
 		
 		HP = HT = 50;

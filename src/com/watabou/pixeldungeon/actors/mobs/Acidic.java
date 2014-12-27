@@ -27,7 +27,9 @@ import com.watabou.utils.Random;
 public class Acidic extends Scorpio {
 
 	{
-		name = Game.getVar(R.string.Acidic_Name);
+		name           = Game.getVar(R.string.Acidic_Name);
+		name_objective = Game.getVar(R.string.Acidic_Name_Objective);
+		
 		spriteClass = AcidicSprite.class;
 	}
 	

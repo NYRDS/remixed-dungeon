@@ -32,6 +32,8 @@ public class Bat extends Mob {
 
 	{
 		name = Game.getVar(R.string.Bat_Name);
+		name_objective = Game.getVar(R.string.Bat_Name_Objective);
+		
 		spriteClass = BatSprite.class;
 		
 		HP = HT = 30;
