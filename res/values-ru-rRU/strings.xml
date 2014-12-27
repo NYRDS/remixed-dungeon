@@ -1590,7 +1590,6 @@
    <!--  STRINGS OF Brute CLASS  -->
    <string name="Brute_Name">гнолл-громила</string>
    <string name="Brute_Name_Objective">гнолла-громилу</string>
-   
    <string name="Brute_Desc">Громилы - самые большие, сильные и выносливые из всех гноллов. Будучи израненными, они впадают в неистовство, нанося увеличенный урон.</string>
    <string name="Brute_Enraged">%s впал в неистовство!</string>
    <string name="Brute_StaEnraged">неистовый</string>
@@ -1726,8 +1725,11 @@
    <string name="Yog_Info1">...</string>
    <string name="Yog_Info2">Я надеюсь мне это почудилось...</string>
    <string name="Yog_NameRottingFist">гнойный кулак</string>
+   <string name="Yog_NameRottingFist_Objective">гнойный кулак</string>
    <string name="Yog_NameBurningFist">пылающий кулак</string>
+   <string name="Yog_NameBurningFist_Objective">пылающий кулак</string>
    <string name="Yog_NameLarva">личинка бога</string>
+   <string name="Yog_NameLarva_Objective">личинку бога</string>
 
 
 <!--  PACKAGE /mobs/npcs  -->

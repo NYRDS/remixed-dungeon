@@ -1718,8 +1718,11 @@
    <string name="Yog_Info1">...</string>
    <string name="Yog_Info2">Hope is an illusion...</string>
    <string name="Yog_NameRottingFist">rotting fist</string>
+   <string name="Yog_NameRottingFist_Objective">rotting fist</string>
    <string name="Yog_NameBurningFist">burning fist</string>
+   <string name="Yog_NameBurningFist_Objective">burning fist</string>
    <string name="Yog_NameLarva">god\'s larva</string>
+   <string name="Yog_NameLarva_Objective">god\'s larva</string>
 
 
 <!--  PACKAGE /mobs/npcs  -->
