@@ -1641,6 +1641,7 @@
    <string name="King_Info2">Восстаньте, слуги!</string>
    <string name="King_Info3">Да как ты смеешь!</string>
    <string name="King_UndeadName">дворф-нежить</string>
+   <string name="King_UndeadName_Objective">дворфа-нежить</string>
    <string name="King_UndeadDesc">Эти мёртвые дворфы, восставшие по воле своего Царя, были некогда членами его придворной свиты. Внешне они выглядят как скелеты с внушительными бородами.</string>
    <string name="King_UndeadDefense">заблокировал</string>
    <!--  STRINGS OF Monk CLASS  -->
@@ -1651,6 +1652,7 @@
    <string name="Monk_Disarm">%1$s выбил %2$s из твоих рук!</string>
    <!--  STRINGS OF Piranha CLASS  -->
    <string name="Piranha_Name">огромная пиранья</string>
+   <string name="Piranha_Name_Objective">пиранью</string>
    <string name="Piranha_Desc">Эти плотоядные рыбы не являются исконными обитателями пещерных водоёмов. Они были выведены специально для защиты затопленных сокровищниц.</string>
    <!--  STRINGS OF Rat CLASS  -->
    <string name="Rat_Name">сумчатая крыса</string>
