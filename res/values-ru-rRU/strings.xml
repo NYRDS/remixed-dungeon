@@ -206,8 +206,8 @@
    <string name="HeroSubClass_DescFreR">_Бегун_ двигается почти вдвое быстрее большинства монстров. В движущегося, _Бегуна_ труднее попасть. Но лишь в тех случаях когда он сыт и не перегружен.</string>
    <string name="HeroSubClass_NameSnip">снайпер</string>
    <string name="HeroSubClass_DescSnip">_Снайперы_ способны заметить прорехи в броне противника, практически игнорируя её при использовании оружия дальнего боя.</string>
-   <string name="HeroSubClass_NameWard">блюститель</string>
-   <string name="HeroSubClass_DescWard">За счёт своей близости к природе, _Блюститель_ может лучше собирать капли росы и семена с растений. Также контакт с высокой травой даёт им временный бонус к броне.</string>
+   <string name="HeroSubClass_NameWard">Травница</string>
+   <string name="HeroSubClass_DescWard">За счёт своей близости к природе, _Травница_ может лучше собирать капли росы и семена с растений. Также контакт с высокой травой даёт ей временный бонус к броне.</string>
 
 
    <!--  STRINGS OF Dungeon CLASS  -->
@@ -293,7 +293,7 @@
    <!-- <string name="Badges_BossSlain3Assa"></string> -->
    <!-- <string name="Badges_BossSlain3Snip"></string> -->
    <!-- <string name="Badges_BossSlain3Ward"></string> -->
-   <string name="Badges_BossSlain3All">Третий босс убит Гладиатором, Берсерком, Чернокнижником, Боевым Магом, Бегуном, Убийцей, Снайпером &amp; Блюстителем</string>
+   <string name="Badges_BossSlain3All">Третий босс убит Гладиатором, Берсерком, Чернокнижником, Боевым Магом, Бегуном, Убийцей, Снайпером &amp; Травницей</string>
    <string name="Badges_RingHaggler">Кольцо Торгаша получено</string>
    <string name="Badges_RingThorns">Кольцо Шипов получено</string>
    <string name="Badges_StrengthAttained1">13 очков Силы достигнуто</string>
