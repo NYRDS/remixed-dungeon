@@ -768,7 +768,7 @@
 
 <!--  PACKAGE /armor/Gyphs  -->
    <!--  STRINGS OF Affection CLASS  -->
-   <string name="Affection_Txt">%s пагубы</string>
+   <string name="Affection_Txt">%s влечения</string>
    <!--  STRINGS OF AntiEntropy CLASS  -->
    <string name="AntiEntropy_Txt">%s антиэнтропии</string>
    <!--  STRINGS OF Bounce CLASS  -->
@@ -776,7 +776,7 @@
    <!--  STRINGS OF Displacement CLASS  -->
    <string name="Displacement_Txt">%s перемещения</string>
    <!--  STRINGS OF Entanglement CLASS  -->
-   <string name="Entanglement_Txt">%s путов</string>
+   <string name="Entanglement_Txt">%s пут</string>
    <!--  STRINGS OF Metabolism CLASS  -->
    <string name="Metabolism_Txt">%s метаболизма</string>
    <!--  STRINGS OF Multiplicity CLASS  -->
@@ -1665,7 +1665,7 @@
    <string name="King_UndeadDefense">заблокировал</string>
    <!--  STRINGS OF Monk CLASS  -->
    <string name="Monk_Name">дворф монах</string>
-   <string name="Monk_Gender">female</string>
+   <string name="Monk_Gender">male</string>
    <string name="Monk_Name_Objective">монаха</string>
    <string name="Monk_Desc">Монахи, это фанатики, посветившие себя защите секретов их народа от чужаков. Они не полагаются на броню и оружие, доверившись искусству рукопашного боя.</string>
    <string name="Monk_Defense">парировал</string>
@@ -1737,7 +1737,7 @@
    <string name="Tengu_Info2">Попался, %s!</string>
    <!--  STRINGS OF Thief CLASS  -->
    <string name="Thief_Name">свихнувшийся вор</string>
-   <string name="Thief_Gender">_male</string>
+   <string name="Thief_Gender">male</string>
    <string name="Thief_Name_Objective">вора</string>
    <string name="Thief_Desc">Глубинные уровни подземелья всегда служили хорошим укрытием для всякого преступника. Но не всякий преступник мог сохранить рассудок, будучи отлучённым от дневного света на долгое время. Давным-давно, эти безумные бандиты и воры позабыли кто они и зачем совершают преступления.</string>
    <string name="Thief_Stole">%1$s украл у тебя %2$s!</string>
@@ -1763,7 +1763,7 @@
    <string name="Yog_Info2">Я надеюсь мне это почудилось...</string>
    <string name="RottingFist_Name">гнойный кулак</string>
    <string name="RottingFist_Gender">male</string>
-   <string name="RottingFist_Objective">гнойный кулак</string>
+   <string name="RottingFist_Name_Objective">гнойный кулак</string>
    <string name="BurningFist_Name">пылающий кулак</string>
    <string name="BurningFist_Gender">male</string>
    <string name="BurningFist_Name_Objective">пылающий кулак</string>
