@@ -175,7 +175,7 @@ public abstract class Char extends Actor {
 		} catch (IllegalArgumentException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
+		}
 	}
 	
 	public boolean attack( Char enemy ) {
@@ -312,7 +312,7 @@ public abstract class Char extends Actor {
 			if (Random.Int( dmg ) >= Random.Int( HP )) {
 				Buff.detach( this, Paralysis.class );
 				if (Dungeon.visible[pos]) {
-					GLog.i( TXT_OUT_OF_PARALYSIS, name );
+					GLog.i( TXT_OUT_OF_PARALYSIS, name_objective );
 				}
 			}
 		}
