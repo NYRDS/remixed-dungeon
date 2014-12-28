@@ -33,8 +33,6 @@ public class Bandit extends Thief {
 	public Item item;
 	
 	{
-		name = Game.getVar(R.string.Bandit_Name);
-		name_objective = Game.getVar(R.string.Bandit_Name_Objective);
 		spriteClass = BanditSprite.class;
 	}
 	

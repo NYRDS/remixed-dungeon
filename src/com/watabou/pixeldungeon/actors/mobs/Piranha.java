@@ -38,16 +38,11 @@ import com.watabou.utils.Random;
 public class Piranha extends Mob {
 	
 	{
-		name = Game.getVar(R.string.Piranha_Name);
-		name_objective = Game.getVar(R.string.Piranha_Name_Objective);
-		
 		spriteClass = PiranhaSprite.class;
 
 		baseSpeed = 2f;
 		
 		EXP = 0;
-		
-		gender = FEMALE;
 	}
 	
 	public Piranha() {

@@ -38,9 +38,6 @@ import com.watabou.utils.Random;
 public class Scorpio extends Mob {
 	
 	{
-		name = Game.getVar(R.string.Scorpio_Name);
-		name_objective = Game.getVar(R.string.Scorpio_Name_Objective);
-		
 		spriteClass = ScorpioSprite.class;
 		
 		HP = HT = 95;
@@ -52,8 +49,6 @@ public class Scorpio extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.125f;
-		
-		gender = MALE;
 	}
 	
 	@Override

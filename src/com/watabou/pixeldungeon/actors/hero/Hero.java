@@ -171,9 +171,14 @@ public class Hero extends Char {
 		
 		belongings = new Belongings( this );
 		
-		visibleEnemies = new ArrayList<Mob>();
+		visibleEnemies = new ArrayList<Mob>();		
 	}
 
+	@Override
+	protected void readCharData(){
+		
+	}
+	
 	public int STR() {
 		return weakened ? STR - 2 : STR;
 	}

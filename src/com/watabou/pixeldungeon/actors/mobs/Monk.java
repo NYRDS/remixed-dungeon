@@ -39,9 +39,6 @@ public class Monk extends Mob {
 	public static final String TXT_DISARM = Game.getVar(R.string.Monk_Disarm);
 	
 	{
-		name = Game.getVar(R.string.Monk_Name);
-		name_objective = Game.getVar(R.string.Monk_Name_Objective);
-		
 		spriteClass = MonkSprite.class;
 		
 		HP = HT = 70;
@@ -52,8 +49,6 @@ public class Monk extends Mob {
 		
 		loot = new Food();
 		lootChance = 0.083f;
-		
-		gender = MALE;
 	}
 	
 	@Override

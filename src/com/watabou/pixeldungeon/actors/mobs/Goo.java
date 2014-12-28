@@ -46,9 +46,6 @@ public class Goo extends Mob {
 	private static final float PUMP_UP_DELAY	= 2f;
 	
 	{
-		name = Game.getVar(R.string.Goo_Name);
-		name_objective = Game.getVar(R.string.Goo_Name_Objective);
-		
 		HP = HT = 80;
 		EXP = 10;
 		defenseSkill = 12;
@@ -56,8 +53,6 @@ public class Goo extends Mob {
 		
 		loot = new LloydsBeacon();
 		lootChance = 0.333f;
-		
-		gender = FEMALE;
 	}
 	
 	private boolean pumpedUp = false;

@@ -30,10 +30,7 @@ import com.watabou.utils.Random;
 
 public class Bat extends Mob {
 
-	{
-		name = Game.getVar(R.string.Bat_Name);
-		name_objective = Game.getVar(R.string.Bat_Name_Objective);
-		
+	{		
 		spriteClass = BatSprite.class;
 		
 		HP = HT = 30;
@@ -47,8 +44,6 @@ public class Bat extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.125f;
-		
-		gender = FEMALE;
 	}
 	
 	@Override

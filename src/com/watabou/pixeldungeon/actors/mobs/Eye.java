@@ -45,9 +45,6 @@ public class Eye extends Mob {
 	private static final String TXT_DEATHGAZE_KILLED = Game.getVar(R.string.Eye_Kill);
 	
 	{
-		name = Game.getVar(R.string.Eye_Name);
-		name_objective = Game.getVar(R.string.Eye_Name_Objective);
-		
 		spriteClass = EyeSprite.class;
 		
 		HP = HT = 100;
@@ -61,8 +58,6 @@ public class Eye extends Mob {
 		
 		loot = new Dewdrop();
 		lootChance = 0.5f;
-		
-		gender = MALE;
 	}
 	
 	@Override

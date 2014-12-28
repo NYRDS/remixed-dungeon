@@ -36,9 +36,6 @@ public class Brute extends Mob {
 	private static final String TXT_ENRAGED = Game.getVar(R.string.Brute_Enraged);
 	
 	{
-		name = Game.getVar(R.string.Brute_Name);
-		name_objective = Game.getVar(R.string.Brute_Name_Objective);
-		
 		spriteClass = BruteSprite.class;
 		
 		HP = HT = 40;
@@ -49,8 +46,6 @@ public class Brute extends Mob {
 		
 		loot = Gold.class;
 		lootChance = 0.5f;
-		
-		gender = MALE;
 	}
 	
 	private boolean enraged = false;

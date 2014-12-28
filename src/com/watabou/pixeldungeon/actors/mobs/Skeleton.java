@@ -40,9 +40,6 @@ public class Skeleton extends Mob {
 	private static final String TXT_HERO_KILLED = Game.getVar(R.string.Skeleton_Killed);
 	
 	{
-		name = Game.getVar(R.string.Skeleton_Name);
-		name_objective = Game.getVar(R.string.Skeleton_Name_Objective);
-		
 		spriteClass = SkeletonSprite.class;
 		
 		HP = HT = 25;
@@ -50,8 +47,6 @@ public class Skeleton extends Mob {
 		
 		EXP = 5;
 		maxLvl = 10;
-		
-		gender = MALE;
 	}
 	
 	@Override

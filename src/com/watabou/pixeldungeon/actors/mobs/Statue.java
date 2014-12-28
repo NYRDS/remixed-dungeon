@@ -40,15 +40,10 @@ import com.watabou.utils.Random;
 public class Statue extends Mob {
 	
 	{
-		name = Game.getVar(R.string.Statue_Name);
-		name_objective = Game.getVar(R.string.Statue_Name_Objective);
-		
 		spriteClass = StatueSprite.class;
 
 		EXP = 0;
 		state = PASSIVE;
-		
-		gender = FEMALE;
 	}
 	
 	private Weapon weapon;

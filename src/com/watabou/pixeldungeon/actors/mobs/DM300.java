@@ -49,9 +49,6 @@ import com.watabou.utils.Random;
 public class DM300 extends Mob {
 	
 	{
-		name = Game.getVar(R.string.DM300_Name);
-		name_objective = Game.getVar(R.string.DM300_Name_Objective);
-		
 		spriteClass = DM300Sprite.class;
 		
 		HP = HT = 200;
@@ -60,8 +57,6 @@ public class DM300 extends Mob {
 		
 		loot = new RingOfThorns().random();
 		lootChance = 0.333f;
-		
-		gender = MALE;
 	}
 	
 	@Override

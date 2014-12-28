@@ -57,9 +57,6 @@ import com.watabou.utils.Random;
 public class Yog extends Mob {
 	
 	{
-		name = Game.getVar(R.string.Yog_Name);
-		name_objective = Game.getVar(R.string.Yog_Name_Objective);
-		
 		spriteClass = YogSprite.class;
 		
 		HP = HT = 300;
@@ -67,8 +64,6 @@ public class Yog extends Mob {
 		EXP = 50;
 		
 		state = PASSIVE;
-		
-		gender = MALE;
 	}
 	
 	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);	
@@ -188,9 +183,6 @@ public class Yog extends Mob {
 		private static final int REGENERATION	= 4;
 		
 		{
-			name = Game.getVar(R.string.Yog_NameRottingFist);
-			name_objective = Game.getVar(R.string.Yog_NameRottingFist_Objective);
-			
 			spriteClass = RottingFistSprite.class;
 			
 			HP = HT = 300;
@@ -199,8 +191,6 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
-			
-			gender = MALE;
 		}
 		
 		public RottingFist() {
@@ -285,9 +275,6 @@ public class Yog extends Mob {
 	public static class BurningFist extends Mob {
 		
 		{
-			name = Game.getVar(R.string.Yog_NameBurningFist);
-			name_objective = Game.getVar(R.string.Yog_NameBurningFist_Objective);
-			
 			spriteClass = BurningFistSprite.class;
 			
 			HP = HT = 200;
@@ -296,8 +283,6 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
-			
-			gender = MALE;
 		}
 		
 		public BurningFist() {
@@ -406,9 +391,6 @@ public class Yog extends Mob {
 	public static class Larva extends Mob {
 		
 		{
-			name = Game.getVar(R.string.Yog_NameLarva);
-			name_objective = Game.getVar(R.string.Yog_NameLarva_Objective);
-			
 			spriteClass = LarvaSprite.class;
 			
 			HP = HT = 25;
@@ -417,8 +399,6 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = HUNTING;
-			
-			gender = FEMALE;
 		}
 		
 		@Override

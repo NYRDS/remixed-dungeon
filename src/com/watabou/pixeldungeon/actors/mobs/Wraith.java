@@ -41,17 +41,12 @@ public class Wraith extends Mob {
 	private int level;
 	
 	{
-		name = Game.getVar(R.string.Wraith_Name);
-		name_objective = Game.getVar(R.string.Wraith_Name_Objective);
-		
 		spriteClass = WraithSprite.class;
 		
 		HP = HT = 1;
 		EXP = 0;
 		
 		flying = true;
-		
-		gender = MALE;
 	}
 	
 	private static final String LEVEL = "level";

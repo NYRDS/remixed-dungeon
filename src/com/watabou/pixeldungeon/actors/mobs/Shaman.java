@@ -44,9 +44,6 @@ public class Shaman extends Mob implements Callback {
 	private static final String TXT_LIGHTNING_KILLED = Game.getVar(R.string.Shaman_Killed);
 	
 	{
-		name = Game.getVar(R.string.Shaman_Name);
-		name_objective = Game.getVar(R.string.Shaman_Name_Objective);
-		
 		spriteClass = ShamanSprite.class;
 		
 		HP = HT = 18;
@@ -57,8 +54,6 @@ public class Shaman extends Mob implements Callback {
 		
 		loot = Generator.Category.SCROLL;
 		lootChance = 0.33f;
-		
-		gender = MALE;
 	}
 	
 	@Override

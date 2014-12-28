@@ -45,9 +45,6 @@ public class Succubus extends Mob {
 	private int delay = 0;
 	
 	{
-		name = Game.getVar(R.string.Succubus_Name);
-		name_objective = Game.getVar(R.string.Succubus_Name_Objective);
-		
 		spriteClass = SuccubusSprite.class;
 		
 		HP = HT = 80;
@@ -59,8 +56,6 @@ public class Succubus extends Mob {
 		
 		loot = new ScrollOfLullaby();
 		lootChance = 0.05f;
-		
-		gender = FEMALE;
 	}
 	
 	@Override

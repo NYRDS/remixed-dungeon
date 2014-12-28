@@ -44,9 +44,6 @@ public class Warlock extends Mob implements Callback {
 	private static final String TXT_SHADOWBOLT_KILLED = Game.getVar(R.string.Warlock_Killed);
 	
 	{
-		name = Game.getVar(R.string.Warlock_Name);
-		name_objective = Game.getVar(R.string.Warlock_Name_Objective);
-		
 		spriteClass = WarlockSprite.class;
 		
 		HP = HT = 70;
@@ -57,8 +54,6 @@ public class Warlock extends Mob implements Callback {
 		
 		loot = Generator.Category.POTION;
 		lootChance = 0.83f;
-		
-		gender = MALE;
 	}
 	
 	@Override

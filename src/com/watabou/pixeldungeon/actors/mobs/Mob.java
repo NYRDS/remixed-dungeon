@@ -44,6 +44,10 @@ import com.watabou.utils.Random;
 
 public abstract class Mob extends Char {
 	
+	{
+		readCharData();
+	}
+	
 	private static final String	TXT_DIED	= Game.getVar(R.string.Mob_Died);
 	
 	protected static final String TXT_NOTICE1	= "?!";

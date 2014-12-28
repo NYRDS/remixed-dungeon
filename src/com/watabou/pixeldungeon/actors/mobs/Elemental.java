@@ -36,9 +36,6 @@ import com.watabou.utils.Random;
 public class Elemental extends Mob {
 
 	{
-		name = Game.getVar(R.string.Elemental_Name);
-		name_objective = Game.getVar(R.string.Elemental_Name_Objective);
-		
 		spriteClass = ElementalSprite.class;
 		
 		HP = HT = 65;
@@ -51,8 +48,6 @@ public class Elemental extends Mob {
 		
 		loot = new PotionOfLiquidFlame();
 		lootChance = 0.1f;
-		
-		gender = MALE;
 	}
 	
 	@Override

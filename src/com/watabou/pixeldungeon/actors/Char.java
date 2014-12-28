@@ -138,6 +138,45 @@ public abstract class Char extends Actor {
 				((Buff)b).attachTo( this );
 			}
 		}
+		
+		readCharData();
+	}
+	
+	private void setCharGender(String sGender){
+		gender = UNDEFINED;
+		
+		if(sGender.equals("male")){
+			gender = MALE;
+		}
+		if(sGender.equals("female")){
+			gender = FEMALE;
+		}
+	}
+	
+	protected void readCharData(){
+		
+		String className = this.getClass().getSimpleName();
+		
+		try {
+			Class<?> strings = Class.forName("com.nyrds.pixeldungeon.ml.R$string");
+			
+			name           = Game.getVar(strings.getField(className+"_Name").getInt(null));
+			name_objective = Game.getVar(strings.getField(className+"_Name_Objective").getInt(null));
+			
+			setCharGender(Game.getVar(strings.getField(className+"_Gender").getInt(null)));
+			
+		} catch (ClassNotFoundException e) {
+			GLog.w("no class R.string");
+
+		} catch (NoSuchFieldException e) {
+			GLog.w("missing resource: %s (loading class %s)",e.getMessage(), className);
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 	
 	public boolean attack( Char enemy ) {

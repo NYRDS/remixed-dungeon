@@ -49,16 +49,11 @@ public class Tengu extends Mob {
 	private static final int JUMP_DELAY = 5;
 	
 	{
-		name = Game.getVar(R.string.Tengu_Name);
-		name_objective = Game.getVar(R.string.Tengu_Name_Objective);
-		
 		spriteClass = TenguSprite.class;
 		
 		HP = HT = 120;
 		EXP = 20;
 		defenseSkill = 20;
-		
-		gender = MALE;
 	}
 	
 	private int timeToJump = JUMP_DELAY;

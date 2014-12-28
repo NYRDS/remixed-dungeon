@@ -40,9 +40,6 @@ import com.watabou.utils.Random;
 public class Swarm extends Mob {
 
 	{
-		name = Game.getVar(R.string.Swarm_Name);
-		name_objective = Game.getVar(R.string.Swarm_Name_Objective);
-		
 		spriteClass = SwarmSprite.class;
 		
 		HP = HT = 80;
@@ -51,8 +48,6 @@ public class Swarm extends Mob {
 		maxLvl = 10;
 		
 		flying = true;
-		
-		gender = MALE;
 	}
 	
 	private static final float SPLIT_DELAY	= 1f;

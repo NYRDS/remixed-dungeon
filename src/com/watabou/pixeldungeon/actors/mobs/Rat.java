@@ -27,17 +27,12 @@ import com.watabou.utils.Random;
 public class Rat extends Mob {
 
 	{
-		name = Game.getVar(R.string.Rat_Name);
-		name_objective = Game.getVar(R.string.Rat_Name_Objective);
-		
 		spriteClass = RatSprite.class;
 		
 		HP = HT = 8;
 		defenseSkill = 3;
 		
 		maxLvl = 5;
-		
-		gender = FEMALE;
 	}
 	
 	@Override

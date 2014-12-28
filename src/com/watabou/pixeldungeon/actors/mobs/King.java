@@ -52,9 +52,6 @@ public class King extends Mob {
 	private static final int MAX_ARMY_SIZE	= 5;
 	
 	{
-		name = Game.getVar(R.string.King_Name);
-		name_objective = Game.getVar(R.string.King_Name_Objective);
-		
 		spriteClass = KingSprite.class;
 		
 		HP = HT = 300;
@@ -62,8 +59,6 @@ public class King extends Mob {
 		defenseSkill = 25;
 		
 		Undead.count = 0;
-		
-		gender = MALE;
 	}
 	
 	private boolean nextPedestal = true;
@@ -239,9 +234,6 @@ public class King extends Mob {
 		public static int count = 0;
 		
 		{
-			name = Game.getVar(R.string.King_UndeadName);
-			name_objective = Game.getVar(R.string.King_UndeadName_Objective);
-			
 			spriteClass = UndeadSprite.class;
 			
 			HP = HT = 28;
@@ -250,8 +242,6 @@ public class King extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
-			
-			gender = MALE;
 		}
 		
 		@Override

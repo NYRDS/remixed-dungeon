@@ -41,9 +41,6 @@ public class Thief extends Mob {
 	public Item item;
 	
 	{
-		name = Game.getVar(R.string.Thief_Name);
-		name_objective = Game.getVar(R.string.Thief_Name_Objective);
-		
 		spriteClass = ThiefSprite.class;
 		
 		HP = HT = 20;
@@ -54,8 +51,6 @@ public class Thief extends Mob {
 		
 		loot = RingOfHaggler.class;
 		lootChance = 0.01f;
-		
-		gender = MALE;
 		
 		FLEEING = new Fleeing();
 	}

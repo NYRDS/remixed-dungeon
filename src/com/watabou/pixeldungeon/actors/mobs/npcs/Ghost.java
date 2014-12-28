@@ -331,7 +331,6 @@ public class Ghost extends NPC {
 	public static class FetidRat extends Mob {
 
 		{
-			name = Game.getVar(R.string.Ghost_FetidRatName);
 			spriteClass = FetidRatSprite.class;
 			
 			HP = HT = 15;
@@ -341,8 +340,6 @@ public class Ghost extends NPC {
 			maxLvl = 5;	
 			
 			state = WANDERING;
-			
-			gender = FEMALE;
 		}
 		
 		@Override
