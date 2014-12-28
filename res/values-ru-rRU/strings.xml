@@ -1661,7 +1661,7 @@
    <string name="Undead_Name">дворф-нежить</string>
    <string name="Undead_Gender">male</string>
    <string name="Undead_Name_Objective">дворфа-нежить</string>
-   <string name="King_UndeadDesc">Эти мёртвые дворфы, восставшие по воле своего Царя, были некогда членами его придворной свиты. Внешне они выглядят как скелеты с внушительными бородами.</string>
+   <string name="Undead_Desc">Эти мёртвые дворфы, восставшие по воле своего Царя, были некогда членами его придворной свиты. Внешне они выглядят как скелеты с внушительными бородами.</string>
    <string name="King_UndeadDefense">прикрылся</string>
    <!--  STRINGS OF Monk CLASS  -->
    <string name="Monk_Name">дворф монах</string>

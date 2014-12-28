@@ -1755,12 +1755,10 @@
    <string name="Yog_Info1">...</string>
    <string name="Yog_Info2">Hope is an illusion...</string>
    <string name="RottingFist_Name">rotting fist</string>
+   <string name="RottingFist_Gender">male</string>
    <string name="RottingFist_Name_Objective">rotting fist</string>
    <string name="BurningFist_Name">burning fist</string>
    <string name="BurningFist_Gender">male</string>
-
-
-
    <string name="BurningFist_Name_Objective">burning fist</string>
    <string name="Larva_Name">god\'s larva</string>
    <string name="Larva_Gender">female</string>
