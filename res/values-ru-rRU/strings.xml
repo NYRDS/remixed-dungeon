@@ -1609,7 +1609,7 @@
    <string name="Crab_Gender">male</string>
    <string name="Crab_Name_Objective">краба</string>
    <string name="Crab_Desc">Эти огромные крабы находятся на вершине пищевой цепочки канализации. Они поразительно быстры, а их прочный хитин способен выдерживать множество ударов.</string>
-   <string name="Crab_Defense">парировал</string>
+   <string name="Crab_Defense">отбился</string>
    <!--  STRINGS OF DM300 CLASS  -->
    <string name="DM300_Name">ДМ-300</string>
    <string name="DM300_Gender">male</string>
@@ -1639,7 +1639,7 @@
    <string name="Golem_Gender">male</string>
    <string name="Golem_Name_Objective">голема</string>
    <string name="Golem_Desc">Продукт Дворфийских экспериментов по взаимоиспользованию их навыков машиностроении и новоприобретённых знаний о покорении стихий. Духи земли заменяли \"душу\" механического каркаса голема, считалось что их легче всего контролировать. Не смотря на это, малейшая оплошность в ритуале приводила к плачевным последствиям.</string>
-   <string name="Golem_Defense">заблокировал</string>
+   <string name="Golem_Defense">прикрылся</string>
    <!--  STRINGS OF Goo CLASS  -->
    <string name="Goo_Name">Жижа</string>
    <string name="Goo_Gender">female</string>
@@ -1654,7 +1654,7 @@
    <string name="King_Gender">male</string>
    <string name="King_Name_Objective">Царя Дворфов</string>
    <string name="King_Desc">Последний из дворфийских царей известен своими выдающимися познаниями о природе жизни и смерти. Он убедил придворную свиту принять участие в ритуале, обещавшим вечную молодость. В итоге её обрёл лишь он сам, заполучив армию нежити, в качестве бонуса.</string>
-   <string name="King_Defense">парировал</string>
+   <string name="King_Defense">отбился</string>
    <string name="King_Info1">Ты не в силах меня одолеть, %s... Я... бессмертен...</string>
    <string name="King_Info2">Восстаньте, слуги!</string>
    <string name="King_Info3">Да как ты смеешь!</string>
@@ -1662,13 +1662,13 @@
    <string name="Undead_Gender">male</string>
    <string name="Undead_Name_Objective">дворфа-нежить</string>
    <string name="King_UndeadDesc">Эти мёртвые дворфы, восставшие по воле своего Царя, были некогда членами его придворной свиты. Внешне они выглядят как скелеты с внушительными бородами.</string>
-   <string name="King_UndeadDefense">заблокировал</string>
+   <string name="King_UndeadDefense">прикрылся</string>
    <!--  STRINGS OF Monk CLASS  -->
    <string name="Monk_Name">дворф монах</string>
    <string name="Monk_Gender">male</string>
    <string name="Monk_Name_Objective">монаха</string>
    <string name="Monk_Desc">Монахи, это фанатики, посветившие себя защите секретов их народа от чужаков. Они не полагаются на броню и оружие, доверившись искусству рукопашного боя.</string>
-   <string name="Monk_Defense">парировал</string>
+   <string name="Monk_Defense">отбился</string>
    <string name="Monk_Disarm">%1$s выбил %2$s из твоих рук!</string>
    <!--  STRINGS OF Piranha CLASS  -->
    <string name="Piranha_Name">огромная пиранья</string>
@@ -1699,13 +1699,13 @@
    <string name="Shielded_Name">громила-щитоносец</string>
    <string name="Shielded_Gender">male</string>
    <string name="Shielded_Name_Objective">громилу-щитоносеца</string>
-   <string name="Shielded_Defense">заблокировал</string>
+   <string name="Shielded_Defense">прикрылся</string>
    <!--  STRINGS OF Skeleton CLASS  -->
    <string name="Skeleton_Name">скелет</string>
    <string name="Skeleton_Gender">male</string>
    <string name="Skeleton_Name_Objective">скелета</string>
    <string name="Skeleton_Desc">Скелеты, состоящие из костей павших путешественников, восстали под воздействием отголосков зловещей магии таящейся в глубине подземелья. Будучи достаточно повреждёнными, они разлетаются на костяные осколки.</string>
-   <string name="Skeleton_Defense">заблокировал</string>
+   <string name="Skeleton_Defense">прикрылся</string>
    <string name="Skeleton_Killed">Тебя пробило костяным осколком...</string>
    <!--  STRINGS OF Spinner CLASS  -->
    <string name="Spinner_Name">пещерный паук</string>
@@ -1727,7 +1727,7 @@
    <string name="Swarm_Gender">male</string>
    <string name="Swarm_Name_Objective">рой</string>
    <string name="Swarm_Desc">Смертоносный рой мух злобно жужжит. Каждая не магическая атака разобьёт его на два роя поменьше, каждый из которых не менее опасен чем полноценный рой.</string>
-   <string name="Swarm_Defense">избежал</string>
+   <string name="Swarm_Defense">отклонился</string>
    <!--  STRINGS OF Tengu CLASS  -->
    <string name="Tengu_Name">Тенгу</string>
    <string name="Tengu_Gender">male</string>
@@ -1753,7 +1753,7 @@
    <string name="Wraith_Gender">male</string>
    <string name="Wraith_Name_Objective">фантома</string>
    <string name="Wraith_Desc">Фантом это мстительный дух грешника, чья могила была потревожена. Нематериальное создание крайне сложно победить простым оружием.</string>
-   <string name="Wraith_Defense">избежал</string>
+   <string name="Wraith_Defense">отклонился</string>
    <!--  STRINGS OF Yog CLASS  -->
    <string name="Yog_Name">Йог-Джева</string>
    <string name="Yog_Gender">male</string>
@@ -1797,13 +1797,13 @@
    <string name="Ghost_Rose2">Прошу... Помоги... Найди розу...</string>
    <string name="Ghost_Rat1">Здравствуй путешественник... Когда-то я был таким же как и ты - сильным, уверенным... А теперь я мёртв... Но я не могу покинуть это место... Пока моя месть не осуществится... Одолей _мерзкую крысу_, которая лишила меня жизни...</string>
    <string name="Ghost_Rat2">Прошу... Помоги... Одолей эту тварь...</string>
-   <string name="Ghost_Defense">избежал</string>
+   <string name="Ghost_Defense">отклонился</string>
    <string name="Ghost_FetidRatName">мерзкая крыса</string>
    <string name="Ghost_FetidRatDesc">Эта сумчатая крыса крупнее обычной. Вокруг неё витает зловоние.</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">амбициозный бес</string>
    <string name="Imp_Desc">Бесы, это низшие демоны. Они не славятся своей силой или магической мощью, но они достаточно умны и общительны. Многие бесы предпочитают жить с теми, кто не является демонами.</string>
-   <string name="Imp_Defense">избежал</string>
+   <string name="Imp_Defense">отклонился</string>
    <string name="Imp_Golems1">Ты путешественник? Я обожаю путешественников! На них всегда можно положится, если требуется чего-нибудь убить. Правда, а? За плату конечно ;)\nВ нашем случае _големы_ нуждаются в убийстве. Видишь ли, я хотел начать здесь дельце, но эти дурацкие големы спутали мне все карты! Ходячие куски гранита не шибко коммуникабельны, однако! Так что, прошу прихлопни... скажем _6 големов_ и я в долгу не останусь.</string>
    <string name="Imp_Golems2">Как там наше големово сафари?</string>
    <string name="Imp_Monks1">Ты путешественник? Я обожаю путешественников! На них всегда можно положится, если требуется чего-нибудь убить. Правда, а? За плату конечно ;)\nВ нашем случае _монахи_ нуждаются в убийстве. Видишь ли, я хотел начать здесь дельце, но эти шизики сами ничего не купят и остальных покупателей распугают. Так что, прошу прихлопни... скажем _8 монахов_ и я в долгу не останусь.</string>
@@ -1829,7 +1829,7 @@
    <!--  STRINGS OF WandMaker CLASS  -->
    <string name="WandMaker_Name">старый палочник</string>
    <string name="WandMaker_Desc">Этот старый, но крепенький мужчина, выглядит немного озадаченным. Он окружён магическим щитом.</string>
-   <string name="WandMaker_Defense">впитал</string>
+   <string name="WandMaker_Defense">отмахнулся</string>
    <string name="WandMaker_Berry1">О, какой приятный сюрприз, встретить достойного человека в таком месте! Я пришёл сюда в поисках редкого ингредиента _семян Гниловики_. Как человек осведомлённый в магии, я вполне справляюсь с местными монстрами, но заблудиться для меня, - раз плюнуть, стыдоба, честное слово. Не поможешь старику? Я с радостью оплачу твои старания одной из своих лучших волшебных палочек.</string>
    <string name="WandMaker_Berry2">Как поиски семян Гниловики, %s? Глухо? Не переживай, я не тороплюсь.</string>
    <string name="WandMaker_Dust1">О, какой приятный сюрприз, встретить достойного человека в таком месте! Я пришёл сюда в поисках редкого ингредиента - _трупной пыли_. Её можно собрать с костяных останков, которыми изобилует подземелье. Как человек осведомлённый в магии, я вполне справляюсь с местными монстрами, но заблудиться для меня, - раз плюнуть, стыдоба, честное слово. Не поможешь старику? Я с радостью оплачу твои старания одной из своих лучших волшебных палочек.</string>
