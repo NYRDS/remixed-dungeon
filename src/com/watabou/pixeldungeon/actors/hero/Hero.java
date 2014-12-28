@@ -163,7 +163,6 @@ public class Hero extends Char {
 		
 		name           = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
-		haveObjective  = true;
 		
 		HP = HT = 20;
 		STR = STARTING_STR;
@@ -224,6 +223,8 @@ public class Hero extends Char {
 		exp = bundle.getInt( EXPERIENCE );
 		
 		belongings.restoreFromBundle( bundle );
+		
+		gender = heroClass.getGender();
 	}
 	
 	public static void preview( GamesInProgress.Info info, Bundle bundle ) {

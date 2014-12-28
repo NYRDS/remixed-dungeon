@@ -78,6 +78,8 @@ public enum HeroClass {
 			break;
 		}
 		
+		hero.gender = getGender();
+		
 		if (Badges.isUnlocked( masteryBadge() )) {
 			new TomeOfMastery().collect();
 		}
@@ -113,8 +115,6 @@ public enum HeroClass {
 		Dungeon.quickslot = Dart.class;
 		
 		new PotionOfStrength().setKnown();
-		
-		hero.gender = Char.MALE;
 	}
 	
 	private static void initMage( Hero hero ) {	
@@ -126,8 +126,6 @@ public enum HeroClass {
 		Dungeon.quickslot = wand;
 		
 		new ScrollOfIdentify().setKnown();
-		
-		hero.gender = Char.MALE;
 	}
 	
 	private static void initRogue( Hero hero ) {
@@ -140,8 +138,6 @@ public enum HeroClass {
 		Dungeon.quickslot = Dart.class;
 		
 		new ScrollOfMagicMapping().setKnown();
-		
-		hero.gender = Char.MALE;
 	}
 	
 	private static void initHuntress( Hero hero ) {
@@ -153,8 +149,6 @@ public enum HeroClass {
 		boomerang.identify().collect();
 		
 		Dungeon.quickslot = boomerang;
-		
-		hero.gender = Char.FEMALE;
 	}
 	
 	public String title() {
@@ -193,6 +187,18 @@ public enum HeroClass {
 		return null;
 	}
 
+	public int getGender(){
+		switch (this) {
+		case WARRIOR:
+		case MAGE:
+		case ROGUE:
+			return Char.MALE;
+		case HUNTRESS:
+			return Char.FEMALE;
+		}
+		return Char.UNDEFINED;
+	}
+	
 	private static final String CLASS = "class";
 	
 	public void storeInBundle( Bundle bundle ) {

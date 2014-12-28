@@ -84,8 +84,7 @@ public abstract class Char extends Actor {
 	public String name            = nameVariants[0];
 	public String name_objective  = nameVariants[1];
 	
-	public boolean haveObjective  = false;
-	public int     gender         = UNDEFINED;
+	public int    gender         = UNDEFINED;
 	
 	public int HT;
 	public int HP;
@@ -186,7 +185,7 @@ public abstract class Char extends Actor {
 		if (hit( this, enemy, false )) {
 			
 			if (visibleFight) {
-				GLog.i( TXT_HIT[gender], name, enemy.haveObjective ? enemy.name_objective : enemy.name );
+				GLog.i( TXT_HIT[gender], name, enemy.name_objective );
 			}
 			
 			// FIXME
@@ -231,7 +230,7 @@ public abstract class Char extends Actor {
 					}
 					
 				} else {
-					GLog.i( TXT_DEFEAT[gender], name, enemy.name );
+					GLog.i( TXT_DEFEAT[gender], name, enemy.name_objective );
 				}
 			}
 			
