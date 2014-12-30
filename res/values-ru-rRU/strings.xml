@@ -1849,8 +1849,8 @@
    <string name="Level_TileWall">Стена</string>
    <string name="Level_TileClosedDoor">Закрытая дверь</string>
    <string name="Level_TileOpenDoor">Открытая дверь</string>
-   <string name="Level_TileEntrance">Спуск</string>
-   <string name="Level_TileExit">Подъём</string>
+   <string name="Level_TileEntrance">Подъём</string>
+   <string name="Level_TileExit">Спуск</string>
    <string name="Level_TileEmbers">Тлеющие угли</string>
    <string name="Level_TileLockedDoor">Запертая дверь</string>
    <string name="Level_TilePedestal">Пьедестал</string>
@@ -1876,8 +1876,8 @@
    <string name="Level_TileDefault">\?\?\?</string>
    <string name="Level_TileDescChasm">Дна не видать.</string>
    <string name="Level_TileDescWater">Если загоришься зайди в воду, чтобы потушится.</string>
-   <string name="Level_TileDescEntrance">Эти ступеньки ведут в глубь подземелья.</string>
-   <string name="Level_TileDescExit">Эти ступеньки ведут наверх.</string>
+   <string name="Level_TileDescEntrance">Эти ступеньки ведут наверх.</string>
+   <string name="Level_TileDescExit">Эти ступеньки ведут в глубь подземелья.</string>
    <string name="Level_TileDescEmbers">Пол усыпан углями.</string>
    <string name="Level_TileDescHighGrass">Густая растительность закрывает обзор.</string>
    <string name="Level_TileDescLockedDoor">Эта дверь заперта, тебе нужен подходящий ключ.</string>
