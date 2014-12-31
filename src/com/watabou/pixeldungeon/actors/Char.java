@@ -159,10 +159,25 @@ public abstract class Char extends Actor {
 		try {
 			Class<?> strings = Class.forName("com.nyrds.pixeldungeon.ml.R$string");
 			
-			name           = Game.getVar(strings.getField(className+"_Name").getInt(null));
-			name_objective = Game.getVar(strings.getField(className+"_Name_Objective").getInt(null));
+			name = Game.getVar(strings.getField(className+"_Name").getInt(null));
 			
-			setCharGender(Game.getVar(strings.getField(className+"_Gender").getInt(null)));
+			try{
+				name_objective = Game.getVar(strings.getField(className+"_Name_Objective").getInt(null));
+			} catch (NoSuchFieldException e) {
+				GLog.w("_Name_Objective not defined for %s", className);
+				name_objective = name;
+			}
+			
+			String genderString = "male";
+			
+			try{
+				genderString = Game.getVar(strings.getField(className+"_Gender").getInt(null));
+				
+			} catch (NoSuchFieldException e) {
+				
+			}
+			
+			setCharGender(genderString);
 			
 		} catch (ClassNotFoundException e) {
 			GLog.w("no class R.string");
