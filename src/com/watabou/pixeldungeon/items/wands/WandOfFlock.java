@@ -107,7 +107,6 @@ public class WandOfFlock extends Wand {
 		private static final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
 		
 		{
-			name = Game.getVar(R.string.WandOfFlock_SheepName);
 			spriteClass = SheepSprite.class;
 		}
 		
@@ -132,11 +131,6 @@ public class WandOfFlock extends Wand {
 		
 		@Override
 		public void damage( int dmg, Object src ) {
-		}
-		
-		@Override
-		public String description() {
-			return Game.getVar(R.string.WandOfFlock_SheepInfo);
 		}
 
 		@Override
