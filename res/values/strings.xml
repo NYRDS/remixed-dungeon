@@ -1249,8 +1249,13 @@
    <!--  STRINGS OF WandOfFlock CLASS  -->
    <string name="WandOfFlock_Name">Wand of Flock</string>
    <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>
-   <string name="WandOfFlock_SheepName">sheep</string>
-   <string name="WandOfFlock_SheepInfo">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
+   
+   <string name="Sheep_Name">sheep</string>
+   <string name="Sheep_Name_Objective">sheep</string>
+   <string name="Sheep_Name_Gender">female</string>
+   <string name="Sheep_Desc">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
+
+   <string name="Sheep_Desc">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Baa!</item>
        <item >Baa?</item>
@@ -1577,6 +1582,7 @@
    <string name="Acidic_Gender">male</string>
    <string name="Acidic_Name_Objective">acidic scorpio</string>
    <string name="Acidic_Desc">These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.</string>
+
    <!--  STRINGS OF Albino CLASS  -->
    <string name="Albino_Name">albino rat</string>
    <string name="Albino_Gender">male</string>
@@ -1800,7 +1806,6 @@
 
    <string name="Ghost_Rat2">Please... Help me... Slay the abomination...</string>
    <string name="Ghost_Defense">evaded</string>
-  
    <string name="FetidRat_Name">fetid rat</string>
    <string name="FetidRat_Name_Objective">fetid rat</string>
    <string name="FetidRat_Gender">female</string>
