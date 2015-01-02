@@ -644,7 +644,7 @@
 <!--  PACKAGE pixeldungeon/plants  -->
    <!--  STRINGS OF Plant CLASS  -->
    <string name="Plant_ACPlant">ПОСАДИТЬ</string>
-   <string name="Plant_Info">Посади эти семеня в то место где ты хочешь вырастить %1$s.\n\n%2$s</string>
+   <string name="Plant_Info">Посади эти семена в то место где ты хочешь вырастить %1$s.\n\n%2$s</string>
    <string name="Plant_Seed">семена растения %s</string>
 
 
