@@ -201,11 +201,6 @@ public class King extends Mob {
 		yell(Game.getVar(R.string.King_Info3));
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.King_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( ToxicGas.class );
@@ -300,11 +295,6 @@ public class King extends Mob {
 		@Override
 		public String defenseVerb() {
 			return Game.getVar(R.string.King_UndeadDefense);
-		}
-		
-		@Override
-		public String description() {
-			return Game.getVar(R.string.Undead_Desc);
 		}
 		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

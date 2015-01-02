@@ -172,11 +172,6 @@ public class Tengu extends Mob {
 		yell(String.format(Game.getVar(R.string.Tengu_Info2), Dungeon.hero.heroClass.title()));
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Tengu_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( ToxicGas.class );

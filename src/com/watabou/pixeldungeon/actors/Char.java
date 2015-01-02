@@ -75,6 +75,8 @@ public abstract class Char extends Actor {
 	
 	private static final String TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
 	
+	protected static final Class<?> strings = getR();
+	
 	public int pos = 0;
 	
 	public CharSprite sprite;
@@ -84,7 +86,8 @@ public abstract class Char extends Actor {
 	public String name            = nameVariants[0];
 	public String name_objective  = nameVariants[1];
 	
-	public int    gender         = UNDEFINED;
+	public String description     = Game.getVar(R.string.Mob_Desc);
+	public int    gender          = UNDEFINED;
 	
 	public int HT;
 	public int HP;
@@ -100,6 +103,16 @@ public abstract class Char extends Actor {
 	public int viewDistance	= 8;
 	
 	private HashSet<Buff> buffs = new HashSet<Buff>();
+	
+	static private Class <?> getR(){
+		try {
+			return Class.forName("com.nyrds.pixeldungeon.ml.R$string");
+		} catch (ClassNotFoundException e) {// well this is newer happens :) 
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 	@Override
 	protected boolean act() {
@@ -152,38 +165,14 @@ public abstract class Char extends Actor {
 		}
 	}
 	
-	protected void readCharData(){
-		
+	protected String getClassParam(String paramName, String defaultValue){
 		String className = this.getClass().getSimpleName();
 		
-		try {
-			Class<?> strings = Class.forName("com.nyrds.pixeldungeon.ml.R$string");
-			
-			name = Game.getVar(strings.getField(className+"_Name").getInt(null));
-			
-			try{
-				name_objective = Game.getVar(strings.getField(className+"_Name_Objective").getInt(null));
-			} catch (NoSuchFieldException e) {
-				GLog.w("_Name_Objective not defined for %s", className);
-				name_objective = name;
-			}
-			
-			String genderString = "male";
-			
-			try{
-				genderString = Game.getVar(strings.getField(className+"_Gender").getInt(null));
-				
-			} catch (NoSuchFieldException e) {
-				
-			}
-			
-			setCharGender(genderString);
-			
-		} catch (ClassNotFoundException e) {
-			GLog.w("no class R.string");
-
-		} catch (NoSuchFieldException e) {
-			GLog.w("missing resource: %s (loading class %s)",e.getMessage(), className);
+		try{
+			String paramValue = Game.getVar(strings.getField(className+"_"+paramName).getInt(null));
+			return paramValue;
+		}catch (NoSuchFieldException e){
+			GLog.w("no defination for  %s_%s :(", className, paramName);
 		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -191,6 +180,18 @@ public abstract class Char extends Actor {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		return defaultValue;
+	}
+	
+	protected void readCharData(){
+				
+			name           = getClassParam("Name","Unnamed");
+			name_objective = getClassParam("Name_Objective", name);
+			
+			description    = getClassParam("Desc", description);
+			
+			setCharGender(getClassParam("Gender","male"));
 	}
 	
 	public boolean attack( Char enemy ) {

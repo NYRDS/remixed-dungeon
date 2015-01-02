@@ -74,11 +74,6 @@ public class Golem extends Mob {
 		super.die( cause );
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Golem_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( ScrollOfPsionicBlast.class );

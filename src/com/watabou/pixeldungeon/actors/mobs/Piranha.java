@@ -121,11 +121,6 @@ public class Piranha extends Mob {
 			return false;
 		}
 	}
-
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Piranha_Desc);
-	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {

@@ -60,9 +60,5 @@ public class Gnoll extends Mob {
 		Ghost.Quest.process( pos );
 		super.die( cause );
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Gnoll_Desc);
-	}
+
 }

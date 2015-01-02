@@ -114,11 +114,6 @@ public class Succubus extends Mob {
 		return 10;
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Succubus_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( Leech.class );

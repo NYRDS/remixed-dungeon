@@ -98,11 +98,6 @@ public class Scorpio extends Mob {
 		}
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Scorpio_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( Leech.class );

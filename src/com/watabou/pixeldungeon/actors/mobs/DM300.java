@@ -143,11 +143,6 @@ public class DM300 extends Mob {
 		yell(Game.getVar(R.string.DM300_Info3));
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.DM300_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( Death.class );

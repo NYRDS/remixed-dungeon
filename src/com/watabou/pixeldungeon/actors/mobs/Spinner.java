@@ -95,11 +95,6 @@ public class Spinner extends Mob {
 		super.move( step );
 	}
 	
-	@Override
-	public String description() {		
-		return Game.getVar(R.string.Spinner_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( Poison.class );

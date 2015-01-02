@@ -90,11 +90,6 @@ public class Wraith extends Mob {
 		state = WANDERING;
 		return true;
 	}
-
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Wraith_Desc);
-	}
 	
 	public static void spawnAround( int pos ) {
 		for (int n : Level.NEIGHBOURS4) {

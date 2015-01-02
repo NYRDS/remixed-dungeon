@@ -87,11 +87,6 @@ public class Brute extends Mob {
 		}
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Brute_Desc);
-	}
-	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
 		IMMUNITIES.add( Terror.class );

@@ -66,9 +66,5 @@ public class Crab extends Mob {
 		Ghost.Quest.process( pos );
 		super.die( cause );
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Crab_Desc);
-	}
+
 }

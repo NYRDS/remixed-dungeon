@@ -89,11 +89,6 @@ public class Elemental extends Mob {
 		}
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Elemental_Desc);
-	}
-	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
 		IMMUNITIES.add( Burning.class );

@@ -126,11 +126,6 @@ public class Warlock extends Mob implements Callback {
 		next();
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Warlock_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( Death.class );

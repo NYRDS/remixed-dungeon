@@ -56,9 +56,5 @@ public class Rat extends Mob {
 		
 		super.die( cause );
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Rat_Desc);
-	}
+
 }

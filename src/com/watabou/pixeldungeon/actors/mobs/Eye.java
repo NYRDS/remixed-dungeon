@@ -144,11 +144,6 @@ public class Eye extends Mob {
 		return true;
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Eye_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( WandOfDisintegration.class );

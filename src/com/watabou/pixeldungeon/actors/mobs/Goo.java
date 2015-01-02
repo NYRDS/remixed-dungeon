@@ -168,11 +168,6 @@ public class Goo extends Mob {
 		yell(Game.getVar(R.string.Goo_Info3));
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Goo_Desc);
-	}
-	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	static {
 		RESISTANCES.add( ToxicGas.class );

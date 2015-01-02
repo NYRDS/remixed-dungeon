@@ -404,7 +404,7 @@ public abstract class Mob extends Char {
 	}
 	
 	public String description() {
-		return Game.getVar(R.string.Mob_Desc);
+		return description;
 	}
 	
 	public void notice() {

@@ -372,11 +372,6 @@ public class Ghost extends NPC {
 			Dungeon.level.drop( new RatSkull(), pos ).sprite.drop();
 		}
 		
-		@Override
-		public String description() {
-			return Game.getVar(R.string.FetidRat_Desc);
-		}
-		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 		static {
 			IMMUNITIES.add( Paralysis.class );

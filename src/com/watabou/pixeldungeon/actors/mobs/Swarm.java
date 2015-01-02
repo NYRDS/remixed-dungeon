@@ -136,9 +136,5 @@ public class Swarm extends Mob {
 			Dungeon.level.drop( new PotionOfHealing(), pos ).sprite.drop();
 		}
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Swarm_Desc);
-	}
+
 }

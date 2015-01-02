@@ -101,10 +101,6 @@ public class Monk extends Mob {
 		return damage;
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Monk_Desc);
-	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
