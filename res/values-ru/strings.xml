@@ -1256,7 +1256,6 @@
    <!--  STRINGS OF WandOfFlock CLASS  -->
    <string name="WandOfFlock_Name">Палочка Стада</string>
    <string name="WandOfFlock_Info">Взмах этой палочки призовёт стадо волшебных овец, которые образуют временное непреодолимое препятствие.</string>
-   
    <string name="Sheep_Name">овца</string>
    <string name="Sheep_Name_Objective">овца</string>
    <string name="Sheep_Name_Gender">female</string>

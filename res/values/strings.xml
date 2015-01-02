@@ -1248,13 +1248,10 @@
 
    <!--  STRINGS OF WandOfFlock CLASS  -->
    <string name="WandOfFlock_Name">Wand of Flock</string>
-   <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>
-   
+   <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>   
    <string name="Sheep_Name">sheep</string>
    <string name="Sheep_Name_Objective">sheep</string>
    <string name="Sheep_Name_Gender">female</string>
-   <string name="Sheep_Desc">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
-
    <string name="Sheep_Desc">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Baa!</item>
