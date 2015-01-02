@@ -1576,10 +1576,12 @@
    <string name="Acidic_Name">acidic scorpio</string>
    <string name="Acidic_Gender">male</string>
    <string name="Acidic_Name_Objective">acidic scorpio</string>
+   <string name="Acidic_Desc">These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.</string>
    <!--  STRINGS OF Albino CLASS  -->
    <string name="Albino_Name">albino rat</string>
    <string name="Albino_Gender">male</string>
    <string name="Albino_Name_Objective">albino rat</string>
+   <string name="Albino_Desc">Marsupial rats are aggressive, but rather weak denizens of the sewers. They can be dangerous only in big numbers.</string>
    <!--  STRINGS OF Bandit CLASS  -->
    <string name="Bandit_Name">crazy bandit</string>
    <string name="Bandit_Gender">male</string>
@@ -1682,6 +1684,7 @@
    <string name="Senior_Name">senior monk</string>
    <string name="Senior_Gender">male</string>
    <string name="Senior_Name_Objective">senior monk</string>
+   <string name="Senior_Desc">These monks are fanatics, who devoted themselves to protecting their city\'s secrets from all aliens. They don\'t use any armor or weapons, relying solely on the art of hand-to-hand combat.</string>
    <!--  STRINGS OF Shaman CLASS  -->
    <string name="Shaman_Name">gnoll shaman</string>
    <string name="Shaman_Gender">male</string>
@@ -1693,6 +1696,7 @@
    <string name="Shielded_Gender">male</string>
    <string name="Shielded_Name_Objective">shielded brute</string>
    <string name="Shielded_Defense">blocked</string>
+   <string name="Shielded_Desc">Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, they go berserk, inflicting even more damage to their enemies.</string>
    <!--  STRINGS OF Skeleton CLASS  -->
    <string name="Skeleton_Name">skeleton</string>
    <string name="Skeleton_Gender">male</string>

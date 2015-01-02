@@ -1583,10 +1583,12 @@
    <string name="Acidic_Name">кислотный скорпион</string>
    <string name="Acidic_Gender">male</string>
    <string name="Acidic_Name_Objective">кислотного скорпиона</string>
+   <string name="Acidic_Desc">Эти огромные членистоногие создания стараются избегать ближнего боя, выстреливая ядовитые иглы с большого расстояния.</string>
    <!--  STRINGS OF Albino CLASS  -->
    <string name="Albino_Name">крыса-альбинос</string>
    <string name="Albino_Gender">male</string>
    <string name="Albino_Name_Objective">крысу-альбиноса</string>
+   <string name="Albino_Desc">Сумчатые крысы - агрессивные, но довольно слабые обитатели канализации. Тем не менее, в больших количествах, они могут представлять опасность.</string>
    <!--  STRINGS OF Bandit CLASS  -->
    <string name="Bandit_Name">бандит</string>
    <string name="Bandit_Gender">male</string>
@@ -1689,6 +1691,7 @@
    <string name="Senior_Name">старший монах</string>
    <string name="Senior_Gender">male</string>
    <string name="Senior_Name_Objective">монаха</string>
+   <string name="Senior_Desc">Монахи, это фанатики, посветившие себя защите секретов их народа от чужаков. Они не полагаются на броню и оружие, доверившись искусству рукопашного боя.</string>
    <!--  STRINGS OF Shaman CLASS  -->
    <string name="Shaman_Name">гнолл-шаман</string>
    <string name="Shaman_Gender">male</string>
@@ -1700,6 +1703,7 @@
    <string name="Shielded_Gender">male</string>
    <string name="Shielded_Name_Objective">громилу-щитоносеца</string>
    <string name="Shielded_Defense">прикрылся</string>
+   <string name="Shielded_Desc">Громилы - самые большие, сильные и выносливые из всех гноллов. Будучи израненными, они впадают в неистовство, нанося увеличенный урон.</string>
    <!--  STRINGS OF Skeleton CLASS  -->
    <string name="Skeleton_Name">скелет</string>
    <string name="Skeleton_Gender">male</string>
