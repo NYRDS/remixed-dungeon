@@ -92,10 +92,6 @@ public class King extends Mob {
 		return 14;
 	}
 	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.King_Defense);
-	}
 	
 	@Override
 	protected boolean getCloser( int target ) {
@@ -291,12 +287,7 @@ public class King extends Mob {
 		public int dr() {
 			return 5;
 		}
-		
-		@Override
-		public String defenseVerb() {
-			return Game.getVar(R.string.King_UndeadDefense);
-		}
-		
+				
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 		static {
 			IMMUNITIES.add( Death.class );

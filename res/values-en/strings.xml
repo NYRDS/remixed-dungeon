@@ -1658,7 +1658,7 @@
    <string name="Undead_Gender">male</string>
    <string name="Undead_Name_Objective">undead dwarf</string>
    <string name="Undead_Desc">These undead dwarves, risen by the will of the King of Dwarves, were members of his court. They appear as skeletons with a stunning amount of facial hair.</string>
-   <string name="King_UndeadDefense">blocked</string>
+   <string name="Undead_Defense">blocked</string>
    <!--  STRINGS OF Monk CLASS  -->
    <string name="Monk_Name">dwarf monk</string>
    <string name="Monk_Gender">male</string>

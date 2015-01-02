@@ -72,11 +72,6 @@ public class Monk extends Mob {
 	}
 	
 	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Monk_Defense);
-	}
-	
-	@Override
 	public void die( Object cause ) {
 		Imp.Quest.process( this );
 		

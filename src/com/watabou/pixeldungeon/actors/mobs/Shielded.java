@@ -17,9 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.sprites.ShieldedSprite;
 
 public class Shielded extends Brute {
@@ -33,11 +31,6 @@ public class Shielded extends Brute {
 	@Override
 	public int dr() {
 		return 10;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Shielded_Defense);
 	}
 	
 	@Override

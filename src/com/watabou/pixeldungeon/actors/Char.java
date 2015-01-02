@@ -86,7 +86,9 @@ public abstract class Char extends Actor {
 	public String name            = nameVariants[0];
 	public String name_objective  = nameVariants[1];
 	
-	public String description     = Game.getVar(R.string.Mob_Desc);
+	protected String description     = Game.getVar(R.string.Mob_Desc);
+	private String defenceVerb     = null;
+	
 	public int    gender          = UNDEFINED;
 	
 	public int HT;
@@ -165,14 +167,16 @@ public abstract class Char extends Actor {
 		}
 	}
 	
-	protected String getClassParam(String paramName, String defaultValue){
+	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent){
 		String className = this.getClass().getSimpleName();
 		
 		try{
 			String paramValue = Game.getVar(strings.getField(className+"_"+paramName).getInt(null));
 			return paramValue;
 		}catch (NoSuchFieldException e){
-			GLog.w("no defination for  %s_%s :(", className, paramName);
+			if(warnIfAbsent){
+				GLog.w("no defination for  %s_%s :(", className, paramName);
+			}
 		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -186,12 +190,14 @@ public abstract class Char extends Actor {
 	
 	protected void readCharData(){
 				
-			name           = getClassParam("Name","Unnamed");
-			name_objective = getClassParam("Name_Objective", name);
+			name           = getClassParam("Name","Unnamed", true);
+			name_objective = getClassParam("Name_Objective", name, true);
 			
-			description    = getClassParam("Desc", description);
+			description    = getClassParam("Desc", description, true);
 			
-			setCharGender(getClassParam("Gender","male"));
+			setCharGender(getClassParam("Gender","male",true));
+			
+			defenceVerb = getClassParam("Defense",null,false);
 	}
 	
 	public boolean attack( Char enemy ) {
@@ -286,6 +292,9 @@ public abstract class Char extends Actor {
 	}
 	
 	public String defenseVerb() {
+		if(defenceVerb!=null){
+			return defenceVerb;
+		}
 		return Game.getVars(R.array.Char_StaDodged)[gender];
 	}
 	

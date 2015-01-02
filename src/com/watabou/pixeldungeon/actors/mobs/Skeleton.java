@@ -105,11 +105,6 @@ public class Skeleton extends Mob {
 		return 5;
 	}
 	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Skeleton_Defense);
-	}
-	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
 		IMMUNITIES.add( Death.class );

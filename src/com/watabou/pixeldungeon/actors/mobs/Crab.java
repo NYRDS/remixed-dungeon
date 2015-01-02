@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
@@ -54,11 +52,6 @@ public class Crab extends Mob {
 	@Override
 	public int dr() {
 		return 4;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Crab_Defense);
 	}
 	
 	@Override

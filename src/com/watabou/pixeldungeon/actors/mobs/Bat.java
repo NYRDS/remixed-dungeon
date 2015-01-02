@@ -19,8 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -59,11 +57,6 @@ public class Bat extends Mob {
 	@Override
 	public int dr() {
 		return 4;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Bat_Defense);
 	}
 	
 	@Override

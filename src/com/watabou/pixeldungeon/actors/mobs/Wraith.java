@@ -19,10 +19,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
-import com.watabou.noosa.Game;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -78,11 +76,6 @@ public class Wraith extends Mob {
 		this.level = level;
 		defenseSkill = attackSkill( null ) * 5;
 		enemySeen = true;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Wraith_Defense);
 	}
 	
 	@Override

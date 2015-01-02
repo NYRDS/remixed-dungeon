@@ -19,9 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -111,11 +109,6 @@ public class Swarm extends Mob {
 	@Override
 	public int attackSkill( Char target ) {
 		return 12;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Swarm_Defense);
 	}
 	
 	private Swarm split() {
