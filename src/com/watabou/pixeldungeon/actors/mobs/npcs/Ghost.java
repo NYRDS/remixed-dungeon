@@ -374,7 +374,7 @@ public class Ghost extends NPC {
 		
 		@Override
 		public String description() {
-			return Game.getVar(R.string.Ghost_FetidRatDesc);
+			return Game.getVar(R.string.FetidRat_Desc);
 		}
 		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

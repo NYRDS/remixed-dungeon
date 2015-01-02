@@ -1796,8 +1796,11 @@
 
    <string name="Ghost_Rat2">Please... Help me... Slay the abomination...</string>
    <string name="Ghost_Defense">evaded</string>
-   <string name="Ghost_FetidRatName">fetid rat</string>
-   <string name="Ghost_FetidRatDesc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
+   
+   <string name="FetidRat_Name">fetid rat</string>
+   <string name="FetidRat_Name_Objective">fetid rat</string>
+   <string name="FetidRat_Gender">female</string>
+   <string name="FetidRat_Desc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
 
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">ambitious imp</string>

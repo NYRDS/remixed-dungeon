@@ -1798,8 +1798,10 @@
    <string name="Ghost_Rat1">Здравствуй путешественник... Когда-то я был таким же как и ты - сильным, уверенным... А теперь я мёртв... Но я не могу покинуть это место... Пока моя месть не осуществится... Одолей _мерзкую крысу_, которая лишила меня жизни...</string>
    <string name="Ghost_Rat2">Прошу... Помоги... Одолей эту тварь...</string>
    <string name="Ghost_Defense">отклонился</string>
-   <string name="Ghost_FetidRatName">мерзкая крыса</string>
-   <string name="Ghost_FetidRatDesc">Эта сумчатая крыса крупнее обычной. Вокруг неё витает зловоние.</string>
+   <string name="FetidRat_Name">мерзкая крыса</string>
+   <string name="FetidRat_Name_Objective">мерзкую крысу</string>
+   <string name="FetidRat_Gender">female</string>
+   <string name="FetidRat_Desc">Эта сумчатая крыса крупнее обычной. Вокруг неё витает зловоние.</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">амбициозный бес</string>
    <string name="Imp_Desc">Бесы, это низшие демоны. Они не славятся своей силой или магической мощью, но они достаточно умны и общительны. Многие бесы предпочитают жить с теми, кто не является демонами.</string>
