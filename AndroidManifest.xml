@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.nyrds.pixeldungeon.ml"
-	android:versionCode="68"
-	android:versionName="1.7.2a-rus.07"
+	android:versionCode="69"
+	android:versionName="1.7.2a-rus.08"
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     
 	<uses-sdk 
 	    android:minSdkVersion="8"
-	    android:targetSdkVersion="19"/>
+	    android:targetSdkVersion="21"/>
 	
 	<uses-feature 
 	    android:glEsVersion="0x00020000"/>
