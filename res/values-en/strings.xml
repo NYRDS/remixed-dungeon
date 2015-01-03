@@ -75,10 +75,8 @@
 
 
    <!--  STRINGS OF Char CLASS  -->
-   <string-array name="Char_Name">
-       <item>mob</item>
-       <item>mob</item>>
-   </string-array>
+   <string name="Char_Name">mob</string>
+   <string name="Char_Name_Objective">mob</string>
 
    <string-array name="Char_Hit">
        <item>%1$s hit %2$s</item>
