@@ -1826,7 +1826,8 @@
    <!--  STRINGS OF MirrorImage CLASS  -->
    <string name="MirrorImage_Name">двойник</string>
    <string name="MirrorImage_Name_Objective">двойника</string>
-   <string name="MirrorImage_Desc">Эта иллюзия весьма на тебя похожа, хотя слегка бледновато и посверкивает.</string>
+   <string name="MirrorImage_Gender">male</string>
+   <string name="MirrorImage_Desc">Эта иллюзия весьма на тебя похожа, хотя слегка бледновата и посверкивает.</string>
    <!--  STRINGS OF RatKing CLASS  -->
    <string name="RatKing_Name">крысиный король</string>
    <string name="RatKing_Desc">Эта красы слегка крупнее просто сумчатой крысы. На её макушке зиждется корона.</string>

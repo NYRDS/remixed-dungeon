@@ -1831,6 +1831,7 @@
    <!--  STRINGS OF MirrorImage CLASS  -->
    <string name="MirrorImage_Name">mirror image</string>
    <string name="MirrorImage_Name_Objective">mirror image</string>
+   <string name="MirrorImage_Gender">male</string>
    <string name="MirrorImage_Desc">This illusion bears a close resemblance to you, but it\'s paler and twitches a little.</string>
 
    <!--  STRINGS OF RatKing CLASS  -->
