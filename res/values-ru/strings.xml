@@ -1977,7 +1977,7 @@
 <!--  PACKAGE /ui  -->
    <!--  STRINGS OF Toolbar CLASS  -->
    <string name="Toolbar_Info1">Ты не знаешь что там.</string>
-   <string name="Toolbar_Info2">Выбери ячейку, которую хочешь исследовать</string>
+   <string name="Toolbar_Info2">Выбери ячейку, для изучения</string>
 
 
 <!--  PACKAGE /utils  -->
