@@ -1589,6 +1589,7 @@
    <string name="Bandit_Name">crazy bandit</string>
    <string name="Bandit_Gender">male</string>
    <string name="Bandit_Name_Objective">crazy bandit</string>
+   <string name="Bandit_Desc">Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal.</string>
    <!--  STRINGS OF Bat CLASS  -->
    <string name="Bat_Name">vampire bat</string>
    <string name="Bat_Gender">male</string>

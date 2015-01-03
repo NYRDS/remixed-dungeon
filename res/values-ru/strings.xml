@@ -1595,6 +1595,7 @@
    <string name="Bandit_Name">бандит</string>
    <string name="Bandit_Gender">male</string>
    <string name="Bandit_Name_Objective">бандита</string>
+   <string name="Bandit_Desc">Глубинные уровни подземелья всегда служили хорошим укрытием для всякого преступника. Но не всякий преступник мог сохранить рассудок, будучи отлучённым от дневного света на долгое время. Давным-давно, эти безумные бандиты и воры позабыли кто они и зачем совершают преступления.</string>
    <!--  STRINGS OF Bat CLASS  -->
    <string name="Bat_Name">летучая мышь-вампир</string>
    <string name="Bat_Gender">male</string>
