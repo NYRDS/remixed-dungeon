@@ -1349,7 +1349,7 @@
 
 <!--  PACKAGE /weapon/melee  -->
    <!--  STRINGS OF MeleeWeapon CLASS  -->
-   <string name="MeleeWeapon_Info1a">%1$s %2$s является оружием ближнего боя %3$d порядка.</string>
+   <string name="MeleeWeapon_Info1a">%1$s - %2$s оружие ближнего боя %3$d порядка.</string>
    <string name="MeleeWeapon_Info1b"></string>
    <string name="MeleeWeapon_Info1c">улучшенное</string>
    <string name="MeleeWeapon_Info1d">ослабленное</string>
