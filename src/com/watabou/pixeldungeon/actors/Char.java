@@ -80,14 +80,12 @@ public abstract class Char extends Actor {
 	public int pos = 0;
 	
 	public CharSprite sprite;
-	
-	public String nameVariants[]  = Game.getVars(R.array.Char_Name);
-	
-	public String name            = nameVariants[0];
-	public String name_objective  = nameVariants[1];
+
+	public String name            = Game.getVar(R.string.Char_Name);
+	public String name_objective  = Game.getVar(R.string.Char_Name_Objective);
 	
 	protected String description     = Game.getVar(R.string.Mob_Desc);
-	private String defenceVerb     = null;
+	private   String defenceVerb     = null;
 	
 	public int    gender          = UNDEFINED;
 	
@@ -169,6 +167,10 @@ public abstract class Char extends Actor {
 	
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent){
 		String className = this.getClass().getSimpleName();
+		
+		if(className.length() == 0){ // isEmpty() require api level 9
+			return defaultValue;
+		}
 		
 		try{
 			String paramValue = Game.getVar(strings.getField(className+"_"+paramName).getInt(null));

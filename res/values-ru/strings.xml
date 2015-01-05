@@ -80,10 +80,8 @@
 
 
    <!--  STRINGS OF Char CLASS  -->
-   <string-array name="Char_Name">
-       <item>монстр</item>
-       <item>монстра</item>>
-   </string-array>
+   <string name="Char_Name">монстр</string>
+   <string name="Char_Name_Objective">монстр</string>
    
    <string-array name="Char_Hit">
        <item>%1$s ударило %2$s</item>
@@ -1022,9 +1020,9 @@
        <item >агатом</item>
    </string-array>
    <string name="Ring_Info1">Ты можешь носить максимум 2 кольца</string>
-   <string name="Ring_Info2">Твоё %s болезненно сжимает палец</string>
-   <string name="Ring_Info3a">%1$s\n\n%2$s на твоём пальце %3$s.</string>
-   <string name="Ring_Info3b">, поскольку оно проклято, ты не в силах его снять</string>
+   <string name="Ring_Info2">Проклятое %s не снять. Боль.</string>
+   <string name="Ring_Info3a">%1$s\n\n%2$s на твоём пальце %3$s</string>
+   <string name="Ring_Info3b">проклято, ты не в силах его снять.</string>
    <string name="Ring_Info4">%1$s\n\nТы чувствуешь зловещую магию затаившуюся внутри предмета %2$s.</string>
    <string name="Ring_BuffKnown">Это %s</string>
 
@@ -1830,7 +1828,7 @@
    <string name="MirrorImage_Desc">Эта иллюзия весьма на тебя похожа, хотя слегка бледновата и посверкивает.</string>
    <!--  STRINGS OF RatKing CLASS  -->
    <string name="RatKing_Name">крысиный король</string>
-   <string name="RatKing_Desc">Эта красы слегка крупнее простой сумчатой крысы. На её макушке виднеется малюсенькая корона.</string>
+   <string name="RatKing_Desc">Эта крыса слегка крупнее обычной. На её макушке зиждется корона.</string>
    <string name="RatKing_Info1">Я не сплю!</string>
    <string name="RatKing_Info2">Это ещё что? У меня нету времени на всякую ерунду. Королевство само собой править не будет!</string>
    <!--  STRINGS OF Shopkeeper CLASS  -->
@@ -1844,7 +1842,7 @@
    <string name="WandMaker_Berry1">О, какой приятный сюрприз, встретить достойного человека в таком месте! Я пришёл сюда в поисках редкого ингредиента _семян Гниловики_. Как человек осведомлённый в магии, я вполне справляюсь с местными монстрами, но заблудиться для меня, - раз плюнуть, стыдоба, честное слово. Не поможешь старику? Я с радостью оплачу твои старания одной из своих лучших волшебных палочек.</string>
    <string name="WandMaker_Berry2">Как поиски семян Гниловики, %s? Глухо? Не переживай, я не тороплюсь.</string>
    <string name="WandMaker_Dust1">О, какой приятный сюрприз, встретить достойного человека в таком месте! Я пришёл сюда в поисках редкого ингредиента - _трупной пыли_. Её можно собрать с костяных останков, которыми изобилует подземелье. Как человек осведомлённый в магии, я вполне справляюсь с местными монстрами, но заблудиться для меня, - раз плюнуть, стыдоба, честное слово. Не поможешь старику? Я с радостью оплачу твои старания одной из своих лучших волшебных палочек.</string>
-   <string name="WandMaker_Dust2">Как наши пыльные делишки, %s? Я бы первым делом осмотрел горсти костей.</string>
+   <string name="WandMaker_Dust2">Как наши пыльные делишки, %s? Я бы первым делом осмотрел кучки костей.</string>
    <string name="WandMaker_RotberryName">Гниловика</string>
    <string name="WandMaker_RotberryDesc">Ягоды с этого куста имеют сладкий привкус смерти.</string>
    <string name="WandMaker_RotberryInfo">Семя издаёт рёв, эхом проносящийся по подземелью!</string>
@@ -1977,7 +1975,7 @@
 <!--  PACKAGE /ui  -->
    <!--  STRINGS OF Toolbar CLASS  -->
    <string name="Toolbar_Info1">Ты не знаешь что там.</string>
-   <string name="Toolbar_Info2">Выбери ячейку, которую хочешь исследовать</string>
+   <string name="Toolbar_Info2">Выбери ячейку, для изучения</string>
 
 
 <!--  PACKAGE /utils  -->
