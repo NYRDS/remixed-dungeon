@@ -262,7 +262,7 @@ public class StartScene extends PixelScene {
 		
 		private static final int SECONDARY_COLOR	= 0xCACFC2;
 		
-		private BitmapText secondary;
+		private BitmapTextMultiline secondary;
 		
 		public GameButton( String primary ) {
 			super( primary );
@@ -274,7 +274,7 @@ public class StartScene extends PixelScene {
 		protected void createChildren() {
 			super.createChildren();
 			
-			secondary = createText( 6 );
+			secondary = createMultiline( 6 );
 			secondary.hardlight( SECONDARY_COLOR );
 			add( secondary );
 		}
@@ -284,7 +284,7 @@ public class StartScene extends PixelScene {
 			super.layout();
 			
 			if (secondary.text().length() > 0) {
-				text.y = align( y + (height - text.height() - secondary.baseLine()) / 2 );
+				text.y = align( y + (height - text.height() - secondary.baseLine()*2) / 2 );
 				
 				secondary.x = align( x + (width - secondary.width()) / 2 );
 				secondary.y = align( text.y + text.height() ); 

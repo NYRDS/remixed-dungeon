@@ -39,7 +39,7 @@
    <string name="StartScene_Load">Загрузить Игру</string>
    <string name="StartScene_New">Новая Игра</string>
    <string name="StartScene_Erase">Стереть текущую игру</string>
-   <string name="StartScene_Depth">Глубина: %1$d, уровень: %2$d</string>
+   <string name="StartScene_Depth">Глубина: %1$d\nУровень: %2$d</string>
    <string name="StartScene_Really">Вы точно хотите начать новую игру?</string>
    <string name="StartScene_Warning">Прогресс текущей игры будет потерян.</string>
    <string name="StartScene_Yes">Да, начать новую игру</string>
