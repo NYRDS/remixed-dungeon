@@ -1776,9 +1776,6 @@
    <string name="Blacksmith_Desc">This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.</string>
    <string name="Blacksmith_Gold1">Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don\'t have money to pay, but I can do some smithin\' for you. Consider yourself lucky, I\'m the only blacksmith around.</string>
    <string name="Blacksmith_Blood1">Hey human! Wanna be useful, eh? Take dis pickaxe and _kill a bat_ wit\' it, I need its blood on the head. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don\'t have money to pay, but I can do some smithin\' for you. Consider yourself lucky, I\'m the only blacksmith around.</string>
-
-
-
    <string name="Blacksmith_Txt2">Are you kiddin\' me? Where is my pickaxe?!</string>
    <string name="Blacksmith_Txt3">Dark gold ore. 15 pieces. Seriously, is it dat hard?</string>
    <string name="Blacksmith_Txt4">I said I need bat blood on the pickaxe. Chop chop!</string>
@@ -1847,7 +1844,6 @@
    <!--  STRINGS OF WandMaker CLASS  -->
    <string name="WandMaker_Name">old wandmaker</string>
    <string name="WandMaker_Desc">This old but hale gentleman wears a slightly confused expression. He is protected by a magic shield.</string>
-
    <string name="WandMaker_Defense">absorbed</string>
    <string name="WandMaker_Berry1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _Rotberry seed_. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
    <string name="WandMaker_Berry2">Any luck with a Rotberry seed, %s? No? Don\'t worry, I\'m not in a hurry.</string>
