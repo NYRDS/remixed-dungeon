@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.nyrds.pixeldungeon.ml"
-	android:versionCode="69"
-	android:versionName="1.7.2a-rus.08"
+	android:versionCode="70"
+	android:versionName="1.7.2a-rus.09"
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
