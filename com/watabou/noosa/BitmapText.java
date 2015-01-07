@@ -52,7 +52,7 @@ public class BitmapText extends Visual {
 	public BitmapText( String text, Font font ) {
 		super( 0, 0, 0, 0 );
 		
-		this.text = text;
+		this.text(text);
 		this.font = font;
 	}
 	
@@ -101,10 +101,6 @@ public class BitmapText extends Visual {
 		
 		width = 0;
 		height = 0;
-		
-		if (text == null) {
-			text = "";
-		}
 		
 		quads = Quad.createSet( text.length() );
 		realLength = 0;
@@ -165,10 +161,6 @@ public class BitmapText extends Visual {
 		width = 0;
 		height = 0;
 		
-		if (text == null) {
-			text = "";
-		}
-		
 		int length = text.length();
 		for (int i=0; i < length; i++) {
 			RectF rect = font.get( text.charAt( i ) );
@@ -208,7 +200,12 @@ public class BitmapText extends Visual {
 	}
 	
 	public void text( String str ) {
-		text = str;
+		if(str == null){
+			text = "";
+		}
+		else{
+			text = str;
+		}
 		dirty = true;
 	}
 	
