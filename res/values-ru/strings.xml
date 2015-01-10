@@ -1090,7 +1090,7 @@
 <!--  PACKAGE /items/scrolls  -->
    <!--  STRINGS OF Scroll CLASS  -->
    <string name="Scroll_Name">свиток \"%s\"</string>
-   <string name="Scroll_Info">Этот свиток покрыт непонятными письменами и озаглавлен рунной %s. Кто знает, что случится если его прочесть вслух?</string>
+   <string name="Scroll_Info">Этот свиток покрыт непонятными письменами и озаглавлен руной %s. Кто знает, что случится если его прочесть вслух?</string>
    <string name="Scroll_ACRead">ЧИТАТЬ</string>
    <string name="Scroll_Blinded">Ты не можешь прочесть свиток, будучи ослеплённым</string>
    <string-array name="Scroll_Runes">
