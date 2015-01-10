@@ -809,7 +809,7 @@
 
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">чехол для палочек</string>
-   <string name="WandHolster_Info">Изящное изделие, сработанное из кожи экзотического зверя, уместит в себе волшебные палочки в количестве до " + size + ".</string>  
+   <string name="WandHolster_Info">Изящное изделие, сработанное из кожи экзотического зверя, уместит в себе волшебные палочки в количестве до %d.</string>
 
 
 <!--  PACKAGE /items/food  -->
