@@ -1297,7 +1297,7 @@
 
    <!--  STRINGS OF WandOfSlowness CLASS  -->
    <string name="WandOfSlowness_Name">Палочка Замедления</string>
-   <string name="WandOfSlowness_Info">Эта палочка наложит на цель временный эффект, ополовинивающий скорость атаки и движения</string>
+   <string name="WandOfSlowness_Info">Эта палочка наложит на цель временный эффект, уменьшающий её скорость атаки и движения</string>
    <string name="WandOfSlowness_Info1">ничего не произошло</string>
 
 
