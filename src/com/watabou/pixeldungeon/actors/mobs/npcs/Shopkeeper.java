@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.windows.WndTradeItem;
 public class Shopkeeper extends NPC {
 
 	{
-		name = Game.getVar(R.string.Shopkeeper_Name);
 		spriteClass = ShopkeeperSprite.class;
 	}
 	
@@ -74,11 +73,6 @@ public class Shopkeeper extends NPC {
 	@Override
 	public boolean reset() {
 		return true;
-	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Shopkeeper_Desc);
 	}
 	
 	public static WndBag sell() {

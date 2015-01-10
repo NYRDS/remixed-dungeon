@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.sprites.RatKingSprite;
 public class RatKing extends NPC {
 
 	{
-		name = Game.getVar(R.string.RatKing_Name);
 		spriteClass = RatKingSprite.class;
 		
 		state = SLEEPEING;
@@ -73,10 +72,5 @@ public class RatKing extends NPC {
 		} else {
 			yell(Game.getVar(R.string.RatKing_Info2));
 		}
-	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.RatKing_Desc);
 	}
 }

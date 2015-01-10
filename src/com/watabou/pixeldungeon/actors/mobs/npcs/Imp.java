@@ -43,7 +43,6 @@ import com.watabou.utils.Random;
 public class Imp extends NPC {
 
 	{
-		name = Game.getVar(R.string.Imp_Name);
 		spriteClass = ImpSprite.class;
 	}
 	
@@ -130,12 +129,7 @@ public class Imp extends NPC {
 		destroy();
 		sprite.die();
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Imp_Desc);
-	}
-	
+		
 	public static class Quest {
 		
 		private static boolean alternative;

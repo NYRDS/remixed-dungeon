@@ -36,7 +36,6 @@ import com.watabou.utils.Random;
 public class MirrorImage extends NPC {
 	
 	{
-		name = Game.getVar(R.string.MirrorImage_Name);
 		spriteClass = MirrorSprite.class;
 		
 		state = HUNTING;
@@ -110,12 +109,7 @@ public class MirrorImage extends NPC {
 		
 		return enemy;
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.MirrorImage_Desc);
-	}
-	
+		
 	@Override
 	public CharSprite sprite() {
 		CharSprite s = super.sprite();
