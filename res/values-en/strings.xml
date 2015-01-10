@@ -34,7 +34,7 @@
    <string name="StartScene_Load">Load Game</string>
    <string name="StartScene_New">New Game</string>
    <string name="StartScene_Erase">Erase current game</string>
-   <string name="StartScene_Depth">Depth: %1$d, level: %2$d</string>
+   <string name="StartScene_Depth">Depth: %1$d\nLevel: %2$d</string>
    <string name="StartScene_Really">Do you really want to start new game?</string>
    <string name="StartScene_Warning">Your current game progress will be erased.</string>
    <string name="StartScene_Yes">Yes, start new game</string>
