@@ -19,9 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.HashSet;
 
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -36,7 +34,6 @@ import com.watabou.utils.Random;
 public class MirrorImage extends NPC {
 	
 	{
-		name = Game.getVar(R.string.MirrorImage_Name);
 		spriteClass = MirrorSprite.class;
 		
 		state = HUNTING;
@@ -110,12 +107,7 @@ public class MirrorImage extends NPC {
 		
 		return enemy;
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.MirrorImage_Desc);
-	}
-	
+		
 	@Override
 	public CharSprite sprite() {
 		CharSprite s = super.sprite();

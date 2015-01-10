@@ -56,7 +56,6 @@ import com.watabou.utils.Random;
 public class Ghost extends NPC {
 
 	{
-		name = Game.getVar(R.string.Ghost_Name);
 		spriteClass = GhostSprite.class;
 		
 		flying = true;
@@ -150,12 +149,7 @@ public class Ghost extends NPC {
 			Journal.add( Journal.Feature.GHOST );
 		}
 	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Ghost_Desc);
-	}
-	
+		
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
 		IMMUNITIES.add( Paralysis.class );

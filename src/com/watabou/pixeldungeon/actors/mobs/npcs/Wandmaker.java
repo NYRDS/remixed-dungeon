@@ -64,10 +64,9 @@ import com.watabou.pixeldungeon.windows.WndWandmaker;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Wandmaker extends NPC {
+public class WandMaker extends NPC {
 
 	{	
-		name = Game.getVar(R.string.WandMaker_Name);
 		spriteClass = WandmakerSprite.class;
 	}
 	
@@ -86,12 +85,7 @@ public class Wandmaker extends NPC {
 	public int defenseSkill( Char enemy ) {
 		return 1000;
 	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.WandMaker_Defense);
-	}
-	
+		
 	@Override
 	public void damage( int dmg, Object src ) {
 	}
@@ -132,11 +126,6 @@ public class Wandmaker extends NPC {
 	
 	private void tell( String format, Object...args ) {
 		GameScene.show( new WndQuest( this, Utils.format( format, args ) ) );
-	}
-	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.WandMaker_Desc);
 	}
 	
 	public static class Quest {
@@ -204,7 +193,7 @@ public class Wandmaker extends NPC {
 		public static void spawn( PrisonLevel level, Room room ) {
 			if (!spawned && Dungeon.depth > 6 && Random.Int( 10 - Dungeon.depth ) == 0) {
 				
-				Wandmaker npc = new Wandmaker();
+				WandMaker npc = new WandMaker();
 				do {
 					npc.pos = room.random();
 				} while (level.map[npc.pos] == Terrain.ENTRANCE || level.map[npc.pos] == Terrain.SIGN);

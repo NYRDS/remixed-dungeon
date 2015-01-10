@@ -22,7 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Wandmaker;
+import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -44,7 +44,7 @@ public class WndWandmaker extends Window {
 	private static final int BTN_HEIGHT	= 18;
 	private static final float GAP		= 2;
 	
-	public WndWandmaker( final Wandmaker wandmaker, final Item item ) {
+	public WndWandmaker( final WandMaker wandmaker, final Item item ) {
 		
 		super();
 		
@@ -63,7 +63,7 @@ public class WndWandmaker extends Window {
 		RedButton btnBattle = new RedButton( TXT_BATTLE ) {
 			@Override
 			protected void onClick() {
-				selectReward( wandmaker, item, Wandmaker.Quest.wand1 );
+				selectReward( wandmaker, item, WandMaker.Quest.wand1 );
 			}
 		};
 		btnBattle.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
@@ -72,7 +72,7 @@ public class WndWandmaker extends Window {
 		RedButton btnNonBattle = new RedButton( TXT_NON_BATTLE ) {
 			@Override
 			protected void onClick() {
-				selectReward( wandmaker, item, Wandmaker.Quest.wand2 );
+				selectReward( wandmaker, item, WandMaker.Quest.wand2 );
 			}
 		};
 		btnNonBattle.setRect( 0, btnBattle.bottom() + GAP, WIDTH, BTN_HEIGHT );
@@ -81,7 +81,7 @@ public class WndWandmaker extends Window {
 		resize( WIDTH, (int)btnNonBattle.bottom() );
 	}
 	
-	private void selectReward( Wandmaker wandmaker, Item item, Wand reward ) {
+	private void selectReward( WandMaker wandmaker, Item item, Wand reward ) {
 		
 		hide();
 		
@@ -99,6 +99,6 @@ public class WndWandmaker extends Window {
 		
 		wandmaker.sprite.die();
 		
-		Wandmaker.Quest.complete();
+		WandMaker.Quest.complete();
 	}
 }

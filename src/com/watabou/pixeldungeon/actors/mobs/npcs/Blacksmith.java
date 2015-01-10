@@ -56,7 +56,6 @@ public class Blacksmith extends NPC {
 	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.Blacksmith_LooksBetter);
 	
 	{
-		name = Game.getVar(R.string.Blacksmith_Name);
 		spriteClass = BlacksmithSprite.class;
 	}
 	
@@ -229,11 +228,6 @@ public class Blacksmith extends NPC {
 		return true;
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Blacksmith_Desc);
-	}
-
 	public static class Quest {
 		
 		private static boolean spawned;

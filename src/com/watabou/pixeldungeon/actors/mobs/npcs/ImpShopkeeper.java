@@ -32,7 +32,6 @@ public class ImpShopkeeper extends Shopkeeper {
 	private static final String TXT_GREETINGS = Game.getVar(R.string.ImpShopkeeper_Greetings);
 	
 	{
-		name = Game.getVar(R.string.ImpShopkeeper_Name);
 		spriteClass = ImpSprite.class;
 	}
 	
@@ -64,8 +63,4 @@ public class ImpShopkeeper extends Shopkeeper {
 		sprite.killAndErase();
 	}
 	
-	@Override
-	public String description() {
-		return Game.getVar(R.string.ImpShopkeeper_Desc);
-	}
 }
