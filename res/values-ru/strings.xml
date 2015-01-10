@@ -786,6 +786,10 @@
    <!--  STRINGS OF Viscosity CLASS  -->
    <string name="Viscosity_Txt">%s вязкости</string>
    <string name="Viscosity_Status">отложено %d</string>
+   
+   <!--  STRINGS OF DeferedDamage CLASS  -->
+   <string name="DeferedDamage_Defered_Txt">Отложеный урон (%d)</string>
+   <string name="DeferedDamage_Killed_Txt">%s убил тебя...</string>
 
 
 <!--  PACKAGE /items/bags  -->

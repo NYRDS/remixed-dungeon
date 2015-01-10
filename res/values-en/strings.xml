@@ -780,7 +780,10 @@
    <string name="Viscosity_Txt">%s of viscosity</string>
    <string name="Viscosity_Status">deferred %d</string>
 
-
+   <!--  STRINGS OF DeferedDamage CLASS  -->
+   <string name="DeferedDamage_Defered_Txt">Defered damage (%d)</string>
+   <string name="DeferedDamage_Killed_Txt">%s killed you...</string>
+   
 <!--  PACKAGE /items/bags  -->
    <!--  STRINGS OF Bag CLASS  -->
    <string name="Bag_ACOpen">OPEN</string>
