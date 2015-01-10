@@ -1773,12 +1773,15 @@
    <string name="RottingFist_Name">гнойный кулак</string>
    <string name="RottingFist_Gender">male</string>
    <string name="RottingFist_Name_Objective">гнойный кулак</string>
+   <string name="RottingFist_Desc">Гнойный кулак Бога</string>
    <string name="BurningFist_Name">пылающий кулак</string>
    <string name="BurningFist_Gender">male</string>
    <string name="BurningFist_Name_Objective">пылающий кулак</string>
+   <string name="BurningFist_Desc">Пылающий кулак Бога</string>
    <string name="Larva_Name">личинка бога</string>
    <string name="Larva_Gender">female</string>
    <string name="Larva_Name_Objective">личинку бога</string>
+   <string name="Larva_Desc">Личинка старого Бога</string>
 
 
 <!--  PACKAGE /mobs/npcs  -->

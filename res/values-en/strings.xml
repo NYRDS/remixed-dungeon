@@ -1766,12 +1766,15 @@
    <string name="RottingFist_Name">rotting fist</string>
    <string name="RottingFist_Gender">male</string>
    <string name="RottingFist_Name_Objective">rotting fist</string>
+   <string name="RottingFist_Desc">Rotting Fist of Old God</string>
    <string name="BurningFist_Name">burning fist</string>
    <string name="BurningFist_Gender">male</string>
    <string name="BurningFist_Name_Objective">burning fist</string>
+   <string name="BurningFist_Desc">Burning Fist of Old God</string>
    <string name="Larva_Name">god\'s larva</string>
    <string name="Larva_Gender">female</string>
    <string name="Larva_Name_Objective">god\'s larva</string>
+   <string name="Larva_Desc">Old God Larva</string>
 
 <!--  PACKAGE /mobs/npcs  -->
    <!--  STRINGS OF Blacksmith CLASS  -->
