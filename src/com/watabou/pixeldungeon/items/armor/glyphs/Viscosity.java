@@ -80,6 +80,9 @@ public class Viscosity extends Glyph {
 	
 	public static class DeferedDamage extends Buff {
 		
+		private static final String TXT_DEFERED_DAMAGE = Game.getVar(R.string.DeferedDamage_Defered_Txt);
+		private static final String TXT_KILLED_YOU     = Game.getVar(R.string.DeferedDamage_Killed_Txt);
+
 		protected int damage = 0;
 		
 		private static final String DAMAGE	= "damage";
@@ -118,7 +121,7 @@ public class Viscosity extends Glyph {
 		
 		@Override
 		public String toString() {
-			return Utils.format( "Defered damage (%d)", damage );
+			return Utils.format( TXT_DEFERED_DAMAGE, damage );
 		}
 		
 		@Override
@@ -130,7 +133,7 @@ public class Viscosity extends Glyph {
 					// FIXME
 					Glyph glyph = new Viscosity();
 					Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, glyph.name(), Dungeon.depth ) );
-					GLog.n( "%s killed you...", glyph.name() );
+					GLog.n( TXT_KILLED_YOU, glyph.name() );
 					
 					Badges.validateDeathFromGlyph();
 				}
