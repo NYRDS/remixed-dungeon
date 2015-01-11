@@ -1260,7 +1260,7 @@
    <string name="WandOfFlock_Info">Взмах этой палочки призовёт стадо волшебных овец, которые образуют временное непреодолимое препятствие.</string>
    <string name="Sheep_Name">овца</string>
    <string name="Sheep_Name_Objective">овца</string>
-   <string name="Sheep_Name_Gender">female</string>
+   <string name="Sheep_Gender">female</string>
    <string name="Sheep_Desc">Это волшебная овца. Что в ней такого волшебного? Ты не сможешь её убить. Она будет стоять на месте, пока, волшебным образом, не испарится, сосредоточенно что-то пережёвывая.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Бее!</item>
