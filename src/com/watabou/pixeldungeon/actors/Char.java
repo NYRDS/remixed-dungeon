@@ -543,6 +543,10 @@ public abstract class Char extends Actor {
 				}
 			}
 			
+			if(candidates.isEmpty()){ // Nowhere to move? just stay then
+				return;
+			}
+			
 			step = Random.element( candidates );
 		}
 		
