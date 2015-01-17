@@ -617,7 +617,7 @@
    <string name="TomeOfMastery_ACRead">ЧИТАТЬ</string>
    <string name="TomeOfMastery_Info">Эта изношенная кожаная книга не так уж велика, но ты почему-то уверен, что она многому тебя научит. Но помни, чтение этого тома требует времени.</string>
    <string name="TomeOfMastery_Blinded">Нельзя читать будучи ослеплённым</string>
-   <string name="TomeOfMastery_Choose">Ты избрал путь %s!</string>
+   <string name="TomeOfMastery_Choose">Теперь ты %s!</string>
 
 
    <!--  STRINGS OF Torch CLASS  -->
