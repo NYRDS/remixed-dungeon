@@ -450,7 +450,7 @@
    <string name="WndInfoItem_Skeleton">Останки скелета</string>
    <string name="WndInfoItem_WontKnow">Ты не узнаешь, что внутри, пока не откроешь!</string>
    <string name="WndInfoItem_NeedKey"> Но, чтобы открыть, тебе понадобится золотой ключ.</string>
-   <string name="WndInfoItem_Inside">Внутри ты видишь %s, но чтобы открыть сундук понадобится золотой ключ.</string>
+   <string name="WndInfoItem_Inside">Внутри ты видишь предмет - %s, но чтобы открыть сундук понадобится золотой ключ.</string>
    <string name="WndInfoItem_Owner">В этой древней гробнице может оказаться нечто полезное, но владелец вряд ли оценит твой энтузиазм.</string>
    <string name="WndInfoItem_Remains">Это всё что осталось от твоего предшественника. Пожалуй стоит обыскать на предмет ценностей.</string>
 
@@ -689,7 +689,7 @@
    <string name="Armor_Identify">ты достаточно хорошо знаком с предметом %1$s чтобы его опознать. Это %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
    <string name="Armor_Incompatible">Взаимодействие несовместимых типов магии стёрли глиф с этой брони!</string>
-   <string name="Armor_Info1">\n\n%1$s обеспечивает поглощение урона вплоть до \"%2$d\" очков за удар.</string>
+   <string name="Armor_Info1">%1$s обеспечивает поглощение урона вплоть до \"%2$d\" очков за удар.</string>
    <string name="Armor_Info2">\n\nИз-за недостаточной силы твоя скорость передвижения и навык защиты понизились. </string>
    <string name="Armor_Info3">\n\nИз-за недостаточной силы ношение этой брони понизит твою скорость передвижения и навык защиты.</string>
    <string name="Armor_Info4">\n\nКак правило %1$s обеспечивает поглощение урона вплоть до %2$d очков за удар и требует %3$d очков силы.</string>
@@ -1532,10 +1532,21 @@
    <string name="Fury_Info">В ярости</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
    <string name="GasesImmunity_Info">Иммунитет к газам</string>
+   
    <!--  STRINGS OF Hunger CLASS  -->
-   <string name="Hunger_Hungry">Ты голоден.</string>
-   <string name="Hunger_Starving">Ты истощён!</string>
-   <string name="Hunger_Death">Ты умер с голоду...</string>
+   <string-array name = "Hunger_Hungry" >
+       <item>Ты голодено.</item>
+       <item>Ты голоден.</item>
+       <item>Ты голодена.</item>
+   </string-array>
+   
+   <string-array name = "Hunger_Starving">
+       <item>Ты истощёно!</item>
+       <item>Ты истощён!</item>
+       <item>Ты истощёна!</item>
+   </string-array>
+   
+   <string name="Hunger_Death">Тебя настигла смерть от голода.</string>
    <string name="Hunger_Info1">Голоден</string>
    <string name="Hunger_Info2">Голодает</string>
    <!--  STRINGS OF Invisibility CLASS  -->

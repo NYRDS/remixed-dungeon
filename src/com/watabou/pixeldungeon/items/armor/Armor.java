@@ -203,11 +203,15 @@ public class Armor extends EquipableItem {
 	
 	@Override
 	public String info() {
-		String name = name();
+		final String p = "\n\n";
+		
 		StringBuilder info = new StringBuilder( desc() );
 		
+		String name = name();
+		
 		if (levelKnown) {
-			info.append(String.format(Game.getVar(R.string.Armor_Info1), name, Math.max( DR, 0 )));
+			info.append(p);
+			info.append(Utils.capitalize(String.format(Game.getVar(R.string.Armor_Info1), name, Math.max( DR, 0 ))));
 			
 			if (STR > Dungeon.hero.STR()) {
 				if (isEquipped( Dungeon.hero )) {

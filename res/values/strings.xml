@@ -682,7 +682,7 @@
    <string name="Armor_Identify">you are now familiar enough with your %1$s to identify it. It is %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
    <string name="Armor_Incompatible">Interaction of different types of magic has erased the glyph on this armor!</string>
-   <string name="Armor_Info1">\n\nThis %1$s provides damage absorption up to \"%2$d\"  points per attack.</string>
+   <string name="Armor_Info1">This %1$s provides damage absorption up to \"%2$d\"  points per attack.</string>
    <string name="Armor_Info2">\n\nBecause of your inadequate strength your movement speed and defense skill is decreased. </string>
    <string name="Armor_Info3">\n\nBecause of your inadequate strength wearing this armor will decrease your movement speed and defense skill.</string>
    <string name="Armor_Info4">\n\nTypical %1$s provides damage absorption up to %2$d points per attack and requires %3$d points of strength.</string>
@@ -1525,9 +1525,20 @@
    <string name="Fury_Info">Fury</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
    <string name="GasesImmunity_Info">Immune to gases</string>
+   
    <!--  STRINGS OF Hunger CLASS  -->
-   <string name="Hunger_Hungry">You are hungry.</string>
-   <string name="Hunger_Starving">You are starving!</string>
+   <string-array name = "Hunger_Hungry" >
+       <item>You are hungry.</item>
+       <item>You are hungry.</item>
+       <item>You are hungry.</item>
+   </string-array>
+   
+   <string-array name = "Hunger_Starving">
+       <item>You are starving!</item>
+       <item>You are starving!</item>
+       <item>You are starving!</item>
+   </string-array>
+   
    <string name="Hunger_Death">You starved to death...</string>
    <string name="Hunger_Info1">Hungry</string>
    <string name="Hunger_Info2">Starving</string>
