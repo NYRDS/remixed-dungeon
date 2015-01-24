@@ -1524,9 +1524,20 @@
    <string name="Fury_Info">Fury</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
    <string name="GasesImmunity_Info">Immune to gases</string>
+   
    <!--  STRINGS OF Hunger CLASS  -->
-   <string name="Hunger_Hungry">You are hungry.</string>
-   <string name="Hunger_Starving">You are starving!</string>
+   <string-array name = "Hunger_Hungry" >
+       <item>You are hungry.</item>
+       <item>You are hungry.</item>
+       <item>You are hungry.</item>
+   </string-array>
+   
+   <string-array name = "Hunger_Starving">
+       <item>You are starving!</item>
+       <item>You are starving!</item>
+       <item>You are starving!</item>
+   </string-array>
+   
    <string name="Hunger_Death">You starved to death...</string>
    <string name="Hunger_Info1">Hungry</string>
    <string name="Hunger_Info2">Starving</string>

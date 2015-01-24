@@ -1532,10 +1532,21 @@
    <string name="Fury_Info">В ярости</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
    <string name="GasesImmunity_Info">Иммунитет к газам</string>
+   
    <!--  STRINGS OF Hunger CLASS  -->
-   <string name="Hunger_Hungry">Ты голоден.</string>
-   <string name="Hunger_Starving">Ты истощён!</string>
-   <string name="Hunger_Death">Ты умер с голоду...</string>
+   <string-array name = "Hunger_Hungry" >
+       <item>Ты голодено.</item>
+       <item>Ты голоден.</item>
+       <item>Ты голодена.</item>
+   </string-array>
+   
+   <string-array name = "Hunger_Starving">
+       <item>Ты истощёно!</item>
+       <item>Ты истощён!</item>
+       <item>Ты истощёна!</item>
+   </string-array>
+   
+   <string name="Hunger_Death">Тебя настигла смерть от голода.</string>
    <string name="Hunger_Info1">Голоден</string>
    <string name="Hunger_Info2">Голодает</string>
    <!--  STRINGS OF Invisibility CLASS  -->
