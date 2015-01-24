@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import java.io.IOException;
+
 import javax.microedition.khronos.opengles.GL10;
 
 import android.annotation.SuppressLint;
@@ -32,6 +34,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class PixelDungeon extends Game {
 	
@@ -110,6 +113,19 @@ public class PixelDungeon extends Game {
 		
 		Music.INSTANCE.enable( music() );
 		Sample.INSTANCE.enable( soundFx() );
+	}
+	
+	@Override
+	public void onPause(){
+		super.onPause();
+		try {
+			if(Dungeon.hero != null){
+				Dungeon.saveAll();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Override

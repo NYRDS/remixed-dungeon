@@ -617,7 +617,7 @@
    <string name="TomeOfMastery_ACRead">ЧИТАТЬ</string>
    <string name="TomeOfMastery_Info">Эта изношенная кожаная книга не так уж велика, но ты почему-то уверен, что она многому тебя научит. Но помни, чтение этого тома требует времени.</string>
    <string name="TomeOfMastery_Blinded">Нельзя читать будучи ослеплённым</string>
-   <string name="TomeOfMastery_Choose">Ты избрал путь %s!</string>
+   <string name="TomeOfMastery_Choose">Теперь ты %s!</string>
 
 
    <!--  STRINGS OF Torch CLASS  -->
@@ -648,7 +648,7 @@
 
    <!--  STRINGS OF Dreamweed CLASS  -->
    <string name="Dreamweed_Name">Дурман-трава</string>
-   <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющие облачко ошеломляющего газа.</string>
+   <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющее облачко ошеломляющего газа.</string>
 
 
    <!--  STRINGS OF Earthroot CLASS  -->
@@ -1260,7 +1260,7 @@
    <string name="WandOfFlock_Info">Взмах этой палочки призовёт стадо волшебных овец, которые образуют временное непреодолимое препятствие.</string>
    <string name="Sheep_Name">овца</string>
    <string name="Sheep_Name_Objective">овца</string>
-   <string name="Sheep_Name_Gender">female</string>
+   <string name="Sheep_Gender">female</string>
    <string name="Sheep_Desc">Это волшебная овца. Что в ней такого волшебного? Ты не сможешь её убить. Она будет стоять на месте, пока, волшебным образом, не испарится, сосредоточенно что-то пережёвывая.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Бее!</item>
@@ -1901,7 +1901,7 @@
    <string name="Level_TileDescBarricade">Деревянная баррикада ладно сработана, но обветшала от времени. Интересно загорится?</string>
    <string name="Level_TileDescSign">Ты не можешь рассмотреть текст от сюда.</string>
    <string name="Level_TileDescTrap">Встав на прижимную плиту, ты активируешь ловушку.</string>
-   <string name="Level_TileDescInactiveTrap">Ловушка уже сработало однажды, теперь она безопасна.</string>
+   <string name="Level_TileDescInactiveTrap">Ловушка уже сработала однажды, теперь она безопасна.</string>
    <string name="Level_TileDescStatue">Декоратор, у этого места, не самый лучший.</string>
    <string name="Level_TileDescAlchemy">Закинь сюда семян, чтобы сварить зелья.</string>
    <string name="Level_TileDescEmptyWell">Источник иссяк.</string>
