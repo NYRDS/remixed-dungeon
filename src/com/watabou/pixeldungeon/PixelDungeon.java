@@ -34,7 +34,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class PixelDungeon extends Game {
 	
