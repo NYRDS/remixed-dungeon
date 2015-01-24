@@ -450,7 +450,7 @@
    <string name="WndInfoItem_Skeleton">Останки скелета</string>
    <string name="WndInfoItem_WontKnow">Ты не узнаешь, что внутри, пока не откроешь!</string>
    <string name="WndInfoItem_NeedKey"> Но, чтобы открыть, тебе понадобится золотой ключ.</string>
-   <string name="WndInfoItem_Inside">Внутри ты видишь %s, но чтобы открыть сундук понадобится золотой ключ.</string>
+   <string name="WndInfoItem_Inside">Внутри ты видишь предмет - %s, но чтобы открыть сундук понадобится золотой ключ.</string>
    <string name="WndInfoItem_Owner">В этой древней гробнице может оказаться нечто полезное, но владелец вряд ли оценит твой энтузиазм.</string>
    <string name="WndInfoItem_Remains">Это всё что осталось от твоего предшественника. Пожалуй стоит обыскать на предмет ценностей.</string>
 
