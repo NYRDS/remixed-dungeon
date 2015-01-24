@@ -22,6 +22,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class MeleeWeapon extends Weapon {
@@ -90,7 +91,7 @@ public class MeleeWeapon extends Weapon {
 		String degraded = Game.getVar(R.string.MeleeWeapon_Info1d);
 		String quality = levelKnown && level != 0 ? (level > 0 ? upgraded : degraded) : typical;
 		info.append(p);
-		info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier));
+		info.append(Utils.capitalize(String.format(Game.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier)));
 		info.append(" ");
 		
 		if (levelKnown) {
