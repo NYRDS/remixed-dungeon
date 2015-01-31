@@ -125,6 +125,7 @@ public enum Icons {
 			break;
 		case POTIONS_BELT:
 			icon.frame( icon.texture.uvRect( 98, 0, 108, 10 ) );
+			break;
 		case KEYRING:
 			icon.frame( icon.texture.uvRect( 64, 29, 74, 39 ) );
 			break;
