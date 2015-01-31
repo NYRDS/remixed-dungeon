@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
-import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
@@ -91,7 +90,6 @@ public enum HeroClass {
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		new Food().identify().collect();
-		new Keyring().collect();
 	}
 	
 	public Badges.Badge masteryBadge() {
