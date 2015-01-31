@@ -811,6 +811,10 @@
    <string name="WandHolster_Name">чехол для палочек</string>
    <string name="WandHolster_Info">Изящное изделие, сработанное из кожи экзотического зверя, уместит в себе волшебные палочки в количестве до %d.</string>
 
+   <!-- STRINGS OF PotionBelt CLASS -->
+   <string name="PotionBelt_Info">На этот крепкий кожанный пояс можно закрепить все твои зелья, также он не даст склянке лопнуть на морозе.</string>
+   <string name="PotionBelt_Name">пояс для зелий</string>
+   
 
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->

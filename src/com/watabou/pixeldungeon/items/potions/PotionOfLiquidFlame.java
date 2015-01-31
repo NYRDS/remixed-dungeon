@@ -32,7 +32,7 @@ public class PotionOfLiquidFlame extends Potion {
 	}
 	
 	@Override
-	protected void shatter( int cell ) {
+	public void shatter( int cell ) {
 		
 		setKnown();
 		

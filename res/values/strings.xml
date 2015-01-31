@@ -804,6 +804,9 @@
    <string name="WandHolster_Name">wand holster</string>
    <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to %d wands.</string>
 
+    <!-- STRINGS OF PotionBelt CLASS -->
+   <string name="PotionBelt_Info">This strong leather belt is capable of storing all your potions while protecting them from shattering due to frost.</string>
+   <string name="PotionBelt_Name">potion belt</string>
 
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
@@ -2014,4 +2017,5 @@
    <!-- 1: Execute Indefinite Function to Language -->
    <!-- 0: NO Execute Indefinite Function to Language -->
    <string name="Utils_IsIndefinte">1</string>
+
 </resources>

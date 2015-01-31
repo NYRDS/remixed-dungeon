@@ -210,7 +210,8 @@ public class Potion extends Item {
 		shatter( hero.pos );
 	}
 	
-	protected void shatter( int cell ) {
+
+	public void shatter( int cell ) {
 		GLog.i(String.format(Game.getVar(R.string.Potion_Shatter), color()));
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		splash( cell );
@@ -245,6 +246,7 @@ public class Potion extends Item {
 	
 	@Override
 	public String info() {
+
 		return isKnown() ? desc() : String.format(Game.getVar(R.string.Potion_Info), color);
 	}
 	
