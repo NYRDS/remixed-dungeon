@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class PotionBelt extends Bag {
 
 	{
-		name  = Game.getVar(R.string.PotionBelt_Info);
+		name  = Game.getVar(R.string.PotionBelt_Name);
 		image = ItemSpriteSheet.BELT;
 		
 		size = 12;
