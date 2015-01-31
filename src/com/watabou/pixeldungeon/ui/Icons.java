@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ public enum Icons {
 
 	SKULL,
 	BUSY,
-	COMPASS,
+	COMPASS, 
 	PREFS,
 	WARNING,
 	TARGET,
@@ -45,11 +45,13 @@ public enum Icons {
 	SCROLL_HOLDER,
 	WAND_HOLSTER,
 	POTIONS_BELT,
+	KEYRING,
 	CHECKED,
 	UNCHECKED,
 	EXIT,
 	CHALLENGE_OFF,
-	CHALLENGE_ON;
+	CHALLENGE_ON,
+	RESUME;
 	
 	public Image get() {
 		return get( this );
@@ -123,6 +125,8 @@ public enum Icons {
 			break;
 		case POTIONS_BELT:
 			icon.frame( icon.texture.uvRect( 98, 0, 108, 10 ) );
+		case KEYRING:
+			icon.frame( icon.texture.uvRect( 64, 29, 74, 39 ) );
 			break;
 		case CHECKED:
 			icon.frame( icon.texture.uvRect( 54, 12, 66, 24 ) );
@@ -138,6 +142,9 @@ public enum Icons {
 			break;
 		case CHALLENGE_ON:
 			icon.frame( icon.texture.uvRect( 102, 16, 126, 40 ) );
+			break;
+		case RESUME:
+			icon.frame( icon.texture.uvRect( 114, 0, 126, 11 ) );
 			break;
 		}
 		return icon;

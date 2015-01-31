@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
+import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -116,7 +117,8 @@ public class WndBag extends WndTabbed {
 			stuff.getItem( PotionBelt.class ), 
 			stuff.getItem( SeedPouch.class ), 
 			stuff.getItem( ScrollHolder.class ),
-			stuff.getItem( WandHolster.class )};
+			stuff.getItem( WandHolster.class ),
+			stuff.getItem( Keyring.class )};
 		
 		for (Bag b : bags) {
 			if (b != null) {
@@ -263,6 +265,8 @@ public class WndBag extends WndTabbed {
 				return Icons.get( Icons.WAND_HOLSTER );
 			} else if (bag instanceof PotionBelt) {
 				return Icons.get( Icons.POTIONS_BELT );
+			} else if (bag instanceof Keyring) {
+				return Icons.get( Icons.KEYRING );
 			} else {
 				return Icons.get( Icons.BACKPACK );
 			}
