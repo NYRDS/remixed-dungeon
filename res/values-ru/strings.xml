@@ -1462,15 +1462,15 @@
    
    <!--  STRINGS OF Hunger CLASS  -->
    <string-array name = "Hunger_Hungry" >
-       <item>Ты голодено.</item>
+       <item>Ты голодно.</item>
        <item>Ты голоден.</item>
-       <item>Ты голодена.</item>
+       <item>Ты голодна.</item>
    </string-array>
    
    <string-array name = "Hunger_Starving">
        <item>Ты истощёно!</item>
        <item>Ты истощён!</item>
-       <item>Ты истощёна!</item>
+       <item>Ты истощена!</item>
    </string-array>
    
    <string name="Hunger_Death">Тебя настигла смерть от голода.</string>
