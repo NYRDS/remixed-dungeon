@@ -39,12 +39,12 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.GooSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Goo extends Mob {
 
 	private static final float PUMP_UP_DELAY	= 2f;
-	
 	{
 		HP = HT = 80;
 		EXP = 10;
@@ -55,7 +55,23 @@ public class Goo extends Mob {
 		lootChance = 0.333f;
 	}
 	
+	private static final String GOO_PUMPED_STATE = "goo_pumped_state";
+	
 	private boolean pumpedUp = false;
+	
+	@Override
+	public void storeInBundle( Bundle bundle ) {		
+		super.storeInBundle( bundle );
+		
+		bundle.put(GOO_PUMPED_STATE, pumpedUp);
+	}
+	
+	@Override
+	public void restoreFromBundle( Bundle bundle ) {
+		
+		super.restoreFromBundle( bundle );
+		pumpedUp = bundle.getBoolean(GOO_PUMPED_STATE);
+	}
 	
 	@Override
 	public int damageRoll() {
