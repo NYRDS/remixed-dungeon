@@ -448,8 +448,8 @@
 
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Не удалось загрузить дополнительную информацию</string>
-   <string name="WndRanking_Stats">Параметры</string>
-   <string name="WndRanking_Items">Предметы</string>
+   <string name="WndRanking_Stats">Герой</string>
+   <string name="WndRanking_Items">Вещи</string>
    <string name="WndRanking_Badges">Значки</string>
    <string name="WndRanking_StaTitle">Уровень %1$d %2$s</string>
    <string name="WndRanking_StaChallenges">Испытания</string>
