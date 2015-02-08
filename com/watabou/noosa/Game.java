@@ -18,6 +18,7 @@
 package com.watabou.noosa;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -33,8 +34,13 @@ import com.watabou.utils.SystemTime;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -91,6 +97,28 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		sceneClass = c;
 	}
 	
+	public void useLocale(String lang){
+		Locale locale = new Locale(lang);  
+		Locale.setDefault(locale); 
+		Configuration config = new Configuration(); 
+		config.locale = locale; 
+		getBaseContext().getResources().updateConfiguration(config,  
+		getBaseContext().getResources().getDisplayMetrics());		
+	}
+	
+	public void doRestart(){
+		Intent i = instance.getBaseContext().getPackageManager()
+	             .getLaunchIntentForPackage(getBaseContext().getPackageName() );
+		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
+
+		int piId = 123456;
+		PendingIntent pi = PendingIntent.getActivity(getBaseContext(), piId, i, PendingIntent.FLAG_CANCEL_CURRENT);
+		AlarmManager mgr = (AlarmManager)getBaseContext().getSystemService(ContextWrapper.ALARM_SERVICE);
+		mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pi);
+		
+		System.exit(0);
+	}
+	
 	@Override
 	protected void onCreate( Bundle savedInstanceState ) {
 		super.onCreate( savedInstanceState );
@@ -114,7 +142,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		
 		view = new GLSurfaceView( this );
 		view.setEGLContextClientVersion( 2 );
-		view.setEGLConfigChooser( false );
+		//Hope this allow game work on broader devices list
+		//view.setEGLConfigChooser( false );
 		view.setRenderer( this );
 		view.setOnTouchListener( this );
 		setContentView( view );
