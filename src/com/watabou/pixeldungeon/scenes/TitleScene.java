@@ -118,6 +118,19 @@ public class TitleScene extends PixelScene {
 		btnExit.setPos( w - btnExit.width(), 0 );
 		add( btnExit );
 		
+		if (PixelDungeon.landscape()) {
+			float y = (h + height) / 2 - DashboardItem.SIZE;
+			btnHighscores	.setPos( w / 2 - btnHighscores.width(), y );
+			btnBadges		.setPos( w / 2, y );
+			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), y );
+			btnAbout		.setPos( btnBadges.right(), y );
+		} else {
+			btnBadges.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
+			btnAbout.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
+			btnPlay.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
+			btnHighscores.setPos( w / 2, btnPlay.top() );
+		}
+		
 		fadeIn();
 	}
 	
