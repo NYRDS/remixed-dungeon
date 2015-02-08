@@ -60,7 +60,7 @@ public class Goo extends Mob {
 	private boolean pumpedUp = false;
 	
 	@Override
-	public void storeInBundle( Bundle bundle ) {		
+	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		
 		bundle.put(GOO_PUMPED_STATE, pumpedUp);
