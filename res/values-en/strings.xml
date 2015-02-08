@@ -496,7 +496,7 @@
    <string name="WndSettings_Brightness">Brightness</string>
    <string name="WndSettings_SwitchPort">Switch to portrait</string>
    <string name="WndSettings_SwitchLand">Switch to landscape</string>
-
+   <string name="WndSettings_SelectLanguage">Select Language</string>
 
    <!--  STRINGS OF WndStory CLASS  -->
    <string name="WndStory_Sewers">The Dungeon lies right beneath the City, its upper levels actually constitute the City\'s sewer system. Being nominally a part of the City, these levels are not that dangerous. No one will call it a safe place, but at least you won\'t need to deal with evil magic here.</string>

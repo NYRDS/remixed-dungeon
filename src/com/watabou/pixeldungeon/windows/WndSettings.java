@@ -46,6 +46,8 @@ public class WndSettings extends Window {
 	private static final String TXT_SWITCH_PORT  = Game.getVar(R.string.WndSettings_SwitchPort);
 	private static final String TXT_SWITCH_LAND  = Game.getVar(R.string.WndSettings_SwitchLand);
 	
+	private static final String TXT_SElECT_LANGUAGE  = Game.getVar(R.string.WndSettings_SelectLanguage);
+	
 	private static final int WIDTH		= 112;
 	private static final int BTN_HEIGHT	= 20;
 	private static final int GAP 		= 2;
@@ -108,7 +110,6 @@ public class WndSettings extends Window {
 			btnImmersive.checked( PixelDungeon.immersed() );
 			btnImmersive.enable( android.os.Build.VERSION.SDK_INT >= 19 );
 			add( btnImmersive );
-			
 		}
 		
 		CheckBox btnMusic = new CheckBox( TXT_MUSIC ) {
@@ -147,6 +148,25 @@ public class WndSettings extends Window {
 			
 			resize( WIDTH, (int)btnOrientation.bottom() );
 			
+			RedButton localeButton = new RedButton (TXT_SElECT_LANGUAGE) {
+				@Override
+				protected void onClick() {
+					PixelDungeon.scene().add( 
+							new WndOptions( TXT_SElECT_LANGUAGE, "","English", "Русский") {
+								@Override
+								protected void onSelect(int index) {
+									String lang[] = {"en","ru"};
+									PixelDungeon.uiLanguage(lang[index]);
+								};
+							}
+						);
+				};
+			};
+			
+			localeButton.setRect(0, btnOrientation.bottom() + GAP, WIDTH, BTN_HEIGHT);
+			add ( localeButton);
+
+			resize( WIDTH, (int)localeButton.bottom() );
 		} else {
 		
 			CheckBox btnBrightness = new CheckBox( TXT_BRIGHTNESS ) {

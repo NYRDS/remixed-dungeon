@@ -478,7 +478,7 @@
    <!--  STRINGS OF WndSettings CLASS  -->
    <string name="WndSettings_ZoomIn">+</string>
    <string name="WndSettings_ZoomOut">-</string>
-   <string name="WndSettings_ZoomDef">Масштаб по условию</string>
+   <string name="WndSettings_ZoomDef">Стандартный Масштаб</string>
    <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
    <string name="WndSettings_Immersive">Режим \"погружение\"</string>
    <string name="WndSettings_Music">Музыка</string>
@@ -486,6 +486,7 @@
    <string name="WndSettings_Brightness">Яркость</string>
    <string name="WndSettings_SwitchPort">Перейти в портретный режим</string>
    <string name="WndSettings_SwitchLand">Перейти в альбомный режим</string>
+   <string name="WndSettings_SelectLanguage">Выберите Язык</string>
 
    <!--  STRINGS OF WndStory CLASS  -->
    <string name="WndStory_Sewers">Подземелье расположено точно под городом, верхние уровни фактически являются канализацией города. Будучи условно частью города, эти уровни не столь опасны. Конечно безопасными их тоже не назовёшь, но по крайней мере, здесь не приходится волноваться о зловещей магии.</string>
