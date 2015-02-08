@@ -32,7 +32,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class Frost extends FlavourBuff {
 
-	private static final String TXT_SHATTERS = "The cold causes %s to shatter!";
+	private static final String TXT_SHATTERS = Game.getVar(R.string.Frost_Shatter);
 	private static final float DURATION	= 5f;
 	
 	@Override

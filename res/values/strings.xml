@@ -1520,6 +1520,7 @@
    <string name="Cripple_Info">Crippled</string>
    <!--  STRINGS OF Frost CLASS  -->
    <string name="Frost_Info">Frozen</string>
+   <string name="Frost_Shatter">The cold causes %s to shatter!</string>
    <!--  STRINGS OF Fury CLASS  -->
    <string name="Fury_Info">Fury</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->

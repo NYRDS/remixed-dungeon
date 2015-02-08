@@ -179,7 +179,7 @@
        <item >Разбойники приспособлены к лёгкой броне, с ней они лучше уворачиваются от вражеских атак.</item>
        <item >Разбойники хороши в поиске скрытых дверей и ловушек.</item>
        <item >Разбойники могут дольше продержаться без еды.</item>
-       <item >Свитки Волшебной Разметки распознаны с самого начала.</item>
+       <item >Свитки Волшебной Карты распознаны с самого начала.</item>
    </string-array>
    <string-array name="HeroClass_HunPerks">
        <item >Охотницы начинают с 15 очками Здоровья.</item>
@@ -928,7 +928,7 @@
 
    <!--  STRINGS OF RatSkull CLASS  -->
    <string name="RatSkull_Name">череп гигантской крысы</string>
-   <string name="RatSkull_Info">Это могло бы стать неплохим трофеем, о не хотелось бы вешать на стену нечто столь зловонное.</string>
+   <string name="RatSkull_Info">Это могло бы стать неплохим трофеем, но не хотелось бы вешать на стену нечто столь зловонное.</string>
 
 
 <!--  PACKAGE /items/rings  -->
@@ -1455,6 +1455,7 @@
    <string name="Cripple_Info">Травмирован</string>
    <!--  STRINGS OF Frost CLASS  -->
    <string name="Frost_Info">Заморожен</string>
+   <string name="Frost_Shatter">%s лопается от холода!</string>
    <!--  STRINGS OF Fury CLASS  -->
    <string name="Fury_Info">В ярости</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
