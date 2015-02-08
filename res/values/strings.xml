@@ -73,6 +73,8 @@
    <string name="GameScene_Grass">The smell of vegetation is thick in the air.</string>
    <string name="GameScene_Secrets">The atmosphere hints that this floor hides many secrets.</string>
 
+   <!-- STRINGS OF SurfaceScene CLASS-->
+   <string name="SurfaceScene_GameOver">Game Over</string>
 
    <!--  STRINGS OF Char CLASS  -->
    <string name="Char_Name">mob</string>

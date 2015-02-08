@@ -78,7 +78,9 @@
    <string name="GameScene_Grass">В воздухе витает растительный аромат.</string>
    <string name="GameScene_Secrets">Атмосфера таинственности окутывает этот уровень, он полон секретов.</string>
 
-
+   <!-- STRINGS OF SurfaceScene CLASS-->
+   <string name="SurfaceScene_GameOver">Конец</string>
+   
    <!--  STRINGS OF Char CLASS  -->
    <string name="Char_Name">монстр</string>
    <string name="Char_Name_Objective">монстр</string>
