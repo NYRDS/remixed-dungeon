@@ -18,10 +18,12 @@
 package com.watabou.pixeldungeon;
 
 import java.io.IOException;
+import java.util.Locale;
 
 import javax.microedition.khronos.opengles.GL10;
 
 import android.annotation.SuppressLint;
+
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -99,6 +101,8 @@ public class PixelDungeon extends Game {
 	@Override
 	protected void onCreate( Bundle savedInstanceState ) {
 		super.onCreate( savedInstanceState );
+		
+		useLocale(uiLanguage());
 		
 		updateImmersiveMode();
 		
@@ -282,6 +286,17 @@ public class PixelDungeon extends Game {
 	
 	public static boolean intro() {
 		return Preferences.INSTANCE.getBoolean( Preferences.KEY_INTRO, true );
+	}
+
+	public static String uiLanguage(){
+		String deviceLocale = Locale.getDefault().getLanguage();
+		return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE, deviceLocale);
+	}
+
+	public static void uiLanguage(String lang){
+		Preferences.INSTANCE.put(Preferences.KEY_LOCALE, lang);
+		
+		instance.doRestart();
 	}
 	
 	/*

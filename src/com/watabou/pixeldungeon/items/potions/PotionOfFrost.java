@@ -37,7 +37,7 @@ public class PotionOfFrost extends Potion {
 	}
 	
 	@Override
-	protected void shatter( int cell ) {
+	public void shatter( int cell ) {
 		
 		PathFinder.buildDistanceMap( cell, BArray.not( Level.losBlocking, null ), DISTANCE );
 		

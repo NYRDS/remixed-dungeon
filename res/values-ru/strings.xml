@@ -78,7 +78,9 @@
    <string name="GameScene_Grass">В воздухе витает растительный аромат.</string>
    <string name="GameScene_Secrets">Атмосфера таинственности окутывает этот уровень, он полон секретов.</string>
 
-
+   <!-- STRINGS OF SurfaceScene CLASS-->
+   <string name="SurfaceScene_GameOver">Конец</string>
+   
    <!--  STRINGS OF Char CLASS  -->
    <string name="Char_Name">монстр</string>
    <string name="Char_Name_Objective">монстр</string>
@@ -179,7 +181,7 @@
        <item >Разбойники приспособлены к лёгкой броне, с ней они лучше уворачиваются от вражеских атак.</item>
        <item >Разбойники хороши в поиске скрытых дверей и ловушек.</item>
        <item >Разбойники могут дольше продержаться без еды.</item>
-       <item >Свитки Волшебной Разметки распознаны с самого начала.</item>
+       <item >Свитки Волшебной Карты распознаны с самого начала.</item>
    </string-array>
    <string-array name="HeroClass_HunPerks">
        <item >Охотницы начинают с 15 очками Здоровья.</item>
@@ -340,18 +342,16 @@
    <string name="Badges_Champion">Испытание пройдено</string>
    <string name="Badges_Supporter">Спасибо за поддержку!</string>
 
-
    <!--  STRINGS OF Challenges CLASS  -->
    <string-array name="Challenges_Names">
-       <item >Без еды</item>
-       <item >Без брони</item>
-       <item >Без зелий исцеления</item>
-       <item >Без росы и семян</item>
+       <item >На диете</item>
+       <item >Вера заменит мне броню</item>
+       <item >Никаких лекарств!</item>
+       <item >Пустыня</item>
        <item >Коллективный разум</item>
-       <item >Тьма</item>
+       <item >Во Тьме</item>
    </string-array>
  
-
    <!--  STRINGS OF Journal CLASS  -->
    <string name="Journal_WellHealt">Источник Исцеления</string>
    <string name="Journal_WellAwareness">Источник Чутья</string>
@@ -380,35 +380,28 @@
    <string name="ResultDescriptions_Fall">Разбился насмерть об уровень %d</string>
    <string name="ResultDescriptions_Win">Заполучил Амулет Эндора</string>
 
-
    <!--  STRINGS OF WndBlacksmith CLASS  -->
    <string name="WndBlacksmith_Prompt">Окей, сделка есть сделка, расклад такой: я перекую тебе два предмета в один, но лучший качеством.</string>
    <string name="WndBlacksmith_Select">Выбери предмет для перековки</string>
    <string name="WndBlacksmith_Reforge">Перековать</string>
-
 
    <!--  STRINGS OF WndCatalogus CLASS  -->
    <string name="WndCatalogus_Potions">Зелья</string>
    <string name="WndCatalogus_Scrolls">Свитки</string>
    <string name="WndCatalogus_Title">Каталог</string>
 
-
    <!--  STRINGS OF WndChallenges CLASS  -->
    <string name="WndChallenges_Title">Испытания</string>
-
 
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Message">Какой дорогой последуешь?</string>
    <string name="WndChooseWay_Cancel">Приму решение позже</string>
 
-
    <!--  STRINGS OF WndClass CLASS  -->
    <string name="WndClass_Mastery">Мастерство</string>
 
-
    <!--  STRINGS OF WndError CLASS  -->
    <string name="WndError_Title">ОШИБКА</string>
-
 
    <!--  STRINGS OF WndGame CLASS  -->
    <string name="WndGame_Settings">Настройки</string>
@@ -418,7 +411,6 @@
    <string name="WndGame_menu">Главное Меню</string>
    <string name="WndGame_Exit">Покинуть Pixel Dungeon</string>
    <string name="WndGame_Return">Вернутся в Игру</string>
-
 
    <!--  STRINGS OF WndHero CLASS  -->
    <string name="WndHero_Stats">Параметры</string>
@@ -432,15 +424,12 @@
    <string name="WndHero_StaCatalogus">Каталог</string>
    <string name="WndHero_StaJournal">Журнал</string>
 
-
    <!--  STRINGS OF WndImp CLASS  -->
    <string name="WndImp_Message">О, да! Ты мой герой!\nНа счёт награды, наличных у меня при себе нет, но я могу предложить кое-что получше. Это кольцо - моя семейная реликвия: мой дедуля снял его с пальца мёртвого паладина.</string>
    <string name="WndImp_Reward">Взять кольцо</string>
 
-
    <!--  STRINGS OF WndInfoCell CLASS  -->
    <string name="WndInfoCell_Nothing">Здесь ничего нет.</string>
-
 
    <!--  STRINGS OF WndInfoItem CLASS  -->
    <string name="WndInfoItem_Chest">Сундук</string>
@@ -454,15 +443,13 @@
    <string name="WndInfoItem_Owner">В этой древней гробнице может оказаться нечто полезное, но владелец вряд ли оценит твой энтузиазм.</string>
    <string name="WndInfoItem_Remains">Это всё что осталось от твоего предшественника. Пожалуй стоит обыскать на предмет ценностей.</string>
 
-
    <!--  STRINGS OF WndJournal CLASS  -->
    <string name="WndJournal_Title">Журнал</string>
 
-
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Не удалось загрузить дополнительную информацию</string>
-   <string name="WndRanking_Stats">Параметры</string>
-   <string name="WndRanking_Items">Предметы</string>
+   <string name="WndRanking_Stats">Герой</string>
+   <string name="WndRanking_Items">Вещи</string>
    <string name="WndRanking_Badges">Значки</string>
    <string name="WndRanking_StaTitle">Уровень %1$d %2$s</string>
    <string name="WndRanking_StaChallenges">Испытания</string>
@@ -475,13 +462,11 @@
    <string name="WndRanking_StaFood">Еды Употреблено</string>
    <string name="WndRanking_StaAlchemy">Зелий Сварено</string>
    <string name="WndRanking_StaAnkhs">Анхов Использовано</string>
-
-
+   
    <!--  STRINGS OF WndResurrect CLASS  -->
    <string name="WndResurrect_Message">Ты погиб, но тебе дарован ещё один шанс покорить подземелье. Воспользуешься ли ты им?</string>
    <string name="WndResurrect_Yes">Да, я продолжу биться!</string>
    <string name="WndResurrect_No">Нет, я сдаюсь</string>
-
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
    <string name="WndSadGhost_Rose">Да! Да!!! То что нужно! Прошу, отдай её мне! И можешь взять любой из этих предметов, они могут тебе пригодится...</string>
@@ -490,11 +475,10 @@
    <string name="WndSadGhost_Armor">Доспехи призрака</string>
    <string name="WndSadGhost_Farewell">Счастливого пути!</string>
 
-
    <!--  STRINGS OF WndSettings CLASS  -->
    <string name="WndSettings_ZoomIn">+</string>
    <string name="WndSettings_ZoomOut">-</string>
-   <string name="WndSettings_ZoomDef">Масштаб по условию</string>
+   <string name="WndSettings_ZoomDef">Стандартный Масштаб</string>
    <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
    <string name="WndSettings_Immersive">Режим \"погружение\"</string>
    <string name="WndSettings_Music">Музыка</string>
@@ -502,7 +486,7 @@
    <string name="WndSettings_Brightness">Яркость</string>
    <string name="WndSettings_SwitchPort">Перейти в портретный режим</string>
    <string name="WndSettings_SwitchLand">Перейти в альбомный режим</string>
-
+   <string name="WndSettings_SelectLanguage">Выберите Язык</string>
 
    <!--  STRINGS OF WndStory CLASS  -->
    <string name="WndStory_Sewers">Подземелье расположено точно под городом, верхние уровни фактически являются канализацией города. Будучи условно частью города, эти уровни не столь опасны. Конечно безопасными их тоже не назовёшь, но по крайней мере, здесь не приходится волноваться о зловещей магии.</string>
@@ -510,7 +494,6 @@
    <string name="WndStory_Caves">Пещеры, протянувшиеся под тюрьмой, вряд ли можно назвать обитаемыми. Они слишком глубоко, вне досягаемости Города и слишком бедны минералами, чтобы заинтересовать дворфов. В прошлом здесь располагалась торговая точка, на пути соединяющим две стороны, но она сгинула вместе с падением Дворфийской Метрополии. Теперь здесь есть лишь вездесущие гноллы и подземные твари.</string>
    <string name="WndStory_Metropolis">Дворфийская Метрополия была когда-то величайшим городом-государством подземного народа. В дни его расцвета механизированная армия дворфов смогла отбиться от вторжения старого бога и его армии демонов. Говорится, что вернувшиеся воины несли с собой семя разрушения, и что эта победа лишь ознаменовала кончину подземного царства.</string>
    <string name="WndStory_Halls">В прошлом эти уровни считались задворками Метрополии. Победа над старым богом далась дворфам дорогой ценой, и они были не в силах зачистить местность от оставшихся демонов. Со временем демоны овладели этими местом, теперь оно зовётся Чертогом Демонов.\n\nЛишь немногие путешественники заходили так далеко...</string>
-
 
    <!--  STRINGS OF WndTradeItem CLASS  -->
    <string name="WndTradeItem_Sale">В ПРОДАЖЕ: %1$s - %2$dg</string>
@@ -522,35 +505,29 @@
    <string name="WndTradeItem_Sold">Ты продал %1$s за %2$dg</string>
    <string name="WndTradeItem_Bought">Ты купил %1$s за %2$dg</string>
 
-
    <!--  STRINGS OF WndWandmaker CLASS  -->
    <string name="WndWandmaker_Message">О, я вижу ты преуспел! Надеюсь это не доставило тебе особых хлопот. Как обещано, ты волен выбрать одну из моих лучших палочек.</string>
    <string name="WndWandmaker_Battle">Боевая палочка</string>
    <string name="WndWandmaker_NonBattle">Не боевая палочка</string>
    <string name="WndWandmaker_Farawell">Удачи тебе в твоих свершениях, %s!</string>
 
-
    <!--  STRINGS OF QuickSlot CLASS  -->
    <string name="QuickSlot_SelectedItem">Выбери предмет для быстрой ячейки</string>
 
-
    <!--  STRINGS OF Item CLASS  -->
    <string name="Item_Name">предмет</string>
-   <string name="Item_ACDrop">ВЫКИНУТЬ</string>
+   <string name="Item_ACDrop">ВЫЛОЖИТЬ</string>
    <string name="Item_ACThrow">МЕТНУТЬ</string>
    <string name="Item_PackFull">У тебя нету места для предмета %s</string>
    <string name="Item_DirThrow">Выбери направление броска</string>
-
 
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">НАДЕТЬ</string>
    <string name="EquipableItem_ACUnequip">СНЯТЬ</string>
    <string name="EquipableItem_Unequip">Ты не можешь снять проклятый предмет %s!</string>
 
-
    <!--  STRINGS OF KindOfWeapon CLASS  -->
    <string name="KindOfWeapon_EquipCursed">ты не в силах разжать пальцы охватившие %s</string>
-
 
    <!--  STRINGS OF Gold CLASS  -->
    <string name="Gold_Name">золото</string>
@@ -558,17 +535,14 @@
    <string name="Gold_Info">Горсть из %d золотых монет.</string>
    <string name="Gold_Info1">Одна золотая монетка.</string>
 
-
    <!--  STRINGS OF Amulet CLASS  -->
    <string name="Amulet_Name">Амулет Эндора</string>
    <string name="Amulet_ACEnd">ЗАВЕРШИТЬ ИГРУ</string>
    <string name="Amulet_Info">Амулет Эндора, могущественнейший артефакт, неведомого происхождения. Считается, что он может исполнить любое желание, если воля его обладателя достаточно сильна, для того чтобы "убедить" амулет.</string>
 
-
    <!--  STRINGS OF Ankh CLASS  -->
    <string name="Ankh_Name">Анх</string>
    <string name="Ankh_Info">Древний символ бессмертия дарующий возможность вернутся к жизни после смерти. При воскрешении все не надетые вещи теряются.</string>
-
 
    <!--  STRINGS OF ArmorKit CLASS  -->
    <string name="ArmorKit_Name">инструменты</string>
@@ -577,11 +551,9 @@
    <string name="ArmorKit_SelectArmor">Выбери броню для улучшения</string>
    <string name="ArmorKit_Upgraded">ты применил инструменты для улучшения предмета %s</string>
 
-
    <!--  STRINGS OF Dewdrop CLASS  -->
    <string name="Dewdrop_Name">капля росы</string>
    <string name="Dewdrop_Info">Кристально чистая капля росы.</string>
-
 
    <!--  STRINGS OF DewVial CLASS  -->
    <string name="DewVial_Name">флакончик росы</string>
@@ -591,7 +563,6 @@
    <string name="DewVial_Collected">Ты собрал капельку росы в свой флакончик росы.</string>
    <string name="DewVial_Full">Флакончик росы заполнен!</string>
    <string name="DewVial_Empty">Флакончик росы пуст!</string>
-
 
    <!--  STRINGS OF LloidsBeacon CLASS  -->
    <string name="LloidsBeacon_Name">маяк Ллойда</string>
@@ -603,14 +574,12 @@
    <string name="LloidsBeacon_Return">Маяк Ллойда успешно установлен на твоё текущее положение, теперь ты можешь вернуться сюда в любое время.</string>
    <string name="LloidsBeacon_Set">\n\nЭтот маяк был установлен где-то на %d уровне Pixel Dungeon.</string>
 
-
    <!--  STRINGS OF Stylus CLASS  -->
    <string name="Stylus_Name">мистический стилус</string>
    <string name="Stylus_ACInscribe">НАЧЕРТАТЬ</string>
    <string name="Stylus_Info">Этот мистический стилус был изготовлен из некоего чёрного, весьма твёрдого камня. С его помощью ты можешь чертить волшебный глифы на своей броне, но ты не в силах выбрать какой глиф начертать, стилус решит за тебя.</string>
    <string name="Stylus_SelectArmor">Выбери броню для начертания</string>
    <string name="Stylus_Inscribed">ты начертал %1$s на предмете %2$s</string>
-
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
    <string name="TomeOfMastery_Name">Том Мастерства</string>
@@ -619,12 +588,10 @@
    <string name="TomeOfMastery_Blinded">Нельзя читать будучи ослеплённым</string>
    <string name="TomeOfMastery_Choose">Теперь ты %s!</string>
 
-
    <!--  STRINGS OF Torch CLASS  -->
    <string name="Torch_Name">факел</string>
    <string name="Torch_ACLight">Зажечь</string>
    <string name="Torch_Info">Это незаменимая вещь в Чертогах Демонов, известных своим скудным освящением.</string>
-
 
    <!--  STRINGS OF Weightstone CLASS  -->
    <string name="Weightstone_Name">грузило</string>
@@ -638,45 +605,38 @@
    <string name="Weightstone_WndAccuracy">На меткость</string>
    <string name="Weightstone_WndCancel">Забудь об этом</string>
 
-
+   
 <!--  PACKAGE pixeldungeon/plants  -->
    <!--  STRINGS OF Plant CLASS  -->
    <string name="Plant_ACPlant">ПОСАДИТЬ</string>
    <string name="Plant_Info">Посади эти семена в то место где ты хочешь вырастить %1$s.\n\n%2$s</string>
    <string name="Plant_Seed">семена растения %s</string>
 
-
    <!--  STRINGS OF Dreamweed CLASS  -->
    <string name="Dreamweed_Name">Дурман-трава</string>
    <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющее облачко ошеломляющего газа.</string>
-
 
    <!--  STRINGS OF Earthroot CLASS  -->
    <string name="Earthroot_Name">Земляной Корень</string>
    <string name="Earthroot_Desc">Когда существо касается Земляного Корня, его окутывает природная броня.</string>
    <string name="Earthroot_Buff">Растительная броня</string>
 
-
    <!--  STRINGS OF Fadeleaf CLASS  -->
    <string name="Fadeleaf_Name">Бледнолист</string>
    <string name="Fadeleaf_Desc">Касание Бледнолиста телепортирует любое существо в случайную точку текущего уровня.</string>
-
 
    <!--  STRINGS OF Firebloom CLASS  -->
    <string name="Firebloom_Name">Огнецвет</string>
    <string name="Firebloom_Desc">Всё, что касается Огнецвета, охватывается огнём.</string>
    
-
    <!--  STRINGS OF Icecap CLASS  -->
    <string name="Icecap_Name">Ледовик</string>
    <string name="Icecap_Desc">При касании Ледовик испускает пыльцу, которая замораживает всё на своём пути.</string>
    
-
    <!--  STRINGS OF Sorrowmoss CLASS  -->
    <string name="Sorrowmoss_Name">Грустномох</string>
    <string name="Sorrowmoss_Desc">Грустномох это цветок (а не мох) с лепестками острыми как бритва, покрытыми смертельным ядом.</string>
    
-
    <!--  STRINGS OF Sungrass CLASS  -->
    <string name="Sungrass_Name">Солнечник</string>
    <string name="Sungrass_Desc">Солнечник славится целебными свойствами своего сока.</string>
@@ -700,17 +660,14 @@
    <string name="Armor_Info8">\n\nТы чувствуешь зловещую силу затаившуюся в предмете %s.</string>
    <string name="Armor_Glyph">глиф</string>
 
-
    <!--  STRINGS OF ClassArmor CLASS  -->
    <string name="ClassArmor_Desc">Вот это вещь!</string>
    <string name="ClassArmor_LowHealt">У тебя слишком мало здоровья!</string>
    <string name="ClassArmor_NotEquipped">Чтобы использовать особые свойства этой брони, её надо надеть!</string>
 
-
    <!--  STRINGS OF ClothArmor CLASS  -->
    <string name="ClothArmor_Name">тканевый доспех</string>
    <string name="ClothArmor_Desc">Эта лёгкая броня обеспечивает простейшую защиту.</string>
-
 
    <!--  STRINGS OF HuntressArmor CLASS  -->
    <string name="HuntressArmor_Name">охотничий плащ</string>
@@ -719,11 +676,9 @@
    <string name="HuntressArmor_NoEnemies">Нету видимых целей</string>
    <string name="HuntressArmor_NotHuntress">Этот доспех доступен лишь охотнице!</string>
 
-
    <!--  STRINGS OF LeatherArmor CLASS  -->
    <string name="LeatherArmor_Name">кожаный доспех</string>
    <string name="LeatherArmor_Desc">Доспех изготовленный из шкуры монстра. Не столь лёгок, как тканьевый доспех, но обеспечивает большую защиту.</string>
-
 
    <!--  STRINGS OF MageArmor CLASS  -->
    <string name="MageArmor_Name">волшебный балахон</string>
@@ -731,16 +686,13 @@
    <string name="MageArmor_ACSpecial">РАСПЛАВЛЕННАЯ ЗЕМЛЯ</string>
    <string name="MageArmor_NotMage">Этот доспех доступен лишь магу!</string>
 
-
    <!--  STRINGS OF MailArmor CLASS  -->
    <string name="MailArmor_Name">кольчужный доспех</string>
    <string name="MailArmor_Desc">Сочленение металлических колец образует прочный, но, в тоже время, не сковывающий движения доспех.</string>
 
-
    <!--  STRINGS OF PlateArmor CLASS  -->
    <string name="PlateArmor_Name">латный доспех</string>
    <string name="PlateArmor_Desc">Массивные металлические пластины обеспечивают непревзойдённую защиту, доступную лишь героям способным осилить эту тяжкую ношу.</string>
-
 
    <!--  STRINGS OF RogueArmor CLASS  -->
    <string name="RogueArmor_Name">разбойничий комбинезон</string>
@@ -750,11 +702,9 @@
    <string name="RogueArmor_Fov">Ты можешь отскочить лишь в свободное место, в поле твоего зрения</string>
    <string name="RogueArmor_Prompt">Выбери место для отскока</string>
 
-
    <!--  STRINGS OF ScaleArmor CLASS  -->
    <string name="ScaleArmor_Name">чешуйчатый доспех</string>
    <string name="ScaleArmor_Desc">Металлические пластинки, нашитые на кожаную основу обеспечивают достаточную подвижность и недурную защиту.</string>
-
 
    <!--  STRINGS OF WarriorArmor CLASS  -->
    <string name="WarriorArmor_Name">боевой доспех</string>
@@ -763,7 +713,7 @@
    <string name="WarriorArmor_NotWarrior">Этот доспех доступен лишь воину!</string>
    <string name="WarriorArmor_Prompt">Выбери направление рывка</string>
 
-
+   
 <!--  PACKAGE /armor/Gyphs  -->
    <!--  STRINGS OF Affection CLASS  -->
    <string name="Affection_Txt">%s влечения</string>
@@ -796,22 +746,26 @@
    <!--  STRINGS OF Bag CLASS  -->
    <string name="Bag_ACOpen">ОТКРЫТЬ</string>
 
-
    <!--  STRINGS OF ScrollHolder CLASS  -->
    <string name="ScrollHolder_Name">футляр для свитков</string>
    <string name="ScrollHolder_Info">В этот футляр может поместиться любое количество свитков. Он освободит место в твоём рюкзаке и защитит свитки от огня.</string>
-
 
    <!--  STRINGS OF SeedPouch CLASS  -->
    <string name="SeedPouch_Name">мешочек для семян</string>
    <string name="SeedPouch_Info">Этот маленький бархатный мешочек вмещает любое количество семян. Полезная вещь.</string>   
 
-
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">чехол для палочек</string>
    <string name="WandHolster_Info">Изящное изделие, сработанное из кожи экзотического зверя, уместит в себе волшебные палочки в количестве до %d.</string>
 
-
+   <!-- STRINGS OF PotionBelt CLASS -->
+   <string name="PotionBelt_Info">На этот крепкий кожаный пояс можно закрепить все твои зелья, также он не даст склянке лопнуть на морозе.</string>
+   <string name="PotionBelt_Name">пояс для зелий</string>
+   
+   <!--  STRINGS OF Keyring CLASS  -->
+   <string name="Keyring_Name">кольцо для ключей</string>
+   <string name="Keyring_Info">Это медное кольцо для ключей позволит удобно хранить все твои ключи.</string>
+   
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
    <string name="Food_Name">сухпаёк</string>
@@ -819,11 +773,9 @@
    <string name="Food_ACEat">СЪЕСТЬ</string>
    <string name="Food_Message">Вкуснечка!</string>
 
-
    <!--  STRINGS OF ChargrilledMeat CLASS  -->
    <string name="ChargrilledMeat_Name">мясо приготовленное на углях</string>
    <string name="ChargrilledMeat_Info">Выглядит достойно.</string>
-
 
    <!--  STRINGS OF FrozenCarpaccio CLASS  -->
    <string name="FrozenCarpaccio_Name">замороженный карпаччо</string>
@@ -832,7 +784,6 @@
    <string name="FrozenCarpaccio_Info2">Ты чувствуешь как твоя кожа крепчает!</string>
    <string name="FrozenCarpaccio_Info3">Освежает!</string>
    <string name="FrozenCarpaccio_Info4">Тебе похорошело!</string>
-
 
    <!--  STRINGS OF MysteryMeat CLASS  -->
    <string name="MysteryMeat_Name">подозрительное мясо</string>
@@ -843,12 +794,10 @@
    <string name="MysteryMeat_Info4">Ты объелся.</string>
    <string name="MysteryMeat_Message">Какой... подозрительный вкус.</string>
 
-
    <!--  STRINGS OF OverpricedRation CLASS  -->
    <string name="OverpricedRation_Name">дорогущий сухпаёк</string>
-   <string name="OverpricedRation_Info">От просто сухпайка отличается только меньшим размером.</string>
+   <string name="OverpricedRation_Info">Он как обычный сухпаёк, только маленький.</string>
    <string name="OverpricedRation_Message">Достаточно вкусно.</string>
-
 
    <!--  STRINGS OF Pasty CLASS  -->
    <string name="Pasty_Name">пирог</string>
@@ -860,12 +809,10 @@
    <string name="GoldemKey_Name">золотой ключ</string>
    <string name="GoldemKey_Info">Засечки на этом ключе имеют миниатюрную, замысловатую форму. Наверное он подойдёт к какому-нибудь сундуку?</string>
 
-
    <!--  STRINGS OF IronKey CLASS  -->
    <string name="IronKey_Name">железный ключ</string>
    <string name="IronKey_Info">Засечки на этом древнем ключе износились; продетый в него кожаный ремень давно потрескался. Какую дверь им можно открыть?</string>
    <string name="IronKey_FromDepth">железный ключ с %d этажа</string>
-
 
    <!--  STRINGS OF SkeletonKey CLASS  -->
    <string name="SkeletonKey_Name">ключ-скелет</string>
@@ -899,39 +846,32 @@
        <item >серебряное</item>
    </string-array>
 
-
    <!--  STRINGS OF PotionOfExperience CLASS  -->
    <string name="PotionOfExperience_Name">Зелье Опыта</string>
    <string name="PotionOfExperience_Info">Опыт накопленный в неисчислимых битвах преобразован в форму зелья, такой напиток моментально повысит твой уровень опыта.</string>
 
-
    <!--  STRINGS OF PotionOfFrost CLASS  -->
    <string name="PotionOfFrost_Name">Зелье Мороза</string>
    <string name="PotionOfFrost_Info">При контакте с воздухом этот химикат испарится, образуя леденящее облачко, примораживающее к месту всякое существо, которое его коснётся, лишая того возможности пошевелится.</string>
-
 
    <!--  STRINGS OF PotionOfHealing CLASS  -->
    <string name="PotionOfHealing_Name">Зелье Исцеления</string>
    <string name="PotionOfHealing_Info">Эликсир мгновенно восстановит твоё здоровье и излечит от яда.</string>
    <string name="PotionOfHealing_Apply">Твои раны полностью затянулись.</string>
 
-
    <!--  STRINGS OF PotionOfInvisibility CLASS  -->
    <string name="PotionOfInvisibility_Name">Зелье Невидимости</string>
    <string name="PotionOfInvisibility_Info">Выпив это зелье ты станешь временно невидимым. Враги не смогут увидеть тебя, но нападение на врага, также как использование палочки или свитка у них на глазах, сделает тебя видимым.</string>
    <string name="PotionOfInvisibility_Apply">Ты становишься невидимым!</string>
-
 
    <!--  STRINGS OF PotionOfLevitation CLASS  -->
    <string name="PotionOfLevitation_Name">Зелье Левитации</string>
    <string name="PotionOfLevitation_Info">Выпив эту занятную субстанцию ты обретёшь способность парить над поверхностью, минуя ловушки. Но, поскольку огонь и газ заполняют воздух, их ты облететь не сможешь.</string>
    <string name="PotionOfLevitation_Apply">Ты воспарил над землёй!</string>
 
-
    <!--  STRINGS OF PotionOfLiquidFlame CLASS  -->
    <string name="PotionOfLiquidFlame_Name">Зелье Жидкого Пламени</string>
    <string name="PotionOfLiquidFlame_Info">Эта фляга содержит мощный реагент, который мгновенно воспламенится при контакте с воздухом.</string>
-
 
    <!--  STRINGS OF PotionOfMight CLASS  -->
    <string name="PotionOfMight_Name">Зелье Могущества</string>
@@ -939,18 +879,15 @@
    <string name="PotionOfMight_Apply">Новоприобретённая сила пульсирует в твоём теле.</string>
    <string name="PotionOfMight_StaApply">+1 сила, +5 здоровье</string>
 
-
    <!--  STRINGS OF PotionOfMindVision CLASS  -->
    <string name="PotionOfMindVision_Name">Зелье Ясновидения</string>
    <string name="PotionOfMindVision_Info">Выпив это ты обретёшь способность улавливать мозговые волны удалённых существ, что позволит тебе чувствовать живые организмы сквозь стены. Также это зелье позволит тебе видеть сквозь ближайшие стены и двери.</string>
    <string name="PotionOfMindVision_Apply1">Ты каким-то образом почувствовал присутствие других разумных существ!</string>
    <string name="PotionOfMindVision_Apply2">Что-то тебе подсказывает, что ты единственное живое существо на этом уровне.</string>
 
-
    <!--  STRINGS OF PotionOfParalyticGas CLASS  -->
    <string name="PotionOfParalyticGas_Name">Зелье Парализующего Газа</string>
    <string name="PotionOfParalyticGas_Info">При контакте с воздухом эта жидкость испарится, образуя желтоватую дымку. Любой вдохнувший его будет мгновенно парализован и сможет двинуться лишь спустя некоторое время после испарения дымки. Этот предмет можно швырнуть во врагов, чтобы парализовать их.</string>
-
 
    <!--  STRINGS OF PotionOfPurity CLASS  -->
    <string name="PotionOfPurity_Name">Зелье Очищения</string>
@@ -958,13 +895,11 @@
    <string name="PotionOfPurity_Freshness">Воздух внезапно посвежел.</string>
    <string name="PotionOfPurity_NoSmell">Ты потерял обоняние!</string>
 
-
    <!--  STRINGS OF PotionOfStrength CLASS  -->
    <string name="PotionOfStrength_Name">Зелье Силы</string>
    <string name="PotionOfStrength_Info">Это сильнодействующее средство нальёт твои мышцы, перманентно повышая твою силу на 1.</string>
    <string name="PotionOfStrength_Apply">Новоприобретённая сила пульсирует в твоём теле.</string>
    <string name="PotionOfStrength_StaApply">+1 сила</string>
-
 
    <!--  STRINGS OF PotionOfToxicGas CLASS  -->
    <string name="PotionOfToxicGas_Name">Зелье Токсичного Газа</string>
@@ -976,21 +911,17 @@
    <string name="CorpseDust_Name">трупная пыль</string>
    <string name="CorpseDust_Info">Горстка трупной пыли неотличима от пыли обыкновенной. Хотя тебя не покидает чувство, что лучше от этого избавится, как можно скорее.</string>
 
-
    <!--  STRINGS OF DarkGold CLASS  -->
    <string name="DarkGold_Name">самородок мракозлата</string>
    <string name="DarkGold_Info">Этот металл зовётся мрачным не из-за его цвета (он не отличим от простого золота), а из-за того что он плавится от солнечного света, в связи с чем, его невозможно использовать на поверхности.</string>
-
 
    <!--  STRINGS OF DriedRose CLASS  -->
    <string name="DriedRose_Name">сухая роза</string>
    <string name="DriedRose_Info">Эта роза иссохла много лет тому назад, но, не смотря на это, сохранила каждый лепесток.</string>
 
-
    <!--  STRINGS OF DwarfToken CLASS  -->
    <string name="DwarfToken_Name">дворфийский жетон</string>
    <string name="DwarfToken_Info">Многие дворфы и их наиболее массивные творения, носили эти маленькие металлические штучки. Для чего они нужны, остаётся загадкой . Может это были украшения или, своего рода, удостоверения. Дворфы - странный народец.</string>
-
 
    <!--  STRINGS OF Pickaxe CLASS  -->
    <string name="Pickaxe_Name">кирка</string>
@@ -998,10 +929,9 @@
    <string name="Pickaxe_ACMine">ДОБЫВАТЬ</string>
    <string name="Pickaxe_NoVein">Ты не видишь ни одного месторождения мракозлата в зоне досягаемости</string>
 
-
    <!--  STRINGS OF RatSkull CLASS  -->
    <string name="RatSkull_Name">череп гигантской крысы</string>
-   <string name="RatSkull_Info">Это могло бы стать неплохим трофеем, о не хотелось бы вешать на стену нечто столь зловонное.</string>
+   <string name="RatSkull_Info">Это могло бы стать неплохим трофеем, но не хотелось бы вешать на стену нечто столь зловонное.</string>
 
 
 <!--  PACKAGE /items/rings  -->
@@ -1528,6 +1458,7 @@
    <string name="Cripple_Info">Травмирован</string>
    <!--  STRINGS OF Frost CLASS  -->
    <string name="Frost_Info">Заморожен</string>
+   <string name="Frost_Shatter">%s лопается от холода!</string>
    <!--  STRINGS OF Fury CLASS  -->
    <string name="Fury_Info">В ярости</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
@@ -1535,15 +1466,15 @@
    
    <!--  STRINGS OF Hunger CLASS  -->
    <string-array name = "Hunger_Hungry" >
-       <item>Ты голодено.</item>
+       <item>Ты голодно.</item>
        <item>Ты голоден.</item>
-       <item>Ты голодена.</item>
+       <item>Ты голодна.</item>
    </string-array>
    
    <string-array name = "Hunger_Starving">
        <item>Ты истощёно!</item>
        <item>Ты истощён!</item>
-       <item>Ты истощёна!</item>
+       <item>Ты истощена!</item>
    </string-array>
    
    <string name="Hunger_Death">Тебя настигла смерть от голода.</string>

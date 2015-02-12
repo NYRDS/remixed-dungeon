@@ -14,9 +14,9 @@
    <!--  STRINGS OF AboutScene CLASS  -->
    <string name="AboutScene_Txt">Code &amp; graphics: Watabou\nMusic: Cube_Code\n\nThis game is inspired by Brian Walker\'s Brogue. Try it on Windows, Mac OS or Linux - it\'s awesome! ;)\n\nPlease visit official website for additional info:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
-   <string name="AboutScene_Translate">Languages Create: rodriformiga</string>
-   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string>
-   <string name="AboutScene_TranslateSnd">Send E-Mail</string>
+   <string name="AboutScene_Translate">Languages Create: rodriformiga</string><!-- Write here the translation credits. -->
+   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string><!-- Write here the e-mail to contat for translator -->
+   <string name="AboutScene_TranslateSnd">Send E-Mail</string><!-- Write here the "Send E-mail" title of the window -->
 
 
    <!--  STRINGS OF RankingsScene CLASS  -->
@@ -73,6 +73,8 @@
    <string name="GameScene_Grass">The smell of vegetation is thick in the air.</string>
    <string name="GameScene_Secrets">The atmosphere hints that this floor hides many secrets.</string>
 
+   <!-- STRINGS OF SurfaceScene CLASS-->
+   <string name="SurfaceScene_GameOver">Game Over</string>
 
    <!--  STRINGS OF Char CLASS  -->
    <string name="Char_Name">mob</string>
@@ -178,7 +180,7 @@
    <string-array name="HeroClass_HunPerks">
        <item >Huntresses start with 15 points of Health.</item>
        <item >Huntresses start with a unique upgradeable boomerang.</item>
-       <item >Huntresses are proficient with missile weapons and get damage bonus for excessive strength when using them.</item>
+       <item >Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.</item>
        <item >Huntresses gain more health from dewdrops.</item>
        <item >Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</item>
    </string-array>
@@ -336,14 +338,13 @@
 
    <!--  STRINGS OF Challenges CLASS  -->
    <string-array name="Challenges_Names">
-       <item >No food</item>
-       <item >No armors</item>
-       <item >No healing potions</item>
-       <item >No dew, no seeds</item>
+       <item >On diet</item>
+       <item >Faith is my armor</item>
+       <item >Pharmacophobia</item>
+       <item >Barren land</item>
        <item >Swarm intelligence</item>
-       <item >Darkness</item>
+       <item >Into darkness</item>
    </string-array>
- 
 
    <!--  STRINGS OF Journal CLASS  -->
    <string name="Journal_WellHealt">Well of Health</string>
@@ -495,7 +496,7 @@
    <string name="WndSettings_Brightness">Brightness</string>
    <string name="WndSettings_SwitchPort">Switch to portrait</string>
    <string name="WndSettings_SwitchLand">Switch to landscape</string>
-
+   <string name="WndSettings_SelectLanguage">Select Language</string>
 
    <!--  STRINGS OF WndStory CLASS  -->
    <string name="WndStory_Sewers">The Dungeon lies right beneath the City, its upper levels actually constitute the City\'s sewer system. Being nominally a part of the City, these levels are not that dangerous. No one will call it a safe place, but at least you won\'t need to deal with evil magic here.</string>
@@ -541,17 +542,6 @@
    <string name="EquipableItem_Unequip">You can\'t remove cursed %s!</string>
 
 
-   <!--  STRINGS OF KindOfWeapon CLASS  -->
-   <string name="KindOfWeapon_EquipCursed">you wince as your grip involuntarily tightens around your %s</string>
-
-
-   <!--  STRINGS OF Gold CLASS  -->
-   <string name="Gold_Name">gold</string>
-   <string name="Gold_Collect">Collect gold coins to spend them later in a shop.</string>
-   <string name="Gold_Info">A pile of %d gold coins.</string>
-   <string name="Gold_Info1">One gold coin.</string>
-
-
    <!--  STRINGS OF Amulet CLASS  -->
    <string name="Amulet_Name">Amulet of Yendor</string>
    <string name="Amulet_ACEnd">END THE GAME</string>
@@ -585,6 +575,17 @@
    <string name="DewVial_Full">Your dew vial is full!</string>
    <string name="DewVial_Empty">Your dew vial is empty!</string>
 
+
+
+   <!--  STRINGS OF Gold CLASS  -->
+   <string name="Gold_Name">gold</string>
+   <string name="Gold_Collect">Collect gold coins to spend them later in a shop.</string>
+   <string name="Gold_Info">A pile of %d gold coins.</string>
+   <string name="Gold_Info1">One gold coin.</string>
+
+
+   <!--  STRINGS OF KindOfWeapon CLASS  -->
+   <string name="KindOfWeapon_EquipCursed">you wince as your grip involuntarily tightens around your %s</string>
 
    <!--  STRINGS OF LloidsBeacon CLASS  -->
    <string name="LloidsBeacon_Name">lloyd\'s beacon</string>
@@ -788,22 +789,22 @@
 <!--  PACKAGE /items/bags  -->
    <!--  STRINGS OF Bag CLASS  -->
    <string name="Bag_ACOpen">OPEN</string>
-
-
+   <!--  STRINGS OF Keyring CLASS  -->
+   <string name="Keyring_Name">key ring</string>
+   <string name="Keyring_Info">This is a copper key ring, that lets you keep all your keys separately from the rest of your belongings.</string>
    <!--  STRINGS OF ScrollHolder CLASS  -->
    <string name="ScrollHolder_Name">scroll holder</string>
    <string name="ScrollHolder_Info">You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.</string>
-
-
    <!--  STRINGS OF SeedPouch CLASS  -->
    <string name="SeedPouch_Name">seed pouch</string>
    <string name="SeedPouch_Info">This small velvet pouch allows you to store any number of seeds in it. Very convenient.</string>   
-
-
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">wand holster</string>
    <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to %d wands.</string>
 
+    <!-- STRINGS OF PotionBelt CLASS -->
+   <string name="PotionBelt_Info">This strong leather belt is capable of storing all your potions while protecting them from shattering due to frost.</string>
+   <string name="PotionBelt_Name">potion belt</string>
 
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
@@ -900,7 +901,7 @@
 
    <!--  STRINGS OF PotionOfFrost CLASS  -->
    <string name="PotionOfFrost_Name">Potion of Frost</string>
-   <string name="PotionOfFrost_Info">Upon exposure to open air this chemical will evaporate into a freezing cloud, causing any creature that contacts it to be frozen in place unable to act and move.</string>
+   <string name="PotionOfFrost_Info">Upon exposure to open air, this chemical will evaporate into a freezing cloud, causing any creature that contacts it to be frozen in place, unable to act and move.</string>
 
 
    <!--  STRINGS OF PotionOfHealing CLASS  -->
@@ -1521,6 +1522,7 @@
    <string name="Cripple_Info">Crippled</string>
    <!--  STRINGS OF Frost CLASS  -->
    <string name="Frost_Info">Frozen</string>
+   <string name="Frost_Shatter">The cold causes %s to shatter!</string>
    <!--  STRINGS OF Fury CLASS  -->
    <string name="Fury_Info">Fury</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
@@ -1830,7 +1832,7 @@
    <string name="Imp_Golems1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _golems_ who need to be killed. You see, I\'m going to start a little business here, but these stupid golems are bad for business! It\'s very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let\'s say _6 of them_ and a reward is yours.</string>
 
    <string name="Imp_Golems2">How is your golem safari going?</string>
-   <string name="Imp_Monks1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _monks_ who need to be killed. You see, I\'m going to start a little business here, but these lunatics don\'t buy anything themselves and will scare away other customers. So please, kill... let\'s say _8 of them_ and a reward is yours.</string>
+   <string name="Imp_Monks1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For a bounty, of course ;)\nIn my case this is _monks_ who need to be killed. You see, I\'m going to start a little business here, but these lunatics don\'t buy anything themselves and will scare away other customers. So please, kill... let\'s say _8 of them_ and a reward is yours.</string>
    <string name="Imp_Monks2">Oh, you are still alive! I knew that your kung-fu is stronger ;) Just don\'t forget to grab these monks\' tokens.</string>
 
 
@@ -2014,4 +2016,5 @@
    <!-- 1: Execute Indefinite Function to Language -->
    <!-- 0: NO Execute Indefinite Function to Language -->
    <string name="Utils_IsIndefinte">1</string>
+
 </resources>

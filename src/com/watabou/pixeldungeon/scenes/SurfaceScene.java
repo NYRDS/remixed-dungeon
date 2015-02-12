@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import java.nio.FloatBuffer;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Matrix;
@@ -51,6 +51,8 @@ public class SurfaceScene extends PixelScene {
 	
 	private static final int NSTARS		= 100;
 	private static final int NCLOUDS	= 5;
+	
+	private static final String TXT_GAME_OVER = Game.getVar(R.string.SurfaceScene_GameOver);
 	
 	private Camera viewport;
 	@Override
@@ -150,7 +152,7 @@ public class SurfaceScene extends PixelScene {
 		frame.y = vy - 9;
 		add( frame );
 		
-		RedButton gameOver = new RedButton( "Game Over" ) {
+		RedButton gameOver = new RedButton( TXT_GAME_OVER ) {
 			protected void onClick() {
 				Game.switchScene( TitleScene.class );
 			}

@@ -187,6 +187,7 @@ public class InterlevelScene extends PixelScene {
 					
 				} catch (Exception e ) {
 					
+					e.printStackTrace();
 					error = ERR_GENERIC;
 					
 				}
@@ -307,11 +308,17 @@ public class InterlevelScene extends PixelScene {
 		Actor.fixTime();
 		
 		Dungeon.loadGame( StartScene.curClass );
+		
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
 			Dungeon.switchLevel( Dungeon.loadLevel( StartScene.curClass ), -1 );
 		} else {
 			Level level = Dungeon.loadLevel( StartScene.curClass );
+			if(level == null){ // save file fucked up :(
+				Dungeon.deleteGame(StartScene.curClass, true);
+				Game.switchScene(StartScene.class);
+				return;
+			}
 			Dungeon.switchLevel( level, Level.resizingNeeded ? level.adjustPos( Dungeon.hero.pos ) : Dungeon.hero.pos );
 		}
 	}

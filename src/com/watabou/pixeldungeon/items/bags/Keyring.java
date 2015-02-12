@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,41 +15,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.watabou.pixeldungeon.items.potions;
+package com.watabou.pixeldungeon.items.bags;
 
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.Fire;
-import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.keys.Key;
+import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class PotionOfLiquidFlame extends Potion {
+public class Keyring extends Bag {
 
 	{
-		name = Game.getVar(R.string.PotionOfLiquidFlame_Name);
+		name = Game.getVar(R.string.Keyring_Name);
+		image = ItemSpriteSheet.KEYRING;
+		
+		size = 12;
 	}
 	
 	@Override
-	public void shatter( int cell ) {
-		
-		setKnown();
-		
-		splash( cell );
-		Sample.INSTANCE.play( Assets.SND_SHATTER );
-		
-		Fire fire = Blob.seed( cell, 2, Fire.class );
-		GameScene.add( fire );
-	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.PotionOfLiquidFlame_Info);
+	public boolean grab( Item item ) {
+		return item instanceof Key;
 	}
 	
 	@Override
 	public int price() {
-		return isKnown() ? 40 * quantity : super.price();
+		return 50;
+	}
+	
+	@Override
+	public String info() {
+		return Game.getVar(R.string.Keyring_Info);
 	}
 }
