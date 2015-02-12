@@ -107,6 +107,7 @@ public class ItemSpriteSheet {
 	public static final int POTION_SILVER		= 67;
 	
 	// Scrolls
+	public static final int SCROLL_BLANK	= 125;
 	public static final int SCROLL_KAUNAN	= 40;
 	public static final int SCROLL_SOWILO	= 41;
 	public static final int SCROLL_LAGUZ	= 42;
@@ -119,6 +120,10 @@ public class ItemSpriteSheet {
 	public static final int SCROLL_BERKANAN	= 77;
 	public static final int SCROLL_ODAL		= 78;
 	public static final int SCROLL_TIWAZ	= 79;
+	public static final int SCROLL_ANSUZ	= 128;
+	public static final int SCROLL_IWAZ 	= 129;
+	public static final int SCROLL_ALGIZ	= 130;
+	public static final int SCROLL_DAGAZ	= 131;
 	
 	// Seeds
 	public static final int SEED_FIREBLOOM	= 88;
@@ -152,6 +157,11 @@ public class ItemSpriteSheet {
 	public static final int STEAK		= 114;
 	public static final int OVERPRICED	= 115;
 	public static final int CARPACCIO	= 116;
+	
+	// Rotten food
+	public static final int ROTTEN_PASTY    = 117;
+	public static final int ROTTEN_MEAT	    = 118;
+	public static final int ROTTEN_RATION   = 119;
 	
 	// Bags
 	public static final int POUCH	= 83;

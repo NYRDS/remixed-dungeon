@@ -1040,6 +1040,10 @@
        <item >БЕРКАНАН</item>
        <item >ОДАЛ</item>
        <item >ТИВАЗ</item>
+	   <item >АНСУЗ</item>
+	   <item >ИВАЗ</item>
+	   <item >АЛГИЗ</item>
+	   <item >ДАГАЗ</item>
    </string-array>
 
 
@@ -1532,7 +1536,7 @@
    <string name="Acidic_Desc">Эти огромные членистоногие создания стараются избегать ближнего боя, выстреливая ядовитые иглы с большого расстояния.</string>
    <!--  STRINGS OF Albino CLASS  -->
    <string name="Albino_Name">крыса-альбинос</string>
-   <string name="Albino_Gender">male</string>
+   <string name="Albino_Gender">female</string>
    <string name="Albino_Name_Objective">крысу-альбиноса</string>
    <string name="Albino_Desc">Сумчатые крысы - агрессивные, но довольно слабые обитатели канализации. Тем не менее, в больших количествах, они могут представлять опасность.</string>
    <!--  STRINGS OF Bandit CLASS  -->
@@ -1542,7 +1546,7 @@
    <string name="Bandit_Desc">Глубинные уровни подземелья всегда служили хорошим укрытием для всякого преступника. Но не всякий преступник мог сохранить рассудок, будучи отлучённым от дневного света на долгое время. Давным-давно, эти безумные бандиты и воры позабыли кто они и зачем совершают преступления.</string>
    <!--  STRINGS OF Bat CLASS  -->
    <string name="Bat_Name">летучая мышь-вампир</string>
-   <string name="Bat_Gender">male</string>
+   <string name="Bat_Gender">female</string>
    <string name="Bat_Name_Objective">вампира</string>
    <string name="Bat_Desc">Эти шустрые, настойчивые обитатели пещер, способны одолеть более крупного соперника, за счёт того, что с каждым успешным ударом, они восполняют часть своего здоровья.</string>
    <string name="Bat_Defense">увернулась</string>
@@ -1577,7 +1581,7 @@
    <string name="Eye_Gender">undefined</string>
    <string name="Eye_Name_Objective">око зла</string>
    <string name="Eye_Desc">Этот демон также известен как \"шар ненависти\", по-скольку при виде врага, он, не задумываясь, обращает на того \"взгляд смерти\", не обращая внимания на то, что может ранить союзников.</string>
-   <string name="Eye_Kill">%s\'s убило тебя взглядом смерти...</string>
+   <string name="Eye_Kill">%s убило тебя взглядом смерти...</string>
    <!--  STRINGS OF Gnoll CLASS  -->
    <string name="Gnoll_Name">гнолл-следопыт</string>
    <string name="Gnoll_Gender">male</string>
@@ -1698,7 +1702,7 @@
    <string name="Warlock_Gender">male</string>
    <string name="Warlock_Name_Objective">чернокнижника</string>
    <string name="Warlock_Desc">Когда интерес дворфов перекочевал с технологий на магию, чернокнижники стали новой элитой. Начиная с магии стихий, вскоре они перешли на некромантию и демонологию.</string>
-   <string name="Warlock_Killed">%s\'s уничтожил тебя стрелой теней...</string>
+   <string name="Warlock_Killed">%s уничтожил тебя стрелой теней...</string>
    <!--  STRINGS OF Wraith CLASS  -->
    <string name="Wraith_Name">фантом</string>
    <string name="Wraith_Gender">male</string>

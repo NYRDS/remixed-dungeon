@@ -66,7 +66,11 @@ public abstract class Scroll extends Item {
 		ItemSpriteSheet.SCROLL_NAUDIZ, 
 		ItemSpriteSheet.SCROLL_BERKANAN, 
 		ItemSpriteSheet.SCROLL_ODAL, 
-		ItemSpriteSheet.SCROLL_TIWAZ};
+		ItemSpriteSheet.SCROLL_TIWAZ,
+		ItemSpriteSheet.SCROLL_ANSUZ,
+		ItemSpriteSheet.SCROLL_IWAZ,
+		ItemSpriteSheet.SCROLL_ALGIZ,
+		ItemSpriteSheet.SCROLL_DAGAZ};
 	
 	private static ItemStatusHandler<Scroll> handler;
 	
