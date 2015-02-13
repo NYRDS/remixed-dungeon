@@ -1,13 +1,8 @@
 package com.watabou.pixeldungeon.sprites;
 
-import javax.microedition.khronos.opengles.GL10;
-
-import android.opengl.GLES20;
-
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
+
 
 public class HedgehogSprite extends MobSprite {
 	public HedgehogSprite() {
