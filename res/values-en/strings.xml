@@ -1828,6 +1828,10 @@
    <string name="FetidRat_Gender">female</string>
    <string name="FetidRat_Desc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
 
+   <!--  STRINGS OF Hedgehog CLASS  -->
+   <string name="Hedgehog_Name">hedgehog</string>
+   <string name="Hedgehog_Desc">That hedgehog seems nervous.</string>
+   
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">ambitious imp</string>
    <string name="Imp_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.</string>
