@@ -32,7 +32,6 @@ public class ScrollOfUpgrade extends InventoryScroll {
 	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.ScrollOfUpgrade_LooksBetter);
 	
 	{
-		name = Game.getVar(R.string.ScrollOfUpgrade_Name);
 		inventoryTitle = Game.getVar(R.string.ScrollOfUpgrade_InvTitle);
 		mode = WndBag.Mode.UPGRADEABLE;
 	}

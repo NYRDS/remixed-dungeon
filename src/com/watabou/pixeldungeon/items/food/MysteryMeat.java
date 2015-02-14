@@ -68,11 +68,6 @@ public class MysteryMeat extends Food {
 		}
 	}
 	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.MysteryMeat_Info);
-	}
-	
 	public int price() {
 		return 5 * quantity;
 	};

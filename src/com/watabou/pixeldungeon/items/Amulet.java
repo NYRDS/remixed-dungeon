@@ -95,9 +95,4 @@ public class Amulet extends Item {
 	public boolean isUpgradable() {
 		return false;
 	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.Amulet_Info);
-	}
 }

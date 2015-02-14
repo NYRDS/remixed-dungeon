@@ -32,10 +32,6 @@ public class ScrollOfTeleportation extends Scroll {
 	public static final String TXT_TELEPORTED = Game.getVar(R.string.ScrollOfTeleportation_Teleport);
 	public static final String TXT_NO_TELEPORT = Game.getVar(R.string.ScrollOfTeleportation_NoTeleport);
 	
-	{
-		name = Game.getVar(R.string.ScrollOfTeleportation_Name);
-	}
-	
 	@Override
 	protected void doRead() {
 

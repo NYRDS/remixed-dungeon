@@ -35,9 +35,6 @@ public class ScrollOfMirrorImage extends Scroll {
 
 	private static final int NIMAGES	= 3;
 	
-	{
-		name = Game.getVar(R.string.ScrollOfMirrorImage_Name);
-	}
 	
 	@Override
 	protected void doRead() {

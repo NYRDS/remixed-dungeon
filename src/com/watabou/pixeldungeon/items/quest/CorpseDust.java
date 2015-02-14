@@ -43,9 +43,4 @@ public class CorpseDust extends Item {
 	public boolean isIdentified() {
 		return true;
 	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.CorpseDust_Info);
-	}
 }

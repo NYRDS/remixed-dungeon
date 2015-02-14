@@ -65,7 +65,9 @@ public class Item implements Bundlable {
 	
 	public String defaultAction;
 	
-	protected String name = Game.getVar(R.string.Item_Name);
+	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), true);
+	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), true);
+	
 	protected int image = 0;
 	
 	public boolean stackable = false;
@@ -467,4 +469,8 @@ public class Item implements Bundlable {
 			return TXT_DIR_THROW;
 		}
 	};
+	
+	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent){
+		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+	}
 }

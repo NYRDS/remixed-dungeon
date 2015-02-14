@@ -62,9 +62,4 @@ public class WandHolster extends Bag {
 	public int price() {
 		return 50;
 	}
-	
-	@Override
-	public String info() {
-		return String.format(Game.getVar(R.string.WandHolster_Info), size);
-	}
 }

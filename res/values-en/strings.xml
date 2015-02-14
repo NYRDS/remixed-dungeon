@@ -530,6 +530,7 @@
 
    <!--  STRINGS OF Item CLASS  -->
    <string name="Item_Name">smth</string>
+   <string name="Item_Info">smth</string>
    <string name="Item_ACDrop">DROP</string>
    <string name="Item_ACThrow">THROW</string>
    <string name="Item_PackFull">Your pack is too full for the %s</string>
@@ -850,9 +851,9 @@
 
 
 <!--  PACKAGE /items/keys  -->
-   <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">golden key</string>
-   <string name="GoldemKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
+   <!--  STRINGS OF GoldenKey CLASS  -->
+   <string name="GoldenKey_Name">golden key</string>
+   <string name="GoldenKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->

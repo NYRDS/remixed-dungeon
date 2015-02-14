@@ -32,10 +32,6 @@ import com.watabou.utils.Random;
 
 public class ScrollOfPsionicBlast extends Scroll {
 
-	{
-		name = Game.getVar(R.string.ScrollOfPsionicBlast_Name);
-	}
-	
 	@Override
 	protected void doRead() {
 		

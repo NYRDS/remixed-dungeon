@@ -32,7 +32,6 @@ public class ScrollOfWeaponUpgrade extends InventoryScroll {
 	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.ScrollOfWeaponUpgrade_LooksBetter);
 	
 	{
-		name = Game.getVar(R.string.ScrollOfWeaponUpgrade_Name);
 		inventoryTitle = Game.getVar(R.string.ScrollOfWeaponUpgrade_InvTitle);
 		mode = WndBag.Mode.WEAPON;
 	}

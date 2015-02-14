@@ -32,10 +32,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfTerror extends Scroll {
 
-	{
-		name = Game.getVar(R.string.ScrollOfTerror_Name);
-	}
-	
 	@Override
 	protected void doRead() {
 		

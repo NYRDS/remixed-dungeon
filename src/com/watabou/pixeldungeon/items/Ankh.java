@@ -40,11 +40,6 @@ public class Ankh extends Item {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.Ankh_Info);
-	}
-	
-	@Override
 	public int price() {
 		return 50 * quantity;
 	}

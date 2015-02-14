@@ -69,9 +69,4 @@ public class Dewdrop extends Item {
 		
 		return true;
 	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.Dewdrop_Info);
-	}
 }

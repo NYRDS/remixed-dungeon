@@ -87,9 +87,4 @@ public class Torch extends Item {
 	public int price() {
 		return 10 * quantity;
 	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.Torch_Info);
-	}
 }

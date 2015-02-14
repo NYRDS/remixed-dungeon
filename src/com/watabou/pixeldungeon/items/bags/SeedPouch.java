@@ -41,9 +41,4 @@ public class SeedPouch extends Bag {
 	public int price() {
 		return 50;
 	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.SeedPouch_Info);
-	}
 }

@@ -43,11 +43,6 @@ public class DwarfToken extends Item {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.DwarfToken_Info);
-	}
-	
-	@Override
 	public int price() {
 		return quantity * 100;
 	}

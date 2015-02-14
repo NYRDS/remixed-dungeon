@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.windows.WndBag;
 public class ScrollOfIdentify extends InventoryScroll {
 
 	{
-		name = Game.getVar(R.string.ScrollOfIdentify_Name);
 		inventoryTitle = Game.getVar(R.string.ScrollOfIdentify_InvTitle);
 		mode = WndBag.Mode.UNIDENTIFED;
 	}

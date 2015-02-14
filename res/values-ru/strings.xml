@@ -516,6 +516,7 @@
 
    <!--  STRINGS OF Item CLASS  -->
    <string name="Item_Name">предмет</string>
+   <string name="Item_Info">описание предмета</string>
    <string name="Item_ACDrop">ВЫЛОЖИТЬ</string>
    <string name="Item_ACThrow">МЕТНУТЬ</string>
    <string name="Item_PackFull">У тебя нету места для предмета %s</string>
@@ -805,9 +806,9 @@
 
 
 <!--  PACKAGE /items/keys  -->
-   <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">золотой ключ</string>
-   <string name="GoldemKey_Info">Засечки на этом ключе имеют миниатюрную, замысловатую форму. Наверное он подойдёт к какому-нибудь сундуку?</string>
+   <!--  STRINGS OF GoldenKey CLASS  -->
+   <string name="GoldenKey_Name">золотой ключ</string>
+   <string name="GoldenKey_Info">Засечки на этом ключе имеют миниатюрную, замысловатую форму. Наверное он подойдёт к какому-нибудь сундуку?</string>
 
    <!--  STRINGS OF IronKey CLASS  -->
    <string name="IronKey_Name">железный ключ</string>

@@ -31,7 +31,6 @@ public class IronKey extends Key {
 	public static int curDepthQuantity = 0;
 	
 	{
-		name = Game.getVar(R.string.IronKey_Name);
 		image = ItemSpriteSheet.IRON_KEY;
 	}
 	
@@ -54,10 +53,5 @@ public class IronKey extends Key {
 	@Override
 	public String toString() {
 		return Utils.format( TXT_FROM_DEPTH, depth );
-	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.IronKey_Info);
 	}
 }

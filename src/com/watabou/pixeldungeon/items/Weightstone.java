@@ -108,11 +108,6 @@ public class Weightstone extends Item {
 		return 40 * quantity;
 	}
 	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.Weightstone_Info);
-	}
-	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {

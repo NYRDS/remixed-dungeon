@@ -41,9 +41,4 @@ public class ScrollHolder extends Bag {
 	public int price() {
 		return 50;
 	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.ScrollHolder_Info);
-	}
 }

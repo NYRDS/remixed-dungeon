@@ -24,12 +24,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class GoldenKey extends Key {
 	
 	{
-		name = Game.getVar(R.string.GoldemKey_Name);
 		image = ItemSpriteSheet.GOLDEN_KEY;
-	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.GoldemKey_Info);
 	}
 }

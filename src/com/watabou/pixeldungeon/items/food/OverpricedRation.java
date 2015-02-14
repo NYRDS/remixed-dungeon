@@ -32,11 +32,6 @@ public class OverpricedRation extends Food {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.OverpricedRation_Info);
-	}
-	
-	@Override
 	public int price() {
 		return 20 * quantity;
 	}

@@ -31,11 +31,6 @@ public class Pasty extends Food {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.Pasty_Info);
-	}
-	
-	@Override
 	public int price() {
 		return 20 * quantity;
 	}

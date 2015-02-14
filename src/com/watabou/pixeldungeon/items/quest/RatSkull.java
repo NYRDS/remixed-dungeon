@@ -42,11 +42,6 @@ public class RatSkull extends Item {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.RatSkull_Info);
-	}
-	
-	@Override
 	public int price() {
 		return 100;
 	}

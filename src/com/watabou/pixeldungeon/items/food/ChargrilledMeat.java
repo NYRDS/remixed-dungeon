@@ -31,11 +31,6 @@ public class ChargrilledMeat extends Food {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.ChargrilledMeat_Info);
-	}
-	
-	@Override
 	public int price() {
 		return 5 * quantity;
 	}

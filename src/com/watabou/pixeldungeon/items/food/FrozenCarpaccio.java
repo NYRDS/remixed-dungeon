@@ -75,11 +75,6 @@ public class FrozenCarpaccio extends Food {
 		}
 	}
 	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.FrozenCarpaccio_Info);
-	}
-	
 	public int price() {
 		return 10 * quantity;
 	};

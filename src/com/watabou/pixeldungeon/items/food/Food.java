@@ -99,11 +99,6 @@ public class Food extends Item {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.Food_Info);
-	}
-	
-	@Override
 	public boolean isUpgradable() {
 		return false;
 	}

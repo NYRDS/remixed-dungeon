@@ -34,11 +34,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfMagicMapping extends Scroll {
 
 	private static final String TXT_LAYOUT = Game.getVar(R.string.ScrollOfMagicMapping_Layout);
-	
-	{
-		name = Game.getVar(R.string.ScrollOfMagicMapping_Name);
-	}
-	
+
 	@Override
 	protected void doRead() {
 		

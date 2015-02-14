@@ -29,10 +29,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfChallenge extends Scroll {
 
-	{
-		name = Game.getVar(R.string.ScrollOfChallenge_Name);
-	}
-	
 	@Override
 	protected void doRead() {
 		

@@ -105,11 +105,6 @@ public class Stylus extends Item {
 		return 50 * quantity;
 	}
 	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.Stylus_Info);
-	}
-	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {

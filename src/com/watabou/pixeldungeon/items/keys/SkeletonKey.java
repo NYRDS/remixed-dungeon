@@ -24,12 +24,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class SkeletonKey extends Key {
 	
 	{
-		name = Game.getVar(R.string.SkeletonKey_Name);
 		image = ItemSpriteSheet.SKELETON_KEY;
-	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.SkeletonKey_Info);
 	}
 }

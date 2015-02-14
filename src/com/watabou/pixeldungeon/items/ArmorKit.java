@@ -107,11 +107,6 @@ public class ArmorKit extends Item {
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.ArmorKit_Info);
-	}
-	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {

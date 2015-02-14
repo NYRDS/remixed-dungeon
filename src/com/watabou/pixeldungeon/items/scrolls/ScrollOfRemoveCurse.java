@@ -34,10 +34,6 @@ public class ScrollOfRemoveCurse extends Scroll {
 	private static final String TXT_PROCCED	= Game.getVar(R.string.ScrollOfRemoveCurse_Proced);
 	private static final String TXT_NOT_PROCCED	= Game.getVar(R.string.ScrollOfRemoveCurse_NoProced);
 	
-	{
-		name = Game.getVar(R.string.ScrollOfRemoveCurse_Name);
-	}
-	
 	@Override
 	protected void doRead() {
 		

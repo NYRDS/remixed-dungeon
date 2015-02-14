@@ -18,11 +18,24 @@
 package com.watabou.pixeldungeon.utils;
 
 import java.util.Locale;
+
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class Utils {
 
+	protected static final Class<?> strings = getR();
+	
+	static private Class <?> getR(){
+		try {
+			return Class.forName("com.nyrds.pixeldungeon.ml.R$string");
+		} catch (ClassNotFoundException e) {// well this is newer happens :) 
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public static String capitalize( String str ) {
 		return Character.toUpperCase( str.charAt( 0 ) ) + str.substring( 1 );
 	}
@@ -45,4 +58,29 @@ public class Utils {
 			return (VOWELS.indexOf( Character.toLowerCase( noun.charAt( 0 ) ) ) != -1 ? "an " : "a ") + noun;
 		}
 	}
+	
+	public static String getClassParam(String className ,String paramName, String defaultValue, boolean warnIfAbsent){
+		
+		if(className.length() == 0){ // isEmpty() require api level 9
+			return defaultValue;
+		}
+		
+		try{
+			String paramValue = Game.getVar(strings.getField(className+"_"+paramName).getInt(null));
+			return paramValue;
+		}catch (NoSuchFieldException e){
+			if(warnIfAbsent){
+				GLog.w("no defination for  %s_%s :(", className, paramName);
+			}
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return defaultValue;
+	}
+	
 }

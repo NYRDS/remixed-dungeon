@@ -116,11 +116,6 @@ public class TomeOfMastery extends Item {
 		return true;
 	}
 	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.TomeOfMastery_Info);
-	}
-	
 	public void choose( HeroSubClass way ) {
 		
 		detach( curUser.belongings.backpack );

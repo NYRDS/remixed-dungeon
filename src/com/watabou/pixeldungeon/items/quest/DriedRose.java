@@ -40,9 +40,4 @@ public class DriedRose extends Item {
 	public boolean isIdentified() {
 		return true;
 	}
-	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.DriedRose_Info);
-	}
 }

@@ -28,10 +28,6 @@ import com.watabou.pixeldungeon.effects.particles.EnergyParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfRecharging extends Scroll {
-
-	{
-		name = Game.getVar(R.string.ScrollOfRecharging_Name);
-	}
 	
 	@Override
 	protected void doRead() {

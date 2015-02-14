@@ -175,11 +175,6 @@ public class DewVial extends Item {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.DewVial_Info);
-	}
-	
-	@Override
 	public String toString() {
 		return super.toString() + " (" + status() +  ")" ;
 	}

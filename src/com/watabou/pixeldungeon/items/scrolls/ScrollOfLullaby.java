@@ -31,10 +31,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfLullaby extends Scroll {
-
-	{
-		name = Game.getVar(R.string.ScrollOfLullaby_Name);
-	}
 	
 	@Override
 	protected void doRead() {

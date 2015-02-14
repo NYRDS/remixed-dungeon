@@ -25,9 +25,4 @@ public class PotionBelt extends Bag {
 		return 50;
 	}
 	
-	@Override
-	public String info() {
-		return Game.getVar(R.string.PotionBelt_Info);
-	}
-	
 }

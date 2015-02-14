@@ -43,11 +43,6 @@ public class DarkGold extends Item {
 	}
 	
 	@Override
-	public String info() {
-		return Game.getVar(R.string.DarkGold_Info);
-	}
-	
-	@Override
 	public int price() {
 		return quantity;
 	}
