@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class OverpricedRation extends Food {
 
 	{
-		name = Game.getVar(R.string.OverpricedRation_Name);
 		image = ItemSpriteSheet.OVERPRICED;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
 		message = Game.getVar(R.string.OverpricedRation_Message);

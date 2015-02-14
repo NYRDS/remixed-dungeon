@@ -17,16 +17,14 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class ScrollHolder extends Bag {
 
 	{
-		name = Game.getVar(R.string.ScrollHolder_Name);
 		image = ItemSpriteSheet.HOLDER;
 		
 		size = 12;
@@ -34,7 +32,7 @@ public class ScrollHolder extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Scroll;
+		return item instanceof Scroll || item instanceof BlankScroll;
 	}
 	
 	@Override

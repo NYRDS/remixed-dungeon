@@ -578,7 +578,7 @@
    <!--  STRINGS OF Stylus CLASS  -->
    <string name="Stylus_Name">мистический стилус</string>
    <string name="Stylus_ACInscribe">НАЧЕРТАТЬ</string>
-   <string name="Stylus_Info">Этот мистический стилус был изготовлен из некоего чёрного, весьма твёрдого камня. С его помощью ты можешь чертить волшебный глифы на своей броне, но ты не в силах выбрать какой глиф начертать, стилус решит за тебя.</string>
+   <string name="Stylus_Info">Этот мистический стилус был изготовлен из некоего чёрного, весьма твёрдого камня. С его помощью ты можешь начертать волшебный глиф или руну, но ты не в силах выбрать что именно, стилус решит за тебя.</string>
    <string name="Stylus_SelectArmor">Выбери броню для начертания</string>
    <string name="Stylus_Inscribed">ты начертал %1$s на предмете %2$s</string>
 
@@ -1054,7 +1054,10 @@
    <string name="InventoryScroll_Yes">Да, пусть так</string>
    <string name="InventoryScroll_No">Нет, я передумал</string>
 
-
+   <!--  STRINGS OF BlankScroll CLASS  -->
+   <string name="BlankScroll_Name">Чистый свиток</string>
+   <string name="BlankScroll_Info">Просто чистый свиток</string>
+   
    <!--  STRINGS OF ScrollOfChallenge CLASS  -->
    <string name="ScrollOfChallenge_Name">Свиток Вызова</string>
    <string name="ScrollOfChallenge_Info">При прочтении вслух этот свиток издаст бросающий вызов рёв, указывая место твоего положения всем монстрам на уровне.</string>

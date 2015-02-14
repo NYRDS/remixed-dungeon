@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -26,7 +24,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class WandHolster extends Bag {
 
 	{
-		name = Game.getVar(R.string.WandHolster_Name);
 		image = ItemSpriteSheet.HOLSTER;
 		
 		size = 12;

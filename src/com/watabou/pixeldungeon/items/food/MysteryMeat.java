@@ -34,7 +34,6 @@ import com.watabou.utils.Random;
 public class MysteryMeat extends Food {
 
 	{
-		name = Game.getVar(R.string.MysteryMeat_Name);
 		image = ItemSpriteSheet.MEAT;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
 		message = Game.getVar(R.string.MysteryMeat_Message);

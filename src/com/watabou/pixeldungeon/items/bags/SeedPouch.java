@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -26,7 +24,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class SeedPouch extends Bag {
 
 	{
-		name = Game.getVar(R.string.SeedPouch_Name);
 		image = ItemSpriteSheet.POUCH;
 		
 		size = 8;

@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 public abstract class Scroll extends Item {
 
@@ -99,6 +100,19 @@ public abstract class Scroll extends Item {
 		super();
 		image = handler.image( this );
 		rune = handler.label( this );
+	}
+	
+	static public Scroll createRandomScroll(){
+		try {
+			return (Scroll) Random.element(scrolls).newInstance();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	@Override

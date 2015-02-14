@@ -19,13 +19,15 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -41,7 +43,6 @@ public class Stylus extends Item {
 	private static final String AC_INSCRIBE = Game.getVar(R.string.Stylus_ACInscribe);
 	
 	{
-		name = Game.getVar(R.string.Stylus_Name);
 		image = ItemSpriteSheet.STYLUS;
 		
 		stackable = true;
@@ -59,7 +60,7 @@ public class Stylus extends Item {
 		if (action == AC_INSCRIBE) {
 
 			curUser = hero;
-			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR, TXT_SELECT_ARMOR );
+			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR_OR_BLANK_SCROLL, TXT_SELECT_ARMOR );
 			
 		} else {
 			
@@ -78,7 +79,16 @@ public class Stylus extends Item {
 		return true;
 	}
 	
-	private void inscribe( Armor armor ) {
+	private void inscribeEffect(){
+		curUser.sprite.operate( curUser.pos );
+		curUser.sprite.centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
+		Sample.INSTANCE.play( Assets.SND_BURNING );
+		
+		curUser.spend( TIME_TO_INSCRIBE );
+		curUser.busy();
+	}
+	
+	private void inscribeArmor ( Armor armor ) {
 		
 		detach( curUser.belongings.backpack );
 		
@@ -92,12 +102,16 @@ public class Stylus extends Item {
 		
 		armor.inscribe( glyph );
 		
-		curUser.sprite.operate( curUser.pos );
-		curUser.sprite.centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
-		Sample.INSTANCE.play( Assets.SND_BURNING );
+		inscribeEffect();
+	}
+	
+	private void inscribeScroll (BlankScroll scroll){
 		
-		curUser.spend( TIME_TO_INSCRIBE );
-		curUser.busy();
+		scroll.detach( curUser.belongings.backpack );
+		
+		inscribeEffect();
+		
+		Scroll.createRandomScroll().collect();
 	}
 	
 	@Override
@@ -109,7 +123,12 @@ public class Stylus extends Item {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
-				Stylus.this.inscribe( (Armor)item );
+				if(item instanceof Armor){
+					Stylus.this.inscribeArmor ( (Armor)item );
+				}
+				if(item instanceof BlankScroll){
+					Stylus.this.inscribeScroll( (BlankScroll)item );
+				}
 			}
 		}
 	};

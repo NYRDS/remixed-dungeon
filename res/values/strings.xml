@@ -601,7 +601,7 @@
    <!--  STRINGS OF Stylus CLASS  -->
    <string name="Stylus_Name">arcane stylus</string>
    <string name="Stylus_ACInscribe">INSCRIBE</string>
-   <string name="Stylus_Info">This arcane stylus is made of some dark, very hard stone. Using it you can inscribe a magical glyph on your armor, but you have no power over choosing what glyph it will be, the stylus will decide it for you.</string>
+   <string name="Stylus_Info">This arcane stylus is made of some dark, very hard stone. Using it you can inscribe a glyph or a rune, but you have no power over choosing what it will be, the stylus will decide it for you.</string>
    <string name="Stylus_SelectArmor">Select an armor to inscribe on</string>
    <string name="Stylus_Inscribed">you inscribed the %1$s on your %2$s</string>
 
@@ -1109,7 +1109,7 @@
        <item >ALGIZ</item>
        <item >DAGAZ</item>
    </string-array>
-
+	
 
    <!--  STRINGS OF InventoryScroll CLASS  -->
    <string name="InventoryScroll_Title">Select an item</string>
@@ -1117,13 +1117,17 @@
    <string name="InventoryScroll_Yes">Yes, I\'m positive</string>
    <string name="InventoryScroll_No">No, I changed my mind</string>
 
+   <!--  STRINGS OF BlankScroll CLASS  -->
+   <string name="BlankScroll_Name">Blank Scroll</string>
+   <string name="BlankScroll_Info">Just blank scroll</string>
 
+   
    <!--  STRINGS OF ScrollOfChallenge CLASS  -->
    <string name="ScrollOfChallenge_Name">Scroll of Challenge</string>
    <string name="ScrollOfChallenge_Info">When read aloud, this scroll will unleash a challenging roar that will awaken all monsters and alert them to the reader\'s location.</string>
    <string name="ScrollOfChallenge_Info1">The scroll emits a challenging roar that echoes throughout the dungeon!</string>
 
-
+   
    <!--  STRINGS OF ScrollOfIdentify CLASS  -->
    <string name="ScrollOfIdentify_Name">Scroll of Identify</string>
    <string name="ScrollOfIdentify_Info">Permanently reveals all of the secrets of a single item.</string>

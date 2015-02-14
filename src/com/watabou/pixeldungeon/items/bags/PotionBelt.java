@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.bags;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -9,7 +7,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class PotionBelt extends Bag {
 
 	{
-		name  = Game.getVar(R.string.PotionBelt_Name);
 		image = ItemSpriteSheet.BELT;
 		
 		size = 12;
