@@ -345,7 +345,7 @@ public class Item implements Bundlable {
 	}
 	
 	public String desc() {
-		return "";
+		return info;
 	}
 	
 	public int quantity() {

@@ -603,7 +603,7 @@
    <string name="Stylus_Name">arcane stylus</string>
    <string name="Stylus_ACInscribe">INSCRIBE</string>
    <string name="Stylus_Info">This arcane stylus is made of some dark, very hard stone. Using it you can inscribe a glyph or a rune, but you have no power over choosing what it will be, the stylus will decide it for you.</string>
-   <string name="Stylus_SelectArmor">Select an armor to inscribe on</string>
+   <string name="Stylus_SelectArmor">Select an item to inscribe on</string>
    <string name="Stylus_Inscribed">you inscribed the %1$s on your %2$s</string>
 
 

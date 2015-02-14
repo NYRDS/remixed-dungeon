@@ -579,7 +579,7 @@
    <string name="Stylus_Name">мистический стилус</string>
    <string name="Stylus_ACInscribe">НАЧЕРТАТЬ</string>
    <string name="Stylus_Info">Этот мистический стилус был изготовлен из некоего чёрного, весьма твёрдого камня. С его помощью ты можешь начертать волшебный глиф или руну, но ты не в силах выбрать что именно, стилус решит за тебя.</string>
-   <string name="Stylus_SelectArmor">Выбери броню для начертания</string>
+   <string name="Stylus_SelectArmor">Выбери предмет для начертания</string>
    <string name="Stylus_Inscribed">ты начертал %1$s на предмете %2$s</string>
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
