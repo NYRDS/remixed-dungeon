@@ -154,7 +154,8 @@ public class InterlevelScene extends PixelScene {
 						Assets.SND_FALLING,
 						Assets.SND_GHOST,
 						Assets.SND_SECRET,
-						Assets.SND_BONES );
+						Assets.SND_BONES,
+						Assets.SND_MIMIC);
 					
 					switch (mode) {
 					case DESCEND:

@@ -87,6 +87,7 @@ public class Assets {
 	public static final String IMP		= "demon.png";
 	public static final String RATKING	= "ratking.png";
 	public static final String HEDGEHOG	= "hedgehog.png";
+	public static final String MIMIC	= "mimic.png";
 	
 	public static final String ITEMS	= "items.png";
 	public static final String PLANTS	= "plants.png";
@@ -161,4 +162,5 @@ public class Assets {
 	public static final String SND_GHOST	= "snd_ghost.mp3";
 	public static final String SND_SECRET	= "snd_secret.mp3";
 	public static final String SND_BONES	= "snd_bones.mp3";
+	public static final String SND_MIMIC	= "snd_mimic.mp3";
 }

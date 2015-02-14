@@ -102,7 +102,9 @@ public class WandOfTelekinesis extends Wand {
 					transport( heap );
 					break;
 				case CHEST:
-					open( heap );
+				case MIMIC:
+					heap.open( curUser );
+					//open( heap );
 					break;
 				default:
 				}

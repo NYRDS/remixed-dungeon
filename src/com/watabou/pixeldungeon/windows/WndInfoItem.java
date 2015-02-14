@@ -67,7 +67,7 @@ public class WndInfoItem extends Window {
 			String title;
 			String info;
 			
-			if (heap.type == Type.CHEST) {
+			if (heap.type == Type.CHEST || heap.type == Type.MIMIC) {
 				title = TXT_CHEST;
 				info = TXT_WONT_KNOW;
 			} else if (heap.type == Type.TOMB) {
