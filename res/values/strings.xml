@@ -535,8 +535,7 @@
    <string name="Item_ACThrow">THROW</string>
    <string name="Item_PackFull">Your pack is too full for the %s</string>
    <string name="Item_DirThrow">Choose direction of throw</string>
-
-
+      
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">EQUIP</string>
    <string name="EquipableItem_ACUnequip">UNEQUIP</string>

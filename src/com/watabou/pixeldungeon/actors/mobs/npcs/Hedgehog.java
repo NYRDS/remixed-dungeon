@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.sprites.HedgehogSprite;
-import com.watabou.utils.Random;
 
 public class Hedgehog extends NPC {
 

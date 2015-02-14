@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class GoldenKey extends Key {
