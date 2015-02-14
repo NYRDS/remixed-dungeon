@@ -85,8 +85,9 @@ public abstract class Mob extends Char {
 		}
 	};
 	
-	private static final String STATE	= "state";
-	private static final String TARGET	= "target";
+	private static final String STATE	    = "state";
+	private static final String TARGET	    = "target";
+	private static final String ENEMY_SEEN  = "enemy_seen";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -105,6 +106,8 @@ public abstract class Mob extends Char {
 			bundle.put( STATE, Passive.TAG );
 		}
 		bundle.put( TARGET, target );
+		
+		bundle.put( ENEMY_SEEN, enemySeen);
 	}
 	
 	@Override
@@ -126,6 +129,10 @@ public abstract class Mob extends Char {
 		}
 
 		target = bundle.getInt( TARGET );
+		
+		if(bundle.contains(ENEMY_SEEN)){
+			enemySeen = bundle.getBoolean(ENEMY_SEEN);
+		}
 	}
 	
 	public CharSprite sprite() {
