@@ -13,14 +13,14 @@ public class Hedgehog extends NPC {
 	{
 		spriteClass = HedgehogSprite.class;
 		
-		flying = true;
+		flying = false;
 		
 		state = WANDERING;
 	}
 	
 	@Override
 	public float speed() {
-		return 0.5f;
+		return 3f;
 	}
 	
 	@Override
@@ -45,8 +45,8 @@ public class Hedgehog extends NPC {
 	private static boolean spawned;
 	
 	public static void spawn( SewerLevel level ) {
-		if (!spawned && Dungeon.depth > 1 && Random.Int( 5 - Dungeon.depth ) == 0) {
-			
+		//if (!spawned && Dungeon.depth > 1 && Random.Int( 5 - Dungeon.depth ) == 0) {
+		if (!spawned && Dungeon.depth == 1) {
 			Hedgehog hedgehog = new Hedgehog();
 			do {
 				hedgehog.pos = level.randomRespawnCell();
