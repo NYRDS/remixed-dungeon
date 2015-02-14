@@ -54,6 +54,21 @@ public abstract class Scroll extends Item {
 		ScrollOfPsionicBlast.class,
 		ScrollOfMirrorImage.class
 	};
+
+	private static final Class<?>[] inscribableScrolls = {
+		ScrollOfIdentify.class, 
+		ScrollOfMagicMapping.class, 
+		ScrollOfRecharging.class, 
+		ScrollOfRemoveCurse.class, 
+		ScrollOfTeleportation.class, 
+		ScrollOfUpgrade.class, 
+		ScrollOfChallenge.class,
+		ScrollOfTerror.class,
+		ScrollOfLullaby.class,
+		ScrollOfPsionicBlast.class,
+		ScrollOfMirrorImage.class
+	};
+	
 	private static final String[] runes = Game.getVars(R.array.Scroll_Runes);
 	private static final Integer[] images = {
 		ItemSpriteSheet.SCROLL_KAUNAN, 
@@ -104,7 +119,7 @@ public abstract class Scroll extends Item {
 	
 	static public Scroll createRandomScroll(){
 		try {
-			return (Scroll) Random.element(scrolls).newInstance();
+			return (Scroll) Random.element(inscribableScrolls).newInstance();
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

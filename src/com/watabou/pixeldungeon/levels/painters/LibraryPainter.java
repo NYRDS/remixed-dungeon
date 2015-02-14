@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.levels.painters;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
+import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -69,6 +70,10 @@ public class LibraryPainter extends Painter {
 				pos = room.random();
 			} while (level.map[pos] != Terrain.EMPTY || level.heaps.get( pos ) != null);
 			level.drop( prize( level), pos );
+			if(Random.Int(2)==0)
+			{
+				level.drop(new BlankScroll(), pos);
+			}
 		}
 		
 		entrance.set( Room.Door.Type.LOCKED );
