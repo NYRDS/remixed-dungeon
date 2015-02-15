@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -110,7 +109,6 @@ public class SewerLevel extends RegularLevel {
 		super.createMobs();
 		
 		Ghost.Quest.spawn( this );
-		Hedgehog.spawn(this);
 	}
 	
 	@Override

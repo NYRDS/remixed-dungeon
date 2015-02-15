@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -155,6 +156,13 @@ public class HallsLevel extends RegularLevel {
 				scene.add( new Stream( i ) );
 			}
 		}
+	}
+	
+	@Override
+	protected void createMobs() {
+		super.createMobs();
+		
+		Hedgehog.spawn(this);
 	}
 	
 	private static class Stream extends Group {
