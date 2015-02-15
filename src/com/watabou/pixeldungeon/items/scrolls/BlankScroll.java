@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class BlankScroll extends Item {
 	{
 		image = ItemSpriteSheet.SCROLL_BLANK;
+		stackable = true;	
 	}
 	
 	@Override

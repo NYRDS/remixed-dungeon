@@ -70,7 +70,7 @@ public class LibraryPainter extends Painter {
 				pos = room.random();
 			} while (level.map[pos] != Terrain.EMPTY || level.heaps.get( pos ) != null);
 			level.drop( prize( level), pos );
-			if(Random.Int(2)==0)
+			if(Random.Int(4)==0)
 			{
 				level.drop(new BlankScroll(), pos);
 			}
