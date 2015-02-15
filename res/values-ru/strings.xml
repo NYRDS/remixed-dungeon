@@ -414,7 +414,7 @@
 
    <!--  STRINGS OF WndHero CLASS  -->
    <string name="WndHero_Stats">Параметры</string>
-   <string name="WndHero_Buffs">Усиления</string>
+   <string name="WndHero_Buffs">Эффекты</string>
    <string name="WndHero_Exp">Опыт</string>
    <string name="WndHero_Str">Сила</string>
    <string name="WndHero_Health">Здоровье</string>
