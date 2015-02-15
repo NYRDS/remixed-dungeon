@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.ChargrilledMeat;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
+import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -79,7 +80,7 @@ public class Burning extends Buff implements Hero.Doom {
 			if (target instanceof Hero) {
 				
 				Item item = ((Hero)target).belongings.randomUnequipped();
-				if (item instanceof Scroll) {
+				if (item instanceof Scroll || item instanceof BlankScroll) {
 					
 					item = item.detach( ((Hero)target).belongings.backpack );
 					GLog.w( TXT_BURNS_UP, item.toString() );
@@ -99,8 +100,10 @@ public class Burning extends Buff implements Hero.Doom {
 					
 				}
 				
-			} else if (target instanceof Thief && ((Thief)target).item instanceof Scroll) {
-				
+			} else if (target instanceof Thief && 
+						( ((Thief)target).item instanceof Scroll || 
+						((Thief)target).item instanceof BlankScroll )  ){
+			
 				((Thief)target).item = null;
 				target.sprite.emitter().burst( ElmoParticle.FACTORY, 6 );
 			}

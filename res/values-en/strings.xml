@@ -1685,6 +1685,13 @@
    <string name="Undead_Name_Objective">undead dwarf</string>
    <string name="Undead_Desc">These undead dwarves, risen by the will of the King of Dwarves, were members of his court. They appear as skeletons with a stunning amount of facial hair.</string>
    <string name="Undead_Defense">blocked</string>
+   
+   <!--  STRINGS OF Mimic CLASS  -->
+   <string name="Mimic_Name">mimic</string>
+   <string name="Mimic_Gender">male</string>
+   <string name="Mimic_Name_Objective">mimic</string>
+   <string name="Mimic_Desc">Mimics are magical creatures which can take any shape they wish. In dungeons they almost always choose a shape of a treasure chest, because they know how to beckon an adventurer.";</string>
+   
    <!--  STRINGS OF Monk CLASS  -->
    <string name="Monk_Name">dwarf monk</string>
    <string name="Monk_Gender">male</string>
