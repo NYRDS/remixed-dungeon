@@ -35,7 +35,8 @@ public class HedgehogSprite extends MobSprite {
 		
 		if (cloud == null) {
 			cloud = emitter();
-			cloud.pour( Speck.factory( Speck.STEAM ), 0.05f );
+			//cloud.pour( Speck.factory( Speck.PARALYSIS ), 0.7f );
+			cloud.pour( Speck.factory( Speck.MIST ), 0.1f );
 		}
 	}
 	
