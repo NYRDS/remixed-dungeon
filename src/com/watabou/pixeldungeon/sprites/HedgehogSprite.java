@@ -1,7 +1,10 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.effects.Speck;
 
 
 public class HedgehogSprite extends MobSprite {
@@ -22,6 +25,37 @@ public class HedgehogSprite extends MobSprite {
 		die.frames( frames, 0 );
 		
 		play( idle );
+	}
+	
+	private Emitter cloud;
+	
+	@Override
+	public void link( Char ch ) {
+		super.link( ch );
+		
+		if (cloud == null) {
+			cloud = emitter();
+			cloud.pour( Speck.factory( Speck.STEAM ), 0.1f );
+		}
+	}
+	
+	@Override
+	public void update() {
+		
+		super.update();
+		
+		if (cloud != null) {
+			cloud.visible = visible;
+		}
+	}
+	
+	@Override
+	public void die() {
+		super.die();
+		
+		if (cloud != null) {
+			cloud.on = false;
+		}
 	}
 	
 }
