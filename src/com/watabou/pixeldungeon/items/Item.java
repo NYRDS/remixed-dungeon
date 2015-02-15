@@ -65,8 +65,8 @@ public class Item implements Bundlable {
 	
 	public String defaultAction;
 	
-	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), true);
-	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), true);
+	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
+	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
 	
 	protected int image = 0;
 	

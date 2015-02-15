@@ -59,6 +59,7 @@ public abstract class Mob extends Char {
 	public AiState WANDERING	= new Wandering();
 	public AiState FLEEING		= new Fleeing();
 	public AiState PASSIVE		= new Passive();
+	
 	public AiState state = SLEEPEING;
 	
 	public Class<? extends CharSprite> spriteClass;

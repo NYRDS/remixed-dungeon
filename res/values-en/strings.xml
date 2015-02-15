@@ -542,7 +542,9 @@
    <string name="EquipableItem_ACUnequip">UNEQUIP</string>
    <string name="EquipableItem_Unequip">You can\'t remove cursed %s!</string>
 
-
+   <!--  STRINGS OF Heap CLASS  -->
+   <string name="Heap_Mimic">This is mimic!</string>
+   
    <!--  STRINGS OF Amulet CLASS  -->
    <string name="Amulet_Name">Amulet of Yendor</string>
    <string name="Amulet_ACEnd">END THE GAME</string>
@@ -1842,6 +1844,12 @@
    <!--  STRINGS OF Hedgehog CLASS  -->
    <string name="Hedgehog_Name">hedgehog</string>
    <string name="Hedgehog_Desc">That hedgehog seems nervous.</string>
+   <string name="Hedgehog_Info1">Do You looking for Bear too?</string>
+   <string name="Hedgehog_Info2">How\'s Horse in the mist?</string>
+   <string name="Hedgehog_Info3">Do You like tea with raspberry jam?</string>
+   <string name="Hedgehog_Info4">Take this pie</string>
+   <string name="Hedgehog_ImLate">I\'m late, I\'m terribly late...</string>
+   
    
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">ambitious imp</string>

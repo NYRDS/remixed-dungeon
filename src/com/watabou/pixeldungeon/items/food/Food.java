@@ -45,7 +45,6 @@ public class Food extends Item {
 	
 	{
 		stackable = true;
-		name = Game.getVar(R.string.Food_Name);
 		image = ItemSpriteSheet.RATION;
 	}
 	

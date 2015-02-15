@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Level;
@@ -151,12 +150,6 @@ public class WandOfTelekinesis extends Wand {
 		} else {
 			Dungeon.level.drop( item, curUser.pos ).sprite.drop();
 		}
-	}
-	
-	private void open( Heap heap ) {
-		heap.type = Type.HEAP;
-		heap.sprite.link();
-		heap.sprite.drop();
 	}
 	
 	protected void fx( int cell, Callback callback ) {

@@ -522,6 +522,10 @@
    <string name="Item_PackFull">У тебя нету места для предмета %s</string>
    <string name="Item_DirThrow">Выбери направление броска</string>
 
+   <!--  STRINGS OF Heap CLASS  -->
+   <string name="Heap_Mimic">Это мимик!</string>
+   
+   
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">НАДЕТЬ</string>
    <string name="EquipableItem_ACUnequip">СНЯТЬ</string>
@@ -1774,6 +1778,12 @@
    <!--  STRINGS OF Hedgehog CLASS  -->
    <string name="Hedgehog_Name">ёжик</string>
    <string name="Hedgehog_Desc">Ёжик беспокойно глядит по сторонам.</string>
+   <string name="Hedgehog_Info1">Ты тоже ищешь медвежонка?</string>
+   <string name="Hedgehog_Info2">Как там лошадка в тумане?</string>
+   <string name="Hedgehog_Info3">А ты любишь чай с малиновым вареньем?</string>
+   <string name="Hedgehog_Info4">Возьми этот пирожок</string>
+   <string name="Hedgehog_ImLate">Я опаздываю, ужасно опаздываю...</string>
+   
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">амбициозный бес</string>
    <string name="Imp_Desc">Бесы, это низшие демоны. Они не славятся своей силой или магической мощью, но они достаточно умны и общительны. Многие бесы предпочитают жить с теми, кто не является демонами.</string>
