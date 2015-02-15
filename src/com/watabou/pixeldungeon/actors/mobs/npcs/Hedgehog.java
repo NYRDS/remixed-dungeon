@@ -1,11 +1,15 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.levels.SewerLevel;
+import com.watabou.pixeldungeon.items.food.Pasty;
+import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.sprites.HedgehogSprite;
+import com.watabou.utils.Bundle;
 
 public class Hedgehog extends NPC {
 
@@ -19,7 +23,7 @@ public class Hedgehog extends NPC {
 	
 	@Override
 	public float speed() {
-		return 0.6f;
+		return speed;
 	}
 	
 	@Override
@@ -35,17 +39,30 @@ public class Hedgehog extends NPC {
 	public void add( Buff buff ) {
 	}
 	
-	@Override
-	public void interact() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	private static boolean spawned;
 	
-	public static void spawn( SewerLevel level ) {
-		//if (!spawned && Dungeon.depth > 1 && Random.Int( 5 - Dungeon.depth ) == 0) {
-		if (!spawned && Dungeon.depth == 1) {
+	private static String action_tag = "action";
+	private static String speed_tag  = "speed";
+	
+	private int     action = 0;
+	private  float  speed  = 0.5f;
+	
+	@Override
+	public void storeInBundle( Bundle bundle ) {
+		super.storeInBundle(bundle);
+		bundle.put(action_tag, action);
+		bundle.put(speed_tag,  speed);
+	}
+	
+	@Override
+	public void restoreFromBundle( Bundle bundle ) {
+		super.restoreFromBundle(bundle);
+		action = bundle.getInt(action_tag);
+		speed  = bundle.getFloat(speed_tag);
+	}
+	
+	public static void spawn( RegularLevel level ) {
+		if (!spawned && Dungeon.depth == 23) {
 			Hedgehog hedgehog = new Hedgehog();
 			do {
 				hedgehog.pos = level.randomRespawnCell();
@@ -55,6 +72,41 @@ public class Hedgehog extends NPC {
 			
 			spawned = true;
 		}
+	}
+
+	@Override
+	public void interact() {
+		sprite.turnTo( pos, Dungeon.hero.pos );
+		
+		switch (action)
+		{
+			case 0:
+				yell(Game.getVar(R.string.Hedgehog_Info1));
+			break;
+		
+			case 1:
+				yell(Game.getVar(R.string.Hedgehog_Info2));
+			break;
+			
+			case 2:
+				yell(Game.getVar(R.string.Hedgehog_Info3));
+			break;
+			
+			case 3:
+				yell(Game.getVar(R.string.Hedgehog_Info4));
+				
+				Pasty pie = new Pasty();
+				
+				Dungeon.level.drop( pie, pos ).sprite.drop();
+			break;
+			
+			default:
+				yell(Game.getVar(R.string.Hedgehog_ImLate));
+				action = 4;
+				speed  = 3;
+		}
+		speed += 0.5f;
+		action++;
 	}
 
 }
