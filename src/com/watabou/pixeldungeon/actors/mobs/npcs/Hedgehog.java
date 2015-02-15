@@ -19,7 +19,7 @@ public class Hedgehog extends NPC {
 	
 	@Override
 	public float speed() {
-		return 3f;
+		return 0.6f;
 	}
 	
 	@Override
