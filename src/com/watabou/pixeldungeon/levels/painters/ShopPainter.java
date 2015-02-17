@@ -36,7 +36,6 @@ import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
@@ -141,7 +140,6 @@ public class ShopPainter extends Painter {
 		items.add( new ScrollOfIdentify() );
 		items.add( new ScrollOfRemoveCurse() );
 		items.add( new ScrollOfMagicMapping() );
-		items.add( new BlankScroll() );
 		items.add( Generator.random( Generator.Category.SCROLL ) );
 		
 		items.add( new OverpricedRation() );
