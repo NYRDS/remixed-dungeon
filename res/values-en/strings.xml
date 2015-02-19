@@ -1498,8 +1498,8 @@
    <string name="ToxicGas_Info">A greenish cloud of toxic gas is swirling here.</string>
    <string name="ToxicGas_Info1">You died from a toxic gas..</string>
    <!--  STRINGS OF WaterOfAwareness CLASS  -->
-   <string name="WaterOfAwareness_Info">As you take a sip, you feel the knowledge pours into your mind. Now you know everything about your equipped items. Also you sense all items on the level and know all its secrets.</string>
-   <string name="WaterOfAwareness_Procced">Power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of equipped items.</string>
+   <string name="WaterOfAwareness_Info">Power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of equipped items.</string>
+   <string name="WaterOfAwareness_Procced">As you take a sip, you feel the knowledge pours into your mind. Now you know everything about your equipped items. Also you sense all items on the level and know all its secrets.</string>
    <!--  STRINGS OF WaterOfHealth CLASS  -->
    <string name="WaterOfHealth_Info">Power of health radiates from the water of this well. Take a sip from it to heal your wounds and satisfy hunger.</string>
    <string name="WaterOfHealth_Procced">As you take a sip, you feel your wounds heal completely.</string>
