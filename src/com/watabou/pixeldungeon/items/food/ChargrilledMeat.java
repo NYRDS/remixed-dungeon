@@ -31,10 +31,4 @@ public class ChargrilledMeat extends Food {
 	public int price() {
 		return 5 * quantity;
 	}
-	
-	public static Food cook( MysteryMeat ingredient ) {
-		ChargrilledMeat result = new ChargrilledMeat();
-		result.quantity = ingredient.quantity();
-		return result;
-	}
 }

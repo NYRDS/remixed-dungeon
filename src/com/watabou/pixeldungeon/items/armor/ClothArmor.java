@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.food.ChargrilledMeat;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.nyrds.pixeldungeon.ml.R;
 
@@ -36,5 +38,10 @@ public class ClothArmor extends Armor {
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.ClothArmor_Desc);
+	}
+	
+	@Override
+	public Item burn(){
+		return null;
 	}
 }

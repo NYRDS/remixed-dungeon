@@ -69,4 +69,9 @@ public class Dewdrop extends Item {
 		
 		return true;
 	}
+	
+	@Override
+	public Item burn(){
+		return null;
+	}
 }

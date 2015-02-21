@@ -473,4 +473,24 @@ public class Item implements Bundlable {
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent){
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
+
+	public Item morphTo(Class<? extends Item> itemClass){
+		try {
+			Item result = itemClass.newInstance();
+			result.quantity(quantity());
+			return result;
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// bad luck :)
+		return null;
+	}
+	
+	public Item burn() {
+		return this;
+	}
 }

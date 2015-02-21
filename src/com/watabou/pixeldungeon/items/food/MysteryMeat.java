@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
@@ -70,4 +71,9 @@ public class MysteryMeat extends Food {
 	public int price() {
 		return 5 * quantity;
 	};
+	
+	@Override
+	public Item burn(){
+		return morphTo(ChargrilledMeat.class);
+	}
 }

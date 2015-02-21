@@ -39,10 +39,8 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
-import com.watabou.pixeldungeon.items.food.ChargrilledMeat;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -209,15 +207,21 @@ public class Heap implements Bundlable {
 		boolean evaporated = false;
 		
 		for (Item item : items.toArray( new Item[0] )) {
-			if (item instanceof Scroll) {
-				items.remove( item );
+			Item burntItem = item.burn();
+			
+			if(!item.equals(burntItem) && !(item instanceof Dewdrop)){
 				burnt = true;
-			} else if (item instanceof Dewdrop) {
-				items.remove( item );
+			}
+			if(item instanceof Dewdrop){
 				evaporated = true;
-			} else if (item instanceof MysteryMeat) {
-				replace( item, ChargrilledMeat.cook( (MysteryMeat)item ) );
-				burnt = true;
+			}
+			
+			if(burntItem != null && !item.equals(burntItem) ){
+				replace(item, burntItem);
+			}
+			
+			if(burntItem == null){
+				items.remove(item);
 			}
 		}
 		

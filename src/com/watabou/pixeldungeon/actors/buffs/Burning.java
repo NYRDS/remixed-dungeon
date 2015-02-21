@@ -80,31 +80,26 @@ public class Burning extends Buff implements Hero.Doom {
 			if (target instanceof Hero) {
 				
 				Item item = ((Hero)target).belongings.randomUnequipped();
-				if (item instanceof Scroll || item instanceof BlankScroll) {
-					
-					item = item.detach( ((Hero)target).belongings.backpack );
-					GLog.w( TXT_BURNS_UP, item.toString() );
-					
+				
+				Item srcItem = item.detach(((Hero)target).belongings.backpack);
+				
+				item = srcItem.burn();
+				
+				if(item == null){
+					GLog.w( TXT_BURNS_UP, srcItem.toString() );
 					Heap.burnFX( target.pos );
-					
-				} else if (item instanceof MysteryMeat) {
-					
-					item = item.detach( ((Hero)target).belongings.backpack );
-					ChargrilledMeat steak = new ChargrilledMeat(); 
-					if (!steak.collect( ((Hero)target).belongings.backpack )) {
-						Dungeon.level.drop( steak, target.pos ).sprite.drop();
-					}
-					GLog.w( TXT_BURNS_UP, item.toString() );
-					
-					Heap.burnFX( target.pos );
-					
 				}
 				
-			} else if (target instanceof Thief && 
-						( ((Thief)target).item instanceof Scroll || 
-						((Thief)target).item instanceof BlankScroll )  ){
-			
-				((Thief)target).item = null;
+				if(!srcItem.equals(item)){
+					GLog.w( TXT_BURNS_UP, srcItem.toString() );
+					if(!item.collect( ((Hero)target).belongings.backpack )){
+						Dungeon.level.drop(item, target.pos).sprite.drop();
+					}
+					Heap.burnFX( target.pos );
+				}
+				
+			} else if (target instanceof Thief){
+				((Thief)target).item = ((Thief)target).item.burn();
 				target.sprite.emitter().burst( ElmoParticle.FACTORY, 6 );
 			}
 

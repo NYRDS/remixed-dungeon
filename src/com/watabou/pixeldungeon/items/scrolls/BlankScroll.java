@@ -10,6 +10,11 @@ public class BlankScroll extends Item {
 	}
 	
 	@Override
+	public Item burn(){
+		return null;
+	}
+	
+	@Override
 	public boolean isUpgradable() {
 		return false;
 	}
