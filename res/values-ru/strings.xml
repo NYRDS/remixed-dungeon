@@ -419,7 +419,7 @@
    <string name="WndHero_Str">Сила</string>
    <string name="WndHero_Health">Здоровье</string>
    <string name="WndHero_Gold">Собрано Золота</string>
-   <string name="WndHero_Depth">Максимальная Глубина</string>
+   <string name="WndHero_Depth">Бывал на глубине</string>
    <string name="WndHero_StaTitle">Уровень %1$d %2$s</string>
    <string name="WndHero_StaCatalogus">Каталог</string>
    <string name="WndHero_StaJournal">Журнал</string>
