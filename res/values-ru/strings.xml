@@ -1202,7 +1202,7 @@
    <string name="WandOfFlock_Info">Взмах этой палочки призовёт стадо волшебных овец, которые образуют временное непреодолимое препятствие.</string>
    <string name="Sheep_Name">овца</string>
    <string name="Sheep_Name_Objective">овца</string>
-   <string name="Sheep_Gender">female</string>
+   <string name="Sheep_Gender">feminine</string>
    <string name="Sheep_Desc">Это волшебная овца. Что в ней такого волшебного? Ты не сможешь её убить. Она будет стоять на месте, пока, волшебным образом, не испарится, сосредоточенно что-то пережёвывая.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Бее!</item>
@@ -1539,41 +1539,41 @@
    <string name="Mob_StaPassiveStatus">%s бездельничает</string>
    <!--  STRINGS OF Acidic CLASS  -->
    <string name="Acidic_Name">кислотный скорпион</string>
-   <string name="Acidic_Gender">male</string>
+   <string name="Acidic_Gender">masculine</string>
    <string name="Acidic_Name_Objective">кислотного скорпиона</string>
    <string name="Acidic_Desc">Эти огромные членистоногие создания стараются избегать ближнего боя, выстреливая ядовитые иглы с большого расстояния.</string>
    <!--  STRINGS OF Albino CLASS  -->
    <string name="Albino_Name">крыса-альбинос</string>
-   <string name="Albino_Gender">female</string>
+   <string name="Albino_Gender">feminine</string>
    <string name="Albino_Name_Objective">крысу-альбиноса</string>
    <string name="Albino_Desc">Сумчатые крысы - агрессивные, но довольно слабые обитатели канализации. Тем не менее, в больших количествах, они могут представлять опасность.</string>
    <!--  STRINGS OF Bandit CLASS  -->
    <string name="Bandit_Name">бандит</string>
-   <string name="Bandit_Gender">male</string>
+   <string name="Bandit_Gender">masculine</string>
    <string name="Bandit_Name_Objective">бандита</string>
    <string name="Bandit_Desc">Глубинные уровни подземелья всегда служили хорошим укрытием для всякого преступника. Но не всякий преступник мог сохранить рассудок, будучи отлучённым от дневного света на долгое время. Давным-давно, эти безумные бандиты и воры позабыли кто они и зачем совершают преступления.</string>
    <!--  STRINGS OF Bat CLASS  -->
    <string name="Bat_Name">летучая мышь-вампир</string>
-   <string name="Bat_Gender">female</string>
+   <string name="Bat_Gender">feminine</string>
    <string name="Bat_Name_Objective">вампира</string>
    <string name="Bat_Desc">Эти шустрые, настойчивые обитатели пещер, способны одолеть более крупного соперника, за счёт того, что с каждым успешным ударом, они восполняют часть своего здоровья.</string>
    <string name="Bat_Defense">увернулась</string>
    <!--  STRINGS OF Brute CLASS  -->
    <string name="Brute_Name">гнолл-громила</string>
-   <string name="Brute_Gender">male</string>
+   <string name="Brute_Gender">masculine</string>
    <string name="Brute_Name_Objective">гнолла-громилу</string>
    <string name="Brute_Desc">Громилы - самые большие, сильные и выносливые из всех гноллов. Будучи израненными, они впадают в неистовство, нанося увеличенный урон.</string>
    <string name="Brute_Enraged">%s впал в неистовство!</string>
    <string name="Brute_StaEnraged">неистовый</string>
    <!--  STRINGS OF Crab CLASS  -->
    <string name="Crab_Name">сточный краб</string>
-   <string name="Crab_Gender">male</string>
+   <string name="Crab_Gender">masculine</string>
    <string name="Crab_Name_Objective">краба</string>
    <string name="Crab_Desc">Эти огромные крабы находятся на вершине пищевой цепочки канализации. Они поразительно быстры, а их прочный хитин способен выдерживать множество ударов.</string>
    <string name="Crab_Defense">отбился</string>
    <!--  STRINGS OF DM300 CLASS  -->
    <string name="DM300_Name">ДМ-300</string>
-   <string name="DM300_Gender">male</string>
+   <string name="DM300_Gender">masculine</string>
    <string name="DM300_Name_Objective">ДМ-300</string>
    <string name="DM300_Desc">Эта машина был создан Дворфами много веков назад. Позднее Дворфы стали заменять машины големами, элементалями и даже демонами. Что и привело к гибели их цивилизации. Машины подобные ДМ-300, в основном, выполняли строительные и шахтёрские функции, но в случае необходимости могли защищать город.</string>
    <string name="DM300_Info1">ДМ-300 ремонтируется!</string>
@@ -1581,29 +1581,29 @@
    <string name="DM300_Info3">Обнаружено несанкционированное проникновение.</string>
    <!--  STRINGS OF Elemental CLASS  -->
    <string name="Elemental_Name">огненный элементаль</string>
-   <string name="Elemental_Gender">male</string>
+   <string name="Elemental_Gender">masculine</string>
    <string name="Elemental_Name_Objective">огненного элементаля</string>
    <string name="Elemental_Desc">Огненные элементали являются побочным эффектом ритуалов призыва великих сущностей. Ввиду своей хаотичной природы, воля этих созданий не подвластна даже сильнейшим демонологам.</string>
    <!--  STRINGS OF Eye CLASS  -->
    <string name="Eye_Name">око зла</string>
-   <string name="Eye_Gender">undefined</string>
+   <string name="Eye_Gender">neuter</string>
    <string name="Eye_Name_Objective">око зла</string>
    <string name="Eye_Desc">Этот демон также известен как \"шар ненависти\", по-скольку при виде врага, он, не задумываясь, обращает на того \"взгляд смерти\", не обращая внимания на то, что может ранить союзников.</string>
    <string name="Eye_Kill">%s убило тебя взглядом смерти...</string>
    <!--  STRINGS OF Gnoll CLASS  -->
    <string name="Gnoll_Name">гнолл-следопыт</string>
-   <string name="Gnoll_Gender">male</string>
+   <string name="Gnoll_Gender">masculine</string>
    <string name="Gnoll_Name_Objective">гнолла</string>
    <string name="Gnoll_Desc">Гноллы, это гиенообразные гуманоиды. Они обитают в канализации и подземельях, периодически совершая набеги на поверхность. Гнолл-следопыт - типичный представитель стаи, он не столь силён, как громила и не так умён, как шаман.</string>
    <!--  STRINGS OF Golem CLASS  -->
    <string name="Golem_Name">голем</string>
-   <string name="Golem_Gender">male</string>
+   <string name="Golem_Gender">masculine</string>
    <string name="Golem_Name_Objective">голема</string>
    <string name="Golem_Desc">Продукт Дворфийских экспериментов по взаимоиспользованию их навыков машиностроении и новоприобретённых знаний о покорении стихий. Духи земли заменяли \"душу\" механического каркаса голема, считалось что их легче всего контролировать. Не смотря на это, малейшая оплошность в ритуале приводила к плачевным последствиям.</string>
    <string name="Golem_Defense">прикрылся</string>
    <!--  STRINGS OF Goo CLASS  -->
    <string name="Goo_Name">Жижа</string>
-   <string name="Goo_Gender">female</string>
+   <string name="Goo_Gender">feminine</string>
    <string name="Goo_Name_Objective">Жижу</string>
    <string name="Goo_Desc">Жижа - загадочная вещь. Скорее всего, что это даже не существо, а масса канализационных субстанций, обретшая зачатки сознания.</string>
    <string name="Goo_Info1">Жижа начинает накачиваться!</string>
@@ -1612,7 +1612,7 @@
    <string name="Goo_StaInfo1">!!!</string>
    <!--  STRINGS OF King CLASS  -->
    <string name="King_Name">Царь Дворфов</string>
-   <string name="King_Gender">male</string>
+   <string name="King_Gender">masculine</string>
    <string name="King_Name_Objective">Царя Дворфов</string>
    <string name="King_Desc">Последний из дворфийских царей известен своими выдающимися познаниями о природе жизни и смерти. Он убедил придворную свиту принять участие в ритуале, обещавшим вечную молодость. В итоге её обрёл лишь он сам, заполучив армию нежити, в качестве бонуса.</string>
    <string name="King_Defense">отбился</string>
@@ -1620,127 +1620,127 @@
    <string name="King_Info2">Восстаньте, слуги!</string>
    <string name="King_Info3">Да как ты смеешь!</string>
    <string name="Undead_Name">дворф-нежить</string>
-   <string name="Undead_Gender">male</string>
+   <string name="Undead_Gender">masculine</string>
    <string name="Undead_Name_Objective">дворфа-нежить</string>
    <string name="Undead_Desc">Эти мёртвые дворфы, восставшие по воле своего Царя, были некогда членами его придворной свиты. Внешне они выглядят как скелеты с внушительными бородами.</string>
    <string name="Undead_Defense">прикрылся</string>
    
    <!--  STRINGS OF Mimic CLASS  -->
    <string name="Mimic_Name">мимик</string>
-   <string name="Mimic_Gender">male</string>
+   <string name="Mimic_Gender">masculine</string>
    <string name="Mimic_Name_Objective">мимика</string>
    <string name="Mimic_Desc">Мимики - магические существа, которые могут принимать любую форму по желанию. В подземельях мимики почти всегда принимают форму сундуков, они ведь знают как лучше всего привлечь искателя приключений.</string>
   
    <!--  STRINGS OF Monk CLASS  -->
    <string name="Monk_Name">дворф монах</string>
-   <string name="Monk_Gender">male</string>
+   <string name="Monk_Gender">masculine</string>
    <string name="Monk_Name_Objective">монаха</string>
    <string name="Monk_Desc">Монахи, это фанатики, посветившие себя защите секретов их народа от чужаков. Они не полагаются на броню и оружие, доверившись искусству рукопашного боя.</string>
    <string name="Monk_Defense">отбился</string>
    <string name="Monk_Disarm">%1$s выбил %2$s из твоих рук!</string>
    <!--  STRINGS OF Piranha CLASS  -->
    <string name="Piranha_Name">огромная пиранья</string>
-   <string name="Piranha_Gender">female</string>
+   <string name="Piranha_Gender">feminine</string>
    <string name="Piranha_Name_Objective">пиранью</string>
    <string name="Piranha_Desc">Эти плотоядные рыбы не являются исконными обитателями пещерных водоёмов. Они были выведены специально для защиты затопленных сокровищниц.</string>
    <!--  STRINGS OF Rat CLASS  -->
    <string name="Rat_Name">сумчатая крыса</string>
-   <string name="Rat_Gender">female</string>
+   <string name="Rat_Gender">feminine</string>
    <string name="Rat_Name_Objective">крысу</string>
    <string name="Rat_Desc">Сумчатые крысы - агрессивные, но довольно слабые обитатели канализации. Тем не менее, в больших количествах, они могут представлять опасность.</string>
    <!--  STRINGS OF Scorpio CLASS  -->
    <string name="Scorpio_Name">скорпион</string>
-   <string name="Scorpio_Gender">male</string>
+   <string name="Scorpio_Gender">masculine</string>
    <string name="Scorpio_Name_Objective">скорпиона</string>
    <string name="Scorpio_Desc">Эти огромные членистоногие создания стараются избегать ближнего боя, выстреливая ядовитые иглы с большого расстояния.</string>
    <!--  STRINGS OF Senior CLASS  -->
    <string name="Senior_Name">старший монах</string>
-   <string name="Senior_Gender">male</string>
+   <string name="Senior_Gender">masculine</string>
    <string name="Senior_Name_Objective">монаха</string>
    <string name="Senior_Desc">Монахи, это фанатики, посветившие себя защите секретов их народа от чужаков. Они не полагаются на броню и оружие, доверившись искусству рукопашного боя.</string>
    <!--  STRINGS OF Shaman CLASS  -->
    <string name="Shaman_Name">гнолл-шаман</string>
-   <string name="Shaman_Gender">male</string>
+   <string name="Shaman_Gender">masculine</string>
    <string name="Shaman_Name_Objective">гнолла-шамана</string>
    <string name="Shaman_Desc">Умнейшие из гноллов способны освоить шаманизм. Гнолл-шаман охотно использует боевые заклятия, компенсируя недостаток физической силы, а также, чтобы обезопасить свой высокий статус в обществе.</string>
    <string name="Shaman_Killed">%s достал тебя разрядом молнии...</string>
    <!--  STRINGS OF Shielded CLASS  -->
    <string name="Shielded_Name">громила-щитоносец</string>
-   <string name="Shielded_Gender">male</string>
+   <string name="Shielded_Gender">masculine</string>
    <string name="Shielded_Name_Objective">громилу-щитоносеца</string>
    <string name="Shielded_Defense">прикрылся</string>
    <string name="Shielded_Desc">Громилы - самые большие, сильные и выносливые из всех гноллов. Будучи израненными, они впадают в неистовство, нанося увеличенный урон.</string>
    <!--  STRINGS OF Skeleton CLASS  -->
    <string name="Skeleton_Name">скелет</string>
-   <string name="Skeleton_Gender">male</string>
+   <string name="Skeleton_Gender">masculine</string>
    <string name="Skeleton_Name_Objective">скелета</string>
    <string name="Skeleton_Desc">Скелеты, состоящие из костей павших путешественников, восстали под воздействием отголосков зловещей магии таящейся в глубине подземелья. Будучи достаточно повреждёнными, они разлетаются на костяные осколки.</string>
    <string name="Skeleton_Defense">прикрылся</string>
    <string name="Skeleton_Killed">Тебя пробило костяным осколком...</string>
    <!--  STRINGS OF Spinner CLASS  -->
    <string name="Spinner_Name">пещерный паук</string>
-   <string name="Spinner_Gender">male</string>
+   <string name="Spinner_Gender">masculine</string>
    <string name="Spinner_Name_Objective">пещерного паука</string>
    <string name="Spinner_Desc">Эти пушистые зелёные пауки стараются избегать прямых столкновений, предпочитая выжидать в дали, пока их жертва, запутанная в паутине, медленно гибнет от яда.</string>
    <!--  STRINGS OF Statue CLASS  -->
    <string name="Statue_Name">ожившая статуя</string>
-   <string name="Statue_Gender">female</string>
+   <string name="Statue_Gender">feminine</string>
    <string name="Statue_Name_Objective">статую</string>
    <string name="Statue_Desc">Может показаться, что это просто очередная неприметная статуя, но красные светящиеся глаза выдают её намерения. Хоть статуя и сработана из камня, её _%s_, выглядит настоящим.</string>
    <!--  STRINGS OF Succubus CLASS  -->
    <string name="Succubus_Name">суккуб</string>
-   <string name="Succubus_Gender">male</string>
+   <string name="Succubus_Gender">masculine</string>
    <string name="Succubus_Name_Objective">суккуба</string>
    <string name="Succubus_Desc">Суккубы, это демоны, принимающие вид соблазнительных (в слегка готическом стиле) девушек. Своим колдовством, они могут зачаровать героя, лишая его возможности атаковать, до того, как эффект пройдёт.</string>
    <!--  STRINGS OF Swarm CLASS  -->
    <string name="Swarm_Name">рой мух</string>
-   <string name="Swarm_Gender">male</string>
+   <string name="Swarm_Gender">masculine</string>
    <string name="Swarm_Name_Objective">рой</string>
    <string name="Swarm_Desc">Смертоносный рой мух злобно жужжит. Каждая не магическая атака разобьёт его на два роя поменьше, каждый из которых не менее опасен чем полноценный рой.</string>
    <string name="Swarm_Defense">отклонился</string>
    <!--  STRINGS OF Tengu CLASS  -->
    <string name="Tengu_Name">Тенгу</string>
-   <string name="Tengu_Gender">male</string>
+   <string name="Tengu_Gender">masculine</string>
    <string name="Tengu_Name_Objective">Тенгу</string>
    <string name="Tengu_Desc">Тенгу, это члены древнего клана наёмных убийц, который также зовётся Тенгу. Они известны страстью к сюрикенам и ловушкам.</string>
    <string name="Tengu_Info1">Наконец-то, свобода...</string>
    <string name="Tengu_Info2">Попался, %s!</string>
    <!--  STRINGS OF Thief CLASS  -->
    <string name="Thief_Name">свихнувшийся вор</string>
-   <string name="Thief_Gender">male</string>
+   <string name="Thief_Gender">masculine</string>
    <string name="Thief_Name_Objective">вора</string>
    <string name="Thief_Desc">Глубинные уровни подземелья всегда служили хорошим укрытием для всякого преступника. Но не всякий преступник мог сохранить рассудок, будучи отлучённым от дневного света на долгое время. Давным-давно, эти безумные бандиты и воры позабыли кто они и зачем совершают преступления.</string>
    <string name="Thief_Stole">%1$s украл у тебя %2$s!</string>
    <string name="Thief_Carries">\n\n%1$s носит _%2$s_. Добро, конечно, краденое.</string>
    <!--  STRINGS OF Warlock CLASS  -->
    <string name="Warlock_Name">дворф-чернокнижник</string>
-   <string name="Warlock_Gender">male</string>
+   <string name="Warlock_Gender">masculine</string>
    <string name="Warlock_Name_Objective">чернокнижника</string>
    <string name="Warlock_Desc">Когда интерес дворфов перекочевал с технологий на магию, чернокнижники стали новой элитой. Начиная с магии стихий, вскоре они перешли на некромантию и демонологию.</string>
    <string name="Warlock_Killed">%s уничтожил тебя стрелой теней...</string>
    <!--  STRINGS OF Wraith CLASS  -->
    <string name="Wraith_Name">фантом</string>
-   <string name="Wraith_Gender">male</string>
+   <string name="Wraith_Gender">masculine</string>
    <string name="Wraith_Name_Objective">фантома</string>
    <string name="Wraith_Desc">Фантом это мстительный дух грешника, чья могила была потревожена. Нематериальное создание крайне сложно победить простым оружием.</string>
    <string name="Wraith_Defense">отклонился</string>
    <!--  STRINGS OF Yog CLASS  -->
    <string name="Yog_Name">Йог-Джева</string>
-   <string name="Yog_Gender">male</string>
+   <string name="Yog_Gender">masculine</string>
    <string name="Yog_Name_Objective">Йог-Джева</string>
    <string name="Yog_Desc">Йог-Джева, это старый Бог, могучая сущность из мира хаоса. В минувшие века, древние дворфы с трудом одолели его армию демонов, но одолеть бога им было не под силу. Они заточили его в глубинах своего города, веря, что он слишком ослаблен, чтобы когда-либо вырваться на свободу.</string>
    <string name="Yog_Info1">...</string>
    <string name="Yog_Info2">Я надеюсь мне это почудилось...</string>
    <string name="RottingFist_Name">гнойный кулак</string>
-   <string name="RottingFist_Gender">male</string>
+   <string name="RottingFist_Gender">masculine</string>
    <string name="RottingFist_Name_Objective">гнойный кулак</string>
    <string name="RottingFist_Desc">Гнойный кулак Бога</string>
    <string name="BurningFist_Name">пылающий кулак</string>
-   <string name="BurningFist_Gender">male</string>
+   <string name="BurningFist_Gender">masculine</string>
    <string name="BurningFist_Name_Objective">пылающий кулак</string>
    <string name="BurningFist_Desc">Пылающий кулак Бога</string>
    <string name="Larva_Name">личинка бога</string>
-   <string name="Larva_Gender">female</string>
+   <string name="Larva_Gender">feminine</string>
    <string name="Larva_Name_Objective">личинку бога</string>
    <string name="Larva_Desc">Личинка старого Бога</string>
 
@@ -1773,7 +1773,7 @@
    <string name="Ghost_Defense">отклонился</string>
    <string name="FetidRat_Name">мерзкая крыса</string>
    <string name="FetidRat_Name_Objective">мерзкую крысу</string>
-   <string name="FetidRat_Gender">female</string>
+   <string name="FetidRat_Gender">feminine</string>
    <string name="FetidRat_Desc">Эта сумчатая крыса крупнее обычной. Вокруг неё витает зловоние.</string>
    <!--  STRINGS OF Hedgehog CLASS  -->
    <string name="Hedgehog_Name">ёжик</string>
@@ -1801,7 +1801,7 @@
    <!--  STRINGS OF MirrorImage CLASS  -->
    <string name="MirrorImage_Name">двойник</string>
    <string name="MirrorImage_Name_Objective">двойника</string>
-   <string name="MirrorImage_Gender">male</string>
+   <string name="MirrorImage_Gender">masculine</string>
    <string name="MirrorImage_Desc">Эта иллюзия весьма на тебя похожа, хотя слегка бледновата и посверкивает.</string>
    <!--  STRINGS OF RatKing CLASS  -->
    <string name="RatKing_Name">крысиный король</string>

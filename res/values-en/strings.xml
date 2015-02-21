@@ -694,7 +694,7 @@
    <string name="Armor_Info6">It is inscribed.</string>
    <string name="Armor_Info7a">\n\nYou are wearing the %1$s%2$s.</string>
    <string name="Armor_Info7b">, and because it is cursed, you are powerless to remove it</string>
-   <string name="Armor_Info8">\n\nYou can feel a masculinevolent magic lurking within the %s.</string>
+   <string name="Armor_Info8">\n\nYou can feel a malevolent magic lurking within the %s.</string>
    <string name="Armor_Glyph">glyph</string>
 
 
@@ -1024,7 +1024,7 @@
    <string name="Ring_Info2">Your %s tightens around your finger painfully</string>
    <string name="Ring_Info3a">%1$s\n\nThe %2$s is on your finger %3$s.</string>
    <string name="Ring_Info3b">, and because it is cursed, you are powerless to remove it</string>
-   <string name="Ring_Info4">%1$s\n\nYou can feel a masculinevolent magic lurking within the %2$s.</string>
+   <string name="Ring_Info4">%1$s\n\nYou can feel a malevolent magic lurking within the %2$s.</string>
    <string name="Ring_BuffKnown">This is a %s</string>
 
 
@@ -1172,7 +1172,7 @@
    <!--  STRINGS OF ScrollOfRemoveCurse CLASS  -->
    <string name="ScrollOfRemoveCurse_Name">Scroll of Remove Curse</string>
    <string name="ScrollOfRemoveCurse_Info">The incantation on this scroll will instantly strip from the reader\'s weapon, armor, rings and carried items any evil enchantments that might prevent the wearer from removing them.</string>
-   <string name="ScrollOfRemoveCurse_Proced">Your pack glows with a cleansing light, and a masculinevolent energy disperses.</string>
+   <string name="ScrollOfRemoveCurse_Proced">Your pack glows with a cleansing light, and a malevolent energy disperses.</string>
    <string name="ScrollOfRemoveCurse_NoProced">Your pack glows with a cleansing light, but nothing happens.</string>
 
 
@@ -1264,7 +1264,7 @@
    <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>   
    <string name="Sheep_Name">sheep</string>
    <string name="Sheep_Name_Objective">sheep</string>
-   <string name="Sheep_Gender">femasculine</string>
+   <string name="Sheep_Gender">feminine</string>
    <string name="Sheep_Desc">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Baa!</item>
@@ -1376,7 +1376,7 @@
    <string name="MeleeWeapon_Info6b">Because of your excess strength the damage of your attack with this %s is increased.</string>
    <string name="MeleeWeapon_Info7a">You hold the %1$s at the ready%2$s.</string>
    <string name="MeleeWeapon_Info7b">, and because it is cursed, you are powerless to let go</string>
-   <string name="MeleeWeapon_Info7c">You can feel a masculinevolent magic lurking within %s.</string>
+   <string name="MeleeWeapon_Info7c">You can feel a malevolent magic lurking within %s.</string>
 
 
    <!--  STRINGS OF BattleAxe CLASS  -->
@@ -1649,7 +1649,7 @@
    <string name="Elemental_Desc">Wandering fire elementals are a byproduct of summoning greater entities. They are too chaotic in their nature to be controlled by even the most powerful demonologist.</string>
    <!--  STRINGS OF Eye CLASS  -->
    <string name="Eye_Name">evil eye</string>
-   <string name="Eye_Gender">undefined</string>
+   <string name="Eye_Gender">neuter</string>
    <string name="Eye_Name_Objective">evil eye</string>
    <string name="Eye_Desc">One of this demon\'s other names is \"orb of hatred\", because when it sees an enemy, it uses its deathgaze recklessly, often ignoring its allies and wounding them.</string>
    <string name="Eye_Kill">%s\'s deathgaze killed you...</string>
@@ -1666,7 +1666,7 @@
    <string name="Golem_Defense">blocked</string>
    <!--  STRINGS OF Goo CLASS  -->
    <string name="Goo_Name">Goo</string>
-   <string name="Goo_Gender">femasculine</string>
+   <string name="Goo_Gender">feminine</string>
    <string name="Goo_Name_Objective">Goo</string>
    <string name="Goo_Desc">Little known about The Goo. It\'s quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will.</string>
    <string name="Goo_Info1">Goo is pumping itself up!</string>
@@ -1703,12 +1703,12 @@
    <string name="Monk_Disarm">%1$s has knocked the %2$s from your hands!</string>
    <!--  STRINGS OF Piranha CLASS  -->
    <string name="Piranha_Name">giant piranha</string>
-   <string name="Piranha_Gender">femasculine</string>
+   <string name="Piranha_Gender">feminine</string>
    <string name="Piranha_Name_Objective">giant piranha</string>
    <string name="Piranha_Desc">These carnivorous fish are not natural inhabitants of underground pools. They were bred specifically to protect flooded treasure vaults.</string>
    <!--  STRINGS OF Rat CLASS  -->
    <string name="Rat_Name">marsupial rat</string>
-   <string name="Rat_Gender">femasculine</string>
+   <string name="Rat_Gender">feminine</string>
    <string name="Rat_Name_Objective">marsupial rat</string>
    <string name="Rat_Desc">Marsupial rats are aggressive, but rather weak denizens of the sewers. They can be dangerous only in big numbers.</string>
    <!--  STRINGS OF Scorpio CLASS  -->
@@ -1747,7 +1747,7 @@
    <string name="Spinner_Desc">These greenish furry cave spiders try to avoid direct combat, preferring to wait in the distance while their victim, entangled in the spinner\'s excreted cobweb, slowly dies from their poisonous bite.</string>
    <!--  STRINGS OF Statue CLASS  -->
    <string name="Statue_Name">animated statue</string>
-  <string name="Statue_Gender">femasculine</string>
+  <string name="Statue_Gender">feminine</string>
    <string name="Statue_Name_Objective">animated statue</string>
    <string name="Statue_Desc">You would think that it\'s just another ugly statue of this dungeon, but its red glowing eyes give itself away. While the statue itself is made of stone, the _%s_, it\'s wielding, looks real.</string>
    <!--  STRINGS OF Succubus CLASS  -->
@@ -1770,7 +1770,7 @@
    <string name="Tengu_Info2">Gotcha, %s!</string>
    <!--  STRINGS OF Thief CLASS  -->
    <string name="Thief_Name">crazy thief</string>
-   <string name="Thief_Gender">_masculine</string>
+   <string name="Thief_Gender">masculine</string>
    <string name="Thief_Name_Objective">crazy thief</string>
    <string name="Thief_Desc">Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal.</string>
    <string name="Thief_Stole">%1$s stole %2$s from you!</string>
@@ -1803,7 +1803,7 @@
    <string name="BurningFist_Name_Objective">burning fist</string>
    <string name="BurningFist_Desc">Burning Fist of Old God</string>
    <string name="Larva_Name">god\'s larva</string>
-   <string name="Larva_Gender">femasculine</string>
+   <string name="Larva_Gender">feminine</string>
    <string name="Larva_Name_Objective">god\'s larva</string>
    <string name="Larva_Desc">Old God Larva</string>
 
@@ -1838,7 +1838,7 @@
    <string name="Ghost_Defense">evaded</string>
    <string name="FetidRat_Name">fetid rat</string>
    <string name="FetidRat_Name_Objective">fetid rat</string>
-   <string name="FetidRat_Gender">femasculine</string>
+   <string name="FetidRat_Gender">feminine</string>
    <string name="FetidRat_Desc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
 
    <!--  STRINGS OF Hedgehog CLASS  -->

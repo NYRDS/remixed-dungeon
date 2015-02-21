@@ -130,8 +130,8 @@ public abstract class Char extends Actor {
 		super.restoreFromBundle( bundle );
 		
 		pos = bundle.getInt( POS );
-		HP = bundle.getInt( TAG_HP );
-		HT = bundle.getInt( TAG_HT );
+		HP  = bundle.getInt( TAG_HP );
+		HT  = bundle.getInt( TAG_HT );
 		
 		for (Bundlable b : bundle.getCollection( BUFFS )) {
 			if (b != null) {
@@ -145,10 +145,10 @@ public abstract class Char extends Actor {
 	private void setCharGender(String sGender){
 		gender = NEUTER;
 		
-		if(sGender.equals("male")){
+		if(sGender.equals("masculine")){
 			gender = MASCULINE;
 		}
-		if(sGender.equals("female")){
+		if(sGender.equals("feminine")){
 			gender = FEMININE;
 		}
 	}
