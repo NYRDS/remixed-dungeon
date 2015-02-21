@@ -17,20 +17,12 @@
 
 package com.watabou.noosa;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
-
-import com.watabou.glscripts.Script;
-import com.watabou.gltextures.TextureCache;
-import com.watabou.input.Keys;
-import com.watabou.input.Touchscreen;
-import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.utils.BitmapCache;
-import com.watabou.utils.SystemTime;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -45,12 +37,24 @@ import android.media.AudioManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StatFs;
 import android.os.Vibrator;
 import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.View;
+
+import com.watabou.glscripts.Script;
+import com.watabou.gltextures.TextureCache;
+import com.watabou.input.Keys;
+import com.watabou.input.Touchscreen;
+import com.watabou.noosa.audio.Music;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.BitmapCache;
+import com.watabou.utils.SystemTime;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener {
 
@@ -97,11 +101,23 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		sceneClass = c;
 	}
 	
+    @SuppressLint("NewApi")
+	@SuppressWarnings("deprecation")
+	public static long getAvailableInternalMemorySize() {
+        File path = Environment.getDataDirectory();
+        StatFs stat = new StatFs(path.getPath());
+        if(android.os.Build.VERSION.SDK_INT < 18){
+	        long blockSize = stat.getBlockSize();
+	        long availableBlocks = stat.getAvailableBlocks();
+	        return availableBlocks * blockSize;
+        }
+        return stat.getAvailableBytes();
+    }
+	
 	public void useLocale(String lang){
-		Locale locale = new Locale(lang);  
-		Locale.setDefault(locale); 
-		Configuration config = new Configuration(); 
-		config.locale = locale; 
+		Locale locale = new Locale(lang);
+		Configuration config = getBaseContext().getResources().getConfiguration();
+		config.locale = locale;
 		getBaseContext().getResources().updateConfiguration(config,  
 		getBaseContext().getResources().getDisplayMetrics());		
 	}
@@ -117,6 +133,24 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pi);
 		
 		System.exit(0);
+	}
+	
+	public static void toast(final String text, final Object... args){
+		instance.runOnUiThread( new Runnable(){
+			@Override
+			public void run() {
+				String toastText = text;
+				Context context = instance.getApplicationContext();
+				
+				if (args.length > 0) {
+					toastText = Utils.format( text, args );
+				}
+				
+				android.widget.Toast toast = android.widget.Toast.makeText(context, toastText, android.widget.Toast.LENGTH_LONG);
+				toast.show();
+			}
+		});
+
 	}
 	
 	@Override
@@ -279,7 +313,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 	
 	public static void switchScene( Class<? extends Scene> c ) {
-		instance.sceneClass = c;
+		instance.sceneClass     = c;
 		instance.requestedReset = true;
 	}
 	
