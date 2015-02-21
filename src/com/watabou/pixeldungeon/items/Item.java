@@ -474,7 +474,7 @@ public class Item implements Bundlable {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
 
-	public Item morphTo(Class<? extends Item> itemClass){
+	protected Item morphTo(Class<? extends Item> itemClass){
 		try {
 			Item result = itemClass.newInstance();
 			result.quantity(quantity());
@@ -490,7 +490,11 @@ public class Item implements Bundlable {
 		return null;
 	}
 	
-	public Item burn() {
+	public Item burn(int cell) {
+		return this;
+	}
+
+	public Item freeze(int cell) {
 		return this;
 	}
 }

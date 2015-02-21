@@ -73,7 +73,12 @@ public class MysteryMeat extends Food {
 	};
 	
 	@Override
-	public Item burn(){
+	public Item burn(int cell){
 		return morphTo(ChargrilledMeat.class);
+	}
+	
+	@Override
+	public Item freeze(int cell){
+		return morphTo(FrozenCarpaccio.class);
 	}
 }

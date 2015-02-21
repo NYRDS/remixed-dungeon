@@ -17,23 +17,33 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
-import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class Frost extends FlavourBuff {
 
 	private static final String TXT_SHATTERS = Game.getVar(R.string.Frost_Shatter);
 	private static final float DURATION	= 5f;
+	
+	class freezeItem implements itemAction{
+		public Item act(Item srcItem){
+			return srcItem.freeze(target.pos);
+		}
+		public void carrierFx(){
+		}
+
+		public String actionText(Item srcItem) {
+			if(srcItem instanceof Potion) {
+				return String.format(TXT_SHATTERS, srcItem.toString());
+			}
+			return null;
+		}
+	}
 	
 	@Override
 	public boolean attachTo( Char target ) {
@@ -42,24 +52,8 @@ public class Frost extends FlavourBuff {
 			target.paralysed = true;
 			Burning.detach( target, Burning.class );
 			
-			if (target instanceof Hero) {
-				Hero hero = (Hero)target;
-				Item item = hero.belongings.randomUnequipped();
-				if (item instanceof MysteryMeat) {
-					
-					item = item.detach( hero.belongings.backpack );
-					FrozenCarpaccio carpaccio = new FrozenCarpaccio(); 
-					if (!carpaccio.collect( hero.belongings.backpack )) {
-						Dungeon.level.drop( carpaccio, target.pos ).sprite.drop();
-					}
-				} else if(item instanceof Potion) {
-					
-					item = item.detach( hero.belongings.backpack );
-					GLog.w( TXT_SHATTERS, item.toString() );
-					((Potion) item).shatter( target.pos );
-				}
-			}
-
+			applyToCarriedItems(new freezeItem());
+			
 			return true;
 		} else {
 			return false;

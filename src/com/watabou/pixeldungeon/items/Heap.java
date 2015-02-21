@@ -39,8 +39,6 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
-import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
-import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -189,6 +187,16 @@ public class Heap implements Bundlable {
 		}
 	}
 	
+	private void replaceOrRemoveItem(Item item, Item newItem){
+		if(newItem != null && !item.equals(newItem) ){
+			replace(item, newItem);
+		}
+		
+		if(newItem == null){
+			items.remove(item);
+		}
+	}
+	
 	public void burn() {
 		
 		if (type == Type.MIMIC) {
@@ -207,22 +215,17 @@ public class Heap implements Bundlable {
 		boolean evaporated = false;
 		
 		for (Item item : items.toArray( new Item[0] )) {
-			Item burntItem = item.burn();
+			Item burntItem = item.burn(pos);
 			
 			if(!item.equals(burntItem) && !(item instanceof Dewdrop)){
 				burnt = true;
 			}
+			
 			if(item instanceof Dewdrop){
 				evaporated = true;
 			}
 			
-			if(burntItem != null && !item.equals(burntItem) ){
-				replace(item, burntItem);
-			}
-			
-			if(burntItem == null){
-				items.remove(item);
-			}
+			replaceOrRemoveItem(item, burntItem);
 		}
 		
 		if (burnt || evaporated) {
@@ -259,10 +262,12 @@ public class Heap implements Bundlable {
 		
 		boolean frozen = false;
 		for (Item item : items.toArray( new Item[0] )) {
-			if (item instanceof MysteryMeat) {
-				replace( item, FrozenCarpaccio.cook( (MysteryMeat)item ) );
+			Item frozenItem = item.freeze(pos);
+			
+			if(!item.equals(frozenItem)){
 				frozen = true;
 			}
+			replaceOrRemoveItem(item, frozenItem);
 		}
 		
 		if (frozen) {

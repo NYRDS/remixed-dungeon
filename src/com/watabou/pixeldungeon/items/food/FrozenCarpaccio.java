@@ -86,7 +86,7 @@ public class FrozenCarpaccio extends Food {
 	}
 	
 	@Override
-	public Item burn(){
+	public Item burn(int cell){
 		return morphTo(MysteryMeat.class);
 	}
 }

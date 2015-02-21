@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import android.annotation.SuppressLint;
+
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -26,15 +28,9 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Thief;
-import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.food.ChargrilledMeat;
-import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
-import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
-import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -52,6 +48,7 @@ public class Burning extends Buff implements Hero.Doom {
 	
 	private float left;
 	
+	@SuppressLint("RtlHardcoded")
 	private static final String LEFT	= "left";
 	
 	@Override
@@ -66,6 +63,19 @@ public class Burning extends Buff implements Hero.Doom {
 		left = bundle.getFloat( LEFT );
 	}
 	
+	class burnItem implements itemAction{
+		public Item act(Item srcItem){
+			return srcItem.burn(target.pos);
+		}
+		public void carrierFx(){
+			Heap.burnFX( target.pos );
+		}
+		@Override
+		public String actionText(Item srcItem) {
+			return String.format(TXT_BURNS_UP, srcItem.toString());
+		}
+	}
+		
 	@Override
 	public boolean act() {
 		
@@ -77,32 +87,7 @@ public class Burning extends Buff implements Hero.Doom {
 			
 			target.damage( Random.Int( 1, 5 ), this );
 			
-			if (target instanceof Hero) {
-				
-				Item item = ((Hero)target).belongings.randomUnequipped();
-				
-				Item srcItem = item.detach(((Hero)target).belongings.backpack);
-				
-				item = srcItem.burn();
-				
-				if(item == null){
-					GLog.w( TXT_BURNS_UP, srcItem.toString() );
-					Heap.burnFX( target.pos );
-				}
-				
-				if(!srcItem.equals(item)){
-					GLog.w( TXT_BURNS_UP, srcItem.toString() );
-					if(!item.collect( ((Hero)target).belongings.backpack )){
-						Dungeon.level.drop(item, target.pos).sprite.drop();
-					}
-					Heap.burnFX( target.pos );
-				}
-				
-			} else if (target instanceof Thief){
-				((Thief)target).item = ((Thief)target).item.burn();
-				target.sprite.emitter().burst( ElmoParticle.FACTORY, 6 );
-			}
-
+			applyToCarriedItems(new burnItem());
 		} else {
 			detach();
 		}

@@ -50,7 +50,5 @@ public class Freezing {
 		if (Dungeon.visible[cell]) {
 			CellEmitter.get( cell ).start( SnowParticle.FACTORY, 0.2f, 6 );
 		}
-		
-		
 	}
 }

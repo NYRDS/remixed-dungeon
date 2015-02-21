@@ -222,7 +222,7 @@ public abstract class Scroll extends Item {
 	}
 	
 	@Override
-	public Item burn(){
+	public Item burn(int cell){
 		return null;
 	}
 }

@@ -290,4 +290,11 @@ public class Potion extends Item {
 	public int price() {
 		return 20 * quantity;
 	}
+	
+	@Override
+	public Item freeze(int cell){
+		shatter(cell);
+		return null;
+	}
+	
 }
