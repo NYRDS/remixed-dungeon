@@ -62,9 +62,9 @@ import com.watabou.utils.Random;
 
 public abstract class Char extends Actor {
 
-	public static final int UNDEFINED = 0;
-	public static final int MALE      = 1;
-	public static final int FEMALE    = 2;
+	public static final int NEUTER    = 0;
+	public static final int MASCULINE = 1;
+	public static final int FEMININE  = 2;
 	
 	protected static final String TXT_HIT[]		= Game.getVars(R.array.Char_Hit);
 	protected static final String TXT_KILL[]    = Game.getVars(R.array.Char_Kill);
@@ -85,7 +85,7 @@ public abstract class Char extends Actor {
 	protected String description  = Game.getVar(R.string.Mob_Desc);
 	private   String defenceVerb  = null;
 	
-	public int    gender          = UNDEFINED;
+	public int    gender          = NEUTER;
 	
 	public int HT;
 	public int HP;
@@ -143,13 +143,13 @@ public abstract class Char extends Actor {
 	}
 	
 	private void setCharGender(String sGender){
-		gender = UNDEFINED;
+		gender = NEUTER;
 		
 		if(sGender.equals("male")){
-			gender = MALE;
+			gender = MASCULINE;
 		}
 		if(sGender.equals("female")){
-			gender = FEMALE;
+			gender = FEMININE;
 		}
 	}
 	
@@ -207,7 +207,7 @@ public abstract class Char extends Actor {
 					if (Dungeon.hero.killerGlyph != null) {
 						
 						Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, Dungeon.hero.killerGlyph.name(), Dungeon.depth ) );
-						GLog.n( TXT_KILL[MALE], Dungeon.hero.killerGlyph.name() );
+						GLog.n( TXT_KILL[MASCULINE], Dungeon.hero.killerGlyph.name() );
 						
 					} else {
 						if (Bestiary.isUnique( this )) {

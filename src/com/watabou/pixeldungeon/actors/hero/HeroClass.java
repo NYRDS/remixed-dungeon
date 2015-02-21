@@ -192,11 +192,11 @@ public enum HeroClass {
 		case WARRIOR:
 		case MAGE:
 		case ROGUE:
-			return Char.MALE;
+			return Char.MASCULINE;
 		case HUNTRESS:
-			return Char.FEMALE;
+			return Char.FEMININE;
 		}
-		return Char.UNDEFINED;
+		return Char.NEUTER;
 	}
 	
 	private static final String CLASS = "class";
