@@ -27,11 +27,11 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import com.watabou.noosa.Game;
 
 public class Bundle {
 
@@ -310,12 +310,12 @@ public class Bundle {
 	
 	public static boolean write( Bundle bundle, OutputStream stream ) {
 		try {
-			BufferedWriter writer = new BufferedWriter( new OutputStreamWriter( stream ) );	
+			BufferedWriter writer = new BufferedWriter( new OutputStreamWriter( stream ) );
 			writer.write( bundle.data.toString() );
 			writer.close();
-			
 			return true;
 		} catch (IOException e) {
+			Game.toast("bungle write failed: %s\n", e.getMessage());
 			return false;
 		}
 	}

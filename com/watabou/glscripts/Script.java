@@ -18,7 +18,6 @@
 package com.watabou.glscripts;
 
 import java.util.HashMap;
-
 import com.watabou.glwrap.Program;
 import com.watabou.glwrap.Shader;
 

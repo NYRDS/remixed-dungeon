@@ -19,9 +19,7 @@ package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
-
 import android.opengl.GLES20;
-
 import com.watabou.glscripts.Script;
 import com.watabou.glwrap.Attribute;
 import com.watabou.glwrap.Quad;

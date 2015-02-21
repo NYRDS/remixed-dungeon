@@ -20,7 +20,6 @@ package com.watabou.utils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

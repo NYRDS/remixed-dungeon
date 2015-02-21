@@ -18,10 +18,8 @@
 package com.watabou.noosa;
 
 import java.util.HashMap;
-
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-
 import android.graphics.RectF;
 
 public class TextureFilm {

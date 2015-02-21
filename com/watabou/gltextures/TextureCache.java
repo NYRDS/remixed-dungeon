@@ -18,7 +18,6 @@
 package com.watabou.gltextures;
 
 import java.util.HashMap;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -26,7 +25,6 @@ import android.graphics.Canvas;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
-
 import com.watabou.glwrap.Texture;
 
 public class TextureCache {

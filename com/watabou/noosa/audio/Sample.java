@@ -19,9 +19,7 @@ package com.watabou.noosa.audio;
 
 import java.io.IOException;
 import java.util.HashMap;
-
 import com.watabou.noosa.Game;
-
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;

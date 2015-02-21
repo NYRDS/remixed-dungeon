@@ -18,12 +18,10 @@
 package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
-
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.Rect;
-
 import android.graphics.RectF;
 
 public class Tilemap extends Visual {

@@ -19,10 +19,8 @@ package com.watabou.input;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import com.watabou.utils.PointF;
 import com.watabou.utils.Signal;
-
 import android.view.MotionEvent;
 
 public class Touchscreen {

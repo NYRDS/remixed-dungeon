@@ -19,10 +19,8 @@ package com.watabou.noosa;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
-
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
-
 import android.graphics.RectF;
 
 public class BitmapTextMultiline extends BitmapText {

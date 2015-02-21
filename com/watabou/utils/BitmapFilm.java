@@ -18,7 +18,6 @@
 package com.watabou.utils;
 
 import java.util.HashMap;
-
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 

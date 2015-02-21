@@ -18,9 +18,7 @@
 package com.watabou.input;
 
 import java.util.ArrayList;
-
 import com.watabou.utils.Signal;
-
 import android.view.KeyEvent;
 
 public class Keys {

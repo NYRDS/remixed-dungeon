@@ -18,7 +18,6 @@
 package com.watabou.gltextures;
 
 import java.util.HashMap;
-
 import android.graphics.RectF;
 
 public class Atlas {

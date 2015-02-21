@@ -18,12 +18,10 @@
 package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
-
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
-
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 
