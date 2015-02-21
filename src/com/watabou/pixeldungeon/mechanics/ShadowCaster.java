@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.mechanics;
 
 import java.util.Arrays;
-
 import com.watabou.pixeldungeon.levels.Level;
 
 public final class ShadowCaster {

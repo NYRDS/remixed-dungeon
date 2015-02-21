@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;

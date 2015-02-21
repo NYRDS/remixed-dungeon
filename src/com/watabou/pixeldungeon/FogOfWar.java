@@ -18,9 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import java.util.Arrays;
-
 import android.graphics.Bitmap;
-
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;

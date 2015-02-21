@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
-
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;

@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import java.util.ArrayList;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;

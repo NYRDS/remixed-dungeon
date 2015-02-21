@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import android.graphics.RectF;
-
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.ColorBlock;

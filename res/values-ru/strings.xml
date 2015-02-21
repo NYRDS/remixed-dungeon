@@ -9,8 +9,9 @@
    <string name="TitleScene_Highscores">Рекорды</string>
    <string name="TitleScene_Badges">Значки</string>
    <string name="TitleScene_About">Об игре</string>
-
-
+   <string name="TitleScene_InternalStorageLow">Недостаточно места во\n внутреннем хранилище\n игра может не сохранится!</string>
+   
+   
    <!--  STRINGS OF AboutScene CLASS  -->
    <string name="AboutScene_Txt">Программирование &amp; графика: Watabou\nМузыка: Cube_Code\n\nРазработчики этой игры вдохновлялись Brogue от Brian Walker. Вы можете сыграть в неё на Windows, Mac OS или Linux - она классная! ;)\n\nПосетите официальный сайт игры для дополнительной информации:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
@@ -22,8 +23,7 @@
    <string name="AboutScene_TranslateRus">Перевод на русский язык: DeadDie44</string>
    <string name="AboutScene_TranslateRusLnk">deaddie44@gmail.com</string>
    
-
-
+   
    <!--  STRINGS OF RankingsScene CLASS  -->
    <string name="RankingsScene_Title">Лучшие Результаты</string>
    <string name="RankingsScene_Total">Всего игр сыграно: %d</string>

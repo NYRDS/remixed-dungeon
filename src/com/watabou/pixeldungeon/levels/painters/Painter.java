@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import java.util.Arrays;
-
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.utils.Point;

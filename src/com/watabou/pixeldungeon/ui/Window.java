@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.ui;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import com.watabou.input.Keys;
 import com.watabou.input.Keys.Key;
 import com.watabou.input.Touchscreen.Touch;

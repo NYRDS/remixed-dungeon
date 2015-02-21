@@ -23,7 +23,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.levels.painters.*;
 import com.watabou.utils.Bundlable;

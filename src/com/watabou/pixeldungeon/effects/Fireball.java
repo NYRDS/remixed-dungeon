@@ -18,10 +18,8 @@
 package com.watabou.pixeldungeon.effects;
 
 import javax.microedition.khronos.opengles.GL10;
-
 import android.graphics.RectF;
 import android.opengl.GLES20;
-
 import com.watabou.glwrap.Texture;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;

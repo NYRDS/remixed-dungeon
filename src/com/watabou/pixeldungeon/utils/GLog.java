@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.utils;
 
 import com.watabou.utils.Signal;
-
 import android.util.Log;
 
 public class GLog {

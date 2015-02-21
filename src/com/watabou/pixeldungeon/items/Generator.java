@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.items;
 
 import java.util.HashMap;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker.Rotberry;

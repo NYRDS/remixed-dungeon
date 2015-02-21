@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.ui;
 
 import java.util.ArrayList;
-
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;

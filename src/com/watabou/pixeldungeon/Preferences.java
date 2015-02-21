@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon;
 
 import com.watabou.noosa.Game;
-
 import android.content.SharedPreferences;
 
 enum Preferences {

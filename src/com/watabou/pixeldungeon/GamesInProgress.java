@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon;
 
 import java.util.HashMap;
-
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.utils.Bundle;
 

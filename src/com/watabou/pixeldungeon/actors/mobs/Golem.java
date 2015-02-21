@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
-
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;

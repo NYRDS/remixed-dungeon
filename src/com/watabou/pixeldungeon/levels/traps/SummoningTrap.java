@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.levels.traps;
 
 import java.util.ArrayList;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;

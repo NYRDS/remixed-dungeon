@@ -9,8 +9,8 @@
    <string name="TitleScene_Highscores">Highscores</string>
    <string name="TitleScene_Badges">Badges</string>
    <string name="TitleScene_About">About</string>
-
-
+   <string name="TitleScene_InternalStorageLow">Not enough space\n in internal storage\n Your progress can be lost!</string>
+   
    <!--  STRINGS OF AboutScene CLASS  -->
    <string name="AboutScene_Txt">Code &amp; graphics: Watabou\nMusic: Cube_Code\n\nThis game is inspired by Brian Walker\'s Brogue. Try it on Windows, Mac OS or Linux - it\'s awesome! ;)\n\nPlease visit official website for additional info:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
@@ -2043,5 +2043,5 @@
    <!-- 1: Execute Indefinite Function to Language -->
    <!-- 0: NO Execute Indefinite Function to Language -->
    <string name="Utils_IsIndefinte">1</string>
-
+   
 </resources>

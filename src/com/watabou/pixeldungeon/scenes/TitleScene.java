@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -109,6 +110,19 @@ public class TitleScene extends PixelScene {
 		version.x = w - version.width();
 		version.y = h - version.height();
 		add( version );
+		
+		float freeInternalStorage = Game.getAvailableInternalMemorySize();
+		
+		if(freeInternalStorage < 2)
+		{
+			BitmapTextMultiline lowInteralStorageWarning = PixelScene.createMultiline(8);
+			lowInteralStorageWarning.text(Game.getVar(R.string.TitleScene_InternalStorageLow));
+			lowInteralStorageWarning.measure();
+			lowInteralStorageWarning.x = 0;
+			lowInteralStorageWarning.y = h - lowInteralStorageWarning.height();
+			lowInteralStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
+			add(lowInteralStorageWarning);
+		}
 		
 		PrefsButton btnPrefs = new PrefsButton();
 		btnPrefs.setPos( 0, 0 );

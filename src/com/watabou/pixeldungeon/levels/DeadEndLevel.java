@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.levels;
 
 import java.util.Arrays;
-
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.Random;
 

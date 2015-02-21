@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.effects;
 import android.annotation.SuppressLint;
 import android.util.FloatMath;
 import android.util.SparseArray;
-
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;

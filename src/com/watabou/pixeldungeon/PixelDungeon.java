@@ -19,17 +19,13 @@ package com.watabou.pixeldungeon;
 
 import java.io.IOException;
 import java.util.Locale;
-
 import javax.microedition.khronos.opengles.GL10;
-
 import android.annotation.SuppressLint;
-
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;

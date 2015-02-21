@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.ui;
 
 import java.util.ArrayList;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;

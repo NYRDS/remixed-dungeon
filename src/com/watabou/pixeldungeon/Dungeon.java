@@ -59,6 +59,7 @@ import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
@@ -435,6 +436,13 @@ public class Dungeon {
 	}
 	
 	public static void saveAll() throws IOException {
+		float MBytesAvaliable = Game.getAvailableInternalMemorySize()/1024f/1024f;
+		
+		if(MBytesAvaliable < 2){
+			Game.toast("Low memory condition, ");
+		}
+		
+		GLog.i("Saving: %5.2f MBytes avaliable\n", MBytesAvaliable);
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();
@@ -447,7 +455,6 @@ public class Dungeon {
 			
 			WndResurrect.instance.hide();
 			Hero.reallyDie( WndResurrect.causeOfDeath );
-			
 		}
 	}
 	

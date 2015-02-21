@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors;
 
 import java.util.Arrays;
 import java.util.HashSet;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;

@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.blobs;
 
 import java.util.Arrays;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;

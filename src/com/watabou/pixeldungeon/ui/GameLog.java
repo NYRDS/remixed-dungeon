@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.ui;
 
 import java.util.regex.Pattern;
-
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
