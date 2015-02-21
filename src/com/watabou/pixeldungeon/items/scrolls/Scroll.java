@@ -36,7 +36,7 @@ public abstract class Scroll extends Item {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
 	
-	public static final String AC_READ	= Game.getVar(R.string.Scroll_ACRead);
+	public static final String AC_READ    	= Game.getVar(R.string.Scroll_ACRead);
 	
 	protected static final float TIME_TO_READ	= 1f;
 	
@@ -69,7 +69,7 @@ public abstract class Scroll extends Item {
 		ScrollOfMirrorImage.class
 	};
 	
-	private static String[] runes;
+	private static String[] runes = null;
 	
 	private static final Integer[] images = {
 		ItemSpriteSheet.SCROLL_KAUNAN, 
@@ -91,6 +91,13 @@ public abstract class Scroll extends Item {
 	
 	private static ItemStatusHandler<Scroll> handler;
 	
+	private static String[] getRunes(){
+		if(runes == null){
+			runes = Game.getVars(R.array.Scroll_Runes);
+		}
+		return runes;
+	}
+	
 	private String rune;
 	
 	{
@@ -100,8 +107,7 @@ public abstract class Scroll extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void initLabels() {
-		runes = Game.getVars(R.array.Scroll_Runes);
-		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, runes, images );
+		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, getRunes(), images );
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -110,13 +116,13 @@ public abstract class Scroll extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, runes, images, bundle );
+		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, getRunes(), images, bundle );
 	}
 	
 	public Scroll() {
 		super();
 		image = handler.image( this );
-		rune = handler.label( this );
+		rune  = handler.label( this );
 	}
 	
 	static public Scroll createRandomScroll(){

@@ -30,8 +30,8 @@ public class ItemStatusHandler<T extends Item> {
 	private Class<? extends T>[] items;
 	
 	private HashMap<Class<? extends T>, Integer> images;
-	private HashMap<Class<? extends T>, String> labels;
-	private HashSet<Class<? extends T>> known;
+	private HashMap<Class<? extends T>, String>  labels;
+	private HashSet<Class<? extends T>>          known;
 	
 	public ItemStatusHandler( Class<? extends T>[] items, String[] allLabels, Integer[] allImages ) {
 		
@@ -39,9 +39,9 @@ public class ItemStatusHandler<T extends Item> {
 		
 		this.images = new HashMap<Class<? extends T>, Integer>();
 		this.labels = new HashMap<Class<? extends T>, String>();
-		known = new HashSet<Class<? extends T>>();
+		known       = new HashSet<Class<? extends T>>();
 		
-		ArrayList<String> labelsLeft = new ArrayList<String>( Arrays.asList( allLabels ) );
+		ArrayList<String>  labelsLeft = new ArrayList<String>(  Arrays.asList( allLabels ) );
 		ArrayList<Integer> imagesLeft = new ArrayList<Integer>( Arrays.asList( allImages ) );
 		
 		for (int i=0; i < items.length; i++) {
@@ -64,7 +64,7 @@ public class ItemStatusHandler<T extends Item> {
 		
 		this.images = new HashMap<Class<? extends T>, Integer>();
 		this.labels = new HashMap<Class<? extends T>, String>();
-		known = new HashSet<Class<? extends T>>();
+		known       = new HashSet<Class<? extends T>>();
 		
 		restore( bundle, labels, images );
 	}

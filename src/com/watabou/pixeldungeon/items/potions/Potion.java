@@ -67,7 +67,7 @@ public class Potion extends Item {
 		PotionOfFrost.class
 	};
 	
-	private static String[] colors;
+	private static String[] colors = null;
 	
 	private static final Integer[] images = {
 		ItemSpriteSheet.POTION_TURQUOISE, 
@@ -92,10 +92,16 @@ public class Potion extends Item {
 		defaultAction = AC_DRINK;
 	}
 	
+	private static String[] getColors(){
+		if(colors == null){
+			colors = Game.getVars(R.array.Potion_Colors);
+		}
+		return colors;
+	}
+	
 	@SuppressWarnings("unchecked")
 	public static void initColors() {
-		colors  = Game.getVars(R.array.Potion_Colors);
-		handler = new ItemStatusHandler<Potion>( (Class<? extends Potion>[])potions, colors, images );
+		handler = new ItemStatusHandler<Potion>( (Class<? extends Potion>[])potions, getColors(), images );
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -104,7 +110,7 @@ public class Potion extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<Potion>( (Class<? extends Potion>[])potions, colors, images, bundle );
+		handler = new ItemStatusHandler<Potion>( (Class<? extends Potion>[])potions, getColors(), images, bundle );
 	}
 	
 	public Potion() {
