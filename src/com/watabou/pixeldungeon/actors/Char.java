@@ -207,7 +207,7 @@ public abstract class Char extends Actor {
 					if (Dungeon.hero.killerGlyph != null) {
 						
 						Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, Dungeon.hero.killerGlyph.name(), Dungeon.depth ) );
-						GLog.n( TXT_KILL[MASCULINE], Dungeon.hero.killerGlyph.name() );
+						GLog.n( TXT_KILL[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name() );
 						
 					} else {
 						if (Bestiary.isUnique( this )) {

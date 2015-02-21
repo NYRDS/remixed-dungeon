@@ -69,7 +69,8 @@ public abstract class Scroll extends Item {
 		ScrollOfMirrorImage.class
 	};
 	
-	private static final String[] runes = Game.getVars(R.array.Scroll_Runes);
+	private static String[] runes;
+	
 	private static final Integer[] images = {
 		ItemSpriteSheet.SCROLL_KAUNAN, 
 		ItemSpriteSheet.SCROLL_SOWILO, 
@@ -99,6 +100,7 @@ public abstract class Scroll extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void initLabels() {
+		runes = Game.getVars(R.array.Scroll_Runes);
 		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, runes, images );
 	}
 	

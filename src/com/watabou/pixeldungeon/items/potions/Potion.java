@@ -43,12 +43,12 @@ public class Potion extends Item {
 	
 	public static final String AC_DRINK	= Game.getVar(R.string.Potion_ACDrink);
 	
-	private static final String TXT_HARMFUL		= Game.getVar(R.string.Potion_Harmfull);
-	private static final String TXT_BENEFICIAL	= Game.getVar(R.string.Potion_Beneficial);
-	private static final String TXT_YES			= Game.getVar(R.string.Potion_Yes);
-	private static final String TXT_NO			= Game.getVar(R.string.Potion_No);
-	private static final String TXT_R_U_SURE_DRINK = Game.getVar(R.string.Potion_SureDrink);
-	private static final String TXT_R_U_SURE_THROW = Game.getVar(R.string.Potion_SureThrow);
+	private static final String TXT_HARMFUL			= Game.getVar(R.string.Potion_Harmfull);
+	private static final String TXT_BENEFICIAL		= Game.getVar(R.string.Potion_Beneficial);
+	private static final String TXT_YES				= Game.getVar(R.string.Potion_Yes);
+	private static final String TXT_NO		   		= Game.getVar(R.string.Potion_No);
+	private static final String TXT_R_U_SURE_DRINK  = Game.getVar(R.string.Potion_SureDrink);
+	private static final String TXT_R_U_SURE_THROW  = Game.getVar(R.string.Potion_SureThrow);
 	
 	private static final float TIME_TO_DRINK = 1f;
 	
@@ -66,7 +66,9 @@ public class Potion extends Item {
 		PotionOfMight.class,
 		PotionOfFrost.class
 	};
-	private static final String[] colors = Game.getVars(R.array.Potion_Colors);
+	
+	private static String[] colors;
+	
 	private static final Integer[] images = {
 		ItemSpriteSheet.POTION_TURQUOISE, 
 		ItemSpriteSheet.POTION_CRIMSON, 
@@ -92,6 +94,7 @@ public class Potion extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void initColors() {
+		colors  = Game.getVars(R.array.Potion_Colors);
 		handler = new ItemStatusHandler<Potion>( (Class<? extends Potion>[])potions, colors, images );
 	}
 	
