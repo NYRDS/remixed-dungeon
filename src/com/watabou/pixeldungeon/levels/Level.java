@@ -154,9 +154,9 @@ public abstract class Level implements Bundlable {
 		mapped = new boolean[LENGTH];
 		Arrays.fill( mapped, false );
 		
-		mobs = new HashSet<Mob>();
-		heaps = new SparseArray<Heap>();
-		blobs = new HashMap<Class<? extends Blob>,Blob>();
+		mobs   = new HashSet<Mob>();
+		heaps  = new SparseArray<Heap>();
+		blobs  = new HashMap<Class<? extends Blob>,Blob>();
 		plants = new SparseArray<Plant>();
 		
 		if (!Dungeon.bossLevel()) {
@@ -222,9 +222,9 @@ public abstract class Level implements Bundlable {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		
-		mobs = new HashSet<Mob>();
-		heaps = new SparseArray<Heap>();
-		blobs = new HashMap<Class<? extends Blob>, Blob>();
+		mobs   = new HashSet<Mob>();
+		heaps  = new SparseArray<Heap>();
+		blobs  = new HashMap<Class<? extends Blob>, Blob>();
 		plants = new SparseArray<Plant>();
 		
 		map		= bundle.getIntArray( MAP );
