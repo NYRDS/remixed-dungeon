@@ -497,4 +497,8 @@ public class Item implements Bundlable {
 	public Item freeze(int cell) {
 		return this;
 	}
+
+	public Item poison(int pos) {
+		return this;
+	}
 }

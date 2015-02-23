@@ -37,7 +37,7 @@ import com.watabou.utils.Random;
 public class FrozenCarpaccio extends Food {
 
 	{
-		image = ItemSpriteSheet.CARPACCIO;
+		image  = ItemSpriteSheet.CARPACCIO;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
 	}
 	

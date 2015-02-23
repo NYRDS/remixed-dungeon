@@ -104,6 +104,10 @@ public class Buff extends Actor {
 			
 			Item item = ((Hero)target).belongings.randomUnequipped();
 			
+			if(item == null){
+				return;
+			}
+			
 			Item srcItem = item.detach(((Hero)target).belongings.backpack);
 			
 			item = action.act(srcItem);
@@ -114,13 +118,14 @@ public class Buff extends Actor {
 				actionText = action.actionText(srcItem);
 				action.carrierFx();
 			}
-			
-			if(!srcItem.equals(item)){
-				actionText = action.actionText(srcItem);
-				if(!item.collect( ((Hero)target).belongings.backpack )){
-					Dungeon.level.drop(item, target.pos).sprite.drop();
+			else{
+				if(!srcItem.equals(item)){
+					actionText = action.actionText(srcItem);
+					if(!item.collect( ((Hero)target).belongings.backpack )){
+						Dungeon.level.drop(item, target.pos).sprite.drop();
+					}
+					action.carrierFx();
 				}
-				action.carrierFx();
 			}
 			
 			if(actionText != null){
