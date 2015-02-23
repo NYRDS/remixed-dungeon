@@ -1889,7 +1889,7 @@
    <string name="Level_TileDescLockedDoor">Эта дверь заперта, тебе нужен подходящий ключ.</string>
    <string name="Level_TileDescLockedExit">Проход закрыт тяжёлой решёткой.</string>
    <string name="Level_TileDescBarricade">Деревянная баррикада ладно сработана, но обветшала от времени. Интересно загорится?</string>
-   <string name="Level_TileDescSign">Ты не можешь рассмотреть текст от сюда.</string>
+   <string name="Level_TileDescSign">Ты не можешь рассмотреть текст отсюда.</string>
    <string name="Level_TileDescTrap">Встав на прижимную плиту, ты активируешь ловушку.</string>
    <string name="Level_TileDescInactiveTrap">Ловушка уже сработала однажды, теперь она безопасна.</string>
    <string name="Level_TileDescStatue">Декоратор, у этого места, не самый лучший.</string>
