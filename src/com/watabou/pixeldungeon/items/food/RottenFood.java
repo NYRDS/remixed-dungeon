@@ -36,7 +36,7 @@ abstract public class RottenFood extends Food{
 			break;
 		case 1:
 			GameScene.add( Blob.seed( cell, 500, ParalyticGas.class ) );
-			CellEmitter.get( cell ).burst( Speck.factory( Speck.TOXIC ), 10 );
+			CellEmitter.get( cell ).burst( Speck.factory( Speck.PARALYSIS ), 10 );
 			break;
 		case 2:
 			GameScene.add( Blob.seed( cell, 500, ToxicGas.class ));

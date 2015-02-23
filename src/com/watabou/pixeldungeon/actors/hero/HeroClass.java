@@ -25,8 +25,13 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
-import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.items.food.MysteryMeat;
+import com.watabou.pixeldungeon.items.food.Pasty;
+import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -89,7 +94,17 @@ public enum HeroClass {
 	
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
-		new Food().identify().collect();
+		new Ration().identify().collect();
+		/*
+		for (int i = 0;i<10;++i){
+			new MysteryMeat().collect();
+			new Ration().collect();
+			new Pasty().collect();
+			new PotionOfFrost().identify().collect();
+			new PotionOfToxicGas().identify().collect();
+			new PotionOfLiquidFlame().identify().collect();
+		}
+		*/
 	}
 	
 	public Badges.Badge masteryBadge() {
