@@ -135,8 +135,8 @@
    <string name="Hero_NewLevel">Твой уровень поднялся до %d! Ты окрепчал, а может даже поумнел. Тебе стало проще попадать по врагам и уклоняться от их атак.</string>
    <string name="Hero_YouNowHave">Теперь у тебя есть %s</string>
    <string name="Hero_SomethingElse">Здесь есть что-то ещё</string>
-   <string name="Hero_LockedChest">Сундук закрыт и у тебя нету подходящего ключа</string>
-   <string name="Hero_LockedDoor">У тебя нету подходящего ключа</string>
+   <string name="Hero_LockedChest">Сундук закрыт и у тебя нет подходящего ключа</string>
+   <string name="Hero_LockedDoor">У тебя нет подходящего ключа</string>
    <string name="Hero_NoticedSmth">Ты что-то заметил</string>
    <string name="Hero_Wait">...</string>
    <string name="Hero_Search">поиск</string>
@@ -228,8 +228,8 @@
        <item >Pixel-Mart. Больше потратишь. Дольше проживёшь.</item>
        <item >Если на тебя нападают несколько монстров попробуй отступить за дверь.</item>
        <item >Если тебя подожгут, пока ты в состоянии левитации, ты не сможешь потушиться зайдя в воду.</item>
-       <item >Нету смысла держать при себе более одного Анха, они все исчезнут при воскрешении.</item>
-       <item >ОПАСТНОСТЬ! Тяжёлая техника может послужить причиной травм, потери конечностей и смерти!</item>
+       <item >Нет смысла держать при себе более одного Анха, они все исчезнут при воскрешении.</item>
+       <item >ОПАСНОСТЬ! Тяжёлая техника может послужить причиной травм, потери конечностей и смерти!</item>
        <item >Pixel-Mart. Обезопась свою жизнь в подземелье.</item>
        <item >При улучшении зачарованного оружия, есть вероятность, что оно лишится волшебных свойств.</item>
        <item >В Источнике Трансмутации можно достать предмет, который иначе никак получить не получится.</item>
@@ -519,7 +519,7 @@
    <string name="Item_Info">описание предмета</string>
    <string name="Item_ACDrop">ВЫЛОЖИТЬ</string>
    <string name="Item_ACThrow">МЕТНУТЬ</string>
-   <string name="Item_PackFull">У тебя нету места для предмета %s</string>
+   <string name="Item_PackFull">У тебя нет места для предмета %s</string>
    <string name="Item_DirThrow">Выбери направление броска</string>
 
    <!--  STRINGS OF Heap CLASS  -->
@@ -678,7 +678,7 @@
    <string name="HuntressArmor_Name">охотничий плащ</string>
    <string name="HuntressArmor_Desc">Подобный плащ позволяет охотнице выпустить веер призрачных клинков. Каждое из этих лезвий устремится к одной из целей находящихся в поле зрения охотницы, нанося урон зависящий от используемого оружия ближнего боя.</string>
    <string name="HuntressArmor_ACSpecial">ПРИЗРАЧНЫЕ КЛИНКИ</string>
-   <string name="HuntressArmor_NoEnemies">Нету видимых целей</string>
+   <string name="HuntressArmor_NoEnemies">Нет видимых целей</string>
    <string name="HuntressArmor_NotHuntress">Этот доспех доступен лишь охотнице!</string>
 
    <!--  STRINGS OF LeatherArmor CLASS  -->
@@ -1807,7 +1807,7 @@
    <string name="RatKing_Name">крысиный король</string>
    <string name="RatKing_Desc">Эта крыса слегка крупнее обычной. На её голове виднеется малюсенькая корона.</string>
    <string name="RatKing_Info1">Я не сплю!</string>
-   <string name="RatKing_Info2">Это ещё что? У меня нету времени на всякую ерунду. Королевство само собой править не будет!</string>
+   <string name="RatKing_Info2">Это ещё что? У меня нет времени на всякую ерунду. Королевство само собой править не будет!</string>
    <!--  STRINGS OF Shopkeeper CLASS  -->
    <string name="Shopkeeper_Name">торговец</string>
    <string name="Shopkeeper_Desc">Этот тучный индивидуум больше подходит для торговли в городском квартале, нежели в подземелье. Хотя судя по ценам, здесь ему тоже не плохо.</string>
