@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.food;
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class OverpricedRation extends Food {
@@ -33,5 +34,10 @@ public class OverpricedRation extends Food {
 	@Override
 	public int price() {
 		return 20 * quantity;
+	}
+	
+	@Override
+	public Item poison(int cell){
+		return morphTo(RottenRation.class);
 	}
 }

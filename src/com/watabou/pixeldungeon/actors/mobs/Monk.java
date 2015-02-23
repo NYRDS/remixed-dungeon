@@ -19,16 +19,16 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
-import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.sprites.MonkSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -47,7 +47,7 @@ public class Monk extends Mob {
 		EXP = 11;
 		maxLvl = 21;
 		
-		loot = new Food();
+		loot = new Ration();
 		lootChance = 0.083f;
 	}
 	

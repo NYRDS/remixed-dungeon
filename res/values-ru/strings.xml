@@ -778,6 +778,10 @@
    <string name="Food_ACEat">СЪЕСТЬ</string>
    <string name="Food_Message">Вкуснечка!</string>
 
+   <!--  STRINGS OF Ration CLASS  -->
+   <string name="Ration_Name">сухпаёк</string>
+   <string name="Ration_Info">Дёшево и сердито: вяленое мясо, немного печенек - и так далее.</string>   
+   
    <!--  STRINGS OF ChargrilledMeat CLASS  -->
    <string name="ChargrilledMeat_Name">мясо приготовленное на углях</string>
    <string name="ChargrilledMeat_Info">Выглядит достойно.</string>
@@ -799,6 +803,22 @@
    <string name="MysteryMeat_Info4">Ты объелся.</string>
    <string name="MysteryMeat_Message">Какой... подозрительный вкус.</string>
 
+   <!--  STRINGS OF RottenFood CLASS  -->
+   <string name="RottenFood_Message">мерзость!</string>
+   
+   <!--  STRINGS OF RottenMeat CLASS  -->
+   <string name="RottenMeat_Name">гнилое мясо</string>
+   <string name="RottenMeat_Info">кусок гнилого мяса</string>
+
+   <!--  STRINGS OF RottenPasty CLASS  -->
+   <string name="RottenPasty_Name">тухлый пирог</string>
+   <string name="RottenPasty_Info">выглядит мерзко</string>
+
+   <!--  STRINGS OF RottenRation CLASS  -->
+   <string name="RottenRation_Name">испорченный рацион</string>
+   <string name="RottenRation_Info">Когда-то давно он был съедобным</string>
+   
+   
    <!--  STRINGS OF OverpricedRation CLASS  -->
    <string name="OverpricedRation_Name">дорогущий сухпаёк</string>
    <string name="OverpricedRation_Info">Он как обычный сухпаёк, только маленький.</string>

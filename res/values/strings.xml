@@ -811,11 +811,12 @@
 
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
-   <string name="Food_Name">ration of food</string>
-   <string name="Food_Info">Nothing fancy here: dried meat, some biscuits - things like that.</string>
    <string name="Food_ACEat">EAT</string>
    <string name="Food_Message">That food tasted delicious!</string>
 
+   <!--  STRINGS OF Ration CLASS  -->
+   <string name="Ration_Name">ration of food</string>
+   <string name="Ration_Info">Nothing fancy here: dried meat, some biscuits - things like that.</string>   
 
    <!--  STRINGS OF ChargrilledMeat CLASS  -->
    <string name="ChargrilledMeat_Name">chargrilled meat</string>
@@ -840,7 +841,21 @@
    <string name="MysteryMeat_Info4">You are stuffed.</string>
    <string name="MysteryMeat_Message">That food tasted... strange.</string>
 
+   <!--  STRINGS OF RottenFood CLASS  -->
+   <string name="RottenFood_Message">disgusting!</string>
+   
+   <!--  STRINGS OF RottenMeat CLASS  -->
+   <string name="RottenMeat_Name">rotten meat</string>
+   <string name="RottenMeat_Info">piece of rotten meat</string>
 
+   <!--  STRINGS OF RottenPasty CLASS  -->
+   <string name="RottenPasty_Name">rotten pasty</string>
+   <string name="RottenPasty_Info">ex-pasty looks so disgusting</string>
+
+   <!--  STRINGS OF RottenRation CLASS  -->
+   <string name="RottenRation_Name">rotten ration</string>
+   <string name="RottenRation_Info">once upon a time it could be eaten</string>
+   
    <!--  STRINGS OF OverpricedRation CLASS  -->
    <string name="OverpricedRation_Name">overpriced food ration</string>
    <string name="OverpricedRation_Info">It looks exactly like a standard ration of food but smaller.</string>

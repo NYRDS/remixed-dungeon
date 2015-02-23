@@ -2,8 +2,8 @@ package com.watabou.pixeldungeon.items.food;
 
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class RottenMeat extends RottenFood {
+public class RottenPasty extends RottenFood {
 	{
-		image   = ItemSpriteSheet.ROTTEN_MEAT;
+		image   = ItemSpriteSheet.ROTTEN_PASTY;
 	}
 }
