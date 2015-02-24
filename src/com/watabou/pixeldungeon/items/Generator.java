@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import java.util.HashMap;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker.Rotberry;
@@ -26,6 +27,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.food.Pasty;
+import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.*;
 import com.watabou.pixeldungeon.items.rings.*;
 import com.watabou.pixeldungeon.items.scrolls.*;
@@ -156,7 +158,7 @@ public class Generator {
 		Category.ARMOR.probs = new float[]{ 1, 1, 1, 1, 1 };
 		
 		Category.FOOD.classes = new Class<?>[]{ 
-			Food.class, 
+			Ration.class, 
 			Pasty.class,
 			MysteryMeat.class };
 		Category.FOOD.probs = new float[]{ 4, 1, 0 };

@@ -773,8 +773,6 @@
    
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
-   <string name="Food_Name">сухпаёк</string>
-   <string name="Food_Info">Дёшево и сердито: вяленое мясо, немного печенек - и так далее.</string>
    <string name="Food_ACEat">СЪЕСТЬ</string>
    <string name="Food_Message">Вкуснечка!</string>
 
