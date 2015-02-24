@@ -249,9 +249,9 @@ public class Heap implements Bundlable {
 					evaporateFX( pos );
 				}
 			}
-			
-			updateHeap();
 		}
+		
+		updateHeap();
 	}
 	
 	public void freeze() {
@@ -266,18 +266,13 @@ public class Heap implements Bundlable {
 			return;
 		}
 		
-		boolean frozen = false;
 		for (Item item : items.toArray( new Item[0] )) {
 			Item frozenItem = item.freeze(pos);
 			
-			if(replaceOrRemoveItem(item, frozenItem)){
-				frozen = true;
-			}
+			replaceOrRemoveItem(item, frozenItem);
 		}
 		
-		if (frozen) {
-			updateHeap();
-		}
+		updateHeap();
 	}
 	
 	public void poison(){
@@ -291,18 +286,13 @@ public class Heap implements Bundlable {
 			return;
 		}
 		
-		boolean toxicated = false;
 		for (Item item : items.toArray( new Item[0] )) {
 			Item toxicatedItem = item.poison(pos);
 
-			if(replaceOrRemoveItem(item, toxicatedItem)){
-				toxicated = true;
-			}
+			replaceOrRemoveItem(item, toxicatedItem);
 		}
 		
-		if(toxicated){
-			updateHeap();
-		}
+		updateHeap();
 	}
 	
 	public Item transmute() {
@@ -395,8 +385,8 @@ public class Heap implements Bundlable {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		pos = bundle.getInt( POS );
-		type = Type.valueOf( bundle.getString( TYPE ) );
+		pos   = bundle.getInt( POS );
+		type  = Type.valueOf( bundle.getString( TYPE ) );
 		items = new LinkedList<Item>( (Collection<? extends Item>) bundle.getCollection( ITEMS ) ); 
 	}
 
