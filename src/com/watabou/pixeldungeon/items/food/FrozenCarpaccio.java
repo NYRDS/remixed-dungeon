@@ -37,7 +37,7 @@ import com.watabou.utils.Random;
 public class FrozenCarpaccio extends Food {
 
 	{
-		image = ItemSpriteSheet.CARPACCIO;
+		image  = ItemSpriteSheet.CARPACCIO;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
 	}
 	
@@ -78,12 +78,6 @@ public class FrozenCarpaccio extends Food {
 	public int price() {
 		return 10 * quantity;
 	};
-	
-	public static Food cook( MysteryMeat ingredient ) {
-		FrozenCarpaccio result = new FrozenCarpaccio();
-		result.quantity = ingredient.quantity();
-		return result;
-	}
 	
 	@Override
 	public Item burn(int cell){

@@ -67,11 +67,7 @@ import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class Dungeon {
-	
-	private static final String NO_TIPS      = Game.getVar(R.string.Dungeon_NoTips);
-	private static final String[] TIPS       = Game.getVars(R.array.Dungeon_Tips);
-	private static final String TXT_DEAD_END = Game.getVar(R.string.Dungeon_DeadEnd);
-	
+
 	public static int potionOfStrength;
 	public static int scrollsOfUpgrade;
 	public static int arcaneStyli;
@@ -236,20 +232,19 @@ public class Dungeon {
 		switchLevel( level, level.entrance );
 	}
 	
-	public static String tip() {
-		
+	public static String tip() {		
 		if (level instanceof DeadEndLevel) {
 			
-			return TXT_DEAD_END;
+			return Game.getVar(R.string.Dungeon_DeadEnd);
 			
 		} else {
-			
+			String[] tips = Game.getVars(R.array.Dungeon_Tips);
 			int index = depth - 1;
 			
-			if (index < TIPS.length) {
-				return TIPS[index];
+			if (index < tips.length) {
+				return tips[index];
 			} else {
-				return NO_TIPS;
+				return Game.getVar(R.string.Dungeon_NoTips);
 			}
 		}
 	}

@@ -23,13 +23,13 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -53,7 +53,7 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -61,7 +61,14 @@ import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.levels.features.HighGrass;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.pixeldungeon.levels.traps.*;
+import com.watabou.pixeldungeon.levels.traps.AlarmTrap;
+import com.watabou.pixeldungeon.levels.traps.FireTrap;
+import com.watabou.pixeldungeon.levels.traps.GrippingTrap;
+import com.watabou.pixeldungeon.levels.traps.LightningTrap;
+import com.watabou.pixeldungeon.levels.traps.ParalyticTrap;
+import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
+import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
+import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -154,9 +161,9 @@ public abstract class Level implements Bundlable {
 		mapped = new boolean[LENGTH];
 		Arrays.fill( mapped, false );
 		
-		mobs = new HashSet<Mob>();
-		heaps = new SparseArray<Heap>();
-		blobs = new HashMap<Class<? extends Blob>,Blob>();
+		mobs   = new HashSet<Mob>();
+		heaps  = new SparseArray<Heap>();
+		blobs  = new HashMap<Class<? extends Blob>,Blob>();
 		plants = new SparseArray<Plant>();
 		
 		if (!Dungeon.bossLevel()) {
@@ -222,9 +229,9 @@ public abstract class Level implements Bundlable {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		
-		mobs = new HashSet<Mob>();
-		heaps = new SparseArray<Heap>();
-		blobs = new HashMap<Class<? extends Blob>, Blob>();
+		mobs   = new HashSet<Mob>();
+		heaps  = new SparseArray<Heap>();
+		blobs  = new HashMap<Class<? extends Blob>, Blob>();
 		plants = new SparseArray<Plant>();
 		
 		map		= bundle.getIntArray( MAP );
@@ -511,7 +518,7 @@ public abstract class Level implements Bundlable {
 	
 	public Heap drop( Item item, int cell ) {
 		
-		if (Dungeon.isChallenged( Challenges.NO_FOOD ) && item instanceof Food) {
+		if (Dungeon.isChallenged( Challenges.NO_FOOD ) && item instanceof Ration) {
 			item = new Gold( item.price() );
 		} else
 		if (Dungeon.isChallenged( Challenges.NO_ARMOR ) && item instanceof Armor) {

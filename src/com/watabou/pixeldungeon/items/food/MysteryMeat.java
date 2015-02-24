@@ -35,8 +35,8 @@ import com.watabou.utils.Random;
 public class MysteryMeat extends Food {
 
 	{
-		image = ItemSpriteSheet.MEAT;
-		energy = Hunger.STARVING - Hunger.HUNGRY;
+		image   = ItemSpriteSheet.MEAT;
+		energy  = Hunger.STARVING - Hunger.HUNGRY;
 		message = Game.getVar(R.string.MysteryMeat_Message);
 	}
 	
@@ -80,5 +80,10 @@ public class MysteryMeat extends Food {
 	@Override
 	public Item freeze(int cell){
 		return morphTo(FrozenCarpaccio.class);
+	}
+	
+	@Override
+	public Item poison(int cell){
+		return morphTo(RottenMeat.class);
 	}
 }

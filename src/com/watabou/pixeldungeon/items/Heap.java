@@ -187,14 +187,26 @@ public class Heap implements Bundlable {
 		}
 	}
 	
-	private void replaceOrRemoveItem(Item item, Item newItem){
-		if(newItem != null && !item.equals(newItem) ){
-			replace(item, newItem);
-		}
-		
+	private boolean replaceOrRemoveItem(Item item, Item newItem){
 		if(newItem == null){
 			items.remove(item);
+			return true;
+		}else{
+			if(!item.equals(newItem) ){
+				replace(item, newItem);
+				return true;
+			}
 		}
+		return false;
+
+	}
+	
+	private void updateHeap(){
+		if (isEmpty()) {
+			destroy();
+		} else if (sprite != null) {
+			sprite.view( image(), glowing() );
+		}		
 	}
 	
 	public void burn() {
@@ -238,17 +250,11 @@ public class Heap implements Bundlable {
 				}
 			}
 			
-			if (isEmpty()) {
-				destroy();
-			} else if (sprite != null) {
-				sprite.view( image(), glowing() );
-			}
-			
+			updateHeap();
 		}
 	}
 	
 	public void freeze() {
-		
 		if (type == Type.MIMIC) {
 			Mimic m = Mimic.spawnAt( pos, items );
 			if (m != null) {
@@ -264,18 +270,38 @@ public class Heap implements Bundlable {
 		for (Item item : items.toArray( new Item[0] )) {
 			Item frozenItem = item.freeze(pos);
 			
-			if(!item.equals(frozenItem)){
+			if(replaceOrRemoveItem(item, frozenItem)){
 				frozen = true;
 			}
-			replaceOrRemoveItem(item, frozenItem);
 		}
 		
 		if (frozen) {
-			if (isEmpty()) {
+			updateHeap();
+		}
+	}
+	
+	public void poison(){
+		if (type == Type.MIMIC) {
+			Mimic m = Mimic.spawnAt( pos, items );
+			if (m != null) {
 				destroy();
-			} else if (sprite != null) {
-				sprite.view( image(), glowing() );
-			}	
+			}
+		}
+		if (type != Type.HEAP) {
+			return;
+		}
+		
+		boolean toxicated = false;
+		for (Item item : items.toArray( new Item[0] )) {
+			Item toxicatedItem = item.poison(pos);
+
+			if(replaceOrRemoveItem(item, toxicatedItem)){
+				toxicated = true;
+			}
+		}
+		
+		if(toxicated){
+			updateHeap();
 		}
 	}
 	
@@ -380,5 +406,4 @@ public class Heap implements Bundlable {
 		bundle.put( TYPE, type.toString() );
 		bundle.put( ITEMS, items );
 	}
-	
 }

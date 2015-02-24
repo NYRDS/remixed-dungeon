@@ -92,6 +92,10 @@ public class PixelDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias( 
 			com.watabou.pixeldungeon.plants.Dreamweed.Seed.class,
 			"com.watabou.pixeldungeon.plants.Blindweed$Seed" );
+		// remix 0.5
+		com.watabou.utils.Bundle.addAlias(
+				com.watabou.pixeldungeon.items.food.Ration.class,
+				"com.watabou.pixeldungeon.items.food.Food" );
 	}
 	
 	@Override
