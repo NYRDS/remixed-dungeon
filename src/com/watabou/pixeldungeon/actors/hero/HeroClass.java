@@ -25,15 +25,22 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
+import com.watabou.pixeldungeon.items.armor.ScaleArmor;
 import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
+import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfMassIdentify;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
+import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.utils.Bundle;
@@ -89,7 +96,18 @@ public enum HeroClass {
 	
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
-		new Food().identify().collect();
+		//new Food().collect();
+		
+		//new PotionOfHealing().collect();
+		//new PotionOfExperience().collect();
+		//new Sword().collect();
+		//new ScaleArmor().collect();
+		
+		for (int i=0; i < 10; i ++) {
+		    //new ScrollOfMassIdentify().identify().collect();
+		    //new PotionOfFrost().collect();
+		    new PotionOfLiquidFlame().identify().collect();
+		}
 	}
 	
 	public Badges.Badge masteryBadge() {

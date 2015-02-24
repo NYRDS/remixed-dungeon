@@ -164,7 +164,7 @@ public class Hero extends Char {
 		name           = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 		
-		HP = HT = 20;
+		HP = HT = 2000;
 		STR = STARTING_STR;
 		awareness = 0.1f;
 		

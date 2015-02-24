@@ -118,6 +118,7 @@ public class Buff extends Actor {
 			if(!srcItem.equals(item)){
 				actionText = action.actionText(srcItem);
 				if(!item.collect( ((Hero)target).belongings.backpack )){
+					
 					Dungeon.level.drop(item, target.pos).sprite.drop();
 				}
 				action.carrierFx();

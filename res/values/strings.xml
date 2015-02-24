@@ -1136,6 +1136,12 @@
    <string name="ScrollOfIdentify_InvTitle">Select an item to identify</string>
    <string name="ScrollOfIdentify_Info1">It is %s</string>
 
+   <!--  STRINGS OF ScrollOfIdentify CLASS  -->
+   <string name="ScrollOfMassIdentify_Name">Scroll of Identify</string>
+   <string name="ScrollOfMassIdentify_Info">Permanently reveals all of the secrets of a single item.</string>
+   <string name="ScrollOfMassIdentify_InvTitle">Select an item to identify</string>
+   <string name="ScrollOfMassIdentify_Info1">All your items had been identified</string>
+   
 
    <!--  STRINGS OF ScrollOfLullaby CLASS  -->
    <string name="ScrollOfLullaby_Name">Scroll of Lullaby</string>

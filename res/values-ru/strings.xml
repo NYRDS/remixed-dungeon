@@ -1074,6 +1074,11 @@
    <string name="ScrollOfIdentify_InvTitle">Выбери предмет для опознания</string>
    <string name="ScrollOfIdentify_Info1">Это %s</string>
 
+      <!--  STRINGS OF ScrollOfIdentify CLASS  -->
+   <string name="ScrollOfMassIdentify_Name">Великий Свиток Опознания</string>
+   <string name="ScrollOfMassIdentify_Info">Опознаёт все предметы в инвентаре.</string>
+   <string name="ScrollOfMassIdentify_InvTitle">Select an item to identify</string>
+   <string name="ScrollOfMassIdentify_Info1">Все твои предметы были распознаны</string>
 
    <!--  STRINGS OF ScrollOfLullaby CLASS  -->
    <string name="ScrollOfLullaby_Name">Свиток Колыбельной</string>
