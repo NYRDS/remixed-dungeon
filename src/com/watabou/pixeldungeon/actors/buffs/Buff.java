@@ -133,6 +133,10 @@ public class Buff extends Actor {
 			}
 			
 		} else if (target instanceof Thief){
+			if (((Thief)target).item == null)
+			{
+				return;
+			}
 			((Thief)target).item = action.act(((Thief)target).item);
 			action.carrierFx();
 			//target.sprite.emitter().burst( ElmoParticle.FACTORY, 6 );

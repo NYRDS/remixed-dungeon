@@ -61,14 +61,13 @@ public class LootIndicator extends Tag {
 		
 		if (Dungeon.hero.ready) {
 			Heap heap = Dungeon.level.heaps.get( Dungeon.hero.pos );
-						
-			if (heap != null) {
-			
-				if(heap.isEmpty()){
-					heap.destroy();
-					heap = null;
-				}
 				
+			if(heap.isEmpty()){
+				heap.destroy();
+				heap = null;
+			}
+	
+			if (heap != null) {
 				Item item = 
 						heap.type == Heap.Type.CHEST || heap.type == Heap.Type.MIMIC ? ItemSlot.CHEST : 
 						heap.type == Heap.Type.LOCKED_CHEST ? ItemSlot.LOCKED_CHEST :
