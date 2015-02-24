@@ -1257,11 +1257,13 @@ public class Hero extends Char {
 				theKey = null;
 			}
 			
-			Heap heap = Dungeon.level.getHeap( ((HeroAction.OpenChest)curAction).dst ); 
-			if (heap.type == Type.SKELETON) {
-				Sample.INSTANCE.play( Assets.SND_BONES );
+			Heap heap = Dungeon.level.getHeap( ((HeroAction.OpenChest)curAction).dst );
+			if(heap != null){
+				if (heap.type == Type.SKELETON) {
+					Sample.INSTANCE.play( Assets.SND_BONES );
+				}
+				heap.open( this );
 			}
-			heap.open( this );
 		}
 		curAction = null;
 
