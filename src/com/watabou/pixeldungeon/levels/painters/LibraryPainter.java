@@ -68,7 +68,7 @@ public class LibraryPainter extends Painter {
 			int pos;
 			do {
 				pos = room.random();
-			} while (level.map[pos] != Terrain.EMPTY || level.heaps.get( pos ) != null);
+			} while (level.map[pos] != Terrain.EMPTY || level.getHeap( pos ) != null);
 			level.drop( prize( level), pos );
 			if(Random.Int(4)==0)
 			{

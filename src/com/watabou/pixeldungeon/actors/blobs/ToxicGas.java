@@ -78,7 +78,7 @@ public class ToxicGas extends Blob implements Hero.Doom {
 			ch.damage( damage, this );
 		}
 		
-		Heap heap = Dungeon.level.heaps.get( pos );
+		Heap heap = Dungeon.level.getHeap( pos );
 		if (heap != null) {
 			heap.poison();
 		}

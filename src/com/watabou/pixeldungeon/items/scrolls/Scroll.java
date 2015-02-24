@@ -52,8 +52,7 @@ public abstract class Scroll extends Item {
 		ScrollOfLullaby.class,
 		ScrollOfWeaponUpgrade.class,
 		ScrollOfPsionicBlast.class,
-		ScrollOfMirrorImage.class,
-		ScrollOfMassIdentify.class
+		ScrollOfMirrorImage.class
 	};
 
 	private static final Class<?>[] inscribableScrolls = {
@@ -67,8 +66,7 @@ public abstract class Scroll extends Item {
 		ScrollOfTerror.class,
 		ScrollOfLullaby.class,
 		ScrollOfPsionicBlast.class,
-		ScrollOfMirrorImage.class,
-		ScrollOfMassIdentify.class
+		ScrollOfMirrorImage.class
 	};
 	
 	private static String[] runes = null;

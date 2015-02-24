@@ -95,7 +95,7 @@ public class WandOfTelekinesis extends Wand {
 				}
 			}
 			
-			if (heap == null && (heap = Dungeon.level.heaps.get( c )) != null) {
+			if (heap == null && (heap = Dungeon.level.getHeap( c )) != null) {
 				switch (heap.type) {
 				case HEAP:
 					transport( heap );

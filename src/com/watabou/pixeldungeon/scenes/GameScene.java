@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import java.io.IOException;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -33,7 +34,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -68,9 +68,9 @@ import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
-import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Random;
 
@@ -155,11 +155,10 @@ public class GameScene extends PixelScene {
 		heaps = new Group();
 		add( heaps );
 		
-		size = Dungeon.level.heaps.size();
-		for (int i=0; i < size; i++) {
-			addHeapSprite( Dungeon.level.heaps.valueAt( i ) );
+		for (Heap heap: Dungeon.level.allHeaps()) {
+			addHeapSprite(heap);
 		}
-		
+			
 		emitters = new Group();
 		effects = new Group();
 		emoicons = new Group();

@@ -69,7 +69,7 @@ public class WellWater extends Blob {
 			volume = off[pos] = cur[pos] = 0;
 			return true;
 			
-		} else if ((heap = Dungeon.level.heaps.get( pos )) != null) {
+		} else if ((heap = Dungeon.level.getHeap( pos )) != null) {
 			
 			Item oldItem = heap.peek();
 			Item newItem = affectItem( oldItem );

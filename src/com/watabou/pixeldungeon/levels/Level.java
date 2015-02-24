@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -104,7 +105,7 @@ public abstract class Level implements Bundlable {
 	// was created in the older version of the game
 	public static int loadedMapSize;
 	
-	public int[] map;
+	public int[]     map;
 	public boolean[] visited;
 	public boolean[] mapped;
 	
@@ -129,9 +130,10 @@ public abstract class Level implements Bundlable {
 	public int exit;
 	
 	public HashSet<Mob> mobs;
-	public SparseArray<Heap> heaps;
 	public HashMap<Class<? extends Blob>,Blob> blobs;
 	public SparseArray<Plant> plants;
+	
+	private SparseArray<Heap> heaps;
 	
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<Item>();
 	
@@ -150,6 +152,36 @@ public abstract class Level implements Bundlable {
 	private static final String PLANTS		= "plants";
 	private static final String MOBS		= "mobs";
 	private static final String BLOBS		= "blobs";
+	
+	public Heap getHeap(int pos){
+		Heap heap = heaps.get(pos);
+		if(heap != null){
+			if(heap.isEmpty()){
+				GLog.w("Empty heap at pos %d",pos);
+				return null;
+			}
+			
+			return heap;
+		}
+		return null;
+	}
+	
+	public void removeHeap(int pos){
+		heaps.remove(pos);
+	}
+	
+	public List<Heap> allHeaps(){
+		return heaps.values();
+	}
+
+	
+	public Heap getHeapByIndex(int index){
+		return heaps.valueAt(index);
+	}
+	
+	public int getHeapsCount(){
+		return heaps.size();
+	}
 	
 	public void create() {
 		

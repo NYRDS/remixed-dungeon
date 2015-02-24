@@ -60,7 +60,7 @@ public class LaboratoryPainter extends Painter {
 				pos = room.random();
 			} while (
 				level.map[pos] != Terrain.EMPTY_SP || 
-				level.heaps.get( pos ) != null);
+				level.getHeap( pos ) != null);
 			level.drop( prize( level ), pos );
 		}
 		

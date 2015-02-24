@@ -68,10 +68,10 @@ public class ShopPainter extends Painter {
 			Point xy = p2xy( room, (pos + per) % per );
 			int cell = xy.x + xy.y * Level.WIDTH;
 			
-			if (level.heaps.get( cell ) != null) {
+			if (level.getHeap( cell ) != null) {
 				do {
 					cell = room.random();
-				} while (level.heaps.get( cell ) != null);
+				} while (level.getHeap( cell ) != null);
 			}
 			
 			level.drop( range[i], cell ).type = Heap.Type.FOR_SALE;
@@ -157,7 +157,7 @@ public class ShopPainter extends Painter {
 		int pos;
 		do {
 			pos = room.random();
-		} while (level.heaps.get( pos ) != null);
+		} while (level.getHeap( pos ) != null);
 		
 		Mob shopkeeper = level instanceof LastShopLevel ? new ImpShopkeeper() : new Shopkeeper();
 		shopkeeper.pos = pos;

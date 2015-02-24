@@ -90,7 +90,7 @@ public class Fire extends Blob {
 			Buff.affect( ch, Burning.class ).reignite( ch );
 		}
 		
-		Heap heap = Dungeon.level.heaps.get( pos );
+		Heap heap = Dungeon.level.getHeap( pos );
 		if (heap != null) {
 			heap.burn();
 		}

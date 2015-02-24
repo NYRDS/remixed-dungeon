@@ -38,7 +38,7 @@ public class ScrollOfChallenge extends Scroll {
 			mob.beckon( curUser.pos );
 		}
 		
-		for (Heap heap : Dungeon.level.heaps.values()) {
+		for (Heap heap : Dungeon.level.allHeaps()) {
 			if (heap.type == Heap.Type.MIMIC) {
 				Mimic m = Mimic.spawnAt( heap.pos, heap.items );
 				if (m != null) {

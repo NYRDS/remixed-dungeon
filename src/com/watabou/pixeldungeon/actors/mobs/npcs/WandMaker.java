@@ -249,7 +249,7 @@ public class WandMaker extends NPC {
 			if (alternative) {
 				
 				ArrayList<Heap> candidates = new ArrayList<Heap>();
-				for (Heap heap : Dungeon.level.heaps.values()) {
+				for (Heap heap : Dungeon.level.allHeaps()) {
 					if (heap.type == Heap.Type.SKELETON && !Dungeon.visible[heap.pos]) {
 						candidates.add( heap );
 					}
@@ -259,7 +259,7 @@ public class WandMaker extends NPC {
 					Random.element( candidates ).drop( new CorpseDust() );
 				} else {
 					int pos = Dungeon.level.randomRespawnCell();
-					while (Dungeon.level.heaps.get( pos ) != null) {
+					while (Dungeon.level.getHeap( pos ) != null) {
 						pos = Dungeon.level.randomRespawnCell();
 					}
 					
@@ -271,7 +271,7 @@ public class WandMaker extends NPC {
 			} else {
 				
 				int shrubPos = Dungeon.level.randomRespawnCell();
-				while (Dungeon.level.heaps.get( shrubPos ) != null) {
+				while (Dungeon.level.getHeap( shrubPos ) != null) {
 					shrubPos = Dungeon.level.randomRespawnCell();
 				}
 				Dungeon.level.plant( new Rotberry.Seed(), shrubPos );

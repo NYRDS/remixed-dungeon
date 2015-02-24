@@ -139,11 +139,8 @@ public class Heap implements Bundlable {
 	public Item pickUp() {
 		
 		Item item = items.removeFirst();
-		if (items.isEmpty()) {
-			destroy();
-		} else if (sprite != null) {
-			sprite.view( image(), glowing() );
-		}
+		
+		updateHeap();
 		
 		return item;
 	}
@@ -370,7 +367,7 @@ public class Heap implements Bundlable {
 	}
 	
 	public void destroy() {
-		Dungeon.level.heaps.remove( this.pos );
+		Dungeon.level.removeHeap( this.pos );
 		if (sprite != null) {
 			sprite.kill();
 		}

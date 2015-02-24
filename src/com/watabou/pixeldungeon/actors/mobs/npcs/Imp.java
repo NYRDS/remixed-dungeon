@@ -190,7 +190,7 @@ public class Imp extends NPC {
 				Imp npc = new Imp();
 				do {
 					npc.pos = level.randomRespawnCell();
-				} while (npc.pos == -1 || level.heaps.get( npc.pos ) != null);
+				} while (npc.pos == -1 || level.getHeap( npc.pos ) != null);
 				level.mobs.add( npc );
 				Actor.occupyCell( npc );
 				

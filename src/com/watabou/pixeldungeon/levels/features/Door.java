@@ -37,7 +37,7 @@ public class Door {
 	}
 	
 	public static void leave( int pos ) {
-		if (Dungeon.level.heaps.get( pos ) == null) {
+		if (Dungeon.level.getHeap( pos ) == null) {
 			Level.set( pos, Terrain.DOOR );
 			GameScene.updateMap( pos );
 			Dungeon.observe();

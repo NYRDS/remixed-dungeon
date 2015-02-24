@@ -164,7 +164,7 @@ public class Hero extends Char {
 		name           = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 		
-		HP = HT = 2000;
+		HP = HT = 20;
 		STR = STARTING_STR;
 		awareness = 0.1f;
 		
@@ -530,7 +530,7 @@ public class Hero extends Char {
 
 			ready();
 			
-			Heap heap = Dungeon.level.heaps.get( dst );
+			Heap heap = Dungeon.level.getHeap( dst );
 			if (heap != null && heap.type == Type.FOR_SALE && heap.size() == 1) {
 				GameScene.show( new WndTradeItem( heap, true ) );
 			}
@@ -569,8 +569,8 @@ public class Hero extends Char {
 		int dst = action.dst;
 		if (pos == dst) {
 			
-			Heap heap = Dungeon.level.heaps.get( pos );
-			if (heap != null) {				
+			Heap heap = Dungeon.level.getHeap( pos );
+			if (heap != null) {
 				Item item = heap.pickUp();
 				if (item.doPickUp( this )) {
 					
@@ -613,7 +613,7 @@ public class Hero extends Char {
 		int dst = action.dst;
 		if (Level.adjacent( pos, dst ) || pos == dst) {
 			
-			Heap heap = Dungeon.level.heaps.get( dst );
+			Heap heap = Dungeon.level.getHeap( dst );
 			if (heap != null && 
 				(heap.type == Type.CHEST || heap.type == Type.TOMB || heap.type == Type.SKELETON ||
 				heap.type == Type.LOCKED_CHEST || heap.type == Type.CRYSTAL_CHEST || heap.type == Type.MIMIC)) {
@@ -977,7 +977,7 @@ public class Hero extends Char {
 				curAction = new HeroAction.Attack( ch );
 			}
 			
-		} else if ((heap = Dungeon.level.heaps.get( cell )) != null) {
+		} else if ((heap = Dungeon.level.getHeap( cell )) != null) {
 
 			switch (heap.type) {
 			case HEAP:
@@ -1257,7 +1257,7 @@ public class Hero extends Char {
 				theKey = null;
 			}
 			
-			Heap heap = Dungeon.level.heaps.get( ((HeroAction.OpenChest)curAction).dst ); 
+			Heap heap = Dungeon.level.getHeap( ((HeroAction.OpenChest)curAction).dst ); 
 			if (heap.type == Type.SKELETON) {
 				Sample.INSTANCE.play( Assets.SND_BONES );
 			}

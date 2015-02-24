@@ -60,7 +60,7 @@ public class LootIndicator extends Tag {
 	public void update() {
 		
 		if (Dungeon.hero.ready) {
-			Heap heap = Dungeon.level.heaps.get( Dungeon.hero.pos );
+			Heap heap = Dungeon.level.getHeap( Dungeon.hero.pos );
 				
 			if(heap.isEmpty()){
 				heap.destroy();

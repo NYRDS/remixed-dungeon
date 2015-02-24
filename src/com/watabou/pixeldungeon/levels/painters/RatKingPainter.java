@@ -50,7 +50,7 @@ public class RatKingPainter extends Painter {
 		}
 		
 		while (true) {
-			Heap chest = level.heaps.get( room.random() );
+			Heap chest = level.getHeap( room.random() );
 			if (chest != null) {
 				chest.type = Heap.Type.MIMIC;
 				break;
