@@ -773,11 +773,13 @@
    
 <!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
-   <string name="Food_Name">сухпаёк</string>
-   <string name="Food_Info">Дёшево и сердито: вяленое мясо, немного печенек - и так далее.</string>
    <string name="Food_ACEat">СЪЕСТЬ</string>
    <string name="Food_Message">Вкуснечка!</string>
 
+   <!--  STRINGS OF Ration CLASS  -->
+   <string name="Ration_Name">сухпаёк</string>
+   <string name="Ration_Info">Дёшево и сердито: вяленое мясо, немного печенек - и так далее.</string>
+   
    <!--  STRINGS OF ChargrilledMeat CLASS  -->
    <string name="ChargrilledMeat_Name">приготовленное на углях мясо</string>
    <string name="ChargrilledMeat_Info">Выглядит достойно.</string>
