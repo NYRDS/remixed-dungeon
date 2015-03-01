@@ -164,21 +164,21 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	} 
 	
 	@Override
-	public void storeInBundle( Bundle bundle ) {	
-		bundle.put( "left", left );
-		bundle.put( "top", top );
-		bundle.put( "right", right );
+	public void storeInBundle( Bundle bundle ) {
+		bundle.put( "left",   left );
+		bundle.put( "top",    top );
+		bundle.put( "right",  right );
 		bundle.put( "bottom", bottom );
-		bundle.put( "type", type.toString() );
+		bundle.put( "type",   type.toString() );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		left = bundle.getInt( "left" );
-		top = bundle.getInt( "top" );
-		right = bundle.getInt( "right" );
-		bottom = bundle.getInt( "bottom" );		
-		type = Type.valueOf( bundle.getString( "type" ) );
+		left   = bundle.getInt( "left" );
+		top    = bundle.getInt( "top" );
+		right  = bundle.getInt( "right" );
+		bottom = bundle.getInt( "bottom" );
+		type   = Type.valueOf( bundle.getString( "type" ) );
 	}
 	
 	public static void shuffleTypes() {
