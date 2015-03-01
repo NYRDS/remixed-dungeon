@@ -182,4 +182,5 @@ public class ItemSpriteSheet {
 	public static final int AMULET	= 87;
 	public static final int VIAL	= 120;
 	public static final int WEIGHT	= 123;
+	public static final int CODEX   = 132;
 }
