@@ -99,6 +99,12 @@ public class Buff extends Actor {
 		detach( target.buff( cl ) );
 	}
 	
+	private void collectOrDropItem(Item item){
+		if(!item.collect( ((Hero)target).belongings.backpack )){
+			Dungeon.level.drop(item, target.pos).sprite.drop();
+		}	
+	}
+	
 	protected void applyToCarriedItems(itemAction action ){
 		if (target instanceof Hero) {
 			
@@ -112,6 +118,11 @@ public class Buff extends Actor {
 			
 			item = action.act(srcItem);
 			
+			if(item == srcItem){ //item unaffected by buff
+				collectOrDropItem(item);
+				return;
+			}
+			
 			String actionText = null;
 			
 			if(item == null){
@@ -121,9 +132,8 @@ public class Buff extends Actor {
 			else{
 				if(!srcItem.equals(item)){
 					actionText = action.actionText(srcItem);
-					if(!item.collect( ((Hero)target).belongings.backpack )){
-						Dungeon.level.drop(item, target.pos).sprite.drop();
-					}
+					collectOrDropItem(item);
+
 					action.carrierFx();
 				}
 			}
