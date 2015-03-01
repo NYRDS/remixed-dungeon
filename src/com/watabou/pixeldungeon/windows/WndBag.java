@@ -61,7 +61,7 @@ public class WndBag extends WndTabbed {
 		ARMOR,
 		WAND,
 		SEED,
-		ARMOR_OR_BLANK_SCROLL
+		INSCRIBABLE
 	}
 	
 	protected static final int COLS	= 4;
@@ -357,7 +357,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.ARMOR && (item instanceof Armor) ||
 						mode == Mode.WAND && (item instanceof Wand) ||
 						mode == Mode.SEED && (item instanceof Seed) ||
-						mode == Mode.ARMOR_OR_BLANK_SCROLL && (item instanceof Armor || item instanceof BlankScroll) || 
+						mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) || 
 						mode == Mode.ALL
 					);
 				}

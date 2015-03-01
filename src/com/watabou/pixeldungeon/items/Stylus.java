@@ -60,7 +60,7 @@ public class Stylus extends Item {
 		if (action == AC_INSCRIBE) {
 
 			curUser = hero;
-			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR_OR_BLANK_SCROLL, TXT_SELECT_ARMOR );
+			GameScene.selectItem( itemSelector, WndBag.Mode.INSCRIBABLE, TXT_SELECT_ARMOR );
 			
 		} else {
 			
