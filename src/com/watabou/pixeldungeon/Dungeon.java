@@ -437,7 +437,7 @@ public class Dungeon {
 			Game.toast("Low memory condition, ");
 		}
 		
-		GLog.i("Saving: %5.2f MBytes avaliable\n", MBytesAvaliable);
+		GLog.i("Saving: %5.2f MBytes avaliable", MBytesAvaliable);
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();

@@ -455,7 +455,7 @@
    <string name="WndRanking_StaChallenges">Испытания</string>
    <string name="WndRanking_StaHealth">Здоровье</string>
    <string name="WndRanking_StaStr">Сила</string>
-   <string name="WndRanking_StaDuration">Продолжительность Игры</string>
+   <string name="WndRanking_StaDuration">Ходов Сделано</string>
    <string name="WndRanking_StaDepth">Максимальная Глубина</string>
    <string name="WndRanking_StaEnemies">Монстров Убито</string>
    <string name="WndRanking_StaGold">Золота Собрано</string>
