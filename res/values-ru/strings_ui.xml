@@ -49,4 +49,17 @@
     
     <!-- STRINGS OF SurfaceScene CLASS -->
     <string name="SurfaceScene_GameOver">Конец</string>
+    
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndSettings_ZoomOut">-</string>
+    <string name="WndSettings_ZoomDef">Стандартный Масштаб</string>
+    <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
+    <string name="WndSettings_Immersive">Режим \"погружение\"</string>
+    <string name="WndSettings_Music">Музыка</string>
+    <string name="WndSettings_Sound">Звуковые эффекты</string>
+    <string name="WndSettings_Brightness">Яркость</string>
+    <string name="WndSettings_SwitchPort">Перейти в портретный режим</string>
+    <string name="WndSettings_SwitchLand">Перейти в альбомный режим</string>
+    <string name="WndSettings_SelectLanguage">Выберите Язык</string>
 </resources>

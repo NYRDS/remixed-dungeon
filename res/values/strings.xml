@@ -311,19 +311,6 @@
     <string name="WndSadGhost_Armor">Ghost\'s armor</string>
     <string name="WndSadGhost_Farewell">Farewell, adventurer!</string>
 
-    <!-- STRINGS OF WndSettings CLASS -->
-    <string name="WndSettings_ZoomIn">+</string>
-    <string name="WndSettings_ZoomOut">-</string>
-    <string name="WndSettings_ZoomDef">Default Zoom</string>
-    <string name="WndSettings_ScaleUp">Scale up UI</string>
-    <string name="WndSettings_Immersive">Immersive mode</string>
-    <string name="WndSettings_Music">Music</string>
-    <string name="WndSettings_Sound">Sound FX</string>
-    <string name="WndSettings_Brightness">Brightness</string>
-    <string name="WndSettings_SwitchPort">Switch to portrait</string>
-    <string name="WndSettings_SwitchLand">Switch to landscape</string>
-    <string name="WndSettings_SelectLanguage">Select Language</string>
-
     <!-- STRINGS OF WndStory CLASS -->
     <string name="WndStory_Sewers">The Dungeon lies right beneath the City, its upper levels actually constitute the City\'s sewer system. Being nominally a part of the City, these levels are not that dangerous. No one will call it a safe place, but at least you won\'t need to deal with evil magic here.</string>
     <string name="WndStory_Prision">Many years ago an underground prison was built here for the most dangerous criminals. At the time it seemed like a very clever idea, because this place indeed was very hard to escape. But soon dark miasma started to permeate from below, driving prisoners and guards insane. In the end the prison was abandoned, though some convicts were left locked up here.</string>
@@ -435,7 +422,7 @@
     <string name="Codex_Blinded">You can\'t read while blinded</string>
 
     <string-array name="Codex_Story">
-        <item>And created Watabou Pixel Dungeoun. And he looked at his handiwork. And he saw that it was good!</item>
+        <item>And created Watabou Pixel Dungeon. And he looked at his handiwork. And he saw that it was good!</item>
     </string-array>
 
     <!-- STRINGS OF Torch CLASS -->
@@ -585,7 +572,7 @@
     <string name="Viscosity_Status">deferred %d</string>
 
     <!-- STRINGS OF DeferedDamage CLASS -->
-    <string name="DeferedDamage_Defered_Txt">Defered damage (%d)</string>
+    <string name="DeferedDamage_Defered_Txt">Deferred damage (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s killed you...</string>
 
     <!-- PACKAGE /items/bags -->

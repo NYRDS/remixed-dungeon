@@ -49,4 +49,17 @@
     <!-- STRINGS OF SurfaceScene CLASS -->
     <string name="SurfaceScene_GameOver">Game Over</string>
     
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndSettings_ZoomOut">-</string>
+    <string name="WndSettings_ZoomDef">Default Zoom</string>
+    <string name="WndSettings_ScaleUp">Scale up UI</string>
+    <string name="WndSettings_Immersive">Immersive mode</string>
+    <string name="WndSettings_Music">Music</string>
+    <string name="WndSettings_Sound">Sound FX</string>
+    <string name="WndSettings_Brightness">Brightness</string>
+    <string name="WndSettings_SwitchPort">Switch to portrait</string>
+    <string name="WndSettings_SwitchLand">Switch to landscape</string>
+    <string name="WndSettings_SelectLanguage">Select Language</string>
+    
 </resources>

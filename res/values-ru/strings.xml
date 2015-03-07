@@ -311,19 +311,6 @@
     <string name="WndSadGhost_Armor">Доспехи призрака</string>
     <string name="WndSadGhost_Farewell">Счастливого пути!</string>
 
-    <!-- STRINGS OF WndSettings CLASS -->
-    <string name="WndSettings_ZoomIn">+</string>
-    <string name="WndSettings_ZoomOut">-</string>
-    <string name="WndSettings_ZoomDef">Стандартный Масштаб</string>
-    <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
-    <string name="WndSettings_Immersive">Режим \"погружение\"</string>
-    <string name="WndSettings_Music">Музыка</string>
-    <string name="WndSettings_Sound">Звуковые эффекты</string>
-    <string name="WndSettings_Brightness">Яркость</string>
-    <string name="WndSettings_SwitchPort">Перейти в портретный режим</string>
-    <string name="WndSettings_SwitchLand">Перейти в альбомный режим</string>
-    <string name="WndSettings_SelectLanguage">Выберите Язык</string>
-
     <!-- STRINGS OF WndStory CLASS -->
     <string name="WndStory_Sewers">Подземелье расположено точно под городом, верхние уровни фактически являются канализацией города. Будучи условно частью города, эти уровни не столь опасны. Конечно безопасными их тоже не назовёшь, но, по крайней мере, здесь не приходится волноваться о зловещей магии.</string>
     <string name="WndStory_Prision">Много лет назад на этом месте возвели подземную тюрьму для содержания опаснейших преступников. Тогда это оказалось весьма недурственной идеей, поскольку побег оттуда был воистину проблематичен. Но вскоре чёрные испарения стали сочиться из глубин, лишая рассудка стражников и заключённых. В конце концов тюрьму забросили, оставив некоторых заключённых взаперти.</string>
@@ -427,7 +414,7 @@
     <string name="Codex_Info">Одна из множества книг что можно найти в любой библиотеке</string>
     <string name="Codex_Blinded">Нельзя читать, будучи ослеплённым</string>
     <string-array name = "Codex_Story">
-        <item>И создал Watabou Pixel Dungeoun. И посмотрел он на дело рук своих. И увидел он что это хорошо!</item>        
+        <item>И создал Watabou Pixel Dungeon. И посмотрел он на дело рук своих. И увидел он что это хорошо!</item>        
     </string-array>
 
     <!-- STRINGS OF TomeOfMastery CLASS -->
