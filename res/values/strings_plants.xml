@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PACKAGE pixeldungeon/plants -->
+    <!-- STRINGS OF Plant CLASS -->
+    <string name="Plant_ACPlant">PLANT</string>
+    <string name="Plant_Info">Throw this seed to the place where you want to grow %1$s.\n\n%2$s</string>
+    <string name="Plant_Seed">seed of %s</string>
+
+    <!-- STRINGS OF Dreamweed CLASS -->
+    <string name="Dreamweed_Name">Dreamweed</string>
+    <string name="Dreamweed_Desc">Upon touching a Dreamweed it secretes a glittering cloud of confusing gas.</string>
+
+    <!-- STRINGS OF Earthroot CLASS -->
+    <string name="Earthroot_Name">Earthroot</string>
+    <string name="Earthroot_Desc">When a creature touches an Earthroot, its roots create a kind of natural armor around it.</string>
+    <string name="Earthroot_Buff">Herbal armor</string>
+
+    <!-- STRINGS OF Fadeleaf CLASS -->
+    <string name="Fadeleaf_Name">Fadeleaf</string>
+    <string name="Fadeleaf_Desc">Touching a Fadeleaf will teleport any creature to a random place on the current level.</string>
+
+    <!-- STRINGS OF Firebloom CLASS -->
+    <string name="Firebloom_Name">Firebloom</string>
+    <string name="Firebloom_Desc">When something touches a Firebloom, it bursts into flames.</string>
+
+    <!-- STRINGS OF Icecap CLASS -->
+    <string name="Icecap_Name">Icecap</string>
+    <string name="Icecap_Desc">Upon touching an Icecap excretes a pollen, which freezes everything in its vicinity.</string>
+
+    <!-- STRINGS OF Sorrowmoss CLASS -->
+    <string name="Sorrowmoss_Name">Sorrowmoss</string>
+    <string name="Sorrowmoss_Desc">A Sorrowmoss is a flower (not a moss) with razor-sharp petals, coated with a deadly venom.</string>
+
+    <!-- STRINGS OF Sungrass CLASS -->
+    <string name="Sungrass_Name">Sungrass</string>
+    <string name="Sungrass_Desc">Sungrass is renowned for its sap\'s healing properties.</string>
+    <string name="Sungrass_Buff">Herbal healing</string>
+    
+</resources>
