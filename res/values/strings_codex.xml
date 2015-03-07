@@ -19,6 +19,18 @@
         <item>Viscosity Glyph - The hero will obtain the damage deferred debuff, which will cause the Hero to receive 1 damage per turn, instead of receiving the whole amount in one shot. </item>
         <item>Displacement Glyph - Whenever the Hero is hit, there is a chance that the Hero will be teleported to a random visible tile. This glyph does not work on boss levels.  </item>
         <item>Entanglement Glyph - The hero may receive herbal armor, but to also be rooted at the same time.</item>
+        
+        <item>Grim weapon - On successful hit, can instantly kill the target (or deal up to 2x damage to a boss).</string>
+        <item>Blazing weapon - On successful hit, deal extra damage to target and can burn it.</string>
+        <item>Eldritch weapon - On successful hit, enemy can flee in Terror.</string>
+        <item>Unstable weapon - On successful hit, can apply the effect of any random enchantment. </string>
+        <item>Vampiric weapon - On successful hit, can heal the Hero for part of damage dealt to the enemy.</string>
+        <item>Lucky weapon - almost completely ignores enemy weapon, and do much more damage.</string>
+        <item>Stunning weapon - On successful hit, can paralyze target.</string>
+        <item>Piercing weapon -  On successful hit, can damage all enemies in a straight line behind the target. </string>
+        <item>Venomous weapon - On successful hit, can poison target.</string>
+        <item>Chilling weapon - On successful hit, can slow target and will prevent it from burning.</string>
+        <item>Wild weapon - On successful hit, can damage all enemies adjacent to the target. </string>
    </string-array>
 
 </resources>
