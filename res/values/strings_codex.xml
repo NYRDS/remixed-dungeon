@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- STRINGS OF Codex CLASS -->
+    <string name="Codex_Name">Codex</string>
+    <string name="Codex_ACRead">READ</string>
+    <string name="Codex_Info">One of the many books that can be found in any library</string>
+    <string name="Codex_Blinded">You can\'t read while blinded</string>
+
+    <string-array name="Codex_Story">
+        <item>And created Watabou Pixel Dungeon. And he looked at his handiwork. And he saw that it was good!</item>
+        
+        <item>Bounce Glyph - Causes enemies to be pushed back after hitting the Hero.</item>
+        <item>Affection Glyph - The enemy will be charmed for few turns, while the Hero will be charmed few turns too but never more than the enemy.</item>
+        <item>Anti-entropy Glyph - The Hero will be illuminated & catch fire, and the enemy will be frozen. </item>
+        <item>Multiplicity Glyph - This effect causes the Hero to spawn a mirror image but be damaged. This can kill the Hero.</item>
+        <item>Potential Glyph - This unleashes a lightning-style blast that will damage the enemy which attacked the player and will damage the Hero on average half the damage done to the enemy.</item>
+        <item>Metabolism Glyph - The Hero will be partially healed from, before the enemy damage is applied. Only applies if the Hero is not starving. The Hero hunger will also grow faster. </item>
+        <item>Stench Glyph - The Hero will release a cloud of toxic gas when hit. </item>
+        <item>Viscosity Glyph - The hero will obtain the damage deferred debuff, which will cause the Hero to receive 1 damage per turn, instead of receiving the whole amount in one shot. </item>
+        <item>Displacement Glyph - Whenever the Hero is hit, there is a chance that the Hero will be teleported to a random visible tile. This glyph does not work on boss levels.  </item>
+        <item>Entanglement Glyph - The hero may receive herbal armor, but to also be rooted at the same time.</item>
+   </string-array>
+
+</resources>

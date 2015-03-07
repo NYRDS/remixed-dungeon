@@ -408,15 +408,6 @@
     <string name="Stylus_SelectArmor">Выбери предмет для начертания</string>
     <string name="Stylus_Inscribed">ты начертал %1$s на предмете %2$s</string>
 
-    <!-- STRINGS OF Codex CLASS -->
-    <string name="Codex_Name">Кодекс</string>
-    <string name="Codex_ACRead">ЧИТАТЬ</string>
-    <string name="Codex_Info">Одна из множества книг что можно найти в любой библиотеке</string>
-    <string name="Codex_Blinded">Нельзя читать, будучи ослеплённым</string>
-    <string-array name = "Codex_Story">
-        <item>И создал Watabou Pixel Dungeon. И посмотрел он на дело рук своих. И увидел он что это хорошо!</item>        
-    </string-array>
-
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_Name">Том Мастерства</string>
     <string name="TomeOfMastery_ACRead">ЧИТАТЬ</string>
