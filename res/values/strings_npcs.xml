@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PACKAGE /mobs/npcs -->
+    <!-- STRINGS OF Blacksmith CLASS -->
+    <string name="Blacksmith_Name">troll blacksmith</string>
+    <string name="Blacksmith_Desc">This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.</string>
+    <string name="Blacksmith_Gold1">Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don\'t have money to pay, but I can do some smithin\' for you. Consider yourself lucky, I\'m the only blacksmith around.</string>
+    <string name="Blacksmith_Blood1">Hey human! Wanna be useful, eh? Take dis pickaxe and _kill a bat_ wit\' it, I need its blood on the head. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don\'t have money to pay, but I can do some smithin\' for you. Consider yourself lucky, I\'m the only blacksmith around.</string>
+    <string name="Blacksmith_Txt2">Are you kiddin\' me? Where is my pickaxe?!</string>
+    <string name="Blacksmith_Txt3">Dark gold ore. 15 pieces. Seriously, is it dat hard?</string>
+    <string name="Blacksmith_Txt4">I said I need bat blood on the pickaxe. Chop chop!</string>
+    <string name="Blacksmith_Completed">Oh, you have returned... Better late dan never.</string>
+    <string name="Blacksmith_GetLost">I\'m busy. Get lost!</string>
+    <string name="Blacksmith_LooksBetter">your %s certainly looks better now</string>
+    <string name="Blacksmith_Verify1">Select 2 different items, not the same item twice!</string>
+    <string name="Blacksmith_Verify2">Select 2 items of the same type!</string>
+    <string name="Blacksmith_Verify3">I need to know what I\'m working with, identify them first!</string>
+    <string name="Blacksmith_Verify4">I don\'t work with cursed items!</string>
+    <string name="Blacksmith_Verify5">It\'s a junk, the quality is too poor!</string>
+    <string name="Blacksmith_Verify6">I can\'t reforge these items!</string>
+    <!-- STRINGS OF Ghost CLASS -->
+    <string name="Ghost_Name">sad ghost</string>
+    <string name="Ghost_Desc">The ghost is barely visible. It looks like a shapeless spot of faint light with a sorrowful face.</string>
+    <string name="Ghost_Rose1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my _dried rose_... It\'s very important to me... Some monster stole it from my body...</string>
+    <string name="Ghost_Rose2">Please... Help me... Find the rose...</string>
+    <string name="Ghost_Rat1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my revenge... Slay the _fetid rat_, that has taken my life...</string>
+    <string name="Ghost_Rat2">Please... Help me... Slay the abomination...</string>
+    <string name="Ghost_Defense">evaded</string>
+    <string name="FetidRat_Name">fetid rat</string>
+    <string name="FetidRat_Name_Objective">fetid rat</string>
+    <string name="FetidRat_Gender">feminine</string>
+    <string name="FetidRat_Desc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
+
+    <!-- STRINGS OF Hedgehog CLASS -->
+    <string name="Hedgehog_Name">hedgehog</string>
+    <string name="Hedgehog_Desc">That hedgehog seems nervous.</string>
+    <string name="Hedgehog_Info1">Do You looking for Bear too?</string>
+    <string name="Hedgehog_Info2">How\'s Horse in the mist?</string>
+    <string name="Hedgehog_Info3">Do You like tea with raspberry jam?</string>
+    <string name="Hedgehog_Info4">Take this pie</string>
+    <string name="Hedgehog_ImLate">I\'m late, I\'m terribly late...</string>
+
+    <!-- STRINGS OF Imp CLASS -->
+    <string name="Imp_Name">ambitious imp</string>
+    <string name="Imp_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.</string>
+    <string name="Imp_Defense">evaded</string>
+    <string name="Imp_Golems1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _golems_ who need to be killed. You see, I\'m going to start a little business here, but these stupid golems are bad for business! It\'s very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let\'s say _6 of them_ and a reward is yours.</string>
+    <string name="Imp_Golems2">How is your golem safari going?</string>
+    <string name="Imp_Monks1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For a bounty, of course ;)\nIn my case this is _monks_ who need to be killed. You see, I\'m going to start a little business here, but these lunatics don\'t buy anything themselves and will scare away other customers. So please, kill... let\'s say _8 of them_ and a reward is yours.</string>
+    <string name="Imp_Monks2">Oh, you are still alive! I knew that your kung-fu is stronger ;) Just don\'t forget to grab these monks\' tokens.</string>
+    <string name="Imp_Cya">See you, %s!</string>
+    <string name="Imp_Hey">Psst, %s!</string>
+    <!-- STRINGS OF ImpShopkeeper CLASS -->
+    <string name="ImpShopkeeper_Name">ambitious imp</string>
+    <string name="ImpShopkeeper_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent. But they are quite smart and sociable, and many of imps prefer to live and do business among non-demons.</string>
+    <string name="ImpShopkeeper_Greetings">Hello, friend!</string>
+    <!-- STRINGS OF MirrorImage CLASS -->
+    <string name="MirrorImage_Name">mirror image</string>
+    <string name="MirrorImage_Name_Objective">mirror image</string>
+    <string name="MirrorImage_Gender">masculine</string>
+    <string name="MirrorImage_Desc">This illusion bears a close resemblance to you, but it\'s paler and twitches a little.</string>
+
+    <!-- STRINGS OF RatKing CLASS -->
+    <string name="RatKing_Name">rat king</string>
+    <string name="RatKing_Desc">This rat is a little bigger than a regular marsupial rat and it\'s wearing a tiny crown on its head.</string>
+    <string name="RatKing_Info1">I\'m not sleeping!</string>
+    <string name="RatKing_Info2">What is it? I have no time for this nonsense. My kingdom won\'t rule itself!</string>
+
+    <!-- STRINGS OF Shopkeeper CLASS -->
+    <string name="Shopkeeper_Name">shopkeeper</string>
+    <string name="Shopkeeper_Desc">This stout guy looks more appropriate for a trade district in some large city than for a dungeon. His prices explain why he prefers to do business here.</string>
+    <string name="Shopkeeper_Sell">Select an item to sell</string>
+    <!-- STRINGS OF WandMaker CLASS -->
+    <string name="WandMaker_Name">old wandmaker</string>
+    <string name="WandMaker_Desc">This old but hale gentleman wears a slightly confused expression. He is protected by a magic shield.</string>
+    <string name="WandMaker_Defense">absorbed</string>
+    <string name="WandMaker_Berry1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _Rotberry seed_. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
+    <string name="WandMaker_Berry2">Any luck with a Rotberry seed, %s? No? Don\'t worry, I\'m not in a hurry.</string>
+    <string name="WandMaker_Dust1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - _corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
+    <string name="WandMaker_Dust2">Any luck with corpse dust, %s? Bone piles are the most obvious places to look.</string>
+    <string name="WandMaker_RotberryName">Rotberry</string>
+    <string name="WandMaker_RotberryDesc">Berries of this shrub taste like sweet, sweet death.</string>
+    <string name="WandMaker_RotberryInfo">The seed emits a roar that echoes throughout the dungeon!</string>
+
+</resources>
