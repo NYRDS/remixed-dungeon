@@ -164,7 +164,7 @@ public abstract class Char extends Actor {
 			
 			description    = getClassParam("Desc", description, true);
 			
-			setCharGender(getClassParam("Gender","male",true));
+			setCharGender(getClassParam("Gender","masculine",true));
 			
 			defenceVerb = getClassParam("Defense",null,false);
 	}
