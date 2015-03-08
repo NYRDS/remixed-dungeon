@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- STRINGS OF TitleScene CLASS -->
+    <string name="TitleScene_Play">Play</string>
+    <string name="TitleScene_Highscores">Highscores</string>
+    <string name="TitleScene_Badges">Badges</string>
+    <string name="TitleScene_About">About</string>
+    <string name="TitleScene_InternalStorageLow">Not enough space\n in internal storage\n Your progress can be lost!</string>
+
+    <!-- STRINGS OF AboutScene CLASS -->
+    <string name="AboutScene_Txt">Code &amp; graphics: Watabou\nMusic: Cube_Code\n\nThis game is inspired by Brian Walker\'s Brogue. Try it on Windows, Mac OS or Linux - it\'s awesome! ;)\n\nPlease visit official website for additional info:</string>
+    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
+    <string name="AboutScene_Translate">Languages Create: rodriformiga</string>
+    <!-- Write here the translation credits. -->
+    <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string>
+    <!-- Write here the e-mail to contat for translator -->
+    <string name="AboutScene_TranslateSnd">Send E-Mail</string>
+    <!-- Write here the "Send E-mail" title of the window -->
+
+        <!-- STRINGS OF RankingsScene CLASS -->
+    <string name="RankingsScene_Title">Top Rankings</string>
+    <string name="RankingsScene_Total">Total games played: %d</string>
+    <string name="RankingsScene_NoGames">No games have been played yet.</string>
+    <string name="RankingsScene_NoInfo">No additional information</string>
+
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_Load">Load Game</string>
+    <string name="StartScene_New">New Game</string>
+    <string name="StartScene_Erase">Erase current game</string>
+    <string name="StartScene_Depth">Depth: %1$d\nLevel: %2$d</string>
+    <string name="StartScene_Really">Do you really want to start new game?</string>
+    <string name="StartScene_Warning">Your current game progress will be erased.</string>
+    <string name="StartScene_Yes">Yes, start new game</string>
+    <string name="StartScene_No">No, return to main menu</string>
+    <string name="StartScene_Unlock">To unlock this character class, slay the 3rd boss with any other class</string>
+    <string name="StartScene_WinGame">To unlock \"Challenges\", win the game with any character class.</string>
+
+        <!-- STRINGS OF InterLevelScene CLASS -->
+    <string name="InterLevelScene_Descending">Descending...</string>
+    <string name="InterLevelScene_Ascending">Ascending...</string>
+    <string name="InterLevelScene_Loading">Loading...</string>
+    <string name="InterLevelScene_Resurrecting">Resurrecting...</string>
+    <string name="InterLevelScene_Returning">Returning...</string>
+    <string name="InterLevelScene_Falling">Falling...</string>
+    <string name="InterLevelScene_FileNotFound">File not found. For some reason...</string>
+    <string name="InterLevelScene_ErrorGeneric">Something went wrong...</string>
+
+    <!-- STRINGS OF SurfaceScene CLASS -->
+    <string name="SurfaceScene_GameOver">Game Over</string>
+    
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndSettings_ZoomOut">-</string>
+    <string name="WndSettings_ZoomDef">Default Zoom</string>
+    <string name="WndSettings_ScaleUp">Scale up UI</string>
+    <string name="WndSettings_Immersive">Immersive mode</string>
+    <string name="WndSettings_Music">Music</string>
+    <string name="WndSettings_Sound">Sound FX</string>
+    <string name="WndSettings_Brightness">Brightness</string>
+    <string name="WndSettings_SwitchPort">Switch to portrait</string>
+    <string name="WndSettings_SwitchLand">Switch to landscape</string>
+    <string name="WndSettings_SelectLanguage">Select Language</string>
+    
+</resources>
