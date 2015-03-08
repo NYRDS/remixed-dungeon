@@ -868,6 +868,8 @@ public class Hero extends Char {
 		restoreHealth = false;
 		super.damage( dmg, src );
 		
+		interrupt();
+		
 		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
 			Buff.affect( this, Fury.class );
 		}
