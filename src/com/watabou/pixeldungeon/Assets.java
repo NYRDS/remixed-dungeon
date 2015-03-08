@@ -37,12 +37,13 @@ public class Assets {
 	public static final String XP_BAR	= "exp_bar.png";
 	public static final String TOOLBAR	= "toolbar.png";
 	
-	public static final String WARRIOR	= "warrior.png";
-	public static final String MAGE		= "mage.png";
-	public static final String ROGUE	= "rogue.png";
-	public static final String HUNTRESS	= "ranger.png";
-	public static final String AVATARS	= "avatars.png";
-	public static final String PET		= "pet.png";
+	public static final String WARRIOR	       = "warrior.png";
+	//public static final String WARRIOR_BERSERK = "warrior_berserk.png";
+	public static final String MAGE	           = "mage.png";
+	public static final String ROGUE	       = "rogue.png";
+	public static final String HUNTRESS	       = "ranger.png";
+	public static final String AVATARS	       = "avatars.png";
+	public static final String PET		       = "pet.png";
 	
 	public static final String SURFACE	= "surface.png";
 	
@@ -88,6 +89,7 @@ public class Assets {
 	public static final String RATKING	= "ratking.png";
 	public static final String HEDGEHOG	= "hedgehog.png";
 	public static final String MIMIC	= "mimic.png";
+	public static final String SHADOW   = "shadow.png";
 	
 	public static final String ITEMS	= "items.png";
 	public static final String PLANTS	= "plants.png";
