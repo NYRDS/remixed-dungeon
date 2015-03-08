@@ -132,6 +132,11 @@
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name_Objective">senior monk</string>
     <string name="Senior_Desc">These monks are fanatics, who devoted themselves to protecting their city\'s secrets from all aliens. They don\'t use any armor or weapons, relying solely on the art of hand-to-hand combat.</string>
+    <!-- STRINGS OF Shadow CLASS -->
+    <string name="Shadow_Name">shadow</string>
+    <string name="Shadow_Gender">feminine</string>
+    <string name="Shadow_Name_Objective">shadow</string>
+    <string name="Shadow_Desc">Shadows silently wander through the ruins of the ancient prison. Only occasionally showing themselves to adventurers, usually in their latest adventure.</string>
     <!-- STRINGS OF Shaman CLASS -->
     <string name="Shaman_Name">gnoll shaman</string>
     <string name="Shaman_Gender">masculine</string>

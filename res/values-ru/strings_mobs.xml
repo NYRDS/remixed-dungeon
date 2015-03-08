@@ -131,6 +131,11 @@
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name_Objective">монаха</string>
     <string name="Senior_Desc">Монахи - это фанатики, посвятившие себя защите секретов их народа от чужаков. Они не полагаются на броню и оружие, доверившись искусству рукопашного боя.</string>
+    <!-- STRINGS OF Shadow CLASS -->
+    <string name="Shadow_Name">тень</string>
+    <string name="Shadow_Gender">feminine</string>
+    <string name="Shadow_Name_Objective">тень</string>
+    <string name="Shadow_Desc">Тени тихо блуждают через руины древней тюрьмы. Только иногда показывая себя путникам, обычно в их последнем приключении.</string>
     <!-- STRINGS OF Shaman CLASS -->
     <string name="Shaman_Name">гнолл-шаман</string>
     <string name="Shaman_Gender">masculine</string>
