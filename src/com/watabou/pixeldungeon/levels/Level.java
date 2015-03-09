@@ -406,15 +406,26 @@ public abstract class Level implements Bundlable {
 		return 0;
 	}
 
+	private Mob createMob(){
+		Mob mob = Bestiary.mutable(Dungeon.depth);
+		mob.state = mob.WANDERING;
+		if(!mob.isWallWalker()){
+			mob.pos = randomRespawnCell();
+		} else {
+			mob.pos = randomSolidCell();
+		}
+		return mob;
+		
+	}
+	
 	public Actor respawner() {
 		return new Actor() {
 			@Override
 			protected boolean act() {
 				if (mobs.size() < nMobs()) {
 
-					Mob mob = Bestiary.mutable(Dungeon.depth);
-					mob.state = mob.WANDERING;
-					mob.pos = randomRespawnCell();
+					Mob mob = createMob();
+					
 					if (Dungeon.hero.isAlive() && mob.pos != -1) {
 						GameScene.add(mob);
 						if (Statistics.amuletObtained) {
@@ -429,6 +440,15 @@ public abstract class Level implements Bundlable {
 		};
 	}
 
+	public int randomSolidCell() {
+		int cell;
+		do {
+			cell = Random.Int(LENGTH);
+		} while (!solid[cell] || Dungeon.visible[cell]
+				|| Actor.findChar(cell) != null);
+		return cell;
+	}
+	
 	public int randomRespawnCell() {
 		int cell;
 		do {

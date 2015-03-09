@@ -43,99 +43,99 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public abstract class Mob extends Char {
-	
+
 	{
 		readCharData();
 	}
-	
-	private static final String	TXT_DIED	= Game.getVar(R.string.Mob_Died);
-	
-	protected static final String TXT_NOTICE1	= "?!";
-	protected static final String TXT_RAGE		= "#$%^";
-	protected static final String TXT_EXP		= "%+dEXP";
-	
-	public AiState SLEEPEING	= new Sleeping();
-	public AiState HUNTING		= new Hunting();
-	public AiState WANDERING	= new Wandering();
-	public AiState FLEEING		= new Fleeing();
-	public AiState PASSIVE		= new Passive();
-	
+
+	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
+
+	protected static final String TXT_NOTICE1 = "?!";
+	protected static final String TXT_RAGE = "#$%^";
+	protected static final String TXT_EXP = "%+dEXP";
+
+	public AiState SLEEPEING = new Sleeping();
+	public AiState HUNTING = new Hunting();
+	public AiState WANDERING = new Wandering();
+	public AiState FLEEING = new Fleeing();
+	public AiState PASSIVE = new Passive();
+
 	public AiState state = SLEEPEING;
-	
+
 	public Class<? extends CharSprite> spriteClass;
-	
+
 	protected int target = -1;
-	
+
 	protected int defenseSkill = 0;
-	
+
 	protected int EXP = 1;
 	protected int maxLvl = 30;
-	
+
 	protected Char enemy;
 	protected boolean enemySeen;
 	protected boolean alerted = false;
 
 	protected static final float TIME_TO_WAKE_UP = 1f;
-	
+
 	public boolean hostile = true;
-	
+
 	// Unreachable target
 	public static final Mob DUMMY = new Mob() {
 		{
 			pos = -1;
 		}
 	};
-	
-	private static final String STATE	    = "state";
-	private static final String TARGET	    = "target";
-	private static final String ENEMY_SEEN  = "enemy_seen";
-	
+
+	private static final String STATE = "state";
+	private static final String TARGET = "target";
+	private static final String ENEMY_SEEN = "enemy_seen";
+
 	@Override
-	public void storeInBundle( Bundle bundle ) {
-		
-		super.storeInBundle( bundle );
-		
+	public void storeInBundle(Bundle bundle) {
+
+		super.storeInBundle(bundle);
+
 		if (state == SLEEPEING) {
-			bundle.put( STATE, Sleeping.TAG );
+			bundle.put(STATE, Sleeping.TAG);
 		} else if (state == WANDERING) {
-			bundle.put( STATE, Wandering.TAG );
+			bundle.put(STATE, Wandering.TAG);
 		} else if (state == HUNTING) {
-			bundle.put( STATE, Hunting.TAG );
+			bundle.put(STATE, Hunting.TAG);
 		} else if (state == FLEEING) {
-			bundle.put( STATE, Fleeing.TAG );
+			bundle.put(STATE, Fleeing.TAG);
 		} else if (state == PASSIVE) {
-			bundle.put( STATE, Passive.TAG );
+			bundle.put(STATE, Passive.TAG);
 		}
-		bundle.put( TARGET, target );
-		
-		bundle.put( ENEMY_SEEN, enemySeen);
+		bundle.put(TARGET, target);
+
+		bundle.put(ENEMY_SEEN, enemySeen);
 	}
-	
+
 	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		
-		super.restoreFromBundle( bundle );
-		
-		String state = bundle.getString( STATE );
-		if (state.equals( Sleeping.TAG )) {
+	public void restoreFromBundle(Bundle bundle) {
+
+		super.restoreFromBundle(bundle);
+
+		String state = bundle.getString(STATE);
+		if (state.equals(Sleeping.TAG)) {
 			this.state = SLEEPEING;
-		} else if (state.equals( Wandering.TAG )) {
+		} else if (state.equals(Wandering.TAG)) {
 			this.state = WANDERING;
-		} else if (state.equals( Hunting.TAG )) {
+		} else if (state.equals(Hunting.TAG)) {
 			this.state = HUNTING;
-		} else if (state.equals( Fleeing.TAG )) {
+		} else if (state.equals(Fleeing.TAG)) {
 			this.state = FLEEING;
-		} else if (state.equals( Passive.TAG )) {
+		} else if (state.equals(Passive.TAG)) {
 			this.state = PASSIVE;
 		}
 
-		target = bundle.getInt( TARGET );
-		
-		if(bundle.contains(ENEMY_SEEN)){
+		target = bundle.getInt(TARGET);
+
+		if (bundle.contains(ENEMY_SEEN)) {
 			enemySeen = bundle.getBoolean(ENEMY_SEEN);
 		}
 	}
-	
+
 	public CharSprite sprite() {
 		CharSprite sprite = null;
 		try {
@@ -144,206 +144,220 @@ public abstract class Mob extends Char {
 		}
 		return sprite;
 	}
-	
+
 	@Override
 	protected boolean act() {
-		
+
 		super.act();
-		
+
 		boolean justAlerted = alerted;
 		alerted = false;
-		
+
 		sprite.hideAlert();
-		
+
 		if (paralysed) {
 			enemySeen = false;
-			spend( TICK );
+			spend(TICK);
 			return true;
 		}
-		
+
 		enemy = chooseEnemy();
-		
-		boolean enemyInFOV = enemy.isAlive() && Level.fieldOfView[enemy.pos] && enemy.invisible <= 0;
-		
-		return state.act( enemyInFOV, justAlerted );
+
+		boolean enemyInFOV = enemy.isAlive() && Level.fieldOfView[enemy.pos]
+				&& enemy.invisible <= 0;
+
+		return state.act(enemyInFOV, justAlerted);
 	}
-	
+
 	protected Char chooseEnemy() {
-		
-		if (buff( Amok.class ) != null) {
+
+		if (buff(Amok.class) != null) {
 			if (enemy == Dungeon.hero || enemy == null) {
-				
+
 				HashSet<Mob> enemies = new HashSet<Mob>();
-				for (Mob mob:Dungeon.level.mobs) {
+				for (Mob mob : Dungeon.level.mobs) {
 					if (mob != this && Level.fieldOfView[mob.pos]) {
-						enemies.add( mob );
+						enemies.add(mob);
 					}
 				}
 				if (enemies.size() > 0) {
-					return Random.element( enemies );
+					return Random.element(enemies);
 				}
-				
+
 			} else {
 				return enemy;
 			}
 		}
-		
-		Terror terror = (Terror)buff( Terror.class );
+
+		Terror terror = (Terror) buff(Terror.class);
 		if (terror != null) {
 			return terror.source;
 		}
-		
+
 		return Dungeon.hero;
 	}
-	
-	protected boolean moveSprite( int from, int to ) {
 
-		if (sprite.isVisible() && (Dungeon.visible[from] || Dungeon.visible[to])) {
-			sprite.move( from, to );
+	protected boolean moveSprite(int from, int to) {
+
+		if (sprite.isVisible()
+				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
+			sprite.move(from, to);
 			return true;
 		} else {
-			sprite.place( to );
+			sprite.place(to);
 			return true;
 		}
 	}
-	
+
 	@Override
-	public void add( Buff buff ) {
-		super.add( buff );
+	public void add(Buff buff) {
+		super.add(buff);
 		if (buff instanceof Amok) {
 			if (sprite != null) {
-				sprite.showStatus( CharSprite.NEGATIVE, TXT_RAGE );
+				sprite.showStatus(CharSprite.NEGATIVE, TXT_RAGE);
 			}
 			state = HUNTING;
 		} else if (buff instanceof Terror) {
 			state = FLEEING;
 		} else if (buff instanceof Sleep) {
 			if (sprite != null) {
-				new Flare( 4, 32 ).color( 0x44ffff, true ).show( sprite, 2f ) ;
+				new Flare(4, 32).color(0x44ffff, true).show(sprite, 2f);
 			}
 			state = SLEEPEING;
-			postpone( Sleep.SWS );
+			postpone(Sleep.SWS);
 		}
 	}
-	
+
 	@Override
-	public void remove( Buff buff ) {
-		super.remove( buff );
+	public void remove(Buff buff) {
+		super.remove(buff);
 		if (buff instanceof Terror) {
-			sprite.showStatus( CharSprite.NEGATIVE, TXT_RAGE );
+			sprite.showStatus(CharSprite.NEGATIVE, TXT_RAGE);
 			state = HUNTING;
 		}
 	}
-	
-	protected boolean canAttack( Char enemy ) {
-		return Level.adjacent( pos, enemy.pos ) && !pacified;
+
+	protected boolean canAttack(Char enemy) {
+		return Level.adjacent(pos, enemy.pos) && !pacified;
 	}
-	
-	protected boolean getCloser( int target ) {
-		
+
+	protected boolean getCloser(int target) {
+
 		if (rooted) {
 			return false;
 		}
-		
-		int step = Dungeon.findPath( this, pos, target, 
-			Level.passable, 
-			Level.fieldOfView );
+		int step = -1;
+
+		if (!isWallWalker()) {
+			step = Dungeon.findPath(this, pos, target, Level.passable,
+					Level.fieldOfView);
+		} else {
+			step = Dungeon.findPath(this, pos, target, Level.solid,
+					Level.fieldOfView);
+		}
+
 		if (step != -1) {
-			move( step );
+			move(step);
 			return true;
 		} else {
 			return false;
 		}
 	}
-	
-	protected boolean getFurther( int target ) {
-		int step = Dungeon.flee( this, pos, target, 
-			Level.passable, 
-			Level.fieldOfView );
+
+	protected boolean getFurther(int target) {
+		int step = -1;
+
+		if (!isWallWalker()) {
+			step = Dungeon.flee(this, pos, target, Level.passable,
+					Level.fieldOfView);
+		} else {
+			step = Dungeon.flee(this, pos, target, Level.solid,
+					Level.fieldOfView);
+		}
 		if (step != -1) {
-			move( step );
+			move(step);
 			return true;
 		} else {
 			return false;
 		}
 	}
-	
+
 	@Override
-	public void move( int step ) {
-		super.move( step );
-		
+	public void move(int step) {
+		super.move(step);
+
 		if (!flying) {
-			Dungeon.level.mobPress( this );
+			Dungeon.level.mobPress(this);
 		}
 	}
-	
+
 	protected float attackDelay() {
 		return 1f;
 	}
-	
-	protected boolean doAttack( Char enemy ) {
-		
+
+	protected boolean doAttack(Char enemy) {
+
 		boolean visible = Dungeon.visible[pos];
-		
+
 		if (visible) {
-			sprite.attack( enemy.pos );
+			sprite.attack(enemy.pos);
 		} else {
-			attack( enemy );
+			attack(enemy);
 		}
-				
-		spend( attackDelay() );
-		
+
+		spend(attackDelay());
+
 		return !visible;
 	}
-	
+
 	@Override
 	public void onAttackComplete() {
-		attack( enemy );
+		attack(enemy);
 		super.onAttackComplete();
 	}
-	
+
 	@Override
-	public int defenseSkill( Char enemy ) {
+	public int defenseSkill(Char enemy) {
 		return enemySeen && !paralysed ? defenseSkill : 0;
 	}
-	
+
 	@Override
-	public int defenseProc( Char enemy, int damage ) {
-		if (!enemySeen && enemy == Dungeon.hero && ((Hero)enemy).subClass == HeroSubClass.ASSASSIN) {
-			damage += Random.Int( 1, damage );
-			Wound.hit( this );
+	public int defenseProc(Char enemy, int damage) {
+		if (!enemySeen && enemy == Dungeon.hero
+				&& ((Hero) enemy).subClass == HeroSubClass.ASSASSIN) {
+			damage += Random.Int(1, damage);
+			Wound.hit(this);
 		}
 		return damage;
 	}
-	
-	@Override
-	public void damage( int dmg, Object src ) {
 
-		Terror.recover( this );
-		
+	@Override
+	public void damage(int dmg, Object src) {
+
+		Terror.recover(this);
+
 		if (state == SLEEPEING) {
 			state = WANDERING;
 		}
 		alerted = true;
-		
-		super.damage( dmg, src );
+
+		super.damage(dmg, src);
 	}
-	
-	
+
 	@Override
 	public void destroy() {
-		
+
 		super.destroy();
-		
-		Dungeon.level.mobs.remove( this );
-		
+
+		Dungeon.level.mobs.remove(this);
+
 		if (Dungeon.hero.isAlive()) {
-			
+
 			if (hostile) {
 				Statistics.enemiesSlain++;
 				Badges.validateMonstersSlain();
 				Statistics.qualifiedForNoKilling = false;
-				
+
 				if (Dungeon.nightMode) {
 					Statistics.nightHunt++;
 				} else {
@@ -351,175 +365,183 @@ public abstract class Mob extends Char {
 				}
 				Badges.validateNightHunter();
 			}
-			
+
 			if (Dungeon.hero.lvl <= maxLvl && EXP > 0) {
-				Dungeon.hero.sprite.showStatus( CharSprite.POSITIVE, TXT_EXP, EXP );
-				Dungeon.hero.earnExp( EXP );
+				Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, TXT_EXP,
+						EXP);
+				Dungeon.hero.earnExp(EXP);
 			}
 		}
 	}
-	
+
 	@Override
-	public void die( Object cause ) {
-		
-		super.die( cause );
-		
+	public void die(Object cause) {
+
+		super.die(cause);
+
 		if (Dungeon.hero.lvl <= maxLvl + 2) {
 			dropLoot();
 		}
-		
-		if (Dungeon.hero.isAlive() && !Dungeon.visible[pos]) {	
-			GLog.i( TXT_DIED );
+
+		if (Dungeon.hero.isAlive() && !Dungeon.visible[pos]) {
+			GLog.i(TXT_DIED);
 		}
 	}
-	
+
 	protected Object loot = null;
 	protected float lootChance = 0;
-	
+
 	@SuppressWarnings("unchecked")
 	protected void dropLoot() {
 		if (loot != null && Random.Float() < lootChance) {
 			Item item = null;
 			if (loot instanceof Generator.Category) {
-				
-				item = Generator.random( (Generator.Category)loot );
-				
+
+				item = Generator.random((Generator.Category) loot);
+
 			} else if (loot instanceof Class<?>) {
-				
-				item = Generator.random( (Class<? extends Item>)loot );
-				
+
+				item = Generator.random((Class<? extends Item>) loot);
+
 			} else {
-				
-				item = (Item)loot;
-				
+
+				item = (Item) loot;
+
 			}
-			Dungeon.level.drop( item, pos ).sprite.drop();
+			Dungeon.level.drop(item, pos).sprite.drop();
 		}
 	}
-	
+
 	public boolean reset() {
 		return false;
 	}
-	
-	public void beckon( int cell ) {
-		
+
+	public void beckon(int cell) {
+
 		notice();
-		
+
 		if (state != HUNTING) {
 			state = WANDERING;
 		}
 		target = cell;
 	}
-	
+
 	public String description() {
 		return description;
 	}
-	
+
 	public void notice() {
 		sprite.showAlert();
 	}
-	
-	public void yell( String str ) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), name, str );
+
+	public void yell(String str) {
+		GLog.n(Game.getVar(R.string.Mob_Yell), name, str);
 	}
-	
-	public void say( String str ) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), name, str );
+
+	public void say(String str) {
+		GLog.i(Game.getVar(R.string.Mob_Yell), name, str);
 	}
-	
+
 	public interface AiState {
-		public boolean act( boolean enemyInFOV, boolean justAlerted );
+		public boolean act(boolean enemyInFOV, boolean justAlerted);
+
 		public String status();
 	}
-	
+
 	private class Sleeping implements AiState {
-		
-		public static final String	TAG = "SLEEPING";
-		
+
+		public static final String TAG = "SLEEPING";
+
 		@Override
-		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
-			if (enemyInFOV && Random.Int( distance( enemy ) + enemy.stealth() + (enemy.flying ? 2 : 0) ) == 0) {
-					
+		public boolean act(boolean enemyInFOV, boolean justAlerted) {
+			if (enemyInFOV
+					&& Random.Int(distance(enemy) + enemy.stealth()
+							+ (enemy.flying ? 2 : 0)) == 0) {
+
 				enemySeen = true;
 
 				notice();
 				state = HUNTING;
 				target = enemy.pos;
-				
-				if (Dungeon.isChallenged( Challenges.SWARM_INTELLIGENCE )) {
+
+				if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
 					for (Mob mob : Dungeon.level.mobs) {
 						if (mob != Mob.this) {
-							mob.beckon( target );
+							mob.beckon(target);
 						}
 					}
 				}
-				
-				spend( TIME_TO_WAKE_UP );
-				
+
+				spend(TIME_TO_WAKE_UP);
+
 			} else {
-				
+
 				enemySeen = false;
-				
-				spend( TICK );
-				
+
+				spend(TICK);
+
 			}
 			return true;
 		}
-		
+
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaSleepingStatus), name );
+			return String.format(Game.getVar(R.string.Mob_StaSleepingStatus),
+					name);
 		}
 	}
-	
+
 	private class Wandering implements AiState {
-		
-		public static final String	TAG = "WANDERING";
-		
+
+		public static final String TAG = "WANDERING";
+
 		@Override
-		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
-			if (enemyInFOV && (justAlerted || Random.Int( distance( enemy ) / 2 + enemy.stealth() ) == 0)) {
-				
+		public boolean act(boolean enemyInFOV, boolean justAlerted) {
+			if (enemyInFOV
+					&& (justAlerted || Random.Int(distance(enemy) / 2
+							+ enemy.stealth()) == 0)) {
+
 				enemySeen = true;
-				
+
 				notice();
 				state = HUNTING;
 				target = enemy.pos;
-				
+
 			} else {
-				
+
 				enemySeen = false;
-				
+
 				int oldPos = pos;
-				if (target != -1 && getCloser( target )) {
-					spend( 1 / speed() );
-					return moveSprite( oldPos, pos );
+				if (target != -1 && getCloser(target)) {
+					spend(1 / speed());
+					return moveSprite(oldPos, pos);
 				} else {
 					target = Dungeon.level.randomDestination();
-					spend( TICK );
+					spend(TICK);
 				}
-				
+
 			}
 			return true;
 		}
-		
+
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaWanderingStatus), name );
+			return String.format(Game.getVar(R.string.Mob_StaWanderingStatus),
+					name);
 		}
 	}
-	
+
 	private class Hunting implements AiState {
-		
-		public static final String	TAG = "HUNTING";
-		
+
+		public static final String TAG = "HUNTING";
+
 		@Override
-		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
+		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = enemyInFOV;
-			if (enemyInFOV && canAttack( enemy )) {
-				
-				return doAttack( enemy );
-				
+			if (enemyInFOV && canAttack(enemy)) {
+
+				return doAttack(enemy);
+
 			} else {
 
 				if (enemyInFOV) {
@@ -527,76 +549,83 @@ public abstract class Mob extends Char {
 				}
 
 				int oldPos = pos;
-				if (target != -1 && getCloser( target )) {
-					
-					spend( 1 / speed() );
-					return moveSprite( oldPos,  pos );
-					
+				if (target != -1 && getCloser(target)) {
+
+					spend(1 / speed());
+					return moveSprite(oldPos, pos);
+
 				} else {
-					
-					spend( TICK );
+
+					spend(TICK);
 					state = WANDERING;
 					target = Dungeon.level.randomDestination();
 					return true;
 				}
 			}
 		}
-		
+
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaHuntingStatus), name );
+			return String.format(Game.getVar(R.string.Mob_StaHuntingStatus),
+					name);
 		}
 	}
-	
+
 	protected class Fleeing implements AiState {
-		
-		public static final String	TAG = "FLEEING";
-		
+
+		public static final String TAG = "FLEEING";
+
 		@Override
-		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
+		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = enemyInFOV;
 			if (enemyInFOV) {
 				target = enemy.pos;
 			}
-			
+
 			int oldPos = pos;
-			if (target != -1 && getFurther( target )) {
-				
-				spend( 1 / speed() );
-				return moveSprite( oldPos, pos );
-				
+			if (target != -1 && getFurther(target)) {
+
+				spend(1 / speed());
+				return moveSprite(oldPos, pos);
+
 			} else {
-				
-				spend( TICK );
+
+				spend(TICK);
 				nowhereToRun();
-				
+
 				return true;
 			}
 		}
-		
+
 		protected void nowhereToRun() {
 		}
-		
+
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaFleeingStatus), name );
+			return String.format(Game.getVar(R.string.Mob_StaFleeingStatus),
+					name);
 		}
 	}
-	
+
 	private class Passive implements AiState {
-		
-		public static final String	TAG = "PASSIVE";
-		
+
+		public static final String TAG = "PASSIVE";
+
 		@Override
-		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
+		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = false;
-			spend( TICK );
+			spend(TICK);
 			return true;
 		}
-		
+
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaPassiveStatus), name );
+			return String.format(Game.getVar(R.string.Mob_StaPassiveStatus),
+					name);
 		}
+	}
+
+	public boolean isWallWalker() {
+		return false;
 	}
 }
