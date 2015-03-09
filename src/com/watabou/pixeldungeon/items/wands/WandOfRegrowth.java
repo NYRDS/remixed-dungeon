@@ -33,9 +33,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfRegrowth extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfRegrowth_Name);
-	}
 	
 	@Override
 	protected void onZap( int cell ) {

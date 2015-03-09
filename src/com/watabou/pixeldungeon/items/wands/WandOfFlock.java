@@ -38,10 +38,7 @@ import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class WandOfFlock extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfFlock_Name);
-	}
-	
+
 	@Override
 	protected void onZap( int cell ) {
 		int level = level();

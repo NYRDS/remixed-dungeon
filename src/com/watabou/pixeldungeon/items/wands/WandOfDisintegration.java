@@ -37,7 +37,6 @@ import com.watabou.utils.Random;
 
 public class WandOfDisintegration extends Wand {
 	{
-		name = Game.getVar(R.string.WandOfDisintegration_Name);
 		hitChars = false;
 	}
 	

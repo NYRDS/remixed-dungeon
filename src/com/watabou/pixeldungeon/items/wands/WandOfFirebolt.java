@@ -40,10 +40,7 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class WandOfFirebolt extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfFirebolt_Name);
-	}
-	
+
 	@Override
 	protected void onZap( int cell ) {
 

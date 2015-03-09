@@ -32,9 +32,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfAmok extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfAmok_Name);
-	}
 
 	@Override
 	protected void onZap( int cell ) {

@@ -51,7 +51,6 @@ public class WandOfMagicMissile extends Wand {
 	private boolean disenchantEquipped;
 	
 	{
-		name = Game.getVar(R.string.WandOfMagicMissile_Name);
 		image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
 	}
 	

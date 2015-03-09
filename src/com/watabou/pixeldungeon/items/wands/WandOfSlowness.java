@@ -30,10 +30,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfSlowness extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfSlowness_Name);
-	}
-
+	
 	@Override
 	protected void onZap( int cell ) {
 		Char ch = Actor.findChar( cell );

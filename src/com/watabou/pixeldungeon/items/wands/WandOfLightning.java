@@ -38,9 +38,6 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class WandOfLightning extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfLightning_Name);
-	}
 	
 	private ArrayList<Char> affected = new ArrayList<Char>();
 	

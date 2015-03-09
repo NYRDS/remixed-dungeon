@@ -31,10 +31,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 
 public class WandOfBlink extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfBlink_Name);
-	}
-	
+
 	@Override
 	protected void onZap( int cell ) {
 

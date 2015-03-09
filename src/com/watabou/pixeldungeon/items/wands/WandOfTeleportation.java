@@ -30,9 +30,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfTeleportation extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfTeleportation_Name);
-	}
 
 	@Override
 	protected void onZap( int cell ) {
@@ -61,7 +58,7 @@ public class WandOfTeleportation extends Wand {
 				ch.pos = pos;
 				ch.sprite.place( ch.pos );
 				ch.sprite.visible = Dungeon.visible[pos];
-				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.name, ch.name));
+				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.name, ch.name_objective));
 			}
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));

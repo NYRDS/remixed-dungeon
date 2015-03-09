@@ -42,7 +42,6 @@ import com.watabou.utils.Random;
 
 public class WandOfAvalanche extends Wand {
 	{
-		name = Game.getVar(R.string.WandOfAvalanche_Name);
 		hitChars = false;
 	}
 	

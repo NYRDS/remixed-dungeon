@@ -30,10 +30,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfPoison extends Wand {
-	{
-		name = Game.getVar(R.string.WandOfPoison_Name);
-	}
-	
+
 	@Override
 	protected void onZap( int cell ) {
 		Char ch = Actor.findChar( cell );
