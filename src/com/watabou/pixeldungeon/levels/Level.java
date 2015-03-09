@@ -406,7 +406,7 @@ public abstract class Level implements Bundlable {
 		return 0;
 	}
 
-	private Mob createMob(){
+	protected Mob createMob(){
 		Mob mob = Bestiary.mutable(Dungeon.depth);
 		mob.state = mob.WANDERING;
 		if(!mob.isWallWalker()){
@@ -834,7 +834,19 @@ public abstract class Level implements Bundlable {
 			plant.activate(mob);
 		}
 	}
-
+	
+	private void markFovCellSafe(int p){
+		if (p > 0 && p < fieldOfView.length){
+			fieldOfView[p] = true;
+		}
+	}
+	
+	private void updateFovForObjectAt(int p){
+		for (int i = 0;i<NEIGHBOURS9.length;++i){
+			markFovCellSafe(p + NEIGHBOURS9[i]);
+		}
+	}
+	
 	public boolean[] updateFieldOfView(Char c) {
 
 		int cx = c.pos % WIDTH;
@@ -876,46 +888,20 @@ public abstract class Level implements Bundlable {
 		if (c.isAlive()) {
 			if (c.buff(MindVision.class) != null) {
 				for (Mob mob : mobs) {
-					int p = mob.pos;
-					fieldOfView[p] = true;
-					fieldOfView[p + 1] = true;
-					fieldOfView[p - 1] = true;
-					fieldOfView[p + WIDTH + 1] = true;
-					fieldOfView[p + WIDTH - 1] = true;
-					fieldOfView[p - WIDTH + 1] = true;
-					fieldOfView[p - WIDTH - 1] = true;
-					fieldOfView[p + WIDTH] = true;
-					fieldOfView[p - WIDTH] = true;
+					updateFovForObjectAt(mob.pos);
 				}
 			} else if (c == Dungeon.hero
 					&& ((Hero) c).heroClass == HeroClass.HUNTRESS) {
 				for (Mob mob : mobs) {
 					int p = mob.pos;
 					if (distance(c.pos, p) == 2) {
-						fieldOfView[p] = true;
-						fieldOfView[p + 1] = true;
-						fieldOfView[p - 1] = true;
-						fieldOfView[p + WIDTH + 1] = true;
-						fieldOfView[p + WIDTH - 1] = true;
-						fieldOfView[p - WIDTH + 1] = true;
-						fieldOfView[p - WIDTH - 1] = true;
-						fieldOfView[p + WIDTH] = true;
-						fieldOfView[p - WIDTH] = true;
+						updateFovForObjectAt(p);
 					}
 				}
 			}
 			if (c.buff(Awareness.class) != null) {
 				for (Heap heap : heaps.values()) {
-					int p = heap.pos;
-					fieldOfView[p] = true;
-					fieldOfView[p + 1] = true;
-					fieldOfView[p - 1] = true;
-					fieldOfView[p + WIDTH + 1] = true;
-					fieldOfView[p + WIDTH - 1] = true;
-					fieldOfView[p - WIDTH + 1] = true;
-					fieldOfView[p - WIDTH - 1] = true;
-					fieldOfView[p + WIDTH] = true;
-					fieldOfView[p - WIDTH] = true;
+					updateFovForObjectAt(heap.pos);
 				}
 			}
 		}
