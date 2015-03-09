@@ -84,6 +84,11 @@ public class Codex extends Item {
 	}
 	
 	@Override
+	public boolean isUpgradable() {
+		return false;
+	}
+	
+	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
 		id   = bundle.getInt( idTag );
