@@ -39,13 +39,16 @@ public class Codex extends Item {
 
 	private static String idTag = "id";
 	private static int    maxId = 0;
-	private static int    id;
+	
+	private int    id;
 	
 	{
 		stackable = false;
-		name      = Game.getVar(R.string.Codex_Name);
 		image     = ItemSpriteSheet.CODEX;
-		
+		maxId     = Game.getVars(R.array.Codex_Story).length;
+	}
+	
+	public Codex(){
 		id = Random.Int(maxId);
 	}
 	
