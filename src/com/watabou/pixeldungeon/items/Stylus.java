@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -111,7 +112,9 @@ public class Stylus extends Item {
 		
 		inscribeEffect();
 		
-		Scroll.createRandomScroll().collect();
+		if(!Scroll.createRandomScroll().collect()){
+			Dungeon.level.drop(scroll, Dungeon.hero.pos).sprite.drop();
+		}
 	}
 	
 	@Override
