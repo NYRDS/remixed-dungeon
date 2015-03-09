@@ -423,6 +423,10 @@ public abstract class Mob extends Char {
 		GLog.n(Game.getVar(R.string.Mob_Yell), name, str );
 	}
 	
+	public void say( String str ) {
+		GLog.i(Game.getVar(R.string.Mob_Yell), name, str );
+	}
+	
 	public interface AiState {
 		public boolean act( boolean enemyInFOV, boolean justAlerted );
 		public String status();

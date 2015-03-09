@@ -81,19 +81,19 @@ public class Hedgehog extends NPC {
 		switch (action)
 		{
 			case 0:
-				yell(Game.getVar(R.string.Hedgehog_Info1));
+				say(Game.getVar(R.string.Hedgehog_Info1));
 			break;
 		
 			case 1:
-				yell(Game.getVar(R.string.Hedgehog_Info2));
+				say(Game.getVar(R.string.Hedgehog_Info2));
 			break;
 			
 			case 2:
-				yell(Game.getVar(R.string.Hedgehog_Info3));
+				say(Game.getVar(R.string.Hedgehog_Info3));
 			break;
 			
 			case 3:
-				yell(Game.getVar(R.string.Hedgehog_Info4));
+				say(Game.getVar(R.string.Hedgehog_Info4));
 				
 				Pasty pie = new Pasty();
 				
@@ -101,7 +101,7 @@ public class Hedgehog extends NPC {
 			break;
 			
 			default:
-				yell(Game.getVar(R.string.Hedgehog_ImLate));
+				say(Game.getVar(R.string.Hedgehog_ImLate));
 				action = 4;
 				speed  = 3;
 		}
