@@ -616,6 +616,17 @@ public class Dungeon {
 	
 	private static boolean[] passable = new boolean[Level.LENGTH];
 	
+	private static void markActorsAsUnpassable(){
+		for (Actor actor : Actor.all()) {
+			if (actor instanceof Char) {
+				int pos = ((Char)actor).pos;
+				if (visible[pos]) {
+					passable[pos] = false;
+				}
+			}
+		}		
+	}
+	
 	public static int findPath( Char ch, int from, int to, boolean pass[], boolean[] visible ) {
 		
 		if (Level.adjacent( from, to )) {
@@ -628,14 +639,7 @@ public class Dungeon {
 			System.arraycopy( pass, 0, passable, 0, Level.LENGTH );
 		}
 		
-		for (Actor actor : Actor.all()) {
-			if (actor instanceof Char) {
-				int pos = ((Char)actor).pos;
-				if (visible[pos]) {
-					passable[pos] = false;
-				}
-			}
-		}
+		markActorsAsUnpassable();
 		
 		return PathFinder.getStep( from, to, passable );
 		
@@ -649,18 +653,11 @@ public class Dungeon {
 			System.arraycopy( pass, 0, passable, 0, Level.LENGTH );
 		}
 		
-		for (Actor actor : Actor.all()) {
-			if (actor instanceof Char) {
-				int pos = ((Char)actor).pos;
-				if (visible[pos]) {
-					passable[pos] = false;
-				}
-			}
-		}
+		markActorsAsUnpassable();
+		
 		passable[cur] = true;
 		
 		return PathFinder.getStepBack( cur, from, passable );
-		
 	}
 
 }
