@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PACKAGE /items/weapon -->
+    <!-- STRINGS OF Weapon CLASS -->
+    <string name="Weapon_Identify">You are now familiar enough with your %1$s to identify it. It is %2$s.</string>
+    <string name="Weapon_Incompatible">Interaction of different types of magic has negated the enchantment on this weapon!</string>
+
+    <!-- PACKAGE /weapon/Enchantment -->
+    <!-- STRINGS OF Death CLASS -->
+    <string name="Death_Name">Grim %s</string>
+    <!-- STRINGS OF Fire CLASS -->
+    <string name="Fire_Name">Blazing %s</string>
+    <!-- STRINGS OF Horror CLASS -->
+    <string name="Horror_Name">Eldritch %s</string>
+    <!-- STRINGS OF Instability CLASS -->
+    <string name="Instability_Name">Unstable %s</string>
+    <!-- STRINGS OF Leech CLASS -->
+    <string name="Leech_Name">Vampiric %s</string>
+    <!-- STRINGS OF Luck CLASS -->
+    <string name="Luck_Name">Lucky %s</string>
+    <!-- STRINGS OF Paralysis CLASS -->
+    <string name="Paralysis_Name">Stunning %s</string>
+    <!-- STRINGS OF Piercing CLASS -->
+    <string name="Piercing_Name">Piercing %s</string>
+    <!-- STRINGS OF Poison CLASS -->
+    <string name="Poison_Name">Venomous %s</string>
+    <!-- STRINGS OF Slow CLASS -->
+    <string name="Slow_Name">Chilling %s</string>
+    <!-- STRINGS OF Swing CLASS -->
+    <string name="Swing_Name">Wild %s</string>
+
+    <!-- PACKAGE /weapon/melee -->
+    <!-- STRINGS OF MeleeWeapon CLASS -->
+    <string name="MeleeWeapon_Info1a">This %1$s is %2$s tier-%3$d melee weapon.</string>
+    <string name="MeleeWeapon_Info1b">a</string>
+    <string name="MeleeWeapon_Info1c">a upgraded</string>
+    <string name="MeleeWeapon_Info1d">an degraded</string>
+    <string name="MeleeWeapon_Info2a">Its average damage is %d points per hit.</string>
+    <string name="MeleeWeapon_Info2b">Its typical average damage is %1$d points per hit and usually it requires %2$d points of strength.</string>
+    <string name="MeleeWeapon_Info2c">Probably this weapon is too heavy for you.</string>
+    <string name="MeleeWeapon_Info3a">This is a rather %s weapon.</string>
+    <string name="MeleeWeapon_Info3b">fast</string>
+    <string name="MeleeWeapon_Info3c">slow</string>
+    <string name="MeleeWeapon_Info3d">and</string>
+    <string name="MeleeWeapon_Info3e">but</string>
+    <string name="MeleeWeapon_Info3f">accurate</string>
+    <string name="MeleeWeapon_Info3g">inaccurate</string>
+    <string name="MeleeWeapon_Info4a">It was balanced to make it faster.</string>
+    <string name="MeleeWeapon_Info4b">It was balanced to make it more accurate.</string>
+    <string name="MeleeWeapon_Info5">It is enchanted.</string>
+    <string name="MeleeWeapon_Info6a">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
+    <string name="MeleeWeapon_Info6b">Because of your excess strength the damage of your attack with this %s is increased.</string>
+    <string name="MeleeWeapon_Info7a">You hold the %1$s at the ready%2$s.</string>
+    <string name="MeleeWeapon_Info7b">, and because it is cursed, you are powerless to let go</string>
+    <string name="MeleeWeapon_Info7c">You can feel a malevolent magic lurking within %s.</string>
+
+    <!-- STRINGS OF BattleAxe CLASS -->
+    <string name="BattleAxe_Name">battle axe</string>
+    <string name="BattleAxe_Info">The enormous steel head of this battle axe puts considerable heft behind each stroke.</string>
+
+    <!-- STRINGS OF Dagger CLASS -->
+    <string name="Dagger_Name">dagger</string>
+    <string name="Dagger_Info">A simple iron dagger with a well worn wooden handle.</string>
+
+    <!-- STRINGS OF Glaive CLASS -->
+    <string name="Glaive_Name">glaive</string>
+    <string name="Glaive_Info">A polearm consisting of a sword blade on the end of a pole.</string>
+
+    <!-- STRINGS OF Knuckles CLASS -->
+    <string name="Knuckles_Name">knuckleduster</string>
+    <string name="Knuckles_Info">A piece of iron shaped to fit around the knuckles.</string>
+
+    <!-- STRINGS OF Longsword CLASS -->
+    <string name="Longsword_Name">longsword</string>
+    <string name="Longsword_Info">This towering blade inflicts heavy damage by investing its heft into every cut.</string>
+
+    <!-- STRINGS OF Mace CLASS -->
+    <string name="Mace_Name">mace</string>
+    <string name="Mace_Info">The iron head of this weapon inflicts substantial damage.</string>
+
+    <!-- STRINGS OF Quarterstaff CLASS -->
+    <string name="Quarterstaff_Name">quarterstaff</string>
+    <string name="Quarterstaff_Info">A staff of hardwood, its ends are shod with iron.</string>
+
+    <!-- STRINGS OF ShortSword CLASS -->
+    <string name="ShortSword_Name">short sword</string>
+    <string name="ShortSword_Info">It is indeed quite short, just a few inches longer, than a dagger.</string>
+    <string name="ShortSword_ACReforge">REFORGE</string>
+    <string name="ShortSword_Select">Select a weapon to upgrade</string>
+    <string name="ShortSword_Reforged">you reforged the short sword to upgrade your %s</string>
+    <string name="ShortSword_NotBoomerang">you can\'t upgrade a boomerang this way</string>
+
+    <!-- STRINGS OF Spear CLASS -->
+    <string name="Spear_Name">spear</string>
+    <string name="Spear_Info">A slender wooden rod tipped with sharpened iron.</string>
+
+    <!-- STRINGS OF Sword CLASS -->
+    <string name="Sword_Name">sword</string>
+    <string name="Sword_Info">The razor-sharp length of steel blade shines reassuringly.</string>
+
+    <!-- STRINGS OF WarHammer CLASS -->
+    <string name="WarHammer_Name">war hammer</string>
+    <string name="WarHammer_Info">Few creatures can withstand the crushing blow of this towering mass of lead and steel, but only the strongest of adventurers can use it effectively.</string>
+
+    <!-- PACKAGE /weapon/missiles -->
+    <!-- STRINGS OF MissileWeapon CLASS -->
+    <string name="MissileWeapon_Missiles">Missile weapon</string>
+    <string name="MissileWeapon_Yes">Yes, I know what I\'m doing</string>
+    <string name="MissileWeapon_No">No, I changed my mind</string>
+    <string name="MissileWeapon_Sure">Do you really want to equip it as a melee weapon?</string>
+    <string name="MissileWeapon_Info1">\n\nAverage damage of this weapon equals to %d points per hit.</string>
+    <string name="MissileWeapon_Info2">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
+    <string name="MissileWeapon_Info3">Because of your excess strength the damage of your attack with this %s is increased.</string>
+    <string name="MissileWeapon_Info4">\n\nYou hold the %s at the ready.</string>
+
+    <!-- STRINGS OF Boomerang CLASS -->
+    <string name="Boomerang_Name">boomerang</string>
+    <string name="Boomerang_Info">Thrown to the enemy this flat curved wooden missile will return to the hands of its thrower.</string>
+
+    <!-- STRINGS OF CurareDart CLASS -->
+    <string name="CurareDart_Name">curare dart</string>
+    <string name="CurareDart_Info">These little evil darts don\'t do much damage but they can paralyze the target leaving it helpless and motionless for some time.</string>
+
+    <!-- STRINGS OF Dart CLASS -->
+    <string name="Dart_Name">dart</string>
+    <string name="Dart_Info">These simple metal spikes are weighted to fly true and sting their prey with a flick of the wrist.</string>
+
+    <!-- STRINGS OF IncendiaryDart CLASS -->
+    <string name="IncendiaryDart_Name">incendiary dart</string>
+    <string name="IncendiaryDart_Info">The spike on each of these darts is designed to pin it to its target while the unstable compounds strapped to its length burst into brilliant flames.</string>
+
+    <!-- STRINGS OF Javelin CLASS -->
+    <string name="Javelin_Name">javelin</string>
+    <string name="Javelin_Info">This length of metal is weighted to keep the spike at its tip foremost as it sails through the air.</string>
+
+    <!-- STRINGS OF Shuriken CLASS -->
+    <string name="Shuriken_Name">shuriken</string>
+    <string name="Shuriken_Info">Star-shaped pieces of metal with razor-sharp blades do significant damage when they hit a target. They can be thrown at very high rate.</string>
+
+    <!-- STRINGS OF Tamahawk CLASS -->
+    <string name="Tamahawk_Name">tomahawk</string>
+    <string name="Tamahawk_Info">This throwing axe is not that heavy, but it still requires significant strength to be used effectively.</string>
+
+</resources>
