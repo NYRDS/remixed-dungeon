@@ -62,10 +62,6 @@ import com.watabou.utils.Random;
 
 public abstract class Char extends Actor {
 
-	public static final int NEUTER    = 0;
-	public static final int MASCULINE = 1;
-	public static final int FEMININE  = 2;
-	
 	protected static final String TXT_HIT[]		= Game.getVars(R.array.Char_Hit);
 	protected static final String TXT_KILL[]    = Game.getVars(R.array.Char_Kill);
 	protected static final String TXT_DEFEAT[]	= Game.getVars(R.array.Char_Defeat);
@@ -85,7 +81,7 @@ public abstract class Char extends Actor {
 	protected String description  = Game.getVar(R.string.Mob_Desc);
 	private   String defenceVerb  = null;
 	
-	public int    gender          = NEUTER;
+	public int    gender          = Utils.NEUTER;
 	
 	public int HT;
 	public int HP;
@@ -142,17 +138,6 @@ public abstract class Char extends Actor {
 		readCharData();
 	}
 	
-	private void setCharGender(String sGender){
-		gender = NEUTER;
-		
-		if(sGender.equals("masculine")){
-			gender = MASCULINE;
-		}
-		if(sGender.equals("feminine")){
-			gender = FEMININE;
-		}
-	}
-	
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent){
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
@@ -164,7 +149,7 @@ public abstract class Char extends Actor {
 			
 			description    = getClassParam("Desc", description, true);
 			
-			setCharGender(getClassParam("Gender","masculine",true));
+			gender = Utils.genderFromString(getClassParam("Gender","masculine",true));
 			
 			defenceVerb = getClassParam("Defense",null,false);
 	}

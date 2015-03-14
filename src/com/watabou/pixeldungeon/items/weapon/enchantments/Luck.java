@@ -25,8 +25,6 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 
 public class Luck extends Weapon.Enchantment {
-
-	private static final String TXT_NAME = Game.getVar(R.string.Luck_Name);
 	
 	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x00FF00 );
 	
@@ -47,11 +45,6 @@ public class Luck extends Weapon.Enchantment {
 		}
 	}
 	
-	@Override
-	public String name( String weaponName) {
-		return String.format( TXT_NAME, weaponName );
-	}
-
 	@Override
 	public Glowing glowing() {
 		return GREEN;

@@ -27,8 +27,6 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.utils.Random;
 
 public class Poison extends Weapon.Enchantment {
-
-	private static final String TXT_NAME = Game.getVar(R.string.Poison_Name);
 	
 	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x4400AA );
 	
@@ -53,11 +51,5 @@ public class Poison extends Weapon.Enchantment {
 	@Override
 	public Glowing glowing() {
 		return PURPLE;
-	}
-	
-	@Override
-	public String name( String weaponName) {
-		return String.format( TXT_NAME, weaponName );
-	}
-
+	}	
 }

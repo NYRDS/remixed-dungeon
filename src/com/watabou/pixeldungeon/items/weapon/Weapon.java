@@ -158,7 +158,7 @@ public class Weapon extends KindOfWeapon {
 	
 	@Override
 	public String name() {
-		return enchantment == null ? super.name() : enchantment.name( super.name() );
+		return enchantment == null ? super.name() : enchantment.name( super.name(), gender );
 	}
 	
 	@Override
@@ -197,6 +197,8 @@ public class Weapon extends KindOfWeapon {
 	
 	public static abstract class Enchantment implements Bundlable {
 		
+		protected final String[] TXT_NAME = Utils.getClassParams(getClass().getSimpleName(), "Name", new String[]{"","",""}, true);
+		
 		private static final Class<?>[] enchants = new Class<?>[]{ 
 			Fire.class, Poison.class, Death.class, Paralysis.class, Leech.class, 
 			Slow.class, Swing.class, Piercing.class, Instability.class, Horror.class, Luck.class };
@@ -204,8 +206,8 @@ public class Weapon extends KindOfWeapon {
 			
 		public abstract boolean proc( Weapon weapon, Char attacker, Char defender, int damage );
 		
-		public String name( String weaponName ) {
-			return weaponName;
+		public String name( String weaponName, int gender) {
+			return String.format( TXT_NAME[gender], weaponName );
 		}
 		
 		@Override

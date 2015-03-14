@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PACKAGE /items/weapon -->
+    <!-- STRINGS OF Weapon CLASS -->
+    <string name="Weapon_Identify">Ты достаточно хорошо знаком с предметом %1$s, чтобы его опознать. Это %2$s.</string>
+    <string name="Weapon_Incompatible">Взаимодействие несовместимых типов магии разрушило чары, наложенные на это оружие!</string>
+
+    <!-- PACKAGE /weapon/Enchantment -->
+    <!-- STRINGS OF Death CLASS -->
+    <string-array name="Death_Name">
+      <item>Мрачное %s</item>
+      <item>Мрачный %s</item>
+      <item>Мрачная %s</item>
+    </string-array>
+    <!-- STRINGS OF Fire CLASS -->
+    <string-array name="Fire_Name">
+      <item>Искрящее %s</item>
+      <item>Искрящий %s</item>
+      <item>Искрящая %s</item>      
+    </string-array>
+    <!-- STRINGS OF Horror CLASS -->
+    <string-array name="Horror_Name">
+      <item>Жуткое %s</item>
+      <item>Жуткий %s</item>
+      <item>Жуткая %s</item>     
+    </string-array>
+    <!-- STRINGS OF Instability CLASS -->
+    <string-array name="Instability_Name">
+      <item>Нестабильное %s</item>
+      <item>Нестабильный %s</item>
+      <item>Нестабильная %s</item>
+   </string-array>
+    <!-- STRINGS OF Leech CLASS -->
+    <string-array name="Leech_Name">
+      <item>Вампирическое %s</item>
+      <item>Вампирический %s</item>
+      <item>Вампирическая %s</item>
+   </string-array>
+   <!-- STRINGS OF Luck CLASS -->
+   <string-array name="Luck_Name">
+      <item>Счастливое %s</item>
+      <item>Счастливый %s</item>
+      <item>Счастливая %s</item>
+   </string-array>
+    <!-- STRINGS OF Paralysis CLASS -->
+    <string-array name="Paralysis_Name">
+      <item>Ошеломляющее %</item>
+      <item>Ошеломляющий %</item>
+      <item>Ошеломляющая %</item>
+    </string-array>
+    <!-- STRINGS OF Piercing CLASS -->
+    <string-array name="Piercing_Name">
+      <item>Пронзающее %s</item>
+      <item>Пронзающий %s</item>
+      <item>Пронзающая %s</item>
+    </string-array>
+    <!-- STRINGS OF Poison CLASS -->
+    <string-array name="Poison_Name">
+      <item>Отравленное %s</item>
+      <item>Отравленный %s</item>
+      <item>Отравленная %s</item>
+   </string-array>
+    <!-- STRINGS OF Slow CLASS -->
+    <string-array name="Slow_Name">
+      <item>Морозное %s</item>
+      <item>Морозный %s</item>
+      <item>Морозная %s</item>
+    </string-array>
+    <!-- STRINGS OF Swing CLASS -->
+    <string-array name="Swing_Name">
+      <item>Дикое %s</item>
+      <item>Дикий %s</item>
+      <item>Дикая %s</item>
+   </string-array>
+
+    <!-- PACKAGE /weapon/melee -->
+    <!-- STRINGS OF MeleeWeapon CLASS -->
+    <string name="MeleeWeapon_Info1a">%1$s - %2$s оружие ближнего боя %3$d порядка.</string>
+    <string name="MeleeWeapon_Info1b"></string>
+    <string name="MeleeWeapon_Info1c">улучшенное</string>
+    <string name="MeleeWeapon_Info1d">ослабленное</string>
+    <string name="MeleeWeapon_Info2a">Средний урон %d единиц за удар.</string>
+    <string name="MeleeWeapon_Info2b">Типичный средний урон составляет %1$d единицы за удар и, как правило, требует %2$d очков силы.</string>
+    <string name="MeleeWeapon_Info2c">Судя по всему, это оружие слишком тяжело для тебя.</string>
+    <string name="MeleeWeapon_Info3a">Это довольно %s оружие.</string>
+    <string name="MeleeWeapon_Info3b">быстрое</string>
+    <string name="MeleeWeapon_Info3c">медленное</string>
+    <string name="MeleeWeapon_Info3d">и</string>
+    <string name="MeleeWeapon_Info3e">но</string>
+    <string name="MeleeWeapon_Info3f">меткое</string>
+    <string name="MeleeWeapon_Info3g">неточное</string>
+    <string name="MeleeWeapon_Info4a">Оно было сбалансировано для повышения скорости.</string>
+    <string name="MeleeWeapon_Info4b">Оно было сбалансировано для повышения точности.</string>
+    <string name="MeleeWeapon_Info5">Оно зачарованно.</string>
+    <string name="MeleeWeapon_Info6a">Из-за твоей недостаточной силы, скорость и точность атаки оружием %s снижены.</string>
+    <string name="MeleeWeapon_Info6b">За счёт более чем достаточной силы, количество урона, от оружия %s, увеличено.</string>
+    <string name="MeleeWeapon_Info7a">Ты держишь %1$s наготове %2$s.</string>
+    <string name="MeleeWeapon_Info7b">, поскольку оружие проклято, ты не в силах выпустить его из рук</string>
+    <string name="MeleeWeapon_Info7c">Ты чувствуешь зловещую магию, затаившуюся в оружии %s.</string>
+
+    <!-- STRINGS OF BattleAxe CLASS -->
+    <string name="BattleAxe_Name">боевой топор</string>
+    <string name="BattleAxe_Info">В каждом взмахе этого грозного оружия чувствуется вес огромного стального лезвия.</string>
+    <string name="BattleAxe_Gender">masculine</string>
+   
+    <!-- STRINGS OF Dagger CLASS -->
+    <string name="Dagger_Name">кинжал</string>
+    <string name="Dagger_Info">Простейший железный кинжал с удобной деревянной рукоятью.</string>
+    <string name="Dagger_Gender">masculine</string>
+    
+    <!-- STRINGS OF Glaive CLASS -->
+    <string name="Glaive_Name">глефа</string>
+    <string name="Glaive_Info">Копьё с лезвием от меча на конце.</string>
+    <string name="Glaive_Gender">feminine</string>
+    
+    <!-- STRINGS OF Knuckles CLASS -->
+    <string name="Knuckles_Name">кастет</string>
+    <string name="Knuckles_Info">Железная скоба, плотно охватывающая пальцы.</string>
+    <string name="Knuckles_Gender">masculine</string>
+    
+    <!-- STRINGS OF Longsword CLASS -->
+    <string name="Longsword_Name">длинный меч</string>
+    <string name="Longsword_Info">Этот массивный клинок наносит огромный урон, обрушивая на врага весь свой вес.</string>
+    <string name="Longsword_Gender">masculine</string>    
+    
+    <!-- STRINGS OF Mace CLASS -->
+    <string name="Mace_Name">булава</string>
+    <string name="Mace_Info">Железный наконечник этого оружия способен наносить существенный урон.</string>
+    <string name="Mace_Gender">feminine</string>       
+
+    <!-- STRINGS OF Quarterstaff CLASS -->
+    <string name="Quarterstaff_Name">боевой посох</string>
+    <string name="Quarterstaff_Info">Посох из твёрдого дерева, его концы окованы железом.</string>
+    <string name="Quarterstaff_Gender">masculine</string>  
+    
+    <!-- STRINGS OF ShortSword CLASS -->
+    <string name="ShortSword_Name">короткий меч</string>
+    <string name="ShortSword_Info">Действительно короткий, буквально на несколько сантиметров длиннее кинжала.</string>
+    <string name="ShortSword_ACReforge">ПЕРЕКОВАТЬ</string>
+    <string name="ShortSword_Select">Выбери оружие для улучшения</string>
+    <string name="ShortSword_Reforged">ты перековал короткий меч для улучшения оружия %s</string>
+    <string name="ShortSword_NotBoomerang">ты не сможешь улучшить бумеранг таким образом</string>
+    <string name="ShortSword_Gender">masculine</string> 
+    
+    <!-- STRINGS OF Spear CLASS -->
+    <string name="Spear_Name">копьё</string>
+    <string name="Spear_Info">Тонкое древко с острым железным наконечником.</string>
+    <string name="Spear_Gender">neuter</string> 
+    
+    <!-- STRINGS OF Sword CLASS -->
+    <string name="Sword_Name">меч</string>
+    <string name="Sword_Info">Отблеск острого как бритва клинка внушает уверенность.</string>
+    <string name="Sword_Gender">masculine</string> 
+    
+    <!-- STRINGS OF WarHammer CLASS -->
+    <string name="WarHammer_Name">боевой молот</string>
+    <string name="WarHammer_Info">Очень немногие существа могут пережить удар такого оружия, но не каждому путешественнику под силу его использовать .</string>
+    <string name="WarHammer_Gender">masculine</string>
+    
+    <!-- PACKAGE /weapon/missiles -->
+    <!-- STRINGS OF MissileWeapon CLASS -->
+    <string name="MissileWeapon_Missiles">Оружие дальнего боя</string>
+    <string name="MissileWeapon_Yes">Да, я знаю, что делаю</string>
+    <string name="MissileWeapon_No">Нет, я передумал</string>
+    <string name="MissileWeapon_Sure">Ты уверен, что хочешь использовать это в качестве оружия ближнего боя?</string>
+    <string name="MissileWeapon_Info1">\n\nСредний урон от этого оружия составляет %d единиц за удар.</string>
+    <string name="MissileWeapon_Info2">Из-за твоей недостаточной силы, скорость и точность атаки оружием %s снижены.</string>
+    <string name="MissileWeapon_Info3">За счёт более чем достаточной силы, количество урона от оружия %s увеличено.</string>
+    <string name="MissileWeapon_Info4">\n\nТы держишь %s наизготове.</string>
+
+    <!-- STRINGS OF Boomerang CLASS -->
+    <string name="Boomerang_Name">бумеранг</string>
+    <string name="Boomerang_Info">Брошенное во врага, это изогнутое деревянное оружие вернётся в руку владельца.</string>
+    <string name="Boomerang_Gender">masculine</string>
+    
+    <!-- STRINGS OF CurareDart CLASS -->
+    <string name="CurareDart_Name">дротик кураре</string>
+    <string name="CurareDart_Info">Эти маленькие зловещие дротики наносят немного урона, но они способны временно парализовать цель.</string>
+    <string name="CurareDart_Gender">masculine</string>
+    
+    <!-- STRINGS OF Dart CLASS -->
+    <string name="Dart_Name">дротик</string>
+    <string name="Dart_Info">Эти простые металлические шипы идеально выверены, для того чтобы точно вонзиться в свою жертву.</string>
+    <string name="Dart_Gender">masculine</string>
+    
+    <!-- STRINGS OF IncendiaryDart CLASS -->
+    <string name="IncendiaryDart_Name">воспламеняющий дротик</string>
+    <string name="IncendiaryDart_Info">Кончик дротика рассчитан на то, чтобы надёжно впиться в цель, в то время как состав, которым он обработан, вспыхнет, окутывая жертву пламенем.</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
+    
+    <!-- STRINGS OF Javelin CLASS -->
+    <string name="Javelin_Name">метательное копьё</string>
+    <string name="Javelin_Info">Это металлическое копьё тщательно сбалансировано, чтобы его острый наконечник неизменно стремился в цель, на протяжении всего полёта.</string>
+    <string name="Javelin_Gender">neuter</string>
+    
+    <!-- STRINGS OF Shuriken CLASS -->
+    <string name="Shuriken_Name">сюрикен</string>
+    <string name="Shuriken_Info">Острые как бритва металлические звёздочки наносят существенный урон своим целям. Их можно метать с большой скоростью.</string>
+    <string name="Shuriken_Gender">masculine</string>
+    
+    <!-- STRINGS OF Tamahawk CLASS -->
+    <string name="Tamahawk_Name">томагавк</string>
+    <string name="Tamahawk_Info">Хоть этот метательный топор не столь тяжёл, но, тем не менее, для обращения с ним требуется ощутимая сила.</string>
+    <string name="Tamahawk_Gender">masculine</string>
+</resources>

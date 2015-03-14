@@ -67,6 +67,7 @@ public class Item implements Bundlable {
 	
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
+	protected int  gender = Utils.genderFromString(getClassParam("Gender","neuter",false));
 	
 	protected int image = 0;
 	

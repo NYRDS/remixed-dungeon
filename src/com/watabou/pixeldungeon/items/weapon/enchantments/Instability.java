@@ -25,8 +25,6 @@ import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 
 public class Instability extends Weapon.Enchantment {
-
-	private static final String TXT_NAME = Game.getVar(R.string.Instability_Name);
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
@@ -38,10 +36,4 @@ public class Instability extends Weapon.Enchantment {
 		}
 		return ench.proc( weapon, attacker, defender, damage );
 	}
-	
-	@Override
-	public String name( String weaponName) {
-		return String.format( TXT_NAME, weaponName );
-	}
-
 }

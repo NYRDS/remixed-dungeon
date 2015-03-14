@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PACKAGE /items/Wands -->
+    <!-- STRINGS OF Wand CLASS -->
+    <string name="Wand_Name">%s wand</string>
+    <string name="Wand_ACZap">ZAP</string>
+    <string name="Wand_Wood">This thin %s wand is warm to the touch. Who knows what it will do when used?</string>
+    <string name="Wand_Damage">When this wand is used as a melee weapon, its average damage is %d points per hit.</string>
+    <string name="Wand_Weapon">You can use this wand as a melee weapon.</string>
+    <string name="Wand_Fizzles">your wand fizzles; it must be out of charges for now</string>
+    <string name="Wand_SelfTarget">You can\'t target yourself</string>
+    <string name="Wand_Prompt">Choose direction to zap</string>
+
+    <string-array name="Wand_Wood">
+        <item>holly</item>
+        <item>yew</item>
+        <item>ebony</item>
+        <item>cherry</item>
+        <item>teak</item>
+        <item>rowan</item>
+        <item>willow</item>
+        <item>mahogany</item>
+        <item>bamboo</item>
+        <item>purpleheart</item>
+        <item>oak</item>
+        <item>birch</item>
+    </string-array>
+
+    <!-- STRINGS OF WandOfAmok CLASS -->
+    <string name="WandOfAmok_Name">Wand of Amok</string>
+    <string name="WandOfAmok_Info">The purple light from this wand will make the target run amok attacking random creatures in its vicinity.</string>
+    <string name="WandOfAmok_Info1">nothing happened</string>
+
+    <!-- STRINGS OF WandOfAvalanche CLASS -->
+    <string name="WandOfAvalanche_Name">Wand of Avalanche</string>
+    <string name="WandOfAvalanche_Info">When a discharge of this wand hits a wall (or any other solid obstacle) it causes an avalanche of stones, damaging and stunning all creatures in the affected area.</string>
+    <string name="WandOfAvalanche_Info1">You killed yourself with your own Wand of Avalanche...</string>
+
+    <!-- STRINGS OF WandOfBlink CLASS -->
+    <string name="WandOfBlink_Name">Wand of Blink</string>
+    <string name="WandOfBlink_Info">This wand will allow you to teleport in the chosen direction. Creatures and inanimate obstructions will block the teleportation.</string>
+
+    <!-- STRINGS OF WandOfDisintegration CLASS -->
+    <string name="WandOfDisintegration_Name">Wand of Disintegration</string>
+    <string name="WandOfDisintegration_Info">This wand emits a beam of destructive energy, which pierces all creatures in its way. The more targets it hits, the more damage it inflicts to each of them.</string>
+
+    <!-- STRINGS OF WandOfFirebolt CLASS -->
+    <string name="WandOfFirebolt_Name">Wand of Firebolt</string>
+    <string name="WandOfFirebolt_Info">This wand unleashes bursts of magical fire. It will ignite flammable terrain, and will damage and burn a creature it hits.</string>
+    <string name="WandOfFirebolt_Info1">You killed yourself with your own Wand of Firebolt...</string>
+
+    <!-- STRINGS OF WandOfFlock CLASS -->
+    <string name="WandOfFlock_Name">Wand of Flock</string>
+    <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>
+    <string name="Sheep_Name">sheep</string>
+    <string name="Sheep_Name_Objective">sheep</string>
+    <string name="Sheep_Gender">feminine</string>
+    <string name="Sheep_Desc">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
+
+    <string-array name="WandOfFlock_SheepBaa">
+        <item>Baa!</item>
+        <item>Baa?</item>
+        <item>Baa.</item>
+        <item>Baa...</item>
+        <item>Bee...</item>
+        <item>Ble...</item>
+    </string-array>
+
+    <!-- STRINGS OF WandOfLightning CLASS -->
+    <string name="WandOfLightning_Name">Wand of Lightning</string>
+    <string name="WandOfLightning_Info">This wand conjures forth deadly arcs of electricity, which deal damage to several creatures standing close to each other.</string>
+    <string name="WandOfLightning_Info1">You killed yourself with your own Wand of Lightning...</string>
+
+    <!-- STRINGS OF WandOfMagicMissile CLASS -->
+    <string name="WandOfMagicMissile_Name">Wand of Magic Missile</string>
+    <string name="WandOfMagicMissile_Info">This wand launches missiles of pure magical energy, dealing moderate damage to a target creature.</string>
+    <string name="WandOfMagicMissile_ACDisenchant">DISENCHANT</string>
+    <string name="WandOfMagicMissile_Info1">You killed yourself with your own Wand of Magic Missile...</string>
+    <string name="WandOfMagicMissile_SelectWand">Select a wand to upgrade</string>
+    <string name="WandOfMagicMissile_Desinchanted">you disenchanted the Wand of Magic Missile and used its essence to upgrade your %s</string>
+
+    <!-- STRINGS OF WandOfPoison CLASS -->
+    <string name="WandOfPoison_Name">Wand of Poison</string>
+    <string name="WandOfPoison_Info">The vile blast of this twisted bit of wood will imbue its target with a deadly venom. A creature that is poisoned will suffer periodic damage until the effect ends. The duration of the effect increases with the level of the staff.</string>
+    <string name="WandOfPoison_Info1">nothing happened</string>
+
+    <!-- STRINGS OF WandOfRegrowth CLASS -->
+    <string name="WandOfRegrowth_Name">Wand of Regrowth</string>
+    <string name="WandOfRegrowth_Info">\"When life ceases new life always begins to grow... The eternal cycle always remains!\"</string>
+    <string name="WandOfRegrowth_Info1">nothing happened</string>
+
+    <!-- STRINGS OF WandOfSlowness CLASS -->
+    <string name="WandOfSlowness_Name">Wand of Slowness</string>
+    <string name="WandOfSlowness_Info">This wand will cause a creature to move and attack at half its ordinary speed until the effect ends</string>
+    <string name="WandOfSlowness_Info1">nothing happened</string>
+
+    <!-- STRINGS OF WandOfTelekinesis CLASS -->
+    <string name="WandOfTelekinesis_Name">Wand of Telekinesis</string>
+    <string name="WandOfTelekinesis_Info">Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, opening closed doors and closing open ones. They also push back monsters.</string>
+    <string name="WandOfTelekinesis_YouNowHave">You have magically transported %s into your backpack</string>
+
+    <!-- STRINGS OF WandOfTeleportation CLASS -->
+    <string name="WandOfTeleportation_Name">Wand of Teleportation</string>
+    <string name="WandOfTeleportation_Info">A blast from this wand will teleport a creature against its will to a random place on the current level.</string>
+    <string name="WandOfTeleportation_Info1">%1$s teleported %2$s to somewhere</string>
+    <string name="WandOfTeleportation_Info2">nothing happened</string>
+
+</resources>

@@ -58,6 +58,31 @@ public class Utils {
 			return (VOWELS.indexOf( Character.toLowerCase( noun.charAt( 0 ) ) ) != -1 ? "an " : "a ") + noun;
 		}
 	}
+
+	public static String[] getClassParams(String className ,String paramName, String[] defaultValues, boolean warnIfAbsent){
+		
+		if(className.length() == 0){ // isEmpty() require api level 9
+			return defaultValues;
+		}
+		
+		try{
+			String[] paramValues = Game.getVars(strings.getField(className+"_"+paramName).getInt(null));
+			return paramValues;
+		}catch (NoSuchFieldException e){
+			if(warnIfAbsent){
+				GLog.w("no defination for  %s_%s :(", className, paramName);
+			}
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return defaultValues;
+	}
+
 	
 	public static String getClassParam(String className ,String paramName, String defaultValue, boolean warnIfAbsent){
 		
@@ -82,5 +107,21 @@ public class Utils {
 		
 		return defaultValue;
 	}
+
+	static public int genderFromString(String sGender){
+		int gender = Utils.NEUTER;
+		
+		if(sGender.equals("masculine")){
+			gender = Utils.MASCULINE;
+		}
+		if(sGender.equals("feminine")){
+			gender = Utils.FEMININE;
+		}
+		return gender;
+	}
+	
+	public static final int NEUTER    = 0;
+	public static final int MASCULINE = 1;
+	public static final int FEMININE  = 2;
 	
 }
