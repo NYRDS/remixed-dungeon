@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class BattleAxe extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.BattleAxe_Name);
 		image = ItemSpriteSheet.BATTLE_AXE;
 	}
 	

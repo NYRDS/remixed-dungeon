@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class WarHammer extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.WarHammer_Name);
 		image = ItemSpriteSheet.WAR_HAMMER;
 	}
 	

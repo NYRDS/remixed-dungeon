@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Spear extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.Spear_Name);
 		image = ItemSpriteSheet.SPEAR;
 	}
 	

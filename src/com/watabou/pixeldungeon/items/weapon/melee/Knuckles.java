@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Knuckles extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.Knuckles_Name);
 		image = ItemSpriteSheet.KNUCKLEDUSTER;
 	}
 	
