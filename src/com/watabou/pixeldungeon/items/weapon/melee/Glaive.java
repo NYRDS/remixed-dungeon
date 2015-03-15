@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Glaive extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.Glaive_Name);
 		image = ItemSpriteSheet.GLAIVE;
 	}
 	

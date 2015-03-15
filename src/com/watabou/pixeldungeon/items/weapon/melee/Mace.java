@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Mace extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.Mace_Name);
 		image = ItemSpriteSheet.MACE;
 	}
 	

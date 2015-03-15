@@ -45,7 +45,6 @@ public class ShortSword extends MeleeWeapon {
 	
 	private boolean  equipped;
 	{
-		name = Game.getVar(R.string.ShortSword_Name);
 		image = ItemSpriteSheet.SHORT_SWORD;
 	}
 	

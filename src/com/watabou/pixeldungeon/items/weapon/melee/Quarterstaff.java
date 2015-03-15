@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Quarterstaff extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.Quarterstaff_Name);
 		image = ItemSpriteSheet.QUARTERSTAFF;
 	}
 	

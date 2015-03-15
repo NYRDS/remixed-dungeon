@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- STRINGS OF Hero CLASS -->
+    <string name="Hero_Name">you</string>
+    <string name="Hero_Name_Objective">you</string>
+    <string name="Hero_Leave">One does not simply leave Pixel Dungeon.</string>
+    <string name="Hero_LevelUp">level up!</string>
+    <string name="Hero_NewLevel">Welcome to level %d! Now you are healthier and more focused. It\'s easier for you to hit enemies and dodge their attacks.</string>
+    <string name="Hero_YouNowHave">You now have %s</string>
+    <string name="Hero_SomethingElse">There is something else here</string>
+    <string name="Hero_LockedChest">This chest is locked and you don\'t have matching key</string>
+    <string name="Hero_LockedDoor">You don\'t have a matching key</string>
+    <string name="Hero_NoticedSmth">You noticed something</string>
+    <string name="Hero_Wait">...</string>
+    <string name="Hero_Search">search</string>
+    <string name="Hero_StaBurning">You catch fire!</string>
+    <string name="Hero_StaParalysis">You are paralysed!</string>
+    <string name="Hero_StaPoison">You are poisoned!</string>
+    <string name="Hero_StaOoze">Caustic ooze eats your flesh. Wash away it!</string>
+    <string name="Hero_StaRoots">You can\'t move!</string>
+    <string name="Hero_StaWeakness">You feel weakened!</string>
+    <string name="Hero_StaBlindness">You are blinded!</string>
+    <string name="Hero_StaFury">You become furious!</string>
+    <string name="Hero_StaFurious">furious</string>
+    <string name="Hero_StaCharm">You are charmed!</string>
+    <string name="Hero_StaCripple">You are crippled!</string>
+    <string name="Hero_StaBleeding">You are bleeding!</string>
+    <string name="Hero_StaVertigo">Everything is spinning around you!</string>
+
+    <!-- STRINGS OF HeroClass CLASS -->
+    <string name="HeroClass_War">warrior</string>
+    <string name="HeroClass_Mag">mage</string>
+    <string name="HeroClass_Rog">rogue</string>
+    <string name="HeroClass_Hun">huntress</string>
+
+    <string-array name="HeroClass_WarPerks">
+        <item>Warriors start with 11 points of Strength.</item>
+        <item>Warriors start with a unique short sword. This sword can be later \"reforged\" to upgrade another melee weapon.</item>
+        <item>Warriors are less proficient with missile weapons.</item>
+        <item>Any piece of food restores some health when eaten.</item>
+        <item>Potions of Strength are identified from the beginning.</item>
+    </string-array>
+    <string-array name="HeroClass_MagPerks">
+        <item>Mages start with a unique Wand of Magic Missile. This wand can be later \"disenchanted\" to upgrade another wand.</item>
+        <item>Mages recharge their wands faster.</item>
+        <item>When eaten, any piece of food restores 1 charge for all wands in the inventory.</item>
+        <item>Mages can use wands as a melee weapon.</item>
+        <item>Scrolls of Identify are identified from the beginning.</item>
+    </string-array>
+    <string-array name="HeroClass_RogPerks">
+        <item>Rogues start with a Ring of Shadows+1.</item>
+        <item>Rogues identify a type of a ring on equipping it.</item>
+        <item>Rogues are proficient with light armor, dodging better while wearing one.</item>
+        <item>Rogues are proficient in detecting hidden doors and traps.</item>
+        <item>Rogues can go without food longer.</item>
+        <item>Scrolls of Magic Mapping are identified from the beginning.</item>
+    </string-array>
+    <string-array name="HeroClass_HunPerks">
+        <item>Huntresses start with 15 points of Health.</item>
+        <item>Huntresses start with a unique upgradeable boomerang.</item>
+        <item>Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.</item>
+        <item>Huntresses gain more health from dewdrops.</item>
+        <item>Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</item>
+    </string-array>
+
+    <!-- STRINGS OF HeroSubClass CLASS -->
+    <string name="HeroSubClass_NameGlad">gladiator</string>
+    <string name="HeroSubClass_DescGlad">A successful attack with a melee weapon allows the _Gladiator_ to start a combo, in which every next successful hit inflicts more damage.</string>
+    <string name="HeroSubClass_NameBers">berserker</string>
+    <string name="HeroSubClass_DescBers">When severely wounded, the _Berserker_ enters a state of wild fury significantly increasing his damage output.</string>
+    <string name="HeroSubClass_NameWarL">warlock</string>
+    <string name="HeroSubClass_DescWarL">After killing an enemy the _Warlock_ consumes its soul. It heals his wounds and satisfies his hunger.</string>
+    <string name="HeroSubClass_NameBatM">battlemage</string>
+    <string name="HeroSubClass_DescBatM">When fighting with a wand in his hands, the _Battlemage_ inflicts additional damage depending on the current number of charges. Every successful hit restores 1 charge to this wand.</string>
+    <string name="HeroSubClass_NameAssa">assassin</string>
+    <string name="HeroSubClass_DescAssa">When performing a surprise attack, the _Assassin_ inflicts additional damage to his target.</string>
+    <string name="HeroSubClass_NameFreR">freerunner</string>
+    <string name="HeroSubClass_DescFreR">The _Freerunner_ can move almost twice faster, than most of the monsters. When he is running, the Freerunner is much harder to hit. For that he must be unencumbered and not starving.</string>
+    <string name="HeroSubClass_NameSnip">sniper</string>
+    <string name="HeroSubClass_DescSnip">_Snipers_ are able to detect weak points in an enemy\'s armor, effectively ignoring it when using a missile weapon.</string>
+    <string name="HeroSubClass_NameWard">warden</string>
+    <string name="HeroSubClass_DescWard">Having a strong connection with forces of nature gives _Wardens_ an ability to gather dewdrops and seeds from plants. Also trampling a high grass grants them a temporary armor buff.</string>
+
+</resources>

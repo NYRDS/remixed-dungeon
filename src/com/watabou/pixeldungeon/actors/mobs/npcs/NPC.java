@@ -21,6 +21,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public abstract class NPC extends Mob {
@@ -32,7 +33,7 @@ public abstract class NPC extends Mob {
 		hostile = false;
 		state = PASSIVE;
 		
-		gender = MASCULINE;
+		gender = Utils.MASCULINE;
 	}
 	
 	protected void throwItem() {

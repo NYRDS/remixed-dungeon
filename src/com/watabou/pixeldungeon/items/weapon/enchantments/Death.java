@@ -30,8 +30,6 @@ import com.watabou.utils.Random;
 
 public class Death extends Weapon.Enchantment {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Death_Name);
-	
 	private static ItemSprite.Glowing BLACK = new ItemSprite.Glowing( 0x000000 );
 	
 	@Override
@@ -63,10 +61,4 @@ public class Death extends Weapon.Enchantment {
 	public Glowing glowing() {
 		return BLACK;
 	}
-	
-	@Override
-	public String name( String weaponName) {
-		return String.format( TXT_NAME, weaponName );
-	}
-
 }

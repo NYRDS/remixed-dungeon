@@ -27,8 +27,6 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.utils.Random;
 
 public class Slow extends Weapon.Enchantment {
-
-	private static final String TXT_NAME = Game.getVar(R.string.Slow_Name);
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0044FF );
 	
@@ -53,11 +51,5 @@ public class Slow extends Weapon.Enchantment {
 	@Override
 	public Glowing glowing() {
 		return BLUE;
-	}
-	
-	@Override
-	public String name( String weaponName) {
-		return String.format( TXT_NAME, weaponName );
-	}
-
+	}	
 }

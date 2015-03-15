@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Longsword extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.Longsword_Name);
 		image = ItemSpriteSheet.LONG_SWORD;
 	}
 	

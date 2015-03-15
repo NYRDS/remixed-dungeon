@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Dagger extends MeleeWeapon {
 	{
-		name = Game.getVar(R.string.Dagger_Name);
 		image = ItemSpriteSheet.DAGGER;
 	}
 	
