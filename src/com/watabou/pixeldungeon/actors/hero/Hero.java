@@ -958,7 +958,7 @@ public class Hero extends Char {
 				damage(dmg, wallWalkerBuff);
 			}
 			
-			spend( 4 / speed() );
+			spend( 1 / speed() );
 			
 			return true;
 
