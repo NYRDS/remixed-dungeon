@@ -17,9 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-import com.nyrds.pixeldungeon.ml.R;
 
 public class RingOfStoneWalking extends Artifact {
 	{

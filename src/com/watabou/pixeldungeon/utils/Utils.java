@@ -21,7 +21,6 @@ import java.util.Locale;
 
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.ml.R.array;
 
 public class Utils {
 
