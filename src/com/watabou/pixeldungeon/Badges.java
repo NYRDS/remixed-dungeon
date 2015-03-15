@@ -144,7 +144,8 @@ public class Badges {
 		GAMES_PLAYED_4(Game.getVar(R.string.Badges_GamesPlayed4), 63, true ),
 		HAPPY_END(Game.getVar(R.string.Badges_HappyEnd), 38 ),
 		CHAMPION(Game.getVar(R.string.Badges_Champion), 39, true ),
-		SUPPORTER(Game.getVar(R.string.Badges_Supporter), 31, true );
+		SUPPORTER(Game.getVar(R.string.Badges_Supporter), 31, true ),
+		IMMURED(Game.getVar(R.string.Badges_Immured), 64);
 		
 		public boolean meta;
 		
@@ -932,5 +933,9 @@ public class Badges {
 				break;
 			}
 		}
+	}
+
+	public static void validateDeathInStone() {
+		displayBadge( Badge.IMMURED );
 	}
 }

@@ -41,6 +41,7 @@ public class ResultDescriptions {
 	public static final String BLEEDING	= Game.getVar(R.string.ResultDescriptions_Bleeding);
 	public static final String OOZE		= Game.getVar(R.string.ResultDescriptions_Ooze);
 	public static final String FALL		= Game.getVar(R.string.ResultDescriptions_Fall);
+	public static final String IMMURED  = Game.getVar(R.string.ResultDescriptions_Immured);
 	
 	public static final String WIN	= Game.getVar(R.string.ResultDescriptions_Win);
 }

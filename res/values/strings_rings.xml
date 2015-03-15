@@ -77,4 +77,9 @@
     <string name="RingOfThorns_Name">Ring of Thorns</string>
     <string name="RingOfThorns_Info">Though this ring doesn\'t provide real thorns, an enemy that attacks you will itself be wounded by a fraction of the damage that it inflicts. Upgrading this ring won\'t give any additional bonuses.</string>
     
+    <!-- STRINGS OF RingOfStoneWalking CLASS -->
+    <string name="RingOfStoneWalking_Name">Ring os Stone Blood</string>
+    <string name="RingOfStoneWalking_Info">This ring is made of sturdy stone would look ordinary. If it was not a drop of liquid blood pulsing instead of gem.</string>  
+    <string name="RingOfStoneWalking_ImmuredInStone">Immured in stone. Forever.</string>
+    
 </resources>

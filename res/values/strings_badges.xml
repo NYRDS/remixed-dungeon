@@ -100,5 +100,6 @@
     <string name="Badges_HappyEnd">Happy end</string>
     <string name="Badges_Champion">Challenge won</string>
     <string name="Badges_Supporter">Thanks for your support!</string>
+    <string name="Badges_Immured">Death from immurement</string>
 
 </resources>

@@ -69,7 +69,7 @@
     <string name="Hero_Name_Objective">тебя</string>
     <string name="Hero_Leave">Нельзя просто так взять и выйти из Pixel Dungeon.</string>
     <string name="Hero_LevelUp">новый уровень!</string>
-    <string name="Hero_NewLevel">Твой уровень поднялся до %d! Ты окрепчал, а может даже поумнел. Тебе стало проще попадать по врагам и уклоняться от их атак.</string>
+    <string name="Hero_NewLevel">Твой уровень поднялся до %d! Теперь ты сильнее, а может даже и умнее. Тебе стало проще попадать по врагам и уклоняться от их атак.</string>
     <string name="Hero_YouNowHave">Теперь у тебя есть %s</string>
     <string name="Hero_SomethingElse">Здесь есть что-то ещё</string>
     <string name="Hero_LockedChest">Сундук закрыт, и у тебя нет подходящего ключа</string>
@@ -200,21 +200,6 @@
     <string name="Journal_Wandmaker">Старый мастер</string>
     <string name="Journal_Troll">Тролль-кузнец</string>
     <string name="Journal_Imp">Амбициозный бес</string>
-
-    <!-- STRINGS OF ResultDescriptions CLASS -->
-    <string name="ResultDescriptions_Mob">Убит монстром: %1$s, на уровне %2$d</string>
-    <string name="ResultDescriptions_Boss">Убит боссом: %1$s, на уровне %2$d</string>
-    <string name="ResultDescriptions_Wand">Убит собственной палочкой: %1$s, на уровне %2$d</string>
-    <string name="ResultDescriptions_Glyph">Убит глифом: %1$s, на уровне %2$d</string>
-    <string name="ResultDescriptions_Trap">Убит ловушкой: %1$s, на уровне %2$d</string>
-    <string name="ResultDescriptions_Burning">Сгорел живьём на уровне %d</string>
-    <string name="ResultDescriptions_Hunger">Помер с голоду на уровне %d</string>
-    <string name="ResultDescriptions_Poison">Отравился на уровне %d</string>
-    <string name="ResultDescriptions_Gas">Погиб от токсичного газа на уровне %d</string>
-    <string name="ResultDescriptions_Bleeding">Истёк кровью на уровне %d</string>
-    <string name="ResultDescriptions_Ooze">Убит едкой слизью на уровне %d</string>
-    <string name="ResultDescriptions_Fall">Разбился насмерть об уровень %d</string>
-    <string name="ResultDescriptions_Win">Заполучил Амулет Эндора</string>
 
     <!-- STRINGS OF WndBlacksmith CLASS -->
     <string name="WndBlacksmith_Prompt">Ладно, сделка есть сделка, расклад такой: я перекую тебе два предмета в один, но лучший качеством.</string>
