@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -45,8 +46,8 @@ public class Belongings implements Iterable<Item> {
 
 	public KindOfWeapon weapon = null;
 	public Armor armor = null;
-	public Ring ring1 = null;
-	public Ring ring2 = null;
+	public Artifact ring1 = null;
+	public Artifact ring2 = null;
 	
 	public Belongings( Hero owner ) {
 		this.owner = owner;
@@ -85,12 +86,12 @@ public class Belongings implements Iterable<Item> {
 		
 		armor = (Armor)bundle.get( ARMOR );
 		
-		ring1 = (Ring)bundle.get( RING1 );
+		ring1 = (Artifact)bundle.get( RING1 );
 		if (ring1 != null) {
 			ring1.activate( owner );
 		}
 		
-		ring2 = (Ring)bundle.get( RING2 );
+		ring2 = (Artifact)bundle.get( RING2 );
 		if (ring2 != null) {
 			ring2.activate( owner );
 		}

@@ -77,6 +77,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.rings.RingOfThorns;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
@@ -913,6 +914,12 @@ public class Hero extends Char {
 		
 		int step = -1;
 		
+		boolean wallWalker = false;
+		
+		for (Buff buff : buffs( RingOfStoneWalking.StoneWalking.class )) {
+			wallWalker = true;
+		}
+		
 		if (Level.adjacent( pos, target )) {
 			
 			if (Actor.findChar( target ) == null) {
@@ -921,7 +928,10 @@ public class Hero extends Char {
 					interrupt();
 					return false;
 				}
-				if (Level.passable[target] || Level.avoid[target]) {
+				if (!wallWalker && (Level.passable[target] || Level.avoid[target])) {
+					step = target;
+				}
+				if (wallWalker && Level.solid[target]) {
 					step = target;
 				}
 			}
@@ -929,7 +939,7 @@ public class Hero extends Char {
 		} else {
 		
 			int len = Level.LENGTH;
-			boolean[] p = Level.passable;
+			boolean[] p = wallWalker ? Level.solid : Level.passable;
 			boolean[] v = Dungeon.level.visited;
 			boolean[] m = Dungeon.level.mapped;
 			boolean[] passable = new boolean[len];

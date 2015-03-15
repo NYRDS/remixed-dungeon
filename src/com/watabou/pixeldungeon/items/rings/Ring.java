@@ -35,13 +35,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Ring extends EquipableItem {
+public class Ring extends Artifact {
 
-	private static final float TIME_TO_EQUIP = 1f;
-	
 	private static final String TXT_IDENTIFY = Game.getVar(R.string.Ring_Identify);
-	
-	protected Buff buff;
 	
 	private static final Class<?>[] rings = { 
 		RingOfMending.class, 
@@ -100,75 +96,6 @@ public class Ring extends EquipableItem {
 	public void syncGem() {
 		image	= handler.image( this );
 		gem		= handler.label( this );
-	}
-	
-	@Override
-	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		actions.add( isEquipped( hero ) ? AC_UNEQUIP : AC_EQUIP );
-		return actions;
-	}
-	
-	@Override
-	public boolean doEquip( Hero hero ) {
-		
-		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null) {
-			
-			GLog.w(Game.getVar(R.string.Ring_Info1));
-			return false;
-			
-		} else {
-			
-			if (hero.belongings.ring1 == null) {
-				hero.belongings.ring1 = this;
-			} else {
-				hero.belongings.ring2 = this;
-			}
-			
-			detach( hero.belongings.backpack );
-			
-			activate( hero );
-			
-			cursedKnown = true;
-			if (cursed) {
-				equipCursed( hero );
-				GLog.n(String.format(Game.getVar(R.string.Ring_Info2), this));
-			}
-			
-			hero.spendAndNext( TIME_TO_EQUIP );
-			return true;
-			
-		}
-
-	}
-	
-	public void activate( Char ch ) {
-		buff = buff();
-		buff.attachTo( ch );
-	}
-
-	@Override
-	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
-		if (super.doUnequip( hero, collect, single )) {
-			
-			if (hero.belongings.ring1 == this) {
-				hero.belongings.ring1 = null;
-			} else {
-				hero.belongings.ring2 = null;
-			}
-			
-			hero.remove( buff );
-			buff = null;
-			
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	@Override
-	public boolean isEquipped( Hero hero ) {
-		return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
 	}
 	
 	@Override
@@ -265,11 +192,7 @@ public class Ring extends EquipableItem {
 		return price;
 	}
 	
-	protected RingBuff buff() {
-		return null;
-	}
-	
-	public class RingBuff extends Buff {
+	public class RingBuff extends ArtifactBuff {
 		
 		private final String TXT_KNOWN = Game.getVar(R.string.Ring_BuffKnown); 
 		
@@ -280,7 +203,7 @@ public class Ring extends EquipableItem {
 		
 		@Override
 		public boolean attachTo( Char target ) {
-
+	
 			if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ROGUE && !isKnown()) {
 				setKnown();
 				GLog.i( TXT_KNOWN, name() );
