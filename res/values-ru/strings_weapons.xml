@@ -44,9 +44,9 @@
    </string-array>
     <!-- STRINGS OF Paralysis CLASS -->
     <string-array name="Paralysis_Name">
-      <item>Ошеломляющее %</item>
-      <item>Ошеломляющий %</item>
-      <item>Ошеломляющая %</item>
+      <item>Ошеломляющее %s</item>
+      <item>Ошеломляющий %s</item>
+      <item>Ошеломляющая %s</item>
     </string-array>
     <!-- STRINGS OF Piercing CLASS -->
     <string-array name="Piercing_Name">
