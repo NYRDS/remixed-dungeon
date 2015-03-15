@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.items.rings;
 
-import android.R;
+import com.nyrds.pixeldungeon.ml.R;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;

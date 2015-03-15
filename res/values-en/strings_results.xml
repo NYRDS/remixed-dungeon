@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- STRINGS OF ResultDescriptions CLASS -->
+    <string name="ResultDescriptions_Mob">Killed by %1$s on level %2$d</string>
+    <string name="ResultDescriptions_Boss">Killed by the %1$s on level %2$d</string>
+    <string name="ResultDescriptions_Wand">Killed by your own %1$s on level %2$d</string>
+    <string name="ResultDescriptions_Glyph">Killed by the %1$s on level %2$d</string>
+    <string name="ResultDescriptions_Trap">Killed by discharge of %1$s on level %2$d</string>
+    <string name="ResultDescriptions_Burning">Burned to death on level %d</string>
+    <string name="ResultDescriptions_Hunger">Starved to death on level %d</string>
+    <string name="ResultDescriptions_Poison">Died from poison on level %d</string>
+    <string name="ResultDescriptions_Gas">Died from toxic gas on level %d</string>
+    <string name="ResultDescriptions_Bleeding">Bled to death on level %d</string>
+    <string name="ResultDescriptions_Ooze">Killed by a caustic ooze on level %d</string>
+    <string name="ResultDescriptions_Fall">Fell to death on level %d</string>
+    <string name="ResultDescriptions_Win">Obtained the Amulet of Yendor</string> 
+    <string name="ResultDescriptions_Immured">Immured in stone on level %d</string>     
+</resources>

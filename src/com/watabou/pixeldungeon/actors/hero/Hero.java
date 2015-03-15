@@ -914,10 +914,10 @@ public class Hero extends Char {
 		
 		int step = -1;
 		
-		boolean wallWalker = false;
+		Buff wallWalkerBuff = null;
 		
 		for (Buff buff : buffs( RingOfStoneWalking.StoneWalking.class )) {
-			wallWalker = true;
+			wallWalkerBuff = buff;
 		}
 		
 		if (Level.adjacent( pos, target )) {
@@ -928,10 +928,10 @@ public class Hero extends Char {
 					interrupt();
 					return false;
 				}
-				if (!wallWalker && (Level.passable[target] || Level.avoid[target])) {
+				if (wallWalkerBuff == null && (Level.passable[target] || Level.avoid[target])) {
 					step = target;
 				}
-				if (wallWalker && Level.solid[target]) {
+				if (wallWalkerBuff != null && Level.solid[target]) {
 					step = target;
 				}
 			}
@@ -939,7 +939,7 @@ public class Hero extends Char {
 		} else {
 		
 			int len = Level.LENGTH;
-			boolean[] p = wallWalker ? Level.solid : Level.passable;
+			boolean[] p = wallWalkerBuff != null ? Level.solid : Level.passable;
 			boolean[] v = Dungeon.level.visited;
 			boolean[] m = Dungeon.level.mapped;
 			boolean[] passable = new boolean[len];
@@ -953,9 +953,16 @@ public class Hero extends Char {
 		if (step != -1) {
 			
 			int oldPos = pos;
+			
 			move( step );
 			sprite.move( oldPos, pos );
-			spend( 1 / speed() );
+			
+			if (wallWalkerBuff != null){
+				int dmg = HP/2 > 2 ? HP/2 : 2; 
+				damage(dmg, wallWalkerBuff);
+			}
+			
+			spend( 4 / speed() );
 			
 			return true;
 
