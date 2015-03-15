@@ -23,9 +23,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class RingOfDetection extends Ring {
-	{
-		name = Game.getVar(R.string.RingOfDetection_Name);
-	}
 	
 	@Override
 	public boolean doEquip( Hero hero ) {

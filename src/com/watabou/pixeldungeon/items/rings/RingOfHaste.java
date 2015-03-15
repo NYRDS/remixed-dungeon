@@ -21,9 +21,6 @@ import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class RingOfHaste extends Ring {
-	{
-		name = Game.getVar(R.string.RingOfHaste_Name);
-	}
 	
 	@Override
 	protected RingBuff buff( ) {

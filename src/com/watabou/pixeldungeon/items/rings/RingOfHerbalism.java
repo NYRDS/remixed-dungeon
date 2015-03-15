@@ -21,9 +21,6 @@ import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class RingOfHerbalism extends Ring {
-	{
-		name = Game.getVar(R.string.RingOfHerbalism_Name);
-	}
 	
 	@Override
 	protected RingBuff buff( ) {

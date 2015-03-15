@@ -31,10 +31,7 @@ import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.utils.Random;
 
 public class RingOfElements extends Ring {
-	{
-		name = Game.getVar(R.string.RingOfElements_Name);
-	}
-	
+
 	@Override
 	protected RingBuff buff( ) {
 		return new Resistance();

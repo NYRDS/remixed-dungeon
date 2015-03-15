@@ -21,9 +21,6 @@ import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class RingOfSatiety extends Ring {
-	{
-		name = Game.getVar(R.string.RingOfSatiety_Name);
-	}
 	
 	@Override
 	protected RingBuff buff( ) {

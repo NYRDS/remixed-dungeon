@@ -24,9 +24,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 
 public class RingOfThorns extends Ring {
-	{
-		name = Game.getVar(R.string.RingOfThorns_Name);
-	}
 	
 	@Override
 	protected RingBuff buff( ) {
