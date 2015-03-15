@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -65,6 +66,15 @@ public class PrisonLevel extends RegularLevel {
 				r.type = Type.PASSAGE;
 			}
 		}
+	}
+	
+	@Override
+	protected void createItems() {
+		if (Dungeon.depth  == 6) {
+			addItemToSpawn( new RingOfStoneWalking() );
+		}
+		
+		super.createItems();
 	}
 	
 	@Override

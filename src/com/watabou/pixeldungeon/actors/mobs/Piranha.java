@@ -95,9 +95,7 @@ public class Piranha extends Mob {
 			return false;
 		}
 		
-		int step = Dungeon.findPath( this, pos, target, 
-			Level.water, 
-			Level.fieldOfView );
+		int step = Dungeon.findPath( this, pos, target, Level.water, null);
 		if (step != -1) {
 			move( step );
 			return true;
@@ -108,9 +106,7 @@ public class Piranha extends Mob {
 	
 	@Override
 	protected boolean getFurther( int target ) {
-		int step = Dungeon.flee( this, pos, target, 
-			Level.water, 
-			Level.fieldOfView );
+		int step = Dungeon.flee( this, pos, target, Level.water, null);
 		if (step != -1) {
 			move( step );
 			return true;

@@ -249,11 +249,9 @@ public abstract class Mob extends Char {
 		int step = -1;
 
 		if (!isWallWalker()) {
-			step = Dungeon.findPath(this, pos, target, Level.passable,
-					Level.fieldOfView);
+			step = Dungeon.findPath(this, pos, target, Level.passable,null);
 		} else {
-			step = Dungeon.findPath(this, pos, target, Level.solid,
-					Level.fieldOfView);
+			step = Dungeon.findPath(this, pos, target, Level.solid,null);
 		}
 
 		if (step != -1) {
@@ -268,11 +266,9 @@ public abstract class Mob extends Char {
 		int step = -1;
 
 		if (!isWallWalker()) {
-			step = Dungeon.flee(this, pos, target, Level.passable,
-					Level.fieldOfView);
+			step = Dungeon.flee(this, pos, target, Level.passable,null);
 		} else {
-			step = Dungeon.flee(this, pos, target, Level.solid,
-					Level.fieldOfView);
+			step = Dungeon.flee(this, pos, target, Level.solid,null);
 		}
 		if (step != -1) {
 			move(step);

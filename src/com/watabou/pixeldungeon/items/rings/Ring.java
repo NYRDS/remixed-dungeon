@@ -150,6 +150,11 @@ public class Ring extends Artifact {
 	}
 	
 	@Override
+	public boolean isUpgradable() {
+		return true;
+	}
+	
+	@Override
 	public Item identify() {
 		setKnown();
 		return super.identify();

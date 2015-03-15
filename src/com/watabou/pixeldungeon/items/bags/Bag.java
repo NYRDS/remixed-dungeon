@@ -42,11 +42,9 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	public Char owner;
-	
 	public ArrayList<Item> items = new ArrayList<Item>();	
-	
 	public int size = 1;
-	
+		
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );

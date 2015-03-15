@@ -8,19 +8,23 @@ public class Shadow extends Mob {
 	{
 		spriteClass = ShadowSprite.class;
 		
-		HP = HT = 1;
+		HP = HT = 20;
 		defenseSkill = 15;
 		
 		EXP = 5;
 		maxLvl = 10;
 		
-		EXP = 5;
 		state = WANDERING;
 	}
 
 	@Override
 	public float speed() {
 		return 2;
+	}
+	
+	@Override
+	protected float attackDelay() {
+		return 0.5f;
 	}
 	
 	@Override

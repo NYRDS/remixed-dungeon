@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
+import java.util.IllegalFormatException;
+
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.nyrds.pixeldungeon.ml.R;
@@ -210,14 +212,15 @@ public class Weapon extends KindOfWeapon {
 		public abstract boolean proc( Weapon weapon, Char attacker, Char defender, int damage );
 		
 		public String name( String weaponName, int gender) {
-			String res="";
 			try{
-				res = String.format( TXT_NAME[gender], weaponName );
-			} catch (Exception e){
-				res = e.getMessage();
-				GLog.i(res);
+				String res = String.format( TXT_NAME[gender], weaponName );
+				return res;
+			} catch (IllegalFormatException e){
+				GLog.w("ife in %s", getClass().getSimpleName());
+			} catch (NullPointerException e){
+				GLog.w("npe in %s", getClass().getSimpleName());
 			}
-			return res;
+			return weaponName;
 		}
 		
 		@Override

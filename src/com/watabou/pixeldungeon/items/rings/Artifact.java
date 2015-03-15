@@ -84,6 +84,16 @@ public class Artifact extends EquipableItem {
 		buff.attachTo( ch );
 	}
 
+	@Override
+	public boolean isIdentified() {
+		return true;
+	}
+
+	@Override
+	public boolean isUpgradable() {
+		return false;
+	}
+	
 	protected ArtifactBuff buff() {
 		return null;
 	}
