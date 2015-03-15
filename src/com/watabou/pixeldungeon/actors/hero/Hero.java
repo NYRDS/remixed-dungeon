@@ -914,11 +914,7 @@ public class Hero extends Char {
 		
 		int step = -1;
 		
-		Buff wallWalkerBuff = null;
-		
-		for (Buff buff : buffs( RingOfStoneWalking.StoneWalking.class )) {
-			wallWalkerBuff = buff;
-		}
+		Buff wallWalkerBuff = buff(RingOfStoneWalking.StoneWalking.class);
 		
 		if (Level.adjacent( pos, target )) {
 			
