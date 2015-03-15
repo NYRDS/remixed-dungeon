@@ -44,6 +44,9 @@ public class Weapon extends KindOfWeapon {
 	public float	ACU	= 1;
 	public float	DLY	= 1f;
 	
+	protected int  gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
+
+	
 	public enum Imbue {
 		NONE, SPEED, ACCURACY
 	}
@@ -207,7 +210,14 @@ public class Weapon extends KindOfWeapon {
 		public abstract boolean proc( Weapon weapon, Char attacker, Char defender, int damage );
 		
 		public String name( String weaponName, int gender) {
-			return String.format( TXT_NAME[gender], weaponName );
+			String res="";
+			try{
+				res = String.format( TXT_NAME[gender], weaponName );
+			} catch (Exception e){
+				res = e.getMessage();
+				GLog.i(res);
+			}
+			return res;
 		}
 		
 		@Override

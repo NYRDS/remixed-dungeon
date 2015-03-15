@@ -21,14 +21,16 @@ import java.util.Locale;
 
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.R.array;
 
 public class Utils {
 
-	protected static final Class<?> strings = getR();
+	protected static final Class<?> strings      = getR_Field("string");
+	protected static final Class<?> stringArrays = getR_Field("array");
 	
-	static private Class <?> getR(){
+	static private Class <?> getR_Field(String field){
 		try {
-			return Class.forName("com.nyrds.pixeldungeon.ml.R$string");
+			return Class.forName("com.nyrds.pixeldungeon.ml.R$"+field);
 		} catch (ClassNotFoundException e) {// well this is newer happens :) 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,7 +68,7 @@ public class Utils {
 		}
 		
 		try{
-			String[] paramValues = Game.getVars(strings.getField(className+"_"+paramName).getInt(null));
+			String[] paramValues = Game.getVars(stringArrays.getField(className+"_"+paramName).getInt(null));
 			return paramValues;
 		}catch (NoSuchFieldException e){
 			if(warnIfAbsent){
