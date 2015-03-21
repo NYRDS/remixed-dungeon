@@ -54,11 +54,7 @@ public class TitleScene extends PixelScene {
 		int h = Camera.main.height;
 		
 		float height = 180;
-		
-		Archs archs = new Archs();
-		archs.setSize( w, h );
-		add( archs );
-		
+				
 		Image title = BannerSprites.get( BannerSprites.Type.PIXEL_DUNGEON );
 		add( title );
 		
@@ -104,6 +100,24 @@ public class TitleScene extends PixelScene {
 		btnHighscores.setPos( w / 2, btnPlay.top() );
 		add( btnHighscores );
 		
+		if (PixelDungeon.landscape()) {
+			float y = (h + height) / 2 - DashboardItem.SIZE;
+			btnHighscores	.setPos( w / 2 - btnHighscores.width(), y );
+			btnBadges		.setPos( w / 2, y );
+			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), y );
+			btnAbout		.setPos( btnBadges.right(), y );
+		} else {
+			btnBadges.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
+			btnAbout.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
+			btnPlay.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
+			btnHighscores.setPos( w / 2, btnPlay.top() );
+		}
+		
+		Archs archs = new Archs();
+		archs.setSize( w, h );
+		addToBack( archs );
+		
+		
 		BitmapText version = new BitmapText( "v " + Game.version, font1x );
 		version.measure();
 		version.hardlight( 0x888888 );
@@ -124,6 +138,7 @@ public class TitleScene extends PixelScene {
 			add(lowInteralStorageWarning);
 		}
 		
+		
 		PrefsButton btnPrefs = new PrefsButton();
 		btnPrefs.setPos( 0, 0 );
 		add( btnPrefs );
@@ -132,19 +147,7 @@ public class TitleScene extends PixelScene {
 		btnExit.setPos( w - btnExit.width(), 0 );
 		add( btnExit );
 		
-		if (PixelDungeon.landscape()) {
-			float y = (h + height) / 2 - DashboardItem.SIZE;
-			btnHighscores	.setPos( w / 2 - btnHighscores.width(), y );
-			btnBadges		.setPos( w / 2, y );
-			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), y );
-			btnAbout		.setPos( btnBadges.right(), y );
-		} else {
-			btnBadges.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
-			btnAbout.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
-			btnPlay.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
-			btnHighscores.setPos( w / 2, btnPlay.top() );
-		}
-		
+				
 		fadeIn();
 	}
 	
