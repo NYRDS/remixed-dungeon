@@ -182,7 +182,7 @@ public class WndSettings extends Window {
 			btnBrightness.checked( PixelDungeon.brightness() );
 			add( btnBrightness );
 			
-			CheckBox secondQuickslot = new CheckBox( TXT_SECOND_QUICKSLOT ) {
+			final CheckBox secondQuickslot = new CheckBox( TXT_SECOND_QUICKSLOT ) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -192,9 +192,21 @@ public class WndSettings extends Window {
 			secondQuickslot.setRect( 0, btnBrightness.bottom() + GAP, WIDTH, BTN_HEIGHT );
 			secondQuickslot.checked( PixelDungeon.secondQuickslot() );
 			add( secondQuickslot );
+
+			CheckBox thirdQuickslot = new CheckBox( TXT_SECOND_QUICKSLOT ) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					secondQuickslot.enable(!checked());
+					PixelDungeon.thirdQuickslot( checked() );
+				}
+			};
+			thirdQuickslot.setRect( 0, secondQuickslot.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			thirdQuickslot.checked( PixelDungeon.thirdQuickslot() );
+			add( thirdQuickslot );
+
 			
-			resize( WIDTH, (int)secondQuickslot.bottom() );
-			
+			resize( WIDTH, (int)thirdQuickslot.bottom() );
 		}
 	}
 	

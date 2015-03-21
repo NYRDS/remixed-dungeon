@@ -37,6 +37,7 @@ enum Preferences {
 	public static final String KEY_BRIGHTNESS	    = "brightness";
 	public static final String KEY_LOCALE           = "locale";
 	public static final String KEY_SECOND_QUICKSLOT = "second_quickslot";
+	public static final String KEY_THIRD_QUICKSLOT  = "third_quickslot";
 	
 	private SharedPreferences prefs;
 	

@@ -255,11 +255,21 @@ public class PixelDungeon extends Game {
 		if (scene() instanceof GameScene) {
 			((GameScene) scene()).updateToolbar(checked);
 		}
-
 	}
 
 	public static boolean secondQuickslot() {
 		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SECOND_QUICKSLOT, true);
+	}
+
+	public static void thirdQuickslot(boolean checked) {
+		Preferences.INSTANCE.put(Preferences.KEY_THIRD_QUICKSLOT, checked);
+		if (scene() instanceof GameScene) {
+			((GameScene) scene()).updateToolbar(checked);
+		}
+	}
+	
+	public static boolean thirdQuickslot() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_THIRD_QUICKSLOT, true);
 	}
 	
 	/*
@@ -269,4 +279,6 @@ public class PixelDungeon extends Game {
 	public static void reportException(Exception e) {
 		Log.e("PD", Log.getStackTraceString(e));
 	}
+
+
 }
