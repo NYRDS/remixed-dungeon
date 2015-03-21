@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import android.graphics.RectF;
+
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.ColorBlock;
@@ -25,6 +26,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
@@ -64,19 +66,18 @@ public class WndBag extends WndTabbed {
 		INSCRIBABLE
 	}
 	
-	protected static final int COLS	= 4;
+
+	protected static final int COLS_P	= 4;
+	protected static final int COLS_L	= 6;
 	
 	protected static final int SLOT_SIZE	= 28;
 	protected static final int SLOT_MARGIN	= 1;
 	
-	protected static final int TAB_WIDTH	= 21;
+	private static final int TAB_WIDTH_P	= 21;
+	private static final int TAB_WIDTH_L	= 30;
 	
 	protected static final int TITLE_HEIGHT	= 12;
-	
-	@SuppressWarnings("unused")
-	protected static final int ROWS = 
-		(Belongings.BACKPACK_SIZE + 4 + 1) / COLS + ((Belongings.BACKPACK_SIZE + 4 + 1) % COLS > 0 ? 1 : 0);
-	
+		
 	private Listener listener;
 	private WndBag.Mode mode;
 	private String title;
@@ -85,12 +86,18 @@ public class WndBag extends WndTabbed {
 	protected int col;
 	protected int row;
 	
+	private int nCols;
+	private int nRows;
+	
 	private static Mode lastMode;
 	private static Bag lastBag;
 	
 	public WndBag( Bag bag, Listener listener, Mode mode, String title ) {
 		
 		super();
+	
+		nCols = PixelDungeon.landscape() ? COLS_L : COLS_P;
+		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
 		
 		this.listener = listener;
 		this.mode = mode;
@@ -102,15 +109,15 @@ public class WndBag extends WndTabbed {
 		BitmapText txtTitle = PixelScene.createText( title != null ? title : Utils.capitalize( bag.name() ), 9 );
 		txtTitle.hardlight( TITLE_COLOR );
 		txtTitle.measure();
-		txtTitle.x = (int)(SLOT_SIZE * COLS + SLOT_MARGIN * (COLS - 1) - txtTitle.width()) / 2;
+		txtTitle.x = (int)(SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1) - txtTitle.width()) / 2;
 		txtTitle.y = (int)(TITLE_HEIGHT - txtTitle.height()) / 2;
 		add( txtTitle );
 		
 		placeItems( bag );
 		
 		resize( 
-			SLOT_SIZE * COLS + SLOT_MARGIN * (COLS - 1), 
-			SLOT_SIZE * ROWS + SLOT_MARGIN * (ROWS - 1) + TITLE_HEIGHT );
+			SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1), 
+			SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + TITLE_HEIGHT );
 		
 		Belongings stuff = Dungeon.hero.belongings;
 		Bag[] bags = {
@@ -124,7 +131,12 @@ public class WndBag extends WndTabbed {
 		for (Bag b : bags) {
 			if (b != null) {
 				BagTab tab = new BagTab( b );
-				tab.setSize( TAB_WIDTH, tabHeight() );
+				if(PixelDungeon.landscape()){
+					tab.setSize( TAB_WIDTH_L, tabHeight() );
+				} else {
+					tab.setSize( TAB_WIDTH_P, tabHeight() );
+				}
+				
 				add( tab );
 				
 				tab.select( b == bag );
@@ -174,8 +186,8 @@ public class WndBag extends WndTabbed {
 		
 		// Gold
 		if (container == Dungeon.hero.belongings.backpack) {
-			row = ROWS - 1;
-			col = COLS - 1;
+			row = nRows - 1;
+			col = nCols - 1;
 			placeItem( new Gold( Dungeon.gold ) );
 		}
 	}
@@ -187,7 +199,7 @@ public class WndBag extends WndTabbed {
 		
 		add( new ItemButton( item ).setPos( x, y ) );
 		
-		if (++col >= COLS) {
+		if (++col >= nCols) {
 			col = 0;
 			row++;
 		}
