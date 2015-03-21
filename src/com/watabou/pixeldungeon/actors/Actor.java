@@ -218,8 +218,11 @@ public abstract class Actor implements Bundlable {
 		}
 	}
 	
-	public static Char findChar( int pos ) {
-		return chars[pos];
+	public static Char findChar(int pos) {
+		if (pos > 0 && pos < chars.length) {
+			return chars[pos];
+		}
+		return null;
 	}
 	
 	public static HashSet<Actor> all() {
