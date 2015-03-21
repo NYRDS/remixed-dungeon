@@ -34,41 +34,41 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
 public class PixelDungeon extends Game {
-	
+
 	public PixelDungeon() {
-		super( TitleScene.class );
+		super(TitleScene.class);
 
 		// remix 0.5
 		com.watabou.utils.Bundle.addAlias(
 				com.watabou.pixeldungeon.items.food.Ration.class,
-				"com.watabou.pixeldungeon.items.food.Food" );
+				"com.watabou.pixeldungeon.items.food.Food");
 	}
-	
+
 	@Override
-	protected void onCreate( Bundle savedInstanceState ) {
-		super.onCreate( savedInstanceState );
-		
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
 		useLocale(uiLanguage());
-		
+
 		updateImmersiveMode();
-		
+
 		DisplayMetrics metrics = new DisplayMetrics();
-		instance.getWindowManager().getDefaultDisplay().getMetrics( metrics );
+		instance.getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		boolean landscape = metrics.widthPixels > metrics.heightPixels;
-		
-		if (Preferences.INSTANCE.getBoolean( Preferences.KEY_LANDSCAPE, false ) != landscape) {
-			landscape( !landscape );
+
+		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_LANDSCAPE, false) != landscape) {
+			landscape(!landscape);
 		}
-		
-		Music.INSTANCE.enable( music() );
-		Sample.INSTANCE.enable( soundFx() );
+
+		Music.INSTANCE.enable(music());
+		Sample.INSTANCE.enable(soundFx());
 	}
-	
+
 	@Override
-	public void onPause(){
+	public void onPause() {
 		super.onPause();
 		try {
-			if(Dungeon.hero != null){
+			if (Dungeon.hero != null) {
 				Dungeon.saveAll();
 			}
 		} catch (IOException e) {
@@ -76,180 +76,185 @@ public class PixelDungeon extends Game {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
-	public void onWindowFocusChanged( boolean hasFocus ) {
-		
-		super.onWindowFocusChanged( hasFocus );
-		
+	public void onWindowFocusChanged(boolean hasFocus) {
+
+		super.onWindowFocusChanged(hasFocus);
+
 		if (hasFocus) {
 			updateImmersiveMode();
 		}
 	}
-	
-	public static void switchNoFade( Class<? extends PixelScene> c ) {
+
+	public static void switchNoFade(Class<? extends PixelScene> c) {
 		PixelScene.noFade = true;
-		switchScene( c );
+		switchScene(c);
 	}
-	
+
 	/*
 	 * ---> Prefernces
 	 */
-	
-	public static void landscape( boolean value ) {
-		Game.instance.setRequestedOrientation( value ?
-			ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE :
-			ActivityInfo.SCREEN_ORIENTATION_PORTRAIT );
-		Preferences.INSTANCE.put( Preferences.KEY_LANDSCAPE, value );
+
+	public static void landscape(boolean value) {
+		Game.instance
+				.setRequestedOrientation(value ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+						: ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		Preferences.INSTANCE.put(Preferences.KEY_LANDSCAPE, value);
 	}
-	
+
 	public static boolean landscape() {
 		return width > height;
 	}
-	
+
 	// *** IMMERSIVE MODE ****
-	
+
 	private static boolean immersiveModeChanged = false;
-	
+
 	@SuppressLint("NewApi")
-	public static void immerse( boolean value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_IMMERSIVE, value );
-		
-		instance.runOnUiThread( new Runnable() {
+	public static void immerse(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
+
+		instance.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
 				updateImmersiveMode();
 				immersiveModeChanged = true;
 			}
-		} );
+		});
 	}
-	
+
 	@Override
-	public void onSurfaceChanged( GL10 gl, int width, int height ) {
-		super.onSurfaceChanged( gl, width, height );
-		
+	public void onSurfaceChanged(GL10 gl, int width, int height) {
+		super.onSurfaceChanged(gl, width, height);
+
 		if (immersiveModeChanged) {
-			requestedReset       = true;
+			requestedReset = true;
 			immersiveModeChanged = false;
 		}
 	}
-	
+
 	@SuppressLint("NewApi")
 	public static void updateImmersiveMode() {
 		if (android.os.Build.VERSION.SDK_INT >= 19) {
-			instance.getWindow().getDecorView().setSystemUiVisibility( 
-				immersed() ?
-				View.SYSTEM_UI_FLAG_LAYOUT_STABLE | 
-				View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | 
-				View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | 
-				View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | 
-				View.SYSTEM_UI_FLAG_FULLSCREEN | 
-				View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY 
-				:
-				0 );
+			if (instance != null) {
+				instance.getWindow()
+						.getDecorView()
+						.setSystemUiVisibility(
+								immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+										| View.SYSTEM_UI_FLAG_FULLSCREEN
+										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+										: 0);
+			}
 		}
 	}
-	
+
 	public static boolean immersed() {
-		return Preferences.INSTANCE.getBoolean( Preferences.KEY_IMMERSIVE, false );
-	}
-	
-	// *****************************
-	
-	public static void scaleUp( boolean value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_SCALE_UP, value );
-		switchScene( TitleScene.class );
-	}
-	
-	public static boolean scaleUp() {
-		return Preferences.INSTANCE.getBoolean( Preferences.KEY_SCALE_UP, true );
+		return Preferences.INSTANCE
+				.getBoolean(Preferences.KEY_IMMERSIVE, false);
 	}
 
-	public static void zoom( int value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_ZOOM, value );
+	// *****************************
+
+	public static void scaleUp(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_SCALE_UP, value);
+		switchScene(TitleScene.class);
 	}
-	
+
+	public static boolean scaleUp() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SCALE_UP, true);
+	}
+
+	public static void zoom(int value) {
+		Preferences.INSTANCE.put(Preferences.KEY_ZOOM, value);
+	}
+
 	public static int zoom() {
-		return Preferences.INSTANCE.getInt( Preferences.KEY_ZOOM, 0 );
+		return Preferences.INSTANCE.getInt(Preferences.KEY_ZOOM, 0);
 	}
-	
-	public static void music( boolean value ) {
-		Music.INSTANCE.enable( value );
-		Preferences.INSTANCE.put( Preferences.KEY_MUSIC, value );
+
+	public static void music(boolean value) {
+		Music.INSTANCE.enable(value);
+		Preferences.INSTANCE.put(Preferences.KEY_MUSIC, value);
 	}
-	
+
 	public static boolean music() {
-		return Preferences.INSTANCE.getBoolean( Preferences.KEY_MUSIC, true );
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_MUSIC, true);
 	}
-	
-	public static void soundFx( boolean value ) {
-		Sample.INSTANCE.enable( value );
-		Preferences.INSTANCE.put( Preferences.KEY_SOUND_FX, value );
+
+	public static void soundFx(boolean value) {
+		Sample.INSTANCE.enable(value);
+		Preferences.INSTANCE.put(Preferences.KEY_SOUND_FX, value);
 	}
-	
+
 	public static boolean soundFx() {
-		return Preferences.INSTANCE.getBoolean( Preferences.KEY_SOUND_FX, true );
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SOUND_FX, true);
 	}
-	
-	public static void brightness( boolean value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_BRIGHTNESS, value );
+
+	public static void brightness(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_BRIGHTNESS, value);
 		if (scene() instanceof GameScene) {
-			((GameScene)scene()).brightness( value );
+			((GameScene) scene()).brightness(value);
 		}
 	}
-	
+
 	public static boolean brightness() {
-		return Preferences.INSTANCE.getBoolean( Preferences.KEY_BRIGHTNESS, false );
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_BRIGHTNESS,
+				false);
 	}
-	
-	public static void donated( String value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_DONATED, value );
+
+	public static void donated(String value) {
+		Preferences.INSTANCE.put(Preferences.KEY_DONATED, value);
 	}
-	
+
 	public static String donated() {
-		return Preferences.INSTANCE.getString( Preferences.KEY_DONATED, "" );
+		return Preferences.INSTANCE.getString(Preferences.KEY_DONATED, "");
 	}
-	
-	public static void lastClass( int value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_LAST_CLASS, value );
+
+	public static void lastClass(int value) {
+		Preferences.INSTANCE.put(Preferences.KEY_LAST_CLASS, value);
 	}
-	
+
 	public static int lastClass() {
-		return Preferences.INSTANCE.getInt( Preferences.KEY_LAST_CLASS, 0 );
+		return Preferences.INSTANCE.getInt(Preferences.KEY_LAST_CLASS, 0);
 	}
-	
-	public static void challenges( int value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_CHALLENGES, value );
+
+	public static void challenges(int value) {
+		Preferences.INSTANCE.put(Preferences.KEY_CHALLENGES, value);
 	}
-	
+
 	public static int challenges() {
-		return Preferences.INSTANCE.getInt( Preferences.KEY_CHALLENGES, 0 );
+		return Preferences.INSTANCE.getInt(Preferences.KEY_CHALLENGES, 0);
 	}
-	
-	public static void intro( boolean value ) {
-		Preferences.INSTANCE.put( Preferences.KEY_INTRO, value );
+
+	public static void intro(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_INTRO, value);
 	}
-	
+
 	public static boolean intro() {
-		return Preferences.INSTANCE.getBoolean( Preferences.KEY_INTRO, true );
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_INTRO, true);
 	}
 
-	public static String uiLanguage(){
+	public static String uiLanguage() {
 		String deviceLocale = Locale.getDefault().getLanguage();
-		return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE, deviceLocale);
+		return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE,
+				deviceLocale);
 	}
 
-	public static void uiLanguage(String lang){
+	public static void uiLanguage(String lang) {
 		Preferences.INSTANCE.put(Preferences.KEY_LOCALE, lang);
-		
+
 		instance.doRestart();
 	}
-	
+
 	/*
 	 * <--- Preferences
 	 */
-	
-	public static void reportException( Exception e ) {
-		Log.e( "PD", Log.getStackTraceString( e ) ); 
+
+	public static void reportException(Exception e) {
+		Log.e("PD", Log.getStackTraceString(e));
 	}
 }
