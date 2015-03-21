@@ -381,9 +381,7 @@ public class Item implements Bundlable {
 	}
 	
 	public void updateQuickslot() {
-		if ((stackable && Dungeon.quickslot() == getClass()) || Dungeon.quickslot() == this) {
-			QuickSlot.refresh();
-		}
+		QuickSlot.refresh();
 	}
 	
 	private static final String QUANTITY		= "quantity";
@@ -392,17 +390,29 @@ public class Item implements Bundlable {
 	private static final String CURSED			= "cursed";
 	private static final String CURSED_KNOWN	= "cursedKnown";
 	private static final String QUICKSLOT		= "quickslot";
+	private static final String QUICKSLOT_2		= "quickslot_2";
+	private static final String QUICKSLOT_3		= "quickslot_3";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( QUANTITY, quantity );
-		bundle.put( LEVEL, level );
-		bundle.put( LEVEL_KNOWN, levelKnown );
-		bundle.put( CURSED, cursed );
+		bundle.put( QUANTITY,     quantity );
+		bundle.put( LEVEL,        level );
+		bundle.put( LEVEL_KNOWN,  levelKnown );
+		bundle.put( CURSED,       cursed );
 		bundle.put( CURSED_KNOWN, cursedKnown );
-		if (this == Dungeon.quickslot()) {
+		
+		if (this == QuickSlot.getItem(0)) {
 			bundle.put( QUICKSLOT, true );
 		}
+		
+		if (this == QuickSlot.getItem(1)) {
+			bundle.put( QUICKSLOT_2, true );
+		}
+		
+		if (this == QuickSlot.getItem(2)) {
+			bundle.put( QUICKSLOT_3, true );
+		}
+		
 	}
 	
 	@Override
@@ -421,7 +431,15 @@ public class Item implements Bundlable {
 		cursed	= bundle.getBoolean( CURSED );
 		
 		if (bundle.getBoolean( QUICKSLOT )) {
-			Dungeon.quickslot(this);
+			QuickSlot.selectItem(this,0);
+		}
+		
+		if (bundle.getBoolean( QUICKSLOT_2 )) {
+			QuickSlot.selectItem(this,1);
+		}
+		
+		if (bundle.getBoolean( QUICKSLOT_3 )) {
+			QuickSlot.selectItem(this,2);
 		}
 	}
 	

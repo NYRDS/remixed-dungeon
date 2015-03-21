@@ -38,6 +38,7 @@ import com.watabou.pixeldungeon.sprites.HeroSprite;
 import com.watabou.pixeldungeon.ui.BadgesList;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -244,15 +245,16 @@ public class WndRanking extends WndTabbed {
 				addItem( stuff.ring2 );
 			}
 			
-			if (Dungeon.quickslot() instanceof Item && 
-				Dungeon.hero.belongings.backpack.contains( (Item)Dungeon.quickslot() )) {
-				
-				addItem( (Item)Dungeon.quickslot() );
-			} else if (Dungeon.quickslot() instanceof Class){
-				@SuppressWarnings("unchecked")
-				Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)Dungeon.quickslot() );
-				if (item != null) {
-					addItem( item );
+			for(int i = 0;i<3;++i) {
+				Object qsItem = QuickSlot.getItem(i);
+				if(qsItem instanceof Item && Dungeon.hero.belongings.backpack.contains(((Item)qsItem))){
+					addItem((Item)qsItem);
+				} else if( qsItem instanceof Class){
+					@SuppressWarnings("unchecked")
+					Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)qsItem );
+					if (item != null) {
+						addItem( item );
+					}					
 				}
 			}
 		}

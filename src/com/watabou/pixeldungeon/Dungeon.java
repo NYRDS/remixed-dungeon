@@ -79,9 +79,6 @@ public class Dungeon {
 	public static Hero hero;
 	public static Level level;
 	
-	// Either Item or Class<? extends Item>
-	private static Object quickslot;
-	
 	public static int depth;
 	public static int gold;
 	// Reason of death
@@ -326,7 +323,6 @@ public class Dungeon {
     private static final String HERO      = "hero";
     private static final String GOLD      = "gold";
     private static final String DEPTH     = "depth";
-    private static final String QUICKSLOT = "quickslot";
     private static final String LEVEL     = "level";
     private static final String POS       = "potionsOfStrength";
     private static final String SOU       = "scrollsOfEnhancement";
@@ -397,11 +393,7 @@ public class Dungeon {
 			
 			Statistics.storeInBundle( bundle );
 			Journal.storeInBundle( bundle );
-			
-			if (quickslot() instanceof Class) {
-				bundle.put( QUICKSLOT, ((Class<?>)quickslot()).getName() );
-			}
-			
+						
 			Scroll.save( bundle );
 			Potion.save( bundle );
 			Wand.save( bundle );
@@ -515,16 +507,6 @@ public class Dungeon {
 			Badges.loadLocal( badges );
 		} else {
 			Badges.reset();
-		}
-		
-		String qsClass = bundle.getString( QUICKSLOT );
-		if (qsClass != null) {
-			try {
-				quickslot(Class.forName( qsClass ));
-			} catch (ClassNotFoundException e) {
-			}
-		} else {
-			quickslot(null);
 		}
 		
 		@SuppressWarnings("unused")
@@ -675,14 +657,6 @@ public class Dungeon {
 		passable[cur] = true;
 		
 		return PathFinder.getStepBack( cur, from, passable );
-	}
-
-	public static Object quickslot() {
-		return quickslot;
-	}
-
-	public static void quickslot(Object quickslot) {
-		Dungeon.quickslot = quickslot;
 	}
 
 }

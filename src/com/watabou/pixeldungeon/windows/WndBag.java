@@ -406,8 +406,7 @@ public class WndBag extends WndTabbed {
 		protected boolean onLongClick() {
 			if (listener == null && item.defaultAction != null) {
 				hide();
-				Dungeon.quickslot(item instanceof Wand ? item : item.getClass());
-				QuickSlot.refresh();
+				QuickSlot.selectItem(item instanceof Wand ? item : item.getClass(),0);
 				return true;
 			} else {
 				return false;

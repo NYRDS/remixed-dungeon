@@ -821,9 +821,7 @@ public class Hero extends Char {
 					if (wand.curCharges < wand.maxCharges && damage > 0) {
 						
 						wand.curCharges++;
-						if (Dungeon.quickslot() == wand) {
-							QuickSlot.refresh();
-						}
+						QuickSlot.refresh();
 						
 						ScrollOfRecharging.charge( this );
 					}

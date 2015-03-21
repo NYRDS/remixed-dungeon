@@ -261,6 +261,7 @@ public class Toolbar extends Component {
 			
 			base.x = x;
 			base.y = y;
+
 		}
 		
 		@Override
