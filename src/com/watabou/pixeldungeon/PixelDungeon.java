@@ -252,6 +252,10 @@ public class PixelDungeon extends Game {
 
 	public static void secondQuickslot(boolean checked) {
 		Preferences.INSTANCE.put(Preferences.KEY_SECOND_QUICKSLOT, checked);
+		if (scene() instanceof GameScene) {
+			((GameScene) scene()).updateToolbar(checked);
+		}
+
 	}
 
 	public static boolean secondQuickslot() {

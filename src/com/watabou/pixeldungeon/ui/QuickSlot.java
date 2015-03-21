@@ -36,6 +36,9 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	
 	private static QuickSlot instance;
 	
+	// Either Item or Class<? extends Item>
+	private static Object quickslotItem;
+	
 	private Item     itemInSlot;
 	private ItemSlot slot;
 	
@@ -128,14 +131,14 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	
 	@SuppressWarnings("unchecked")
 	private static Item select() {
-		if (Dungeon.quickslot() instanceof Item) {
+		if (quickslotItem instanceof Item) {
 			
-			return (Item)Dungeon.quickslot();
+			return (Item)quickslotItem;
 			
-		} else if (Dungeon.quickslot() != null) {
+		} else if (quickslotItem != null) {
 			
-			Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)Dungeon.quickslot() );			
-			return item != null ? item : Item.virtual( (Class<? extends Item>)Dungeon.quickslot() );
+			Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)quickslotItem );			
+			return item != null ? item : Item.virtual( (Class<? extends Item>)quickslotItem );
 			
 		} else {
 			
@@ -147,7 +150,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	@Override
 	public void onSelect( Item item ) {
 		if (item != null) {
-			Dungeon.quickslot(item.stackable ? item.getClass() : item);
+			quickslotItem = item.stackable ? item.getClass() : item;
 			refresh();
 		}
 	}

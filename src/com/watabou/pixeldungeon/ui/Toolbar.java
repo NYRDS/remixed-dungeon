@@ -25,6 +25,7 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -52,7 +53,8 @@ public class Toolbar extends Component {
 	private Tool btnInfo;
 	private Tool btnResume;
 	private Tool btnInventory;
-	private Tool btnQuick;
+	private Tool btnQuick1;
+	private Tool btnQuick2;
 	
 	private PickedUpItem pickedUp;
 	
@@ -122,7 +124,8 @@ public class Toolbar extends Component {
 			};
 		} );
 		
-		add( btnQuick = new QuickslotTool( 105, 7, 22, 24 ) );
+		add( btnQuick1 = new QuickslotTool( 105, 7, 22, 24 ) );
+		add( btnQuick2 = new QuickslotTool( 105, 7, 22, 24 ) );
 		
 		add( pickedUp = new PickedUpItem() );
 	}
@@ -133,8 +136,20 @@ public class Toolbar extends Component {
 		btnSearch.setPos( btnWait.right(), y );
 		btnInfo.setPos( btnSearch.right(), y );
 		btnResume.setPos( btnInfo.right(), y );
-		btnQuick.setPos( width - btnQuick.width(), y );
-		btnInventory.setPos( btnQuick.left() - btnInventory.width(), y );
+		btnQuick1.setPos( width - btnQuick1.width(), y );
+		
+		if(PixelDungeon.secondQuickslot()){
+			btnQuick2.visible = true;
+			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
+			btnInventory.setPos( btnQuick2.left() - btnInventory.width(), y );
+		} else {
+			btnQuick2.visible = false;
+			btnInventory.setPos( btnQuick1.left() - btnInventory.width(), y );
+		}
+	}
+	
+	public void updateLayout() {
+		layout();
 	}
 	
 	@Override

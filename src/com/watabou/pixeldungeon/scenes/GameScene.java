@@ -76,9 +76,9 @@ import com.watabou.utils.Random;
 
 public class GameScene extends PixelScene {
 	
-	private static final String TXT_WELCOME = Game.getVar(R.string.GameScene_Welcome);
+	private static final String TXT_WELCOME      = Game.getVar(R.string.GameScene_Welcome);
 	private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
-	private static final String TXT_NIGHT_MODE = Game.getVar(R.string.GameScene_NightMode);
+	private static final String TXT_NIGHT_MODE   = Game.getVar(R.string.GameScene_NightMode);
 	
 	private static final String TXT_CHASM = Game.getVar(R.string.GameScene_Chasm);
 	private static final String TXT_WATER = Game.getVar(R.string.GameScene_Water);
@@ -617,4 +617,8 @@ public class GameScene extends PixelScene {
 			return null;
 		}
 	};
+
+	public void updateToolbar(boolean checked) {
+		toolbar.updateLayout();
+	}
 }
