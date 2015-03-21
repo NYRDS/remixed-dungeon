@@ -80,7 +80,7 @@ public class Dungeon {
 	public static Level level;
 	
 	// Either Item or Class<? extends Item>
-	public static Object quickslot;
+	private static Object quickslot;
 	
 	public static int depth;
 	public static int gold;
@@ -398,8 +398,8 @@ public class Dungeon {
 			Statistics.storeInBundle( bundle );
 			Journal.storeInBundle( bundle );
 			
-			if (quickslot instanceof Class) {
-				bundle.put( QUICKSLOT, ((Class<?>)quickslot).getName() );
+			if (quickslot() instanceof Class) {
+				bundle.put( QUICKSLOT, ((Class<?>)quickslot()).getName() );
 			}
 			
 			Scroll.save( bundle );
@@ -520,11 +520,11 @@ public class Dungeon {
 		String qsClass = bundle.getString( QUICKSLOT );
 		if (qsClass != null) {
 			try {
-				quickslot = Class.forName( qsClass );
+				quickslot(Class.forName( qsClass ));
 			} catch (ClassNotFoundException e) {
 			}
 		} else {
-			quickslot = null;
+			quickslot(null);
 		}
 		
 		@SuppressWarnings("unused")
@@ -675,6 +675,14 @@ public class Dungeon {
 		passable[cur] = true;
 		
 		return PathFinder.getStepBack( cur, from, passable );
+	}
+
+	public static Object quickslot() {
+		return quickslot;
+	}
+
+	public static void quickslot(Object quickslot) {
+		Dungeon.quickslot = quickslot;
 	}
 
 }

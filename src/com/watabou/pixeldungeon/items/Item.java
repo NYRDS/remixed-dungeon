@@ -381,7 +381,7 @@ public class Item implements Bundlable {
 	}
 	
 	public void updateQuickslot() {
-		if ((stackable && Dungeon.quickslot == getClass()) || Dungeon.quickslot == this) {
+		if ((stackable && Dungeon.quickslot() == getClass()) || Dungeon.quickslot() == this) {
 			QuickSlot.refresh();
 		}
 	}
@@ -400,7 +400,7 @@ public class Item implements Bundlable {
 		bundle.put( LEVEL_KNOWN, levelKnown );
 		bundle.put( CURSED, cursed );
 		bundle.put( CURSED_KNOWN, cursedKnown );
-		if (this == Dungeon.quickslot) {
+		if (this == Dungeon.quickslot()) {
 			bundle.put( QUICKSLOT, true );
 		}
 	}
@@ -421,7 +421,7 @@ public class Item implements Bundlable {
 		cursed	= bundle.getBoolean( CURSED );
 		
 		if (bundle.getBoolean( QUICKSLOT )) {
-			Dungeon.quickslot = this;
+			Dungeon.quickslot(this);
 		}
 	}
 	

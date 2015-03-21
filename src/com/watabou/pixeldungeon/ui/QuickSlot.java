@@ -36,7 +36,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	
 	private static QuickSlot instance;
 	
-	private Item itemInSlot;
+	private Item     itemInSlot;
 	private ItemSlot slot;
 	
 	private Image crossB;
@@ -57,9 +57,9 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	public void destroy() {
 		super.destroy();
 		
-		instance = null;
+		instance   = null;
 		
-		lastItem = null;
+		lastItem   = null;
 		lastTarget = null;
 	}
 	
@@ -128,14 +128,14 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	
 	@SuppressWarnings("unchecked")
 	private static Item select() {
-		if (Dungeon.quickslot instanceof Item) {
+		if (Dungeon.quickslot() instanceof Item) {
 			
-			return (Item)Dungeon.quickslot;
+			return (Item)Dungeon.quickslot();
 			
-		} else if (Dungeon.quickslot != null) {
+		} else if (Dungeon.quickslot() != null) {
 			
-			Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)Dungeon.quickslot );			
-			return item != null ? item : Item.virtual( (Class<? extends Item>)Dungeon.quickslot );
+			Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)Dungeon.quickslot() );			
+			return item != null ? item : Item.virtual( (Class<? extends Item>)Dungeon.quickslot() );
 			
 		} else {
 			
@@ -147,7 +147,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	@Override
 	public void onSelect( Item item ) {
 		if (item != null) {
-			Dungeon.quickslot = item.stackable ? item.getClass() : item;
+			Dungeon.quickslot(item.stackable ? item.getClass() : item);
 			refresh();
 		}
 	}

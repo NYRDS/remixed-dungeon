@@ -244,13 +244,13 @@ public class WndRanking extends WndTabbed {
 				addItem( stuff.ring2 );
 			}
 			
-			if (Dungeon.quickslot instanceof Item && 
-				Dungeon.hero.belongings.backpack.contains( (Item)Dungeon.quickslot )) {
+			if (Dungeon.quickslot() instanceof Item && 
+				Dungeon.hero.belongings.backpack.contains( (Item)Dungeon.quickslot() )) {
 				
-				addItem( (Item)Dungeon.quickslot );
-			} else if (Dungeon.quickslot instanceof Class){
+				addItem( (Item)Dungeon.quickslot() );
+			} else if (Dungeon.quickslot() instanceof Class){
 				@SuppressWarnings("unchecked")
-				Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)Dungeon.quickslot );
+				Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)Dungeon.quickslot() );
 				if (item != null) {
 					addItem( item );
 				}
