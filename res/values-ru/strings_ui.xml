@@ -62,4 +62,5 @@
     <string name="WndSettings_SwitchPort">Портретный режим</string>
     <string name="WndSettings_SwitchLand">Альбомный режим</string>
     <string name="WndSettings_SelectLanguage">Выберите Язык</string>
+    <string name="WndSettings_SecondQuickslot">Второй слот</string>
 </resources>

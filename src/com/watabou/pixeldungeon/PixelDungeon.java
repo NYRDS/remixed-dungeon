@@ -250,6 +250,14 @@ public class PixelDungeon extends Game {
 		instance.doRestart();
 	}
 
+	public static void secondQuickslot(boolean checked) {
+		Preferences.INSTANCE.put(Preferences.KEY_SECOND_QUICKSLOT, checked);
+	}
+
+	public static boolean secondQuickslot() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SECOND_QUICKSLOT, true);
+	}
+	
 	/*
 	 * <--- Preferences
 	 */

@@ -61,5 +61,6 @@
     <string name="WndSettings_SwitchPort">Switch to portrait</string>
     <string name="WndSettings_SwitchLand">Switch to landscape</string>
     <string name="WndSettings_SelectLanguage">Select Language</string>
+    <string name="WndSettings_SecondQuickslot">Second Quickslot</string>
     
 </resources>

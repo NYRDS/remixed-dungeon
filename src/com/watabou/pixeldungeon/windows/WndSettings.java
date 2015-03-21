@@ -48,6 +48,8 @@ public class WndSettings extends Window {
 	
 	private static final String TXT_SElECT_LANGUAGE  = Game.getVar(R.string.WndSettings_SelectLanguage);
 	
+	private static final String TXT_SECOND_QUICKSLOT  = Game.getVar(R.string.WndSettings_SecondQuickslot);
+	
 	private static final int WIDTH		= 112;
 	private static final int BTN_HEIGHT	= 20;
 	private static final int GAP 		= 2;
@@ -180,7 +182,18 @@ public class WndSettings extends Window {
 			btnBrightness.checked( PixelDungeon.brightness() );
 			add( btnBrightness );
 			
-			resize( WIDTH, (int)btnBrightness.bottom() );
+			CheckBox secondQuickslot = new CheckBox( TXT_SECOND_QUICKSLOT ) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					PixelDungeon.secondQuickslot( checked() );
+				}
+			};
+			secondQuickslot.setRect( 0, btnBrightness.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			secondQuickslot.checked( PixelDungeon.secondQuickslot() );
+			add( secondQuickslot );
+			
+			resize( WIDTH, (int)secondQuickslot.bottom() );
 			
 		}
 	}
