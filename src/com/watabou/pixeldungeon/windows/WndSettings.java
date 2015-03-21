@@ -49,6 +49,7 @@ public class WndSettings extends Window {
 	private static final String TXT_SElECT_LANGUAGE  = Game.getVar(R.string.WndSettings_SelectLanguage);
 	
 	private static final String TXT_SECOND_QUICKSLOT  = Game.getVar(R.string.WndSettings_SecondQuickslot);
+	private static final String TXT_THIRD_QUICKSLOT  = Game.getVar(R.string.WndSettings_ThirdQuickslot);
 	
 	private static final int WIDTH		= 112;
 	private static final int BTN_HEIGHT	= 20;
@@ -193,7 +194,7 @@ public class WndSettings extends Window {
 			secondQuickslot.checked( PixelDungeon.secondQuickslot() );
 			add( secondQuickslot );
 
-			CheckBox thirdQuickslot = new CheckBox( TXT_SECOND_QUICKSLOT ) {
+			CheckBox thirdQuickslot = new CheckBox( TXT_THIRD_QUICKSLOT ) {
 				@Override
 				protected void onClick() {
 					super.onClick();

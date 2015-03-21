@@ -63,4 +63,5 @@
     <string name="WndSettings_SwitchLand">Альбомный режим</string>
     <string name="WndSettings_SelectLanguage">Выберите Язык</string>
     <string name="WndSettings_SecondQuickslot">Второй слот</string>
+    <string name="WndSettings_ThirdQuickslot">Третий слот</string>
 </resources>
