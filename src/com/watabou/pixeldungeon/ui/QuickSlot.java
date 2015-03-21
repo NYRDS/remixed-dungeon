@@ -226,9 +226,17 @@ public class QuickSlot extends Button implements WndBag.Listener {
 		}
 	}
 
+	public static Object getEarlyLoadItem(int n) {
+		if (earlyLoad.containsKey(n)) {
+			return earlyLoad.get(n);
+		}
+		return null;
+	}
+	
 	public static Object getItem(int n) {
 		if (n < slots.size()) {
 			return slots.get(n).select();
+		}
 		return null;
 	}
 
