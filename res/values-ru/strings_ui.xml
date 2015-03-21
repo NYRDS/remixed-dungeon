@@ -59,7 +59,7 @@
     <string name="WndSettings_Music">Музыка</string>
     <string name="WndSettings_Sound">Звуковые эффекты</string>
     <string name="WndSettings_Brightness">Яркость</string>
-    <string name="WndSettings_SwitchPort">Перейти в портретный режим</string>
-    <string name="WndSettings_SwitchLand">Перейти в альбомный режим</string>
+    <string name="WndSettings_SwitchPort">Портретный режим</string>
+    <string name="WndSettings_SwitchLand">Альбомный режим</string>
     <string name="WndSettings_SelectLanguage">Выберите Язык</string>
 </resources>
