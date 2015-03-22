@@ -24,7 +24,7 @@
     <string name="Badges_AllScrolls">Все свитки распознаны</string>
     <string name="Badges_AllRings">Все кольца распознаны"</string>
     <string name="Badges_AllWands">Все палочки распознаны"</string>
-    <string name="Badges_AllItems">Все зелья, свитки, кольца &amp; палочки распознаны</string>
+    <string name="Badges_AllItems">Все зелья, свитки, кольца и палочки распознаны</string>
     <!-- <string name="Badges_BagSeed"></string> -->
     <!-- <string name="Badges_BagSroll"></string> -->
     <!-- <string name="Badges_BagWand"></string> -->
@@ -35,7 +35,7 @@
     <string name="Badges_DeathHunger">Погиб с голоду</string>
     <string name="Badges_DeathGlyph">Погиб от глифа</string>
     <string name="Badges_DeathFalling">Погиб от падения</string>
-    <string name="Badges_Yasd">Погибал от огня, яда, токсичного газа &amp; голода</string>
+    <string name="Badges_Yasd">Погибал от огня, яда, токсичного газа и голода</string>
     <!-- <string name="Badges_BossSlain1War"></string> -->
     <!-- <string name="Badges_BossSlain1Mag"></string> -->
     <!-- <string name="Badges_BossSlain1Rog"></string> -->
@@ -44,7 +44,7 @@
     <string name="Badges_BossSlain2">2-ой босс убит</string>
     <string name="Badges_BossSlain3">3-ий босс убит</string>
     <string name="Badges_BossSlain4">4-ый босс убит</string>
-    <string name="Badges_BossSlain1All">1-ый босс убит Воином, Магом, Разбойником &amp; Охотницей</string>
+    <string name="Badges_BossSlain1All">1-ый босс убит Воином, Магом, Разбойником и Охотницей</string>
     <!-- <string name="Badges_BossSlain3Glad"></string> -->
     <!-- <string name="Badges_BossSlain3Bers"></string> -->
     <!-- <string name="Badges_BossSlain3WarL"></string> -->
@@ -53,7 +53,7 @@
     <!-- <string name="Badges_BossSlain3Assa"></string> -->
     <!-- <string name="Badges_BossSlain3Snip"></string> -->
     <!-- <string name="Badges_BossSlain3Ward"></string> -->
-    <string name="Badges_BossSlain3All">Третий босс убит Гладиатором, Берсерком, Чернокнижником, Боевым Магом, Бегуном, Убийцей, Снайпером &amp; Травницей</string>
+    <string name="Badges_BossSlain3All">Третий босс убит Гладиатором, Берсерком, Чернокнижником, Боевым Магом, Бегуном, Убийцей, Снайпером и Травницей</string>
     <string name="Badges_RingHaggler">Кольцо Торгаша получено</string>
     <string name="Badges_RingThorns">Кольцо Шипов получено</string>
     <string name="Badges_StrengthAttained1">13 очков Силы достигнуто</string>
@@ -83,7 +83,7 @@
     <!-- <string name="Badges_VictoryRog"></string> -->
     <!-- <string name="Badges_VictoryHun"></string> -->
     <string name="Badges_Victory">Амулет Эндора получен</string>
-    <string name="Badges_VictoryAll">Амулет Эндора получен Воином, Магом, Разбойником &amp; Охотницей</string>
+    <string name="Badges_VictoryAll">Амулет Эндора получен Воином, Магом, Разбойником и Охотницей</string>
     <string name="Badges_MasteryCombo">7 комбо-ударов за серию</string>
     <string name="Badges_PotionsCooked1">3 зелья изготовлено</string>
     <string name="Badges_PotionsCooked2">6 зелий изготовлено</string>
