@@ -258,7 +258,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static boolean secondQuickslot() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SECOND_QUICKSLOT, true);
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SECOND_QUICKSLOT, false);
 	}
 
 	public static void thirdQuickslot(boolean checked) {
@@ -269,7 +269,7 @@ public class PixelDungeon extends Game {
 	}
 	
 	public static boolean thirdQuickslot() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_THIRD_QUICKSLOT, true);
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_THIRD_QUICKSLOT, false);
 	}
 	
 	/*
