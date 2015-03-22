@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import java.util.ArrayList;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -26,15 +27,22 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.glyphs.*;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.items.armor.glyphs.Affection;
+import com.watabou.pixeldungeon.items.armor.glyphs.AntiEntropy;
+import com.watabou.pixeldungeon.items.armor.glyphs.Bounce;
+import com.watabou.pixeldungeon.items.armor.glyphs.Displacement;
+import com.watabou.pixeldungeon.items.armor.glyphs.Entanglement;
+import com.watabou.pixeldungeon.items.armor.glyphs.Metabolism;
+import com.watabou.pixeldungeon.items.armor.glyphs.Multiplicity;
+import com.watabou.pixeldungeon.items.armor.glyphs.Potential;
+import com.watabou.pixeldungeon.items.armor.glyphs.Stench;
+import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-import com.nyrds.pixeldungeon.ml.R;
 
 public class Armor extends EquipableItem {
 

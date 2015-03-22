@@ -135,6 +135,7 @@ public class Toolbar extends Component {
 		add(btnQuick1 = new QuickslotTool(105, 7, 22, 24));
 		add(btnQuick2 = new QuickslotTool(105, 7, 22, 24));
 		add(btnQuick3 = new QuickslotTool(105, 7, 22, 24));
+		
 
 		add(pickedUp = new PickedUpItem());
 		
@@ -150,6 +151,11 @@ public class Toolbar extends Component {
 		
 		btnQuick1.setPos(width - btnQuick1.width(), y);
 		btnQuick1.show(true);
+		
+		if (PixelDungeon.landscape() && PixelDungeon.thirdQuickslot()) {
+			PixelDungeon.thirdQuickslot(false);
+			PixelDungeon.secondQuickslot(true);
+		}
 		
 		if (PixelDungeon.thirdQuickslot()) {
 			btnQuick2.show(true);

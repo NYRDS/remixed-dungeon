@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHero;
 

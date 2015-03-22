@@ -82,8 +82,10 @@ public class HeroSprite extends CharSprite {
 	}
 	
 	public void updateState(Hero hero) {
+		/*
 		updateMode (HeroClass.spritesheet(hero) );
 		updateArmor(hero.tier());
+		*/
 	}
 	
 	public void updateArmor(int tier) {
