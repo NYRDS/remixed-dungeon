@@ -27,9 +27,9 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
@@ -54,21 +54,17 @@ public class HeroSprite extends CharSprite {
 		
 		link( hero );
 		
-		texture( hero.heroClass.spritesheet() );
+		texture( hero.heroClass.spritesheet(hero) );
 		updateArmor();
 		
 		idle();
 	}
 	
+
+	
 	public void updateState(Hero hero) {
-		if(hero.className() == HeroSubClass.BERSERKER.name()){
-			if(hero.inFury()) {
-				texture(Assets.WARRIOR_BERSERK);
-			} else {
-				texture(Assets.WARRIOR);
-			}
-			updateArmor();
-		}
+		texture( hero.heroClass.spritesheet(hero) );
+		updateArmor();
 	}
 	
 	public void updateArmor() {
@@ -164,7 +160,7 @@ public class HeroSprite extends CharSprite {
 	public static Image avatar( HeroClass cl, int armorTier ) {
 		
 		RectF patch = tiers().get( armorTier );
-		Image avatar = new Image( cl.spritesheet() );
+		Image avatar = new Image( cl.spritesheet(Dungeon.hero) );
 		RectF frame = avatar.texture.uvRect( 1, 0, FRAME_WIDTH, FRAME_HEIGHT );
 		frame.offset( patch.left, patch.top );
 		avatar.frame( frame );

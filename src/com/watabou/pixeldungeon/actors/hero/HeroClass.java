@@ -87,9 +87,9 @@ public enum HeroClass {
 		
 		hero.gender = getGender();
 		
-		if (Badges.isUnlocked( masteryBadge() )) {
+		//if (Badges.isUnlocked( masteryBadge() )) {
 			new TomeOfMastery().collect();
-		}
+		//}
 		
 		hero.updateAwareness();
 	}
@@ -162,7 +162,13 @@ public enum HeroClass {
 		return title;
 	}
 	
-	public String spritesheet() {
+	public String spritesheet(Hero hero) {
+		
+		if(hero.subClass.name() == HeroSubClass.BERSERKER.name()){
+			if(hero.inFury()) {
+				return Assets.WARRIOR_BERSERK;
+			}
+		}
 		
 		switch (this) {
 		case WARRIOR:
