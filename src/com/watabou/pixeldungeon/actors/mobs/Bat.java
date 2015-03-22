@@ -65,7 +65,7 @@ public class Bat extends Mob {
 		
 		if (reg > 0) {
 			HP += reg;
-			sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 		}
 		
 		return damage;

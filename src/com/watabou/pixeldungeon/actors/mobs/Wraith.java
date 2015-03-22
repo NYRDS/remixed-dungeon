@@ -101,10 +101,10 @@ public class Wraith extends Mob {
 			w.state = w.HUNTING;
 			GameScene.add( w, SPAWN_DELAY );
 			
-			w.sprite.alpha( 0 );
-			w.sprite.parent.add( new AlphaTweener( w.sprite, 1, 0.5f ) );
+			w.getSprite().alpha( 0 );
+			w.getSprite().parent.add( new AlphaTweener( w.getSprite(), 1, 0.5f ) );
 			
-			w.sprite.emitter().burst( ShadowParticle.CURSE, 5 );
+			w.getSprite().emitter().burst( ShadowParticle.CURSE, 5 );
 			
 			return w;
 		} else {

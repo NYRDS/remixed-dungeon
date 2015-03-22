@@ -56,8 +56,8 @@ public class WandOfTeleportation extends Wand {
 				GLog.w( ScrollOfTeleportation.TXT_NO_TELEPORT );
 			} else {
 				ch.pos = pos;
-				ch.sprite.place( ch.pos );
-				ch.sprite.visible = Dungeon.visible[pos];
+				ch.getSprite().place( ch.pos );
+				ch.getSprite().visible = Dungeon.visible[pos];
 				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.name, ch.name_objective));
 			}
 		} else {
@@ -66,7 +66,7 @@ public class WandOfTeleportation extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.coldLight( curUser.sprite.parent, curUser.pos, cell, callback );
+		MagicMissile.coldLight( curUser.getSprite().parent, curUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

@@ -223,7 +223,7 @@ public class Yog extends Mob {
 		public int attackProc( Char enemy, int damage ) {
 			if (Random.Int( 3 ) == 0) {
 				Buff.affect( enemy, Ooze.class );
-				enemy.sprite.burst( 0xFF000000, 5 );
+				enemy.getSprite().burst( 0xFF000000, 5 );
 			}
 			
 			return damage;
@@ -233,7 +233,7 @@ public class Yog extends Mob {
 		public boolean act() {
 			
 			if (Level.water[pos] && HP < HT) {
-				sprite.emitter().burst( ShadowParticle.UP, 2 );
+				getSprite().emitter().burst( ShadowParticle.UP, 2 );
 				HP += REGENERATION;
 			}
 			
@@ -327,8 +327,8 @@ public class Yog extends Mob {
 					int dmg =  damageRoll();
 					enemy.damage( dmg, this );
 					
-					enemy.sprite.bloodBurstA( sprite.center(), dmg );
-					enemy.sprite.flash();
+					enemy.getSprite().bloodBurstA( getSprite().center(), dmg );
+					enemy.getSprite().flash();
 					
 					if (!enemy.isAlive() && enemy == Dungeon.hero) {
 						Dungeon.fail( Utils.format( ResultDescriptions.BOSS, name, Dungeon.depth ) );
@@ -338,7 +338,7 @@ public class Yog extends Mob {
 					
 				} else {
 					
-					enemy.sprite.showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
+					enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 					return false;
 				}
 			} else {

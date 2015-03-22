@@ -529,7 +529,7 @@ public class GameScene extends PixelScene {
 			scene.fog.updateVisibility( Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped );
 			
 			for (Mob mob : Dungeon.level.mobs) {
-				mob.sprite.visible = Dungeon.visible[mob.pos];
+				mob.getSprite().visible = Dungeon.visible[mob.pos];
 			}
 		}
 	}

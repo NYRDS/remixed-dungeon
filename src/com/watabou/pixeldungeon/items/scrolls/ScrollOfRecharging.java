@@ -56,7 +56,7 @@ public class ScrollOfRecharging extends Scroll {
 	}
 	
 	public static void charge( Hero hero ) {
-		hero.sprite.centerEmitter().burst( EnergyParticle.FACTORY, 15 );
+		hero.getSprite().centerEmitter().burst( EnergyParticle.FACTORY, 15 );
 	}
 	
 	@Override

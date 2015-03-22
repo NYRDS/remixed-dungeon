@@ -136,7 +136,7 @@ public class Plant implements Bundlable {
 				hero.busy();
 				((Seed)detach( hero.belongings.backpack )).onThrow( hero.pos );
 				
-				hero.sprite.operate( hero.pos );
+				hero.getSprite().operate( hero.pos );
 				
 			} else {
 				

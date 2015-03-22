@@ -50,8 +50,8 @@ public class Piercing extends Enchantment {
 				
 				ch.damage( effectiveDamage, this );
 				
-				ch.sprite.bloodBurstA( attacker.sprite.center(), effectiveDamage );
-				ch.sprite.flash();
+				ch.getSprite().bloodBurstA( attacker.getSprite().center(), effectiveDamage );
+				ch.getSprite().flash();
 				
 				pos += d;
 			} while (pos >= 0 && pos < Level.LENGTH);

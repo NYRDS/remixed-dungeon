@@ -61,7 +61,7 @@ public class WandOfFirebolt extends Wand {
 			ch.damage( Random.Int( 1, 8 + level * level ), this );
 			Buff.affect( ch, Burning.class ).reignite( ch );
 			
-			ch.sprite.emitter().burst( FlameParticle.FACTORY, 5 );
+			ch.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
 			
 			if (ch == curUser && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
@@ -71,7 +71,7 @@ public class WandOfFirebolt extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.fire( curUser.sprite.parent, curUser.pos, cell, callback );
+		MagicMissile.fire( curUser.getSprite().parent, curUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

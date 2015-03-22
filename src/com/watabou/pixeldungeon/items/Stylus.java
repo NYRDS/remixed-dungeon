@@ -81,8 +81,8 @@ public class Stylus extends Item {
 	}
 	
 	private void inscribeEffect(){
-		curUser.sprite.operate( curUser.pos );
-		curUser.sprite.centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
+		curUser.getSprite().operate( curUser.pos );
+		curUser.getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
 		Sample.INSTANCE.play( Assets.SND_BURNING );
 		
 		curUser.spend( TIME_TO_INSCRIBE );

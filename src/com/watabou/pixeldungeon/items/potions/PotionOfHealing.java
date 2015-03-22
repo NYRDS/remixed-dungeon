@@ -50,7 +50,7 @@ public class PotionOfHealing extends Potion {
 		Buff.detach( hero, Weakness.class );
 		Buff.detach( hero, Bleeding.class );
 		
-		hero.sprite.emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+		hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
 	}
 	
 	@Override

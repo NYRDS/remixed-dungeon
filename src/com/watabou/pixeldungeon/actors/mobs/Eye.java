@@ -104,7 +104,7 @@ public class Eye extends Mob {
 		}
 		
 		if (rayVisible) {
-			sprite.attack( hitCell );
+			getSprite().attack( hitCell );
 			return false;
 		} else {
 			attack( enemy );
@@ -128,7 +128,7 @@ public class Eye extends Mob {
 				ch.damage( Random.NormalIntRange( 14, 20 ), this );
 				
 				if (Dungeon.visible[pos]) {
-					ch.sprite.flash();
+					ch.getSprite().flash();
 					CellEmitter.center( pos ).burst( PurpleParticle.BURST, Random.IntRange( 1, 2 ) );
 				}
 				
@@ -137,7 +137,7 @@ public class Eye extends Mob {
 					GLog.n( TXT_DEATHGAZE_KILLED, name );
 				}
 			} else {
-				ch.sprite.showStatus( CharSprite.NEUTRAL,  ch.defenseVerb() );
+				ch.getSprite().showStatus( CharSprite.NEUTRAL,  ch.defenseVerb() );
 			}
 		}
 		

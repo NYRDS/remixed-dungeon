@@ -315,6 +315,10 @@ public class Hero extends Char {
 		return dr;
 	}
 	
+	public boolean inFury() {
+		return buff( Fury.class ) != null;
+	}
+		
 	@Override
 	public int damageRoll() {
 		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
@@ -324,7 +328,7 @@ public class Hero extends Char {
 		} else {
 			dmg = STR() > 10 ? Random.IntRange( 1, STR() - 9 ) : 1;
 		}
-		return buff( Fury.class ) != null ? (int)(dmg * 1.5f) : dmg;
+		return inFury() ? (int)(dmg * 1.5f) : dmg;
 	}
 	
 	@Override
@@ -338,7 +342,7 @@ public class Hero extends Char {
 		} else {
 			
 			float speed = super.speed();
-			return ((HeroSprite)sprite).sprint( subClass == HeroSubClass.FREERUNNER && !isStarving() ) ? 1.6f * speed : speed;
+			return ((HeroSprite)getSprite()).sprint( subClass == HeroSubClass.FREERUNNER && !isStarving() ) ? 1.6f * speed : speed;
 			
 		}
 	}
@@ -465,7 +469,7 @@ public class Hero extends Char {
 	}
 	
 	private void ready() {
-		sprite.idle();
+		getSprite().idle();
 		curAction = null;
 		ready = true;
 		
@@ -507,7 +511,7 @@ public class Hero extends Char {
 		if (Level.adjacent( pos, npc.pos )) {
 			
 			ready();
-			sprite.turnTo( pos, npc.pos );
+			getSprite().turnTo( pos, npc.pos );
 			npc.interact();
 			return false;
 			
@@ -644,7 +648,7 @@ public class Hero extends Char {
 				}
 				
 				spend( Key.TIME_TO_UNLOCK );
-				sprite.operate( dst );
+				getSprite().operate( dst );
 				
 			} else {
 				ready();
@@ -682,7 +686,7 @@ public class Hero extends Char {
 			if (theKey != null) {
 				
 				spend( Key.TIME_TO_UNLOCK );
-				sprite.operate( doorCell );
+				getSprite().operate( doorCell );
 				
 				Sample.INSTANCE.play( Assets.SND_UNLOCK );
 				
@@ -776,7 +780,7 @@ public class Hero extends Char {
 		if (Level.adjacent( pos, enemy.pos ) && enemy.isAlive() && !pacified) {
 			
 			spend( attackDelay() );
-			sprite.attack( enemy.pos );
+			getSprite().attack( enemy.pos );
 			
 			return false;
 			
@@ -797,7 +801,7 @@ public class Hero extends Char {
 	public void rest( boolean tillHealthy ) {
 		spendAndNext( TIME_TO_REST );
 		if (!tillHealthy) {
-			sprite.showStatus( CharSprite.DEFAULT, TXT_WAIT );
+			getSprite().showStatus( CharSprite.DEFAULT, TXT_WAIT );
 		}
 		restoreHealth = tillHealthy;
 	}
@@ -870,6 +874,7 @@ public class Hero extends Char {
 		interrupt();
 		
 		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
+			((HeroSprite)getSprite()).updateState(this);
 			Buff.affect( this, Fury.class );
 		}
 	}
@@ -949,7 +954,7 @@ public class Hero extends Char {
 			int oldPos = pos;
 			
 			move( step );
-			sprite.move( oldPos, pos );
+			getSprite().move( oldPos, pos );
 			
 			if (wallWalkerBuff != null){
 				int dmg = HP/2 > 2 ? HP/2 : 2; 
@@ -1051,7 +1056,7 @@ public class Hero extends Char {
 		if (levelUp) {
 			
 			GLog.p( TXT_NEW_LEVEL, lvl );
-			sprite.showStatus( CharSprite.POSITIVE, TXT_LEVEL_UP );
+			getSprite().showStatus( CharSprite.POSITIVE, TXT_LEVEL_UP );
 			Sample.INSTANCE.play( Assets.SND_LEVELUP );
 			
 			Badges.validateLevelReached();
@@ -1062,7 +1067,7 @@ public class Hero extends Char {
 			int value = Math.min( HT - HP, 1 + (Dungeon.depth - 1) / 5 );
 			if (value > 0) {
 				HP += value;
-				sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 			
 			((Hunger)buff( Hunger.class )).satisfy( 10 );
@@ -1088,7 +1093,7 @@ public class Hero extends Char {
 	public void add( Buff buff ) {
 		super.add( buff );
 		
-		if (sprite != null) {
+		if (getSprite() != null) {
 			if (buff instanceof Burning) {
 				GLog.w(Game.getVar(R.string.Hero_StaBurning));
 				interrupt();
@@ -1108,7 +1113,7 @@ public class Hero extends Char {
 				GLog.w(Game.getVar(R.string.Hero_StaBlindness));
 			} else if (buff instanceof Fury) {
 				GLog.w(Game.getVar(R.string.Hero_StaFury));
-				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Hero_StaFurious));
+				getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Hero_StaFurious));
 			} else if (buff instanceof Charm) {
 				GLog.w(Game.getVar(R.string.Hero_StaCharm));
 			}  else if (buff instanceof Cripple) {
@@ -1121,7 +1126,7 @@ public class Hero extends Char {
 			}
 			
 			else if (buff instanceof Light) {
-				sprite.add( CharSprite.State.ILLUMINATED );
+				getSprite().add( CharSprite.State.ILLUMINATED );
 			}
 		}
 		
@@ -1133,7 +1138,9 @@ public class Hero extends Char {
 		super.remove( buff );
 		
 		if (buff instanceof Light) {
-			sprite.remove( CharSprite.State.ILLUMINATED );
+			getSprite().remove( CharSprite.State.ILLUMINATED );
+		} else if (buff instanceof Fury) {
+			((HeroSprite)getSprite()).updateState(this);
 		}
 		
 		BuffIndicator.refreshHero();
@@ -1155,7 +1162,7 @@ public class Hero extends Char {
 		
 		DewVial.autoDrink( this );
 		if (isAlive()) {
-			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( sprite, 2f ) ;
+			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( getSprite(), 2f ) ;
 			return;
 		}
 		
@@ -1330,7 +1337,7 @@ public class Hero extends Char {
 				if (Dungeon.visible[p]) {
 					
 					if (intentional) {
-						sprite.parent.addToBack( new CheckedCell( p ) );
+						getSprite().parent.addToBack( new CheckedCell( p ) );
 					}
 					
 					if (Level.secret[p] && (intentional || Random.Float() < level)) {
@@ -1353,8 +1360,8 @@ public class Hero extends Char {
 
 		
 		if (intentional) {
-			sprite.showStatus( CharSprite.DEFAULT, TXT_SEARCH );
-			sprite.operate( pos );
+			getSprite().showStatus( CharSprite.DEFAULT, TXT_SEARCH );
+			getSprite().operate( pos );
 			if (smthFound) {
 				spendAndNext( Random.Float() < level ? TIME_TO_SEARCH : TIME_TO_SEARCH * 2 );
 			} else {

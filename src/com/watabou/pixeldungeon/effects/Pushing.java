@@ -33,7 +33,7 @@ public class Pushing extends Actor {
 	private Effect effect;
 	
 	public Pushing( Char ch, int from, int to ) {
-		sprite = ch.sprite;
+		sprite = ch.getSprite();
 		this.from = from;
 		this.to = to;
 	}

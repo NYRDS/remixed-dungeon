@@ -303,7 +303,7 @@ public class Item implements Bundlable {
 	}
 	
 	public static void evoke( Hero hero ) {
-		hero.sprite.emitter().burst( Speck.factory( Speck.EVOKE ), 5 );
+		hero.getSprite().emitter().burst( Speck.factory( Speck.EVOKE ), 5 );
 	}
 	
 	@Override
@@ -446,7 +446,7 @@ public class Item implements Bundlable {
 	public void cast( final Hero user, int dst ) {
 		
 		final int cell = Ballistica.cast( user.pos, dst, false, true );
-		user.sprite.zap( cell );
+		user.getSprite().zap( cell );
 		user.busy();
 		
 		Char enemy = Actor.findChar( cell );
@@ -463,7 +463,7 @@ public class Item implements Bundlable {
 		}
 		final float finalDelay = delay;
 		
-		((MissileSprite)user.sprite.parent.recycle( MissileSprite.class )).
+		((MissileSprite)user.getSprite().parent.recycle( MissileSprite.class )).
 			reset( user.pos, cell, this, new Callback() {			
 				@Override
 				public void call() {

@@ -43,8 +43,8 @@ public class Leech extends Weapon.Enchantment {
 		if (effValue > 0) {
 		
 			attacker.HP += effValue;
-			attacker.sprite.emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 1 );
-			attacker.sprite.showStatus( CharSprite.POSITIVE, Integer.toString( effValue ) );
+			attacker.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 1 );
+			attacker.getSprite().showStatus( CharSprite.POSITIVE, Integer.toString( effValue ) );
 			
 			return true;
 			

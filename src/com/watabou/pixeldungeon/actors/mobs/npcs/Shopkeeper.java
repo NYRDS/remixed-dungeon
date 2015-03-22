@@ -41,7 +41,7 @@ public class Shopkeeper extends NPC {
 		
 		throwItem();
 		
-		sprite.turnTo( pos, Dungeon.hero.pos );
+		getSprite().turnTo( pos, Dungeon.hero.pos );
 		spend( TICK );
 		return true;
 	}
@@ -66,7 +66,7 @@ public class Shopkeeper extends NPC {
 		
 		destroy();
 		
-		sprite.killAndErase();
+		getSprite().killAndErase();
 		CellEmitter.get( pos ).burst( ElmoParticle.FACTORY, 6 );
 	}
 	

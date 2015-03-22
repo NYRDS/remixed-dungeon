@@ -93,7 +93,7 @@ public class Sungrass extends Plant {
 				detach();
 			} else {
 				target.HP = Math.min( target.HT, target.HP + target.HT / 10 );
-				target.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				target.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 			spend( STEP );
 			return true;

@@ -50,7 +50,7 @@ public class AntiEntropy extends Glyph {
 			CellEmitter.get( attacker.pos ).start( SnowParticle.FACTORY, 0.2f, 6 );
 			
 			Buff.affect( defender, Burning.class ).reignite( defender );
-			defender.sprite.emitter().burst( FlameParticle.FACTORY, 5 );
+			defender.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
 
 		}
 		

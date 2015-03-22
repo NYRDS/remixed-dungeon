@@ -153,7 +153,7 @@ public abstract class Mob extends Char {
 		boolean justAlerted = alerted;
 		alerted = false;
 
-		sprite.hideAlert();
+		getSprite().hideAlert();
 
 		if (paralysed) {
 			enemySeen = false;
@@ -199,12 +199,12 @@ public abstract class Mob extends Char {
 
 	protected boolean moveSprite(int from, int to) {
 
-		if (sprite.isVisible()
+		if (getSprite().isVisible()
 				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
-			sprite.move(from, to);
+			getSprite().move(from, to);
 			return true;
 		} else {
-			sprite.place(to);
+			getSprite().place(to);
 			return true;
 		}
 	}
@@ -213,15 +213,15 @@ public abstract class Mob extends Char {
 	public void add(Buff buff) {
 		super.add(buff);
 		if (buff instanceof Amok) {
-			if (sprite != null) {
-				sprite.showStatus(CharSprite.NEGATIVE, TXT_RAGE);
+			if (getSprite() != null) {
+				getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
 			}
 			state = HUNTING;
 		} else if (buff instanceof Terror) {
 			state = FLEEING;
 		} else if (buff instanceof Sleep) {
-			if (sprite != null) {
-				new Flare(4, 32).color(0x44ffff, true).show(sprite, 2f);
+			if (getSprite() != null) {
+				new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
 			}
 			state = SLEEPEING;
 			postpone(Sleep.SWS);
@@ -232,7 +232,7 @@ public abstract class Mob extends Char {
 	public void remove(Buff buff) {
 		super.remove(buff);
 		if (buff instanceof Terror) {
-			sprite.showStatus(CharSprite.NEGATIVE, TXT_RAGE);
+			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
 			state = HUNTING;
 		}
 	}
@@ -296,7 +296,7 @@ public abstract class Mob extends Char {
 		boolean visible = Dungeon.visible[pos];
 
 		if (visible) {
-			sprite.attack(enemy.pos);
+			getSprite().attack(enemy.pos);
 		} else {
 			attack(enemy);
 		}
@@ -363,7 +363,7 @@ public abstract class Mob extends Char {
 			}
 
 			if (Dungeon.hero.lvl <= maxLvl && EXP > 0) {
-				Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, TXT_EXP,
+				Dungeon.hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
 						EXP);
 				Dungeon.hero.earnExp(EXP);
 			}
@@ -427,7 +427,7 @@ public abstract class Mob extends Char {
 	}
 
 	public void notice() {
-		sprite.showAlert();
+		getSprite().showAlert();
 	}
 
 	public void yell(String str) {

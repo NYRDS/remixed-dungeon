@@ -58,12 +58,12 @@ public class Torch extends Item {
 			hero.spend( TIME_TO_LIGHT );
 			hero.busy();
 			
-			hero.sprite.operate( hero.pos );
+			hero.getSprite().operate( hero.pos );
 			
 			detach( hero.belongings.backpack );
 			Buff.affect( hero, Light.class, Light.DURATION );
 			
-			Emitter emitter = hero.sprite.centerEmitter();
+			Emitter emitter = hero.getSprite().centerEmitter();
 			emitter.start( FlameParticle.FACTORY, 0.2f, 3 );
 			
 		} else {

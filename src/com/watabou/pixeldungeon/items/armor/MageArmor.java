@@ -68,10 +68,10 @@ public class MageArmor extends ClassArmor {
 		curUser.HP -= (curUser.HP / 3);
 		
 		curUser.spend( Actor.TICK );
-		curUser.sprite.operate( curUser.pos );
+		curUser.getSprite().operate( curUser.pos );
 		curUser.busy();
 		
-		curUser.sprite.centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
+		curUser.getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	

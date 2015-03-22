@@ -91,7 +91,7 @@ public class Pickaxe extends Weapon {
 					hero.spend( TIME_TO_MINE );
 					hero.busy();
 					
-					hero.sprite.attack( pos, new Callback() {
+					hero.getSprite().attack( pos, new Callback() {
 						
 						@Override
 						public void call() {

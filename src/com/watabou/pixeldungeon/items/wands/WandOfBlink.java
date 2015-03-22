@@ -43,31 +43,31 @@ public class WandOfBlink extends Wand {
 			cell = Ballistica.trace[Ballistica.distance - 2];
 		}
 		
-		curUser.sprite.visible = true;
+		curUser.getSprite().visible = true;
 		appear( Dungeon.hero, cell );
 		Dungeon.observe();
 	}
 	
 	@Override
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.whiteLight( curUser.sprite.parent, curUser.pos, cell, callback );
+		MagicMissile.whiteLight( curUser.getSprite().parent, curUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
-		curUser.sprite.visible = false;
+		curUser.getSprite().visible = false;
 	}
 	
 	public static void appear( Char ch, int pos ) {
 		
-		ch.sprite.interruptMotion();
+		ch.getSprite().interruptMotion();
 		
 		ch.move( pos );
-		ch.sprite.place( pos );
+		ch.getSprite().place( pos );
 		
 		if (ch.invisible == 0) {
-			ch.sprite.alpha( 0 );
-			ch.sprite.parent.add( new AlphaTweener( ch.sprite, 1, 0.4f ) );
+			ch.getSprite().alpha( 0 );
+			ch.getSprite().parent.add( new AlphaTweener( ch.getSprite(), 1, 0.4f ) );
 		}
 		
-		ch.sprite.emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
+		ch.getSprite().emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 		Sample.INSTANCE.play( Assets.SND_TELEPORT );
 	}
 	

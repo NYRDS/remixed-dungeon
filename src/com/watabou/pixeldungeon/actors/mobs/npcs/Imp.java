@@ -98,7 +98,7 @@ public class Imp extends NPC {
 	@Override
 	public void interact() {
 		
-		sprite.turnTo( pos, Dungeon.hero.pos );
+		getSprite().turnTo( pos, Dungeon.hero.pos );
 		if (Quest.given) {
 			
 			DwarfToken tokens = Dungeon.hero.belongings.getItem( DwarfToken.class );
@@ -127,7 +127,7 @@ public class Imp extends NPC {
 		yell( Utils.format( TXT_CYA, Dungeon.hero.className() ) );
 		
 		destroy();
-		sprite.die();
+		getSprite().die();
 	}
 		
 	public static class Quest {

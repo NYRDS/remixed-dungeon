@@ -66,7 +66,7 @@ public class WandOfAvalanche extends Wand {
 				Char ch = Actor.findChar( i ); 
 				if (ch != null) {
 					
-					ch.sprite.flash();
+					ch.getSprite().flash();
 					
 					ch.damage( Random.Int( 2, 6 + (size - d) * 2 ), this );
 					
@@ -87,7 +87,7 @@ public class WandOfAvalanche extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.earth( curUser.sprite.parent, curUser.pos, cell, callback );
+		MagicMissile.earth( curUser.getSprite().parent, curUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

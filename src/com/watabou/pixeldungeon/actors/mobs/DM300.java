@@ -89,7 +89,7 @@ public class DM300 extends Mob {
 		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && HP < HT) {
 			
 			HP += Random.Int( 1, HT - HP );
-			sprite.emitter().burst( ElmoParticle.FACTORY, 5 );
+			getSprite().emitter().burst( ElmoParticle.FACTORY, 5 );
 			
 			if (Dungeon.visible[step] && Dungeon.hero.isAlive()) {
 				GLog.n(Game.getVar(R.string.DM300_Info1));

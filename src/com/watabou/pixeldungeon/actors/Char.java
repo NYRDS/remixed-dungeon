@@ -73,7 +73,7 @@ public abstract class Char extends Actor {
 	
 	public int pos = 0;
 	
-	public CharSprite sprite;
+	private CharSprite sprite;
 
 	public String name            = Game.getVar(R.string.Char_Name);
 	public String name_objective  = Game.getVar(R.string.Char_Name_Objective);
@@ -179,8 +179,8 @@ public abstract class Char extends Actor {
 				Sample.INSTANCE.play( Assets.SND_HIT, 1, 1, Random.Float( 0.8f, 1.25f ) );
 			}
 			
-			enemy.sprite.bloodBurstA( sprite.center(), effectiveDamage );
-			enemy.sprite.flash();
+			enemy.getSprite().bloodBurstA( getSprite().center(), effectiveDamage );
+			enemy.getSprite().flash();
 			
 			if (!enemy.isAlive() && visibleFight) {
 				if (enemy == Dungeon.hero) {
@@ -212,7 +212,7 @@ public abstract class Char extends Actor {
 			
 			if (visibleFight) {
 				String defense = enemy.defenseVerb();
-				enemy.sprite.showStatus( CharSprite.NEUTRAL, defense );
+				enemy.getSprite().showStatus( CharSprite.NEUTRAL, defense );
 				if (this == Dungeon.hero) {
 					GLog.i( TXT_YOU_MISSED, enemy.name, defense );
 				} else {
@@ -294,7 +294,7 @@ public abstract class Char extends Actor {
 		
 		HP -= dmg;
 		if (dmg > 0 || src instanceof Char) {
-			sprite.showStatus( HP > HT / 2 ? 
+			getSprite().showStatus( HP > HT / 2 ? 
 				CharSprite.WARNING : 
 				CharSprite.NEGATIVE,
 				Integer.toString( dmg ) );
@@ -312,7 +312,7 @@ public abstract class Char extends Actor {
 	
 	public void die( Object src ) {
 		destroy();
-		sprite.die();
+		getSprite().die();
 	}
 	
 	public boolean isAlive() {
@@ -364,65 +364,65 @@ public abstract class Char extends Actor {
 		buffs.add( buff );
 		Actor.add( buff );
 		
-		if (sprite != null) {
+		if (getSprite() != null) {
 			if (buff instanceof Poison) {
 				
 				CellEmitter.center( pos ).burst( PoisonParticle.SPLASH, 5 );
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
 				
 			} else if (buff instanceof Amok) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
 
 			} else if (buff instanceof Slow) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaSlowed));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaSlowed));
 				
 			} else if (buff instanceof MindVision) {
 				
-				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
-				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
+				getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
+				getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
 				
 			} else if (buff instanceof Paralysis) {
 
-				sprite.add( CharSprite.State.PARALYSED );
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
+				getSprite().add( CharSprite.State.PARALYSED );
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
 				
 			} else if (buff instanceof Terror) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaFrightened));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaFrightened));
 				
 			} else if (buff instanceof Roots) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
 				
 			} else if (buff instanceof Cripple) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaCrippled));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaCrippled));
 				
 			} else if (buff instanceof Bleeding) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
 				
 			} else if (buff instanceof Vertigo) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaDizzy));
+				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaDizzy));
 				
 			} else if (buff instanceof Sleep) {
-				sprite.idle();
+				getSprite().idle();
 			}
 			
 			  else if (buff instanceof Burning) {
-				sprite.add( CharSprite.State.BURNING );
+				getSprite().add( CharSprite.State.BURNING );
 			} else if (buff instanceof Levitation) {
-				sprite.add( CharSprite.State.LEVITATING );
+				getSprite().add( CharSprite.State.LEVITATING );
 			} else if (buff instanceof Frost) {
-				sprite.add( CharSprite.State.FROZEN );
+				getSprite().add( CharSprite.State.FROZEN );
 			} else if (buff instanceof Invisibility) {
 				if (!(buff instanceof Shadows)) {
-					sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
+					getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
 				}
-				sprite.add( CharSprite.State.INVISIBLE );
+				getSprite().add( CharSprite.State.INVISIBLE );
 			}
 		}
 	}
@@ -433,15 +433,15 @@ public abstract class Char extends Actor {
 		Actor.remove( buff );
 		
 		if (buff instanceof Burning) {
-			sprite.remove( CharSprite.State.BURNING );
+			getSprite().remove( CharSprite.State.BURNING );
 		} else if (buff instanceof Levitation) {
-			sprite.remove( CharSprite.State.LEVITATING );
+			getSprite().remove( CharSprite.State.LEVITATING );
 		} else if (buff instanceof Invisibility && invisible <= 0) {
-			sprite.remove( CharSprite.State.INVISIBLE );
+			getSprite().remove( CharSprite.State.INVISIBLE );
 		} else if (buff instanceof Paralysis) {
-			sprite.remove( CharSprite.State.PARALYSED );
+			getSprite().remove( CharSprite.State.PARALYSED );
 		} else if (buff instanceof Frost) {
-			sprite.remove( CharSprite.State.FROZEN );
+			getSprite().remove( CharSprite.State.FROZEN );
 		} 
 	}
 	
@@ -461,17 +461,17 @@ public abstract class Char extends Actor {
 	public void updateSpriteState() {
 		for (Buff buff:buffs) {
 			if (buff instanceof Burning) {
-				sprite.add( CharSprite.State.BURNING );
+				getSprite().add( CharSprite.State.BURNING );
 			} else if (buff instanceof Levitation) {
-				sprite.add( CharSprite.State.LEVITATING );
+				getSprite().add( CharSprite.State.LEVITATING );
 			} else if (buff instanceof Invisibility) {
-				sprite.add( CharSprite.State.INVISIBLE );
+				getSprite().add( CharSprite.State.INVISIBLE );
 			} else if (buff instanceof Paralysis) {
-				sprite.add( CharSprite.State.PARALYSED );
+				getSprite().add( CharSprite.State.PARALYSED );
 			} else if (buff instanceof Frost) {
-				sprite.add( CharSprite.State.FROZEN );
+				getSprite().add( CharSprite.State.FROZEN );
 			} else if (buff instanceof Light) {
-				sprite.add( CharSprite.State.ILLUMINATED );
+				getSprite().add( CharSprite.State.ILLUMINATED );
 			}
 		}
 	}
@@ -509,7 +509,7 @@ public abstract class Char extends Actor {
 		}
 		
 		if (this != Dungeon.hero) {
-			sprite.visible = Dungeon.visible[pos];
+			getSprite().visible = Dungeon.visible[pos];
 		}
 	}
 	
@@ -537,5 +537,13 @@ public abstract class Char extends Actor {
 	
 	public HashSet<Class<?>> immunities() {
 		return EMPTY;
+	}
+
+	public CharSprite getSprite() {
+		return sprite;
+	}
+
+	public void setSprite(CharSprite sprite) {
+		this.sprite = sprite;
 	}
 }

@@ -71,7 +71,7 @@ public class HuntressArmor extends ClassArmor {
 					}
 				};
 				
-				((MissileSprite)curUser.sprite.parent.recycle( MissileSprite.class )).
+				((MissileSprite)curUser.getSprite().parent.recycle( MissileSprite.class )).
 					reset( curUser.pos, mob.pos, proto, callback );
 				
 				targets.put( callback, mob );
@@ -85,7 +85,7 @@ public class HuntressArmor extends ClassArmor {
 		
 		curUser.HP -= (curUser.HP / 3);
 		
-		curUser.sprite.zap( curUser.pos );
+		curUser.getSprite().zap( curUser.pos );
 		curUser.busy();
 	}
 	

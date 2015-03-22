@@ -66,8 +66,8 @@ public class WandOfLightning extends Wand {
 		affected.add( ch );
 		ch.damage( Level.water[ch.pos] && !ch.flying ? (int)(damage * 2) : damage, LightningTrap.LIGHTNING  );
 		
-		ch.sprite.centerEmitter().burst( SparkParticle.FACTORY, 3 );
-		ch.sprite.flash();
+		ch.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
+		ch.getSprite().flash();
 		
 		points[nPoints++] = ch.pos;
 		
@@ -103,7 +103,7 @@ public class WandOfLightning extends Wand {
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
 			
 		}
-		curUser.sprite.parent.add( new Lightning( points, nPoints, callback ) );
+		curUser.getSprite().parent.add( new Lightning( points, nPoints, callback ) );
 	}
 	
 	@Override

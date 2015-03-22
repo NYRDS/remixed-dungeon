@@ -63,7 +63,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void interact() {
-		sprite.turnTo( pos, Dungeon.hero.pos );
+		getSprite().turnTo( pos, Dungeon.hero.pos );
 		if (state == SLEEPEING) {
 			notice();
 			yell(Game.getVar(R.string.RatKing_Info1));

@@ -55,8 +55,8 @@ public class HealthIndicator extends Component {
 	public void update() {
 		super.update();
 		
-		if (target != null && target.isAlive() && target.sprite.visible) {
-			CharSprite sprite = target.sprite;
+		if (target != null && target.isAlive() && target.getSprite().visible) {
+			CharSprite sprite = target.getSprite();
 			bg.scale.x = sprite.width;
 			level.scale.x = sprite.width * target.HP / target.HT;
 			bg.x = level.x = sprite.x;

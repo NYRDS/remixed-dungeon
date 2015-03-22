@@ -150,7 +150,7 @@ public class Mimic extends Mob {
 		m.state = m.HUNTING;
 		GameScene.add( m, 1 );
 		
-		m.sprite.turnTo( pos, Dungeon.hero.pos );
+		m.getSprite().turnTo( pos, Dungeon.hero.pos );
 		
 		if (Dungeon.visible[m.pos]) {
 			CellEmitter.get( pos ).burst( Speck.factory( Speck.STAR ), 10 );

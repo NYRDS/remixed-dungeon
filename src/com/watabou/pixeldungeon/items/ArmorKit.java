@@ -84,7 +84,7 @@ public class ArmorKit extends Item {
 		
 		detach( curUser.belongings.backpack );
 		
-		curUser.sprite.centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
+		curUser.getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
 		curUser.spend( TIME_TO_UPGRADE );
 		curUser.busy();
 		
@@ -94,7 +94,7 @@ public class ArmorKit extends Item {
 		if (curUser.belongings.armor == armor) {
 			
 			curUser.belongings.armor = classArmor;
-			((HeroSprite)curUser.sprite).updateArmor();
+			((HeroSprite)curUser.getSprite()).updateArmor();
 			
 		} else {
 			
@@ -103,7 +103,7 @@ public class ArmorKit extends Item {
 			
 		}
 		
-		curUser.sprite.operate( curUser.pos );
+		curUser.getSprite().operate( curUser.pos );
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	

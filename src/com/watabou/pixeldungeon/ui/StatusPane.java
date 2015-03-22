@@ -72,7 +72,7 @@ public class StatusPane extends Component {
 		add( new TouchArea( 0, 1, 30, 30 ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Image sprite = Dungeon.hero.sprite;
+				Image sprite = Dungeon.hero.getSprite();
 				if (!sprite.isVisible()) {
 					Camera.main.focusOn( sprite );
 				}

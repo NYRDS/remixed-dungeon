@@ -55,10 +55,10 @@ public class PotionOfInvisibility extends Potion {
 	}
 	
 	public static void melt( Char ch ) {
-		if (ch.sprite.parent != null) {
-			ch.sprite.parent.add( new AlphaTweener( ch.sprite, ALPHA, 0.4f ) );
+		if (ch.getSprite().parent != null) {
+			ch.getSprite().parent.add( new AlphaTweener( ch.getSprite(), ALPHA, 0.4f ) );
 		} else {
-			ch.sprite.alpha( ALPHA );
+			ch.getSprite().alpha( ALPHA );
 		}
 	}
 }

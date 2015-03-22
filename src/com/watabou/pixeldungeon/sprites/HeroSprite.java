@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import android.graphics.RectF;
+
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
@@ -28,6 +29,7 @@ import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
@@ -56,6 +58,17 @@ public class HeroSprite extends CharSprite {
 		updateArmor();
 		
 		idle();
+	}
+	
+	public void updateState(Hero hero) {
+		if(hero.className() == HeroSubClass.BERSERKER.name()){
+			if(hero.inFury()) {
+				texture(Assets.WARRIOR_BERSERK);
+			} else {
+				texture(Assets.WARRIOR);
+			}
+			updateArmor();
+		}
 	}
 	
 	public void updateArmor() {

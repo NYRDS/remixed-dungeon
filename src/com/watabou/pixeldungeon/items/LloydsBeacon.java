@@ -118,7 +118,7 @@ public class LloydsBeacon extends Item {
 			hero.spend( LloydsBeacon.TIME_TO_USE );
 			hero.busy();
 			
-			hero.sprite.operate( hero.pos );
+			hero.getSprite().operate( hero.pos );
 			Sample.INSTANCE.play( Assets.SND_BEACON );
 			
 			GLog.i( TXT_RETURN );

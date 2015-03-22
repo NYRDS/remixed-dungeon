@@ -79,7 +79,7 @@ public class Chasm {
 			}
 			Game.switchScene( InterlevelScene.class );
 		} else {
-			Dungeon.hero.sprite.visible = false;
+			Dungeon.hero.getSprite().visible = false;
 		}
 	}
 	
@@ -87,7 +87,7 @@ public class Chasm {
 		
 		Hero hero = Dungeon.hero;
 		
-		hero.sprite.burst( hero.sprite.blood(), 10 );
+		hero.getSprite().burst( hero.getSprite().blood(), 10 );
 		Camera.main.shake( 4, 0.2f );
 		
 		Buff.prolong( hero, Cripple.class, Cripple.DURATION );
@@ -106,6 +106,6 @@ public class Chasm {
 		// Destroy instead of kill to prevent dropping loot
 		mob.destroy();
 		
-		((MobSprite)mob.sprite).fall();
+		((MobSprite)mob.getSprite()).fall();
 	}
 }

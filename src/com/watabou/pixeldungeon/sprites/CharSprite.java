@@ -93,7 +93,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	
 	public void link( Char ch ) {
 		this.ch = ch;
-		ch.sprite = this;
+		ch.setSprite(this);
 		
 		place( ch.pos );
 		turnTo( ch.pos, Random.Int( Level.LENGTH ) );

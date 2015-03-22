@@ -51,7 +51,7 @@ public class ScrollOfChallenge extends Scroll {
 		GLog.w(Game.getVar(R.string.ScrollOfChallenge_Info1));
 		setKnown();
 		
-		curUser.sprite.centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );		
+		curUser.getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );		
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 		Invisibility.dispel();
 		

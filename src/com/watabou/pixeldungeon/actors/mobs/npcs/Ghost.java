@@ -110,7 +110,7 @@ public class Ghost extends NPC {
 	
 	@Override
 	public void interact() {
-		sprite.turnTo( pos, Dungeon.hero.pos );
+		getSprite().turnTo( pos, Dungeon.hero.pos );
 		
 		Sample.INSTANCE.play( Assets.SND_GHOST );
 		
@@ -137,8 +137,8 @@ public class Ghost extends NPC {
 					
 					CellEmitter.get( pos ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 					pos = newPos;
-					sprite.place( pos );
-					sprite.visible = Dungeon.visible[pos];
+					getSprite().place( pos );
+					getSprite().visible = Dungeon.visible[pos];
 				}
 			}
 			

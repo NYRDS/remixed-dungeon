@@ -35,7 +35,7 @@ public class ScrollOfTerror extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		new Flare( 5, 32 ).color( 0xFF0000, true ).show( curUser.sprite, 2f );
+		new Flare( 5, 32 ).color( 0xFF0000, true ).show( curUser.getSprite(), 2f );
 		Sample.INSTANCE.play( Assets.SND_READ );
 		Invisibility.dispel();
 		

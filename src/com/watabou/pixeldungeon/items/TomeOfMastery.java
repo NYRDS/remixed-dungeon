@@ -125,11 +125,11 @@ public class TomeOfMastery extends Item {
 		
 		curUser.subClass = way;
 		
-		curUser.sprite.operate( curUser.pos );
+		curUser.getSprite().operate( curUser.pos );
 		Sample.INSTANCE.play( Assets.SND_MASTERY );
 		
 		SpellSprite.show( curUser, SpellSprite.MASTERY );
-		curUser.sprite.emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
+		curUser.getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		
 		if (way == HeroSubClass.BERSERKER && curUser.HP <= curUser.HT * Fury.LEVEL) {

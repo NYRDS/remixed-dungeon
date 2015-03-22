@@ -59,8 +59,8 @@ public class ImpShopkeeper extends Shopkeeper {
 		
 		destroy();
 		
-		sprite.emitter().burst( Speck.factory( Speck.WOOL ), 15 );
-		sprite.killAndErase();
+		getSprite().emitter().burst( Speck.factory( Speck.WOOL ), 15 );
+		getSprite().killAndErase();
 	}
 	
 }

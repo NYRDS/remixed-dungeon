@@ -114,7 +114,7 @@ public class Heap implements Bundlable {
 			for (Item item : items) {
 				if (item.cursed) {
 					if (Wraith.spawnAt( pos ) == null) {
-						hero.sprite.emitter().burst( ShadowParticle.CURSE, 6 );
+						hero.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
 						hero.damage( hero.HP / 2, this );
 					}
 					Sample.INSTANCE.play( Assets.SND_CURSED );
@@ -212,7 +212,7 @@ public class Heap implements Bundlable {
 			Mimic m = Mimic.spawnAt( pos, items );
 			if (m != null) {
 				Buff.affect( m, Burning.class ).reignite( m );
-				m.sprite.emitter().burst( FlameParticle.FACTORY, 5 );
+				m.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
 				destroy();
 			}
 		}

@@ -66,7 +66,7 @@ abstract public class Food extends Item {
 			case WARRIOR:
 				if (hero.HP < hero.HT) {
 					hero.HP = Math.min( hero.HP + 5, hero.HT );
-					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 				}
 				break;
 			case MAGE:
@@ -78,7 +78,7 @@ abstract public class Food extends Item {
 				break;
 			}
 			
-			hero.sprite.operate( hero.pos );
+			hero.getSprite().operate( hero.pos );
 			hero.busy();
 			SpellSprite.show( hero, SpellSprite.FOOD );
 			Sample.INSTANCE.play( Assets.SND_EAT );

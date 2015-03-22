@@ -54,8 +54,8 @@ public class Metabolism extends Glyph {
 					BuffIndicator.refreshHero();
 					
 					defender.HP += healing;
-					defender.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-					defender.sprite.showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
+					defender.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+					defender.getSprite().showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
 				}
 			}
 

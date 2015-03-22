@@ -58,11 +58,11 @@ public class LightningTrap {
 			
 			points[0] = pos - Level.WIDTH;
 			points[1] = pos + Level.WIDTH;
-			ch.sprite.parent.add( new Lightning( points, 2, null ) );
+			ch.getSprite().parent.add( new Lightning( points, 2, null ) );
 			
 			points[0] = pos - 1;
 			points[1] = pos + 1;
-			ch.sprite.parent.add( new Lightning( points, 2, null ) );
+			ch.getSprite().parent.add( new Lightning( points, 2, null ) );
 		}
 		
 		CellEmitter.center( pos ).burst( SparkParticle.FACTORY, Random.IntRange( 3, 4 ) );

@@ -96,7 +96,7 @@ public class Weightstone extends Item {
 			GLog.p( TXT_ACCURATE, weapon.name() );
 		}
 		
-		curUser.sprite.operate( curUser.pos );
+		curUser.getSprite().operate( curUser.pos );
 		Sample.INSTANCE.play( Assets.SND_MISS );
 		
 		curUser.spend( TIME_TO_APPLY );

@@ -47,10 +47,10 @@ public class Affection extends Glyph {
 			int duration = Random.IntRange( 2, 5 );
 			
 			Buff.affect( attacker, Charm.class, Charm.durationFactor( attacker ) * duration );
-			attacker.sprite.centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
+			attacker.getSprite().centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
 			
 			Buff.affect( defender, Charm.class, Random.Float( Charm.durationFactor( defender ) * duration / 2, duration ) );
-			defender.sprite.centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
+			defender.getSprite().centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
 		}
 		
 		return damage;

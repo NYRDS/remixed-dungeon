@@ -73,7 +73,7 @@ public class WandOfMagicMissile extends Wand {
 			
 			ch.damage( Random.Int( 1, 6 + level * 2 ), this );
 			
-			ch.sprite.burst( 0xFF99CCFF, level / 2 + 2 );
+			ch.getSprite().burst( 0xFF99CCFF, level / 2 + 2 );
 			
 			if (ch == curUser && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );

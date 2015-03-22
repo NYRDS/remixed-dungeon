@@ -150,7 +150,7 @@ public class King extends Mob {
 
 		nextPedestal = !nextPedestal;
 		
-		sprite.centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );		
+		getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );		
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 		
 		boolean[] passable = Level.passable.clone();
@@ -177,7 +177,7 @@ public class King extends Mob {
 						GameScene.add( undead );
 						
 						WandOfBlink.appear( undead, j );
-						new Flare( 3, 32 ).color( 0x000000, false ).show( undead.sprite, 2f ) ;
+						new Flare( 3, 32 ).color( 0x000000, false ).show( undead.getSprite(), 2f ) ;
 						
 						PathFinder.distance[j] = Integer.MAX_VALUE;
 						

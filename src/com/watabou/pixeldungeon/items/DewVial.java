@@ -96,8 +96,8 @@ public class DewVial extends Item {
 				int effect = Math.min( hero.HT - hero.HP, value );
 				if (effect > 0) {
 					hero.HP += effect;
-					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), volume > 5 ? 2 : 1 );
-					hero.sprite.showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
+					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), volume > 5 ? 2 : 1 );
+					hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				}
 				
 				volume = 0;
@@ -106,7 +106,7 @@ public class DewVial extends Item {
 				hero.busy();
 				
 				Sample.INSTANCE.play( Assets.SND_DRINK );
-				hero.sprite.operate( hero.pos );
+				hero.getSprite().operate( hero.pos );
 				
 				updateQuickslot();
 				
@@ -156,7 +156,7 @@ public class DewVial extends Item {
 		DewVial vial = hero.belongings.getItem( DewVial.class );
 		if (vial != null && vial.isFull()) {
 			vial.execute( hero );
-			hero.sprite.emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
+			hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
 			
 			GLog.w( TXT_AUTO_DRINK );
 		}

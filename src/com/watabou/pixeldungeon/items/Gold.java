@@ -68,7 +68,7 @@ public class Gold extends Item {
 		Badges.validateGoldCollected();
 		
 		GameScene.pickUp( this );
-		hero.sprite.showStatus( CharSprite.NEUTRAL, TXT_VALUE, quantity );
+		hero.getSprite().showStatus( CharSprite.NEUTRAL, TXT_VALUE, quantity );
 		hero.spendAndNext( TIME_TO_PICK_UP );
 		
 		Sample.INSTANCE.play( Assets.SND_GOLD, 1, 1, Random.Float( 0.9f, 1.1f ) );

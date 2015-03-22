@@ -88,8 +88,8 @@ public class WandOfDisintegration extends Wand {
 		int dmgMax = 8 + lvl * lvl / 3;
 		for (Char ch : chars) {
 			ch.damage( Random.NormalIntRange( dmgMin, dmgMax ), this );
-			ch.sprite.centerEmitter().burst( PurpleParticle.BURST, Random.IntRange( 1, 2 ) );
-			ch.sprite.flash();
+			ch.getSprite().centerEmitter().burst( PurpleParticle.BURST, Random.IntRange( 1, 2 ) );
+			ch.getSprite().flash();
 		}
 	}
 	
@@ -100,7 +100,7 @@ public class WandOfDisintegration extends Wand {
 	@Override
 	protected void fx( int cell, Callback callback ) {
 		cell = Ballistica.trace[Math.min( Ballistica.distance, distance() ) - 1];
-		curUser.sprite.parent.add( new DeathRay( curUser.sprite.center(), DungeonTilemap.tileCenterToWorld( cell ) ) );		
+		curUser.getSprite().parent.add( new DeathRay( curUser.getSprite().center(), DungeonTilemap.tileCenterToWorld( cell ) ) );		
 		callback.call();
 	}
 	

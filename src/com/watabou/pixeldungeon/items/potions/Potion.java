@@ -195,7 +195,7 @@ public class Potion extends Item {
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
-		hero.sprite.operate( hero.pos );
+		hero.getSprite().operate( hero.pos );
 	}
 	
 	@Override

@@ -86,7 +86,7 @@ public class Warlock extends Mob implements Callback {
 			
 			boolean visible = Level.fieldOfView[pos] || Level.fieldOfView[enemy.pos]; 
 			if (visible) {
-				((WarlockSprite)sprite).zap( enemy.pos );
+				((WarlockSprite)getSprite()).zap( enemy.pos );
 			} else {
 				zap();
 			}
@@ -112,7 +112,7 @@ public class Warlock extends Mob implements Callback {
 				GLog.n( TXT_SHADOWBOLT_KILLED, name );
 			}
 		} else {
-			enemy.sprite.showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
+			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 		}
 	}
 	

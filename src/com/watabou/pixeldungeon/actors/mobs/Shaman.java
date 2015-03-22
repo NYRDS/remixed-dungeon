@@ -87,7 +87,7 @@ public class Shaman extends Mob implements Callback {
 			
 			boolean visible = Level.fieldOfView[pos] || Level.fieldOfView[enemy.pos]; 
 			if (visible) {
-				((ShamanSprite)sprite).zap( enemy.pos );
+				((ShamanSprite)getSprite()).zap( enemy.pos );
 			}
 			
 			spend( TIME_TO_ZAP );
@@ -99,8 +99,8 @@ public class Shaman extends Mob implements Callback {
 				}
 				enemy.damage( dmg, LightningTrap.LIGHTNING );
 				
-				enemy.sprite.centerEmitter().burst( SparkParticle.FACTORY, 3 );
-				enemy.sprite.flash();
+				enemy.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
+				enemy.getSprite().flash();
 				
 				if (enemy == Dungeon.hero) {
 					
@@ -113,7 +113,7 @@ public class Shaman extends Mob implements Callback {
 					}
 				}
 			} else {
-				enemy.sprite.showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
+				enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 			}
 			
 			return !visible;

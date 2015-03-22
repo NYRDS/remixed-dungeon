@@ -99,7 +99,7 @@ public class Armor extends EquipableItem {
 				GLog.n( TXT_EQUIP_CURSED, toString() );
 			}
 			
-			((HeroSprite)hero.sprite).updateArmor();
+			((HeroSprite)hero.getSprite()).updateArmor();
 			
 			hero.spendAndNext( 2 * time2equip( hero ) );
 			return true;
@@ -122,7 +122,7 @@ public class Armor extends EquipableItem {
 		if (super.doUnequip( hero, collect, single )) {
 			
 			hero.belongings.armor = null;
-			((HeroSprite)hero.sprite).updateArmor();
+			((HeroSprite)hero.getSprite()).updateArmor();
 			
 			return true;
 			

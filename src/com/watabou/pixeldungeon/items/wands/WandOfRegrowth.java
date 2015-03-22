@@ -64,7 +64,7 @@ public class WandOfRegrowth extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.foliage( curUser.sprite.parent, curUser.pos, cell, callback );
+		MagicMissile.foliage( curUser.getSprite().parent, curUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

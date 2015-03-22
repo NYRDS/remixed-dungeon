@@ -50,7 +50,7 @@ public class ScrollOfUpgrade extends InventoryScroll {
 	}
 	
 	public static void upgrade( Hero hero ) {
-		hero.sprite.emitter().start( Speck.factory( Speck.UP ), 0.2f, 3 );
+		hero.getSprite().emitter().start( Speck.factory( Speck.UP ), 0.2f, 3 );
 	}
 	
 	@Override

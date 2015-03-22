@@ -35,7 +35,7 @@ public class ScrollOfLullaby extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		curUser.sprite.centerEmitter().start( Speck.factory( Speck.NOTE ), 0.3f, 5 );
+		curUser.getSprite().centerEmitter().start( Speck.factory( Speck.NOTE ), 0.3f, 5 );
 		Sample.INSTANCE.play( Assets.SND_LULLABY );
 		Invisibility.dispel();
 		

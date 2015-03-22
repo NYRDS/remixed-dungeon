@@ -76,7 +76,7 @@ public class Hedgehog extends NPC {
 
 	@Override
 	public void interact() {
-		sprite.turnTo( pos, Dungeon.hero.pos );
+		getSprite().turnTo( pos, Dungeon.hero.pos );
 		
 		switch (action)
 		{
