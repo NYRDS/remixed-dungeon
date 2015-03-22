@@ -125,11 +125,13 @@ public class PathFinder {
 		for (int i = 0; i < dir.length; i++) {
 
 			int n = s + dir[i];
-			int thisD = distance[n];
+			if (n > 0 && n < size) {
+				int thisD = distance[n];
 
-			if (thisD < minD) {
-				minD = thisD;
-				mins = n;
+				if (thisD < minD) {
+					minD = thisD;
+					mins = n;
+				}
 			}
 		}
 
