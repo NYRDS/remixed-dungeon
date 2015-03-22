@@ -53,9 +53,10 @@ public class Toolbar extends Component {
 	private Tool btnInfo;
 	private Tool btnResume;
 	private Tool btnInventory;
-	private Tool btnQuick1;
-	private Tool btnQuick2;
-	private Tool btnQuick3;
+	
+	private QuickslotTool  btnQuick1;
+	private QuickslotTool  btnQuick2;
+	private QuickslotTool  btnQuick3;
 
 	private PickedUpItem pickedUp;
 
@@ -136,6 +137,8 @@ public class Toolbar extends Component {
 		add(btnQuick3 = new QuickslotTool(105, 7, 22, 24));
 
 		add(pickedUp = new PickedUpItem());
+		
+		update();
 	}
 
 	@Override
@@ -144,22 +147,33 @@ public class Toolbar extends Component {
 		btnSearch.setPos(btnWait.right(), y);
 		btnInfo.setPos(btnSearch.right(), y);
 		btnResume.setPos(btnInfo.right(), y);
+		
 		btnQuick1.setPos(width - btnQuick1.width(), y);
-
+		btnQuick1.show(true);
+		
 		if (PixelDungeon.thirdQuickslot()) {
-			btnQuick2.visible = true;
+			btnQuick2.show(true);
+			btnQuick3.show(true);
+			
 			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
-			btnQuick3.visible = true;
 			btnQuick3.setPos(btnQuick2.left() - btnQuick3.width(), y);
+			
 			btnInventory.setPos(btnQuick3.left() - btnInventory.width(), y);
 		} else if (PixelDungeon.secondQuickslot()) {
-			btnQuick2.visible = false;
-			btnQuick2.visible = true;
+			btnQuick2.show(true);
+			btnQuick3.show(false);
+			
 			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
+			btnQuick3.setPos(width - btnQuick1.width(), y);
+			
 			btnInventory.setPos(btnQuick2.left() - btnInventory.width(), y);
 		} else {
-			btnQuick2.visible = false;
-			btnQuick3.visible = false;
+			btnQuick2.show(false);
+			btnQuick3.show(false);
+			
+			btnQuick2.setPos(width - btnQuick1.width(), y);
+			btnQuick3.setPos(width - btnQuick1.width(), y);
+			
 			btnInventory.setPos(btnQuick1.left() - btnInventory.width(), y);
 		}
 	}
@@ -331,6 +345,11 @@ public class Toolbar extends Component {
 			slot.setRect(x + 1, y + 2, width - 2, height - 2);
 		}
 
+		public void show(boolean value){
+			visible = value;
+			enable(value);
+		}
+		
 		@Override
 		public void enable(boolean value) {
 			slot.enable(value);
