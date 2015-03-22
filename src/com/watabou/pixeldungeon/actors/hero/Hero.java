@@ -1409,4 +1409,8 @@ public class Hero extends Char {
 	public static interface Doom {
 		public void onDeath();
 	}
+
+	public void updateLook() {
+		getHeroSprite().updateArmor(tier());
+	}
 }

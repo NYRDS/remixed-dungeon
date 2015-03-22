@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 
@@ -57,7 +56,7 @@ public class HeroSprite extends CharSprite {
 		link( hero );
 		
 		updateMode( HeroClass.spritesheet(hero) );
-		updateArmor(hero);
+		updateArmor(hero.tier());
 		
 		idle();
 	}
@@ -66,7 +65,7 @@ public class HeroSprite extends CharSprite {
 		super();
 
 		updateMode( HeroClass.spritesheet(hero) );
-		updateArmor(hero);
+		updateArmor(hero.tier());
 		
 		idle();		
 	}
@@ -78,17 +77,18 @@ public class HeroSprite extends CharSprite {
 			currentMode = newMode;
 			texture(currentMode);
 			tiers = null;
+			tiers();
 		}
 	}
 	
 	public void updateState(Hero hero) {
 		updateMode (HeroClass.spritesheet(hero) );
-		updateArmor(hero);
+		updateArmor(hero.tier());
 	}
 	
-	public void updateArmor(Hero hero) {
+	public void updateArmor(int tier) {
 
-		TextureFilm film = new TextureFilm( tiers(), hero.tier(), FRAME_WIDTH, FRAME_HEIGHT );
+		TextureFilm film = new TextureFilm( tiers(), tier, FRAME_WIDTH, FRAME_HEIGHT );
 		
 		idle = new Animation( 1, true );
 		idle.frames( film, 0, 0, 0, 1, 0, 0, 1, 1 );
