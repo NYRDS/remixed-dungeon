@@ -26,7 +26,6 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.levels.Level;
@@ -48,12 +47,12 @@ public class HeroSprite extends CharSprite {
 	private Tweener jumpTweener;
 	private Callback jumpCallback;
 	
-	public HeroSprite() {
+	public HeroSprite(Hero hero) {
 		super();
 		
-		link( Dungeon.hero );
+		link( hero );
 		
-		texture( Dungeon.hero.heroClass.spritesheet() );
+		texture( hero.heroClass.spritesheet() );
 		updateArmor();
 		
 		idle();

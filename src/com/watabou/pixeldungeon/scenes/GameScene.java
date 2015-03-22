@@ -90,7 +90,7 @@ public class GameScene extends PixelScene {
 	private SkinnedBlock water;
 	private DungeonTilemap tiles;
 	private FogOfWar fog;
-	private HeroSprite hero;
+	private HeroSprite heroSprite;
 	
 	private GameLog log;
 	
@@ -198,10 +198,10 @@ public class GameScene extends PixelScene {
 		
 		add( emoicons );
 		
-		hero = new HeroSprite();
-		hero.place( Dungeon.hero.pos );
-		hero.updateArmor();
-		mobs.add( hero );
+		heroSprite = new HeroSprite(Dungeon.hero);
+		heroSprite.place( Dungeon.hero.pos );
+		heroSprite.updateArmor();
+		mobs.add( heroSprite );
 
 		
 		add( new HealthIndicator() );
@@ -265,7 +265,7 @@ public class GameScene extends PixelScene {
 		switch (InterlevelScene.mode) {
 		case RESURRECT:
 			WandOfBlink.appear( Dungeon.hero, Dungeon.level.entrance );
-			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( hero, 2f ) ;
+			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( heroSprite, 2f ) ;
 			break;
 		case RETURN:
 			WandOfBlink.appear(  Dungeon.hero, Dungeon.hero.pos );
@@ -298,7 +298,7 @@ public class GameScene extends PixelScene {
 		default:
 		}
 		
-		Camera.main.target = hero;
+		Camera.main.target = heroSprite;
 		fadeIn();
 	}
 	
