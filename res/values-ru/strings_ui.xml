@@ -53,7 +53,7 @@
     <!-- STRINGS OF WndSettings CLASS -->
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
-    <string name="WndSettings_ZoomDef">Стандартный Масштаб</string>
+    <string name="WndSettings_ZoomDef">Обычный Масштаб</string>
     <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
     <string name="WndSettings_Immersive">Режим \"погружение\"</string>
     <string name="WndSettings_Music">Музыка</string>
