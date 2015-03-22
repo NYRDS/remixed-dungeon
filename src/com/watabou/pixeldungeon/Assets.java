@@ -38,7 +38,7 @@ public class Assets {
 	public static final String TOOLBAR	= "toolbar.png";
 	
 	public static final String WARRIOR	       = "warrior.png";
-	//public static final String WARRIOR_BERSERK = "warrior_berserk.png";
+	public static final String WARRIOR_BERSERK = "warrior_berserk.png";
 	public static final String MAGE	           = "mage.png";
 	public static final String ROGUE	       = "rogue.png";
 	public static final String HUNTRESS	       = "ranger.png";
