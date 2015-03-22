@@ -162,7 +162,7 @@ public enum HeroClass {
 		return title;
 	}
 	
-	public String spritesheet(Hero hero) {
+	public static String spritesheet(Hero hero) {
 		
 		if(hero.subClass.name() == HeroSubClass.BERSERKER.name()){
 			if(hero.inFury()) {
@@ -170,7 +170,7 @@ public enum HeroClass {
 			}
 		}
 		
-		switch (this) {
+		switch (hero.heroClass) {
 		case WARRIOR:
 			return Assets.WARRIOR;
 		case MAGE:

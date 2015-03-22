@@ -27,11 +27,11 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 
@@ -42,34 +42,53 @@ public class HeroSprite extends CharSprite {
 	
 	private static final int RUN_FRAMERATE	= 20;
 	
-	private static TextureFilm tiers;
+	private TextureFilm tiers;
 	
 	private Animation fly;
 	
 	private Tweener jumpTweener;
 	private Callback jumpCallback;
 	
+	private String currentMode;
+	
 	public HeroSprite(Hero hero) {
 		super();
 		
 		link( hero );
 		
-		texture( hero.heroClass.spritesheet(hero) );
-		updateArmor();
+		updateMode( HeroClass.spritesheet(hero) );
+		updateArmor(hero);
 		
 		idle();
 	}
 	
+	public HeroSprite(Hero hero, boolean b) {
+		super();
 
-	
-	public void updateState(Hero hero) {
-		texture( hero.heroClass.spritesheet(hero) );
-		updateArmor();
+		updateMode( HeroClass.spritesheet(hero) );
+		updateArmor(hero);
+		
+		idle();		
+	}
+
+	private void updateMode(String newMode){
+		if(newMode.equals(currentMode)) {
+			return;
+		} else {
+			currentMode = newMode;
+			texture(currentMode);
+			tiers = null;
+		}
 	}
 	
-	public void updateArmor() {
+	public void updateState(Hero hero) {
+		updateMode (HeroClass.spritesheet(hero) );
+		updateArmor(hero);
+	}
+	
+	public void updateArmor(Hero hero) {
 
-		TextureFilm film = new TextureFilm( tiers(), ((Hero)ch).tier(), FRAME_WIDTH, FRAME_HEIGHT );
+		TextureFilm film = new TextureFilm( tiers(), hero.tier(), FRAME_WIDTH, FRAME_HEIGHT );
 		
 		idle = new Animation( 1, true );
 		idle.frames( film, 0, 0, 0, 1, 0, 0, 1, 1 );
@@ -147,7 +166,7 @@ public class HeroSprite extends CharSprite {
 		return on;
 	}
 	
-	public static TextureFilm tiers() {
+	public TextureFilm tiers() {
 		if (tiers == null) {
 			// Sprites for all classes are the same in size
 			SmartTexture texture = TextureCache.get( Assets.ROGUE );
@@ -157,10 +176,10 @@ public class HeroSprite extends CharSprite {
 		return tiers;
 	}
 	
-	public static Image avatar( HeroClass cl, int armorTier ) {
+	public Image avatar( Hero hero, int armorTier ) {
 		
 		RectF patch = tiers().get( armorTier );
-		Image avatar = new Image( cl.spritesheet(Dungeon.hero) );
+		Image avatar = new Image( HeroClass.spritesheet(hero) );
 		RectF frame = avatar.texture.uvRect( 1, 0, FRAME_WIDTH, FRAME_HEIGHT );
 		frame.offset( patch.left, patch.top );
 		avatar.frame( frame );

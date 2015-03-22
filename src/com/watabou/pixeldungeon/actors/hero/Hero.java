@@ -874,8 +874,8 @@ public class Hero extends Char {
 		interrupt();
 		
 		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
-			((HeroSprite)getSprite()).updateState(this);
 			Buff.affect( this, Fury.class );
+			getHeroSprite().updateState(this);
 		}
 	}
 	
@@ -1140,7 +1140,7 @@ public class Hero extends Char {
 		if (buff instanceof Light) {
 			getSprite().remove( CharSprite.State.ILLUMINATED );
 		} else if (buff instanceof Fury) {
-			((HeroSprite)getSprite()).updateState(this);
+			getHeroSprite().updateState(this);
 		}
 		
 		BuffIndicator.refreshHero();
@@ -1400,6 +1400,10 @@ public class Hero extends Char {
 	public HashSet<Class<?>> immunities() {
 		GasesImmunity buff = buff( GasesImmunity.class );
 		return buff == null ? super.immunities() : GasesImmunity.IMMUNITIES;
+	}
+	
+	public HeroSprite getHeroSprite(){
+		return (HeroSprite)getSprite();
 	}
 	
 	public static interface Doom {

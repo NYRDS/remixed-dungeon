@@ -200,7 +200,7 @@ public class GameScene extends PixelScene {
 		
 		heroSprite = new HeroSprite(Dungeon.hero);
 		heroSprite.place( Dungeon.hero.pos );
-		heroSprite.updateArmor();
+		heroSprite.updateArmor(Dungeon.hero);
 		mobs.add( heroSprite );
 
 		

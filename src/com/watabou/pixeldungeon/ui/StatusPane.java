@@ -83,7 +83,7 @@ public class StatusPane extends Component {
 		btnMenu = new MenuButton();
 		add( btnMenu );
 		
-		avatar = HeroSprite.avatar( Dungeon.hero.heroClass, lastTier );
+		avatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero, lastTier );
 		add( avatar );
 		
 		blood = new Emitter();
@@ -203,7 +203,7 @@ public class StatusPane extends Component {
 		int tier = Dungeon.hero.tier();
 		if (tier != lastTier) {
 			lastTier = tier;
-			avatar.copy( HeroSprite.avatar( Dungeon.hero.heroClass, tier ) );
+			avatar.copy( Dungeon.hero.getHeroSprite().avatar( Dungeon.hero, tier ) );
 		}
 	}
 	
