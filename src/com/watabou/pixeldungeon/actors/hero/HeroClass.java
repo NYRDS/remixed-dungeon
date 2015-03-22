@@ -15,6 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
+ 
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.pixeldungeon.ml.R;
@@ -22,25 +23,26 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.items.Generator;
+import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
-import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
+import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
+import com.watabou.pixeldungeon.ui.QuickSlot;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public enum HeroClass {
@@ -94,17 +96,7 @@ public enum HeroClass {
 	
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
-		new Ration().identify().collect();
-		/*
-		for (int i = 0;i<10;++i){
-			new MysteryMeat().collect();
-			new Ration().collect();
-			new Pasty().collect();
-			new PotionOfFrost().identify().collect();
-			new PotionOfToxicGas().identify().collect();
-			new PotionOfLiquidFlame().identify().collect();
-		}
-		*/
+		new Ration().identify().collect();		
 	}
 	
 	public Badges.Badge masteryBadge() {
@@ -127,7 +119,7 @@ public enum HeroClass {
 		(hero.belongings.weapon = new ShortSword()).identify();
 		new Dart( 8 ).identify().collect();
 		
-		Dungeon.quickslot = Dart.class;
+		QuickSlot.selectItem(Dart.class,0);
 		
 		new PotionOfStrength().setKnown();
 	}
@@ -138,7 +130,7 @@ public enum HeroClass {
 		WandOfMagicMissile wand = new WandOfMagicMissile();
 		wand.identify().collect();
 		
-		Dungeon.quickslot = wand;
+		QuickSlot.selectItem(wand,0);
 		
 		new ScrollOfIdentify().setKnown();
 	}
@@ -150,7 +142,7 @@ public enum HeroClass {
 		
 		hero.belongings.ring1.activate( hero );
 		
-		Dungeon.quickslot = Dart.class;
+		QuickSlot.selectItem(Dart.class,0);
 		
 		new ScrollOfMagicMapping().setKnown();
 	}
@@ -163,7 +155,7 @@ public enum HeroClass {
 		Boomerang boomerang = new Boomerang();
 		boomerang.identify().collect();
 		
-		Dungeon.quickslot = boomerang;
+		QuickSlot.selectItem(boomerang,0);
 	}
 	
 	public String title() {
@@ -207,11 +199,11 @@ public enum HeroClass {
 		case WARRIOR:
 		case MAGE:
 		case ROGUE:
-			return Char.MASCULINE;
+			return Utils.MASCULINE;
 		case HUNTRESS:
-			return Char.FEMININE;
+			return Utils.FEMININE;
 		}
-		return Char.NEUTER;
+		return Utils.NEUTER;
 	}
 	
 	private static final String CLASS = "class";
