@@ -87,9 +87,9 @@ public enum HeroClass {
 		
 		hero.gender = getGender();
 		
-		//if (Badges.isUnlocked( masteryBadge() )) {
+		if (Badges.isUnlocked( masteryBadge() )) {
 			new TomeOfMastery().collect();
-		//}
+		}
 		
 		hero.updateAwareness();
 	}
