@@ -132,10 +132,9 @@ public class Toolbar extends Component {
 			};
 		});
 
-		add(btnQuick1 = new QuickslotTool(105, 7, 22, 24));
-		add(btnQuick2 = new QuickslotTool(105, 7, 22, 24));
-		add(btnQuick3 = new QuickslotTool(105, 7, 22, 24));
-		
+		btnQuick1 = new QuickslotTool(105, 7, 22, 24);
+		btnQuick2 = new QuickslotTool(105, 7, 22, 24);
+		btnQuick3 = new QuickslotTool(105, 7, 22, 24);
 
 		add(pickedUp = new PickedUpItem());
 		
@@ -149,37 +148,37 @@ public class Toolbar extends Component {
 		btnInfo.setPos(btnSearch.right(), y);
 		btnResume.setPos(btnInfo.right(), y);
 		
+		remove(btnQuick1);
+		remove(btnQuick2);
+		remove(btnQuick3);
+		
+		
 		btnQuick1.setPos(width - btnQuick1.width(), y);
 		btnQuick1.show(true);
+		add(btnQuick1);
 		
-		if (PixelDungeon.landscape() && PixelDungeon.thirdQuickslot()) {
+		if (! PixelDungeon.landscape() && PixelDungeon.thirdQuickslot()) {
 			PixelDungeon.thirdQuickslot(false);
 			PixelDungeon.secondQuickslot(true);
 		}
 		
-		if (PixelDungeon.thirdQuickslot()) {
-			btnQuick2.show(true);
-			btnQuick3.show(true);
-			
+		if (PixelDungeon.thirdQuickslot()) {			
 			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
 			btnQuick3.setPos(btnQuick2.left() - btnQuick3.width(), y);
 			
+			add(btnQuick2);
+			add(btnQuick3);
+			btnQuick2.show(true);
+			btnQuick3.show(true);
+			
 			btnInventory.setPos(btnQuick3.left() - btnInventory.width(), y);
 		} else if (PixelDungeon.secondQuickslot()) {
-			btnQuick2.show(true);
-			btnQuick3.show(false);
-			
 			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
-			btnQuick3.setPos(width - btnQuick1.width(), y);
+			add(btnQuick2);
+			btnQuick2.show(true);
 			
 			btnInventory.setPos(btnQuick2.left() - btnInventory.width(), y);
-		} else {
-			btnQuick2.show(false);
-			btnQuick3.show(false);
-			
-			btnQuick2.setPos(width - btnQuick1.width(), y);
-			btnQuick3.setPos(width - btnQuick1.width(), y);
-			
+		} else {			
 			btnInventory.setPos(btnQuick1.left() - btnInventory.width(), y);
 		}
 	}
