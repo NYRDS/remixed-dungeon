@@ -42,7 +42,6 @@ public class Gold extends Item {
 	private static final String TXT_VALUE	= "%+d";
 	
 	{
-		name = Game.getVar(R.string.Gold_Name);
 		image = ItemSpriteSheet.GOLD;
 		stackable = true;
 	}
