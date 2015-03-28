@@ -38,8 +38,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	private static final String TXT_SELECT_ITEM = Game
 			.getVar(R.string.QuickSlot_SelectedItem);
 
-	private static ArrayList<QuickSlot> slots = new ArrayList<QuickSlot>();
-	private static HashMap<Integer, Object> earlyLoad = new HashMap<Integer, Object>();
+	private static ArrayList<QuickSlot> slots         = new ArrayList<QuickSlot>();
+	private static HashMap<Integer, Object> qsStorage = new HashMap<Integer, Object>();
 
 	// Either Item or Class<? extends Item>
 	private Object quickslotItem;
@@ -51,16 +51,18 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	private Image crossM;
 
 	private boolean targeting = false;
-	private Item lastItem = null;
-	private Char lastTarget = null;
+	private Item lastItem     = null;
+	private Char lastTarget   = null;
+	
+	private int index;
 
 	public QuickSlot() {
 		super();
 		slots.add(this);
 
-		int n = slots.size() - 1;
-		if (earlyLoad.containsKey(n)) {
-			selectItem(earlyLoad.get(n), n);
+		index = slots.size() - 1;
+		if (qsStorage.containsKey(index)) {
+			selectItem(qsStorage.get(index), index);
 		} else {
 			item(select());
 		}
@@ -142,13 +144,13 @@ public class QuickSlot extends Button implements WndBag.Listener {
 
 	@SuppressWarnings("unchecked")
 	private Item select() {
-		if (quickslotItem instanceof Item) {
-			return (Item) quickslotItem;
-		} else if (quickslotItem != null) {
+		if (quickslotItem() instanceof Item) {
+			return (Item) quickslotItem();
+		} else if (quickslotItem() != null) {
 			Item item = Dungeon.hero.belongings
-					.getItem((Class<? extends Item>) quickslotItem);
+					.getItem((Class<? extends Item>) quickslotItem());
 			return item != null ? item : Item
-					.virtual((Class<? extends Item>) quickslotItem);
+					.virtual((Class<? extends Item>) quickslotItem());
 		} else {
 			return null;
 		}
@@ -157,7 +159,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	@Override
 	public void onSelect(Item item) {
 		if (item != null) {
-			quickslotItem = item.stackable ? item.getClass() : item;
+			quickslotItem(item.stackable ? item.getClass() : item);
 			refresh();
 		}
 	}
@@ -226,8 +228,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	}
 
 	public static Object getEarlyLoadItem(int n) {
-		if (earlyLoad.containsKey(n)) {
-			return earlyLoad.get(n);
+		if (qsStorage.containsKey(n)) {
+			return qsStorage.get(n);
 		}
 		return null;
 	}
@@ -242,11 +244,24 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	public static void selectItem(Object object, int n) {
 		if (n < slots.size()) {
 			QuickSlot slot = slots.get(n);
-			slot.quickslotItem = object;
+			slot.quickslotItem(object);
 			slot.onSelect(slot.select());
 		} else {
-			earlyLoad.put(n, object);
+			qsStorage.put(n, object);
 		}
 
+	}
+
+	public static void cleanStorage() {
+		qsStorage.clear();
+	}
+	
+	private Object quickslotItem() {
+		return quickslotItem;
+	}
+
+	private void quickslotItem(Object quickslotItem) {
+		qsStorage.put(index, quickslotItem);
+		this.quickslotItem = quickslotItem;
 	}
 }

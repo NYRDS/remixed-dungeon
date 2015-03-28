@@ -128,7 +128,7 @@ public class Hero extends Char {
 	private static final float TIME_TO_REST		= 1f;
 	private static final float TIME_TO_SEARCH	= 2f;
 	
-	public HeroClass heroClass = HeroClass.ROGUE;
+	public HeroClass   heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass = HeroSubClass.NONE;
 	
 	private int attackSkill = 10;

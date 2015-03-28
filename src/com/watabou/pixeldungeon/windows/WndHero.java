@@ -50,7 +50,7 @@ public class WndHero extends WndTabbed {
 	private static final String TXT_DEPTH	= Game.getVar(R.string.WndHero_Depth);
 	
 	private static final int WIDTH		= 100;
-	private static final int TAB_WIDTH	= 40;
+	private static final int TAB_WIDTH	= 50;
 	
 	private StatsTab stats;
 	private BuffsTab buffs;
