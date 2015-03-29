@@ -112,7 +112,6 @@ public class TitleScene extends PixelScene {
 		
 		DonateButton btnDonate = new DonateButton();
 		btnDonate.setPos((w-btnDonate.width())/2,pleaseSupport.y-btnDonate.height());
-		add(btnDonate);
 		
 		if(PixelDungeon.canDonate()){
 			add(pleaseSupport);

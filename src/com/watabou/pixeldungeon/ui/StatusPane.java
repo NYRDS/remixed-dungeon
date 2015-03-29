@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHero;
 
@@ -205,7 +204,6 @@ public class StatusPane extends Component {
 		Image newAvatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero );
 		if(newAvatar != null){
 			avatar.copy(newAvatar);
-			GLog.i("avatar updated");
 		}
 	}
 	
