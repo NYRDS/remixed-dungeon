@@ -65,7 +65,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	
 	public void load( String... assets ) {
 		
-		AssetManager manager = Game.instance.getAssets();
+		AssetManager manager = Game.instance().getAssets();
 		
 		for (int i=0; i < assets.length; i++) {
 			

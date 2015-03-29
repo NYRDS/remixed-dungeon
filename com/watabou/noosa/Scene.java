@@ -28,7 +28,7 @@ public class Scene extends Group {
 		Keys.event.add( keyListener = new Signal.Listener<Keys.Key>() {
 			@Override
 			public void onSignal( Keys.Key key ) {
-				if (Game.instance != null && key.pressed) {
+				if (Game.instance() != null && key.pressed) {
 					switch (key.code) {
 					case Keys.BACK:
 						onBackPressed();
@@ -67,7 +67,7 @@ public class Scene extends Group {
 	}
 	
 	protected void onBackPressed() {
-		Game.instance.finish();
+		Game.instance().finish();
 	}
 	
 	protected void onMenuPressed() {

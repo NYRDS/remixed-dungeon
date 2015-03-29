@@ -55,7 +55,7 @@ import com.watabou.utils.SystemTime;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener {
 
-	public static Game instance;
+	private static Game instance;
 	private static Context context;
 	
 	// Actual size of the screen
@@ -120,7 +120,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 	
 	public void doRestart(){
-		Intent i = instance.getBaseContext().getPackageManager()
+		Intent i = instance().getBaseContext().getPackageManager()
 	             .getLaunchIntentForPackage(getBaseContext().getPackageName() );
 		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
@@ -133,11 +133,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 	
 	public static void toast(final String text, final Object... args){
-		instance.runOnUiThread( new Runnable(){
+		instance().runOnUiThread( new Runnable(){
 			@Override
 			public void run() {
 				String toastText = text;
-				Context context = instance.getApplicationContext();
+				Context context = instance().getApplicationContext();
 				
 				if (args.length > 0) {
 					toastText = Utils.format( text, args );
@@ -157,7 +157,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		//Criado para manter o contexto e poder fazer a busca dos resources
 		context = getApplicationContext();
 		
-		BitmapCache.context = TextureCache.context = instance = this;
+		BitmapCache.context = TextureCache.context = instance(this);
 		
 		DisplayMetrics m = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics( m );
@@ -302,20 +302,20 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			scene = null;
 		}
 		
-		instance = null;
+		instance(null);
 	}
 	
 	public static void resetScene() {
-		switchScene( instance.sceneClass );
+		switchScene( instance().sceneClass );
 	}
 	
 	public static void switchScene( Class<? extends Scene> c ) {
-		instance.sceneClass     = c;
-		instance.requestedReset = true;
+		instance().sceneClass     = c;
+		instance().requestedReset = true;
 	}
 	
 	public static Scene scene() {
-		return instance.scene;
+		return instance().scene;
 	}
 	
 	protected void step() {
@@ -368,7 +368,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 	
 	public static void vibrate( int milliseconds ) {
-		((Vibrator)instance.getSystemService( VIBRATOR_SERVICE )).vibrate( milliseconds );
+		((Vibrator)instance().getSystemService( VIBRATOR_SERVICE )).vibrate( milliseconds );
 	}
 	
 	public static String getVar(int id){
@@ -376,5 +376,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 	public static String[] getVars(int id){
 		return context.getResources().getStringArray(id);
+	}
+
+	public static Game instance() {
+		return instance;
+	}
+
+	public static Game instance(Game instance) {
+		Game.instance = instance;
+		return instance;
 	}
 }

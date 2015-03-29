@@ -51,7 +51,7 @@ public enum Music implements MediaPlayer.OnPreparedListener, MediaPlayer.OnError
 		
 		try {
 			
-			AssetFileDescriptor afd = Game.instance.getAssets().openFd( assetName );
+			AssetFileDescriptor afd = Game.instance().getAssets().openFd( assetName );
 			
 			player = new MediaPlayer();
 			player.setAudioStreamType( AudioManager.STREAM_MUSIC );
