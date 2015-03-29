@@ -133,9 +133,6 @@ public class StartScene extends PixelScene {
 						@Override
 						protected void onSelect( int index ) {
 							if (index == 0) {
-								if(PixelDungeon.instance() instanceof GameWithGoogleIap){
-									((GameWithGoogleIap)PixelDungeon.instance()).doPurchase();
-								}
 								startNewGame();
 							}
 						}

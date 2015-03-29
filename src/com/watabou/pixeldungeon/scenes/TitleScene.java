@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.Fireball;
 import com.watabou.pixeldungeon.ui.Archs;
+import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.nyrds.pixeldungeon.ml.R;
@@ -99,16 +100,36 @@ public class TitleScene extends PixelScene {
 		};
 		btnHighscores.setPos( w / 2, btnPlay.top() );
 		add( btnHighscores );
+
+		float dashBaseline = h;
+		
+		BitmapTextMultiline pleaseSupport = PixelScene.createMultiline(8);
+		pleaseSupport.text("please consider donating");
+		pleaseSupport.measure();
+		pleaseSupport.x = (w - pleaseSupport.width())/2;
+		pleaseSupport.y = h - pleaseSupport.height()*2;
+		pleaseSupport.hardlight(0.95f, 0.95f, 0.1f);
+		
+		DonateButton btnDonate = new DonateButton();
+		btnDonate.setPos((w-btnDonate.width())/2,pleaseSupport.y-btnDonate.height());
+		add(btnDonate);
+		
+		if(PixelDungeon.canDonate()){
+			add(pleaseSupport);
+			add(btnDonate);
+		}
+		
+		dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 		
 		if (PixelDungeon.landscape()) {
 			float y = (h + height) / 2 - DashboardItem.SIZE;
-			btnHighscores	.setPos( w / 2 - btnHighscores.width(), y );
-			btnBadges		.setPos( w / 2, y );
-			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), y );
-			btnAbout		.setPos( btnBadges.right(), y );
+			btnHighscores	.setPos( w / 2 - btnHighscores.width(), dashBaseline);
+			btnBadges		.setPos( w / 2, dashBaseline );
+			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), dashBaseline );
+			btnAbout		.setPos( btnBadges.right(), dashBaseline );
 		} else {
-			btnBadges.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
-			btnAbout.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
+			btnBadges.setPos( w / 2 - btnBadges.width(),dashBaseline );
+			btnAbout.setPos( w / 2, dashBaseline );
 			btnPlay.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
 			btnHighscores.setPos( w / 2, btnPlay.top() );
 		}
@@ -116,7 +137,6 @@ public class TitleScene extends PixelScene {
 		Archs archs = new Archs();
 		archs.setSize( w, h );
 		addToBack( archs );
-		
 		
 		BitmapText version = new BitmapText( "v " + Game.version, font1x );
 		version.measure();
@@ -137,8 +157,7 @@ public class TitleScene extends PixelScene {
 			lowInteralStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
 			add(lowInteralStorageWarning);
 		}
-		
-		
+				
 		PrefsButton btnPrefs = new PrefsButton();
 		btnPrefs.setPos( 0, 0 );
 		add( btnPrefs );
