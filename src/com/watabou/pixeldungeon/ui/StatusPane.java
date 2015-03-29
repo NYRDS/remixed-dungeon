@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHero;
 
@@ -42,8 +43,6 @@ public class StatusPane extends Component {
 	private NinePatch shield;
 	private Image avatar;
 	private Emitter blood;
-	
-	private int lastTier = 0;
 	
 	private Image hp;
 	private Image exp;
@@ -82,7 +81,7 @@ public class StatusPane extends Component {
 		btnMenu = new MenuButton();
 		add( btnMenu );
 		
-		avatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero, lastTier );
+		avatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero );
 		add( avatar );
 		
 		blood = new Emitter();
@@ -198,11 +197,15 @@ public class StatusPane extends Component {
 			keys.measure();
 			keys.x = width - 8 - keys.width()    - 18;
 		}
-		
-		int tier = Dungeon.hero.tier();
-		if (tier != lastTier) {
-			lastTier = tier;
-			avatar.copy( Dungeon.hero.getHeroSprite().avatar( Dungeon.hero, tier ) );
+
+		updateAvatar();
+	}
+	
+	public void updateAvatar(){
+		Image newAvatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero );
+		if(newAvatar != null){
+			avatar.copy(newAvatar);
+			GLog.i("avatar updated");
 		}
 	}
 	

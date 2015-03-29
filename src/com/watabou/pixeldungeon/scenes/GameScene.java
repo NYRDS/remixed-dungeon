@@ -80,9 +80,9 @@ public class GameScene extends PixelScene {
 	private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
 	private static final String TXT_NIGHT_MODE   = Game.getVar(R.string.GameScene_NightMode);
 	
-	private static final String TXT_CHASM = Game.getVar(R.string.GameScene_Chasm);
-	private static final String TXT_WATER = Game.getVar(R.string.GameScene_Water);
-	private static final String TXT_GRASS = Game.getVar(R.string.GameScene_Grass);
+	private static final String TXT_CHASM   = Game.getVar(R.string.GameScene_Chasm);
+	private static final String TXT_WATER   = Game.getVar(R.string.GameScene_Water);
+	private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
 	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 	
 	static GameScene scene;
@@ -198,11 +198,7 @@ public class GameScene extends PixelScene {
 		
 		add( emoicons );
 		
-		heroSprite = new HeroSprite(Dungeon.hero);
-		heroSprite.place( Dungeon.hero.pos );
-		Dungeon.hero.updateLook();
-		mobs.add( heroSprite );
-
+		updateHeroSprite();
 		
 		add( new HealthIndicator() );
 		
@@ -302,6 +298,18 @@ public class GameScene extends PixelScene {
 		fadeIn();
 	}
 	
+	
+	public static void updateHeroSprite(){
+		if(scene.heroSprite != null){
+			scene.mobs.remove(scene.heroSprite);
+		}
+		
+		scene.heroSprite = new HeroSprite(Dungeon.hero);
+		scene.heroSprite.place( Dungeon.hero.pos );
+		Dungeon.hero.updateLook();
+		scene.mobs.add( scene.heroSprite );
+	}
+	
 	public void destroy() {
 		
 		scene = null;
@@ -327,7 +335,7 @@ public class GameScene extends PixelScene {
 		}
 			
 		super.update();
-		
+				
 		water.offset( 0, -5 * Game.elapsed );
 		
 		Actor.process();

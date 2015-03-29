@@ -35,172 +35,166 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 
 public class HeroSprite extends CharSprite {
-	
-	private static final int FRAME_WIDTH	= 12;
-	private static final int FRAME_HEIGHT	= 15;
-	
-	private static final int RUN_FRAMERATE	= 20;
-	
+
+	private static final int FRAME_WIDTH = 12;
+	private static final int FRAME_HEIGHT = 15;
+
+	private static final int RUN_FRAMERATE = 20;
+
 	private TextureFilm tiers;
-	
+
 	private Animation fly;
-	
-	private Tweener jumpTweener;
+
+	private Tweener  jumpTweener;
 	private Callback jumpCallback;
-	
-	private String currentMode;
-	
+
+	private int lastTier = -1;
+
 	public HeroSprite(Hero hero) {
 		super();
-		
-		link( hero );
-		
-		updateMode( HeroClass.spritesheet(hero) );
+
+		link(hero);
+
+		texture(HeroClass.spritesheet(hero));
+		tiers();
 		updateArmor(hero.tier());
-		
+
 		idle();
 	}
-	
+
 	public HeroSprite(Hero hero, boolean b) {
 		super();
 
-		updateMode( HeroClass.spritesheet(hero) );
+		texture(HeroClass.spritesheet(hero));
+		tiers();
 		updateArmor(hero.tier());
-		
-		idle();		
+
+		idle();
 	}
 
-	private void updateMode(String newMode){
-		if(newMode.equals(currentMode)) {
-			return;
-		} else {
-			currentMode = newMode;
-			texture(currentMode);
-			tiers = null;
-			tiers();
-		}
-	}
-	
 	public void updateState(Hero hero) {
-		/*
-		updateMode (HeroClass.spritesheet(hero) );
-		updateArmor(hero.tier());
-		*/
+		GameScene.updateHeroSprite();
 	}
-	
+
 	public void updateArmor(int tier) {
 
-		TextureFilm film = new TextureFilm( tiers(), tier, FRAME_WIDTH, FRAME_HEIGHT );
-		
-		idle = new Animation( 1, true );
-		idle.frames( film, 0, 0, 0, 1, 0, 0, 1, 1 );
-		
-		run = new Animation( RUN_FRAMERATE, true );
-		run.frames( film, 2, 3, 4, 5, 6, 7 );
-		
-		die = new Animation( 20, false );
-		die.frames( film, 8, 9, 10, 11, 12, 11 );
-		
-		attack = new Animation( 15, false );
-		attack.frames( film, 13, 14, 15, 0 );
-		
+		TextureFilm film = new TextureFilm(tiers(), tier, FRAME_WIDTH,
+				FRAME_HEIGHT);
+
+		idle = new Animation(1, true);
+		idle.frames(film, 0, 0, 0, 1, 0, 0, 1, 1);
+
+		run = new Animation(RUN_FRAMERATE, true);
+		run.frames(film, 2, 3, 4, 5, 6, 7);
+
+		die = new Animation(20, false);
+		die.frames(film, 8, 9, 10, 11, 12, 11);
+
+		attack = new Animation(15, false);
+		attack.frames(film, 13, 14, 15, 0);
+
 		zap = attack.clone();
-		
-		operate = new Animation( 8, false );
-		operate.frames( film, 16, 17, 16, 17 );
-		
-		fly = new Animation( 1, true );
-		fly.frames( film, 18 );
+
+		operate = new Animation(8, false);
+		operate.frames(film, 16, 17, 16, 17);
+
+		fly = new Animation(1, true);
+		fly.frames(film, 18);
 	}
-	
+
 	@Override
-	public void place( int p ) {
-		super.place( p );
+	public void place(int p) {
+		super.place(p);
 		Camera.main.target = this;
 	}
 
 	@Override
-	public void move( int from, int to ) {		
-		super.move( from, to );
+	public void move(int from, int to) {
+		super.move(from, to);
 		if (ch.flying) {
-			play( fly );
+			play(fly);
 		}
 		Camera.main.target = this;
 	}
-	
-	public void jump( int from, int to, Callback callback ) {	
+
+	public void jump(int from, int to, Callback callback) {
 		jumpCallback = callback;
-		
-		int distance = Level.distance( from, to );
-		jumpTweener = new JumpTweener( this, worldToCamera( to ), distance * 4, distance * 0.1f );
+
+		int distance = Level.distance(from, to);
+		jumpTweener = new JumpTweener(this, worldToCamera(to), distance * 4,
+				distance * 0.1f);
 		jumpTweener.listener = this;
-		parent.add( jumpTweener );
-		
-		turnTo( from, to );
-		play( fly );
+		parent.add(jumpTweener);
+
+		turnTo(from, to);
+		play(fly);
 	}
-	
+
 	@Override
-	public void onComplete( Tweener tweener ) {
+	public void onComplete(Tweener tweener) {
 		if (tweener == jumpTweener) {
-			
+
 			if (visible && Level.water[ch.pos] && !ch.flying) {
-				GameScene.ripple( ch.pos );
+				GameScene.ripple(ch.pos);
 			}
 			if (jumpCallback != null) {
 				jumpCallback.call();
 			}
-			
+
 		} else {
-			super.onComplete( tweener );
+			super.onComplete(tweener);
 		}
 	}
-	
+
 	@Override
 	public void update() {
-		sleeping = ((Hero)ch).restoreHealth;
-		
+		sleeping = ((Hero) ch).restoreHealth;
+
 		super.update();
 	}
-	
-	public boolean sprint( boolean on ) {
+
+	public boolean sprint(boolean on) {
 		run.delay = on ? 0.625f / RUN_FRAMERATE : 1f / RUN_FRAMERATE;
 		return on;
 	}
-	
+
 	public TextureFilm tiers() {
 		if (tiers == null) {
 			// Sprites for all classes are the same in size
-			SmartTexture texture = TextureCache.get( Assets.ROGUE );
-			tiers = new TextureFilm( texture, texture.width, FRAME_HEIGHT );
+			SmartTexture texture = TextureCache.get(Assets.ROGUE);
+			tiers = new TextureFilm(texture, texture.width, FRAME_HEIGHT);
 		}
-		
+
 		return tiers;
 	}
-	
-	public Image avatar( Hero hero, int armorTier ) {
-		
-		RectF patch = tiers().get( armorTier );
-		Image avatar = new Image( HeroClass.spritesheet(hero) );
-		RectF frame = avatar.texture.uvRect( 1, 0, FRAME_WIDTH, FRAME_HEIGHT );
-		frame.offset( patch.left, patch.top );
-		avatar.frame( frame );
-		
+
+	public Image avatar(Hero hero) {
+		if (hero.tier() == lastTier) {
+			return null;
+		}
+
+		RectF patch = tiers().get(hero.tier());
+		Image avatar = new Image(HeroClass.spritesheet(hero));
+		RectF frame = avatar.texture.uvRect(1, 0, FRAME_WIDTH, FRAME_HEIGHT);
+		frame.offset(patch.left, patch.top);
+		avatar.frame(frame);
+		lastTier = hero.tier();
 		return avatar;
+
 	}
 
 	private static class JumpTweener extends Tweener {
 
 		public Visual visual;
-		
+
 		public PointF start;
 		public PointF end;
-		
+
 		public float height;
-		
-		public JumpTweener( Visual visual, PointF pos, float height, float time ) {
-			super( visual, time );
-			
+
+		public JumpTweener(Visual visual, PointF pos, float height, float time) {
+			super(visual, time);
+
 			this.visual = visual;
 			start = visual.point();
 			end = pos;
@@ -209,8 +203,9 @@ public class HeroSprite extends CharSprite {
 		}
 
 		@Override
-		protected void updateValues( float progress ) {
-			visual.point( PointF.inter( start, end, progress ).offset( 0, -height * 4 * progress * (1 - progress) ) );
+		protected void updateValues(float progress) {
+			visual.point(PointF.inter(start, end, progress).offset(0,
+					-height * 4 * progress * (1 - progress)));
 		}
 	}
 }

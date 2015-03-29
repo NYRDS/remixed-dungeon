@@ -343,7 +343,7 @@ public class Hero extends Char {
 		} else {
 			
 			float speed = super.speed();
-			return ((HeroSprite)getSprite()).sprint( subClass == HeroSubClass.FREERUNNER && !isStarving() ) ? 1.6f * speed : speed;
+			return getHeroSprite().sprint( subClass == HeroSubClass.FREERUNNER && !isStarving() ) ? 1.6f * speed : speed;
 			
 		}
 	}
@@ -491,7 +491,6 @@ public class Hero extends Char {
 	}
 	
 	private boolean actMove( HeroAction.Move action ) {
-
 		if (getCloser( action.dst )) {
 			
 			return true;
@@ -876,6 +875,7 @@ public class Hero extends Char {
 		
 		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
 			Buff.affect( this, Fury.class );
+
 			getHeroSprite().updateState(this);
 		}
 	}
