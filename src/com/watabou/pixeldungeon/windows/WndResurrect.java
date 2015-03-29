@@ -81,7 +81,7 @@ public class WndResurrect extends Window {
 			protected void onClick() {
 				hide();
 				
-				Rankings.INSTANCE.submit( false );
+				Rankings.INSTANCE.submit( Rankings.gameOver.LOSE );
 				Hero.reallyDie( WndResurrect.causeOfDeath );
 			}
 		};

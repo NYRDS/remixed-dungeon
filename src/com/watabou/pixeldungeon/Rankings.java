@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -37,23 +38,27 @@ public enum Rankings {
 	public static final int TABLE_SIZE	= 6;
 	
 	public static final String RANKINGS_FILE = "rankings.dat";
-	public static final String DETAILS_FILE = "game_%d.dat";
+	public static final String DETAILS_FILE  = "game_%d.dat";
 	
 	public ArrayList<Record> records;
 	public int lastRecord;
 	public int totalNumber;
+	public int wonNumber;
+	public int happyWonNumber;
 	
-	public void submit( boolean win ) {
+	public enum gameOver{ LOSE, WIN_AMULET, WIN_HAPPY };
+	
+	public void submit( gameOver winLevel ) {
 		
 		load();
 		
 		Record rec = new Record();
 		
-		rec.info	= Dungeon.resultDescription;
-		rec.win		= win;
+		rec.info	    = Dungeon.resultDescription;
+		rec.win		    = winLevel  != gameOver.LOSE;
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();
-		rec.score	= score( win );
+		rec.score	    = score( winLevel  != gameOver.LOSE );
 		
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now );
 		try {
@@ -86,6 +91,14 @@ public enum Rankings {
 		
 		totalNumber++;
 		
+		if (winLevel != gameOver.LOSE) {
+			wonNumber++;
+		}
+		
+		if (winLevel == gameOver.WIN_HAPPY) {
+			happyWonNumber++;
+		}
+		
 		Badges.validateGamesPlayed();
 		
 		save();
@@ -98,12 +111,16 @@ public enum Rankings {
 	private static final String RECORDS	= "records";
 	private static final String LATEST	= "latest";
 	private static final String TOTAL	= "total";
+	private static final String WON		= "won";
+	private static final String HAPPY   = "happy";
 	
 	public void save() {
 		Bundle bundle = new Bundle();
 		bundle.put( RECORDS, records );
-		bundle.put( LATEST, lastRecord );
-		bundle.put( TOTAL, totalNumber );
+		bundle.put( LATEST,  lastRecord );
+		bundle.put( TOTAL,   totalNumber );
+		bundle.put( WON,     wonNumber );
+		bundle.put( HAPPY,   happyWonNumber);
 		
 		try {
 			OutputStream output = Game.instance().openFileOutput( RANKINGS_FILE, Game.MODE_PRIVATE );
@@ -128,13 +145,12 @@ public enum Rankings {
 			
 			for (Bundlable record : bundle.getCollection( RECORDS )) {
 				records.add( (Record)record );
-			}			
-			lastRecord = bundle.getInt( LATEST );
-			
-			totalNumber = bundle.getInt( TOTAL );
-			if (totalNumber == 0) {
-				totalNumber = records.size();
 			}
+			
+			lastRecord     = bundle.getInt( LATEST );	
+			totalNumber    = bundle.getInt( TOTAL );
+			wonNumber      = bundle.getInt( WON );
+			happyWonNumber = bundle.getInt( HAPPY );
 			
 		} catch (Exception e) {
 		}
@@ -161,9 +177,9 @@ public enum Rankings {
 		@Override
 		public void restoreFromBundle( Bundle bundle ) {
 			
-			info	= bundle.getString( REASON );
-			win		= bundle.getBoolean( WIN );
-			score	= bundle.getInt( SCORE );
+			info	= bundle.getString  ( REASON );
+			win		= bundle.getBoolean ( WIN    );
+			score	= bundle.getInt     ( SCORE  );
 			
 			heroClass	= HeroClass.restoreInBundle( bundle );
 			armorTier	= bundle.getInt( TIER );
@@ -175,7 +191,7 @@ public enum Rankings {
 		public void storeInBundle( Bundle bundle ) {
 			
 			bundle.put( REASON, info );
-			bundle.put( WIN, win );
+			bundle.put( WIN,   win );
 			bundle.put( SCORE, score );
 			
 			heroClass.storeInBundle( bundle );

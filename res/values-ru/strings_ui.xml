@@ -21,7 +21,7 @@
 
     <!-- STRINGS OF RankingsScene CLASS -->
     <string name="RankingsScene_Title">Лучшие Результаты</string>
-    <string name="RankingsScene_Total">Всего игр сыграно: %d</string>
+    <string name="RankingsScene_Total">Всего игр сыграно: </string>
     <string name="RankingsScene_NoGames">Вы ещё ни разу не сыграли.</string>
     <string name="RankingsScene_NoInfo">Дополнительная информация отсутствует</string>
 

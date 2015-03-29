@@ -26,6 +26,7 @@ import java.util.HashSet;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -568,18 +569,18 @@ public class Dungeon {
 	public static void fail( String desc ) {
 		resultDescription = desc;
 		if (hero.belongings.getItem( Ankh.class ) == null) { 
-			Rankings.INSTANCE.submit( false );
+			Rankings.INSTANCE.submit( Rankings.gameOver.LOSE);
 		}
 	}
 	
-	public static void win( String desc ) {
+	public static void win( String desc, gameOver kind ) {
 		
 		if (challenges != 0) {
 			Badges.validateChampion();
 		}
 		
 		resultDescription = desc;
-		Rankings.INSTANCE.submit( true );
+		Rankings.INSTANCE.submit( kind );
 	}
 	
 	public static void observe() {

@@ -20,7 +20,7 @@
 
         <!-- STRINGS OF RankingsScene CLASS -->
     <string name="RankingsScene_Title">Top Rankings</string>
-    <string name="RankingsScene_Total">Total games played: %d</string>
+    <string name="RankingsScene_Total">Total games played: </string>
     <string name="RankingsScene_NoGames">No games have been played yet.</string>
     <string name="RankingsScene_NoInfo">No additional information</string>
 
