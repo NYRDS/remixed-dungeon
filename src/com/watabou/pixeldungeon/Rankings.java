@@ -80,7 +80,7 @@ public enum Rankings {
 			}
 			
 			if (removedGame.gameFile.length() > 0) {
-				Game.instance.deleteFile( removedGame.gameFile );
+				Game.instance().deleteFile( removedGame.gameFile );
 			}
 		}
 		
@@ -106,7 +106,7 @@ public enum Rankings {
 		bundle.put( TOTAL, totalNumber );
 		
 		try {
-			OutputStream output = Game.instance.openFileOutput( RANKINGS_FILE, Game.MODE_PRIVATE );
+			OutputStream output = Game.instance().openFileOutput( RANKINGS_FILE, Game.MODE_PRIVATE );
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (Exception e) {
@@ -122,7 +122,7 @@ public enum Rankings {
 		records = new ArrayList<Rankings.Record>();
 		
 		try {
-			InputStream input = Game.instance.openFileInput( RANKINGS_FILE );
+			InputStream input = Game.instance().openFileInput( RANKINGS_FILE );
 			Bundle bundle = Bundle.read( input );
 			input.close();
 			

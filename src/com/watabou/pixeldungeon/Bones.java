@@ -69,7 +69,7 @@ public class Bones {
 		bundle.put( ITEM, item );
 		
 		try {
-			OutputStream output = Game.instance.openFileOutput( BONES_FILE, Game.MODE_PRIVATE );
+			OutputStream output = Game.instance().openFileOutput( BONES_FILE, Game.MODE_PRIVATE );
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (IOException e) {
@@ -81,7 +81,7 @@ public class Bones {
 		if (depth == -1) {
 			
 			try {
-				InputStream input = Game.instance.openFileInput( BONES_FILE ) ;
+				InputStream input = Game.instance().openFileInput( BONES_FILE ) ;
 				Bundle bundle = Bundle.read( input );
 				input.close();
 				
@@ -96,7 +96,7 @@ public class Bones {
 			
 		} else {
 			if (depth == Dungeon.depth) {
-				Game.instance.deleteFile( BONES_FILE );
+				Game.instance().deleteFile( BONES_FILE );
 				depth = 0;
 				
 				if (!item.stackable) {

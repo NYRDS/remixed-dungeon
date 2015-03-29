@@ -19,21 +19,25 @@ package com.watabou.pixeldungeon;
 
 import java.io.IOException;
 import java.util.Locale;
+
 import javax.microedition.khronos.opengles.GL10;
+
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+
 import com.watabou.noosa.Game;
+import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
-public class PixelDungeon extends Game {
+public class PixelDungeon extends GameWithGoogleIap {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -53,7 +57,7 @@ public class PixelDungeon extends Game {
 		updateImmersiveMode();
 
 		DisplayMetrics metrics = new DisplayMetrics();
-		instance.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		instance().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		boolean landscape = metrics.widthPixels > metrics.heightPixels;
 
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_LANDSCAPE, false) != landscape) {
@@ -97,7 +101,7 @@ public class PixelDungeon extends Game {
 	 */
 
 	public static void landscape(boolean value) {
-		Game.instance
+		Game.instance()
 				.setRequestedOrientation(value ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 						: ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		Preferences.INSTANCE.put(Preferences.KEY_LANDSCAPE, value);
@@ -115,7 +119,7 @@ public class PixelDungeon extends Game {
 	public static void immerse(boolean value) {
 		Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
 
-		instance.runOnUiThread(new Runnable() {
+		instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
 				updateImmersiveMode();
@@ -137,8 +141,8 @@ public class PixelDungeon extends Game {
 	@SuppressLint("NewApi")
 	public static void updateImmersiveMode() {
 		if (android.os.Build.VERSION.SDK_INT >= 19) {
-			if (instance != null) {
-				instance.getWindow()
+			if (instance() != null) {
+				instance().getWindow()
 						.getDecorView()
 						.setSystemUiVisibility(
 								immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -247,7 +251,7 @@ public class PixelDungeon extends Game {
 	public static void uiLanguage(String lang) {
 		Preferences.INSTANCE.put(Preferences.KEY_LOCALE, lang);
 
-		instance.doRestart();
+		instance().doRestart();
 	}
 
 	public static void secondQuickslot(boolean checked) {

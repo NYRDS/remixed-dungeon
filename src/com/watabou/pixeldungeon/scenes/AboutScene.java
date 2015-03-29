@@ -56,7 +56,7 @@ public class AboutScene extends PixelScene {
 				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{address} );
 				intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name) );
 
-				Game.instance.startActivity( Intent.createChooser(intent, TRANSLATE_SND) );
+				Game.instance().startActivity( Intent.createChooser(intent, TRANSLATE_SND) );
 			}
 		};
 		add(area);
@@ -98,7 +98,7 @@ public class AboutScene extends PixelScene {
 			@Override
 			protected void onClick( Touch touch ) {
 				Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "http://" + LNK ) );
-				Game.instance.startActivity( intent );
+				Game.instance().startActivity( intent );
 			}
 		};
 		add( hotArea );

@@ -403,7 +403,7 @@ public class Dungeon {
 			Badges.saveLocal( badges );
 			bundle.put( BADGES, badges );
 			
-			OutputStream output = Game.instance.openFileOutput( fileName, Game.MODE_PRIVATE );
+			OutputStream output = Game.instance().openFileOutput( fileName, Game.MODE_PRIVATE );
 			Bundle.write( bundle, output );
 			output.close();
 			
@@ -417,7 +417,7 @@ public class Dungeon {
 		Bundle bundle = new Bundle();
 		bundle.put( LEVEL, level );
 		
-		OutputStream output = Game.instance.openFileOutput( Utils.format( depthFile( hero.heroClass ), depth ), Game.MODE_PRIVATE );
+		OutputStream output = Game.instance().openFileOutput( Utils.format( depthFile( hero.heroClass ), depth ), Game.MODE_PRIVATE );
 		Bundle.write( bundle, output );
 		output.close();
 	}
@@ -527,7 +527,7 @@ public class Dungeon {
 		Dungeon.level = null;
 		Actor.clear();
 		
-		InputStream input = Game.instance.openFileInput( Utils.format( depthFile( cl ), depth ) ) ;
+		InputStream input = Game.instance().openFileInput( Utils.format( depthFile( cl ), depth ) ) ;
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
@@ -536,11 +536,11 @@ public class Dungeon {
 	
 	public static void deleteGame( HeroClass cl, boolean deleteLevels ) {
 		
-		Game.instance.deleteFile( gameFile( cl ) );
+		Game.instance().deleteFile( gameFile( cl ) );
 		
 		if (deleteLevels) {
 			int depth = 1;
-			while (Game.instance.deleteFile( Utils.format( depthFile( cl ), depth ) )) {
+			while (Game.instance().deleteFile( Utils.format( depthFile( cl ), depth ) )) {
 				depth++;
 			}
 		}
@@ -550,7 +550,7 @@ public class Dungeon {
 	
 	public static Bundle gameBundle( String fileName ) throws IOException {
 		
-		InputStream input = Game.instance.openFileInput( fileName );
+		InputStream input = Game.instance().openFileInput( fileName );
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
