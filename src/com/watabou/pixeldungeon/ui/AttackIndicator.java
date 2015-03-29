@@ -161,6 +161,8 @@ public class AttackIndicator extends Tag {
 	}
 	
 	public static void updateState() {
-		instance.checkEnemies();
+		if(instance != null){
+			instance.checkEnemies();
+		}
 	}
 }
