@@ -35,7 +35,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 abstract public class Food extends Item {
 
-	private static final float TIME_TO_EAT	= 3f;
+	public static final float TIME_TO_EAT	= 3f;
 	
 	public static final String AC_EAT = Game.getVar(R.string.Food_ACEat);
 	

@@ -23,11 +23,20 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
+import com.watabou.pixeldungeon.actors.buffs.Speed;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
+import com.watabou.utils.Random;
 
 public class Icecap extends Plant {
 
@@ -74,6 +83,20 @@ public class Icecap extends Plant {
 		@Override
 		public String desc() {
 			return TXT_DESC;
+		}
+		
+		@Override
+		public void execute( Hero hero, String action ) {
+			
+			super.execute( hero, action );
+			
+			if (action.equals( Food.AC_EAT )) {
+				
+				Buff.prolong( hero, Frost.class, Frost.duration( hero ));
+				
+				hero.HP = hero.HT;
+				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+			}
 		}
 	}
 }

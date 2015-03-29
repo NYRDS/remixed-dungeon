@@ -22,9 +22,14 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
+import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
@@ -70,6 +75,17 @@ public class Sorrowmoss extends Plant {
 		@Override
 		public String desc() {
 			return TXT_DESC;
+		}
+		
+		@Override
+		public void execute( Hero hero, String action ) {
+			
+			super.execute( hero, action );
+			
+			if (action.equals( Food.AC_EAT )) {
+				Buff.affect( hero, Poison.class ).set( Poison.durationFactor( hero ) * (hero.lvl) );
+				Buff.affect( hero, Invisibility.class, Invisibility.DURATION );
+			}
 		}
 	}
 }

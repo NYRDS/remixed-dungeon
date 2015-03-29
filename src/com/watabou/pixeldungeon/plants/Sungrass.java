@@ -22,13 +22,19 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Charm;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 public class Sungrass extends Plant {
 
@@ -72,6 +78,18 @@ public class Sungrass extends Plant {
 		@Override
 		public String desc() {
 			return TXT_DESC;
+		}
+		
+		@Override
+		public void execute( Hero hero, String action ) {
+			
+			super.execute( hero, action );
+			
+			if (action.equals( Food.AC_EAT )) {
+				Buff.affect(hero, Charm.class, Charm.durationFactor( hero ) * Random.IntRange( 3, 6 ) );
+				hero.HP = hero.HT;
+				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+			}
 		}
 	}
 	

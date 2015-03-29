@@ -21,10 +21,15 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Barkskin;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -95,6 +100,18 @@ public class Fadeleaf extends Plant {
 		@Override
 		public String desc() {
 			return TXT_DESC;
+		}
+		
+		@Override
+		public void execute( Hero hero, String action ) {
+			
+			super.execute( hero, action );
+			
+			if (action.equals( Food.AC_EAT )) {
+				ScrollOfTeleportation.teleportHero( hero );
+				hero.spendAndNext(1);
+				Buff.affect(hero, Vertigo.class, Vertigo.DURATION);
+			}
 		}
 	}
 }

@@ -37,7 +37,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
-public class PixelDungeon extends GameWithGoogleIap {
+public class PixelDungeon extends Game {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -96,6 +96,10 @@ public class PixelDungeon extends GameWithGoogleIap {
 		switchScene(c);
 	}
 
+	public static boolean canDonate() {
+		return instance() instanceof GameWithGoogleIap;
+	}
+	
 	/*
 	 * ---> Prefernces
 	 */
@@ -210,12 +214,12 @@ public class PixelDungeon extends GameWithGoogleIap {
 				false);
 	}
 
-	public static void donated(String value) {
+	public static void donated(int value) {
 		Preferences.INSTANCE.put(Preferences.KEY_DONATED, value);
 	}
 
-	public static String donated() {
-		return Preferences.INSTANCE.getString(Preferences.KEY_DONATED, "");
+	public static int donated() {
+		return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
 	}
 
 	public static void lastClass(int value) {
@@ -275,7 +279,6 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public static boolean thirdQuickslot() {
 		return Preferences.INSTANCE.getBoolean(Preferences.KEY_THIRD_QUICKSLOT, false);
 	}
-	
 	/*
 	 * <--- Preferences
 	 */
