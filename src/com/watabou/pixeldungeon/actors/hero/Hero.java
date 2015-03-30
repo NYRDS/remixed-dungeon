@@ -874,9 +874,10 @@ public class Hero extends Char {
 		interrupt();
 		
 		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
-			Buff.affect( this, Fury.class );
-
-			getHeroSprite().updateState(this);
+			if(buff(Fury.class)==null){
+				Buff.affect( this, Fury.class );
+				getHeroSprite().updateState(this);
+			}
 		}
 	}
 	

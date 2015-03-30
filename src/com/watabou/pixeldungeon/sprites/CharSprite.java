@@ -267,6 +267,14 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		}
 	}
 	
+	public void removeAllStates() {
+		remove(State.BURNING);
+		remove(State.LEVITATING);
+		remove(State.INVISIBLE);
+		remove(State.FROZEN);
+		remove(State.ILLUMINATED);
+	}
+	
 	public void remove( State state ) {
 		switch (state) {
 		case BURNING:
