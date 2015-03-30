@@ -191,9 +191,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		sleeping = false;
 		play( die );
 		
-		if (emo != null) {
-			emo.killAndErase();
-		}
+		removeEmo();
 	}
 	
 	public Emitter emitter() {
@@ -267,12 +265,20 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		}
 	}
 	
+	private void removeEmo() {
+		if (emo != null) {
+			emo.killAndErase();
+			emo = null;
+		}		
+	}
+	
 	public void removeAllStates() {
 		remove(State.BURNING);
 		remove(State.LEVITATING);
 		remove(State.INVISIBLE);
 		remove(State.FROZEN);
 		remove(State.ILLUMINATED);
+		removeEmo();
 	}
 	
 	public void remove( State state ) {
@@ -346,17 +352,14 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		if (emo instanceof EmoIcon.Sleep) {
 			
 		} else {
-			if (emo != null) {
-				emo.killAndErase();
-			}
+			removeEmo();
 			emo = new EmoIcon.Sleep( this );
 		}
 	}
 	
 	public void hideSleep() {
 		if (emo instanceof EmoIcon.Sleep) {
-			emo.killAndErase();
-			emo = null;
+			removeEmo();
 		}
 	}
 	
@@ -364,28 +367,21 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		if (emo instanceof EmoIcon.Alert) {
 			
 		} else {
-			if (emo != null) {
-				emo.killAndErase();
-			}
+			removeEmo();
 			emo = new EmoIcon.Alert( this );
 		}
 	}
 	
 	public void hideAlert() {
 		if (emo instanceof EmoIcon.Alert) {
-			emo.killAndErase();
-			emo = null;
+			removeEmo();
 		}
 	}
 	
 	@Override
 	public void kill() {
 		super.kill();
-		
-		if (emo != null) {
-			emo.killAndErase();
-			emo = null;
-		}
+		removeEmo();
 	}
 	
 	@Override
