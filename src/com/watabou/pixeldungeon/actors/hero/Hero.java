@@ -470,9 +470,11 @@ public class Hero extends Char {
 	}
 	
 	private void ready() {
-		getSprite().idle();
+		if(getSprite() != null){
+			getSprite().idle();
+		}
 		curAction = null;
-		ready = true;
+		ready     = true;
 		
 		GameScene.ready();
 	}
