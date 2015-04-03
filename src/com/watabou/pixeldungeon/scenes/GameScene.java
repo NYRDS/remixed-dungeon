@@ -198,11 +198,11 @@ public class GameScene extends PixelScene {
 		
 		add( emoicons );
 		
-		updateHeroSprite();
-		
 		add( new HealthIndicator() );
 		
 		add( cellSelector = new CellSelector( tiles ) );
+		
+		updateHeroSprite();
 		
 		StatusPane sb = new StatusPane();
 		sb.camera = uiCamera;
@@ -300,11 +300,14 @@ public class GameScene extends PixelScene {
 	
 	
 	public static void updateHeroSprite(){
+		
+		HeroSprite newHeroSprite = new HeroSprite(Dungeon.hero);
 		if(scene.heroSprite != null){
 			scene.mobs.remove(scene.heroSprite);
+			scene.heroSprite.removeAllStates();
 		}
 		
-		scene.heroSprite = new HeroSprite(Dungeon.hero);
+		scene.heroSprite = newHeroSprite;
 		scene.heroSprite.place( Dungeon.hero.pos );
 		Dungeon.hero.updateLook();
 		scene.mobs.add( scene.heroSprite );

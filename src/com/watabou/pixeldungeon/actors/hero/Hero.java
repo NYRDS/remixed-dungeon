@@ -470,9 +470,11 @@ public class Hero extends Char {
 	}
 	
 	private void ready() {
-		getSprite().idle();
+		if(getSprite() != null){
+			getSprite().idle();
+		}
 		curAction = null;
-		ready = true;
+		ready     = true;
 		
 		GameScene.ready();
 	}
@@ -874,9 +876,10 @@ public class Hero extends Char {
 		interrupt();
 		
 		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
-			Buff.affect( this, Fury.class );
-
-			getHeroSprite().updateState(this);
+			if(buff(Fury.class)==null){
+				Buff.affect( this, Fury.class );
+				getHeroSprite().updateState(this);
+			}
 		}
 	}
 	
