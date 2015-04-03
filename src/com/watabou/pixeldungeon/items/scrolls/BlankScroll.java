@@ -1,12 +1,15 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.utils.GLog;
 
-public class BlankScroll extends Item {
+public class BlankScroll extends Scroll {
 	{
 		image = ItemSpriteSheet.SCROLL_BLANK;
-		stackable = true;	
+		stackable = true;
 	}
 	
 	@Override
@@ -27,5 +30,23 @@ public class BlankScroll extends Item {
 	@Override
 	public int price() {
 		return 10 * quantity;
+	}
+
+	@Override
+	protected void doRead() {
+		curItem.collect( curUser.belongings.backpack );
+		curUser.spendAndNext( TIME_TO_READ );
+		
+		GLog.i(Game.getVar(R.string.BlankScroll_ReallyBlank));
+	}
+	
+	@Override
+	public String name() {
+		return name; 
+	}
+	
+	@Override
+	public String info() {
+		return desc();
 	}
 }
