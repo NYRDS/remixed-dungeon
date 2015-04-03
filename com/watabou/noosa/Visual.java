@@ -232,4 +232,9 @@ public class Visual extends Gizmo {
 		float h = height();
 		return x + w >= cx && y + h >= cy && x < cx + c.width && y < cy + c.height;
 	}
+	
+	public void setScale(float x, float y){
+		scale.x = x;
+		scale.y = y;
+	}
 }
