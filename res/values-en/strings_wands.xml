@@ -11,7 +11,7 @@
     <string name="Wand_SelfTarget">You can\'t target yourself</string>
     <string name="Wand_Prompt">Choose direction to zap</string>
 
-    <string-array name="Wand_Wood">
+    <string-array name="Wand_Wood_Types">
         <item>holly</item>
         <item>yew</item>
         <item>ebony</item>

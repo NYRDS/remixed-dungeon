@@ -11,7 +11,7 @@
     <string name="Wand_SelfTarget">Ты не можешь нацелится на себя</string>
     <string name="Wand_Prompt">Выбери направление взмаха</string>
 
-    <string-array name="Wand_Wood">
+    <string-array name="Wand_Wood_Types">
         <item>ясеневая</item>
         <item>тисовая</item>
         <item>эбеновая</item>
