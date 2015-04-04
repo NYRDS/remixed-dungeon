@@ -36,6 +36,7 @@
     <!-- STRINGS OF BlankScroll CLASS -->
     <string name="BlankScroll_Name">Чистый свиток</string>
     <string name="BlankScroll_Info">Просто чистый свиток</string>
+    <string name="BlankScroll_ReallyBlank">Действительно чистый свиток</string>
 
     <!-- STRINGS OF ScrollOfChallenge CLASS -->
     <string name="ScrollOfChallenge_Name">Свиток Вызова</string>

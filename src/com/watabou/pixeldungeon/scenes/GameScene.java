@@ -113,6 +113,8 @@ public class GameScene extends PixelScene {
 	private Toolbar toolbar;
 	private Toast prompt;
 	
+	private boolean sceneCreated = false;
+	
 	@Override
 	public void create() {
 		
@@ -296,6 +298,8 @@ public class GameScene extends PixelScene {
 		
 		Camera.main.target = heroSprite;
 		fadeIn();
+		
+		sceneCreated = true;
 	}
 	
 	
@@ -333,6 +337,10 @@ public class GameScene extends PixelScene {
 	
 	@Override
 	public synchronized void update() {
+		if (sceneCreated == false){
+			return;
+		}
+		
 		if (Dungeon.hero == null) {
 			return;
 		}

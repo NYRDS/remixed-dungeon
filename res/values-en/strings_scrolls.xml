@@ -35,6 +35,7 @@
     <!-- STRINGS OF BlankScroll CLASS -->
     <string name="BlankScroll_Name">Blank Scroll</string>
     <string name="BlankScroll_Info">Just blank scroll</string>
+    <string name="BlankScroll_ReallyBlank">This scroll is really blank</string>
 
     <!-- STRINGS OF ScrollOfChallenge CLASS -->
     <string name="ScrollOfChallenge_Name">Scroll of Challenge</string>

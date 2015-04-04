@@ -101,7 +101,7 @@ public abstract class Scroll extends Item {
 	private String rune;
 	
 	{
-		stackable = true;		
+		stackable     = true;		
 		defaultAction = AC_READ;
 	}
 	
@@ -121,6 +121,9 @@ public abstract class Scroll extends Item {
 	
 	public Scroll() {
 		super();
+		if (this instanceof BlankScroll){
+			return;
+		}
 		image = handler.image( this );
 		rune  = handler.label( this );
 	}
