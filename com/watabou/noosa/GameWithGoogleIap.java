@@ -9,7 +9,7 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.util.Log;
 
-public class GameWithGoogleIap extends Game {
+abstract public class GameWithGoogleIap extends Game {
 
 	protected static final String SKU_LEVEL_1 = "supporter_level_1";
 	protected static final String SKU_LEVEL_2 = "supporter_level_2";
@@ -116,7 +116,7 @@ public class GameWithGoogleIap extends Game {
 	protected boolean mIsPremium;
 
 	// User clicked the "Upgrade to Premium" button.
-	public void doPurchase() {
+	public void doPurchase(String sku) {
 		Log.d("GAME",
 				"Upgrade button clicked; launching purchase flow for upgrade.");
 
@@ -130,7 +130,7 @@ public class GameWithGoogleIap extends Game {
 
 		// mHelper.launchPurchaseFlow(this, SKU_LEVEL_1,
 		// RC_REQUEST,mPurchaseFinishedListener, payload);
-		mHelper.launchPurchaseFlow(this, "android.test.purchased", RC_REQUEST,
+		mHelper.launchPurchaseFlow(this, sku, RC_REQUEST,
 				mPurchaseFinishedListener, payload);
 	}
 
@@ -140,6 +140,23 @@ public class GameWithGoogleIap extends Game {
 		Log.d("GAME", payload);
 
 		return true;
+	}
+
+	protected abstract void setDonationLevel(int level);
+
+	@Override
+	protected void donate(int level) {
+		switch (level) {
+		case 1:
+			doPurchase(SKU_LEVEL_1);
+			break;
+		case 2:
+			doPurchase(SKU_LEVEL_2);
+			break;
+		case 3:
+			doPurchase(SKU_LEVEL_3);
+			break;
+		}
 	}
 
 	// Callback for when a purchase is finished
@@ -162,16 +179,20 @@ public class GameWithGoogleIap extends Game {
 				return;
 			}
 
-			Log.d("GAME", "Purchase successful.");
+			Log.d("GAME", "Purchase successful!");
 
 			if (purchase.getSku().equals(SKU_LEVEL_1)) {
-				// bought the premium upgrade!
-				Log.d("GAME",
-						"Purchase is premium upgrade. Congratulating user.");
-				alert("Thank you for upgrading to premium!");
-				mIsPremium = true;
-
+				setDonationLevel(1);
 			}
+
+			if (purchase.getSku().equals(SKU_LEVEL_2)) {
+				setDonationLevel(2);
+			}
+
+			if (purchase.getSku().equals(SKU_LEVEL_3)) {
+				setDonationLevel(3);
+			}
+
 		}
 	};
 
