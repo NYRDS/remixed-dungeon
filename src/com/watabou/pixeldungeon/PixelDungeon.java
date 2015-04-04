@@ -37,7 +37,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
-public class PixelDungeon extends Game {
+public class PixelDungeon extends GameWithGoogleIap {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -287,5 +287,12 @@ public class PixelDungeon extends Game {
 		Log.e("PD", Log.getStackTraceString(e));
 	}
 
+	/*
+	 * <---Purchases
+	 */
+	
+	protected void setDonationLevel(int level){
+		donated(level);
+	}
 
 }
