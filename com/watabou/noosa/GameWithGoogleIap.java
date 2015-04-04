@@ -145,7 +145,7 @@ abstract public class GameWithGoogleIap extends Game {
 	protected abstract void setDonationLevel(int level);
 
 	@Override
-	protected void donate(int level) {
+	public void donate(int level) {
 		switch (level) {
 		case 1:
 			doPurchase(SKU_LEVEL_1);
