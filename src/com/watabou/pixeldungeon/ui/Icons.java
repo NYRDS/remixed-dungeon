@@ -51,7 +51,10 @@ public enum Icons {
 	EXIT,
 	CHALLENGE_OFF,
 	CHALLENGE_ON,
-	RESUME;
+	RESUME,
+	CHEST_SILVER,
+	CHEST_GOLD,
+	CHEST_RUBY;
 	
 	public Image get() {
 		return get( this );
@@ -146,6 +149,15 @@ public enum Icons {
 			break;
 		case RESUME:
 			icon.frame( icon.texture.uvRect( 114, 0, 126, 11 ) );
+			break;
+		case CHEST_SILVER:
+			icon.frame( icon.texture.uvRect( 63, 46, 77, 59 ) );
+			break;
+		case CHEST_GOLD:
+			icon.frame( icon.texture.uvRect( 79, 46, 93, 59 ) );
+			break;
+		case CHEST_RUBY:
+			icon.frame( icon.texture.uvRect( 95, 46, 109, 59 ) );
 			break;
 		}
 		return icon;
