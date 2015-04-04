@@ -62,9 +62,7 @@ public class PixelScene extends Scene {
 	public void create() {
 		
 		super.create();
-		
-		GameScene.scene = null;
-		
+
 		float minWidth, minHeight;
 		if (PixelDungeon.landscape()) {
 			minWidth = MIN_WIDTH_L;
@@ -100,6 +98,10 @@ public class PixelScene extends Scene {
 		uiCamera = Camera.createFullscreen( uiZoom );
 		Camera.add( uiCamera );
 		
+		createFonts();
+	}
+	
+	private void createFonts(){
 		if (font1x == null) {
 			
 			// 3x5 (6)
@@ -131,7 +133,7 @@ public class PixelScene extends Scene {
 				BitmapCache.get( Assets.FONTS3X ), 22, 0x00000000, BitmapText.Font.ALL_CHARS);
 			font3x.baseLine = 17;
 			font3x.tracking = -2;
-		}
+		}		
 	}
 	
 	@Override
