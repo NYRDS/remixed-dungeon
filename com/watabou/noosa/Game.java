@@ -384,6 +384,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return instance;
 	}
 	
-	public void donate(int level) {
+	public static void donate(int level) {
 	}
 }

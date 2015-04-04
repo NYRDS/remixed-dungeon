@@ -144,17 +144,20 @@ abstract public class GameWithGoogleIap extends Game {
 
 	protected abstract void setDonationLevel(int level);
 
-	@Override
-	public void donate(int level) {
+	static public GameWithGoogleIap instance() {
+		return (GameWithGoogleIap) Game.instance();
+	}
+
+	public static void donate(int level) {
 		switch (level) {
 		case 1:
-			doPurchase(SKU_LEVEL_1);
+			instance().doPurchase(SKU_LEVEL_1);
 			break;
 		case 2:
-			doPurchase(SKU_LEVEL_2);
+			instance().doPurchase(SKU_LEVEL_2);
 			break;
 		case 3:
-			doPurchase(SKU_LEVEL_3);
+			instance().doPurchase(SKU_LEVEL_3);
 			break;
 		}
 	}
