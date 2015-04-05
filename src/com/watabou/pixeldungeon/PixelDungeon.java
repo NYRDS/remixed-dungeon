@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class PixelDungeon extends Game {
 
@@ -53,8 +52,6 @@ public class PixelDungeon extends Game {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		//setDonationLevel(2);
 		
 		useLocale(uiLanguage());
 
@@ -309,11 +306,15 @@ public class PixelDungeon extends Game {
 	 * <---Purchases
 	 */
 	
-	protected void setDonationLevel(int level){
-		Assets.chromeType  = level;
-		Assets.statusType  = level;
-		Assets.toolbarType = level;
-		GLog.i("donation level: %d", level);
+	public void setDonationLevel(int level) {
+		if (level < donated()) {
+			return;
+		}
+
+		if (donated() == 0 && level != 0) {
+			Sample.INSTANCE.play(Assets.SND_GOLD);
+			Badges.validateSupporter();
+		}
 		donated(level);
 	}
 

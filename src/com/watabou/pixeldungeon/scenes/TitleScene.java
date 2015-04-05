@@ -111,7 +111,6 @@ public class TitleScene extends PixelScene {
 		pleaseSupport.measure();
 		pleaseSupport.x = (w - pleaseSupport.width())/2;
 		pleaseSupport.y = h - pleaseSupport.height()*2;
-		pleaseSupport.hardlight(0.95f, 0.95f, 0.1f);
 		
 		btnDonate.setPos((w-btnDonate.width())/2,pleaseSupport.y-btnDonate.height());
 		
@@ -162,12 +161,13 @@ public class TitleScene extends PixelScene {
 		btnPrefs.setPos( 0, 0 );
 		add( btnPrefs );
 
+/*
 		if(PixelDungeon.donated() > 0) {
 			PremiumPrefsButton btnPPrefs = new PremiumPrefsButton();
-			btnPPrefs.setPos(btnPrefs.right(), 0);
+			btnPPrefs.setPos(btnPrefs.right() + 2, 0);
 			add(btnPPrefs);
 		}
-		
+*/		
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos( w - btnExit.width(), 0 );
 		add( btnExit );

@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
@@ -18,10 +19,12 @@ public class DonateButton extends Button {
 		height = image.height;
 	}
 
-	@Override
-	protected void createChildren() {
-		super.createChildren();
-
+	private void updateImage() {
+		
+		if(image != null) {
+			remove(image);
+		}
+		
 		switch (PixelDungeon.donated()) {
 		case 0:
 			image = Icons.SUPPORT.get();
@@ -36,21 +39,29 @@ public class DonateButton extends Button {
 			image = Icons.CHEST_RUBY.get();
 			break;
 		}
-
+		
 		add(image);
+		layout();
+	}
+	
+	@Override
+	protected void createChildren() {
+		super.createChildren();
+
+		updateImage();
 	}
 
 	public String getText() {
 		switch (PixelDungeon.donated()) {
 
 		case 1:
-			return "Thanks for your support 1";
+			return "Any helps counts!";
 		case 2:
-			return "Thanks for your support 2";
+			return "Thanks for Your support!";
 		case 3:
 			return "Thanks for your support 3";
 		default:
-			return "please consider donation";
+			return "Please consider donating";
 		}
 	}
 
@@ -75,6 +86,13 @@ public class DonateButton extends Button {
 
 	@Override
 	protected void onClick() {
-		parent.add(new WndDonate());
+		if(PixelDungeon.donated() == 0) {
+			//PixelDungeon.instance().setDonationLevel(2);
+			updateImage();
+			
+			//PixelDungeon.donate(2);
+			
+			//parent.add(new WndDonate());
+		}
 	}
 }
