@@ -36,8 +36,9 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
+import com.watabou.pixeldungeon.utils.GLog;
 
-public class PixelDungeon extends GameWithGoogleIap {
+public class PixelDungeon extends Game {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -51,7 +52,9 @@ public class PixelDungeon extends GameWithGoogleIap {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
+		//setDonationLevel(2);
+		
 		useLocale(uiLanguage());
 
 		updateImmersiveMode();
@@ -292,6 +295,10 @@ public class PixelDungeon extends GameWithGoogleIap {
 	 */
 	
 	protected void setDonationLevel(int level){
+		Assets.chromeType  = level;
+		Assets.statusType  = level;
+		Assets.toolbarType = level;
+		GLog.i("donation level: %d", level);
 		donated(level);
 	}
 
