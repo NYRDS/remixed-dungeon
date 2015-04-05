@@ -1,19 +1,16 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.Rankings;
-import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.ui.Archs;
-import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.ui.ScrollPane;
-import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.ui.Archs;
+import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 
 //TODO: update this class with relevant info as new versions come out.
 public class WelcomeScene extends PixelScene {
@@ -25,8 +22,6 @@ public class WelcomeScene extends PixelScene {
     @Override
     public void create() {
         super.create();
-
-        final int gameversion = PixelDungeon.version();
 
         BitmapTextMultiline title;
         BitmapTextMultiline text;
