@@ -108,7 +108,7 @@ public class Fadeleaf extends Plant {
 			if (action.equals( Food.AC_EAT )) {
 				ScrollOfTeleportation.teleportHero( hero );
 				hero.spendAndNext(1);
-				Buff.affect(hero, Vertigo.class, Vertigo.DURATION);
+				Buff.affect(hero, Vertigo.class, Vertigo.DURATION * 2);
 			}
 		}
 	}

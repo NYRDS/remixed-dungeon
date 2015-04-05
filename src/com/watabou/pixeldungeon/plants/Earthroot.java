@@ -85,8 +85,8 @@ public class Earthroot extends Plant {
 			super.execute( hero, action );
 			
 			if (action.equals( Food.AC_EAT )) {
-				Buff.affect(hero, Roots.class, 10);
-				Buff.affect(hero, Barkskin.class).level(hero.HT / 4);
+				Buff.affect(hero, Roots.class, 25);
+				Buff.affect(hero, Barkskin.class).level(hero.STR / 4);
 			}
 		}
 	}

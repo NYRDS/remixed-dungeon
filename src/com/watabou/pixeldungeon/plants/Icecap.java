@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
+import com.watabou.utils.Random;
 
 public class Icecap extends Plant {
 
@@ -88,9 +89,9 @@ public class Icecap extends Plant {
 			
 			if (action.equals( Food.AC_EAT )) {
 				
-				Buff.prolong( hero, Frost.class, Frost.duration( hero ));
+				Buff.prolong( hero, Frost.class, Frost.duration( hero ) * 2);
 				
-				hero.HP = hero.HT;
+				hero.HP += Random.Int(0, Math.max((hero.HT - hero.HP) / 4, 10) );
 				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
 			}
 		}

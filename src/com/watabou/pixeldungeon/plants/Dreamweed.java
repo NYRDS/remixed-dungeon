@@ -78,8 +78,8 @@ public class Dreamweed extends Plant {
 			super.execute( hero, action );
 			
 			if (action.equals( Food.AC_EAT )) {
-				Buff.affect(hero, Vertigo.class, Vertigo.DURATION);
-				Buff.affect(hero, MindVision.class, MindVision.DURATION);
+				Buff.affect(hero, Vertigo.class, Vertigo.DURATION * 2);
+				Buff.affect(hero, MindVision.class, 1);
 			}
 		}
 	}

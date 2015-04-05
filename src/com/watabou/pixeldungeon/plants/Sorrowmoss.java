@@ -82,7 +82,7 @@ public class Sorrowmoss extends Plant {
 			
 			if (action.equals( Food.AC_EAT )) {
 				Buff.affect( hero, Poison.class ).set( Poison.durationFactor( hero ) * (hero.lvl) );
-				Buff.affect( hero, Invisibility.class, Invisibility.DURATION );
+				Buff.affect( hero, Invisibility.class, 2 );
 			}
 		}
 	}
