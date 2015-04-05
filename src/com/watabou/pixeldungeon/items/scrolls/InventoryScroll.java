@@ -79,7 +79,7 @@ public abstract class InventoryScroll extends Scroll {
 				curUser.spendAndNext( TIME_TO_READ );
 				
 				Sample.INSTANCE.play( Assets.SND_READ );
-				Invisibility.dispel();
+				Invisibility.dispel(curUser);
 				
 			} else if (identifiedByUse) {
 				

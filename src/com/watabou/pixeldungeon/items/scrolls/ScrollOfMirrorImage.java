@@ -66,7 +66,7 @@ public class ScrollOfMirrorImage extends Scroll {
 		}
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel();
+		Invisibility.dispel(curUser);
 		
 		curUser.spendAndNext( TIME_TO_READ );
 	}

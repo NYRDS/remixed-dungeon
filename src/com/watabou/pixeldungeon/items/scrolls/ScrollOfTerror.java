@@ -37,7 +37,7 @@ public class ScrollOfTerror extends Scroll {
 		
 		new Flare( 5, 32 ).color( 0xFF0000, true ).show( curUser.getSprite(), 2f );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel();
+		Invisibility.dispel(curUser);
 		
 		int count = 0;
 		Mob affected = null;

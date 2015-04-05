@@ -75,7 +75,7 @@ public class ScrollOfMagicMapping extends Scroll {
 		
 		SpellSprite.show( curUser, SpellSprite.MAP );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel();
+		Invisibility.dispel(curUser);
 		
 		setKnown();
 		

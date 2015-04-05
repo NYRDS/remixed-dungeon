@@ -39,7 +39,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 		
 		new Flare( 6, 32 ).show( curUser.getSprite(), 2f ) ;
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel();
+		Invisibility.dispel(curUser);
 		
 		boolean procced = uncurse( curUser, curUser.belongings.backpack.items.toArray( new Item[0] ) ); 
 		procced = uncurse( curUser, 

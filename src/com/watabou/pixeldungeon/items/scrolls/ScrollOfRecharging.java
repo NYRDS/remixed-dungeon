@@ -36,7 +36,7 @@ public class ScrollOfRecharging extends Scroll {
 		charge( curUser );
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel();
+		Invisibility.dispel(curUser);
 		
 		if (count > 0) {
 			GLog.i((count > 1 ? Game.getVar(R.string.ScrollOfRecharging_Info1b) 

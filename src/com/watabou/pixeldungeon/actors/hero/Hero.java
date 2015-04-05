@@ -1256,7 +1256,7 @@ public class Hero extends Char {
 		attack( enemy );
 		curAction = null;
 		
-		Invisibility.dispel();
+		Invisibility.dispel(this);
 
 		super.onAttackComplete();
 	}

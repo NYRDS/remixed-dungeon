@@ -691,6 +691,8 @@ public class Dungeon {
 					.start(Speck.factory(Speck.SCREAM), 0.3f, 3);
 		}
 		Sample.INSTANCE.play(sound);
-		Invisibility.dispel();
+		if (ch instanceof Hero) {
+			Invisibility.dispel((Hero) ch);
+		}
 	}
 }

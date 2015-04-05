@@ -38,7 +38,7 @@ public class ScrollOfPsionicBlast extends Scroll {
 		GameScene.flash( 0xFFFFFF );
 		
 		Sample.INSTANCE.play( Assets.SND_BLAST );
-		Invisibility.dispel();
+		Invisibility.dispel(curUser);
 		
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
 			if (Level.fieldOfView[mob.pos]) {

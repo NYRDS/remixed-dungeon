@@ -157,6 +157,7 @@ public abstract class Scroll extends Item {
 			} else {
 				curUser = hero;
 				curItem = detach( hero.belongings.backpack );
+				
 				doRead();
 			}
 			

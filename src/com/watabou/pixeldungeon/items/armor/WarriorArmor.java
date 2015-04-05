@@ -17,19 +17,17 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
@@ -92,11 +90,10 @@ public class WarriorArmor extends ClassArmor {
 				}
 				
 				curUser.HP -= (curUser.HP / 3);
-				if (curUser.subClass == HeroSubClass.BERSERKER && curUser.HP <= curUser.HT * Fury.LEVEL) {
-					Buff.affect( curUser, Fury.class );
-				}
 				
-				Invisibility.dispel();
+				curUser.checkIfFurious();
+				
+				Invisibility.dispel(curUser);
 				
 				final int dest = cell;
 				curUser.busy();

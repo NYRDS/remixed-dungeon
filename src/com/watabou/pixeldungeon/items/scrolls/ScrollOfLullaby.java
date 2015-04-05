@@ -17,13 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -37,7 +36,6 @@ public class ScrollOfLullaby extends Scroll {
 		
 		curUser.getSprite().centerEmitter().start( Speck.factory( Speck.NOTE ), 0.3f, 5 );
 		Sample.INSTANCE.play( Assets.SND_LULLABY );
-		Invisibility.dispel();
 		
 		int count = 0;
 		Mob affected = null;

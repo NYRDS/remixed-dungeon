@@ -36,7 +36,7 @@ public class ScrollOfTeleportation extends Scroll {
 	protected void doRead() {
 
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel();
+		Invisibility.dispel(curUser);
 		
 		teleportHero( curUser );
 		setKnown();
