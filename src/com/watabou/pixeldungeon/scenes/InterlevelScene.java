@@ -63,13 +63,14 @@ public class InterlevelScene extends PixelScene {
 	private enum Phase {
 		FADE_IN, STATIC, FADE_OUT
 	};
-	private Phase phase;
-	private float timeLeft;
+	volatile private Phase phase;
+	volatile private float timeLeft;
 	
 	private BitmapText message;
 	
 	private Thread thread;
-	private String error = null;
+	
+	volatile private String error = null;
 	
 	@Override
 	public void create() {
@@ -191,7 +192,7 @@ public class InterlevelScene extends PixelScene {
 				} catch (Exception e ) {
 					
 					e.printStackTrace();
-					error = ERR_GENERIC;
+					error = ERR_GENERIC + "\n" + e.getMessage();
 					
 				}
 				
