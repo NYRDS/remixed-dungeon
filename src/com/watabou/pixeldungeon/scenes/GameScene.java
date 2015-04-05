@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -204,7 +205,7 @@ public class GameScene extends PixelScene {
 		
 		add( cellSelector = new CellSelector( tiles ) );
 		
-		updateHeroSprite();
+		updateHeroSprite(Dungeon.hero);
 		
 		StatusPane sb = new StatusPane();
 		sb.camera = uiCamera;
@@ -303,17 +304,17 @@ public class GameScene extends PixelScene {
 	}
 	
 	
-	public static void updateHeroSprite(){
+	public static void updateHeroSprite(Hero hero){
 		
-		HeroSprite newHeroSprite = new HeroSprite(Dungeon.hero);
+		HeroSprite newHeroSprite = new HeroSprite(hero);
 		if(scene.heroSprite != null){
 			scene.mobs.remove(scene.heroSprite);
 			scene.heroSprite.removeAllStates();
 		}
 		
 		scene.heroSprite = newHeroSprite;
-		scene.heroSprite.place( Dungeon.hero.pos );
-		Dungeon.hero.updateLook();
+		scene.heroSprite.place(hero.pos );
+		hero.updateLook();
 		scene.mobs.add( scene.heroSprite );
 	}
 	

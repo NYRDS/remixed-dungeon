@@ -73,7 +73,7 @@ public class HeroSprite extends CharSprite {
 	}
 
 	public void updateState(Hero hero) {
-		GameScene.updateHeroSprite();
+		GameScene.updateHeroSprite(hero);
 	}
 
 	public void updateArmor(int tier) {
