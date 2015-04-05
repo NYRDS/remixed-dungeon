@@ -19,24 +19,24 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.ArrayList;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -327,19 +327,25 @@ public class WandMaker extends NPC {
 			}
 			
 			@Override
+			public void execute( Hero hero, String action ) {
+				
+				super.execute( hero, action );
+				
+				if (action.equals( Food.AC_EAT )) {
+					
+					Buff.prolong( hero, Frost.class, Frost.duration( hero ) * 2);
+					
+					hero.HP += Random.Int(0, Math.max((hero.HT - hero.HP) / 4, 10) );
+					hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+				}
+			}
+			
+			@Override
 			public boolean collect( Bag container ) {
 				if (super.collect( container )) {
+					Dungeon.challengeAllMobs(Dungeon.hero,Assets.SND_CHALLENGE);
 					
-					if (Dungeon.level != null) {
-						for (Mob mob : Dungeon.level.mobs) {
-							mob.beckon( Dungeon.hero.pos );
-						}
-						
-						GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
-						CellEmitter.center( Dungeon.hero.pos ).start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
-						Sample.INSTANCE.play( Assets.SND_CHALLENGE );
-					}
-					
+					GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
 					return true;
 				} else {
 					return false;

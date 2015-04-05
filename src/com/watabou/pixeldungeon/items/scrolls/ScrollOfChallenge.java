@@ -17,16 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.mobs.Mimic;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfChallenge extends Scroll {
@@ -34,27 +28,11 @@ public class ScrollOfChallenge extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		for (Mob mob : Dungeon.level.mobs) {
-			mob.beckon( curUser.pos );
-		}
-		
-		for (Heap heap : Dungeon.level.allHeaps()) {
-			if (heap.type == Heap.Type.MIMIC) {
-				Mimic m = Mimic.spawnAt( heap.pos, heap.items );
-				if (m != null) {
-					m.beckon( curUser.pos );
-					heap.destroy();
-				}
-			}
-		}
+		Dungeon.challengeAllMobs(curUser,Assets.SND_CHALLENGE);
 		
 		GLog.w(Game.getVar(R.string.ScrollOfChallenge_Info1));
 		setKnown();
-		
-		curUser.getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );		
-		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
-		Invisibility.dispel();
-		
+				
 		curUser.spendAndNext( TIME_TO_READ );
 	}
 	

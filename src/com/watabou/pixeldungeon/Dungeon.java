@@ -26,18 +26,24 @@ import java.util.HashSet;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.mobs.Mimic;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Ankh;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -659,5 +665,32 @@ public class Dungeon {
 		
 		return PathFinder.getStepBack( cur, from, passable );
 	}
+	
+	public static void challengeAllMobs(Char ch, String sound) {
 
+		if (Dungeon.level == null) {
+			return;
+		}
+
+		for (Mob mob : Dungeon.level.mobs) {
+			mob.beckon(ch.pos);
+		}
+
+		for (Heap heap : Dungeon.level.allHeaps()) {
+			if (heap.type == Heap.Type.MIMIC) {
+				Mimic m = Mimic.spawnAt(heap.pos, heap.items);
+				if (m != null) {
+					m.beckon(ch.pos);
+					heap.destroy();
+				}
+			}
+		}
+
+		if (ch.getSprite() != null) {
+			ch.getSprite().centerEmitter()
+					.start(Speck.factory(Speck.SCREAM), 0.3f, 3);
+		}
+		Sample.INSTANCE.play(sound);
+		Invisibility.dispel();
+	}
 }
