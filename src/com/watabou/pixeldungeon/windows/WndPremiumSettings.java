@@ -34,7 +34,6 @@ public class WndPremiumSettings extends Window {
 							protected void onSelect(int index) {
 								if (PixelDungeon.donated() >= index) {
 									Assets.use(assetKind, index);
-									Assets.chromeType = index;
 									PixelDungeon.scene().add(
 											new WndMessage("ok!"));
 								} else {
