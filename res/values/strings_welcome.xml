@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Welcome_Title">Welcome!</string>
+    <string name="Welcome_Text">
+        Remixed Pixel Dungeon is a modification of Watabou\'s open source Pixel Dungeon.\n\n
+        Project was created to provide players with new expirience and content.\n\n
+        With every update we try to stay as close to our community as possible.\n\n
+        And if one day you\'ll see your idea implemented in the game... Thanks for your creativity =)\n\n
+        Current version based on Pixel Dungeon 1.7.3 and partially 1.7.5.\n 
+        Difference from original: \n
+        - New mobs\n
+        - New items\n
+        - New fire and ice interaction mechanics\n     
+        </string>
+</resources>
