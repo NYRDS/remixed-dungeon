@@ -213,4 +213,22 @@ public class Assets {
 			return "toolbar_supporter_3.png";
 		}
 	}
+
+	public static void use(String assetKind, int index) {
+		if(assetKind.equals("chrome")) {
+			chromeType = index;
+			return;
+		}
+
+		if(assetKind.equals("status")) {
+			statusType = index;
+			return;
+		}
+		
+		if(assetKind.equals("toolbar")) {
+			toolbarType = index;
+			return;
+		}
+		
+	}
 }
