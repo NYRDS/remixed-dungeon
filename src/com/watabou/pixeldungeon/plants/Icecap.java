@@ -92,6 +92,9 @@ public class Icecap extends Plant {
 				Buff.prolong( hero, Frost.class, Frost.duration( hero ) * 2);
 				
 				hero.HP += Random.Int(0, Math.max((hero.HT - hero.HP) / 4, 10) );
+				if (hero.HP > hero.HT) {
+					hero.HP = hero.HT;
+				}
 				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
 			}
 		}

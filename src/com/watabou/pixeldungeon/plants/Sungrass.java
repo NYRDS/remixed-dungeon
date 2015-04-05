@@ -86,6 +86,9 @@ public class Sungrass extends Plant {
 			if (action.equals( Food.AC_EAT )) {
 				Buff.affect(hero, Charm.class, Charm.durationFactor( hero ) * Random.IntRange( 10, 15 ) );
 				hero.HP += Random.Int(0,  Math.max((hero.HT - hero.HP) / 4, 15) );
+				if (hero.HP > hero.HT) {
+					hero.HP = hero.HT;
+				}
 				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
 			}
 		}

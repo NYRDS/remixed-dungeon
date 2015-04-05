@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
@@ -332,11 +333,8 @@ public class WandMaker extends NPC {
 				super.execute( hero, action );
 				
 				if (action.equals( Food.AC_EAT )) {
-					
-					Buff.prolong( hero, Frost.class, Frost.duration( hero ) * 2);
-					
-					hero.HP += Random.Int(0, Math.max((hero.HT - hero.HP) / 4, 10) );
-					hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+					GameScene.add( Blob.seed( hero.pos, 100, ToxicGas.class ) );
+					GameScene.add( Blob.seed( hero.pos, 100, ParalyticGas.class ) );					
 				}
 			}
 			
