@@ -819,10 +819,10 @@ public class Badges {
 	}
 	
 	public static void validateSupporter() {
-
+		loadGlobal();
 		global.add( Badge.SUPPORTER );
 		saveNeeded = true;
-		
+		saveGlobal();
 		PixelScene.showBadge( Badge.SUPPORTER );
 	}
 	
