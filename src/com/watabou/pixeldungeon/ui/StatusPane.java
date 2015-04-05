@@ -63,7 +63,7 @@ public class StatusPane extends Component {
 	@Override
 	protected void createChildren() {
 		
-		shield = new NinePatch( Assets.STATUS, 80, 0, 30   + 18, 0 );
+		shield = new NinePatch( Assets.getStatus(), 80, 0, 30   + 18, 0 );
 		add( shield );
 		
 		add( new TouchArea( 0, 1, 30, 30 ) {
@@ -222,7 +222,7 @@ public class StatusPane extends Component {
 		protected void createChildren() {
 			super.createChildren();
 			
-			image = new Image( Assets.STATUS, 114, 3, 12, 11 );
+			image = new Image( Assets.getStatus(), 114, 3, 12, 11 );
 			add( image );
 		}
 		
