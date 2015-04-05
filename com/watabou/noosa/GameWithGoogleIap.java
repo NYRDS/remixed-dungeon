@@ -42,7 +42,7 @@ abstract public class GameWithGoogleIap extends Game {
 		 * want to make it easy for an attacker to replace the public key with
 		 * one of their own and then fake messages from the server.
 		 */
-		String base64EncodedPublicKey = "putkey here but do not commit it";
+		String base64EncodedPublicKey = "put key here";
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
 		Log.d("GAME", "Creating IAB helper.");
@@ -78,7 +78,7 @@ abstract public class GameWithGoogleIap extends Game {
 			}
 		});
 	}
-
+	
 	// Listener that's called when we finish querying the items and
 	// subscriptions we own
 	IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
@@ -104,32 +104,29 @@ abstract public class GameWithGoogleIap extends Game {
 			 * the developer payload to see if it's correct! See
 			 * verifyDeveloperPayload().
 			 */
-
-			// Do we have the premium upgrade?
-			Purchase premiumPurchase = inventory.getPurchase(SKU_LEVEL_1);
-			boolean mIsPremium = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
-			Log.d("GAME", "User is " + (mIsPremium ? "PREMIUM" : "NOT PREMIUM"));
-
-			Log.d("GAME", "Initial inventory query finished; enabling main UI.");
+			setDonationLevel(0);
+			
+			Purchase check = inventory.getPurchase(SKU_LEVEL_1);
+			if(check != null && verifyDeveloperPayload(check)){
+				setDonationLevel(1);
+			}
+				
+			check = inventory.getPurchase(SKU_LEVEL_2);
+			if(check != null && verifyDeveloperPayload(check)){
+				setDonationLevel(2);
+			}
+			
+			check = inventory.getPurchase(SKU_LEVEL_3);
+			if(check != null && verifyDeveloperPayload(check)){
+				setDonationLevel(2);
+			}
+			
 		}
 	};
-	protected boolean mIsPremium;
 
-	// User clicked the "Upgrade to Premium" button.
 	public void doPurchase(String sku) {
-		Log.d("GAME",
-				"Upgrade button clicked; launching purchase flow for upgrade.");
-
-		/*
-		 * TODO: for security, generate your payload here for verification. See
-		 * the comments on verifyDeveloperPayload() for more info. Since this is
-		 * a SAMPLE, we just use an empty string, but on a production app you
-		 * should carefully generate this.
-		 */
 		String payload = "";
 
-		// mHelper.launchPurchaseFlow(this, SKU_LEVEL_1,
-		// RC_REQUEST,mPurchaseFinishedListener, payload);
 		mHelper.launchPurchaseFlow(this, sku, RC_REQUEST,
 				mPurchaseFinishedListener, payload);
 	}
