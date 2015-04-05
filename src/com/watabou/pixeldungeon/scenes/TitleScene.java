@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
+import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class TitleScene extends PixelScene {
@@ -109,15 +110,16 @@ public class TitleScene extends PixelScene {
 		add( btnHighscores );
 
 		float dashBaseline = h;
+				
+		DonateButton btnDonate = new DonateButton();
 		
 		BitmapTextMultiline pleaseSupport = PixelScene.createMultiline(8);
-		pleaseSupport.text("please consider donating");
+		pleaseSupport.text(btnDonate.getText());
 		pleaseSupport.measure();
 		pleaseSupport.x = (w - pleaseSupport.width())/2;
 		pleaseSupport.y = h - pleaseSupport.height()*2;
 		pleaseSupport.hardlight(0.95f, 0.95f, 0.1f);
 		
-		DonateButton btnDonate = new DonateButton();
 		btnDonate.setPos((w-btnDonate.width())/2,pleaseSupport.y-btnDonate.height());
 		
 		if(PixelDungeon.canDonate()){
@@ -128,7 +130,6 @@ public class TitleScene extends PixelScene {
 		dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 		
 		if (PixelDungeon.landscape()) {
-			float y = (h + height) / 2 - DashboardItem.SIZE;
 			btnHighscores	.setPos( w / 2 - btnHighscores.width(), dashBaseline);
 			btnBadges		.setPos( w / 2, dashBaseline );
 			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), dashBaseline );
@@ -167,6 +168,12 @@ public class TitleScene extends PixelScene {
 		PrefsButton btnPrefs = new PrefsButton();
 		btnPrefs.setPos( 0, 0 );
 		add( btnPrefs );
+
+		if(PixelDungeon.donated() > 0) {
+			PremiumPrefsButton btnPPrefs = new PremiumPrefsButton();
+			btnPPrefs.setPos(btnPrefs.right(), 0);
+			add(btnPPrefs);
+		}
 		
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos( w - btnExit.width(), 0 );

@@ -474,9 +474,9 @@ public class Dungeon {
 		
 		potionOfStrength = bundle.getInt( POS );
 		scrollsOfUpgrade = bundle.getInt( SOU );
-		arcaneStyli = bundle.getInt( AS );
-		dewVial = bundle.getBoolean( DV );
-		transmutation = bundle.getInt( WT );
+		arcaneStyli      = bundle.getInt( AS );
+		dewVial          = bundle.getBoolean( DV );
+		transmutation    = bundle.getInt( WT );
 		
 		if (fullLoad) {
 			chapters = new HashSet<Integer>();

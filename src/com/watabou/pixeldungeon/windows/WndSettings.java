@@ -166,8 +166,6 @@ public class WndSettings extends Window {
 					BTN_HEIGHT);
 			add(btnOrientation);
 
-			resize(WIDTH, (int) btnOrientation.bottom());
-
 			RedButton localeButton = new RedButton(TXT_SElECT_LANGUAGE) {
 				@Override
 				protected void onClick() {
@@ -182,7 +180,7 @@ public class WndSettings extends Window {
 							});
 				};
 			};
-
+			
 			localeButton.setRect(0, btnOrientation.bottom() + GAP, WIDTH,
 					BTN_HEIGHT);
 			add(localeButton);
