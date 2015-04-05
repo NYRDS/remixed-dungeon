@@ -47,7 +47,6 @@ public class TomeOfMastery extends Item {
 	
 	{
 		stackable = false;
-		name = Game.getVar(R.string.TomeOfMastery_Name);
 		image = ItemSpriteSheet.MASTERY;
 		
 		unique = true;
@@ -132,8 +131,6 @@ public class TomeOfMastery extends Item {
 		curUser.getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		
-		if (way == HeroSubClass.BERSERKER && curUser.HP <= curUser.HT * Fury.LEVEL) {
-			Buff.affect( curUser, Fury.class );
-		}
+		curUser.checkIfFurious();
 	}
 }

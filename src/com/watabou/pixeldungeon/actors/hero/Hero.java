@@ -874,7 +874,10 @@ public class Hero extends Char {
 		super.damage( dmg, src );
 		
 		interrupt();
-		
+		checkIfFurious();
+	}
+	
+	public void checkIfFurious() {
 		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
 			if(buff(Fury.class)==null){
 				Buff.affect( this, Fury.class );
