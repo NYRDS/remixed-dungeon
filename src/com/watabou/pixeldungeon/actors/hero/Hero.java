@@ -882,6 +882,7 @@ public class Hero extends Char {
 			if(buff(Fury.class)==null){
 				Buff.affect( this, Fury.class );
 				getHeroSprite().updateState(this);
+				ready();
 			}
 		}
 	}
