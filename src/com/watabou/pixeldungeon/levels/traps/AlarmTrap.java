@@ -17,17 +17,34 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class AlarmTrap {
+
+	// 0xDD3333
 	
 	public static void trigger( int pos, Char ch ) {
-		Dungeon.challengeAllMobs(ch, Assets.SND_ALERT);
-		GLog.w(Game.getVar(R.string.AlarmTrap_Desc));
+		
+		for (Mob mob : Dungeon.level.mobs) {
+			if (mob != ch) {
+				mob.beckon( pos );
+			}
+		}
+		
+		if (Dungeon.visible[pos]) {
+			GLog.w(Game.getVar(R.string.AlarmTrap_Desc));
+			CellEmitter.center( pos ).start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
+		}
+		
+		Sample.INSTANCE.play( Assets.SND_ALERT );
 	}
 }
