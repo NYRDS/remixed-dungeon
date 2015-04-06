@@ -18,11 +18,10 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.sprites.RatKingSprite;
 
 public class RatKing extends NPC {
@@ -62,8 +61,8 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public void interact() {
-		getSprite().turnTo( pos, Dungeon.hero.pos );
+	public void interact(final Hero hero) {
+		getSprite().turnTo( pos, hero.pos );
 		if (state == SLEEPEING) {
 			notice();
 			yell(Game.getVar(R.string.RatKing_Info1));

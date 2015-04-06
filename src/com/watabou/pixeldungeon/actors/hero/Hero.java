@@ -514,7 +514,7 @@ public class Hero extends Char {
 			
 			ready();
 			getSprite().turnTo( pos, npc.pos );
-			npc.interact();
+			npc.interact(this);
 			return false;
 			
 		} else {

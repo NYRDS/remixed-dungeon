@@ -56,7 +56,6 @@ public class HeroSprite extends CharSprite {
 		link(hero);
 
 		texture(HeroClass.spritesheet(hero));
-		tiers();
 		updateArmor(hero.tier());
 
 		idle();
@@ -66,7 +65,6 @@ public class HeroSprite extends CharSprite {
 		super();
 
 		texture(HeroClass.spritesheet(hero));
-		tiers();
 		updateArmor(hero.tier());
 
 		idle();

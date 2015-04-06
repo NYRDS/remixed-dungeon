@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Level;
@@ -51,5 +52,5 @@ public abstract class NPC extends Mob {
 	public void beckon( int cell ) {
 	}
 	
-	abstract public void interact();
+	abstract public void interact(final Hero hero);
 }

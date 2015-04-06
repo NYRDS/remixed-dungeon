@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -109,16 +110,16 @@ public class Ghost extends NPC {
 	}
 	
 	@Override
-	public void interact() {
-		getSprite().turnTo( pos, Dungeon.hero.pos );
+	public void interact(final Hero hero) {
+		getSprite().turnTo( pos, hero.pos );
 		
 		Sample.INSTANCE.play( Assets.SND_GHOST );
 		
 		if (Quest.given) {
 			
 			Item item = Quest.alternative ?
-				Dungeon.hero.belongings.getItem( RatSkull.class ) :
-				Dungeon.hero.belongings.getItem( DriedRose.class );	
+				hero.belongings.getItem( RatSkull.class ) :
+				hero.belongings.getItem( DriedRose.class );	
 			if (item != null) {
 				GameScene.show( new WndSadGhost( this, item ) );
 			} else {

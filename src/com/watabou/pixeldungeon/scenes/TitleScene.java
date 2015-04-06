@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
-import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class TitleScene extends PixelScene {

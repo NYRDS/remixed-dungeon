@@ -99,18 +99,18 @@ public class WandMaker extends NPC {
 	}
 	
 	@Override
-	public void interact() {
+	public void interact(final Hero hero) {
 		
-		getSprite().turnTo( pos, Dungeon.hero.pos );
+		getSprite().turnTo( pos, hero.pos );
 		if (Quest.given) {
 			
 			Item item = Quest.alternative ?
-				Dungeon.hero.belongings.getItem( CorpseDust.class ) :
-				Dungeon.hero.belongings.getItem( Rotberry.Seed.class );
+				hero.belongings.getItem( CorpseDust.class ) :
+				hero.belongings.getItem( Rotberry.Seed.class );
 			if (item != null) {
 				GameScene.show( new WndWandmaker( this, item ) );
 			} else {
-				tell( Quest.alternative ? TXT_DUST2 : TXT_BERRY2, Dungeon.hero.className() );
+				tell( Quest.alternative ? TXT_DUST2 : TXT_BERRY2, hero.className() );
 			}
 			
 		} else {

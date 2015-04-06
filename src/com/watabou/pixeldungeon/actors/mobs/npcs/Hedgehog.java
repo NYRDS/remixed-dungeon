@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.sprites.HedgehogSprite;
@@ -75,8 +76,8 @@ public class Hedgehog extends NPC {
 	}
 
 	@Override
-	public void interact() {
-		getSprite().turnTo( pos, Dungeon.hero.pos );
+	public void interact(final Hero hero) {
+		getSprite().turnTo( pos, hero.pos );
 		
 		switch (action)
 		{

@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -91,7 +92,12 @@ public enum HeroClass {
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		new Ration().identify().collect();
-
+		/*
+		for (int i = 0; i<10 ;i++){
+			new ScrollOfMirrorImage().collect();
+		}
+		*/
+		
 		QuickSlot.cleanStorage();
 	}
 	
@@ -217,5 +223,24 @@ public enum HeroClass {
 	public static HeroClass restoreInBundle( Bundle bundle ) {
 		String value = bundle.getString( CLASS );
 		return value.length() > 0 ? valueOf( value ) : ROGUE;
+	}
+
+	public static boolean isSpriteSheet(String spriteKind) {
+		if (spriteKind.equals(Assets.WARRIOR_BERSERK))
+			return true;
+		
+		if (spriteKind.equals(Assets.WARRIOR))
+			return true;
+
+		if (spriteKind.equals(Assets.MAGE))
+			return true;
+
+		if (spriteKind.equals(Assets.ROGUE))
+			return true;
+
+		if (spriteKind.equals(Assets.HUNTRESS))
+			return true;
+
+		return false;
 	}
 }

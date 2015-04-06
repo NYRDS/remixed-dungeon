@@ -17,21 +17,23 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
 
 public class MirrorSprite extends MobSprite {
 	
 	private static final int FRAME_WIDTH	= 12;
 	private static final int FRAME_HEIGHT	= 15;
+	private TextureFilm tiers;
 	
 	public MirrorSprite() {
 		super();
 		
-		texture( HeroClass.spritesheet(Dungeon.hero) );
+		texture( Assets.WARRIOR );
 		updateArmor( 0 );
 		idle();
 	}
@@ -42,8 +44,18 @@ public class MirrorSprite extends MobSprite {
 		updateArmor( ((MirrorImage)ch).tier );
 	}
 	
+	public TextureFilm tiers() {
+		if (tiers == null) {
+			// Sprites for all classes are the same in size
+			SmartTexture texture = TextureCache.get(Assets.ROGUE);
+			tiers = new TextureFilm(texture, texture.width, FRAME_HEIGHT);
+		}
+
+		return tiers;
+	}
+	
 	public void updateArmor( int tier ) {
-		TextureFilm film = new TextureFilm( Dungeon.hero.getHeroSprite().tiers(), tier, FRAME_WIDTH, FRAME_HEIGHT );
+		TextureFilm film = new TextureFilm( tiers(), tier, FRAME_WIDTH, FRAME_HEIGHT );
 		
 		idle = new Animation( 1, true );
 		idle.frames( film, 0, 0, 0, 1, 0, 0, 1, 1 );

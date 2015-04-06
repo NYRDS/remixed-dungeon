@@ -18,11 +18,14 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.HashSet;
+
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -44,10 +47,12 @@ public class MirrorImage extends NPC {
 	
 	private int attack;
 	private int damage;
+	private String spriteKind;
 	
 	private static final String TIER	= "tier";
 	private static final String ATTACK	= "attack";
 	private static final String DAMAGE	= "damage";
+	private static final String SPRITE  = "spriteKind";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -55,6 +60,7 @@ public class MirrorImage extends NPC {
 		bundle.put( TIER, tier );
 		bundle.put( ATTACK, attack );
 		bundle.put( DAMAGE, damage );
+		bundle.put( SPRITE, spriteKind );
 	}
 	
 	@Override
@@ -63,12 +69,19 @@ public class MirrorImage extends NPC {
 		tier = bundle.getInt( TIER );
 		attack = bundle.getInt( ATTACK );
 		damage = bundle.getInt( DAMAGE );
+		spriteKind = bundle.getString( SPRITE );
+		
+		if(! HeroClass.isSpriteSheet(spriteKind)) {
+			spriteKind = Assets.WARRIOR;
+		}
 	}
 	
 	public void duplicate( Hero hero ) {
 		tier = hero.tier();
 		attack = hero.attackSkill( hero );
 		damage = hero.damageRoll();
+		
+		spriteKind = HeroClass.spritesheet(hero);
 	}
 	
 	@Override
@@ -109,24 +122,26 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		CharSprite s = super.sprite();
-		((MirrorSprite)s).updateArmor( tier );
+		assert (spriteKind != null);
+		MirrorSprite s = new MirrorSprite();
+		s.texture(spriteKind);
+		s.updateArmor(tier);
 		return s;
 	}
 
 	@Override
-	public void interact() {
+	public void interact(final Hero hero) {
 		
 		int curPos = pos;
 		
-		moveSprite( pos, Dungeon.hero.pos );
-		move( Dungeon.hero.pos );
+		moveSprite( pos, hero.pos );
+		move( hero.pos );
 		
-		Dungeon.hero.getSprite().move( Dungeon.hero.pos, curPos );
-		Dungeon.hero.move( curPos );
+		hero.getSprite().move( hero.pos, curPos );
+		hero.move( curPos );
 		
-		Dungeon.hero.spend( 1 / Dungeon.hero.speed() );
-		Dungeon.hero.busy();
+		hero.spend( 1 / hero.speed() );
+		hero.busy();
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
