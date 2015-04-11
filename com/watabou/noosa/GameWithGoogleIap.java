@@ -10,7 +10,7 @@ import com.nyrds.android.google.util.Purchase;
 import android.app.AlertDialog;
 import android.util.Log;
 
-abstract public class GameWithGoogleIap extends Game {
+public abstract class GameWithGoogleIap extends Game {
 
 	protected static final String SKU_LEVEL_1 = "supporter_level_1";
 	protected static final String SKU_LEVEL_2 = "supporter_level_2";
@@ -20,8 +20,9 @@ abstract public class GameWithGoogleIap extends Game {
 	IabHelper mHelper    = null;
 	Inventory mInventory = null;
 
+	private 
 	// (arbitrary) request code for the purchase flow
-	static final int RC_REQUEST = 10001;
+	static final int RC_REQUEST = (int) (Math.random()*0xffff);
 
 	public GameWithGoogleIap(Class<? extends Scene> c) {
 		super(c);
@@ -61,10 +62,6 @@ abstract public class GameWithGoogleIap extends Game {
 				// Have we been disposed of in the meantime? If so, quit.
 				if (mHelper == null)
 					return;
-
-				// IAB is fully set up. Now, let's get an inventory of stuff we
-				// own.
-				Log.d("GAME", "Setup successful. Querying inventory.");
 				
 				ArrayList<String> skuList = new ArrayList<String> ();
 				
@@ -77,6 +74,24 @@ abstract public class GameWithGoogleIap extends Game {
 		});
 	}
 	
+	private void checkPurchases() {
+		setDonationLevel(0);
+		
+		Purchase check = mInventory.getPurchase(SKU_LEVEL_1);
+		if(check != null && verifyDeveloperPayload(check)){
+			setDonationLevel(1);
+		}
+		
+		check = mInventory.getPurchase(SKU_LEVEL_2);
+		if(check != null && verifyDeveloperPayload(check)){
+			setDonationLevel(2);
+		}
+		
+		check = mInventory.getPurchase(SKU_LEVEL_3);
+		if(check != null && verifyDeveloperPayload(check)){
+			setDonationLevel(2);
+		}
+	}
 	// Listener that's called when we finish querying the items and
 	// subscriptions we own
 	IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
@@ -96,24 +111,7 @@ abstract public class GameWithGoogleIap extends Game {
 			}
 
 			mInventory = inventory;
-
-			setDonationLevel(0);
-			
-			Purchase check = inventory.getPurchase(SKU_LEVEL_1);
-			if(check != null && verifyDeveloperPayload(check)){
-				setDonationLevel(1);
-			}
-			
-			check = inventory.getPurchase(SKU_LEVEL_2);
-			if(check != null && verifyDeveloperPayload(check)){
-				setDonationLevel(2);
-			}
-			
-			check = inventory.getPurchase(SKU_LEVEL_3);
-			if(check != null && verifyDeveloperPayload(check)){
-				setDonationLevel(2);
-			}
-			
+			checkPurchases();
 		}
 	};
 
@@ -135,7 +133,7 @@ abstract public class GameWithGoogleIap extends Game {
 	
 	public void doPurchase(String sku) {
 		String payload = "";
-
+		
 		mHelper.launchPurchaseFlow(this, sku, RC_REQUEST,
 				mPurchaseFinishedListener, payload);
 	}
@@ -150,7 +148,7 @@ abstract public class GameWithGoogleIap extends Game {
 
 	public abstract void setDonationLevel(int level);
 
-	static public GameWithGoogleIap instance() {
+	public static  GameWithGoogleIap instance() {
 		return (GameWithGoogleIap) Game.instance();
 	}
 
