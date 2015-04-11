@@ -42,7 +42,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
-		        
+		
 		// remix 0.5
 		com.watabou.utils.Bundle.addAlias(
 				com.watabou.pixeldungeon.items.food.Ration.class,
@@ -52,6 +52,8 @@ public class PixelDungeon extends GameWithGoogleIap {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		PixelDungeon.instance().initIap();
 		
 		useLocale(uiLanguage());
 
@@ -68,9 +70,9 @@ public class PixelDungeon extends GameWithGoogleIap {
 		Music.INSTANCE.enable(music());
 		Sample.INSTANCE.enable(soundFx());
 		
-        if (PixelDungeon.version() != Game.versionCode) {
-        	switchScene(WelcomeScene.class);
-        } 
+		if (PixelDungeon.version() != Game.versionCode) {
+			switchScene(WelcomeScene.class);
+		} 
 	}
 
 	@Override

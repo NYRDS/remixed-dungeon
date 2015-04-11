@@ -13,8 +13,8 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndDonate extends WndTabbed {
 
-	private static final String RUBY = Game.getVar(R.string.WndDonate_ruby);
-	private static final String GOLD = Game.getVar(R.string.WndDonate_gold);
+	private static final String RUBY   = Game.getVar(R.string.WndDonate_ruby);
+	private static final String GOLD   = Game.getVar(R.string.WndDonate_gold);
 	private static final String SILVER = Game.getVar(R.string.WndDonate_silver);
 
 	private static final String DONATE = Game.getVar(R.string.WndDonate_donate);
