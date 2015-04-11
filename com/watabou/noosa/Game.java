@@ -20,8 +20,10 @@ package com.watabou.noosa;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -43,6 +45,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.View;
+
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -391,5 +394,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 	
 	public static void donate(int level) {
+	}
+	
+	public String getPriceString(int level) {
+		return null;
+	}
+	
+	public void initIap() {
 	}
 }

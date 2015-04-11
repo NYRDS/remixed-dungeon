@@ -1,12 +1,13 @@
 package com.watabou.noosa;
 
+import java.util.ArrayList;
+
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
 
 import android.app.AlertDialog;
-import android.os.Bundle;
 import android.util.Log;
 
 abstract public class GameWithGoogleIap extends Game {
@@ -16,7 +17,8 @@ abstract public class GameWithGoogleIap extends Game {
 	protected static final String SKU_LEVEL_3 = "supporter_level_3";
 
 	// The helper object
-	IabHelper mHelper;
+	IabHelper mHelper    = null;
+	Inventory mInventory = null;
 
 	// (arbitrary) request code for the purchase flow
 	static final int RC_REQUEST = 10001;
@@ -25,23 +27,12 @@ abstract public class GameWithGoogleIap extends Game {
 		super(c);
 		instance(this);
 	}
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		/*
-		 * base64EncodedPublicKey should be YOUR APPLICATION'S PUBLIC KEY (that
-		 * you got from the Google Play developer console). This is not your
-		 * developer public key, it's the *app-specific* public key.
-		 * 
-		 * Instead of just storing the entire literal string here embedded in
-		 * the program, construct the key at runtime from pieces or use bit
-		 * manipulation (for example, XOR with some other string) to hide the
-		 * actual key. The key itself is not secret information, but we don't
-		 * want to make it easy for an attacker to replace the public key with
-		 * one of their own and then fake messages from the server.
-		 */
+	
+	public void initIap() {
+		if(mHelper != null) {
+			return;
+		}
+		
 		String base64EncodedPublicKey = "put key here";
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
@@ -74,7 +65,14 @@ abstract public class GameWithGoogleIap extends Game {
 				// IAB is fully set up. Now, let's get an inventory of stuff we
 				// own.
 				Log.d("GAME", "Setup successful. Querying inventory.");
-				mHelper.queryInventoryAsync(mGotInventoryListener);
+				
+				ArrayList<String> skuList = new ArrayList<String> ();
+				
+				skuList.add(SKU_LEVEL_1);
+				skuList.add(SKU_LEVEL_2);
+				skuList.add(SKU_LEVEL_3);
+				
+				mHelper.queryInventoryAsync(true, skuList, mGotInventoryListener);
 			}
 		});
 	}
@@ -97,20 +95,15 @@ abstract public class GameWithGoogleIap extends Game {
 				return;
 			}
 
-			Log.d("GAME", "Query inventory was successful.");
+			mInventory = inventory;
 
-			/*
-			 * Check for items we own. Notice that for each purchase, we check
-			 * the developer payload to see if it's correct! See
-			 * verifyDeveloperPayload().
-			 */
 			setDonationLevel(0);
 			
 			Purchase check = inventory.getPurchase(SKU_LEVEL_1);
 			if(check != null && verifyDeveloperPayload(check)){
 				setDonationLevel(1);
 			}
-				
+			
 			check = inventory.getPurchase(SKU_LEVEL_2);
 			if(check != null && verifyDeveloperPayload(check)){
 				setDonationLevel(2);
@@ -124,6 +117,22 @@ abstract public class GameWithGoogleIap extends Game {
 		}
 	};
 
+	public String getPriceString(int level) {
+		if(mInventory == null) {
+			return null;
+		}
+		
+		switch (level) {
+			case 1:
+				return mInventory.getSkuDetails(SKU_LEVEL_1).getPrice();
+			case 2:
+				return mInventory.getSkuDetails(SKU_LEVEL_2).getPrice();
+			case 3:
+				return mInventory.getSkuDetails(SKU_LEVEL_3).getPrice();
+		}
+		return null;
+	}
+	
 	public void doPurchase(String sku) {
 		String payload = "";
 
