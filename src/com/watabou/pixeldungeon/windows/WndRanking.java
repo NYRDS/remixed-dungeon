@@ -155,7 +155,7 @@ public class WndRanking extends WndTabbed {
 		
 		private final String TXT_DEPTH    = Game.getVar(R.string.WndRanking_StaDepth);
 		private final String TXT_ENEMIES  = Game.getVar(R.string.WndRanking_StaEnemies);
-		private final String TXT_GOLD     = Game.getVar(R.string.WndRanking_StaGold);;
+		private final String TXT_GOLD     = Game.getVar(R.string.WndRanking_StaGold);
 		
 		private final String TXT_FOOD     = Game.getVar(R.string.WndRanking_StaFood);
 		private final String TXT_ALCHEMY  = Game.getVar(R.string.WndRanking_StaAlchemy);
