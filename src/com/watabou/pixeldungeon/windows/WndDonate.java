@@ -37,7 +37,7 @@ public class WndDonate extends WndTabbed {
 	private static final int HEIGHT = 111;
 
 	private static final int BTN_HEIGHT = 20;
-	private static final int BTN_WIDTH  = 60;
+	private static final int BTN_WIDTH  = 80;
 	
 	private static final int GAP = 2;
 	private static final int TAB_WIDTH = 41;
@@ -69,7 +69,7 @@ public class WndDonate extends WndTabbed {
 
 	private class DonateTab extends Group {
 
-		public DonateTab(int level) {
+		public DonateTab(final int level) {
 			super();
 
 			IconTitle tabTitle = new IconTitle(Icons.get(icons[level - 1]),
@@ -82,10 +82,10 @@ public class WndDonate extends WndTabbed {
 			pos += GAP;
 
 			if (PixelDungeon.donated() < level) {
-				RedButton donate = new RedButton(DONATE) {
+				RedButton donate = new RedButton(DONATE + PixelDungeon.instance().getPriceString(level)) {
 					@Override
 					protected void onClick() {
-						// PixelDungeon.donate(level);
+						PixelDungeon.donate(level);
 					}
 				};
 				add(donate.setRect(WIDTH - BTN_WIDTH ,HEIGHT - BTN_HEIGHT, BTN_WIDTH, BTN_HEIGHT));

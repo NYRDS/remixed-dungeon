@@ -226,8 +226,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 
 	public static int donated() {
-		return 2;
-		//return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
+		return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
 	}
 
 	public static void lastClass(int value) {
