@@ -37,6 +37,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.LabeledTab;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndHero extends WndTabbed {
 	
@@ -71,14 +73,14 @@ public class WndHero extends WndTabbed {
 		buffs = new BuffsTab();
 		add( buffs );
 		
-		add( new LabeledTab( TXT_STATS ) {
-			protected void select( boolean value ) {
+		add( new LabeledTab( this, TXT_STATS ) {
+			public void select( boolean value ) {
 				super.select( value );
 				stats.visible = stats.active = selected;
 			};
 		} );
-		add( new LabeledTab( TXT_BUFFS ) {
-			protected void select( boolean value ) {
+		add( new LabeledTab( this, TXT_BUFFS ) {
+			public void select( boolean value ) {
 				super.select( value );
 				buffs.visible = buffs.active = selected;
 			};

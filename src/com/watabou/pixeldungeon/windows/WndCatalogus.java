@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.LabeledTab;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndCatalogus extends WndTabbed {
 	
@@ -88,15 +90,15 @@ public class WndCatalogus extends WndTabbed {
 		
 		boolean showPotions = WndCatalogus.showPotions;
 		Tab[] tabs = {
-			new LabeledTab( TXT_POTIONS ) {
-				protected void select( boolean value ) {
+			new LabeledTab(this , TXT_POTIONS ) {
+				public void select( boolean value ) {
 					super.select( value );
 					WndCatalogus.showPotions = value;
 					updateList();
 				};
 			},
-			new LabeledTab( TXT_SCROLLS ) {
-				protected void select( boolean value ) {
+			new LabeledTab(this,  TXT_SCROLLS ) {
+				public void select( boolean value ) {
 					super.select( value );
 					WndCatalogus.showPotions = !value;
 					updateList();

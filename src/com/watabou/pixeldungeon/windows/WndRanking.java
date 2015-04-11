@@ -42,6 +42,9 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.LabeledTab;
+import com.watabou.pixeldungeon.windows.elements.RankingTab;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndRanking extends WndTabbed {
 	
@@ -115,30 +118,12 @@ public class WndRanking extends WndTabbed {
 			
 			add( pages[i] );
 			
-			Tab tab = new RankingTab( labels[i], pages[i] );
+			Tab tab = new RankingTab(this, labels[i], pages[i] );
 			tab.setSize( TAB_WIDTH, tabHeight() );
 			add( tab );
 		}
 		
 		select( 0 );
-	}
-
-	private class RankingTab extends LabeledTab {
-		
-		private Group page;
-		
-		public RankingTab( String label, Group page ) {
-			super( label );
-			this.page = page;
-		}
-		
-		@Override
-		protected void select( boolean value ) {
-			super.select( value );
-			if (page != null) {
-				page.visible = page.active = selected;
-			}
-		}
 	}
 	
 	private class StatsTab extends Group {

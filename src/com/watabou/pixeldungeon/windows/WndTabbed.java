@@ -18,19 +18,15 @@
 package com.watabou.pixeldungeon.windows;
 
 import java.util.ArrayList;
-import com.watabou.noosa.BitmapText;
+
 import com.watabou.noosa.Game;
-import com.watabou.noosa.NinePatch;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.ui.Button;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndTabbed extends Window {
 
-	protected ArrayList<Tab> tabs = new ArrayList<WndTabbed.Tab>();
+	protected ArrayList<Tab> tabs = new ArrayList<Tab>();
 	protected Tab selected;
 	
 	public WndTabbed() {
@@ -87,7 +83,7 @@ public class WndTabbed extends Window {
 			remove( tab );
 		}
 		
-		ArrayList<Tab> tabs = new ArrayList<WndTabbed.Tab>( this.tabs );
+		ArrayList<Tab> tabs = new ArrayList<Tab>( this.tabs );
 		this.tabs.clear();
 		
 		for (Tab tab : tabs) {
@@ -99,88 +95,8 @@ public class WndTabbed extends Window {
 		return 25;
 	}
 	
-	protected void onClick( Tab tab ) {
+	public void onClick( Tab tab ) {
 		select( tab );
-	}
-	
-	protected class Tab extends Button {
-		
-		protected final int CUT = 5;
-		
-		protected boolean selected;
-		
-		protected NinePatch bg;
-		
-		@Override
-		protected void layout() {
-			super.layout();
-			
-			if (bg != null) {
-				bg.x = x;
-				bg.y = y;
-				bg.size( width, height );
-			}
-		}
-		
-		protected void select( boolean value ) {
-			
-			active = !(selected = value);
-			
-			if (bg != null) {
-				remove( bg );
-			}
-			
-			bg = Chrome.get( selected ? 
-				Chrome.Type.TAB_SELECTED : 
-				Chrome.Type.TAB_UNSELECTED );
-			addToBack( bg );
-			
-			layout();
-		}
-		
-		@Override
-		protected void onClick() {	
-			Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
-			WndTabbed.this.onClick( this );
-		}
-	}
-	
-	protected class LabeledTab extends Tab {
-		
-		private BitmapText btLabel;
-		
-		public LabeledTab( String label ) {
-			
-			super();
-			
-			btLabel.text( label );
-			btLabel.measure();
-		}
-		
-		@Override
-		protected void createChildren() {
-			super.createChildren();
-			
-			btLabel = PixelScene.createText( 9 );
-			add( btLabel );
-		}
-		
-		@Override
-		protected void layout() {
-			super.layout();
-			
-			btLabel.x = PixelScene.align( x + (width - btLabel.width()) / 2 );
-			btLabel.y = PixelScene.align( y + (height - btLabel.baseLine()) / 2 ) - 1;
-			if (!selected) {
-				btLabel.y -= 2;
-			}
-		}
-		
-		@Override
-		protected void select( boolean value ) {
-			super.select( value );
-			btLabel.am = selected ? 1.0f : 0.6f;
-		}
 	}	
 
 }
