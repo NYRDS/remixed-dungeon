@@ -237,4 +237,9 @@ public class Visual extends Gizmo {
 		scale.x = x;
 		scale.y = y;
 	}
+	
+	public void setPos(float x, float y){
+		this.x = x;
+		this.y = y;
+	}
 }
