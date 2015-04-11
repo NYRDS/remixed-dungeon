@@ -139,7 +139,7 @@ abstract public class GameWithGoogleIap extends Game {
 		return true;
 	}
 
-	protected abstract void setDonationLevel(int level);
+	public abstract void setDonationLevel(int level);
 
 	static public GameWithGoogleIap instance() {
 		return (GameWithGoogleIap) Game.instance();
