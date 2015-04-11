@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
+import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class TitleScene extends PixelScene {
@@ -160,13 +161,13 @@ public class TitleScene extends PixelScene {
 		btnPrefs.setPos( 0, 0 );
 		add( btnPrefs );
 
-/*
+
 		if(PixelDungeon.donated() > 0) {
 			PremiumPrefsButton btnPPrefs = new PremiumPrefsButton();
 			btnPPrefs.setPos(btnPrefs.right() + 2, 0);
 			add(btnPPrefs);
 		}
-*/		
+		
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos( w - btnExit.width(), 0 );
 		add( btnExit );

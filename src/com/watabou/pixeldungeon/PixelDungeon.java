@@ -38,7 +38,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 
-public class PixelDungeon extends Game {
+public class PixelDungeon extends GameWithGoogleIap {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -224,7 +224,8 @@ public class PixelDungeon extends Game {
 	}
 
 	public static int donated() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
+		return 2;
+		//return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
 	}
 
 	public static void lastClass(int value) {

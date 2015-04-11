@@ -85,7 +85,7 @@ public class DonateButton extends Button {
 	@Override
 	protected void onClick() {
 		if(PixelDungeon.donated() == 0) {
-			//PixelDungeon.instance().setDonationLevel(2);
+			PixelDungeon.instance().setDonationLevel(2);
 			updateImage();
 			
 			//PixelDungeon.donate(2);
