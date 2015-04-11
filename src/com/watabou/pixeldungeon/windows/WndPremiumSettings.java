@@ -23,12 +23,12 @@ public class WndPremiumSettings extends Window {
 		resize(WIDTH, curBottom);
 	}
 
-	private void createAssetsSelector(final String assetKind, String assetName) {
+	private void createAssetsSelector(final String assetKind, final String assetName) {
 		RedButton btn = new RedButton(assetName) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.scene().add(
-						new WndOptions("chrome type", "", "std", "silver",
+						new WndOptions(assetName +" type", "", "std", "silver",
 								"gold", "ruby") {
 							@Override
 							protected void onSelect(int index) {
