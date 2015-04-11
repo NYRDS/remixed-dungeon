@@ -109,8 +109,7 @@ public class TitleScene extends PixelScene {
 		BitmapTextMultiline pleaseSupport = PixelScene.createMultiline(8);
 		pleaseSupport.text(btnDonate.getText());
 		pleaseSupport.measure();
-		pleaseSupport.x = (w - pleaseSupport.width())/2;
-		pleaseSupport.y = h - pleaseSupport.height()*2;
+		pleaseSupport.setPos((w - pleaseSupport.width())/2, h - pleaseSupport.height()*2);
 		
 		btnDonate.setPos((w-btnDonate.width())/2,pleaseSupport.y-btnDonate.height());
 		
@@ -140,8 +139,7 @@ public class TitleScene extends PixelScene {
 		BitmapText version = new BitmapText( "v " + Game.version, font1x );
 		version.measure();
 		version.hardlight( 0x888888 );
-		version.x = w - version.width();
-		version.y = h - version.height();
+		version.setPos(w - version.width(), h - version.height());
 		add( version );
 		
 		float freeInternalStorage = Game.getAvailableInternalMemorySize();
@@ -151,8 +149,7 @@ public class TitleScene extends PixelScene {
 			BitmapTextMultiline lowInteralStorageWarning = PixelScene.createMultiline(8);
 			lowInteralStorageWarning.text(Game.getVar(R.string.TitleScene_InternalStorageLow));
 			lowInteralStorageWarning.measure();
-			lowInteralStorageWarning.x = 0;
-			lowInteralStorageWarning.y = h - lowInteralStorageWarning.height();
+			lowInteralStorageWarning.setPos(0, h - lowInteralStorageWarning.height());
 			lowInteralStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
 			add(lowInteralStorageWarning);
 		}
