@@ -9,14 +9,11 @@
     <string name="TitleScene_InternalStorageLow">Not enough space\n in internal storage\n Your progress can be lost!</string>
 
     <!-- STRINGS OF AboutScene CLASS -->
-    <string name="AboutScene_Txt">Code &amp; graphics: Watabou\nMusic: Cube_Code\n\nThis game is inspired by Brian Walker\'s Brogue. Try it on Windows, Mac OS or Linux - it\'s awesome! ;)\n\nPlease visit official website for additional info:</string>
-    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
-    <string name="AboutScene_Translate">Languages Create: rodriformiga</string>
-    <!-- Write here the translation credits. -->
-    <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string>
-    <!-- Write here the e-mail to contat for translator -->
-    <string name="AboutScene_TranslateSnd">Send E-Mail</string>
-    <!-- Write here the "Send E-mail" title of the window -->
+    <string name="AboutScene_Txt">Remixed Pixel Dungein by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou  &amp; NYRDS\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD l18n code\n\nE-Mail us:\n\n</string>
+    <string name="AboutScene_Lnk">no site yet</string>
+    <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+    <string name="AboutScene_Snd">Send E-Mail</string>
+
 
         <!-- STRINGS OF RankingsScene CLASS -->
     <string name="RankingsScene_Title">Top Rankings</string>

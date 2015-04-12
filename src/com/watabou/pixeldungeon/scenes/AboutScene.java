@@ -38,9 +38,7 @@ public class AboutScene extends PixelScene {
 
 	private static final String TXT           = Game.getVar(R.string.AboutScene_Txt);
 	private static final String LNK           = Game.getVar(R.string.AboutScene_Lnk);
-	private static final String TRANSLATE     = Game.getVar(R.string.AboutScene_Translate);
-	private static final String TRANSLATE_LNK = Game.getVar(R.string.AboutScene_TranslateLnk);
-	private static final String TRANSLATE_SND = Game.getVar(R.string.AboutScene_TranslateSnd);
+	private static final String TRANSLATE_SND = Game.getVar(R.string.AboutScene_Snd);
 	
 	private BitmapTextMultiline createTouchEmail(final String address, BitmapTextMultiline upper)
 	{
@@ -87,12 +85,13 @@ public class AboutScene extends PixelScene {
 		
 		text.x = align( (Camera.main.width - text.width()) / 2 );
 		text.y = align( (Camera.main.height - text.height()) / 3 );
-		
+		/*
 		BitmapTextMultiline link = createText( LNK );
 		add( link );
 		link.hardlight( Window.TITLE_COLOR );
 		
 		placeBellow(link,text);
+		
 		
 		TouchArea hotArea = new TouchArea( link ) {
 			@Override
@@ -102,33 +101,11 @@ public class AboutScene extends PixelScene {
 			}
 		};
 		add( hotArea );
+		*/
+		
+		BitmapTextMultiline lnkTra = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), text);
+		
 
-
-		BitmapTextMultiline txtTra = createText(TRANSLATE);		
-		placeBellow(txtTra,link);
-		
-		BitmapTextMultiline lnkTra = createTouchEmail(TRANSLATE_LNK, txtTra);
-		
-		String lang = java.util.Locale.getDefault().getLanguage();
-		
-		if("ru".equals(lang)){
-			
-			String TRANSLATE_RUS_SUP     = Game.getVar(R.string.AboutScene_TranslateRusSup);
-			String TRANSLATE_RUS_SUP_LNK = Game.getVar(R.string.AboutScene_TranslateRusSupLnk);
-			
-			String TRANSLATE_RUS         = Game.getVar(R.string.AboutScene_TranslateRus);
-			String TRANSLATE_RUS_LNK     = Game.getVar(R.string.AboutScene_TranslateRusLnk);
-			
-			BitmapTextMultiline txtTraRusSup = createText( TRANSLATE_RUS_SUP);		
-			placeBellow(txtTraRusSup,lnkTra);
-			
-			BitmapTextMultiline traRusSupLnk = createTouchEmail(TRANSLATE_RUS_SUP_LNK, txtTraRusSup);
-			
-			BitmapTextMultiline txtTraRus = createText( TRANSLATE_RUS);	
-			placeBellow(txtTraRus, traRusSupLnk);
-			createTouchEmail(TRANSLATE_RUS_LNK, txtTraRus);
-		}
-			
 		Image wata = Icons.WATA.get();
 		wata.x = align( text.x + (text.width() - wata.width) / 2 );
 		wata.y = text.y - wata.height - 8;
