@@ -429,7 +429,7 @@ public abstract class Wand extends KindOfWeapon {
 					curWand.levelKnown = true;
 					
 					if(Random.Int(5) == 0) {
-						curWand.curChargeKnown = true;
+						curWand.identify();
 					}
 					
 					curWand.updateQuickslot();
