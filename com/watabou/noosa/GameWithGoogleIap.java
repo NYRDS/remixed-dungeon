@@ -20,7 +20,12 @@ public abstract class GameWithGoogleIap extends Game {
 	IabHelper mHelper    = null;
 	Inventory mInventory = null;
 
-	private 
+	private volatile boolean m_iapReady = false;
+	
+	public  boolean iapReady(){
+		return m_iapReady;
+	}
+	
 	// (arbitrary) request code for the purchase flow
 	static final int RC_REQUEST = (int) (Math.random()*0xffff);
 
@@ -112,6 +117,7 @@ public abstract class GameWithGoogleIap extends Game {
 
 			mInventory = inventory;
 			checkPurchases();
+			m_iapReady = true;
 		}
 	};
 
@@ -132,8 +138,14 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 	
 	public void doPurchase(String sku) {
+		if(!m_iapReady){
+			alert("Sorry, we not ready yet");
+			return;
+		}
+		
 		String payload = "";
 		
+		m_iapReady = false;
 		mHelper.launchPurchaseFlow(this, sku, RC_REQUEST,
 				mPurchaseFinishedListener, payload);
 	}
@@ -199,7 +211,8 @@ public abstract class GameWithGoogleIap extends Game {
 			if (purchase.getSku().equals(SKU_LEVEL_3)) {
 				setDonationLevel(3);
 			}
-
+			
+			m_iapReady = true;
 		}
 	};
 
