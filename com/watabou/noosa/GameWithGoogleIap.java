@@ -1,5 +1,6 @@
 package com.watabou.noosa;
 
+import java.net.InetAddress;
 import java.util.ArrayList;
 
 import com.nyrds.android.google.util.IabHelper;
@@ -17,28 +18,28 @@ public abstract class GameWithGoogleIap extends Game {
 	protected static final String SKU_LEVEL_3 = "supporter_level_3";
 
 	// The helper object
-	IabHelper mHelper    = null;
+	IabHelper mHelper = null;
 	Inventory mInventory = null;
 
 	private volatile boolean m_iapReady = false;
-	
-	public  boolean iapReady(){
+
+	public boolean iapReady() {
 		return m_iapReady;
 	}
-	
+
 	// (arbitrary) request code for the purchase flow
-	static final int RC_REQUEST = (int) (Math.random()*0xffff);
+	static final int RC_REQUEST = (int) (Math.random() * 0xffff);
 
 	public GameWithGoogleIap(Class<? extends Scene> c) {
 		super(c);
 		instance(this);
 	}
-	
-	public void initIap() {
-		if(mHelper != null) {
+
+	public void initIapPhase2() {
+		if (mHelper != null) {
 			return;
 		}
-		
+
 		String base64EncodedPublicKey = "put key here";
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
@@ -67,36 +68,56 @@ public abstract class GameWithGoogleIap extends Game {
 				// Have we been disposed of in the meantime? If so, quit.
 				if (mHelper == null)
 					return;
-				
-				ArrayList<String> skuList = new ArrayList<String> ();
-				
+
+				ArrayList<String> skuList = new ArrayList<String>();
+
 				skuList.add(SKU_LEVEL_1);
 				skuList.add(SKU_LEVEL_2);
 				skuList.add(SKU_LEVEL_3);
-				
-				mHelper.queryInventoryAsync(true, skuList, mGotInventoryListener);
+
+				mHelper.queryInventoryAsync(true, skuList,
+						mGotInventoryListener);
 			}
 		});
 	}
 	
+	public void initIap() {
+		new Thread() {
+			@Override
+			public void run() {
+				try {
+					InetAddress ipAddr = InetAddress.getByName("google.com");
+					if (ipAddr.equals("")) {
+						return;
+					}
+					initIapPhase2();
+				} catch (Exception e) {
+					return;
+				}
+			}
+		}.start();
+		
+	}
+
 	private void checkPurchases() {
 		setDonationLevel(0);
-		
+
 		Purchase check = mInventory.getPurchase(SKU_LEVEL_1);
-		if(check != null && verifyDeveloperPayload(check)){
+		if (check != null && verifyDeveloperPayload(check)) {
 			setDonationLevel(1);
 		}
-		
+
 		check = mInventory.getPurchase(SKU_LEVEL_2);
-		if(check != null && verifyDeveloperPayload(check)){
+		if (check != null && verifyDeveloperPayload(check)) {
 			setDonationLevel(2);
 		}
-		
+
 		check = mInventory.getPurchase(SKU_LEVEL_3);
-		if(check != null && verifyDeveloperPayload(check)){
-			setDonationLevel(2);
+		if (check != null && verifyDeveloperPayload(check)) {
+			setDonationLevel(3);
 		}
 	}
+
 	// Listener that's called when we finish querying the items and
 	// subscriptions we own
 	IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
@@ -122,29 +143,29 @@ public abstract class GameWithGoogleIap extends Game {
 	};
 
 	public String getPriceString(int level) {
-		if(mInventory == null) {
+		if (mInventory == null) {
 			return null;
 		}
-		
+
 		switch (level) {
-			case 1:
-				return mInventory.getSkuDetails(SKU_LEVEL_1).getPrice();
-			case 2:
-				return mInventory.getSkuDetails(SKU_LEVEL_2).getPrice();
-			case 3:
-				return mInventory.getSkuDetails(SKU_LEVEL_3).getPrice();
+		case 1:
+			return mInventory.getSkuDetails(SKU_LEVEL_1).getPrice();
+		case 2:
+			return mInventory.getSkuDetails(SKU_LEVEL_2).getPrice();
+		case 3:
+			return mInventory.getSkuDetails(SKU_LEVEL_3).getPrice();
 		}
 		return null;
 	}
-	
+
 	public void doPurchase(String sku) {
-		if(!m_iapReady){
+		if (!m_iapReady) {
 			alert("Sorry, we not ready yet");
 			return;
 		}
-		
+
 		String payload = "";
-		
+
 		m_iapReady = false;
 		mHelper.launchPurchaseFlow(this, sku, RC_REQUEST,
 				mPurchaseFinishedListener, payload);
@@ -160,7 +181,7 @@ public abstract class GameWithGoogleIap extends Game {
 
 	public abstract void setDonationLevel(int level);
 
-	public static  GameWithGoogleIap instance() {
+	public static GameWithGoogleIap instance() {
 		return (GameWithGoogleIap) Game.instance();
 	}
 
@@ -190,6 +211,7 @@ public abstract class GameWithGoogleIap extends Game {
 
 			if (result.isFailure()) {
 				complain("Error purchasing: " + result);
+				m_iapReady = true;
 				return;
 			}
 
@@ -211,7 +233,7 @@ public abstract class GameWithGoogleIap extends Game {
 			if (purchase.getSku().equals(SKU_LEVEL_3)) {
 				setDonationLevel(3);
 			}
-			
+
 			m_iapReady = true;
 		}
 	};
