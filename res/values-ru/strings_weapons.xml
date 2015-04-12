@@ -238,10 +238,10 @@
     <string name="ParalysisQuiver_Info"></string>
     <string name="ParalysisQuiver_Gender">masculine</string>
 	
-	<!-- STRINGS OF Arrow CLASS -->
-    <string name="Arrow_Name">стрела</string>
-    <string name="Arrow_Info">Обычная деревянная стрела с железным наконечником.</string>
-    <string name="Arrow_Gender">feminine</string>
+	<!-- STRINGS OF CommonArrow CLASS -->
+    <string name="CommonArrow_Name">стрела</string>
+    <string name="CommonArrow_Info">Обычная деревянная стрела с железным наконечником.</string>
+    <string name="CommonArrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF FireArrow CLASS -->
     <string name="FireArrow_Name">огненая стрела</string>

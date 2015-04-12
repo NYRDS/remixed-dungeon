@@ -238,10 +238,10 @@
     <string name="ParalysisQuiver_Info"></string>
     <string name="ParalysisQuiver_Gender">masculine</string>
 	
-	<!-- STRINGS OF Arrow CLASS -->
-    <string name="Arrow_Name">arrow</string>
-    <string name="Arrow_Info">Common wooden arrow with iron head.</string>
-    <string name="Arrow_Gender">feminine</string>
+	<!-- STRINGS OF CommonArrow CLASS -->
+    <string name="CommonArrow_Name">arrow</string>
+    <string name="CommonArrow_Info">Common wooden arrow with iron head.</string>
+    <string name="CommonArrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF FireArrow CLASS -->
     <string name="FireArrow_Name">fire arrow</string>
