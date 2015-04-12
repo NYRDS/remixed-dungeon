@@ -15,8 +15,9 @@ public class CommonArrow extends Arrow {
 		super();
 		quantity = number;
 		
-		MIN = 1;
-		MAX = 4;
+		baseMin = 1;
+		baseMax = 4;
+		baseDly = 0.75;
 		
 		image = ItemSpriteSheet.ARROW_COMMON;
 	}

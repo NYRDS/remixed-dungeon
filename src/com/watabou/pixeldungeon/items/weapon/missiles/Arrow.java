@@ -5,10 +5,10 @@ import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 
 public abstract class Arrow extends MissileWeapon {
 
-	protected float baseAcu = 1f;
-	protected float baseDly = 1f;
-	protected float baseMax = 1f;
-	protected float baseMin = 1f;
+	protected double baseAcu = 1;
+	protected double baseDly = 1;
+	protected double baseMax = 1;
+	protected double baseMin = 1;
 	
 	public Arrow() {
 		this( 1 );
@@ -29,6 +29,8 @@ public abstract class Arrow extends MissileWeapon {
 			MIN = (int) (baseMin * bow.dmgFactor());
 			ACU = (float) (baseAcu * bow.acuFactor());
 			DLY = (float) (baseDly * bow.dlyFactor());
+			
+			bow.usedForHit();
 			
 			super.onThrow(cell);
 		} else {

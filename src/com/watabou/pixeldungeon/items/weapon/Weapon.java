@@ -58,6 +58,14 @@ public class Weapon extends KindOfWeapon {
 	
 	protected Enchantment enchantment;
 	
+	public void usedForHit() {
+		if (!levelKnown && --hitsToKnow <= 0) {
+			levelKnown = true;
+			GLog.i(TXT_IDENTIFY, name(), toString());
+			Badges.validateItemLevelAquired(this);
+		}
+	}
+	
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
 		
@@ -65,13 +73,7 @@ public class Weapon extends KindOfWeapon {
 			enchantment.proc( this, attacker, defender, damage );
 		}
 		
-		if (!levelKnown) {
-			if (--hitsToKnow <= 0) {
-				levelKnown = true;
-				GLog.i( TXT_IDENTIFY, name(), toString() );
-				Badges.validateItemLevelAquired( this );
-			}
-		}
+		usedForHit();
 	}
 	
 	private static final String ENCHANTMENT	= "enchantment";
