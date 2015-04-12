@@ -120,8 +120,8 @@ public class MissileWeapon extends Weapon {
 	public String info() {
 		
 		StringBuilder info = new StringBuilder( desc() );
-		   
-		info.append(String.format(Game.getVar(R.string.MissileWeapon_Info1),(MIN + (MAX - MIN) / 2)));
+		
+		info.append(String.format(Game.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
 		info.append(" ");
 
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
