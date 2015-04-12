@@ -39,10 +39,14 @@ public class Journal {
 		TROLL					(Game.getVar(R.string.Journal_Troll)),
 		IMP						(Game.getVar(R.string.Journal_Imp));
 		
-		public String desc;
+		private String desc;
 		
 		private Feature( String desc ) {
 			this.desc = desc;
+		}
+
+		public String desc() {
+			return desc;
 		}
 	};
 	

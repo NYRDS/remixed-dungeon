@@ -42,6 +42,9 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.LabeledTab;
+import com.watabou.pixeldungeon.windows.elements.RankingTab;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndRanking extends WndTabbed {
 	
@@ -115,30 +118,12 @@ public class WndRanking extends WndTabbed {
 			
 			add( pages[i] );
 			
-			Tab tab = new RankingTab( labels[i], pages[i] );
+			Tab tab = new RankingTab(this, labels[i], pages[i] );
 			tab.setSize( TAB_WIDTH, tabHeight() );
 			add( tab );
 		}
 		
 		select( 0 );
-	}
-
-	private class RankingTab extends LabeledTab {
-		
-		private Group page;
-		
-		public RankingTab( String label, Group page ) {
-			super( label );
-			this.page = page;
-		}
-		
-		@Override
-		protected void select( boolean value ) {
-			super.select( value );
-			if (page != null) {
-				page.visible = page.active = selected;
-			}
-		}
 	}
 	
 	private class StatsTab extends Group {
@@ -155,7 +140,7 @@ public class WndRanking extends WndTabbed {
 		
 		private final String TXT_DEPTH    = Game.getVar(R.string.WndRanking_StaDepth);
 		private final String TXT_ENEMIES  = Game.getVar(R.string.WndRanking_StaEnemies);
-		private final String TXT_GOLD     = Game.getVar(R.string.WndRanking_StaGold);;
+		private final String TXT_GOLD     = Game.getVar(R.string.WndRanking_StaGold);
 		
 		private final String TXT_FOOD     = Game.getVar(R.string.WndRanking_StaFood);
 		private final String TXT_ALCHEMY  = Game.getVar(R.string.WndRanking_StaAlchemy);
@@ -249,7 +234,7 @@ public class WndRanking extends WndTabbed {
 			
 			for(int i = 0;i<3;++i) {
 				Object qsItem = QuickSlot.getEarlyLoadItem(i);
-				if(qsItem instanceof Item && Dungeon.hero.belongings.backpack.contains(((Item)qsItem))){
+				if(qsItem instanceof Item && Dungeon.hero.belongings.backpack.contains((Item)qsItem)){
 					addItem((Item)qsItem);
 				} else if( qsItem instanceof Class){
 					@SuppressWarnings("unchecked")

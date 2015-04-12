@@ -50,6 +50,7 @@ import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndBag extends WndTabbed {
 	
@@ -130,7 +131,7 @@ public class WndBag extends WndTabbed {
 		
 		for (Bag b : bags) {
 			if (b != null) {
-				BagTab tab = new BagTab( b );
+				BagTab tab = new BagTab(this, b );
 				if(PixelDungeon.landscape()){
 					tab.setSize( TAB_WIDTH_L, tabHeight() );
 				} else {
@@ -223,7 +224,7 @@ public class WndBag extends WndTabbed {
 	}
 	
 	@Override
-	protected void onClick( Tab tab ) {
+	public void onClick( Tab tab ) {
 		hide();
 		GameScene.show( new WndBag( ((BagTab)tab).bag, listener, mode, title ) );
 	}
@@ -239,8 +240,8 @@ public class WndBag extends WndTabbed {
 
 		private Bag bag;
 		
-		public BagTab( Bag bag ) {
-			super();
+		public BagTab(WndBag parent, Bag bag ) {
+			super(parent);
 			
 			this.bag = bag;
 			
@@ -249,7 +250,7 @@ public class WndBag extends WndTabbed {
 		}
 		
 		@Override
-		protected void select( boolean value ) {
+		public void select( boolean value ) {
 			super.select( value );
 			icon.am = selected ? 1.0f : 0.6f;
 		}

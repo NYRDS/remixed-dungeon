@@ -27,6 +27,8 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.RankingTab;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndClass extends WndTabbed {
 	
@@ -50,7 +52,7 @@ public class WndClass extends WndTabbed {
 		tabPerks = new PerksTab();
 		add( tabPerks );
 		
-		Tab tab = new RankingTab( Utils.capitalize( cl.title() ), tabPerks );
+		Tab tab = new RankingTab(this, Utils.capitalize( cl.title() ), tabPerks );
 		tab.setSize( TAB_WIDTH, tabHeight() );
 		add( tab );
 		
@@ -58,7 +60,7 @@ public class WndClass extends WndTabbed {
 			tabMastery = new MasteryTab();
 			add( tabMastery );
 			
-			tab = new RankingTab( TXT_MASTERY, tabMastery );
+			tab = new RankingTab(this, TXT_MASTERY, tabMastery );
 			tab.setSize( TAB_WIDTH, tabHeight() );
 			add( tab );
 			
@@ -72,24 +74,6 @@ public class WndClass extends WndTabbed {
 		select( 0 );
 	}
 
-	private class RankingTab extends LabeledTab {
-		
-		private Group page;
-		
-		public RankingTab( String label, Group page ) {
-			super( label );
-			this.page = page;
-		}
-		
-		@Override
-		protected void select( boolean value ) {
-			super.select( value );
-			if (page != null) {
-				page.visible = page.active = selected;
-			}
-		}
-	}
-	
 	private class PerksTab extends Group {
 		
 		private static final int MARGIN	= 4;
