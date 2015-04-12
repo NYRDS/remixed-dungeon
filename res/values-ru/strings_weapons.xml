@@ -202,4 +202,59 @@
     <string name="Tamahawk_Name">томагавк</string>
     <string name="Tamahawk_Info">Хоть этот метательный топор не столь тяжёл, но, тем не менее, для обращения с ним требуется ощутимая сила.</string>
     <string name="Tamahawk_Gender">masculine</string>
+	
+		<!-- STRINGS OF WoodenBow CLASS -->
+    <string name="WoodenBow_Name">деревянный лук</string>
+    <string name="WoodenBow_Info">Не смотря на кажущуюся простоту, этот лук может оказаться полезным. Если у тебя есть стрелы</string>
+    <string name="WoodenBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF CompoundBow CLASS -->
+    <string name="CompoundBow_Name">блочный лук</string>
+    <string name="CompoundBow_Info"></string>
+    <string name="CompoundBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF RubyBow CLASS -->
+    <string name="RubyBow_Name">рубиновый лук</string>
+    <string name="RubyBow_Info"></string>
+    <string name="RubyBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF Quiver CLASS -->
+    <string name="Quiver_Name">колчан</string>
+    <string name="Quiver_Info"></string>
+    <string name="Quiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF FireQuiver CLASS -->
+    <string name="FireQuiver_Name">огненый колчан</string>
+    <string name="FireQuiver_Info"></string>
+    <string name="FireQuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF PoisonQuiver CLASS -->
+    <string name="PoisonQuiver_Name">отравленный колчан</string>
+    <string name="PoisonQuiver_Info"></string>
+    <string name="Poisonuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF ParalysisQuiver CLASS -->
+    <string name="ParalysisQuiver_Name">парализующий колчан</string>
+    <string name="ParalysisQuiver_Info"></string>
+    <string name="ParalysisQuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF Arrow CLASS -->
+    <string name="Arrow_Name">стрела</string>
+    <string name="Arrow_Info">Обычная деревянная стрела с железным наконечником.</string>
+    <string name="Arrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF FireArrow CLASS -->
+    <string name="FireArrow_Name">огненая стрела</string>
+    <string name="FireArrow_Info"></string>
+    <string name="FireArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF PoisonArrow CLASS -->
+    <string name="PoisonArrow_Name">ядовитая стрела</string>
+    <string name="PoisonArrow_Info"></string>
+    <string name="PoisonArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF ParalysisArrow CLASS -->
+    <string name="ParalysisArrow_Name">парализующая стрела</string>
+    <string name="ParalysisArrow_Info"></string>
+    <string name="ParalysisArrow_Gender">feminine</string>
 </resources>
