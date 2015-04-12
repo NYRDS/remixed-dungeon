@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.Char;
 
 public abstract class Arrow extends MissileWeapon {
 
