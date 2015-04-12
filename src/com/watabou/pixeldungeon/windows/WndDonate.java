@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -34,14 +35,14 @@ public class WndDonate extends WndTabbed {
 	private static final String RUBY_DONATE_TEXT = Game
 			.getVar(R.string.WndDonate_rubyDonateText);
 
-	private static final int WIDTH = 111;
-	private static final int HEIGHT = 111;
+	private static final int WIDTH = 120;
+	private static final int HEIGHT = 120;
 
 	private static final int BTN_HEIGHT = 20;
 	private static final int BTN_WIDTH  = WIDTH;
 	
 	private static final int GAP = 2;
-	private static final int TAB_WIDTH = 41;
+	private static final int TAB_WIDTH = 44;
 
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY };
@@ -65,7 +66,7 @@ public class WndDonate extends WndTabbed {
 
 		resize(HEIGHT, WIDTH);
 
-		select(0);
+		select(1);
 	}
 
 	private class DonateTab extends Group {
@@ -90,7 +91,7 @@ public class WndDonate extends WndTabbed {
 				} else {
 					btnText = NOT_CONNECTED;
 				}
-				RedButton donate = new RedButton(DONATE + PixelDungeon.instance().getPriceString(level)) {
+				RedButton donate = new RedButton(btnText) {
 					@Override
 					protected void onClick() {
 						PixelDungeon.donate(level);
@@ -104,8 +105,18 @@ public class WndDonate extends WndTabbed {
 				add(donate.setRect(WIDTH - BTN_WIDTH ,HEIGHT - BTN_HEIGHT, BTN_WIDTH, BTN_HEIGHT));
 			}
 
+			BitmapTextMultiline commonText = PixelScene.createMultiline(
+					Game.getVar(R.string.WndDonate_commonDonateText), 7);
+			commonText.maxWidth = WIDTH - 10;
+			commonText.measure();
+			commonText.setPos(0, pos);
+			add(commonText);
+			pos += commonText.height() + GAP;
+			
 			BitmapTextMultiline tabText = PixelScene.createMultiline(
 					text[level - 1], 7);
+			tabText.maxWidth = WIDTH - 10;
+			tabText.hardlight( Window.TITLE_COLOR );
 			tabText.measure();
 			tabText.setPos(0, pos);
 			add(tabText);

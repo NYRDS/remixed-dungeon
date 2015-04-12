@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
@@ -52,15 +54,12 @@ public class DonateButton extends Button {
 
 	public String getText() {
 		switch (PixelDungeon.donated()) {
-
 		case 1:
-			return "Any helps counts!";
 		case 2:
-			return "Thanks for Your support!";
 		case 3:
-			return "Thanks for your support 3";
+			return Game.getVar(R.string.DonateButton_thanks);
 		default:
-			return "Please consider donating";
+			return Game.getVar(R.string.DonateButton_pleaseDonate);
 		}
 	}
 
