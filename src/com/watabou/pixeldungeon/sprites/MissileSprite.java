@@ -56,14 +56,14 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		PointF d = PointF.diff( dest, point() ); 
 		speed.set( d ).normalize().scale( SPEED );
 		
-		if (image == 31 || image == 108 || image == 109 || image == 110) {
+		if (ItemSpriteSheet.isFliesStraight(image)) {
 
 			angularSpeed = 0;
 			angle = 135 - (float)(Math.atan2( d.x, d.y ) / 3.1415926 * 180);
 			
 		} else {
 			
-			angularSpeed = image == 15 || image == 106 ? 1440 : 720;
+			angularSpeed = ItemSpriteSheet.isFliesFastRotating(image) ? 1440 : 720;
 			
 		}
 		
