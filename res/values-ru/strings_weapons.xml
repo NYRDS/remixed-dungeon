@@ -205,12 +205,12 @@
 	
 		<!-- STRINGS OF WoodenBow CLASS -->
     <string name="WoodenBow_Name">деревянный лук</string>
-    <string name="WoodenBow_Info">This simple wooden bow might prove to be useful, once you find some arrows.</string>
+    <string name="WoodenBow_Info">Не смотря на кажущуюся простоту, этот лук может оказаться полезным. Если у тебя есть стрелы</string>
     <string name="WoodenBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF CompoundBow CLASS -->
     <string name="CompoundBow_Name">блочный лук</string>
-    <string name="CompoundBow_Info">A fine example of dwarven craftsmanship.</string>
+    <string name="CompoundBow_Info"></string>
     <string name="CompoundBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF RubyBow CLASS -->
@@ -240,7 +240,7 @@
 	
 	<!-- STRINGS OF Arrow CLASS -->
     <string name="Arrow_Name">стрела</string>
-    <string name="Arrow_Info"></string>
+    <string name="Arrow_Info">Обычная деревянная стрела с железным наконечником.</string>
     <string name="Arrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF FireArrow CLASS -->

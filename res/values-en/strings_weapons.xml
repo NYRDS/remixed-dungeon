@@ -210,7 +210,7 @@
 	
 	<!-- STRINGS OF CompoundBow CLASS -->
     <string name="CompoundBow_Name">compound bow</string>
-    <string name="CompoundBow_Info">A fine example of dwarven craftsmanship.</string>
+    <string name="CompoundBow_Info"></string>
     <string name="CompoundBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF RubyBow CLASS -->
@@ -240,7 +240,7 @@
 	
 	<!-- STRINGS OF Arrow CLASS -->
     <string name="Arrow_Name">arrow</string>
-    <string name="Arrow_Info"></string>
+    <string name="Arrow_Info">Common wooden arrow with iron head.</string>
     <string name="Arrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF FireArrow CLASS -->
