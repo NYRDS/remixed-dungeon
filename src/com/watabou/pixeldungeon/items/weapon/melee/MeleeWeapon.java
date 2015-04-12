@@ -43,11 +43,11 @@ public class MeleeWeapon extends Weapon {
 		MAX = max();
 	}
 	
-	private int min() {
+	protected int min() {
 		return tier;
 	}
 	
-	private int max() {
+	protected int max() {
 		return (int)((tier * tier - tier + 10) / ACU * DLY);
 	}
 	

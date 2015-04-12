@@ -6,4 +6,9 @@ public abstract class Bow extends MeleeWeapon {
 		super(tier, acu, dly);
 	}
 	
+	@Override
+	protected int max() {
+		return min();
+	}
+	
 }
