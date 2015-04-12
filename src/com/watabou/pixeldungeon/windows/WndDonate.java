@@ -38,7 +38,7 @@ public class WndDonate extends WndTabbed {
 	private static final int HEIGHT = 111;
 
 	private static final int BTN_HEIGHT = 20;
-	private static final int BTN_WIDTH  = 80;
+	private static final int BTN_WIDTH  = WIDTH;
 	
 	private static final int GAP = 2;
 	private static final int TAB_WIDTH = 41;
