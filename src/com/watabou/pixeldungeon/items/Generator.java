@@ -49,7 +49,9 @@ public class Generator {
 		RING	( 2,	Ring.class ),
 		SEED	( 5,	Plant.Seed.class ),
 		FOOD	( 0,	Food.class ),
-		GOLD	( 50,	Gold.class );
+		GOLD	( 50,	Gold.class ),
+		RANGED  ( 15,	Bow.class),
+		BULLETS ( 15,	Arrow.class);
 		
 		public Class<?>[] classes;
 		public float[] probs;
@@ -146,7 +148,7 @@ public class Generator {
 			CurareDart.class,
 			Shuriken.class,
 			Boomerang.class,
-			Tamahawk.class };
+			Tamahawk.class};
 		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1 };
 		
 		Category.ARMOR.classes = new Class<?>[]{ 
@@ -188,6 +190,17 @@ public class Generator {
 			Fadeleaf.Seed.class,
 			Rotberry.Seed.class };
 		Category.SEED.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 0 };
+		
+		Category.RANGED.classes = new Class<?>[] {
+				WoodenBow.class
+		};
+		Category.RANGED.probs = new float[]{ 1 };
+		
+		Category.BULLETS.classes = new Class<?>[] {
+				CommonArrow.class
+		};
+		Category.BULLETS.probs = new float[]{ 1 };
+		
 	}
 	
 	public static void reset() {

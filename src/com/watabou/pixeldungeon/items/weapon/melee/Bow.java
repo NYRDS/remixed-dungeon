@@ -11,4 +11,15 @@ public abstract class Bow extends MeleeWeapon {
 		return min();
 	}
 	
+	public double acuFactor() {
+		return 1;
+	}
+
+	public double dlyFactor() {
+		return 1;
+	}
+	
+	public double dmgFactor() {
+		return 1;
+	}
 }

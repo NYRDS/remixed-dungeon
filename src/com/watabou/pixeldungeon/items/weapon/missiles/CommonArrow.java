@@ -15,8 +15,8 @@ public class CommonArrow extends Arrow {
 		super();
 		quantity = number;
 		
-		MIN = 2;
-		MAX = 5;
+		MIN = 1;
+		MAX = 4;
 		
 		image = ItemSpriteSheet.ARROW_COMMON;
 	}
@@ -30,5 +30,10 @@ public class CommonArrow extends Arrow {
 	@Override
 	public int price() {
 		return quantity * 3;
+	}
+	
+	@Override
+	public Item burn(int cell) {
+		return null;
 	}
 }
