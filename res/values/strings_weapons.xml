@@ -209,9 +209,9 @@
     <string name="WoodenBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF CompoundBow CLASS -->
-    <string name="CompositeBow_Name">compound bow</string>
-    <string name="CompositeBow_Info">A fine example of dwarven craftsmanship.</string>
-    <string name="CompositeBow_Gender">masculine</string>
+    <string name="CompoundBow_Name">compound bow</string>
+    <string name="CompoundBow_Info">A fine example of dwarven craftsmanship.</string>
+    <string name="CompoundBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF RubyBow CLASS -->
     <string name="RubyBow_Name">ruby bow</string>
