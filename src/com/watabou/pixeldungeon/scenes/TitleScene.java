@@ -48,7 +48,8 @@ public class TitleScene extends PixelScene {
 			.getVar(R.string.TitleScene_About);
 
 	BitmapTextMultiline pleaseSupport;
-
+	DonateButton        btnDonate;
+	
 	@Override
 	public void create() {
 		super.create();
@@ -112,7 +113,7 @@ public class TitleScene extends PixelScene {
 
 		float dashBaseline = h;
 
-		DonateButton btnDonate = new DonateButton();
+		btnDonate = new DonateButton();
 
 		pleaseSupport = PixelScene.createMultiline(8);
 		pleaseSupport.text(btnDonate.getText());
@@ -122,11 +123,6 @@ public class TitleScene extends PixelScene {
 
 		btnDonate.setPos((w - btnDonate.width()) / 2, pleaseSupport.y
 				- btnDonate.height());
-
-		if (PixelDungeon.canDonate()) {
-			add(pleaseSupport);
-			add(btnDonate);
-		}
 
 		dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 
@@ -185,13 +181,22 @@ public class TitleScene extends PixelScene {
 	}
 
 	private double time = 0;
+	private boolean donationAdded = false;;
 	@Override
 	public void update() {
 		super.update();
 		time += Game.elapsed;
 		
-		float cl = (float) Math.sin(time) * 0.5f + 0.5f;
-		pleaseSupport.hardlight(cl, cl, cl);
+		if(!donationAdded) {
+			if (PixelDungeon.canDonate()) {
+				add(pleaseSupport);
+				add(btnDonate);
+				donationAdded = true;
+			}
+		} else {
+			float cl = (float) Math.sin(time) * 0.5f + 0.5f;
+			pleaseSupport.hardlight(cl, cl, cl);
+		}
 
 	}
 

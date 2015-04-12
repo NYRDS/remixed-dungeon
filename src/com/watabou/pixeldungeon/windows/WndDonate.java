@@ -18,6 +18,7 @@ public class WndDonate extends WndTabbed {
 	private static final String SILVER = Game.getVar(R.string.WndDonate_silver);
 
 	private static final String DONATE = Game.getVar(R.string.WndDonate_donate);
+	private static final String NOT_CONNECTED =  Game.getVar(R.string.WndDonate_notConnected);
 
 	private static final String RUBY_DONATE = Game
 			.getVar(R.string.WndDonate_rubyDonate);
@@ -82,12 +83,24 @@ public class WndDonate extends WndTabbed {
 			pos += GAP;
 
 			if (PixelDungeon.donated() < level) {
+				String price = PixelDungeon.instance().getPriceString(level);
+				String btnText;
+				if( price != null ) {
+					btnText = DONATE + price;
+				} else {
+					btnText = NOT_CONNECTED;
+				}
 				RedButton donate = new RedButton(DONATE + PixelDungeon.instance().getPriceString(level)) {
 					@Override
 					protected void onClick() {
 						PixelDungeon.donate(level);
 					}
 				};
+				
+				if( price == null) {
+					donate.enable(false);
+				}
+				
 				add(donate.setRect(WIDTH - BTN_WIDTH ,HEIGHT - BTN_HEIGHT, BTN_WIDTH, BTN_HEIGHT));
 			}
 

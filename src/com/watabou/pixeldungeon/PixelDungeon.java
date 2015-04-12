@@ -104,7 +104,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 
 	public static boolean canDonate() {
-		return instance() instanceof GameWithGoogleIap;
+		return instance().iapReady();
 	}
 	
 	/*
