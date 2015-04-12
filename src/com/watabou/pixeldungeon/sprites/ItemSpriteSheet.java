@@ -184,4 +184,18 @@ public class ItemSpriteSheet {
 	public static final int VIAL	= 120;
 	public static final int WEIGHT	= 123;
 	public static final int CODEX   = 132;
+	
+	public static final int BOW_WOODEN      = 134;
+	public static final int BOW_COMPOSITE   = 135;
+	public static final int BOW_RUBY        = 136;
+
+	public static final int QUIVER_COMMON     = 137;
+	public static final int QUIVER_FIRE       = 138;
+	public static final int QUIVER_POISON     = 139;
+	public static final int QUIVER_PARALYSIS  = 140;
+
+	public static final int ARROW_COMMON     = 141;
+	public static final int ARROW_FIRE       = 142;
+	public static final int ARROW_POISON     = 143;
+	public static final int ARROW_PARALYSIS  = 144;
 }
