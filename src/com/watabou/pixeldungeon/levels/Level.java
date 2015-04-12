@@ -213,7 +213,17 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(new Stylus());
 				Dungeon.arcaneStyli++;
 			}
-
+			
+			if( Random.Int(5) == 0) 
+			{
+				addItemToSpawn(Generator.random(Generator.Category.RANGED));
+			}
+			
+			if( Random.Int(3) == 0) 
+			{
+				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
+			}
+			
 			if (Dungeon.depth > 1) {
 				switch (Random.Int(10)) {
 				case 0:
