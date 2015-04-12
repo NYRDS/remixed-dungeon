@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- STRINGS OF WndDonate CLASS -->
+    <string name="WndDonate_silver">silver</string>
+    <string name="WndDonate_gold">gold</string>
+    <string name="WndDonate_ruby">ruby</string>
+    
+    <string name="WndDonate_donate">donate: </string>
+    <string name="WndDonate_notConnected">no connection :(</string>
+    <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - free to everyone and always will be.\n\nHowever, You can help us make the game even better.\n\nIn addition to our heartfelt thanks you\'ll get some cosmetic improvements.</string>
+    
+    <string name="WndDonate_silverDonate">silver donation</string>
+    <string name="WndDonate_goldDonate">gold donation</string>
+    <string name="WndDonate_rubyDonate">ruby donation</string>
+    
+    <string name="WndDonate_silverDonateText">Any donation will help the development of the project</string>
+    <string name="WndDonate_goldDonateText">Thank You for Your help</string>
+    <string name="WndDonate_rubyDonateText">Your generosity will help us continue to improve Remixed Pixel Dungeon!</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_std">standard</string>
+    <string name="WndPremiumSettings_silver">silver</string>
+    <string name="WndPremiumSettings_gold">gold</string>
+    <string name="WndPremiumSettings_ruby">ruby</string>
+    
+    <string name="WndPremiumSettings_chrome">Select gui material</string>
+    <string name="WndPremiumSettings_status">Select status bar material</string>
+    <string name="WndPremiumSettings_toolbar">Select toolbar material</string>
+    
+    <string name="WndPremiumSettings_notAvailbale">This option not available yet</string>
+    
+    <!-- STRINGS OF DonateButton CLASS -->
+    <string name="DonateButton_pleaseDonate">please consider donating</string>
+    <string name="DonateButton_thanks">Thanks for Your support!</string>
+    
+</resources>
