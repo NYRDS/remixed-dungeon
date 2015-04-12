@@ -38,18 +38,15 @@ public class Codex extends Item {
 	public static final String AC_READ	= Game.getVar(R.string.Codex_ACRead);
 
 	private static String idTag = "id";
-	private static int    maxId = 0;
+	private int    maxId = 0;
 	
 	private int    id;
-	
-	{
+
+	public Codex(){
 		stackable = false;
 		image     = ItemSpriteSheet.CODEX;
 		maxId     = Game.getVars(R.array.Codex_Story).length;
-	}
-	
-	public Codex(){
-		id = Random.Int(maxId);
+		id        = Random.Int(maxId);
 	}
 	
 	@Override

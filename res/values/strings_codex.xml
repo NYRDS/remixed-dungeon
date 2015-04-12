@@ -31,6 +31,8 @@
         <item>Venomous weapon - On successful hit, can poison target.</item>
         <item>Chilling weapon - On successful hit, can slow target and will prevent it from burning.</item>
         <item>Wild weapon - On successful hit, can damage all enemies adjacent to the target.</item>
+        
+        <item>This book written in demon language</item>
    </string-array>
 
 </resources>
