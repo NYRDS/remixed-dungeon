@@ -428,6 +428,10 @@ public abstract class Wand extends KindOfWeapon {
 					GLog.w( TXT_FIZZLES );
 					curWand.levelKnown = true;
 					
+					if(Random.Int(5) == 0) {
+						curWand.curChargeKnown = true;
+					}
+					
 					curWand.updateQuickslot();
 				}
 				
