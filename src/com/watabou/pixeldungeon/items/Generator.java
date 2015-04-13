@@ -50,8 +50,8 @@ public class Generator {
 		SEED	( 5,	Plant.Seed.class ),
 		FOOD	( 0,	Food.class ),
 		GOLD	( 50,	Gold.class ),
-		RANGED  ( 15,	Bow.class),
-		BULLETS ( 15,	Arrow.class);
+		RANGED  ( 2,	Bow.class),
+		BULLETS ( 5,	Arrow.class);
 		
 		public Class<?>[] classes;
 		public float[] probs;
