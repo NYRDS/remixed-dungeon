@@ -74,8 +74,8 @@ public class PixelScene extends Scene {
 		
 		defaultZoom = (int)Math.ceil( Game.density * 2.5 );
 		while ((
-			Game.width / defaultZoom < minWidth || 
-			Game.height / defaultZoom < minHeight
+			Game.width() / defaultZoom < minWidth || 
+			Game.height() / defaultZoom < minHeight
 			) && defaultZoom > 1) {
 			
 			defaultZoom--;
@@ -83,8 +83,8 @@ public class PixelScene extends Scene {
 			
 		if (PixelDungeon.scaleUp()) {
 			while (
-				Game.width / (defaultZoom + 1) >= minWidth && 
-				Game.height / (defaultZoom + 1) >= minHeight) {
+				Game.width() / (defaultZoom + 1) >= minWidth && 
+				Game.height() / (defaultZoom + 1) >= minHeight) {
 				
 				defaultZoom++;
 			}	
@@ -152,7 +152,7 @@ public class PixelScene extends Scene {
 	public static void chooseFont( float size, float zoom ) {
 
 		float pt = size * zoom;
-
+/*
 		if (pt >= 19) {
 
 			scale = pt / 19;
@@ -203,11 +203,11 @@ public class PixelScene extends Scene {
 			scale = Math.max( 1, (int)(pt / 7) );
 
 		}
-
+*/
 
 		font = font25x;
 
-		scale /= defaultZoom;
+		scale = 0.1f / zoom * size;//(int)(pt / 19 / zoom);
 	}
 	
 	public static BitmapText createText( float size ) {
@@ -322,10 +322,10 @@ public class PixelScene extends Scene {
 		
 		public PixelCamera( float zoom ) {
 			super( 
-				(int)(Game.width - Math.ceil( Game.width / zoom ) * zoom) / 2, 
-				(int)(Game.height - Math.ceil( Game.height / zoom ) * zoom) / 2, 
-				(int)Math.ceil( Game.width / zoom ), 
-				(int)Math.ceil( Game.height / zoom ), zoom );
+				(int)(Game.width() - Math.ceil( Game.width() / zoom ) * zoom) / 2, 
+				(int)(Game.height() - Math.ceil( Game.height() / zoom ) * zoom) / 2, 
+				(int)Math.ceil( Game.width() / zoom ), 
+				(int)Math.ceil( Game.height() / zoom ), zoom );
 		}
 		
 		@Override

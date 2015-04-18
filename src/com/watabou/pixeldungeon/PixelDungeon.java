@@ -38,7 +38,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 
-public class PixelDungeon extends GameWithGoogleIap {
+public class PixelDungeon extends Game {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -119,7 +119,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 
 	public static boolean landscape() {
-		return width > height;
+		return width() > height();
 	}
 
 	// *** IMMERSIVE MODE ****
