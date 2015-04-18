@@ -86,6 +86,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -783,24 +784,45 @@ public class Hero extends Char {
 
 		enemy = action.target;
 
-		if (Level.adjacent( pos, enemy.pos ) && enemy.isAlive() && !pacified) {
+		if (enemy.isAlive() && !pacified) {
 			
-			spend( attackDelay() );
-			getSprite().attack( enemy.pos );
-			
-			return false;
-			
-		} else {
-			
-			if (Level.fieldOfView[enemy.pos] && getCloser( enemy.pos )) {
+			if(Level.adjacent(pos, enemy.pos)) {
+				spend( attackDelay() );
+				getSprite().attack( enemy.pos );
 				
-				return true;
-				
-			} else {
-				ready();
 				return false;
+			} else {
+				if ( bowEquiped() ) {
+					Bow bow = (Bow) belongings.weapon;
+					
+					Class <? extends Arrow> arrowType = bow.arrowType();
+					
+					Arrow arrow;
+					
+					if(arrowType.equals(Arrow.class)) { // no arrow type selected
+						arrow = belongings.getItem( Arrow.class );
+					} else {
+						arrow = belongings.getItem( arrowType );
+						if (arrow == null) {
+							arrow = belongings.getItem( Arrow.class );
+						}
+					}
+					
+					if(arrow != null) { // We have arrows!
+						arrow.cast(this, enemy.pos);
+						ready();
+						return false;
+					} //no arrows? just get closer...
+					
+				}
 			}
+		} 
 			
+		if (Level.fieldOfView[enemy.pos] && getCloser( enemy.pos )) {			
+			return true;
+		} else {
+			ready();
+			return false;
 		}
 	}
 	
@@ -1082,7 +1104,7 @@ public class Hero extends Char {
 				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 			
-			((Hunger)buff( Hunger.class )).satisfy( 10 );
+			buff( Hunger.class ).satisfy( 10 );
 		}
 	}
 	
@@ -1098,7 +1120,7 @@ public class Hero extends Char {
 	}
 	
 	public boolean isStarving() {
-		return ((Hunger)buff( Hunger.class )).isStarving();
+		return buff( Hunger.class ).isStarving();
 	}
 	
 	@Override
@@ -1181,7 +1203,7 @@ public class Hero extends Char {
 		Actor.fixTime();
 		super.die( cause );
 		
-		Ankh ankh = (Ankh)belongings.getItem( Ankh.class );
+		Ankh ankh = belongings.getItem( Ankh.class );
 		if (ankh == null) {
 			
 			reallyDie( cause );

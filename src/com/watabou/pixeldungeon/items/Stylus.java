@@ -113,7 +113,7 @@ public class Stylus extends Item {
 		inscribeEffect();
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
-		if(!inscribedScroll.collect()){
+		if(!inscribedScroll.collect(curUser)){
 			Dungeon.level.drop(inscribedScroll, Dungeon.hero.pos).sprite.drop();
 		}
 	}

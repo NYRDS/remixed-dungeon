@@ -34,7 +34,9 @@ import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
+import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
+import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -83,7 +85,7 @@ public enum HeroClass {
 		hero.gender = getGender();
 		
 		if (Badges.isUnlocked( masteryBadge() )) {
-			new TomeOfMastery().collect();
+			new TomeOfMastery().collect(hero);
 		}
 		
 		hero.updateAwareness();
@@ -91,12 +93,10 @@ public enum HeroClass {
 	
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
-		new Ration().identify().collect();
-		/*
-		for (int i = 0; i<10 ;i++){
-			new ScrollOfMirrorImage().collect();
-		}
-		*/
+		new Ration().identify().collect(hero);
+		
+		new WoodenBow().identify().collect(hero);
+		new CommonArrow(100).collect(hero);
 		
 		QuickSlot.cleanStorage();
 	}
@@ -119,7 +119,7 @@ public enum HeroClass {
 		hero.STR = hero.STR + 1;
 		
 		(hero.belongings.weapon = new ShortSword()).identify();
-		new Dart( 8 ).identify().collect();
+		new Dart( 8 ).identify().collect(hero);
 		
 		QuickSlot.selectItem(Dart.class,0);
 		
@@ -130,7 +130,7 @@ public enum HeroClass {
 		(hero.belongings.weapon = new Knuckles()).identify();
 		
 		WandOfMagicMissile wand = new WandOfMagicMissile();
-		wand.identify().collect();
+		wand.identify().collect(hero);
 		
 		QuickSlot.selectItem(wand,0);
 		
@@ -140,7 +140,7 @@ public enum HeroClass {
 	private static void initRogue( Hero hero ) {
 		(hero.belongings.weapon = new Dagger()).identify();
 		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
-		new Dart( 8 ).identify().collect();
+		new Dart( 8 ).identify().collect(hero);
 		
 		hero.belongings.ring1.activate( hero );
 		
@@ -155,7 +155,7 @@ public enum HeroClass {
 		
 		(hero.belongings.weapon = new Dagger()).identify();
 		Boomerang boomerang = new Boomerang();
-		boomerang.identify().collect();
+		boomerang.identify().collect(hero);
 		
 		QuickSlot.selectItem(boomerang,0);
 	}

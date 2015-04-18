@@ -31,6 +31,7 @@ public abstract class Arrow extends MissileWeapon {
 			DLY = (float) (baseDly * bow.dlyFactor());
 			
 			bow.usedForHit();
+			bow.useArrowType(this);
 			
 			super.onThrow(cell);
 		} else {

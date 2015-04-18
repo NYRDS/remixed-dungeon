@@ -109,7 +109,7 @@ public class PixelDungeon extends Game {
 	}
 	
 	/*
-	 * ---> Prefernces
+	 * ---> Preferences
 	 */
 
 	public static void landscape(boolean value) {
@@ -296,7 +296,14 @@ public class PixelDungeon extends Game {
         return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
     }
 	
-    
+	public static void fontScale(int value) {
+		Preferences.INSTANCE.put(Preferences.KEY_FONT_SCALE, value);
+	}
+
+	public static int fontScale() {
+		return Preferences.INSTANCE.getInt(Preferences.KEY_FONT_SCALE, 0);
+	}
+	
 	/*
 	 * <--- Preferences
 	 */
@@ -320,13 +327,4 @@ public class PixelDungeon extends Game {
 		}
 		donated(level);
 	}
-
-	public static void fontScale(int value) {
-		Preferences.INSTANCE.put(Preferences.KEY_FONT_SCALE, value);
-	}
-
-	public static int fontScale() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_FONT_SCALE, 0);
-	}
-
 }
