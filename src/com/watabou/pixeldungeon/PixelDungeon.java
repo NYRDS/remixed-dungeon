@@ -104,7 +104,8 @@ public class PixelDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return instance().iapReady();
+		return true;
+		//return instance().iapReady();
 	}
 	
 	/*
@@ -318,6 +319,14 @@ public class PixelDungeon extends Game {
 			Badges.validateSupporter();
 		}
 		donated(level);
+	}
+
+	public static void fontScale(int value) {
+		Preferences.INSTANCE.put(Preferences.KEY_FONT_SCALE, value);
+	}
+
+	public static int fontScale() {
+		return Preferences.INSTANCE.getInt(Preferences.KEY_FONT_SCALE, 0);
 	}
 
 }

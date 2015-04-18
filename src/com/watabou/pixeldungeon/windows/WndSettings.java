@@ -70,39 +70,21 @@ public class WndSettings extends Window {
 
 	private RedButton btnZoomOut;
 	private RedButton btnZoomIn;
+	
+	private RedButton btnStdFontScale;
+	private RedButton btnScaleMinus;
+	private RedButton btnScalePlus;
 
+	private boolean mInGame;
+	
 	public WndSettings(boolean inGame) {
 		super();
+		mInGame = inGame;
 
-		CheckBox btnImmersive = null;
-
-		if (inGame) {
-			int w = BTN_HEIGHT;
-
-			btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
-				@Override
-				protected void onClick() {
-					zoom(Camera.main.zoom - 1);
-				}
-			};
-			add(btnZoomOut.setRect(0, 0, w, BTN_HEIGHT));
-
-			btnZoomIn = new RedButton(TXT_ZOOM_IN) {
-				@Override
-				protected void onClick() {
-					zoom(Camera.main.zoom + 1);
-				}
-			};
-			add(btnZoomIn.setRect(WIDTH - w, 0, w, BTN_HEIGHT));
-
-			add(new RedButton(TXT_ZOOM_DEFAULT) {
-				@Override
-				protected void onClick() {
-					zoom(PixelScene.defaultZoom);
-				}
-			}.setRect(btnZoomOut.right(), 0, WIDTH - btnZoomIn.width()
-					- btnZoomOut.width(), BTN_HEIGHT));
-
+		float curY = 0;
+		
+		if (mInGame) {
+			curY = createZoomButtons();
 		} else {
 
 			CheckBox btnScaleUp = new CheckBox(TXT_SCALE_UP) {
@@ -116,7 +98,7 @@ public class WndSettings extends Window {
 			btnScaleUp.checked(PixelDungeon.scaleUp());
 			add(btnScaleUp);
 
-			btnImmersive = new CheckBox(TXT_IMMERSIVE) {
+			CheckBox btnImmersive = new CheckBox(TXT_IMMERSIVE) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -128,8 +110,12 @@ public class WndSettings extends Window {
 			btnImmersive.checked(PixelDungeon.immersed());
 			btnImmersive.enable(android.os.Build.VERSION.SDK_INT >= 19);
 			add(btnImmersive);
+			curY = btnImmersive.bottom();
+			
+			curY = createTextScaleButtons(curY + GAP);
 		}
-
+		curY += GAP;
+		
 		CheckBox btnMusic = new CheckBox(TXT_MUSIC) {
 			@Override
 			protected void onClick() {
@@ -137,8 +123,7 @@ public class WndSettings extends Window {
 				PixelDungeon.music(checked());
 			}
 		};
-		btnMusic.setRect(0, (btnImmersive != null ? btnImmersive.bottom()
-				: BTN_HEIGHT) + GAP, WIDTH, BTN_HEIGHT);
+		btnMusic.setRect(0, curY, WIDTH, BTN_HEIGHT);
 		btnMusic.checked(PixelDungeon.music());
 		add(btnMusic);
 
@@ -154,7 +139,7 @@ public class WndSettings extends Window {
 		btnSound.checked(PixelDungeon.soundFx());
 		add(btnSound);
 
-		if (!inGame) {
+		if (!mInGame) {
 
 			RedButton btnOrientation = new RedButton(orientationText()) {
 				@Override
@@ -238,8 +223,85 @@ public class WndSettings extends Window {
 				resize(WIDTH, (int) secondQuickslot.bottom());
 			}
 		}
-	}
 
+	}
+	
+	private float createZoomButtons() {
+		int w = BTN_HEIGHT;
+
+		btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
+			@Override
+			protected void onClick() {
+				zoom(Camera.main.zoom - 1);
+			}
+		};
+		add(btnZoomOut.setRect(0, 0, w, BTN_HEIGHT));
+
+		btnZoomIn = new RedButton(TXT_ZOOM_IN) {
+			@Override
+			protected void onClick() {
+				zoom(Camera.main.zoom + 1);
+			}
+		};
+		add(btnZoomIn.setRect(WIDTH - w, 0, w, BTN_HEIGHT));
+
+		add(new RedButton(TXT_ZOOM_DEFAULT) {
+			@Override
+			protected void onClick() {
+				zoom(PixelScene.defaultZoom);
+			}
+		}.setRect(btnZoomOut.right(), 0, WIDTH - btnZoomIn.width()
+				- btnZoomOut.width(), BTN_HEIGHT));
+		
+		return btnZoomIn.bottom();
+	}
+	
+	
+	private float createTextScaleButtons(float y) {
+		int w = BTN_HEIGHT;
+		
+		remove(btnScaleMinus);
+		remove(btnScalePlus);
+		remove(btnStdFontScale);
+		
+		btnScaleMinus = new RedButton(TXT_ZOOM_OUT) {
+			@Override
+			protected void onClick() {
+				PixelDungeon.fontScale(PixelDungeon.fontScale()-1);
+				createTextScaleButtons(y);
+			}
+		};
+		add(btnScaleMinus.setRect(0, y, w, BTN_HEIGHT));
+
+		btnScalePlus = new RedButton(TXT_ZOOM_IN) {
+			@Override
+			protected void onClick() {
+				PixelDungeon.fontScale(PixelDungeon.fontScale()+1);
+				createTextScaleButtons(y);
+			}
+		};
+		add(btnScalePlus.setRect(WIDTH - w, y, w, BTN_HEIGHT));
+		
+		btnStdFontScale = new RedButton(TXT_ZOOM_DEFAULT) {
+			@Override
+			protected void onClick() {
+				PixelDungeon.fontScale(0);
+				createTextScaleButtons(y);
+			}
+		};
+		btnStdFontScale.setRect(btnScaleMinus.right(), y, WIDTH - btnScalePlus.width()
+				- btnScaleMinus.width(), BTN_HEIGHT);
+		add(btnStdFontScale);
+		
+		return btnScaleMinus.bottom();
+	}
+	
+	@Override
+	public void onBackPressed() {
+		hide();
+		PixelDungeon.resetScene();
+	}
+	
 	private void zoom(float value) {
 
 		Camera.main.zoom(value);
