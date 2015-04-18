@@ -23,10 +23,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class PotionOfExperience extends Potion {
 
-	{
-		name = Game.getVar(R.string.PotionOfExperience_Name);
-	}
-	
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

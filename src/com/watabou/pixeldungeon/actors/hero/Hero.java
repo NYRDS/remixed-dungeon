@@ -1447,4 +1447,10 @@ public class Hero extends Char {
 	public void updateLook() {
 		getHeroSprite().updateArmor(tier());
 	}
+	
+	public void collect(Item item) {
+		if(!item.collect(this)){
+			Dungeon.level.drop(item, pos).sprite.drop();
+		}
+	}
 }

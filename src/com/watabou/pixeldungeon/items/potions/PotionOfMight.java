@@ -24,10 +24,6 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfMight extends PotionOfStrength {
-
-	{
-		name = Game.getVar(R.string.PotionOfMight_Name);
-	}
 	
 	@Override
 	protected void apply( Hero hero ) {

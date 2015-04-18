@@ -1,6 +1,11 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.utils.Random;
 
 
 public abstract class Arrow extends MissileWeapon {
@@ -18,6 +23,12 @@ public abstract class Arrow extends MissileWeapon {
 		super();
 		quantity = number;
 	
+	}
+	
+	@Override
+	public Item random() {
+		quantity = Random.Int( 5, 15 );
+		return this;
 	}
 	
 	@Override
@@ -39,4 +50,8 @@ public abstract class Arrow extends MissileWeapon {
 		}
 	}
 	
+	@Override
+	public Item burn(int cell) {
+		return null;
+	}
 }

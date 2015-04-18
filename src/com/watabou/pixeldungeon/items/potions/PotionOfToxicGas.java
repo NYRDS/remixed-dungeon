@@ -28,9 +28,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfToxicGas extends Potion {
 
-	{
-		name = Game.getVar(R.string.PotionOfToxicGas_Name);
-	}
 	
 	@Override
 	public void shatter( int cell ) {

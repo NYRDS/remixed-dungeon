@@ -20,17 +20,17 @@ package com.watabou.pixeldungeon.items.potions;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfLiquidFlame extends Potion {
 
-	{
-		name = Game.getVar(R.string.PotionOfLiquidFlame_Name);
-	}
-	
 	@Override
 	public void shatter( int cell ) {
 		
@@ -51,5 +51,22 @@ public class PotionOfLiquidFlame extends Potion {
 	@Override
 	public int price() {
 		return isKnown() ? 40 * quantity : super.price();
+	}
+	
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		int quantity = arrow.quantity();
+		
+		if(quantity <= 10){
+			arrow.detach( curUser.belongings.backpack );
+		} else {
+			arrow.quantity(arrow.quantity() - 10);
+			quantity = 10;
+		}
+		
+		moistenEffect();
+		
+		FireArrow moistenArrows = new FireArrow(quantity);
+		curUser.collect(moistenArrows);
 	}
 }

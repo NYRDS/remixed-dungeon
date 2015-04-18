@@ -26,10 +26,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfStrength extends Potion {
 
-	{
-		name = Game.getVar(R.string.PotionOfStrength_Name);
-	}
-	
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

@@ -39,8 +39,10 @@ import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -64,7 +66,8 @@ public class WndBag extends WndTabbed {
 		ARMOR,
 		WAND,
 		SEED,
-		INSCRIBABLE
+		INSCRIBABLE,
+		MOISTABLE
 	}
 	
 
@@ -371,6 +374,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.WAND && (item instanceof Wand) ||
 						mode == Mode.SEED && (item instanceof Seed) ||
 						mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) || 
+						mode == Mode.MOISTABLE && ( item instanceof Arrow || item instanceof Scroll ) ||
 						mode == Mode.ALL
 					);
 				}

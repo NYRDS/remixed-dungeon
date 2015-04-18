@@ -26,15 +26,15 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfInvisibility extends Potion {
 
 	private static final float ALPHA	= 0.4f;
-	
-	{
-		name = Game.getVar(R.string.PotionOfInvisibility_Name);
-	}
 	
 	@Override
 	protected void apply( Hero hero ) {
@@ -60,5 +60,23 @@ public class PotionOfInvisibility extends Potion {
 		} else {
 			ch.getSprite().alpha( ALPHA );
 		}
+	}
+	
+	@Override
+	protected void moistenScroll(Scroll scroll) {
+		int quantity = scroll.quantity();
+		
+		if(quantity <= 3){
+			scroll.detach( curUser.belongings.backpack );
+		} else {
+			scroll.quantity(scroll.quantity() - 3);
+			quantity = 3;
+		}
+		
+		moistenEffect();
+		
+		BlankScroll moistenScroll = new BlankScroll();
+		moistenScroll.quantity(3);
+		curUser.collect(moistenScroll);
 	}
 }

@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -92,17 +91,17 @@ public class Boomerang extends MissileWeapon {
 		circleBack( cell, curUser );
 	}
 	
-	private void circleBack( int from, Hero owner ) {
-		
-		((MissileSprite)curUser.getSprite().parent.recycle( MissileSprite.class )).
-			reset( from, curUser.pos, curItem, null );
-		
+	private void circleBack(int from, Hero owner) {
+
+		((MissileSprite) curUser.getSprite().parent
+				.recycle(MissileSprite.class)).reset(from, curUser.pos,
+				curItem, null);
+
 		if (throwEquiped) {
 			owner.belongings.weapon = this;
-			owner.spend( -TIME_TO_EQUIP );
-		} else 
-		if (!collect( curUser.belongings.backpack )) {
-			Dungeon.level.drop( this, owner.pos ).sprite.drop();
+			owner.spend(-TIME_TO_EQUIP);
+		} else {
+			curUser.collect(this);
 		}
 	}
 	

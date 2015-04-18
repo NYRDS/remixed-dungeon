@@ -27,9 +27,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfParalyticGas extends Potion {
 
-	{
-		name = Game.getVar(R.string.PotionOfParalyticGas_Name);
-	}
 	
 	@Override
 	public void shatter( int cell ) {

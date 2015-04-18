@@ -42,10 +42,6 @@ public class PotionOfPurity extends Potion {
 	
 	private static final int DISTANCE	= 2;
 	
-	{
-		name = Game.getVar(R.string.PotionOfPurity_Name);
-	}
-	
 	@Override
 	public void shatter( int cell ) {
 		

@@ -25,6 +25,8 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
@@ -98,6 +100,16 @@ public enum HeroClass {
 		new WoodenBow().identify().collect(hero);
 		new CommonArrow(100).collect(hero);
 		
+		hero.collect(new ScrollOfMirrorImage());
+		hero.collect(new ScrollOfMirrorImage());
+		hero.collect(new ScrollOfMirrorImage());
+		hero.collect(new ScrollOfMirrorImage());
+		hero.collect(new ScrollOfMirrorImage());
+		
+		hero.collect(new PotionOfInvisibility().identify());
+		
+		hero.collect(new PotionOfLiquidFlame().identify());
+		
 		QuickSlot.cleanStorage();
 	}
 	
@@ -155,7 +167,7 @@ public enum HeroClass {
 		
 		(hero.belongings.weapon = new Dagger()).identify();
 		Boomerang boomerang = new Boomerang();
-		boomerang.identify().collect(hero);
+		hero.collect(boomerang.identify());
 		
 		QuickSlot.selectItem(boomerang,0);
 	}

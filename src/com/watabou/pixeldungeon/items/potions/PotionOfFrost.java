@@ -32,10 +32,6 @@ public class PotionOfFrost extends Potion {
 	
 	private static final int DISTANCE	= 2;
 	
-	{
-		name = Game.getVar(R.string.PotionOfFrost_Name);
-	}
-	
 	@Override
 	public void shatter( int cell ) {
 		

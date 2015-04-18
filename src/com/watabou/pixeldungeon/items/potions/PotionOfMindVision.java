@@ -27,9 +27,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfMindVision extends Potion {
 
-	{
-		name = Game.getVar(R.string.PotionOfMindVision_Name);
-	}
 	
 	@Override
 	protected void apply( Hero hero ) {

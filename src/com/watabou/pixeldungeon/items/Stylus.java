@@ -113,9 +113,7 @@ public class Stylus extends Item {
 		inscribeEffect();
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
-		if(!inscribedScroll.collect(curUser)){
-			Dungeon.level.drop(inscribedScroll, Dungeon.hero.pos).sprite.drop();
-		}
+		curUser.collect(inscribedScroll);
 	}
 	
 	@Override
@@ -128,10 +126,10 @@ public class Stylus extends Item {
 		public void onSelect( Item item ) {
 			if (item != null) {
 				if(item instanceof Armor){
-					Stylus.this.inscribeArmor ( (Armor)item );
+					inscribeArmor ( (Armor)item );
 				}
 				if(item instanceof BlankScroll){
-					Stylus.this.inscribeScroll( (BlankScroll)item );
+					inscribeScroll( (BlankScroll)item );
 				}
 			}
 		}

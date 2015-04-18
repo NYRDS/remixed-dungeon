@@ -30,27 +30,36 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
+import com.watabou.pixeldungeon.items.Stylus;
+import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
 
 public class Potion extends Item {
 	
-	public static final String AC_DRINK	= Game.getVar(R.string.Potion_ACDrink);
+	public static final String AC_DRINK	  = Game.getVar(R.string.Potion_ACDrink);
+	public static final String AC_MOISTEN = Game.getVar(R.string.Potion_ACMoisten);
 	
 	private static final String TXT_HARMFUL			= Game.getVar(R.string.Potion_Harmfull);
 	private static final String TXT_BENEFICIAL		= Game.getVar(R.string.Potion_Beneficial);
 	private static final String TXT_YES				= Game.getVar(R.string.Potion_Yes);
 	private static final String TXT_NO		   		= Game.getVar(R.string.Potion_No);
-	private static final String TXT_R_U_SURE_DRINK  = Game.getVar(R.string.Potion_SureDrink);
-	private static final String TXT_R_U_SURE_THROW  = Game.getVar(R.string.Potion_SureThrow);
+	private static final String TXT_R_U_SURE_DRINK     = Game.getVar(R.string.Potion_SureDrink);
+	private static final String TXT_R_U_SURE_THROW     = Game.getVar(R.string.Potion_SureThrow);
+	private static final String TXT_SELECT_FOR_MOISTEN = Game.getVar(R.string.Potion_SelectForMoisten);
 	
 	private static final float TIME_TO_DRINK = 1f;
+	private static final float TIME_TO_MOISTEN = 1f;
 	
 	private static final Class<?>[] potions = {
 		PotionOfHealing.class, 
@@ -88,7 +97,7 @@ public class Potion extends Item {
 	private String color;
 	
 	{	
-		stackable = true;		
+		stackable = true;
 		defaultAction = AC_DRINK;
 	}
 	
@@ -123,13 +132,15 @@ public class Potion extends Item {
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_DRINK );
+		actions.add( AC_MOISTEN );
 		return actions;
 	}
 	
 	@Override
 	public void execute( final Hero hero, String action ) {
+		curUser = hero;
+		
 		if (action.equals( AC_DRINK )) {
-			
 			if (isKnown() && (
 					this instanceof PotionOfLiquidFlame || 
 					this instanceof PotionOfToxicGas || 
@@ -150,6 +161,8 @@ public class Potion extends Item {
 					drink( hero );
 				}
 			
+		} else if(action.equals(AC_MOISTEN)){
+			moisten (hero);
 		} else {
 			
 			super.execute( hero, action );
@@ -194,6 +207,17 @@ public class Potion extends Item {
 		onThrow( hero.pos );
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
+		
+		hero.getSprite().operate( hero.pos );
+	}
+	
+	private void moisten(Hero hero) {
+		detach( hero.belongings.backpack );
+		
+		hero.spend( TIME_TO_MOISTEN);
+		hero.busy();
+		
+		GameScene.selectItem( itemSelector, WndBag.Mode.MOISTABLE, TXT_SELECT_FOR_MOISTEN );
 		
 		hero.getSprite().operate( hero.pos );
 	}
@@ -297,4 +321,30 @@ public class Potion extends Item {
 		return null;
 	}
 	
+	private final WndBag.Listener itemSelector = new WndBag.Listener() {
+		@Override
+		public void onSelect( Item item ) {
+			if (item != null) {
+				if(item instanceof Arrow){
+					moistenArrow ((Arrow) item );
+				}
+				
+				if(item instanceof Scroll){
+					moistenScroll ((Scroll) item );
+				}
+			}
+		}
+	};
+
+	protected void moistenScroll(Scroll scroll) {
+	}
+	
+	protected void moistenArrow(Arrow arrow) {
+	}
+	
+	protected void moistenEffect() {
+		curUser.getSprite().operate( curUser.pos );		
+		curUser.spend( TIME_TO_MOISTEN );
+		curUser.busy();	
+	}
 }

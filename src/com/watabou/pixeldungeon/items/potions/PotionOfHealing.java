@@ -31,10 +31,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfHealing extends Potion {
 
-	{
-		name = Game.getVar(R.string.PotionOfHealing_Name);
-	}
-	
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

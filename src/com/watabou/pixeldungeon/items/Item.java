@@ -291,6 +291,13 @@ public class Item implements Bundlable {
 	}
 	
 	public boolean isEquipped( Hero hero ) {
+		if(	this.equals(hero.belongings.weapon) ||
+			this.equals(hero.belongings.armor) ||
+			this.equals(hero.belongings.ring1) ||
+			this.equals(hero.belongings.ring2) ) {
+			return true;
+		}
+		
 		return false;
 	}
 	
