@@ -41,7 +41,7 @@ public class FloatingText extends BitmapText {
 		super();
 
 		PixelScene.chooseFont( 9 );
-		font = PixelScene.font;
+		font = PixelScene.font();
 		scale.set( PixelScene.scale );
 		
 		speed.y = - DISTANCE / LIFESPAN;
