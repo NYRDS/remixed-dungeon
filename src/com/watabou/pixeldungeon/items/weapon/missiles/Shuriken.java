@@ -25,8 +25,13 @@ import com.watabou.utils.Random;
 
 public class Shuriken extends MissileWeapon {
 
-	{
-		name = Game.getVar(R.string.Shuriken_Name);
+	public Shuriken() {
+		this( 1 );
+	}
+	
+	public Shuriken( int number ) {
+		super();
+		
 		image = ItemSpriteSheet.SHURIKEN;
 		
 		STR = 13;
@@ -35,14 +40,7 @@ public class Shuriken extends MissileWeapon {
 		MAX = 6;
 		
 		DLY = 0.5f;
-	}
-	
-	public Shuriken() {
-		this( 1 );
-	}
-	
-	public Shuriken( int number ) {
-		super();
+		
 		quantity = number;
 	}
 	

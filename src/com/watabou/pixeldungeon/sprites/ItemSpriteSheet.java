@@ -186,7 +186,7 @@ public class ItemSpriteSheet {
 	public static final int CODEX   = 132;
 	
 	public static final int BOW_WOODEN      = 134;
-	public static final int BOW_COMPOSITE   = 135;
+	public static final int BOW_COMPOUND    = 135;
 	public static final int BOW_RUBY        = 136;
 
 	public static final int QUIVER_COMMON     = 137;

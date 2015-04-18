@@ -336,6 +336,18 @@ public class Potion extends Item {
 		}
 	};
 
+	protected int detachMoistenItems(Item item, int maxQuantity) {
+		int quantity = item.quantity();
+		
+		if(quantity <= maxQuantity){
+			item.detach( curUser.belongings.backpack );
+		} else {
+			item.quantity(item.quantity() - maxQuantity);
+			quantity = maxQuantity;
+		}
+		return quantity;
+	}
+	
 	protected void moistenScroll(Scroll scroll) {
 	}
 	

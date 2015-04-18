@@ -28,22 +28,19 @@ import com.watabou.utils.Random;
 
 public class Tamahawk extends MissileWeapon {
 
-	{
-		name = Game.getVar(R.string.Tamahawk_Name);
-		image = ItemSpriteSheet.TOMAHAWK;
-		
-		STR = 17;
-		
-		MIN = 4;
-		MAX = 20;
-	}
-	
 	public Tamahawk() {
 		this( 1 );
 	}
 	
 	public Tamahawk( int number ) {
 		super();
+		image = ItemSpriteSheet.TOMAHAWK;
+		
+		STR = 17;
+		
+		MIN = 4;
+		MAX = 20;
+		
 		quantity = number;
 	}
 	

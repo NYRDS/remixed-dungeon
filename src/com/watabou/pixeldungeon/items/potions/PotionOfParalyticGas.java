@@ -23,6 +23,8 @@ import com.watabou.pixeldungeon.Assets;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.ParalysisArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfParalyticGas extends Potion {
@@ -47,5 +49,15 @@ public class PotionOfParalyticGas extends Potion {
 	@Override
 	public int price() {
 		return isKnown() ? 40 * quantity : super.price();
+	}
+	
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		int quantity = detachMoistenItems(arrow,10);
+		
+		moistenEffect();
+		
+		ParalysisArrow moistenArrows = new ParalysisArrow(quantity);
+		curUser.collect(moistenArrows);
 	}
 }

@@ -27,16 +27,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
 
 public class Javelin extends MissileWeapon {
-
-	{
-		name = Game.getVar(R.string.Javelin_Name);
-		image = ItemSpriteSheet.JAVELIN;
-		
-		STR = 15;
-		
-		MIN = 2;
-		MAX = 15;
-	}
 	
 	public Javelin() {
 		this( 1 );
@@ -44,6 +34,14 @@ public class Javelin extends MissileWeapon {
 	
 	public Javelin( int number ) {
 		super();
+
+		image = ItemSpriteSheet.JAVELIN;
+		
+		STR = 15;
+		
+		MIN = 2;
+		MAX = 15;
+		
 		quantity = number;
 	}
 	

@@ -55,14 +55,7 @@ public class PotionOfLiquidFlame extends Potion {
 	
 	@Override
 	protected void moistenArrow(Arrow arrow) {
-		int quantity = arrow.quantity();
-		
-		if(quantity <= 10){
-			arrow.detach( curUser.belongings.backpack );
-		} else {
-			arrow.quantity(arrow.quantity() - 10);
-			quantity = 10;
-		}
+		int quantity = detachMoistenItems(arrow,10);
 		
 		moistenEffect();
 		

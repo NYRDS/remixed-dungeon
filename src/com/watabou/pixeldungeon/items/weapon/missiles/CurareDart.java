@@ -29,23 +29,21 @@ import com.watabou.utils.Random;
 public class CurareDart extends MissileWeapon {
 
 	public static final float DURATION	= 3f;
-	
-	{
-		name = Game.getVar(R.string.CurareDart_Name);
-		image = ItemSpriteSheet.CURARE_DART;
-		
-		STR = 14;
-		
-		MIN = 1;
-		MAX = 3;
-	}
-	
+
 	public CurareDart() {
 		this( 1 );
 	}
 	
 	public CurareDart( int number ) {
 		super();
+		
+		image = ItemSpriteSheet.CURARE_DART;
+		
+		STR = 14;
+		
+		MIN = 1;
+		MAX = 3;
+		
 		quantity = number;
 	}
 	

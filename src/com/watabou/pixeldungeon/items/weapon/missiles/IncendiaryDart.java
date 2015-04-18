@@ -34,22 +34,20 @@ import com.watabou.utils.Random;
 
 public class IncendiaryDart extends MissileWeapon {
 
-	{
-		name = Game.getVar(R.string.IncendiaryDart_Name);
-		image = ItemSpriteSheet.INCENDIARY_DART;
-		
-		STR = 12;
-		
-		MIN = 1;
-		MAX = 2;
-	}
-	
 	public IncendiaryDart() {
 		this( 1 );
 	}
 	
 	public IncendiaryDart( int number ) {
 		super();
+		
+		image = ItemSpriteSheet.INCENDIARY_DART;
+		
+		STR = 12;
+		
+		MIN = 1;
+		MAX = 2;
+		
 		quantity = number;
 	}
 	

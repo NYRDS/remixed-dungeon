@@ -64,19 +64,12 @@ public class PotionOfInvisibility extends Potion {
 	
 	@Override
 	protected void moistenScroll(Scroll scroll) {
-		int quantity = scroll.quantity();
-		
-		if(quantity <= 3){
-			scroll.detach( curUser.belongings.backpack );
-		} else {
-			scroll.quantity(scroll.quantity() - 3);
-			quantity = 3;
-		}
+		int quantity = detachMoistenItems(scroll,3);
 		
 		moistenEffect();
 		
 		BlankScroll moistenScroll = new BlankScroll();
-		moistenScroll.quantity(3);
+		moistenScroll.quantity(quantity);
 		curUser.collect(moistenScroll);
 	}
 }

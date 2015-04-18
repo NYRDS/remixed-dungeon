@@ -24,6 +24,9 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.ParalysisArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.PoisonArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfToxicGas extends Potion {
@@ -50,5 +53,15 @@ public class PotionOfToxicGas extends Potion {
 	@Override
 	public int price() {
 		return isKnown() ? 40 * quantity : super.price();
+	}
+	
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		int quantity = detachMoistenItems(arrow,10);
+		
+		moistenEffect();
+		
+		PoisonArrow moistenArrows = new PoisonArrow(quantity);
+		curUser.collect(moistenArrows);
 	}
 }

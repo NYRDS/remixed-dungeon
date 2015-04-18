@@ -15,6 +15,8 @@ public abstract class Arrow extends MissileWeapon {
 	protected double baseMax = 1;
 	protected double baseMin = 1;
 	
+	protected Bow firedFrom;
+	
 	public Arrow() {
 		this( 1 );
 	}
@@ -27,22 +29,22 @@ public abstract class Arrow extends MissileWeapon {
 	
 	@Override
 	public Item random() {
-		quantity = Random.Int( 5, 15 );
+		quantity = Random.Int( 15, 25 );
 		return this;
 	}
 	
 	@Override
 	protected void onThrow( int cell ) {
 		if (curUser.bowEquiped()) {
-			Bow bow = (Bow)curUser.belongings.weapon;
+			firedFrom= (Bow)curUser.belongings.weapon;
+
+			MAX = (int) (baseMax * firedFrom.dmgFactor());
+			MIN = (int) (baseMin * firedFrom.dmgFactor());
+			ACU = (float) (baseAcu * firedFrom.acuFactor());
+			DLY = (float) (baseDly * firedFrom.dlyFactor());
 			
-			MAX = (int) (baseMax * bow.dmgFactor());
-			MIN = (int) (baseMin * bow.dmgFactor());
-			ACU = (float) (baseAcu * bow.acuFactor());
-			DLY = (float) (baseDly * bow.dlyFactor());
-			
-			bow.usedForHit();
-			bow.useArrowType(this);
+			firedFrom.usedForHit();
+			firedFrom.useArrowType(this);
 			
 			super.onThrow(cell);
 		} else {
