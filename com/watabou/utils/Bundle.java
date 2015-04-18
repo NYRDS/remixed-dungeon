@@ -45,12 +45,14 @@ public class Bundle {
 		this( new JSONObject() );
 	}
 	
-	public String toString() {
-		return data.toString();
-	}
 	
 	private Bundle( JSONObject data ) {
 		this.data = data;
+	}
+	
+	@Override
+	public String toString() {
+		return data.toString();
 	}
 	
 	public boolean isNull() {

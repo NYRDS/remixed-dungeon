@@ -40,7 +40,7 @@ public abstract class GameWithGoogleIap extends Game {
 			return;
 		}
 
-		String base64EncodedPublicKey = "put key here";
+		String base64EncodedPublicKey = "put your key here";
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
 		Log.d("GAME", "Creating IAB helper.");

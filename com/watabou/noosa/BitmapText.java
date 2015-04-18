@@ -338,14 +338,14 @@ public class BitmapText extends Visual {
 			autoUppercase = chars.equals( LATIN_UPPER );
 			int length    = chars.length();
 			
-			int b_width  = bitmap.getWidth();
-			int b_height = bitmap.getHeight();
+			int bWidth  = bitmap.getWidth();
+			int bHeight = bitmap.getHeight();
 			
 			int charsProcessed = 0;
 			int lineTop        = 0;
 			int lineBottom     = 0;
 			
-			while(lineBottom<b_height){
+			while(lineBottom<bHeight){
 				lineBottom = findNextEmptyLine(bitmap, lineTop, color);
 				
 				int charColumn = 0;
@@ -360,10 +360,10 @@ public class BitmapText extends Visual {
 					}
 
 					add( chars.charAt(charsProcessed), 
-						new RectF( (float)(charColumn)/b_width, 
-								   (float)lineTop/b_height, 
-								   (float)(charBorder)/b_width, 
-								   (float)lineBottom/b_height ) );
+						new RectF( (float)(charColumn)/bWidth, 
+								   (float)lineTop/bHeight, 
+								   (float)(charBorder)/bWidth, 
+								   (float)lineBottom/bHeight ) );
 					++charsProcessed;
 					charColumn = charBorder;
 				}

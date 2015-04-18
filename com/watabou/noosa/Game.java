@@ -40,7 +40,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
 import android.os.Vibrator;
-import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -63,11 +62,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	private static Context context;
 
 	// Actual size of the screen
-	public static int width;
-	public static int height;
-
-	// Density: mdpi=1, hdpi=1.5, xhdpi=2...
-	public static float density = 1;
+	private static int width;
+	private static int height;
 
 	public static String version;
 	public static int versionCode;
@@ -167,10 +163,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 		BitmapCache.context = TextureCache.context = instance(this);
 
-		DisplayMetrics m = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(m);
-		density = m.density;
-
 		try {
 			version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
 		} catch (NameNotFoundException e) {
@@ -269,7 +261,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	@Override
 	public void onDrawFrame(GL10 gl) {
 
-		if (width == 0 || height == 0) {
+		if (width() == 0 || height() == 0) {
 			return;
 		}
 
@@ -281,7 +273,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 		step();
 
 		NoosaScript.get().resetCamera();
-		GLES20.glScissor(0, 0, width, height);
+		GLES20.glScissor(0, 0, width(), height());
 		GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 		draw();
 	}
@@ -291,8 +283,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 		GLES20.glViewport(0, 0, width, height);
 
-		Game.width = width;
-		Game.height = height;
+		Game.width(width);
+		Game.height(height);
 
 	}
 
@@ -412,5 +404,21 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 	public boolean iapReady() {
 		return false;
+	}
+
+	public static int width() {
+		return width;
+	}
+
+	public static void width(int width) {
+		Game.width = width;
+	}
+
+	public static int height() {
+		return height;
+	}
+
+	public static void height(int height) {
+		Game.height = height;
 	}
 }
