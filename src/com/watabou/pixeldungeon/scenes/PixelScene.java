@@ -131,7 +131,7 @@ public class PixelScene extends Scene {
 	public static void chooseFont( float size ) {
 		font = font25x;
 		float userScale = Math.min(PixelDungeon.fontScale() * 0.1f, 0.1f);
-		scale = 0.04f * size * (1 + userScale);
+		scale = 0.05f * size * (1 + userScale);
 	}
 	
 	public static BitmapText createText( float size ) {
