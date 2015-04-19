@@ -36,6 +36,9 @@ public class WndSettings extends Window {
 			.getVar(R.string.WndSettings_ZoomOut);
 	private static final String TXT_ZOOM_DEFAULT = Game
 			.getVar(R.string.WndSettings_ZoomDef);
+	
+	private static final String TXT_TEXT_SCALE_DEFAULT = Game
+			.getVar(R.string.WndSettings_TextScaleDefault);
 
 	private static final String TXT_SCALE_UP = Game
 			.getVar(R.string.WndSettings_ScaleUp);
@@ -282,7 +285,7 @@ public class WndSettings extends Window {
 		};
 		add(btnScalePlus.setRect(WIDTH - w, y, w, BTN_HEIGHT));
 		
-		btnStdFontScale = new RedButton(TXT_ZOOM_DEFAULT) {
+		btnStdFontScale = new RedButton(TXT_TEXT_SCALE_DEFAULT) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.fontScale(0);

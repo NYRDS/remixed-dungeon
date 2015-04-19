@@ -2,7 +2,7 @@
 <resources>
     
     <!-- STRINGS OF Bow CLASS -->
-    <string name="Bow_Info1">Лук это оружие дальнего боя, в ближнем бою почти бесполезное (для всех кроме эльфов)\n</string>
+    <string name="Bow_Info1">Лук это оружие дальнего боя, в ближнем бою почти бесполезное (для всех кроме эльфов).\n\n</string>
     
     
 	<!-- STRINGS OF WoodenBow CLASS -->

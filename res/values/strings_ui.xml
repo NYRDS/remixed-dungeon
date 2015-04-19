@@ -50,6 +50,7 @@
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndSettings_ZoomDef">Default Zoom</string>
+    <string name="WndSettings_TextScaleDefault">Default font</string>
     <string name="WndSettings_ScaleUp">Scale up UI</string>
     <string name="WndSettings_Immersive">Immersive mode</string>
     <string name="WndSettings_Music">Music</string>

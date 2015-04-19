@@ -68,7 +68,7 @@ public class TitleScene extends PixelScene {
 		add(title);
 
 		title.x = (w - title.width()) / 2;
-		title.y = (h - height) / 2;
+		title.y = (title.height() * 0.3f) / 2;
 
 		placeTorch(title.x + 18, title.y + 20);
 		placeTorch(title.x + title.width - 18, title.y + 20);
