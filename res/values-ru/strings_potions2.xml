@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- PACKAGE /items/potions additional strings-->
+    
+    <string name="Potion_ACMoisten">СМАЗАТЬ</string>
+    <string name="Potion_SelectForMoisten">Что смазываем?</string>
+    <string name="Potion_MoistenUseless">Похоже это зелье потрачено впустую.</string>
+    
+    <string name="Potion_RuneDissaperaed">Руна исчезла с предмета %s.</string>
+    <string name="Potion_ArrowMoisten">Стрелы успешно смазаны.</string>
+    <string name="Potion_ItemFliesAway">Предмет %s  вырвался из рук и улетел. </string>
+    
+</resources>

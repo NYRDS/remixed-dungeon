@@ -17,11 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfLevitation extends Potion {
@@ -41,5 +43,17 @@ public class PotionOfLevitation extends Potion {
 	@Override
 	public int price() {
 		return isKnown() ? 35 * quantity : super.price();
+	}
+	
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		detachMoistenItems(arrow, 10);
+		GLog.i(TXT_ITEM_FLIES_AWAY , arrow.name());
+	}
+	
+	@Override
+	protected void moistenScroll(Scroll scroll) {
+		detachMoistenItems(scroll,3);
+		GLog.i(TXT_ITEM_FLIES_AWAY , scroll.name());
 	}
 }

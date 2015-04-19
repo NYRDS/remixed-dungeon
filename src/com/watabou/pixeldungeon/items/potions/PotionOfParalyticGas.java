@@ -53,9 +53,7 @@ public class PotionOfParalyticGas extends Potion {
 	
 	@Override
 	protected void moistenArrow(Arrow arrow) {
-		int quantity = detachMoistenItems(arrow,10);
-		
-		moistenEffect();
+		int quantity = reallyMoistArrows(arrow);
 		
 		ParalysisArrow moistenArrows = new ParalysisArrow(quantity);
 		curUser.collect(moistenArrows);

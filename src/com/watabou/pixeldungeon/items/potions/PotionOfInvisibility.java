@@ -17,19 +17,17 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
-import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
-import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfInvisibility extends Potion {
@@ -65,6 +63,8 @@ public class PotionOfInvisibility extends Potion {
 	@Override
 	protected void moistenScroll(Scroll scroll) {
 		int quantity = detachMoistenItems(scroll,3);
+		
+		GLog.i(TXT_RUNE_DISAPPEARED, scroll.name());
 		
 		moistenEffect();
 		

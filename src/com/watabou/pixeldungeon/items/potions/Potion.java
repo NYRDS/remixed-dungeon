@@ -56,7 +56,13 @@ public class Potion extends Item {
 	private static final String TXT_NO		   		= Game.getVar(R.string.Potion_No);
 	private static final String TXT_R_U_SURE_DRINK     = Game.getVar(R.string.Potion_SureDrink);
 	private static final String TXT_R_U_SURE_THROW     = Game.getVar(R.string.Potion_SureThrow);
+	
 	private static final String TXT_SELECT_FOR_MOISTEN = Game.getVar(R.string.Potion_SelectForMoisten);
+	private static final String TXT_MOISTEN_USELESS    = Game.getVar(R.string.Potion_MoistenUseless);
+	
+	protected static final String TXT_RUNE_DISAPPEARED = Game.getVar(R.string.Potion_RuneDissaperaed);
+	protected static final String TXT_ARROW_MOISTEN    = Game.getVar(R.string.Potion_ArrowMoisten);
+	protected static final String TXT_ITEM_FLIES_AWAY  = Game.getVar(R.string.Potion_ItemFliesAway);
 	
 	private static final float TIME_TO_DRINK = 1f;
 	private static final float TIME_TO_MOISTEN = 1f;
@@ -348,10 +354,19 @@ public class Potion extends Item {
 		return quantity;
 	}
 	
+	protected int reallyMoistArrows(Arrow arrow) {
+		int quantity = detachMoistenItems(arrow,10);
+		moistenEffect();
+		GLog.i(TXT_ARROW_MOISTEN);
+		return quantity;
+	}
+	
 	protected void moistenScroll(Scroll scroll) {
+		GLog.i(TXT_MOISTEN_USELESS);
 	}
 	
 	protected void moistenArrow(Arrow arrow) {
+		GLog.i(TXT_MOISTEN_USELESS);
 	}
 	
 	protected void moistenEffect() {

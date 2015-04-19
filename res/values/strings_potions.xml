@@ -6,8 +6,6 @@
     <string name="Potion_Name">%s potion</string>
     <string name="Potion_Info">This flask contains a swirling %s liquid. Who knows what it will do when drunk or thrown?</string>
     <string name="Potion_ACDrink">DRINK</string>
-    <string name="Potion_ACMoisten">Moisten</string>
-    <string name="Potion_SelectForMoisten">Select item to moist</string>
     <string name="Potion_Harmfull">Harmful potion!</string>
     <string name="Potion_Beneficial">Beneficial potion</string>
     <string name="Potion_Yes">Yes, I know what I\'m doing</string>

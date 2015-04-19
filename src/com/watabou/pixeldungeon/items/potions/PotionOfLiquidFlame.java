@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfLiquidFlame extends Potion {
 
@@ -55,9 +56,7 @@ public class PotionOfLiquidFlame extends Potion {
 	
 	@Override
 	protected void moistenArrow(Arrow arrow) {
-		int quantity = detachMoistenItems(arrow,10);
-		
-		moistenEffect();
+		int quantity = reallyMoistArrows(arrow);
 		
 		FireArrow moistenArrows = new FireArrow(quantity);
 		curUser.collect(moistenArrows);

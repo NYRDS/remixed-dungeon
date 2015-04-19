@@ -57,9 +57,7 @@ public class PotionOfToxicGas extends Potion {
 	
 	@Override
 	protected void moistenArrow(Arrow arrow) {
-		int quantity = detachMoistenItems(arrow,10);
-		
-		moistenEffect();
+		int quantity = reallyMoistArrows(arrow);
 		
 		PoisonArrow moistenArrows = new PoisonArrow(quantity);
 		curUser.collect(moistenArrows);

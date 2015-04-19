@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- PACKAGE /items/potions additional strings-->
+    
+    <string name="Potion_ACMoisten">MOISTEN</string>
+    <string name="Potion_SelectForMoisten">Select item to moist</string>
+    <string name="Potion_MoistenUseless">Looks like you just wasted this potion.</string>
+    
+    <string name="Potion_RuneDissaperaed">Rune disappeared from %s.</string>
+    <string name="Potion_ArrowMoisten">You succesifully moist arrows.</string>
+    <string name="Potion_ItemFliesAway">%s just flies away from your hands.</string>
+    
+</resources>
