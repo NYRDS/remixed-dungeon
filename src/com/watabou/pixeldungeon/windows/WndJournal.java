@@ -25,6 +25,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -33,8 +34,11 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndJournal extends Window {
 	
-	private static final int WIDTH	= 112;
-	private static final int HEIGHT	= 160;
+	private static final int WIDTH_P	= 112;
+	private static final int HEIGHT_P	= 160;
+	
+	private static final int WIDTH_L	= 128;
+	private static final int HEIGHT_L	= 128;
 	
 	private static final int ITEM_HEIGHT	= 18;
 	
@@ -46,6 +50,17 @@ public class WndJournal extends Window {
 	public WndJournal() {
 		
 		super();
+		
+		int WIDTH, HEIGHT;
+		
+		if(PixelDungeon.landscape()){
+			WIDTH = WIDTH_L;
+			HEIGHT = HEIGHT_L;
+		} else {
+			WIDTH = WIDTH_P;
+			HEIGHT = HEIGHT_P;
+		}
+		
 		resize( WIDTH, HEIGHT );
 		
 		txtTitle = PixelScene.createText( TXT_TITLE, 9 );
