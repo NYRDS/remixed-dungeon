@@ -18,6 +18,8 @@ public class CommonArrow extends Arrow {
 		baseDly = 0.75;
 		
 		image = ItemSpriteSheet.ARROW_COMMON;
+		
+		updateStatsForInfo();
 	}
 	
 	@Override

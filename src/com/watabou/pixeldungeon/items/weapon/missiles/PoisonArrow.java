@@ -22,6 +22,8 @@ public class PoisonArrow extends Arrow {
 		baseDly = 0.75;
 		
 		image = ItemSpriteSheet.ARROW_POISON;
+		
+		updateStatsForInfo();
 	}
 	
 	@Override

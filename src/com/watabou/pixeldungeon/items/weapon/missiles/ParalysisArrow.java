@@ -23,6 +23,8 @@ public class ParalysisArrow extends Arrow {
 		baseDly = 0.75;
 		
 		image = ItemSpriteSheet.ARROW_PARALYSIS;
+		
+		updateStatsForInfo();
 	}
 	
 	@Override

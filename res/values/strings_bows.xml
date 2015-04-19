@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    	<!-- STRINGS OF WoodenBow CLASS -->
+    
+    <!-- STRINGS OF Bow CLASS -->
+    <string name="Bow_Info1">Bow is a ranged weapon, almost useless (for everyone except elves) at short distance\n</string>
+    
+    <!-- STRINGS OF WoodenBow CLASS -->
     <string name="WoodenBow_Name">wooden bow</string>
     <string name="WoodenBow_Info">This simple wooden bow might prove to be useful, once you find some arrows.</string>
     <string name="WoodenBow_Gender">masculine</string>

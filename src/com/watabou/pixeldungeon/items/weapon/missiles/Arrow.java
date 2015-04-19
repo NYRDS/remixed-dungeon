@@ -1,10 +1,14 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 
@@ -27,6 +31,13 @@ public abstract class Arrow extends MissileWeapon {
 	
 	}
 	
+	protected void updateStatsForInfo() {
+		MAX = (int) baseMax;
+		MIN = (int) baseMin;
+		ACU = (float) baseAcu;
+		DLY = (float) baseDly;
+	}
+	
 	@Override
 	public Item random() {
 		quantity = Random.Int( 15, 25 );
@@ -36,12 +47,28 @@ public abstract class Arrow extends MissileWeapon {
 	@Override
 	protected void onThrow( int cell ) {
 		if (curUser.bowEquiped()) {
-			firedFrom= (Bow)curUser.belongings.weapon;
-
+			
+			if(Level.adjacent(curUser.pos, cell)) {
+				miss( cell );
+				return;
+			}
+			firedFrom = (Bow)curUser.belongings.weapon;
+			
 			MAX = (int) (baseMax * firedFrom.dmgFactor());
 			MIN = (int) (baseMin * firedFrom.dmgFactor());
 			ACU = (float) (baseAcu * firedFrom.acuFactor());
 			DLY = (float) (baseDly * firedFrom.dlyFactor());
+			
+			float sDelta = curUser.STR - firedFrom.STR;
+			
+			if (sDelta < 0) {
+				DLY += sDelta * 0.5;
+				ACU -= sDelta * 0.1;
+			}
+			
+			if (sDelta > 2) {
+				MAX += MIN;
+			}
 			
 			firedFrom.usedForHit();
 			firedFrom.useArrowType(this);
@@ -51,7 +78,7 @@ public abstract class Arrow extends MissileWeapon {
 			miss( cell );
 		}
 	}
-	
+		
 	@Override
 	public Item burn(int cell) {
 		return null;

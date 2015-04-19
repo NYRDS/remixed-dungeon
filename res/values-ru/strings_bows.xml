@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-		<!-- STRINGS OF WoodenBow CLASS -->
+    
+    <!-- STRINGS OF Bow CLASS -->
+    <string name="Bow_Info1">Лук это оружие дальнего боя, в ближнем бою почти бесполезное (для всех кроме эльфов)\n</string>
+    
+    
+	<!-- STRINGS OF WoodenBow CLASS -->
     <string name="WoodenBow_Name">деревянный лук</string>
     <string name="WoodenBow_Info">Не смотря на кажущуюся простоту, этот лук может оказаться полезным. Если у тебя есть стрелы.</string>
     <string name="WoodenBow_Gender">masculine</string>

@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 
 public abstract class Bow extends MeleeWeapon {
@@ -20,7 +22,7 @@ public abstract class Bow extends MeleeWeapon {
 	
 	@Override
 	public String info() {
-		return desc();
+		return Game.getVar(R.string.Bow_Info1) + desc();
 	}
 	
 	@Override
