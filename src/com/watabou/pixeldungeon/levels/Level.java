@@ -219,7 +219,7 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(Generator.random(Generator.Category.RANGED));
 			}
 			
-			if( Random.Int(3) == 0) 
+			if( Random.Int(2) == 0) 
 			{
 				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
 			}

@@ -192,14 +192,19 @@ public class Generator {
 		Category.SEED.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 0 };
 		
 		Category.RANGED.classes = new Class<?>[] {
-				WoodenBow.class
+				WoodenBow.class,
+				CompoundBow.class,
+				RubyBow.class
 		};
-		Category.RANGED.probs = new float[]{ 1 };
+		Category.RANGED.probs = new float[]{ 5, 3, 1 };
 		
 		Category.BULLETS.classes = new Class<?>[] {
-				CommonArrow.class
+				CommonArrow.class,
+				FireArrow.class,
+				PoisonArrow.class,
+				ParalysisArrow.class,
 		};
-		Category.BULLETS.probs = new float[]{ 1 };
+		Category.BULLETS.probs = new float[]{ 10, 2, 2, 2 };
 		
 	}
 	
