@@ -25,20 +25,15 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
-import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
-import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -95,20 +90,7 @@ public enum HeroClass {
 	
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
-		new Ration().identify().collect(hero);
-		
-		new WoodenBow().identify().collect(hero);
-		new CommonArrow(100).collect(hero);
-		
-		hero.collect(new ScrollOfMirrorImage());
-		hero.collect(new ScrollOfMirrorImage());
-		hero.collect(new ScrollOfMirrorImage());
-		hero.collect(new ScrollOfMirrorImage());
-		hero.collect(new ScrollOfMirrorImage());
-		
-		hero.collect(new PotionOfInvisibility().identify());
-		
-		hero.collect(new PotionOfLiquidFlame().identify());
+		hero.collect(new Ration());
 		
 		QuickSlot.cleanStorage();
 	}
@@ -131,7 +113,7 @@ public enum HeroClass {
 		hero.STR = hero.STR + 1;
 		
 		(hero.belongings.weapon = new ShortSword()).identify();
-		new Dart( 8 ).identify().collect(hero);
+		hero.collect(new Dart( 8 ).identify());
 		
 		QuickSlot.selectItem(Dart.class,0);
 		
@@ -142,7 +124,7 @@ public enum HeroClass {
 		(hero.belongings.weapon = new Knuckles()).identify();
 		
 		WandOfMagicMissile wand = new WandOfMagicMissile();
-		wand.identify().collect(hero);
+		hero.collect(wand.identify());
 		
 		QuickSlot.selectItem(wand,0);
 		
@@ -152,7 +134,8 @@ public enum HeroClass {
 	private static void initRogue( Hero hero ) {
 		(hero.belongings.weapon = new Dagger()).identify();
 		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
-		new Dart( 8 ).identify().collect(hero);
+		
+		hero.collect(new Dart( 8 ).identify());
 		
 		hero.belongings.ring1.activate( hero );
 		
