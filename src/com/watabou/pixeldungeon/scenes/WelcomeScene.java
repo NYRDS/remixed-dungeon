@@ -37,7 +37,6 @@ public class WelcomeScene extends PixelScene {
 
         title.maxWidth = pw;
         title.measure();
-       // title.hardlight(Window.SHPX_COLOR);
 
         title.x = align( (w - title.width()) / 2 );
         title.y = align( 8 );
@@ -75,20 +74,6 @@ public class WelcomeScene extends PixelScene {
                 Game.switchScene(TitleScene.class);
             }
         };
-
-        /*
-        okay.setRect(text.x, text.y + text.height() + 5, 55, 18);
-        add(okay);
-
-        RedButton changes = new RedButton("Changes") {
-            @Override
-            protected void onClick() {
-                parent.add(new WndChanges());
-            }
-        };
-
-        changes.setRect(text.x + 65, text.y + text.height() + 5, 55, 18);
-        add(changes);*/
 
         okay.setRect((w - pw) / 2, h - 22, pw, 18);
         add(okay);
