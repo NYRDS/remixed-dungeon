@@ -7,10 +7,10 @@
     
     <string name="WndDonate_donate">faire un don: </string>
     <string name="WndDonate_notConnected">pas de connection :(</string>
-    <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - Gratuitement à tout le monde et sera toujours \ n \ nToutefois, vous pouvez nous aider rendre le jeu encore mieux plus \ n \ nEn à nos remerciements les plus sincères vous \ 'll obtenir quelques améliorations cosmétiques..</string>
+    <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - Gratuitement à tout le monde et sera toujours \n\nToutefois, vous pouvez nous aider rendre le jeu encore mieux plus \n\nEn à nos remerciements les plus sincères vous \'ll obtenir quelques améliorations cosmétiques..</string>
     
     <string name="WndDonate_silverDonate">don en argent</string>
-    <string name="WndDonate_goldDonate">don d'or</string>
+    <string name="WndDonate_goldDonate">don d\'or</string>
     <string name="WndDonate_rubyDonate">ruby don</string>
     
     <string name="WndDonate_silverDonateText">Tout don aidera le développement du projet</string>
@@ -25,9 +25,9 @@
     
     <string name="WndPremiumSettings_chrome">gui</string>
     <string name="WndPremiumSettings_status">matérielle de bar</string>
-    <string name="WndPremiumSettings_toolbar">barre d'outils</string>
+    <string name="WndPremiumSettings_toolbar">barre d\'outils</string>
     
-    <string name="WndPremiumSettings_notAvailbale">Cette option ne est disponible pour l'instant</string>
+    <string name="WndPremiumSettings_notAvailbale">Cette option ne est disponible pour l\'instant</string>
     
     <!-- STRINGS OF DonateButton CLASS -->
     <string name="DonateButton_pleaseDonate">se il vous plaît envisager de faire don</string>
