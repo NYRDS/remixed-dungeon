@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    	<!-- STRINGS OF WoodenBow CLASS -->
+    <string name="WoodenBow_Name">wooden bow</string>
+    <string name="WoodenBow_Info">This simple wooden bow might prove to be useful, once you find some arrows.</string>
+    <string name="WoodenBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF CompoundBow CLASS -->
+    <string name="CompoundBow_Name">compound bow</string>
+    <string name="CompoundBow_Info">Arrows launched from compond bow deal great amount of damage and have improved accuraccy at cost of some speed.</string>
+    <string name="CompoundBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF RubyBow CLASS -->
+    <string name="RubyBow_Name">ruby bow</string>
+    <string name="RubyBow_Info">Only greatest archers can use ruby bow. Almost each arrow pierces through the enemy, leaving a huge hole in his body. But how much force is needed to pull the bowstring.</string>
+    <string name="RubyBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF Quiver CLASS -->
+    <string name="Quiver_Name">quiver</string>
+    <string name="Quiver_Info"></string>
+    <string name="Quiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF FireQuiver CLASS -->
+    <string name="FireQuiver_Name">fire quiver</string>
+    <string name="FireQuiver_Info"></string>
+    <string name="FireQuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF PoisonQuiver CLASS -->
+    <string name="PoisonQuiver_Name">poison quiver</string>
+    <string name="PoisonQuiver_Info"></string>
+    <string name="Poisonuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF ParalysisQuiver CLASS -->
+    <string name="ParalysisQuiver_Name">paralyzing quiver</string>
+    <string name="ParalysisQuiver_Info"></string>
+    <string name="ParalysisQuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF CommonArrow CLASS -->
+    <string name="CommonArrow_Name">arrow</string>
+    <string name="CommonArrow_Info">Common wooden arrow with iron head.</string>
+    <string name="CommonArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF FireArrow CLASS -->
+    <string name="FireArrow_Name">fire arrow</string>
+    <string name="FireArrow_Info">This arrow looks just like common, except warm red light radiating from its head.</string>
+    <string name="FireArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF PoisonArrow CLASS -->
+    <string name="PoisonArrow_Name">poison arrow</string>
+    <string name="PoisonArrow_Info">Deadly poison drop shine on this arrow head.</string>
+    <string name="PoisonArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF ParalysisArrow CLASS -->
+    <string name="ParalysisArrow_Name">paralyzing arrow</string>
+    <string name="ParalysisArrow_Info">This arrow spread very weak but familiar curare smell.</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+		<!-- STRINGS OF WoodenBow CLASS -->
+    <string name="WoodenBow_Name">деревянный лук</string>
+    <string name="WoodenBow_Info">Не смотря на кажущуюся простоту, этот лук может оказаться полезным. Если у тебя есть стрелы.</string>
+    <string name="WoodenBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF CompoundBow CLASS -->
+    <string name="CompoundBow_Name">блочный лук</string>
+    <string name="CompoundBow_Info">Стрелы выпущенные из блочного лука с легкостью находят цель и наносят серьёзный урон, однако он не так быстр как простой лук</string>
+    <string name="CompoundBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF RubyBow CLASS -->
+    <string name="RubyBow_Name">рубиновый лук</string>
+    <string name="RubyBow_Info">Только величайшие лучники могут использовать рубиновый лук. Почти каждая выпущеная из него стрела пронзает врага насквозь, оставляя огромные дыры в его плоти. Но как же непросто натянуть тетиву.</string>
+    <string name="RubyBow_Gender">masculine</string>
+	
+	<!-- STRINGS OF Quiver CLASS -->
+    <string name="Quiver_Name">колчан</string>
+    <string name="Quiver_Info"></string>
+    <string name="Quiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF FireQuiver CLASS -->
+    <string name="FireQuiver_Name">огненый колчан</string>
+    <string name="FireQuiver_Info"></string>
+    <string name="FireQuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF PoisonQuiver CLASS -->
+    <string name="PoisonQuiver_Name">отравленный колчан</string>
+    <string name="PoisonQuiver_Info"></string>
+    <string name="Poisonuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF ParalysisQuiver CLASS -->
+    <string name="ParalysisQuiver_Name">парализующий колчан</string>
+    <string name="ParalysisQuiver_Info"></string>
+    <string name="ParalysisQuiver_Gender">masculine</string>
+	
+	<!-- STRINGS OF CommonArrow CLASS -->
+    <string name="CommonArrow_Name">стрела</string>
+    <string name="CommonArrow_Info">Обычная деревянная стрела с железным наконечником.</string>
+    <string name="CommonArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF FireArrow CLASS -->
+    <string name="FireArrow_Name">огненая стрела</string>
+    <string name="FireArrow_Info">Эта стрела выглядит обычной, лишь наконечник испускает теплый красноватый свет.</string>
+    <string name="FireArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF PoisonArrow CLASS -->
+    <string name="PoisonArrow_Name">ядовитая стрела</string>
+    <string name="PoisonArrow_Info">Капля смертельного яда поблескивает на наконечнике этой стрелы.</string>
+    <string name="PoisonArrow_Gender">feminine</string>
+	
+	<!-- STRINGS OF ParalysisArrow CLASS -->
+    <string name="ParalysisArrow_Name">парализующая стрела</string>
+    <string name="ParalysisArrow_Info">Эта стрела испускает лёгкий запах кураре.</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
+</resources>

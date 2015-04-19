@@ -22,6 +22,6 @@ public class WoodenBow extends Bow {
 	
 	@Override
 	public double dmgFactor() {
-		return 1 + level * 0.3;
+		return 1 + level * 0.25;
 	}
 }
