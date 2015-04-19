@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">parchemin \"%s\"</string>
+  <string name="Scroll_Info">Le parchemin est couvert d\'écritures indéchiffrables, et porte le titre de rune %s. Qui sait ce que ça fera une fois lu à voix haute ?</string>
+  <string name="Scroll_ACRead">LIRE</string>
+  <string name="Scroll_Blinded">Vous ne pouvez pas lire un parchemin en étant aveugle </string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Choisissez un objet</string>
+  <string name="InventoryScroll_Warning">Voulez vous vraiment annuler l\'effet de ce parchemin ? Il sera consumé de toutes façons.</string>
+  <string name="InventoryScroll_Yes">Oui, je suis affirmatif</string>
+  <string name="InventoryScroll_No">Non, j\'ai changé d\'avis</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Parchemin blanc</string>
+  <string name="BlankScroll_Info">Juste un parchemin blanc</string>
+  <string name="BlankScroll_ReallyBlank">Le parchemin est vraiment blanc</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Parchemin de défi</string>
+  <string name="ScrollOfChallenge_Info">Quand il est lu à voix haute, ce parchemin va pousser un rugissement de défi qui réveillera tous les monstres et les attirer vers le lecteur.</string>
+  <string name="ScrollOfChallenge_Info1">Le parchemin pousse un rugissement de défi sur tout l\'étage !</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Parchemin d\'identification</string>
+  <string name="ScrollOfIdentify_Info">Révèle en permanence tous les secrets d\'un objet.</string>
+  <string name="ScrollOfIdentify_InvTitle">Choisissez un objet à identifier</string>
+  <string name="ScrollOfIdentify_Info1">C\'est %s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Parchemin de berceuse</string>
+  <string name="ScrollOfLullaby_Info">Une mélodie apaisante endormira toutes les créatures de votre champ de vision, vous donnant l\'opportunité de fuir ou de faire une attaque surprise.</string>
+  <string name="ScrollOfLullaby_Info1">Le parchemin fredonne une mélodie apaisante.</string>
+  <string name="ScrollOfLullaby_Info2">Le parchemin fredonne une mélodie apaisante et le %s s\'endort !</string>
+  <string name="ScrollOfLullaby_Info3">Le parchemin fredonne une douce mélodie et les monstres s\'endorment !</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Parchemin de vision magique</string>
+  <string name="ScrollOfMagicMapping_Info">En lisant ce parchemin, une image d\'une clarté cristalline se gravera dans votre mémoire, vous alertant de la disposition précise des pièces de l\'étage et révélant tous ses secrets. La localisation des objets et des créatures restera inconnue.</string>
+  <string name="ScrollOfMagicMapping_Layout">Vous connaissez maintenant tout de l\'étage.</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Parchemin d\'images miroir</string>
+  <string name="ScrollOfMirrorImage_Info">L\'incantation sur ce parchemin créera des jumeaux illusoires du lecteurs, qui pourchasseront ses ennemis.</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Parchemin de rafale psionique</string>
+  <string name="ScrollOfPsionicBlast_Info">Le parchemin contient une énergie destructrice, qui peut être canalisée psioniquement pour infliger des dommages énormes aux créatures dans le champ de vision. Le flash qui accompagne la rafale aveuglera temporairement tout le monde dans la zone d\'effet, le lecteur compris.</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Parchemin de recharge</string>
+  <string name="ScrollOfRecharging_Info">Le pouvoir magique contenu dans ce parchemin va , une fois relâché, recharger complètement tous les sceptres du lecteur.</string>
+  <string name="ScrollOfRecharging_Info1a">une décharge d\'énergie parcourt vos affaire, rechargeant votre sceptre</string>
+  <string name="ScrollOfRecharging_Info1b">une décharge d\'énergie parcourt vos affaires, rechargeant vos sceptres</string>
+  <string name="ScrollOfRecharging_Info2">une décharge d\'énergie parcourt vos affaires, mais rien ne se passe</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Parchemin de démystification </string>
+  <string name="ScrollOfRemoveCurse_Info">L\'incantation de ce parchemin va extirper instantanément toutes les malédictions qui pourraient empêcher le lecteur d\'enlever certains objets maudits.</string>
+  <string name="ScrollOfRemoveCurse_Proced">Vos affaires brillent d\'une lumière purificatrice, et une énergie maléfique se disperse.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Vos affaires brillent d\'une lumière purificatrice, mais rien ne se passe.</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">parchemin de téléportation</string>
+  <string name="ScrollOfTeleportation_Info">Le sort de ce parchemin téléportera instantanément le lecteur à un endroit aléatoire de l\'étage. Il peut être utilisé pour s\'échapper d\'une situation périlleuse, mais le lecteur malchanceux pourrait se retrouver dans un endroit encore plus dangereux.</string>
+  <string name="ScrollOfTeleportation_Teleport">Vous êtes téléporté en un clin d\'oeil.</string>
+  <string name="ScrollOfTeleportation_NoTeleport">La forte aura magique de cet endroit empêche la téléportation !</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Parchemin de terreur</string>
+  <string name="ScrollOfTerror_Info">Un flash de lumière rouge va submerger de terreur toutes les créatures du champ de vision, qui fuiront. Attaquer un de ces fuyards dissipera l\'effet.</string>
+  <string name="ScrollOfTerror_Info1">Le parchemin émet un flash brillant de lumière rouge</string>
+  <string name="ScrollOfTerror_Info2">Le parchemin émet un flash brillant de lumière rouge et le %s s\'enfuit !</string>
+  <string name="ScrollOfTerror_Info3">Le parchemin émet un flash brillant de lumière rouge et les monstres s\'enfuient !</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Parchemin d\'amélioration</string>
+  <string name="ScrollOfUpgrade_Info">Le parchemin améliorera un objet, augmentant sa qualité. Un sceptre sera plus puissant et aura plus de charges; une arme infligera plus de dommages et atteindra plus souvent sa cible; une armure résistera à plus de coups; l\'effet dune bague s\'intensifiera sur son porteur. Les armes et les armures vont requérir aussi moins de force, et les éventuelles malédictions de l\'objet seront retirées.</string>
+  <string name="ScrollOfUpgrade_InvTitle">Choisissez un objet à améliorer</string>
+  <string name="ScrollOfUpgrade_LooksBetter">votre %s a l\'air mieux maintenant</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Parchemin d\'amélioration d\'arme</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Le parchemin va améliorer une arme de mélée, augmentant sa qualité. Par rapport à un parchemin d\'amélioration classique, cette version spécialisée n\'enlèvera jamais l\'enchantement d\'une arme, au contraire, elle peut même octroyer une arme non-enchantée avec un enchantement aléatoire.</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Choisissez une arme à améliorer</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">votre %s a l\'air mieux maintenant</string>
+</resources>

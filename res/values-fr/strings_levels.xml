@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">Une plaque de pression cachée s\'enclenche !</string>
+  <string name="Level_TileChasm">Gouffre</string>
+  <string name="Level_TileFloor">Etage</string>
+  <string name="Level_TileGrass">Herbe</string>
+  <string name="Level_TileWater">Eau</string>
+  <string name="Level_TileWall">Mur</string>
+  <string name="Level_TileClosedDoor">Porte fermée </string>
+  <string name="Level_TileOpenDoor">Porte ouverte</string>
+  <string name="Level_TileEntrance">Entrée de l\'étage</string>
+  <string name="Level_TileExit">Sortie de l\'étage</string>
+  <string name="Level_TileEmbers">Braises</string>
+  <string name="Level_TileLockedDoor">Porte verrouillée</string>
+  <string name="Level_TilePedestal">Piédestal</string>
+  <string name="Level_TileBarricade">Barricade</string>
+  <string name="Level_TileHighGrass">Hautes herbes</string>
+  <string name="Level_TileLockedExit">Sortie de l\'étage verrouillée</string>
+  <string name="Level_TileUnlockedExit">Sortie de l\'étage déverrouillée</string>
+  <string name="Level_TileSign">Panneau</string>
+  <string name="Level_TileWell">Puits</string>
+  <string name="Level_TileEmptyWell">Puits vide</string>
+  <string name="Level_TileStatue">Statue</string>
+  <string name="Level_TileToxicTrap">Piège de gaz toxiques</string>
+  <string name="Level_TileFireTrap">Piège de feu</string>
+  <string name="Level_TileParalyticTrap">Piège de gaz paralysants</string>
+  <string name="Level_TilePoisonTrap">Piège d\'aiguilles empoisonnées</string>
+  <string name="Level_TileAlarmTrap">Piège d\'alarme</string>
+  <string name="Level_TileLightningTrap">Piège de foudre</string>
+  <string name="Level_TileGrippingTrap">Piège agrippant  </string>
+  <string name="Level_TileSummoningTrap">Piège d\'invocation</string>
+  <string name="Level_TileInactiveTrap">Piège déclenché</string>
+  <string name="Level_TileBookshelf">Bibliothèque</string>
+  <string name="Level_TileAlchemy">Chaudron d\'alchimie</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">Vous n\'arrivez pas à voir le sol.</string>
+  <string name="Level_TileDescWater">En cas de brûlure, marchez dans l\'eau pour éteindre les flammes.</string>
+  <string name="Level_TileDescEntrance">Les escaliers mènent à l\'étage du dessus.</string>
+  <string name="Level_TileDescExit">Les escaliers mènent à l\'étage du dessous.</string>
+  <string name="Level_TileDescEmbers">Des braises recouvrent le sol.</string>
+  <string name="Level_TileDescHighGrass">La végétation dense empêche de voir plus loin.</string>
+  <string name="Level_TileDescLockedDoor">Cette porte est verrouillée, vous avez besoin de la clé correspondante pour l\'ouvrir.</string>
+  <string name="Level_TileDescLockedExit">D\'épais barreaux vous séparent de l\'escalier qui mène à l\'étage suivant.</string>
+  <string name="Level_TileDescBarricade">La barricade de bois est bien fixée, mais elle a séché au fil des années. Pourrait-elle brûler ?</string>
+  <string name="Level_TileDescSign">Vous n\'arrivez pas à lire d\'ici.</string>
+  <string name="Level_TileDescTrap">Marcher sur une plaque de pression cachée activera le piège.</string>
+  <string name="Level_TileDescInactiveTrap">Le piège a déjà été déclenché et ne représente plus une menace.</string>
+  <string name="Level_TileDescStatue">Quelqu\'un a voulu décorer cet endroit, mais a échoué visiblement.</string>
+  <string name="Level_TileDescAlchemy">Lâchez quelques graines ici pour préparer une potion.</string>
+  <string name="Level_TileDescEmptyWell">Le puits est sec maintenant.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileGrass">Mousse fluorescente</string>
+  <string name="Caves_TileHighGrass">Champignons fluorescents</string>
+  <string name="Caves_TileWater">Eau gelée.</string>
+  <string name="Caves_TileDescEntrance">L\'échelle mène à l\'étage du dessus.</string>
+  <string name="Caves_TileDescExit">L\'échelle descend vers l\'étage du bas.</string>
+  <string name="Caves_TileDescHighGrass">Des champignons géants bloquent la vue.</string>
+  <string name="Caves_TileDescDeco">Une veine de minerai est visible sur le mur. De l\'or ?</string>
+  <string name="Caves_TileDescBookshelf">Qui aurait besoin d\'une bibliothèque dans une grotte ?</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">Eau colorée douteuse</string>
+  <string name="City_TileHighGrass">Hautes fleurs épanouies</string>
+  <string name="City_TileDescEntrance">Une rampe mène à l\'étage du dessus.</string>
+  <string name="City_TileDescExit">Une rampe mène à l\'étage du bas.</string>
+  <string name="City_TileDescDeco">Il manque plusieurs briques ici.</string>
+  <string name="City_TileDescEmptySP">Un épais tapis est sur le sol.</string>
+  <string name="City_TileDescStatue">La statue représente un espèce de nain se dressant dans une position héroïque.</string>
+  <string name="City_TileDescBookshelf">Des rangs de livres sur des sujets divers remplissent la bibliothèque.</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">Lave froide</string>
+  <string name="Halls_TileGrass">Braises de mousse</string>
+  <string name="Halls_TileHighGrass">Braises de champignons</string>
+  <string name="Halls_TileStatue">Pilier</string>
+  <string name="Halls_TileDescWater">Ca ressemble à de la lave, mais c\'est froid et probablement pas dangereux à toucher.</string>
+  <string name="Halls_TileDescStatue">Le pilier est fait avec de véritables crânes humains. Magnifique.</string>
+  <string name="Halls_TileDescBookshelf">Des livres écrits dans d\'anciens langages recouvrent la bibliothèque.</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">Lave froide</string>
+  <string name="LastLevel_TileGrass">Braises de mousse</string>
+  <string name="LastLevel_TileHighGrass">Braises de champignons</string>
+  <string name="LastLevel_TileStatue">Pilier</string>
+  <string name="LastLevel_TileDescWater">Ca ressemble à de la lave, mais c\'est froid et probablement pas dangereux à toucher.</string>
+  <string name="LastLevel_TileDescStatue">Le pilier est fait de véritables crânes humains. Magnifique.</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">Eau colorée douteuse</string>
+  <string name="LastShopLevel_TileHighGrass">Hautes fleurs épanouies</string>
+  <string name="LastShopLevel_TileDescEntrance">Une rampe amène à l\'étage du dessus.</string>
+  <string name="LastShopLevel_TileDescExit">Une rampe mène tout droit en enfer.</string>
+  <string name="LastShopLevel_TileDescDeco">Il manque plusieurs briques ici.</string>
+  <string name="LastShopLevel_TileDescEmptySP">Un tapis épais recouvre le sol.</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">Eau froide et sombre.</string>
+  <string name="Prison_TileDescDeco">Il y\'a des traces de sang séché sur le sol.</string>
+  <string name="Prison_TileDescBookshelf">C\'est probablement les restes d\'une librairie de prison. Pourraient-ils brûler ?</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">Eau boueuse</string>
+  <string name="Sewer_TileDescDeco">De la mousse jaunâtre et humide recouvre le sol.</string>
+  <string name="Sewer_TileDescBookshelf">La bibliothèque est remplie de livres inutiles et pas chers. Pourrait-elle brûler ?</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">Choisissez une graine à lancer</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">Gouffre</string>
+  <string name="Chasm_Yes">Oui, je sais ce que je fais</string>
+  <string name="Chasm_No">Non, j\'ai changé d\'avis</string>
+  <string name="Chasm_Jump">Voulez vous vraiment plonger dans le gouffre ? Vous pourriez y passer.</string>
+  <string name="Chasm_Info">Votre chute a été fatale...</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">Le piège émet un son strident qui résonne à travers tout le donjon !</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">Piège de foudre</string>
+  <string name="LightningTrap_Desc">Vous avez été tué par une décharge d\'un piège de foudre...</string>
+</resources>

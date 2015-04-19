@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">PLANTER</string>
+  <string name="Plant_Info">Lancez cette graine à l\'endroit voulu pour faire pousser %1$s.
+%2$s</string>
+  <string name="Plant_Seed">graine de %s</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">Herberêve</string>
+  <string name="Dreamweed_Desc">Toucher de l\'herberêve lui fera sécréter un nuage de gaz scintillant et qui causera la confusion à celui qui le respirera.</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">Terracine</string>
+  <string name="Earthroot_Desc">Quand une créature touche une Terracine, ses racines créent une sorte d\'armure autour d\'elle. </string>
+  <string name="Earthroot_Buff">Armure végétale</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">Pâlefeuille</string>
+  <string name="Fadeleaf_Desc">Toucher une Pâlefeuille téléportera n\'importe quelle créature à un endroit aléatoire de l\'étage actuel. </string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">Fleur de feu</string>
+  <string name="Firebloom_Desc">Quand quelque chose touche la Fleur de feu, elle explose dans une gerbe de flammes.</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">Champiglace</string>
+  <string name="Icecap_Desc">Le champiglace va , au toucher, relâcher des spores qui vont geler tout ce qui se trouve dans les environs.</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">Tristemousse</string>
+  <string name="Sorrowmoss_Desc">La tristemousse est une fleur ( pas de la mousse ) avec des pétales tranchantes et vénéneuses.</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">Herbesoleil</string>
+  <string name="Sungrass_Desc">L\'Herbesoleil est renommée pour les propriétés curatives de sa sève.</string>
+  <string name="Sungrass_Buff">Soin végétal</string>
+</resources>

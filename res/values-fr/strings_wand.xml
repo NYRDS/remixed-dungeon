@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/Wands-->
+  <!--STRINGS OF Wand CLASS-->
+  <string name="Wand_Name">Sceptre %s</string>
+  <string name="Wand_ACZap">TIRER</string>
+  <string name="Wand_Wood">Cet épais sceptre %s est chaud au toucher. Qui sait ce qu\'il fera une fois utilisé ? </string>
+  <string name="Wand_Damage">Quand ce sceptre est utilisé comme arme de mélée, ses dommages moyens sont de %d points par coup.</string>
+  <string name="Wand_Weapon">Vous pouvez utiliser ce sceptre comme une arme de mélée.</string>
+  <string name="Wand_Fizzles">Votre sceptre pétille, il ne doit plus avoir assez de charges</string>
+  <string name="Wand_SelfTarget">vous ne pouvez pas vous cibler vous-même !</string>
+  <string name="Wand_Prompt">Choisissez la direction ou tirer</string>
+  <string-array name="Wand_Wood_Types">
+    <item>de houx</item>
+    <item>d\'if</item>
+    <item>d\'ébène</item>
+    <item>de cerisier</item>
+    <item>de teck</item>
+    <item>de sorbier</item>
+    <item>de saule</item>
+    <item>d\'acajou</item>
+    <item>de bambou</item>
+    <item>pourpre</item>
+    <item>de chêne</item>
+    <item>de bouleau</item>
+  </string-array>
+  <!--STRINGS OF WandOfAmok CLASS-->
+  <string name="WandOfAmok_Name">Sceptre d\'Amok</string>
+  <string name="WandOfAmok_Info">La lumière mauve de ce sceptre va enrager la créature ciblée qui attaquera tout ce qui se trouve à proximité.</string>
+  <string name="WandOfAmok_Info1">rien ne se passe</string>
+  <!--STRINGS OF WandOfAvalanche CLASS-->
+  <string name="WandOfAvalanche_Name">Sceptre des avalanches</string>
+  <string name="WandOfAvalanche_Info">Quand une décharge de ce sceptre atteint un mur ( ou quelconque obstacle solide ) il déclenche un éboulement, blessant et sonnant toutes les créatures dans la zone d\'effet.</string>
+  <string name="WandOfAvalanche_Info1">Vous vous êtes tué sous les gravats de votre propre sceptre d\'avalanche...</string>
+  <!--STRINGS OF WandOfBlink CLASS-->
+  <string name="WandOfBlink_Name">Sceptre de scintillement</string>
+  <string name="WandOfBlink_Info">Ce sceptre vous téléportera dans la direction choisie. Les obstacles bloqueront la téléportation.</string>
+  <!--STRINGS OF WandOfDisintegration CLASS-->
+  <string name="WandOfDisintegration_Name">Sceptre de désintégration</string>
+  <string name="WandOfDisintegration_Info">Ce sceptre émet un rayon d\'énergie destructrice, qui traverse toutes les créatures qui lui font obstacle. Plus il touche de cibles, plus il leur inflige de dommages.</string>
+  <!--STRINGS OF WandOfFirebolt CLASS-->
+  <string name="WandOfFirebolt_Name">Sceptre de tirs enflammés</string>
+  <string name="WandOfFirebolt_Info">Ce sceptre relâche des explosions de feu magiques. Elles brûleront  toutes les zones inflammables, et blesseront et brûleront les créatures qu\'elles touchent.</string>
+  <string name="WandOfFirebolt_Info1">Vous vous êtes tué avec votre propre sceptre de tirs enflammés...</string>
+  <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="WandOfFlock_Name">Sceptre du troupeau</string>
+  <string name="WandOfFlock_Info">Un petit coup de ce sceptre invoque un troupeau de moutons magiques, créant ainsi un obstacle temporaire impénétrable.</string>
+  <string name="Sheep_Name">mouton</string>
+  <string name="Sheep_Name_Objective">mouton</string>
+  <string name="Sheep_Gender">femelle</string>
+  <string name="Sheep_Desc">C\'est un mouton magique. Qu\'y a-t-il de si magique chez lui ? On ne peut pas le tuer. Il restera là, en mâchant du foin, le regard vide, jusqu\'à ce qu\'il disparaisse par magie.</string>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>Bêê!</item>
+    <item>Bêê?</item>
+    <item>Bêê.</item>
+    <item>Bêê...</item>
+    <item>Bee...</item>
+    <item>Ble...</item>
+  </string-array>
+  <!--STRINGS OF WandOfLightning CLASS-->
+  <string name="WandOfLightning_Name">Sceptre de foudre</string>
+  <string name="WandOfLightning_Info">Ce sceptre invoque des arcs électriques mortels, qui infligent des dommages à plusieurs créatures qui se tiennent les unes à côté des autres.</string>
+  <string name="WandOfLightning_Info1">Vous vous êtes tués avec votre propre sceptre de foudre...</string>
+  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_Name">sceptre de projectiles magiques</string>
+  <string name="WandOfMagicMissile_Info">Ce sceptre lance des projectiles d\'énergie magique pure, infligeant des dommages moyens à une créature ciblée</string>
+  <string name="WandOfMagicMissile_ACDisenchant">DESENCHANTER</string>
+  <string name="WandOfMagicMissile_Info1">Vous vous êtes tué avec votre propre sceptre de projectiles magiques</string>
+  <string name="WandOfMagicMissile_SelectWand">Choisissez un sceptre à améliorer</string>
+  <string name="WandOfMagicMissile_Desinchanted">Vous avez désenchanté le sceptre de projectiles magiques et utilisé son essence magique pour améliorer votre %s</string>
+  <!--STRINGS OF WandOfPoison CLASS-->
+  <string name="WandOfPoison_Name">Sceptre de poison</string>
+  <string name="WandOfPoison_Info">Le vil souffle de ce morceau de bois tordu imprégnera sa cible avec un venin mortel. Une créature empoisonnée souffrira périodiquement jusqu\'à la fin de l\'effet. La durée de l\'effet augmente avec le niveau du sceptre.</string>
+  <string name="WandOfPoison_Info1">rien ne se passe</string>
+  <!--STRINGS OF WandOfRegrowth CLASS-->
+  <string name="WandOfRegrowth_Name">Sceptre de repousse</string>
+  <string name="WandOfRegrowth_Info">\"Lorsqu\'une vie cesse, une nouvelle vie commence à grandir... Le cycle éternel pour toujours demeurera !\"</string>
+  <string name="WandOfRegrowth_Info1">rien ne se passe</string>
+  <!--STRINGS OF WandOfSlowness CLASS-->
+  <string name="WandOfSlowness_Name">Sceptre de lenteur</string>
+  <string name="WandOfSlowness_Info">Ce sceptre diminuera de moitié la vitesse d\'attaque et de déplacement de la créature atteinte jusqu\'à ce que l\'effet cesse.</string>
+  <string name="WandOfSlowness_Info1">rien ne se passe</string>
+  <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <string name="WandOfTelekinesis_Name">Sceptre de télékinésie</string>
+  <string name="WandOfTelekinesis_Info">Les vagues de force magique de ce sceptre affecterons tout sur leur passage, activant les pièges, piétinant les hautes herbes, ouvrant les portes fermées et fermant celles qui sont ouvertes. Cela  repoussera aussi les monstres.</string>
+  <string name="WandOfTelekinesis_YouNowHave">Vous avez transporté magiquement le %s dans votre sac</string>
+  <!--STRINGS OF WandOfTeleportation CLASS-->
+  <string name="WandOfTeleportation_Name">Sceptre de téléportation</string>
+  <string name="WandOfTeleportation_Info">Le tir de ce sceptre téléportera une créature contre sa volonté à un endroit aléatoire de l\'étage.</string>
+  <string name="WandOfTeleportation_Info1">%1$s avez téléporté %2$s quelque part</string>
+  <string name="WandOfTeleportation_Info2">rien ne se passe</string>
+</resources>

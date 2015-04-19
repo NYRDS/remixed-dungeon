@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">vous</string>
+  <string name="Hero_Name_Objective">vous</string>
+  <string name="Hero_Leave">Personne ne ressort du Pixel Dungeon si facilement.</string>
+  <string name="Hero_LevelUp">Niveau supérieur !</string>
+  <string name="Hero_NewLevel">Bienvenue au niveau %d ! Vous êtes désormais en meilleure santé et plus concentré. C\'est plus facile pour vous de frapper les ennemis et d\'esquiver leurs attaques.</string>
+  <string name="Hero_YouNowHave">Vous avez %s</string>
+  <string name="Hero_SomethingElse">Il y\'a autre chose ici</string>
+  <string name="Hero_LockedChest">Le coffre est verrouillé et vous n\'avez pas la bonne clé</string>
+  <string name="Hero_LockedDoor">Vous n\'avez pas la bonne clé</string>
+  <string name="Hero_NoticedSmth">Vous remarquez quelque chose</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">recherche</string>
+  <string name="Hero_StaBurning">Vous êtes en feu !</string>
+  <string name="Hero_StaParalysis">Vous êtes paralysé !</string>
+  <string name="Hero_StaPoison">Vous êtes empoisonné !</string>
+  <string name="Hero_StaOoze">Le limon caustique vous ronge la chair. Nettoyez le !</string>
+  <string name="Hero_StaRoots">Vous ne pouvez pas bouger !</string>
+  <string name="Hero_StaWeakness">Vous vous sentez affaibli !</string>
+  <string name="Hero_StaBlindness">Vous êtes aveuglé !</string>
+  <string name="Hero_StaFury">Vous devenez furieux !</string>
+  <string name="Hero_StaFurious">furieux</string>
+  <string name="Hero_StaCharm">Vous êtes sous le charme !</string>
+  <string name="Hero_StaCripple">Vous êtes estropié !</string>
+  <string name="Hero_StaBleeding">Vous saignez !</string>
+  <string name="Hero_StaVertigo">Tout tourne autour de vous !</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">guerrier</string>
+  <string name="HeroClass_Mag">mage</string>
+  <string name="HeroClass_Rog">gredin</string>
+  <string name="HeroClass_Hun">chasseresse</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Les guerriers commencent avec 11 points de force.</item>
+    <item>Les guerriers commencent avec une épée courte unique. Celle-ci pourra être \"reforgée\" pour améliorer une autre arme de mélée.</item>
+    <item>Les guerriers sont moins efficaces avec les armes à distance.</item>
+    <item>Chaque ration redonne un peu de santé lors de sa consommation.</item>
+    <item>Les potions de force sont identifiées dès le début.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Les mages commencent avec un unique sceptre de missiles magiques. Celui-ci pourra être \"désenchanté\" pour améliorer un autre sceptre.</item>
+    <item>Les mages rechargent leurs sceptres plus vite.</item>
+    <item>Lors de sa consommation, une ration redonnera 1 charge à tous les sceptres de l\'inventaire.</item>
+    <item>Les mages peuvent utiliser leurs sceptres comme armes de mélée.</item>
+    <item>Les parchemins d\'identification sont identifiés dès le début.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Les gredins commencent avec un anneau des ténèbres +1.</item>
+    <item>Les gredins identifient le type d\'un anneau en l\'équipant.</item>
+    <item>Les gredins sont plus à l\'aise avec les armures légères, ils esquivent mieux quand ils en portent une.</item>
+    <item>Les gredins détectent plus facilement les pièges et les portes cachées.</item>
+    <item>Les gredins survivent plus longtemps sans manger.</item>
+    <item>Les parchemins de repérage magique sont identifiés dès le début.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Les chasseresses ne commencent qu\'avec 15 points de vie.</item>
+    <item>Les chasseresses commencent avec un unique boomerang améliorable.</item>
+    <item>Les chasseresses sont douées lors de l\'utilisation des armes à distance et font des dommages supplémentaires en fonction de leur force quand elles les utilisent.</item>
+    <item>Les chasseresses gagnent plus de points de vie en buvant la rosée.</item>
+    <item>Les chasseresses détectent les monstres à proximité même s\'ils sont cachés par des obstacles.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladiateur</string>
+  <string name="HeroSubClass_DescGlad">Une attaque réussie avec une arme de mélée permet au gladiateur de commencer un combo, dans lequel chaque attaque réussie supplémentaire inflige plus de dommages.</string>
+  <string name="HeroSubClass_NameBers">berzerk</string>
+  <string name="HeroSubClass_DescBers">Quand ils sont sévèrement blessés, les berzerk entrent dans un état de furie augmentant significativement leurs dommages.</string>
+  <string name="HeroSubClass_NameWarL">sorcier</string>
+  <string name="HeroSubClass_DescWarL">Après avoir tué un ennemi, le sorcier consomme son âme. Cela soigne ses blessures et satisfait sa faim.</string>
+  <string name="HeroSubClass_NameBatM">mage de bataille</string>
+  <string name="HeroSubClass_DescBatM">Quand il se bat avec un sceptre à la main, le mage de bataille inflige des dommages supplémentaires en fonction d nombre de charges du sceptre. Chaque attaque réussie redonne 1 charge à ce sceptre.</string>
+  <string name="HeroSubClass_NameAssa">assassin</string>
+  <string name="HeroSubClass_DescAssa">Quand il fait une attaque surprise, l\'assassin inflige des dommages supplémentaires à sa cible.</string>
+  <string name="HeroSubClass_NameFreR">coureur</string>
+  <string name="HeroSubClass_DescFreR">Le coureur se déplace presque deux fois plus vite que la plupart des monstre. Quand il court, le coureur est plus dur à toucher. Mais pour cela, il doit ne doit pas être encombré et avoir le ventre plein.</string>
+  <string name="HeroSubClass_NameSnip">sniper</string>
+  <string name="HeroSubClass_DescSnip">Les snipers sont capables de détecter les points faibles dans l\'armure des ennemis, ignorant cette protection lors de l\'utilisation d\'armes à distance. </string>
+  <string name="HeroSubClass_NameWard">gardienne</string>
+  <string name="HeroSubClass_DescWard">Les gardiennes ont une forte connexion avec les forces de la nature, ce qui leur donne la possibilité de collecter de la rosée et des graines sur les plantes. Piétiner des herbes hautes leur octroie aussi un bonus d\'armure temporaire.</string>
+</resources>

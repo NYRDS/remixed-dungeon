@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">Tué par %1$s au niveau %2$d</string>
+  <string name="ResultDescriptions_Boss">Tué par le %1$s au niveau %2$d</string>
+  <string name="ResultDescriptions_Wand">Tué par votre propre %1$s au niveau %2$d</string>
+  <string name="ResultDescriptions_Glyph">Tué par le %1$s au niveau %2$d</string>
+  <string name="ResultDescriptions_Trap">Tué par une décharge du %1$s au niveau %2$d</string>
+  <string name="ResultDescriptions_Burning">Brûlé à mort au niveau %d</string>
+  <string name="ResultDescriptions_Hunger">Mort de faim au niveau %d</string>
+  <string name="ResultDescriptions_Poison">Empoisonné au niveau %d</string>
+  <string name="ResultDescriptions_Gas">Asphyxié au niveau %d</string>
+  <string name="ResultDescriptions_Bleeding">Mort d\'anémie au niveau %d</string>
+  <string name="ResultDescriptions_Ooze">Tué par le limon toxique au niveau %d</string>
+  <string name="ResultDescriptions_Fall">Est tombé au niveau %d</string>
+  <string name="ResultDescriptions_Win">A obtenu l\'amulette de Yendor</string>
+  <string name="ResultDescriptions_Immured">Emmuré au niveau %d</string>
+</resources>
