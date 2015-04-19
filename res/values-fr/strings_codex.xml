@@ -28,5 +28,10 @@
     <item>arme venimeuse - peut empoisonner la cible.</item>
     <item>arme gelée - peut ralentir la cible et l\'empêcher de brûler si le coup est réussi.</item>
     <item>arme sauvage - peut toucher tous les ennemis à côté de la cible.</item>
+    
+    <item>Ce livre écrit en langage démon </item>
+    <item>Ce livre écrit en langage nain</item>
+    <item>Ce livre écrit en langage elfique</item>
+    
   </string-array>
 </resources>
