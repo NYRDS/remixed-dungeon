@@ -21,16 +21,20 @@ import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TouchArea;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.utils.SparseArray;
 
 public class WndStory extends Window {
 
-	private static final int WIDTH = 120;
+	private static final int WIDTH  = 120;
+	private static final int HEIGHT = 120;
+	
 	private static final int MARGIN = 6;
 	
 	private static final float bgR	= 0.77f;
@@ -70,16 +74,24 @@ public class WndStory extends Window {
 		tf.gm = -bgG;
 		tf.bm = -bgB;
 		tf.x = MARGIN;
-		add( tf );
 		
-		add( new TouchArea( chrome ) {
-			@Override
-			protected void onClick( Touch touch ) {
-				hide();
-			}
-		} );
+		int h = (int) Math.min(HEIGHT - MARGIN, tf.height());
+		int w = (int)(tf.width() + MARGIN * 2);
 		
-		resize( (int)(tf.width() + MARGIN * 2), (int)Math.min( tf.height(), 180 ) );
+		resize( w, h );
+		
+		Component content = new Component();
+		
+		content.add( tf );
+		
+		content.setSize(tf.width(), tf.height());
+		
+        ScrollPane list = new ScrollPane( content );
+        add( list );
+        
+        list.setRect( 0, 0, w, h);
+
+		
 	}
 	
 	@Override

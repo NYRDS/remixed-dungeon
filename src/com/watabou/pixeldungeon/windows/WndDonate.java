@@ -107,7 +107,7 @@ public class WndDonate extends WndTabbed {
 
 			BitmapTextMultiline commonText = PixelScene.createMultiline(
 					Game.getVar(R.string.WndDonate_commonDonateText), 7);
-			commonText.maxWidth = WIDTH - 10;
+			commonText.maxWidth = WIDTH;
 			commonText.measure();
 			commonText.setPos(0, pos);
 			add(commonText);
