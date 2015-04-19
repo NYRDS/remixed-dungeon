@@ -19,6 +19,11 @@ public abstract class Bow extends MeleeWeapon {
 	}
 	
 	@Override
+	public String info() {
+		return desc();
+	}
+	
+	@Override
 	protected int max() {
 		return min();
 	}
