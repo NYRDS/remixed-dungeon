@@ -9,6 +9,6 @@
     
     <string name="Potion_RuneDissaperaed">Руна исчезла с предмета %s.</string>
     <string name="Potion_ArrowMoisten">Стрелы успешно смазаны.</string>
-    <string name="Potion_ItemFliesAway">Предмет %s  вырвался из рук и улетел. </string>
+    <string name="Potion_ItemFliesAway">Предмет %s вырвался из рук и улетел.</string>
     
 </resources>
