@@ -18,8 +18,8 @@ public class ParalysisArrow extends Arrow {
 		super();
 		quantity = number;
 		
-		baseMin = 1;
-		baseMax = 4;
+		baseMin = 0;
+		baseMax = 7;
 		baseDly = 0.75;
 		
 		image = ItemSpriteSheet.ARROW_PARALYSIS;

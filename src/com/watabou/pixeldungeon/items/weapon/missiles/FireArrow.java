@@ -17,7 +17,7 @@ public class FireArrow extends Arrow {
 		quantity = number;
 		
 		baseMin = 1;
-		baseMax = 4;
+		baseMax = 6;
 		baseDly = 0.75;
 		
 		image = ItemSpriteSheet.ARROW_FIRE;

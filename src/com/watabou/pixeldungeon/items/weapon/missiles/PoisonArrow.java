@@ -17,7 +17,7 @@ public class PoisonArrow extends Arrow {
 		super();
 		quantity = number;
 		
-		baseMin = 1;
+		baseMin = 3;
 		baseMax = 4;
 		baseDly = 0.75;
 		
