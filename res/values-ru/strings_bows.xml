@@ -7,12 +7,12 @@
 	
 	<!-- STRINGS OF CompoundBow CLASS -->
     <string name="CompoundBow_Name">блочный лук</string>
-    <string name="CompoundBow_Info">Стрелы выпущенные из блочного лука с легкостью находят цель и наносят серьёзный урон, однако он не так быстр как простой лук</string>
+    <string name="CompoundBow_Info">Стрелы выпущенные из блочного лука с легкостью находят цель и наносят серьёзный урон, однако он не так быстр как простой лук.</string>
     <string name="CompoundBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF RubyBow CLASS -->
     <string name="RubyBow_Name">рубиновый лук</string>
-    <string name="RubyBow_Info">Только величайшие лучники могут использовать рубиновый лук. Почти каждая выпущеная из него стрела пронзает врага насквозь, оставляя огромные дыры в его плоти. Но как же непросто натянуть тетиву.</string>
+    <string name="RubyBow_Info">Только величайшие лучники могут использовать рубиновый лук. Почти каждая выпущенная из него стрела пронзает врага насквозь, оставляя огромные дыры в его плоти. Но как же непросто натянуть тетиву.</string>
     <string name="RubyBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF Quiver CLASS -->
@@ -21,7 +21,7 @@
     <string name="Quiver_Gender">masculine</string>
 	
 	<!-- STRINGS OF FireQuiver CLASS -->
-    <string name="FireQuiver_Name">огненый колчан</string>
+    <string name="FireQuiver_Name">огненный колчан</string>
     <string name="FireQuiver_Info"></string>
     <string name="FireQuiver_Gender">masculine</string>
 	
@@ -41,7 +41,7 @@
     <string name="CommonArrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF FireArrow CLASS -->
-    <string name="FireArrow_Name">огненая стрела</string>
+    <string name="FireArrow_Name">огненная стрела</string>
     <string name="FireArrow_Info">Эта стрела выглядит обычной, лишь наконечник испускает теплый красноватый свет.</string>
     <string name="FireArrow_Gender">feminine</string>
 	
