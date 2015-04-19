@@ -1450,7 +1450,7 @@ public class Hero extends Char {
 	
 	public void collect(Item item) {
 		if(!item.collect(this)){
-			if(Dungeon.level!=null){
+			if(Dungeon.level!=null && pos != 0) {
 				Dungeon.level.drop(item, pos).sprite.drop();
 			}
 		}
