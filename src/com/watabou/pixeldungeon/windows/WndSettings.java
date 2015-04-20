@@ -302,7 +302,9 @@ public class WndSettings extends Window {
 	@Override
 	public void onBackPressed() {
 		hide();
-		PixelDungeon.resetScene();
+		if(!mInGame) {
+			PixelDungeon.resetScene();
+		}
 	}
 	
 	private void zoom(float value) {
