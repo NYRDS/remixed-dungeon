@@ -33,8 +33,15 @@ public class PoisonArrow extends Arrow {
 
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
+		
+		int poisonFactor = 1;
+		
+		if(firedFrom != null) {
+			poisonFactor += firedFrom.level;
+		}
+		
 		Buff.affect( defender, com.watabou.pixeldungeon.actors.buffs.Poison.class ).
-		set( com.watabou.pixeldungeon.actors.buffs.Poison.durationFactor( defender ) * (firedFrom.level + 1) );
+		set( com.watabou.pixeldungeon.actors.buffs.Poison.durationFactor( defender ) * poisonFactor );
 
 		super.proc( attacker, defender, damage );
 	}
