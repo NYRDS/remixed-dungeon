@@ -54,7 +54,8 @@ public enum Icons {
 	RESUME,
 	CHEST_SILVER,
 	CHEST_GOLD,
-	CHEST_RUBY;
+	CHEST_RUBY,
+	BOOMERANG;
 	
 	public Image get() {
 		return get( this );
@@ -158,6 +159,9 @@ public enum Icons {
 			break;
 		case CHEST_RUBY:
 			icon.frame( icon.texture.uvRect( 95, 46, 109, 59 ) );
+			break;
+		case BOOMERANG:
+			icon.frame( icon.texture.uvRect( 110, 45, 126, 61 ) );
 			break;
 		}
 		return icon;
