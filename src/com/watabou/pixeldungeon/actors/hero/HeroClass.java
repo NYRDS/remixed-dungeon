@@ -175,7 +175,17 @@ public enum HeroClass {
 		case ROGUE:
 			return Assets.ROGUE;
 		case HUNTRESS:
-			return Assets.HUNTRESS;
+			
+			switch(hero.subClass) {
+			case SNIPER:
+				return Assets.SNIPER;
+			case WARDEN:
+				return Assets.WARDEN;
+				
+			default:
+				return Assets.HUNTRESS;
+			}
+			
 		}
 		
 		return null;
