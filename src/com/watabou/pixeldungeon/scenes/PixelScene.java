@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Map.Entry;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -37,8 +36,6 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.opengl.GLES20;
-import android.os.Environment;
-import android.provider.MediaStore;
 
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.BitmapText;
@@ -327,7 +324,12 @@ public class PixelScene extends Scene {
 
 	public static void chooseFont(float size) {
 		
-		int fontSize = (int) (size * 2);
+		int fontSize = (int) (size*2) + PixelDungeon.fontScale() - 2;
+		
+		if(fontSize < 8) {
+			fontSize = 8;
+		}
+		
 		font = fontCache.get(fontSize);
 		
 		if(font == null) {
@@ -335,12 +337,8 @@ public class PixelScene extends Scene {
 			fontCache.put(fontSize, font);
 		}
 		
-		float userScale = PixelDungeon.fontScale() * 0.1f;
-		if (userScale < -0.7f) {
-			userScale = -0.7f;
-		}
 
-		scale = (1 + userScale)/3;
+		scale = 0.5f;
 	}
 
 	public static BitmapText createText(float size) {
