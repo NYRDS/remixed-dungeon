@@ -9,11 +9,12 @@
         And if one day you\'ll see your idea implemented in the game... Thanks for your creativity =)\n
         Current version based on Pixel Dungeon 1.7.2 and partially 1.7.5.\n 
         Difference from original: \n
-        - Option to change language. (currently supported: English, Russian and French (created by community) )\n
+        - Option to change language.\n
         - New monster and NPC\n
         - Toxic gas and fire able to interact with more items\n
         - New types of «food»\n
         - New items and new properties for some old items\n
         - Seeds can be eaten now =)\n 
+        - Elves
         </string>
 </resources>

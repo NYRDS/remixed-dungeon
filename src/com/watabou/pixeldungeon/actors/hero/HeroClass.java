@@ -103,7 +103,9 @@ public enum HeroClass {
 		
 		(hero.belongings.armor = new ClothArmor()).identify();
 		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
-		hero.collect(new CommonArrow(50));
+		
+		hero.collect(new Dagger().upgrade().identify());
+		hero.collect(new CommonArrow(20));
 		
 		QuickSlot.cleanStorage();
 		

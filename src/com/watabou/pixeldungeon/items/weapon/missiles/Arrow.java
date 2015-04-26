@@ -22,6 +22,7 @@ public abstract class Arrow extends MissileWeapon {
 	
 	public Arrow( int number ) {
 		super();
+		STR = 9;
 		quantity = number;
 	
 	}
