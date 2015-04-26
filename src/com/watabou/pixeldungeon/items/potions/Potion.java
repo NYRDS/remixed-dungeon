@@ -20,19 +20,16 @@ package com.watabou.pixeldungeon.items.potions;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
-import com.watabou.pixeldungeon.items.Stylus;
-import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
@@ -343,6 +340,7 @@ public class Potion extends Item {
 	};
 
 	protected int detachMoistenItems(Item item, int maxQuantity) {
+		setKnown();
 		int quantity = item.quantity();
 		
 		if(quantity <= maxQuantity){
