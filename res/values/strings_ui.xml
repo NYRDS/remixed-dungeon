@@ -31,6 +31,7 @@
     <string name="StartScene_Yes">Yes, start new game</string>
     <string name="StartScene_No">No, return to main menu</string>
     <string name="StartScene_Unlock">To unlock this character class, slay the 3rd boss with any other class</string>
+    <string name="StartScene_UnlockElf">To unlock this character class, slay the 4rd boss with any other class</string>
     <string name="StartScene_WinGame">To unlock \"Challenges\", win the game with any character class.</string>
 
         <!-- STRINGS OF InterLevelScene CLASS -->

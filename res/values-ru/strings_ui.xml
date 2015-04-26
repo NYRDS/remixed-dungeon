@@ -30,6 +30,7 @@
     <string name="StartScene_Yes">Да, начать новую игру</string>
     <string name="StartScene_No">Нет, вернуться в меню</string>
     <string name="StartScene_Unlock">Чтобы открыть этот класс персонажа, убейте 3-го босса любым другим классом</string>
+    <string name="StartScene_UnlockElf">Чтобы открыть этот класс персонажа, убейте 4-го босса любым другим классом</string>
     <string name="StartScene_WinGame">Чтобы открыть \"Испытания\", пройдите игру любым персонажем.</string>
 
     <!-- STRINGS OF InterLevelScene CLASS -->
