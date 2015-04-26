@@ -18,6 +18,7 @@
 package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
+
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Matrix;
@@ -215,7 +216,7 @@ public class BitmapText extends Visual {
 		" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 		public static final String LATIN_FULL = LATIN_UPPER +
-		"[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007F";
+		"[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 		
 		public static final String CYRILLIC_UPPER =
 		"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
@@ -281,7 +282,7 @@ public class BitmapText extends Visual {
 			
 			int nextEmptyLine = startFrom;
 			
-			for(nextEmptyLine = startFrom; nextEmptyLine < height; ++nextEmptyLine){
+			for(; nextEmptyLine < height; ++nextEmptyLine){
 				boolean lineEmpty = true;
 				for(int i = 0;i<width; ++i){
 					lineEmpty = (bitmap.getPixel (i, nextEmptyLine ) == color) && lineEmpty;
@@ -304,7 +305,7 @@ public class BitmapText extends Visual {
 			}
 			return true;
 		}
-		
+
 		private int findNextCharColumn(Bitmap bitmap, int sx, int sy, int ey, int color){
 			int width = bitmap.getWidth();
 			
@@ -315,7 +316,7 @@ public class BitmapText extends Visual {
 					break;
 				}
 			}
-			
+
 			int nextCharColumn;
 			
 			for(nextCharColumn = nextEmptyColumn; nextCharColumn < width; ++nextCharColumn){
@@ -345,24 +346,40 @@ public class BitmapText extends Visual {
 			int lineTop        = 0;
 			int lineBottom     = 0;
 			
+			
 			while(lineBottom<bHeight){
+				while(lineTop==findNextEmptyLine(bitmap, lineTop, color) && lineTop<bHeight) {
+					lineTop++;
+				}
 				lineBottom = findNextEmptyLine(bitmap, lineTop, color);
-				
+				//GLog.w("Empty line: %d", lineBottom);
 				int charColumn = 0;
 				int charBorder = 0;
 				
 				endOfRow = false;
 				while (! endOfRow){
-					charBorder = findNextCharColumn(bitmap,charColumn+1,lineTop,lineBottom,color);
-
 					if(charsProcessed == length){
 						break;
 					}
+					
+					charBorder = findNextCharColumn(bitmap,charColumn+1,lineTop,lineBottom,color);
+					
+					int glyphBorder = charBorder;
+					if(chars.charAt(charsProcessed) != 32) {
 
+						for (;glyphBorder > charColumn + 1; --glyphBorder) {
+							if( !isColumnEmpty(bitmap,glyphBorder, lineTop, lineBottom, color)) {
+								break;
+							}
+						}
+						glyphBorder++;
+					}
+					
+					//GLog.w("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
 					add( chars.charAt(charsProcessed), 
 						new RectF( (float)(charColumn)/bWidth, 
 								   (float)lineTop/bHeight, 
-								   (float)(charBorder)/bWidth, 
+								   (float)(glyphBorder)/bWidth, 
 								   (float)lineBottom/bHeight ) );
 					++charsProcessed;
 					charColumn = charBorder;
