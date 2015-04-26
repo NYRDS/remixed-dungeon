@@ -7,7 +7,7 @@
   <string name="TitleScene_About">o</string>
   <string name="TitleScene_InternalStorageLow">Za malo miejsca\n w Twojej pamieci\n Mozesz wszystko stracic!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt">Remixed Pixel Dungein by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou  &amp; NYRDS\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD l18n code\n\nE-Mail us:\n\n</string>
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou  &amp; NYRDS\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD l18n code\n\nE-Mail us:\n\n</string>
   <string name="AboutScene_Lnk">no site yet</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com and polish lang biuro.piotr.pietrucha@gmail.com</string>
   <string name="AboutScene_Snd">Send E-Mail to fix bug or translate to Polish lang</string>
@@ -38,7 +38,7 @@
   <string name="InterLevelScene_FileNotFound">Nie znaleziono pliku !</string>
   <string name="InterLevelScene_ErrorGeneric">Cos jest nie tak</string>
   <!--STRINGS OF SurfaceScene CLASS-->
-  <string name="SurfaceScene_GameOver">KONIEC GRY KURWA !</string>
+  <string name="SurfaceScene_GameOver">KONIEC GRY!</string>
   <!--STRINGS OF WndSettings CLASS-->
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>

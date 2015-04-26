@@ -129,7 +129,7 @@
   <string name="WndGame_Ranking">Ranking</string>
   <string name="WndGame_Start">Graj od NOwa</string>
   <string name="WndGame_menu">Moje Menu</string>
-  <string name="WndGame_Exit">Wyjdz z Pixel Dungeone ale kurwa nie radze!</string>
+  <string name="WndGame_Exit">Wyjdz z Pixel Dungeone</string>
   <string name="WndGame_Return">Wroc do Gry</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">Status</string>
@@ -341,7 +341,7 @@
   <string name="RatSkull_Info">Wyglada odlotowo.. Bedize moim trofeem i powiesze go na scianie</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
-  <string name="ConfusionGas_Info">Gaz, o kurwa.</string>
+  <string name="ConfusionGas_Info">Gaz</string>
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Ogień szaleje tutaj .</string>
   <!--STRINGS OF Foliage CLASS-->
