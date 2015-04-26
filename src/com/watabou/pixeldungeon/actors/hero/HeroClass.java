@@ -101,8 +101,6 @@ public enum HeroClass {
 		hero.STR = 9;
 		hero.HT = hero.HP = 15;
 		
-		hero.speed();
-		
 		(hero.belongings.armor = new ClothArmor()).identify();
 		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
 		hero.collect(new CommonArrow(50));
