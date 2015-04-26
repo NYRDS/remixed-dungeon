@@ -1446,6 +1446,7 @@ public class Hero extends Char {
 
 	public void updateLook() {
 		getHeroSprite().updateArmor(tier());
+		ready();
 	}
 	
 	public void collect(Item item) {
