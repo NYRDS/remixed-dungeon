@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -53,7 +54,10 @@ public class TomeOfMastery extends Item {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_READ );
+		
+		if(hero.heroClass != HeroClass.ELF) {
+			actions.add( AC_READ );
+		}
 		return actions;
 	}
 	
