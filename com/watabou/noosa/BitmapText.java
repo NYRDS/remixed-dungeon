@@ -155,8 +155,8 @@ public class BitmapText extends Visual {
 			realLength++;
 			
 			width += w + font.tracking;
-			if (h > height) {
-				height = h;
+			if (h + sy > height) {
+				height = h + sy;
 			}
 		}
 		
@@ -182,7 +182,7 @@ public class BitmapText extends Visual {
 				rect = font.get(INVALID_CHAR);
 			}
 			float w = font.width( rect );
-			float h = font.height( rect );
+			float h = font.height( rect ) + glyphShiftY(text.charAt( i ));
 			
 			width += w + font.tracking;
 			if (h > height) {
@@ -219,6 +219,16 @@ public class BitmapText extends Visual {
 			text = str;
 		}
 		dirty = true;
+	}
+	
+	protected float glyphShiftY(char c) {
+		PointF shift = font.glyphShift.get(c);
+		
+		if(shift != null) {
+			return shift.y;
+		}
+		
+		return 0;			
 	}
 	
 	public static class Font extends TextureFilm {

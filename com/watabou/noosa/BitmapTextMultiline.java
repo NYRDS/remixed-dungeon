@@ -77,7 +77,6 @@ public class BitmapTextMultiline extends BitmapText {
 					continue;
 				}
 				
-				
 				getWordMetrics( word, metrics );	
 				writer.addSymbol( metrics.x, metrics.y );
 				
@@ -162,7 +161,8 @@ public class BitmapTextMultiline extends BitmapText {
 				rect = font.get(INVALID_CHAR);
 			}
 			w += font.width( rect ) + (w > 0 ? font.tracking : 0);
-			h = Math.max( h, font.height( rect ) );
+			
+			h = Math.max( h, font.height( rect ) + glyphShiftY(word.charAt( i )));
 		}
 		
 		metrics.set( w, h );
