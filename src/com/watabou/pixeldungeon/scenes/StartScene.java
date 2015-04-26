@@ -156,7 +156,7 @@ public class StartScene extends PixelScene {
 		float centralHeight = buttonY - title.y - title.height();
 		
 		HeroClass[] classes = {
-			HeroClass.WARRIOR, HeroClass.MAGE, HeroClass.ROGUE, HeroClass.HUNTRESS	
+			HeroClass.WARRIOR, HeroClass.MAGE, HeroClass.ROGUE, HeroClass.HUNTRESS, HeroClass.ELF	
 		};
 		for (HeroClass cl : classes) {
 			ClassShield shield = new ClassShield( cl );

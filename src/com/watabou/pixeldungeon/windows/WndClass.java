@@ -79,7 +79,7 @@ public class WndClass extends WndTabbed {
 		private static final int MARGIN	= 4;
 		private static final int GAP	= 4;
 		
-		private static final String DOT	= "\u007F";
+		private static final String DOT	= "#";
 		
 		public float height;
 		public float width;

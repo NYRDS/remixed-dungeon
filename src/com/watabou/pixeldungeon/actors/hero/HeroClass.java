@@ -224,6 +224,8 @@ public enum HeroClass {
 			return ROG_PERKS;
 		case HUNTRESS:
 			return HUN_PERKS;
+		case ELF:
+			return ELF_PERKS;
 		}
 		
 		return null;
