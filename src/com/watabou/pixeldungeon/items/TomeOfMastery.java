@@ -130,5 +130,7 @@ public class TomeOfMastery extends Item {
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		
 		curUser.checkIfFurious();
+		GameScene.updateHeroSprite(curUser);
+		
 	}
 }
