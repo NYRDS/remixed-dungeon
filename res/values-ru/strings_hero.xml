@@ -32,6 +32,7 @@
     <string name="HeroClass_Mag">маг</string>
     <string name="HeroClass_Rog">разбойник</string>
     <string name="HeroClass_Hun">охотница</string>
+    <string name="HeroClass_Elf">эльф</string>
 
     <string-array name="HeroClass_WarPerks">
         <item>Воины начинают с 11 очками Силы.</item>
@@ -61,6 +62,13 @@
         <item>Охотницы хороши в обращении с оружием дальнего боя и получают бонус к урону за каждое очко Силы сверх требований этого оружия.</item>
         <item>Охотницы восстанавливают больше здоровья от капель росы.</item>
         <item>Охотницы чувствуют ближайших монстров, даже если те скрыты за препятствиями.</item>
+    </string-array>
+    <string-array name="HeroClass_ElfPerks">
+        <item>Эльфы начинают с 15 очками Здоровья.</item>
+        <item>Эльфы начинают с 9 очками Силы.</item>
+        <item>Эльфы начинают с улучшенным деревянным луком и стрелами.</item>
+        <item>Эльфы восхитительно владеют луками.</item>
+        <item>Эльфы не слишком хороши в ближнем бою.</item>>
     </string-array>
 
     <!-- STRINGS OF HeroSubClass CLASS -->

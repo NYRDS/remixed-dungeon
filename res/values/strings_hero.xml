@@ -63,10 +63,12 @@
         <item>Huntresses gain more health from dewdrops.</item>
         <item>Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</item>
     </string-array>
-        <string-array name="HeroClass_ElfPerks">
-        <item>Elf start with 15 points of Health.</item>
-        <item>Elf start with a upgraded wooden bow and bunch of arrows.</item>
-        <item>Elf are extremly proficient with bows.</item>
+    <string-array name="HeroClass_ElfPerks">
+        <item>Elves start with 15 points of Health.</item>
+        <item>Elves start with 9 points of Strength.</item>
+        <item>Elves start with a upgraded wooden bow and bunch of arrows.</item>
+        <item>Elves are extremly proficient with bows.</item>
+        <item>Elves are less proficient with melee weapons</item>>
     </string-array>
 
     <!-- STRINGS OF HeroSubClass CLASS -->

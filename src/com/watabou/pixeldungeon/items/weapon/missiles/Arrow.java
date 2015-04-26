@@ -1,11 +1,6 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.pixeldungeon.levels.Level;
@@ -48,10 +43,11 @@ public abstract class Arrow extends MissileWeapon {
 	protected void onThrow( int cell ) {
 		if (curUser.bowEquiped()) {
 			
-			if(Level.adjacent(curUser.pos, cell)) {
+			if(Level.adjacent(curUser.pos, cell) && curUser.heroClass != HeroClass.ELF) {
 				miss( cell );
 				return;
 			}
+			
 			firedFrom = (Bow)curUser.belongings.weapon;
 			
 			MAX = (int) (baseMax * firedFrom.dmgFactor());
@@ -68,6 +64,11 @@ public abstract class Arrow extends MissileWeapon {
 			
 			if (sDelta > 2) {
 				MAX += MIN;
+			}
+			
+			if (curUser.heroClass == HeroClass.ELF) {
+				ACU *= 1.1;
+				DLY *= 0.9;
 			}
 			
 			firedFrom.usedForHit();

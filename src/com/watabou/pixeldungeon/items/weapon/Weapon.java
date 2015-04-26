@@ -28,6 +28,8 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.weapon.enchantments.*;
+import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -108,6 +110,10 @@ public class Weapon extends KindOfWeapon {
 				break;
 			default:
 			}
+		}
+		
+		if (this instanceof MeleeWeapon && !(this instanceof Bow)) {
+			encumbrance += 3;
 		}
 		
 		return 

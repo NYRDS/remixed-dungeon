@@ -97,8 +97,14 @@ public enum HeroClass {
 	}
 	
 	private void initElf(Hero hero) {
+		
+		hero.STR = 9;
+		hero.HT = hero.HP = 15;
+		
+		hero.speed();
+		
 		(hero.belongings.armor = new ClothArmor()).identify();
-		hero.collect(new WoodenBow().upgrade());
+		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
 		hero.collect(new CommonArrow(50));
 		
 		QuickSlot.cleanStorage();
@@ -236,6 +242,7 @@ public enum HeroClass {
 		case WARRIOR:
 		case MAGE:
 		case ROGUE:
+		case ELF:
 			return Utils.MASCULINE;
 		case HUNTRESS:
 			return Utils.FEMININE;

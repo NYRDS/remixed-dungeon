@@ -367,6 +367,12 @@ public class Hero extends Char {
 	@Override
 	public void spend( float time ) {
 		int hasteLevel = 0;
+		
+		
+		if(heroClass == HeroClass.ELF) {
+			hasteLevel = 1;
+		}
+		
 		for (Buff buff : buffs( RingOfHaste.Haste.class )) {
 			hasteLevel += ((RingOfHaste.Haste)buff).level;
 		}
@@ -785,36 +791,36 @@ public class Hero extends Char {
 		enemy = action.target;
 
 		if (enemy.isAlive() && !pacified) {
+			if ( bowEquiped() && (!Level.adjacent(pos, enemy.pos) || this.heroClass == HeroClass.ELF) ) {
+				Bow bow = (Bow) belongings.weapon;
+				
+				Class <? extends Arrow> arrowType = bow.arrowType();
+				
+				Arrow arrow;
+				
+				if(arrowType.equals(Arrow.class)) { // no arrow type selected
+					arrow = belongings.getItem( Arrow.class );
+				} else {
+					arrow = belongings.getItem( arrowType );
+					if (arrow == null) {
+						arrow = belongings.getItem( Arrow.class );
+					}
+				}
+				
+				if(arrow != null) { // We have arrows!
+					arrow.cast(this, enemy.pos);
+					ready();
+					return false;
+				} //no arrows? just get closer...
+				getCloser(enemy.pos);
+				return true;
+			}
 			
 			if(Level.adjacent(pos, enemy.pos)) {
 				spend( attackDelay() );
 				getSprite().attack( enemy.pos );
 				
 				return false;
-			} else {
-				if ( bowEquiped() ) {
-					Bow bow = (Bow) belongings.weapon;
-					
-					Class <? extends Arrow> arrowType = bow.arrowType();
-					
-					Arrow arrow;
-					
-					if(arrowType.equals(Arrow.class)) { // no arrow type selected
-						arrow = belongings.getItem( Arrow.class );
-					} else {
-						arrow = belongings.getItem( arrowType );
-						if (arrow == null) {
-							arrow = belongings.getItem( Arrow.class );
-						}
-					}
-					
-					if(arrow != null) { // We have arrows!
-						arrow.cast(this, enemy.pos);
-						ready();
-						return false;
-					} //no arrows? just get closer...
-					
-				}
 			}
 		} 
 			
