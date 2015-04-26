@@ -76,12 +76,15 @@ public class PixelScene extends Scene {
 	public static BitmapText.Font font1x;
 	public static BitmapText.Font font;
 
+	
+	
 	@Override
 	public void create() {
 
 		super.create();
-
+		
 		float minWidth, minHeight;
+		
 		if (PixelDungeon.landscape()) {
 			minWidth = MIN_WIDTH_L;
 			minHeight = MIN_HEIGHT_L;
@@ -337,7 +340,7 @@ public class PixelScene extends Scene {
 			userScale = -0.7f;
 		}
 
-		scale = (1 + userScale) / defaultZoom * 2;
+		scale = (1 + userScale)/3;
 	}
 
 	public static BitmapText createText(float size) {
