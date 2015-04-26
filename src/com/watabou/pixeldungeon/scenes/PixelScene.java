@@ -238,7 +238,7 @@ public class PixelScene extends Scene {
 		Bitmap bitmap = createBitmapFromFont(Game.instance().getAssets(),
 				"Roboto-Regular.ttf", BitmapText.Font.ALL_CHARS, size,
 				metrics, shifts, fontHeight);
-
+/*
 		File storageDir = Game.instance().getExternalFilesDir(null);
 		File file = new File(storageDir, "tst.png");
 
@@ -279,7 +279,7 @@ public class PixelScene extends Scene {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} // do not forget to close the stream
-
+*/
 		font = Font.createEmptyFont(bitmap);
 
 		Iterator<Entry<Object, RectF>> it = metrics.entrySet().iterator();
