@@ -106,7 +106,7 @@ public enum HeroClass {
 		
 		hero.collect(new Dagger().upgrade().identify());
 		hero.collect(new CommonArrow(20));
-		
+
 		QuickSlot.cleanStorage();
 		
 	}

@@ -73,6 +73,9 @@ public class StartScene extends PixelScene {
 	private static final String TXT_UNLOCK = Game
 			.getVar(R.string.StartScene_Unlock);
 
+	private static final String TXT_UNLOCK_ELF = Game
+			.getVar(R.string.StartScene_UnlockElf);
+	
 	private static final String TXT_WIN_THE_GAME = Game
 			.getVar(R.string.StartScene_WinGame);
 
@@ -91,7 +94,10 @@ public class StartScene extends PixelScene {
 	private GameButton btnNewGame;
 
 	private boolean huntressUnlocked;
+	private boolean elfUnlocked;
+	
 	private Group unlock;
+	private Group unlockElf;
 
 	public static HeroClass curClass;
 
@@ -206,10 +212,11 @@ public class StartScene extends PixelScene {
 
 		unlock = new Group();
 		add(unlock);
+		
+		unlockElf = new Group();
+		add(unlockElf);
 
-		// if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3
-		// ))) {
-		if (!(huntressUnlocked = true)) {
+		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3))) {
 
 			BitmapTextMultiline text = PixelScene
 					.createMultiline(TXT_UNLOCK, 9);
@@ -229,6 +236,25 @@ public class StartScene extends PixelScene {
 			}
 		}
 
+		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4))) {
+			BitmapTextMultiline text = PixelScene
+					.createMultiline(TXT_UNLOCK_ELF, 9);
+			text.maxWidth = (int) width;
+			text.measure();
+
+			float pos = (bottom - BUTTON_HEIGHT)
+					+ (BUTTON_HEIGHT - text.height()) / 2;
+			for (BitmapText line : text.new LineSplitter().split()) {
+				line.measure();
+				line.hardlight(0xFFFF00);
+				line.x = PixelScene.align(w / 2 - line.width() / 2);
+				line.y = PixelScene.align(pos);
+				unlockElf.add(line);
+
+				pos += line.height();
+			}
+		}
+		
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(Camera.main.width - btnExit.width(), 0);
 		add(btnExit);
@@ -259,42 +285,50 @@ public class StartScene extends PixelScene {
 		}
 		shields.get(curClass = cl).highlight(true);
 
-		if (cl != HeroClass.HUNTRESS || huntressUnlocked) {
-
-			unlock.visible = false;
-
-			GamesInProgress.Info info = GamesInProgress.check(curClass);
-			if (info != null) {
-
-				btnLoad.visible = true;
-				btnLoad.secondary(Utils.format(TXT_DPTH_LVL, info.depth,
-						info.level));
-
-				btnNewGame.visible = true;
-				btnNewGame.secondary(TXT_ERASE);
-
-				float w = (Camera.main.width - GAP) / 2 - buttonX;
-
-				btnLoad.setRect(buttonX, buttonY, w, BUTTON_HEIGHT);
-				btnNewGame.setRect(btnLoad.right() + GAP, buttonY, w,
-						BUTTON_HEIGHT);
-
-			} else {
-				btnLoad.visible = false;
-
-				btnNewGame.visible = true;
-				btnNewGame.secondary(null);
-				btnNewGame.setRect(buttonX, buttonY, Camera.main.width
-						- buttonX * 2, BUTTON_HEIGHT);
-			}
-
-		} else {
-
+		if ((cl == HeroClass.HUNTRESS && !huntressUnlocked)) {
 			unlock.visible = true;
+			unlockElf.visible = false;
 			btnLoad.visible = false;
 			btnNewGame.visible = false;
-
+			return;
 		}
+		
+		if ((cl == HeroClass.ELF && !elfUnlocked)) {
+			unlock.visible = false;
+			unlockElf.visible = true;
+			btnLoad.visible = false;
+			btnNewGame.visible = false;
+			return;
+		}
+		
+		unlock.visible = false;
+		unlockElf.visible = false;
+
+		GamesInProgress.Info info = GamesInProgress.check(curClass);
+		if (info != null) {
+
+			btnLoad.visible = true;
+			btnLoad.secondary(Utils.format(TXT_DPTH_LVL, info.depth,
+					info.level));
+
+			btnNewGame.visible = true;
+			btnNewGame.secondary(TXT_ERASE);
+
+			float w = (Camera.main.width - GAP) / 2 - buttonX;
+
+			btnLoad.setRect(buttonX, buttonY, w, BUTTON_HEIGHT);
+			btnNewGame.setRect(btnLoad.right() + GAP, buttonY, w,
+					BUTTON_HEIGHT);
+
+		} else {
+			btnLoad.visible = false;
+
+			btnNewGame.visible = true;
+			btnNewGame.secondary(null);
+			btnNewGame.setRect(buttonX, buttonY, Camera.main.width
+					- buttonX * 2, BUTTON_HEIGHT);
+		}
+
 	}
 
 	private void startNewGame() {
