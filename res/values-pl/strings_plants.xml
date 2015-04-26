@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">Roslina</string>
+  <string name="Plant_Info">Rzuc nasieniem w jakies miejsce, by wyrosla roslina %1$s.\n\n%2$s</string>
+  <string name="Plant_Seed">nasiona %s</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">Senne Drzewo</string>
+  <string name="Dreamweed_Desc">Po dotknieciu Sennego Drzewa ulotni sie gaz...</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">Korzen</string>
+  <string name="Earthroot_Desc">Gdy istota dotknie Korzenia, to jego pancerz zostaje naturalnie wzmocniony po przez sile natury.</string>
+  <string name="Earthroot_Buff">Zbroja z Herballu</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">Nie znane... ale moze byc CIekawe</string>
+  <string name="Fadeleaf_Desc">Dotknięcie Fadeleaf przeniesie każdą istotę na losowym miejscu na obecnym poziomie.</string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">plonaca roslina</string>
+  <string name="Firebloom_Desc">Jezeli ktos dotknie rosliny wyhodowanej w ogni piekielnym, stanie w plomieniu!</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">Lodowate... cos.</string>
+  <string name="Icecap_Desc">Po dotyknieciiu ICECAP wydala się pyłek , który zamraża wszystko, co jest w obrebie lochu.</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">Nieznana Roslina</string>
+  <string name="Sorrowmoss_Desc">(Nieznana Roslina) - po jej dotknieciu wydziela sie smierteln jad..</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">Rumianek</string>
+  <string name="Sungrass_Desc">Rumianek, znany z wlasciwosci leczniczych</string>
+  <string name="Sungrass_Buff">Ziolo Ktore Wyleczy Twoje rany</string>
+</resources>

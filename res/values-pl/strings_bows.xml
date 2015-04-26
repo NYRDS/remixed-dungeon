@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">Luk jest bezuzyteczny (dla wszystkich procz elfow ) na krotki dystans.\n\n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">Drewniany luk.</string>
+  <string name="WoodenBow_Info">TEn Luk moze by przydatny, gdy tylko znajdziesz odpowiednie strzaly.</string>
+  <string name="WoodenBow_Gender">meski</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">Mieszany luk</string>
+  <string name="CompoundBow_Info">Strzaly, wyrzucane z Mieszanego Luku daja calkiem niezle obrazenia !</string>
+  <string name="CompoundBow_Gender">meski</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Name">Rubinowy Luk</string>
+  <string name="RubyBow_Info">Tylko najwieksi Lucznicy moga korzystac z Rubinowego Luku. Prawie kazda strzala przebija pancerz wroga raniac go. By uzywac ten Luk musisz miec duzo sily!</string>
+  <string name="RubyBow_Gender">meski</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">Futeral na Strzaly</string>
+  <string name="Quiver_Info"></string>
+  <string name="Quiver_Gender">meski</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">ognisty futerał na Strzaly</string>
+  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Gender">meski</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">Zatruty Futeral</string>
+  <string name="PoisonQuiver_Info"></string>
+  <string name="Poisonuiver_Gender">meski</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">paralizujacy Futeral</string>
+  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Gender">meski</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">strzala</string>
+  <string name="CommonArrow_Info">Drewniana strzala ze stalowym grotem</string>
+  <string name="CommonArrow_Gender">kobiecy</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">ognista strzala</string>
+  <string name="FireArrow_Info">Ta strzala wyglada tak pieknie, a grot swieci niczym slonce</string>
+  <string name="FireArrow_Gender">kobiecy</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">trujaca strzala</string>
+  <string name="PoisonArrow_Info">Smiertelna Trucizna !</string>
+  <string name="PoisonArrow_Gender">kobieca</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">paralizujaca strzala</string>
+  <string name="ParalysisArrow_Info">Ta strzala rozprzestrzenia swoj obrzydliwy zapach</string>
+  <string name="ParalysisArrow_Gender">kobiecy</string>
+</resources>

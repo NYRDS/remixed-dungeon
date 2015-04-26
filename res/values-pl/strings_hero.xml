@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">Ty</string>
+  <string name="Hero_Name_Objective">Ty</string>
+  <string name="Hero_Leave">Nie tak latwo jest opuscic Pixel Dungeon.</string>
+  <string name="Hero_LevelUp">Poziom Wyzej!</string>
+  <string name="Hero_NewLevel">Zapraszamy do poziomu %d! Teraz jestes zdrowszy i bardziej skoncentrowany . Nawet łatwiej trafić wrogów i unikac ich atakow </string>
+  <string name="Hero_YouNowHave">Teraz masz %s</string>
+  <string name="Hero_SomethingElse">Tu jest co jeszcze....</string>
+  <string name="Hero_LockedChest">Ta skrzynka jest zamknieta, a Ty nie masz do niej klucza,</string>
+  <string name="Hero_LockedDoor">Nie masz zadnego klucza</string>
+  <string name="Hero_NoticedSmth">Zauwazyles cos....</string>
+  <string name="Hero_Wait">... - . - ...</string>
+  <string name="Hero_Search">szukasz</string>
+  <string name="Hero_StaBurning">Zostales podpalony</string>
+  <string name="Hero_StaParalysis">Zostales sparalizowany</string>
+  <string name="Hero_StaPoison">Zostales Otruty !</string>
+  <string name="Hero_StaOoze">Jakis obrzydliwy sluz zjada po woli Twoje Cialo, natychmiast zmyj to !</string>
+  <string name="Hero_StaRoots">Nie mozesz sie ruszyc!</string>
+  <string name="Hero_StaWeakness">Czujesz zmeczenie</string>
+  <string name="Hero_StaBlindness">Jestes Oslepiony</string>
+  <string name="Hero_StaFury">JEstes Wsciekly</string>
+  <string name="Hero_StaFurious">Wscieklosc</string>
+  <string name="Hero_StaCharm">Jestes... Jakis tępy.</string>
+  <string name="Hero_StaCripple">Jestes Wystraszony</string>
+  <string name="Hero_StaBleeding">Krwawisz !</string>
+  <string name="Hero_StaVertigo">Wszystko kreci sie wokol Ciebie.!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">Wojownik</string>
+  <string name="HeroClass_Mag">Mag</string>
+  <string name="HeroClass_Rog">Zabojca</string>
+  <string name="HeroClass_Hun">Lowca</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Wojownik posiada na poczatku 11 Sily.</item>
+    <item>Wojownik posiada na poczatku krotki miecz. Mozna go poswiecic do ulepszenia innej broni.</item>
+    <item>Wojownik jest wrazliwy na pociski z magii oraz broni dystansowej.</item>
+    <item>Kazdy kawalek miesa regeneruje punkty zycia.</item>
+    <item>Mikstura SIly jest dostepna od poczatku.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Mag na start Otrzymuje bardzo rzadka Rozdzke. Moze potem zostac poswiecona by ulepszyc inna bron.</item>
+    <item>Mag laduje szybciej rozdzke.</item>
+    <item>Kiedy jemy, to kazda rozdzka w ekwipunku laduje sie o 1 stopien.</item>
+    <item>Magnie moze uzywac broni bialej.</item>
+    <item>Skrol identyfikacji jest odkryta na samym poczatku.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Zabojca dostaje na start Pierscien Cieni+1</item>
+    <item>Zabojca identyfikuje pierscienie tuz po nalozeniu.</item>
+    <item>Zabjcy przy lekkiej zbroji latwiej unikaja obrazenia.</item>
+    <item>Zabojcy sa biegli w otkrywaniu tajemniczych drzwi.</item>
+    <item>Zabojcy nie musza czesto jesc</item>
+    <item>Skrol Mapy jest od razu odkodowany.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Lowca posiada 15 punktow zycia na start.</item>
+    <item>Lowca posiada unikatowy bumerang!.</item>
+    <item>Lowca jest zajebisty w uzywaniu broni dystasowej. Dodatkowo otrzymasz bonus od nadmiernej sily </item>
+    <item>Lowca zdobywa wiecej zycia z wody lisci .</item>
+    <item>Lowca wyczuwa zblizajace sie potwory nawet gdy ich nie widzi.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladiator</string>
+  <string name="HeroSubClass_DescGlad">Udat atakk z bialej broni przez _Gladiatora_ uruchamia combo, ktore przy kazdym kolejnym trafieniu uderza mocniej!</string>
+  <string name="HeroSubClass_NameBers">berserker</string>
+  <string name="HeroSubClass_DescBers">Gdy zostaje Ciezko Ranny _berserker_ Staje sie nie do pokonania podczas furii!</string>
+  <string name="HeroSubClass_NameWarL">Warlock</string>
+  <string name="HeroSubClass_DescWarL">Po zabiciu wroga _Warlock_ wysysa dusze i leczy swoje rany regenerujac glod!</string>
+  <string name="HeroSubClass_NameBatM">Bitewny Mag</string>
+  <string name="HeroSubClass_DescBatM">Podczas walki z różdżką w ręku ,_Bitewny Mag_ zadaje dodatkowe obrażenia w zależności od aktualnej liczby ładunków . Każde trafienie przywraca 1 ładunek do tej różdżki .</string>
+  <string name="HeroSubClass_NameAssa">assassin</string>
+  <string name="HeroSubClass_DescAssa">Przeprowadzając atak z zaskoczenia ,_Assassin_ zadaje dodatkowe obrażenia do swojego celu.</string>
+  <string name="HeroSubClass_NameFreR">freerunner</string>
+  <string name="HeroSubClass_DescFreR">_Freerunner_ Może poruszać się prawie dwa razy szybciej , niż większość potworów . Kiedy biegnie ,Freerunner jest znacznie trudniejsze do trafienia. Do tego musi być nieobciążony i nie głoduje .</string>
+  <string name="HeroSubClass_NameSnip">snajper</string>
+  <string name="HeroSubClass_DescSnip">_Snipers_ są w stanie wykryć słabe punkty w zbroi wroga , skutecznie ignorując go przy użyciu broni dystansowej .</string>
+  <string name="HeroSubClass_NameWard">Opiekun</string>
+  <string name="HeroSubClass_DescWard">Posia Poteza moc Natury _Opiekun_  Posiada zdolność do gromadzenia sily z nasion roślin . Deptanie po wysokiej trawie przyznaje mu tymczasowy pancerz!</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/Wands-->
+  <!--STRINGS OF Wand CLASS-->
+  <string name="Wand_Name">%s rozdzka</string>
+  <string name="Wand_ACZap">Uderz</string>
+  <string name="Wand_Wood">Ta cienka %s rozdzka jest ciepla w dotyku... Czyzby rzucala ogniem?</string>
+  <string name="Wand_Damage">Uzywany do walki wrecz sila uderzenia wynosi  %d .</string>
+  <string name="Wand_Weapon">Nie mozesz uzyc tej rozdzki, to jest bron biala!</string>
+  <string name="Wand_Fizzles">Twoja ROZDZJA Frizzles; mus zostac naladowana !</string>
+  <string name="Wand_SelfTarget">Nie mozesz uzyc na sobie.</string>
+  <string name="Wand_Prompt">Wybierz punkt uderzenia</string>
+  <string-array name="Wand_Wood_Types">
+    <item>swietosc</item>
+    <item>yew</item>
+    <item>ebonitowe</item>
+    <item>wisniowe</item>
+    <item>teak</item>
+    <item>rowan</item>
+    <item>willow</item>
+    <item>mahogany</item>
+    <item>bamboo</item>
+    <item>purpurowe serce</item>
+    <item>oak</item>
+    <item>birch</item>
+  </string-array>
+  <!--STRINGS OF WandOfAmok CLASS-->
+  <string name="WandOfAmok_Name">Rozdzka Amok</string>
+  <string name="WandOfAmok_Info">Fioletowe światło z tej różdżki będzie docelowo atakowanic przypadkowych wrogow w jego pobliżu .</string>
+  <string name="WandOfAmok_Info1">nic szczegolnego sie nie dzieje</string>
+  <!--STRINGS OF WandOfAvalanche CLASS-->
+  <string name="WandOfAvalanche_Name">Rozdzka Lawiny Kamieni</string>
+  <string name="WandOfAvalanche_Info">Uderzenie w sciane, zapore czy cokolwiek innego.... powoduje lawine kamieni</string>
+  <string name="WandOfAvalanche_Info1">Ty idioto, zabiles samego siebie!</string>
+  <!--STRINGS OF WandOfBlink CLASS-->
+  <string name="WandOfBlink_Name">Rozdzka Migotania</string>
+  <string name="WandOfBlink_Info">Ta różdżka pozwala teleportować się w wybranym kierunku</string>
+  <!--STRINGS OF WandOfDisintegration CLASS-->
+  <string name="WandOfDisintegration_Name">Rożdzka o dziwnych wlasciwosciach</string>
+  <string name="WandOfDisintegration_Info">Wiozka promienia ktora razi wszystkie potwory jesli sa obok siebie! uwazaj ! nie uzywaj jej w wodzie!</string>
+  <!--STRINGS OF WandOfFirebolt CLASS-->
+  <string name="WandOfFirebolt_Name">Rozdzka Ognistego wzroku</string>
+  <string name="WandOfFirebolt_Info">Ta różdżka uwalnia wybuchy magicznego ognia </string>
+  <string name="WandOfFirebolt_Info1">Zabiles sam siebie... </string>
+  <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="WandOfFlock_Name">Przywolanie Trzody</string>
+  <string name="WandOfFlock_Info">Przwoluje stado owiec.</string>
+  <string name="Sheep_Name">owca</string>
+  <string name="Sheep_Name_Objective">owca</string>
+  <string name="Sheep_Gender">kobiecy</string>
+  <string name="Sheep_Desc">Tej owcy nie mozna zabic. Bedzie ona stala poki nie zniknie...</string>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>Baa!</item>
+    <item>Baa?</item>
+    <item>Baa.</item>
+    <item>Baa...</item>
+    <item>Bee...</item>
+    <item>Ble...</item>
+  </string-array>
+  <!--STRINGS OF WandOfLightning CLASS-->
+  <string name="WandOfLightning_Name">Rozdzka Swiatla</string>
+  <string name="WandOfLightning_Info">Rozdzka potrafi zranic wszystkie demony ktore sa obok siebie.</string>
+  <string name="WandOfLightning_Info1">Zabiles sam siebie </string>
+  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_Name">Rozdzka Elektrycznych Pociskow</string>
+  <string name="WandOfMagicMissile_Info">Powoduje umiarkowane obrazenia!</string>
+  <string name="WandOfMagicMissile_ACDisenchant">Odczrowac</string>
+  <string name="WandOfMagicMissile_Info1">Znowu zostales zabity przez samego siebie</string>
+  <string name="WandOfMagicMissile_SelectWand">Wybierz Rozdzke do ulepszenia</string>
+  <string name="WandOfMagicMissile_Desinchanted">Twoja rozdzka zostala zurzyta.. uzyj jej na czym innym albo wsadz w dupe sobie %s</string>
+  <!--STRINGS OF WandOfPoison CLASS-->
+  <string name="WandOfPoison_Name">Berło Trucizny!</string>
+  <string name="WandOfPoison_Info">Podmuch wiatru moze naladowac te rozdzke jadem drzew.... Uwaga BARDZO NIEBEZPIECZNE</string>
+  <string name="WandOfPoison_Info1">nic szczegolnego sie nie dzieje</string>
+  <!--STRINGS OF WandOfRegrowth CLASS-->
+  <string name="WandOfRegrowth_Name">Rozdzka o wlasciwosciach Ziemnych</string>
+  <string name="WandOfRegrowth_Info">\"Gdy stracisz sens zycia, Nie rzucaj sie w odchlan... po pr ostu biegnij dalej az dechniesz i szczury zjedza Twoje cialo !!!\"</string>
+  <string name="WandOfRegrowth_Info1">nic szczegolnego sie nie dzieje</string>
+  <!--STRINGS OF WandOfSlowness CLASS-->
+  <string name="WandOfSlowness_Name">Rozdzka Korzeni</string>
+  <string name="WandOfSlowness_Info">Rozdzka Korzenia spowolni atak i ruch przeciwnika</string>
+  <string name="WandOfSlowness_Info1">nic szczegolnego sie nie dzieje</string>
+  <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <string name="WandOfTelekinesis_Name">Rozdzka Telekinezy</string>
+  <string name="WandOfTelekinesis_Info">Fale magiczne siły z tej różdżki mają wpływ na wszystkie komórki ludzkie i demonowa i w jakis sposob wykrywa polapki.</string>
+  <string name="WandOfTelekinesis_YouNowHave">Tajemnicze sily tleportuja %s do Twojego Plecaka</string>
+  <!--STRINGS OF WandOfTeleportation CLASS-->
+  <string name="WandOfTeleportation_Name">Rozdzka Teleportacji</string>
+  <string name="WandOfTeleportation_Info">Powiew tej różdżki teleportuje stwora mimo jego woli do przypadkowym miejsca na obecnym poziomie .</string>
+  <string name="WandOfTeleportation_Info1">%1$s teleportowany %2$s gdziekolwiek</string>
+  <string name="WandOfTeleportation_Info2">nic szczegolnego sie nie dzieje</string>
+</resources>

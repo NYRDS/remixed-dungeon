@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">Twoja %s zadaje Ci ból.</string>
+  <string name="Armor_Identify">Jestes teraz na dobrym tropie by poznac %1$s zidentyfikowac to. Udalo sie, to jest  %2$s.</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">Rożne rodzaje magii zaklnela sie w tej zbroi. Uwazaj !</string>
+  <string name="Armor_Info1">Ten przedmit %1$s pozwali Ci zaabsorbowac czesc obrazen \"%2$d\"  przy kazdym ataku.</string>
+  <string name="Armor_Info2">
+\n\nPoniewaz jestes nie wystarczajaco silny Twoja obrona zostaje zmniejszona. </string>
+  <string name="Armor_Info3">
+\n\nPoniewaz ta zbroja jest nie odpowiednia dla Ciebie to zmniesza poziom Twojej umiejetnosci obrony.</string>
+  <string name="Armor_Info4">
+\n\nTypowol %1$s zapewnia absporbcje obrazen do %2$d punktow ataku %3$d i wymaga sporo sily.</string>
+  <string name="Armor_Info5">Prawdopodobnie ta zbroja jest zbyt ciezka dla Ciebie.</string>
+  <string name="Armor_Info6">Artefakt ktorego efekty  sa losowe. Uwazaj !</string>
+  <string name="Armor_Info7a">
+\n\nMasz na Sobie %1$s%2$s.</string>
+  <string name="Armor_Info7b">, i poniewaz jest to przeklete, a ty jestes bezsilny. Natychmiast wyjeb to !</string>
+  <string name="Armor_Info8">
+\n\nMozesz czuc czarna magie, ktora zbliza sie do Ciebie %s.</string>
+  <string name="Armor_Glyph">glif</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">To wszystko wyglada zajebiscie!</string>
+  <string name="ClassArmor_LowHealt">Twoje punkty zycia sa niskie !</string>
+  <string name="ClassArmor_NotEquipped">Gdy bedziesz mial na sobie te szczegolna zbroje, to wykorzystasz swoja cala moc!</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">Tkana Zbroja</string>
+  <string name="ClothArmor_Desc">Ta lekka zbroja oferuje bardzo dobra obrone.</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">plaszcz lowcy</string>
+  <string name="HuntressArmor_Desc">Lowca w takim plaszczu moze wyrzucic kilka ostrzy na raz ! Kazdy z Tych nozy jest skierowany we wroga w obrebie wzroku. Obrazenia zaleza od broni trzymanej w dloni.</string>
+  <string name="HuntressArmor_ACSpecial">DEMONICZNE OSTRZE</string>
+  <string name="HuntressArmor_NoEnemies">Brak wrogow w zasiegu wzroku, boja sie - to dobry znak.</string>
+  <string name="HuntressArmor_NotHuntress">Tylko lowca jest w stanie uzyc tej zbroji!</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">To Tylko Skorzana zbroja.</string>
+  <string name="LeatherArmor_Desc">Zbroja stworzona ze skory potwora, nie jest zbyt lekka, ale stanowi dobra obrone.</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">Szata Maga</string>
+  <string name="MageArmor_Desc">Noszac te szate, Mag moze rzucic zalecie na wszystkich wrogow podpalajac ich, lecz przy tym sam nie moze sie ruszyc.</string>
+  <string name="MageArmor_ACSpecial">Stopina Ziemia, Lawa? </string>
+  <string name="MageArmor_NotMage">Tylko Magowie moga zalozyc te zbroje!</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">łuskana Zbroja</string>
+  <string name="MailArmor_Desc">Wzrok potworow powoduje ze ta zbroja jest Twarda ale elastyczna.</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">platynowa zbroja</string>
+  <string name="PlateArmor_Desc">Zbroja polaczona z garniturem wyszyta ze stali diabla, zapewnia prawidlowa obrone dla kazdego podroznika tego swiata. </string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">Stroj Zabojcy</string>
+  <string name="RogueArmor_Desc">Noszenie tego stroju powoduje ze zabijca dostaje umiejetnosc \"dymna bomba\" (mimo ze nie posiada zadnych ladunkow wybuchowych); - oslepia wrogow !</string>
+  <string name="RogueArmor_ACSpecial">Bomba dymna</string>
+  <string name="RogueArmor_NotRogue">Tylko Zabojca moze uniesc ten armor!</string>
+  <string name="RogueArmor_Fov">Możesz przeskoczyć tylko w pustym miejscu aby w zasiegu wzroku.</string>
+  <string name="RogueArmor_Prompt">Wybiesz lokalizacje by skoczyc.</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">Scalona Zbroja</string>
+  <string name="ScaleArmor_Desc">Material Scalany na te zboroje sa szyte na skorzanej kamizelce. Potrafia dobrze obronic.</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">wojownicza, zbroja</string>
+  <string name="WarriorArmor_Desc">MImo ze zbroja wyglada ciezko, potrafi dobrze zaskoczyc... Skok w kierunku wroga potrafi ogluszyc i oslepic wrogow do-okola!</string>
+  <string name="WarriorArmor_ACSpecial">Heroiczny Leap</string>
+  <string name="WarriorArmor_NotWarrior">Tylko prawdziwy wojownik moze uniesc te zbroje!</string>
+  <string name="WarriorArmor_Prompt">wybierz kierunek skoku</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">%s effektu</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">%s nie znane efekty</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">%s odbicie</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">%s przemieszczenie</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">%s splatanie</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">%s metabolizm</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">%s klonowanie</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">%s zwiekszenie potecjalu</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">%s Sily</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">%s lepkosci</string>
+  <string name="Viscosity_Status">obnizowny %d</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Zmnieszenie Ataku (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s zajebali Cie</string>
+</resources>

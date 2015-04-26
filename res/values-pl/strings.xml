@@ -1,0 +1,449 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">Pixel Dungeon Remix</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">Wielu bohaterow w poszukiwaniu cennych artefaktow nie moglo sie doczekac gdy wejda do lochu... podejma wyzwanie w zdobyciu najcenniejszego artegfaktu Amuletu Yerdota , w glebi duszy uwazali ze jest to proste zadanie .\n\nAle nigdy z tamtąd nie wrocili...</string>
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Exit">Powiedzmy ze wlasnie mina dzien..</string>
+  <string name="AmuletScene_Stay">Nie skonczylem Jeszcze</string>
+  <string name="AmuletScene_Txt">Masz ! Masz go w reku ! Amulet Yerdoow ! udalo ci sie... TEraz swiat jest moj ! TYLKO MOJ !! huauahauhahaaa !!!!</string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Witamy na levelu %d gry Pixel Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Witamy spowrotem na poziomie %d of Pixel Dungeon!</string>
+  <string name="GameScene_NightMode">Bądź ostrożny , ponieważ lochy sa jeszcze bardziej niebezpieczne w nocy </string>
+  <string name="GameScene_Chasm">slychac echo gdy tylko chodzisz!</string>
+  <string name="GameScene_Water">Słychać plusk wody wokół ciebie .
+</string>
+  <string name="GameScene_Grass">Czuje smrud gnijacego miesa</string>
+  <string name="GameScene_Secrets">Atmosfera podpowiada , że podłoga skrywa wiele tajemnic </string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">MOB</string>
+  <string name="Char_Name_Objective">MOB</string>
+  <string-array name="Char_Hit">
+    <item>%1$s hit %2$s</item>
+    <item>%1$s hit %2$s</item>
+    <item>%1$s hit %2$s</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s zabilo ciebie...</item>
+    <item>%s zabilo ciebie...</item>
+    <item>%s zabilo ciebie...</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s pokonany %2$s</item>
+    <item>%1$s pokonany %2$s</item>
+    <item>%1$s pokonany %2$s</item>
+  </string-array>
+  <string name="Char_YouMissed">%1$s %2$s Twoj Atak</string>
+  <string name="Char_SmbMissed">%1$s %2$s %3$s\'s atack</string>
+  <string name="Char_OutParalysis">Czuje bol %s z paralizowany jestem!</string>
+  <string-array name="Char_StaDodged">
+    <item>unik</item>
+    <item>unik</item>
+    <item>unik</item>
+  </string-array>
+  <string name="Char_StaPoisoned">Zatruty </string>
+  <string name="Char_StaAmok">amok</string>
+  <string name="Char_StaSlowed">spowolniony</string>
+  <string name="Char_StaMind">umysl</string>
+  <string name="Char_StaVision">wizja</string>
+  <string name="Char_StaParalysed">sparalizowany</string>
+  <string name="Char_StaFrightened">Przestraszony</string>
+  <string name="Char_StaRooted">zgnite</string>
+  <string name="Char_StaCrippled">wystraszony</string>
+  <string name="Char_StaBleeding">Krwawie !</string>
+  <string name="Char_StaDizzy">Oszolomiony</string>
+  <string name="Char_StaInvisible">Niewidzilanosc</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">Ten Tekst jest niesamowicie ciekawy..</string>
+  <string name="Dungeon_DeadEnd">Co ty tutaj kurwa robisz?</string>
+  <string-array name="Dungeon_Tips">
+    <item>Nie należy przeceniać swoje siły.</item>
+    <item>Nie wszystkie drzwi w lochu są widoczne na pierwszy rzut oka . Jeśli utkniesz , szukać ukrytych drzwi.</item>
+    <item>Podniesienie sly to nie tylko lewel... mozeszposzukac Zwoju ktory zrobi to szybciej.</item>
+    <item>mozesz wydac swoje zloto w sklepach. pierwszy z nich znajduje siena 6 poziomiel.</item>
+    <item>Uwazaj na  Goo!</item>
+    <item>Pixel-Mart -To wszystko co potrzebujesz do udanej przygody!</item>
+    <item>Identyfikuj przedmioty i leikisty.. pomoga Ci w podrozy.</item>
+    <item>Gdy jestes glodny badz zmeczony zjedz cos !.</item>
+    <item>Atak jest wiekszy gdy zaskoczysz pzeciwnika.</item>
+    <item>Nie lekcewaz niczego!</item>
+    <item>Pixel-Mart. Zbieraj hajs by dluzej zyc.</item>
+    <item>Uwazaj na pulapki.</item>
+    <item>Jesli lewitujesz nie lataj zbyt dlugo nad przepascia.</item>
+    <item>Odnawiaj sie co chwile w ogrodzie.</item>
+    <item>Po kazdej smierci tracisz wszystko wiec kupuj Ankh!</item>
+    <item>Pixel-Mart. Graj az do smierci swoich wrogown.</item>
+    <item>When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.</item>
+    <item>Zycze milej gry. Darax1991.</item>
+    <item>Tlumaczenie za posrednictwem Remix Pixel D</item>
+    <item>Sporo Godzin To Tlumaczylem wiec uszanuj to</item>
+    <item>Pixel-Mart. info biuro.piotr.pietrucha na g mail.!</item>
+    <item>The text is written in demonic language.</item>
+    <item>The text is written in demonic language.</item>
+    <item>The text is written in demonic language.</item>
+  </string-array>
+  <!--STRINGS OF Assets CLASS-->
+  <string name="Assets_Prefix"></string>
+  <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>na dziecie</item>
+    <item>Wiara jest moja zbroja!</item>
+    <item>Czuje strach..</item>
+    <item>Jałowa ziemia</item>
+    <item>Cos co posiada mozg</item>
+    <item>w ciemnosci</item>
+  </string-array>
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_WellHealt">Zdrowo!</string>
+  <string name="Journal_WellAwareness">Masz Swiadomosc?</string>
+  <string name="Journal_WellTransmut">Transmutacja</string>
+  <string name="Journal_Alchemy">Alchemiczna Mikstura</string>
+  <string name="Journal_Garden">Ogrod</string>
+  <string name="Journal_Statue">Zywa Statula</string>
+  <string name="Journal_Ghost">smutny duch</string>
+  <string name="Journal_Wandmaker">Stary Ki\'i</string>
+  <string name="Journal_Troll">Dziwny Kowal</string>
+  <string name="Journal_Imp">Ambitny Demon</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Prompt">Ok. Spoko Umowa stoi.. Co moge Dla Ciebie zrobic?? Daj 2 takie same pozycje.. a z nich zrobie jedna mocniejsza!</string>
+  <string name="WndBlacksmith_Select">Wybierz przedmiot by ulepszyc</string>
+  <string name="WndBlacksmith_Reforge">ulepsz!</string>
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">Eliksir</string>
+  <string name="WndCatalogus_Scrolls">Zwoj</string>
+  <string name="WndCatalogus_Title">Catalogus</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <string name="WndChallenges_Title">wyzwanie</string>
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">Czy mam sledzic ?</string>
+  <string name="WndChooseWay_Cancel">Zdecydujesz pozniej</string>
+  <!--STRINGS OF WndClass CLASS-->
+  <string name="WndClass_Mastery">Mistrzostwo</string>
+  <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">Blad</string>
+  <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">Opcje</string>
+  <string name="WndGame_Challenges">Wyzwanie</string>
+  <string name="WndGame_Ranking">Ranking</string>
+  <string name="WndGame_Start">Graj od NOwa</string>
+  <string name="WndGame_menu">Moje Menu</string>
+  <string name="WndGame_Exit">Wyjdz z Pixel Dungeone ale kurwa nie radze!</string>
+  <string name="WndGame_Return">Wroc do Gry</string>
+  <!--STRINGS OF WndHero CLASS-->
+  <string name="WndHero_Stats">Status</string>
+  <string name="WndHero_Buffs">Buffs</string>
+  <string name="WndHero_Exp">Doswiadczenie</string>
+  <string name="WndHero_Str">Sila</string>
+  <string name="WndHero_Health">Zycie</string>
+  <string name="WndHero_Gold">Zebrane zloto</string>
+  <string name="WndHero_Depth">Maksymalna glebokosc</string>
+  <string name="WndHero_StaTitle">Level %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">Catalogus</string>
+  <string name="WndHero_StaJournal">Czasopismo</string>
+  <!--STRINGS OF WndImp CLASS-->
+  <string name="WndImp_Message">jestes moim bohaterem... Nie mam kasy by zaplacic.. ale..To jest mój pierścionek spadek rodziny : dziadek zabrał go wraz z palcem martwego paladyna .</string>
+  <string name="WndImp_Reward">Wez Pierscien</string>
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <string name="WndInfoCell_Nothing">Nie ma nic tutaj</string>
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">Skrznka</string>
+  <string name="WndInfoItem_LockedChest">zamknieta skrzynka</string>
+  <string name="WndInfoItem_CrystalChest">Krysztalowa skrzynka</string>
+  <string name="WndInfoItem_Tomb">Grobowiec</string>
+  <string name="WndInfoItem_Skeleton">Szczątki</string>
+  <string name="WndInfoItem_WontKnow">Nie wiem, co jest w środku</string>
+  <string name="WndInfoItem_NeedKey">Ale potrzebuje zlotego klucza</string>
+  <string name="WndInfoItem_Inside">Widzisz %s, ale musisz miec zloty klucz do otwarcia skrzyni</string>
+  <string name="WndInfoItem_Owner">Ten starożytny grób może zawierać coś pożytecznego.. ale przeraza mnie.</string>
+  <string name="WndInfoItem_Remains">To jest wszystko, co pozostało z jednego z poprzedników </string>
+  <!--STRINGS OF WndJournal CLASS-->
+  <string name="WndJournal_Title">Czasopismo</string>
+  <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Error">Nie można załadować dodatkowych informacji</string>
+  <string name="WndRanking_Stats">Stats</string>
+  <string name="WndRanking_Items">przedmioty</string>
+  <string name="WndRanking_Badges">Osiagniecie</string>
+  <string name="WndRanking_StaTitle">Level %1$d %2$s</string>
+  <string name="WndRanking_StaChallenges">wyzwanie</string>
+  <string name="WndRanking_StaHealth">Zdrowie!</string>
+  <string name="WndRanking_StaStr">SIla</string>
+  <string name="WndRanking_StaDuration">Czas Gry</string>
+  <string name="WndRanking_StaDepth">Maksymalna Glebokosc</string>
+  <string name="WndRanking_StaEnemies">Zabite Potwory</string>
+  <string name="WndRanking_StaGold">zebrane zlota</string>
+  <string name="WndRanking_StaFood">Zjedzone JEdzenie</string>
+  <string name="WndRanking_StaAlchemy">Ugotowane Eliksiry</string>
+  <string name="WndRanking_StaAnkhs">Uzytych Ankhs</string>
+  <!--STRINGS OF WndResurrect CLASS-->
+  <string name="WndResurrect_Message">Umarłeś , ale chcesz kolejną szansę na przejscie tego lochu . Weźmiesz ją ? czy pekasz?</string>
+  <string name="WndResurrect_Yes">Tak, Chce walczyc!</string>
+  <string name="WndResurrect_No">Poddaje Sie</string>
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <string name="WndSadGhost_Rose">Tak ! Tak !!! To jest to! Proszę daj mi to ! I </string>
+  <string name="WndSadGhost_Rat">W koncu moge odpoczac...</string>
+  <string name="WndSadGhost_Wepon">Bron Ducha</string>
+  <string name="WndSadGhost_Armor">Zbroja Ducha</string>
+  <string name="WndSadGhost_Farewell">Zegnaj !</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Sewers">Nikt nie będzie nazwać ze to bezpieczne miejsce , ale przynajmniej nie trzeba będzie radzić sobie z czarną magią.. Tutaj Panuja inne zasady</string>
+  <string name="WndStory_Prision">Kiedys, te podziemia byly wiezieniem dla innych zlodziei, mordecow jak i gwalcicieli.. Zas od Czasu gdy krasnolidzie sie zbuntowali... Doszlo do niewyjasnionych zjawisk..</string>
+  <string name="WndStory_Caves">Jaskinie , które rozciągają się pod opuszczonym więzieniu , są słabo zaludnione. W zasadzie strach jest zejsc nizej i zbudowac jakis dom.. Stworzyc rodzine.. kazdy by sie bal...</string>
+  <string name="WndStory_Metropolis">Metropolia Krasnoludow kiedys obiecalo przysz;ym pokoleniom ze odbudujemy miasto... gdy tylko zbuntowani straca panowanie... i gdy przyjdzie wojownik  o czystym sercu i uwolni nas... </string>
+  <string name="WndStory_Halls">nadzieja ktora nigdy w nas nie umarla... zawsze bedzie pomagac i wskazywac droge podroznikom by w koncu zakonczyc zywot demonow a pismo demonologi  spalic..</string>
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <string name="WndTradeItem_Sale">Na sprzedaz: %1$s - %2$dg</string>
+  <string name="WndTradeItem_Buy">Kup Za %dg</string>
+  <string name="WndTradeItem_Sell">sprzedaj za %dg</string>
+  <string name="WndTradeItem_Sell1">Sprzedaj 1 za %dg</string>
+  <string name="WndTradeItem_SellAll">sprzedaj wszystko za %dg</string>
+  <string name="WndTradeItem_Cancel">nie wazne</string>
+  <string name="WndTradeItem_Sold">Sprzedakes %1$s za %2$dg</string>
+  <string name="WndTradeItem_Bought">Kupiles %1$s za %2$dg</string>
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Message">Udalo Ci sie.. w Nagrode ...możesz wybrać jedną z moich wysokiej jakości różdżki .</string>
+  <string name="WndWandmaker_Battle">Bitewna Rozdzka</string>
+  <string name="WndWandmaker_NonBattle">Passywna Rozdzka</string>
+  <string name="WndWandmaker_Farawell">Powodzenia w Zadaniu, %s!</string>
+  <!--STRINGS OF QuickSlot CLASS-->
+  <string name="QuickSlot_SelectedItem">Wybierz przedmiot by umiescis w pasku</string>
+  <!--STRINGS OF Item CLASS-->
+  <string name="Item_Name">smth</string>
+  <string name="Item_Info">smth</string>
+  <string name="Item_ACDrop">Wyrzuc</string>
+  <string name="Item_ACThrow">Rzuc</string>
+  <string name="Item_PackFull">Twoj plecack jest pelny %s</string>
+  <string name="Item_DirThrow">Wybierz kierunek rzutu</string>
+  <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">Zaloz</string>
+  <string name="EquipableItem_ACUnequip">Zdejmij</string>
+  <string name="EquipableItem_Unequip">Nie mozesz zdjac ponieaz jest zatrute%s!</string>
+  <!--STRINGS OF Heap CLASS-->
+  <string name="Heap_Mimic">To jest mimic</string>
+  <!--STRINGS OF Amulet CLASS-->
+  <string name="Amulet_Name">Amulet Yendorow </string>
+  <string name="Amulet_ACEnd">Koniec Gry</string>
+  <string name="Amulet_Info">Amulet Yerdorow to mityczny artefakt skradziony Bogom przez opętanego krasnoluda</string>
+  <!--STRINGS OF Ankh CLASS-->
+  <string name="Ankh_Name">Ankh</string>
+  <string name="Ankh_Info">Ten Symbol pozwoli Ci zmartwych wstac... ale niestety bez ekwipunku.</string>
+  <!--STRINGS OF ArmorKit CLASS-->
+  <string name="ArmorKit_Name">Zestaw zbroji</string>
+  <string name="ArmorKit_ACAplly">Zatwierdz</string>
+  <string name="ArmorKit_Info">Stosując ten zestaw drobnych narzędzi i materiałów każda może przekształcić zbroję w \" epickiej zbroe \", nadal bedzie miala efekty starej zbroji</string>
+  <string name="ArmorKit_SelectArmor">Wybierz zbroje do ulepszenia</string>
+  <string name="ArmorKit_Upgraded">można zastosować zestaw zbroi , aby ulepszyc %s</string>
+  <!--STRINGS OF Dewdrop CLASS-->
+  <string name="Dewdrop_Name">dewdrop</string>
+  <string name="Dewdrop_Info">Czysty Kamien</string>
+  <!--STRINGS OF DewVial CLASS-->
+  <string name="DewVial_Name">Pusta buteleczka</string>
+  <string name="DewVial_ACDRINK">PIJ</string>
+  <string name="DewVial_Info">Można przechowywać nadmiar rosy w tym maleńkim naczyniu do picia. a nastepnie wylezyc rany</string>
+  <string name="DewVial_AutoDrink">Rosa leczy Twoje rany</string>
+  <string name="DewVial_Collected">Zebrales Rose</string>
+  <string name="DewVial_Full">Twoj flakonik jest Pelny</string>
+  <string name="DewVial_Empty">Twoj Flakonik JEst pusty</string>
+  <!--STRINGS OF Gold CLASS-->
+  <string name="Gold_Name">zloto</string>
+  <string name="Gold_Collect">Zbieraj zloto by potem je wydac w sklepie</string>
+  <string name="Gold_Info">Stos %d zlotych monet.</string>
+  <string name="Gold_Info1">Jedna zlota moneta</string>
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <string name="KindOfWeapon_EquipCursed">cos zaciska ci sie wogol.. %s</string>
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <string name="LloidsBeacon_Name">Wehikol.</string>
+  <string name="LloidsBeacon_ACSet">wybierz</string>
+  <string name="LloidsBeacon_ACReturn">Powroc</string>
+  <string name="LloidsBeacon_Info">Wehikol Pozwala Wrocic na miejsce ktore ustawiles</string>
+  <string name="LloidsBeacon_Preventing">Silna aura magiczna... a moze demoniczna.. nie pozwala uzyc mi Wehikolu</string>
+  <string name="LloidsBeacon_Creatures">Cos blokuje energie Wehikolu</string>
+  <string name="LloidsBeacon_Return">Ustawiles Wehikol, teraz mozesz spokojnie wrocic.</string>
+  <string name="LloidsBeacon_Set">\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.
+</string>
+  <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_Name">Tajemniczy Zarys</string>
+  <string name="Stylus_ACInscribe">Wpisz</string>
+  <string name="Stylus_Info">Przy tym magicznym Zarysie mozesz wpisac jakos rune badz magie.. Ale nie masz wplywu co wpiszesz.. </string>
+  <string name="Stylus_SelectArmor">Wybierz w co ma mwpisac rune!</string>
+  <string name="Stylus_Inscribed">Wpisales  %1$s w swoj %2$s</string>
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_Name">Ksiazka Mistrzostwa</string>
+  <string name="TomeOfMastery_ACRead">Gotowy</string>
+  <string name="TomeOfMastery_Info">Ciekawa gruba ksiazka..Pamiętaj jednak, że czytając ten tom może zajac trochę czasu .</string>
+  <string name="TomeOfMastery_Blinded">Jestes zaslepiony nie mozesz czytac</string>
+  <string name="TomeOfMastery_Choose">wybrales droge %s!</string>
+  <!--STRINGS OF Torch CLASS-->
+  <string name="Torch_Name">Pochodnia</string>
+  <string name="Torch_ACLight">swiatlo</string>
+  <string name="Torch_Info">Demony slabna podczas gdy loch jest oswietlony</string>
+  <!--STRINGS OF Weightstone CLASS-->
+  <string name="Weightstone_Name">Runa</string>
+  <string name="Weightstone_ACApply">Zatwierdz</string>
+  <string name="Weightstone_Info">Runa zwieksza szybkosc broni albo dokladnosc.</string>
+  <string name="Weightstone_Select">Wybierz by zbilanoswac bron</string>
+  <string name="Weightstone_Fast">Bilans spowodowal  %s wieksza szybkosc</string>
+  <string name="Weightstone_Accurate">Bilans spowodowal %s lepsza dokladnosc</string>
+  <string name="Weightstone_WndChoice">Jak zamierzasz zbalansowac to? %s?</string>
+  <string name="Weightstone_WndSpeed">Dla szybkosci</string>
+  <string name="Weightstone_WndAccuracy">Dla dokladnosci</string>
+  <string name="Weightstone_WndCancel">nie wazne</string>
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <string name="Bag_ACOpen">Otworz</string>
+  <!--STRINGS OF Keyring CLASS-->
+  <string name="Keyring_Name">Pierscien na Klucze</string>
+  <string name="Keyring_Info">Ten Brylok potrafi zachowac wszystkie klucze w 1 miejscu</string>
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <string name="ScrollHolder_Name">Tu zatrzymasz Zwoje</string>
+  <string name="ScrollHolder_Info">Możesz umieścić dowolną liczbę zwojów do tego rurowego pojemnika . </string>
+  <!--STRINGS OF SeedPouch CLASS-->
+  <string name="SeedPouch_Name">Torba nasion</string>
+  <string name="SeedPouch_Info">To małe aksamitne etui pozwala przechowywać dowolną liczbę nasion w nim . Bardzo wygodne .</string>
+  <!--STRINGS OF WandHolster CLASS-->
+  <string name="WandHolster_Name">Kabura</string>
+  <string name="WandHolster_Info">Ten smukły uchwyt jest wykonany ze skóry jakiegoś egzotycznego zwierzęcia. Pozwala na kompaktowo przewozić do %d różdżki .</string>
+  <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Info">Ta silna skórzany pas jest w stanie przechowywać wszystkie swoje mikstury , jednocześnie chroniąc je przed wstrząsające ze względu na mróz .</string>
+  <string name="PotionBelt_Name">Trujacy Bot</string>
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <string name="GoldenKey_Name">Zloty Klucz</string>
+  <string name="GoldenKey_Info">Opis jest zarzygany po przez jakies podroznika.. obrzydliwe!</string>
+  <!--STRINGS OF IronKey CLASS-->
+  <string name="IronKey_Name">Stalowy Klucz</string>
+  <string name="IronKey_Info">akie drzwi może otworzyć ? Ten Stary Klucz?</string>
+  <string name="IronKey_FromDepth">stalowy klucz z poziomu %d</string>
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <string name="SkeletonKey_Name">Klucz z Kosci</string>
+  <string name="SkeletonKey_Info">Ten klucz wygląda Zajebiscie : jego głowa ma kształt czaszki . Prawdopodobnie może otworzyć ta wielka brame</string>
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <string name="CorpseDust_Name">Pyl trupa</string>
+  <string name="CorpseDust_Info">epiej , aby się go pozbyć jak najszybcie</string>
+  <!--STRINGS OF DarkGold CLASS-->
+  <string name="DarkGold_Name">Ciemna Zimna Woda</string>
+  <string name="DarkGold_Info">Metal ten jest nazywany ciemny nie ze względu na jego kolor (nie różnią się od zwykłej złota) , ale ponieważ ulega stopieniu</string>
+  <!--STRINGS OF DriedRose CLASS-->
+  <string name="DriedRose_Name">Zdechla Roza</string>
+  <string name="DriedRose_Info">Róża wyschnięciu dawno temu, ale zachowała jakos wszystkie platki</string>
+  <!--STRINGS OF DwarfToken CLASS-->
+  <string name="DwarfToken_Name">Token Krasnoluda</string>
+  <string name="DwarfToken_Info">Kiedys Krasnoludy mialy przy sobie takie tokeny... uzywali je do bizuteri ? </string>
+  <!--STRINGS OF Pickaxe CLASS-->
+  <string name="Pickaxe_Name">Kilof</string>
+  <string name="Pickaxe_Info">Jest toduży i wytrzymały narzędzie do rozbijania skał . Prawdopodobnie mogą być stosowane jako narzędzia .</string>
+  <string name="Pickaxe_ACMine">KOP</string>
+  <string name="Pickaxe_NoVein">Do Wykuwania Ciemnego Zlota..</string>
+  <!--STRINGS OF RatSkull CLASS-->
+  <string name="RatSkull_Name">Ogromna Czacha</string>
+  <string name="RatSkull_Info">Wyglada odlotowo.. Bedize moim trofeem i powiesze go na scianie</string>
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="ConfusionGas_Info">Gaz, o kurwa.</string>
+  <!--STRINGS OF Fire CLASS-->
+  <string name="Fire_Info">Ogień szaleje tutaj .</string>
+  <!--STRINGS OF Foliage CLASS-->
+  <string name="Foliage_Info">Mrok, wszedzie MRok... ale niektore czesci lochow sa oswietlone.. jak ten ogrod</string>
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <string name="ParalyticGas_Info">Chmura gazu paralizujacego...</string>
+  <!--STRINGS OF ToxicGas CLASS-->
+  <string name="ToxicGas_Info">Chmura gazu toksycznego</string>
+  <string name="ToxicGas_Info1">Zdechles od trujacego gazu</string>
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <string name="WaterOfAwareness_Info">Moc, jasna moc emituje z tej wody.. Wezme Lyk.</string>
+  <string name="WaterOfAwareness_Procced">Po napiciu sie wody, wiem juz wszystko o swoim wyposazeniu</string>
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <string name="WaterOfHealth_Info">Moc zdrowia promieniuje z wody to dobrze. Weź łyk z niej wyleczyć swoje rany i zaspokoić głód .</string>
+  <string name="WaterOfHealth_Procced">Jak można wziąć łyk , uważasz, że rany goją się całkowicie .</string>
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <string name="WaterOfTransmutation_Info">RzuC element do studni , aby przekształcić go w coś innego.</string>
+  <!--STRINGS OF Web CLASS-->
+  <string name="Web_Info">Wszystko jest pokryte mchem..</string>
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <string name="Amok_Info">amok</string>
+  <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">Barkskin</string>
+  <!--STRINGS OF Bleeding CLASS-->
+  <string name="Bleeding_Info">Krwawie !</string>
+  <string name="Bleeding_Death">Zblizasz sie do smierci</string>
+  <!--STRINGS OF Blindness CLASS-->
+  <string name="Blindness_Info">Oslepiony</string>
+  <!--STRINGS OF Burning CLASS-->
+  <string name="Burning_Info">Ploniesz!</string>
+  <string name="Burning_Burns">%s Spalasz sie</string>
+  <string name="Burning_Death">Ploniesz .... Umrzesz!!</string>
+  <!--STRINGS OF Charm CLASS-->
+  <string name="Charm_Info">Czarodziejki</string>
+  <!--STRINGS OF Combo CLASS-->
+  <string name="Combo_Info">Kombo</string>
+  <string name="Combo_Combo">%d hit combo!</string>
+  <!--STRINGS OF Cripple CLASS-->
+  <string name="Cripple_Info">wystraszony</string>
+  <!--STRINGS OF Frost CLASS-->
+  <string name="Frost_Info">Zamrozony</string>
+  <string name="Frost_Shatter">Zimno  %s trzeba rozjebac to!</string>
+  <!--STRINGS OF Fury CLASS-->
+  <string name="Fury_Info">Wkurwienie</string>
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <string name="GasesImmunity_Info">Odporny na gazy</string>
+  <!--STRINGS OF Hunger CLASS-->
+  <string-array name="Hunger_Hungry">
+    <item>Jesteś głodny.</item>
+    <item>Jesteś głodny.</item>
+    <item>Jesteś głodny.</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>Jestes zmeczony!</item>
+    <item>Jestes zmeczony!</item>
+    <item>Jestes zmeczony!</item>
+  </string-array>
+  <string name="Hunger_Death">Umarles ze zmeczenia</string>
+  <string name="Hunger_Info1">Glodny</string>
+  <string name="Hunger_Info2">Zmeczony</string>
+  <!--STRINGS OF Invisibility CLASS-->
+  <string name="Invisibility_Info">Niewidzialny</string>
+  <!--STRINGS OF Levitation CLASS-->
+  <string name="Levitation_Info">Lewitacja</string>
+  <!--STRINGS OF Light CLASS-->
+  <string name="Light_Info">oswiecony</string>
+  <!--STRINGS OF MindVision CLASS-->
+  <string name="MindVision_Info">Wizja!</string>
+  <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Info">Sluz...</string>
+  <string name="Ooze_Death">%s zabito Ciebie</string>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string name="Paralysis_Info">sparalizowany</string>
+  <!--STRINGS OF Poison CLASS-->
+  <string name="Poison_Info">Zatruty </string>
+  <string name="Poison_Death">Zajebal cie Jad</string>
+  <!--STRINGS OF Roots CLASS-->
+  <string name="Roots_Info">zgnite</string>
+  <!--STRINGS OF Shadows CLASS-->
+  <string name="Shadows_Info">Cieniste...</string>
+  <!--STRINGS OF Slow CLASS-->
+  <string name="Slow_Info">spowolniony</string>
+  <!--STRINGS OF SnipersMark CLASS-->
+  <string name="SnipersMark_Info">Znak Snajpera</string>
+  <!--STRINGS OF Vertigo CLASS-->
+  <string name="Vertigo_Info">Zawrot Glowy</string>
+  <!--STRINGS OF Weakness CLASS-->
+  <string name="Weakness_Info">oslabiony</string>
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <string name="Belongings_Name">plecack</string>
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <string name="ItemSprite_Info1">Wyrzucony: %1$.1f %2$.1f</string>
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+  <string name="Toolbar_Info1">Nie wiadomo co to </string>
+  <string name="Toolbar_Info2">Wybierz, do badania</string>
+  <!--PACKAGE /utils-->
+  <!--STRINGS OF Utils CLASS-->
+  <!--1: Execute Indefinite Function to Language-->
+  <!--0: NO Execute Indefinite Function to Language-->
+  <string name="Utils_IsIndefinte">1</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">Srebny</string>
+  <string name="WndDonate_gold">zloty</string>
+  <string name="WndDonate_ruby">Rubinowy</string>
+  <string name="WndDonate_donate">darowizna</string>
+  <string name="WndDonate_notConnected">brak połączenia :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - free to everyone and always will be.\n\nHowever, You can help us make the game even better.\n\nIn addition to our heartfelt thanks you\'ll get some cosmetic improvements.</string>
+  <string name="WndDonate_silverDonate">srebna darowizna</string>
+  <string name="WndDonate_goldDonate">zlota darowizna</string>
+  <string name="WndDonate_rubyDonate">rubinowa darowizna</string>
+  <string name="WndDonate_silverDonateText">Kazda darowiza pomaga nam w ulepszaniu gry</string>
+  <string name="WndDonate_goldDonateText">Dziekuje Tobie za pomoc</string>
+  <string name="WndDonate_rubyDonateText">Your generosity will help us continue to improve Remixed Pixel Dungeon!</string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">standardowy</string>
+  <string name="WndPremiumSettings_silver">srebny</string>
+  <string name="WndPremiumSettings_gold">zloty</string>
+  <string name="WndPremiumSettings_ruby">rubinowy</string>
+  <string name="WndPremiumSettings_chrome">Wybierz Material</string>
+  <string name="WndPremiumSettings_status">Wybiesz status</string>
+  <string name="WndPremiumSettings_toolbar">Pasek Narzedzi</string>
+  <string name="WndPremiumSettings_notAvailbale">Ta opcja nie jest jeszcz dostępna</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">Prosze o Dotacje</string>
+  <string name="DonateButton_thanks">Dziekuje dla Supportu !</string>
+</resources>

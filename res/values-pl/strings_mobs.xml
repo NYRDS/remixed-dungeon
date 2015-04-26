@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">Prawdziwe Opisy już wkrótce</string>
+  <string name="Mob_Died">Slyszysz jak cos zdechlo nie daleko</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus">To %s jest spiace</string>
+  <string name="Mob_StaWanderingStatus">Ten %s z wedrowki przez lochy</string>
+  <string name="Mob_StaHuntingStatus">To %s jest polowanie</string>
+  <string name="Mob_StaFleeingStatus">To %s Przeczucie</string>
+  <string name="Mob_StaPassiveStatus">To %s jest Pozytywne</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">Trujacy skorpion</string>
+  <string name="Acidic_Gender">meski</string>
+  <string name="Acidic_Name_Objective">trujacy skorpion</string>
+  <string name="Acidic_Desc">Unikac wali z bliska! Te obrzydliwe pająki potrafia sparalizowac!</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">Szczur Albinos</string>
+  <string name="Albino_Gender">meski</string>
+  <string name="Albino_Name_Objective">szczur albinos</string>
+  <string name="Albino_Desc">Szczury? Eh.. One sa slabe.. zamieszkuja tylko kanaly... Moga byc groznie jednak w stadzie.</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">zwariowany bandya</string>
+  <string name="Bandit_Gender">meski</string>
+  <string name="Bandit_Name_Objective">zwariowany bandya</string>
+  <string name="Bandit_Desc">Glebokie Lochy, ukrywaja bandtow od lat... niektorzy z nich juz zapomnieli jak sie nazywaja...</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">Skrzydlo wampira</string>
+  <string name="Bat_Gender">meski</string>
+  <string name="Bat_Name_Objective">skrzydlo wampira</string>
+  <string name="Bat_Desc">Uwazaj, Moga wyssac z Ciebie zycie uzupelniajac swoje... Wiele podroznikow z lekcewazylo to...</string>
+  <string name="Bat_Defense">Omijanie</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">Ciekawe Co to jest?</string>
+  <string name="Brute_Name_Objective">Ciekawe co to jest</string>
+  <string name="Brute_Desc">Bestia ktora jest bardzo potezna ! uwazaj zamim zaatakjesz</string>
+  <string name="Brute_Gender">meski</string>
+  <string name="Brute_Enraged">%s nadchodzi Wkurwiony!</string>
+  <string name="Brute_StaEnraged">Wkurwiony</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">Kanalizacja Krabow</string>
+  <string name="Crab_Gender">meski</string>
+  <string name="Crab_Name_Objective">Kanalizacja Krabow</string>
+  <string name="Crab_Desc">Potezne graby sa na samym szczycie kanalu, sa mocne i maja potezny pancerz!</string>
+  <string name="Crab_Defense">Zblokowany</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">meski</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">Maszyna ta została stworzona przez krasnoludów kilka wieków temu . Później , krasnoludy zaczęły zastępować maszyny golemami, żywiołaki , a nawet demonami!. Ostatecznie doprowadziło to do ich upadku !!. DM-300 i podobne maszyny były zazwyczaj używane jako maszyny budowlane i kopalniane , a w niektórych przypadkach , do obrony MIASTA .</string>
+  <string name="DM300_Info1">DM-300 Naprawil sie sam !</string>
+  <string name="DM300_Info2">Misja Zakonczona porazka !</string>
+  <string name="DM300_Info3">Nieuprawniony</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">Ognisty Zywiol</string>
+  <string name="Elemental_Gender">meski</string>
+  <string name="Elemental_Name_Objective">Ognisty Zywiol</string>
+  <string name="Elemental_Desc">Ogniste Zywiolaki sa strasznie agresywne! Moga byc kontrolowane po przez silnieszje Potwory</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">oko demona</string>
+  <string name="Eye_Gender">pieklo</string>
+  <string name="Eye_Name_Objective">oko demona</string>
+  <string name="Eye_Desc">Jednym z innych nazw tego demona jest \" kula nienawiści \" , bo gdy widzi wroga , używa Ognistej Kuli  lekkomyślnie , często ignorującswoich sojuszników i raniac ich..</string>
+  <string name="Eye_Kill">%s\'s Ognista Kula zabila Ciebie...</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">Ciekawe co to jest</string>
+  <string name="Gnoll_Gender">meski</string>
+  <string name="Gnoll_Name_Objective">Ciekawe co to jest</string>
+  <string name="Gnoll_Desc">To zwykly Gnoll, teraz juz wiem co to jest... Nie sa zbyt sile... ale bede na nie uwazal.</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">golem</string>
+  <string name="Golem_Gender">meski</string>
+  <string name="Golem_Name_Objective">golem</string>
+  <string name="Golem_Desc">Krasnoludy kiedys chcialy polaczyc moc zywiolow z moca maszyn gnoli i golemow... ale nie udawalo im sie.. ale gdyby ? a moze jednak im sie udalo ? nikt do konca nie jest tego pewien..</string>
+  <string name="Golem_Defense">zablokowany</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">Idz!</string>
+  <string name="Goo_Gender">kobiecy</string>
+  <string name="Goo_Name_Objective">Goo</string>
+  <string name="Goo_Desc">Nie wiele wiadomo o tej substancji.. Prawdopodobnie pochodzi ze sciekow.</string>
+  <string name="Goo_Info1">Goo, wydobywa sie na zewnatrz!</string>
+  <string name="Goo_Info2">glurp... glurp...</string>
+  <string name="Goo_Info3">GLURP-GLURP!</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">Krol Krasnoludow!</string>
+  <string name="King_Gender">meski</string>
+  <string name="King_Name_Objective">Krol Krasnoludow</string>
+  <string name="King_Desc">Ostatni król krasnoludów znany był z głębokiego zrozumienia procesów życia i śmierci . On przekonał członków jego dworu do udziału w rytuale , że powinna była przyznać im wieczne młodość . W końcu byłtylko jeden , który dostał go - i armie nieumarłych jako bonus .</string>
+  <string name="King_Defense">Zblokowany</string>
+  <string name="King_Info1">Nie mozesz mnie zabic, %s... ja jestem... niesmiertelny mhuahuahuhaua...</string>
+  <string name="King_Info2">Arise, NIEWOLNICY !</string>
+  <string name="King_Info3">Jak mogles!</string>
+  <string name="Undead_Name">niesmiertelny krasnolud</string>
+  <string name="Undead_Gender">meski</string>
+  <string name="Undead_Name_Objective">niesmiertelny krasnolud</string>
+  <string name="Undead_Desc">Mowa o potworze ktory byl kiedys krasnoludem... Teraz wlada szkieletami...</string>
+  <string name="Undead_Defense">zablkowany</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">mimic</string>
+  <string name="Mimic_Gender">meski</string>
+  <string name="Mimic_Name_Objective">mimic</string>
+  <string name="Mimic_Desc">Mimics,  są magicznymi stworzeniami , które mogą przyjmować dowolny kształt </string>
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">Magiczny Krasnlod</string>
+  <string name="Monk_Gender">meski</string>
+  <string name="Monk_Name_Objective">Magiczny Krasnolud</string>
+  <string name="Monk_Desc">Mnisi, poświęcili się do ochrony  tajemnic miasta ze wszystkich cudzoziemców . Nie używać w zbroji i broń , opierając się wyłącznie na sztuce Walki  wręcz </string>
+  <string name="Monk_Defense">Zblokowany</string>
+  <string name="Monk_Disarm">%1$s cos ci wypadlo %2$s z Twoich dloni!</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">Ogromna Pirania</string>
+  <string name="Piranha_Gender">Kobiecy</string>
+  <string name="Piranha_Name_Objective">Ogromna Pirania</string>
+  <string name="Piranha_Desc">Te mięsożerne ryby nie są naturalnymi mieszkańcami basenów podziemnych . Były hodowane specjalnie do ochrony artefaktow..</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">Torbielowy Szczur</string>
+  <string name="Rat_Gender">kobiecy</string>
+  <string name="Rat_Name_Objective">Torbielowy Szczur</string>
+  <string name="Rat_Desc">Torbielowe szczury sa bardzo agresywne i moga powaznie Ciebie zranic</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">scorpion</string>
+  <string name="Scorpio_Gender">meski</string>
+  <string name="Scorpio_Name_Objective">skorpion</string>
+  <string name="Scorpio_Desc">Te ogromne pajeczaki potrafia z bliska sparalizowac Ciebie oraz mocno uszkodzic pancerz!</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">Starszy mnich</string>
+  <string name="Senior_Gender">meski</string>
+  <string name="Senior_Name_Objective">starszy mąk</string>
+  <string name="Senior_Desc">Mnisi, poświęcili się do ochrony  tajemnic miasta ze wszystkich cudzoziemców . Nie używać w zbroji i broń , opierając się wyłącznie na sztuce Walki  wręcz </string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">Cien</string>
+  <string name="Shadow_Gender">kobiecy</string>
+  <string name="Shadow_Name_Objective">cien</string>
+  <string name="Shadow_Desc">Cienie, bardzo rzadko sie pojawiaja.. wola pozostac niewidoczni</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">Szaman Gnoll</string>
+  <string name="Shaman_Gender">meski</string>
+  <string name="Shaman_Name_Objective">Szaman Gnoll</string>
+  <string name="Shaman_Desc">Szamani Gnole sa pefekcyji w walce na odleglosc, Rzucaja mocne zakleia!</string>
+  <string name="Shaman_Killed">%s\'s swietlista strzala wlasnie Ciebie Zabila</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">shielded brute</string>
+  <string name="Shielded_Gender">meski</string>
+  <string name="Shielded_Name_Objective">shielded brute</string>
+  <string name="Shielded_Defense">zablokowany</string>
+  <string name="Shielded_Desc">Brutes prawdziwymi bryalami, gdy ich rany sa glebokie wpadaja w furrie a jego uderzenie potrafi zadac do 30 procent zycia.</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">Szkieleton</string>
+  <string name="Skeleton_Gender">meski</string>
+  <string name="Skeleton_Name_Objective">Szkieleton</string>
+  <string name="Skeleton_Desc">Szkielety, opetane przez podroznikow ktorzy tu zgineli. Generalnie pochodza z sali bio-chemicznej Trolii</string>
+  <string name="Skeleton_Defense">zablokowany</string>
+  <string name="Skeleton_Killed">Umarles po przez eksplozje kosci Szkieleta</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">Dziki pajak</string>
+  <string name="Spinner_Gender">meski</string>
+  <string name="Spinner_Name_Objective">Podziemy Spinner</string>
+  <string name="Spinner_Desc">Te podziemne pajaki wola unikac walki w recz bardziej czekaj na dogodny moment by rzucic siec i zabic.</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">Zywa Statula</string>
+  <string name="Statue_Gender">kobiecy</string>
+  <string name="Statue_Name_Objective">Zywa Statula</string>
+  <string name="Statue_Desc">Wydaje sie ze to kolejny zwykly pomnik.. ale.. te czerwone oczy wydaja sie strasznie poderzanie  _%s_ i wyglada na prawdziwy.</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">succubus</string>
+  <string name="Succubus_Gender">meski</string>
+  <string name="Succubus_Name_Objective">succubus</string>
+  <string name="Succubus_Desc">W sukuby są demony , które wyglądają jak kusząca ( w nieco gotycki sposób ) dziewczyny. Cos jak Prostytutki.</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Name">Roj Much</string>
+  <string name="Swarm_Gender">meski</string>
+  <string name="Swarm_Name_Objective">Roj Much</string>
+  <string name="Swarm_Desc">Kazdy Attak na Roj Much je powiela... Ale mozesz byc spokojny... Czesto mozna wyciagna z nich jad ktory wyleczy nasze rany.</string>
+  <string name="Swarm_Defense">Omijanie</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">Tengu</string>
+  <string name="Tengu_Gender">meski</string>
+  <string name="Tengu_Name_Objective">Tengu</string>
+  <string name="Tengu_Desc">Tengu są członkami klanu starożytnych zabójców , który jest nazywany również Tengu . Ci zabójcy są znani szerokiemu wykorzystaniu shuriken i pułapek</string>
+  <string name="Tengu_Info1">W koncu Wolnosc</string>
+  <string name="Tengu_Info2">Gotcha, %s!</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">zwariowany bandya</string>
+  <string name="Thief_Gender">meski</string>
+  <string name="Thief_Name_Objective">zwariowany bandya</string>
+  <string name="Thief_Desc">Bandyci.... Kiedys juz o nich Czytalem... patrze ze kazda informacja jest inna... Tu napisali ze byli Kanibalami..</string>
+  <string name="Thief_Stole">%1$s zajebal ci %2$s jak cygan!</string>
+  <string name="Thief_Carries">\n\n%1$s is Noszone  _%2$s_. zajebal ci i wyrzucil.</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Name">Magiczny Krasnal</string>
+  <string name="Warlock_Gender">meski</string>
+  <string name="Warlock_Name_Objective">Magiczny Krasnal</string>
+  <string name="Warlock_Desc">Krasnoludy kiedy sie nauczyli uzywac magii to dostali szalu.. i w dosc szybkim tempie zaczeli bawic sie elementarna czescia magii, oraz demonologia.</string>
+  <string name="Warlock_Killed">%s\'s zostales zabity po przez cienistego wroga...</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Name">WIDMO</string>
+  <string name="Wraith_Gender">meski</string>
+  <string name="Wraith_Name_Objective">WIDMO</string>
+  <string name="Wraith_Desc">Widmo, po przebudzeniu sa niebezpieczne i strasznie ciezko trafiac regularnie z broni..</string>
+  <string name="Wraith_Defense">Omijanie</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">Yog-Dzewa</string>
+  <string name="Yog_Gender">meski</string>
+  <string name="Yog_Name_Objective">Yog-Dzewa</string>
+  <string name="Yog_Desc">Yog-Dzewa  Bóg ,potężny podmiot od sfery chaosu . Sto lat temu , starożytni krasnoludy ledwo wygrali wojnę z jego armią demonów , ale nie byli w stanie zabić samego boga . Zamiast tego, po czym uwięził go w salach poniżej ich miasta , wierząc , że jest zbyt słaby, aby wydostac sie..</string>
+  <string name="Yog_Info1">...</string>
+  <string name="Yog_Info2">Mam nadzieje ze to iluzja</string>
+  <string name="RottingFist_Name">Cos zgnilego</string>
+  <string name="RottingFist_Gender">meski</string>
+  <string name="RottingFist_Name_Objective">Cos zgnilego</string>
+  <string name="RottingFist_Desc">Zgnila czesc Starego Boga</string>
+  <string name="BurningFist_Name">Plonaca Piesc</string>
+  <string name="BurningFist_Gender">meski</string>
+  <string name="BurningFist_Name_Objective">Plonaca Piesc</string>
+  <string name="BurningFist_Desc">Plonaca Piesc Starego Boga</string>
+  <string name="Larva_Name">Zarodek Boga</string>
+  <string name="Larva_Gender">kobiecy</string>
+  <string name="Larva_Name_Objective">Zarodek Boga</string>
+  <string name="Larva_Desc">Stary Zarodek Boga</string>
+</resources>

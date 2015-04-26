@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">Zabity %1$s na levelu %2$d</string>
+  <string name="ResultDescriptions_Boss">Zabity przez %1$s na levelu %2$d</string>
+  <string name="ResultDescriptions_Wand">Zabity przez siebie %1$s na levelu %2$d</string>
+  <string name="ResultDescriptions_Glyph">Zabity %1$s na levelu %2$d</string>
+  <string name="ResultDescriptions_Trap">Zabity przez wyrzut %1$s na levelu %2$d</string>
+  <string name="ResultDescriptions_Burning">Spaliles sie na levelu %d</string>
+  <string name="ResultDescriptions_Hunger">Wyslchles na smierc na levelu %d</string>
+  <string name="ResultDescriptions_Poison">Smiersc po-przez jad na levelu %d</string>
+  <string name="ResultDescriptions_Gas">Zabil Ciebie gaz na levelu %d</string>
+  <string name="ResultDescriptions_Bleeding">Wykrwawił się na śmierć na levelu %d</string>
+  <string name="ResultDescriptions_Ooze">Zabity po przez sluz zracy cialo na levelu %d</string>
+  <string name="ResultDescriptions_Fall">Smierc Ciebie dotknela %d</string>
+  <string name="ResultDescriptions_Win">Uzyskales Amulet Yendrow!</string>
+  <string name="ResultDescriptions_Immured">Zamordowany po przez kamien... na leve;u %d</string>
+</resources>
