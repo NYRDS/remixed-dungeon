@@ -33,7 +33,7 @@ public enum Icons {
 	WARRIOR,
 	MAGE,
 	ROGUE,
-	HUNTRESS,
+	ELF,
 	CLOSE,
 	DEPTH,
 	SLEEP,
@@ -55,7 +55,7 @@ public enum Icons {
 	CHEST_SILVER,
 	CHEST_GOLD,
 	CHEST_RUBY,
-	BOOMERANG;
+	HUNTRESS;
 	
 	public Image get() {
 		return get( this );
@@ -94,7 +94,7 @@ public enum Icons {
 		case ROGUE:
 			icon.frame( icon.texture.uvRect( 32, 29, 48, 45 ) );
 			break;
-		case HUNTRESS:
+		case ELF:
 			icon.frame( icon.texture.uvRect( 48, 29, 64, 45 ) );
 			break;
 		case CLOSE:
@@ -160,7 +160,7 @@ public enum Icons {
 		case CHEST_RUBY:
 			icon.frame( icon.texture.uvRect( 95, 46, 109, 59 ) );
 			break;
-		case BOOMERANG:
+		case HUNTRESS:
 			icon.frame( icon.texture.uvRect( 110, 45, 126, 61 ) );
 			break;
 		}
@@ -177,6 +177,8 @@ public enum Icons {
 			return get( ROGUE );
 		case HUNTRESS:
 			return get( HUNTRESS );
+		case ELF:
+			return get( ELF );
 		default:
 			return null;
 		}

@@ -90,6 +90,9 @@ public class Tengu extends Mob {
 		case HUNTRESS:
 			badgeToCheck = Badge.MASTERY_HUNTRESS;
 			break;
+		case ELF:
+			badgeToCheck = Badge.MASTERY_ELF;
+			break;
 		}
 		if (!Badges.isUnlocked( badgeToCheck )) {
 			Dungeon.level.drop( new TomeOfMastery(), pos ).sprite.drop();

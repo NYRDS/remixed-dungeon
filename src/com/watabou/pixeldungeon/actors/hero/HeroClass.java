@@ -33,7 +33,9 @@ import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
+import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
+import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -44,7 +46,8 @@ public enum HeroClass {
 	WARRIOR(Game.getVar(R.string.HeroClass_War)),
 	MAGE(Game.getVar(R.string.HeroClass_Mag)),
 	ROGUE(Game.getVar(R.string.HeroClass_Rog)),
-	HUNTRESS(Game.getVar(R.string.HeroClass_Hun));
+	HUNTRESS(Game.getVar(R.string.HeroClass_Hun)),
+	ELF(Game.getVar(R.string.HeroClass_Elf));
 
 	private String title;
 
@@ -56,6 +59,7 @@ public enum HeroClass {
 	public static final String[] MAG_PERKS = Game.getVars(R.array.HeroClass_MagPerks);
 	public static final String[] ROG_PERKS = Game.getVars(R.array.HeroClass_RogPerks);
 	public static final String[] HUN_PERKS = Game.getVars(R.array.HeroClass_HunPerks);
+	public static final String[] ELF_PERKS = Game.getVars(R.array.HeroClass_ElfPerks);
 	
 	public void initHero( Hero hero ) {
 		hero.heroClass = this;
@@ -77,6 +81,10 @@ public enum HeroClass {
 		case HUNTRESS:
 			initHuntress( hero );
 			break;
+		
+		case ELF:
+			initElf( hero );
+			break;
 		}
 		
 		hero.gender = getGender();
@@ -88,6 +96,15 @@ public enum HeroClass {
 		hero.updateAwareness();
 	}
 	
+	private void initElf(Hero hero) {
+		(hero.belongings.armor = new ClothArmor()).identify();
+		hero.collect(new WoodenBow().upgrade());
+		hero.collect(new CommonArrow(50));
+		
+		QuickSlot.cleanStorage();
+		
+	}
+
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
@@ -105,6 +122,9 @@ public enum HeroClass {
 			return Badges.Badge.MASTERY_ROGUE;
 		case HUNTRESS:
 			return Badges.Badge.MASTERY_HUNTRESS;
+		case ELF:
+			return Badges.Badge.MASTERY_ELF;
+			
 		}
 		return null;
 	}
@@ -152,6 +172,8 @@ public enum HeroClass {
 		Boomerang boomerang = new Boomerang();
 		hero.collect(boomerang.identify());
 		
+		hero.collect(new TomeOfMastery());
+		
 		QuickSlot.selectItem(boomerang,0);
 	}
 	
@@ -175,7 +197,6 @@ public enum HeroClass {
 		case ROGUE:
 			return Assets.ROGUE;
 		case HUNTRESS:
-			
 			switch(hero.subClass) {
 			case SNIPER:
 				return Assets.SNIPER;
@@ -185,7 +206,8 @@ public enum HeroClass {
 			default:
 				return Assets.HUNTRESS;
 			}
-			
+		case ELF:
+			return Assets.ELF;
 		}
 		
 		return null;
@@ -246,6 +268,12 @@ public enum HeroClass {
 		if (spriteKind.equals(Assets.HUNTRESS))
 			return true;
 
+		if (spriteKind.equals(Assets.SNIPER))
+			return true;
+		
+		if (spriteKind.equals(Assets.WARDEN))
+			return true;
+		
 		return false;
 	}
 }

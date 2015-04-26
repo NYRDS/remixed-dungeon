@@ -145,7 +145,8 @@ public class Badges {
 		HAPPY_END(Game.getVar(R.string.Badges_HappyEnd), 38 ),
 		CHAMPION(Game.getVar(R.string.Badges_Champion), 39, true ),
 		SUPPORTER(Game.getVar(R.string.Badges_Supporter), 31, true ),
-		IMMURED(Game.getVar(R.string.Badges_Immured), 64);
+		IMMURED(Game.getVar(R.string.Badges_Immured), 64), 
+		MASTERY_ELF, VICTORY_ELF;
 		
 		public boolean meta;
 		
@@ -697,6 +698,9 @@ public class Badges {
 		case HUNTRESS:
 			badge = Badge.MASTERY_HUNTRESS;
 			break;
+		case ELF:
+			badge = Badge.MASTERY_ELF;
+			break;
 		}
 		
 		if (!global.contains( badge )) {
@@ -777,6 +781,9 @@ public class Badges {
 		case HUNTRESS:
 			badge = Badge.VICTORY_HUNTRESS;
 			break;
+		case ELF:
+			badge = Badge.VICTORY_ELF;
+			break;
 		}
 		local.add( badge );
 		if (!global.contains( badge )) {
@@ -787,7 +794,8 @@ public class Badges {
 		if (global.contains( Badge.VICTORY_WARRIOR ) &&
 			global.contains( Badge.VICTORY_MAGE ) &&
 			global.contains( Badge.VICTORY_ROGUE ) &&
-			global.contains( Badge.VICTORY_HUNTRESS )) {
+			global.contains( Badge.VICTORY_HUNTRESS ) &&
+			global.contains( Badge.VICTORY_ELF ) ) {
 			
 			badge = Badge.VICTORY_ALL_CLASSES;
 			displayBadge( badge );

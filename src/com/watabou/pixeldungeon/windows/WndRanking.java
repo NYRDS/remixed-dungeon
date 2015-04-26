@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSprite;
@@ -42,7 +43,6 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -149,12 +149,14 @@ public class WndRanking extends WndTabbed {
 		public StatsTab() {
 			super();
 			
-			String heroClass = Dungeon.hero.className();
-			heroSprite = new HeroSprite(Dungeon.hero, false);
+			Hero hero = Dungeon.hero;
+			String heroClass = hero.className();
+			
+			heroSprite = new HeroSprite(hero, false);
 			
 			IconTitle title = new IconTitle();
-			title.icon( heroSprite.avatar( Dungeon.hero ) );
-			title.label( Utils.format( TXT_TITLE, Dungeon.hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );
+			title.icon( heroSprite.avatar( hero ) );
+			title.label( Utils.format( TXT_TITLE, hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
 			add( title );
 			
@@ -175,8 +177,8 @@ public class WndRanking extends WndTabbed {
 			
 			pos += GAP + GAP;
 			
-			pos = statSlot( this, TXT_STR, Integer.toString( Dungeon.hero.STR ), pos );
-			pos = statSlot( this, TXT_HEALTH, Integer.toString( Dungeon.hero.HT ), pos );
+			pos = statSlot( this, TXT_STR, Integer.toString( hero.STR ), pos );
+			pos = statSlot( this, TXT_HEALTH, Integer.toString( hero.HT ), pos );
 			
 			pos += GAP;
 			

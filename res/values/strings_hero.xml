@@ -32,6 +32,7 @@
     <string name="HeroClass_Mag">mage</string>
     <string name="HeroClass_Rog">rogue</string>
     <string name="HeroClass_Hun">huntress</string>
+    <string name="HeroClass_Elf">elf</string>
 
     <string-array name="HeroClass_WarPerks">
         <item>Warriors start with 11 points of Strength.</item>
@@ -61,6 +62,11 @@
         <item>Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.</item>
         <item>Huntresses gain more health from dewdrops.</item>
         <item>Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</item>
+    </string-array>
+        <string-array name="HeroClass_ElfPerks">
+        <item>Elf start with 15 points of Health.</item>
+        <item>Elf start with a upgraded wooden bow and bunch of arrows.</item>
+        <item>Elf are extremly proficient with bows.</item>
     </string-array>
 
     <!-- STRINGS OF HeroSubClass CLASS -->
