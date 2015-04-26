@@ -18,11 +18,14 @@
 package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
+import java.util.HashMap;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
+import com.watabou.utils.PointF;
+
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 
@@ -114,26 +117,36 @@ public class BitmapText extends Visual {
 			float w = font.width( rect );
 			float h = font.height( rect );
 			
-			vertices[0] 	= width;
-			vertices[1] 	= 0;
+			float sx = 0;
+			float sy = 0;
+			
+			PointF sp = font.glyphShift.get(text.charAt( i ));
+			
+			if(sp != null) {
+				sx = sp.x;
+				sy = sp.y;
+			}
+			
+			vertices[0] 	= width + sx;
+			vertices[1] 	= sy;
 			
 			vertices[2]		= rect.left;
 			vertices[3]		= rect.top;
 			
-			vertices[4] 	= width + w;
-			vertices[5] 	= 0;
+			vertices[4] 	= width + w + sx;
+			vertices[5] 	= sy;
 			
 			vertices[6]		= rect.right;
 			vertices[7]		= rect.top;
 			
-			vertices[8] 	= width + w;
-			vertices[9] 	= h;
-			
+			vertices[8] 	= width + w + sx;
+			vertices[9] 	= h + sy;
+		
 			vertices[10]	= rect.right;
 			vertices[11]	= rect.bottom;
 			
-			vertices[12]	= width;
-			vertices[13]	= h;
+			vertices[12]	= width + sx;
+			vertices[13]	= h + sy;
 			
 			vertices[14]	= rect.left;
 			vertices[15]	= rect.bottom;
@@ -236,6 +249,8 @@ public class BitmapText extends Visual {
 		public float lineHeight;
 		
 		private boolean endOfRow = false;
+		
+		HashMap<Object, PointF> glyphShift = new HashMap<Object, PointF>();
 		
 		protected Font( SmartTexture tx ) {
 			super( tx );
@@ -391,6 +406,10 @@ public class BitmapText extends Visual {
 			lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
 		}
 		
+		public static Font createEmptyFont( Bitmap bmp) {
+			return new Font( TextureCache.get(bmp) );
+		}
+		
 		public static Font colorMarked( Bitmap bmp, int color, String chars ) {
 			Font font = new Font( TextureCache.get( bmp ) );
 			font.splitBy( bmp, bmp.getHeight(), color, chars );
@@ -403,7 +422,11 @@ public class BitmapText extends Visual {
 			return font;
 		}
 		
-		public RectF get( char ch ) {
+		public void addGlyphShift(char c, PointF shift) {
+			glyphShift.put(c,shift);
+		}
+		
+		public RectF get( char ch ){
 			RectF rec = super.get( autoUppercase ? Character.toUpperCase(ch) : ch );
 
 			//Fix for fonts without accentuation

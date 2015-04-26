@@ -92,30 +92,40 @@ public class BitmapTextMultiline extends BitmapText {
 						rect = font.get(INVALID_CHAR);
 					}
 					
+					float sx = 0;
+					float sy = 0;
+					
+					PointF sp = font.glyphShift.get(word.charAt( k ) );
+					
+					if(sp != null) {
+						sx = sp.x;
+						sy = sp.y;
+					}
+					
 					float w = font.width( rect );
 					float h = font.height( rect );
 					
 					if (mask == null || mask[pos]) {
-						vertices[0] 	= writer.x + shift;
-						vertices[1] 	= writer.y;
+						vertices[0] 	= writer.x + shift + sx;
+						vertices[1] 	= writer.y + sy;
 						
 						vertices[2]		= rect.left;
 						vertices[3]		= rect.top;
 						
-						vertices[4] 	= writer.x + shift + w;
-						vertices[5] 	= writer.y;
+						vertices[4] 	= writer.x + shift + w + sx;
+						vertices[5] 	= writer.y + sy;
 						
 						vertices[6]		= rect.right;
 						vertices[7]		= rect.top;
 						
-						vertices[8] 	= writer.x + shift + w;
-						vertices[9] 	= writer.y + h;
+						vertices[8] 	= writer.x + shift + w +sx;
+						vertices[9] 	= writer.y + h + sy;
 						
 						vertices[10]	= rect.right;
 						vertices[11]	= rect.bottom;
 						
-						vertices[12]	= writer.x + shift;
-						vertices[13]	= writer.y + h;
+						vertices[12]	= writer.x + shift + sx;
+						vertices[13]	= writer.y + h + sy;
 						
 						vertices[14]	= rect.left;
 						vertices[15]	= rect.bottom;
