@@ -9,7 +9,7 @@
     <string name="TitleScene_InternalStorageLow">Not enough space\n in internal storage\n Your progress can be lost!</string>
 
     <!-- STRINGS OF AboutScene CLASS -->
-    <string name="AboutScene_Txt">Remixed Pixel Dungein by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou  &amp; NYRDS\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD l18n code\n\nE-Mail us:\n\n</string>
+    <string name="AboutScene_Txt">Remixed Pixel Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou  &amp; NYRDS\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD l18n code\n\nE-Mail us:\n\n</string>
     <string name="AboutScene_Lnk">no site yet</string>
     <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
     <string name="AboutScene_Snd">Send E-Mail</string>

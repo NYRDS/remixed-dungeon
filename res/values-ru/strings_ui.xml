@@ -9,7 +9,7 @@
     <string name="TitleScene_InternalStorageLow">Недостаточно места во\n внутреннем хранилище\n игра может не сохранится!</string>
 
     <!-- STRINGS OF AboutScene CLASS -->
-    <string name="AboutScene_Txt">Remixed Pixel Dungein от NYRDS основана исходном коде Pixel Dungeon от Watabou.\n\n Програмирование &amp; графика: Watabou  &amp; NYRDS\n\nМузыка: Cube_Code\n\nОсобая благодарность: rodriformiga за подготовку локализации PD\n\nНапишите нам:\n\n</string>
+    <string name="AboutScene_Txt">Remixed Pixel Dungeon от NYRDS основана исходном коде Pixel Dungeon от Watabou.\n\n Програмирование &amp; графика: Watabou  &amp; NYRDS\n\nМузыка: Cube_Code\n\nОсобая благодарность: rodriformiga за подготовку локализации PD\n\nНапишите нам:\n\n</string>
     <string name="AboutScene_Lnk">нету сайта</string>
     <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
     <string name="AboutScene_Snd">Отправить E-Mail</string>

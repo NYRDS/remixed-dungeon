@@ -8,7 +8,7 @@
   <string name="TitleScene_InternalStorageLow">Pas assez de place\n dans l\'espace de stockage interne\n Votre progression peut être perdue !</string>
   
   <!-- STRINGS OF AboutScene CLASS -->
-  <string name="AboutScene_Txt">Remixed Pixel Dungein par NYRDS basé sur Pixel Dungeon Source par Watabou \n\n  code &amp; graphiques: Watabou &amp; NYRDS \n\nMusic: Cube_Code \n\n Merci spécial à: rodriformiga pour le code PD l18n Merci spécial à: Rémi Schneider pour Français l18n \n\n E-mail nous: \n\n</string>
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon par NYRDS basé sur Pixel Dungeon Source par Watabou \n\n  code &amp; graphiques: Watabou &amp; NYRDS \n\nMusic: Cube_Code \n\n Merci spécial à: rodriformiga pour le code PD l18n Merci spécial à: Rémi Schneider pour Français l18n \n\n E-mail nous: \n\n</string>
   <string name="AboutScene_Lnk">aucun site encore</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">Envoyer un E-mail</string>
