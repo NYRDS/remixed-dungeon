@@ -326,8 +326,8 @@ public class PixelScene extends Scene {
 		
 		int fontSize = (int) (size*2) + PixelDungeon.fontScale() - 2;
 		
-		if(fontSize < 8) {
-			fontSize = 8;
+		if(fontSize < 12) {
+			fontSize = 12;
 		}
 		
 		font = fontCache.get(fontSize);
