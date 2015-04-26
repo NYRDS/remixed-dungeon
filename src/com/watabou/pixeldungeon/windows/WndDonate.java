@@ -35,14 +35,14 @@ public class WndDonate extends WndTabbed {
 	private static final String RUBY_DONATE_TEXT = Game
 			.getVar(R.string.WndDonate_rubyDonateText);
 
-	private static final int WIDTH = 120;
-	private static final int HEIGHT = 120;
+	private static final int WIDTH = 130;
+	private static final int HEIGHT = 145;
 
 	private static final int BTN_HEIGHT = 20;
 	private static final int BTN_WIDTH  = WIDTH;
 	
 	private static final int GAP = 2;
-	private static final int TAB_WIDTH = 44;
+	private static final int TAB_WIDTH = 47;
 
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY };
@@ -64,7 +64,7 @@ public class WndDonate extends WndTabbed {
 			add(tab);
 		}
 
-		resize(HEIGHT, WIDTH);
+		resize(WIDTH,HEIGHT);
 
 		select(1);
 	}
@@ -106,7 +106,7 @@ public class WndDonate extends WndTabbed {
 			}
 
 			BitmapTextMultiline commonText = PixelScene.createMultiline(
-					Game.getVar(R.string.WndDonate_commonDonateText), 7);
+					Game.getVar(R.string.WndDonate_commonDonateText), 6);
 			commonText.maxWidth = WIDTH;
 			commonText.measure();
 			commonText.setPos(0, pos);
