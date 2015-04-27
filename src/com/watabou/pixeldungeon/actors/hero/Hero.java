@@ -786,50 +786,68 @@ public class Hero extends Char {
 		}
 	}
 	
+	private boolean getCloserToEnemy() {
+		if (Level.fieldOfView[enemy.pos] && getCloser( enemy.pos )) {
+			return true;
+		} else {
+			ready();
+			return false;
+		}
+	}
+	
+	private boolean actMeleeAttack() {
+		
+		if(Level.adjacent(pos, enemy.pos)) {
+			spend( attackDelay() );
+			getSprite().attack( enemy.pos );
+			
+			return false;
+		}
+		return getCloserToEnemy();
+	}
+	
+	private boolean actBowAttack() {
+		
+		Bow bow = (Bow) belongings.weapon;
+		
+		Class <? extends Arrow> arrowType = bow.arrowType();
+		
+		Arrow arrow;
+		
+		if(arrowType.equals(Arrow.class)) { // no arrow type selected
+			arrow = belongings.getItem( Arrow.class );
+		} else {
+			arrow = belongings.getItem( arrowType );
+			if (arrow == null) {
+				arrow = belongings.getItem( Arrow.class );
+			}
+		}
+		
+		if(arrow != null) { // We have arrows!
+			arrow.cast(this, enemy.pos);
+			ready();
+			return false;
+		} //no arrows? just get closer...
+		
+		return actMeleeAttack();
+
+	}
+
+	
 	private boolean actAttack( HeroAction.Attack action ) {
 
 		enemy = action.target;
 
 		if (enemy.isAlive() && !pacified) {
 			if ( bowEquiped() && (!Level.adjacent(pos, enemy.pos) || this.heroClass == HeroClass.ELF) ) {
-				Bow bow = (Bow) belongings.weapon;
-				
-				Class <? extends Arrow> arrowType = bow.arrowType();
-				
-				Arrow arrow;
-				
-				if(arrowType.equals(Arrow.class)) { // no arrow type selected
-					arrow = belongings.getItem( Arrow.class );
-				} else {
-					arrow = belongings.getItem( arrowType );
-					if (arrow == null) {
-						arrow = belongings.getItem( Arrow.class );
-					}
-				}
-				
-				if(arrow != null) { // We have arrows!
-					arrow.cast(this, enemy.pos);
-					ready();
-					return false;
-				} //no arrows? just get closer...
-				getCloser(enemy.pos);
-				return true;
+				return actBowAttack();
+			} else {
+				return actMeleeAttack();
 			}
 			
-			if(Level.adjacent(pos, enemy.pos)) {
-				spend( attackDelay() );
-				getSprite().attack( enemy.pos );
-				
-				return false;
-			}
 		} 
-			
-		if (Level.fieldOfView[enemy.pos] && getCloser( enemy.pos )) {			
-			return true;
-		} else {
-			ready();
-			return false;
-		}
+		
+		return getCloserToEnemy();
 	}
 	
 	public void rest( boolean tillHealthy ) {
