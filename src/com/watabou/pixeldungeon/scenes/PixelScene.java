@@ -71,17 +71,17 @@ public class PixelScene extends Scene {
 	public static Camera uiCamera;
 
 	public static BitmapText.Font font1x;
+	public static BitmapText.Font font25x;
+	
 	public static BitmapText.Font font;
 
-	
-	
 	@Override
 	public void create() {
 
 		super.create();
-		
+
 		float minWidth, minHeight;
-		
+
 		if (PixelDungeon.landscape()) {
 			minWidth = MIN_WIDTH_L;
 			minHeight = MIN_HEIGHT_L;
@@ -139,9 +139,8 @@ public class PixelScene extends Scene {
 
 		// get font metrics
 		Paint.FontMetrics fm = paint.getFontMetrics(); // Get Font Metrics
-		
-		fontHeight = (float) Math.ceil(Math.abs(fm.bottom)
-				+ Math.abs(fm.top)); // Calculate
+
+		fontHeight = (float) Math.ceil(Math.abs(fm.bottom) + Math.abs(fm.top)); // Calculate
 		// Ascent
 		float fontDescent = (float) Math.ceil(Math.abs(fm.descent)); // Save
 																		// Font
@@ -183,7 +182,7 @@ public class PixelScene extends Scene {
 			}
 		}
 
-		//GLog.w("creating %d x %d texture", textureSizeX, textureSizeY);
+		// GLog.w("creating %d x %d texture", textureSizeX, textureSizeY);
 
 		// create an empty bitmap (alpha only)
 		Bitmap bitmap = Bitmap.createBitmap(textureSizeX, textureSizeY,
@@ -204,20 +203,21 @@ public class PixelScene extends Scene {
 			float thisCellWidth = charWidths.get(s[0]) + padX * 2;
 
 			Rect bounds = new Rect();
-			
-			if(i == 0){ //special case for space
+
+			if (i == 0) { // special case for space
 				bounds.right = size / 3;
-				//GLog.i("making space");
+				// GLog.i("making space");
 			} else {
 				paint.getTextBounds(s, 0, 1, bounds);
 			}
 			metrics.put(s[0], new RectF((x + bounds.left) / textureSizeX,
 					(y + bounds.top) / textureSizeY, (x + bounds.right + 1)
-							/ textureSizeX, (y + bounds.bottom + 2) / textureSizeY));
+							/ textureSizeX, (y + bounds.bottom + 2)
+							/ textureSizeY));
 
-			shifts.put(s[0], new PointF(bounds.left, size+bounds.top));
+			shifts.put(s[0], new PointF(bounds.left, size + bounds.top));
 
-			//GLog.w("rendering char %d at %3.0f,%3.0f", (int) s[0], x, y);
+			// GLog.w("rendering char %d at %3.0f,%3.0f", (int) s[0], x, y);
 			canvas.drawText(s, 0, 1, x, y, paint); // Draw Character
 			x += thisCellWidth; // Move to Next Character
 			if ((x + thisCellWidth - padX) > textureSizeX) {
@@ -232,54 +232,29 @@ public class PixelScene extends Scene {
 
 	private static Font createFont(int size) {
 		float fontHeight = 0;
-		
+
 		HashMap<Object, RectF> metrics = new HashMap<Object, RectF>();
 		HashMap<Object, PointF> shifts = new HashMap<Object, PointF>();
 		Bitmap bitmap = createBitmapFromFont(Game.instance().getAssets(),
-				"Roboto-Regular.ttf", BitmapText.Font.ALL_CHARS, size,
-				metrics, shifts, fontHeight);
-/*
-		File storageDir = Game.instance().getExternalFilesDir(null);
-		File file = new File(storageDir, "tst.png");
-
-		OutputStream fOut = null;
-		try {
-			fOut = new FileOutputStream(file);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		boolean res = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut); // saving
-																				// the
-																				// Bitmap
-																				// to
-																				// a
-																				// file
-																				// compressed
-																				// as
-																				// a
-																				// JPEG
-																				// with
-																				// 85%
-																				// compression
-																				// rate
-
-		try {
-			if (res) {
-				fOut.flush();
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			fOut.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} // do not forget to close the stream
-*/
+				"Roboto-Regular.ttf", BitmapText.Font.ALL_CHARS, size, metrics,
+				shifts, fontHeight);
+		/*
+		 * File storageDir = Game.instance().getExternalFilesDir(null); File
+		 * file = new File(storageDir, "tst.png");
+		 * 
+		 * OutputStream fOut = null; try { fOut = new FileOutputStream(file); }
+		 * catch (FileNotFoundException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 * 
+		 * boolean res = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
+		 * // saving // the // Bitmap // to // a // file // compressed // as //
+		 * a // JPEG // with // 85% // compression // rate
+		 * 
+		 * try { if (res) { fOut.flush(); } } catch (IOException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); } try { fOut.close();
+		 * } catch (IOException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); } // do not forget to close the stream
+		 */
 		font = Font.createEmptyFont(bitmap);
 
 		Iterator<Entry<Object, RectF>> it = metrics.entrySet().iterator();
@@ -291,18 +266,18 @@ public class PixelScene extends Scene {
 		Iterator<Entry<Object, PointF>> it1 = shifts.entrySet().iterator();
 		while (it1.hasNext()) {
 			Entry<Object, PointF> pair = it1.next();
-			
+
 			PointF p = pair.getValue();
-			
-			font.addGlyphShift((Character) pair.getKey(),p);
+
+			font.addGlyphShift((Character) pair.getKey(), p);
 		}
-		
+
 		font.lineHeight = fontHeight;
 		font.baseLine = size;
 
 		return font;
 	}
-	
+
 	private void createFonts() {
 		if (font1x == null) {
 			// 3x5 (6)
@@ -310,6 +285,12 @@ public class PixelScene extends Scene {
 					0x00000000, BitmapText.Font.LATIN_FULL);
 			font1x.baseLine = 6;
 			font1x.tracking = -1;
+			
+			// 7x12 (15)
+			font25x = Font.colorMarked( 
+				BitmapCache.get( Assets.FONTS25X ), 17, 0x00000000, BitmapText.Font.ALL_CHARS);
+			font25x.baseLine = 13;
+			font25x.tracking = -1;
 		}
 	}
 
@@ -318,27 +299,84 @@ public class PixelScene extends Scene {
 		super.destroy();
 		Touchscreen.event.removeAll();
 	}
-	
+
 	private static HashMap<Integer, BitmapText.Font> fontCache = new HashMap<Integer, BitmapText.Font>();
 	public static float scale;
 
 	public static void chooseFont(float size) {
 		
-		int fontSize = (int) (size*2) + PixelDungeon.fontScale() - 2;
-		
-		if(fontSize < 12) {
-			fontSize = 12;
-		}
-		
-		font = fontCache.get(fontSize);
-		
-		if(font == null) {
-			font = createFont(fontSize);
-			fontCache.put(fontSize, font);
-		}
-		
+		if (!PixelDungeon.classicFont()) {
+			int fontSize = (int) (size * 2) + PixelDungeon.fontScale() - 2;
 
-		scale = 0.5f;
+			if (fontSize < 12) {
+				fontSize = 12;
+			}
+
+			font = fontCache.get(fontSize);
+
+			if (font == null) {
+				font = createFont(fontSize);
+				fontCache.put(fontSize, font);
+			}
+
+			scale = 0.5f;
+		} else {
+			float pt = size * defaultZoom;
+
+			if (pt >= 19) {
+
+				scale = pt / 19;
+				if (1.5 <= scale && scale < 2) {
+					font = font25x;
+					scale = (int)(pt / 14);
+				} else {
+					//font = font3x;
+					scale = (int)scale;
+				}
+
+			} else if (pt >= 14) {
+
+				scale = pt / 14;
+				if (1.8 <= scale && scale < 2) {
+					//font = font2x;
+					scale = (int)(pt / 12);
+				} else {
+					font = font25x;
+					scale = (int)scale;
+				}
+
+			} else if (pt >= 12) {
+
+				scale = pt / 12;
+				if (1.7 <= scale && scale < 2) {
+					//font = font15x;
+					scale = (int)(pt / 10);
+				} else {
+					//font = font2x;
+					scale = (int)scale;
+				}
+
+			} else if (pt >= 10) {
+
+				scale = pt / 10;
+				if (1.4 <= scale && scale < 2) {
+					font = font1x;
+					scale = (int)(pt / 7);
+				} else {
+					//font = font15x;
+					scale = (int)scale;
+				}
+
+			} else {
+
+				font = font1x;
+				scale = Math.max( 1, (int)(pt / 7) );
+
+			}
+			
+			scale /= defaultZoom;
+			font = font25x;
+		}
 	}
 
 	public static BitmapText createText(float size) {

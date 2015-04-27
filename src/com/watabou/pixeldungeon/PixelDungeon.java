@@ -307,6 +307,13 @@ public class PixelDungeon extends GameWithGoogleIap {
 		return Preferences.INSTANCE.getInt(Preferences.KEY_FONT_SCALE, 0);
 	}
 	
+	public static boolean classicFont() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_CLASSIC_FONT, true);
+	}
+
+	public static void classicFont(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_CLASSIC_FONT, value);
+	}
 	/*
 	 * <--- Preferences
 	 */

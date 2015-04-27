@@ -61,15 +61,21 @@ public class WndSettings extends Window {
 
 	private static final String TXT_SElECT_LANGUAGE = Game
 			.getVar(R.string.WndSettings_SelectLanguage);
-
+	
 	private static final String TXT_SECOND_QUICKSLOT = Game
 			.getVar(R.string.WndSettings_SecondQuickslot);
 	private static final String TXT_THIRD_QUICKSLOT = Game
 			.getVar(R.string.WndSettings_ThirdQuickslot);
 
 	private static final int WIDTH = 112;
-	private static final int BTN_HEIGHT = 20;
-	private static final int GAP = 2;
+	private static final int BTN_HEIGHT = 18;
+	private static final int GAP = 1;
+	
+	private static final String TXT_EXPEREMENTAL_FONT = Game
+			.getVar(R.string.WndSettings_ExperementalFont);
+			;
+	private static final String TXT_CLASSIC_FONT = Game
+			.getVar(R.string.WndSettings_ClassicFont);
 
 	private RedButton btnZoomOut;
 	private RedButton btnZoomIn;
@@ -78,7 +84,10 @@ public class WndSettings extends Window {
 	private RedButton btnScaleMinus;
 	private RedButton btnScalePlus;
 
+	RedButton btnFontMode;
+	
 	private boolean mInGame;
+
 	
 	public WndSettings(boolean inGame) {
 		super();
@@ -173,7 +182,9 @@ public class WndSettings extends Window {
 					BTN_HEIGHT);
 			add(localeButton);
 
-			resize(WIDTH, (int) localeButton.bottom());
+			float y = createFontSelector(localeButton.bottom() + GAP);
+			
+			resize(WIDTH, (int) y);
 		} else {
 
 			CheckBox btnBrightness = new CheckBox(TXT_BRIGHTNESS) {
@@ -259,6 +270,40 @@ public class WndSettings extends Window {
 		return btnZoomIn.bottom();
 	}
 	
+	private float createFontSelector(float y) {
+		remove(btnFontMode);
+		
+		String text;
+		
+		if(PixelDungeon.classicFont()) {
+			text = TXT_EXPEREMENTAL_FONT;
+			
+			btnStdFontScale.enable(false);
+			btnScaleMinus.enable(false);
+			btnScalePlus.enable(false);
+			
+		} else {
+			text = TXT_CLASSIC_FONT;
+			
+			btnStdFontScale.enable(true);
+			btnScaleMinus.enable(true);
+			btnScalePlus.enable(true);
+		}
+		
+		btnFontMode = new RedButton(text) {
+			@Override
+			protected void onClick() {
+				PixelDungeon.classicFont(!PixelDungeon.classicFont());
+				createFontSelector(y);
+			};
+		};
+		
+		btnFontMode.setRect(0, y, WIDTH,
+				BTN_HEIGHT);
+		add(btnFontMode);
+		
+		return btnFontMode.bottom();
+	}
 	
 	private float createTextScaleButtons(float y) {
 		int w = BTN_HEIGHT;

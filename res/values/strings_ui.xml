@@ -62,5 +62,7 @@
     <string name="WndSettings_SelectLanguage">Select Language</string>
     <string name="WndSettings_SecondQuickslot">Second Quickslot</string>
     <string name="WndSettings_ThirdQuickslot">Third Quickslot</string>
+    <string name="WndSettings_ExperementalFont">New Font</string>
+    <string name="WndSettings_ClassicFont">Classic Font</string>
     
 </resources>

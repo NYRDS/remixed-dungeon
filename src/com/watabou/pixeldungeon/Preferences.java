@@ -40,6 +40,7 @@ enum Preferences {
 	public static final String KEY_THIRD_QUICKSLOT  = "third_quickslot";
 	public static final String KEY_VERSION          = "version";
 	public static final String KEY_FONT_SCALE       = "font_scale";
+	public static final String KEY_CLASSIC_FONT     = "classic_font";
 	
 	private SharedPreferences prefs;
 	

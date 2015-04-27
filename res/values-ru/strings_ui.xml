@@ -61,4 +61,6 @@
     <string name="WndSettings_SelectLanguage">Выберите Язык</string>
     <string name="WndSettings_SecondQuickslot">Второй слот</string>
     <string name="WndSettings_ThirdQuickslot">Третий слот</string>
+    <string name="WndSettings_ExperementalFont">Новый Шрифт</string>
+    <string name="WndSettings_ClassicFont">Шрифт Классик</string>
 </resources>
