@@ -107,7 +107,7 @@ public enum HeroClass {
 		hero.collect(new Dagger().upgrade().identify());
 		hero.collect(new CommonArrow(20));
 
-		QuickSlot.cleanStorage();
+		QuickSlot.selectItem(CommonArrow.class,0);
 		
 	}
 
@@ -177,8 +177,6 @@ public enum HeroClass {
 		(hero.belongings.weapon = new Dagger()).identify();
 		Boomerang boomerang = new Boomerang();
 		hero.collect(boomerang.identify());
-		
-		hero.collect(new TomeOfMastery());
 		
 		QuickSlot.selectItem(boomerang,0);
 	}

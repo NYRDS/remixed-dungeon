@@ -36,7 +36,7 @@ public abstract class Arrow extends MissileWeapon {
 	
 	@Override
 	public Item random() {
-		quantity = Random.Int( 15, 25 );
+		quantity = Random.Int( 10, 25 );
 		return this;
 	}
 	
