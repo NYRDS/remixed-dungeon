@@ -113,7 +113,9 @@ public class Weapon extends KindOfWeapon {
 		}
 		
 		if (this instanceof MeleeWeapon && !(this instanceof Bow)) {
-			encumbrance += 3;
+			if( hero.heroClass == HeroClass.ELF) {
+				encumbrance += 3;
+			}
 		}
 		
 		return 
