@@ -53,11 +53,9 @@ public class TomeOfMastery extends Item {
 	
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
+		ArrayList<String> actions = super.actions( hero );		
+		actions.add( AC_READ );
 		
-		if(hero.heroClass != HeroClass.ELF) {
-			actions.add( AC_READ );
-		}
 		return actions;
 	}
 	
@@ -90,6 +88,10 @@ public class TomeOfMastery extends Item {
 			case HUNTRESS:
 				way1 = HeroSubClass.SNIPER;
 				way2 = HeroSubClass.WARDEN;
+				break;
+			case ELF:
+				way1 = HeroSubClass.SCOUT;
+				way2 = HeroSubClass.SHAMAN;
 				break;
 			}
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );

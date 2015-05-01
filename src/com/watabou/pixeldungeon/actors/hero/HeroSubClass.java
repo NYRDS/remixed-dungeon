@@ -24,14 +24,16 @@ import com.watabou.utils.Bundle;
 public enum HeroSubClass {
 
 	NONE( null, null ),
-	GLADIATOR( Game.getVar(R.string.HeroSubClass_NameGlad), Game.getVar(R.string.HeroSubClass_DescGlad)),
-	BERSERKER( Game.getVar(R.string.HeroSubClass_NameBers), Game.getVar(R.string.HeroSubClass_DescBers)),
-	WARLOCK(   Game.getVar(R.string.HeroSubClass_NameWarL), Game.getVar(R.string.HeroSubClass_DescWarL)),
-	BATTLEMAGE(Game.getVar(R.string.HeroSubClass_NameBatM), Game.getVar(R.string.HeroSubClass_DescBatM)),
-	ASSASSIN(  Game.getVar(R.string.HeroSubClass_NameAssa), Game.getVar(R.string.HeroSubClass_DescAssa)),
-	FREERUNNER(Game.getVar(R.string.HeroSubClass_NameFreR), Game.getVar(R.string.HeroSubClass_DescFreR)),
-	SNIPER(    Game.getVar(R.string.HeroSubClass_NameSnip), Game.getVar(R.string.HeroSubClass_DescSnip)),
-	WARDEN(    Game.getVar(R.string.HeroSubClass_NameWard), Game.getVar(R.string.HeroSubClass_DescWard));
+	GLADIATOR( Game.getVar(R.string.HeroSubClass_NameGlad),   Game.getVar(R.string.HeroSubClass_DescGlad)),
+	BERSERKER( Game.getVar(R.string.HeroSubClass_NameBers),   Game.getVar(R.string.HeroSubClass_DescBers)),
+	WARLOCK(   Game.getVar(R.string.HeroSubClass_NameWarL),   Game.getVar(R.string.HeroSubClass_DescWarL)),
+	BATTLEMAGE(Game.getVar(R.string.HeroSubClass_NameBatM),   Game.getVar(R.string.HeroSubClass_DescBatM)),
+	ASSASSIN(  Game.getVar(R.string.HeroSubClass_NameAssa),   Game.getVar(R.string.HeroSubClass_DescAssa)),
+	FREERUNNER(Game.getVar(R.string.HeroSubClass_NameFreR),   Game.getVar(R.string.HeroSubClass_DescFreR)),
+	SNIPER(    Game.getVar(R.string.HeroSubClass_NameSnip),   Game.getVar(R.string.HeroSubClass_DescSnip)),
+	WARDEN(    Game.getVar(R.string.HeroSubClass_NameWard),   Game.getVar(R.string.HeroSubClass_DescWard)),
+	SCOUT(     Game.getVar(R.string.HeroSubClass_NameScout),  Game.getVar(R.string.HeroSubClass_DescScout)),
+	SHAMAN(    Game.getVar(R.string.HeroSubClass_NameShaman), Game.getVar(R.string.HeroSubClass_DescShaman));
 	
 	private String title;
 	private String desc;
