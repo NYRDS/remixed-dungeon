@@ -370,7 +370,10 @@ public class Hero extends Char {
 		
 		
 		if(heroClass == HeroClass.ELF) {
-			hasteLevel = 1;
+			hasteLevel++;
+			if(subClass == HeroSubClass.SCOUT) {
+				hasteLevel++;
+			}
 		}
 		
 		for (Buff buff : buffs( RingOfHaste.Haste.class )) {
