@@ -324,6 +324,10 @@ public class Dungeon {
 	
 	private static final String RN_GAME_FILE	= "ranger.dat";
 	private static final String RN_DEPTH_FILE	= "ranger%d.dat";
+
+	private static final String EL_GAME_FILE	= "elf.dat";
+	private static final String EL_DEPTH_FILE	= "elf%d.dat";
+
 	
     private static final String VERSION   = "version";
 	private static final String CHALLENGES= "challenges";
@@ -342,12 +346,14 @@ public class Dungeon {
 
 	public static String gameFile( HeroClass cl ) {
 		switch (cl) {
-		case WARRIOR:
+		case ROGUE:
 			return WR_GAME_FILE;
 		case MAGE:
 			return MG_GAME_FILE;
 		case HUNTRESS:
 			return RN_GAME_FILE;
+		case ELF:
+			return EL_GAME_FILE;
 		default:
 			return RG_GAME_FILE;
 		}
@@ -361,6 +367,8 @@ public class Dungeon {
 			return MG_DEPTH_FILE;
 		case HUNTRESS:
 			return RN_DEPTH_FILE;
+		case ELF:
+			return EL_GAME_FILE;
 		default:
 			return RG_DEPTH_FILE;
 		}
