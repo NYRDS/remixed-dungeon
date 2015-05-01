@@ -85,11 +85,6 @@ public class Artifact extends EquipableItem {
 	}
 
 	@Override
-	public boolean isIdentified() {
-		return true;
-	}
-
-	@Override
 	public boolean isUpgradable() {
 		return false;
 	}

@@ -12,10 +12,12 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class RingOfStoneWalking extends Artifact{
-	{
+
+	public RingOfStoneWalking() {
 		image = ItemSpriteSheet.RING_OF_STONE_WALKING;
+		identify();
 	}
-		
+	
 	@Override
 	protected ArtifactBuff buff( ) {
 		return new StoneWalking();
