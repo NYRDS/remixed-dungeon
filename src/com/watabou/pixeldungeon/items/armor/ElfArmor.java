@@ -2,8 +2,17 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -24,11 +33,22 @@ public class ElfArmor extends ClassArmor {
 	
 	@Override
 	public void doSpecial() {
-			
+		
+		for (Mob mob : Dungeon.level.mobs) {
+			if (Level.fieldOfView[mob.pos]) {
+				GameScene.add( Blob.seed( mob.pos, 100, Regrowth.class ) );
+			}
+		}
+		
 		curUser.HP -= (curUser.HP / 3);
 		
-		curUser.getSprite().zap( curUser.pos );
+		curUser.spend( Actor.TICK );
+		curUser.getSprite().operate( curUser.pos );
 		curUser.busy();
+		
+		Sample.INSTANCE.play( Assets.SND_READ );
+		
+		GameScene.add( Blob.seed( curUser.pos, 100, Regrowth.class ) );
 	}
 	
 	@Override
@@ -40,7 +60,6 @@ public class ElfArmor extends ClassArmor {
 			return false;
 		}
 	}
-	
 	
 	@Override
 	public String desc() {
