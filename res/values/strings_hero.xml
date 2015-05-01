@@ -64,8 +64,8 @@
         <item>Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</item>
     </string-array>
     <string-array name="HeroClass_ElfPerks">
-        <item>Elves start with 15 points of Health.</item>
-        <item>Elves start with 9 points of Strength.</item>
+        <item>Elves start with 15 HP and 9 STR </item>
+        <item>Elves have immunity from rooting</item>
         <item>Elves start with a upgraded wooden bow and bunch of arrows.</item>
         <item>Elves are extremly proficient with bows and agile.</item>
         <item>Elves are less proficient with melee weapons.</item>>

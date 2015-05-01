@@ -20,13 +20,24 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Roots extends FlavourBuff {
 	
 	@Override
 	public boolean attachTo( Char target ) {
-		if (!target.flying && super.attachTo( target )) {
+		if (target.flying) {
+			return false;
+		}
+		
+		//FIX ME we must implement customizable Hero immunities
+		if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ELF){
+			return false;
+		}
+		
+		if ( super.attachTo( target )) {
 			target.rooted = true;
 			return true;
 		} else {
