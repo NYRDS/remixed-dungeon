@@ -42,8 +42,6 @@ public class AmuletScene extends PixelScene {
 	private static final float SMALL_GAP	= 2;
 	private static final float LARGE_GAP	= 8;
 	
-	
-	
 	public static boolean noText = false;
 	
 	private Image amulet;
@@ -67,7 +65,7 @@ public class AmuletScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				Dungeon.win( ResultDescriptions.WIN, Rankings.gameOver.WIN_AMULET );
-				Dungeon.deleteGame( Dungeon.hero.heroClass, true );
+				Dungeon.gameOver();
 				Game.switchScene( noText ? TitleScene.class : RankingsScene.class );
 			}
 		};

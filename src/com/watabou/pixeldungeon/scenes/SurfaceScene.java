@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import java.nio.FloatBuffer;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
@@ -162,6 +163,8 @@ public class SurfaceScene extends PixelScene {
 		add( gameOver );
 		
 		Badges.validateHappyEnd();
+		
+		Dungeon.gameOver();
 		
 		fadeIn();
 	}

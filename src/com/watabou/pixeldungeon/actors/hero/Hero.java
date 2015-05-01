@@ -757,7 +757,9 @@ public class Hero extends Char {
 					ready();
 				} else {
 					Dungeon.win( ResultDescriptions.WIN, Rankings.gameOver.WIN_HAPPY );
-					Dungeon.deleteGame( Dungeon.hero.heroClass, true );
+					
+					Dungeon.gameOver();;
+					
 					Game.switchScene( SurfaceScene.class );
 				}
 				
@@ -1273,7 +1275,7 @@ public class Hero extends Char {
 			((Hero.Doom)cause).onDeath();
 		}
 		
-		Dungeon.deleteGame( Dungeon.hero.heroClass, true );
+		Dungeon.gameOver();
 	}
 	
 	@Override

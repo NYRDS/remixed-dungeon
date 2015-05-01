@@ -38,8 +38,8 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -67,7 +67,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -93,13 +92,14 @@ public class Dungeon {
 	
 	public static HashSet<Integer> chapters;
 	
+	private static boolean gameOver = false;
+	
 	// Hero's field of view
 	public static boolean[] visible = new boolean[Level.LENGTH];
 	
 	public static boolean nightMode;
 	
 	public static void init() {
-
 		challenges = PixelDungeon.challenges();
 		
 		Actor.clear();
@@ -138,6 +138,8 @@ public class Dungeon {
 		Badges.reset();
 		
 		StartScene.curClass.initHero( hero );
+		
+		gameOver = false;
 	}
 	
 	public static boolean isChallenged( int mask ) {
@@ -313,21 +315,6 @@ public class Dungeon {
 		return Random.Int( 12 * (1 + arcaneStyli) ) < depth;
 	}
 	
-	private static final String RG_GAME_FILE	= "game.dat";
-	private static final String RG_DEPTH_FILE	= "depth%d.dat";
-	
-	private static final String WR_GAME_FILE	= "warrior.dat";
-	private static final String WR_DEPTH_FILE	= "warrior%d.dat";
-	
-	private static final String MG_GAME_FILE	= "mage.dat";
-	private static final String MG_DEPTH_FILE	= "mage%d.dat";
-	
-	private static final String RN_GAME_FILE	= "ranger.dat";
-	private static final String RN_DEPTH_FILE	= "ranger%d.dat";
-
-	private static final String EL_GAME_FILE	= "elf.dat";
-	private static final String EL_DEPTH_FILE	= "elf%d.dat";
-
 	
     private static final String VERSION   = "version";
 	private static final String CHALLENGES= "challenges";
@@ -344,37 +331,18 @@ public class Dungeon {
     private static final String QUESTS    = "quests";
     private static final String BADGES    = "badges";
 
-	public static String gameFile( HeroClass cl ) {
-		switch (cl) {
-		case ROGUE:
-			return WR_GAME_FILE;
-		case MAGE:
-			return MG_GAME_FILE;
-		case HUNTRESS:
-			return RN_GAME_FILE;
-		case ELF:
-			return EL_GAME_FILE;
-		default:
-			return RG_GAME_FILE;
-		}
-	}
 	
-	private static String depthFile( HeroClass cl ) {
-		switch (cl) {
-		case WARRIOR:
-			return WR_DEPTH_FILE;
-		case MAGE:
-			return MG_DEPTH_FILE;
-		case HUNTRESS:
-			return RN_DEPTH_FILE;
-		case ELF:
-			return EL_GAME_FILE;
-		default:
-			return RG_DEPTH_FILE;
-		}
+	public static void gameOver(){
+		gameOver = true;
+		Dungeon.deleteGame( Dungeon.hero.heroClass, true );
 	}
 	
 	public static void saveGame( String fileName ) throws IOException {
+		
+		if(gameOver) {
+			return;
+		}
+		
 		try {
 			Bundle bundle = new Bundle();
 			
@@ -432,7 +400,7 @@ public class Dungeon {
 		Bundle bundle = new Bundle();
 		bundle.put( LEVEL, level );
 		
-		OutputStream output = Game.instance().openFileOutput( Utils.format( depthFile( hero.heroClass ), depth ), Game.MODE_PRIVATE );
+		OutputStream output = Game.instance().openFileOutput( SaveUtils.depthFile( hero.heroClass, depth ), Game.MODE_PRIVATE );
 		Bundle.write( bundle, output );
 		output.close();
 	}
@@ -448,7 +416,7 @@ public class Dungeon {
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();
-			saveGame( gameFile( hero.heroClass ) );
+			saveGame( SaveUtils.gameFile( hero.heroClass ) );
 			saveLevel();
 			
 			GamesInProgress.set( hero.heroClass, depth, hero.lvl );
@@ -461,7 +429,7 @@ public class Dungeon {
 	}
 	
 	public static void loadGame( HeroClass cl ) throws IOException {
-		loadGame( gameFile( cl ), true );
+		loadGame( SaveUtils.gameFile( cl ), true );
 	}
 	
 	public static void loadGame( String fileName ) throws IOException {
@@ -542,7 +510,7 @@ public class Dungeon {
 		Dungeon.level = null;
 		Actor.clear();
 		
-		InputStream input = Game.instance().openFileInput( Utils.format( depthFile( cl ), depth ) ) ;
+		InputStream input = Game.instance().openFileInput( SaveUtils.depthFile( cl , depth ) ) ;
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
@@ -551,11 +519,11 @@ public class Dungeon {
 	
 	public static void deleteGame( HeroClass cl, boolean deleteLevels ) {
 		
-		Game.instance().deleteFile( gameFile( cl ) );
+		Game.instance().deleteFile( SaveUtils.gameFile( cl ) );
 		
 		if (deleteLevels) {
 			int depth = 1;
-			while (Game.instance().deleteFile( Utils.format( depthFile( cl ), depth ) )) {
+			while (Game.instance().deleteFile( SaveUtils.depthFile( cl , depth ) )) {
 				depth++;
 			}
 		}
