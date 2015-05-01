@@ -44,7 +44,7 @@ public class WandOfBlink extends Wand {
 		}
 		
 		curUser.getSprite().visible = true;
-		appear( Dungeon.hero, cell );
+		appear( curUser, cell );
 		Dungeon.observe();
 	}
 	
@@ -74,5 +74,10 @@ public class WandOfBlink extends Wand {
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.WandOfBlink_Info);
+	}
+	
+	@Override
+	public boolean affectTarget() {
+		return false;
 	}
 }

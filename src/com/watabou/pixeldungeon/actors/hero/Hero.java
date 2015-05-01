@@ -888,9 +888,20 @@ public class Hero extends Char {
 					}
 					damage += wand.curCharges;
 				}
+				break;
 			case SNIPER:
 				if (rangedWeapon != null) {
 					Buff.prolong( enemy, SnipersMark.class, attackDelay() * 1.1f );
+				}
+				break;
+			case SHAMAN:
+				if (wep instanceof Wand) {
+					Wand wand = (Wand) wep;
+					if (wand.affectTarget()) {
+						if (Random.Int(4) == 0) {
+							wand.zap(enemy.pos);
+						}
+					}
 				}
 				break;
 			default:
