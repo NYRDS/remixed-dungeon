@@ -52,9 +52,9 @@ public class ArmorKit extends Item {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if(hero.heroClass != HeroClass.ELF) {
+		//if(hero.heroClass != HeroClass.ELF) {
 			actions.add( AC_APPLY );
-		}
+		//}
 		return actions;
 	}
 	
@@ -92,7 +92,7 @@ public class ArmorKit extends Item {
 		
 		GLog.w( TXT_UPGRADED, armor.name() );
 		
-		ClassArmor classArmor = ClassArmor.upgrade( curUser, armor );
+		Armor classArmor = ClassArmor.upgrade( curUser, armor );
 		if (curUser.belongings.armor == armor) {
 			
 			curUser.belongings.armor = classArmor;
@@ -101,8 +101,7 @@ public class ArmorKit extends Item {
 		} else {
 			
 			armor.detach( curUser.belongings.backpack );
-			classArmor.collect( curUser.belongings.backpack );
-			
+			curUser.collect(classArmor);			
 		}
 		
 		curUser.getSprite().operate( curUser.pos );

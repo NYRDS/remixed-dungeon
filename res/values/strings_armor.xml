@@ -26,6 +26,12 @@
     <string name="ClothArmor_Name">cloth armor</string>
     <string name="ClothArmor_Desc">This lightweight armor offers basic protection.</string>
 
+    <!-- STRINGS OF ElfArmor CLASS -->
+    <string name="ElfArmor_Name">Elven mantle</string>
+    <string name="ElfArmor_Desc">With help of this mantle elf can summon forces of nature itself. High grass will grow in a blink even through solid stone immobilizing all enemies in a sight.</string>
+    <string name="ElfArmor_ACSpecial">NATURE CALL</string>
+    <string name="ElfArmor_NotElf">Only elves can use this armor!</string>
+    
     <!-- STRINGS OF HuntressArmor CLASS -->
     <string name="HuntressArmor_Name">huntress cloak</string>
     <string name="HuntressArmor_Desc">A huntress in such cloak can create a fan of spectral blades. Each of these blades will target a single enemy in the huntress\'s field of view, inflicting damage depending on her currently equipped melee weapon.</string>

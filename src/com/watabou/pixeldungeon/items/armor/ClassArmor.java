@@ -41,7 +41,7 @@ abstract public class ClassArmor extends Armor {
 		super( 6 );
 	}
 	
-	public static ClassArmor upgrade ( Hero owner, Armor armor ) {
+	public static Armor upgrade ( Hero owner, Armor armor ) {
 		
 		ClassArmor classArmor = null;
 		
@@ -58,6 +58,12 @@ abstract public class ClassArmor extends Armor {
 		case HUNTRESS:
 			classArmor = new HuntressArmor();
 			break;
+		case ELF:
+			classArmor = new ElfArmor();
+			break;
+			
+		default:
+			return armor;
 		}
 		
 		classArmor.STR = armor.STR;

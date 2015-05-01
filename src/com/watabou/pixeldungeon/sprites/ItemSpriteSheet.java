@@ -62,6 +62,7 @@ public class ItemSpriteSheet {
 	public static final int ARMOR_WARRIOR	= 97;
 	public static final int ARMOR_MAGE		= 98;
 	public static final int ARMOR_HUNTRESS	= 99;
+	public static final int ARMOR_ELF		= 145;
 	
 	// Wands
 	public static final int WAND_MAGIC_MISSILE	= 3;
