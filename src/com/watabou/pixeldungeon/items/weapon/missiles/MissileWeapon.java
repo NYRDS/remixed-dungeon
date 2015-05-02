@@ -71,16 +71,18 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
-		
-		super.proc( attacker, defender, damage );
-		
-		Hero hero = (Hero)attacker;
+	public void proc(Char attacker, Char defender, int damage) {
+
+		super.proc(attacker, defender, damage);
+
+		Hero hero = (Hero) attacker;
 		if (hero.rangedWeapon == null && stackable) {
-			if (quantity == 1) {
-				doUnequip( hero, false, false );
-			} else {
-				detach( null );
+			if (this != hero.belongings.weapon) {
+				if (quantity == 1) {
+					doUnequip(hero, false, false);
+				} else {
+					detach(null);
+				}
 			}
 		}
 	}
