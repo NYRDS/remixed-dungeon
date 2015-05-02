@@ -31,6 +31,9 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
+import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
@@ -42,6 +45,8 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
+import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
+import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -109,20 +114,6 @@ public enum HeroClass {
 		hero.updateAwareness();
 	}
 	
-	private void initElf(Hero hero) {
-		
-		hero.STR = 9;
-		hero.HT = hero.HP = 15;
-		
-		(hero.belongings.armor = new ClothArmor()).identify();
-		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
-				
-		hero.collect(new Dagger().upgrade().identify());
-		hero.collect(new CommonArrow(20));
-
-		QuickSlot.selectItem(CommonArrow.class,0);
-		
-	}
 
 	private static void initDebug(Hero hero) {
 		hero.collect(new TomeOfMastery());
@@ -135,22 +126,12 @@ public enum HeroClass {
 		hero.HP = hero.HT = 1000;
 		
 		
-		hero.collect(new RingOfElements().upgrade());
-		hero.collect(new RingOfStoneWalking());
-		hero.collect(new ScrollOfIdentify().identify());
-		hero.collect(new Amulet());
-		hero.collect(new CommonArrow(20));
-		hero.collect(new SeedPouch());
-		
-		hero.collect(new ArmorKit());
-		hero.collect(new PlateArmor());
-		hero.collect(new MageArmor());
-		hero.collect(new TomeOfMastery());
-		hero.collect(new WandOfMagicMissile());
-		hero.collect(new WandOfFirebolt());
-		hero.collect(new WandOfAvalanche());
-		hero.collect(new WandOfBlink());
-		
+		hero.collect(new PotionOfStrength());
+		hero.collect(new PotionOfFrost());
+		hero.collect(new PotionOfLiquidFlame());
+		hero.collect(new PotionOfLiquidFlame());
+		hero.collect(new PotionOfLevitation());
+		hero.collect(new WandOfTelekinesis());
 
 	}
 	
@@ -175,7 +156,6 @@ public enum HeroClass {
 			return Badges.Badge.MASTERY_HUNTRESS;
 		case ELF:
 			return Badges.Badge.MASTERY_ELF;
-			
 		}
 		return null;
 	}
@@ -216,14 +196,29 @@ public enum HeroClass {
 	}
 	
 	private static void initHuntress( Hero hero ) {
-		
-		hero.HP = (hero.HT -= 5);
+		hero.HT -= 5;
+		hero.HP = hero.HT;
 		
 		(hero.belongings.weapon = new Dagger()).identify();
 		Boomerang boomerang = new Boomerang();
 		hero.collect(boomerang.identify());
 		
 		QuickSlot.selectItem(boomerang,0);
+	}
+
+	private void initElf(Hero hero) {
+		hero.STR--;
+		
+		hero.HT -= 5;
+		hero.HP = hero.HT;
+		
+		(hero.belongings.armor = new ClothArmor()).upgrade().identify();
+		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
+				
+		hero.collect(new Dagger().upgrade().identify());
+		hero.collect(new CommonArrow(20));
+
+		QuickSlot.selectItem(CommonArrow.class,0);
 	}
 	
 	public String title() {
