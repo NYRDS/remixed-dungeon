@@ -48,6 +48,7 @@ public class Bag extends Item implements Iterable<Item> {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
+		actions.add(AC_OPEN);
 		return actions;
 	}
 	
