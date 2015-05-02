@@ -66,7 +66,7 @@ public class PotionOfInvisibility extends Potion {
 		
 		GLog.i(TXT_RUNE_DISAPPEARED, scroll.name());
 		
-		moistenEffect();
+		moistenEffective();
 		
 		BlankScroll moistenScroll = new BlankScroll();
 		moistenScroll.quantity(quantity);

@@ -215,7 +215,6 @@ public class Potion extends Item {
 	}
 	
 	private void moisten(Hero hero) {
-		detach( hero.belongings.backpack );
 		
 		hero.spend( TIME_TO_MOISTEN);
 		hero.busy();
@@ -328,6 +327,7 @@ public class Potion extends Item {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
+				
 				if(item instanceof Arrow){
 					moistenArrow ((Arrow) item );
 				}
@@ -354,20 +354,30 @@ public class Potion extends Item {
 	
 	protected int reallyMoistArrows(Arrow arrow) {
 		int quantity = detachMoistenItems(arrow,10);
-		moistenEffect();
+		moistenEffective();
 		GLog.i(TXT_ARROW_MOISTEN);
 		return quantity;
 	}
 	
 	protected void moistenScroll(Scroll scroll) {
-		GLog.i(TXT_MOISTEN_USELESS);
+		moistenUseless();
 	}
 	
 	protected void moistenArrow(Arrow arrow) {
-		GLog.i(TXT_MOISTEN_USELESS);
+		moistenUseless();
 	}
 	
-	protected void moistenEffect() {
+	protected void moistenUseless() {
+		detach(curUser.belongings.backpack );
+		GLog.i(TXT_MOISTEN_USELESS);
+		curUser.getSprite().operate( curUser.pos );		
+		curUser.spend( TIME_TO_MOISTEN );
+		curUser.busy();	
+	}
+	
+	protected void moistenEffective() {
+		detach(curUser.belongings.backpack );
+		identify();
 		curUser.getSprite().operate( curUser.pos );		
 		curUser.spend( TIME_TO_MOISTEN );
 		curUser.busy();	

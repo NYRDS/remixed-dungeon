@@ -49,11 +49,13 @@ public class PotionOfLevitation extends Potion {
 	protected void moistenArrow(Arrow arrow) {
 		detachMoistenItems(arrow, 10);
 		GLog.i(TXT_ITEM_FLIES_AWAY , arrow.name());
+		moistenEffective();
 	}
 	
 	@Override
 	protected void moistenScroll(Scroll scroll) {
 		detachMoistenItems(scroll,3);
 		GLog.i(TXT_ITEM_FLIES_AWAY , scroll.name());
+		moistenEffective();
 	}
 }
