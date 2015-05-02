@@ -22,15 +22,28 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.items.ArmorKit;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
+import com.watabou.pixeldungeon.items.armor.MageArmor;
+import com.watabou.pixeldungeon.items.armor.PlateArmor;
+import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.wands.WandOfAvalanche;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
+import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
+import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
@@ -103,7 +116,7 @@ public enum HeroClass {
 		
 		(hero.belongings.armor = new ClothArmor()).identify();
 		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
-		
+				
 		hero.collect(new Dagger().upgrade().identify());
 		hero.collect(new CommonArrow(20));
 
@@ -111,9 +124,41 @@ public enum HeroClass {
 		
 	}
 
+	private static void initDebug(Hero hero) {
+		hero.collect(new TomeOfMastery());
+
+		Item gl = new Glaive().upgrade(8);
+		gl.cursed = true;
+		
+		hero.collect(gl);
+		
+		hero.HP = hero.HT = 1000;
+		
+		
+		hero.collect(new RingOfElements().upgrade());
+		hero.collect(new RingOfStoneWalking());
+		hero.collect(new ScrollOfIdentify().identify());
+		hero.collect(new Amulet());
+		hero.collect(new CommonArrow(20));
+		hero.collect(new SeedPouch());
+		
+		hero.collect(new ArmorKit());
+		hero.collect(new PlateArmor());
+		hero.collect(new MageArmor());
+		hero.collect(new TomeOfMastery());
+		hero.collect(new WandOfMagicMissile());
+		hero.collect(new WandOfFirebolt());
+		hero.collect(new WandOfAvalanche());
+		hero.collect(new WandOfBlink());
+		
+
+	}
+	
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
+		
+		//initDebug(hero);
 		
 		QuickSlot.cleanStorage();
 	}
@@ -186,16 +231,20 @@ public enum HeroClass {
 	}
 	
 	public static String spritesheet(Hero hero) {
-		
-		if(hero.subClass.name() == HeroSubClass.BERSERKER.name()){
-			if(hero.inFury()) {
-				return Assets.WARRIOR_BERSERK;
-			}
-		}
-		
 		switch (hero.heroClass) {
 		case WARRIOR:
-			return Assets.WARRIOR;
+			switch(hero.subClass) {
+			case BERSERKER:
+				if(hero.inFury()) {
+					return Assets.BERSERK_IN_FURY;
+				}
+				return Assets.BERSERK;
+			case GLADIATOR:
+				return Assets.GLADIATOR;
+				
+			default:
+				return Assets.WARRIOR;
+			}
 		case MAGE:
 			return Assets.MAGE;
 		case ROGUE:
@@ -260,12 +309,18 @@ public enum HeroClass {
 	}
 
 	public static boolean isSpriteSheet(String spriteKind) {
-		if (spriteKind.equals(Assets.WARRIOR_BERSERK))
-			return true;
-		
 		if (spriteKind.equals(Assets.WARRIOR))
 			return true;
-
+		
+		if (spriteKind.equals(Assets.BERSERK))
+			return true;
+		
+		if (spriteKind.equals(Assets.BERSERK_IN_FURY))
+			return true;
+		
+		if (spriteKind.equals(Assets.GLADIATOR))
+			return true;
+		
 		if (spriteKind.equals(Assets.MAGE))
 			return true;
 
