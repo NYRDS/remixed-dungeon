@@ -154,7 +154,7 @@ public class WndClass extends WndTabbed {
 				text = HeroSubClass.SNIPER.desc() + "\n\n" + HeroSubClass.WARDEN.desc();
 				break;
 			case ELF:
-				text = "";
+				text = HeroSubClass.SCOUT.desc() + "\n\n" + HeroSubClass.SHAMAN.desc();
 				break;
 			}
 			
