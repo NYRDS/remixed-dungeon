@@ -26,10 +26,10 @@ public class Assets {
 	public static final String ARCS_FG = "arcs2.png";
 	public static final String DASHBOARD = "dashboard.png";
 
-	public static final String BANNERS = Game.getVar(R.string.Assets_Prefix)
-			+ "banners.png";
 	public static final String BADGES = "badges.png";
 	public static final String AMULET = "amulet.png";
+
+	private static final String BANNERS_PREFIX = Game.getVar(R.string.Assets_Prefix);
 
 	private static String CHROME = "chrome.png";
 	private static String STATUS = "status_pane.png";
@@ -101,6 +101,7 @@ public class Assets {
 	public static final String ITEMS = "items.png";
 	public static final String PLANTS = "plants.png";
 
+	//public static final String TILES_SEWERS = "tiles6.png";
 	public static final String TILES_SEWERS = "tiles0.png";
 	public static final String TILES_PRISON = "tiles1.png";
 	public static final String TILES_CAVES = "tiles2.png";
@@ -175,10 +176,25 @@ public class Assets {
 
 	public static final String SND_ROTTEN_DROP = "snd_rotten_drop.mp3";
 
-	public static int chromeType = 0;
-	public static int statusType = 0;
-	public static int toolbarType = 0;
+	private static int chromeType = 0;
+	private static int statusType = 0;
+	private static int toolbarType = 0;
+	private static int bannersType = 0;
 
+	public static String getBanners() {
+		switch (bannersType) {
+		default:
+			return BANNERS_PREFIX+"banners.png";
+		case 1:
+			return BANNERS_PREFIX+"banners_supporter_1.png";
+		case 2:
+			return BANNERS_PREFIX+"banners_supporter_2.png";
+		case 3:
+			return BANNERS_PREFIX+"banners_supporter_3.png";
+		}
+	}
+
+	
 	public static String getChrome() {
 		switch (chromeType) {
 		default:
@@ -190,7 +206,6 @@ public class Assets {
 		case 3:
 			return "chrome_supporter_3.png";
 		}
-
 	}
 
 	public static String getStatus() {
@@ -232,6 +247,11 @@ public class Assets {
 		
 		if(assetKind.equals("toolbar")) {
 			toolbarType = index;
+			return;
+		}
+		
+		if(assetKind.equals("banners")) {
+			bannersType = index;
 			return;
 		}
 		

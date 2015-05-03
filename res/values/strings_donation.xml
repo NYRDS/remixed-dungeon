@@ -26,6 +26,7 @@
     <string name="WndPremiumSettings_chrome">Select gui material</string>
     <string name="WndPremiumSettings_status">Select status bar material</string>
     <string name="WndPremiumSettings_toolbar">Select toolbar material</string>
+    <string name="WndPremiumSettings_banners">Select banner material</string>
     
     <string name="WndPremiumSettings_notAvailbale">This option not available yet</string>
     
