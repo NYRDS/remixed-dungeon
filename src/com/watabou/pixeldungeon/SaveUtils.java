@@ -21,8 +21,10 @@ public class SaveUtils {
 
 	public static String gameFile( HeroClass cl ) {
 		switch (cl) {
-		case ROGUE:
+		case WARRIOR:
 			return WR_GAME_FILE;
+		case ROGUE:
+			return RG_GAME_FILE;
 		case MAGE:
 			return MG_GAME_FILE;
 		case HUNTRESS:
@@ -42,6 +44,8 @@ public class SaveUtils {
 		switch (cl) {
 		case WARRIOR:
 			return WR_DEPTH_FILE;
+		case ROGUE:
+			return RG_DEPTH_FILE;
 		case MAGE:
 			return MG_DEPTH_FILE;
 		case HUNTRESS:
