@@ -27,10 +27,13 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+
 import com.watabou.noosa.Game;
 
 public class Bundle {
@@ -45,6 +48,9 @@ public class Bundle {
 		this( new JSONObject() );
 	}
 	
+	public Bundle( String data ) throws JSONException {
+		this.data = new JSONObject(data);
+	}
 	
 	private Bundle( JSONObject data ) {
 		this.data = data;
@@ -160,7 +166,7 @@ public class Bundle {
 	
 	public Collection<Bundlable> getCollection( String key ) {
 		
-		ArrayList<Bundlable> list = new ArrayList<Bundlable>();
+		List<Bundlable> list = new ArrayList<Bundlable>();
 		
 		try {
 			JSONArray array = data.getJSONArray( key );
