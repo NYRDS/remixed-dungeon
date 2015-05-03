@@ -65,10 +65,10 @@ public class RatKing extends NPC {
 		getSprite().turnTo( pos, hero.pos );
 		if (state == SLEEPEING) {
 			notice();
-			yell(Game.getVar(R.string.RatKing_Info1));
+			say(Game.getVar(R.string.RatKing_Info1));
 			state = WANDERING;
 		} else {
-			yell(Game.getVar(R.string.RatKing_Info2));
+			say(Game.getVar(R.string.RatKing_Info2));
 		}
 	}
 }

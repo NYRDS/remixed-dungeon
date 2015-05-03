@@ -41,7 +41,7 @@ public class ImpShopkeeper extends Shopkeeper {
 	protected boolean act() {
 
 		if (!seenBefore && Dungeon.visible[pos]) {
-			yell( Utils.format( TXT_GREETINGS ) );
+			say( Utils.format( TXT_GREETINGS ) );
 			seenBefore = true;
 		}
 		

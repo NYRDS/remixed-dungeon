@@ -61,7 +61,7 @@ public class Imp extends NPC {
 		
 		if (!Quest.given && Dungeon.visible[pos]) {
 			if (!seenBefore) {
-				yell( Utils.format( TXT_HEY, Dungeon.hero.className() ) );
+				say( Utils.format( TXT_HEY, Dungeon.hero.className() ) );
 			}
 			seenBefore = true;
 		} else {
@@ -125,7 +125,7 @@ public class Imp extends NPC {
 	
 	public void flee() {
 		
-		yell( Utils.format( TXT_CYA, Dungeon.hero.className() ) );
+		say( Utils.format( TXT_CYA, Dungeon.hero.className() ) );
 		
 		destroy();
 		getSprite().die();
