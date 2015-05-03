@@ -72,7 +72,7 @@ public class PixelDungeon extends Game {
 		
 		if (PixelDungeon.version() != Game.versionCode) {
 			switchScene(WelcomeScene.class);
-		} 
+		}
 	}
 
 	@Override

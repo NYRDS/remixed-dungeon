@@ -69,15 +69,15 @@ public enum HeroClass {
 
 	private String title;
 
-	private HeroClass( String title ) {
-		this.title = title;
-	}
-
 	public static final String[] WAR_PERKS = Game.getVars(R.array.HeroClass_WarPerks);
 	public static final String[] MAG_PERKS = Game.getVars(R.array.HeroClass_MagPerks);
 	public static final String[] ROG_PERKS = Game.getVars(R.array.HeroClass_RogPerks);
 	public static final String[] HUN_PERKS = Game.getVars(R.array.HeroClass_HunPerks);
 	public static final String[] ELF_PERKS = Game.getVars(R.array.HeroClass_ElfPerks);
+
+	private HeroClass( String title ) {
+		this.title = title;
+	}
 	
 	public void initHero( Hero hero ) {
 		hero.heroClass = this;
@@ -118,8 +118,15 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		hero.collect(new TomeOfMastery());
 
+		Badges.validateMastery();
+		
 		Item gl = new Glaive().upgrade(8);
 		gl.cursed = true;
+		
+		Item rr = new RingOfShadows().degrade(4);
+		rr.cursed = true;
+		
+		hero.collect(rr);
 		
 		hero.collect(gl);
 		
@@ -132,6 +139,9 @@ public enum HeroClass {
 		hero.collect(new PotionOfLiquidFlame());
 		hero.collect(new PotionOfLevitation());
 		hero.collect(new WandOfTelekinesis());
+
+		for(int i = 0;i<10;i++)
+		hero.collect(new ScrollOfMagicMapping());
 
 	}
 	
@@ -331,6 +341,9 @@ public enum HeroClass {
 		if (spriteKind.equals(Assets.WARDEN))
 			return true;
 		
+		if (spriteKind.equals(Assets.ELF))
+			return true;
+
 		return false;
 	}
 }
