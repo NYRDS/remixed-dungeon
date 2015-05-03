@@ -26,6 +26,12 @@
     <string name="ClothArmor_Name">тканевый доспех</string>
     <string name="ClothArmor_Desc">Эта лёгкая броня обеспечивает простейшую защиту.</string>
 
+    <!-- STRINGS OF ElfArmor CLASS -->
+    <string name="ElfArmor_Name">Эльфийская накидка</string>
+    <string name="ElfArmor_Desc">Эта накидка позволяет эльфу взывать к силам самой природы. Создаёт заросли высокой травы, обездвиживая всех врагов в зоне видимости.</string>
+    <string name="ElfArmor_ACSpecial">ЗОВ ПРИРОДЫ</string>
+    <string name="ElfArmor_NotElf">Этот доспех доступен лишь эльфам!</string>
+    
     <!-- STRINGS OF HuntressArmor CLASS -->
     <string name="HuntressArmor_Name">охотничий плащ</string>
     <string name="HuntressArmor_Desc">Подобный плащ позволяет охотнице выпустить веер призрачных клинков. Каждое из этих лезвий устремится к одной из целей, находящихся в поле зрения охотницы, нанося урон в зависимости от используемого оружия ближнего боя.</string>
