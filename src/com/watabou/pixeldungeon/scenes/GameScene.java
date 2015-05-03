@@ -606,7 +606,7 @@ public class GameScene extends PixelScene {
 	}
 	
 	static boolean cancel() {
-		if (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth) {
+		if (Dungeon.hero != null && (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth) ) {
 			
 			Dungeon.hero.curAction = null;
 			Dungeon.hero.restoreHealth = false;
