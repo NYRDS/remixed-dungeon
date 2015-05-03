@@ -64,4 +64,10 @@ public class WndPremiumSettings extends Window {
 		add(btn);
 		curBottom += BTN_HEIGHT + GAP;
 	}
+	
+	@Override
+	public void onBackPressed() {
+		hide();
+		PixelDungeon.resetScene();
+	}
 }
