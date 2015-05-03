@@ -71,7 +71,7 @@ public class HighGrass {
 		}
 		
 		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.SCOUT) {
-			Buff.affect( ch, Invisibility.class, 5);
+			Buff.prolong( ch, Invisibility.class, 5);
 			leaves = 2;
 		}
 		
