@@ -43,23 +43,12 @@ public class WandOfTeleportation extends Wand {
 			
 		} else if (ch != null) {
 			
-			int count = 10;
-			int pos;
-			do {
-				pos = Dungeon.level.randomRespawnCell();
-				if (count-- <= 0) {
-					break;
-				}
-			} while (pos == -1);
-			
-			if (pos == -1) {
-				GLog.w( ScrollOfTeleportation.TXT_NO_TELEPORT );
-			} else {
-				ch.pos = pos;
-				ch.getSprite().place( ch.pos );
-				ch.getSprite().visible = Dungeon.visible[pos];
-				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.name, ch.name_objective));
-			}
+			ch.pos = Dungeon.level.randomRespawnCell();
+			ch.getSprite().place(ch.pos);
+			ch.getSprite().visible = Dungeon.visible[ch.pos];
+			GLog.i(String.format(
+					Game.getVar(R.string.WandOfTeleportation_Info1),
+					curUser.name, ch.name_objective));
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
 		}
