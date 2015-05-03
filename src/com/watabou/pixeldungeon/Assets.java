@@ -17,11 +17,18 @@
  */
 package com.watabou.pixeldungeon;
 
+import org.json.JSONException;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.utils.Bundle;
 
 public class Assets {
 
+	private static final String KEY_BANNERS = "banners";
+	private static final String KEY_TOOLBAR = "toolbar";
+	private static final String KEY_STATUS = "status";
+	private static final String KEY_CHROME = "chrome";
 	public static final String ARCS_BG = "arcs1.png";
 	public static final String ARCS_FG = "arcs2.png";
 	public static final String DASHBOARD = "dashboard.png";
@@ -180,7 +187,19 @@ public class Assets {
 	private static int statusType = 0;
 	private static int toolbarType = 0;
 	private static int bannersType = 0;
-
+	
+	static {
+		Bundle premiumSettings;
+		try {
+			premiumSettings = new Bundle(Preferences.INSTANCE.getString(Preferences.KEY_PREMIUM_SETTINGS, ""));
+			chromeType = premiumSettings.getInt(KEY_CHROME);
+			statusType = premiumSettings.getInt(KEY_STATUS);
+			toolbarType = premiumSettings.getInt(KEY_TOOLBAR);
+			bannersType = premiumSettings.getInt(KEY_BANNERS);
+		} catch (JSONException e) {
+		}
+	}
+	
 	public static String getBanners() {
 		switch (bannersType) {
 		default:
@@ -235,25 +254,28 @@ public class Assets {
 	}
 
 	public static void use(String assetKind, int index) {
-		if(assetKind.equals("chrome")) {
+		if(assetKind.equals(KEY_CHROME)) {
 			chromeType = index;
-			return;
 		}
-
-		if(assetKind.equals("status")) {
+		if(assetKind.equals(KEY_STATUS)) {
 			statusType = index;
-			return;
 		}
 		
-		if(assetKind.equals("toolbar")) {
+		if(assetKind.equals(KEY_TOOLBAR)) {
 			toolbarType = index;
-			return;
 		}
 		
-		if(assetKind.equals("banners")) {
+		if(assetKind.equals(KEY_BANNERS)) {
 			bannersType = index;
-			return;
 		}
+		
+		Bundle premiumSettings = new Bundle();
+		premiumSettings.put(KEY_CHROME, chromeType);
+		premiumSettings.put(KEY_STATUS, statusType);
+		premiumSettings.put(KEY_TOOLBAR, toolbarType);
+		premiumSettings.put(KEY_BANNERS, bannersType);
+		
+		Preferences.INSTANCE.put(Preferences.KEY_PREMIUM_SETTINGS, premiumSettings.toString());
 		
 	}
 }

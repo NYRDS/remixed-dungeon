@@ -41,6 +41,7 @@ enum Preferences {
 	public static final String KEY_VERSION          = "version";
 	public static final String KEY_FONT_SCALE       = "font_scale";
 	public static final String KEY_CLASSIC_FONT     = "classic_font";
+	public static final String KEY_PREMIUM_SETTINGS = "premium_settings";
 	
 	private SharedPreferences prefs;
 	
