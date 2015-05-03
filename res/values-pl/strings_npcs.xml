@@ -21,10 +21,10 @@
   <!--STRINGS OF Ghost CLASS-->
   <string name="Ghost_Name">smutny duch</string>
   <string name="Ghost_Desc">Ten duch nie ma zadnych krztaltow.. jest jakby przerazony.</string>
-  <string name="Ghost_Rose1">Witaj przygód ... Kiedyś byłem taki jak ty - silny i pewny siebie ... I teraz jestem martwy ... Ale nie mogę opuścić tego miejsca ... Nie, dopóki nie zdobede _zaczarowanej rozy _... To bardzo ważne, dlamnie ... Niektóre potwóry ukradł ja z mojego ciała, prosze pomoz mi... a oddam Ci cos w zamian..</string>
-  <string name="Ghost_Rose2">Prosze.. pomoz mi.. znajdz Zaczarowana Roże</string>
+  <string name="Ghost_Rose1">Witaj przygód ... Kiedys byłem taki jak ty - silny i pewny siebie ... I teraz jestem martwy ... Ale nie moge opuscic tego miejsca ... Nie, dopóki nie zdobede _zaczarowanej rozy _... To bardzo wazne, dlamnie ... Niektore potwory ukradły  ja z mojego ciala, prosze pomoz mi... a oddam Ci cos w zamian..</string>
+  <string name="Ghost_Rose2">Prosze.. pomoz mi.. znajdz Zaczarowana Roze.</string>
   <string name="Ghost_Rat1">Witaj przygód ... Kiedyś byłem taki jak ty - silny i pewny siebie ... I teraz jestem martwy ... Ale nie mogę opuścić tego miejsca ... Nie, dopóki nie zdobede _wnetrznosci szczura _... To bardzo ważne, dlamnie ...</string>
-  <string name="Ghost_Rat2">PRosze pomoz mi t oznalezc!</string>
+  <string name="Ghost_Rat2">PRosze pomoz mi znalezc tego szczura</string>
   <string name="Ghost_Defense">Omijanie</string>
   <string name="FetidRat_Name">Smierdzacy szczur</string>
   <string name="FetidRat_Name_Objective">Smierdzacy szczur</string>
@@ -42,7 +42,7 @@
   <string name="Imp_Name">Ambitny Demon</string>
   <string name="Imp_Desc">Ambitni sa dosc inteligentne jak na tak male potepione potwory.. nalezy uwazac na ich magie  oraz walke wrecz. Sa bardzo Towarzyskie</string>
   <string name="Imp_Defense">Omijanie</string>
-  <string name="Imp_Golems1">Jetses podroznikem? Kochasz przygody ?? tak oczywiscie ! ;)\nzabij  _golemy_ Tyle ile dasz rade . Dzialaja mi na nerwy, ciakle wkurwiaja i wkurwiaja, wiesz jak to jest? wlasnie nie.. powiedzmy ze zabij ich  _6_ a ja odwdziecze Ci sie.</string>
+  <string name="Imp_Golems1">Jetses podroznikem? Kochasz przygody ?? tak oczywiscie ! ;)\nzabij  _golemy_ Tyle ile dasz rade . Dzialaja mi na nerwy, ciakle denerwuja i wkurwiaja, wiesz jak to jest? wlasnie nie.. powiedzmy ze zabij ich  _6_ a ja odwdziecze Ci sie.</string>
   <string name="Imp_Golems2">Jaki jest Twoj ulubiony golem ? Jego mieso jest calkiem smaczne..</string>
   <string name="Imp_Monks1">Ej Cwaniaczku !!  chodz no tu ... Mam do Ciebie sprawe... nie za darmo oczywiscie  ;)\nIn Wiesz jak wyglada _monich_ ostatnio gonili mnie nago z kutasami na wierzchu... Teraz wiesz o co mi chodzi ? . Wiec prosze zabij _8 ich_ i przyjdz po nagrode.</string>
   <string name="Imp_Monks2">Ty jeszcze zyjesz??. Myslalem ze juz dawno po Tobie.. Szczescie :)</string>
@@ -70,7 +70,7 @@
   <string name="WandMaker_Name">Stary Ki\'i</string>
   <string name="WandMaker_Desc">Stary ale jary... Chroni go magicza tarcza !</string>
   <string name="WandMaker_Defense">absorbowany</string>
-  <string name="WandMaker_Berry1">Och , co za miła niespodzianka spotkać przyzwoitego człowieka w takim miejscu ! Przyjechałem tu po rzadki składnik - _Nasiona Niesmiertelnosci_. Będąc magiem, jestem całkiem w stanie bronić się przed lokalnymi potworami , ale niestety gubię się w w korytarzach... mam problemy z pamiecia.. , to bardzo krępujące. Mógłbyś mi pomóc ? Byłbym szczęśliwy, wzamian dostaniesz jedna z moich najlepszych różdżek .</string>
+  <string name="WandMaker_Berry1">Och , co za miła niespodzianka spotkac przyzwoitego czlowieka w takim miejscu ! Przyjechałem tu po rzadki skladnik - _Nasiona Niesmiertelnosci_. Bedac magiem, jestem calkiem w stanie bronic sie przed lokalnymi potworami , ale niestety gubie sie w w korytarzach... mam problemy z pamiecia.. , to bardzo krepujące. Moglbys mi pomoc ? Byłbym szczesliwy, wzamian dostaniesz jedna z moich najlepszych prostytuek.. nie pomylilem sie rozdzek. heh</string>
   <string name="WandMaker_Berry2">Powodzenia w zdobywaniu Nasiona Niesmiertelnosci, %s? Nie martw sie.. Nie spieszy mi sie</string>
   <string name="WandMaker_Dust1">Co za mila niespodzanka ! .. Tak sie sklada ze akurat szukalem pomocy.. SLuchaj podrozniku  potrzebuje  _Zatrute ramie Demona_ . Ja jako starzec nie jestem w stanie wyruszyc w tak niebezpieczna przygode... poniewaz mam Demencje... wstyd mi.. 800 lat czekam na podcziwego bohatera ktory mi to przyniesie... W zamian za pomoc oddam Ci jedna z rozdzek. Powodzenia</string>
   <string name="WandMaker_Dust2">Udało ci sie zdobyc Zatrute Ramie Demona, %s? Stos kosci to byl najlepszy wybor poszukiwan ! dziekuje !!</string>

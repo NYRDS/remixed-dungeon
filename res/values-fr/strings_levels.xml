@@ -44,7 +44,7 @@
   <string name="Level_TileDescLockedDoor">Cette porte est verrouillée, vous avez besoin de la clé correspondante pour l\'ouvrir.</string>
   <string name="Level_TileDescLockedExit">D\'épais barreaux vous séparent de l\'escalier qui mène à l\'étage suivant.</string>
   <string name="Level_TileDescBarricade">La barricade de bois est bien fixée, mais elle a séché au fil des années. Pourrait-elle brûler ?</string>
-  <string name="Level_TileDescSign">Vous n\'arrivez pas à lire d\'ici.</string>
+  <string name="Level_TileDescSign">Vous n\'arrivez pas à lire d\'où vous êtes.</string>
   <string name="Level_TileDescTrap">Marcher sur une plaque de pression cachée activera le piège.</string>
   <string name="Level_TileDescInactiveTrap">Le piège a déjà été déclenché et ne représente plus une menace.</string>
   <string name="Level_TileDescStatue">Quelqu\'un a voulu décorer cet endroit, mais a échoué visiblement.</string>

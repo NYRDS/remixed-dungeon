@@ -31,8 +31,8 @@
   <string name="Badges_DeathPoison">Mort par empoisonnement</string>
   <string name="Badges_DeathGas">Asphyxié par des gaz toxiques</string>
   <string name="Badges_DeathHunger">Mort de faim</string>
-  <string name="Badges_DeathGlyph">Mort par une glyphe</string>
-  <string name="Badges_DeathFalling">Chute fatale</string>
+  <string name="Badges_DeathGlyph">Mort par un glyphe</string>
+  <string name="Badges_DeathFalling">Mort suite à une chute</string>
   <string name="Badges_Yasd">Mort par le feu, le poison, les gaz toxiques et la faim</string>
   <!--<string name="Badges_BossSlain1War"></string>-->
   <!--<string name="Badges_BossSlain1Mag"></string>-->
@@ -52,8 +52,8 @@
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
   <string name="Badges_BossSlain3All">3e boss vaincu avec les spécialisations de chaque personnage</string>
-  <string name="Badges_RingHaggler">anneau du marchandeur obtenu</string>
-  <string name="Badges_RingThorns">anneau d\'épines obtenu</string>
+  <string name="Badges_RingHaggler">Anneau du marchandeur obtenu</string>
+  <string name="Badges_RingThorns">Anneau d\'épines obtenu</string>
   <string name="Badges_StrengthAttained1">13 points de force obtenus</string>
   <string name="Badges_StrengthAttained2">15 points de force obtenus</string>
   <string name="Badges_StrengthAttained3">17 points de force obtenus</string>
@@ -82,12 +82,12 @@
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amulette de Yendor obtenue</string>
   <string name="Badges_VictoryAll">Amulette de Yendor obtenue par tous les personnages</string>
-  <string name="Badges_MasteryCombo">combo de 7 coups</string>
+  <string name="Badges_MasteryCombo">Combo de 7 coups</string>
   <string name="Badges_PotionsCooked1">3 potions préparées</string>
   <string name="Badges_PotionsCooked2">6 potions préparées</string>
   <string name="Badges_PotionsCooked3">9 potions préparées</string>
   <string name="Badges_PotionsCooked4">12 potions préparées</string>
-  <string name="Badges_NoMonsterSlain">Etage complété sans avoir tué de monstres</string>
+  <string name="Badges_NoMonsterSlain">Niveau complété sans avoir tué un seul monstre</string>
   <string name="Badges_GrimWepon">Monstre tué par une arme macabre</string>
   <string name="Badges_Piranhas">6 piranhas tués</string>
   <string name="Badges_NightHunter">5 monstres tués pendant la nuit</string>
@@ -95,8 +95,8 @@
   <string name="Badges_GamesPlayed2">100 parties jouées</string>
   <string name="Badges_GamesPlayed3">500 parties jouées</string>
   <string name="Badges_GamesPlayed4">2000 parties jouées</string>
-  <string name="Badges_HappyEnd">Happy end</string>
+  <string name="Badges_HappyEnd">Fin heureuse</string>
   <string name="Badges_Champion">Challenge réussi</string>
-  <string name="Badges_Supporter">Merci de votre soutien !</string>
+  <string name="Badges_Supporter">Merci pour votre soutien !</string>
   <string name="Badges_Immured">Mort par emmurement</string>
 </resources>

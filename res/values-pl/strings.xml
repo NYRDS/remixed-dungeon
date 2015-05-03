@@ -59,8 +59,8 @@
   <string name="Dungeon_NoTips">Ten Tekst jest niesamowicie ciekawy..</string>
   <string name="Dungeon_DeadEnd">Co ty tutaj kurwa robisz?</string>
   <string-array name="Dungeon_Tips">
-    <item>Nie należy przeceniać swoje siły.</item>
-    <item>Nie wszystkie drzwi w lochu są widoczne na pierwszy rzut oka . Jeśli utkniesz , szukać ukrytych drzwi.</item>
+    <item>Nie nalezy przeceniac swoje siły.</item>
+    <item>Nie wszystkie drzwi w lochu sa widoczne na pierwszy rzut oka . Jeśli utkniesz , szukacc ukrytych drzwi.</item>
     <item>Podniesienie sly to nie tylko lewel... mozeszposzukac Zwoju ktory zrobi to szybciej.</item>
     <item>mozesz wydac swoje zloto w sklepach. pierwszy z nich znajduje siena 6 poziomiel.</item>
     <item>Uwazaj na  Goo!</item>
@@ -129,7 +129,7 @@
   <string name="WndGame_Ranking">Ranking</string>
   <string name="WndGame_Start">Graj od NOwa</string>
   <string name="WndGame_menu">Moje Menu</string>
-  <string name="WndGame_Exit">Wyjdz z Pixel Dungeone</string>
+  <string name="WndGame_Exit">Wyjdz z Pixel Dungeone ale kurcze nie radze!</string>
   <string name="WndGame_Return">Wroc do Gry</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">Status</string>
@@ -143,7 +143,7 @@
   <string name="WndHero_StaCatalogus">Catalogus</string>
   <string name="WndHero_StaJournal">Czasopismo</string>
   <!--STRINGS OF WndImp CLASS-->
-  <string name="WndImp_Message">jestes moim bohaterem... Nie mam kasy by zaplacic.. ale..To jest mój pierścionek spadek rodziny : dziadek zabrał go wraz z palcem martwego paladyna .</string>
+  <string name="WndImp_Message">jestes moim bohaterem... Nie mam kasy by zaplacic.. ale..To jest moj pierscionek spadek rodziny : dziadek zabral go wraz z palcem martwego paladyna .</string>
   <string name="WndImp_Reward">Wez Pierscien</string>
   <!--STRINGS OF WndInfoCell CLASS-->
   <string name="WndInfoCell_Nothing">Nie ma nic tutaj</string>
@@ -152,8 +152,8 @@
   <string name="WndInfoItem_LockedChest">zamknieta skrzynka</string>
   <string name="WndInfoItem_CrystalChest">Krysztalowa skrzynka</string>
   <string name="WndInfoItem_Tomb">Grobowiec</string>
-  <string name="WndInfoItem_Skeleton">Szczątki</string>
-  <string name="WndInfoItem_WontKnow">Nie wiem, co jest w środku</string>
+  <string name="WndInfoItem_Skeleton">Szczatki</string>
+  <string name="WndInfoItem_WontKnow">Nie wiem, co jest w srodku</string>
   <string name="WndInfoItem_NeedKey">Ale potrzebuje zlotego klucza</string>
   <string name="WndInfoItem_Inside">Widzisz %s, ale musisz miec zloty klucz do otwarcia skrzyni</string>
   <string name="WndInfoItem_Owner">Ten starożytny grób może zawierać coś pożytecznego.. ale przeraza mnie.</string>
@@ -161,7 +161,7 @@
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">Czasopismo</string>
   <!--STRINGS OF WndRanking CLASS-->
-  <string name="WndRanking_Error">Nie można załadować dodatkowych informacji</string>
+  <string name="WndRanking_Error">Nie mozna zaladowac dodatkowych informacji</string>
   <string name="WndRanking_Stats">Stats</string>
   <string name="WndRanking_Items">przedmioty</string>
   <string name="WndRanking_Badges">Osiagniecie</string>
@@ -177,7 +177,7 @@
   <string name="WndRanking_StaAlchemy">Ugotowane Eliksiry</string>
   <string name="WndRanking_StaAnkhs">Uzytych Ankhs</string>
   <!--STRINGS OF WndResurrect CLASS-->
-  <string name="WndResurrect_Message">Umarłeś , ale chcesz kolejną szansę na przejscie tego lochu . Weźmiesz ją ? czy pekasz?</string>
+  <string name="WndResurrect_Message">Umarłes , ale chcesz kolejna szanse na przejscie tego lochu . Wezmiesz ja ? czy pekasz?</string>
   <string name="WndResurrect_Yes">Tak, Chce walczyc!</string>
   <string name="WndResurrect_No">Poddaje Sie</string>
   <!--STRINGS OF WndSadGhost CLASS-->
@@ -187,7 +187,7 @@
   <string name="WndSadGhost_Armor">Zbroja Ducha</string>
   <string name="WndSadGhost_Farewell">Zegnaj !</string>
   <!--STRINGS OF WndStory CLASS-->
-  <string name="WndStory_Sewers">Nikt nie będzie nazwać ze to bezpieczne miejsce , ale przynajmniej nie trzeba będzie radzić sobie z czarną magią.. Tutaj Panuja inne zasady</string>
+  <string name="WndStory_Sewers">Smierdzace miejsce... , ale przynajmniej nie trzeba bedzie radzic sobie z czarna magia.. Tutaj Panuja inne zasady</string>
   <string name="WndStory_Prision">Kiedys, te podziemia byly wiezieniem dla innych zlodziei, mordecow jak i gwalcicieli.. Zas od Czasu gdy krasnolidzie sie zbuntowali... Doszlo do niewyjasnionych zjawisk..</string>
   <string name="WndStory_Caves">Jaskinie , które rozciągają się pod opuszczonym więzieniu , są słabo zaludnione. W zasadzie strach jest zejsc nizej i zbudowac jakis dom.. Stworzyc rodzine.. kazdy by sie bal...</string>
   <string name="WndStory_Metropolis">Metropolia Krasnoludow kiedys obiecalo przysz;ym pokoleniom ze odbudujemy miasto... gdy tylko zbuntowani straca panowanie... i gdy przyjdzie wojownik  o czystym sercu i uwolni nas... </string>
@@ -202,7 +202,7 @@
   <string name="WndTradeItem_Sold">Sprzedakes %1$s za %2$dg</string>
   <string name="WndTradeItem_Bought">Kupiles %1$s za %2$dg</string>
   <!--STRINGS OF WndWandmaker CLASS-->
-  <string name="WndWandmaker_Message">Udalo Ci sie.. w Nagrode ...możesz wybrać jedną z moich wysokiej jakości różdżki .</string>
+  <string name="WndWandmaker_Message">Udalo Ci sie.. w Nagrode ...mozesz wybrac jedna z moich wysokiej jakosci rozdzki .</string>
   <string name="WndWandmaker_Battle">Bitewna Rozdzka</string>
   <string name="WndWandmaker_NonBattle">Passywna Rozdzka</string>
   <string name="WndWandmaker_Farawell">Powodzenia w Zadaniu, %s!</string>
@@ -224,23 +224,23 @@
   <!--STRINGS OF Amulet CLASS-->
   <string name="Amulet_Name">Amulet Yendorow </string>
   <string name="Amulet_ACEnd">Koniec Gry</string>
-  <string name="Amulet_Info">Amulet Yerdorow to mityczny artefakt skradziony Bogom przez opętanego krasnoluda</string>
+  <string name="Amulet_Info">Amulet Yerdorow to mityczny artefakt skradziony Bogom przez opetanego krasnoluda</string>
   <!--STRINGS OF Ankh CLASS-->
   <string name="Ankh_Name">Ankh</string>
   <string name="Ankh_Info">Ten Symbol pozwoli Ci zmartwych wstac... ale niestety bez ekwipunku.</string>
   <!--STRINGS OF ArmorKit CLASS-->
   <string name="ArmorKit_Name">Zestaw zbroji</string>
   <string name="ArmorKit_ACAplly">Zatwierdz</string>
-  <string name="ArmorKit_Info">Stosując ten zestaw drobnych narzędzi i materiałów każda może przekształcić zbroję w \" epickiej zbroe \", nadal bedzie miala efekty starej zbroji</string>
+  <string name="ArmorKit_Info">Stosujac ten zestaw drobnych narzedzi i materiałow każda może przeksztalcic zbroje w \" epickia zbroje \", nadal bedzie miala efekty starej zbroji</string>
   <string name="ArmorKit_SelectArmor">Wybierz zbroje do ulepszenia</string>
-  <string name="ArmorKit_Upgraded">można zastosować zestaw zbroi , aby ulepszyc %s</string>
+  <string name="ArmorKit_Upgraded">mozna zastosowac zestaw zbroi , aby ulepszyc %s</string>
   <!--STRINGS OF Dewdrop CLASS-->
   <string name="Dewdrop_Name">dewdrop</string>
   <string name="Dewdrop_Info">Czysty Kamien</string>
   <!--STRINGS OF DewVial CLASS-->
   <string name="DewVial_Name">Pusta buteleczka</string>
   <string name="DewVial_ACDRINK">PIJ</string>
-  <string name="DewVial_Info">Można przechowywać nadmiar rosy w tym maleńkim naczyniu do picia. a nastepnie wylezyc rany</string>
+  <string name="DewVial_Info">Mozna przechowywac nadmiar rosy w tym maleńkim naczyniu do picia. a nastepnie wylezyc rany</string>
   <string name="DewVial_AutoDrink">Rosa leczy Twoje rany</string>
   <string name="DewVial_Collected">Zebrales Rose</string>
   <string name="DewVial_Full">Twoj flakonik jest Pelny</string>
@@ -297,15 +297,15 @@
   <string name="Keyring_Info">Ten Brylok potrafi zachowac wszystkie klucze w 1 miejscu</string>
   <!--STRINGS OF ScrollHolder CLASS-->
   <string name="ScrollHolder_Name">Tu zatrzymasz Zwoje</string>
-  <string name="ScrollHolder_Info">Możesz umieścić dowolną liczbę zwojów do tego rurowego pojemnika . </string>
+  <string name="ScrollHolder_Info">Mozesz umiescic dowolna liczbe zwojow do tego rurowego pojemnika . </string>
   <!--STRINGS OF SeedPouch CLASS-->
   <string name="SeedPouch_Name">Torba nasion</string>
-  <string name="SeedPouch_Info">To małe aksamitne etui pozwala przechowywać dowolną liczbę nasion w nim . Bardzo wygodne .</string>
+  <string name="SeedPouch_Info">To male aksamitne etui pozwala przechowywac dowolna liczbe nasion w nim . Bardzo wygodne .</string>
   <!--STRINGS OF WandHolster CLASS-->
   <string name="WandHolster_Name">Kabura</string>
-  <string name="WandHolster_Info">Ten smukły uchwyt jest wykonany ze skóry jakiegoś egzotycznego zwierzęcia. Pozwala na kompaktowo przewozić do %d różdżki .</string>
+  <string name="WandHolster_Info">Ten smukly uchwyt jest wykonany ze skory jakiegos egzotycznego zwierzęcia. Pozwala na kompaktowo przewozic do %d rozdzki.</string>
   <!--STRINGS OF PotionBelt CLASS-->
-  <string name="PotionBelt_Info">Ta silna skórzany pas jest w stanie przechowywać wszystkie swoje mikstury , jednocześnie chroniąc je przed wstrząsające ze względu na mróz .</string>
+  <string name="PotionBelt_Info">Ta silna skorzany pas jest w stanie przechowywac wszystkie swoje mikstury , jednoczesnie chroniac je przed wstrzasajace ze wzgledu na mroz .</string>
   <string name="PotionBelt_Name">Trujacy Bot</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
@@ -313,11 +313,11 @@
   <string name="GoldenKey_Info">Opis jest zarzygany po przez jakies podroznika.. obrzydliwe!</string>
   <!--STRINGS OF IronKey CLASS-->
   <string name="IronKey_Name">Stalowy Klucz</string>
-  <string name="IronKey_Info">akie drzwi może otworzyć ? Ten Stary Klucz?</string>
+  <string name="IronKey_Info">akie drzwi moze otworzyc ? Ten Stary Klucz?</string>
   <string name="IronKey_FromDepth">stalowy klucz z poziomu %d</string>
   <!--STRINGS OF SkeletonKey CLASS-->
   <string name="SkeletonKey_Name">Klucz z Kosci</string>
-  <string name="SkeletonKey_Info">Ten klucz wygląda Zajebiscie : jego głowa ma kształt czaszki . Prawdopodobnie może otworzyć ta wielka brame</string>
+  <string name="SkeletonKey_Info">Ten klucz wyglada Zajebiscie : jego głowa ma ksztalt czaszki . Prawdopodobnie moze otworzyc ta wielka brame</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">Pyl trupa</string>
@@ -327,21 +327,21 @@
   <string name="DarkGold_Info">Metal ten jest nazywany ciemny nie ze względu na jego kolor (nie różnią się od zwykłej złota) , ale ponieważ ulega stopieniu</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">Zdechla Roza</string>
-  <string name="DriedRose_Info">Róża wyschnięciu dawno temu, ale zachowała jakos wszystkie platki</string>
+  <string name="DriedRose_Info">Niesmiertelna roza?  zachowała jakos wszystkie platki</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">Token Krasnoluda</string>
   <string name="DwarfToken_Info">Kiedys Krasnoludy mialy przy sobie takie tokeny... uzywali je do bizuteri ? </string>
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">Kilof</string>
-  <string name="Pickaxe_Info">Jest toduży i wytrzymały narzędzie do rozbijania skał . Prawdopodobnie mogą być stosowane jako narzędzia .</string>
-  <string name="Pickaxe_ACMine">KOP</string>
+  <string name="Pickaxe_Info">Jest to duzy i wytrzymały narzedzie do rozbijania skal . Prawdopodobnie moga bycstosowane jako narzędzia .</string>
+  <string name="Pickaxe_ACMine">wykop</string>
   <string name="Pickaxe_NoVein">Do Wykuwania Ciemnego Zlota..</string>
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">Ogromna Czacha</string>
   <string name="RatSkull_Info">Wyglada odlotowo.. Bedize moim trofeem i powiesze go na scianie</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
-  <string name="ConfusionGas_Info">Gaz</string>
+  <string name="ConfusionGas_Info">Gaz, o kurwa.</string>
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Ogień szaleje tutaj .</string>
   <!--STRINGS OF Foliage CLASS-->
@@ -356,7 +356,7 @@
   <string name="WaterOfAwareness_Procced">Po napiciu sie wody, wiem juz wszystko o swoim wyposazeniu</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
   <string name="WaterOfHealth_Info">Moc zdrowia promieniuje z wody to dobrze. Weź łyk z niej wyleczyć swoje rany i zaspokoić głód .</string>
-  <string name="WaterOfHealth_Procced">Jak można wziąć łyk , uważasz, że rany goją się całkowicie .</string>
+  <string name="WaterOfHealth_Procced">po wypiciu, mam wrazenie jakby rany sie goily</string>
   <!--STRINGS OF WaterOfTransmutation CLASS-->
   <string name="WaterOfTransmutation_Info">RzuC element do studni , aby przekształcić go w coś innego.</string>
   <!--STRINGS OF Web CLASS-->
@@ -391,9 +391,9 @@
   <string name="GasesImmunity_Info">Odporny na gazy</string>
   <!--STRINGS OF Hunger CLASS-->
   <string-array name="Hunger_Hungry">
-    <item>Jesteś głodny.</item>
-    <item>Jesteś głodny.</item>
-    <item>Jesteś głodny.</item>
+    <item>Jestes głodny.</item>
+    <item>Jestes głodny.</item>
+    <item>Jestes głodny.</item>
   </string-array>
   <string-array name="Hunger_Starving">
     <item>Jestes zmeczony!</item>

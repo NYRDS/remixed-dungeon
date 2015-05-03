@@ -3,8 +3,8 @@
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">Luk jest bezuzyteczny (dla wszystkich procz elfow ) na krotki dystans.\n\n</string>
   <!--STRINGS OF WoodenBow CLASS-->
-  <string name="WoodenBow_Name">Drewniany luk.</string>
-  <string name="WoodenBow_Info">TEn Luk moze by przydatny, gdy tylko znajdziesz odpowiednie strzaly.</string>
+  <string name="WoodenBow_Name">Drewniany luk z Topora Gnola</string>
+  <string name="WoodenBow_Info">TEn Luk moze byc przydatny, gdy tylko znajdziesz odpowiednie strzaly.</string>
   <string name="WoodenBow_Gender">meski</string>
   <!--STRINGS OF CompoundBow CLASS-->
   <string name="CompoundBow_Name">Mieszany luk</string>

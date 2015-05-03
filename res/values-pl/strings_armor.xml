@@ -17,7 +17,7 @@
   <string name="Armor_Info6">Artefakt ktorego efekty  sa losowe. Uwazaj !</string>
   <string name="Armor_Info7a">
 \n\nMasz na Sobie %1$s%2$s.</string>
-  <string name="Armor_Info7b">, i poniewaz jest to przeklete, a ty jestes bezsilny. Natychmiast wyjeb to !</string>
+  <string name="Armor_Info7b">, i poniewaz jest to przeklete, a ty jestes bezsilny. To Natychmiast wyjeb to !</string>
   <string name="Armor_Info8">
 \n\nMozesz czuc czarna magie, ktora zbliza sie do Ciebie %s.</string>
   <string name="Armor_Glyph">glif</string>
@@ -28,6 +28,7 @@
   <!--STRINGS OF ClothArmor CLASS-->
   <string name="ClothArmor_Name">Tkana Zbroja</string>
   <string name="ClothArmor_Desc">Ta lekka zbroja oferuje bardzo dobra obrone.</string>
+  <!--STRINGS OF ElfArmor CLASS-->
   <!--STRINGS OF HuntressArmor CLASS-->
   <string name="HuntressArmor_Name">plaszcz lowcy</string>
   <string name="HuntressArmor_Desc">Lowca w takim plaszczu moze wyrzucic kilka ostrzy na raz ! Kazdy z Tych nozy jest skierowany we wroga w obrebie wzroku. Obrazenia zaleza od broni trzymanej w dloni.</string>

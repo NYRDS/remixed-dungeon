@@ -5,7 +5,7 @@
   <string name="WndDonate_gold">zloty</string>
   <string name="WndDonate_ruby">Rubinowy</string>
   <string name="WndDonate_donate">darowizna</string>
-  <string name="WndDonate_notConnected">brak połączenia :(</string>
+  <string name="WndDonate_notConnected">brak polaczenia :(</string>
   <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - free to everyone and always will be.\n\nHowever, You can help us make the game even better.\n\nIn addition to our heartfelt thanks you\'ll get some cosmetic improvements.</string>
   <string name="WndDonate_silverDonate">srebna darowizna</string>
   <string name="WndDonate_goldDonate">zlota darowizna</string>

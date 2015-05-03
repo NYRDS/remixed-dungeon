@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE pixeldungeon/plants-->
   <!--STRINGS OF Plant CLASS-->
-  <string name="Plant_ACPlant">Roslina</string>
+  <string name="Plant_ACPlant">Roslina ? a moze Marihuana</string>
   <string name="Plant_Info">Rzuc nasieniem w jakies miejsce, by wyrosla roslina %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">nasiona %s</string>
   <!--STRINGS OF Dreamweed CLASS-->
