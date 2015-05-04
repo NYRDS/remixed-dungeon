@@ -12,7 +12,7 @@
   <string name="ChargrilledMeat_Info">Calkiem przyzwoity stek</string>
   <!--STRINGS OF FrozenCarpaccio CLASS-->
   <string name="FrozenCarpaccio_Name">zamrozona kawa</string>
-  <string name="FrozenCarpaccio_Info">Tokawałek mrożonego mięsa surowego . Jedynym sposobem, aby go zjeść to przez cięcie na mniejsze plastry !</string>
+  <string name="FrozenCarpaccio_Info">To kawalek mrozonego miesa w dodatku surowego . Jedynym sposobem, aby go zjesc to przez ciecie na mniejsze plastry !</string>
   <string name="FrozenCarpaccio_Info1">Widzisz jak Twoje dlonie znikaja !</string>
   <string name="FrozenCarpaccio_Info2">Czujesz jak skora robi sie twardsza !</string>
   <string name="FrozenCarpaccio_Info3">Odswierzenie</string>
@@ -20,7 +20,7 @@
   <!--STRINGS OF MysteryMeat CLASS-->
   <string name="MysteryMeat_Name">Legendarne Mieso!</string>
   <string name="MysteryMeat_Info">Jesz na wlasne ryzyko !</string>
-  <string name="MysteryMeat_Info1">O kurwa, gorace !</string>
+  <string name="MysteryMeat_Info1">O, gorace !</string>
   <string name="MysteryMeat_Info2">Nie czujesz nog</string>
   <string name="MysteryMeat_Info3">Nie czujesz nic specjalnego</string>
   <string name="MysteryMeat_Info4">Jestes nacpany</string>

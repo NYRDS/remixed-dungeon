@@ -17,17 +17,22 @@
   <string name="Armor_Info6">Artefakt ktorego efekty  sa losowe. Uwazaj !</string>
   <string name="Armor_Info7a">
 \n\nMasz na Sobie %1$s%2$s.</string>
-  <string name="Armor_Info7b">, i poniewaz jest to przeklete, a ty jestes bezsilny. Natychmiast wyjeb to !</string>
+  <string name="Armor_Info7b">, i poniewaz jest to przeklete, a ty jestes bezsilny. To Natychmiast wyjeb to !</string>
   <string name="Armor_Info8">
 \n\nMozesz czuc czarna magie, ktora zbliza sie do Ciebie %s.</string>
   <string name="Armor_Glyph">glif</string>
   <!--STRINGS OF ClassArmor CLASS-->
-  <string name="ClassArmor_Desc">To wszystko wyglada zajebiscie!</string>
+  <string name="ClassArmor_Desc">To wszystko wyglada wspanialy!</string>
   <string name="ClassArmor_LowHealt">Twoje punkty zycia sa niskie !</string>
   <string name="ClassArmor_NotEquipped">Gdy bedziesz mial na sobie te szczegolna zbroje, to wykorzystasz swoja cala moc!</string>
   <!--STRINGS OF ClothArmor CLASS-->
   <string name="ClothArmor_Name">Tkana Zbroja</string>
   <string name="ClothArmor_Desc">Ta lekka zbroja oferuje bardzo dobra obrone.</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Plaszcz Elfa</string>
+  <string name="ElfArmor_Desc">Z pomocą tego płaszcza elf moze wezwac siłyj natury . Wysoka trawa bedzie rosla i rosla a w mgnieniu oka nawet przez lity kamien unieruchomi wszystkich wrogow w zasiegu wzroku .</string>
+  <string name="ElfArmor_ACSpecial">NATURE CALL</string>
+  <string name="ElfArmor_NotElf">Tylko dla Elfow</string>
   <!--STRINGS OF HuntressArmor CLASS-->
   <string name="HuntressArmor_Name">plaszcz lowcy</string>
   <string name="HuntressArmor_Desc">Lowca w takim plaszczu moze wyrzucic kilka ostrzy na raz ! Kazdy z Tych nozy jest skierowany we wroga w obrebie wzroku. Obrazenia zaleza od broni trzymanej w dloni.</string>
@@ -35,18 +40,18 @@
   <string name="HuntressArmor_NoEnemies">Brak wrogow w zasiegu wzroku, boja sie - to dobry znak.</string>
   <string name="HuntressArmor_NotHuntress">Tylko lowca jest w stanie uzyc tej zbroji!</string>
   <!--STRINGS OF LeatherArmor CLASS-->
-  <string name="LeatherArmor_Name">To Tylko Skorzana zbroja.</string>
+  <string name="LeatherArmor_Name">Skorzana zbroja</string>
   <string name="LeatherArmor_Desc">Zbroja stworzona ze skory potwora, nie jest zbyt lekka, ale stanowi dobra obrone.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">Szata Maga</string>
   <string name="MageArmor_Desc">Noszac te szate, Mag moze rzucic zalecie na wszystkich wrogow podpalajac ich, lecz przy tym sam nie moze sie ruszyc.</string>
-  <string name="MageArmor_ACSpecial">Stopina Ziemia, Lawa? </string>
+  <string name="MageArmor_ACSpecial">Stopiony Ziemia </string>
   <string name="MageArmor_NotMage">Tylko Magowie moga zalozyc te zbroje!</string>
   <!--STRINGS OF MailArmor CLASS-->
-  <string name="MailArmor_Name">łuskana Zbroja</string>
+  <string name="MailArmor_Name">Luskana Zbroja</string>
   <string name="MailArmor_Desc">Wzrok potworow powoduje ze ta zbroja jest Twarda ale elastyczna.</string>
   <!--STRINGS OF PlateArmor CLASS-->
-  <string name="PlateArmor_Name">platynowa zbroja</string>
+  <string name="PlateArmor_Name">Platynowa Zbroja</string>
   <string name="PlateArmor_Desc">Zbroja polaczona z garniturem wyszyta ze stali diabla, zapewnia prawidlowa obrone dla kazdego podroznika tego swiata. </string>
   <!--STRINGS OF RogueArmor CLASS-->
   <string name="RogueArmor_Name">Stroj Zabojcy</string>

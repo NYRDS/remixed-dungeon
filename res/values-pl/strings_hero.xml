@@ -20,7 +20,7 @@
   <string name="Hero_StaRoots">Nie mozesz sie ruszyc!</string>
   <string name="Hero_StaWeakness">Czujesz zmeczenie</string>
   <string name="Hero_StaBlindness">Jestes Oslepiony</string>
-  <string name="Hero_StaFury">JEstes Wsciekly</string>
+  <string name="Hero_StaFury">Jestes Wsciekly</string>
   <string name="Hero_StaFurious">Wscieklosc</string>
   <string name="Hero_StaCharm">Jestes... Jakis tępy.</string>
   <string name="Hero_StaCripple">Jestes Wystraszony</string>
@@ -31,6 +31,7 @@
   <string name="HeroClass_Mag">Mag</string>
   <string name="HeroClass_Rog">Zabojca</string>
   <string name="HeroClass_Hun">Lowca</string>
+  <string name="HeroClass_Elf">Elf</string>
   <string-array name="HeroClass_WarPerks">
     <item>Wojownik posiada na poczatku 11 Sily.</item>
     <item>Wojownik posiada na poczatku krotki miecz. Mozna go poswiecic do ulepszenia innej broni.</item>
@@ -60,6 +61,13 @@
     <item>Lowca zdobywa wiecej zycia z wody lisci .</item>
     <item>Lowca wyczuwa zblizajace sie potwory nawet gdy ich nie widzi.</item>
   </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Elfy maja  15 HP i  9 Sily .</item>
+    <item>Elfy odporne na atak korzeniem .</item>
+    <item>Elfy na start otrzymuja ulepszony luk i kilka strzal.</item>
+    <item>Elfy sa biegle utalentowane we wladaniu lukiem.</item>
+    <item>Elfy nie umieja za bardzo uzywac broni bialeej.</item>
+  </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">Udat atakk z bialej broni przez _Gladiatora_ uruchamia combo, ktore przy kazdym kolejnym trafieniu uderza mocniej!</string>
@@ -68,13 +76,17 @@
   <string name="HeroSubClass_NameWarL">Warlock</string>
   <string name="HeroSubClass_DescWarL">Po zabiciu wroga _Warlock_ wysysa dusze i leczy swoje rany regenerujac glod!</string>
   <string name="HeroSubClass_NameBatM">Bitewny Mag</string>
-  <string name="HeroSubClass_DescBatM">Podczas walki z różdżką w ręku ,_Bitewny Mag_ zadaje dodatkowe obrażenia w zależności od aktualnej liczby ładunków . Każde trafienie przywraca 1 ładunek do tej różdżki .</string>
+  <string name="HeroSubClass_DescBatM">Podczas walki z rozdzka w reku ,_Bitewny Mag_ zadaje dodatkowe obrazenia w zaleznosci od aktualnej liczby ładunków . Kazde trafienie przywraca 1 ładunek do tej rozdzki .</string>
   <string name="HeroSubClass_NameAssa">assassin</string>
-  <string name="HeroSubClass_DescAssa">Przeprowadzając atak z zaskoczenia ,_Assassin_ zadaje dodatkowe obrażenia do swojego celu.</string>
+  <string name="HeroSubClass_DescAssa">Przeprowadzajac atak z zaskoczenia ,_Assassin_ zadaje dodatkowe obrazenia do swojego celu.</string>
   <string name="HeroSubClass_NameFreR">freerunner</string>
-  <string name="HeroSubClass_DescFreR">_Freerunner_ Może poruszać się prawie dwa razy szybciej , niż większość potworów . Kiedy biegnie ,Freerunner jest znacznie trudniejsze do trafienia. Do tego musi być nieobciążony i nie głoduje .</string>
+  <string name="HeroSubClass_DescFreR">_Freerunner_ Moze poruszac sie prawie dwa razy szybciej , niż wiekszosć potworów . Kiedy biegnie ,Freerunner jest znacznie trudniejsze do trafienia. Do tego musi być nieobciazony i nie gloduje .</string>
   <string name="HeroSubClass_NameSnip">snajper</string>
-  <string name="HeroSubClass_DescSnip">_Snipers_ są w stanie wykryć słabe punkty w zbroi wroga , skutecznie ignorując go przy użyciu broni dystansowej .</string>
+  <string name="HeroSubClass_DescSnip">_Snipers_ sa w stanie wykryc slabe punkty w zbroi wroga , skutecznie ignorując go przy użyciu broni dystansowej .</string>
   <string name="HeroSubClass_NameWard">Opiekun</string>
-  <string name="HeroSubClass_DescWard">Posia Poteza moc Natury _Opiekun_  Posiada zdolność do gromadzenia sily z nasion roślin . Deptanie po wysokiej trawie przyznaje mu tymczasowy pancerz!</string>
+  <string name="HeroSubClass_DescWard">Posiada Poteza moc Natury _Opiekun_  Posiada zdolnosc do gromadzenia sily z nasion roślin . Deptanie po wysokiej trawie przyznaje mu tymczasowy pancerz!</string>
+  <string name="HeroSubClass_NameScout">zwiadowca</string>
+  <string name="HeroSubClass_DescScout">Elf _Zwiadowca_ sa mistrzami w skradaniu sie. Deptanie po trawie sprawia ze sa niewidzialni !</string>
+  <string name="HeroSubClass_NameShaman">Szaman</string>
+  <string name="HeroSubClass_DescShaman">Elf _Szaman_ mozne uzywac rozdzki jako bron walki w recz ! Maa duze szanse na uderzenie wroga nie ponaszac straty ladunkow!</string>
 </resources>
