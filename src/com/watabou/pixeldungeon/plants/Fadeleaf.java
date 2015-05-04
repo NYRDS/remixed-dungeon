@@ -53,9 +53,25 @@ public class Fadeleaf extends Plant {
 			
 		} else if (ch instanceof Mob) {
 			
-			ch.pos = Dungeon.level.randomRespawnCell();
-			ch.getSprite().place(ch.pos);
-			ch.getSprite().visible = Dungeon.visible[ch.pos];
+			// Why do I try to choose a new position 10 times?
+			// I don't remember...
+			int count = 10;
+			int newPos;
+			do {
+				newPos = Dungeon.level.randomRespawnCell();
+				if (count-- <= 0) {
+					break;
+				}
+			} while (newPos == -1);
+			
+			if (newPos != -1) {
+			
+				ch.pos = newPos;
+				ch.getSprite().place( ch.pos );
+				ch.getSprite().visible = Dungeon.visible[pos];
+				
+			}
+						
 		}
 		
 		if (Dungeon.visible[pos]) {

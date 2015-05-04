@@ -297,8 +297,11 @@ public class Ghost extends NPC {
 					
 					FetidRat rat = new FetidRat();
 					rat.pos = Dungeon.level.randomRespawnCell();
-					GameScene.add( rat );
-					processed = true;
+					if (rat.pos != -1) {
+						GameScene.add( rat );
+						processed = true;
+					}
+					
 				} else {
 					
 					if (Random.Int( left2kill ) == 0) {

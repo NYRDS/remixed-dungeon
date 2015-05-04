@@ -44,16 +44,30 @@ public class ScrollOfTeleportation extends Scroll {
 		curUser.spendAndNext( TIME_TO_READ );
 	}
 	
-	public static void teleportHero(Hero hero) {
+	public static void teleportHero( Hero  hero ) {
 
-		int pos = Dungeon.level.randomRespawnCell();
+		int count = 10;
+		int pos;
+		do {
+			pos = Dungeon.level.randomRespawnCell();
+			if (count-- <= 0) {
+				break;
+			}
+		} while (pos == -1);
+		
+		if (pos == -1) {
+			
+			GLog.w( TXT_NO_TELEPORT );
+			
+		} else {
 
-		WandOfBlink.appear(hero, pos);
-		Dungeon.level.press(pos, hero);
-		Dungeon.observe();
-
-		GLog.i(TXT_TELEPORTED);
-
+			WandOfBlink.appear( hero, pos );
+			Dungeon.level.press( pos, hero );
+			Dungeon.observe();
+			
+			GLog.i( TXT_TELEPORTED );
+			
+		}
 	}
 	
 	@Override
