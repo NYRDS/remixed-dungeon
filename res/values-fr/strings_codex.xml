@@ -6,12 +6,12 @@
   <string name="Codex_Info">L\'un des nombreux livres qui peuvent être trouvés dans n\'importe quelle librairie</string>
   <string name="Codex_Blinded">Vous ne pouvez pas lire aveuglé</string>
   <string-array name="Codex_Story">
-    <item>Et a créé le pixel dungeon de watabou. Il observa son travail. Et il vit qu\'il était bien !</item>
+    <item>Watabou créa Pixel Dungeon. Alors il observa son travail. Et il vit que c\'était bien !</item>
     <item>Glyphe de rebond - Les ennemis sont repoussés après avoir frappés le héros.</item>
-    <item>Glyphe d\'affection - L\'ennemi sera charmé pour quelques tours, tandis que le héros aussi, mais pas aussi longtemps que l\'ennemi.</item>
+    <item>Glyphe d\'affection - L\'ennemi sera charmé pour quelques tours, de même que le héros, mais pour une durée moindre.</item>
     <item>Glyphe d\'anti-entropie - Le héros sera illuminé et prendra feu, et l\'ennemi sera gelé.</item>
     <item>Glyphe de multiplicité - Cet effet invoque une image miroir du héros, mais le blesse aussi. Cela peut tuer le héros.</item>
-    <item>Glyphe de potentiel - Cela va déclencher un contre-attaque foudroyante sur l\'ennemi qui a attaqué le joueur et va blesser le héros d\'environ la moitié des dommages infligés.</item>
+    <item>Glyphe de potentiel - Cela va déclencher une contre-attaque foudroyante sur l\'ennemi qui a attaqué le joueur et va blesser le héros d\'environ la moitié des dommages infligés.</item>
     <item>Glyphe de métabolisme - Le héros sera partiellement soigné, avant que les dommages de l\'ennemi ne soient infligés. Ca ne marchera que si le héros ne meurt pas de faim. La faim du héros sera aussi plus importante.</item>
     <item>Glyphe de puanteur- Le héros émet un gaz toxique quand il se fait frapper.</item>
     <item> Glyphe de viscosité - Le héros recevra des dommages répartis en 1 dommage par tour, au lieu de tout prendre d\'un coup.</item>
@@ -19,19 +19,14 @@
     <item>Glyphe de constriction - Le héros recevra une armure végétale, mais pourra être enraciné aussi.</item>
     <item>Arme macabre - Un coup réussi peut tuer instantanément sa cible (ou infliger 2 fois plus de dommages à un boss).</item>
     <item>Arme enflammée - Un coup réussi pourra brûler l\'ennemi ciblé.</item>
-    <item>arme d\'Eldritch - Un coup réussi pourra faire fuir l\'ennemi.</item>
-    <item>arme instable - Un coup réussi peut déclencher l\'effet de n\'importe quel enchantement.</item>
-    <item>arme vampirique - Un coup réussi soignera le héros de la moitié des dommages infligés à l\'ennemi.</item>
-    <item>arme chanceuse - inflige des dommages bien plus importants.</item>
+    <item>Arme d\'Eldritch - Un coup réussi pourra faire fuir l\'ennemi.</item>
+    <item>Arme instable - Un coup réussi peut déclencher l\'effet de n\'importe quel enchantement.</item>
+    <item>Arme vampirique - Un coup réussi soignera le héros de la moitié des dommages infligés à l\'ennemi.</item>
+    <item>Arme chanceuse - inflige des dommages bien plus importants.</item>
     <item>Arme étourdissante - peut paralyser si le coup est réussi.</item>
-    <item>arme perçante - peut toucher tous les ennemis en ligne droite si le coup est réussi.</item>
-    <item>arme venimeuse - peut empoisonner la cible.</item>
-    <item>arme gelée - peut ralentir la cible et l\'empêcher de brûler si le coup est réussi.</item>
-    <item>arme sauvage - peut toucher tous les ennemis à côté de la cible.</item>
-    
-    <item>Ce livre écrit en langage démon </item>
-    <item>Ce livre écrit en langage nain</item>
-    <item>Ce livre écrit en langage elfique</item>
-    
+    <item>Arme perçante - peut toucher tous les ennemis en ligne droite si le coup est réussi.</item>
+    <item>Arme venimeuse - peut empoisonner la cible.</item>
+    <item>Arme gelée - peut ralentir la cible et l\'empêcher de brûler si le coup est réussi.</item>
+    <item>Arme sauvage - peut toucher tous les ennemis à côté de la cible.</item>
   </string-array>
 </resources>

@@ -14,7 +14,7 @@
   <string name="Acidic_Name">scorpion d\'acide</string>
   <string name="Acidic_Gender">mâle</string>
   <string name="Acidic_Name_Objective">scorpion d\'acide</string>
-  <string name="Acidic_Desc">Ces énormes arachnides démoniaques évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées sur de longues distances.</string>
+  <string name="Acidic_Desc">Ces énormes démons à la forme arachnide évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées depuis de longues distances.</string>
   <!--STRINGS OF Albino CLASS-->
   <string name="Albino_Name">rat albinos</string>
   <string name="Albino_Gender">mâle</string>
@@ -34,7 +34,7 @@
   <!--STRINGS OF Brute CLASS-->
   <string name="Brute_Name">gnoll brutal</string>
   <string name="Brute_Name_Objective">gnoll brutal</string>
-  <string name="Brute_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils deviennent furieux, infligeant encore plus de dommages à leurs ennemis.</string>
+  <string name="Brute_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils deviennent berzerk, infligeant encore plus de dommages à leurs ennemis.</string>
   <string name="Brute_Gender">mâle</string>
   <string name="Brute_Enraged">%s a la rage !</string>
   <string name="Brute_StaEnraged">enragé</string>

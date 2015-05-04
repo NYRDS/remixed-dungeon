@@ -69,7 +69,7 @@
   <string name="WandOfMagicMissile_SelectWand">Wybierz Rozdzke do ulepszenia</string>
   <string name="WandOfMagicMissile_Desinchanted">Twoja rozdzka zostala zurzyta.. uzyj jej na czym innym albo wsadz w dupe sobie %s</string>
   <!--STRINGS OF WandOfPoison CLASS-->
-  <string name="WandOfPoison_Name">Berło Trucizny!</string>
+  <string name="WandOfPoison_Name">Berlo Trucizny!</string>
   <string name="WandOfPoison_Info">Podmuch wiatru moze naladowac te rozdzke jadem drzew.... Uwaga BARDZO NIEBEZPIECZNE</string>
   <string name="WandOfPoison_Info1">nic szczegolnego sie nie dzieje</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
@@ -82,7 +82,7 @@
   <string name="WandOfSlowness_Info1">nic szczegolnego sie nie dzieje</string>
   <!--STRINGS OF WandOfTelekinesis CLASS-->
   <string name="WandOfTelekinesis_Name">Rozdzka Telekinezy</string>
-  <string name="WandOfTelekinesis_Info">Fale magiczne siły z tej różdżki mają wpływ na wszystkie komórki ludzkie i demonowa i w jakis sposob wykrywa polapki.</string>
+  <string name="WandOfTelekinesis_Info">Fale magiczne siły z tej rozdzki mają wplyw na wszystkie komorki ludzkie i demonowa i w jakis sposob wykrywa polapki.</string>
   <string name="WandOfTelekinesis_YouNowHave">Tajemnicze sily tleportuja %s do Twojego Plecaka</string>
   <!--STRINGS OF WandOfTeleportation CLASS-->
   <string name="WandOfTeleportation_Name">Rozdzka Teleportacji</string>

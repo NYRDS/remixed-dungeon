@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <string name="Welcome_Title">Bienvenue!</string>
-    <string name="Welcome_Text">
-        Remixed Pixel Dungeon is a modification of Watabou\'s open source Pixel Dungeon.
-        Projet a été créé pour offrir aux joueurs une nouvelle expérience et le contenu.\n
+  <string name="Welcome_Title">Bienvenue!</string>
+  <string name="Welcome_Text">
+        Remixed Pixel Dungeon est une modification de Pixel Dungeon, le jeu open-source de Watabou.
+        Ce projet a été créé pour offrir aux joueurs une nouvelle expérience du jeu et un nouveau contenu.\n
         Une autre partie importante de notre projet est de développer un support multilingue pour le jeu.\n
         Avec chaque mise à jour, nous essayons de rester aussi proche de notre communauté que possible.\n
-        Et si un jour vous l\'voir votre idée mise en œuvre dans le jeu ... Merci pour votre créativité =)\n
+        Et si un jour vous voulez voir votre idée mise en œuvre dans le jeu ... Merci pour votre créativité =)\n
         Version actuelle basée sur Pixel Dungeon 1.7.2 et partiellement 1.7.5.\n 
-        Différence de l\'original: \n
-        - Option pour changer de langue.\n
-        - Nouveau monstre et NPC\n
-        - Un gaz toxique et de feu capable d\'interagir avec d\'autres articles\n
+        Différences avec l\'original: \n
+        - Option pour changer de langue (actuellement pris en charge : anglais, russe, français (appuyé par la communauté)) \n
+        - Nouveaux monstres et PNJ\n
+        - Gaz toxique et feu capables d\'interagir avec plus d\'articles\n
         - De nouveaux types de «nourriture»\n
-        - Nouveaux articles et de nouvelles propriétés pour quelques pièces anciennes\n
-        - Les graines peuvent être consommés maintenant =)\n 
+        - Nouveaux articles et nouvelles propriétés pour quelques anciens articles\n
+        - Les graines peuvent être mangées maintenant =)\n 
         - Arcs et Flèches\n
-        - Elfe
         </string>
 </resources>

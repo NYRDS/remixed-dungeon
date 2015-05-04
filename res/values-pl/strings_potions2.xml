@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/potions additional strings-->
-  <string name="Potion_ACMoisten">Nawilzony</string>
+  <string name="Potion_ACMoisten">Zaczaruj !</string>
   <string name="Potion_SelectForMoisten">Wybierz jakis przedmiot</string>
   <string name="Potion_MoistenUseless">Patrze ze lubisz tracic mikstury !</string>
   <string name="Potion_RuneDissaperaed">Kamien zniknał z %s.</string>

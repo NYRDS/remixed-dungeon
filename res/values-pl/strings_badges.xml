@@ -32,7 +32,7 @@
   <string name="Badges_DeathGas">Smiersc po przez Gaz</string>
   <string name="Badges_DeathHunger">Umarles z glodu</string>
   <string name="Badges_DeathGlyph">Cos Ciebie zabiło</string>
-  <string name="Badges_DeathFalling">Upadek Cie zabił</string>
+  <string name="Badges_DeathFalling">Upadek Cie zabil</string>
   <string name="Badges_Yasd">Zostales spalony zywcem, a w miedzyczasie cierpiales otroty &amp; i glodny</string>
   <!--<string name="Badges_BossSlain1War"></string>-->
   <!--<string name="Badges_BossSlain1Mag"></string>-->
@@ -52,7 +52,7 @@
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
   <string name="Badges_BossSlain3All">3rd Boss zaliczony przez Gladiatora, Berserkera,Warloka, Battlemage, Freeruner, Assasina, Snipera &amp; Wardena</string>
-  <string name="Badges_RingHaggler">Pierścień Hanggiera !</string>
+  <string name="Badges_RingHaggler">Pierscien Hanggiera !</string>
   <string name="Badges_RingThorns">Pierscień Tronow !</string>
   <string name="Badges_StrengthAttained1">13 poziom Sily osiagniety</string>
   <string name="Badges_StrengthAttained2">15 poziom Siły osiagniety</string>

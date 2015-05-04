@@ -2,8 +2,8 @@
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
-  <string name="Mob_Desc">Prawdziwe Opisy już wkrótce</string>
-  <string name="Mob_Died">Slyszysz jak cos zdechlo nie daleko</string>
+  <string name="Mob_Desc">Prawdziwe Opisy już wkrotce</string>
+  <string name="Mob_Died">usluszales jak cos zdechlo nie daleko</string>
   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
   <string name="Mob_StaSleepingStatus">To %s jest spiace</string>
   <string name="Mob_StaWanderingStatus">Ten %s z wedrowki przez lochy</string>
@@ -37,7 +37,7 @@
   <string name="Brute_Desc">Bestia ktora jest bardzo potezna ! uwazaj zamim zaatakjesz</string>
   <string name="Brute_Gender">meski</string>
   <string name="Brute_Enraged">%s nadchodzi Wkurwiony!</string>
-  <string name="Brute_StaEnraged">Wkurwiony</string>
+  <string name="Brute_StaEnraged">Zly, </string>
   <!--STRINGS OF Crab CLASS-->
   <string name="Crab_Name">Kanalizacja Krabow</string>
   <string name="Crab_Gender">meski</string>
@@ -48,7 +48,7 @@
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">meski</string>
   <string name="DM300_Name_Objective">DM-300</string>
-  <string name="DM300_Desc">Maszyna ta została stworzona przez krasnoludów kilka wieków temu . Później , krasnoludy zaczęły zastępować maszyny golemami, żywiołaki , a nawet demonami!. Ostatecznie doprowadziło to do ich upadku !!. DM-300 i podobne maszyny były zazwyczaj używane jako maszyny budowlane i kopalniane , a w niektórych przypadkach , do obrony MIASTA .</string>
+  <string name="DM300_Desc">Maszyna ta została stworzona przez krasnoludow kilka wiekow temu . Pozniej , krasnoludy zaczely zastępować maszyny golemami, żywiolaki , a nawet demonami!. Ostatecznie doprowadzilo to do ich upadku !!. DM-300 i podobne maszyny byly zazwyczaj uzywane jako maszyny budowlane i kopalniane , a w niektórych przypadkach , do obrony MIASTA .</string>
   <string name="DM300_Info1">DM-300 Naprawil sie sam !</string>
   <string name="DM300_Info2">Misja Zakonczona porazka !</string>
   <string name="DM300_Info3">Nieuprawniony</string>
@@ -61,7 +61,7 @@
   <string name="Eye_Name">oko demona</string>
   <string name="Eye_Gender">pieklo</string>
   <string name="Eye_Name_Objective">oko demona</string>
-  <string name="Eye_Desc">Jednym z innych nazw tego demona jest \" kula nienawiści \" , bo gdy widzi wroga , używa Ognistej Kuli  lekkomyślnie , często ignorującswoich sojuszników i raniac ich..</string>
+  <string name="Eye_Desc">Jednym z innych nazw tego demona jest \" kula nienawiści \" , bo gdy widzi wroga , używa Ognistej Kuli  lekkomyślnie , często ignoruja swoich sojuszników i raniac ich..</string>
   <string name="Eye_Kill">%s\'s Ognista Kula zabila Ciebie...</string>
   <!--STRINGS OF Gnoll CLASS-->
   <string name="Gnoll_Name">Ciekawe co to jest</string>
@@ -87,7 +87,7 @@
   <string name="King_Name">Krol Krasnoludow!</string>
   <string name="King_Gender">meski</string>
   <string name="King_Name_Objective">Krol Krasnoludow</string>
-  <string name="King_Desc">Ostatni król krasnoludów znany był z głębokiego zrozumienia procesów życia i śmierci . On przekonał członków jego dworu do udziału w rytuale , że powinna była przyznać im wieczne młodość . W końcu byłtylko jeden , który dostał go - i armie nieumarłych jako bonus .</string>
+  <string name="King_Desc">Ostatni krol krasnoludów znany byl z glebokiego zrozumienia procesow zycia i smierci . On przekonal czlonkow jego dworu do udziału w rytuale , ze powinna byla przyznac im wieczne mlodosc . W koncu byl tylko jeden , ktory dostal ja - i armie nieumarlych jako bonus .</string>
   <string name="King_Defense">Zblokowany</string>
   <string name="King_Info1">Nie mozesz mnie zabic, %s... ja jestem... niesmiertelny mhuahuahuhaua...</string>
   <string name="King_Info2">Arise, NIEWOLNICY !</string>
@@ -106,14 +106,14 @@
   <string name="Monk_Name">Magiczny Krasnlod</string>
   <string name="Monk_Gender">meski</string>
   <string name="Monk_Name_Objective">Magiczny Krasnolud</string>
-  <string name="Monk_Desc">Mnisi, poświęcili się do ochrony  tajemnic miasta ze wszystkich cudzoziemców . Nie używać w zbroji i broń , opierając się wyłącznie na sztuce Walki  wręcz </string>
+  <string name="Monk_Desc">Mnisi poswiecili sie do obrony calego miasta.. przysiegli ze nie uzyja broni bialej.. sa zdolni przywolac potezne moce natury</string>
   <string name="Monk_Defense">Zblokowany</string>
   <string name="Monk_Disarm">%1$s cos ci wypadlo %2$s z Twoich dloni!</string>
   <!--STRINGS OF Piranha CLASS-->
   <string name="Piranha_Name">Ogromna Pirania</string>
   <string name="Piranha_Gender">Kobiecy</string>
   <string name="Piranha_Name_Objective">Ogromna Pirania</string>
-  <string name="Piranha_Desc">Te mięsożerne ryby nie są naturalnymi mieszkańcami basenów podziemnych . Były hodowane specjalnie do ochrony artefaktow..</string>
+  <string name="Piranha_Desc">Te miesozerne ryby nie są naturalnymi mieszkańcami basenow podziemnych . Byly hodowane specjalnie do ochrony artefaktow..</string>
   <!--STRINGS OF Rat CLASS-->
   <string name="Rat_Name">Torbielowy Szczur</string>
   <string name="Rat_Gender">kobiecy</string>
@@ -127,8 +127,8 @@
   <!--STRINGS OF Senior CLASS-->
   <string name="Senior_Name">Starszy mnich</string>
   <string name="Senior_Gender">meski</string>
-  <string name="Senior_Name_Objective">starszy mąk</string>
-  <string name="Senior_Desc">Mnisi, poświęcili się do ochrony  tajemnic miasta ze wszystkich cudzoziemców . Nie używać w zbroji i broń , opierając się wyłącznie na sztuce Walki  wręcz </string>
+  <string name="Senior_Name_Objective">starszy mnich</string>
+  <string name="Senior_Desc">Mnisi, poswiecili się do ochrony  tajemnic miasta.. </string>
   <!--STRINGS OF Shadow CLASS-->
   <string name="Shadow_Name">Cien</string>
   <string name="Shadow_Gender">kobiecy</string>
@@ -167,7 +167,7 @@
   <string name="Succubus_Name">succubus</string>
   <string name="Succubus_Gender">meski</string>
   <string name="Succubus_Name_Objective">succubus</string>
-  <string name="Succubus_Desc">W sukuby są demony , które wyglądają jak kusząca ( w nieco gotycki sposób ) dziewczyny. Cos jak Prostytutki.</string>
+  <string name="Succubus_Desc">W Sukuby sa demony , które wyglądaja jak kuszaca ( w nieco gotycki sposob ) dziewczyny. Cos jak Prostytutki.</string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Name">Roj Much</string>
   <string name="Swarm_Gender">meski</string>
@@ -178,7 +178,7 @@
   <string name="Tengu_Name">Tengu</string>
   <string name="Tengu_Gender">meski</string>
   <string name="Tengu_Name_Objective">Tengu</string>
-  <string name="Tengu_Desc">Tengu są członkami klanu starożytnych zabójców , który jest nazywany również Tengu . Ci zabójcy są znani szerokiemu wykorzystaniu shuriken i pułapek</string>
+  <string name="Tengu_Desc">Tengu są członkami klanu starozytnych zabójcow , który jest nazywany rowniez Tengu . Ci zabojcy ss znani szerokiemu wykorzystaniu shuriken i pulapek</string>
   <string name="Tengu_Info1">W koncu Wolnosc</string>
   <string name="Tengu_Info2">Gotcha, %s!</string>
   <!--STRINGS OF Thief CLASS-->
@@ -204,8 +204,8 @@
   <string name="Yog_Name">Yog-Dzewa</string>
   <string name="Yog_Gender">meski</string>
   <string name="Yog_Name_Objective">Yog-Dzewa</string>
-  <string name="Yog_Desc">Yog-Dzewa  Bóg ,potężny podmiot od sfery chaosu . Sto lat temu , starożytni krasnoludy ledwo wygrali wojnę z jego armią demonów , ale nie byli w stanie zabić samego boga . Zamiast tego, po czym uwięził go w salach poniżej ich miasta , wierząc , że jest zbyt słaby, aby wydostac sie..</string>
-  <string name="Yog_Info1">...</string>
+  <string name="Yog_Desc">Yog-Dzewa  Bog ,potezny podmiot od sfery chaosu . Sto lat temu , starozytni krasnoludy ledwo wygrali wojne z jego armią demonów , ale nie byli w stanie zabic samego boga . Zamiast tego, po czym uwiezili go w salach poniżej ich miasta , wierzac , ze jest zbyt slaby, aby wydostac sie..</string>
+  <string name="Yog_Info1">Nie mam czasu</string>
   <string name="Yog_Info2">Mam nadzieje ze to iluzja</string>
   <string name="RottingFist_Name">Cos zgnilego</string>
   <string name="RottingFist_Gender">meski</string>

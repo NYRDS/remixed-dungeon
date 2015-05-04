@@ -71,23 +71,23 @@
   <string name="ScrollOfRemoveCurse_NoProced">Twoja paczka promienieje swiatlem czystosci!</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
   <string name="ScrollOfTeleportation_Name">Zwoj Teleportacji</string>
-  <string name="ScrollOfTeleportation_Info">Zaklęcie na tym pergaminie natychmiast przenosi Bohatera do przypadkowej lokalizacji na poziomie lochu . Może być używany do ucieczki przed niebezpieczną sytuacja , ale może znaleźć się w jeszcze bardziej w niebezpiecznym miejscu </string>
+  <string name="ScrollOfTeleportation_Info">Zaklęcie na tym pergaminie natychmiast przenosi Bohatera do przypadkowej lokalizacji na poziomie lochu . Moze byc używany do ucieczki przed niebezpieczna sytuacja , ale moze znalezc sie w jeszcze bardziej w niebezpiecznym miejscu </string>
   <string name="ScrollOfTeleportation_Teleport">W mgnieniu oka moznaby bylo teleportowac sie na inny poziom lochow..</string>
   <string name="ScrollOfTeleportation_NoTeleport">Te miejsce... nie umozliwia teleportacje</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
   <string name="ScrollOfTerror_Name">Zwoj Grozy</string>
   <string name="ScrollOfTerror_Info">Blysk czerwonego swiatla... jest potezny i niszczy wrogow w obrebie wzroku</string>
   <string name="ScrollOfTerror_Info1">emituje jasny błysk czerwonego światła</string>
-  <string name="ScrollOfTerror_Info2">emituje jasny błysk światła czerwonego %s Uciekaj!</string>
+  <string name="ScrollOfTerror_Info2">emituje jasny lysk swiatla czerwonego %s Uciekaj!</string>
   <string name="ScrollOfTerror_Info3">emituje jasny błysk światła czerwonego i potwory uciekają</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">Zwoj Ulepszenia</string>
-  <string name="ScrollOfUpgrade_Info">Ten zwój będzie uaktualniać pojedynczy element , poprawi jakośc i moc.i . Różdżka zwiększy moc i liczbę ladunkow; Broń będzie czynila więcej szkód; zbroja uniknie dodatkowych ciosów ; efekt pierścienia na jego użytkownika będzie się nasilać. Broń i zbroja będzie również wymagają mniejszej siły użyć, a wszelkie przekleństwa na pozycji zostaną zniesione .</string>
+  <string name="ScrollOfUpgrade_Info">Ten zwoj bedzie uaktualniac pojedynczy element , poprawi jakosc i moc. . Rozdzka zwiekszy moc i liczbe ladunkow; Bron bedzie czynila wiecej szkod; zbroja uniknie dodatkowych ciosow ; efekt pierscienia na jego uzytkownika bedzie sie nasilac. Bron i zbroja bedzie rowniez wymagaja mniejszej siły uzyc, a wszelkie przeklenstwa na pozycji zostaną zniesione .</string>
   <string name="ScrollOfUpgrade_InvTitle">Wybierz do ulepszenia</string>
   <string name="ScrollOfUpgrade_LooksBetter">Twoj %s z pewnoscia wyglada lepiej</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
   <string name="ScrollOfWeaponUpgrade_Name">Zwoj ulepszenia Broni</string>
-  <string name="ScrollOfWeaponUpgrade_Info">Ten zwój będzie ulepszac broń do walki wręcz , poprawie jej jakości sily... </string>
+  <string name="ScrollOfWeaponUpgrade_Info">Ten zwoj będzie ulepszac bron do walki wrecz , poprawi jej jakosc i sile... </string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Wybierz Bron do ulepszenia</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">Ty%s wygladasz znacznie lepiej</string>
 </resources>

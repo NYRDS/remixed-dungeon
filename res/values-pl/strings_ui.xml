@@ -26,6 +26,7 @@
   <string name="StartScene_Yes">Tak, chce zaczac od nowa</string>
   <string name="StartScene_No">Nie, chce wrocic do gry!</string>
   <string name="StartScene_Unlock">Zeby odblokowac specjalna klase, musisz pokonac 3 Bossa DM-300</string>
+  <string name="StartScene_UnlockElf">Zeby odblokowac Te postac, musisz zabic albo dojsc do 4 swiata.</string>
   <string name="StartScene_WinGame">Zeby odblokowac \"Wyzwania\" musisz przejsc gre kazda postacia!</string>
   <!--STRINGS OF InterLevelScene CLASS-->
   <string name="InterLevelScene_Descending">Malejaco</string>
@@ -38,7 +39,7 @@
   <string name="InterLevelScene_FileNotFound">Nie znaleziono pliku !</string>
   <string name="InterLevelScene_ErrorGeneric">Cos jest nie tak</string>
   <!--STRINGS OF SurfaceScene CLASS-->
-  <string name="SurfaceScene_GameOver">KONIEC GRY!</string>
+  <string name="SurfaceScene_GameOver">KONIEC GRY</string>
   <!--STRINGS OF WndSettings CLASS-->
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>
@@ -54,4 +55,6 @@
   <string name="WndSettings_SelectLanguage">Wybierz jezyk</string>
   <string name="WndSettings_SecondQuickslot">Pojedynczy slot</string>
   <string name="WndSettings_ThirdQuickslot">Trzeci Szybki Slot</string>
+  <string name="WndSettings_ExperementalFont">Nowa Czczciaka</string>
+  <string name="WndSettings_ClassicFont">Zwykla CzCzciaka</string>
 </resources>

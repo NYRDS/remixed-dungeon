@@ -2,15 +2,15 @@
 <resources>
   <!--PACKAGE /items/potions-->
   <!--STRINGS OF Potion CLASS-->
-  <string name="Potion_Name">%s mikstura</string>
+  <string name="Potion_Name">%s eliksir</string>
   <string name="Potion_Info">Zawartosc dziwnej cieczy %s Hmmm . Co sie stanie po wypiciu ??</string>
   <string name="Potion_ACDrink">Drink</string>
   <string name="Potion_Harmfull">Szkodliwy eliksir</string>
-  <string name="Potion_Beneficial">Nie znane dzialanie tej mikstury, prawdopodobnie zaszkodzi choc nie koniecznie</string>
+  <string name="Potion_Beneficial">Nie znane dzialanie tej mikstury, prawdopodobnie zaszkodzi Tobie choc nie koniecznie</string>
   <string name="Potion_Yes">Tak, Wiem c o robie.</string>
   <string name="Potion_No">NIe, Ja zmieniam zdanie.</string>
   <string name="Potion_SureDrink">Czy na pewno chcesz ją pić ? W większości przypadków należy wrzucać takie mikstury na swoich wrogów .</string>
-  <string name="Potion_SureThrow">Czy jesteś pewien, że chcesz rzucić ? W większości przypadków jest sens go pić .</string>
+  <string name="Potion_SureThrow">Czy jestes pewien, że chcesz rzucić ? W wiekszości przypadkow jest mozliwosc zeby go wypic.. .</string>
   <string name="Potion_Shatter">NIeczytelna instrukcja... ale %s co to znaczy?</string>
   <string-array name="Potion_Colors">
     <item>Turkus</item>
@@ -56,7 +56,7 @@
   <string name="PotionOfMindVision_Name">Eliksir Wizji</string>
   <string name="PotionOfMindVision_Info">Ta mikstura pozwala zauwazyc polozenie wrogow i ich policzyc! a takze ukryte drzwi jesli znajduja sie obok ciebie !</string>
   <string name="PotionOfMindVision_Apply1">Mozesz poczuc Obecnosc ... Wrogow..</string>
-  <string name="PotionOfMindVision_Apply2">Można powiedzieć , że w jakiś sposób jesteś sam na tym poziomie w tej chwili .</string>
+  <string name="PotionOfMindVision_Apply2">Mozna powiedziec , że w jakis sposob jestes sam na tym poziomie w tej chwili .</string>
   <!--STRINGS OF PotionOfParalyticGas CLASS-->
   <string name="PotionOfParalyticGas_Name">Eliksir Gazu Paralizujacego</string>
   <string name="PotionOfParalyticGas_Info">Po otwarciu butelki z tym gazem w powietrzu bedzie panowac trujacy paralizujacy gaz.. Nie Bedziesz mogl sie poruszac poki nie zniknie... albo poki umrzesz.!</string>
@@ -72,5 +72,5 @@
   <string name="PotionOfStrength_StaApply">+1 do Siły</string>
   <!--STRINGS OF PotionOfToxicGas CLASS-->
   <string name="PotionOfToxicGas_Name">Eliksir Toksycznego Gazu</string>
-  <string name="PotionOfToxicGas_Info">Możesz wybrać, aby rzucić ten eliksir w kierunku wrogow, albo popelnic samobojstwo i go wypic!</string>
+  <string name="PotionOfToxicGas_Info">Mozesz wybrac, aby rzucić ten eliksir w kierunku wrogow, albo popelnic samobojstwo i go wypic!</string>
 </resources>

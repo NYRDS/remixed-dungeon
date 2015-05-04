@@ -391,9 +391,9 @@
   <string name="GasesImmunity_Info">Odporny na gazy</string>
   <!--STRINGS OF Hunger CLASS-->
   <string-array name="Hunger_Hungry">
-    <item>Jestes głodny.</item>
-    <item>Jestes głodny.</item>
-    <item>Jestes głodny.</item>
+    <item>Jestes glodny.</item>
+    <item>Jestes glodny.</item>
+    <item>Jestes glodny.</item>
   </string-array>
   <string-array name="Hunger_Starving">
     <item>Jestes zmeczony!</item>
