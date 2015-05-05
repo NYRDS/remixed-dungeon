@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -130,7 +131,7 @@ public enum HeroClass {
 		
 		hero.collect(gl);
 		
-		hero.HP = hero.HT = 1000;
+		hero.HP = hero.HT = 10;
 		
 		
 		hero.collect(new PotionOfStrength());
@@ -142,6 +143,9 @@ public enum HeroClass {
 
 		for(int i = 0;i<10;i++)
 		hero.collect(new ScrollOfMagicMapping());
+		
+		hero.collect(new WandOfTeleportation().upgrade(10));
+		hero.collect(new Ankh());
 
 	}
 	
