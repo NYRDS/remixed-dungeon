@@ -45,6 +45,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.View;
 
+import com.nyrds.android.util.FileSystem;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -160,6 +161,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 		// Criado para manter o contexto e poder fazer a busca dos resources
 		context = getApplicationContext();
+		
+		FileSystem.setContext(context);
 
 		BitmapCache.context = TextureCache.context = instance(this);
 
