@@ -333,12 +333,15 @@ public class StartScene extends PixelScene {
 	}
 
 	private void startNewGame() {
-
 		Dungeon.hero = null;
 		Dungeon.heroClass = curClass;
-		
+
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
 
+		if( PixelDungeon.moddingMode() ) {
+			InterlevelScene.mode = InterlevelScene.Mode.MODDING;
+		}
+		
 		if (PixelDungeon.intro()) {
 			PixelDungeon.intro(false);
 			Game.switchScene(IntroScene.class);

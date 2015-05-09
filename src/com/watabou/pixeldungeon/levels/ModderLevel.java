@@ -89,6 +89,8 @@ public class ModderLevel extends RegularLevel {
 				break;
 			}
 		}
+		
+		map[exit] = Terrain.LOCKED_EXIT;
 	}
 	
 	@Override
@@ -104,12 +106,6 @@ public class ModderLevel extends RegularLevel {
 		addItemToSpawn(new MailArmor());
 		addItemToSpawn(new LeatherArmor());
 		addItemToSpawn(new ClothArmor());
-		
-		if (Dungeon.dewVial && Random.Int( 4 - Dungeon.depth ) == 0) {
-			addItemToSpawn( new DewVial() );
-			addItemToSpawn( new Keyring() );
-			Dungeon.dewVial = false;
-		}
 		
 		super.createItems();
 	}

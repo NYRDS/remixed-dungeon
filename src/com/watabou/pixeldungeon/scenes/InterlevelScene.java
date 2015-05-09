@@ -49,7 +49,7 @@ public class InterlevelScene extends PixelScene {
 	private static final String ERR_GENERIC        = Game.getVar(R.string.InterLevelScene_ErrorGeneric);	
 	
 	public static enum Mode {
-		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
+		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, MODDING
 	};
 	public static Mode mode;
 	
@@ -96,6 +96,9 @@ public class InterlevelScene extends PixelScene {
 			break;
 		case FALL:
 			text = TXT_FALLING;
+			break;
+		case MODDING:
+			text = "modding test mode";
 			break;
 		}
 		
@@ -180,6 +183,9 @@ public class InterlevelScene extends PixelScene {
 					case FALL:
 						fall();
 						break;
+					case MODDING:
+						testMode();
+						break;
 					}
 					
 					if ((Dungeon.depth % 5) == 0) {
@@ -250,6 +256,17 @@ public class InterlevelScene extends PixelScene {
 			break;
 		}
 	}
+	
+	private void testMode() {
+		Actor.fixTime();
+		Dungeon.init();
+		
+		Level level;
+		level = Dungeon.testLevel();
+		
+		Dungeon.switchLevel( level, level.entrance );
+	}
+
 	
 	private void descend() throws Exception {
 		
