@@ -8,7 +8,7 @@ public class Shadow extends Mob {
 	{
 		spriteClass = ShadowSprite.class;
 		
-		HP = HT = 20;
+		hp(ht(20));
 		defenseSkill = 15;
 		
 		EXP = 5;

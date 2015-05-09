@@ -54,7 +54,7 @@ public class King extends Mob {
 	{
 		spriteClass = KingSprite.class;
 		
-		HP = HT = 300;
+		hp(ht(300));
 		EXP = 40;
 		defenseSkill = 25;
 		
@@ -143,7 +143,7 @@ public class King extends Mob {
 	}
 	
 	private int maxArmySize() {
-		return 1 + MAX_ARMY_SIZE * (HT - HP) / HT;
+		return 1 + MAX_ARMY_SIZE * (ht() - hp()) / ht();
 	}
 	
 	private void summon() {
@@ -227,7 +227,7 @@ public class King extends Mob {
 		{
 			spriteClass = UndeadSprite.class;
 			
-			HP = HT = 28;
+			hp(ht(28));
 			defenseSkill = 15;
 			
 			EXP = 0;

@@ -92,10 +92,10 @@ public class DewVial extends Item {
 			
 			if (volume > 0) {
 
-				int value = (int)Math.ceil( Math.pow( volume, POW ) / NUM * hero.HT );
-				int effect = Math.min( hero.HT - hero.HP, value );
+				int value = (int)Math.ceil( Math.pow( volume, POW ) / NUM * hero.ht() );
+				int effect = Math.min( hero.ht() - hero.hp(), value );
 				if (effect > 0) {
-					hero.HP += effect;
+					hero.hp(hero.hp() + effect);
 					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), volume > 5 ? 2 : 1 );
 					hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				}

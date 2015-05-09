@@ -85,9 +85,9 @@ public class Sungrass extends Plant {
 			
 			if (action.equals( Food.AC_EAT )) {
 				Buff.affect(hero, Charm.class, Charm.durationFactor( hero ) * Random.IntRange( 10, 15 ) );
-				hero.HP += Random.Int(0,  Math.max((hero.HT - hero.HP) / 4, 15) );
-				if (hero.HP > hero.HT) {
-					hero.HP = hero.HT;
+				hero.hp(hero.hp() + Random.Int(0,  Math.max((hero.ht() - hero.hp()) / 4, 15) ));
+				if (hero.hp() > hero.ht()) {
+					hero.hp(hero.ht());
 				}
 				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
 			}
@@ -108,10 +108,10 @@ public class Sungrass extends Plant {
 		
 		@Override
 		public boolean act() {
-			if (target.pos != pos || target.HP >= target.HT) {
+			if (target.pos != pos || target.hp() >= target.ht()) {
 				detach();
 			} else {
-				target.HP = Math.min( target.HT, target.HP + target.HT / 10 );
+				target.hp(Math.min( target.ht(), target.hp() + target.ht() / 10 ));
 				target.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 			spend( STEP );

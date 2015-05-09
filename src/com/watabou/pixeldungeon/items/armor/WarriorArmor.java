@@ -89,7 +89,7 @@ public class WarriorArmor extends ClassArmor {
 					cell = Ballistica.trace[Ballistica.distance - 2];
 				}
 				
-				curUser.HP -= (curUser.HP / 3);
+				curUser.hp(curUser.hp() - (curUser.hp() / 3));
 				
 				curUser.checkIfFurious();
 				

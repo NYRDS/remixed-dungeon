@@ -30,7 +30,7 @@ public class Bat extends Mob {
 	{		
 		spriteClass = BatSprite.class;
 		
-		HP = HT = 30;
+		hp(ht(30));
 		defenseSkill = 15;
 		baseSpeed = 2f;
 		
@@ -61,10 +61,10 @@ public class Bat extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		
-		int reg = Math.min( damage, HT - HP );
+		int reg = Math.min( damage, ht() - hp() );
 		
 		if (reg > 0) {
-			HP += reg;
+			hp(hp() + reg);
 			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 		}
 		

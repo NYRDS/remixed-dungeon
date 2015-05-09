@@ -61,7 +61,7 @@ public class WndInfoMob extends WndTitledMessage {
 		
 		public MobTitle( Mob mob ) {
 			
-			hp = (float)mob.HP / mob.HT;
+			hp = (float)mob.hp() / mob.ht();
 			
 			name = PixelScene.createText( Utils.capitalize( mob.name ), 9 );
 			name.hardlight( TITLE_COLOR );

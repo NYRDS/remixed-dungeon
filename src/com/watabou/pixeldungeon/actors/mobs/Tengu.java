@@ -51,7 +51,7 @@ public class Tengu extends Mob {
 	{
 		spriteClass = TenguSprite.class;
 		
-		HP = HT = 120;
+		hp(ht(120));
 		EXP = 20;
 		defenseSkill = 20;
 	}
