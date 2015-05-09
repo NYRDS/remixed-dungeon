@@ -17,7 +17,11 @@
 
 package com.watabou.gltextures;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.HashMap;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,11 +29,14 @@ import android.graphics.Canvas;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
+
+import com.nyrds.android.util.FileSystem;
 import com.watabou.glwrap.Texture;
 
 public class TextureCache {
 
 	public static Context context;
+	public static boolean useExternalStorage = false;
 	
 	private static HashMap<Object,SmartTexture> all = new HashMap<Object, SmartTexture>();
 	
@@ -120,37 +127,54 @@ public class TextureCache {
 			tx.reload();
 		}		
 	}
-	
-	public static Bitmap getBitmap( Object src ) {
-		
+
+	public static Bitmap getBitmap(Object src) {
+
 		try {
-			if (src instanceof Integer){
-				
-				return BitmapFactory.decodeResource( 
-					context.getResources(), (Integer)src, bitmapOptions );
-				
+			if (src instanceof Integer) {
+
+				return BitmapFactory.decodeResource(context.getResources(),
+						(Integer) src, bitmapOptions);
+
 			} else if (src instanceof String) {
-				
-				return BitmapFactory.decodeStream( 
-					context.getAssets().open( (String)src ), null, bitmapOptions );
-				
+
+				String fileName = (String) src;
+
+				if (useExternalStorage) {
+					File file = FileSystem.getExternalStorageFile(fileName);
+					if (file.exists()) {
+						return BitmapFactory.decodeStream(new FileInputStream(
+								file));
+					} else {
+						return loadFromAssets(fileName);
+					}
+				} else {
+					return loadFromAssets(fileName);
+				}
+
 			} else if (src instanceof Bitmap) {
-				
-				return (Bitmap)src;
-				
+
+				return (Bitmap) src;
+
 			} else {
-				
+
 				return null;
-				
+
 			}
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
 			return null;
-			
+
 		}
 	}
 	
+	private static Bitmap loadFromAssets(String fileName) throws IOException {
+		return BitmapFactory.decodeStream(
+				context.getAssets().open(fileName), null,
+				bitmapOptions);	
+	}
+		
 	public static boolean contains( Object key ) {
 		return all.containsKey( key );
 	}
