@@ -62,7 +62,8 @@ public class InterlevelScene extends PixelScene {
 	
 	private enum Phase {
 		FADE_IN, STATIC, FADE_OUT
-	};
+	}
+	
 	volatile private Phase phase;
 	volatile private float timeLeft;
 	
@@ -268,7 +269,7 @@ public class InterlevelScene extends PixelScene {
 			level = Dungeon.newLevel();
 		} else {
 			Dungeon.depth++;
-			level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+			level = Dungeon.loadLevel( );
 		}
 		Dungeon.switchLevel( level, level.entrance );
 	}
@@ -283,7 +284,7 @@ public class InterlevelScene extends PixelScene {
 			level = Dungeon.newLevel();
 		} else {
 			Dungeon.depth++;
-			level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+			level = Dungeon.loadLevel( );
 		}
 		Dungeon.switchLevel( level, fallIntoPit ? level.pitCell() : level.randomRespawnCell() );
 	}
@@ -293,7 +294,7 @@ public class InterlevelScene extends PixelScene {
 		
 		Dungeon.saveLevel();
 		Dungeon.depth--;
-		Level level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+		Level level = Dungeon.loadLevel( );
 		Dungeon.switchLevel( level, level.exit );
 	}
 	
@@ -303,12 +304,12 @@ public class InterlevelScene extends PixelScene {
 		
 		Dungeon.saveLevel();
 		Dungeon.depth = returnDepth;
-		Level level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+		Level level = Dungeon.loadLevel( );
 		Dungeon.switchLevel( level, Level.resizingNeeded ? level.adjustPos( returnPos ) : returnPos );
 	}
 	
 	private void problemWithSave(){
-		Dungeon.deleteGame(StartScene.curClass, true);
+		Dungeon.deleteGame(true);
 		Game.switchScene(StartScene.class);
 		return;
 	}
@@ -317,7 +318,7 @@ public class InterlevelScene extends PixelScene {
 		
 		Actor.fixTime();
 		
-		Dungeon.loadGame( StartScene.curClass );
+		Dungeon.loadGame();
 		
 		if(Dungeon.hero == null){
 			problemWithSave();
@@ -326,9 +327,9 @@ public class InterlevelScene extends PixelScene {
 		
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
-			Dungeon.switchLevel( Dungeon.loadLevel( StartScene.curClass ), -1 );
+			Dungeon.switchLevel( Dungeon.loadLevel( ), -1 );
 		} else {
-			Level level = Dungeon.loadLevel( StartScene.curClass );
+			Level level = Dungeon.loadLevel( );
 			if(level == null){ // save file fucked up :(
 				problemWithSave();
 				return;
