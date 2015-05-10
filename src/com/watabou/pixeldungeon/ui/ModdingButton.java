@@ -21,7 +21,7 @@ public class ModdingButton extends Button {
 	protected void createChildren() {
 		super.createChildren();
 		
-		image = Icons.WATA.get();
+		image = Icons.NYRDIE.get();
 		add( image );
 	}
 	

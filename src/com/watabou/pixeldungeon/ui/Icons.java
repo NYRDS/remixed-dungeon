@@ -29,7 +29,7 @@ public enum Icons {
 	PREFS,
 	WARNING,
 	TARGET,
-	WATA,
+	NYRDIE,
 	WARRIOR,
 	MAGE,
 	ROGUE,
@@ -82,7 +82,7 @@ public enum Icons {
 		case TARGET:
 			icon.frame( icon.texture.uvRect( 0, 13, 16, 29 ) );
 			break;
-		case WATA:
+		case NYRDIE:
 			icon.frame( icon.texture.uvRect( 30, 16, 45, 26 ) );
 			break;
 		case WARRIOR:

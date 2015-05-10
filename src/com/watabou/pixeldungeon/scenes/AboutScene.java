@@ -106,7 +106,7 @@ public class AboutScene extends PixelScene {
 		BitmapTextMultiline lnkTra = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), text);
 		
 
-		Image wata = Icons.WATA.get();
+		Image wata = Icons.NYRDIE.get();
 		wata.x = align( text.x + (text.width() - wata.width) / 2 );
 		wata.y = text.y - wata.height - 8;
 		add( wata );
