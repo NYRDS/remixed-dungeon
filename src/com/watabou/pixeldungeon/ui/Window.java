@@ -39,7 +39,7 @@ public class Window extends Group implements Signal.Listener<Key> {
 	protected TouchArea blocker;
 	protected NinePatch chrome;
 	
-	public static final int TITLE_COLOR = 0xFFFF44;
+	public static final int TITLE_COLOR = 0xFF4444;
 	
 	public Window() {
 		this( 0, 0, Chrome.get( Chrome.Type.WINDOW ) );
