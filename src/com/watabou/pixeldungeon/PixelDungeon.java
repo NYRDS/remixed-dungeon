@@ -29,6 +29,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 
+import com.nyrds.android.util.FileSystem;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
@@ -37,6 +38,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class PixelDungeon extends GameWithGoogleIap {
 
@@ -52,6 +54,17 @@ public class PixelDungeon extends GameWithGoogleIap {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		String placeModFilesHere = "placeModFilesHere";
+		
+		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
+			try {
+				FileSystem.getExternalStorageFile(placeModFilesHere).createNewFile();
+			} catch (IOException e) {
+				GLog.i(e.getMessage());
+				e.printStackTrace();
+			}
+		}
 		
 		PixelDungeon.instance().initIap();
 		
