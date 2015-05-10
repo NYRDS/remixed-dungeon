@@ -40,7 +40,7 @@ import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class PixelDungeon extends GameWithGoogleIap {
+public class PixelDungeon extends Game {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
