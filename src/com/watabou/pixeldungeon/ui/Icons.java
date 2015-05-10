@@ -29,7 +29,7 @@ public enum Icons {
 	PREFS,
 	WARNING,
 	TARGET,
-	WATA,
+	NYRDIE,
 	WARRIOR,
 	MAGE,
 	ROGUE,
@@ -55,7 +55,8 @@ public enum Icons {
 	CHEST_SILVER,
 	CHEST_GOLD,
 	CHEST_RUBY,
-	HUNTRESS;
+	HUNTRESS,
+	MODDING_MODE;
 	
 	public Image get() {
 		return get( this );
@@ -82,7 +83,7 @@ public enum Icons {
 		case TARGET:
 			icon.frame( icon.texture.uvRect( 0, 13, 16, 29 ) );
 			break;
-		case WATA:
+		case NYRDIE:
 			icon.frame( icon.texture.uvRect( 30, 16, 45, 26 ) );
 			break;
 		case WARRIOR:
@@ -162,6 +163,9 @@ public enum Icons {
 			break;
 		case HUNTRESS:
 			icon.frame( icon.texture.uvRect( 110, 45, 126, 61 ) );
+			break;
+		case MODDING_MODE:
+			icon.frame( icon.texture.uvRect( 0, 57, 12, 69) );
 			break;
 		}
 		return icon;

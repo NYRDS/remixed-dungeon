@@ -65,7 +65,6 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.SewerBossLevel;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndResurrect;
@@ -349,9 +348,9 @@ public class Dungeon {
 		Dungeon.deleteGame( true );
 	}
 	
-	public static void saveGame( String fileName ) throws IOException {
+	public static void saveGame( String fileName, boolean ignoreGameOver ) throws IOException {
 		
-		if(gameOver) {
+		if(!ignoreGameOver && gameOver) {
 			return;
 		}
 		
@@ -428,7 +427,7 @@ public class Dungeon {
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();
-			saveGame( SaveUtils.gameFile( hero.heroClass ) );
+			saveGame( SaveUtils.gameFile( hero.heroClass ), false );
 			saveLevel();
 			
 			GamesInProgress.set( hero.heroClass, depth, hero.lvl );

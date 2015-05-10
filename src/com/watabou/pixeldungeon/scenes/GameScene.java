@@ -552,7 +552,9 @@ public class GameScene extends PixelScene {
 					Dungeon.level.mapped );
 			
 			for (Mob mob : Dungeon.level.mobs) {
-				mob.getSprite().visible = Dungeon.visible[mob.pos];
+				if(mob.getSprite() != null) {
+					mob.getSprite().visible = Dungeon.visible[mob.pos];
+				}
 			}
 		}
 	}

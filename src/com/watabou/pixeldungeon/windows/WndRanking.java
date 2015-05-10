@@ -42,6 +42,7 @@ import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
@@ -77,7 +78,8 @@ public class WndRanking extends WndTabbed {
 					Badges.loadGlobal();
 					Dungeon.loadGame( gameFile );
 				} catch (Exception e ) {
-					error = TXT_ERROR;
+					error = TXT_ERROR + "->" +e.getMessage();
+					GLog.i(error);
 				}
 			}
 		};
@@ -158,6 +160,7 @@ public class WndRanking extends WndTabbed {
 			title.icon( heroSprite.avatar( hero ) );
 			title.label( Utils.format( TXT_TITLE, hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
+			title.color(0xff4444);
 			add( title );
 			
 			float pos = title.bottom();

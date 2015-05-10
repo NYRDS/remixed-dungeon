@@ -20,6 +20,11 @@ public class SaveUtils {
 	private static final String EL_DEPTH_FILE	= "elf%d.dat";
 
 	public static String gameFile( HeroClass cl ) {
+		
+		if(PixelDungeon.moddingMode()) {
+			return "modding.dat";
+		}
+		
 		switch (cl) {
 		case WARRIOR:
 			return WR_GAME_FILE;
@@ -41,6 +46,11 @@ public class SaveUtils {
 	}
 	
 	private static String _depthFile( HeroClass cl) {
+		
+		if(PixelDungeon.moddingMode()) {
+			return "modding%d.dat";
+		}
+		
 		switch (cl) {
 		case WARRIOR:
 			return WR_DEPTH_FILE;

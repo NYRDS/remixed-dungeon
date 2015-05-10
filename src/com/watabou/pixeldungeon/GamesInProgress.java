@@ -18,12 +18,14 @@
 package com.watabou.pixeldungeon;
 
 import java.util.HashMap;
+import java.util.Map;
+
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.utils.Bundle;
 
 public class GamesInProgress {
 
-	private static HashMap<HeroClass, Info> state = new HashMap<HeroClass, Info>();
+	private static Map<HeroClass, Info> state = new HashMap<HeroClass, Info>();
 	
 	public static Info check( HeroClass cl ) {
 		
@@ -48,6 +50,10 @@ public class GamesInProgress {
 			return info;
 			
 		}
+	}
+	
+	public static void removeAll() {
+		state = new HashMap<HeroClass, Info>();
 	}
 	
 	public static void set( HeroClass cl, int depth, int level ) {
