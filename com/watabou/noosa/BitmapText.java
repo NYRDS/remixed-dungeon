@@ -439,24 +439,31 @@ public class BitmapText extends Visual {
 		public RectF get( char ch ){
 			RectF rec = super.get( autoUppercase ? Character.toUpperCase(ch) : ch );
 
-			//Fix for fonts without accentuation
-			if ((rec == null) && (ch > 126)){
+			// Fix for fonts without accentuation
+			if ((rec == null) && (ch > 126)) {
 				char tmp = ch;
-				String str = (ch+"")
-					    .replaceAll("[àáâäã]",  "a")
-			            .replaceAll("[èéêë]",   "e")
-			            .replaceAll("[ìíîï]",   "i")
-			            .replaceAll("[òóôöõ]",  "o")
-			            .replaceAll("[ùúûü]",   "u")
-			            .replaceAll("[ÀÁÂÄÃ]",  "A")
-			            .replaceAll("[ÈÉÊË]",   "E")
-			            .replaceAll("[ÌÍÎÏ]",   "I")
-			            .replaceAll("[ÒÓÔÖÕ]",  "O")
-			            .replaceAll("[ÙÚÛÜ]",   "U")
-			            .replace('ç',   'c')
-			            .replace('Ç',   'C')
-			            .replace('ñ',   'n')
-			            .replace('Ñ',   'N');
+				String str = (ch + "")
+						.replaceAll("[àáâäãą]", "a")
+						.replaceAll("[èéêëę]", "e")
+						.replaceAll("[ìíîï]", "i")
+						.replaceAll("[òóôöõ]", "o")
+						.replaceAll("[ùúûü]", "u")
+						.replaceAll("[ÀÁÂÄÃĄ]", "A")
+						.replaceAll("[ÈÉÊËĘ]", "E")
+						.replaceAll("[ÌÍÎÏ]", "I")
+						.replaceAll("[ÒÓÔÖÕ]", "O")
+						.replaceAll("[ÙÚÛÜ]", "U")
+						.replaceAll("[ÙÚÛÜ]", "U")
+						.replaceAll("[ñń]", "n")
+						.replaceAll("[ÑŃ]", "N")
+						.replaceAll("[ŹŻ]", "Z")
+						.replaceAll("[źż]", "z")
+						.replaceAll("[ÇĆ]", "C")
+						.replaceAll("[çć]", "c")
+						.replace("Ł", "L")
+						.replace("ł", "l")
+						.replace("Ś", "S")
+						.replace("ś", "s");
 
 				tmp = str.charAt(0);
 				rec = super.get(autoUppercase ? Character.toUpperCase(tmp) : tmp);
