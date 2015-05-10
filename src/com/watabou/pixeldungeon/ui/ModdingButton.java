@@ -6,6 +6,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
@@ -70,6 +71,7 @@ public class ModdingButton extends Button {
 	@Override
 	protected void onClick() {
 		PixelDungeon.moddingMode(!PixelDungeon.moddingMode());
+		GamesInProgress.removeAll();
 		updateLook();
 	}
 }
