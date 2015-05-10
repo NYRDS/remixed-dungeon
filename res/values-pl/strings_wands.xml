@@ -2,53 +2,53 @@
 <resources>
   <!--PACKAGE /items/Wands-->
   <!--STRINGS OF Wand CLASS-->
-  <string name="Wand_Name">%s rozdzka</string>
-  <string name="Wand_ACZap">Uderz</string>
-  <string name="Wand_Wood">Ta cienka %s rozdzka jest ciepla w dotyku... Czyzby rzucala ogniem?</string>
-  <string name="Wand_Damage">Uzywany do walki wrecz sila uderzenia wynosi  %d .</string>
-  <string name="Wand_Weapon">Nie mozesz uzyc tej rozdzki, to jest bron biala!</string>
-  <string name="Wand_Fizzles">Twoja ROZDZJA Frizzles; mus zostac naladowana !</string>
-  <string name="Wand_SelfTarget">Nie mozesz uzyc na sobie.</string>
-  <string name="Wand_Prompt">Wybierz punkt uderzenia</string>
+  <string name="Wand_Name">%s kostur</string>
+  <string name="Wand_ACZap">UŻYJ</string>
+  <string name="Wand_Wood">Ten cienki, %s kostur jest ciepły w dotyku. Kto wie co się stanie kiedy zostanie użyty?</string>
+  <string name="Wand_Damage">Kiedy ten kostur jest używany jako broń biała, zadaje %d obrażeń.</string>
+  <string name="Wand_Weapon">Możesz używać tego kostura jako broń białą.</string>
+  <string name="Wand_Fizzles">Ten kostur dziwnie trzeszczy. Pewnie nie ma już ładunków.</string>
+  <string name="Wand_SelfTarget">Nie możesz celować w siebie</string>
+  <string name="Wand_Prompt">Wybierz kierunek strzału</string>
   <string-array name="Wand_Wood_Types">
-    <item>swietosc</item>
-    <item>yew</item>
-    <item>ebonitowe</item>
-    <item>wisniowe</item>
-    <item>teak</item>
-    <item>rowan</item>
-    <item>willow</item>
-    <item>mahogany</item>
-    <item>bamboo</item>
-    <item>purpurowe serce</item>
-    <item>oak</item>
-    <item>birch</item>
+    <item>ostrokrzewowy</item>
+    <item>cisowy</item>
+    <item>ebonitowy</item>
+    <item>wiśniowy</item>
+    <item>tekowy</item>
+    <item>jarzębinowy</item>
+    <item>wierzbowy</item>
+    <item>mahoniowy</item>
+    <item>bambusowy</item>
+    <item>purpurowy</item>
+    <item>dębowy</item>
+    <item>brzozowy</item>
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
-  <string name="WandOfAmok_Name">Rozdzka Amok</string>
-  <string name="WandOfAmok_Info">Fioletowe światło z tej różdżki będzie docelowo atakowanic przypadkowych wrogow w jego pobliżu .</string>
-  <string name="WandOfAmok_Info1">nic szczegolnego sie nie dzieje</string>
+  <string name="WandOfAmok_Name">Kostur Szału</string>
+  <string name="WandOfAmok_Info">Fioletowe światło wystrzelone z tego kostura sprawi, że cel zacznie atakować wszystkie stworzenia w zasięgu swojego wzroku.</string>
+  <string name="WandOfAmok_Info1">nic się nie stało</string>
   <!--STRINGS OF WandOfAvalanche CLASS-->
-  <string name="WandOfAvalanche_Name">Rozdzka Lawiny Kamieni</string>
-  <string name="WandOfAvalanche_Info">Uderzenie w sciane, zapore czy cokolwiek innego.... powoduje lawine kamieni</string>
-  <string name="WandOfAvalanche_Info1">Ty idioto, zabiles samego siebie!</string>
+  <string name="WandOfAvalanche_Name">Kostur Lawiny</string>
+  <string name="WandOfAvalanche_Info">Kiedy ładunek tego kostura uderzy w ścianę (lub w jakąkolwiek solidną przeszkodę) wywoła lawinę kamieni, zadając obrażenia i ogłuszając wszystkie stworzenia w zasięgu efektu.</string>
+  <string name="WandOfAvalanche_Info1">Zabiłeś siebie Kosturem Lawiny...</string>
   <!--STRINGS OF WandOfBlink CLASS-->
-  <string name="WandOfBlink_Name">Rozdzka Migotania</string>
-  <string name="WandOfBlink_Info">Ta różdżka pozwala teleportować się w wybranym kierunku</string>
+  <string name="WandOfBlink_Name">Kostur Błysku</string>
+  <string name="WandOfBlink_Info">Ten kostur pozwala ci się teleportować w wybranym kierunku. Stworzenia i nieruchome obiekty zatrzymają teleportację.</string>
   <!--STRINGS OF WandOfDisintegration CLASS-->
-  <string name="WandOfDisintegration_Name">Rożdzka o dziwnych wlasciwosciach</string>
-  <string name="WandOfDisintegration_Info">Wiozka promienia ktora razi wszystkie potwory jesli sa obok siebie! uwazaj ! nie uzywaj jej w wodzie!</string>
+  <string name="WandOfDisintegration_Name">Kostur Dezintegracji </string>
+  <string name="WandOfDisintegration_Info">Ten kostur wyzwala strumień niszczycielskiej energii, która przebija się przez wszystkie stworzenia na jego drodze. Im więcej uderzy celów, tym więcej zada im obrażeń.</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
-  <string name="WandOfFirebolt_Name">Rozdzka Ognistego wzroku</string>
-  <string name="WandOfFirebolt_Info">Ta różdżka uwalnia wybuchy magicznego ognia </string>
-  <string name="WandOfFirebolt_Info1">Zabiles sam siebie... </string>
+  <string name="WandOfFirebolt_Name">Kostur Kuli Ognistej </string>
+  <string name="WandOfFirebolt_Info">Ten kostur wyzwala wybuch magicznego ognia, który podpali łatwopalny teren, nakładając ten efekt również na stworzenia, w które uderzy. </string>
+  <string name="WandOfFirebolt_Info1">Zabiłeś siebie Kosturem Kuli Ognistej...</string>
   <!--STRINGS OF WandOfFlock CLASS-->
-  <string name="WandOfFlock_Name">Przywolanie Trzody</string>
-  <string name="WandOfFlock_Info">Przwoluje stado owiec.</string>
+  <string name="WandOfFlock_Name">Kostur Trzody</string>
+  <string name="WandOfFlock_Info">Za jednym ruchem tego kostura, możesz przywołać stado magicznych owiec, tworzących niezniszczalną przeszkodę.</string>
   <string name="Sheep_Name">owca</string>
   <string name="Sheep_Name_Objective">owca</string>
   <string name="Sheep_Gender">kobiecy</string>
-  <string name="Sheep_Desc">Tej owcy nie mozna zabic. Bedzie ona stala poki nie zniknie...</string>
+  <string name="Sheep_Desc">To magiczna owca. Co jest w niej takiego magicznego? Nie możesz jej zabić. Będzie tu stała dopóki magicznie nie zniknie. W czasie swej egzystencji będzie po prostu żuć trawę tępo patrząc w dal.</string>
   <string-array name="WandOfFlock_SheepBaa">
     <item>Baa!</item>
     <item>Baa?</item>
@@ -58,35 +58,35 @@
     <item>Ble...</item>
   </string-array>
   <!--STRINGS OF WandOfLightning CLASS-->
-  <string name="WandOfLightning_Name">Rozdzka Swiatla</string>
-  <string name="WandOfLightning_Info">Rozdzka potrafi zranic wszystkie demony ktore sa obok siebie.</string>
-  <string name="WandOfLightning_Info1">Zabiles sam siebie </string>
+  <string name="WandOfLightning_Name">Kostur Błyskawicy</string>
+  <string name="WandOfLightning_Info">Ten kostur przywołuje śmiertelnie niebezpieczne wiązki błyskawic, które zranią kilka stworzeń stojących blisko siebie.</string>
+  <string name="WandOfLightning_Info1">Zabiłeś siebie Kosturem Błyskawicy...</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
-  <string name="WandOfMagicMissile_Name">Rozdzka Elektrycznych Pociskow</string>
-  <string name="WandOfMagicMissile_Info">Powoduje umiarkowane obrazenia!</string>
-  <string name="WandOfMagicMissile_ACDisenchant">Odczrowac</string>
-  <string name="WandOfMagicMissile_Info1">Znowu zostales zabity przez samego siebie</string>
-  <string name="WandOfMagicMissile_SelectWand">Wybierz Rozdzke do ulepszenia</string>
-  <string name="WandOfMagicMissile_Desinchanted">Twoja rozdzka zostala zurzyta.. uzyj jej na czym innym albo wsadz w dupe sobie %s</string>
+  <string name="WandOfMagicMissile_Name">Kostur Magicznego Pocisku</string>
+  <string name="WandOfMagicMissile_Info">Ten kostur wystrzeliwuje pociski czystej energii magicznej, zadając niewielkie obrażenia celowi w który uderzy.</string>
+  <string name="WandOfMagicMissile_ACDisenchant">WYŁADUJ</string>
+  <string name="WandOfMagicMissile_Info1">Zabiłeś siebie Kosturem Magicznego Pocisku...</string>
+  <string name="WandOfMagicMissile_SelectWand">Wybierz kostur do ulepszenia </string>
+  <string name="WandOfMagicMissile_Desinchanted">wyładowałeś Kostur Magicznego Pocisku i użyłeś jego esencji by %s stał się znacznie silniejszy.</string>
   <!--STRINGS OF WandOfPoison CLASS-->
-  <string name="WandOfPoison_Name">Berlo Trucizny!</string>
-  <string name="WandOfPoison_Info">Podmuch wiatru moze naladowac te rozdzke jadem drzew.... Uwaga BARDZO NIEBEZPIECZNE</string>
-  <string name="WandOfPoison_Info1">nic szczegolnego sie nie dzieje</string>
+  <string name="WandOfPoison_Name">Kostur Trucizny</string>
+  <string name="WandOfPoison_Info">Mroczny wybuch wywołany tym spaczonym kawałkiem drewna napełni ciało ofiary śmiercionośnym jadem. Stworzenie, które jest zatrute będzie otrzymywać periodyczne obrażenia dopóki efekt się nie skończy. Im wyższy poziom kostura, tym dłuższy będzie czas działania trucizny.</string>
+  <string name="WandOfPoison_Info1">nic się nie stało</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
-  <string name="WandOfRegrowth_Name">Rozdzka o wlasciwosciach Ziemnych</string>
-  <string name="WandOfRegrowth_Info">\"Gdy stracisz sens zycia, Nie rzucaj sie w odchlan... po pr ostu biegnij dalej az dechniesz i szczury zjedza Twoje cialo !!!\"</string>
-  <string name="WandOfRegrowth_Info1">nic szczegolnego sie nie dzieje</string>
+  <string name="WandOfRegrowth_Name">Kostur Natury</string>
+  <string name="WandOfRegrowth_Info">\"Kiedy jedno życie się kończy, drugie zawsze się zaczyna... Wieczny cykl trwa zawsze!\"</string>
+  <string name="WandOfRegrowth_Info1">nic się nie stało</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
-  <string name="WandOfSlowness_Name">Rozdzka Korzeni</string>
-  <string name="WandOfSlowness_Info">Rozdzka Korzenia spowolni atak i ruch przeciwnika</string>
-  <string name="WandOfSlowness_Info1">nic szczegolnego sie nie dzieje</string>
+  <string name="WandOfSlowness_Name">Kostur Spowolnienia</string>
+  <string name="WandOfSlowness_Info">Ten kostur sprawi, że stworzenie będzie się poruszało i atakowało o połowę wolniej niż normalnie, dopóki efekt się nie skończy.</string>
+  <string name="WandOfSlowness_Info1">nic się nie stało</string>
   <!--STRINGS OF WandOfTelekinesis CLASS-->
-  <string name="WandOfTelekinesis_Name">Rozdzka Telekinezy</string>
-  <string name="WandOfTelekinesis_Info">Fale magiczne siły z tej rozdzki mają wplyw na wszystkie komorki ludzkie i demonowa i w jakis sposob wykrywa polapki.</string>
-  <string name="WandOfTelekinesis_YouNowHave">Tajemnicze sily tleportuja %s do Twojego Plecaka</string>
+  <string name="WandOfTelekinesis_Name">Kostur Telekinezy</string>
+  <string name="WandOfTelekinesis_Info">Fala magicznej mocy tego kostura uaktywni pułapki, stratuje wysoką roślinność, otworzy zamknięte i zamknie otwarte drzwi na swej trasie. Odepchnie ona również potwory.</string>
+  <string name="WandOfTelekinesis_YouNowHave">Magicznie przeteleportowałeś %s do Twojego Plecaka</string>
   <!--STRINGS OF WandOfTeleportation CLASS-->
-  <string name="WandOfTeleportation_Name">Rozdzka Teleportacji</string>
-  <string name="WandOfTeleportation_Info">Powiew tej różdżki teleportuje stwora mimo jego woli do przypadkowym miejsca na obecnym poziomie .</string>
-  <string name="WandOfTeleportation_Info1">%1$s teleportowany %2$s gdziekolwiek</string>
-  <string name="WandOfTeleportation_Info2">nic szczegolnego sie nie dzieje</string>
+  <string name="WandOfTeleportation_Name">Kostur Teleportacji</string>
+  <string name="WandOfTeleportation_Info">Pocisk tego kostura teleportuje stworzenie wbrew jego woli do losowego miejsca na obecnym poziomie.</string>
+  <string name="WandOfTeleportation_Info1">%1$s przeteleportował %2$s w inne miejsce </string>
+  <string name="WandOfTeleportation_Info2">nic się nie stało </string>
 </resources>

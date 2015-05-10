@@ -3,58 +3,58 @@
   <!--STRINGS OF TitleScene CLASS-->
   <string name="TitleScene_Play">Graj</string>
   <string name="TitleScene_Highscores">Rekordy</string>
-  <string name="TitleScene_Badges">Osiagniecie</string>
-  <string name="TitleScene_About">o</string>
-  <string name="TitleScene_InternalStorageLow">Za malo miejsca\n w Twojej pamieci\n Mozesz wszystko stracic!</string>
+  <string name="TitleScene_Badges">Odznaki</string>
+  <string name="TitleScene_About">o Grze</string>
+  <string name="TitleScene_InternalStorageLow">Masz za mało miejsca\n w Twojej pamięci\n Twoje postępy mogą zostać utracone!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt">Remixed Pixel Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou  &amp; NYRDS\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD l18n code\n\nE-Mail us:\n\n</string>
-  <string name="AboutScene_Lnk">no site yet</string>
-  <string name="AboutScene_Mail">nyrdsofficial@gmail.com and polish lang biuro.piotr.pietrucha@gmail.com</string>
-  <string name="AboutScene_Snd">Send E-Mail to fix bug or translate to Polish lang</string>
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon stworzony przez NYRDS, bazujący na bazie danych Pixel Dungeon od Watabou.\n\n Kod &amp; grafika: Watabou  &amp; NYRDS\n\nMuzyka: Cube_Code\n\nSpecjalne podziękowania dla: rodriformiga za kod PD l18n oraz dla Łukasza Piętki za pomoc w procesie tłumaczenia gry.\n\nNapisz do nas:\n\n</string>
+  <string name="AboutScene_Lnk">na razie brak strony</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com i polskie tłumaczenie tramer008@gmail.com</string>
+  <string name="AboutScene_Snd">Wyślij E-Mail</string>
   <!--STRINGS OF RankingsScene CLASS-->
-  <string name="RankingsScene_Title">Najlepsi</string>
-  <string name="RankingsScene_Total">Suma Wszystkich Gier</string>
-  <string name="RankingsScene_NoGames">Nie zagrano ani jednego razu</string>
-  <string name="RankingsScene_NoInfo">Brak dodatkowych informacjii</string>
+  <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
+  <string name="RankingsScene_Total">Do tej pory rozegrano gier:</string>
+  <string name="RankingsScene_NoGames">Nie zagrano jeszcze ani razu</string>
+  <string name="RankingsScene_NoInfo">Brak dodatkowych informacji</string>
   <!--STRINGS OF StartScene CLASS-->
-  <string name="StartScene_Load">Zaladuj Gre</string>
+  <string name="StartScene_Load">Wczytaj Grę</string>
   <string name="StartScene_New">Nowa Gra</string>
-  <string name="StartScene_Erase">Usun aktualna gre</string>
-  <string name="StartScene_Depth">Poziom: %1$d\nLevel: %2$d</string>
-  <string name="StartScene_Really">Czy Chcesz rozpoczac nowa gre?</string>
-  <string name="StartScene_Warning">Twoja stara gra zostanie usunieta</string>
-  <string name="StartScene_Yes">Tak, chce zaczac od nowa</string>
-  <string name="StartScene_No">Nie, chce wrocic do gry!</string>
-  <string name="StartScene_Unlock">Zeby odblokowac specjalna klase, musisz pokonac 3 Bossa DM-300</string>
-  <string name="StartScene_UnlockElf">Zeby odblokowac Te postac, musisz zabic albo dojsc do 4 swiata.</string>
-  <string name="StartScene_WinGame">Zeby odblokowac \"Wyzwania\" musisz przejsc gre kazda postacia!</string>
+  <string name="StartScene_Erase">Usuń aktualna grę</string>
+  <string name="StartScene_Depth">Głębokość: %1$d\nPoziom: %2$d</string>
+  <string name="StartScene_Really">Czy na pewno chcesz rozpocząć nową grę?</string>
+  <string name="StartScene_Warning">Twoja obecna gra zostanie usunięta.</string>
+  <string name="StartScene_Yes">Tak, zacznij nową grę</string>
+  <string name="StartScene_No">Nie, wróć do menu głównego</string>
+  <string name="StartScene_Unlock">By odblokować tę klasę postaci, pokonaj trzeciego bossa jakąkolwiek inną postacią</string>
+  <string name="StartScene_UnlockElf">Żeby odblokować tę klasę postaci, zabij czwartego bossa jakąkolwiek inną postacią</string>
+  <string name="StartScene_WinGame">Aby odblokować \"Wyzwania\", przejdź grę jakąkolwiek postacią.</string>
   <!--STRINGS OF InterLevelScene CLASS-->
-  <string name="InterLevelScene_Descending">Malejaco</string>
-  <string name="InterLevelScene_Ascending">Wzrastrajaco
+  <string name="InterLevelScene_Descending">Zejście...</string>
+  <string name="InterLevelScene_Ascending">Wejście...
 </string>
-  <string name="InterLevelScene_Loading">Ladowanie</string>
-  <string name="InterLevelScene_Resurrecting">Zamyslony...</string>
-  <string name="InterLevelScene_Returning">Powrot</string>
-  <string name="InterLevelScene_Falling">Spadanie</string>
-  <string name="InterLevelScene_FileNotFound">Nie znaleziono pliku !</string>
-  <string name="InterLevelScene_ErrorGeneric">Cos jest nie tak</string>
+  <string name="InterLevelScene_Loading">Ładowanie</string>
+  <string name="InterLevelScene_Resurrecting">Zmartwychwstanie...</string>
+  <string name="InterLevelScene_Returning">Powrót...</string>
+  <string name="InterLevelScene_Falling">Upadek...</string>
+  <string name="InterLevelScene_FileNotFound">Z jakiegoś powodu plik nie może zostać odnaleziony...</string>
+  <string name="InterLevelScene_ErrorGeneric">Coś poszło źle...</string>
   <!--STRINGS OF SurfaceScene CLASS-->
-  <string name="SurfaceScene_GameOver">KONIEC GRY</string>
+  <string name="SurfaceScene_GameOver">Koniec Gry</string>
   <!--STRINGS OF WndSettings CLASS-->
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>
-  <string name="WndSettings_ZoomDef">Powieksz Gre</string>
-  <string name="WndSettings_TextScaleDefault">Powieksz Czcziake</string>
+  <string name="WndSettings_ZoomDef">Domyślne zbliżenie</string>
+  <string name="WndSettings_TextScaleDefault">Domyślna czcionka</string>
   <string name="WndSettings_ScaleUp">Skalowanie UI</string>
-  <string name="WndSettings_Immersive">Przechylenie </string>
+  <string name="WndSettings_Immersive">Tryb immersyjny </string>
   <string name="WndSettings_Music">Muzyka</string>
-  <string name="WndSettings_Sound">Odglosy</string>
-  <string name="WndSettings_Brightness">Jasnosc</string>
-  <string name="WndSettings_SwitchPort">Przełacz ponownie ekran</string>
-  <string name="WndSettings_SwitchLand">Przełacz ponownie ekran</string>
-  <string name="WndSettings_SelectLanguage">Wybierz jezyk</string>
-  <string name="WndSettings_SecondQuickslot">Pojedynczy slot</string>
-  <string name="WndSettings_ThirdQuickslot">Trzeci Szybki Slot</string>
-  <string name="WndSettings_ExperementalFont">Nowa Czczciaka</string>
-  <string name="WndSettings_ClassicFont">Zwykla CzCzciaka</string>
+  <string name="WndSettings_Sound">Odgłosy</string>
+  <string name="WndSettings_Brightness">Jasność</string>
+  <string name="WndSettings_SwitchPort">Przełącz do widoku \"portretowego\" </string>
+  <string name="WndSettings_SwitchLand">Przełącz do widoku panoramicznego </string>
+  <string name="WndSettings_SelectLanguage">Wybierz język</string>
+  <string name="WndSettings_SecondQuickslot">Drugi quickslot</string>
+  <string name="WndSettings_ThirdQuickslot">Trzeci quickslot</string>
+  <string name="WndSettings_ExperementalFont">Nowa Czcionka</string>
+  <string name="WndSettings_ClassicFont">Klasyczna Czcionka</string>
 </resources>
