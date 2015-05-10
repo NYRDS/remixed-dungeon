@@ -83,8 +83,8 @@ public abstract class Char extends Actor {
 	
 	public int    gender          = Utils.NEUTER;
 	
-	public int HT;
-	public int HP;
+	private int HT;
+	private int HP;
 	
 	protected float baseSpeed	= 1;
 	
@@ -115,8 +115,8 @@ public abstract class Char extends Actor {
 		super.storeInBundle( bundle );
 		
 		bundle.put( POS, pos );
-		bundle.put( TAG_HP, HP );
-		bundle.put( TAG_HT, HT );
+		bundle.put( TAG_HP, hp() );
+		bundle.put( TAG_HT, ht() );
 		bundle.put( BUFFS, buffs );
 	}
 	
@@ -126,8 +126,8 @@ public abstract class Char extends Actor {
 		super.restoreFromBundle( bundle );
 		
 		pos = bundle.getInt( POS );
-		HP  = bundle.getInt( TAG_HP );
-		HT  = bundle.getInt( TAG_HT );
+		hp(bundle.getInt( TAG_HP ));
+		ht(bundle.getInt( TAG_HT ));
 		
 		for (Bundlable b : bundle.getCollection( BUFFS )) {
 			if (b != null) {
@@ -270,7 +270,7 @@ public abstract class Char extends Actor {
 	
 	public void damage( int dmg, Object src ) {
 		
-		if (HP <= 0) {
+		if (hp() <= 0) {
 			return;
 		}
 		
@@ -284,7 +284,7 @@ public abstract class Char extends Actor {
 		}
 		
 		if (buff( Paralysis.class ) != null) {
-			if (Random.Int( dmg ) >= Random.Int( HP )) {
+			if (Random.Int( dmg ) >= Random.Int( hp() )) {
 				Buff.detach( this, Paralysis.class );
 				if (Dungeon.visible[pos]) {
 					GLog.i( TXT_OUT_OF_PARALYSIS, name_objective );
@@ -292,20 +292,20 @@ public abstract class Char extends Actor {
 			}
 		}
 		
-		HP -= dmg;
+		hp(hp() - dmg);
 		if (dmg > 0 || src instanceof Char) {
-			getSprite().showStatus( HP > HT / 2 ? 
+			getSprite().showStatus( hp() > ht() / 2 ? 
 				CharSprite.WARNING : 
 				CharSprite.NEGATIVE,
 				Integer.toString( dmg ) );
 		}
-		if (HP <= 0) {
+		if (hp() <= 0) {
 			die( src );
 		}
 	}
 	
 	public void destroy() {
-		HP = 0;
+		hp(0);
 		Actor.remove( this );
 		Actor.freeCell( pos );
 	}
@@ -316,7 +316,7 @@ public abstract class Char extends Actor {
 	}
 	
 	public boolean isAlive() {
-		return HP > 0;
+		return hp() > 0;
 	}
 	
 	@Override
@@ -545,5 +545,22 @@ public abstract class Char extends Actor {
 
 	public void setSprite(CharSprite sprite) {
 		this.sprite = sprite;
+	}
+
+	public int ht() {
+		return HT;
+	}
+
+	public int ht(int hT) {
+		HT = hT;
+		return hT;
+	}
+
+	public int hp() {
+		return HP;
+	}
+
+	public void hp(int hP) {
+		HP = hP;
 	}
 }

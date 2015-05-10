@@ -28,7 +28,7 @@ public class Gnoll extends Mob {
 	{
 		spriteClass = GnollSprite.class;
 		
-		HP = HT = 12;
+		hp(ht(12));
 		defenseSkill = 4;
 		
 		EXP = 2;

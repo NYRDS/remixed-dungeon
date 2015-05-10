@@ -62,7 +62,7 @@ public class Multiplicity extends Glyph {
 				GameScene.add( mob );
 				WandOfBlink.appear( mob, Random.element( respawnPoints ) );
 				
-				defender.damage( Random.IntRange( 1, defender.HT / 6 ), /*attacker*/ this );
+				defender.damage( Random.IntRange( 1, defender.ht() / 6 ), /*attacker*/ this );
 				checkOwner( defender );
 			}
 			

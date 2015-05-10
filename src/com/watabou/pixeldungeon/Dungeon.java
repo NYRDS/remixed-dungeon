@@ -58,6 +58,7 @@ import com.watabou.pixeldungeon.levels.HallsLevel;
 import com.watabou.pixeldungeon.levels.LastLevel;
 import com.watabou.pixeldungeon.levels.LastShopLevel;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.ModderLevel;
 import com.watabou.pixeldungeon.levels.PrisonBossLevel;
 import com.watabou.pixeldungeon.levels.PrisonLevel;
 import com.watabou.pixeldungeon.levels.Room;
@@ -137,13 +138,24 @@ public class Dungeon {
 		
 		Badges.reset();
 		
-		StartScene.curClass.initHero( hero );
+		heroClass.initHero( hero );
 		
 		gameOver = false;
 	}
 	
 	public static boolean isChallenged( int mask ) {
 		return (challenges & mask) != 0;
+	}
+	
+	public static Level testLevel() {
+		Dungeon.level = null;
+		Actor.clear();
+
+		level = new ModderLevel();
+		
+		level.create();
+		
+		return level;
 	}
 	
 	public static Level newLevel() {
@@ -334,7 +346,7 @@ public class Dungeon {
 	
 	public static void gameOver(){
 		gameOver = true;
-		Dungeon.deleteGame( Dungeon.hero.heroClass, true );
+		Dungeon.deleteGame( true );
 	}
 	
 	public static void saveGame( String fileName ) throws IOException {
@@ -428,8 +440,8 @@ public class Dungeon {
 		}
 	}
 	
-	public static void loadGame( HeroClass cl ) throws IOException {
-		loadGame( SaveUtils.gameFile( cl ), true );
+	public static void loadGame( ) throws IOException {
+		loadGame( SaveUtils.gameFile( heroClass ), true );
 	}
 	
 	public static void loadGame( String fileName ) throws IOException {
@@ -505,30 +517,30 @@ public class Dungeon {
 		Journal.restoreFromBundle( bundle );
 	}
 	
-	public static Level loadLevel( HeroClass cl ) throws IOException {
+	public static Level loadLevel( ) throws IOException {
 		
 		Dungeon.level = null;
 		Actor.clear();
 		
-		InputStream input = Game.instance().openFileInput( SaveUtils.depthFile( cl , depth ) ) ;
+		InputStream input = Game.instance().openFileInput( SaveUtils.depthFile( heroClass , depth ) ) ;
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
 		return (Level)bundle.get( "level" );
 	}
 	
-	public static void deleteGame( HeroClass cl, boolean deleteLevels ) {
+	public static void deleteGame(boolean deleteLevels ) {
 		
-		Game.instance().deleteFile( SaveUtils.gameFile( cl ) );
+		Game.instance().deleteFile( SaveUtils.gameFile( heroClass ) );
 		
 		if (deleteLevels) {
 			int depth = 1;
-			while (Game.instance().deleteFile( SaveUtils.depthFile( cl , depth ) )) {
+			while (Game.instance().deleteFile( SaveUtils.depthFile( heroClass , depth ) )) {
 				depth++;
 			}
 		}
 		
-		GamesInProgress.delete( cl );
+		GamesInProgress.delete( heroClass );
 	}
 	
 	public static Bundle gameBundle( String fileName ) throws IOException {
@@ -580,6 +592,7 @@ public class Dungeon {
 	}
 	
 	private static boolean[] passable = new boolean[Level.LENGTH];
+	public static HeroClass heroClass;
 
 	private static void markActorsAsUnpassableIgnoreFov(){
 		for (Actor actor : Actor.all()) {

@@ -328,7 +328,7 @@ public class Ghost extends NPC {
 		{
 			spriteClass = FetidRatSprite.class;
 			
-			HP = HT = 15;
+			hp(ht(15));
 			defenseSkill = 5;
 			
 			EXP = 0;

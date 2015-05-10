@@ -51,7 +51,7 @@ public class DM300 extends Mob {
 	{
 		spriteClass = DM300Sprite.class;
 		
-		HP = HT = 200;
+		hp(ht(200));
 		EXP = 30;
 		defenseSkill = 18;
 		
@@ -86,9 +86,9 @@ public class DM300 extends Mob {
 	public void move( int step ) {
 		super.move( step );
 
-		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && HP < HT) {
+		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && hp() < ht()) {
 			
-			HP += Random.Int( 1, HT - HP );
+			hp(hp() + Random.Int( 1, ht() - hp() ));
 			getSprite().emitter().burst( ElmoParticle.FACTORY, 5 );
 			
 			if (Dungeon.visible[step] && Dungeon.hero.isAlive()) {

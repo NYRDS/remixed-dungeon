@@ -68,7 +68,7 @@ public class Mimic extends Mob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( HT / 10, HT / 4 );
+		return Random.NormalIntRange( ht() / 10, ht() / 4 );
 	}
 	
 	@Override
@@ -91,7 +91,7 @@ public class Mimic extends Mob {
 	public void adjustStats( int level ) {
 		this.level = level;
 		
-		HT = (3 + level) * 4;
+		ht((3 + level) * 4);
 		EXP = 2 + 2 * (level - 1) / 5;
 		defenseSkill = attackSkill( null ) / 2;
 		
@@ -145,7 +145,7 @@ public class Mimic extends Mob {
 		Mimic m = new Mimic();
 		m.items = new ArrayList<Item>( items );
 		m.adjustStats( Dungeon.depth );
-		m.HP = m.HT;
+		m.hp(m.ht());
 		m.pos = pos;
 		m.state = m.HUNTING;
 		GameScene.add( m, 1 );

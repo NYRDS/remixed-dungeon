@@ -30,8 +30,8 @@ public class PotionOfMight extends PotionOfStrength {
 		setKnown();
 		
 		hero.STR++;
-		hero.HT += 5;
-		hero.HP += 5;
+		hero.ht(hero.ht() + 5);
+		hero.hp(hero.hp() + 5);
 		hero.getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.PotionOfMight_StaApply));
 		GLog.p(Game.getVar(R.string.PotionOfMight_Apply));
 	}

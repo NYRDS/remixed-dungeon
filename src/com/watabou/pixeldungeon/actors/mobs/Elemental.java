@@ -35,7 +35,7 @@ public class Elemental extends Mob {
 	{
 		spriteClass = ElementalSprite.class;
 		
-		HP = HT = 65;
+		hp(ht(65));
 		defenseSkill = 20;
 		
 		EXP = 10;
@@ -74,13 +74,13 @@ public class Elemental extends Mob {
 	@Override
 	public void add( Buff buff ) {
 		if (buff instanceof Burning) {
-			if (HP < HT) {
-				HP++;
+			if (hp() < ht()) {
+				hp(hp() + 1);
 				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 		} else {
 			if (buff instanceof Frost) {
-				damage( Random.NormalIntRange( 1, HT * 2 / 3 ), buff );
+				damage( Random.NormalIntRange( 1, ht() * 2 / 3 ), buff );
 			}
 			super.add( buff );
 		}

@@ -99,7 +99,7 @@ public class StartScene extends PixelScene {
 	private Group unlock;
 	private Group unlockElf;
 
-	public static HeroClass curClass;
+	private static HeroClass curClass;
 
 	@Override
 	public void create() {
@@ -163,6 +163,7 @@ public class StartScene extends PixelScene {
 			protected void onClick() {
 				InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 				Game.switchScene(InterlevelScene.class);
+				Dungeon.heroClass = curClass;
 			}
 		};
 		add(btnLoad);
@@ -285,7 +286,7 @@ public class StartScene extends PixelScene {
 		}
 		shields.get(curClass = cl).highlight(true);
 
-		if ((cl == HeroClass.HUNTRESS && !huntressUnlocked)) {
+		if (cl == HeroClass.HUNTRESS && !huntressUnlocked) {
 			unlock.visible = true;
 			unlockElf.visible = false;
 			btnLoad.visible = false;
@@ -293,7 +294,7 @@ public class StartScene extends PixelScene {
 			return;
 		}
 		
-		if ((cl == HeroClass.ELF && !elfUnlocked)) {
+		if (cl == HeroClass.ELF && !elfUnlocked) {
 			unlock.visible = false;
 			unlockElf.visible = true;
 			btnLoad.visible = false;
@@ -332,10 +333,15 @@ public class StartScene extends PixelScene {
 	}
 
 	private void startNewGame() {
-
 		Dungeon.hero = null;
+		Dungeon.heroClass = curClass;
+
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
 
+		if( PixelDungeon.moddingMode() ) {
+			InterlevelScene.mode = InterlevelScene.Mode.MODDING;
+		}
+		
 		if (PixelDungeon.intro()) {
 			PixelDungeon.intro(false);
 			Game.switchScene(IntroScene.class);

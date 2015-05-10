@@ -171,7 +171,7 @@ public class Bestiary {
 			
 		default:
 			chances = new float[]{ 1 };
-			classes = new Class<?>[]{ Eye.class };
+			classes = new Class<?>[]{ Rat.class };
 		}
 		
 		return classes[ Random.chances( chances )];

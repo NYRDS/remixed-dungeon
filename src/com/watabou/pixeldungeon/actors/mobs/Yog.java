@@ -59,7 +59,7 @@ public class Yog extends Mob {
 	{
 		spriteClass = YogSprite.class;
 		
-		HP = HT = 300;
+		hp(ht(300));
 		
 		EXP = 50;
 		
@@ -185,7 +185,7 @@ public class Yog extends Mob {
 		{
 			spriteClass = RottingFistSprite.class;
 			
-			HP = HT = 300;
+			hp(ht(300));
 			defenseSkill = 25;
 			
 			EXP = 0;
@@ -232,9 +232,9 @@ public class Yog extends Mob {
 		@Override
 		public boolean act() {
 			
-			if (Level.water[pos] && HP < HT) {
+			if (Level.water[pos] && hp() < ht()) {
 				getSprite().emitter().burst( ShadowParticle.UP, 2 );
-				HP += REGENERATION;
+				hp(hp() + REGENERATION);
 			}
 			
 			return super.act();
@@ -277,7 +277,7 @@ public class Yog extends Mob {
 		{
 			spriteClass = BurningFistSprite.class;
 			
-			HP = HT = 200;
+			hp(ht(200));
 			defenseSkill = 25;
 			
 			EXP = 0;
@@ -393,7 +393,7 @@ public class Yog extends Mob {
 		{
 			spriteClass = LarvaSprite.class;
 			
-			HP = HT = 25;
+			hp(ht(25));
 			defenseSkill = 20;
 			
 			EXP = 0;

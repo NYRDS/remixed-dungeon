@@ -157,7 +157,7 @@ public class StatusPane extends Component {
 	public void update() {
 		super.update();
 		
-		float health = (float)Dungeon.hero.HP / Dungeon.hero.HT;
+		float health = (float)Dungeon.hero.hp() / Dungeon.hero.ht();
 		
 		if (health == 0) {
 			avatar.tint( 0x000000, 0.6f );

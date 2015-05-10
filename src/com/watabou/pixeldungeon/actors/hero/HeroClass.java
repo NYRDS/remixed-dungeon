@@ -131,7 +131,7 @@ public enum HeroClass {
 		
 		hero.collect(gl);
 		
-		hero.HP = hero.HT = 10;
+		hero.hp(hero.ht(10));
 		
 		
 		hero.collect(new PotionOfStrength());
@@ -210,8 +210,8 @@ public enum HeroClass {
 	}
 	
 	private static void initHuntress( Hero hero ) {
-		hero.HT -= 5;
-		hero.HP = hero.HT;
+		hero.ht(hero.ht() - 5);
+		hero.hp(hero.ht());
 		
 		(hero.belongings.weapon = new Dagger()).identify();
 		Boomerang boomerang = new Boomerang();
@@ -223,8 +223,8 @@ public enum HeroClass {
 	private void initElf(Hero hero) {
 		hero.STR--;
 		
-		hero.HT -= 5;
-		hero.HP = hero.HT;
+		hero.ht(hero.ht() - 5);
+		hero.hp(hero.ht());
 		
 		(hero.belongings.armor = new ClothArmor()).upgrade().identify();
 		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();

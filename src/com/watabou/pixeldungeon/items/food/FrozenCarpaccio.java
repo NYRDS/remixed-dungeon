@@ -55,7 +55,7 @@ public class FrozenCarpaccio extends Food {
 				break;
 			case 1:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info2));
-				Buff.affect( hero, Barkskin.class ).level( hero.HT / 4 );
+				Buff.affect( hero, Barkskin.class ).level( hero.ht() / 4 );
 				break;
 			case 2:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info3));
@@ -66,8 +66,8 @@ public class FrozenCarpaccio extends Food {
 				break;
 			case 3:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info4));
-				if (hero.HP < hero.HT) {
-					hero.HP = Math.min( hero.HP + hero.HT / 4, hero.HT );
+				if (hero.hp() < hero.ht()) {
+					hero.hp(Math.min( hero.hp() + hero.ht() / 4, hero.ht() ));
 					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 				}
 				break;

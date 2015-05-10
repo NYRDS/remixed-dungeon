@@ -100,7 +100,7 @@ public class Burning extends Buff implements Hero.Doom {
 		left -= TICK;
 		
 		if (left <= 0 ||
-			Random.Float() > (2 + (float)target.HP / target.HT) / 3 ||
+			Random.Float() > (2 + (float)target.hp() / target.ht()) / 3 ||
 			(Level.water[target.pos] && !target.flying)) {
 			
 			detach();

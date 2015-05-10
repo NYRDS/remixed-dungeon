@@ -49,7 +49,7 @@ public class InterlevelScene extends PixelScene {
 	private static final String ERR_GENERIC        = Game.getVar(R.string.InterLevelScene_ErrorGeneric);	
 	
 	public static enum Mode {
-		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
+		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, MODDING
 	};
 	public static Mode mode;
 	
@@ -62,7 +62,8 @@ public class InterlevelScene extends PixelScene {
 	
 	private enum Phase {
 		FADE_IN, STATIC, FADE_OUT
-	};
+	}
+	
 	volatile private Phase phase;
 	volatile private float timeLeft;
 	
@@ -95,6 +96,9 @@ public class InterlevelScene extends PixelScene {
 			break;
 		case FALL:
 			text = TXT_FALLING;
+			break;
+		case MODDING:
+			text = "modding test mode";
 			break;
 		}
 		
@@ -179,6 +183,9 @@ public class InterlevelScene extends PixelScene {
 					case FALL:
 						fall();
 						break;
+					case MODDING:
+						testMode();
+						break;
 					}
 					
 					if ((Dungeon.depth % 5) == 0) {
@@ -250,6 +257,17 @@ public class InterlevelScene extends PixelScene {
 		}
 	}
 	
+	private void testMode() {
+		Actor.fixTime();
+		Dungeon.init();
+		
+		Level level;
+		level = Dungeon.testLevel();
+		
+		Dungeon.switchLevel( level, level.entrance );
+	}
+
+	
 	private void descend() throws Exception {
 		
 		Actor.fixTime();
@@ -268,7 +286,7 @@ public class InterlevelScene extends PixelScene {
 			level = Dungeon.newLevel();
 		} else {
 			Dungeon.depth++;
-			level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+			level = Dungeon.loadLevel( );
 		}
 		Dungeon.switchLevel( level, level.entrance );
 	}
@@ -283,7 +301,7 @@ public class InterlevelScene extends PixelScene {
 			level = Dungeon.newLevel();
 		} else {
 			Dungeon.depth++;
-			level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+			level = Dungeon.loadLevel( );
 		}
 		Dungeon.switchLevel( level, fallIntoPit ? level.pitCell() : level.randomRespawnCell() );
 	}
@@ -293,7 +311,7 @@ public class InterlevelScene extends PixelScene {
 		
 		Dungeon.saveLevel();
 		Dungeon.depth--;
-		Level level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+		Level level = Dungeon.loadLevel( );
 		Dungeon.switchLevel( level, level.exit );
 	}
 	
@@ -303,12 +321,12 @@ public class InterlevelScene extends PixelScene {
 		
 		Dungeon.saveLevel();
 		Dungeon.depth = returnDepth;
-		Level level = Dungeon.loadLevel( Dungeon.hero.heroClass );
+		Level level = Dungeon.loadLevel( );
 		Dungeon.switchLevel( level, Level.resizingNeeded ? level.adjustPos( returnPos ) : returnPos );
 	}
 	
 	private void problemWithSave(){
-		Dungeon.deleteGame(StartScene.curClass, true);
+		Dungeon.deleteGame(true);
 		Game.switchScene(StartScene.class);
 		return;
 	}
@@ -317,7 +335,7 @@ public class InterlevelScene extends PixelScene {
 		
 		Actor.fixTime();
 		
-		Dungeon.loadGame( StartScene.curClass );
+		Dungeon.loadGame();
 		
 		if(Dungeon.hero == null){
 			problemWithSave();
@@ -326,9 +344,9 @@ public class InterlevelScene extends PixelScene {
 		
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
-			Dungeon.switchLevel( Dungeon.loadLevel( StartScene.curClass ), -1 );
+			Dungeon.switchLevel( Dungeon.loadLevel( ), -1 );
 		} else {
-			Level level = Dungeon.loadLevel( StartScene.curClass );
+			Level level = Dungeon.loadLevel( );
 			if(level == null){ // save file fucked up :(
 				problemWithSave();
 				return;

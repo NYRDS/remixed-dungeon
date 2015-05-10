@@ -40,7 +40,7 @@ public class PotionOfHealing extends Potion {
 	
 	public static void heal( Hero hero ) {
 		
-		hero.HP = hero.HT;
+		hero.hp(hero.ht());
 		Buff.detach( hero, Poison.class );
 		Buff.detach( hero, Cripple.class );
 		Buff.detach( hero, Weakness.class );

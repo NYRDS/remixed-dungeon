@@ -168,7 +168,7 @@ public class Hero extends Char {
 		name           = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 		
-		HP = HT = 20;
+		hp(ht(20));
 		STR = STARTING_STR;
 		awareness = 0.1f;
 		
@@ -407,7 +407,7 @@ public class Hero extends Char {
 		if (curAction == null) {
 			
 			if (restoreHealth) {
-				if (isStarving() || HP >= HT) {
+				if (isStarving() || hp() >= ht()) {
 					restoreHealth = false;
 				} else {
 					spend( TIME_TO_REST ); next();
@@ -944,7 +944,7 @@ public class Hero extends Char {
 	}
 	
 	public void checkIfFurious() {
-		if (subClass == HeroSubClass.BERSERKER && 0 < HP && HP <= HT * Fury.LEVEL) {
+		if (subClass == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
 			if(buff(Fury.class)==null){
 				Buff.affect( this, Fury.class );
 				getHeroSprite().updateState(this);
@@ -1031,7 +1031,7 @@ public class Hero extends Char {
 			getSprite().move( oldPos, pos );
 			
 			if (wallWalkerBuff != null){
-				int dmg = HP/2 > 2 ? HP/2 : 2; 
+				int dmg = hp()/2 > 2 ? hp()/2 : 2; 
 				damage(dmg, wallWalkerBuff);
 			}
 			
@@ -1115,8 +1115,8 @@ public class Hero extends Char {
 			this.exp -= maxExp();
 			lvl++;
 			
-			HT += 5;
-			HP += 5;			
+			ht(ht() + 5);
+			hp(hp() + 5);			
 			attackSkill++;
 			defenseSkill++;
 			
@@ -1138,9 +1138,9 @@ public class Hero extends Char {
 		
 		if (subClass == HeroSubClass.WARLOCK) {
 			
-			int value = Math.min( HT - HP, 1 + (Dungeon.depth - 1) / 5 );
+			int value = Math.min( ht() - hp(), 1 + (Dungeon.depth - 1) / 5 );
 			if (value > 0) {
-				HP += value;
+				hp(hp() + value);
 				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 			
@@ -1250,7 +1250,7 @@ public class Hero extends Char {
 			
 		} else {
 			
-			Dungeon.deleteGame( Dungeon.hero.heroClass, false );
+			Dungeon.deleteGame( false );
 			GameScene.show( new WndResurrect( ankh, cause ) );
 			
 		}
@@ -1455,7 +1455,7 @@ public class Hero extends Char {
 	
 	public void resurrect( int resetLevel ) {
 		
-		HP = HT;
+		hp(ht());
 		Dungeon.gold = 0;
 		exp = 0;
 		

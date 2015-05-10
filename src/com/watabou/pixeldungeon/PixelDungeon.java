@@ -314,6 +314,15 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public static void classicFont(boolean value) {
 		Preferences.INSTANCE.put(Preferences.KEY_CLASSIC_FONT, value);
 	}
+
+	public static boolean moddingMode() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_MODDING_MODE, true);
+	}
+
+	public static void moddingMode(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_MODDING_MODE, value);
+	}
+	
 	/*
 	 * <--- Preferences
 	 */

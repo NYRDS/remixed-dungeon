@@ -46,7 +46,7 @@ public class Goo extends Mob {
 
 	private static final float PUMP_UP_DELAY	= 2f;
 	{
-		HP = HT = 80;
+		hp(ht(80));
 		EXP = 10;
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
@@ -95,9 +95,9 @@ public class Goo extends Mob {
 	@Override
 	public boolean act() {
 		
-		if (Level.water[pos] && HP < HT) {
+		if (Level.water[pos] && hp() < ht()) {
 			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-			HP++;
+			hp(hp() + 1);
 		}
 		
 		return super.act();

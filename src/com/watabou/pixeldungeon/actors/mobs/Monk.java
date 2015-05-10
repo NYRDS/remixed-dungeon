@@ -41,7 +41,7 @@ public class Monk extends Mob {
 	{
 		spriteClass = MonkSprite.class;
 		
-		HP = HT = 70;
+		hp(ht(70));
 		defenseSkill = 30;
 		
 		EXP = 11;
