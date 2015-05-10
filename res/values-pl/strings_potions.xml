@@ -2,75 +2,75 @@
 <resources>
   <!--PACKAGE /items/potions-->
   <!--STRINGS OF Potion CLASS-->
-  <string name="Potion_Name">%s eliksir</string>
-  <string name="Potion_Info">Zawartosc dziwnej cieczy %s Hmmm . Co sie stanie po wypiciu ??</string>
-  <string name="Potion_ACDrink">Drink</string>
-  <string name="Potion_Harmfull">Szkodliwy eliksir</string>
-  <string name="Potion_Beneficial">Nie znane dzialanie tej mikstury, prawdopodobnie zaszkodzi Tobie choc nie koniecznie</string>
-  <string name="Potion_Yes">Tak, Wiem c o robie.</string>
-  <string name="Potion_No">NIe, Ja zmieniam zdanie.</string>
-  <string name="Potion_SureDrink">Czy na pewno chcesz ją pić ? W większości przypadków należy wrzucać takie mikstury na swoich wrogów .</string>
-  <string name="Potion_SureThrow">Czy jestes pewien, że chcesz rzucić ? W wiekszości przypadkow jest mozliwosc zeby go wypic.. .</string>
-  <string name="Potion_Shatter">NIeczytelna instrukcja... ale %s co to znaczy?</string>
+  <string name="Potion_Name">%s mikstura</string>
+  <string name="Potion_Info">Ta flaszka zawiera ciecz, która jest %s. Kto wie co się stanie po jej wypiciu lub rzuceniu?</string>
+  <string name="Potion_ACDrink">WYPIJ</string>
+  <string name="Potion_Harmfull">Szkodliwa mikstura!</string>
+  <string name="Potion_Beneficial">Pozytywna mikstura</string>
+  <string name="Potion_Yes">Tak, wiem co robię</string>
+  <string name="Potion_No">Nie, zmieniłem zdanie</string>
+  <string name="Potion_SureDrink">Jesteś pewien, że chcesz to wypić? Najrozsądniej będzie jeśli rzucisz tym we wrogów.</string>
+  <string name="Potion_SureThrow">Czy jesteś pewien, że chcesz tym rzucić? Najrozsądniej będzie jeśli to wypijesz.</string>
+  <string name="Potion_Shatter">Flaszka roztrzaskuje się i %s ciecz rozpływa się nieszkodliwie</string>
   <string-array name="Potion_Colors">
-    <item>Turkus</item>
-    <item>karmazynowy</item>
-    <item>lazur</item>
-    <item>jadowity</item>
-    <item>zloty</item>
-    <item>magentyczny</item>
-    <item>wegiel drzewny</item>
-    <item>kosc sloniowa</item>
-    <item>bursztyn</item>
-    <item>Ciemno-Brunatne</item>
+    <item>turkusowa</item>
+    <item>karmazynowa</item>
+    <item>azurowa</item>
+    <item>jadeitowa</item>
+    <item>złota</item>
+    <item>magentowa</item>
+    <item>zwęglona</item>
+    <item>śnieżnobiała</item>
+    <item>bursztynowa</item>
+    <item>ciemnobrunatna</item>
     <item>indigo</item>
-    <item>srebny</item>
+    <item>srebna</item>
   </string-array>
   <!--STRINGS OF PotionOfExperience CLASS-->
-  <string name="PotionOfExperience_Name">Eliksir Doswiadczenia</string>
-  <string name="PotionOfExperience_Info">Dzieki temu mozna podniesc natychmiastowo poziom doswiadczenia !</string>
+  <string name="PotionOfExperience_Name">Mikstura Doświadczenia</string>
+  <string name="PotionOfExperience_Info">Przechowywane przez wieki doświadczenia uczestników wielu bitew zostały sprowadzone do ciekłej postaci. Ten wyciąg z czystej mądrości natychmiast zwiększy twój poziom doświadczenia.</string>
   <!--STRINGS OF PotionOfFrost CLASS-->
-  <string name="PotionOfFrost_Name">Zimny Eliksir </string>
-  <string name="PotionOfFrost_Info">Wybuch spowodowal radioaktywne dzialanie w tej czesci lochu! uwazaj..</string>
+  <string name="PotionOfFrost_Name">Mikstura Zimna</string>
+  <string name="PotionOfFrost_Info">Kiedy te chemikalia wejdą w kontakt z powietrzem, wyparują, tworząc lodowatą chmurę, sprawiając, że każda istota zostaje zamrożona po kontakcie z nią i nie może się ruszać dopóki lód się nie roztopi.</string>
   <!--STRINGS OF PotionOfHealing CLASS-->
-  <string name="PotionOfHealing_Name">Eliksir Zycia</string>
-  <string name="PotionOfHealing_Info">Eliksir , który natychmiast przywroci do pełni zdrowia i wyleczy od trucizny .</string>
-  <string name="PotionOfHealing_Apply">Twoje rany calkowicie wyleczone!</string>
+  <string name="PotionOfHealing_Name">Mikstura Uzdrowienia</string>
+  <string name="PotionOfHealing_Info">Mikstura, która natychmiast przywróci ci całe zdrowie i wyleczy zatrucie.</string>
+  <string name="PotionOfHealing_Apply">Twe rany goją się natychmiastowo.</string>
   <!--STRINGS OF PotionOfInvisibility CLASS-->
-  <string name="PotionOfInvisibility_Name">Eliksir Niewidzialnosci</string>
-  <string name="PotionOfInvisibility_Info">Wrogowie po wipicu Eliksiru Niewidzialnosci nie zauwaza Ciebie, poki ich nie zaatakujesz.!</string>
-  <string name="PotionOfInvisibility_Apply">Twoje Dlonie Znikaja</string>
+  <string name="PotionOfInvisibility_Name">Mikstura Niewidzialności</string>
+  <string name="PotionOfInvisibility_Info">Wypicie tej mikstury sprawi, że staniesz się tymczasowo niewidzialny. W tym stanie wrogowie nie będą mogli ciebie zobaczyć. Atakowanie, używanie kostura lub zwoju przed oczami wroga sprawi, że znów będziesz widoczny.</string>
+  <string name="PotionOfInvisibility_Apply">Widzisz, że twe dłonie znikają!</string>
   <!--STRINGS OF PotionOfLevitation CLASS-->
-  <string name="PotionOfLevitation_Name">Eliksir Lewitacji</string>
-  <string name="PotionOfLevitation_Info">Po wypiciy tej mikstury mozesz uosic sie nad woda oraz przepascia!</string>
-  <string name="PotionOfLevitation_Apply">Latasz!</string>
+  <string name="PotionOfLevitation_Name">Mikstura Lewitacji</string>
+  <string name="PotionOfLevitation_Info">Wypicie tej dziwacznej mikstury sprawi, że będziesz lewitował w powietrzu, pozwalając ci na lot ponad przepaścią i pułapkami. Płomienie i gazy zapełniają powietrze i nie można przez nie przejść będąc w powietrzu.</string>
+  <string name="PotionOfLevitation_Apply">Wznosisz się w powietrze!</string>
   <!--STRINGS OF PotionOfLiquidFlame CLASS-->
-  <string name="PotionOfLiquidFlame_Name">Eliksir z Ogniem</string>
-  <string name="PotionOfLiquidFlame_Info">Ta mikstura pozwoli ci podpalic wroga nie robiac Ci krzydy jesli jestes w powietrzu!</string>
+  <string name="PotionOfLiquidFlame_Name">Mikstura Ciekłego Ognia</string>
+  <string name="PotionOfLiquidFlame_Info">Ta flaszka zawiera niestabilną, łatwopalną substancję, która wybuchnie żywym ogniem, jeśli wejdzie w kontakt z powietrzem.</string>
   <!--STRINGS OF PotionOfMight CLASS-->
-  <string name="PotionOfMight_Name">Eliksir Mocy</string>
-  <string name="PotionOfMight_Info">Po wypiciu tej Mikstury Zwiekszasz swoje miescie, sile oraz punkty zycia !</string>
-  <string name="PotionOfMight_Apply">Nowe sily, przeszywaja Twoje Cialo !</string>
-  <string name="PotionOfMight_StaApply">+1 sily, +5 ht</string>
+  <string name="PotionOfMight_Name">Mikstura Potęgi</string>
+  <string name="PotionOfMight_Info">Ta potężna ciecz przesyci twe mięśnie, permanentnie zwiększając twą Siłę o jeden punkt i Życie o pięć punktów.</string>
+  <string name="PotionOfMight_Apply">Nowa siła przesyca twe ciało.</string>
+  <string name="PotionOfMight_StaApply">+1 siły, +5 hp</string>
   <!--STRINGS OF PotionOfMindVision CLASS-->
-  <string name="PotionOfMindVision_Name">Eliksir Wizji</string>
-  <string name="PotionOfMindVision_Info">Ta mikstura pozwala zauwazyc polozenie wrogow i ich policzyc! a takze ukryte drzwi jesli znajduja sie obok ciebie !</string>
-  <string name="PotionOfMindVision_Apply1">Mozesz poczuc Obecnosc ... Wrogow..</string>
-  <string name="PotionOfMindVision_Apply2">Mozna powiedziec , że w jakis sposob jestes sam na tym poziomie w tej chwili .</string>
+  <string name="PotionOfMindVision_Name">Mikstura Telepatii</string>
+  <string name="PotionOfMindVision_Info">Po wypiciu tego, twój umysł będzie przestrojony na możliwość wykrywania fizycznych postaci dalekich istot, pozwalając na wyczucie ich obecności przez ściany. Ponadto ta mikstura pozwoli ci widzieć przez pobliskie ściany i drzwi.</string>
+  <string name="PotionOfMindVision_Apply1">Możesz jakoś wyczuć obecność umysłów innych istot!</string>
+  <string name="PotionOfMindVision_Apply2">Możesz jakoś stwierdzić, że aktualnie jesteś sam na tym poziomie.</string>
   <!--STRINGS OF PotionOfParalyticGas CLASS-->
-  <string name="PotionOfParalyticGas_Name">Eliksir Gazu Paralizujacego</string>
-  <string name="PotionOfParalyticGas_Info">Po otwarciu butelki z tym gazem w powietrzu bedzie panowac trujacy paralizujacy gaz.. Nie Bedziesz mogl sie poruszac poki nie zniknie... albo poki umrzesz.!</string>
+  <string name="PotionOfParalyticGas_Name">Mikstura Gazu Paraliżującego</string>
+  <string name="PotionOfParalyticGas_Info">Po kontakcie z powietrzem, płyn w tej flaszce wyparuje tworząc żółty obłok. Każdy kto weźmie wdech tej chmury zostanie natychmiast sparaliżowany. Nie będzie mógł się poruszać dopóki chmura nie zniknie. Ten przedmiot może zostać rzucony w odległych wrogów, by złapać ich w pułapkę gazu.</string>
   <!--STRINGS OF PotionOfPurity CLASS-->
-  <string name="PotionOfPurity_Name">Eliksir Oczyszczenia</string>
-  <string name="PotionOfPurity_Info">Automatycznie oczyszcza Ciebie i Twoje Cialo ze szkodliwych efektow innych gazow.</string>
-  <string name="PotionOfPurity_Freshness">Czujesz się niezwykłą świeżość w powietrzu </string>
-  <string name="PotionOfPurity_NoSmell">Zatrzymales czulosc jakichkolwiek zapachow! </string>
+  <string name="PotionOfPurity_Name">Mikstura Czystości</string>
+  <string name="PotionOfPurity_Info">Ten preparat szybko zneutralizuje wszystkie szkodliwe gazy w zasięgu działania. Wypicie tego gwarantuje tymczasową odporność na tego typu gazy.</string>
+  <string name="PotionOfPurity_Freshness">Czujesz niezwykłą świeżość w powietrzu</string>
+  <string name="PotionOfPurity_NoSmell">Przestałeś czuć jakiekolwiek zapachy!</string>
   <!--STRINGS OF PotionOfStrength CLASS-->
-  <string name="PotionOfStrength_Name">Eliksir SIly!</string>
-  <string name="PotionOfStrength_Info">Ten Eliksir zwieksza Twoje parametry Sily o 1+! </string>
-  <string name="PotionOfStrength_Apply">Nowo odkryte sily przeplywaja przez Twoje cialo! Czujesz sie wielki!</string>
+  <string name="PotionOfStrength_Name">Mikstura Siły</string>
+  <string name="PotionOfStrength_Info">Ten potężny płyn zwiększy objętość twych mięśni, permanentnie zwiększając twoją Siłę o jeden punkt.</string>
+  <string name="PotionOfStrength_Apply">Nowa siła przepływa przez twe ciało.</string>
   <string name="PotionOfStrength_StaApply">+1 do Siły</string>
   <!--STRINGS OF PotionOfToxicGas CLASS-->
-  <string name="PotionOfToxicGas_Name">Eliksir Toksycznego Gazu</string>
-  <string name="PotionOfToxicGas_Info">Mozesz wybrac, aby rzucić ten eliksir w kierunku wrogow, albo popelnic samobojstwo i go wypic!</string>
+  <string name="PotionOfToxicGas_Name">Mikstura Toksycznego Gazu</string>
+  <string name="PotionOfToxicGas_Info">Odkorkowanie lub zbicie flaszki zawierającej tę ciecz sprawi, że wybuchnie ona, tworząc śmiercionośną chmurę toksycznego, zielonego gazu. Możesz wybrać czy rzucić tą miksturą we wrogów zamiast odkorkowywać ją własnoręcznie</string>
 </resources>

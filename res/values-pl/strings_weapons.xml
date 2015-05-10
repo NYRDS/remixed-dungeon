@@ -2,26 +2,26 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">To wyglada bardzo znajomo, %1$s zidentyfikuj to %2$s.</string>
-  <string name="Weapon_Incompatible">Dziwny rodzaj maggi zostal zaklęty w tej bronii.</string>
+  <string name="Weapon_Identify">%1$s został już przez ciebie dokładniej poznany. Okazuje się, że to %2$s.</string>
+  <string name="Weapon_Incompatible">Interakcja różnych typów magii usunęła zaklęcie z tej broni!</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
-    <item>Ponury %s</item>
-    <item>Ponury %s</item>
-    <item>Ponury %s</item>
+    <item>Śmiercionośny %s</item>
+    <item>Śmiercionośny %s</item>
+    <item>Śmiercionośny %s</item>
   </string-array>
   <!--STRINGS OF Fire CLASS-->
   <string-array name="Fire_Name">
-    <item>Plonacy %s</item>
-    <item>Plonacy %s</item>
-    <item>Plonacy %s</item>
+    <item>Płonący %s</item>
+    <item>Płonący %s</item>
+    <item>Płonący %s</item>
   </string-array>
   <!--STRINGS OF Horror CLASS-->
   <string-array name="Horror_Name">
-    <item>Przerazliwy %s</item>
-    <item>Przerazliwy %s</item>
-    <item>Przerazliwy %s</item>
+    <item>Duchowy %s</item>
+    <item>Duchowy %s</item>
+    <item>Duchowy %s</item>
   </string-array>
   <!--STRINGS OF Instability CLASS-->
   <string-array name="Instability_Name">
@@ -31,39 +31,39 @@
   </string-array>
   <!--STRINGS OF Leech CLASS-->
   <string-array name="Leech_Name">
-    <item>Wampirzy %s</item>
-    <item>Wampirzy %s</item>
-    <item>Wampirzy %s</item>
+    <item>Wampiryczny %s</item>
+    <item>Wampiryczny %s</item>
+    <item>Wampiryczny %s</item>
   </string-array>
   <!--STRINGS OF Luck CLASS-->
   <string-array name="Luck_Name">
-    <item>Szczescie %s</item>
-    <item>Szczescie %s</item>
-    <item>Szczescie %s</item>
+    <item>Szczęśliwy %s</item>
+    <item>Szczęśliwy %s</item>
+    <item>Szczęśliwy %s</item>
   </string-array>
   <!--STRINGS OF Paralysis CLASS-->
   <string-array name="Paralysis_Name">
-    <item>Oszalamiajacy %s</item>
-    <item>Oszalamiajacy %s</item>
-    <item>Oszalamiajacy %s</item>
+    <item>Ogłuszający %s</item>
+    <item>Ogłuszający %s</item>
+    <item>Ogłuszający %s</item>
   </string-array>
   <!--STRINGS OF Piercing CLASS-->
   <string-array name="Piercing_Name">
-    <item>Przeszywajacy %s</item>
-    <item>Przeszywajacy %s</item>
-    <item>Przeszywajacy %s</item>
+    <item>Przebijający %s</item>
+    <item>Przebijający %s</item>
+    <item>Przebijający %s</item>
   </string-array>
   <!--STRINGS OF Poison CLASS-->
   <string-array name="Poison_Name">
-    <item>Jadowity %s</item>
-    <item>Jadowity %s</item>
-    <item>Jadowity %s</item>
+    <item>Trujący %s</item>
+    <item>Trujący %s</item>
+    <item>Trujący %s</item>
   </string-array>
   <!--STRINGS OF Slow CLASS-->
   <string-array name="Slow_Name">
-    <item>Chlodne %s</item>
-    <item>Chlodne %s</item>
-    <item>Chlodne %s</item>
+    <item>Zimny %s</item>
+    <item>Zimny %s</item>
+    <item>Zimny %s</item>
   </string-array>
   <!--STRINGS OF Swing CLASS-->
   <string-array name="Swing_Name">
@@ -73,112 +73,113 @@
   </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
-  <string name="MeleeWeapon_Info1a">To %1$s jest %2$s tier-%3$d biala bron.</string>
+  <string name="MeleeWeapon_Info1a">Ten %1$s to %2$s %3$d-ego tieru. Jest bronią białą.</string>
   <string name="MeleeWeapon_Info1b">a</string>
   <string name="MeleeWeapon_Info1c">ulepszony</string>
   <string name="MeleeWeapon_Info1d">zdegradowany</string>
-  <string name="MeleeWeapon_Info2a">Srednie obrazenia to %d punktow na uderzenie.</string>
-  <string name="MeleeWeapon_Info2b">Zazwyczaj srednie obrazenia to%1$d punktow za trafienie i zazwyczaj plus %2$d punktow za siłe.</string>
-  <string name="MeleeWeapon_Info2c">ten przedmiot jest za ciężki dla ciebie</string>
-  <string name="MeleeWeapon_Info3a">Prawdopodonie to bron i masz szanse %s z tego trafic.</string>
-  <string name="MeleeWeapon_Info3b">szybki</string>
-  <string name="MeleeWeapon_Info3c">wolny</string>
+  <string name="MeleeWeapon_Info2a">Zadaje średnie obrażenia o wartości %d punktów na uderzenie.</string>
+  <string name="MeleeWeapon_Info2b">Jego średnie obrażenia zazwyczaj zadają %1$d punktów na uderzenie i wymaga %2$d punktów Siły.</string>
+  <string name="MeleeWeapon_Info2c">Prawdopodobnie ta broń jest dla ciebie za ciężka.</string>
+  <string name="MeleeWeapon_Info3a">To raczej %s broń.</string>
+  <string name="MeleeWeapon_Info3b">szybka</string>
+  <string name="MeleeWeapon_Info3c">powolna</string>
   <string name="MeleeWeapon_Info3d">i</string>
   <string name="MeleeWeapon_Info3e">ale</string>
-  <string name="MeleeWeapon_Info3f">dokladnosc</string>
-  <string name="MeleeWeapon_Info3g">niedokladny</string>
-  <string name="MeleeWeapon_Info4a">zbalansowane byloby efektywniejsze.</string>
-  <string name="MeleeWeapon_Info4b">Zbalansowane byloby bardziej dokladne.</string>
-  <string name="MeleeWeapon_Info5">To jest zaczarowane.</string>
-  <string name="MeleeWeapon_Info6a">Poniewaz nie masz niedostatecznej wytrzymałościi i prędkość podczas ataku z tym  %s pozostaje natychmiast zmniejszona.</string>
-  <string name="MeleeWeapon_Info6b">Z powodu olbrzymiej sily Twoj atak jest zwiekszony o %s.</string>
-  <string name="MeleeWeapon_Info7a">Trzymasz %1$s i jest gotowe do uzytku %2$s.</string>
-  <string name="MeleeWeapon_Info7b">,i dlatego, że jest przeklęty , jesteś bezsilny by go wyjebac z eq.</string>
-  <string name="MeleeWeapon_Info7c">Czujesz jak zla magia czai sie w mroku %s.</string>
+  <string name="MeleeWeapon_Info3f">celna</string>
+  <string name="MeleeWeapon_Info3g">niecelna</string>
+  <string name="MeleeWeapon_Info4a">Broń ta została specjalnie zbalansowana by uczynić ją szybszą.</string>
+  <string name="MeleeWeapon_Info4b">Broń ta została specjalnie zbalansowana by uczynić ją celniejszą.</string>
+  <string name="MeleeWeapon_Info5">Jest to zaczarowane.</string>
+  <string name="MeleeWeapon_Info6a">Ponieważ nie jesteś wystarczająco silny, %s będzie znacznie wolniejszy, a także mniej celny.</string>
+  <string name="MeleeWeapon_Info6b">Ponieważ jesteś niezwykle silny, %s zadaje większe obrażenia.</string>
+  <string name="MeleeWeapon_Info7a">Trzymasz %1$s w pogotowiu %2$s.</string>
+  <string name="MeleeWeapon_Info7b">, i ponieważ ta broń jest przeklęta, jesteś bezsilny by ją zostawić.</string>
+  <string name="MeleeWeapon_Info7c">%s emanuje mroczną magią.</string>
   <!--STRINGS OF BattleAxe CLASS-->
-  <string name="BattleAxe_Name">topór bojowy</string>
-  <string name="BattleAxe_Info">Ogromna stalowa glowica w tym Toporze powoduje znacze obrażenia za kazdym uderzeniem.</string>
+  <string name="BattleAxe_Name">topór bitewny</string>
+  <string name="BattleAxe_Info">Ogromna stalowa głowica tego topora zadaje olbrzymie obrażenia z każdym uderzeniem.</string>
   <string name="BattleAxe_Gender">meski</string>
   <!--STRINGS OF Dagger CLASS-->
   <string name="Dagger_Name">sztylet</string>
-  <string name="Dagger_Info">Zwykły stalowy sztylet zbudawany ze stargo drzewa.</string>
+  <string name="Dagger_Info">Zwykły żelazny sztylet z poręczną, drewnianą rękojeścią.</string>
   <string name="Dagger_Gender">meski</string>
   <!--STRINGS OF Glaive CLASS-->
-  <string name="Glaive_Name">miecz</string>
-  <string name="Glaive_Info">Ostrze miecza, na koncu słupa.</string>
+  <string name="Glaive_Name">glewia</string>
+  <string name="Glaive_Info">Włócznia posiadająca ostrze miecza zamiast grotu na czubku kija.</string>
   <string name="Glaive_Gender">kobiecy</string>
   <!--STRINGS OF Knuckles CLASS-->
   <string name="Knuckles_Name">kastet</string>
-  <string name="Knuckles_Info">Kawalek zelaza w ksztalcie jakies kostki.</string>
+  <string name="Knuckles_Info">Kawałek żelaza dopasowany do knykci.</string>
   <string name="Knuckles_Gender">meski</string>
   <!--STRINGS OF Longsword CLASS-->
   <string name="Longsword_Name">długi miecz</string>
-  <string name="Longsword_Info">Te potezne ostrze zadaje ogromne obrazenia przy kazdym cieciu.</string>
+  <string name="Longsword_Info">To wielkie ostrze zadaje ciężkie obrażenia z każdym cięciem.</string>
   <string name="Longsword_Gender">meski</string>
   <!--STRINGS OF Mace CLASS-->
-  <string name="Mace_Name">bulawa</string>
-  <string name="Mace_Info">Stal tej broni potrafi powaznie zranic.</string>
+  <string name="Mace_Name">buława </string>
+  <string name="Mace_Info">Stalowa głowica tej broni zadaje przyzwoite obrażenia.</string>
   <string name="Mace_Gender">kobiecy</string>
   <!--STRINGS OF Quarterstaff CLASS-->
-  <string name="Quarterstaff_Name">laska magika</string>
-  <string name="Quarterstaff_Info">Laska zrobiona z twardego drewna i kawalka stali.</string>
+  <string name="Quarterstaff_Name">pałka bojowa</string>
+  <string name="Quarterstaff_Info">Pałka wykonana z twardego drewna, której czubki są zakończone żelazem.</string>
   <string name="Quarterstaff_Gender">meski</string>
   <!--STRINGS OF ShortSword CLASS-->
   <string name="ShortSword_Name">krótki miecz</string>
-  <string name="ShortSword_Info">Bardzo krotki miecz, nie wiele wiekszy od sztyleta.</string>
-  <string name="ShortSword_ACReforge">przekuty</string>
-  <string name="ShortSword_Select">wybierz bron do ulepszenia.</string>
-  <string name="ShortSword_Reforged">Poswieciles swoj miecz by ulepszyc %s</string>
-  <string name="ShortSword_NotBoomerang">nie mozesz ulepszyc bumeranku w ten sposob</string>
+  <string name="ShortSword_Info">W rzeczy samej jest krótki, ponieważ jest o kilka cali dłuższy od sztyletu.</string>
+  <string name="ShortSword_ACReforge">PRZEKUJ</string>
+  <string name="ShortSword_Select">wybierz broń do ulepszenia</string>
+  <string name="ShortSword_Reforged">Przekułeś krótki miecz by wzmocnić %s</string>
+  <string name="ShortSword_NotBoomerang">Nie możesz ulepszyć bumerangu w ten sposób </string>
   <string name="ShortSword_Gender">meski</string>
   <!--STRINGS OF Spear CLASS-->
-  <string name="Spear_Name">wlocznia</string>
-  <string name="Spear_Info">Krotki drewniany pret wykuty zaostrzony zelazem.</string>
+  <string name="Spear_Name">włócznia</string>
+  <string name="Spear_Info">Smukły drewniany kij zakończony ostrym, żelaznym grotem.</string>
   <string name="Spear_Gender">nijaki</string>
   <!--STRINGS OF Sword CLASS-->
   <string name="Sword_Name">miecz</string>
-  <string name="Sword_Info">Ostrze jak brzytwa, stal ma uspokajający blask.</string>
-  <string name="Sword_Gender">mesk</string>
+  <string name="Sword_Info">Ostre jak brzytwa stalowe ostrze błyszczy dumnie w ciemności.</string>
+  <string name="Sword_Gender">meski</string>
   <!--STRINGS OF WarHammer CLASS-->
-  <string name="WarHammer_Name">mlot bojowy</string>
-  <string name="WarHammer_Info">Niewiele stworzen jest w stanie wytrzymac miazdzacy cios z poteznej broni , ale tylkonaj silniejsi moga korzystac z tego podczas przygod. </string>
+  <string name="WarHammer_Name">młot wojenny</string>
+  <string name="WarHammer_Info">Niewiele stworzeń jest w stanie wytrzymać miażdżące ciosy tego ogromnego młota wykonanego z ołowiu i stali, ale tylko najsilniejsi poszukiwacze przygód mogą go używać efektywnie.</string>
   <string name="WarHammer_Gender">meski</string>
   <!--PACKAGE /weapon/missiles-->
   <!--STRINGS OF MissileWeapon CLASS-->
-  <string name="MissileWeapon_Missiles">Pociski</string>
-  <string name="MissileWeapon_Yes">Tak, wiem co robie.</string>
-  <string name="MissileWeapon_No">Nie, zmieniłem moje zdanie</string>
-  <string name="MissileWeapon_Sure">Czy aby napewno chcesz wybrać broń do walki wręcz?</string>
-  <string name="MissileWeapon_Info1">\n\nUszkodzenia od tej broni wynosza  %d na kazde uderzenie.</string>
-  <string name="MissileWeapon_Info2">Z powodu swojej niedostatecznej wytrzymalosci okładność i predkosc podczas ataku z tym %s jest zmniejszona.</string>
-  <string name="MissileWeapon_Info3">Z powodu swojej nadmiernej sily, zwieksza obrazenia swojego ataku z tym %s</string>
-  <string name="MissileWeapon_Info4">\n\nwlasnie trzymasz %s i jest juz gotowe.</string>
+  <string name="MissileWeapon_Missiles">Broń dystansowa</string>
+  <string name="MissileWeapon_Yes">Tak, wiem co robię</string>
+  <string name="MissileWeapon_No">Nie, zmieniłem zdanie</string>
+  <string name="MissileWeapon_Sure">Czy aby na pewno chcesz tego używać jako broni białej?</string>
+  <string name="MissileWeapon_Info1">\n\nŚrednie obrażenia tej broni wynoszą %d za każde uderzenie.</string>
+  <string name="MissileWeapon_Info2">Ponieważ nie jesteś wystarczająco silny, %s jest znacznie mniej poręczny. Trafienie nim jest trudniejsze i wymaga więcej czasu na przygotowanie. </string>
+  <string name="MissileWeapon_Info3">%s zadaje więcej obrażeń ze względu na twoją ogromną siłę.</string>
+  <string name="MissileWeapon_Info4">
+\n\nTrzymasz %s w pogotowiu.</string>
   <!--STRINGS OF Boomerang CLASS-->
   <string name="Boomerang_Name">bumerang</string>
-  <string name="Boomerang_Info">Rzucony na wroga drewniany pocisk wroci spowrotem do Twojej dloni.</string>
+  <string name="Boomerang_Info">Rzucony we wroga, ten kawałek zakrzywionego drewna wróci z powrotem do rąk swego właściciela.</string>
   <string name="Boomerang_Gender">meski</string>
   <!--STRINGS OF CurareDart CLASS-->
-  <string name="CurareDart_Name">rzadka strzala</string>
-  <string name="CurareDart_Info">Demoniczne strzaly, nie robia duzej krzywdy ale potrafia sparalizowac ofiare pozostawiajac ja bez-radna.</string>
+  <string name="CurareDart_Name">trująca rzutka</string>
+  <string name="CurareDart_Info">Te małe, złe rzutki nie zadają dużo obrażeń, ale mogą sparaliżować cel, pozostawiając go bezbronnym i unieruchomionym na pewien czas.</string>
   <string name="CurareDart_Gender">meski</string>
   <!--STRINGS OF Dart CLASS-->
-  <string name="Dart_Name">strzala</string>
-  <string name="Dart_Info">Te proste metalowe ostrze potrafi naprawde uszkodzic cialo jednym ruchem nadgarstka.</string>
+  <string name="Dart_Name">rzutka</string>
+  <string name="Dart_Info">Te proste w użyciu metalowe kolce są na tyle lekkie, że można nimi rzucać szybko i efektywnie za pomocą jednego ruchu nadgarstka.</string>
   <string name="Dart_Gender">meski</string>
   <!--STRINGS OF IncendiaryDart CLASS-->
-  <string name="IncendiaryDart_Name">ognista strzala</string>
-  <string name="IncendiaryDart_Info">Kazdy rzut tej strzaly trafia do celu. </string>
+  <string name="IncendiaryDart_Name">podpalająca rzutka</string>
+  <string name="IncendiaryDart_Info">Każdy kolec tych rzutek został zaprojektowany do wbicia się w cel, podczas gdy niestabilna substancja zawarta w nim sprawi, że wróg lub przeszkoda stanie w pięknych płomieniach.</string>
   <string name="IncendiaryDart_Gender">meski</string>
   <!--STRINGS OF Javelin CLASS-->
   <string name="Javelin_Name">oszczep</string>
-  <string name="Javelin_Info">Te ostrze jest dlugie i bardzo wazne, od niego zalezy jak daleko zajdziemy.</string>
+  <string name="Javelin_Info">Długość oszczepu została tak przemyślnie wykonana, by kolec na jego czubki praktycznie sunął przez powietrze.</string>
   <string name="Javelin_Gender">nijaki</string>
   <!--STRINGS OF Shuriken CLASS-->
   <string name="Shuriken_Name">shuriken</string>
-  <string name="Shuriken_Info">Gwiazdziste kawalki metalu z ostrzami jak brzytwa moga zrobic znaczne szkody, gdy tylko trafia w cel. UWAGA ! Moga byc rzucone na bardzo wysokim poziomie !</string>
+  <string name="Shuriken_Info">Te ostre jak brzytwa kawałki metalu w kształcie gwiazdek zadają niczego sobie obrażenia kiedy uderzą cel. Mogą być rzucane z dużą szybkością.</string>
   <string name="Shuriken_Gender">meski</string>
   <!--STRINGS OF Tamahawk CLASS-->
   <string name="Tamahawk_Name">tomahawk</string>
-  <string name="Tamahawk_Info">Ten topor do rzucania nie jest zbyt ciezki.!</string>
+  <string name="Tamahawk_Info">Ten toporek do rzucania nie jest aż tak ciężki, ale nadal potrzebuje sporej siły do użycia jego efektywnie.</string>
   <string name="Tamahawk_Gender">meski</string>
 </resources>

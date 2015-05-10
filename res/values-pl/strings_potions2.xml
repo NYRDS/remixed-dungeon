@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/potions additional strings-->
-  <string name="Potion_ACMoisten">Zaczaruj !</string>
-  <string name="Potion_SelectForMoisten">Wybierz jakis przedmiot</string>
-  <string name="Potion_MoistenUseless">Patrze ze lubisz tracic mikstury !</string>
-  <string name="Potion_RuneDissaperaed">Kamien zniknał z %s.</string>
-  <string name="Potion_ArrowMoisten">Zdobyles Mokre Strzaly.</string>
-  <string name="Potion_ItemFliesAway">%s poprostu az wylatuje sama z rąk</string>
+  <string name="Potion_ACMoisten">NASĄCZ</string>
+  <string name="Potion_SelectForMoisten">Wybierz przedmiot, który chcesz nasączyć miksturą.</string>
+  <string name="Potion_MoistenUseless">Wygląda na to, że właśnie zmarnowałeś tę miksturę.</string>
+  <string name="Potion_RuneDissaperaed">Runa zniknęła z %s.</string>
+  <string name="Potion_ArrowMoisten">Udało ci się nasączyć strzały.</string>
+  <string name="Potion_ItemFliesAway">%s odleciał w nieznane...</string>
 </resources>

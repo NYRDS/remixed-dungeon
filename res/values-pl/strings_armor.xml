@@ -2,96 +2,96 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">Twoja %s zadaje Ci ból.</string>
-  <string name="Armor_Identify">Jestes teraz na dobrym tropie by poznac %1$s zidentyfikowac to. Udalo sie, to jest  %2$s.</string>
+  <string name="Armor_EquipCursed">%s boleśnie zaciska się na tobie</string>
+  <string name="Armor_Identify">Udało Ci się zidentyfikować %1$s. Okazuje się, że to  %2$s.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
-  <string name="Armor_Incompatible">Rożne rodzaje magii zaklnela sie w tej zbroi. Uwazaj !</string>
-  <string name="Armor_Info1">Ten przedmit %1$s pozwali Ci zaabsorbowac czesc obrazen \"%2$d\"  przy kazdym ataku.</string>
+  <string name="Armor_Incompatible">Interakcja różnych typów magii usunęła glif z tej zbroi!</string>
+  <string name="Armor_Info1">Ta %1$s wchłania \"%2$d\"  obrażeń.</string>
   <string name="Armor_Info2">
-\n\nPoniewaz jestes nie wystarczajaco silny Twoja obrona zostaje zmniejszona. </string>
+\n\nPonieważ twoja siła jest niewystarczająca, twoja szybkość i zdolności obronne są obniżone. </string>
   <string name="Armor_Info3">
-\n\nPoniewaz ta zbroja jest nie odpowiednia dla Ciebie to zmniesza poziom Twojej umiejetnosci obrony.</string>
+\n\nPonieważ nie masz wystarczającej Siły, ta zbroja obniży twoją prędkość i zdolności obronne.</string>
   <string name="Armor_Info4">
-\n\nTypowol %1$s zapewnia absporbcje obrazen do %2$d punktow ataku %3$d i wymaga sporo sily.</string>
-  <string name="Armor_Info5">Prawdopodobnie ta zbroja jest zbyt ciezka dla Ciebie.</string>
-  <string name="Armor_Info6">Artefakt ktorego efekty  sa losowe. Uwazaj !</string>
+\n\nTypowa %1$s wchłania do %2$d punktów obrażeń i wymaga %3$d punktów siły.</string>
+  <string name="Armor_Info5">Prawdopodobnie ta zbroja jest za ciężka dla Ciebie.</string>
+  <string name="Armor_Info6">To zostało zaklęte.</string>
   <string name="Armor_Info7a">
-\n\nMasz na Sobie %1$s%2$s.</string>
-  <string name="Armor_Info7b">, i poniewaz jest to przeklete, a ty jestes bezsilny. To Natychmiast wyjeb to !</string>
+\n\nMasz na sobie %1$s%2$s.</string>
+  <string name="Armor_Info7b">, ponieważ to jest przeklęte, jesteś bezsilny by to zostawić.</string>
   <string name="Armor_Info8">
-\n\nMozesz czuc czarna magie, ktora zbliza sie do Ciebie %s.</string>
+\n\n%s emanuje mroczną magią.</string>
   <string name="Armor_Glyph">glif</string>
   <!--STRINGS OF ClassArmor CLASS-->
-  <string name="ClassArmor_Desc">To wszystko wyglada wspanialy!</string>
-  <string name="ClassArmor_LowHealt">Twoje punkty zycia sa niskie !</string>
-  <string name="ClassArmor_NotEquipped">Gdy bedziesz mial na sobie te szczegolna zbroje, to wykorzystasz swoja cala moc!</string>
+  <string name="ClassArmor_Desc">To wygląda wspaniale!</string>
+  <string name="ClassArmor_LowHealt">Twoje zdrowie jest zbyt niskie!</string>
+  <string name="ClassArmor_NotEquipped">Musisz mieć na sobie tę zbroję by użyć jej specjalnej mocy!</string>
   <!--STRINGS OF ClothArmor CLASS-->
-  <string name="ClothArmor_Name">Tkana Zbroja</string>
-  <string name="ClothArmor_Desc">Ta lekka zbroja oferuje bardzo dobra obrone.</string>
+  <string name="ClothArmor_Name">Wełniana Zbroja</string>
+  <string name="ClothArmor_Desc">Ta lekka zbroja zapewnia podstawową obronę.</string>
   <!--STRINGS OF ElfArmor CLASS-->
-  <string name="ElfArmor_Name">Plaszcz Elfa</string>
-  <string name="ElfArmor_Desc">Z pomocą tego płaszcza elf moze wezwac siłyj natury . Wysoka trawa bedzie rosla i rosla a w mgnieniu oka nawet przez lity kamien unieruchomi wszystkich wrogow w zasiegu wzroku .</string>
-  <string name="ElfArmor_ACSpecial">NATURE CALL</string>
-  <string name="ElfArmor_NotElf">Tylko dla Elfow</string>
+  <string name="ElfArmor_Name">Elficki Płaszcz</string>
+  <string name="ElfArmor_Desc">Za pomocą tego płaszcza, elf może wezwać siły natury we własnej osobie. Wysokie pnącza urosną w mgnieniu oka przez litą skałę, unieruchamiając wszystkich wrogów w zasięgu wzroku .</string>
+  <string name="ElfArmor_ACSpecial">ZEW NATURY</string>
+  <string name="ElfArmor_NotElf">Tylko elfy mogą korzystać z tej zbroi!</string>
   <!--STRINGS OF HuntressArmor CLASS-->
-  <string name="HuntressArmor_Name">plaszcz lowcy</string>
-  <string name="HuntressArmor_Desc">Lowca w takim plaszczu moze wyrzucic kilka ostrzy na raz ! Kazdy z Tych nozy jest skierowany we wroga w obrebie wzroku. Obrazenia zaleza od broni trzymanej w dloni.</string>
-  <string name="HuntressArmor_ACSpecial">DEMONICZNE OSTRZE</string>
-  <string name="HuntressArmor_NoEnemies">Brak wrogow w zasiegu wzroku, boja sie - to dobry znak.</string>
-  <string name="HuntressArmor_NotHuntress">Tylko lowca jest w stanie uzyc tej zbroji!</string>
+  <string name="HuntressArmor_Name">Peleryna Łowczyni</string>
+  <string name="HuntressArmor_Desc">Łowczyni używając tej peleryny może stworzyć salwę widmowych ostrzy. Każde z nich namierzy pojedynczych wrogów w zasięgu wzroku Łowczyni i zadadzą obrażenia zależne od jej używanej broni białej.</string>
+  <string name="HuntressArmor_ACSpecial">WIDMOWE OSTRZA</string>
+  <string name="HuntressArmor_NoEnemies">Brak wrogów w zasięgu wzroku.</string>
+  <string name="HuntressArmor_NotHuntress">Tylko Łowczynie mogą używać tej zbroi!</string>
   <!--STRINGS OF LeatherArmor CLASS-->
-  <string name="LeatherArmor_Name">Skorzana zbroja</string>
-  <string name="LeatherArmor_Desc">Zbroja stworzona ze skory potwora, nie jest zbyt lekka, ale stanowi dobra obrone.</string>
+  <string name="LeatherArmor_Name">Skórzana zbroja</string>
+  <string name="LeatherArmor_Desc">Zbroja zrobiona z wygarbowanej skóry potwora. Nie jest tak lekka jak wełniana zbroja, lecz zapewnia lepszą ochronę.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">Szata Maga</string>
-  <string name="MageArmor_Desc">Noszac te szate, Mag moze rzucic zalecie na wszystkich wrogow podpalajac ich, lecz przy tym sam nie moze sie ruszyc.</string>
-  <string name="MageArmor_ACSpecial">Stopiony Ziemia </string>
-  <string name="MageArmor_NotMage">Tylko Magowie moga zalozyc te zbroje!</string>
+  <string name="MageArmor_Desc">Nosząc tę cudowną szatę, mag może rzucić zaklęcie Spalonej Ziemi. Wszyscy wrogowie w zasięgu wzroku zostaną podpaleni i unieruchomieni w tym samym czasie!</string>
+  <string name="MageArmor_ACSpecial">Spalona Ziemia</string>
+  <string name="MageArmor_NotMage">Tylko magowie mogą używać tej zbroi!</string>
   <!--STRINGS OF MailArmor CLASS-->
-  <string name="MailArmor_Name">Luskana Zbroja</string>
-  <string name="MailArmor_Desc">Wzrok potworow powoduje ze ta zbroja jest Twarda ale elastyczna.</string>
+  <string name="MailArmor_Name">Kolczuga</string>
+  <string name="MailArmor_Desc">Połączone metalowe kółka stwarzają solidną, aczkolwiek wygodną ochronę.</string>
   <!--STRINGS OF PlateArmor CLASS-->
-  <string name="PlateArmor_Name">Platynowa Zbroja</string>
-  <string name="PlateArmor_Desc">Zbroja polaczona z garniturem wyszyta ze stali diabla, zapewnia prawidlowa obrone dla kazdego podroznika tego swiata. </string>
+  <string name="PlateArmor_Name">Zbroja Płytowa</string>
+  <string name="PlateArmor_Desc">Ogromne płytki metalu są złączone ze sobą w pancerz, który zapewnia niezrównaną ochronę każdemu poszukiwaczowi przygód, silnemu na tyle, by móc udźwignąć jej przytłaczającą wagę.</string>
   <!--STRINGS OF RogueArmor CLASS-->
-  <string name="RogueArmor_Name">Stroj Zabojcy</string>
-  <string name="RogueArmor_Desc">Noszenie tego stroju powoduje ze zabijca dostaje umiejetnosc \"dymna bomba\" (mimo ze nie posiada zadnych ladunkow wybuchowych); - oslepia wrogow !</string>
-  <string name="RogueArmor_ACSpecial">Bomba dymna</string>
-  <string name="RogueArmor_NotRogue">Tylko Zabojca moze uniesc ten armor!</string>
+  <string name="RogueArmor_Name">Strój Złodzieja</string>
+  <string name="RogueArmor_Desc">Kiedy Złodziej nosi ten ciemny strój, może przygotować specjalny ruch, zwany \"bombą dymną\" (żadne prawdziwe ładunki wybuchowe nie są używane), która oślepia wrogów, a Złodziej uskakuje w wybrane miejsce.</string>
+  <string name="RogueArmor_ACSpecial">BOMBA DYMNA</string>
+  <string name="RogueArmor_NotRogue">Tylko Złodzieje mogą nosić tę zbroję!</string>
   <string name="RogueArmor_Fov">Możesz przeskoczyć tylko w pustym miejscu aby w zasiegu wzroku.</string>
-  <string name="RogueArmor_Prompt">Wybiesz lokalizacje by skoczyc.</string>
+  <string name="RogueArmor_Prompt">Wybierz kierunek skoku</string>
   <!--STRINGS OF ScaleArmor CLASS-->
-  <string name="ScaleArmor_Name">Scalona Zbroja</string>
-  <string name="ScaleArmor_Desc">Material Scalany na te zboroje sa szyte na skorzanej kamizelce. Potrafia dobrze obronic.</string>
+  <string name="ScaleArmor_Name">Zbroja Łuskowa</string>
+  <string name="ScaleArmor_Desc">Połączone ze sobą metalowe łuski, przyszyte do skórzanej zbroi tworzą wygodną i zarazem dobrą ochronę.</string>
   <!--STRINGS OF WarriorArmor CLASS-->
-  <string name="WarriorArmor_Name">wojownicza, zbroja</string>
-  <string name="WarriorArmor_Desc">MImo ze zbroja wyglada ciezko, potrafi dobrze zaskoczyc... Skok w kierunku wroga potrafi ogluszyc i oslepic wrogow do-okola!</string>
-  <string name="WarriorArmor_ACSpecial">Heroiczny Leap</string>
-  <string name="WarriorArmor_NotWarrior">Tylko prawdziwy wojownik moze uniesc te zbroje!</string>
-  <string name="WarriorArmor_Prompt">wybierz kierunek skoku</string>
+  <string name="WarriorArmor_Name">Pancerz Wojowników</string>
+  <string name="WarriorArmor_Desc">Mimo iż ta zbroja wygląda na ciężką, pozwala Wojownikowi przygotować Heroiczny Skok w stronę wybranego miejsca, by uderzyć z impetem w ziemię, ogłuszając wszystkich pobliskich wrogów.</string>
+  <string name="WarriorArmor_ACSpecial">HEROICZNY SKOK</string>
+  <string name="WarriorArmor_NotWarrior">Tylko Wojownicy mogą użyć tej zbroi!</string>
+  <string name="WarriorArmor_Prompt">Wybierz kierunek skoku</string>
   <!--PACKAGE /armor/Gyphs-->
   <!--STRINGS OF Affection CLASS-->
-  <string name="Affection_Txt">%s effektu</string>
+  <string name="Affection_Txt">%s uroku</string>
   <!--STRINGS OF AntiEntropy CLASS-->
-  <string name="AntiEntropy_Txt">%s nie znane efekty</string>
+  <string name="AntiEntropy_Txt">%s chaotycznej magii</string>
   <!--STRINGS OF Bounce CLASS-->
-  <string name="Bounce_Txt">%s odbicie</string>
+  <string name="Bounce_Txt">%s odbicia</string>
   <!--STRINGS OF Displacement CLASS-->
-  <string name="Displacement_Txt">%s przemieszczenie</string>
+  <string name="Displacement_Txt">%s teleportacji</string>
   <!--STRINGS OF Entanglement CLASS-->
-  <string name="Entanglement_Txt">%s splatanie</string>
+  <string name="Entanglement_Txt">%s oplątania</string>
   <!--STRINGS OF Metabolism CLASS-->
-  <string name="Metabolism_Txt">%s metabolizm</string>
+  <string name="Metabolism_Txt">%s metabolizmu</string>
   <!--STRINGS OF Multiplicity CLASS-->
-  <string name="Multiplicity_Txt">%s klonowanie</string>
+  <string name="Multiplicity_Txt">%s duplikacji</string>
   <!--STRINGS OF Potential CLASS-->
-  <string name="Potential_Txt">%s zwiekszenie potecjalu</string>
+  <string name="Potential_Txt">%s porażenia</string>
   <!--STRINGS OF Stench CLASS-->
-  <string name="Stench_Txt">%s Sily</string>
+  <string name="Stench_Txt">%s smrodu</string>
   <!--STRINGS OF Viscosity CLASS-->
-  <string name="Viscosity_Txt">%s lepkosci</string>
-  <string name="Viscosity_Status">obnizowny %d</string>
+  <string name="Viscosity_Txt">%s cierpienia</string>
+  <string name="Viscosity_Status">rozłożone %d</string>
   <!--STRINGS OF DeferedDamage CLASS-->
-  <string name="DeferedDamage_Defered_Txt">Zmnieszenie Ataku (%d)</string>
-  <string name="DeferedDamage_Killed_Txt">%s zajebali Cie</string>
+  <string name="DeferedDamage_Defered_Txt">Rozłożone obrażenia (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s zabił cię...</string>
 </resources>

@@ -2,30 +2,30 @@
 <resources>
   <!--PACKAGE pixeldungeon/plants-->
   <!--STRINGS OF Plant CLASS-->
-  <string name="Plant_ACPlant">Roslina</string>
-  <string name="Plant_Info">Rzuc nasieniem w jakies miejsce, by wyrosla roslina %1$s.\n\n%2$s</string>
-  <string name="Plant_Seed">nasiona %s</string>
+  <string name="Plant_ACPlant">ZASADŹ</string>
+  <string name="Plant_Info">Rzuć nasieniem w miejsce, gdzie chcesz żeby wyrosła roślina: %1$s.\n\n%2$s</string>
+  <string name="Plant_Seed">nasiono %s</string>
   <!--STRINGS OF Dreamweed CLASS-->
-  <string name="Dreamweed_Name">Senne Drzewo</string>
-  <string name="Dreamweed_Desc">Po dotknieciu Sennego Drzewa ulotni sie gaz...</string>
+  <string name="Dreamweed_Name">Senne Ziele</string>
+  <string name="Dreamweed_Desc">Dotknięcie Sennego Ziela wyzwala migoczącą chmurę gazu, który ma właściwości narkotyzujące. Senne Ziele jest wykorzystywane jako środek nasenny lub narkotyk.</string>
   <!--STRINGS OF Earthroot CLASS-->
-  <string name="Earthroot_Name">Korzen</string>
-  <string name="Earthroot_Desc">Gdy istota dotknie Korzenia, to jego pancerz zostaje naturalnie wzmocniony po przez sile natury.</string>
-  <string name="Earthroot_Buff">Zbroja z Herballu</string>
+  <string name="Earthroot_Name">Ziemiokorzeń</string>
+  <string name="Earthroot_Desc">Kiedy istota dotknie Ziemiokorzenia, oplata ją grubymi korzeniami, tworząc coś na kształt naturalnego pancerza wokół niej.</string>
+  <string name="Earthroot_Buff">Zbroja Natury</string>
   <!--STRINGS OF Fadeleaf CLASS-->
-  <string name="Fadeleaf_Name">Nie znane... ale moze byc CIekawe</string>
-  <string name="Fadeleaf_Desc">Dotknięcie Fadeleaf przeniesie każdą istotę na losowym miejscu na obecnym poziomie.</string>
+  <string name="Fadeleaf_Name">Znikoliść</string>
+  <string name="Fadeleaf_Desc">Sok ze Znikoliścia jest wykorzystywany przy tworzeniu teleportów, ponieważ powoduje on przemieszczenie w losowe miejsce. Oczywiście portale wykorzystują specjalnie przygotowany sok ze Znikoliścia, mogąc ukierunkować trasę teleportacji, lecz dzikie odmiany są niestabilne.</string>
   <!--STRINGS OF Firebloom CLASS-->
-  <string name="Firebloom_Name">plonaca roslina</string>
-  <string name="Firebloom_Desc">Jezeli ktos dotknie rosliny wyhodowanej w ogni piekielnym, stanie w plomieniu!</string>
+  <string name="Firebloom_Name">Ogniokwiat</string>
+  <string name="Firebloom_Desc">Kiedy coś dotknie Ogniokwiatu, natychmiast staje w płomieniach.</string>
   <!--STRINGS OF Icecap CLASS-->
-  <string name="Icecap_Name">Lodowate... cos.</string>
-  <string name="Icecap_Desc">Po dotyknieciiu ICECAP wydala się pyłek , który zamraża wszystko, co jest w obrebie lochu.</string>
+  <string name="Icecap_Name">Lodokrzew</string>
+  <string name="Icecap_Desc">Dotknięty Lodokrzew wypuszcza magiczny pyłek, który zamraża wszystko czego się dotknie. Specjalnie przygotowane nasiona Lodokrzewu są często wykorzystywane przy produkcji napojów wyskokowych, ze względu na swe chłodzące właściwości.</string>
   <!--STRINGS OF Sorrowmoss CLASS-->
-  <string name="Sorrowmoss_Name">Nieznana Roslina</string>
-  <string name="Sorrowmoss_Desc">(Nieznana Roslina) - po jej dotknieciu wydziela sie smierteln jad..</string>
+  <string name="Sorrowmoss_Name">Jadomech</string>
+  <string name="Sorrowmoss_Desc">Jadomech to kwiat (a nie mech), który posiada ostre jak brzytwa płatki, pokryte śmiertelnym jadem.</string>
   <!--STRINGS OF Sungrass CLASS-->
-  <string name="Sungrass_Name">Rumianek</string>
-  <string name="Sungrass_Desc">Rumianek, znany z wlasciwosci leczniczych</string>
-  <string name="Sungrass_Buff">Ziolo Ktore Wyleczy Twoje rany</string>
+  <string name="Sungrass_Name">Herba Solis</string>
+  <string name="Sungrass_Desc">Herba Solis (dosł. Trawa Słońca) jest znana ze swych właściwości leczniczych, co czyni ją podstawowym składnikiem mikstur leczniczych.</string>
+  <string name="Sungrass_Buff">Błogosławieństwo Natury</string>
 </resources>
