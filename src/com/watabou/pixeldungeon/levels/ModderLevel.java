@@ -9,12 +9,24 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.DewVial;
+import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.ScaleArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
+import com.watabou.pixeldungeon.items.weapon.melee.CompoundBow;
+import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
+import com.watabou.pixeldungeon.items.weapon.melee.RubyBow;
+import com.watabou.pixeldungeon.items.weapon.melee.Spear;
+import com.watabou.pixeldungeon.items.weapon.melee.Sword;
+import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
+import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
@@ -106,6 +118,19 @@ public class ModderLevel extends RegularLevel {
 		addItemToSpawn(new MailArmor());
 		addItemToSpawn(new LeatherArmor());
 		addItemToSpawn(new ClothArmor());
+		
+		addItemToSpawn(new TomeOfMastery());
+		addItemToSpawn(new WoodenBow());
+		addItemToSpawn(new CompoundBow());
+		addItemToSpawn(new RubyBow());
+		addItemToSpawn(new ScrollOfWeaponUpgrade());
+		addItemToSpawn(new ScrollOfUpgrade());
+		addItemToSpawn(new CommonArrow(50));
+		
+		addItemToSpawn(new Sword());
+		addItemToSpawn(new WarHammer());
+		addItemToSpawn(new Spear());
+		
 		
 		super.createItems();
 	}

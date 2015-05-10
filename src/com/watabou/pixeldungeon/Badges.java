@@ -210,7 +210,9 @@ public class Badges {
 	}
 	
 	public static void saveLocal( Bundle bundle ) {
-		store( bundle, local );
+		if (PixelDungeon.moddingMode()) {
+			store( bundle, local );
+		}
 	}
 	
 	public static void loadGlobal() {
@@ -229,6 +231,9 @@ public class Badges {
 	}
 	
 	public static void saveGlobal() {
+		if (PixelDungeon.moddingMode()) {
+			return;
+		}
 		if (saveNeeded) {
 			
 			Bundle bundle = new Bundle();

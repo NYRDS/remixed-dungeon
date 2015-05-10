@@ -29,8 +29,9 @@ public class CellEmitter {
 		PointF p = DungeonTilemap.tileToWorld( cell );
 		
 		Emitter emitter = GameScene.emitter();
-		emitter.pos( p.x, p.y, DungeonTilemap.SIZE, DungeonTilemap.SIZE );
-		
+		if(emitter != null) {
+			emitter.pos( p.x, p.y, DungeonTilemap.SIZE, DungeonTilemap.SIZE );
+		}
 		return emitter;
 	}
 	

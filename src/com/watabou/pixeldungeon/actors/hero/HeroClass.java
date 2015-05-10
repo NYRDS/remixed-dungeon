@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
@@ -119,8 +120,6 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		hero.collect(new TomeOfMastery());
 
-		Badges.validateMastery();
-		
 		Item gl = new Glaive().upgrade(8);
 		gl.cursed = true;
 		
@@ -131,8 +130,11 @@ public enum HeroClass {
 		
 		hero.collect(gl);
 		
-		hero.hp(hero.ht(10));
+		hero.hp(hero.ht(1000));
+		hero.STR = 18;
 		
+		hero.attackSkill += 10;
+		hero.defenseSkill += 10;
 		
 		hero.collect(new PotionOfStrength());
 		hero.collect(new PotionOfFrost());
@@ -141,19 +143,21 @@ public enum HeroClass {
 		hero.collect(new PotionOfLevitation());
 		hero.collect(new WandOfTelekinesis());
 
-		for(int i = 0;i<10;i++)
 		hero.collect(new ScrollOfMagicMapping());
 		
-		hero.collect(new WandOfTeleportation().upgrade(10));
+		hero.collect(new WandOfTeleportation());
 		hero.collect(new Ankh());
-
+		
+		hero.collect(new RingOfStoneWalking());
 	}
 	
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		//initDebug(hero);
+		if(PixelDungeon.moddingMode()) {
+			initDebug(hero);
+		}
 		
 		QuickSlot.cleanStorage();
 	}
