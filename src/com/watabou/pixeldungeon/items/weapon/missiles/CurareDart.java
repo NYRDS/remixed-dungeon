@@ -44,7 +44,7 @@ public class CurareDart extends MissileWeapon {
 		MIN = 1;
 		MAX = 3;
 		
-		quantity = number;
+		quantity(number);
 	}
 	
 	@Override
@@ -60,12 +60,12 @@ public class CurareDart extends MissileWeapon {
 	
 	@Override
 	public Item random() {
-		quantity = Random.Int( 2, 5 );
+		quantity(Random.Int( 2, 5 ));
 		return this;
 	}
 	
 	@Override
 	public int price() {
-		return 12 * quantity;
+		return 12 * quantity();
 	}
 }

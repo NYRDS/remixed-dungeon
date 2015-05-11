@@ -55,9 +55,9 @@ public class WndInfoItem extends Window {
 			Item item = heap.peek();
 			
 			int color = TITLE_COLOR;
-			if (item.levelKnown && item.level > 0) {
+			if (item.levelKnown && item.level() > 0) {
 				color = ItemSlot.UPGRADED;				
-			} else if (item.levelKnown && item.level < 0) {
+			} else if (item.levelKnown && item.level() < 0) {
 				color = ItemSlot.DEGRADED;				
 			}
 			fillFields( item.image(), item.glowing(), color, item.toString(), item.info() );
@@ -94,9 +94,9 @@ public class WndInfoItem extends Window {
 		super();
 		
 		int color = TITLE_COLOR;
-		if (item.levelKnown && item.level > 0) {
+		if (item.levelKnown && item.level() > 0) {
 			color = ItemSlot.UPGRADED;				
-		} else if (item.levelKnown && item.level < 0) {
+		} else if (item.levelKnown && item.level() < 0) {
 			color = ItemSlot.DEGRADED;				
 		}
 		

@@ -17,12 +17,12 @@ public class CompoundBow extends Bow {
 	
 	@Override
 	public double acuFactor() {
-		return 1 + level * 0.2;
+		return 1 + level() * 0.2;
 	}
 	
 	@Override
 	public double dmgFactor() {
-		return 1 + level * 0.5;
+		return 1 + level() * 0.5;
 	}
 	
 	public double dlyFactor() {

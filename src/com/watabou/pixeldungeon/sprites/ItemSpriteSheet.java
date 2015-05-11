@@ -208,6 +208,7 @@ public class ItemSpriteSheet {
 		case ARROW_FIRE:
 		case ARROW_POISON:
 		case ARROW_PARALYSIS:
+		case ARROW_FROST:
 		case SPEAR:
 			return true;
 		}

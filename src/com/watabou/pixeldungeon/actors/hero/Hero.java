@@ -107,6 +107,7 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class Hero extends Char {
@@ -152,7 +153,7 @@ public class Hero extends Char {
 	public MissileWeapon rangedWeapon = null;
 	public Belongings belongings;
 	
-	public int STR;
+	private int STR;
 	public boolean weakened = false;
 	
 	public float awareness;
@@ -169,7 +170,7 @@ public class Hero extends Char {
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 		
 		hp(ht(20));
-		STR = STARTING_STR;
+		STR(STARTING_STR);
 		awareness = 0.1f;
 		
 		belongings = new Belongings( this );
@@ -182,7 +183,12 @@ public class Hero extends Char {
 	}
 	
 	public int STR() {
-		return weakened ? STR - 2 : STR;
+		int str = Scrambler.descramble(STR);
+		return weakened ? str - 2 : str;
+	}
+	
+	public void STR(int sTR) {
+		STR = Scrambler.scramble(sTR);
 	}
 
 	private static final String ATTACK		= "attackSkill";
@@ -201,7 +207,7 @@ public class Hero extends Char {
 		bundle.put( ATTACK, attackSkill );
 		bundle.put( DEFENSE, defenseSkill );
 		
-		bundle.put( STRENGTH, STR );
+		bundle.put( STRENGTH, STR() );
 		
 		bundle.put( LEVEL, lvl );
 		bundle.put( EXPERIENCE, exp );
@@ -219,7 +225,7 @@ public class Hero extends Char {
 		attackSkill = bundle.getInt( ATTACK );
 		defenseSkill = bundle.getInt( DEFENSE );
 		
-		STR = bundle.getInt( STRENGTH );
+		STR(bundle.getInt( STRENGTH ));
 		updateAwareness();
 		
 		lvl = bundle.getInt( LEVEL );

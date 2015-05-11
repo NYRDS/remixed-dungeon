@@ -42,7 +42,7 @@ public class PotionOfLevitation extends Potion {
 	
 	@Override
 	public int price() {
-		return isKnown() ? 35 * quantity : super.price();
+		return isKnown() ? 35 * quantity() : super.price();
 	}
 	
 	@Override

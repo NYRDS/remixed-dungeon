@@ -11,7 +11,7 @@ public class CommonArrow extends Arrow {
 	
 	public CommonArrow( int number ) {
 		super();
-		quantity = number;
+		quantity(number);
 		
 		baseMin = 2;
 		baseMax = 5;
@@ -24,6 +24,6 @@ public class CommonArrow extends Arrow {
 	
 	@Override
 	public int price() {
-		return quantity * 3;
+		return quantity() * 3;
 	}
 }

@@ -16,10 +16,10 @@ public class RubyBow extends Bow {
 	
 	@Override
 	public double dmgFactor() {
-		return 1 + level;
+		return 1 + level();
 	}
 	
 	public double dlyFactor() {
-		return 1 + level * 0.2;
+		return 1 + level() * 0.2;
 	}
 }

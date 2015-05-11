@@ -14,7 +14,7 @@ public class FireArrow extends Arrow {
 	
 	public FireArrow( int number ) {
 		super();
-		quantity = number;
+		quantity(number);
 		
 		baseMin = 1;
 		baseMax = 6;
@@ -27,7 +27,7 @@ public class FireArrow extends Arrow {
 	
 	@Override
 	public int price() {
-		return quantity * 5;
+		return quantity() * 5;
 	}
 
 	@Override

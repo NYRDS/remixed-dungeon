@@ -36,6 +36,6 @@ public class PotionOfExperience extends Potion {
 	
 	@Override
 	public int price() {
-		return isKnown() ? 80 * quantity : super.price();
+		return isKnown() ? 80 * quantity() : super.price();
 	}
 }

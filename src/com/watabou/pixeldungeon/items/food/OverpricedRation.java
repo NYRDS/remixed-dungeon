@@ -33,7 +33,7 @@ public class OverpricedRation extends Food {
 	
 	@Override
 	public int price() {
-		return 20 * quantity;
+		return 20 * quantity();
 	}
 	
 	@Override

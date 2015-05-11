@@ -42,7 +42,7 @@ public class Javelin extends MissileWeapon {
 		MIN = 2;
 		MAX = 15;
 		
-		quantity = number;
+		quantity(number);
 	}
 	
 	@Override
@@ -58,12 +58,12 @@ public class Javelin extends MissileWeapon {
 	
 	@Override
 	public Item random() {
-		quantity = Random.Int( 5, 15 );
+		quantity(Random.Int( 5, 15 ));
 		return this;
 	}
 	
 	@Override
 	public int price() {
-		return 15 * quantity;
+		return 15 * quantity();
 	}
 }

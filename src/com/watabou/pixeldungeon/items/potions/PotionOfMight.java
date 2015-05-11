@@ -29,7 +29,7 @@ public class PotionOfMight extends PotionOfStrength {
 	protected void apply( Hero hero ) {
 		setKnown();
 		
-		hero.STR++;
+		hero.STR(hero.STR() + 1);
 		hero.ht(hero.ht() + 5);
 		hero.hp(hero.hp() + 5);
 		hero.getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.PotionOfMight_StaApply));
@@ -43,6 +43,6 @@ public class PotionOfMight extends PotionOfStrength {
 	
 	@Override
 	public int price() {
-		return isKnown() ? 200 * quantity : super.price();
+		return isKnown() ? 200 * quantity() : super.price();
 	}
 }

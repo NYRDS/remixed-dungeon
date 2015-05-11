@@ -15,7 +15,7 @@ public class PoisonArrow extends Arrow {
 	
 	public PoisonArrow( int number ) {
 		super();
-		quantity = number;
+		quantity(number);
 		
 		baseMin = 3;
 		baseMax = 4;
@@ -28,7 +28,7 @@ public class PoisonArrow extends Arrow {
 	
 	@Override
 	public int price() {
-		return quantity * 5;
+		return quantity() * 5;
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class PoisonArrow extends Arrow {
 		int poisonFactor = 1;
 		
 		if(firedFrom != null) {
-			poisonFactor += firedFrom.level;
+			poisonFactor += firedFrom.level();
 		}
 		
 		Buff.affect( defender, com.watabou.pixeldungeon.actors.buffs.Poison.class ).

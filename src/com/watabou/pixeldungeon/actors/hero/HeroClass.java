@@ -136,7 +136,7 @@ public enum HeroClass {
 		hero.collect(gl);
 		
 		hero.hp(hero.ht(1000));
-		hero.STR = 18;
+		hero.STR(18);
 		
 		hero.attackSkill += 10;
 		hero.defenseSkill += 10;
@@ -191,7 +191,7 @@ public enum HeroClass {
 	}
 	
 	private static void initWarrior( Hero hero ) {
-		hero.STR = hero.STR + 1;
+		hero.STR(hero.STR() + 1);
 		
 		(hero.belongings.weapon = new ShortSword()).identify();
 		hero.collect(new Dart( 8 ).identify());
@@ -237,7 +237,7 @@ public enum HeroClass {
 	}
 
 	private void initElf(Hero hero) {
-		hero.STR--;
+		hero.STR(hero.STR() - 1);
 		
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());

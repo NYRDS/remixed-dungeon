@@ -44,6 +44,6 @@ public class DarkGold extends Item {
 	
 	@Override
 	public int price() {
-		return quantity;
+		return quantity();
 	}
 }

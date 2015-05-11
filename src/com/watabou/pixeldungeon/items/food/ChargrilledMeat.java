@@ -30,7 +30,7 @@ public class ChargrilledMeat extends Food {
 	
 	@Override
 	public int price() {
-		return 5 * quantity;
+		return 5 * quantity();
 	}
 	
 	@Override

@@ -57,7 +57,7 @@ public class WandOfMagicMissile extends Wand {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if (level > 0) {
+		if (level() > 0) {
 			actions.add( AC_DISENCHANT );
 		}
 		return actions;

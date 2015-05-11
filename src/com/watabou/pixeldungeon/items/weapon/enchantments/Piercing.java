@@ -29,7 +29,7 @@ public class Piercing extends Enchantment {
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
 		
-		int level = Math.max( 0, weapon.level );
+		int level = Math.max( 0, weapon.level() );
 		
 		int maxDamage = (int)(damage * Math.pow( 2, -1d / (level + 1) ));
 		if (maxDamage >= 1) {

@@ -32,7 +32,7 @@ public class Leech extends Weapon.Enchantment {
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
 		
-		int level = Math.max( 0, weapon.level );
+		int level = Math.max( 0, weapon.level() );
 		
 		// lvl 0 - 33%
 		// lvl 1 - 43%

@@ -17,7 +17,7 @@ public class FrostArrow extends Arrow {
 	
 	public FrostArrow( int number ) {
 		super();
-		quantity = number;
+		quantity(number);
 		
 		baseMin = 0;
 		baseMax = 6;
@@ -30,7 +30,7 @@ public class FrostArrow extends Arrow {
 	
 	@Override
 	public int price() {
-		return quantity * 5;
+		return quantity() * 5;
 	}
 
 	@Override

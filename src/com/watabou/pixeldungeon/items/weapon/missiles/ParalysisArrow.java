@@ -16,7 +16,7 @@ public class ParalysisArrow extends Arrow {
 	
 	public ParalysisArrow( int number ) {
 		super();
-		quantity = number;
+		quantity(number);
 		
 		baseMin = 0;
 		baseMax = 4;
@@ -29,7 +29,7 @@ public class ParalysisArrow extends Arrow {
 	
 	@Override
 	public int price() {
-		return quantity * 5;
+		return quantity() * 5;
 	}
 
 	@Override

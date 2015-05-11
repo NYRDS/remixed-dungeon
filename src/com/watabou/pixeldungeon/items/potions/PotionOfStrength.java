@@ -30,7 +30,7 @@ public class PotionOfStrength extends Potion {
 	protected void apply( Hero hero ) {
 		setKnown();
 		
-		hero.STR++;
+		hero.STR(hero.STR() + 1);
 		hero.getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.PotionOfStrength_StaApply));
 		GLog.p(Game.getVar(R.string.PotionOfStrength_Apply));
 		
@@ -44,6 +44,6 @@ public class PotionOfStrength extends Potion {
 	
 	@Override
 	public int price() {
-		return isKnown() ? 100 * quantity : super.price();
+		return isKnown() ? 100 * quantity() : super.price();
 	}
 }
