@@ -212,7 +212,7 @@ public class Badges {
 	}
 	
 	public static void saveLocal( Bundle bundle ) {
-		if (PixelDungeon.moddingMode()) {
+		if (!PixelDungeon.moddingMode()) {
 			store( bundle, local );
 		}
 	}
