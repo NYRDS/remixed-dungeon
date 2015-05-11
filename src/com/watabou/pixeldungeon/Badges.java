@@ -185,13 +185,15 @@ public class Badges {
 		HashSet<Badge> badges = new HashSet<Badge>();
 		
 		String[] names = bundle.getStringArray( BADGES );
-		for (int i=0; i < names.length; i++) {
-			try {
-				badges.add( Badge.valueOf( names[i] ) );
-			} catch (Exception e) {
+		
+		if(names != null) {
+			for (int i=0; i < names.length; i++) {
+				try {
+					badges.add( Badge.valueOf( names[i] ) );
+				} catch (Exception e) {
+				}
 			}
 		}
-	
 		return badges;
 	}
 	

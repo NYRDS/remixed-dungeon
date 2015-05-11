@@ -34,7 +34,6 @@ public class ModdingButton extends Button {
 			text.visible = false;
 			ModdingMode.mode(false);
 		}
-
 	}
 	
 	@Override
@@ -77,5 +76,7 @@ public class ModdingButton extends Button {
 		PixelDungeon.moddingMode(!PixelDungeon.moddingMode());
 		GamesInProgress.removeAll();
 		updateLook();
+		
+		PixelDungeon.instance().doRestart();
 	}
 }

@@ -30,6 +30,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
@@ -60,11 +61,13 @@ public class PixelDungeon extends Game {
 		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
 			try {
 				FileSystem.getExternalStorageFile(placeModFilesHere).createNewFile();
+				ModdingMode.mode(PixelDungeon.moddingMode());
 			} catch (IOException e) {
 				GLog.i(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		
 		
 		PixelDungeon.instance().initIap();
 		
