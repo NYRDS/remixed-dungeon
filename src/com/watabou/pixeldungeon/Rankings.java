@@ -50,6 +50,10 @@ public enum Rankings {
 	
 	public void submit( gameOver winLevel ) {
 		
+		if(PixelDungeon.moddingMode()) {
+			return;
+		}
+		
 		load();
 		
 		Record rec = new Record();

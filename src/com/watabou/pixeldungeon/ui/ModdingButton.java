@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -26,9 +27,11 @@ public class ModdingButton extends Button {
 		if(PixelDungeon.moddingMode()) {
 			image.brightness(1.5f);
 			text.visible = true;
+			TextureCache.useExternalStorage = true;
 		} else {
 			image.brightness(0.1f);
 			text.visible = false;
+			TextureCache.useExternalStorage = false;
 		}
 
 	}

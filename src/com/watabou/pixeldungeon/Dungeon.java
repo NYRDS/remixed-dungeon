@@ -258,6 +258,10 @@ public class Dungeon {
 			String[] tips = Game.getVars(R.array.Dungeon_Tips);
 			int index = depth - 1;
 			
+			if( index == -1) {
+				return "Welcome to test level";
+			}
+			
 			if (index < tips.length) {
 				return tips[index];
 			} else {

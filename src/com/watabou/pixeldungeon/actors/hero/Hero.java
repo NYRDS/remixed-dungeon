@@ -134,8 +134,8 @@ public class Hero extends Char {
 	public HeroClass   heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass = HeroSubClass.NONE;
 	
-	private int attackSkill = 10;
-	private int defenseSkill = 5;
+	int attackSkill = 10;
+	int defenseSkill = 5;
 	
 	public boolean ready = false;
 	public HeroAction curAction = null;
