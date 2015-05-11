@@ -191,10 +191,8 @@ public class ItemSpriteSheet {
 	public static final int BOW_RUBY        = 136;
 
 	public static final int QUIVER_COMMON     = 137;
-	public static final int QUIVER_FIRE       = 138;
-	public static final int QUIVER_POISON     = 139;
-	public static final int QUIVER_PARALYSIS  = 140;
 
+	public static final int ARROW_FROST      = 140;
 	public static final int ARROW_COMMON     = 141;
 	public static final int ARROW_FIRE       = 142;
 	public static final int ARROW_POISON     = 143;

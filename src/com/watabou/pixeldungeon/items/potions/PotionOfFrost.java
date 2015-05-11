@@ -24,6 +24,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.FrostArrow;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
@@ -59,5 +61,13 @@ public class PotionOfFrost extends Potion {
 	@Override
 	public int price() {
 		return isKnown() ? 50 * quantity : super.price();
+	}
+	
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		int quantity = reallyMoistArrows(arrow);
+		
+		FrostArrow moistenArrows = new FrostArrow(quantity);
+		curUser.collect(moistenArrows);
 	}
 }

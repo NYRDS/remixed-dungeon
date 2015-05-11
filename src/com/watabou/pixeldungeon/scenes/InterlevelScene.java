@@ -32,51 +32,61 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndStory;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class InterlevelScene extends PixelScene {
 
 	private static final float TIME_TO_FADE = 0.3f;
-	
-	private static final String TXT_DESCENDING     = Game.getVar(R.string.InterLevelScene_Descending);
-	private static final String TXT_ASCENDING      = Game.getVar(R.string.InterLevelScene_Ascending);
-	private static final String TXT_LOADING        = Game.getVar(R.string.InterLevelScene_Loading);
-	private static final String TXT_RESURRECTING   = Game.getVar(R.string.InterLevelScene_Resurrecting);
-	private static final String TXT_RETURNING      = Game.getVar(R.string.InterLevelScene_Returning);
-	private static final String TXT_FALLING        = Game.getVar(R.string.InterLevelScene_Falling);
-	
-	private static final String ERR_FILE_NOT_FOUND = Game.getVar(R.string.InterLevelScene_FileNotFound);
-	private static final String ERR_GENERIC        = Game.getVar(R.string.InterLevelScene_ErrorGeneric);	
-	
+
+	private static final String TXT_DESCENDING = Game
+			.getVar(R.string.InterLevelScene_Descending);
+	private static final String TXT_ASCENDING = Game
+			.getVar(R.string.InterLevelScene_Ascending);
+	private static final String TXT_LOADING = Game
+			.getVar(R.string.InterLevelScene_Loading);
+	private static final String TXT_RESURRECTING = Game
+			.getVar(R.string.InterLevelScene_Resurrecting);
+	private static final String TXT_RETURNING = Game
+			.getVar(R.string.InterLevelScene_Returning);
+	private static final String TXT_FALLING = Game
+			.getVar(R.string.InterLevelScene_Falling);
+
+	private static final String ERR_FILE_NOT_FOUND = Game
+			.getVar(R.string.InterLevelScene_FileNotFound);
+	private static final String ERR_GENERIC = Game
+			.getVar(R.string.InterLevelScene_ErrorGeneric);
+
 	public static enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, MODDING
 	};
+
 	public static Mode mode;
-	
+
 	public static int returnDepth;
 	public static int returnPos;
-	
+
 	public static boolean noStory = false;
-	
+
 	public static boolean fallIntoPit;
-	
+
 	private enum Phase {
 		FADE_IN, STATIC, FADE_OUT
 	}
-	
+
 	volatile private Phase phase;
 	volatile private float timeLeft;
-	
+
 	private BitmapText message;
-	
+
 	private Thread thread;
-	
+
 	volatile private String error = null;
-	
+
 	@Override
 	public void create() {
 		super.create();
-		
+
 		String text = "";
 		switch (mode) {
 		case DESCEND:
@@ -101,108 +111,88 @@ public class InterlevelScene extends PixelScene {
 			text = "modding test mode";
 			break;
 		}
-		
-		message = PixelScene.createText( text, 9 );
+
+		message = PixelScene.createText(text, 9);
 		message.measure();
-		message.x = (Camera.main.width - message.width()) / 2; 
+		message.x = (Camera.main.width - message.width()) / 2;
 		message.y = (Camera.main.height - message.height()) / 2;
-		add( message );
-		
+		add(message);
+
 		phase = Phase.FADE_IN;
 		timeLeft = TIME_TO_FADE;
-		
+
 		thread = new Thread() {
 			@Override
 			public void run() {
-				
+
 				try {
-					
+
 					Generator.reset();
-					
-					Sample.INSTANCE.load( 
-						Assets.SND_OPEN,
-						Assets.SND_UNLOCK,
-						Assets.SND_ITEM,
-						Assets.SND_DEWDROP, 
-						Assets.SND_HIT, 
-						Assets.SND_MISS,
-						Assets.SND_STEP,
-						Assets.SND_WATER,
-						Assets.SND_DESCEND,
-						Assets.SND_EAT,
-						Assets.SND_READ,
-						Assets.SND_LULLABY,
-						Assets.SND_DRINK,
-						Assets.SND_SHATTER,
-						Assets.SND_ZAP,
-						Assets.SND_LIGHTNING,
-						Assets.SND_LEVELUP,
-						Assets.SND_DEATH,
-						Assets.SND_CHALLENGE,
-						Assets.SND_CURSED,
-						Assets.SND_EVOKE,
-						Assets.SND_TRAP,
-						Assets.SND_TOMB,
-						Assets.SND_ALERT,
-						Assets.SND_MELD,
-						Assets.SND_BOSS,
-						Assets.SND_BLAST,
-						Assets.SND_PLANT,
-						Assets.SND_RAY,
-						Assets.SND_BEACON,
-						Assets.SND_TELEPORT,
-						Assets.SND_CHARMS,
-						Assets.SND_MASTERY,
-						Assets.SND_PUFF,
-						Assets.SND_ROCKS,
-						Assets.SND_BURNING,
-						Assets.SND_FALLING,
-						Assets.SND_GHOST,
-						Assets.SND_SECRET,
-						Assets.SND_BONES,
-						Assets.SND_MIMIC,
-						Assets.SND_ROTTEN_DROP,
-						Assets.SND_GOLD);
-					
-					switch (mode) {
-					case DESCEND:
-						descend();
-						break;
-					case ASCEND:
-						ascend();
-						break;
-					case CONTINUE:
-						restore();
-						break;
-					case RESURRECT:
-						resurrect();
-						break;
-					case RETURN:
-						returnTo();
-						break;
-					case FALL:
-						fall();
-						break;
-					case MODDING:
+
+					Sample.INSTANCE.load(Assets.SND_OPEN, Assets.SND_UNLOCK,
+							Assets.SND_ITEM, Assets.SND_DEWDROP,
+							Assets.SND_HIT, Assets.SND_MISS, Assets.SND_STEP,
+							Assets.SND_WATER, Assets.SND_DESCEND,
+							Assets.SND_EAT, Assets.SND_READ,
+							Assets.SND_LULLABY, Assets.SND_DRINK,
+							Assets.SND_SHATTER, Assets.SND_ZAP,
+							Assets.SND_LIGHTNING, Assets.SND_LEVELUP,
+							Assets.SND_DEATH, Assets.SND_CHALLENGE,
+							Assets.SND_CURSED, Assets.SND_EVOKE,
+							Assets.SND_TRAP, Assets.SND_TOMB, Assets.SND_ALERT,
+							Assets.SND_MELD, Assets.SND_BOSS, Assets.SND_BLAST,
+							Assets.SND_PLANT, Assets.SND_RAY,
+							Assets.SND_BEACON, Assets.SND_TELEPORT,
+							Assets.SND_CHARMS, Assets.SND_MASTERY,
+							Assets.SND_PUFF, Assets.SND_ROCKS,
+							Assets.SND_BURNING, Assets.SND_FALLING,
+							Assets.SND_GHOST, Assets.SND_SECRET,
+							Assets.SND_BONES, Assets.SND_MIMIC,
+							Assets.SND_ROTTEN_DROP, Assets.SND_GOLD);
+
+					if (ModdingMode.mode()) {
 						testMode();
-						break;
+					} else {
+
+						switch (mode) {
+						case DESCEND:
+							descend();
+							break;
+						case ASCEND:
+							ascend();
+							break;
+						case CONTINUE:
+							restore();
+							break;
+						case RESURRECT:
+							resurrect();
+							break;
+						case RETURN:
+							returnTo();
+							break;
+						case FALL:
+							fall();
+							break;
+						case MODDING:
+							testMode();
+							break;
+						}
 					}
-					
 					if ((Dungeon.depth % 5) == 0) {
-						Sample.INSTANCE.load( Assets.SND_BOSS );
+						Sample.INSTANCE.load(Assets.SND_BOSS);
 					}
-					
+
 				} catch (FileNotFoundException e) {
-					
+
 					error = ERR_FILE_NOT_FOUND;
-					
-				} catch (Exception e ) {
-					
+
+				} catch (Exception e) {
+
 					e.printStackTrace();
 					error = ERR_GENERIC + "\n" + e.getMessage();
-					
+
 				}
-				
+
 				if (phase == Phase.STATIC && error == null) {
 					phase = Phase.FADE_OUT;
 					timeLeft = TIME_TO_FADE;
@@ -211,17 +201,17 @@ public class InterlevelScene extends PixelScene {
 		};
 		thread.start();
 	}
-	
+
 	@Override
 	public void update() {
 		super.update();
-		
+
 		float p = timeLeft / TIME_TO_FADE;
-		
+
 		switch (phase) {
-		
+
 		case FADE_IN:
-			message.alpha( 1 - p );
+			message.alpha(1 - p);
 			if ((timeLeft -= Game.elapsed) <= 0) {
 				if (!thread.isAlive() && error == null) {
 					phase = Phase.FADE_OUT;
@@ -231,145 +221,149 @@ public class InterlevelScene extends PixelScene {
 				}
 			}
 			break;
-			
+
 		case FADE_OUT:
-			message.alpha( p );
-			
-			if (mode == Mode.CONTINUE || (mode == Mode.DESCEND && Dungeon.depth == 1)) {
-				Music.INSTANCE.volume( p );
+			message.alpha(p);
+
+			if (mode == Mode.CONTINUE
+					|| (mode == Mode.DESCEND && Dungeon.depth == 1)) {
+				Music.INSTANCE.volume(p);
 			}
 			if ((timeLeft -= Game.elapsed) <= 0) {
-				Game.switchScene( GameScene.class );
+				Game.switchScene(GameScene.class);
 			}
 			break;
-			
+
 		case STATIC:
 			if (error != null) {
-				add( new WndError( error ) {
+				add(new WndError(error) {
 					public void onBackPressed() {
 						super.onBackPressed();
-						Game.switchScene( StartScene.class );
+						Game.switchScene(StartScene.class);
 					};
-				} );
+				});
 				error = null;
 			}
 			break;
 		}
 	}
-	
+
 	private void testMode() {
 		Actor.fixTime();
 		Dungeon.init();
-		
+
 		Level level;
 		level = Dungeon.testLevel();
-		
-		Dungeon.switchLevel( level, level.entrance );
+
+		Dungeon.switchLevel(level, level.entrance);
 	}
 
-	
 	private void descend() throws Exception {
-		
+
 		Actor.fixTime();
 		if (Dungeon.hero == null) {
 			Dungeon.init();
 			if (noStory) {
-				Dungeon.chapters.add( WndStory.ID_SEWERS );
+				Dungeon.chapters.add(WndStory.ID_SEWERS);
 				noStory = false;
 			}
 		} else {
 			Dungeon.saveLevel();
 		}
-		
+
 		Level level;
 		if (Dungeon.depth >= Statistics.deepestFloor) {
 			level = Dungeon.newLevel();
 		} else {
 			Dungeon.depth++;
-			level = Dungeon.loadLevel( );
+			level = Dungeon.loadLevel();
 		}
-		Dungeon.switchLevel( level, level.entrance );
+		Dungeon.switchLevel(level, level.entrance);
 	}
-	
+
 	private void fall() throws Exception {
-		
+
 		Actor.fixTime();
 		Dungeon.saveLevel();
-		
+
 		Level level;
 		if (Dungeon.depth >= Statistics.deepestFloor) {
 			level = Dungeon.newLevel();
 		} else {
 			Dungeon.depth++;
-			level = Dungeon.loadLevel( );
+			level = Dungeon.loadLevel();
 		}
-		Dungeon.switchLevel( level, fallIntoPit ? level.pitCell() : level.randomRespawnCell() );
+		Dungeon.switchLevel(level,
+				fallIntoPit ? level.pitCell() : level.randomRespawnCell());
 	}
-	
+
 	private void ascend() throws Exception {
 		Actor.fixTime();
-		
+
 		Dungeon.saveLevel();
 		Dungeon.depth--;
-		Level level = Dungeon.loadLevel( );
-		Dungeon.switchLevel( level, level.exit );
+		Level level = Dungeon.loadLevel();
+		Dungeon.switchLevel(level, level.exit);
 	}
-	
+
 	private void returnTo() throws Exception {
-		
+
 		Actor.fixTime();
-		
+
 		Dungeon.saveLevel();
 		Dungeon.depth = returnDepth;
-		Level level = Dungeon.loadLevel( );
-		Dungeon.switchLevel( level, Level.resizingNeeded ? level.adjustPos( returnPos ) : returnPos );
+		Level level = Dungeon.loadLevel();
+		Dungeon.switchLevel(level,
+				Level.resizingNeeded ? level.adjustPos(returnPos) : returnPos);
 	}
-	
-	private void problemWithSave(){
+
+	private void problemWithSave() {
 		Dungeon.deleteGame(true);
 		Game.switchScene(StartScene.class);
 		return;
 	}
-	
+
 	private void restore() throws Exception {
-		
+
 		Actor.fixTime();
-		
+
 		Dungeon.loadGame();
-		
-		if(Dungeon.hero == null){
+
+		if (Dungeon.hero == null) {
 			problemWithSave();
 			return;
 		}
-		
+
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
-			Dungeon.switchLevel( Dungeon.loadLevel( ), -1 );
+			Dungeon.switchLevel(Dungeon.loadLevel(), -1);
 		} else {
-			Level level = Dungeon.loadLevel( );
-			if(level == null){ // save file fucked up :(
+			Level level = Dungeon.loadLevel();
+			if (level == null) { // save file fucked up :(
 				problemWithSave();
 				return;
 			}
-			Dungeon.switchLevel( level, Level.resizingNeeded ? level.adjustPos( Dungeon.hero.pos ) : Dungeon.hero.pos );
+			Dungeon.switchLevel(level,
+					Level.resizingNeeded ? level.adjustPos(Dungeon.hero.pos)
+							: Dungeon.hero.pos);
 		}
 	}
-	
+
 	private void resurrect() throws Exception {
-		
-		Actor.fixTime(); 
-		
+
+		Actor.fixTime();
+
 		if (Dungeon.bossLevel()) {
-			Dungeon.hero.resurrect( Dungeon.depth );
+			Dungeon.hero.resurrect(Dungeon.depth);
 			Dungeon.depth--;
 			Level level = Dungeon.newLevel(/* true */);
-			Dungeon.switchLevel( level, level.entrance );
+			Dungeon.switchLevel(level, level.entrance);
 		} else {
-			Dungeon.hero.resurrect( -1 );
+			Dungeon.hero.resurrect(-1);
 			Dungeon.resetLevel();
 		}
 	}
-	
+
 	@Override
 	protected void onBackPressed() {
 	}

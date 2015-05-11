@@ -56,7 +56,8 @@ public enum Icons {
 	CHEST_GOLD,
 	CHEST_RUBY,
 	HUNTRESS,
-	MODDING_MODE;
+	MODDING_MODE,
+	QUIVER;
 	
 	public Image get() {
 		return get( this );
@@ -166,6 +167,9 @@ public enum Icons {
 			break;
 		case MODDING_MODE:
 			icon.frame( icon.texture.uvRect( 0, 57, 12, 69) );
+			break;
+		case QUIVER:
+			icon.frame( icon.texture.uvRect( 12,53,  22,63 ) );
 			break;
 		}
 		return icon;

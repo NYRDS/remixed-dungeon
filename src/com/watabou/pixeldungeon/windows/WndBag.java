@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.Keyring;
+import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -77,8 +78,8 @@ public class WndBag extends WndTabbed {
 	protected static final int SLOT_SIZE	= 28;
 	protected static final int SLOT_MARGIN	= 1;
 	
-	private static final int TAB_WIDTH_P	= 21;
-	private static final int TAB_WIDTH_L	= 30;
+	private static final int TAB_WIDTH_P	= 18;
+	private static final int TAB_WIDTH_L	= 26;
 	
 	protected static final int TITLE_HEIGHT	= 12;
 		
@@ -130,7 +131,8 @@ public class WndBag extends WndTabbed {
 			stuff.getItem( SeedPouch.class ), 
 			stuff.getItem( ScrollHolder.class ),
 			stuff.getItem( WandHolster.class ),
-			stuff.getItem( Keyring.class )};
+			stuff.getItem( Keyring.class ),
+			stuff.getItem( Quiver.class ) };
 		
 		for (Bag b : bags) {
 			if (b != null) {
@@ -284,6 +286,8 @@ public class WndBag extends WndTabbed {
 				return Icons.get( Icons.POTIONS_BELT );
 			} else if (bag instanceof Keyring) {
 				return Icons.get( Icons.KEYRING );
+			} else if (bag instanceof Quiver) {
+				return Icons.get( Icons.QUIVER);
 			} else {
 				return Icons.get( Icons.BACKPACK );
 			}

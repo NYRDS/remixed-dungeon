@@ -4,25 +4,26 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class ParalysisArrow extends Arrow {
+public class FrostArrow extends Arrow {
 
-	public static final float DURATION	= 4f;
+	public static final float DURATION	= 5f;
 	
-	public ParalysisArrow() {
+	public FrostArrow() {
 		this( 1 );
 	}
 	
-	public ParalysisArrow( int number ) {
+	public FrostArrow( int number ) {
 		super();
 		quantity = number;
 		
 		baseMin = 0;
-		baseMax = 4;
+		baseMax = 6;
 		baseDly = 0.75;
 		
-		image = ItemSpriteSheet.ARROW_PARALYSIS;
+		image = ItemSpriteSheet.ARROW_FROST;
 		
 		updateStatsForInfo();
 	}
@@ -34,7 +35,7 @@ public class ParalysisArrow extends Arrow {
 
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
-		Buff.prolong( defender, Paralysis.class, DURATION );
+		Buff.prolong( defender, Slow.class, DURATION );
 		super.proc( attacker, defender, damage );
 	}
 }
