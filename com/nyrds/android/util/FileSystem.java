@@ -7,11 +7,11 @@ import android.content.Context;
 public class FileSystem {
 
 	static private Context m_context;
-
+	
 	static public void setContext(Context context) {
 		m_context = context;
 	}
-
+	
 	static public File getInteralStorageFile(String fileName) {
 		File storageDir = m_context.getFilesDir();
 		File file = new File(storageDir, fileName);

@@ -31,13 +31,13 @@ import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.glwrap.Texture;
 
 public class TextureCache {
 
 	public static Context context;
-	public static boolean useExternalStorage = false;
-	
+
 	private static HashMap<Object,SmartTexture> all = new HashMap<Object, SmartTexture>();
 	
 	// No dithering, no scaling, 32 bits per pixel
@@ -140,7 +140,7 @@ public class TextureCache {
 
 				String fileName = (String) src;
 
-				if (useExternalStorage) {
+				if (ModdingMode.mode()) {
 					File file = FileSystem.getExternalStorageFile(fileName);
 					if (file.exists()) {
 						return BitmapFactory.decodeStream(new FileInputStream(

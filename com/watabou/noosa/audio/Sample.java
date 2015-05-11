@@ -17,9 +17,14 @@
 
 package com.watabou.noosa.audio;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+
+import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
+
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
@@ -73,15 +78,35 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 			
 			if (!ids.containsKey( asset )) {
 				try {
-					AssetFileDescriptor fd = manager.openFd( asset );
-					int streamID = pool.load( fd, 1 ) ;
+					
+					int streamID;
+					
+					if (ModdingMode.mode()) {
+						File file = FileSystem.getExternalStorageFile(asset);
+						if (file.exists()) {
+							streamID = pool.load(file.getAbsolutePath(), 1);
+						} else {
+							streamID = fromAsset(manager, asset);
+						}
+					} else {
+						streamID = fromAsset(manager, asset);
+					}
+					
 					ids.put( asset, streamID );
-					fd.close();
+					
 				} catch (IOException e) {
 				}
 			}
 			
 		}
+	}
+
+	private int fromAsset(AssetManager manager, String asset)
+			throws IOException {
+		AssetFileDescriptor fd = manager.openFd( asset );
+		int streamID = pool.load( fd, 1 ) ;
+		fd.close();
+		return streamID;
 	}
 	
 	public void unload( Object src ) {
