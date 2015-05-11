@@ -28,7 +28,7 @@ public class WndList extends Window {
 	private static final int MARGIN	= 4;
 	private static final int GAP	= 4;
 	
-	private static final String DOT	= "\u007F";
+	private static final String DOT	= "#";
 	
 	public WndList( String[] items ) {
 		
