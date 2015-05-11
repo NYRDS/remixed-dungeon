@@ -16,7 +16,7 @@
   <string name="RubyBow_Gender">masculin</string>
   <!--STRINGS OF Quiver CLASS-->
   <string name="Quiver_Name">carquois</string>
-  <string name="Quiver_Info"></string>
+  <string name="Quiver_Info">carquois</string>
   <string name="Quiver_Gender">masculin</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">carquois de feu</string>
