@@ -16,7 +16,7 @@
   <string name="RubyBow_Gender">męski</string>
   <!--STRINGS OF Quiver CLASS-->
   <string name="Quiver_Name">Kołczan</string>
-  <string name="Quiver_Info"></string>
+  <string name="Quiver_Info">Kołczan</string>
   <string name="Quiver_Gender">męski</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">Ognisty Kołczan</string>
