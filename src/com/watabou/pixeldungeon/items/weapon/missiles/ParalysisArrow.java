@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class ParalysisArrow extends Arrow {
 
-	public static final float DURATION	= 5f;
+	public static final float DURATION	= 4f;
 	
 	public ParalysisArrow() {
 		this( 1 );
@@ -16,10 +16,10 @@ public class ParalysisArrow extends Arrow {
 	
 	public ParalysisArrow( int number ) {
 		super();
-		quantity = number;
+		quantity(number);
 		
 		baseMin = 0;
-		baseMax = 7;
+		baseMax = 4;
 		baseDly = 0.75;
 		
 		image = ItemSpriteSheet.ARROW_PARALYSIS;
@@ -29,7 +29,7 @@ public class ParalysisArrow extends Arrow {
 	
 	@Override
 	public int price() {
-		return quantity * 5;
+		return quantity() * 5;
 	}
 
 	@Override

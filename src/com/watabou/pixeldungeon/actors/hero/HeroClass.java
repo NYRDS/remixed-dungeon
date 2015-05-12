@@ -31,7 +31,12 @@ import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
+import com.watabou.pixeldungeon.items.bags.Keyring;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
+import com.watabou.pixeldungeon.items.bags.Quiver;
+import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
+import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
@@ -131,18 +136,25 @@ public enum HeroClass {
 		hero.collect(gl);
 		
 		hero.hp(hero.ht(1000));
-		hero.STR = 18;
+		hero.STR(18);
 		
 		hero.attackSkill += 10;
 		hero.defenseSkill += 10;
 		
-		hero.collect(new PotionOfStrength());
-		hero.collect(new PotionOfFrost());
-		hero.collect(new PotionOfLiquidFlame());
-		hero.collect(new PotionOfLiquidFlame());
-		hero.collect(new PotionOfLevitation());
-		hero.collect(new WandOfTelekinesis());
+		hero.collect(new PotionOfStrength().identify());
+		hero.collect(new PotionOfLiquidFlame().identify());
+		hero.collect(new PotionOfFrost().identify());
+		hero.collect(new PotionOfLevitation().identify());
+		hero.collect(new WandOfTelekinesis().identify());
 
+		hero.collect(new CommonArrow(100));
+		hero.collect(new Quiver());
+		hero.collect(new SeedPouch());
+		hero.collect(new WandHolster());
+		hero.collect(new ScrollHolder());
+		hero.collect(new PotionBelt());
+		hero.collect(new Keyring());
+		
 		hero.collect(new ScrollOfMagicMapping());
 		
 		hero.collect(new WandOfTeleportation());
@@ -179,7 +191,7 @@ public enum HeroClass {
 	}
 	
 	private static void initWarrior( Hero hero ) {
-		hero.STR = hero.STR + 1;
+		hero.STR(hero.STR() + 1);
 		
 		(hero.belongings.weapon = new ShortSword()).identify();
 		hero.collect(new Dart( 8 ).identify());
@@ -225,7 +237,7 @@ public enum HeroClass {
 	}
 
 	private void initElf(Hero hero) {
-		hero.STR--;
+		hero.STR(hero.STR() - 1);
 		
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());

@@ -72,7 +72,7 @@ abstract public class RottenFood extends Food{
 	}
 	
 	public int price() {
-		return 1 * quantity;
+		return 1 * quantity();
 	};
 
 }

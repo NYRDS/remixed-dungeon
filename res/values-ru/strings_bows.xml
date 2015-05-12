@@ -22,7 +22,7 @@
 	
 	<!-- STRINGS OF Quiver CLASS -->
     <string name="Quiver_Name">колчан</string>
-    <string name="Quiver_Info"></string>
+    <string name="Quiver_Info">Кожаный колчан отлично подходит для любых стрел</string>
     <string name="Quiver_Gender">masculine</string>
 	
 	<!-- STRINGS OF FireQuiver CLASS -->

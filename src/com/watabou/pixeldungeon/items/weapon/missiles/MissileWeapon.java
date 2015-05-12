@@ -78,7 +78,7 @@ public class MissileWeapon extends Weapon {
 		Hero hero = (Hero) attacker;
 		if (hero.rangedWeapon == null && stackable) {
 			if (this != hero.belongings.weapon) {
-				if (quantity == 1) {
+				if (quantity() == 1) {
 					doUnequip(hero, false, false);
 				} else {
 					detach(null);

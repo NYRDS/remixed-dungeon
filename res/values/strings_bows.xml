@@ -21,7 +21,7 @@
 	
 	<!-- STRINGS OF Quiver CLASS -->
     <string name="Quiver_Name">quiver</string>
-    <string name="Quiver_Info"></string>
+    <string name="Quiver_Info">Leather quiver suitable to hold any arrows</string>
     <string name="Quiver_Gender">masculine</string>
 	
 	<!-- STRINGS OF FireQuiver CLASS -->

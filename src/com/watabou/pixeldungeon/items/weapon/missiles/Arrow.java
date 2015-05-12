@@ -23,7 +23,7 @@ public abstract class Arrow extends MissileWeapon {
 	public Arrow( int number ) {
 		super();
 		STR = 9;
-		quantity = number;
+		quantity(number);
 	
 	}
 	
@@ -36,7 +36,7 @@ public abstract class Arrow extends MissileWeapon {
 	
 	@Override
 	public Item random() {
-		quantity = Random.Int( 10, 25 );
+		quantity(Random.Int( 10, 25 ));
 		return this;
 	}
 	
@@ -56,7 +56,7 @@ public abstract class Arrow extends MissileWeapon {
 			ACU = (float) (baseAcu * firedFrom.acuFactor());
 			DLY = (float) (baseDly * firedFrom.dlyFactor());
 			
-			float sDelta = curUser.STR - firedFrom.STR;
+			float sDelta = curUser.STR() - firedFrom.STR;
 			
 			if (sDelta < 0) {
 				DLY += sDelta * 0.5;

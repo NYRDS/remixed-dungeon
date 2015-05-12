@@ -3,25 +3,27 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class PoisonArrow extends Arrow {
+public class FrostArrow extends Arrow {
 
 	public static final float DURATION	= 5f;
 	
-	public PoisonArrow() {
+	public FrostArrow() {
 		this( 1 );
 	}
 	
-	public PoisonArrow( int number ) {
+	public FrostArrow( int number ) {
 		super();
 		quantity(number);
 		
-		baseMin = 3;
-		baseMax = 4;
+		baseMin = 0;
+		baseMax = 6;
 		baseDly = 0.75;
 		
-		image = ItemSpriteSheet.ARROW_POISON;
+		image = ItemSpriteSheet.ARROW_FROST;
 		
 		updateStatsForInfo();
 	}
@@ -33,16 +35,7 @@ public class PoisonArrow extends Arrow {
 
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
-		
-		int poisonFactor = 1;
-		
-		if(firedFrom != null) {
-			poisonFactor += firedFrom.level();
-		}
-		
-		Buff.affect( defender, com.watabou.pixeldungeon.actors.buffs.Poison.class ).
-		set( com.watabou.pixeldungeon.actors.buffs.Poison.durationFactor( defender ) * poisonFactor );
-
+		Buff.prolong( defender, Slow.class, DURATION );
 		super.proc( attacker, defender, damage );
 	}
 }

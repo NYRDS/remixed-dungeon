@@ -26,6 +26,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -71,9 +72,9 @@ public class Item implements Bundlable {
 	protected int image = 0;
 	
 	public boolean stackable = false;
-	protected int quantity = 1;
+	private int quantity = Scrambler.scramble(1);
 	
-	public int level = 0;
+	private int level = Scrambler.scramble(0);
 	public boolean levelKnown = false;
 	
 	public boolean cursed;
@@ -164,7 +165,7 @@ public class Item implements Bundlable {
 			Class<?>c = getClass();
 			for (Item item:items) {
 				if (item.getClass() == c) {
-					item.quantity += quantity;
+					item.quantity(item.quantity() + quantity());
 					item.updateQuickslot();
 					return true;
 				}
@@ -196,18 +197,18 @@ public class Item implements Bundlable {
 	
 	public final Item detach( Bag container ) {
 		
-		if (quantity <= 0) {
+		if (quantity() <= 0) {
 			
 			return null;
 			
 		} else
-		if (quantity == 1) {
+		if (quantity() == 1) {
 
 			return detachAll( container );
 			
 		} else {
 			
-			quantity--;
+			quantity(quantity() - 1);
 			updateQuickslot();
 			
 			try { 
@@ -246,7 +247,7 @@ public class Item implements Bundlable {
 		
 		cursed = false;
 		cursedKnown = true;
-		this.level++;
+		this.level(this.level() + 1);
 		
 		return this;
 	}
@@ -261,7 +262,7 @@ public class Item implements Bundlable {
 	
 	public Item degrade() {
 		
-		this.level--;
+		this.level(this.level() - 1);
 		
 		return this;
 	}
@@ -275,7 +276,7 @@ public class Item implements Bundlable {
 	}
 	
 	public int visiblyUpgraded() {
-		return levelKnown ? level : 0;
+		return levelKnown ? level() : 0;
 	}
 	
 	public boolean visiblyCursed() {
@@ -316,15 +317,15 @@ public class Item implements Bundlable {
 	@Override
 	public String toString() {
 		
-		if (levelKnown && level != 0) {
-			if (quantity > 1) {
-				return Utils.format( TXT_TO_STRING_LVL_X, name(), level, quantity );
+		if (levelKnown && level() != 0) {
+			if (quantity() > 1) {
+				return Utils.format( TXT_TO_STRING_LVL_X, name(), level(), quantity() );
 			} else {
-				return Utils.format( TXT_TO_STRING_LVL, name(), level );
+				return Utils.format( TXT_TO_STRING_LVL, name(), level() );
 			}
 		} else {
-			if (quantity > 1) {
-				return Utils.format( TXT_TO_STRING_X, name(), quantity );
+			if (quantity() > 1) {
+				return Utils.format( TXT_TO_STRING_X, name(), quantity() );
 			} else {
 				return Utils.format( TXT_TO_STRING, name() );
 			}
@@ -356,11 +357,11 @@ public class Item implements Bundlable {
 	}
 	
 	public int quantity() {
-		return quantity;
+		return Scrambler.descramble(quantity);
 	}
 	
 	public void quantity( int value ) {
-		quantity = value;
+		quantity = Scrambler.scramble(value);
 	}
 	
 	public int price() {
@@ -371,7 +372,7 @@ public class Item implements Bundlable {
 		try {
 			
 			Item item = (Item)cl.newInstance();
-			item.quantity = 0;
+			item.quantity(0);
 			return item;
 			
 		} catch (Exception e) {
@@ -384,7 +385,7 @@ public class Item implements Bundlable {
 	}
 	
 	public String status() {
-		return quantity != 1 ? Integer.toString( quantity ) : null;
+		return quantity() != 1 ? Integer.toString( quantity() ) : null;
 	}
 	
 	public void updateQuickslot() {
@@ -402,8 +403,8 @@ public class Item implements Bundlable {
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( QUANTITY,     quantity );
-		bundle.put( LEVEL,        level );
+		bundle.put( QUANTITY,     quantity() );
+		bundle.put( LEVEL,        level() );
 		bundle.put( LEVEL_KNOWN,  levelKnown );
 		bundle.put( CURSED,       cursed );
 		bundle.put( CURSED_KNOWN, cursedKnown );
@@ -424,7 +425,7 @@ public class Item implements Bundlable {
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		quantity	= bundle.getInt( QUANTITY );
+		quantity(bundle.getInt( QUANTITY ));
 		levelKnown	= bundle.getBoolean( LEVEL_KNOWN );
 		cursedKnown	= bundle.getBoolean( CURSED_KNOWN );
 		
@@ -527,5 +528,13 @@ public class Item implements Bundlable {
 
 	public Item poison(int pos) {
 		return this;
+	}
+
+	public int level() {
+		return Scrambler.descramble(level);
+	}
+
+	public void level(int level) {
+		this.level = Scrambler.scramble(level);
 	}
 }

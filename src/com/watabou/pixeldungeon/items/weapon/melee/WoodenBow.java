@@ -17,11 +17,11 @@ public class WoodenBow extends Bow {
 	
 	@Override
 	public double acuFactor() {
-		return 1 + level * 0.1;
+		return 1 + level() * 0.1;
 	}
 	
 	@Override
 	public double dmgFactor() {
-		return 1 + level * 0.25;
+		return 1 + level() * 0.25;
 	}
 }

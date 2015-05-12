@@ -24,6 +24,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -548,19 +549,19 @@ public abstract class Char extends Actor {
 	}
 
 	public int ht() {
-		return HT;
+		return Scrambler.descramble(HT);
 	}
 
 	public int ht(int hT) {
-		HT = hT;
+		HT = Scrambler.scramble(hT);
 		return hT;
 	}
 
 	public int hp() {
-		return HP;
+		return Scrambler.descramble(HP);
 	}
 
 	public void hp(int hP) {
-		HP = hP;
+		HP = Scrambler.scramble(hP);
 	}
 }

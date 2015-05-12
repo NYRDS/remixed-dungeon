@@ -154,7 +154,7 @@ public class Armor extends EquipableItem {
 	public Item upgrade( boolean inscribe ) {
 		
 		if (glyph != null) {
-			if (!inscribe && Random.Int( level ) > 0) {
+			if (!inscribe && Random.Int( level() ) > 0) {
 				GLog.w( TXT_INCOMPATIBLE );
 				inscribe( null );
 			}
@@ -294,10 +294,10 @@ public class Armor extends EquipableItem {
 			price /= 2;
 		}
 		if (levelKnown) {
-			if (level > 0) {
-				price *= (level + 1);
-			} else if (level < 0) {
-				price /= (1 - level);
+			if (level() > 0) {
+				price *= (level() + 1);
+			} else if (level() < 0) {
+				price /= (1 - level());
 			}
 		}
 		if (price < 1) {

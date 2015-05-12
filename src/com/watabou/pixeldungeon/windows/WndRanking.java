@@ -160,7 +160,7 @@ public class WndRanking extends WndTabbed {
 			title.icon( heroSprite.avatar( hero ) );
 			title.label( Utils.format( TXT_TITLE, hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
-			title.color(0xff4444);
+			title.color(0xCC33FF);
 			add( title );
 			
 			float pos = title.bottom();
@@ -180,7 +180,7 @@ public class WndRanking extends WndTabbed {
 			
 			pos += GAP + GAP;
 			
-			pos = statSlot( this, TXT_STR, Integer.toString( hero.STR ), pos );
+			pos = statSlot( this, TXT_STR, Integer.toString( hero.STR() ), pos );
 			pos = statSlot( this, TXT_HEALTH, Integer.toString( hero.ht() ), pos );
 			
 			pos += GAP;

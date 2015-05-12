@@ -61,6 +61,6 @@ public class ScrollOfRecharging extends Scroll {
 	
 	@Override
 	public int price() {
-		return isKnown() ? 40 * quantity : super.price();
+		return isKnown() ? 40 * quantity() : super.price();
 	}
 }

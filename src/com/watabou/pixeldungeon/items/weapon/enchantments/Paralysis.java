@@ -33,7 +33,7 @@ public class Paralysis extends Weapon.Enchantment {
 		// lvl 0 - 13%
 		// lvl 1 - 22%
 		// lvl 2 - 30%
-		int level = Math.max( 0, weapon.level );
+		int level = Math.max( 0, weapon.level() );
 		
 		if (Random.Int( level + 8 ) >= 7) {
 			

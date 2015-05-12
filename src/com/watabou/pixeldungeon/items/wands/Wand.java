@@ -210,9 +210,9 @@ public abstract class Wand extends KindOfWeapon {
 	public int level() {
 		if (charger != null) {
 			Power power = charger.target.buff(Power.class);
-			return power == null ? level : Math.max(level + power.level, 0);
+			return power == null ? super.level() : Math.max(super.level() + power.level, 0);
 		} else {
-			return level;
+			return super.level();
 		}
 	}
 
@@ -312,7 +312,7 @@ public abstract class Wand extends KindOfWeapon {
 	}
 
 	protected void updateLevel() {
-		maxCharges = Math.min(initialCharges() + level, 9);
+		maxCharges = Math.min(initialCharges() + level(), 9);
 		curCharges = Math.min(curCharges, maxCharges);
 
 		calculateDamage();
@@ -323,9 +323,9 @@ public abstract class Wand extends KindOfWeapon {
 	}
 
 	private void calculateDamage() {
-		int tier = 1 + level / 3;
+		int tier = 1 + level() / 3;
 		MIN = tier;
-		MAX = (tier * tier - tier + 10) / 2 + level;
+		MAX = (tier * tier - tier + 10) / 2 + level();
 	}
 
 	protected void fx(int cell, Callback callback) {
@@ -364,10 +364,10 @@ public abstract class Wand extends KindOfWeapon {
 			price /= 2;
 		}
 		if (levelKnown) {
-			if (level > 0) {
-				price *= (level + 1);
-			} else if (level < 0) {
-				price /= (1 - level);
+			if (level() > 0) {
+				price *= (level() + 1);
+			} else if (level() < 0) {
+				price /= (1 - level());
 			}
 		}
 		if (price < 1) {
@@ -483,7 +483,7 @@ public abstract class Wand extends KindOfWeapon {
 
 		protected void delay() {
 			float time2charge = ((Hero) target).heroClass == HeroClass.MAGE ? TIME_TO_CHARGE
-					/ (float) Math.sqrt(1 + level)
+					/ (float) Math.sqrt(1 + level())
 					: TIME_TO_CHARGE;
 			spend(time2charge);
 		}

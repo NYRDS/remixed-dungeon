@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,27 +15,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.watabou.pixeldungeon.items.potions;
+package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class PotionOfExperience extends Potion {
+public class Quiver extends Bag {
 
-	@Override
-	protected void apply( Hero hero ) {
-		setKnown();
-		hero.earnExp( hero.maxExp() - hero.exp );
+	{
+		image = ItemSpriteSheet.QUIVER_COMMON;
+		
+		size = 12;
 	}
 	
 	@Override
-	public String desc() {
-		return Game.getVar(R.string.PotionOfExperience_Info);
+	public boolean grab( Item item ) {
+		return item instanceof Arrow;
 	}
 	
 	@Override
 	public int price() {
-		return isKnown() ? 80 * quantity() : super.price();
+		return 50;
 	}
 }

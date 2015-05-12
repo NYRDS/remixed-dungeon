@@ -55,7 +55,7 @@ public abstract class EquipableItem extends Item {
 	public void cast( final Hero user, int dst ) {
 
 		if (isEquipped( user )) {
-			if (quantity == 1 && !this.doUnequip( user, false, false )) {
+			if (quantity() == 1 && !this.doUnequip( user, false, false )) {
 				return;
 			}
 		}

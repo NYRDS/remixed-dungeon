@@ -89,7 +89,7 @@ public class MeleeWeapon extends Weapon {
 		String typical  = Game.getVar(R.string.MeleeWeapon_Info1b);
 		String upgraded = Game.getVar(R.string.MeleeWeapon_Info1c);
 		String degraded = Game.getVar(R.string.MeleeWeapon_Info1d);
-		String quality = levelKnown && level != 0 ? (level > 0 ? upgraded : degraded) : typical;
+		String quality = levelKnown && level() != 0 ? (level() > 0 ? upgraded : degraded) : typical;
 		info.append(p);
 		info.append(Utils.capitalize(String.format(Game.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier)));
 		info.append(" ");
@@ -172,10 +172,10 @@ public class MeleeWeapon extends Weapon {
 			price /= 2;
 		}
 		if (levelKnown) {
-			if (level > 0) {
-				price *= (level + 1);
-			} else if (level < 0) {
-				price /= (1 - level);
+			if (level() > 0) {
+				price *= (level() + 1);
+			} else if (level() < 0) {
+				price /= (1 - level());
 			}
 		}
 		if (price < 1) {
@@ -188,7 +188,7 @@ public class MeleeWeapon extends Weapon {
 	public Item random() {
 		super.random();
 		
-		if (Random.Int( 10 + level ) == 0) {
+		if (Random.Int( 10 + level() ) == 0) {
 			enchant( Enchantment.random() );
 		}
 		

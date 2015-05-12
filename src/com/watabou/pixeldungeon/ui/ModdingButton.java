@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
@@ -27,13 +28,12 @@ public class ModdingButton extends Button {
 		if(PixelDungeon.moddingMode()) {
 			image.brightness(1.5f);
 			text.visible = true;
-			TextureCache.useExternalStorage = true;
+			ModdingMode.mode(true);
 		} else {
 			image.brightness(0.1f);
 			text.visible = false;
-			TextureCache.useExternalStorage = false;
+			ModdingMode.mode(false);
 		}
-
 	}
 	
 	@Override
@@ -76,5 +76,7 @@ public class ModdingButton extends Button {
 		PixelDungeon.moddingMode(!PixelDungeon.moddingMode());
 		GamesInProgress.removeAll();
 		updateLook();
+		
+		PixelDungeon.instance().doRestart();
 	}
 }
