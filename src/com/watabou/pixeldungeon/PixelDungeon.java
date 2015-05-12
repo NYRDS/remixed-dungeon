@@ -58,6 +58,8 @@ public class PixelDungeon extends GameWithGoogleIap {
 		
 		String placeModFilesHere = "placeModFilesHere";
 		
+		PixelDungeon.moddingMode(false);
+		
 		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
 			try {
 				FileSystem.getExternalStorageFile(placeModFilesHere).createNewFile();
@@ -332,7 +334,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 
 	public static boolean moddingMode() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_MODDING_MODE, true);
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_MODDING_MODE, false);
 	}
 
 	public static void moddingMode(boolean value) {
