@@ -26,6 +26,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
@@ -212,7 +213,7 @@ public class Badges {
 	}
 	
 	public static void saveLocal( Bundle bundle ) {
-		if (!PixelDungeon.moddingMode()) {
+		if (!ModdingMode.mode()) {
 			store( bundle, local );
 		}
 	}
@@ -233,9 +234,10 @@ public class Badges {
 	}
 	
 	public static void saveGlobal() {
-		if (PixelDungeon.moddingMode()) {
+		if (ModdingMode.mode()) {
 			return;
 		}
+		
 		if (saveNeeded) {
 			
 			Bundle bundle = new Bundle();

@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -50,7 +51,7 @@ public enum Rankings {
 	
 	public void submit( gameOver winLevel ) {
 		
-		if(PixelDungeon.moddingMode()) {
+		if(ModdingMode.mode()) {
 			return;
 		}
 		

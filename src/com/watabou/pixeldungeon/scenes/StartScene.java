@@ -47,6 +47,7 @@ import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class StartScene extends PixelScene {
@@ -338,7 +339,7 @@ public class StartScene extends PixelScene {
 
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
 
-		if( PixelDungeon.moddingMode() ) {
+		if( ModdingMode.mode()) {
 			InterlevelScene.mode = InterlevelScene.Mode.MODDING;
 		}
 		

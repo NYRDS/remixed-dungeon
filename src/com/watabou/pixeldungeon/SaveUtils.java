@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -21,7 +22,7 @@ public class SaveUtils {
 
 	public static String gameFile( HeroClass cl ) {
 		
-		if(PixelDungeon.moddingMode()) {
+		if(ModdingMode.mode()) {
 			return "modding.dat";
 		}
 		
@@ -47,7 +48,7 @@ public class SaveUtils {
 	
 	private static String _depthFile( HeroClass cl) {
 		
-		if(PixelDungeon.moddingMode()) {
+		if(ModdingMode.mode()) {
 			return "modding%d.dat";
 		}
 		

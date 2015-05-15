@@ -18,6 +18,7 @@
  
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -167,7 +168,7 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		if(PixelDungeon.moddingMode()) {
+		if(ModdingMode.mode()) {
 			initDebug(hero);
 		}
 		
