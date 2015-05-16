@@ -1,20 +1,18 @@
-package com.watabou.pixeldungeon.actors.mobs;
+package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderExplodingSprite;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.SpiderMumParalysisSprite;
-import com.watabou.pixeldungeon.sprites.SpiderMumPoisonSprite;
-import com.watabou.pixeldungeon.sprites.base.SpiderMumSprite;
 import com.watabou.utils.Random;
 
-public class SpiderMum extends Mob {
+public class SpiderExploding extends Mob {
 
-	@SuppressWarnings("unchecked")
-	public SpiderMum() {
+	private int kind = 0;
+	
+	public SpiderExploding() {
 		
-		spriteClass = (Class<? extends CharSprite>) Random.oneOf( SpiderMumParalysisSprite.class, 
-									SpiderMumPoisonSprite.class);
+		spriteClass = SpiderExplodingSprite.class;
 		
 		hp(ht(15));
 		defenseSkill = 1;
@@ -23,8 +21,15 @@ public class SpiderMum extends Mob {
 		EXP = 3;
 		maxLvl = 9;
 		
+		kind = Random.Int(0, 5);
+		
 		loot = new MysteryMeat();
 		lootChance = 0.167f;
+	}
+	
+	@Override
+	public int getKind() {
+		return kind;
 	}
 	
 	@Override

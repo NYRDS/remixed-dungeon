@@ -1,9 +1,9 @@
-package com.watabou.pixeldungeon.actors.mobs;
+package com.nyrds.pixeldungeon.mobs.spiders;
 
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
+import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderNestSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.sprites.SpiderNestSprite;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 public class SpiderNest extends Mob {
 

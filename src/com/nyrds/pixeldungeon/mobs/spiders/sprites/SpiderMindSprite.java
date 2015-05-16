@@ -1,8 +1,8 @@
-package com.watabou.pixeldungeon.sprites;
+package com.nyrds.pixeldungeon.mobs.spiders.sprites;
 
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
+import com.watabou.pixeldungeon.sprites.MobSprite;
 
 public class SpiderMindSprite extends MobSprite {
 	

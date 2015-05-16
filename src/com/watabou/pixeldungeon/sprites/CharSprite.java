@@ -417,4 +417,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 			
 		}
 	}
+
+	public void selectKind(int i) {
+	}
 }

@@ -1,8 +1,10 @@
-package com.watabou.pixeldungeon.actors.mobs;
+package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.sprites.SpiderQueenSprite;
 import com.watabou.utils.Random;
 
 public class SpiderQueen extends Mob {
@@ -18,6 +20,15 @@ public class SpiderQueen extends Mob {
 		
 		loot = Generator.Category.POTION;
 		lootChance = 0.83f;
+	}
+	
+	@Override
+	protected boolean act(){
+		if(Random.Int(0, 20) == 0) {
+			SpiderSpawner.spawnEgg(Dungeon.level, pos);
+		}
+		
+		return super.act();
 	}
 	
 	@Override

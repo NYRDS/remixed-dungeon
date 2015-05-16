@@ -1,14 +1,15 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.SpiderMind;
-import com.watabou.pixeldungeon.actors.mobs.SpiderMum;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 public class SpiderSpawner {
 	
-	static Object SpiderClasses[] = {SpiderMum.class, SpiderMind.class};
+	static Object SpiderClasses[] = {	SpiderMum.class, 
+										SpiderMind.class, 
+										SpiderExploding.class,
+										SpiderQueen.class};
 	
 	static public void spawnRandomSpider(Level level,int position) {
 		try {
@@ -26,4 +27,12 @@ public class SpiderSpawner {
 			e.printStackTrace();
 		}
 	}
+	
+	static public void spawnEgg(Level level,int position) {
+			Mob mob = new SpiderEgg();
+			mob.pos = position;
+			mob.state = mob.SLEEPEING;
+			level.spawnMob( mob );
+	}
+	
 }

@@ -136,10 +136,15 @@ public abstract class Mob extends Char {
 		}
 	}
 
+	protected int getKind() {
+		return 0;
+	}
+	
 	public CharSprite sprite() {
 		CharSprite sprite = null;
 		try {
 			sprite = spriteClass.newInstance();
+			sprite.selectKind(getKind());
 		} catch (Exception e) {
 			GLog.w(e.getMessage());
 		}

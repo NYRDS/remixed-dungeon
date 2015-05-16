@@ -1,15 +1,19 @@
-package com.watabou.pixeldungeon.actors.mobs;
+package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderMumSprite;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.sprites.SpiderMindSprite;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
-public class SpiderMind extends Mob {
+public class SpiderMum extends Mob {
 
-	public SpiderMind() {
+	private int kind = 0;
+	
+	public SpiderMum() {
 		
-		spriteClass = SpiderMindSprite.class;
+		spriteClass = SpiderMumSprite.class;
 		
 		hp(ht(15));
 		defenseSkill = 1;
@@ -18,8 +22,15 @@ public class SpiderMind extends Mob {
 		EXP = 3;
 		maxLvl = 9;
 		
+		kind = Random.Int(0, 1);
+		
 		loot = new MysteryMeat();
 		lootChance = 0.167f;
+	}
+	
+	@Override
+	public int getKind() {
+		return kind;
 	}
 	
 	@Override

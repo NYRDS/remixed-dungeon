@@ -1,10 +1,11 @@
-package com.watabou.pixeldungeon.sprites;
+package com.nyrds.pixeldungeon.mobs.spiders.sprites;
 
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.sprites.MobSprite;
 import com.watabou.utils.Callback;
 
 public class SpiderQueenSprite extends MobSprite {
@@ -31,28 +32,5 @@ public class SpiderQueenSprite extends MobSprite {
 		die.frames( frames, 0, 7, 8, 8, 9, 10 );
 		
 		play( idle );
-	}
-	
-	public void zap( int cell ) {
-		
-		turnTo( ch.pos , cell );
-		play( zap );
-		
-		MagicMissile.shadow( parent, ch.pos, cell, 
-			new Callback() {			
-				@Override
-				public void call() {
-					((Warlock)ch).onZapComplete();
-				}
-			} );
-		Sample.INSTANCE.play( Assets.SND_ZAP );
-	}
-	
-	@Override
-	public void onComplete( Animation anim ) {
-		if (anim == zap) {
-			idle();
-		}
-		super.onComplete( anim );
 	}
 }
