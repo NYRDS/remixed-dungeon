@@ -141,6 +141,7 @@ public abstract class Mob extends Char {
 		try {
 			sprite = spriteClass.newInstance();
 		} catch (Exception e) {
+			GLog.w(e.getMessage());
 		}
 		return sprite;
 	}
