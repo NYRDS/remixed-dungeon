@@ -1,7 +1,8 @@
-package com.watabou.pixeldungeon.sprites;
+package com.watabou.pixeldungeon.sprites.base;
 
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.sprites.MobSprite;
 
 public class SpiderMumSprite extends MobSprite {
 	

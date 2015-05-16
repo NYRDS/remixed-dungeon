@@ -2,19 +2,14 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.SpiderMumParalysisSprite;
-import com.watabou.pixeldungeon.sprites.SpiderMumPoisonSprite;
-import com.watabou.pixeldungeon.sprites.base.SpiderMumSprite;
+import com.watabou.pixeldungeon.sprites.SpiderMindSprite;
 import com.watabou.utils.Random;
 
-public class SpiderMum extends Mob {
+public class SpiderMind extends Mob {
 
-	@SuppressWarnings("unchecked")
-	SpiderMum() {
+	SpiderMind() {
 		
-		spriteClass = (Class<? extends CharSprite>) Random.oneOf( SpiderMumParalysisSprite.class, 
-									SpiderMumPoisonSprite.class);
+		spriteClass = SpiderMindSprite.class;
 		
 		hp(ht(15));
 		defenseSkill = 1;
