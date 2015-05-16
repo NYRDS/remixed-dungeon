@@ -3,13 +3,13 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.sprites.SpiderEggSprite;
+import com.watabou.pixeldungeon.sprites.SpiderNestSprite;
 
-public class SpiderEgg extends Mob {
+public class SpiderNest extends Mob {
 
-	public SpiderEgg() {
+	public SpiderNest() {
 		
-		spriteClass = SpiderEggSprite.class;
+		spriteClass = SpiderNestSprite.class;
 		
 		hp(ht(10));
 		defenseSkill = 1;
@@ -37,7 +37,9 @@ public class SpiderEgg extends Mob {
 		
 		SpiderSpawner.spawnRandomSpider(Dungeon.level, pos);
 		
-		remove();
+		state = SLEEPEING;
+		
+		postpone(20);
 		
 		return true;
 	}
