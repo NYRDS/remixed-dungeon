@@ -371,6 +371,10 @@ public abstract class Mob extends Char {
 		}
 	}
 
+	public void remove() {
+		super.die(this);
+	}
+	
 	@Override
 	public void die(Object cause) {
 

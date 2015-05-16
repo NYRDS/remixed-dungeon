@@ -8,7 +8,7 @@ public class SpiderNestSprite extends MobSprite {
 	public SpiderNestSprite() {
 		super();
 		
-		texture( Assets.SPIDER_EGG );
+		texture( Assets.SPIDER_NEST );
 		
 		TextureFilm frames = new TextureFilm( texture, 16, 15 );
 		

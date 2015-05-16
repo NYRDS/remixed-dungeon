@@ -7,7 +7,7 @@ import com.watabou.utils.Random;
 
 public class SpiderMind extends Mob {
 
-	SpiderMind() {
+	public SpiderMind() {
 		
 		spriteClass = SpiderMindSprite.class;
 		

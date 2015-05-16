@@ -416,6 +416,12 @@ public abstract class Level implements Bundlable {
 		return 0;
 	}
 
+	public void spawnMob(Mob mob) {
+		mobs.add( mob );
+		Actor.occupyCell( mob );
+		GameScene.add(mob);
+	}
+	
 	protected Mob createMob(){
 		Mob mob = Bestiary.mutable(Dungeon.depth);
 		if(!mob.isWallWalker()){

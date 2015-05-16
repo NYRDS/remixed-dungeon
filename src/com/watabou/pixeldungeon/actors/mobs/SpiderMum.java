@@ -11,7 +11,7 @@ import com.watabou.utils.Random;
 public class SpiderMum extends Mob {
 
 	@SuppressWarnings("unchecked")
-	SpiderMum() {
+	public SpiderMum() {
 		
 		spriteClass = (Class<? extends CharSprite>) Random.oneOf( SpiderMumParalysisSprite.class, 
 									SpiderMumPoisonSprite.class);
