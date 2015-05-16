@@ -32,12 +32,4 @@ public class SpiderMindSprite extends MobSprite {
 	public int blood() {
 		return 0xFF80706c;
 	}
-	
-	@Override
-	public void onComplete( Animation anim ) {
-		if (anim == die) {
-			emitter().burst( ElmoParticle.FACTORY, 4 );
-		}
-		super.onComplete( anim );
-	}
 }

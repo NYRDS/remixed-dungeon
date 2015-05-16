@@ -108,7 +108,7 @@ public class Assets {
 	public static final String SPIDER_MUM = "spider_mum.png";
 	public static final String SPIDER_MIND = "spider_mind.png";
 	public static final String SPIDER_QUEEN = "spider_queen.png";
-	
+	public static final String SPIDER_EGG = "spider_egg.png";	
 	
 	public static final String ITEMS = "items.png";
 	public static final String PLANTS = "plants.png";
