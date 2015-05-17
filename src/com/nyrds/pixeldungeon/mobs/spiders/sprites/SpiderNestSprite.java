@@ -11,10 +11,10 @@ public class SpiderNestSprite extends MobSprite {
 		
 		texture( Assets.SPIDER_NEST );
 		
-		TextureFilm frames = new TextureFilm( texture, 16, 15 );
+		TextureFilm frames = new TextureFilm( texture, 16, 18 );
 		
-		idle = new Animation( 1, true );
-		idle.frames( frames, 0 );
+		idle = new Animation( 2, true );
+		idle.frames( frames, 0, 1 );
 		
 		run = new Animation( 1, true );
 		run.frames( frames, 0 );
@@ -22,10 +22,8 @@ public class SpiderNestSprite extends MobSprite {
 		attack = new Animation( 1, false );
 		attack.frames( frames, 0 );
 		
-		zap = attack.clone();
-		
-		die = new Animation( 1, false );
-		die.frames( frames, 0 );
+		die = new Animation( 5, false );
+		die.frames( frames, 2, 3, 4 );
 		
 		play( idle );
 	}
