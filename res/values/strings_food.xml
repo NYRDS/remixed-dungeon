@@ -53,5 +53,9 @@
     <!-- STRINGS OF Pasty CLASS -->
     <string name="Pasty_Name">pasty</string>
     <string name="Pasty_Info">This is authentic Cornish pasty with traditional filling of beef and potato.</string>
+
+    <!-- STRINGS OF PseudoPasty CLASS -->
+    <string name="PseudoPasty_Name">pasty</string>
+    <string name="PseudoPasty_Info">This is authentic Cornish pasty with traditional filling of beef and potato.</string>
     
 </resources>

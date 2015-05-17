@@ -105,6 +105,12 @@
     <string name="Mimic_Name_Objective">mimic</string>
     <string name="Mimic_Desc">Mimics are magical creatures which can take any shape they wish. In dungeons they almost always choose a shape of a treasure chest, because they know how to beckon an adventurer.";</string>
 
+    <!-- STRINGS OF MimicPie CLASS -->
+    <string name="MimicPie_Name">mimic</string>
+    <string name="MimicPie_Gender">masculine</string>
+    <string name="MimicPie_Name_Objective">mimic</string>
+    <string name="MimicPie_Desc">Mimics are magical creatures which can take any shape they wish. This one looks like big tasty pasty";</string>
+
     <!-- STRINGS OF Monk CLASS -->
     <string name="Monk_Name">dwarf monk</string>
     <string name="Monk_Gender">masculine</string>
