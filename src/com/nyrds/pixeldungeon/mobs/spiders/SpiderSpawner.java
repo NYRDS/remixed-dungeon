@@ -7,7 +7,7 @@ import com.watabou.utils.Random;
 
 public class SpiderSpawner {
 	
-	static Object SpiderClasses[] = {	SpiderMum.class, 
+	static Object SpiderClasses[] = {	SpiderServant.class, 
 										SpiderMind.class, 
 										SpiderExploding.class,
 										SpiderQueen.class};

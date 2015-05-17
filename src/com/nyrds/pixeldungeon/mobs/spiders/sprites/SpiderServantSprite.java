@@ -4,7 +4,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.sprites.MobSprite;
 
-public class SpiderMumSprite extends MobSprite {
+public class SpiderServantSprite extends MobSprite {
 	
 	static final int framesInRow = 16;
 	
@@ -31,7 +31,7 @@ public class SpiderMumSprite extends MobSprite {
 		play( idle );
 	}
 	
-	public SpiderMumSprite() {
+	public SpiderServantSprite() {
 		super();
 		selectKind(0);
 	}

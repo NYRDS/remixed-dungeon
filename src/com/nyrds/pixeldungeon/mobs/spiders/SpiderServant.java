@@ -1,19 +1,19 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderMumSprite;
+import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderServantSprite;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
-public class SpiderMum extends Mob {
+public class SpiderServant extends Mob {
 
 	private int kind = 0;
 	
-	public SpiderMum() {
+	public SpiderServant() {
 		
-		spriteClass = SpiderMumSprite.class;
+		spriteClass = SpiderServantSprite.class;
 		
 		hp(ht(15));
 		defenseSkill = 1;
