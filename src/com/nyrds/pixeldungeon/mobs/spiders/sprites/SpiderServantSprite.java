@@ -12,7 +12,7 @@ public class SpiderServantSprite extends MobSprite {
 	public void selectKind(int kind) {
 		int shift = framesInRow * kind;
 		
-		texture( Assets.SPIDER_MUM );
+		texture( Assets.SPIDER_SERVANT );
 		
 		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 		

@@ -2,6 +2,9 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderServantSprite;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -31,6 +34,27 @@ public class SpiderServant extends Mob {
 	@Override
 	public int getKind() {
 		return kind;
+	}
+	
+	@Override
+	public int attackProc( Char enemy, int damage ) {
+		
+		switch (getKind()) {
+			case 0:
+				if (Random.Int( 4 ) == 0) {
+					Buff.affect( enemy, Poison.class ).set( Random.Int( 2, 3 ) * Poison.durationFactor( enemy ) );
+				}
+			break;
+			
+			case 1:
+				if (Random.Int( 10 ) == 0) {
+					Buff.prolong( enemy, Paralysis.class, 3);
+				}				
+				
+			break;
+		}
+		
+		return damage;
 	}
 	
 	@Override
