@@ -11,7 +11,7 @@ public class SpiderEgg extends Mob {
 		
 		spriteClass = SpiderEggSprite.class;
 		
-		hp(ht(10));
+		hp(ht(2));
 		defenseSkill = 1;
 		baseSpeed = 0f;
 		
