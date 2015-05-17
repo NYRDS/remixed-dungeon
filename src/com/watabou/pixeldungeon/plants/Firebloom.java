@@ -40,7 +40,7 @@ public class Firebloom extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Firebloom_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Firebloom_Desc);
 
-	Firebloom() {
+	public Firebloom() {
 		image = 0;
 		plantName = TXT_NAME;
 	}

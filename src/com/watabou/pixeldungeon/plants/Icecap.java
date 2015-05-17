@@ -40,7 +40,7 @@ public class Icecap extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Icecap_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Icecap_Desc);
 	
-	Icecap() {
+	public Icecap() {
 		image = 1;
 		plantName = TXT_NAME;
 	}

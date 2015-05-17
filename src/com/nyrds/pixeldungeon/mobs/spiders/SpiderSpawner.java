@@ -7,14 +7,14 @@ import com.watabou.utils.Random;
 
 public class SpiderSpawner {
 	
-	static Object SpiderClasses[] = {	SpiderServant.class, 
+	static Class<?> SpiderClasses[] = {	SpiderServant.class, 
 										SpiderMind.class, 
 										SpiderExploding.class,
 										SpiderQueen.class};
 	
 	static public void spawnRandomSpider(Level level,int position) {
 		try {
-			Mob mob = (Mob) ((Class) Random.oneOf(SpiderClasses)).newInstance();
+			Mob mob = (Mob) ((Class<?>) Random.oneOf(SpiderClasses)).newInstance();
 			mob.pos = position;
 			mob.state = mob.WANDERING;
 			

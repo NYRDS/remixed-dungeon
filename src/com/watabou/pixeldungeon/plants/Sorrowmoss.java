@@ -36,7 +36,7 @@ public class Sorrowmoss extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Sorrowmoss_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Sorrowmoss_Desc);
 	
-	Sorrowmoss() {
+	public Sorrowmoss() {
 		image = 2;
 		plantName = TXT_NAME;
 	}

@@ -42,7 +42,7 @@ public class Earthroot extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Earthroot_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Earthroot_Desc);
 	
-	Earthroot() {
+	public Earthroot() {
 		image = 5;
 		plantName = TXT_NAME;
 	}

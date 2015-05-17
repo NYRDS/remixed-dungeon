@@ -37,7 +37,7 @@ public class Dreamweed extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Dreamweed_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Dreamweed_Desc);
 	
-	Dreamweed() {
+	public Dreamweed() {
 		image = 3;
 		plantName = TXT_NAME;
 	}

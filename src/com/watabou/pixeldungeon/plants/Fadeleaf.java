@@ -37,7 +37,7 @@ public class Fadeleaf extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Fadeleaf_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Fadeleaf_Desc);
 	
-	Fadeleaf () {
+	public Fadeleaf () {
 		image = 6;
 		plantName = TXT_NAME;
 	}

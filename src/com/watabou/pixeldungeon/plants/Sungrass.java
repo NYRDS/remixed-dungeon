@@ -39,7 +39,7 @@ public class Sungrass extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Sungrass_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Sungrass_Desc);
 	
-	Sungrass() {
+	public Sungrass() {
 		image = 4;
 		plantName = TXT_NAME;
 	}
