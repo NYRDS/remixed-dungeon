@@ -272,7 +272,14 @@ public enum HeroClass {
 				return Assets.WARRIOR;
 			}
 		case MAGE:
-			return Assets.MAGE;
+			switch(hero.subClass) {
+			case BATTLEMAGE:
+				return Assets.BATTLEMAGE;
+			case WARLOCK:
+				return Assets.MAGE_WARLOCK;
+			default:
+				return Assets.MAGE;
+			}
 		case ROGUE:
 			return Assets.ROGUE;
 		case HUNTRESS:
