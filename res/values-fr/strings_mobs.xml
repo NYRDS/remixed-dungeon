@@ -102,6 +102,11 @@
   <string name="Mimic_Gender">mâle</string>
   <string name="Mimic_Name_Objective">mime</string>
   <string name="Mimic_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Dans les donjons, ils prennent très souvent la forme de coffres, car ils savent comment attirer les aventuriers.\";</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">mime</string>
+  <string name="MimicPie_Gender">mâle</string>
+  <string name="MimicPie_Name_Objective">mime</string>
+  <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs.;</string>
   <!--STRINGS OF Monk CLASS-->
   <string name="Monk_Name">moine nain</string>
   <string name="Monk_Gender">mâle</string>

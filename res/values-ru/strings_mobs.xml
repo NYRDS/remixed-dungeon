@@ -104,6 +104,12 @@
     <string name="Mimic_Name_Objective">мимика</string>
     <string name="Mimic_Desc">Мимики - магические существа, которые могут принимать любую форму по желанию. В подземельях мимики почти всегда принимают форму сундуков, они ведь знают, как лучше всего привлечь искателя приключений.</string>
 
+    <!-- STRINGS OF MimicPie CLASS -->
+    <string name="MimicPie_Name">мимик</string>
+    <string name="MimicPie_Gender">masculine</string>
+    <string name="MimicPie_Name_Objective">мимика</string>
+    <string name="MimicPie_Desc">Мимики - магические существа, которые могут принимать любую форму по желанию. Этот похож на большой вкусный пирог.</string>
+
     <!-- STRINGS OF Monk CLASS -->
     <string name="Monk_Name">дворф-монах</string>
     <string name="Monk_Gender">masculine</string>
