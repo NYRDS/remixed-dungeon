@@ -103,6 +103,7 @@ public class Assets {
 	public static final String RATKING = "ratking.png";
 	public static final String HEDGEHOG = "hedgehog.png";
 	public static final String MIMIC = "mimic.png";
+	public static final String MIMIC_PIE = "mimic_pie.png";
 	public static final String SHADOW = "shadow.png";
 	
 	public static final String SPIDER_SERVANT = "spider_servant.png";

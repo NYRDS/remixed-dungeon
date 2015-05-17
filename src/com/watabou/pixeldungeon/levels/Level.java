@@ -419,7 +419,7 @@ public abstract class Level implements Bundlable {
 	public void spawnMob(Mob mob) {
 		mobs.add( mob );
 		Actor.occupyCell( mob );
-		GameScene.add(mob);
+		GameScene.add( mob, 1 );
 	}
 	
 	protected Mob createMob(){

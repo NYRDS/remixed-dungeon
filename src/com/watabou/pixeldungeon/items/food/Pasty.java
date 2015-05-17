@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Pasty extends Food {
 
-	{
+	public Pasty() {
 		image  = ItemSpriteSheet.PASTY;
 		energy = Hunger.STARVING;
 	}

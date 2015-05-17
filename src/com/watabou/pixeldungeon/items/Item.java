@@ -537,4 +537,8 @@ public class Item implements Bundlable {
 	public void level(int level) {
 		this.level = Scrambler.scramble(level);
 	}
+
+	public Item pick(Char ch,int pos) {
+		return this;
+	}
 }

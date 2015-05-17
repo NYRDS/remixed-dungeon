@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.ScaleArmor;
+import com.watabou.pixeldungeon.items.food.PseudoPasty;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.weapon.melee.CompoundBow;
@@ -125,6 +126,7 @@ public class ModderLevel extends RegularLevel {
 		addItemToSpawn(new WarHammer());
 		addItemToSpawn(new Spear());
 		
+		addItemToSpawn(new PseudoPasty());
 		
 		super.createItems();
 	}

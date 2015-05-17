@@ -44,7 +44,7 @@ import com.watabou.utils.Random;
 
 public abstract class Mob extends Char {
 
-	{
+	public Mob() {
 		readCharData();
 	}
 

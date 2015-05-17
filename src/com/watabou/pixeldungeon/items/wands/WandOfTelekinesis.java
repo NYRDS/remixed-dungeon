@@ -27,16 +27,12 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfTelekinesis extends Wand {
@@ -129,24 +125,15 @@ public class WandOfTelekinesis extends Wand {
 		}
 	}
 	
-	private void transport( Heap heap ) {
+	private void transport(Heap heap) {
 		Item item = heap.pickUp();
-		if (item.doPickUp( curUser )) {
-			
-			if (item instanceof Dewdrop) {
-
+		item = item.pick(curUser,heap.pos);
+		if (item != null) {
+			if (item.doPickUp(curUser)) {
+				curUser.itemPickedUp(item);
 			} else {
-
-				if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade)item).isKnown()) ||
-					(item instanceof PotionOfStrength && ((PotionOfStrength)item).isKnown())) {
-					GLog.p( TXT_YOU_NOW_HAVE, item.name() );
-				} else {
-					GLog.i( TXT_YOU_NOW_HAVE, item.name() );
-				}
+				Dungeon.level.drop(item, curUser.pos).sprite.drop();
 			}
-
-		} else {
-			Dungeon.level.drop( item, curUser.pos ).sprite.drop();
 		}
 	}
 	
