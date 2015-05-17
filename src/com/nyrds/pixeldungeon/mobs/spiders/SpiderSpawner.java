@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
@@ -29,6 +30,11 @@ public class SpiderSpawner {
 	}
 	
 	static public void spawnEgg(Level level,int position) {
+		
+			if(Actor.findChar(position) instanceof SpiderEgg) {
+				return;
+			}
+		
 			Mob mob = new SpiderEgg();
 			mob.pos = position;
 			mob.state = mob.SLEEPEING;

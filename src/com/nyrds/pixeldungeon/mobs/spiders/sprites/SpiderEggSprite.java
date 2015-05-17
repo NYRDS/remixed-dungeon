@@ -22,9 +22,7 @@ public class SpiderEggSprite extends MobSprite {
 		attack = new Animation( 1, false );
 		attack.frames( frames, 0 );
 		
-		zap = attack.clone();
-		
-		die = new Animation( 1, false );
+		die = new Animation( 10, false );
 		die.frames( frames, 0 );
 		
 		play( idle );

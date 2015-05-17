@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 
 public class SpiderQueen extends Mob {
 	
-	{
+	public SpiderQueen() {
 		spriteClass = SpiderQueenSprite.class;
 		
 		hp(ht(1));
@@ -24,8 +24,8 @@ public class SpiderQueen extends Mob {
 	
 	@Override
 	protected boolean act(){
-		if(Random.Int(0, 20) == 0) {
-			SpiderSpawner.spawnEgg(Dungeon.level, pos);
+		if(Random.Int(0, 20) == 0 && !SpiderEgg.eggLaid(pos)) {
+			SpiderEgg.layEgg(pos);
 		}
 		
 		return super.act();
