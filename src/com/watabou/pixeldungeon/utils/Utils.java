@@ -30,6 +30,7 @@ public class Utils {
 	static private Class <?> getR_Field(String field){
 		try {
 			return Class.forName("com.nyrds.pixeldungeon.ml.R$"+field);
+			//return Class.forName("com.nyrds.pixeldungeon.test.R$"+field);
 		} catch (ClassNotFoundException e) {// well this is newer happens :) 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -67,8 +68,7 @@ public class Utils {
 		}
 		
 		try{
-			String[] paramValues = Game.getVars(stringArrays.getField(className+"_"+paramName).getInt(null));
-			return paramValues;
+			return Game.getVars(stringArrays.getField(className+"_"+paramName).getInt(null));
 		}catch (NoSuchFieldException e){
 			if(warnIfAbsent){
 				GLog.w("no defination for  %s_%s :(", className, paramName);
@@ -109,7 +109,7 @@ public class Utils {
 		return defaultValue;
 	}
 
-	static public int genderFromString(String sGender){
+	public static int genderFromString(String sGender) {
 		int gender = Utils.NEUTER;
 		
 		if(sGender.equals("masculine")){

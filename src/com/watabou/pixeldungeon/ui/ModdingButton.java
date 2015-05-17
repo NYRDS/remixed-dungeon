@@ -1,9 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.ModdingMode;
-import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;

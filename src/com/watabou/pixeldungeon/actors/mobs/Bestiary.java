@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.utils.Random;
 

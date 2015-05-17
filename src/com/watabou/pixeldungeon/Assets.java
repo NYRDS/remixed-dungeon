@@ -51,6 +51,8 @@ public class Assets {
 	public static final String BERSERK_IN_FURY = "berserk_in_fury.png";
 	public static final String GLADIATOR = "gladiator.png";
 	public static final String MAGE = "mage.png";
+	public static final String BATTLEMAGE = "battle_mage.png";
+	public static final String MAGE_WARLOCK = "mage_warlock.png";
 	public static final String ROGUE = "rogue.png";
 	public static final String HUNTRESS = "ranger.png";
 	public static final String SNIPER = "sniper.png";
@@ -116,8 +118,8 @@ public class Assets {
 	public static final String ITEMS = "items.png";
 	public static final String PLANTS = "plants.png";
 
-	public static final String TILES_SEWERS = "tiles_spider_nest.png";
-	//public static final String TILES_SEWERS = "tiles0.png";
+	//public static final String TILES_SEWERS = "tiles_spider_nest.png";
+	public static final String TILES_SEWERS = "tiles0.png";
 	public static final String TILES_PRISON = "tiles1.png";
 	public static final String TILES_CAVES = "tiles2.png";
 	public static final String TILES_CITY = "tiles3.png";
