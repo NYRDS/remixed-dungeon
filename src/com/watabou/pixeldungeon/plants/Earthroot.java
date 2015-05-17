@@ -22,6 +22,8 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
@@ -30,6 +32,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
@@ -39,22 +42,19 @@ public class Earthroot extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Earthroot_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Earthroot_Desc);
 	
-	{
+	Earthroot() {
 		image = 5;
 		plantName = TXT_NAME;
 	}
-	
-	@Override
-	public void activate( Char ch ) {
-		super.activate( ch );
-		
+
+	public void effect(int pos, Char ch) {
 		if (ch != null) {
-			Buff.affect( ch, Armor.class ).level = ch.ht();
+			Buff.affect(ch, Armor.class).level = ch.ht();
 		}
-		
+
 		if (Dungeon.visible[pos]) {
-			CellEmitter.bottom( pos ).start( EarthParticle.FACTORY, 0.05f, 8 );
-			Camera.main.shake( 1, 0.4f );
+			CellEmitter.bottom(pos).start(EarthParticle.FACTORY, 0.05f, 8);
+			Camera.main.shake(1, 0.4f);
 		}
 	}
 	

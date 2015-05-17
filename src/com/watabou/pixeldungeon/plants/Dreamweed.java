@@ -37,18 +37,13 @@ public class Dreamweed extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Dreamweed_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Dreamweed_Desc);
 	
-	{
+	Dreamweed() {
 		image = 3;
 		plantName = TXT_NAME;
 	}
 	
-	@Override
-	public void activate( Char ch ) {
-		super.activate( ch );
-		
-		if (ch != null) {
-			GameScene.add( Blob.seed( pos, 300 + 20 * Dungeon.depth, ConfusionGas.class ) );
-		}
+	public void effect(int pos, Char ch) {
+		GameScene.add( Blob.seed( pos, 300 + 20 * Dungeon.depth, ConfusionGas.class ) );
 	}
 	
 	@Override

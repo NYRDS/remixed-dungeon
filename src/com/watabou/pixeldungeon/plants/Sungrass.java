@@ -39,15 +39,12 @@ public class Sungrass extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Sungrass_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Sungrass_Desc);
 	
-	{
+	Sungrass() {
 		image = 4;
 		plantName = TXT_NAME;
 	}
 	
-	@Override
-	public void activate( Char ch ) {
-		super.activate( ch );
-		
+	public void effect( int pos, Char ch ) {
 		if (ch != null) {
 			Buff.affect( ch, Health.class );
 		}

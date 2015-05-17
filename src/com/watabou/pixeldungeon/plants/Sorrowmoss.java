@@ -36,15 +36,12 @@ public class Sorrowmoss extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Sorrowmoss_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Sorrowmoss_Desc);
 	
-	{
+	Sorrowmoss() {
 		image = 2;
 		plantName = TXT_NAME;
 	}
 	
-	@Override
-	public void activate( Char ch ) {
-		super.activate( ch );
-		
+	public void effect(int pos, Char ch ) {
 		if (ch != null) {
 			Buff.affect( ch, Poison.class ).set( Poison.durationFactor( ch ) * (4 + Dungeon.depth / 2) );
 		}

@@ -22,6 +22,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -38,50 +39,48 @@ public class Firebloom extends Plant {
 
 	private static final String TXT_NAME = Game.getVar(R.string.Firebloom_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Firebloom_Desc);
-	{
+
+	Firebloom() {
 		image = 0;
 		plantName = TXT_NAME;
 	}
-	
-	@Override
-	public void activate( Char ch ) {
-		super.activate( ch );
-		
-		GameScene.add( Blob.seed( pos, 2, Fire.class ) );
-		
+
+	public void effect(int pos, Char ch) {
+		GameScene.add(Blob.seed(pos, 2, Fire.class));
+
 		if (Dungeon.visible[pos]) {
-			CellEmitter.get( pos ).burst( FlameParticle.FACTORY, 5 );
+			CellEmitter.get(pos).burst(FlameParticle.FACTORY, 5);
 		}
 	}
-	
+
 	@Override
 	public String desc() {
 		return TXT_DESC;
 	}
-	
+
 	public static class Seed extends Plant.Seed {
 		{
 			plantName = TXT_NAME;
-			
+
 			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_FIREBLOOM;
-			
+
 			plantClass = Firebloom.class;
 			alchemyClass = PotionOfLiquidFlame.class;
 		}
-		
+
 		@Override
 		public String desc() {
 			return TXT_DESC;
 		}
-		
+
 		@Override
-		public void execute( Hero hero, String action ) {
-			
-			super.execute( hero, action );
-			
-			if (action.equals( Food.AC_EAT )) {
-				Buff.affect(hero, Burning.class).reignite( hero );
+		public void execute(Hero hero, String action) {
+
+			super.execute(hero, action);
+
+			if (action.equals(Food.AC_EAT)) {
+				Buff.affect(hero, Burning.class).reignite(hero);
 				Buff.affect(hero, Speed.class, Speed.DURATION);
 			}
 		}

@@ -25,6 +25,8 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -38,6 +40,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -58,7 +61,9 @@ public class Plant implements Bundlable {
 		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.WARDEN) {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 		}
-
+		
+		effect(pos, ch);
+		
 		wither();
 	}
 
@@ -95,6 +100,10 @@ public class Plant implements Bundlable {
 
 	public String desc() {
 		return null;
+	}
+	
+	public void effect(int pos, Char ch) {
+		
 	}
 
 	public static class Seed extends Item {

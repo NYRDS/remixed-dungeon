@@ -40,15 +40,13 @@ public class Icecap extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Icecap_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Icecap_Desc);
 	
-	{
+	Icecap() {
 		image = 1;
 		plantName = TXT_NAME;
 	}
 	
 	@Override
-	public void activate( Char ch ) {
-		super.activate( ch );
-		
+	public void effect(int pos, Char ch ) {
 		PathFinder.buildDistanceMap( pos, BArray.not( Level.losBlocking, null ), 1 );
 		
 		Fire fire = (Fire)Dungeon.level.blobs.get( Fire.class );

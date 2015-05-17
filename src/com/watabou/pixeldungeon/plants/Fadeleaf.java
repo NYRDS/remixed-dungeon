@@ -37,15 +37,12 @@ public class Fadeleaf extends Plant {
 	private static final String TXT_NAME = Game.getVar(R.string.Fadeleaf_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Fadeleaf_Desc);
 	
-	{
+	Fadeleaf () {
 		image = 6;
 		plantName = TXT_NAME;
 	}
 	
-	@Override
-	public void activate( Char ch ) {
-		super.activate( ch );
-		
+	public void effect(int pos, Char ch) {
 		if (ch instanceof Hero) {
 			
 			ScrollOfTeleportation.teleportHero( (Hero)ch );
@@ -76,7 +73,7 @@ public class Fadeleaf extends Plant {
 		
 		if (Dungeon.visible[pos]) {
 			CellEmitter.get( pos ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
-		}
+		}		
 	}
 	
 	@Override
