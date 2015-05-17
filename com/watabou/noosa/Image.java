@@ -18,10 +18,13 @@
 package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
+
 import android.graphics.RectF;
+
 import com.watabou.gltextures.TextureCache;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class Image extends Visual {
 
@@ -144,6 +147,10 @@ public class Image extends Visual {
 		super.draw();
 
 		NoosaScript script = NoosaScript.get();
+		
+		if(texture == null) {
+			GLog.i("null texture");
+		}
 		
 		texture.bind();
 		
