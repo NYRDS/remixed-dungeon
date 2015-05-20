@@ -20,6 +20,8 @@ public class MimicPie extends Mob {
 		
 		baseSpeed = 1.25f;
 		
+		flying = true;
+		
 		level = Dungeon.depth;
 	}
 	

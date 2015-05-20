@@ -45,6 +45,7 @@ public class PseudoPasty extends Food {
 		
 		MimicPie mob = new MimicPie();
 		mob.pos = spawnPos;
+		mob.state = mob.WANDERING;
 		mob.adjustStats(Dungeon.depth);
 		
 		Dungeon.level.spawnMob( mob );

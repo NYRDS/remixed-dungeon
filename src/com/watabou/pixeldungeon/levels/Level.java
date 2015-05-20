@@ -54,6 +54,7 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.food.PseudoPasty;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
@@ -217,6 +218,11 @@ public abstract class Level implements Bundlable {
 			if( Random.Int(5) == 0) 
 			{
 				addItemToSpawn(Generator.random(Generator.Category.RANGED));
+			}
+
+			if( Random.Int(5) == 0) 
+			{
+				addItemToSpawn(new PseudoPasty());
 			}
 			
 			if( Random.Int(2) == 0) 

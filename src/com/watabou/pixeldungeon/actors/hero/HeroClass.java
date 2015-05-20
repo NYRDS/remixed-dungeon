@@ -148,6 +148,7 @@ public enum HeroClass {
 		hero.collect(new PotionOfLevitation().identify());
 		hero.collect(new WandOfTelekinesis().identify());
 
+		hero.collect(new ArmorKit());
 		hero.collect(new CommonArrow(100));
 		hero.collect(new Quiver());
 		hero.collect(new SeedPouch());
