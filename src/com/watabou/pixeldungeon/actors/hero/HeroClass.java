@@ -357,7 +357,13 @@ public enum HeroClass {
 		
 		if (spriteKind.equals(Assets.MAGE))
 			return true;
+		
+		if (spriteKind.equals(Assets.BATTLEMAGE))
+			return true;
 
+		if (spriteKind.equals(Assets.MAGE_WARLOCK))
+			return true;
+		
 		if (spriteKind.equals(Assets.ROGUE))
 			return true;
 
