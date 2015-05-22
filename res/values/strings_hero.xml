@@ -67,7 +67,7 @@
         <item>Elves start with 15 HP and 9 STR.</item>
         <item>Elves immune to rooting.</item>
         <item>Elves start with a upgraded wooden bow and bunch of arrows.</item>
-        <item>Elves are extremly proficient with bows and agile.</item>
+        <item>Elves are extremely proficient with bows and agile.</item>
         <item>Elves are less proficient with melee weapons.</item>>
     </string-array>
 
@@ -91,6 +91,6 @@
     <string name="HeroSubClass_NameScout">scout</string>
     <string name="HeroSubClass_DescScout">Elven _Scouts_ are masters of stealth. Trampling a high grass grants them a temporary invisibility buff. Also they even faster than regular Elves.</string>
     <string name="HeroSubClass_NameShaman">shaman</string>
-    <string name="HeroSubClass_DescShaman">Elven _Shamans_ can use wands as melee weapon. Successul hit have chance to activate wand power on target without using charge.</string>
+    <string name="HeroSubClass_DescShaman">Elven _Shamans_ can use wands as melee weapon. Successful hit have chance to activate wand power on target without using charge.</string>
     
 </resources>
