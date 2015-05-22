@@ -47,7 +47,7 @@ public class WandOfTelekinesis extends Wand {
 		
 		boolean mapUpdated = false;
 		
-		int maxDistance = level() + 4;
+		int maxDistance = effectiveLevel() + 4;
 		Ballistica.distance = Math.min( Ballistica.distance, maxDistance );
 		
 		Char ch;

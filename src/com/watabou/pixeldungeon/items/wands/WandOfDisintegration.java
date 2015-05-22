@@ -45,7 +45,7 @@ public class WandOfDisintegration extends Wand {
 		
 		boolean terrainAffected = false;
 		
-		int level = level();
+		int level = effectiveLevel();
 		
 		int maxDistance = distance();
 		Ballistica.distance = Math.min( Ballistica.distance, maxDistance );
@@ -94,7 +94,7 @@ public class WandOfDisintegration extends Wand {
 	}
 	
 	private int distance() {
-		return level() + 4;
+		return effectiveLevel() + 4;
 	}
 	
 	@Override

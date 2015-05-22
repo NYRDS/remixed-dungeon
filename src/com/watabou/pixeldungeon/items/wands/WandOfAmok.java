@@ -40,7 +40,7 @@ public class WandOfAmok extends Wand {
 			if (ch == Dungeon.hero) {
 				Buff.affect( ch, Vertigo.class, Vertigo.duration( ch ) );
 			} else {
-				Buff.affect( ch, Amok.class, 3f + level() );
+				Buff.affect( ch, Amok.class, 3f + effectiveLevel() );
 			}
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfAmok_Info1));

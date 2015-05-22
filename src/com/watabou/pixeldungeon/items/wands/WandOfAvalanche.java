@@ -50,7 +50,7 @@ public class WandOfAvalanche extends Wand {
 		
 		Sample.INSTANCE.play( Assets.SND_ROCKS );
 		
-		int level = level();
+		int level = effectiveLevel();
 		
 		Ballistica.distance = Math.min( Ballistica.distance, 8 + level );
 		

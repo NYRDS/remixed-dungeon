@@ -42,7 +42,7 @@ public class WandOfFlock extends Wand {
 
 	@Override
 	protected void onZap( int cell ) {
-		int level = level();
+		int level = effectiveLevel();
 		
 		int n = level + 2;
 		

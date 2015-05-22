@@ -207,7 +207,7 @@ public abstract class Wand extends KindOfWeapon {
 		}
 	}
 
-	public int level() {
+	public int effectiveLevel() {
 		if (charger != null) {
 			Power power = charger.target.buff(Power.class);
 			return power == null ? super.level() : Math.max(super.level() + power.level, 0);
@@ -323,9 +323,9 @@ public abstract class Wand extends KindOfWeapon {
 	}
 
 	private void calculateDamage() {
-		int tier = 1 + level() / 3;
+		int tier = 1 + effectiveLevel() / 3;
 		MIN = tier;
-		MAX = (tier * tier - tier + 10) / 2 + level();
+		MAX = (tier * tier - tier + 10) / 2 + effectiveLevel();
 	}
 
 	protected void fx(int cell, Callback callback) {
@@ -483,7 +483,7 @@ public abstract class Wand extends KindOfWeapon {
 
 		protected void delay() {
 			float time2charge = ((Hero) target).heroClass == HeroClass.MAGE ? TIME_TO_CHARGE
-					/ (float) Math.sqrt(1 + level())
+					/ (float) Math.sqrt(1 + effectiveLevel())
 					: TIME_TO_CHARGE;
 			spend(time2charge);
 		}
