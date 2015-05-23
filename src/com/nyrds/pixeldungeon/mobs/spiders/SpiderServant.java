@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
 public class SpiderServant extends Mob {

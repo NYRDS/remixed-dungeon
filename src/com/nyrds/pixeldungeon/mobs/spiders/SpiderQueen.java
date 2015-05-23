@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
