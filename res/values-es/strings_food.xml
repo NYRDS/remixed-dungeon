@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">COMER</string>
+  <string name="Food_Message">¡Esa comida estaba deliciosa!</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">ración de comida</string>
+  <string name="Ration_Info">Nada raro por aquí: carne seca, algunas galletas... Cosas así.</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">carne a la brasa</string>
+  <string name="ChargrilledMeat_Info">Parece un bistec decente.</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">carpaccio congelado</string>
+  <string name="FrozenCarpaccio_Info">Es un pedazo de carne cruda congelada. La única manera de comérsela es cortando finas rebanadas. Y de esa forma está sorprendentemente buena.</string>
+  <string name="FrozenCarpaccio_Info1">¡Ves como tus manos se vuelven invisibles!</string>
+  <string name="FrozenCarpaccio_Info2">¡Sientes que tu piel se endurece!</string>
+  <string name="FrozenCarpaccio_Info3">¡Refrescante!</string>
+  <string name="FrozenCarpaccio_Info4">¡Te encuentras mejor!</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">carne misteriosa</string>
+  <string name="MysteryMeat_Info">¡Cómelo bajo tu propia responsabilidad!</string>
+  <string name="MysteryMeat_Info1">¡Está caliente!</string>
+  <string name="MysteryMeat_Info2">¡No sientes las piernas!</string>
+  <string name="MysteryMeat_Info3">No te sientes bien.</string>
+  <string name="MysteryMeat_Info4">Estás lleno.</string>
+  <string name="MysteryMeat_Message">Esa comida tenia un sabor... extraño.</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">¡repugnante!</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">carne podrida</string>
+  <string name="RottenMeat_Info">trozo de carne podrida</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">empanada podrida</string>
+  <string name="RottenPasty_Info">esa empanada tiene una pinta asquerosa</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">ración podrida</string>
+  <string name="RottenRation_Info">en algún momento podría haberse comido</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">ración de comida demasiado cara</string>
+  <string name="OverpricedRation_Info">Es exactamente igual que una ración de comida, pero más pequeña.</string>
+  <string name="OverpricedRation_Message">Esa comida estaba buena.</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">empanada</string>
+  <string name="Pasty_Info">Esto es una autentica empanada con el tradicional relleno de carne y patata.</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">empanada</string>
+  <string name="PseudoPasty_Info">Esto es una auténtica empanada con el tradicional relleno de carne y patata.</string>
+</resources>

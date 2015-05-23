@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/Wands-->
+  <!--STRINGS OF Wand CLASS-->
+  <string name="Wand_Name">varita %s</string>
+  <string name="Wand_ACZap">Disparar</string>
+  <string name="Wand_Wood">Esta fina varita de %s está caliente al tacto. ¿Quién sabe que hará cuando sea utilizada?</string>
+  <string name="Wand_Damage">Cuando esta varita es utilizada como arma cuerpo a cuerpo, su promedio de daño es de %d puntos por golpe.</string>
+  <string name="Wand_Weapon">Puedes usar esta vara como arma cuerpo a cuerpo.</string>
+  <string name="Wand_Fizzles">tu varita chisporrotea; debe de haberse quedado sin cargas</string>
+  <string name="Wand_SelfTarget">No puedes apuntarte a ti mismo</string>
+  <string name="Wand_Prompt">Escoge una dirección para disparar</string>
+  <string-array name="Wand_Wood_Types">
+    <item>acebo</item>
+    <item>tejo</item>
+    <item>ébano</item>
+    <item>cerezo</item>
+    <item>teca</item>
+    <item>serbal</item>
+    <item>sauce</item>
+    <item>caoba</item>
+    <item>bambú</item>
+    <item>amaranto</item>
+    <item>roble</item>
+    <item>abedul</item>
+  </string-array>
+  <!--STRINGS OF WandOfAmok CLASS-->
+  <string name="WandOfAmok_Name">Varita de Locura</string>
+  <string name="WandOfAmok_Info">La luz morada de esta varita hará que el objetivo corra fuera de control atacando aleatoriamente a las criaturas cercanas.</string>
+  <string name="WandOfAmok_Info1">no ha pasado nada</string>
+  <!--STRINGS OF WandOfAvalanche CLASS-->
+  <string name="WandOfAvalanche_Name">Varita de Avalancha</string>
+  <string name="WandOfAvalanche_Info">Cuando un proyectil de esta varita golpee un muro (u otro objeto sólido) causará una avalancha de piedras, dañando y aturdiendo a todas las criaturas del área afectada.</string>
+  <string name="WandOfAvalanche_Info1">Te has suicidado con tu propia Varita de Avalancha...</string>
+  <!--STRINGS OF WandOfBlink CLASS-->
+  <string name="WandOfBlink_Name">Varita de Destello</string>
+  <string name="WandOfBlink_Info">Esta varita te permite teletransportarte en la dirección elegida. Las criaturas y los obstáculos bloquearán el teletransporte.</string>
+  <!--STRINGS OF WandOfDisintegration CLASS-->
+  <string name="WandOfDisintegration_Name">Varita de Desintegración</string>
+  <string name="WandOfDisintegration_Info">Esta varita emite un haz de energía destructiva, que atraviesa todas las criaturas en su camino. Cuantas más blancos golpee, más daño causará a cada uno de ellos.</string>
+  <!--STRINGS OF WandOfFirebolt CLASS-->
+  <string name="WandOfFirebolt_Name">Varita de Fuego</string>
+  <string name="WandOfFirebolt_Info">Esta varita desata ráfagas de fuego mágico. Se prenderá el terreno inflamable y dañará y quemará las criaturas a las que golpee.</string>
+  <string name="WandOfFirebolt_Info1">Te has suicidado con tu propia Varita de Fuego...</string>
+  <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="WandOfFlock_Name">Varita de Rebaño</string>
+  <string name="WandOfFlock_Info">Un movimiento de esta varita convoca un rebaño de ovejas mágicas, creando temporalmente un obstáculo impenetrable.</string>
+  <string name="Sheep_Name">oveja</string>
+  <string name="Sheep_Name_Objective">oveja</string>
+  <string name="Sheep_Gender">femenino</string>
+  <string name="Sheep_Desc">Esta es una oveja mágica. ¿Qué tiene de mágica? No la puedes matar. Se quedará ahí  hasta que por arte de magia se desvanezca. Mientras tanto rumia con la mirada perdida.</string>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>¡Baa!</item>
+    <item>¿Baa?</item>
+    <item>Baa.</item>
+    <item>Baa...</item>
+    <item>Bee...</item>
+    <item>Ble...</item>
+  </string-array>
+  <!--STRINGS OF WandOfLightning CLASS-->
+  <string name="WandOfLightning_Name">Varita de Relámpago</string>
+  <string name="WandOfLightning_Info">Esta varita evoca arcos mortales de electricidad, que hacen daño a varias criaturas que estén paradas cerca una de otra.</string>
+  <string name="WandOfLightning_Info1">Te has suicidado con tu propia Varita de Relámpago...</string>
+  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_Name">Varita de Misil Magico</string>
+  <string name="WandOfMagicMissile_Info">Esta varita lanza misiles de energía mágica pura, haciendo daño moderado a una criatura objetivo.</string>
+  <string name="WandOfMagicMissile_ACDisenchant">DESENCANTAR</string>
+  <string name="WandOfMagicMissile_Info1">Te has suicidado con tu propia Varita de Misil Mágico...</string>
+  <string name="WandOfMagicMissile_SelectWand">Selecciona una varita para mejorar</string>
+  <string name="WandOfMagicMissile_Desinchanted">desencantaste la Varita de Misil Mágico y usaste su esencia para mejorar tu %s</string>
+  <!--STRINGS OF WandOfPoison CLASS-->
+  <string name="WandOfPoison_Name">Varita de Veneno</string>
+  <string name="WandOfPoison_Info">El vil disparo de este retorcido pedazo de madera impregnará a su objetivo con un veneno mortal. Una criatura que ha sido envenenada sufrirá daño periódico hasta que el efecto termine. La duración del efecto se incrementa con el nivel del bastón.</string>
+  <string name="WandOfPoison_Info1">No pasó nada</string>
+  <!--STRINGS OF WandOfRegrowth CLASS-->
+  <string name="WandOfRegrowth_Name">Varita de Vegetación</string>
+  <string name="WandOfRegrowth_Info">\"Cuando la vida termina, nueva vida siempre empieza a crecer... ¡El ciclo eterno siempre permanece!\"</string>
+  <string name="WandOfRegrowth_Info1">No pasó nada.</string>
+  <!--STRINGS OF WandOfSlowness CLASS-->
+  <string name="WandOfSlowness_Name">Varita de Lentitud</string>
+  <string name="WandOfSlowness_Info">Esta vara provocará que una criatura se mueva y ataque a la mitad de su velocidad normal hasta que el efecto termine.</string>
+  <string name="WandOfSlowness_Info1">no pasó nada</string>
+  <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <string name="WandOfTelekinesis_Name">Varita de Telequinesis</string>
+  <string name="WandOfTelekinesis_Info">Las olas de fuerza mágica de esta varita afectarán a todos los elementos en su camino activando trampas, pisando vegetación alta, abriendo puertas cerradas y cerrando las abiertas. También empujan hacía atrás a los monstruos.</string>
+  <string name="WandOfTelekinesis_YouNowHave">Has transportado mágicamente %s a tu mochila</string>
+  <!--STRINGS OF WandOfTeleportation CLASS-->
+  <string name="WandOfTeleportation_Name">Varita de Teletransportación</string>
+  <string name="WandOfTeleportation_Info">Un disparo de esta varita teletransportará a una criatura en contra de su voluntad a un lugar al azar en el mismo nivel.</string>
+  <string name="WandOfTeleportation_Info1">%1$s teletransportado %2$s a algún lugar</string>
+  <string name="WandOfTeleportation_Info2">no pasó nada</string>
+</resources>

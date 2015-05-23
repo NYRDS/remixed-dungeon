@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">PLANTAR</string>
+  <string name="Plant_Info">Tira esta semilla en el lugar dónde quieres que creza %1$s.\n\n%2$s</string>
+  <string name="Plant_Seed">semilla de %s</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">Hierbasueño</string>
+  <string name="Dreamweed_Desc">Al tocar una Hierbasueño, esta segrega una brillante nube de gas desconcertante.</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">Tierraíz</string>
+  <string name="Earthroot_Desc">Cuando una criatura toca una Tierraíz, sus raíces le otorgan una armadura orgánica.</string>
+  <string name="Earthroot_Buff">Armadura orgánica</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">Hojaesfuma</string>
+  <string name="Fadeleaf_Desc">Tocar una Hojaesfuma transportará a cualquier critatura a un lugar al azar del nivel actual. </string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">Florardiente</string>
+  <string name="Firebloom_Desc">Cuando algo toca una Florardiente, arde en llamas.</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">Heladora</string>
+  <string name="Icecap_Desc">Al tocar una Heladora, esta suelta un polen, el cual congela todo a su alrededor.</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">Musgohiriente</string>
+  <string name="Sorrowmoss_Desc">Un musgohiriente es una flor (no un musgo) con pétalos como cuchillas, cubiertas de veneno mortal.</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">Curasol</string>
+  <string name="Sungrass_Desc">El Curasol es conocido por las propiedades curativas de su savia.</string>
+  <string name="Sungrass_Buff">Curación natural</string>
+</resources>

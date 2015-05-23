@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">anillo %s</string>
+  <string name="Ring_Info">Este anillo está adornado con una gran gema %s que brilla en la oscuridad. ¿Quién sabe que efecto tendrá al usarlo?</string>
+  <string name="Ring_Identify">te has familiarizado suficientemente con tu %1$s y lo identificas. Es %2$s.</string>
+  <string-array name="Ring_Gems">
+    <item>de diamante</item>
+    <item>de ópalo</item>
+    <item>de granate</item>
+    <item>de rubí</item>
+    <item>de amatista</item>
+    <item>de topacio</item>
+    <item>de ónix</item>
+    <item>de turmalina</item>
+    <item>de esmeralda</item>
+    <item>de safiro</item>
+    <item>de cuarzo</item>
+    <item>de ágata</item>
+  </string-array>
+  <string name="Ring_Info1">Solo puedes llevar 2 anillos a la vez</string>
+  <string name="Ring_Info2">Tu %s  se aprieta dolorosamente alrededor de tu dedo </string>
+  <string name="Ring_Info3a">%1$s\n\nEl %2$s está en tu dedo %3$s.</string>
+  <string name="Ring_Info3b">, y como esta maldito, no puedes quitártelo</string>
+  <string name="Ring_Info4">%1$s\n\nPuedes sentir una malevolente magia acechando dentro del %2$s.</string>
+  <string name="Ring_BuffKnown">Esto es un %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">Anillo de Puntería</string>
+  <string name="RingOfAccuracy_Info">Este anillo aumenta la probabilidad de golpear al enemigo.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">Anillo de Detección</string>
+  <string name="RingOfDetection_Info">Este anillo permitirá al portador detectar objetos secretos, como puertas y trampas, sin malgastar tiempo en buscar. Un anillo de detección degradado embotará tus sentidos, haciendo más difícil encontrar secretos por mucho que busques.</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">Anillo Elemental</string>
+  <string name="RingOfElements_Info">Este anillo te da protección ante diferentes elementos, como fuego, electricidad, gas... etc. Además reduce la duración de los efectos negativos. </string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">Anillo de Evasión</string>
+  <string name="RingOfEvasion_Info">Este anillo aumenta la probabilidad de esquivar los ataques enemigos. </string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">Anillo del Regateador</string>
+  <string name="RingOfHaggler_Info">De hecho este anillo no tiene ningún efecto mágico, pero demuestra a los tenderos y vendedores, que el dueño del anillo es miembro de El Gremio de los Ladrones. Normalmente estarán a favor de hacer un descuento a cambio de inmunidad temporal garantizada. Mejorar este anillo no dará ningún efecto adicional.</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">Anillo de Celeridad</string>
+  <string name="RingOfHaste_Info">Este anillo acelera el flujo del tiempo del portador, permitiéndole a uno llevar a cabo todas las acciones un poco mas rápido.</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">Anillo del Herbalismo</string>
+  <string name="RingOfHerbalism_Info">Este anillo incrementa tus probabilidades de recoger rocío y semillas de la hierba que pises.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">Anillo de Remendadura</string>
+  <string name="RingOfMending_Info">Este anillo incrementa las propiedades regenerativas del cuerpo, permitiéndole a uno recuperar la salud perdida a un ritmo acelerado. Los anillos degradados decrecerán o incluso detendrán la recuperación natural de salud.</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">Anillo de Poder</string>
+  <string name="RingOfPower_Info">Tus varitas se volverán más poderosas en el campo de energia que irradia este anillo. Los anillos de poder degradados debilitarán tus varitas.</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">Anillo de Saciedad</string>
+  <string name="RingOfSatiety_Info">Llevando este anillo puedes aguantar más sin comer. Un Anillo de Saciedad degradado causará el efecto contrario.</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">Anillo de Sombras</string>
+  <string name="RingOfShadows_Info">Será menos probable que los enemigos te noten si llevas este anillo. Los anillos de sombras degradados alertarán a enemigos que de otra manera no hubieran notado tu presencia.</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">Anillo de Espinas</string>
+  <string name="RingOfThorns_Info">Aunque este anillo no provee de espinas reales, el enemigo que te ataque será herido con una fracción del daño que inflige. Mejorar este anillo no dará ventajas adicionales.</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Anillo de Sangre de Piedra</string>
+  <string name="RingOfStoneWalking_Info">Este anillo hecho de piedra maciza parecería ordinario, si no fuera por la gota de sangre líquida latiendo en lugar de una gema.</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Encerrado en piedra. Para siempre.</string>
+</resources>

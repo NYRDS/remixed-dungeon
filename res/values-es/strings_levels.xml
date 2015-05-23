@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">¡Una placa de presión oculta hace clic!</string>
+  <string name="Level_TileChasm">Abismo</string>
+  <string name="Level_TileFloor">Planta</string>
+  <string name="Level_TileGrass">Hierba</string>
+  <string name="Level_TileWater">Agua</string>
+  <string name="Level_TileWall">Muro</string>
+  <string name="Level_TileClosedDoor">Puerta cerrada</string>
+  <string name="Level_TileOpenDoor">Puerta abierta</string>
+  <string name="Level_TileEntrance">Entrada a la profundidad</string>
+  <string name="Level_TileExit">Salida de la profundidad</string>
+  <string name="Level_TileEmbers">Ascuas</string>
+  <string name="Level_TileLockedDoor">Puerta cerrada</string>
+  <string name="Level_TilePedestal">Pedestal</string>
+  <string name="Level_TileBarricade">Barricada</string>
+  <string name="Level_TileHighGrass">Hierba alta</string>
+  <string name="Level_TileLockedExit">Salida bloqueada</string>
+  <string name="Level_TileUnlockedExit">Salida desbloqueada</string>
+  <string name="Level_TileSign">Señal</string>
+  <string name="Level_TileWell">Fuente</string>
+  <string name="Level_TileEmptyWell">Fuente vacía</string>
+  <string name="Level_TileStatue">Estatua</string>
+  <string name="Level_TileToxicTrap">Trampa de gas tóxico</string>
+  <string name="Level_TileFireTrap">Trampa de fuego</string>
+  <string name="Level_TileParalyticTrap">Trampa de gas paralizante</string>
+  <string name="Level_TilePoisonTrap">Trampa de dardo envenenado</string>
+  <string name="Level_TileAlarmTrap">Trampa de alarma</string>
+  <string name="Level_TileLightningTrap">Trampa de rayo</string>
+  <string name="Level_TileGrippingTrap">Trampa de movimiento</string>
+  <string name="Level_TileSummoningTrap">Trampa de invocación</string>
+  <string name="Level_TileInactiveTrap">Trampa activada</string>
+  <string name="Level_TileBookshelf">Estantería</string>
+  <string name="Level_TileAlchemy">Olla de alquimia</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">No puedes ver el fondo.</string>
+  <string name="Level_TileDescWater">Si estás ardiendo anda sobre el agua para apagar el fuego.</string>
+  <string name="Level_TileDescEntrance">Escaleras que llevan a la profundidad superior.</string>
+  <string name="Level_TileDescExit">Escaleras que llevan a la profundidad inferior.</string>
+  <string name="Level_TileDescEmbers">Las ascuas cubren el suelo.</string>
+  <string name="Level_TileDescHighGrass">La densa vegetación impide ver.</string>
+  <string name="Level_TileDescLockedDoor">Esta puerta está cerrada. Necesitas la llave adecuada para abrirla.</string>
+  <string name="Level_TileDescLockedExit">Unas pesadas barras bloquean las escaleras.</string>
+  <string name="Level_TileDescBarricade">La barricada de madera está bien apuntalada, pero se ha secado con los año. ¿Arderá?</string>
+  <string name="Level_TileDescSign">No puedes leer el texto desde aquí.</string>
+  <string name="Level_TileDescTrap">Andar sobre una placa de presión oculta activará la trampa.</string>
+  <string name="Level_TileDescInactiveTrap">La trampa ha sido activada con anterioridad y ya no supone un peligro.</string>
+  <string name="Level_TileDescStatue">Alguién intento decorar este lugar. Obviamente falló.</string>
+  <string name="Level_TileDescAlchemy">Suelta varias semillas para crear una poción.</string>
+  <string name="Level_TileDescEmptyWell">La fuente se ha secado.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileGrass">Musgo fluorescente</string>
+  <string name="Caves_TileHighGrass">Setas fluorescentes</string>
+  <string name="Caves_TileWater">Agua congelada.</string>
+  <string name="Caves_TileDescEntrance">La escalera lleva a la profundidad superior.</string>
+  <string name="Caves_TileDescExit">La escalera lleva a la profundidad inferior.</string>
+  <string name="Caves_TileDescHighGrass">Unas setas gigantescas bloquean la visión.</string>
+  <string name="Caves_TileDescDeco">La veta de algún material puede verse en la pared. ¿Oro?</string>
+  <string name="Caves_TileDescBookshelf">¿Quién necesita una estantería en una caverna?</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">Agua de color sospechoso</string>
+  <string name="City_TileHighGrass">Plantas de crecimiento alto</string>
+  <string name="City_TileDescEntrance">Una rampa lleva a la profundidad superior</string>
+  <string name="City_TileDescExit">Una rampa lleva a la profundidad inferior</string>
+  <string name="City_TileDescDeco">Faltan varios azulejos aquí.</string>
+  <string name="City_TileDescEmptySP">Una gruesa alfombra cubre el suelo.</string>
+  <string name="City_TileDescStatue">La estatua representa a varios enanos posando de forma heroica. </string>
+  <string name="City_TileDescBookshelf">Las filas de libros de distintas disciplinas llenan la estantería.</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">Lava fría</string>
+  <string name="Halls_TileGrass">musgofuego</string>
+  <string name="Halls_TileHighGrass">Hongobrasa</string>
+  <string name="Halls_TileStatue">Columna</string>
+  <string name="Halls_TileDescWater">Parece lava, pero está fría y probablemente sea segura de tocar.</string>
+  <string name="Halls_TileDescStatue">La columna está hecha de cráneos humanos. Increíble. </string>
+  <string name="Halls_TileDescBookshelf">Libros en antiguos idiomas humean en la estantería.</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">Lava fría</string>
+  <string name="LastLevel_TileGrass">musgofuego</string>
+  <string name="LastLevel_TileHighGrass">Hongobrasa</string>
+  <string name="LastLevel_TileStatue">Columna</string>
+  <string name="LastLevel_TileDescWater">Parece lava, pero está fría y probablemente sea segura de tocar.</string>
+  <string name="LastLevel_TileDescStatue">La columna está hecha de cráneos humanos. Increíble. </string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">Agua de color sospechoso</string>
+  <string name="LastShopLevel_TileHighGrass">Plantas de crecimiento alto</string>
+  <string name="LastShopLevel_TileDescEntrance">Una rampa lleva a la profundidad superior</string>
+  <string name="LastShopLevel_TileDescExit">Una rampa que baja hasta el Infierno.</string>
+  <string name="LastShopLevel_TileDescDeco">Faltan varias baldosas aquí.</string>
+  <string name="LastShopLevel_TileDescEmptySP">Una gruesa alfombra cubre el suelo.</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">Agua fría y oscura.</string>
+  <string name="Prison_TileDescDeco">Hay viejas manchas de sangre en el suelo.</string>
+  <string name="Prison_TileDescBookshelf">Esto probablemente sean los restos de la biblioteca de la prisión. ¿Arderá?</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">Agua turbia</string>
+  <string name="Sewer_TileDescDeco">Un musgo amarillento y húmedo cubre el suelo.</string>
+  <string name="Sewer_TileDescBookshelf">La estantería está llena de libros baratos e inútiles. ¿Arderá?</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">Selecciona la semilla que lanzar</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">Abismo</string>
+  <string name="Chasm_Yes">Sí, se lo que estoy haciendo</string>
+  <string name="Chasm_No">No, he cambiado de opinión</string>
+  <string name="Chasm_Jump">¿De verdad quieres saltar al abismo? Probablemente morirás.</string>
+  <string name="Chasm_Info">Caes hacia la muerte...</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">¡La trampa emite un desgarrador sonido que resuena por toda la mazmorra!</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">trampa eléctrica</string>
+  <string name="LightningTrap_Desc">Has muerto por la descarga de una trampa eléctrica...</string>
+</resources>

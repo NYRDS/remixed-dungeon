@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">¡Pronto tendremos una descripción más fiable!</string>
+  <string name="Mob_Died">Oyes algo morir a lo lejos.</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus">%s está durmiendo</string>
+  <string name="Mob_StaWanderingStatus">%s está deambulando</string>
+  <string name="Mob_StaHuntingStatus">%s está cazando</string>
+  <string name="Mob_StaFleeingStatus">%s está huyendo</string>
+  <string name="Mob_StaPassiveStatus">%s es pasivo</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">escorpión ácido</string>
+  <string name="Acidic_Gender">masculino</string>
+  <string name="Acidic_Name_Objective">escorpión ácido</string>
+  <string name="Acidic_Desc">Estos demonios arácnidos evitan el combate cercano a toda costa, disparando proyectiles paralizantes desde lejos.</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">rata albina</string>
+  <string name="Albino_Gender">masculino</string>
+  <string name="Albino_Name_Objective">rata albina</string>
+  <string name="Albino_Desc">Las ratas marsupiales son agresivas, pero son los habitantes más debiles de las alcantarillas. Solo son un problema cuando son muchas.</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">bandido loco</string>
+  <string name="Bandit_Gender">masculino</string>
+  <string name="Bandit_Name_Objective">bandido loco</string>
+  <string name="Bandit_Desc">Los niveles más bajos de la mazmorra siempre tienen un sitio oculto para todo tipo de criminales. No todos ellos pueden mantener la mente lúcida durante sus largos periódos sin luz solar. Hace mucho que esos bandidos y ladrones olvidaron quienes son y por qué roban.</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">murciélago vampiro</string>
+  <string name="Bat_Gender">masculino</string>
+  <string name="Bat_Name_Objective">murciélago vampiro</string>
+  <string name="Bat_Desc">Estos enérgicos y tenaces habitantes de los techos de las cuevas pueden derrotar a enemigos mucho mayores que ellos, ya que se curan vida con cada ataque consecutivo.</string>
+  <string name="Bat_Defense">esquivado</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">bruto gnoll</string>
+  <string name="Brute_Name_Objective">bruto gnoll</string>
+  <string name="Brute_Desc">Los brutos son los más grandes, fuertes y resistentes de los gnolls. Cuando están heridos de gravedad se vuelven locos, infligiendo más daño a sus enemigos.</string>
+  <string name="Brute_Gender">masculino</string>
+  <string name="Brute_Enraged">¡ %s está furioso!</string>
+  <string name="Brute_StaEnraged">furioso</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">cangrejo de alcantarilla</string>
+  <string name="Crab_Gender">masculino</string>
+  <string name="Crab_Name_Objective">cangrejo de alcantarilla</string>
+  <string name="Crab_Desc">Estos grandes cangrejos están en lo alto de la cadena alimenticia de las alcantarillas. Son extremadamente rápidos y su duro exoesqueleto puede resistir flechas potentes.</string>
+  <string name="Crab_Defense">repelido</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">masculino</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">Estas máquinas fueron creadas por los enanos hace siglos. Más tarde, los enanos las reemplazaron por golems, elementales e incluso demonios. Finalmente esto llevo al declive de su civilización. El DM-300 y otras máquinas similares eran usadas para la construcción y minería, y en algunos casos, para defender la ciudad.</string>
+  <string name="DM300_Info1">¡El DM-300 se repara a sí mismo!</string>
+  <string name="DM300_Info2">Misión fallida. Apagando sistema. </string>
+  <string name="DM300_Info3">Personal no autorizado detectado.</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">elemental de fuego</string>
+  <string name="Elemental_Gender">masculino</string>
+  <string name="Elemental_Name_Objective">elemental de fuego</string>
+  <string name="Elemental_Desc">Los elementales de fuego son la consecuencia de invocar entidades mayores. Su naturaleza es demasiado caótica para ser controlada incluso por el demonólogo más poderoso.</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">ojo malvado</string>
+  <string name="Eye_Gender">neutro</string>
+  <string name="Eye_Name_Objective">ojo malvado</string>
+  <string name="Eye_Desc">Otro de los nombres de estos demonios es \"orbe del odio\", porque al ver a un enemigo usa su mirada de la muerte de forma imprudente, a veces ignorando e hiriendo a sus aliados.</string>
+  <string name="Eye_Kill">La mirada mortal del %s te ha matado...</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">explorador gnoll</string>
+  <string name="Gnoll_Gender">masculino</string>
+  <string name="Gnoll_Name_Objective">explorador gnoll</string>
+  <string name="Gnoll_Desc">Los gnolls son humanoides con forma de hiena. Viven en las alcantarillas y mazmorras, aventurándose a la superficie de vez en cuando. Los exploradores son bastante comunes, y no son tan fuertes como los brutos ni tan listos como los chamanes. </string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">golem</string>
+  <string name="Golem_Gender">masculino</string>
+  <string name="Golem_Name_Objective">golem</string>
+  <string name="Golem_Desc">Los enanos trataron de combinar su conocimiento de la mecánica con la vinculación elemental que acababan de descubrir. Usaban los espíritus de la tierra como almas para los cuerpos mecánicos de los golems, pensando que podrían controlarlos mejor. A pesar de esto, el error más pequeño en el ritual podía echarlo todo a perder.</string>
+  <string name="Golem_Defense">bloqueado</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">viscosidad</string>
+  <string name="Goo_Gender">femenino</string>
+  <string name="Goo_Name_Objective">viscosidad</string>
+  <string name="Goo_Desc">Se sabe poco sobre la viscosidad. Es bastante posible que ni siquiera sea una criatura, sino más bien un conglomerado de sustancias de la alcantarilla que ha conseguido algún tipo de libre albedrío.</string>
+  <string name="Goo_Info1">¡La viscosidad se está bombeando a sí misma!</string>
+  <string name="Goo_Info2">glurp... glurp...</string>
+  <string name="Goo_Info3">¡GLURP-GLURP!</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">Rey de los Enanos</string>
+  <string name="King_Gender">masculino</string>
+  <string name="King_Name_Objective">Rey de los Enanos</string>
+  <string name="King_Desc">El último rey de los enanos fue conocido por su amplio conocimiento de los procesos de la vida y la muerte. Persuadió a miembros de su corte para que participasen en un ritual que debía garantizarles la juventud eterna. Al final él fue el único que la consiguió... Con un ejército de no-muertos como premio.</string>
+  <string name="King_Defense">repelido</string>
+  <string name="King_Info1">No puedes matarme, %s... Soy... inmortal...</string>
+  <string name="King_Info2">¡Alzaos, esclavos!</string>
+  <string name="King_Info3">¡Cómo te atreves!</string>
+  <string name="Undead_Name">enano no-muerto</string>
+  <string name="Undead_Gender">masculino</string>
+  <string name="Undead_Name_Objective">enano no-muerto</string>
+  <string name="Undead_Desc">Estos enanos no muertos, resucitados por el Rey de los Enanos, fueron miembros de su corte. Parecen esqueletos con una increíble cantidad de vello facial.</string>
+  <string name="Undead_Defense">bloqueado</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">mímico</string>
+  <string name="Mimic_Gender">masculino</string>
+  <string name="Mimic_Name_Objective">mímico</string>
+  <string name="Mimic_Desc">Los mímicos son criaturas mágicas que pueden adoptar la forma que deseen. En las mazmorras casi siempre eligen la forma de cofres del tesoro, ya que saben como atraer a un aventurero. \";</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">mímico</string>
+  <string name="MimicPie_Gender">masculino</string>
+  <string name="MimicPie_Name_Objective">mímico</string>
+  <string name="MimicPie_Desc">Los mímicos son criaturas mágicas que pueden adoptar la forma que deseen. Este parece una empanada grande y sabrosa. </string>
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">monje enano</string>
+  <string name="Monk_Gender">masculino</string>
+  <string name="Monk_Name_Objective">monje enano</string>
+  <string name="Monk_Desc">Estos monjes son fanáticos, que se dedicaron a proteger los secretos de su ciudad de cualquier extranjero. No usan armadura o armas, confiando plenamente en el arte del combate mano a mano.</string>
+  <string name="Monk_Defense">repelido</string>
+  <string name="Monk_Disarm">¡ %1$s te ha quitado%2$s de las manos!</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">piraña gigante</string>
+  <string name="Piranha_Gender">femenino</string>
+  <string name="Piranha_Name_Objective">piraña gigante</string>
+  <string name="Piranha_Desc">Estos peces carnívoros no son naturales de las piscinas subterráneas. Fueron criadas específicamente para proteger las cámaras del tesoro sumergidas.</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">rata masupial</string>
+  <string name="Rat_Gender">femenino</string>
+  <string name="Rat_Name_Objective">rata marsupial</string>
+  <string name="Rat_Desc">Las ratas marsupiales son agresivas, pero son los habitantes más debiles de las alcantarillas. Solo son un problema cuando son muchas.</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">escorpión</string>
+  <string name="Scorpio_Gender">masculino</string>
+  <string name="Scorpio_Name_Objective">escorpión</string>
+  <string name="Scorpio_Desc">Estos demonios arácnidos evitan el combate cercano a toda costa, disparando proyectiles paralizantes desde lejos.</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">alto monje</string>
+  <string name="Senior_Gender">masculino</string>
+  <string name="Senior_Name_Objective">alto monje</string>
+  <string name="Senior_Desc">Estos monjes son fanáticos, que se dedicaron a proteger los secretos de su ciudad de cualquier extranjero. No usan armadura o armas, confiando plenamente en el arte del combate mano a mano.</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">sombra</string>
+  <string name="Shadow_Gender">femenino</string>
+  <string name="Shadow_Name_Objective">sombra</string>
+  <string name="Shadow_Desc">Las sombras deambulan silenciosamente por las ruinas de la antigua prisión. Solo a veces se muestran antes los aventureros... Normalmente en su última aventura.</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">chamán gnoll</string>
+  <string name="Shaman_Gender">masculino</string>
+  <string name="Shaman_Name_Objective">chamán gnoll</string>
+  <string name="Shaman_Desc">Los gnolls más inteligentes pueden dominar la magia chamánica. Los chamanes gnoll prefieren luchar con hechizos para compensar su falta de fuerza, y no dudan en usarlos contra aquellos que cuestionan su posición en la tribu.</string>
+  <string name="Shaman_Killed">El rayo del %s te ha matado...</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">bruto blindado</string>
+  <string name="Shielded_Gender">masculino</string>
+  <string name="Shielded_Name_Objective">bruto blindado</string>
+  <string name="Shielded_Defense">bloqueado</string>
+  <string name="Shielded_Desc">Los brutos son los más grandes, fuertes y resistentes de los gnolls. Cuando están heridos de gravedad enloquecen, infligiendo más daño a sus enemigos.</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">esqueleto</string>
+  <string name="Skeleton_Gender">masculino</string>
+  <string name="Skeleton_Name_Objective">esqueleto</string>
+  <string name="Skeleton_Desc">Los esqueletos están compuestos de huesos de los cadáveres de desafortunados aventureros y habitantes de la mazmorra, y viven gracias a las emanaciones de magia maligna de las profundidades. Cuando reciben suficiente daño se desintegran en una explosión de huesos. </string>
+  <string name="Skeleton_Defense">bloqueado</string>
+  <string name="Skeleton_Killed">Una explosión de huesos te ha matado...</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">araña de cueva</string>
+  <string name="Spinner_Gender">masculino</string>
+  <string name="Spinner_Name_Objective">araña de cueva</string>
+  <string name="Spinner_Desc">Estas arañas verdes y peludas intentan evitar el combate directo, prefiriendo esperar en la distancia mientras su victima, enredada en su telaraña, muere lentamente por el veneno de su mordisco. </string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">estatua con vida</string>
+  <string name="Statue_Gender">femenino</string>
+  <string name="Statue_Name_Objective">estatua con vida</string>
+  <string name="Statue_Desc">Podrías pensar que es solo otra fea estatua de esta mazmorra, pero sus brillantes ojos rojos te harían cambiar de opinión. A pesar de que la estatua está hecha de piedra, el _%s_ que tiene entre sus manos parece real.</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">súcubo</string>
+  <string name="Succubus_Gender">masculino</string>
+  <string name="Succubus_Name_Objective">súcubo</string>
+  <string name="Succubus_Desc">Los súcubos son demonios con el aspecto de una atractiva mujer (góticamente hablando). Usando su magia, el súcubo puede encantar al héroe, que se volverá incapaz de atacar mientras dure el encantamiento.</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Name">enjambre de moscas</string>
+  <string name="Swarm_Gender">masculino</string>
+  <string name="Swarm_Name_Objective">enjambre de moscas</string>
+  <string name="Swarm_Desc">El mortal enjambre de moscas zumba enojado. Cualquier ataque no mágico lo dividirá en 2 enjambres más pequeños, pero igualmente mortíferos.</string>
+  <string name="Swarm_Defense">esquivado</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">Tengu</string>
+  <string name="Tengu_Gender">masculino</string>
+  <string name="Tengu_Name_Objective">Tengu</string>
+  <string name="Tengu_Desc">Los Tengu son miembros de un antiguo clan de asesinos, también llamado Tengu. Estos asesinos son conocidos por su uso del shuriken y las trampas.</string>
+  <string name="Tengu_Info1">Al fin libre...</string>
+  <string name="Tengu_Info2">¡Te tengo, %s!</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">ladrón loco</string>
+  <string name="Thief_Gender">masculino</string>
+  <string name="Thief_Name_Objective">ladrón loco</string>
+  <string name="Thief_Desc">Los niveles más bajos de la mazmorra siempre tienen un sitio oculto para todo tipo de criminales. No todos ellos pueden mantener la mente lúcida durante sus largos periodos sin luz solar. Hace mucho que esos bandidos y ladrones olvidaron quienes son y por qué roban.</string>
+  <string name="Thief_Stole">¡ %1$s te ha robado %2$s !</string>
+  <string name="Thief_Carries">
+\n\n%1$s lleva un _%2$s_. Obviamente, robado.</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Name">brujo enano</string>
+  <string name="Warlock_Gender">masculino</string>
+  <string name="Warlock_Name_Objective">brujo enano</string>
+  <string name="Warlock_Desc">Cuando el interés de los enanos cambió de la ingeniería a las artes arcanas, los brujos ganaron poder en las ciudades. Empezaron con la magia elemental, pero pronto se cambiaron a la demonología y la necromancia.</string>
+  <string name="Warlock_Killed">El rayo de %s te ha matado...</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Name">espectro</string>
+  <string name="Wraith_Gender">masculino</string>
+  <string name="Wraith_Name_Objective">espectro</string>
+  <string name="Wraith_Desc">Un espectro es el espíritu vengativo de un pecador, cuya tumba ha sido molestada. Dado que es un ser etéreo, es muy difícil darle con un arma normal.</string>
+  <string name="Wraith_Defense">esquivado</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">Yog-Dzewa</string>
+  <string name="Yog_Gender">masculino</string>
+  <string name="Yog_Name_Objective">Yog-Dzewa</string>
+  <string name="Yog_Desc">Yog-Dzewa es un antiguo dios, una poderosa entidad de los reinos del caos. Hace un siglo, los antiguos enanos ganaron con dificultad la guerra contra su ejército de demonios, pero fueron incapaces de matar al dios en sí. En cambio lo encarcelaron en los salones bajo la ciudad, creyendo que estaba demasiado débil para alzarse de nuevo.</string>
+  <string name="Yog_Info1">...</string>
+  <string name="Yog_Info2">La esperanza es una ilusión...</string>
+  <string name="RottingFist_Name">puño putrefacto</string>
+  <string name="RottingFist_Gender">masculino</string>
+  <string name="RottingFist_Name_Objective">puño putrefacto</string>
+  <string name="RottingFist_Desc">Puño Putrefacto del Antiguo Dios</string>
+  <string name="BurningFist_Name">puño ardiente</string>
+  <string name="BurningFist_Gender">masculino</string>
+  <string name="BurningFist_Name_Objective">puño ardiente</string>
+  <string name="BurningFist_Desc">Puño Ardiente del Antiguo Dios</string>
+  <string name="Larva_Name">larva del dios</string>
+  <string name="Larva_Gender">femenino</string>
+  <string name="Larva_Name_Objective">larva del dios</string>
+  <string name="Larva_Desc">Larva del Antiguo Dios</string>
+</resources>

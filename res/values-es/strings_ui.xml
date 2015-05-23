@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Jugar</string>
+  <string name="TitleScene_Highscores">Récords</string>
+  <string name="TitleScene_Badges">Logros</string>
+  <string name="TitleScene_About">Acerca de</string>
+  <string name="TitleScene_InternalStorageLow">No hay espacio suficiente\n en la memoria interna\n ¡Podrías perder tu progreso!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon por NYRDS basado en Pixel Dungeon Source por Watabou.\n\n Código &amp; gráficos: Watabou &amp; NYRDS\n\nMúsica: Cube_Code\n\nSpecial Gracias a: rodriformiga por PD l18n code\n\nE-Mail us:\n\n</string>
+  <string name="AboutScene_Lnk">sin web aún</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">Enviar e-mail</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">Top de puntuaciones</string>
+  <string name="RankingsScene_Total">Partidas totales:</string>
+  <string name="RankingsScene_NoGames">Aún no has jugado.</string>
+  <string name="RankingsScene_NoInfo">Sin información adicional.</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Cargar partida</string>
+  <string name="StartScene_New">Nueva partida</string>
+  <string name="StartScene_Erase">Borrar partida actual</string>
+  <string name="StartScene_Depth">Profundidad: %1$d\nNivel: %2$d</string>
+  <string name="StartScene_Really">¿De verdad quieres empezar una nueva partida?</string>
+  <string name="StartScene_Warning">Tu progreso actual será borrado.</string>
+  <string name="StartScene_Yes">Si, empezar una nueva partida.</string>
+  <string name="StartScene_No">No, volver al menú principal.</string>
+  <string name="StartScene_Unlock">Para desbloquear esta clase derrota al 3er con otra clase.</string>
+  <string name="StartScene_UnlockElf">Para desbloquear esta clase derrota al 4º jefe con otra clase.</string>
+  <string name="StartScene_WinGame">Para desbloquear los \"Desafíos\" gana una partida con cualquier personaje.</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">Descendiendo...</string>
+  <string name="InterLevelScene_Ascending">Ascendiendo...</string>
+  <string name="InterLevelScene_Loading">Cargando...</string>
+  <string name="InterLevelScene_Resurrecting">Resucitando...</string>
+  <string name="InterLevelScene_Returning">Volviendo...</string>
+  <string name="InterLevelScene_Falling">Cayendo...</string>
+  <string name="InterLevelScene_FileNotFound">Archivo no encontrado por alguna razón...</string>
+  <string name="InterLevelScene_ErrorGeneric">Algo ha ido mal...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Fin del juego</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">Zoom por defecto</string>
+  <string name="WndSettings_TextScaleDefault">Fuente por defecto</string>
+  <string name="WndSettings_ScaleUp">Escalar UI</string>
+  <string name="WndSettings_Immersive">Modo inmersivo</string>
+  <string name="WndSettings_Music">Musica</string>
+  <string name="WndSettings_Sound">Sonido</string>
+  <string name="WndSettings_Brightness">Brillo</string>
+  <string name="WndSettings_SwitchPort">Cambiar a horizontal</string>
+  <string name="WndSettings_SwitchLand">Cambiar a apaisado</string>
+  <string name="WndSettings_SelectLanguage">Seleccionar idioma</string>
+  <string name="WndSettings_SecondQuickslot">2ª ranura rápida</string>
+  <string name="WndSettings_ThirdQuickslot">3ª ranura rápida</string>
+  <string name="WndSettings_ExperementalFont">Fuente nueva</string>
+  <string name="WndSettings_ClassicFont">Fuente clásica</string>
+</resources>

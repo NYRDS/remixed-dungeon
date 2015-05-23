@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">tú</string>
+  <string name="Hero_Name_Objective">tú</string>
+  <string name="Hero_Leave">Uno simplemente no deja Pixel Dungeon.</string>
+  <string name="Hero_LevelUp">¡Ascenso!</string>
+  <string name="Hero_NewLevel">¡Bienvenido al nivel %d! Ahora estás más centrado y sano. Te resulta más fácil golpear a los enemigos y esquivar su ataques.</string>
+  <string name="Hero_YouNowHave">Ahora tienes %s</string>
+  <string name="Hero_SomethingElse">Hay algo más aquí</string>
+  <string name="Hero_LockedChest">Este cofre está cerrado y no tienes la llave.</string>
+  <string name="Hero_LockedDoor">No tienes la llave adecuada</string>
+  <string name="Hero_NoticedSmth">Has notado algo</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">buscar</string>
+  <string name="Hero_StaBurning">¡Estás ardiendo!</string>
+  <string name="Hero_StaParalysis">¡Estás paralizado!</string>
+  <string name="Hero_StaPoison">¡Estás envenenado!</string>
+  <string name="Hero_StaOoze">El cieno caustico te devora la piel. ¡Deshazte de él!</string>
+  <string name="Hero_StaRoots">¡No puedes moverte!</string>
+  <string name="Hero_StaWeakness">¡Te sientes débil!</string>
+  <string name="Hero_StaBlindness">¡Estás ciego!</string>
+  <string name="Hero_StaFury">¡Estás furioso!</string>
+  <string name="Hero_StaFurious">furioso</string>
+  <string name="Hero_StaCharm">¡Estás encantado!</string>
+  <string name="Hero_StaCripple">¡Estás mutilado!</string>
+  <string name="Hero_StaBleeding">¡Estás sangrando!</string>
+  <string name="Hero_StaVertigo">¡Todo te da vueltas!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">guerrero</string>
+  <string name="HeroClass_Mag">mago</string>
+  <string name="HeroClass_Rog">granuja</string>
+  <string name="HeroClass_Hun">cazadora</string>
+  <string name="HeroClass_Elf">elfo</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Los guerreros empiezan con 11 puntos de fuerza</item>
+    <item>Los guerreros empiezan con una espada corta, que más tarde puede ser reforjada para mejorar otra arma cuerpo a cuerpo.</item>
+    <item>Los guerreros son menos eficientes con las armas arrojadizas.</item>
+    <item>Recuperan vida cuando comen algo de comida.</item>
+    <item>Pueden identificar Pociones de Fuerza desde el principio.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Los magos empiezan con una Varita de misiles mágicos, que más tarde puede ser desencantada para mejorar otra varita.</item>
+    <item>Los magos recargan sus varitas más rápido.</item>
+    <item>Al comer cualquier pieza de comida, recuperan 1 carga para cada varita del inventario</item>
+    <item>Los magos pueden usar varitas como armas cuerpo a cuerpo.</item>
+    <item>Los pergaminos de Identificación son identificados desde el principio.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Los granujas empiezan con un Anillo de las Sombras +1.</item>
+    <item>Los granujas identifican un tipo de anillo al equiparlo.</item>
+    <item>Los granujas son más eficientes con armaduras ligeras, y esquivan mejor cuando llevan una.</item>
+    <item>Los granujas son mejores identificando puertas secretas y trampas.</item>
+    <item>Los granujas aguantan más sin comer.</item>
+    <item>Los Pergaminos de mapeo mágico son identificados desde el principio.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Las cazadoras empiezan con 15 puntos de vida.</item>
+    <item>Las cazadoras empiezan con un boomerang que puede ser mejorado.</item>
+    <item>Las cazadoras son mejores con armas arrojadizas, y ganan un bonus de daño al usarlas.</item>
+    <item>Las cazadoras ganan más vida con las gotas de rocío.</item>
+    <item>Las cazadoras sienten a enemigos cercanos incluso si están escondidos tras obstáculos. </item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladiador</string>
+  <string name="HeroSubClass_DescGlad">Un ataque con exito con un arma cuerpo a cuerpo permite al _Gladiador_ empezar un combo, con lo que cada golpe consecutivo causa más daño.</string>
+  <string name="HeroSubClass_NameBers">berserker</string>
+  <string name="HeroSubClass_DescBers">Cuando está seriamente herido, el _Berserker_ entra en un estado de furia salvaje que aumente el daño causado.</string>
+  <string name="HeroSubClass_NameWarL">brujo</string>
+  <string name="HeroSubClass_DescWarL">Tras matar a un enemigo el _Brujo_ consume su alma. Esto cura sus heridas y llena su estómago.</string>
+  <string name="HeroSubClass_NameBatM">adepto</string>
+  <string name="HeroSubClass_DescBatM">Cuando lucha con una varita, el _Adepto_ inflige daño adicional dependiendo del número de cargas actual. Cada golpe consecutivo restaura 1 carga de su varita.</string>
+  <string name="HeroSubClass_NameAssa">asesino</string>
+  <string name="HeroSubClass_DescAssa">Cuando ataca por sorpresa, el _Asesino_ inflige daño adicional a su objetivo.</string>
+  <string name="HeroSubClass_NameFreR">corredor</string>
+  <string name="HeroSubClass_DescFreR">El _Corredor_ puede moverse casi el doble de rápido que la mayoría de monstruos. Cuando está corriendo es más difícil acertarle. Para ello no puede estar impedido ni hambriento.</string>
+  <string name="HeroSubClass_NameSnip">tirador</string>
+  <string name="HeroSubClass_DescSnip">Los _Tiradores_  son capaces de detectar los puntos débiles de la armadura de su enemigo, ignorándola cuando usan armas arrojadizas.</string>
+  <string name="HeroSubClass_NameWard">guardián</string>
+  <string name="HeroSubClass_DescWard">Su fuerte conexión con la naturaleza permite a los _Guardianes_ recolectar gotas de rocío y semillas a partir de plantas. Además, pisar hierba alta les otorga un bonus de armadura temporal.</string>
+  <string name="HeroSubClass_NameScout">explorador</string>
+  <string name="HeroSubClass_DescScout">Los _Exploradores_ elfos son maestros del sigilo. Entrar en hierba alta les otorga invisibilidad temporal. Además son más rápidos que los elfos normales.</string>
+  <string name="HeroSubClass_NameShaman">chamán</string>
+  <string name="HeroSubClass_DescShaman">Los _Chamanes_ elfos pueden usar varitas como arma cuerpo a cuerpo. Un golpe con éxito tiene la posibilidad de liberar el poder de la varita sin gastar una carga.</string>
+</resources>

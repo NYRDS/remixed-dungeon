@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">Te has familiarizado con %1$s y lo identificas. Es %2$s.</string>
+  <string name="Weapon_Incompatible">¡La influencia de diferentes tipos de magia ha borrado el encantamiento de esta arma!</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>%s macabra</item>
+    <item>%s macabra</item>
+    <item>%s macabra</item>
+  </string-array>
+  <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>%s ardiente</item>
+    <item>%s ardiente</item>
+    <item>%s ardiente</item>
+  </string-array>
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>%s terrorífica</item>
+    <item>%s terrorífica</item>
+    <item>%s terrorífica</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>%s inestable</item>
+    <item>%s inestable</item>
+    <item>%s inestable</item>
+  </string-array>
+  <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>%s vampírica</item>
+    <item>%s vampírica</item>
+    <item>%s vampírica</item>
+  </string-array>
+  <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>%s afortunada</item>
+    <item>%s afortunada</item>
+    <item>%s afortunada</item>
+  </string-array>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>%s paralizadora</item>
+    <item>%s paralizadora</item>
+    <item>%s paralizadora</item>
+  </string-array>
+  <!--STRINGS OF Piercing CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>%s venenosa</item>
+    <item>%s venenosa</item>
+    <item>%s venenosa</item>
+  </string-array>
+  <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>%s gélida</item>
+    <item>%s gélida</item>
+    <item>%s gélida</item>
+  </string-array>
+  <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>%s salvaje</item>
+    <item>%s salvaje</item>
+    <item>%s salvaje</item>
+  </string-array>
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">Este/a %1$s es %2$s arma cuerpo a cuerpo de nivel-%3$d </string>
+  <string name="MeleeWeapon_Info1b">un/a</string>
+  <string name="MeleeWeapon_Info1c">una mejorada</string>
+  <string name="MeleeWeapon_Info1d">una degradada</string>
+  <string name="MeleeWeapon_Info2a">Su daño promedio es de %d puntos por golpe</string>
+  <string name="MeleeWeapon_Info2b">Su daño promedio típico es %1$d puntos por golpe y usualmente requiere %2$d puntos de fuerza.</string>
+  <string name="MeleeWeapon_Info2c">Probablemente este arma pese demasiado para ti.</string>
+  <string name="MeleeWeapon_Info3a">Esta es un arma más bien %s.</string>
+  <string name="MeleeWeapon_Info3b">rápido</string>
+  <string name="MeleeWeapon_Info3c">lento</string>
+  <string name="MeleeWeapon_Info3d">y</string>
+  <string name="MeleeWeapon_Info3e">pero</string>
+  <string name="MeleeWeapon_Info3f">preciso</string>
+  <string name="MeleeWeapon_Info3g">impreciso </string>
+  <string name="MeleeWeapon_Info4a">Fue equilibrada para hacerla más rápida.</string>
+  <string name="MeleeWeapon_Info4b">Fue equilibrada para hacerla más certera.</string>
+  <string name="MeleeWeapon_Info5">Está encantado. </string>
+  <string name="MeleeWeapon_Info6a">Dado que no tienes la fuerza necesaria, tu puntería y tu velocidad de ataque con %s ha disminuido.</string>
+  <string name="MeleeWeapon_Info6b">Gracias a tu gran fuerza, tu daño de ataque con %s ha aumentado.</string>
+  <string name="MeleeWeapon_Info7a">Estás usando %1$s en este momento%2$s.</string>
+  <string name="MeleeWeapon_Info7b">, y como esta maldita, no puedes soltarla.</string>
+  <string name="MeleeWeapon_Info7c">Puedes sentir una malevolente magia acechando dentro de %s.</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">hacha de batalla</string>
+  <string name="BattleAxe_Info">El peso de la enorme cabeza de metal de este hacha de batalla añade fuerza considerable en cada golpe.</string>
+  <string name="BattleAxe_Gender">masculino</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">daga</string>
+  <string name="Dagger_Info">Una simple daga de hierro con un mango de madera desgastado.</string>
+  <string name="Dagger_Gender">masculino</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">alabarda</string>
+  <string name="Glaive_Info">Esta arma consiste en un palo con la hoja de una espada en su extremo.</string>
+  <string name="Glaive_Gender">femenino</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">nudillera</string>
+  <string name="Knuckles_Info">Un pedazo de hierro moldeado para ajustarse alrededor de los nudillos.</string>
+  <string name="Knuckles_Gender">masculino</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">espada larga</string>
+  <string name="Longsword_Info">Esta imponente espada inflige gran daño con cada golpe gracias a su peso. </string>
+  <string name="Longsword_Gender">masculino</string>
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">maza</string>
+  <string name="Mace_Info">El extremo de metal de este arma inflige un daño considerable.</string>
+  <string name="Mace_Gender">femenino</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">bastón</string>
+  <string name="Quarterstaff_Info">Un bastón de madera dura, con extremos de hierro.</string>
+  <string name="Quarterstaff_Gender">masculino</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">espada corta</string>
+  <string name="ShortSword_Info">Es de hecho bastante corta, solo unos centímetros más larga que una daga.</string>
+  <string name="ShortSword_ACReforge">REFORJAR</string>
+  <string name="ShortSword_Select">Selecciona un arma para mejorar</string>
+  <string name="ShortSword_Reforged">has reforjado la espada corta para mejorar tu %s</string>
+  <string name="ShortSword_NotBoomerang">no puedes mejorar un boomerang de esta forma</string>
+  <string name="ShortSword_Gender">masculino</string>
+  <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">lanza</string>
+  <string name="Spear_Info">Una delgada vara de madera con una punta de hierro afilada.</string>
+  <string name="Spear_Gender">neutro</string>
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">espada</string>
+  <string name="Sword_Info">La afilada hoja de esta espada brilla de forma tranquilizadora. </string>
+  <string name="Sword_Gender">masculino</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">maza de guerra</string>
+  <string name="WarHammer_Info">Pocas criaturas pueden resistir el golpe demoledor de esta masa de plomo y acero, pero solo los aventureros más fuertes pueden manejarla. </string>
+  <string name="WarHammer_Gender">masculino</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">arma a distancia</string>
+  <string name="MissileWeapon_Yes">Sí, se lo que estoy haciendo</string>
+  <string name="MissileWeapon_No">No, he cambiado de opinión</string>
+  <string name="MissileWeapon_Sure">¿De verdad quieres equiparla como arma cuerpo a cuerpo?</string>
+  <string name="MissileWeapon_Info1">
+\n\nEl daño promedio de esta arma de %d puntos por golpe.</string>
+  <string name="MissileWeapon_Info2">Dado que no tienes la fuerza necesaria, tu puntería y tu velocidad de ataque con %s ha disminuido.</string>
+  <string name="MissileWeapon_Info3">Gracias a tu gran fuerza, tu daño de ataque con %s ha aumentado.</string>
+  <string name="MissileWeapon_Info4">
+\n\n Sostienes la %s preparada.</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name">boomerang</string>
+  <string name="Boomerang_Info">Al ser lanzado contra un enemigo, esta arma curva de madera volverá a su lanzador.</string>
+  <string name="Boomerang_Gender">masculino</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">dardo paralizante</string>
+  <string name="CurareDart_Info">Estos pequeños dardos no hacen mucho daño, pero pueden paralizar al objetivo dejándolo indefenso y sin movimiento por algún tiempo.</string>
+  <string name="CurareDart_Gender">masculino</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">dardo</string>
+  <string name="Dart_Info">Estos simples dardos de metal están fabricados para volar hacia su presa y clavarse en ella, con solo un movimiento de muñeca.</string>
+  <string name="Dart_Gender">masculino</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">dardo incendiario</string>
+  <string name="IncendiaryDart_Info">La punta de cada uno de estos dardos está diseñada para pegarse a su objetivo mientras que los componentes inestables que lleva en la cola explotan en brillantes llamas.</string>
+  <string name="IncendiaryDart_Gender">masculino</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">jabalina </string>
+  <string name="Javelin_Info">Esta arma metálica está diseñada para mantener su punta recta mientras viaja por el aire.</string>
+  <string name="Javelin_Gender">neutro</string>
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">shuriken</string>
+  <string name="Shuriken_Info">Estas piezas de metal con forma de estrella y afiladas como cuchillas hacen un daño significativo al golpear a un enemigo. Pueden ser lanzados a mucha velocidad.</string>
+  <string name="Shuriken_Gender">masculino</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">tomahawk</string>
+  <string name="Tamahawk_Info">Esta hacha arrojadiza no no es demasiado pesada, pero aun así requiere bastante fuerza para ser usada efectivamente.</string>
+  <string name="Tamahawk_Gender">masculino</string>
+</resources>
