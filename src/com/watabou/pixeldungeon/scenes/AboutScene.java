@@ -85,12 +85,12 @@ public class AboutScene extends PixelScene {
 		
 		text.x = align( (Camera.main.width - text.width()) / 2 );
 		text.y = align( (Camera.main.height - text.height()) / 3 );
+				
+		BitmapTextMultiline email = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), text);
 		
-		BitmapTextMultiline translatedBy = createText( TRN );
+		BitmapTextMultiline translatedBy = createText("\n\n"+TRN );
 		add(translatedBy);
-		placeBellow(translatedBy, text);
-		
-		createTouchEmail(Game.getVar(R.string.AboutScene_Mail), translatedBy);
+		placeBellow(translatedBy, email);
 		
 		Image nyrdie = Icons.NYRDIE.get();
 		nyrdie.x = align( text.x + (text.width() - nyrdie.width) / 2 );
