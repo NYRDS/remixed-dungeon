@@ -233,7 +233,7 @@ public class BitmapText extends Visual {
 	
 	public static class Font extends TextureFilm {
 		public static final String SPECIAL_CHAR = 
-		"àáâäãèéêëìíîïòóôöõùúûüñçÀÁÂÄÃÈÉÊËÌÍÎÏÒÓÔÖÕÙÚÛÜÑÇº";
+		"àáâäãèéêëìíîïòóôöõùúûüñçÀÁÂÄÃÈÉÊËÌÍÎÏÒÓÔÖÕÙÚÛÜÑÇº¿¡";
 
 		public static final String LATIN_UPPER = 
 		" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ";
