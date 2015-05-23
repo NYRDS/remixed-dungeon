@@ -11,9 +11,9 @@ public class SpiderEggSprite extends MobSprite {
 		
 		texture( Assets.SPIDER_EGG );
 		
-		TextureFilm frames = new TextureFilm( texture, 13, 12 );
+		TextureFilm frames = new TextureFilm( texture, 12, 12 );
 		
-		idle = new Animation( 1, true );
+		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 1, 2, 1, 0 );
 		
 		run = new Animation( 1, true );

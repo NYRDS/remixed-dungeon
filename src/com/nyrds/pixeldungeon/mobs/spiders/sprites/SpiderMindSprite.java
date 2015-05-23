@@ -17,7 +17,7 @@ public class SpiderMindSprite extends MobSprite {
 		idle.frames( frames, 0, 1, 3, 1 );
 		
 		run = new Animation( 12, true );
-		run.frames( frames, 2, 3, 4, 5 );
+		run.frames( frames, 2, 3, 4, 2, 3 );
 		
 		attack = new Animation( 10, false );
 		attack.frames( frames, 0, 1, 5, 6, 7 );
