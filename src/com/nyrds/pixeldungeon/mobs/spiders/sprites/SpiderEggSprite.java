@@ -11,10 +11,10 @@ public class SpiderEggSprite extends MobSprite {
 		
 		texture( Assets.SPIDER_EGG );
 		
-		TextureFilm frames = new TextureFilm( texture, 16, 15 );
+		TextureFilm frames = new TextureFilm( texture, 13, 12 );
 		
 		idle = new Animation( 1, true );
-		idle.frames( frames, 0 );
+		idle.frames( frames, 0, 1, 2, 1, 0 );
 		
 		run = new Animation( 1, true );
 		run.frames( frames, 0 );
@@ -23,7 +23,7 @@ public class SpiderEggSprite extends MobSprite {
 		attack.frames( frames, 0 );
 		
 		die = new Animation( 10, false );
-		die.frames( frames, 0 );
+		die.frames( frames, 0, 3, 4, 5, 6  );
 		
 		play( idle );
 	}

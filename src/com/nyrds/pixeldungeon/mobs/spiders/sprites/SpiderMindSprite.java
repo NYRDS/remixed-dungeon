@@ -14,16 +14,16 @@ public class SpiderMindSprite extends MobSprite {
 		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 		
 		idle = new Animation( 4, true );
-		idle.frames( frames, 0, 1 );
+		idle.frames( frames, 0, 1, 3, 1 );
 		
 		run = new Animation( 12, true );
 		run.frames( frames, 2, 3, 4, 5 );
 		
 		attack = new Animation( 10, false );
-		attack.frames( frames, 6, 7, 8 );
+		attack.frames( frames, 0, 1, 5, 6, 7 );
 		
 		die = new Animation( 15, false );
-		die.frames( frames, 9, 10, 11, 12, 13 );
+		die.frames( frames, 0, 8, 9, 10, 11);
 		
 		play( idle );
 	}

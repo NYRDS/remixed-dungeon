@@ -40,7 +40,7 @@ public class SpiderExploding extends Mob {
 		EXP = 3;
 		maxLvl = 9;
 		
-		kind = Random.Int(0, 6);
+		kind = Random.IntRange(0, 6);
 		
 		loot = new MysteryMeat();
 		lootChance = 0.167f;
