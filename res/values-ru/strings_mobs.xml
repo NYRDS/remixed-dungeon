@@ -227,4 +227,40 @@
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name_Objective">личинку бога</string>
     <string name="Larva_Desc">Личинка старого Бога</string>
+    
+    <!-- STRINGS OF SpiderEgg CLASS -->
+    <string name="SpiderEgg_Name">паучье яйцо</string>
+    <string name="SpiderEgg_Gender">neuter</string>
+    <string name="SpiderEgg_Name_Objective">яйцо</string>
+    <string name="SpiderEgg_Desc">это яйцо с мягкой оболочкой медленно пульсирует, внутри просмотривается что-то многоногое</string>
+    
+    <!-- STRINGS OF SpiderNest CLASS -->
+    <string name="SpiderNest_Name">паучий кокон</string>
+    <string name="SpiderNest_Gender">male</string>
+    <string name="SpiderNest_Name_Objective">кокон</string>
+    <string name="SpiderNest_Desc">кокон из тончайшего шелка скрывает в себе нечто живое</string>
+    
+    <!-- STRINGS OF SpiderServant CLASS -->
+    <string name="SpiderServant_Name">паук солдат</string>
+    <string name="SpiderServant_Gender">male</string>
+    <string name="SpiderServant_Name_Objective">паука солдата</string>
+    <string name="SpiderServant_Desc">самая многочисленная боевая единица паучьего логова. Защищает территорию от внезапных посягательств. Его хелицеры снабжены ядовитыми железами по этому внезапный укус чреват отравлением.</string>
+    
+    <!-- STRINGS OF SpiderExploding CLASS -->
+    <string name="SpiderExploding_Name">паук рабочий</string>
+    <string name="SpiderExploding_Gender">male</string>
+    <string name="SpiderExploding_Name_Objective">паука рабочего</string>
+    <string name="SpiderExploding_Desc">в спокойное время для колонии эти трудяги безобидны, но при появлении опасности молниеносно бросаются на неприятеля посадив на себе первое попавшееся растение, тем самым выполняя роль смертник</string>
+    
+    <!-- STRINGS OF SpiderMind CLASS -->
+    <string name="SpiderMind_Name">пси паук</string>
+    <string name="SpiderMind_Gender">male</string>
+    <string name="SpiderMind_Name_Objective">пси паука</string>
+    <string name="SpiderMind_Desc">несмотря на свою хрупкость данные пауки обладают уникальными ментальными способностями предназначенными для управления колонии. Может воздействовать на сознание любого живого существа, однако очень трусливый.</string>
+    
+    <!-- STRINGS OF SpiderQueen CLASS -->
+    <string name="SpiderQueen_Name">королева пауков</string>
+    <string name="SpiderQueen_Gender">feminine</string>
+    <string name="SpiderQueen_Name_Objective">королеву</string>
+    <string name="SpiderQueen_Desc">тело прекрасной девушки скрещенное с отвратительным пауком. В ее подчинении находятся все обитатели данного логова. Встреча с данной особой чревата смертельными последствиям, так что не ждите пощады. Вы в ее владениях!</string>
 </resources>

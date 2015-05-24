@@ -229,4 +229,40 @@
     <string name="Larva_Name_Objective">god\'s larva</string>
     <string name="Larva_Desc">Old God Larva</string>
     
+    <!-- STRINGS OF SpiderEgg CLASS -->
+    <string name="SpiderEgg_Name">SpiderEgg</string>
+    <string name="SpiderEgg_Gender">neuter</string>
+    <string name="SpiderEgg_Name_Objective">SpiderEgg</string>
+    <string name="SpiderEgg_Desc">SpiderEgg</string>
+    
+    <!-- STRINGS OF SpiderNest CLASS -->
+    <string name="SpiderNest_Name">SpiderNest</string>
+    <string name="SpiderNest_Gender">neuter</string>
+    <string name="SpiderNest_Name_Objective">SpiderNest</string>
+    <string name="SpiderNest_Desc">SpiderNest</string>
+    
+    <!-- STRINGS OF SpiderServant CLASS -->
+    <string name="SpiderServant_Name">SpiderServant</string>
+    <string name="SpiderServant_Gender">male</string>
+    <string name="SpiderServant_Name_Objective">SpiderServant</string>
+    <string name="SpiderServant_Desc">SpiderServant</string>
+    
+    <!-- STRINGS OF SpiderExploding CLASS -->
+    <string name="SpiderExploding_Name">SpiderExploding</string>
+    <string name="SpiderExploding_Gender">male</string>
+    <string name="SpiderExploding_Name_Objective">SpiderExploding</string>
+    <string name="SpiderExploding_Desc">SpiderExploding</string>
+    
+    <!-- STRINGS OF SpiderMind CLASS -->
+    <string name="SpiderMind_Name">SpiderMind</string>
+    <string name="SpiderMind_Gender">male</string>
+    <string name="SpiderMind_Name_Objective">SpiderMind</string>
+    <string name="SpiderMind_Desc">SpiderMind</string>
+    
+    <!-- STRINGS OF SpiderQueen CLASS -->
+    <string name="SpiderQueen_Name">SpiderQueen</string>
+    <string name="SpiderQueen_Gender">feminine</string>
+    <string name="SpiderQueen_Name_Objective">SpiderQueen</string>
+    <string name="SpiderQueen_Desc">SpiderQueen</string>
+    
 </resources>
