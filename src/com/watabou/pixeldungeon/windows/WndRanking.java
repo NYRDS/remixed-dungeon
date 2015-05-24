@@ -180,7 +180,7 @@ public class WndRanking extends WndTabbed {
 			
 			pos += GAP + GAP;
 			
-			pos = statSlot( this, TXT_STR, Integer.toString( hero.STR() ), pos );
+			pos = statSlot( this, TXT_STR, Integer.toString( hero.effectiveSTR() ), pos );
 			pos = statSlot( this, TXT_HEALTH, Integer.toString( hero.ht() ), pos );
 			
 			pos += GAP;

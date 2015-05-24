@@ -189,13 +189,17 @@ public class Hero extends Char {
 	protected void readCharData() {
 	}
 
-	public int STR() {
+	public int effectiveSTR() {
 		int str = Scrambler.descramble(STR);
 		return weakened ? str - 2 : str;
 	}
 
 	public void STR(int sTR) {
 		STR = Scrambler.scramble(sTR);
+	}
+	
+	public int STR() {
+		return Scrambler.descramble(STR);
 	}
 
 	private static final String ATTACK = "attackSkill";
@@ -307,7 +311,7 @@ public class Hero extends Char {
 			evasion /= 2;
 		}
 
-		int aEnc = belongings.armor != null ? belongings.armor.STR - STR() : 0;
+		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;
 
 		if (aEnc > 0) {
 			return (int) (defenseSkill * evasion / Math.pow(1.5, aEnc));
@@ -350,7 +354,7 @@ public class Hero extends Char {
 		if (wep != null) {
 			dmg = wep.damageRoll(this);
 		} else {
-			dmg = STR() > 10 ? Random.IntRange(1, STR() - 9) : 1;
+			dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
 		}
 		return inFury() ? (int) (dmg * 1.5f) : dmg;
 	}
@@ -358,7 +362,7 @@ public class Hero extends Char {
 	@Override
 	public float speed() {
 
-		int aEnc = belongings.armor != null ? belongings.armor.STR - STR() : 0;
+		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;
 		if (aEnc > 0) {
 
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));

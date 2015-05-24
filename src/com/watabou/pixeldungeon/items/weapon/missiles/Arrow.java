@@ -56,7 +56,7 @@ public abstract class Arrow extends MissileWeapon {
 			ACU = (float) (baseAcu * firedFrom.acuFactor());
 			DLY = (float) (baseDly * firedFrom.dlyFactor());
 			
-			float sDelta = curUser.STR() - firedFrom.STR;
+			float sDelta = curUser.effectiveSTR() - firedFrom.STR;
 			
 			if (sDelta < 0) {
 				DLY += sDelta * 0.5;

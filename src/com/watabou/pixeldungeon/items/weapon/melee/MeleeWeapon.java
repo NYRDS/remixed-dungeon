@@ -98,7 +98,7 @@ public class MeleeWeapon extends Weapon {
 			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info2a), (MIN + (MAX - MIN) / 2)));
 		} else {
 			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
-			if (typicalSTR() > Dungeon.hero.STR()) {
+			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
 				info.append(" "+Game.getVar(R.string.MeleeWeapon_Info2c));
 			}
 		}
@@ -141,10 +141,10 @@ public class MeleeWeapon extends Weapon {
 
 		if (levelKnown && Dungeon.hero.belongings.backpack.items.contains( this )) {
 			info.append(p);
-			if (STR > Dungeon.hero.STR()) {
+			if (STR > Dungeon.hero.effectiveSTR()) {
 				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6a), name));
 			}
-			if (STR < Dungeon.hero.STR()) {
+			if (STR < Dungeon.hero.effectiveSTR()) {
 				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6b), name));
 			}
 		}

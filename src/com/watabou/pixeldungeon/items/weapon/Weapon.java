@@ -98,7 +98,7 @@ public class Weapon extends KindOfWeapon {
 	@Override
 	public float acuracyFactor( Hero hero ) {
 		
-		int encumbrance = STR - hero.STR();
+		int encumbrance = STR - hero.effectiveSTR();
 		
 		if (this instanceof MissileWeapon) {
 			switch (hero.heroClass) {
@@ -126,7 +126,7 @@ public class Weapon extends KindOfWeapon {
 	@Override
 	public float speedFactor( Hero hero ) {
 
-		int encumrance = STR - hero.STR();
+		int encumrance = STR - hero.effectiveSTR();
 		if (this instanceof MissileWeapon && hero.heroClass == HeroClass.HUNTRESS) {
 			encumrance -= 2;
 		}
@@ -142,7 +142,7 @@ public class Weapon extends KindOfWeapon {
 		int damage = super.damageRoll( hero );
 		
 		if ((hero.rangedWeapon != null) == (hero.heroClass == HeroClass.HUNTRESS)) {
-			int exStr = hero.STR() - STR;
+			int exStr = hero.effectiveSTR() - STR;
 			if (exStr > 0) {
 				damage += Random.IntRange( 0, exStr );
 			}

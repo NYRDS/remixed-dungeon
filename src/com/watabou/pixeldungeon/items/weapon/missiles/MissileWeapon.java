@@ -127,10 +127,10 @@ public class MissileWeapon extends Weapon {
 		info.append(" ");
 
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
-			if (STR > Dungeon.hero.STR()) {
+			if (STR > Dungeon.hero.effectiveSTR()) {
 				info.append(String.format(Game.getVar(R.string.MissileWeapon_Info2), name));
 			}
-			if (STR < Dungeon.hero.STR()) {
+			if (STR < Dungeon.hero.effectiveSTR()) {
 				info.append(String.format(Game.getVar(R.string.MissileWeapon_Info3), name));
 			}
 		}
