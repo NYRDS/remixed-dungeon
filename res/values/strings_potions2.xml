@@ -8,7 +8,7 @@
     <string name="Potion_MoistenUseless">Looks like you just wasted this potion.</string>
     
     <string name="Potion_RuneDissaperaed">Rune disappeared from %s.</string>
-    <string name="Potion_ArrowMoisten">You succesifully moist arrows.</string>
+    <string name="Potion_ArrowMoisten">You successfully moist arrows.</string>
     <string name="Potion_ItemFliesAway">%s just flies away from your hands.</string>
     <string name="Potion_FoodRefreshed">%s now looks edible</string>
 
