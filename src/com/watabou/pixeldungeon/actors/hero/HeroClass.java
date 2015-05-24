@@ -35,9 +35,11 @@ import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.food.RottenPasty;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfPurity;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfPower;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
@@ -144,6 +146,7 @@ public enum HeroClass {
 		hero.collect(new PotionOfFrost().identify());
 		hero.collect(new PotionOfFrost().identify());
 		hero.collect(new PotionOfFrost().identify());
+		hero.collect(new PotionOfPurity().identify());
 		hero.collect(new PotionOfLevitation().identify());
 		hero.collect(new WandOfTelekinesis().identify());
 		hero.collect(new WandOfFirebolt());
@@ -155,6 +158,7 @@ public enum HeroClass {
 		
 		hero.collect(new RingOfPower().upgrade(3).identify());
 
+		hero.collect(new RottenPasty());
 		hero.collect(new ArmorKit());
 		hero.collect(new CommonArrow(100));
 		hero.collect(new Quiver());
