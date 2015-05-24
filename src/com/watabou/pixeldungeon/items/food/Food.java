@@ -75,6 +75,7 @@ abstract public class Food extends Item {
 				break;
 			case ROGUE:
 			case HUNTRESS:
+			case ELF:
 				break;
 			}
 			

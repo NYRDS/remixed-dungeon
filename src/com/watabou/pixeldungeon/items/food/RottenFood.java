@@ -49,6 +49,10 @@ abstract public class RottenFood extends Food{
 		return true;
 	}
 	
+	public Food purify() {
+		return this;
+	}
+	
 	@Override
 	public void execute( Hero hero, String action ) {
 		

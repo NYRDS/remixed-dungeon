@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
+import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
@@ -57,9 +59,11 @@ public class Potion extends Item {
 	private static final String TXT_SELECT_FOR_MOISTEN = Game.getVar(R.string.Potion_SelectForMoisten);
 	private static final String TXT_MOISTEN_USELESS    = Game.getVar(R.string.Potion_MoistenUseless);
 	
-	protected static final String TXT_RUNE_DISAPPEARED = Game.getVar(R.string.Potion_RuneDissaperaed);
-	protected static final String TXT_ARROW_MOISTEN    = Game.getVar(R.string.Potion_ArrowMoisten);
-	protected static final String TXT_ITEM_FLIES_AWAY  = Game.getVar(R.string.Potion_ItemFliesAway);
+	protected static final String TXT_RUNE_DISAPPEARED    = Game.getVar(R.string.Potion_RuneDissaperaed);
+	protected static final String TXT_ARROW_MOISTEN       = Game.getVar(R.string.Potion_ArrowMoisten);
+	protected static final String TXT_ITEM_FLIES_AWAY     = Game.getVar(R.string.Potion_ItemFliesAway);
+	protected static final String TXT_ROTTEN_FOOD_MOISTEN = Game.getVar(R.string.Potion_FoodRefreshed);
+	
 	
 	private static final float TIME_TO_DRINK = 1f;
 	private static final float TIME_TO_MOISTEN = 1f;
@@ -291,7 +295,6 @@ public class Potion extends Item {
 	
 	@Override
 	public String info() {
-
 		return isKnown() ? desc() : String.format(Game.getVar(R.string.Potion_Info), color);
 	}
 	
@@ -338,12 +341,16 @@ public class Potion extends Item {
 		public void onSelect( Item item ) {
 			if (item != null) {
 				
-				if(item instanceof Arrow){
+				if(item instanceof Arrow) {
 					moistenArrow ((Arrow) item );
 				}
 				
-				if(item instanceof Scroll){
+				if(item instanceof Scroll) {
 					moistenScroll ((Scroll) item );
+				}
+				
+				if(item instanceof RottenFood) {
+					moistenRottenFood((RottenFood) item);
 				}
 			}
 		}
@@ -368,12 +375,20 @@ public class Potion extends Item {
 		GLog.i(TXT_ARROW_MOISTEN);
 		return quantity;
 	}
+
+	protected void moistenRottenFood(RottenFood scroll) {
+		moistenUseless();
+	}
 	
 	protected void moistenScroll(Scroll scroll) {
 		moistenUseless();
 	}
 	
 	protected void moistenArrow(Arrow arrow) {
+		moistenUseless();
+	}
+	
+	protected void moistenFood(Food food) {
 		moistenUseless();
 	}
 	
