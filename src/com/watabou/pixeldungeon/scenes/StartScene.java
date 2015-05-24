@@ -218,7 +218,7 @@ public class StartScene extends PixelScene {
 		unlockElf = new Group();
 		add(unlockElf);
 
-		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 2) )) {
+		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
 			BitmapTextMultiline text = PixelScene
 					.createMultiline(TXT_UNLOCK, 9);
 			text.maxWidth = (int) width;
@@ -237,7 +237,7 @@ public class StartScene extends PixelScene {
 			}
 		}
 
-		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) )) {
+		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
 			BitmapTextMultiline text = PixelScene
 					.createMultiline(TXT_UNLOCK_ELF, 9);
 			text.maxWidth = (int) width;
@@ -437,8 +437,6 @@ public class StartScene extends PixelScene {
 				highlighted = BASIC_HIGHLIGHTED;
 			}
 
-			// name.text( cl.name() );//Adjusted to load the translated names as
-			// each player class
 			name.text(cl.title().toUpperCase(Locale.getDefault()));
 			name.measure();
 			name.hardlight(normal);
