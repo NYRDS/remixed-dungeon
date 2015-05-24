@@ -20,7 +20,7 @@ public class SpiderServantSprite extends MobSprite {
 		idle.frames(shift, frames, 0, 1, 0, 2 );
 		
 		run = new Animation( 10, true );
-		run.frames(shift, frames, 3, 4, 5 );
+		run.frames(shift, frames, 3, 4, 5, 4 );
 		
 		attack = new Animation( 12, false );
 		attack.frames(shift, frames, 6, 7, 8 );
