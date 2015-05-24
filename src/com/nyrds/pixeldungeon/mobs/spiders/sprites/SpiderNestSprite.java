@@ -14,7 +14,7 @@ public class SpiderNestSprite extends MobSprite {
 		TextureFilm frames = new TextureFilm( texture, 16, 18 );
 		
 		idle = new Animation( 5, true );
-		idle.frames( frames, 0, 1, 0, 0, 1, 1 );
+		idle.frames( frames, 0, 1, 2, 1, 1, 0, 1 );
 		
 		run = new Animation( 1, true );
 		run.frames( frames, 0 );
