@@ -20,10 +20,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -50,8 +49,6 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.LarvaSprite;
 import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Yog extends Mob {
@@ -330,12 +327,7 @@ public class Yog extends Mob {
 					enemy.getSprite().bloodBurstA( getSprite().center(), dmg );
 					enemy.getSprite().flash();
 					
-					if (!enemy.isAlive() && enemy == Dungeon.hero) {
-						Dungeon.fail( Utils.format( ResultDescriptions.BOSS, name, Dungeon.depth ) );
-						GLog.n( TXT_KILL[gender], name );
-					}
 					return true;
-					
 				} else {
 					
 					enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
