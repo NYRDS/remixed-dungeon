@@ -104,6 +104,9 @@ public class Potion extends Item {
 		defaultAction = AC_DRINK;
 	}
 	
+	
+	private boolean shatterd = false;
+	
 	private static String[] getColors(){
 		if(colors == null){
 			colors = Game.getVars(R.array.Potion_Colors);
@@ -244,7 +247,14 @@ public class Potion extends Item {
 	protected void apply( Hero hero ) {
 		shatter( hero.pos );
 	}
-	
+
+	protected boolean canShatter() {
+		if(!shatterd) {
+			shatterd = true;
+			return true;
+		}
+		return false;
+	}
 
 	public void shatter( int cell ) {
 		GLog.i(String.format(Game.getVar(R.string.Potion_Shatter), color()));
