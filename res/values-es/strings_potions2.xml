@@ -7,4 +7,5 @@
   <string name="Potion_RuneDissaperaed">La runa ha desaparecido de %s.</string>
   <string name="Potion_ArrowMoisten">Has impregnado las flechas satisfactoriamente.</string>
   <string name="Potion_ItemFliesAway">%s se marcha volando de tus manos.</string>
+  <string name="Potion_FoodRefreshed">%s ahora parece comestible.</string>
 </resources>
