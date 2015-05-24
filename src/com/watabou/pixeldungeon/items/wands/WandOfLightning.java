@@ -79,7 +79,7 @@ public class WandOfLightning extends Wand {
 			}
 		}
 		
-		if (ns.size() > 0) {
+		if (!ns.isEmpty()) {
 			hit( Random.element( ns ), Random.Int( damage / 2, damage ) );
 		}
 	}
