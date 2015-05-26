@@ -61,33 +61,33 @@
   <!--STRINGS OF ScrollOfRecharging CLASS-->
   <string name="ScrollOfRecharging_Name">Pergamino de Recarga</string>
   <string name="ScrollOfRecharging_Info">El poder mágico en bruto acumulado en este pergamino cuando, sea liberado, recargara a   su poder completo todas las varas del lector.</string>
-  <string name="ScrollOfRecharging_Info1a">Una oleada de energía corre por tu mochila, recargando tu vara.</string>
-  <string name="ScrollOfRecharging_Info1b">Una oleada de energía corre por tu mochila, recargando tus varas</string>
-  <string name="ScrollOfRecharging_Info2">Una oleada de energía corre por tu mochila, pero no pasa nada</string>
+  <string name="ScrollOfRecharging_Info1a">Una oleada de energía recorre tu mochila, recargando tu varita</string>
+  <string name="ScrollOfRecharging_Info1b">Una oleada de energía recorre tu mochila, recargando tus varitas</string>
+  <string name="ScrollOfRecharging_Info2">Una oleada de energía recorre tu mochila, pero no pasa nada</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
-  <string name="ScrollOfRemoveCurse_Name">Pergamino de Remover Maldicion</string>
+  <string name="ScrollOfRemoveCurse_Name">Pergamino de Remover Maldición</string>
   <string name="ScrollOfRemoveCurse_Info">El encantamiento en este pergamino desproveerá instantáneamente al arma, armadura, anillos y artículos que cargue el lector de cualquier encantamiento maligno que pudiera prevenir al portador de removerse el articulo. </string>
   <string name="ScrollOfRemoveCurse_Proced">Tu mochila brilla con una luz purificadora, y una energía malévola se dispersa.</string>
   <string name="ScrollOfRemoveCurse_NoProced">Tu mochila brilla con una luz purificadora, pero no pasa nada.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
-  <string name="ScrollOfTeleportation_Name">Pergamino de teletransportacion.</string>
+  <string name="ScrollOfTeleportation_Name">Pergamino de teletransportación</string>
   <string name="ScrollOfTeleportation_Info">El hechizo en este pergamino transporta instantáneamente al lector a un lugar al azar en el nivel del calabozo. Este puede ser utilizado para escapar de una situación peligrosa, pero el lector sin suerte puede encontrarse a si mismo en un lugar aun mas peligroso.</string>
   <string name="ScrollOfTeleportation_Teleport">En un parpadeo fuiste teletransportado a otro lugar en el nivel.</string>
-  <string name="ScrollOfTeleportation_NoTeleport">El aura mágica fuerte de este lugar previene que te teletransportes!</string>
+  <string name="ScrollOfTeleportation_NoTeleport">¡El fuerte aura mágica de este lugar impide que te teletransportes!</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
   <string name="ScrollOfTerror_Name">Pergamino de Terror</string>
   <string name="ScrollOfTerror_Info">Un destello de luz roja abrumara a todas las criaturas en tu campo visual con terror y ellas se voltearan y huirán. Atacar a un enemigo que esta huyendo disipara el efecto.</string>
   <string name="ScrollOfTerror_Info1">El pergamino emite un destello brillante de luz roja</string>
-  <string name="ScrollOfTerror_Info2">El pergamino emite un destello brillante de luz roja y los %s huyen!</string>
-  <string name="ScrollOfTerror_Info3">El pergamino emite un destello brillante de luz roja y los monstruos huyen!</string>
+  <string name="ScrollOfTerror_Info2">¡El pergamino emite un brillante destello de luz roja y los %s huyen!</string>
+  <string name="ScrollOfTerror_Info3">¡El pergamino emite un brillante destello de luz roja y los monstruos huyen!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">Pergamino de Mejora</string>
-  <string name="ScrollOfUpgrade_Info">Este pergamino mejorara un solo articulo, subiendo su calidad. Una vara incrementara su poder y su numero de cargas; un arma infligirá mas daño o encontrara su objetivo mas frecuentemente; un traje de armadura desviara golpes adicionales; el efecto de un anillo en su portador se intensificara. Armas y armaduras también requerirán menos fuerza para usarlas, y cualquier maldición en el articulo sera levantada.</string>
+  <string name="ScrollOfUpgrade_Info">Este pergamino mejorará un solo objeto, aumentando su calidad. Una varita incrementara su poder y su número de cargas; un arma infligirá mas daño o será más precisa; una armadura desviará golpes adicionales; el efecto de un anillo se intensificará. Además, las armas y armaduras requerirán menos fuerza para usarlas, y cualquier maldición en el objeto será eliminada.</string>
   <string name="ScrollOfUpgrade_InvTitle">Selecciona un objeto para mejorarlo</string>
   <string name="ScrollOfUpgrade_LooksBetter">tu %s ciertamente se ve mejor ahora</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
   <string name="ScrollOfWeaponUpgrade_Name">Pergamino de Mejora de Arma</string>
-  <string name="ScrollOfWeaponUpgrade_Info">Este pergamino mejorara un arma de cuerpo a cuerpo, subiendo su calidad. En contraste con un pergamino de Mejora regular, esta versión especializada jamas destruirá el encantamiento en un arma. Por el contrario, es posible que imbuyere un arma sin encantamiento con un encantamiento al azar.</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Este pergamino mejorara un arma cuerpo a cuerpo, aumentando su calidad. A diferencia de  un pergamino de mejora normal, esta versión especializada jamás destruirá el encantamiento de un arma. En cambio, es posible que encante a un arma con un encantamiento al azar. </string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Selecciona un arma para mejorar</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">tu %s ciertamente se ve mejor ahora</string>
 </resources>

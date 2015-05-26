@@ -33,7 +33,7 @@
   <string name="Badges_DeathHunger">Muerte por hambre</string>
   <string name="Badges_DeathGlyph">Muerte por un glifo.</string>
   <string name="Badges_DeathFalling">Muerte por caída</string>
-  <string name="Badges_Yasd">Muerte por el fuego, veneno, gas toxico &amp; hambre</string>
+  <string name="Badges_Yasd">Muerte por el fuego, veneno, gas tóxico &amp; hambre</string>
   <!--<string name="Badges_BossSlain1War"></string>-->
   <!--<string name="Badges_BossSlain1Mag"></string>-->
   <!--<string name="Badges_BossSlain1Rog"></string>-->
@@ -51,7 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3er jefe asesinado por Gladiador, Berserker, Brujo, Mago de Batalla, Freerunner, Asesino, Tirador &amp;aml; Guardabosques</string>
+  <string name="Badges_BossSlain3All">3er jefe asesinado por Gladiador, Berserker, Brujo, Mago de Batalla, Corredor, Asesino, Tirador &amp;aml; Guardabosques</string>
   <string name="Badges_RingHaggler">Anillo del Regateador obtenido</string>
   <string name="Badges_RingThorns">Anillo de Espinas obtenido</string>
   <string name="Badges_StrengthAttained1">13 puntos de Fuerza obtenidos</string>
