@@ -43,7 +43,7 @@ import com.watabou.utils.Random;
 
 public class Imp extends NPC {
 
-	{
+	public Imp() {
 		spriteClass = ImpSprite.class;
 	}
 	
@@ -97,7 +97,7 @@ public class Imp extends NPC {
 	}
 	
 	@Override
-	public void interact(final Hero hero) {
+	public boolean interact(final Hero hero) {
 		
 		getSprite().turnTo( pos, hero.pos );
 		if (Quest.given) {
@@ -116,6 +116,8 @@ public class Imp extends NPC {
 			
 			Journal.add( Journal.Feature.IMP );
 		}
+		
+		return true;
 	}
 	
 	private void tell( String format, Object...args ) {

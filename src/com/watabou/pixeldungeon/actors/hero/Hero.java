@@ -545,7 +545,9 @@ public class Hero extends Char {
 
 			ready();
 			getSprite().turnTo(pos, npc.pos);
-			npc.interact(this);
+			if( !npc.interact(this) ) {
+				actAttack(new HeroAction.Attack(npc));
+			}
 			return false;
 
 		} else {

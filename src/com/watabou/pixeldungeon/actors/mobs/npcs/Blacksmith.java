@@ -66,7 +66,7 @@ public class Blacksmith extends NPC {
 	}
 	
 	@Override
-	public void interact(final Hero hero) {
+	public boolean interact(final Hero hero) {
 		
 		getSprite().turnTo( pos, hero.pos );
 		
@@ -142,6 +142,7 @@ public class Blacksmith extends NPC {
 			tell( TXT_GET_LOST );
 			
 		}
+		return true;
 	}
 	
 	private void tell( String text ) {

@@ -110,7 +110,7 @@ public class Ghost extends NPC {
 	}
 	
 	@Override
-	public void interact(final Hero hero) {
+	public boolean interact(final Hero hero) {
 		getSprite().turnTo( pos, hero.pos );
 		
 		Sample.INSTANCE.play( Assets.SND_GHOST );
@@ -149,6 +149,7 @@ public class Ghost extends NPC {
 			
 			Journal.add( Journal.Feature.GHOST );
 		}
+		return true;
 	}
 		
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

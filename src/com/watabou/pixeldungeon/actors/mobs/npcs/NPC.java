@@ -52,5 +52,5 @@ public abstract class NPC extends Mob {
 	public void beckon( int cell ) {
 	}
 	
-	abstract public void interact(final Hero hero);
+	abstract public boolean interact(final Hero hero);
 }

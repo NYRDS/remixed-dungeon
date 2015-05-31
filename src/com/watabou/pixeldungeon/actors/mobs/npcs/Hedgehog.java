@@ -76,7 +76,7 @@ public class Hedgehog extends NPC {
 	}
 
 	@Override
-	public void interact(final Hero hero) {
+	public boolean interact(final Hero hero) {
 		getSprite().turnTo( pos, hero.pos );
 		
 		switch (action)
@@ -108,6 +108,8 @@ public class Hedgehog extends NPC {
 		}
 		speed += 0.5f;
 		action++;
+		
+		return true;
 	}
 
 }

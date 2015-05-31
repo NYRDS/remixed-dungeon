@@ -132,8 +132,9 @@ public class WandOfFlock extends Wand {
 		}
 
 		@Override
-		public void interact(final Hero hero) {
-			yell( Random.element( QUOTES ) );
+		public boolean interact(final Hero hero) {
+			say( Random.element( QUOTES ) );
+			return false;
 		}
 	}
 }

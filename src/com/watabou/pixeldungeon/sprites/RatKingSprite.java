@@ -33,13 +33,13 @@ public class RatKingSprite extends MobSprite {
 		idle.frames( frames, 0, 0, 0, 1 );
 		
 		run = new Animation( 10, true );
-		run.frames( frames, 2, 3, 4, 5, 6 );
+		run.frames( frames, 2, 7, 8, 9, 10 );
 		
 		attack = new Animation( 15, false );
-		attack.frames( frames, 0 );
+		attack.frames( frames, 2, 3, 4, 5 );
 		
 		die = new Animation( 10, false );
-		die.frames( frames, 0 );
+		die.frames( frames, 0, 11, 12, 13, 14 );
 		
 		play( idle );
 	}

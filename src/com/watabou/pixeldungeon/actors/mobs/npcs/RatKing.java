@@ -23,18 +23,25 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.sprites.RatKingSprite;
+import com.watabou.utils.Bundle;
 
 public class RatKing extends NPC {
 
-	{
+	private static final String ANGER = "anger";
+	
+	private int anger = 0;
+	
+	public RatKing() {
 		spriteClass = RatKingSprite.class;
-		
 		state  = SLEEPEING;
+		defenseSkill = 20;
+		
+		hp(ht(30));
+		EXP = 1;
 	}
 	
-	@Override
-	public int defenseSkill( Char enemy ) {
-		return 1000;
+	private boolean friendly(){
+		return anger < 2;
 	}
 	
 	@Override
@@ -44,15 +51,25 @@ public class RatKing extends NPC {
 	
 	@Override
 	protected Char chooseEnemy() {
-		return DUMMY;
+		if(friendly()) {
+			return DUMMY;
+		} else {
+			return super.chooseEnemy();
+		}
 	}
 	
 	@Override
 	public void damage( int dmg, Object src ) {
+		if(friendly()){anger++;} else {
+			super.damage(dmg, src);
+		}
 	}
 	
 	@Override
 	public void add( Buff buff ) {
+		if(friendly()){} else {
+			super.add(buff);
+		}
 	}
 	
 	@Override
@@ -61,14 +78,51 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public void interact(final Hero hero) {
+	public boolean interact(final Hero hero) {
 		getSprite().turnTo( pos, hero.pos );
+		
+		if (!friendly()) {
+			return false;
+		}
+		
 		if (state == SLEEPEING) {
 			notice();
 			say(Game.getVar(R.string.RatKing_Info1));
 			state = WANDERING;
 		} else {
-			say(Game.getVar(R.string.RatKing_Info2));
+			anger++;
+			if(friendly()) {
+				say(Game.getVar(R.string.RatKing_Info2));
+			} else {
+				hostile = true;
+				state = HUNTING;
+				yell(Game.getVar(R.string.RatKing_Info3));
+			}
 		}
+		return true;
 	}
+	
+	@Override
+	public void die(Object cause) {
+		say(Game.getVar(R.string.RatKing_Died));
+		super.die(cause);
+	}
+	
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		
+		bundle.put(ANGER, anger);
+
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+
+		super.restoreFromBundle(bundle);
+		
+		anger = bundle.getInt(ANGER);
+	}
+
+	
 }

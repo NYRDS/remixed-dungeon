@@ -99,7 +99,7 @@ public class WandMaker extends NPC {
 	}
 	
 	@Override
-	public void interact(final Hero hero) {
+	public boolean interact(final Hero hero) {
 		
 		getSprite().turnTo( pos, hero.pos );
 		if (Quest.given) {
@@ -121,6 +121,8 @@ public class WandMaker extends NPC {
 			
 			Journal.add( Journal.Feature.WANDMAKER );
 		}
+		
+		return false;
 	}
 	
 	private void tell( String format, Object...args ) {

@@ -91,7 +91,8 @@ public class Shopkeeper extends NPC {
 	};
 
 	@Override
-	public void interact(final Hero hero) {
+	public boolean interact(final Hero hero) {
 		sell();
+		return false;
 	}
 }
