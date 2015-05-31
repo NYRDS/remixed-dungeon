@@ -22,81 +22,102 @@ public class SpiderLevel extends Level {
 		color1 = 0x801500;
 		color2 = 0xa68521;
 	}
-	
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;
 	}
-	
+
 	@Override
 	public String waterTex() {
 		return Assets.WATER_HALLS;
 	}
-	
+
 	List<Chamber> chambers = new ArrayList<Chamber>();
-	
+
 	protected void createChambers() {
-		
-		chambers.add(new Chamber(Level.getWidth()/2, Level.getWidth()/2, 2 ));
-		for(int i = 0;i<6; ++i) {
-			
-			int cx = Random.Int(1,Level.getWidth()-1);
-			int cy = Random.Int(1,Level.getWidth()-1);
-			
-			chambers.add(new Chamber ( cx, cy, 1));
+
+		chambers.add(new Chamber(1, 1, 5, 3));
+
+		for (int i = 0; i < 5; ++i) {
+
+			int cx = Random.Int(1, Level.getWidth() - 1);
+			int cy = Random.Int(1, Level.getWidth() - 1);
+
+			chambers.add(new Chamber(cx, cy, 3, Random.IntRange(0, 3)));
 		}
-		
+
 		digChamber(chambers.get(0));
-		
-		for( int i = 1; i < chambers.size() ; i++ ) {
+
+		for (int i = 1; i < chambers.size(); ++i) {
 			digChamber(chambers.get(i));
-			connectChambers(chambers.get(i-1), chambers.get(i));
+			connectChambers(chambers.get(0), chambers.get(i));
 		}
 	}
-	
+
 	private void digChamber(Chamber chamber) {
 		int k = chamber.r;
-		
+
 		for (int i = -k; i < k + 1; ++i) {
 			for (int j = -k; j < k + 1; ++j) {
-				if( cellValid(chamber.x + i, chamber.y + j) ) {
-					if(Math.abs(i*j) < k*k) {
+				if (cellValid(chamber.x + i, chamber.y + j)) {
+
+					boolean empty = false;
+					switch (chamber.kind) {
+					case 0:
+						empty = Math.abs(i - j) < k;
+						break;
+
+					case 1:
+						empty = Math.abs(i + j) < k;
+						break;
+
+					case 2:
+						empty = Math.abs(i) + Math.abs(j) < k;
+						break;
+
+					case 3:
+						empty = Math.abs(i * j) < k;
+						break;
+					}
+
+					if (empty) {
 						map[cell(chamber.x + i, chamber.y + j)] = Terrain.EMPTY;
 					}
 				}
 			}
 		}
-		
+
 	}
 
 	private void connectChambers(Chamber a, Chamber b) {
 		int x = a.x;
 		int y = a.y;
-		
-		while( x != b.x || y != b.y ) {
+
+		while (x != b.x || y != b.y) {
 			int dx = (int) Math.signum(x - b.x);
 			int dy = (int) Math.signum(y - b.y);
-			
-			if(cellValid(x,y)) {
-				map[cell(x,y)] = Terrain.EMPTY;
+
+			if (cellValid(x, y)) {
+				map[cell(x, y)] = Terrain.EMPTY;
 			}
-			
-			if(dx != 0 && map[cell(x - dx, y)] == Terrain.EMPTY) {
+
+			if (dx != 0 && map[cell(x - dx, y)] == Terrain.EMPTY) {
 				x = x - dx;
 				continue;
 			}
-			
-			if(dy != 0 && map[cell(x,y-dy)] == Terrain.EMPTY) {
+
+			if (dy != 0 && map[cell(x, y - dy)] == Terrain.EMPTY) {
 				y = y - dy;
 				continue;
 			}
-			
-			switch( Random.Int(10) ) {
+
+			switch (Random.Int(10)) {
 			case 0:
 			case 1:
 			case 2:
 			case 3:
-				if( dx != 0 && cellValid(x - dx, y)) {
+				if (dx != 0) {
 					x -= dx;
 				}
 				break;
@@ -104,92 +125,93 @@ public class SpiderLevel extends Level {
 			case 5:
 			case 6:
 			case 7:
-				if( dy != 0 && cellValid(x, y - dy)) {
+				if (dy != 0) {
 					y -= dy;
 				}
 				break;
 			case 8:
-				if( dx != 0 && cellValid(x + dx, y)) {
+				if (dx != 0) {
 					x += dx;
 				}
 				break;
 			case 9:
-				if( dy != 0 && cellValid(x, y + dy)) {
+				if (dy != 0) {
 					y += dy;
 				}
 				break;
 			}
 		}
 	}
-	
+
 	@Override
 	protected boolean build() {
-		Arrays.fill( map, Terrain.WALL );
-		
+		Arrays.fill(map, Terrain.WALL);
+
 		createChambers();
-		
-		Chamber ent = chambers.get(chambers.size()-1);
+
+		Chamber ent = chambers.get(chambers.size() - 1);
 		entrance = cell(ent.x, ent.y);
 		map[entrance] = Terrain.ENTRANCE;
-		
-		Chamber ext = chambers.get(chambers.size()-2);
+
+		Chamber ext = chambers.get(chambers.size() - 2);
 		exit = cell(ext.x, ext.y);
 		map[exit] = Terrain.EXIT;
 
 		feeling = Feeling.NONE;
-		
+
 		return true;
 	}
 
 	@Override
 	protected void decorate() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public int nMobs() {
-		return 2 + Dungeon.depth % 5 + Random.Int( 3 );
+		return 2 + Dungeon.depth % 5 + Random.Int(3);
 	}
-	
+
 	@Override
 	protected void createMobs() {
 		int nMobs = nMobs();
-		for (int i=0; i < nMobs; i++) {
+		for (int i = 0; i < nMobs; i++) {
 			Mob mob = createMob();
-			mobs.add( mob );
-			Actor.occupyCell( mob );
+			mobs.add(mob);
+			Actor.occupyCell(mob);
 		}
 	}
-	
+
 	@Override
 	protected void createItems() {
-		
+
 		int nItems = 3;
 		while (Random.Float() < 0.3f) {
 			nItems++;
 		}
-		
-		for (int i=0; i < nItems; i++) {
+
+		for (int i = 0; i < nItems; i++) {
 			Heap.Type type = Heap.Type.SKELETON;
-			drop( Generator.random(), randomRespawnCell() ).type = type;
+			drop(Generator.random(), randomRespawnCell()).type = type;
 		}
 
 		for (Item item : itemsToSpawn) {
 			int cell = randomRespawnCell();
 			if (item instanceof ScrollOfUpgrade) {
 
-				while (map[cell] == Terrain.FIRE_TRAP || map[cell] == Terrain.SECRET_FIRE_TRAP) {
+				while (map[cell] == Terrain.FIRE_TRAP
+						|| map[cell] == Terrain.SECRET_FIRE_TRAP) {
 					cell = randomRespawnCell();
 				}
 			}
 
-			drop( item, cell ).type = Heap.Type.HEAP;
+			drop(item, cell).type = Heap.Type.HEAP;
 		}
-		
+
 		Item item = Bones.get();
 		if (item != null) {
-			drop( item, randomRespawnCell() ).type = Heap.Type.SKELETON;
+			drop(item, randomRespawnCell()).type = Heap.Type.SKELETON;
 		}
 	}
 }
