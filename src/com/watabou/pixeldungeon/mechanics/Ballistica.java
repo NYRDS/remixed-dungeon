@@ -22,12 +22,12 @@ import com.watabou.pixeldungeon.levels.Level;
 
 public class Ballistica {
 
-	public static int[] trace = new int[Math.max( Level.WIDTH, Level.HEIGHT )];
+	public static int[] trace = new int[Math.max( Level.getWidth(), Level.getHeight() )];
 	public static int distance;
 	
 	public static int cast( int from, int to, boolean magic, boolean hitChars ) {
 		
-		int w = Level.WIDTH;
+		int w = Level.getWidth();
 		
 		int x0 = from % w;
 		int x1 = to % w;

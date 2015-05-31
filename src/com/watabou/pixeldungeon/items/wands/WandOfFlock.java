@@ -70,7 +70,7 @@ public class WandOfFlock extends Wand {
 	sheepLabel:
 		for (int i=0; i < n; i++) {
 			do {
-				for (int j=0; j < Level.LENGTH; j++) {
+				for (int j=0; j < Level.getLength(); j++) {
 					if (PathFinder.distance[j] == dist) {
 						
 						Sheep sheep = new Sheep();

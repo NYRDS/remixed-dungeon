@@ -57,7 +57,7 @@ public class WandOfAvalanche extends Wand {
 		int size = 1 + level / 3;
 		PathFinder.buildDistanceMap( cell, BArray.not( Level.solid, null ), size );
 		
-		for (int i=0; i < Level.LENGTH; i++) {
+		for (int i=0; i < Level.getLength(); i++) {
 			
 			int d = PathFinder.distance[i];
 			

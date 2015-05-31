@@ -45,10 +45,10 @@ public class HallsBossLevel extends Level {
 		viewDistance = 3;
 	}
 	
-	private static final int ROOM_LEFT		= WIDTH / 2 - 1;
-	private static final int ROOM_RIGHT		= WIDTH / 2 + 1;
-	private static final int ROOM_TOP		= HEIGHT / 2 - 1;
-	private static final int ROOM_BOTTOM	= HEIGHT / 2 + 1;
+	private static final int ROOM_LEFT		= getWidth() / 2 - 1;
+	private static final int ROOM_RIGHT		= getWidth() / 2 + 1;
+	private static final int ROOM_TOP		= getHeight() / 2 - 1;
+	private static final int ROOM_BOTTOM	= getHeight() / 2 + 1;
 	
 	private int stairs = -1;
 	private boolean enteredArena = false;
@@ -94,13 +94,13 @@ public class HallsBossLevel extends Level {
 			Painter.fill( this, 2 + i * 4, top, 4, bottom - top + 1, Terrain.EMPTY );
 			
 			if (i == 2) {
-				exit = (i * 4 + 3) + (top - 1) * WIDTH ;
+				exit = (i * 4 + 3) + (top - 1) * getWidth() ;
 			}
 			
 			for (int j=0; j < 4; j++) {
 				if (Random.Int( 2 ) == 0) {
 					int y = Random.IntRange( top + 1, bottom - 1 );
-					map[i*4+j + y*WIDTH] = Terrain.WALL_DECO;
+					map[i*4+j + y*getWidth()] = Terrain.WALL_DECO;
 				}
 			}
 		}
@@ -113,11 +113,11 @@ public class HallsBossLevel extends Level {
 			ROOM_RIGHT - ROOM_LEFT + 1, ROOM_BOTTOM - ROOM_TOP + 1, Terrain.EMPTY );
 		
 		entrance = Random.Int( ROOM_LEFT + 1, ROOM_RIGHT - 1 ) + 
-			Random.Int( ROOM_TOP + 1, ROOM_BOTTOM - 1 ) * WIDTH;
+			Random.Int( ROOM_TOP + 1, ROOM_BOTTOM - 1 ) * getWidth();
 		map[entrance] = Terrain.ENTRANCE;
 		
 		boolean[] patch = Patch.generate( 0.45f, 6 );
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < getLength(); i++) {
 			if (map[i] == Terrain.EMPTY && patch[i]) {
 				map[i] = Terrain.WATER;
 			}
@@ -129,7 +129,7 @@ public class HallsBossLevel extends Level {
 	@Override
 	protected void decorate() {	
 		
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < getLength(); i++) {
 			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
 				map[i] = Terrain.EMPTY_DECO;
 			}
@@ -150,7 +150,7 @@ public class HallsBossLevel extends Level {
 		if (item != null) {
 			int pos;
 			do {
-				pos = Random.IntRange( ROOM_LEFT, ROOM_RIGHT ) + Random.IntRange( ROOM_TOP + 1, ROOM_BOTTOM ) * WIDTH;
+				pos = Random.IntRange( ROOM_LEFT, ROOM_RIGHT ) + Random.IntRange( ROOM_TOP + 1, ROOM_BOTTOM ) * getWidth();
 			} while (pos == entrance || map[pos] == Terrain.SIGN);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
@@ -171,12 +171,12 @@ public class HallsBossLevel extends Level {
 			enteredArena = true;
 			
 			for (int i=ROOM_LEFT-1; i <= ROOM_RIGHT + 1; i++) {
-				doMagic( (ROOM_TOP - 1) * WIDTH + i );
-				doMagic( (ROOM_BOTTOM + 1) * WIDTH + i );
+				doMagic( (ROOM_TOP - 1) * getWidth() + i );
+				doMagic( (ROOM_BOTTOM + 1) * getWidth() + i );
 			}
 			for (int i=ROOM_TOP; i < ROOM_BOTTOM + 1; i++) {
-				doMagic( i * WIDTH + ROOM_LEFT - 1 );
-				doMagic( i * WIDTH + ROOM_RIGHT + 1 );
+				doMagic( i * getWidth() + ROOM_LEFT - 1 );
+				doMagic( i * getWidth() + ROOM_RIGHT + 1 );
 			}
 			doMagic( entrance );
 			GameScene.updateMap();
@@ -185,7 +185,7 @@ public class HallsBossLevel extends Level {
 			
 			Yog boss = new Yog();
 			do {
-				boss.pos = Random.Int( LENGTH );
+				boss.pos = Random.Int( getLength() );
 			} while (
 				!passable[boss.pos] ||
 				Dungeon.visible[boss.pos]);

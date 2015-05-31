@@ -68,7 +68,7 @@ public class ShopPainter extends Painter {
 		for (int i=0; i < range.length; i++) {
 			
 			Point xy = p2xy( room, (pos + per) % per );
-			int cell = xy.x + xy.y * Level.WIDTH;
+			int cell = xy.x + xy.y * Level.getWidth();
 			
 			if (level.getHeap( cell ) != null) {
 				do {

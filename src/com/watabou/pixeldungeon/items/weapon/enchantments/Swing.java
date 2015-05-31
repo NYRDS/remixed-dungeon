@@ -36,8 +36,8 @@ public class Swing extends Enchantment {
 			
 			int p = attacker.pos;
 			int[] neighbours = {
-				p+1, p-1, p+Level.WIDTH, p-Level.WIDTH, 
-				p+1+Level.WIDTH, p+1-Level.WIDTH, p-1+Level.WIDTH, p-1-Level.WIDTH};
+				p+1, p-1, p+Level.getWidth(), p-Level.getWidth(), 
+				p+1+Level.getWidth(), p+1-Level.getWidth(), p-1+Level.getWidth(), p-1-Level.getWidth()};
 			
 			for (int n : neighbours) {
 				Char ch = Actor.findChar( n );

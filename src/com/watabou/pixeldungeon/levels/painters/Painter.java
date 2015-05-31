@@ -30,7 +30,7 @@ public class Painter {
 	}
 	
 	public static void set( Level level, int x, int y, int value ) {
-		set( level, x + y * Level.WIDTH, value );
+		set( level, x + y * Level.getWidth(), value );
 	}
 	
 	public static void set( Level level, Point p, int value ) {
@@ -39,7 +39,7 @@ public class Painter {
 	
 	public static void fill( Level level, int x, int y, int w, int h, int value ) {
 		
-		int width = Level.WIDTH;
+		int width = Level.getWidth();
 		
 		int pos = y * width + x;
 		for (int i=y; i < y + h; i++, pos += width) {

@@ -1047,7 +1047,7 @@ public class Hero extends Char {
 
 		} else {
 
-			int len = Level.LENGTH;
+			int len = Level.getLength();
 			boolean[] p = wallWalkerBuff != null ? Level.solid : Level.passable;
 			boolean[] v = Dungeon.level.visited;
 			boolean[] m = Dungeon.level.mapped;
@@ -1294,7 +1294,7 @@ public class Hero extends Char {
 
 	public static void reallyDie(Object cause) {
 
-		int length = Level.LENGTH;
+		int length = Level.getLength();
 		int[] map = Dungeon.level.map;
 		boolean[] visited = Dungeon.level.visited;
 		boolean[] discoverable = Level.discoverable;
@@ -1426,27 +1426,27 @@ public class Hero extends Char {
 			distance = 1;
 		}
 
-		int cx = pos % Level.WIDTH;
-		int cy = pos / Level.WIDTH;
+		int cx = pos % Level.getWidth();
+		int cy = pos / Level.getWidth();
 		int ax = cx - distance;
 		if (ax < 0) {
 			ax = 0;
 		}
 		int bx = cx + distance;
-		if (bx >= Level.WIDTH) {
-			bx = Level.WIDTH - 1;
+		if (bx >= Level.getWidth()) {
+			bx = Level.getWidth() - 1;
 		}
 		int ay = cy - distance;
 		if (ay < 0) {
 			ay = 0;
 		}
 		int by = cy + distance;
-		if (by >= Level.HEIGHT) {
-			by = Level.HEIGHT - 1;
+		if (by >= Level.getHeight()) {
+			by = Level.getHeight() - 1;
 		}
 
 		for (int y = ay; y <= by; y++) {
-			for (int x = ax, p = ax + y * Level.WIDTH; x <= bx; x++, p++) {
+			for (int x = ax, p = ax + y * Level.getWidth(); x <= bx; x++, p++) {
 
 				if (Dungeon.visible[p]) {
 

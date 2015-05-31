@@ -54,7 +54,7 @@ public class Piercing extends Enchantment {
 				ch.getSprite().flash();
 				
 				pos += d;
-			} while (pos >= 0 && pos < Level.LENGTH);
+			} while (pos >= 0 && pos < Level.getLength());
 			
 			return true;
 			

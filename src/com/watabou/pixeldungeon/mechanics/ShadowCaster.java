@@ -24,8 +24,8 @@ public final class ShadowCaster {
 
 	private static final int MAX_DISTANCE = 8;
 	
-	private static final int WIDTH	= Level.WIDTH;
-	private static final int HEIGHT	= Level.HEIGHT;
+	private static final int WIDTH	= Level.getWidth();
+	private static final int HEIGHT	= Level.getHeight();
 	
 	private static int distance;
 	private static int limits[];

@@ -28,9 +28,9 @@ import com.watabou.utils.Bundle;
 
 public class Blob extends Actor {
 	
-	public static final int WIDTH	= Level.WIDTH;
-	public static final int HEIGHT	= Level.HEIGHT;
-	public static final int LENGTH	= Level.LENGTH;
+	public static final int WIDTH	= Level.getWidth();
+	public static final int HEIGHT	= Level.getHeight();
+	public static final int LENGTH	= Level.getLength();
 	
 	public int volume = 0;
 	
@@ -97,12 +97,12 @@ public class Blob extends Actor {
 		}
 		
 		if (Level.resizingNeeded) {
-			int[] cur = new int[Level.LENGTH];
+			int[] cur = new int[Level.getLength()];
 			Arrays.fill( cur, 0 );
 			
 			int loadedMapSize = Level.loadedMapSize;
 			for (int i=0; i < loadedMapSize; i++) {
-				System.arraycopy( this.cur, i * loadedMapSize, cur, i * Level.WIDTH, loadedMapSize );
+				System.arraycopy( this.cur, i * loadedMapSize, cur, i * Level.getWidth(), loadedMapSize );
 			}
 			
 			this.cur = cur;

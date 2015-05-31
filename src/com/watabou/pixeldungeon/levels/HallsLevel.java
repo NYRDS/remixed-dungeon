@@ -72,7 +72,7 @@ public class HallsLevel extends RegularLevel {
 	@Override
 	protected void decorate() {
 		
-		for (int i=WIDTH + 1; i < LENGTH - WIDTH - 1; i++) {
+		for (int i=getWidth() + 1; i < getLength() - getWidth() - 1; i++) {
 			if (map[i] == Terrain.EMPTY) { 
 				
 				int count = 0;
@@ -151,7 +151,7 @@ public class HallsLevel extends RegularLevel {
 	}
 	
 	public static void addVisuals( Level level, Scene scene ) {
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < getLength(); i++) {
 			if (level.map[i] == 63) {
 				scene.add( new Stream( i ) );
 			}

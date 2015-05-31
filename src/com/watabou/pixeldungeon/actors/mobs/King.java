@@ -169,7 +169,7 @@ public class King extends Mob {
 	undeadLabel:
 		for (int i=0; i < undeadsToSummon; i++) {
 			do {
-				for (int j=0; j < Level.LENGTH; j++) {
+				for (int j=0; j < Level.getLength(); j++) {
 					if (PathFinder.distance[j] == dist) {
 						
 						Undead undead = new Undead();

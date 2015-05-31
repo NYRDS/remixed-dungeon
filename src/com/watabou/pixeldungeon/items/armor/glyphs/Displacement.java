@@ -45,7 +45,7 @@ public class Displacement extends Glyph {
 		
 		int nTries = (armor.level() < 0 ? 1 : armor.level() + 1) * 5;
 		for (int i=0; i < nTries; i++) {
-			int pos = Random.Int( Level.LENGTH );
+			int pos = Random.Int( Level.getLength() );
 			if (Dungeon.visible[pos] && Level.passable[pos] && Actor.findChar( pos ) == null) {
 				
 				WandOfBlink.appear( defender, pos );

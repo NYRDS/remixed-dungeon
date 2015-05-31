@@ -95,7 +95,7 @@ public class Dungeon {
 	private static boolean gameOver = false;
 	
 	// Hero's field of view
-	public static boolean[] visible = new boolean[Level.LENGTH];
+	public static boolean[] visible = new boolean[Level.getLength()];
 	
 	public static boolean nightMode;
 	
@@ -104,7 +104,7 @@ public class Dungeon {
 		
 		Actor.clear();
 		
-		PathFinder.setMapSize( Level.WIDTH, Level.HEIGHT );
+		PathFinder.setMapSize( Level.getWidth(), Level.getHeight() );
 		
 		Scroll.initLabels();
 		Potion.initColors();
@@ -461,7 +461,7 @@ public class Dungeon {
 		Dungeon.depth = -1;
 		
 		if (fullLoad) {
-			PathFinder.setMapSize( Level.WIDTH, Level.HEIGHT );
+			PathFinder.setMapSize( Level.getWidth(), Level.getHeight() );
 		}
 		
 		Scroll.restore( bundle );
@@ -594,7 +594,7 @@ public class Dungeon {
 		GameScene.afterObserve();
 	}
 	
-	private static boolean[] passable = new boolean[Level.LENGTH];
+	private static boolean[] passable = new boolean[Level.getLength()];
 	public static HeroClass heroClass;
 
 	private static void markActorsAsUnpassableIgnoreFov(){
@@ -626,7 +626,7 @@ public class Dungeon {
 		if (ch.flying || ch.buff( Amok.class ) != null) {
 			BArray.or( pass, Level.avoid, passable );
 		} else {
-			System.arraycopy( pass, 0, passable, 0, Level.LENGTH );
+			System.arraycopy( pass, 0, passable, 0, Level.getLength() );
 		}
 		
 		if(visible != null){
@@ -644,7 +644,7 @@ public class Dungeon {
 		if (ch.flying) {
 			BArray.or( pass, Level.avoid, passable );
 		} else {
-			System.arraycopy( pass, 0, passable, 0, Level.LENGTH );
+			System.arraycopy( pass, 0, passable, 0, Level.getLength() );
 		}
 		
 		if(visible != null){

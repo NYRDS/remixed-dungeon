@@ -21,15 +21,15 @@ import com.watabou.utils.Random;
 
 public class Patch {
 	
-	private static boolean[] cur = new boolean[Level.LENGTH];
-	private static boolean[] off = new boolean[Level.LENGTH];
+	private static boolean[] cur = new boolean[Level.getLength()];
+	private static boolean[] off = new boolean[Level.getLength()];
 	
 	public static boolean[] generate( float seed, int nGen ) {
 		
-		int w = Level.WIDTH;
-		int h = Level.HEIGHT;
+		int w = Level.getWidth();
+		int h = Level.getHeight();
 		
-		for (int i=0; i < Level.LENGTH; i++) {
+		for (int i=0; i < Level.getLength(); i++) {
 			off[i] = Random.Float() < seed;
 		}
 		

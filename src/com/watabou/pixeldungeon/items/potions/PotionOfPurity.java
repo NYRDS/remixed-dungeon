@@ -62,7 +62,7 @@ public class PotionOfPurity extends Potion {
 				continue;
 			}
 			
-			for (int i=0; i < Level.LENGTH; i++) {
+			for (int i=0; i < Level.getLength(); i++) {
 				if (PathFinder.distance[i] < Integer.MAX_VALUE) {
 					
 					int value = blob.cur[i]; 

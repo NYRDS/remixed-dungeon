@@ -39,7 +39,7 @@ public class Fire extends Blob {
 		boolean[] flamable = Level.flamable;
 		
 		int from = WIDTH + 1;
-		int to = Level.LENGTH - WIDTH - 1;
+		int to = Level.getLength() - WIDTH - 1;
 		
 		boolean observe = false;
 		

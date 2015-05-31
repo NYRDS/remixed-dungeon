@@ -56,8 +56,8 @@ public class LightningTrap {
 			
 			int[] points = new int[2];
 			
-			points[0] = pos - Level.WIDTH;
-			points[1] = pos + Level.WIDTH;
+			points[0] = pos - Level.getWidth();
+			points[1] = pos + Level.getWidth();
 			ch.getSprite().parent.add( new Lightning( points, 2, null ) );
 			
 			points[0] = pos - 1;

@@ -61,10 +61,10 @@ public class LibraryPainter extends Painter {
 			fill(level, room.left + 1, room.top + 1, room.width() - 1, 1,
 					Terrain.BOOKSHELF);
 		}
-		if (a != null && level.map[a.x + a.y * Level.WIDTH] == Terrain.EMPTY) {
+		if (a != null && level.map[a.x + a.y * Level.getWidth()] == Terrain.EMPTY) {
 			set(level, a, Terrain.STATUE);
 		}
-		if (b != null && level.map[b.x + b.y * Level.WIDTH] == Terrain.EMPTY) {
+		if (b != null && level.map[b.x + b.y * Level.getWidth()] == Terrain.EMPTY) {
 			set(level, b, Terrain.STATUE);
 		}
 

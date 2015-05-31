@@ -99,7 +99,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	public int random( int m ) {
 		int x = Random.Int( left + 1 + m, right - m );
 		int y = Random.Int( top + 1 + m, bottom - m );
-		return x + y * Level.WIDTH;
+		return x + y * Level.getWidth();
 	}
 	
 	public void addNeigbour( Room other ) {
@@ -125,8 +125,8 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	}
 	
 	public boolean inside( int p ) {
-		int x = p % Level.WIDTH;
-		int y = p / Level.WIDTH;
+		int x = p % Level.getWidth();
+		int y = p / Level.getWidth();
 		return x > left && y > top && x < right && y < bottom;
 	}
 	

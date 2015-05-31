@@ -45,7 +45,7 @@ public class PotionOfFrost extends Potion {
 		
 		Fire fire = (Fire)Dungeon.level.blobs.get( Fire.class );
 		
-		for (int i=0; i < Level.LENGTH; i++) {
+		for (int i=0; i < Level.getLength(); i++) {
 			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
 				Freezing.affect( i, fire );
 			}

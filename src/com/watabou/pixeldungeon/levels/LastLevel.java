@@ -56,13 +56,13 @@ public class LastLevel extends Level {
 		Painter.fill( this, 2, 2, SIZE-2, SIZE-2, Terrain.EMPTY );
 		Painter.fill( this, SIZE/2, SIZE/2, 3, 3, Terrain.EMPTY_SP );
 		
-		entrance = SIZE * WIDTH + SIZE / 2 + 1;
+		entrance = SIZE * getWidth() + SIZE / 2 + 1;
 		map[entrance] = Terrain.ENTRANCE;
 		
-		exit = entrance - WIDTH * SIZE;
+		exit = entrance - getWidth() * SIZE;
 		map[exit] = Terrain.LOCKED_EXIT;
 		
-		pedestal = (SIZE / 2 + 1) * (WIDTH + 1);
+		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 		map[pedestal] = Terrain.PEDESTAL;
 		map[pedestal-1] = map[pedestal+1] = Terrain.STATUE_SP;
 		
@@ -73,7 +73,7 @@ public class LastLevel extends Level {
 
 	@Override
 	protected void decorate() {
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < getLength(); i++) {
 			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
 				map[i] = Terrain.EMPTY_DECO;
 			}

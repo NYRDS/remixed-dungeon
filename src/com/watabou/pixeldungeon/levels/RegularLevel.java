@@ -149,7 +149,7 @@ public abstract class RegularLevel extends Level {
 	protected boolean initRooms() {
 
 		rooms = new HashSet<Room>();
-		split( new Rect( 0, 0, WIDTH - 1, HEIGHT - 1 ) );
+		split( new Rect( 0, 0, getWidth() - 1, getHeight() - 1 ) );
 
 		if (rooms.size() < 8) {
 			return false;
@@ -257,7 +257,7 @@ public abstract class RegularLevel extends Level {
 	
 	protected void paintWater() {
 		boolean[] lake = water();
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < getLength(); i++) {
 			if (map[i] == Terrain.EMPTY && lake[i]) {
 				map[i] = Terrain.WATER;
 			}
@@ -271,15 +271,15 @@ public abstract class RegularLevel extends Level {
 			
 			for (Room room : rooms) {
 				if (room.type != Type.NULL && room.type != Type.PASSAGE && room.type != Type.TUNNEL) {
-					grass[(room.left + 1) + (room.top + 1) * WIDTH] = true;
-					grass[(room.right - 1) + (room.top + 1) * WIDTH] = true;
-					grass[(room.left + 1) + (room.bottom - 1) * WIDTH] = true;
-					grass[(room.right - 1) + (room.bottom - 1) * WIDTH] = true;
+					grass[(room.left + 1) + (room.top + 1) * getWidth()] = true;
+					grass[(room.right - 1) + (room.top + 1) * getWidth()] = true;
+					grass[(room.left + 1) + (room.bottom - 1) * getWidth()] = true;
+					grass[(room.right - 1) + (room.bottom - 1) * getWidth()] = true;
 				}
 			}
 		}
 
-		for (int i=WIDTH+1; i < LENGTH-WIDTH-1; i++) {
+		for (int i=getWidth()+1; i < getLength()-getWidth()-1; i++) {
 			if (map[i] == Terrain.EMPTY && grass[i]) {
 				int count = 1;
 				for (int n : NEIGHBOURS8) {
@@ -302,7 +302,7 @@ public abstract class RegularLevel extends Level {
 		
 		for (int i=0; i < nTraps; i++) {
 			
-			int trapPos = Random.Int( LENGTH );
+			int trapPos = Random.Int( getLength() );
 			
 			if (map[trapPos] == Terrain.EMPTY) {
 				switch (Random.chances( trapChances )) {
@@ -433,7 +433,7 @@ public abstract class RegularLevel extends Level {
 			}
 			
 			Room.Door d = r.connected.get( n );
-			int door = d.x + d.y * WIDTH;
+			int door = d.x + d.y * getWidth();
 			
 			switch (d.type) {
 			case EMPTY:
