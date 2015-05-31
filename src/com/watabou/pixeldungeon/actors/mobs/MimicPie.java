@@ -5,6 +5,8 @@ import java.util.HashSet;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.food.RottenPasty;
 import com.watabou.pixeldungeon.sprites.MimicPieSprite;
@@ -63,6 +65,8 @@ public class MimicPie extends Mob {
 		defenseSkill = 2 * attackSkill( null ) / 3;
 		
 		enemySeen = true;
+		
+		Buff.affect( this, Levitation.class, 1000000 );
 	}
 		
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
