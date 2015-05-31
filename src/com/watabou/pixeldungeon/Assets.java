@@ -86,6 +86,7 @@ public class Assets {
 	public static final String DM300 = "dm300.png";
 	public static final String WRAITH = "wraith.png";
 	public static final String ELEMENTAL = "elemental.png";
+	public static final String WATER_ELEMENTAL = "water_elemental.png";
 	public static final String MONK = "monk.png";
 	public static final String WARLOCK = "warlock.png";
 	public static final String GOLEM = "golem.png";

@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.sprites.RatKingSprite;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 public class RatKing extends NPC {
 
@@ -39,6 +40,22 @@ public class RatKing extends NPC {
 		hp(ht(30));
 		EXP = 1;
 	}
+	
+	@Override
+	public int damageRoll() {
+		return Random.NormalIntRange( 4, 10 );
+	}
+	
+	@Override
+	public int attackSkill( Char target ) {
+		return 15;
+	}
+	
+	@Override
+	public int dr() {
+		return 5;
+	}
+	
 	
 	private boolean friendly(){
 		return anger < 2;

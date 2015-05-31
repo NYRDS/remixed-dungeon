@@ -32,7 +32,7 @@ import com.watabou.utils.Random;
 
 public class Elemental extends Mob {
 
-	{
+	public Elemental() {
 		spriteClass = ElementalSprite.class;
 		
 		hp(ht(65));

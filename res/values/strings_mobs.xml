@@ -265,4 +265,10 @@
     <string name="SpiderQueen_Name_Objective">SpiderQueen</string>
     <string name="SpiderQueen_Desc">SpiderQueen</string>
     
+    <!-- STRINGS OF WaterElemental CLASS -->
+    <string name="WaterElemental_Name">water elemental</string>
+    <string name="WaterElemental_Gender">masculine</string>
+    <string name="WaterElemental_Name_Objective">water elemental</string>
+    <string name="WaterElemental_Desc">Water elementals can be found near big water masses. Typically those magically bonded waves just wandering around.</string>
+    
 </resources>

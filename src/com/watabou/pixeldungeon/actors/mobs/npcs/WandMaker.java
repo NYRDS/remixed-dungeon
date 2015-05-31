@@ -122,7 +122,7 @@ public class WandMaker extends NPC {
 			Journal.add( Journal.Feature.WANDMAKER );
 		}
 		
-		return false;
+		return true;
 	}
 	
 	private void tell( String format, Object...args ) {
