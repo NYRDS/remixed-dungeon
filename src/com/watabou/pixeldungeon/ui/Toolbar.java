@@ -146,7 +146,7 @@ public class Toolbar extends Component {
 		btnWait.setPos(x, y);
 		btnSearch.setPos(btnWait.right(), y);
 		btnInfo.setPos(btnSearch.right(), y);
-		btnResume.setPos(btnInfo.right(), y);
+		btnResume.setPos(x, y - 24);
 		
 		remove(btnQuick1);
 		remove(btnQuick2);
@@ -299,7 +299,6 @@ public class Toolbar extends Component {
 
 			base.x = x;
 			base.y = y;
-
 		}
 
 		@Override

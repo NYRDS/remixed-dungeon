@@ -442,6 +442,8 @@ public class Hero extends Char {
 			}
 
 			ready();
+			//spend(TICK);
+			//next();
 			return false;
 
 		} else {
@@ -492,7 +494,6 @@ public class Hero extends Char {
 
 			}
 		}
-
 		return false;
 	}
 
