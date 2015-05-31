@@ -305,7 +305,15 @@ public enum HeroClass {
 				return Assets.HUNTRESS;
 			}
 		case ELF:
-			return Assets.ELF;
+			switch(hero.subClass) {
+			case SCOUT:
+				return Assets.ELF_SCOUT;
+			case SHAMAN:
+				return Assets.ELF_SHAMAN;
+				
+			default:
+				return Assets.ELF;
+			}
 		}
 		
 		return null;
@@ -388,6 +396,12 @@ public enum HeroClass {
 			return true;
 		
 		if (spriteKind.equals(Assets.ELF))
+			return true;
+		
+		if (spriteKind.equals(Assets.ELF_SCOUT))
+			return true;
+		
+		if (spriteKind.equals(Assets.ELF_SHAMAN))
 			return true;
 
 		return false;

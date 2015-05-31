@@ -58,6 +58,8 @@ public class Assets {
 	public static final String SNIPER = "sniper.png";
 	public static final String WARDEN = "warden.png";
 	public static final String ELF = "elf.png";
+	public static final String ELF_SCOUT = "elf_scout.png";
+	public static final String ELF_SHAMAN = "elf_shaman.png";
 	public static final String AVATARS = "avatars.png";
 	public static final String PET = "pet.png";
 
