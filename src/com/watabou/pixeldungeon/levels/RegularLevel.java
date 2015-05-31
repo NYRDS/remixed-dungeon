@@ -43,7 +43,7 @@ public abstract class RegularLevel extends Level {
 	protected Room roomEntrance;
 	protected Room roomExit;
 	
-	protected ArrayList<Room.Type> specials;
+	protected List<Room.Type> specials;
 	
 	public int secretDoors;
 	

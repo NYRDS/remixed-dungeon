@@ -163,7 +163,6 @@ public abstract class Level implements Bundlable {
 				GLog.w("Empty heap at pos %d", pos);
 				return null;
 			}
-
 			return heap;
 		}
 		return null;
@@ -185,6 +184,10 @@ public abstract class Level implements Bundlable {
 		return heaps.size();
 	}
 
+	public int cell(int i, int j) {
+		return j * getWidth() + i;
+	}
+	
 	public void create() {
 
 		resizingNeeded = false;
@@ -1097,5 +1100,13 @@ public abstract class Level implements Bundlable {
 
 	public static int getLength() {
 		return LENGTH;
+	}
+	
+	public boolean cellValid(int x, int y) {
+		return x > 0 && y > 0 && x < getWidth() - 1 && y < getHeight() - 1;
+	}
+	
+	public boolean cellValid(int cell) {
+		return cell > 0 && cell < map.length;
 	}
 }

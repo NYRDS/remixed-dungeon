@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;
@@ -29,7 +30,7 @@ import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-public class ModderLevel extends RegularLevel {
+public class ModderLevel extends SpiderLevel {
 
 	{
 		color1 = 0x48763c;
@@ -88,14 +89,6 @@ public class ModderLevel extends RegularLevel {
 				if (Random.Int( 16 ) < count * count) {
 					map[i] = Terrain.EMPTY_DECO;
 				}
-			}
-		}
-		
-		while (true) {
-			int pos = roomEntrance.random();
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
 			}
 		}
 	}
