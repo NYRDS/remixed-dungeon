@@ -46,6 +46,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.WaterElemental;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Generator;
@@ -431,8 +432,15 @@ public abstract class Level implements Bundlable {
 		GameScene.add( mob, 1 );
 	}
 	
-	protected Mob createMob(){
-		Mob mob = Bestiary.mutable(Dungeon.depth);
+	protected Mob createMob() {
+		Mob mob;
+		
+		if(feeling == Feeling.WATER && Random.Int(10)==0 ) {
+			mob = new WaterElemental();
+		} else {
+			mob = Bestiary.mutable(Dungeon.depth);
+		}
+		
 		if(!mob.isWallWalker()){
 			mob.pos   = randomRespawnCell();
 		} else {
@@ -440,7 +448,6 @@ public abstract class Level implements Bundlable {
 			mob.pos   = randomSolidCell();
 		}
 		return mob;
-		
 	}
 	
 	public Actor respawner() {
