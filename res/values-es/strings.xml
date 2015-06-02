@@ -20,9 +20,9 @@
   <string name="Char_Name">enemigo</string>
   <string name="Char_Name_Objective">enemigo</string>
   <string-array name="Char_Hit">
-    <item>%1$s golpea %2$s</item>
-    <item>%1$s golpea %2$s</item>
-    <item>%1$s golpea %2$s</item>
+    <item>%1$s golpea a %2$s</item>
+    <item>%1$s golpea a %2$s</item>
+    <item>%1$s golpea a %2$s</item>
   </string-array>
   <string-array name="Char_Kill">
     <item>%s te ha matado...</item>
@@ -260,7 +260,7 @@
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">pluma arcana</string>
   <string name="Stylus_ACInscribe">INSCRIBIR</string>
-  <string name="Stylus_Info">Esta pluma arcana esta hecha de una piedra dura y oscura. Puedes usarla para inscribir un glifo o una runa, pero no puedes elegir cuál será: la pluma lo decidirá por ti.</string>
+  <string name="Stylus_Info">Esta pluma arcana está hecha de una piedra dura y oscura. Puedes usarla para inscribir un glifo o una runa, pero no puedes elegir cuál será: la pluma lo decidirá por ti.</string>
   <string name="Stylus_SelectArmor">Selecciona el objeto que quieres inscribir</string>
   <string name="Stylus_Inscribed">has inscrito %1$s en tu %2$s</string>
   <!--STRINGS OF TomeOfMastery CLASS-->

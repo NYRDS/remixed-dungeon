@@ -58,4 +58,10 @@
     <string name="ParalysisArrow_Name">paralyzing arrow</string>
     <string name="ParalysisArrow_Info">This arrow spread very weak but familiar curare smell.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
+
+    <!-- STRINGS OF FrostArrow CLASS -->
+    <string name="FrostArrow_Name">frost arrow</string>
+    <string name="FrostArrow_Info">You can feel freezing aura emanating from arrow head.</string>
+    <string name="FrostArrow_Gender">feminine</string>
+
 </resources>

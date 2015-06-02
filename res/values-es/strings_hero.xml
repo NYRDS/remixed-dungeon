@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Hero CLASS-->
-  <string name="Hero_Name">tú</string>
-  <string name="Hero_Name_Objective">tú</string>
+  <string name="Hero_Name">el héroe</string>
+  <string name="Hero_Name_Objective">el héroe</string>
   <string name="Hero_Leave">Uno simplemente no deja Pixel Dungeon.</string>
   <string name="Hero_LevelUp">¡Ascenso!</string>
   <string name="Hero_NewLevel">¡Bienvenido al nivel %d! Ahora estás más centrado y sano. Te resulta más fácil golpear a los enemigos y esquivar su ataques.</string>

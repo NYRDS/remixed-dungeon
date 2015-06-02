@@ -63,4 +63,11 @@
 	<string name="ParalysisArrow_Name_Objective">парализующую стрелу</string>
     <string name="ParalysisArrow_Info">Эта стрела испускает лёгкий запах кураре.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
+    
+    <!-- STRINGS OF FrostArrow CLASS -->
+    <string name="FrostArrow_Name">морозная стрела</string>
+    <string name="FrostArrow_Name_Objective">морозную стрелу</string>
+    <string name="FrostArrow_Info">Ты чуствуешь ауру холода, исходящую от наконечника этой стрелы</string>
+    <string name="FrostArrow_Gender">feminine</string>
+    
 </resources>

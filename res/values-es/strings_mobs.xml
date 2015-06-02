@@ -225,4 +225,21 @@
   <string name="Larva_Gender">femenino</string>
   <string name="Larva_Name_Objective">larva del dios</string>
   <string name="Larva_Desc">Larva del Antiguo Dios</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Gender">neutral</string>
+  <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Gender">neutral</string>
+  <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Gender">neutral</string>
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Gender">masculino</string>
+  <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Gender">masculino</string>
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Gender">femenino</string>
+  <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">elemental de agua</string>
+  <string name="WaterElemental_Gender">masculino</string>
+  <string name="WaterElemental_Name_Objective">elemental de agua</string>
+  <string name="WaterElemental_Desc">Los elementales de agua pueden encontrarse cerca de grandes masa de agua. Normalmente, estos seres mágicos simplemente están dando un paseo.</string>
 </resources>
