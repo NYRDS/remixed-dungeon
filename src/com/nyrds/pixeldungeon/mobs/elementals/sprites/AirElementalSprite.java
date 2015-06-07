@@ -1,11 +1,9 @@
 package com.nyrds.pixeldungeon.mobs.elementals.sprites;
 
 import com.watabou.noosa.TextureFilm;
-import com.watabou.noosa.MovieClip.Animation;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.MobSprite;
-import com.watabou.pixeldungeon.sprites.CharSprite.State;
 
 public class AirElementalSprite extends MobSprite {
 	

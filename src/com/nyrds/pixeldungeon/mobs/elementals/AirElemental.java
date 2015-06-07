@@ -1,26 +1,14 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import java.util.HashSet;
-
 import com.nyrds.pixeldungeon.mobs.elementals.sprites.AirElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.Freezing;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class AirElemental extends Mob {
@@ -49,7 +37,7 @@ public class AirElemental extends Mob {
 
 	@Override
 	public int attackSkill(Char target) {
-		return defenseSkill * 2 + 10;
+		return defenseSkill * 2;
 	}
 
 	@Override
