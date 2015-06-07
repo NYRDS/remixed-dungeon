@@ -7,6 +7,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -87,6 +88,7 @@ public class EarthElemental extends Mob {
 		IMMUNITIES.add(Roots.class);
 		IMMUNITIES.add(Paralysis.class);
 		IMMUNITIES.add(ToxicGas.class);
+		IMMUNITIES.add(Fire.class);
 	}
 
 	@Override

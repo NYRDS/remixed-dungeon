@@ -12,10 +12,10 @@ public class EarthElementalSprite extends MobSprite {
 		
 		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 		
-		idle = new Animation( 4, true );
+		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 1);
 		
-		run = new Animation( 8, true );
+		run = new Animation( 4, true );
 		run.frames( frames, 2, 3, 4, 5 );
 		
 		attack = new Animation( 12, false );
