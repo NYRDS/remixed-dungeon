@@ -19,10 +19,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.ui.Button;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -45,13 +42,13 @@ import com.watabou.pixeldungeon.windows.WndInfoPlant;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
+import com.watabou.pixeldungeon.windows.elements.Tool;
 
 public class Toolbar extends Component {
 
 	private Tool btnWait;
 	private Tool btnSearch;
 	private Tool btnInfo;
-	private Tool btnResume;
 	private Tool btnInventory;
 	
 	private QuickslotTool  btnQuick1;
@@ -97,13 +94,6 @@ public class Toolbar extends Component {
 			}
 		});
 
-		add(btnResume = new Tool(61, 7, 21, 24) {
-			@Override
-			protected void onClick() {
-				Dungeon.hero.resume();
-			}
-		});
-
 		add(btnInventory = new Tool(82, 7, 23, 24) {
 			private GoldIndicator gold;
 
@@ -146,7 +136,7 @@ public class Toolbar extends Component {
 		btnWait.setPos(x, y);
 		btnSearch.setPos(btnWait.right(), y);
 		btnInfo.setPos(btnSearch.right(), y);
-		btnResume.setPos(x, y - 24);
+		//btnResume.setPos(x, y - 24);
 		
 		remove(btnQuick1);
 		remove(btnQuick2);
@@ -200,8 +190,6 @@ public class Toolbar extends Component {
 				}
 			}
 		}
-
-		btnResume.visible = Dungeon.hero.lastAction != null;
 
 		if (!Dungeon.hero.isAlive()) {
 			btnInventory.enable(true);
@@ -269,63 +257,6 @@ public class Toolbar extends Component {
 			return Game.getVar(R.string.Toolbar_Info2);
 		}
 	};
-
-	private static class Tool extends Button {
-
-		private static final int BGCOLOR = 0x7B8073;
-
-		private Image base;
-
-		public Tool(int x, int y, int width, int height) {
-			super();
-
-			base.frame(x, y, width, height);
-
-			this.width = width;
-			this.height = height;
-		}
-
-		@Override
-		protected void createChildren() {
-			super.createChildren();
-
-			base = new Image(Assets.getToolbar());
-			add(base);
-		}
-
-		@Override
-		protected void layout() {
-			super.layout();
-
-			base.x = x;
-			base.y = y;
-		}
-
-		@Override
-		protected void onTouchDown() {
-			base.brightness(1.4f);
-		}
-
-		@Override
-		protected void onTouchUp() {
-			if (active) {
-				base.resetColor();
-			} else {
-				base.tint(BGCOLOR, 0.7f);
-			}
-		}
-
-		public void enable(boolean value) {
-			if (value != active) {
-				if (value) {
-					base.resetColor();
-				} else {
-					base.tint(BGCOLOR, 0.7f);
-				}
-				active = value;
-			}
-		}
-	}
 
 	private static class QuickslotTool extends Tool {
 

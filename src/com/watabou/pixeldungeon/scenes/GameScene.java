@@ -64,6 +64,7 @@ import com.watabou.pixeldungeon.ui.BusyIndicator;
 import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.ui.HealthIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
+import com.watabou.pixeldungeon.ui.ResumeIndicator;
 import com.watabou.pixeldungeon.ui.StatusPane;
 import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.ui.Toolbar;
@@ -223,6 +224,12 @@ public class GameScene extends PixelScene {
 			uiCamera.width - attack.width(), 
 			toolbar.top() - attack.height() );
 		add( attack );
+		
+		ResumeIndicator resume = new ResumeIndicator();
+		resume.camera = uiCamera;
+		resume.setPos(uiCamera.width - resume.width(),
+						attack.top() - resume.height());
+		add(resume);
 		
 		log = new GameLog();
 		log.camera = uiCamera;
