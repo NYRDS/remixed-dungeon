@@ -30,6 +30,6 @@ public class EarthElementalSprite extends MobSprite {
 	
 	@Override
 	public int blood() {
-		return 0xFF137DFF;
+		return 0xFF7DFF7D;
 	}
 }
