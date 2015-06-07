@@ -7,6 +7,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
+import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
@@ -18,7 +19,7 @@ public class AirElemental extends Mob {
 
 		adjustLevel(Dungeon.depth);
 
-		loot = new PotionOfFrost();
+		loot = new PotionOfLevitation();
 		lootChance = 0.1f;
 	}
 

@@ -14,17 +14,17 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class EarthElemental extends Mob {
-
 	public EarthElemental() {
 		spriteClass = EarthElementalSprite.class;
 
 		adjustLevel(Dungeon.depth);
 
-		loot = new PotionOfFrost();
+		loot = new Earthroot.Seed();
 		lootChance = 0.1f;
 	}
 
