@@ -54,7 +54,7 @@ public class Assets {
 	public static final String MAGE_BATTLEMAGE = "battle_mage.png";
 	public static final String MAGE_WARLOCK = "mage_warlock.png";
 	public static final String ROGUE = "rogue.png";
-	public static final String ROGUE_ASSASIN = "rogue_assasin.png";
+	public static final String ROGUE_ASSASIN = "rogue_asassin.png";
 	public static final String ROGUE_FREERUNNER = "rogue_freerunner.png";
 	public static final String HUNTRESS = "ranger.png";
 	public static final String HUNTRESS_SNIPER = "sniper.png";
