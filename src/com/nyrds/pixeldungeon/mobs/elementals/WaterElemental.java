@@ -1,18 +1,19 @@
-package com.watabou.pixeldungeon.actors.mobs;
+package com.nyrds.pixeldungeon.mobs.elementals;
 
 import java.util.HashSet;
 
+import com.nyrds.pixeldungeon.mobs.elementals.sprites.WaterElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.sprites.WaterElementalSprite;
 import com.watabou.utils.Random;
 
 public class WaterElemental extends Mob {

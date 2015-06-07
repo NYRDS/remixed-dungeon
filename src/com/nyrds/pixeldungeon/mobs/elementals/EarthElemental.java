@@ -1,8 +1,9 @@
-package com.watabou.pixeldungeon.actors.mobs;
+package com.nyrds.pixeldungeon.mobs.elementals;
 
 import java.util.HashSet;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.elementals.sprites.EarthElementalSprite;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -16,13 +17,13 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.EarthElementalSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 

@@ -25,6 +25,9 @@ import java.util.HashSet;
 import java.util.List;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
+import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
+import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
@@ -46,7 +49,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.WaterElemental;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Generator;
@@ -433,11 +435,28 @@ public abstract class Level implements Bundlable {
 	}
 	
 	protected Mob createMob() {
-		Mob mob;
+		Mob mob = null;
 		
-		if(feeling == Feeling.WATER && Random.Int(10)==0 ) {
-			mob = new WaterElemental();
-		} else {
+		if(Random.Int(5) == 0) {
+			switch(feeling) {
+			case WATER:
+				mob = new WaterElemental();
+			break;
+			case CHASM:
+				mob = new AirElemental();
+				break;
+			case GRASS:
+				mob = new EarthElemental();
+				break;
+			case NONE:
+				break;
+			default:
+				break;
+			}
+		}
+		
+		if(mob == null)
+		{
 			mob = Bestiary.mutable(Dungeon.depth);
 		}
 		
