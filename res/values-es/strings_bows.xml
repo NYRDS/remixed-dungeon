@@ -46,4 +46,8 @@
   <string name="ParalysisArrow_Name">flecha paralizante</string>
   <string name="ParalysisArrow_Info">Esta flecha emana un débil pero familiar olor a curare.</string>
   <string name="ParalysisArrow_Gender">femenino</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Name">flecha helada</string>
+  <string name="FrostArrow_Info">Puedes sentir como un aura de congelación emana de esta flecha.</string>
+  <string name="FrostArrow_Gender">femenino</string>
 </resources>

@@ -263,4 +263,24 @@
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name_Objective">королеву</string>
     <string name="SpiderQueen_Desc">тело прекрасной девушки скрещенное с отвратительным пауком. В ее подчинении находятся все обитатели данного логова. Встреча с данной особой чревата смертельными последствиям, так что не ждите пощады. Вы в ее владениях!</string>
+
+    <!-- STRINGS OF WaterElemental CLASS -->
+    <string name="WaterElemental_Name">водный элементаль</string>
+    <string name="WaterElemental_Gender">masculine</string>
+    <string name="WaterElemental_Name_Objective">водного элементаля</string>
+    <string name="WaterElemental_Desc">Водных элементалей можно найти около больших масс воды. Обычно эти магически связанные волны просто бродят по округе.</string>
+
+    <!-- STRINGS OF AirElemental CLASS -->
+    <string name="AirElemental_Name">воздушный элементаль</string>
+    <string name="AirElemental_Gender">masculine</string>
+    <string name="AirElemental_Name_Objective">воздушного элементаля</string>
+    <string name="AirElemental_Desc">Воздушные элементали это летающие магические существа из ожившего воздуха.</string>
+
+    <!-- STRINGS OF EarthElemental CLASS -->
+    <string name="EarthElemental_Name">земляной элементаль</string>
+    <string name="EarthElemental_Gender">masculine</string>
+    <string name="EarthElemental_Name_Objective">земленного элементаля</string>
+    <string name="EarthElemental_Desc">Земляные элементали это массы земли движимые силами природы.</string>
+
+    
 </resources>
