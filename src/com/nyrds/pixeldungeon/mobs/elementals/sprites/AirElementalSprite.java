@@ -43,6 +43,6 @@ public class AirElementalSprite extends MobSprite {
 	
 	@Override
 	public int blood() {
-		return 0xFF137DFF;
+		return 0xFF439DFF;
 	}
 }

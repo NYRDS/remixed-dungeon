@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -14,6 +13,8 @@ import com.watabou.utils.Random;
 
 public class AirElemental extends Mob {
 
+	private final int maxDistance = 3;
+	
 	public AirElemental() {
 		spriteClass = AirElementalSprite.class;
 
@@ -43,33 +44,45 @@ public class AirElemental extends Mob {
 
 	@Override
 	public int dr() {
-		return 5;
+		return EXP / 5;
 	}
 
 	@Override
 	protected boolean getCloser( int target ) {
 		if (state == HUNTING) {
-			return enemySeen && getFurther( target );
-		} else {
-			return super.getCloser( target );
+			if(Level.distance(pos, target) < maxDistance - 1) {
+				return getFurther( target );
+			} 
 		}
+		
+		return super.getCloser( target );
 	}
 	
 	@Override
 	protected boolean canAttack(Char enemy) {
-		return !Level.adjacent(pos, enemy.pos)
-				&& Ballistica.cast(pos, enemy.pos, false, true) == enemy.pos;
+		
+		if(Level.adjacent(pos, enemy.pos)) {
+			return false;
+		}
+		
+		Ballistica.cast( pos, enemy.pos, true, false );
+			
+		for (int i=1; i < maxDistance; i++) {
+			if (Ballistica.trace[i] == enemy.pos) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
 	public int attackProc(Char enemy, int damage) {
 
-		int maxDistance = 7;
-		Ballistica.distance = Math.min(Ballistica.distance, maxDistance);
-
+		Ballistica.cast( pos, enemy.pos, true, false );
+		
 		Char ch;
-
-		for (int i = 1; i < Ballistica.distance; i++) {
+		
+		for (int i = 1; i < maxDistance; i++) {
 
 			int c = Ballistica.trace[i];
 
@@ -79,6 +92,9 @@ public class AirElemental extends Mob {
 						&& Actor.findChar(next) == null) {
 					ch.move(next);
 					ch.getSprite().place(next);
+					Dungeon.observe();
+				} else {
+					return damage * 2;
 				}
 			}
 		}

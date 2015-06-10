@@ -32,8 +32,6 @@ public class WaterElemental extends Mob {
 		defenseSkill = depth * 2;
 		EXP = depth;
 		maxLvl = depth + 2;
-		
-		
 	}
 	
 	@Override
@@ -48,7 +46,7 @@ public class WaterElemental extends Mob {
 	
 	@Override
 	public int dr() {
-		return 5;
+		return EXP / 3;
 	}
 	
 	@Override
@@ -74,12 +72,12 @@ public class WaterElemental extends Mob {
 	public void add( Buff buff ) {
 		if (buff instanceof Frost) {
 			if (hp() < ht()) {
-				hp(hp() + 1);
+				hp(hp() + EXP);
 				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 		} else {
 			if (buff instanceof Burning) {
-				damage( Random.NormalIntRange( 1, ht() * 2 / 3 ), buff );
+				damage( Random.NormalIntRange( 1, ht() / 3 ), buff );
 			}
 			super.add( buff );
 		}

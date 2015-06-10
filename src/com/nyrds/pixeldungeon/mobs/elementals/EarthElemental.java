@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -48,7 +47,7 @@ public class EarthElemental extends Mob {
 
 	@Override
 	public int dr() {
-		return 10;
+		return EXP;
 	}
 
 	@Override
@@ -62,7 +61,7 @@ public class EarthElemental extends Mob {
 					|| c == Terrain.EMPTY_DECO || c == Terrain.GRASS
 					|| c == Terrain.HIGH_GRASS) {
 				
-				GameScene.add(Blob.seed(cell, (EXP + 2) * 20, Regrowth.class));
+				GameScene.add(Blob.seed(cell, EXP * 15, Regrowth.class));
 			}
 		}
 		return damage;

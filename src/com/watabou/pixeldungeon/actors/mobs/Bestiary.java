@@ -17,8 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
+import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.utils.Random;
 
@@ -67,7 +66,7 @@ public class Bestiary {
 		switch (depth) {
 		case 1:
 			chances = new float[]{ 1 };
-			//classes = new Class<?>[]{ EarthElemental.class };
+			//classes = new Class<?>[]{ AirElemental.class };
 			classes = new Class<?>[]{ Rat.class };
 			//classes = new Class<?>[]{ SpiderNest.class };
 			break;
