@@ -18,7 +18,6 @@
 package com.watabou.noosa.audio;
 
 import java.io.File;
-import java.io.FileDescriptor;
 import java.io.IOException;
 
 import com.nyrds.android.util.FileSystem;
@@ -60,7 +59,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 
 			player = new MediaPlayer();
 			player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-
+			
 			if (ModdingMode.mode()) {
 				File file = FileSystem.getExternalStorageFile(assetName);
 				if (file.exists()) {

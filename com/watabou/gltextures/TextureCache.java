@@ -20,6 +20,7 @@ package com.watabou.gltextures;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 
 import android.content.Context;
@@ -36,10 +37,8 @@ import com.watabou.glwrap.Texture;
 
 public class TextureCache {
 
-	public static Context context;
+	private static HashMap<Object, SmartTexture> all = new HashMap<Object, SmartTexture>();
 
-	private static HashMap<Object,SmartTexture> all = new HashMap<Object, SmartTexture>();
-	
 	// No dithering, no scaling, 32 bits per pixel
 	private static BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
 	static {
@@ -48,135 +47,111 @@ public class TextureCache {
 		bitmapOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
 	}
 
-	public static SmartTexture createSolid( int color ) {
+	public static SmartTexture createSolid(int color) {
 		String key = "1x1:" + color;
-		
-		if (all.containsKey( key )) {
-			
-			return all.get( key );
-			
+
+		if (all.containsKey(key)) {
+
+			return all.get(key);
+
 		} else {
-		
-			Bitmap bmp = Bitmap.createBitmap( 1, 1, Bitmap.Config.ARGB_8888 );
-			bmp.eraseColor( color );
-			
-			SmartTexture tx = new SmartTexture( bmp );
-			all.put( key, tx );
-			
+
+			Bitmap bmp = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
+			bmp.eraseColor(color);
+
+			SmartTexture tx = new SmartTexture(bmp);
+			all.put(key, tx);
+
 			return tx;
 		}
 	}
-	
-	public static SmartTexture createGradient( int width, int height, int... colors ) {
-		
+
+	public static SmartTexture createGradient(int width, int height,
+			int... colors) {
+
 		String key = "" + width + "x" + height + ":" + colors;
-		
-		if (all.containsKey( key )) {
-			
-			return all.get( key );
-			
+
+		if (all.containsKey(key)) {
+
+			return all.get(key);
+
 		} else {
-		
-			Bitmap bmp = Bitmap.createBitmap( width, height, Bitmap.Config.ARGB_8888 );
-			Canvas canvas = new Canvas( bmp );
+
+			Bitmap bmp = Bitmap.createBitmap(width, height,
+					Bitmap.Config.ARGB_8888);
+			Canvas canvas = new Canvas(bmp);
 			Paint paint = new Paint();
-			paint.setShader( new LinearGradient( 0, 0, 0, height, colors, null, TileMode.CLAMP ) );
-			canvas.drawPaint( paint );
-			
-			SmartTexture tx = new SmartTexture( bmp );
-			all.put( key, tx );
+			paint.setShader(new LinearGradient(0, 0, 0, height, colors, null,
+					TileMode.CLAMP));
+			canvas.drawPaint(paint);
+
+			SmartTexture tx = new SmartTexture(bmp);
+			all.put(key, tx);
 			return tx;
 		}
-		
-	}
-	
-	public static void add( Object key, SmartTexture tx ) {
-		all.put( key, tx );
+
 	}
 
-	public static SmartTexture get( Object src ) {
-		
-		if (all.containsKey( src )) {
-			
-			return all.get( src );
-			
+	public static void add(Object key, SmartTexture tx) {
+		all.put(key, tx);
+	}
+
+	public static SmartTexture get(Object src) {
+
+		if (all.containsKey(src)) {
+
+			return all.get(src);
+
 		} else if (src instanceof SmartTexture) {
-			
-			return (SmartTexture)src;
-			
+
+			return (SmartTexture) src;
+
 		} else {
 
-			SmartTexture tx = new SmartTexture( getBitmap( src ) );
-			all.put( src, tx );
+			SmartTexture tx = new SmartTexture(getBitmap(src));
+			all.put(src, tx);
 			return tx;
 		}
-		
+
 	}
-	
+
 	public static void clear() {
-		
-		for (Texture txt:all.values()) {
+
+		for (Texture txt : all.values()) {
 			txt.delete();
 		}
 		all.clear();
-		
+
 	}
-	
+
 	public static void reload() {
-		for (SmartTexture tx:all.values()) {
+		for (SmartTexture tx : all.values()) {
 			tx.reload();
-		}		
+		}
 	}
 
 	public static Bitmap getBitmap(Object src) {
-
 		try {
-			if (src instanceof Integer) {
-
-				return BitmapFactory.decodeResource(context.getResources(),
-						(Integer) src, bitmapOptions);
-
-			} else if (src instanceof String) {
-
-				String fileName = (String) src;
-
-				if (ModdingMode.mode()) {
-					File file = FileSystem.getExternalStorageFile(fileName);
-					if (file.exists()) {
-						return BitmapFactory.decodeStream(new FileInputStream(
-								file));
-					} else {
-						return loadFromAssets(fileName);
-					}
+			if (src instanceof String) {
+				InputStream stream = ModdingMode.getInputStream((String) src);
+				if(stream != null){
+					return BitmapFactory.decodeStream(stream);
 				} else {
-					return loadFromAssets(fileName);
+					return null;
 				}
-
 			} else if (src instanceof Bitmap) {
-
 				return (Bitmap) src;
-
 			} else {
-
 				return null;
-
 			}
 		} catch (Exception e) {
-
 			e.printStackTrace();
 			return null;
-
 		}
 	}
-	
-	private static Bitmap loadFromAssets(String fileName) throws IOException {
-		return BitmapFactory.decodeStream(
-				context.getAssets().open(fileName), null,
-				bitmapOptions);	
+
+	public static boolean contains(Object key) {
+		return all.containsKey(key);
 	}
-		
-	public static boolean contains( Object key ) {
-		return all.containsKey( key );
-	}
-	
+
 }
