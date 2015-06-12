@@ -361,7 +361,12 @@ public class Potion extends Item {
 		int quantity = item.quantity();
 		
 		if(quantity <= maxQuantity){
-			item.detachAll( curUser.belongings.backpack );
+			
+			if(item.equals(curUser.belongings.weapon)) {
+				curUser.belongings.weapon = null;
+			} else {
+				item.detachAll( curUser.belongings.backpack );
+			}
 		} else {
 			item.quantity(item.quantity() - maxQuantity);
 			quantity = maxQuantity;
