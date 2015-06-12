@@ -208,11 +208,10 @@ public abstract class Mob extends Char {
 		if (getSprite().isVisible()
 				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
 			getSprite().move(from, to);
-			return true;
 		} else {
 			getSprite().place(to);
-			return true;
 		}
+		return true;
 	}
 
 	@Override
