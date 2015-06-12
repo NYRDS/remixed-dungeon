@@ -38,6 +38,7 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -62,7 +63,8 @@ public abstract class Mob extends Char {
 
 	public AiState state = SLEEPEING;
 
-	public Class<? extends CharSprite> spriteClass;
+	// public Class<? extends CharSprite> spriteClass;
+	protected Object spriteClass;
 
 	protected int target = -1;
 
@@ -139,11 +141,18 @@ public abstract class Mob extends Char {
 	protected int getKind() {
 		return 0;
 	}
-	
+
 	public CharSprite sprite() {
 		CharSprite sprite = null;
 		try {
-			sprite = spriteClass.newInstance();
+			if(spriteClass instanceof Class){
+				sprite = (CharSprite) ((Class<?>)spriteClass).newInstance();
+			}
+			
+			if(spriteClass instanceof String){
+				sprite = new MobSpriteDef((String)spriteClass);
+			}
+			
 			sprite.selectKind(getKind());
 		} catch (Exception e) {
 			GLog.w(e.getMessage());
