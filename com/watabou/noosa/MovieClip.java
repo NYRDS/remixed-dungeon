@@ -17,6 +17,8 @@
 
 package com.watabou.noosa;
 
+import java.util.List;
+
 import android.graphics.RectF;
 
 public class MovieClip extends Image {
@@ -134,6 +136,14 @@ public class MovieClip extends Image {
 		
 		public Animation clone() {
 			return new Animation( Math.round( 1 / delay ), looped ).frames( frames );
+		}
+
+		public Animation frames(TextureFilm film, List<Integer> frames, int shift) {
+			this.frames = new RectF[frames.size()];
+			for (int i=0; i < frames.size(); i++) {
+				this.frames[i] = film.get( frames.get(i) + shift );
+			}
+			return this;
 		}
 	}
 	
