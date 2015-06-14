@@ -16,8 +16,10 @@ public class AirElemental extends Mob {
 	private final int maxDistance = 3;
 	
 	public AirElemental() {
-		spriteClass = AirElementalSprite.class;
+		//spriteClass = AirElementalSprite.class;
 
+		spriteClass = "air_elemental_sprite.json";
+		
 		adjustLevel(Dungeon.depth);
 
 		loot = new PotionOfLevitation();
