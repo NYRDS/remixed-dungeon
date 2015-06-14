@@ -93,7 +93,7 @@ public class AirElemental extends Mob {
 				if ((Level.passable[next] || Level.avoid[next])
 						&& Actor.findChar(next) == null) {
 					ch.move(next);
-					ch.getSprite().place(next);
+					ch.getSprite().move(ch.pos, next);
 					Dungeon.observe();
 				} else {
 					return damage * 2;
