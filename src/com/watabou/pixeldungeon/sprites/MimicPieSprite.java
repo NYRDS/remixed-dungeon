@@ -38,7 +38,7 @@ public class MimicPieSprite extends MobSprite {
 		attack = new Animation( 10, false );
 		attack.frames( frames, 0, 3, 4, 5 );
 		
-		die = new Animation( 5, false );
+		die = new Animation( 15, false );
 		die.frames( frames, 0, 6, 7, 8, 9 );
 		
 		play( idle );
