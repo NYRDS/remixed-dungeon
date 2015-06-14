@@ -1,7 +1,7 @@
 {
    texture = "air_elemental.png",
    width = 12,
-   height = 14,
+   height = 16,
    idle = {
       fps = 10,
       looped = true,
@@ -10,17 +10,17 @@
    run = {
       fps = 12,
       looped = true,
-      frames = [0,1,3]
+      frames = [0,1,3,2,1]
    },
    attack = {
       fps = 15,
       looped = false,
-      frames = [4,5,6]
+      frames = [3,4,5,6]
    },
    die = {
       fps = 15,
       looped = false,
-      frames = [7, 8, 9, 10, 11, 12, 13, 12]
+      frames = [7, 8, 9, 10, 11, 12, 13]
    },
    levitating = true,
    bloodColor = 0xFF439DFF
