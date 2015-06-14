@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -484,7 +485,7 @@ public abstract class Char extends Actor {
 	public void move( int step ) {
 		
 		if (buff( Vertigo.class ) != null) {
-			ArrayList<Integer> candidates = new ArrayList<Integer>();
+			List<Integer> candidates = new ArrayList<Integer>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = pos + dir;
 				if ((Level.passable[p] || Level.avoid[p]) && Actor.findChar( p ) == null) {
