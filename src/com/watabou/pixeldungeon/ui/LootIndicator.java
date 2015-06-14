@@ -59,7 +59,7 @@ public class LootIndicator extends Tag {
 	@Override
 	public void update() {
 		
-		if (Dungeon.hero.ready) {
+		if (Dungeon.hero.isReady()) {
 			Heap heap = Dungeon.level.getHeap( Dungeon.hero.pos );
 				
 			if (heap != null) {
@@ -86,7 +86,7 @@ public class LootIndicator extends Tag {
 			}
 		}
 		
-		slot.enable( visible && Dungeon.hero.ready );
+		slot.enable( visible && Dungeon.hero.isReady() );
 		
 		super.update();
 	}

@@ -70,7 +70,7 @@ public class AttackIndicator extends Tag {
 		
 		if (Dungeon.hero.isAlive()) {
 			
-			if (!Dungeon.hero.ready) {
+			if (!Dungeon.hero.isReady()) {
 				enable( false );
 			}		
 			

@@ -359,11 +359,12 @@ public class GameScene extends PixelScene {
 		
 		Actor.process();
 		
-		if (Dungeon.hero.ready && !Dungeon.hero.paralysed) {
+		if (Dungeon.hero.isReady() && !Dungeon.hero.paralysed) {
 			log.newLine();
 		}
 		
-		cellSelector.enabled = Dungeon.hero.ready;
+		cellSelector.enabled = Dungeon.hero.isAlive() && Dungeon.hero.isReady();
+		
 	}
 	
 	@Override
@@ -375,7 +376,7 @@ public class GameScene extends PixelScene {
 	
 	@Override
 	protected void onMenuPressed() {
-		if (Dungeon.hero.ready) {
+		if (Dungeon.hero.isReady()) {
 			selectItem( null, WndBag.Mode.ALL, null );
 		}
 	}

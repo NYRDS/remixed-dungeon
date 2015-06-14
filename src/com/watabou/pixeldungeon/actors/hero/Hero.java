@@ -145,7 +145,7 @@ public class Hero extends Char {
 	int attackSkill = 10;
 	int defenseSkill = 5;
 
-	public boolean ready = false;
+	private boolean ready = false;
 	public HeroAction curAction = null;
 	public HeroAction lastAction = null;
 
@@ -1540,4 +1540,9 @@ public class Hero extends Char {
 			}
 		}
 	}
+
+	public boolean isReady() {
+		return isAlive() && ready;
+	}
+
 }
