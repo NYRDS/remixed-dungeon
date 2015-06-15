@@ -18,12 +18,14 @@
 package com.watabou.glscripts;
 
 import java.util.HashMap;
+import java.util.Map;
+
 import com.watabou.glwrap.Program;
 import com.watabou.glwrap.Shader;
 
 public class Script extends Program {
 
-	private static final HashMap<Class<? extends Script>,Script> all = 
+	private static final Map<Class<? extends Script>,Script> all = 
 		new HashMap<Class<? extends Script>, Script>();
 	
 	private static Script curScript = null;

@@ -17,13 +17,12 @@
 
 package com.watabou.utils;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.Map;
 
 import com.nyrds.android.util.ModdingMode;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
@@ -31,7 +30,7 @@ public class BitmapCache {
 
 	private static final String DEFAULT = "__default";
 
-	private static HashMap<String, Layer> layers = new HashMap<String, BitmapCache.Layer>();
+	private static Map<String, Layer> layers = new HashMap<String, BitmapCache.Layer>();
 
 	private static BitmapFactory.Options opts = new BitmapFactory.Options();
 	static {

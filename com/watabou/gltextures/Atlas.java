@@ -18,13 +18,15 @@
 package com.watabou.gltextures;
 
 import java.util.HashMap;
+import java.util.Map;
+
 import android.graphics.RectF;
 
 public class Atlas {
 
 	public SmartTexture tx;
 	
-	protected HashMap<Object,RectF> namedFrames;
+	protected Map<Object,RectF> namedFrames;
 	
 	protected float uvLeft;
 	protected float uvTop;

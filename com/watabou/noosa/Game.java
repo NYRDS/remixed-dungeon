@@ -268,7 +268,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 		}
 
 		SystemTime.tick();
-		long rightNow = SystemTime.now;
+		long rightNow = SystemTime.now();
 		step = (now == 0 ? 0 : rightNow - now);
 		now = rightNow;
 

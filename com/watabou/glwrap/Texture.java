@@ -35,7 +35,7 @@ public class Texture {
 	
 	public int id;
 	
-	public boolean premultiplied = false;
+	private boolean premultiplied = false;
 	
 	public Texture() {
 		int[] ids = new int[1];

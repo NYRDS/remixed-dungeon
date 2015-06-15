@@ -1,13 +1,11 @@
 package com.nyrds.android.util;
 
 import java.io.File;
-import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 import android.content.Context;
-import android.graphics.BitmapFactory;
 
 public class ModdingMode {
 	static private boolean mMode = false;

@@ -17,13 +17,10 @@
 
 package com.watabou.gltextures;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.Map;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -31,13 +28,12 @@ import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
 
-import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.glwrap.Texture;
 
 public class TextureCache {
 
-	private static HashMap<Object, SmartTexture> all = new HashMap<Object, SmartTexture>();
+	private static Map<Object, SmartTexture> all = new HashMap<Object, SmartTexture>();
 
 	// No dithering, no scaling, 32 bits per pixel
 	private static BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();

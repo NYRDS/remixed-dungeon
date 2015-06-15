@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,7 +41,7 @@ public class Bundle {
 
 	private static final String CLASS_NAME = "__className";
 	
-	private static HashMap<String,String> aliases = new HashMap<String, String>();
+	private static Map<String,String> aliases = new HashMap<String, String>();
 	
 	private JSONObject data;
 	
@@ -105,7 +106,6 @@ public class Bundle {
 				return null;
 			}
 		} catch (Exception e) {
-			e = null;
 			return null;
 		}	
 	}

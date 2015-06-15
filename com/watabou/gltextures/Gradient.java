@@ -21,7 +21,7 @@ import android.graphics.Bitmap;
 
 public class Gradient extends SmartTexture {
 	
-	public Gradient( int colors[] ) {
+	public Gradient( int[] colors ) {
 		
 		super( Bitmap.createBitmap( colors.length, 1, Bitmap.Config.ARGB_8888 ) );
 		

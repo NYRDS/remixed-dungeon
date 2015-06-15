@@ -62,25 +62,23 @@ public class Button extends Component {
 		super.update();
 		
 		hotArea.active = visible;
-		
-		if (pressed) {
-			if ((pressTime += Game.elapsed) >= longClick) {
-				pressed = false;
-				if (onLongClick()) {
 
-					hotArea.reset();
-					processed = true;
-					onTouchUp();
-					
-					Game.vibrate( 50 );
-				}
+		if (pressed && ((pressTime += Game.elapsed) >= longClick)) {
+			pressed = false;
+			if (onLongClick()) {
+
+				hotArea.reset();
+				processed = true;
+				onTouchUp();
+
+				Game.vibrate(50);
 			}
 		}
 	}
 	
-	protected void onTouchDown() {};
-	protected void onTouchUp() {};
-	protected void onClick() {};
+	protected void onTouchDown() {}
+	protected void onTouchUp() {}
+	protected void onClick() {}
 	
 	protected boolean onLongClick() {
 		return false;

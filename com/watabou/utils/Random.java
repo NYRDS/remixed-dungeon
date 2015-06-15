@@ -18,7 +18,7 @@
 package com.watabou.utils;
 
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.Map;
 
 public class Random {
 
@@ -72,7 +72,7 @@ public class Random {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public static <K> K chances( HashMap<K,Float> chances ) {
+	public static <K> K chances( Map<K,Float> chances ) {
 		
 		int size = chances.size();
 
