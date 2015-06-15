@@ -975,9 +975,9 @@ public class Hero extends Char {
 	public void damage(int dmg, Object src) {
 		restoreHealth = false;
 		super.damage(dmg, src);
-
-		interrupt();
+		
 		checkIfFurious();
+		interrupt();
 	}
 
 	public void checkIfFurious() {
