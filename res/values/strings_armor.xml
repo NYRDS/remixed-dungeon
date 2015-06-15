@@ -10,7 +10,7 @@
     <string name="Armor_Info2">\n\nBecause of your inadequate strength your movement speed and defense skill is decreased. </string>
     <string name="Armor_Info3">\n\nBecause of your inadequate strength wearing this armor will decrease your movement speed and defense skill.</string>
     <string name="Armor_Info4">\n\nTypical %1$s provides damage absorption up to %2$d points per attack and requires %3$d points of strength.</string>
-    <string name="Armor_Info5">Probably this armor is too heavy for you.</string>
+    <string name="Armor_Info5">This armor probably is too heavy for you.</string>
     <string name="Armor_Info6">It is inscribed.</string>
     <string name="Armor_Info7a">\n\nYou are wearing the %1$s%2$s.</string>
     <string name="Armor_Info7b">, and because it is cursed, you are powerless to remove it</string>
@@ -28,7 +28,7 @@
 
     <!-- STRINGS OF ElfArmor CLASS -->
     <string name="ElfArmor_Name">Elven mantle</string>
-    <string name="ElfArmor_Desc">With help of this mantle elf can summon forces of nature itself. High grass will grow in a blink even through solid stone immobilizing all enemies in a sight.</string>
+    <string name="ElfArmor_Desc">With the help of this mantle, the elf can summon the forces of nature itself. High grass will grow in the blink of an eye even through solid stone, immobilizing all enemies in sight.</string>
     <string name="ElfArmor_ACSpecial">NATURE CALL</string>
     <string name="ElfArmor_NotElf">Only elves can use this armor!</string>
     
@@ -41,11 +41,11 @@
 
     <!-- STRINGS OF LeatherArmor CLASS -->
     <string name="LeatherArmor_Name">leather armor</string>
-    <string name="LeatherArmor_Desc">Armor made from tanned monster hide. Not as light as cloth armor but provides better protection.</string>
+    <string name="LeatherArmor_Desc">Armor made from tanned monster hide. Not as light as cloth armor, but it provides better protection.</string>
 
     <!-- STRINGS OF MageArmor CLASS -->
     <string name="MageArmor_Name">mage robe</string>
-    <string name="MageArmor_Desc">Wearing this gorgeous robe, a mage can cast a spell of molten earth: all the enemies in his field of view will be set on fire and unable to move at the same time.</string>
+    <string name="MageArmor_Desc">Wearing this gorgeous robe, a mage can cast a spell of molten earth: all the enemies in his field of view will be set on fire and will be unable to move at the same time.</string>
     <string name="MageArmor_ACSpecial">MOLTEN EARTH</string>
     <string name="MageArmor_NotMage">Only mages can use this armor!</string>
 
@@ -59,7 +59,7 @@
 
     <!-- STRINGS OF RogueArmor CLASS -->
     <string name="RogueArmor_Name">rogue garb</string>
-    <string name="RogueArmor_Desc">Wearing this dark garb, a rogue can perform a trick, that is called \"smoke bomb\" (though no real explosives are used): he blinds enemies who could see him and jumps aside.</string>
+    <string name="RogueArmor_Desc">Wearing this dark garb, a rogue can perform a trick called \"smoke bomb\" (though no real explosives are used): he blinds enemies who can see him and jumps aside.</string>
     <string name="RogueArmor_ACSpecial">SMOKE BOMB</string>
     <string name="RogueArmor_NotRogue">Only rogues can use this armor!</string>
     <string name="RogueArmor_Fov">You can only jump to an empty location in your field of view</string>
@@ -71,7 +71,7 @@
 
     <!-- STRINGS OF WarriorArmor CLASS -->
     <string name="WarriorArmor_Name">warrior suit of armor</string>
-    <string name="WarriorArmor_Desc">While this armor looks heavy, it allows a warrior to perform heroic leap towards a targeted location, slamming down to stun all neighbouring enemies.</string>
+    <string name="WarriorArmor_Desc">While this armor looks heavy, it allows a warrior to perform a heroic leap towards a targeted location, slamming down to stun all neighbouring enemies.</string>
     <string name="WarriorArmor_ACSpecial">HEROIC LEAP</string>
     <string name="WarriorArmor_NotWarrior">Only warriors can use this armor!</string>
     <string name="WarriorArmor_Prompt">Choose direction to leap</string>

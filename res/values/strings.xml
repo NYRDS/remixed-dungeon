@@ -71,22 +71,22 @@
     <string-array name="Dungeon_Tips">
         <item>Don\'t overestimate your strength, use weapons and armor you can handle.</item>
         <item>Not all doors in the dungeon are visible at first sight. If you are stuck, search for hidden doors.</item>
-        <item>Remember, that raising your strength is not the only way to access better equipment, you can go the other way lowering its strength requirement with Scrolls of Upgrade.</item>
+        <item>Remember that raising your strength is not the only way to access better equipment, you can go the other way by lowering its strength requirement with Scrolls of Upgrade.</item>
         <item>You can spend your gold in shops on deeper levels of the dungeon. The first one is on the 6th level.</item>
         <item>Beware of Goo!</item>
         <item>Pixel-Mart - all you need for successful adventure!</item>
         <item>Identify your potions and scrolls as soon as possible. Don\'t put it off to the moment when you actually need them.</item>
         <item>Being hungry doesn\'t hurt, but starving does hurt.</item>
-        <item>Surprise attack has a better chance to hit. For example, you can ambush your enemy behind a closed door when you know it is approaching.</item>
+        <item>Surprise attacks have a better chance to hit. For example, you can ambush your enemy behind a closed door when you know it is approaching.</item>
         <item>Don\'t let The Tengu out!</item>
         <item>Pixel-Mart. Spend money. Live longer.</item>
         <item>When you\'re attacked by several monsters at the same time, try to retreat behind a door.</item>
-        <item>If you are burning, you can\'t put out the fire in the water while levitating.</item>
+        <item>If you are burning and levitating, you can\'t put the fire out in water.</item>
         <item>There is no sense in possessing more than one Ankh at the same time, because you will lose them upon resurrecting.</item>
         <item>DANGER! Heavy machinery can cause injury, loss of limbs or death!</item>
         <item>Pixel-Mart. A safer life in dungeon.</item>
         <item>When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.</item>
-        <item>In a Well of Transmutation you can get an item, that cannot be obtained otherwise.</item>
+        <item>A Well of Transmutation can give you an item that cannot be obtained otherwise.</item>
         <item>The only way to enchant a weapon is by upgrading it with a Scroll of Weapon Upgrade.</item>
         <item>No weapons allowed in the presence of His Majesty!</item>
         <item>Pixel-Mart. Special prices for demon hunters!</item>
@@ -128,7 +128,7 @@
     <!-- STRINGS OF WndCatalogus CLASS -->
     <string name="WndCatalogus_Potions">Potions</string>
     <string name="WndCatalogus_Scrolls">Scrolls</string>
-    <string name="WndCatalogus_Title">Catalogus</string>
+    <string name="WndCatalogus_Title">Catalogues</string>
 
     <!-- STRINGS OF WndChallenges CLASS -->
     <string name="WndChallenges_Title">Challenges</string>
@@ -161,7 +161,7 @@
     <string name="WndHero_Gold">Gold Collected</string>
     <string name="WndHero_Depth">Maximum Depth</string>
     <string name="WndHero_StaTitle">Level %1$d %2$s</string>
-    <string name="WndHero_StaCatalogus">Catalogus</string>
+    <string name="WndHero_StaCatalogus">Catalogues</string>
     <string name="WndHero_StaJournal">Journal</string>
 
     <!-- STRINGS OF WndImp CLASS -->
@@ -204,7 +204,7 @@
     <string name="WndRanking_StaAnkhs">Ankhs Used</string>
 
     <!-- STRINGS OF WndResurrect CLASS -->
-    <string name="WndResurrect_Message">You died, but you were given another chance to win this dungeon. Will you take it?</string>
+    <string name="WndResurrect_Message">You died, but you were given another chance to defeat this dungeon. Will you take it?</string>
     <string name="WndResurrect_Yes">Yes, I will fight!</string>
     <string name="WndResurrect_No">No, I give up</string>
 
@@ -216,10 +216,10 @@
     <string name="WndSadGhost_Farewell">Farewell, adventurer!</string>
 
     <!-- STRINGS OF WndStory CLASS -->
-    <string name="WndStory_Sewers">The Dungeon lies right beneath the City, its upper levels actually constitute the City\'s sewer system. Being nominally a part of the City, these levels are not that dangerous. No one will call it a safe place, but at least you won\'t need to deal with evil magic here.</string>
+    <string name="WndStory_Sewers">The Dungeon lies right beneath the City, its upper levels actually constitute the City\'s sewer system. Being nominally a part of the City, these levels are not that dangerous. No one will call it a safe place, but at least you won\'t need to deal with much evil magic here.</string>
     <string name="WndStory_Prision">Many years ago an underground prison was built here for the most dangerous criminals. At the time it seemed like a very clever idea, because this place indeed was very hard to escape. But soon dark miasma started to permeate from below, driving prisoners and guards insane. In the end the prison was abandoned, though some convicts were left locked up here.</string>
-    <string name="WndStory_Caves">The caves, which stretch down under the abandoned prison, are sparsely populated. They lie too deep to be exploited by the City and they are too poor in minerals to interest the dwarves. In the past there was a trade outpost somewhere here on the route between these two states, but it has perished since the decline of Dwarven Metropolis. Only omnipresent gnolls and subterranean animals dwell here now.</string>
-    <string name="WndStory_Metropolis">Dwarven Metropolis was once the greatest of dwarven city-states. In its heyday the mechanized army of dwarves has successfully repelled the invasion of the old god and his demon army. But it is said, that the returning warriors have brought seeds of corruption with them, and that victory was the beginning of the end for the underground kingdom.</string>
+    <string name="WndStory_Caves">The caves, which stretch down under the abandoned prison, are sparsely populated. They lie too deep to be exploited by the City and they are too poor in minerals to interest the dwarves. In the past there was a trade outpost somewhere here on the route between these two states, but it has perished since the decline of the Dwarven Metropolis. Only omnipresent gnolls and subterranean animals dwell here now.</string>
+    <string name="WndStory_Metropolis">The Dwarven Metropolis was once the greatest of dwarven city-states. In its heyday the mechanized army of dwarves had successfully repelled the invasion of the old god and his demon army. But it is said, that the returning warriors had brought seeds of corruption with them, and that victory was the beginning of the end for the underground kingdom.</string>
     <string name="WndStory_Halls">In the past these levels were the outskirts of Metropolis. After the costly victory in the war with the old god dwarves were too weakened to clear them of remaining demons. Gradually demons have tightened their grip on this place and now it\'s called Demon Halls.\n\nVery few adventurers have ever descended this far...</string>
 
     <!-- STRINGS OF WndTradeItem CLASS -->
@@ -235,7 +235,7 @@
     <!-- STRINGS OF WndWandmaker CLASS -->
     <string name="WndWandmaker_Message">Oh, I see you have succeeded! I do hope it hasn\'t troubled you too much. As I promised, you can choose one of my high quality wands.</string>
     <string name="WndWandmaker_Battle">Battle wand</string>
-    <string name="WndWandmaker_NonBattle">Non-battle wand</string>
+    <string name="WndWandmaker_NonBattle">Utility wand</string>
     <string name="WndWandmaker_Farawell">Good luck in your quest, %s!</string>
 
     <!-- STRINGS OF QuickSlot CLASS -->
@@ -255,7 +255,7 @@
     <string name="EquipableItem_Unequip">You can\'t remove cursed %s!</string>
 
     <!-- STRINGS OF Heap CLASS -->
-    <string name="Heap_Mimic">This is mimic!</string>
+    <string name="Heap_Mimic">This is a mimic!</string>
 
     <!-- STRINGS OF Amulet CLASS -->
     <string name="Amulet_Name">Amulet of Yendor</string>
@@ -264,14 +264,14 @@
 
     <!-- STRINGS OF Ankh CLASS -->
     <string name="Ankh_Name">Ankh</string>
-    <string name="Ankh_Info">The ancient symbol of immortality grants an ability to return to life after death. Upon resurrection all non-equipped items are lost.</string>
+    <string name="Ankh_Info">This ancient symbol of immortality grants an ability to return to life after death. Upon resurrection all non-equipped items are lost.</string>
 
     <!-- STRINGS OF ArmorKit CLASS -->
     <string name="ArmorKit_Name">armor kit</string>
     <string name="ArmorKit_ACAplly">APPLY</string>
-    <string name="ArmorKit_Info">Using this kit of small tools and materials anybody can transform any armor into an \"epic armor\", which will keep all properties of the original armor, but will also provide its wearer a special ability depending on his class. No skills in tailoring, leatherworking or blacksmithing are required.</string>
+    <string name="ArmorKit_Info">Using this kit of small tools and materials anybody can transform any armor into an \"epic armor\", which will keep all properties of the original armor, but will also provide its wearer a special ability depending on his class. No skills in tailoring, leather-working or blacksmithing are required.</string>
     <string name="ArmorKit_SelectArmor">Select an armor to upgrade</string>
-    <string name="ArmorKit_Upgraded">you applied the armor kit to upgrade your %s</string>
+    <string name="ArmorKit_Upgraded">You applied the armor kit to upgrade your %s</string>
 
     <!-- STRINGS OF Dewdrop CLASS -->
     <string name="Dewdrop_Name">dewdrop</string>
@@ -300,8 +300,8 @@
     <string name="LloidsBeacon_ACSet">SET</string>
     <string name="LloidsBeacon_ACReturn">RETURN</string>
     <string name="LloidsBeacon_Info">Lloyd\'s beacon is an intricate magic device, that allows you to return to a place you have already been.</string>
-    <string name="LloidsBeacon_Preventing">Strong magic aura of this place prevents you from using the lloyd\'s beacon!</string>
-    <string name="LloidsBeacon_Creatures">Psychic aura of neighbouring creatures doesn\'t allow you to use the lloyd\'s beacon at this moment.</string>
+    <string name="LloidsBeacon_Preventing">Some kind of strong magic aura present here prevents you from using the lloyd\'s beacon!</string>
+    <string name="LloidsBeacon_Creatures">The psychic aura of neighbouring creatures doesn\'t allow you to use the lloyd\'s beacon at this moment.</string>
     <string name="LloidsBeacon_Return">The lloyd\'s beacon is successfully set at your current location, now you can return here anytime.</string>
     <string name="LloidsBeacon_Set">\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.</string>
 
@@ -376,11 +376,11 @@
 
     <!-- STRINGS OF DarkGold CLASS -->
     <string name="DarkGold_Name">dark gold ore</string>
-    <string name="DarkGold_Info">This metal is called dark not because of its color (it doesn\'t differ from the normal gold), but because it melts under the daylight, making it useless on the surface.</string>
+    <string name="DarkGold_Info">This metal is called dark not because of its color (it doesn\'t differ from normal gold), but because it melts under the daylight, making it useless on the surface.</string>
 
     <!-- STRINGS OF DriedRose CLASS -->
     <string name="DriedRose_Name">dried rose</string>
-    <string name="DriedRose_Info">The rose has dried long ago, but it has kept all its petals somehow.</string>
+    <string name="DriedRose_Info">This rose dried up long ago, but it has somehow kept all its petals.</string>
 
     <!-- STRINGS OF DwarfToken CLASS -->
     <string name="DwarfToken_Name">dwarf token</string>
@@ -388,7 +388,7 @@
 
     <!-- STRINGS OF Pickaxe CLASS -->
     <string name="Pickaxe_Name">pickaxe</string>
-    <string name="Pickaxe_Info">This is a large and sturdy tool for breaking rocks. Probably it can be used as a weapon.</string>
+    <string name="Pickaxe_Info">This is a large and sturdy tool for breaking rocks. It can be probably used as a weapon.</string>
     <string name="Pickaxe_ACMine">MINE</string>
     <string name="PickAxe_Gender">feminine</string>
     <string name="Pickaxe_NoVein">There is no dark gold vein near you to mine</string>
@@ -408,12 +408,12 @@
     <string name="ParalyticGas_Info">A cloud of paralytic gas is swirling here.</string>
     <!-- STRINGS OF ToxicGas CLASS -->
     <string name="ToxicGas_Info">A greenish cloud of toxic gas is swirling here.</string>
-    <string name="ToxicGas_Info1">You died from a toxic gas..</string>
+    <string name="ToxicGas_Info1">You died from breathing toxic gas..</string>
     <!-- STRINGS OF WaterOfAwareness CLASS -->
-    <string name="WaterOfAwareness_Info">Power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of equipped items.</string>
-    <string name="WaterOfAwareness_Procced">As you take a sip, you feel the knowledge pours into your mind. Now you know everything about your equipped items. Also you sense all items on the level and know all its secrets.</string>
+    <string name="WaterOfAwareness_Info"> The power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of your equipped items.</string>
+    <string name="WaterOfAwareness_Procced">As you take a sip, you feel the knowledge pour into your mind. You now know everything about your equipped items. Also, you sense all items on the level and know all of its secrets.</string>
     <!-- STRINGS OF WaterOfHealth CLASS -->
-    <string name="WaterOfHealth_Info">Power of health radiates from the water of this well. Take a sip from it to heal your wounds and satisfy hunger.</string>
+    <string name="WaterOfHealth_Info">The power of health radiates from the water of this well. Take a sip from it to heal your wounds and satisfy hunger.</string>
     <string name="WaterOfHealth_Procced">As you take a sip, you feel your wounds heal completely.</string>
     <!-- STRINGS OF WaterOfTransmutation CLASS -->
     <string name="WaterOfTransmutation_Info">Power of change radiates from the water of this well. Throw an item into the well to turn it into something else.</string>

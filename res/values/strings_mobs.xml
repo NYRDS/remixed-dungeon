@@ -20,12 +20,12 @@
     <string name="Albino_Name">albino rat</string>
     <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name_Objective">albino rat</string>
-    <string name="Albino_Desc">Marsupial rats are aggressive, but rather weak denizens of the sewers. They can be dangerous only in big numbers.</string>
+    <string name="Albino_Desc">Marsupial rats are aggressive, but rather weak denizens of the sewers. They can be dangerous only in big numbers. This particular rat seems to be an albino. It also has abnormally sharp teeth.</string>
     <!-- STRINGS OF Bandit CLASS -->
     <string name="Bandit_Name">crazy bandit</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name_Objective">crazy bandit</string>
-    <string name="Bandit_Desc">Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal.</string>
+    <string name="Bandit_Desc">Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal. This bandit seems to have coated his dagger with something!</string>
     <!-- STRINGS OF Bat CLASS -->
     <string name="Bat_Name">vampire bat</string>
     <string name="Bat_Gender">masculine</string>
@@ -79,7 +79,7 @@
     <string name="Goo_Name">Goo</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Name_Objective">Goo</string>
-    <string name="Goo_Desc">Little known about The Goo. It\'s quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will.</string>
+    <string name="Goo_Desc">Little is known about The Goo. It\'s quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will. Either way, it/'s obvious dark magic is at work here. </string>
     <string name="Goo_Info1">Goo is pumping itself up!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -88,7 +88,7 @@
     <string name="King_Name">King of Dwarves</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Name_Objective">King of Dwarves</string>
-    <string name="King_Desc">The last king of dwarves was known for his deep understanding of processes of life and death. He has persuaded members of his court to participate in a ritual, that should have granted them eternal youthfulness. In the end he was the only one, who got it - and an army of undead as a bonus.</string>
+    <string name="King_Desc">The last king of dwarves was known for his deep understanding of the processes of life and death. He had persuaded members of his court to participate in a ritual, that should have granted them eternal youthfulness. In the end he was the only one who got it - and an army of undead as a bonus.</string>
     <string name="King_Defense">parried</string>
     <string name="King_Info1">You cannot kill me, %s... I am... immortal...</string>
     <string name="King_Info2">Arise, slaves!</string>
@@ -103,13 +103,13 @@
     <string name="Mimic_Name">mimic</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name_Objective">mimic</string>
-    <string name="Mimic_Desc">Mimics are magical creatures which can take any shape they wish. In dungeons they almost always choose a shape of a treasure chest, because they know how to beckon an adventurer.";</string>
+    <string name="Mimic_Desc">Mimics are magical creatures which can take any shape they wish. In dungeons they almost always choose the shape of a treasure chest, because they know how to beckon an adventurer.";</string>
 
     <!-- STRINGS OF MimicPie CLASS -->
     <string name="MimicPie_Name">mimic</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">mimic</string>
-    <string name="MimicPie_Desc">Mimics are magical creatures which can take any shape they wish. This one looks like big tasty pasty";</string>
+    <string name="MimicPie_Desc">Mimics are magical creatures which can take any shape they wish. This one looks like a big tasty pasty";</string>
 
     <!-- STRINGS OF Monk CLASS -->
     <string name="Monk_Name">dwarf monk</string>
@@ -137,12 +137,12 @@
     <string name="Senior_Name">senior monk</string>
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name_Objective">senior monk</string>
-    <string name="Senior_Desc">These monks are fanatics, who devoted themselves to protecting their city\'s secrets from all aliens. They don\'t use any armor or weapons, relying solely on the art of hand-to-hand combat.</string>
+    <string name="Senior_Desc">These monks are fanatics, who devoted themselves to protecting their city\'s secrets from all aliens. They don\'t use any armor or weapons, relying solely on the art of hand-to-hand combat. This particular monk has mastered the art of disabling hiss opponents.</string>
     <!-- STRINGS OF Shadow CLASS -->
     <string name="Shadow_Name">shadow</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">shadow</string>
-    <string name="Shadow_Desc">Shadows silently wander through the ruins of the ancient prison. Only occasionally showing themselves to adventurers, usually in their latest adventure.</string>
+    <string name="Shadow_Desc">Shadows silently wander through the ruins of the ancient prison, only occasionally showing themselves to adventurers, usually in their latest adventure.</string>
     <!-- STRINGS OF Shaman CLASS -->
     <string name="Shaman_Name">gnoll shaman</string>
     <string name="Shaman_Gender">masculine</string>
@@ -154,7 +154,7 @@
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name_Objective">shielded brute</string>
     <string name="Shielded_Defense">blocked</string>
-    <string name="Shielded_Desc">Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, they go berserk, inflicting even more damage to their enemies.</string>
+    <string name="Shielded_Desc">Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, they go berserk, inflicting even more damage to their enemies. This brute is wearing a gigantic shield!</string>
     <!-- STRINGS OF Skeleton CLASS -->
     <string name="Skeleton_Name">skeleton</string>
     <string name="Skeleton_Gender">masculine</string>
@@ -187,27 +187,27 @@
     <string name="Tengu_Name">Tengu</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Name_Objective">Tengu</string>
-    <string name="Tengu_Desc">Tengu are members of the ancient assassins clan, which is also called Tengu. These assassins are noted for extensive use of shuriken and traps.</string>
+    <string name="Tengu_Desc">Tengu are members of the ancient assassins clan, which is also called Tengu. These assassins are noted for extensive use of shurikens and traps.</string>
     <string name="Tengu_Info1">Free at last...</string>
     <string name="Tengu_Info2">Gotcha, %s!</string>
     <!-- STRINGS OF Thief CLASS -->
     <string name="Thief_Name">crazy thief</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name_Objective">crazy thief</string>
-    <string name="Thief_Desc">Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal.</string>
+    <string name="Thief_Desc">Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits forgot who they are and why they steal.</string>
     <string name="Thief_Stole">%1$s stole %2$s from you!</string>
     <string name="Thief_Carries">\n\n%1$s is carrying a _%2$s_. Stolen obviously.</string>
     <!-- STRINGS OF Warlock CLASS -->
     <string name="Warlock_Name">dwarf warlock</string>
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Name_Objective">dwarf warlock</string>
-    <string name="Warlock_Desc">When dwarves\' interests have shifted from engineering to arcane arts, warlocks have come to power in the city. They started with elemental magic, but soon switched to demonology and necromancy.</string>
+    <string name="Warlock_Desc">When dwarves\' interests shifted from engineering to arcane arts, warlocks came to power in the city. They started with elemental magic, but soon switched to demonology and necromancy.</string>
     <string name="Warlock_Killed">%s\'s shadow bolt killed you...</string>
     <!-- STRINGS OF Wraith CLASS -->
     <string name="Wraith_Name">wraith</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name_Objective">wraith</string>
-    <string name="Wraith_Desc">A wraith is a vengeful spirit of a sinner, whose grave or tomb was disturbed. Being an ethereal entity, it is very hard to hit with a regular weapon.</string>
+    <string name="Wraith_Desc">A wraith is the vengeful spirit of a sinner, whose grave or tomb was disturbed. Being an ethereal entity, it is very hard to hit with a regular weapon.</string>
     <string name="Wraith_Defense">evaded</string>
     <!-- STRINGS OF Yog CLASS -->
     <string name="Yog_Name">Yog-Dzewa</string>
@@ -269,7 +269,7 @@
     <string name="WaterElemental_Name">water elemental</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">water elemental</string>
-    <string name="WaterElemental_Desc">Water elementals can be found near big water masses. Typically those magically bonded waves just wander around.</string>
+    <string name="WaterElemental_Desc">Water elementals can be found near big water masses. Typically these magically bonded waves just wander around.</string>
 
     <!-- STRINGS OF AirElemental CLASS -->
     <string name="AirElemental_Name">air elemental</string>

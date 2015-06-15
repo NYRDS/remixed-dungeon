@@ -17,7 +17,7 @@
     <string name="FrozenCarpaccio_Name">frozen carpaccio</string>
     <string name="FrozenCarpaccio_Info">It\'s a piece of frozen raw meat. The only way to eat it is by cutting thin slices of it. And this way it\'s surprisingly good.</string>
     <string name="FrozenCarpaccio_Info1">You see your hands turn invisible!</string>
-    <string name="FrozenCarpaccio_Info2">You feel your skin hardens!</string>
+    <string name="FrozenCarpaccio_Info2">You feel your skin harden!</string>
     <string name="FrozenCarpaccio_Info3">Refreshing!</string>
     <string name="FrozenCarpaccio_Info4">You feel better!</string>
 
@@ -31,31 +31,31 @@
     <string name="MysteryMeat_Message">That food tasted... strange.</string>
 
     <!-- STRINGS OF RottenFood CLASS -->
-    <string name="RottenFood_Message">disgusting!</string>
+    <string name="RottenFood_Message">Disgusting!</string>
 
     <!-- STRINGS OF RottenMeat CLASS -->
-    <string name="RottenMeat_Name">rotten meat</string>
-    <string name="RottenMeat_Info">piece of rotten meat</string>
+    <string name="RottenMeat_Name">Rotten meat</string>
+    <string name="RottenMeat_Info">A piece of rotten meat</string>
 
     <!-- STRINGS OF RottenPasty CLASS -->
-    <string name="RottenPasty_Name">rotten pasty</string>
-    <string name="RottenPasty_Info">ex-pasty looks so disgusting</string>
+    <string name="RottenPasty_Name">Rotten pasty</string>
+    <string name="RottenPasty_Info">This pasty looks quite nasty.</string>
 
     <!-- STRINGS OF RottenRation CLASS -->
-    <string name="RottenRation_Name">rotten ration</string>
-    <string name="RottenRation_Info">once upon a time it could be eaten</string>
+    <string name="RottenRation_Name">Rotten ration</string>
+    <string name="RottenRation_Info">Once upon a time it could be eaten</string>
 
     <!-- STRINGS OF OverpricedRation CLASS -->
     <string name="OverpricedRation_Name">overpriced food ration</string>
     <string name="OverpricedRation_Info">It looks exactly like a standard ration of food but smaller.</string>
-    <string name="OverpricedRation_Message">That food tasted good.</string>
+    <string name="OverpricedRation_Message">That food tasted Ok.</string>
 
     <!-- STRINGS OF Pasty CLASS -->
     <string name="Pasty_Name">pasty</string>
-    <string name="Pasty_Info">This is authentic Cornish pasty with traditional filling of beef and potato.</string>
+    <string name="Pasty_Info">This is an authentic Cornish pasty with the traditional filling of beef and potato.</string>
 
     <!-- STRINGS OF PseudoPasty CLASS -->
     <string name="PseudoPasty_Name">pasty</string>
-    <string name="PseudoPasty_Info">This is authentic Cornish pasty with traditional filling of beef and potato.</string>
+    <string name="PseudoPasty_Info">This is an authentic Cornish pasty with the traditional filling of beef and potato.</string>
     
 </resources>

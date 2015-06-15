@@ -2,7 +2,7 @@
 <resources>
     
     <!-- STRINGS OF Bow CLASS -->
-    <string name="Bow_Info1">Bow is a ranged weapon, almost useless (for everyone except elves) at short distance.\n\n</string>
+    <string name="Bow_Info1">This bow is a ranged weapon. It is useless for everybody but elves at very close range. Having a bow equipped allows you to fire arrows.\n\n</string>
     
     <!-- STRINGS OF WoodenBow CLASS -->
     <string name="WoodenBow_Name">wooden bow</string>
@@ -11,17 +11,17 @@
 	
 	<!-- STRINGS OF CompoundBow CLASS -->
     <string name="CompoundBow_Name">compound bow</string>
-    <string name="CompoundBow_Info">Arrows launched from compond bow deal great amount of damage and have improved accuraccy at cost of some speed.</string>
+    <string name="CompoundBow_Info">Arrows launched from this compound bow deal a great amount of damage and have improved accuracy over a wooden bow at the cost of some speed.</string>
     <string name="CompoundBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF RubyBow CLASS -->
     <string name="RubyBow_Name">ruby bow</string>
-    <string name="RubyBow_Info">Only greatest archers can use ruby bow. Almost each arrow pierces through the enemy, leaving a huge hole in his body. But how much force is needed to pull the bowstring.</string>
+    <string name="RubyBow_Info">Only the greatest archers can use this ruby bow. Almost every arrow pierces through the enemy, leaving a huge hole in his body, but extreme force is needed to pull the bowstring.</string>
     <string name="RubyBow_Gender">masculine</string>
 	
 	<!-- STRINGS OF Quiver CLASS -->
     <string name="Quiver_Name">quiver</string>
-    <string name="Quiver_Info">Leather quiver suitable to hold any arrows</string>
+    <string name="Quiver_Info">Leather quiver suitable to hold any amount of arrows</string>
     <string name="Quiver_Gender">masculine</string>
 	
 	<!-- STRINGS OF FireQuiver CLASS -->
@@ -41,27 +41,27 @@
 	
 	<!-- STRINGS OF CommonArrow CLASS -->
     <string name="CommonArrow_Name">arrow</string>
-    <string name="CommonArrow_Info">Common wooden arrow with iron head.</string>
+    <string name="CommonArrow_Info">Common wooden arrow with an iron head.</string>
     <string name="CommonArrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF FireArrow CLASS -->
     <string name="FireArrow_Name">fire arrow</string>
-    <string name="FireArrow_Info">This arrow looks just like common, except warm red light radiating from its head.</string>
+    <string name="FireArrow_Info">This arrow looks just like a normal one, except for a warm red light radiating from its head.</string>
     <string name="FireArrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF PoisonArrow CLASS -->
     <string name="PoisonArrow_Name">poison arrow</string>
-    <string name="PoisonArrow_Info">Deadly poison drop shine on this arrow head.</string>
+    <string name="PoisonArrow_Info">A drop of deadly poison shines on this arrow head.</string>
     <string name="PoisonArrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF ParalysisArrow CLASS -->
     <string name="ParalysisArrow_Name">paralyzing arrow</string>
-    <string name="ParalysisArrow_Info">This arrow spread very weak but familiar curare smell.</string>
+    <string name="ParalysisArrow_Info">This arrow is coated in paralysing liquid.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
 
     <!-- STRINGS OF FrostArrow CLASS -->
     <string name="FrostArrow_Name">frost arrow</string>
-    <string name="FrostArrow_Info">You can feel freezing aura emanating from arrow head.</string>
+    <string name="FrostArrow_Info">You can feel a freezing aura emanating from the arrow head.</string>
     <string name="FrostArrow_Gender">feminine</string>
 
 </resources>
