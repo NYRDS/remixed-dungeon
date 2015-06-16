@@ -46,7 +46,7 @@
 	
 	<!-- STRINGS OF FireArrow CLASS -->
     <string name="FireArrow_Name">fire arrow</string>
-    <string name="FireArrow_Info">This arrow looks just like a normal one, except for a warm red light radiating from its head.</string>
+    <string name="FireArrow_Info">This arrow looks just like a normal one, other than a warm red light radiating from its head.</string>
     <string name="FireArrow_Gender">feminine</string>
 	
 	<!-- STRINGS OF PoisonArrow CLASS -->
@@ -56,7 +56,7 @@
 	
 	<!-- STRINGS OF ParalysisArrow CLASS -->
     <string name="ParalysisArrow_Name">paralyzing arrow</string>
-    <string name="ParalysisArrow_Info">This arrow is coated in paralysing liquid.</string>
+    <string name="ParalysisArrow_Info">This arrow is coated in curare.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
 
     <!-- STRINGS OF FrostArrow CLASS -->
