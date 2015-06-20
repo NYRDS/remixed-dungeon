@@ -28,7 +28,7 @@
 
     <!-- STRINGS OF WandOfAmok CLASS -->
     <string name="WandOfAmok_Name">Wand of Amok</string>
-    <string name="WandOfAmok_Info">The purple light from this wand will make the target run amok attacking random creatures in its vicinity.</string>
+    <string name="WandOfAmok_Info">The purple light from this wand will make the target run amok, attacking random creatures in its vicinity.</string>
     <string name="WandOfAmok_Info1">nothing happened</string>
 
     <!-- STRINGS OF WandOfAvalanche CLASS -->
@@ -51,7 +51,7 @@
 
     <!-- STRINGS OF WandOfFlock CLASS -->
     <string name="WandOfFlock_Name">Wand of Flock</string>
-    <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>
+    <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating a temporary impenetrable obstacle.</string>
     <string name="Sheep_Name">sheep</string>
     <string name="Sheep_Name_Objective">sheep</string>
     <string name="Sheep_Gender">feminine</string>
@@ -68,7 +68,7 @@
 
     <!-- STRINGS OF WandOfLightning CLASS -->
     <string name="WandOfLightning_Name">Wand of Lightning</string>
-    <string name="WandOfLightning_Info">This wand conjures forth deadly arcs of electricity, which deal damage to several creatures standing close to each other.</string>
+    <string name="WandOfLightning_Info">This wand conjures forth deadly arcs of electricity, which will deal damage to several creatures standing close to each other.</string>
     <string name="WandOfLightning_Info1">You killed yourself with your own Wand of Lightning...</string>
 
     <!-- STRINGS OF WandOfMagicMissile CLASS -->

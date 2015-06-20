@@ -79,7 +79,7 @@
     
     <!-- STRINGS OF RingOfStoneWalking CLASS -->
     <string name="RingOfStoneWalking_Name">Ring of Stone Blood</string>
-    <string name="RingOfStoneWalking_Info">This ring is made of sturdy stone would look ordinary. If it was not a drop of liquid blood pulsing instead of gem.</string>  
-    <string name="RingOfStoneWalking_ImmuredInStone">Immured in stone. Forever.</string>
+    <string name="RingOfStoneWalking_Info">This strange ring is made of some sturdy stone. What you first thought was a ruby is actually liquid blood being held in place! Inside is an arrow pointing at what appears to be a wall, along with a broken heart... What might it do?</string>  
+    <string name="RingOfStoneWalking_ImmuredInStone"> You have been immured in stone. Forever.</string>
     
 </resources>

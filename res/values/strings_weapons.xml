@@ -81,7 +81,7 @@
     <string name="MeleeWeapon_Info1d">an degraded</string>
     <string name="MeleeWeapon_Info2a">Its average damage is %d points per hit.</string>
     <string name="MeleeWeapon_Info2b">Its typical average damage is %1$d points per hit and usually it requires %2$d points of strength.</string>
-    <string name="MeleeWeapon_Info2c">Probably this weapon is too heavy for you.</string>
+    <string name="MeleeWeapon_Info2c">This weapon is probably too heavy for you.</string>
     <string name="MeleeWeapon_Info3a">This is a rather %s weapon.</string>
     <string name="MeleeWeapon_Info3b">fast</string>
     <string name="MeleeWeapon_Info3c">slow</string>
@@ -170,12 +170,12 @@
 
     <!-- STRINGS OF Boomerang CLASS -->
     <string name="Boomerang_Name">boomerang</string>
-    <string name="Boomerang_Info">Thrown to the enemy this flat curved wooden missile will return to the hands of its thrower.</string>
+    <string name="Boomerang_Info">When thrown at the enemy this flat, curved, wooden missile will return to the hands of its thrower.</string>
     <string name="Boomerang_Gender">masculine</string>
     
     <!-- STRINGS OF CurareDart CLASS -->
     <string name="CurareDart_Name">curare dart</string>
-    <string name="CurareDart_Info">These little evil darts don\'t do much damage but they can paralyze the target leaving it helpless and motionless for some time.</string>
+    <string name="CurareDart_Info">These evil little darts don\'t do much damage, but they can paralyze the target leaving it helpless and motionless for some time.</string>
     <string name="CurareDart_Gender">masculine</string>
     
     <!-- STRINGS OF Dart CLASS -->

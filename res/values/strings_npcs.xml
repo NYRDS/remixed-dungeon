@@ -29,7 +29,7 @@
     <string name="FetidRat_Name">fetid rat</string>
     <string name="FetidRat_Name_Objective">fetid rat</string>
     <string name="FetidRat_Gender">feminine</string>
-    <string name="FetidRat_Desc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
+    <string name="FetidRat_Desc">This marsupial rat is much larger than a regular one. It is surrounded by a foul cloud.</string>
 
     <!-- STRINGS OF Hedgehog CLASS -->
     <string name="Hedgehog_Name">hedgehog</string>

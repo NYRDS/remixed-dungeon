@@ -16,7 +16,7 @@
     <string name="Hero_StaBurning">You catch fire!</string>
     <string name="Hero_StaParalysis">You are paralysed!</string>
     <string name="Hero_StaPoison">You are poisoned!</string>
-    <string name="Hero_StaOoze">Caustic ooze eats your flesh. Wash away it!</string>
+    <string name="Hero_StaOoze">Caustic ooze eats at your flesh. Wash it away!</string>
     <string name="Hero_StaRoots">You can\'t move!</string>
     <string name="Hero_StaWeakness">You feel weakened!</string>
     <string name="Hero_StaBlindness">You are blinded!</string>
@@ -50,8 +50,8 @@
     </string-array>
     <string-array name="HeroClass_RogPerks">
         <item>Rogues start with a Ring of Shadows+1.</item>
-        <item>Rogues identify a type of a ring on equipping it.</item>
-        <item>Rogues are proficient with light armor, dodging better while wearing one.</item>
+        <item>Rogues identify the type of a ring on equipping it.</item>
+        <item>Rogues are proficient with light armor, dodging better while wearing it.</item>
         <item>Rogues are proficient in detecting hidden doors and traps.</item>
         <item>Rogues can go without food longer.</item>
         <item>Scrolls of Magic Mapping are identified from the beginning.</item>
@@ -65,9 +65,9 @@
     </string-array>
     <string-array name="HeroClass_ElfPerks">
         <item>Elves start with 15 HP and 9 STR.</item>
-        <item>Elves immune to rooting.</item>
-        <item>Elves start with a upgraded wooden bow and bunch of arrows.</item>
-        <item>Elves are extremely proficient with bows and agile.</item>
+        <item>Elves are immune to rooting.</item>
+        <item>Elves start with an upgraded wooden bow and a bunch of arrows.</item>
+        <item>Elves are extremely proficient with bows and are agile.</item>
         <item>Elves are less proficient with melee weapons.</item>>
     </string-array>
 
@@ -89,8 +89,8 @@
     <string name="HeroSubClass_NameWard">warden</string>
     <string name="HeroSubClass_DescWard">Having a strong connection with forces of nature gives _Wardens_ an ability to gather dewdrops and seeds from plants. Also trampling a high grass grants them a temporary armor buff.</string>
     <string name="HeroSubClass_NameScout">scout</string>
-    <string name="HeroSubClass_DescScout">Elven _Scouts_ are masters of stealth. Trampling a high grass grants them a temporary invisibility buff. Also they even faster than regular Elves.</string>
+    <string name="HeroSubClass_DescScout">Elven _Scouts_ are masters of stealth. Trampling high grass grants them a temporary invisibility buff. Also they are even faster than regular Elves.</string>
     <string name="HeroSubClass_NameShaman">shaman</string>
-    <string name="HeroSubClass_DescShaman">Elven _Shamans_ can use wands as melee weapon. Successful hit have chance to activate wand power on target without using charge.</string>
+    <string name="HeroSubClass_DescShaman">Elven _Shamans_ can use wands as melee weapons. Successful hits have a chance to activate the wand/'s power on a target without using a charge.</string>
     
 </resources>

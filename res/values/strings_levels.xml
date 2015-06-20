@@ -47,7 +47,7 @@
     <string name="Level_TileDescBarricade">The wooden barricade is firmly set but has dried over the years. Might it burn?</string>
     <string name="Level_TileDescSign">You can\'t read the text from here.</string>
     <string name="Level_TileDescTrap">Stepping onto a hidden pressure plate will activate the trap.</string>
-    <string name="Level_TileDescInactiveTrap">The trap has been triggered before and it\'s not dangerous anymore.</string>
+    <string name="Level_TileDescInactiveTrap">The trap has been triggered before and it\'s not dangerous any more.</string>
     <string name="Level_TileDescStatue">Someone wanted to adorn this place, but failed, obviously.</string>
     <string name="Level_TileDescAlchemy">Drop some seeds here to cook a potion.</string>
     <string name="Level_TileDescEmptyWell">The well has run dry.</string>
@@ -108,7 +108,7 @@
     <string name="Chasm_Yes">Yes, I know what I\'m doing</string>
     <string name="Chasm_No">No, I changed my mind</string>
     <string name="Chasm_Jump">Do you really want to jump into the chasm? You can probably die.</string>
-    <string name="Chasm_Info">You fell to death...</string>
+    <string name="Chasm_Info">You fell to your death...</string>
 
     <!-- PACKAGE /levels/traps -->
     <!-- STRINGS OF AlarmTrap CLASS -->
