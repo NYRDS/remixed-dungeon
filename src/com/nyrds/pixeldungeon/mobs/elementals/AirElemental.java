@@ -13,13 +13,13 @@ import com.watabou.utils.Random;
 
 public class AirElemental extends Mob {
 
-	private final int maxDistance = 3;
-	
+	private static final int maxDistance = 3;
+
 	public AirElemental() {
-		//spriteClass = AirElementalSprite.class;
+		// spriteClass = AirElementalSprite.class;
 
 		spriteClass = "air_elemental_sprite.json";
-		
+
 		adjustLevel(Dungeon.depth);
 
 		loot = new PotionOfLevitation();
@@ -50,26 +50,24 @@ public class AirElemental extends Mob {
 	}
 
 	@Override
-	protected boolean getCloser( int target ) {
-		if (state == HUNTING) {
-			if(Level.distance(pos, target) < maxDistance - 1) {
-				return getFurther( target );
-			} 
+	protected boolean getCloser(int target) {
+		if (state == HUNTING && Level.distance(pos, target) < maxDistance - 1) {
+			return getFurther(target);
 		}
-		
-		return super.getCloser( target );
+
+		return super.getCloser(target);
 	}
-	
+
 	@Override
 	protected boolean canAttack(Char enemy) {
-		
-		if(Level.adjacent(pos, enemy.pos)) {
+
+		if (Level.adjacent(pos, enemy.pos)) {
 			return false;
 		}
-		
-		Ballistica.cast( pos, enemy.pos, true, false );
-			
-		for (int i=1; i < maxDistance; i++) {
+
+		Ballistica.cast(pos, enemy.pos, true, false);
+
+		for (int i = 1; i < maxDistance; i++) {
 			if (Ballistica.trace[i] == enemy.pos) {
 				return true;
 			}
@@ -80,10 +78,10 @@ public class AirElemental extends Mob {
 	@Override
 	public int attackProc(Char enemy, int damage) {
 
-		Ballistica.cast( pos, enemy.pos, true, false );
-		
+		Ballistica.cast(pos, enemy.pos, true, false);
+
 		Char ch;
-		
+
 		for (int i = 1; i < maxDistance; i++) {
 
 			int c = Ballistica.trace[i];
