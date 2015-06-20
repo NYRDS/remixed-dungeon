@@ -7,4 +7,5 @@
   <string name="Potion_RuneDissaperaed">Runa zniknęła z %s.</string>
   <string name="Potion_ArrowMoisten">Udało ci się nasączyć strzały.</string>
   <string name="Potion_ItemFliesAway">%s odleciał w nieznane...</string>
+  <string name="Potion_FoodRefreshed">%s teraz wygląda całkiem dobrze</string>
 </resources>
