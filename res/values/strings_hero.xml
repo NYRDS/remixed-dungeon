@@ -91,6 +91,6 @@
     <string name="HeroSubClass_NameScout">scout</string>
     <string name="HeroSubClass_DescScout">Elven _Scouts_ are masters of stealth. Trampling high grass grants them a temporary invisibility buff. Also they are even faster than regular Elves.</string>
     <string name="HeroSubClass_NameShaman">shaman</string>
-    <string name="HeroSubClass_DescShaman">Elven _Shamans_ can use wands as melee weapons. Successful hits have a chance to activate the wand/'s power on a target without using a charge.</string>
+    <string name="HeroSubClass_DescShaman">Elven _Shamans_ can use wands as melee weapons. Successful hits have a chance to activate the wand\'s power on a target without using a charge.</string>
     
 </resources>
