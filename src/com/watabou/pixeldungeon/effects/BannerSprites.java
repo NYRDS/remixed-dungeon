@@ -27,7 +27,7 @@ public class BannerSprites {
 		BOSS_SLAIN,
 		GAME_OVER,
 		SELECT_YOUR_HERO
-	};
+	}
 	
 	public static Image get( Type type ) {
 		Image icon = new Image( Assets.getBanners() );

@@ -34,7 +34,7 @@ import com.watabou.utils.Random;
 public class AmuletScene extends PixelScene {
 
 	private static final String TXT_EXIT = Game.getVar(R.string.AmuletScene_Exit);
-	private static final String TXT_STAY = Game.getVar(R.string.AmuletScene_Stay);;
+	private static final String TXT_STAY = Game.getVar(R.string.AmuletScene_Stay);
 	private static final String TXT      = Game.getVar(R.string.AmuletScene_Txt);
 	
 	private static final int WIDTH			= 120;

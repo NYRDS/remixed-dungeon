@@ -88,7 +88,7 @@ public class Blacksmith extends NPC {
 					} else {
 						Dungeon.level.drop( pick, hero.pos ).sprite.drop();
 					}
-				};
+				}
 			} );
 			
 			Journal.add( Journal.Feature.TROLL );

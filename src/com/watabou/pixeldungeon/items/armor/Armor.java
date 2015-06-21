@@ -162,7 +162,7 @@ public class Armor extends EquipableItem {
 			if (inscribe) {
 				inscribe( Glyph.random() );
 			}
-		};
+		}
 		
 		DR += tier;
 		STR--;

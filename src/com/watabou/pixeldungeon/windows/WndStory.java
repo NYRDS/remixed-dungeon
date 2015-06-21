@@ -17,10 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;

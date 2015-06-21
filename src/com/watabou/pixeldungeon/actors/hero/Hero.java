@@ -403,7 +403,7 @@ public class Hero extends Char {
 		}
 		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1,
 				-hasteLevel)));
-	};
+	}
 
 	public void spendAndNext(float time) {
 		busy();
@@ -795,7 +795,6 @@ public class Hero extends Char {
 							Rankings.gameOver.WIN_HAPPY);
 
 					Dungeon.gameOver();
-					;
 
 					Game.switchScene(SurfaceScene.class);
 				}

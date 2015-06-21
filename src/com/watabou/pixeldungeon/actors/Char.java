@@ -172,7 +172,7 @@ public abstract class Char extends Actor {
 				Random.IntRange( 0, enemy.dr() );
 			
 			int dmg = damageRoll();
-			int effectiveDamage = Math.max( dmg - dr, 0 );;
+			int effectiveDamage = Math.max( dmg - dr, 0 );
 			
 			effectiveDamage = attackProc( enemy, effectiveDamage );
 			effectiveDamage = enemy.defenseProc( this, effectiveDamage );

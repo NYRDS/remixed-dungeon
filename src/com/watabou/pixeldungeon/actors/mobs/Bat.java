@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;

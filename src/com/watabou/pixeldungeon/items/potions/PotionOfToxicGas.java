@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
-import com.watabou.pixeldungeon.items.weapon.missiles.ParalysisArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.PoisonArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 

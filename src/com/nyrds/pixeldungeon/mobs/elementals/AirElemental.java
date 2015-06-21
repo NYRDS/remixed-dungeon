@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import com.nyrds.pixeldungeon.mobs.elementals.sprites.AirElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;

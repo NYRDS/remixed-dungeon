@@ -49,11 +49,6 @@ public class AttackIndicator extends Tag {
 	}
 	
 	@Override
-	protected void createChildren() {
-		super.createChildren();
-	}
-	
-	@Override
 	protected void layout() {
 		super.layout();
 		

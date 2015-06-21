@@ -1,8 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.nyrds.pixeldungeon.mobs.elementals.sprites.WaterElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;

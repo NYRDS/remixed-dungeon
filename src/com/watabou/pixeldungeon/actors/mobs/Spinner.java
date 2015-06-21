@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Web;

@@ -50,7 +50,7 @@ public class Bleeding extends Buff {
 	
 	public void set( int level ) {
 		this.level = level;
-	};
+	}
 	
 	@Override
 	public int icon() {

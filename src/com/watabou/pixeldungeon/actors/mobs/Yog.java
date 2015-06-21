@@ -18,9 +18,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;

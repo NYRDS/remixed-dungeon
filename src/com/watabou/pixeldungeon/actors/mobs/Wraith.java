@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;

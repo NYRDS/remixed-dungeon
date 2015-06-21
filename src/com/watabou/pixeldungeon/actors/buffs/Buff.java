@@ -34,7 +34,7 @@ public class Buff extends Actor {
 		public Item   act(Item srcItem);
 		public String actionText(Item srcItem);
 		public void   carrierFx();
-	};
+	}
 	
 	public boolean attachTo( Char target ) {
 

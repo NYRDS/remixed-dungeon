@@ -24,7 +24,7 @@ public class Banner extends Image {
 
 	private enum State {
 		FADE_IN, STATIC, FADE_OUT
-	};
+	}
 	private State state;
 	
 	private float time;

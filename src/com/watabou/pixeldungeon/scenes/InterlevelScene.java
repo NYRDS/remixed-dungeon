@@ -59,7 +59,7 @@ public class InterlevelScene extends PixelScene {
 
 	public static enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, MODDING
-	};
+	}
 
 	public static Mode mode;
 

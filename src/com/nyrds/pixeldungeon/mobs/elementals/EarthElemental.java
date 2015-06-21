@@ -1,8 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.nyrds.pixeldungeon.mobs.elementals.sprites.EarthElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -70,11 +67,5 @@ public class EarthElemental extends Mob {
 			}
 		}
 		return damage;
-	}
-
-	@Override
-	public boolean act() {
-
-		return super.act();
 	}
 }
