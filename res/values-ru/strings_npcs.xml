@@ -61,6 +61,7 @@
     <!-- STRINGS OF RatKing CLASS -->
     <string name="RatKing_Name">крысиный король</string>
     <string name="RatKing_Desc">Эта крыса слегка крупнее обычной. На её голове виднеется малюсенькая корона.</string>
+    <string name="RatKing_Name_Objective">крысиного короля</string>
     <string name="RatKing_Info1">Я не сплю!</string>
     <string name="RatKing_Info2">Это ещё что? У меня нет времени на всякую ерунду. Королевство само собой править не будет!</string>
     <string name="RatKing_Info3">Как смеешь ты, жалкое существо, беспокоить нашу Крыссность?!</string>
