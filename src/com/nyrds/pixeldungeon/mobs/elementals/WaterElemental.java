@@ -26,9 +26,9 @@ public class WaterElemental extends Mob {
 	}
 	
 	private void adjustLevel(int depth) {
-		hp(ht(depth * 5));
-		defenseSkill = depth * 2;
-		EXP = depth;
+		hp(ht(depth * 5 + 1));
+		defenseSkill = depth * 2 + 1;
+		EXP = depth + 1;
 		maxLvl = depth + 2;
 		
 		IMMUNITIES.add( Frost.class );

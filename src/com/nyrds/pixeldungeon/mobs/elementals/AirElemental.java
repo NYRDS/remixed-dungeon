@@ -26,9 +26,9 @@ public class AirElemental extends Mob {
 	}
 
 	private void adjustLevel(int depth) {
-		hp(ht(depth * 3));
-		defenseSkill = depth * 2;
-		EXP = depth;
+		hp(ht(depth * 3 + 1));
+		defenseSkill = depth * 2 + 1;
+		EXP = depth + 1;
 		maxLvl = depth + 2;
 
 	}
