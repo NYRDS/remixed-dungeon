@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Generator;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -74,6 +75,22 @@ public class Shaman extends Mob implements Callback {
 	@Override
 	protected boolean canAttack( Char enemy ) {
 		return Ballistica.cast( pos, enemy.pos, false, true ) == enemy.pos;
+	}
+	
+	@Override
+	public int defenseProc(Char enemy, int damage) {
+		
+		if( hp() > 2*ht() / 3 && hp()-damage/2 < 2*ht() / 3 ) {
+			state = FLEEING;
+			return damage/2;
+		}
+		
+		if( hp() > ht() / 3 && hp()-damage/2 < ht() / 3 ) {
+			state = FLEEING;
+			return damage/2;
+		}
+		
+		return damage;
 	}
 	
 	@Override
