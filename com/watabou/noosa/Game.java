@@ -54,7 +54,6 @@ import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.BitmapCache;
 import com.watabou.utils.SystemTime;
 
 public class Game extends Activity implements GLSurfaceView.Renderer,

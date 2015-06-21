@@ -41,18 +41,18 @@ public class Button extends Component {
 				pressTime = 0;
 				processed = false;
 				Button.this.onTouchDown();
-			};
+			}
 			@Override
 			protected void onTouchUp(Touch touch) {
 				pressed = false;
 				Button.this.onTouchUp();
-			};
+			}
 			@Override
 			protected void onClick( Touch touch ) {
 				if (!processed) {
 					Button.this.onClick();
 				}
-			};
+			}
 		};
 		add( hotArea );
 	}
