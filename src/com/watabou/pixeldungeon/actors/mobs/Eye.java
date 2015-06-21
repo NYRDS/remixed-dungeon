@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -44,7 +45,7 @@ public class Eye extends Mob {
 	
 	private static final String TXT_DEATHGAZE_KILLED = Game.getVar(R.string.Eye_Kill);
 	
-	{
+	public Eye() {
 		spriteClass = EyeSprite.class;
 		
 		hp(ht(100));
@@ -58,6 +59,12 @@ public class Eye extends Mob {
 		
 		loot = new Dewdrop();
 		lootChance = 0.5f;
+		
+		RESISTANCES.add( WandOfDisintegration.class );
+		RESISTANCES.add( Death.class );
+		RESISTANCES.add( Leech.class );
+		
+		IMMUNITIES.add( Terror.class );
 	}
 	
 	@Override
@@ -142,27 +149,5 @@ public class Eye extends Mob {
 		}
 		
 		return true;
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( WandOfDisintegration.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( Leech.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Terror.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

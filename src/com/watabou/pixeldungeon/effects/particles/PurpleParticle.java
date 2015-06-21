@@ -44,8 +44,6 @@ public class PurpleParticle extends PixelParticle {
 	};
 	
 	public PurpleParticle() {
-		super();
-		
 		lifespan = 0.5f;
 	}
 	

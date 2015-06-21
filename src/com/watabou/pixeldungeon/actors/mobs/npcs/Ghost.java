@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -71,8 +72,6 @@ public class Ghost extends NPC {
 
 	
 	public Ghost() {
-		super();
-
 		Sample.INSTANCE.load( Assets.SND_GHOST );
 	}
 	
@@ -159,7 +158,7 @@ public class Ghost extends NPC {
 	}
 	
 	@Override
-	public HashSet<Class<?>> immunities() {
+	public Set<Class<?>> immunities() {
 		return IMMUNITIES;
 	}
 	
@@ -374,7 +373,7 @@ public class Ghost extends NPC {
 		}
 		
 		@Override
-		public HashSet<Class<?>> immunities() {
+		public Set<Class<?>> immunities() {
 			return IMMUNITIES;
 		}
 	}

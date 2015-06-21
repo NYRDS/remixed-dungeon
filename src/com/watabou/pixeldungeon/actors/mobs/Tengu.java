@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -48,12 +49,17 @@ public class Tengu extends Mob {
 
 	private static final int JUMP_DELAY = 5;
 	
-	{
+	public Tengu() {
 		spriteClass = TenguSprite.class;
 		
 		hp(ht(120));
 		EXP = 20;
 		defenseSkill = 20;
+		
+		RESISTANCES.add( ToxicGas.class );
+		RESISTANCES.add( Poison.class );
+		RESISTANCES.add( Death.class );
+		RESISTANCES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	private int timeToJump = JUMP_DELAY;
@@ -173,18 +179,5 @@ public class Tengu extends Mob {
 	public void notice() {
 		super.notice();
 		yell(String.format(Game.getVar(R.string.Tengu_Info2), Dungeon.hero.heroClass.title()));
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( Poison.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
+	}	
 }

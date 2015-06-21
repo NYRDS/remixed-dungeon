@@ -48,8 +48,6 @@ public class PoisonParticle extends PixelParticle {
 	};
 	
 	public PoisonParticle() {
-		super();
-		
 		lifespan = 0.6f;
 		
 		acc.set( 0, +30 );

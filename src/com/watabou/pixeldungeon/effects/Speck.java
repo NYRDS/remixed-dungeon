@@ -70,8 +70,6 @@ public class Speck extends Image {
 	private static SparseArray<Emitter.Factory> factories = new SparseArray<Emitter.Factory>();
 	
 	public Speck() {
-		super();
-		
 		texture( Assets.SPECKS );
 		if (film == null) {
 			film = new TextureFilm( texture, SIZE, SIZE );

@@ -7,8 +7,6 @@ import com.watabou.pixeldungeon.sprites.MobSprite;
 public class SpiderQueenSprite extends MobSprite {
 	
 	public SpiderQueenSprite() {
-		super();
-		
 		texture( Assets.SPIDER_QUEEN );
 		
 		TextureFilm frames = new TextureFilm( texture, 16, 15 );

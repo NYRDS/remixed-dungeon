@@ -42,8 +42,6 @@ public class WindParticle extends PixelParticle {
 	private float size;
 	
 	public WindParticle() {
-		super();
-		
 		lifespan = Random.Float( 1, 2 );
 		scale.set( size = Random.Float( 3 ) );
 	}
@@ -83,8 +81,6 @@ public class WindParticle extends PixelParticle {
 		private float delay;
 		
 		public Wind( int pos ) {
-			super();
-			
 			this.pos = pos;
 			PointF p = DungeonTilemap.tileToWorld( pos );
 			x = p.x;

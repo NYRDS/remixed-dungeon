@@ -32,7 +32,6 @@ public class SpiderExplodingSprite extends MobSprite {
 	}
 	
 	public SpiderExplodingSprite() {
-		super();
 		selectKind(0);
 	}
 	

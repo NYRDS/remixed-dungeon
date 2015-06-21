@@ -120,7 +120,6 @@ public abstract class Scroll extends Item {
 	}
 	
 	public Scroll() {
-		super();
 		if (this instanceof BlankScroll){
 			return;
 		}

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -39,17 +40,13 @@ import com.watabou.utils.Random;
 
 public class Statue extends Mob {
 	
-	{
+	private Weapon weapon;
+	
+	public Statue() {
 		spriteClass = StatueSprite.class;
 
 		EXP = 0;
 		state = PASSIVE;
-	}
-	
-	private Weapon weapon;
-	
-	public Statue() {
-		super();
 		
 		do {
 			weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
@@ -60,6 +57,12 @@ public class Statue extends Mob {
 		
 		hp(ht(15 + Dungeon.depth * 5));
 		defenseSkill = 4 + Dungeon.depth;
+		
+		RESISTANCES.add( ToxicGas.class );
+		RESISTANCES.add( Poison.class );
+		RESISTANCES.add( Death.class );
+		RESISTANCES.add( ScrollOfPsionicBlast.class );
+		IMMUNITIES.add( Leech.class );
 	}
 	
 	private static final String WEAPON	= "weapon";
@@ -145,25 +148,5 @@ public class Statue extends Mob {
 	@Override
 	public String description() {
 		return String.format(Game.getVar(R.string.Statue_Desc), weapon.name());
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( Poison.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-		IMMUNITIES.add( Leech.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
+	}	
 }

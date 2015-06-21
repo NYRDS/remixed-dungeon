@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -531,14 +532,15 @@ public abstract class Char extends Actor {
 		next();
 	}
 	
-	private static final HashSet<Class<?>> EMPTY = new HashSet<Class<?>>();
+	protected static final Set<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	protected static final Set<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	
-	public HashSet<Class<?>> resistances() {
-		return EMPTY;
+	public Set<Class<?>> resistances() {
+		return RESISTANCES;
 	}
 	
-	public HashSet<Class<?>> immunities() {
-		return EMPTY;
+	public Set<Class<?>> immunities() {
+		return IMMUNITIES;
 	}
 
 	public CharSprite getSprite() {

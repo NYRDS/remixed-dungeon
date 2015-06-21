@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -34,7 +36,7 @@ import com.watabou.utils.Random;
 
 public class Scorpio extends Mob {
 	
-	{
+	public Scorpio() {
 		spriteClass = ScorpioSprite.class;
 		
 		hp(ht(95));
@@ -46,6 +48,9 @@ public class Scorpio extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.125f;
+		
+		RESISTANCES.add( Leech.class );
+		RESISTANCES.add( Poison.class );
 	}
 	
 	@Override
@@ -93,16 +98,5 @@ public class Scorpio extends Mob {
 		} else if (Random.Int( 6 ) == 0) {
 			Dungeon.level.drop( new MysteryMeat(), pos ).sprite.drop();
 		}
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( Leech.class );
-		RESISTANCES.add( Poison.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
+	}	
 }

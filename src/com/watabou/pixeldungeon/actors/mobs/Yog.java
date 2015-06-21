@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Set;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -53,7 +54,11 @@ import com.watabou.utils.Random;
 
 public class Yog extends Mob {
 	
-	{
+	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);	
+	
+	private static int fistsCount = 0;
+	
+	public Yog() {
 		spriteClass = YogSprite.class;
 		
 		hp(ht(300));
@@ -61,14 +66,15 @@ public class Yog extends Mob {
 		EXP = 50;
 		
 		state = PASSIVE;
-	}
-	
-	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);	
-	
-	private static int fistsCount = 0;
-	
-	public Yog() {
-		super();
+		
+		IMMUNITIES.add( Death.class );
+		IMMUNITIES.add( Terror.class );
+		IMMUNITIES.add( Amok.class );
+		IMMUNITIES.add( Charm.class );
+		IMMUNITIES.add( Sleep.class );
+		IMMUNITIES.add( Burning.class );
+		IMMUNITIES.add( ToxicGas.class );
+		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	public void spawnFists() {
@@ -154,26 +160,8 @@ public class Yog extends Mob {
 	@Override
 	public String description() {
 		return TXT_DESC;
-			
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		
-		IMMUNITIES.add( Death.class );
-		IMMUNITIES.add( Terror.class );
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Charm.class );
-		IMMUNITIES.add( Sleep.class );
-		IMMUNITIES.add( Burning.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
 	
 	public static class RottingFist extends Mob {
 	
@@ -188,10 +176,18 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			RESISTANCES.add( ToxicGas.class );
+			RESISTANCES.add( Death.class );
+			RESISTANCES.add( ScrollOfPsionicBlast.class );
+			
+			IMMUNITIES.add( Amok.class );
+			IMMUNITIES.add( Sleep.class );
+			IMMUNITIES.add( Terror.class );
+			IMMUNITIES.add( Poison.class );
 		}
 		
 		public RottingFist() {
-			super();
 			fistsCount++;
 		}
 		
@@ -240,32 +236,6 @@ public class Yog extends Mob {
 		@Override
 		public String description() {
 			return TXT_DESC;
-				
-		}
-		
-		private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-		static {
-			RESISTANCES.add( ToxicGas.class );
-			RESISTANCES.add( Death.class );
-			RESISTANCES.add( ScrollOfPsionicBlast.class );
-		}
-		
-		@Override
-		public HashSet<Class<?>> resistances() {
-			return RESISTANCES;
-		}
-		
-		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-		static {
-			IMMUNITIES.add( Amok.class );
-			IMMUNITIES.add( Sleep.class );
-			IMMUNITIES.add( Terror.class );
-			IMMUNITIES.add( Poison.class );
-		}
-		
-		@Override
-		public HashSet<Class<?>> immunities() {
-			return IMMUNITIES;
 		}
 	}
 	
@@ -280,10 +250,18 @@ public class Yog extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			RESISTANCES.add( ToxicGas.class );
+			RESISTANCES.add( Death.class );
+			RESISTANCES.add( ScrollOfPsionicBlast.class );
+			
+			IMMUNITIES.add( Amok.class );
+			IMMUNITIES.add( Sleep.class );
+			IMMUNITIES.add( Terror.class );
+			IMMUNITIES.add( Burning.class );
 		}
 		
 		public BurningFist() {
-			super();
 			fistsCount++;
 		}
 		
@@ -351,32 +329,6 @@ public class Yog extends Mob {
 		@Override
 		public String description() {
 			return TXT_DESC;
-				
-		}
-		
-		private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-		static {
-			RESISTANCES.add( ToxicGas.class );
-			RESISTANCES.add( Death.class );
-			RESISTANCES.add( ScrollOfPsionicBlast.class );
-		}
-		
-		@Override
-		public HashSet<Class<?>> resistances() {
-			return RESISTANCES;
-		}
-		
-		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-		static {
-			IMMUNITIES.add( Amok.class );
-			IMMUNITIES.add( Sleep.class );
-			IMMUNITIES.add( Terror.class );
-			IMMUNITIES.add( Burning.class );
-		}
-		
-		@Override
-		public HashSet<Class<?>> immunities() {
-			return IMMUNITIES;
 		}
 	}
 	

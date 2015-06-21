@@ -30,8 +30,6 @@ public class IceBlock extends Gizmo {
 	private CharSprite target;
 	
 	public IceBlock( CharSprite target ) {
-		super();
-
 		this.target = target;
 		phase = 0;
 	}

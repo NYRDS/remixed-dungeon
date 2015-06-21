@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -43,7 +44,7 @@ public class Shaman extends Mob implements Callback {
 	
 	private static final String TXT_LIGHTNING_KILLED = Game.getVar(R.string.Shaman_Killed);
 	
-	{
+	public Shaman() {
 		spriteClass = ShamanSprite.class;
 		
 		hp(ht(18));
@@ -54,6 +55,8 @@ public class Shaman extends Mob implements Callback {
 		
 		loot = Generator.Category.SCROLL;
 		lootChance = 0.33f;
+		
+		RESISTANCES.add( LightningTrap.Electricity.class );
 	}
 	
 	@Override
@@ -123,15 +126,5 @@ public class Shaman extends Mob implements Callback {
 	@Override
 	public void call() {
 		next();
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( LightningTrap.Electricity.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
+	}	
 }

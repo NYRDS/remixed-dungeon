@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -27,7 +29,7 @@ import com.watabou.utils.Random;
 
 public class Bat extends Mob {
 
-	{		
+	public Bat() {		
 		spriteClass = BatSprite.class;
 		
 		hp(ht(30));
@@ -41,6 +43,8 @@ public class Bat extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.125f;
+		
+		RESISTANCES.add( Leech.class );
 	}
 	
 	@Override
@@ -69,15 +73,5 @@ public class Bat extends Mob {
 		}
 		
 		return damage;
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( Leech.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
 	}
 }

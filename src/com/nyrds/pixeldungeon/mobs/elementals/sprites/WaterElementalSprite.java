@@ -7,8 +7,6 @@ import com.watabou.pixeldungeon.sprites.MobSprite;
 public class WaterElementalSprite extends MobSprite {
 	
 	public WaterElementalSprite() {
-		super();
-		
 		texture( Assets.WATER_ELEMENTAL );
 		
 		TextureFilm frames = new TextureFilm( texture, 16, 16 );

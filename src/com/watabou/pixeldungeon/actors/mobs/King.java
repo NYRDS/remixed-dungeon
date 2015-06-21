@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -51,7 +52,7 @@ public class King extends Mob {
 	
 	private static final int MAX_ARMY_SIZE	= 5;
 	
-	{
+	public King() {
 		spriteClass = KingSprite.class;
 		
 		hp(ht(300));
@@ -59,6 +60,13 @@ public class King extends Mob {
 		defenseSkill = 25;
 		
 		Undead.count = 0;
+		
+		RESISTANCES.add( ToxicGas.class );
+		RESISTANCES.add( Death.class );
+		RESISTANCES.add( ScrollOfPsionicBlast.class );
+		RESISTANCES.add( WandOfDisintegration.class );
+		
+		IMMUNITIES.add( Paralysis.class );
 	}
 	
 	private boolean nextPedestal = true;
@@ -197,34 +205,11 @@ public class King extends Mob {
 		yell(Game.getVar(R.string.King_Info3));
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-		RESISTANCES.add( WandOfDisintegration.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Paralysis.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
-	
 	public static class Undead extends Mob {
 		
 		public static int count = 0;
 		
-		{
+		public Undead() {
 			spriteClass = UndeadSprite.class;
 			
 			hp(ht(28));
@@ -233,6 +218,9 @@ public class King extends Mob {
 			EXP = 0;
 			
 			state = WANDERING;
+			
+			IMMUNITIES.add( Death.class );
+			IMMUNITIES.add( Paralysis.class );
 		}
 		
 		@Override
@@ -286,17 +274,6 @@ public class King extends Mob {
 		@Override
 		public int dr() {
 			return 5;
-		}
-				
-		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-		static {
-			IMMUNITIES.add( Death.class );
-			IMMUNITIES.add( Paralysis.class );
-		}
-		
-		@Override
-		public HashSet<Class<?>> immunities() {
-			return IMMUNITIES;
 		}
 	}
 }

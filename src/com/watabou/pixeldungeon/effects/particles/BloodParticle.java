@@ -31,8 +31,6 @@ public class BloodParticle extends PixelParticle.Shrinking {
 	};
 	
 	public BloodParticle() {
-		super();
-		
 		color( 0xCC0000 );
 		lifespan = 0.8f;
 		

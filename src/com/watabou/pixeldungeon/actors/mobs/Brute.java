@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -35,7 +36,7 @@ public class Brute extends Mob {
 
 	private static final String TXT_ENRAGED = Game.getVar(R.string.Brute_Enraged);
 	
-	{
+	public Brute() {
 		spriteClass = BruteSprite.class;
 		
 		hp(ht(40));
@@ -46,6 +47,8 @@ public class Brute extends Mob {
 		
 		loot = Gold.class;
 		lootChance = 0.5f;
+		
+		IMMUNITIES.add( Terror.class );
 	}
 	
 	private boolean enraged = false;
@@ -85,15 +88,5 @@ public class Brute extends Mob {
 				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Brute_StaEnraged));
 			}
 		}
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Terror.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

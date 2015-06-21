@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -34,19 +36,21 @@ import com.watabou.utils.Random;
 
 public class Piranha extends Mob {
 	
-	{
+	public Piranha() {
 		spriteClass = PiranhaSprite.class;
+		
+		hp(ht(10 + Dungeon.depth * 5));
+		defenseSkill = 10 + Dungeon.depth * 2;
 
 		baseSpeed = 2f;
 		
 		EXP = 0;
-	}
-	
-	public Piranha() {
-		super();
 		
-		hp(ht(10 + Dungeon.depth * 5));
-		defenseSkill = 10 + Dungeon.depth * 2;
+		IMMUNITIES.add( Burning.class );
+		IMMUNITIES.add( Paralysis.class );
+		IMMUNITIES.add( ToxicGas.class );
+		IMMUNITIES.add( Roots.class );
+		IMMUNITIES.add( Frost.class );
 	}
 	
 	@Override
@@ -113,19 +117,5 @@ public class Piranha extends Mob {
 		} else {
 			return false;
 		}
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Burning.class );
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Roots.class );
-		IMMUNITIES.add( Frost.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

@@ -31,9 +31,6 @@ public class BlobEmitter extends Emitter {
 	private Blob blob;
 	
 	public BlobEmitter( Blob blob ) {
-		
-		super();
-		
 		this.blob = blob;
 		blob.use( this );
 	}

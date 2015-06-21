@@ -37,9 +37,6 @@ public class FloatingText extends BitmapText {
 	private static SparseArray<ArrayList<FloatingText>> stacks = new SparseArray<ArrayList<FloatingText>>();
 	
 	public FloatingText() {
-		
-		super();
-
 		PixelScene.chooseFont( 9 );
 		font = PixelScene.font();
 		scale.set( PixelScene.scale );

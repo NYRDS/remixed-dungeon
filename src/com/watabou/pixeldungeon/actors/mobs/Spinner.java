@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Web;
@@ -32,7 +34,7 @@ import com.watabou.utils.Random;
 
 public class Spinner extends Mob {
 	
-	{
+	public Spinner() {
 		spriteClass = SpinnerSprite.class;
 		
 		hp(ht(50));
@@ -45,6 +47,9 @@ public class Spinner extends Mob {
 		lootChance = 0.125f;
 		
 		FLEEING = new Fleeing();
+		
+		RESISTANCES.add( Poison.class );
+		IMMUNITIES.add( Roots.class );
 	}
 	
 	@Override
@@ -90,26 +95,6 @@ public class Spinner extends Mob {
 			GameScene.add( Blob.seed( pos, Random.Int( 5, 7 ), Web.class ) );
 		}
 		super.move( step );
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( Poison.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Roots.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 	
 	private class Fleeing extends Mob.Fleeing {

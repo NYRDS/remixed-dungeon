@@ -133,7 +133,6 @@ public class Potion extends Item {
 	}
 	
 	public Potion() {
-		super();
 		image = handler.image( this );
 		color = handler.label( this );
 	}

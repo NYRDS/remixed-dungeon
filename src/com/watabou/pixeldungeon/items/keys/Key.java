@@ -25,15 +25,11 @@ public class Key extends Item {
 
 	public static final float TIME_TO_UNLOCK = 1f;
 	
-	{
-		stackable = false;
-	}
-	
 	public int depth;
 	
 	public Key() {
-		super();
 		depth = Dungeon.depth;
+		stackable = false;
 	}
 	
 	private static final String DEPTH = "depth";

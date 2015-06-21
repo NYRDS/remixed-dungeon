@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.nyrds.pixeldungeon.mobs.elementals.sprites.EarthElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
@@ -32,7 +33,11 @@ public class EarthElemental extends Mob {
 		defenseSkill = depth * 2;
 		EXP = depth;
 		maxLvl = depth + 2;
-
+		
+		IMMUNITIES.add(Roots.class);
+		IMMUNITIES.add(Paralysis.class);
+		IMMUNITIES.add(ToxicGas.class);
+		IMMUNITIES.add(Fire.class);
 	}
 
 	@Override
@@ -71,18 +76,5 @@ public class EarthElemental extends Mob {
 	public boolean act() {
 
 		return super.act();
-	}
-
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add(Roots.class);
-		IMMUNITIES.add(Paralysis.class);
-		IMMUNITIES.add(ToxicGas.class);
-		IMMUNITIES.add(Fire.class);
-	}
-
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

@@ -34,8 +34,6 @@ public class EmoIcon extends Image {
 	protected CharSprite owner;
 	
 	public EmoIcon( CharSprite owner ) {
-		super();
-		
 		this.owner = owner;
 		GameScene.add( this );
 	}

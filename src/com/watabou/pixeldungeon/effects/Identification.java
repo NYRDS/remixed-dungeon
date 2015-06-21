@@ -65,8 +65,6 @@ public class Identification extends Group {
 	public static class Speck extends PixelParticle {
 		
 		public Speck( float x0, float y0, int mx, int my ) {
-			
-			super();
 			color( 0x4488CC );
 			
 			float x1 = x0 + mx * 3;

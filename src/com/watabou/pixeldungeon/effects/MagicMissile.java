@@ -179,8 +179,6 @@ public class MagicMissile extends Emitter {
 		};
 		
 		public MagicParticle() {
-			super();
-			
 			color( 0x88CCFF );
 			lifespan = 0.5f;
 			
@@ -214,8 +212,6 @@ public class MagicMissile extends Emitter {
 		};
 		
 		public EarthParticle() {
-			super();
-			
 			lifespan = 0.5f;
 			
 			color( ColorMath.random( 0x555555, 0x777766 ) );
@@ -250,8 +246,6 @@ public class MagicMissile extends Emitter {
 		};
 		
 		public WhiteParticle() {
-			super();
-			
 			lifespan = 0.4f;
 			
 			am = 0.5f;
@@ -290,8 +284,6 @@ public class MagicMissile extends Emitter {
 		};
 		
 		public SlowParticle() {
-			super();
-			
 			lifespan = 0.6f;
 			
 			color( 0x664422 );
@@ -330,8 +322,6 @@ public class MagicMissile extends Emitter {
 		};
 		
 		public ForceParticle() {
-			super();
-			
 			lifespan = 0.6f;
 
 			size( 4 );
@@ -372,8 +362,6 @@ public class MagicMissile extends Emitter {
 		};
 		
 		public ColdParticle() {
-			super();
-			
 			lifespan = 0.6f;
 			
 			color( 0x2244FF );

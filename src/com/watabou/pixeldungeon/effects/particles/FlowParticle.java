@@ -37,8 +37,6 @@ public class FlowParticle extends PixelParticle {
 	};
 	
 	public FlowParticle() {
-		super();
-		
 		lifespan = 0.6f;
 		acc.set( 0, 32 );
 		angularSpeed = Random.Float( -360, +360 );
@@ -78,8 +76,6 @@ public class FlowParticle extends PixelParticle {
 		private float delay;
 		
 		public Flow( int pos ) {
-			super();
-			
 			this.pos = pos;
 			
 			PointF p = DungeonTilemap.tileToWorld( pos );

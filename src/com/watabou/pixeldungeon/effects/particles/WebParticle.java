@@ -34,8 +34,6 @@ public class WebParticle extends PixelParticle {
 	};
 	
 	public WebParticle() {
-		super();
-		
 		color( 0xCCCCCC );
 		lifespan = 2f;
 	}

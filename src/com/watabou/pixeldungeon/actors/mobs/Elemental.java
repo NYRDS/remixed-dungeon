@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -45,6 +47,11 @@ public class Elemental extends Mob {
 		
 		loot = new PotionOfLiquidFlame();
 		lootChance = 0.1f;
+		
+		IMMUNITIES.add( Burning.class );
+		IMMUNITIES.add( Fire.class );
+		IMMUNITIES.add( WandOfFirebolt.class );
+		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	@Override
@@ -84,18 +91,5 @@ public class Elemental extends Mob {
 			}
 			super.add( buff );
 		}
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Burning.class );
-		IMMUNITIES.add( Fire.class );
-		IMMUNITIES.add( WandOfFirebolt.class );
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
+	}	
 }

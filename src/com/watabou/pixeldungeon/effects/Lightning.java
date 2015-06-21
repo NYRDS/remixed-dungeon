@@ -45,9 +45,6 @@ public class Lightning extends Group {
 	private Callback callback;
 	
 	public Lightning( int[] cells, int length, Callback callback ) {
-		
-		super();
-		
 		this.callback = callback;
 		
 		Image proto = Effects.get( Effects.Type.LIGHTNING );

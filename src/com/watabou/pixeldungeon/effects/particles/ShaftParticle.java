@@ -36,8 +36,6 @@ public class ShaftParticle extends PixelParticle {
 	};
 	
 	public ShaftParticle() {
-		super();
-		
 		lifespan = 1.2f;
 		speed.set( 0, -6 );
 	}

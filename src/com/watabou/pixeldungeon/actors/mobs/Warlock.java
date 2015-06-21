@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -43,7 +44,7 @@ public class Warlock extends Mob implements Callback {
 	
 	private static final String TXT_SHADOWBOLT_KILLED = Game.getVar(R.string.Warlock_Killed);
 	
-	{
+	public Warlock() {
 		spriteClass = WarlockSprite.class;
 		
 		hp(ht(70));
@@ -54,6 +55,8 @@ public class Warlock extends Mob implements Callback {
 		
 		loot = Generator.Category.POTION;
 		lootChance = 0.83f;
+		
+		RESISTANCES.add( Death.class );
 	}
 	
 	@Override
@@ -124,15 +127,5 @@ public class Warlock extends Mob implements Callback {
 	@Override
 	public void call() {
 		next();
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( Death.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
 	}
 }

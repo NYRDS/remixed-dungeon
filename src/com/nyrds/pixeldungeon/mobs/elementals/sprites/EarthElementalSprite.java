@@ -7,8 +7,6 @@ import com.watabou.pixeldungeon.sprites.MobSprite;
 public class EarthElementalSprite extends MobSprite {
 	
 	public EarthElementalSprite() {
-		super();
-		
 		texture( Assets.EARTH_ELEMENTAL );
 		
 		TextureFilm frames = new TextureFilm( texture, 16, 16 );

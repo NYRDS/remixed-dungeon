@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -45,7 +46,8 @@ import com.watabou.utils.Random;
 public class Goo extends Mob {
 
 	private static final float PUMP_UP_DELAY	= 2f;
-	{
+	
+	public Goo() {
 		hp(ht(80));
 		EXP = 10;
 		defenseSkill = 12;
@@ -53,6 +55,10 @@ public class Goo extends Mob {
 		
 		loot = new LloydsBeacon();
 		lootChance = 0.333f;
+		
+		RESISTANCES.add( ToxicGas.class );
+		RESISTANCES.add( Death.class );
+		RESISTANCES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	private static final String GOO_PUMPED_STATE = "goo_pumped_state";
@@ -182,17 +188,5 @@ public class Goo extends Mob {
 	public void notice() {
 		super.notice();
 		yell(Game.getVar(R.string.Goo_Info3));
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
 	}
 }

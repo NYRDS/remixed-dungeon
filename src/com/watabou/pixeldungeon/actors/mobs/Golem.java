@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
@@ -29,7 +31,7 @@ import com.watabou.utils.Random;
 
 public class Golem extends Mob {
 	
-	{
+	public Golem() {
 		spriteClass = GolemSprite.class;
 		
 		hp(ht(85));
@@ -37,6 +39,12 @@ public class Golem extends Mob {
 		
 		EXP = 12;
 		maxLvl = 22;
+		
+		RESISTANCES.add( ScrollOfPsionicBlast.class );
+		
+		IMMUNITIES.add( Amok.class );
+		IMMUNITIES.add( Terror.class );
+		IMMUNITIES.add( Sleep.class );
 	}
 	
 	@Override
@@ -64,27 +72,5 @@ public class Golem extends Mob {
 		Imp.Quest.process( this );
 		
 		super.die( cause );
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Terror.class );
-		IMMUNITIES.add( Sleep.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

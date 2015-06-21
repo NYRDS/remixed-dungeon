@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -153,7 +154,7 @@ public class MirrorImage extends NPC {
 	}
 	
 	@Override
-	public HashSet<Class<?>> immunities() {
+	public Set<Class<?>> immunities() {
 		return IMMUNITIES;
 	}
 }

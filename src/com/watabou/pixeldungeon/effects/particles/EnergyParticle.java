@@ -37,8 +37,6 @@ public class EnergyParticle extends PixelParticle {
 	};
 	
 	public EnergyParticle() {
-		super();
-		
 		lifespan = 1f;
 		color( 0xFFFFAA );
 		

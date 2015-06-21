@@ -111,8 +111,6 @@ public abstract class Wand extends KindOfWeapon {
 	}
 
 	public Wand() {
-		super();
-
 		calculateDamage();
 
 		try {

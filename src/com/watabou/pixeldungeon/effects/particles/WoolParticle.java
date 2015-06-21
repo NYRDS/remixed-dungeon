@@ -33,8 +33,6 @@ public class WoolParticle extends PixelParticle.Shrinking {
 	};
 	
 	public WoolParticle() {
-		super();
-		
 		color( ColorMath.random( 0x999999, 0xEEEEE0 ) );
 		
 		acc.set( 0, -40 );

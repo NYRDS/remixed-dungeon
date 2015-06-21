@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -42,8 +44,10 @@ public class Mimic extends Mob {
 	
 	private int level;
 	
-	{
+	public Mimic() {
 		spriteClass = MimicSprite.class;
+		
+		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	public ArrayList<Item> items;
@@ -158,15 +162,5 @@ public class Mimic extends Mob {
 		}
 		
 		return m;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

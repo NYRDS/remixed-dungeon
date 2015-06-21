@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.nyrds.pixeldungeon.mobs.elementals.sprites.WaterElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
@@ -32,6 +33,9 @@ public class WaterElemental extends Mob {
 		defenseSkill = depth * 2;
 		EXP = depth;
 		maxLvl = depth + 2;
+		
+		IMMUNITIES.add( Frost.class );
+		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	@Override
@@ -81,16 +85,5 @@ public class WaterElemental extends Mob {
 			}
 			super.add( buff );
 		}
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Frost.class );
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -25,6 +26,9 @@ public class MimicPie extends Mob {
 		flying = true;
 		
 		level = Dungeon.depth;
+		
+		IMMUNITIES.add( ToxicGas.class );
+		IMMUNITIES.add( Paralysis.class );
 	}
 	
 	private static final String LEVEL	= "level";
@@ -67,16 +71,5 @@ public class MimicPie extends Mob {
 		enemySeen = true;
 		
 		Buff.affect( this, Levitation.class, 1000000 );
-	}
-		
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Paralysis.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

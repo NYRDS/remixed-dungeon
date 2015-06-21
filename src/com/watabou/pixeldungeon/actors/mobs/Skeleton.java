@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -39,7 +40,7 @@ public class Skeleton extends Mob {
 
 	private static final String TXT_HERO_KILLED = Game.getVar(R.string.Skeleton_Killed);
 	
-	{
+	public Skeleton() {
 		spriteClass = SkeletonSprite.class;
 		
 		hp(ht(25));
@@ -47,6 +48,8 @@ public class Skeleton extends Mob {
 		
 		EXP = 5;
 		maxLvl = 10;
+		
+		IMMUNITIES.add( Death.class );
 	}
 	
 	@Override
@@ -103,15 +106,5 @@ public class Skeleton extends Mob {
 	@Override
 	public int dr() {
 		return 5;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Death.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

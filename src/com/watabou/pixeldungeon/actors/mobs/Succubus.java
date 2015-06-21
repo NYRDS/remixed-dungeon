@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -41,7 +43,7 @@ public class Succubus extends Mob {
 	
 	private int delay = 0;
 	
-	{
+	public Succubus() {
 		spriteClass = SuccubusSprite.class;
 		
 		hp(ht(80));
@@ -53,6 +55,9 @@ public class Succubus extends Mob {
 		
 		loot = new ScrollOfLullaby();
 		lootChance = 0.05f;
+		
+		RESISTANCES.add( Leech.class );
+		IMMUNITIES.add( Sleep.class );
 	}
 	
 	@Override
@@ -109,25 +114,5 @@ public class Succubus extends Mob {
 	@Override
 	public int dr() {
 		return 10;
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( Leech.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Sleep.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

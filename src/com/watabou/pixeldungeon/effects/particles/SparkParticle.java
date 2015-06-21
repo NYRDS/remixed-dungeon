@@ -36,8 +36,6 @@ public class SparkParticle extends PixelParticle {
 	};
 	
 	public SparkParticle() {
-		super();
-		
 		size( 2 );
 		
 		acc.set( 0, +50 );

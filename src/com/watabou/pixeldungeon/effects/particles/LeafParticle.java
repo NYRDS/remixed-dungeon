@@ -49,8 +49,6 @@ public class LeafParticle extends PixelParticle.Shrinking {
 	};
 	
 	public LeafParticle() {
-		super();
-		
 		lifespan = 1.2f;
 		acc.set( 0, 25 );
 	}

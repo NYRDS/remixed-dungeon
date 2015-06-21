@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
+
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -37,13 +39,16 @@ public class Wraith extends Mob {
 	
 	private int level;
 	
-	{
+	public Wraith() {
 		spriteClass = WraithSprite.class;
 		
 		hp(ht(1));
 		EXP = 0;
 		
 		flying = true;
+		
+		IMMUNITIES.add( Death.class );
+		IMMUNITIES.add( Terror.class );
 	}
 	
 	private static final String LEVEL = "level";
@@ -110,16 +115,5 @@ public class Wraith extends Mob {
 		} else {
 			return null;
 		}
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Death.class );
-		IMMUNITIES.add( Terror.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
+	}	
 }

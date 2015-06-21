@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -38,7 +39,7 @@ public class Monk extends Mob {
 
 	public static final String TXT_DISARM = Game.getVar(R.string.Monk_Disarm);
 	
-	{
+	public Monk() {
 		spriteClass = MonkSprite.class;
 		
 		hp(ht(70));
@@ -49,6 +50,9 @@ public class Monk extends Mob {
 		
 		loot = new Ration();
 		lootChance = 0.083f;
+		
+		IMMUNITIES.add( Amok.class );
+		IMMUNITIES.add( Terror.class );
 	}
 	
 	@Override
@@ -94,17 +98,5 @@ public class Monk extends Mob {
 		}
 		
 		return damage;
-	}
-	
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Terror.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

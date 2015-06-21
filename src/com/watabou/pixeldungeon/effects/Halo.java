@@ -34,8 +34,6 @@ public class Halo extends Image {
 	protected float brightness = 1;
 
 	public Halo() {
-		super();
-		
 		if (!TextureCache.contains( CACHE_KEY )) {
 			Bitmap bmp = Bitmap.createBitmap( RADIUS * 2, RADIUS * 2, Bitmap.Config.ARGB_8888 );
 			Canvas canvas = new Canvas( bmp );

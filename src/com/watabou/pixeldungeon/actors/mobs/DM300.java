@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -48,7 +49,7 @@ import com.watabou.utils.Random;
 
 public class DM300 extends Mob {
 	
-	{
+	public DM300() {
 		spriteClass = DM300Sprite.class;
 		
 		hp(ht(200));
@@ -57,6 +58,11 @@ public class DM300 extends Mob {
 		
 		loot = new RingOfThorns().random();
 		lootChance = 0.333f;
+		
+		RESISTANCES.add( Death.class );
+		RESISTANCES.add( ScrollOfPsionicBlast.class );
+		
+		IMMUNITIES.add( ToxicGas.class );
 	}
 	
 	@Override
@@ -141,26 +147,5 @@ public class DM300 extends Mob {
 	public void notice() {
 		super.notice();
 		yell(Game.getVar(R.string.DM300_Info3));
-	}
-	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	static {
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> resistances() {
-		return RESISTANCES;
-	}
-	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	static {
-		IMMUNITIES.add( ToxicGas.class );
-	}
-	
-	@Override
-	public HashSet<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

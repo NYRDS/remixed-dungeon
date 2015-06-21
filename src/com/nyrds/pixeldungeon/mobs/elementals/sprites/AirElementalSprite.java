@@ -8,8 +8,6 @@ import com.watabou.pixeldungeon.sprites.MobSprite;
 public class AirElementalSprite extends MobSprite {
 	
 	public AirElementalSprite() {
-		super();
-		
 		texture( Assets.AIR_ELEMENTAL );
 		
 		TextureFilm frames = new TextureFilm( texture, 12, 14 );

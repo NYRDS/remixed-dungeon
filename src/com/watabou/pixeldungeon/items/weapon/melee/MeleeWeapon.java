@@ -30,8 +30,6 @@ public class MeleeWeapon extends Weapon {
 	private int tier;
 	
 	public MeleeWeapon( int tier, float acu, float dly ) {
-		super();
-		
 		this.tier = tier;
 		
 		ACU = acu;

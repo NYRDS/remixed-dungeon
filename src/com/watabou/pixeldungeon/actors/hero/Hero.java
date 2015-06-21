@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Set;
 
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -171,8 +171,6 @@ public class Hero extends Char {
 	private ArrayList<Mob> visibleEnemies;
 
 	public Hero() {
-		super();
-
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 
@@ -1509,13 +1507,13 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public HashSet<Class<?>> resistances() {
+	public Set<Class<?>> resistances() {
 		RingOfElements.Resistance r = buff(RingOfElements.Resistance.class);
 		return r == null ? super.resistances() : r.resistances();
 	}
 
 	@Override
-	public HashSet<Class<?>> immunities() {
+	public Set<Class<?>> immunities() {
 		GasesImmunity buff = buff(GasesImmunity.class);
 		return buff == null ? super.immunities() : GasesImmunity.IMMUNITIES;
 	}

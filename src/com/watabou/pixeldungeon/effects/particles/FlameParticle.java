@@ -35,8 +35,6 @@ public class FlameParticle extends PixelParticle.Shrinking {
 	};
 	
 	public FlameParticle() {
-		super();
-		
 		color( 0xEE7722 );
 		lifespan = 0.6f;
 		
