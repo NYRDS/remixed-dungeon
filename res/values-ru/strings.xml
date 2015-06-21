@@ -395,7 +395,7 @@
     <string name="Pickaxe_Name">кирка</string>
     <string name="Pickaxe_Info">Это крупное, крепкое орудие используется для раскалывания камней. Как простое оружие оно тоже может сгодится.</string>
     <string name="Pickaxe_ACMine">ДОБЫВАТЬ</string>
-    <string name="PickAxe_Gender">feminine</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_NoVein">Ты не видишь ни одного месторождения мракозлата в зоне досягаемости</string>
 
     <!-- STRINGS OF RatSkull CLASS -->

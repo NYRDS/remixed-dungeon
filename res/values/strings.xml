@@ -390,7 +390,7 @@
     <string name="Pickaxe_Name">pickaxe</string>
     <string name="Pickaxe_Info">This is a large and sturdy tool for breaking rocks. It can be probably used as a weapon.</string>
     <string name="Pickaxe_ACMine">MINE</string>
-    <string name="PickAxe_Gender">feminine</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_NoVein">There is no dark gold vein near you to mine</string>
 
     <!-- STRINGS OF RatSkull CLASS -->
