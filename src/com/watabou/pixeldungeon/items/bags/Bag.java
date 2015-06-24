@@ -137,6 +137,11 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 
 	@Override
+	public String desc() {
+		return String.format(super.desc(),size);
+	}
+	
+	@Override
 	public Iterator<Item> iterator() {
 		return new ItemIterator();
 	}
