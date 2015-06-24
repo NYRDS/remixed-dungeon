@@ -279,7 +279,7 @@
     <!-- STRINGS OF EarthElemental CLASS -->
     <string name="EarthElemental_Name">земляной элементаль</string>
     <string name="EarthElemental_Gender">masculine</string>
-    <string name="EarthElemental_Name_Objective">земленного элементаля</string>
+    <string name="EarthElemental_Name_Objective">земляного элементаля</string>
     <string name="EarthElemental_Desc">Земляные элементали это массы земли движимые силами природы.</string>
 
     
