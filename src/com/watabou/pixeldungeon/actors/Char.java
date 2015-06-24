@@ -532,8 +532,8 @@ public abstract class Char extends Actor {
 		next();
 	}
 	
-	protected static final Set<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	protected static final Set<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	protected Set<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	protected Set<Class<?>> RESISTANCES = new HashSet<Class<?>>();
 	
 	public Set<Class<?>> resistances() {
 		return RESISTANCES;
