@@ -62,6 +62,7 @@
   <string name="RatKing_Desc">Esta rata es un poco mas grande que una rata normal, y lleva una pequeña corona en la cabeza.</string>
   <string name="RatKing_Info1">¡No estoy durmiendo!</string>
   <string name="RatKing_Info2">¿Qué pasa? No tengo tiempo para este sinsentido. ¡Mi reino no va a gobernarse solo!</string>
+  <string name="RatKing_Info3">¿Cómo te atreves, insignificante criatura, a molestar a Nuestra Majestad?</string>
   <string name="RatKing_Died">El rey está muerto. ¡Larga vida al rey!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <string name="Shopkeeper_Name">tendero</string>

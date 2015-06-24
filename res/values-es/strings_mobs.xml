@@ -242,4 +242,14 @@
   <string name="WaterElemental_Gender">masculino</string>
   <string name="WaterElemental_Name_Objective">elemental de agua</string>
   <string name="WaterElemental_Desc">Los elementales de agua pueden encontrarse cerca de grandes masa de agua. Normalmente, estos seres mágicos simplemente están dando un paseo.</string>
+  <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">elemental de aire</string>
+  <string name="AirElemental_Gender">masculino</string>
+  <string name="AirElemental_Name_Objective">elemental de aire</string>
+  <string name="AirElemental_Desc">Los elementales de aire son seres mágicos voladores hechos de aire. </string>
+  <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">elemental de tierra</string>
+  <string name="EarthElemental_Gender">masculino</string>
+  <string name="EarthElemental_Name_Objective">elemental de tierra</string>
+  <string name="EarthElemental_Desc">Los elementales de tierra son masas de tierra movidas por las fuerzas de la naturaleza.</string>
 </resources>
