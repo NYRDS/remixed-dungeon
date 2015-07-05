@@ -21,6 +21,8 @@ public class AirElemental extends Mob {
 
 		adjustLevel(Dungeon.depth);
 
+		flying = true;
+		
 		loot = new PotionOfLevitation();
 		lootChance = 0.1f;
 	}
@@ -30,7 +32,6 @@ public class AirElemental extends Mob {
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
 		maxLvl = depth + 2;
-
 	}
 
 	@Override
