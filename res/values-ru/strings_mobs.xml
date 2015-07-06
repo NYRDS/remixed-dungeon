@@ -232,25 +232,25 @@
     <string name="SpiderEgg_Name">паучье яйцо</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">яйцо</string>
-    <string name="SpiderEgg_Desc">это яйцо с мягкой оболочкой медленно пульсирует, внутри просмотривается что-то многоногое</string>
+    <string name="SpiderEgg_Desc">это яйцо с мягкой оболочкой медленно пульсирует, внутри просматривается что-то многоногое</string>
     
     <!-- STRINGS OF SpiderNest CLASS -->
     <string name="SpiderNest_Name">паучий кокон</string>
     <string name="SpiderNest_Gender">male</string>
     <string name="SpiderNest_Name_Objective">кокон</string>
-    <string name="SpiderNest_Desc">кокон из тончайшего шелка скрывает в себе нечто живое</string>
+    <string name="SpiderNest_Desc">кокон из тончайшего шёлка скрывает в себе нечто живое</string>
     
     <!-- STRINGS OF SpiderServant CLASS -->
     <string name="SpiderServant_Name">паук солдат</string>
     <string name="SpiderServant_Gender">male</string>
     <string name="SpiderServant_Name_Objective">паука солдата</string>
-    <string name="SpiderServant_Desc">самая многочисленная боевая единица паучьего логова. Защищает территорию от внезапных посягательств. Его хелицеры снабжены ядовитыми железами по этому внезапный укус чреват отравлением.</string>
+    <string name="SpiderServant_Desc">самая многочисленная боевая единица паучьего логова. Защищает территорию от внезапных посягательств. Его хелицеры снабжены ядовитыми железами по этому внезапный укус чревата отравлением.</string>
     
     <!-- STRINGS OF SpiderExploding CLASS -->
     <string name="SpiderExploding_Name">паук рабочий</string>
     <string name="SpiderExploding_Gender">male</string>
     <string name="SpiderExploding_Name_Objective">паука рабочего</string>
-    <string name="SpiderExploding_Desc">в спокойное время для колонии эти трудяги безобидны, но при появлении опасности молниеносно бросаются на неприятеля посадив на себе первое попавшееся растение, тем самым выполняя роль смертник</string>
+    <string name="SpiderExploding_Desc">в спокойное время для колонии эти трудяги безобидны, но при появлении опасности молниеносно бросаются на неприятеля посадив на себе первое попавшееся растение, тем самым выполняя роль смертника</string>
     
     <!-- STRINGS OF SpiderMind CLASS -->
     <string name="SpiderMind_Name">пси паук</string>

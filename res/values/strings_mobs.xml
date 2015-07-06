@@ -230,40 +230,40 @@
     <string name="Larva_Desc">Old God Larva</string>
     
     <!-- STRINGS OF SpiderEgg CLASS -->
-    <string name="SpiderEgg_Name">SpiderEgg</string>
+    <string name="SpiderEgg_Name">spider egg</string>
     <string name="SpiderEgg_Gender">neuter</string>
-    <string name="SpiderEgg_Name_Objective">SpiderEgg</string>
-    <string name="SpiderEgg_Desc">SpiderEgg</string>
+    <string name="SpiderEgg_Name_Objective">spider egg</string>
+    <string name="SpiderEgg_Desc">This fragile egg is pulsating briefly, inside it you can see something of many legs.</string>
     
     <!-- STRINGS OF SpiderNest CLASS -->
-    <string name="SpiderNest_Name">SpiderNest</string>
+    <string name="SpiderNest_Name">spider cocoon</string>
     <string name="SpiderNest_Gender">neuter</string>
-    <string name="SpiderNest_Name_Objective">SpiderNest</string>
-    <string name="SpiderNest_Desc">SpiderNest</string>
+    <string name="SpiderNest_Name_Objective">spider cocoon</string>
+    <string name="SpiderNest_Desc">This cocoon is made of thinnest silk and it conceals something alive.</string>
     
     <!-- STRINGS OF SpiderServant CLASS -->
-    <string name="SpiderServant_Name">SpiderServant</string>
+    <string name="SpiderServant_Name">spider soldier</string>
     <string name="SpiderServant_Gender">male</string>
-    <string name="SpiderServant_Name_Objective">SpiderServant</string>
-    <string name="SpiderServant_Desc">SpiderServant</string>
+    <string name="SpiderServant_Name_Objective">spider soldier</string>
+    <string name="SpiderServant_Desc">Soldiers happens to be the most numerous units of spider lair. Born to protect it's territory. Soldiers's chelicera developed venomous glands to poison his enemies.</string>
     
     <!-- STRINGS OF SpiderExploding CLASS -->
-    <string name="SpiderExploding_Name">SpiderExploding</string>
+    <string name="SpiderExploding_Name">spider worker</string>
     <string name="SpiderExploding_Gender">male</string>
-    <string name="SpiderExploding_Name_Objective">SpiderExploding</string>
-    <string name="SpiderExploding_Desc">SpiderExploding</string>
+    <string name="SpiderExploding_Name_Objective">spider worker</string>
+    <string name="SpiderExploding_Desc">Hard workers during peaceful times, these creatures won't hesitate to charge to their enemies and grab first plant they run across, turning themselves into living bombs.</string>
     
     <!-- STRINGS OF SpiderMind CLASS -->
-    <string name="SpiderMind_Name">SpiderMind</string>
+    <string name="SpiderMind_Name">Psi-Spider</string>
     <string name="SpiderMind_Gender">male</string>
-    <string name="SpiderMind_Name_Objective">SpiderMind</string>
-    <string name="SpiderMind_Desc">SpiderMind</string>
+    <string name="SpiderMind_Name_Objective">Psi-Spider</string>
+    <string name="SpiderMind_Desc">These seemingly fragile spiders possess unique mental powers, which allows them to control whole colony. Psi-Spider able to control any living creature, but he is quite a coward.</string>
     
     <!-- STRINGS OF SpiderQueen CLASS -->
-    <string name="SpiderQueen_Name">SpiderQueen</string>
+    <string name="SpiderQueen_Name">spider queen</string>
     <string name="SpiderQueen_Gender">feminine</string>
-    <string name="SpiderQueen_Name_Objective">SpiderQueen</string>
-    <string name="SpiderQueen_Desc">SpiderQueen</string>
+    <string name="SpiderQueen_Name_Objective">spider queen</string>
+    <string name="SpiderQueen_Desc">A body of beautiful woman crossed with hideous spider. Every living being in this lair is her servant. Meeting this extraordinary lady may turn out to be a deadly experience. Because you are trespasser!</string>
     
     <!-- STRINGS OF WaterElemental CLASS -->
     <string name="WaterElemental_Name">water elemental</string>
