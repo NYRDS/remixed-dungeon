@@ -60,10 +60,10 @@
     <string name="Badges_StrengthAttained2">15 очков Силы достигнуто</string>
     <string name="Badges_StrengthAttained3">17 очков Силы достигнуто</string>
     <string name="Badges_StrengthAttained4">19 очков Силы достигнуто</string>
-    <string name="Badges_FoodEaten1">10 кусков пищи съедено</string>
-    <string name="Badges_FoodEaten2">20 кусков пищи съедено</string>
-    <string name="Badges_FoodEaten3">30 кусков пищи съедено</string>
-    <string name="Badges_FoodEaten4">40 кусков пищи съедено</string>
+    <string name="Badges_FoodEaten1">10 порций пищи съедено</string>
+    <string name="Badges_FoodEaten2">20 порций пищи съедено</string>
+    <string name="Badges_FoodEaten3">30 порций пищи съедено</string>
+    <string name="Badges_FoodEaten4">40 порций пищи съедено</string>
     <!-- <string name="Badges_MasteryWar"></string> -->
     <!-- <string name="Badges_MasteryMag"></string> -->
     <!-- <string name="Badges_MasteryRog"></string> -->

@@ -73,8 +73,8 @@
     <string name="RingOfShadows_Info">Враги имеют меньший шанс заметить носителя этого кольца. Ослабленное кольцо наоборот привлечёт внимание врагов, которые в простой ситуации могли тебя и не заметить.</string>
 
     <!-- STRINGS OF RingOfThorns CLASS -->
-    <string name="RingOfThorns_Name">Кольцо Колючек</string>
-    <string name="RingOfThorns_Info">Хоть само кольцо и не обладает колючками, всякий атакующий враг ощутит на своей шкуре часть нанесённого тебе урона. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
+    <string name="RingOfThorns_Name">Кольцо Шипов</string>
+    <string name="RingOfThorns_Info">Хоть само кольцо и не утыкано шипами, всякий атакующий враг ощутит на своей шкуре часть нанесённого тебе урона. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
     
     <!-- STRINGS OF RingOfStoneWalking CLASS -->
     <string name="RingOfStoneWalking_Name">Кольцо Каменной Крови</string>
