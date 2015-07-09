@@ -44,7 +44,7 @@ public class SpiderLevel extends Level {
 			int cx = Random.Int(1, Level.getWidth() - 1);
 			int cy = Random.Int(1, Level.getWidth() - 1);
 
-			chambers.add(new Chamber(cx, cy, 3, Random.IntRange(0, 3)));
+			chambers.add(new Chamber(cx, cy, 3, Random.IntRange(0, 4)));
 		}
 
 		digChamber(chambers.get(0));
@@ -67,16 +67,20 @@ public class SpiderLevel extends Level {
 					case 0:
 						empty = Math.abs(i - j) < k;
 						break;
-
+						
 					case 1:
+						empty = Math.abs(j - i) < k;
+						break;
+						
+					case 2:
 						empty = Math.abs(i + j) < k;
 						break;
 
-					case 2:
+					case 3:
 						empty = Math.abs(i) + Math.abs(j) < k;
 						break;
 
-					case 3:
+					case 4:
 						empty = Math.abs(i * j) < k;
 						break;
 					}
@@ -84,8 +88,13 @@ public class SpiderLevel extends Level {
 					if (empty) {
 						map[cell(chamber.x + i, chamber.y + j)] = Terrain.EMPTY;
 						
-						if(Random.Int(2)==0){
+						switch(Random.Int(3)){
+						case 0:
 							map[cell(chamber.x + i, chamber.y + j)] = Terrain.WATER;
+						break;
+						case 1:
+							map[cell(chamber.x + i, chamber.y + j)] = Terrain.HIGH_GRASS;
+						break;
 						}
 					}
 				}

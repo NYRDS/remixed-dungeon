@@ -15,7 +15,6 @@ public class AirElemental extends Mob {
 	private static final int maxDistance = 3;
 
 	public AirElemental() {
-		// spriteClass = AirElementalSprite.class;
 
 		spriteClass = "air_elemental_sprite.json";
 
