@@ -56,7 +56,6 @@ public class RatKing extends NPC {
 		return 5;
 	}
 	
-	
 	private boolean friendly(){
 		return anger < 2;
 	}
@@ -77,14 +76,17 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void damage( int dmg, Object src ) {
-		if(friendly()){anger++;} else {
+		if(friendly()){
+			anger++;
+		} else {
 			super.damage(dmg, src);
 		}
 	}
 	
 	@Override
 	public void add( Buff buff ) {
-		if(friendly()){} else {
+		if(friendly()){
+		} else {
 			super.add(buff);
 		}
 	}
@@ -130,7 +132,6 @@ public class RatKing extends NPC {
 		super.storeInBundle(bundle);
 		
 		bundle.put(ANGER, anger);
-
 	}
 
 	@Override
@@ -139,7 +140,5 @@ public class RatKing extends NPC {
 		super.restoreFromBundle(bundle);
 		
 		anger = bundle.getInt(ANGER);
-	}
-
-	
+	}	
 }

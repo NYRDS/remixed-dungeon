@@ -39,7 +39,7 @@ public class SpiderLevel extends Level {
 
 		chambers.add(new Chamber(1, 1, 5, 3));
 
-		for (int i = 0; i < 5; ++i) {
+		for (int i = 0; i < 6; ++i) {
 
 			int cx = Random.Int(1, Level.getWidth() - 1);
 			int cy = Random.Int(1, Level.getWidth() - 1);
@@ -83,6 +83,10 @@ public class SpiderLevel extends Level {
 
 					if (empty) {
 						map[cell(chamber.x + i, chamber.y + j)] = Terrain.EMPTY;
+						
+						if(Random.Int(2)==0){
+							map[cell(chamber.x + i, chamber.y + j)] = Terrain.WATER;
+						}
 					}
 				}
 			}

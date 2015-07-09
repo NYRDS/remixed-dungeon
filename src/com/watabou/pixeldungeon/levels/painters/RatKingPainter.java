@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
@@ -60,6 +61,10 @@ public class RatKingPainter extends Painter {
 		RatKing king = new RatKing();
 		king.pos = room.random( 1 );
 		level.mobs.add( king );
+		
+		SpiderExploding spider = new SpiderExploding();
+		spider.pos = room.random( 1 );
+		level.mobs.add(spider);
 	}
 	
 	private static void addChest( Level level, int pos, int door ) {
