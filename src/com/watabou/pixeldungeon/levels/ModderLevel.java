@@ -1,12 +1,10 @@
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -32,19 +30,7 @@ import com.watabou.utils.Random;
 
 public class ModderLevel extends SpiderLevel {
 
-	{
-		color1 = 0x48763c;
-		color2 = 0x59994a;
-	}
-	
-	@Override
-	public String tilesTex() {
-		return Assets.TILES_SPIDER_NEST;
-	}
-	
-	@Override
-	public String waterTex() {
-		return Assets.WATER_SEWERS;
+	public ModderLevel(){
 	}
 	
 	protected boolean[] water() {
@@ -60,7 +46,7 @@ public class ModderLevel extends SpiderLevel {
 		
 		for (int i=0; i < getWidth(); i++) {
 			if (map[i] == Terrain.WALL &&  
-				map[i + getWidth()] == Terrain.WATER &&
+				map[i + getWidth()] == Terrain.WATER && 
 				Random.Int( 4 ) == 0) {
 				
 				map[i] = Terrain.WALL_DECO;
@@ -135,28 +121,6 @@ public class ModderLevel extends SpiderLevel {
 			if (level.map[i] == Terrain.WALL_DECO) {
 				scene.add( new Sink( i ) );
 			}
-		}
-	}
-	
-	@Override
-	public String tileName( int tile ) {
-		switch (tile) {
-		case Terrain.WATER:
-			return Game.getVar(R.string.Sewer_TileWater);
-		default:
-			return super.tileName( tile );
-		}
-	}
-	
-	@Override
-	public String tileDesc(int tile) {
-		switch (tile) {
-		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.Sewer_TileDescDeco);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Sewer_TileDescBookshelf);
-		default:
-			return super.tileDesc( tile );
 		}
 	}
 	

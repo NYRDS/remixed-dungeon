@@ -18,14 +18,14 @@ import com.watabou.utils.Random;
 
 public class SpiderLevel extends Level {
 
-	{
-		color1 = 0x801500;
-		color2 = 0xa68521;
+	public SpiderLevel() {
+		color1 = 0x48763c;
+		color2 = 0x59994a;
 	}
 
 	@Override
 	public String tilesTex() {
-		return Assets.TILES_HALLS;
+		return Assets.TILES_SPIDER_NEST;
 	}
 
 	@Override
