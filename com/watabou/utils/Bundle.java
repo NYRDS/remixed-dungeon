@@ -77,6 +77,10 @@ public class Bundle {
 	public int getInt( String key ) {
 		return data.optInt( key );
 	}
+
+	public int optInt( String key, int val ) {
+		return data.optInt( key, val );
+	}
 	
 	public float getFloat( String key ) {
 		return (float)data.optDouble( key );
@@ -106,6 +110,7 @@ public class Bundle {
 				return null;
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			return null;
 		}	
 	}
