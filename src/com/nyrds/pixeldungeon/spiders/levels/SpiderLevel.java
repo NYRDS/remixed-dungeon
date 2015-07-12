@@ -30,32 +30,35 @@ public class SpiderLevel extends Level {
 
 	@Override
 	public String waterTex() {
-		return Assets.WATER_HALLS;
+		return Assets.WATER_CAVES;
 	}
 
 	List<Chamber> chambers = new ArrayList<Chamber>();
 
 	protected void createChambers() {
 
-		chambers.add(new Chamber(1, 1, 5, 3));
+		for (int i = 0; i < 8; ++i) {
 
-		for (int i = 0; i < 6; ++i) {
-
-			int cx = Random.Int(1, getWidth() - 1);
-			int cy = Random.Int(1, getWidth() - 1);
-
-			chambers.add(new Chamber(cx, cy, 3, Random.IntRange(0, 4)));
+			Chamber chamber;
+			do{
+				int cx = Random.Int(1, getWidth() - 1);
+				int cy = Random.Int(1, getHeight() - 1);
+				chamber = new Chamber(cx, cy, Random.IntRange(3, 8), Random.IntRange(0, 5));
+			} while(!digChamber(chamber,false));
+			
+			digChamber(chamber, true);
+			
+			chambers.add(chamber);
 		}
 
-		digChamber(chambers.get(0));
-
 		for (int i = 1; i < chambers.size(); ++i) {
-			digChamber(chambers.get(i));
 			connectChambers(chambers.get(0), chambers.get(i));
 		}
 	}
 
-	private void digChamber(Chamber chamber) {
+	
+	private boolean digChamber(Chamber chamber, boolean realyDig) {
+		
 		int k = chamber.r;
 
 		for (int i = -k; i < k + 1; ++i) {
@@ -83,24 +86,35 @@ public class SpiderLevel extends Level {
 					case 4:
 						empty = Math.abs(i * j) < k;
 						break;
+						
+					case 5:
+						empty = i*i + j*j < k*k;
+						break;
 					}
 
 					if (empty) {
-						map[cell(chamber.x + i, chamber.y + j)] = Terrain.EMPTY;
 						
-						switch(Random.Int(3)){
-						case 0:
-							map[cell(chamber.x + i, chamber.y + j)] = Terrain.WATER;
-						break;
-						case 1:
-							map[cell(chamber.x + i, chamber.y + j)] = Terrain.HIGH_GRASS;
-						break;
+						if(realyDig) {						
+							map[cell(chamber.x + i, chamber.y + j)] = Terrain.EMPTY;
+							
+							switch(Random.Int(3)){
+							case 0:
+								map[cell(chamber.x + i, chamber.y + j)] = Terrain.WATER;
+							break;
+							case 1:
+								map[cell(chamber.x + i, chamber.y + j)] = Terrain.HIGH_GRASS;
+							break;
+							}
+						}else {
+							if(map[cell(chamber.x+i,chamber.y+j)]==Terrain.EMPTY) {
+								return false;
+							}
 						}
 					}
 				}
 			}
 		}
-
+		return true;
 	}
 
 	private void connectChambers(Chamber a, Chamber b) {
