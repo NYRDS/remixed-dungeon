@@ -72,7 +72,7 @@ public class ShopPainter extends Painter {
 			
 			if (level.getHeap( cell ) != null) {
 				do {
-					cell = room.random();
+					cell = room.random(level);
 				} while (level.getHeap( cell ) != null);
 			}
 			
@@ -158,7 +158,7 @@ public class ShopPainter extends Painter {
 		
 		int pos;
 		do {
-			pos = room.random();
+			pos = room.random(level);
 		} while (level.getHeap( pos ) != null);
 		
 		Mob shopkeeper = level instanceof LastShopLevel ? new ImpShopkeeper() : new Shopkeeper();

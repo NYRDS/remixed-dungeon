@@ -553,8 +553,8 @@ public abstract class RegularLevel extends Level {
 				continue;
 			}
 			
-			cell = room.random();
-			if (!Dungeon.visible[cell] && Actor.findChar( cell ) == null && Dungeon.level.passable[cell]) {
+			cell = room.random(this);
+			if (!Dungeon.visible[cell] && Actor.findChar( cell ) == null && passable[cell]) {
 				return cell;
 			}
 			
@@ -573,7 +573,7 @@ public abstract class RegularLevel extends Level {
 				continue;
 			}
 			
-			cell = room.random();
+			cell = room.random(this);
 			if (Dungeon.level.passable[cell]) {
 				return cell;
 			}
@@ -652,7 +652,7 @@ public abstract class RegularLevel extends Level {
 		while (true) {
 			Room room = randomRoom( Room.Type.STANDARD, 1 );
 			if (room != null) {
-				int pos = room.random();
+				int pos = room.random(this);
 				if (passable[pos]) {
 					return pos;
 				}
@@ -664,7 +664,7 @@ public abstract class RegularLevel extends Level {
 	public int pitCell() {
 		for (Room room : rooms) {
 			if (room.type == Type.PIT) {
-				return room.random();
+				return room.random(this);
 			}
 		}
 		

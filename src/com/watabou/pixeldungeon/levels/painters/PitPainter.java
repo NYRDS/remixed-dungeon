@@ -50,9 +50,9 @@ public class PitPainter extends Painter {
 		}
 		set( level, well, Terrain.EMPTY_WELL );
 		
-		int remains = room.random();
+		int remains = room.random(level);
 		while (level.map[remains] == Terrain.EMPTY_WELL) {
-			remains = room.random();
+			remains = room.random(level);
 		}
 		
 		level.drop( new IronKey(), remains ).type = Type.SKELETON;

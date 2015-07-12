@@ -36,7 +36,7 @@ public class BlacksmithPainter extends Painter {
 		for (int i=0; i < 2; i++) {
 			int pos;
 			do {
-				pos = room.random();
+				pos = room.random(level);
 			} while (level.map[pos] != Terrain.EMPTY_SP);
 			level.drop( 
 				Generator.random( Random.oneOf( 
@@ -52,7 +52,7 @@ public class BlacksmithPainter extends Painter {
 		
 		Blacksmith npc = new Blacksmith();
 		do {
-			npc.pos = room.random( 1 );
+			npc.pos = room.random(level, 1 );
 		} while (level.getHeap( npc.pos ) != null);
 		level.mobs.add( npc );
 		Actor.occupyCell( npc );

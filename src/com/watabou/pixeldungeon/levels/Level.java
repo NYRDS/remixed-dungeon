@@ -193,11 +193,8 @@ public abstract class Level implements Bundlable {
 		create(32, 32);
 	}
 	
-	public void create(int w, int h) {
-		
-		width  = w;
-		height = h;
-		
+	
+	private void initSizeDependentStuff() {
 		NEIGHBOURS4 = new int[]{ -getWidth(), +1, +getWidth(), -1 };
 		NEIGHBOURS8 = new int[]{ +1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(), -1 - getWidth() };
@@ -223,6 +220,14 @@ public abstract class Level implements Bundlable {
 		nearWalls = new boolean[getLength()];
 
 		discoverable = new boolean[getLength()];
+	}
+	
+	public void create(int w, int h) {
+		
+		width  = w;
+		height = h;
+		
+		initSizeDependentStuff();
 		
 		mobs = new HashSet<Mob>();
 		heaps = new SparseArray<Heap>();
@@ -316,6 +321,8 @@ public abstract class Level implements Bundlable {
 		width = bundle.optInt(WIDTH,  32);  // old levels compat
 		height = bundle.optInt(HEIGHT, 32);
 		
+		initSizeDependentStuff();
+		
 		map = bundle.getIntArray(MAP);
 		visited = bundle.getBooleanArray(VISITED);
 		mapped = bundle.getBooleanArray(MAPPED);
@@ -366,7 +373,8 @@ public abstract class Level implements Bundlable {
 		bundle.put(PLANTS, plants.values());
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
-		bundle.put(WIDTH, width);
+		
+		bundle.put(WIDTH,  width);
 		bundle.put(HEIGHT, height);
 	}
 

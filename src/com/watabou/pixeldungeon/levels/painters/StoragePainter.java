@@ -38,7 +38,7 @@ public class StoragePainter extends Painter {
 		for (int i=0; i < n; i++) { 
 			int pos;
 			do {
-				pos = room.random();
+				pos = room.random(level);
 			} while (level.map[pos] != floor);
 			level.drop( prize( level ), pos );
 		}

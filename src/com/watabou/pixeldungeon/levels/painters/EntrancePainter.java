@@ -32,7 +32,7 @@ public class EntrancePainter extends Painter {
 			door.set( Room.Door.Type.REGULAR );
 		}
 		
-		level.entrance = room.random( 1 );
+		level.entrance = room.random(level, 1 );
 		set( level, level.entrance, Terrain.ENTRANCE );
 	}
 	

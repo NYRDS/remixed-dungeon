@@ -94,14 +94,14 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	public Type type = Type.NULL;
 	
-	public int random() {
-		return random( 0 );
+	public int random(Level level) {
+		return random(level, 0 );
 	}
 	
-	public int random( int m ) {
+	public int random(Level level, int m ) {
 		int x = Random.Int( left + 1 + m, right - m );
 		int y = Random.Int( top + 1 + m, bottom - m );
-		return x + y * Dungeon.level.getWidth();
+		return x + y * level.getWidth();
 	}
 	
 	public void addNeigbour( Room other ) {

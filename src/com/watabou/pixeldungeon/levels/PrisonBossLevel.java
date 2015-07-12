@@ -257,7 +257,7 @@ public class PrisonBossLevel extends RegularLevel {
 		}
 		
 		while (true) {
-			int pos = roomEntrance.random();
+			int pos = roomEntrance.random(this);
 			if (pos != entrance) {
 				map[pos] = Terrain.SIGN;
 				break;
@@ -287,9 +287,9 @@ public class PrisonBossLevel extends RegularLevel {
 	@Override
 	protected void createItems() {
 
-		int keyPos = anteroom.random();
+		int keyPos = anteroom.random(this);
 		while (!passable[keyPos]) {
-			keyPos = anteroom.random();
+			keyPos = anteroom.random(this);
 		}
 		drop( new IronKey(), keyPos ).type = Heap.Type.CHEST;
 		
@@ -297,7 +297,7 @@ public class PrisonBossLevel extends RegularLevel {
 		if (item != null) {
 			int pos;
 			do {
-				pos = roomEntrance.random();
+				pos = roomEntrance.random(this);
 			} while (pos == entrance || map[pos] == Terrain.SIGN);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
@@ -314,7 +314,7 @@ public class PrisonBossLevel extends RegularLevel {
 		
 			int pos;
 			do {
-				pos = roomExit.random();
+				pos = roomExit.random(this);
 			} while (pos == cell || Actor.findChar( pos ) != null);
 			
 			Mob boss = Bestiary.mob( Dungeon.depth );

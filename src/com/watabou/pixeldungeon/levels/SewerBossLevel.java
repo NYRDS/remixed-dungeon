@@ -163,7 +163,7 @@ public class SewerBossLevel extends RegularLevel {
 		}
 		
 		while (true) {
-			int pos = roomEntrance.random();
+			int pos = roomEntrance.random(this);
 			if (pos != entrance) {
 				map[pos] = Terrain.SIGN;
 				break;
@@ -180,7 +180,7 @@ public class SewerBossLevel extends RegularLevel {
 	@Override
 	protected void createMobs() {
 		Mob mob = Bestiary.mob( Dungeon.depth );
-		mob.pos = roomExit.random();
+		mob.pos = roomExit.random(this);
 		mobs.add( mob );
 	}
 	
@@ -194,7 +194,7 @@ public class SewerBossLevel extends RegularLevel {
 		if (item != null) {
 			int pos;
 			do {
-				pos = roomEntrance.random();
+				pos = roomEntrance.random(this);
 			} while (pos == entrance || map[pos] == Terrain.SIGN);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}

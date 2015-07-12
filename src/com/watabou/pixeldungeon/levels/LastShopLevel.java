@@ -147,7 +147,7 @@ public class LastShopLevel extends RegularLevel {
 		
 		if (Imp.Quest.isCompleted()) {
 			while (true) {
-				int pos = roomEntrance.random();
+				int pos = roomEntrance.random(this);
 				if (pos != entrance) {
 					map[pos] = Terrain.SIGN;
 					break;
@@ -170,7 +170,7 @@ public class LastShopLevel extends RegularLevel {
 		if (item != null) {
 			int pos;
 			do {
-				pos = roomEntrance.random();
+				pos = roomEntrance.random(this);
 			} while (pos == entrance || map[pos] == Terrain.SIGN);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
