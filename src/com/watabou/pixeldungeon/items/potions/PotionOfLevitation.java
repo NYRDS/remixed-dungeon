@@ -62,7 +62,7 @@ public class PotionOfLevitation extends Potion {
 	
 	@Override
 	protected void moistenRottenFood(RottenFood rfood) {
-		int quantity = detachMoistenItems(rfood,1);
+		detachMoistenItems(rfood,1);
 		
 		GLog.i(TXT_ITEM_FLIES_AWAY , rfood.name());
 		moistenEffective();
