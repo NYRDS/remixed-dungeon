@@ -40,6 +40,7 @@ public class WndItem extends Window {
 		
 		super();
 		
+		
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item.image(), item.glowing() ) );
 		titlebar.label( Utils.capitalize( item.toString() ) );
@@ -58,7 +59,7 @@ public class WndItem extends Window {
 		info.x = titlebar.left();
 		info.y = titlebar.bottom() + GAP;
 		add( info );
-	
+		 
 		float y = info.y + info.height() + GAP;
 		float x = 0;
 		

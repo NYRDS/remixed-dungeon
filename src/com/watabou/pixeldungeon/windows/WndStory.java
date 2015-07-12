@@ -84,12 +84,10 @@ public class WndStory extends Window {
 		
 		content.setSize(tf.width(), tf.height());
 		
-        ScrollPane list = new ScrollPane( content );
-        add( list );
-        
-        list.setRect( 0, 0, w, h);
+		ScrollPane list = new ScrollPane(content);
+		add(list);
 
-		
+		list.setRect(0, 0, w, h);
 	}
 	
 	@Override

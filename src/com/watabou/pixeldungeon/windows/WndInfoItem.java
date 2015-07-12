@@ -17,17 +17,16 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.GenericInfo;
 
 public class WndInfoItem extends Window {
 
@@ -41,10 +40,6 @@ public class WndInfoItem extends Window {
 	private static final String TXT_INSIDE			= Game.getVar(R.string.WndInfoItem_Inside);
 	private static final String TXT_OWNER           = Game.getVar(R.string.WndInfoItem_Owner);
 	private static final String TXT_REMAINS	        = Game.getVar(R.string.WndInfoItem_Remains);
-
-	private static final float GAP	= 2;
-	
-	private static final int WIDTH = 120;
 	
 	public WndInfoItem( Heap heap ) {
 		
@@ -104,19 +99,10 @@ public class WndInfoItem extends Window {
 	}
 	
 	private void fillFields( int image, ItemSprite.Glowing glowing, int titleColor, String title, String info ) {
-		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( image, glowing ) );
-		titlebar.label( Utils.capitalize( title ), titleColor );
-		titlebar.setRect( 0, 0, WIDTH, 0 );
-		add( titlebar );
-
-		BitmapTextMultiline txtInfo = PixelScene.createMultiline( info, 6 );
-		txtInfo.maxWidth = WIDTH;
-		txtInfo.measure();
-		txtInfo.x = titlebar.left();
-		txtInfo.y = titlebar.bottom() + GAP;
-		add( txtInfo );
-
-		resize( WIDTH, (int)(txtInfo.y + txtInfo.height()) );
+		GenericInfo.makeInfo(	this,
+								new ItemSprite( image, glowing ), 
+								title, 
+								titleColor, 
+								info);
 	}
 }
