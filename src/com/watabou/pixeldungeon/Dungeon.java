@@ -103,19 +103,19 @@ public class Dungeon {
 	
 	public static HeroClass heroClass;
 	
+	private static void initSizeDependentStuff(int w, int h) {
+		int size = w*h;
+		Actor.clear(size);
+		visible = new boolean[size];
+		passable = new boolean[size];
+		
+		Arrays.fill( visible, false );
+		
+		PathFinder.setMapSize( w, h );
+	}
+	
 	public static void init() {
 		challenges = PixelDungeon.challenges();
-		
-		
-		
-		// must know sizes here
-		
-		Actor.clear(level.getLength());
-		visible = new boolean[level.getLength()];
-		passable = new boolean[level.getLength()];
-		
-		PathFinder.setMapSize( level.getWidth(), level.getHeight() );
-		
 		
 		Scroll.initLabels();
 		Potion.initColors();
@@ -162,9 +162,9 @@ public class Dungeon {
 		
 		level = new ModderLevel();
 		
-		level.create(64,64);
+		initSizeDependentStuff(64,64);
 		
-		Actor.clear(level.getLength());
+		level.create(64,64);
 		
 		return level;
 	}
@@ -183,8 +183,6 @@ public class Dungeon {
 				Statistics.completedWithNoKilling = false;
 			}
 		}
-		
-		Arrays.fill( visible, false );
 		
 		Level level;
 		switch (depth) {
@@ -242,9 +240,9 @@ public class Dungeon {
 			level = new DeadEndLevel();
 			Statistics.deepestFloor--;
 		}
-		
-		Actor.clear(level.getLength());
-		
+
+		initSizeDependentStuff(level.getWidth(), level.getHeight());
+
 		level.create();
 		
 		Statistics.qualifiedForNoKilling = !bossLevel();
@@ -254,9 +252,7 @@ public class Dungeon {
 	
 	public static void resetLevel() {
 		
-		Actor.clear(level.getLength());
-		
-		Arrays.fill( visible, false );
+		initSizeDependentStuff(level.getWidth(),level.getHeight());
 		
 		level.reset();
 		switchLevel( level, level.entrance );
@@ -473,11 +469,6 @@ public class Dungeon {
 		Dungeon.level = null;
 		Dungeon.depth = -1;
 		
-		if (fullLoad) {
-			
-			PathFinder.setMapSize( level.getWidth(), level.getHeight() );
-		}
-		
 		Scroll.restore( bundle );
 		Potion.restore( bundle );
 		Wand.restore( bundle );
@@ -544,8 +535,7 @@ public class Dungeon {
 		input.close();
 		
 		Level level = (Level)bundle.get( "level" );
-		
-		Actor.clear(level.getLength());
+		initSizeDependentStuff(level.getWidth(), level.getHeight());
 		
 		return level;
 	}

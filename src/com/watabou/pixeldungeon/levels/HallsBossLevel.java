@@ -111,7 +111,7 @@ public class HallsBossLevel extends Level {
 			Random.Int( _RoomTop() + 1, _RoomBottom() - 1 ) * getWidth();
 		map[entrance] = Terrain.ENTRANCE;
 		
-		boolean[] patch = Patch.generate( 0.45f, 6 );
+		boolean[] patch = Patch.generate(this, 0.45f, 6 );
 		for (int i=0; i < getLength(); i++) {
 			if (map[i] == Terrain.EMPTY && patch[i]) {
 				map[i] = Terrain.WATER;

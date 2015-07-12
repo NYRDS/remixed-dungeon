@@ -39,7 +39,7 @@ public class Freezing {
 		}
 		
 		if (fire != null) {
-			fire.clear( cell );
+			fire.clearBlob( cell );
 		}
 		
 		Heap heap = Dungeon.level.getHeap( cell );

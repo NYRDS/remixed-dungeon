@@ -62,11 +62,11 @@ public class HallsLevel extends RegularLevel {
 	}
 	
 	protected boolean[] water() {
-		return Patch.generate( feeling == Feeling.WATER ? 0.55f : 0.40f, 6 );
+		return Patch.generate(this, feeling == Feeling.WATER ? 0.55f : 0.40f, 6 );
 	}
 	
 	protected boolean[] grass() {
-		return Patch.generate( feeling == Feeling.GRASS ? 0.55f : 0.30f, 3 );
+		return Patch.generate(this, feeling == Feeling.GRASS ? 0.55f : 0.30f, 3 );
 	}
 	
 	@Override

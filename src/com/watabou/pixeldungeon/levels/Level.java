@@ -111,20 +111,20 @@ public abstract class Level implements Bundlable {
 
 	public int viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : 8;
 
-	public boolean[] fieldOfView = new boolean[getLength()];
+	public boolean[] fieldOfView;
 
-	public boolean[] passable = new boolean[getLength()];
-	public boolean[] losBlocking = new boolean[getLength()];
-	public boolean[] flamable = new boolean[getLength()];
-	public boolean[] secret = new boolean[getLength()];
-	public boolean[] solid = new boolean[getLength()];
-	public boolean[] avoid = new boolean[getLength()];
-	public boolean[] water = new boolean[getLength()];
-	public boolean[] pit = new boolean[getLength()];
+	public boolean[] passable;
+	public boolean[] losBlocking;
+	public boolean[] flamable;
+	public boolean[] secret;
+	public boolean[] solid;
+	public boolean[] avoid;
+	public boolean[] water;
+	public boolean[] pit;
 
-	public boolean[] nearWalls = new boolean[getLength()];
+	public boolean[] nearWalls;
 
-	public boolean[] discoverable = new boolean[getLength()];
+	public boolean[] discoverable;
 
 	public Feeling feeling = Feeling.NONE;
 
@@ -206,10 +206,24 @@ public abstract class Level implements Bundlable {
 		
 		map = new int[getLength()];
 		visited = new boolean[getLength()];
-		Arrays.fill(visited, false);
 		mapped = new boolean[getLength()];
-		Arrays.fill(mapped, false);
 
+		
+		fieldOfView = new boolean[getLength()];
+
+		passable = new boolean[getLength()];
+		losBlocking = new boolean[getLength()];
+		flamable = new boolean[getLength()];
+		secret = new boolean[getLength()];
+		solid = new boolean[getLength()];
+		avoid = new boolean[getLength()];
+		water = new boolean[getLength()];
+		pit = new boolean[getLength()];
+
+		nearWalls = new boolean[getLength()];
+
+		discoverable = new boolean[getLength()];
+		
 		mobs = new HashSet<Mob>();
 		heaps = new SparseArray<Heap>();
 		blobs = new HashMap<Class<? extends Blob>, Blob>();

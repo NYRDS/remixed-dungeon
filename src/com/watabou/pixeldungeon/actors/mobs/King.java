@@ -254,7 +254,7 @@ public class King extends Mob {
 		public void damage( int dmg, Object src ) {
 			super.damage( dmg, src );
 			if (src instanceof ToxicGas) {		
-				((ToxicGas)src).clear( pos );
+				((ToxicGas)src).clearBlob( pos );
 			}
 		}
 		

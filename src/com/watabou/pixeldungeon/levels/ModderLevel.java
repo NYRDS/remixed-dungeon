@@ -34,11 +34,11 @@ public class ModderLevel extends SpiderLevel {
 	}
 	
 	protected boolean[] water() {
-		return Patch.generate( feeling == Feeling.WATER ? 0.60f : 0.45f, 5 );
+		return Patch.generate(this, feeling == Feeling.WATER ? 0.60f : 0.45f, 5 );
 	}
 	
 	protected boolean[] grass() {
-		return Patch.generate( feeling == Feeling.GRASS ? 0.60f : 0.40f, 4 );
+		return Patch.generate(this, feeling == Feeling.GRASS ? 0.60f : 0.40f, 4 );
 	}
 	
 	@Override

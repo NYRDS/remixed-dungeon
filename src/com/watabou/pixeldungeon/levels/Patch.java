@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.utils.Random;
 
 public class Patch {
@@ -25,12 +24,12 @@ public class Patch {
 	private static boolean[] cur = new boolean[32];
 	private static boolean[] off = new boolean[32];
 	
-	public static boolean[] generate( float seed, int nGen ) {
+	public static boolean[] generate(Level level, float seed, int nGen ) {
 		
-		int w = Dungeon.level.getWidth();
-		int h = Dungeon.level.getHeight();
+		int w = level.getWidth();
+		int h = level.getHeight();
 		
-		int len = Dungeon.level.getLength();
+		int len = level.getLength();
 		
 		if(cur.length < len) {
 			cur = new boolean[len];

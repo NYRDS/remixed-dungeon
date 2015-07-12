@@ -166,11 +166,11 @@ public class PrisonBossLevel extends RegularLevel {
 	}
 		
 	protected boolean[] water() {
-		return Patch.generate( 0.45f, 5 );
+		return Patch.generate(this, 0.45f, 5 );
 	}
 	
 	protected boolean[] grass() {
-		return Patch.generate( 0.30f, 4 );
+		return Patch.generate(this, 0.30f, 4 );
 	}
 	
 	protected void paintDoors( Room r ) {
