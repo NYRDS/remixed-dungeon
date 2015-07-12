@@ -220,6 +220,9 @@ public abstract class Level implements Bundlable {
 		nearWalls = new boolean[getLength()];
 
 		discoverable = new boolean[getLength()];
+
+		Blob.setWidth(getWidth());
+		Blob.setHeight(getHeight());
 	}
 	
 	public void create(int w, int h) {

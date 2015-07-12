@@ -241,9 +241,12 @@ public class Dungeon {
 			Statistics.deepestFloor--;
 		}
 
-		initSizeDependentStuff(level.getWidth(), level.getHeight());
+		int lw = 32 + Random.Int(8);
+		int lh = 32 + Random.Int(8);
+		
+		initSizeDependentStuff(lw, lh);
 
-		level.create();
+		level.create(lw, lh);
 		
 		Statistics.qualifiedForNoKilling = !bossLevel();
 		

@@ -31,6 +31,9 @@ public class Blob extends Actor {
 	public int[] cur;
 	protected int[] off;
 	
+	static private int width;
+	static private int height;
+	
 	public BlobEmitter emitter;
 	
 	protected Blob() {
@@ -191,15 +194,24 @@ public class Blob extends Actor {
 		}
 	}
 
+	
+	public static void setWidth(int val) {
+		width = val;
+	}
+
+	public static void setHeight(int val) {
+		height = val;
+	}
+	
 	public static int getWidth() {
-		return Dungeon.level.getWidth();
+		return width;
 	}
 
 	public static int getHeight() {
-		return Dungeon.level.getHeight();
+		return height;
 	}
 
 	public static int getLength() {
-		return Dungeon.level.getLength();
+		return width*height;
 	}
 }
