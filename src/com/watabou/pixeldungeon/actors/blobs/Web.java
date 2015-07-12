@@ -31,7 +31,7 @@ public class Web extends Blob {
 	@Override
 	protected void evolve() {
 		
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < getLength(); i++) {
 			
 			int offv = cur[i] > 0 ? cur[i] - 1 : 0;
 			off[i] = offv;

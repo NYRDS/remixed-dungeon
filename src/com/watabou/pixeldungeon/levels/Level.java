@@ -89,9 +89,8 @@ public abstract class Level implements Bundlable {
 		NONE, CHASM, WATER, GRASS
 	};
 
-	private static final int WIDTH = 32;
-	private static final int HEIGHT = 32;
-	private static final int LENGTH = getWidth() * getHeight();
+	private static int width  = 32;
+	private static int height = 32;
 
 	public static final int[] NEIGHBOURS4 = { -getWidth(), +1, +getWidth(), -1 };
 	public static final int[] NEIGHBOURS8 = { +1, -1, +getWidth(), -getWidth(),
@@ -157,6 +156,8 @@ public abstract class Level implements Bundlable {
 	private static final String PLANTS = "plants";
 	private static final String MOBS = "mobs";
 	private static final String BLOBS = "blobs";
+	private static final String WIDTH = "width";
+	private static final String HEIGHT = "height";
 
 	public Heap getHeap(int pos) {
 		Heap heap = heaps.get(pos);
@@ -280,12 +281,15 @@ public abstract class Level implements Bundlable {
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
-
+		
 		mobs = new HashSet<Mob>();
 		heaps = new SparseArray<Heap>();
 		blobs = new HashMap<Class<? extends Blob>, Blob>();
 		plants = new SparseArray<Plant>();
 
+		width = bundle.optInt(WIDTH,  32);  // old levels compat
+		height = bundle.optInt(HEIGHT, 32);
+		
 		map = bundle.getIntArray(MAP);
 		visited = bundle.getBooleanArray(VISITED);
 		mapped = bundle.getBooleanArray(MAPPED);
@@ -336,6 +340,8 @@ public abstract class Level implements Bundlable {
 		bundle.put(PLANTS, plants.values());
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
+		bundle.put(WIDTH, width);
+		bundle.put(HEIGHT, height);
 	}
 
 	public int tunnelTile() {
@@ -1067,15 +1073,15 @@ public abstract class Level implements Bundlable {
 	}
 
 	public static int getWidth() {
-		return WIDTH;
+		return width;
 	}
 
 	public static int getHeight() {
-		return HEIGHT;
+		return height;
 	}
 
 	public static int getLength() {
-		return LENGTH;
+		return getWidth()*getHeight();
 	}
 	
 	public boolean cellValid(int x, int y) {

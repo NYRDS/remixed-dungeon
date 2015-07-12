@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import java.util.Arrays;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -27,10 +28,6 @@ import com.watabou.utils.Bundle;
 
 public class Blob extends Actor {
 	
-	public static final int WIDTH	= Level.getWidth();
-	public static final int HEIGHT	= Level.getHeight();
-	public static final int LENGTH	= Level.getLength();
-	
 	public int volume = 0;
 	
 	public int[] cur;
@@ -40,8 +37,8 @@ public class Blob extends Actor {
 	
 	protected Blob() {
 		
-		cur = new int[LENGTH];
-		off = new int[LENGTH];
+		cur = new int[getLength()];
+		off = new int[getLength()];
 		
 		volume = 0;
 	}
@@ -56,13 +53,13 @@ public class Blob extends Actor {
 		if (volume > 0) {
 		
 			int start;
-			for (start=0; start < LENGTH; start++) {
+			for (start=0; start < getLength(); start++) {
 				if (cur[start] > 0) {
 					break;
 				}
 			}
 			int end;
-			for (end=LENGTH-1; end > start; end--) {
+			for (end=getLength()-1; end > start; end--) {
 				if (cur[end] > 0) {
 					break;
 				}
@@ -123,10 +120,10 @@ public class Blob extends Actor {
 		
 		boolean[] notBlocking = BArray.not( Level.solid, null );
 		
-		for (int i=1; i < HEIGHT-1; i++) {
+		for (int i=1; i < getHeight()-1; i++) {
 			
-			int from = i * WIDTH + 1;
-			int to = from + WIDTH - 2;
+			int from = i * getWidth() + 1;
+			int to = from + getWidth() - 2;
 			
 			for (int pos=from; pos < to; pos++) {
 				if (notBlocking[pos]) {
@@ -142,12 +139,12 @@ public class Blob extends Actor {
 						sum += cur[pos+1];
 						count++;
 					}
-					if (notBlocking[pos-WIDTH]) {
-						sum += cur[pos-WIDTH];
+					if (notBlocking[pos-getWidth()]) {
+						sum += cur[pos-getWidth()];
 						count++;
 					}
-					if (notBlocking[pos+WIDTH]) {
-						sum += cur[pos+WIDTH];
+					if (notBlocking[pos+getWidth()]) {
+						sum += cur[pos+getWidth()];
 						count++;
 					}
 					
@@ -194,5 +191,17 @@ public class Blob extends Actor {
 			PixelDungeon.reportException( e );
 			return null;
 		}
+	}
+
+	public static int getWidth() {
+		return Level.getWidth();
+	}
+
+	public static int getHeight() {
+		return Level.getHeight();
+	}
+
+	public static int getLength() {
+		return Level.getLength();
 	}
 }

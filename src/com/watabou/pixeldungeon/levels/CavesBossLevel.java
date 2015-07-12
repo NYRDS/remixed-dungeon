@@ -47,12 +47,7 @@ public class CavesBossLevel extends Level {
 		
 		viewDistance = 6;
 	}
-	
-	private static final int ROOM_LEFT		= getWidth() / 2 - 2;
-	private static final int ROOM_RIGHT		= getWidth() / 2 + 2;
-	private static final int ROOM_TOP		= getHeight() / 2 - 2;
-	private static final int ROOM_BOTTOM	= getHeight() / 2 + 2;
-	
+		
 	private int arenaDoor;
 	private boolean enteredArena = false;
 	private boolean keyDropped = false;
@@ -95,18 +90,18 @@ public class CavesBossLevel extends Level {
 		for (int i=0; i < 8; i++) {
 			int left, right, top, bottom;
 			if (Random.Int( 2 ) == 0) {
-				left = Random.Int( 1, ROOM_LEFT - 3 );
-				right = ROOM_RIGHT + 3;
+				left = Random.Int( 1, _RoomLeft() - 3 );
+				right = _RoomRight() + 3;
 			} else {
-				left = ROOM_LEFT - 3;
-				right = Random.Int( ROOM_RIGHT + 3, getWidth() - 1 );
+				left = _RoomLeft() - 3;
+				right = Random.Int( _RoomRight() + 3, getWidth() - 1 );
 			}
 			if (Random.Int( 2 ) == 0) {
-				top = Random.Int( 2, ROOM_TOP - 3 );
-				bottom = ROOM_BOTTOM + 3;
+				top = Random.Int( 2, _RoomTop() - 3 );
+				bottom = _RoomBottom() + 3;
 			} else {
-				top = ROOM_LEFT - 3;
-				bottom = Random.Int( ROOM_TOP + 3, getHeight() - 1 );
+				top = _RoomLeft() - 3;
+				bottom = Random.Int( _RoomTop() + 3, getHeight() - 1 );
 			}
 			
 			Painter.fill( this, left, top, right - left + 1, bottom - top + 1, Terrain.EMPTY );
@@ -125,19 +120,19 @@ public class CavesBossLevel extends Level {
 			}
 		}
 		
-		Painter.fill( this, ROOM_LEFT - 1, ROOM_TOP - 1, 
-			ROOM_RIGHT - ROOM_LEFT + 3, ROOM_BOTTOM - ROOM_TOP + 3, Terrain.WALL );
-		Painter.fill( this, ROOM_LEFT, ROOM_TOP + 1, 
-			ROOM_RIGHT - ROOM_LEFT + 1, ROOM_BOTTOM - ROOM_TOP, Terrain.EMPTY );
+		Painter.fill( this, _RoomLeft() - 1, _RoomTop() - 1, 
+			_RoomRight() - _RoomLeft() + 3, _RoomBottom() - _RoomTop() + 3, Terrain.WALL );
+		Painter.fill( this, _RoomLeft(), _RoomTop() + 1, 
+			_RoomRight() - _RoomLeft() + 1, _RoomBottom() - _RoomTop(), Terrain.EMPTY );
 		
-		Painter.fill( this, ROOM_LEFT, ROOM_TOP, 
-			ROOM_RIGHT - ROOM_LEFT + 1, 1, Terrain.TOXIC_TRAP );
+		Painter.fill( this, _RoomLeft(), _RoomTop(), 
+			_RoomRight() - _RoomLeft() + 1, 1, Terrain.TOXIC_TRAP );
 		
-		arenaDoor = Random.Int( ROOM_LEFT, ROOM_RIGHT ) + (ROOM_BOTTOM + 1) * getWidth();
+		arenaDoor = Random.Int( _RoomLeft(), _RoomRight() ) + (_RoomBottom() + 1) * getWidth();
 		map[arenaDoor] = Terrain.DOOR;
 		
-		entrance = Random.Int( ROOM_LEFT + 1, ROOM_RIGHT - 1 ) + 
-			Random.Int( ROOM_TOP + 1, ROOM_BOTTOM - 1 ) * getWidth();
+		entrance = Random.Int( _RoomLeft() + 1, _RoomRight() - 1 ) + 
+			Random.Int( _RoomTop() + 1, _RoomBottom() - 1 ) * getWidth();
 		map[entrance] = Terrain.ENTRANCE;
 		
 		boolean[] patch = Patch.generate( 0.45f, 6 );
@@ -182,7 +177,7 @@ public class CavesBossLevel extends Level {
 		
 		int sign;
 		do {
-			sign = Random.Int( ROOM_LEFT, ROOM_RIGHT ) + Random.Int( ROOM_TOP, ROOM_BOTTOM ) * getWidth();
+			sign = Random.Int( _RoomLeft(), _RoomRight() ) + Random.Int( _RoomTop(), _RoomBottom() ) * getWidth();
 		} while (sign == entrance);
 		map[sign] = Terrain.SIGN;
 	}
@@ -201,7 +196,7 @@ public class CavesBossLevel extends Level {
 		if (item != null) {
 			int pos;
 			do {
-				pos = Random.IntRange( ROOM_LEFT, ROOM_RIGHT ) + Random.IntRange( ROOM_TOP + 1, ROOM_BOTTOM ) * getWidth();
+				pos = Random.IntRange( _RoomLeft(), _RoomRight() ) + Random.IntRange( _RoomTop() + 1, _RoomBottom() ) * getWidth();
 			} while (pos == entrance || map[pos] == Terrain.SIGN);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
@@ -261,7 +256,7 @@ public class CavesBossLevel extends Level {
 	private boolean outsideEntraceRoom( int cell ) {
 		int cx = cell % getWidth();
 		int cy = cell / getWidth();
-		return cx < ROOM_LEFT-1 || cx > ROOM_RIGHT+1 || cy < ROOM_TOP-1 || cy > ROOM_BOTTOM+1;
+		return cx < _RoomLeft()-1 || cx > _RoomRight()+1 || cy < _RoomTop()-1 || cy > _RoomBottom()+1;
 	}
 	
 	@Override
@@ -297,5 +292,21 @@ public class CavesBossLevel extends Level {
 	@Override
 	public void addVisuals( Scene scene ) {
 		CavesLevel.addVisuals( this, scene );
+	}
+
+	private static int _RoomLeft() {
+		return getWidth() / 2 - 2;
+	}
+
+	private static int _RoomRight() {
+		return getWidth() / 2 + 2;
+	}
+
+	private static int _RoomTop() {
+		return getHeight() / 2 - 2;
+	}
+
+	private static int _RoomBottom() {
+		return getHeight() / 2 + 2;
 	}
 }

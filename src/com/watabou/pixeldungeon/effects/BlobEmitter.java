@@ -21,12 +21,10 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 public class BlobEmitter extends Emitter {
-
-	private static final int WIDTH	= Blob.WIDTH;
-	private static final int LENGTH	= Blob.LENGTH;
 	
 	private Blob blob;
 	
@@ -45,10 +43,10 @@ public class BlobEmitter extends Emitter {
 		int[] map = blob.cur;
 		float size = DungeonTilemap.SIZE;
 		
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < Level.getLength(); i++) {
 			if (map[i] > 0 && Dungeon.visible[i]) {
-				float x = ((i % WIDTH) + Random.Float()) * size;
-				float y = ((i / WIDTH) + Random.Float()) * size;
+				float x = ((i % Level.getWidth()) + Random.Float()) * size;
+				float y = ((i / Level.getWidth()) + Random.Float()) * size;
 				factory.emit( this, index, x, y );
 			}
 		}

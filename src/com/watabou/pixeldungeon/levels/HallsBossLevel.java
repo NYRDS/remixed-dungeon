@@ -44,12 +44,7 @@ public class HallsBossLevel extends Level {
 		
 		viewDistance = 3;
 	}
-	
-	private static final int ROOM_LEFT		= getWidth() / 2 - 1;
-	private static final int ROOM_RIGHT		= getWidth() / 2 + 1;
-	private static final int ROOM_TOP		= getHeight() / 2 - 1;
-	private static final int ROOM_BOTTOM	= getHeight() / 2 + 1;
-	
+
 	private int stairs = -1;
 	private boolean enteredArena = false;
 	private boolean keyDropped = false;
@@ -89,8 +84,8 @@ public class HallsBossLevel extends Level {
 		
 		for (int i=0; i < 5; i++) {
 			
-			int top = Random.IntRange( 2, ROOM_TOP - 1 );
-			int bottom = Random.IntRange( ROOM_BOTTOM + 1, 22 );
+			int top = Random.IntRange( 2, _RoomTop() - 1 );
+			int bottom = Random.IntRange( _RoomBottom() + 1, 22 );
 			Painter.fill( this, 2 + i * 4, top, 4, bottom - top + 1, Terrain.EMPTY );
 			
 			if (i == 2) {
@@ -107,13 +102,13 @@ public class HallsBossLevel extends Level {
 		
 		map[exit] = Terrain.LOCKED_EXIT;
 		
-		Painter.fill( this, ROOM_LEFT - 1, ROOM_TOP - 1, 
-			ROOM_RIGHT - ROOM_LEFT + 3, ROOM_BOTTOM - ROOM_TOP + 3, Terrain.WALL );
-		Painter.fill( this, ROOM_LEFT, ROOM_TOP, 
-			ROOM_RIGHT - ROOM_LEFT + 1, ROOM_BOTTOM - ROOM_TOP + 1, Terrain.EMPTY );
+		Painter.fill( this, _RoomLeft() - 1, _RoomTop() - 1, 
+			_RoomRight() - _RoomLeft() + 3, _RoomBottom() - _RoomTop() + 3, Terrain.WALL );
+		Painter.fill( this, _RoomLeft(), _RoomTop(), 
+			_RoomRight() - _RoomLeft() + 1, _RoomBottom() - _RoomTop() + 1, Terrain.EMPTY );
 		
-		entrance = Random.Int( ROOM_LEFT + 1, ROOM_RIGHT - 1 ) + 
-			Random.Int( ROOM_TOP + 1, ROOM_BOTTOM - 1 ) * getWidth();
+		entrance = Random.Int( _RoomLeft() + 1, _RoomRight() - 1 ) + 
+			Random.Int( _RoomTop() + 1, _RoomBottom() - 1 ) * getWidth();
 		map[entrance] = Terrain.ENTRANCE;
 		
 		boolean[] patch = Patch.generate( 0.45f, 6 );
@@ -150,7 +145,7 @@ public class HallsBossLevel extends Level {
 		if (item != null) {
 			int pos;
 			do {
-				pos = Random.IntRange( ROOM_LEFT, ROOM_RIGHT ) + Random.IntRange( ROOM_TOP + 1, ROOM_BOTTOM ) * getWidth();
+				pos = Random.IntRange( _RoomLeft(), _RoomRight() ) + Random.IntRange( _RoomTop() + 1, _RoomBottom() ) * getWidth();
 			} while (pos == entrance || map[pos] == Terrain.SIGN);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
@@ -170,13 +165,13 @@ public class HallsBossLevel extends Level {
 			
 			enteredArena = true;
 			
-			for (int i=ROOM_LEFT-1; i <= ROOM_RIGHT + 1; i++) {
-				doMagic( (ROOM_TOP - 1) * getWidth() + i );
-				doMagic( (ROOM_BOTTOM + 1) * getWidth() + i );
+			for (int i=_RoomLeft()-1; i <= _RoomRight() + 1; i++) {
+				doMagic( (_RoomTop() - 1) * getWidth() + i );
+				doMagic( (_RoomBottom() + 1) * getWidth() + i );
 			}
-			for (int i=ROOM_TOP; i < ROOM_BOTTOM + 1; i++) {
-				doMagic( i * getWidth() + ROOM_LEFT - 1 );
-				doMagic( i * getWidth() + ROOM_RIGHT + 1 );
+			for (int i=_RoomTop(); i < _RoomBottom() + 1; i++) {
+				doMagic( i * getWidth() + _RoomLeft() - 1 );
+				doMagic( i * getWidth() + _RoomRight() + 1 );
 			}
 			doMagic( entrance );
 			GameScene.updateMap();
@@ -249,5 +244,21 @@ public class HallsBossLevel extends Level {
 	@Override
 	public void addVisuals( Scene scene ) {
 		HallsLevel.addVisuals( this, scene );
+	}
+
+	private static int _RoomLeft() {
+		return getWidth() / 2 - 1;
+	}
+
+	private static int _RoomRight() {
+		return getWidth() / 2 + 1;
+	}
+
+	private static int _RoomTop() {
+		return getHeight() / 2 - 1;
+	}
+
+	private static int _RoomBottom() {
+		return getHeight() / 2 + 1;
 	}
 }

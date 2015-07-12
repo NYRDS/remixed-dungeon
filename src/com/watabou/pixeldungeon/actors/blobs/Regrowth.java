@@ -38,7 +38,7 @@ public class Regrowth extends Blob {
 			
 			boolean mapUpdated = false;
 			
-			for (int i=0; i < LENGTH; i++) {
+			for (int i=0; i < getLength(); i++) {
 				if (off[i] > 0) {
 					int c = Dungeon.level.map[i];
 					if (c == Terrain.EMPTY || c == Terrain.EMBERS || c == Terrain.EMPTY_DECO) {

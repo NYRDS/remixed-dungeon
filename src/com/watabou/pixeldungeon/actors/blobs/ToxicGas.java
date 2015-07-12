@@ -38,7 +38,7 @@ public class ToxicGas extends Blob implements Hero.Doom {
 	protected void evolve() {
 		super.evolve();
 		
-		for (int pos=0; pos < LENGTH; pos++) {
+		for (int pos=0; pos < getLength(); pos++) {
 			if (cur[pos] > 0){
 				poison(pos);
 			}
@@ -49,7 +49,7 @@ public class ToxicGas extends Blob implements Hero.Doom {
 			
 			int par[] = blob.cur;
 			
-			for (int i=0; i < LENGTH; i++) {
+			for (int i=0; i < getLength(); i++) {
 				
 				int t = cur[i];
 				int p = par[i];

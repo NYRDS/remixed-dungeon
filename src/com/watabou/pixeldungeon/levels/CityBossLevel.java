@@ -47,9 +47,6 @@ public class CityBossLevel extends Level {
 	private static final int HALL_HEIGHT	= 15;
 	private static final int CHAMBER_HEIGHT	= 3;
 	
-	private static final int LEFT	= (getWidth() - HALL_WIDTH) / 2;
-	private static final int CENTER	= LEFT + HALL_WIDTH / 2;
-	
 	private int arenaDoor;
 	private boolean enteredArena = false;
 	private boolean keyDropped = false;
@@ -87,13 +84,13 @@ public class CityBossLevel extends Level {
 	@Override
 	protected boolean build() {
 		
-		Painter.fill( this, LEFT, TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY );
-		Painter.fill( this, CENTER, TOP, 1, HALL_HEIGHT, Terrain.EMPTY_SP );
+		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY );
+		Painter.fill( this, _Center(), TOP, 1, HALL_HEIGHT, Terrain.EMPTY_SP );
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + CENTER - 2] = Terrain.STATUE_SP;
-			map[y * getWidth() + CENTER + 2] = Terrain.STATUE_SP;
+			map[y * getWidth() + _Center() - 2] = Terrain.STATUE_SP;
+			map[y * getWidth() + _Center() + 2] = Terrain.STATUE_SP;
 			y += 2;
 		}
 		
@@ -104,17 +101,17 @@ public class CityBossLevel extends Level {
 			map[i] = Terrain.EMPTY_SP;
 		}
 		
-		exit = (TOP - 1) * getWidth() + CENTER;
+		exit = (TOP - 1) * getWidth() + _Center();
 		map[exit] = Terrain.LOCKED_EXIT;
 		
-		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + CENTER;
+		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
 		map[arenaDoor] = Terrain.DOOR;
 		
-		Painter.fill( this, LEFT, TOP + HALL_HEIGHT + 1, HALL_WIDTH, CHAMBER_HEIGHT, Terrain.EMPTY );
-		Painter.fill( this, LEFT, TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
-		Painter.fill( this, LEFT + HALL_WIDTH - 1, TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
+		Painter.fill( this, _Left(), TOP + HALL_HEIGHT + 1, HALL_WIDTH, CHAMBER_HEIGHT, Terrain.EMPTY );
+		Painter.fill( this, _Left(), TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
+		Painter.fill( this, _Left() + HALL_WIDTH - 1, TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
 		
-		entrance = (TOP + HALL_HEIGHT + 2 + Random.Int( CHAMBER_HEIGHT - 1 )) * getWidth() + LEFT + (/*1 +*/ Random.Int( HALL_WIDTH-2 )); 
+		entrance = (TOP + HALL_HEIGHT + 2 + Random.Int( CHAMBER_HEIGHT - 1 )) * getWidth() + _Left() + (/*1 +*/ Random.Int( HALL_WIDTH-2 )); 
 		map[entrance] = Terrain.ENTRANCE;
 		
 		return true;
@@ -137,9 +134,9 @@ public class CityBossLevel extends Level {
 	
 	public static int pedestal( boolean left ) {
 		if (left) {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + CENTER - 2;
+			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
 		} else {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + CENTER + 2;
+			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
 		}
 	}
 	
@@ -158,7 +155,7 @@ public class CityBossLevel extends Level {
 			int pos;
 			do {
 				pos = 
-					Random.IntRange( LEFT + 1, LEFT + HALL_WIDTH - 2 ) + 
+					Random.IntRange( _Left() + 1, _Left() + HALL_WIDTH - 2 ) + 
 					Random.IntRange( TOP + HALL_HEIGHT + 1, TOP + HALL_HEIGHT  + CHAMBER_HEIGHT ) * getWidth();
 			} while (pos == entrance || map[pos] == Terrain.SIGN);
 			drop( item, pos ).type = Heap.Type.SKELETON;
@@ -251,5 +248,13 @@ public class CityBossLevel extends Level {
 	@Override
 	public void addVisuals( Scene scene ) {
 		CityLevel.addVisuals( this, scene );
+	}
+
+	private static int _Left() {
+		return (getWidth() - HALL_WIDTH) / 2;
+	}
+
+	private static int _Center() {
+		return _Left() + HALL_WIDTH / 2;
 	}
 }

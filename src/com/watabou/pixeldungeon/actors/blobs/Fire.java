@@ -38,8 +38,8 @@ public class Fire extends Blob {
 
 		boolean[] flamable = Level.flamable;
 		
-		int from = WIDTH + 1;
-		int to = Level.getLength() - WIDTH - 1;
+		int from = getWidth() + 1;
+		int to = Level.getLength() - getWidth() - 1;
 		
 		boolean observe = false;
 		
@@ -66,7 +66,7 @@ public class Fire extends Blob {
 				
 			} else {
 				
-				if (flamable[pos] && (cur[pos-1] > 0 || cur[pos+1] > 0 || cur[pos-WIDTH] > 0 || cur[pos+WIDTH] > 0)) {
+				if (flamable[pos] && (cur[pos-1] > 0 || cur[pos+1] > 0 || cur[pos-getWidth()] > 0 || cur[pos+getWidth()] > 0)) {
 					fire = 4;
 					burn( pos );
 				} else {

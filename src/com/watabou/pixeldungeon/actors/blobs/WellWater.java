@@ -37,7 +37,7 @@ public class WellWater extends Blob {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		
-		for (int i=0; i < LENGTH; i++) {
+		for (int i=0; i < getLength(); i++) {
 			if (cur[i] > 0) {
 				pos = i;
 				break;
