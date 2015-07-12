@@ -147,7 +147,7 @@ public class Badges {
 		CHAMPION(Game.getVar(R.string.Badges_Champion), 39, true ),
 		SUPPORTER(Game.getVar(R.string.Badges_Supporter), 31, true ),
 		IMMURED(Game.getVar(R.string.Badges_Immured), 64), 
-		MASTERY_ELF, VICTORY_ELF;
+		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT;
 		
 		public boolean meta;
 		
@@ -616,6 +616,9 @@ public class Badges {
 				case HUNTRESS:
 					badge = Badge.BOSS_SLAIN_1_HUNTRESS;
 					break;
+				case ELF:
+					badge = Badge.BOSS_SLAIN_1_ELF;
+					break;
 				}
 				local.add( badge );
 				if (!global.contains( badge )) {
@@ -626,7 +629,8 @@ public class Badges {
 				if (global.contains( Badge.BOSS_SLAIN_1_WARRIOR ) &&
 					global.contains( Badge.BOSS_SLAIN_1_MAGE ) &&
 					global.contains( Badge.BOSS_SLAIN_1_ROGUE ) &&
-					global.contains( Badge.BOSS_SLAIN_1_HUNTRESS)) {
+					global.contains( Badge.BOSS_SLAIN_1_HUNTRESS) &&
+					global.contains( Badge.BOSS_SLAIN_1_ELF)) {
 					
 					badge = Badge.BOSS_SLAIN_1_ALL_CLASSES;
 					if (!global.contains( badge )) {
@@ -662,6 +666,12 @@ public class Badges {
 				case WARDEN:
 					badge = Badge.BOSS_SLAIN_3_WARDEN;
 					break;
+				case SHAMAN:
+					badge = Badge.BOSS_SLAIN_3_SHAMAN;
+					break;
+				case SCOUT:
+					badge = Badge.BOSS_SLAIN_3_SCOUT;
+					break;
 				default:
 					return;
 				}
@@ -678,7 +688,9 @@ public class Badges {
 					global.contains( Badge.BOSS_SLAIN_3_FREERUNNER ) &&
 					global.contains( Badge.BOSS_SLAIN_3_ASSASSIN ) &&
 					global.contains( Badge.BOSS_SLAIN_3_SNIPER ) &&
-					global.contains( Badge.BOSS_SLAIN_3_WARDEN )) {
+					global.contains( Badge.BOSS_SLAIN_3_WARDEN ) &&
+					global.contains( Badge.BOSS_SLAIN_3_SHAMAN ) &&
+					global.contains( Badge.BOSS_SLAIN_3_SCOUT ) ) {
 					
 					badge = Badge.BOSS_SLAIN_3_ALL_SUBCLASSES;
 					if (!global.contains( badge )) {
