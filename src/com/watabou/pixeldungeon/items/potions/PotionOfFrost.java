@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FrostArrow;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
 
@@ -41,11 +40,11 @@ public class PotionOfFrost extends Potion {
 			return;
 		}
 		
-		PathFinder.buildDistanceMap( cell, BArray.not( Level.losBlocking, null ), DISTANCE );
+		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.losBlocking, null ), DISTANCE );
 		
 		Fire fire = (Fire)Dungeon.level.blobs.get( Fire.class );
 		
-		for (int i=0; i < Level.getLength(); i++) {
+		for (int i=0; i < Dungeon.level.getLength(); i++) {
 			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
 				Freezing.affect( i, fire );
 			}

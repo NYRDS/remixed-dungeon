@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -66,7 +65,7 @@ abstract public class RottenFood extends Food{
 	
 	@Override
 	protected void onThrow( int cell ) {
-	   if (Dungeon.level.map[cell] == Terrain.WELL || Level.pit[cell]) {
+	   if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
 			super.onThrow( cell );
 		} else  {
 			if(! molder( cell )){

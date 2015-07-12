@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.buffs.Shadows;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
@@ -36,7 +35,7 @@ public class Foliage extends Blob {
 	protected void evolve() {
 
 		int from = getWidth() + 1;
-		int to = Level.getLength() - getWidth() - 1;
+		int to   = getLength() - getWidth() - 1;
 		
 		int[] map = Dungeon.level.map;
 		boolean regrowth = false;

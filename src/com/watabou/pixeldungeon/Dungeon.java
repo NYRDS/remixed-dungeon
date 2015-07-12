@@ -95,16 +95,27 @@ public class Dungeon {
 	private static boolean gameOver = false;
 	
 	// Hero's field of view
-	public static boolean[] visible = new boolean[Level.getLength()];
+	public static boolean[] visible;
 	
 	public static boolean nightMode;
+	
+	private static boolean[] passable;
+	
+	public static HeroClass heroClass;
 	
 	public static void init() {
 		challenges = PixelDungeon.challenges();
 		
-		Actor.clear();
 		
-		PathFinder.setMapSize( Level.getWidth(), Level.getHeight() );
+		
+		// must know sizes here
+		
+		Actor.clear(level.getLength());
+		visible = new boolean[level.getLength()];
+		passable = new boolean[level.getLength()];
+		
+		PathFinder.setMapSize( level.getWidth(), level.getHeight() );
+		
 		
 		Scroll.initLabels();
 		Potion.initColors();
@@ -148,11 +159,12 @@ public class Dungeon {
 	
 	public static Level testLevel() {
 		Dungeon.level = null;
-		Actor.clear();
-
+		
 		level = new ModderLevel();
 		
-		level.create();
+		level.create(64,64);
+		
+		Actor.clear(level.getLength());
 		
 		return level;
 	}
@@ -160,7 +172,6 @@ public class Dungeon {
 	public static Level newLevel() {
 		
 		Dungeon.level = null;
-		Actor.clear();
 		
 		depth++;
 		if (depth > Statistics.deepestFloor) {
@@ -232,6 +243,8 @@ public class Dungeon {
 			Statistics.deepestFloor--;
 		}
 		
+		Actor.clear(level.getLength());
+		
 		level.create();
 		
 		Statistics.qualifiedForNoKilling = !bossLevel();
@@ -241,7 +254,7 @@ public class Dungeon {
 	
 	public static void resetLevel() {
 		
-		Actor.clear();
+		Actor.clear(level.getLength());
 		
 		Arrays.fill( visible, false );
 		
@@ -461,7 +474,8 @@ public class Dungeon {
 		Dungeon.depth = -1;
 		
 		if (fullLoad) {
-			PathFinder.setMapSize( Level.getWidth(), Level.getHeight() );
+			
+			PathFinder.setMapSize( level.getWidth(), level.getHeight() );
 		}
 		
 		Scroll.restore( bundle );
@@ -523,13 +537,17 @@ public class Dungeon {
 	public static Level loadLevel( ) throws IOException {
 		
 		Dungeon.level = null;
-		Actor.clear();
+		
 		
 		InputStream input = Game.instance().openFileInput( SaveUtils.depthFile( heroClass , depth ) ) ;
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
-		return (Level)bundle.get( "level" );
+		Level level = (Level)bundle.get( "level" );
+		
+		Actor.clear(level.getLength());
+		
+		return level;
 	}
 	
 	public static void deleteGame(boolean deleteLevels ) {
@@ -587,15 +605,12 @@ public class Dungeon {
 		}
 		
 		level.updateFieldOfView( hero );
-		System.arraycopy( Level.fieldOfView, 0, visible, 0, visible.length );
+		System.arraycopy( level.fieldOfView, 0, visible, 0, visible.length );
 		
 		BArray.or( level.visited, visible, level.visited );
 		
 		GameScene.afterObserve();
 	}
-	
-	private static boolean[] passable = new boolean[Level.getLength()];
-	public static HeroClass heroClass;
 
 	private static void markActorsAsUnpassableIgnoreFov(){
 		for (Actor actor : Actor.all()) {
@@ -619,14 +634,14 @@ public class Dungeon {
 	
 	public static int findPath( Char ch, int from, int to, boolean pass[], boolean[] visible ) {
 		
-		if (Level.adjacent( from, to )) {
-			return Actor.findChar( to ) == null && (pass[to] || Level.avoid[to]) ? to : -1;
+		if (level.adjacent( from, to )) {
+			return Actor.findChar( to ) == null && (pass[to] || level.avoid[to]) ? to : -1;
 		}
 		
 		if (ch.flying || ch.buff( Amok.class ) != null) {
-			BArray.or( pass, Level.avoid, passable );
+			BArray.or( pass, level.avoid, passable );
 		} else {
-			System.arraycopy( pass, 0, passable, 0, Level.getLength() );
+			System.arraycopy( pass, 0, passable, 0, level.getLength() );
 		}
 		
 		if(visible != null){
@@ -642,9 +657,9 @@ public class Dungeon {
 	public static int flee( Char ch, int cur, int from, boolean pass[], boolean[] visible ) {
 		
 		if (ch.flying) {
-			BArray.or( pass, Level.avoid, passable );
+			BArray.or( pass, level.avoid, passable );
 		} else {
-			System.arraycopy( pass, 0, passable, 0, Level.getLength() );
+			System.arraycopy( pass, 0, passable, 0, level.getLength() );
 		}
 		
 		if(visible != null){

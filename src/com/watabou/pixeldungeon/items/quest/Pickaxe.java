@@ -99,7 +99,7 @@ public class Pickaxe extends Weapon {
 							CellEmitter.center( pos ).burst( Speck.factory( Speck.STAR ), 7 );
 							Sample.INSTANCE.play( Assets.SND_EVOKE );
 							
-							Level.set( pos, Terrain.WALL );
+							Dungeon.level.set( pos, Terrain.WALL );
 							GameScene.updateMap( pos );
 							
 							DarkGold gold = new DarkGold();

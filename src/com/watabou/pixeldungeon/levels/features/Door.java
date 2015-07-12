@@ -20,14 +20,13 @@ package com.watabou.pixeldungeon.levels.features;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class Door {
 
 	public static void enter( int pos ) {
-		Level.set( pos, Terrain.OPEN_DOOR );
+		Dungeon.level.set( pos, Terrain.OPEN_DOOR );
 		GameScene.updateMap( pos );
 		Dungeon.observe();
 		
@@ -38,7 +37,7 @@ public class Door {
 	
 	public static void leave( int pos ) {
 		if (Dungeon.level.getHeap( pos ) == null) {
-			Level.set( pos, Terrain.DOOR );
+			Dungeon.level.set( pos, Terrain.DOOR );
 			GameScene.updateMap( pos );
 			Dungeon.observe();
 		}

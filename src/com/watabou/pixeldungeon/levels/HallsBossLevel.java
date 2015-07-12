@@ -246,19 +246,19 @@ public class HallsBossLevel extends Level {
 		HallsLevel.addVisuals( this, scene );
 	}
 
-	private static int _RoomLeft() {
+	private int _RoomLeft() {
 		return getWidth() / 2 - 1;
 	}
 
-	private static int _RoomRight() {
+	private int _RoomRight() {
 		return getWidth() / 2 + 1;
 	}
 
-	private static int _RoomTop() {
+	private int _RoomTop() {
 		return getHeight() / 2 - 1;
 	}
 
-	private static int _RoomBottom() {
+	private int _RoomBottom() {
 		return getHeight() / 2 + 1;
 	}
 }

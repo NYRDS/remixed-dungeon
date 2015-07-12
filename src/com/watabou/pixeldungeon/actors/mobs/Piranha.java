@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.PiranhaSprite;
 import com.watabou.utils.Random;
 
@@ -52,7 +51,7 @@ public class Piranha extends Mob {
 	
 	@Override
 	protected boolean act() {
-		if (!Level.water[pos]) {
+		if (!Dungeon.level.water[pos]) {
 			die( null );
 			return true;
 		} else {
@@ -96,7 +95,7 @@ public class Piranha extends Mob {
 			return false;
 		}
 		
-		int step = Dungeon.findPath( this, pos, target, Level.water, null);
+		int step = Dungeon.findPath( this, pos, target, Dungeon.level.water, null);
 		if (step != -1) {
 			move( step );
 			return true;
@@ -107,7 +106,7 @@ public class Piranha extends Mob {
 	
 	@Override
 	protected boolean getFurther( int target ) {
-		int step = Dungeon.flee( this, pos, target, Level.water, null);
+		int step = Dungeon.flee( this, pos, target, Dungeon.level.water, null);
 		if (step != -1) {
 			move( step );
 			return true;

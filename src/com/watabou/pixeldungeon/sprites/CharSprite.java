@@ -24,6 +24,7 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.EmoIcon;
@@ -34,7 +35,6 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.TorchHalo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -96,7 +96,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		ch.setSprite(this);
 		
 		place( ch.pos );
-		turnTo( ch.pos, Random.Int( Level.getLength() ) );
+		turnTo( ch.pos, Random.Int( Dungeon.level.getLength() ) );
 		
 		ch.updateSpriteState();
 	}
@@ -106,8 +106,8 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		final int csize = DungeonTilemap.SIZE;
 		
 		return new PointF(
-			((cell % Level.getWidth()) + 0.5f) * csize - width * 0.5f,
-			((cell / Level.getWidth()) + 1.0f) * csize - height
+			((cell % Dungeon.level.getWidth()) + 0.5f) * csize - width * 0.5f,
+			((cell / Dungeon.level.getWidth()) + 1.0f) * csize - height
 		);
 	}
 	
@@ -143,7 +143,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		
 		turnTo( from , to );
 		
-		if (visible && Level.water[from] && !ch.flying) {
+		if (visible && Dungeon.level.water[from] && !ch.flying) {
 			GameScene.ripple( from );
 		}
 		
@@ -178,8 +178,8 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	}
 	
 	public void turnTo( int from, int to ) {
-		int fx = from % Level.getWidth();
-		int tx = to % Level.getWidth();
+		int fx = from % Dungeon.level.getWidth();
+		int tx = to % Dungeon.level.getWidth();
 		if (tx > fx) {
 			flipHorizontal = false;
 		} else if (tx < fx) {

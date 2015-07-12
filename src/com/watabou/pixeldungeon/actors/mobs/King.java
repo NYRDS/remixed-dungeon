@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.CityBossLevel;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.KingSprite;
 import com.watabou.pixeldungeon.sprites.UndeadSprite;
@@ -109,7 +108,7 @@ public class King extends Mob {
 	protected boolean canAttack( Char enemy ) {
 		return canTryToSummon() ? 
 			pos == CityBossLevel.pedestal( nextPedestal ) : 
-			Level.adjacent( pos, enemy.pos );
+			Dungeon.level.adjacent( pos, enemy.pos );
 	}
 	
 	private boolean canTryToSummon() {
@@ -158,7 +157,7 @@ public class King extends Mob {
 		getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );		
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 		
-		boolean[] passable = Level.passable.clone();
+		boolean[] passable = Dungeon.level.passable.clone();
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
 				passable[((Char)actor).pos] = false;
@@ -174,7 +173,7 @@ public class King extends Mob {
 	undeadLabel:
 		for (int i=0; i < undeadsToSummon; i++) {
 			do {
-				for (int j=0; j < Level.getLength(); j++) {
+				for (int j=0; j < Dungeon.level.getLength(); j++) {
 					if (PathFinder.distance[j] == dist) {
 						
 						Undead undead = new Undead();

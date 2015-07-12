@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.utils.Random;
@@ -45,8 +44,8 @@ public class Displacement extends Glyph {
 		
 		int nTries = (armor.level() < 0 ? 1 : armor.level() + 1) * 5;
 		for (int i=0; i < nTries; i++) {
-			int pos = Random.Int( Level.getLength() );
-			if (Dungeon.visible[pos] && Level.passable[pos] && Actor.findChar( pos ) == null) {
+			int pos = Random.Int( Dungeon.level.getLength() );
+			if (Dungeon.visible[pos] && Dungeon.level.passable[pos] && Actor.findChar( pos ) == null) {
 				
 				WandOfBlink.appear( defender, pos );
 				Dungeon.level.press( pos, defender );

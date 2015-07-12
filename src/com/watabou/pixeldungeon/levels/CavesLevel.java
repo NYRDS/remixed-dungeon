@@ -222,7 +222,7 @@ public class CavesLevel extends RegularLevel {
 	}
 	
 	public static void addVisuals( Level level, Scene scene ) {
-		for (int i=0; i < getLength(); i++) {
+		for (int i=0; i < level.getLength(); i++) {
 			if (level.map[i] == Terrain.WALL_DECO) {
 				scene.add( new Vein( i ) );
 			}

@@ -36,7 +36,7 @@ public class VaultPainter extends Painter {
 		
 		int cx = (room.left + room.right) / 2;
 		int cy = (room.top + room.bottom) / 2;
-		int c = cx + cy * Level.getWidth();
+		int c = cx + cy * level.getWidth();
 		
 		switch (Random.Int( 3 )) {
 		

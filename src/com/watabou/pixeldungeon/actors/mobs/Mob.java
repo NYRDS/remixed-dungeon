@@ -36,7 +36,6 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -178,7 +177,7 @@ public abstract class Mob extends Char {
 
 		enemy = chooseEnemy();
 
-		boolean enemyInFOV = enemy.isAlive() && Level.fieldOfView[enemy.pos]
+		boolean enemyInFOV = enemy.isAlive() && Dungeon.level.fieldOfView[enemy.pos]
 				&& enemy.invisible <= 0;
 
 		return state.act(enemyInFOV, justAlerted);
@@ -191,7 +190,7 @@ public abstract class Mob extends Char {
 
 				HashSet<Mob> enemies = new HashSet<Mob>();
 				for (Mob mob : Dungeon.level.mobs) {
-					if (mob != this && Level.fieldOfView[mob.pos]) {
+					if (mob != this && Dungeon.level.fieldOfView[mob.pos]) {
 						enemies.add(mob);
 					}
 				}
@@ -252,7 +251,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected boolean canAttack(Char enemy) {
-		return Level.adjacent(pos, enemy.pos) && !pacified;
+		return Dungeon.level.adjacent(pos, enemy.pos) && !pacified;
 	}
 
 	protected boolean getCloser(int target) {
@@ -263,9 +262,9 @@ public abstract class Mob extends Char {
 		int step = -1;
 
 		if (!isWallWalker()) {
-			step = Dungeon.findPath(this, pos, target, Level.passable,null);
+			step = Dungeon.findPath(this, pos, target, Dungeon.level.passable,null);
 		} else {
-			step = Dungeon.findPath(this, pos, target, Level.solid,null);
+			step = Dungeon.findPath(this, pos, target, Dungeon.level.solid,null);
 		}
 
 		if (step != -1) {
@@ -280,9 +279,9 @@ public abstract class Mob extends Char {
 		int step = -1;
 
 		if (!isWallWalker()) {
-			step = Dungeon.flee(this, pos, target, Level.passable,null);
+			step = Dungeon.flee(this, pos, target, Dungeon.level.passable,null);
 		} else {
-			step = Dungeon.flee(this, pos, target, Level.solid,null);
+			step = Dungeon.flee(this, pos, target, Dungeon.level.solid,null);
 		}
 		if (step != -1) {
 			move(step);

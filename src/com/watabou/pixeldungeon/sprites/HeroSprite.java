@@ -27,9 +27,9 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
@@ -118,7 +118,7 @@ public class HeroSprite extends CharSprite {
 	public void jump(int from, int to, Callback callback) {
 		jumpCallback = callback;
 
-		int distance = Level.distance(from, to);
+		int distance = Dungeon.level.distance(from, to);
 		jumpTweener = new JumpTweener(this, worldToCamera(to), distance * 4,
 				distance * 0.1f);
 		jumpTweener.listener = this;
@@ -132,7 +132,7 @@ public class HeroSprite extends CharSprite {
 	public void onComplete(Tweener tweener) {
 		if (tweener == jumpTweener) {
 
-			if (visible && Level.water[ch.pos] && !ch.flying) {
+			if (visible && Dungeon.level.water[ch.pos] && !ch.flying) {
 				GameScene.ripple(ch.pos);
 			}
 			if (jumpCallback != null) {

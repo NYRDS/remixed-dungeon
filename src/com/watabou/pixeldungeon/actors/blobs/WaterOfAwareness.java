@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -50,12 +49,12 @@ public class WaterOfAwareness extends WellWater {
 		
 		hero.belongings.observe();
 		
-		for (int i=0; i < Level.getLength(); i++) {
+		for (int i=0; i < Dungeon.level.getLength(); i++) {
 			
 			int terr = Dungeon.level.map[i];
 			if ((Terrain.flags[terr] & Terrain.SECRET) != 0) {
 				
-				Level.set( i, Terrain.discover( terr ) );						
+				Dungeon.level.set( i, Terrain.discover( terr ) );						
 				GameScene.updateMap( i );
 				
 				if (Dungeon.visible[i]) {

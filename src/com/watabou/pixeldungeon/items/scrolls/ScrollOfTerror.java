@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfTerror extends Scroll {
@@ -42,7 +41,7 @@ public class ScrollOfTerror extends Scroll {
 		int count = 0;
 		Mob affected = null;
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
-			if (Level.fieldOfView[mob.pos]) {
+			if (Dungeon.level.fieldOfView[mob.pos]) {
 				Terror terror = Buff.affect( mob, Terror.class, Terror.DURATION );
 				terror.source = curUser;
 				

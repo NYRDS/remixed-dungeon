@@ -35,7 +35,6 @@ import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -112,7 +111,7 @@ public class Tengu extends Mob {
 	
 	@Override
 	protected boolean getCloser( int target ) {
-		if (Level.fieldOfView[target]) {
+		if (Dungeon.level.fieldOfView[target]) {
 			jump();
 			return true;
 		} else {
@@ -128,7 +127,7 @@ public class Tengu extends Mob {
 	@Override
 	protected boolean doAttack( Char enemy ) {
 		timeToJump--;
-		if (timeToJump <= 0 && Level.adjacent( pos, enemy.pos )) {
+		if (timeToJump <= 0 && Dungeon.level.adjacent( pos, enemy.pos )) {
 			jump();
 			return true;
 		} else {
@@ -142,11 +141,11 @@ public class Tengu extends Mob {
 		for (int i=0; i < 4; i++) {
 			int trapPos;
 			do {
-				trapPos = Random.Int( Level.getLength() );
-			} while (!Level.fieldOfView[trapPos] || !Level.passable[trapPos]);
+				trapPos = Random.Int( Dungeon.level.getLength() );
+			} while (!Dungeon.level.fieldOfView[trapPos] || !Dungeon.level.passable[trapPos]);
 			
 			if (Dungeon.level.map[trapPos] == Terrain.INACTIVE_TRAP) {
-				Level.set( trapPos, Terrain.POISON_TRAP );
+				Dungeon.level.set( trapPos, Terrain.POISON_TRAP );
 				GameScene.updateMap( trapPos );
 				ScrollOfMagicMapping.discover( trapPos );
 			}
@@ -154,11 +153,11 @@ public class Tengu extends Mob {
 		
 		int newPos;
 		do {
-			newPos = Random.Int( Level.getLength() );
+			newPos = Random.Int( Dungeon.level.getLength() );
 		} while (
-			!Level.fieldOfView[newPos] || 
-			!Level.passable[newPos] || 
-			Level.adjacent( newPos, enemy.pos ) ||
+			!Dungeon.level.fieldOfView[newPos] || 
+			!Dungeon.level.passable[newPos] || 
+			Dungeon.level.adjacent( newPos, enemy.pos ) ||
 			Actor.findChar( newPos ) != null);
 		
 		getSprite().move( pos, newPos );

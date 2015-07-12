@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
@@ -43,12 +42,12 @@ public class Regrowth extends Blob {
 					int c = Dungeon.level.map[i];
 					if (c == Terrain.EMPTY || c == Terrain.EMBERS || c == Terrain.EMPTY_DECO) {
 						
-						Level.set( i, cur[i] > 9 ? Terrain.HIGH_GRASS : Terrain.GRASS );
+						Dungeon.level.set( i, cur[i] > 9 ? Terrain.HIGH_GRASS : Terrain.GRASS );
 						mapUpdated = true;
 						
 					} else if (c == Terrain.GRASS && cur[i] > 9) {
 						
-						Level.set( i, Terrain.HIGH_GRASS );
+						Dungeon.level.set( i, Terrain.HIGH_GRASS );
 						mapUpdated = true;
 						
 					}

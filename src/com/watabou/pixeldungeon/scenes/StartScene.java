@@ -337,10 +337,6 @@ public class StartScene extends PixelScene {
 		Dungeon.heroClass = curClass;
 
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
-
-		if( ModdingMode.mode()) {
-			InterlevelScene.mode = InterlevelScene.Mode.MODDING;
-		}
 		
 		if (PixelDungeon.intro()) {
 			PixelDungeon.intro(false);

@@ -18,14 +18,16 @@
 package com.watabou.pixeldungeon.effects;
 
 import javax.microedition.khronos.opengles.GL10;
+
 import android.opengl.GLES20;
+
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
@@ -57,8 +59,8 @@ public class Lightning extends Group {
 		
 		for (int i=0; i < length; i++) {
 			int c = cells[i];
-			cx[i] = (c % Level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
-			cy[i] = (c / Level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
+			cx[i] = (c % Dungeon.level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
+			cy[i] = (c / Dungeon.level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
 		}
 		
 		arcsS = new Image[length - 1];

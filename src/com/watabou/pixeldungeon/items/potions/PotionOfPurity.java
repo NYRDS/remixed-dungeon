@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.food.RottenFood;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PathFinder;
@@ -46,7 +45,7 @@ public class PotionOfPurity extends Potion {
 	@Override
 	public void shatter( int cell ) {
 		
-		PathFinder.buildDistanceMap( cell, BArray.not( Level.losBlocking, null ), DISTANCE );
+		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.losBlocking, null ), DISTANCE );
 		
 		boolean procd = false;
 		
@@ -62,7 +61,7 @@ public class PotionOfPurity extends Potion {
 				continue;
 			}
 			
-			for (int i=0; i < Level.getLength(); i++) {
+			for (int i=0; i < Dungeon.level.getLength(); i++) {
 				if (PathFinder.distance[i] < Integer.MAX_VALUE) {
 					
 					int value = blob.cur[i]; 

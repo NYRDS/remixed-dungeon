@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -80,8 +79,8 @@ public class RogueArmor extends ClassArmor {
 		public void onSelect( Integer target ) {
 			if (target != null) {
 
-				if (!Level.fieldOfView[target] || 
-					!(Level.passable[target] || Level.avoid[target]) || 
+				if (!Dungeon.level.fieldOfView[target] || 
+					!(Dungeon.level.passable[target] || Dungeon.level.avoid[target]) || 
 					Actor.findChar( target ) != null) {
 					
 					GLog.w( TXT_FOV );
@@ -91,7 +90,7 @@ public class RogueArmor extends ClassArmor {
 				curUser.hp(curUser.hp() - (curUser.hp() / 3));
 				
 				for (Mob mob : Dungeon.level.mobs) {
-					if (Level.fieldOfView[mob.pos]) {
+					if (Dungeon.level.fieldOfView[mob.pos]) {
 						Buff.prolong( mob, Blindness.class, 2 );
 						mob.state = mob.WANDERING;
 						mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );

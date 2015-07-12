@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
@@ -50,7 +49,7 @@ public class AirElemental extends Mob {
 
 	@Override
 	protected boolean getCloser(int target) {
-		if (state == HUNTING && Level.distance(pos, target) < maxDistance - 1) {
+		if (state == HUNTING && Dungeon.level.distance(pos, target) < maxDistance - 1) {
 			return getFurther(target);
 		}
 
@@ -60,7 +59,7 @@ public class AirElemental extends Mob {
 	@Override
 	protected boolean canAttack(Char enemy) {
 
-		if (Level.adjacent(pos, enemy.pos)) {
+		if (Dungeon.level.adjacent(pos, enemy.pos)) {
 			return false;
 		}
 
@@ -87,7 +86,7 @@ public class AirElemental extends Mob {
 
 			if ((ch = Actor.findChar(c)) != null && ch instanceof Hero) {
 				int next = Ballistica.trace[i + 1];
-				if ((Level.passable[next] || Level.avoid[next])
+				if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next])
 						&& Actor.findChar(next) == null) {
 					ch.move(next);
 					ch.getSprite().move(ch.pos, next);

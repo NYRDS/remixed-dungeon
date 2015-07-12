@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -35,7 +34,7 @@ public class ElfArmor extends ClassArmor {
 	public void doSpecial() {
 		
 		for (Mob mob : Dungeon.level.mobs) {
-			if (Level.fieldOfView[mob.pos]) {
+			if (Dungeon.level.fieldOfView[mob.pos]) {
 				GameScene.add( Blob.seed( mob.pos, 100, Regrowth.class ) );
 			}
 		}

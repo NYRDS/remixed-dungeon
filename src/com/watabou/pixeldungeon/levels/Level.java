@@ -92,11 +92,9 @@ public abstract class Level implements Bundlable {
 	private static int width  = 32;
 	private static int height = 32;
 
-	public static final int[] NEIGHBOURS4 = { -getWidth(), +1, +getWidth(), -1 };
-	public static final int[] NEIGHBOURS8 = { +1, -1, +getWidth(), -getWidth(),
-			+1 + getWidth(), +1 - getWidth(), -1 + getWidth(), -1 - getWidth() };
-	public static final int[] NEIGHBOURS9 = { 0, +1, -1, +getWidth(), -getWidth(),
-			+1 + getWidth(), +1 - getWidth(), -1 + getWidth(), -1 - getWidth() };
+	public static int[] NEIGHBOURS4;
+	public static int[] NEIGHBOURS8;
+	public static int[] NEIGHBOURS9;
 
 	protected static final float TIME_TO_RESPAWN = 50;
 
@@ -113,20 +111,20 @@ public abstract class Level implements Bundlable {
 
 	public int viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : 8;
 
-	public static boolean[] fieldOfView = new boolean[getLength()];
+	public boolean[] fieldOfView = new boolean[getLength()];
 
-	public static boolean[] passable = new boolean[getLength()];
-	public static boolean[] losBlocking = new boolean[getLength()];
-	public static boolean[] flamable = new boolean[getLength()];
-	public static boolean[] secret = new boolean[getLength()];
-	public static boolean[] solid = new boolean[getLength()];
-	public static boolean[] avoid = new boolean[getLength()];
-	public static boolean[] water = new boolean[getLength()];
-	public static boolean[] pit = new boolean[getLength()];
+	public boolean[] passable = new boolean[getLength()];
+	public boolean[] losBlocking = new boolean[getLength()];
+	public boolean[] flamable = new boolean[getLength()];
+	public boolean[] secret = new boolean[getLength()];
+	public boolean[] solid = new boolean[getLength()];
+	public boolean[] avoid = new boolean[getLength()];
+	public boolean[] water = new boolean[getLength()];
+	public boolean[] pit = new boolean[getLength()];
 
-	public static boolean[] nearWalls = new boolean[getLength()];
+	public boolean[] nearWalls = new boolean[getLength()];
 
-	public static boolean[] discoverable = new boolean[getLength()];
+	public boolean[] discoverable = new boolean[getLength()];
 
 	public Feeling feeling = Feeling.NONE;
 
@@ -192,6 +190,20 @@ public abstract class Level implements Bundlable {
 	}
 	
 	public void create() {
+		create(32, 32);
+	}
+	
+	public void create(int w, int h) {
+		
+		width  = w;
+		height = h;
+		
+		NEIGHBOURS4 = new int[]{ -getWidth(), +1, +getWidth(), -1 };
+		NEIGHBOURS8 = new int[]{ +1, -1, +getWidth(), -getWidth(),
+				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(), -1 - getWidth() };
+		NEIGHBOURS9 = new int[]{ 0, +1, -1, +getWidth(), -getWidth(),
+				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(), -1 - getWidth() };
+		
 		map = new int[getLength()];
 		visited = new boolean[getLength()];
 		Arrays.fill(visited, false);
@@ -586,7 +598,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public static void set(int cell, int terrain) {
+	public void set(int cell, int terrain) {
 		Painter.set(Dungeon.level, cell, terrain);
 
 		int flags = Terrain.flags[terrain];
@@ -640,7 +652,7 @@ public abstract class Level implements Bundlable {
 			int n;
 			do {
 				n = cell + Level.NEIGHBOURS8[Random.Int(8)];
-			} while (!Level.passable[n] && !Level.avoid[n]);
+			} while (!Dungeon.level.passable[n] && !Dungeon.level.avoid[n]);
 			return drop(item, n);
 
 		}
@@ -916,7 +928,7 @@ public abstract class Level implements Bundlable {
 		return fieldOfView;
 	}
 
-	public static int distance(int a, int b) {
+	public int distance(int a, int b) {
 		int ax = a % getWidth();
 		int ay = a / getWidth();
 		int bx = b % getWidth();
@@ -924,7 +936,7 @@ public abstract class Level implements Bundlable {
 		return Math.max(Math.abs(ax - bx), Math.abs(ay - by));
 	}
 
-	public static boolean adjacent(int a, int b) {
+	public boolean adjacent(int a, int b) {
 		int diff = Math.abs(a - b);
 		return diff == 1 || diff == getWidth() || diff == getWidth() + 1
 				|| diff == getWidth() - 1;
@@ -1072,16 +1084,16 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public static int getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
-	public static int getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-	public static int getLength() {
-		return getWidth()*getHeight();
+	public int getLength() {
+		return width*height;
 	}
 	
 	public boolean cellValid(int x, int y) {

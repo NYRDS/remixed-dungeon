@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -95,13 +94,13 @@ public class Shaman extends Mob implements Callback {
 	@Override
 	protected boolean doAttack( Char enemy ) {
 
-		if (Level.distance( pos, enemy.pos ) <= 1) {
+		if (Dungeon.level.distance( pos, enemy.pos ) <= 1) {
 			
 			return super.doAttack( enemy );
 			
 		} else {
 			
-			boolean visible = Level.fieldOfView[pos] || Level.fieldOfView[enemy.pos]; 
+			boolean visible = Dungeon.level.fieldOfView[pos] || Dungeon.level.fieldOfView[enemy.pos]; 
 			if (visible) {
 				((ShamanSprite)getSprite()).zap( enemy.pos );
 			}
@@ -110,7 +109,7 @@ public class Shaman extends Mob implements Callback {
 			
 			if (hit( this, enemy, true )) {
 				int dmg = Random.Int( 2, 12 );
-				if (Level.water[enemy.pos] && !enemy.flying) {
+				if (Dungeon.level.water[enemy.pos] && !enemy.flying) {
 					dmg *= 1.5f;
 				}
 				enemy.damage( dmg, LightningTrap.LIGHTNING );

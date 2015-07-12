@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
@@ -47,11 +46,11 @@ public class Icecap extends Plant {
 	
 	@Override
 	public void effect(int pos, Char ch ) {
-		PathFinder.buildDistanceMap( pos, BArray.not( Level.losBlocking, null ), 1 );
+		PathFinder.buildDistanceMap( pos, BArray.not( Dungeon.level.losBlocking, null ), 1 );
 		
 		Fire fire = (Fire)Dungeon.level.blobs.get( Fire.class );
 		
-		for (int i=0; i < Level.getLength(); i++) {
+		for (int i=0; i < Dungeon.level.getLength(); i++) {
 			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
 
 				Freezing.affect( i, fire );

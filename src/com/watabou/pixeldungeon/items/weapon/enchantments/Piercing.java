@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 public class Piercing extends Enchantment {
@@ -54,7 +54,7 @@ public class Piercing extends Enchantment {
 				ch.getSprite().flash();
 				
 				pos += d;
-			} while (pos >= 0 && pos < Level.getLength());
+			} while (pos >= 0 && pos < Dungeon.level.getLength());
 			
 			return true;
 			

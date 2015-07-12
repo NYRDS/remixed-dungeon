@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -209,7 +208,7 @@ public class Toolbar extends Component {
 			}
 
 			if (cell < 0
-					|| cell > Level.getLength()
+					|| cell > Dungeon.level.getLength()
 					|| (!Dungeon.level.visited[cell] && !Dungeon.level.mapped[cell])) {
 				GameScene.show(new WndMessage(Game
 						.getVar(R.string.Toolbar_Info1)));

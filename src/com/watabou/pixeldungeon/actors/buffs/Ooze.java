@@ -21,7 +21,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -52,7 +51,7 @@ public class Ooze extends Buff {
 			}
 			spend( TICK );
 		}
-		if (Level.water[target.pos]) {
+		if (Dungeon.level.water[target.pos]) {
 			detach();
 		}
 		return true;

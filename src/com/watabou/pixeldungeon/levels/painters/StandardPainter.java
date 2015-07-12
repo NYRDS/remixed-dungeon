@@ -107,7 +107,7 @@ public class StandardPainter extends Painter {
 					t = Terrain.INACTIVE_TRAP;
 					break;
 				}
-				level.map[i * Level.getWidth() + j] = t;
+				level.map[i * level.getWidth() + j] = t;
 			}
 		}
 	}
@@ -124,8 +124,8 @@ public class StandardPainter extends Painter {
 		int shift = Random.Int( 2 );
 		for (int i=0; i < nGraves; i++) {
 			int pos = w > h ?
-				room.left + 1 + shift + i * 2 + (room.top + 2 + Random.Int( h-2 )) * Level.getWidth() :
-				(room.left + 2 + Random.Int( w-2 )) + (room.top + 1 + shift + i * 2) * Level.getWidth();	
+				room.left + 1 + shift + i * 2 + (room.top + 2 + Random.Int( h-2 )) * level.getWidth() :
+				(room.left + 2 + Random.Int( w-2 )) + (room.top + 1 + shift + i * 2) * level.getWidth();	
 			level.drop( i == index ? Generator.random() : new Gold(), pos ).type = Heap.Type.TOMB;
 		}
 	}

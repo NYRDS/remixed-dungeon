@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.effects;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.levels.Level;
 
 public class Ripple extends Image {
 
@@ -35,8 +35,8 @@ public class Ripple extends Image {
 	public void reset( int p ) {
 		revive();
 		
-		x = (p % Level.getWidth()) * DungeonTilemap.SIZE;
-		y = (p / Level.getWidth()) * DungeonTilemap.SIZE;
+		x = (p % Dungeon.level.getWidth()) * DungeonTilemap.SIZE;
+		y = (p / Dungeon.level.getWidth()) * DungeonTilemap.SIZE;
 		
 		origin.set( width / 2, height / 2 );
 		scale.set( 0 );

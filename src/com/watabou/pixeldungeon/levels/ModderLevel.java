@@ -117,7 +117,7 @@ public class ModderLevel extends SpiderLevel {
 	}
 	
 	public static void addVisuals( Level level, Scene scene ) {
-		for (int i=0; i < getLength(); i++) {
+		for (int i=0; i < level.getLength(); i++) {
 			if (level.map[i] == Terrain.WALL_DECO) {
 				scene.add( new Sink( i ) );
 			}
@@ -156,7 +156,7 @@ public class ModderLevel extends SpiderLevel {
 				super.update();
 				
 				if ((rippleDelay -= Game.elapsed) <= 0) {
-					GameScene.ripple( pos + getWidth() ).y -= DungeonTilemap.SIZE / 2;
+					GameScene.ripple( pos + Dungeon.level.getWidth() ).y -= DungeonTilemap.SIZE / 2;
 					rippleDelay = Random.Float( 0.2f, 0.3f );
 				}
 			}

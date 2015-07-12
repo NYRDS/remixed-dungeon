@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -43,7 +44,7 @@ public class ScrollOfMirrorImage extends Scroll {
 		
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			int p = curUser.pos + Level.NEIGHBOURS8[i];
-			if (Actor.findChar( p ) == null && (Level.passable[p] || Level.avoid[p])) {
+			if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
 				respawnPoints.add( p );
 			}
 		}

@@ -41,8 +41,8 @@ public class SpiderLevel extends Level {
 
 		for (int i = 0; i < 6; ++i) {
 
-			int cx = Random.Int(1, Level.getWidth() - 1);
-			int cy = Random.Int(1, Level.getWidth() - 1);
+			int cx = Random.Int(1, getWidth() - 1);
+			int cy = Random.Int(1, getWidth() - 1);
 
 			chambers.add(new Chamber(cx, cy, 3, Random.IntRange(0, 4)));
 		}

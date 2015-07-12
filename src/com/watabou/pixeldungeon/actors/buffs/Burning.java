@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -92,7 +91,7 @@ public class Burning extends Buff implements Hero.Doom {
 			detach();
 		}
 		
-		if (Level.flamable[target.pos]) {
+		if (Dungeon.level.flamable[target.pos]) {
 			GameScene.add( Blob.seed( target.pos, 4, Fire.class ) );
 		}
 		
@@ -101,7 +100,7 @@ public class Burning extends Buff implements Hero.Doom {
 		
 		if (left <= 0 ||
 			Random.Float() > (2 + (float)target.hp() / target.ht()) / 3 ||
-			(Level.water[target.pos] && !target.flying)) {
+			(Dungeon.level.water[target.pos] && !target.flying)) {
 			
 			detach();
 		}

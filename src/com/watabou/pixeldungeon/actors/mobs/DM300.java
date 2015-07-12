@@ -98,25 +98,18 @@ public class DM300 extends Mob {
 				GLog.n(Game.getVar(R.string.DM300_Info1));
 			}
 		}
-
-		int[] cells = {
-			step-1, step+1, step-Level.getWidth(), step+Level.getWidth(), 
-			step-1-Level.getWidth(), 
-			step-1+Level.getWidth(), 
-			step+1-Level.getWidth(), 
-			step+1+Level.getWidth()
-		};
-		int cell = cells[Random.Int( cells.length )];
+		
+		int cell = step + Level.NEIGHBOURS8[Random.Int( Level.NEIGHBOURS8.length )];
 		
 		if (Dungeon.visible[cell]) {
 			CellEmitter.get( cell ).start( Speck.factory( Speck.ROCK ), 0.07f, 10 );
 			Camera.main.shake( 3, 0.7f );
 			Sample.INSTANCE.play( Assets.SND_ROCKS );
 
-			if (Level.water[cell]) {
+			if (Dungeon.level.water[cell]) {
 				GameScene.ripple( cell );
 			} else if (Dungeon.level.map[cell] == Terrain.EMPTY) {
-				Level.set( cell, Terrain.EMPTY_DECO );
+				Dungeon.level.set( cell, Terrain.EMPTY_DECO );
 				GameScene.updateMap( cell );
 			}
 		}

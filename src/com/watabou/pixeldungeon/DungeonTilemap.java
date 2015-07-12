@@ -21,7 +21,6 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.noosa.tweeners.AlphaTweener;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -35,7 +34,7 @@ public class DungeonTilemap extends Tilemap {
 		super( 
 			Dungeon.level.tilesTex(), 
 			new TextureFilm( Dungeon.level.tilesTex(), SIZE, SIZE ) );
-		map( Dungeon.level.map, Level.getWidth() );
+		map( Dungeon.level.map, Dungeon.level.getWidth() );
 		
 		instance = this;
 	}
@@ -45,7 +44,7 @@ public class DungeonTilemap extends Tilemap {
 			offset( this.point().negate() ).
 			invScale( SIZE ).
 			floor();
-		return p.x >= 0 && p.x < Level.getWidth() && p.y >= 0 && p.y < Level.getHeight() ? p.x + p.y * Level.getWidth() : -1;
+		return p.x >= 0 && p.x < Dungeon.level.getWidth() && p.y >= 0 && p.y < Dungeon.level.getHeight() ? p.x + p.y * Dungeon.level.getWidth() : -1;
 	}
 	
 	@Override
@@ -72,13 +71,13 @@ public class DungeonTilemap extends Tilemap {
 	}
 	
 	public static PointF tileToWorld( int pos ) {
-		return new PointF( pos % Level.getWidth(), pos / Level.getWidth()  ).scale( SIZE );
+		return new PointF( pos % Dungeon.level.getWidth(), pos / Dungeon.level.getWidth()  ).scale( SIZE );
 	}
 	
 	public static PointF tileCenterToWorld( int pos ) {
 		return new PointF( 
-			(pos % Level.getWidth() + 0.5f) * SIZE, 
-			(pos / Level.getWidth() + 0.5f) * SIZE );
+			(pos % Dungeon.level.getWidth() + 0.5f) * SIZE, 
+			(pos / Dungeon.level.getWidth() + 0.5f) * SIZE );
 	}
 	
 	public static Image tile( int index ) {

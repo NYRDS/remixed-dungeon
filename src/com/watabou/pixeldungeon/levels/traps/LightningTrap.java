@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -56,8 +55,8 @@ public class LightningTrap {
 			
 			int[] points = new int[2];
 			
-			points[0] = pos - Level.getWidth();
-			points[1] = pos + Level.getWidth();
+			points[0] = pos - Dungeon.level.getWidth();
+			points[1] = pos + Dungeon.level.getWidth();
 			ch.getSprite().parent.add( new Lightning( points, 2, null ) );
 			
 			points[0] = pos - 1;

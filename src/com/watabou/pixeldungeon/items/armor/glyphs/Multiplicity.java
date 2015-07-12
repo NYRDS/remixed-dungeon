@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -51,7 +52,7 @@ public class Multiplicity extends Glyph {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				int p = defender.pos + Level.NEIGHBOURS8[i];
-				if (Actor.findChar( p ) == null && (Level.passable[p] || Level.avoid[p])) {
+				if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
 					respawnPoints.add( p );
 				}
 			}

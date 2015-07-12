@@ -36,7 +36,6 @@ import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -133,7 +132,7 @@ public class Plant implements Bundlable {
 
 		@Override
 		protected void onThrow(int cell) {
-			if (Dungeon.level.map[cell] == Terrain.ALCHEMY || Level.pit[cell]) {
+			if (Dungeon.level.map[cell] == Terrain.ALCHEMY || Dungeon.level.pit[cell]) {
 				super.onThrow(cell);
 			} else {
 				Dungeon.level.plant(this, cell);

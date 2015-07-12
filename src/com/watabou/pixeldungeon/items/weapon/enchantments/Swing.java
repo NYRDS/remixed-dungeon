@@ -35,12 +35,9 @@ public class Swing extends Enchantment {
 		if (maxDamage >= 1) {
 			
 			int p = attacker.pos;
-			int[] neighbours = {
-				p+1, p-1, p+Level.getWidth(), p-Level.getWidth(), 
-				p+1+Level.getWidth(), p+1-Level.getWidth(), p-1+Level.getWidth(), p-1-Level.getWidth()};
-			
-			for (int n : neighbours) {
-				Char ch = Actor.findChar( n );
+
+			for (int n : Level.NEIGHBOURS8) {
+				Char ch = Actor.findChar( n + p );
 				if (ch != null && ch != defender && ch.isAlive()) {
 					
 					int dr = Random.IntRange( 0, ch.dr() );
@@ -51,7 +48,6 @@ public class Swing extends Enchantment {
 					
 					ch.getSprite().bloodBurstA( attacker.getSprite().center(), effectiveDamage );
 					ch.getSprite().flash();
-					
 				}
 			}
 			

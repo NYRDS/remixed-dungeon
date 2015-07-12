@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Callback;
 
 public class ScorpioSprite extends MobSprite {
@@ -58,7 +58,7 @@ public class ScorpioSprite extends MobSprite {
 	
 	@Override
 	public void attack( int cell ) {
-		if (!Level.adjacent( cell, ch.pos )) {
+		if (!Dungeon.level.adjacent( cell, ch.pos )) {
 			
 			cellToAttack = cell;
 			turnTo( ch.pos , cell );

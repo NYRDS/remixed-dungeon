@@ -1,9 +1,9 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 
@@ -44,7 +44,7 @@ public abstract class Arrow extends MissileWeapon {
 	protected void onThrow( int cell ) {
 		if (curUser.bowEquiped()) {
 			
-			if(Level.adjacent(curUser.pos, cell) && curUser.heroClass != HeroClass.ELF) {
+			if(Dungeon.level.adjacent(curUser.pos, cell) && curUser.heroClass != HeroClass.ELF) {
 				miss( cell );
 				return;
 			}

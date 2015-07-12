@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 public class WaterElemental extends Mob {
@@ -61,7 +60,7 @@ public class WaterElemental extends Mob {
 	
 	@Override
 	public boolean act() {
-		if (Level.water[pos] && hp() < ht()) {
+		if (Dungeon.level.water[pos] && hp() < ht()) {
 			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			hp(Math.max(hp() + EXP,ht()));
 		}

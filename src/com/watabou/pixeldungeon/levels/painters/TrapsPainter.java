@@ -41,7 +41,7 @@ public class TrapsPainter extends Painter {
 		Room.Door door = room.entrance(); 
 		door.set( Room.Door.Type.REGULAR );
 		
-		int lastRow = level.map[room.left + 1 + (room.top + 1) * Level.getWidth()] == Terrain.CHASM ? Terrain.CHASM : Terrain.EMPTY;
+		int lastRow = level.map[room.left + 1 + (room.top + 1) * level.getWidth()] == Terrain.CHASM ? Terrain.CHASM : Terrain.EMPTY;
 
 		int x = -1;
 		int y = -1;
@@ -63,7 +63,7 @@ public class TrapsPainter extends Painter {
 			fill( level, room.left + 1, y, room.width() - 1, 1 , lastRow );
 		}
 		
-		int pos = x + y * Level.getWidth();
+		int pos = x + y * level.getWidth();
 		if (Random.Int( 3 ) == 0) {
 			if (lastRow == Terrain.CHASM) {
 				set( level, pos, Terrain.EMPTY );

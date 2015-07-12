@@ -134,9 +134,9 @@ public class CityBossLevel extends Level {
 	
 	public static int pedestal( boolean left ) {
 		if (left) {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
+			return (TOP + HALL_HEIGHT / 2) * Dungeon.level.getWidth() + _Center() - 2;
 		} else {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
+			return (TOP + HALL_HEIGHT / 2) * Dungeon.level.getWidth() + _Center() + 2;
 		}
 	}
 	
@@ -251,7 +251,7 @@ public class CityBossLevel extends Level {
 	}
 
 	private static int _Left() {
-		return (getWidth() - HALL_WIDTH) / 2;
+		return (Dungeon.level.getWidth() - HALL_WIDTH) / 2;
 	}
 
 	private static int _Center() {

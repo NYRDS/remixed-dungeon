@@ -81,7 +81,7 @@ public class Yog extends Mob {
 		do {
 			fist1.pos = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
 			fist2.pos = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
-		} while (!Level.passable[fist1.pos] || !Level.passable[fist2.pos] || fist1.pos == fist2.pos);
+		} while (!Dungeon.level.passable[fist1.pos] || !Dungeon.level.passable[fist2.pos] || fist1.pos == fist2.pos);
 		
 		GameScene.add( fist1 );
 		GameScene.add( fist2 );
@@ -111,7 +111,7 @@ public class Yog extends Mob {
 		
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			int p = pos + Level.NEIGHBOURS8[i];
-			if (Actor.findChar( p ) == null && (Level.passable[p] || Level.avoid[p])) {
+			if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
 				spawnPoints.add( p );
 			}
 		}
@@ -222,7 +222,7 @@ public class Yog extends Mob {
 		@Override
 		public boolean act() {
 			
-			if (Level.water[pos] && hp() < ht()) {
+			if (Dungeon.level.water[pos] && hp() < ht()) {
 				getSprite().emitter().burst( ShadowParticle.UP, 2 );
 				hp(hp() + REGENERATION);
 			}
@@ -291,7 +291,7 @@ public class Yog extends Mob {
 		@Override
 		public boolean attack( Char enemy ) {
 			
-			if (!Level.adjacent( pos, enemy.pos )) {
+			if (!Dungeon.level.adjacent( pos, enemy.pos )) {
 				spend( attackDelay() );
 				
 				if (hit( this, enemy, true )) {

@@ -17,12 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
-import java.util.Arrays;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.Bundle;
 
@@ -118,7 +116,7 @@ public class Blob extends Actor {
 	
 	protected void evolve() {
 		
-		boolean[] notBlocking = BArray.not( Level.solid, null );
+		boolean[] notBlocking = BArray.not( Dungeon.level.solid, null );
 		
 		for (int i=1; i < getHeight()-1; i++) {
 			
@@ -164,7 +162,7 @@ public class Blob extends Actor {
 		volume += amount;
 	}
 	
-	public void clear( int cell ) {
+	public void clearBlob( int cell ) {
 		volume -= cur[cell];
 		cur[cell] = 0;
 	}
@@ -194,14 +192,14 @@ public class Blob extends Actor {
 	}
 
 	public static int getWidth() {
-		return Level.getWidth();
+		return Dungeon.level.getWidth();
 	}
 
 	public static int getHeight() {
-		return Level.getHeight();
+		return Dungeon.level.getHeight();
 	}
 
 	public static int getLength() {
-		return Level.getLength();
+		return Dungeon.level.getLength();
 	}
 }

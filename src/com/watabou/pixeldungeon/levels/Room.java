@@ -23,6 +23,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.levels.painters.*;
 import com.watabou.utils.Bundlable;
@@ -99,7 +101,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	public int random( int m ) {
 		int x = Random.Int( left + 1 + m, right - m );
 		int y = Random.Int( top + 1 + m, bottom - m );
-		return x + y * Level.getWidth();
+		return x + y * Dungeon.level.getWidth();
 	}
 	
 	public void addNeigbour( Room other ) {
@@ -125,8 +127,8 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	}
 	
 	public boolean inside( int p ) {
-		int x = p % Level.getWidth();
-		int y = p / Level.getWidth();
+		int x = p % Dungeon.level.getWidth();
+		int y = p / Dungeon.level.getWidth();
 		return x > left && y > top && x < right && y < bottom;
 	}
 	

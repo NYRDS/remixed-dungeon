@@ -38,16 +38,16 @@ public class Bounce extends Glyph {
 
 		int level = Math.max( 0, armor.level() );
 		
-		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( level + 5) >= 4) {
+		if (Dungeon.level.adjacent( attacker.pos, defender.pos ) && Random.Int( level + 5) >= 4) {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				int ofs = Level.NEIGHBOURS8[i];
 				if (attacker.pos - defender.pos == ofs) {
 					int newPos = attacker.pos + ofs;
-					if ( newPos < 0 || newPos > Level.passable.length){
+					if ( newPos < 0 || newPos > Dungeon.level.passable.length){
 						newPos = defender.pos;
 					}
-					if ((Level.passable[newPos] || Level.avoid[newPos]) && Actor.findChar( newPos ) == null) {
+					if ((Dungeon.level.passable[newPos] || Dungeon.level.avoid[newPos]) && Actor.findChar( newPos ) == null) {
 						
 						Actor.addDelayed( new Pushing( attacker, attacker.pos, newPos ), -1 );
 						

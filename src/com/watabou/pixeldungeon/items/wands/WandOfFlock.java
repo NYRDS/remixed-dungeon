@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.SheepSprite;
@@ -50,7 +49,7 @@ public class WandOfFlock extends Wand {
 			cell = Ballistica.trace[Ballistica.distance - 2];
 		}
 		
-		boolean[] passable = BArray.or( Level.passable, Level.avoid, null );
+		boolean[] passable = BArray.or( Dungeon.level.passable, Dungeon.level.avoid, null );
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
 				passable[((Char)actor).pos] = false;
@@ -70,7 +69,7 @@ public class WandOfFlock extends Wand {
 	sheepLabel:
 		for (int i=0; i < n; i++) {
 			do {
-				for (int j=0; j < Level.getLength(); j++) {
+				for (int j=0; j < Dungeon.level.getLength(); j++) {
 					if (PathFinder.distance[j] == dist) {
 						
 						Sheep sheep = new Sheep();

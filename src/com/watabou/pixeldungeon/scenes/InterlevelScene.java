@@ -173,9 +173,6 @@ public class InterlevelScene extends PixelScene {
 						case FALL:
 							fall();
 							break;
-						case MODDING:
-							testMode();
-							break;
 						}
 					}
 					if ((Dungeon.depth % 5) == 0) {

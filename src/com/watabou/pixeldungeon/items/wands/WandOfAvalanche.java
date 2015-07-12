@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -55,9 +54,9 @@ public class WandOfAvalanche extends Wand {
 		Ballistica.distance = Math.min( Ballistica.distance, 8 + level );
 		
 		int size = 1 + level / 3;
-		PathFinder.buildDistanceMap( cell, BArray.not( Level.solid, null ), size );
+		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.solid, null ), size );
 		
-		for (int i=0; i < Level.getLength(); i++) {
+		for (int i=0; i < Dungeon.level.getLength(); i++) {
 			
 			int d = PathFinder.distance[i];
 			

@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -48,7 +47,7 @@ public class WandOfFirebolt extends Wand {
 		
 		for (int i=1; i < Ballistica.distance - 1; i++) {
 			int c = Ballistica.trace[i];
-			if (Level.flamable[c]) {
+			if (Dungeon.level.flamable[c]) {
 				GameScene.add( Blob.seed( c, 1, Fire.class ) );
 			}
 		}

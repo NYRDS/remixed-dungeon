@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.missiles.Shuriken;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -58,7 +57,7 @@ public class HuntressArmor extends ClassArmor {
 		Item proto = new Shuriken();
 		
 		for (Mob mob : Dungeon.level.mobs) {
-			if (Level.fieldOfView[mob.pos]) {
+			if (Dungeon.level.fieldOfView[mob.pos]) {
 				
 				Callback callback = new Callback() {	
 					@Override

@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
@@ -79,12 +78,12 @@ public abstract class Actor implements Bundlable {
 	
 	private static float now = 0;
 	
-	private static Char[] chars = new Char[Level.getLength()];
+	private static Char[] chars;
 	
-	public static void clear() {
+	public static void clear(int len) {
 		
 		now = 0;
-		
+		chars = new Char[len];
 		Arrays.fill( chars, null );
 		all.clear();
 	}

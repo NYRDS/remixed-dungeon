@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -38,10 +37,10 @@ public class ScrollOfMagicMapping extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		int length = Level.getLength();
+		int length = Dungeon.level.getLength();
 		int[] map = Dungeon.level.map;
 		boolean[] mapped = Dungeon.level.mapped;
-		boolean[] discoverable = Level.discoverable;
+		boolean[] discoverable = Dungeon.level.discoverable;
 		
 		boolean noticed = false;
 		
@@ -54,7 +53,7 @@ public class ScrollOfMagicMapping extends Scroll {
 				mapped[i] = true;
 				if ((Terrain.flags[terr] & Terrain.SECRET) != 0) {
 					
-					Level.set( i, Terrain.discover( terr ) );						
+					Dungeon.level.set( i, Terrain.discover( terr ) );						
 					GameScene.updateMap( i );
 					
 					if (Dungeon.visible[i]) {

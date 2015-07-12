@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.WarlockSprite;
@@ -90,7 +89,7 @@ public class Warlock extends Mob implements Callback {
 		int cell = pos;
 		for (int i = 1; i < 4; i++) {
 			int next = Ballistica.trace[i + 1];
-			if ((Level.passable[next] || Level.avoid[next]) && Actor.findChar(next) == null) {
+			if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
 				cell = next;
 				Dungeon.observe();
 			}
@@ -132,14 +131,14 @@ public class Warlock extends Mob implements Callback {
 
 	protected boolean doAttack(Char enemy) {
 
-		if (Level.adjacent(pos, enemy.pos)) {
+		if (Dungeon.level.adjacent(pos, enemy.pos)) {
 
 			return super.doAttack(enemy);
 
 		} else {
 
-			boolean visible = Level.fieldOfView[pos]
-					|| Level.fieldOfView[enemy.pos];
+			boolean visible = Dungeon.level.fieldOfView[pos]
+					|| Dungeon.level.fieldOfView[enemy.pos];
 			if (visible) {
 				((WarlockSprite) getSprite()).zap(enemy.pos);
 			} else {

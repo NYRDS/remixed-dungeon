@@ -18,7 +18,8 @@
 package com.watabou.pixeldungeon.mechanics;
 
 import java.util.Arrays;
-import com.watabou.pixeldungeon.levels.Level;
+
+import com.watabou.pixeldungeon.Dungeon;
 
 public final class ShadowCaster {
 
@@ -45,14 +46,14 @@ public final class ShadowCaster {
 	
 	public static void castShadow( int x, int y, boolean[] fieldOfView, int distance ) {
 
-		losBlocking = Level.losBlocking;
+		losBlocking = Dungeon.level.losBlocking;
 		
 		ShadowCaster.distance = distance;
 		limits = rounding[distance];
 		
 		ShadowCaster.fieldOfView = fieldOfView;
 		Arrays.fill( fieldOfView, false );
-		fieldOfView[y * Level.getWidth() + x] = true;
+		fieldOfView[y * Dungeon.level.getWidth() + x] = true;
 		
 		scanSector( x, y, +1, +1, 0, 0 );
 		scanSector( x, y, -1, +1, 0, 0 );
@@ -78,13 +79,13 @@ public final class ShadowCaster {
 				int x = cx + q * m1 + p * m3;
 				int y = cy + p * m2 + q * m4;
 				
-				if (y >= 0 && y < Level.getHeight() && x >= 0 && x < Level.getWidth()) {
+				if (y >= 0 && y < Dungeon.level.getHeight() && x >= 0 && x < Dungeon.level.getWidth()) {
 					
 					float a0 = (float)q / p;
 					float a1 = a0 - dq2;
 					float a2 = a0 + dq2;
 					
-					int pos = y * Level.getWidth() + x;
+					int pos = y * Dungeon.level.getWidth() + x;
 	
 					if (obs.isBlocked( a0 ) && obs.isBlocked( a1 ) && obs.isBlocked( a2 )) {
 				

@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
@@ -42,9 +41,9 @@ public class WndInfoCell extends Window {
 		super();
 		
 		int tile = Dungeon.level.map[cell];
-		if (Level.water[cell]) {
+		if (Dungeon.level.water[cell]) {
 			tile = Terrain.WATER;
-		} else if (Level.pit[cell]) {
+		} else if (Dungeon.level.pit[cell]) {
 			tile = Terrain.CHASM;
 		}
 		

@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfLullaby extends Scroll {
@@ -40,7 +39,7 @@ public class ScrollOfLullaby extends Scroll {
 		int count = 0;
 		Mob affected = null;
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
-			if (Level.fieldOfView[mob.pos]) {
+			if (Dungeon.level.fieldOfView[mob.pos]) {
 				Buff.affect( mob, Sleep.class );
 				if (mob.buff( Sleep.class ) != null) {
 					affected = mob;

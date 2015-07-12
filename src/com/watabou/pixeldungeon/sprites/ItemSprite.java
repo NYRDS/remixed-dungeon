@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -102,8 +101,8 @@ public class ItemSprite extends MovieClip {
 		final int csize = DungeonTilemap.SIZE;
 		
 		return new PointF(
-			cell % Level.getWidth() * csize + (csize - SIZE) * 0.5f,
-			cell / Level.getWidth() * csize + (csize - SIZE) * 0.5f
+			cell % Dungeon.level.getWidth() * csize + (csize - SIZE) * 0.5f,
+			cell / Dungeon.level.getWidth() * csize + (csize - SIZE) * 0.5f
 		);
 	}
 	
@@ -169,7 +168,7 @@ public class ItemSprite extends MovieClip {
 			acc.set( 0 );
 			place( heap.pos );
 			
-			if (Level.water[heap.pos]) {
+			if (Dungeon.level.water[heap.pos]) {
 				GameScene.ripple( heap.pos );
 			}
 		}

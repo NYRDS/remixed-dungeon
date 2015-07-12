@@ -49,7 +49,6 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.plants.Plant;
@@ -135,8 +134,8 @@ public class GameScene extends PixelScene {
 		add( terrain );
 		
 		water = new SkinnedBlock( 
-			Level.getWidth() * DungeonTilemap.SIZE, 
-			Level.getHeight() * DungeonTilemap.SIZE,
+			Dungeon.level.getWidth() * DungeonTilemap.SIZE, 
+			Dungeon.level.getHeight() * DungeonTilemap.SIZE,
 			Dungeon.level.waterTex() );
 		terrain.add( water );
 		
@@ -188,7 +187,7 @@ public class GameScene extends PixelScene {
 			addBlobSprite( blob );
 		}
 		
-		fog = new FogOfWar( Level.getWidth(), Level.getHeight() );
+		fog = new FogOfWar( Dungeon.level.getWidth(), Dungeon.level.getHeight() );
 		fog.updateVisibility( Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped );
 		add( fog );
 		
@@ -531,13 +530,13 @@ public class GameScene extends PixelScene {
 	
 	public static void updateMap() {
 		if (scene != null) {
-			scene.tiles.updated.set( 0, 0, Level.getWidth(), Level.getHeight() );
+			scene.tiles.updated.set( 0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight() );
 		}
 	}
 	
 	public static void updateMap( int cell ) {
 		if (scene != null) {
-			scene.tiles.updated.union( cell % Level.getWidth(), cell / Level.getWidth() );
+			scene.tiles.updated.union( cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth() );
 		}
 	}
 	

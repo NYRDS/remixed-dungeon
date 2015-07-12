@@ -151,7 +151,7 @@ public class HallsLevel extends RegularLevel {
 	}
 	
 	public static void addVisuals( Level level, Scene scene ) {
-		for (int i=0; i < getLength(); i++) {
+		for (int i=0; i < level.getLength(); i++) {
 			if (level.map[i] == 63) {
 				scene.add( new Stream( i ) );
 			}

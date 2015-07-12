@@ -45,7 +45,7 @@ public class GardenPainter extends Painter {
 		}
 		for (int i=room.top + 1; i < room.bottom; i++) {
 			for (int j=room.left + 1; j < room.right; j++) {
-				light.seed( j + Level.getWidth() * i, 1 );
+				light.seed( j + level.getWidth() * i, 1 );
 			}
 		}
 		level.blobs.put( Foliage.class, light );

@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -68,7 +67,7 @@ public class WandOfTelekinesis extends Wand {
 				} else {
 					
 					int next = Ballistica.trace[i + 1];
-					if ((Level.passable[next] || Level.avoid[next]) && Actor.findChar( next ) == null) {
+					if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar( next ) == null) {
 						
 						Actor.addDelayed( new Pushing( ch, ch.pos, next ), -1 );
 						
@@ -106,10 +105,10 @@ public class WandOfTelekinesis extends Wand {
 			Dungeon.level.press( c, null );
 			if (before == Terrain.OPEN_DOOR && Actor.findChar( c ) == null) {
 				
-				Level.set( c, Terrain.DOOR );
+				Dungeon.level.set( c, Terrain.DOOR );
 				GameScene.updateMap( c );
 				
-			} else if (Level.water[c]) {
+			} else if (Dungeon.level.water[c]) {
 				
 				GameScene.ripple( c );
 				

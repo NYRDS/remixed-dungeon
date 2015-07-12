@@ -489,7 +489,7 @@ public abstract class Char extends Actor {
 			List<Integer> candidates = new ArrayList<Integer>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = pos + dir;
-				if ((Level.passable[p] || Level.avoid[p]) && Actor.findChar( p ) == null) {
+				if ((Dungeon.level.passable[p] || Dungeon.level.avoid[p]) && Actor.findChar( p ) == null) {
 					candidates.add( p );
 				}
 			}
@@ -517,7 +517,7 @@ public abstract class Char extends Actor {
 	}
 	
 	public int distance( Char other ) {
-		return Level.distance( pos, other.pos );
+		return Dungeon.level.distance( pos, other.pos );
 	}
 	
 	public void onMotionComplete() {
