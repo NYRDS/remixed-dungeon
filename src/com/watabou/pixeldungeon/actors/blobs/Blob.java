@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
-import java.util.Arrays;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -94,18 +93,6 @@ public class Blob extends Actor {
 				cur[i + start] = data[i];
 				volume += data[i];
 			}
-		}
-		
-		if (Level.resizingNeeded) {
-			int[] cur = new int[Level.getLength()];
-			Arrays.fill( cur, 0 );
-			
-			int loadedMapSize = Level.loadedMapSize;
-			for (int i=0; i < loadedMapSize; i++) {
-				System.arraycopy( this.cur, i * loadedMapSize, cur, i * Level.getWidth(), loadedMapSize );
-			}
-			
-			this.cur = cur;
 		}
 	}
 	

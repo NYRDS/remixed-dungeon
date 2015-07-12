@@ -313,8 +313,7 @@ public class InterlevelScene extends PixelScene {
 		Dungeon.saveLevel();
 		Dungeon.depth = returnDepth;
 		Level level = Dungeon.loadLevel();
-		Dungeon.switchLevel(level,
-				Level.resizingNeeded ? level.adjustPos(returnPos) : returnPos);
+		Dungeon.switchLevel(level, returnPos);
 	}
 
 	private void problemWithSave() {
@@ -343,9 +342,7 @@ public class InterlevelScene extends PixelScene {
 				problemWithSave();
 				return;
 			}
-			Dungeon.switchLevel(level,
-					Level.resizingNeeded ? level.adjustPos(Dungeon.hero.pos)
-							: Dungeon.hero.pos);
+			Dungeon.switchLevel(level, Dungeon.hero.pos);
 		}
 	}
 

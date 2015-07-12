@@ -104,7 +104,6 @@ public abstract class Level implements Bundlable {
 	private static final String TXT_HIDDEN_PLATE_CLICKS = Game
 			.getVar(R.string.Level_HiddenPlate);
 
-	public static boolean resizingNeeded;
 	// This one can be different from resizingNeeded if the level
 	// was created in the older version of the game
 	public static int loadedMapSize;
@@ -192,9 +191,6 @@ public abstract class Level implements Bundlable {
 	}
 	
 	public void create() {
-
-		resizingNeeded = false;
-
 		map = new int[getLength()];
 		visited = new boolean[getLength()];
 		Arrays.fill(visited, false);
@@ -299,23 +295,15 @@ public abstract class Level implements Bundlable {
 
 		weakFloorCreated = false;
 
-		adjustMapSize();
-
 		Collection<Bundlable> collection = bundle.getCollection(HEAPS);
 		for (Bundlable h : collection) {
 			Heap heap = (Heap) h;
-			if (resizingNeeded) {
-				heap.pos = adjustPos(heap.pos);
-			}
 			heaps.put(heap.pos, heap);
 		}
 
 		collection = bundle.getCollection(PLANTS);
 		for (Bundlable p : collection) {
 			Plant plant = (Plant) p;
-			if (resizingNeeded) {
-				plant.pos = adjustPos(plant.pos);
-			}
 			plants.put(plant.pos, plant);
 		}
 
@@ -323,9 +311,6 @@ public abstract class Level implements Bundlable {
 		for (Bundlable m : collection) {
 			Mob mob = (Mob) m;
 			if (mob != null) {
-				if (resizingNeeded) {
-					mob.pos = adjustPos(mob.pos);
-				}
 				mobs.add(mob);
 			}
 		}
@@ -357,41 +342,6 @@ public abstract class Level implements Bundlable {
 		return feeling == Feeling.CHASM ? Terrain.EMPTY_SP : Terrain.EMPTY;
 	}
 
-	private void adjustMapSize() {
-		// For levels from older saves
-		if (map.length < getLength()) {
-
-			resizingNeeded = true;
-			loadedMapSize = (int) Math.sqrt(map.length);
-
-			int[] map = new int[getLength()];
-			Arrays.fill(map, Terrain.WALL);
-
-			boolean[] visited = new boolean[getLength()];
-			Arrays.fill(visited, false);
-
-			boolean[] mapped = new boolean[getLength()];
-			Arrays.fill(mapped, false);
-
-			for (int i = 0; i < loadedMapSize; i++) {
-				System.arraycopy(this.map, i * loadedMapSize, map, i * getWidth(),
-						loadedMapSize);
-				System.arraycopy(this.visited, i * loadedMapSize, visited, i
-						* getWidth(), loadedMapSize);
-				System.arraycopy(this.mapped, i * loadedMapSize, mapped, i
-						* getWidth(), loadedMapSize);
-			}
-
-			this.map = map;
-			this.visited = visited;
-			this.mapped = mapped;
-
-			entrance = adjustPos(entrance);
-			exit = adjustPos(exit);
-		} else {
-			resizingNeeded = false;
-		}
-	}
 
 	public int adjustPos(int pos) {
 		return (pos / loadedMapSize) * getWidth() + (pos % loadedMapSize);
