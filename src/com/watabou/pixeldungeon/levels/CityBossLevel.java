@@ -132,11 +132,11 @@ public class CityBossLevel extends Level {
 		map[sign] = Terrain.SIGN;
 	}
 	
-	public static int pedestal( boolean left ) {
+	public int pedestal( boolean left ) {
 		if (left) {
-			return (TOP + HALL_HEIGHT / 2) * Dungeon.level.getWidth() + _Center() - 2;
+			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
 		} else {
-			return (TOP + HALL_HEIGHT / 2) * Dungeon.level.getWidth() + _Center() + 2;
+			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
 		}
 	}
 	
@@ -250,11 +250,11 @@ public class CityBossLevel extends Level {
 		CityLevel.addVisuals( this, scene );
 	}
 
-	private static int _Left() {
-		return (Dungeon.level.getWidth() - HALL_WIDTH) / 2;
+	private int _Left() {
+		return (getWidth() - HALL_WIDTH) / 2;
 	}
 
-	private static int _Center() {
+	private int _Center() {
 		return _Left() + HALL_WIDTH / 2;
 	}
 }

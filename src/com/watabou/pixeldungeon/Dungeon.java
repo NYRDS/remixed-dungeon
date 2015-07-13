@@ -300,14 +300,19 @@ public class Dungeon {
 		nightMode = new Date().getHours() < 7;
 		
 		Dungeon.level = level;
-		Actor.init();
+		
+		Actor.init(level);
 		
 		Actor respawner = level.respawner();
 		if (respawner != null) {
 			Actor.add( level.respawner() );
 		}
 		
-		hero.pos = pos != -1 ? pos : level.exit;
+		hero.pos = pos;
+		
+		if(!level.cellValid(hero.pos)) {
+			hero.pos = level.entrance;
+		}
 		
 		Light light = hero.buff( Light.class );
 		hero.viewDistance = light == null ? level.viewDistance : Math.max( Light.DISTANCE, level.viewDistance );
@@ -518,7 +523,6 @@ public class Dungeon {
 		@SuppressWarnings("unused")
 		String version = bundle.getString( VERSION );
 		
-		hero = null;
 		hero = (Hero)bundle.get( HERO );
 		
 		gold = bundle.getInt( GOLD );
@@ -530,7 +534,6 @@ public class Dungeon {
 	
 	public static Level loadLevel( ) throws IOException {
 		Dungeon.level = null;
-		
 		
 		String fileName = SaveUtils.depthFile( heroClass , depth );
 		

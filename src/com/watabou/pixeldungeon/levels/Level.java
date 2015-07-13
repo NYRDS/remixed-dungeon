@@ -89,7 +89,7 @@ public abstract class Level implements Bundlable {
 		NONE, CHASM, WATER, GRASS
 	};
 
-	private static int width  = 32;
+	private static int width = 32;
 	private static int height = 32;
 
 	public static int[] NEIGHBOURS4;
@@ -188,24 +188,24 @@ public abstract class Level implements Bundlable {
 	public int cell(int i, int j) {
 		return j * getWidth() + i;
 	}
-	
+
 	public void create() {
 		create(32, 32);
 	}
-	
-	
+
 	private void initSizeDependentStuff() {
-		NEIGHBOURS4 = new int[]{ -getWidth(), +1, +getWidth(), -1 };
-		NEIGHBOURS8 = new int[]{ +1, -1, +getWidth(), -getWidth(),
-				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(), -1 - getWidth() };
-		NEIGHBOURS9 = new int[]{ 0, +1, -1, +getWidth(), -getWidth(),
-				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(), -1 - getWidth() };
-		
+		NEIGHBOURS4 = new int[] { -getWidth(), +1, +getWidth(), -1 };
+		NEIGHBOURS8 = new int[] { +1, -1, +getWidth(), -getWidth(),
+				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
+				-1 - getWidth() };
+		NEIGHBOURS9 = new int[] { 0, +1, -1, +getWidth(), -getWidth(),
+				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
+				-1 - getWidth() };
+
 		map = new int[getLength()];
 		visited = new boolean[getLength()];
 		mapped = new boolean[getLength()];
 
-		
 		fieldOfView = new boolean[getLength()];
 
 		passable = new boolean[getLength()];
@@ -224,14 +224,14 @@ public abstract class Level implements Bundlable {
 		Blob.setWidth(getWidth());
 		Blob.setHeight(getHeight());
 	}
-	
+
 	public void create(int w, int h) {
-		
-		width  = w;
+
+		width = w;
 		height = h;
-		
+
 		initSizeDependentStuff();
-		
+
 		mobs = new HashSet<Mob>();
 		heaps = new SparseArray<Heap>();
 		blobs = new HashMap<Class<? extends Blob>, Blob>();
@@ -251,22 +251,19 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(new Stylus());
 				Dungeon.arcaneStyli++;
 			}
-			
-			if( Random.Int(5) == 0) 
-			{
+
+			if (Random.Int(5) == 0) {
 				addItemToSpawn(Generator.random(Generator.Category.RANGED));
 			}
 
-			if( Random.Int(5) == 0) 
-			{
+			if (Random.Int(5) == 0) {
 				addItemToSpawn(new PseudoPasty());
 			}
-			
-			if( Random.Int(2) == 0) 
-			{
+
+			if (Random.Int(2) == 0) {
 				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
 			}
-			
+
 			if (Dungeon.depth > 1) {
 				switch (Random.Int(10)) {
 				case 0:
@@ -315,17 +312,17 @@ public abstract class Level implements Bundlable {
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
-		
+
 		mobs = new HashSet<Mob>();
 		heaps = new SparseArray<Heap>();
 		blobs = new HashMap<Class<? extends Blob>, Blob>();
 		plants = new SparseArray<Plant>();
 
-		width = bundle.optInt(WIDTH,  32);  // old levels compat
+		width = bundle.optInt(WIDTH, 32); // old levels compat
 		height = bundle.optInt(HEIGHT, 32);
-		
+
 		initSizeDependentStuff();
-		
+
 		map = bundle.getIntArray(MAP);
 		visited = bundle.getBooleanArray(VISITED);
 		mapped = bundle.getBooleanArray(MAPPED);
@@ -376,15 +373,14 @@ public abstract class Level implements Bundlable {
 		bundle.put(PLANTS, plants.values());
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
-		
-		bundle.put(WIDTH,  width);
+
+		bundle.put(WIDTH, width);
 		bundle.put(HEIGHT, height);
 	}
 
 	public int tunnelTile() {
 		return feeling == Feeling.CHASM ? Terrain.EMPTY_SP : Terrain.EMPTY;
 	}
-
 
 	public int adjustPos(int pos) {
 		return (pos / loadedMapSize) * getWidth() + (pos % loadedMapSize);
@@ -422,19 +418,19 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void spawnMob(Mob mob) {
-		mobs.add( mob );
-		Actor.occupyCell( mob );
-		GameScene.add( mob, 1 );
+		mobs.add(mob);
+		Actor.occupyCell(mob);
+		GameScene.add(mob, 1);
 	}
-	
+
 	protected Mob createMob() {
 		Mob mob = null;
-		
-		if(Random.Int(5) == 0) {
-			switch(feeling) {
+
+		if (Random.Int(5) == 0) {
+			switch (feeling) {
 			case WATER:
 				mob = new WaterElemental();
-			break;
+				break;
 			case CHASM:
 				mob = new AirElemental();
 				break;
@@ -447,28 +443,27 @@ public abstract class Level implements Bundlable {
 				break;
 			}
 		}
-		
-		if(mob == null)
-		{
+
+		if (mob == null) {
 			mob = Bestiary.mutable(Dungeon.depth);
 		}
-		
-		if(!mob.isWallWalker()){
-			mob.pos   = randomRespawnCell();
+
+		if (!mob.isWallWalker()) {
+			mob.pos = randomRespawnCell();
 		} else {
 			mob.state = mob.WANDERING;
-			mob.pos   = randomSolidCell();
+			mob.pos = randomSolidCell();
 		}
 		return mob;
 	}
-	
+
 	public Actor respawner() {
 		return new Actor() {
 			@Override
 			protected boolean act() {
 				if (mobs.size() < nMobs()) {
 
-					Mob mob   = createMob();
+					Mob mob = createMob();
 					mob.state = mob.WANDERING;
 					if (Dungeon.hero.isAlive() && mob.pos != -1) {
 						GameScene.add(mob);
@@ -492,7 +487,7 @@ public abstract class Level implements Bundlable {
 				|| Actor.findChar(cell) != null);
 		return cell;
 	}
-	
+
 	public int randomRespawnCell() {
 		int cell;
 		do {
@@ -551,13 +546,13 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (int i = getWidth(); i < getLength() - getWidth(); i++) {
-			
+
 			nearWalls[i] = false;
 			if (passable[i]) {
 				int count = 0;
 				for (int j = 0; j < NEIGHBOURS4.length; j++) {
-					int tile = map[i + NEIGHBOURS4[j]]; 
-					if ( tile == Terrain.WALL || tile == Terrain.WALL_DECO) {
+					int tile = map[i + NEIGHBOURS4[j]];
+					if (tile == Terrain.WALL || tile == Terrain.WALL_DECO) {
 						count++;
 					}
 				}
@@ -624,7 +619,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void set(int cell, int terrain) {
-		Painter.set(Dungeon.level, cell, terrain);
+		Painter.set(this, cell, terrain);
 
 		int flags = Terrain.flags[terrain];
 		passable[cell] = (flags & Terrain.PASSABLE) != 0;
@@ -878,19 +873,19 @@ public abstract class Level implements Bundlable {
 			plant.activate(mob);
 		}
 	}
-	
-	private void markFovCellSafe(int p){
-		if (p > 0 && p < fieldOfView.length){
+
+	private void markFovCellSafe(int p) {
+		if (p > 0 && p < fieldOfView.length) {
 			fieldOfView[p] = true;
 		}
 	}
-	
-	private void updateFovForObjectAt(int p){
-		for (int i = 0;i<NEIGHBOURS9.length;++i){
+
+	private void updateFovForObjectAt(int p) {
+		for (int i = 0; i < NEIGHBOURS9.length; ++i) {
 			markFovCellSafe(p + NEIGHBOURS9[i]);
 		}
 	}
-	
+
 	public boolean[] updateFieldOfView(Char c) {
 
 		int cx = c.pos % getWidth();
@@ -1118,14 +1113,14 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getLength() {
-		return width*height;
+		return width * height;
 	}
-	
+
 	public boolean cellValid(int x, int y) {
 		return x > 0 && y > 0 && x < getWidth() - 1 && y < getHeight() - 1;
 	}
-	
+
 	public boolean cellValid(int cell) {
-		return cell > 0 && cell < map.length;
+		return cell > 0 && cell < getLength();
 	}
 }

@@ -172,8 +172,10 @@ public enum HeroClass {
 		hero.collect(new PotionBelt());
 		hero.collect(new Keyring());
 
-		hero.collect(new ScrollOfMagicMapping());
-
+		for(int i = 0; i < 100; ++i){
+			hero.collect(new ScrollOfMagicMapping());
+		}
+		
 		hero.collect(new WandOfTeleportation());
 		hero.collect(new Ankh());
 
@@ -184,9 +186,9 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 
-		if (ModdingMode.mode()) {
+		//if (ModdingMode.mode()) {
 			initDebug(hero);
-		}
+		//}
 
 		QuickSlot.cleanStorage();
 	}

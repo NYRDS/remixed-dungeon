@@ -17,14 +17,16 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
@@ -78,13 +80,12 @@ public abstract class Actor implements Bundlable {
 	
 	private static float now = 0;
 	
-	private static Char[] chars;
+	private static Map<Integer, Char> chars = new HashMap<Integer, Char>();
 	
 	public static void clear(int len) {
 		
 		now = 0;
-		chars = new Char[len];
-		Arrays.fill( chars, null );
+		chars.clear();
 		all.clear();
 	}
 	
@@ -106,15 +107,16 @@ public abstract class Actor implements Bundlable {
 		now = 0;
 	}
 	
-	public static void init() {
+	public static void init(Level level) {
+		clear(level.getLength());
 		
 		addDelayed( Dungeon.hero, -Float.MIN_VALUE );
 		
-		for (Mob mob : Dungeon.level.mobs) {
+		for (Mob mob : level.mobs) {
 			add( mob );
 		}
 		
-		for (Blob blob : Dungeon.level.blobs.values()) {
+		for (Blob blob : level.blobs.values()) {
 			add( blob );
 		}
 		
@@ -122,11 +124,11 @@ public abstract class Actor implements Bundlable {
 	}
 	
 	public static void occupyCell( Char ch ) {
-		chars[ch.pos] = ch;
+		chars.put(ch.pos, ch);
 	}
 	
 	public static void freeCell( int pos ) {
-		chars[pos] = null;
+		chars.remove(pos);
 	}
 	
 	/*protected*/public void next() {
@@ -147,7 +149,7 @@ public abstract class Actor implements Bundlable {
 			now = Float.MAX_VALUE;
 			current = null;
 			
-			Arrays.fill( chars, null );
+			chars.clear();
 			
 			for (Actor actor : all) {
 				if (actor.time < now) {
@@ -157,7 +159,7 @@ public abstract class Actor implements Bundlable {
 				
 				if (actor instanceof Char) {
 					Char ch = (Char)actor;
-					chars[ch.pos] = ch;
+					chars.put(ch.pos, ch);
 				}
 			}
 
@@ -204,7 +206,7 @@ public abstract class Actor implements Bundlable {
 		
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;
-			chars[ch.pos] = ch;
+			chars.put(ch.pos, ch);
 			for (Buff buff : ch.buffs()) {
 				all.add( buff );
 				buff.onAdd();
@@ -221,10 +223,7 @@ public abstract class Actor implements Bundlable {
 	}
 	
 	public static Char findChar(int pos) {
-		if (pos > 0 && pos < chars.length) {
-			return chars[pos];
-		}
-		return null;
+		return chars.get(pos);
 	}
 	
 	public static HashSet<Actor> all() {

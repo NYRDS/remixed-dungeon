@@ -294,19 +294,19 @@ public class CavesBossLevel extends Level {
 		CavesLevel.addVisuals( this, scene );
 	}
 
-	private static int _RoomLeft() {
-		return Dungeon.level.getWidth() / 2 - 2;
+	private int _RoomLeft() {
+		return getWidth() / 2 - 2;
 	}
 
-	private static int _RoomRight() {
-		return Dungeon.level.getWidth() / 2 + 2;
+	private int _RoomRight() {
+		return getWidth() / 2 + 2;
 	}
 
-	private static int _RoomTop() {
-		return Dungeon.level.getHeight() / 2 - 2;
+	private int _RoomTop() {
+		return getHeight() / 2 - 2;
 	}
 
-	private static int _RoomBottom() {
-		return Dungeon.level.getHeight() / 2 + 2;
+	private int _RoomBottom() {
+		return getHeight() / 2 + 2;
 	}
 }

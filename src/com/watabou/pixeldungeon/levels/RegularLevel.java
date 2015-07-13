@@ -574,7 +574,7 @@ public abstract class RegularLevel extends Level {
 			}
 			
 			cell = room.random(this);
-			if (Dungeon.level.passable[cell]) {
+			if (passable[cell]) {
 				return cell;
 			}
 			
