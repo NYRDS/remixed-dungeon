@@ -116,7 +116,11 @@ public class Bundle {
 	}
 	
 	public Bundlable get( String key ) {
-		return getBundle( key ).get();	
+		JSONObject obj = data.optJSONObject( key );
+		if(obj!=null) {
+			return new Bundle(obj).get();
+		}
+		return null;
 	}
 	
 	public <E extends Enum<E>> E getEnum( String key, Class<E> enumClass ) {

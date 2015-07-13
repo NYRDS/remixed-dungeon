@@ -35,16 +35,13 @@ public class PathFinder {
 
 		int size = width * height;
 
-		if (PathFinder.size != size) {
+		PathFinder.size = size;
+		distance = new int[size];
+		goals = new boolean[size];
+		queue = new int[size];
 
-			PathFinder.size = size;
-			distance = new int[size];
-			goals = new boolean[size];
-			queue = new int[size];
-
-			dir = new int[] { -1, +1, -width, +width, -width - 1, -width + 1,
-					+width - 1, +width + 1 };
-		}
+		dir = new int[] { -1, +1, -width, +width, -width - 1, -width + 1,
+				+width - 1, +width + 1 };
 	}
 
 	public static Path find(int from, int to, boolean[] passable) {
