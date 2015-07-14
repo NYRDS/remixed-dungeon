@@ -61,6 +61,13 @@
     <item>Las cazadoras ganan más vida con las gotas de rocío.</item>
     <item>Las cazadoras sienten a enemigos cercanos incluso si están escondidos tras obstáculos. </item>
   </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Los elfos empiezan con 15 de vida y 9 de fuerza.</item>
+    <item>Los elfos son inmunes a la parálisis.</item>
+    <item>Los elfos empiezan con un arco de madera mejorado y flechas.</item>
+    <item>Los elfos son ágiles y extremadamente buenos con arcos.</item>
+    <item>Los elfos son menos eficientes con armas cuerpo a cuerpo.</item>
+  </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiador</string>
   <string name="HeroSubClass_DescGlad">Un ataque con exito con un arma cuerpo a cuerpo permite al _Gladiador_ empezar un combo, con lo que cada golpe consecutivo causa más daño.</string>
