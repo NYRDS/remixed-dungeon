@@ -47,6 +47,7 @@ import android.view.View;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.UserKey;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -95,6 +96,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 	public Game(Class<? extends Scene> c) {
 		super();
+		
+		instance(this);
+		UserKey.init();
+		
 		sceneClass = c;
 	}
 

@@ -8,7 +8,6 @@ import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
 
-import android.app.AlertDialog;
 import android.util.Log;
 
 public abstract class GameWithGoogleIap extends Game {
@@ -40,7 +39,8 @@ public abstract class GameWithGoogleIap extends Game {
 			return;
 		}
 
-		String base64EncodedPublicKey = "put your key here";
+		String base64EncodedPublicKey = "";
+
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
 		Log.d("GAME", "Creating IAB helper.");
@@ -240,18 +240,18 @@ public abstract class GameWithGoogleIap extends Game {
 
 	void complain(String message) {
 		Log.e("GAME", "**** IAP Error: " + message);
-		alert("Error: " + message);
+		//alert("Error: " + message);
 	}
 
 	void alert(final String message) {
 		instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				AlertDialog.Builder bld = new AlertDialog.Builder(instance());
-				bld.setMessage(message);
-				bld.setNeutralButton("OK", null);
+				//AlertDialog.Builder bld = new AlertDialog.Builder(instance());
+				//bld.setMessage(message);
+				//bld.setNeutralButton("OK", null);
 				Log.d("GAME", "Showing alert dialog: " + message);
-				bld.create().show();
+				//bld.create().show();
 			}
 		});
 	}
