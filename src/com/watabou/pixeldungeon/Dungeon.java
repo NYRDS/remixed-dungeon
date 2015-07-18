@@ -240,9 +240,13 @@ public class Dungeon {
 			level = new DeadEndLevel();
 			Statistics.deepestFloor--;
 		}
-
+/*
 		int lw = 32 + Random.Int(8);
 		int lh = 32 + Random.Int(8);
+*/		
+		
+		int lw = 32;
+		int lh = 32;
 		
 		initSizeDependentStuff(lw, lh);
 

@@ -46,7 +46,7 @@ public class Monk extends Mob {
 		maxLvl = 21;
 		
 		loot = new Ration();
-		lootChance = 0.083f;
+		lootChance = 0.153f;
 		
 		IMMUNITIES.add( Amok.class );
 		IMMUNITIES.add( Terror.class );

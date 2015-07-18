@@ -62,7 +62,7 @@ public class WaterElemental extends Mob {
 	public boolean act() {
 		if (Dungeon.level.water[pos] && hp() < ht()) {
 			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-			hp(Math.max(hp() + EXP,ht()));
+			hp(Math.min(hp() + EXP,ht()));
 		}
 		
 		return super.act();
