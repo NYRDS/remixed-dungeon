@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.android.util.UserKey;
 import com.watabou.noosa.Game;
+
 import android.content.SharedPreferences;
 
 enum Preferences {
@@ -55,26 +57,93 @@ enum Preferences {
 	}
 	
 	int getInt( String key, int defValue  ) {
-		return get().getInt( key, defValue );
+		String defVal = Integer.toString(defValue);
+		String propVal = getString(key, defVal);
+		try{
+			return Integer.parseInt(propVal);
+		} catch (NumberFormatException e) {
+			put(key, defValue);
+			return defValue;
+		}
 	}
 	
 	boolean getBoolean( String key, boolean defValue  ) {
-		return get().getBoolean( key, defValue );
+		String defVal = Boolean.toString(defValue);
+		String propVal = getString(key, defVal);
+		
+		return Boolean.parseBoolean(propVal);
 	}
 	
-	String getString( String key, String defValue  ) {
-		return get().getString( key, defValue );
+	boolean checkString(String key) {
+		try{
+			get().getString( key, "");
+		} catch(ClassCastException e) {
+			return false;
+		}
+		return true;
+	}
+	
+	boolean checkInt(String key) {
+		try{
+			get().getInt( key, 0);
+		} catch(ClassCastException e) {
+			return false;
+		}
+		return true;
+	}
+
+	boolean checkBoolean(String key) {
+		try{
+			get().getBoolean( key, false);
+		} catch(ClassCastException e) {
+			return false;
+		}
+		return true;
+	}
+	
+	String getString( String key, String defValue ) {
+		String scrambledKey = UserKey.encrypt(key);
+
+		if(get().contains(scrambledKey)) {
+			String encVal = get().getString( scrambledKey, UserKey.encrypt(defValue) );
+			return UserKey.decrypt(encVal);
+		} 
+		
+		if (get().contains(key)) {
+			
+			String val = "";
+			
+			if(checkString(key)){
+				val = get().getString( key, defValue);
+			}
+			if(checkInt(key)){
+				val = Integer.toString(get().getInt( key, Integer.parseInt(defValue)));
+			}
+			if(checkBoolean(key)){
+				val = Boolean.toString(get().getBoolean( key, Boolean.parseBoolean(defValue)));
+			}			
+			
+			get().edit().putString(scrambledKey, UserKey.encrypt(val)).commit();
+			get().edit().remove(key).commit();
+			return val;
+		}
+		
+		return defValue;
 	}
 	
 	void put( String key, int value ) {
-		get().edit().putInt( key, value ).commit();
+		String val = Integer.toString(value);
+		put(key, val);
 	}
 	
 	void put( String key, boolean value ) {
-		get().edit().putBoolean( key, value ).commit();
+		String val = Boolean.toString(value);
+		put(key,val);
 	}
 	
 	void put( String key, String value ) {
-		get().edit().putString( key, value ).commit();
+		String scrambledVal = UserKey.encrypt(value);
+		String scrambledKey = UserKey.encrypt(key);
+		get().edit().putString( scrambledKey, scrambledVal ).commit();
 	}
 }

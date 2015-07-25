@@ -27,6 +27,7 @@ public class DonateButton extends Button {
 		}
 		
 		switch (PixelDungeon.donated()) {
+		default:
 		case 0:
 			image = Icons.SUPPORT.get();
 			break;
