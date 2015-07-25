@@ -26,11 +26,11 @@ public class UserKey {
 		crypter = new Crypter("RPD_UserKey_"+userId.toString());
 	}
 	
-	static String encrypt(String in){
+	public static String encrypt(String in){
 		return crypter.encrypt(in);
 	}
 	
-	static String decrypt(String in){
+	public static String decrypt(String in){
 		return crypter.decrypt(in);
 	}
 }
