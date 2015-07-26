@@ -65,4 +65,7 @@
   <string name="RingOfStoneWalking_Name">Pierścień Krwawego Kamienia</string>
   <string name="RingOfStoneWalking_Info">Ten pierścień jest zrobiony z ciemnego kamienia i wyglądałby zwyczajnie, gdyby nie kropla pulsującej krwi, która zastępuje klejnot.</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Uwięziony w kamieniu. Na zawsze.</string>
+  <!-- STRINGS OF SpiderCharm CLASS -->
+  <string name="SpiderCharm_Name">Spider Charm</string>
+  <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
 </resources>

@@ -67,4 +67,7 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
   <string name="RingOfStoneWalking_Name">Anneau du sang de la pierre</string>
   <string name="RingOfStoneWalking_Info">Cet anneau fait de pierre robuste passerait inaperçu. S\'il n\'y avait pas une goutte de sang liquide battant à la place d\'une gemme.</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Emmuré dans la pierre. A tout jamais.</string>
+  <!-- STRINGS OF SpiderCharm CLASS -->
+  <string name="SpiderCharm_Name">Spider Charm</string>
+  <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
 </resources>

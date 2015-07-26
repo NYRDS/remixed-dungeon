@@ -65,4 +65,7 @@
   <string name="RingOfStoneWalking_Name">Anillo de Sangre de Piedra</string>
   <string name="RingOfStoneWalking_Info">Este anillo hecho de piedra maciza parecería ordinario, si no fuera por la gota de sangre líquida latiendo en lugar de una gema.</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Encerrado en piedra. Para siempre.</string>
+  <!-- STRINGS OF SpiderCharm CLASS -->
+  <string name="SpiderCharm_Name">Spider Charm</string>
+  <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
 </resources>
