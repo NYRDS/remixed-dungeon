@@ -89,7 +89,7 @@ public abstract class Level implements Bundlable {
 		NONE, CHASM, WATER, GRASS
 	};
 
-	private static int width = 32;
+	private static int width  = 32;
 	private static int height = 32;
 
 	public static int[] NEIGHBOURS4;
@@ -137,6 +137,8 @@ public abstract class Level implements Bundlable {
 
 	private SparseArray<Heap> heaps;
 
+	private String kind;
+	
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<Item>();
 
 	public int color1 = 0x004400;
@@ -157,6 +159,10 @@ public abstract class Level implements Bundlable {
 	private static final String WIDTH = "width";
 	private static final String HEIGHT = "height";
 
+	public String levelKind() {
+		return this.getClass().getName();
+	}
+	
 	public Heap getHeap(int pos) {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
@@ -329,7 +335,7 @@ public abstract class Level implements Bundlable {
 
 		entrance = bundle.getInt(ENTRANCE);
 		exit = bundle.getInt(EXIT);
-
+		
 		weakFloorCreated = false;
 
 		Collection<Bundlable> collection = bundle.getCollection(HEAPS);
