@@ -48,6 +48,10 @@ public class Compass extends Image {
 	public void update() {
 		super.update();
 		
+		if(!Dungeon.level.cellValid(cell)){
+			return;
+		}
+		
 		if (!visible) {
 			visible = Dungeon.level.visited[cell] || Dungeon.level.mapped[cell]; 
 		}

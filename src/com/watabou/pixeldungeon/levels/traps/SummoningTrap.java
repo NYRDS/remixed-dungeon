@@ -80,7 +80,7 @@ public class SummoningTrap {
 		for (Integer point : respawnPoints) {
 			Mob mob;
 			do {
-				mob = Bestiary.mob(Dungeon.depth);
+				mob = Bestiary.mob(Dungeon.depth, Dungeon.level.levelKind());
 			} while (mob.isWallWalker() == true);
 			
 			mob.state = mob.WANDERING;

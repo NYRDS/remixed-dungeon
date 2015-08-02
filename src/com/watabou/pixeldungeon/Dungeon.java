@@ -24,7 +24,10 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Rankings.gameOver;
@@ -48,22 +51,10 @@ import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.levels.CavesBossLevel;
-import com.watabou.pixeldungeon.levels.CavesLevel;
-import com.watabou.pixeldungeon.levels.CityBossLevel;
-import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
-import com.watabou.pixeldungeon.levels.HallsBossLevel;
-import com.watabou.pixeldungeon.levels.HallsLevel;
-import com.watabou.pixeldungeon.levels.LastLevel;
-import com.watabou.pixeldungeon.levels.LastShopLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.ModderLevel;
-import com.watabou.pixeldungeon.levels.PrisonBossLevel;
-import com.watabou.pixeldungeon.levels.PrisonLevel;
 import com.watabou.pixeldungeon.levels.Room;
-import com.watabou.pixeldungeon.levels.SewerBossLevel;
-import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -102,7 +93,7 @@ public class Dungeon {
 	private static boolean[] passable;
 	
 	public static HeroClass heroClass;
-	
+
 	private static void initSizeDependentStuff(int w, int h) {
 		int size = w*h;
 		Actor.clear(size);
@@ -149,6 +140,9 @@ public class Dungeon {
 		Badges.reset();
 		
 		heroClass.initHero( hero );
+		hero.levelKind = "SewerLevel";
+		
+		SaveUtils.deleteLevels(heroClass);
 		
 		gameOver = false;
 	}
@@ -169,11 +163,7 @@ public class Dungeon {
 		return level;
 	}
 	
-	public static Level newLevel() {
-		
-		Dungeon.level = null;
-		
-		depth++;
+	private static void updateStatistics() {
 		if (depth > Statistics.deepestFloor) {
 			Statistics.deepestFloor = depth;
 			
@@ -183,71 +173,23 @@ public class Dungeon {
 				Statistics.completedWithNoKilling = false;
 			}
 		}
+	}
+	
+	public static Level newLevel(Position pos) {
 		
-		Level level;
-		switch (depth) {
-		case 1:
-		case 2:
-		case 3:
-		case 4:
-			level = new SewerLevel();
-			break;
-		case 5:
-			level = new SewerBossLevel();
-			break;
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-			level = new PrisonLevel();
-			break;
-		case 10:
-			level = new PrisonBossLevel();
-			break;
-		case 11:
-		case 12:
-		case 13:
-		case 14:
-			level = new CavesLevel();
-			break;
-		case 15:
-			level = new CavesBossLevel();
-			break;
-		case 16:
-		case 17:
-		case 18:
-		case 19:
-			level = new CityLevel();
-			break;
-		case 20:
-			level = new CityBossLevel();
-			break;
-		case 21:
-			level = new LastShopLevel();
-			break;
-		case 22:
-		case 23:
-		case 24:
-			level = new HallsLevel();
-			break;
-		case 25:
-			level = new HallsBossLevel();
-			break;
-		case 26:
-			level = new LastLevel();
-			break;
-		default:
-			level = new DeadEndLevel();
-			Statistics.deepestFloor--;
-		}
-/*
-		int lw = 32 + Random.Int(8);
-		int lh = 32 + Random.Int(8);
-*/		
+		Dungeon.level = null;
+		updateStatistics();
+		GLog.i("creating: %s %d", pos.levelKind, pos.levelDepth);
+		Level level = DungeonGenerator.createLevel(pos);
 		
 		int lw = 32;
 		int lh = 32;
 		
+		if(pos.levelKind.equals(DungeonGenerator.SPIDER_LEVEL)){
+			lw = 64;
+			lh = 64;
+		}
+
 		initSizeDependentStuff(lw, lh);
 
 		level.create(lw, lh);
@@ -313,6 +255,7 @@ public class Dungeon {
 		}
 		
 		hero.pos = pos;
+		hero.levelKind = level.levelKind();
 		
 		if(!level.cellValid(hero.pos)) {
 			hero.pos = level.entrance;
@@ -436,7 +379,12 @@ public class Dungeon {
 		Bundle bundle = new Bundle();
 		bundle.put( LEVEL, level );
 		
-		OutputStream output = Game.instance().openFileOutput( SaveUtils.depthFile( hero.heroClass, depth ), Game.MODE_PRIVATE );
+		Position current =currentPosition();
+		
+		String saveTo = SaveUtils.saveDepthFile( hero.heroClass, current.levelDepth, current.levelKind );		
+		GLog.i("saving level: %s", saveTo);
+		
+		OutputStream output = Game.instance().openFileOutput( saveTo , Game.MODE_PRIVATE );
 		Bundle.write( bundle, output );
 		output.close();
 	}
@@ -536,33 +484,35 @@ public class Dungeon {
 		Journal.restoreFromBundle( bundle );
 	}
 	
-	public static Level loadLevel( ) throws IOException {
-		Dungeon.level = null;
+	public static Level loadLevel(Position next ) throws IOException {
+		String loadFrom = SaveUtils.loadDepthFile( heroClass , next.levelDepth, next.levelKind);
 		
-		String fileName = SaveUtils.depthFile( heroClass , depth );
+		GLog.i("loading level: %s", loadFrom);
 		
-		InputStream input = Game.instance().openFileInput( fileName ) ;
-		Bundle bundle = Bundle.read( input );
-		input.close();
-		
-		Level level = (Level)bundle.get( "level" );
-		if(level != null){
-			initSizeDependentStuff(level.getWidth(), level.getHeight());
-		} else {
-			GLog.w("cannot load %s \n", fileName);
+		if(FileSystem.getInteralStorageFile(loadFrom).exists()){
+			Dungeon.level = null;
+			
+			InputStream input = Game.instance().openFileInput( loadFrom ) ;
+			Bundle bundle = Bundle.read( input );
+			input.close();
+			
+			Level level = (Level)bundle.get( "level" );
+			if(level != null){
+				initSizeDependentStuff(level.getWidth(), level.getHeight());
+			} else {
+				GLog.w("cannot load %s \n", loadFrom);
+			}
+			return level;
 		}
-		return level;
+		return null;
 	}
 	
 	public static void deleteGame(boolean deleteLevels ) {
 		
-		Game.instance().deleteFile( SaveUtils.gameFile( heroClass ) );
+		SaveUtils.deleteGameFile(heroClass);
 		
 		if (deleteLevels) {
-			int depth = 1;
-			while (Game.instance().deleteFile( SaveUtils.depthFile( heroClass , depth ) )) {
-				depth++;
-			}
+			SaveUtils.deleteLevels(heroClass);
 		}
 		
 		GamesInProgress.delete( heroClass );
@@ -705,5 +655,9 @@ public class Dungeon {
 		if (ch instanceof Hero) {
 			Invisibility.dispel((Hero) ch);
 		}
+	}
+	
+	public static Position currentPosition() {
+		return new Position(hero.levelKind, depth, hero.pos);
 	}
 }

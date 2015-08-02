@@ -20,14 +20,17 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.utils.Random;
 
 public class Bestiary {
 
-	public static Mob mob( int depth ) {
+	public static Mob mob( int depth, String levelKind ) {
 		@SuppressWarnings("unchecked")
-		Class<? extends Mob> cl = (Class<? extends Mob>)mobClass( depth );
+		Class<? extends Mob> cl = (Class<? extends Mob>)mobClass( depth, levelKind );
 		try {
 			return cl.newInstance();
 		} catch (Exception e) {
@@ -35,9 +38,9 @@ public class Bestiary {
 		}
 	}
 	
-	public static Mob mutable( int depth ) {
+	public static Mob mutable( int depth, String levelKind ) {
 		@SuppressWarnings("unchecked")
-		Class<? extends Mob> cl = (Class<? extends Mob>)mobClass( depth );
+		Class<? extends Mob> cl = (Class<? extends Mob>)mobClass( depth, levelKind );
 		
 		if (Random.Int( 30 ) == 0) {
 			if (cl == Rat.class) {
@@ -60,17 +63,49 @@ public class Bestiary {
 		}
 	}
 	
-	private static Class<?> mobClass( int depth ) {
+	private static Class<?> mobClass( int depth, String levelKind ) {
 		
 		float[] chances;
 		Class<?>[] classes;
 		
+		
+		if(levelKind.equals("SpiderLevel")) {
+			switch (depth) {
+			
+			case 6:
+				chances = new float[]{ 1 };
+				classes = new Class<?>[]{ SpiderServant.class };
+				break;
+			case 7:
+				chances = new float[]{ 1, 1};
+				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class};
+				break;
+			case 8:
+				chances = new float[]{ 1, 1, 0.2f};
+				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class, SpiderMind.class};
+				break;
+			case 9:
+				chances = new float[]{ 1, 1, 1 };
+				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class, SpiderMind.class };
+				break;
+				
+			case 10:
+				chances = new float[]{ 1, 1, 1 };
+				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class, SpiderMind.class };
+				break;			
+			
+				default:
+					chances = new float[]{ 1 };
+					classes = new Class<?>[]{ Rat.class };
+			}
+			
+			return classes[ Random.chances( chances )];
+		}
+		
 		switch (depth) {
 		case 1:
 			chances = new float[]{ 1 };
-			//classes = new Class<?>[]{ AirElemental.class };
 			classes = new Class<?>[]{ Rat.class };
-			//classes = new Class<?>[]{ SpiderNest.class };
 			break;
 		case 2:
 			chances = new float[]{ 1, 1 };

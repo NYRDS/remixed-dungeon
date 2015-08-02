@@ -81,7 +81,9 @@ public class Artifact extends EquipableItem {
 	
 	public void activate( Char ch ) {
 		buff = buff();
-		buff.attachTo( ch );
+		if(buff != null) {
+			buff.attachTo( ch );
+		}
 	}
 
 	@Override

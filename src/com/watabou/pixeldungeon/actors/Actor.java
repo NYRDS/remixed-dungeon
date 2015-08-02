@@ -72,6 +72,11 @@ public abstract class Actor implements Bundlable {
 		time = bundle.getFloat( TIME );
 	}
 	
+	@Override
+	public boolean dontPack() {
+		return false;
+	}
+	
 	// **********************
 	// *** Static members ***
 	

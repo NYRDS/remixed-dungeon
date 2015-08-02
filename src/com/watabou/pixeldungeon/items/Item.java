@@ -451,6 +451,10 @@ public class Item implements Bundlable {
 		}
 	}
 	
+	public boolean dontPack() {
+		return false;
+	}
+	
 	public void cast( final Hero user, int dst ) {
 		
 		curUser = user;

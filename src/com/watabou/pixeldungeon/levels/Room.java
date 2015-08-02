@@ -101,7 +101,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	public int random(Level level, int m ) {
 		int x = Random.Int( left + 1 + m, right - m );
 		int y = Random.Int( top + 1 + m, bottom - m );
-		return x + y * level.getWidth();
+		return level.cell(x, y);
 	}
 	
 	public void addNeigbour( Room other ) {
@@ -181,6 +181,10 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		right  = bundle.getInt( "right" );
 		bottom = bundle.getInt( "bottom" );
 		type   = Type.valueOf( bundle.getString( "type" ) );
+	}
+	
+	public boolean dontPack() {
+		return false;
 	}
 	
 	public static void shuffleTypes() {

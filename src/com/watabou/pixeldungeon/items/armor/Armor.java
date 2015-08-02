@@ -355,6 +355,11 @@ public class Armor extends EquipableItem {
 		public void storeInBundle( Bundle bundle ) {	
 		}
 		
+		@Override
+		public boolean dontPack() {
+			return false;
+		}
+		
 		public ItemSprite.Glowing glowing() {
 			return ItemSprite.Glowing.WHITE;
 		}

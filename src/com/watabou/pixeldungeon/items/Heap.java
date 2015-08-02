@@ -393,4 +393,8 @@ public class Heap implements Bundlable {
 		bundle.put( TYPE, type.toString() );
 		bundle.put( ITEMS, items );
 	}
+	
+	public boolean dontPack() {
+		return false;
+	}
 }

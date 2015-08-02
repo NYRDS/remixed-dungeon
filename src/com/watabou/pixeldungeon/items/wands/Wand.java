@@ -457,9 +457,11 @@ public abstract class Wand extends KindOfWeapon {
 	protected class Charger extends Buff {
 		private static final float TIME_TO_CHARGE = 40f;
 
-		public Charger(){
+		@Override
+		public boolean dontPack(){
+			return true;
 		}
-		
+
 		@Override
 		public boolean attachTo(Char target) {
 			super.attachTo(target);

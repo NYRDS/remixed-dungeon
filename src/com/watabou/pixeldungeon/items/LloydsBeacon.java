@@ -132,8 +132,7 @@ public class LloydsBeacon extends Item {
 				Dungeon.observe();
 			} else {
 				InterlevelScene.mode = InterlevelScene.Mode.RETURN;
-				InterlevelScene.returnDepth = returnDepth;
-				InterlevelScene.returnPos = returnPos;
+				InterlevelScene.returnTo = Dungeon.currentPosition();
 				reset();
 				Game.switchScene( InterlevelScene.class );
 			}

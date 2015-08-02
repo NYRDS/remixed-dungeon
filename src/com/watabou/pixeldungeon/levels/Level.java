@@ -89,7 +89,7 @@ public abstract class Level implements Bundlable {
 		NONE, CHASM, WATER, GRASS
 	};
 
-	private static int width = 32;
+	private static int width  = 32;
 	private static int height = 32;
 
 	public static int[] NEIGHBOURS4;
@@ -136,7 +136,7 @@ public abstract class Level implements Bundlable {
 	public SparseArray<Plant> plants;
 
 	private SparseArray<Heap> heaps;
-
+	
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<Item>();
 
 	public int color1 = 0x004400;
@@ -157,6 +157,10 @@ public abstract class Level implements Bundlable {
 	private static final String WIDTH = "width";
 	private static final String HEIGHT = "height";
 
+	public String levelKind() {
+		return this.getClass().getSimpleName();
+	}
+	
 	public Heap getHeap(int pos) {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
@@ -329,7 +333,7 @@ public abstract class Level implements Bundlable {
 
 		entrance = bundle.getInt(ENTRANCE);
 		exit = bundle.getInt(EXIT);
-
+		
 		weakFloorCreated = false;
 
 		Collection<Bundlable> collection = bundle.getCollection(HEAPS);
@@ -376,6 +380,10 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(WIDTH, width);
 		bundle.put(HEIGHT, height);
+	}
+	
+	public boolean dontPack() {
+		return false;
 	}
 
 	public int tunnelTile() {
@@ -445,7 +453,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (mob == null) {
-			mob = Bestiary.mutable(Dungeon.depth);
+			mob = Bestiary.mutable(Dungeon.depth, levelKind());
 		}
 
 		if (!mob.isWallWalker()) {
@@ -965,7 +973,7 @@ public abstract class Level implements Bundlable {
 	public String tileName(int tile) {
 
 		if (tile >= Terrain.WATER_TILES) {
-			return tileName(Terrain.WATER);
+			return Game.getVar(R.string.Level_TileWater);
 		}
 
 		if (tile != Terrain.CHASM && (Terrain.flags[tile] & Terrain.PIT) != 0) {

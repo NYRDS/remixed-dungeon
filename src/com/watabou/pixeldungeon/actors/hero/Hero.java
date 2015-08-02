@@ -166,6 +166,7 @@ public class Hero extends Char {
 
 	public int lvl = 1;
 	public int exp = 0;
+	public String levelKind;
 
 	private ArrayList<Mob> visibleEnemies;
 
@@ -204,6 +205,7 @@ public class Hero extends Char {
 	private static final String STRENGTH = "STR";
 	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
+	private static final String LEVEL_KIND = "levelKind";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -219,6 +221,7 @@ public class Hero extends Char {
 
 		bundle.put(LEVEL, lvl);
 		bundle.put(EXPERIENCE, exp);
+		bundle.put(LEVEL_KIND, levelKind);
 
 		belongings.storeInBundle(bundle);
 	}
@@ -238,7 +241,8 @@ public class Hero extends Char {
 
 		lvl = bundle.getInt(LEVEL);
 		exp = bundle.getInt(EXPERIENCE);
-
+		levelKind = bundle.getString(LEVEL_KIND);
+		
 		belongings.restoreFromBundle(bundle);
 
 		gender = heroClass.getGender();
