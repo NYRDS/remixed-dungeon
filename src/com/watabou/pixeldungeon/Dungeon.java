@@ -25,6 +25,8 @@ import java.util.Date;
 import java.util.HashSet;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Rankings.gameOver;
@@ -48,22 +50,10 @@ import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.levels.CavesBossLevel;
-import com.watabou.pixeldungeon.levels.CavesLevel;
-import com.watabou.pixeldungeon.levels.CityBossLevel;
-import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
-import com.watabou.pixeldungeon.levels.HallsBossLevel;
-import com.watabou.pixeldungeon.levels.HallsLevel;
-import com.watabou.pixeldungeon.levels.LastLevel;
-import com.watabou.pixeldungeon.levels.LastShopLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.ModderLevel;
-import com.watabou.pixeldungeon.levels.PrisonBossLevel;
-import com.watabou.pixeldungeon.levels.PrisonLevel;
 import com.watabou.pixeldungeon.levels.Room;
-import com.watabou.pixeldungeon.levels.SewerBossLevel;
-import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -102,7 +92,7 @@ public class Dungeon {
 	private static boolean[] passable;
 	
 	public static HeroClass heroClass;
-	
+
 	private static void initSizeDependentStuff(int w, int h) {
 		int size = w*h;
 		Actor.clear(size);
@@ -169,11 +159,7 @@ public class Dungeon {
 		return level;
 	}
 	
-	public static Level newLevel() {
-		
-		Dungeon.level = null;
-		
-		depth++;
+	private static void updateStatistics() {
 		if (depth > Statistics.deepestFloor) {
 			Statistics.deepestFloor = depth;
 			
@@ -183,63 +169,17 @@ public class Dungeon {
 				Statistics.completedWithNoKilling = false;
 			}
 		}
+	}
+	
+	public static Level newLevel() {
 		
-		Level level;
-		switch (depth) {
-		case 1:
-		case 2:
-		case 3:
-		case 4:
-			level = new SewerLevel();
-			break;
-		case 5:
-			level = new SewerBossLevel();
-			break;
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-			level = new PrisonLevel();
-			break;
-		case 10:
-			level = new PrisonBossLevel();
-			break;
-		case 11:
-		case 12:
-		case 13:
-		case 14:
-			level = new CavesLevel();
-			break;
-		case 15:
-			level = new CavesBossLevel();
-			break;
-		case 16:
-		case 17:
-		case 18:
-		case 19:
-			level = new CityLevel();
-			break;
-		case 20:
-			level = new CityBossLevel();
-			break;
-		case 21:
-			level = new LastShopLevel();
-			break;
-		case 22:
-		case 23:
-		case 24:
-			level = new HallsLevel();
-			break;
-		case 25:
-			level = new HallsBossLevel();
-			break;
-		case 26:
-			level = new LastLevel();
-			break;
-		default:
-			level = new DeadEndLevel();
-			Statistics.deepestFloor--;
-		}
+		Dungeon.level = null;
+		Position next = DungeonGenerator.descend(currentPosition());
+		
+		depth++;
+		updateStatistics();
+		
+		Level level = DungeonGenerator.createLevel(next);
 /*
 		int lw = 32 + Random.Int(8);
 		int lh = 32 + Random.Int(8);
@@ -536,10 +476,10 @@ public class Dungeon {
 		Journal.restoreFromBundle( bundle );
 	}
 	
-	public static Level loadLevel( ) throws IOException {
+	public static Level loadLevel(Position next ) throws IOException {
 		Dungeon.level = null;
 		
-		String fileName = SaveUtils.loadDepthFile( heroClass , depth );
+		String fileName = SaveUtils.loadDepthFile( heroClass , next.levelDepth, next.levelKind);
 		
 		InputStream input = Game.instance().openFileInput( fileName ) ;
 		Bundle bundle = Bundle.read( input );
@@ -702,5 +642,9 @@ public class Dungeon {
 		if (ch instanceof Hero) {
 			Invisibility.dispel((Hero) ch);
 		}
+	}
+	
+	public static Position currentPosition() {
+		return new Position(level.levelKind(), depth, hero.pos);
 	}
 }

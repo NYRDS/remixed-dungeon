@@ -136,8 +136,6 @@ public abstract class Level implements Bundlable {
 	public SparseArray<Plant> plants;
 
 	private SparseArray<Heap> heaps;
-
-	private String kind;
 	
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<Item>();
 
