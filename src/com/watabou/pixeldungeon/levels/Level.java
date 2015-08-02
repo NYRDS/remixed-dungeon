@@ -453,7 +453,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (mob == null) {
-			mob = Bestiary.mutable(Dungeon.depth);
+			mob = Bestiary.mutable(Dungeon.depth, levelKind());
 		}
 
 		if (!mob.isWallWalker()) {
@@ -973,7 +973,7 @@ public abstract class Level implements Bundlable {
 	public String tileName(int tile) {
 
 		if (tile >= Terrain.WATER_TILES) {
-			return tileName(Terrain.WATER);
+			return Game.getVar(R.string.Level_TileWater);
 		}
 
 		if (tile != Terrain.CHASM && (Terrain.flags[tile] & Terrain.PIT) != 0) {

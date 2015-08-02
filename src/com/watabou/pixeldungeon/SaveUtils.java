@@ -94,7 +94,6 @@ public class SaveUtils {
 		String fname = Utils.format(levelKind+"_"+_depthFile2(cl), depth);
 		GLog.i("trying: %s", fname);
 		if(FileSystem.getInteralStorageFile(fname).exists()){
-			
 			return fname;
 		}
 		

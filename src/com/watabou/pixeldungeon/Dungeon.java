@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -139,6 +140,9 @@ public class Dungeon {
 		Badges.reset();
 		
 		heroClass.initHero( hero );
+		hero.levelKind = "SewerLevel";
+		
+		SaveUtils.deleteLevels(heroClass);
 		
 		gameOver = false;
 	}
@@ -171,23 +175,21 @@ public class Dungeon {
 		}
 	}
 	
-	public static Level newLevel() {
+	public static Level newLevel(Position pos) {
 		
 		Dungeon.level = null;
-		Position next = DungeonGenerator.descend(currentPosition());
-		
-		depth++;
 		updateStatistics();
-		
-		Level level = DungeonGenerator.createLevel(next);
-/*
-		int lw = 32 + Random.Int(8);
-		int lh = 32 + Random.Int(8);
-*/		
+		GLog.i("creating: %s %d", pos.levelKind, pos.levelDepth);
+		Level level = DungeonGenerator.createLevel(pos);
 		
 		int lw = 32;
 		int lh = 32;
 		
+		if(pos.levelKind.equals(DungeonGenerator.SPIDER_LEVEL)){
+			lw = 64;
+			lh = 64;
+		}
+
 		initSizeDependentStuff(lw, lh);
 
 		level.create(lw, lh);
@@ -483,23 +485,26 @@ public class Dungeon {
 	}
 	
 	public static Level loadLevel(Position next ) throws IOException {
-		Dungeon.level = null;
-		
 		String loadFrom = SaveUtils.loadDepthFile( heroClass , next.levelDepth, next.levelKind);
 		
 		GLog.i("loading level: %s", loadFrom);
 		
-		InputStream input = Game.instance().openFileInput( loadFrom ) ;
-		Bundle bundle = Bundle.read( input );
-		input.close();
-		
-		Level level = (Level)bundle.get( "level" );
-		if(level != null){
-			initSizeDependentStuff(level.getWidth(), level.getHeight());
-		} else {
-			GLog.w("cannot load %s \n", loadFrom);
+		if(FileSystem.getInteralStorageFile(loadFrom).exists()){
+			Dungeon.level = null;
+			
+			InputStream input = Game.instance().openFileInput( loadFrom ) ;
+			Bundle bundle = Bundle.read( input );
+			input.close();
+			
+			Level level = (Level)bundle.get( "level" );
+			if(level != null){
+				initSizeDependentStuff(level.getWidth(), level.getHeight());
+			} else {
+				GLog.w("cannot load %s \n", loadFrom);
+			}
+			return level;
 		}
-		return level;
+		return null;
 	}
 	
 	public static void deleteGame(boolean deleteLevels ) {

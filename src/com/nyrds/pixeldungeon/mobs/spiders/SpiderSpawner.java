@@ -9,8 +9,7 @@ public class SpiderSpawner {
 	
 	static Class<?> SpiderClasses[] = {	SpiderServant.class, 
 										SpiderMind.class, 
-										SpiderExploding.class,
-										SpiderQueen.class};
+										SpiderExploding.class};
 	
 	static public void spawnRandomSpider(Level level,int position) {
 		try {

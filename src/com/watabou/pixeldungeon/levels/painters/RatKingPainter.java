@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -54,6 +55,7 @@ public class RatKingPainter extends Painter {
 			Heap chest = level.getHeap( room.random(level) );
 			if (chest != null) {
 				chest.type = Heap.Type.MIMIC;
+				chest.items.add(new SpiderCharm());
 				break;
 			}
 		}

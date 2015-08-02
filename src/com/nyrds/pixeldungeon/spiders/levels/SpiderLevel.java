@@ -197,7 +197,7 @@ public class SpiderLevel extends Level {
 
 	@Override
 	public int nMobs() {
-		return 2 + Dungeon.depth % 5 + Random.Int(3);
+		return 5 + Dungeon.depth % 5 + Random.Int(3);
 	}
 
 	@Override

@@ -93,6 +93,7 @@ public class ItemSpriteSheet {
 	public static final int RING_QUARTZ		= 74;
 	public static final int RING_AGATE		= 75;
 	public static final int RING_OF_STONE_WALKING = 133;
+	public static final int SPIDER_CHARM          = 146;
 	
 	// Potions
 	public static final int POTION_TURQUOISE	= 56;

@@ -270,17 +270,14 @@ public class InterlevelScene extends PixelScene {
 		} else {
 			Dungeon.saveLevel();
 		}
-
-		Level level;
-		if (Dungeon.depth >= Statistics.deepestFloor) {
-			level = Dungeon.newLevel();
-		} else {
-			Position next = DungeonGenerator.descend(Dungeon.currentPosition());
-					
-			Dungeon.depth++;
-			
-			level = Dungeon.loadLevel(next);
+		
+		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
+		Dungeon.depth = next.levelDepth;
+		Level level = Dungeon.loadLevel(next);
+		if(level == null) {
+			level = Dungeon.newLevel(next);
 		}
+		
 		Dungeon.switchLevel(level, level.entrance);
 	}
 
@@ -288,16 +285,14 @@ public class InterlevelScene extends PixelScene {
 
 		Actor.fixTime();
 		Dungeon.saveLevel();
-
-		Level level;
-		if (Dungeon.depth >= Statistics.deepestFloor) {
-			level = Dungeon.newLevel();
-		} else {
-			Position next = DungeonGenerator.descend(Dungeon.currentPosition());
-
-			Dungeon.depth++;
-			level = Dungeon.loadLevel(next);
+		
+		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
+		Dungeon.depth = next.levelDepth;
+		Level level = Dungeon.loadLevel(next);
+		if(level == null) {
+			level = Dungeon.newLevel(next);
 		}
+		
 		Dungeon.switchLevel(level,
 				fallIntoPit ? level.pitCell() : level.randomRespawnCell());
 	}
@@ -308,7 +303,7 @@ public class InterlevelScene extends PixelScene {
 		Position next = DungeonGenerator.ascend(Dungeon.currentPosition());
 		
 		Dungeon.saveLevel();
-		Dungeon.depth--;
+		Dungeon.depth=next.levelDepth;
 		
 		Level level = Dungeon.loadLevel(next);
 		Dungeon.switchLevel(level, level.exit);
@@ -362,8 +357,7 @@ public class InterlevelScene extends PixelScene {
 
 		if (Dungeon.bossLevel()) {
 			Dungeon.hero.resurrect(Dungeon.depth);
-			Dungeon.depth--;
-			Level level = Dungeon.newLevel(/* true */);
+			Level level = Dungeon.newLevel(Dungeon.currentPosition());
 			Dungeon.switchLevel(level, level.entrance);
 		} else {
 			Dungeon.hero.resurrect(-1);

@@ -5,6 +5,7 @@ import com.watabou.pixeldungeon.levels.CavesBossLevel;
 import com.watabou.pixeldungeon.levels.CavesLevel;
 import com.watabou.pixeldungeon.levels.CityBossLevel;
 import com.watabou.pixeldungeon.levels.CityLevel;
+import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.HallsBossLevel;
 import com.watabou.pixeldungeon.levels.HallsLevel;
 import com.watabou.pixeldungeon.levels.LastLevel;
@@ -29,7 +30,9 @@ public enum LevelKind {
 	HALLS_BOSS_LEVEL(HallsBossLevel.class),
 	SPIDER_LEVEL(SpiderLevel.class),
 	LAST_LEVEL(LastLevel.class),
-	LAST_SHOP_LEVEL(LastShopLevel.class);
+	LAST_SHOP_LEVEL(LastShopLevel.class),
+	DEAD_END_LEVEL(DeadEndLevel.class);
+	
 	
 	private Class<? extends Level> levelClass;
 	
