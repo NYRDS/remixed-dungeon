@@ -230,7 +230,7 @@ public class Bundle {
 	}
 	
 	public void put( String key, Bundlable object ) {
-		if (object != null) {
+		if (object != null && !object.dontPack()) {
 			try {
 				Bundle bundle = new Bundle();
 				bundle.put( CLASS_NAME, object.getClass().getName() );
