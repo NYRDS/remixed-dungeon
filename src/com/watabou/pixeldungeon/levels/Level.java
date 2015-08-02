@@ -381,6 +381,10 @@ public abstract class Level implements Bundlable {
 		bundle.put(WIDTH, width);
 		bundle.put(HEIGHT, height);
 	}
+	
+	public boolean dontPack() {
+		return false;
+	}
 
 	public int tunnelTile() {
 		return feeling == Feeling.CHASM ? Terrain.EMPTY_SP : Terrain.EMPTY;

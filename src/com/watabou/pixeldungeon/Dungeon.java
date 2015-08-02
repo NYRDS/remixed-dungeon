@@ -253,6 +253,7 @@ public class Dungeon {
 		}
 		
 		hero.pos = pos;
+		hero.levelKind = level.levelKind();
 		
 		if(!level.cellValid(hero.pos)) {
 			hero.pos = level.entrance;
@@ -652,10 +653,6 @@ public class Dungeon {
 	}
 	
 	public static Position currentPosition() {
-		if(level != null){
-			return new Position(level.levelKind(), depth, hero.pos);
-		} else {
-			return new Position(null, depth, hero.pos);
-		}
+		return new Position(hero.levelKind, depth, hero.pos);
 	}
 }

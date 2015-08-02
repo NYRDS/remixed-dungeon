@@ -94,6 +94,10 @@ public class Plant implements Bundlable {
 		bundle.put(POS, pos);
 	}
 
+	public boolean dontPack() {
+		return false;
+	}
+	
 	public String desc() {
 		return null;
 	}

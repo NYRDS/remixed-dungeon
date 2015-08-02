@@ -37,4 +37,8 @@ public class Position implements Bundlable {
 		bundle.put(LEVEL_KIND,  levelKind);
 	}
 	
+	public boolean dontPack() {
+		return false;
+	}
+	
 }

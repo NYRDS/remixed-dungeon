@@ -204,6 +204,10 @@ public enum Rankings {
 			
 			bundle.put( GAME, gameFile );
 		}
+		
+		public boolean dontPack() {
+			return false;
+		}
 	}
 
 	private static final Comparator<Record> scoreComparator = new Comparator<Rankings.Record>() {

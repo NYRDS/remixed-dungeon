@@ -241,6 +241,10 @@ public class Weapon extends KindOfWeapon {
 		public void storeInBundle( Bundle bundle ) {	
 		}
 		
+		public boolean dontPack() {
+			return false;
+		}
+		
 		public ItemSprite.Glowing glowing() {
 			return ItemSprite.Glowing.WHITE;
 		}

@@ -183,6 +183,10 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		type   = Type.valueOf( bundle.getString( "type" ) );
 	}
 	
+	public boolean dontPack() {
+		return false;
+	}
+	
 	public static void shuffleTypes() {
 		int size = SPECIALS.size();
 		for (int i=0; i < size - 1; i++) {

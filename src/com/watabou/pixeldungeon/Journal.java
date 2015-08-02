@@ -82,6 +82,10 @@ public class Journal {
 			bundle.put( FEATURE, feature.toString() );
 			bundle.put( DEPTH, depth );
 		}
+		
+		public boolean dontPack() {
+			return false;
+		}
 	}
 	
 	public static ArrayList<Record> records;
@@ -101,6 +105,10 @@ public class Journal {
 		for (Bundlable rec : bundle.getCollection( JOURNAL ) ) {
 			records.add( (Record) rec );
 		}
+	}
+	
+	public static boolean dontPack() {
+		return false;
 	}
 	
 	public static void add( Feature feature ) {
