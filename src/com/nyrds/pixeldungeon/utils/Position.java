@@ -8,6 +8,7 @@ public class Position implements Bundlable {
 	public int levelId = -1;
 	public int cellId  = -1;
 	
+	
 	static final String LEVEL_ID = "levelId";
 	static final String CELL_ID  = "cellId";
 	
