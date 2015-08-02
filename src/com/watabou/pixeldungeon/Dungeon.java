@@ -376,7 +376,12 @@ public class Dungeon {
 		Bundle bundle = new Bundle();
 		bundle.put( LEVEL, level );
 		
-		OutputStream output = Game.instance().openFileOutput( SaveUtils.saveDepthFile( hero.heroClass, depth, level.levelKind() ), Game.MODE_PRIVATE );
+		Position current =currentPosition();
+		
+		String saveTo = SaveUtils.saveDepthFile( hero.heroClass, current.levelDepth, current.levelKind );		
+		GLog.i("saving level: %s", saveTo);
+		
+		OutputStream output = Game.instance().openFileOutput( saveTo , Game.MODE_PRIVATE );
 		Bundle.write( bundle, output );
 		output.close();
 	}
@@ -479,9 +484,11 @@ public class Dungeon {
 	public static Level loadLevel(Position next ) throws IOException {
 		Dungeon.level = null;
 		
-		String fileName = SaveUtils.loadDepthFile( heroClass , next.levelDepth, next.levelKind);
+		String loadFrom = SaveUtils.loadDepthFile( heroClass , next.levelDepth, next.levelKind);
 		
-		InputStream input = Game.instance().openFileInput( fileName ) ;
+		GLog.i("loading level: %s", loadFrom);
+		
+		InputStream input = Game.instance().openFileInput( loadFrom ) ;
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
@@ -489,7 +496,7 @@ public class Dungeon {
 		if(level != null){
 			initSizeDependentStuff(level.getWidth(), level.getHeight());
 		} else {
-			GLog.w("cannot load %s \n", fileName);
+			GLog.w("cannot load %s \n", loadFrom);
 		}
 		return level;
 	}

@@ -4,6 +4,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class SaveUtils {
@@ -47,6 +48,7 @@ public class SaveUtils {
 		
 		for (String file : files) {
 			if(file.endsWith(".dat") && hasClassTag(cl, file)) {
+				GLog.i("deleting: %s", file);
 				Game.instance().deleteFile(file);
 			}
 		}
@@ -90,7 +92,9 @@ public class SaveUtils {
 	public static String loadDepthFile( HeroClass cl, int depth, String levelKind) {
 		
 		String fname = Utils.format(levelKind+"_"+_depthFile2(cl), depth);
+		GLog.i("trying: %s", fname);
 		if(FileSystem.getInteralStorageFile(fname).exists()){
+			
 			return fname;
 		}
 		

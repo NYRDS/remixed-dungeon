@@ -310,8 +310,6 @@ public class InterlevelScene extends PixelScene {
 		Dungeon.saveLevel();
 		Dungeon.depth--;
 		
-		
-		
 		Level level = Dungeon.loadLevel(next);
 		Dungeon.switchLevel(level, level.exit);
 	}

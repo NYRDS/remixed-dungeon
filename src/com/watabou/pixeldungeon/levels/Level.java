@@ -158,7 +158,7 @@ public abstract class Level implements Bundlable {
 	private static final String HEIGHT = "height";
 
 	public String levelKind() {
-		return this.getClass().getName();
+		return this.getClass().getSimpleName();
 	}
 	
 	public Heap getHeap(int pos) {
