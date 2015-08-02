@@ -645,6 +645,10 @@ public class Dungeon {
 	}
 	
 	public static Position currentPosition() {
-		return new Position(level.levelKind(), depth, hero.pos);
+		if(level != null){
+			return new Position(level.levelKind(), depth, hero.pos);
+		} else {
+			return new Position(null, depth, hero.pos);
+		}
 	}
 }

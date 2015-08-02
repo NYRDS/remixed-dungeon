@@ -9,19 +9,19 @@ public class DungeonGenerator {
 	private static Map<String, LevelKind> levelTypes = levelTypes(); 
 
 	public static Position ascend(Position current) {
-		Position ret = new Position();
-		ret.levelDepth = current.levelDepth - 1;
-		ret.levelKind  = depthToKind(ret.levelDepth);
+		Position next = new Position();
+		next.levelDepth = current.levelDepth - 1;
+		next.levelKind  = depthToKind(next.levelDepth);
 		
-		return current;
+		return next;
 	}
 	
 	public static Position descend(Position current) {
-		Position ret = new Position();
-		ret.levelDepth = current.levelDepth + 1;
-		ret.levelKind  = depthToKind(ret.levelDepth);
+		Position next = new Position();
+		next.levelDepth = current.levelDepth + 1;
+		next.levelKind  = depthToKind(next.levelDepth);
 		
-		return ret;
+		return next;
 	}
 	
 	public static Level createLevel(Position pos) {
