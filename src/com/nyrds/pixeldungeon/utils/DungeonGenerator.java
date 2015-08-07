@@ -124,9 +124,9 @@ public class DungeonGenerator {
 		case 22:
 		case 23:
 		case 24:
-			return "HallsLevel";
+			return HALLS_LEVELS;
 		case 25:
-			return "HallsBossLevel";
+			return HALLS_BOSS_LEVELS;
 		case 26:
 			return LAST_LEVEL;
 		default:
