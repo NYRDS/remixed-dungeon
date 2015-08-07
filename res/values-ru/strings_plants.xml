@@ -1,38 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <!-- PACKAGE pixeldungeon/plants -->
-    <!-- STRINGS OF Plant CLASS -->
-    <string name="Plant_ACPlant">ПОСАДИТЬ</string>
-    <string name="Plant_Info">Посади эти семена в то место, где ты хочешь вырастить %1$s.\n\n%2$s</string>
-    <string name="Plant_Seed">семена растения %s</string>
-
-    <!-- STRINGS OF Dreamweed CLASS -->
-    <string name="Dreamweed_Name">Дурман-трава</string>
-    <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющее облачко ошеломляющего газа.</string>
-
-    <!-- STRINGS OF Earthroot CLASS -->
-    <string name="Earthroot_Name">Земляной Корень</string>
-    <string name="Earthroot_Desc">Когда существо касается Земляного Корня, его окутывает природная броня.</string>
-    <string name="Earthroot_Buff">Растительная броня</string>
-
-    <!-- STRINGS OF Fadeleaf CLASS -->
-    <string name="Fadeleaf_Name">Бледнолист</string>
-    <string name="Fadeleaf_Desc">Касание Бледнолиста телепортирует любое существо в случайную точку текущего уровня.</string>
-
-    <!-- STRINGS OF Firebloom CLASS -->
-    <string name="Firebloom_Name">Огнецвет</string>
-    <string name="Firebloom_Desc">Всё, что касается Огнецвета, охватывается огнём.</string>
-
-    <!-- STRINGS OF Icecap CLASS -->
-    <string name="Icecap_Name">Ледовик</string>
-    <string name="Icecap_Desc">При касании Ледовик испускает пыльцу, которая замораживает всё на своём пути.</string>
-
-    <!-- STRINGS OF Sorrowmoss CLASS -->
-    <string name="Sorrowmoss_Name">Грустномох</string>
-    <string name="Sorrowmoss_Desc">Грустномох - это цветок (а не мох) с бритвенно острыми лепестками, покрытыми смертельным ядом.</string>
-
-    <!-- STRINGS OF Sungrass CLASS -->
-    <string name="Sungrass_Name">Солнечник</string>
-    <string name="Sungrass_Desc">Солнечник славится целебными свойствами своего сока.</string>
-    <string name="Sungrass_Buff">Растительное исцеление</string>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">ПОСАДИТЬ</string>
+  <string name="Plant_Info">Посади эти семена в то место, где ты хочешь вырастить %1$s.\n\n%2$s</string>
+  <string name="Plant_Seed">семена растения %s</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">Дурман-трава</string>
+  <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющее облачко ошеломляющего газа.</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">Земляной Корень</string>
+  <string name="Earthroot_Desc">Когда существо касается Земляного Корня, его окутывает природная броня.</string>
+  <string name="Earthroot_Buff">Растительная броня</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">Бледнолист</string>
+  <string name="Fadeleaf_Desc">Касание Бледнолиста телепортирует любое существо в случайную точку текущего уровня.</string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">Огнецвет</string>
+  <string name="Firebloom_Desc">Всё, чего касается Огнецвет, охватывает огонь.</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">Ледовик</string>
+  <string name="Icecap_Desc">При касании Ледовик испускает пыльцу, которая замораживает всё на своём пути.</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">Грустномох</string>
+  <string name="Sorrowmoss_Desc">Грустномох - это цветок (а не мох) с бритвенно острыми лепестками, покрытыми смертельным ядом.</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">Солнечник</string>
+  <string name="Sungrass_Desc">Солнечник славится целебными свойствами своего сока.</string>
+  <string name="Sungrass_Buff">Растительное исцеление</string>
 </resources>

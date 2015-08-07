@@ -1,88 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <!-- PACKAGE /items/rings -->
-    <!-- STRINGS OF Ring CLASS -->
-    <string name="Ring_Name">кольцо с %s</string>
-    <string name="Ring_Info">Это металлическое колечко украшено переливающимся на свету %s. Кто знает, какой эффект оно может оказать при надевании?</string>
-    <string name="Ring_Identify">ты достаточно хорошо знаком с предметом %1$s, чтобы его опознать. Это %2$s.</string>
-
-    <string-array name="Ring_Gems">
-        <item>бриллиантом</item>
-        <item>опалом</item>
-        <item>гранатом</item>
-        <item>рубином</item>
-        <item>аметистом</item>
-        <item>топазом</item>
-        <item>ониксом</item>
-        <item>турмалином</item>
-        <item>изумрудом</item>
-        <item>сапфиром</item>
-        <item>кварцем</item>
-        <item>агатом</item>
-    </string-array>
-
-    <string name="Ring_Info1">Ты можешь носить максимум 2 кольца</string>
-    <string name="Ring_Info2">Проклятое %s не снять. Боль.</string>
-    <string name="Ring_Info3a">%1$s\n\n%2$s на твоём пальце %3$s</string>
-    <string name="Ring_Info3b">проклято, ты не в силах его снять.</string>
-    <string name="Ring_Info4">%1$s\n\nТы чувствуешь зловещую магию, затаившуюся внутри предмета %2$s.</string>
-    <string name="Ring_BuffKnown">Это %s</string>
-
-    <!-- STRINGS OF RingOfAccuracy CLASS -->
-    <string name="RingOfAccuracy_Name">Кольцо Меткости</string>
-    <string name="RingOfAccuracy_Info">Это кольцо повысит твой шанс попадания по врагу.</string>
-
-    <!-- STRINGS OF RingOfDetection CLASS -->
-    <string name="RingOfDetection_Name">Кольцо Обнаружения</string>
-    <string name="RingOfDetection_Info">Это кольцо позволит тебе замечать такие секреты, как тайные двери и ловушки, не тратя время на поиски. Ослабленное кольцо обнаружения наоборот притупит твои чувства, усложнив поиск секретов.</string>
-
-    <!-- STRINGS OF RingOfElements CLASS -->
-    <string name="RingOfElements_Name">Кольцо Стихий</string>
-    <string name="RingOfElements_Info">Это кольцо обеспечит тебя сопротивляемостью к воздействию стихий, таких как огонь, электричество, газы и т.д. Также оно снизит время влияния негативных эффектов</string>
-
-    <!-- STRINGS OF RingOfEvasion CLASS -->
-    <string name="RingOfEvasion_Name">Кольцо Уклонения</string>
-    <string name="RingOfEvasion_Info">Это кольцо повысит твой шанс уклонится от вражеской атаки.</string>
-
-    <!-- STRINGS OF RingOfHaggler CLASS -->
-    <string name="RingOfHaggler_Name">Кольцо Торгаша</string>
-    <string name="RingOfHaggler_Info">Это кольцо не имеет волшебных эффектов, но торговцы и дельцы в курсе, что его может носить лишь член Гильдии Воров. Как правило, они готовы предложить скидку, чтобы избежать проблем. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
-
-    <!-- STRINGS OF RingOfHaste CLASS -->
-    <string name="RingOfHaste_Name">Кольцо Стремительности</string>
-    <string name="RingOfHaste_Info">Это кольцо ускорит течение времени своего владельца, в связи с чем тот начнёт быстрее справлятся со всевозможными задачами.</string>
-
-    <!-- STRINGS OF RingOfHerbalism CLASS -->
-    <string name="RingOfHerbalism_Name">Кольцо Травничества</string>
-    <string name="RingOfHerbalism_Info">Это кольцо увеличит шанс собрать росу и семена с вытоптанной травы.</string>
-
-    <!-- STRINGS OF RingOfMending CLASS -->
-    <string name="RingOfMending_Name">Кольцо Заживления</string>
-    <string name="RingOfMending_Info">Это кольцо увеличит регенеративные способности владельца, позволяя ему быстрее восполнять здоровье. Ослабленное кольцо снизит или может целиком остановить регенерацию организма.</string>
-
-    <!-- STRINGS OF RingOfPower CLASS -->
-    <string name="RingOfPower_Name">Кольцо Власти</string>
-    <string name="RingOfPower_Info">Мощь этого кольца усилит волшебные палочки владельца. Ослабленное кольцо окажет обратный эффект.</string>
-
-    <!-- STRINGS OF RingOfSatiety CLASS -->
-    <string name="RingOfSatiety_Name">Кольцо Сытости</string>
-    <string name="RingOfSatiety_Info">Носитель кольца сможет дольше продержаться без еды. Ослабленное кольцо подстегнёт голод.</string>
-
-    <!-- STRINGS OF RingOfShadows CLASS -->
-    <string name="RingOfShadows_Name">Кольцо Теней</string>
-    <string name="RingOfShadows_Info">Враги имеют меньший шанс заметить носителя этого кольца. Ослабленное кольцо наоборот привлечёт внимание врагов, которые в простой ситуации могли тебя и не заметить.</string>
-
-    <!-- STRINGS OF RingOfThorns CLASS -->
-    <string name="RingOfThorns_Name">Кольцо Шипов</string>
-    <string name="RingOfThorns_Info">Хоть само кольцо и не утыкано шипами, всякий атакующий враг ощутит на своей шкуре часть нанесённого тебе урона. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
-    
-    <!-- STRINGS OF RingOfStoneWalking CLASS -->
-    <string name="RingOfStoneWalking_Name">Кольцо Каменной Крови</string>
-    <string name="RingOfStoneWalking_Info">Это кольцо сделанное из крепкого камня выглядело бы обычным. Если бы не капля жидкой крови пульсирующая вместо камня.</string>  
-    <string name="RingOfStoneWalking_ImmuredInStone">Замурован в камне. Навсегда.</string>
-	
-	<!-- STRINGS OF SpiderCharm CLASS -->
-    <string name="SpiderCharm_Name">Паучий Оберег</string>
-    <string name="SpiderCharm_Info">Эта занятная побрякушка источает некую ауру. Интересно, что станется если её надеть?</string>
-        
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">кольцо с %s</string>
+  <string name="Ring_Info">Это металлическое колечко украшено переливающимся на свету %s. Кто знает, какой эффект оно может оказать при надевании?</string>
+  <string name="Ring_Identify">ты достаточно хорошо знаком с предметом %1$s, чтобы его опознать. Это %2$s.</string>
+  <string-array name="Ring_Gems">
+    <item>бриллиантом</item>
+    <item>опалом</item>
+    <item>гранатом</item>
+    <item>рубином</item>
+    <item>аметистом</item>
+    <item>топазом</item>
+    <item>ониксом</item>
+    <item>турмалином</item>
+    <item>изумрудом</item>
+    <item>сапфиром</item>
+    <item>кварцем</item>
+    <item>агатом</item>
+  </string-array>
+  <string name="Ring_Info1">Ты можешь носить максимум 2 кольца</string>
+  <string name="Ring_Info2">Проклятое %s не снять. Боль.</string>
+  <string name="Ring_Info3a">%1$s\n\n%2$s на твоём пальце %3$s</string>
+  <string name="Ring_Info3b">проклято, ты не в силах его снять.</string>
+  <string name="Ring_Info4">%1$s\n\nТы чувствуешь зловещую магию, затаившуюся внутри предмета %2$s.</string>
+  <string name="Ring_BuffKnown">Это %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">Кольцо Меткости</string>
+  <string name="RingOfAccuracy_Info">Это кольцо повысит твой шанс попадания по врагу.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">Кольцо Обнаружения</string>
+  <string name="RingOfDetection_Info">Это кольцо позволит тебе замечать такие секреты, как тайные двери и ловушки, не тратя время на поиски. Ослабленное кольцо обнаружения наоборот притупит твои чувства, усложнив поиск секретов.</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">Кольцо Стихий</string>
+  <string name="RingOfElements_Info">Это кольцо обеспечит тебя сопротивляемостью к воздействию стихий, таких как огонь, электричество, газы и т.д. Также оно снизит время влияния негативных эффектов</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">Кольцо Уклонения</string>
+  <string name="RingOfEvasion_Info">Это кольцо повысит твой шанс уклонится от вражеской атаки.</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">Кольцо Торгаша</string>
+  <string name="RingOfHaggler_Info">Это кольцо не имеет волшебных эффектов, но торговцы и дельцы в курсе, что его может носить лишь член Гильдии Воров. Как правило, они готовы предложить скидку, чтобы избежать проблем. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">Кольцо Стремительности</string>
+  <string name="RingOfHaste_Info">Это кольцо ускорит течение времени своего владельца, в связи с чем тот начнёт быстрее справлятся со всевозможными задачами.</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">Кольцо Травничества</string>
+  <string name="RingOfHerbalism_Info">Это кольцо увеличит шанс собрать росу и семена с вытоптанной травы.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">Кольцо Заживления</string>
+  <string name="RingOfMending_Info">Это кольцо увеличит регенеративные способности владельца, позволяя ему быстрее восполнять здоровье. Ослабленное кольцо снизит или может целиком остановить регенерацию организма.</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">Кольцо Власти</string>
+  <string name="RingOfPower_Info">Мощь этого кольца усилит волшебные палочки владельца. Ослабленное кольцо окажет обратный эффект.</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">Кольцо Сытости</string>
+  <string name="RingOfSatiety_Info">Носитель кольца сможет дольше продержаться без еды. Ослабленное кольцо подстегнёт голод.</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">Кольцо Теней</string>
+  <string name="RingOfShadows_Info">Враги имеют меньший шанс заметить носителя этого кольца. Ослабленное кольцо наоборот привлечёт внимание врагов, которые в простой ситуации могли тебя и не заметить.</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">Кольцо Колючек</string>
+  <string name="RingOfThorns_Info">Хоть само кольцо и не обладает колючками, всякий атакующий враг ощутит на своей шкуре часть нанесённого тебе урона. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Кольцо Каменной Крови</string>
+  <string name="RingOfStoneWalking_Info">Это кольцо, сделанное из крепкого камня, выглядело бы обычным. Если бы не капля жидкой крови, пульсирующая вместо камня.</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Замурован в камне. Навсегда.</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Паучий Оберег</string>
+  <string name="SpiderCharm_Info">Эта занятная побрякушка источает некую ауру. Интересно, что станется если её надеть?</string>
 </resources>

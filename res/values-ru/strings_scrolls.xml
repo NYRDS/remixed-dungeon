@@ -1,110 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-
-    <!-- PACKAGE /items/scrolls -->
-    <!-- STRINGS OF Scroll CLASS -->
-    <string name="Scroll_Name">свиток \"%s\"</string>
-    <string name="Scroll_Info">Этот свиток покрыт непонятными письменами и озаглавлен руной %s. Кто знает, что случится если его прочесть вслух?</string>
-    <string name="Scroll_ACRead">ЧИТАТЬ</string>
-    <string name="Scroll_Blinded">Ты не можешь прочесть свиток, будучи ослеплённым</string>
-
-    <string-array name="Scroll_Runes">
-        <item>КАУНАН</item>
-        <item>СОВИЛОУ</item>
-        <item>ЛАГУЗ</item>
-        <item>ВАЙНДЖИ</item>
-        <item>ГАЙФУ</item>
-        <item>РАЙДО</item>
-        <item>ИЗАС</item>
-        <item>МАННАЗ</item>
-        <item>НАУДИЗ</item>
-        <item>БЕРКАНАН</item>
-        <item>ОДАЛ</item>
-        <item>ТИВАЗ</item>
-        <item>АНСУЗ</item>
-        <item>ИВАЗ</item>
-        <item>АЛГИЗ</item>
-        <item>ДАГАЗ</item>
-    </string-array>
-
-    <!-- STRINGS OF InventoryScroll CLASS -->
-    <string name="InventoryScroll_Title">Выбери предмет</string>
-    <string name="InventoryScroll_Warning">Ты уверен, что хочешь отменить использование свитка? Он пропадёт в любом случае.</string>
-    <string name="InventoryScroll_Yes">Да, пусть так</string>
-    <string name="InventoryScroll_No">Нет, я передумал</string>
-
-    <!-- STRINGS OF BlankScroll CLASS -->
-    <string name="BlankScroll_Name">Чистый свиток</string>
-    <string name="BlankScroll_Info">Просто чистый свиток</string>
-    <string name="BlankScroll_ReallyBlank">Действительно чистый свиток</string>
-
-    <!-- STRINGS OF ScrollOfChallenge CLASS -->
-    <string name="ScrollOfChallenge_Name">Свиток Вызова</string>
-    <string name="ScrollOfChallenge_Info">При прочтении вслух этот свиток издаст бросающий вызов рёв, указывая место твоего положения всем монстрам на уровне.</string>
-    <string name="ScrollOfChallenge_Info1">Свиток испускает бросающий вызов рёв, эхом проносящийся по подземелью!</string>
-
-    <!-- STRINGS OF ScrollOfIdentify CLASS -->
-    <string name="ScrollOfIdentify_Name">Свиток Опознания</string>
-    <string name="ScrollOfIdentify_Info">Раскрывает все секреты одного предмета.</string>
-    <string name="ScrollOfIdentify_InvTitle">Выбери предмет для опознания</string>
-    <string name="ScrollOfIdentify_Info1">Это %s</string>
-
-    <!-- STRINGS OF ScrollOfLullaby CLASS -->
-    <string name="ScrollOfLullaby_Name">Свиток Колыбельной</string>
-    <string name="ScrollOfLullaby_Info">Убаюкивающая мелодия, создаваемая свитком, усыпляет всех существ в поле зрения, позволяя тебе сбежать или давая возможность нанести неожиданный удар.</string>
-    <string name="ScrollOfLullaby_Info1">Свиток испускает убаюкивающую мелодию.</string>
-    <string name="ScrollOfLullaby_Info2">Свиток испускает убаюкивающую мелодию и %s засыпает!</string>
-    <string name="ScrollOfLullaby_Info3">Свиток испускает убаюкивающую мелодию и монстры засыпают!</string>
-
-    <!-- STRINGS OF ScrollOfMagicMapping CLASS -->
-    <string name="ScrollOfMagicMapping_Name">Свиток Волшебной Карты</string>
-    <string name="ScrollOfMagicMapping_Info">При прочтении свитка в твоей памяти отчётливо выстроится картина, показывающая карту уровня и все его секреты. Но расположение предметов и существ останется неизвестным.</string>
-    <string name="ScrollOfMagicMapping_Layout">Теперь ты знаешь план уровня.</string>
-
-    <!-- STRINGS OF ScrollOfMirrorImage CLASS -->
-    <string name="ScrollOfMirrorImage_Name">Свиток Двойника</string>
-    <string name="ScrollOfMirrorImage_Info">Прочтение свитка создаст твоего иллюзорного близнеца, который устремится в погоню за врагами.</string>
-
-    <!-- STRINGS OF ScrollOfPsionicBlast CLASS -->
-    <string name="ScrollOfPsionicBlast_Name">Свиток Ментального Удара</string>
-    <string name="ScrollOfPsionicBlast_Info">Этот свиток содержит разрушительную энергию, которая, по воле владельца, устремится ко всем врагам в поле зрения, нанося им непомерный урон. Этот эффект сопровождается сильнейшей вспышкой, которая ослепит всех присутствующих, включая владельца.</string>
-
-    <!-- STRINGS OF ScrollOfRecharging CLASS -->
-    <string name="ScrollOfRecharging_Name">Свиток Перезарядки</string>
-    <string name="ScrollOfRecharging_Info">Сырая магическая энергия, заточённая в этом свитке восстановит заряд всех волшебных палочек у того, кто его прочтёт.</string>
-    <string name="ScrollOfRecharging_Info1a">поток энергии пробежал по твоему рюкзаку, перезарядив волшебную палочку</string>
-    <string name="ScrollOfRecharging_Info1b">поток энергии пробежал по твоему рюкзаку, перезарядив волшебные палочки</string>
-    <string name="ScrollOfRecharging_Info2">поток энергии пробежал по твоему рюкзаку, но ничего не изменилось</string>
-
-    <!-- STRINGS OF ScrollOfRemoveCurse CLASS -->
-    <string name="ScrollOfRemoveCurse_Name">Свиток Снятия Проклятия</string>
-    <string name="ScrollOfRemoveCurse_Info">Прочитав этот свиток, ты призовёшь волшебную силу, которая развеет проклятья со всех предметов, позволяя тебе их снять.</string>
-    <string name="ScrollOfRemoveCurse_Proced">Очистительный свет пробежал по твоему рюкзаку, изгоняя зловещую силу.</string>
-    <string name="ScrollOfRemoveCurse_NoProced">Очистительный свет пробежал по твоему рюкзаку, но ничего не изменилось.</string>
-
-    <!-- STRINGS OF ScrollOfTeleportation CLASS -->
-    <string name="ScrollOfTeleportation_Name">Свиток Телепортации</string>
-    <string name="ScrollOfTeleportation_Info">Этот свиток перенесёт заклинателя в случайную точку текущего уровня. Это может помочь сбежать из опасных ситуаций, хотя невезение может привести в место и похуже.</string>
-    <string name="ScrollOfTeleportation_Teleport">В мгновение ока ты переместился в другую область уровня.</string>
-    <string name="ScrollOfTeleportation_NoTeleport">Могучая магическая аура этого места не позволяет тебе телепортироваться!</string>
-
-    <!-- STRINGS OF ScrollOfTerror CLASS -->
-    <string name="ScrollOfTerror_Name">Свиток Ужаса</string>
-    <string name="ScrollOfTerror_Info">Красная вспышка повергнет всех видимых существ в ужас, обращая их в бегство. Атакуя убегающего врага, ты снимешь с него заклятие.</string>
-    <string name="ScrollOfTerror_Info1">Свиток испускает яркую вспышку красного света</string>
-    <string name="ScrollOfTerror_Info2">Свиток испускает яркую вспышку красного света и %s спасается бегством!</string>
-    <string name="ScrollOfTerror_Info3">Свиток испускает яркую вспышку красного света и монстры спасаются бегством!</string>
-
-    <!-- STRINGS OF ScrollOfUpgrade CLASS -->
-    <string name="ScrollOfUpgrade_Name">Свиток Улучшения</string>
-    <string name="ScrollOfUpgrade_Info">Этот свиток улучшит единственную вещь, повышая её качество. Сила и ёмкость палочки возрастёт; оружие получит больший урон или увеличит меткость; броня получит большую защиту; возможности кольца возрастут. Оружие и броня также потребуют меньше силы для использования, а любой проклятый предмет будет очищен.</string>
-    <string name="ScrollOfUpgrade_InvTitle">Выбери предмет для улучшения</string>
-    <string name="ScrollOfUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
-
-    <!-- STRINGS OF ScrollOfWeaponUpgrade CLASS -->
-    <string name="ScrollOfWeaponUpgrade_Name">Свиток Улучшения Оружия</string>
-    <string name="ScrollOfWeaponUpgrade_Info">Этот свиток улучшит оружие ближнего боя, повысив его качество. В отличие от простого Свитка Улучшения, эта версия не разрушит чары, наложенные на предмет. Даже наоборот, он сможет наделить случайным эффектом незачарованный предмет.</string>
-    <string name="ScrollOfWeaponUpgrade_InvTitle">Выбери предмет для улучшения</string>
-    <string name="ScrollOfWeaponUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
-
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">свиток \"%s\"</string>
+  <string name="Scroll_Info">Этот свиток покрыт непонятными письменами и озаглавлен руной %s. Кто знает, что случится если его прочесть вслух?</string>
+  <string name="Scroll_ACRead">ЧИТАТЬ</string>
+  <string name="Scroll_Blinded">Ты не можешь прочесть свиток, будучи ослеплённым</string>
+  <string-array name="Scroll_Runes">
+    <item>КАУНАН</item>
+    <item>СОВИЛО</item>
+    <item>ЛАГУЗ</item>
+    <item>ИНГВИ</item>
+    <item>ГИФУ</item>
+    <item>РАЙДО</item>
+    <item>ИСАЗ</item>
+    <item>МАННАЗ</item>
+    <item>НАУДИЗ</item>
+    <item>БЕРКАНАН</item>
+    <item>ОДАЛ</item>
+    <item>ТИВАЗ</item>
+    <item>АНСУЗ</item>
+    <item>ИВАЗ</item>
+    <item>АЛГИЗ</item>
+    <item>ДАГАЗ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Выбери предмет</string>
+  <string name="InventoryScroll_Warning">Ты уверен, что хочешь отменить использование свитка? Он пропадёт в любом случае.</string>
+  <string name="InventoryScroll_Yes">Да, пусть так</string>
+  <string name="InventoryScroll_No">Нет, я передумал</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Чистый свиток</string>
+  <string name="BlankScroll_Info">Просто чистый свиток</string>
+  <string name="BlankScroll_ReallyBlank">Этот свиток действительно чист</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Свиток Вызова</string>
+  <string name="ScrollOfChallenge_Info">При прочтении вслух этот свиток издаст бросающий вызов рёв, указывая место твоего положения всем монстрам на уровне.</string>
+  <string name="ScrollOfChallenge_Info1">Свиток испускает бросающий вызов рёв, эхом проносящийся по подземелью!</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Свиток Опознания</string>
+  <string name="ScrollOfIdentify_Info">Раскрывает все секреты одного предмета.</string>
+  <string name="ScrollOfIdentify_InvTitle">Выбери предмет для опознания</string>
+  <string name="ScrollOfIdentify_Info1">Это %s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Свиток Колыбельной</string>
+  <string name="ScrollOfLullaby_Info">Убаюкивающая мелодия, создаваемая свитком, усыпляет всех существ в поле зрения, позволяя тебе сбежать или давая возможность нанести неожиданный удар.</string>
+  <string name="ScrollOfLullaby_Info1">Свиток испускает убаюкивающую мелодию.</string>
+  <string name="ScrollOfLullaby_Info2">Свиток испускает убаюкивающую мелодию и %s засыпает!</string>
+  <string name="ScrollOfLullaby_Info3">Свиток испускает убаюкивающую мелодию и монстры засыпают!</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Свиток Волшебной Карты</string>
+  <string name="ScrollOfMagicMapping_Info">При прочтении свитка в твоей памяти отчётливо выстроится картина, показывающая карту уровня и все его секреты. Но расположение предметов и существ останется неизвестным.</string>
+  <string name="ScrollOfMagicMapping_Layout">Теперь ты знаешь план уровня.</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Свиток Двойника</string>
+  <string name="ScrollOfMirrorImage_Info">Прочтение свитка создаст твоего иллюзорного близнеца, который устремится в погоню за врагами.</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Свиток Ментального Удара</string>
+  <string name="ScrollOfPsionicBlast_Info">Этот свиток содержит разрушительную энергию, которая, по воле владельца, устремится ко всем врагам в поле зрения, нанося им непомерный урон. Этот эффект сопровождается сильнейшей вспышкой, которая ослепит всех присутствующих, включая владельца.</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Свиток Перезарядки</string>
+  <string name="ScrollOfRecharging_Info">Сырая магическая энергия, заточённая в этом свитке восстановит заряд всех волшебных палочек у того, кто его прочтёт.</string>
+  <string name="ScrollOfRecharging_Info1a">поток энергии пробежал сквозь твой рюкзак, перезарядив волшебную палочку</string>
+  <string name="ScrollOfRecharging_Info1b">поток энергии пробежал сквозь твой рюкзак, перезарядив волшебные палочки</string>
+  <string name="ScrollOfRecharging_Info2">поток энергии пробежал сквозь твой рюкзак, но ничего не изменилось</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Свиток Снятия Проклятия</string>
+  <string name="ScrollOfRemoveCurse_Info">Прочитав этот свиток, ты призовёшь волшебную силу, которая развеет проклятья со всех предметов, позволяя тебе их снять.</string>
+  <string name="ScrollOfRemoveCurse_Proced">Очистительный свет озаряет твой рюкзак, изгоняя зловещую силу.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Очистительный свет озаряет твой рюкзак, но ничего не изменилось.</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">Свиток Телепортации</string>
+  <string name="ScrollOfTeleportation_Info">Этот свиток перенесёт заклинателя в случайную точку текущего уровня. Это может помочь сбежать из опасных ситуаций, хотя невезение может привести в место и похуже.</string>
+  <string name="ScrollOfTeleportation_Teleport">В мгновение ока ты переместился в другую область уровня.</string>
+  <string name="ScrollOfTeleportation_NoTeleport">Могучая магическая аура этого места не позволяет тебе телепортироваться!</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Свиток Ужаса</string>
+  <string name="ScrollOfTerror_Info">Красная вспышка повергнет всех видимых существ в ужас, обращая их в бегство. Атакуя убегающего врага, ты снимешь с него заклятие.</string>
+  <string name="ScrollOfTerror_Info1">Свиток испускает яркую вспышку красного света</string>
+  <string name="ScrollOfTerror_Info2">Свиток испускает яркую вспышку красного света, и %s спасается бегством!</string>
+  <string name="ScrollOfTerror_Info3">Свиток испускает яркую вспышку красного света, и монстры спасаются бегством!</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Свиток Улучшения</string>
+  <string name="ScrollOfUpgrade_Info">Этот свиток улучшит единственную вещь, повышая её качество. Сила и ёмкость палочки возрастёт; оружие получит больший урон или увеличит меткость; броня получит большую защиту; возможности кольца возрастут. Оружие и броня также потребуют меньше силы для использования, а любой проклятый предмет будет очищен.</string>
+  <string name="ScrollOfUpgrade_InvTitle">Выбери предмет для улучшения</string>
+  <string name="ScrollOfUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Свиток Улучшения Оружия</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Этот свиток улучшит оружие ближнего боя, повысив его качество. В отличие от простого Свитка Улучшения, эта версия не разрушит чары, наложенные на предмет. Даже наоборот, он сможет наделить случайным эффектом незачарованный предмет.</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Выбери предмет для улучшения</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
 </resources>

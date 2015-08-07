@@ -1,67 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-
-    <!-- STRINGS OF TitleScene CLASS -->
-    <string name="TitleScene_Play">Играть</string>
-    <string name="TitleScene_Highscores">Рекорды</string>
-    <string name="TitleScene_Badges">Значки</string>
-    <string name="TitleScene_About">Об игре</string>
-    <string name="TitleScene_InternalStorageLow">Недостаточно места во\n внутреннем хранилище\n игра может не сохранится!</string>
-
-    <!-- STRINGS OF AboutScene CLASS -->
-    <string name="AboutScene_Txt">Remixed Pixel Dungeon от NYRDS основана на исходном коде Pixel Dungeon от Watabou.\n\n Програмирование &amp; графика: Watabou  &amp; NYRDS &amp; ThEnigma314\n\nМузыка: Cube_Code\n\nОсобая благодарность: rodriformiga за подготовку локализации PD\n\nНапишите нам:\n\n</string>
-    <string name="AboutScene_Lnk">нету сайта</string>
-    <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
-    <string name="AboutScene_Snd">Отправить E-Mail</string>
-    <string name="AboutScene_TranslatedBy">Русский перевод:\n NYRDS\nспециальное спасибо Arex-rus и всем нашим пользователям.</string>
-    
-    <!-- STRINGS OF RankingsScene CLASS -->
-    <string name="RankingsScene_Title">Лучшие Результаты</string>
-    <string name="RankingsScene_Total">Всего игр сыграно: </string>
-    <string name="RankingsScene_NoGames">Вы ещё ни разу не сыграли.</string>
-    <string name="RankingsScene_NoInfo">Дополнительная информация отсутствует</string>
-
-    <!-- STRINGS OF StartScene CLASS -->
-    <string name="StartScene_Load">Загрузить Игру</string>
-    <string name="StartScene_New">Новая Игра</string>
-    <string name="StartScene_Erase">Стереть\nтекущую игру</string>
-    <string name="StartScene_Depth">Глубина: %1$d\nУровень: %2$d</string>
-    <string name="StartScene_Really">Вы точно хотите начать новую игру?</string>
-    <string name="StartScene_Warning">Прогресс текущей игры будет потерян.</string>
-    <string name="StartScene_Yes">Да, начать новую игру</string>
-    <string name="StartScene_No">Нет, вернуться в меню</string>
-    <string name="StartScene_Unlock">Чтобы открыть этот класс персонажа, убейте 3-го босса любым другим классом</string>
-    <string name="StartScene_UnlockElf">Чтобы открыть этот класс персонажа, убейте 4-го босса любым другим классом</string>
-    <string name="StartScene_WinGame">Чтобы открыть \"Испытания\", пройдите игру любым персонажем.</string>
-
-    <!-- STRINGS OF InterLevelScene CLASS -->
-    <string name="InterLevelScene_Descending">Спускаемся...</string>
-    <string name="InterLevelScene_Ascending">Поднимаемся...</string>
-    <string name="InterLevelScene_Loading">Загружаемся...</string>
-    <string name="InterLevelScene_Resurrecting">Воскрешаемся...</string>
-    <string name="InterLevelScene_Returning">Возвращаемся...</string>
-    <string name="InterLevelScene_Falling">Падаем...</string>
-    <string name="InterLevelScene_FileNotFound">Файл не найден. К чему бы это...</string>
-    <string name="InterLevelScene_ErrorGeneric">Что-то пошло не так...</string>
-    
-    <!-- STRINGS OF SurfaceScene CLASS -->
-    <string name="SurfaceScene_GameOver">Конец</string>
-    
-    <!-- STRINGS OF WndSettings CLASS -->
-    <string name="WndSettings_ZoomIn">+</string>
-    <string name="WndSettings_ZoomOut">-</string>
-    <string name="WndSettings_ZoomDef">Обычный Масштаб</string>
-    <string name="WndSettings_TextScaleDefault">Обычный шрифт</string>
-    <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
-    <string name="WndSettings_Immersive">Режим \"погружение\"</string>
-    <string name="WndSettings_Music">Музыка</string>
-    <string name="WndSettings_Sound">Звуковые эффекты</string>
-    <string name="WndSettings_Brightness">Яркость</string>
-    <string name="WndSettings_SwitchPort">Портретный режим</string>
-    <string name="WndSettings_SwitchLand">Альбомный режим</string>
-    <string name="WndSettings_SelectLanguage">Выберите Язык</string>
-    <string name="WndSettings_SecondQuickslot">Второй слот</string>
-    <string name="WndSettings_ThirdQuickslot">Третий слот</string>
-    <string name="WndSettings_ExperementalFont">Новый Шрифт</string>
-    <string name="WndSettings_ClassicFont">Шрифт Классик</string>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Играть</string>
+  <string name="TitleScene_Highscores">Рекорды</string>
+  <string name="TitleScene_Badges">Значки</string>
+  <string name="TitleScene_About">Об игре</string>
+  <string name="TitleScene_InternalStorageLow">Недостаточно места во\n внутреннем хранилище\n Игра может не сохранится!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon от NYRDS основана исходном коде Pixel Dungeon от Watabou.\n\n Програмирование &amp; графика: Watabou  &amp; NYRDS &amp; ThEnigma314\n\nМузыка: Cube_Code\n\nОсобая благодарность: rodriformiga за подготовку локализации PD\n\nНапишите нам:\n\n</string>
+  <string name="AboutScene_Lnk">нету сайта</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">Отправить E-Mail</string>
+  <string name="AboutScene_TranslatedBy">Русский перевод:\n NYRDS\nспециальное спасибо Arex-rus и всем нашим пользователям.</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">Лучшие Результаты</string>
+  <string name="RankingsScene_Total">Всего игр сыграно: </string>
+  <string name="RankingsScene_NoGames">Вы ещё ни разу не сыграли.</string>
+  <string name="RankingsScene_NoInfo">Дополнительная информация отсутствует</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Загрузить Игру</string>
+  <string name="StartScene_New">Новая Игра</string>
+  <string name="StartScene_Erase">Стереть\nтекущую игру</string>
+  <string name="StartScene_Depth">Глубина: %1$d\nУровень: %2$d</string>
+  <string name="StartScene_Really">Вы точно хотите начать новую игру?</string>
+  <string name="StartScene_Warning">Прогресс текущей игры будет потерян.</string>
+  <string name="StartScene_Yes">Да, начать новую игру</string>
+  <string name="StartScene_No">Нет, вернуться в меню</string>
+  <string name="StartScene_Unlock">Чтобы открыть этот класс персонажа, убейте 3-го босса любым другим классом</string>
+  <string name="StartScene_UnlockElf">Чтобы открыть этот класс персонажа, убейте 4-го босса любым другим классом</string>
+  <string name="StartScene_WinGame">Чтобы открыть \"Испытания\", пройдите игру любым персонажем.</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">Спускаемся...</string>
+  <string name="InterLevelScene_Ascending">Поднимаемся...</string>
+  <string name="InterLevelScene_Loading">Загружаемся...</string>
+  <string name="InterLevelScene_Resurrecting">Воскрешаемся...</string>
+  <string name="InterLevelScene_Returning">Возвращаемся...</string>
+  <string name="InterLevelScene_Falling">Падаем...</string>
+  <string name="InterLevelScene_FileNotFound">Файл не найден. К чему бы это...</string>
+  <string name="InterLevelScene_ErrorGeneric">Что-то пошло не так...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Конец</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">Обычный Масштаб</string>
+  <string name="WndSettings_TextScaleDefault">Обычный шрифт</string>
+  <string name="WndSettings_ScaleUp">Маcштабировать ГУИ</string>
+  <string name="WndSettings_Immersive">Режим \"погружение\"</string>
+  <string name="WndSettings_Music">Музыка</string>
+  <string name="WndSettings_Sound">Звуковые эффекты</string>
+  <string name="WndSettings_Brightness">Яркость</string>
+  <string name="WndSettings_SwitchPort">Портретный режим</string>
+  <string name="WndSettings_SwitchLand">Альбомный режим</string>
+  <string name="WndSettings_SelectLanguage">Выберите язык</string>
+  <string name="WndSettings_SecondQuickslot">Второй слот</string>
+  <string name="WndSettings_ThirdQuickslot">Третий слот</string>
+  <string name="WndSettings_ExperementalFont">Новый шрифт</string>
+  <string name="WndSettings_ClassicFont">Шрифт Классик</string>
 </resources>

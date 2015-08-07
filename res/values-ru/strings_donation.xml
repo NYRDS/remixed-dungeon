@@ -1,36 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <!-- STRINGS OF WndDonate CLASS -->
-    <string name="WndDonate_silver">серебро</string>
-    <string name="WndDonate_gold">золото</string>
-    <string name="WndDonate_ruby">рубин</string>
-    
-    <string name="WndDonate_donate">поддержать:  </string>
-    <string name="WndDonate_notConnected">нет связи :(</string>
-    <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - свободна и бесплатна для всех и так будет всегда.\n\nОднако Вы можете помочь нам сделать игру ещё лучше.\n\nКроме нашей сердечной благодарности Вы получите некоторые косметические улучшения, не влияющие однако на геймплей.</string>
-    
-    <string name="WndDonate_silverDonate">серебряное пожертвование</string>
-    <string name="WndDonate_goldDonate">золотое пожертвование</string>
-    <string name="WndDonate_rubyDonate">рубиновое пожертвование</string>
-    
-    <string name="WndDonate_silverDonateText">Любой вклад поможет развитию проекта</string>
-    <string name="WndDonate_goldDonateText">Спасибо за Вашу помощь</string>
-    <string name="WndDonate_rubyDonateText">Ваша щедрость поможет нам и дальше улучшать Remixed Pixel Dungeon!</string>
-
-    <!-- STRINGS OF WndPremiumSettings CLASS -->
-    <string name="WndPremiumSettings_std">обычный</string>
-    <string name="WndPremiumSettings_silver">серебрянный</string>
-    <string name="WndPremiumSettings_gold">золотой</string>
-    <string name="WndPremiumSettings_ruby">рубиновый</string>
-    
-    <string name="WndPremiumSettings_chrome">Вид интерфейса</string>
-    <string name="WndPremiumSettings_status">Вид панели героя</string>
-    <string name="WndPremiumSettings_toolbar">Вид панели инструментов</string>
-	<string name="WndPremiumSettings_banners">Вид баннеров</string>
-    
-    <string name="WndPremiumSettings_notAvailbale">Эта опция недоступна</string>
-    
-    <!-- STRINGS OF DonateButton CLASS -->
-    <string name="DonateButton_pleaseDonate">Поддержите проект</string>
-    <string name="DonateButton_thanks">Спасибо за Вашу помощь!</string>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">серебро</string>
+  <string name="WndDonate_gold">золото</string>
+  <string name="WndDonate_ruby">рубин</string>
+  <string name="WndDonate_donate">поддержать:  </string>
+  <string name="WndDonate_notConnected">нет связи :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - свободна и бесплатна для всех, и так будет всегда.\n\nОднако Вы можете помочь нам сделать игру ещё лучше.\n\nКроме нашей сердечной благодарности Вы получите некоторые косметические улучшения, однако не влияющие на геймплей.</string>
+  <string name="WndDonate_silverDonate">серебряное пожертвование</string>
+  <string name="WndDonate_goldDonate">золотое пожертвование</string>
+  <string name="WndDonate_rubyDonate">рубиновое пожертвование</string>
+  <string name="WndDonate_silverDonateText">Любой вклад поможет развитию проекта</string>
+  <string name="WndDonate_goldDonateText">Спасибо за Вашу помощь</string>
+  <string name="WndDonate_rubyDonateText">Ваша щедрость поможет нам и дальше улучшать Remixed Pixel Dungeon!</string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">обычный</string>
+  <string name="WndPremiumSettings_silver">серебрянный</string>
+  <string name="WndPremiumSettings_gold">золотой</string>
+  <string name="WndPremiumSettings_ruby">рубиновый</string>
+  <string name="WndPremiumSettings_chrome">Вид интерфейса</string>
+  <string name="WndPremiumSettings_status">Вид панели героя</string>
+  <string name="WndPremiumSettings_toolbar">Вид панели инструментов</string>
+  <string name="WndPremiumSettings_banners">Вид баннеров</string>
+  <string name="WndPremiumSettings_notAvailbale">Эта опция недоступна</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">Поддержите проект</string>
+  <string name="DonateButton_thanks">Спасибо за Вашу помощь!</string>
 </resources>
