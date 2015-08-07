@@ -89,8 +89,8 @@ public class Codex extends Item {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
 		id   = bundle.getInt( idTag );
-		if(id > maxId){
-			id = maxId;
+		if(!(id < maxId)){
+			id = maxId - 1;
 		}
 	}
 
