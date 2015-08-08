@@ -90,7 +90,7 @@ public class Codex extends Item {
 		super.restoreFromBundle(bundle);
 		id   = bundle.getInt( idTag );
 		if(!(id < maxId)){
-			id = maxId - 1;
+			id = Random.Int(maxId);
 		}
 	}
 
