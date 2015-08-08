@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -10,6 +11,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
 @SuppressWarnings("unused")
@@ -38,6 +40,7 @@ public class SpiderQueen extends Mob {
 			SpiderEgg.lay(pos);
 		}
 		
+		
 		return super.act();
 	}
 	
@@ -51,10 +54,20 @@ public class SpiderQueen extends Mob {
 	}
 	
 	@Override
+	protected boolean canAttack(Char enemy) {
+		if (Dungeon.level.adjacent(pos, enemy.pos) && hp() > ht() / 2 ) {
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
 	protected boolean getCloser( int target ) {
-		
-		if (state == HUNTING && hp() < ht() / 2) {
-			return enemySeen && getFurther( target );
+		if (hp() < ht() / 2) {
+			if (state == HUNTING && Dungeon.level.distance(pos, target) < 5) {
+				return getFurther(target);
+			}
+			return super.getCloser(target);
 		} else {
 			return super.getCloser( target );
 		}

@@ -84,7 +84,7 @@ public class SummoningTrap {
 			} while (mob.isWallWalker() == true);
 			
 			mob.state = mob.WANDERING;
-			GameScene.add( mob, DELAY );
+			GameScene.add(Dungeon.level, mob, DELAY );
 			WandOfBlink.appear( mob, point );
 		}
 	}

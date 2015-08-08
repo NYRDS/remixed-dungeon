@@ -101,10 +101,6 @@ public abstract class Level implements Bundlable {
 	private static final String TXT_HIDDEN_PLATE_CLICKS = Game
 			.getVar(R.string.Level_HiddenPlate);
 
-	// This one can be different from resizingNeeded if the level
-	// was created in the older version of the game
-	public static int loadedMapSize;
-
 	public int[] map;
 	public boolean[] visited;
 	public boolean[] mapped;
@@ -131,11 +127,10 @@ public abstract class Level implements Bundlable {
 	public int entrance;
 	public int exit;
 
-	public HashSet<Mob> mobs;
-	public HashMap<Class<? extends Blob>, Blob> blobs;
-	public SparseArray<Plant> plants;
-
-	private SparseArray<Heap> heaps;
+	public HashSet<Mob> mobs = new HashSet<Mob>();
+	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<Class<? extends Blob>, Blob>();
+	public SparseArray<Plant> plants = new SparseArray<Plant>();
+	private SparseArray<Heap> heaps = new SparseArray<Heap>();
 	
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<Item>();
 
@@ -228,18 +223,13 @@ public abstract class Level implements Bundlable {
 		Blob.setWidth(getWidth());
 		Blob.setHeight(getHeight());
 	}
-
+	
 	public void create(int w, int h) {
 
 		width = w;
 		height = h;
 
 		initSizeDependentStuff();
-
-		mobs = new HashSet<Mob>();
-		heaps = new SparseArray<Heap>();
-		blobs = new HashMap<Class<? extends Blob>, Blob>();
-		plants = new SparseArray<Plant>();
 
 		if (!Dungeon.bossLevel()) {
 			addItemToSpawn(Generator.random(Generator.Category.FOOD));
@@ -390,10 +380,6 @@ public abstract class Level implements Bundlable {
 		return feeling == Feeling.CHASM ? Terrain.EMPTY_SP : Terrain.EMPTY;
 	}
 
-	public int adjustPos(int pos) {
-		return (pos / loadedMapSize) * getWidth() + (pos % loadedMapSize);
-	}
-
 	public String tilesTex() {
 		return null;
 	}
@@ -426,9 +412,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void spawnMob(Mob mob) {
-		mobs.add(mob);
 		Actor.occupyCell(mob);
-		GameScene.add(mob, 1);
+		GameScene.add(this, mob, 1);
 	}
 
 	protected Mob createMob() {
@@ -474,7 +459,7 @@ public abstract class Level implements Bundlable {
 					Mob mob = createMob();
 					mob.state = mob.WANDERING;
 					if (Dungeon.hero.isAlive() && mob.pos != -1) {
-						GameScene.add(mob);
+						GameScene.add(Dungeon.level, mob);
 						if (Statistics.amuletObtained) {
 							mob.beckon(Dungeon.hero.pos);
 						}
@@ -1119,7 +1104,7 @@ public abstract class Level implements Bundlable {
 	public int getHeight() {
 		return height;
 	}
-
+	
 	public int getLength() {
 		return width * height;
 	}

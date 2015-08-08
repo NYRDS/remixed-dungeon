@@ -33,9 +33,9 @@ public class SpiderMind extends Mob {
 		
 		spriteClass = SpiderMindSprite.class;
 		
-		hp(ht(15));
+		hp(ht(5));
 		defenseSkill = 1;
-		baseSpeed = 1f;
+		baseSpeed = 0.8f;
 		
 		EXP = 6;
 		maxLvl = 9;

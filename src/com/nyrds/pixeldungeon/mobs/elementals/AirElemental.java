@@ -15,8 +15,6 @@ public class AirElemental extends Mob {
 
 	public AirElemental() {
 
-		spriteClass = "air_elemental_sprite.json";
-
 		adjustLevel(Dungeon.depth);
 
 		flying = true;

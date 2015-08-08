@@ -184,7 +184,7 @@ public class CityBossLevel extends Level {
 				!passable[boss.pos] ||
 				!outsideEntraceRoom( boss.pos ) ||
 				Dungeon.visible[boss.pos]);
-			GameScene.add( boss );
+			GameScene.add(Dungeon.level, boss );
 			
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );

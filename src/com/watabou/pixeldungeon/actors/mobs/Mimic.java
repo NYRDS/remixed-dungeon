@@ -118,12 +118,13 @@ public class Mimic extends Mob {
 	}
 
 	public static Mimic spawnAt( int pos, List<Item> items ) {
+		Level level = Dungeon.level;
 		Char ch = Actor.findChar( pos ); 
 		if (ch != null) {
 			ArrayList<Integer> candidates = new ArrayList<Integer>();
 			for (int n : Level.NEIGHBOURS8) {
 				int cell = pos + n;
-				if ((Dungeon.level.passable[cell] || Dungeon.level.avoid[cell]) && Actor.findChar( cell ) == null) {
+				if ((level.passable[cell] || level.avoid[cell]) && Actor.findChar( cell ) == null) {
 					candidates.add( cell );
 				}
 			}
@@ -134,9 +135,9 @@ public class Mimic extends Mob {
 				ch.pos = newPos;
 				// FIXME
 				if (ch instanceof Mob) {
-					Dungeon.level.mobPress( (Mob)ch );
+					level.mobPress( (Mob)ch );
 				} else {
-					Dungeon.level.press( newPos, ch );
+					level.press( newPos, ch );
 				}
 			} else {
 				return null;
@@ -149,7 +150,7 @@ public class Mimic extends Mob {
 		m.hp(m.ht());
 		m.pos = pos;
 		m.state = m.HUNTING;
-		GameScene.add( m, 1 );
+		GameScene.add(level, m, 1 );
 		
 		m.getSprite().turnTo( pos, Dungeon.hero.pos );
 		

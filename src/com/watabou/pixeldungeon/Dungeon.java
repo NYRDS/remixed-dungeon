@@ -182,17 +182,9 @@ public class Dungeon {
 		GLog.i("creating: %s %d", pos.levelKind, pos.levelDepth);
 		Level level = DungeonGenerator.createLevel(pos);
 		
-		int lw = 32;
-		int lh = 32;
-		
-		if(pos.levelKind.equals(DungeonGenerator.SPIDER_LEVEL)){
-			lw = 64;
-			lh = 64;
-		}
+		initSizeDependentStuff(pos.xs, pos.ys);
 
-		initSizeDependentStuff(lw, lh);
-
-		level.create(lw, lh);
+		level.create(pos.xs, pos.ys);
 		
 		Statistics.qualifiedForNoKilling = !bossLevel();
 		

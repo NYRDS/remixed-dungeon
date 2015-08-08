@@ -320,7 +320,7 @@ public class PrisonBossLevel extends RegularLevel {
 			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );
 			boss.state = boss.HUNTING;
 			boss.pos = pos;
-			GameScene.add( boss );
+			GameScene.add(Dungeon.level, boss );
 			boss.notice();
 			
 			mobPress( boss );

@@ -85,7 +85,7 @@ public class Bestiary {
 				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class, SpiderMind.class};
 				break;
 			case 9:
-				chances = new float[]{ 1, 1, 1 };
+				chances = new float[]{ 1, 1, 0.3f };
 				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class, SpiderMind.class };
 				break;
 				

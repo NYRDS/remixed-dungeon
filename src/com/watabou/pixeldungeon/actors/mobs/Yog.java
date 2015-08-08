@@ -83,8 +83,8 @@ public class Yog extends Mob {
 			fist2.pos = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
 		} while (!Dungeon.level.passable[fist1.pos] || !Dungeon.level.passable[fist2.pos] || fist1.pos == fist2.pos);
 		
-		GameScene.add( fist1 );
-		GameScene.add( fist2 );
+		GameScene.add(Dungeon.level, fist1 );
+		GameScene.add(Dungeon.level, fist2 );
 	}
 	
 	@Override
@@ -120,7 +120,7 @@ public class Yog extends Mob {
 			Larva larva = new Larva();
 			larva.pos = Random.element( spawnPoints );
 			
-			GameScene.add( larva );
+			GameScene.add(Dungeon.level, larva );
 			Actor.addDelayed( new Pushing( larva, pos, larva.pos ), -1 );
 		}
 

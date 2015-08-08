@@ -178,7 +178,7 @@ public class King extends Mob {
 						
 						Undead undead = new Undead();
 						undead.pos = j;
-						GameScene.add( undead );
+						GameScene.add(Dungeon.level, undead );
 						
 						WandOfBlink.appear( undead, j );
 						new Flare( 3, 32 ).color( 0x000000, false ).show( undead.getSprite(), 2f ) ;

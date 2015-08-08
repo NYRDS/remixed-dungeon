@@ -184,7 +184,7 @@ public class HallsBossLevel extends Level {
 			} while (
 				!passable[boss.pos] ||
 				Dungeon.visible[boss.pos]);
-			GameScene.add( boss );
+			GameScene.add(Dungeon.level, boss );
 			boss.spawnFists();
 			
 			stairs = entrance;

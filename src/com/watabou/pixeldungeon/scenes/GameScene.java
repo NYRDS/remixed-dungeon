@@ -49,6 +49,7 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.plants.Plant;
@@ -478,18 +479,22 @@ public class GameScene extends PixelScene {
 		}
 	}
 	
-	public static void add( Mob mob ) {
-		Dungeon.level.mobs.add( mob );
+	public static void add(Level level, Mob mob ) {
+		level.mobs.add( mob );
 		Actor.add( mob );
 		Actor.occupyCell( mob );
-		scene.addMobSprite( mob );
+		if(scene != null){
+			scene.addMobSprite( mob );
+		}
 	}
 	
-	public static void add( Mob mob, float delay ) {
-		Dungeon.level.mobs.add( mob );
+	public static void add(Level level, Mob mob, float delay ) {
+		level.mobs.add( mob );
 		Actor.addDelayed( mob, delay );
 		Actor.occupyCell( mob );
-		scene.addMobSprite( mob );
+		if(scene != null){
+			scene.addMobSprite( mob );
+		}
 	}
 	
 	public static void add( EmoIcon icon ) {

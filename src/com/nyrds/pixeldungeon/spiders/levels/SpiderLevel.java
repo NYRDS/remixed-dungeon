@@ -39,13 +39,13 @@ public class SpiderLevel extends Level {
 
 	protected void createChambers() {
 
-		for (int i = 0; i < Dungeon.depth/2; ++i) {
+		for (int i = 0; i < (Dungeon.depth - 4) * 2; ++i) {
 
 			Chamber chamber;
 			do{
 				int cx = Random.Int(1, getWidth() - 1);
 				int cy = Random.Int(1, getHeight() - 1);
-				chamber = new Chamber(cx, cy, Random.IntRange(Dungeon.depth/2, Dungeon.depth), Random.IntRange(0, 5));
+				chamber = new Chamber(cx, cy, Random.IntRange(2, Dungeon.depth/2), Random.IntRange(0, 5));
 			} while(!digChamber(chamber,false));
 			
 			digChamber(chamber, true);
@@ -183,13 +183,15 @@ public class SpiderLevel extends Level {
 
 		createChambers();
 
-		Chamber ent = chambers.get(chambers.size() - 1);
+		Chamber ent = chambers.get(0);
 		entrance = cell(ent.x, ent.y);
 		map[entrance] = Terrain.ENTRANCE;
 
-		Chamber ext = chambers.get(chambers.size() - 2);
-		exit = cell(ext.x, ext.y);
-		map[exit] = Terrain.EXIT;
+		if(Dungeon.depth != 10) {
+			Chamber ext = chambers.get(chambers.size() - 1);
+			exit = cell(ext.x, ext.y);
+			map[exit] = Terrain.EXIT;
+		}
 
 		feeling = Feeling.NONE;
 
@@ -209,20 +211,24 @@ public class SpiderLevel extends Level {
 	@Override
 	protected void createMobs() {
 		
-		int pos = randomRespawnCell();;
+		int pos = randomRespawnCell();
 		
-		for (int i = 0; i<Dungeon.depth * 2; i++) {
+		for (int i = 0; i< Dungeon.depth * 2; i++) {
 			while(Actor.findChar(pos) != null) {
-				randomRespawnCell();
+				pos = randomRespawnCell();
 			}
 			SpiderSpawner.spawnEgg(this, pos);
 		}
 		
-		for (int i = 0; i<Dungeon.depth / 2; i++) {
+		for (int i = 0; i< Dungeon.depth / 2; i++) {
 			while(Actor.findChar(pos) != null) {
-				randomRespawnCell();
+				pos = randomRespawnCell();
 			}
 			SpiderSpawner.spawnNest(this, pos);
+		}
+		
+		if(Dungeon.depth == 10) {
+			SpiderSpawner.spawnQueen(this, randomRespawnCell());
 		}
 
 	}

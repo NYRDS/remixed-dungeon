@@ -47,16 +47,13 @@ public class DungeonGenerator {
 			if (Dungeon.hero.belongings.ring1 instanceof SpiderCharm
 					|| Dungeon.hero.belongings.ring2 instanceof SpiderCharm) {
 				next.levelKind = SPIDER_LEVEL;
+				next.xs = 16 + (next.levelDepth-6) * 16;
+				next.ys = 16 + (next.levelDepth-6) * 16;
 			}
 		}
 		
 		if(current.levelKind.equals(SPIDER_LEVEL)) {
-			if(next.levelDepth < 11) {
-				next.levelKind = SPIDER_LEVEL;
-			} else {
-				next.levelKind = DEAD_END_LEVEL;
-			}
-			
+			next.levelKind = SPIDER_LEVEL;
 		}
 		
 		return next;

@@ -8,6 +8,8 @@ public class Position implements Bundlable {
 	public int    levelDepth = -1;
 	public int    cellId     = -1;
 	public String levelKind  = "DeadEndLevel";
+	public int    xs         = 32;
+	public int    ys         = 32;
 	
 	static final String LEVEL_DEPTH = "levelDepth";
 	static final String LEVEL_KIND  = "levelKind";
