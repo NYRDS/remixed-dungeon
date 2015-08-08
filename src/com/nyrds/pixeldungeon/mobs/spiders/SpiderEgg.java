@@ -23,15 +23,15 @@ public class SpiderEgg extends Mob {
 		postpone(20);
 	}
 
-	public static void layEgg(int pos) {
+	public static void lay(int pos) {
 		eggsLaid.append(pos, true);
 		SpiderSpawner.spawnEgg(Dungeon.level, pos);
 	}
 
-	public static boolean eggLaid(int pos) {
+	public static boolean laid(int pos) {
 		return eggsLaid.get(pos, false);
 	}
-
+	
 	@Override
 	protected boolean act() {
 		super.act();

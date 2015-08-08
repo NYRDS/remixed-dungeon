@@ -51,7 +51,12 @@ public class DungeonGenerator {
 		}
 		
 		if(current.levelKind.equals(SPIDER_LEVEL)) {
-			next.levelKind = SPIDER_LEVEL;
+			if(next.levelDepth < 11) {
+				next.levelKind = SPIDER_LEVEL;
+			} else {
+				next.levelKind = DEAD_END_LEVEL;
+			}
+			
 		}
 		
 		return next;
@@ -87,6 +92,10 @@ public class DungeonGenerator {
 		return lmap;
 	}
 
+	private static String depthToKindSpiders(int depth) {
+		return null;
+		
+	}
 
 	private static String depthToKind(int depth) {
 		

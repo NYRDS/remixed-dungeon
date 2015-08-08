@@ -17,11 +17,11 @@ public class SpiderServant extends Mob {
 		
 		spriteClass = SpiderServantSprite.class;
 		
-		hp(ht(15));
-		defenseSkill = 1;
-		baseSpeed = 2f;
+		hp(ht(20));
+		defenseSkill = 3;
+		baseSpeed = 1.1f;
 		
-		EXP = 3;
+		EXP = 2;
 		maxLvl = 9;
 		
 		kind = Random.IntRange(0, 1);
@@ -63,12 +63,12 @@ public class SpiderServant extends Mob {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 1;
+		return 10;
 	}
 	
 	@Override
 	public int dr() {
-		return 0;
+		return 5;
 	}
 	
 	@Override

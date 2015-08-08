@@ -3,11 +3,12 @@ package com.nyrds.pixeldungeon.spiders.levels;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -17,10 +18,11 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
 
 public class SpiderLevel extends Level {
-
+	
 	public SpiderLevel() {
 		color1 = 0x48763c;
 		color2 = 0x59994a;
+		
 	}
 
 	@Override
@@ -37,22 +39,27 @@ public class SpiderLevel extends Level {
 
 	protected void createChambers() {
 
-		for (int i = 0; i < 8; ++i) {
+		for (int i = 0; i < Dungeon.depth/2; ++i) {
 
 			Chamber chamber;
 			do{
 				int cx = Random.Int(1, getWidth() - 1);
 				int cy = Random.Int(1, getHeight() - 1);
-				chamber = new Chamber(cx, cy, Random.IntRange(3, 8), Random.IntRange(0, 5));
+				chamber = new Chamber(cx, cy, Random.IntRange(Dungeon.depth/2, Dungeon.depth), Random.IntRange(0, 5));
 			} while(!digChamber(chamber,false));
 			
 			digChamber(chamber, true);
 			
 			chambers.add(chamber);
 		}
-
-		for (int i = 1; i < chambers.size(); ++i) {
-			connectChambers(chambers.get(0), chambers.get(i));
+		if(Math.random() > 0.5) {
+			for (int i = 1; i < chambers.size(); ++i) {
+				connectChambers(chambers.get(i-1), chambers.get(i));
+			}
+		} else {
+			for (int i = 1; i < chambers.size(); ++i) {
+				connectChambers(chambers.get(0), chambers.get(i));
+			}
 		}
 	}
 
@@ -192,22 +199,32 @@ public class SpiderLevel extends Level {
 	@Override
 	protected void decorate() {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public int nMobs() {
-		return 5 + Dungeon.depth % 5 + Random.Int(3);
+		return 0;
 	}
 
 	@Override
 	protected void createMobs() {
-		int nMobs = nMobs();
-		for (int i = 0; i < nMobs; i++) {
-			Mob mob = createMob();
-			mobs.add(mob);
-			Actor.occupyCell(mob);
+		
+		int pos = randomRespawnCell();;
+		
+		for (int i = 0; i<Dungeon.depth * 2; i++) {
+			while(Actor.findChar(pos) != null) {
+				randomRespawnCell();
+			}
+			SpiderSpawner.spawnEgg(this, pos);
 		}
+		
+		for (int i = 0; i<Dungeon.depth / 2; i++) {
+			while(Actor.findChar(pos) != null) {
+				randomRespawnCell();
+			}
+			SpiderSpawner.spawnNest(this, pos);
+		}
+
 	}
 
 	@Override

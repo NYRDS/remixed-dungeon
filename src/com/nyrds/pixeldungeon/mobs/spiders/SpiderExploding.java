@@ -33,7 +33,7 @@ public class SpiderExploding extends Mob {
 		
 		spriteClass = SpiderExplodingSprite.class;
 		
-		hp(ht(15));
+		hp(ht(5));
 		defenseSkill = 1;
 		baseSpeed = 2f;
 		
