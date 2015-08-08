@@ -92,11 +92,6 @@ public class DungeonGenerator {
 		return lmap;
 	}
 
-	private static String depthToKindSpiders(int depth) {
-		return null;
-		
-	}
-
 	private static String depthToKind(int depth) {
 		
 		switch (depth) {
