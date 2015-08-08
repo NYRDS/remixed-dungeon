@@ -28,8 +28,11 @@ public class Regeneration extends Buff {
 	public boolean act() {
 		if (target.isAlive()) {
 			
-			if (target.hp() < target.ht() && !((Hero)target).isStarving()) {
-				target.hp(target.hp() + 1);
+			if (target.hp() < target.ht()) {
+				if(target instanceof Hero && ((Hero)target).isStarving()) {
+				} else {
+					target.hp(target.hp() + 1);
+				}
 			}
 			
 			int bonus = 0;
