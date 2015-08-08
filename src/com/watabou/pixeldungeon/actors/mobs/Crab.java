@@ -20,14 +20,11 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.sprites.CrabSprite;
 import com.watabou.utils.Random;
 
 public class Crab extends Mob {
 
 	{
-		spriteClass = CrabSprite.class;
-		
 		hp(ht(15));
 		defenseSkill = 5;
 		baseSpeed = 2f;

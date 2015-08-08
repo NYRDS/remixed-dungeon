@@ -152,6 +152,10 @@ public abstract class Mob extends Char {
 				sprite = new MobSpriteDef((String)spriteClass);
 			}
 			
+			if(spriteClass == null) {
+				sprite = new MobSpriteDef("spritesDesc/"+getClass().getSimpleName()+".json");
+			}
+			
 			sprite.selectKind(getKind());
 		} catch (Exception e) {
 			GLog.w(e.getMessage());
