@@ -13,11 +13,11 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
-import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
 
-public class SpiderLevel extends Level {
+public class SpiderLevel extends CommonLevel {
 	
 	public SpiderLevel() {
 		color1 = 0x48763c;
@@ -41,12 +41,14 @@ public class SpiderLevel extends Level {
 		for (int i = 0; i < (Dungeon.depth - 4) * 2; ++i) {
 
 			Chamber chamber;
+			boolean canDig;
 			do{
 				int cx = Random.Int(1, getWidth() - 1);
 				int cy = Random.Int(1, getHeight() - 1);
 				chamber = new Chamber(cx, cy, Random.IntRange(2, Dungeon.depth/2));
 				chamber.setShape(Random.IntRange(0, 5));
-			} while(!chamber.digChamber(this,false));
+				canDig = chamber.digChamber(this,false);
+			} while(!canDig);
 			
 			chamber.digChamber(this, true);
 			
@@ -61,6 +63,8 @@ public class SpiderLevel extends Level {
 				connectChambers(chambers.get(0), chambers.get(i));
 			}
 		}
+		
+		
 	}
 
 	private void connectChambers(Chamber a, Chamber b) {
@@ -115,7 +119,7 @@ public class SpiderLevel extends Level {
 			}
 		}
 	}
-
+	
 	@Override
 	protected boolean build() {
 		Arrays.fill(map, Terrain.WALL);
@@ -133,10 +137,14 @@ public class SpiderLevel extends Level {
 		}
 
 		feeling = Feeling.NONE;
-
+		placeTraps();
 		return true;
 	}
 
+	protected int nTraps() {
+		return Random.IntRange(Dungeon.depth, (int) (Math.sqrt(getLength()) + Dungeon.depth) );
+	}
+	
 	@Override
 	protected void decorate() {
 		// TODO Auto-generated method stub
@@ -203,4 +211,5 @@ public class SpiderLevel extends Level {
 			drop(item, randomRespawnCell()).type = Heap.Type.SKELETON;
 		}
 	}
+
 }

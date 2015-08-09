@@ -1,7 +1,9 @@
 package com.nyrds.pixeldungeon.spiders.levels;
 
+import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.utils.Random;
 
 public class Chamber {
@@ -16,6 +18,9 @@ public class Chamber {
 		this.x = x;
 		this.y = y;
 		this.r = r;
+		
+		this.shape = Random.IntRange(0, 5);
+		this.interior = Random.IntRange(0, 2);
 	}
 	
 	public void setShape(int shape) {
@@ -28,55 +33,44 @@ public class Chamber {
 	
 	public boolean digChamber(Level level, boolean realyDig) {
 		
-		int k = r;
-
-		for (int i = -k; i < k + 1; ++i) {
-			for (int j = -k; j < k + 1; ++j) {
+		for (int i = -r; i < r + 1; ++i) {
+			for (int j = -r; j < r + 1; ++j) {
 				if (level.cellValid(x + i, y + j)) {
 
 					boolean empty = false;
 					switch (shape) {
 					case 0:
-						empty = Math.abs(i - j) < k;
+						empty = Math.abs(i - j) < r;
 						break;
 						
 					case 1:
-						empty = Math.abs(j - i) < k;
+						empty = Math.abs(j - i) < r;
 						break;
 						
 					case 2:
-						empty = Math.abs(i + j) < k;
+						empty = Math.abs(i + j) < r;
 						break;
 
 					case 3:
-						empty = Math.abs(i) + Math.abs(j) < k;
+						empty = Math.abs(i) + Math.abs(j) < r;
 						break;
 
 					case 4:
-						empty = Math.abs(i * j) < k;
+						empty = Math.abs(i * j) < r;
 						break;
 						
 					case 5:
-						empty = i*i + j*j < k*k;
+						empty = i*i + j*j < r*r;
 						break;
 					}
-
+					
 					if (empty) {
 						int cellId = level.cell(x + i, y + j);
 						
 						if(realyDig) {
-							level.map[cellId] = Terrain.EMPTY;
-							
-							switch(Random.Int(3)){
-							case 0:
-								level.map[cellId] = Terrain.WATER;
-							break;
-							case 1:
-								level.map[cellId] = Terrain.HIGH_GRASS;
-							break;
-							}
+							decorateCell(level, cellId);
 						}else {
-							if(level.map[cellId]==Terrain.EMPTY) {
+							if(level.map[cellId] != Terrain.WALL) {
 								return false;
 							}
 						}
@@ -85,6 +79,38 @@ public class Chamber {
 			}
 		}
 		return true;
+	}
+
+	private void decorateCell(Level level, int cellId) {
+		
+		level.map[cellId] = Terrain.EMPTY;
+		
+		switch(interior){
+			case 0:		//simple cave
+				switch(Random.Int(3)){
+				case 0:
+					level.map[cellId] = Terrain.WATER;
+				break;
+				case 1:
+					level.map[cellId] = Terrain.HIGH_GRASS;
+				break;
+				}
+			break;
+			
+			case 1:		//garden
+				level.map[cellId] = Terrain.HIGH_GRASS;
+				if(Random.Int(5)==0) {
+					level.plant( (Seed)Generator.random(Generator.Category.SEED), cellId);
+				}
+			break;
+			
+			case 2:		//water
+				level.map[cellId] = Terrain.WATER;
+				if(Random.Int(5)==0) {
+					level.map[cellId] = Terrain.GRASS;
+				}
+			break;
+		}
 	}
 
 	

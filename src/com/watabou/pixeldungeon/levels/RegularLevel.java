@@ -36,7 +36,7 @@ import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
 
-public abstract class RegularLevel extends Level {
+public abstract class RegularLevel extends CommonLevel {
 
 	protected HashSet<Room> rooms;
 	
@@ -144,6 +144,10 @@ public abstract class RegularLevel extends Level {
 		placeTraps();
 		
 		return true;
+	}
+	
+	protected int nTraps() {
+		return Dungeon.depth <= 1 ? 0 : Random.Int( 1, rooms.size() + Dungeon.depth );
 	}
 	
 	protected boolean initRooms() {
@@ -295,54 +299,6 @@ public abstract class RegularLevel extends Level {
 	protected abstract boolean[] water();
 	protected abstract boolean[] grass();
 	
-	protected void placeTraps() {
-		
-		int nTraps = nTraps();
-		float[] trapChances = trapChances();
-		
-		for (int i=0; i < nTraps; i++) {
-			
-			int trapPos = Random.Int( getLength() );
-			
-			if (map[trapPos] == Terrain.EMPTY) {
-				switch (Random.chances( trapChances )) {
-				case 0:
-					map[trapPos] = Terrain.SECRET_TOXIC_TRAP;
-					break;
-				case 1:
-					map[trapPos] = Terrain.SECRET_FIRE_TRAP;
-					break;
-				case 2:
-					map[trapPos] = Terrain.SECRET_PARALYTIC_TRAP;
-					break;
-				case 3:
-					map[trapPos] = Terrain.SECRET_POISON_TRAP;
-					break;
-				case 4:
-					map[trapPos] = Terrain.SECRET_ALARM_TRAP;
-					break;
-				case 5:
-					map[trapPos] = Terrain.SECRET_LIGHTNING_TRAP;
-					break;
-				case 6:
-					map[trapPos] = Terrain.SECRET_GRIPPING_TRAP;
-					break;
-				case 7:
-					map[trapPos] = Terrain.SECRET_SUMMONING_TRAP;
-					break;
-				}
-			}
-		}
-	}
-	
-	protected int nTraps() {
-		return Dungeon.depth <= 1 ? 0 : Random.Int( 1, rooms.size() + Dungeon.depth );
-	}
-	
-	protected float[] trapChances() {
-		float[] chances = { 1, 1, 1, 1, 1, 1, 1, 1 };
-		return chances;
-	}
 	
 	protected int minRoomSize = 7;
 	protected int maxRoomSize = 9;
