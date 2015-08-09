@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import android.content.Intent;
+import android.net.Uri;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.input.Touchscreen.Touch;
@@ -35,16 +36,16 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class AboutScene extends PixelScene {
 
-	private static final String TXT  = Game.getVar(R.string.AboutScene_Txt);
-	private static final String LNK  = Game.getVar(R.string.AboutScene_Lnk);
-	private static final String SND  = Game.getVar(R.string.AboutScene_Snd);
-	private static final String TRN  = Game.getVar(R.string.AboutScene_TranslatedBy);
+	private static final String TXT      = Game.getVar(R.string.AboutScene_Txt);
+	private static final String OUR_SITE = Game.getVar(R.string.AboutScene_OurSite);
+	private static final String LNK      = Game.getVar(R.string.AboutScene_Lnk);
+	private static final String SND      = Game.getVar(R.string.AboutScene_Snd);
+	private static final String TRN      = Game.getVar(R.string.AboutScene_TranslatedBy);
 	
 	private BitmapTextMultiline createTouchEmail(final String address, BitmapTextMultiline upper)
 	{
-		BitmapTextMultiline text = createText(address);
+		BitmapTextMultiline text = createText(address, upper);
 		text.hardlight( Window.TITLE_COLOR );
-		placeBellow(text, upper);
 		
 		TouchArea area = new TouchArea( text ) {
 			@Override
@@ -61,19 +62,39 @@ public class AboutScene extends PixelScene {
 		return text;
 	}
 	
+	private BitmapTextMultiline createTouchLink(final String address, BitmapTextMultiline upper)
+	{
+		BitmapTextMultiline text = createText(address, upper);
+		text.hardlight( Window.TITLE_COLOR );
+		placeBellow(text, upper);
+		
+		TouchArea area = new TouchArea( text ) {
+			@Override
+			protected void onClick( Touch touch ) {
+				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
+
+				Game.instance().startActivity( Intent.createChooser(intent, OUR_SITE) );
+			}
+		};
+		add(area);
+		return text;
+	}
+	
 	private void placeBellow(BitmapTextMultiline elem, BitmapTextMultiline upper)
 	{
 		elem.x = upper.x;
 		elem.y = upper.y + upper.height();
 	}
 
-	private BitmapTextMultiline createText(String text)
+	private BitmapTextMultiline createText(String text, BitmapTextMultiline upper)
 	{
 		BitmapTextMultiline multiline = createMultiline( text, 8 );
 		multiline.maxWidth = Math.min( Camera.main.width, 120 );
 		multiline.measure();
 		add( multiline );
-		
+		if(upper!=null){
+			placeBellow(multiline, upper);
+		}
 		return multiline;
 	}
 	
@@ -81,16 +102,16 @@ public class AboutScene extends PixelScene {
 	public void create() {
 		super.create();
 		
-		BitmapTextMultiline text = createText( TXT );
+		BitmapTextMultiline text = createText( TXT, null );
 		
 		text.x = align( (Camera.main.width - text.width()) / 2 );
 		text.y = align( (Camera.main.height - text.height()) / 3 );
-				
-		BitmapTextMultiline email = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), text);
 		
-		BitmapTextMultiline translatedBy = createText("\n\n"+TRN );
-		add(translatedBy);
-		placeBellow(translatedBy, email);
+		BitmapTextMultiline visit = createText(Game.getVar(R.string.AboutScene_OurSite)+"\n\n", text);
+		BitmapTextMultiline site  = createTouchLink(LNK, visit);		
+		
+		BitmapTextMultiline email = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), site);
+		createText("\n\n"+TRN, email);
 		
 		Image nyrdie = Icons.NYRDIE.get();
 		nyrdie.x = align( text.x + (text.width() - nyrdie.width) / 2 );
