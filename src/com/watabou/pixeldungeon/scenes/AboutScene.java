@@ -66,7 +66,6 @@ public class AboutScene extends PixelScene {
 	{
 		BitmapTextMultiline text = createText(address, upper);
 		text.hardlight( Window.TITLE_COLOR );
-		placeBellow(text, upper);
 		
 		TouchArea area = new TouchArea( text ) {
 			@Override
@@ -107,11 +106,13 @@ public class AboutScene extends PixelScene {
 		text.x = align( (Camera.main.width - text.width()) / 2 );
 		text.y = align( (Camera.main.height - text.height()) / 3 );
 		
-		BitmapTextMultiline visit = createText(Game.getVar(R.string.AboutScene_OurSite)+"\n\n", text);
+
+		BitmapTextMultiline email = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), text);
+
+		BitmapTextMultiline visit = createText("\n\n"+Game.getVar(R.string.AboutScene_OurSite)+"\n\n", email);
 		BitmapTextMultiline site  = createTouchLink(LNK, visit);		
 		
-		BitmapTextMultiline email = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), site);
-		createText("\n\n"+TRN, email);
+		createText("\n\n"+TRN, site);
 		
 		Image nyrdie = Icons.NYRDIE.get();
 		nyrdie.x = align( text.x + (text.width() - nyrdie.width) / 2 );
