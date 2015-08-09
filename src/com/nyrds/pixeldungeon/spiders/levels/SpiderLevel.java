@@ -22,7 +22,6 @@ public class SpiderLevel extends Level {
 	public SpiderLevel() {
 		color1 = 0x48763c;
 		color2 = 0x59994a;
-		
 	}
 
 	@Override
@@ -45,10 +44,11 @@ public class SpiderLevel extends Level {
 			do{
 				int cx = Random.Int(1, getWidth() - 1);
 				int cy = Random.Int(1, getHeight() - 1);
-				chamber = new Chamber(cx, cy, Random.IntRange(2, Dungeon.depth/2), Random.IntRange(0, 5));
-			} while(!digChamber(chamber,false));
+				chamber = new Chamber(cx, cy, Random.IntRange(2, Dungeon.depth/2));
+				chamber.setShape(Random.IntRange(0, 5));
+			} while(!chamber.digChamber(this,false));
 			
-			digChamber(chamber, true);
+			chamber.digChamber(this, true);
 			
 			chambers.add(chamber);
 		}
@@ -61,67 +61,6 @@ public class SpiderLevel extends Level {
 				connectChambers(chambers.get(0), chambers.get(i));
 			}
 		}
-	}
-
-	
-	private boolean digChamber(Chamber chamber, boolean realyDig) {
-		
-		int k = chamber.r;
-
-		for (int i = -k; i < k + 1; ++i) {
-			for (int j = -k; j < k + 1; ++j) {
-				if (cellValid(chamber.x + i, chamber.y + j)) {
-
-					boolean empty = false;
-					switch (chamber.kind) {
-					case 0:
-						empty = Math.abs(i - j) < k;
-						break;
-						
-					case 1:
-						empty = Math.abs(j - i) < k;
-						break;
-						
-					case 2:
-						empty = Math.abs(i + j) < k;
-						break;
-
-					case 3:
-						empty = Math.abs(i) + Math.abs(j) < k;
-						break;
-
-					case 4:
-						empty = Math.abs(i * j) < k;
-						break;
-						
-					case 5:
-						empty = i*i + j*j < k*k;
-						break;
-					}
-
-					if (empty) {
-						
-						if(realyDig) {						
-							map[cell(chamber.x + i, chamber.y + j)] = Terrain.EMPTY;
-							
-							switch(Random.Int(3)){
-							case 0:
-								map[cell(chamber.x + i, chamber.y + j)] = Terrain.WATER;
-							break;
-							case 1:
-								map[cell(chamber.x + i, chamber.y + j)] = Terrain.HIGH_GRASS;
-							break;
-							}
-						}else {
-							if(map[cell(chamber.x+i,chamber.y+j)]==Terrain.EMPTY) {
-								return false;
-							}
-						}
-					}
-				}
-			}
-		}
-		return true;
 	}
 
 	private void connectChambers(Chamber a, Chamber b) {
