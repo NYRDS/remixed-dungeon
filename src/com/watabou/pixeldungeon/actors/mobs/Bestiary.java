@@ -77,11 +77,11 @@ public class Bestiary {
 				classes = new Class<?>[]{ SpiderServant.class };
 				break;
 			case 7:
-				chances = new float[]{ 1, 1};
+				chances = new float[]{ 1, 0.5f};
 				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class};
 				break;
 			case 8:
-				chances = new float[]{ 1, 1, 0.2f};
+				chances = new float[]{ 1, 0.5f, 0.2f};
 				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class, SpiderMind.class};
 				break;
 			case 9:
@@ -90,9 +90,9 @@ public class Bestiary {
 				break;
 				
 			case 10:
-				chances = new float[]{ 1, 1, 1 };
+				chances = new float[]{ 1, 1, 0.5f };
 				classes = new Class<?>[]{ SpiderServant.class, SpiderExploding.class, SpiderMind.class };
-				break;			
+				break;
 			
 				default:
 					chances = new float[]{ 1 };
