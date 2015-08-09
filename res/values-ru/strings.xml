@@ -83,8 +83,6 @@
     <item>Этот текст написан на языке демонов.</item>
     <item>Этот текст написан на языке демонов</item>
   </string-array>
-  <!--STRINGS OF Assets CLASS-->
-  <string name="Assets_Prefix"></string>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>На диете</item>

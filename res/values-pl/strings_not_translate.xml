@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- STRINGS OF Assets CLASS -->
+    <string name="Assets_Prefix">""</string>
+
+    <!-- PACKAGE /utils -->
+    <!-- STRINGS OF Utils CLASS -->
+    <!-- 1: Execute Indefinite Function to Language -->
+    <!-- 0: NO Execute Indefinite Function to Language -->
+    <string name="Utils_IsIndefinte">1</string>
+
+</resources>

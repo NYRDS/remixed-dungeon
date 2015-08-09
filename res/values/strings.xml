@@ -95,9 +95,6 @@
         <item>The text is written in demonic language.</item>
     </string-array>
 
-    <!-- STRINGS OF Assets CLASS -->
-    <string name="Assets_Prefix">""</string>
-
     <!-- STRINGS OF Challenges CLASS -->
     <string-array name="Challenges_Names">
         <item>On diet</item>
@@ -505,11 +502,4 @@
     <!-- STRINGS OF Toolbar CLASS -->
     <string name="Toolbar_Info1">You don\'t know what is there.</string>
     <string name="Toolbar_Info2">Select a cell to examine</string>
-
-    <!-- PACKAGE /utils -->
-    <!-- STRINGS OF Utils CLASS -->
-    <!-- 1: Execute Indefinite Function to Language -->
-    <!-- 0: NO Execute Indefinite Function to Language -->
-    <string name="Utils_IsIndefinte">1</string>
-
 </resources>

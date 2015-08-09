@@ -16,7 +16,7 @@
   <string name="Hero_StaBurning">Vous prenez feu !</string>
   <string name="Hero_StaParalysis">Vous êtes paralysé !</string>
   <string name="Hero_StaPoison">Vous êtes empoisonné !</string>
-  <string name="Hero_StaOoze">Le limon caustique vous ronge les chairs. Rincez-le !</string>
+  <string name="Hero_StaOoze">Une substance caustique ronge votre chair. Débarrassez vous en!</string>
   <string name="Hero_StaRoots">Vous ne pouvez pas bouger !</string>
   <string name="Hero_StaWeakness">Vous vous sentez affaibli !</string>
   <string name="Hero_StaBlindness">Vous êtes aveuglé !</string>
