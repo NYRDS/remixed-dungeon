@@ -7,6 +7,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.windows.WndStory;
 
 public class DungeonGenerator {
 	public static final String DEAD_END_LEVEL    = "DeadEndLevel";
@@ -133,6 +134,31 @@ public class DungeonGenerator {
 		default:
 			return DEAD_END_LEVEL;
 		}
+	}
+
+	public static void showStory(Level level) {
+		if(level.levelKind().equals(SPIDER_LEVEL)) {
+			WndStory.showChapter( WndStory.ID_SPIDERS );
+		}	else {
+			switch (Dungeon.depth) {
+			case 1:
+				WndStory.showChapter( WndStory.ID_SEWERS );
+				break;
+			case 6:
+				WndStory.showChapter( WndStory.ID_PRISON );
+				break;
+			case 11:
+				WndStory.showChapter( WndStory.ID_CAVES );
+				break;
+			case 16:
+				WndStory.showChapter( WndStory.ID_METROPOLIS );
+				break;
+			case 22:
+				WndStory.showChapter( WndStory.ID_HALLS );
+				break;
+			}
+		}
+		
 	}
 	
 	

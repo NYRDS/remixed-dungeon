@@ -44,6 +44,7 @@ public class WndStory extends Window {
 	public static final int ID_CAVES		= 2;
 	public static final int ID_METROPOLIS	= 3;
 	public static final int ID_HALLS		= 4;
+	public static final int ID_SPIDERS		= 5;
 	
 	private static final SparseArray<String> CHAPTERS = new SparseArray<String>();
 	
@@ -53,6 +54,7 @@ public class WndStory extends Window {
 		CHAPTERS.put(ID_CAVES,      Game.getVar(R.string.WndStory_Caves));
 		CHAPTERS.put(ID_METROPOLIS, Game.getVar(R.string.WndStory_Metropolis));
 		CHAPTERS.put(ID_HALLS,      Game.getVar(R.string.WndStory_Halls));
+		CHAPTERS.put(ID_SPIDERS,    Game.getVar(R.string.WndStory_Spiders));
 	};
 	
 	private BitmapTextMultiline tf;

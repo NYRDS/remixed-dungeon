@@ -218,7 +218,8 @@
     <string name="WndStory_Caves">The caves, which stretch down under the abandoned prison, are sparsely populated. They lie too deep to be exploited by the City and they are too poor in minerals to interest the dwarves. In the past there was a trade outpost somewhere here on the route between these two states, but it has perished since the decline of the Dwarven Metropolis. Only omnipresent gnolls and subterranean animals dwell here now.</string>
     <string name="WndStory_Metropolis">The Dwarven Metropolis was once the greatest of dwarven city-states. In its heyday the mechanized army of dwarves had successfully repelled the invasion of the old god and his demon army. But it is said, that the returning warriors had brought seeds of corruption with them, and that victory was the beginning of the end for the underground kingdom.</string>
     <string name="WndStory_Halls">In the past these levels were the outskirts of Metropolis. After the costly victory in the war with the old god dwarves were too weakened to clear them of remaining demons. Gradually demons have tightened their grip on this place and now it\'s called Demon Halls.\n\nVery few adventurers have ever descended this far...</string>
-
+    <string name="WndStory_Spiders">Little is known about the spider\'s caves.</string>
+    
     <!-- STRINGS OF WndTradeItem CLASS -->
     <string name="WndTradeItem_Sale">FOR SALE: %1$s - %2$dg</string>
     <string name="WndTradeItem_Buy">Buy for %dg</string>
