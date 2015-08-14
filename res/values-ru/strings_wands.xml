@@ -73,7 +73,7 @@
   <string name="WandOfPoison_Info">Этот порочный кусок древесины извергает сгусток яда, отравляющий твою цель. Отравленное существо получает периодический урон вплоть до окончания действия эффекта. Продолжительность эффекта возрастает с уровнем палочки.</string>
   <string name="WandOfPoison_Info1">ничего не произошло</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
-  <string name="WandOfRegrowth_Name">Палочка Отрастания</string>
+  <string name="WandOfRegrowth_Name">Палочка Роста</string>
   <string name="WandOfRegrowth_Info">\"В окончании одной жизни новая жизнь берёт своё начало... Бесконечный цикл нерушим!\"</string>
   <string name="WandOfRegrowth_Info1">ничего не произошло</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
