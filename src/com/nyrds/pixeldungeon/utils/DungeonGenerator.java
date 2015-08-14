@@ -13,8 +13,8 @@ public class DungeonGenerator {
 	public static final String DEAD_END_LEVEL    = "DeadEndLevel";
 	public static final String LAST_LEVEL        = "LastLevel";
 	public static final String LAST_SHOP_LEVEL   = "LastShopLevel";
-	public static final String HALLS_BOSS_LEVELS = "HallsBossLevels";
-	public static final String HALLS_LEVELS      = "HallsLevels";
+	public static final String HALLS_BOSS_LEVEL  = "HallsBossLevel";
+	public static final String HALLS_LEVEL       = "HallsLevel";
 	public static final String CITY_BOSS_LEVEL   = "CityBossLevel";
 	public static final String CITY_LEVEL        = "CityLevel";
 	public static final String CAVES_BOSS_LEVEL  = "CavesBossLevel";
@@ -80,8 +80,8 @@ public class DungeonGenerator {
 		lmap.put(CAVES_BOSS_LEVEL,     LevelKind.CAVES_BOSS_LEVEL);
 		lmap.put(CITY_LEVEL,           LevelKind.CITY_LEVEL);
 		lmap.put(CITY_BOSS_LEVEL,      LevelKind.CITY_BOSS_LEVEL);
-		lmap.put(HALLS_LEVELS,         LevelKind.HALLS_LEVEL);
-		lmap.put(HALLS_BOSS_LEVELS,    LevelKind.HALLS_BOSS_LEVEL);
+		lmap.put(HALLS_LEVEL,         LevelKind.HALLS_LEVEL);
+		lmap.put(HALLS_BOSS_LEVEL,    LevelKind.HALLS_BOSS_LEVEL);
 		lmap.put(LAST_SHOP_LEVEL,      LevelKind.LAST_SHOP_LEVEL);
 		lmap.put(LAST_LEVEL,           LevelKind.LAST_LEVEL);
 		lmap.put(SPIDER_LEVEL,         LevelKind.SPIDER_LEVEL);
@@ -126,9 +126,9 @@ public class DungeonGenerator {
 		case 22:
 		case 23:
 		case 24:
-			return HALLS_LEVELS;
+			return HALLS_LEVEL;
 		case 25:
-			return HALLS_BOSS_LEVELS;
+			return HALLS_BOSS_LEVEL;
 		case 26:
 			return LAST_LEVEL;
 		default:
