@@ -24,6 +24,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -38,54 +39,53 @@ import com.watabou.utils.Bundle;
 public class LloydsBeacon extends Item {
 
 	private static final String TXT_PREVENTING = Game.getVar(R.string.LloidsBeacon_Preventing);
-	
-	private static final String TXT_CREATURES = Game.getVar(R.string.LloidsBeacon_Creatures);
-	
-	private static final String TXT_RETURN = Game.getVar(R.string.LloidsBeacon_Return);
-			
-	private static final String TXT_INFO = Game.getVar(R.string.LloidsBeacon_Info);
-	
-	private static final String TXT_SET = Game.getVar(R.string.LloidsBeacon_Set);
+	private static final String TXT_CREATURES  = Game.getVar(R.string.LloidsBeacon_Creatures);
+	private static final String TXT_RETURN     = Game.getVar(R.string.LloidsBeacon_Return);
+	private static final String TXT_INFO       = Game.getVar(R.string.LloidsBeacon_Info);
+	private static final String TXT_SET        = Game.getVar(R.string.LloidsBeacon_Set);
 	
 	public static final float TIME_TO_USE = 1;
 	
 	public static final String AC_SET		= Game.getVar(R.string.LloidsBeacon_ACSet);
 	public static final String AC_RETURN	= Game.getVar(R.string.LloidsBeacon_ACReturn);
 	
-	private int returnDepth	= -1;
-	private int returnPos;
+	private Position returnTo;
 	
-	{
-		name = Game.getVar(R.string.LloidsBeacon_Name);
+	public LloydsBeacon() {
 		image = ItemSpriteSheet.BEACON;
-		
 		unique = true;
+		returnTo = Dungeon.currentPosition();
+		returnTo.levelDepth = -1;	
 	}
 	
-	private static final String DEPTH	= "depth";
-	private static final String POS		= "pos";
+	private static final String DEPTH	 = "depth";
+	private static final String POS		 = "pos";
+	
+	private static final String POSITION = "position";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( DEPTH, returnDepth );
-		if (returnDepth != -1) {
-			bundle.put( POS, returnPos );
-		}
+		
+		bundle.put(POSITION, returnTo);
+
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
-		returnDepth	= bundle.getInt( DEPTH );
-		returnPos	= bundle.getInt( POS );
+		
+		returnTo = (Position) bundle.get(POSITION);
+		if(returnTo == null) { //pre remix.19.0 code, remove in future
+			returnTo = new Position("unknown",  bundle.getInt( DEPTH ),  bundle.getInt( POS ));
+		}
 	}
 	
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_SET );
-		if (returnDepth != -1) {
+		if (returnTo.levelDepth != -1) {
 			actions.add( AC_RETURN );
 		}
 		return actions;
@@ -112,8 +112,7 @@ public class LloydsBeacon extends Item {
 		
 		if (action == AC_SET) {
 			
-			returnDepth = Dungeon.depth;
-			returnPos = hero.pos;
+			returnTo = Dungeon.currentPosition();
 			
 			hero.spend( LloydsBeacon.TIME_TO_USE );
 			hero.busy();
@@ -124,20 +123,17 @@ public class LloydsBeacon extends Item {
 			GLog.i( TXT_RETURN );
 			
 		} else if (action == AC_RETURN) {
-			
-			if (returnDepth == Dungeon.depth) {
+			if (returnTo.levelDepth == Dungeon.depth) {
 				reset();
-				WandOfBlink.appear( hero, returnPos );
-				Dungeon.level.press( returnPos, hero );
+				WandOfBlink.appear( hero, returnTo.cellId );
+				Dungeon.level.press( returnTo.cellId, hero );
 				Dungeon.observe();
 			} else {
 				InterlevelScene.mode = InterlevelScene.Mode.RETURN;
-				InterlevelScene.returnTo = Dungeon.currentPosition();
+				InterlevelScene.returnTo = new Position(returnTo);
 				reset();
 				Game.switchScene( InterlevelScene.class );
 			}
-			
-			
 		} else {
 			
 			super.execute( hero, action );
@@ -146,7 +142,7 @@ public class LloydsBeacon extends Item {
 	}
 	
 	public void reset() {
-		returnDepth = -1;
+		returnTo.levelDepth = -1;
 	}
 	
 	@Override
@@ -163,11 +159,11 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public Glowing glowing() {
-		return returnDepth != -1 ? WHITE : null;
+		return returnTo.levelDepth != -1 ? WHITE : null;
 	}
 	
 	@Override
 	public String info() {
-		return TXT_INFO + (returnDepth == -1 ? "" : Utils.format( TXT_SET, returnDepth ) );
+		return TXT_INFO + (returnTo.levelDepth == -1 ? "" : Utils.format( TXT_SET, returnTo.levelDepth ) );
 	}
 }

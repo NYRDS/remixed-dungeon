@@ -84,7 +84,6 @@ public class SaveUtils {
 	}
 	
 	public static String saveDepthFile( HeroClass cl, int depth, String levelKind) {
-		
 		return Utils.format(levelKind+"_"+_depthFile2(cl), depth);
 	}
 

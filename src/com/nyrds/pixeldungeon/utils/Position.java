@@ -20,7 +20,11 @@ public class Position implements Bundlable {
 		levelDepth = _levelDepth;
 		cellId     = _cellId;
 	}
-	
+
+	public Position(Position pos) {
+		this(pos.levelKind, pos.levelDepth, pos.cellId);
+	}
+
 	public Position() {
 		// TODO Auto-generated constructor stub
 	}
