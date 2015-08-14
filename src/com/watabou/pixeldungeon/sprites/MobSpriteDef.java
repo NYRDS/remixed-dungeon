@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -22,15 +21,10 @@ public class MobSpriteDef extends MobSprite {
 	private int bloodColor;
 	private boolean levitating;
 	
-	public MobSpriteDef(String defName) {
+	public MobSpriteDef(String defName) throws Exception {
 		super();
 		
 		InputStream stream = ModdingMode.getInputStream(defName);
-		if(stream == null) {
-			GLog.w("can't load sprite definition: %s", defName);
-			return;
-		}
-		
 		StringBuilder animationDef = new StringBuilder();
 
 		try {
@@ -44,12 +38,7 @@ public class MobSpriteDef extends MobSprite {
 				line = reader.readLine();
 			}
 			reader.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
+
 			JSONObject json = (JSONObject) new JSONTokener(animationDef.toString()).nextValue();
 			
 			texture(json.getString("texture"));
@@ -65,9 +54,9 @@ public class MobSpriteDef extends MobSprite {
 			die    = readAnimation(json, "die",    film);
 			zap    = attack.clone();
 			
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			GLog.w("Something bad happens when loading %s", defName);
+			throw e;
 		}
 		
 		play(idle);
