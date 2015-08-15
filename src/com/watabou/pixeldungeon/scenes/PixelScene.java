@@ -123,7 +123,8 @@ public class PixelScene extends Scene {
 		int padX = 2;
 		int padY = 1;
 		// load the font and setup paint instance for drawing
-		Typeface tf = Typeface.createFromAsset(assets, file); // Create the
+		//Typeface tf = Typeface.createFromAsset(assets, file); // Create the
+		Typeface tf = Typeface.create((String)null, Typeface.NORMAL);
 																// Typeface from
 																// Font File
 		Paint paint = new Paint(); // Create Android Paint Instance
