@@ -54,7 +54,7 @@ public class LloydsBeacon extends Item {
 	public LloydsBeacon() {
 		image = ItemSpriteSheet.BEACON;
 		unique = true;
-		returnTo = Dungeon.currentPosition();
+		returnTo = new Position();
 		returnTo.levelDepth = -1;	
 	}
 	
@@ -68,7 +68,6 @@ public class LloydsBeacon extends Item {
 		super.storeInBundle( bundle );
 		
 		bundle.put(POSITION, returnTo);
-
 	}
 	
 	@Override
