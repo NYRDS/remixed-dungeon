@@ -31,7 +31,7 @@ public class SaveUtils {
 		switch(cl) {
 		default:
 		case ROGUE:
-			return fname.contains("game") || fname.contains("depth") || fname.contains("rogue");
+			return fname.equals(RG_GAME_FILE) || fname.contains("depth") || fname.contains("rogue");
 		case WARRIOR:
 			return fname.contains("warrior");
 		case HUNTRESS:
