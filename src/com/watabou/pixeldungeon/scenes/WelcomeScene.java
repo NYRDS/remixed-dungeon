@@ -17,7 +17,10 @@ public class WelcomeScene extends PixelScene {
 
     private static final String TTL_Welcome = Game.getVar(R.string.Welcome_Title);
 
-    private static final String TXT_Welcome = Game.getVar(R.string.Welcome_Text);
+    private static final String TXT_Welcome    = Game.getVar(R.string.Welcome_Text);
+    private static final String TXT_Welcome_19 = Game.getVar(R.string.Welcome_Text_19);
+    
+    private static final int GAP = 4;
 
     @Override
     public void create() {
@@ -25,9 +28,11 @@ public class WelcomeScene extends PixelScene {
 
         BitmapTextMultiline title;
         BitmapTextMultiline text;
+        BitmapTextMultiline text_19;
         
-        text = createMultiline(TXT_Welcome, 8);
-        title = createMultiline(TTL_Welcome, 16);
+        text    = createMultiline(TXT_Welcome, 8);
+        text_19 = createMultiline(TXT_Welcome_19, 8);
+        title   = createMultiline(TTL_Welcome, 16);
 
         int w = Camera.main.width;
         int h = Camera.main.height;
@@ -60,12 +65,16 @@ public class WelcomeScene extends PixelScene {
         Component content = list.content();
         content.clear();
 
-        text.maxWidth = (int) panel.innerWidth();
+        text_19.maxWidth = text.maxWidth = (int) panel.innerWidth();
         text.measure();
-
+        text_19.measure();
+      
+        text_19.setPos(0, text.height() + GAP);
+        
         content.add(text);
+        content.add(text_19);
 
-        content.setSize( panel.innerWidth(), text.height() );
+        content.setSize( panel.innerWidth(), text.height() + text_19.height() + GAP );
 
         RedButton okay = new RedButton("Okay!") {
             @Override
