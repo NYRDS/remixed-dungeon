@@ -5,6 +5,7 @@ import android.util.SparseBooleanArray;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderEggSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Generator;
 
 public class SpiderEgg extends Mob {
 
@@ -21,6 +22,9 @@ public class SpiderEgg extends Mob {
 		maxLvl = 9;
 
 		postpone(20);
+		
+		loot = Generator.random(Generator.Category.SEED);
+		lootChance = 0.2f;
 	}
 
 	public static void lay(int pos) {

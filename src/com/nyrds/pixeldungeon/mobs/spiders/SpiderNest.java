@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderNestSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 
 public class SpiderNest extends Mob {
 
@@ -19,6 +20,9 @@ public class SpiderNest extends Mob {
 		maxLvl = 9;
 		
 		postpone(20);
+		
+		loot = new PotionOfHealing();
+		lootChance = 0.2f;
 	}
 	
 	@Override
