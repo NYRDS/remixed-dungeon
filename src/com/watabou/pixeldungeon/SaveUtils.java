@@ -48,7 +48,7 @@ public class SaveUtils {
 		
 		for (String file : files) {
 			if(file.endsWith(".dat") && hasClassTag(cl, file)) {
-				GLog.i("deleting: %s", file);
+				//GLog.i("deleting: %s", file);
 				Game.instance().deleteFile(file);
 			}
 		}
@@ -91,7 +91,7 @@ public class SaveUtils {
 	public static String loadDepthFile( HeroClass cl, int depth, String levelKind) {
 		
 		String fname = Utils.format(levelKind+"_"+_depthFile2(cl), depth);
-		GLog.i("trying: %s", fname);
+		//GLog.i("trying: %s", fname);
 		if(FileSystem.getInteralStorageFile(fname).exists()){
 			return fname;
 		}
