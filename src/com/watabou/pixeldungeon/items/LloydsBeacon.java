@@ -56,6 +56,8 @@ public class LloydsBeacon extends Item {
 		unique = true;
 		returnTo = new Position();
 		returnTo.levelDepth = -1;	
+		
+		name = Game.getVar(R.string.LloidsBeacon_Name);
 	}
 	
 	private static final String DEPTH	 = "depth";

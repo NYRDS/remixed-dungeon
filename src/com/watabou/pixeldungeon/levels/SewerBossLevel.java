@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
@@ -182,6 +183,7 @@ public class SewerBossLevel extends RegularLevel {
 		Mob mob = Bestiary.mob( Dungeon.depth, levelKind() );
 		mob.pos = roomExit.random(this);
 		mobs.add( mob );
+		drop( new SpiderCharm(), mob.pos ).type = Heap.Type.SKELETON;
 	}
 	
 	public Actor respawner() {

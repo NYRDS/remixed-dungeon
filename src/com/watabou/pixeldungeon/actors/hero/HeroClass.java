@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
@@ -176,6 +177,8 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping());
 		}
 		
+		
+		hero.collect(new LloydsBeacon());
 		hero.collect(new WandOfTeleportation());
 		hero.collect(new Ankh());
 

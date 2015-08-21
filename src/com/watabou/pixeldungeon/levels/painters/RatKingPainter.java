@@ -55,7 +55,6 @@ public class RatKingPainter extends Painter {
 			Heap chest = level.getHeap( room.random(level) );
 			if (chest != null) {
 				chest.type = Heap.Type.MIMIC;
-				chest.items.add(new SpiderCharm());
 				break;
 			}
 		}
@@ -63,10 +62,6 @@ public class RatKingPainter extends Painter {
 		RatKing king = new RatKing();
 		king.pos = room.random(level, 1 );
 		level.mobs.add( king );
-		
-		SpiderExploding spider = new SpiderExploding();
-		spider.pos = room.random(level, 1 );
-		level.mobs.add(spider);
 	}
 	
 	private static void addChest( Level level, int pos, int door ) {

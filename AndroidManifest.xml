@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.nyrds.pixeldungeon.ml"
-	android:versionCode="148"
-	android:versionName="remix.19.0.beta.1"
+	android:versionCode="149"
+	android:versionName="remix.19.0"
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
