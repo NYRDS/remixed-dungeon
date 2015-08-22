@@ -102,32 +102,37 @@ enum Preferences {
 	}
 	
 	String getString( String key, String defValue ) {
-		String scrambledKey = UserKey.encrypt(key);
+		
+		try{
+			String scrambledKey = UserKey.encrypt(key);
+			
+			if(get().contains(scrambledKey)) {
+				String encVal = get().getString( scrambledKey, UserKey.encrypt(defValue) );
+				return UserKey.decrypt(encVal);
+			} 
+			
+			if (get().contains(key)) {
+				String val = "";
+				
+				if(checkString(key)){
+					val = get().getString( key, defValue);
+				}
+				if(checkInt(key)){
+					val = Integer.toString(get().getInt( key, Integer.parseInt(defValue)));
+				}
+				if(checkBoolean(key)){
+					val = Boolean.toString(get().getBoolean( key, Boolean.parseBoolean(defValue)));
+				}			
+				
+				get().edit().putString(scrambledKey, UserKey.encrypt(val)).commit();
+				get().edit().remove(key).commit();
+				return val;
+			}
+		} catch (ClassCastException e) {
+			//just return default value when loading old preferences
+		} catch (Exception e) {
 
-		if(get().contains(scrambledKey)) {
-			String encVal = get().getString( scrambledKey, UserKey.encrypt(defValue) );
-			return UserKey.decrypt(encVal);
-		} 
-		
-		if (get().contains(key)) {
-			
-			String val = "";
-			
-			if(checkString(key)){
-				val = get().getString( key, defValue);
-			}
-			if(checkInt(key)){
-				val = Integer.toString(get().getInt( key, Integer.parseInt(defValue)));
-			}
-			if(checkBoolean(key)){
-				val = Boolean.toString(get().getBoolean( key, Boolean.parseBoolean(defValue)));
-			}			
-			
-			get().edit().putString(scrambledKey, UserKey.encrypt(val)).commit();
-			get().edit().remove(key).commit();
-			return val;
 		}
-		
 		return defValue;
 	}
 	
