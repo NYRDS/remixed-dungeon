@@ -231,22 +231,22 @@
   <string name="SpiderEgg_Desc">Это яйцо с мягкой оболочкой медленно пульсирует, внутри просматривается что-то многоногое.</string>
   <!--STRINGS OF SpiderNest CLASS-->
   <string name="SpiderNest_Name">паучий кокон</string>
-  <string name="SpiderNest_Gender">male</string>
+  <string name="SpiderNest_Gender">masculine</string>
   <string name="SpiderNest_Name_Objective">кокон</string>
   <string name="SpiderNest_Desc">Кокон из тончайшего шёлка скрывает в себе нечто живое.</string>
   <!--STRINGS OF SpiderServant CLASS-->
   <string name="SpiderServant_Name">паук-солдат</string>
-  <string name="SpiderServant_Gender">male</string>
+  <string name="SpiderServant_Gender">masculine</string>
   <string name="SpiderServant_Name_Objective">паука</string>
   <string name="SpiderServant_Desc">Самые многочисленные представители паучьего логова. Защищает территорию от внезапных посягательств. Его хелицеры снабжены ядовитыми железами, поэтому внезапный укус чреват отравлением.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
   <string name="SpiderExploding_Name">паук-рабочий</string>
-  <string name="SpiderExploding_Gender">male</string>
+  <string name="SpiderExploding_Gender">masculine</string>
   <string name="SpiderExploding_Name_Objective">паука</string>
   <string name="SpiderExploding_Desc">В спокойное для колонии время эти трудяги безобидны, но при появлении опасности молниеносно бросаются на неприятеля, сорвав первое попавшееся растение, тем самым выполняя роль смертника.</string>
   <!--STRINGS OF SpiderMind CLASS-->
   <string name="SpiderMind_Name">пси-паук</string>
-  <string name="SpiderMind_Gender">male</string>
+  <string name="SpiderMind_Gender">masculine</string>
   <string name="SpiderMind_Name_Objective">паука</string>
   <string name="SpiderMind_Desc">Несмотря на свою хрупкость, данные пауки обладают уникальными ментальными способностями, предназначенными для управления колонией. Может воздействовать на сознание любого живого существа, однако очень трусливый.</string>
   <!--STRINGS OF SpiderQueen CLASS-->

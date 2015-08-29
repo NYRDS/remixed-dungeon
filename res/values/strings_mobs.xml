@@ -243,19 +243,19 @@
     
     <!-- STRINGS OF SpiderServant CLASS -->
     <string name="SpiderServant_Name">spider soldier</string>
-    <string name="SpiderServant_Gender">male</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name_Objective">spider soldier</string>
     <string name="SpiderServant_Desc">Soldiers happens to be the most numerous units of spider lair. Born to protect it\'s territory. Soldiers\'s chelicera developed venomous glands to poison his enemies.</string>
     
     <!-- STRINGS OF SpiderExploding CLASS -->
     <string name="SpiderExploding_Name">spider worker</string>
-    <string name="SpiderExploding_Gender">male</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name_Objective">spider worker</string>
     <string name="SpiderExploding_Desc">Hard workers during peaceful times, these creatures won\'t hesitate to charge to their enemies and grab first plant they run across, turning themselves into living bombs.</string>
     
     <!-- STRINGS OF SpiderMind CLASS -->
     <string name="SpiderMind_Name">Psi-Spider</string>
-    <string name="SpiderMind_Gender">male</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name_Objective">Psi-Spider</string>
     <string name="SpiderMind_Desc">These seemingly fragile spiders possess unique mental powers, which allows them to control whole colony. Psi-Spider able to control any living creature, but he is quite a coward.</string>
     
