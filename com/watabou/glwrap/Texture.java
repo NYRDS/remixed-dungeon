@@ -35,8 +35,6 @@ public class Texture {
 	
 	public int id;
 	
-	private boolean premultiplied = false;
-	
 	public Texture() {
 		int[] ids = new int[1];
 		GLES20.glGenTextures( 1, ids, 0 );
@@ -73,8 +71,6 @@ public class Texture {
 	public void bitmap( Bitmap bitmap ) {
 		bind();
 		GLUtils.texImage2D( GLES20.GL_TEXTURE_2D, 0, bitmap, 0 );
-		
-		premultiplied = true;
 	}
 	
 	public void pixels( int w, int h, int[] pixels ) {
@@ -146,8 +142,6 @@ public class Texture {
 		}
 		
 		pixels( w, h, pixels );
-		
-		premultiplied = false;
 	}
 	
 	public static Texture create( Bitmap bmp ) {
