@@ -1,5 +1,7 @@
 package com.watabou.noosa;
 
+import com.watabou.glwrap.Matrix;
+
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -16,22 +18,32 @@ public class SystemText extends Text {
 	private final int oversample = 4;
 	
 	private boolean dirty = true;
+	Rect bounds = new Rect();
 	
-	public SystemText() {
+	public SystemText(){
 		this( "", null );
 	}
 	
-	public SystemText( Font font ) {
+	public SystemText( Font font )  {
 		this( "", font );
 	}
 	
-	public SystemText( String text, Font font ) {
+	public SystemText( String text, Font font )  {
 		super( 0, 0, 0, 0 );
-		size = (int) font.lineHeight;
+		size = (int) font.baseLine;
+		
+		if(size == 0) {
+			try {
+				throw new Exception("zero sized font!!!");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		
 		Typeface tf = Typeface.create((String)null, Typeface.BOLD);
 
-		textPaint.setTextSize(size*2);
+		textPaint.setTextSize(size*oversample);
 		textPaint.setAntiAlias(true);
 		textPaint.setColor(0xffffffff);
 		textPaint.setTypeface(tf);
@@ -51,12 +63,23 @@ public class SystemText extends Text {
 			Bitmap bitmap = Bitmap.createBitmap((int)width*oversample, (int)height*oversample, Bitmap.Config.ARGB_4444);
 			Canvas canvas = new Canvas(bitmap);
 			
-			canvas.drawText(text, 0, (int)height*oversample, textPaint);
+			canvas.drawText(text, 0, textPaint.descent()*oversample, textPaint);
 			
 			image = new Image(bitmap, true);
+			if(parent != null) {
+				parent.add(image);
+			}
 		}
 	}
 	
+	@Override
+	protected void updateMatrix() {
+		// "origin" field is ignored
+		Matrix.setIdentity( matrix );
+		Matrix.translate( matrix, x, y );
+		Matrix.scale( matrix, scale.x, scale.y );
+		Matrix.rotate( matrix, angle );
+	}
 	
 	@Override
 	public void draw() {
@@ -69,8 +92,6 @@ public class SystemText extends Text {
 			
 			image.scale.x = scale.x/oversample;
 			image.scale.y = scale.y/oversample;
-			
-			image.draw();
 		}
 	}
 
@@ -79,9 +100,11 @@ public class SystemText extends Text {
 			dirty = false;
 			Rect bounds = new Rect();
 			
-			textPaint.getTextBounds(text, 0, text.length(), bounds);
-			width  = (bounds.right - bounds.left)/oversample;
-			height = (bounds.bottom - bounds.top)/oversample;
+			//textPaint.getTextBounds(text, 0, text.length(), bounds);
+			width = textPaint.measureText(text)/oversample;
+			//width  = (bounds.right  - bounds.left)/oversample;
+			//height = (bounds.bottom - bounds.top)/oversample;
+			height = ( textPaint.descent() -textPaint.ascent())/oversample;
 		}
 	}
 	

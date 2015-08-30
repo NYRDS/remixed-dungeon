@@ -19,7 +19,6 @@ package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
 
-import com.nyrds.android.util.ModdingMode;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
