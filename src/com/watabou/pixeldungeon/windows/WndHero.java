@@ -21,10 +21,10 @@ import java.util.Locale;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -109,7 +109,7 @@ public class WndHero extends WndTabbed {
 			
 			Hero hero = Dungeon.hero; 
 
-			BitmapText title = PixelScene.createText( 
+			Text title = PixelScene.createText( 
 				Utils.format( TXT_TITLE, hero.lvl, hero.className() ).toUpperCase( Locale.ENGLISH ), 9 );
 			title.hardlight( TITLE_COLOR );
 			title.measure();
@@ -153,7 +153,7 @@ public class WndHero extends WndTabbed {
 		
 		private void statSlot( String label, String value ) {
 			
-			BitmapText txt = PixelScene.createText( label, 8 );
+			Text txt = PixelScene.createText( label, 8 );
 			txt.y = pos;
 			add( txt );
 			
@@ -198,7 +198,7 @@ public class WndHero extends WndTabbed {
 				icon.y = pos;
 				add( icon );
 				
-				BitmapText txt = PixelScene.createText( buff.toString(), 8 );
+				Text txt = PixelScene.createText( buff.toString(), 8 );
 				txt.x = icon.width + GAP;
 				txt.y = pos + (int)(icon.height - txt.baseLine()) / 2;
 				add( txt );

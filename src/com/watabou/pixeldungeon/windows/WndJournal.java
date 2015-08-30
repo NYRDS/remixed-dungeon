@@ -19,9 +19,9 @@ package com.watabou.pixeldungeon.windows;
 
 import java.util.Collections;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -44,7 +44,7 @@ public class WndJournal extends Window {
 	
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
 	
-	private BitmapText txtTitle;
+	private Text txtTitle;
 	private ScrollPane list;
 	
 	public WndJournal() {
@@ -92,8 +92,8 @@ public class WndJournal extends Window {
 	
 	private static class ListItem extends Component {
 		
-		private BitmapText feature;
-		private BitmapText depth;
+		private Text feature;
+		private Text depth;
 		
 		private Image icon;
 		
@@ -117,7 +117,7 @@ public class WndJournal extends Window {
 			feature = PixelScene.createText( 9 );
 			add( feature );
 			
-			depth = new BitmapText( PixelScene.font1x );
+			depth = Text.create( PixelScene.font1x );
 			add( depth );
 			
 			icon = Icons.get( Icons.DEPTH );

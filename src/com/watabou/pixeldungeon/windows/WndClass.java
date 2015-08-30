@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -98,7 +98,7 @@ public class WndClass extends WndTabbed {
 					pos += GAP;
 				}
 				
-				BitmapText dot = PixelScene.createText( DOT, 6 );
+				Text dot = PixelScene.createText( DOT, 6 );
 				dot.x = MARGIN;
 				dot.y = pos;
 				if (dotWidth == 0) {

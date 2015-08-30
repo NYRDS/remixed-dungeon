@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 public class RedButton extends Button {
 	
 	protected NinePatch bg;
-	protected BitmapText text;
+	protected Text text;
 	protected Image icon;
 			
 	public RedButton( String label ) {

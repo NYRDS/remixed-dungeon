@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -44,7 +44,7 @@ public class WndList extends Window {
 				pos += GAP;
 			}
 			
-			BitmapText dot = PixelScene.createText( DOT, 6 );
+			Text dot = PixelScene.createText( DOT, 6 );
 			dot.x = MARGIN;
 			dot.y = pos;
 			if (dotWidth == 0) {

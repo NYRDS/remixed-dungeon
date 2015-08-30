@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
@@ -83,7 +83,7 @@ public class RankingsScene extends PixelScene {
 			float left = (w - Math.min( MAX_ROW_WIDTH, w )) / 2 + GAP;
 			float top = align( (h - rowHeight  * Rankings.INSTANCE.records.size()) / 2 );
 			
-			BitmapText title = PixelScene.createText( TXT_TITLE, 9 );
+			Text title = PixelScene.createText( TXT_TITLE, 9 );
 			title.hardlight( Window.TITLE_COLOR );
 			title.measure();
 			title.x = align( (w - title.width()) / 2 );
@@ -101,22 +101,22 @@ public class RankingsScene extends PixelScene {
 			}
 			
 			if (Rankings.INSTANCE.totalNumber >= Rankings.TABLE_SIZE) {
-				BitmapText label = PixelScene.createText( TXT_TOTAL, 8 );
+				Text label = PixelScene.createText( TXT_TOTAL, 8 );
 				label.hardlight( DEFAULT_COLOR );
 				label.measure();
 				add( label );
 
-				BitmapText happy = PixelScene.createText( Integer.toString( Rankings.INSTANCE.happyWonNumber ), 8 );
+				Text happy = PixelScene.createText( Integer.toString( Rankings.INSTANCE.happyWonNumber ), 8 );
 				happy.hardlight( HAPPY_COLOR );
 				happy.measure();
 				add( happy );
 				
-				BitmapText won = PixelScene.createText(  "/" + Integer.toString( Rankings.INSTANCE.wonNumber ), 8 );
+				Text won = PixelScene.createText(  "/" + Integer.toString( Rankings.INSTANCE.wonNumber ), 8 );
 				won.hardlight( Window.TITLE_COLOR );
 				won.measure();
 				add( won );
 				
-				BitmapText total = PixelScene.createText( "/" + Rankings.INSTANCE.totalNumber, 8 );
+				Text total = PixelScene.createText( "/" + Rankings.INSTANCE.totalNumber, 8 );
 				total.hardlight( DEFAULT_COLOR );
 				total.measure();
 				total.x = align( (w - total.width()) / 2 );
@@ -133,7 +133,7 @@ public class RankingsScene extends PixelScene {
 			
 		} else {
 			
-			BitmapText title = PixelScene.createText( TXT_NO_GAMES, 8 );
+			Text title = PixelScene.createText( TXT_NO_GAMES, 8 );
 			title.hardlight( DEFAULT_COLOR );
 			title.measure();
 			title.x = align( (w - title.width()) / 2 );
@@ -167,7 +167,7 @@ public class RankingsScene extends PixelScene {
 		
 		private ItemSprite shield;
 		private Flare flare;
-		private BitmapText position;
+		private Text position;
 		private BitmapTextMultiline desc;
 		private Image classIcon;
 		
@@ -209,7 +209,7 @@ public class RankingsScene extends PixelScene {
 			shield = new ItemSprite( ItemSpriteSheet.TOMB, null );
 			add( shield );
 			
-			position = new BitmapText( PixelScene.font1x );
+			position = Text.create( PixelScene.font1x );
 			add( position );
 			
 			desc = createMultiline( 9 );		

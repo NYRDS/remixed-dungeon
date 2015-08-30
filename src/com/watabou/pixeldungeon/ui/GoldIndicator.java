@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -29,13 +29,13 @@ public class GoldIndicator extends Component {
 	
 	private int lastValue = 0;
 	
-	private BitmapText tf;
+	private Text tf;
 	
 	private float time;
 	
 	@Override
 	protected void createChildren() {
-		tf = new BitmapText( PixelScene.font1x );
+		tf = Text.create( PixelScene.font1x );
 		tf.hardlight( 0xFFFF00 );
 		add( tf );
 		

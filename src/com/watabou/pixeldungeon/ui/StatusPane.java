@@ -18,10 +18,10 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.watabou.input.Touchscreen.Touch;
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
@@ -49,9 +49,9 @@ public class StatusPane extends Component {
 	private int lastLvl = -1;
 	private int lastKeys = -1;
 	
-	private BitmapText level;
-	private BitmapText depth;
-	private BitmapText keys;
+	private Text level;
+	private Text depth;
+	private Text keys;
 	
 	private DangerIndicator danger;
 	private LootIndicator loot;
@@ -99,17 +99,17 @@ public class StatusPane extends Component {
 		exp = new Image( Assets.XP_BAR );
 		add( exp );
 		
-		level = new BitmapText( PixelScene.font1x );
+		level = Text.create( PixelScene.font1x );
 		level.hardlight( 0xFFEBA4 );
 		add( level );
 		
-		depth = new BitmapText( Integer.toString( Dungeon.depth ), PixelScene.font1x );
+		depth = Text.create( Integer.toString( Dungeon.depth ), PixelScene.font1x );
 		depth.hardlight( 0xCACFC2 );
 		depth.measure();
 		add( depth );
 		
 		Dungeon.hero.belongings.countIronKeys();
-		keys = new BitmapText( PixelScene.font1x );
+		keys = Text.create( PixelScene.font1x );
 		keys.hardlight( 0xCACFC2 );
 		add( keys );
 		

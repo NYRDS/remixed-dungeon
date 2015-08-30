@@ -20,9 +20,10 @@ package com.watabou.pixeldungeon.scenes;
 import java.io.FileNotFoundException;
 
 
-import com.watabou.noosa.BitmapText;
+
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -79,7 +80,7 @@ public class InterlevelScene extends PixelScene {
 	volatile private Phase phase;
 	volatile private float timeLeft;
 
-	private BitmapText message;
+	private Text message;
 
 	private Thread thread;
 

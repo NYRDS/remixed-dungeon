@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.windows;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -52,7 +52,7 @@ public class WndCatalogus extends WndTabbed {
 	private static final String TXT_SCROLLS	= Game.getVar(R.string.WndCatalogus_Scrolls);
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndCatalogus_Title);
 	
-	private BitmapText txtTitle;
+	private Text txtTitle;
 	private ScrollPane list;
 	
 	private ArrayList<ListItem> items = new ArrayList<WndCatalogus.ListItem>();
@@ -153,7 +153,7 @@ public class WndCatalogus extends WndTabbed {
 		private boolean identified;
 		
 		private ItemSprite sprite;
-		private BitmapText label;
+		private Text label;
 		
 		public ListItem( Class<? extends Item> cl ) {
 			super();

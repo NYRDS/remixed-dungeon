@@ -33,13 +33,13 @@ import android.graphics.Typeface;
 import android.opengl.GLES20;
 
 import com.watabou.input.Touchscreen;
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.BitmapText.Font;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
+import com.watabou.noosa.Font;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -65,10 +65,10 @@ public class PixelScene extends Scene {
 
 	public static Camera uiCamera;
 
-	public static BitmapText.Font font1x;
-	public static BitmapText.Font font25x;
+	public static Font font1x;
+	public static Font font25x;
 	
-	public static BitmapText.Font font;
+	public static Font font;
 
 	@Override
 	public void create() {
@@ -232,7 +232,7 @@ public class PixelScene extends Scene {
 		HashMap<Object, RectF> metrics = new HashMap<Object, RectF>();
 		HashMap<Object, PointF> shifts = new HashMap<Object, PointF>();
 		Bitmap bitmap = createBitmapFromFont(Game.instance().getAssets(),
-				"Roboto-Regular.ttf", BitmapText.Font.ALL_CHARS, size, metrics,
+				"Roboto-Regular.ttf", Font.ALL_CHARS, size, metrics,
 				shifts, fontHeight);
 		/*
 		 * File storageDir = Game.instance().getExternalFilesDir(null); File
@@ -278,13 +278,13 @@ public class PixelScene extends Scene {
 		if (font1x == null) {
 			// 3x5 (6)
 			font1x = Font.colorMarked(BitmapCache.get(Assets.FONTS1X),
-					0x00000000, BitmapText.Font.LATIN_FULL);
+					0x00000000, Font.LATIN_FULL);
 			font1x.baseLine = 6;
 			font1x.tracking = -1;
 			
 			// 7x12 (15)
 			font25x = Font.colorMarked( 
-				BitmapCache.get( Assets.FONTS25X ), 17, 0x00000000, BitmapText.Font.ALL_CHARS);
+				BitmapCache.get( Assets.FONTS25X ), 17, 0x00000000, Font.ALL_CHARS);
 			font25x.baseLine = 13;
 			font25x.tracking = -1;
 		}
@@ -296,7 +296,7 @@ public class PixelScene extends Scene {
 		Touchscreen.event.removeAll();
 	}
 
-	private static HashMap<Integer, BitmapText.Font> fontCache = new HashMap<Integer, BitmapText.Font>();
+	private static HashMap<Integer, Font> fontCache = new HashMap<Integer, Font>();
 	public static float scale;
 
 	public static void chooseFont(float size) {
@@ -375,15 +375,15 @@ public class PixelScene extends Scene {
 		}
 	}
 
-	public static BitmapText createText(float size) {
+	public static Text createText(float size) {
 		return createText(null, size);
 	}
 
-	public static BitmapText createText(String text, float size) {
+	public static Text createText(String text, float size) {
 
 		chooseFont(size);
 
-		BitmapText result = new BitmapText(text, font);
+		Text result = Text.create(text, font);
 		result.scale.set(scale);
 
 		return result;
@@ -444,11 +444,11 @@ public class PixelScene extends Scene {
 		}
 	}
 
-	public static BitmapText.Font font() {
+	public static Font font() {
 		return font;
 	}
 
-	public static void font(BitmapText.Font font) {
+	public static void font(Font font) {
 		PixelScene.font = font;
 	}
 

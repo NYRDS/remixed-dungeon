@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
@@ -144,7 +144,9 @@ public class TitleScene extends PixelScene {
 		archs.setSize(w, h);
 		addToBack(archs);
 
-		BitmapText version = new BitmapText("v " + Game.version, font1x);
+		//Text version = Text.create("v " + Game.version, font1x);
+		Text version = Text.create(font1x);
+		version.text("v " + Game.version);
 		version.measure();
 		version.hardlight(0x888888);
 		version.setPos(w - version.width(), h - version.height());
@@ -218,7 +220,7 @@ public class TitleScene extends PixelScene {
 		private static final int IMAGE_SIZE = 32;
 
 		private Image image;
-		private BitmapText label;
+		private Text label;
 
 		public DashboardItem(String text, int index) {
 			super();

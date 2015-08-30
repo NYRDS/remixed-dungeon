@@ -18,9 +18,10 @@
 package com.watabou.pixeldungeon.ui;
 
 import java.util.ArrayList;
-import com.watabou.noosa.BitmapText;
+
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
@@ -80,7 +81,7 @@ public class BadgesList extends ScrollPane {
 		private Badges.Badge badge;
 		
 		private Image icon;
-		private BitmapText label;
+		private Text label;
 		
 		public ListItem( Badges.Badge badge ) {
 			super();

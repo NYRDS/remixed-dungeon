@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.ModdingMode;
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 public class ModdingButton extends Button {
 
 	private Image      image;
-	private BitmapText text;
+	private Text text;
 
 	public ModdingButton() {
 		super();

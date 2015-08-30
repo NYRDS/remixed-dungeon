@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -62,7 +62,7 @@ public class BadgesScene extends PixelScene {
 		panel.y = (h - ph) / 2;
 		add( panel );
 		
-		BitmapText title = PixelScene.createText( TXT_TITLE, 9 );
+		Text title = PixelScene.createText( TXT_TITLE, 9 );
 		title.hardlight( Window.TITLE_COLOR );
 		title.measure();
 		title.x = align( (w - title.width()) / 2 );

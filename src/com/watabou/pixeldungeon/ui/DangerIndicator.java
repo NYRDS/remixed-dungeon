@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -28,7 +28,7 @@ public class DangerIndicator extends Tag {
 	
 	public static final int COLOR	= 0xFF4C4C;
 	
-	private BitmapText number;
+	private Text number;
 	private Image icon;
 	
 	private int enemyIndex = 0;
@@ -47,7 +47,7 @@ public class DangerIndicator extends Tag {
 	protected void createChildren() {
 		super.createChildren();
 		
-		number = new BitmapText( PixelScene.font1x );
+		number = Text.create( PixelScene.font1x );
 		add( number );
 		
 		icon = Icons.SKULL.get();

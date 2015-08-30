@@ -1,12 +1,12 @@
 package com.watabou.pixeldungeon.windows.elements;
 
-import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndTabbed;
 
 public class LabeledTab extends Tab {
 
-	private BitmapText btLabel;
+	private Text btLabel;
 
 	public LabeledTab(WndTabbed parent, String label) {
 		super(parent);

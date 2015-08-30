@@ -26,6 +26,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Button;
@@ -409,7 +410,7 @@ public class StartScene extends PixelScene {
 		private HeroClass cl;
 
 		private Image avatar;
-		private BitmapText name;
+		private Text name;
 		private Emitter emitter;
 
 		private float brightness;

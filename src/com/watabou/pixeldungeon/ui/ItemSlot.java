@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
@@ -39,9 +39,9 @@ public class ItemSlot extends Button {
 	private static final float DISABLED	= 0.3f;
 	
 	protected ItemSprite icon;
-	protected BitmapText topLeft;
-	protected BitmapText topRight;
-	protected BitmapText bottomRight;
+	protected Text topLeft;
+	protected Text topRight;
+	protected Text bottomRight;
 	
 	private static final String TXT_STRENGTH	= ":%d";
 	private static final String TXT_TYPICAL_STR	= "%d?";
@@ -79,15 +79,15 @@ public class ItemSlot extends Button {
 		icon = new ItemSprite();
 		add( icon );
 		
-		topLeft = new BitmapText( PixelScene.font1x );
+		topLeft = Text.create( PixelScene.font1x );
 		topLeft.setScale(0.8f,0.8f);
 		add( topLeft );
 		
-		topRight = new BitmapText( PixelScene.font1x );
+		topRight = Text.create( PixelScene.font1x );
 		topRight.setScale(0.8f,0.8f);
 		add( topRight );
 		
-		bottomRight = new BitmapText( PixelScene.font1x );
+		bottomRight = Text.create( PixelScene.font1x );
 		bottomRight.setScale(0.8f,0.8f);
 		add( bottomRight );
 	}

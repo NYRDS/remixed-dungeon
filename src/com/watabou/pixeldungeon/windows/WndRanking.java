@@ -19,11 +19,11 @@ package com.watabou.pixeldungeon.windows;
 
 import java.util.Locale;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
@@ -202,7 +202,7 @@ public class WndRanking extends WndTabbed {
 		
 		private float statSlot( Group parent, String label, String value, float pos ) {
 			
-			BitmapText txt = PixelScene.createText( label, 7 );
+			Text txt = PixelScene.createText( label, 7 );
 			txt.y = pos;
 			parent.add( txt );
 			
@@ -282,7 +282,7 @@ public class WndRanking extends WndTabbed {
 		
 		private ItemSlot slot;
 		private ColorBlock bg;
-		private BitmapText name;
+		private Text name;
 		
 		public ItemButton( Item item ) {
 			
