@@ -19,6 +19,7 @@ package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
 
+import android.graphics.Bitmap;
 import android.graphics.RectF;
 
 import com.watabou.gltextures.TextureCache;
@@ -61,6 +62,12 @@ public class Image extends Visual {
 		frame( texture.uvRect( left,  top,  left + width, top + height ) );
 	}
 	
+	public Image(Bitmap bitmap, boolean doNotCache) {
+		this();
+		texture = new SmartTexture(bitmap);
+		frame( new RectF( 0, 0, 1, 1 ) );
+	}
+
 	public void texture( Object tx ) {
 		texture = tx instanceof SmartTexture ? (SmartTexture)tx : TextureCache.get( tx );
 		frame( new RectF( 0, 0, 1, 1 ) );
@@ -166,7 +173,6 @@ public class Image extends Visual {
 			verticesBuffer.put( vertices );
 			dirty = false;
 		}
-		script.drawQuad( verticesBuffer );
-		
+		script.drawQuad( verticesBuffer );	
 	}
 }

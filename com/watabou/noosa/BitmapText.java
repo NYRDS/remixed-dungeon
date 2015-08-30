@@ -225,6 +225,6 @@ public class BitmapText extends Visual {
 			return shift.y;
 		}
 		
-		return 0;			
+		return 0;
 	}
 }
