@@ -47,5 +47,11 @@ public class ModdingMode {
 	public static void setContext(Context context) {
 		mContext = context;
 	}
-
+	
+	public static void setTextRenderingMode(boolean val) {
+	}
+	
+	public static boolean getTextRenderingMode() {
+		return true;
+	}
 }

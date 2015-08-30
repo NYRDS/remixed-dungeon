@@ -19,13 +19,14 @@ package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
 
 import android.graphics.RectF;
 
-public class BitmapText extends Visual {
+public class BitmapText extends Text {
 
 	protected String text;
 	protected Font font;
@@ -49,7 +50,6 @@ public class BitmapText extends Visual {
 	
 	public BitmapText( String text, Font font ) {
 		super( 0, 0, 0, 0 );
-		
 		this.text(text);
 		this.font = font;
 	}
@@ -74,9 +74,7 @@ public class BitmapText extends Visual {
 	
 	@Override
 	public void draw() {
-		
 		super.draw();
-		
 		NoosaScript script = NoosaScript.get();
 		
 		font.texture.bind();
@@ -93,7 +91,6 @@ public class BitmapText extends Visual {
 			ra, ga, ba, aa );
 		
 		script.drawQuadSet( quads, realLength );
-		
 	}
 	
 	protected void updateVertices() {
@@ -164,7 +161,7 @@ public class BitmapText extends Visual {
 		dirty = false;
 		
 	}
-	
+
 	public void measure() {
 		
 		width = 0;
@@ -196,10 +193,12 @@ public class BitmapText extends Visual {
 		return font.baseLine * scale.y;
 	}
 	
+	@Override
 	public String text() {
 		return text;
 	}
 	
+	@Override
 	public void text( String str ) {
 		if(str == null){
 			text = "";
