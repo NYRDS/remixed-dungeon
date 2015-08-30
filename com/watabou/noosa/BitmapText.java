@@ -196,14 +196,6 @@ public class BitmapText extends Visual {
 		return font.baseLine * scale.y;
 	}
 	
-	public Font font() {
-		return font;
-	}
-	
-	public void font( Font value ) {
-		font = value;
-	}
-	
 	public String text() {
 		return text;
 	}
