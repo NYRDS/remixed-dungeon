@@ -64,8 +64,9 @@ public class WelcomeScene extends PixelScene {
 
         Component content = list.content();
         content.clear();
-
-        text_19.maxWidth(text.maxWidth = (int) panel.innerWidth());
+        
+        text.maxWidth((int) panel.innerWidth());
+        text_19.maxWidth(text.getMaxWidth());
         text.measure();
         text_19.measure();
       
