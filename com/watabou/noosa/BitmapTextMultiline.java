@@ -193,15 +193,6 @@ public class BitmapTextMultiline extends BitmapText {
 		width = writer.width;
 		height = writer.height;
 	}
-	
-	public int getMaxWidth() {
-		return maxWidth;
-	}
-
-	public int maxWidth(int maxWidth) {
-		this.maxWidth = maxWidth;
-		return maxWidth;
-	}
 
 	private class SymbolWriter {
 		

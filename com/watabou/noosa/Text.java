@@ -45,6 +45,15 @@ public abstract class Text extends Visual {
 		super.draw();
 	}
 	
+	public int getMaxWidth() {
+		return maxWidth;
+	}
+
+	public int maxWidth(int maxWidth) {
+		this.maxWidth = maxWidth;
+		return maxWidth;
+	}
+	
 	public abstract void measure();
 	public abstract float baseLine();
 	public abstract String text();
