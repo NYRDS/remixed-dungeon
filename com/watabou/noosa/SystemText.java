@@ -98,13 +98,8 @@ public class SystemText extends Text {
 	public void measure() {
 		if(dirty){
 			dirty = false;
-			Rect bounds = new Rect();
-			
-			//textPaint.getTextBounds(text, 0, text.length(), bounds);
 			width = textPaint.measureText(text)/oversample;
-			//width  = (bounds.right  - bounds.left)/oversample;
-			//height = (bounds.bottom - bounds.top)/oversample;
-			height = ( textPaint.descent() -textPaint.ascent())/oversample;
+			height = ( textPaint.descent() - textPaint.ascent())/oversample;
 		}
 	}
 	
