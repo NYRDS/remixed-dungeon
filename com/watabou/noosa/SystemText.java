@@ -94,10 +94,13 @@ public class SystemText extends Text {
 			image.scale.y = scale.y/oversample;
 		}
 	}
-
+	
 	public void measure() {
 		if(dirty){
 			dirty = false;
+			
+			
+			
 			width = textPaint.measureText(text)/oversample;
 			height = ( textPaint.descent() - textPaint.ascent())/oversample;
 		}

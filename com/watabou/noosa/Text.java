@@ -1,9 +1,15 @@
 package com.watabou.noosa;
 
+import java.util.regex.Pattern;
+
 import com.nyrds.android.util.ModdingMode;
 
 public abstract class Text extends Visual {
 
+	protected static final Pattern PARAGRAPH	= Pattern.compile( "\n" );
+	protected static final Pattern WORD			= Pattern.compile( "\\s+" );
+	protected              int maxWidth = Integer.MAX_VALUE;
+	
 	protected Text(float x, float y, float width, float height) {
 		super(x, y, width, height);
 	}

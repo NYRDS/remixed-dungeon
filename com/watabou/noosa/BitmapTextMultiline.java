@@ -18,18 +18,12 @@
 package com.watabou.noosa;
 
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
 import android.graphics.RectF;
 
 public class BitmapTextMultiline extends BitmapText {
 
-	public int maxWidth = Integer.MAX_VALUE;
-	
-	protected static final Pattern PARAGRAPH	= Pattern.compile( "\n" );
-	protected static final Pattern WORD			= Pattern.compile( "\\s+" );
-	
 	protected float spaceSize;
 	
 	public boolean[] mask;
@@ -200,6 +194,15 @@ public class BitmapTextMultiline extends BitmapText {
 		height = writer.height;
 	}
 	
+	public int getMaxWidth() {
+		return maxWidth;
+	}
+
+	public int maxWidth(int maxWidth) {
+		this.maxWidth = maxWidth;
+		return maxWidth;
+	}
+
 	private class SymbolWriter {
 		
 		public float width = 0;
@@ -212,7 +215,7 @@ public class BitmapTextMultiline extends BitmapText {
 		public float y = 0;
 		
 		public void addSymbol( float w, float h ) {
-			if (lineWidth > 0 && lineWidth + font.tracking + w > maxWidth / scale.x) {
+			if (lineWidth > 0 && lineWidth + font.tracking + w > getMaxWidth() / scale.x) {
 				newLine( w, h );
 			} else {
 				
@@ -226,7 +229,7 @@ public class BitmapTextMultiline extends BitmapText {
 		}
 		
 		public void addSpace( float w ) {
-			if (lineWidth > 0 && lineWidth + font.tracking + w > maxWidth / scale.x) {
+			if (lineWidth > 0 && lineWidth + font.tracking + w > getMaxWidth() / scale.x) {
 				newLine( 0, 0 );
 			} else {
 				
@@ -295,13 +298,13 @@ public class BitmapTextMultiline extends BitmapText {
 					
 					getWordMetrics( word, metrics );	
 
-					if (curLineWidth > 0 && curLineWidth + font.tracking + metrics.x > maxWidth / scale.x) {
+					if (curLineWidth > 0 && curLineWidth + font.tracking + metrics.x > getMaxWidth() / scale.x) {
 						newLine( word, metrics.x );				
 					} else {				
 						append( word,  metrics.x );			
 					}
 					
-					if (curLineWidth > 0 && curLineWidth + font.tracking + spaceSize > maxWidth / scale.x) {						
+					if (curLineWidth > 0 && curLineWidth + font.tracking + spaceSize > getMaxWidth() / scale.x) {						
 						newLine( "", 0 );				
 					} else {		
 						append( " ", spaceSize );
