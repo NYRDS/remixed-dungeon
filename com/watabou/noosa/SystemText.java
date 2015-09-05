@@ -1,21 +1,32 @@
 package com.watabou.noosa;
 
 import com.watabou.glwrap.Matrix;
+import com.watabou.utils.PointF;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.text.Layout;
+import android.text.StaticLayout;
+import android.text.TextPaint;
 
 public class SystemText extends Text {
 
 	protected String text;
 	
-	protected Paint textPaint = new Paint();
+	
+	
+	protected TextPaint textPaint = new TextPaint();
+	
+	private StaticLayout sl;
 	private Image image;
 	private int size = 8;
 	private final int oversample = 4;
+	
+	
+	
+	private String[] lines;
 	
 	private boolean dirty = true;
 	Rect bounds = new Rect();
@@ -60,10 +71,11 @@ public class SystemText extends Text {
 	private void createText() {
 		measure();
 		if (width > 0 && height > 0){
-			Bitmap bitmap = Bitmap.createBitmap((int)width*oversample, (int)height*oversample, Bitmap.Config.ARGB_4444);
+			Bitmap bitmap = Bitmap.createBitmap((int)(width*oversample), (int)(height*oversample), Bitmap.Config.ARGB_4444);
 			Canvas canvas = new Canvas(bitmap);
 			
-			canvas.drawText(text, 0, textPaint.descent()*oversample, textPaint);
+			sl.draw(canvas);
+			//canvas.drawText(text, 0, textPaint.descent()*oversample, textPaint);
 			
 			image = new Image(bitmap, true);
 			if(parent != null) {
@@ -98,11 +110,18 @@ public class SystemText extends Text {
 	public void measure() {
 		if(dirty){
 			dirty = false;
+			if(text.equals("")){
+				return;
+			}
+			sl = new StaticLayout(text, textPaint, maxWidth, Layout.Alignment.ALIGN_NORMAL, 1, 1, false);
 			
-			
-			
+			width = sl.getLineRight(0)/oversample;
+			height = sl.getHeight()/oversample;
+			/*
 			width = textPaint.measureText(text)/oversample;
 			height = ( textPaint.descent() - textPaint.ascent())/oversample;
+			
+			*/
 		}
 	}
 	

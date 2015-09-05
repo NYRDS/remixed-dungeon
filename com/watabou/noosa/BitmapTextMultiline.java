@@ -28,10 +28,6 @@ public class BitmapTextMultiline extends BitmapText {
 	
 	public boolean[] mask;
 	
-	public BitmapTextMultiline( Font font ) {
-		this( "", font ); 
-	}
-	
 	public BitmapTextMultiline( String text, Font font ) {
 		super( text, font );
 		spaceSize = font.width( font.get( ' ' ) );
