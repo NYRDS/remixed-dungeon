@@ -24,7 +24,7 @@ public class GenericInfo {
 		parent.add( titlebar );
 		
 		BitmapTextMultiline txtInfo = PixelScene.createMultiline( desc, 6 );
-		txtInfo.maxWidth = WIDTH;
+		txtInfo.maxWidth(WIDTH);
 		txtInfo.measure();
 		txtInfo.setPos(0, 0);
 		

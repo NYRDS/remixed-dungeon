@@ -56,7 +56,7 @@ public class WndList extends Window {
 			BitmapTextMultiline item = PixelScene.createMultiline( items[i], 6 );
 			item.x = dot.x + dotWidth;
 			item.y = pos;
-			item.maxWidth = (int)(WIDTH - MARGIN * 2 - dotWidth);
+			item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));
 			item.measure();
 			add( item );
 			

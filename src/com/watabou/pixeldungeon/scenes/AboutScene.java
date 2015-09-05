@@ -88,7 +88,7 @@ public class AboutScene extends PixelScene {
 	private BitmapTextMultiline createText(String text, BitmapTextMultiline upper)
 	{
 		BitmapTextMultiline multiline = createMultiline( text, 8 );
-		multiline.maxWidth = Math.min( Camera.main.width, 120 );
+		multiline.maxWidth(Math.min( Camera.main.width, 120 ));
 		multiline.measure();
 		add( multiline );
 		if(upper!=null){

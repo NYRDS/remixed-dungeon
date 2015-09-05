@@ -47,7 +47,7 @@ public class WndTitledMessage extends Window {
 		Highlighter hl = new Highlighter( message );
 		
 		normal = PixelScene.createMultiline( hl.text, 6 );
-		normal.maxWidth = WIDTH;
+		normal.maxWidth(WIDTH);
 		normal.measure();
 		normal.x = titlebar.left();
 		normal.y = titlebar.bottom() + GAP;
@@ -57,7 +57,7 @@ public class WndTitledMessage extends Window {
 			normal.mask = hl.inverted();
 			
 			highlighted = PixelScene.createMultiline( hl.text, 6 );
-			highlighted.maxWidth = normal.maxWidth;
+			highlighted.maxWidth(normal.getMaxWidth());
 			highlighted.measure();
 			highlighted.x = normal.x;
 			highlighted.y = normal.y;

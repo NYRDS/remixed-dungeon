@@ -222,7 +222,7 @@ public class StartScene extends PixelScene {
 		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
 			BitmapTextMultiline text = PixelScene
 					.createMultiline(TXT_UNLOCK, 9);
-			text.maxWidth = (int) width;
+			text.maxWidth((int) width);
 			text.measure();
 
 			float pos = (bottom - BUTTON_HEIGHT)
@@ -241,7 +241,7 @@ public class StartScene extends PixelScene {
 		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
 			BitmapTextMultiline text = PixelScene
 					.createMultiline(TXT_UNLOCK_ELF, 9);
-			text.maxWidth = (int) width;
+			text.maxWidth((int) width);
 			text.measure();
 
 			float pos = (bottom - BUTTON_HEIGHT)

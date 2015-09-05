@@ -39,7 +39,7 @@ public class WndBadge extends Window {
 		add( icon );
 		
 		BitmapTextMultiline info = PixelScene.createMultiline( badge.description, 8 );
-		info.maxWidth = WIDTH - MARGIN * 2;
+		info.maxWidth(WIDTH - MARGIN * 2);
 		info.measure();
 		
 		float w = Math.max( icon.width(), info.width() ) + MARGIN * 2;

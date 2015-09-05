@@ -40,7 +40,7 @@ public class WelcomeScene extends PixelScene {
         int pw = w - 10;
         int ph = h - 50;
 
-        title.maxWidth = pw;
+        title.maxWidth(pw);
         title.measure();
 
         title.x = align( (w - title.width()) / 2 );
@@ -65,7 +65,7 @@ public class WelcomeScene extends PixelScene {
         Component content = list.content();
         content.clear();
 
-        text_19.maxWidth = text.maxWidth = (int) panel.innerWidth();
+        text_19.maxWidth(text.maxWidth = (int) panel.innerWidth());
         text.measure();
         text_19.measure();
       

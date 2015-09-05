@@ -55,7 +55,7 @@ public class WndSadGhost extends Window {
 		add( titlebar );
 		
 		BitmapTextMultiline message = PixelScene.createMultiline( item instanceof DriedRose ? TXT_ROSE : TXT_RAT, 6 );
-		message.maxWidth = WIDTH;
+		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;
 		add( message );

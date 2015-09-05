@@ -52,7 +52,7 @@ public class WndImp extends Window {
 		add( titlebar );
 		
 		BitmapTextMultiline message = PixelScene.createMultiline( TXT_MESSAGE, 6 );
-		message.maxWidth = WIDTH;
+		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;
 		add( message );
