@@ -156,7 +156,8 @@ public class Image extends Visual {
 		NoosaScript script = NoosaScript.get();
 		
 		if(texture == null) {
-			GLog.i("null texture");
+			//GLog.i("null texture");
+			return;
 		}
 		
 		texture.bind();

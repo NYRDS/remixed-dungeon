@@ -6,6 +6,7 @@ import java.util.Locale;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Paint.Style;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.util.Log;
@@ -48,9 +49,11 @@ public class SystemText extends Text {
 		Typeface tf = Typeface.create((String) null, Typeface.BOLD);
 
 		textPaint.setTextSize(size * oversample);
-		textPaint.setAntiAlias(true);
-		textPaint.setColor(0xffffffff);
+		//textPaint.setAntiAlias(false);
+		
 		textPaint.setTypeface(tf);
+		
+		textPaint.setColor(0xffffffff);
 
 		this.text(text);
 	}
@@ -98,12 +101,12 @@ public class SystemText extends Text {
 				Log.d("SystemText", String.format("space"));
 				// return offset;
 			}
-			/*
+			
 			if (codepoint == 0x000A) {
 				Log.d("SystemText", String.format("line break"));
 				return offset;
 			}
-*/
+
 			xPos += xDelta;
 
 			if (maxWidth != Integer.MAX_VALUE && xPos > maxWidth * oversample) {
@@ -135,9 +138,6 @@ public class SystemText extends Text {
 			int charIndex = 0;
 			int startLine = 0;
 
-			
-			
-
 			while (startLine < text.length()) {
 				int nextLine = fillLine(startLine);
 				Log.d("SystemText",
@@ -156,9 +156,8 @@ public class SystemText extends Text {
 					Log.d("SystemText",
 							String.format(Locale.ROOT, "lineWidth : %3f", lineWidth));
 				}
-				
+				height += fontHeight;
 				if (lineWidth > 0) {
-					height += fontHeight;
 
 					Bitmap bitmap = Bitmap.createBitmap(
 							(int) (lineWidth * oversample),
@@ -177,6 +176,20 @@ public class SystemText extends Text {
 							Log.d("SystemText", String.format("symbol: %s %d %d %3.1f", text.substring(offset, offset
 							+ codepointCharCount), offset, charIndex, xCharPos.get(lineCounter) ));
 
+
+							textPaint.setColor(0xffffffff);
+							textPaint.setStyle(Style.FILL);
+							
+							canvas.drawText(
+									text.substring(offset, offset
+											+ codepointCharCount),
+											xCharPos.get(lineCounter) * oversample,
+									textPaint.descent() * oversample, textPaint);
+							
+							textPaint.setColor(0xff000000);
+							textPaint.setStyle(Style.STROKE);
+							textPaint.setStrokeWidth(0);
+							
 							canvas.drawText(
 									text.substring(offset, offset
 											+ codepointCharCount),
@@ -209,6 +222,7 @@ public class SystemText extends Text {
 					lineImage.add(new Image(bitmap, true));
 				} else {
 					charIndex += cpProcessed;
+					lineImage.add(new Image());
 				}
 				startLine = nextLine;
 			}
@@ -257,6 +271,13 @@ public class SystemText extends Text {
 		}
 	}
 
+	@Override
+	public void hardlight( int color ) {
+		for (Image img : lineImage) {
+			img.hardlight( (color >> 16) / 255f, ((color >> 8) & 0xFF) / 255f, (color & 0xFF) / 255f );
+		}
+	}
+	
 	protected float symbolWidth(String symbol) {
 		return textPaint.measureText(symbol) / oversample;
 	}
