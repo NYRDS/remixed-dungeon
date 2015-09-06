@@ -92,10 +92,6 @@ public class SystemText extends Text {
 			// textPaint);
 
 			lineImage.add(new Image(bitmap, true));
-
-			if (parent != null) {
-				// parent.add(lineImage.get(0));
-			}
 		}
 	}
 
@@ -117,8 +113,8 @@ public class SystemText extends Text {
 		if (lineImage != null) {
 			for (Image img : lineImage) {
 
-				Log.d("SystemText", String.format(Locale.ROOT,
-						"%3.1f x %3.1f -> %s", x, y, text));
+				//Log.d("SystemText", String.format(Locale.ROOT,
+				//		"%3.1f x %3.1f -> %s", x, y, text));
 
 				if (parent!=null && img.parent != parent) {
 					if (img.parent != null) {
