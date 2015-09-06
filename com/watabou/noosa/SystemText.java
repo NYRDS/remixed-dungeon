@@ -61,6 +61,45 @@ public class SystemText extends Text {
 		super.destroy();
 	}
 
+	private ArrayList<Float> xCharPos = new ArrayList<Float>();
+
+	private int fillLine(int startFrom) {
+		int offset = startFrom;
+
+		float xPos = 0;
+
+		final int length = text.length();
+		int lastWordOffset = offset;
+
+		for (; offset < length;) {
+			final int codepoint = text.codePointAt(offset);
+			int codepointCharCount = Character.charCount(codepoint);
+
+			xCharPos.add(xPos);
+
+			float xDelta = symbolWidth(text.substring(offset, offset
+					+ codepointCharCount));
+
+			offset += codepointCharCount;
+
+			if (Character.isWhitespace(codepoint)) {
+				lastWordOffset = offset;
+				//return offset;
+			}
+			if (codepoint == 0x000A) {
+				return offset;
+			}
+
+			xPos += xDelta;
+
+			if (xPos > maxWidth) {
+				return lastWordOffset;
+			}
+		}
+
+		return offset;
+	}
+
 	@SuppressLint("NewApi")
 	private void createText() {
 		measure();
@@ -72,26 +111,61 @@ public class SystemText extends Text {
 				}
 				lineImage.clear();
 			}
+			
+			int charIndex = 0;
+			int startLine = 0;
+			xCharPos.clear();
+			
+			int nextLine = fillLine(0);
 
-			Log.d("SystemText", String.format(Locale.ROOT,
-					"%3.1f x %3.1f -> %s", width, height, text));
-
-			Bitmap bitmap = Bitmap.createBitmap((int) (width * oversample),
-					(int) (height * oversample), Bitmap.Config.ARGB_4444);
-			Canvas canvas = new Canvas(bitmap);
-
-			float x = 0;
-			for (int i = 0; i < text.length(); i++) {
-				if (mask == null || mask[i]) {
-					canvas.drawText(text.substring(i, i + 1), x,
-							textPaint.descent() * oversample, textPaint);
-				}
-				x += symbolWidth(text.substring(i, i + 1)) * oversample;
+			float lineWidth = 0;
+			
+			if(nextLine > 0){
+				lineWidth = xCharPos.get(xCharPos.size()-1);
 			}
-			// canvas.drawText(text, 0, textPaint.descent()*oversample,
-			// textPaint);
+			if (lineWidth > 0) {
+				Bitmap bitmap = Bitmap.createBitmap(
+						(int) (lineWidth * oversample),
+						(int) (height * oversample), Bitmap.Config.ARGB_4444);
 
-			lineImage.add(new Image(bitmap, true));
+				Canvas canvas = new Canvas(bitmap);
+				
+				int offset = startLine;
+				
+				for (; offset < nextLine;) {
+					final int codepoint = text.codePointAt(offset);
+					int codepointCharCount = Character.charCount(codepoint);
+					
+					if (mask == null || mask[charIndex]) {
+						int localIndex = offset - startLine;
+						canvas.drawText(
+								text.substring(offset,offset+codepointCharCount),
+								xCharPos.get(charIndex) * oversample,
+								textPaint.descent() * oversample, textPaint);
+					}
+					
+					charIndex++;
+					offset += codepointCharCount;
+				}
+
+				/*
+				 * Log.d("SystemText", String.format(Locale.ROOT,
+				 * "%3.1f x %3.1f -> %s", width, height, text));
+				 * 
+				 * Bitmap bitmap = Bitmap.createBitmap((int) (width *
+				 * oversample), (int) (height * oversample),
+				 * Bitmap.Config.ARGB_4444); Canvas canvas = new Canvas(bitmap);
+				 * 
+				 * float x = 0; for (int i = 0; i < text.length(); i++) { if
+				 * (mask == null || mask[i]) { canvas.drawText(text.substring(i,
+				 * i + 1), x, textPaint.descent() * oversample, textPaint); } x
+				 * += symbolWidth(text.substring(i, i + 1)) * oversample; }
+				 */
+				// canvas.drawText(text, 0, textPaint.descent()*oversample,
+				// textPaint);
+
+				lineImage.add(new Image(bitmap, true));
+			}
 		}
 	}
 
@@ -113,10 +187,10 @@ public class SystemText extends Text {
 		if (lineImage != null) {
 			for (Image img : lineImage) {
 
-				//Log.d("SystemText", String.format(Locale.ROOT,
-				//		"%3.1f x %3.1f -> %s", x, y, text));
+				// Log.d("SystemText", String.format(Locale.ROOT,
+				// "%3.1f x %3.1f -> %s", x, y, text));
 
-				if (parent!=null && img.parent != parent) {
+				if (parent != null && img.parent != parent) {
 					if (img.parent != null) {
 						img.parent.remove(img);
 					}
@@ -163,7 +237,7 @@ public class SystemText extends Text {
 		if (str == null) {
 			text = "";
 		} else {
-			text = str;
+			text = str+" ";
 		}
 		createText();
 	}
