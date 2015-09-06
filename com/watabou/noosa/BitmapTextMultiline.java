@@ -26,7 +26,6 @@ public class BitmapTextMultiline extends BitmapText {
 
 	protected float spaceSize;
 	
-	public boolean[] mask;
 	
 	public BitmapTextMultiline( String text, Font font ) {
 		super( text, font );

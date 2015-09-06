@@ -10,6 +10,10 @@ public abstract class Text extends Visual {
 	protected static final Pattern WORD			= Pattern.compile( "\\s+" );
 	protected              int maxWidth = Integer.MAX_VALUE;
 	
+	protected boolean dirty = true;
+	
+	public boolean[] mask;
+	
 	protected Text(float x, float y, float width, float height) {
 		super(x, y, width, height);
 	}
@@ -35,6 +39,15 @@ public abstract class Text extends Visual {
 		return new BitmapText(text, font);
 	}
 	
+	public static Text createMultiline(String text, Font font) {
+		
+		if(ModdingMode.getTextRenderingMode()) {
+			return new SystemText(text, font);
+		}
+		
+		return new BitmapTextMultiline(text, font);
+	}
+	
 	@Override
 	public void destroy(){
 		super.destroy();
@@ -49,9 +62,10 @@ public abstract class Text extends Visual {
 		return maxWidth;
 	}
 
-	public int maxWidth(int maxWidth) {
+	public void maxWidth(int maxWidth) {
 		this.maxWidth = maxWidth;
-		return maxWidth;
+		dirty = true;
+		measure();
 	}
 	
 	public abstract void measure();

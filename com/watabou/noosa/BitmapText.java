@@ -35,8 +35,6 @@ public class BitmapText extends Text {
 	
 	public int realLength;
 	
-	protected boolean dirty = true;
-	
 	protected static char INVALID_CHAR = ' ';
 	
 	public BitmapText() {
