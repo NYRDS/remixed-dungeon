@@ -1,9 +1,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -105,7 +105,7 @@ public class WndDonate extends WndTabbed {
 				add(donate.setRect(WIDTH - BTN_WIDTH ,HEIGHT - BTN_HEIGHT, BTN_WIDTH, BTN_HEIGHT));
 			}
 
-			BitmapTextMultiline commonText = PixelScene.createMultiline(
+			Text commonText = PixelScene.createMultiline(
 					Game.getVar(R.string.WndDonate_commonDonateText), 6);
 			commonText.maxWidth(WIDTH);
 			commonText.measure();
@@ -113,7 +113,7 @@ public class WndDonate extends WndTabbed {
 			add(commonText);
 			pos += commonText.height() + GAP;
 			
-			BitmapTextMultiline tabText = PixelScene.createMultiline(
+			Text tabText = PixelScene.createMultiline(
 					text[level - 1], 7);
 			tabText.maxWidth(WIDTH - 10);
 			tabText.hardlight( Window.TITLE_COLOR );

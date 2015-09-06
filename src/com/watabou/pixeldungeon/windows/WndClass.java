@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
@@ -107,7 +106,7 @@ public class WndClass extends WndTabbed {
 				}
 				add( dot );
 				
-				BitmapTextMultiline item = PixelScene.createMultiline( items[i], 6 );
+				Text item = PixelScene.createMultiline( items[i], 6 );
 				item.x = dot.x + dotWidth;
 				item.y = pos;
 				item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));
@@ -130,8 +129,8 @@ public class WndClass extends WndTabbed {
 		
 		private static final int MARGIN	= 4;
 		
-		private BitmapTextMultiline normal;
-		private BitmapTextMultiline highlighted;
+		private Text normal;
+		private Text highlighted;
 		
 		public float height;
 		public float width;

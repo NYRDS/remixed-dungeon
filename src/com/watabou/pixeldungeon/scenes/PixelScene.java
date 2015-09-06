@@ -33,7 +33,6 @@ import android.graphics.Typeface;
 import android.opengl.GLES20;
 
 import com.watabou.input.Touchscreen;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Font;
@@ -389,15 +388,15 @@ public class PixelScene extends Scene {
 		return result;
 	}
 
-	public static BitmapTextMultiline createMultiline(float size) {
+	public static Text createMultiline(float size) {
 		return createMultiline(null, size);
 	}
 
-	public static BitmapTextMultiline createMultiline(String text, float size) {
+	public static Text createMultiline(String text, float size) {
 
 		chooseFont(size);
 
-		BitmapTextMultiline result = new BitmapTextMultiline(text, font);
+		Text result = Text.createMultiline(text, font);
 		result.scale.set(scale);
 
 		return result;

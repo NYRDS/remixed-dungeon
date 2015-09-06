@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.nyrds.pixeldungeon.ml.R;
@@ -137,7 +137,7 @@ public class Weightstone extends Item {
 			titlebar.setRect( 0, 0, WIDTH, 0 );
 			add( titlebar );
 			
-			BitmapTextMultiline tfMesage = PixelScene.createMultiline( Utils.format( TXT_CHOICE, weapon.name() ), 8 );
+			Text tfMesage = PixelScene.createMultiline( Utils.format( TXT_CHOICE, weapon.name() ), 8 );
 			tfMesage.maxWidth(WIDTH - MARGIN * 2);
 			tfMesage.measure();
 			tfMesage.x = MARGIN;

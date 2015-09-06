@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -49,7 +49,7 @@ public class WndChooseWay extends Window {
 		
 		Highlighter hl = new Highlighter( way1.desc() + "\n\n" + way2.desc() + "\n\n" + TXT_MESSAGE );
 		
-		BitmapTextMultiline normal = PixelScene.createMultiline( hl.text, 6 );
+		Text normal = PixelScene.createMultiline( hl.text, 6 );
 		normal.maxWidth(WIDTH);
 		normal.measure();
 		normal.x = titlebar.left();
@@ -59,7 +59,7 @@ public class WndChooseWay extends Window {
 		if (hl.isHighlighted()) {
 			normal.mask = hl.inverted();
 			
-			BitmapTextMultiline highlighted = PixelScene.createMultiline( hl.text, 6 );
+			Text highlighted = PixelScene.createMultiline( hl.text, 6 );
 			highlighted.maxWidth(normal.getMaxWidth());
 			highlighted.measure();
 			highlighted.x = normal.x;

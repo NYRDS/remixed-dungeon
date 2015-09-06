@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -48,7 +47,7 @@ public class TitleScene extends PixelScene {
 	private static final String TXT_ABOUT = Game
 			.getVar(R.string.TitleScene_About);
 
-	BitmapTextMultiline pleaseSupport;
+	Text pleaseSupport;
 	DonateButton        btnDonate;
 	
 	@Override
@@ -155,7 +154,7 @@ public class TitleScene extends PixelScene {
 		float freeInternalStorage = Game.getAvailableInternalMemorySize();
 
 		if (freeInternalStorage < 2) {
-			BitmapTextMultiline lowInteralStorageWarning = PixelScene
+			Text lowInteralStorageWarning = PixelScene
 					.createMultiline(8);
 			lowInteralStorageWarning.text(Game
 					.getVar(R.string.TitleScene_InternalStorageLow));

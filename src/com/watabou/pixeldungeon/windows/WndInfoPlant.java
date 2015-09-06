@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.PlantSprite;
@@ -39,7 +39,7 @@ public class WndInfoPlant extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		BitmapTextMultiline info = PixelScene.createMultiline( 6 );
+		Text info = PixelScene.createMultiline( 6 );
 		add( info );
 		
 		info.text( plant.desc() );

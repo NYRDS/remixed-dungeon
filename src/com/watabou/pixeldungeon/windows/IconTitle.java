@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -33,7 +33,7 @@ public class IconTitle extends Component {
 	private static final float GAP = 2;
 	
 	protected Image imIcon;
-	protected BitmapTextMultiline tfLabel;
+	protected Text tfLabel;
 	
 	public IconTitle() {
 		super();

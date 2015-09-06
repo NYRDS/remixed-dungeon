@@ -176,6 +176,8 @@ public class Window extends Group implements Signal.Listener<Key> {
 			m.appendTail( sb );
 			
 			this.text = sb.toString();
+			
+			this.text = text;
 		}
 		
 		public boolean[] inverted() {
@@ -187,12 +189,15 @@ public class Window extends Group implements Signal.Listener<Key> {
 		}
 		
 		public boolean isHighlighted() {
+			return false;
+			/*
 			for (int i=0; i < mask.length; i++) {
 				if (mask[i]) {
 					return true;
 				}
 			}
 			return false;
+			*/
 		}
 	}
 }

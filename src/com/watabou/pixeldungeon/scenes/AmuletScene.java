@@ -17,14 +17,14 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.watabou.noosa.BitmapTextMultiline;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Rankings;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -50,7 +50,7 @@ public class AmuletScene extends PixelScene {
 	public void create() {
 		super.create();
 		
-		BitmapTextMultiline text = null;
+		Text text = null;
 		if (!noText) {
 			text = createMultiline( TXT, 8 );
 			text.maxWidth(WIDTH);

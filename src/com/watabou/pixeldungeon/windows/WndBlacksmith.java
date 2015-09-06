@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
@@ -62,7 +62,7 @@ public class WndBlacksmith extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		BitmapTextMultiline message = PixelScene.createMultiline( TXT_PROMPT, 6 );
+		Text message = PixelScene.createMultiline( TXT_PROMPT, 6 );
 		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;

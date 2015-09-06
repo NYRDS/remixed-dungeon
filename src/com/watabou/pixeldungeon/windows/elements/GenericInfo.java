@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.windows.elements;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -23,7 +23,7 @@ public class GenericInfo {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		parent.add( titlebar );
 		
-		BitmapTextMultiline txtInfo = PixelScene.createMultiline( desc, 6 );
+		Text txtInfo = PixelScene.createMultiline( desc, 6 );
 		txtInfo.maxWidth(WIDTH);
 		txtInfo.measure();
 		txtInfo.setPos(0, 0);

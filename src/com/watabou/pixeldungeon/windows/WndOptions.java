@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -31,14 +31,14 @@ public class WndOptions extends Window {
 	public WndOptions( String title, String message, String... options ) {
 		super();
 		
-		BitmapTextMultiline tfTitle = PixelScene.createMultiline( title, 9 );
+		Text tfTitle = PixelScene.createMultiline( title, 9 );
 		tfTitle.hardlight( TITLE_COLOR );
 		tfTitle.x = tfTitle.y = MARGIN;
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
 		tfTitle.measure();
 		add( tfTitle );
 		
-		BitmapTextMultiline tfMesage = PixelScene.createMultiline( message, 8 );
+		Text tfMesage = PixelScene.createMultiline( message, 8 );
 		tfMesage.maxWidth(WIDTH - MARGIN * 2);
 		tfMesage.measure();
 		tfMesage.x = MARGIN;

@@ -18,7 +18,10 @@
 package com.watabou.pixeldungeon.ui;
 
 import java.util.regex.Pattern;
-import com.watabou.noosa.BitmapTextMultiline;
+
+import com.watabou.noosa.Gizmo;
+import com.watabou.noosa.Text;
+import com.watabou.noosa.Visual;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -32,7 +35,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	
 	private static final Pattern PUNCTUATION = Pattern.compile( ".*[.,;?! ]$" );
 	
-	private BitmapTextMultiline lastEntry;
+	private Text lastEntry;
 	private int lastColor;
 	
 	public GameLog() {
@@ -98,7 +101,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	protected void layout() {
 		float pos = y;
 		for (int i=length-1; i >= 0; i--) {
-			BitmapTextMultiline entry = (BitmapTextMultiline)members.get( i );
+			Visual entry = (Visual) members.get( i );
 			entry.x = x;
 			entry.y = pos - entry.height();
 			pos -= entry.height();

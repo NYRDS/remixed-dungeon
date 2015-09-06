@@ -17,9 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -38,7 +37,7 @@ public class WndBadge extends Window {
 		icon.scale.set( 2 );
 		add( icon );
 		
-		BitmapTextMultiline info = PixelScene.createMultiline( badge.description, 8 );
+		Text info = PixelScene.createMultiline( badge.description, 8 );
 		info.maxWidth(WIDTH - MARGIN * 2);
 		info.measure();
 		
@@ -48,6 +47,14 @@ public class WndBadge extends Window {
 		icon.y = MARGIN;
 		
 		float pos = icon.y + icon.height() + MARGIN;
+		
+		info.hardlight(0xFFFF00);
+		info.x = PixelScene.align(w / 2 - info.width() / 2);
+		info.y = PixelScene.align(pos);
+		add(info);
+		
+		//TODO fix when text rendering will be ok
+		/*
 		for (BitmapText line : info.new LineSplitter().split()) {
 			line.measure();
 			line.x = PixelScene.align( (w - line.width()) / 2 );
@@ -56,7 +63,7 @@ public class WndBadge extends Window {
 			
 			pos += line.height(); 
 		}
-
+		*/
 		resize( (int)w, (int)(pos + MARGIN) );
 		
 		BadgeBanner.highlight( icon, badge.image );

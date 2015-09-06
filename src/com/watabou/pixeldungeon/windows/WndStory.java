@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
@@ -57,7 +57,7 @@ public class WndStory extends Window {
 		CHAPTERS.put(ID_SPIDERS,    Game.getVar(R.string.WndStory_Spiders));
 	};
 	
-	private BitmapTextMultiline tf;
+	private Text tf;
 	
 	private float delay;
 	

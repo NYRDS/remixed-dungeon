@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
@@ -53,7 +52,7 @@ public class WndList extends Window {
 			}
 			add( dot );
 			
-			BitmapTextMultiline item = PixelScene.createMultiline( items[i], 6 );
+			Text item = PixelScene.createMultiline( items[i], 6 );
 			item.x = dot.x + dotWidth;
 			item.y = pos;
 			item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));

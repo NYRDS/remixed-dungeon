@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -185,7 +185,7 @@ public class WndTradeItem extends Window {
 		}
 		
 		// Description
-		BitmapTextMultiline info = PixelScene.createMultiline( item.info(), 6 );
+		Text info = PixelScene.createMultiline( item.info(), 6 );
 		info.maxWidth(WIDTH);
 		info.measure();
 		info.x = titlebar.left();

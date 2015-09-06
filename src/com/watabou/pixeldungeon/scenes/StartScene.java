@@ -20,8 +20,6 @@ package com.watabou.pixeldungeon.scenes;
 import java.util.HashMap;
 import java.util.Locale;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -220,13 +218,20 @@ public class StartScene extends PixelScene {
 		add(unlockElf);
 
 		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
-			BitmapTextMultiline text = PixelScene
+			Text text = PixelScene
 					.createMultiline(TXT_UNLOCK, 9);
 			text.maxWidth((int) width);
 			text.measure();
 
 			float pos = (bottom - BUTTON_HEIGHT)
 					+ (BUTTON_HEIGHT - text.height()) / 2;
+			
+			//TODO fix when text rendering will be ok
+			text.hardlight(0xFFFF00);
+			text.x = PixelScene.align(w / 2 - text.width() / 2);
+			text.y = PixelScene.align(pos);
+			unlock.add(text);
+			/*
 			for (BitmapText line : text.new LineSplitter().split()) {
 				line.measure();
 				line.hardlight(0xFFFF00);
@@ -236,16 +241,23 @@ public class StartScene extends PixelScene {
 
 				pos += line.height();
 			}
+			*/
 		}
 
 		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
-			BitmapTextMultiline text = PixelScene
+			Text text = PixelScene
 					.createMultiline(TXT_UNLOCK_ELF, 9);
 			text.maxWidth((int) width);
 			text.measure();
 
 			float pos = (bottom - BUTTON_HEIGHT)
 					+ (BUTTON_HEIGHT - text.height()) / 2;
+			//TODO fix when text rendering will be ok
+			text.hardlight(0xFFFF00);
+			text.x = PixelScene.align(w / 2 - text.width() / 2);
+			text.y = PixelScene.align(pos);
+			unlock.add(text);
+			/*
 			for (BitmapText line : text.new LineSplitter().split()) {
 				line.measure();
 				line.hardlight(0xFFFF00);
@@ -255,6 +267,7 @@ public class StartScene extends PixelScene {
 
 				pos += line.height();
 			}
+			*/
 		}
 		
 		ExitButton btnExit = new ExitButton();
@@ -354,7 +367,7 @@ public class StartScene extends PixelScene {
 
 	private static class GameButton extends RedButton {
 
-		private BitmapTextMultiline secondary;
+		private Text secondary;
 
 		public GameButton(String primary) {
 			super(primary);

@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
@@ -29,8 +29,8 @@ public class WndTitledMessage extends Window {
 	private static final int GAP	= 2;
 	private static final float MAX_HEIGHT = 120;
 	
-	private BitmapTextMultiline normal;
-	private BitmapTextMultiline highlighted;
+	private Text normal;
+	private Text highlighted;
 	
 	public WndTitledMessage( Image icon, String title, String message ) {
 		
@@ -52,7 +52,7 @@ public class WndTitledMessage extends Window {
 		normal.x = titlebar.left();
 		normal.y = titlebar.bottom() + GAP;
 		add( normal );
-		
+
 		if (hl.isHighlighted()) {
 			normal.mask = hl.inverted();
 			
@@ -68,26 +68,5 @@ public class WndTitledMessage extends Window {
 		}
 		
 		resize( WIDTH, (int)(normal.y + normal.height()) );
-/*		
-		int wndHeight = (int) Math.min((titlebar.bottom() + normal.height() + 3 * GAP),MAX_HEIGHT);
-		
-		int scroolZoneHeight = (int) (normal.height() + GAP);
-
-		ScrollPane list = new ScrollPane(new Component());
-		
-				
-		Component content = list.content();
-		content.clear();
-
-		content.add(normal);
-		int contentHeight = (int) normal.height();
-		if(hl.isHighlighted()){
-			content.add(highlighted);
-			contentHeight = (int) Math.max(normal.height(), highlighted.height());
-		}
-		content.setSize(normal.maxWidth, contentHeight);
-		add(list);
-		list.setRect(0, 0, normal.maxWidth, contentHeight);
-*/		
 	}
 }

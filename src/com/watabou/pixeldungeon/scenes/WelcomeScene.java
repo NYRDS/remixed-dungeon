@@ -1,10 +1,10 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -26,9 +26,9 @@ public class WelcomeScene extends PixelScene {
     public void create() {
         super.create();
 
-        BitmapTextMultiline title;
-        BitmapTextMultiline text;
-        BitmapTextMultiline text_19;
+        Text title;
+        Text text;
+        Text text_19;
         
         text    = createMultiline(TXT_Welcome, 8);
         text_19 = createMultiline(TXT_Welcome_19, 8);

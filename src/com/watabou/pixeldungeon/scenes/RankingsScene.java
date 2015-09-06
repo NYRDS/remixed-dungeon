@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -168,7 +167,7 @@ public class RankingsScene extends PixelScene {
 		private ItemSprite shield;
 		private Flare flare;
 		private Text position;
-		private BitmapTextMultiline desc;
+		private Text desc;
 		private Image classIcon;
 		
 		public Record( int pos, boolean latest, Rankings.Record rec ) {

@@ -73,7 +73,8 @@ public class PixelDungeon extends GameWithGoogleIap {
 		
 		PixelDungeon.instance().initIap();
 		
-		useLocale(uiLanguage());
+		//useLocale(uiLanguage());
+		useLocale("ko");
 
 		updateImmersiveMode();
 

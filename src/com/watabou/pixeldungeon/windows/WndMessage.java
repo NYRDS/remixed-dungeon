@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -30,7 +30,7 @@ public class WndMessage extends Window {
 		
 		super();
 		
-		BitmapTextMultiline info = PixelScene.createMultiline( text, 6 );
+		Text info = PixelScene.createMultiline( text, 6 );
 		info.maxWidth(WIDTH - MARGIN * 2);
 		info.measure();
 		info.x = info.y = MARGIN;

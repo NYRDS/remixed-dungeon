@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -53,7 +53,7 @@ public class WndItem extends Window {
 			titlebar.color( ItemSlot.DEGRADED );
 		}	
 		
-		BitmapTextMultiline info = PixelScene.createMultiline( item.info(), 6 );
+		Text info = PixelScene.createMultiline( item.info(), 6 );
 		info.maxWidth(WIDTH);
 		info.measure();
 		info.x = titlebar.left();
