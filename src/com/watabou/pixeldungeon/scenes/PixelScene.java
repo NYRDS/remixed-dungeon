@@ -38,6 +38,7 @@ import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Font;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
+import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.Assets;
@@ -225,53 +226,6 @@ public class PixelScene extends Scene {
 
 	}
 
-	private static Font createFont(int size) {
-		float fontHeight = 0;
-
-		HashMap<Object, RectF> metrics = new HashMap<Object, RectF>();
-		HashMap<Object, PointF> shifts = new HashMap<Object, PointF>();
-		Bitmap bitmap = createBitmapFromFont(Game.instance().getAssets(),
-				"Roboto-Regular.ttf", Font.ALL_CHARS, size, metrics,
-				shifts, fontHeight);
-		/*
-		 * File storageDir = Game.instance().getExternalFilesDir(null); File
-		 * file = new File(storageDir, "tst.png");
-		 * 
-		 * OutputStream fOut = null; try { fOut = new FileOutputStream(file); }
-		 * catch (FileNotFoundException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); }
-		 * 
-		 * boolean res = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-		 * // saving // the // Bitmap // to // a // file // compressed // as //
-		 * a // JPEG // with // 85% // compression // rate
-		 * 
-		 * try { if (res) { fOut.flush(); } } catch (IOException e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); } try { fOut.close();
-		 * } catch (IOException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); } // do not forget to close the stream
-		 */
-		font = Font.createEmptyFont(bitmap);
-
-		Iterator<Entry<Object, RectF>> it = metrics.entrySet().iterator();
-		while (it.hasNext()) {
-			Entry<Object, RectF> pair = it.next();
-			font.add(pair.getKey(), pair.getValue());
-		}
-
-		Iterator<Entry<Object, PointF>> it1 = shifts.entrySet().iterator();
-		while (it1.hasNext()) {
-			Entry<Object, PointF> pair = it1.next();
-
-			PointF p = pair.getValue();
-
-			font.addGlyphShift((Character) pair.getKey(), p);
-		}
-
-		font.lineHeight = fontHeight;
-		font.baseLine = size;
-
-		return font;
-	}
 
 	private void createFonts() {
 		if (font1x == null) {
@@ -295,27 +249,9 @@ public class PixelScene extends Scene {
 		Touchscreen.event.removeAll();
 	}
 
-	private static HashMap<Integer, Font> fontCache = new HashMap<Integer, Font>();
 	public static float scale;
 
 	public static void chooseFont(float size) {
-		
-		if (!PixelDungeon.classicFont()) {
-			int fontSize = (int) (size * 2) + PixelDungeon.fontScale() - 2;
-
-			if (fontSize < 12) {
-				fontSize = 12;
-			}
-
-			font = fontCache.get(fontSize);
-
-			if (font == null) {
-				font = createFont(fontSize);
-				fontCache.put(fontSize, font);
-			}
-
-			scale = 0.5f;
-		} else {
 			float pt = size * defaultZoom;
 
 			if (pt >= 19) {
@@ -371,7 +307,6 @@ public class PixelScene extends Scene {
 			
 			scale /= defaultZoom;
 			font = font25x;
-		}
 	}
 
 	public static Text createText(float size) {
@@ -392,6 +327,16 @@ public class PixelScene extends Scene {
 		return createMultiline(null, size);
 	}
 
+	public static Text createSystemText(String text, float size) {
+
+		chooseFont(size);
+
+		Text result = new SystemText(text, font);
+		result.scale.set(scale);
+
+		return result;
+	}
+	
 	public static Text createMultiline(String text, float size) {
 
 		chooseFont(size);

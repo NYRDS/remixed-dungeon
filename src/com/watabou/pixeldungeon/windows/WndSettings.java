@@ -167,12 +167,12 @@ public class WndSettings extends Window {
 				@Override
 				protected void onClick() {
 					PixelDungeon.scene().add(
-							new WndOptions(TXT_SElECT_LANGUAGE, "", "English",
-									"Русский", "Français", "Polski", "Español") {
+							new WndOptions(TXT_SElECT_LANGUAGE, "",true, "English",
+									"Русский", "Français", "Polski", "Español","한국말","Português brasileiro") {
 								
 								@Override
 								protected void onSelect(int index) {
-									String lang[] = { "en", "ru", "fr", "pl", "es" };
+									String lang[] = { "en", "ru", "fr", "pl", "es","ko","pt-BR"};
 									PixelDungeon.uiLanguage(lang[index]);
 								};
 							});

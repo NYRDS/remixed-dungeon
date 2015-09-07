@@ -73,8 +73,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 		
 		PixelDungeon.instance().initIap();
 		
-		//useLocale(uiLanguage());
-		useLocale("ko");
+		useLocale(uiLanguage());
 
 		updateImmersiveMode();
 
@@ -327,7 +326,9 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 	
 	public static boolean classicFont() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_CLASSIC_FONT, true);
+		boolean val = Preferences.INSTANCE.getBoolean(Preferences.KEY_CLASSIC_FONT, true);
+		ModdingMode.setTextRenderingMode(val);
+		return val;
 	}
 
 	public static void classicFont(boolean value) {
