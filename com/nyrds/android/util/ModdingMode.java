@@ -11,6 +11,8 @@ public class ModdingMode {
 	static private boolean mMode = false;
 	static private String mActiveMod = "";
 	static private Context mContext;
+	
+	static private boolean mTextRenderingMode = false;
 
 	public static boolean mode() {
 		return mMode;
@@ -49,9 +51,10 @@ public class ModdingMode {
 	}
 	
 	public static void setTextRenderingMode(boolean val) {
+		 mTextRenderingMode = !val;
 	}
 	
 	public static boolean getTextRenderingMode() {
-		return true;
+		return  mTextRenderingMode;
 	}
 }

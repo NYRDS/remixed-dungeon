@@ -20,7 +20,6 @@ public class SystemText extends Text {
 	protected TextPaint textPaint = new TextPaint();
 
 	private ArrayList<Image> lineImage = new ArrayList<Image>();
-	private ArrayList<Float> yPos = new ArrayList<Float>();
 
 	private int size = 8;
 	private final int oversample = 4;
@@ -49,7 +48,7 @@ public class SystemText extends Text {
 		Typeface tf = Typeface.create((String) null, Typeface.BOLD);
 
 		textPaint.setTextSize(size * oversample);
-		//textPaint.setAntiAlias(false);
+		textPaint.setAntiAlias(false);
 		
 		textPaint.setTypeface(tf);
 		
