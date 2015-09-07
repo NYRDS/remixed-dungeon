@@ -32,6 +32,7 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.opengl.GLES20;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
@@ -306,6 +307,7 @@ public class PixelScene extends Scene {
 			}
 			
 			scale /= defaultZoom;
+
 			font = font25x;
 	}
 

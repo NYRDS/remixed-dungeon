@@ -172,8 +172,12 @@ public class WndSettings extends Window {
 								
 								@Override
 								protected void onSelect(int index) {
-									String lang[] = { "en", "ru", "fr", "pl", "es","ko","pt-BR"};
+									String lang[] = { "en", "ru", "fr", "pl", "es","ko","pt_BR"};
+									if(lang[index].equals("ko")) {
+										PixelDungeon.classicFont(false);
+									}
 									PixelDungeon.uiLanguage(lang[index]);
+									
 								};
 							});
 				};
@@ -298,6 +302,10 @@ public class WndSettings extends Window {
 				createFontSelector(y);
 			};
 		};
+		
+		if(PixelDungeon.uiLanguage().equals("ko") ) {
+			btnFontMode.enable(false);
+		}
 		
 		btnFontMode.setRect(0, y, WIDTH,
 				BTN_HEIGHT);
