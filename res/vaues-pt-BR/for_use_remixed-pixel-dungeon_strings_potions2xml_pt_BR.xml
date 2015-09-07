@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_MoistenUseless">Parece que você desperdiçou essa poção.</string>
+  <string name="Potion_RuneDissaperaed">Runa desapareceu de %s.</string>
+  <string name="Potion_ItemFliesAway">%s voa da suas mãos</string>
+  <string name="Potion_FoodRefreshed">%s agora parece ingerível </string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">Este arco é uma arma a distância. É inútil para todos exceto elfos a uma distância curta. Ter um arco lhe permite atirar flecha.\n\n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">arco de madeira</string>
+  <string name="WoodenBow_Info">Este simples arco de madeira pode se provar útil, se você achar algumas flechas.</string>
+  <string name="WoodenBow_Gender">masculino</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">arco composto</string>
+  <string name="CompoundBow_Info">Flechas lançadas por este arco composto infligem mais dano e são mais precisos quando comparados ao arco de madeira, ao preço de velocidade.</string>
+  <string name="CompoundBow_Gender">masculino</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Name">arco de rubi</string>
+  <string name="RubyBow_Info">Apenas os melhores arqueiros conseguem usar este arco de rubi. Quase todas as flechas atravessam o inimigos, deixando um buraco em seu corpo, mas uma extrema força é necessário para puxar o arco.</string>
+  <string name="RubyBow_Gender">masculino</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">Aljava</string>
+  <string name="Quiver_Info">A Aljava de couro é perfeita para carregar qualquer quantia de flechas.</string>
+  <string name="Quiver_Gender">masculino</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">Aljava de fogo</string>
+  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Gender">masculino</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">Aljava envenenada</string>
+  <string name="PoisonQuiver_Info"></string>
+  <string name="Poisonuiver_Gender">masculino</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">Aljava paralisante</string>
+  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Gender">masculino</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">flecha</string>
+  <string name="CommonArrow_Info">Flecha comum de madeira com ponta de ferro.</string>
+  <string name="CommonArrow_Gender">feminino</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">flecha de fogo</string>
+  <string name="FireArrow_Info">Esta flecha parece normal, exceto pela luz vermelha quente emanando da ponta.</string>
+  <string name="FireArrow_Gender">feminino</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">flecha envenenada</string>
+  <string name="PoisonArrow_Info">Uma gota de um veneno mortal brilha na ponta da flecha.</string>
+  <string name="PoisonArrow_Gender">feminino</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">arco paralisante</string>
+  <string name="ParalysisArrow_Info">Esta flecha é revestida com curare, um veneno paralisante.</string>
+  <string name="ParalysisArrow_Gender">feminino</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Name">flecha congelante</string>
+  <string name="FrostArrow_Info">Você sente uma aura congelante emanando da ponta da flecha.</string>
+  <string name="FrostArrow_Gender">feminino</string>
+</resources>

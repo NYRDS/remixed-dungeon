@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">시작</string>
+  <string name="TitleScene_Highscores">최고 점수</string>
+  <string name="TitleScene_Badges">업적</string>
+  <string name="TitleScene_About">게임에 관해</string>
+  <string name="TitleScene_InternalStorageLow">공간 부족\n 내부 저장 장치\n 진행 사항을 잃을 수 있습니다!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou  &amp; NYRDS &amp; ThEnigma314\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD l18n code\n\nE-Mail us:\n\n</string>
+  <string name="AboutScene_Lnk">없음</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">Send E-Mail</string>
+  <string name="AboutScene_TranslatedBy">한국어 - primary l18n for Remixed Pixel Dungeon translated by 이해동=Henry Yi</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">최고 랭킹</string>
+  <string name="RankingsScene_Total">총 플레이 회수.</string>
+  <string name="RankingsScene_NoGames">한번도 플레이 하지 않음.</string>
+  <string name="RankingsScene_NoInfo">정보 없음</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">불러 오기</string>
+  <string name="StartScene_New">새 게임</string>
+  <string name="StartScene_Erase">현재 게임 삭제</string>
+  <string name="StartScene_Depth">진행 깊이: %1$d\n층 수: %2$d</string>
+  <string name="StartScene_Really">정말 게임을 새로 시작 하시겠습니까?</string>
+  <string name="StartScene_Warning">현재 게임 진행 상황은 지워집니다.</string>
+  <string name="StartScene_Yes">네, 새로운 게임 시작</string>
+  <string name="StartScene_No">아니오, 메인 메뉴로</string>
+  <string name="StartScene_Unlock">이 캐릭터 클래스를 얻으려면, 아무 클래스로 3번째 보스까지 물리치세요</string>
+  <string name="StartScene_UnlockElf">이 캐릭터 클래스를 얻으려면, 아무 클래스로 4번째 보스까지 물리치세요</string>
+  <string name="StartScene_WinGame">\"도전\"을 해제하려면, 아무 클래스로 게임을 클리어 하세요.</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">내려가는중...</string>
+  <string name="InterLevelScene_Ascending">올라가는중...</string>
+  <string name="InterLevelScene_Loading">로딩...</string>
+  <string name="InterLevelScene_Resurrecting">부활중...</string>
+  <string name="InterLevelScene_Returning">돌아오는중...</string>
+  <string name="InterLevelScene_Falling">떨어지는중...</string>
+  <string name="InterLevelScene_FileNotFound">파일을 찾지 못함. 어떠한 이유로...</string>
+  <string name="InterLevelScene_ErrorGeneric">무언가 잘못 되었다...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">게임 오버</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">기본 배율</string>
+  <string name="WndSettings_TextScaleDefault">기본 폰트</string>
+  <string name="WndSettings_ScaleUp">확대 UI</string>
+  <string name="WndSettings_Immersive">실감 모드</string>
+  <string name="WndSettings_Music">음악</string>
+  <string name="WndSettings_Sound">Sound FX</string>
+  <string name="WndSettings_Brightness">밝기</string>
+  <string name="WndSettings_SwitchPort">세로 모드로 전환</string>
+  <string name="WndSettings_SwitchLand">가로 모드로 전환</string>
+  <string name="WndSettings_SelectLanguage">언어 선택</string>
+  <string name="WndSettings_SecondQuickslot">두 번째 퀵 슬롯</string>
+  <string name="WndSettings_ThirdQuickslot">세 번째 퀵 슬롯</string>
+  <string name="WndSettings_ExperementalFont">새 폰트</string>
+  <string name="WndSettings_ClassicFont">클래식 폰트</string>
+</resources>

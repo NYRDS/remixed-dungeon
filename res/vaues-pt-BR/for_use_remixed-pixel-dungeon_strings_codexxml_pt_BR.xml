@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">Codex</string>
+  <string name="Codex_ACRead">LER</string>
+  <string name="Codex_Info">Um de vários livros que podem ser encontrados em qualquer biblioteca.</string>
+  <string name="Codex_Blinded">Você não pode ler enquanto estiver cego!</string>
+  <string-array name="Codex_Story">
+    <item>E criou Watabou Pixel Dungeon. E ele viu seu trabalho. E viu que era bom!</item>
+    <item>Glifo Elástico - Faz inimigos serem jogados para trás ao atingirem o Herói.</item>
+    <item>Glifo da Afeição - O inimigo ficará encantado por alguns turnos, o herói também, porém nunca mais que o inimigo.</item>
+    <item>Glifo Anti Entropia - O Herói será iluminado e pegará fogo, o inimigo será congelado.</item>
+    <item>Glifo Multiplicatório - O Herói fará surgir uma cópia sua e receber dano. Isso pode matar o herói.</item>
+    <item>Glifo do Potencial - Este libera uma explosão como um raio que vai atacar o inimigo que atacou o Herói e dará metade deste dano ao Herói.</item>
+    <item>Glifo do Metabolismo - O Herói será parcialmente curado, antes do ataque inimigo ser aplicado. Só é possível se o jogador não estiver morrendo de fome. A fome do Herói aumentará mais rápido.</item>
+    <item>Glifo Fétido - O herói irá liberar uma nuvem de gás tóxico quando atingido.</item>
+    <item>Glifo Viscoso - O Herói receberá o debuff de dano deferido, o que faz o Herói  receber 1 dano por turno, em vez de receber tudo de uma vez.</item>
+    <item>Glifo do Deslocamento - Quando o Herói for atingido há uma chance do Herói ser teleportado para outro lugar visível. Não funciona em níveis de Boss.</item>
+    <item>Glifo Emaranhado - O Herói pode receber uma armadura de ervas, mas também esta enraizado ao mesmo tempo.</item>
+    <item>Arma Cruel - Num ataque pode matar instantaneamente o inimigo(ou dar 2x de dano á um boss).</item>
+    <item>Arma Ardente - Num ataque, dá dano extra e queima o alvo.</item>
+    <item>Arma Sobrenatural - Num ataque, o inimigo pode fugir em pavor.</item>
+    <item>Arma Instável - Num ataque, Pode aplicar o efeito de um encantamento aleatório.</item>
+    <item>Arma Vampírica - Num ataque, pode curar o personagem o mesmo que parte do dano causado.</item>
+    <item>Arma Sortuda - Ignora quase completamente arma inimiga e causa muito mais dano.</item>
+    <item>Arma Paralisante - Num ataque, pode paralisar o alvo.</item>
+    <item>Arma Perfurante - Num ataque, pode causar dano a todos os inimigos atrás do alvo em linha reta.</item>
+    <item>Arma Peçonhenta - Num ataque, pode deixar o alvo envenenado.</item>
+    <item>Arma Calmante - Num ataque, pode deixar o alvo devagar e o impedir de queimar.</item>
+    <item>Arma Selvagem - Num ataque, pode causar dano a todos os inimigos adjacentes ao alvo.</item>
+    <item>Este livro está escrito em linguagem demoníaca</item>
+    <item>Este livro está escrito linguagem anã</item>
+    <item>Este livro está escrito em linguagem élfica</item>
+  </string-array>
+</resources>

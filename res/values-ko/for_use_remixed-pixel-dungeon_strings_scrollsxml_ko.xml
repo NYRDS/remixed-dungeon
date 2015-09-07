@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">\"%s\" 스크롤</string>
+  <string name="Scroll_Info">이 양피지는 판독할 수 없는 룬문자 %s로 덮여있습니다. 누가 이것을 소리내어 읽을때 효과를 알 수 있을까요?</string>
+  <string name="Scroll_ACRead">읽는다</string>
+  <string name="Scroll_Blinded">눈이 먼 상태에서 스크롤을 읽을 수 없습니다.</string>
+  <string-array name="Scroll_Runes">
+    <item>ㅋㅏㅇㅜㄴㅏㄴ</item>
+    <item>ㅅㅗㅇㅣㄹㄹㅗ</item>
+    <item>ㄹㅏㄱㅜㅈㅡㅇ</item>
+    <item>ㅇㅕㅇㄱㅣㅂㅡ</item>
+    <item>ㄱㅏㅍㅜ</item>
+    <item>ㄹㅔㅇㅣㄷㅗ</item>
+    <item>ㅇㅣㅅㅏㅈㅡ</item>
+    <item>ㅁㅏㄴㄴㅏㅈㅡ</item>
+    <item>ㄴㅏㅇㅜㄷㅣㅈㅡ</item>
+    <item>ㅂㅓㅋㅏㄴㅏㄴ</item>
+    <item>ㅇㅗㄷㅏㄹ</item>
+    <item>ㅌㅣㅇㅗㅏㅈㅡ</item>
+    <item>ㅇㅏㄴㅅㅜㅈㅡ</item>
+    <item>ㅇㅣㅇㅗㅏㅈㅡ</item>
+    <item>ㅇㅔㄹㅈㅣㅈㅡ</item>
+    <item>ㄷㅏㄱㅏㅈㅡ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">아이템을 선택하세요.</string>
+  <string name="InventoryScroll_Warning">정말 이 스크롤 사용을 취소 하시겠습니까? 어쨌든 스크롤은 소모됩니다.</string>
+  <string name="InventoryScroll_Yes">네, 긍정적입니다.</string>
+  <string name="InventoryScroll_No">아니, 생각을 바꿨어</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">비어있는 스크롤</string>
+  <string name="BlankScroll_Info">그냥 비어있는 스크롤</string>
+  <string name="BlankScroll_ReallyBlank">이 스크롤은 정말 비어있습니다.</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">도전의 스크롤</string>
+  <string name="ScrollOfChallenge_Info">도전의 스크롤을 소리내어 읽을때, 모든 몬스터가 사용자의 위치로 모여들게 됩니다.</string>
+  <string name="ScrollOfChallenge_Info1">스크롤에서 던전 전체에 적들을 부르는 포효 발생!!</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">식별의 스크롤</string>
+  <string name="ScrollOfIdentify_Info">영구적으로 아이템의 비밀을 보여준다.</string>
+  <string name="ScrollOfIdentify_InvTitle">식별할 아이템을 선택하세요.</string>
+  <string name="ScrollOfIdentify_Info1">이것은 %s 입니다.</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">자장가의 스크롤</string>
+  <string name="ScrollOfLullaby_Info">이 부드러운 멜로디는 시야안에 있는 모든 생물에게 깊은 잠에 빠지게 합니다. 당신은 도망가거나 이들에게 기습공격를 가할 수 있습니다.</string>
+  <string name="ScrollOfLullaby_Info1">스크롤에서 부드러운 멜로디가 흘러나옵니다.</string>
+  <string name="ScrollOfLullaby_Info2">스크롤에서 부드러운 멜로디가 흘러나와 %s 이/가 깊은 잠에 빠졌습니다!!</string>
+  <string name="ScrollOfLullaby_Info3">스크롤에서 부드러운 멜로디가 흘러나와 몬스터들이 깊은 잠에 빠졌습니다!!</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">마법지도의 스크롤</string>
+  <string name="ScrollOfMagicMapping_Info">이 스크롤을 읽는 순간 현재층의 모든 구역이 기억됩니다. 하지만 여전히 아이템과 생물의 위치는 알수 없습니다.</string>
+  <string name="ScrollOfMagicMapping_Layout">이제 현재층의 모든 지형을 파악했습니다.</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">환영의 스크롤</string>
+  <string name="ScrollOfMirrorImage_Info">이 스크롤의 주문은 주문자의 쌍둥이 환영을 만들어 적들을 쫓아갑니다.</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">사이오닉 폭발의 스크롤</string>
+  <string name="ScrollOfPsionicBlast_Info">이 스크롤은 시야내의 모든 생물에 엄청난 피해를 입힐 수 있는 파괴 에너지를 포함하고 있습니다. 빛을 동반한 섬광이 일시적으로 시전자를 포함하여 범위안의 모든 생물의 눈을 멀게 합니다.</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">충전의 스크롤</string>
+  <string name="ScrollOfRecharging_Info">이 스크롤에 바인딩된 원시마법의 힘은 발동할때 시전자의 모든 완드의 충전량을 가득 채웁니다.</string>
+  <string name="ScrollOfRecharging_Info1a">가방에서 에너지가 급증하며 당신의 완드가 충전되었습니다.</string>
+  <string name="ScrollOfRecharging_Info1b">가방에서 에너지가 급증하며 당신의 완드들이 충전되었습니다.</string>
+  <string name="ScrollOfRecharging_Info2">가방에서 에너지가 급증하였지만 아무일도 일어나지 않았습니다.</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">저주제거 스크롤</string>
+  <string name="ScrollOfRemoveCurse_Info">이 스크롤을 발동하는 즉시 시전자의 무기,갑옷,반지에서 해가되는 저주들을 제거합니다.</string>
+  <string name="ScrollOfRemoveCurse_Proced">가방에서 정화의 빛이 빛나며 악의 에너지가 분산되고 있습니다.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">가방에서 정화의 빛이 빛났지만 아무일도 일어나지 않았습니다.</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">순간이동의 스크롤</string>
+  <string name="ScrollOfTeleportation_Info">이 스크롤을 발동하면 즉시 시전자를 같은층의 임의의 장소로 이동시킵니다. 이것은 위험한 상황을 탈출하는데 사용할 수도 있지만 시전자를 더 위험한 장소로 이동시킬 수도 있습니다.</string>
+  <string name="ScrollOfTeleportation_Teleport">순식간에 다른장소로 순간이동 했습니다.</string>
+  <string name="ScrollOfTeleportation_NoTeleport">이곳의 강력한 마법장이 순간이동을 못하게 막고 있습니다!</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">공포의 스크롤</string>
+  <string name="ScrollOfTerror_Info">붉은 빛의 플래시의 공포가 시야의 모든 생물을 압도하며 모두 도망칩니다. 달아나는 적을 공격하면 공포효과가 풀립니다.</string>
+  <string name="ScrollOfTerror_Info1">스크롤에서 붉은 빛의 화려한 플래쉬가 터져나옵니다.</string>
+  <string name="ScrollOfTerror_Info2">스크롤에서 붉은 빛의 화려한 플래시가 터져나오고, %s 이/가 달아납니다!</string>
+  <string name="ScrollOfTerror_Info3">스크롤에서 붉은 빛의 화려한 플래시가 터져나오고, 몬스터가 달아납니다!</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">업그레이드 스크롤</string>
+  <string name="ScrollOfUpgrade_Info">이 스크롤은 한가지 아이템을 업그레이드 합니다. 완드는 사용횟수의 증가; 무기는 데미지의 증가;갑옷은 막을수 있는 데미지의 량이 증가; 링의 효과를 강화;무기와 갑옷을 사용하는데 필요한 최소의 힘을 요구하게 되고 아이템의 저주는 해제 됩니다.</string>
+  <string name="ScrollOfUpgrade_InvTitle">업그레이드 할 아이템을 선택하세요.</string>
+  <string name="ScrollOfUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진것같다.</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">무기업그레이드 스크롤</string>
+  <string name="ScrollOfWeaponUpgrade_Info">이 스크롤은 근접무기를 업그레이드합니다. 이 스크롤은 강화 업그레이드 버전으로 인첸트를 파괴하지 않습니다.  랜덤으로 인첸트되지 않은 무기를 인첸트 시켜줍니다.</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">업그레이드할 무기를 고르세요</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진것같다.</string>
+</resources>

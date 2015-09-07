@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_ACMoisten">촉촉해졌다.</string>
+  <string name="Potion_SelectForMoisten">판매할 아이템을 선택 하세요.</string>
+  <string name="Potion_MoistenUseless">흠.. 제가 보기에 그 포션을 낭비한것 같네요.</string>
+  <string name="Potion_RuneDissaperaed">룬이 %s에 의해서 사라졌습니다.</string>
+  <string name="Potion_ArrowMoisten">성공적으로 화살을 촉촉하게 했습니다.</string>
+  <string name="Potion_ItemFliesAway">%s 을/를 멀리 날립니다.</string>
+  <string name="Potion_FoodRefreshed">지금은 %s 을/를 먹을 수 있을꺼 같습니다.</string>
+</resources>

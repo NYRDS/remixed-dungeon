@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">COMER</string>
+  <string name="Food_Message">A comida estava deliciosa!</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">ração de comida</string>
+  <string name="Ration_Info">Nada de especial aqui: carne seca, alguns biscoitos - coisas deste tipo.</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">carne grelhada</string>
+  <string name="ChargrilledMeat_Info">Parece ser um bife decente.</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">carpaccio congelado</string>
+  <string name="FrozenCarpaccio_Info">É um pedaço congelado de carne crua. O único jeito de comer é cortando em fatias. E deste jeito é surpreendentemente bom.</string>
+  <string name="FrozenCarpaccio_Info1">Você vê suas mãos se tornarem invisíveis!</string>
+  <string name="FrozenCarpaccio_Info2">Você sente sua pele endurecer!</string>
+  <string name="FrozenCarpaccio_Info3">Refrescante!</string>
+  <string name="FrozenCarpaccio_Info4">Você se sente melhor!</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">carne misteriosa</string>
+  <string name="MysteryMeat_Info">Coma sob seu próprio risco!</string>
+  <string name="MysteryMeat_Info1">Oh está quente!</string>
+  <string name="MysteryMeat_Info2">Você não sente suas pernas!</string>
+  <string name="MysteryMeat_Info3">Você não se sente bem.</string>
+  <string name="MysteryMeat_Info4">Você está cheio.</string>
+  <string name="MysteryMeat_Message">Esta comida teve um sabor... estranho.</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">nojento!</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">carne podre</string>
+  <string name="RottenMeat_Info">pedaço de carne podre</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">pastel de carne podre</string>
+  <string name="RottenPasty_Info">Este pastel parece muito nojento.</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">ração podre</string>
+  <string name="RottenRation_Info">Há muito tempo isso podia ser comido</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">ração acima do preço</string>
+  <string name="OverpricedRation_Info">É como uma ração normal, mas menor.</string>
+  <string name="OverpricedRation_Message">Aquela comida estava deliciosa.</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">pastel de carne</string>
+  <string name="Pasty_Info">Este autêntico pastel de frango, com receio adicional de carne e batatas.</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">pastel de carne</string>
+  <string name="PseudoPasty_Info">Este autêntico pastel de frango, com receio adicional de carne e batatas.</string>
+</resources>

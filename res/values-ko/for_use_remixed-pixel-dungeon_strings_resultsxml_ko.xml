@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">%2$d층에서 %1$s에게 죽었습니다.</string>
+  <string name="ResultDescriptions_Boss">%2$d층에서 %1$s에게 죽었습니다.</string>
+  <string name="ResultDescriptions_Wand">%2$d 층에서 당신의 %1$s에 의해서 죽었습니다.</string>
+  <string name="ResultDescriptions_Glyph">%2$d층에서 %1$s에게 죽었습니다.</string>
+  <string name="ResultDescriptions_Trap">진행 깊이: %1$s \n층 수: %2$d</string>
+  <string name="ResultDescriptions_Burning">%d 층에서 불에 타죽었습니다.</string>
+  <string name="ResultDescriptions_Hunger">%d 층에서 굶어 죽었습니다.</string>
+  <string name="ResultDescriptions_Poison">%d 층에서 독에 의해 죽었습니다.</string>
+  <string name="ResultDescriptions_Gas">%d 층에서 독가스에 의해 죽었습니다.</string>
+  <string name="ResultDescriptions_Bleeding">%d 층에서 출혈에 의해 죽었습니다.</string>
+  <string name="ResultDescriptions_Ooze">%d 층에서 부식성 점액에 의해 죽었습니다.</string>
+  <string name="ResultDescriptions_Fall">%d 층에서 낙사 하였습니다.</string>
+  <string name="ResultDescriptions_Win">Yendor의 부적을 획득하였습니다.</string>
+  <string name="ResultDescriptions_Immured">%d 층에서 돌에 갖혀 죽었습니다.</string>
+</resources>
