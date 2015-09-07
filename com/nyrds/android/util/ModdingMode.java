@@ -50,11 +50,11 @@ public class ModdingMode {
 		mContext = context;
 	}
 	
-	public static void setTextRenderingMode(boolean val) {
-		 mTextRenderingMode = !val;
+	public static void setClassicTextRenderingMode(boolean val) {
+		 mTextRenderingMode = val;
 	}
 	
-	public static boolean getTextRenderingMode() {
+	public static boolean getClassicTextRenderingMode() {
 		return  mTextRenderingMode;
 	}
 }

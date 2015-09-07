@@ -19,21 +19,21 @@ public abstract class Text extends Visual {
 	}
 
 	public static Text create() {
-		if(ModdingMode.getTextRenderingMode()) {
+		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText();
 		}
 		return new BitmapText();
 	}
 	
 	public static Text create(Font font) {
-		if(ModdingMode.getTextRenderingMode()) {
+		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(font);
 		}
 		return new BitmapText(font);
 	}
 	
 	public static Text create(String text, Font font) {
-		if(ModdingMode.getTextRenderingMode()) {
+		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(text, font);
 		}
 		return new BitmapText(text, font);
@@ -41,7 +41,7 @@ public abstract class Text extends Visual {
 	
 	public static Text createMultiline(String text, Font font) {
 		
-		if(ModdingMode.getTextRenderingMode()) {
+		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(text, font);
 		}
 		

@@ -113,7 +113,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	}
 
 	public void useLocale(String lang) {
-		Locale locale = new Locale(lang);
+		Locale locale;
+		if(lang.equals("pt_BR")) {
+			locale = new Locale("pt","BR");
+		} else {
+			locale = new Locale(lang);
+		}
+		
 		Configuration config = getBaseContext().getResources()
 				.getConfiguration();
 		config.locale = locale;
