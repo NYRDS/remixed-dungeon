@@ -6,7 +6,6 @@ import java.util.Locale;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Paint.Style;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.util.Log;
@@ -80,8 +79,6 @@ public class SystemText extends Text {
 		
 		final int length = text.length();
 		int lastWordOffset = offset;
-
-		//Log.d("SystemText", String.format("startFrom %d", startFrom));
 		
 		cpProcessed = 0;
 		
@@ -95,28 +92,23 @@ public class SystemText extends Text {
 			float xDelta = symbolWidth(text.substring(offset, offset
 					+ codepointCharCount));
 
-			//Log.d("SystemText", String.format("symbolWidth %s %3.1f %3.1f", text.substring(offset, offset
-//					+ codepointCharCount), xDelta, xPos));
 			offset += codepointCharCount;
 
 			if (Character.isWhitespace(codepoint)) {
 				lastWordOffset = offset;
-				//Log.d("SystemText", String.format("space"));
-				// return offset;
 			}
 			
 			if (codepoint == 0x000A) {
-				//Log.d("SystemText", String.format("line break"));
 				return offset;
 			}
 
 			xPos += xDelta;
 
 			if (maxWidth != Integer.MAX_VALUE && xPos > maxWidth * oversample) {
-				//Log.d("SystemText", String.format("soft line break %3f",xPos));
 				return lastWordOffset;
 			}
 		}
+		xCharPos.add(xPos);
 		Log.d("SystemText", String.format("eot"));
 		return offset;
 	}
@@ -129,7 +121,7 @@ public class SystemText extends Text {
 		}
 		
 		if (fontHeight > 0) {
-			
+			Log.d("SystemText", String.format("xscale: %3.2f %s", scale.x, text));
 			if (parent != null) {
 				for (Image img : lineImage) {
 					parent.remove(img);
@@ -161,9 +153,11 @@ public class SystemText extends Text {
 					width = Math.max(lineWidth, width);
 					
 					Log.d("SystemText",
-							String.format(Locale.ROOT, "lineWidth : %3f", lineWidth));
+							String.format(Locale.ROOT, "lineWidth : %3f %3f", lineWidth, width));
 				}
+				
 				height += fontHeight;
+				
 				if (lineWidth > 0) {
 
 					Bitmap bitmap = Bitmap.createBitmap(
@@ -180,8 +174,8 @@ public class SystemText extends Text {
 						int codepointCharCount = Character.charCount(codepoint);
 
 						if (mask == null || mask[charIndex]) {
-							//Log.d("SystemText", String.format("symbol: %s %d %d %3.1f", text.substring(offset, offset
-							//+ codepointCharCount), offset, charIndex, xCharPos.get(lineCounter) ));
+//							Log.d("SystemText", String.format("symbol: %s %d %d %3.1f", text.substring(offset, offset
+//							+ codepointCharCount), offset, charIndex, xCharPos.get(lineCounter) ));
 
 							canvas.drawText(
 									text.substring(offset, offset
@@ -190,7 +184,7 @@ public class SystemText extends Text {
 									textPaint.descent() * oversample, textPaint);
 						}
 						charIndex++;
-						lineCounter ++;
+						lineCounter++;
 						offset += codepointCharCount;
 					}
 					
@@ -285,7 +279,7 @@ public class SystemText extends Text {
 		if (str == null) {
 			text = "";
 		} else {
-			text = str + " ";
+			text = str;
 		}
 		measure();
 	}
