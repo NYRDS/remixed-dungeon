@@ -34,7 +34,7 @@ public abstract class Text extends Visual {
 	
 	public static Text create(String text, Font font) {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, font);
+			return new SystemText(text, font, false);
 		}
 		return new BitmapText(text, font);
 	}
@@ -42,7 +42,7 @@ public abstract class Text extends Visual {
 	public static Text createMultiline(String text, Font font) {
 		
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, font);
+			return new SystemText(text, font,true);
 		}
 		
 		return new BitmapTextMultiline(text, font);
