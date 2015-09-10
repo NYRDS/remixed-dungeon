@@ -88,7 +88,7 @@ public class SurfaceScene extends PixelScene {
 		boolean dayTime = !Dungeon.nightMode;
 		
 		Sky sky = new Sky( dayTime );
-		sky.scale.set( WIDTH, HEIGHT );
+		sky.Scale().set( WIDTH, HEIGHT );
 		window.add( sky );
 		
 		if (!dayTime) {

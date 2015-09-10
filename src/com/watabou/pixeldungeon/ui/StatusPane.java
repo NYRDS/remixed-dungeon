@@ -170,8 +170,8 @@ public class StatusPane extends Component {
 			blood.on = false;
 		}
 		
-		hp.scale.x = health;
-		exp.scale.x = (width / exp.width) * Dungeon.hero.exp / Dungeon.hero.maxExp();
+		hp.Scale().x = health;
+		exp.Scale().x = (width / exp.width) * Dungeon.hero.exp / Dungeon.hero.maxExp();
 		
 		if (Dungeon.hero.lvl != lastLvl) {
 			

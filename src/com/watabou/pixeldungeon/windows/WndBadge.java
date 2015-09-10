@@ -34,7 +34,7 @@ public class WndBadge extends Window {
 		super();
 		
 		Image icon = BadgeBanner.image( badge.image );
-		icon.scale.set( 2 );
+		icon.Scale().set( 2 );
 		add( icon );
 		
 		Text info = PixelScene.createMultiline( badge.description, 8 );

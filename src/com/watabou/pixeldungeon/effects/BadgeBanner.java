@@ -256,11 +256,11 @@ public class BadgeBanner extends Image {
 			break;
 		}
 		
-		p.x *= image.scale.x; 
-		p.y *= image.scale.y;
+		p.x *= image.Scale().x; 
+		p.y *= image.Scale().y;
 		p.offset( 
-			-image.origin.x * (image.scale.x - 1), 
-			-image.origin.y * (image.scale.y - 1) );
+			-image.origin.x * (image.Scale().x - 1), 
+			-image.origin.y * (image.Scale().y - 1) );
 		p.offset( image.point() );
 		
 		Speck star = new Speck();
