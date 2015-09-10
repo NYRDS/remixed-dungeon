@@ -17,22 +17,10 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
-
 import javax.microedition.khronos.opengles.GL10;
 
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Typeface;
 import android.opengl.GLES20;
 
-import com.nyrds.android.util.ModdingMode;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
@@ -48,7 +36,6 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.BitmapCache;
-import com.watabou.utils.PointF;
 
 public class PixelScene extends Scene {
 
@@ -116,117 +103,6 @@ public class PixelScene extends Scene {
 
 		createFonts();
 	}
-
-	public static Bitmap createBitmapFromFont(AssetManager assets, String file,
-			String chars, int size, HashMap<Object, RectF> metrics,
-			HashMap<Object, PointF> shifts, float fontHeight) {
-
-		int padX = 2;
-		int padY = 1;
-		// load the font and setup paint instance for drawing
-		//Typeface tf = Typeface.createFromAsset(assets, file); // Create the
-		Typeface tf = Typeface.create((String)null, Typeface.NORMAL);
-																// Typeface from
-																// Font File
-		Paint paint = new Paint(); // Create Android Paint Instance
-		paint.setAntiAlias(true); // Enable Anti Alias
-		paint.setTextSize(size); // Set Text Size
-		paint.setColor(0xffffffff); // Set ARGB (White, Opaque)
-		paint.setTypeface(tf); // Set Typeface
-
-		// get font metrics
-		Paint.FontMetrics fm = paint.getFontMetrics(); // Get Font Metrics
-
-		fontHeight = (float) Math.ceil(Math.abs(fm.bottom) + Math.abs(fm.top)); // Calculate
-		// Ascent
-		float fontDescent = (float) Math.ceil(Math.abs(fm.descent)); // Save
-																		// Font
-		// Descent
-
-		// determine the width of each character (including unknown character)
-		// also determine the maximum character width
-		char[] s = new char[1]; // Create Character Array
-		float[] w = new float[1]; // Working Width Value
-
-		HashMap<Object, Float> charWidths = new HashMap<Object, Float>();
-
-		float charWidthMax = 0f;
-
-		for (int i = 0; i < chars.length(); i++) { // FOR Each Character
-			s[0] = chars.charAt(i); // Set Character
-			paint.getTextWidths(s, 0, 1, w); // Get Character Bounds
-
-			charWidths.put(s[0], w[0]);
-
-			if (charWidthMax < w[0]) {
-				charWidthMax = w[0];
-			}
-		}
-
-		// find the maximum size, validate, and setup cell sizes
-		int cellWidth = (int) charWidthMax + (2 * padX); // Set Cell Width
-
-		int totalArea = (int) (cellWidth * fontHeight * chars.length());
-
-		int textureSizeX = 64;
-		int textureSizeY = 64;
-
-		while (totalArea > textureSizeX * textureSizeY) {
-			if (textureSizeY < textureSizeX) {
-				textureSizeY *= 2;
-			} else {
-				textureSizeX *= 2;
-			}
-		}
-
-		// GLog.w("creating %d x %d texture", textureSizeX, textureSizeY);
-
-		// create an empty bitmap (alpha only)
-		Bitmap bitmap = Bitmap.createBitmap(textureSizeX, textureSizeY,
-				Bitmap.Config.ARGB_8888); // Create Bitmap
-		Canvas canvas = new Canvas(bitmap); // Create Canvas for Rendering to
-											// Bitmap
-		bitmap.eraseColor(0x00000000); // Set Transparent Background (ARGB)
-
-		// render each of the characters to the canvas (ie. build the font map)
-		float yShift = (fontHeight - 1) - fontDescent - padY;
-
-		float x = 0; // Set Start Position (X)
-		float y = yShift; // Set Start
-							// Position (Y)
-		for (int i = 0; i < chars.length(); i++) { // FOR Each Character
-			s[0] = chars.charAt(i); // Set Character
-
-			float thisCellWidth = charWidths.get(s[0]) + padX * 2;
-
-			Rect bounds = new Rect();
-
-			if (i == 0) { // special case for space
-				bounds.right = size / 3;
-				// GLog.i("making space");
-			} else {
-				paint.getTextBounds(s, 0, 1, bounds);
-			}
-			metrics.put(s[0], new RectF((x + bounds.left) / textureSizeX,
-					(y + bounds.top) / textureSizeY, (x + bounds.right + 1)
-							/ textureSizeX, (y + bounds.bottom + 2)
-							/ textureSizeY));
-
-			shifts.put(s[0], new PointF(bounds.left, size + bounds.top));
-
-			// GLog.w("rendering char %d at %3.0f,%3.0f", (int) s[0], x, y);
-			canvas.drawText(s, 0, 1, x, y, paint); // Draw Character
-			x += thisCellWidth; // Move to Next Character
-			if ((x + thisCellWidth - padX) > textureSizeX) {
-				x = 0; // Set X for New Row
-				y += fontHeight; // Move Down a Row
-			}
-		}
-
-		return bitmap;
-
-	}
-
 
 	private void createFonts() {
 		if (font1x == null) {
@@ -320,7 +196,7 @@ public class PixelScene extends Scene {
 		chooseFont(size);
 
 		Text result = Text.create(text, font);
-		result.scale.set(scale);
+		result.Scale().set(scale);
 
 		return result;
 	}
@@ -333,8 +209,8 @@ public class PixelScene extends Scene {
 
 		chooseFont(size);
 
-		Text result = new SystemText(text, font);
-		result.scale.set(scale);
+		Text result = new SystemText(text, font, false);
+		result.Scale().set(scale);
 
 		return result;
 	}
@@ -344,7 +220,7 @@ public class PixelScene extends Scene {
 		chooseFont(size);
 
 		Text result = Text.createMultiline(text, font);
-		result.scale.set(scale);
+		result.Scale().set(scale);
 
 		return result;
 	}
