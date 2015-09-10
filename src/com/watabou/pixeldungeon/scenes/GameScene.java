@@ -543,7 +543,7 @@ public class GameScene extends PixelScene {
 	}
 	
 	public static void afterObserve() {
-		if (scene != null) {
+		if (scene != null && scene.sceneCreated == true) {
 			scene.fog.updateVisibility(
 					Dungeon.visible, 
 					Dungeon.level.visited, 
