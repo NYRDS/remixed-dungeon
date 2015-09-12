@@ -13,6 +13,7 @@ import android.text.TextPaint;
 import android.util.Log;
 
 import com.watabou.glwrap.Matrix;
+import com.watabou.utils.PointF;
 
 public class SystemText extends Text {
 
@@ -25,7 +26,7 @@ public class SystemText extends Text {
 	private static Set<SystemText> texts = new HashSet<SystemText>();
 
 	private float size;
-	private final float oversample = 2f;
+	private final static float oversample = 2f;
 	private boolean needWidth = false;
 	
 	public SystemText() {
@@ -35,9 +36,16 @@ public class SystemText extends Text {
 	public SystemText(float baseLine) {
 		this("", baseLine, false);
 	}
-	
+
 	public SystemText(String text, float baseLine, boolean multiline) {
+		this(text, baseLine, multiline, 1/oversample);
+	}
+
+	
+	public SystemText(String text, float baseLine, boolean multiline, float scale) {
 		super(0, 0, 0, 0);
+		
+		Scale().set(scale);
 		
 		needWidth = multiline;
 		
@@ -249,11 +257,8 @@ public class SystemText extends Text {
 				img.gm = gm;
 				img.bm = bm;
 				
-				img.x = x;
-				img.y = y+line * fontHeight / oversample;
-
-				img.scale.x = scale.x / oversample;
-				img.scale.y = scale.y / oversample;
+				img.setPos(x, y+ (line * fontHeight)*scale.y);
+				img.setScale(scale.x / oversample, scale.x / oversample);
 
 				line++;
 			}
@@ -262,6 +267,7 @@ public class SystemText extends Text {
 
 	@Override
 	public void hardlight( int color ) {
+		super.hardlight(color);
 		for (Image img : lineImage) {
 			img.hardlight( (color >> 16) / 255f, ((color >> 8) & 0xFF) / 255f, (color & 0xFF) / 255f );
 		}
@@ -310,6 +316,18 @@ public class SystemText extends Text {
 		for(SystemText txt:texts){
 			txt.dirty = true;
 		}
-		
 	}
+	/*
+	@Override
+	public PointF Scale() {
+		Log.d("SystemText", String.format("%s <- %3.2f %3.2f",text, super.Scale().x,super.Scale().y));
+		return super.Scale();
+	}
+	
+	@Override
+	public void Scale(PointF arg) {
+		Log.d("SystemText", String.format("%s -> %3.2f %3.2f",text, arg.x,arg.y));
+		super.Scale(arg);
+	}
+	*/
 }

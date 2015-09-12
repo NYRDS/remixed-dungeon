@@ -17,12 +17,24 @@ public abstract class Text extends Visual {
 	protected Text(float x, float y, float width, float height) {
 		super(x, y, width, height);
 	}
-
+/*
 	public static Text create() {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText();
 		}
 		return new BitmapText();
+	}
+*/
+	public static Text create(float fontSize) {
+		return new SystemText(fontSize);
+	}
+	
+	public static Text create(String text, float fontSize) {
+		return new SystemText(text, fontSize, false);
+	}
+	
+	public static Text createMultiline(String text, float fontSize) {
+		return new SystemText(text, fontSize, true);
 	}
 	
 	public static Text create(Font font) {
