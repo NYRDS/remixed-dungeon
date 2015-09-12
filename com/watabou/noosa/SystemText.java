@@ -24,24 +24,24 @@ public class SystemText extends Text {
 	
 	private static Set<SystemText> texts = new HashSet<SystemText>();
 
-	private int size = 8;
-	private final int oversample = 4;
+	private float size;
+	private final float oversample = 2f;
 	private boolean needWidth = false;
 	
 	public SystemText() {
-		this("", null, false);
+		this("", 8, false);
 	}
 
-	public SystemText(Font font) {
-		this("", font, false);
+	public SystemText(float baseLine) {
+		this("", baseLine, false);
 	}
 	
-	public SystemText(String text, Font font, boolean multiline) {
+	public SystemText(String text, float baseLine, boolean multiline) {
 		super(0, 0, 0, 0);
 		
 		needWidth = multiline;
 		
-		size = (int) font.baseLine;
+		size = baseLine;
 
 		if (size == 0) {
 			try {
@@ -119,7 +119,7 @@ public class SystemText extends Text {
 			}
 		}
 		xCharPos.add(xPos);
-		Log.d("SystemText", String.format("eot"));
+		//Log.d("SystemText", String.format("eot"));
 		return offset;
 	}
 
@@ -131,7 +131,7 @@ public class SystemText extends Text {
 		}
 		
 		if (fontHeight > 0) {
-			Log.d("SystemText", String.format("xscale: %3.2f %s", scale.x, text));
+			//Log.d("SystemText", String.format("xscale: %3.2f %s", scale.x, text));
 			if (parent != null) {
 				for (Image img : lineImage) {
 					parent.remove(img);
@@ -162,8 +162,8 @@ public class SystemText extends Text {
 					lineWidth = xCharPos.get(xCharPos.size() - 1);
 					width = Math.max(lineWidth, width);
 					
-					Log.d("SystemText",
-							String.format(Locale.ROOT, "lineWidth : %3f %3f", lineWidth, width));
+					//Log.d("SystemText",
+					//		String.format(Locale.ROOT, "lineWidth : %3f %3f", lineWidth, width));
 				}
 				
 				height += fontHeight;
@@ -191,7 +191,9 @@ public class SystemText extends Text {
 									text.substring(offset, offset
 											+ codepointCharCount),
 											xCharPos.get(lineCounter) * oversample,
-									textPaint.descent() * oversample, textPaint);
+									//textPaint.descent() * oversample,
+											(fontHeight) * oversample -textPaint.descent(),
+									textPaint);
 						}
 						charIndex++;
 						lineCounter++;
@@ -205,8 +207,8 @@ public class SystemText extends Text {
 				}
 				startLine = nextLine;
 			}
-			Log.d("SystemText", String.format(Locale.ROOT,
-					"%3.1f x %3.1f -> %s", width, height, text));
+			//Log.d("SystemText", String.format(Locale.ROOT,
+			//		"%3.1f x %3.1f -> %s", width, height, text));
 		}
 	}
 
@@ -239,6 +241,7 @@ public class SystemText extends Text {
 					parent.add(img);
 				}
 
+				img.camera = null;
 				img.ra = ra;
 				img.ga = ga;
 				img.ba = ba;
