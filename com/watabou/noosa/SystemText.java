@@ -1,7 +1,9 @@
 package com.watabou.noosa;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
@@ -19,6 +21,8 @@ public class SystemText extends Text {
 	protected TextPaint textPaint = new TextPaint();
 
 	private ArrayList<Image> lineImage = new ArrayList<Image>();
+	
+	private static Set<SystemText> texts = new HashSet<SystemText>();
 
 	private int size = 8;
 	private final int oversample = 4;
@@ -58,12 +62,14 @@ public class SystemText extends Text {
 		textPaint.setColor(0xffffffff);
 
 		this.text(text);
+		texts.add(this);
 	}
 
 	@Override
 	public void destroy() {
 		text = null;
 		super.destroy();
+		texts.remove(this);
 	}
 
 	private ArrayList<Float> xCharPos = new ArrayList<Float>();
@@ -104,8 +110,12 @@ public class SystemText extends Text {
 
 			xPos += xDelta;
 
-			if (maxWidth != Integer.MAX_VALUE && xPos > maxWidth * oversample) {
-				return lastWordOffset;
+			if (maxWidth != Integer.MAX_VALUE && xPos > (float)(maxWidth * oversample)) {
+				if(lastWordOffset != startFrom) {
+					return lastWordOffset;
+				} else {
+					return offset-1;
+				}
 			}
 		}
 		xCharPos.add(xPos);
@@ -259,6 +269,10 @@ public class SystemText extends Text {
 	}
 
 	public void measure() {
+		if (Math.abs(scale.x) < 0.001) {
+			return;
+		}
+		
 		if (dirty) {
 			dirty = false;
 			if (text.equals("")) {
@@ -287,5 +301,12 @@ public class SystemText extends Text {
 	@Override
 	public float baseLine() {
 		return height * scale.y;
+	}
+
+	public static void invalidate() {
+		for(SystemText txt:texts){
+			txt.dirty = true;
+		}
+		
 	}
 }

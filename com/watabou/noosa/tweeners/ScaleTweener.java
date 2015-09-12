@@ -31,12 +31,12 @@ public class ScaleTweener extends Tweener {
 		super( visual, time );
 		
 		this.visual = visual;
-		start = visual.scale;
+		start = visual.Scale();
 		end = scale;
 	}
 
 	@Override
 	protected void updateValues( float progress ) {
-		visual.scale = PointF.inter( start, end, progress );
+		visual.Scale(PointF.inter( start, end, progress ));
 	}
 }

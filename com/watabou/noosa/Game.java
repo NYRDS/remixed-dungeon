@@ -306,6 +306,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 		GLES20.glEnable(GL10.GL_SCISSOR_TEST);
 
 		TextureCache.reload();
+		SystemText.invalidate();
 	}
 
 	protected void destroyGame() {

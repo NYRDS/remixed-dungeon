@@ -29,7 +29,7 @@ public class Visual extends Gizmo {
 	public float width;
 	public float height;
 	
-	public PointF scale;
+	protected PointF scale;
 	public PointF origin;
 	
 	protected float[] matrix;
@@ -55,7 +55,7 @@ public class Visual extends Gizmo {
 		this.width = width;
 		this.height = height;
 		
-		scale = new PointF( 1, 1 );
+		Scale(new PointF( 1, 1 ));
 		origin = new PointF();
 		
 		matrix = new float[16];
@@ -210,7 +210,7 @@ public class Visual extends Gizmo {
 	}
 	
 	public boolean overlapsPoint( float x, float y ) {
-		return x >= this.x && x < this.x + width * scale.x && y >= this.y && y < this.y + height * scale.y;
+		return x >= this.x && x < this.x + width * scale.x && y >= this.y && y < this.y + height * Scale().y;
 	}
 	
 	public boolean overlapsScreenPoint( int x, int y ) {
@@ -241,5 +241,13 @@ public class Visual extends Gizmo {
 	public void setPos(float x, float y){
 		this.x = x;
 		this.y = y;
+	}
+
+	public PointF Scale() {
+		return scale;
+	}
+
+	public void Scale(PointF scale) {
+		this.scale = scale;
 	}
 }
