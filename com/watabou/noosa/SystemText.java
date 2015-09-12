@@ -45,12 +45,12 @@ public class SystemText extends Text {
 	public SystemText(String text, float baseLine, boolean multiline, float scale) {
 		super(0, 0, 0, 0);
 		
-		Scale().set(scale);
+		setScale(scale, scale);
 		
 		needWidth = multiline;
 		
 		size = baseLine;
-
+		
 		if (size == 0) {
 			try {
 				throw new Exception("zero sized font!!!");
@@ -118,7 +118,7 @@ public class SystemText extends Text {
 
 			xPos += xDelta;
 
-			if (maxWidth != Integer.MAX_VALUE && xPos > (float)(maxWidth * oversample)) {
+			if (maxWidth != Integer.MAX_VALUE && xPos > (float)(maxWidth/scale.x)) {
 				if(lastWordOffset != startFrom) {
 					return lastWordOffset;
 				} else {
@@ -215,8 +215,8 @@ public class SystemText extends Text {
 				}
 				startLine = nextLine;
 			}
-			//Log.d("SystemText", String.format(Locale.ROOT,
-			//		"%3.1f x %3.1f -> %s", width, height, text));
+			Log.d("SystemText", String.format(Locale.ROOT,
+					"%3.1f x %3.1f (max: %d) -> %s", width, height, maxWidth,  text));
 		}
 	}
 
