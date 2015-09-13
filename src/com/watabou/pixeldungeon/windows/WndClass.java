@@ -160,23 +160,25 @@ public class WndClass extends WndTabbed {
 			Highlighter hl = new Highlighter( text );
 			
 			normal = PixelScene.createMultiline( hl.text, 6 );
+			if (hl.isHighlighted()) {
+				normal.mask = hl.inverted();
+			}
 			normal.maxWidth(WIDTH - MARGIN * 2);
 			normal.measure();
 			normal.x = MARGIN;
 			normal.y = MARGIN;
 			add( normal );
 			
-			if (hl.isHighlighted()) {
-				normal.mask = hl.inverted();
-				
+			if (hl.isHighlighted()) {				
 				highlighted = PixelScene.createMultiline( hl.text, 6 );
+				highlighted.mask = hl.mask;
+
 				highlighted.maxWidth(normal.getMaxWidth());
 				highlighted.measure();
 				highlighted.x = normal.x;
 				highlighted.y = normal.y;
 				add( highlighted );
 		
-				highlighted.mask = hl.mask;
 				highlighted.hardlight( TITLE_COLOR );
 			}
 			

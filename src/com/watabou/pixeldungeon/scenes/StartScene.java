@@ -231,17 +231,7 @@ public class StartScene extends PixelScene {
 			text.x = PixelScene.align(w / 2 - text.width() / 2);
 			text.y = PixelScene.align(pos);
 			unlock.add(text);
-			/*
-			for (BitmapText line : text.new LineSplitter().split()) {
-				line.measure();
-				line.hardlight(0xFFFF00);
-				line.x = PixelScene.align(w / 2 - line.width() / 2);
-				line.y = PixelScene.align(pos);
-				unlock.add(line);
 
-				pos += line.height();
-			}
-			*/
 		}
 
 		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
@@ -256,18 +246,8 @@ public class StartScene extends PixelScene {
 			text.hardlight(0xFFFF00);
 			text.x = PixelScene.align(w / 2 - text.width() / 2);
 			text.y = PixelScene.align(pos);
-			unlock.add(text);
-			/*
-			for (BitmapText line : text.new LineSplitter().split()) {
-				line.measure();
-				line.hardlight(0xFFFF00);
-				line.x = PixelScene.align(w / 2 - line.width() / 2);
-				line.y = PixelScene.align(pos);
-				unlockElf.add(line);
+			unlockElf.add(text);
 
-				pos += line.height();
-			}
-			*/
 		}
 		
 		ExitButton btnExit = new ExitButton();
@@ -388,7 +368,7 @@ public class StartScene extends PixelScene {
 		protected void layout() {
 			super.layout();
 
-			if (secondary.text().length() > 0) {
+			if (secondary.text() != null && secondary.text().length() > 0) {
 				text.y = align(y
 						+ (height - text.height() - secondary.baseLine() * 2)
 						/ 2);

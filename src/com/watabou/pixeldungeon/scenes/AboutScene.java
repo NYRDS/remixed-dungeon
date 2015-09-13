@@ -88,7 +88,7 @@ public class AboutScene extends PixelScene {
 	private Text createText(String text, Text upper)
 	{
 		Text multiline = createMultiline( text, 8 );
-		multiline.maxWidth(Math.min( Camera.main.width, 120 ));
+		multiline.maxWidth(Camera.main.width * 5 / 6);
 		multiline.measure();
 		add( multiline );
 		if(upper!=null){
@@ -101,7 +101,12 @@ public class AboutScene extends PixelScene {
 	public void create() {
 		super.create();
 		
+		//uiCamera.visible = false;
+		//camera().zoom( defaultZoom + PixelDungeon.zoom() );
+		
 		Text text = createText( TXT, null );
+		
+		text.camera = uiCamera;
 		
 		text.x = align( (Camera.main.width - text.width()) / 2 );
 		text.y = align( (Camera.main.height - text.height()) / 3 );

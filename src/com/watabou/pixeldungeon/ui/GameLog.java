@@ -104,7 +104,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			Visual entry = (Visual) members.get( i );
 			entry.x = x;
 			entry.y = pos - entry.height();
-			pos -= entry.height();
+			pos = entry.y;
 		}
 	}
 	

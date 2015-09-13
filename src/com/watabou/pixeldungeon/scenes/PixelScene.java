@@ -21,6 +21,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLES20;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
@@ -95,6 +96,7 @@ public class PixelScene extends Scene {
 
 		GLog.i("%d %d %f", Game.width(), Game.height(), defaultZoom);
 
+		//Camera.reset(new PixelCamera(defaultZoom + PixelDungeon.zoom()));
 		Camera.reset(new PixelCamera(defaultZoom));
 
 		float uiZoom = defaultZoom;
@@ -129,70 +131,84 @@ public class PixelScene extends Scene {
 	public static float scale;
 
 	public static void chooseFont(float size) {
-			float pt = size * defaultZoom;
+		float pt = size * defaultZoom;
 
-			if (pt >= 19) {
+		if (pt >= 19) {
 
-				scale = pt / 19;
-				if (1.5 <= scale && scale < 2) {
-					font = font25x;
-					scale = (int)(pt / 14);
-				} else {
-					//font = font3x;
-					scale = (int)scale;
-				}
-
-			} else if (pt >= 14) {
-
-				scale = pt / 14;
-				if (1.8 <= scale && scale < 2) {
-					//font = font2x;
-					scale = (int)(pt / 12);
-				} else {
-					font = font25x;
-					scale = (int)scale;
-				}
-
-			} else if (pt >= 12) {
-
-				scale = pt / 12;
-				if (1.7 <= scale && scale < 2) {
-					//font = font15x;
-					scale = (int)(pt / 10);
-				} else {
-					//font = font2x;
-					scale = (int)scale;
-				}
-
-			} else if (pt >= 10) {
-
-				scale = pt / 10;
-				if (1.4 <= scale && scale < 2) {
-					font = font1x;
-					scale = (int)(pt / 7);
-				} else {
-					//font = font15x;
-					scale = (int)scale;
-				}
-
+			scale = pt / 19;
+			if (1.5 <= scale && scale < 2) {
+				font = font25x;
+				scale = (int) (pt / 14);
 			} else {
-
-				font = font1x;
-				scale = Math.max( 1, (int)(pt / 7) );
-
+				// font = font3x;
+				scale = (int) scale;
 			}
-			
-			scale /= defaultZoom;
 
-			font = font25x;
+		} else if (pt >= 14) {
+
+			scale = pt / 14;
+			if (1.8 <= scale && scale < 2) {
+				// font = font2x;
+				scale = (int) (pt / 12);
+			} else {
+				font = font25x;
+				scale = (int) scale;
+			}
+
+		} else if (pt >= 12) {
+
+			scale = pt / 12;
+			if (1.7 <= scale && scale < 2) {
+				// font = font15x;
+				scale = (int) (pt / 10);
+			} else {
+				// font = font2x;
+				scale = (int) scale;
+			}
+
+		} else if (pt >= 10) {
+
+			scale = pt / 10;
+			if (1.4 <= scale && scale < 2) {
+				font = font1x;
+				scale = (int) (pt / 7);
+			} else {
+				// font = font15x;
+				scale = (int) scale;
+			}
+
+		} else {
+
+			font = font1x;
+			scale = Math.max(1, (int) (pt / 7));
+
+		}
+
+		scale /= defaultZoom;
+
+		font = font25x;
 	}
 
 	public static Text createText(float size) {
 		return createText(null, size);
 	}
 
+	private static float computeFontScale() {
+		float scale = 0.5f + 0.01f*PixelDungeon.fontScale();
+		
+		if(scale < 0.1f) return 0.1f;
+		if(scale > 4)   return 4;
+		
+		return scale;
+		
+	}
+	
 	public static Text createText(String text, float size) {
 
+		if(!ModdingMode.getClassicTextRenderingMode()) {
+			return new SystemText(text, size, false,  computeFontScale());
+		}
+		
 		chooseFont(size);
 
 		Text result = Text.create(text, font);
@@ -206,17 +222,15 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createSystemText(String text, float size) {
-
-		chooseFont(size);
-
-		Text result = new SystemText(text, font, false);
-		result.Scale().set(scale);
-
-		return result;
+		return new SystemText(text, size, false, computeFontScale());
 	}
 	
 	public static Text createMultiline(String text, float size) {
 
+		if(!ModdingMode.getClassicTextRenderingMode()) {
+			return new SystemText(text, size, true, computeFontScale());
+		}
+		
 		chooseFont(size);
 
 		Text result = Text.createMultiline(text, font);
@@ -319,14 +333,15 @@ public class PixelScene extends Scene {
 		}
 	}
 
-	private static class PixelCamera extends Camera {
+	static class PixelCamera extends Camera {
 
 		public PixelCamera(float zoom) {
 			super(
 					(int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
-					(int) (Game.height() - Math.ceil(Game.height() / zoom)
-							* zoom) / 2, (int) Math.ceil(Game.width() / zoom),
-					(int) Math.ceil(Game.height() / zoom), zoom);
+					(int) (Game.height() - Math.ceil(Game.height() / zoom)* zoom) / 2,
+					(int) Math.ceil(Game.width() / zoom),
+					(int) Math.ceil(Game.height() / zoom),
+					zoom);
 		}
 
 		@Override
