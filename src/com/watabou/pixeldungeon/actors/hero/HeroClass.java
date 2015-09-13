@@ -18,6 +18,7 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -46,6 +47,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
@@ -174,6 +176,7 @@ public enum HeroClass {
 
 		for(int i = 0; i < 100; ++i){
 			hero.collect(new ScrollOfMagicMapping());
+			hero.collect(new ScrollOfTeleportation());
 		}
 		
 		
@@ -188,9 +191,9 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 
-		//if (ModdingMode.mode()) {
+		if (ModdingMode.mode()) {
 			initDebug(hero);
-		//}
+		}
 
 		QuickSlot.cleanStorage();
 	}
