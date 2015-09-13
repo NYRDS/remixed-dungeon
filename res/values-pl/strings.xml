@@ -440,9 +440,4 @@
   <!--STRINGS OF Toolbar CLASS-->
   <string name="Toolbar_Info1">Nie wiesz co tam się znajduje.</string>
   <string name="Toolbar_Info2">Wybierz miejsce by je zbadać</string>
-  <!--PACKAGE /utils-->
-  <!--STRINGS OF Utils CLASS-->
-  <!--1: Execute Indefinite Function to Language-->
-  <!--0: NO Execute Indefinite Function to Language-->
-  <string name="Utils_IsIndefinte">1</string>
 </resources>
