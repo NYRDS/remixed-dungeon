@@ -100,7 +100,7 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 48, 29, 64, 45 ) );
 			break;
 		case CLOSE:
-			icon.frame( icon.texture.uvRect( 0, 45, 13, 58 ) );
+			icon.frame( icon.texture.uvRect( 1, 46, 11, 56 ) );
 			break;
 		case DEPTH:
 			icon.frame( icon.texture.uvRect( 45, 12, 54, 20 ) );
