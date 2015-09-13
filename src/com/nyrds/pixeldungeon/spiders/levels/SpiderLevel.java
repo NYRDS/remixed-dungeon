@@ -63,8 +63,6 @@ public class SpiderLevel extends CommonLevel {
 				connectChambers(chambers.get(0), chambers.get(i));
 			}
 		}
-		
-		
 	}
 
 	private void connectChambers(Chamber a, Chamber b) {
@@ -75,7 +73,7 @@ public class SpiderLevel extends CommonLevel {
 			int dx = (int) Math.signum(x - b.x);
 			int dy = (int) Math.signum(y - b.y);
 
-			if (cellValid(x, y)) {
+			if (cellValid(x, y) && map[cell(x,y)] == Terrain.WALL) {
 				map[cell(x, y)] = Terrain.EMPTY;
 			}
 
