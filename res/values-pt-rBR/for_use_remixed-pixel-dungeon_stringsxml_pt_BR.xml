@@ -18,6 +18,7 @@
   <string name="GameScene_Secrets">O ambiente sugere que este piso esconde muitos segredos.</string>
   <!--STRINGS OF Char CLASS-->
   <string name="Char_Name">mob</string>
+  <string name="Char_Name_Objective">mob</string>
   <string-array name="Char_Hit"/>
   <string-array name="Char_Kill"/>
   <string-array name="Char_Defeat"/>
@@ -165,6 +166,7 @@
   <string name="QuickSlot_SelectedItem">Selecione um item para o QuickSlot</string>
   <!--STRINGS OF Item CLASS-->
   <string name="Item_Name">smth</string>
+  <string name="Item_Info">smth</string>
   <string name="Item_ACDrop">LARGAR</string>
   <string name="Item_ACThrow">JOGAR</string>
   <string name="Item_PackFull">Sua mochila está muito cheia para %s</string>
@@ -216,6 +218,9 @@
   <string name="LloidsBeacon_Return">O Farol Lloyd definiu com sucesso sua posição atual, agora você poderá retornar aqui a qualquer momento.</string>
   <string name="LloidsBeacon_Set">\n\nEste Farol foi definido em algum lugar do nível %d de Pixel Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_ACInscribe">INSCREVER</string>
+  <string name="Stylus_SelectArmor">Selecione um item para inscrever</string>
+  <string name="Stylus_Inscribed">você increveu %1$s no seu %2$s</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Livro Mestre</string>
   <string name="TomeOfMastery_ACRead">LER</string>
@@ -253,6 +258,7 @@
   <string name="WandHolster_Name">estojo de varinhas</string>
   <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>
   <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Name">cinto de poções </string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
   <string name="GoldenKey_Name">chave de ouro</string>
@@ -331,6 +337,7 @@
   <string name="Cripple_Info">Aleijado</string>
   <!--STRINGS OF Frost CLASS-->
   <string name="Frost_Info">Congelado</string>
+  <string name="Frost_Shatter">O frio faz %s quebrar!</string>
   <!--STRINGS OF Fury CLASS-->
   <string name="Fury_Info">Furioso</string>
   <!--STRINGS OF GasesImmunity CLASS-->

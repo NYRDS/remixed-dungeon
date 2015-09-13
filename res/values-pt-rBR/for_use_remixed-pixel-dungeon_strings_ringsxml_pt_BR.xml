@@ -62,5 +62,8 @@
   <string name="RingOfThorns_Name">Anel de Espinhos</string>
   <string name="RingOfThorns_Info">Embora este anel não conjure espinhos reais, um inimigo que atacar você vai se ser ferido por uma fração do dano que ele infligiu. Atualizar este anel não vai dar nenhum bônus adicional.</string>
   <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Anel da Pedra Sangrenta</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Você foi preso na pedra. Para Sempre.</string>
   <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Encanto de Aranha</string>
 </resources>

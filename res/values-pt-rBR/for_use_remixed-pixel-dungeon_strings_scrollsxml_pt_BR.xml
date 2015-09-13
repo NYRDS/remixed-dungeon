@@ -82,4 +82,7 @@
   <string name="ScrollOfUpgrade_InvTitle">Escolha um item para atualizar</string>
   <string name="ScrollOfUpgrade_LooksBetter">seu %s certamente está melhor agora.</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Pergaminho de Melhora de Arma</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Selecione uma arma para aprimorar</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">%s parece estar muito melhor agora</string>
 </resources>

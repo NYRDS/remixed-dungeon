@@ -28,6 +28,7 @@
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
   <string name="MeleeWeapon_Info1a">%1$s: Uma arma corpo a corpo nível %3$d %2$s.</string>
+  <string name="MeleeWeapon_Info1b">um</string>
   <string name="MeleeWeapon_Info1c">aprimorada</string>
   <string name="MeleeWeapon_Info1d">degradada</string>
   <string name="MeleeWeapon_Info2a">O dano médio é de %d pontos por acerto.</string>

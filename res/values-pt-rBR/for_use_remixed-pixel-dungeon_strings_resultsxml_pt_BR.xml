@@ -14,4 +14,5 @@
   <string name="ResultDescriptions_Ooze">Morreu com lodo tóxico no nível %d</string>
   <string name="ResultDescriptions_Fall">Morreu caindo no nível %d</string>
   <string name="ResultDescriptions_Win">Você consquistou o Amuleto de Yendor</string>
+  <string name="ResultDescriptions_Immured">Emparedado em pedra no nível %d</string>
 </resources>

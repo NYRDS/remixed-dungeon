@@ -27,8 +27,15 @@
   <string name="Ghost_Rat2">Por favor... Ajude-me... Mate essa abominação...</string>
   <string name="Ghost_Defense">evitou</string>
   <string name="FetidRat_Name">rato fedorento</string>
+  <string name="FetidRat_Name_Objective">rato fedorento</string>
   <string name="FetidRat_Gender">feminino</string>
+  <string name="FetidRat_Desc">O rato marsupial é muito maior que um normal. É cercado por uma nuvem poluída.</string>
   <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Name">ouriço</string>
+  <string name="Hedgehog_Desc">Aquele ouriço parece nervoso.</string>
+  <string name="Hedgehog_Info1">Você está procurando por Urso também?</string>
+  <string name="Hedgehog_Info2">Como está o Cavalo na mistura?</string>
+  <string name="Hedgehog_Info3">Você gosta de chá com geleia de framboesa?</string>
   <string name="Hedgehog_Info4">Pegue esta torta</string>
   <string name="Hedgehog_ImLate">Estou atrasado, estou terrivelmente atrasado...</string>
   <!--STRINGS OF Imp CLASS-->
@@ -47,6 +54,7 @@
   <string name="ImpShopkeeper_Greetings">Olá Amigo!</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">imagem espelhada</string>
+  <string name="MirrorImage_Name_Objective">imagem espelhada</string>
   <string name="MirrorImage_Gender">masculino</string>
   <string name="MirrorImage_Desc">Esta ilusão é muito semelhante a você, mas é mais pálida e se contorce um pouco.</string>
   <!--STRINGS OF RatKing CLASS-->
@@ -54,6 +62,8 @@
   <string name="RatKing_Desc">Este rato é um pouco maior do que um rato marsupial normal e ele está usando uma pequena coroa em sua cabeça.</string>
   <string name="RatKing_Info1">Eu não estou dormindo!</string>
   <string name="RatKing_Info2">O que é isso? Eu não tenho tempo para essa bobagem. O meu reino não vai se governar sozinho!</string>
+  <string name="RatKing_Info3">Como ousa, criatura franzina, perturbar Nossa Ratoeza?</string>
+  <string name="RatKing_Died">O Rei morreu. Vida Longa ao Rei!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <string name="Shopkeeper_Name">comerciante</string>
   <string name="Shopkeeper_Desc">Esse cara gordo parece mais apropriado para um distrito comercial em alguma grande cidade do que para um calabouço. Seus preços explicam por que ele prefere fazer negócios aqui.</string>
