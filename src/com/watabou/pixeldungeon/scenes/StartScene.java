@@ -226,7 +226,6 @@ public class StartScene extends PixelScene {
 			float pos = (bottom - BUTTON_HEIGHT)
 					+ (BUTTON_HEIGHT - text.height()) / 2;
 			
-			//TODO fix when text rendering will be ok
 			text.hardlight(0xFFFF00);
 			text.x = PixelScene.align(w / 2 - text.width() / 2);
 			text.y = PixelScene.align(pos);
@@ -242,7 +241,7 @@ public class StartScene extends PixelScene {
 
 			float pos = (bottom - BUTTON_HEIGHT)
 					+ (BUTTON_HEIGHT - text.height()) / 2;
-			//TODO fix when text rendering will be ok
+			
 			text.hardlight(0xFFFF00);
 			text.x = PixelScene.align(w / 2 - text.width() / 2);
 			text.y = PixelScene.align(pos);
@@ -359,7 +358,7 @@ public class StartScene extends PixelScene {
 		protected void createChildren() {
 			super.createChildren();
 
-			secondary = createMultiline(6);
+			secondary = createText(6);
 
 			add(secondary);
 		}
