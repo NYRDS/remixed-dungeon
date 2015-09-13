@@ -24,7 +24,7 @@ public class Gizmo {
 	public boolean active;
 	public boolean visible;
 	
-	public Group parent;
+	private Group parent;
 	
 	public Camera camera;
 	
@@ -93,5 +93,13 @@ public class Gizmo {
 		if (parent != null) {
 			parent.remove( this );
 		}
+	}
+
+	public Group getParent() {
+		return parent;
+	}
+
+	public void setParent(Group parent) {
+		this.parent = parent;
 	}
 }

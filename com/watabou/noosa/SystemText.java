@@ -13,7 +13,6 @@ import android.text.TextPaint;
 import android.util.Log;
 
 import com.watabou.glwrap.Matrix;
-import com.watabou.utils.PointF;
 
 public class SystemText extends Text {
 
@@ -22,13 +21,13 @@ public class SystemText extends Text {
 	protected TextPaint textPaint = new TextPaint();
 
 	private ArrayList<Image> lineImage = new ArrayList<Image>();
-	
+
 	private static Set<SystemText> texts = new HashSet<SystemText>();
 
 	private float size;
 	private final static float oversample = 2f;
 	private boolean needWidth = false;
-	
+
 	public SystemText() {
 		this("", 8, false);
 	}
@@ -38,19 +37,19 @@ public class SystemText extends Text {
 	}
 
 	public SystemText(String text, float baseLine, boolean multiline) {
-		this(text, baseLine, multiline, 1/oversample);
+		this(text, baseLine, multiline, 1 / oversample);
 	}
 
-	
-	public SystemText(String text, float baseLine, boolean multiline, float scale) {
+	public SystemText(String text, float baseLine, boolean multiline,
+			float scale) {
 		super(0, 0, 0, 0);
-		
+
 		setScale(scale, scale);
-		
+
 		needWidth = multiline;
-		
+
 		size = baseLine;
-		
+
 		if (size == 0) {
 			try {
 				throw new Exception("zero sized font!!!");
@@ -64,9 +63,9 @@ public class SystemText extends Text {
 
 		textPaint.setTextSize(size * oversample);
 		textPaint.setAntiAlias(false);
-		
+
 		textPaint.setTypeface(tf);
-		
+
 		textPaint.setColor(0xffffffff);
 
 		this.text(text);
@@ -83,22 +82,18 @@ public class SystemText extends Text {
 	private ArrayList<Float> xCharPos = new ArrayList<Float>();
 
 	private float fontHeight;
-	private int cpProcessed;
 
 	private int fillLine(int startFrom) {
 		int offset = startFrom;
 
 		float xPos = 0;
 		xCharPos.clear();
-		
+
 		final int length = text.length();
 		int lastWordOffset = offset;
-		
-		cpProcessed = 0;
-		
+
 		for (; offset < length;) {
 			final int codepoint = text.codePointAt(offset);
-			cpProcessed++;
 			int codepointCharCount = Character.charCount(codepoint);
 
 			xCharPos.add(xPos);
@@ -111,42 +106,48 @@ public class SystemText extends Text {
 			if (Character.isWhitespace(codepoint)) {
 				lastWordOffset = offset;
 			}
-			
+
 			if (codepoint == 0x000A) {
 				return offset;
 			}
 
 			xPos += xDelta;
 
-			if (maxWidth != Integer.MAX_VALUE && xPos > (float)(maxWidth/scale.x)) {
-				if(lastWordOffset != startFrom) {
+			if (maxWidth != Integer.MAX_VALUE
+					&& xPos > (float) (maxWidth / scale.x)) {
+				if (lastWordOffset != startFrom) {
 					return lastWordOffset;
 				} else {
-					return offset-1;
+					return offset - 1;
 				}
 			}
 		}
 		xCharPos.add(xPos);
-		//Log.d("SystemText", String.format("eot"));
+		// Log.d("SystemText", String.format("eot"));
 		return offset;
 	}
 
 	@SuppressLint("NewApi")
 	private void createText() {
-		
-		if(needWidth == true && maxWidth == Integer.MAX_VALUE) {
+		if (text == null) {
 			return;
 		}
-		
+
+		if (needWidth == true && maxWidth == Integer.MAX_VALUE) {
+			return;
+		}
+
 		if (fontHeight > 0) {
-			//Log.d("SystemText", String.format("xscale: %3.2f %s", scale.x, text));
-			if (parent != null) {
+			// Log.d("SystemText", String.format("xscale: %3.2f %s", scale.x,
+			// text));
+
+			if (getParent() != null) {
 				for (Image img : lineImage) {
-					parent.remove(img);
-					img.parent = null;
+					getParent().remove(img);
+					img.setParent(null);
 				}
 			}
-			
+
 			lineImage.clear();
 
 			width = height = 0;
@@ -157,25 +158,26 @@ public class SystemText extends Text {
 			while (startLine < text.length()) {
 				int nextLine = fillLine(startLine);
 				/*
-				Log.d("SystemText",
-						String.format(Locale.ROOT, "width: %d", maxWidth));
-
-				Log.d("SystemText", String.format(Locale.ROOT,
-						"processed: %d - %d -> %s", startLine, nextLine,
-						text.substring(startLine, nextLine)));
-				*/
+				 * Log.d("SystemText", String.format(Locale.ROOT, "width: %d",
+				 * maxWidth));
+				 * 
+				 * Log.d("SystemText", String.format(Locale.ROOT,
+				 * "processed: %d - %d -> %s", startLine, nextLine,
+				 * text.substring(startLine, nextLine)));
+				 */
 				float lineWidth = 0;
 
 				if (nextLine > 0) {
 					lineWidth = xCharPos.get(xCharPos.size() - 1);
 					width = Math.max(lineWidth, width);
-					
-					//Log.d("SystemText",
-					//		String.format(Locale.ROOT, "lineWidth : %3f %3f", lineWidth, width));
+
+					// Log.d("SystemText",
+					// String.format(Locale.ROOT, "lineWidth : %3f %3f",
+					// lineWidth, width));
 				}
-				
+
 				height += fontHeight;
-				
+
 				if (lineWidth > 0) {
 
 					Bitmap bitmap = Bitmap.createBitmap(
@@ -191,32 +193,41 @@ public class SystemText extends Text {
 						final int codepoint = text.codePointAt(offset);
 						int codepointCharCount = Character.charCount(codepoint);
 
-						if (mask == null || mask[charIndex]) {
-//							Log.d("SystemText", String.format("symbol: %s %d %d %3.1f", text.substring(offset, offset
-//							+ codepointCharCount), offset, charIndex, xCharPos.get(lineCounter) ));
+						if (Character.isWhitespace(codepoint)) {
 
-							canvas.drawText(
-									text.substring(offset, offset
-											+ codepointCharCount),
-											xCharPos.get(lineCounter) * oversample,
-									//textPaint.descent() * oversample,
-											(fontHeight) * oversample -textPaint.descent(),
-									textPaint);
+						} else {
+							if (mask == null
+									|| (charIndex < mask.length && mask[charIndex])) {
+								// Log.d("SystemText",
+								// String.format("symbol: %s %d %d %3.1f",
+								// text.substring(offset, offset
+								// + codepointCharCount), offset, charIndex,
+								// xCharPos.get(lineCounter) ));
+
+								canvas.drawText(
+										text.substring(offset, offset + codepointCharCount),
+										xCharPos.get(lineCounter) * oversample,
+										// textPaint.descent() * oversample,
+										(fontHeight) * oversample - textPaint.descent(),
+										textPaint);
+							}
+							charIndex++;
 						}
-						charIndex++;
+						
 						lineCounter++;
 						offset += codepointCharCount;
 					}
-					
 					lineImage.add(new Image(bitmap, true));
 				} else {
-					charIndex += cpProcessed;
 					lineImage.add(new Image());
 				}
 				startLine = nextLine;
 			}
-			Log.d("SystemText", String.format(Locale.ROOT,
-					"%3.1f x %3.1f (max: %d) -> %s", width, height, maxWidth,  text));
+			
+/*			Log.d("SystemText", String.format(Locale.ROOT,
+					"%3.1f x %3.1f (max: %3.1f, lines: %d) -> %s", width,
+					height, maxWidth / scale.x, lineImage.size(), text));
+*/			
 		}
 	}
 
@@ -228,8 +239,29 @@ public class SystemText extends Text {
 		Matrix.scale(matrix, scale.x, scale.y);
 		Matrix.rotate(matrix, angle);
 	}
-
-	@SuppressLint("NewApi")
+	
+	private void updateParent() {
+		Group parent = getParent();
+		for (Image img : lineImage) {
+			if(img.getParent() != parent){
+				if(img.getParent() != null){
+					img.getParent().remove(img);
+				}
+				
+				if(parent != null) {
+					parent.add(img);
+				}
+			}
+		}
+	}
+	
+	@Override
+	public void setParent(Group parent) {
+		super.setParent(parent);
+		
+		updateParent();
+	}
+	
 	@Override
 	public void draw() {
 		super.draw();
@@ -237,27 +269,25 @@ public class SystemText extends Text {
 		measure();
 		if (lineImage != null) {
 			int line = 0;
+			
+			updateParent();
+			
 			for (Image img : lineImage) {
 
 				// Log.d("SystemText", String.format(Locale.ROOT,
 				// "%3.1f x %3.1f -> %s", x, y, text));
-
-				if (parent != null && img.parent != parent) {
-					if (img.parent != null) {
-						img.parent.remove(img);
-					}
-					parent.add(img);
-				}
-
-				img.camera = null;
+				
+				img.visible = visible;
 				img.ra = ra;
 				img.ga = ga;
 				img.ba = ba;
 				img.rm = rm;
 				img.gm = gm;
 				img.bm = bm;
+				img.am = am;
+				img.aa = aa;
 				
-				img.setPos(x, y+ (line * fontHeight)*scale.y);
+				img.setPos(x, y + (line * fontHeight) * scale.y);
 				img.setScale(scale.x / oversample, scale.x / oversample);
 
 				line++;
@@ -265,14 +295,6 @@ public class SystemText extends Text {
 		}
 	}
 
-	@Override
-	public void hardlight( int color ) {
-		super.hardlight(color);
-		for (Image img : lineImage) {
-			img.hardlight( (color >> 16) / 255f, ((color >> 8) & 0xFF) / 255f, (color & 0xFF) / 255f );
-		}
-	}
-	
 	protected float symbolWidth(String symbol) {
 		return textPaint.measureText(symbol) / oversample;
 	}
@@ -281,10 +303,10 @@ public class SystemText extends Text {
 		if (Math.abs(scale.x) < 0.001) {
 			return;
 		}
-		
+
 		if (dirty) {
 			dirty = false;
-			if (text.equals("")) {
+			if (text == null || text.equals("")) {
 				return;
 			}
 			fontHeight = (textPaint.descent() - textPaint.ascent())
@@ -299,11 +321,7 @@ public class SystemText extends Text {
 
 	public void text(String str) {
 		dirty = true;
-		if (str == null) {
-			text = "";
-		} else {
-			text = str;
-		}
+		text = str;
 		measure();
 	}
 
@@ -313,21 +331,8 @@ public class SystemText extends Text {
 	}
 
 	public static void invalidate() {
-		for(SystemText txt:texts){
+		for (SystemText txt : texts) {
 			txt.dirty = true;
 		}
 	}
-	/*
-	@Override
-	public PointF Scale() {
-		Log.d("SystemText", String.format("%s <- %3.2f %3.2f",text, super.Scale().x,super.Scale().y));
-		return super.Scale();
-	}
-	
-	@Override
-	public void Scale(PointF arg) {
-		Log.d("SystemText", String.format("%s -> %3.2f %3.2f",text, arg.x,arg.y));
-		super.Scale(arg);
-	}
-	*/
 }

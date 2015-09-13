@@ -86,48 +86,48 @@ public class Group extends Gizmo {
 	
 	public Gizmo add( Gizmo g ) {
 		
-		if (g.parent == this) {
+		if (g.getParent() == this) {
 			return g;
 		}
 		
-		if (g.parent != null) {
-			g.parent.remove( g );
+		if (g.getParent() != null) {
+			g.getParent().remove( g );
 		}
 		
 		// Trying to find an empty space for a new member
 		for (int i=0; i < length; i++) {
 			if (members.get( i ) == null) {
 				members.set( i, g );
-				g.parent = this;
+				g.setParent(this);
 				return g;
 			}
 		}
 		
 		members.add( g );
-		g.parent = this;
+		g.setParent(this);
 		length++;
 		return g;
 	}
 	
 	public Gizmo addToBack( Gizmo g ) {
 		
-		if (g.parent == this) {
+		if (g.getParent() == this) {
 			sendToBack( g );
 			return g;
 		}
 		
-		if (g.parent != null) {
-			g.parent.remove( g );
+		if (g.getParent() != null) {
+			g.getParent().remove( g );
 		}
 		
 		if (members.get( 0 ) == null) {
 			members.set( 0, g );
-			g.parent = this;
+			g.setParent(this);
 			return g;
 		}
 		
 		members.add( 0, g );
-		g.parent = this;
+		g.setParent(this);
 		length++;
 		return g;
 	}
@@ -160,7 +160,7 @@ public class Group extends Gizmo {
 		int index = members.indexOf( g );
 		if (index != -1) {
 			members.set( index, null );
-			g.parent = null;
+			g.setParent(null);
 			return g;
 		} else {
 			return null;
@@ -171,7 +171,7 @@ public class Group extends Gizmo {
 	public Gizmo remove( Gizmo g ) {
 		if (members.remove( g )) {
 			length--;
-			g.parent = null;
+			g.setParent(null);
 			return g;
 		} else {
 			return null;
@@ -182,8 +182,8 @@ public class Group extends Gizmo {
 		int index = members.indexOf( oldOne );
 		if (index != -1) {
 			members.set( index, newOne );
-			newOne.parent = this;
-			oldOne.parent = null;
+			newOne.setParent(this);
+			oldOne.setParent(null);
 			return newOne;
 		} else {
 			return null;
@@ -242,7 +242,7 @@ public class Group extends Gizmo {
 		for (int i=0; i < length; i++) {
 			Gizmo g = members.get( i );
 			if (g != null) {
-				g.parent = null;
+				g.setParent(null);
 			}
 		}
 		members.clear();
