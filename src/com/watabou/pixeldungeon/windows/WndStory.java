@@ -59,8 +59,6 @@ public class WndStory extends Window {
 	
 	private Text tf;
 	
-	private float delay;
-	
 	public WndStory( String text ) {
 		super( 0, 0, Chrome.get( Chrome.Type.SCROLL ) );
 		
@@ -96,17 +94,11 @@ public class WndStory extends Window {
 	public void update() {
 		super.update();
 		
-		if (delay > 0 && (delay -= Game.elapsed) <= 0) {
-			chrome.visible = tf.visible = true;
-		}
 	}
 	
 	public static void showCustomStory( String text ) {
 		if (text != null) {
 			WndStory wnd = new WndStory( text );
-			if ((wnd.delay = 0.6f) > 0) {
-				wnd.chrome.visible = wnd.tf.visible = false;
-			}
 			
 			Game.scene().add( wnd );
 		}
@@ -121,9 +113,6 @@ public class WndStory extends Window {
 		String text = CHAPTERS.get( id );
 		if (text != null) {
 			WndStory wnd = new WndStory( text );
-			if ((wnd.delay = 0.6f) > 0) {
-				wnd.chrome.visible = wnd.tf.visible = false;
-			}
 			
 			Game.scene().add( wnd );
 			

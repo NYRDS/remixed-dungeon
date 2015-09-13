@@ -85,6 +85,6 @@ public class DonateButton extends Button {
 
 	@Override
 	protected void onClick() {
-		parent.add(new WndDonate());
+		getParent().add(new WndDonate());
 	}
 }

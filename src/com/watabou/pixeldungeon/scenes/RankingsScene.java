@@ -245,9 +245,9 @@ public class RankingsScene extends PixelScene {
 		@Override
 		protected void onClick() {
 			if (rec.gameFile.length() > 0) {
-				parent.add( new WndRanking( rec.gameFile ) );
+				getParent().add( new WndRanking( rec.gameFile ) );
 			} else {
-				parent.add( new WndError( TXT_NO_INFO ) );
+				getParent().add( new WndError( TXT_NO_INFO ) );
 			}
 		}
 	}

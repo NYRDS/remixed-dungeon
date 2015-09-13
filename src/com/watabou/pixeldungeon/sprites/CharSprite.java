@@ -137,7 +137,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		
 		motion = new PosTweener( this, worldToCamera( to ), MOVE_INTERVAL );
 		motion.listener = this;
-		parent.add( motion );
+		getParent().add( motion );
 
 		isMoving = true;
 		

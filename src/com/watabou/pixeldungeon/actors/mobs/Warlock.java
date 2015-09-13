@@ -77,7 +77,7 @@ public class Warlock extends Mob implements Callback {
 	}
 
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.whiteLight( getSprite().parent, pos, cell, callback );
+		MagicMissile.whiteLight( getSprite().getParent(), pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 		getSprite().visible = false;
 	}

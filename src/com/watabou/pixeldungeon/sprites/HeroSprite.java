@@ -122,7 +122,7 @@ public class HeroSprite extends CharSprite {
 		jumpTweener = new JumpTweener(this, worldToCamera(to), distance * 4,
 				distance * 0.1f);
 		jumpTweener.listener = this;
-		parent.add(jumpTweener);
+		getParent().add(jumpTweener);
 
 		turnTo(from, to);
 		play(fly);

@@ -60,9 +60,9 @@ public class DungeonTilemap extends Tilemap {
 		// For bright mode
 		tile.rm = tile.gm = tile.bm = rm;
 		tile.ra = tile.ga = tile.ba = ra;
-		parent.add( tile );
+		getParent().add( tile );
 		
-		parent.add( new AlphaTweener( tile, 0, 0.6f ) {
+		getParent().add( new AlphaTweener( tile, 0, 0.6f ) {
 			protected void onComplete() {
 				tile.killAndErase();
 				killAndErase();

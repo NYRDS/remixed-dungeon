@@ -477,7 +477,7 @@ public class Item implements Bundlable {
 		}
 		final float finalDelay = delay;
 		
-		((MissileSprite)user.getSprite().parent.recycle( MissileSprite.class )).
+		((MissileSprite)user.getSprite().getParent().recycle( MissileSprite.class )).
 			reset( user.pos, cell, this, new Callback() {			
 				@Override
 				public void call() {

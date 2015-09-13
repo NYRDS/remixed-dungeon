@@ -73,7 +73,7 @@ public class Pushing extends Actor {
 			
 			delay = 0;
 			
-			sprite.parent.add( this );
+			sprite.getParent().add( this );
 		}
 		
 		@Override

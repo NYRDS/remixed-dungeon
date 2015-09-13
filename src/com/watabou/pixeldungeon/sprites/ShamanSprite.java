@@ -54,7 +54,7 @@ public class ShamanSprite extends MobSprite {
 		
 		points[0] = ch.pos;
 		points[1] = pos;
-		parent.add( new Lightning( points, 2, (Shaman)ch ) );
+		getParent().add( new Lightning( points, 2, (Shaman)ch ) );
 		
 		turnTo( ch.pos, pos );
 		play( zap );

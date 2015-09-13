@@ -62,8 +62,8 @@ public class Wound extends Image {
 	}
 	
 	public static void hit( Char ch, float angle ) {
-		Wound w = (Wound)ch.getSprite().parent.recycle( Wound.class );
-		ch.getSprite().parent.bringToFront( w );
+		Wound w = (Wound)ch.getSprite().getParent().recycle( Wound.class );
+		ch.getSprite().getParent().bringToFront( w );
 		w.reset( ch.pos );
 		w.angle = angle;
 	}
@@ -73,7 +73,7 @@ public class Wound extends Image {
 	}
 	
 	public static void hit( int pos, float angle ) {
-		Group parent = Dungeon.hero.getSprite().parent;
+		Group parent = Dungeon.hero.getSprite().getParent();
 		Wound w = (Wound)parent.recycle( Wound.class );
 		parent.bringToFront( w );
 		w.reset( pos );

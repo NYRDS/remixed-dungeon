@@ -46,6 +46,6 @@ public class PremiumPrefsButton extends Button {
 	
 	@Override
 	protected void onClick() {
-		parent.add( new WndPremiumSettings( ) );
+		getParent().add( new WndPremiumSettings( ) );
 	}
 }

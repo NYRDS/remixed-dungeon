@@ -104,7 +104,7 @@ public class Wraith extends Mob {
 			GameScene.add(Dungeon.level, w, SPAWN_DELAY );
 			
 			w.getSprite().alpha( 0 );
-			w.getSprite().parent.add( new AlphaTweener( w.getSprite(), 1, 0.5f ) );
+			w.getSprite().getParent().add( new AlphaTweener( w.getSprite(), 1, 0.5f ) );
 			
 			w.getSprite().emitter().burst( ShadowParticle.CURSE, 5 );
 			

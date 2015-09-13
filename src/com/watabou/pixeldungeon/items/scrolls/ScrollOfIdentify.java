@@ -35,7 +35,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 	@Override
 	protected void onItemSelected( Item item ) {
 		
-		curUser.getSprite().parent.add( new Identification( curUser.getSprite().center().offset( 0, -16 ) ) );
+		curUser.getSprite().getParent().add( new Identification( curUser.getSprite().center().offset( 0, -16 ) ) );
 		
 		item.identify();
 		GLog.i(String.format(Game.getVar(R.string.ScrollOfIdentify_Info1), item));

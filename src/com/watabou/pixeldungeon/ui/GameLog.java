@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.ui;
 
 import java.util.regex.Pattern;
 
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.ui.Component;
@@ -80,7 +79,6 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			lastEntry.measure();
 			
 		} else {
-			
 			lastEntry = PixelScene.createMultiline( text, 7 );
 			lastEntry.maxWidth((int)width);
 			lastEntry.measure();
@@ -90,8 +88,19 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			
 		}
 		
-		if (length > MAX_MESSAGES) {
-			remove( members.get( 0 ) );
+		int texts = 0;
+		for (int i = 0; i<length;i++) {
+			if(members.get( i ) instanceof Text)
+			texts++;
+		}
+		
+		if (texts > MAX_MESSAGES) {
+			for(int i = 0; i< length; i++) {
+				if(members.get( i ) instanceof Text) {
+					remove ( members.get( i ) );
+					break;
+				}
+			}
 		}
 		
 		layout();
@@ -102,9 +111,11 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		float pos = y;
 		for (int i=length-1; i >= 0; i--) {
 			Visual entry = (Visual) members.get( i );
-			entry.x = x;
-			entry.y = pos - entry.height();
-			pos = entry.y;
+			if(entry instanceof Text) {
+				entry.x = x;
+				entry.y = pos - entry.height();
+				pos = entry.y;
+			}
 		}
 	}
 	

@@ -1454,7 +1454,7 @@ public class Hero extends Char {
 				if (Dungeon.visible[p]) {
 
 					if (intentional) {
-						getSprite().parent.addToBack(new CheckedCell(p));
+						getSprite().getParent().addToBack(new CheckedCell(p));
 					}
 
 					if (Dungeon.level.secret[p]

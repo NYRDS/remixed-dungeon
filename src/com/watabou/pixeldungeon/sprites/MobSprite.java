@@ -41,11 +41,11 @@ public class MobSprite extends CharSprite {
 		super.onComplete( anim );
 		
 		if (anim == die) {	
-			parent.add( new AlphaTweener( this, 0, FADE_TIME ) {
+			getParent().add( new AlphaTweener( this, 0, FADE_TIME ) {
 				@Override
 				protected void onComplete() {
 					MobSprite.this.killAndErase();
-					parent.erase( this );
+					getParent().erase( this );
 				};
 			} );
 		}
@@ -56,11 +56,11 @@ public class MobSprite extends CharSprite {
 		origin.set( width / 2, height - DungeonTilemap.SIZE / 2 );
 		angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
 		
-		parent.add( new ScaleTweener( this, new PointF( 0, 0 ), FALL_TIME ) {
+		getParent().add( new ScaleTweener( this, new PointF( 0, 0 ), FALL_TIME ) {
 			@Override
 			protected void onComplete() {
 				MobSprite.this.killAndErase();
-				parent.erase( this );
+				getParent().erase( this );
 			};
 			@Override
 			protected void updateValues( float progress ) {
