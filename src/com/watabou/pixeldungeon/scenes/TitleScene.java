@@ -115,7 +115,7 @@ public class TitleScene extends PixelScene {
 
 		btnDonate = new DonateButton();
 
-		pleaseSupport = PixelScene.createMultiline(8);
+		pleaseSupport = PixelScene.createText(8);
 		pleaseSupport.text(btnDonate.getText());
 		pleaseSupport.measure();
 		pleaseSupport.setPos((w - pleaseSupport.width()) / 2,
