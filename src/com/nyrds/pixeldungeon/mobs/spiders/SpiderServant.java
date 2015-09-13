@@ -27,7 +27,7 @@ public class SpiderServant extends Mob {
 		kind = Random.IntRange(0, 1);
 		
 		loot = new MysteryMeat();
-		lootChance = 0.167f;
+		lootChance = 0.067f;
 	}
 	
 	@Override

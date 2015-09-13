@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -41,7 +42,7 @@ public class SpiderMind extends Mob {
 		maxLvl = 9;
 		
 		loot = new MysteryMeat();
-		lootChance = 0.167f;
+		lootChance = 0.067f;
 	}
 	
 	@Override
@@ -52,8 +53,11 @@ public class SpiderMind extends Mob {
 	@SuppressWarnings("unchecked")
 	@Override
 	public int attackProc( Char enemy, int damage ) {
-		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);		
-		Buff.prolong( enemy, buffClass, 3 );
+		
+		if(enemy instanceof Hero) {
+			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);		
+			Buff.prolong( enemy, buffClass, 3 );
+		}
 		
 		return damage;
 	}
