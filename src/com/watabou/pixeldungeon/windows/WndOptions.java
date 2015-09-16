@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndOptions extends Window {
@@ -49,7 +50,7 @@ public class WndOptions extends Window {
 		
 		for (int i=0; i < options.length; i++) {
 			final int index = i;
-			RedButton btn = new RedButton( options[i] ) {
+			SystemRedButton btn = new SystemRedButton( options[i]) {
 				@Override
 				protected void onClick() {
 					hide();

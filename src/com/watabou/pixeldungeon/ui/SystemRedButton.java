@@ -25,15 +25,14 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 
-public class RedButton extends Button {
+public class SystemRedButton extends Button {
 	
 	protected NinePatch bg;
 	protected Text text;
 	protected Image icon;
 	
-	public RedButton( String label ) {
+	public SystemRedButton( String label ) {
 		super();
 		
 		text.text( label );
@@ -47,7 +46,8 @@ public class RedButton extends Button {
 		bg = Chrome.get( Chrome.Type.BUTTON );
 		add( bg );
 		
-		text = PixelScene.createText( 9 );
+		text = new SystemText(9);
+		
 		add( text );
 	}
 	
