@@ -70,8 +70,13 @@ public class PixelDungeon extends GameWithGoogleIap {
 			}
 		}
 		
-		
 		PixelDungeon.instance().initIap();
+		
+		if(PixelDungeon.uiLanguage().equals("ko")) {
+			PixelDungeon.classicFont(false);
+		}
+		
+		ModdingMode.setClassicTextRenderingMode(PixelDungeon.classicFont());
 		
 		useLocale(uiLanguage());
 
@@ -277,6 +282,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 
 	public static String uiLanguage() {
 		String deviceLocale = Locale.getDefault().getLanguage();
+		GLog.i("Device locale: %s", deviceLocale);
 		return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE,
 				deviceLocale);
 	}
