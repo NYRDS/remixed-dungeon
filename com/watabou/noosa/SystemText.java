@@ -62,7 +62,7 @@ public class SystemText extends Text {
 		Typeface tf = Typeface.create((String) null, Typeface.BOLD);
 
 		textPaint.setTextSize(size * oversample);
-		textPaint.setAntiAlias(false);
+		textPaint.setAntiAlias(true);
 
 		textPaint.setTypeface(tf);
 
@@ -144,7 +144,7 @@ public class SystemText extends Text {
 			if (getParent() != null) {
 				for (Image img : lineImage) {
 					getParent().remove(img);
-					img.setParent(null);
+					img.destroy();
 				}
 			}
 

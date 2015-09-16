@@ -67,7 +67,13 @@ public class Image extends Visual {
 		texture = new SmartTexture(bitmap);
 		frame( new RectF( 0, 0, 1, 1 ) );
 	}
-
+/*
+	@Override
+	public void destroy() {
+		super.destroy();
+		texture.delete();
+	}
+*/
 	public void texture( Object tx ) {
 		texture = tx instanceof SmartTexture ? (SmartTexture)tx : TextureCache.get( tx );
 		frame( new RectF( 0, 0, 1, 1 ) );
