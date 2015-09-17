@@ -90,11 +90,11 @@ public class FloatingText extends BitmapText {
 	/* STATIC METHODS */
 	
 	public static void show( float x, float y, String text, int color ) {
-		GameScene.status().reset( x,  y,  text, color );
+		((FloatingText) GameScene.status()).reset( x,  y,  text, color );
 	}
 	
 	public static void show( float x, float y, int key, String text, int color ) {
-		FloatingText txt = GameScene.status();
+		FloatingText txt = (FloatingText) GameScene.status();
 		txt.reset( x,  y,  text, color );
 		push( txt, key );
 	}

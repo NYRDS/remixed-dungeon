@@ -23,7 +23,7 @@ public class GenericInfo {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		parent.add( titlebar );
 		
-		Text txtInfo = PixelScene.createMultiline( desc, 6 );
+		Text txtInfo = PixelScene.createMultiline( desc, 8 );
 		txtInfo.maxWidth(WIDTH);
 		txtInfo.measure();
 		txtInfo.setPos(0, 0);

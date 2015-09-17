@@ -19,12 +19,14 @@ package com.watabou.pixeldungeon.scenes;
 
 import java.io.IOException;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.SkinnedBlock;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
@@ -47,6 +49,7 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.Ripple;
 import com.watabou.pixeldungeon.effects.SpellSprite;
+import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -511,8 +514,12 @@ public class GameScene extends PixelScene {
 		}
 	}
 	
-	public static FloatingText status() {
-		return scene != null ? (FloatingText)scene.statuses.recycle( FloatingText.class ) : null;
+	public static Text status() {
+		if(ModdingMode.getClassicTextRenderingMode()) {
+			return scene != null ? (FloatingText)scene.statuses.recycle( FloatingText.class ) : null;
+		} else {
+			return scene != null ? (SystemFloatingText) scene.statuses.recycle( SystemFloatingText.class ) : null;
+		}
 	}
 	
 	public static void pickUp( Item item ) {

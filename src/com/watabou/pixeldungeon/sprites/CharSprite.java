@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
@@ -32,6 +33,7 @@ import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.IceBlock;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
+import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.effects.TorchHalo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
@@ -120,10 +122,19 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 			if (args.length > 0) {
 				text = Utils.format( text, args );
 			}
-			if (ch != null) {
-				FloatingText.show( x + width * 0.5f, y, ch.pos, text, color );
-			} else {
-				FloatingText.show( x + width * 0.5f, y, text, color );
+			
+			if(ModdingMode.getClassicTextRenderingMode()) {
+				if (ch != null) {
+					FloatingText.show( x + width * 0.5f, y, ch.pos, text, color );
+				} else {
+					FloatingText.show( x + width * 0.5f, y, text, color );
+				}
+			}	else {
+				if (ch != null) {
+					SystemFloatingText.show( x + width * 0.5f, y, ch.pos, text, color );
+				} else {
+					SystemFloatingText.show( x + width * 0.5f, y, text, color );
+				}				
 			}
 		}
 	}

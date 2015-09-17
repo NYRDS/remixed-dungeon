@@ -143,9 +143,7 @@ public class TitleScene extends PixelScene {
 		archs.setSize(w, h);
 		addToBack(archs);
 
-		//Text version = Text.create("v " + Game.version, font1x);
-		Text version = Text.create(font1x);
-		version.text("v " + Game.version);
+		Text version = Text.create("v " + Game.version, font1x);
 		version.measure();
 		version.hardlight(0x888888);
 		version.setPos(w - version.width(), h - version.height());

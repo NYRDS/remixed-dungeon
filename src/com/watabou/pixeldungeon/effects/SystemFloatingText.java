@@ -2,7 +2,6 @@ package com.watabou.pixeldungeon.effects;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -22,7 +21,7 @@ public class SystemFloatingText extends SystemText {
 	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<ArrayList<SystemFloatingText>>();
 	
 	public SystemFloatingText() {
-		super(null,9,false);
+		super(null, 12 ,false);
 		
 		speed.y = - DISTANCE / LIFESPAN;
 	}
@@ -74,11 +73,11 @@ public class SystemFloatingText extends SystemText {
 	/* STATIC METHODS */
 	
 	public static void show( float x, float y, String text, int color ) {
-		GameScene.status().reset( x,  y,  text, color );
+		((SystemFloatingText) GameScene.status()).reset( x,  y,  text, color );
 	}
 	
 	public static void show( float x, float y, int key, String text, int color ) {
-		SystemFloatingText txt = GameScene.status();
+		SystemFloatingText txt = (SystemFloatingText) GameScene.status();
 		txt.reset( x,  y,  text, color );
 		push( txt, key );
 	}
