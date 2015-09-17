@@ -20,17 +20,13 @@ public class SystemText extends Text {
 
 	protected TextPaint textPaint = new TextPaint();
 
-	private ArrayList<Image> lineImage = new ArrayList<Image>();
+	private ArrayList<SystemTextLine> lineImage = new ArrayList<SystemTextLine>();
 
 	private static Set<SystemText> texts = new HashSet<SystemText>();
 
 	private float size;
 	private final static float oversample = 2f;
 	private boolean needWidth = false;
-
-	public SystemText() {
-		this("", 8, false);
-	}
 
 	public SystemText(float baseLine) {
 		this("", baseLine, false);
@@ -142,7 +138,7 @@ public class SystemText extends Text {
 			// text));
 
 			if (getParent() != null) {
-				for (Image img : lineImage) {
+				for (SystemTextLine img : lineImage) {
 					getParent().remove(img);
 					img.destroy();
 				}
@@ -217,9 +213,9 @@ public class SystemText extends Text {
 						lineCounter++;
 						offset += codepointCharCount;
 					}
-					lineImage.add(new Image(bitmap, true));
+					lineImage.add(new SystemTextLine(bitmap));
 				} else {
-					lineImage.add(new Image());
+					lineImage.add(new SystemTextLine());
 				}
 				startLine = nextLine;
 			}
@@ -242,7 +238,7 @@ public class SystemText extends Text {
 	
 	private void updateParent() {
 		Group parent = getParent();
-		for (Image img : lineImage) {
+		for (SystemTextLine img : lineImage) {
 			if(img.getParent() != parent){
 				if(img.getParent() != null){
 					img.getParent().remove(img);
@@ -272,7 +268,7 @@ public class SystemText extends Text {
 			
 			updateParent();
 			
-			for (Image img : lineImage) {
+			for (SystemTextLine img : lineImage) {
 
 				// Log.d("SystemText", String.format(Locale.ROOT,
 				// "%3.1f x %3.1f -> %s", x, y, text));
@@ -306,9 +302,10 @@ public class SystemText extends Text {
 
 		if (dirty) {
 			dirty = false;
-			if (text == null || text.equals("")) {
-				return;
+			if (text == null) {
+				text = "";
 			}
+
 			fontHeight = (textPaint.descent() - textPaint.ascent())
 					/ oversample;
 			createText();

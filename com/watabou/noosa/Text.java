@@ -33,10 +33,6 @@ public abstract class Text extends Visual {
 		return new SystemText(text, fontSize, false);
 	}
 	
-	public static Text createMultiline(String text, float fontSize) {
-		return new SystemText(text, fontSize, true);
-	}
-	
 	public static Text create(Font font) {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(font.baseLine);

@@ -63,10 +63,6 @@ public class MovieClip extends Image {
 					finished = true;
 					if (listener != null) {
 						listener.onComplete( curAnim );
-						// This check can probably be removed
-						if (curAnim == null) {
-							return;
-						}
 					}
 					
 				} else {

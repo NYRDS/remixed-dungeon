@@ -19,45 +19,43 @@ package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
 
+import android.graphics.Bitmap;
 import android.graphics.RectF;
+import android.util.Log;
 
-import com.watabou.gltextures.TextureCache;
 import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
 
-public class Image extends Visual {
+public class SystemTextLine extends Visual {
 
 	public SmartTexture texture;
 	protected RectF frame;
-	
-	public boolean flipHorizontal;
-	public boolean flipVertical;
 	
 	protected float[] vertices;
 	protected FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
 	
-	public Image() {
+	public SystemTextLine() {
 		super( 0, 0, 0, 0 );
 		
 		vertices = new float[16];
 		verticesBuffer = Quad.create();
 	}
-	
-	public Image( Image src ) {
+		
+	public SystemTextLine(Bitmap bitmap) {
 		this();
-		copy( src );
+		texture = new SmartTexture(bitmap);
+		frame( new RectF( 0, 0, 1, 1 ) );
 	}
-	
-	public Image( Object tx ) {
-		this();
-		texture( tx );
-	}
-	
-	public Image( Object tx, int left, int top, int width, int height ) {
-		this( tx );
-		frame( texture.uvRect( left,  top,  left + width, top + height ) );
+
+	@Override
+	public void destroy() {
+		super.destroy();
+		if(texture != null) {
+			texture.delete();
+		}
 	}
 
 	public void texture( Object tx ) {
@@ -83,7 +81,7 @@ public class Image extends Visual {
 		return new RectF( frame );
 	}
 
-	public void copy( Image other ) {
+	public void copy( SystemTextLine other ) {
 		texture = other.texture;
 		frame = new RectF( other.frame );
 		
@@ -95,30 +93,15 @@ public class Image extends Visual {
 	}
 	
 	protected void updateFrame() {
-		
-		if (flipHorizontal) {
-			vertices[2]		= frame.right;
-			vertices[6]		= frame.left;
-			vertices[10]	= frame.left;
-			vertices[14]	= frame.right;
-		} else {
-			vertices[2]		= frame.left;
-			vertices[6]		= frame.right;
-			vertices[10]	= frame.right;
-			vertices[14]	= frame.left;
-		}
-		
-		if (flipVertical) {
-			vertices[3]		= frame.bottom;
-			vertices[7]		= frame.bottom;
-			vertices[11]	= frame.top;
-			vertices[15]	= frame.top;
-		} else {
-			vertices[3]		= frame.top;
-			vertices[7]		= frame.top;
-			vertices[11]	= frame.bottom;
-			vertices[15]	= frame.bottom;
-		}
+		vertices[2]		= frame.left;
+		vertices[6]		= frame.right;
+		vertices[10]	= frame.right;
+		vertices[14]	= frame.left;
+
+		vertices[3]		= frame.top;
+		vertices[7]		= frame.top;
+		vertices[11]	= frame.bottom;
+		vertices[15]	= frame.bottom;
 		
 		dirty = true;
 	}
@@ -142,6 +125,10 @@ public class Image extends Visual {
 	
 	@Override
 	public void draw() {
+		if(texture == null) {
+			//GLog.i("null texture");
+			return;
+		}
 		
 		super.draw();
 
