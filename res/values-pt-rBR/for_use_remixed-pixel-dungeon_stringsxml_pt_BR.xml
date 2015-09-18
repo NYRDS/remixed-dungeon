@@ -9,7 +9,7 @@
   <string name="AmuletScene_Stay">Eu não acabei ainda</string>
   <string name="AmuletScene_Txt">Você finalmente segurou em suas mãos o Amuleto de Yendor. Usando o seu poder, você pode dominar o mundo ou trazer paz e prosperidade para as pessoas ou o que quiser. De qualquer forma, sua vida vai mudar para sempre e este jogo vai terminar aqui. Ou você pode continuar um mero mortal um pouco mais.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Bem-vindo ao nível %d de Pixel Dungeon!\nàáâäãą èéêëę ìíîï òóôöõ ùúûüñń çćłśźż ÀÁÂÄÃĄ ÈÉÊËĘ ÌÍÎÏ ÒÓÔÖÕ ÙÚÛÜÑŃ ÇĆŁŚŹŻº</string>
+  <string name="GameScene_Welcome">Bem-vindo ao nível %d de Pixel Dungeon!</string>
   <string name="GameScene_WelcomeBack">Bem-vindo de volta ao nível %d de Pixel Dungeon!</string>
   <string name="GameScene_NightMode">Seja cauteloso, pois o calabouço é ainda mais perigoso à noite!</string>
   <string name="GameScene_Chasm">Seus passos ecoam através do calabouço.</string>
