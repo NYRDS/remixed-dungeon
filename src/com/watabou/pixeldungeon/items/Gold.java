@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -48,8 +47,7 @@ public class Gold extends Item {
 	public Gold( int value ) {
 		this.quantity(value);
 		
-		imageFile = "gold.png";
-		image = ItemSpriteSheet.GOLD;
+		imageFile = "items/gold.png";
 		stackable = true;
 	}
 	
@@ -94,6 +92,31 @@ public class Gold extends Item {
 		default:
 			return Utils.format( TXT_INFO, quantity() );
 		}
+	}
+	
+	@Override
+	public void quantity(int value) {
+		super.quantity(value);
+		
+		image = 0;
+		
+		if(value > 9 ) {
+			image = 1;
+		}
+		
+		if(value > 99) {
+			image = 2;
+		}
+		
+		if(value > 999) {
+			image = 3;
+		}
+		
+		if(value > 9999) {
+			image = 4;
+		}
+		
+		
 	}
 	
 	@Override

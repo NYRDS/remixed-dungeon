@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -56,23 +57,24 @@ public class ItemSprite extends MovieClip {
 	public ItemSprite() {
 		this( ItemSpriteSheet.SMTH, null );
 	}
-	/*
+	
 	public ItemSprite( Item item ) {
-		this( item.image(), item.glowing() );
+		this(item.imageFile(), item.image(), item.glowing() );
 	}
-	*/
+	
 	public ItemSprite( int image, Glowing glowing ) {
 		this(Assets.ITEMS, image, glowing);
 	}
 	
-	public ItemSprite(String file, int imageIndex, Glowing glowing ) {
-		super( file );
-		
-		if (film == null) {
-			film = new TextureFilm( texture, SIZE, SIZE );
-		}
+	private ItemSprite(String file, int imageIndex, Glowing glowing ) {
+		super();
 		
 		view(file, imageIndex, glowing );
+	}
+	
+	private void updateTexture(String file) {
+		texture(file);
+		film = new TextureFilm( texture, SIZE, SIZE );
 	}
 	
 	public void originToCenter() {
@@ -150,7 +152,8 @@ public class ItemSprite extends MovieClip {
 	}
 	
 	public ItemSprite view(String file, int image, Glowing glowing ) {
-		texture(file);
+		
+		updateTexture(file);
 		
 		frame( film.get( image ) );
 		if ((this.glowing = glowing) == null) {

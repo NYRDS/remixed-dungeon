@@ -42,7 +42,7 @@ public class WndChooseWay extends Window {
 		super();
 		
 		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( tome.image(), null ) );
+		titlebar.icon( new ItemSprite( tome ) );
 		titlebar.label( tome.name() );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );

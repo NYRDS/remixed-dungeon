@@ -49,7 +49,7 @@ public class WndWandmaker extends Window {
 		super();
 		
 		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( item.image(), null ) );
+		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( Utils.capitalize( item.name() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );

@@ -120,58 +120,58 @@ public class ItemSlot extends Button {
 			
 			active = false;
 			icon.visible = topLeft.visible = topRight.visible = bottomRight.visible = false;
+			return;
+		}
+		
+		active = true;
+		icon.visible = topLeft.visible = topRight.visible = bottomRight.visible = true;
+		
+		icon.view(item.imageFile(), item.image(), item.glowing() );
+		
+		topLeft.text( item.status()  );
+		
+		boolean isArmor = item instanceof Armor;
+		boolean isWeapon = item instanceof Weapon;
+		if (isArmor || isWeapon) {
+			
+			if (item.levelKnown || (isWeapon && !(item instanceof MeleeWeapon))) {
+				
+				int str = isArmor ? ((Armor)item).STR : ((Weapon)item).STR;
+				topRight.text( Utils.format( TXT_STRENGTH, str ) );
+				if (str > Dungeon.hero.effectiveSTR()) {
+					topRight.hardlight( DEGRADED );
+				} else {
+					topRight.resetColor();
+				}
+				
+			} else {
+				
+				topRight.text( Utils.format( TXT_TYPICAL_STR, isArmor ? 
+					((Armor)item).typicalSTR() : 
+					((MeleeWeapon)item).typicalSTR() ) );
+				topRight.hardlight( WARNING );
+				
+			}
+			topRight.measure();
 			
 		} else {
 			
-			active = true;
-			icon.visible = topLeft.visible = topRight.visible = bottomRight.visible = true;
+			topRight.text( null );
 			
-			icon.view(item.imageFile(), item.image(), item.glowing() );
-			
-			topLeft.text( item.status()  );
-			
-			boolean isArmor = item instanceof Armor;
-			boolean isWeapon = item instanceof Weapon;
-			if (isArmor || isWeapon) {
-				
-				if (item.levelKnown || (isWeapon && !(item instanceof MeleeWeapon))) {
-					
-					int str = isArmor ? ((Armor)item).STR : ((Weapon)item).STR;
-					topRight.text( Utils.format( TXT_STRENGTH, str ) );
-					if (str > Dungeon.hero.effectiveSTR()) {
-						topRight.hardlight( DEGRADED );
-					} else {
-						topRight.resetColor();
-					}
-					
-				} else {
-					
-					topRight.text( Utils.format( TXT_TYPICAL_STR, isArmor ? 
-						((Armor)item).typicalSTR() : 
-						((MeleeWeapon)item).typicalSTR() ) );
-					topRight.hardlight( WARNING );
-					
-				}
-				topRight.measure();
-				
-			} else {
-				
-				topRight.text( null );
-				
-			}
-	
-			int level = item.visiblyUpgraded(); 
-
-			if (level != 0 || (item.cursed && item.cursedKnown)) {
-				bottomRight.text( item.levelKnown ? Utils.format( TXT_LEVEL, level ) : "" );
-				bottomRight.measure();
-				bottomRight.hardlight( level > 0 ? UPGRADED : DEGRADED );
-			} else {
-				bottomRight.text( null );
-			}
-			
-			layout();
 		}
+
+		int level = item.visiblyUpgraded(); 
+
+		if (level != 0 || (item.cursed && item.cursedKnown)) {
+			bottomRight.text( item.levelKnown ? Utils.format( TXT_LEVEL, level ) : "" );
+			bottomRight.measure();
+			bottomRight.hardlight( level > 0 ? UPGRADED : DEGRADED );
+		} else {
+			bottomRight.text( null );
+		}
+		
+		layout();
+	
 	}
 	
 	public void enable( boolean value ) {

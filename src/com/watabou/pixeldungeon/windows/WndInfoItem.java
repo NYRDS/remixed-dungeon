@@ -55,7 +55,7 @@ public class WndInfoItem extends Window {
 			} else if (item.levelKnown && item.level() < 0) {
 				color = ItemSlot.DEGRADED;				
 			}
-			fillFields( item.image(), item.glowing(), color, item.toString(), item.info() );
+			fillFields( item, color, item.toString(), item.info() );
 			
 		} else {
 			
@@ -79,7 +79,7 @@ public class WndInfoItem extends Window {
 				info = TXT_NEED_KEY;
 			}
 			
-			fillFields( heap.image(), heap.glowing(), TITLE_COLOR, title, info );
+			fillFields( heap.peek(), TITLE_COLOR, title, info );
 			
 		}
 	}
@@ -95,12 +95,12 @@ public class WndInfoItem extends Window {
 			color = ItemSlot.DEGRADED;				
 		}
 		
-		fillFields( item.image(), item.glowing(), color, item.toString(), item.info() );
+		fillFields( item, color, item.toString(), item.info() );
 	}
 	
-	private void fillFields( int image, ItemSprite.Glowing glowing, int titleColor, String title, String info ) {
+	private void fillFields( Item item, int titleColor, String title, String info ) {
 		GenericInfo.makeInfo(	this,
-								new ItemSprite( image, glowing ), 
+								new ItemSprite( item ), 
 								title, 
 								titleColor, 
 								info);
