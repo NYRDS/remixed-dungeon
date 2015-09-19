@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.sprites;
 import android.graphics.Bitmap;
 import android.util.Log;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.MovieClip;
@@ -28,12 +29,10 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -44,7 +43,7 @@ public class ItemSprite extends MovieClip {
 	
 	private static final float DROP_INTERVAL = 0.4f;
 	
-	protected static TextureFilm film;
+	protected TextureFilm film;
 	
 	public Heap heap;
 	
@@ -57,19 +56,23 @@ public class ItemSprite extends MovieClip {
 	public ItemSprite() {
 		this( ItemSpriteSheet.SMTH, null );
 	}
-	
+	/*
 	public ItemSprite( Item item ) {
 		this( item.image(), item.glowing() );
 	}
-	
+	*/
 	public ItemSprite( int image, Glowing glowing ) {
-		super( Assets.ITEMS );
+		this(Assets.ITEMS, image, glowing);
+	}
+	
+	public ItemSprite(String file, int imageIndex, Glowing glowing ) {
+		super( file );
 		
 		if (film == null) {
 			film = new TextureFilm( texture, SIZE, SIZE );
 		}
 		
-		view( image, glowing );
+		view(file, imageIndex, glowing );
 	}
 	
 	public void originToCenter() {
@@ -82,7 +85,7 @@ public class ItemSprite extends MovieClip {
 	
 	public void link( Heap heap ) {
 		this.heap = heap;
-		view( heap.image(), heap.glowing() );
+		view(heap.imageFile(), heap.image(), heap.glowing() );
 		place( heap.pos );
 	}
 	
@@ -146,7 +149,9 @@ public class ItemSprite extends MovieClip {
 		}
 	}
 	
-	public ItemSprite view( int image, Glowing glowing ) {
+	public ItemSprite view(String file, int image, Glowing glowing ) {
+		texture(file);
+		
 		frame( film.get( image ) );
 		if ((this.glowing = glowing) == null) {
 			resetColor();

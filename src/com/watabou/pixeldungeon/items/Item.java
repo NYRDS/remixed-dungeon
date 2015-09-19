@@ -70,6 +70,7 @@ public class Item implements Bundlable {
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
 	
 	protected int image = 0;
+	protected String imageFile;
 	
 	public boolean stackable = false;
 	private int quantity = Scrambler.scramble(1);
@@ -544,5 +545,12 @@ public class Item implements Bundlable {
 
 	public Item pick(Char ch,int pos) {
 		return this;
+	}
+
+	public String imageFile() {
+		if(imageFile != null) {
+			return imageFile;
+		}
+		return Assets.ITEMS;
 	}
 }

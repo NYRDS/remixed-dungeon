@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
@@ -161,10 +162,10 @@ public class WndCatalogus extends WndTabbed {
 			try {
 				item = cl.newInstance();
 				if (identified = item.isIdentified()) {
-					sprite.view( item.image(), null );
+					sprite.view(item.imageFile(), item.image(), null );
 					label.text( item.name() );
 				} else {
-					sprite.view( 127, null );
+					sprite.view(Assets.ITEMS, 127, null );
 					label.text( item.trueName() );
 					label.hardlight( 0xCCCCCC );
 				}

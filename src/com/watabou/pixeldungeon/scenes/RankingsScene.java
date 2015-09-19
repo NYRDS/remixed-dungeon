@@ -189,7 +189,7 @@ public class RankingsScene extends PixelScene {
 			desc.measure();
 			
 			if (rec.win) {
-				shield.view( ItemSpriteSheet.AMULET, null );
+				shield.view(Assets.ITEMS, ItemSpriteSheet.AMULET, null );
 				position.hardlight( TEXT_WIN );
 				desc.hardlight( TEXT_WIN );
 			} else {

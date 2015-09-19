@@ -71,6 +71,10 @@ public class Heap implements Bundlable {
 	
 	public LinkedList<Item> items = new LinkedList<Item>();
 	
+	public String imageFile() {
+		return Assets.ITEMS;
+	}
+	
 	public int image() {
 		switch (type) {
 		case HEAP:
@@ -172,7 +176,7 @@ public class Heap implements Bundlable {
 		}
 		
 		if (sprite != null) {
-			sprite.view( image(), glowing() );
+			sprite.view(imageFile(), image(), glowing() );
 		}
 	}
 	
@@ -202,7 +206,7 @@ public class Heap implements Bundlable {
 		if (isEmpty()) {
 			destroy();
 		} else if (sprite != null) {
-			sprite.view( image(), glowing() );
+			sprite.view(imageFile(), image(), glowing() );
 		}		
 	}
 	

@@ -41,17 +41,16 @@ public class Gold extends Item {
 	private static final String TXT_INFO_1	= Game.getVar(R.string.Gold_Info1)+" "+TXT_COLLECT;
 	private static final String TXT_VALUE	= "%+d";
 	
-	{
-		image = ItemSpriteSheet.GOLD;
-		stackable = true;
-	}
-	
 	public Gold() {
 		this( 1 );
 	}
 	
 	public Gold( int value ) {
 		this.quantity(value);
+		
+		imageFile = "gold.png";
+		image = ItemSpriteSheet.GOLD;
+		stackable = true;
 	}
 	
 	@Override
