@@ -26,7 +26,8 @@ public class Effects {
 		RIPPLE,
 		LIGHTNING,
 		WOUND,
-		RAY
+		RAY,
+		CHAIN
 	}
 	
 	public static Image get( Type type ) {
@@ -43,6 +44,9 @@ public class Effects {
 			break;
 		case RAY:
 			icon.frame( icon.texture.uvRect( 16, 16, 32, 24 ) );
+			break;
+		case CHAIN:
+			icon.frame( icon.texture.uvRect( 16, 24, 32, 32 ) );
 			break;
 		}
 		return icon;

@@ -55,6 +55,7 @@ import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
+import com.watabou.pixeldungeon.items.weapon.melee.Kusarigama;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
@@ -128,6 +129,7 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		hero.collect(new TomeOfMastery());
 
+		hero.collect(new Kusarigama());
 		Item gl = new Glaive().upgrade(8);
 		gl.cursed = true;
 
@@ -191,6 +193,8 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 
+		hero.collect(new Kusarigama());
+		
 		if (ModdingMode.mode()) {
 			initDebug(hero);
 		}

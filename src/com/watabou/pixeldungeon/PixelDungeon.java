@@ -56,11 +56,12 @@ public class PixelDungeon extends GameWithGoogleIap {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		String placeModFilesHere = "placeModFilesHere";
+
+		//String placeModFilesHere = "placeModFilesHere";
 		
 		PixelDungeon.moddingMode(false);
 		ModdingMode.mode(PixelDungeon.moddingMode());
-		
+		/*
 		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
 			try {
 				FileSystem.getExternalStorageFile(placeModFilesHere).createNewFile();
@@ -69,7 +70,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 				e.printStackTrace();
 			}
 		}
-		
+		*/
 		PixelDungeon.instance().initIap();
 		
 		if(PixelDungeon.uiLanguage().equals("ko")) {
@@ -248,7 +249,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 				false);
 	}
 
-	public static void donated(int value) {
+	private static void donated(int value) {
 		Preferences.INSTANCE.put(Preferences.KEY_DONATED, value);
 	}
 

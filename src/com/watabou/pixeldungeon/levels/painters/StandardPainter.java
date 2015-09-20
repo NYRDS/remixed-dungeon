@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
@@ -161,6 +163,12 @@ public class StandardPainter extends Painter {
 		}
 		
 		set( level, room.center(), Terrain.PEDESTAL );
+		
+		if(Random.Float(1) < 0.01f) {
+			Crystal crystal = new Crystal();
+			crystal.pos = room.random(level, 1 );
+			level.mobs.add( crystal );
+		}
 	}
 	
 	private static void paintBridge( Level level, Room room ) {

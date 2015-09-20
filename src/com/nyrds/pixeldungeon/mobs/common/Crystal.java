@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -14,9 +16,7 @@ import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.wands.WandOfPoison;
 import com.watabou.pixeldungeon.items.wands.WandOfRegrowth;
 import com.watabou.pixeldungeon.items.wands.WandOfSlowness;
-import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class Crystal extends Mob {
@@ -55,12 +55,14 @@ public class Crystal extends Mob {
 	private void adjustLevel(int depth) {
 		kind = Random.Int(0, 1);
 		
-		hp(ht(50));
+		hp(ht(Dungeon.depth * 4));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
 		maxLvl = depth + 2;
 		
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
+		IMMUNITIES.add( ToxicGas.class );
+		IMMUNITIES.add( ParalyticGas.class );
 	}
 	
 	@Override
