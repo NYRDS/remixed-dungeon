@@ -31,9 +31,7 @@ public class Kusarigama extends SpecialWeapon {
 	protected static CellSelector.Listener impaler = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer target) {
-
-			int distance = Dungeon.level.distance(curUser.pos, target);
-
+			
 			if (target != null
 					&& Dungeon.level.distance(curUser.pos, target) <= 4) {
 				Char chr = Actor.findChar(target);
@@ -81,7 +79,17 @@ public class Kusarigama extends SpecialWeapon {
 		return actions;
 	}
 
-	public void applySpecial(Char tgt) {
+	public void applySpecial(Hero hero, Char tgt) {
+		curUser = hero;
+		
+		if(Dungeon.level.distance(curUser.pos, tgt.pos) > 1) {
+			curUser.getSprite()
+			.getParent()
+			.add(new KusarigamaChain(curUser.getSprite()
+					.center(), DungeonTilemap
+					.tileCenterToWorld(tgt.pos)));
+		}
+		
 		if (Random.Float(1) < 0.1f) {
 			Buff.prolong(tgt, Vertigo.class, 3);
 		}

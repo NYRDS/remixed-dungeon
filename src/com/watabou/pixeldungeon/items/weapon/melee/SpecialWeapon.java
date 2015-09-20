@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class SpecialWeapon extends MeleeWeapon{
 
@@ -15,7 +16,7 @@ public class SpecialWeapon extends MeleeWeapon{
 		return range;
 	}
 	
-	public void applySpecial( Char tgt ) {
+	public void applySpecial(Hero hero, Char tgt ) {
 	}
 
 }

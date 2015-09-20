@@ -902,7 +902,7 @@ public class Hero extends Char {
 		if(Dungeon.level.distance(pos, action.target.pos) <= weapon.getRange()) {
 			spend(attackDelay());
 			getSprite().attack(enemy.pos);
-			weapon.applySpecial(action.target);
+			weapon.applySpecial(this, action.target);
 			return false;
 		}
 		return getCloserToEnemy();

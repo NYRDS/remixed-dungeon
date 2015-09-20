@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.nyrds.pixeldungeon.ml"
 	android:versionCode="154"
-	android:versionName="remix.19.1.fix.1"
+	android:versionName="remix.19.2.alpha.1"
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>

@@ -206,7 +206,7 @@ public class PixelScene extends Scene {
 	public static Text createText(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size * 2, false,  computeFontScale());
+			return new SystemText(text, size * 1.2f, false,  computeFontScale());
 		}
 		
 		chooseFont(size);
@@ -222,13 +222,13 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createSystemText(String text, float size) {
-		return new SystemText(text, size*1.5f, false, computeFontScale());
+		return new SystemText(text, size*1.2f, false, computeFontScale());
 	}
 	
 	public static Text createMultiline(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size*1.5f, true, computeFontScale());
+			return new SystemText(text, size*1.2f, true, computeFontScale());
 		}
 		
 		chooseFont(size);
