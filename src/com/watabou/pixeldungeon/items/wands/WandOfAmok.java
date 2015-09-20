@@ -48,7 +48,7 @@ public class WandOfAmok extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.purpleLight( curUser.getSprite().getParent(), curUser.pos, cell, callback );
+		MagicMissile.purpleLight( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

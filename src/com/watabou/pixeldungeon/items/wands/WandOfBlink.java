@@ -50,9 +50,9 @@ public class WandOfBlink extends Wand {
 	
 	@Override
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.whiteLight( curUser.getSprite().getParent(), curUser.pos, cell, callback );
+		MagicMissile.whiteLight( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
-		curUser.getSprite().visible = false;
+		wandUser.getSprite().visible = false;
 	}
 	
 	public static void appear( Char ch, int pos ) {

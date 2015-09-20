@@ -65,6 +65,8 @@ public abstract class Wand extends KindOfWeapon {
 
 	public int maxCharges = initialCharges();
 	public int curCharges = maxCharges;
+	
+	protected Char wandUser;
 
 	protected Charger charger;
 
@@ -90,10 +92,6 @@ public abstract class Wand extends KindOfWeapon {
 
 	private String wood;
 
-	{
-		defaultAction = AC_ZAP;
-	}
-
 	@SuppressWarnings("unchecked")
 	public static void initWoods() {
 		handler = new ItemStatusHandler<Wand>((Class<? extends Wand>[]) wands,
@@ -113,6 +111,8 @@ public abstract class Wand extends KindOfWeapon {
 	public Wand() {
 		calculateDamage();
 
+		defaultAction = AC_ZAP;
+		
 		try {
 			image = handler.image(this);
 			wood = handler.label(this);
@@ -161,6 +161,7 @@ public abstract class Wand extends KindOfWeapon {
 		if (action.equals(AC_ZAP)) {
 
 			curUser = hero;
+			wandUser = hero;
 			curItem = this;
 			GameScene.selectCell(zapper);
 
@@ -326,8 +327,20 @@ public abstract class Wand extends KindOfWeapon {
 		MAX = (tier * tier - tier + 10) / 2 + effectiveLevel();
 	}
 
+	public void mobWandUse(Char user, final int tgt) {
+		wandUser = user;
+		
+		fx(tgt, new Callback() {
+			@Override
+			public void call() {
+				onZap(tgt);
+			}
+		});
+		
+	}
+	
 	protected void fx(int cell, Callback callback) {
-		MagicMissile.blueLight(curUser.getSprite().getParent(), curUser.pos, cell,
+		MagicMissile.blueLight(wandUser.getSprite().getParent(), wandUser.pos, cell,
 				callback);
 		Sample.INSTANCE.play(Assets.SND_ZAP);
 	}
@@ -394,7 +407,7 @@ public abstract class Wand extends KindOfWeapon {
 		curChargeKnown = bundle.getBoolean(CUR_CHARGE_KNOWN);
 	}
 
-	public void wandEffect(final int cell) {
+	protected void wandEffect(final int cell) {
 		setKnown();
 
 		QuickSlot.target(curItem, Actor.findChar(cell));

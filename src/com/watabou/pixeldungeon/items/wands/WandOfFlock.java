@@ -91,7 +91,7 @@ public class WandOfFlock extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.wool( curUser.getSprite().getParent(), curUser.pos, cell, callback );
+		MagicMissile.wool( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 

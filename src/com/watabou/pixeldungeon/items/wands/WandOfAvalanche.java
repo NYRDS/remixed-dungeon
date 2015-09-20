@@ -79,14 +79,14 @@ public class WandOfAvalanche extends Wand {
 			}
 		}
 		
-		if (!curUser.isAlive()) {
+		if (curUser != null && !curUser.isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfAvalanche_Info1));
 		}
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.earth( curUser.getSprite().getParent(), curUser.pos, cell, callback );
+		MagicMissile.earth( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

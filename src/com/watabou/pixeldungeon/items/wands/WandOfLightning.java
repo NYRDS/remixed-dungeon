@@ -47,7 +47,7 @@ public class WandOfLightning extends Wand {
 	@Override
 	protected void onZap( int cell ) {
 
-		if (!curUser.isAlive()) {
+		if (curUser!=null && !curUser.isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfLightning_Info1));
 		}
@@ -88,7 +88,7 @@ public class WandOfLightning extends Wand {
 	protected void fx( int cell, Callback callback ) {
 		
 		nPoints = 0;
-		points[nPoints++] = Dungeon.hero.pos;
+		points[nPoints++] = wandUser.pos;
 		
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
@@ -103,7 +103,7 @@ public class WandOfLightning extends Wand {
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
 			
 		}
-		curUser.getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
+		wandUser.getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
 	}
 	
 	@Override

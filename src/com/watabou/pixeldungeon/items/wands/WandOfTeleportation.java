@@ -66,7 +66,7 @@ public class WandOfTeleportation extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.coldLight( curUser.getSprite().getParent(), curUser.pos, cell, callback );
+		MagicMissile.coldLight( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	
