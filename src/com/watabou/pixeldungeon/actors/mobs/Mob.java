@@ -146,17 +146,16 @@ public abstract class Mob extends Char {
 		try {
 			if(spriteClass instanceof Class){
 				sprite = (CharSprite) ((Class<?>)spriteClass).newInstance();
+				sprite.selectKind(getKind());
 			}
 			
 			if(spriteClass instanceof String){
-				sprite = new MobSpriteDef((String)spriteClass);
+				sprite = new MobSpriteDef((String)spriteClass, getKind());
 			}
 			
 			if(spriteClass == null) {
-				sprite = new MobSpriteDef("spritesDesc/"+getClass().getSimpleName()+".json");
+				sprite = new MobSpriteDef("spritesDesc/"+getClass().getSimpleName()+".json", getKind());
 			}
-			
-			sprite.selectKind(getKind());
 		} catch (Exception e) {
 			GLog.w(e.getMessage());
 		}

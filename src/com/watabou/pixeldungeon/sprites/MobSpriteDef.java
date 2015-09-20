@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,33 +22,56 @@ public class MobSpriteDef extends MobSprite {
 	
 	private int bloodColor;
 	private boolean levitating;
+	private int framesInRow;
+	private int kind;
 	
-	public MobSpriteDef(String defName) throws Exception {
+	static private Map<String, JSONObject> defMap = new HashMap<String, JSONObject>();
+	
+	private String name;
+	
+	public MobSpriteDef(String defName, int kind) throws Exception {
 		super();
 		
-		InputStream stream = ModdingMode.getInputStream(defName);
-		StringBuilder animationDef = new StringBuilder();
-
-		try {
+		name = defName;
+		
+		if(defMap.containsKey(name)) {
+			 
+		} else {
+			InputStream stream = ModdingMode.getInputStream(name);
+			StringBuilder animationDef = new StringBuilder();
+			
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(stream));
 			
 			String line = reader.readLine();
-
+			
 			while (line != null) {
 				animationDef.append(line);
 				line = reader.readLine();
 			}
 			reader.close();
-
-			JSONObject json = (JSONObject) new JSONTokener(animationDef.toString()).nextValue();
 			
+			defMap.put(name, (JSONObject) new JSONTokener(animationDef.toString()).nextValue());
+		}
+		
+		selectKind(kind);
+	}
+
+	@Override
+	public void selectKind(int kind) {
+		this.kind = kind;
+		JSONObject json = defMap.get(name);
+		
+		try {
 			texture(json.getString("texture"));
 			
-			TextureFilm film = new TextureFilm(texture, json.getInt("width"), json.getInt("height"));
+			int width = json.getInt("width");
 			
-			bloodColor = json.optInt("bloodColor",0xFFBB0000);
-			levitating = json.optBoolean("levitating", false);
+			TextureFilm film = new TextureFilm(texture, width, json.getInt("height"));
+			
+			bloodColor  = json.optInt("bloodColor",      0xFFBB0000);
+			levitating  = json.optBoolean("levitating",  false);
+			framesInRow = texture.width / width;
 			
 			idle   = readAnimation(json, "idle",   film);
 			run    = readAnimation(json, "run",    film);
@@ -55,13 +80,12 @@ public class MobSpriteDef extends MobSprite {
 			zap    = attack.clone();
 			
 		} catch (Exception e) {
-			GLog.w("Something bad happens when loading %s", defName);
-			throw e;
+			GLog.w("Something bad happens when loading %s", name);
 		}
 		
 		play(idle);
 	}
-
+	
 	private Animation readAnimation(JSONObject root, String animKind, TextureFilm film) {
 		try {
 			
@@ -79,7 +103,7 @@ public class MobSpriteDef extends MobSprite {
 				framesSeq.add(nextFrame);
 			}
 			
-			anim.frames(film, framesSeq, root.optInt("shift"));
+			anim.frames(film, framesSeq, kind * framesInRow);
 			
 			return anim;
 		} catch (JSONException e) {
