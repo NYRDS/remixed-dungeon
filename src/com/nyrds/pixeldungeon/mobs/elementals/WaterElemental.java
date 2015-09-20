@@ -14,7 +14,7 @@ import com.watabou.utils.Random;
 
 public class WaterElemental extends Mob {
 
-	private int kind = 0;
+	private int kind;
 	
 	public WaterElemental() {
 		adjustLevel(Dungeon.depth);

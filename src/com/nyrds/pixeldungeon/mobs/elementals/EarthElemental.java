@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import com.nyrds.pixeldungeon.mobs.elementals.sprites.EarthElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -16,9 +15,10 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class EarthElemental extends Mob {
+	
+	private int kind;
+	
 	public EarthElemental() {
-		spriteClass = EarthElementalSprite.class;
-
 		adjustLevel(Dungeon.depth);
 
 		loot = new Earthroot.Seed();
@@ -26,6 +26,8 @@ public class EarthElemental extends Mob {
 	}
 
 	private void adjustLevel(int depth) {
+		kind = Math.min(depth/5, 4);
+		
 		hp(ht(depth * 10 + 1));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
@@ -37,6 +39,11 @@ public class EarthElemental extends Mob {
 		IMMUNITIES.add(Fire.class);
 	}
 
+	@Override
+	public int getKind() {
+		return kind;
+	}
+	
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange(hp() / 5, ht() / 5);
