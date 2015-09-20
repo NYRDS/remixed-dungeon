@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import com.nyrds.pixeldungeon.mobs.elementals.sprites.WaterElementalSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
@@ -15,9 +14,9 @@ import com.watabou.utils.Random;
 
 public class WaterElemental extends Mob {
 
+	private int kind = 0;
+	
 	public WaterElemental() {
-		spriteClass = WaterElementalSprite.class;
-		
 		adjustLevel(Dungeon.depth);
 		
 		loot = new PotionOfFrost();
@@ -25,6 +24,8 @@ public class WaterElemental extends Mob {
 	}
 	
 	private void adjustLevel(int depth) {
+		kind = Math.min(depth/5, 4);
+		
 		hp(ht(depth * 5 + 1));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
@@ -32,6 +33,11 @@ public class WaterElemental extends Mob {
 		
 		IMMUNITIES.add( Frost.class );
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
+	}
+	
+	@Override
+	public int getKind() {
+		return kind;
 	}
 	
 	@Override
