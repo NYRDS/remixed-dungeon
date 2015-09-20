@@ -53,6 +53,7 @@ import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
+import com.watabou.pixeldungeon.actors.hero.HeroAction.Attack;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
@@ -86,6 +87,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -879,6 +881,10 @@ public class Hero extends Char {
 		enemy = action.target;
 
 		if (enemy.isAlive() && !pacified) {
+			if(belongings.weapon instanceof SpecialWeapon) {
+				return actSpecialAttack(action);
+			}
+			
 			if (bowEquiped()
 					&& (!Dungeon.level.adjacent(pos, enemy.pos) || this.heroClass == HeroClass.ELF)) {
 				return actBowAttack();
@@ -888,6 +894,17 @@ public class Hero extends Char {
 
 		}
 
+		return getCloserToEnemy();
+	}
+
+	private boolean actSpecialAttack(Attack action) {
+		SpecialWeapon weapon = (SpecialWeapon)belongings.weapon;
+		if(Dungeon.level.distance(pos, action.target.pos) <= weapon.getRange()) {
+			spend(attackDelay());
+			getSprite().attack(enemy.pos);
+
+			return false;
+		}
 		return getCloserToEnemy();
 	}
 

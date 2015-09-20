@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
@@ -105,7 +106,8 @@ public class Bestiary {
 		switch (depth) {
 		case 1:
 			chances = new float[]{ 1 };
-			classes = new Class<?>[]{ Rat.class };
+			//classes = new Class<?>[]{ Rat.class };
+			classes = new Class<?>[]{ Crystal.class };
 			break;
 		case 2:
 			chances = new float[]{ 1, 1 };
