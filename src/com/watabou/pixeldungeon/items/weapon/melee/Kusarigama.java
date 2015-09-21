@@ -17,7 +17,8 @@ import com.watabou.utils.Random;
 
 public class Kusarigama extends SpecialWeapon {
 
-	public static final String AC_IMPALE = "IMPALE";
+	private static final String AC_IMPALE = "IMPALE";
+	private static final float TIME_TO_IMPALE = 1.5f;
 
 	public Kusarigama() {
 		super(3, 2f, 1f);
@@ -32,26 +33,39 @@ public class Kusarigama extends SpecialWeapon {
 		@Override
 		public void onSelect(Integer target) {
 			
-			if (target != null
-					&& Dungeon.level.distance(curUser.pos, target) <= 4) {
-				Char chr = Actor.findChar(target);
-				if (chr != null) {
-					curUser.getSprite()
-							.getParent()
-							.add(new KusarigamaChain(curUser.getSprite()
-									.center(), DungeonTilemap
-									.tileCenterToWorld(target)));
-
-					Ballistica.cast(curUser.pos, target, true, false);
-
-					chr.move(Ballistica.trace[1]);
-					chr.getSprite().move(chr.pos, Ballistica.trace[1]);
+			if(target != null) {
+				curUser.spendAndNext(TIME_TO_IMPALE);
+				Ballistica.cast(curUser.pos, target, true, false);
+				
+				for(int i = 1; i<=4;i++) {
+					int cell = Ballistica.trace[i];
 					
-					curUser.spendAndNext(TIME_TO_THROW);
-					
-					Dungeon.observe();
+					if (Dungeon.level.passable[cell] || Dungeon.level.avoid[cell]) {
+						curUser.getSprite()
+						.getParent()
+						.add(new KusarigamaChain(curUser.getSprite()
+								.center(), DungeonTilemap
+								.tileCenterToWorld(cell)));
+						
+						Char chr = Actor.findChar(cell);
+						if(chr != null) {
+							target = chr.pos;
+							
+							drawChain(target);
+							
+							chr.move(Ballistica.trace[1]);
+							chr.getSprite().move(chr.pos, Ballistica.trace[1]);
+							
+							
+							Dungeon.observe();
+							return;
+						}
+					}
 				}
+				drawChain(Ballistica.trace[4]);
 			}
+			
+			
 		}
 
 		@Override
@@ -60,6 +74,14 @@ public class Kusarigama extends SpecialWeapon {
 		}
 	};
 
+	private static void drawChain(int tgt) {
+			curUser.getSprite()
+			.getParent()
+			.add(new KusarigamaChain(curUser.getSprite()
+					.center(), DungeonTilemap
+					.tileCenterToWorld(tgt)));
+	}
+	
 	@Override
 	public void execute(Hero hero, String action) {
 		curUser = hero;
@@ -83,11 +105,7 @@ public class Kusarigama extends SpecialWeapon {
 		curUser = hero;
 		
 		if(Dungeon.level.distance(curUser.pos, tgt.pos) > 1) {
-			curUser.getSprite()
-			.getParent()
-			.add(new KusarigamaChain(curUser.getSprite()
-					.center(), DungeonTilemap
-					.tileCenterToWorld(tgt.pos)));
+			 drawChain(tgt.pos);
 		}
 		
 		if (Random.Float(1) < 0.1f) {

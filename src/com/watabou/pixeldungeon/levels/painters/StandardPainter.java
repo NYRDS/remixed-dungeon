@@ -163,7 +163,7 @@ public class StandardPainter extends Painter {
 		
 		set( level, room.center(), Terrain.PEDESTAL );
 		
-		if(Random.Float(1) < 0.01f) {
+		if(Random.Float(1) < 0.1f) {
 			Crystal crystal = new Crystal();
 			crystal.pos = room.random(level, 1 );
 			level.mobs.add( crystal );
