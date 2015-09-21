@@ -55,6 +55,7 @@ public class SystemTextLine extends Visual {
 		super.destroy();
 		if(texture != null) {
 			texture.delete();
+			texture = null;
 		}
 	}
 

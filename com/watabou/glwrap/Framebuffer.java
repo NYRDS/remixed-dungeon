@@ -50,7 +50,7 @@ public class Framebuffer {
 	
 	public void attach( int point, Texture tex ) {
 		bind();
-		GLES20.glFramebufferTexture2D( GLES20.GL_FRAMEBUFFER, point, GLES20.GL_TEXTURE_2D, tex.id, 0 );
+		GLES20.glFramebufferTexture2D( GLES20.GL_FRAMEBUFFER, point, GLES20.GL_TEXTURE_2D, tex.getId(), 0 );
 	}
 	
 	public void attach( int point, Renderbuffer buffer ) {

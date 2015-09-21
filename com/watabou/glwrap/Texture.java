@@ -33,7 +33,7 @@ public class Texture {
 	public static final int MIRROR	= GLES20.GL_MIRRORED_REPEAT;
 	public static final int CLAMP	= GLES20.GL_CLAMP_TO_EDGE;
 	
-	public int id;
+	protected int id;
 	
 	public Texture() {
 		int[] ids = new int[1];
@@ -163,5 +163,9 @@ public class Texture {
 		tex.pixels( width, height, pixels );
 		
 		return tex;
+	}
+
+	public int getId() {
+		return id;
 	}
 }
