@@ -202,4 +202,9 @@
     <string name="Tamahawk_Name">tomahawk</string>
     <string name="Tamahawk_Info">This throwing axe is not that heavy, but it still requires significant strength to be used effectively.</string>
     <string name="Tamahawk_Gender">masculine</string>
+
+    <!-- STRINGS OF Kusarigama CLASS -->
+    <string name="Kusarigama_Name">kusarigama</string>
+    <string name="Kusarigama_Info"> This weapon that consists of a sickle on a metal chain with a heavy iron weight at the end.</string>
+    <string name="Kusarigama_Gender">femenine</string>    
 </resources>
