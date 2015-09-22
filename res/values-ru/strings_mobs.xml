@@ -269,4 +269,9 @@
   <string name="EarthElemental_Gender">masculine</string>
   <string name="EarthElemental_Name_Objective">элементаля</string>
   <string name="EarthElemental_Desc">Земляные элементали - это массы земли, движимые силами природы.</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">парящий кристалл</string>
+  <string name="Crystal_Gender">masculine</string>
+  <string name="Crystal_Name_Objective">парящий кристалл</string>
+  <string name="Crystal_Desc">Большой сияющий кристалл парит в воздухе. Наверное он наполнен магией.</string>
 </resources>
