@@ -93,6 +93,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -899,12 +900,20 @@ public class Hero extends Char {
 
 	private boolean actSpecialAttack(Attack action) {
 		SpecialWeapon weapon = (SpecialWeapon)belongings.weapon;
-		if(Dungeon.level.distance(pos, action.target.pos) <= weapon.getRange()) {
-			spend(attackDelay());
-			getSprite().attack(enemy.pos);
-			weapon.applySpecial(this, action.target);
-			return false;
+		
+		int distance = Math.min(Ballistica.cast(pos, action.target.pos, false, true), weapon.getRange());
+		
+		for(int i = 1; i<= distance;i++) {
+			int cell = Ballistica.trace[i];
+			Char tgt = Actor.findChar(cell);
+			if ( tgt != null ){
+				spend(attackDelay());
+				getSprite().attack(tgt.pos);
+				weapon.applySpecial(this, tgt);
+				return false;
+			}
 		}
+		
 		return getCloserToEnemy();
 	}
 

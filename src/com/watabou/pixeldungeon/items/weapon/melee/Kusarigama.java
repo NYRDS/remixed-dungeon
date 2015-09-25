@@ -35,18 +35,13 @@ public class Kusarigama extends SpecialWeapon {
 			
 			if(target != null) {
 				curUser.spendAndNext(TIME_TO_IMPALE);
-				Ballistica.cast(curUser.pos, target, true, false);
-				
-				for(int i = 1; i<=4;i++) {
+				int distance = Math.min(Ballistica.cast(curUser.pos, target, false, true), 4);
+				int passableTo = curUser.pos;
+				for(int i = 1; i<distance;i++) {
 					int cell = Ballistica.trace[i];
 					
 					if (Dungeon.level.passable[cell] || Dungeon.level.avoid[cell]) {
-						curUser.getSprite()
-						.getParent()
-						.add(new KusarigamaChain(curUser.getSprite()
-								.center(), DungeonTilemap
-								.tileCenterToWorld(cell)));
-						
+						passableTo = cell;
 						Char chr = Actor.findChar(cell);
 						if(chr != null) {
 							target = chr.pos;
@@ -62,10 +57,11 @@ public class Kusarigama extends SpecialWeapon {
 						}
 					}
 				}
-				drawChain(Ballistica.trace[4]);
+				
+				drawChain(passableTo);
+				
 			}
-			
-			
+
 		}
 
 		@Override

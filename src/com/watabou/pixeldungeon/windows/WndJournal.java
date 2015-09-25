@@ -117,7 +117,7 @@ public class WndJournal extends Window {
 			feature = PixelScene.createText( 9 );
 			add( feature );
 			
-			depth = Text.create( PixelScene.font1x );
+			depth = Text.createBasicText( PixelScene.font1x );
 			add( depth );
 			
 			icon = Icons.get( Icons.DEPTH );

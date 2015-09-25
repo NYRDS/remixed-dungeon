@@ -208,7 +208,7 @@ public class RankingsScene extends PixelScene {
 			shield = new ItemSprite( ItemSpriteSheet.TOMB, null );
 			add( shield );
 			
-			position = Text.create( PixelScene.font1x );
+			position = Text.createBasicText( PixelScene.font1x );
 			add( position );
 			
 			desc = createMultiline( 9 );		

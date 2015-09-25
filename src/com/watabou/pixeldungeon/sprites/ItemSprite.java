@@ -72,6 +72,12 @@ public class ItemSprite extends MovieClip {
 		view(file, imageIndex, glowing );
 	}
 	
+	public ItemSprite(Heap heap) {
+		super();
+		
+		link(heap);
+	}
+
 	private void updateTexture(String file) {
 		texture(file);
 		film = new TextureFilm( texture, SIZE, SIZE );

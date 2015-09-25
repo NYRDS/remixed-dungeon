@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -48,11 +47,8 @@ public class DangerIndicator extends Tag {
 	protected void createChildren() {
 		super.createChildren();
 		
-		if(ModdingMode.getClassicTextRenderingMode()) {
-			number = Text.create( PixelScene.font1x );
-		} else {
-			number = Text.create( PixelScene.font1x.baseLine * 2 );
-		}
+		number = Text.createBasicText(PixelScene.font1x);
+
 		add( number );
 		
 		icon = Icons.SKULL.get();

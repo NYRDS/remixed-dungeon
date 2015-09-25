@@ -79,7 +79,7 @@ public class WndInfoItem extends Window {
 				info = TXT_NEED_KEY;
 			}
 			
-			fillFields( heap.peek(), TITLE_COLOR, title, info );
+			fillFields( heap, TITLE_COLOR, title, info );
 			
 		}
 	}
@@ -96,6 +96,14 @@ public class WndInfoItem extends Window {
 		}
 		
 		fillFields( item, color, item.toString(), item.info() );
+	}
+
+	private void fillFields( Heap heap, int titleColor, String title, String info ) {
+		GenericInfo.makeInfo(	this,
+								new ItemSprite( heap ), 
+								title, 
+								titleColor, 
+								info);
 	}
 	
 	private void fillFields( Item item, int titleColor, String title, String info ) {

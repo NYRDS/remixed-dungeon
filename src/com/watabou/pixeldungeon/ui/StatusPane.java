@@ -99,17 +99,17 @@ public class StatusPane extends Component {
 		exp = new Image( Assets.XP_BAR );
 		add( exp );
 		
-		level = Text.create( PixelScene.font1x.baseLine * 2 );
+		level = Text.createBasicText(PixelScene.font1x);
 		level.hardlight( 0xFFEBA4 );
 		add( level );
 		
-		depth = Text.create( Integer.toString( Dungeon.depth ), PixelScene.font1x.baseLine * 2 );
+		depth = Text.createBasicText( Integer.toString( Dungeon.depth ), PixelScene.font1x);
 		depth.hardlight( 0xCACFC2 );
 		depth.measure();
 		add( depth );
 		
 		Dungeon.hero.belongings.countIronKeys();
-		keys = Text.create( PixelScene.font1x.baseLine * 2 );
+		keys = Text.createBasicText( PixelScene.font1x);
 		keys.hardlight( 0xCACFC2 );
 		add( keys );
 		

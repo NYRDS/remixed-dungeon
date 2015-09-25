@@ -79,15 +79,15 @@ public class ItemSlot extends Button {
 		icon = new ItemSprite();
 		add( icon );
 		
-		topLeft = Text.create( PixelScene.font1x );
+		topLeft = Text.createBasicText( PixelScene.font1x );
 		topLeft.setScale(0.8f,0.8f);
 		add( topLeft );
 		
-		topRight = Text.create( PixelScene.font1x );
+		topRight = Text.createBasicText( PixelScene.font1x );
 		topRight.setScale(0.8f,0.8f);
 		add( topRight );
 		
-		bottomRight = Text.create( PixelScene.font1x );
+		bottomRight = Text.createBasicText( PixelScene.font1x );
 		bottomRight.setScale(0.8f,0.8f);
 		add( bottomRight );
 	}
