@@ -53,4 +53,8 @@ public abstract class NPC extends Mob {
 	}
 	
 	abstract public boolean interact(final Hero hero);
+
+	public boolean friendly() {
+		return true;
+	}
 }

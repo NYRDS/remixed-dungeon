@@ -106,7 +106,7 @@ public class Tengu extends Mob {
 		
 		Badges.validateBossSlain();
 		
-		yell(Game.getVar(R.string.Tengu_Info1));
+		say(Game.getVar(R.string.Tengu_Info1));
 	}
 	
 	@Override

@@ -148,8 +148,9 @@ public class Generator {
 			CurareDart.class,
 			Shuriken.class,
 			Boomerang.class,
-			Tamahawk.class};
-		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1 };
+			Tamahawk.class,
+			Kusarigama.class};
+		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f };
 		
 		Category.ARMOR.classes = new Class<?>[]{ 
 			ClothArmor.class, 

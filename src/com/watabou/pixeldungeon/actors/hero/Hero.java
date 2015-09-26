@@ -1127,7 +1127,7 @@ public class Hero extends Char {
 		} else if (Dungeon.level.fieldOfView[cell]
 				&& (ch = Actor.findChar(cell)) instanceof Mob) {
 
-			if (ch instanceof NPC) {
+			if (ch instanceof NPC && ((NPC)ch).friendly()) {
 				curAction = new HeroAction.Interact((NPC) ch);
 			} else {
 				curAction = new HeroAction.Attack(ch);

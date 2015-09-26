@@ -58,8 +58,7 @@ public class Multiplicity extends Glyph {
 			}
 			
 			if (respawnPoints.size() > 0) {
-				MirrorImage mob = new MirrorImage();
-				mob.duplicate( (Hero)defender );
+				MirrorImage mob = new MirrorImage((Hero)defender);
 				Dungeon.level.spawnMob(mob);
 				GameScene.add(Dungeon.level, mob );
 				WandOfBlink.appear( mob, Random.element( respawnPoints ) );

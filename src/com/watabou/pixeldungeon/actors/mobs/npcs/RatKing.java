@@ -56,7 +56,8 @@ public class RatKing extends NPC {
 		return 5;
 	}
 	
-	private boolean friendly(){
+	@Override
+	public boolean friendly(){
 		return anger < 2;
 	}
 	
@@ -77,7 +78,7 @@ public class RatKing extends NPC {
 	@Override
 	public void damage( int dmg, Object src ) {
 		if(friendly()){
-			anger++;
+			anger=2;
 		} else {
 			super.damage(dmg, src);
 		}

@@ -35,12 +35,16 @@ import com.watabou.utils.Random;
 
 public class MirrorImage extends NPC {
 	
-	{
+	public MirrorImage(Hero hero) {
 		spriteClass = MirrorSprite.class;
-		
 		state = HUNTING;
-		
 		enemy = DUMMY;
+		
+		tier = hero.tier();
+		attack = hero.attackSkill( hero );
+		damage = hero.damageRoll();
+		
+		spriteKind = HeroClass.spritesheet(hero);
 	}
 	
 	public int tier;
@@ -74,14 +78,6 @@ public class MirrorImage extends NPC {
 		if(! HeroClass.isSpriteSheet(spriteKind)) {
 			spriteKind = Assets.WARRIOR;
 		}
-	}
-	
-	public void duplicate( Hero hero ) {
-		tier = hero.tier();
-		attack = hero.attackSkill( hero );
-		damage = hero.damageRoll();
-		
-		spriteKind = HeroClass.spritesheet(hero);
 	}
 	
 	@Override
