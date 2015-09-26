@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
-public class WandOfTeleportation extends SimpleWand {
+public class WandOfTeleportation extends Wand {
 
 	@Override
 	protected void onZap( int cell ) {
