@@ -38,7 +38,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-public class WandOfFirebolt extends Wand {
+public class WandOfFirebolt extends SimpleWand  {
 
 	@Override
 	protected void onZap( int cell ) {

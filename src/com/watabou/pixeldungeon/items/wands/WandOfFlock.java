@@ -37,7 +37,7 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class WandOfFlock extends Wand {
+public class WandOfFlock extends SimpleWand  {
 
 	@Override
 	protected void onZap( int cell ) {

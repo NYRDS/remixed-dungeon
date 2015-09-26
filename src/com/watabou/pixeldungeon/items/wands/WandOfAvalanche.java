@@ -39,7 +39,7 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class WandOfAvalanche extends Wand {
+public class WandOfAvalanche extends SimpleWand {
 	{
 		hitChars = false;
 	}

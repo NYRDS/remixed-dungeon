@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
-public class WandOfSlowness extends Wand {
+public class WandOfSlowness extends SimpleWand  {
 	
 	@Override
 	protected void onZap( int cell ) {

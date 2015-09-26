@@ -37,7 +37,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-public class WandOfLightning extends Wand {
+public class WandOfLightning extends SimpleWand  {
 	
 	private ArrayList<Char> affected = new ArrayList<Char>();
 	

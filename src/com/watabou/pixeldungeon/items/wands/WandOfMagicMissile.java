@@ -38,7 +38,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Random;
 
-public class WandOfMagicMissile extends Wand {
+public class WandOfMagicMissile extends SimpleWand  {
 
 	public static final String AC_DISENCHANT    = Game.getVar(R.string.WandOfMagicMissile_ACDisenchant);
 	

@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
-public class WandOfAmok extends Wand {
+public class WandOfAmok extends SimpleWand {
 
 	@Override
 	protected void onZap( int cell ) {

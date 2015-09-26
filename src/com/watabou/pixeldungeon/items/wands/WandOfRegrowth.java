@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
-public class WandOfRegrowth extends Wand {
+public class WandOfRegrowth extends SimpleWand  {
 	
 	@Override
 	protected void onZap( int cell ) {

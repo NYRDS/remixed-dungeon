@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-public class WandOfDisintegration extends Wand {
+public class WandOfDisintegration extends SimpleWand  {
 	{
 		hitChars = false;
 	}

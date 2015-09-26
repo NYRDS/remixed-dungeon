@@ -6,46 +6,20 @@ import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.items.wands.WandOfAmok;
-import com.watabou.pixeldungeon.items.wands.WandOfAvalanche;
-import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
-import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
-import com.watabou.pixeldungeon.items.wands.WandOfLightning;
-import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
-import com.watabou.pixeldungeon.items.wands.WandOfPoison;
-import com.watabou.pixeldungeon.items.wands.WandOfRegrowth;
-import com.watabou.pixeldungeon.items.wands.WandOfSlowness;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
 public class Crystal extends Mob {
 
 	private int kind;
-	
-	private static Class[] variants = {	WandOfAmok.class, 
-										WandOfAvalanche.class, 
-										WandOfDisintegration.class, 
-										WandOfFirebolt.class, 
-										WandOfLightning.class, 
-										WandOfMagicMissile.class, 
-										WandOfPoison.class, 
-										WandOfRegrowth.class, 
-										WandOfSlowness.class};
+
 	
 	public Crystal() {
 		adjustLevel(Dungeon.depth);
 		
-		try {
-			loot = Random.element(variants).newInstance();
-			
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		loot = SimpleWand.createRandomSimpleWand();
 		
 		((Wand)loot).upgrade(Dungeon.depth);
 		
