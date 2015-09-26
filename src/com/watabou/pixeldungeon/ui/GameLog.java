@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.ui;
 
 import java.util.regex.Pattern;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.ui.Component;
@@ -50,7 +51,9 @@ public class GameLog extends Component implements Signal.Listener<String> {
 
 	@Override
 	public void onSignal( String text ) {
-
+		if(Game.isPaused()) {
+			return;
+		}
 		int color = CharSprite.DEFAULT;
 		if (text.startsWith( GLog.POSITIVE )) {
 			text = text.substring( GLog.POSITIVE.length() );
