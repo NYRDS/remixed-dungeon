@@ -38,6 +38,7 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Looper;
 import android.os.StatFs;
 import android.os.Vibrator;
 import android.view.KeyEvent;
@@ -87,7 +88,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	protected GLSurfaceView view;
 	protected SurfaceHolder holder;
 
-	private static boolean paused = false;
+	private static boolean paused = true;
 	
 	// Accumulated touch events
 	protected ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
@@ -314,7 +315,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 		TextureCache.reload();
 		
 	}
-
+	
+	public static boolean inMainThread() {
+		return Looper.myLooper() == Looper.getMainLooper();
+	}
+	
 	public static boolean isPaused() {
 		return paused;
 	}

@@ -74,7 +74,9 @@ public class SystemText extends Text {
 	@Override
 	public void destroy() {
 		for (SystemTextLine img : lineImage) {
-			getParent().remove(img);
+			if(getParent()!=null){
+				getParent().remove(img);
+			}
 			img.destroy();
 		}
 		
@@ -268,6 +270,9 @@ public class SystemText extends Text {
 	
 	@Override
 	public void draw() {
+		if(!exists) {
+			return;
+		}
 		super.draw();
 
 		measure();
