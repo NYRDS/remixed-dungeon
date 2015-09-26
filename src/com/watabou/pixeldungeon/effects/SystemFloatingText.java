@@ -46,9 +46,7 @@ public class SystemFloatingText extends SystemText {
 		if (key != -1) {
 			ArrayList<SystemFloatingText> stack = stacks.get( key );
 			stack.remove(this);
-			
-			//this.destroy();
-			
+
 			if(stack.isEmpty()) {
 				stacks.remove(key);
 			}

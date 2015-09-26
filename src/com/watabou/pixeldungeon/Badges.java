@@ -902,7 +902,7 @@ public class Badges {
 				GLog.h(Game.getVar(R.string.Badges_Info2), badge.description );
 			} else {
 				GLog.h(Game.getVar(R.string.Badges_Info3), badge.description );
-			}	
+			}
 			PixelScene.showBadge( badge );
 		}
 	}
