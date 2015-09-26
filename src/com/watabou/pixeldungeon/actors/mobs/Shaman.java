@@ -40,6 +40,8 @@ public class Shaman extends Mob implements Callback {
 	
 	private static final String TXT_LIGHTNING_KILLED = Game.getVar(R.string.Shaman_Killed);
 	
+	private int fleeState = 0;
+	
 	public Shaman() {
 		spriteClass = ShamanSprite.class;
 		
@@ -78,17 +80,29 @@ public class Shaman extends Mob implements Callback {
 	@Override
 	public int defenseProc(Char enemy, int damage) {
 		
-		if( hp() > 2*ht() / 3 && hp()-damage/2 < 2*ht() / 3 ) {
+		if( hp() > 2*ht() / 3 && fleeState < 1) {
 			state = FLEEING;
+			fleeState++;
 			return damage/2;
 		}
 		
-		if( hp() > ht() / 3 && hp()-damage/2 < ht() / 3 ) {
+		if( hp() > ht() / 3 && fleeState < 2 ) {
 			state = FLEEING;
+			fleeState++;
 			return damage/2;
 		}
 		
 		return damage;
+	}
+	
+	@Override
+	protected boolean getFurther(int target) {
+		
+		if(Dungeon.level.distance(pos, target) >2) {
+			state = HUNTING;
+		}
+		
+		return super.getFurther(target);
 	}
 	
 	@Override
