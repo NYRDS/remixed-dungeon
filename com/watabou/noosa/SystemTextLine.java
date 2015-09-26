@@ -21,21 +21,19 @@ import java.nio.FloatBuffer;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;
-import android.util.Log;
 
 import com.watabou.gltextures.SmartTexture;
-import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
 
 public class SystemTextLine extends Visual {
 
-	public SmartTexture texture;
-	protected RectF frame;
+	private SmartTexture texture;
+	private RectF frame;
 	
-	protected float[] vertices;
-	protected FloatBuffer verticesBuffer;
+	private float[] vertices;
+	private FloatBuffer verticesBuffer;
 	
-	protected boolean dirty;
+	private boolean dirty;
 	
 	public SystemTextLine() {
 		super( 0, 0, 0, 0 );
@@ -58,11 +56,6 @@ public class SystemTextLine extends Visual {
 			texture = null;
 		}
 	}
-
-	public void texture( Object tx ) {
-		texture = tx instanceof SmartTexture ? (SmartTexture)tx : TextureCache.get( tx );
-		frame( new RectF( 0, 0, 1, 1 ) );
-	}
 	
 	public void frame( RectF frame ) {
 		this.frame = frame;
@@ -74,25 +67,7 @@ public class SystemTextLine extends Visual {
 		updateVertices();
 	}
 	
-	public void frame( int left, int top, int width, int height ) {
-		frame( texture.uvRect( left, top, left + width, top + height ) );
-	}
-	
-	public RectF frame() {
-		return new RectF( frame );
-	}
 
-	public void copy( SystemTextLine other ) {
-		texture = other.texture;
-		frame = new RectF( other.frame );
-		
-		width = other.width;
-		height = other.height;
-		
-		updateFrame();
-		updateVertices();
-	}
-	
 	protected void updateFrame() {
 		vertices[2]		= frame.left;
 		vertices[6]		= frame.right;

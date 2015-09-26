@@ -87,6 +87,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	protected GLSurfaceView view;
 	protected SurfaceHolder holder;
 
+	private static boolean paused = false;
+	
 	// Accumulated touch events
 	protected ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
 
@@ -197,7 +199,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	@Override
 	public void onResume() {
 		super.onResume();
-
+		
 		now = 0;
 		view.onResume();
 
@@ -208,7 +210,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	@Override
 	public void onPause() {
 		super.onPause();
-
+		paused = true;
+		
 		if (scene != null) {
 			scene.pause();
 		}
@@ -305,10 +308,17 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 		GLES20.glEnable(GL10.GL_SCISSOR_TEST);
 
-		TextureCache.reload();
+		paused = false;
+		
 		SystemText.invalidate();
+		TextureCache.reload();
+		
 	}
 
+	public static boolean isPaused() {
+		return paused;
+	}
+	
 	protected void destroyGame() {
 		if (scene != null) {
 			scene.destroy();

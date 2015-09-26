@@ -27,6 +27,7 @@ public class SystemText extends Text {
 	private float size;
 	private final static float oversample = 2f;
 	private boolean needWidth = false;
+	private float fontScale;
 
 	public SystemText(float baseLine) {
 		this("", baseLine, false);
@@ -40,7 +41,9 @@ public class SystemText extends Text {
 			float scale) {
 		super(0, 0, 0, 0);
 
-		setScale(scale, scale);
+		fontScale = scale;
+		
+		super.setScale(scale, scale);
 
 		needWidth = multiline;
 
@@ -70,6 +73,11 @@ public class SystemText extends Text {
 
 	@Override
 	public void destroy() {
+		for (SystemTextLine img : lineImage) {
+			getParent().remove(img);
+			img.destroy();
+		}
+		
 		text = null;
 		super.destroy();
 		texts.remove(this);
@@ -312,6 +320,11 @@ public class SystemText extends Text {
 		}
 	}
 
+	@Override
+	public void setScale(float x, float y){
+		super.setScale(fontScale * x, fontScale * y);
+	}
+	
 	public String text() {
 		return text;
 	}

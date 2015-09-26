@@ -25,14 +25,20 @@ public abstract class Text extends Visual {
 		return new BitmapText();
 	}
 */
-	public static Text create(float fontSize) {
-		return new SystemText(fontSize);
+	public static Text createBasicText(Font font) {
+		if(!ModdingMode.getClassicTextRenderingMode()) {
+			return new SystemText(font.baseLine * 2);
+		}
+		return new BitmapText(font);
 	}
 	
-	public static Text create(String text, float fontSize) {
-		return new SystemText(text, fontSize, false);
+	public static Text createBasicText(String text,Font font) {
+		if(!ModdingMode.getClassicTextRenderingMode()) {
+			return new SystemText(text, font.baseLine * 2, false);
+		}
+		return new BitmapText(text, font);
 	}
-	
+
 	public static Text create(Font font) {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(font.baseLine);
