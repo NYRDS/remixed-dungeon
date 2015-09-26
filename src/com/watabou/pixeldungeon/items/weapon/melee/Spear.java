@@ -21,13 +21,14 @@ import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class Spear extends MeleeWeapon {
+public class Spear extends SpecialWeapon {
 	{
 		image = ItemSpriteSheet.SPEAR;
 	}
 	
 	public Spear() {
 		super( 2, 1f, 1.5f );
+		range = 2;
 	}
 	
 	@Override
