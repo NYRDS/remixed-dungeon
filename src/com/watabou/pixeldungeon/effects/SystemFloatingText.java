@@ -44,16 +44,18 @@ public class SystemFloatingText extends SystemText {
 	@Override
 	public void kill() {
 		if (key != -1) {
-			stacks.get( key ).remove( this );
+			ArrayList<SystemFloatingText> stack = stacks.get( key );
+			stack.remove(this);
+			
+			//this.destroy();
+			
+			if(stack.isEmpty()) {
+				stacks.remove(key);
+			}
+
 			key = -1;
 		}
 		super.kill();
-	}
-	
-	@Override
-	public void destroy() {
-		kill();
-		super.destroy();
 	}
 	
 	public void reset( float x, float y, String text, int color ) {
