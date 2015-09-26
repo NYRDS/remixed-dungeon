@@ -32,34 +32,31 @@ public class Kusarigama extends SpecialWeapon {
 	protected static CellSelector.Listener impaler = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer target) {
-			
-			if(target != null) {
+
+			if (target != null) {
 				curUser.spendAndNext(TIME_TO_IMPALE);
-				int distance = Math.min(Ballistica.cast(curUser.pos, target, false, true), 4);
-				int passableTo = curUser.pos;
-				for(int i = 1; i<distance;i++) {
-					int cell = Ballistica.trace[i];
-					
-					if (Dungeon.level.passable[cell] || Dungeon.level.avoid[cell]) {
-						passableTo = cell;
-						Char chr = Actor.findChar(cell);
-						if(chr != null) {
-							target = chr.pos;
-							
-							drawChain(target);
-							
-							chr.move(Ballistica.trace[1]);
-							chr.getSprite().move(chr.pos, Ballistica.trace[1]);
-							
-							
-							Dungeon.observe();
-							return;
-						}
-					}
+				int hitCell = Ballistica.cast(curUser.pos, target, false, true);
+				
+				if(hitCell == curUser.pos) {
+					return;
 				}
 				
-				drawChain(passableTo);
-				
+				if (Dungeon.level.distance(curUser.pos, hitCell) < 4) {
+					Char chr = Actor.findChar(hitCell);
+					
+					if (chr != null) {
+						target = chr.pos;
+
+						chr.move(Ballistica.trace[1]);
+						chr.getSprite().move(chr.pos, Ballistica.trace[1]);
+
+						Dungeon.observe();
+					}
+
+					drawChain(hitCell);
+				} else {
+					drawChain(Ballistica.trace[4]);
+				}
 			}
 
 		}
@@ -71,13 +68,12 @@ public class Kusarigama extends SpecialWeapon {
 	};
 
 	private static void drawChain(int tgt) {
-			curUser.getSprite()
-			.getParent()
-			.add(new KusarigamaChain(curUser.getSprite()
-					.center(), DungeonTilemap
-					.tileCenterToWorld(tgt)));
+		curUser.getSprite()
+				.getParent()
+				.add(new KusarigamaChain(curUser.getSprite().center(),
+						DungeonTilemap.tileCenterToWorld(tgt)));
 	}
-	
+
 	@Override
 	public void execute(Hero hero, String action) {
 		curUser = hero;
@@ -99,11 +95,11 @@ public class Kusarigama extends SpecialWeapon {
 
 	public void applySpecial(Hero hero, Char tgt) {
 		curUser = hero;
-		
-		if(Dungeon.level.distance(curUser.pos, tgt.pos) > 1) {
-			 drawChain(tgt.pos);
+
+		if (Dungeon.level.distance(curUser.pos, tgt.pos) > 1) {
+			drawChain(tgt.pos);
 		}
-		
+
 		if (Random.Float(1) < 0.1f) {
 			Buff.prolong(tgt, Vertigo.class, 3);
 		}
