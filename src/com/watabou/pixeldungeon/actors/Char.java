@@ -435,6 +435,11 @@ public abstract class Char extends Actor {
 		buffs.remove( buff );
 		Actor.remove( buff );
 		
+		// TODO: fix me!
+		if(getSprite() == null) {
+			return;
+		}
+		
 		if (buff instanceof Burning) {
 			getSprite().remove( CharSprite.State.BURNING );
 		} else if (buff instanceof Levitation) {
