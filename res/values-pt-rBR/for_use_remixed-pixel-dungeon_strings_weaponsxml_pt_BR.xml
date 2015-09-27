@@ -6,24 +6,56 @@
   <string name="Weapon_Incompatible">Interação de diferentes tipos de magia negou o encantamento sobre essa arma!</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
-  <string-array name="Death_Name"/>
+  <string-array name="Death_Name">
+    <item>%s Cruel</item>
+    <item>%s Cruel</item>
+    <item>%s Cruel</item>
+  </string-array>
   <!--STRINGS OF Fire CLASS-->
-  <string-array name="Fire_Name"/>
+  <string-array name="Fire_Name">
+    <item>%s Ardente</item>
+    <item>%s Ardente</item>
+    <item>%s Ardente</item>
+  </string-array>
   <!--STRINGS OF Horror CLASS-->
-  <string-array name="Horror_Name"/>
+  <string-array name="Horror_Name">
+    <item>%s Sobrenatural</item>
+    <item>%s Sobrenatural</item>
+    <item>%s Sobrenatural</item>
+  </string-array>
   <!--STRINGS OF Instability CLASS-->
-  <string-array name="Instability_Name"/>
+  <string-array name="Instability_Name">
+    <item>%s Instável</item>
+    <item>%s Instável</item>
+    <item>%s Instável</item>
+  </string-array>
   <!--STRINGS OF Leech CLASS-->
   <string-array name="Leech_Name"/>
   <!--STRINGS OF Luck CLASS-->
-  <string-array name="Luck_Name"/>
+  <string-array name="Luck_Name">
+    <item>%s da Sorte</item>
+    <item>%s da Sorte</item>
+    <item>%s da Sorte</item>
+  </string-array>
   <!--STRINGS OF Paralysis CLASS-->
-  <string-array name="Paralysis_Name"/>
+  <string-array name="Paralysis_Name">
+    <item>%s do Atordoamento</item>
+    <item>%s do Atordoamento</item>
+    <item>%s do Atordoamento</item>
+  </string-array>
   <!--STRINGS OF Piercing CLASS-->
   <!--STRINGS OF Poison CLASS-->
-  <string-array name="Poison_Name"/>
+  <string-array name="Poison_Name">
+    <item>%s Venenoso</item>
+    <item>%s Venenosa</item>
+    <item>%s Venenoso(a)</item>
+  </string-array>
   <!--STRINGS OF Slow CLASS-->
-  <string-array name="Slow_Name"/>
+  <string-array name="Slow_Name">
+    <item>%s Arrepiante</item>
+    <item>%s Arrepiante</item>
+    <item>%s Arrepiante</item>
+  </string-array>
   <!--STRINGS OF Swing CLASS-->
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
@@ -133,4 +165,5 @@
   <string name="Tamahawk_Name">machadinha</string>
   <string name="Tamahawk_Info">Este machado de arremesso não é tão pesado, mas ainda exige força significativa para ser usado de forma eficaz.</string>
   <string name="Tamahawk_Gender">masculino</string>
+  <!--STRINGS OF Kusarigama CLASS-->
 </resources>

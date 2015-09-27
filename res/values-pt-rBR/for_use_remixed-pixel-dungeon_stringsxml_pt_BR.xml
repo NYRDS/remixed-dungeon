@@ -19,13 +19,29 @@
   <!--STRINGS OF Char CLASS-->
   <string name="Char_Name">mob</string>
   <string name="Char_Name_Objective">mob</string>
-  <string-array name="Char_Hit"/>
-  <string-array name="Char_Kill"/>
-  <string-array name="Char_Defeat"/>
+  <string-array name="Char_Hit">
+    <item>%1$s bateu em %2$s</item>
+    <item>%1$s bateu em %2$s</item>
+    <item>%1$s bateu em %2$s</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s matou você...</item>
+    <item>%s matou você...</item>
+    <item>%s matou você...</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s derrotou %2$s</item>
+    <item>%1$s derrotou %2$s</item>
+    <item>%1$s derrotou %2$s</item>
+  </string-array>
   <string name="Char_YouMissed">%1$s %2$s seu ataque</string>
   <string name="Char_SmbMissed">%1$s %2$s o ataque de %3$s</string>
   <string name="Char_OutParalysis">A dor de %s causou paralisia</string>
-  <string-array name="Char_StaDodged"/>
+  <string-array name="Char_StaDodged">
+    <item>evitou</item>
+    <item>evitou</item>
+    <item>evitou</item>
+  </string-array>
   <string name="Char_StaPoisoned">envenenado</string>
   <string name="Char_StaAmok">furia</string>
   <string name="Char_StaSlowed">lento</string>
@@ -343,8 +359,16 @@
   <!--STRINGS OF GasesImmunity CLASS-->
   <string name="GasesImmunity_Info">Imune a gases</string>
   <!--STRINGS OF Hunger CLASS-->
-  <string-array name="Hunger_Hungry"/>
-  <string-array name="Hunger_Starving"/>
+  <string-array name="Hunger_Hungry">
+    <item>Você está com fome.</item>
+    <item>Você está com fome.</item>
+    <item>Você está com fome.</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>Você está morrendo de fome!</item>
+    <item>Você está morrendo de fome!</item>
+    <item>Você está morrendo de fome!</item>
+  </string-array>
   <string name="Hunger_Death">Você morreu de fome...</string>
   <string name="Hunger_Info1">Faminto</string>
   <string name="Hunger_Info2">Morrendo de Fome</string>
