@@ -20,9 +20,11 @@ package com.watabou.glwrap;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
+
 import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
+import android.util.Log;
 
 public class Texture {
 
@@ -40,6 +42,11 @@ public class Texture {
 		GLES20.glGenTextures( 1, ids, 0 );
 		id = ids[0];
 		
+		if(id == 0) {
+			throw new AssertionError();
+		}
+		
+		//Log.i("texture",String.format("creating %d", id));
 		bind();
 	}
 	
@@ -48,6 +55,9 @@ public class Texture {
 	}
 	
 	public void bind() {
+		if(id==0) {
+			throw new AssertionError();
+		}
 		GLES20.glBindTexture( GLES20.GL_TEXTURE_2D, id );
 	}
 	
@@ -64,8 +74,11 @@ public class Texture {
 	}
 	
 	public void delete() {
-		int[] ids = {id};
-		GLES20.glDeleteTextures( 1, ids, 0 );
+		if(id != 0) {
+			int[] ids = {id};
+			GLES20.glDeleteTextures( 1, ids, 0 );
+			//Log.i("texture",String.format("deleting %d", id));
+		}
 	}
 	
 	public void bitmap( Bitmap bitmap ) {
