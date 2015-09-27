@@ -93,7 +93,7 @@ public class WndSadGhost extends Window {
 			Dungeon.level.drop( reward, ghost.pos ).sprite.drop();
 		}
 		
-		ghost.yell( TXT_FAREWELL );
+		ghost.say( TXT_FAREWELL );
 		ghost.die( null );
 		
 		Ghost.Quest.complete();

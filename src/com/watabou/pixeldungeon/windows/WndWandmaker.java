@@ -94,7 +94,7 @@ public class WndWandmaker extends Window {
 			Dungeon.level.drop( reward, wandmaker.pos ).sprite.drop();
 		}
 		
-		wandmaker.yell( Utils.format( TXT_FARAWELL, Dungeon.hero.className() ) );
+		wandmaker.say(Utils.format( TXT_FARAWELL, Dungeon.hero.className() ) );
 		wandmaker.destroy();
 		
 		wandmaker.getSprite().die();
