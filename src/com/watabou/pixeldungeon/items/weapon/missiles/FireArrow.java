@@ -32,7 +32,9 @@ public class FireArrow extends Arrow {
 
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
-		Buff.affect( defender, Burning.class ).reignite( defender );
+		if(activateSpecial(attacker, defender, damage)) {
+			Buff.affect( defender, Burning.class ).reignite( defender );
+		}
 		super.proc( attacker, defender, damage );
 	}
 }

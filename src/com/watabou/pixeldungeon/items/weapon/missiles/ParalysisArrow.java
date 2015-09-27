@@ -34,7 +34,9 @@ public class ParalysisArrow extends Arrow {
 
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
-		Buff.prolong( defender, Paralysis.class, DURATION );
+		if(activateSpecial(attacker, defender, damage)) {
+			Buff.prolong( defender, Paralysis.class, DURATION );
+		}
 		super.proc( attacker, defender, damage );
 	}
 }
