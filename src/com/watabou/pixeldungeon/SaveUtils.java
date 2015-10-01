@@ -67,7 +67,7 @@ public class SaveUtils {
 		case WARRIOR:
 			return WR_GAME_FILE;
 		case ROGUE:
-			if(FileSystem.getInteralStorageFile(RG2_GAME_FILE).exists()){
+			if(FileSystem.getFile(RG2_GAME_FILE).exists()){
 				return RG2_GAME_FILE;
 			}
 			return RG_GAME_FILE;
@@ -91,7 +91,7 @@ public class SaveUtils {
 		
 		String fname = Utils.format(levelKind+"_"+_depthFile2(cl), depth);
 		//GLog.i("trying: %s", fname);
-		if(FileSystem.getInteralStorageFile(fname).exists()){
+		if(FileSystem.getFile(fname).exists()) {
 			return fname;
 		}
 		

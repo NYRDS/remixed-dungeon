@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -481,22 +483,27 @@ public class Dungeon {
 		
 		GLog.i("loading level: %s", loadFrom);
 		
-		if(FileSystem.getInteralStorageFile(loadFrom).exists()){
+		InputStream input;
+		
+		if(FileSystem.getFile(loadFrom).exists()) {
+			input = new FileInputStream(FileSystem.getFile(loadFrom));
 			Dungeon.level = null;
-			
-			InputStream input = Game.instance().openFileInput( loadFrom ) ;
-			Bundle bundle = Bundle.read( input );
-			input.close();
-			
-			Level level = (Level)bundle.get( "level" );
-			if(level != null){
-				initSizeDependentStuff(level.getWidth(), level.getHeight());
-			} else {
-				GLog.w("cannot load %s \n", loadFrom);
-			}
-			return level;
+		} else {
+			return null;
 		}
-		return null;
+		
+		Bundle bundle = Bundle.read( input );
+		input.close();
+		
+		Level level = (Level)bundle.get( "level" );
+		if(level != null){
+			initSizeDependentStuff(level.getWidth(), level.getHeight());
+		} else {
+			GLog.w("cannot load %s \n", loadFrom);
+		}
+		return level;
+		
+		
 	}
 	
 	public static void deleteGame(boolean deleteLevels ) {
@@ -512,7 +519,8 @@ public class Dungeon {
 	
 	public static Bundle gameBundle( String fileName ) throws IOException {
 		
-		InputStream input = Game.instance().openFileInput( fileName );
+		InputStream input = new FileInputStream(FileSystem.getFile(fileName));
+		
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
