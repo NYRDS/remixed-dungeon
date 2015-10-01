@@ -12,8 +12,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 
 public class ModdingButton extends Button {
 
-	private Image      image;
-	private Text text;
+	private Image image;
+	private Text  text;
 
 	public ModdingButton() {
 		super();
@@ -40,7 +40,8 @@ public class ModdingButton extends Button {
 		
 		image = Icons.MODDING_MODE.get();
 		
-		text = PixelScene.createText("modding mode", 9);
+		text = Text.createBasicText(PixelScene.font1x);
+		text.text("modding mode");
 		
 		updateLook();
 		
