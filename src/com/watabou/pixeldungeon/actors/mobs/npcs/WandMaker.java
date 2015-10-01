@@ -129,6 +129,54 @@ public class WandMaker extends NPC {
 		GameScene.show( new WndQuest( this, Utils.format( format, args ) ) );
 	}
 	
+	public static Wand makeBattleWand() {
+		Wand wand = null;
+		switch (Random.Int( 5 )) {
+		case 0:
+			wand = new WandOfAvalanche();
+			break;
+		case 1:
+			wand = new WandOfDisintegration();
+			break;
+		case 2:
+			wand = new WandOfFirebolt();
+			break;
+		case 3:
+			wand = new WandOfLightning();
+			break;
+		case 4:
+			wand = new WandOfPoison();
+			break;
+		}
+		wand.random().upgrade();
+		
+		return wand;
+	}
+	
+	public static Wand makeNonBattleWand() {
+		Wand wand = null;
+		
+		switch (Random.Int( 5 )) {
+		case 0:
+			wand = new WandOfAmok();
+			break;
+		case 1:
+			wand = new WandOfBlink();
+			break;
+		case 2:
+			wand = new WandOfRegrowth();
+			break;
+		case 3:
+			wand = new WandOfSlowness();
+			break;
+		case 4:
+			wand = new WandOfTelekinesis();
+			break;
+		}
+		wand.random().upgrade();
+		return wand;
+	}
+	
 	public static class Quest {
 		
 		private static boolean spawned;
@@ -137,14 +185,8 @@ public class WandMaker extends NPC {
 		
 		private static boolean given;
 		
-		public static Wand wand1;
-		public static Wand wand2;
-		
 		public static void reset() {
 			spawned = false;
-
-			wand1 = null;
-			wand2 = null;
 		}
 		
 		private static final String NODE		= "wandmaker";
@@ -152,8 +194,6 @@ public class WandMaker extends NPC {
 		private static final String SPAWNED		= "spawned";
 		private static final String ALTERNATIVE	= "alternative";
 		private static final String GIVEN		= "given";
-		private static final String WAND1		= "wand1";
-		private static final String WAND2		= "wand2";
 		
 		public static void storeInBundle( Bundle bundle ) {
 			
@@ -167,8 +207,6 @@ public class WandMaker extends NPC {
 				
 				node.put(GIVEN, given );
 				
-				node.put( WAND1, wand1 );
-				node.put( WAND2, wand2 );
 			}
 			
 			bundle.put( NODE, node );
@@ -181,11 +219,7 @@ public class WandMaker extends NPC {
 			if (!node.isNull() && (spawned = node.getBoolean( SPAWNED ))) {
 				
 				alternative	=  node.getBoolean( ALTERNATIVE );
-				
 				given = node.getBoolean( GIVEN );
-				
-				wand1 = (Wand)node.get( WAND1 );
-				wand2 = (Wand)node.get( WAND2 );
 			} else {
 				reset();
 			}
@@ -205,44 +239,6 @@ public class WandMaker extends NPC {
 				alternative = Random.Int( 2 ) == 0;
 				
 				given = false;
-				
-				switch (Random.Int( 5 )) {
-				case 0:
-					wand1 = new WandOfAvalanche();
-					break;
-				case 1:
-					wand1 = new WandOfDisintegration();
-					break;
-				case 2:
-					wand1 = new WandOfFirebolt();
-					break;
-				case 3:
-					wand1 = new WandOfLightning();
-					break;
-				case 4:
-					wand1 = new WandOfPoison();
-					break;
-				}
-				wand1.random().upgrade();
-				
-				switch (Random.Int( 5 )) {
-				case 0:
-					wand2 = new WandOfAmok();
-					break;
-				case 1:
-					wand2 = new WandOfBlink();
-					break;
-				case 2:
-					wand2 = new WandOfRegrowth();
-					break;
-				case 3:
-					wand2 = new WandOfSlowness();
-					break;
-				case 4:
-					wand2 = new WandOfTelekinesis();
-					break;
-				}
-				wand2.random().upgrade();
 			}
 		}
 		
@@ -280,10 +276,7 @@ public class WandMaker extends NPC {
 			}
 		}
 		
-		public static void complete() {
-			wand1 = null;
-			wand2 = null;
-			
+		public static void complete() {			
 			Journal.remove( Journal.Feature.WANDMAKER );
 		}
 	}
