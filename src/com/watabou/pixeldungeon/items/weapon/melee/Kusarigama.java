@@ -2,6 +2,8 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import java.util.ArrayList;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -17,7 +19,7 @@ import com.watabou.utils.Random;
 
 public class Kusarigama extends SpecialWeapon {
 
-	private static final String AC_IMPALE = "IMPALE";
+	private static final String AC_PULL = Game.getVar(R.string.Kusarigama_Pull);
 	private static final float TIME_TO_IMPALE = 1.5f;
 
 	public Kusarigama() {
@@ -77,7 +79,7 @@ public class Kusarigama extends SpecialWeapon {
 	@Override
 	public void execute(Hero hero, String action) {
 		curUser = hero;
-		if (action.equals(AC_IMPALE)) {
+		if (action.equals(AC_PULL)) {
 			GameScene.selectCell(impaler);
 		} else {
 			super.execute(hero, action);
@@ -88,7 +90,7 @@ public class Kusarigama extends SpecialWeapon {
 	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = super.actions(hero);
 		if (isEquipped(hero)) {
-			actions.add(AC_IMPALE);
+			actions.add(AC_PULL);
 		}
 		return actions;
 	}

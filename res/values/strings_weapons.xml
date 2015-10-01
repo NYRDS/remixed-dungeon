@@ -205,6 +205,7 @@
 
     <!-- STRINGS OF Kusarigama CLASS -->
     <string name="Kusarigama_Name">kusarigama</string>
-    <string name="Kusarigama_Info"> This weapon that consists of a sickle on a metal chain with a heavy iron weight at the end.</string>
-    <string name="Kusarigama_Gender">feminine</string>    
+    <string name="Kusarigama_Info">This weapon that consists of a sickle on a metal chain with a heavy iron weight at the end.</string>
+    <string name="Kusarigama_Gender">feminine</string>
+    <string name="Kusarigama_Pull">pull</string>
 </resources>
