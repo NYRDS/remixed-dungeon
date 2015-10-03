@@ -42,10 +42,6 @@ public class Texture {
 		GLES20.glGenTextures( 1, ids, 0 );
 		id = ids[0];
 		
-		if(id == 0) {
-			throw new AssertionError();
-		}
-		
 		//Log.i("texture",String.format("creating %d", id));
 		bind();
 	}
@@ -120,7 +116,7 @@ public class Texture {
 		imageBuffer.position( 0 );
 		
 		GLES20.glPixelStorei( GLES20.GL_UNPACK_ALIGNMENT, 1 );
-	    
+		
 		GLES20.glTexImage2D(
 			GLES20.GL_TEXTURE_2D, 
 			0, 

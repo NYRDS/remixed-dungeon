@@ -71,14 +71,18 @@ public class SystemText extends Text {
 		texts.add(this);
 	}
 
-	@Override
-	public void destroy() {
+	private void destroyLines() {
 		for (SystemTextLine img : lineImage) {
 			if(getParent()!=null){
 				getParent().remove(img);
 			}
 			img.destroy();
 		}
+	}
+	
+	@Override
+	public void destroy() {
+		destroyLines();
 		
 		text = null;
 		super.destroy();
@@ -147,12 +151,7 @@ public class SystemText extends Text {
 			// Log.d("SystemText", String.format("xscale: %3.2f %s", scale.x,
 			// text));
 
-			if (getParent() != null) {
-				for (SystemTextLine img : lineImage) {
-					getParent().remove(img);
-					img.destroy();
-				}
-			}
+			destroyLines();
 
 			lineImage.clear();
 
@@ -223,7 +222,7 @@ public class SystemText extends Text {
 						lineCounter++;
 						offset += codepointCharCount;
 					}
-					lineImage.add(new SystemTextLine(bitmap));
+					lineImage.add(new SystemTextLine(bitmap,text.substring(startLine, nextLine)));
 				} else {
 					lineImage.add(new SystemTextLine());
 				}
@@ -270,11 +269,13 @@ public class SystemText extends Text {
 	
 	@Override
 	public void draw() {
+		/*
 		if(!exists) {
 			return;
 		}
-		super.draw();
-
+		*/
+		//super.draw();
+		
 		measure();
 		if (lineImage != null) {
 			int line = 0;
@@ -348,6 +349,7 @@ public class SystemText extends Text {
 	public static void invalidate() {
 		for (SystemText txt : texts) {
 			txt.dirty = true;
+			txt.destroyLines();
 		}
 	}
 }

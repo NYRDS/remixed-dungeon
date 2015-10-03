@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.utils;
 
+import com.watabou.noosa.Game;
 import com.watabou.utils.Signal;
+
 import android.util.Log;
 
 public class GLog {
@@ -38,7 +40,9 @@ public class GLog {
 		}
 		
 		Log.i( TAG, text );
-		update.dispatch( text );
+		if(!Game.isPaused()) {
+			update.dispatch( text );
+		}
 	}
 	
 	public static void p( String text, Object... args ) {

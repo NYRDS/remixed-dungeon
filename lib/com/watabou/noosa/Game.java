@@ -366,6 +366,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 	protected void switchScene(Scene requestedScene) {
 
+		SystemText.invalidate();
 		Camera.reset();
 
 		if (scene != null) {
