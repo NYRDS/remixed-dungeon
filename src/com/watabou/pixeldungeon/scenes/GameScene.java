@@ -409,7 +409,7 @@ public class GameScene extends PixelScene {
 	
 	private void addMobSprite( Mob mob ) {
 		CharSprite sprite = mob.sprite();
-		sprite.visible = Dungeon.visible[mob.pos];
+		sprite.setVisible(Dungeon.visible[mob.pos]);
 		mobs.add( sprite );
 		sprite.link( mob );
 	}
@@ -558,7 +558,7 @@ public class GameScene extends PixelScene {
 			
 			for (Mob mob : Dungeon.level.mobs) {
 				if(mob.getSprite() != null) {
-					mob.getSprite().visible = Dungeon.visible[mob.pos];
+					mob.getSprite().setVisible(Dungeon.visible[mob.pos]);
 				}
 			}
 		}

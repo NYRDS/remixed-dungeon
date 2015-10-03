@@ -66,7 +66,7 @@ public class Tag extends Button {
 	public void update() {
 		super.update();
 		
-		if (visible && lightness > 0.5) {
+		if (getVisible() && lightness > 0.5) {
 			if ((lightness -= Game.elapsed) > 0.5) {
 				bg.ra = bg.ga = bg.ba = 2 * lightness - 1;
 				bg.rm = 2 * r * (1 - lightness);

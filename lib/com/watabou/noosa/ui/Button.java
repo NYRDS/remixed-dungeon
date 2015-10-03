@@ -61,7 +61,7 @@ public class Button extends Component {
 	public void update() {
 		super.update();
 		
-		hotArea.active = visible;
+		hotArea.active = getVisible();
 
 		if (pressed && ((pressTime += Game.elapsed) >= longClick)) {
 			pressed = false;

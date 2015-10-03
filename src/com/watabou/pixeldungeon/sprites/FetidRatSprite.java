@@ -41,7 +41,7 @@ public class FetidRatSprite extends RatSprite {
 		super.update();
 		
 		if (cloud != null) {
-			cloud.visible = visible;
+			cloud.setVisible(getVisible());
 		}
 	}
 	

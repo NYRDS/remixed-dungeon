@@ -280,7 +280,7 @@ public class Toolbar extends Component {
 		}
 
 		public void show(boolean value){
-			visible = value;
+			setVisible(value);
 			enable(value);
 		}
 		
@@ -305,13 +305,13 @@ public class Toolbar extends Component {
 
 			originToCenter();
 
-			active = visible = false;
+			active = setVisible(false);
 		}
 
 		public void reset(Item item, float dstX, float dstY) {
 			view(item.imageFile(), item.image(), item.glowing());
 
-			active = visible = true;
+			active = setVisible(true);
 
 			this.dstX = dstX - ItemSprite.SIZE / 2;
 			this.dstY = dstY - ItemSprite.SIZE / 2;
@@ -328,7 +328,7 @@ public class Toolbar extends Component {
 
 			if ((left -= Game.elapsed) <= 0) {
 
-				visible = active = false;
+				setVisible(active = false);
 
 			} else {
 				float p = left / DURATION;

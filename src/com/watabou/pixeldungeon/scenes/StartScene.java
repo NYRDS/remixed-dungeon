@@ -107,7 +107,7 @@ public class StartScene extends PixelScene {
 
 		Badges.loadGlobal();
 
-		uiCamera.visible = false;
+		uiCamera.setVisible(false);
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;
@@ -280,32 +280,32 @@ public class StartScene extends PixelScene {
 		shields.get(curClass = cl).highlight(true);
 
 		if (cl == HeroClass.HUNTRESS && !huntressUnlocked) {
-			unlock.visible = true;
-			unlockElf.visible = false;
-			btnLoad.visible = false;
-			btnNewGame.visible = false;
+			unlock.setVisible(true);
+			unlockElf.setVisible(false);
+			btnLoad.setVisible(false);
+			btnNewGame.setVisible(false);
 			return;
 		}
 		
 		if (cl == HeroClass.ELF && !elfUnlocked) {
-			unlock.visible = false;
-			unlockElf.visible = true;
-			btnLoad.visible = false;
-			btnNewGame.visible = false;
+			unlock.setVisible(false);
+			unlockElf.setVisible(true);
+			btnLoad.setVisible(false);
+			btnNewGame.setVisible(false);
 			return;
 		}
 		
-		unlock.visible = false;
-		unlockElf.visible = false;
+		unlock.setVisible(false);
+		unlockElf.setVisible(false);
 
 		GamesInProgress.Info info = GamesInProgress.check(curClass);
 		if (info != null) {
 
-			btnLoad.visible = true;
+			btnLoad.setVisible(true);
 			btnLoad.secondary(Utils.format(TXT_DPTH_LVL, info.depth,
 					info.level));
 
-			btnNewGame.visible = true;
+			btnNewGame.setVisible(true);
 			btnNewGame.secondary(TXT_ERASE);
 
 			float w = (Camera.main.width - GAP) / 2 - buttonX;
@@ -315,9 +315,9 @@ public class StartScene extends PixelScene {
 					BUTTON_HEIGHT);
 
 		} else {
-			btnLoad.visible = false;
+			btnLoad.setVisible(false);
 
-			btnNewGame.visible = true;
+			btnNewGame.setVisible(true);
 			btnNewGame.secondary(null);
 			btnNewGame.setRect(buttonX, buttonY, Camera.main.width
 					- buttonX * 2, BUTTON_HEIGHT);

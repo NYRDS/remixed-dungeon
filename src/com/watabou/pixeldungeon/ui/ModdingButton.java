@@ -25,11 +25,11 @@ public class ModdingButton extends Button {
 	private void updateLook() {
 		if(PixelDungeon.moddingMode()) {
 			image.brightness(1.5f);
-			text.visible = true;
+			text.setVisible(true);
 			ModdingMode.mode(true);
 		} else {
 			image.brightness(0.1f);
-			text.visible = false;
+			text.setVisible(false);
 			ModdingMode.mode(false);
 		}
 	}

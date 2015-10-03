@@ -116,7 +116,7 @@ public class SpellSprite extends Image {
 	
 	public static void show( Char ch, int index ) {
 		
-		if (!ch.getSprite().visible) {
+		if (!ch.getSprite().getVisible()) {
 			return;
 		}
 		

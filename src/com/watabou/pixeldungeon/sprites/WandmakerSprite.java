@@ -97,7 +97,7 @@ public class WandmakerSprite extends MobSprite {
 				}
 			}
 			
-			if (visible = WandmakerSprite.this.visible) {
+			if (setVisible(WandmakerSprite.this.getVisible())) {
 				PointF p = WandmakerSprite.this.center();
 				point(p.x, p.y );
 			}

@@ -287,7 +287,7 @@ public class SystemText extends Text {
 				// Log.d("SystemText", String.format(Locale.ROOT,
 				// "%3.1f x %3.1f -> %s", x, y, text));
 				
-				img.visible = visible;
+				img.setVisible(getVisible());
 				img.ra = ra;
 				img.ga = ga;
 				img.ba = ba;

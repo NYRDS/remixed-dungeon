@@ -151,7 +151,7 @@ public class ModderLevel extends SpiderLevel {
 		
 		@Override
 		public void update() {
-			if (visible = Dungeon.visible[pos]) {
+			if (setVisible(Dungeon.visible[pos])) {
 				
 				super.update();
 				

@@ -39,7 +39,7 @@ public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Tou
 		super( x, y, width, height );
 		this.target = this;
 		
-		visible = false;
+		setVisible(false);
 		
 		Touchscreen.event.add( this );
 	}

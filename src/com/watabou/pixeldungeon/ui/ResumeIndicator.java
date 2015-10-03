@@ -12,7 +12,7 @@ public class ResumeIndicator extends Tag {
 		
 		setSize( 24, 26 );
 		
-		visible = true;
+		setVisible(true);
 	}
 	
 	@Override
@@ -37,7 +37,11 @@ public class ResumeIndicator extends Tag {
 	
 	@Override
 	public void update() {
-		visible = btnResume.visible = Dungeon.hero.lastAction != null;
+		
+		boolean visible = Dungeon.hero.lastAction != null;
+		
+		btnResume.setVisible(visible);
+		setVisible(visible);
 		
 		super.update();
 	}

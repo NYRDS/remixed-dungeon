@@ -63,7 +63,7 @@ public class BlacksmithSprite extends MobSprite {
 		super.update();
 		
 		if (emitter != null) {
-			emitter.visible = visible;
+			emitter.setVisible(getVisible());
 		}
 	}
 	
@@ -71,7 +71,7 @@ public class BlacksmithSprite extends MobSprite {
 	public void onComplete( Animation anim ) {
 		super.onComplete( anim );
 		
-		if (visible && emitter != null && anim == idle) {
+		if (getVisible() && emitter != null && anim == idle) {
 			emitter.burst( Speck.factory( Speck.FORGE ), 3 );
 			float volume = 0.2f / (Dungeon.level.distance( ch.pos, Dungeon.hero.pos ));
 			Sample.INSTANCE.play( Assets.SND_EVOKE, volume, volume, 0.8f  );

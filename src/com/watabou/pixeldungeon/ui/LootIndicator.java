@@ -33,7 +33,7 @@ public class LootIndicator extends Tag {
 		
 		setSize( 24, 22 );
 		
-		visible = false;
+		setVisible(false);
 	}
 	
 	@Override
@@ -76,17 +76,17 @@ public class LootIndicator extends Tag {
 					slot.item( item );
 					flash();
 				}
-				visible = true;
+				setVisible(true);
 				
 			} else {
 				
 				lastItem = null;
-				visible = false;
+				setVisible(false);
 				
 			}
 		}
 		
-		slot.enable( visible && Dungeon.hero.isReady() );
+		slot.enable( getVisible() && Dungeon.hero.isReady() );
 		
 		super.update();
 	}

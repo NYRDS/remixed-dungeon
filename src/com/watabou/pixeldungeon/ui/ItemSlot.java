@@ -119,12 +119,19 @@ public class ItemSlot extends Button {
 		if (item == null) {
 			
 			active = false;
-			icon.visible = topLeft.visible = topRight.visible = bottomRight.visible = false;
+
+			icon.setVisible(false);
+			topLeft.setVisible(false);
+			topRight.setVisible(false);
+			bottomRight.setVisible(false);
 			return;
 		}
 		
 		active = true;
-		icon.visible = topLeft.visible = topRight.visible = bottomRight.visible = true;
+		icon.setVisible(true);
+		topLeft.setVisible(true);
+		topRight.setVisible(true);
+		bottomRight.setVisible(true);
 		
 		icon.view(item.imageFile(), item.image(), item.glowing() );
 		

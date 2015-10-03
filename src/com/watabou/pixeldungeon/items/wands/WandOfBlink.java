@@ -43,7 +43,7 @@ public class WandOfBlink extends Wand {
 			cell = Ballistica.trace[Ballistica.distance - 2];
 		}
 		
-		curUser.getSprite().visible = true;
+		curUser.getSprite().setVisible(true);
 		appear( curUser, cell );
 		Dungeon.observe();
 	}
@@ -52,7 +52,7 @@ public class WandOfBlink extends Wand {
 	protected void fx( int cell, Callback callback ) {
 		MagicMissile.whiteLight( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
-		wandUser.getSprite().visible = false;
+		wandUser.getSprite().setVisible(false);
 	}
 	
 	public static void appear( Char ch, int pos ) {

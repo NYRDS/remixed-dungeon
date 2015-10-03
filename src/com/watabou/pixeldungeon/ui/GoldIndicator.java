@@ -39,7 +39,7 @@ public class GoldIndicator extends Component {
 		tf.hardlight( 0xFFFF00 );
 		add( tf );
 		
-		visible = false;
+		setVisible(false);
 	}
 	
 	@Override
@@ -52,13 +52,13 @@ public class GoldIndicator extends Component {
 	public void update() {
 		super.update();
 		
-		if (visible) {
+		if (getVisible()) {
 			
 			time -= Game.elapsed;
 			if (time > 0) {
 				tf.alpha( time > TIME / 2 ? 1f : time * 2 / TIME );
 			} else {
-				visible = false;
+				setVisible(false);
 			}
 			
 		}
@@ -70,7 +70,7 @@ public class GoldIndicator extends Component {
 			tf.text( Integer.toString( lastValue ) );
 			tf.measure();
 			
-			visible = true;
+			setVisible(true);
 			time = TIME;
 			
 			layout();

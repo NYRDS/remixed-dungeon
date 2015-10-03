@@ -114,7 +114,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 		add(slot);
 
 		crossB = Icons.TARGET.get();
-		crossB.visible = false;
+		crossB.setVisible(false);
 		add(crossB);
 
 		crossM = new Image();
@@ -195,7 +195,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 			if (Actor.all().contains(lastTarget)) {
 				lastTarget.getSprite().getParent().add(crossM);
 				crossM.point(DungeonTilemap.tileToWorld(lastTarget.pos));
-				crossB.visible = true;
+				crossB.setVisible(true);
 			} else {
 				lastTarget = null;
 			}
@@ -220,7 +220,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	public static void cancel() {
 		for (QuickSlot slot : slots) {
 			if (slot != null && slot.targeting) {
-				slot.crossB.visible = false;
+				slot.crossB.setVisible(false);
 				slot.crossM.remove();
 				slot.targeting = false;
 			}
