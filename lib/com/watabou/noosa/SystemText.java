@@ -222,7 +222,9 @@ public class SystemText extends Text {
 						lineCounter++;
 						offset += codepointCharCount;
 					}
-					lineImage.add(new SystemTextLine(bitmap,text.substring(startLine, nextLine)));
+					SystemTextLine line = new SystemTextLine(bitmap,text.substring(startLine, nextLine));
+					line.setVisible(getVisible());
+					lineImage.add(line);
 				} else {
 					lineImage.add(new SystemTextLine());
 				}
@@ -268,6 +270,16 @@ public class SystemText extends Text {
 	}
 	
 	@Override
+	public boolean setVisible(boolean visible) {
+		if(lineImage != null) {
+			for (SystemTextLine img : lineImage) {
+				img.setVisible(visible);
+			}
+		}
+		return super.setVisible(visible);
+	}
+	
+	@Override
 	public void draw() {
 		/*
 		if(!exists) {
@@ -287,7 +299,6 @@ public class SystemText extends Text {
 				// Log.d("SystemText", String.format(Locale.ROOT,
 				// "%3.1f x %3.1f -> %s", x, y, text));
 				
-				img.setVisible(getVisible());
 				img.ra = ra;
 				img.ga = ga;
 				img.ba = ba;

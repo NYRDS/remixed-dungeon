@@ -47,8 +47,8 @@ public class TitleScene extends PixelScene {
 	private static final String TXT_ABOUT = Game
 			.getVar(R.string.TitleScene_About);
 
-	Text pleaseSupport;
-	DonateButton        btnDonate;
+	Text            pleaseSupport;
+	DonateButton    btnDonate;
 	
 	@Override
 	public void create() {
@@ -185,7 +185,7 @@ public class TitleScene extends PixelScene {
 	}
 
 	private double time = 0;
-	private boolean donationAdded = false;;
+	private boolean donationAdded = false;
 	@Override
 	public void update() {
 		super.update();
