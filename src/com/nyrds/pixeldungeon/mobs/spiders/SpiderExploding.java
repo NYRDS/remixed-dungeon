@@ -25,8 +25,8 @@ public class SpiderExploding extends Mob {
 		Sorrowmoss.class,
 		Earthroot.class,
 		Sungrass.class,
-		Dreamweed.class,
-		Fadeleaf.class
+		Fadeleaf.class,
+		Dreamweed.class
 	};
 	
 	public SpiderExploding() {
