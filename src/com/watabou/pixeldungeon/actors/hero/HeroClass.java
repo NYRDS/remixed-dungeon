@@ -192,8 +192,6 @@ public enum HeroClass {
 	private static void initCommon(Hero hero) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
-
-		hero.collect(new Kusarigama());
 		
 		if (ModdingMode.mode()) {
 			initDebug(hero);

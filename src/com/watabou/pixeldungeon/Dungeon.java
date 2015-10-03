@@ -57,6 +57,7 @@ import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.ModderLevel;
 import com.watabou.pixeldungeon.levels.Room;
+import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -156,7 +157,7 @@ public class Dungeon {
 	public static Level testLevel() {
 		Dungeon.level = null;
 		
-		level = new ModderLevel();
+		level = new SewerLevel();
 		
 		initSizeDependentStuff(64,64);
 		
