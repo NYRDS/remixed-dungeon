@@ -21,8 +21,6 @@ import java.nio.FloatBuffer;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;
-import android.util.Log;
-
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
 
@@ -35,9 +33,7 @@ public class SystemTextLine extends Visual {
 	private FloatBuffer verticesBuffer;
 	
 	private boolean dirty;
-	
-	String text;
-	
+
 	public SystemTextLine() {
 		super( 0, 0, 0, 0 );
 		
@@ -49,11 +45,6 @@ public class SystemTextLine extends Visual {
 		this();
 		texture = new SmartTexture(bitmap);
 		frame( new RectF( 0, 0, 1, 1 ) );
-	}
-
-	public SystemTextLine(Bitmap bitmap, String substring) {
-		this(bitmap);
-		text = substring;
 	}
 
 	@Override
@@ -109,31 +100,16 @@ public class SystemTextLine extends Visual {
 	
 	@Override
 	public void draw() {
-		if(texture == null) {
-			//GLog.i("null texture");
+		if(texture == null) { // used as empty rows
 			return;
 		}
 		
-		if(!isVisible()) {
-			if(text != null) {
-				Log.i("System text line", String.format("invisible %s",text));
-			}
-			return;
-		}
-
-				
 		super.draw();
 
 		NoosaScript script = NoosaScript.get();
 
 		texture.bind();
-		
-		if(text.equals("modding mode")) {
-			Log.i("tt","t");
-		}
-		
-		Log.i("ddd",String.format( "%s %4.2f %4.2f", text, width, width()));
-		
+
 		script.camera( camera() );
 		
 		script.uModel.valueM4( matrix );

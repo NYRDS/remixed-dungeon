@@ -222,7 +222,7 @@ public class SystemText extends Text {
 						lineCounter++;
 						offset += codepointCharCount;
 					}
-					SystemTextLine line = new SystemTextLine(bitmap,text.substring(startLine, nextLine));
+					SystemTextLine line = new SystemTextLine(bitmap);
 					line.setVisible(getVisible());
 					lineImage.add(line);
 				} else {
@@ -281,13 +281,6 @@ public class SystemText extends Text {
 	
 	@Override
 	public void draw() {
-		/*
-		if(!exists) {
-			return;
-		}
-		*/
-		//super.draw();
-		
 		measure();
 		if (lineImage != null) {
 			int line = 0;
