@@ -165,11 +165,11 @@ public class StandardPainter extends Painter {
 		
 		set( level, roomCenter, Terrain.PEDESTAL );
 		
-		//if(Random.Float(1) < 0.1f) {
+		if(Random.Float(1) < 0.25f) {
 			Crystal crystal = new Crystal();
 			crystal.pos = level.cell(roomCenter.x, roomCenter.y);
 			level.mobs.add( crystal );
-		//}
+		}
 	}
 	
 	private static void paintBridge( Level level, Room room ) {

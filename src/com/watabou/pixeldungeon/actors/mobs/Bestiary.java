@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
@@ -106,7 +107,6 @@ public class Bestiary {
 		case 1:
 			chances = new float[]{ 1 };
 			classes = new Class<?>[]{ Rat.class };
-			//classes = new Class<?>[]{ Crystal.class };
 			break;
 		case 2:
 			chances = new float[]{ 1, 1 };
@@ -214,8 +214,8 @@ public class Bestiary {
 			//chances = new float[]{ 1,1 };
 			//classes = new Class<?>[]{ Shaman.class, Warlock.class  };
 
-			chances = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-			classes = new Class<?>[]{ Rat.class, Gnoll.class, Crab.class, Swarm.class, Skeleton.class, Thief.class, Swarm.class, Shadow.class, Bat.class, Brute.class, Spinner.class, Elemental.class, Monk.class, Golem.class, Warlock.class, Succubus.class, Eye.class, Scorpio.class, AirElemental.class, WaterElemental.class, EarthElemental.class  };
+			chances = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1 };
+			classes = new Class<?>[]{ Rat.class, Gnoll.class, Crab.class, Swarm.class, Skeleton.class, Thief.class, Swarm.class, Shadow.class, Bat.class, Brute.class, Spinner.class, Elemental.class, Monk.class, Golem.class, Warlock.class, Succubus.class, Eye.class, Scorpio.class, AirElemental.class, WaterElemental.class, EarthElemental.class, Crystal.class  };
 		}
 		
 		return classes[ Random.chances( chances )];

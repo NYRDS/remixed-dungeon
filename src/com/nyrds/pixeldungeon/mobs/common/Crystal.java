@@ -15,19 +15,19 @@ public class Crystal extends Mob {
 
 	private int kind;
 
+	static private int ctr = 0;
 	
 	public Crystal() {
 		adjustLevel(Dungeon.depth);
 		
 		loot = SimpleWand.createRandomSimpleWand();
-		
 		((Wand)loot).upgrade(Dungeon.depth);
 		
-		lootChance = 1f;
+		lootChance = 0.25f;
 	}
 	
 	private void adjustLevel(int depth) {
-		kind = Random.Int(0, 1);
+		kind = (ctr++)%2;
 		
 		hp(ht(Dungeon.depth * 4));
 		defenseSkill = depth * 2 + 1;
