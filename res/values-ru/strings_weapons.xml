@@ -159,7 +159,7 @@
   <string name="Boomerang_Gender">masculine</string>
   <!--STRINGS OF CurareDart CLASS-->
   <string name="CurareDart_Name">дротик с кураре</string>
-  <string name="CurareDart_Info">Эти маленькие зловещие дротики наносят немного урона, но способны временно парализовать цель.</string>
+  <string name="CurareDart_Info">Эти маленькие зловещие дротики наносят не много урона, но способны временно парализовать цель.</string>
   <string name="CurareDart_Gender">masculine</string>
   <!--STRINGS OF Dart CLASS-->
   <string name="Dart_Name">дротик</string>
@@ -185,4 +185,5 @@
   <string name="Kusarigama_Name">кусаригама</string>
   <string name="Kusarigama_Info">Это оружие состоит из серпа на длинной цепи и тяжелой гири на другом её конце.</string>
   <string name="Kusarigama_Gender">feminine</string>
+  <string name="Kusarigama_Pull">подтянуть</string>
 </resources>
