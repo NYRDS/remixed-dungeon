@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -445,9 +446,15 @@ public class Hero extends Char {
 				}
 			}
 
-			ready();
-			//spend(TICK);
-			//next();
+			if(PixelDungeon.realtime()) {
+				if(ready == false) {
+					ready();
+				}
+				spend(TICK);
+				next();
+			} else {
+				ready();
+			}
 			return false;
 
 		} else {

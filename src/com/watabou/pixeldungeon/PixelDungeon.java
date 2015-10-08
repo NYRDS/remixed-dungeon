@@ -351,6 +351,15 @@ public class PixelDungeon extends GameWithGoogleIap {
 		Preferences.INSTANCE.put(Preferences.KEY_MODDING_MODE, value);
 	}
 	
+	
+	public static boolean realtime() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_REALTIME, false);
+	}
+
+	public static void realtime(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_REALTIME, value);
+	}
+	
 	/*
 	 * <--- Preferences
 	 */

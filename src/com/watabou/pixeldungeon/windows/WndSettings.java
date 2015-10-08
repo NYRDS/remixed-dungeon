@@ -162,7 +162,19 @@ public class WndSettings extends Window {
 			btnOrientation.setRect(0, btnSound.bottom() + GAP, WIDTH,
 					BTN_HEIGHT);
 			add(btnOrientation);
-
+			
+			CheckBox btnRealtime = new CheckBox("Realtime!") {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					PixelDungeon.realtime(checked());
+				}
+			};
+			btnRealtime.setRect(0, btnOrientation.bottom() + GAP, WIDTH,
+					BTN_HEIGHT);
+			btnRealtime.checked(PixelDungeon.realtime());
+			add(btnRealtime);
+			
 			RedButton localeButton = new RedButton(TXT_SElECT_LANGUAGE) {
 				@Override
 				protected void onClick() {
@@ -183,7 +195,7 @@ public class WndSettings extends Window {
 				};
 			};
 			
-			localeButton.setRect(0, btnOrientation.bottom() + GAP, WIDTH,
+			localeButton.setRect(0, btnRealtime.bottom() + GAP, WIDTH,
 					BTN_HEIGHT);
 			add(localeButton);
 

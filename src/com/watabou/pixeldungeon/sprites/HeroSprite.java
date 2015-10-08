@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.effects.Hat;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
@@ -48,6 +49,8 @@ public class HeroSprite extends CharSprite {
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
 
+	private Hat hat;
+	
 	private int lastTier = -1;
 
 	public HeroSprite(Hero hero) {
@@ -57,8 +60,11 @@ public class HeroSprite extends CharSprite {
 
 		texture(HeroClass.spritesheet(hero));
 		updateArmor(hero.tier());
-
+		
 		idle();
+		
+		//hat = new Hat.Test(this);
+		//hat.setVisible(true);
 	}
 
 	public HeroSprite(Hero hero, boolean b) {

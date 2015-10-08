@@ -45,6 +45,7 @@ enum Preferences {
 	public static final String KEY_CLASSIC_FONT     = "classic_font";
 	public static final String KEY_PREMIUM_SETTINGS = "premium_settings";
 	public static final String KEY_MODDING_MODE     = "modding_mode";
+	public static final String KEY_REALTIME         = "realtime";
 	
 	
 	private SharedPreferences prefs;
