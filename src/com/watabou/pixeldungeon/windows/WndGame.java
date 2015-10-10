@@ -33,20 +33,24 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndGame extends Window {
 
-	private static final String TXT_SETTINGS	= Game.getVar(R.string.WndGame_Settings);
-	private static final String TXT_CHALLEGES	= Game.getVar(R.string.WndGame_Challenges);
-	private static final String TXT_RANKINGS	= Game.getVar(R.string.WndGame_Ranking);
-	private static final String TXT_START		= Game.getVar(R.string.WndGame_Start);
-	private static final String TXT_MENU		= Game.getVar(R.string.WndGame_menu);
-	private static final String TXT_EXIT		= Game.getVar(R.string.WndGame_Exit);
-	private static final String TXT_RETURN		= Game.getVar(R.string.WndGame_Return);
-	
-	private static final int WIDTH		= 120;
-	private static final int BTN_HEIGHT	= 20;
-	private static final int GAP		= 2;
-	
+	private static final String TXT_SETTINGS = Game
+			.getVar(R.string.WndGame_Settings);
+	private static final String TXT_CHALLEGES = Game
+			.getVar(R.string.WndGame_Challenges);
+	private static final String TXT_RANKINGS = Game
+			.getVar(R.string.WndGame_Ranking);
+	private static final String TXT_START = Game.getVar(R.string.WndGame_Start);
+	private static final String TXT_MENU = Game.getVar(R.string.WndGame_menu);
+	private static final String TXT_EXIT = Game.getVar(R.string.WndGame_Exit);
+	private static final String TXT_RETURN = Game
+			.getVar(R.string.WndGame_Return);
+
+	private static final int WIDTH = 120;
+	private static final int BTN_HEIGHT = 20;
+	private static final int GAP = 2;
+
 	private int pos;
-	
+
 	public WndGame() {
 		
 		super();
@@ -58,6 +62,22 @@ public class WndGame extends Window {
 				GameScene.show( new WndSettings( true ) );
 			}
 		} );
+		
+		if(Dungeon.getDifficulty() <= 2) {
+			addButton( new RedButton( Game.getVar(R.string.WndGame_Save) ) {
+				@Override
+				protected void onClick() {
+					GameScene.show(new WndSaveSlotSelect(true));
+				}
+			} );
+			
+			addButton( new RedButton( Game.getVar(R.string.WndGame_Load) ) {
+				@Override
+				protected void onClick() {
+					GameScene.show(new WndSaveSlotSelect(false));
+				}
+			} );
+		}
 		
 		if (Dungeon.challenges > 0) {
 			addButton( new RedButton( TXT_CHALLEGES ) {
@@ -121,10 +141,10 @@ public class WndGame extends Window {
 		
 		resize( WIDTH, pos );
 	}
-	
-	private void addButton( RedButton btn ) {
-		add( btn );
-		btn.setRect( 0, pos > 0 ? pos += GAP : 0, WIDTH, BTN_HEIGHT );
+
+	private void addButton(RedButton btn) {
+		add(btn);
+		btn.setRect(0, pos > 0 ? pos += GAP : 0, WIDTH, BTN_HEIGHT);
 		pos += BTN_HEIGHT;
 	}
 }

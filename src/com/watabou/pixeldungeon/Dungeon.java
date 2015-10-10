@@ -665,4 +665,8 @@ public class Dungeon {
 	public static void setDifficulty(int _difficulty) {
 		difficulty = Scrambler.scramble(_difficulty);
 	}
+
+	public static int getDifficulty() {
+		return Scrambler.descramble(difficulty);
+	}
 }

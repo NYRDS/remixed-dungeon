@@ -148,6 +148,8 @@
     <string name="WndGame_menu">Main Menu</string>
     <string name="WndGame_Exit">Exit Pixel Dungeon</string>
     <string name="WndGame_Return">Return to Game</string>
+    <string name="WndGame_Save">Save</string>
+    <string name="WndGame_Load">Load</string>
 
     <!-- STRINGS OF WndHero CLASS -->
     <string name="WndHero_Stats">Stats</string>
