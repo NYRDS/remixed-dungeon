@@ -10,7 +10,7 @@
   <string name="Dreamweed_Desc">이 드림위드를 만지면 혼란 가스 구름을 뿜어낸다.</string>
   <!--STRINGS OF Earthroot CLASS-->
   <string name="Earthroot_Name">어스루트</string>
-  <string name="Earthroot_Desc">생물이 이 어스루트를 만지면, 자연의 값옷을 주변에 만들어 준다.</string>
+  <string name="Earthroot_Desc">생물이 이 어스루트를 만지면, 자연의 갑옷을 주변에 만들어 준다.</string>
   <string name="Earthroot_Buff">허브의 갑옷</string>
   <!--STRINGS OF Fadeleaf CLASS-->
   <string name="Fadeleaf_Name">페이드리프</string>

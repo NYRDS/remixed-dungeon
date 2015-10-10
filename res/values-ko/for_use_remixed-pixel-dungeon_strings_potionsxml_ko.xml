@@ -39,13 +39,13 @@
   <!--STRINGS OF PotionOfInvisibility CLASS-->
   <string name="PotionOfInvisibility_Name">투명의 물약</string>
   <string name="PotionOfInvisibility_Info">이 물약을 마시면 잠시동안 모습이 사라진다. 투명상태 동안 적들은 당신을 볼 수 없다. 적의 시야 안에서 적을 공격하거나, 완드 또는 스크롤을 사용하면 효과가 풀린다.</string>
-  <string name="PotionOfInvisibility_Apply">당신 손이 서서히 눈에서 사라지기 시작했다!!</string>
+  <string name="PotionOfInvisibility_Apply">당신의 손이 서서히 눈에서 사라지기 시작했다!!</string>
   <!--STRINGS OF PotionOfLevitation CLASS-->
   <string name="PotionOfLevitation_Name">비행의 포션</string>
   <string name="PotionOfLevitation_Info">이 흥미로운 액체를 마시게되면 몸이 공중에 뜨게되어, 함정위를 아무런 힘들이지 않고 지나갈 수 있다. 하지만 가스나 화염은 공기중을 가득 매우기 때문에 비행 중이라도 피해없이 지나가기 힘들다.</string>
   <string name="PotionOfLevitation_Apply">공기 중으로 두둥실 떴다!</string>
   <!--STRINGS OF PotionOfLiquidFlame CLASS-->
-  <string name="PotionOfLiquidFlame_Name">액체 화염의 포션</string>
+  <string name="PotionOfLiquidFlame_Name">가연성 물질의 포션</string>
   <string name="PotionOfLiquidFlame_Info">플라스크는 불안정한 혼합물로 가득차 있어, 공기에 닿으면 폭발하며 화염을 일으킨다.</string>
   <!--STRINGS OF PotionOfMight CLASS-->
   <string name="PotionOfMight_Name">완력의 포션</string>

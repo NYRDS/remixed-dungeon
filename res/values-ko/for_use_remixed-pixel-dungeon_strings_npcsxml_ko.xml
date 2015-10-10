@@ -4,12 +4,12 @@
   <!--STRINGS OF Blacksmith CLASS-->
   <string name="Blacksmith_Name">트롤 대장장이</string>
   <string name="Blacksmith_Desc">트롤 대장장이는 전형적인 트톨의 외형을 갖추고있다. 큰 키에 여윈 몸, 그리고 돌을 연상시키는 피부가 인상적이다. 트롤 대장장이는 덩치에 맞지않는 작은 도구들로 땜질을 하고있다.</string>
-  <string name="Blacksmith_Gold1">닝겐, 나랑 일좀 해볼래? 내가 곡괭이 빌려줄테니까  가서 _흑금석 원석_ _15개_ 만 캐와. 보상은 뭐냐고? 욕심많은 새ㄲ... \n 알았어, 내가 돈은 없지만 아이템 재련은 해줄수있지. 운 좋은줄알아라! 이 근처에 대장장이 나밖에 없으니깐.</string>
-  <string name="Blacksmith_Blood1">닝겐, 나랑 일좀 해볼래? 내가 곡괭이 빌려줄테니까  이걸로 _박쥐를 잡아서_ 곡괭이에 박쥐피를 묻혀와. 보상은 뭐냐고? 욕심많은 새ㄲ... \n 알았어, 내가 돈은 없지만 아이템 재련은 해줄수있지. 운 좋은줄알아라! 이 근처에 대장장이 나밖에 없으니깐.</string>
+  <string name="Blacksmith_Gold1">이봐! 나랑 일좀 해볼래? 내가 곡괭이를 빌려줄테니 가서 _흑금광석_, _15개_ 만 캐와. 보상은 뭐냐고? 욕심많은 새ㄲ... \n알았어, 알았다고, 내가 돈은 없지만 아이템 재련은 해줄수있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
+  <string name="Blacksmith_Blood1">이봐, 나랑 일좀 해볼래? 내가 곡괭이를 빌려줄테니까  이걸로 _박쥐를 잡아서_ 곡괭이에 박쥐피를 묻혀와. 보상은 뭐냐고? 욕심많은 새ㄲ... \n 알았어, 알았다고, 내가 돈은 없지만 아이템 재련은 해줄수있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
   <string name="Blacksmith_Txt2">장난하냐??? 내 곡괭이 어디갔어?!</string>
-  <string name="Blacksmith_Txt3">흑금석 원석. 15개. 대가리 안돌아가냐?!</string>
+  <string name="Blacksmith_Txt3">흑금광석. 15개. 진심으로, 그게 그렇게 어려운거냐?!</string>
   <string name="Blacksmith_Txt4">내가 곡괭이에 박쥐피 묻혀오라고 했어 안했어?!</string>
-  <string name="Blacksmith_Completed">짜식, 그래도 돌아오긴 했네?</string>
+  <string name="Blacksmith_Completed">오, 그래도 돌아오긴 했네?</string>
   <string name="Blacksmith_GetLost">바쁘니까 좀 꺼져!</string>
   <string name="Blacksmith_LooksBetter">당신의 %s는(은) 확실히 좋아진것같다.</string>
   <string name="Blacksmith_Verify1">똑같은 아이템 두번 고르지말고, 다른 아이템 2개를 고르라고!</string>
@@ -33,9 +33,9 @@
   <!--STRINGS OF Hedgehog CLASS-->
   <string name="Hedgehog_Name">고슴도치</string>
   <string name="Hedgehog_Desc">저 고슴도치는 불안해 보인다.</string>
-  <string name="Hedgehog_Info1">당신고 곰을 찾고 있나요?</string>
-  <string name="Hedgehog_Info2">안개속의 말은 어떤가요?</string>
-  <string name="Hedgehog_Info3">라즈베리 잼과 함께하는 티 좋아 하세요?</string>
+  <string name="Hedgehog_Info1">당신도 곰을 찾고 있나요?</string>
+  <string name="Hedgehog_Info2">안개 속의 말은 어떤가요?</string>
+  <string name="Hedgehog_Info3">라즈베리 잼으로 만든 차를 좋아 하세요?</string>
   <string name="Hedgehog_Info4">이 파이 드세요</string>
   <string name="Hedgehog_ImLate">저 늦었어요, 엄청 늦었다구요...</string>
   <!--STRINGS OF Imp CLASS-->
@@ -45,7 +45,7 @@
   <string name="Imp_Golems1">모험가이신가요? 전 모험가들이 좋아요! 누군가를 죽이고 싶을땐 언제나 그들에게 믿고 맡길 수 있죠. 내말이 맞죠? 당연히 댓가도 드리죠. :)\n제 경우엔 _골렘_을 죽이고 싶어요. 제가 여기서 조그만한 사업을 하나 시작하려고 하는데 이놈에 멍청한 골렘들이 골치예요. 돌아다니는 화강암 덩어리인 녀석들과는 도무지 협상이 안되요, 제길! 그러니 제발, 좀 죽여줘요... 한.._6 마리_정도면 보상하겠습니다.</string>
   <string name="Imp_Golems2">골렘 사파리는 잘되가고 있나요?</string>
   <string name="Imp_Monks1">모험가이신가요? 전 모험가들이 좋아요! 누군가를 죽이고 싶을땐 언제나 그들에게 믿고 맡길 수 있죠. 내말이 맞죠? 당연히 댓가도 드리죠. :)\n제 경우엔 _몽크_를 죽이고 싶어요. 제가 여기서 조그만한 사업을 하나 시작하려고 하는데 이놈에 미친 몽크들이 지들은 아무것도 안사면서 손님들을 겁줘서 쫓아 내요. 그러니 제발, 좀 죽여줘요... 한.._8 마리_정도면 보상하겠습니다.</string>
-  <string name="Imp_Monks2">오, 당신 아직 살아 있네요! 역시 당신 쿵후가 더 셀줄 알았아요 :) 몽크의 토큰 챙기는거 잊지 마요.</string>
+  <string name="Imp_Monks2">오, 당신 아직 살아 있네요! 역시 당신 쿵푸가 더 셀줄 알았아요 :) 몽크의 토큰 챙기는거 잊지 마요.</string>
   <string name="Imp_Cya">나중에 봐요, %s!</string>
   <string name="Imp_Hey">저기요, %s!</string>
   <!--STRINGS OF ImpShopkeeper CLASS-->
@@ -69,14 +69,14 @@
   <string name="Shopkeeper_Desc">이 통통한 남자가 있을 곳은 이 던전 보다는 큰 도시의 상가가 더 적합해 보인다. 그가 제시하는 금액을 들어보면 왜 여기서 장사하는걸 더 선호 하는지 알 수 있을것 같다.</string>
   <string name="Shopkeeper_Sell">매각할 아이템을 선택 하세요</string>
   <!--STRINGS OF WandMaker CLASS-->
-  <string name="WandMaker_Name">늙은 완드 장인</string>
+  <string name="WandMaker_Name">늙은 지팡이 장인</string>
   <string name="WandMaker_Desc">이 노익장은  살짝 혼란스런 표정을 하고 있다. 그는 마법 실드에 의해 보호받고 있다.</string>
   <string name="WandMaker_Defense">흡수</string>
-  <string name="WandMaker_Berry1">오, 이런 장소에서 이렇게 바른 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔다네 - _썩은딸기 씨_라네. 마법을 사용하는 사람으로서, 이 지역 몬스터로 부터 내 자신을 지킬수는 있지만, 방향감각이 없어서 말이지. 당황 스럽구만. 아마도 자네가 날 도와줄 수 있을거 같은데? 도와 준다면 내 최고의 완드로 기꺼이 보상하겠네.</string>
-  <string name="WandMaker_Berry2">썩은딸기 씨 찾는건 잘되가는가, %s? 잘 안되나요? 괜찮아요, 급한건 아니니깐.</string>
+  <string name="WandMaker_Berry1">오, 이런 장소에서 이렇게 바른 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔다네 - _썩은딸기의 씨_라네. 마법을 사용하는 사람으로서, 이 지역 몬스터로 부터 내 자신을 지킬수는 있지만, 방향감각이 없어서 말이지. 당황 스럽구만. 아마도 자네가 날 도와줄 수 있을거 같은데? 도와 준다면 내 최고의 완드로 기꺼이 보상하겠네.</string>
+  <string name="WandMaker_Berry2">썩은딸기의 씨를 찾는건 잘되어가는가, %s? 잘 안되어가나? 괜찮다네, 급한건 아니니까.</string>
   <string name="WandMaker_Dust1">오, 이런 장소에서 이렇게 바른 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔다네 - _시체의 먼지_라네. 시체 더미로부터 모을 수 있고, 그것들은 던전에 널려 있다네. 마법을 사용하는 사람으로서, 이 지역 몬스터로 부터 내 자신을 지킬수는 있지만, 방향감각이 없어서 말이지. 당황 스럽구만. 아마도 자네가 날 도와줄 수 있을거 같은데? 도와 준다면 내 최고의 완드로 기꺼이 보상하겠네.</string>
-  <string name="WandMaker_Dust2">시체의 먼지 찾는 건 잘되가는가, %s? 가장 먼저 찾아봐야 할 장소는 뼈 무더기라네.</string>
-  <string name="WandMaker_RotberryName">썩은딸기 씨</string>
+  <string name="WandMaker_Dust2">시체의 먼지를 찾는 건 잘되어가는가, %s? 가장 먼저 찾아봐야 할 장소는 뼈 무더기라네.</string>
+  <string name="WandMaker_RotberryName">썩은딸기의 씨</string>
   <string name="WandMaker_RotberryDesc">이 딸기의 과즙은 달콤하다, 달콤한 죽음.</string>
-  <string name="WandMaker_RotberryInfo">그 씨앗은 으러렁하는 소리를 발하였고, 그 소리는 던전 전체로 퍼져나갔다.</string>
+  <string name="WandMaker_RotberryInfo">그 씨앗은 으르렁하는 소리를 내었고, 그 소리는 던전 전체로 퍼져나갔다.</string>
 </resources>

@@ -6,25 +6,25 @@
   <string name="Hero_Leave">아무도 이곳 Pixel Dungeon을 쉽게 빠져 나갈 수 없다.</string>
   <string name="Hero_LevelUp">레벨 업!</string>
   <string name="Hero_NewLevel">레벨 %d이 된걸 축하합니다! 이제 당신은 보다 더 건강해지고 집중력이 높아 졌습니다. 적을 맞추거나 적의 공격을 회피하기 좀 더 쉬워졌습니다.</string>
-  <string name="Hero_YouNowHave">%s를 갖게 되었다</string>
+  <string name="Hero_YouNowHave">%s을/를 갖게 되었다</string>
   <string name="Hero_SomethingElse">여기에 다른 무언가가 있다.</string>
   <string name="Hero_LockedChest">이 상자는 잠겨있고, 당신에게는 맞는 열쇠가 없다.</string>
   <string name="Hero_LockedDoor">맞는 열쇠를 가지고 있지 않다.</string>
   <string name="Hero_NoticedSmth">뭔가가 당신 눈에 띄었다.</string>
   <string name="Hero_Wait">...</string>
   <string name="Hero_Search">탐색</string>
-  <string name="Hero_StaBurning">아 시바 불붙었다!!</string>
+  <string name="Hero_StaBurning">당신은 불이 붙었다!!</string>
   <string name="Hero_StaParalysis">당신은 마비 되었다!!</string>
-  <string name="Hero_StaPoison">당신은 중독됐다!</string>
+  <string name="Hero_StaPoison">당신은 중독됐다!!</string>
   <string name="Hero_StaOoze">부식성 진액이 당신의 살을 파고든다. 빨리 씻어내야 해!</string>
-  <string name="Hero_StaRoots">움직일 수 없다!</string>
-  <string name="Hero_StaWeakness">당신은 나약해짐을 느낀다!</string>
-  <string name="Hero_StaBlindness">당신은 눈이 멀었다!</string>
-  <string name="Hero_StaFury">당신은 으아아 화가난다!</string>
+  <string name="Hero_StaRoots">당신은 움직일 수 없습니다!</string>
+  <string name="Hero_StaWeakness">당신은 나약해짐을 느꼈습니다!</string>
+  <string name="Hero_StaBlindness">당신은 눈이 멀었습니다!</string>
+  <string name="Hero_StaFury">당신은 화가 나고 있습니다!</string>
   <string name="Hero_StaFurious">맹렬한</string>
-  <string name="Hero_StaCharm">당신은 매료되었다!</string>
+  <string name="Hero_StaCharm">당신은 매료되었습니다!</string>
   <string name="Hero_StaCripple">당신은 절름발이가 되었다!  (니가 범인이다!)</string>
-  <string name="Hero_StaBleeding">피가 철철철 난다!</string>
+  <string name="Hero_StaBleeding">당신은 피를 흘리고 있습니다!</string>
   <string name="Hero_StaVertigo">으..아..주변이 빙글빙글 돈...돈다.!</string>
   <!--STRINGS OF HeroClass CLASS-->
   <string name="HeroClass_War">전사</string>
@@ -40,10 +40,10 @@
     <item>처음부터 힘의 물약의 정체를 알고 시작한다.</item>
   </string-array>
   <string-array name="HeroClass_MagPerks">
-    <item>마법사는 유니크 매직 미사일 완드를 가지고 시작한다. 이 완드는 나중에 \"강화해제\"를 통해 다른 완드를 업그레이드할 수 있다.</item>
-    <item>마법사는 완드를 더 빨리 재충전 시킨다.</item>
+    <item>마법사는 유니크 매직 미사일 지팡이를 가지고 시작한다. 이 지팡이는 나중에 \"강화해제\"를 통해 다른 지팡이를 업그레이드할 수 있다.</item>
+    <item>마법사는 지팡이를 더 빨리 재충전 시킨다.</item>
     <item>어떤 음식이든 먹으면, 소유하고 있는 모든 완드가 1만큼 재충전 된다.</item>
-    <item>마법사는 완드를 근접 무기로 사용할 수 있다.</item>
+    <item>마법사는 지팡이를 근접 무기로 사용할 수 있다.</item>
     <item>처음부터 확인의 스크롤의 정체를 알고 시작한다.</item>
   </string-array>
   <string-array name="HeroClass_RogPerks">
@@ -76,7 +76,7 @@
   <string name="HeroSubClass_NameWarL">워락</string>
   <string name="HeroSubClass_DescWarL">적을 죽이면, _워락_은 적의 영혼을 취하여, 상처와 배고픔을 조금 덜 수 있다.</string>
   <string name="HeroSubClass_NameBatM">배틀메이지</string>
-  <string name="HeroSubClass_DescBatM">완드를 장착하고 전투를 하면, _배틀메이지_는 현재 충전량에 비례한 추가 데미지를 입힌다. 공격이 성공할 때 마다 장착하고 있는 완드의 충전량이 1씩 회복된다.</string>
+  <string name="HeroSubClass_DescBatM">지팡이를 장착하고 전투를 하면, _배틀메이지_는 현재 충전량에 비례한 추가 데미지를 입힌다. 공격이 성공할 때 마다 장착하고 있는 지팡이의 충전량이 1씩 회복된다.</string>
   <string name="HeroSubClass_NameAssa">어쌔신</string>
   <string name="HeroSubClass_DescAssa">기습공격을 감행할 경우, _어쌔신_은 대상에게 추가 데미지를 가한다.</string>
   <string name="HeroSubClass_NameFreR">프리러너</string>
@@ -88,5 +88,5 @@
   <string name="HeroSubClass_NameScout">스카웃</string>
   <string name="HeroSubClass_DescScout">엘프_스카웃_은 은신의 달인이다. 키가 큰 잔디위를 밟고 지나가면 잠시동안 은신 상태가 된다. 또한 일반 엘프들 보다 빠르다.</string>
   <string name="HeroSubClass_NameShaman">샤먼</string>
-  <string name="HeroSubClass_DescShaman">엘프샤먼은 완드를 근접 무기로 사용할 수 있습니다. 타격에 성공시 완드의 충전량을 소모하지 않고 완드의 힘을 적에게 가할 수 있습니다.</string>
+  <string name="HeroSubClass_DescShaman">엘프샤먼은 지팡이를 근접 무기로 사용할 수 있습니다. 타격에 성공시 완드의 충전량을 소모하지 않고 지팡이의 힘을 적에게 가할 수 있습니다.</string>
 </resources>

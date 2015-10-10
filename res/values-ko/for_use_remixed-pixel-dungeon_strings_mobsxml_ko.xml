@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
-  <string name="Mob_Desc">진짜 디스크립션은 곧 나옵니다!</string>
+  <string name="Mob_Desc">진짜 설명은 곧 나옵니다!</string>
   <string name="Mob_Died">저 멀리서 뭔가가 죽는 소리가 들립니다.</string>
   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
   <string name="Mob_StaSleepingStatus">이 %s 은/는 자는 중 입니다</string>
@@ -16,9 +16,9 @@
   <string name="Acidic_Name_Objective">산성 전갈</string>
   <string name="Acidic_Desc">이 거대한 거미류의 악마같은 생물은 근접전을 최대한 피하고, 멀리서 불구로 만들어 버릴 수 있는 톱니 가시를 발사한다.</string>
   <!--STRINGS OF Albino CLASS-->
-  <string name="Albino_Name">알비노 거대쥐</string>
+  <string name="Albino_Name">하얗고 거대한 쥐</string>
   <string name="Albino_Gender">남성</string>
-  <string name="Albino_Name_Objective">알비노 거대쥐</string>
+  <string name="Albino_Name_Objective">하얗고 거대한 쥐</string>
   <string name="Albino_Desc">주머니 쥐들은 난폭하지만 다소 약한 하수구의 거주자들이다. 그들은 큰 수가 모였을때 위험하다. 이 특별한 쥐는 알비노 종으로 보인다. 게다가 비정상 적으로 날카로운 이빨을 가지고 있다.</string>
   <!--STRINGS OF Bandit CLASS-->
   <string name="Bandit_Name">미친 도둑</string>
@@ -42,8 +42,8 @@
   <string name="Crab_Name">하수구 게</string>
   <string name="Crab_Gender">남성</string>
   <string name="Crab_Name_Objective">하수구 게</string>
-  <string name="Crab_Desc">이 거대한 게들은 하수구 먹이사슬의 최상이 포식자다. 그들은 매우 빠르고 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
-  <string name="Crab_Defense">피했다</string>
+  <string name="Crab_Desc">이 거대한 게들은 하수구 먹이사슬의 최상의 포식자다. 그들은 매우 빠르고 그들의 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
+  <string name="Crab_Defense">막았다</string>
   <!--STRINGS OF DM300 CLASS-->
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">남성</string>
@@ -56,12 +56,12 @@
   <string name="Elemental_Name">불 엘레멘탈</string>
   <string name="Elemental_Gender">남성</string>
   <string name="Elemental_Name_Objective">불 엘레멘탈</string>
-  <string name="Elemental_Desc">이리 저리 돌아다니는 불 엘레멘달들은 고위 몬스터 소환의 부산물이다. 이들은 너무나 혼돈스런 성질을 가지고 있어서 최고의 데몬술사도 조종하기 어렵다.</string>
+  <string name="Elemental_Desc">이리 저리 돌아다니는 불 엘레멘탈들은 고위 몬스터 소환의 부산물이다. 이들은 너무나 혼돈스런 성질을 가지고 있어서 가장 강력한 데몬술사마저 조종하기 어렵다.</string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">이블 아이</string>
   <string name="Eye_Gender">중성적인</string>
   <string name="Eye_Name_Objective">이블 아이</string>
-  <string name="Eye_Desc">이 악마의 또다른 이름은 \"증오의 구슬\"이다. 왜냐하면 한 번 적을 본 녀석은 주변에 아군이 있든 말든 무시하고 죽음의 광선을 사용하여 아군도 상처 입힌다.</string>
+  <string name="Eye_Desc">이 악마의 또다른 이름은 \"증오의 구슬\"이다. 왜냐하면 한 번 적을 본 녀석은 주변에 아군이 있든 말든 무시하고 죽음의 광선을 사용하여 아군도 상처 입히기 때문이다.</string>
   <string name="Eye_Kill">%s의 죽음의 광선이 당신을 죽였다...</string>
   <!--STRINGS OF Gnoll CLASS-->
   <string name="Gnoll_Name">놀 수색대</string>
@@ -140,10 +140,10 @@
   <string name="Shadow_Name_Objective">그림자</string>
   <string name="Shadow_Desc">조용히 고대 감옥의 폐허를 떠돌아 다니는 그림자. 모험자들에게 아주 드물게 자신들의 모습을 드러낸다. 대개 그 모험자의 모험은 그날로 끝이다.</string>
   <!--STRINGS OF Shaman CLASS-->
-  <string name="Shaman_Name">노올 샤먼</string>
+  <string name="Shaman_Name">놀 샤먼</string>
   <string name="Shaman_Gender">남성</string>
-  <string name="Shaman_Name_Objective">노올 샤먼</string>
-  <string name="Shaman_Desc">가장 지능이 뛰어는 노올들만이 샤먼의 마법을 익힐 수 있다.  노올 샤먼은 힘은 약하지만 그대신 전투 마법을 사용하길 좋아하며, 부족에서 자신의 지위를 의심하는 자들에게는 이를 사용하길 꺼리지 않는다.</string>
+  <string name="Shaman_Name_Objective">놀 샤먼</string>
+  <string name="Shaman_Desc">가장 지능이 뛰어는 놀들만이 샤먼의 마법을 익힐 수 있다.  놀 샤먼은 힘은 약하지만 그대신 전투 마법을 사용하길 좋아하며, 부족에서 자신의 지위를 의심하는 자들에게는 이를 사용하길 꺼리지 않는다.</string>
   <string name="Shaman_Killed">%s의 라이트닝 볼트가 당신을 죽였다...</string>
   <!--STRINGS OF Shielded CLASS-->
   <string name="Shielded_Name">방패 야수</string>
@@ -236,14 +236,17 @@
   <string name="SpiderNest_Desc">이 고치는 아주 가느다란 거미줄로 만들어져 있는데 살아 있는 뭔가를 감싸고 있다.</string>
   <!--STRINGS OF SpiderServant CLASS-->
   <string name="SpiderServant_Name">거미 병사</string>
+  <string name="SpiderServant_Gender">남성</string>
   <string name="SpiderServant_Name_Objective">거미 병사</string>
   <string name="SpiderServant_Desc">거미 병사는 거미 왕국에서 가장 많은 수를 차지 한다. 그들은 자신들의 영역을 지키기 위해 태어났다. 거미 병사들의 집게턱에는 맹독 분비샘이 발달되어 이를 이용해 적을 중독 시킨다.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
   <string name="SpiderExploding_Name">거미 일꾼</string>
+  <string name="SpiderExploding_Gender">남성</string>
   <string name="SpiderExploding_Name_Objective">거미 일꾼</string>
   <string name="SpiderExploding_Desc">평화 시에는 성실한 일꾼이지만, 이 짐승들은 적에게 돌진하고 마주치는 식물을 움켜 잡는것을 마다하지 않음으로써 그들을 살아있는 폭탄으로 변모시킨다.</string>
   <!--STRINGS OF SpiderMind CLASS-->
   <string name="SpiderMind_Name">정신 거미</string>
+  <string name="SpiderMind_Gender">남성</string>
   <string name="SpiderMind_Name_Objective">정신 거미</string>
   <string name="SpiderMind_Desc">보기에 연약해 보이는 이 거미들은 특별한 정신적 힘을 가지고 있어서, 콜로니 전체를 컨트롤 할 수 있다. 정신 거미는 어떤 살아있는 생물도 조종할 수 있지만, 다소 겁이 많다.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
@@ -266,4 +269,9 @@
   <string name="EarthElemental_Gender">남성</string>
   <string name="EarthElemental_Name_Objective">흙 엘레멘탈</string>
   <string name="EarthElemental_Desc">흙 엘레멘탈은 자연의 힘이 집약되어 만들어진 흙 덩어리다.</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">공중에 떠있는 크리스탈</string>
+  <string name="Crystal_Gender">남성</string>
+  <string name="Crystal_Name_Objective">공중에 떠있는 크리스탈</string>
+  <string name="Crystal_Desc">크고 빛나는 크리스탈이 공중에 떠있습니다. 아마도 이것은 강력한 마법으로 가득 차 있을 것입니다.</string>
 </resources>

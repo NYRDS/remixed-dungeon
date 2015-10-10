@@ -3,7 +3,7 @@
   <!--PACKAGE /items/food-->
   <!--STRINGS OF Food CLASS-->
   <string name="Food_ACEat">먹는다</string>
-  <string name="Food_Message">오 존나 마시쪙!!</string>
+  <string name="Food_Message">아주 맛있습니다!!</string>
   <!--STRINGS OF Ration CLASS-->
   <string name="Ration_Name">휴대 식량</string>
   <string name="Ration_Info">특별히 고급스런건 없다: 말린 고기, 비스킷 몇 개 - 뭐 그런것들.</string>
@@ -12,34 +12,34 @@
   <string name="ChargrilledMeat_Info">고급 스테이크 같아 보인다.</string>
   <!--STRINGS OF FrozenCarpaccio CLASS-->
   <string name="FrozenCarpaccio_Name">냉동 카르파초</string>
-  <string name="FrozenCarpaccio_Info">냉동시킨 고기 조각. 이걸 먹는 방법은 고기를 얇게 썰어서 먹는 것이다. 그리고 이렇게 먹으면 졸랭 맛좋다.</string>
+  <string name="FrozenCarpaccio_Info">냉동시킨 고기 조각. 이걸 먹는 방법은 고기를 얇게 썰어서 먹는 것이다. 그리고 이렇게 먹으면 아주 맛이 좋다.</string>
   <string name="FrozenCarpaccio_Info1">당신 손이 서서히 눈에서 사라지기 시작했다!!</string>
   <string name="FrozenCarpaccio_Info2">당신은 피부가 단단해 지는게 느껴진다.</string>
   <string name="FrozenCarpaccio_Info3">캬! 상쾌하다!!</string>
   <string name="FrozenCarpaccio_Info4">당신은 생기발랄해 졌다!!</string>
   <!--STRINGS OF MysteryMeat CLASS-->
   <string name="MysteryMeat_Name">의문의 고기</string>
-  <string name="MysteryMeat_Info">먹어서 탈나면 니 잘못!</string>
+  <string name="MysteryMeat_Info">먹어서 탈나면 당신의 잘못!</string>
   <string name="MysteryMeat_Info1">오 뜨거!</string>
-  <string name="MysteryMeat_Info2">시발 다리에 감각이 없다!</string>
-  <string name="MysteryMeat_Info3">아.. 시바. 속이 졸라 안좋다.</string>
-  <string name="MysteryMeat_Info4">아 배부르다.</string>
-  <string name="MysteryMeat_Message">이거 맛이.... 이상해.</string>
+  <string name="MysteryMeat_Info2">당신은 하반신의 감각을 느낄수가 없습니다!</string>
+  <string name="MysteryMeat_Info3">당신은 기분이 좋지 않습니다.</string>
+  <string name="MysteryMeat_Info4">당신은 배가 부릅니다.</string>
+  <string name="MysteryMeat_Message">이 음식.... 맛이 이상합니다.</string>
   <!--STRINGS OF RottenFood CLASS-->
-  <string name="RottenFood_Message">핵역겨워!!</string>
+  <string name="RottenFood_Message">역겹습니다!!</string>
   <!--STRINGS OF RottenMeat CLASS-->
   <string name="RottenMeat_Name">썩은 고기</string>
   <string name="RottenMeat_Info">썩은 고기 조각</string>
   <!--STRINGS OF RottenPasty CLASS-->
   <string name="RottenPasty_Name">썩은 파이</string>
-  <string name="RottenPasty_Info">원래는 파이였을텐데 겁나 역겹게 생겼다.</string>
+  <string name="RottenPasty_Info">원래는 파이였을지 모르지만, 역겨워 보입니다.</string>
   <!--STRINGS OF RottenRation CLASS-->
   <string name="RottenRation_Name">썩은 휴대 식량</string>
-  <string name="RottenRation_Info">옛날 옛적에 먹었어야 했다</string>
+  <string name="RottenRation_Info">옛날 옛적에 이 음식은 먹을 수 있었을 것입니다.</string>
   <!--STRINGS OF OverpricedRation CLASS-->
-  <string name="OverpricedRation_Name">개바가지 가격의 휴대 식량</string>
-  <string name="OverpricedRation_Info">일반 휴대 식량이랑 똑같이 생겼는데 크기만 좀 더 작다.</string>
-  <string name="OverpricedRation_Message">맛있다.</string>
+  <string name="OverpricedRation_Name">터무니 없는 가격의 휴대 식량</string>
+  <string name="OverpricedRation_Info">일반 휴대 식량과 똑같이 생겼지만 크기가 좀 더 작습니다.</string>
+  <string name="OverpricedRation_Message">맛이 좋습니다.</string>
   <!--STRINGS OF Pasty CLASS-->
   <string name="Pasty_Name">파이</string>
   <string name="Pasty_Info">소고기와 감자를 넣어 전통 방법으로 요리한 원조 코니쉬 파이다.</string>

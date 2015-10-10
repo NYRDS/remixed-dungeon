@@ -3,7 +3,7 @@
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Pixel Dungeon Remix</string>
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">수많은 영우들이 당신 이전에 던전으로 모험을 떠났다. 일부는 보물이나 마법 장비와 함께 돌아 오기도 했지만, 대부분은 그 이후로 소식이 끊겼다. 하지만 그 누구도 던전 가장 아래에 숨겨진 옌도르의 아뮬렛을 손에 넣는데 성공한 사람은 없다.\n\n당신은 이제 도전 모드를 활성화할 준비가 됐고, 보다 중요한건, 행운이 당신 편이라는 것이다. 이제 당신만의 모험을 떠날 시간이다!</string>
+  <string name="IntroScene_Txt">수많은 영웅들이 당신 이전에 던전으로 모험을 떠났다. 일부는 보물이나 마법 장비와 함께 돌아 오기도 했지만, 대부분은 그 이후로 소식이 끊겼다. 하지만 그 누구도 던전 가장 아래에 숨겨진 옌도르의 아뮬렛을 손에 넣는데 성공한 사람은 없다.\n\n당신은 이제 도전 모드를 활성화할 준비가 됐고, 보다 중요한건, 행운이 당신 편이라는 것이다. 이제 당신만의 모험을 떠날 시간이다!</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">여기서 끝내기로 하지</string>
   <string name="AmuletScene_Stay">아직 끝내긴 이르다</string>
@@ -20,27 +20,27 @@
   <string name="Char_Name">무리</string>
   <string name="Char_Name_Objective">무리</string>
   <string-array name="Char_Hit">
-    <item>%1$s hit %2$s</item>
-    <item>%1$s hit %2$s</item>
-    <item>%1$s hit %2$s</item>
+    <item>%1$s 이/가 %2$s</item>
+    <item>%1$s 이/가 %2$s</item>
+    <item>%1$s 이/가 %2$s</item>
   </string-array>
   <string-array name="Char_Kill">
-    <item>%s 이 당신을 죽였다...</item>
-    <item>%s 이 당신을 죽였다...</item>
-    <item>%s 이 당신을 죽였다...</item>
+    <item>%s 이/가 당신을 죽였다...</item>
+    <item>%s 이/가 당신을 죽였다...</item>
+    <item>%s 이/가 당신을 죽였다...</item>
   </string-array>
   <string-array name="Char_Defeat">
-    <item>%1$s 패배 %2$s</item>
-    <item>%1$s 패배 %2$s</item>
-    <item>%1$s 패배 %2$s</item>
+    <item>%1$s이(가) %2$s</item>
+    <item>%1$s이(가) %2$s</item>
+    <item>%1$s이(가) %2$s</item>
   </string-array>
   <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
   <string name="Char_SmbMissed">%1$s %2$s %3$s의 공격</string>
   <string name="Char_OutParalysis">고통이 %s를 마비로부터 벗어나게 했다</string>
   <string-array name="Char_StaDodged">
-    <item>피함</item>
-    <item>피함</item>
-    <item>피함</item>
+    <item>이/가 </item>
+    <item>이/가 </item>
+    <item>이/가 </item>
   </string-array>
   <string name="Char_StaPoisoned">중독</string>
   <string name="Char_StaAmok">착란</string>
@@ -55,8 +55,8 @@
   <string name="Char_StaDizzy">어지럼</string>
   <string name="Char_StaInvisible">투명</string>
   <!--STRINGS OF Dungeon CLASS-->
-  <string name="Dungeon_NoTips">글자가 뭔말인지 해독 불가다..</string>
-  <string name="Dungeon_DeadEnd">당신 여기서 뭐함?!</string>
+  <string name="Dungeon_NoTips">글자가 뭔말인지 해독할 수 없습니다..</string>
+  <string name="Dungeon_DeadEnd">당신 여기서 뭐하시는 겁니까?!</string>
   <string-array name="Dungeon_Tips">
     <item>당신의 힘을 과신하지 말고, 다룰 수 있을 만한 무기나 갑옷을 착용하라.</item>
     <item>던전에 있는 모든 문들이 첫 눈에 보이는 것은 아니다. 만일 갇혔다고 생각되면, 숨겨진 문이 있는지 조사해보라.</item>
@@ -104,7 +104,7 @@
   <string name="Journal_Troll">트롤 대장장이</string>
   <string name="Journal_Imp">야망가 임프</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
-  <string name="WndBlacksmith_Prompt">알았다구, 약속은 약속이니깐, 내가 해줄 수 있는 건 이거야:  아이템 2 개를 재 주조해서 더 나은 하나로 만들어 주지.</string>
+  <string name="WndBlacksmith_Prompt">알았다구, 약속은 약속이니깐, 내가 해줄 수 있는 건 이거야:  아이템 2개를 재 주조해서 더 나은 하나로 만들어 주지.</string>
   <string name="WndBlacksmith_Select">재 주조할 아이템을 고르시오</string>
   <string name="WndBlacksmith_Reforge">재주조 한다</string>
   <!--STRINGS OF WndCatalogus CLASS-->
@@ -174,14 +174,14 @@
   <string name="WndRanking_StaAlchemy">제조한 포션</string>
   <string name="WndRanking_StaAnkhs">사용한 앵커</string>
   <!--STRINGS OF WndResurrect CLASS-->
-  <string name="WndResurrect_Message">당신은 죽었다, 하지만 이 던전 정복을 위한 한 번의 기회가 더 주어졌다. 받아 들이겠는가?</string>
+  <string name="WndResurrect_Message">당신은 죽었다, 하지만 이 던전의 정복을 위한 한 번의 기회가 더 주어졌다. 받아 들이겠는가?</string>
   <string name="WndResurrect_Yes">그래, 난 싸우겠어!</string>
   <string name="WndResurrect_No">아니, 포기할래</string>
   <!--STRINGS OF WndSadGhost CLASS-->
   <string name="WndSadGhost_Rose">네!네!! 그거에요! 제발 저한테 주세요! 그리고 당신은 이중에 하나를 고르세요, 아마도 당신의 여행에 도움이 될꺼에요..</string>
   <string name="WndSadGhost_Rat">네! 그 추한생물은 죽고 드디어 쉴수 있겠군요.. 이 중에 한가지를 가져가세요. 아마 여행에 도움이 될껍니다.</string>
-  <string name="WndSadGhost_Wepon">유령무기</string>
-  <string name="WndSadGhost_Armor">유령갑옷</string>
+  <string name="WndSadGhost_Wepon">유령의 무기</string>
+  <string name="WndSadGhost_Armor">유령의 갑옷</string>
   <string name="WndSadGhost_Farewell">잘가요, 모험가님!</string>
   <!--STRINGS OF WndStory CLASS-->
   <string name="WndStory_Sewers">던전은 도시 아래 위치하고 있습니다. 실제로 상위 레벨은 도시의 하수 시스템이 구성되어 있습니다. 명목상 도시의 일부이기 때문에 이 수준은 위험하지 않습니다. 아무도 이곳을 안전하게 요청하지 않았기 때문에 당신은 여기에 모든 사악한 마법을 전부 처리 할 필요는 없습니다.</string>
@@ -199,9 +199,9 @@
   <string name="WndTradeItem_Sold">%1$s 을/를 %2$dg 에 판매했습니다.</string>
   <string name="WndTradeItem_Bought">%1$s 을/를 %2$dg 에 구매했습니다.</string>
   <!--STRINGS OF WndWandmaker CLASS-->
-  <string name="WndWandmaker_Message">오, 성공했군요! 자 너무 고민하지 마세요. 약속대로 제 고급 완드중 하나를 드리겠습니다.</string>
-  <string name="WndWandmaker_Battle">배틀 완드</string>
-  <string name="WndWandmaker_NonBattle">유틸리티 완드</string>
+  <string name="WndWandmaker_Message">오, 성공했군요! 자 너무 고민하지 마세요. 약속대로 제 고급 지팡이중 하나를 드리겠습니다.</string>
+  <string name="WndWandmaker_Battle">전투용 지팡이</string>
+  <string name="WndWandmaker_NonBattle">비전투용 지팡이</string>
   <string name="WndWandmaker_Farawell">당신의 퀘스트에 행운을 빌어요, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">퀵슬롯에 등록 할 아이템을 선택하세요.</string>
@@ -210,14 +210,16 @@
   <string name="Item_Info">어떤것</string>
   <string name="Item_ACDrop">버리다</string>
   <string name="Item_ACThrow">던지다</string>
-  <string name="Item_PackFull">가방이 가득차서 %s 못 넣음</string>
+  <string name="Item_PackFull">가방이 가득차서 %s 넣을 수 없습니다.
+</string>
   <string name="Item_DirThrow">던질 방향을 선택하세요.</string>
   <!--STRINGS OF EquipableItem CLASS-->
   <string name="EquipableItem_ACEquip">장착</string>
   <string name="EquipableItem_ACUnequip">해제</string>
   <string name="EquipableItem_Unequip">%s 은/는 저주로 인해 해제 할 수 없습니다!</string>
   <!--STRINGS OF Heap CLASS-->
-  <string name="Heap_Mimic">이건 모방이에요!</string>
+  <string name="Heap_Mimic">이건 미믹입니다!
+</string>
   <!--STRINGS OF Amulet CLASS-->
   <string name="Amulet_Name">옌도르의 목걸이</string>
   <string name="Amulet_ACEnd">END THE GAME</string>
@@ -232,33 +234,33 @@
   <string name="ArmorKit_SelectArmor">업그레이드할 갑옷을 선택하세요.</string>
   <string name="ArmorKit_Upgraded">%s 에 방어구 업그레이드 키트를 적용했습니다.</string>
   <!--STRINGS OF Dewdrop CLASS-->
-  <string name="Dewdrop_Name">이슬방울</string>
-  <string name="Dewdrop_Info">맑은이슬방울</string>
+  <string name="Dewdrop_Name">이슬</string>
+  <string name="Dewdrop_Info">맑은 이슬</string>
   <!--STRINGS OF DewVial CLASS-->
   <string name="DewVial_Name">이슬을 담는 병</string>
   <string name="DewVial_ACDRINK">마신다</string>
   <string name="DewVial_Info">이 작은 용기에 넘치는 이슬을 저장할 수 있습니다. 나중에 유리병이 가득 찬 경우, 치명적인 위험의 순간에 이슬이 자동으로 소비됩니다.</string>
   <string name="DewVial_AutoDrink">이슬을 담은 유리병이 당신의 상처를 치유하기위해 비워졌습니다.</string>
-  <string name="DewVial_Collected">이슬방울을 유리병에 모았습니다.</string>
+  <string name="DewVial_Collected">이슬을 유리병에 모았습니다.</string>
   <string name="DewVial_Full">이슬을 담는 유리병이 가득 찼습니다.</string>
   <string name="DewVial_Empty">이슬을 담는 유리병이 비어있습니다.</string>
   <!--STRINGS OF Gold CLASS-->
-  <string name="Gold_Name">금</string>
+  <string name="Gold_Name">금화</string>
   <string name="Gold_Collect">나중에 상점에서 사용할 수 있는 금화를 수집합니다.</string>
   <string name="Gold_Info">%d 금화더미</string>
   <string name="Gold_Info1">금화 한개.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
   <string name="KindOfWeapon_EquipCursed">%s 주위로 몰려드는 강한 느낌에 당신은 잠시 주춤 했습니다.</string>
   <!--STRINGS OF LloidsBeacon CLASS-->
-  <string name="LloidsBeacon_Name">lloyd\'s beacon</string>
+  <string name="LloidsBeacon_Name">lloyd의 신호기</string>
   <string name="LloidsBeacon_ACSet">SET</string>
   <string name="LloidsBeacon_ACReturn">RETURN</string>
-  <string name="LloidsBeacon_Info">로이드의 신호는 저장된 위치로 귀환할 수 있는 복잡한 마법 장치 입니다.</string>
-  <string name="LloidsBeacon_Preventing">이곳의 강력한 마법장이 lloyd\'s beacon을 사용하지 못하게 막고 있습니다!</string>
-  <string name="LloidsBeacon_Creatures">주변 생물의 영향력때문에 lloyd\'s beacon 을 사용할 수 없습니다.</string>
-  <string name="LloidsBeacon_Return">lloyd\'s beacon 이 귀환위치를 설정하는데 성공했습니다. 이제 언제든지 당신은 여기로 귀환할 수 있습니다.</string>
+  <string name="LloidsBeacon_Info">Lloyd의 신호기는 저장된 위치로 귀환할 수 있는 복잡한 마법 장치 입니다.</string>
+  <string name="LloidsBeacon_Preventing">이곳의 강력한 마법장이 lloyd의 신호기를 사용하지 못하게 막고 있습니다!</string>
+  <string name="LloidsBeacon_Creatures">주변 생물의 영향력때문에 lloyd의 신호기를 사용할 수 없습니다.</string>
+  <string name="LloidsBeacon_Return">lloyd의 신호기가 귀환위치를 설정하는데 성공했습니다. 이제 언제든지 당신은 여기로 귀환할 수 있습니다.</string>
   <string name="LloidsBeacon_Set">
-lloyd\'s beacon 은 %d 층 어딘가에 귀환지점을 설정했습니다.</string>
+lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">arcane stylus - 갑옷인첸트</string>
   <string name="Stylus_ACInscribe">룬을 새기다</string>
@@ -335,7 +337,7 @@ lloyd\'s beacon 은 %d 층 어딘가에 귀환지점을 설정했습니다.</str
   <string name="Pickaxe_Gender">여성스런</string>
   <string name="Pickaxe_NoVein">근처에 캘수있는 흑금광석이 없습니다.</string>
   <!--STRINGS OF RatSkull CLASS-->
-  <string name="RatSkull_Name">거대한 쥐 두개골</string>
+  <string name="RatSkull_Name">거대한 쥐의 두개골</string>
   <string name="RatSkull_Info">이건 아주 좋은 사냥 기념품이 될 수 있겠지만.. 벽에 걸어놓기엔 악취가 너무 심합니다.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
@@ -345,7 +347,7 @@ lloyd\'s beacon 은 %d 층 어딘가에 귀환지점을 설정했습니다.</str
   <!--STRINGS OF Foliage CLASS-->
   <string name="Foliage_Info">빛의 기둥이 지하정원의 어둠을 관통합니다.</string>
   <!--STRINGS OF ParalyticGas CLASS-->
-  <string name="ParalyticGas_Info">마비되는 가스 구름이 소용돌이 칩니다.</string>
+  <string name="ParalyticGas_Info">마비가스의 구름이 소용돌이 칩니다.</string>
   <!--STRINGS OF ToxicGas CLASS-->
   <string name="ToxicGas_Info">녹색 독성 가스구름이 소용돌이 칩니다.</string>
   <string name="ToxicGas_Info1">당신은 유독가스 흡입으로 사망하였습니다...</string>
@@ -389,14 +391,14 @@ lloyd\'s beacon 은 %d 층 어딘가에 귀환지점을 설정했습니다.</str
   <string name="GasesImmunity_Info">가스에 면역</string>
   <!--STRINGS OF Hunger CLASS-->
   <string-array name="Hunger_Hungry">
-    <item>배고프다.</item>
-    <item>배고프다.</item>
-    <item>배고프다.</item>
+    <item>당신은 배가 고픕니다.</item>
+    <item>당신은 배가 고픕니다.</item>
+    <item>당신은 배가 고픕니다.</item>
   </string-array>
   <string-array name="Hunger_Starving">
-    <item>굶주리고 있습니다!</item>
-    <item>굶주리고 있습니다!</item>
-    <item>굶주리고 있습니다!</item>
+    <item>당신은 굶주리고 있습니다!</item>
+    <item>당신은 굶주리고 있습니다!</item>
+    <item>당신은 굶주리고 있습니다!</item>
   </string-array>
   <string name="Hunger_Death">굶어 죽었습니다.</string>
   <string name="Hunger_Info1">배고프다</string>
@@ -408,7 +410,7 @@ lloyd\'s beacon 은 %d 층 어딘가에 귀환지점을 설정했습니다.</str
   <!--STRINGS OF Light CLASS-->
   <string name="Light_Info">섬광</string>
   <!--STRINGS OF MindVision CLASS-->
-  <string name="MindVision_Info">마인드비젼</string>
+  <string name="MindVision_Info">마인드 비젼</string>
   <!--STRINGS OF Ooze CLASS-->
   <string name="Ooze_Info">부식성 점액</string>
   <string name="Ooze_Death">%s 이/가 당신을 죽였습니다...</string>
