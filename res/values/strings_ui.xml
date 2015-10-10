@@ -35,6 +35,12 @@
     <string name="StartScene_Unlock">To unlock this character class, slay the 3rd boss with any other class</string>
     <string name="StartScene_UnlockElf">To unlock this character class, slay the 4th boss with any other class</string>
     <string name="StartScene_WinGame">To unlock \"Challenges\", win the game with any character class.</string>
+    <string name="StartScene_DifficultySelect">Choose your destiny</string>
+    <string name="StartScene_DifficultyEasy">Easy (with ads)</string>
+    <string name="StartScene_DifficultyNormalWithSaves">Normal with saves (and ads)</string>
+    <string name="StartScene_DifficultyNormal">Normal</string>
+    <string name="StartScene_DifficultyExpert">Expert</string>
+    
 
         <!-- STRINGS OF InterLevelScene CLASS -->
     <string name="InterLevelScene_Descending">Descending...</string>

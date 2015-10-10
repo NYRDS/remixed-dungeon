@@ -17,10 +17,13 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import java.util.ArrayList;
+
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
+import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndOptions extends Window {
@@ -28,6 +31,8 @@ public class WndOptions extends Window {
 	private static final int WIDTH			= 120;
 	private static final int MARGIN 		= 2;
 	private static final int BUTTON_HEIGHT	= 20;
+	
+	private ArrayList<TextButton> buttons = new ArrayList<TextButton>();
 	
 	public WndOptions( String title, String message, boolean systemFont, String... options ) {
 		super();
@@ -57,6 +62,7 @@ public class WndOptions extends Window {
 					onSelect( index );
 				}
 			};
+			buttons.add(btn);
 			btn.setRect( MARGIN, pos, WIDTH - MARGIN * 2, BUTTON_HEIGHT );
 			add( btn );
 			
@@ -95,6 +101,7 @@ public class WndOptions extends Window {
 					onSelect( index );
 				}
 			};
+			buttons.add(btn);
 			btn.setRect( MARGIN, pos, WIDTH - MARGIN * 2, BUTTON_HEIGHT );
 			add( btn );
 			
@@ -102,6 +109,10 @@ public class WndOptions extends Window {
 		}
 		
 		resize( WIDTH, (int)pos );
+	}
+	
+	public void setEnabled(int i, boolean enabled) {
+		buttons.get(i).enable(enabled);
 	}
 	
 	protected void onSelect( int index ) {};

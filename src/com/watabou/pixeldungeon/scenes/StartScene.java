@@ -146,13 +146,13 @@ public class StartScene extends PixelScene {
 						@Override
 						protected void onSelect(int index) {
 							if (index == 0) {
-								startNewGame();
+								selectDifficulty();
 							}
 						}
 					});
 
 				} else {
-					startNewGame();
+					selectDifficulty();
 				}
 			}
 		};
@@ -325,7 +325,28 @@ public class StartScene extends PixelScene {
 
 	}
 
+	private void selectDifficulty() {
+		
+		WndOptions difficultyOptions = new WndOptions(Game.getVar(R.string.StartScene_DifficultySelect), "",
+				Game.getVar(R.string.StartScene_DifficultyEasy), 
+				Game.getVar(R.string.StartScene_DifficultyNormalWithSaves), 
+				Game.getVar(R.string.StartScene_DifficultyNormal),
+				Game.getVar(R.string.StartScene_DifficultyExpert)) {
+			@Override
+			protected void onSelect(int index) {
+				Dungeon.setDifficulty(index);
+					startNewGame();
+			}
+		};
+		
+		difficultyOptions.setEnabled(0, false);
+		difficultyOptions.setEnabled(3, false);
+		
+		add(difficultyOptions);
+	}
+	
 	private void startNewGame() {
+		
 		Dungeon.hero = null;
 		Dungeon.heroClass = curClass;
 

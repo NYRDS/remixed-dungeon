@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,6 +26,7 @@ import java.util.Date;
 import java.util.HashSet;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -55,7 +55,6 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.ModderLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -660,5 +659,10 @@ public class Dungeon {
 	
 	public static Position currentPosition() {
 		return new Position(hero.levelKind, depth, hero.pos);
+	}
+
+	private static int difficulty;
+	public static void setDifficulty(int _difficulty) {
+		difficulty = Scrambler.scramble(_difficulty);
 	}
 }
