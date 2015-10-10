@@ -63,7 +63,7 @@ public class WndGame extends Window {
 			}
 		} );
 		
-		if(Dungeon.hero.getDifficulty() <= 2) {
+		if(Dungeon.hero.getDifficulty() < 2) {
 			addButton( new RedButton( Game.getVar(R.string.WndGame_Save) ) {
 				@Override
 				protected void onClick() {

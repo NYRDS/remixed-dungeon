@@ -14,6 +14,14 @@ public class WndSaveSlotSelect extends WndOptions {
 	WndSaveSlotSelect(boolean _saving) {
 		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), "", "1", "2", "3", "4", "5", "6", "7", "8", "9");
 		saving = _saving;
+		
+		if(!saving) {
+			for (int i = 1; i<10; i++) {
+				if(!SaveUtils.slotUsed(Integer.toString(i), Dungeon.heroClass)) {
+					setEnabled(i-1, false);
+				}
+			}
+		}
 	}
 	
 	@Override
