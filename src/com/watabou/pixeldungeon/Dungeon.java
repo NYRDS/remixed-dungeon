@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -137,7 +138,9 @@ public class Dungeon {
 		Room.shuffleTypes();
 		
 		hero = new Hero();
+		hero.setDifficulty(difficulty);
 		hero.live();
+		
 		
 		Badges.reset();
 		
@@ -359,7 +362,9 @@ public class Dungeon {
 			Badges.saveLocal( badges );
 			bundle.put( BADGES, badges );
 			
-			OutputStream output = Game.instance().openFileOutput( fileName, Game.MODE_PRIVATE );
+			GLog.i("saving game: %s", fileName);
+			
+			OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(fileName));
 			Bundle.write( bundle, output );
 			output.close();
 			
@@ -378,7 +383,7 @@ public class Dungeon {
 		String saveTo = SaveUtils.saveDepthFile( hero.heroClass, current.levelDepth, current.levelKind );		
 		GLog.i("saving level: %s", saveTo);
 		
-		OutputStream output = Game.instance().openFileOutput( saveTo , Game.MODE_PRIVATE );
+		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(saveTo)); 
 		Bundle.write( bundle, output );
 		output.close();
 	}
@@ -663,10 +668,7 @@ public class Dungeon {
 
 	private static int difficulty;
 	public static void setDifficulty(int _difficulty) {
-		difficulty = Scrambler.scramble(_difficulty);
+		difficulty = _difficulty;
 	}
 
-	public static int getDifficulty() {
-		return Scrambler.descramble(difficulty);
-	}
 }

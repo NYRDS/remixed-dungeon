@@ -174,6 +174,8 @@ public class Hero extends Char {
 
 	private ArrayList<Mob> visibleEnemies;
 
+	private int difficulty;
+
 	public Hero() {
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
@@ -210,6 +212,7 @@ public class Hero extends Char {
 	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
 	private static final String LEVEL_KIND = "levelKind";
+	private static final String DIFFICULTY = "difficulty";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -226,6 +229,7 @@ public class Hero extends Char {
 		bundle.put(LEVEL, lvl);
 		bundle.put(EXPERIENCE, exp);
 		bundle.put(LEVEL_KIND, levelKind);
+		bundle.put(DIFFICULTY, difficulty);
 
 		belongings.storeInBundle(bundle);
 	}
@@ -246,10 +250,12 @@ public class Hero extends Char {
 		lvl = bundle.getInt(LEVEL);
 		exp = bundle.getInt(EXPERIENCE);
 		levelKind = bundle.getString(LEVEL_KIND);
+		difficulty = bundle.optInt(DIFFICULTY, 2);
 		
 		belongings.restoreFromBundle(bundle);
 
 		gender = heroClass.getGender();
+		
 	}
 
 	public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -1573,6 +1579,14 @@ public class Hero extends Char {
 
 	public boolean isReady() {
 		return isAlive() && ready;
+	}
+
+	public int getDifficulty() {
+		return difficulty;
+	}
+
+	public void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
 	}
 
 }
