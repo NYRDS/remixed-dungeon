@@ -435,7 +435,6 @@ public class Hero extends Char {
 		AttackIndicator.updateState();
 
 		if (curAction == null) {
-
 			if (restoreHealth) {
 				if (isStarving() || hp() >= ht()) {
 					restoreHealth = false;
@@ -446,8 +445,8 @@ public class Hero extends Char {
 				}
 			}
 
-			if(PixelDungeon.realtime()) {
-				if(ready == false) {
+			if (PixelDungeon.realtime()) {
+				if (ready == false) {
 					ready();
 				}
 				spend(TICK);

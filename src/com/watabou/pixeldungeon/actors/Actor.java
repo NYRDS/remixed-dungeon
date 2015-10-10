@@ -222,6 +222,10 @@ public abstract class Actor implements Bundlable {
 	public static void remove( Actor actor ) {
 		
 		if (actor != null) {
+			if(current == actor) {
+				current = null;
+			}
+			
 			all.remove( actor );
 			actor.onRemove();
 		}
