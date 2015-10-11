@@ -3,10 +3,14 @@ package com.watabou.noosa;
 import java.net.InetAddress;
 import java.util.ArrayList;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import android.util.Log;
 
@@ -22,6 +26,8 @@ public abstract class GameWithGoogleIap extends Game {
 
 	private volatile boolean m_iapReady = false;
 
+	static InterstitialAd mInterstitialAd;
+
 	public boolean iapReady() {
 		return m_iapReady;
 	}
@@ -34,12 +40,52 @@ public abstract class GameWithGoogleIap extends Game {
 		instance(this);
 	}
 
+	private static void requestNewInterstitial() {
+		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
+				"28A84414B608E9C25DC2DDDF7E85B161").build();
+		
+		GLog.w("loading ad");
+		mInterstitialAd.loadAd(adRequest);
+	}
+
+	public static void displayAd(final IntersitialPoint work) {
+		
+		if(mInterstitialAd == null) {
+			GLog.w("ad not created");
+			work.returnToWork();
+		}
+		
+		mInterstitialAd.setAdListener(new AdListener() {
+			@Override
+			public void onAdClosed() {
+				GLog.w("ad closed");
+				requestNewInterstitial();
+				work.returnToWork();
+			}
+		});
+		
+		if(mInterstitialAd.isLoaded()) {
+			GLog.w("showing ad");
+			mInterstitialAd.show();
+		} else {
+			GLog.w("ad not loaded");
+			work.returnToWork();
+		}
+		
+	}
+
 	public void initIapPhase2() {
+
 		if (mHelper != null) {
 			return;
 		}
 
-		String base64EncodedPublicKey = "";
+		mInterstitialAd = new InterstitialAd(this);
+		mInterstitialAd.setAdUnitId("ca-app-pub-4791779564989579/8957634845");
+
+		requestNewInterstitial();
+
+		String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQRfPt11/KWsITVw7wAt6FSQjl2sK+JaiiGm83JLlq+j1DFaMRFtx52/zbjOt+fu6LaiH9tyjcaaJrGbq/YfMjr2z1yr7Qru83iqqXMsiMLKWuW+nSnQd5/yqJwRge8Oymz6m9ddCpyj5MbmMQ4pnh6eoGdeZaInuZh5TbuvP4004wAW1HYwvtkWl3p7SR+YcOGeQX1nfcTNflwFYunQLoKB+rQHjL3y+FTEJAUSISKDI47J1cOjFoN/upOsxIKHYyU8FI0mAq8lim6zkxa/kapojgpKw+UJNmJShnWzMutf/3JeVWVWFiXi6XX7aE0MJnfcMgU/IeI37f17au3ClQIDAQAB";
 
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
@@ -80,7 +126,7 @@ public abstract class GameWithGoogleIap extends Game {
 			}
 		});
 	}
-	
+
 	public void initIap() {
 		new Thread() {
 			@Override
@@ -96,7 +142,7 @@ public abstract class GameWithGoogleIap extends Game {
 				}
 			}
 		}.start();
-		
+
 	}
 
 	private void checkPurchases() {
@@ -240,19 +286,24 @@ public abstract class GameWithGoogleIap extends Game {
 
 	void complain(String message) {
 		Log.e("GAME", "**** IAP Error: " + message);
-		//alert("Error: " + message);
+		// alert("Error: " + message);
 	}
 
 	void alert(final String message) {
 		instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				//AlertDialog.Builder bld = new AlertDialog.Builder(instance());
-				//bld.setMessage(message);
-				//bld.setNeutralButton("OK", null);
+				// AlertDialog.Builder bld = new
+				// AlertDialog.Builder(instance());
+				// bld.setMessage(message);
+				// bld.setNeutralButton("OK", null);
 				Log.d("GAME", "Showing alert dialog: " + message);
-				//bld.create().show();
+				// bld.create().show();
 			}
 		});
+	}
+
+	public interface IntersitialPoint {
+		public void returnToWork();
 	}
 }

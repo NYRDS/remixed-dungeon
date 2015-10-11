@@ -4,12 +4,16 @@ import java.io.IOException;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 
-public class WndSaveSlotSelect extends WndOptions {
+public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.IntersitialPoint{
 	
-	boolean saving;
+	private boolean saving;
+	private String slot;
+	
 	
 	WndSaveSlotSelect(boolean _saving) {
 		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), "", "1", "2", "3", "4", "5", "6", "7", "8", "9");
@@ -26,7 +30,13 @@ public class WndSaveSlotSelect extends WndOptions {
 	
 	@Override
 	protected void onSelect( int index ) {
-		String slot = Integer.toString(index+1);
+		slot = Integer.toString(index+1);
+		PixelDungeon.displayAd(this);
+	}
+
+	@Override
+	public void returnToWork() {
+		
 		if(saving) {
 			try {
 				
@@ -40,7 +50,6 @@ public class WndSaveSlotSelect extends WndOptions {
 			return;
 		}
 		SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
-		
 	};
 	
 }
