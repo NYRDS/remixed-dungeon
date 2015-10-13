@@ -3,10 +3,14 @@ package com.watabou.noosa;
 import java.net.InetAddress;
 import java.util.ArrayList;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import android.util.Log;
 
@@ -22,6 +26,8 @@ public abstract class GameWithGoogleIap extends Game {
 
 	private volatile boolean m_iapReady = false;
 
+	static InterstitialAd mInterstitialAd;
+
 	public boolean iapReady() {
 		return m_iapReady;
 	}
@@ -34,7 +40,66 @@ public abstract class GameWithGoogleIap extends Game {
 		instance(this);
 	}
 
+	private static void requestNewInterstitial() {
+		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
+				"28A84414B608E9C25DC2DDDF7E85B161").build();
+		
+		GLog.w("loading ad");
+		mInterstitialAd.loadAd(adRequest);
+		
+		mInterstitialAd.setAdListener(new AdListener() {
+			@Override
+			public void onAdClosed() {
+				GLog.w("ad closed");
+			}
+			
+			@Override
+			public void onAdFailedToLoad (int errorCode) {
+				GLog.w("ad load failed");
+			}
+			
+			@Override
+			public void onAdLoaded() {
+				GLog.w("ad loaded");
+			}
+		});
+	}
+
+	public static void displayAd(final IntersitialPoint work) {
+		
+		if(mInterstitialAd == null) {
+			GLog.w("ad not created");
+			work.returnToWork();
+		}
+		
+		mInterstitialAd.setAdListener(new AdListener() {
+			@Override
+			public void onAdClosed() {
+				GLog.w("ad closed");
+				requestNewInterstitial();
+				work.returnToWork();
+			}
+		});
+		
+		if(mInterstitialAd.isLoaded()) {
+			GLog.w("showing ad");
+			mInterstitialAd.show();
+		} else {
+			GLog.w("ad not loaded");
+			work.returnToWork();
+		}
+		
+	}
+
+	private void initIntersitial() {
+		mInterstitialAd = new InterstitialAd(this);
+		mInterstitialAd.setAdUnitId("ca-app-pub-4791779564989579/8957634845");
+		
+		requestNewInterstitial();
+	}
+	
 	public void initIapPhase2() {
+
 		if (mHelper != null) {
 			return;
 		}
@@ -80,7 +145,7 @@ public abstract class GameWithGoogleIap extends Game {
 			}
 		});
 	}
-	
+
 	public void initIap() {
 		new Thread() {
 			@Override
@@ -96,7 +161,7 @@ public abstract class GameWithGoogleIap extends Game {
 				}
 			}
 		}.start();
-		
+
 	}
 
 	private void checkPurchases() {
@@ -139,6 +204,8 @@ public abstract class GameWithGoogleIap extends Game {
 			mInventory = inventory;
 			checkPurchases();
 			m_iapReady = true;
+			
+			initIntersitial();
 		}
 	};
 
@@ -240,19 +307,24 @@ public abstract class GameWithGoogleIap extends Game {
 
 	void complain(String message) {
 		Log.e("GAME", "**** IAP Error: " + message);
-		//alert("Error: " + message);
+		// alert("Error: " + message);
 	}
 
 	void alert(final String message) {
 		instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				//AlertDialog.Builder bld = new AlertDialog.Builder(instance());
-				//bld.setMessage(message);
-				//bld.setNeutralButton("OK", null);
+				// AlertDialog.Builder bld = new
+				// AlertDialog.Builder(instance());
+				// bld.setMessage(message);
+				// bld.setNeutralButton("OK", null);
 				Log.d("GAME", "Showing alert dialog: " + message);
-				//bld.create().show();
+				// bld.create().show();
 			}
 		});
+	}
+
+	public interface IntersitialPoint {
+		public void returnToWork();
 	}
 }
