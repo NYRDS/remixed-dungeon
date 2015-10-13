@@ -1,4 +1,4 @@
-Remixed Pixel Dungeon
+Remixed Pixel Dungeon (TEST)
 =====================
 
 Classic roguelike with pixel graphics and simple interface.
