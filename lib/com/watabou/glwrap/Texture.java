@@ -24,7 +24,6 @@ import java.nio.IntBuffer;
 import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
-import android.util.Log;
 
 public class Texture {
 

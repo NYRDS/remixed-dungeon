@@ -44,23 +44,19 @@ public abstract class GameWithGoogleIap extends Game {
 		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
 				"28A84414B608E9C25DC2DDDF7E85B161").build();
 		
-		GLog.w("loading ad");
 		mInterstitialAd.loadAd(adRequest);
 		
 		mInterstitialAd.setAdListener(new AdListener() {
 			@Override
 			public void onAdClosed() {
-				GLog.w("ad closed");
 			}
 			
 			@Override
 			public void onAdFailedToLoad (int errorCode) {
-				GLog.w("ad load failed");
 			}
 			
 			@Override
 			public void onAdLoaded() {
-				GLog.w("ad loaded");
 			}
 		});
 	}
@@ -68,24 +64,20 @@ public abstract class GameWithGoogleIap extends Game {
 	public static void displayAd(final IntersitialPoint work) {
 		
 		if(mInterstitialAd == null) {
-			GLog.w("ad not created");
 			work.returnToWork();
 		}
 		
 		mInterstitialAd.setAdListener(new AdListener() {
 			@Override
 			public void onAdClosed() {
-				GLog.w("ad closed");
 				requestNewInterstitial();
 				work.returnToWork();
 			}
 		});
 		
 		if(mInterstitialAd.isLoaded()) {
-			GLog.w("showing ad");
 			mInterstitialAd.show();
 		} else {
-			GLog.w("ad not loaded");
 			work.returnToWork();
 		}
 		

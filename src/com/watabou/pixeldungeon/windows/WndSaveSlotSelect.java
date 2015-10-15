@@ -13,6 +13,7 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 	
 	private boolean saving;
 	private String slot;
+	private volatile boolean adDisplayed = false;
 	
 	
 	WndSaveSlotSelect(boolean _saving) {
@@ -31,11 +32,8 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 	@Override
 	protected void onSelect( int index ) {
 		slot = Integer.toString(index+1);
-		PixelDungeon.displayAd(this);
-	}
-
-	@Override
-	public void returnToWork() {
+		
+		final GameWithGoogleIap.IntersitialPoint returnTo = this;
 		
 		if(saving) {
 			try {
@@ -49,7 +47,22 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 			}
 			return;
 		}
-		SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
-	};
-	
+		
+		Game.paused = true;
+		Game.instance().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				PixelDungeon.displayAd(returnTo);
+			}
+		});
+	}
+
+	@Override
+	public void returnToWork() {
+		Game.paused = false;
+		if(!saving) {
+			SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
+		}
+	}
+
 }
