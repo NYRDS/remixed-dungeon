@@ -914,16 +914,17 @@ public class Hero extends Char {
 		SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
 		spend(attackDelay());
 
-		int hitCell = Ballistica.cast(pos, action.target.pos, false, true);
-
-		if (Dungeon.level.distance(pos, hitCell) <= weapon.getRange()) {
-			Char chr = Actor.findChar(hitCell);
+		Ballistica.cast(pos, action.target.pos, false, true);
+		
+		for (int i = 1; i<=Math.min(Ballistica.distance, weapon.getRange()); i++) {
+			Char chr = Actor.findChar(Ballistica.trace[i]);
 			if(chr!=null) {
 				getSprite().attack(chr.pos);
 				weapon.applySpecial(this, chr);
 				return false;
 			}
 		}
+		
 		return getCloserToEnemy();
 	}
 
