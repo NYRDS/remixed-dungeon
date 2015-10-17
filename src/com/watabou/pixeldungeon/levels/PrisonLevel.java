@@ -69,15 +69,6 @@ public class PrisonLevel extends RegularLevel {
 	}
 	
 	@Override
-	protected void createItems() {
-		if (Dungeon.depth  == 6) {
-			addItemToSpawn( new RingOfStoneWalking() );
-		}
-		
-		super.createItems();
-	}
-	
-	@Override
 	protected void createMobs() {
 		super.createMobs();
 		

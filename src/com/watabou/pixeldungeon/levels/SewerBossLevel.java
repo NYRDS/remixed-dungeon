@@ -135,6 +135,10 @@ public class SewerBossLevel extends RegularLevel {
 		paint();
 		
 		paintWater();
+		
+		secondaryExit = roomExit.random(this);
+		set(secondaryExit, Terrain.EXIT );
+		
 		paintGrass();
 		
 		placeTraps();
@@ -155,7 +159,7 @@ public class SewerBossLevel extends RegularLevel {
 		int start = roomExit.top * getWidth() + roomExit.left + 1;
 		int end = start + roomExit.width() - 1;
 		for (int i=start; i < end; i++) {
-			if (i != exit) {
+			if (i != exit && i != secondaryExit) {
 				map[i] = Terrain.WALL_DECO;
 				map[i + getWidth()] = Terrain.WATER;
 			} else {
@@ -183,10 +187,6 @@ public class SewerBossLevel extends RegularLevel {
 		Mob mob = Bestiary.mob( Dungeon.depth, levelKind() );
 		mob.pos = roomExit.random(this);
 		mobs.add( mob );
-		drop( new SpiderCharm(), roomExit.random(this) ).type = Heap.Type.SKELETON;
-		
-		secondaryExit = roomExit.random(this);
-		set(secondaryExit, Terrain.EXIT );
 	}
 	
 	public Actor respawner() {

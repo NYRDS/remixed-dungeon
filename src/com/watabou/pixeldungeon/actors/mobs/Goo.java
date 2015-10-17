@@ -28,7 +28,9 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
+import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.SewerBossLevel;
@@ -49,8 +51,16 @@ public class Goo extends Mob {
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
 		
-		loot = new LloydsBeacon();
-		lootChance = 0.333f;
+		float dice = Random.Float();
+		if( dice < 0.33 ) {
+			loot = new LloydsBeacon();
+		} else if (dice < 0.66) {
+			loot = new SpiderCharm();
+		} else {
+			loot = new RingOfStoneWalking();
+		}
+		
+		lootChance = 0.5f;
 		
 		RESISTANCES.add( ToxicGas.class );
 		RESISTANCES.add( Death.class );
