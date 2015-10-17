@@ -9,4 +9,8 @@
     <!-- 0: NO Execute Indefinite Function to Language -->
     <string name="Utils_IsIndefinte">0</string>
 
+    <string name="Pet_Name"></string>
+    <string name="Pet_Name_Objective"></string>
+    <string name="Pet_Gender"></string>
+    <string name="Pet_Desc"></string>
 </resources>
