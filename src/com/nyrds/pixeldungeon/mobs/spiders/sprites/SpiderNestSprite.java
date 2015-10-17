@@ -21,7 +21,7 @@ public class SpiderNestSprite extends MobSprite {
 		attack.frames( frames, 0 );
 		
 		die = new Animation( 5, false );
-		die.frames( frames, 2, 3, 4 );
+		die.frames( frames, 2, 3, 4, 5 );
 		
 		play( idle );
 	}
