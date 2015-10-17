@@ -78,13 +78,13 @@ public abstract class Char extends Actor {
 	
 	private CharSprite sprite;
 
-	public String name            = Game.getVar(R.string.Char_Name);
-	public String name_objective  = Game.getVar(R.string.Char_Name_Objective);
+	protected String name            = Game.getVar(R.string.Char_Name);
+	protected String name_objective  = Game.getVar(R.string.Char_Name_Objective);
 	
 	protected String description  = Game.getVar(R.string.Mob_Desc);
 	private   String defenceVerb  = null;
 	
-	public int    gender          = Utils.NEUTER;
+	protected int    gender          = Utils.NEUTER;
 	
 	private int HT;
 	private int HP;
@@ -164,7 +164,7 @@ public abstract class Char extends Actor {
 		if (hit( this, enemy, false )) {
 			
 			if (visibleFight) {
-				GLog.i( TXT_HIT[gender], name, enemy.name_objective );
+				GLog.i( TXT_HIT[gender], name, enemy.getName_objective() );
 			}
 			
 			// FIXME
@@ -205,7 +205,7 @@ public abstract class Char extends Actor {
 					}
 					
 				} else {
-					GLog.i( TXT_DEFEAT[gender], name, enemy.name_objective );
+					GLog.i( TXT_DEFEAT[gender], name, enemy.getName_objective() );
 				}
 			}
 			
@@ -290,7 +290,7 @@ public abstract class Char extends Actor {
 			if (Random.Int( dmg ) >= Random.Int( hp() )) {
 				Buff.detach( this, Paralysis.class );
 				if (Dungeon.visible[pos]) {
-					GLog.i( TXT_OUT_OF_PARALYSIS, name_objective );
+					GLog.i( TXT_OUT_OF_PARALYSIS, getName_objective() );
 				}
 			}
 		}
@@ -571,5 +571,17 @@ public abstract class Char extends Actor {
 
 	public void hp(int hP) {
 		HP = Scrambler.scramble(hP);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getName_objective() {
+		return name_objective;
+	}
+
+	public int getGender() {
+		return gender;
 	}
 }

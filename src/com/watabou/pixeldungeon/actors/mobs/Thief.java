@@ -122,7 +122,7 @@ public class Thief extends Mob {
 		Item item = hero.belongings.randomUnequipped();
 		if (item != null) {
 			
-			GLog.w( TXT_STOLE, this.name, item.name() );
+			GLog.w( TXT_STOLE, this.getName(), item.name() );
 			
 			item.detachAll( hero.belongings.backpack );
 			this.item = item;
@@ -138,7 +138,7 @@ public class Thief extends Mob {
 		String desc = Game.getVar(R.string.Thief_Desc);
 		
 		if (item != null) {
-			desc += String.format( TXT_CARRIES, Utils.capitalize( this.name ), item.name() );
+			desc += String.format( TXT_CARRIES, Utils.capitalize( this.getName() ), item.name() );
 		}
 		
 		return desc;

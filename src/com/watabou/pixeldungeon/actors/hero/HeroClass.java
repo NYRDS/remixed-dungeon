@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
+import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
@@ -118,7 +119,7 @@ public enum HeroClass {
 			break;
 		}
 
-		hero.gender = getGender();
+		hero.setGender(getGender());
 
 		if (Badges.isUnlocked(masteryBadge())) {
 			new TomeOfMastery().collect(hero);
@@ -164,7 +165,7 @@ public enum HeroClass {
 		hero.collect(new RingOfPower().upgrade(3).identify());
 
 		hero.collect(new Spear());
-		hero.collect(new ArmorKit());
+		hero.collect(new SpiderCharm());
 		hero.collect(new CommonArrow(100));
 		hero.collect(new Quiver());
 		hero.collect(new SeedPouch());
@@ -173,6 +174,7 @@ public enum HeroClass {
 		hero.collect(new PotionBelt());
 		hero.collect(new Keyring());
 
+		
 		for(int i = 0; i < 100; ++i){
 			hero.collect(new PotionOfMindVision());
 			hero.collect(new ScrollOfMagicMapping());

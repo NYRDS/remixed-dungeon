@@ -58,7 +58,7 @@ public class WndBlacksmith extends Window {
 		
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( troll.sprite() );
-		titlebar.label( Utils.capitalize( troll.name ) );
+		titlebar.label( Utils.capitalize( troll.getName() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		

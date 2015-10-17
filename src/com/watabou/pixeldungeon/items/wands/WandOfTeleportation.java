@@ -58,7 +58,7 @@ public class WandOfTeleportation extends Wand {
 				ch.pos = pos;
 				ch.getSprite().place( ch.pos );
 				ch.getSprite().setVisible(Dungeon.visible[pos]);
-				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.name, ch.name_objective));
+				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.getName(), ch.getName_objective()));
 			}
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));

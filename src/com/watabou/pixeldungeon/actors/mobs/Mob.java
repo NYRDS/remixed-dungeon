@@ -451,11 +451,11 @@ public abstract class Mob extends Char {
 	}
 
 	public void yell(String str) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), name, str);
+		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), str);
 	}
 
 	public void say(String str) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), name, str);
+		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), str);
 	}
 
 	public interface AiState {
@@ -503,7 +503,7 @@ public abstract class Mob extends Char {
 		@Override
 		public String status() {
 			return String.format(Game.getVar(R.string.Mob_StaSleepingStatus),
-					name);
+					getName());
 		}
 	}
 
@@ -543,7 +543,7 @@ public abstract class Mob extends Char {
 		@Override
 		public String status() {
 			return String.format(Game.getVar(R.string.Mob_StaWanderingStatus),
-					name);
+					getName());
 		}
 	}
 
@@ -583,7 +583,7 @@ public abstract class Mob extends Char {
 		@Override
 		public String status() {
 			return String.format(Game.getVar(R.string.Mob_StaHuntingStatus),
-					name);
+					getName());
 		}
 	}
 
@@ -619,7 +619,7 @@ public abstract class Mob extends Char {
 		@Override
 		public String status() {
 			return String.format(Game.getVar(R.string.Mob_StaFleeingStatus),
-					name);
+					getName());
 		}
 	}
 
@@ -637,7 +637,7 @@ public abstract class Mob extends Char {
 		@Override
 		public String status() {
 			return String.format(Game.getVar(R.string.Mob_StaPassiveStatus),
-					name);
+					getName());
 		}
 	}
 

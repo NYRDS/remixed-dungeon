@@ -1590,4 +1590,8 @@ public class Hero extends Char {
 		this.difficulty = difficulty;
 	}
 
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+
 }

@@ -55,7 +55,7 @@ public class ScrollOfTerror extends Scroll {
 			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info1));
 			break;
 		case 1:
-			GLog.i(String.format(Game.getVar(R.string.ScrollOfTerror_Info2), affected.name));
+			GLog.i(String.format(Game.getVar(R.string.ScrollOfTerror_Info2), affected.getName()));
 			break;
 		default:
 			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info3));
