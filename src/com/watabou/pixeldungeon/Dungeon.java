@@ -27,7 +27,6 @@ import java.util.Date;
 import java.util.HashSet;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;

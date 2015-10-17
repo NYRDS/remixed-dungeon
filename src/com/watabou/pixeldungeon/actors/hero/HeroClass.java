@@ -39,6 +39,7 @@ import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfPurity;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfPower;
@@ -150,10 +151,6 @@ public enum HeroClass {
 		hero.collect(new PotionOfLiquidFlame().identify());
 		hero.collect(new PotionOfFrost().identify());
 		hero.collect(new PotionOfFrost().identify());
-		hero.collect(new PotionOfFrost().identify());
-		hero.collect(new PotionOfFrost().identify());
-		hero.collect(new PotionOfFrost().identify());
-		hero.collect(new PotionOfFrost().identify());
 		hero.collect(new PotionOfPurity().identify());
 		hero.collect(new PotionOfLevitation().identify());
 		hero.collect(new WandOfTelekinesis().identify());
@@ -177,6 +174,7 @@ public enum HeroClass {
 		hero.collect(new Keyring());
 
 		for(int i = 0; i < 100; ++i){
+			hero.collect(new PotionOfMindVision());
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfTeleportation());
 		}
@@ -193,9 +191,9 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		if (ModdingMode.mode()) {
+		//if (ModdingMode.mode()) {
 			initDebug(hero);
-		}
+		//}
 
 		QuickSlot.cleanStorage();
 	}

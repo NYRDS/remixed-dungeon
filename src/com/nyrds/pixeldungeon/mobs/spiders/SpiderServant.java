@@ -70,10 +70,5 @@ public class SpiderServant extends Mob {
 	public int dr() {
 		return 5;
 	}
-	
-	@Override
-	public void die( Object cause ) {
-		super.die( cause );
-	}
 
 }

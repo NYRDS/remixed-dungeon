@@ -183,7 +183,10 @@ public class SewerBossLevel extends RegularLevel {
 		Mob mob = Bestiary.mob( Dungeon.depth, levelKind() );
 		mob.pos = roomExit.random(this);
 		mobs.add( mob );
-		drop( new SpiderCharm(), mob.pos ).type = Heap.Type.SKELETON;
+		drop( new SpiderCharm(), roomExit.random(this) ).type = Heap.Type.SKELETON;
+		
+		secondaryExit = roomExit.random(this);
+		set(secondaryExit, Terrain.EXIT );
 	}
 	
 	public Actor respawner() {

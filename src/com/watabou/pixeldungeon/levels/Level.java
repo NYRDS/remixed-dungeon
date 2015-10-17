@@ -126,7 +126,8 @@ public abstract class Level implements Bundlable {
 
 	public int entrance;
 	public int exit;
-
+	public int secondaryExit;
+	
 	public HashSet<Mob> mobs = new HashSet<Mob>();
 	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<Class<? extends Blob>, Blob>();
 	public SparseArray<Plant> plants = new SparseArray<Plant>();
@@ -151,6 +152,7 @@ public abstract class Level implements Bundlable {
 	private static final String BLOBS = "blobs";
 	private static final String WIDTH = "width";
 	private static final String HEIGHT = "height";
+	private static final String SECONDARY_EXIT = "secondaryExit";
 
 	public String levelKind() {
 		return this.getClass().getSimpleName();
@@ -323,6 +325,7 @@ public abstract class Level implements Bundlable {
 
 		entrance = bundle.getInt(ENTRANCE);
 		exit = bundle.getInt(EXIT);
+		secondaryExit = bundle.optInt(SECONDARY_EXIT, -1);
 		
 		weakFloorCreated = false;
 
@@ -363,6 +366,7 @@ public abstract class Level implements Bundlable {
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
 		bundle.put(EXIT, exit);
+		bundle.put(SECONDARY_EXIT, secondaryExit);
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());
 		bundle.put(MOBS, mobs);

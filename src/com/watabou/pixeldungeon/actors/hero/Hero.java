@@ -775,7 +775,7 @@ public class Hero extends Char {
 
 	private boolean actDescend(HeroAction.Descend action) {
 		int stairs = action.dst;
-		if (pos == stairs && pos == Dungeon.level.exit) {
+		if (pos == stairs && (pos == Dungeon.level.exit || pos == Dungeon.level.secondaryExit)) {
 
 			curAction = null;
 
@@ -1165,7 +1165,7 @@ public class Hero extends Char {
 
 			curAction = new HeroAction.Unlock(cell);
 
-		} else if (cell == Dungeon.level.exit) {
+		} else if (cell == Dungeon.level.exit || cell == Dungeon.level.secondaryExit) {
 
 			curAction = new HeroAction.Descend(cell);
 

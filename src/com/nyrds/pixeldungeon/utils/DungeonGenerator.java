@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndStory;
@@ -31,9 +30,14 @@ public class DungeonGenerator {
 		Position next = new Position();
 		next.levelDepth = current.levelDepth - 1;
 		next.levelKind  = depthToKind(next.levelDepth);
+		next.cellId = -1;
 		
 		if(current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth !=5) {
 			next.levelKind = SPIDER_LEVEL;
+		}
+		
+		if(current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth ==5) {
+			next.cellId = -2;
 		}
 		
 		return next;
@@ -44,9 +48,9 @@ public class DungeonGenerator {
 		next.levelDepth = current.levelDepth + 1;
 		next.levelKind  = depthToKind(next.levelDepth);
 		
+		
 		if (next.levelDepth == 6) {
-			if (Dungeon.hero.belongings.ring1 instanceof SpiderCharm
-					|| Dungeon.hero.belongings.ring2 instanceof SpiderCharm) {
+			if (current.cellId == Dungeon.level.secondaryExit) {
 				next.levelKind = SPIDER_LEVEL;
 				next.xs = 16 + (next.levelDepth-6) * 16;
 				next.ys = 16 + (next.levelDepth-6) * 16;

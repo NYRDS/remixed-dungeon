@@ -310,7 +310,12 @@ public class InterlevelScene extends PixelScene {
 		Dungeon.depth=next.levelDepth;
 		
 		Level level = Dungeon.loadLevel(next);
-		Dungeon.switchLevel(level, level.exit);
+		
+		if(next.cellId == -2 && level.secondaryExit > 0) {
+			Dungeon.switchLevel(level, level.secondaryExit);
+		} else {
+			Dungeon.switchLevel(level, level.exit);
+		}
 	}
 
 	private void returnTo() throws IOException {
