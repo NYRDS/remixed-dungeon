@@ -273,7 +273,7 @@ public class PixelScene extends Scene {
 			return;
 		}
 		
-		if (uiCamera != null) {
+		if (uiCamera != null && !Game.paused) {
 			BadgeBanner banner = BadgeBanner.show(badge.image);
 			banner.camera = uiCamera;
 			banner.x = align(banner.camera,
