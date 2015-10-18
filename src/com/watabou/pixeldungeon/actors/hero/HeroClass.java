@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
+import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.SpiderCharm;
@@ -157,6 +158,7 @@ public enum HeroClass {
 		hero.collect(new RogueArmor());
 		hero.collect(new HuntressArmor());
 		hero.collect(new ElfArmor());
+		hero.collect(new DewVial());
 	}
 
 	private static void initCommon(Hero hero) {

@@ -173,7 +173,7 @@ public class WndSettings extends Window {
 			btnRealtime.setRect(0, btnOrientation.bottom() + GAP, WIDTH,
 					BTN_HEIGHT);
 			btnRealtime.checked(PixelDungeon.realtime());
-			btnRealtime.enable(false);
+			//btnRealtime.enable(false);
 			add(btnRealtime);
 			
 			RedButton localeButton = new RedButton(TXT_SElECT_LANGUAGE) {
