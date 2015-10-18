@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Pet;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
@@ -210,7 +211,18 @@ public abstract class Mob extends Char {
 		if (terror != null) {
 			return terror.source;
 		}
-
+		
+		HashSet<Mob> enemies = new HashSet<Mob>();
+		for (Mob mob : Dungeon.level.mobs) {
+			if (mob != this && Dungeon.level.fieldOfView[mob.pos] && mob instanceof Pet) {
+				enemies.add(mob);
+			}
+		}
+		if (enemies.size() > 0) {
+			return Random.element(enemies);
+		}
+		
+		
 		return Dungeon.hero;
 	}
 
