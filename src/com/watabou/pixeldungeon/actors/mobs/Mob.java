@@ -96,6 +96,7 @@ public abstract class Mob extends Char {
 	
 	public static Mob makePet(Mob pet) {
 		pet.fraction = Fraction.HEROES;
+		pet.enemy = DUMMY;
 		return pet;
 	}
 	
@@ -227,7 +228,7 @@ public abstract class Mob extends Char {
 			}
 		}
 		
-		return chooseEnemyHeroes();
+		return Dungeon.hero;
 	}
 	
 	private Char chooseEnemyHeroes() {
@@ -243,7 +244,7 @@ public abstract class Mob extends Char {
 				return newEnemy;
 			}
 			
-			return Dungeon.hero;
+			return DUMMY;
 		}
 		
 		return enemy;
