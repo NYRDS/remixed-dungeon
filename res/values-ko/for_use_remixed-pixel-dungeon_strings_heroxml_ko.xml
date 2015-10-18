@@ -3,29 +3,29 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">당신</string>
   <string name="Hero_Name_Objective">당신</string>
-  <string name="Hero_Leave">아무도 이곳 Pixel Dungeon을 쉽게 빠져 나갈 수 없다.</string>
+  <string name="Hero_Leave">아무도 Pixel Dungeon을 쉽게 빠져 나갈 수 없다.</string>
   <string name="Hero_LevelUp">레벨 업!</string>
-  <string name="Hero_NewLevel">레벨 %d이 된걸 축하합니다! 이제 당신은 보다 더 건강해지고 집중력이 높아 졌습니다. 적을 맞추거나 적의 공격을 회피하기 좀 더 쉬워졌습니다.</string>
+  <string name="Hero_NewLevel">레벨 %d이 된걸 축하합니다! 이제 당신은 보다 더 건강해지고 집중력이 높아졌습니다. 적을 맞추거나 공격을 회피하기 쉬워졌습니다.</string>
   <string name="Hero_YouNowHave">%s을/를 갖게 되었다</string>
   <string name="Hero_SomethingElse">여기에 다른 무언가가 있다.</string>
-  <string name="Hero_LockedChest">이 상자는 잠겨있고, 당신에게는 맞는 열쇠가 없다.</string>
+  <string name="Hero_LockedChest">상자는 잠겨 있고, 맞는 열쇠를 가지고 있지 않다.</string>
   <string name="Hero_LockedDoor">맞는 열쇠를 가지고 있지 않다.</string>
-  <string name="Hero_NoticedSmth">뭔가가 당신 눈에 띄었다.</string>
+  <string name="Hero_NoticedSmth">당신은 무언가를 눈치챘다.</string>
   <string name="Hero_Wait">...</string>
   <string name="Hero_Search">탐색</string>
-  <string name="Hero_StaBurning">당신은 불이 붙었다!!</string>
-  <string name="Hero_StaParalysis">당신은 마비 되었다!!</string>
-  <string name="Hero_StaPoison">당신은 중독됐다!!</string>
-  <string name="Hero_StaOoze">부식성 진액이 당신의 살을 파고든다. 빨리 씻어내야 해!</string>
-  <string name="Hero_StaRoots">당신은 움직일 수 없습니다!</string>
-  <string name="Hero_StaWeakness">당신은 나약해짐을 느꼈습니다!</string>
-  <string name="Hero_StaBlindness">당신은 눈이 멀었습니다!</string>
-  <string name="Hero_StaFury">당신은 화가 나고 있습니다!</string>
+  <string name="Hero_StaBurning">당신에게 불이 붙었다!</string>
+  <string name="Hero_StaParalysis">당신은 마비되었다!</string>
+  <string name="Hero_StaPoison">당신은 중독되었다!!</string>
+  <string name="Hero_StaOoze">산성 액체가 당신의 살을 파고든다. 씻어내라!</string>
+  <string name="Hero_StaRoots">움직일 수 없다!</string>
+  <string name="Hero_StaWeakness">나약해짐을 느꼈다!</string>
+  <string name="Hero_StaBlindness">눈이 멀었다!</string>
+  <string name="Hero_StaFury">당신은 화가 났다!</string>
   <string name="Hero_StaFurious">맹렬한</string>
-  <string name="Hero_StaCharm">당신은 매료되었습니다!</string>
-  <string name="Hero_StaCripple">당신은 절름발이가 되었다!  (니가 범인이다!)</string>
-  <string name="Hero_StaBleeding">당신은 피를 흘리고 있습니다!</string>
-  <string name="Hero_StaVertigo">으..아..주변이 빙글빙글 돈...돈다.!</string>
+  <string name="Hero_StaCharm">당신은 매혹되었다!</string>
+  <string name="Hero_StaCripple">절름발이가 되었다!</string>
+  <string name="Hero_StaBleeding">피를 흘리고 있다!</string>
+  <string name="Hero_StaVertigo">주변이 빙글빙글 돈다!</string>
   <!--STRINGS OF HeroClass CLASS-->
   <string name="HeroClass_War">전사</string>
   <string name="HeroClass_Mag">마법사</string>
@@ -37,34 +37,34 @@
     <item>전사는 유니크 숏 소드로 시작한다. 이 무기는 나중에 \"재주조\"하여 다른 근접 무기를 업그레이드하는데 쓸 수 있다.</item>
     <item>전사는 원거리 무기 숙련도가 떨어진다.</item>
     <item>어떤 음식이든 먹으면 약간의 체력을 회복한다.</item>
-    <item>처음부터 힘의 물약의 정체를 알고 시작한다.</item>
+    <item>시작부터 힘의 물약의 정체가 식별되어 있다. </item>
   </string-array>
   <string-array name="HeroClass_MagPerks">
-    <item>마법사는 유니크 매직 미사일 지팡이를 가지고 시작한다. 이 지팡이는 나중에 \"강화해제\"를 통해 다른 지팡이를 업그레이드할 수 있다.</item>
-    <item>마법사는 지팡이를 더 빨리 재충전 시킨다.</item>
-    <item>어떤 음식이든 먹으면, 소유하고 있는 모든 완드가 1만큼 재충전 된다.</item>
+    <item>마법사는 유니크 마법 미사일 지팡이를 가지고 시작한다. 나중에 다른 지팡이를 업그레이드하기 위해 이 지팡이를 \"강화해제\" 할 수 있다.</item>
+    <item>마법사는 지팡이를 더 빨리 재충전시킨다.</item>
+    <item>어떤 음식이든 먹으면, 인벤토리의 모든 완드가 1만큼 재충전 된다.</item>
     <item>마법사는 지팡이를 근접 무기로 사용할 수 있다.</item>
-    <item>처음부터 확인의 스크롤의 정체를 알고 시작한다.</item>
+    <item>처음부터 확인의 스크롤의 정체가 식별되어 있다.</item>
   </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>로그는 그림자의 반지+1을 가지고 시작한다.</item>
     <item>로그는 반지를 착용하자마자 그 반지의 속성을 알아낼 수 있다.</item>
     <item>로그는 경갑옷 숙련도가 높아, 착용하는 동안 회피율이 올라 간다.</item>
     <item>로그는 숨겨진 함정이나 문의 탐지 숙련도가 높다.</item>
-    <item>로그는 음식 없이도 더 멀리까지 모험할 수 있다.</item>
-    <item>처음부터 감식 스크롤의 정체를 알고 시작한다.</item>
+    <item>로그는 음식 없이 더 오래 버틸 수 있다.</item>
+    <item>처음부터 마법 지도 스크롤의 정체가 식별되어 있다.</item>
   </string-array>
   <string-array name="HeroClass_HunPerks">
     <item>사냥꾼은 체력 15로 시작한다.</item>
     <item>사냥꾼은 업그레이드 가능한 유니크 부메랑을 가지고 시작한다.</item>
-    <item>사냥꾼은 원거리 무기에 숙련도가 높아, 무기 이용에 필요한 힘 이외에 남는힘만큼 보너스 데미지를 줄 수 있다.</item>
-    <item>사냥꾼은 이슬을 통해 더 많은 양의 체력을 회복한다.소주아님.</item>
-    <item>사냥꾼은 근처에 있는 몬스터의 존재를 감지할 수 있다. 벽 너머에 있어도 감지 가능.</item>
+    <item>사냥꾼은 원거리 무기에 숙련도가 높아, 무기 사용에 필요한 힘보다 힘이 넘친다면 피해를 입힐 때 보너스를 받는다.</item>
+    <item>사냥꾼은 이슬에서 좀 더 많은 양의 체력을 회복한다.</item>
+    <item>사냥꾼은 근처에 있는 적이라면 장애물 너머에 숨어 있더라도 감지할 수 있다.</item>
   </string-array>
   <string-array name="HeroClass_ElfPerks">
     <item>엘프는 15의 체력과 9의 힘을 가지고 시작한다.</item>
     <item>엘프는 속박에 면역이다.</item>
-    <item>엘프는 업그레이드 된 활과 많은 양의 화살을 가지고 시작한다.</item>
+    <item>엘프는 업그레이드된 활과 화살 더미를 가지고 시작한다.</item>
     <item>엘프는 활에 대한 숙련도가 매우 높고 민첩하다</item>
     <item>엘프는 근접 무기에 대한 숙련도가 떨어진다.</item>
   </string-array>

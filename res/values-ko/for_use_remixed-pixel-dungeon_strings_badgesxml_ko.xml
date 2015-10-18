@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF BadgesScene CLASS-->
-  <string name="BadgesScene_Title">획득한 칭호들</string>
+  <string name="BadgesScene_Title">당신의 휘장</string>
   <!--STRINGS OF Badges CLASS-->
-  <string name="Badges_Info1">칭호를 획득했다 : %s</string>
-  <string name="Badges_Info2">새로운 슈퍼 칭호 : %s</string>
-  <string name="Badges_Info3">새로운 칭호 : %s</string>
+  <string name="Badges_Info1">휘장을 획득했다 : %s</string>
+  <string name="Badges_Info2">새로운 슈퍼 휘장 : %s</string>
+  <string name="Badges_Info3">새로운 휘장: %s</string>
   <string name="Badges_MonsterSlain1">적 10마리 섬멸</string>
   <string name="Badges_MonsterSlain2">적 50 마리 섬멸</string>
   <string name="Badges_MonsterSlain3">적 150 마리 섬멸</string>
@@ -18,11 +18,11 @@
   <string name="Badges_LevelReached2">레벨 12 달성</string>
   <string name="Badges_LevelReached3">레벨 18 달성</string>
   <string name="Badges_LevelReached4">레벨 24 달성</string>
-  <string name="Badges_AllPotions">모든 물약의 정체 확인</string>
-  <string name="Badges_AllScrolls">모든 스크롤의 정체 확인</string>
-  <string name="Badges_AllRings">모든 반지의 정체 확인\"</string>
-  <string name="Badges_AllWands">모든 완드의 정체 확인\"</string>
-  <string name="Badges_AllItems">모든 물약, 스크롤, 반지 &amp; 완드의 정체 확인</string>
+  <string name="Badges_AllPotions">모든 물약 식별</string>
+  <string name="Badges_AllScrolls">모든 스크롤 식별</string>
+  <string name="Badges_AllRings">모든 반지 식별\"</string>
+  <string name="Badges_AllWands">모든 완드 식별\"</string>
+  <string name="Badges_AllItems">모든 물약, 스크롤, 반지 &amp; 완드 식별</string>
   <!--<string name="Badges_BagSeed"></string>-->
   <!--<string name="Badges_BagSroll"></string>-->
   <!--<string name="Badges_BagWand"></string>-->
@@ -42,7 +42,7 @@
   <string name="Badges_BossSlain2">제 2 보스 섬멸</string>
   <string name="Badges_BossSlain3">제 3 보스 섬멸</string>
   <string name="Badges_BossSlain4">제 4 보스 섬멸</string>
-  <string name="Badges_BossSlain1All">제 1 보스가 전사, 마법사, 로그 &amp; 사냥꾼에 의해 섬멸</string>
+  <string name="Badges_BossSlain1All">제 1 보스를 전사, 마법사, 로그 &amp; 사냥꾼으로 섬멸</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">제 3 보스가 글래디에이터, 버서커, 워락, 배틀메이지, 프리러너, 어쌔신, 스나이퍼 &amp; 워든에 의해 섬멸</string>
+  <string name="Badges_BossSlain3All">제 3 보스를 글래디에이터, 버서커, 워락, 배틀메이지, 프리러너, 어쌔신, 스나이퍼 &amp; 워든으로 섬멸</string>
   <string name="Badges_RingHaggler">흥정가의 반지 획득</string>
   <string name="Badges_RingThorns">가시의 반지 획득</string>
   <string name="Badges_StrengthAttained1">힘 13 획득</string>
@@ -90,13 +90,13 @@
   <string name="Badges_NoMonsterSlain">아무 몬스터도 해치우지 않고 층을 클리어</string>
   <string name="Badges_GrimWepon">죽음의 무기로 몬스터 처치</string>
   <string name="Badges_Piranhas">피라냐 6마리 처치</string>
-  <string name="Badges_NightHunter">밤 시간에 몬스터 5마리 처치</string>
+  <string name="Badges_NightHunter">밤에 몬스터 5마리 처치</string>
   <string name="Badges_GamesPlayed1">게임 10회 플레이</string>
   <string name="Badges_GamesPlayed2">게임 100회 플레이</string>
   <string name="Badges_GamesPlayed3">게임 500회 플레이</string>
   <string name="Badges_GamesPlayed4">게임 2000회 플레이</string>
-  <string name="Badges_HappyEnd">해피 엔드</string>
+  <string name="Badges_HappyEnd">해피 엔딩</string>
   <string name="Badges_Champion">도전 성공</string>
-  <string name="Badges_Supporter">도와 주셔서 감사합니다!</string>
+  <string name="Badges_Supporter">도움 감사합니다!</string>
   <string name="Badges_Immured">감금에 의해 사망</string>
 </resources>
