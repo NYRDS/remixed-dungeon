@@ -49,6 +49,8 @@ import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
+import com.watabou.pixeldungeon.items.wands.WandOfAmok;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
@@ -179,11 +181,11 @@ public enum HeroClass {
 			hero.collect(new PotionOfMindVision());
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfTeleportation());
+			hero.collect(new ScrollOfTerror());
 		}
 		
 		
-		hero.collect(new LloydsBeacon());
-		hero.collect(new WandOfTeleportation());
+		hero.collect(new WandOfAmok());
 		hero.collect(new Ankh());
 
 		hero.collect(new RingOfStoneWalking());
@@ -193,9 +195,9 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		//if (ModdingMode.mode()) {
+		if (ModdingMode.mode()) {
 			initDebug(hero);
-		//}
+		}
 
 		QuickSlot.cleanStorage();
 	}
