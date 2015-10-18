@@ -32,7 +32,6 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Pet;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
@@ -44,10 +43,6 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public abstract class Mob extends Char {
-
-	public Mob() {
-		readCharData();
-	}
 
 	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
 
@@ -91,7 +86,19 @@ public abstract class Mob extends Char {
 	private static final String STATE = "state";
 	private static final String TARGET = "target";
 	private static final String ENEMY_SEEN = "enemy_seen";
-
+	private static final String FRACTION   = "fraction";
+	
+	protected Fraction fraction = Fraction.DUNGEON;
+	
+	public Mob() {
+		readCharData();
+	}
+	
+	public static Mob makePet(Mob pet) {
+		pet.fraction = Fraction.HEROES;
+		return pet;
+	}
+	
 	@Override
 	public void storeInBundle(Bundle bundle) {
 
@@ -111,6 +118,7 @@ public abstract class Mob extends Char {
 		bundle.put(TARGET, target);
 
 		bundle.put(ENEMY_SEEN, enemySeen);
+		bundle.put(FRACTION, fraction.ordinal());
 	}
 
 	@Override
@@ -136,6 +144,9 @@ public abstract class Mob extends Char {
 		if (bundle.contains(ENEMY_SEEN)) {
 			enemySeen = bundle.getBoolean(ENEMY_SEEN);
 		}
+		
+		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
+		
 	}
 
 	protected int getKind() {
@@ -187,43 +198,72 @@ public abstract class Mob extends Char {
 		return state.act(enemyInFOV, justAlerted);
 	}
 
-	protected Char chooseEnemy() {
-
+	private Char chooseEnemyFromFraction( Fraction enemyFraction ) {
+		HashSet<Mob> enemies = new HashSet<Mob>();
+		for (Mob mob : Dungeon.level.mobs) {
+			if (Dungeon.level.fieldOfView[mob.pos] && mob.fraction.equals(enemyFraction)) {
+				enemies.add(mob);
+			}
+		}
+		
+		if (enemies.size() > 0) {
+			return Random.element(enemies);
+		}
+		
+		return null;
+	}
+	
+	private Char chooseEnemyDungeon() {
 		if (buff(Amok.class) != null) {
 			if (enemy == Dungeon.hero || enemy == null) {
-
-				HashSet<Mob> enemies = new HashSet<Mob>();
-				for (Mob mob : Dungeon.level.mobs) {
-					if (mob != this && Dungeon.level.fieldOfView[mob.pos]) {
-						enemies.add(mob);
-					}
-				}
-				if (enemies.size() > 0) {
-					return Random.element(enemies);
+				Char newEnemy = chooseEnemyFromFraction(Fraction.DUNGEON);
+				
+				if(newEnemy != null) {
+					return newEnemy;
 				}
 
 			} else {
 				return enemy;
 			}
 		}
-
+		
+		return chooseEnemyHeroes();
+	}
+	
+	private Char chooseEnemyHeroes() {
+		
+		if (buff(Amok.class) != null) {
+			return chooseEnemyDungeon();
+		}
+		
+		if (enemy == DUMMY || !enemy.isAlive()) {
+			Char newEnemy = chooseEnemyFromFraction(Fraction.DUNGEON);
+			
+			if(newEnemy != null) {
+				return newEnemy;
+			}
+			
+			return Dungeon.hero;
+		}
+		
+		return enemy;
+	}
+	
+	protected Char chooseEnemy() {
+		
 		Terror terror = (Terror) buff(Terror.class);
 		if (terror != null) {
 			return terror.source;
 		}
 		
-		HashSet<Mob> enemies = new HashSet<Mob>();
-		for (Mob mob : Dungeon.level.mobs) {
-			if (mob != this && Dungeon.level.fieldOfView[mob.pos] && mob instanceof Pet) {
-				enemies.add(mob);
-			}
+		switch (fraction) {
+		case DUNGEON:
+			return chooseEnemyDungeon();
+		case HEROES:
+			return chooseEnemyHeroes();
+		default:
+			return chooseEnemyDungeon();
 		}
-		if (enemies.size() > 0) {
-			return Random.element(enemies);
-		}
-		
-		
-		return Dungeon.hero;
 	}
 
 	protected boolean moveSprite(int from, int to) {

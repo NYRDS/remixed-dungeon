@@ -101,11 +101,13 @@ public class WandOfFlock extends SimpleWand  {
 	}
 
 	public static class Sheep extends NPC {
-		private static final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
 		
-		{
+		Sheep() {
+			super();
 			spriteClass = SheepSprite.class;
 		}
+
+		private static final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
 		
 		public float lifespan;
 		

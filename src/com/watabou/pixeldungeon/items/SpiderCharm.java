@@ -6,7 +6,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Pet;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -54,7 +54,7 @@ public class SpiderCharm extends Artifact {
 		}
 		
 		if (spawnPoints.size() > 0) {
-			Pet<SpiderServant> pet = new Pet<SpiderServant>(new SpiderServant());
+			Mob pet = Mob.makePet(new SpiderServant());
 			pet.pos = Random.element( spawnPoints );
 			
 			GameScene.add(Dungeon.level, pet );
