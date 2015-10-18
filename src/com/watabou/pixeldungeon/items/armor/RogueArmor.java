@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class RogueArmor extends ClassArmor {
@@ -44,8 +43,7 @@ public class RogueArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.RogueArmor_ACSpecial); 
 	
 	{
-		name = Game.getVar(R.string.RogueArmor_Name);
-		image = ItemSpriteSheet.ARMOR_ROGUE;
+		image = 16;
 	}
 	
 	@Override

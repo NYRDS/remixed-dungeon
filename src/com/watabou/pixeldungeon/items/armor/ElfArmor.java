@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ElfArmor extends ClassArmor {
@@ -21,8 +20,7 @@ public class ElfArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.ElfArmor_ACSpecial); 
 	
 	public ElfArmor() {
-		name = Game.getVar(R.string.ElfArmor_Name);
-		image = ItemSpriteSheet.ARMOR_ELF;
+		image = 13;
 	}	
 	
 	@Override

@@ -64,6 +64,7 @@ public class Armor extends EquipableItem {
 	public Glyph glyph;
 	
 	public Armor( int tier ) {
+		imageFile = "items/armor.png";
 		
 		this.tier = tier;
 		

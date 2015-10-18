@@ -30,6 +30,15 @@ import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
+import com.watabou.pixeldungeon.items.armor.ElfArmor;
+import com.watabou.pixeldungeon.items.armor.HuntressArmor;
+import com.watabou.pixeldungeon.items.armor.LeatherArmor;
+import com.watabou.pixeldungeon.items.armor.MageArmor;
+import com.watabou.pixeldungeon.items.armor.MailArmor;
+import com.watabou.pixeldungeon.items.armor.PlateArmor;
+import com.watabou.pixeldungeon.items.armor.RogueArmor;
+import com.watabou.pixeldungeon.items.armor.ScaleArmor;
+import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.Quiver;
@@ -133,62 +142,21 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		hero.collect(new TomeOfMastery());
 
-		hero.collect(new Kusarigama());
-		Item gl = new Glaive().upgrade(8);
-		gl.cursed = true;
+		//hero.hp(hero.ht(1000));
+		//hero.STR(18);
 
-		Item rr = new RingOfShadows().degrade(4);
-		rr.cursed = true;
+		//hero.attackSkill += 10;
+		//hero.defenseSkill += 10;
 
-		hero.collect(rr);
-
-		hero.collect(gl);
-
-		hero.hp(hero.ht(1000));
-		hero.STR(18);
-
-		hero.attackSkill += 10;
-		hero.defenseSkill += 10;
-
-		hero.collect(new PotionOfStrength().identify());
-		hero.collect(new PotionOfLiquidFlame().identify());
-		hero.collect(new PotionOfFrost().identify());
-		hero.collect(new PotionOfFrost().identify());
-		hero.collect(new PotionOfPurity().identify());
-		hero.collect(new PotionOfLevitation().identify());
-		hero.collect(new WandOfTelekinesis().identify());
-		hero.collect(new WandOfFirebolt());
-
-		hero.collect(new Icecap.Seed());
-		hero.collect(new Icecap.Seed());
-		hero.collect(new Icecap.Seed());
-		hero.collect(new Icecap.Seed());
-
-		hero.collect(new RingOfPower().upgrade(3).identify());
-
-		hero.collect(new Spear());
-		hero.collect(new SpiderCharm());
-		hero.collect(new CommonArrow(100));
-		hero.collect(new Quiver());
-		hero.collect(new SeedPouch());
-		hero.collect(new WandHolster());
-		hero.collect(new ScrollHolder());
-		hero.collect(new PotionBelt());
-		hero.collect(new Keyring());
-
-		
-		for(int i = 0; i < 100; ++i){
-			hero.collect(new PotionOfMindVision());
-			hero.collect(new ScrollOfMagicMapping());
-			hero.collect(new ScrollOfTeleportation());
-			hero.collect(new ScrollOfTerror());
-		}
-		
-		
-		hero.collect(new WandOfAmok());
-		hero.collect(new Ankh());
-
-		hero.collect(new RingOfStoneWalking());
+		hero.collect(new LeatherArmor());
+		hero.collect(new MailArmor());
+		hero.collect(new ScaleArmor());
+		hero.collect(new PlateArmor());
+		hero.collect(new WarriorArmor());
+		hero.collect(new MageArmor());
+		hero.collect(new RogueArmor());
+		hero.collect(new HuntressArmor());
+		hero.collect(new ElfArmor());
 	}
 
 	private static void initCommon(Hero hero) {
