@@ -217,7 +217,7 @@ public class StartScene extends PixelScene {
 		unlockElf = new Group();
 		add(unlockElf);
 
-		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
+		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1) || ModdingMode.mode() )) {
 			Text text = PixelScene
 					.createMultiline(TXT_UNLOCK, 9);
 			text.maxWidth((int) width);

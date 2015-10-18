@@ -13,8 +13,6 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 	
 	private boolean saving;
 	private String slot;
-	private volatile boolean adDisplayed = false;
-	
 	
 	WndSaveSlotSelect(boolean _saving) {
 		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), "", "1", "2", "3", "4", "5", "6", "7", "8", "9");
@@ -45,16 +43,20 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			return;
 		}
 		
 		Game.paused = true;
-		Game.instance().runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				PixelDungeon.displayAd(returnTo);
-			}
-		});
+		
+		if(PixelDungeon.donated() < 2) {
+			Game.instance().runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					PixelDungeon.displayAd(returnTo);
+				}
+			});
+		} else {
+			returnToWork();
+		}
 	}
 
 	@Override
