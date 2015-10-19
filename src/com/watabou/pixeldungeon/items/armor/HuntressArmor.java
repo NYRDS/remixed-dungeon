@@ -19,15 +19,14 @@ package com.watabou.pixeldungeon.items.armor;
 
 import java.util.HashMap;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.missiles.Shuriken;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
@@ -40,8 +39,7 @@ public class HuntressArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.HuntressArmor_ACSpecial); 
 	
 	{
-		name = Game.getVar(R.string.HuntressArmor_Name);
-		image = ItemSpriteSheet.ARMOR_HUNTRESS;
+		image = 8;
 	}
 	
 	private HashMap<Callback, Mob> targets = new HashMap<Callback, Mob>();

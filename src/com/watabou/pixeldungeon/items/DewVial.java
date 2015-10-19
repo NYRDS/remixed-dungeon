@@ -19,16 +19,15 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -50,8 +49,8 @@ public class DewVial extends Item {
 	private static final String TXT_EMPTY		= Game.getVar(R.string.DewVial_Empty);
 	
 	{
-		name = Game.getVar(R.string.DewVial_Name);
-		image = ItemSpriteSheet.VIAL;
+		imageFile = "items/vials.png";
+		image = 0;
 		
 		defaultAction = AC_DRINK;
 		
@@ -65,19 +64,19 @@ public class DewVial extends Item {
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( VOLUME, volume );
+		bundle.put( VOLUME, getVolume() );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		volume	= bundle.getInt( VOLUME );
+		setVolume(bundle.getInt( VOLUME ));
 	}
 	
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if (volume > 0) {
+		if (getVolume() > 0) {
 			actions.add( AC_DRINK );
 		}
 		return actions;
@@ -90,17 +89,17 @@ public class DewVial extends Item {
 	public void execute( final Hero hero, String action ) {
 		if (action.equals( AC_DRINK )) {
 			
-			if (volume > 0) {
+			if (getVolume() > 0) {
 
-				int value = (int)Math.ceil( Math.pow( volume, POW ) / NUM * hero.ht() );
+				int value = (int)Math.ceil( Math.pow( getVolume(), POW ) / NUM * hero.ht() );
 				int effect = Math.min( hero.ht() - hero.hp(), value );
 				if (effect > 0) {
 					hero.hp(hero.hp() + effect);
-					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), volume > 5 ? 2 : 1 );
+					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), getVolume() > 5 ? 2 : 1 );
 					hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				}
 				
-				volume = 0;
+				setVolume(0);
 				
 				hero.spend( TIME_TO_DRINK );
 				hero.busy();
@@ -132,15 +131,15 @@ public class DewVial extends Item {
 	}
 	
 	public boolean isFull() {
-		return volume >= MAX_VOLUME;
+		return getVolume() >= MAX_VOLUME;
 	}
 	
 	public void collectDew( Dewdrop dew ) {
 		
 		GLog.i( TXT_COLLECTED );
-		volume += dew.quantity();
-		if (volume >= MAX_VOLUME) {
-			volume = MAX_VOLUME;
+		setVolume(getVolume() + dew.quantity());
+		if (getVolume() >= MAX_VOLUME) {
+			setVolume(MAX_VOLUME);
 			GLog.p( TXT_FULL );
 		}
 		
@@ -148,7 +147,7 @@ public class DewVial extends Item {
 	}
 	
 	public void fill() {
-		volume = MAX_VOLUME;
+		setVolume(MAX_VOLUME);
 		updateQuickslot();
 	}
 	
@@ -171,11 +170,28 @@ public class DewVial extends Item {
 	
 	@Override
 	public String status() {
-		return Utils.format( TXT_STATUS, volume, MAX_VOLUME );
+		return Utils.format( TXT_STATUS, getVolume(), MAX_VOLUME );
 	}
 	
 	@Override
 	public String toString() {
 		return super.toString() + " (" + status() +  ")" ;
+	}
+
+	private int getVolume() {
+		return volume;
+	}
+
+	private void setVolume(int volume) {
+		this.volume = volume;
+		if(volume == 0) {
+			image = 0;
+		} else if(volume < 5) {
+			image = 1;
+		} else if(volume < 10) {
+			image = 2;
+		} else {
+			image = 3;
+		}
 	}
 }

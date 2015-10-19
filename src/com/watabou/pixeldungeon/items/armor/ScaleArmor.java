@@ -17,20 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.Game;
 
 
 public class ScaleArmor extends Armor {
 
-	{
-		name = Game.getVar(R.string.ScaleArmor_Name);
-		image = ItemSpriteSheet.ARMOR_SCALE;
-	}
-	
 	public ScaleArmor() {
 		super( 4 );
+		image = 3;
 	}
 	
 	@Override

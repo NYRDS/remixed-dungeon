@@ -17,20 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.Game;
 
 
 public class LeatherArmor extends Armor {
 
-	{	
-		name = Game.getVar(R.string.LeatherArmor_Name);
-		image = ItemSpriteSheet.ARMOR_LEATHER;
-	}
-	
 	public LeatherArmor() {
 		super( 2 );
+		image = 1;
 	}
 	
 	@Override

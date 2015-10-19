@@ -17,20 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.Game;
 
 
 public class PlateArmor extends Armor {
 
-	{
-		name = Game.getVar(R.string.PlateArmor_Name);
-		image = ItemSpriteSheet.ARMOR_PLATE;
-	}
-	
 	public PlateArmor() {
 		super( 5 );
+		image = 4;
 	}
 	
 	@Override

@@ -22,6 +22,7 @@ import java.util.HashSet;
 import java.util.Map;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -142,9 +143,50 @@ public abstract class Actor implements Bundlable {
 		}
 	}
 	
-	public static void process() {
+
+	public static void processReaTime(float elapsed) {
+
+		now += elapsed * 10;
+
+
+		do {
+			
+			current = null;
+
+			chars.clear();
+			
+			for (Actor actor : all) {
+				if (actor.time < now) {
+					now = actor.time;
+					current = actor;
+				}
+
+				if (actor instanceof Char) {
+					Char ch = (Char) actor;
+					chars.put(ch.pos, ch);
+				}
+			}
+
+			if(current!= null) {
+				current.act();
+			}
+
+			if (!Dungeon.hero.isAlive()) {
+				break;
+			}
+
+		} while (current != null);
+
+	}
+	
+	public static void process(float elapsed) {
 		
-		if (current != null) {
+		if(PixelDungeon.realtime()) {
+			processReaTime(elapsed);
+			return;
+		}
+		
+		if (current != null && !PixelDungeon.realtime()) {
 			return;
 		}
 	
