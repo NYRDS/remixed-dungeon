@@ -33,6 +33,7 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
+import android.content.res.Resources.NotFoundException;
 import android.media.AudioManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -54,6 +55,7 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
@@ -165,6 +167,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 	}
 
+	public static boolean isAlpha() {
+		return version.contains("alpha");
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -401,7 +407,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	}
 
 	public static String getVar(int id) {
-		return context.getResources().getString(id);
+		try{
+			return context.getResources().getString(id);
+		} catch (NotFoundException notFound) {
+			GLog.w("resource not found: %s", notFound.getMessage());
+		}
+		return "";
 	}
 
 	public static String[] getVars(int id) {

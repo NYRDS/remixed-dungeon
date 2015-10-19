@@ -59,7 +59,10 @@ public class PixelDungeon extends GameWithGoogleIap {
 
 		//String placeModFilesHere = "placeModFilesHere";
 		
-		PixelDungeon.moddingMode(false);
+		if(!isAlpha()) {
+			PixelDungeon.realtime(false);
+			PixelDungeon.moddingMode(false);
+		}
 		ModdingMode.mode(PixelDungeon.moddingMode());
 		/*
 		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
