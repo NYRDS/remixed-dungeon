@@ -148,7 +148,6 @@ public abstract class Actor implements Bundlable {
 
 		now += elapsed * 10;
 
-
 		do {
 			
 			current = null;
@@ -157,7 +156,6 @@ public abstract class Actor implements Bundlable {
 			
 			for (Actor actor : all) {
 				if (actor.time < now) {
-					now = actor.time;
 					current = actor;
 				}
 
