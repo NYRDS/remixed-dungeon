@@ -378,8 +378,14 @@ public class PixelDungeon extends GameWithGoogleIap {
 		}
 
 		if (donated() == 0 && level != 0) {
-			Sample.INSTANCE.play(Assets.SND_GOLD);
-			Badges.validateSupporter();
+			view.queueEvent(new Runnable() {
+				
+				@Override
+				public void run() {
+					Sample.INSTANCE.play(Assets.SND_GOLD);
+					Badges.validateSupporter();
+				}
+			});
 		}
 		donated(level);
 	}

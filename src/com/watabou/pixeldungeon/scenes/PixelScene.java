@@ -269,10 +269,6 @@ public class PixelScene extends Scene {
 	}
 
 	public static void showBadge(Badges.Badge badge) {
-		if(!Game.inMainThread()) {
-			return;
-		}
-		
 		if (uiCamera != null && !Game.paused) {
 			BadgeBanner banner = BadgeBanner.show(badge.image);
 			banner.camera = uiCamera;
