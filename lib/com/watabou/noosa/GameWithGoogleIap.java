@@ -83,10 +83,12 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	private void initIntersitial() {
-		mInterstitialAd = new InterstitialAd(this);
-		mInterstitialAd.setAdUnitId(getVar(R.string.saveLoadAdUnitId));
-		
-		requestNewInterstitial();
+		if (android.os.Build.VERSION.SDK_INT >= 9) {
+			mInterstitialAd = new InterstitialAd(this);
+			mInterstitialAd.setAdUnitId(getVar(R.string.saveLoadAdUnitId));
+			
+			requestNewInterstitial();
+		}
 	}
 	
 	public void initIapPhase2() {
