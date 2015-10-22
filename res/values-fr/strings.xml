@@ -84,8 +84,6 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <item>Le texte est écrit dans une langue démoniaque.</item>
     <item>Le texte est écrit dans une langue démoniaque.</item>
   </string-array>
-  <!--STRINGS OF Assets CLASS-->
-  <string name="Assets_Prefix"></string>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Au régime</item>

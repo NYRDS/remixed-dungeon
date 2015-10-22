@@ -83,8 +83,6 @@
     <item>Ten tekst jest napisany w języku demonów.</item>
     <item>Ten tekst jest napisany w języku demonów.</item>
   </string-array>
-  <!--STRINGS OF Assets CLASS-->
-  <string name="Assets_Prefix"></string>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Na diecie</item>

@@ -79,8 +79,6 @@
     <item>El texto está escrito en lenguaje demoníaco</item>
     <item>El texto está escrito en lenguaje demoníaco</item>
   </string-array>
-  <!--STRINGS OF Assets CLASS-->
-  <string name="Assets_Prefix"></string>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>A régimen</item>
