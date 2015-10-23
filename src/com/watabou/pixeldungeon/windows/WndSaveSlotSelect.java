@@ -47,7 +47,7 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 		
 		Game.paused = true;
 		
-		if(PixelDungeon.donated() < 2) {
+		if(PixelDungeon.donated() < 1) {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
