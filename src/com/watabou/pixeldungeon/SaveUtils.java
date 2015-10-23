@@ -85,15 +85,19 @@ public class SaveUtils {
 
 	public static void copySaveToSlot(String slot, HeroClass cl) {
 
-		String[] slotFiles = FileSystem.getInteralStorageFile(slot)
-				.getAbsoluteFile().list();
-
+		
+		File slotDir = FileSystem.getInteralStorageFile(slot)
+				.getAbsoluteFile();
+		
+		File[] slotFiles = slotDir.listFiles();
+		
 		if (slotFiles != null) {
-			for (String file : slotFiles) {
-				if (file.endsWith(".dat") && hasClassTag(cl, file)
-						|| file.endsWith(gameFile(cl))) {
-					GLog.i("deleting: %s", file);
-					new File(file).delete();
+			for (File file : slotFiles) {
+				String path = file.getAbsolutePath();
+				if (path.endsWith(".dat") && hasClassTag(cl, path)
+						|| path.endsWith(gameFile(cl))) {
+					GLog.i("deleting: %s", path);
+					file.delete();
 				}
 			}
 		}
