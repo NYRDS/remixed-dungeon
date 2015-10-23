@@ -71,7 +71,9 @@ public class WndGame extends Window {
 					GameScene.show(new WndSaveSlotSelect(true));
 				}
 			} );
-			
+		}
+		
+		if(Dungeon.hero.getDifficulty() < 2) {
 			addButton( new RedButton( Game.getVar(R.string.WndGame_Load) ) {
 				@Override
 				protected void onClick() {
