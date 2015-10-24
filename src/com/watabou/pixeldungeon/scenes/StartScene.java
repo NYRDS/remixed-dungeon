@@ -340,7 +340,10 @@ public class StartScene extends PixelScene {
 		};
 		
 		difficultyOptions.setEnabled(0, false);
-		difficultyOptions.setEnabled(3, false);
+		
+		if(!PixelDungeon.isAlpha()) {
+			difficultyOptions.setEnabled(3, false);
+		}
 		
 		add(difficultyOptions);
 	}
