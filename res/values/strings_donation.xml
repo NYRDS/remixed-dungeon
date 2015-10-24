@@ -16,7 +16,11 @@
     <string name="WndDonate_silverDonateText">Any donation will help the development of the project</string>
     <string name="WndDonate_goldDonateText">Thank You for Your help</string>
     <string name="WndDonate_rubyDonateText">Your generosity will help us continue to improve Remixed Pixel Dungeon!</string>
-
+    
+    <string name="WndDonate_silverDonateText2">Also disable ads in all game modes and unlock huntress from start</string>
+    <string name="WndDonate_goldDonateText2">Also unlocks elf from start</string>
+    <string name="WndDonate_rubyDonateText2"></string>
+    
     <!-- STRINGS OF WndPremiumSettings CLASS -->
     <string name="WndPremiumSettings_std">standard</string>
     <string name="WndPremiumSettings_silver">silver</string>
@@ -33,5 +37,8 @@
     <!-- STRINGS OF DonateButton CLASS -->
     <string name="DonateButton_pleaseDonate">please consider donating</string>
     <string name="DonateButton_thanks">Thanks for Your support!</string>
+    
+    <!-- STRINGS OF WndSaveSlotSelect -->
+    <string name="WndSaveSlotSelect_dontLike">Don\'t like ads? Make any donation, and they disappear. Forever.</string>
     
 </resources>
