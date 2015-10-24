@@ -23,6 +23,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.DewVial;
@@ -137,7 +139,7 @@ public enum HeroClass {
 
 		hero.setGender(getGender());
 
-		if (Badges.isUnlocked(masteryBadge())) {
+		if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
 			new TomeOfMastery().collect(hero);
 		}
 
