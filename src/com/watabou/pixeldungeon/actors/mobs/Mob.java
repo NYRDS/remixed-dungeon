@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
@@ -373,8 +374,8 @@ public abstract class Mob extends Char {
 		} else {
 			attack(enemy);
 		}
-
-		spend(attackDelay());
+		
+		spend(PixelDungeon.realtime() ? attackDelay()*10 : attackDelay());
 
 		return !visible;
 	}

@@ -356,7 +356,12 @@ public class GameScene extends PixelScene {
 			log.newLine();
 		}
 		
-		cellSelector.enabled = Dungeon.hero.isReady();
+		
+		if(!PixelDungeon.realtime()) {
+			cellSelector.enabled = Dungeon.hero.isReady();
+		} else {
+			cellSelector.enabled = Dungeon.hero.isAlive();
+		}
 		
 	}
 	
