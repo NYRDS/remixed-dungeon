@@ -30,8 +30,10 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.armor.BerserkArmor;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
+import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
@@ -39,6 +41,8 @@ import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.ScaleArmor;
+import com.watabou.pixeldungeon.items.armor.SniperArmor;
+import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
@@ -159,6 +163,10 @@ public enum HeroClass {
 		hero.collect(new HuntressArmor());
 		hero.collect(new ElfArmor());
 		hero.collect(new DewVial());
+		hero.collect(new BerserkArmor());
+		hero.collect(new GladiatorArmor());
+		hero.collect(new WardenArmor());
+		hero.collect(new SniperArmor());
 	}
 
 	private static void initCommon(Hero hero) {
