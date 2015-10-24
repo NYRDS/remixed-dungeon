@@ -8,14 +8,15 @@ import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
+import com.watabou.pixeldungeon.ui.DonateButton;
 
-public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.IntersitialPoint{
+public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoogleIap.IntersitialPoint{
 	
 	private boolean saving;
 	private String slot;
 	
 	WndSaveSlotSelect(boolean _saving) {
-		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), "", "1", "2", "3", "4", "5", "6", "7", "8", "9");
+		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), windowText(), "1", "2", "3", "4", "5", "6", "7", "8", "9");
 		saving = _saving;
 		
 		if(!saving) {
@@ -25,6 +26,20 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 				}
 			}
 		}
+		
+		if(PixelDungeon.donated() == 0 && PixelDungeon.canDonate()) {
+			DonateButton btn = new DonateButton();
+			add(btn);
+			btn.setPos(width/2 - btn.width()/2, height);
+			resize(width,(int) (height+btn.height()));
+		}
+	}
+	
+	private static String windowText() {
+		if(PixelDungeon.donated() == 0 && PixelDungeon.canDonate()) {
+			return Game.getVar(R.string.WndSaveSlotSelect_dontLike);
+		}
+		return "";
 	}
 	
 	@Override
@@ -47,7 +62,7 @@ public class WndSaveSlotSelect extends WndOptions implements GameWithGoogleIap.I
 		
 		Game.paused = true;
 		
-		if(PixelDungeon.donated() < 2) {
+		if(PixelDungeon.donated() < 1) {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {

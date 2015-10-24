@@ -34,6 +34,13 @@ public class WndDonate extends WndTabbed {
 			.getVar(R.string.WndDonate_goldDonateText);
 	private static final String RUBY_DONATE_TEXT = Game
 			.getVar(R.string.WndDonate_rubyDonateText);
+	
+	private static final String SILVER_DONATE_TEXT_2 = Game
+			.getVar(R.string.WndDonate_silverDonateText2);
+	private static final String GOLD_DONATE_TEXT_2 = Game
+			.getVar(R.string.WndDonate_goldDonateText2);
+	private static final String RUBY_DONATE_TEXT_2 = Game
+			.getVar(R.string.WndDonate_rubyDonateText2);
 
 	private static final int WIDTH = 130;
 	private static final int HEIGHT = 145;
@@ -48,8 +55,12 @@ public class WndDonate extends WndTabbed {
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY };
 	private static final String[] title = { SILVER_DONATE, GOLD_DONATE,
 			RUBY_DONATE };
+	
 	private static final String[] text = { SILVER_DONATE_TEXT,
 			GOLD_DONATE_TEXT, RUBY_DONATE_TEXT };
+	
+	private static final String[] text2 = { SILVER_DONATE_TEXT_2,
+			GOLD_DONATE_TEXT_2, RUBY_DONATE_TEXT_2 };
 
 	public WndDonate() {
 		super();
@@ -120,6 +131,15 @@ public class WndDonate extends WndTabbed {
 			tabText.measure();
 			tabText.setPos(0, pos);
 			add(tabText);
+			
+			pos += tabText.height() + GAP;
+			
+			Text tabText2 = PixelScene.createMultiline(
+					text2[level - 1], 7);
+			tabText2.maxWidth(WIDTH - 10);
+			tabText2.measure();
+			tabText2.setPos(0, pos);
+			add(tabText2);
 		}
 	}
 

@@ -237,6 +237,10 @@ public abstract class Mob extends Char {
 			return chooseEnemyDungeon();
 		}
 		
+		if (enemy == null) {
+			enemy = DUMMY;
+		}
+		
 		if (enemy == DUMMY || !enemy.isAlive()) {
 			Char newEnemy = chooseEnemyFromFraction(Fraction.DUNGEON);
 			
