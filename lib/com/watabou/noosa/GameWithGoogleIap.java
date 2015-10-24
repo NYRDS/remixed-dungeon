@@ -10,8 +10,7 @@ import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
-import com.watabou.pixeldungeon.utils.GLog;
-
+import com.nyrds.pixeldungeon.ml.R;
 import android.util.Log;
 
 public abstract class GameWithGoogleIap extends Game {
@@ -42,7 +41,7 @@ public abstract class GameWithGoogleIap extends Game {
 
 	private static void requestNewInterstitial() {
 		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
-				"28A84414B608E9C25DC2DDDF7E85B161").build();
+				getVar(R.string.testDevice)).build();
 		
 		mInterstitialAd.loadAd(adRequest);
 		
@@ -65,6 +64,12 @@ public abstract class GameWithGoogleIap extends Game {
 		
 		if(mInterstitialAd == null) {
 			work.returnToWork();
+			return;
+		}
+
+		if(!mInterstitialAd.isLoaded()) {
+			work.returnToWork();
+			return;
 		}
 		
 		mInterstitialAd.setAdListener(new AdListener() {
@@ -74,20 +79,16 @@ public abstract class GameWithGoogleIap extends Game {
 				work.returnToWork();
 			}
 		});
-		
-		if(mInterstitialAd.isLoaded()) {
-			mInterstitialAd.show();
-		} else {
-			work.returnToWork();
-		}
-		
+		mInterstitialAd.show();
 	}
 
 	private void initIntersitial() {
-		mInterstitialAd = new InterstitialAd(this);
-		mInterstitialAd.setAdUnitId("ca-app-pub-4791779564989579/8957634845");
-		
-		requestNewInterstitial();
+		if (android.os.Build.VERSION.SDK_INT >= 9) {
+			mInterstitialAd = new InterstitialAd(this);
+			mInterstitialAd.setAdUnitId(getVar(R.string.saveLoadAdUnitId));
+			
+			requestNewInterstitial();
+		}
 	}
 	
 	public void initIapPhase2() {
@@ -96,8 +97,8 @@ public abstract class GameWithGoogleIap extends Game {
 			return;
 		}
 
-		String base64EncodedPublicKey = "";
-
+		String base64EncodedPublicKey = getVar(R.string.iapKey);
+		
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
 		Log.d("GAME", "Creating IAB helper.");

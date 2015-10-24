@@ -1,93 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <!--STRINGS OF Hero CLASS-->
-  <string name="Hero_Name">você</string>
-  <string name="Hero_Name_Objective">você</string>
-  <string name="Hero_Leave">Não é tão simples deixar Pixel Dungeon</string>
-  <string name="Hero_LevelUp">subiu de nível!</string>
-  <string name="Hero_NewLevel">Bem-vindo ao nível %d! Agora você está mais saudável e focado. É mais fácil para você acertar os inimigos e desviar de seus ataques.</string>
-  <string name="Hero_YouNowHave">Você agora tem %s</string>
-  <string name="Hero_SomethingElse">Há algo mais aqui</string>
-  <string name="Hero_LockedChest">Este baú está bloqueado e você não tem a chave para abri-lo</string>
-  <string name="Hero_LockedDoor">Você não tem uma chave correspondente</string>
-  <string name="Hero_NoticedSmth">Você notou algo</string>
-  <string name="Hero_Wait">...</string>
-  <string name="Hero_Search">procurar</string>
-  <string name="Hero_StaBurning">Você pegou Fogo!</string>
-  <string name="Hero_StaParalysis">Você foi paralisado!</string>
-  <string name="Hero_StaPoison">Você foi envenenado!</string>
-  <string name="Hero_StaOoze">Lodo tóxico queima a sua pele. Lave-se!</string>
-  <string name="Hero_StaRoots">Você não pode se mover!</string>
-  <string name="Hero_StaWeakness">Você está fraco!</string>
-  <string name="Hero_StaBlindness">Você está cego!</string>
-  <string name="Hero_StaFury">Você ficou furioso!</string>
-  <string name="Hero_StaFurious">furioso</string>
-  <string name="Hero_StaCharm">Você foi encantado!</string>
-  <string name="Hero_StaCripple">Você está incapacitado!</string>
-  <string name="Hero_StaBleeding">Você está sangrando!</string>
-  <string name="Hero_StaVertigo">Tudo está girando em torno de você!</string>
-  <!--STRINGS OF HeroClass CLASS-->
-  <string name="HeroClass_War">guerreiro</string>
-  <string name="HeroClass_Mag">mago</string>
-  <string name="HeroClass_Rog">ladrão</string>
-  <string name="HeroClass_Hun">caçadora</string>
-  <string name="HeroClass_Elf">Elfo</string>
-  <string-array name="HeroClass_WarPerks">
-    <item>Guerreiros começam com 11 pontos de força.</item>
-    <item>Guerreiros começam com uma Espada Curta. Esta espada pode ser \"reforjada\" para se tranformar em outra arma.</item>
-    <item>Guerreiros são menos hábeis com armas de arremesso.</item>
-    <item>Qualquer pedaço de comida recupera um pouco de vida quando comidos.</item>
-    <item>Poções de Força são identificadas desde o início.</item>
-    <item>àáâäãą èéêëę ìíîï òóôöõ ùúûüñń çćłśźż ÀÁÂÄÃĄ ÈÉÊËĘ ÌÍÎÏ ÒÓÔÖÕ ÙÚÛÜÑŃ ÇĆŁŚŹŻº</item>
-  </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se tranformar em outra varinha.</item>
-    <item>Magos recarregam suas varinhas mais rápido.</item>
-    <item>Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</item>
-    <item>Magos podem usar varinhas como uma arma de combate.</item>
-    <item>Pergaminhos de Identificação são identificados desde o início.</item>
-  </string-array>
-  <string-array name="HeroClass_RogPerks">
-    <item>Ladrões começam com um Anel de Sombras +1.</item>
-    <item>Ladrões podem identificar um anel ao equipa-lo.</item>
-    <item>Ladrões estão acostumados com armaduras leves, esquivando-se melhor, quando vestem armadura.</item>
-    <item>Ladrões são peritos na detecção de portas e armadilhas escondidas.</item>
-    <item>Ladrões podem ficar sem comida por mais tempo.</item>
-    <item>Pergaminhos de Mapeamento de Magia são identificados desde o início.</item>
-  </string-array>
-  <string-array name="HeroClass_HunPerks">
-    <item>Caçadoras começam com 15 pontos de vida.</item>
-    <item>Caçadoras começam com um Bumerangue, mas ele é atualizável.</item>
-    <item>Caçadoras são peritas em armas de aremesso, e tem bonus de ataque quando usadas.</item>
-    <item>Caçadoras ganham mais vida a partir de gotas de orvalho.</item>
-    <item>Caçadoras podem sentir monstros por perto, mesmo que eles estejam escondidos atrás de obstáculos.</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>Elfos começam com 15 de vida e 9 de força</item>
-    <item>Elfos são imunes ao enraizamento</item>
-    <item>Elfos começam com um arco de madeira melhorado e um monte de flechas</item>
-    <item>Elfos são peritos com arcos e ágeis</item>
-    <item>Elfos são menos experientes com armas corpo a corpo</item>
-  </string-array>
-  <!--STRINGS OF HeroSubClass CLASS-->
-  <string name="HeroSubClass_NameGlad">gladiador</string>
-  <string name="HeroSubClass_DescGlad">Um ataque bem sucedido com arma branca permite que o _Gladiador_ inicie um combo, onde no próximo ataque causa mais danos</string>
-  <string name="HeroSubClass_NameBers">furia</string>
-  <string name="HeroSubClass_DescBers">Quando gravemente ferido, o _Furia_ entra em um estado de fúria selvagem aumentando significativamente seu potencial de dano.</string>
-  <string name="HeroSubClass_NameWarL">bruxo</string>
-  <string name="HeroSubClass_DescWarL">Depois de matar um inimigo o _Bruxo_ consome a sua alma. Ele cura as feridas e preenche sua fome.</string>
-  <string name="HeroSubClass_NameBatM">mago</string>
-  <string name="HeroSubClass_DescBatM">Ao lutar com uma varinha, o _Mago_ causa dano adicional, dependendo do número atual de cargas. Cada ataque bem sucedido restaura 1 carga para esta varinha.</string>
-  <string name="HeroSubClass_NameAssa">assassino</string>
-  <string name="HeroSubClass_DescAssa">Ao realizar um ataque surpresa, o _Assassino_ inflige danos adicionais ao seu alvo.</string>
-  <string name="HeroSubClass_NameFreR">corredor</string>
-  <string name="HeroSubClass_DescFreR">O _Corredor_ pode se mover quase duas vezes mais rápido do que a maioria dos monstros. Quando ele estiver em correndo, é muito mais difícil de acertá-lo. Para isso, ele deve estar livre e não ficar com fome.</string>
-  <string name="HeroSubClass_NameSnip">atirador</string>
-  <string name="HeroSubClass_DescSnip">_Atirador_ é capaz de detectar pontos fracos na armadura de um inimigo mais efetivamente quando estiver usando uma arma de mísseis.</string>
-  <string name="HeroSubClass_NameWard">guarda</string>
-  <string name="HeroSubClass_DescWard">Tendo uma forte ligação com as forças da natureza o _Guarda_ tem uma capacidade de conseguir gotas de orvalho e sementes de plantas. Também, pisar em grama alta concede um escudo temporário.</string>
-  <string name="HeroSubClass_NameScout">escoteiro</string>
-  <string name="HeroSubClass_DescScout">_Escoteiros_ Élficos são mestres da furtividade. Entrar na grama alta lhes concede um bônus temporário de invisibilidade. Eles também são mais rápidos que Elfos normais.</string>
-  <string name="HeroSubClass_NameShaman">xamã</string>
-  <string name="HeroSubClass_DescShaman">_Xamãs_ Élficos podem usar varinhas como armas corpo a corpo. Ataques sucedidos possuem uma chance de ativar o poder da varinha no alvo, mesmo sem carga.</string>
+    <!-- STRINGS OF Assets CLASS -->
+    <string name="Assets_Prefix">""</string>
+
+    <!-- PACKAGE /utils -->
+    <!-- STRINGS OF Utils CLASS -->
+    <!-- 1: Execute Indefinite Function to Language -->
+    <!-- 0: NO Execute Indefinite Function to Language -->
+    <string name="Utils_IsIndefinte">1</string>
+
 </resources>

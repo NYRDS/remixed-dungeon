@@ -169,7 +169,10 @@ public class TitleScene extends PixelScene {
 
 		ModdingButton btnModding = new ModdingButton();
 		btnModding.setPos(0, btnPrefs.bottom() + 2);
-		add(btnModding);
+
+		if(PixelDungeon.isAlpha()) {
+			add(btnModding);
+		}
 		
 		if (PixelDungeon.donated() > 0) {
 			PremiumPrefsButton btnPPrefs = new PremiumPrefsButton();
