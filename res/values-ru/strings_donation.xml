@@ -13,7 +13,7 @@
   <string name="WndDonate_silverDonateText">Любой вклад поможет развитию проекта.</string>
   <string name="WndDonate_goldDonateText">Спасибо за Вашу помощь.</string>
   <string name="WndDonate_rubyDonateText">Ваша щедрость поможет нам и дальше улучшать Remixed Pixel Dungeon!</string>
-  <string name="WndDonate_silverDonateText2">Никакой реклама во всех игровых режимах. Охотница доступна с самого начала.</string>
+  <string name="WndDonate_silverDonateText2">Никакой рекламы во всех игровых режимах. Охотница доступна с самого начала.</string>
   <string name="WndDonate_goldDonateText2">"А также открывает Эльфа с самого начала.</string>
  <string name="WndDonate_rubyDonateText2"></string>
   <!--STRINGS OF WndPremiumSettings CLASS-->
