@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Callback;
@@ -36,18 +35,10 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		originToCenter();
 	}
 	
-	public void reset( int from, int to, Item item, Callback listener ) {
-		if (item == null) {
-			reset( from, to, Assets.ITEMS, 0, null, listener );
-		} else {
-			reset( from, to, item.imageFile(), item.image(), item.glowing(), listener );
-		}
-	}
-	
-	public void reset( int from, int to, String file, int image, Glowing glowing, Callback listener ) {
+	public void reset( int from, int to,Item item, Glowing glowing, Callback listener ) {
 		revive();
 		
-		view(file, image, glowing );
+		view(item.imageFile(), item.image(), glowing );
 		
 		this.callback = listener;
 
@@ -57,14 +48,14 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		PointF d = PointF.diff( dest, point() ); 
 		speed.set( d ).normalize().scale( SPEED );
 		
-		if (ItemSpriteSheet.isFliesStraight(image)) {
+		if (item.isFliesStraight()) {
 
 			angularSpeed = 0;
 			angle = 135 - (float)(Math.atan2( d.x, d.y ) / 3.1415926 * 180);
 			
 		} else {
 			
-			angularSpeed = ItemSpriteSheet.isFliesFastRotating(image) ? 1440 : 720;
+			angularSpeed = item.isFliesFastRotating() ? 1440 : 720;
 			
 		}
 		

@@ -33,4 +33,9 @@ public class Spear extends SpecialWeapon {
 	public String desc() {
 		return Game.getVar(R.string.Spear_Info);
 	}
+	
+	@Override
+	public boolean isFliesStraight() {
+		return true;
+	}
 }

@@ -59,4 +59,14 @@ public class Shuriken extends MissileWeapon {
 	public int price() {
 		return 15 * quantity();
 	}
+	
+	@Override
+	public boolean isFliesStraight() {
+		return false;
+	}
+
+	@Override
+	public boolean isFliesFastRotating() {
+		return true;
+	}
 }

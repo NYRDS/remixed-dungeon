@@ -19,9 +19,9 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import java.util.ArrayList;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -140,5 +140,10 @@ public class MissileWeapon extends Weapon {
 		}
 		
 		return info.toString();
+	}
+	
+	@Override
+	public boolean isFliesStraight() {
+		return true;
 	}
 }

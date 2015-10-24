@@ -39,6 +39,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -479,7 +480,7 @@ public class Item implements Bundlable {
 		final float finalDelay = delay;
 		
 		((MissileSprite)user.getSprite().getParent().recycle( MissileSprite.class )).
-			reset( user.pos, cell, this, new Callback() {			
+			reset( user.pos, cell, this, null, new Callback() {			
 				@Override
 				public void call() {
 					Item.this.detach( user.belongings.backpack ).onThrow( cell );
@@ -552,5 +553,13 @@ public class Item implements Bundlable {
 			return imageFile;
 		}
 		return Assets.ITEMS;
+	}
+
+	public boolean isFliesStraight() {
+		return false;
+	}
+
+	public boolean isFliesFastRotating() {
+		return false;
 	}
 }

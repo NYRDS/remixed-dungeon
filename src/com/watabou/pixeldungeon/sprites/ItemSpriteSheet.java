@@ -198,26 +198,4 @@ public class ItemSpriteSheet {
 	public static final int ARROW_FIRE       = 142;
 	public static final int ARROW_POISON     = 143;
 	public static final int ARROW_PARALYSIS  = 144;
-	
-	public static boolean isFliesStraight(int img) {
-		switch(img){
-		case DART:
-		case INCENDIARY_DART:
-		case CURARE_DART:
-		case JAVELIN:
-		case ARROW_COMMON:
-		case ARROW_FIRE:
-		case ARROW_POISON:
-		case ARROW_PARALYSIS:
-		case ARROW_FROST:
-		case SPEAR:
-			return true;
-		}
-		
-		return false;
-	}
-	
-	public static boolean isFliesFastRotating(int img) {
-		return img == SHURIKEN || img == BOOMERANG;
-	}
 }

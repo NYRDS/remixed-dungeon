@@ -95,7 +95,7 @@ public class Boomerang extends MissileWeapon {
 
 		((MissileSprite) curUser.getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, curUser.pos,
-				curItem, null);
+				curItem, null, null);
 
 		if (throwEquiped) {
 			owner.belongings.weapon = this;
@@ -116,5 +116,15 @@ public class Boomerang extends MissileWeapon {
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.Boomerang_Info);
+	}
+	
+	@Override
+	public boolean isFliesStraight() {
+		return false;
+	}
+
+	@Override
+	public boolean isFliesFastRotating() {
+		return true;
 	}
 }
