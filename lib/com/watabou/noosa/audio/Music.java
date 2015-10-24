@@ -55,6 +55,8 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			return;
 		}
 
+		assetName = "sound/"+assetName;
+		
 		try {
 
 			player = new MediaPlayer();

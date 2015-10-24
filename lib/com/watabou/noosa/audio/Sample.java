@@ -78,18 +78,18 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 			
 			if (!ids.containsKey( asset )) {
 				try {
-					
+					String assetFile = "sound/"+asset;
 					int streamID;
 					
 					if (ModdingMode.mode()) {
-						File file = FileSystem.getExternalStorageFile(asset);
+						File file = FileSystem.getExternalStorageFile(assetFile);
 						if (file.exists()) {
 							streamID = pool.load(file.getAbsolutePath(), 1);
 						} else {
-							streamID = fromAsset(manager, asset);
+							streamID = fromAsset(manager, assetFile);
 						}
 					} else {
-						streamID = fromAsset(manager, asset);
+						streamID = fromAsset(manager, assetFile);
 					}
 					
 					ids.put( asset, streamID );
