@@ -46,15 +46,8 @@ public class ScrollOfTeleportation extends Scroll {
 	
 	public static void teleportHero( Hero  hero ) {
 
-		int count = 10;
-		int pos;
-		do {
-			pos = Dungeon.level.randomRespawnCell();
-			if (count-- <= 0) {
-				break;
-			}
-		} while (pos == -1);
-		
+		int pos = Dungeon.level.randomRespawnCell();
+
 		if (pos == -1) {
 			
 			GLog.w( TXT_NO_TELEPORT );

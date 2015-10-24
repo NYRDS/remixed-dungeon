@@ -44,31 +44,19 @@ public class Fadeleaf extends Plant {
 	
 	public void effect(int pos, Char ch) {
 		if (ch instanceof Hero) {
-			
-			ScrollOfTeleportation.teleportHero( (Hero)ch );
-			((Hero)ch).curAction = null;
+			Hero hero = (Hero)ch;
+			ScrollOfTeleportation.teleportHero( hero );
+			hero.spendAndNext(1);
+			hero.curAction = null;
 			
 		} else if (ch instanceof Mob) {
 			
-			// Why do I try to choose a new position 10 times?
-			// I don't remember...
-			int count = 10;
-			int newPos;
-			do {
-				newPos = Dungeon.level.randomRespawnCell();
-				if (count-- <= 0) {
-					break;
-				}
-			} while (newPos == -1);
-			
+			int newPos = Dungeon.level.randomRespawnCell();
 			if (newPos != -1) {
-			
 				ch.pos = newPos;
-				ch.getSprite().place( ch.pos );
+				ch.getSprite().place(ch.pos);
 				ch.getSprite().setVisible(Dungeon.visible[pos]);
-				
 			}
-						
 		}
 		
 		if (Dungeon.visible[pos]) {
@@ -105,6 +93,7 @@ public class Fadeleaf extends Plant {
 			if (action.equals( Food.AC_EAT )) {
 				ScrollOfTeleportation.teleportHero( hero );
 				hero.spendAndNext(1);
+				hero.curAction = null;
 				Buff.affect(hero, Vertigo.class, Vertigo.DURATION * 2);
 			}
 		}
