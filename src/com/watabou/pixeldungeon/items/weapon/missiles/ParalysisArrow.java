@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class ParalysisArrow extends Arrow {
 
@@ -22,7 +21,7 @@ public class ParalysisArrow extends Arrow {
 		baseMax = 4;
 		baseDly = 0.75;
 		
-		image = ItemSpriteSheet.ARROW_PARALYSIS;
+		image = PARALYSIS_ARROW_IMAGE;
 		
 		updateStatsForInfo();
 	}

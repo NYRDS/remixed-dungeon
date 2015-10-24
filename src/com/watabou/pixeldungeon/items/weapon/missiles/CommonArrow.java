@@ -1,8 +1,6 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
 public class CommonArrow extends Arrow {
 
 	public CommonArrow() {
@@ -17,11 +15,11 @@ public class CommonArrow extends Arrow {
 		baseMax = 5;
 		baseDly = 0.75;
 		
-		image = ItemSpriteSheet.ARROW_COMMON;
+		image = COMMON_ARROW_IMAGE;
 		
 		updateStatsForInfo();
 	}
-	
+		
 	@Override
 	public int price() {
 		return quantity() * 3;

@@ -2,7 +2,6 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class PoisonArrow extends Arrow {
 
@@ -20,7 +19,7 @@ public class PoisonArrow extends Arrow {
 		baseMax = 4;
 		baseDly = 0.75;
 
-		image = ItemSpriteSheet.ARROW_POISON;
+		image = POISON_ARROW_IMAGE;
 
 		updateStatsForInfo();
 	}

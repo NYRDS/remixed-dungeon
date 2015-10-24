@@ -9,6 +9,13 @@ import com.watabou.utils.Random;
 
 public abstract class Arrow extends MissileWeapon {
 
+	
+	protected final int COMMON_ARROW_IMAGE    = 0;
+	protected final int FIRE_ARROW_IMAGE      = 1;
+	protected final int POISON_ARROW_IMAGE    = 2;
+	protected final int PARALYSIS_ARROW_IMAGE = 3;
+	protected final int FROST_ARROW_IMAGE     = 4;
+	
 	protected double baseAcu = 1;
 	protected double baseDly = 1;
 	protected double baseMax = 1;
@@ -97,4 +104,9 @@ public abstract class Arrow extends MissileWeapon {
 	public Item burn(int cell) {
 		return null;
 	}
+	
+	@Override
+	public String imageFile() {
+		return "items/arrows.png";
+	};
 }
