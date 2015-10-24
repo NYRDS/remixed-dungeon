@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -74,6 +75,17 @@ public class Hunger extends Buff implements Hero.Doom {
 					
 					hero.interrupt();
 				}
+				
+				if(hero.getDifficulty() >= 3) {
+					if(Random.Float() < 0.01) {
+						Buff.prolong(hero, Weakness.class, Weakness.duration(hero));
+					}
+					
+					if(Random.Float() < 0.01) {
+						Buff.prolong(hero, Vertigo.class, Vertigo.duration(hero));
+					}
+				}
+				
 			} else {	
 				
 				int bonus = 0;
@@ -81,7 +93,13 @@ public class Hunger extends Buff implements Hero.Doom {
 					bonus += ((RingOfSatiety.Satiety)buff).level;
 				}
 				
-				float newLevel = level + STEP - bonus;
+				float delta = STEP - bonus;
+				
+				if(PixelDungeon.realtime()) {
+					delta *= 0.3;
+				}
+				
+				float newLevel = level + delta;
 				boolean statusUpdated = false;
 				if (newLevel >= STARVING) {
 					
@@ -104,7 +122,7 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 			}
 			
-			float step = ((Hero)target).heroClass == HeroClass.ROGUE ? STEP * 1.2f : STEP;
+			float step = hero.heroClass == HeroClass.ROGUE ? STEP * 1.2f : STEP;
 			spend( target.buff( Shadows.class ) == null ? step : step * 1.5f );
 			
 		} else {

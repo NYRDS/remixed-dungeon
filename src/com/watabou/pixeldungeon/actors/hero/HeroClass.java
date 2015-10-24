@@ -62,6 +62,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfPower;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
@@ -155,20 +156,13 @@ public enum HeroClass {
 		//hero.attackSkill += 10;
 		//hero.defenseSkill += 10;
 
-		hero.collect(new LeatherArmor());
-		hero.collect(new MailArmor());
-		hero.collect(new ScaleArmor());
-		hero.collect(new PlateArmor());
-		hero.collect(new WarriorArmor());
-		hero.collect(new MageArmor());
-		hero.collect(new RogueArmor());
-		hero.collect(new HuntressArmor());
 		hero.collect(new ElfArmor());
 		hero.collect(new DewVial());
 		hero.collect(new BerserkArmor());
 		hero.collect(new GladiatorArmor());
 		hero.collect(new WardenArmor());
 		hero.collect(new SniperArmor());
+		hero.collect(new ScrollOfDomination());
 	}
 
 	private static void initCommon(Hero hero) {

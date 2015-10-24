@@ -154,7 +154,8 @@ public class InterlevelScene extends PixelScene {
 							Assets.SND_BURNING, Assets.SND_FALLING,
 							Assets.SND_GHOST, Assets.SND_SECRET,
 							Assets.SND_BONES, Assets.SND_MIMIC,
-							Assets.SND_ROTTEN_DROP, Assets.SND_GOLD);
+							Assets.SND_ROTTEN_DROP, Assets.SND_GOLD,
+							Assets.SND_DOMINANCE);
 
 					if (ModdingMode.mode()) {
 						testMode();
