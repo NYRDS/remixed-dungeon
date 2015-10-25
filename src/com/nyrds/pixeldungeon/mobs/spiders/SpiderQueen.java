@@ -6,16 +6,11 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
-import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
-@SuppressWarnings("unused")
-public class SpiderQueen extends Mob {
+public class SpiderQueen extends Boss {
 	
 	public SpiderQueen() {
 		spriteClass = SpiderQueenSprite.class;
@@ -29,8 +24,6 @@ public class SpiderQueen extends Mob {
 		loot = ScrollOfWeaponUpgrade.class;
 		lootChance = 1f;
 		
-		RESISTANCES.add( Death.class );
-		
 		Buff.affect(this, Regeneration.class);
 	}
 	
@@ -39,7 +32,6 @@ public class SpiderQueen extends Mob {
 		if(Random.Int(0, 20) == 0 && !SpiderEgg.laid(pos)) {
 			SpiderEgg.lay(pos);
 		}
-		
 		
 		return super.act();
 	}
@@ -80,11 +72,11 @@ public class SpiderQueen extends Mob {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 20;
+		return 22;
 	}
 	
 	@Override
 	public int dr() {
-		return 8;
+		return 10;
 	}
 }

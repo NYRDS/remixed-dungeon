@@ -31,8 +31,6 @@ import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.SewerBossLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -41,7 +39,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Goo extends Mob {
+public class Goo extends Boss {
 
 	private static final float PUMP_UP_DELAY	= 2f;
 	
@@ -63,8 +61,6 @@ public class Goo extends Mob {
 		lootChance = 0.5f;
 		
 		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	private static final String GOO_PUMPED_STATE = "goo_pumped_state";

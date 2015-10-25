@@ -6,6 +6,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.utils.Random;
@@ -21,7 +22,7 @@ public class ScrollOfDomination extends Scroll {
 		ArrayList<Mob> mobsInSight = new ArrayList<Mob>();
 		
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
-			if (Dungeon.level.fieldOfView[mob.pos] && !mob.isPet()) {
+			if (Dungeon.level.fieldOfView[mob.pos] && !(mob instanceof Boss) && !mob.isPet()) {
 				mobsInSight.add(mob);
 			}
 		}

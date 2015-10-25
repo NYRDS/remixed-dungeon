@@ -44,7 +44,7 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class King extends Mob {
+public class King extends Boss {
 	
 	private static final int MAX_ARMY_SIZE	= 5;
 	
@@ -58,8 +58,6 @@ public class King extends Mob {
 		Undead.count = 0;
 		
 		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
 		RESISTANCES.add( WandOfDisintegration.class );
 		
 		IMMUNITIES.add( Paralysis.class );

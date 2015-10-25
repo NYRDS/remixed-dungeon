@@ -44,7 +44,7 @@ import com.watabou.pixeldungeon.sprites.DM300Sprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
-public class DM300 extends Mob {
+public class DM300 extends Boss {
 	
 	public DM300() {
 		spriteClass = DM300Sprite.class;
@@ -55,9 +55,6 @@ public class DM300 extends Mob {
 		
 		loot = new RingOfThorns().random();
 		lootChance = 0.333f;
-		
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
 		
 		IMMUNITIES.add( ToxicGas.class );
 	}

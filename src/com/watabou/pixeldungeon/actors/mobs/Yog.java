@@ -49,7 +49,7 @@ import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
 import com.watabou.utils.Random;
 
-public class Yog extends Mob {
+public class Yog extends Boss {
 	
 	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);	
 	
@@ -160,7 +160,7 @@ public class Yog extends Mob {
 	}
 	
 	
-	public static class RottingFist extends Mob {
+	public static class RottingFist extends Boss {
 	
 		private static final int REGENERATION	= 4;
 		
@@ -175,8 +175,6 @@ public class Yog extends Mob {
 			state = WANDERING;
 			
 			RESISTANCES.add( ToxicGas.class );
-			RESISTANCES.add( Death.class );
-			RESISTANCES.add( ScrollOfPsionicBlast.class );
 			
 			IMMUNITIES.add( Amok.class );
 			IMMUNITIES.add( Sleep.class );
@@ -236,7 +234,7 @@ public class Yog extends Mob {
 		}
 	}
 	
-	public static class BurningFist extends Mob {
+	public static class BurningFist extends Boss {
 		
 		{
 			spriteClass = BurningFistSprite.class;
@@ -249,8 +247,6 @@ public class Yog extends Mob {
 			state = WANDERING;
 			
 			RESISTANCES.add( ToxicGas.class );
-			RESISTANCES.add( Death.class );
-			RESISTANCES.add( ScrollOfPsionicBlast.class );
 			
 			IMMUNITIES.add( Amok.class );
 			IMMUNITIES.add( Sleep.class );
