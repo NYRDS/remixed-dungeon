@@ -90,4 +90,10 @@
   <string name="ScrollOfWeaponUpgrade_Info">Этот свиток улучшит оружие ближнего боя, повысив его качество. В отличие от простого Свитка Улучшения, эта версия не разрушит чары, наложенные на предмет. Даже наоборот, он сможет наделить случайным эффектом незачарованный предмет.</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Выбери предмет для улучшения</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Свиток Подчинения</string>
+  <string name="ScrollOfDomination_Info">Этот свиток сломает волю одного из существ в твоем поле зрения. Существо будет биться за тебе не щадя живота своего.</string>
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Свиток Проклятья</string>
+  <string name="ScrollOfCurse_Info">Этот свиток создан исключительно чтобы наказать вора достаточно глупого чтобы попытаться  использовать магию природа которой ему недоступна. Магия заключенная в нём абсолютно бесполезна и даже вредна для искателя приключений, однако весьма ценима торговцами.</string>
 </resources>
