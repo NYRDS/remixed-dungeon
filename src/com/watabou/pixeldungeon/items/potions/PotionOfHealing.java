@@ -18,8 +18,12 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
@@ -34,19 +38,19 @@ public class PotionOfHealing extends Potion {
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();
-		heal( Dungeon.hero );
+		heal( Dungeon.hero, 1f );
 		GLog.p(Game.getVar(R.string.PotionOfHealing_Apply));
 	}
 	
-	public static void heal( Hero hero ) {
+	public static void heal( Char ch, float portion ) {
 		
-		hero.hp(hero.ht());
-		Buff.detach( hero, Poison.class );
-		Buff.detach( hero, Cripple.class );
-		Buff.detach( hero, Weakness.class );
-		Buff.detach( hero, Bleeding.class );
+		ch.hp((int) Math.min(ch.ht(),ch.hp()+ch.ht()*portion));
+		Buff.detach( ch, Poison.class );
+		Buff.detach( ch, Cripple.class );
+		Buff.detach( ch, Weakness.class );
+		Buff.detach( ch, Bleeding.class );
 		
-		hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+		ch.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
 	}
 	
 	@Override
@@ -57,5 +61,21 @@ public class PotionOfHealing extends Potion {
 	@Override
 	public int price() {
 		return isKnown() ? 30 * quantity() : super.price();
+	}
+	
+	@Override
+	public void shatter( int cell ) {
+		
+		setKnown();
+		
+		splash( cell );
+		Sample.INSTANCE.play( Assets.SND_SHATTER );
+		
+		Char ch = Actor.findChar(cell);
+		
+		if(ch != null) {
+			heal(ch, 0.5f);
+		}
+		
 	}
 }

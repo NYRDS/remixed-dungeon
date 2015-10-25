@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
-    android:versionCode="175"
-    android:versionName="remix.21.alpha.3" >
+    android:versionCode="176"
+    android:versionName="remix.21.alpha.4" >
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />

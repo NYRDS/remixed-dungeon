@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfParalyticGas extends Potion {
 
-	
 	@Override
 	public void shatter( int cell ) {
 		
