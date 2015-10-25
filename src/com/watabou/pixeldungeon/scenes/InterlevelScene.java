@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.windows.WndError;
@@ -260,6 +261,8 @@ public class InterlevelScene extends PixelScene {
 		level = Dungeon.testLevel();
 
 		Dungeon.switchLevel(level, level.entrance);
+		
+		Dungeon.hero.spawnPets();
 	}
 
 	private void descend() throws IOException {
@@ -273,6 +276,7 @@ public class InterlevelScene extends PixelScene {
 				noStory = false;
 			}
 		} else {
+			Dungeon.level.removePets();
 			Dungeon.saveLevel();
 		}
 		
@@ -284,6 +288,8 @@ public class InterlevelScene extends PixelScene {
 		}
 		
 		Dungeon.switchLevel(level, level.entrance);
+		
+		Dungeon.hero.spawnPets();
 	}
 
 	private void fall() throws IOException {
@@ -307,6 +313,7 @@ public class InterlevelScene extends PixelScene {
 		
 		Position next = DungeonGenerator.ascend(Dungeon.currentPosition());
 		
+		Dungeon.level.removePets();
 		Dungeon.saveLevel();
 		Dungeon.depth=next.levelDepth;
 		
@@ -317,6 +324,8 @@ public class InterlevelScene extends PixelScene {
 		} else {
 			Dungeon.switchLevel(level, level.exit);
 		}
+		
+		Dungeon.hero.spawnPets();
 	}
 
 	private void returnTo() throws IOException {

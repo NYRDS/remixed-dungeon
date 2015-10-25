@@ -55,7 +55,11 @@ public abstract class NPC extends Mob {
 	public void beckon( int cell ) {
 	}
 	
-	abstract public boolean interact(final Hero hero);
+	@Override
+	public boolean interact(final Hero hero){
+		swapPosition(hero);
+		return true;
+	}
 
 	public boolean friendly() {
 		return true;

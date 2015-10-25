@@ -62,6 +62,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfPower;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -162,7 +163,11 @@ public enum HeroClass {
 		hero.collect(new GladiatorArmor());
 		hero.collect(new WardenArmor());
 		hero.collect(new SniperArmor());
-		hero.collect(new ScrollOfDomination());
+		
+		for(int i = 0;i<10;i++) {
+			hero.collect(new ScrollOfDomination());
+			hero.collect(new ScrollOfCurse());
+		}
 	}
 
 	private static void initCommon(Hero hero) {
@@ -173,6 +178,11 @@ public enum HeroClass {
 			initDebug(hero);
 		}
 
+		for(int i = 0;i<10;i++) {
+			hero.collect(new ScrollOfDomination());
+			hero.collect(new ScrollOfCurse());
+		}
+		
 		QuickSlot.cleanStorage();
 	}
 

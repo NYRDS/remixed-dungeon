@@ -81,6 +81,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	private float flashTime = 0;
 	
 	protected boolean sleeping = false;
+	protected boolean controlled = false;
 	
 	// Char owner
 	public Char ch;
@@ -356,6 +357,11 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		} else {
 			hideSleep();
 		}
+		
+		if(controlled) {
+			showMindControl();
+		}
+			
 		if (emo != null) {
 			emo.setVisible(visible);
 		}
@@ -376,6 +382,18 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		}
 	}
 	
+	public void showMindControl() {
+		if (emo instanceof EmoIcon.Controlled) {
+
+		} else {
+			removeEmo();
+			
+			if(ch!= null && ch.isAlive()){
+				emo = new EmoIcon.Controlled(this);
+			}
+		}
+	}
+
 	public void showAlert() {
 		if (emo instanceof EmoIcon.Alert) {
 			

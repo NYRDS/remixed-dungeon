@@ -380,7 +380,7 @@ public class Dungeon {
 		Position current =currentPosition();
 		
 		String saveTo = SaveUtils.saveDepthFile( hero.heroClass, current.levelDepth, current.levelKind );		
-		GLog.i("saving level: %s", saveTo);
+		//GLog.i("saving level: %s", saveTo);
 		
 		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(saveTo)); 
 		Bundle.write( bundle, output );
@@ -394,7 +394,7 @@ public class Dungeon {
 			Game.toast("Low memory condition, ");
 		}
 		
-		GLog.i("Saving: %5.2f MBytes avaliable", MBytesAvaliable);
+		//GLog.i("Saving: %5.2f MBytes avaliable", MBytesAvaliable);
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();

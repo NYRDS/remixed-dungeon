@@ -95,9 +95,11 @@ public abstract class Mob extends Char {
 		readCharData();
 	}
 	
-	public static Mob makePet(Mob pet) {
+	public static Mob makePet(Mob pet, Hero hero) {
 		pet.fraction = Fraction.HEROES;
 		pet.enemy = DUMMY;
+		hero.addPet(pet);
+		
 		return pet;
 	}
 	
@@ -229,6 +231,14 @@ public abstract class Mob extends Char {
 			}
 		}
 		
+		if (enemy == Dungeon.hero || enemy == null) {
+			Char newEnemy = chooseEnemyFromFraction(Fraction.HEROES);
+			
+			if(newEnemy != null) {
+				return newEnemy;
+			}
+		}
+		
 		return Dungeon.hero;
 	}
 	
@@ -249,6 +259,9 @@ public abstract class Mob extends Char {
 				return newEnemy;
 			}
 			
+			state = WANDERING;
+			target = Dungeon.hero.pos;
+			
 			return DUMMY;
 		}
 		
@@ -260,6 +273,13 @@ public abstract class Mob extends Char {
 		Terror terror = (Terror) buff(Terror.class);
 		if (terror != null) {
 			return terror.source;
+		}
+		
+		if(enemy instanceof Mob) {
+			Mob enemyMob = (Mob) enemy;
+			if(enemyMob.fraction == fraction) {
+				enemy = DUMMY;
+			}
 		}
 		
 		switch (fraction) {
@@ -700,6 +720,33 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean isWallWalker() {
+		return false;
+	}
+
+	public boolean isPet() {
+		return fraction == Fraction.HEROES;
+	}
+
+	protected void swapPosition(final Hero hero) {
+		
+		int curPos = pos;
+		
+		moveSprite( pos, hero.pos );
+		move( hero.pos );
+		
+		hero.getSprite().move( hero.pos, curPos );
+		hero.move( curPos );
+		
+		hero.spend( 1 / hero.speed() );
+		hero.busy();
+	}
+	
+	public boolean interact(Hero hero) {
+		if (fraction == Fraction.HEROES) {
+			swapPosition(hero);
+			return true;
+		}
+		
 		return false;
 	}
 }

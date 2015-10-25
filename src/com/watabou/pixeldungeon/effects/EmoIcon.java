@@ -91,5 +91,21 @@ public class EmoIcon extends Image {
 			scale.set( Random.Float( 1, maxSize ) );
 		}
 	}
+	
+	public static class Controlled extends EmoIcon {
+		
+		public Controlled( CharSprite owner ) {
+			
+			super( owner );
+			
+			copy( Icons.get( Icons.MIND_CONTROL ) );
+			
+			maxSize = 1.1f;
+			timeScale = 0.5f;;
+			
+			origin.set( 1f, height / 2 );
+			scale.set( Random.Float( 1, maxSize ) );
+		}
+	}
 
 }

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Set;
 
 import com.watabou.noosa.Camera;
@@ -91,6 +92,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -108,6 +110,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
+import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.nyrds.android.util.Scrambler;
@@ -173,7 +176,12 @@ public class Hero extends Char {
 	public String levelKind;
 
 	private ArrayList<Mob> visibleEnemies;
+	private Collection<Mob> pets = new ArrayList<Mob>();
 
+	public void addPet(Mob pet) {
+		pets.add(pet);
+	}
+	
 	private int difficulty;
 
 	public Hero() {
@@ -213,7 +221,20 @@ public class Hero extends Char {
 	private static final String EXPERIENCE = "exp";
 	private static final String LEVEL_KIND = "levelKind";
 	private static final String DIFFICULTY = "difficulty";
+	private static final String PETS       = "pets";
 
+	private void refreshPets() {
+		ArrayList<Mob> alivePets = new ArrayList<Mob>();
+		if(pets!=null) {
+			for(Mob pet:pets) {
+				if(pet.isAlive()) {
+					alivePets.add(pet);
+				}
+			}
+		}
+		pets = alivePets;
+	}
+	
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
@@ -230,7 +251,11 @@ public class Hero extends Char {
 		bundle.put(EXPERIENCE, exp);
 		bundle.put(LEVEL_KIND, levelKind);
 		bundle.put(DIFFICULTY, difficulty);
-
+		
+		refreshPets();
+		
+		bundle.put(PETS, pets);
+		
 		belongings.storeInBundle(bundle);
 	}
 
@@ -251,6 +276,14 @@ public class Hero extends Char {
 		exp = bundle.getInt(EXPERIENCE);
 		levelKind = bundle.getString(LEVEL_KIND);
 		difficulty = bundle.optInt(DIFFICULTY, 2);
+		
+		Collection<Bundlable> _pets = bundle.getCollection(PETS);
+		
+		if(_pets != null) {
+			for (Bundlable pet: _pets) {
+				pets.add((Mob)pet);
+			}
+		}
 		
 		belongings.restoreFromBundle(bundle);
 
@@ -556,7 +589,7 @@ public class Hero extends Char {
 
 	private boolean actInteract(HeroAction.Interact action) {
 
-		NPC npc = action.npc;
+		Mob npc = action.npc;
 
 		if (Dungeon.level.adjacent(pos, npc.pos)) {
 
@@ -1139,13 +1172,17 @@ public class Hero extends Char {
 
 		} else if (Dungeon.level.fieldOfView[cell]
 				&& (ch = Actor.findChar(cell)) instanceof Mob) {
-
+			
+			Mob mob = (Mob)ch;
+			
 			if (ch instanceof NPC && ((NPC)ch).friendly()) {
-				curAction = new HeroAction.Interact((NPC) ch);
+				curAction = new HeroAction.Interact(mob);
+			} else if (mob.isPet()) {
+				curAction = new HeroAction.Interact(mob);
 			} else {
 				curAction = new HeroAction.Attack(ch);
 			}
-
+	
 		} else if ((heap = Dungeon.level.getHeap(cell)) != null) {
 
 			switch (heap.type) {
@@ -1592,6 +1629,16 @@ public class Hero extends Char {
 
 	public void setGender(int gender) {
 		this.gender = gender;
+	}
+
+	public void spawnPets() {
+		refreshPets();
+		
+		for (Mob pet:pets) {
+			pet.pos = pos;
+			pet.state = pet.WANDERING;
+			Dungeon.level.spawnMob(pet);
+		}
 	}
 
 }

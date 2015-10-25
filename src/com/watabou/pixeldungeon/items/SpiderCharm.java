@@ -58,7 +58,7 @@ public class SpiderCharm extends Artifact {
 			}
 			
 			if (spawnPoints.size() > 0) {
-				Mob pet = Mob.makePet(new SpiderServant());
+				Mob pet = Mob.makePet(new SpiderServant(), curUser);
 				pet.pos = Random.element( spawnPoints );
 				
 				GameScene.add(Dungeon.level, pet );

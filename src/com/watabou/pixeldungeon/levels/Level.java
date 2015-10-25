@@ -359,6 +359,18 @@ public abstract class Level implements Bundlable {
 		cleanWalls();
 	}
 
+	public void removePets() {
+		HashSet <Mob> nonPets = new HashSet<Mob>();
+		
+		for(Mob mob:mobs) {
+			if(!mob.isPet()) {
+				nonPets.add(mob);
+			}
+		}
+		
+		mobs = nonPets;
+	}
+	
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(MAP, map);
@@ -369,6 +381,7 @@ public abstract class Level implements Bundlable {
 		bundle.put(SECONDARY_EXIT, secondaryExit);
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());
+		
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
 
@@ -458,7 +471,15 @@ public abstract class Level implements Bundlable {
 		return new Actor() {
 			@Override
 			protected boolean act() {
-				if (mobs.size() < nMobs()) {
+				
+				int hostileMobsCount = 0;
+				for(Mob mob: mobs) {
+					if(!mob.isPet()) {
+						hostileMobsCount++;
+					}
+				}
+				
+				if (hostileMobsCount < nMobs()) {
 
 					Mob mob = createMob();
 					mob.state = mob.WANDERING;

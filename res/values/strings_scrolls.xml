@@ -105,5 +105,13 @@
     <string name="ScrollOfWeaponUpgrade_Info">This scroll will upgrade a melee weapon, improving its quality. In contrast to a regular Scroll of Upgrade, this specialized version will never destroy an enchantment on a weapon. On the contrary, it is able to imbue an unenchanted weapon with a random enchantment.</string>
     <string name="ScrollOfWeaponUpgrade_InvTitle">Select an weapon to upgrade</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">your %s certainly looks better now</string>
+
+    <!-- STRINGS OF ScrollOfDomination CLASS -->
+    <string name="ScrollOfDomination_Name">Scroll of Domination</string>
+    <string name="ScrollOfDomination_Info">This scroll will bend will of one creature in your sight. Creature will fight for you to the death.</string>
+    
+    <!-- STRINGS OF ScrollOfCurse CLASS -->
+    <string name="ScrollOfCurse_Name">Scroll of Curse</string>
+    <string name="ScrollOfCurse_Info">This scroll created especially to punish thieves stupid enough to try use magic they cant understand. Scroll magic totally useless and even harmful for regular adventurer, but valued pretty well by merchants.</string>
     
 </resources>

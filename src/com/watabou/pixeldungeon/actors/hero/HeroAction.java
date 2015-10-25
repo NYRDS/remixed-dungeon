@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 
 public class HeroAction {
@@ -49,8 +50,8 @@ public class HeroAction {
 	}
 	
 	public static class Interact extends HeroAction {
-		public NPC npc;
-		public Interact( NPC npc ) {
+		public Mob npc;
+		public Interact( Mob npc ) {
 			this.npc = npc;
 		}
 	}
