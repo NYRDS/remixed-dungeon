@@ -164,7 +164,7 @@ public enum HeroClass {
 		hero.collect(new WardenArmor());
 		hero.collect(new SniperArmor());
 		
-		for(int i = 0;i<10;i++) {
+		for(int i = 0;i<5;i++) {
 			hero.collect(new ScrollOfDomination());
 			hero.collect(new ScrollOfCurse());
 		}
@@ -178,11 +178,6 @@ public enum HeroClass {
 			initDebug(hero);
 		}
 
-		for(int i = 0;i<10;i++) {
-			hero.collect(new ScrollOfDomination());
-			hero.collect(new ScrollOfCurse());
-		}
-		
 		QuickSlot.cleanStorage();
 	}
 
