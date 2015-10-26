@@ -31,7 +31,7 @@ public class SpiderLevel extends CommonLevel {
 
 	@Override
 	public String waterTex() {
-		return Assets.WATER_CAVES;
+		return Assets.WATER_SPIDERS;
 	}
 
 	List<Chamber> chambers = new ArrayList<Chamber>();
