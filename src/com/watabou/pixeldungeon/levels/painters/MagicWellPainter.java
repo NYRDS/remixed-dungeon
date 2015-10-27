@@ -56,7 +56,7 @@ public class MagicWellPainter extends Painter {
 			try {
 				water = waterClass.newInstance();
 			} catch (Exception e) {
-				water = null;
+				throw new RuntimeException(e);
 			}
 		}
 		water.seed( c.x + level.getWidth() * c.y, 1 );

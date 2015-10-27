@@ -234,21 +234,16 @@ public class Generator {
 			}
 			
 		} catch (Exception e) {
+			throw new RuntimeException(e);
 
-			return null;
-			
 		}
 	}
 	
 	public static Item random( Class<? extends Item> cl ) {
 		try {
-			
 			return ((Item)cl.newInstance()).random();
-			
 		} catch (Exception e) {
-
-			return null;
-			
+			throw new RuntimeException(e);
 		}
 	}
 	

@@ -180,7 +180,7 @@ public class Plant implements Bundlable {
 				plant.pos = pos;
 				return plant;
 			} catch (Exception e) {
-				return null;
+				throw new RuntimeException(e);
 			}
 		}
 

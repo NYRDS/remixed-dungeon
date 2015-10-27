@@ -254,7 +254,7 @@ public class Weapon extends KindOfWeapon {
 			try {
 				return ((Class<Enchantment>)enchants[ Random.chances( chances ) ]).newInstance();
 			} catch (Exception e) {
-				return null;
+				throw new RuntimeException(e);
 			}
 		}
 		
