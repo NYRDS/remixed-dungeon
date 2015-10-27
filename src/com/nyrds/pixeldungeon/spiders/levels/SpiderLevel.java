@@ -65,6 +65,18 @@ public class SpiderLevel extends CommonLevel {
 		}
 	}
 
+	private boolean isCellIs(int x, int y, int type) {
+		if(!cellValid(x,y)) {
+			return false;
+		}
+		
+		if(map[cell(x,y)] == type) {
+			return true;
+		}
+		
+		return false;
+	}
+	
 	private void connectChambers(Chamber a, Chamber b) {
 		int x = a.x;
 		int y = a.y;
@@ -72,17 +84,17 @@ public class SpiderLevel extends CommonLevel {
 		while (x != b.x || y != b.y) {
 			int dx = (int) Math.signum(x - b.x);
 			int dy = (int) Math.signum(y - b.y);
-
-			if (cellValid(x, y) && map[cell(x,y)] == Terrain.WALL) {
+			
+			if (isCellIs(x,y, Terrain.WALL) ) {
 				map[cell(x, y)] = Terrain.EMPTY;
 			}
 
-			if (dx != 0 && map[cell(x - dx, y)] == Terrain.EMPTY) {
+			if (dx != 0 && isCellIs(x-dx,y,Terrain.EMPTY)) {
 				x = x - dx;
 				continue;
 			}
 
-			if (dy != 0 && map[cell(x, y - dy)] == Terrain.EMPTY) {
+			if (dy != 0 && isCellIs(x,y-dy,Terrain.EMPTY)) {
 				y = y - dy;
 				continue;
 			}
