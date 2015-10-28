@@ -150,21 +150,10 @@ public enum HeroClass {
 
 	private static void initDebug(Hero hero) {
 		hero.collect(new TomeOfMastery());
-
-		//hero.hp(hero.ht(1000));
-		//hero.STR(18);
-
-		//hero.attackSkill += 10;
-		//hero.defenseSkill += 10;
-
-		hero.collect(new ElfArmor());
-		hero.collect(new DewVial());
-		hero.collect(new BerserkArmor());
-		hero.collect(new GladiatorArmor());
-		hero.collect(new WardenArmor());
-		hero.collect(new SniperArmor());
 		
+		hero.collect(new LloydsBeacon());
 		for(int i = 0;i<5;i++) {
+			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfDomination());
 			hero.collect(new ScrollOfCurse());
 		}
