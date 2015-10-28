@@ -71,6 +71,10 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		private Method paint;
 		
 		private Type( Class<? extends Painter> painter ) {
+			if(painter==null) {
+				return;
+			}
+			
 			try {
 				paint = painter.getMethod( "paint", Level.class, Room.class );
 			} catch (Exception e) {
@@ -79,6 +83,9 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		}
 		
 		public void paint( Level level, Room room ) {
+			if(paint==null){
+				return;
+			}
 			try {
 				paint.invoke( null, level, room );
 			} catch (Exception e) {
