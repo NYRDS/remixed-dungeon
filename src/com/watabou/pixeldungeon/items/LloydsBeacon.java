@@ -124,7 +124,7 @@ public class LloydsBeacon extends Item {
 			GLog.i( TXT_RETURN );
 			
 		} else if (action == AC_RETURN) {
-			if (returnTo.levelDepth == Dungeon.depth) {
+			if (returnTo.levelDepth == Dungeon.depth && returnTo.levelKind.equals(hero.levelKind)) {
 				reset();
 				WandOfBlink.appear( hero, returnTo.cellId );
 				Dungeon.level.press( returnTo.cellId, hero );

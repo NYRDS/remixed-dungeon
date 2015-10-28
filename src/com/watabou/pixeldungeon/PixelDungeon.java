@@ -26,10 +26,8 @@ import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 
-import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
@@ -374,14 +372,13 @@ public class PixelDungeon extends GameWithGoogleIap {
 	/*
 	 * <---Purchases
 	 */
-	
 	public void setDonationLevel(int level) {
 		if (level < donated()) {
 			return;
 		}
 
 		if (donated() == 0 && level != 0) {
-			view.queueEvent(new Runnable() {
+			executeInGlThread(new Runnable() {
 				
 				@Override
 				public void run() {

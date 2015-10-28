@@ -7,7 +7,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class SaveUtils {
@@ -47,14 +46,13 @@ public class SaveUtils {
 	}
 
 	public static void loadGame(String slot, HeroClass heroClass) {
-
-		deleteGameFile(heroClass);
-		deleteLevels(heroClass);
+		Dungeon.deleteGame(true);
 
 		String[] files = FileSystem.getInteralStorageFile(slot).list();
 
 		for (String file : files) {
 			if (file.endsWith(".dat") && hasClassTag(heroClass, file)) {
+				//GLog.i("restoring: %s", file);
 				FileSystem.copyFile(
 						FileSystem.getInteralStorageFile(slot + "/" + file)
 								.getAbsolutePath(), FileSystem
@@ -96,7 +94,7 @@ public class SaveUtils {
 				String path = file.getAbsolutePath();
 				if (path.endsWith(".dat") && hasClassTag(cl, path)
 						|| path.endsWith(gameFile(cl))) {
-					GLog.i("deleting: %s", path);
+					//GLog.i("deleting: %s", path);
 					file.delete();
 				}
 			}

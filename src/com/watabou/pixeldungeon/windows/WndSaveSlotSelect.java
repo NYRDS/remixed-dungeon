@@ -76,10 +76,15 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 
 	@Override
 	public void returnToWork() {
-		Game.paused = false;
-		if(!saving) {
-			SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
-		}
+		Game.executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				Game.paused = false;
+				if(!saving) {
+					SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
+				}
+			}
+		});
 	}
 
 }
