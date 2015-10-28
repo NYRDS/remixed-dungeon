@@ -31,7 +31,7 @@
   <string name="InventoryScroll_No">Нет, я передумал</string>
   <!--STRINGS OF BlankScroll CLASS-->
   <string name="BlankScroll_Name">Чистый свиток</string>
-  <string name="BlankScroll_Info">Просто чистый свиток</string>
+  <string name="BlankScroll_Info">Просто чистый свиток. Может, написать на нём что-нибудь?</string>
   <string name="BlankScroll_ReallyBlank">Этот свиток действительно чист</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
   <string name="ScrollOfChallenge_Name">Свиток Вызова</string>
@@ -92,8 +92,8 @@
   <string name="ScrollOfWeaponUpgrade_LooksBetter">%s теперь действительно выглядит лучше</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
   <string name="ScrollOfDomination_Name">Свиток Подчинения</string>
-  <string name="ScrollOfDomination_Info">Этот свиток сломает волю одного из существ в твоем поле зрения. Существо будет биться за тебе не щадя живота своего.</string>
+  <string name="ScrollOfDomination_Info">Этот свиток сломит волю одного из существ в твоём поле зрения. Существо будет биться за тебя не щадя живота своего.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
   <string name="ScrollOfCurse_Name">Свиток Проклятья</string>
-  <string name="ScrollOfCurse_Info">Этот свиток создан исключительно чтобы наказать вора достаточно глупого чтобы попытаться  использовать магию природа которой ему недоступна. Магия заключенная в нём абсолютно бесполезна и даже вредна для искателя приключений, однако весьма ценима торговцами.</string>
+  <string name="ScrollOfCurse_Info">Этот свиток создан исключительно для наказания вора, который достаточно глуп, чтобы попытаться использовать магию неведомой ему природы. Заключённая в нём магия абсолютно бесполезна и даже вредна для искателя приключений, однако весьма ценится торговцами.</string>
 </resources>
