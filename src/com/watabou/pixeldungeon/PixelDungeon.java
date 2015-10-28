@@ -371,10 +371,6 @@ public class PixelDungeon extends GameWithGoogleIap {
 	 * <--- Preferences
 	 */
 
-	public static void reportException(Exception e) {
-		Log.e("PD", Log.getStackTraceString(e));
-	}
-
 	/*
 	 * <---Purchases
 	 */

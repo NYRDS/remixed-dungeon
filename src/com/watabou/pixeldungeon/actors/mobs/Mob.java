@@ -173,7 +173,7 @@ public abstract class Mob extends Char {
 				sprite = new MobSpriteDef("spritesDesc/"+getClass().getSimpleName()+".json", getKind());
 			}
 		} catch (Exception e) {
-			GLog.w(e.getMessage());
+			throw new RuntimeException(e);
 		}
 		return sprite;
 	}

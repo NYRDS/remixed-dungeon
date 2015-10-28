@@ -189,8 +189,7 @@ public class Blob extends Actor {
 			return gas;
 			
 		} catch (Exception e) {
-			PixelDungeon.reportException( e );
-			return null;
+			throw new RuntimeException(e);
 		}
 	}
 

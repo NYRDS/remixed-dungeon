@@ -110,19 +110,15 @@ public class AttackIndicator extends Tag {
 			sprite.killAndErase();
 			sprite = null;
 		}
-		
-		try {
-			sprite = lastTarget.sprite();
-			sprite.idle();
-			sprite.paused = true;
-			add( sprite );
 
-			sprite.x = x + (width - sprite.width()) / 2 + 1;
-			sprite.y = y + (height - sprite.height()) / 2;
-			PixelScene.align( sprite );
-			
-		} catch (Exception e) {
-		}
+		sprite = lastTarget.sprite();
+		sprite.idle();
+		sprite.paused = true;
+		add(sprite);
+
+		sprite.x = x + (width - sprite.width()) / 2 + 1;
+		sprite.y = y + (height - sprite.height()) / 2;
+		PixelScene.align(sprite);
 	}
 	
 	private boolean enabled = true;

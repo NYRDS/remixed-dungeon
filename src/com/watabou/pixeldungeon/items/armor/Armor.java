@@ -382,7 +382,7 @@ public class Armor extends EquipableItem {
 			try {
 				return ((Class<Glyph>)glyphs[ Random.chances( chances ) ]).newInstance();
 			} catch (Exception e) {
-				return null;
+				throw new RuntimeException(e);
 			}
 		}
 		

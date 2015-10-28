@@ -189,10 +189,7 @@ public class Badges {
 		
 		if(names != null) {
 			for (int i=0; i < names.length; i++) {
-				try {
-					badges.add( Badge.valueOf( names[i] ) );
-				} catch (Exception e) {
-				}
+				badges.add( Badge.valueOf( names[i] ) );
 			}
 		}
 		return badges;

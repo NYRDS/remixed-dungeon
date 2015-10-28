@@ -134,14 +134,9 @@ public abstract class Scroll extends Item {
 	static public Scroll createRandomScroll(){
 		try {
 			return (Scroll) Random.element(inscribableScrolls).newInstance();
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
-		return null;
 	}
 	
 	@Override

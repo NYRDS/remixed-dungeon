@@ -35,7 +35,7 @@ public class Bestiary {
 		try {
 			return cl.newInstance();
 		} catch (Exception e) {
-			return null;
+			throw new RuntimeException(e);
 		}
 	}
 	
@@ -60,7 +60,7 @@ public class Bestiary {
 		try {
 			return cl.newInstance();
 		} catch (Exception e) {
-			return null;
+			throw new RuntimeException(e);
 		}
 	}
 	
