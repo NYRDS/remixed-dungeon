@@ -19,6 +19,10 @@
     <item>BERKANAN</item>
     <item>ODAL</item>
     <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
   <string name="InventoryScroll_Title">Escolha um item</string>
@@ -85,4 +89,6 @@
   <string name="ScrollOfWeaponUpgrade_Name">Pergaminho de Melhora de Arma</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Selecione uma arma para aprimorar</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">%s parece estar muito melhor agora</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
 </resources>
