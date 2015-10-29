@@ -104,11 +104,6 @@ public abstract class Scroll extends Item {
 	
 	private String rune;
 	
-	{
-		stackable     = true;		
-		defaultAction = AC_READ;
-	}
-	
 	@SuppressWarnings("unchecked")
 	public static void initLabels() {
 		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, getRunes(), images );
@@ -124,9 +119,13 @@ public abstract class Scroll extends Item {
 	}
 	
 	public Scroll() {
+		stackable     = true;
+		defaultAction = AC_READ;
+		
 		if (this instanceof BlankScroll){
 			return;
 		}
+		
 		image = handler.image( this );
 		rune  = handler.label( this );
 	}
