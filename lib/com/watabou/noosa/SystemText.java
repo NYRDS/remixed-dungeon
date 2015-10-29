@@ -2,17 +2,15 @@ package com.watabou.noosa;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Set;
+
+import com.watabou.glwrap.Matrix;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Typeface;
 import android.text.TextPaint;
-import android.util.Log;
-
-import com.watabou.glwrap.Matrix;
 
 public class SystemText extends Text {
 

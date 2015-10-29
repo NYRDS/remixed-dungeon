@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 
 public class HeroAction {
 	

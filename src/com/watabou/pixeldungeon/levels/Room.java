@@ -25,7 +25,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.levels.painters.*;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;

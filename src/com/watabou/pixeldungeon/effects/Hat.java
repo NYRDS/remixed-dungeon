@@ -4,7 +4,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.utils.Random;
 
 public class Hat extends Image {

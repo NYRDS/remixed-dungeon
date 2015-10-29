@@ -4,6 +4,7 @@ import com.watabou.utils.Random;
 
 public abstract class SimpleWand extends Wand {
 	
+	@SuppressWarnings("rawtypes")
 	private static Class[] variants = {	WandOfAmok.class, 
 		WandOfAvalanche.class, 
 		WandOfDisintegration.class, 

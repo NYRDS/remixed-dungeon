@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 

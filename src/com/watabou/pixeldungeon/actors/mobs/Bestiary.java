@@ -24,7 +24,6 @@ import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.utils.Random;
 
 public class Bestiary {
