@@ -661,7 +661,9 @@ public class GameScene extends PixelScene {
 		}
 	};
 
-	public void updateToolbar(boolean checked) {
-		toolbar.updateLayout();
+	public void updateToolbar() {
+		if(toolbar!=null) {
+			toolbar.updateLayout();
+		}
 	}
 }

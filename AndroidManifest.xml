@@ -3,7 +3,7 @@
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
     android:versionCode="177"
-    android:versionName="remix.21.alpha.5" >
+    android:versionName="remix.20.1.beta.1" >
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />

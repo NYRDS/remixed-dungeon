@@ -298,7 +298,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public static void secondQuickslot(boolean checked) {
 		Preferences.INSTANCE.put(Preferences.KEY_SECOND_QUICKSLOT, checked);
 		if (scene() instanceof GameScene) {
-			((GameScene) scene()).updateToolbar(checked);
+			((GameScene) scene()).updateToolbar();
 		}
 	}
 
@@ -309,7 +309,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public static void thirdQuickslot(boolean checked) {
 		Preferences.INSTANCE.put(Preferences.KEY_THIRD_QUICKSLOT, checked);
 		if (scene() instanceof GameScene) {
-			((GameScene) scene()).updateToolbar(checked);
+			((GameScene) scene()).updateToolbar();
 		}
 	}
 	
