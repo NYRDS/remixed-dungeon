@@ -11,6 +11,8 @@ import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.PixelDungeon;
+
 import android.util.Log;
 
 public abstract class GameWithGoogleIap extends Game {
@@ -198,7 +200,9 @@ public abstract class GameWithGoogleIap extends Game {
 			checkPurchases();
 			m_iapReady = true;
 			
-			initIntersitial();
+			if(PixelDungeon.donated() == 0) {
+				initIntersitial();
+			}
 		}
 	};
 
