@@ -8,7 +8,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class SaveUtils {
@@ -69,12 +68,13 @@ public class SaveUtils {
 
 	public static String slotInfo(String slot, HeroClass cl) {
 		if(slotUsed(slot, cl)) {
-			File gameFile = FileSystem.getInteralStorageFile(slot +"/"+ gameFile(cl));
 			
-			Info info = GamesInProgress.checkFile(gameFile.getAbsolutePath());
+			String localName = slot +"/"+ gameFile(cl);
+			
+			Info info = GamesInProgress.checkFile(localName);
 			
 			if(info!= null) {
-				return Utils.format(StartScene.TXT_DPTH_LVL, info.depth,
+				return Utils.format("d: %2d   l: %2d", info.depth,
 						info.level);
 			}
 		}

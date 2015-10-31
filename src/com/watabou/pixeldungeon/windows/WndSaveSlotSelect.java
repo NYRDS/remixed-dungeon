@@ -20,9 +20,9 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 		saving = _saving;
 		
 		if(!saving) {
-			for (int i = 1; i<10; i++) {
-				if(!SaveUtils.slotUsed(Integer.toString(i), Dungeon.heroClass)) {
-					setEnabled(i-1, false);
+			for (int i = 0; i<10; i++) {
+				if(!SaveUtils.slotUsed(slotNameFromIndex(i), Dungeon.heroClass)) {
+					setEnabled(i, false);
 				}
 			}
 		}
