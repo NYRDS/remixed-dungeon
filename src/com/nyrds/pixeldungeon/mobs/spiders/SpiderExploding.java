@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.plants.Icecap;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 public class SpiderExploding extends Mob {

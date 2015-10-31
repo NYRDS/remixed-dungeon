@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.windows;
 
-import java.io.IOException;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
@@ -68,9 +66,8 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 				Dungeon.saveAll();
 				SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 				
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (Exception e) {
+				throw new RuntimeException(e);
 			}
 		}
 		

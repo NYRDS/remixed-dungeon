@@ -53,17 +53,6 @@ public class WndBadge extends Window {
 		info.y = PixelScene.align(pos);
 		add(info);
 		
-		//TODO fix when text rendering will be ok
-		/*
-		for (BitmapText line : info.new LineSplitter().split()) {
-			line.measure();
-			line.x = PixelScene.align( (w - line.width()) / 2 );
-			line.y = PixelScene.align( pos );
-			add( line );
-			
-			pos += line.height(); 
-		}
-		*/
 		resize( (int)w, (int)(pos + MARGIN) );
 		
 		BadgeBanner.highlight( icon, badge.image );

@@ -73,12 +73,8 @@ public class Utils {
 			if(warnIfAbsent){
 				GLog.w("no defination for  %s_%s :(", className, paramName);
 			}
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 		
 		return defaultValues;
@@ -98,12 +94,8 @@ public class Utils {
 			if(warnIfAbsent){
 				GLog.w("no defination for  %s_%s :(", className, paramName);
 			}
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 		
 		return defaultValue;

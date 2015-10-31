@@ -26,7 +26,6 @@ public class Position implements Bundlable {
 	}
 
 	public Position() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

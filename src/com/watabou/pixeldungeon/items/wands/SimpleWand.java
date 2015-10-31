@@ -18,14 +18,9 @@ public abstract class SimpleWand extends Wand {
 	static public SimpleWand createRandomSimpleWand() {
 		try {
 			return (SimpleWand) Random.element(variants).newInstance();
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
-		return null;
 	}
 	
 	

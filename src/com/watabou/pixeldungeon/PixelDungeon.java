@@ -17,16 +17,9 @@
  */
 package com.watabou.pixeldungeon;
 
-import java.io.IOException;
 import java.util.Locale;
 
 import javax.microedition.khronos.opengles.GL10;
-
-import android.annotation.SuppressLint;
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.view.View;
 
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
@@ -38,6 +31,12 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
 
 public class PixelDungeon extends GameWithGoogleIap {
 
@@ -103,14 +102,6 @@ public class PixelDungeon extends GameWithGoogleIap {
 	@Override
 	public void onPause() {
 		super.onPause();
-		try {
-			if (Dungeon.hero != null) {
-				Dungeon.saveAll();
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	@Override

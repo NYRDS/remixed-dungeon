@@ -26,7 +26,6 @@ public class Crypter {
 					Base64.NO_WRAP|Base64.URL_SAFE);
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return plainText;
@@ -41,7 +40,6 @@ public class Crypter {
 			return new String(plainBytes);
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return encrypted;

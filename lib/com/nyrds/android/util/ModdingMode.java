@@ -11,7 +11,7 @@ public class ModdingMode {
 	static private boolean mMode = false;
 	static private String mActiveMod = "";
 	static private Context mContext;
-	
+
 	static private boolean mTextRenderingMode = false;
 
 	public static boolean mode() {
@@ -40,21 +40,19 @@ public class ModdingMode {
 			}
 			return mContext.getAssets().open(resName);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
-		return null;
 	}
 
 	public static void setContext(Context context) {
 		mContext = context;
 	}
-	
+
 	public static void setClassicTextRenderingMode(boolean val) {
-		 mTextRenderingMode = val;
+		mTextRenderingMode = val;
 	}
-	
+
 	public static boolean getClassicTextRenderingMode() {
-		return  mTextRenderingMode;
+		return mTextRenderingMode;
 	}
 }

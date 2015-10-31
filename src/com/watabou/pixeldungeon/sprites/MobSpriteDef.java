@@ -16,7 +16,6 @@ import org.json.JSONTokener;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class MobSpriteDef extends MobSprite {
 	
@@ -80,38 +79,30 @@ public class MobSpriteDef extends MobSprite {
 			zap    = attack.clone();
 			
 		} catch (Exception e) {
-			GLog.w("Something bad happens when loading %s", name);
+			throw new RuntimeException(String.format("Something bad happens when loading %s", name),e);
 		}
 		
 		play(idle);
 	}
 	
-	private Animation readAnimation(JSONObject root, String animKind, TextureFilm film) {
-		try {
-			
-			JSONObject jsonAnim = root.getJSONObject(animKind);
-			
-			Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));
-			
-			List<Integer> framesSeq = new ArrayList<Integer>(16);
-			
-			JSONArray jsonFrames = jsonAnim.getJSONArray("frames");
-			
-			int nextFrame;
-			
-			for(int i = 0; (nextFrame = jsonFrames.optInt(i, -1))!= -1; ++i) {
-				framesSeq.add(nextFrame);
-			}
-			
-			anim.frames(film, framesSeq, kind * framesInRow);
-			
-			return anim;
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	private Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
+		JSONObject jsonAnim = root.getJSONObject(animKind);
+		
+		Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));
+		
+		List<Integer> framesSeq = new ArrayList<Integer>(16);
+		
+		JSONArray jsonFrames = jsonAnim.getJSONArray("frames");
+		
+		int nextFrame;
+		
+		for(int i = 0; (nextFrame = jsonFrames.optInt(i, -1))!= -1; ++i) {
+			framesSeq.add(nextFrame);
 		}
 		
-		return null;
+		anim.frames(film, framesSeq, kind * framesInRow);
+		
+		return anim;
 	}
 	
 	@Override

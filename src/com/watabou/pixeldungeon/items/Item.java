@@ -512,15 +512,9 @@ public class Item implements Bundlable {
 			Item result = itemClass.newInstance();
 			result.quantity(quantity());
 			return result;
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		// bad luck :)
-		return null;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		} 
 	}
 	
 	public Item burn(int cell) {

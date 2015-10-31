@@ -183,10 +183,10 @@ public class ItemSlot extends Button {
 			String text = artifact.getText();
 			
 			if(text!=null) {
-				topRight.text(artifact.getText());
-				topRight.hardlight(artifact.getColor());
-				topRight.setVisible(true);
-				topRight.measure();
+				topLeft.text(artifact.getText());
+				topLeft.hardlight(artifact.getColor());
+				topLeft.setVisible(true);
+				topLeft.measure();
 			}
 		}
 		
