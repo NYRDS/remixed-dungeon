@@ -7,11 +7,12 @@ import com.watabou.pixeldungeon.levels.Level;
 
 public class SpiderSpawner {
 
-	static public void spawnRandomSpider(Level level,int position) {
+	static public Mob spawnRandomSpider(Level level,int position) {
 		Mob mob = Bestiary.mob(Dungeon.depth, level.levelKind());
 		mob.pos = position;
 		mob.state = mob.WANDERING;
 		level.spawnMob( mob );
+		return mob;
 	}
 
 	static public void spawnQueen(Level level,int position) {

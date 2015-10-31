@@ -119,6 +119,11 @@ public class Swarm extends Mob {
 		if (buff( Poison.class ) != null) {
 			Buff.affect( clone, Poison.class ).set( 2 );
 		}
+		
+		if(isPet()) {
+			Mob.makePet(clone, Dungeon.hero);
+		}
+		
 		return clone;
 	}
 	

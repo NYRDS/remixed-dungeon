@@ -39,8 +39,11 @@ public class SpiderNest extends Mob {
 	protected boolean act(){
 		super.act();
 		
-		SpiderSpawner.spawnRandomSpider(Dungeon.level, pos);
+		Mob newSpider = SpiderSpawner.spawnRandomSpider(Dungeon.level, pos);
 		
+		if(isPet()) {
+			Mob.makePet(newSpider, Dungeon.hero);
+		}
 		state = SLEEPEING;
 		
 		postpone(20);

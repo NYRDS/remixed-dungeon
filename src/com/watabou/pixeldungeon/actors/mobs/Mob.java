@@ -98,6 +98,7 @@ public abstract class Mob extends Char {
 	public static Mob makePet(Mob pet, Hero hero) {
 		pet.fraction = Fraction.HEROES;
 		pet.enemy = DUMMY;
+		pet.hostile = false;
 		hero.addPet(pet);
 		
 		return pet;

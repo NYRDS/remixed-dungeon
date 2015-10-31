@@ -81,7 +81,7 @@ public class AttackIndicator extends Tag {
 		int v = Dungeon.hero.visibleEnemies();
 		for (int i=0; i < v; i++) {
 			Mob mob = Dungeon.hero.visibleEnemy( i );
-			if (Dungeon.level.adjacent( heroPos, mob.pos )) {
+			if (Dungeon.level.adjacent( heroPos, mob.pos ) && !mob.isPet()) {
 				candidates.add( mob );
 			}
 		}

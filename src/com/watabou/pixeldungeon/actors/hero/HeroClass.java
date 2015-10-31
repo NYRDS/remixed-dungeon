@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.ChaosCrystal;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
@@ -109,7 +110,10 @@ public enum HeroClass {
 		hero.collect(new TomeOfMastery());
 		
 		hero.collect(new LloydsBeacon());
+		hero.collect(new ChaosCrystal());
+		
 		for(int i = 0;i<5;i++) {
+			hero.collect(new ScrollOfIdentify());
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfDomination());
 			hero.collect(new ScrollOfCurse());
