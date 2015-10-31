@@ -1073,7 +1073,7 @@ public class Hero extends Char {
 		boolean newMob = false;
 
 		for (Mob m : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[m.pos] && m.hostile) {
+			if (Dungeon.level.fieldOfView[m.pos] && m.hostile &&!m.isPet()) {
 				visible.add(m);
 				if (!visibleEnemies.contains(m)) {
 					newMob = true;

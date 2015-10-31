@@ -82,10 +82,8 @@ public class FileSystem {
 			out.flush();
 			out.close();
 
-		} catch (FileNotFoundException fnfe1) {
-			Log.e("FileSystem", fnfe1.getMessage());
 		} catch (Exception e) {
-			Log.e("FileSystem", e.getMessage());
+			throw new RuntimeException(e);
 		}
 
 	}

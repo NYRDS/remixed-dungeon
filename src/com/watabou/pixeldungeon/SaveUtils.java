@@ -52,7 +52,7 @@ public class SaveUtils {
 		String[] files = FileSystem.getInteralStorageFile(slot).list();
 
 		for (String file : files) {
-			if (file.endsWith(".dat") && hasClassTag(heroClass, file)) {
+			if (isRelatedTo(file, heroClass)) {
 				//GLog.i("restoring: %s", file);
 				FileSystem.copyFile(
 						FileSystem.getInteralStorageFile(slot + "/" + file)
@@ -98,6 +98,10 @@ public class SaveUtils {
 		return false;
 	}
 
+	private static boolean isRelatedTo(String path,HeroClass cl) {
+		return ( path.endsWith(".dat") && hasClassTag(cl, path) ) || path.endsWith(gameFile(cl));
+	}
+	
 	public static void copySaveToSlot(String slot, HeroClass cl) {
 
 		
@@ -109,8 +113,7 @@ public class SaveUtils {
 		if (slotFiles != null) {
 			for (File file : slotFiles) {
 				String path = file.getAbsolutePath();
-				if (path.endsWith(".dat") && hasClassTag(cl, path)
-						|| path.endsWith(gameFile(cl))) {
+				if (isRelatedTo(path, cl)) {
 					//GLog.i("deleting: %s", path);
 					file.delete();
 				}
@@ -120,7 +123,7 @@ public class SaveUtils {
 		String[] files = Game.instance().fileList();
 
 		for (String file : files) {
-			if (file.endsWith(".dat") && hasClassTag(cl, file)) {
+			if (isRelatedTo(file, cl)) {
 				FileSystem.copyFile(FileSystem.getInteralStorageFile(file)
 						.getAbsolutePath(),
 						FileSystem.getInteralStorageFile(slot + "/" + file)
