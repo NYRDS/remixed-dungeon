@@ -242,7 +242,7 @@ public class Belongings implements Iterable<Item> {
 	public Iterator<Item> iterator() {
 		return new ItemIterator(); 
 	}
-	
+
 	private class ItemIterator implements Iterator<Item> {
 
 		private int index = 0;

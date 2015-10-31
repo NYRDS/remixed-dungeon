@@ -87,4 +87,16 @@
     <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
     <string name="SpiderCharm_Use">USE</string>
     
+        <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_Name">Strange Crystal</string>
+    <string name="ChaosCrystal_Name_1">Chaotic Crystal</string>
+    <string name="ChaosCrystal_Name_2">Chaos Crystal</string>
+    <string name="ChaosCrystal_Info">You feel streams of energy, running through your hands while you holding it.</string>
+    <string name="ChaosCrystal_Info_1">Chaotic powers flow through this crystal. Maybe it might be useful.</string>
+    <string name="ChaosCrystal_Info_2">Yes! Now you know, that you can fuse it with one of your item, but what\'s next?</string>
+    <string name="ChaosCrystal_Use">USE</string>
+    <string name="ChaosCrystal_Fuse">FUSE</string>
+    <string name="ChaosCrystal_Prompt">Choose place to set Chaos Mark</string>
+    
+    
 </resources>

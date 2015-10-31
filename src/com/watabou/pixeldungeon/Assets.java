@@ -198,9 +198,10 @@ public class Assets {
 	public static final String SND_SECRET = "snd_secret.mp3";
 	public static final String SND_BONES = "snd_bones.mp3";
 	public static final String SND_MIMIC = "snd_mimic.mp3";
+	
 	public static final String SND_DOMINANCE = "snd_dominance.mp3";
-
 	public static final String SND_ROTTEN_DROP = "snd_rotten_drop.mp3";
+	public static final String SND_CRYSTAL = "snd_crystal.mp3";
 
 	private static int chromeType = 0;
 	private static int statusType = 0;

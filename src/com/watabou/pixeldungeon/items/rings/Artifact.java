@@ -97,4 +97,12 @@ public class Artifact extends EquipableItem {
 	
 	public class ArtifactBuff extends Buff {
 	}
+
+	public String getText() {
+		return null;
+	}
+
+	public int getColor() {
+		return 0;
+	}
 }

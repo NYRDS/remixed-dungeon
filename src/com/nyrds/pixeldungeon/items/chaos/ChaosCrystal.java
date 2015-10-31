@@ -4,15 +4,18 @@ import java.util.ArrayList;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
-import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.blobs.Web;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -31,7 +34,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	private static final int CHAOS_CRYSTALL_IMAGE = 9;
 	
 	private int identetifyLevel = 0;
-	private int charge          = 100;
+	private int charge          = 0;
 	
 	@SuppressWarnings("rawtypes")
 	private static Class[] blobs = {
@@ -40,7 +43,6 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		ParalyticGas.class,
 		Regrowth.class,
 		ToxicGas.class,
-		Web.class
 	};
 	
 	public ChaosCrystal() {
@@ -65,6 +67,9 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		@Override
 		public void onSelect(Integer cell) {
 			if (cell != null) {
+				CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );
+				Sample.INSTANCE.play( Assets.SND_CRYSTAL );
+				GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
 				GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
 			}
 			getCurUser().spendAndNext(TIME_TO_USE);
@@ -136,12 +141,16 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	@SuppressLint("DefaultLocale")
 	@Override
 	public String getText() {
-		return String.format("%d/100", charge);
+		if(identetifyLevel > 0) {
+			return String.format("%d/100", charge);
+		} else {
+			return null;
+		}
 	}
 	
 	@Override
 	public int getColor() {
-		return 0x7f7f7f;
+		return 0xe0a0a0;
 	}
 
 	@Override

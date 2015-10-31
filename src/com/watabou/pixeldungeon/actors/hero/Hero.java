@@ -113,6 +113,7 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.ml.R;
 
 public class Hero extends Char {
@@ -1047,6 +1048,12 @@ public class Hero extends Char {
 		
 		checkIfFurious();
 		interrupt();
+		
+		for(Item item:belongings){
+			if(item instanceof IChaosItem) {
+				((IChaosItem)item).ownerTakesDamage(dmg);
+			}
+		}
 	}
 
 	public void checkIfFurious() {

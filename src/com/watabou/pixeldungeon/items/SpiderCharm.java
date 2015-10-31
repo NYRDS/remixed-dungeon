@@ -26,8 +26,6 @@ public class SpiderCharm extends Artifact {
 	public SpiderCharm() {
 		image = ItemSpriteSheet.SPIDER_CHARM;
 		unique = true;
-		
-		
 	}
 
 	@Override

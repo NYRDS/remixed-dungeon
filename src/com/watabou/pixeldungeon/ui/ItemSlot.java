@@ -22,6 +22,7 @@ import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -175,6 +176,18 @@ public class ItemSlot extends Button {
 			bottomRight.hardlight( level > 0 ? UPGRADED : DEGRADED );
 		} else {
 			bottomRight.text( null );
+		}
+		
+		if(item instanceof Artifact) {
+			Artifact artifact = (Artifact) item;
+			String text = artifact.getText();
+			
+			if(text!=null) {
+				topRight.text(artifact.getText());
+				topRight.hardlight(artifact.getColor());
+				topRight.setVisible(true);
+				topRight.measure();
+			}
 		}
 		
 		layout();
