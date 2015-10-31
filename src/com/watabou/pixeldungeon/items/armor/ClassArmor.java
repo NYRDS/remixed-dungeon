@@ -109,7 +109,7 @@ abstract public class ClassArmor extends Armor {
 			} else if (!isEquipped( hero )) {
 				GLog.w( TXT_NOT_EQUIPPED );
 			} else {
-				curUser = hero;
+				setCurUser(hero);
 				doSpecial();
 			}
 			

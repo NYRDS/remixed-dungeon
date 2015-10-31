@@ -71,6 +71,6 @@ public class PotionOfFrost extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 		
 		FrostArrow moistenArrows = new FrostArrow(quantity);
-		curUser.collect(moistenArrows);
+		getCurUser().collect(moistenArrows);
 	}
 }

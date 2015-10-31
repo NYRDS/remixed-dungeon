@@ -160,7 +160,7 @@ public abstract class Wand extends KindOfWeapon {
 	public void execute(Hero hero, String action) {
 		if (action.equals(AC_ZAP)) {
 
-			curUser = hero;
+			setCurUser(hero);
 			wandUser = hero;
 			curItem = this;
 			GameScene.selectCell(zapper);
@@ -349,7 +349,7 @@ public abstract class Wand extends KindOfWeapon {
 		curCharges--;
 		updateQuickslot();
 
-		curUser.spendAndNext(TIME_TO_ZAP);
+		getCurUser().spendAndNext(TIME_TO_ZAP);
 	}
 
 	@Override
@@ -414,7 +414,7 @@ public abstract class Wand extends KindOfWeapon {
 
 		if (curCharges > 0) {
 
-			curUser.busy();
+			getCurUser().busy();
 
 			fx(cell, new Callback() {
 				@Override
@@ -424,10 +424,10 @@ public abstract class Wand extends KindOfWeapon {
 				}
 			});
 
-			Invisibility.dispel(curUser);
+			Invisibility.dispel(getCurUser());
 		} else {
 
-			curUser.spendAndNext(TIME_TO_ZAP);
+			getCurUser().spendAndNext(TIME_TO_ZAP);
 			GLog.w(TXT_FIZZLES);
 			levelKnown = true;
 
@@ -447,15 +447,15 @@ public abstract class Wand extends KindOfWeapon {
 
 			if (target != null) {
 
-				if (target == curUser.pos) {
+				if (target == getCurUser().pos) {
 					GLog.i(TXT_SELF_TARGET);
 					return;
 				}
 
 				final Wand curWand = (Wand) Wand.curItem;
 				
-				final int cell = Ballistica.cast(curUser.pos, target, true, curWand.hitChars);
-				curUser.getSprite().zap(cell);
+				final int cell = Ballistica.cast(getCurUser().pos, target, true, curWand.hitChars);
+				getCurUser().getSprite().zap(cell);
 				
 				curWand.wandEffect(cell);
 			}

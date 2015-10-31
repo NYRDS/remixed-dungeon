@@ -122,7 +122,7 @@ public class Item implements Bundlable {
 	
 	public void execute( Hero hero, String action ) {
 		
-		curUser = hero;
+		setCurUser(hero);
 		curItem = this;
 		
 		if (action.equals( AC_DROP )) {
@@ -458,7 +458,7 @@ public class Item implements Bundlable {
 	
 	public void cast( final Hero user, int dst ) {
 		
-		curUser = user;
+		setCurUser(user);
 		
 		final int cell = Ballistica.cast( user.pos, dst, false, true );
 		user.getSprite().zap( cell );
@@ -488,13 +488,13 @@ public class Item implements Bundlable {
 			} );
 	}
 	
-	protected static Hero curUser = null;
+	private static Hero curUser = null;
 	protected static Item curItem = null;
 	protected static CellSelector.Listener thrower = new CellSelector.Listener() {	
 		@Override
 		public void onSelect( Integer target ) {
 			if (target != null) {
-				curItem.cast( curUser, target );
+				curItem.cast( getCurUser(), target );
 			}
 		}
 		@Override
@@ -560,5 +560,13 @@ public class Item implements Bundlable {
 
 	public boolean isFliesFastRotating() {
 		return false;
+	}
+
+	protected static Hero getCurUser() {
+		return curUser;
+	}
+
+	protected static void setCurUser(Hero curUser) {
+		Item.curUser = curUser;
 	}
 }

@@ -44,6 +44,8 @@ public class SpiderCharm extends Artifact {
 	
 	@Override
 	public void execute( final Hero ch, String action ) {
+		setCurUser(ch);
+		
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);
 			ch.damage(ch.ht()/4, this);
@@ -58,7 +60,7 @@ public class SpiderCharm extends Artifact {
 			}
 			
 			if (spawnPoints.size() > 0) {
-				Mob pet = Mob.makePet(new SpiderServant(), curUser);
+				Mob pet = Mob.makePet(new SpiderServant(), getCurUser());
 				pet.pos = Random.element( spawnPoints );
 				
 				GameScene.add(Dungeon.level, pet );

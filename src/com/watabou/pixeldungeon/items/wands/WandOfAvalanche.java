@@ -79,7 +79,7 @@ public class WandOfAvalanche extends SimpleWand {
 			}
 		}
 		
-		if (curUser != null && !curUser.isAlive()) {
+		if (getCurUser() != null && !getCurUser().isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfAvalanche_Info1));
 		}

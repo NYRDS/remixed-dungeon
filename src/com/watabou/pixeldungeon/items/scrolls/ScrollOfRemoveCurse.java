@@ -37,18 +37,18 @@ public class ScrollOfRemoveCurse extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		new Flare( 6, 32 ).show( curUser.getSprite(), 2f ) ;
+		new Flare( 6, 32 ).show( getCurUser().getSprite(), 2f ) ;
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(curUser);
+		Invisibility.dispel(getCurUser());
 		
-		boolean procced = uncurse( curUser, curUser.belongings.backpack.items.toArray( new Item[0] ) ); 
-		procced = uncurse( curUser, 
-			curUser.belongings.weapon, 
-			curUser.belongings.armor, 
-			curUser.belongings.ring1, 
-			curUser.belongings.ring2 ) || procced;
+		boolean procced = uncurse( getCurUser(), getCurUser().belongings.backpack.items.toArray( new Item[0] ) ); 
+		procced = uncurse( getCurUser(), 
+			getCurUser().belongings.weapon, 
+			getCurUser().belongings.armor, 
+			getCurUser().belongings.ring1, 
+			getCurUser().belongings.ring2 ) || procced;
 		
-		Weakness.detach( curUser, Weakness.class );
+		Weakness.detach( getCurUser(), Weakness.class );
 		
 		if (procced) {
 			GLog.p( TXT_PROCCED );			
@@ -58,7 +58,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 		
 		setKnown();
 		
-		curUser.spendAndNext( TIME_TO_READ );
+		getCurUser().spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

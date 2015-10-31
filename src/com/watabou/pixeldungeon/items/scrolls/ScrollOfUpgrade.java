@@ -46,7 +46,7 @@ public class ScrollOfUpgrade extends InventoryScroll {
 		
 		Badges.validateItemLevelAquired( item );
 		
-		upgrade( curUser );
+		upgrade( getCurUser() );
 	}
 	
 	public static void upgrade( Hero hero ) {

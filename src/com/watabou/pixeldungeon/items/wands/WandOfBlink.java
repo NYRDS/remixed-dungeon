@@ -43,8 +43,8 @@ public class WandOfBlink extends Wand {
 			cell = Ballistica.trace[Ballistica.distance - 2];
 		}
 		
-		curUser.getSprite().setVisible(true);
-		appear( curUser, cell );
+		getCurUser().getSprite().setVisible(true);
+		appear( getCurUser(), cell );
 		Dungeon.observe();
 	}
 	

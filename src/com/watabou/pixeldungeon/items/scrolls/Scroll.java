@@ -152,7 +152,7 @@ public abstract class Scroll extends Item {
 			if (hero.buff( Blindness.class ) != null) {
 				GLog.w( TXT_BLINDED );
 			} else {
-				curUser = hero;
+				setCurUser(hero);
 				curItem = detach( hero.belongings.backpack );
 				
 				doRead();

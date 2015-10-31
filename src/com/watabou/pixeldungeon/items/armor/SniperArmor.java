@@ -44,16 +44,16 @@ public class SniperArmor extends ClassArmor {
 				Callback callback = new Callback() {	
 					@Override
 					public void call() {
-						curUser.attack( targets.get( this ) );
+						getCurUser().attack( targets.get( this ) );
 						targets.remove( this );
 						if (targets.isEmpty()) {
-							curUser.spendAndNext( curUser.attackDelay() );
+							getCurUser().spendAndNext( getCurUser().attackDelay() );
 						}
 					}
 				};
 				
-				((MissileSprite)curUser.getSprite().getParent().recycle( MissileSprite.class )).
-					reset( curUser.pos, mob.pos, proto, null, callback );
+				((MissileSprite)getCurUser().getSprite().getParent().recycle( MissileSprite.class )).
+					reset( getCurUser().pos, mob.pos, proto, null, callback );
 				
 				targets.put( callback, mob );
 			}
@@ -64,10 +64,10 @@ public class SniperArmor extends ClassArmor {
 			return;
 		}
 		
-		curUser.hp(curUser.hp() - (curUser.hp() / 3));
+		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 		
-		curUser.getSprite().zap( curUser.pos );
-		curUser.busy();
+		getCurUser().getSprite().zap( getCurUser().pos );
+		getCurUser().busy();
 	}
 	
 	@Override

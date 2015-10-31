@@ -32,22 +32,22 @@ public class ScrollOfRecharging extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		int count = curUser.belongings.charge( true );		
-		charge( curUser );
+		int count = getCurUser().belongings.charge( true );		
+		charge( getCurUser() );
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(curUser);
+		Invisibility.dispel(getCurUser());
 		
 		if (count > 0) {
 			GLog.i((count > 1 ? Game.getVar(R.string.ScrollOfRecharging_Info1b) 
 					          : Game.getVar(R.string.ScrollOfRecharging_Info1a)) );
-			SpellSprite.show( curUser, SpellSprite.CHARGE );
+			SpellSprite.show( getCurUser(), SpellSprite.CHARGE );
 		} else {
 			GLog.i(Game.getVar(R.string.ScrollOfRecharging_Info2));
 		}
 		setKnown();
 		
-		curUser.spendAndNext( TIME_TO_READ );
+		getCurUser().spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

@@ -67,7 +67,7 @@ public class TomeOfMastery extends Item {
 				return;
 			}
 			
-			curUser = hero;
+			setCurUser(hero);
 			
 			HeroSubClass way1 = null;
 			HeroSubClass way2 = null;
@@ -120,22 +120,22 @@ public class TomeOfMastery extends Item {
 	
 	public void choose( HeroSubClass way ) {
 		
-		detach( curUser.belongings.backpack );
+		detach( getCurUser().belongings.backpack );
 		
-		curUser.spend( TomeOfMastery.TIME_TO_READ );
-		curUser.busy();
+		getCurUser().spend( TomeOfMastery.TIME_TO_READ );
+		getCurUser().busy();
 		
-		curUser.subClass = way;
+		getCurUser().subClass = way;
 		
-		curUser.getSprite().operate( curUser.pos );
+		getCurUser().getSprite().operate( getCurUser().pos );
 		Sample.INSTANCE.play( Assets.SND_MASTERY );
 		
-		SpellSprite.show( curUser, SpellSprite.MASTERY );
-		curUser.getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
+		SpellSprite.show( getCurUser(), SpellSprite.MASTERY );
+		getCurUser().getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		
-		curUser.checkIfFurious();
-		GameScene.updateHeroSprite(curUser);
+		getCurUser().checkIfFurious();
+		GameScene.updateHeroSprite(getCurUser());
 		
 	}
 }

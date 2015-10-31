@@ -64,31 +64,31 @@ public class BerserkArmor extends ClassArmor {
 		
 		@Override
 		public void onSelect( Integer target ) {
-			if (target != null && target != curUser.pos) {
+			if (target != null && target != getCurUser().pos) {
 				
-				int cell = Ballistica.cast( curUser.pos, target, false, true );
-				if (Actor.findChar( cell ) != null && cell != curUser.pos) {
+				int cell = Ballistica.cast( getCurUser().pos, target, false, true );
+				if (Actor.findChar( cell ) != null && cell != getCurUser().pos) {
 					cell = Ballistica.trace[Ballistica.distance - 2];
 				}
 				
-				curUser.hp(curUser.hp() - (curUser.hp() / 3));
+				getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 				
-				curUser.checkIfFurious();
+				getCurUser().checkIfFurious();
 				
-				Invisibility.dispel(curUser);
+				Invisibility.dispel(getCurUser());
 				
 				final int dest = cell;
-				curUser.busy();
-				((HeroSprite)curUser.getSprite()).jump( curUser.pos, cell, new Callback() {
+				getCurUser().busy();
+				((HeroSprite)getCurUser().getSprite()).jump( getCurUser().pos, cell, new Callback() {
 					@Override
 					public void call() {
-						curUser.move( dest );
-						Dungeon.level.press( dest, curUser );
+						getCurUser().move( dest );
+						Dungeon.level.press( dest, getCurUser() );
 						Dungeon.observe();
 						
 						for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-							Char mob = Actor.findChar( curUser.pos + Level.NEIGHBOURS8[i] );
-							if (mob != null && mob != curUser) {
+							Char mob = Actor.findChar( getCurUser().pos + Level.NEIGHBOURS8[i] );
+							if (mob != null && mob != getCurUser()) {
 								Buff.prolong( mob, Paralysis.class, SHOCK_TIME );
 							}
 						}
@@ -96,7 +96,7 @@ public class BerserkArmor extends ClassArmor {
 						CellEmitter.center( dest ).burst( Speck.factory( Speck.DUST ), 10 );
 						Camera.main.shake( 2, 0.5f );
 						
-						curUser.spendAndNext( LEAP_TIME );
+						getCurUser().spendAndNext( LEAP_TIME );
 					}
 				} );
 			}

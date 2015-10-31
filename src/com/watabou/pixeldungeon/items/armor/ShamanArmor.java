@@ -38,15 +38,15 @@ public class ShamanArmor extends ClassArmor {
 			}
 		}
 		
-		curUser.hp(curUser.hp() - (curUser.hp() / 3));
+		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 		
-		curUser.spend( Actor.TICK );
-		curUser.getSprite().operate( curUser.pos );
-		curUser.busy();
+		getCurUser().spend( Actor.TICK );
+		getCurUser().getSprite().operate( getCurUser().pos );
+		getCurUser().busy();
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
 		
-		GameScene.add( Blob.seed( curUser.pos, 100, Regrowth.class ) );
+		GameScene.add( Blob.seed( getCurUser().pos, 100, Regrowth.class ) );
 	}
 	
 	@Override

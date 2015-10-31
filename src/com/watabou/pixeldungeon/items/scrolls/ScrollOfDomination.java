@@ -17,7 +17,7 @@ public class ScrollOfDomination extends Scroll {
 	protected void doRead() {
 		
 		Sample.INSTANCE.play( Assets.SND_DOMINANCE );
-		Invisibility.dispel(curUser);
+		Invisibility.dispel(getCurUser());
 		
 		ArrayList<Mob> mobsInSight = new ArrayList<Mob>();
 		
@@ -29,7 +29,7 @@ public class ScrollOfDomination extends Scroll {
 		
 		if(!mobsInSight.isEmpty()) {
 			Mob pet = Random.element(mobsInSight);
-			Mob.makePet(pet, curUser);
+			Mob.makePet(pet, getCurUser());
 			new Flare( 3, 32 ).show( pet.getSprite(), 2f );
 		}
 		
@@ -37,7 +37,7 @@ public class ScrollOfDomination extends Scroll {
 		
 		setKnown();
 		
-		curUser.spendAndNext( TIME_TO_READ );
+		getCurUser().spendAndNext( TIME_TO_READ );
 	}
 
 	@Override

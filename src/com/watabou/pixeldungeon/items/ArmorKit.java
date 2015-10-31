@@ -61,7 +61,7 @@ public class ArmorKit extends Item {
 	public void execute( Hero hero, String action ) {
 		if (action == AC_APPLY) {
 
-			curUser = hero;
+			setCurUser(hero);
 			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR, TXT_SELECT_ARMOR );
 			
 		} else {
@@ -83,27 +83,27 @@ public class ArmorKit extends Item {
 	
 	private void upgrade( Armor armor ) {
 		
-		detach( curUser.belongings.backpack );
+		detach( getCurUser().belongings.backpack );
 		
-		curUser.getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
-		curUser.spend( TIME_TO_UPGRADE );
-		curUser.busy();
+		getCurUser().getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
+		getCurUser().spend( TIME_TO_UPGRADE );
+		getCurUser().busy();
 		
 		GLog.w( TXT_UPGRADED, armor.name() );
 		
-		Armor classArmor = ClassArmor.upgrade( curUser, armor );
-		if (curUser.belongings.armor == armor) {
+		Armor classArmor = ClassArmor.upgrade( getCurUser(), armor );
+		if (getCurUser().belongings.armor == armor) {
 			
-			curUser.belongings.armor = classArmor;
-			curUser.updateLook();
+			getCurUser().belongings.armor = classArmor;
+			getCurUser().updateLook();
 			
 		} else {
 			
-			armor.detach( curUser.belongings.backpack );
-			curUser.collect(classArmor);			
+			armor.detach( getCurUser().belongings.backpack );
+			getCurUser().collect(classArmor);			
 		}
 		
-		curUser.getSprite().operate( curUser.pos );
+		getCurUser().getSprite().operate( getCurUser().pos );
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	

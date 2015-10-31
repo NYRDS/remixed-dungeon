@@ -36,14 +36,14 @@ public class Kusarigama extends SpecialWeapon {
 		public void onSelect(Integer target) {
 
 			if (target != null) {
-				curUser.spendAndNext(TIME_TO_IMPALE);
-				int hitCell = Ballistica.cast(curUser.pos, target, false, true);
+				getCurUser().spendAndNext(TIME_TO_IMPALE);
+				int hitCell = Ballistica.cast(getCurUser().pos, target, false, true);
 				
-				if(hitCell == curUser.pos) {
+				if(hitCell == getCurUser().pos) {
 					return;
 				}
 				
-				if (Dungeon.level.distance(curUser.pos, hitCell) < 4) {
+				if (Dungeon.level.distance(getCurUser().pos, hitCell) < 4) {
 					Char chr = Actor.findChar(hitCell);
 					
 					if (chr != null) {
@@ -70,15 +70,15 @@ public class Kusarigama extends SpecialWeapon {
 	};
 
 	private static void drawChain(int tgt) {
-		curUser.getSprite()
+		getCurUser().getSprite()
 				.getParent()
-				.add(new KusarigamaChain(curUser.getSprite().center(),
+				.add(new KusarigamaChain(getCurUser().getSprite().center(),
 						DungeonTilemap.tileCenterToWorld(tgt)));
 	}
 
 	@Override
 	public void execute(Hero hero, String action) {
-		curUser = hero;
+		setCurUser(hero);
 		if (action.equals(AC_PULL)) {
 			GameScene.selectCell(impaler);
 		} else {
@@ -96,9 +96,9 @@ public class Kusarigama extends SpecialWeapon {
 	}
 
 	public void applySpecial(Hero hero, Char tgt) {
-		curUser = hero;
+		setCurUser(hero);
 
-		if (Dungeon.level.distance(curUser.pos, tgt.pos) > 1) {
+		if (Dungeon.level.distance(getCurUser().pos, tgt.pos) > 1) {
 			drawChain(tgt.pos);
 		}
 

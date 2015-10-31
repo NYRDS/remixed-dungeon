@@ -56,6 +56,6 @@ public class PotionOfLiquidFlame extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 		
 		FireArrow moistenArrows = new FireArrow(quantity);
-		curUser.collect(moistenArrows);
+		getCurUser().collect(moistenArrows);
 	}
 }

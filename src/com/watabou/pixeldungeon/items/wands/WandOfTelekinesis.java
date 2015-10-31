@@ -96,7 +96,7 @@ public class WandOfTelekinesis extends Wand {
 					break;
 				case CHEST:
 				case MIMIC:
-					heap.open( curUser );
+					heap.open( getCurUser() );
 					break;
 				default:
 				}
@@ -126,12 +126,12 @@ public class WandOfTelekinesis extends Wand {
 	
 	private void transport(Heap heap) {
 		Item item = heap.pickUp();
-		item = item.pick(curUser,heap.pos);
+		item = item.pick(getCurUser(),heap.pos);
 		if (item != null) {
-			if (item.doPickUp(curUser)) {
-				curUser.itemPickedUp(item);
+			if (item.doPickUp(getCurUser())) {
+				getCurUser().itemPickedUp(item);
 			} else {
-				Dungeon.level.drop(item, curUser.pos).sprite.drop();
+				Dungeon.level.drop(item, getCurUser().pos).sprite.drop();
 			}
 		}
 	}

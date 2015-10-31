@@ -146,7 +146,7 @@ public class Potion extends Item {
 	
 	@Override
 	public void execute( final Hero hero, String action ) {
-		curUser = hero;
+		setCurUser(hero);
 		
 		if (action.equals( AC_DRINK )) {
 			if (isKnown() && (
@@ -360,10 +360,10 @@ public class Potion extends Item {
 		
 		if(quantity <= maxQuantity){
 			
-			if(item.equals(curUser.belongings.weapon)) {
-				curUser.belongings.weapon = null;
+			if(item.equals(getCurUser().belongings.weapon)) {
+				getCurUser().belongings.weapon = null;
 			} else {
-				item.detachAll( curUser.belongings.backpack );
+				item.detachAll( getCurUser().belongings.backpack );
 			}
 		} else {
 			item.quantity(item.quantity() - maxQuantity);
@@ -396,18 +396,18 @@ public class Potion extends Item {
 	}
 	
 	protected void moistenUseless() {
-		detach(curUser.belongings.backpack );
+		detach(getCurUser().belongings.backpack );
 		GLog.i(TXT_MOISTEN_USELESS);
-		curUser.getSprite().operate( curUser.pos );		
-		curUser.spend( TIME_TO_MOISTEN );
-		curUser.busy();	
+		getCurUser().getSprite().operate( getCurUser().pos );		
+		getCurUser().spend( TIME_TO_MOISTEN );
+		getCurUser().busy();	
 	}
 	
 	protected void moistenEffective() {
-		detach(curUser.belongings.backpack );
+		detach(getCurUser().belongings.backpack );
 		identify();
-		curUser.getSprite().operate( curUser.pos );		
-		curUser.spend( TIME_TO_MOISTEN );
-		curUser.busy();	
+		getCurUser().getSprite().operate( getCurUser().pos );		
+		getCurUser().spend( TIME_TO_MOISTEN );
+		getCurUser().busy();	
 	}
 }

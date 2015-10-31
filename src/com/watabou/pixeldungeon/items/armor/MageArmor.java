@@ -62,13 +62,13 @@ public class MageArmor extends ClassArmor {
 			}
 		}
 		
-		curUser.hp(curUser.hp() - (curUser.hp() / 3));
+		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 		
-		curUser.spend( Actor.TICK );
-		curUser.getSprite().operate( curUser.pos );
-		curUser.busy();
+		getCurUser().spend( Actor.TICK );
+		getCurUser().getSprite().operate( getCurUser().pos );
+		getCurUser().busy();
 		
-		curUser.getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
+		getCurUser().getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	

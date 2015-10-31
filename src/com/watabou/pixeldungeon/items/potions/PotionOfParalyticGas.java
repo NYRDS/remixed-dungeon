@@ -55,6 +55,6 @@ public class PotionOfParalyticGas extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 		
 		ParalysisArrow moistenArrows = new ParalysisArrow(quantity);
-		curUser.collect(moistenArrows);
+		getCurUser().collect(moistenArrows);
 	}
 }

@@ -37,7 +37,7 @@ public class ScrollOfPsionicBlast extends Scroll {
 		GameScene.flash( 0xFFFFFF );
 		
 		Sample.INSTANCE.play( Assets.SND_BLAST );
-		Invisibility.dispel(curUser);
+		Invisibility.dispel(getCurUser());
 		
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
 			if (Dungeon.level.fieldOfView[mob.pos]) {
@@ -46,12 +46,12 @@ public class ScrollOfPsionicBlast extends Scroll {
 			}
 		}
 		
-		Buff.prolong( curUser, Blindness.class, Random.Int( 3, 6 ) );
+		Buff.prolong( getCurUser(), Blindness.class, Random.Int( 3, 6 ) );
 		Dungeon.observe();
 		
 		setKnown();
 		
-		curUser.spendAndNext( TIME_TO_READ );
+		getCurUser().spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

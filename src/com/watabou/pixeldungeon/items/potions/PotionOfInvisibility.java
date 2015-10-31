@@ -70,6 +70,6 @@ public class PotionOfInvisibility extends Potion {
 		
 		BlankScroll moistenScroll = new BlankScroll();
 		moistenScroll.quantity(quantity);
-		curUser.collect(moistenScroll);
+		getCurUser().collect(moistenScroll);
 	}
 }

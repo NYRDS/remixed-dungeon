@@ -64,7 +64,7 @@ public class Weightstone extends Item {
 	public void execute( Hero hero, String action ) {
 		if (action == AC_APPLY) {
 
-			curUser = hero;
+			setCurUser(hero);
 			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, TXT_SELECT_WEAPON );
 			
 		} else {
@@ -86,7 +86,7 @@ public class Weightstone extends Item {
 	
 	private void apply( Weapon weapon, boolean forSpeed ) {
 		
-		detach( curUser.belongings.backpack );
+		detach( getCurUser().belongings.backpack );
 		
 		if (forSpeed) {
 			weapon.imbue = Weapon.Imbue.SPEED;
@@ -96,11 +96,11 @@ public class Weightstone extends Item {
 			GLog.p( TXT_ACCURATE, weapon.name() );
 		}
 		
-		curUser.getSprite().operate( curUser.pos );
+		getCurUser().getSprite().operate( getCurUser().pos );
 		Sample.INSTANCE.play( Assets.SND_MISS );
 		
-		curUser.spend( TIME_TO_APPLY );
-		curUser.busy();
+		getCurUser().spend( TIME_TO_APPLY );
+		getCurUser().busy();
 	}
 	
 	@Override

@@ -59,6 +59,6 @@ public class PotionOfToxicGas extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 		
 		PoisonArrow moistenArrows = new PoisonArrow(quantity);
-		curUser.collect(moistenArrows);
+		getCurUser().collect(moistenArrows);
 	}
 }

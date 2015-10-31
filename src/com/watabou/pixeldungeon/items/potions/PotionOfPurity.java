@@ -127,6 +127,6 @@ public class PotionOfPurity extends Potion {
 		moistenEffective();
 		GLog.i(TXT_ROTTEN_FOOD_MOISTEN, rfood.name());
 		
-		curUser.collect(rfood.purify());
+		getCurUser().collect(rfood.purify());
 	}
 }

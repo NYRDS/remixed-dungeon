@@ -36,10 +36,10 @@ public class WandOfTeleportation extends Wand {
 		
 		Char ch = Actor.findChar( cell );
 		
-		if (ch == curUser) {
+		if (ch == getCurUser()) {
 			
 			setKnown();
-			ScrollOfTeleportation.teleportHero( curUser );
+			ScrollOfTeleportation.teleportHero( getCurUser() );
 			
 		} else if (ch != null) {
 			
@@ -58,7 +58,7 @@ public class WandOfTeleportation extends Wand {
 				ch.pos = pos;
 				ch.getSprite().place( ch.pos );
 				ch.getSprite().setVisible(Dungeon.visible[pos]);
-				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.getName(), ch.getName_objective()));
+				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), getCurUser().getName(), ch.getName_objective()));
 			}
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));

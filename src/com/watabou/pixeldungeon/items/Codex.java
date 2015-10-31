@@ -65,7 +65,7 @@ public class Codex extends Item {
 				return;
 			}
 			
-			curUser = hero;
+			setCurUser(hero);
 			
 			WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[id]);
 		} else {

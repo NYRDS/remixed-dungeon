@@ -85,7 +85,7 @@ public class RogueArmor extends ClassArmor {
 					return;
 				}
 				
-				curUser.hp(curUser.hp() - (curUser.hp() / 3));
+				getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 				
 				for (Mob mob : Dungeon.level.mobs) {
 					if (Dungeon.level.fieldOfView[mob.pos]) {
@@ -95,13 +95,13 @@ public class RogueArmor extends ClassArmor {
 					}
 				}
 				
-				WandOfBlink.appear( curUser, target );
+				WandOfBlink.appear( getCurUser(), target );
 				CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
 				Sample.INSTANCE.play( Assets.SND_PUFF );
-				Dungeon.level.press( target, curUser );
+				Dungeon.level.press( target, getCurUser() );
 				Dungeon.observe();
 				
-				curUser.spendAndNext( Actor.TICK );
+				getCurUser().spendAndNext( Actor.TICK );
 			}
 		}
 		

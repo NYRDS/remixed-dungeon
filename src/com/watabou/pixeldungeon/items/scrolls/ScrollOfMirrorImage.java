@@ -43,7 +43,7 @@ public class ScrollOfMirrorImage extends Scroll {
 		ArrayList<Integer> respawnPoints = new ArrayList<Integer>();
 		
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-			int p = curUser.pos + Level.NEIGHBOURS8[i];
+			int p = getCurUser().pos + Level.NEIGHBOURS8[i];
 			if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
 				respawnPoints.add( p );
 			}
@@ -53,7 +53,7 @@ public class ScrollOfMirrorImage extends Scroll {
 		while (nImages > 0 && respawnPoints.size() > 0) {
 			int index = Random.index( respawnPoints );
 			
-			MirrorImage mob = new MirrorImage(curUser);
+			MirrorImage mob = new MirrorImage(getCurUser());
 			GameScene.add(Dungeon.level, mob );
 			WandOfBlink.appear( mob, respawnPoints.get( index ) );
 			
@@ -66,9 +66,9 @@ public class ScrollOfMirrorImage extends Scroll {
 		}
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(curUser);
+		Invisibility.dispel(getCurUser());
 		
-		curUser.spendAndNext( TIME_TO_READ );
+		getCurUser().spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override
