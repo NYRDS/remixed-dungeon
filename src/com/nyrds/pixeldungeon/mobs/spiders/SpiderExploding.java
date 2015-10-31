@@ -57,12 +57,9 @@ public class SpiderExploding extends Mob {
 			
 			die(this);
 			
-		} catch (InstantiationException e) {
-			GLog.w(e.getMessage());
-		} catch (IllegalAccessException e) {
-			GLog.w(e.getMessage());
-		}
-		
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		} 
 		return damage;
 	}
 	
