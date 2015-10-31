@@ -60,7 +60,7 @@ public class StartScene extends PixelScene {
 
 	private static final String TXT_ERASE = Game
 			.getVar(R.string.StartScene_Erase);
-	private static final String TXT_DPTH_LVL = Game
+	public static final String TXT_DPTH_LVL = Game
 			.getVar(R.string.StartScene_Depth);
 
 	private static final String TXT_REALLY = Game

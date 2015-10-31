@@ -16,7 +16,7 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 	private String slot;
 	
 	WndSaveSlotSelect(boolean _saving) {
-		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), windowText(), "1", "2", "3", "4", "5", "6", "7", "8", "9");
+		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), windowText(), slotInfos());
 		saving = _saving;
 		
 		if(!saving) {
@@ -42,9 +42,23 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 		return "";
 	}
 	
+	private static String slotNameFromIndex(int i) {
+		return Integer.toString(i+1);
+	}
+	
+	private static String[] slotInfos() {
+		String[] ret = new String[10];
+		
+		for(int i = 0;i<ret.length;i++) {
+			ret[i] = SaveUtils.slotInfo(slotNameFromIndex(i), Dungeon.heroClass);
+		}
+		
+		return ret;
+	}
+	
 	@Override
 	protected void onSelect( int index ) {
-		slot = Integer.toString(index+1);
+		slot = slotNameFromIndex(index);
 		
 		final GameWithGoogleIap.IntersitialPoint returnTo = this;
 		

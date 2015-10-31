@@ -27,6 +27,21 @@ public class GamesInProgress {
 
 	private static Map<HeroClass, Info> state = new HashMap<HeroClass, Info>();
 	
+	public static Info checkFile(String file) {
+		Info info;
+		try {
+			
+			Bundle bundle = Dungeon.gameBundle( file );
+			info = new Info();
+			Dungeon.preview( info, bundle );
+
+		} catch (Exception e) {
+			info = null;
+		}
+		return info;
+		
+	}
+	
 	public static Info check( HeroClass cl ) {
 		
 		if (state.containsKey( cl )) {
@@ -34,21 +49,9 @@ public class GamesInProgress {
 			return state.get( cl );
 			
 		} else {
-			
-			Info info;
-			try {
-				
-				Bundle bundle = Dungeon.gameBundle( SaveUtils.gameFile( cl ) );
-				info = new Info();
-				Dungeon.preview( info, bundle );
-
-			} catch (Exception e) {
-				info = null;
-			}
-			
+			Info info =checkFile(SaveUtils.gameFile( cl ));
 			state.put( cl, info );
 			return info;
-			
 		}
 	}
 	

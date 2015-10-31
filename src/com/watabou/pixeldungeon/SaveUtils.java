@@ -5,8 +5,10 @@ import java.io.File;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class SaveUtils {
@@ -65,6 +67,21 @@ public class SaveUtils {
 		Dungeon.heroClass = heroClass;
 	}
 
+	public static String slotInfo(String slot, HeroClass cl) {
+		if(slotUsed(slot, cl)) {
+			File gameFile = FileSystem.getInteralStorageFile(slot +"/"+ gameFile(cl));
+			
+			Info info = GamesInProgress.checkFile(gameFile.getAbsolutePath());
+			
+			if(info!= null) {
+				return Utils.format(StartScene.TXT_DPTH_LVL, info.depth,
+						info.level);
+			}
+		}
+		
+		return "";
+	}
+	
 	public static boolean slotUsed(String slot, HeroClass cl) {
 		String[] slotFiles = FileSystem.getInteralStorageFile(slot)
 				.getAbsoluteFile().list();
