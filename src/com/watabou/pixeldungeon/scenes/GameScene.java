@@ -380,15 +380,18 @@ public class GameScene extends PixelScene {
 	}
 	
 	public void brightness( boolean value ) {
-		water.rm = water.gm = water.bm = 
-		tiles.rm = tiles.gm = tiles.bm = 
-			value ? 1.5f : 1.0f;
-		if (value) {
-			fog.am = +2f;
-			fog.aa = -1f;
-		} else {
-			fog.am = +1f;
-			fog.aa =  0f;
+		if(fog!=null) {		
+			water.rm = water.gm = water.bm = 
+			tiles.rm = tiles.gm = tiles.bm = 
+				value ? 1.5f : 1.0f;
+			
+			if (value) {
+				fog.am = +2f;
+				fog.aa = -1f;
+			} else {
+				fog.am = +1f;
+				fog.aa =  0f;
+			}
 		}
 	}
 	
