@@ -17,9 +17,12 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -34,8 +37,11 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	
 	public static final String AC_USE = Game.getVar(R.string.ChaosCrystal_Use);
 	public static final String AC_FUSE = Game.getVar(R.string.ChaosCrystal_Fuse);
-
+	private static final String TXT_SELECT_FOR_FUSE = Game.getVar(R.string.ChaosCrystal_SelectForFuse);
+	
 	private static final int CHAOS_CRYSTALL_IMAGE = 9;
+	private static final float TIME_TO_FUSE = 10;
+	
 	
 	private int identetifyLevel = 0;
 	private int charge          = 0;
@@ -85,6 +91,34 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		}
 	};
 	
+	private final WndBag.Listener itemSelector = new WndBag.Listener() {
+		@Override
+		public void onSelect( Item item ) {
+			if (item != null) {
+				if(item instanceof Scroll) {
+					fuseScroll ((Scroll) item );
+				}
+			}
+		}
+	};
+	
+	private void fuse(Hero hero) {
+		
+		GameScene.selectItem( itemSelector, WndBag.Mode.FUSEABLE, TXT_SELECT_FOR_FUSE );
+		hero.getSprite().operate( hero.pos );
+	}
+	
+	protected void fuseScroll(Scroll scroll) {
+		
+		scroll.detach(getCurUser().belongings.backpack);
+		detach(getCurUser().belongings.backpack );
+		getCurUser().getSprite().operate( getCurUser().pos );
+		getCurUser().spend( TIME_TO_FUSE);
+		getCurUser().busy();
+		
+		getCurUser().collect(new ScrollOfWeaponUpgrade());
+	}
+
 	@Override
 	public void execute( final Hero ch, String action ) {
 		setCurUser(ch);
@@ -92,7 +126,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		if (action.equals( AC_USE )) {
 			GameScene.selectCell(chaosMark);
 		} else if(action.equals( AC_FUSE)){
-			ch.spendAndNext(TIME_TO_USE);
+			fuse(ch);
 		} else {
 			
 			super.execute( ch, action );
@@ -161,6 +195,9 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	public void ownerTakesDamage(int damage) {
 		if(damage > 0) {
 			charge++;
+			if(charge > 100) {
+				charge = 100;
+			}
 		}
 	}
 	

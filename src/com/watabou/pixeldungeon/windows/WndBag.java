@@ -69,7 +69,8 @@ public class WndBag extends WndTabbed {
 		WAND,
 		SEED,
 		INSCRIBABLE,
-		MOISTABLE
+		MOISTABLE, 
+		FUSEABLE
 	}
 	
 
@@ -380,6 +381,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.SEED && (item instanceof Seed) ||
 						mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) || 
 						mode == Mode.MOISTABLE && ( item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood ) ||
+						mode == Mode.FUSEABLE && (item instanceof Scroll) ||
 						mode == Mode.ALL
 					);
 				}
