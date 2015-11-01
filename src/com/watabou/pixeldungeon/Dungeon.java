@@ -85,8 +85,6 @@ public class Dungeon {
 	
 	public static HashSet<Integer> chapters;
 	
-	private static boolean gameOver = false;
-	
 	// Hero's field of view
 	public static boolean[] visible;
 	
@@ -147,8 +145,6 @@ public class Dungeon {
 		hero.levelKind = "SewerLevel";
 		
 		SaveUtils.deleteLevels(heroClass);
-		
-		gameOver = false;
 	}
 	
 	public static boolean isChallenged( int mask ) {
@@ -308,16 +304,10 @@ public class Dungeon {
 
 	
 	public static void gameOver(){
-		gameOver = true;
 		Dungeon.deleteGame( true );
 	}
 	
-	public static void saveGame( String fileName, boolean ignoreGameOver ) throws IOException {
-		
-		if(!ignoreGameOver && gameOver) {
-			return;
-		}
-
+	public static void saveGame( String fileName ) throws IOException {
 		Bundle bundle = new Bundle();
 
 		bundle.put(VERSION, Game.version);
@@ -395,7 +385,7 @@ public class Dungeon {
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();
-			saveGame( SaveUtils.gameFile( hero.heroClass ), false );
+			saveGame( SaveUtils.gameFile( hero.heroClass ) );
 			saveLevel();
 			
 			GamesInProgress.set( hero.heroClass, depth, hero.lvl );

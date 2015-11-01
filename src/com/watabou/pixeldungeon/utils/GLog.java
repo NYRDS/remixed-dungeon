@@ -58,7 +58,7 @@ public class GLog {
 			
 			try {
 				logWriter = new FileWriter(logFile,true);
-				toFile("log started!");
+				toFile("log started %s !", Game.version);
 			} catch (Exception e) {
 				throw new RuntimeException("can't create log file", e);
 			}
