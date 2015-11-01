@@ -31,6 +31,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	private static final String CHARGE_KEY = "charge";
 	
 	public static final float TIME_TO_USE = 1;
+	
 	public static final String AC_USE = Game.getVar(R.string.ChaosCrystal_Use);
 	public static final String AC_FUSE = Game.getVar(R.string.ChaosCrystal_Fuse);
 
@@ -51,7 +52,6 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	public ChaosCrystal() {
 		imageFile = "items/artifacts.png";
 		image = CHAOS_CRYSTALL_IMAGE;
-		unique = true;
 	}
 
 	@Override
