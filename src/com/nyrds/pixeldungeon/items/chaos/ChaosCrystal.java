@@ -20,11 +20,15 @@ import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import android.annotation.SuppressLint;
 
 public class ChaosCrystal extends Artifact implements IChaosItem{
+	
+	private static final String IDENTETIFY_LEVEL_KEY = "identetifyLevel";
+	private static final String CHARGE_KEY = "charge";
 	
 	public static final float TIME_TO_USE = 1;
 	public static final String AC_USE = Game.getVar(R.string.ChaosCrystal_Use);
@@ -66,6 +70,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		@Override
 		public void onSelect(Integer cell) {
 			if (cell != null) {
+				charge = 0;
 				CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );
 				Sample.INSTANCE.play( Assets.SND_CRYSTAL );
 				GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
@@ -154,6 +159,25 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 
 	@Override
 	public void ownerTakesDamage(int damage) {
-		charge++;
-	};
+		if(damage > 0) {
+			charge++;
+		}
+	}
+	
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		
+		bundle.put(CHARGE_KEY, charge);
+		bundle.put(IDENTETIFY_LEVEL_KEY, identetifyLevel);
+	}
+	
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		
+		charge = bundle.getInt(CHARGE_KEY);
+		identetifyLevel = bundle.getInt(IDENTETIFY_LEVEL_KEY); 
+		
+	}
 }
