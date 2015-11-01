@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon;
 
+import java.io.IOException;
 import java.util.Locale;
 
 import javax.microedition.khronos.opengles.GL10;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
@@ -54,14 +56,14 @@ public class PixelDungeon extends GameWithGoogleIap {
 		super.onCreate(savedInstanceState);
 		
 
-		//String placeModFilesHere = "placeModFilesHere";
+		String placeModFilesHere = "placeModFilesHere";
 		
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
 			PixelDungeon.moddingMode(false);
 		}
 		ModdingMode.mode(PixelDungeon.moddingMode());
-		/*
+		
 		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
 			try {
 				FileSystem.getExternalStorageFile(placeModFilesHere).createNewFile();
@@ -70,7 +72,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 				e.printStackTrace();
 			}
 		}
-		*/
+		
 		PixelDungeon.instance().initIap();
 		
 		if(PixelDungeon.uiLanguage().equals("ko")) {

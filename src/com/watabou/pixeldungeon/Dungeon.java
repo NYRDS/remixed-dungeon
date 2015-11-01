@@ -183,7 +183,7 @@ public class Dungeon {
 		
 		Dungeon.level = null;
 		updateStatistics();
-		GLog.i("creating: %s %d", pos.levelKind, pos.levelDepth);
+		GLog.toFile("creating level: %s %d", pos.levelKind, pos.levelDepth);
 		Level level = DungeonGenerator.createLevel(pos);
 		
 		initSizeDependentStuff(pos.xs, pos.ys);
@@ -360,7 +360,7 @@ public class Dungeon {
 		Badges.saveLocal(badges);
 		bundle.put(BADGES, badges);
 
-		GLog.i("saving game: %s", fileName);
+		GLog.toFile("saving game: %s", fileName);
 
 		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(fileName));
 		Bundle.write(bundle, output);
@@ -373,8 +373,9 @@ public class Dungeon {
 		
 		Position current =currentPosition();
 		
-		String saveTo = SaveUtils.saveDepthFile( hero.heroClass, current.levelDepth, current.levelKind );		
-		//GLog.i("saving level: %s", saveTo);
+		String saveTo = SaveUtils.depthFile( hero.heroClass, current.levelDepth, current.levelKind );		
+		
+		GLog.toFile("saving level: %s", saveTo);
 		
 		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(saveTo)); 
 		Bundle.write( bundle, output );
@@ -385,10 +386,12 @@ public class Dungeon {
 		float MBytesAvaliable = Game.getAvailableInternalMemorySize()/1024f/1024f;
 		
 		if(MBytesAvaliable < 2){
-			Game.toast("Low memory condition, ");
+			Game.toast("Low memory condition");
+			GLog.toFile("Low memory!!!");
 		}
 		
-		//GLog.i("Saving: %5.2f MBytes avaliable", MBytesAvaliable);
+		GLog.toFile("Saving: %5.2f MBytes available", MBytesAvaliable);
+		
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();
@@ -405,14 +408,16 @@ public class Dungeon {
 	}
 	
 	public static void loadGame( ) throws IOException {
+		GLog.toFile("load Game");
 		loadGame( SaveUtils.gameFile( heroClass ), true );
 	}
 	
-	public static void loadGame( String fileName ) throws IOException {
+	public static void loadGameForRankings( String fileName ) throws IOException {
 		loadGame( fileName, false );
 	}
 	
 	public static void loadGame( String fileName, boolean fullLoad ) throws IOException {
+		GLog.toFile("load Game %s",fileName);
 		
 		Bundle bundle = gameBundle( fileName );
 		
@@ -477,9 +482,9 @@ public class Dungeon {
 	}
 	
 	public static Level loadLevel(Position next ) throws IOException {
-		String loadFrom = SaveUtils.loadDepthFile( heroClass , next.levelDepth, next.levelKind);
+		String loadFrom = SaveUtils.depthFile( heroClass , next.levelDepth, next.levelKind);
 		
-		GLog.i("loading level: %s", loadFrom);
+		GLog.toFile("loading level: %s", loadFrom);
 		
 		InputStream input;
 		
@@ -487,6 +492,7 @@ public class Dungeon {
 			input = new FileInputStream(FileSystem.getFile(loadFrom));
 			Dungeon.level = null;
 		} else {
+			GLog.toFile("File %s not found!", loadFrom);
 			return null;
 		}
 		
@@ -497,15 +503,13 @@ public class Dungeon {
 		if(level != null){
 			initSizeDependentStuff(level.getWidth(), level.getHeight());
 		} else {
-			GLog.w("cannot load %s \n", loadFrom);
+			GLog.toFile("cannot load %s !", loadFrom);
 		}
 		return level;
-		
-		
 	}
 	
 	public static void deleteGame(boolean deleteLevels ) {
-		
+		GLog.toFile("deleteGame");
 		SaveUtils.deleteGameFile(heroClass);
 		
 		if (deleteLevels) {

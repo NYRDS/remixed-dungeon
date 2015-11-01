@@ -76,7 +76,7 @@ public class WndRanking extends WndTabbed {
 			public void run() {
 				try {
 					Badges.loadGlobal();
-					Dungeon.loadGame( gameFile );
+					Dungeon.loadGameForRankings( gameFile );
 				} catch (Exception e ) {
 					error = TXT_ERROR + "->" +e.getMessage();
 					GLog.i(error);

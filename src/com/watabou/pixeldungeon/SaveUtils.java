@@ -8,14 +8,12 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class SaveUtils {
-	private static final String RG_GAME_FILE = "game.dat";
-	private static final String RG_DEPTH_FILE = "depth%d.dat";
-
-	private static final String RG2_GAME_FILE = "rogue.dat";
-	private static final String RG2_DEPTH_FILE = "rogue%d.dat";
+	private static final String RG_GAME_FILE = "rogue.dat";
+	private static final String RG_DEPTH_FILE = "rogue%d.dat";
 
 	private static final String WR_GAME_FILE = "warrior.dat";
 	private static final String WR_DEPTH_FILE = "warrior%d.dat";
@@ -31,10 +29,8 @@ public class SaveUtils {
 
 	static private boolean hasClassTag(HeroClass cl, String fname) {
 		switch (cl) {
-		default:
 		case ROGUE:
-			return fname.equals(RG_GAME_FILE) || fname.contains("depth")
-					|| fname.contains("rogue");
+			return fname.contains("rogue");
 		case WARRIOR:
 			return fname.contains("warrior");
 		case HUNTRESS:
@@ -43,21 +39,28 @@ public class SaveUtils {
 			return fname.contains("mage");
 		case ELF:
 			return fname.contains("elf");
+		default:
+			throw new RuntimeException("unknown hero class!");
 		}
 	}
 
 	public static void loadGame(String slot, HeroClass heroClass) {
+
+		GLog.toFile("Loading: class :%s slot: %s", heroClass.toString(), slot);
+
 		Dungeon.deleteGame(true);
 
 		String[] files = FileSystem.getInteralStorageFile(slot).list();
 
 		for (String file : files) {
 			if (isRelatedTo(file, heroClass)) {
-				//GLog.i("restoring: %s", file);
-				FileSystem.copyFile(
-						FileSystem.getInteralStorageFile(slot + "/" + file)
-								.getAbsolutePath(), FileSystem
-								.getInteralStorageFile(file).getAbsolutePath());
+
+				String from = FileSystem.getInteralStorageFile(slot + "/" + file).getAbsolutePath();
+				String to = FileSystem.getInteralStorageFile(file).getAbsolutePath();
+
+				GLog.toFile("restoring file: %s, (%s -> %s)", file, from, to);
+
+				FileSystem.copyFile(from, to);
 			}
 		}
 
@@ -103,7 +106,7 @@ public class SaveUtils {
 	}
 	
 	public static void copySaveToSlot(String slot, HeroClass cl) {
-
+		GLog.toFile("Saving: class :%s slot: %s", cl.toString(), slot);
 		
 		File slotDir = FileSystem.getInteralStorageFile(slot)
 				.getAbsoluteFile();
@@ -114,8 +117,10 @@ public class SaveUtils {
 			for (File file : slotFiles) {
 				String path = file.getAbsolutePath();
 				if (isRelatedTo(path, cl)) {
-					//GLog.i("deleting: %s", path);
-					file.delete();
+					GLog.toFile("deleting %s", path);
+					if(!file.delete()) {
+						GLog.toFile("Failed to delete file: %s !", path);
+					}
 				}
 			}
 		}
@@ -124,27 +129,36 @@ public class SaveUtils {
 
 		for (String file : files) {
 			if (isRelatedTo(file, cl)) {
-				FileSystem.copyFile(FileSystem.getInteralStorageFile(file)
-						.getAbsolutePath(),
-						FileSystem.getInteralStorageFile(slot + "/" + file)
-								.getAbsolutePath());
+				
+				String from = FileSystem.getInteralStorageFile(file).getAbsolutePath();
+				String to = FileSystem.getInteralStorageFile(slot + "/" + file).getAbsolutePath();
+				
+				GLog.toFile("storing file: %s, (%s -> %s)", file, from, to);
+				
+				FileSystem.copyFile(from,to);
 			}
 		}
 	}
 
 	public static void deleteLevels(HeroClass cl) {
+		GLog.toFile("Deleting levels: class :%s", cl.toString());
+		
 		String[] files = Game.instance().fileList();
 
 		for (String file : files) {
 			if (file.endsWith(".dat") && hasClassTag(cl, file)) {
-				// GLog.i("deleting: %s", file);
-				Game.instance().deleteFile(file);
+				GLog.toFile("deleting: %s", file);
+				if(!Game.instance().deleteFile(file)){
+					GLog.toFile("Failed to delete file: %s !", file);
+				}
 			}
 		}
 	}
 
 	public static void deleteGameFile(HeroClass cl) {
-		Game.instance().deleteFile(gameFile(cl));
+		String gameFile = gameFile(cl);
+		GLog.toFile("Deleting gamefile: class :%s file: %s", cl.toString(), gameFile);
+		Game.instance().deleteFile(gameFile);
 	}
 
 	public static String gameFile(HeroClass cl) {
@@ -152,14 +166,10 @@ public class SaveUtils {
 		if (ModdingMode.mode()) {
 			return "modding.dat";
 		}
-
 		switch (cl) {
 		case WARRIOR:
 			return WR_GAME_FILE;
 		case ROGUE:
-			if (FileSystem.getFile(RG2_GAME_FILE).exists()) {
-				return RG2_GAME_FILE;
-			}
 			return RG_GAME_FILE;
 		case MAGE:
 			return MG_GAME_FILE;
@@ -168,45 +178,12 @@ public class SaveUtils {
 		case ELF:
 			return EL_GAME_FILE;
 		default:
-			return RG_GAME_FILE;
+			throw new RuntimeException("unknown hero class!");
 		}
 	}
 
-	public static String saveDepthFile(HeroClass cl, int depth, String levelKind) {
-		return Utils.format(levelKind + "_" + _depthFile2(cl), depth);
-	}
-
-	public static String loadDepthFile(HeroClass cl, int depth, String levelKind) {
-
-		String fname = Utils.format(levelKind + "_" + _depthFile2(cl), depth);
-		// GLog.i("trying: %s", fname);
-		if (FileSystem.getFile(fname).exists()) {
-			return fname;
-		}
-
-		return Utils.format(_depthFile(cl), depth);
-	}
-
-	private static String _depthFile2(HeroClass cl) {
-
-		if (ModdingMode.mode()) {
-			return "modding%d.dat";
-		}
-
-		switch (cl) {
-		case WARRIOR:
-			return WR_DEPTH_FILE;
-		case ROGUE:
-			return RG2_DEPTH_FILE;
-		case MAGE:
-			return MG_DEPTH_FILE;
-		case HUNTRESS:
-			return RN_DEPTH_FILE;
-		case ELF:
-			return EL_DEPTH_FILE;
-		default:
-			return RG_DEPTH_FILE;
-		}
+	public static String depthFile(HeroClass cl, int depth, String levelKind) {
+		return Utils.format(levelKind + "_" + _depthFile(cl), depth);
 	}
 
 	private static String _depthFile(HeroClass cl) {
@@ -227,7 +204,7 @@ public class SaveUtils {
 		case ELF:
 			return EL_DEPTH_FILE;
 		default:
-			return RG_DEPTH_FILE;
+			throw new RuntimeException("unknown hero class!");
 		}
 	}
 }
