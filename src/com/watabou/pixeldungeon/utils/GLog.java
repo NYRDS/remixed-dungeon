@@ -43,8 +43,13 @@ public class GLog {
 	public static Signal<String> update = new Signal<String>();
 	
 	private static FileWriter logWriter;
+	private static boolean readonlySd = false;
 	
 	public static synchronized void toFile(String text, Object... args) {
+		if(readonlySd) {
+			return;
+		}
+		
 		if(logWriter==null) {
 			File logFile = FileSystem.getExternalStorageFile(RE_PD_LOG_FILE_LOG);
 			
@@ -52,7 +57,9 @@ public class GLog {
 				try {
 					logFile.createNewFile();
 				} catch (IOException e) {
-					throw new RuntimeException("can't create new log file", e);
+					readonlySd = true;
+					return;
+					//throw new RuntimeException("can't create new log file", e);
 				}
 			}
 			
@@ -60,7 +67,9 @@ public class GLog {
 				logWriter = new FileWriter(logFile,true);
 				toFile("log started %s !", Game.version);
 			} catch (Exception e) {
-				throw new RuntimeException("can't create log file", e);
+				readonlySd = true;
+				return;
+				//throw new RuntimeException("can't create log file", e);
 			}
 		}
 		
