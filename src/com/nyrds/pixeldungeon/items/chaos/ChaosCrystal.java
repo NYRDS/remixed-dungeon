@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -105,6 +106,10 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
+				
+				if(item.isEquipped(getCurUser())) {
+					((EquipableItem) item).doUnequip(getCurUser(), true);
+				}
 				
 				item.detach(getCurUser().belongings.backpack);
 				detach(getCurUser().belongings.backpack );
