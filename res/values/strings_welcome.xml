@@ -34,4 +34,9 @@
         - Game mode where you can save and load game\n
         - And much more less noticeable stuff\n
         </string>
+        <string name="Welcome_Text_20_1">
+        remix.20.1:\n
+        - Scroll of Domination\n
+        - Scroll of Curse\n
+        </string>
 </resources>
