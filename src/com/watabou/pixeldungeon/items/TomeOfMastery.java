@@ -121,10 +121,7 @@ public class TomeOfMastery extends Item {
 	public void choose( HeroSubClass way ) {
 		
 		detach( getCurUser().belongings.backpack );
-		
-		getCurUser().spend( TomeOfMastery.TIME_TO_READ );
-		getCurUser().busy();
-		
+				
 		getCurUser().subClass = way;
 		
 		getCurUser().getSprite().operate( getCurUser().pos );
@@ -136,6 +133,10 @@ public class TomeOfMastery extends Item {
 		
 		getCurUser().checkIfFurious();
 		GameScene.updateHeroSprite(getCurUser());
+		
+		getCurUser().spendAndNext( TomeOfMastery.TIME_TO_READ );
+		getCurUser().busy();
+
 		
 	}
 }
