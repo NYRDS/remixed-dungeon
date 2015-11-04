@@ -174,7 +174,7 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 12,53,  22,63 ) );
 			break;
 		case MIND_CONTROL:
-			icon.frame( icon.texture.uvRect( 14,71,  26,80 ) );
+			icon.frame( icon.texture.uvRect( 13,69,  27,78 ) );
 			break;
 		}
 		return icon;

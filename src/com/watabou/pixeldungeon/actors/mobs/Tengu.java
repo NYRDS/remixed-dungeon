@@ -153,7 +153,7 @@ public class Tengu extends Boss {
 		} while (
 			!Dungeon.level.fieldOfView[newPos] || 
 			!Dungeon.level.passable[newPos] || 
-			Dungeon.level.adjacent( newPos, enemy.pos ) ||
+			Dungeon.level.adjacent( newPos, getEnemy().pos ) ||
 			Actor.findChar( newPos ) != null);
 		
 		getSprite().move( pos, newPos );

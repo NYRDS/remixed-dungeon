@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.wands.WandOfAmok;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
@@ -113,6 +114,11 @@ public enum HeroClass {
 		hero.collect(new LloydsBeacon());
 		hero.collect(new ChaosCrystal());
 		
+		hero.ht(1000);
+		hero.hp(1000);
+		hero.collect(new WandOfAmok().upgrade(10));
+		hero.collect(new Glaive().upgrade(10));
+		
 		for(int i = 0;i<5;i++) {
 			hero.collect(new ScrollOfIdentify());
 			hero.collect(new ScrollOfMagicMapping());
@@ -125,9 +131,9 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		if (ModdingMode.mode()) {
+		//if (ModdingMode.mode()) {
 			initDebug(hero);
-		}
+		//}
 
 		QuickSlot.cleanStorage();
 	}

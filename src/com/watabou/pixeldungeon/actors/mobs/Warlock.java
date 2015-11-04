@@ -152,22 +152,22 @@ public class Warlock extends Mob implements Callback {
 	private void zap() {
 		spend(TIME_TO_ZAP);
 
-		if (hit(this, enemy, true)) {
-			if (enemy == Dungeon.hero && Random.Int(2) == 0) {
-				Buff.prolong(enemy, Weakness.class, Weakness.duration(enemy));
+		if (hit(this, getEnemy(), true)) {
+			if (getEnemy() == Dungeon.hero && Random.Int(2) == 0) {
+				Buff.prolong(getEnemy(), Weakness.class, Weakness.duration(getEnemy()));
 			}
 
 			int dmg = Random.Int(12, 18);
-			enemy.damage(dmg, this);
+			getEnemy().damage(dmg, this);
 
-			if (!enemy.isAlive() && enemy == Dungeon.hero) {
+			if (!getEnemy().isAlive() && getEnemy() == Dungeon.hero) {
 				Dungeon.fail(Utils.format(ResultDescriptions.MOB,
 						Utils.indefinite(getName()), Dungeon.depth));
 				GLog.n(TXT_SHADOWBOLT_KILLED, getName());
 			}
 		} else {
-			enemy.getSprite().showStatus(CharSprite.NEUTRAL,
-					enemy.defenseVerb());
+			getEnemy().getSprite().showStatus(CharSprite.NEUTRAL,
+					getEnemy().defenseVerb());
 		}
 	}
 

@@ -69,7 +69,7 @@ public abstract class Mob extends Char {
 	protected int EXP = 1;
 	protected int maxLvl = 30;
 
-	protected Char enemy;
+	private Char enemy;
 	protected boolean enemySeen;
 	protected boolean alerted = false;
 
@@ -97,7 +97,7 @@ public abstract class Mob extends Char {
 	
 	public static Mob makePet(Mob pet, Hero hero) {
 		pet.fraction = Fraction.HEROES;
-		pet.enemy = DUMMY;
+		pet.setEnemy(DUMMY);
 		hero.addPet(pet);
 		
 		return pet;
@@ -194,18 +194,36 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		enemy = chooseEnemy();
+		setEnemy(chooseEnemy());
 
-		boolean enemyInFOV = enemy.isAlive() && Dungeon.level.fieldOfView[enemy.pos]
-				&& enemy.invisible <= 0;
+		boolean enemyInFOV = getEnemy().isAlive() && Dungeon.level.fieldOfView[getEnemy().pos]
+				&& getEnemy().invisible <= 0;
 
 		return state.act(enemyInFOV, justAlerted);
 	}
 
+	private Char chooseNearestEnemy() {
+
+		Char bestEnemy = Dungeon.hero;
+		int dist   = Dungeon.level.distance(pos, enemy.pos);
+		
+		for (Mob mob : Dungeon.level.mobs) {
+			if(mob != this) {
+				int candidateDist = Dungeon.level.distance(pos, mob.pos);
+				if (candidateDist <= dist) {
+					bestEnemy = mob;
+					dist = candidateDist;
+				}
+			}
+		}
+		
+		return bestEnemy;
+	}
+	
 	private Char chooseEnemyFromFraction( Fraction enemyFraction ) {
 		HashSet<Mob> enemies = new HashSet<Mob>();
 		for (Mob mob : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[mob.pos] && mob.fraction.equals(enemyFraction)) {
+			if (Dungeon.level.fieldOfView[mob.pos] && mob.fraction.equals(enemyFraction) && mob != this) {
 				enemies.add(mob);
 			}
 		}
@@ -214,27 +232,14 @@ public abstract class Mob extends Char {
 			return Random.element(enemies);
 		}
 		
-		return null;
+		return DUMMY;
 	}
 	
 	private Char chooseEnemyDungeon() {
-		if (buff(Amok.class) != null) {
-			if (enemy == Dungeon.hero || enemy == null) {
-				Char newEnemy = chooseEnemyFromFraction(Fraction.DUNGEON);
-				
-				if(newEnemy != null) {
-					return newEnemy;
-				}
-
-			} else {
-				return enemy;
-			}
-		}
-		
-		if (enemy == Dungeon.hero || enemy == null) {
+		if (getEnemy() == Dungeon.hero || getEnemy() == DUMMY) {
 			Char newEnemy = chooseEnemyFromFraction(Fraction.HEROES);
 			
-			if(newEnemy != null) {
+			if(newEnemy != DUMMY) {
 				return newEnemy;
 			}
 		}
@@ -243,19 +248,10 @@ public abstract class Mob extends Char {
 	}
 	
 	private Char chooseEnemyHeroes() {
-		
-		if (buff(Amok.class) != null) {
-			return chooseEnemyDungeon();
-		}
-		
-		if (enemy == null) {
-			enemy = DUMMY;
-		}
-		
-		if (enemy == DUMMY || !enemy.isAlive()) {
+		if (getEnemy() == DUMMY ) {
 			Char newEnemy = chooseEnemyFromFraction(Fraction.DUNGEON);
 			
-			if(newEnemy != null) {
+			if(newEnemy != DUMMY) {
 				return newEnemy;
 			}
 			
@@ -265,20 +261,33 @@ public abstract class Mob extends Char {
 			return DUMMY;
 		}
 		
-		return enemy;
+		return getEnemy();
 	}
 	
 	protected Char chooseEnemy() {
+		if (getEnemy() == null) {
+			setEnemy(DUMMY);
+		}
+		
+		if(!getEnemy().isAlive()) {
+			setEnemy(DUMMY);
+		}
 		
 		Terror terror = (Terror) buff(Terror.class);
 		if (terror != null) {
 			return terror.source;
 		}
 		
-		if(enemy instanceof Mob) {
-			Mob enemyMob = (Mob) enemy;
+		if (buff(Amok.class) != null) {
+			if(getEnemy()==Dungeon.hero) {
+				return chooseNearestEnemy();
+			}
+		}
+		
+		if(getEnemy() instanceof Mob) {
+			Mob enemyMob = (Mob) getEnemy();
 			if(enemyMob.fraction == fraction) {
-				enemy = DUMMY;
+				setEnemy(DUMMY);
 			}
 		}
 		
@@ -402,7 +411,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void onAttackComplete() {
-		attack(enemy);
+		attack(getEnemy());
 		super.onAttackComplete();
 	}
 
@@ -549,14 +558,14 @@ public abstract class Mob extends Char {
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			if (enemyInFOV
-					&& Random.Int(distance(enemy) + enemy.stealth()
-							+ (enemy.flying ? 2 : 0)) == 0) {
+					&& Random.Int(distance(getEnemy()) + getEnemy().stealth()
+							+ (getEnemy().flying ? 2 : 0)) == 0) {
 
 				enemySeen = true;
 
 				notice();
 				state = HUNTING;
-				target = enemy.pos;
+				target = getEnemy().pos;
 
 				if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
 					for (Mob mob : Dungeon.level.mobs) {
@@ -592,14 +601,14 @@ public abstract class Mob extends Char {
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			if (enemyInFOV
-					&& (justAlerted || Random.Int(distance(enemy) / 2
-							+ enemy.stealth()) == 0)) {
+					&& (justAlerted || Random.Int(distance(getEnemy()) / 2
+							+ getEnemy().stealth()) == 0)) {
 
 				enemySeen = true;
 
 				notice();
 				state = HUNTING;
-				target = enemy.pos;
+				target = getEnemy().pos;
 
 			} else {
 
@@ -632,14 +641,14 @@ public abstract class Mob extends Char {
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = enemyInFOV;
-			if (enemyInFOV && canAttack(enemy)) {
+			if (enemyInFOV && canAttack(getEnemy())) {
 
-				return doAttack(enemy);
+				return doAttack(getEnemy());
 
 			} else {
 
 				if (enemyInFOV) {
-					target = enemy.pos;
+					target = getEnemy().pos;
 				}
 
 				int oldPos = pos;
@@ -673,7 +682,7 @@ public abstract class Mob extends Char {
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = enemyInFOV;
 			if (enemyInFOV) {
-				target = enemy.pos;
+				target = getEnemy().pos;
 			}
 
 			int oldPos = pos;
@@ -748,5 +757,13 @@ public abstract class Mob extends Char {
 		}
 		
 		return false;
+	}
+
+	protected Char getEnemy() {
+		return enemy;
+	}
+
+	protected void setEnemy(Char enemy) {
+		this.enemy = enemy;
 	}
 }
