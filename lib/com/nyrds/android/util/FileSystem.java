@@ -2,13 +2,11 @@ package com.nyrds.android.util;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
 import android.content.Context;
-import android.util.Log;
 
 public class FileSystem {
 
