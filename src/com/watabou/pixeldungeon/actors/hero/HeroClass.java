@@ -20,22 +20,28 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfAmok;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
+import com.watabou.pixeldungeon.items.wands.WandOfRegrowth;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -112,24 +118,30 @@ public enum HeroClass {
 		hero.collect(new TomeOfMastery());
 		
 		hero.collect(new LloydsBeacon());
-		hero.collect(new ChaosCrystal());
-		
-		hero.ht(1000);
-		hero.hp(1000);
-		hero.collect(new WandOfAmok().upgrade(10));
-		hero.collect(new Glaive().upgrade(10));
+
+		hero.ht(100);
+		hero.hp(100);
+		hero.collect(new WandOfRegrowth().upgrade(10));
+		hero.collect(new PotionOfLiquidFlame().identify());
+		hero.collect(new ChaosSword());
 		
 		for(int i = 0;i<5;i++) {
-			hero.collect(new ScrollOfIdentify());
-			hero.collect(new ScrollOfMagicMapping());
-			hero.collect(new ScrollOfDomination());
-			hero.collect(new ScrollOfCurse());
+			hero.collect(new ScrollOfWeaponUpgrade().identify());
+			hero.collect(new ScrollOfIdentify().identify());
+			hero.collect(new ScrollOfMagicMapping().identify());
+			hero.collect(new ScrollOfDomination().identify());
+			hero.collect(new ScrollOfCurse().identify());
 		}
 	}
 
 	private static void initCommon(Hero hero) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
+		
+		if(PixelDungeon.isAlpha()) {
+			hero.collect(new ChaosSword().identify());
+			hero.collect(new ChaosCrystal().identify().identify());
+		}
 		
 		if (ModdingMode.mode()) {
 			initDebug(hero);
