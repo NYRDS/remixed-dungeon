@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import android.graphics.RectF;
 
+import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Image;
@@ -382,7 +383,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.SEED && (item instanceof Seed) ||
 						mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) || 
 						mode == Mode.MOISTABLE && ( item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood ) ||
-						mode == Mode.FUSEABLE && (item instanceof Scroll || item instanceof MeleeWeapon)  ||
+						mode == Mode.FUSEABLE && ((item instanceof Scroll || item instanceof MeleeWeapon) && !(item instanceof IChaosItem)) ||
 						mode == Mode.UPGRADABLE_WEAPON && ((item instanceof MeleeWeapon || item instanceof Boomerang ) && (item.isUpgradable())) ||
 						mode == Mode.ALL
 					);

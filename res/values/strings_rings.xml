@@ -98,6 +98,7 @@
     <string name="ChaosCrystal_Fuse">FUSE</string>
     <string name="ChaosCrystal_Prompt">Choose place to set Chaos Mark</string>
     <string name="ChaosCrystal_SelectForFuse">Choose item to fuse Chaos Crysatl in</string>
+    <string name="ChaosCrystal_SwordFused">Crystal absorbs your weapon, and now took the form of an Sword</string>
     
     
 </resources>

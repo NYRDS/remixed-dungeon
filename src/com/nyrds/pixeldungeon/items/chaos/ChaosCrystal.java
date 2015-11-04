@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -45,7 +46,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	
 	
 	private int identetifyLevel = 0;
-	private int charge          = 10;
+	private int charge          = 100;
 	
 	@SuppressWarnings("rawtypes")
 	private static Class[] blobs = {
@@ -117,6 +118,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 				
 				if(item instanceof MeleeWeapon) {
 					getCurUser().collect(new ChaosSword());
+					GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
 				}
 			}
 		}

@@ -22,9 +22,20 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 	
 	@Override
 	public void ownerTakesDamage(int damage) {
+		charge--;
+		if(charge < 0) {
+			charge = 0;
+		}
 		
+		if(level() > 3) {
+			if(charge == 0) {
+				degrade();
+				charge = 10 * level();
+				selectImage();
+			}
+		}
 	}
-
+	
 	@Override
 	public void ownerDoesDamage(int damage) {
 		
@@ -33,8 +44,8 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 		}
 		
 		if(damage > 0) {
-			charge+=10;
-			if(charge>100) {
+			charge++;
+			if(charge > 5 * level()) {
 				upgrade();
 				upgrade(true);
 				selectImage();
