@@ -85,10 +85,14 @@ public class Bones {
 				Bundle bundle = Bundle.read( input );
 				input.close();
 				
-				depth = bundle.getInt( LEVEL );
-				item = (Item)bundle.get( ITEM );
+				if(bundle != null) {
+					depth = bundle.getInt( LEVEL );
+					item = (Item)bundle.get( ITEM );
 				
-				return get();
+					return get();
+				}
+				
+				return null;
 				
 			} catch (IOException e) {
 				return null;
