@@ -33,7 +33,7 @@ public class ScrollOfWeaponUpgrade extends InventoryScroll {
 	
 	{
 		inventoryTitle = Game.getVar(R.string.ScrollOfWeaponUpgrade_InvTitle);
-		mode = WndBag.Mode.WEAPON;
+		mode = WndBag.Mode.UPGRADABLE_WEAPON;
 	}
 	
 	@Override

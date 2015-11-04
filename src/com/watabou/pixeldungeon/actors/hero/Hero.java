@@ -1014,7 +1014,13 @@ public class Hero extends Char {
 			default:
 			}
 		}
-
+		
+		for(Item item:belongings){
+			if(item instanceof IChaosItem && item.isEquipped(this)) {
+					((IChaosItem)item).ownerDoesDamage(damage);
+			}
+		}
+		
 		return damage;
 	}
 
@@ -1050,7 +1056,6 @@ public class Hero extends Char {
 		interrupt();
 		
 		for(Item item:belongings){
-			
 			if(item instanceof IChaosItem && item.isEquipped(this)) {
 				if(!(src instanceof Hunger)) {
 					((IChaosItem)item).ownerTakesDamage(dmg);

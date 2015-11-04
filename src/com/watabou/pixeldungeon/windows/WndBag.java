@@ -70,7 +70,8 @@ public class WndBag extends WndTabbed {
 		SEED,
 		INSCRIBABLE,
 		MOISTABLE, 
-		FUSEABLE
+		FUSEABLE, 
+		UPGRADABLE_WEAPON
 	}
 	
 
@@ -381,7 +382,8 @@ public class WndBag extends WndTabbed {
 						mode == Mode.SEED && (item instanceof Seed) ||
 						mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) || 
 						mode == Mode.MOISTABLE && ( item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood ) ||
-						mode == Mode.FUSEABLE && (item instanceof Scroll) ||
+						mode == Mode.FUSEABLE && (item instanceof Scroll || item instanceof MeleeWeapon)  ||
+						mode == Mode.UPGRADABLE_WEAPON && ((item instanceof MeleeWeapon || item instanceof Boomerang ) && (item.isUpgradable())) ||
 						mode == Mode.ALL
 					);
 				}

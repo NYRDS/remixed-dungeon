@@ -95,13 +95,6 @@ public class Fire extends Blob {
 		}
 	}
 	
-	public void seed( int cell, int amount ) {
-		if (cur[cell] == 0) {
-			volume += amount;
-			cur[cell] = amount;
-		}
-	}
-	
 	@Override
 	public void use( BlobEmitter emitter ) {
 		super.use( emitter );

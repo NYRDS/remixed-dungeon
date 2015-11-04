@@ -19,6 +19,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
@@ -44,7 +45,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	
 	
 	private int identetifyLevel = 0;
-	private int charge          = 0;
+	private int charge          = 10;
 	
 	@SuppressWarnings("rawtypes")
 	private static Class[] blobs = {
@@ -70,17 +71,25 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		return new Glowing( (int) (Math.random() * 0xffffff) );
 	}
 	
+	@SuppressWarnings("unchecked")
+	private void doChaosMark(int cell) {
+		CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );
+		Sample.INSTANCE.play( Assets.SND_CRYSTAL );
+		GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
+		GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
+		charge = 0;
+	}
+	
 	protected CellSelector.Listener chaosMark = new CellSelector.Listener() {
-
-		@SuppressWarnings("unchecked")
 		@Override
 		public void onSelect(Integer cell) {
 			if (cell != null) {
-				charge = 0;
-				CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );
-				Sample.INSTANCE.play( Assets.SND_CRYSTAL );
-				GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
-				GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
+				
+				if(cursed) {
+					cell = getCurUser().pos;
+				}
+				
+				doChaosMark(cell.intValue());
 			}
 			getCurUser().spendAndNext(TIME_TO_USE);
 		}
@@ -95,8 +104,19 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
+				
+				item.detach(getCurUser().belongings.backpack);
+				detach(getCurUser().belongings.backpack );
+				getCurUser().getSprite().operate( getCurUser().pos );
+				getCurUser().spend( TIME_TO_FUSE);
+				getCurUser().busy();
+
 				if(item instanceof Scroll) {
-					fuseScroll ((Scroll) item );
+					getCurUser().collect(new ScrollOfWeaponUpgrade());
+				}
+				
+				if(item instanceof MeleeWeapon) {
+					getCurUser().collect(new ChaosSword());
 				}
 			}
 		}
@@ -108,17 +128,6 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		hero.getSprite().operate( hero.pos );
 	}
 	
-	protected void fuseScroll(Scroll scroll) {
-		
-		scroll.detach(getCurUser().belongings.backpack);
-		detach(getCurUser().belongings.backpack );
-		getCurUser().getSprite().operate( getCurUser().pos );
-		getCurUser().spend( TIME_TO_FUSE);
-		getCurUser().busy();
-		
-		getCurUser().collect(new ScrollOfWeaponUpgrade());
-	}
-
 	@Override
 	public void execute( final Hero ch, String action ) {
 		setCurUser(ch);
@@ -216,5 +225,14 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		charge = bundle.getInt(CHARGE_KEY);
 		identetifyLevel = bundle.getInt(IDENTETIFY_LEVEL_KEY); 
 		
+	}
+
+	@Override
+	public void ownerDoesDamage(int damage) {
+		if(cursed) {
+			if(charge > 0) {
+				doChaosMark(getCurUser().pos);
+			}
+		}
 	}
 }
