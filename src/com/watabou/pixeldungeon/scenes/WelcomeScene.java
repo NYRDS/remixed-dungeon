@@ -77,7 +77,7 @@ public class WelcomeScene extends PixelScene {
       
         text_19.setPos(0, text.height() + GAP);
         text_20.setPos(0,  text.height()+text_19.height() + 2*GAP);
-        text_20_1.setPos(0,  text.height()+text_19.height() + text_20_1.height() + 3*GAP);
+        text_20_1.setPos(0,  text.height()+text_19.height() + text_20.height() + 3*GAP);
         
         content.add(text);
         content.add(text_19);
