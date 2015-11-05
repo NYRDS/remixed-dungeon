@@ -83,7 +83,6 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 
 				if (saving) {
 					try {
-
 						Dungeon.saveAll();
 						SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 
