@@ -63,7 +63,7 @@ public class MeleeWeapon extends Weapon {
 	}
 	
 	public Item safeUpgrade() {
-		return upgrade( enchantment != null );
+		return upgrade( getEnchantment() != null );
 	}
 	
 	@Override
@@ -133,7 +133,7 @@ public class MeleeWeapon extends Weapon {
 		}
 
 		info.append(" ");
-		if (enchantment != null) {
+		if (getEnchantment() != null) {
 			info.append(Game.getVar(R.string.MeleeWeapon_Info5));
 		}
 
@@ -163,7 +163,7 @@ public class MeleeWeapon extends Weapon {
 	@Override
 	public int price() {
 		int price = 20 * (1 << (tier - 1));
-		if (enchantment != null) {
+		if (getEnchantment() != null) {
 			price *= 1.5;
 		}
 		if (cursed && cursedKnown) {

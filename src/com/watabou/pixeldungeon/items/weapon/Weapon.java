@@ -58,7 +58,7 @@ public class Weapon extends KindOfWeapon {
 	
 	private int hitsToKnow = 20;
 	
-	protected Enchantment enchantment;
+	private Enchantment enchantment;
 	
 	public void usedForHit() {
 		if (!levelKnown && --hitsToKnow <= 0) {
@@ -71,8 +71,8 @@ public class Weapon extends KindOfWeapon {
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
 		
-		if (enchantment != null) {
-			enchantment.proc( this, attacker, defender, damage );
+		if (getEnchantment() != null) {
+			getEnchantment().proc( this, attacker, defender, damage );
 		}
 		
 		usedForHit();
@@ -84,7 +84,7 @@ public class Weapon extends KindOfWeapon {
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( ENCHANTMENT, enchantment );
+		bundle.put( ENCHANTMENT, getEnchantment() );
 		bundle.put( IMBUE, imbue );
 	}
 	
@@ -152,7 +152,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	public Item upgrade( boolean enchant ) {		
-		if (enchantment != null) {
+		if (getEnchantment() != null) {
 			if (!enchant && Random.Int( level() ) > 0) {
 				GLog.w( TXT_INCOMPATIBLE );
 				enchant( null );
@@ -173,7 +173,7 @@ public class Weapon extends KindOfWeapon {
 	
 	@Override
 	public String name() {
-		return enchantment == null ? super.name() : enchantment.name( super.name(), gender );
+		return getEnchantment() == null ? super.name() : getEnchantment().name( super.name(), gender );
 	}
 	
 	@Override
@@ -197,19 +197,23 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	public Weapon enchant( Enchantment ench ) {
-		this.enchantment = ench;
+		enchantment = ench;
 		return this;
 	}
 	
 	public boolean isEnchanted() {
-		return enchantment != null;
+		return getEnchantment() != null;
 	}
 	
 	@Override
 	public ItemSprite.Glowing glowing() {
-		return enchantment != null ? enchantment.glowing() : null;
+		return getEnchantment() != null ? getEnchantment().glowing() : null;
 	}
 	
+	public Enchantment getEnchantment() {
+		return enchantment;
+	}
+
 	public static abstract class Enchantment implements Bundlable {
 		
 		protected final String[] TXT_NAME = Utils.getClassParams(getClass().getSimpleName(), "Name", new String[]{"","",""}, true);

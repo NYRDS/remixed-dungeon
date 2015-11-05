@@ -74,6 +74,13 @@ public class MissileWeapon extends Weapon {
 	public void proc(Char attacker, Char defender, int damage) {
 
 		super.proc(attacker, defender, damage);
+		
+		if(this instanceof Arrow) {
+			Arrow arrow = (Arrow) this;
+			if(arrow.firedFrom != null && arrow.firedFrom.isEnchanted()) {
+				arrow.firedFrom.getEnchantment().proc( arrow.firedFrom, attacker, defender, damage );
+			}
+		}
 
 		Hero hero = (Hero) attacker;
 		if (hero.rangedWeapon == null && stackable) {
