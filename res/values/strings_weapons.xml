@@ -211,6 +211,6 @@
     
     <!-- STRINGS OF ChaosSword CLASS -->
     <string name="ChaosSword_Name">chaos sword</string>
-    <string name="ChaosSword_Info">Sword blade made of pure chaos mildly vibrate sometimes. Great powers bound inside of this weapon can cut in halves almost everyone, but looks like those forces require great skill to deal with.</string>
+    <string name="ChaosSword_Info">The blade of the sword is made of pure chaos and it mildly vibrates sometimes. Great power is stored inside the weapon, that can cut in half almost anything. Although, great skills are needed, to cope the mighty force of the weapon.</string>
     <string name="ChaosSword_Gender">masculine</string>
 </resources>
