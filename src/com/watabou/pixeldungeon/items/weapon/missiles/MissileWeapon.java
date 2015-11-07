@@ -67,6 +67,14 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	protected void miss( int cell ) {
+		
+		if(this instanceof Arrow) {
+			Arrow arrow = (Arrow) this;
+			if(arrow.firedFrom != null ) {
+				arrow.firedFrom.onMiss();
+			}
+		}
+		
 		super.onThrow( cell );
 	}
 	

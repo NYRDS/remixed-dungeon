@@ -84,4 +84,9 @@ public class ChaosBow extends Bow implements IChaosItem {
 	public double dmgFactor() {
 		return 1 + level() * 0.3;
 	}
+	
+	@Override
+	public void onMiss() {
+		ChaosCommon.doChaosMark(getCurUser().pos, charge + level());
+	}
 }

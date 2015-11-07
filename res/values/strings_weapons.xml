@@ -213,4 +213,14 @@
     <string name="ChaosSword_Name">chaos sword</string>
     <string name="ChaosSword_Info">The blade of the sword is made of pure chaos and it mildly vibrates sometimes. Great power is stored inside the weapon, that can cut in half almost anything. Although, great skills are needed, to cope the mighty force of the weapon.</string>
     <string name="ChaosSword_Gender">masculine</string>
+    
+    <!-- STRINGS OF ChaosBow CLASS -->
+    <string name="ChaosBow_Name">chaos bow</string>
+    <string name="ChaosBow_Info">A dreadful Bow filled with the power of Chaos. Each arrow fired from it will carry piece of chaos energy to target. But if you miss...</string>
+    <string name="ChaosBow_Gender">masculine</string>
+    
+    <!-- STRINGS OF ChaosStaff CLASS -->
+    <string name="ChaosStaff_Name">chaos staff</string>
+    <string name="ChaosStaff_Info">Staff imbued with Power Of Chaos! What else mage can dream or fear of?</string>
+    <string name="ChaosStaff_Gender">masculine</string>
 </resources>

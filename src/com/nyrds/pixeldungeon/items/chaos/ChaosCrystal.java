@@ -4,18 +4,8 @@ import java.util.ArrayList;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
-import com.watabou.pixeldungeon.actors.blobs.Fire;
-import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
-import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
-import com.watabou.pixeldungeon.actors.blobs.Regrowth;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -30,8 +20,6 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
-
 import android.annotation.SuppressLint;
 
 public class ChaosCrystal extends Artifact implements IChaosItem{
@@ -51,21 +39,6 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	
 	private int identetifyLevel = 0;
 	private int charge          = 100;
-/*	
-	@SuppressWarnings("rawtypes")
-	private static Class[] blobs = {
-		ConfusionGas.class,
-		Fire.class,
-		ParalyticGas.class,
-		Regrowth.class,
-		ToxicGas.class,
-	};
-*/
-	
-	@SuppressWarnings("rawtypes")
-	private static Class[] blobs = {
-		LiquidFlame.class
-	};
 	
 	public ChaosCrystal() {
 		imageFile = "items/artifacts.png";
@@ -82,15 +55,6 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		return new Glowing( (int) (Math.random() * 0xffffff) );
 	}
 	
-	@SuppressWarnings("unchecked")
-	private void doChaosMark(int cell) {
-		CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );
-		Sample.INSTANCE.play( Assets.SND_CRYSTAL );
-		GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
-		GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
-		charge = 0;
-	}
-	
 	protected CellSelector.Listener chaosMark = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer cell) {
@@ -100,7 +64,8 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 					cell = getCurUser().pos;
 				}
 				
-				doChaosMark(cell.intValue());
+				ChaosCommon.doChaosMark(cell.intValue(), charge);
+				charge = 0;
 			}
 			getCurUser().spendAndNext(TIME_TO_USE);
 		}
@@ -175,8 +140,10 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 			actions.add( AC_USE  );
 		}
 		
-		if(charge >= 50 && identetifyLevel > 1) {
-			actions.add( AC_FUSE );
+		if(PixelDungeon.isAlpha()) {
+			if(charge >= 50 && identetifyLevel > 1) {
+				actions.add( AC_FUSE );
+			}
 		}
 		return actions;
 	}
@@ -257,7 +224,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	public void ownerDoesDamage(int damage) {
 		if(cursed) {
 			if(charge > 0) {
-				doChaosMark(getCurUser().pos);
+				ChaosCommon.doChaosMark(getCurUser().pos, charge);
 			}
 		}
 	}

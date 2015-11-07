@@ -41,4 +41,7 @@ public abstract class Bow extends MeleeWeapon {
 	public double dmgFactor() {
 		return 1;
 	}
+
+	public void onMiss() {
+	}
 }

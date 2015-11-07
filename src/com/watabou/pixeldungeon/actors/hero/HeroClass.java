@@ -119,11 +119,11 @@ public enum HeroClass {
 
 		hero.ht(100);
 		hero.hp(100);
-		hero.collect(new PotionOfLiquidFlame().identify());
-		hero.collect(new ChaosSword());
+		hero.collect(new ChaosSword().identify());		
+		hero.collect(new ChaosBow().identify());
+		hero.collect(new ChaosStaff().identify());
 		
-		hero.collect(new ChaosBow());
-		hero.collect(new ChaosStaff());
+		hero.collect(new CommonArrow(100));
 		
 		for(int i = 0;i<5;i++) {
 			hero.collect(new PotionOfLiquidFlame().identify());
@@ -140,7 +140,6 @@ public enum HeroClass {
 		hero.collect(new Ration());
 		
 		if(PixelDungeon.isAlpha()) {
-			hero.collect(new ChaosSword().identify());
 			hero.collect(new ChaosCrystal().identify().identify());
 		}
 		

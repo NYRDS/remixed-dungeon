@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
-    android:versionCode="186"
-    android:versionName="remix.20.2.alpha.4" >
+    android:versionCode="187"
+    android:versionName="remix.20.2.alpha.5" >
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="22" />
+        android:targetSdkVersion="23" />
 
     <uses-feature android:glEsVersion="0x00020000" />
 
