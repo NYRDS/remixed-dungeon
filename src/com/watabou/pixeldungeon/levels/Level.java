@@ -49,6 +49,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Swarm;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Generator;
@@ -1140,5 +1142,22 @@ public abstract class Level implements Bundlable {
 
 	public boolean cellValid(int cell) {
 		return cell > 0 && cell < getLength();
+	}
+
+	public int getEmptyCellNextTo(int cell) {
+		ArrayList<Integer> candidates = new ArrayList<Integer>();
+		
+		for (int n : Level.NEIGHBOURS8) {
+			int p = n + cell;
+			if (passable[p] && Actor.findChar( p ) == null) {
+				candidates.add( p );
+			}
+		}
+		
+		if(candidates.size()>0) {
+			return Random.element(candidates);
+		}
+		
+		return -1;
 	}
 }

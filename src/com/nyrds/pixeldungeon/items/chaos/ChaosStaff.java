@@ -1,6 +1,12 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.utils.Bundle;
 
 public class ChaosStaff extends Wand implements IChaosItem {
@@ -81,6 +87,32 @@ public class ChaosStaff extends Wand implements IChaosItem {
 
 	@Override
 	protected void onZap(int cell) {
+		Char ch = Actor.findChar(cell);
 		
+		if(ch instanceof Mob) {
+			Mob mob = (Mob) ch;
+			//===
+			if(!(mob instanceof Boss)){
+				mob.die(getCurUser());
+			}
+			//===
+			Mob.makePet(mob, getCurUser());
+			//===
+			int nextCell = Dungeon.level.getEmptyCellNextTo(cell);
+			
+			if(nextCell!=-1) {
+				try {
+					Mob newMob = mob.getClass().newInstance();
+					Dungeon.level.spawnMob(newMob);
+				} catch (Exception e) {
+					throw new RuntimeException(e);
+				}
+			}
+			//===
+			WandOfTeleportation.teleport(mob);
+			//===
+			
+			//===
+		}
 	}
 }
