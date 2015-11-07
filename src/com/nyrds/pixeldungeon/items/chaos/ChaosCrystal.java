@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
+import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -20,6 +21,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
+import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -48,7 +51,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	
 	private int identetifyLevel = 0;
 	private int charge          = 100;
-	
+/*	
 	@SuppressWarnings("rawtypes")
 	private static Class[] blobs = {
 		ConfusionGas.class,
@@ -56,6 +59,12 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 		ParalyticGas.class,
 		Regrowth.class,
 		ToxicGas.class,
+	};
+*/
+	
+	@SuppressWarnings("rawtypes")
+	private static Class[] blobs = {
+		LiquidFlame.class
 	};
 	
 	public ChaosCrystal() {
@@ -124,6 +133,16 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 				if(item instanceof MeleeWeapon) {
 					getCurUser().collect(new ChaosSword());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
+				}
+				
+				if(item instanceof Bow) {
+					getCurUser().collect(new ChaosBow());
+					GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
+				}
+				
+				if(item instanceof Wand) {
+					getCurUser().collect(new ChaosStaff());
+					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
 				}
 			}
 		}
@@ -241,5 +260,10 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 				doChaosMark(getCurUser().pos);
 			}
 		}
+	}
+	
+	@Override
+	public int getCharge() {
+		return charge;
 	}
 }

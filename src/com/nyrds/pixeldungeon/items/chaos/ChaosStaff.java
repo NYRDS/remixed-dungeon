@@ -1,18 +1,17 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
-import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
+import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.utils.Bundle;
 
-public class ChaosSword extends SpecialWeapon implements IChaosItem {
+public class ChaosStaff extends Wand implements IChaosItem {
 
 	private int charge = 0;
 	
-	public ChaosSword() {
-		super(3, 1, 1);
+	public ChaosStaff() {
 		
-		imageFile = "items/chaosSword.png";
+		imageFile = "items/chaosStaff.png";
 		image = 0;
-		upgrade(true);
+		upgrade();
 	}
 
 	@Override
@@ -50,7 +49,7 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 		if(damage > 0) {
 			charge++;
 			if(charge > chargeForLevel()) {
-				upgrade(true);
+				upgrade();
 				selectImage();
 				charge = 0;
 			}
@@ -78,5 +77,10 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 	@Override
 	public int getCharge() {
 		return charge;
+	}
+
+	@Override
+	protected void onZap(int cell) {
+		
 	}
 }

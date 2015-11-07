@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
+import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -37,7 +38,7 @@ public class PotionOfLiquidFlame extends Potion {
 		splash( cell );
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		
-		Fire fire = Blob.seed( cell, 2, Fire.class );
+		LiquidFlame fire = Blob.seed( cell, 10, LiquidFlame.class );
 		GameScene.add( fire );
 	}
 	

@@ -1,16 +1,16 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
-import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.utils.Bundle;
 
-public class ChaosSword extends SpecialWeapon implements IChaosItem {
+public class ChaosBow extends Bow implements IChaosItem {
 
 	private int charge = 0;
 	
-	public ChaosSword() {
-		super(3, 1, 1);
+	public ChaosBow() {
+		super( 3, 1f, 1f );
 		
-		imageFile = "items/chaosSword.png";
+		imageFile = "items/chaosBow.png";
 		image = 0;
 		upgrade(true);
 	}
@@ -78,5 +78,10 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 	@Override
 	public int getCharge() {
 		return charge;
+	}
+	
+	@Override
+	public double dmgFactor() {
+		return 1 + level() * 0.3;
 	}
 }

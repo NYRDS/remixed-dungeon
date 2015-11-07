@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
@@ -383,7 +384,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.SEED && (item instanceof Seed) ||
 						mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) || 
 						mode == Mode.MOISTABLE && ( item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood ) ||
-						mode == Mode.FUSEABLE && ((item instanceof Scroll || item instanceof MeleeWeapon) && !(item instanceof IChaosItem)) ||
+						mode == Mode.FUSEABLE && ((item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Bow || item instanceof Wand) && !(item instanceof IChaosItem)) ||
 						mode == Mode.UPGRADABLE_WEAPON && ((item instanceof MeleeWeapon || item instanceof Boomerang ) && (item.isUpgradable())) ||
 						mode == Mode.ALL
 					);

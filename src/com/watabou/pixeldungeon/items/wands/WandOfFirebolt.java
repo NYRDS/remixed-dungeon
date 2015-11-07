@@ -55,7 +55,7 @@ public class WandOfFirebolt extends SimpleWand  {
 		GameScene.add( Blob.seed( cell, 1, Fire.class ) );
 					
 		Char ch = Actor.findChar( cell );
-		if (ch != null) {	
+		if (ch != null) {
 			
 			ch.damage( Random.Int( 1, 8 + level * level ), this );
 			Buff.affect( ch, Burning.class ).reignite( ch );
