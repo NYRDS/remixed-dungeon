@@ -186,4 +186,16 @@
   <string name="Kusarigama_Info">Это оружие состоит из серпа на длинной цепи и тяжелой гири на другом её конце.</string>
   <string name="Kusarigama_Gender">feminine</string>
   <string name="Kusarigama_Pull">ПОДТЯНУТЬ</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">меч хаоса</string>
+  <string name="ChaosSword_Info">Клинок это меча создан из чистого хаоса и иногда слегка подрагивает в предвкушении. Великая сила сокрытая в этом оружии может рассечь пополам почти всё что угодно. Однако чтобы совладать с ней нужно великое мастерство. </string>
+  <string name="ChaosSword_Gender">masculine</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">лук хаоса</string>
+  <string name="ChaosBow_Info">Устрашающий лук напитанный силой Хаоса. Каждая стрела впущенная из него донесет до цели частицу хаотичной энергии. Но если ты промахнешься...</string>
+  <string name="ChaosBow_Gender">masculine</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">посох хаоса</string>
+  <string name="ChaosStaff_Info">Посох пропитанный Силами Хаоса! О чем еще может мечтать и чего еще бояться маг?</string>
+  <string name="ChaosStaff_Gender">masculine</string>
 </resources>
