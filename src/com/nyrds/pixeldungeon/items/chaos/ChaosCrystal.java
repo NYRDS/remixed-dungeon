@@ -38,7 +38,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 	
 	
 	private int identetifyLevel = 0;
-	private int charge          = 100;
+	private int charge          = 0;
 	
 	public ChaosCrystal() {
 		imageFile = "items/artifacts.png";
@@ -92,7 +92,9 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 				getCurUser().busy();
 
 				if(item instanceof Scroll) {
-					getCurUser().collect(new ScrollOfWeaponUpgrade());
+					Item newItem= new ScrollOfWeaponUpgrade();
+					getCurUser().collect(newItem);
+					GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
 				}
 				
 				if(item instanceof MeleeWeapon) {

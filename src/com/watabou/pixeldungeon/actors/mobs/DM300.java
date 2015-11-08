@@ -23,6 +23,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -51,7 +52,13 @@ public class DM300 extends Boss {
 		EXP = 30;
 		defenseSkill = 18;
 		
-		loot = new RingOfThorns().random();
+		float dice = Random.Float();
+		if( dice < 0.5 ) {
+			loot = new ChaosCrystal();
+		} else {
+			loot = new RingOfThorns().random();
+		}
+		
 		lootChance = 0.333f;
 		
 		IMMUNITIES.add( ToxicGas.class );

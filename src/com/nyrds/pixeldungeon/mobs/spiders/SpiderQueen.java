@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -7,7 +8,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.utils.Random;
 
 public class SpiderQueen extends Boss {
@@ -21,7 +21,7 @@ public class SpiderQueen extends Boss {
 		EXP = 11;
 		maxLvl = 21;
 		
-		loot = ScrollOfWeaponUpgrade.class;
+		loot = new ChaosCrystal();
 		lootChance = 1f;
 		
 		Buff.affect(this, Regeneration.class);

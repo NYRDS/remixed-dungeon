@@ -27,10 +27,12 @@ public class ChaosCommon {
 	
 	@SuppressWarnings("unchecked")
 	public static void doChaosMark(int cell, int charge) {
-		CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );
-		Sample.INSTANCE.play( Assets.SND_CRYSTAL );
-		GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
-		GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
-		charge = 0;
+		if(charge > 0) {
+			CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );
+			Sample.INSTANCE.play( Assets.SND_CRYSTAL );
+			GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
+			GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
+			charge = 0;
+		}
 	}
 }

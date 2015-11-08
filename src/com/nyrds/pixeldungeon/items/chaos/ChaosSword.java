@@ -30,7 +30,7 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 			charge = 0;
 		}
 		
-		if(level() > 0) {
+		if(level() > 3) {
 			if(charge == 0) {
 				degrade();
 				charge = chargeForLevel();

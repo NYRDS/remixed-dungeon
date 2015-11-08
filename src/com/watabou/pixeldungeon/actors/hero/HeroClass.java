@@ -139,10 +139,6 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		if(PixelDungeon.isAlpha()) {
-			hero.collect(new ChaosCrystal().identify().identify());
-		}
-		
 		if (ModdingMode.mode()) {
 			initDebug(hero);
 		}
