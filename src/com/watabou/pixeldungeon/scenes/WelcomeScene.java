@@ -21,6 +21,8 @@ public class WelcomeScene extends PixelScene {
     private static final String TXT_Welcome_19 = Game.getVar(R.string.Welcome_Text_19);
     private static final String TXT_Welcome_20 = Game.getVar(R.string.Welcome_Text_20);
     private static final String TXT_Welcome_20_1 = Game.getVar(R.string.Welcome_Text_20_1);
+    private static final String TXT_Welcome_21 = Game.getVar(R.string.Welcome_Text_20_2);
+
     
     private static final int GAP = 4;
 
@@ -32,6 +34,8 @@ public class WelcomeScene extends PixelScene {
         Text text_19 = createMultiline(TXT_Welcome_19, 8);
         Text text_20 = createMultiline(TXT_Welcome_20, 8);
         Text text_20_1 = createMultiline(TXT_Welcome_20_1, 8);
+        Text text_21 = createMultiline(TXT_Welcome_21, 8);
+        
         Text title   = createMultiline(TTL_Welcome, 16);
 
         int w = Camera.main.width;
@@ -69,22 +73,27 @@ public class WelcomeScene extends PixelScene {
         text_19.maxWidth((int) panel.innerWidth());
         text_20.maxWidth((int) panel.innerWidth());
         text_20_1.maxWidth((int) panel.innerWidth());
+        text_21.maxWidth((int) panel.innerWidth());
         
         text.measure();
         text_19.measure();
         text_20.measure();
         text_20_1.measure();
+        text_21.measure();
       
         text_19.setPos(0, text.height() + GAP);
         text_20.setPos(0,  text.height()+text_19.height() + 2*GAP);
         text_20_1.setPos(0,  text.height()+text_19.height() + text_20.height() + 3*GAP);
+        text_21.setPos(0,  text.height()+text_19.height() + text_20.height() + text_20_1.height() + 4*GAP);
         
         content.add(text);
         content.add(text_19);
         content.add(text_20);
         content.add(text_20_1);
+        content.add(text_21);
 
-        content.setSize( panel.innerWidth(), text.height() + text_19.height() + text_20.height() + text_20_1.height() + 3*GAP );
+
+        content.setSize( panel.innerWidth(), text.height() + text_19.height() + text_20.height() + text_20_1.height()+text_21.height() + 4*GAP );
 
         RedButton okay = new RedButton("Okay!") {
             @Override
