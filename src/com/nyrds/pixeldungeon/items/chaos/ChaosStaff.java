@@ -21,7 +21,6 @@ public class ChaosStaff extends Wand implements IChaosItem {
 
 		imageFile = "items/chaosStaff.png";
 		image = 0;
-		upgrade();
 	}
 
 	@Override
@@ -65,10 +64,10 @@ public class ChaosStaff extends Wand implements IChaosItem {
 	@Override
 	protected void onZap(int cell) {
 
-		ChaosCommon.doChaosMark(cell, level() * 10 + charge);
+		ChaosCommon.doChaosMark(cell, 10 + level() * 10 + charge);
 		charge = 0;
 
-		if (Math.random() < 0.01f) {
+		if (Math.random() < 0.1f) {
 			Char ch = Actor.findChar(cell);
 			if (ch instanceof Mob) {
 				Mob mob = (Mob) ch;

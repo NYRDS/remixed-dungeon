@@ -12,7 +12,6 @@ public class ChaosBow extends Bow implements IChaosItem {
 		
 		imageFile = "items/chaosBow.png";
 		image = 0;
-		upgrade(true);
 	}
 
 	@Override
@@ -87,6 +86,6 @@ public class ChaosBow extends Bow implements IChaosItem {
 	
 	@Override
 	public void onMiss() {
-		ChaosCommon.doChaosMark(getCurUser().pos, charge + level());
+		ChaosCommon.doChaosMark(getCurUser().pos, charge + 3*level());
 	}
 }

@@ -12,7 +12,6 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 		
 		imageFile = "items/chaosSword.png";
 		image = 0;
-		upgrade(true);
 	}
 
 	@Override
