@@ -487,15 +487,17 @@ public abstract class Char extends Actor {
 	public int stealth() {
 		return 0;
 	}
-	
-	public void move( int step ) {
-		
-		if (buff( Vertigo.class ) != null) {
+
+	public void move(int step) {
+
+		if (buff(Vertigo.class) != null) {
 			List<Integer> candidates = new ArrayList<Integer>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = pos + dir;
-				if ((Dungeon.level.passable[p] || Dungeon.level.avoid[p]) && Actor.findChar( p ) == null) {
-					candidates.add( p );
+				if (Dungeon.level.cellValid(p)) {
+					if ((Dungeon.level.passable[p] || Dungeon.level.avoid[p]) && Actor.findChar(p) == null) {
+						candidates.add(p);
+					}
 				}
 			}
 			
