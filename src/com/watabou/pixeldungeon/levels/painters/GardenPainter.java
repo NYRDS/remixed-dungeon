@@ -36,7 +36,11 @@ public class GardenPainter extends Painter {
 		
 		int bushes = Random.Int( 3 ) == 0 ? (Random.Int( 5 ) == 0 ? 2 : 1) : 0;
 		for (int i=0; i < bushes; i++) {
-			level.plant( new Sungrass.Seed(), room.random(level) );
+			int cellToPlant = room.random(level);
+			
+			if(level.plants.get(cellToPlant)==null) {
+				level.plant( new Sungrass.Seed(), cellToPlant );
+			}
 		}
 		
 		Foliage light = (Foliage)level.blobs.get( Foliage.class );
