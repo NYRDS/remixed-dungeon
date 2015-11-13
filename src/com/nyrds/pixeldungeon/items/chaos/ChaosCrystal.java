@@ -22,24 +22,23 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 import android.annotation.SuppressLint;
 
-public class ChaosCrystal extends Artifact implements IChaosItem{
-	
+public class ChaosCrystal extends Artifact implements IChaosItem {
+
 	private static final String IDENTETIFY_LEVEL_KEY = "identetifyLevel";
 	private static final String CHARGE_KEY = "charge";
-	
+
 	public static final float TIME_TO_USE = 1;
-	
+
 	public static final String AC_USE = Game.getVar(R.string.ChaosCrystal_Use);
 	public static final String AC_FUSE = Game.getVar(R.string.ChaosCrystal_Fuse);
 	private static final String TXT_SELECT_FOR_FUSE = Game.getVar(R.string.ChaosCrystal_SelectForFuse);
-	
+
 	private static final int CHAOS_CRYSTALL_IMAGE = 9;
 	private static final float TIME_TO_FUSE = 10;
-	
-	
+
 	private int identetifyLevel = 0;
-	private int charge          = 0;
-	
+	private int charge = 0;
+
 	public ChaosCrystal() {
 		imageFile = "items/artifacts.png";
 		image = CHAOS_CRYSTALL_IMAGE;
@@ -52,18 +51,18 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 
 	@Override
 	public Glowing glowing() {
-		return new Glowing( (int) (Math.random() * 0xffffff) );
+		return new Glowing((int) (Math.random() * 0xffffff));
 	}
-	
+
 	protected CellSelector.Listener chaosMark = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer cell) {
 			if (cell != null) {
-				
-				if(cursed) {
+
+				if (cursed) {
 					cell = getCurUser().pos;
 				}
-				
+
 				ChaosCommon.doChaosMark(cell.intValue(), charge);
 				charge = 0;
 			}
@@ -75,121 +74,119 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 			return Game.getVar(R.string.ChaosCrystal_Prompt);
 		}
 	};
-	
+
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
-		public void onSelect( Item item ) {
+		public void onSelect(Item item) {
 			if (item != null) {
-				
-				if(item.isEquipped(getCurUser())) {
+
+				if (item.isEquipped(getCurUser())) {
 					((EquipableItem) item).doUnequip(getCurUser(), true);
 				}
-				
+
 				item.detach(getCurUser().belongings.backpack);
-				detach(getCurUser().belongings.backpack );
-				getCurUser().getSprite().operate( getCurUser().pos );
-				getCurUser().spend( TIME_TO_FUSE);
+				detach(getCurUser().belongings.backpack);
+				getCurUser().getSprite().operate(getCurUser().pos);
+				getCurUser().spend(TIME_TO_FUSE);
 				getCurUser().busy();
 
-				if(item instanceof Scroll) {
-					Item newItem= new ScrollOfWeaponUpgrade();
+				if (item instanceof Scroll) {
+					Item newItem = new ScrollOfWeaponUpgrade();
 					getCurUser().collect(newItem);
 					GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
 				}
-				
-				if(item instanceof MeleeWeapon) {
+
+				if (item instanceof MeleeWeapon) {
 					getCurUser().collect(new ChaosSword());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
 				}
-				
-				if(item instanceof Bow) {
+
+				if (item instanceof Bow) {
 					getCurUser().collect(new ChaosBow());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
 				}
-				
-				if(item instanceof Wand) {
+
+				if (item instanceof Wand) {
 					getCurUser().collect(new ChaosStaff());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
 				}
 			}
 		}
 	};
-	
+
 	private void fuse(Hero hero) {
-		
-		GameScene.selectItem( itemSelector, WndBag.Mode.FUSEABLE, TXT_SELECT_FOR_FUSE );
-		hero.getSprite().operate( hero.pos );
+
+		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, TXT_SELECT_FOR_FUSE);
+		hero.getSprite().operate(hero.pos);
 	}
-	
+
 	@Override
-	public void execute( final Hero ch, String action ) {
+	public void execute(final Hero ch, String action) {
 		setCurUser(ch);
-		
-		if (action.equals( AC_USE )) {
+
+		if (action.equals(AC_USE)) {
 			GameScene.selectCell(chaosMark);
-		} else if(action.equals( AC_FUSE)){
+		} else if (action.equals(AC_FUSE)) {
 			fuse(ch);
 		} else {
-			
-			super.execute( ch, action );
+
+			super.execute(ch, action);
 		}
 	}
-	
+
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		if(charge > 0 && identetifyLevel > 0)	{
-			actions.add( AC_USE  );
+	public ArrayList<String> actions(Hero hero) {
+		ArrayList<String> actions = super.actions(hero);
+		if (charge > 0 && identetifyLevel > 0) {
+			actions.add(AC_USE);
 		}
-		
-		if(PixelDungeon.isAlpha()) {
-			if(charge >= 50 && identetifyLevel > 1) {
-				actions.add( AC_FUSE );
-			}
+
+		if (charge >= 50 && identetifyLevel > 1) {
+			actions.add(AC_FUSE);
 		}
 		return actions;
 	}
-	
+
 	@Override
 	public Item identify() {
 		identetifyLevel++;
 		return this;
 	};
-	
+
 	@Override
 	public String name() {
-		switch(identetifyLevel) {
-			default:
-				return super.name();
-			case 1:
-				return Game.getVar(R.string.ChaosCrystal_Name_1);
-			case 2:
-				return Game.getVar(R.string.ChaosCrystal_Name_2);
+		switch (identetifyLevel) {
+		default:
+			return super.name();
+		case 1:
+			return Game.getVar(R.string.ChaosCrystal_Name_1);
+		case 2:
+			return Game.getVar(R.string.ChaosCrystal_Name_2);
 		}
 	}
-	
+
 	@Override
 	public String info() {
-		switch(identetifyLevel) {
-			default:
-				return super.info();
-			case 1:
-				return Game.getVar(R.string.ChaosCrystal_Info_1);
-			case 2:
-				return Game.getVar(R.string.ChaosCrystal_Info_2);
+		switch (identetifyLevel) {
+		default:
+			return super.info();
+		case 1:
+			return Game.getVar(R.string.ChaosCrystal_Info_1);
+		case 2:
+			return Game.getVar(R.string.ChaosCrystal_Info_2);
 		}
 	}
-	
+
 	@SuppressLint("DefaultLocale")
 	@Override
 	public String getText() {
-		if(identetifyLevel > 0) {
+		if (identetifyLevel > 0) {
 			return String.format("%d/100", charge);
 		} else {
 			return null;
 		}
 	}
-	
+
 	@Override
 	public int getColor() {
 		return 0xe0a0a0;
@@ -197,40 +194,40 @@ public class ChaosCrystal extends Artifact implements IChaosItem{
 
 	@Override
 	public void ownerTakesDamage(int damage) {
-		if(damage > 0) {
+		if (damage > 0) {
 			charge++;
-			if(charge > 100) {
+			if (charge > 100) {
 				charge = 100;
 			}
 		}
 	}
-	
+
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-		
+
 		bundle.put(CHARGE_KEY, charge);
 		bundle.put(IDENTETIFY_LEVEL_KEY, identetifyLevel);
 	}
-	
+
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		
+
 		charge = bundle.getInt(CHARGE_KEY);
-		identetifyLevel = bundle.getInt(IDENTETIFY_LEVEL_KEY); 
-		
+		identetifyLevel = bundle.getInt(IDENTETIFY_LEVEL_KEY);
+
 	}
 
 	@Override
 	public void ownerDoesDamage(int damage) {
-		if(cursed) {
-			if(charge > 0) {
+		if (cursed) {
+			if (charge > 0) {
 				ChaosCommon.doChaosMark(getCurUser().pos, charge);
 			}
 		}
 	}
-	
+
 	@Override
 	public int getCharge() {
 		return charge;
