@@ -30,7 +30,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 			charge = 0;
 		}
 		
-		if(level() > 0) {
+		if(level() > 5) {
 			if(charge == 0) {
 				degrade();
 				charge = chargeForLevel();

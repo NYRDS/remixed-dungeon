@@ -68,8 +68,6 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 			} catch (Exception e) {
 				throw new RuntimeException(e);
 			}
-		} else {
-			SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
 		}
 		
 		Game.paused = true;
@@ -92,6 +90,10 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 			@Override
 			public void run() {
 				Game.paused = false;
+				
+				if (!saving) {
+					SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
+				}
 			}
 		});
 	}
