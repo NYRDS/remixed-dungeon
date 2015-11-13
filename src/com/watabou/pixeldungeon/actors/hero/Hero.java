@@ -184,14 +184,21 @@ public class Hero extends Char {
 	
 	private int difficulty;
 
-	public Hero() {
+	public Hero(int difficulty) {
+		this.difficulty = difficulty;
+		
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 
-		hp(ht(20));
+		if(difficulty!=0) {
+			hp(ht(20));
+		} else {
+			hp(ht(30));
+		}
+		
 		STR(STARTING_STR);
 		awareness = 0.1f;
-
+		
 		belongings = new Belongings(this);
 
 		visibleEnemies = new ArrayList<Mob>();
@@ -1277,7 +1284,11 @@ public class Hero extends Char {
 	}
 
 	public int maxExp() {
-		return 5 + lvl * 5;
+		if(difficulty!=0) {
+			return 5 + lvl * 5;
+		} else {
+			return 5 + lvl * 4;
+		}
 	}
 
 	void updateAwareness() {
@@ -1635,10 +1646,6 @@ public class Hero extends Char {
 
 	public int getDifficulty() {
 		return difficulty;
-	}
-
-	public void setDifficulty(int difficulty) {
-		this.difficulty = difficulty;
 	}
 
 	public void setGender(int gender) {

@@ -134,8 +134,7 @@ public class Dungeon {
 		
 		Room.shuffleTypes();
 		
-		hero = new Hero();
-		hero.setDifficulty(difficulty);
+		hero = new Hero(difficulty);
 		hero.live();
 		
 		
