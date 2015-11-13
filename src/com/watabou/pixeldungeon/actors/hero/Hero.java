@@ -341,6 +341,10 @@ public class Hero extends Char {
 			accuracy *= 0.5f;
 		}
 
+		if(difficulty==0) {
+			accuracy *= 1.2;
+		}
+		
 		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon
 				: belongings.weapon;
 		if (wep != null) {
@@ -362,6 +366,10 @@ public class Hero extends Char {
 			evasion /= 2;
 		}
 
+		if(difficulty==0) {
+			evasion *= 1.2;
+		}
+		
 		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;
 
 		if (aEnc > 0) {

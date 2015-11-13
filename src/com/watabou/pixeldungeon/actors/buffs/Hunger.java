@@ -73,7 +73,7 @@ public class Hunger extends Buff implements Hero.Doom {
 					GLog.n( TXT_STARVING[hero.getGender()] );
 					
 					if(hero.getDifficulty() >= 3) {
-						hero.damage(Math.min(hero.effectiveSTR() - 10, 1), this);
+						hero.damage(Math.max(hero.effectiveSTR() - 10, 1), this);
 					} else {
 						hero.damage( 1, this );
 					}
@@ -102,6 +102,10 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 				if(PixelDungeon.realtime()) {
 					delta *= 0.3;
+				}
+				
+				if(hero.getDifficulty() == 0) {
+					delta *= 0.8;
 				}
 				
 				float newLevel = level + delta;
