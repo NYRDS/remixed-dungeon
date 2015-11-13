@@ -107,41 +107,48 @@ public class Buff extends Actor {
 	
 	protected void applyToCarriedItems(itemAction action ){
 		if (target instanceof Hero) {
+			Hero hero = (Hero) target;
 			
-			Item item = ((Hero)target).belongings.randomUnequipped();
+			int n = 1;
 			
-			if(item == null){
-				return;
+			if(hero.getDifficulty()>=3) {
+				n = 5;
 			}
 			
-			Item srcItem = item.detach(((Hero)target).belongings.backpack);
-			
-			item = action.act(srcItem);
-			
-			if(item == srcItem){ //item unaffected by buff
-				collectOrDropItem(item);
-				return;
-			}
-			
-			String actionText = null;
-			
-			if(item == null){
-				actionText = action.actionText(srcItem);
-				action.carrierFx();
-			}
-			else{
-				if(!srcItem.equals(item)){
-					actionText = action.actionText(srcItem);
-					collectOrDropItem(item);
+			for (int i = 0; i < n; i++) {
+				Item item = hero.belongings.randomUnequipped();
 
+				if (item == null) {
+					continue;
+				}
+
+				Item srcItem = item.detach(hero.belongings.backpack);
+
+				item = action.act(srcItem);
+
+				if (item == srcItem) { // item unaffected by buff
+					collectOrDropItem(item);
+					continue;
+				}
+
+				String actionText = null;
+
+				if (item == null) {
+					actionText = action.actionText(srcItem);
 					action.carrierFx();
+				} else {
+					if (!srcItem.equals(item)) {
+						actionText = action.actionText(srcItem);
+						collectOrDropItem(item);
+
+						action.carrierFx();
+					}
+				}
+
+				if (actionText != null) {
+					GLog.w(actionText);
 				}
 			}
-			
-			if(actionText != null){
-				GLog.w(actionText);
-			}
-			
 		} else if (target instanceof Thief){
 			if (((Thief)target).item == null)
 			{
@@ -149,7 +156,6 @@ public class Buff extends Actor {
 			}
 			((Thief)target).item = action.act(((Thief)target).item);
 			action.carrierFx();
-			//target.sprite.emitter().burst( ElmoParticle.FACTORY, 6 );
 		}
 	}
 }
