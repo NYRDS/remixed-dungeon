@@ -19,9 +19,9 @@
   </string-array>
   <!--STRINGS OF Horror CLASS-->
   <string-array name="Horror_Name">
-    <item>%s terrorífica</item>
-    <item>%s terrorífica</item>
-    <item>%s terrorífica</item>
+    <item>%s aterradora</item>
+    <item>%s aterradora</item>
+    <item>%s aterradora</item>
   </string-array>
   <!--STRINGS OF Instability CLASS-->
   <string-array name="Instability_Name">
@@ -37,15 +37,15 @@
   </string-array>
   <!--STRINGS OF Luck CLASS-->
   <string-array name="Luck_Name">
-    <item>%s afortunada</item>
-    <item>%s afortunada</item>
-    <item>%s afortunada</item>
+    <item>%s con suerte</item>
+    <item>%s con suerte</item>
+    <item>%s con suerte</item>
   </string-array>
   <!--STRINGS OF Paralysis CLASS-->
   <string-array name="Paralysis_Name">
-    <item>%s paralizadora</item>
-    <item>%s paralizadora</item>
-    <item>%s paralizadora</item>
+    <item>%s paralizante</item>
+    <item>%s paralizante</item>
+    <item>%s paralizante</item>
   </string-array>
   <!--STRINGS OF Piercing CLASS-->
   <!--STRINGS OF Poison CLASS-->
@@ -69,22 +69,22 @@
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
   <string name="MeleeWeapon_Info1a">Este/a %1$s es %2$s arma cuerpo a cuerpo de nivel-%3$d </string>
-  <string name="MeleeWeapon_Info1b">un/a</string>
+  <string name="MeleeWeapon_Info1b">una</string>
   <string name="MeleeWeapon_Info1c">una mejorada</string>
   <string name="MeleeWeapon_Info1d">una degradada</string>
   <string name="MeleeWeapon_Info2a">Su daño promedio es de %d puntos por golpe</string>
   <string name="MeleeWeapon_Info2b">Su daño promedio típico es %1$d puntos por golpe y usualmente requiere %2$d puntos de fuerza.</string>
   <string name="MeleeWeapon_Info2c">Probablemente este arma pese demasiado para ti.</string>
   <string name="MeleeWeapon_Info3a">Esta es un arma más bien %s.</string>
-  <string name="MeleeWeapon_Info3b">rápido</string>
-  <string name="MeleeWeapon_Info3c">lento</string>
+  <string name="MeleeWeapon_Info3b">rápida</string>
+  <string name="MeleeWeapon_Info3c">lenta</string>
   <string name="MeleeWeapon_Info3d">y</string>
   <string name="MeleeWeapon_Info3e">pero</string>
-  <string name="MeleeWeapon_Info3f">preciso</string>
-  <string name="MeleeWeapon_Info3g">impreciso </string>
+  <string name="MeleeWeapon_Info3f">precisa</string>
+  <string name="MeleeWeapon_Info3g">imprecisa</string>
   <string name="MeleeWeapon_Info4a">Fue equilibrada para hacerla más rápida.</string>
   <string name="MeleeWeapon_Info4b">Fue equilibrada para hacerla más certera.</string>
-  <string name="MeleeWeapon_Info5">Está encantado. </string>
+  <string name="MeleeWeapon_Info5">Está encantada.</string>
   <string name="MeleeWeapon_Info6a">Dado que no tienes la fuerza necesaria, tu puntería y tu velocidad de ataque con %s ha disminuido.</string>
   <string name="MeleeWeapon_Info6b">Gracias a tu gran fuerza, tu daño de ataque con %s ha aumentado.</string>
   <string name="MeleeWeapon_Info7a">Estás usando %1$s en este momento%2$s.</string>
@@ -115,7 +115,7 @@
   <string name="Mace_Info">El extremo de metal de este arma inflige un daño considerable.</string>
   <string name="Mace_Gender">femenino</string>
   <!--STRINGS OF Quarterstaff CLASS-->
-  <string name="Quarterstaff_Name">bastón</string>
+  <string name="Quarterstaff_Name">vara</string>
   <string name="Quarterstaff_Info">Un bastón de madera dura, con extremos de hierro.</string>
   <string name="Quarterstaff_Gender">masculino</string>
   <!--STRINGS OF ShortSword CLASS-->
@@ -175,7 +175,24 @@
   <string name="Shuriken_Info">Estas piezas de metal con forma de estrella y afiladas como cuchillas hacen un daño significativo al golpear a un enemigo. Pueden ser lanzados a mucha velocidad.</string>
   <string name="Shuriken_Gender">masculino</string>
   <!--STRINGS OF Tamahawk CLASS-->
-  <string name="Tamahawk_Name">tomahawk</string>
+  <string name="Tamahawk_Name">hacha arrojadiza</string>
   <string name="Tamahawk_Info">Esta hacha arrojadiza no no es demasiado pesada, pero aun así requiere bastante fuerza para ser usada efectivamente.</string>
   <string name="Tamahawk_Gender">masculino</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">kusarigama</string>
+  <string name="Kusarigama_Info">Este arma consiste en una hoz unida a una cadena de metal con un peso de acero al final. </string>
+  <string name="Kusarigama_Gender">femenino</string>
+  <string name="Kusarigama_Pull">TIRAR</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">espada de caos</string>
+  <string name="ChaosSword_Info">La hoja de la espada está compuesta de puro caos, y a veces vibra. En esta espada hay almacenado un gran poder, capaz de cortar por la mitad casi cualquier cosa. Sin embargo, se necesita mucha habilidad para hacer frente a las poderosas fuerzas de este arma.</string>
+  <string name="ChaosSword_Gender">masculino</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">arco de caos</string>
+  <string name="ChaosBow_Info">Un atroz arco que contiene el poder del Caos. Cada flecha lanzada desde él llevará consigo un poco de energía de caos hacia el objetivo. Pero si fallas...</string>
+  <string name="ChaosBow_Gender">masculino</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">vara de caos</string>
+  <string name="ChaosStaff_Info">¡Una vara imbuida por el Poder del Caos! ¿Qué otra cosa puede soñar o temer un mago?</string>
+  <string name="ChaosStaff_Gender">femenino</string>
 </resources>

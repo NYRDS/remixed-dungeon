@@ -16,7 +16,7 @@
   <string name="RubyBow_Gender">masculino</string>
   <!--STRINGS OF Quiver CLASS-->
   <string name="Quiver_Name">carcaj</string>
-  <string name="Quiver_Info">Carcaj de cuero válido para cualquier tipo de flechas</string>
+  <string name="Quiver_Info">Carcaj de cuero válido para cualquier cantidad de flechas.</string>
   <string name="Quiver_Gender">masculino</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">carcaj de fuego</string>

@@ -63,9 +63,25 @@
   <string name="RingOfThorns_Info">Aunque este anillo no provee de espinas reales, el enemigo que te ataque será herido con una fracción del daño que inflige. Mejorar este anillo no dará ventajas adicionales.</string>
   <!--STRINGS OF RingOfStoneWalking CLASS-->
   <string name="RingOfStoneWalking_Name">Anillo de Sangre de Piedra</string>
-  <string name="RingOfStoneWalking_Info">Este anillo hecho de piedra maciza parecería ordinario, si no fuera por la gota de sangre líquida latiendo en lugar de una gema.</string>
-  <string name="RingOfStoneWalking_ImmuredInStone">Encerrado en piedra. Para siempre.</string>
-  <!-- STRINGS OF SpiderCharm CLASS -->
-  <string name="SpiderCharm_Name">Spider Charm</string>
-  <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
+  <string name="RingOfStoneWalking_Info">Este extraño anillo está hecho de piedra. Lo que al principio pensabas que era un rubí es en realidad... ¡sangre líquida! Dentro hay una flecha apuntando a lo que parece ser una pared, junto a un corazón roto... ¿Qué hará?</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Has sido convertido en piedra. Para siempre.</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Encanto de Araña</string>
+  <string name="SpiderCharm_Info">Este exótico abalorio está envuelto en un aura de misterio. ¿Quién sabe qué le ocurrirá a aquel que lo lleve?</string>
+  <string name="SpiderCharm_Use">USAR</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">Cristal Extraño</string>
+  <string name="ChaosCrystal_Name_1">Cristal Caótico</string>
+  <string name="ChaosCrystal_Name_2">Cristal de Caos</string>
+  <string name="ChaosCrystal_Info">Sientes la energía corriendo por tus venas mientras lo sostienes. </string>
+  <string name="ChaosCrystal_Info_1">Poderes caóticos fluyen por este cristal. Quizá sea útil. </string>
+  <string name="ChaosCrystal_Info_2">¡Sí! Ahora sabes que puedes fusionarlo con uno de tus objetos ¿pero ahora qué?</string>
+  <string name="ChaosCrystal_Use">USAR</string>
+  <string name="ChaosCrystal_Fuse">FUSIONAR</string>
+  <string name="ChaosCrystal_Prompt">Elige dónde colocar la Marca del Caos</string>
+  <string name="ChaosCrystal_SelectForFuse">Elige con que objeto fusionar el Cristal de Caos</string>
+  <string name="ChaosCrystal_ScrollFused">El cristal es absorbido por la runa del pergamino, y ahora es... %s</string>
+  <string name="ChaosCrystal_SwordFused">El cristal absorbe tu arma, y toma la forma de una espada. </string>
+  <string name="ChaosCrystal_BowFused">El cristal absorbe tu arco, y toma la forma de un arco. </string>
+  <string name="ChaosCrystal_StaffFused">El cristal absorbe tu varita, y toma la forma de una vara. </string>
 </resources>

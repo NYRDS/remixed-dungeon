@@ -37,6 +37,11 @@
   <string name="Char_YouMissed">%1$s %2$s tu ataque</string>
   <string name="Char_SmbMissed">%1$s %2$s el ataque de %3$s</string>
   <string name="Char_OutParalysis">El dolor sacó a %s de la parálisis</string>
+  <string-array name="Char_StaDodged">
+    <item>esquivó</item>
+    <item>esquivó</item>
+    <item>esquivó</item>
+  </string-array>
   <string name="Char_StaPoisoned">envenenado </string>
   <string name="Char_StaAmok">loco</string>
   <string name="Char_StaSlowed">ralentizado</string>
@@ -124,6 +129,8 @@
   <string name="WndGame_menu">Menú Principal</string>
   <string name="WndGame_Exit">Salir de Pixel Dungeon</string>
   <string name="WndGame_Return">Volver al juego</string>
+  <string name="WndGame_Save">Guardar</string>
+  <string name="WndGame_Load">Cargar</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">Estadísticas</string>
   <string name="WndHero_Buffs">Mejoras</string>
@@ -185,6 +192,7 @@
   <string name="WndStory_Caves">Las cuevas que se extienden bajo la prisión abandonada están escasamente pobladas. Están demasiado profundas para ser explotadas por la ciudad, y tienen muy pocos minerales para interesarle a los enanos. En el pasado había un puesto comercial en algún lugar de esta ruta entre ambos pueblos, pero ha sucumbido desde el declive de la metrópolis de los enanos. Ahora, solo los omnipresentes gnolls y algunos animales subterráneos viven por aquí.</string>
   <string name="WndStory_Metropolis">La metrópolis de los enanos fue en una ocasión una de las ciudades-estado mas grandes. En su apogeo, el ejército mecanizado de los enanos logró repeler la invasión del viejo dios y su ejército demoníaco. Pero se dice que los guerreros que han regresado han traído consigo semillas de corrupción, y que esa victoria fue el inicio del fin para este reino subterráneo.</string>
   <string name="WndStory_Halls">En el pasado estos niveles fueron la periferia de la Metrópolis. Después de la victoria en la guerra contra el viejo dios, los enanos estaban demasiado debilitados para librarse de los demonios que quedaron. Poco a poco los demonios han ganado presencia en este lugar, y ahora se le conoce como Pasillos Demoníacos.\n\nMuy pocos aventureros han descendido tan lejos...</string>
+  <string name="WndStory_Spiders">Hace muchos, mucho años, había una mina llena de roca mágica. Pero cuando las vetas de mineral se agotaron, los mineros se marcharon, dejando atrás una amplia red de túneles. Con el tiempo, las arañas poblaron este lugar. Pero ni siquiera esas peligrosas criaturas, que acechaban en la oscuridad, fueron suficientes para asustar a aquellos locos y valientes que buscaban tesoros ocultos en las minas. La escala de peligro es siempre proporcional al número de rumores sobre artefactos mágicos. Hubo un tiempo en el que una malvada bruja se adentró en los túneles, huyendo de sus perseguidores. Pero aquellas personas supersticiosas no se atrevieron a  entrar, y decidieron esperar fuera. Pero la bruja nunca salió. Quizá encontrase otra salida, o puede que se escabullese entre sus captores pasando desapercibida o... quizás murió, rodeada por el susurro de las criaturas que acechan en la oscuridad. </string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">A LA VENTA: %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">Comprar por %dg</string>
@@ -328,6 +336,7 @@
   <string name="Pickaxe_Name">pico</string>
   <string name="Pickaxe_Info">Esto es una herramienta grande y robusta para romper rocas. Probablemente pueda usarse como arma. </string>
   <string name="Pickaxe_ACMine">EXTRAER</string>
+  <string name="Pickaxe_Gender">femenino</string>
   <string name="Pickaxe_NoVein">No hay ninguna veta de oro oscuro cerca </string>
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">cráneo de rata gigante</string>
