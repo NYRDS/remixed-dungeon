@@ -24,6 +24,18 @@ import java.util.Locale;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModdingMode;
+import com.watabou.glscripts.Script;
+import com.watabou.gltextures.TextureCache;
+import com.watabou.input.Keys;
+import com.watabou.input.Touchscreen;
+import com.watabou.noosa.audio.Music;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.SystemTime;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -46,18 +58,8 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.View;
-
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.ModdingMode;
-import com.watabou.glscripts.Script;
-import com.watabou.gltextures.TextureCache;
-import com.watabou.input.Keys;
-import com.watabou.input.Touchscreen;
-import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.SystemTime;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class Game extends Activity implements GLSurfaceView.Renderer,
 		View.OnTouchListener {
@@ -88,6 +90,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	public static float elapsed = 0f;
 
 	protected GLSurfaceView view;
+	protected LinearLayout layout;
 	protected SurfaceHolder holder;
 
 	public static boolean paused = true;
@@ -193,16 +196,23 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 		}
 
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
-
+		
 		view = new GLSurfaceView(this);
 		view.setEGLContextClientVersion(2);
 		// Hope this allow game work on broader devices list
 		// view.setEGLConfigChooser( false );
 		view.setRenderer(this);
 		view.setOnTouchListener(this);
-		setContentView(view);
+		
+		layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		layout.addView(view);
+		
+		setContentView(layout);
 	}
-
+	
+	
+	
 	@Override
 	public void onResume() {
 		super.onResume();

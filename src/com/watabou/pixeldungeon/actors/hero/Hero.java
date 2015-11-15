@@ -188,7 +188,7 @@ public class Hero extends Char {
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 
-		if(difficulty!=0) {
+		if(getDifficulty()!=0) {
 			hp(ht(20));
 		} else {
 			hp(ht(30));
@@ -204,7 +204,7 @@ public class Hero extends Char {
 	
 	public Hero(int difficulty) {
 		this();
-		this.difficulty = difficulty;
+		setDifficulty(difficulty);
 	}
 
 	@Override
@@ -260,7 +260,7 @@ public class Hero extends Char {
 		bundle.put(LEVEL, lvl);
 		bundle.put(EXPERIENCE, exp);
 		bundle.put(LEVEL_KIND, levelKind);
-		bundle.put(DIFFICULTY, difficulty);
+		bundle.put(DIFFICULTY, getDifficulty());
 		
 		refreshPets();
 		
@@ -285,7 +285,7 @@ public class Hero extends Char {
 		lvl = bundle.getInt(LEVEL);
 		exp = bundle.getInt(EXPERIENCE);
 		levelKind = bundle.getString(LEVEL_KIND);
-		difficulty = bundle.optInt(DIFFICULTY, 2);
+		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 		
 		Collection<Bundlable> _pets = bundle.getCollection(PETS);
 		
@@ -344,7 +344,7 @@ public class Hero extends Char {
 			accuracy *= 0.5f;
 		}
 
-		if(difficulty==0) {
+		if(getDifficulty()==0) {
 			accuracy *= 1.2;
 		}
 		
@@ -369,7 +369,7 @@ public class Hero extends Char {
 			evasion /= 2;
 		}
 
-		if(difficulty==0) {
+		if(getDifficulty()==0) {
 			evasion *= 1.2;
 		}
 		
@@ -1295,7 +1295,7 @@ public class Hero extends Char {
 	}
 
 	public int maxExp() {
-		if(difficulty!=0) {
+		if(getDifficulty()!=0) {
 			return 5 + lvl * 5;
 		} else {
 			return 5 + lvl * 4;
@@ -1671,6 +1671,11 @@ public class Hero extends Char {
 			pet.state = pet.WANDERING;
 			Dungeon.level.spawnMob(pet);
 		}
+	}
+
+	private void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
+		Dungeon.setDifficulty(difficulty);
 	}
 
 }

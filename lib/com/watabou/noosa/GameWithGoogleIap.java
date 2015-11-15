@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
@@ -13,7 +15,9 @@ import com.nyrds.android.google.util.Purchase;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.PixelDungeon;
 
+import android.graphics.Color;
 import android.util.Log;
+import android.widget.Button;
 
 public abstract class GameWithGoogleIap extends Game {
 
@@ -41,21 +45,52 @@ public abstract class GameWithGoogleIap extends Game {
 		instance(this);
 	}
 
+	public static void displayEasyModeBanner() {
+		instance().runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				if (instance().layout.getChildCount() == 1) {
+					AdView adView = new AdView(instance());
+					adView.setAdSize(AdSize.BANNER);
+					adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
+					adView.setBackgroundColor(Color.TRANSPARENT);
+					AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice)).build();
+					adView.loadAd(adRequest);
+					instance().layout.addView(adView, 0);
+				}
+			}
+
+		});
+	}
+
+	public static void removeEasyModeBanner() {
+		instance().runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				if (instance().layout.getChildCount() == 2) {
+					instance().layout.removeViewAt(0);
+				}
+			}
+
+		});
+	}
+	
 	private static void requestNewInterstitial() {
-		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
-				getVar(R.string.testDevice)).build();
-		
+		AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice)).build();
+
 		mInterstitialAd.loadAd(adRequest);
-		
+
 		mInterstitialAd.setAdListener(new AdListener() {
 			@Override
 			public void onAdClosed() {
 			}
-			
+
 			@Override
-			public void onAdFailedToLoad (int errorCode) {
+			public void onAdFailedToLoad(int errorCode) {
 			}
-			
+
 			@Override
 			public void onAdLoaded() {
 			}
@@ -63,17 +98,17 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static void displayAd(final IntersitialPoint work) {
-		
-		if(mInterstitialAd == null) {
+
+		if (mInterstitialAd == null) {
 			work.returnToWork();
 			return;
 		}
 
-		if(!mInterstitialAd.isLoaded()) {
+		if (!mInterstitialAd.isLoaded()) {
 			work.returnToWork();
 			return;
 		}
-		
+
 		mInterstitialAd.setAdListener(new AdListener() {
 			@Override
 			public void onAdClosed() {
@@ -88,11 +123,11 @@ public abstract class GameWithGoogleIap extends Game {
 		if (android.os.Build.VERSION.SDK_INT >= 9) {
 			mInterstitialAd = new InterstitialAd(this);
 			mInterstitialAd.setAdUnitId(getVar(R.string.saveLoadAdUnitId));
-			
+
 			requestNewInterstitial();
 		}
 	}
-	
+
 	public void initIapPhase2() {
 
 		if (mHelper != null) {
@@ -100,7 +135,7 @@ public abstract class GameWithGoogleIap extends Game {
 		}
 
 		String base64EncodedPublicKey = getVar(R.string.iapKey);
-		
+
 		// Create the helper, passing it our context and the public key to
 		// verify signatures with
 		Log.d("GAME", "Creating IAB helper.");
@@ -135,8 +170,7 @@ public abstract class GameWithGoogleIap extends Game {
 				skuList.add(SKU_LEVEL_2);
 				skuList.add(SKU_LEVEL_3);
 
-				mHelper.queryInventoryAsync(true, skuList,
-						mGotInventoryListener);
+				mHelper.queryInventoryAsync(true, skuList, mGotInventoryListener);
 			}
 		});
 	}
@@ -182,8 +216,7 @@ public abstract class GameWithGoogleIap extends Game {
 	// subscriptions we own
 	IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
 		@Override
-		public void onQueryInventoryFinished(IabResult result,
-				Inventory inventory) {
+		public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
 			Log.d("GAME", "Query inventory finished.");
 
 			// Have we been disposed of in the meantime? If so, quit.
@@ -199,8 +232,8 @@ public abstract class GameWithGoogleIap extends Game {
 			mInventory = inventory;
 			checkPurchases();
 			m_iapReady = true;
-			
-			if(PixelDungeon.donated() == 0) {
+
+			if (PixelDungeon.donated() == 0) {
 				initIntersitial();
 			}
 		}
@@ -231,8 +264,7 @@ public abstract class GameWithGoogleIap extends Game {
 		String payload = "";
 
 		m_iapReady = false;
-		mHelper.launchPurchaseFlow(this, sku, RC_REQUEST,
-				mPurchaseFinishedListener, payload);
+		mHelper.launchPurchaseFlow(this, sku, RC_REQUEST, mPurchaseFinishedListener, payload);
 	}
 
 	/** Verifies the developer payload of a purchase. */
@@ -266,8 +298,7 @@ public abstract class GameWithGoogleIap extends Game {
 	// Callback for when a purchase is finished
 	IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
 		public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
-			Log.d("GAME", "Purchase finished: " + result + ", purchase: "
-					+ purchase);
+			Log.d("GAME", "Purchase finished: " + result + ", purchase: " + purchase);
 
 			// if we were disposed of in the meantime, quit.
 			if (mHelper == null)
