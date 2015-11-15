@@ -184,9 +184,7 @@ public class Hero extends Char {
 	
 	private int difficulty;
 
-	public Hero(int difficulty) {
-		this.difficulty = difficulty;
-		
+	public Hero() {
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 
@@ -202,6 +200,11 @@ public class Hero extends Char {
 		belongings = new Belongings(this);
 
 		visibleEnemies = new ArrayList<Mob>();
+	}
+	
+	public Hero(int difficulty) {
+		this();
+		this.difficulty = difficulty;
 	}
 
 	@Override
