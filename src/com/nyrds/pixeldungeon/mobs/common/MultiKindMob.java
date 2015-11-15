@@ -5,6 +5,7 @@ import com.watabou.utils.Bundle;
 
 public class MultiKindMob extends Mob {
 	
+	private static final String KIND_TAG = "KIND";
 	protected int kind = 0;
 	
 	@Override
@@ -15,13 +16,13 @@ public class MultiKindMob extends Mob {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-		bundle.put("KIND", kind);
+		bundle.put(KIND_TAG, kind);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		kind = bundle.optInt("KIND", 0);
+		kind = bundle.optInt(KIND_TAG, 0);
 	}
 	
 }
