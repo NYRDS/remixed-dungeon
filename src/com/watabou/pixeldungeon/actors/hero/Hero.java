@@ -187,12 +187,6 @@ public class Hero extends Char {
 	public Hero() {
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
-
-		if(getDifficulty()!=0) {
-			hp(ht(20));
-		} else {
-			hp(ht(30));
-		}
 		
 		STR(STARTING_STR);
 		awareness = 0.1f;
@@ -205,6 +199,12 @@ public class Hero extends Char {
 	public Hero(int difficulty) {
 		this();
 		setDifficulty(difficulty);
+		
+		if(getDifficulty()!=0) {
+			hp(ht(20));
+		} else {
+			hp(ht(30));
+		}
 	}
 
 	@Override
