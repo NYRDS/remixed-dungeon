@@ -1,6 +1,7 @@
 package com.watabou.noosa;
 
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 
 import com.google.android.gms.ads.AdListener;
@@ -17,7 +18,6 @@ import com.watabou.pixeldungeon.PixelDungeon;
 
 import android.graphics.Color;
 import android.util.Log;
-import android.widget.Button;
 
 public abstract class GameWithGoogleIap extends Game {
 
@@ -46,37 +46,42 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static void displayEasyModeBanner() {
-		instance().runOnUiThread(new Runnable() {
-
-			@Override
-			public void run() {
-				if (instance().layout.getChildCount() == 1) {
-					AdView adView = new AdView(instance());
-					adView.setAdSize(AdSize.BANNER);
-					adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
-					adView.setBackgroundColor(Color.TRANSPARENT);
-					AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice)).build();
-					adView.loadAd(adRequest);
-					instance().layout.addView(adView, 0);
-				}
+		if (android.os.Build.VERSION.SDK_INT >= 9) {
+			if (isConnectedToInternet()) {
+				instance().runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						if (instance().layout.getChildCount() == 1) {
+							AdView adView = new AdView(instance());
+							adView.setAdSize(AdSize.BANNER);
+							adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
+							adView.setBackgroundColor(Color.TRANSPARENT);
+							AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice))
+									.build();
+							adView.loadAd(adRequest);
+							instance().layout.addView(adView, 0);
+						}
+					}
+				});
 			}
-
-		});
+		}
 	}
 
 	public static void removeEasyModeBanner() {
-		instance().runOnUiThread(new Runnable() {
+		if (android.os.Build.VERSION.SDK_INT >= 9) {
+			instance().runOnUiThread(new Runnable() {
 
-			@Override
-			public void run() {
-				if (instance().layout.getChildCount() == 2) {
-					instance().layout.removeViewAt(0);
+				@Override
+				public void run() {
+					if (instance().layout.getChildCount() == 2) {
+						instance().layout.removeViewAt(0);
+					}
 				}
-			}
 
-		});
+			});
+		}
 	}
-	
+
 	private static void requestNewInterstitial() {
 		AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice)).build();
 
@@ -175,18 +180,26 @@ public abstract class GameWithGoogleIap extends Game {
 		});
 	}
 
+	private static boolean isConnectedToInternet() {
+		InetAddress ipAddr;
+		try {
+			ipAddr = InetAddress.getByName("google.com");
+		} catch (UnknownHostException e) {
+			return false;
+		}
+
+		if (ipAddr.equals("")) {
+			return false;
+		}
+		return true;
+	}
+
 	public void initIap() {
 		new Thread() {
 			@Override
 			public void run() {
-				try {
-					InetAddress ipAddr = InetAddress.getByName("google.com");
-					if (ipAddr.equals("")) {
-						return;
-					}
+				if (isConnectedToInternet()) {
 					initIapPhase2();
-				} catch (Exception e) {
-					return;
 				}
 			}
 		}.start();

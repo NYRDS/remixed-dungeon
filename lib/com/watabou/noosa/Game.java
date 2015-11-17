@@ -61,8 +61,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class Game extends Activity implements GLSurfaceView.Renderer,
-		View.OnTouchListener {
+public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener {
 
 	private static Game instance;
 	private static Context context;
@@ -94,7 +93,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	protected SurfaceHolder holder;
 
 	public static boolean paused = true;
-	
+
 	// Accumulated touch events
 	protected ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
 
@@ -122,14 +121,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 
 	public void useLocale(String lang) {
 		Locale locale;
-		if(lang.equals("pt_BR")) {
-			locale = new Locale("pt","BR");
+		if (lang.equals("pt_BR")) {
+			locale = new Locale("pt", "BR");
 		} else {
 			locale = new Locale(lang);
 		}
-		
-		Configuration config = getBaseContext().getResources()
-				.getConfiguration();
+
+		Configuration config = getBaseContext().getResources().getConfiguration();
 		config.locale = locale;
 		getBaseContext().getResources().updateConfiguration(config,
 				getBaseContext().getResources().getDisplayMetrics());
@@ -138,14 +136,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	public void doRestart() {
 		Intent i = instance().getBaseContext().getPackageManager()
 				.getLaunchIntentForPackage(getBaseContext().getPackageName());
-		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
-				| Intent.FLAG_ACTIVITY_NEW_TASK);
+		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 
 		int piId = 123456;
-		PendingIntent pi = PendingIntent.getActivity(getBaseContext(), piId, i,
-				PendingIntent.FLAG_CANCEL_CURRENT);
-		AlarmManager mgr = (AlarmManager) getBaseContext().getSystemService(
-				ContextWrapper.ALARM_SERVICE);
+		PendingIntent pi = PendingIntent.getActivity(getBaseContext(), piId, i, PendingIntent.FLAG_CANCEL_CURRENT);
+		AlarmManager mgr = (AlarmManager) getBaseContext().getSystemService(ContextWrapper.ALARM_SERVICE);
 		mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pi);
 
 		System.exit(0);
@@ -162,8 +157,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 					toastText = Utils.format(text, args);
 				}
 
-				android.widget.Toast toast = android.widget.Toast.makeText(
-						context, toastText, android.widget.Toast.LENGTH_LONG);
+				android.widget.Toast toast = android.widget.Toast.makeText(context, toastText,
+						android.widget.Toast.LENGTH_LONG);
 				toast.show();
 			}
 		});
@@ -173,13 +168,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	public static boolean isAlpha() {
 		return version.contains("alpha");
 	}
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		context = getApplicationContext();
-		
+
 		FileSystem.setContext(context);
 		ModdingMode.setContext(context);
 
@@ -189,34 +184,35 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 			version = "???";
 		}
 		try {
-			versionCode = getPackageManager().getPackageInfo(getPackageName(),
-					0).versionCode;
+			versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
 		} catch (NameNotFoundException e) {
 			versionCode = 0;
 		}
 
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
-		
+
 		view = new GLSurfaceView(this);
 		view.setEGLContextClientVersion(2);
 		// Hope this allow game work on broader devices list
 		// view.setEGLConfigChooser( false );
 		view.setRenderer(this);
 		view.setOnTouchListener(this);
-		
-		layout = new LinearLayout(this);
-		layout.setOrientation(LinearLayout.VERTICAL);
-		layout.addView(view);
-		
-		setContentView(layout);
+
+		if (android.os.Build.VERSION.SDK_INT >= 9) {
+			layout = new LinearLayout(this);
+			layout.setOrientation(LinearLayout.VERTICAL);
+			layout.addView(view);
+
+			setContentView(layout);
+		}	else {
+			setContentView(view);
+		}
 	}
-	
-	
-	
+
 	@Override
 	public void onResume() {
 		super.onResume();
-		
+
 		now = 0;
 		view.onResume();
 
@@ -228,7 +224,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	public void onPause() {
 		super.onPause();
 		paused = true;
-		
+
 		if (scene != null) {
 			scene.pause();
 		}
@@ -326,20 +322,20 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 		GLES20.glEnable(GL10.GL_SCISSOR_TEST);
 
 		paused = false;
-		
+
 		SystemText.invalidate();
 		TextureCache.reload();
-		
+
 	}
-	
+
 	public static boolean inMainThread() {
 		return Looper.myLooper() == Looper.getMainLooper();
 	}
-	
+
 	public static boolean isPaused() {
 		return paused;
 	}
-	
+
 	protected void destroyGame() {
 		if (scene != null) {
 			scene.destroy();
@@ -412,12 +408,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	}
 
 	public static void vibrate(int milliseconds) {
-		((Vibrator) instance().getSystemService(VIBRATOR_SERVICE))
-				.vibrate(milliseconds);
+		((Vibrator) instance().getSystemService(VIBRATOR_SERVICE)).vibrate(milliseconds);
 	}
 
 	public static String getVar(int id) {
-		try{
+		try {
 			return context.getResources().getString(id);
 		} catch (NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
@@ -467,7 +462,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer,
 	public static void height(int height) {
 		Game.height = height;
 	}
-	
+
 	public static void executeInGlThread(Runnable task) {
 		instance.view.queueEvent(task);
 	}
