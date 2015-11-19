@@ -56,27 +56,27 @@
   <string name="ScrollOfMirrorImage_Name">Pergamino de Imagen Espejo</string>
   <string name="ScrollOfMirrorImage_Info">El encantamiento de este pergamino creará gemelos ilusorios del lector, los cuales perseguirán a sus enemigos.</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
-  <string name="ScrollOfPsionicBlast_Name">Pergamino de estallido Psionico</string>
-  <string name="ScrollOfPsionicBlast_Info">Este pergamino contiene energía destructiva, que puede ser canalizada psionicamente para infligir un daño masivo a todas las criaturas que estén en el campo visual. Un destello de luz acompañante cegara temporalmente a todos los que estén en el área de efecto, incluyendo al lector del pergamino</string>
+  <string name="ScrollOfPsionicBlast_Name">Pergamino de estallido Psiónico</string>
+  <string name="ScrollOfPsionicBlast_Info">Este pergamino contiene energía destructiva, que puede ser canalizada psionicamente para infligir daño masivo a todas las criaturas que estén en tu campo visual. Además, un destello de luz cegará temporalmente a todos los que estén en el área de efecto, incluyendo al lector del pergamino.</string>
   <!--STRINGS OF ScrollOfRecharging CLASS-->
   <string name="ScrollOfRecharging_Name">Pergamino de Recarga</string>
-  <string name="ScrollOfRecharging_Info">El poder mágico en bruto acumulado en este pergamino cuando, sea liberado, recargara a   su poder completo todas las varas del lector.</string>
+  <string name="ScrollOfRecharging_Info">Al ser liberado, el poder en  bruto de este pergamino recargará todo el poder las varitas del lector.</string>
   <string name="ScrollOfRecharging_Info1a">Una oleada de energía recorre tu mochila, recargando tu varita</string>
   <string name="ScrollOfRecharging_Info1b">Una oleada de energía recorre tu mochila, recargando tus varitas</string>
   <string name="ScrollOfRecharging_Info2">Una oleada de energía recorre tu mochila, pero no pasa nada</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
   <string name="ScrollOfRemoveCurse_Name">Pergamino de Remover Maldición</string>
-  <string name="ScrollOfRemoveCurse_Info">El encantamiento en este pergamino desproveerá instantáneamente al arma, armadura, anillos y artículos que cargue el lector de cualquier encantamiento maligno que pudiera prevenir al portador de removerse el articulo. </string>
+  <string name="ScrollOfRemoveCurse_Info">El encantamiento en este pergamino eliminara instantáneamente cualquier encantamiento maligno que te impida deshacerte de tus armas, armaduras, anillos y objetos.</string>
   <string name="ScrollOfRemoveCurse_Proced">Tu mochila brilla con una luz purificadora, y una energía malévola se dispersa.</string>
   <string name="ScrollOfRemoveCurse_NoProced">Tu mochila brilla con una luz purificadora, pero no pasa nada.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
   <string name="ScrollOfTeleportation_Name">Pergamino de teletransportación</string>
-  <string name="ScrollOfTeleportation_Info">El hechizo en este pergamino transporta instantáneamente al lector a un lugar al azar en el nivel del calabozo. Este puede ser utilizado para escapar de una situación peligrosa, pero el lector sin suerte puede encontrarse a si mismo en un lugar aun mas peligroso.</string>
-  <string name="ScrollOfTeleportation_Teleport">En un parpadeo fuiste teletransportado a otro lugar en el nivel.</string>
+  <string name="ScrollOfTeleportation_Info">El hechizo en este pergamino transporta instantáneamente al lector a un lugar al azar en el nivel actual de la mazmorra. Puede ser utilizado para escapar de una situación peligrosa, pero un lector poco afortunado podría transportarse a sí mismo a un lugar aún mas peligroso.</string>
+  <string name="ScrollOfTeleportation_Teleport">En un segundo fuiste teletransportado a otro lugar de la mazmorra.</string>
   <string name="ScrollOfTeleportation_NoTeleport">¡El fuerte aura mágica de este lugar impide que te teletransportes!</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
   <string name="ScrollOfTerror_Name">Pergamino de Terror</string>
-  <string name="ScrollOfTerror_Info">Un destello de luz roja abrumara a todas las criaturas en tu campo visual con terror y ellas se voltearan y huirán. Atacar a un enemigo que esta huyendo disipara el efecto.</string>
+  <string name="ScrollOfTerror_Info">Un destello de luz roja abrumará a todas las criaturas en tu campo visual, aterrorizándolas y haciendo que se den la vuelta y huyan. Atacar a un enemigo que está huyendo disipará el efecto.</string>
   <string name="ScrollOfTerror_Info1">El pergamino emite un destello brillante de luz roja</string>
   <string name="ScrollOfTerror_Info2">¡El pergamino emite un brillante destello de luz roja y los %s huyen!</string>
   <string name="ScrollOfTerror_Info3">¡El pergamino emite un brillante destello de luz roja y los monstruos huyen!</string>
@@ -90,4 +90,10 @@
   <string name="ScrollOfWeaponUpgrade_Info">Este pergamino mejorara un arma cuerpo a cuerpo, aumentando su calidad. A diferencia de  un pergamino de mejora normal, esta versión especializada jamás destruirá el encantamiento de un arma. En cambio, es posible que encante a un arma con un encantamiento al azar. </string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Selecciona un arma para mejorar</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">tu %s ciertamente se ve mejor ahora</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Pergamino de Dominación</string>
+  <string name="ScrollOfDomination_Info">Este pergamino acabará con la voluntad de una criatura en tu rango de visión, y luchará a tu lado hasta que muera. </string>
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Pergamino de Maldición </string>
+  <string name="ScrollOfCurse_Info">Este pergamino fue creado específicamente para castigar a aquellos ladrones tan estúpido como para usar magia que no pueden entender. Es totalmente inútil, e incluso puede resultar dañino para un aventurero normal, pero está muy bien valorado por los mercaderes. </string>
 </resources>

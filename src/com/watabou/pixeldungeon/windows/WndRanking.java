@@ -54,7 +54,7 @@ public class WndRanking extends WndTabbed {
 	private static final String TXT_STATS	= Game.getVar(R.string.WndRanking_Stats);
 	private static final String TXT_ITEMS	= Game.getVar(R.string.WndRanking_Items);
 	private static final String TXT_BADGES	= Game.getVar(R.string.WndRanking_Badges);
-	
+
 	private static final int WIDTH			= 112;
 	private static final int HEIGHT			= 144;
 	
@@ -179,6 +179,14 @@ public class WndRanking extends WndTabbed {
 			}
 			
 			pos += GAP + GAP;
+
+			pos = statSlot( this, difficultyToText(hero.getDifficulty()), "", pos );
+			
+			pos += GAP;
+
+			pos = statSlot( this, TXT_STR, Integer.toString( hero.effectiveSTR() ), pos );
+			
+			pos += GAP;
 			
 			pos = statSlot( this, TXT_STR, Integer.toString( hero.effectiveSTR() ), pos );
 			pos = statSlot( this, TXT_HEALTH, Integer.toString( hero.ht() ), pos );
@@ -198,6 +206,22 @@ public class WndRanking extends WndTabbed {
 			pos = statSlot( this, TXT_FOOD, Integer.toString( Statistics.foodEaten ), pos );
 			pos = statSlot( this, TXT_ALCHEMY, Integer.toString( Statistics.potionsCooked ), pos );
 			pos = statSlot( this, TXT_ANKHS, Integer.toString( Statistics.ankhsUsed ), pos );
+		}
+		
+		private String difficultyToText(int difficulty) {
+
+			switch (difficulty) {
+			case 0:
+				return Game.getVar(R.string.StartScene_DifficultyEasy);
+			case 1:
+				return Game.getVar(R.string.StartScene_DifficultyNormalWithSaves);
+			case 2:
+				return Game.getVar(R.string.StartScene_DifficultyNormal);
+			case 3:
+				return Game.getVar(R.string.StartScene_DifficultyExpert);
+			}
+			
+			return "";
 		}
 		
 		private float statSlot( Group parent, String label, String value, float pos ) {

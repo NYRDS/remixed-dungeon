@@ -18,7 +18,6 @@ public class ChaosStaff extends Wand implements IChaosItem {
 	private int charge = 0;
 
 	public ChaosStaff() {
-
 		imageFile = "items/chaosStaff.png";
 		image = 0;
 	}

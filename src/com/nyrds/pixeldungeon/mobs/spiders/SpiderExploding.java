@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderExplodingSprite;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.plants.Dreamweed;
 import com.watabou.pixeldungeon.plants.Earthroot;
@@ -14,10 +14,8 @@ import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
 
-public class SpiderExploding extends Mob {
+public class SpiderExploding extends MultiKindMob {
 
-	private int kind = 0;
-	
 	static Class<?> PLantClasses[] = {
 		Firebloom.class, 
 		Icecap.class, 
@@ -60,11 +58,6 @@ public class SpiderExploding extends Mob {
 			throw new RuntimeException(e);
 		} 
 		return damage;
-	}
-	
-	@Override
-	public int getKind() {
-		return kind;
 	}
 	
 	@Override

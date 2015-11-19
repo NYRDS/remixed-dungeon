@@ -615,7 +615,7 @@ public abstract class Mob extends Char {
 				enemySeen = false;
 
 				int oldPos = pos;
-				if (target != -1 && getCloser(target)) {
+				if ( Dungeon.level.cellValid(target) && getCloser(target)) {
 					spend(1 / speed());
 					return moveSprite(oldPos, pos);
 				} else {

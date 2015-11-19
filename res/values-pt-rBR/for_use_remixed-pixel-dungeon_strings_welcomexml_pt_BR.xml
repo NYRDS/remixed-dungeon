@@ -26,4 +26,14 @@ remix.19:\n
 -Aranhas\n
 -Níveis de aranha\n
 -Aranha Rainha\n</string>
+  <string name="Welcome_Text_20_1">
+remix.20.1:\n
+- Pergaminho de Dominação\n
+- Pergaminho de Madilção\n
+</string>
+  <string name="Welcome_Text_20_2">
+remix.21:\n
+- Itens raros do Caos\n
+- O Líquido inflamável esta realmente líquido agora\n
+</string>
 </resources>

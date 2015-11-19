@@ -187,14 +187,24 @@ public class Hero extends Char {
 	public Hero() {
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
-
-		hp(ht(20));
+		
 		STR(STARTING_STR);
 		awareness = 0.1f;
-
+		
 		belongings = new Belongings(this);
 
 		visibleEnemies = new ArrayList<Mob>();
+	}
+	
+	public Hero(int difficulty) {
+		this();
+		setDifficulty(difficulty);
+		
+		if(getDifficulty()!=0) {
+			hp(ht(20));
+		} else {
+			hp(ht(30));
+		}
 	}
 
 	@Override
@@ -250,7 +260,7 @@ public class Hero extends Char {
 		bundle.put(LEVEL, lvl);
 		bundle.put(EXPERIENCE, exp);
 		bundle.put(LEVEL_KIND, levelKind);
-		bundle.put(DIFFICULTY, difficulty);
+		bundle.put(DIFFICULTY, getDifficulty());
 		
 		refreshPets();
 		
@@ -275,7 +285,7 @@ public class Hero extends Char {
 		lvl = bundle.getInt(LEVEL);
 		exp = bundle.getInt(EXPERIENCE);
 		levelKind = bundle.getString(LEVEL_KIND);
-		difficulty = bundle.optInt(DIFFICULTY, 2);
+		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 		
 		Collection<Bundlable> _pets = bundle.getCollection(PETS);
 		
@@ -334,6 +344,10 @@ public class Hero extends Char {
 			accuracy *= 0.5f;
 		}
 
+		if(getDifficulty()==0) {
+			accuracy *= 1.2;
+		}
+		
 		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon
 				: belongings.weapon;
 		if (wep != null) {
@@ -355,6 +369,10 @@ public class Hero extends Char {
 			evasion /= 2;
 		}
 
+		if(getDifficulty()==0) {
+			evasion *= 1.2;
+		}
+		
 		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;
 
 		if (aEnc > 0) {
@@ -1277,7 +1295,11 @@ public class Hero extends Char {
 	}
 
 	public int maxExp() {
-		return 5 + lvl * 5;
+		if(getDifficulty()!=0) {
+			return 5 + lvl * 5;
+		} else {
+			return 5 + lvl * 4;
+		}
 	}
 
 	void updateAwareness() {
@@ -1637,10 +1659,6 @@ public class Hero extends Char {
 		return difficulty;
 	}
 
-	public void setDifficulty(int difficulty) {
-		this.difficulty = difficulty;
-	}
-
 	public void setGender(int gender) {
 		this.gender = gender;
 	}
@@ -1653,6 +1671,11 @@ public class Hero extends Char {
 			pet.state = pet.WANDERING;
 			Dungeon.level.spawnMob(pet);
 		}
+	}
+
+	private void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
+		Dungeon.setDifficulty(difficulty);
 	}
 
 }

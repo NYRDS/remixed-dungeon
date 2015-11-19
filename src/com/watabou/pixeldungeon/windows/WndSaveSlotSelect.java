@@ -60,8 +60,18 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 
 		final GameWithGoogleIap.IntersitialPoint returnTo = this;
 
-		Game.paused = true;
+		if (saving) {
+			try {
+				Dungeon.saveAll();
+				SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		}
+		
+		Game.paused = true;
+		
 		if (PixelDungeon.donated() < 1) {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
@@ -80,16 +90,8 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 			@Override
 			public void run() {
 				Game.paused = false;
-
-				if (saving) {
-					try {
-						Dungeon.saveAll();
-						SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
-
-					} catch (Exception e) {
-						throw new RuntimeException(e);
-					}
-				} else {
+				
+				if (!saving) {
 					SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
 				}
 			}

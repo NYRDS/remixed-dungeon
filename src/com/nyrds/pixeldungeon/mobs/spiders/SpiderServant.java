@@ -1,17 +1,15 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderServantSprite;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
 
-public class SpiderServant extends Mob {
-
-	private int kind = 0;
+public class SpiderServant extends MultiKindMob {
 	
 	public SpiderServant() {
 		
@@ -28,11 +26,6 @@ public class SpiderServant extends Mob {
 		
 		loot = new MysteryMeat();
 		lootChance = 0.067f;
-	}
-	
-	@Override
-	public int getKind() {
-		return kind;
 	}
 	
 	@Override

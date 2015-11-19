@@ -186,9 +186,9 @@ public class DewVial extends Item {
 		this.volume = volume;
 		if(volume == 0) {
 			image = 0;
-		} else if(volume < 5) {
+		} else if(volume < MAX_VOLUME/2) {
 			image = 1;
-		} else if(volume < 10) {
+		} else if(volume < MAX_VOLUME) {
 			image = 2;
 		} else {
 			image = 3;
