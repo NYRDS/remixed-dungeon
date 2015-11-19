@@ -84,6 +84,10 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 					((EquipableItem) item).doUnequip(getCurUser(), true);
 				}
 
+				if(isEquipped(getCurUser())) {
+					doUnequip(getCurUser(), true);
+				}
+				
 				item.detach(getCurUser().belongings.backpack);
 				detach(getCurUser().belongings.backpack);
 				getCurUser().getSprite().operate(getCurUser().pos);
@@ -115,7 +119,6 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 	};
 
 	private void fuse(Hero hero) {
-
 		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, TXT_SELECT_FOR_FUSE);
 		hero.getSprite().operate(hero.pos);
 	}
