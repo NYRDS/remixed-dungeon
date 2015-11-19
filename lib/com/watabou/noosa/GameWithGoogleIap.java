@@ -53,13 +53,13 @@ public abstract class GameWithGoogleIap extends Game {
 					public void run() {
 						if (instance().layout.getChildCount() == 1) {
 							AdView adView = new AdView(instance());
-							adView.setAdSize(AdSize.BANNER);
+							adView.setAdSize(AdSize.SMART_BANNER);
 							adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
 							adView.setBackgroundColor(Color.TRANSPARENT);
 							AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice))
 									.build();
-							adView.loadAd(adRequest);
 							instance().layout.addView(adView, 0);
+							adView.loadAd(adRequest);
 						}
 					}
 				});
