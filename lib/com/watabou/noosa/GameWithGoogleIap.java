@@ -60,6 +60,7 @@ public abstract class GameWithGoogleIap extends Game {
 									.build();
 							instance().layout.addView(adView, 0);
 							adView.loadAd(adRequest);
+							needSceneRestart = true;
 						}
 					}
 				});
@@ -75,6 +76,7 @@ public abstract class GameWithGoogleIap extends Game {
 				public void run() {
 					if (instance().layout.getChildCount() == 2) {
 						instance().layout.removeViewAt(0);
+						needSceneRestart = true;
 					}
 				}
 

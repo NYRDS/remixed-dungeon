@@ -29,6 +29,7 @@ import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
@@ -145,9 +146,6 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 
 	// *** IMMERSIVE MODE ****
-
-	private static boolean immersiveModeChanged = false;
-
 	@SuppressLint("NewApi")
 	public static void immerse(boolean value) {
 		Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
@@ -156,7 +154,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 			@Override
 			public void run() {
 				updateImmersiveMode();
-				immersiveModeChanged = true;
+				needSceneRestart = true;
 			}
 		});
 	}
@@ -165,9 +163,9 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
 		super.onSurfaceChanged(gl, width, height);
 
-		if (immersiveModeChanged) {
+		if (needSceneRestart && !(scene instanceof InterlevelScene)) {
 			requestedReset = true;
-			immersiveModeChanged = false;
+			needSceneRestart = false;
 		}
 	}
 

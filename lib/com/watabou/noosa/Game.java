@@ -77,6 +77,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected Scene scene;
 	// true if scene switch is requested
 	protected boolean requestedReset = true;
+	protected static boolean needSceneRestart = false;
+	
 	// New scene class
 	protected Class<? extends Scene> sceneClass;
 
@@ -365,7 +367,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			try {
 				switchScene(sceneClass.newInstance());
 			} catch (Exception e) {
-				e.printStackTrace();
+				throw new RuntimeException(e);
 			}
 		}
 
