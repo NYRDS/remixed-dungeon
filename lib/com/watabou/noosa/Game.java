@@ -95,7 +95,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected SurfaceHolder holder;
 
 	public static boolean paused = true;
-
+	protected static int difficulty;
+	
 	// Accumulated touch events
 	protected ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
 

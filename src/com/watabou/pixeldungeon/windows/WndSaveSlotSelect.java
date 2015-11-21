@@ -73,12 +73,7 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 		Game.paused = true;
 		
 		if (PixelDungeon.donated() < 1) {
-			Game.instance().runOnUiThread(new Runnable() {
-				@Override
-				public void run() {
-					PixelDungeon.displayAd(returnTo);
-				}
-			});
+			PixelDungeon.displaySaveAndLoadAd(returnTo);
 		} else {
 			returnToWork();
 		}

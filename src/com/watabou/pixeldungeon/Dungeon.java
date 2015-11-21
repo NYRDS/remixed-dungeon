@@ -653,13 +653,10 @@ public class Dungeon {
 	}
 
 	private static int difficulty;
+
 	public static void setDifficulty(int _difficulty) {
 		difficulty = _difficulty;
-		if(difficulty == 0 && PixelDungeon.donated()==0) {
-			PixelDungeon.displayEasyModeBanner();
-		} else {
-			PixelDungeon.removeEasyModeBanner();
-		}
+		PixelDungeon.setDifficulty(difficulty);
 	}
 
 }

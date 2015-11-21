@@ -364,10 +364,15 @@ public class PixelDungeon extends GameWithGoogleIap {
 	 * <---Purchases
 	 */
 	public void setDonationLevel(int level) {
+		
+		if(level > 0) {
+			removeEasyModeBanner();
+		}
+		
 		if (level < donated()) {
 			return;
 		}
-
+		
 		if (donated() == 0 && level != 0) {
 			executeInGlThread(new Runnable() {
 				
@@ -379,5 +384,21 @@ public class PixelDungeon extends GameWithGoogleIap {
 			});
 		}
 		donated(level);
+	}
+
+	public static void setDifficulty(int _difficulty) {
+		difficulty = _difficulty;
+		if (PixelDungeon.donated() == 0) {
+			if (difficulty == 0) {
+				PixelDungeon.displayEasyModeBanner();
+			}
+			
+			if (difficulty < 2) {
+				PixelDungeon.initSaveAndLoadIntersitial();
+			}
+		} else {
+			PixelDungeon.removeEasyModeBanner();
+		}
+		
 	}
 }

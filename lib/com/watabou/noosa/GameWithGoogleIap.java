@@ -3,6 +3,8 @@ package com.watabou.noosa;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -31,7 +33,8 @@ public abstract class GameWithGoogleIap extends Game {
 
 	private volatile boolean m_iapReady = false;
 
-	static InterstitialAd mInterstitialAd;
+	static InterstitialAd mSaveAndLoadAd;
+	static InterstitialAd mEasyModeSmallScreenAd;
 
 	public boolean iapReady() {
 		return m_iapReady;
@@ -45,25 +48,41 @@ public abstract class GameWithGoogleIap extends Game {
 		instance(this);
 	}
 
+	private static boolean isSmallScreen() {
+		return (width() < 400 || height() < 400);
+	}
+
+	public static boolean needDisplaySmallScreenEasyModeIs() {
+		if (difficulty == 0 && isSmallScreen() && PixelDungeon.donated() == 0) {
+			return true;
+		}
+
+		return false;
+	}
+
 	public static void displayEasyModeBanner() {
 		if (android.os.Build.VERSION.SDK_INT >= 9) {
 			if (isConnectedToInternet()) {
-				instance().runOnUiThread(new Runnable() {
-					@Override
-					public void run() {
-						if (instance().layout.getChildCount() == 1) {
-							AdView adView = new AdView(instance());
-							adView.setAdSize(AdSize.SMART_BANNER);
-							adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
-							adView.setBackgroundColor(Color.TRANSPARENT);
-							AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice))
-									.build();
-							instance().layout.addView(adView, 0);
-							adView.loadAd(adRequest);
-							needSceneRestart = true;
+				if (!isSmallScreen()) {
+					instance().runOnUiThread(new Runnable() {
+						@Override
+						public void run() {
+							if (instance().layout.getChildCount() == 1) {
+								AdView adView = new AdView(instance());
+								adView.setAdSize(AdSize.SMART_BANNER);
+								adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
+								adView.setBackgroundColor(Color.TRANSPARENT);
+								AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice))
+										.build();
+								instance().layout.addView(adView, 0);
+								adView.loadAd(adRequest);
+								needSceneRestart = true;
+							}
 						}
-					}
-				});
+					});
+				} else {
+					initEasyModeIntersitial();
+				}
 			}
 		}
 	}
@@ -84,54 +103,118 @@ public abstract class GameWithGoogleIap extends Game {
 		}
 	}
 
-	private static void requestNewInterstitial() {
+	private static Map<InterstitialAd, Boolean> mAdLoadInProgress = new HashMap<InterstitialAd, Boolean>();
+
+	private static void requestNewInterstitial(final InterstitialAd isAd) {
+
+		Boolean loadAlreadyInProgress = mAdLoadInProgress.get(isAd);
+
+		if (loadAlreadyInProgress != null && loadAlreadyInProgress.booleanValue()) {
+			return;
+		}
+
 		AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice)).build();
 
-		mInterstitialAd.loadAd(adRequest);
-
-		mInterstitialAd.setAdListener(new AdListener() {
+		isAd.setAdListener(new AdListener() {
 			@Override
 			public void onAdClosed() {
+				super.onAdClosed();
 			}
 
 			@Override
 			public void onAdFailedToLoad(int errorCode) {
+				super.onAdFailedToLoad(errorCode);
+				mAdLoadInProgress.put(isAd, false);
 			}
 
 			@Override
 			public void onAdLoaded() {
+				super.onAdLoaded();
+				mAdLoadInProgress.put(isAd, false);
 			}
-		});
-	}
 
-	public static void displayAd(final IntersitialPoint work) {
-
-		if (mInterstitialAd == null) {
-			work.returnToWork();
-			return;
-		}
-
-		if (!mInterstitialAd.isLoaded()) {
-			work.returnToWork();
-			return;
-		}
-
-		mInterstitialAd.setAdListener(new AdListener() {
 			@Override
-			public void onAdClosed() {
-				requestNewInterstitial();
-				work.returnToWork();
+			public void onAdOpened() {
+				super.onAdOpened();
+			}
+
+			@Override
+			public void onAdLeftApplication() {
+				super.onAdLeftApplication();
 			}
 		});
-		mInterstitialAd.show();
+
+		mAdLoadInProgress.put(isAd, true);
+		isAd.loadAd(adRequest);
+
 	}
 
-	private void initIntersitial() {
-		if (android.os.Build.VERSION.SDK_INT >= 9) {
-			mInterstitialAd = new InterstitialAd(this);
-			mInterstitialAd.setAdUnitId(getVar(R.string.saveLoadAdUnitId));
+	private static void displayIsAd(final IntersitialPoint work, final InterstitialAd isAd) {
+		instance().runOnUiThread( new Runnable() {
+			
+			@Override
+			public void run() {
+				if (isAd == null) {
+					work.returnToWork();
+					return;
+				}
 
-			requestNewInterstitial();
+				if (!isAd.isLoaded()) {
+					work.returnToWork();
+					return;
+				}
+
+				isAd.setAdListener(new AdListener() {
+					@Override
+					public void onAdClosed() {
+						requestNewInterstitial(isAd);
+						work.returnToWork();
+					}
+				});
+				isAd.show();
+			}
+		});
+	}
+
+	public static void displaySaveAndLoadAd(final IntersitialPoint work) {
+		displayIsAd(work, mSaveAndLoadAd);
+	}
+
+	public static void displayEasyModeSmallScreenAd(final IntersitialPoint work) {
+		displayIsAd(work, mEasyModeSmallScreenAd);
+	}
+
+	private static void initEasyModeIntersitial() {
+		if (android.os.Build.VERSION.SDK_INT >= 9 && isConnectedToInternet()) {
+			{
+				instance().runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						if (mEasyModeSmallScreenAd == null) {
+							mEasyModeSmallScreenAd = new InterstitialAd(instance());
+							mEasyModeSmallScreenAd.setAdUnitId(getVar(R.string.easyModeSmallScreenAdUnitId));
+							requestNewInterstitial(mEasyModeSmallScreenAd);
+						}
+					}
+				});
+			}
+		}
+	}
+
+	public static void initSaveAndLoadIntersitial() {
+		if (android.os.Build.VERSION.SDK_INT >= 9 && isConnectedToInternet()) {
+			{
+				instance().runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						if (mSaveAndLoadAd == null) {
+							mSaveAndLoadAd = new InterstitialAd(instance());
+							mSaveAndLoadAd.setAdUnitId(getVar(R.string.saveLoadAdUnitId));
+							requestNewInterstitial(mSaveAndLoadAd);
+						}
+					}
+				});
+			}
 		}
 	}
 
@@ -247,10 +330,6 @@ public abstract class GameWithGoogleIap extends Game {
 			mInventory = inventory;
 			checkPurchases();
 			m_iapReady = true;
-
-			if (PixelDungeon.donated() == 0) {
-				initIntersitial();
-			}
 		}
 	};
 

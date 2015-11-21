@@ -26,11 +26,13 @@ import java.io.IOException;
 
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.GameWithGoogleIap.IntersitialPoint;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.items.Generator;
@@ -85,10 +87,96 @@ public class InterlevelScene extends PixelScene {
 
 	private Text message;
 
-	private Thread thread;
+	private LevelChanger levelChanger;
 
 	volatile private String error = null;
 
+	class LevelChanger extends Thread implements IntersitialPoint {
+
+		@Override
+		public void returnToWork() {
+			if (phase == Phase.STATIC && error == null) {
+				phase = Phase.FADE_OUT;
+				timeLeft = TIME_TO_FADE;
+			}
+		}
+		
+		@Override
+		public void run() {
+			try {
+				Generator.reset();
+				
+				Sample.INSTANCE.load(Assets.SND_OPEN, Assets.SND_UNLOCK,
+						Assets.SND_ITEM, Assets.SND_DEWDROP,
+						Assets.SND_HIT, Assets.SND_MISS, Assets.SND_STEP,
+						Assets.SND_WATER, Assets.SND_DESCEND,
+						Assets.SND_EAT, Assets.SND_READ,
+						Assets.SND_LULLABY, Assets.SND_DRINK,
+						Assets.SND_SHATTER, Assets.SND_ZAP,
+						Assets.SND_LIGHTNING, Assets.SND_LEVELUP,
+						Assets.SND_DEATH, Assets.SND_CHALLENGE,
+						Assets.SND_CURSED, Assets.SND_EVOKE,
+						Assets.SND_TRAP, Assets.SND_TOMB, Assets.SND_ALERT,
+						Assets.SND_MELD, Assets.SND_BOSS, Assets.SND_BLAST,
+						Assets.SND_PLANT, Assets.SND_RAY,
+						Assets.SND_BEACON, Assets.SND_TELEPORT,
+						Assets.SND_CHARMS, Assets.SND_MASTERY,
+						Assets.SND_PUFF, Assets.SND_ROCKS,
+						Assets.SND_BURNING, Assets.SND_FALLING,
+						Assets.SND_GHOST, Assets.SND_SECRET,
+						Assets.SND_BONES, Assets.SND_MIMIC,
+						Assets.SND_ROTTEN_DROP, Assets.SND_GOLD,
+						Assets.SND_DOMINANCE, Assets.SND_CRYSTAL);
+
+				if (ModdingMode.mode()) {
+					testMode();
+				} else {
+
+					switch (mode) {
+					case DESCEND:
+						descend();
+						break;
+					case ASCEND:
+						ascend();
+						break;
+					case CONTINUE:
+						restore();
+						break;
+					case RESURRECT:
+						resurrect();
+						break;
+					case RETURN:
+						returnTo();
+						break;
+					case FALL:
+						fall();
+						break;
+					}
+				}
+				if ((Dungeon.depth % 5) == 0) {
+					Sample.INSTANCE.load(Assets.SND_BOSS);
+				}
+
+			} catch (FileNotFoundException e) {
+
+				error = ERR_FILE_NOT_FOUND;
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+				error = ERR_GENERIC + "\n" + e.getMessage();
+
+			}
+			if(mode != Mode.CONTINUE && PixelDungeon.needDisplaySmallScreenEasyModeIs()) {
+				PixelDungeon.displayEasyModeSmallScreenAd(this);
+			} else {
+				returnToWork();
+			}
+
+		}
+		
+	}
+	
 	@Override
 	public void create() {
 		super.create();
@@ -124,83 +212,8 @@ public class InterlevelScene extends PixelScene {
 		phase = Phase.FADE_IN;
 		timeLeft = TIME_TO_FADE;
 
-		thread = new Thread() {
-			@Override
-			public void run() {
-
-				try {
-
-					Generator.reset();
-
-					Sample.INSTANCE.load(Assets.SND_OPEN, Assets.SND_UNLOCK,
-							Assets.SND_ITEM, Assets.SND_DEWDROP,
-							Assets.SND_HIT, Assets.SND_MISS, Assets.SND_STEP,
-							Assets.SND_WATER, Assets.SND_DESCEND,
-							Assets.SND_EAT, Assets.SND_READ,
-							Assets.SND_LULLABY, Assets.SND_DRINK,
-							Assets.SND_SHATTER, Assets.SND_ZAP,
-							Assets.SND_LIGHTNING, Assets.SND_LEVELUP,
-							Assets.SND_DEATH, Assets.SND_CHALLENGE,
-							Assets.SND_CURSED, Assets.SND_EVOKE,
-							Assets.SND_TRAP, Assets.SND_TOMB, Assets.SND_ALERT,
-							Assets.SND_MELD, Assets.SND_BOSS, Assets.SND_BLAST,
-							Assets.SND_PLANT, Assets.SND_RAY,
-							Assets.SND_BEACON, Assets.SND_TELEPORT,
-							Assets.SND_CHARMS, Assets.SND_MASTERY,
-							Assets.SND_PUFF, Assets.SND_ROCKS,
-							Assets.SND_BURNING, Assets.SND_FALLING,
-							Assets.SND_GHOST, Assets.SND_SECRET,
-							Assets.SND_BONES, Assets.SND_MIMIC,
-							Assets.SND_ROTTEN_DROP, Assets.SND_GOLD,
-							Assets.SND_DOMINANCE, Assets.SND_CRYSTAL);
-
-					if (ModdingMode.mode()) {
-						testMode();
-					} else {
-
-						switch (mode) {
-						case DESCEND:
-							descend();
-							break;
-						case ASCEND:
-							ascend();
-							break;
-						case CONTINUE:
-							restore();
-							break;
-						case RESURRECT:
-							resurrect();
-							break;
-						case RETURN:
-							returnTo();
-							break;
-						case FALL:
-							fall();
-							break;
-						}
-					}
-					if ((Dungeon.depth % 5) == 0) {
-						Sample.INSTANCE.load(Assets.SND_BOSS);
-					}
-
-				} catch (FileNotFoundException e) {
-
-					error = ERR_FILE_NOT_FOUND;
-
-				} catch (IOException e) {
-
-					e.printStackTrace();
-					error = ERR_GENERIC + "\n" + e.getMessage();
-
-				}
-
-				if (phase == Phase.STATIC && error == null) {
-					phase = Phase.FADE_OUT;
-					timeLeft = TIME_TO_FADE;
-				}
-			}
-		};
-		thread.start();
+		levelChanger= new LevelChanger();
+		levelChanger.start();
 	}
 
 	@Override
@@ -214,7 +227,7 @@ public class InterlevelScene extends PixelScene {
 		case FADE_IN:
 			message.alpha(1 - p);
 			if ((timeLeft -= Game.elapsed) <= 0) {
-				if (!thread.isAlive() && error == null) {
+				if (!levelChanger.isAlive() && error == null) {
 					phase = Phase.FADE_OUT;
 					timeLeft = TIME_TO_FADE;
 				} else {
