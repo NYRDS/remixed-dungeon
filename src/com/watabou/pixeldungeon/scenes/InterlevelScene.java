@@ -65,7 +65,7 @@ public class InterlevelScene extends PixelScene {
 			.getVar(R.string.InterLevelScene_ErrorGeneric);
 
 	public static enum Mode {
-		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, MODDING
+		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
 	}
 
 	public static Mode mode;
@@ -112,9 +112,6 @@ public class InterlevelScene extends PixelScene {
 			break;
 		case FALL:
 			text = TXT_FALLING;
-			break;
-		case MODDING:
-			text = "modding test mode";
 			break;
 		}
 
