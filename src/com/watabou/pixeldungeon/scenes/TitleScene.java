@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.ModdingButton;
+import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.nyrds.pixeldungeon.ml.R;
@@ -169,10 +170,15 @@ public class TitleScene extends PixelScene {
 
 		ModdingButton btnModding = new ModdingButton();
 		btnModding.setPos(0, btnPrefs.bottom() + 2);
+		
+		ModsButton btnMods = new ModsButton();
+		btnMods.setPos(0, btnModding.bottom() + 2);
 
 		if(PixelDungeon.isAlpha()) {
 			add(btnModding);
 		}
+		
+		add(btnMods);
 		
 		if (PixelDungeon.donated() > 0) {
 			PremiumPrefsButton btnPPrefs = new PremiumPrefsButton();

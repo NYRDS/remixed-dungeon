@@ -81,13 +81,10 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 					String assetFile = "sound/"+asset;
 					int streamID;
 					
-					if (ModdingMode.mode()) {
-						File file = FileSystem.getExternalStorageFile(assetFile);
-						if (file.exists()) {
-							streamID = pool.load(file.getAbsolutePath(), 1);
-						} else {
-							streamID = fromAsset(manager, assetFile);
-						}
+
+					File file = ModdingMode.getFile(assetFile);
+					if (file!= null && file.exists()) {
+						streamID = pool.load(file.getAbsolutePath(), 1);
 					} else {
 						streamID = fromAsset(manager, assetFile);
 					}

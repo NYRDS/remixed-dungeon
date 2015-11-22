@@ -297,8 +297,7 @@ public class Hero extends Char {
 		
 		belongings.restoreFromBundle(bundle);
 
-		gender = heroClass.getGender();
-		
+		gender = heroClass.getGender();		
 	}
 
 	public static void preview(GamesInProgress.Info info, Bundle bundle) {

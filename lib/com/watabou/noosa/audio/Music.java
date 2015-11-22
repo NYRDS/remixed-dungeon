@@ -62,13 +62,9 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			player = new MediaPlayer();
 			player.setAudioStreamType(AudioManager.STREAM_MUSIC);
 			
-			if (ModdingMode.mode()) {
-				File file = FileSystem.getExternalStorageFile(assetName);
-				if (file.exists()) {
-					player.setDataSource(file.getAbsolutePath());
-				} else {
-					fromAsset(assetName);
-				}
+			File file = ModdingMode.getFile(assetName);
+			if (file!=null && file.exists()) {
+				player.setDataSource(file.getAbsolutePath());
 			} else {
 				fromAsset(assetName);
 			}

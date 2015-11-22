@@ -40,6 +40,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
+import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
@@ -115,11 +116,12 @@ public enum HeroClass {
 		
 		hero.collect(new LloydsBeacon());
 
-		hero.ht(100);
-		hero.hp(100);
+		hero.ht(1000);
+		hero.hp(1000);
 		hero.collect(new ChaosSword().identify());		
 		hero.collect(new ChaosBow().identify());
 		hero.collect(new ChaosStaff().identify());
+		hero.collect(new Glaive().upgrade(10));
 		
 		hero.collect(new CommonArrow(100));
 		

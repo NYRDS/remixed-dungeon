@@ -9,7 +9,7 @@ import android.content.Context;
 
 public class ModdingMode {
 	static private boolean mMode = false;
-	static private String mActiveMod = "";
+	static private String mActiveMod = null;
 	static private Context mContext;
 
 	static private boolean mTextRenderingMode = false;
@@ -30,10 +30,17 @@ public class ModdingMode {
 		return mActiveMod;
 	}
 
+	public static File getFile(String resName) {
+		if(mActiveMod!=null){
+			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);
+		}
+		return null;
+	}
+	
 	public static InputStream getInputStream(String resName) {
 		try {
-			if (mode()) {
-				File file = FileSystem.getExternalStorageFile(resName);
+			if (mActiveMod!=null) {
+				File file = FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);
 				if (file.exists()) {
 					return new FileInputStream(file);
 				}
