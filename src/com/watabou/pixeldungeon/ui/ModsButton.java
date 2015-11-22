@@ -5,16 +5,22 @@ import java.util.ArrayList;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndOptions;
+
 
 public class ModsButton extends Button {
 	
 	private Image image;
+	private Text  text;
 	
 	public ModsButton() {
 		super();
@@ -27,8 +33,12 @@ public class ModsButton extends Button {
 	protected void createChildren() {
 		super.createChildren();
 		
-		image = Icons.PREFS.get();
+		image = Icons.MODDING_MODE.get();
 		add( image );
+		
+		text = Text.createBasicText(PixelScene.font1x);
+		text.text(PixelDungeon.activeMod());
+		add(text);
 	}
 	
 	@Override
@@ -37,6 +47,9 @@ public class ModsButton extends Button {
 		
 		image.x = x;
 		image.y = y;
+		
+		text.x = x;
+		text.y = image.y + image.height + 2;
 	}
 	
 	@Override
@@ -64,7 +77,7 @@ public class ModsButton extends Button {
 			}
 		}
 		
-		getParent().add( new WndOptions("Select Mod", "", mods.toArray(new String[0])){
+		getParent().add( new WndOptions(Game.getVar(R.string.ModsButton_SelectMod), "", mods.toArray(new String[0])){
 			@Override
 			protected void onSelect(int index) {
 				super.onSelect(index);

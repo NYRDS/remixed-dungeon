@@ -76,4 +76,6 @@
     <!-- STRINGS OF WndSaveSlotSelect CLASS -->
     <string name="WndSaveSlotSelect_SelectSlot">Select slot</string>
     
+    <!-- STRINGS OF ModsButton CLASS -->
+    <string name="ModsButton_SelectMod">Select mod</string>
 </resources>
