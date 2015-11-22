@@ -2,22 +2,22 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">당신의 %s 이/가 당신의 몸을 고통스럽게 조여온다</string>
-  <string name="Armor_Identify">당신은 %1$s 에 충분히 친숙해져서 그것의 정체를 알 게 되었다. 그것은 %2$s이다.</string>
+  <string name="Armor_EquipCursed">당신의 %s 이/가 몸을 고통스럽게 조여온다</string>
+  <string name="Armor_Identify">당신은 이제 %1$s 을 식별할 수 있을 만큼 충분히 익숙해졌습니다. 이것은 %2$s 입니다.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
-  <string name="Armor_Incompatible">서로 다른 타입의 마법간에 상호작용으로 갑옷의 각인을 지워져 버렸다</string>
+  <string name="Armor_Incompatible">서로 다른 마법간의 상호작용으로 갑옷의 각인이 지워져 버렸다.</string>
   <string name="Armor_Info1">이 %1$s 은/는 최대  \"%2$d\" 데미지를 흡수할 수 있다</string>
   <string name="Armor_Info2">\n\n힘이 부족하여 당신의 움직임이 느려지고 방어능력이 떨어졌다.</string>
   <string name="Armor_Info3">\n\n힘이 부족하여 이 갑옷을 입으면 움직임이 느려지고 방어 능력이 떨어질 것이다.</string>
-  <string name="Armor_Info4">\n\n일반적으로 %1$s 은/는 최대 %2$d 데미지를 흡수하고 힘 %3$d을 필요로 한다.</string>
-  <string name="Armor_Info5">이 갑옷은 지금 당신한테 너무 무거운거 같다.</string>
-  <string name="Armor_Info6">각인 되어 있음.</string>
+  <string name="Armor_Info4">\n\n일반적인 %1$s 은/는 최대 %2$d 데미지를 흡수하고 힘 %3$d을 필요로 한다.</string>
+  <string name="Armor_Info5">아마 당신에게는 갑옷이 너무 무거워 보인다.</string>
+  <string name="Armor_Info6">각인되어 있다.</string>
   <string name="Armor_Info7a">\n\n당신은 %1$s%2$s 을/를 착용하고 있다.</string>
   <string name="Armor_Info7b">그리고 저주로 인해, 당신은 그것을 벗을 수가 없다.</string>
-  <string name="Armor_Info8">\n\n당신은 %s안에 숨어있는 해로운 마법의 기운을 느낄 수 있다.</string>
-  <string name="Armor_Glyph">각인</string>
+  <string name="Armor_Info8">\n\n %s안에 해로운 마법이 숨어있음을 느낄 수 있다.</string>
+  <string name="Armor_Glyph">문양</string>
   <!--STRINGS OF ClassArmor CLASS-->
-  <string name="ClassArmor_Desc">와 존나 멋져 졌다!!</string>
+  <string name="ClassArmor_Desc">쩔어 보인다!</string>
   <string name="ClassArmor_LowHealt">쓰러지기 일보 직전입니다!!</string>
   <string name="ClassArmor_NotEquipped">그 갑옷의 특별한 힘을 이용하기 위해서는 입고 있어야 합니다.</string>
   <!--STRINGS OF ClothArmor CLASS-->
@@ -25,68 +25,68 @@
   <string name="ClothArmor_Desc">이 경갑옷은 기본적인 방어력을 제공한다.</string>
   <!--STRINGS OF ElfArmor CLASS-->
   <string name="ElfArmor_Name">엘프의 망토</string>
-  <string name="ElfArmor_Desc">이 망토를 이용하여, 엘프는 자연의 힘을 소환할 수 있다. 단단한 바위 표면이라 할지라도, 큰 풀숲이 눈 깜짝할 새 자라서 보이는 적들을 옴짝달싹 못하게 해버릴 것이다.</string>
+  <string name="ElfArmor_Desc">이 망토의 도움으로 엘프는 자연의 힘 자체를 소환할 수 있다. 단단한 바위 표면이라 할지라도, 큰 풀숲이 눈 깜짝할 새 자라서 보이는 적들을 옴짝달싹 못하게 해버릴 것이다.</string>
   <string name="ElfArmor_ACSpecial">자연의 부름</string>
-  <string name="ElfArmor_NotElf">이 갑옷은 엘프만 착용 가능.</string>
+  <string name="ElfArmor_NotElf">이 갑옷은 엘프만 착용 가능하다.</string>
   <!--STRINGS OF HuntressArmor CLASS-->
   <string name="HuntressArmor_Name">사냥꾼의 망토</string>
-  <string name="HuntressArmor_Desc">이 망토를 착용한 사냥꾼은 보이지 않는 회전하는 칼날을 만들어 낼 수 있다. 이 칼날은 사냥꾼의 시야에 들어온 적에게 칼날 하나당 하나의 적을 목표삼고, 지금 착용중인 무기의 데미지에 따르는 피해를 준다.</string>
-  <string name="HuntressArmor_ACSpecial">보이지 않는 칼날</string>
-  <string name="HuntressArmor_NoEnemies">적이 시야 내에 없음</string>
-  <string name="HuntressArmor_NotHuntress">이 갑옷은 사냥꾼만 착용 가능</string>
+  <string name="HuntressArmor_Desc">이 망토를 착용한 사냥꾼은 귀검 부채를 만들어낼 수 있다.각 칼날 하나마다 시야에 들어온 적 하나씩을 노리고, 착용중인 근접 무기의 공격력에 따라 피해를 준다.</string>
+  <string name="HuntressArmor_ACSpecial">귀검</string>
+  <string name="HuntressArmor_NoEnemies">시야 내에 적 없음</string>
+  <string name="HuntressArmor_NotHuntress">이 갑옷은 사냥꾼만 착용 가능하다.</string>
   <!--STRINGS OF LeatherArmor CLASS-->
   <string name="LeatherArmor_Name">가죽 갑옷</string>
-  <string name="LeatherArmor_Desc">동물의 가죽을 무두질하여 만든 갑옷. 천 갑옷 만큼은 가볍지 않으나 보다 나은 방어력을 제공한다.</string>
+  <string name="LeatherArmor_Desc">무두질한 몬스터 가죽으로 만든 갑옷. 천 갑옷만큼 가볍지는 않지만 더 나은 방어력을 제공한다.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">마법사의 로브</string>
-  <string name="MageArmor_Desc">이 멋진 로브를 입고있는 마법사는 용암 주문을 사용할 수 있다. 시야에 들어온 모든 적을 불꽃으로 태우는 동시에 움직일 수 잆게 한다.</string>
-  <string name="MageArmor_ACSpecial">용암</string>
-  <string name="MageArmor_NotMage">이 갑옷은 마법사만 착용 가능.</string>
+  <string name="MageArmor_Desc">이 멋진 로브를 입고있는 마법사는 용암 분출 주문을 사용할 수 있다; 시야의 모든 적에 불을 붙이고 움직일 수 없게 한다.</string>
+  <string name="MageArmor_ACSpecial">용암 분출</string>
+  <string name="MageArmor_NotMage">이 갑옷은 마법사만 착용 가능하다</string>
   <!--STRINGS OF MailArmor CLASS-->
   <string name="MailArmor_Name">사슬 갑옷</string>
-  <string name="MailArmor_Desc">쇠 사슬들을 맞물리게 연결하여 강하지만 유연한 착용감을 주도록 만든 갑옷.</string>
+  <string name="MailArmor_Desc">갑옷을 단단하면서도 유연하게 하기 위하여 쇠사슬을 엮어 만들었다.</string>
   <!--STRINGS OF PlateArmor CLASS-->
   <string name="PlateArmor_Name">판금 갑옷</string>
-  <string name="PlateArmor_Desc">굉장한 철판들을 서로 연결하여 착용할 수 있도록 만들어져 있어, 이 무게를 감당할 수 있는 모험자들에게는 비교할 수 없을만한 방어력을 제공한다.</string>
+  <string name="PlateArmor_Desc">많은 철판들을 서로 연결해 한 벌로 만들어, 이 엄청난 무게를 견딜 수 있는 모험자들에게는 비교할 수 없는 방어력을 제공한다.</string>
   <!--STRINGS OF RogueArmor CLASS-->
   <string name="RogueArmor_Name">로그의 의복</string>
-  <string name="RogueArmor_Desc">이 어둠의 의복을 입은 로그는 연막탄이라는 술수를 부릴 수 있게된다(폭약이 들어있지는 않다): 적들의 눈을 멀게하고 옆으로 회피한다.</string>
+  <string name="RogueArmor_Desc">이 어둠의 의복을 입는다면, 로그는 \"연막탄\" 이라는 술수를 부릴 수 있게 된다 (폭발물을 사용하진 않지만 말이다): 적들의 눈을 멀게 하고 옆으로 회피한다.</string>
   <string name="RogueArmor_ACSpecial">연막탄</string>
-  <string name="RogueArmor_NotRogue">이 갑옷은 로그만 착용 가능.</string>
+  <string name="RogueArmor_NotRogue">이 갑옷은 로그만 착용 가능하다</string>
   <string name="RogueArmor_Fov">시야에 들어오는 비어있는 위치로만 점프할 수 있다.</string>
   <string name="RogueArmor_Prompt">점프할 위치 선택</string>
   <!--STRINGS OF ScaleArmor CLASS-->
   <string name="ScaleArmor_Name">미늘 갑옷</string>
-  <string name="ScaleArmor_Desc">가죽 조끼 표면에 철판을 꿰메어 만들어서 유연하면서도 방어력이 강한 갑옷</string>
+  <string name="ScaleArmor_Desc">가죽 조끼 표면에 철판을 꿰메어 유연하면서도 방어력이 강한 갑옷을 만들었다.</string>
   <!--STRINGS OF WarriorArmor CLASS-->
   <string name="WarriorArmor_Name">전사의 갑주</string>
   <string name="WarriorArmor_Desc">이 갑옷이 보기엔 무거워 보일지 모르나 착용한 전사에게 영웅적 도약을 가능케 한다. 영웅적 도약으로 목표 지점을 강하게 내리치며 주변의 모든 적을 스턴시킬 수 있다.</string>
-  <string name="WarriorArmor_ACSpecial">영웅적 도약</string>
-  <string name="WarriorArmor_NotWarrior">이 갑옷은 전사만 착용 가능.</string>
-  <string name="WarriorArmor_Prompt">도약할 방향을 선택</string>
+  <string name="WarriorArmor_ACSpecial">영웅의 도약</string>
+  <string name="WarriorArmor_NotWarrior">이 갑옷은 전사만 착용 가능하다.</string>
+  <string name="WarriorArmor_Prompt">도약할 방향을 선택하라.</string>
   <!--PACKAGE /armor/Gyphs-->
   <!--STRINGS OF Affection CLASS-->
   <string name="Affection_Txt">매혹의 %s </string>
   <!--STRINGS OF AntiEntropy CLASS-->
-  <string name="AntiEntropy_Txt">반-열역학의 %s</string>
+  <string name="AntiEntropy_Txt">반 엔트로피의 %s</string>
   <!--STRINGS OF Bounce CLASS-->
-  <string name="Bounce_Txt">튕겨냄의 %s</string>
+  <string name="Bounce_Txt">탄력의 %s</string>
   <!--STRINGS OF Displacement CLASS-->
-  <string name="Displacement_Txt">사라짐의 %s</string>
+  <string name="Displacement_Txt">이동의 %s</string>
   <!--STRINGS OF Entanglement CLASS-->
-  <string name="Entanglement_Txt">속박의 %s</string>
+  <string name="Entanglement_Txt">속박 %s</string>
   <!--STRINGS OF Metabolism CLASS-->
-  <string name="Metabolism_Txt">대사의 %s</string>
+  <string name="Metabolism_Txt">신진대사의 %s</string>
   <!--STRINGS OF Multiplicity CLASS-->
-  <string name="Multiplicity_Txt">복제의 %s</string>
+  <string name="Multiplicity_Txt">다중성의 %s</string>
   <!--STRINGS OF Potential CLASS-->
-  <string name="Potential_Txt">잠재성의 %s</string>
+  <string name="Potential_Txt">전격의 %s</string>
   <!--STRINGS OF Stench CLASS-->
   <string name="Stench_Txt">악취의 %s</string>
   <!--STRINGS OF Viscosity CLASS-->
-  <string name="Viscosity_Txt">끈적임의 %s</string>
+  <string name="Viscosity_Txt">점성의의 %s</string>
   <string name="Viscosity_Status">지속적으로 %d</string>
   <!--STRINGS OF DeferedDamage CLASS-->
   <string name="DeferedDamage_Defered_Txt">지속 피해 (%d)</string>
-  <string name="DeferedDamage_Killed_Txt">당신은 %s 에게 죽었습니다...</string>
+  <string name="DeferedDamage_Killed_Txt">%s 이/가 당신을 죽였습니다...</string>
 </resources>

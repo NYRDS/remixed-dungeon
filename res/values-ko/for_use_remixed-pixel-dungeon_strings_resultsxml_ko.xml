@@ -13,6 +13,6 @@
   <string name="ResultDescriptions_Bleeding">%d 층에서 출혈에 의해 죽었습니다.</string>
   <string name="ResultDescriptions_Ooze">%d 층에서 부식성 점액에 의해 죽었습니다.</string>
   <string name="ResultDescriptions_Fall">%d 층에서 낙사 하였습니다.</string>
-  <string name="ResultDescriptions_Win">Yendor의 부적을 획득하였습니다.</string>
+  <string name="ResultDescriptions_Win">옌더의 아뮬렛을 획득하였습니다.</string>
   <string name="ResultDescriptions_Immured">%d 층에서 돌에 갖혀 죽었습니다.</string>
 </resources>

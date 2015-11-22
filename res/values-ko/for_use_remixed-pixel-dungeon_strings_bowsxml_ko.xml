@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">활은 원거리 무기이고, 보통 근접전에서는 쓸모가 없다(단, 엘프는 예외).\n\n</string>
+  <string name="Bow_Info1">활은 원거리 무기이다. 매우 가까이에서는 쓸모가 없지만 엘프들은 사용가능하다. 활을 착용하면 화살을 쏠 수 있다.\n\n</string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">나무 활</string>
   <string name="WoodenBow_Info">이 간단한 나무활은 당신이 화살을 가지고 있다면 어느정도 쓸만할 것이다.</string>
   <string name="WoodenBow_Gender">남성적인</string>
   <!--STRINGS OF CompoundBow CLASS-->
-  <string name="CompoundBow_Name">양궁 활</string>
-  <string name="CompoundBow_Info">양궁 활은 속도가 좀 느린 대신 향상된 정확도로 활을 발사하여 큰 데미지를 줄 수 있다.</string>
+  <string name="CompoundBow_Name">합성궁</string>
+  <string name="CompoundBow_Info">이 합성궁에서 발사된 화살은 속도를 좀 희생하는 대신 높은 데미지와 향상된 명중률을 가진다.</string>
   <string name="CompoundBow_Gender">남성적인</string>
   <!--STRINGS OF RubyBow CLASS-->
   <string name="RubyBow_Name">루비 활</string>
@@ -31,12 +31,12 @@
   <string name="ParalysisQuiver_Info"></string>
   <string name="ParalysisQuiver_Gender">남성적인</string>
   <!--STRINGS OF CommonArrow CLASS-->
-  <string name="CommonArrow_Name">활</string>
-  <string name="CommonArrow_Info">아무 화살이나 보관할 수 있는 가죽 화살집</string>
+  <string name="CommonArrow_Name">화살</string>
+  <string name="CommonArrow_Info">쇠촉을 가진 평범한 나무 화살</string>
   <string name="CommonArrow_Gender">여성스런</string>
   <!--STRINGS OF FireArrow CLASS-->
-  <string name="FireArrow_Name">불 화살</string>
-  <string name="FireArrow_Info">아무 화살이나 보관할 수 있는 가죽 화살집</string>
+  <string name="FireArrow_Name">화염 화살</string>
+  <string name="FireArrow_Info">이 화살은 평범해 보이지만 화살촉에서 붉고 따뜻한 빛이 새어나온다</string>
   <string name="FireArrow_Gender">여성스런</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">독 화살</string>
@@ -44,10 +44,10 @@
   <string name="PoisonArrow_Gender">여성스런</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
   <string name="ParalysisArrow_Name">마비 화살</string>
-  <string name="ParalysisArrow_Info">이 화살은 흐릿하지만 어디서 많이 맡아본 마비초의 향이 난다.</string>
+  <string name="ParalysisArrow_Info">이 화살은 쿠라레가 칠해져 있다.</string>
   <string name="ParalysisArrow_Gender">여성스런</string>
   <!--STRINGS OF FrostArrow CLASS-->
-  <string name="FrostArrow_Name">냉기 화살</string>
+  <string name="FrostArrow_Name">얼음 화살</string>
   <string name="FrostArrow_Info">화살 촉에서 차가운의 기운이 발산되는걸 느낄 수 있다.</string>
   <string name="FrostArrow_Gender">여성스런</string>
 </resources>

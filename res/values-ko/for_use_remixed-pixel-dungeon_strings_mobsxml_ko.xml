@@ -5,10 +5,10 @@
   <string name="Mob_Desc">진짜 설명은 곧 나옵니다!</string>
   <string name="Mob_Died">저 멀리서 뭔가가 죽는 소리가 들립니다.</string>
   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
-  <string name="Mob_StaSleepingStatus">이 %s 은/는 자는 중 입니다</string>
-  <string name="Mob_StaWanderingStatus">이 %s 은/는 서성대고 있습니다</string>
-  <string name="Mob_StaHuntingStatus">이 %s 은/는 사냥 중 입니다</string>
-  <string name="Mob_StaFleeingStatus">이 %s 은/는 혼비백산 중 입니다</string>
+  <string name="Mob_StaSleepingStatus">이 %s 은/는 자는중 입니다</string>
+  <string name="Mob_StaWanderingStatus">이 %s 은/는 방랑중 입니다</string>
+  <string name="Mob_StaHuntingStatus">이 %s 은/는 사냥중 입니다</string>
+  <string name="Mob_StaFleeingStatus">이 %s 은/는 혼비백산하고 있습니다.</string>
   <string name="Mob_StaPassiveStatus">이 %s 은/는 소극적입니다</string>
   <!--STRINGS OF Acidic CLASS-->
   <string name="Acidic_Name">산성 전갈</string>
@@ -16,15 +16,15 @@
   <string name="Acidic_Name_Objective">산성 전갈</string>
   <string name="Acidic_Desc">이 거대한 거미류의 악마같은 생물은 근접전을 최대한 피하고, 멀리서 불구로 만들어 버릴 수 있는 톱니 가시를 발사한다.</string>
   <!--STRINGS OF Albino CLASS-->
-  <string name="Albino_Name">하얗고 거대한 쥐</string>
+  <string name="Albino_Name">알비노 쥐</string>
   <string name="Albino_Gender">남성</string>
-  <string name="Albino_Name_Objective">하얗고 거대한 쥐</string>
-  <string name="Albino_Desc">주머니 쥐들은 난폭하지만 다소 약한 하수구의 거주자들이다. 그들은 큰 수가 모였을때 위험하다. 이 특별한 쥐는 알비노 종으로 보인다. 게다가 비정상 적으로 날카로운 이빨을 가지고 있다.</string>
+  <string name="Albino_Name_Objective">알비노 쥐</string>
+  <string name="Albino_Desc">주머니 쥐들은 난폭하지만 다소 약한 하수구의 거주자들이다. 그들은 큰 수가 모였을때만 위험하다. 이 특별한 쥐는 알비노 종으로 보인다. 게다가 비정상적으로 날카로운 이빨을 가지고 있다.</string>
   <!--STRINGS OF Bandit CLASS-->
-  <string name="Bandit_Name">미친 도둑</string>
+  <string name="Bandit_Name">미친 강도</string>
   <string name="Bandit_Gender">남성</string>
-  <string name="Bandit_Name_Objective">미친 도둑</string>
-  <string name="Bandit_Desc">던전 깊숙한 곳에는 언제나 모든 종류의 범죄자들이 숨어 지내는 곳이 있다. 빛을 보지 못하는 시간이 길어짐으로 인해 그들중 대다수는 제정신이 아니다. 이미 오래 전, 이들 미치광이 도둑과 강도들은 자신들이 누구이며 왜 무언가를 훔치고 있는지 잊었다. 이 강도는 그의 단도에 뭔가를 묻혀둔거 같다!</string>
+  <string name="Bandit_Name_Objective">미친 강도</string>
+  <string name="Bandit_Desc">던전 깊숙한 곳에는 언제나 모든 종류의 범죄자들이 숨어 지내는 곳이 있다. 빛을 보지 못하는 시간이 길어짐으로 인해 그들중 대다수는 제정신이 아니다.오래 전, 미친 도둑과 강도들은 자신들이 누구이며 왜 무언가를 훔치고 있는지 잊었다. 이 강도는 그의 단도에 뭔가를 묻혀둔거 같다!</string>
   <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">흡혈 박쥐</string>
   <string name="Bat_Gender">남성</string>
@@ -32,70 +32,70 @@
   <string name="Bat_Desc">이 민첩하고 끈질긴 동굴 천장의 주민은 공격 성공시마다 흡혈을 통해 자기 보다 훨씬 큰 상대도 제압할 수 있다.</string>
   <string name="Bat_Defense">회피</string>
   <!--STRINGS OF Brute CLASS-->
-  <string name="Brute_Name">놀 광전사</string>
-  <string name="Brute_Name_Objective">놀 광전사</string>
-  <string name="Brute_Desc">놀 광전사는 놀 중에서도 가장 크고 강하며 터프한 녀석들이다. 큰 상처를 입게되면, 이들은 광폭화 하면서 적에게 보타 큰 데미지를 준다.</string>
+  <string name="Brute_Name">놀 정예병</string>
+  <string name="Brute_Name_Objective">놀 정예병</string>
+  <string name="Brute_Desc">놀 정예병은 놀 중에서도 가장 크고 강하며 터프한 녀석들이다. 큰 상처를 입게되면, 이들은 격분하면서 적에게 보다 큰 데미지를 준다.</string>
   <string name="Brute_Gender">남성</string>
-  <string name="Brute_Enraged">%s 은/는 포악해졌다!</string>
-  <string name="Brute_StaEnraged">포악해짐</string>
+  <string name="Brute_Enraged">%s 은/는 격분에 빠졌다!</string>
+  <string name="Brute_StaEnraged">격분</string>
   <!--STRINGS OF Crab CLASS-->
   <string name="Crab_Name">하수구 게</string>
   <string name="Crab_Gender">남성</string>
   <string name="Crab_Name_Objective">하수구 게</string>
   <string name="Crab_Desc">이 거대한 게들은 하수구 먹이사슬의 최상의 포식자다. 그들은 매우 빠르고 그들의 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
-  <string name="Crab_Defense">막았다</string>
+  <string name="Crab_Defense">막음</string>
   <!--STRINGS OF DM300 CLASS-->
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">남성</string>
   <string name="DM300_Name_Objective">DM-300</string>
-  <string name="DM300_Desc">이 기계는 드워프에 의해 수백년 전에 만들어 졌다. 나중에 드워프들은 이 기계들을 골렘, 엘레멘탈 심지어는 데몬으로 대체하기 시작했다. 결국 이는 그들 문명의 쇠퇴로 이어졌다. DM-300 및 이와 유사한 기계들은 대개 건축이나 채광 그리고 때로는 도시 방어에 이용되었다.</string>
-  <string name="DM300_Info1">DM-300이 스스로 수리 중!</string>
+  <string name="DM300_Desc">이 기계는 드워프에 의해 수세기 전에 만들어 졌다. 시간이 지남에 따라 이들은 골렘, 정령, 심지어는 악마들로 교체되어 갔고, 이 때문에 드워프들의 문명은 쇠퇴하게 되었다. DM-300 및 이와 유사한 기계들은 건설, 채광, 또는 도시 방어를 위해 사용되었다.</string>
+  <string name="DM300_Info1">DM-300이 스스로를 수리했다!</string>
   <string name="DM300_Info2">임무 실패. 종료됩니다.</string>
-  <string name="DM300_Info3">침입자 감지.</string>
+  <string name="DM300_Info3">무단 출입 감지됨.</string>
   <!--STRINGS OF Elemental CLASS-->
-  <string name="Elemental_Name">불 엘레멘탈</string>
+  <string name="Elemental_Name">불의 정령</string>
   <string name="Elemental_Gender">남성</string>
-  <string name="Elemental_Name_Objective">불 엘레멘탈</string>
-  <string name="Elemental_Desc">이리 저리 돌아다니는 불 엘레멘탈들은 고위 몬스터 소환의 부산물이다. 이들은 너무나 혼돈스런 성질을 가지고 있어서 가장 강력한 데몬술사마저 조종하기 어렵다.</string>
+  <string name="Elemental_Name_Objective">불의 정령</string>
+  <string name="Elemental_Desc">이리 저리 돌아다니는 불의 정령들은 고위 몬스터 소환의 부산물이다. 이들은 너무나 혼돈스런 성질을 가지고 있어서 가장 강력한 데몬술사마저 조종하기 어렵다.</string>
   <!--STRINGS OF Eye CLASS-->
-  <string name="Eye_Name">이블 아이</string>
+  <string name="Eye_Name">이블아이</string>
   <string name="Eye_Gender">중성적인</string>
-  <string name="Eye_Name_Objective">이블 아이</string>
+  <string name="Eye_Name_Objective">이블아이</string>
   <string name="Eye_Desc">이 악마의 또다른 이름은 \"증오의 구슬\"이다. 왜냐하면 한 번 적을 본 녀석은 주변에 아군이 있든 말든 무시하고 죽음의 광선을 사용하여 아군도 상처 입히기 때문이다.</string>
   <string name="Eye_Kill">%s의 죽음의 광선이 당신을 죽였다...</string>
   <!--STRINGS OF Gnoll CLASS-->
-  <string name="Gnoll_Name">놀 수색대</string>
+  <string name="Gnoll_Name">놀 정찰병</string>
   <string name="Gnoll_Gender">남성</string>
-  <string name="Gnoll_Name_Objective">놀 수색대</string>
-  <string name="Gnoll_Desc">놀은 하이에나 처럼 생긴 인간형 몬스터이다. 그들은 하수구나 던전에 살면서  때때론 지상을 습격한다. 놀 수색대는 그들 무리의 일반 구성원이다. 그들은 놀 광전사 만큼 강하지도 않고 놀 샤먼 만큼 똑똑하지도 않다.</string>
+  <string name="Gnoll_Name_Objective">놀 정찰병</string>
+  <string name="Gnoll_Desc">놀은 하이에나 처럼 생긴 인간형 몬스터이다. 그들은 하수구나 던전에 살면서 때때로 지상을 습격한다. 놀 수색대는 그들 무리의 일반 구성원이다. 그들은 놀 정예병만큼 강하지도 않고 놀 주술사만큼 똑똑하지도 않다.</string>
   <!--STRINGS OF Golem CLASS-->
   <string name="Golem_Name">골렘</string>
   <string name="Golem_Gender">남성</string>
   <string name="Golem_Name_Objective">골렘</string>
-  <string name="Golem_Desc">드워프들은 그들의 기계에대한 지식과 새로 발견한 엘레멘탈의 힘을 서로 융합하려고 하였다. 그들은 토양의 정기를 \"영혼\"으로 이용하여 골렘의 기계로된 몸체에 넣었고, 이를 조종할 수 있을거라고 믿어 의심치 않았다. 그럼에도 불구하고, 의식 도중의 아주 사소한 실수에도 재앙을 초래할 수 있다.</string>
-  <string name="Golem_Defense">막았다</string>
+  <string name="Golem_Desc">드워프들은 그들의 기계에 대한 지식과 새로 발견한 정령의 힘을 서로 융합하려고 하였다. 그들은 토양의 정기를 \"영혼\"으로 이용하여 골렘의 기계로된 몸체에 넣었고, 이를 조종할 수 있을거라고 믿어 의심치 않았다. 그럼에도 불구하고, 의식 도중의 아주 사소한 실수에도 재앙을 초래할 수 있다.</string>
+  <string name="Golem_Defense">막음</string>
   <!--STRINGS OF Goo CLASS-->
-  <string name="Goo_Name">구우</string>
+  <string name="Goo_Name">블랙 푸딩</string>
   <string name="Goo_Gender">여성</string>
-  <string name="Goo_Name_Objective">구우</string>
-  <string name="Goo_Desc">별로 알려진게 없다. Goo 라고 부른다. 생물이 아니라, 오히려 하수구로부터의 물질들이 접적된 것에 자유 의지의 씨앗이 깃든 무언가일 가능성도 있다. 어느 쪽이든 간에, 어둠의 마법이 이 곳에 영향을 미치고 있는게 틀림없다.</string>
-  <string name="Goo_Info1">구우가 부풀어 오르기 시작했다!</string>
-  <string name="Goo_Info2">꿀럭...꿀럭....</string>
-  <string name="Goo_Info3">꿀렁-꿀렁!</string>
+  <string name="Goo_Name_Objective">블랙 푸딩</string>
+  <string name="Goo_Desc">블랙 푸딩에 대해서는 알려진게 없다. 생물이 아니라, 오히려 하수구로부터의 물질들이 접적된 것에 자유 의지의 씨앗이 깃든 무언가일 가능성도 있다. 어느 쪽이든 간에, 어둠의 마법이 이 곳에 영향을 미치고 있는게 틀림없다.</string>
+  <string name="Goo_Info1">블랙 푸딩이 부풀어 오르기 시작했다!</string>
+  <string name="Goo_Info2">꾸룩...꾸룩....</string>
+  <string name="Goo_Info3">꾸룩-꾸룩!</string>
   <string name="Goo_StaInfo1">!!!</string>
   <!--STRINGS OF King CLASS-->
-  <string name="King_Name">드워프의 왕</string>
+  <string name="King_Name">드워프 왕</string>
   <string name="King_Gender">남성</string>
-  <string name="King_Name_Objective">드워프의 왕</string>
-  <string name="King_Desc">드워프의 마지막 왕은 생명과 죽음의 프로세스에 대해 깊은 지식을 가진 것으로 잘 알려져 있다. 그는 자기 의회의 멤버들을 영원한 젊음을 얻을 수 있다고 설득하여 의식에 참여하게 하였다. 마지막에 그걸 얻은건 왕 혼자 뿐이었다. 그리고 그는 보너스로 언데드 군대도 얻었다.</string>
-  <string name="King_Defense">피했다</string>
+  <string name="King_Name_Objective">드워프 왕</string>
+  <string name="King_Desc">드워프의 마지막 왕은 생명과 죽음의 원리에 대해 깊은 지식을 가진 것으로 잘 알려져 있다. 그는 의회의 의원들을 영원한 젊음을 얻을 수 있다고 설득하여 의식에 참여하게 하였다. 마지막에 그걸 얻은건 왕 혼자 뿐이었다. 그리고 그는 보너스로 언데드 군대도 얻었다.</string>
+  <string name="King_Defense">막음</string>
   <string name="King_Info1">넌 나를 죽일 수 없다, %s... 나는... 불사신이다...</string>
   <string name="King_Info2">일어나라, 노예들아!</string>
-  <string name="King_Info3">니가 감히!</string>
+  <string name="King_Info3">네가 감히!</string>
   <string name="Undead_Name">언데드 드워프</string>
   <string name="Undead_Gender">남성</string>
   <string name="Undead_Name_Objective">언데드 드워프</string>
-  <string name="Undead_Desc">드워프 왕의 의지에 의해 살아난 이들 언데드 드워프들은 왕의 의회의 구성원들이었다. 그들은 스켈레톤 몰골에 얼굴에는 엄청나게 수염이 많이 붙어있는 꼴을 하고 있다.</string>
+  <string name="Undead_Desc">드워프 왕의 의지에 의해 살아난 언데드 드워프들은 왕의 의회의 구성원들이었다. 그들은 해골의 형상에 얼굴에는 엄청나게 수염이 많이 붙어있는 꼴을 하고 있다.</string>
   <string name="Undead_Defense">막았다</string>
   <!--STRINGS OF Mimic CLASS-->
   <string name="Mimic_Name">미믹</string>
@@ -106,13 +106,13 @@
   <string name="MimicPie_Name">미믹</string>
   <string name="MimicPie_Gender">남성</string>
   <string name="MimicPie_Name_Objective">미믹</string>
-  <string name="MimicPie_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법의 생물이다. 이 놈은 크고 맛잇는 파이처럼 생겼다.</string>
+  <string name="MimicPie_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법의 생물이다. 이 놈은 크고 맛있는 파스티처럼 생겼다.</string>
   <!--STRINGS OF Monk CLASS-->
   <string name="Monk_Name">드워프 수도승</string>
   <string name="Monk_Gender">남성</string>
   <string name="Monk_Name_Objective">드워프 수도승</string>
   <string name="Monk_Desc">외부 침략자들로부터 자신들의 도시의 비밀을 지키는데 헌신하는 이 수도승들은 광기에 빠져 있다. 그들은 아무런 갑옷도 무기도 사용하지 않고, 오직 맨주먹에 의지하여 싸운다.</string>
-  <string name="Monk_Defense">피했다</string>
+  <string name="Monk_Defense">막음</string>
   <string name="Monk_Disarm">%1$s 이  %2$s 을/를 당신 손에서 떨어 뜨렸다!</string>
   <!--STRINGS OF Piranha CLASS-->
   <string name="Piranha_Name">거대 피라냐</string>
@@ -125,14 +125,14 @@
   <string name="Rat_Name_Objective">주머니 쥐</string>
   <string name="Rat_Desc">거대 주머니 쥐는 포악하지만 비교적 약한 하수구 거주자다.  많은 수가 모이지 않으면 그닥 위험하지 않다.</string>
   <!--STRINGS OF Scorpio CLASS-->
-  <string name="Scorpio_Name">스콜피오</string>
+  <string name="Scorpio_Name">거대 전갈</string>
   <string name="Scorpio_Gender">남성</string>
-  <string name="Scorpio_Name_Objective">스콜피오</string>
+  <string name="Scorpio_Name_Objective">거대 전갈</string>
   <string name="Scorpio_Desc">이 거대한 거미류의 악마같은 생물은 근접전을 최대한 피하고, 멀리서 불구로 만들어 버릴 수 있는 톱니 가시를 발사한다.</string>
   <!--STRINGS OF Senior CLASS-->
-  <string name="Senior_Name">고위 수도승</string>
+  <string name="Senior_Name">고위 드워프 수도승</string>
   <string name="Senior_Gender">남성</string>
-  <string name="Senior_Name_Objective">고위 수도승</string>
+  <string name="Senior_Name_Objective">고위 드워프 수도승</string>
   <string name="Senior_Desc">외부 침략자들로부터 자신들의 도시의 비밀을 지키는데 헌신하는 이 수도승들은 광기에 빠져 있다. 그들은 아무런 갑옷도 무기도 사용하지 않고, 오직 맨주먹에 의지하여 싸운다. 이 특별한 몽크는 상대를 불구로 만들어 버리는 기술의 달인이다.</string>
   <!--STRINGS OF Shadow CLASS-->
   <string name="Shadow_Name">그림자</string>
@@ -140,23 +140,23 @@
   <string name="Shadow_Name_Objective">그림자</string>
   <string name="Shadow_Desc">조용히 고대 감옥의 폐허를 떠돌아 다니는 그림자. 모험자들에게 아주 드물게 자신들의 모습을 드러낸다. 대개 그 모험자의 모험은 그날로 끝이다.</string>
   <!--STRINGS OF Shaman CLASS-->
-  <string name="Shaman_Name">놀 샤먼</string>
+  <string name="Shaman_Name">놀 주술사</string>
   <string name="Shaman_Gender">남성</string>
-  <string name="Shaman_Name_Objective">놀 샤먼</string>
-  <string name="Shaman_Desc">가장 지능이 뛰어는 놀들만이 샤먼의 마법을 익힐 수 있다.  놀 샤먼은 힘은 약하지만 그대신 전투 마법을 사용하길 좋아하며, 부족에서 자신의 지위를 의심하는 자들에게는 이를 사용하길 꺼리지 않는다.</string>
-  <string name="Shaman_Killed">%s의 라이트닝 볼트가 당신을 죽였다...</string>
+  <string name="Shaman_Name_Objective">놀 주술사</string>
+  <string name="Shaman_Desc">가장 지능이 뛰어는 놀들만이 주술사의 주술을 익힐 수 있다. 놀 주술사의 힘은 약하지만 그 대신 전투 마법을 사용하길 좋아하며, 부족에서 자신의 지위를 의심하는 자들에게는 이를 사용하길 꺼리지 않는다.</string>
+  <string name="Shaman_Killed">%s의 번개 화살이 당신을 죽였다...</string>
   <!--STRINGS OF Shielded CLASS-->
-  <string name="Shielded_Name">방패 야수</string>
+  <string name="Shielded_Name">방패를 든 놀 정예병</string>
   <string name="Shielded_Gender">남성</string>
-  <string name="Shielded_Name_Objective">방패 야수</string>
-  <string name="Shielded_Defense">막았다</string>
-  <string name="Shielded_Desc">놀 광전사는 놀 중에서도 가장 크고 강하며 터프한 녀석들이다. 큰 상처를 입게되면, 이들은 광폭화 하면서 적에게 보타 큰 데미지를 준다. 이 광전사는 거대한 방패를 들고 있다.</string>
+  <string name="Shielded_Name_Objective">방패를 든 놀 정예병</string>
+  <string name="Shielded_Defense">막음</string>
+  <string name="Shielded_Desc">놀 정예병은 놀 중에서도 가장 크고 강하며 터프한 녀석들이다. 큰 상처를 입게되면, 이들은 격분하면서 적에게 보다 큰 데미지를 준다. 이 정예병은 거대한 방패를 들고 있다.</string>
   <!--STRINGS OF Skeleton CLASS-->
-  <string name="Skeleton_Name">스켈레톤</string>
+  <string name="Skeleton_Name">해골</string>
   <string name="Skeleton_Gender">남성</string>
-  <string name="Skeleton_Name_Objective">스켈레톤</string>
-  <string name="Skeleton_Desc">스켈레톤은 운 없는 모험가들이나 던전에 사는 생물들의 시체에서 나온 뼈들로 이루어져 있고, 저 깊은 곳으로부터 뿜어나오는 악마의 주문에 의해 살아 움직인다. 어느 이상 데미지를 받게되면 뼈의 폭발로 산산조각 난다.</string>
-  <string name="Skeleton_Defense">막았다</string>
+  <string name="Skeleton_Name_Objective">해골</string>
+  <string name="Skeleton_Desc">해골은 운 없는 모험가들이나 던전에 사는 생물들의 시체에서 나온 뼈들로 이루어져 있고, 저 깊은 곳으로부터 뿜어나오는 악마의 주문에 의해 살아 움직인다. 어느 이상 데미지를 받게되면 뼈의 폭발로 산산조각 난다.</string>
+  <string name="Skeleton_Defense">막음</string>
   <string name="Skeleton_Killed">당신은 뼈의 폭발에 맞아 죽었다...</string>
   <!--STRINGS OF Spinner CLASS-->
   <string name="Spinner_Name">동굴 거미</string>
@@ -164,15 +164,15 @@
   <string name="Spinner_Name_Objective">동굴 거미</string>
   <string name="Spinner_Desc">이 초록색 털복숭이 동굴 거미들은 직접 전투를 꺼려 하는 대신, 그들의 희생자들이 독에 물린채 그들이 뿜어 놓은 거미줄에 걸려 서서히 죽어가는 것을 멀리서 지켜보는 걸 좋아한다.</string>
   <!--STRINGS OF Statue CLASS-->
-  <string name="Statue_Name">살아난 석상</string>
+  <string name="Statue_Name">살아있는 석상</string>
   <string name="Statue_Gender">여성</string>
-  <string name="Statue_Name_Objective">살아난 석상</string>
+  <string name="Statue_Name_Objective">살아있는 석상</string>
   <string name="Statue_Desc">던전에 있는 못생긴 여느 석상과 다를바 없다고 생각 할수도 있지만, 붉게 빛나는 눈은 그렇지 않다고 말하고 있다. 석상 자체는 돌로 만들어져 있지만, _%s_, 무기를 휘두르는걸 보면, 진짜다.</string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">서큐버스</string>
   <string name="Succubus_Gender">남성</string>
   <string name="Succubus_Name_Objective">서큐버스</string>
-  <string name="Succubus_Desc">서큐버스들은 유혹하는 여자들(약간 스모키 화장한 여자들)처럼 생긴 악마들이다. 그녀들은 마법을 써서 영웅들을 매혹에 빠뜨리고 그 저주가 풀리기 전까지는 아무런 공격도 하지 못하게 만들어 버린다.</string>
+  <string name="Succubus_Desc">서큐버스들은 유혹하는 여자들(약간 고전적인 방식으로)처럼 생긴 악마들이다. 그녀들은 마법을 써서 영웅들을 매혹에 빠뜨리고 그 저주가 풀리기 전까지는 아무런 공격도 하지 못하게 만들어 버린다.</string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Name">파리 떼</string>
   <string name="Swarm_Gender">남성</string>
@@ -180,38 +180,38 @@
   <string name="Swarm_Desc">죽음의 파리 떼가 매섭게 윙윙 거린다. 물리 공격을 받을 때마다 더 작은 두 무리로 분할 되지만 똑같이 위험하다.</string>
   <string name="Swarm_Defense">회피</string>
   <!--STRINGS OF Tengu CLASS-->
-  <string name="Tengu_Name">덴구</string>
+  <string name="Tengu_Name">텐구</string>
   <string name="Tengu_Gender">남성</string>
-  <string name="Tengu_Name_Objective">덴구</string>
-  <string name="Tengu_Desc">덴구는 고대 암살 집단의 일원이다. 이들 암살자들은 광범위한 표창과 함정을 다루는 걸로 유명하다.</string>
-  <string name="Tengu_Info1">마침내 자유로워 졌다...</string>
-  <string name="Tengu_Info2">잡았다 요놈, %s!</string>
+  <string name="Tengu_Name_Objective">텐구</string>
+  <string name="Tengu_Desc">덴구는 고대 암살 집단의 일원이다. 이들 암살자들은 수리검과 함정을 다루는 데 능하다.</string>
+  <string name="Tengu_Info1">드디어 해방이구나...</string>
+  <string name="Tengu_Info2">잡았다, %s!</string>
   <!--STRINGS OF Thief CLASS-->
-  <string name="Thief_Name">미치광이 도둑</string>
+  <string name="Thief_Name">미친 도둑</string>
   <string name="Thief_Gender">남성</string>
-  <string name="Thief_Name_Objective">미치광이 도둑</string>
+  <string name="Thief_Name_Objective">미친 도둑</string>
   <string name="Thief_Desc">던전 깊이 들어가면 갈수록 언제나 오만 가지의 범죄자들이 숨는 소굴이 있다. 햇볕으로 부터 멀리 떨어진 기간이 길어짐에 따라 제대로 된 정신을 차리고 있는 자들은 몇 되지 않는다. 오래 전, 이 미친 도둑들은 자신이 누구고 왜 훔치는지 잊어버렸다.</string>
   <string name="Thief_Stole">%1$s 이 당신한테서 %2$s 을/를 훔쳤다!</string>
-  <string name="Thief_Carries">\n\n%1$s 이 _%2$s_를 들고 있다. 딱! 보면 훔친거다.</string>
+  <string name="Thief_Carries">\n\n%1$s 이 _%2$s_를 들고 있다. 분명히 훔친거다.</string>
   <!--STRINGS OF Warlock CLASS-->
-  <string name="Warlock_Name">드워프 워락</string>
+  <string name="Warlock_Name">드워프 흑마법사</string>
   <string name="Warlock_Gender">남성</string>
-  <string name="Warlock_Name_Objective">드워프 워락</string>
-  <string name="Warlock_Desc">드워프들의 관심이 기술에서 비밀스런 마법으로 옮겨갔을 때, 워락이 도시에서 힘을 얻기 시작했다. 그들은 원소 마법으로 시작했지만, 얼마 지나지 않아 악마술과 심령술에 손을 뻗었다.</string>
-  <string name="Warlock_Killed">%s의 쉐도우 볼트가 당신을 죽였다...</string>
+  <string name="Warlock_Name_Objective">드워프 흑마법사</string>
+  <string name="Warlock_Desc">드워프들의 관심이 기술에서 비밀스런 마법으로 옮겨갔을 때, 흑마법사들이 도시에서 힘을 얻기 시작했다. 그들은 원소 마법으로 시작했지만, 얼마 지나지 않아 악마술과 사령술에 손을 뻗었다.</string>
+  <string name="Warlock_Killed">%s의 암흑 화살이 당신을 죽였다...</string>
   <!--STRINGS OF Wraith CLASS-->
-  <string name="Wraith_Name">레이스</string>
+  <string name="Wraith_Name">유령</string>
   <string name="Wraith_Gender">남성</string>
-  <string name="Wraith_Name_Objective">레이스</string>
-  <string name="Wraith_Desc">그들의 묘지에 방해 받은 레이스들은 복수심에 불타는 죄인의 영혼이다. 유체로 이루어져 있기 때문에 일반 무기로 맞추기가 매우 어렵다.</string>
+  <string name="Wraith_Name_Objective">유령</string>
+  <string name="Wraith_Desc">그들의 묘지의 유령들은 복수심에 불타는 죄인의 영혼이다. 영체로 이루어져 있기 때문에 일반 무기로 맞추기가 매우 어렵다.</string>
   <string name="Wraith_Defense">회피</string>
   <!--STRINGS OF Yog CLASS-->
-  <string name="Yog_Name">요그-데제와</string>
+  <string name="Yog_Name">요그-제바</string>
   <string name="Yog_Gender">남성</string>
-  <string name="Yog_Name_Objective">요그-데제와</string>
-  <string name="Yog_Desc">요그-데제와는 혼돈의 왕국의 강력한 고대의 신이다. 한 세기 전, 고대 드워프들은 악마의 군대와 싸워 간신히 이겼지만, 신의 본체는 죽이지 못했다. 그대신, 그들은 자신들의 도시 아래에 있는 홀에 이 신을 가두고는, 그가 다시는 일어서지 못할 정도로 약해지기를 바랬다.</string>
+  <string name="Yog_Name_Objective">요그-제바</string>
+  <string name="Yog_Desc">요그-제바는 혼돈의 왕국의 강력한 고대의 신이다. 한 세기 전, 고대 드워프들은 악마의 군대와 싸워 간신히 이겼지만, 신은 죽이지 못했다. 그 대신, 그들은 자신들의 도시 아래에 있는 홀에 이 신을 가두고는, 그가 다시는 일어서지 못할 정도로 약해지기를 바랬다.</string>
   <string name="Yog_Info1">...</string>
-  <string name="Yog_Info2">저게 환영이길 빈다.....</string>
+  <string name="Yog_Info2">저게 환상이길 빈다.....</string>
   <string name="RottingFist_Name">썩어가는 주먹</string>
   <string name="RottingFist_Gender">남성</string>
   <string name="RottingFist_Name_Objective">썩어가는 주먹</string>
@@ -220,10 +220,10 @@
   <string name="BurningFist_Gender">남성</string>
   <string name="BurningFist_Name_Objective">불타는 주먹</string>
   <string name="BurningFist_Desc">고대 신의 불타는 주먹</string>
-  <string name="Larva_Name">신의 구더기</string>
+  <string name="Larva_Name">신의 애벌레</string>
   <string name="Larva_Gender">여성</string>
-  <string name="Larva_Name_Objective">신의 구더기</string>
-  <string name="Larva_Desc">고대 신의 구더기</string>
+  <string name="Larva_Name_Objective">신의 애벌레</string>
+  <string name="Larva_Desc">고대 신의 애벌레</string>
   <!--STRINGS OF SpiderEgg CLASS-->
   <string name="SpiderEgg_Name">거미 알</string>
   <string name="SpiderEgg_Gender">중성적인</string>
@@ -255,20 +255,20 @@
   <string name="SpiderQueen_Name_Objective">거미 여왕</string>
   <string name="SpiderQueen_Desc">아름다운 여성과 추악한 거미가 섞인 몸을 가졌다. 이 거미 굴에서 살아 있는 모든 것은 그녀의 시종들이다. 이 기괴한 여인과 마주 친다는 것은 매우 목숨이 위태로운 일이다. 왜냐하면 당신은 침입자이기 때문이다!</string>
   <!--STRINGS OF WaterElemental CLASS-->
-  <string name="WaterElemental_Name">물 엘레멘탈</string>
+  <string name="WaterElemental_Name">물의 정령</string>
   <string name="WaterElemental_Gender">남성</string>
-  <string name="WaterElemental_Name_Objective">물 엘레멘탈</string>
-  <string name="WaterElemental_Desc">물 엘레멘탈은 큰 물 웅덩이 근처에서 볼 수 있다. 이 마법으로 뭉쳐진 물덩어리들은 대개 그냥 주변을 어슬렁 댄다.</string>
+  <string name="WaterElemental_Name_Objective">물의 정령</string>
+  <string name="WaterElemental_Desc">물의 정령은 큰 물 웅덩이 근처에서 볼 수 있다. 이 마법으로 뭉쳐진 물덩어리들은 대개 그냥 주변을 어슬렁 댄다.</string>
   <!--STRINGS OF AirElemental CLASS-->
-  <string name="AirElemental_Name">공기 엘레멘탈</string>
+  <string name="AirElemental_Name">공기의 정령</string>
   <string name="AirElemental_Gender">남성</string>
-  <string name="AirElemental_Name_Objective">공기 엘레멘탈</string>
-  <string name="AirElemental_Desc">공기 엘레멘탈은 살아있는 공기로 만들어진 날아 다니는 마법 생물이다.</string>
+  <string name="AirElemental_Name_Objective">공기의 정령</string>
+  <string name="AirElemental_Desc">바람의 정령은 살아있는 공기로 만들어진 날아 다니는 마법 생물이다.</string>
   <!--STRINGS OF EarthElemental CLASS-->
-  <string name="EarthElemental_Name">흙 엘레멘탈</string>
+  <string name="EarthElemental_Name">대지의 정령</string>
   <string name="EarthElemental_Gender">남성</string>
-  <string name="EarthElemental_Name_Objective">흙 엘레멘탈</string>
-  <string name="EarthElemental_Desc">흙 엘레멘탈은 자연의 힘이 집약되어 만들어진 흙 덩어리다.</string>
+  <string name="EarthElemental_Name_Objective">대지의 정령</string>
+  <string name="EarthElemental_Desc">대지의 정령은 자연의 힘이 집약되어 만들어진 흙 덩어리다.</string>
   <!--STRINGS OF Crystal CLASS-->
   <string name="Crystal_Name">공중에 떠있는 크리스탈</string>
   <string name="Crystal_Gender">남성</string>

@@ -7,32 +7,32 @@
   <string name="Scroll_ACRead">읽는다</string>
   <string name="Scroll_Blinded">눈이 먼 상태에서 스크롤을 읽을 수 없습니다.</string>
   <string-array name="Scroll_Runes">
-    <item>ㅋㅏㅇㅜㄴㅏㄴ</item>
-    <item>ㅅㅗㅇㅣㄹㄹㅗ</item>
-    <item>ㄹㅏㄱㅜㅈㅡㅇ</item>
-    <item>ㅇㅕㅇㄱㅣㅂㅡ</item>
-    <item>ㄱㅏㅍㅜ</item>
-    <item>ㄹㅔㅇㅣㄷㅗ</item>
-    <item>ㅇㅣㅅㅏㅈㅡ</item>
-    <item>ㅁㅏㄴㄴㅏㅈㅡ</item>
-    <item>ㄴㅏㅇㅜㄷㅣㅈㅡ</item>
-    <item>ㅂㅓㅋㅏㄴㅏㄴ</item>
-    <item>ㅇㅗㄷㅏㄹ</item>
-    <item>ㅌㅣㅇㅗㅏㅈㅡ</item>
-    <item>ㅇㅏㄴㅅㅜㅈㅡ</item>
-    <item>ㅇㅣㅇㅗㅏㅈㅡ</item>
-    <item>ㅇㅔㄹㅈㅣㅈㅡ</item>
-    <item>ㄷㅏㄱㅏㅈㅡ</item>
+    <item>카우난</item>
+    <item>소윌로</item>
+    <item>라구즈</item>
+    <item>잉과즈</item>
+    <item>게보</item>
+    <item>라이도</item>
+    <item>이사즈</item>
+    <item>만나즈룬</item>
+    <item>나우디즈</item>
+    <item>버카난</item>
+    <item>오쌀란</item>
+    <item>티와즈 루</item>
+    <item>안수즈</item>
+    <item>에이하즈</item>
+    <item>알기즈</item>
+    <item>다가즈</item>
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
   <string name="InventoryScroll_Title">아이템을 선택하세요.</string>
   <string name="InventoryScroll_Warning">정말 이 스크롤 사용을 취소 하시겠습니까? 어쨌든 스크롤은 소모됩니다.</string>
-  <string name="InventoryScroll_Yes">네, 긍정적입니다.</string>
+  <string name="InventoryScroll_Yes">네, 괜찮습니다.</string>
   <string name="InventoryScroll_No">아니, 생각을 바꿨어</string>
   <!--STRINGS OF BlankScroll CLASS-->
   <string name="BlankScroll_Name">비어있는 스크롤</string>
-  <string name="BlankScroll_Info">그냥 비어있는 스크롤</string>
-  <string name="BlankScroll_ReallyBlank">이 스크롤은 정말 비어있습니다.</string>
+  <string name="BlankScroll_Info">그냥 비어있는 스크롤입니다. 아마 뭔가를 여기 다 쓸 수 있지 않을까요?</string>
+  <string name="BlankScroll_ReallyBlank">이 스크롤은 비어있습니다.</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
   <string name="ScrollOfChallenge_Name">도전의 스크롤</string>
   <string name="ScrollOfChallenge_Info">도전의 스크롤을 소리내어 읽을때, 모든 몬스터가 사용자의 위치로 모여들게 됩니다.</string>
@@ -49,7 +49,7 @@
   <string name="ScrollOfLullaby_Info2">스크롤에서 부드러운 멜로디가 흘러나와 %s 이/가 깊은 잠에 빠졌습니다!!</string>
   <string name="ScrollOfLullaby_Info3">스크롤에서 부드러운 멜로디가 흘러나와 몬스터들이 깊은 잠에 빠졌습니다!!</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
-  <string name="ScrollOfMagicMapping_Name">마법지도의 스크롤</string>
+  <string name="ScrollOfMagicMapping_Name">마법 지도 스크롤</string>
   <string name="ScrollOfMagicMapping_Info">이 스크롤을 읽는 순간 현재층의 모든 구역이 기억됩니다. 하지만 여전히 아이템과 생물의 위치는 알수 없습니다.</string>
   <string name="ScrollOfMagicMapping_Layout">이제 현재층의 모든 지형을 파악했습니다.</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
@@ -90,4 +90,6 @@
   <string name="ScrollOfWeaponUpgrade_Info">이 스크롤은 근접무기를 업그레이드합니다. 이 스크롤은 강화 업그레이드 버전으로 인첸트를 파괴하지 않습니다.  랜덤으로 인첸트되지 않은 무기를 인첸트 시켜줍니다.</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">업그레이드할 무기를 고르세요</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진것같다.</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
 </resources>

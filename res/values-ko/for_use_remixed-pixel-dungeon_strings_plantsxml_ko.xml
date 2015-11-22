@@ -6,26 +6,26 @@
   <string name="Plant_Info"> %1$s를 심고 싶은 곳에 이 씨앗을 던지면 된다.\n\n%2$s</string>
   <string name="Plant_Seed">%s 의 씨앗</string>
   <!--STRINGS OF Dreamweed CLASS-->
-  <string name="Dreamweed_Name">드림위드</string>
-  <string name="Dreamweed_Desc">이 드림위드를 만지면 혼란 가스 구름을 뿜어낸다.</string>
+  <string name="Dreamweed_Name">꿈결초</string>
+  <string name="Dreamweed_Desc">꿈결초를 만지면 혼란가스 구름을 뿜어낸다.</string>
   <!--STRINGS OF Earthroot CLASS-->
-  <string name="Earthroot_Name">어스루트</string>
-  <string name="Earthroot_Desc">생물이 이 어스루트를 만지면, 자연의 갑옷을 주변에 만들어 준다.</string>
-  <string name="Earthroot_Buff">허브의 갑옷</string>
+  <string name="Earthroot_Name">뱀뿌리</string>
+  <string name="Earthroot_Desc">생물이 이 뱀뿌리를 만지면, 자연의 갑옷을 주변에 만들어 준다.</string>
+  <string name="Earthroot_Buff">자연의 갑옷</string>
   <!--STRINGS OF Fadeleaf CLASS-->
-  <string name="Fadeleaf_Name">페이드리프</string>
-  <string name="Fadeleaf_Desc">페이드리프를 만지면 현재 층의 랜덤한 장소로 텔레포트시켜 버린다.</string>
+  <string name="Fadeleaf_Name">미명초</string>
+  <string name="Fadeleaf_Desc">미명초를 만지면 현재 층의 랜덤한 장소로 순간이동시켜 버린다.</string>
   <!--STRINGS OF Firebloom CLASS-->
-  <string name="Firebloom_Name">파이어블룸</string>
-  <string name="Firebloom_Desc">파이어블룸에 뭔가라도 닿으면, 불꽃으로 변해 버린다.</string>
+  <string name="Firebloom_Name">화염초</string>
+  <string name="Firebloom_Desc">화염초에 뭔가 닿으면, 불꽃으로 변해 버린다.</string>
   <!--STRINGS OF Icecap CLASS-->
-  <string name="Icecap_Name">아이스캡</string>
-  <string name="Icecap_Desc">아이스캡을 만지면 꽃가루를 사방에 배출하는데, 이는 가까이 있는 모든걸 얼려버린다.</string>
+  <string name="Icecap_Name">얼음송이</string>
+  <string name="Icecap_Desc">얼음송이를 만지면 꽃가루를 사방에 배출하는데, 이는 가까이 있는 모든것을 얼려버린다.</string>
   <!--STRINGS OF Sorrowmoss CLASS-->
-  <string name="Sorrowmoss_Name">소로우모스</string>
-  <string name="Sorrowmoss_Desc">소로우모스는 면도날처럼 날카롭고 독이 묻은 꽃잎으로된 꽃이다(이끼가 아님).</string>
+  <string name="Sorrowmoss_Name">슬픔이끼</string>
+  <string name="Sorrowmoss_Desc">슬픔이끼는 면도날처럼 날카롭고 치명적인 독이 묻은 꽃잎으로된 꽃이다(이끼가 아님).</string>
   <!--STRINGS OF Sungrass CLASS-->
-  <string name="Sungrass_Name">썬그래스</string>
-  <string name="Sungrass_Desc">썬그래스는 잠시 회복력을 주고 서서히 사라지는 것으로 알려져있다.</string>
-  <string name="Sungrass_Buff">허브 힐링</string>
+  <string name="Sungrass_Name">태양초</string>
+  <string name="Sungrass_Desc">태양초는 잠시 회복력을 주고 서서히 사라지는 것으로 알려져있다.</string>
+  <string name="Sungrass_Buff">자연의 회복</string>
 </resources>
