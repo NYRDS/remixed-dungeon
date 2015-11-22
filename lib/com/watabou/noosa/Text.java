@@ -17,14 +17,7 @@ public abstract class Text extends Visual {
 	protected Text(float x, float y, float width, float height) {
 		super(x, y, width, height);
 	}
-/*
-	public static Text create() {
-		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText();
-		}
-		return new BitmapText();
-	}
-*/
+
 	public static Text createBasicText(Font font) {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(font.baseLine * 2);

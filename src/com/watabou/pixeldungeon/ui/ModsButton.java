@@ -8,6 +8,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
@@ -36,7 +37,7 @@ public class ModsButton extends Button {
 		image = Icons.MODDING_MODE.get();
 		add( image );
 		
-		text = Text.createBasicText(PixelScene.font1x);
+		text = new SystemText(8);
 		text.text(PixelDungeon.activeMod());
 		add(text);
 	}
