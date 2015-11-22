@@ -8,8 +8,10 @@ import java.io.InputStream;
 import android.content.Context;
 
 public class ModdingMode {
+	public static final String REMIXED = "Remixed";
+	
 	static private boolean mMode = false;
-	static private String mActiveMod = null;
+	static private String mActiveMod = REMIXED;
 	static private Context mContext;
 
 	static private boolean mTextRenderingMode = false;
@@ -31,7 +33,7 @@ public class ModdingMode {
 	}
 
 	public static File getFile(String resName) {
-		if(mActiveMod!=null){
+		if(!mActiveMod.equals(REMIXED)){
 			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);
 		}
 		return null;
@@ -39,7 +41,7 @@ public class ModdingMode {
 	
 	public static InputStream getInputStream(String resName) {
 		try {
-			if (mActiveMod!=null) {
+			if (!mActiveMod.equals(REMIXED)) {
 				File file = FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);
 				if (file.exists()) {
 					return new FileInputStream(file);

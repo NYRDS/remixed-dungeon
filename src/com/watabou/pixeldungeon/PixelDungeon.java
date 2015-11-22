@@ -63,7 +63,10 @@ public class PixelDungeon extends GameWithGoogleIap {
 			PixelDungeon.realtime(false);
 			PixelDungeon.moddingMode(false);
 		}
+		
 		ModdingMode.mode(PixelDungeon.moddingMode());
+		ModdingMode.selectMod(PixelDungeon.activeMod());
+		
 		
 		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
 			try {
@@ -335,6 +338,14 @@ public class PixelDungeon extends GameWithGoogleIap {
 		Preferences.INSTANCE.put(Preferences.KEY_CLASSIC_FONT, value);
 	}
 
+	public static void activeMod(String mod) {
+		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
+	}
+	
+	public static String activeMod() {
+		return Preferences.INSTANCE.getString(Preferences.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
+	}
+	
 	public static boolean moddingMode() {
 		return Preferences.INSTANCE.getBoolean(Preferences.KEY_MODDING_MODE, false);
 	}
