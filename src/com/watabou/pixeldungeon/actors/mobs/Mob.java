@@ -163,7 +163,7 @@ public abstract class Mob extends Char {
 		try {
 			
 			String descName = "spritesDesc/"+getClass().getSimpleName()+".json";
-			if(ModdingMode.getFile(descName).exists()) {
+			if(ModdingMode.isResourceExist(descName)) {
 				return new MobSpriteDef(descName, getKind());
 			}
 			
