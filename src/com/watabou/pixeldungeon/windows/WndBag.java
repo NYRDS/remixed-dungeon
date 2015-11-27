@@ -116,18 +116,24 @@ public class WndBag extends WndTabbed {
 		lastMode = mode;
 		lastBag = bag;
 		
-		Text txtTitle = PixelScene.createText( title != null ? title : Utils.capitalize( bag.name() ), 9 );
+		int panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
+		
+		Text txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), 9 );
+		txtTitle.maxWidth(panelWidth);
 		txtTitle.hardlight( TITLE_COLOR );
 		txtTitle.measure();
-		txtTitle.x = (int)(SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1) - txtTitle.width()) / 2;
+		txtTitle.x = (int)(panelWidth - txtTitle.width()) / 2;
+		if(txtTitle.x<0) {
+			txtTitle.x = 0;
+		}
 		txtTitle.y = (int)(TITLE_HEIGHT - txtTitle.height()) / 2;
 		add( txtTitle );
 		
 		placeItems( bag );
 		
 		resize( 
-			SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1), 
-			SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + TITLE_HEIGHT );
+			panelWidth, 
+			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + txtTitle.y + txtTitle.height() + SLOT_MARGIN) );
 		
 		Belongings stuff = Dungeon.hero.belongings;
 		Bag[] bags = {

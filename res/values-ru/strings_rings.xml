@@ -63,7 +63,7 @@
   <string name="RingOfThorns_Info">Хоть само кольцо и не обладает колючками, всякий атакующий враг ощутит на своей шкуре часть нанесённого тебе урона. Улучшение этого кольца не принесёт дополнительных бонусов.</string>
   <!--STRINGS OF RingOfStoneWalking CLASS-->
   <string name="RingOfStoneWalking_Name">Кольцо Каменной Крови</string>
-  <string name="RingOfStoneWalking_Info">Это кольцо, сделанное из крепкого камня, выглядело бы обычным. Если бы не капля жидкой крови, пульсирующая вместо камня. Внутри стрелка, указывающая на что-то воде стены и на разбитое сердце... Что бы это могло значить?</string>
+  <string name="RingOfStoneWalking_Info">Это кольцо, сделанное из крепкого камня, выглядело бы обычным. Если бы не капля жидкой крови, пульсирующая вместо камня. Внутри стрелка, указывающая на что-то вроде стены и на разбитое сердце... Что бы это могло значить?</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Замурован в камне. Навсегда.</string>
   <!--STRINGS OF SpiderCharm CLASS-->
   <string name="SpiderCharm_Name">Паучий Оберег</string>
@@ -76,8 +76,8 @@
   <string name="ChaosCrystal_Info">Касаясь его, ты чувствуешь потоки энергии, бегущие по твоим рукам.</string>
   <string name="ChaosCrystal_Info_1">Силы хаоса пронизывают этот кристалл. Пожалуй, он на что-нибудь сгодится.</string>
   <string name="ChaosCrystal_Info_2">Да! Теперь ты знаешь что его можно слить с одним из твоих предметов, но что же дальше?</string>
-  <string name="ChaosCrystal_Use">Использовать</string>
-  <string name="ChaosCrystal_Fuse">Слить</string>
+  <string name="ChaosCrystal_Use">ИСПОЛЬЗОВАТЬ</string>
+  <string name="ChaosCrystal_Fuse">СЛИТЬ</string>
   <string name="ChaosCrystal_Prompt">Выбери место для Метки Хаоса</string>
   <string name="ChaosCrystal_SelectForFuse">Выбери предмет, чтобы слить его с Кристаллом</string>
   <string name="ChaosCrystal_ScrollFused">Начертанная на свитке руна поглотила кристалл, и теперь это %s</string>
