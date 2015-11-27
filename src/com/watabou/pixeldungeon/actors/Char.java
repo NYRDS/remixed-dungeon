@@ -489,8 +489,8 @@ public abstract class Char extends Actor {
 	}
 
 	public void move(int step) {
-
-		if (buff(Vertigo.class) != null) {
+		
+		if (buff(Vertigo.class) != null && Dungeon.level.adjacent(pos, step)) { //ignore vertigo when blinking or teleporting
 			List<Integer> candidates = new ArrayList<Integer>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = pos + dir;
