@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
@@ -160,6 +161,12 @@ public abstract class Mob extends Char {
 	public CharSprite sprite() {
 		CharSprite sprite = null;
 		try {
+			
+			String descName = "spritesDesc/"+getClass().getSimpleName()+".json";
+			if(ModdingMode.getFile(descName).exists()) {
+				return new MobSpriteDef(descName, getKind());
+			}
+			
 			if(spriteClass instanceof Class){
 				sprite = (CharSprite) ((Class<?>)spriteClass).newInstance();
 				sprite.selectKind(getKind());
@@ -169,9 +176,6 @@ public abstract class Mob extends Char {
 				sprite = new MobSpriteDef((String)spriteClass, getKind());
 			}
 			
-			if(spriteClass == null) {
-				sprite = new MobSpriteDef("spritesDesc/"+getClass().getSimpleName()+".json", getKind());
-			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
