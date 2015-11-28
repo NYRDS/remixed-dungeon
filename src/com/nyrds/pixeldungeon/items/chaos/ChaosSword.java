@@ -50,6 +50,7 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 			charge++;
 			if(charge > chargeForLevel()) {
 				upgrade(true);
+				upgrade(true);
 				selectImage();
 				charge = 0;
 			}

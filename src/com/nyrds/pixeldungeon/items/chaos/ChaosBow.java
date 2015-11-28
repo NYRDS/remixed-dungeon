@@ -50,6 +50,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 			charge++;
 			if(charge > chargeForLevel()) {
 				upgrade(true);
+				upgrade(true);
 				selectImage();
 				charge = 0;
 			}
