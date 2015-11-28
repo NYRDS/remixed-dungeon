@@ -85,8 +85,6 @@ public class WndBag extends WndTabbed {
 	
 	private static final int TAB_WIDTH_P	= 18;
 	private static final int TAB_WIDTH_L	= 26;
-	
-	protected static final int TITLE_HEIGHT	= 12;
 		
 	private Listener listener;
 	private WndBag.Mode mode;
@@ -101,6 +99,8 @@ public class WndBag extends WndTabbed {
 	
 	private static Mode lastMode;
 	private static Bag lastBag;
+	
+	private Text txtTitle;
 	
 	public WndBag( Bag bag, Listener listener, Mode mode, String title ) {
 		
@@ -118,7 +118,7 @@ public class WndBag extends WndTabbed {
 		
 		int panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
 		
-		Text txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), 9 );
+		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), 9 );
 		txtTitle.maxWidth(panelWidth);
 		txtTitle.hardlight( TITLE_COLOR );
 		txtTitle.measure();
@@ -126,7 +126,7 @@ public class WndBag extends WndTabbed {
 		if(txtTitle.x<0) {
 			txtTitle.x = 0;
 		}
-		txtTitle.y = (int)(TITLE_HEIGHT - txtTitle.height()) / 2;
+		txtTitle.y = 0;
 		add( txtTitle );
 		
 		placeItems( bag );
@@ -212,7 +212,7 @@ public class WndBag extends WndTabbed {
 	protected void placeItem( final Item item ) {
 		
 		int x = col * (SLOT_SIZE + SLOT_MARGIN);
-		int y = TITLE_HEIGHT + row * (SLOT_SIZE + SLOT_MARGIN);
+		int y = (int) (txtTitle.height() + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
 		
 		add( new ItemButton( item ).setPos( x, y ) );
 		
