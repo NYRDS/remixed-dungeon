@@ -223,4 +223,10 @@
     <string name="ChaosStaff_Name">chaos staff</string>
     <string name="ChaosStaff_Info">Staff imbued with Power Of Chaos! What else mage can dream or fear of?</string>
     <string name="ChaosStaff_Gender">masculine</string>
+    
+    <!-- STRINGS OF SacrificialSword CLASS -->
+    <string name="SacrificialSword_Name">sacrificial sword</string>
+    <string name="SacrificialSword_Info">At first glance this old bronze sword, coverd with patina stains absolutly useless. But some sort of old, archaic powers sleeps inside. Those powers can turn almost any creature to will-less slave. Just need find right way to wake them...</string>
+    <string name="SacrificialSword_Gender">masculine</string>
+    
 </resources>
