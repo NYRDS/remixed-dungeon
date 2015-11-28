@@ -259,4 +259,6 @@
   <string name="EarthElemental_Gender">masculino</string>
   <string name="EarthElemental_Name_Objective">elemental de terra</string>
   <string name="EarthElemental_Desc">Elementais de Terra são massas de terra direcionados por forças concentradas da natureza.</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Gender">masculino</string>
 </resources>

@@ -66,4 +66,8 @@
   <string name="RingOfStoneWalking_ImmuredInStone">Você foi preso na pedra. Para Sempre.</string>
   <!--STRINGS OF SpiderCharm CLASS-->
   <string name="SpiderCharm_Name">Encanto de Aranha</string>
+  <string name="SpiderCharm_Use">USAR</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Use">USAR</string>
+  <string name="ChaosCrystal_Fuse">FUNDIR</string>
 </resources>

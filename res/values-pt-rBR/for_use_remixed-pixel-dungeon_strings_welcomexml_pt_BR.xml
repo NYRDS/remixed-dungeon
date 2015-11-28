@@ -26,6 +26,13 @@ remix.19:\n
 -Aranhas\n
 -Níveis de aranha\n
 -Aranha Rainha\n</string>
+  <string name="Welcome_Text_20">
+        remix.20:\n
+        - Novos itens raros - kusarigama\n
+        - Novos mobs raros\n
+        - O jogo permite Salvar e Carregar\n
+        - E muitas outras coisas não visíveis\n
+        </string>
   <string name="Welcome_Text_20_1">
 remix.20.1:\n
 - Pergaminho de Dominação\n
@@ -36,4 +43,13 @@ remix.21:\n
 - Itens raros do Caos\n
 - O Líquido inflamável esta realmente líquido agora\n
 </string>
+  <string name="Welcome_Text_21_1">
+        remix.21.1:\n
+        - Modo Fácil (com propaganda)\n
+        - Modo Expert\n
+        </string>
+  <string name="Welcome_Text_21_2">
+        remix.21.2:\n
+        - Possibilidade de escolher game mods (somente remodelagem visual por enquanto) ( Usável apenas para jogadores experientes)\n
+        </string>
 </resources>

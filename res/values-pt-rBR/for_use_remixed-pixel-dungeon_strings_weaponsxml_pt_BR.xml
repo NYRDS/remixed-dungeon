@@ -166,4 +166,10 @@
   <string name="Tamahawk_Info">Este machado de arremesso não é tão pesado, mas ainda exige força significativa para ser usado de forma eficaz.</string>
   <string name="Tamahawk_Gender">masculino</string>
   <!--STRINGS OF Kusarigama CLASS-->
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Gender">masculino</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Gender">masculino</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Gender">masculino</string>
 </resources>

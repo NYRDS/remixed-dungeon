@@ -13,6 +13,9 @@
   <string name="WndDonate_silverDonateText">Qualquer doação ajudará o desenvolvimento do projeto</string>
   <string name="WndDonate_goldDonateText">Obrigado pela sua ajuda</string>
   <string name="WndDonate_rubyDonateText">Sua generosidade nos ajudará a melhorar o Remixed Pixel Dungeon!</string>
+  <string name="WndDonate_silverDonateText2">Também desativa as propagandas e ativa a caçadora desde o início.</string>
+  <string name="WndDonate_goldDonateText2">Também ativa o Elfo desde o início</string>
+  <string name="WndDonate_rubyDonateText2"></string>
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">padrão</string>
   <string name="WndPremiumSettings_silver">prata</string>
@@ -22,8 +25,10 @@
   <string name="WndPremiumSettings_status">Selecione o material da barra de status</string>
   <string name="WndPremiumSettings_toolbar">Selecione o material da barra de ferramentas</string>
   <string name="WndPremiumSettings_banners">Selecione o material do banner</string>
-  <string name="WndPremiumSettings_notAvailbale">Essa opção não está disponível ainda</string>
+  <string name="WndPremiumSettings_notAvailbale">Opção não disponível... Ainda...</string>
   <!--STRINGS OF DonateButton CLASS-->
   <string name="DonateButton_pleaseDonate">Por favor, considere doar</string>
   <string name="DonateButton_thanks">Obrigado pelo seu apoio!</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">Não gosta de propaganda? Faça uma pequena doação e ela desaparecerão. Para sempre.</string>
 </resources>
