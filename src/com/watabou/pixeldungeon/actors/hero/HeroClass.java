@@ -22,10 +22,12 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
+import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
@@ -141,6 +143,9 @@ public enum HeroClass {
 		
 		if (ModdingMode.mode()) {
 			initDebug(hero);
+		}
+		if(PixelDungeon.isAlpha()) {
+			hero.collect(new SacrificialSword());
 		}
 
 		QuickSlot.cleanStorage();

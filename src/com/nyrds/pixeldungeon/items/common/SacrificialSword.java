@@ -25,7 +25,7 @@ public class SacrificialSword extends SpecialWeapon {
 	public Glowing glowing() {
 		
 		float period = (float) Math.max(0.1, 0.1/baseChance(Dungeon.hero));
-		GLog.i("base chance: %.5f %.5f",baseChance(Dungeon.hero), period);
+		GLog.i("base chance: %.3f %.3f",baseChance(Dungeon.hero), period);
 		
 		return new Glowing(0xFF4466, period);
 		
@@ -47,7 +47,7 @@ public class SacrificialSword extends SpecialWeapon {
 			classBonus = 2.0;
 		}
 
-		return (0.05 + (hero.lvl + level()*2) * 0.01) * classBonus / armorPenalty;
+		return (0.25 + (hero.lvl + level()*2) * 0.01) * classBonus / armorPenalty;
 	}
 	
 	public void applySpecial(Hero hero, Char tgt ) {
@@ -72,7 +72,7 @@ public class SacrificialSword extends SpecialWeapon {
 
 		double roll = Math.random();
 		
-		GLog.i("chance %.2f roll %.2f\n", conversionChance, roll);
+		GLog.i("chance %.3f roll %.3f\n", conversionChance, roll);
 		
 		
 		if(roll < conversionChance ) {
