@@ -17,15 +17,28 @@
 
 package com.watabou.noosa;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Field;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -58,7 +71,6 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener {
@@ -78,7 +90,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	// true if scene switch is requested
 	protected boolean requestedReset = true;
 	protected static boolean needSceneRestart = false;
-	
+
 	// New scene class
 	protected Class<? extends Scene> sceneClass;
 
@@ -96,7 +108,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public static boolean paused = true;
 	protected static int difficulty;
-	
+
 	// Accumulated touch events
 	protected ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
 
@@ -134,6 +146,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		config.locale = locale;
 		getBaseContext().getResources().updateConfiguration(config,
 				getBaseContext().getResources().getDisplayMetrics());
+		
+		parseStrings(String.format("strings_%s.json", lang));
 	}
 
 	public void doRestart() {
@@ -172,12 +186,71 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return version.contains("alpha");
 	}
 
+	@SuppressLint("UseSparseArrays")
+	private Map<Integer, String> stringMap = new HashMap<Integer, String>();
+	private Map<String, Integer> keyToInt;
+
+	private void initTextMapping() {
+		long mapStart = System.nanoTime();
+		Class<?> string = R.string.class;
+
+		keyToInt = new HashMap<String, Integer>();
+		
+		for (Field f : string.getDeclaredFields()) {
+			int key;
+			try {
+				key = f.getInt(null);
+			} catch (IllegalAccessException | IllegalArgumentException e) {
+				throw new RuntimeException(e);
+			}
+			String name = f.getName();
+
+			keyToInt.put(name, key);
+		}
+		long mapEnd = System.nanoTime();
+		GLog.toFile("map creating time %f", (mapEnd - mapStart)/1000000f);
+	}
+
+	private void parseStrings(String resource) {
+		File jsonFile = ModdingMode.getFile(resource);
+		if (jsonFile == null) {
+			return;
+		}
+
+		if(keyToInt==null) {
+			initTextMapping();
+		}
+		
+		String line = "";
+		
+		try {
+			InputStream fis = new FileInputStream(jsonFile.getAbsolutePath());
+			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+			BufferedReader br = new BufferedReader(isr);
+			
+			while ((line = br.readLine()) != null) {
+				JSONArray entry = new JSONArray(line);
+				if (entry.length() == 2) {
+					String key = entry.getString(0);
+					String value = entry.getString(1);
+					stringMap.put(keyToInt.get(key), value);
+				}
+			}
+			br.close();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		} catch (JSONException e) {
+			toast("malformed json: [%s] in [%s] ignored ", line, resource);
+		}
+		return;
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
 		context = getApplicationContext();
-
+		
 		FileSystem.setContext(context);
 		ModdingMode.setContext(context);
 
@@ -191,7 +264,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		} catch (NameNotFoundException e) {
 			versionCode = 0;
 		}
-
+		
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
 		view = new GLSurfaceView(this);
@@ -207,7 +280,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			layout.addView(view);
 
 			setContentView(layout);
-		}	else {
+		} else {
 			setContentView(view);
 		}
 	}
@@ -415,6 +488,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public static String getVar(int id) {
+		
+		if(instance.stringMap.containsKey(id)) {
+			return instance.stringMap.get(id);
+		}
+		
 		try {
 			return context.getResources().getString(id);
 		} catch (NotFoundException notFound) {
