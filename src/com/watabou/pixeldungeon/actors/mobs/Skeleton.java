@@ -61,7 +61,7 @@ public class Skeleton extends Mob {
 		
 		boolean heroKilled = false;
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-			Char ch = findChar( pos + Level.NEIGHBOURS8[i] );
+			Char ch = findChar( getPos() + Level.NEIGHBOURS8[i] );
 			if (ch != null && ch.isAlive()) {
 				int damage = Math.max( 0,  damageRoll() - Random.IntRange( 0, ch.dr() / 2 ) );
 				ch.damage( damage, this );
@@ -71,7 +71,7 @@ public class Skeleton extends Mob {
 			}
 		}
 		
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.visible[getPos()]) {
 			Sample.INSTANCE.play( Assets.SND_BONES );
 		}
 		
@@ -91,7 +91,7 @@ public class Skeleton extends Mob {
 					loot = l;
 				}
 			}
-			Dungeon.level.drop( loot, pos ).sprite.drop();
+			Dungeon.level.drop( loot, getPos() ).sprite.drop();
 		}
 	}
 	

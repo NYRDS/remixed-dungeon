@@ -42,7 +42,7 @@ public class Affection extends Glyph {
 
 		int level = (int)GameMath.gate( 0, armor.level(), 6 );
 		
-		if (Dungeon.level.adjacent( attacker.pos, defender.pos ) && Random.Int( level / 2 + 5 ) >= 4) {
+		if (Dungeon.level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( level / 2 + 5 ) >= 4) {
 			
 			int duration = Random.IntRange( 2, 5 );
 			

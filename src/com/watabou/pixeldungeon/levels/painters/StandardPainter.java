@@ -167,7 +167,7 @@ public class StandardPainter extends Painter {
 		
 		if(Random.Float(1) < 0.25f) {
 			Crystal crystal = new Crystal();
-			crystal.pos = level.cell(roomCenter.x, roomCenter.y);
+			crystal.setPos(level.cell(roomCenter.x, roomCenter.y));
 			level.mobs.add( crystal );
 		}
 	}

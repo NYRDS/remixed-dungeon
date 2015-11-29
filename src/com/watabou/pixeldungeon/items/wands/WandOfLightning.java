@@ -64,16 +64,16 @@ public class WandOfLightning extends SimpleWand  {
 		}
 		
 		affected.add( ch );
-		ch.damage( Dungeon.level.water[ch.pos] && !ch.flying ? (int)(damage * 2) : damage, LightningTrap.LIGHTNING  );
+		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.flying ? (int)(damage * 2) : damage, LightningTrap.LIGHTNING  );
 		
 		ch.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
 		ch.getSprite().flash();
 		
-		points[nPoints++] = ch.pos;
+		points[nPoints++] = ch.getPos();
 		
 		HashSet<Char> ns = new HashSet<Char>();
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-			Char n = Actor.findChar( ch.pos + Level.NEIGHBOURS8[i] );
+			Char n = Actor.findChar( ch.getPos() + Level.NEIGHBOURS8[i] );
 			if (n != null && !affected.contains( n )) {
 				ns.add( n );
 			}
@@ -88,7 +88,7 @@ public class WandOfLightning extends SimpleWand  {
 	protected void fx( int cell, Callback callback ) {
 		
 		nPoints = 0;
-		points[nPoints++] = wandUser.pos;
+		points[nPoints++] = wandUser.getPos();
 		
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {

@@ -78,7 +78,7 @@ public class Swarm extends Mob {
 			boolean[] passable = Dungeon.level.passable;
 			
 			for (int n : Level.NEIGHBOURS4) {
-				int p = n + pos;
+				int p = n + getPos();
 				if (passable[p] && Actor.findChar( p ) == null) {
 					candidates.add( p );
 				}
@@ -88,15 +88,15 @@ public class Swarm extends Mob {
 				
 				Swarm clone = split();
 				clone.hp((hp() - damage) / 2);
-				clone.pos = Random.element( candidates );
+				clone.setPos(Random.element( candidates ));
 				clone.state = clone.HUNTING;
 				
-				if (Dungeon.level.map[clone.pos] == Terrain.DOOR) {
-					Door.enter( clone.pos );
+				if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
+					Door.enter( clone.getPos() );
 				}
 				
 				GameScene.add(Dungeon.level, clone, SPLIT_DELAY );
-				Actor.addDelayed( new Pushing( clone, pos, clone.pos ), -1 );
+				Actor.addDelayed( new Pushing( clone, getPos(), clone.getPos() ), -1 );
 				
 				hp(hp() - clone.hp());
 			}
@@ -130,7 +130,7 @@ public class Swarm extends Mob {
 	@Override
 	protected void dropLoot() {
 		if (Random.Int( 5 * (generation + 1) ) == 0) {
-			Dungeon.level.drop( new PotionOfHealing(), pos ).sprite.drop();
+			Dungeon.level.drop( new PotionOfHealing(), getPos() ).sprite.drop();
 		}
 	}
 

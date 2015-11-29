@@ -78,7 +78,7 @@ public class Statue extends Mob {
 	
 	@Override
 	protected boolean act() {
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.visible[getPos()]) {
 			Journal.add( Journal.Feature.STATUE );
 		}
 		return super.act();
@@ -126,7 +126,7 @@ public class Statue extends Mob {
 	
 	@Override
 	public void die( Object cause ) {
-		Dungeon.level.drop( weapon, pos ).sprite.drop();
+		Dungeon.level.drop( weapon, getPos() ).sprite.drop();
 		super.die( cause );
 	}
 	

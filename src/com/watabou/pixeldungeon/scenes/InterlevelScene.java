@@ -375,7 +375,7 @@ public class InterlevelScene extends PixelScene {
 				problemWithSave();
 				return;
 			}
-			Dungeon.switchLevel(level, Dungeon.hero.pos);
+			Dungeon.switchLevel(level, Dungeon.hero.getPos());
 		}
 	}
 

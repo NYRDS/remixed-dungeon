@@ -220,7 +220,7 @@ public class Toolbar extends Component {
 				return;
 			}
 
-			if (cell == Dungeon.hero.pos) {
+			if (cell == Dungeon.hero.getPos()) {
 				GameScene.show(new WndHero());
 				return;
 			}

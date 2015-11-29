@@ -55,7 +55,7 @@ public class HuntressArmor extends ClassArmor {
 		Item proto = new Shuriken();
 		
 		for (Mob mob : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[mob.pos]) {
+			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				
 				Callback callback = new Callback() {	
 					@Override
@@ -69,7 +69,7 @@ public class HuntressArmor extends ClassArmor {
 				};
 				
 				((MissileSprite)getCurUser().getSprite().getParent().recycle( MissileSprite.class )).
-					reset( getCurUser().pos, mob.pos, proto, null, callback );
+					reset( getCurUser().getPos(), mob.getPos(), proto, null, callback );
 				
 				targets.put( callback, mob );
 			}
@@ -82,7 +82,7 @@ public class HuntressArmor extends ClassArmor {
 		
 		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 		
-		getCurUser().getSprite().zap( getCurUser().pos );
+		getCurUser().getSprite().zap( getCurUser().getPos() );
 		getCurUser().busy();
 	}
 	

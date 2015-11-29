@@ -41,7 +41,7 @@ public class Levitation extends FlavourBuff {
 	@Override
 	public void detach() {
 		target.flying = false;
-		Dungeon.level.press( target.pos, target );
+		Dungeon.level.press( target.getPos(), target );
 		super.detach();
 	}
 	

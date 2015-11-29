@@ -84,7 +84,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 			@Override
 			protected void onClick() {
 				if (targeting) {
-					GameScene.handleCell(lastTarget.pos);
+					GameScene.handleCell(lastTarget.getPos());
 				} else {
 					Item item = select();
 					if (item == lastItem) {
@@ -189,12 +189,12 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	private void useTargeting() {
 
 		targeting = lastTarget != null && lastTarget.isAlive()
-				&& Dungeon.visible[lastTarget.pos];
+				&& Dungeon.visible[lastTarget.getPos()];
 
 		if (targeting) {
 			if (Actor.all().contains(lastTarget)) {
 				lastTarget.getSprite().getParent().add(crossM);
-				crossM.point(DungeonTilemap.tileToWorld(lastTarget.pos));
+				crossM.point(DungeonTilemap.tileToWorld(lastTarget.getPos()));
 				crossB.setVisible(true);
 			} else {
 				lastTarget = null;

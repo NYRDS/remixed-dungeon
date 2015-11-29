@@ -74,7 +74,7 @@ public class Shaman extends Mob implements Callback {
 	
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		return Ballistica.cast( pos, enemy.pos, false, true ) == enemy.pos;
+		return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
 	@Override
@@ -98,7 +98,7 @@ public class Shaman extends Mob implements Callback {
 	@Override
 	protected boolean getFurther(int target) {
 		
-		if(Dungeon.level.distance(pos, target) >2) {
+		if(Dungeon.level.distance(getPos(), target) >2) {
 			state = HUNTING;
 		}
 		
@@ -108,22 +108,22 @@ public class Shaman extends Mob implements Callback {
 	@Override
 	protected boolean doAttack( Char enemy ) {
 
-		if (Dungeon.level.distance( pos, enemy.pos ) <= 1) {
+		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
 			
 			return super.doAttack( enemy );
 			
 		} else {
 			
-			boolean visible = Dungeon.level.fieldOfView[pos] || Dungeon.level.fieldOfView[enemy.pos]; 
+			boolean visible = Dungeon.level.fieldOfView[getPos()] || Dungeon.level.fieldOfView[enemy.getPos()]; 
 			if (visible) {
-				((ShamanSprite)getSprite()).zap( enemy.pos );
+				((ShamanSprite)getSprite()).zap( enemy.getPos() );
 			}
 			
 			spend( TIME_TO_ZAP );
 			
 			if (hit( this, enemy, true )) {
 				int dmg = Random.Int( 2, 12 );
-				if (Dungeon.level.water[enemy.pos] && !enemy.flying) {
+				if (Dungeon.level.water[enemy.getPos()] && !enemy.flying) {
 					dmg *= 1.5f;
 				}
 				enemy.damage( dmg, LightningTrap.LIGHTNING );

@@ -62,7 +62,7 @@ public abstract class Arrow extends MissileWeapon {
 	protected void onThrow(int cell) {
 		if (getCurUser().bowEquiped()) {
 
-			if (Dungeon.level.adjacent(getCurUser().pos, cell)
+			if (Dungeon.level.adjacent(getCurUser().getPos(), cell)
 					&& getCurUser().heroClass != HeroClass.ELF) {
 				miss(cell);
 				return;

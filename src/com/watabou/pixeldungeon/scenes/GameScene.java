@@ -177,9 +177,10 @@ public class GameScene extends PixelScene {
 		add( mobs );
 		
 		for (Mob mob : Dungeon.level.mobs) {
+
 			addMobSprite( mob );
 			if (Statistics.amuletObtained) {
-				mob.beckon( Dungeon.hero.pos );
+				mob.beckon( Dungeon.hero.getPos() );
 			}
 		}
 		
@@ -281,7 +282,7 @@ public class GameScene extends PixelScene {
 			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( heroSprite, 2f ) ;
 			break;
 		case RETURN:
-			WandOfBlink.appear(  Dungeon.hero, Dungeon.hero.pos );
+			WandOfBlink.appear(  Dungeon.hero, Dungeon.hero.getPos() );
 			break;
 		case FALL:
 			Chasm.heroLand();
@@ -313,7 +314,7 @@ public class GameScene extends PixelScene {
 		}
 		
 		scene.heroSprite = newHeroSprite;
-		scene.heroSprite.place(hero.pos );
+		scene.heroSprite.place(hero.getPos() );
 		hero.updateLook();
 		scene.mobs.add( scene.heroSprite );
 	}
@@ -421,7 +422,7 @@ public class GameScene extends PixelScene {
 	
 	private void addMobSprite( Mob mob ) {
 		CharSprite sprite = mob.sprite();
-		sprite.setVisible(Dungeon.visible[mob.pos]);
+		sprite.setVisible(Dungeon.visible[mob.getPos()]);
 		mobs.add( sprite );
 		sprite.link( mob );
 	}
@@ -574,7 +575,7 @@ public class GameScene extends PixelScene {
 			
 			for (Mob mob : Dungeon.level.mobs) {
 				if(mob.getSprite() != null) {
-					mob.getSprite().setVisible(Dungeon.visible[mob.pos]);
+					mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
 				}
 			}
 		}

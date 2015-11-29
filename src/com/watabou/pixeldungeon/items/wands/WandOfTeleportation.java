@@ -31,44 +31,40 @@ import com.watabou.utils.Callback;
 
 public class WandOfTeleportation extends Wand {
 
-	
 	public static void teleport(Char ch) {
 		int pos = Dungeon.level.randomRespawnCell();
-		
-		if (pos == -1) {
-			GLog.w( ScrollOfTeleportation.TXT_NO_TELEPORT );
-		} else {
-			ch.pos = pos;
-			ch.getSprite().place( ch.pos );
-			ch.getSprite().setVisible(Dungeon.visible[pos]);
-			GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), getCurUser().getName(), ch.getName_objective()));
-		}
+
+		ch.setPos(pos);
+		ch.getSprite().place(ch.getPos());
+		ch.getSprite().setVisible(Dungeon.visible[pos]);
+		GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), getCurUser().getName(),
+				ch.getName_objective()));
 	}
-	
+
 	@Override
-	protected void onZap( int cell ) {
-		
-		Char ch = Actor.findChar( cell );
-		
+	protected void onZap(int cell) {
+
+		Char ch = Actor.findChar(cell);
+
 		if (ch == getCurUser()) {
-			
+
 			setKnown();
-			ScrollOfTeleportation.teleportHero( getCurUser() );
-			
+			ScrollOfTeleportation.teleportHero(getCurUser());
+
 		} else if (ch != null) {
-			
+
 			teleport(ch);
-			
+
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
 		}
 	}
-	
-	protected void fx( int cell, Callback callback ) {
-		MagicMissile.coldLight( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
-		Sample.INSTANCE.play( Assets.SND_ZAP );
+
+	protected void fx(int cell, Callback callback) {
+		MagicMissile.coldLight(wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback);
+		Sample.INSTANCE.play(Assets.SND_ZAP);
 	}
-	
+
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.WandOfTeleportation_Info);

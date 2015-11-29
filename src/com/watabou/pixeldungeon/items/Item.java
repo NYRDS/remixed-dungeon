@@ -113,7 +113,7 @@ public class Item implements Bundlable {
 	
 	public void doDrop( Hero hero ) {	
 		hero.spendAndNext( TIME_TO_DROP );			
-		Dungeon.level.drop( detachAll( hero.belongings.backpack ), hero.pos ).sprite.drop( hero.pos );	
+		Dungeon.level.drop( detachAll( hero.belongings.backpack ), hero.getPos() ).sprite.drop( hero.getPos() );	
 	}
 	
 	public void doThrow( Hero hero ) {
@@ -460,7 +460,7 @@ public class Item implements Bundlable {
 		
 		setCurUser(user);
 		
-		final int cell = Ballistica.cast( user.pos, dst, false, true );
+		final int cell = Ballistica.cast( user.getPos(), dst, false, true );
 		user.getSprite().zap( cell );
 		user.busy();
 		
@@ -479,7 +479,7 @@ public class Item implements Bundlable {
 		final float finalDelay = delay;
 		
 		((MissileSprite)user.getSprite().getParent().recycle( MissileSprite.class )).
-			reset( user.pos, cell, this, null, new Callback() {			
+			reset( user.getPos(), cell, this, null, new Callback() {			
 				@Override
 				public void call() {
 					Item.this.detach( user.belongings.backpack ).onThrow( cell );

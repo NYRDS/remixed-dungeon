@@ -103,7 +103,7 @@ public class ArmorKit extends Item {
 			getCurUser().collect(classArmor);			
 		}
 		
-		getCurUser().getSprite().operate( getCurUser().pos );
+		getCurUser().getSprite().operate( getCurUser().getPos() );
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	

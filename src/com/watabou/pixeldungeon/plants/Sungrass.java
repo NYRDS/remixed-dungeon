@@ -99,13 +99,13 @@ public class Sungrass extends Plant {
 		
 		@Override
 		public boolean attachTo( Char target ) {
-			pos = target.pos;
+			pos = target.getPos();
 			return super.attachTo( target );
 		}
 		
 		@Override
 		public boolean act() {
-			if (target.pos != pos || target.hp() >= target.ht()) {
+			if (target.getPos() != pos || target.hp() >= target.ht()) {
 				detach();
 			} else {
 				target.hp(Math.min( target.ht(), target.hp() + target.ht() / 10 ));

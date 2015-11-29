@@ -29,8 +29,8 @@ public class SpiderQueen extends Boss {
 	
 	@Override
 	protected boolean act(){
-		if(Random.Int(0, 20) == 0 && !SpiderEgg.laid(pos)) {
-			SpiderEgg.lay(pos);
+		if(Random.Int(0, 20) == 0 && !SpiderEgg.laid(getPos())) {
+			SpiderEgg.lay(getPos());
 		}
 		
 		return super.act();
@@ -47,7 +47,7 @@ public class SpiderQueen extends Boss {
 	
 	@Override
 	protected boolean canAttack(Char enemy) {
-		if (Dungeon.level.adjacent(pos, enemy.pos) && hp() > ht() / 2 ) {
+		if (Dungeon.level.adjacent(getPos(), enemy.getPos()) && hp() > ht() / 2 ) {
 			return true;
 		}
 		return false;
@@ -56,7 +56,7 @@ public class SpiderQueen extends Boss {
 	@Override
 	protected boolean getCloser( int target ) {
 		if (hp() < ht() / 2) {
-			if (state == HUNTING && Dungeon.level.distance(pos, target) < 5) {
+			if (state == HUNTING && Dungeon.level.distance(getPos(), target) < 5) {
 				return getFurther(target);
 			}
 			return super.getCloser(target);

@@ -149,14 +149,14 @@ public class Plant implements Bundlable {
 
 				hero.spend(TIME_TO_PLANT);
 				hero.busy();
-				((Seed) detach(hero.belongings.backpack)).onThrow(hero.pos);
+				((Seed) detach(hero.belongings.backpack)).onThrow(hero.getPos());
 
-				hero.getSprite().operate(hero.pos);
+				hero.getSprite().operate(hero.getPos());
 
 			} else if (action.equals(Food.AC_EAT)) {
 				detach(hero.belongings.backpack);
 
-				hero.getSprite().operate(hero.pos);
+				hero.getSprite().operate(hero.getPos());
 				hero.busy();
 
 				SpellSprite.show(hero, SpellSprite.FOOD);

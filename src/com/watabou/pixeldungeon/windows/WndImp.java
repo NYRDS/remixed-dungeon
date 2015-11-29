@@ -79,7 +79,7 @@ public class WndImp extends Window {
 		if (reward.doPickUp( Dungeon.hero )) {
 			GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
 		} else {
-			Dungeon.level.drop( reward, imp.pos ).sprite.drop();
+			Dungeon.level.drop( reward, imp.getPos() ).sprite.drop();
 		}
 		
 		imp.flee();

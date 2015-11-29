@@ -51,7 +51,7 @@ public class Piranha extends Mob {
 	
 	@Override
 	protected boolean act() {
-		if (!Dungeon.level.water[pos]) {
+		if (!Dungeon.level.water[getPos()]) {
 			die( null );
 			return true;
 		} else {
@@ -76,7 +76,7 @@ public class Piranha extends Mob {
 	
 	@Override
 	public void die( Object cause ) {
-		Dungeon.level.drop( new MysteryMeat(), pos ).sprite.drop();
+		Dungeon.level.drop( new MysteryMeat(), getPos() ).sprite.drop();
 		super.die( cause );
 		
 		Statistics.piranhasKilled++;
@@ -95,7 +95,7 @@ public class Piranha extends Mob {
 			return false;
 		}
 		
-		int step = Dungeon.findPath( this, pos, target, Dungeon.level.water, null);
+		int step = Dungeon.findPath( this, getPos(), target, Dungeon.level.water, null);
 		if (step != -1) {
 			move( step );
 			return true;
@@ -106,7 +106,7 @@ public class Piranha extends Mob {
 	
 	@Override
 	protected boolean getFurther( int target ) {
-		int step = Dungeon.flee( this, pos, target, Dungeon.level.water, null);
+		int step = Dungeon.flee( this, getPos(), target, Dungeon.level.water, null);
 		if (step != -1) {
 			move( step );
 			return true;

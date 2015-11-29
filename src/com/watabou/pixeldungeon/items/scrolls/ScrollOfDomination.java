@@ -23,7 +23,7 @@ public class ScrollOfDomination extends Scroll {
 		ArrayList<Mob> mobsInSight = new ArrayList<Mob>();
 		
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
-			if (Dungeon.level.fieldOfView[mob.pos] && !(mob instanceof Boss) && !mob.isPet() && !(mob instanceof NPC)) {
+			if (Dungeon.level.fieldOfView[mob.getPos()] && !(mob instanceof Boss) && !mob.isPet() && !(mob instanceof NPC)) {
 				mobsInSight.add(mob);
 			}
 		}

@@ -101,7 +101,7 @@ public class Buff extends Actor {
 	
 	private void collectOrDropItem(Item item){
 		if(!item.collect( ((Hero)target).belongings.backpack )){
-			Dungeon.level.drop(item, target.pos).sprite.drop();
+			Dungeon.level.drop(item, target.getPos()).sprite.drop();
 		}	
 	}
 	

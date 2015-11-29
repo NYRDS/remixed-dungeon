@@ -51,7 +51,7 @@ public class Crystal extends Mob {
 	
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		return Ballistica.cast( pos, enemy.pos, false, true ) == enemy.pos;
+		return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
 	@Override
@@ -68,7 +68,7 @@ public class Crystal extends Mob {
 	public int attackProc( final Char enemy, int damage ) {
 		final Wand wand = ((Wand)loot);
 		
-		wand.mobWandUse(this, enemy.pos);
+		wand.mobWandUse(this, enemy.getPos());
 		
 		return 0;
 	}

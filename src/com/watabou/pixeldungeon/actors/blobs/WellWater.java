@@ -64,7 +64,7 @@ public class WellWater extends Blob {
 
 		Heap heap;
 		
-		if (pos == Dungeon.hero.pos && affectHero( Dungeon.hero )) {
+		if (pos == Dungeon.hero.getPos() && affectHero( Dungeon.hero )) {
 			
 			volume = off[pos] = cur[pos] = 0;
 			return true;

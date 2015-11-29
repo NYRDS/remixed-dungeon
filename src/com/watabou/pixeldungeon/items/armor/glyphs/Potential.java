@@ -41,7 +41,7 @@ public class Potential extends Glyph {
 
 		int level = Math.max( 0, armor.level() );
 		
-		if (Dungeon.level.adjacent( attacker.pos, defender.pos ) && Random.Int( level + 7 ) >= 6) {
+		if (Dungeon.level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( level + 7 ) >= 6) {
 			
 			int dmg = Random.IntRange( 1, damage );
 			attacker.damage( dmg, LightningTrap.LIGHTNING );
@@ -53,7 +53,7 @@ public class Potential extends Glyph {
 				Camera.main.shake( 2, 0.3f );
 			}
 			
-			int[] points = {attacker.pos, defender.pos};
+			int[] points = {attacker.getPos(), defender.getPos()};
 			attacker.getSprite().getParent().add( new Lightning( points, 2, null ) );
 
 		}

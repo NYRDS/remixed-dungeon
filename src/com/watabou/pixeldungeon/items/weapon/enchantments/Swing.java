@@ -34,7 +34,7 @@ public class Swing extends Enchantment {
 		int maxDamage = (int)(damage * Math.pow( 2, -1d / (level + 1) ));
 		if (maxDamage >= 1) {
 			
-			int p = attacker.pos;
+			int p = attacker.getPos();
 
 			for (int n : Level.NEIGHBOURS8) {
 				Char ch = Actor.findChar( n + p );

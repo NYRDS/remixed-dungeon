@@ -59,7 +59,7 @@ abstract public class RottenFood extends Food{
 		
 		if (action.equals( AC_EAT )) {
 			GLog.w(message);
-			molder(hero.pos);
+			molder(hero.getPos());
 		}
 	}
 	

@@ -79,7 +79,7 @@ abstract public class Food extends Item {
 				break;
 			}
 			
-			hero.getSprite().operate( hero.pos );
+			hero.getSprite().operate( hero.getPos() );
 			hero.busy();
 			SpellSprite.show( hero, SpellSprite.FOOD );
 			Sample.INSTANCE.play( Assets.SND_EAT );

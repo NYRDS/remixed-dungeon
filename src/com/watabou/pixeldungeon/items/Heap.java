@@ -117,7 +117,7 @@ public class Heap implements Bundlable {
 			}
 			break;
 		case TOMB:
-			Wraith.spawnAround( hero.pos );
+			Wraith.spawnAround( hero.getPos() );
 			break;
 		case SKELETON:
 			CellEmitter.center( pos ).start( Speck.factory( Speck.RATTLE ), 0.1f, 3 );

@@ -51,7 +51,7 @@ public class Ooze extends Buff {
 			}
 			spend( TICK );
 		}
-		if (Dungeon.level.water[target.pos]) {
+		if (Dungeon.level.water[target.getPos()]) {
 			detach();
 		}
 		return true;

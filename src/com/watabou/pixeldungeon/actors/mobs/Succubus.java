@@ -76,7 +76,7 @@ public class Succubus extends Mob {
 	
 	@Override
 	protected boolean getCloser( int target ) {
-		if (Dungeon.level.fieldOfView[target] && Dungeon.level.distance( pos, target ) > 2 && delay <= 0) {
+		if (Dungeon.level.fieldOfView[target] && Dungeon.level.distance( getPos(), target ) > 2 && delay <= 0) {
 			
 			blink( target );
 			spend( -1 / speed() );
@@ -92,7 +92,7 @@ public class Succubus extends Mob {
 	
 	private void blink( int target ) {
 		
-		int cell = Ballistica.cast( pos, target, true, true );
+		int cell = Ballistica.cast( getPos(), target, true, true );
 		
 		if (Actor.findChar( cell ) != null && Ballistica.distance > 1) {
 			cell = Ballistica.trace[Ballistica.distance - 2];

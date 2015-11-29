@@ -124,7 +124,7 @@ public class TomeOfMastery extends Item {
 				
 		getCurUser().subClass = way;
 		
-		getCurUser().getSprite().operate( getCurUser().pos );
+		getCurUser().getSprite().operate( getCurUser().getPos() );
 		Sample.INSTANCE.play( Assets.SND_MASTERY );
 		
 		SpellSprite.show( getCurUser(), SpellSprite.MASTERY );

@@ -104,8 +104,8 @@ public class King extends Boss {
 	@Override
 	protected boolean canAttack( Char enemy ) {
 		return canTryToSummon() ? 
-			pos == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal ) : 
-			Dungeon.level.adjacent( pos, enemy.pos );
+			getPos() == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal ) : 
+			Dungeon.level.adjacent( getPos(), enemy.getPos() );
 	}
 	
 	private boolean canTryToSummon() {
@@ -119,7 +119,7 @@ public class King extends Boss {
 	
 	@Override
 	public boolean attack( Char enemy ) {
-		if (canTryToSummon() && pos == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal )) {
+		if (canTryToSummon() && getPos() == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal )) {
 			summon();
 			return true;
 		} else {
@@ -133,8 +133,8 @@ public class King extends Boss {
 	@Override
 	public void die( Object cause ) {
 		GameScene.bossSlain();
-		Dungeon.level.drop( new ArmorKit(), pos ).sprite.drop();
-		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
+		Dungeon.level.drop( new ArmorKit(), getPos() ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		super.die( cause );
 		
@@ -157,14 +157,14 @@ public class King extends Boss {
 		boolean[] passable = Dungeon.level.passable.clone();
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
-				passable[((Char)actor).pos] = false;
+				passable[((Char)actor).getPos()] = false;
 			}
 		}
 		
 		int undeadsToSummon = maxArmySize() - Undead.count;
 
-		PathFinder.buildDistanceMap( pos, passable, undeadsToSummon );
-		PathFinder.distance[pos] = Integer.MAX_VALUE;
+		PathFinder.buildDistanceMap( getPos(), passable, undeadsToSummon );
+		PathFinder.distance[getPos()] = Integer.MAX_VALUE;
 		int dist = 1;
 		
 	undeadLabel:
@@ -174,7 +174,7 @@ public class King extends Boss {
 					if (PathFinder.distance[j] == dist) {
 						
 						Undead undead = new Undead();
-						undead.pos = j;
+						undead.setPos(j);
 						GameScene.add(Dungeon.level, undead );
 						
 						WandOfBlink.appear( undead, j );
@@ -251,7 +251,7 @@ public class King extends Boss {
 		public void damage( int dmg, Object src ) {
 			super.damage( dmg, src );
 			if (src instanceof ToxicGas) {		
-				((ToxicGas)src).clearBlob( pos );
+				((ToxicGas)src).clearBlob( getPos() );
 			}
 		}
 		
@@ -259,7 +259,7 @@ public class King extends Boss {
 		public void die( Object cause ) {
 			super.die( cause );
 			
-			if (Dungeon.visible[pos]) {
+			if (Dungeon.visible[getPos()]) {
 				Sample.INSTANCE.play( Assets.SND_BONES );
 			}
 		}

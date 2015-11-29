@@ -68,7 +68,7 @@ public class Blacksmith extends NPC {
 	@Override
 	public boolean interact(final Hero hero) {
 		
-		getSprite().turnTo( pos, hero.pos );
+		getSprite().turnTo( getPos(), hero.getPos() );
 		
 		if (!Quest.given) {
 			
@@ -86,7 +86,7 @@ public class Blacksmith extends NPC {
 					if (pick.doPickUp( hero )) {
 						GLog.i( Hero.TXT_YOU_NOW_HAVE, pick.name() );
 					} else {
-						Dungeon.level.drop( pick, hero.pos ).sprite.drop();
+						Dungeon.level.drop( pick, hero.getPos() ).sprite.drop();
 					}
 				}
 			} );

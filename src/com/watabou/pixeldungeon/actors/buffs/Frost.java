@@ -32,7 +32,7 @@ public class Frost extends FlavourBuff {
 	
 	class freezeItem implements itemAction{
 		public Item act(Item srcItem){
-			return srcItem.freeze(target.pos);
+			return srcItem.freeze(target.getPos());
 		}
 		public void carrierFx(){
 		}

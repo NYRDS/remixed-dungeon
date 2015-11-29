@@ -101,7 +101,7 @@ public class WandMaker extends NPC {
 	@Override
 	public boolean interact(final Hero hero) {
 		
-		getSprite().turnTo( pos, hero.pos );
+		getSprite().turnTo( getPos(), hero.getPos() );
 		if (Quest.given) {
 			
 			Item item = Quest.alternative ?
@@ -230,8 +230,8 @@ public class WandMaker extends NPC {
 				
 				WandMaker npc = new WandMaker();
 				do {
-					npc.pos = room.random(level);
-				} while (level.map[npc.pos] == Terrain.ENTRANCE || level.map[npc.pos] == Terrain.SIGN);
+					npc.setPos(room.random(level));
+				} while (level.map[npc.getPos()] == Terrain.ENTRANCE || level.map[npc.getPos()] == Terrain.SIGN);
 				level.mobs.add( npc );
 				Actor.occupyCell( npc );
 				
@@ -326,8 +326,8 @@ public class WandMaker extends NPC {
 				super.execute( hero, action );
 				
 				if (action.equals( Food.AC_EAT )) {
-					GameScene.add( Blob.seed( hero.pos, 100, ToxicGas.class ) );
-					GameScene.add( Blob.seed( hero.pos, 100, ParalyticGas.class ) );					
+					GameScene.add( Blob.seed( hero.getPos(), 100, ToxicGas.class ) );
+					GameScene.add( Blob.seed( hero.getPos(), 100, ParalyticGas.class ) );					
 				}
 			}
 			

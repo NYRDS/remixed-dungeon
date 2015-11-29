@@ -51,18 +51,18 @@ public class SpiderCharm extends Artifact {
 			ArrayList<Integer> spawnPoints = new ArrayList<Integer>();
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-				int p = ch.pos + Level.NEIGHBOURS8[i];
-				if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
+				int p = ch.getPos() + Level.NEIGHBOURS8[i];
+				if (Dungeon.level.cellValid(p) && Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
 					spawnPoints.add( p );
 				}
 			}
 			
 			if (spawnPoints.size() > 0) {
 				Mob pet = Mob.makePet(new SpiderServant(), getCurUser());
-				pet.pos = Random.element( spawnPoints );
+				pet.setPos(Random.element( spawnPoints ));
 				
 				GameScene.add(Dungeon.level, pet );
-				Actor.addDelayed( new Pushing( pet, ch.pos, pet.pos ), -1 );
+				Actor.addDelayed( new Pushing( pet, ch.getPos(), pet.getPos() ), -1 );
 			}
 
 		} else {

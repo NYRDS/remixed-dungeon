@@ -78,7 +78,7 @@ public class PotionOfPurity extends Potion {
 			}
 		}
 		
-		boolean heroAffected = PathFinder.distance[Dungeon.hero.pos] < Integer.MAX_VALUE;
+		boolean heroAffected = PathFinder.distance[Dungeon.hero.getPos()] < Integer.MAX_VALUE;
 		
 		if (procd) {
 			

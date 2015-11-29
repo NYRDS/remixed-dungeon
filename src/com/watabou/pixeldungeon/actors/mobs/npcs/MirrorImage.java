@@ -105,7 +105,7 @@ public class MirrorImage extends NPC {
 		if (getEnemy() == DUMMY || !getEnemy().isAlive()) {
 			HashSet<Mob> enemies = new HashSet<Mob>();
 			for (Mob mob:Dungeon.level.mobs) {
-				if (mob.hostile && Dungeon.level.fieldOfView[mob.pos] && !mob.isPet()) {
+				if (mob.hostile && Dungeon.level.fieldOfView[mob.getPos()] && !mob.isPet()) {
 					enemies.add( mob );
 				}
 			}
@@ -128,12 +128,12 @@ public class MirrorImage extends NPC {
 	@Override
 	public boolean interact(final Hero hero) {
 		
-		int curPos = pos;
+		int curPos = getPos();
 		
-		moveSprite( pos, hero.pos );
-		move( hero.pos );
+		moveSprite( getPos(), hero.getPos() );
+		move( hero.getPos() );
 		
-		hero.getSprite().move( hero.pos, curPos );
+		hero.getSprite().move( hero.getPos(), curPos );
 		hero.move( curPos );
 		
 		hero.spend( 1 / hero.speed() );

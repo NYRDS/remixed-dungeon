@@ -88,7 +88,7 @@ public class RogueArmor extends ClassArmor {
 				getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 				
 				for (Mob mob : Dungeon.level.mobs) {
-					if (Dungeon.level.fieldOfView[mob.pos]) {
+					if (Dungeon.level.fieldOfView[mob.getPos()]) {
 						Buff.prolong( mob, Blindness.class, 2 );
 						mob.state = mob.WANDERING;
 						mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );

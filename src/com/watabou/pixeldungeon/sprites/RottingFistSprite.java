@@ -61,7 +61,7 @@ public class RottingFistSprite extends MobSprite {
 		if (anim == attack) {
 			speed.set( 0 );
 			acc.set( 0 );
-			place( ch.pos );
+			place( ch.getPos() );
 			
 			Camera.main.shake( 4, 0.2f );
 		}

@@ -77,16 +77,16 @@ public class Warlock extends Mob implements Callback {
 	}
 
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.whiteLight( getSprite().getParent(), pos, cell, callback );
+		MagicMissile.whiteLight( getSprite().getParent(), getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 		getSprite().setVisible(false);
 	}
 	
 	private void blink(int epos) {
 
-		Ballistica.cast(epos, pos, true, false);
+		Ballistica.cast(epos, getPos(), true, false);
 
-		int cell = pos;
+		int cell = getPos();
 		for (int i = 1; i < 4; i++) {
 			int next = Ballistica.trace[i + 1];
 			if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
@@ -95,7 +95,7 @@ public class Warlock extends Mob implements Callback {
 			}
 		}
 		
-		if (cell != pos){
+		if (cell != getPos()){
 			final int tgt = cell;
 			final Char ch = this;
 			fx(cell, new Callback() {
@@ -112,12 +112,12 @@ public class Warlock extends Mob implements Callback {
 	public int defenseProc(Char enemy, int damage) {
 
 		if (hp() > 2 * ht() / 3 && hp() - damage / 2 < 2 * ht() / 3) {
-			blink(enemy.pos);
+			blink(enemy.getPos());
 			return damage / 2;
 		}
 
 		if (hp() > ht() / 3 && hp() - damage / 2 < ht() / 3) {
-			blink(enemy.pos);
+			blink(enemy.getPos());
 			return damage / 2;
 		}
 
@@ -126,21 +126,21 @@ public class Warlock extends Mob implements Callback {
 
 	@Override
 	protected boolean canAttack(Char enemy) {
-		return Ballistica.cast(pos, enemy.pos, false, true) == enemy.pos;
+		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 
 	protected boolean doAttack(Char enemy) {
 
-		if (Dungeon.level.adjacent(pos, enemy.pos)) {
+		if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 
 			return super.doAttack(enemy);
 
 		} else {
 
-			boolean visible = Dungeon.level.fieldOfView[pos]
-					|| Dungeon.level.fieldOfView[enemy.pos];
+			boolean visible = Dungeon.level.fieldOfView[getPos()]
+					|| Dungeon.level.fieldOfView[enemy.getPos()];
 			if (visible) {
-				((WarlockSprite) getSprite()).zap(enemy.pos);
+				((WarlockSprite) getSprite()).zap(enemy.getPos());
 			} else {
 				zap();
 			}

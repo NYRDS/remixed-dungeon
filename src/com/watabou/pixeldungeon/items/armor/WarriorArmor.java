@@ -80,10 +80,10 @@ public class WarriorArmor extends ClassArmor {
 		
 		@Override
 		public void onSelect( Integer target ) {
-			if (target != null && target != getCurUser().pos) {
+			if (target != null && target != getCurUser().getPos()) {
 				
-				int cell = Ballistica.cast( getCurUser().pos, target, false, true );
-				if (Actor.findChar( cell ) != null && cell != getCurUser().pos) {
+				int cell = Ballistica.cast( getCurUser().getPos(), target, false, true );
+				if (Actor.findChar( cell ) != null && cell != getCurUser().getPos()) {
 					cell = Ballistica.trace[Ballistica.distance - 2];
 				}
 				
@@ -95,7 +95,7 @@ public class WarriorArmor extends ClassArmor {
 				
 				final int dest = cell;
 				getCurUser().busy();
-				((HeroSprite)getCurUser().getSprite()).jump( getCurUser().pos, cell, new Callback() {
+				((HeroSprite)getCurUser().getSprite()).jump( getCurUser().getPos(), cell, new Callback() {
 					@Override
 					public void call() {
 						getCurUser().move( dest );
@@ -103,7 +103,7 @@ public class WarriorArmor extends ClassArmor {
 						Dungeon.observe();
 						
 						for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-							Char mob = Actor.findChar( getCurUser().pos + Level.NEIGHBOURS8[i] );
+							Char mob = Actor.findChar( getCurUser().getPos() + Level.NEIGHBOURS8[i] );
 							if (mob != null && mob != getCurUser()) {
 								Buff.prolong( mob, Paralysis.class, SHOCK_TIME );
 							}

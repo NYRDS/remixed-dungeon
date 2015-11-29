@@ -64,7 +64,7 @@ public class Wound extends Image {
 	public static void hit( Char ch, float angle ) {
 		Wound w = (Wound)ch.getSprite().getParent().recycle( Wound.class );
 		ch.getSprite().getParent().bringToFront( w );
-		w.reset( ch.pos );
+		w.reset( ch.getPos() );
 		w.angle = angle;
 	}
 	

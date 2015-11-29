@@ -62,7 +62,7 @@ public class EarthElemental extends Mob {
 	@Override
 	public int attackProc(Char enemy, int damage) {
 
-		int cell = enemy.pos;
+		int cell = enemy.getPos();
 
 		if (Random.Int(2) == 0) {
 			int c = Dungeon.level.map[cell];

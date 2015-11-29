@@ -180,10 +180,10 @@ public class HallsBossLevel extends Level {
 			
 			Yog boss = new Yog();
 			do {
-				boss.pos = Random.Int( getLength() );
+				boss.setPos(Random.Int( getLength() ));
 			} while (
-				!passable[boss.pos] ||
-				Dungeon.visible[boss.pos]);
+				!passable[boss.getPos()] ||
+				Dungeon.visible[boss.getPos()]);
 			GameScene.add(Dungeon.level, boss );
 			boss.spawnFists();
 			

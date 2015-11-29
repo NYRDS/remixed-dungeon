@@ -179,11 +179,11 @@ public class CityBossLevel extends Level {
 			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );
 			boss.state = boss.HUNTING;
 			do {
-				boss.pos = Random.Int( getLength() );
+				boss.setPos(Random.Int( getLength() ));
 			} while (
-				!passable[boss.pos] ||
-				!outsideEntraceRoom( boss.pos ) ||
-				Dungeon.visible[boss.pos]);
+				!passable[boss.getPos()] ||
+				!outsideEntraceRoom( boss.getPos() ) ||
+				Dungeon.visible[boss.getPos()]);
 			GameScene.add(Dungeon.level, boss );
 			
 			set( arenaDoor, Terrain.LOCKED_DOOR );

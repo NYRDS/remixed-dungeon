@@ -82,7 +82,7 @@ public class DM300 extends Boss {
 	@Override
 	public boolean act() {
 
-		GameScene.add( Blob.seed( pos, 30, ToxicGas.class ) );
+		GameScene.add( Blob.seed( getPos(), 30, ToxicGas.class ) );
 		
 		return super.act();
 	}
@@ -128,7 +128,7 @@ public class DM300 extends Boss {
 		super.die( cause );
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		Badges.validateBossSlain();
 		

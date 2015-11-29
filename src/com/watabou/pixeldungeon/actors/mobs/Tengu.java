@@ -93,11 +93,11 @@ public class Tengu extends Boss {
 			break;
 		}
 		if (!Badges.isUnlocked( badgeToCheck ) || Dungeon.hero.getDifficulty() >= 3) {
-			Dungeon.level.drop( new TomeOfMastery(), pos ).sprite.drop();
+			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
 		}
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		super.die( cause );
 		
 		Badges.validateBossSlain();
@@ -117,13 +117,13 @@ public class Tengu extends Boss {
 	
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		return Ballistica.cast( pos, enemy.pos, false, true ) == enemy.pos;
+		return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
 	@Override
 	protected boolean doAttack( Char enemy ) {
 		timeToJump--;
-		if (timeToJump <= 0 && Dungeon.level.adjacent( pos, enemy.pos )) {
+		if (timeToJump <= 0 && Dungeon.level.adjacent( getPos(), enemy.getPos() )) {
 			jump();
 			return true;
 		} else {
@@ -153,10 +153,10 @@ public class Tengu extends Boss {
 		} while (
 			!Dungeon.level.fieldOfView[newPos] || 
 			!Dungeon.level.passable[newPos] || 
-			Dungeon.level.adjacent( newPos, getEnemy().pos ) ||
+			Dungeon.level.adjacent( newPos, getEnemy().getPos() ) ||
 			Actor.findChar( newPos ) != null);
 		
-		getSprite().move( pos, newPos );
+		getSprite().move( getPos(), newPos );
 		move( newPos );
 		
 		if (Dungeon.visible[newPos]) {

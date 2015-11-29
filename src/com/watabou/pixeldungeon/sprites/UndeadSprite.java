@@ -49,7 +49,7 @@ public class UndeadSprite extends MobSprite {
 	@Override
 	public void die() {
 		super.die();
-		if (Dungeon.visible[ch.pos]) {
+		if (Dungeon.visible[ch.getPos()]) {
 			emitter().burst( Speck.factory( Speck.BONE ), 3 );
 		}
 	}

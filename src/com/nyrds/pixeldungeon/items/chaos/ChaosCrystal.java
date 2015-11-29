@@ -60,7 +60,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 			if (cell != null) {
 
 				if (cursed) {
-					cell = getCurUser().pos;
+					cell = getCurUser().getPos();
 				}
 
 				ChaosCommon.doChaosMark(cell.intValue(), charge);
@@ -90,7 +90,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 				
 				item.detach(getCurUser().belongings.backpack);
 				detach(getCurUser().belongings.backpack);
-				getCurUser().getSprite().operate(getCurUser().pos);
+				getCurUser().getSprite().operate(getCurUser().getPos());
 				getCurUser().spend(TIME_TO_FUSE);
 				getCurUser().busy();
 
@@ -120,7 +120,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 
 	private void fuse(Hero hero) {
 		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, TXT_SELECT_FOR_FUSE);
-		hero.getSprite().operate(hero.pos);
+		hero.getSprite().operate(hero.getPos());
 	}
 
 	@Override
@@ -226,7 +226,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 	public void ownerDoesDamage(int damage) {
 		if (cursed) {
 			if (charge > 0) {
-				ChaosCommon.doChaosMark(getCurUser().pos, charge);
+				ChaosCommon.doChaosMark(getCurUser().getPos(), charge);
 			}
 		}
 	}

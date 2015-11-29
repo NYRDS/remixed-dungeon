@@ -77,9 +77,9 @@ public class Yog extends Boss {
 		BurningFist fist2 = new BurningFist();
 
 		do {
-			fist1.pos = pos + Level.NEIGHBOURS8[Random.Int(8)];
-			fist2.pos = pos + Level.NEIGHBOURS8[Random.Int(8)];
-		} while (!Dungeon.level.passable[fist1.pos] || !Dungeon.level.passable[fist2.pos] || fist1.pos == fist2.pos);
+			fist1.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
+			fist2.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
+		} while (!Dungeon.level.passable[fist1.getPos()] || !Dungeon.level.passable[fist2.getPos()] || fist1.getPos() == fist2.getPos());
 
 		GameScene.add(Dungeon.level, fist1);
 		GameScene.add(Dungeon.level, fist2);
@@ -91,7 +91,7 @@ public class Yog extends Boss {
 		int damageShift = 0;
 		for (Mob mob : Dungeon.level.mobs) {
 			if (mob instanceof BurningFist || mob instanceof RottingFist) {
-				mob.beckon(pos);
+				mob.beckon(getPos());
 				damageShift++;
 			}
 		}
@@ -107,7 +107,7 @@ public class Yog extends Boss {
 		ArrayList<Integer> spawnPoints = new ArrayList<Integer>();
 
 		for (int i = 0; i < Level.NEIGHBOURS8.length; i++) {
-			int p = pos + Level.NEIGHBOURS8[i];
+			int p = getPos() + Level.NEIGHBOURS8[i];
 			if (Actor.findChar(p) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
 				spawnPoints.add(p);
 			}
@@ -115,10 +115,10 @@ public class Yog extends Boss {
 
 		if (spawnPoints.size() > 0) {
 			Larva larva = new Larva();
-			larva.pos = Random.element(spawnPoints);
+			larva.setPos(Random.element(spawnPoints));
 
 			GameScene.add(Dungeon.level, larva);
-			Actor.addDelayed(new Pushing(larva, pos, larva.pos), -1);
+			Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
 		}
 
 		return super.defenseProc(enemy, damage);
@@ -139,7 +139,7 @@ public class Yog extends Boss {
 		}
 
 		GameScene.bossSlain();
-		Dungeon.level.drop(new SkeletonKey(), pos).sprite.drop();
+		Dungeon.level.drop(new SkeletonKey(), getPos()).sprite.drop();
 		super.die(cause);
 
 		yell(Game.getVar(R.string.Yog_Info1));
@@ -214,7 +214,7 @@ public class Yog extends Boss {
 		@Override
 		public boolean act() {
 
-			if (Dungeon.level.water[pos] && hp() < ht()) {
+			if (Dungeon.level.water[getPos()] && hp() < ht()) {
 				getSprite().emitter().burst(ShadowParticle.UP, 2);
 				hp(hp() + REGENERATION);
 			}
@@ -273,13 +273,13 @@ public class Yog extends Boss {
 
 		@Override
 		protected boolean canAttack(Char enemy) {
-			return Ballistica.cast(pos, enemy.pos, false, true) == enemy.pos;
+			return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 		}
 
 		@Override
 		public boolean attack(Char enemy) {
 
-			if (!Dungeon.level.adjacent(pos, enemy.pos)) {
+			if (!Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 				spend(attackDelay());
 
 				if (hit(this, enemy, true)) {
@@ -305,7 +305,7 @@ public class Yog extends Boss {
 		public boolean act() {
 
 			for (int i = 0; i < Level.NEIGHBOURS9.length; i++) {
-				GameScene.add(Blob.seed(pos + Level.NEIGHBOURS9[i], 2, Fire.class));
+				GameScene.add(Blob.seed(getPos() + Level.NEIGHBOURS9[i], 2, Fire.class));
 			}
 
 			return super.act();

@@ -52,7 +52,7 @@ public class WandOfFlock extends SimpleWand  {
 		boolean[] passable = BArray.or( Dungeon.level.passable, Dungeon.level.avoid, null );
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
-				passable[((Char)actor).pos] = false;
+				passable[((Char)actor).getPos()] = false;
 			}
 		}
 		
@@ -74,7 +74,7 @@ public class WandOfFlock extends SimpleWand  {
 						
 						Sheep sheep = new Sheep();
 						sheep.lifespan = lifespan;
-						sheep.pos = j;
+						sheep.setPos(j);
 						GameScene.add(Dungeon.level, sheep );
 						Dungeon.level.mobPress( sheep );
 						
@@ -91,7 +91,7 @@ public class WandOfFlock extends SimpleWand  {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.wool( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
+		MagicMissile.wool( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 

@@ -58,7 +58,7 @@ public class RatKingPainter extends Painter {
 		}
 		
 		RatKing king = new RatKing();
-		king.pos = room.random(level, 1 );
+		king.setPos(room.random(level, 1 ));
 		level.mobs.add( king );
 	}
 	

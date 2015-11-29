@@ -69,16 +69,16 @@ public class WandOfTelekinesis extends Wand {
 					int next = Ballistica.trace[i + 1];
 					if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar( next ) == null) {
 						
-						Actor.addDelayed( new Pushing( ch, ch.pos, next ), -1 );
+						Actor.addDelayed( new Pushing( ch, ch.getPos(), next ), -1 );
 						
-						ch.pos = next;
+						ch.setPos(next);
 						Actor.freeCell( next );
 
 						// FIXME
 						if (ch instanceof Mob) {
 							Dungeon.level.mobPress( (Mob)ch );
 						} else {
-							Dungeon.level.press( ch.pos, ch );
+							Dungeon.level.press( ch.getPos(), ch );
 						}
 						
 					} else {
@@ -131,13 +131,13 @@ public class WandOfTelekinesis extends Wand {
 			if (item.doPickUp(getCurUser())) {
 				getCurUser().itemPickedUp(item);
 			} else {
-				Dungeon.level.drop(item, getCurUser().pos).sprite.drop();
+				Dungeon.level.drop(item, getCurUser().getPos()).sprite.drop();
 			}
 		}
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.force( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
+		MagicMissile.force( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

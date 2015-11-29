@@ -64,10 +64,10 @@ public class Burning extends Buff implements Hero.Doom {
 	
 	class burnItem implements itemAction{
 		public Item act(Item srcItem){
-			return srcItem.burn(target.pos);
+			return srcItem.burn(target.getPos());
 		}
 		public void carrierFx(){
-			Heap.burnFX( target.pos );
+			Heap.burnFX( target.getPos() );
 		}
 		@Override
 		public String actionText(Item srcItem) {
@@ -91,8 +91,8 @@ public class Burning extends Buff implements Hero.Doom {
 			detach();
 		}
 		
-		if (Dungeon.level.flamable[target.pos]) {
-			GameScene.add( Blob.seed( target.pos, 4, Fire.class ) );
+		if (Dungeon.level.flamable[target.getPos()]) {
+			GameScene.add( Blob.seed( target.getPos(), 4, Fire.class ) );
 		}
 		
 		spend( TICK );
@@ -100,7 +100,7 @@ public class Burning extends Buff implements Hero.Doom {
 		
 		if (left <= 0 ||
 			Random.Float() > (2 + (float)target.hp() / target.ht()) / 3 ||
-			(Dungeon.level.water[target.pos] && !target.flying)) {
+			(Dungeon.level.water[target.getPos()] && !target.flying)) {
 			
 			detach();
 		}

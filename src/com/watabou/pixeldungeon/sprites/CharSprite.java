@@ -98,8 +98,8 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		this.ch = ch;
 		ch.setSprite(this);
 		
-		place( ch.pos );
-		turnTo( ch.pos, Random.Int( Dungeon.level.getLength() ) );
+		place( ch.getPos() );
+		turnTo( ch.getPos(), Random.Int( Dungeon.level.getLength() ) );
 		
 		ch.updateSpriteState();
 	}
@@ -126,13 +126,13 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 			
 			if(ModdingMode.getClassicTextRenderingMode()) {
 				if (ch != null) {
-					FloatingText.show( x + width * 0.5f, y, ch.pos, text, color );
+					FloatingText.show( x + width * 0.5f, y, ch.getPos(), text, color );
 				} else {
 					FloatingText.show( x + width * 0.5f, y, text, color );
 				}
 			}	else {
 				if (ch != null) {
-					SystemFloatingText.show( x + width * 0.5f, y, ch.pos, text, color );
+					SystemFloatingText.show( x + width * 0.5f, y, ch.getPos(), text, color );
 				} else {
 					SystemFloatingText.show( x + width * 0.5f, y, text, color );
 				}				
@@ -169,23 +169,23 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	}
 	
 	public void attack( int cell ) {
-		turnTo( ch.pos, cell );
+		turnTo( ch.getPos(), cell );
 		play( attack );
 	}
 	
 	public void attack( int cell, Callback callback ) {
 		animCallback = callback;
-		turnTo( ch.pos, cell );
+		turnTo( ch.getPos(), cell );
 		play( attack );
 	}
 	
 	public void operate( int cell ) {
-		turnTo( ch.pos, cell );
+		turnTo( ch.getPos(), cell );
 		play( operate );
 	}
 	
 	public void zap( int cell ) {
-		turnTo( ch.pos, cell );
+		turnTo( ch.getPos(), cell );
 		play( zap );
 	}
 	

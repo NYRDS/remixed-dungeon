@@ -103,7 +103,7 @@ public class Goo extends Boss {
 	@Override
 	public boolean act() {
 		
-		if (Dungeon.level.water[pos] && hp() < ht()) {
+		if (Dungeon.level.water[getPos()] && hp() < ht()) {
 			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			hp(hp() + 1);
 		}
@@ -143,7 +143,7 @@ public class Goo extends Boss {
 			
 			((GooSprite)getSprite()).pumpUp();
 			
-			if (Dungeon.visible[pos]) {
+			if (Dungeon.visible[getPos()]) {
 				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 				GLog.n(Game.getVar(R.string.Goo_Info1));
 			}
@@ -179,7 +179,7 @@ public class Goo extends Boss {
 		((SewerBossLevel)Dungeon.level).unseal();
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		Badges.validateBossSlain();
 		

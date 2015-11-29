@@ -27,7 +27,7 @@ public class PseudoPasty extends Food {
 	public Item pick(Char ch, int pos ) {
 		int spawnPos = pos;
 		
-		if(ch.pos == pos) {
+		if(ch.getPos() == pos) {
 			ArrayList<Integer> candidates = new ArrayList<Integer>();
 			for (int n : Level.NEIGHBOURS8) {
 				int cell = pos + n;
@@ -44,7 +44,7 @@ public class PseudoPasty extends Food {
 		}
 		
 		MimicPie mob = new MimicPie();
-		mob.pos = spawnPos;
+		mob.setPos(spawnPos);
 		mob.state = mob.WANDERING;
 		mob.adjustStats(Dungeon.depth);
 		

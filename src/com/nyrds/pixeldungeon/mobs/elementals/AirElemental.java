@@ -47,7 +47,7 @@ public class AirElemental extends Mob {
 
 	@Override
 	protected boolean getCloser(int target) {
-		if (state == HUNTING && Dungeon.level.distance(pos, target) < maxDistance - 1) {
+		if (state == HUNTING && Dungeon.level.distance(getPos(), target) < maxDistance - 1) {
 			return getFurther(target);
 		}
 
@@ -57,14 +57,14 @@ public class AirElemental extends Mob {
 	@Override
 	protected boolean canAttack(Char enemy) {
 
-		if (Dungeon.level.adjacent(pos, enemy.pos)) {
+		if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 			return false;
 		}
 
-		Ballistica.cast(pos, enemy.pos, true, false);
+		Ballistica.cast(getPos(), enemy.getPos(), true, false);
 
 		for (int i = 1; i < maxDistance; i++) {
-			if (Ballistica.trace[i] == enemy.pos) {
+			if (Ballistica.trace[i] == enemy.getPos()) {
 				return true;
 			}
 		}
@@ -74,7 +74,7 @@ public class AirElemental extends Mob {
 	@Override
 	public int attackProc(Char enemy, int damage) {
 
-		Ballistica.cast(pos, enemy.pos, true, false);
+		Ballistica.cast(getPos(), enemy.getPos(), true, false);
 
 		Char ch;
 
@@ -87,7 +87,7 @@ public class AirElemental extends Mob {
 				if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next])
 						&& Actor.findChar(next) == null) {
 					ch.move(next);
-					ch.getSprite().move(ch.pos, next);
+					ch.getSprite().move(ch.getPos(), next);
 					Dungeon.observe();
 				} else {
 					return damage * 2;

@@ -47,7 +47,7 @@ public class SpiderMind extends Mob {
 	
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		return !Dungeon.level.adjacent( pos, enemy.pos ) && Ballistica.cast( pos, enemy.pos, false, true ) == enemy.pos;
+		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
 	@SuppressWarnings("unchecked")

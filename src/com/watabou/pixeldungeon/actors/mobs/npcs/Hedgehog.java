@@ -66,8 +66,8 @@ public class Hedgehog extends NPC {
 		if (!spawned && Dungeon.depth == 23) {
 			Hedgehog hedgehog = new Hedgehog();
 			do {
-				hedgehog.pos = level.randomRespawnCell();
-			} while (hedgehog.pos == -1);
+				hedgehog.setPos(level.randomRespawnCell());
+			} while (hedgehog.getPos() == -1);
 			level.mobs.add( hedgehog );
 			Actor.occupyCell( hedgehog );
 			
@@ -77,7 +77,7 @@ public class Hedgehog extends NPC {
 
 	@Override
 	public boolean interact(final Hero hero) {
-		getSprite().turnTo( pos, hero.pos );
+		getSprite().turnTo( getPos(), hero.getPos() );
 		
 		switch (action)
 		{
@@ -98,7 +98,7 @@ public class Hedgehog extends NPC {
 				
 				Pasty pie = new Pasty();
 				
-				Dungeon.level.drop( pie, pos ).sprite.drop();
+				Dungeon.level.drop( pie, getPos() ).sprite.drop();
 			break;
 			
 			default:

@@ -48,9 +48,9 @@ public class SpiderExploding extends MultiKindMob {
 		
 		try {
 			Plant plant  = (Plant) ((Class<?>) PLantClasses[getKind()]).newInstance();
-			plant.pos = enemy.pos;
+			plant.pos = enemy.getPos();
 			
-			plant.effect(enemy.pos,enemy);
+			plant.effect(enemy.getPos(),enemy);
 			
 			die(this);
 			

@@ -42,7 +42,7 @@ public class WandOfPoison extends SimpleWand  {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.poison( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
+		MagicMissile.poison( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

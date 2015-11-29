@@ -105,7 +105,7 @@ public class DewVial extends Item {
 				hero.busy();
 				
 				Sample.INSTANCE.play( Assets.SND_DRINK );
-				hero.getSprite().operate( hero.pos );
+				hero.getSprite().operate( hero.getPos() );
 				
 				updateQuickslot();
 				

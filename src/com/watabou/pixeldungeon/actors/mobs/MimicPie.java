@@ -55,7 +55,7 @@ public class MimicPie extends Mob {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-		Dungeon.level.drop(new RottenPasty(), pos);
+		Dungeon.level.drop(new RottenPasty(), getPos());
 	}
 	
 	public void adjustStats( int level ) {

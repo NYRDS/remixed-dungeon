@@ -59,7 +59,7 @@ public class Imp extends NPC {
 	@Override
 	protected boolean act() {
 		
-		if (!Quest.given && Dungeon.visible[pos]) {
+		if (!Quest.given && Dungeon.visible[getPos()]) {
 			if (!seenBefore) {
 				say( Utils.format( TXT_HEY, Dungeon.hero.className() ) );
 			}
@@ -99,7 +99,7 @@ public class Imp extends NPC {
 	@Override
 	public boolean interact(final Hero hero) {
 		
-		getSprite().turnTo( pos, hero.pos );
+		getSprite().turnTo( getPos(), hero.getPos() );
 		if (Quest.given) {
 			
 			DwarfToken tokens = hero.belongings.getItem( DwarfToken.class );
@@ -192,8 +192,8 @@ public class Imp extends NPC {
 				
 				Imp npc = new Imp();
 				do {
-					npc.pos = level.randomRespawnCell();
-				} while (npc.pos == -1 || level.getHeap( npc.pos ) != null);
+					npc.setPos(level.randomRespawnCell());
+				} while (npc.getPos() == -1 || level.getHeap( npc.getPos() ) != null);
 				level.mobs.add( npc );
 				Actor.occupyCell( npc );
 				
@@ -215,7 +215,7 @@ public class Imp extends NPC {
 				if ((alternative && mob instanceof Monk) ||
 					(!alternative && mob instanceof Golem)) {
 					
-					Dungeon.level.drop( new DwarfToken(), mob.pos ).sprite.drop();
+					Dungeon.level.drop( new DwarfToken(), mob.getPos() ).sprite.drop();
 				}
 			}
 		}

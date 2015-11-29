@@ -50,7 +50,7 @@ public class WandOfBlink extends Wand {
 	
 	@Override
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.whiteLight( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
+		MagicMissile.whiteLight( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 		wandUser.getSprite().setVisible(false);
 	}

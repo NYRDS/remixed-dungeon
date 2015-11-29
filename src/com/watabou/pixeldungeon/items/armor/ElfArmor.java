@@ -32,20 +32,20 @@ public class ElfArmor extends ClassArmor {
 	public void doSpecial() {
 		
 		for (Mob mob : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[mob.pos]) {
-				GameScene.add( Blob.seed( mob.pos, 100, Regrowth.class ) );
+			if (Dungeon.level.fieldOfView[mob.getPos()]) {
+				GameScene.add( Blob.seed( mob.getPos(), 100, Regrowth.class ) );
 			}
 		}
 		
 		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 		
 		getCurUser().spend( Actor.TICK );
-		getCurUser().getSprite().operate( getCurUser().pos );
+		getCurUser().getSprite().operate( getCurUser().getPos() );
 		getCurUser().busy();
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
 		
-		GameScene.add( Blob.seed( getCurUser().pos, 100, Regrowth.class ) );
+		GameScene.add( Blob.seed( getCurUser().getPos(), 100, Regrowth.class ) );
 	}
 	
 	@Override

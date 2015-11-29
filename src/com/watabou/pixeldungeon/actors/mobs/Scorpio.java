@@ -66,7 +66,7 @@ public class Scorpio extends Mob {
 	
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		return !Dungeon.level.adjacent( pos, enemy.pos ) && Ballistica.cast( pos, enemy.pos, false, true ) == enemy.pos;
+		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
 	@Override
@@ -90,9 +90,9 @@ public class Scorpio extends Mob {
 	@Override
 	protected void dropLoot() {
 		if (Random.Int( 8 ) == 0) {
-			Dungeon.level.drop( new PotionOfHealing(), pos ).sprite.drop();
+			Dungeon.level.drop( new PotionOfHealing(), getPos() ).sprite.drop();
 		} else if (Random.Int( 6 ) == 0) {
-			Dungeon.level.drop( new MysteryMeat(), pos ).sprite.drop();
+			Dungeon.level.drop( new MysteryMeat(), getPos() ).sprite.drop();
 		}
 	}	
 }

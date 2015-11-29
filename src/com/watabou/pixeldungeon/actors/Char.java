@@ -74,7 +74,7 @@ public abstract class Char extends Actor {
 	
 	private static final String TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
 	
-	public int pos = 0;
+	private int pos = 0;
 	
 	private CharSprite sprite;
 
@@ -117,7 +117,7 @@ public abstract class Char extends Actor {
 		
 		super.storeInBundle( bundle );
 		
-		bundle.put( POS, pos );
+		bundle.put( POS, getPos() );
 		bundle.put( TAG_HP, hp() );
 		bundle.put( TAG_HT, ht() );
 		bundle.put( BUFFS, buffs );
@@ -128,7 +128,7 @@ public abstract class Char extends Actor {
 		
 		super.restoreFromBundle( bundle );
 		
-		pos = bundle.getInt( POS );
+		setPos(bundle.getInt( POS ));
 		hp(bundle.getInt( TAG_HP ));
 		ht(bundle.getInt( TAG_HT ));
 		
@@ -159,7 +159,7 @@ public abstract class Char extends Actor {
 	
 	public boolean attack( Char enemy ) {
 		
-		boolean visibleFight = Dungeon.visible[pos] || Dungeon.visible[enemy.pos];
+		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
 		
 		if (hit( this, enemy, false )) {
 			
@@ -289,7 +289,7 @@ public abstract class Char extends Actor {
 		if (buff( Paralysis.class ) != null) {
 			if (Random.Int( dmg ) >= Random.Int( hp() )) {
 				Buff.detach( this, Paralysis.class );
-				if (Dungeon.visible[pos]) {
+				if (Dungeon.visible[getPos()]) {
 					GLog.i( TXT_OUT_OF_PARALYSIS, getName_objective() );
 				}
 			}
@@ -310,7 +310,7 @@ public abstract class Char extends Actor {
 	public void destroy() {
 		hp(0);
 		Actor.remove( this );
-		Actor.freeCell( pos );
+		Actor.freeCell( getPos() );
 	}
 	
 	public void die( Object src ) {
@@ -370,7 +370,7 @@ public abstract class Char extends Actor {
 		if (getSprite() != null) {
 			if (buff instanceof Poison) {
 				
-				CellEmitter.center( pos ).burst( PoisonParticle.SPLASH, 5 );
+				CellEmitter.center( getPos() ).burst( PoisonParticle.SPLASH, 5 );
 				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
 				
 			} else if (buff instanceof Amok) {
@@ -490,10 +490,10 @@ public abstract class Char extends Actor {
 
 	public void move(int step) {
 		
-		if (buff(Vertigo.class) != null && Dungeon.level.adjacent(pos, step)) { //ignore vertigo when blinking or teleporting
+		if (buff(Vertigo.class) != null && Dungeon.level.adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 			List<Integer> candidates = new ArrayList<Integer>();
 			for (int dir : Level.NEIGHBOURS8) {
-				int p = pos + dir;
+				int p = getPos() + dir;
 				if (Dungeon.level.cellValid(p)) {
 					if ((Dungeon.level.passable[p] || Dungeon.level.avoid[p]) && Actor.findChar(p) == null) {
 						candidates.add(p);
@@ -508,23 +508,23 @@ public abstract class Char extends Actor {
 			step = Random.element( candidates );
 		}
 		
-		if (Dungeon.level.map[pos] == Terrain.OPEN_DOOR) {
-			Door.leave( pos );
+		if (Dungeon.level.map[getPos()] == Terrain.OPEN_DOOR) {
+			Door.leave( getPos() );
 		}
 		
-		pos = step;
+		setPos(step);
 		
-		if (flying && Dungeon.level.map[pos] == Terrain.DOOR) {
-			Door.enter( pos );
+		if (flying && Dungeon.level.map[getPos()] == Terrain.DOOR) {
+			Door.enter( getPos() );
 		}
 		
 		if (this != Dungeon.hero) {
-			getSprite().setVisible(Dungeon.visible[pos]);
+			getSprite().setVisible(Dungeon.visible[getPos()]);
 		}
 	}
 	
 	public int distance( Char other ) {
-		return Dungeon.level.distance( pos, other.pos );
+		return Dungeon.level.distance( getPos(), other.getPos() );
 	}
 	
 	public void onMotionComplete() {
@@ -585,5 +585,13 @@ public abstract class Char extends Actor {
 
 	public int getGender() {
 		return gender;
+	}
+
+	public int getPos() {
+		return pos;
+	}
+
+	public void setPos(int pos) {
+		this.pos = pos;
 	}
 }

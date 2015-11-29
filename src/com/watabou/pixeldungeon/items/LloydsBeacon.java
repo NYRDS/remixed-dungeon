@@ -104,7 +104,7 @@ public class LloydsBeacon extends Item {
 			}
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-				if (Actor.findChar( hero.pos + Level.NEIGHBOURS8[i] ) != null) {
+				if (Actor.findChar( hero.getPos() + Level.NEIGHBOURS8[i] ) != null) {
 					GLog.w( TXT_CREATURES );
 					return;
 				}
@@ -118,7 +118,7 @@ public class LloydsBeacon extends Item {
 			hero.spend( LloydsBeacon.TIME_TO_USE );
 			hero.busy();
 			
-			hero.getSprite().operate( hero.pos );
+			hero.getSprite().operate( hero.getPos() );
 			Sample.INSTANCE.play( Assets.SND_BEACON );
 			
 			GLog.i( TXT_RETURN );

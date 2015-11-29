@@ -91,7 +91,7 @@ public class WndWandmaker extends Window {
 		if (reward.doPickUp( Dungeon.hero )) {
 			GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
 		} else {
-			Dungeon.level.drop( reward, wandmaker.pos ).sprite.drop();
+			Dungeon.level.drop( reward, wandmaker.getPos() ).sprite.drop();
 		}
 		
 		wandmaker.say(Utils.format( TXT_FARAWELL, Dungeon.hero.className() ) );

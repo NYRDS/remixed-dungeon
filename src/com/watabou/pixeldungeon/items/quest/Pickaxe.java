@@ -85,7 +85,7 @@ public class Pickaxe extends Weapon {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				
-				final int pos = hero.pos + Level.NEIGHBOURS8[i];
+				final int pos = hero.getPos() + Level.NEIGHBOURS8[i];
 				if (Dungeon.level.map[pos] == Terrain.WALL_DECO) {
 				
 					hero.spend( TIME_TO_MINE );
@@ -106,7 +106,7 @@ public class Pickaxe extends Weapon {
 							if (gold.doPickUp( Dungeon.hero )) {
 								GLog.i( Hero.TXT_YOU_NOW_HAVE, gold.name() );
 							} else {
-								Dungeon.level.drop( gold, hero.pos ).sprite.drop();
+								Dungeon.level.drop( gold, hero.getPos() ).sprite.drop();
 							}
 							
 							Hunger hunger = hero.buff( Hunger.class );

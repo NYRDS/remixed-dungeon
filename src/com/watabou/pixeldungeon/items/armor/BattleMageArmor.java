@@ -40,7 +40,7 @@ public class BattleMageArmor extends ClassArmor {
 	public void doSpecial() {	
 
 		for (Mob mob : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[mob.pos]) {
+			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Buff.affect( mob, Burning.class ).reignite( mob );
 				Buff.prolong( mob, Roots.class, 3 );
 			}
@@ -49,7 +49,7 @@ public class BattleMageArmor extends ClassArmor {
 		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 		
 		getCurUser().spend( Actor.TICK );
-		getCurUser().getSprite().operate( getCurUser().pos );
+		getCurUser().getSprite().operate( getCurUser().getPos() );
 		getCurUser().busy();
 		
 		getCurUser().getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );

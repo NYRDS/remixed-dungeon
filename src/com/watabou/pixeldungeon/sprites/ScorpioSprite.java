@@ -58,10 +58,10 @@ public class ScorpioSprite extends MobSprite {
 	
 	@Override
 	public void attack( int cell ) {
-		if (!Dungeon.level.adjacent( cell, ch.pos )) {
+		if (!Dungeon.level.adjacent( cell, ch.getPos() )) {
 			
 			cellToAttack = cell;
-			turnTo( ch.pos , cell );
+			turnTo( ch.getPos() , cell );
 			play( zap );	
 			
 		} else {
@@ -77,7 +77,7 @@ public class ScorpioSprite extends MobSprite {
 			idle();
 			
 			((MissileSprite)getParent().recycle( MissileSprite.class )).
-			reset( ch.pos, cellToAttack, new Dart(), null, new Callback() {
+			reset( ch.getPos(), cellToAttack, new Dart(), null, new Callback() {
 				@Override
 				public void call() {
 					ch.onAttackComplete();

@@ -42,7 +42,7 @@ public class LootIndicator extends Tag {
 		
 		slot = new ItemSlot() {
 			protected void onClick() {
-				Dungeon.hero.handle( Dungeon.hero.pos );
+				Dungeon.hero.handle( Dungeon.hero.getPos() );
 			};
 		};
 		slot.showParams( false );
@@ -60,7 +60,7 @@ public class LootIndicator extends Tag {
 	public void update() {
 		
 		if (Dungeon.hero.isReady()) {
-			Heap heap = Dungeon.level.getHeap( Dungeon.hero.pos );
+			Heap heap = Dungeon.level.getHeap( Dungeon.hero.getPos() );
 				
 			if (heap != null) {
 				Item item = 

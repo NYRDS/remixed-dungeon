@@ -90,7 +90,7 @@ public class WndSadGhost extends Window {
 		if (reward.doPickUp( Dungeon.hero )) {
 			GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
 		} else {
-			Dungeon.level.drop( reward, ghost.pos ).sprite.drop();
+			Dungeon.level.drop( reward, ghost.getPos() ).sprite.drop();
 		}
 		
 		ghost.say( TXT_FAREWELL );

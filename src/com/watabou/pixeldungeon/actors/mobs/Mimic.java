@@ -83,7 +83,7 @@ public class Mimic extends Mob {
 			Gold gold = new Gold( Random.Int( Dungeon.gold / 10, Dungeon.gold / 2 ) );
 			if (gold.quantity() > 0) {
 				Dungeon.gold -= gold.quantity();
-				Dungeon.level.drop( gold, Dungeon.hero.pos ).sprite.drop();
+				Dungeon.level.drop( gold, Dungeon.hero.getPos() ).sprite.drop();
 			}
 		}
 		return super.attackProc( enemy, damage );
@@ -106,7 +106,7 @@ public class Mimic extends Mob {
 		
 		if (items != null) {
 			for (Item item : items) {
-				Dungeon.level.drop( item, pos ).sprite.drop();
+				Dungeon.level.drop( item, getPos() ).sprite.drop();
 			}
 		}
 	}
@@ -130,9 +130,9 @@ public class Mimic extends Mob {
 			}
 			if (candidates.size() > 0) {
 				int newPos = Random.element( candidates );
-				Actor.addDelayed( new Pushing( ch, ch.pos, newPos ), -1 );
+				Actor.addDelayed( new Pushing( ch, ch.getPos(), newPos ), -1 );
 				
-				ch.pos = newPos;
+				ch.setPos(newPos);
 				// FIXME
 				if (ch instanceof Mob) {
 					level.mobPress( (Mob)ch );
@@ -148,13 +148,13 @@ public class Mimic extends Mob {
 		m.items = new ArrayList<Item>( items );
 		m.adjustStats( Dungeon.depth );
 		m.hp(m.ht());
-		m.pos = pos;
+		m.setPos(pos);
 		m.state = m.HUNTING;
 		GameScene.add(level, m, 1 );
 		
-		m.getSprite().turnTo( pos, Dungeon.hero.pos );
+		m.getSprite().turnTo( pos, Dungeon.hero.getPos() );
 		
-		if (Dungeon.visible[m.pos]) {
+		if (Dungeon.visible[m.getPos()]) {
 			CellEmitter.get( pos ).burst( Speck.factory( Speck.STAR ), 10 );
 			Sample.INSTANCE.play( Assets.SND_MIMIC );
 		}

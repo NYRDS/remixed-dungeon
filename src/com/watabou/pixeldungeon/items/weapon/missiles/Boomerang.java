@@ -82,7 +82,7 @@ public class Boomerang extends MissileWeapon {
 	public void proc( Char attacker, Char defender, int damage ) {
 		super.proc( attacker, defender, damage );
 		if (attacker instanceof Hero && ((Hero)attacker).rangedWeapon == this) {
-			circleBack( defender.pos, (Hero)attacker );
+			circleBack( defender.getPos(), (Hero)attacker );
 		}
 	}
 	
@@ -94,7 +94,7 @@ public class Boomerang extends MissileWeapon {
 	private void circleBack(int from, Hero owner) {
 
 		((MissileSprite) getCurUser().getSprite().getParent()
-				.recycle(MissileSprite.class)).reset(from, getCurUser().pos,
+				.recycle(MissileSprite.class)).reset(from, getCurUser().getPos(),
 				curItem, null, null);
 
 		if (throwEquiped) {

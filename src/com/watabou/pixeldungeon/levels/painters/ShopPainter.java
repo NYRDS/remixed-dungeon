@@ -162,12 +162,12 @@ public class ShopPainter extends Painter {
 		} while (level.getHeap( pos ) != null);
 		
 		Mob shopkeeper = level instanceof LastShopLevel ? new ImpShopkeeper() : new Shopkeeper();
-		shopkeeper.pos = pos;
+		shopkeeper.setPos(pos);
 		level.mobs.add( shopkeeper );
 		
 		if (level instanceof LastShopLevel) {
 			for (int i=0; i < Level.NEIGHBOURS9.length; i++) {
-				int p = shopkeeper.pos + Level.NEIGHBOURS9[i];
+				int p = shopkeeper.getPos() + Level.NEIGHBOURS9[i];
 				if (level.map[p] == Terrain.EMPTY_SP) {
 					level.map[p] = Terrain.WATER;
 				}

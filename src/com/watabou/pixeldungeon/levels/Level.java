@@ -344,7 +344,7 @@ public abstract class Level implements Bundlable {
 		collection = bundle.getCollection(MOBS);
 		for (Bundlable m : collection) {
 			Mob mob = (Mob) m;
-			if (mob != null) {
+			if (mob != null && mob.getPos() != -1) {
 				mobs.add(mob);
 			}
 		}
@@ -459,10 +459,10 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (!mob.isWallWalker()) {
-			mob.pos = randomRespawnCell();
+			mob.setPos(randomRespawnCell());
 		} else {
 			mob.state = mob.WANDERING;
-			mob.pos = randomSolidCell();
+			mob.setPos(randomSolidCell());
 		}
 		return mob;
 	}
@@ -483,10 +483,10 @@ public abstract class Level implements Bundlable {
 
 					Mob mob = createMob();
 					mob.state = mob.WANDERING;
-					if (Dungeon.hero.isAlive() && mob.pos != -1) {
+					if (Dungeon.hero.isAlive() && mob.getPos() != -1) {
 						GameScene.add(Dungeon.level, mob);
 						if (Statistics.amuletObtained) {
-							mob.beckon(Dungeon.hero.pos);
+							mob.beckon(Dungeon.hero.getPos());
 						}
 					}
 				}
@@ -829,7 +829,7 @@ public abstract class Level implements Bundlable {
 
 	public void mobPress(Mob mob) {
 
-		int cell = mob.pos;
+		int cell = mob.getPos();
 
 		if (pit[cell] && !mob.flying) {
 			Chasm.mobFall(mob);
@@ -906,8 +906,8 @@ public abstract class Level implements Bundlable {
 
 	public boolean[] updateFieldOfView(Char c) {
 
-		int cx = c.pos % getWidth();
-		int cy = c.pos / getWidth();
+		int cx = c.getPos() % getWidth();
+		int cy = c.getPos() / getWidth();
 
 		boolean sighted = c.buff(Blindness.class) == null
 				&& c.buff(Shadows.class) == null && c.isAlive();
@@ -945,13 +945,13 @@ public abstract class Level implements Bundlable {
 		if (c.isAlive()) {
 			if (c.buff(MindVision.class) != null) {
 				for (Mob mob : mobs) {
-					updateFovForObjectAt(mob.pos);
+					updateFovForObjectAt(mob.getPos());
 				}
 			} else if (c == Dungeon.hero
 					&& ((Hero) c).heroClass == HeroClass.HUNTRESS) {
 				for (Mob mob : mobs) {
-					int p = mob.pos;
-					if (distance(c.pos, p) == 2) {
+					int p = mob.getPos();
+					if (distance(c.getPos(), p) == 2) {
 						updateFovForObjectAt(p);
 					}
 				}

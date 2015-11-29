@@ -130,7 +130,7 @@ public abstract class Actor implements Bundlable {
 	}
 	
 	public static void occupyCell( Char ch ) {
-		chars.put(ch.pos, ch);
+		chars.put(ch.getPos(), ch);
 	}
 	
 	public static void freeCell( int pos ) {
@@ -161,7 +161,7 @@ public abstract class Actor implements Bundlable {
 
 				if (actor instanceof Char) {
 					Char ch = (Char) actor;
-					chars.put(ch.pos, ch);
+					chars.put(ch.getPos(), ch);
 				}
 			}
 
@@ -204,7 +204,7 @@ public abstract class Actor implements Bundlable {
 				
 				if (actor instanceof Char) {
 					Char ch = (Char)actor;
-					chars.put(ch.pos, ch);
+					chars.put(ch.getPos(), ch);
 				}
 			}
 
@@ -251,7 +251,7 @@ public abstract class Actor implements Bundlable {
 		
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;
-			chars.put(ch.pos, ch);
+			chars.put(ch.getPos(), ch);
 			for (Buff buff : ch.buffs()) {
 				all.add( buff );
 				buff.onAdd();

@@ -37,20 +37,20 @@ public class Kusarigama extends SpecialWeapon {
 
 			if (target != null) {
 				getCurUser().spendAndNext(TIME_TO_IMPALE);
-				int hitCell = Ballistica.cast(getCurUser().pos, target, false, true);
+				int hitCell = Ballistica.cast(getCurUser().getPos(), target, false, true);
 				
-				if(hitCell == getCurUser().pos) {
+				if(hitCell == getCurUser().getPos()) {
 					return;
 				}
 				
-				if (Dungeon.level.distance(getCurUser().pos, hitCell) < 4) {
+				if (Dungeon.level.distance(getCurUser().getPos(), hitCell) < 4) {
 					Char chr = Actor.findChar(hitCell);
 					
 					if (chr != null) {
-						target = chr.pos;
+						target = chr.getPos();
 
 						chr.move(Ballistica.trace[1]);
-						chr.getSprite().move(chr.pos, Ballistica.trace[1]);
+						chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
 
 						Dungeon.observe();
 					}
@@ -98,8 +98,8 @@ public class Kusarigama extends SpecialWeapon {
 	public void applySpecial(Hero hero, Char tgt) {
 		setCurUser(hero);
 
-		if (Dungeon.level.distance(getCurUser().pos, tgt.pos) > 1) {
-			drawChain(tgt.pos);
+		if (Dungeon.level.distance(getCurUser().getPos(), tgt.getPos()) > 1) {
+			drawChain(tgt.getPos());
 		}
 
 		if (Random.Float(1) < 0.1f) {

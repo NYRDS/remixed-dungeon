@@ -245,11 +245,11 @@ public class Dungeon {
 			Actor.add( level.respawner() );
 		}
 		
-		hero.pos = pos;
+		hero.setPos(pos);
 		hero.levelKind = level.levelKind();
 		
-		if(!level.cellValid(hero.pos)) {
-			hero.pos = level.entrance;
+		if(!level.cellValid(hero.getPos())) {
+			hero.setPos(level.entrance);
 		}
 		
 		Light light = hero.buff( Light.class );
@@ -560,7 +560,7 @@ public class Dungeon {
 	private static void markActorsAsUnpassableIgnoreFov(){
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
-				int pos = ((Char)actor).pos;
+				int pos = ((Char)actor).getPos();
 				passable[pos] = false;
 			}
 		}
@@ -569,7 +569,7 @@ public class Dungeon {
 	private static void markActorsAsUnpassable(boolean[] visible){
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
-				int pos = ((Char)actor).pos;
+				int pos = ((Char)actor).getPos();
 				if (visible[pos]) {
 					passable[pos] = false;
 				}
@@ -625,14 +625,14 @@ public class Dungeon {
 		}
 
 		for (Mob mob : Dungeon.level.mobs) {
-			mob.beckon(ch.pos);
+			mob.beckon(ch.getPos());
 		}
 
 		for (Heap heap : Dungeon.level.allHeaps()) {
 			if (heap.type == Heap.Type.MIMIC) {
 				Mimic m = Mimic.spawnAt(heap.pos, heap.items);
 				if (m != null) {
-					m.beckon(ch.pos);
+					m.beckon(ch.getPos());
 					heap.destroy();
 				}
 			}
@@ -649,7 +649,7 @@ public class Dungeon {
 	}
 	
 	public static Position currentPosition() {
-		return new Position(hero.levelKind, depth, hero.pos);
+		return new Position(hero.levelKind, depth, hero.getPos());
 	}
 
 	private static int difficulty;

@@ -70,7 +70,7 @@ public class WandOfFirebolt extends SimpleWand  {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.fire( wandUser.getSprite().getParent(), wandUser.pos, cell, callback );
+		MagicMissile.fire( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

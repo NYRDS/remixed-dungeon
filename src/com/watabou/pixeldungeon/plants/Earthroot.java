@@ -97,13 +97,13 @@ public class Earthroot extends Plant {
 		
 		@Override
 		public boolean attachTo( Char target ) {
-			pos = target.pos;
+			pos = target.getPos();
 			return super.attachTo( target );
 		}
 		
 		@Override
 		public boolean act() {
-			if (target.pos != pos) {
+			if (target.getPos() != pos) {
 				detach();
 			}
 			spend( STEP );

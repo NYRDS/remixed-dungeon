@@ -340,7 +340,7 @@ public abstract class Wand extends KindOfWeapon {
 	}
 	
 	protected void fx(int cell, Callback callback) {
-		MagicMissile.blueLight(wandUser.getSprite().getParent(), wandUser.pos, cell,
+		MagicMissile.blueLight(wandUser.getSprite().getParent(), wandUser.getPos(), cell,
 				callback);
 		Sample.INSTANCE.play(Assets.SND_ZAP);
 	}
@@ -447,14 +447,14 @@ public abstract class Wand extends KindOfWeapon {
 
 			if (target != null) {
 
-				if (target == getCurUser().pos) {
+				if (target == getCurUser().getPos()) {
 					GLog.i(TXT_SELF_TARGET);
 					return;
 				}
 
 				final Wand curWand = (Wand) Wand.curItem;
 				
-				final int cell = Ballistica.cast(getCurUser().pos, target, true, curWand.hitChars);
+				final int cell = Ballistica.cast(getCurUser().getPos(), target, true, curWand.hitChars);
 				getCurUser().getSprite().zap(cell);
 				
 				curWand.wandEffect(cell);

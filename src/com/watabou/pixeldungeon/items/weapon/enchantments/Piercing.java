@@ -34,8 +34,8 @@ public class Piercing extends Enchantment {
 		int maxDamage = (int)(damage * Math.pow( 2, -1d / (level + 1) ));
 		if (maxDamage >= 1) {
 			
-			int d = defender.pos - attacker.pos;
-			int pos = defender.pos + d;
+			int d = defender.getPos() - attacker.getPos();
+			int pos = defender.getPos() + d;
 			
 			do {
 				

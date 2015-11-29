@@ -41,13 +41,13 @@ public abstract class NPC extends Mob {
 	}
 	
 	protected void throwItem() {
-		Heap heap = Dungeon.level.getHeap( pos );
+		Heap heap = Dungeon.level.getHeap( getPos() );
 		if (heap != null) {
 			int n;
 			do {
-				n = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
+				n = getPos() + Level.NEIGHBOURS8[Random.Int( 8 )];
 			} while (!Dungeon.level.passable[n] && !Dungeon.level.avoid[n]);
-			Dungeon.level.drop( heap.pickUp(), n ).sprite.drop( pos );
+			Dungeon.level.drop( heap.pickUp(), n ).sprite.drop( getPos() );
 		}
 	}
 	

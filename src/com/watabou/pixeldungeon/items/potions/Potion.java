@@ -212,11 +212,11 @@ public class Potion extends Item {
 		
 		hero.spend( TIME_TO_DRINK );
 		hero.busy();
-		onThrow( hero.pos );
+		onThrow( hero.getPos() );
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
-		hero.getSprite().operate( hero.pos );
+		hero.getSprite().operate( hero.getPos() );
 	}
 	
 	private void moisten(Hero hero) {
@@ -226,12 +226,12 @@ public class Potion extends Item {
 		
 		GameScene.selectItem( itemSelector, WndBag.Mode.MOISTABLE, TXT_SELECT_FOR_MOISTEN );
 		
-		hero.getSprite().operate( hero.pos );
+		hero.getSprite().operate( hero.getPos() );
 	}
 	
 	@Override
 	protected void onThrow( int cell ) {
-		if (Dungeon.hero.pos == cell) {
+		if (Dungeon.hero.getPos() == cell) {
 			
 			apply( Dungeon.hero );
 			
@@ -247,7 +247,7 @@ public class Potion extends Item {
 	}
 	
 	protected void apply( Hero hero ) {
-		shatter( hero.pos );
+		shatter( hero.getPos() );
 	}
 
 	protected boolean canShatter() {
@@ -398,7 +398,7 @@ public class Potion extends Item {
 	protected void moistenUseless() {
 		detach(getCurUser().belongings.backpack );
 		GLog.i(TXT_MOISTEN_USELESS);
-		getCurUser().getSprite().operate( getCurUser().pos );		
+		getCurUser().getSprite().operate( getCurUser().getPos() );		
 		getCurUser().spend( TIME_TO_MOISTEN );
 		getCurUser().busy();	
 	}
@@ -406,7 +406,7 @@ public class Potion extends Item {
 	protected void moistenEffective() {
 		detach(getCurUser().belongings.backpack );
 		identify();
-		getCurUser().getSprite().operate( getCurUser().pos );		
+		getCurUser().getSprite().operate( getCurUser().getPos() );		
 		getCurUser().spend( TIME_TO_MOISTEN );
 		getCurUser().busy();	
 	}

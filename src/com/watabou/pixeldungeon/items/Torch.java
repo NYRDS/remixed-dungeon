@@ -58,7 +58,7 @@ public class Torch extends Item {
 			hero.spend( TIME_TO_LIGHT );
 			hero.busy();
 			
-			hero.getSprite().operate( hero.pos );
+			hero.getSprite().operate( hero.getPos() );
 			
 			detach( hero.belongings.backpack );
 			Buff.affect( hero, Light.class, Light.DURATION );

@@ -58,7 +58,7 @@ public class WaterElemental extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
-			Freezing.affect( enemy.pos, null );
+			Freezing.affect( enemy.getPos(), null );
 		}
 		
 		return damage;
@@ -66,7 +66,7 @@ public class WaterElemental extends Mob {
 	
 	@Override
 	public boolean act() {
-		if (Dungeon.level.water[pos] && hp() < ht()) {
+		if (Dungeon.level.water[getPos()] && hp() < ht()) {
 			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			hp(Math.min(hp() + EXP,ht()));
 		}

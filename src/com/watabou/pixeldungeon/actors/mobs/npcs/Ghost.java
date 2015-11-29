@@ -110,7 +110,7 @@ public class Ghost extends NPC {
 	
 	@Override
 	public boolean interact(final Hero hero) {
-		getSprite().turnTo( pos, hero.pos );
+		getSprite().turnTo( getPos(), hero.getPos() );
 		
 		Sample.INSTANCE.play( Assets.SND_GHOST );
 		
@@ -133,12 +133,12 @@ public class Ghost extends NPC {
 				}
 				if (newPos != -1) {
 					
-					Actor.freeCell( pos );
+					Actor.freeCell( getPos() );
 					
-					CellEmitter.get( pos ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
-					pos = newPos;
-					getSprite().place( pos );
-					getSprite().setVisible(Dungeon.visible[pos]);
+					CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
+					setPos(newPos);
+					getSprite().place( getPos() );
+					getSprite().setVisible(Dungeon.visible[getPos()]);
 				}
 			}
 			
@@ -248,8 +248,8 @@ public class Ghost extends NPC {
 				
 				Ghost ghost = new Ghost();
 				do {
-					ghost.pos = level.randomRespawnCell();
-				} while (ghost.pos == -1);
+					ghost.setPos(level.randomRespawnCell());
+				} while (ghost.getPos() == -1);
 				level.mobs.add( ghost );
 				Actor.occupyCell( ghost );
 				
@@ -296,8 +296,8 @@ public class Ghost extends NPC {
 				if (alternative) {
 					
 					FetidRat rat = new FetidRat();
-					rat.pos = Dungeon.level.randomRespawnCell();
-					if (rat.pos != -1) {
+					rat.setPos(Dungeon.level.randomRespawnCell());
+					if (rat.getPos() != -1) {
 						GameScene.add(Dungeon.level, rat );
 						processed = true;
 					}
@@ -355,7 +355,7 @@ public class Ghost extends NPC {
 		@Override
 		public int defenseProc( Char enemy, int damage ) {
 			
-			GameScene.add( Blob.seed( pos, 20, ParalyticGas.class ) );
+			GameScene.add( Blob.seed( getPos(), 20, ParalyticGas.class ) );
 			
 			return super.defenseProc(enemy, damage);
 		}
@@ -364,7 +364,7 @@ public class Ghost extends NPC {
 		public void die( Object cause ) {
 			super.die( cause );
 			
-			Dungeon.level.drop( new RatSkull(), pos ).sprite.drop();
+			Dungeon.level.drop( new RatSkull(), getPos() ).sprite.drop();
 		}
 		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
