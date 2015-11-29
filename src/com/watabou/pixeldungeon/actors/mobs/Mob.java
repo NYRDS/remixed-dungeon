@@ -162,7 +162,7 @@ public abstract class Mob extends Char {
 		try {
 			
 			String descName = "spritesDesc/"+getClass().getSimpleName()+".json";
-			if(ModdingMode.isResourceExist(descName)) {
+			if(ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
 				return new MobSpriteDef(descName, getKind());
 			}
 			
@@ -173,6 +173,11 @@ public abstract class Mob extends Char {
 			
 			if(spriteClass instanceof String){
 				sprite = new MobSpriteDef((String)spriteClass, getKind());
+			}
+			
+			
+			if(sprite==null) {
+				throw new RuntimeException("spite must not be null");
 			}
 			
 		} catch (Exception e) {

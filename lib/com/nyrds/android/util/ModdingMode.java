@@ -32,20 +32,24 @@ public class ModdingMode {
 		return mActiveMod;
 	}
 
+	
+	public static boolean isAssetExist(String resName) {
+		InputStream str;
+		try {
+			str = mContext.getAssets().open(resName);
+			str.close();
+			return true;
+		} catch (IOException e) {
+			return false;
+		}
+	}
+	
 	public static boolean isResourceExist(String resName) {
 		if(!mActiveMod.equals(REMIXED)){
 			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName).exists();
 		} else {
-			InputStream str;
-			try {
-				str = mContext.getAssets().open(resName);
-				str.close();
-				return true;
-			} catch (IOException e) {
-				return false;
-			}
+			return isAssetExist(resName);
 		}
-
 	}
 	
 	public static File getFile(String resName) {
