@@ -146,7 +146,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		config.locale = locale;
 		getBaseContext().getResources().updateConfiguration(config,
 				getBaseContext().getResources().getDisplayMetrics());
-		
+
 		parseStrings(String.format("strings_%s.json", lang));
 	}
 
@@ -188,15 +188,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	@SuppressLint("UseSparseArrays")
 	private Map<Integer, String> stringMap = new HashMap<Integer, String>();
+	@SuppressLint("UseSparseArrays")
+	private Map<Integer, String[]> stringsMap = new HashMap<Integer, String[]>();
 	private Map<String, Integer> keyToInt;
 
-	private void initTextMapping() {
-		long mapStart = System.nanoTime();
-		Class<?> string = R.string.class;
-
-		keyToInt = new HashMap<String, Integer>();
-		
-		for (Field f : string.getDeclaredFields()) {
+	private void addMappingForClass(Class<?> clazz) {
+		for (Field f : clazz.getDeclaredFields()) {
 			int key;
 			try {
 				key = f.getInt(null);
@@ -207,8 +204,18 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 			keyToInt.put(name, key);
 		}
+	}
+	
+	private void initTextMapping() {
+		long mapStart = System.nanoTime();
+
+		keyToInt = new HashMap<String, Integer>();
+
+		addMappingForClass( R.string.class);
+		addMappingForClass( R.array.class);
+
 		long mapEnd = System.nanoTime();
-		GLog.toFile("map creating time %f", (mapEnd - mapStart)/1000000f);
+		GLog.toFile("map creating time %f", (mapEnd - mapStart) / 1000000f);
 	}
 
 	private void parseStrings(String resource) {
@@ -217,23 +224,38 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			return;
 		}
 
-		if(keyToInt==null) {
+		if (keyToInt == null) {
 			initTextMapping();
 		}
-		
+
 		String line = "";
-		
+
 		try {
 			InputStream fis = new FileInputStream(jsonFile.getAbsolutePath());
 			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 			BufferedReader br = new BufferedReader(isr);
-			
+
 			while ((line = br.readLine()) != null) {
 				JSONArray entry = new JSONArray(line);
+				
+				String keyString = entry.getString(0);
+				Integer key = keyToInt.get(keyString);
+				if(key == null){
+					toast("unknown key: [%s] in [%s] ignored ", keyString, resource);
+				}
+				
 				if (entry.length() == 2) {
-					String key = entry.getString(0);
+
 					String value = entry.getString(1);
-					stringMap.put(keyToInt.get(key), value);
+					stringMap.put(key, value);
+				}
+
+				if (entry.length() > 2) {
+					String[] values = new String[entry.length() - 1];
+					for (int i = 1; i < entry.length(); i++) {
+						values[i - 1] = entry.getString(i);
+					}
+					stringsMap.put(key, values);
 				}
 			}
 			br.close();
@@ -248,9 +270,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		context = getApplicationContext();
-		
+
 		FileSystem.setContext(context);
 		ModdingMode.setContext(context);
 
@@ -264,7 +286,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		} catch (NameNotFoundException e) {
 			versionCode = 0;
 		}
-		
+
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
 		view = new GLSurfaceView(this);
@@ -488,11 +510,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public static String getVar(int id) {
-		
-		if(instance.stringMap.containsKey(id)) {
+
+		if (instance.stringMap.containsKey(id)) {
 			return instance.stringMap.get(id);
 		}
-		
+
 		try {
 			return context.getResources().getString(id);
 		} catch (NotFoundException notFound) {
@@ -502,6 +524,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public static String[] getVars(int id) {
+
+		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
+				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey && id != R.string.testDevice) {
+			if (instance.stringsMap.containsKey(id)) {
+				return instance.stringsMap.get(id);
+			}
+		}
 		return context.getResources().getStringArray(id);
 	}
 
