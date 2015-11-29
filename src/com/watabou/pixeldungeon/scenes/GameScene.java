@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import java.io.IOException;
+import java.util.HashSet;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
@@ -176,8 +177,17 @@ public class GameScene extends PixelScene {
 		mobs = new Group();
 		add( mobs );
 		
+		// hack to save bugged saves...
+		HashSet<Mob> filteredMobs = new HashSet<>();
 		for (Mob mob : Dungeon.level.mobs) {
-
+			if(mob.getPos()!=-1) {
+				filteredMobs.add(mob);
+			}
+		}
+		
+		Dungeon.level.mobs = filteredMobs;
+		
+		for (Mob mob : Dungeon.level.mobs) {
 			addMobSprite( mob );
 			if (Statistics.amuletObtained) {
 				mob.beckon( Dungeon.hero.getPos() );
