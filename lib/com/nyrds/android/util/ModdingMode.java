@@ -25,7 +25,10 @@ public class ModdingMode {
 	}
 
 	public static void selectMod(String mod) {
-		mActiveMod = mod;
+		File modPath = FileSystem.getExternalStorageFile(mod);
+		if(modPath.exists() && modPath.isDirectory()) {
+			mActiveMod = mod;
+		}
 	}
 
 	public static final String activeMod() {

@@ -50,6 +50,7 @@ public class ShamanSprite extends MobSprite {
 		play( idle );
 	}
 	
+	@Override
 	public void zap( int pos ) {
 		
 		points[0] = ch.getPos();
