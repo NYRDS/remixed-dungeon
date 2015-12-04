@@ -223,6 +223,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		if (jsonFile == null) {
 			return;
 		}
+		
+		if(!jsonFile.exists()) {
+			return;
+		}
 
 		if (keyToInt == null) {
 			initTextMapping();
@@ -231,7 +235,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		String line = "";
 
 		try {
-			InputStream fis = new FileInputStream(jsonFile.getAbsolutePath());
+			InputStream fis = new FileInputStream(jsonFile);
 			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 			BufferedReader br = new BufferedReader(isr);
 

@@ -20,7 +20,6 @@ package com.watabou.noosa.audio;
 import java.io.File;
 import java.io.IOException;
 
-import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 

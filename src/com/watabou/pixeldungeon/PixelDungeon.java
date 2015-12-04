@@ -66,7 +66,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 		
 		ModdingMode.mode(PixelDungeon.moddingMode());
 		ModdingMode.selectMod(PixelDungeon.activeMod());
-		
+		PixelDungeon.activeMod(ModdingMode.activeMod());
 		
 		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
 			try {

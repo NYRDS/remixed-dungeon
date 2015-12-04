@@ -21,7 +21,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
-import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 
