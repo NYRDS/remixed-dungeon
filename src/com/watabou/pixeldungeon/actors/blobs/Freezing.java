@@ -29,6 +29,9 @@ import com.watabou.utils.Random;
 
 public class Freezing {
 
+	// for newInstance used if Buff.affect
+	public Freezing() {
+	}
 	// It's not really a blob...
 	
 	public static void affect( int cell, Fire fire ) {

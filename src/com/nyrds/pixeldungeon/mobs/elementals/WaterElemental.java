@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.elementals;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -58,7 +59,7 @@ public class WaterElemental extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
-			Freezing.affect( enemy.getPos(), null );
+			Freezing.affect( enemy.getPos(), (Fire)Dungeon.level.blobs.get( Fire.class ) );
 		}
 		
 		return damage;

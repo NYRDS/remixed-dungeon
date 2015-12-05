@@ -36,8 +36,6 @@ public class FileSystem {
 		}
 	}
 
-	}
-
 	static public String getInteralStorageFileName(String fileName) {
 		return getInteralStorageFile(fileName).getAbsolutePath();
 	}
