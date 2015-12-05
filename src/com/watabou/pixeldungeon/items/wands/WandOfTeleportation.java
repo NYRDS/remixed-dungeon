@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -51,7 +52,7 @@ public class WandOfTeleportation extends Wand {
 			setKnown();
 			ScrollOfTeleportation.teleportHero(getCurUser());
 
-		} else if (ch != null) {
+		} else if (ch != null && ! (ch instanceof Boss) ) {
 
 			teleport(ch);
 
