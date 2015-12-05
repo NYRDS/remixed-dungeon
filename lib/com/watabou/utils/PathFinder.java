@@ -77,7 +77,10 @@ public class PathFinder {
 	}
 
 	public static int getStep(int from, int to, boolean[] passable) {
-
+		if(to<0 || to>size-1) {
+			return -1;
+		}
+		
 		if (!buildDistanceMap(from, to, passable)) {
 			return -1;
 		}
