@@ -66,5 +66,5 @@
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
   <string name="WndSaveSlotSelect_SelectSlot">Выбери ячейку</string>
   <!--STRINGS OF ModsButton CLASS-->
-  <string name="ModsButton_SelectMod">Выберете мод</string>
+  <string name="ModsButton_SelectMod">Выберите мод</string>
 </resources>
