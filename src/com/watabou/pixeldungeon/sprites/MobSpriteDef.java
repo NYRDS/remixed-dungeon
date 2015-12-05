@@ -85,9 +85,15 @@ public class MobSpriteDef extends MobSprite {
 			run = readAnimation(json, "run", film);
 			attack = readAnimation(json, "attack", film);
 			die = readAnimation(json, "die", film);
-			zap = attack.clone();
+			
+			if(json.has("zap")) {
+				zap = readAnimation(json, "zap", film);
+			} else {
+				zap = attack.clone();
+			}
 
 		} catch (Exception e) {
+			Game.toast(String.format("Something bad happens when loading %s", name), e);
 			throw new RuntimeException(String.format("Something bad happens when loading %s", name), e);
 		}
 
