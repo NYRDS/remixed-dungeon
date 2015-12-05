@@ -84,8 +84,8 @@ public class DungeonGenerator {
 		lmap.put(CAVES_BOSS_LEVEL,     LevelKind.CAVES_BOSS_LEVEL);
 		lmap.put(CITY_LEVEL,           LevelKind.CITY_LEVEL);
 		lmap.put(CITY_BOSS_LEVEL,      LevelKind.CITY_BOSS_LEVEL);
-		lmap.put(HALLS_LEVEL,         LevelKind.HALLS_LEVEL);
-		lmap.put(HALLS_BOSS_LEVEL,    LevelKind.HALLS_BOSS_LEVEL);
+		lmap.put(HALLS_LEVEL,          LevelKind.HALLS_LEVEL);
+		lmap.put(HALLS_BOSS_LEVEL,     LevelKind.HALLS_BOSS_LEVEL);
 		lmap.put(LAST_SHOP_LEVEL,      LevelKind.LAST_SHOP_LEVEL);
 		lmap.put(LAST_LEVEL,           LevelKind.LAST_LEVEL);
 		lmap.put(SPIDER_LEVEL,         LevelKind.SPIDER_LEVEL);
