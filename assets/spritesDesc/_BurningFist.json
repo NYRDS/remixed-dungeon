@@ -21,4 +21,5 @@
       fps = 10,
       looped = false,
       frames = [0,2,3,4]
+   }
 }
