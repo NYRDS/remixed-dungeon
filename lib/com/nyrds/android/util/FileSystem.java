@@ -29,9 +29,15 @@ public class FileSystem {
 
 	static public File[] listExternalStorage() {
 		File storageDir = m_context.getExternalFilesDir(null);
-		return storageDir.listFiles();
+		if (storageDir != null) {
+			return storageDir.listFiles();
+		} else {
+			return new File[0];
+		}
 	}
-	
+
+	}
+
 	static public String getInteralStorageFileName(String fileName) {
 		return getInteralStorageFile(fileName).getAbsolutePath();
 	}
