@@ -10,6 +10,20 @@
   <string name="Wand_Fizzles">sua varinha chiou; ele deve estar sem cargas por enquanto</string>
   <string name="Wand_SelfTarget">Você não pode acertar a si mesmo.</string>
   <string name="Wand_Prompt">Escolha uma direção para atirar</string>
+  <string-array name="Wand_Wood_Types">
+    <item>azevinho</item>
+    <item>teixo</item>
+    <item>ébano</item>
+    <item>cerejeira</item>
+    <item>teca</item>
+    <item>sorveira</item>
+    <item>salgueiro</item>
+    <item>mogno</item>
+    <item>bambu</item>
+    <item>roxinho</item>
+    <item>carvalho</item>
+    <item>bétula</item>
+  </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
   <string name="WandOfAmok_Name">Varinha de Fúria</string>
   <string name="WandOfAmok_Info">A luz roxa desta varinha irá causar um ataque de fúria no alvo, que atacará criaturas aleatórias nas suas proximidades.</string>
@@ -34,6 +48,7 @@
   <string name="Sheep_Name">ovelha</string>
   <string name="Sheep_Name_Objective">ovelha</string>
   <string name="Sheep_Gender">feminino</string>
+  <string name="Sheep_Desc">Esta é uma ovelha mágica. O que há de tão mágico sobre ela? Você não pode matá-las. Ela vai ficar lá até que magicamente desapareça, e ficará o tempo todo ruminando com um olhar vazio.</string>
   <string-array name="WandOfFlock_SheepBaa">
     <item>Bee!</item>
     <item>Bee?</item>

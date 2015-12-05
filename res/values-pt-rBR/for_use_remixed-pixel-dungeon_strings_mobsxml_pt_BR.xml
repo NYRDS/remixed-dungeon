@@ -14,6 +14,7 @@
   <string name="Acidic_Name">escorpião ácido</string>
   <string name="Acidic_Gender">masculino</string>
   <string name="Acidic_Name_Objective">escorpião ácido</string>
+  <string name="Acidic_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
   <!--STRINGS OF Albino CLASS-->
   <string name="Albino_Name">rato albino</string>
   <string name="Albino_Gender">masculino</string>
@@ -23,6 +24,7 @@
   <string name="Bandit_Name">bandido maluco</string>
   <string name="Bandit_Gender">masculino</string>
   <string name="Bandit_Name_Objective">bandido louco</string>
+  <string name="Bandit_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam. Este bandido parece ter revestido o punhal com alguma coisa!</string>
   <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">morcego</string>
   <string name="Bat_Gender">masculino</string>
@@ -57,6 +59,7 @@
   <string name="Elemental_Desc">Elementais do fogo errantes são conhecidas por convocar outras entidades. Eles são muito caóticos e são dificeis de serem controlados até pelo mais poderoso Demonologista.</string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">olho do mal</string>
+  <string name="Eye_Gender">neutro</string>
   <string name="Eye_Name_Objective">olho do mal</string>
   <string name="Eye_Desc">Um dos outros nomes deste demônio é \"esfera de ódio\", porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
   <string name="Eye_Kill">Olhar da Morte de %s matou você...</string>
@@ -92,6 +95,7 @@
   <string name="Undead_Name">anão morto-vivo</string>
   <string name="Undead_Gender">masculino</string>
   <string name="Undead_Name_Objective">anão morto-vivo</string>
+  <string name="Undead_Desc">Estes anões zumbi, aumentados pela vontade do rei dos anões, eram membros de sua corte. Eles aparecem como esqueletos com uma quantidade impressionante de cabelo em sua face.</string>
   <string name="Undead_Defense">bloqueado</string>
   <!--STRINGS OF Mimic CLASS-->
   <string name="Mimic_Name">imitação</string>
@@ -222,28 +226,34 @@
   <string name="Larva_Desc">Larva do Deus Antigo</string>
   <!--STRINGS OF SpiderEgg CLASS-->
   <string name="SpiderEgg_Name">ovo de aranha</string>
+  <string name="SpiderEgg_Gender">neutro</string>
   <string name="SpiderEgg_Name_Objective">ovo de aranha</string>
   <string name="SpiderEgg_Desc">Este ovo frágil está pulsando, dentro você consegue ver algo com muitas pernas.</string>
   <!--STRINGS OF SpiderNest CLASS-->
   <string name="SpiderNest_Name">casulo de aranha</string>
+  <string name="SpiderNest_Gender">neutro</string>
   <string name="SpiderNest_Name_Objective">casulo de aranha</string>
   <string name="SpiderNest_Desc">Este casulo é feito de seda finíssima e dentro está algo vivo.</string>
   <!--STRINGS OF SpiderServant CLASS-->
   <string name="SpiderServant_Name">aranha soldado</string>
   <string name="SpiderServant_Gender">masculino</string>
-  <string name="SpiderServant_Name_Objective">aranha soldier</string>
+  <string name="SpiderServant_Name_Objective">aranha soldado</string>
+  <string name="SpiderServant_Desc">Soldados são as mais numerosas unidades da toca da aranha. Nascido para proteger o seu território. As Aranhas Soldado desenvolveram glândulas venenosas em suas garras, para envenenar seus inimigos.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
   <string name="SpiderExploding_Name">aranha trabalhadora</string>
   <string name="SpiderExploding_Gender">masculino</string>
   <string name="SpiderExploding_Name_Objective">aranha trabalhadora</string>
+  <string name="SpiderExploding_Desc">Trabalhadores duros durante tempos de paz, essa criatura não hesitará em cobrar  seus inimigos e pegará primeira planta que atravessar, transformando-se em uma bomba viva.</string>
   <!--STRINGS OF SpiderMind CLASS-->
   <string name="SpiderMind_Name">Aranha Psíquica</string>
   <string name="SpiderMind_Gender">masculino</string>
   <string name="SpiderMind_Name_Objective">Aranha Psíquica</string>
+  <string name="SpiderMind_Desc">Estas aranhas aparentemente frágeis possuem poderes mentais únicos, que lhes permite controlar toda a colônia. Aranhas Psíquicas são capazes de controlar qualquer criatura viva, mas ela é muito covarde.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
   <string name="SpiderQueen_Name">aranha rainha</string>
   <string name="SpiderQueen_Gender">feminino</string>
   <string name="SpiderQueen_Name_Objective">aranha rainha</string>
+  <string name="SpiderQueen_Desc">Um corpo de mulher bonita cruzou com aranha horrenda. Todo ser vivo neste covil é seu servo. Juntar-se a esta dama extraordinária pode ser uma experiência mortal. Porque você é um intruso!</string>
   <!--STRINGS OF WaterElemental CLASS-->
   <string name="WaterElemental_Name">elemental de água</string>
   <string name="WaterElemental_Gender">masculino</string>
@@ -260,5 +270,8 @@
   <string name="EarthElemental_Name_Objective">elemental de terra</string>
   <string name="EarthElemental_Desc">Elementais de Terra são massas de terra direcionados por forças concentradas da natureza.</string>
   <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">cristal flutuante</string>
   <string name="Crystal_Gender">masculino</string>
+  <string name="Crystal_Name_Objective">cristal flutuante</string>
+  <string name="Crystal_Desc">Um grande cristal brilhante flutuando no ar. Provavelmente ele está cheio de magia poderosa.</string>
 </resources>

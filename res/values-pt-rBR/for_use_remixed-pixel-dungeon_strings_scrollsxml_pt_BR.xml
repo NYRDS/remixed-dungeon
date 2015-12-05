@@ -87,8 +87,13 @@
   <string name="ScrollOfUpgrade_LooksBetter">seu %s certamente está melhor agora.</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
   <string name="ScrollOfWeaponUpgrade_Name">Pergaminho de Melhora de Arma</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Este pergaminho vai atualizar uma arma branca, melhorando a sua qualidade. Em contraste com um Pergaminho de Atualização, esta versão especializada nunca vai destruir um encantamento em uma arma. Pelo contrário, ele é capaz de atribuir um encantamento aleatório a uma arma não encantada .</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Selecione uma arma para aprimorar</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">%s parece estar muito melhor agora</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Pergaminho da Dominação</string>
+  <string name="ScrollOfDomination_Info">Este pergaminho vai modificar o arbitrio de uma criatura em sua visão. A criatura vai lutar por você até a morte.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Pergaminho da Maldição</string>
+  <string name="ScrollOfCurse_Info">Este pergaminho foi criado especialmente para punir ladrões estúpidos o suficiente para tentar usar magia que eles não podem compreender. A magia do pergaminho é totalmente inútil e até prejudicial para o aventureiro qualquer, mas muito valorizada pelos comerciantes.</string>
 </resources>

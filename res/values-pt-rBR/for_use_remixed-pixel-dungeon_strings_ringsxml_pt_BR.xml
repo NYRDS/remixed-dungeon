@@ -63,11 +63,25 @@
   <string name="RingOfThorns_Info">Embora este anel não conjure espinhos reais, um inimigo que atacar você vai se ser ferido por uma fração do dano que ele infligiu. Atualizar este anel não vai dar nenhum bônus adicional.</string>
   <!--STRINGS OF RingOfStoneWalking CLASS-->
   <string name="RingOfStoneWalking_Name">Anel da Pedra Sangrenta</string>
+  <string name="RingOfStoneWalking_Info">Este anel estranho é feito de alguma pedra resistente. O que parece inicialmente é um rubi mas na verdade é sangue líquido que está sendo mantido aqui! No interior, está uma seta apontando para o que parece ser um muro, junto com um coração partido... O que poderia fazer?</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Você foi preso na pedra. Para Sempre.</string>
   <!--STRINGS OF SpiderCharm CLASS-->
   <string name="SpiderCharm_Name">Encanto de Aranha</string>
+  <string name="SpiderCharm_Info">Esta coisa exótica está envolta por uma aura de mistério. Quem sabe, o que pode acontecer para alguém que usa-lo?</string>
   <string name="SpiderCharm_Use">USAR</string>
   <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">Cristal Estranho</string>
+  <string name="ChaosCrystal_Name_1">Cristal Caótico</string>
+  <string name="ChaosCrystal_Name_2">Cristal do Caos</string>
+  <string name="ChaosCrystal_Info">Você sente correntes de energia correndo através de suas mãos, enquanto você o segura.</string>
+  <string name="ChaosCrystal_Info_1">Poderes caóticos fluem através deste cristal. Talvez ele pode ser útil.</string>
+  <string name="ChaosCrystal_Info_2">Sim! Agora você sabe que você pode fundi-lo com um de seus itens, mas o que pode acontecer a seguir?</string>
   <string name="ChaosCrystal_Use">USAR</string>
   <string name="ChaosCrystal_Fuse">FUNDIR</string>
+  <string name="ChaosCrystal_Prompt">Escolha lugar para setar a Marca do Caos.</string>
+  <string name="ChaosCrystal_SelectForFuse">Escolha um item para fundir com o Cristal do Caos.</string>
+  <string name="ChaosCrystal_ScrollFused">O Cristal foi absorvido pela runa inscrita no pergaminho, transformando-se em %s</string>
+  <string name="ChaosCrystal_SwordFused">O Cristal absorve sua arma, e tomou a forma de uma Espada.</string>
+  <string name="ChaosCrystal_BowFused">O Cristal absorve seu arco, e tomou a forma de um Arco</string>
+  <string name="ChaosCrystal_StaffFused">O Cristal absorve sua varinha, e tomou a forma de um bastão.</string>
 </resources>

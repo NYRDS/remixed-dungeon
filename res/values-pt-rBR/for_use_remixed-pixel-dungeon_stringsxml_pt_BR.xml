@@ -436,6 +436,7 @@
   <string name="Belongings_Name">mochila</string>
   <!--PACKAGE /sprites-->
   <!--STRINGS OF ItemSprite CLASS-->
+  <string name="ItemSprite_Info1">caiu: %1$.1f %2$.1f</string>
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
   <string name="Toolbar_Info1">Você não sabe o que tem ali.</string>
