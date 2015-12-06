@@ -11,6 +11,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
@@ -224,6 +226,11 @@ public abstract class GameWithGoogleIap extends Game {
 			return;
 		}
 
+		int st =  GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+		if(st != ConnectionResult.SUCCESS) {
+			return;
+		}
+		
 		String base64EncodedPublicKey = getVar(R.string.iapKey);
 
 		// Create the helper, passing it our context and the public key to
