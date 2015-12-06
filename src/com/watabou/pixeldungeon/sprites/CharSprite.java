@@ -434,7 +434,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 			animCallback = null;
 		} else {
 			
-			if (anim == attack) {
+			if (anim == attack || anim == zap) {
 				
 				idle();
 				ch.onAttackComplete();
