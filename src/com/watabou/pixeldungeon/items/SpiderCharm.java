@@ -7,12 +7,14 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.plants.Sungrass.Health;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -47,6 +49,7 @@ public class SpiderCharm extends Artifact {
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);
 			ch.damage(ch.ht()/4, this);
+			Buff.detach(ch, Health.class);
 			
 			ArrayList<Integer> spawnPoints = new ArrayList<Integer>();
 			
