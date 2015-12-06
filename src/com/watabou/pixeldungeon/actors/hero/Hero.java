@@ -1174,7 +1174,7 @@ public class Hero extends Char {
 
 	public boolean handle(int cell) {
 
-		if (cell == -1) {
+		if (!Dungeon.level.cellValid(cell)) {
 			return false;
 		}
 
