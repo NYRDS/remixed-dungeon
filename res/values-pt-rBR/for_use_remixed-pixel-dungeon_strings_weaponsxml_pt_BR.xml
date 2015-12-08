@@ -30,7 +30,11 @@
     <item>%s Instável</item>
   </string-array>
   <!--STRINGS OF Leech CLASS-->
-  <string-array name="Leech_Name"/>
+  <string-array name="Leech_Name">
+    <item>%s Vampírico(a)</item>
+    <item>%s Vampírico(a)</item>
+    <item>%s Vampírico(a)</item>
+  </string-array>
   <!--STRINGS OF Luck CLASS-->
   <string-array name="Luck_Name">
     <item>%s da Sorte</item>
@@ -120,6 +124,7 @@
   <!--STRINGS OF Spear CLASS-->
   <string name="Spear_Name">Lança</string>
   <string name="Spear_Info">A haste de madeira com ponta delgada com ferro afiada.</string>
+  <string name="Spear_Gender">neutro</string>
   <!--STRINGS OF Sword CLASS-->
   <string name="Sword_Name">Espada</string>
   <string name="Sword_Info">O comprimento desta afiada lâmina de aço tem um brilho tranqüilizador.</string>
@@ -157,6 +162,7 @@
   <!--STRINGS OF Javelin CLASS-->
   <string name="Javelin_Name">lança</string>
   <string name="Javelin_Info">Este pesado metal comprido tem uma ponta em sua extremidade, cortando o ar em seu caminho.</string>
+  <string name="Javelin_Gender">neutro</string>
   <!--STRINGS OF Shuriken CLASS-->
   <string name="Shuriken_Name">shuriken</string>
   <string name="Shuriken_Info">Peças de metal em forma de estrela com lâminas afiadas podem causar danos significativos quando atingem o alvo. Eles podem ser jogados em altas velocidades.</string>
@@ -172,4 +178,5 @@
   <string name="ChaosBow_Gender">masculino</string>
   <!--STRINGS OF ChaosStaff CLASS-->
   <string name="ChaosStaff_Gender">masculino</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
 </resources>
