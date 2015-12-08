@@ -59,7 +59,7 @@ public class WarlockSprite extends MobSprite {
 			new Callback() {			
 				@Override
 				public void call() {
-					((Warlock)ch).onZapComplete();
+					ch.onZapComplete();
 				}
 			} );
 		Sample.INSTANCE.play( Assets.SND_ZAP );

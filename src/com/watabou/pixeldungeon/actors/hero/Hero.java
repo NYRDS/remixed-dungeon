@@ -1447,7 +1447,6 @@ public class Hero extends Char {
 	public void onAttackComplete() {
 
 		AttackIndicator.target(enemy);
-
 		attack(enemy);
 		curAction = null;
 

@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.EmoIcon;
 import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.IceBlock;
@@ -434,10 +435,14 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 			animCallback = null;
 		} else {
 			
-			if (anim == attack || anim == zap) {
+			if (anim == attack ) {
 				
 				idle();
 				ch.onAttackComplete();
+				
+			} else if(anim == zap) {
+				idle();
+				ch.onZapComplete();
 				
 			} else if (anim == operate) {
 				

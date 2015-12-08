@@ -594,4 +594,8 @@ public abstract class Char extends Actor {
 	public void setPos(int pos) {
 		this.pos = pos;
 	}
+
+	public void onZapComplete() {
+		next();
+	}
 }
