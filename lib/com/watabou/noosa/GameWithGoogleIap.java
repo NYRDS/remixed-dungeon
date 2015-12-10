@@ -152,8 +152,8 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	private static void displayIsAd(final IntersitialPoint work, final InterstitialAd isAd) {
-		instance().runOnUiThread( new Runnable() {
-			
+		instance().runOnUiThread(new Runnable() {
+
 			@Override
 			public void run() {
 				if (isAd == null) {
@@ -226,11 +226,13 @@ public abstract class GameWithGoogleIap extends Game {
 			return;
 		}
 
-		int st =  GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
-		if(st != ConnectionResult.SUCCESS) {
-			return;
+		if (android.os.Build.VERSION.SDK_INT >= 9) {
+			int st = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+			if (st != ConnectionResult.SUCCESS) {
+				return;
+			}
 		}
-		
+
 		String base64EncodedPublicKey = getVar(R.string.iapKey);
 
 		// Create the helper, passing it our context and the public key to

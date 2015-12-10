@@ -140,10 +140,9 @@ public class Warlock extends Mob implements Callback {
 			boolean visible = Dungeon.level.fieldOfView[getPos()]
 					|| Dungeon.level.fieldOfView[enemy.getPos()];
 			if (visible) {
-				((WarlockSprite) getSprite()).zap(enemy.getPos());
-			} else {
-				zap();
+				getSprite().zap(enemy.getPos());
 			}
+			zap();
 
 			return !visible;
 		}
@@ -172,7 +171,6 @@ public class Warlock extends Mob implements Callback {
 	}
 
 	public void onZapComplete() {
-		zap();
 		next();
 	}
 
