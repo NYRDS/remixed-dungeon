@@ -14,6 +14,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 
@@ -65,29 +66,6 @@ public class ModsButton extends Button {
 	
 	@Override
 	protected void onClick() {
-		
-		File[] extList = FileSystem.listExternalStorage();
-		final ArrayList<String> mods = new ArrayList<String>();
-		
-		mods.add(ModdingMode.REMIXED);
-		
-		for (File file: extList) {
-			if(file.isDirectory()) {
-				mods.add(file.getName());
-			}
-		}
-		
-		getParent().add( new WndOptions(Game.getVar(R.string.ModsButton_SelectMod), "", mods.toArray(new String[0])){
-			@Override
-			protected void onSelect(int index) {
-				super.onSelect(index);
-				String mod = mods.get(index);
-				
-				if(!mod.equals(PixelDungeon.activeMod())) {
-					PixelDungeon.activeMod(mod);
-					PixelDungeon.instance().doRestart();
-				}
-			}
-		});
+		getParent().add(new WndModSelect());
 	}
 }
