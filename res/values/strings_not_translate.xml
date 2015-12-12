@@ -13,4 +13,9 @@
     <string name="Pet_Name_Objective"></string>
     <string name="Pet_Gender"></string>
     <string name="Pet_Desc"></string>
+    
+    <string-array name="known_mods">
+        <item>[\"The Dungeon of Heroes\", \"https://github.com/NYRDS/The-dungeon-of-heroes-RPD-MOD/archive/tdoh.1.zip\"]</item>
+
+    </string-array>
 </resources>

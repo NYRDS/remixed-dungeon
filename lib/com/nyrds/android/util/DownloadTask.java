@@ -24,7 +24,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 		Boolean result = false;
 		m_url = args[0];
 		
-		//System.setProperty("https.protocols", "TLSv1");
+		System.setProperty("https.protocols", "TLSv1");
 		
 		publishProgress( 0 );
 		
