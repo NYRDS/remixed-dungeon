@@ -55,7 +55,7 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static boolean needDisplaySmallScreenEasyModeIs() {
-		if (difficulty == 0 && isSmallScreen() && PixelDungeon.donated() == 0) {
+		if (difficulty == 0 && (isSmallScreen() || android.os.Build.BRAND.contains("chromium")) && PixelDungeon.donated() == 0) {
 			return true;
 		}
 
@@ -63,9 +63,12 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static void displayEasyModeBanner() {
+		
 		if (android.os.Build.VERSION.SDK_INT >= 9) {
 			if (isConnectedToInternet()) {
-				if (!isSmallScreen()) {
+				if(isSmallScreen() || android.os.Build.BRAND.contains("chromium")) {
+					initEasyModeIntersitial();
+				} else {
 					instance().runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
@@ -82,8 +85,6 @@ public abstract class GameWithGoogleIap extends Game {
 							}
 						}
 					});
-				} else {
-					initEasyModeIntersitial();
 				}
 			}
 		}
