@@ -52,9 +52,10 @@ public class WndModSelect extends WndOptions implements DownloadStateListener {
 				ModDesc desc = new ModDesc();
 				desc.name = modDesc.getString(0);
 				
-				//if(FileSystem.getExternalStorageFile(desc.name).exists()) {
-				//	continue;
-				//}
+				//TODO check versions...
+				if(FileSystem.getExternalStorageFile(desc.name).exists()) {
+					continue;
+				}
 				
 				desc.link = modDesc.getString(1);
 				
@@ -107,7 +108,31 @@ public class WndModSelect extends WndOptions implements DownloadStateListener {
 	@Override
 	public void DownloadComplete(String url, Boolean result) {
 		if (result) {
-			if(Unzip.unzip(downloadTo,FileSystem.getExternalStorageFile(selectedMod).getAbsolutePath())) {
+			
+			String tmpDirName = "tmp";
+			
+			File tmpDirFile = FileSystem.getExternalStorageFile(tmpDirName);
+			if(tmpDirFile.exists()) {
+				tmpDirFile.delete();
+			}
+			
+			if(Unzip.unzip(downloadTo,
+							FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath())) {
+				
+				File[] unpackedList = tmpDirFile.listFiles();
+				
+				for(File file:unpackedList) {
+					if(file.isDirectory()) {
+						
+						String modDir = downloadTo.substring(0,downloadTo.length()-4);
+						file.renameTo(new File(modDir));
+						
+						FileSystem.deleteRecursive(tmpDirFile);
+						FileSystem.deleteRecursive(new File(downloadTo));
+						continue;
+					}
+				}
+				
 				Game.toast("Download %s ok", url);
 			} else {
 				Game.toast("unzipping %s failed", downloadTo);
