@@ -93,11 +93,12 @@ public class WndModSelect extends WndOptions implements DownloadStateListener {
 			new DownloadTask(this).execute(mModsMap.get(option).link,downloadTo);
 			return;
 		}
-
-		if (!option.equals(PixelDungeon.activeMod())) {
-			PixelDungeon.activeMod(option);
-			PixelDungeon.instance().doRestart();
+		
+		if(option.equals(PixelDungeon.activeMod())) {
+			return;
 		}
+		
+		Game.scene().add(new WndModDescription(option));
 	}
 
 	@Override
@@ -132,8 +133,7 @@ public class WndModSelect extends WndOptions implements DownloadStateListener {
 						continue;
 					}
 				}
-				
-				Game.toast("Download %s ok", url);
+				Game.scene().add(new WndModSelect());
 			} else {
 				Game.toast("unzipping %s failed", downloadTo);
 			}
