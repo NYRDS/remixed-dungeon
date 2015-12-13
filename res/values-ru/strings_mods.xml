@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Mods_CreatedBy">Автор:</string>
+  <string name="Mods_AuthorSite">Сайт автора:</string>
+  <string name="Mods_AuthorEmail">Email автора:</string>
+  <string name="Mods_RestartRequired">Нужен рестарт</string>
+</resources>
