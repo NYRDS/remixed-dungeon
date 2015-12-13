@@ -1,12 +1,5 @@
 package com.watabou.pixeldungeon.ui;
 
-import java.io.File;
-import java.util.ArrayList;
-
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
@@ -15,7 +8,6 @@ import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.windows.WndModSelect;
-import com.watabou.pixeldungeon.windows.WndOptions;
 
 
 public class ModsButton extends Button {

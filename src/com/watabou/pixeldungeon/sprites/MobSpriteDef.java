@@ -1,9 +1,5 @@
 package com.watabou.pixeldungeon.sprites;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,9 +8,7 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
-
-import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.JsonHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.Char;
@@ -34,35 +28,12 @@ public class MobSpriteDef extends MobSprite {
 		super();
 
 		name = defName;
-		try {
-
-			if (defMap.containsKey(name)) {
-
-			} else {
-				InputStream stream = ModdingMode.getInputStream(name);
-				StringBuilder animationDef = new StringBuilder();
-
-				BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-
-				String line = reader.readLine();
-
-				while (line != null) {
-					animationDef.append(line);
-					line = reader.readLine();
-				}
-				reader.close();
-
-				defMap.put(name, (JSONObject) new JSONTokener(animationDef.toString()).nextValue());
-			}
-
-			selectKind(kind);
-		} catch (JSONException e) {
-			Game.toast(e.getLocalizedMessage());
-			throw new RuntimeException(e);
-		} catch (IOException e) {
-			Game.toast(e.getLocalizedMessage());
-			throw new RuntimeException(e);
+		
+		if (!defMap.containsKey(name)) {
+			defMap.put(name, JsonHelper.readFile(name));
 		}
+
+		selectKind(kind);
 	}
 
 	@Override
@@ -85,8 +56,8 @@ public class MobSpriteDef extends MobSprite {
 			run = readAnimation(json, "run", film);
 			attack = readAnimation(json, "attack", film);
 			die = readAnimation(json, "die", film);
-			
-			if(json.has("zap")) {
+
+			if (json.has("zap")) {
 				zap = readAnimation(json, "zap", film);
 			} else {
 				zap = attack.clone();

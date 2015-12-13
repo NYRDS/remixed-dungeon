@@ -341,10 +341,6 @@ public class Item implements Bundlable {
 		return name;
 	}
 	
-	public int image() {
-		return image;
-	}
-	
 	public ItemSprite.Glowing glowing() {
 		return null;
 	}
@@ -542,18 +538,34 @@ public class Item implements Bundlable {
 	}
 
 	public String imageFile() {
+		String customImageFile = ItemSpritesDescription.getImageFile(this);
+		
+		if(customImageFile!=null) {
+			return customImageFile;
+		}
+		
 		if(imageFile != null) {
 			return imageFile;
 		}
 		return Assets.ITEMS;
 	}
 
+	public int image() {
+		Integer customImageIndex = ItemSpritesDescription.getImageIndex(this);
+		
+		if(customImageIndex!=null) {
+			return customImageIndex;
+		}
+		
+		return image;
+	}
+	
 	public boolean isFliesStraight() {
-		return false;
+		return ItemSpritesDescription.isFliesStraight(this);
 	}
 
 	public boolean isFliesFastRotating() {
-		return false;
+		return ItemSpritesDescription.isFliesFastRotating(this);
 	}
 
 	protected static Hero getCurUser() {

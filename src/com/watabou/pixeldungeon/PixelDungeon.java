@@ -28,6 +28,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.items.ItemSpritesDescription;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -86,6 +87,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 		ModdingMode.setClassicTextRenderingMode(PixelDungeon.classicFont());
 		
 		useLocale(uiLanguage());
+		ItemSpritesDescription.readItemsDesc();
 
 		updateImmersiveMode();
 

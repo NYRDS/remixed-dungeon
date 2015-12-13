@@ -19,9 +19,6 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
-import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
-import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -45,7 +42,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfLightning;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
-import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
