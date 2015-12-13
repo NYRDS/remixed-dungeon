@@ -102,7 +102,7 @@ public class WndModDescription extends Window {
 			};
 		};
 		
-		btn.setSize( Math.min( 120, btn.reqWidth() ), 16 );
+		btn.setSize( Math.min( WIDTH, btn.reqWidth() ), 16 );
 		btn.setPos(WIDTH / 2 - btn.width() / 2, yPos);
 		
 		add(btn);
