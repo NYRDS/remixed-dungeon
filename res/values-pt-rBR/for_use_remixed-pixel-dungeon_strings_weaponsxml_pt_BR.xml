@@ -48,6 +48,11 @@
     <item>%s do Atordoamento</item>
   </string-array>
   <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>%s Perfurante</item>
+    <item>%s Perfurante</item>
+    <item>%s Perfurante</item>
+  </string-array>
   <!--STRINGS OF Poison CLASS-->
   <string-array name="Poison_Name">
     <item>%s Venenoso</item>
@@ -61,6 +66,11 @@
     <item>%s Arrepiante</item>
   </string-array>
   <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>%s Selvagem</item>
+    <item>%s Selvagem</item>
+    <item>%s Selvagem</item>
+  </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
   <string name="MeleeWeapon_Info1a">%1$s: Uma arma corpo a corpo nível %3$d %2$s.</string>
@@ -172,11 +182,24 @@
   <string name="Tamahawk_Info">Este machado de arremesso não é tão pesado, mas ainda exige força significativa para ser usado de forma eficaz.</string>
   <string name="Tamahawk_Gender">masculino</string>
   <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">kusarigama</string>
+  <string name="Kusarigama_Info">Esta arma é constituída por uma foice em uma corrente de metal com um bloco de ferro ferro na extremidade.</string>
+  <string name="Kusarigama_Gender">feminino</string>
+  <string name="Kusarigama_Pull">PUXAR</string>
   <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">Espada do Caos</string>
+  <string name="ChaosSword_Info">A lâmina da espada é feita de puro caos e às vezes ela vibra intensamente. Um grande poder está guardado dentro da arma, que pode cortar pela metade qualquer coisa. Porém é necessário uma grande habilidade para usar a poderosa força desta arma.</string>
   <string name="ChaosSword_Gender">masculino</string>
   <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">Arco do Caos</string>
+  <string name="ChaosBow_Info">Um arco terrível cheio de poder do Caos. Cada flecha disparada por ele vai levar um pouco de energia do caos para seu destino. Mas se você errar...</string>
   <string name="ChaosBow_Gender">masculino</string>
   <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">Vara do Caos</string>
+  <string name="ChaosStaff_Info">Uma varinha possuída pelo Poder do Caos! O que mais um mago pode sonhar em ter?</string>
   <string name="ChaosStaff_Gender">masculino</string>
   <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">espada do sacrifício</string>
+  <string name="SacrificialSword_Info">À primeira vista, esta antiga espada de bronze coberta com manchas oxidadas parece absolutamente inútil. Mas algum tipo de poder arcaico está adormecido no seu interior. Esse poder pode transformar quase qualquer criatura em seu escravo. Só, é preciso encontrar caminho certo para faze-lo...</string>
+  <string name="SacrificialSword_Gender">masculino</string>
 </resources>
