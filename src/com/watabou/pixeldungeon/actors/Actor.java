@@ -184,19 +184,22 @@ public abstract class Actor implements Bundlable {
 			return;
 		}
 		
-		if (current != null && !PixelDungeon.realtime()) {
+		if (current != null) {
 			return;
 		}
 	
 		boolean doNext;
-
+		
+		Actor toRemove = null;
+		
 		do {
 			now = Float.MAX_VALUE;
 			current = null;
 			
 			chars.clear();
 			
-			for (Actor actor : all) {
+			
+			for (Actor actor : all) { 
 				if (actor.time < now) {
 					now = actor.time;
 					current = actor;
@@ -204,10 +207,20 @@ public abstract class Actor implements Bundlable {
 				
 				if (actor instanceof Char) {
 					Char ch = (Char)actor;
+					if(!Dungeon.level.cellValid(ch.getPos())) {
+						current = null;
+						toRemove = actor;
+						continue;
+					}
 					chars.put(ch.getPos(), ch);
 				}
 			}
 
+			if(toRemove != null) {
+				remove(toRemove);
+				toRemove = null;
+			}
+			
 			if (current != null) {
 				if (current instanceof Char && 
 					((Char)current).getSprite() != null &&
