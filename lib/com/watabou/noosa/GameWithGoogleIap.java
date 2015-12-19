@@ -62,9 +62,12 @@ public abstract class GameWithGoogleIap extends Game {
 		return false;
 	}
 
+	private static boolean googleAdsUsable() {
+		return android.os.Build.VERSION.SDK_INT >= 9 &&  !android.os.Build.BRAND.contains("chromium");
+	}
+	
 	public static void displayEasyModeBanner() {
-		
-		if (android.os.Build.VERSION.SDK_INT >= 9) {
+		if (googleAdsUsable()) {
 			if (isConnectedToInternet()) {
 				if(isSmallScreen() || android.os.Build.BRAND.contains("chromium")) {
 					initEasyModeIntersitial();
@@ -91,7 +94,7 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static void removeEasyModeBanner() {
-		if (android.os.Build.VERSION.SDK_INT >= 9) {
+		if (googleAdsUsable()) {
 			instance().runOnUiThread(new Runnable() {
 
 				@Override
@@ -188,7 +191,7 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	private static void initEasyModeIntersitial() {
-		if (android.os.Build.VERSION.SDK_INT >= 9 && isConnectedToInternet()) {
+		if (googleAdsUsable() && isConnectedToInternet()) {
 			{
 				instance().runOnUiThread(new Runnable() {
 					@Override
@@ -205,7 +208,7 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static void initSaveAndLoadIntersitial() {
-		if (android.os.Build.VERSION.SDK_INT >= 9 && isConnectedToInternet()) {
+		if (googleAdsUsable() && isConnectedToInternet()) {
 			{
 				instance().runOnUiThread(new Runnable() {
 					@Override
@@ -227,7 +230,7 @@ public abstract class GameWithGoogleIap extends Game {
 			return;
 		}
 
-		if (android.os.Build.VERSION.SDK_INT >= 9) {
+		if (googleAdsUsable()) {
 			int st = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
 			if (st != ConnectionResult.SUCCESS) {
 				return;

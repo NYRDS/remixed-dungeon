@@ -580,4 +580,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public static void executeInGlThread(Runnable task) {
 		instance.view.queueEvent(task);
 	}
+	
+	protected static void removeEasyModeBanner() {
+	}
+	
+	protected static void initSaveAndLoadIntersitial() {
+	}
+
+	protected static void displayEasyModeBanner() {
+	}
 }

@@ -67,7 +67,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			} else {
 				fromAsset(assetName);
 			}
-
+			
 			player.setOnPreparedListener(this);
 			player.setOnErrorListener(this);
 			player.setLooping(looping);
@@ -85,6 +85,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 		AssetFileDescriptor afd = Game.instance().getAssets().openFd(assetName);
 		player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),
 				afd.getLength());
+		afd.close();
 	}
 
 	public void mute() {
