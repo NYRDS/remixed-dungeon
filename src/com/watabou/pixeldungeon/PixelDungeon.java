@@ -43,6 +43,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 
 public class PixelDungeon extends GameWithGoogleIap {
+//public class PixelDungeon extends Game {
 
 	public PixelDungeon() {
 		super(TitleScene.class);

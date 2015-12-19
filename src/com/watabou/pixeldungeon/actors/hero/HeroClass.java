@@ -125,7 +125,7 @@ public enum HeroClass {
 		hero.collect(new CommonArrow(100));
 
 		hero.collect(new WandOfTeleportation().identify());
-		hero.collect(new WandOfLightning().identify());
+		hero.collect(new WandOfLightning().identify().upgrade(10));
 		hero.collect(new WandOfFirebolt().identify());
 		
 		for(int i = 0;i<50;i++) {

@@ -44,6 +44,12 @@ public class SewerLevel extends RegularLevel {
 	public String tilesTex() {
 		return Assets.TILES_SEWERS;
 	}
+
+	@Override
+	public String tilesTexEx() {
+		return Assets.TILES_SEWERS_X;
+	}
+	
 	
 	@Override
 	public String waterTex() {

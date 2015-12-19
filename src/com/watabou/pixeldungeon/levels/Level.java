@@ -187,7 +187,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int cell(int i, int j) {
-		return j * getWidth() + i;
+		int cell = j * getWidth() + i;
+		if(cellValid(cell)) {
+			return cell;
+		}
+		return -1;
 	}
 
 	public void create() {
@@ -401,6 +405,10 @@ public abstract class Level implements Bundlable {
 		return null;
 	}
 
+	public String tilesTexEx() {
+		return null;
+	}
+	
 	public String waterTex() {
 		return null;
 	}

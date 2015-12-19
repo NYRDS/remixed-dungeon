@@ -40,7 +40,7 @@ public class Tilemap extends Visual {
 	protected float[] vertices;
 	protected FloatBuffer quads;
 	
-	public Rect updated;
+	protected Rect updated;
 	
 	public Tilemap( Object tx, TextureFilm tileset ) {
 		
@@ -150,5 +150,9 @@ public class Tilemap extends Visual {
 		script.camera( camera );
 		script.drawQuadSet( quads, size );
 
+	}
+
+	public Rect updateRegion() {
+		return updated;
 	}
 }

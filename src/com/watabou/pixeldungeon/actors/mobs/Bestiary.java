@@ -210,8 +210,8 @@ public class Bestiary {
 			break;
 			
 		default:
-			//chances = new float[]{ 1,1 };
-			//classes = new Class<?>[]{ Shaman.class, Warlock.class  };
+			//chances = new float[]{ 1 };
+			//classes = new Class<?>[]{ Shaman.class };
 
 			chances = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1 };
 			classes = new Class<?>[]{ Rat.class, Gnoll.class, Crab.class, Swarm.class, Skeleton.class, Thief.class, Swarm.class, Shadow.class, Bat.class, Brute.class, Spinner.class, Elemental.class, Monk.class, Golem.class, Warlock.class, Succubus.class, Eye.class, Scorpio.class, AirElemental.class, WaterElemental.class, EarthElemental.class, Crystal.class  };
