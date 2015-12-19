@@ -92,6 +92,30 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.EXIT:
 			return 5 * 16 + 6;
 
+		case Terrain.BARRICADE:
+			return 7*16 + Random.Int(3,5);
+		
+		case Terrain.BOOKSHELF:
+			return 7*16 + Random.Int(0,2);
+			
+		case Terrain.EMBERS:
+			return 6*16 + Random.Int(0,2);
+			
+		case Terrain.EMPTY_DECO:
+			return 9*16 + Random.Int(0,2);
+			
+		case Terrain.WALL_DECO:
+			return 10*16 + Random.Int(0,2);
+			
+		case Terrain.ALCHEMY:
+			return 4*16 + 2;
+			
+		case Terrain.EMPTY_WELL:
+			return 4*16 + 0;
+			
+		case Terrain.WELL:
+			return 4*16 + 1;
+			
 		default:
 			return 15;
 		}
