@@ -121,15 +121,10 @@ public class Mimic extends Mob {
 		Level level = Dungeon.level;
 		Char ch = Actor.findChar( pos ); 
 		if (ch != null) {
-			ArrayList<Integer> candidates = new ArrayList<Integer>();
-			for (int n : Level.NEIGHBOURS8) {
-				int cell = pos + n;
-				if ((level.passable[cell] || level.avoid[cell]) && Actor.findChar( cell ) == null) {
-					candidates.add( cell );
-				}
-			}
-			if (candidates.size() > 0) {
-				int newPos = Random.element( candidates );
+			int newPos = Dungeon.level.getEmptyCellNextTo(pos);
+			
+			if (!Dungeon.level.cellValid(newPos)) {
+			
 				Actor.addDelayed( new Pushing( ch, ch.getPos(), newPos ), -1 );
 				
 				ch.setPos(newPos);

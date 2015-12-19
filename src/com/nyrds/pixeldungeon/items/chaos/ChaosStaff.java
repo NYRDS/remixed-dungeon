@@ -85,7 +85,7 @@ public class ChaosStaff extends Wand implements IChaosItem {
 				case 2:
 					int nextCell = Dungeon.level.getEmptyCellNextTo(cell);
 
-					if (nextCell != -1) {
+					if (Dungeon.level.cellValid(nextCell)) {
 						try {
 							Mob newMob = mob.getClass().newInstance();
 							Dungeon.level.spawnMob(newMob);

@@ -1147,7 +1147,7 @@ public abstract class Level implements Bundlable {
 		
 		for (int n : Level.NEIGHBOURS8) {
 			int p = n + cell;
-			if (passable[p] && Actor.findChar( p ) == null) {
+			if (cellValid(p) && (avoid[p] || passable[p]) && Actor.findChar( p ) == null) {
 				candidates.add( p );
 			}
 		}

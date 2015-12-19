@@ -17,19 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
-import java.util.ArrayList;
-
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
@@ -48,20 +44,13 @@ public class Multiplicity extends Glyph {
 		
 		if (Random.Int( level / 2 + 6 ) >= 5) {
 			
-			ArrayList<Integer> respawnPoints = new ArrayList<Integer>();
-			
-			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-				int p = defender.getPos() + Level.NEIGHBOURS8[i];
-				if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
-					respawnPoints.add( p );
-				}
-			}
-			
-			if (respawnPoints.size() > 0) {
+			int imgCell = Dungeon.level.getEmptyCellNextTo(defender.getPos());
+
+			if (Dungeon.level.cellValid(imgCell)) {
 				MirrorImage mob = new MirrorImage((Hero)defender);
 				Dungeon.level.spawnMob(mob);
 				GameScene.add(Dungeon.level, mob );
-				WandOfBlink.appear( mob, Random.element( respawnPoints ) );
+				WandOfBlink.appear( mob, imgCell );
 				
 				defender.damage( Random.IntRange( 1, defender.ht() / 6 ), /*attacker*/ this );
 				checkOwner( defender );

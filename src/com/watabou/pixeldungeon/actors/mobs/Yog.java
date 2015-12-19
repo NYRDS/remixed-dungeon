@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.ArrayList;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -104,19 +103,12 @@ public class Yog extends Boss {
 	@Override
 	public int defenseProc(Char enemy, int damage) {
 
-		ArrayList<Integer> spawnPoints = new ArrayList<Integer>();
-
-		for (int i = 0; i < Level.NEIGHBOURS8.length; i++) {
-			int p = getPos() + Level.NEIGHBOURS8[i];
-			if (Actor.findChar(p) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
-				spawnPoints.add(p);
-			}
-		}
-
-		if (spawnPoints.size() > 0) {
+		int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
+		
+		if (Dungeon.level.cellValid(larvaPos)) {
 			Larva larva = new Larva();
-			larva.setPos(Random.element(spawnPoints));
-
+			larva.setPos(larvaPos);
+			
 			GameScene.add(Dungeon.level, larva);
 			Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
 		}
