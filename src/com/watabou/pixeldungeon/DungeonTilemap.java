@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
@@ -62,14 +63,15 @@ public class DungeonTilemap extends Tilemap {
 		instance = this;
 	}
 
-	private int cellStableRandom(int cell, int min, int max) {
+	private static int cellStableRandom(int cell, int min, int max) {
 		int rnd = Math.abs((((cell ^ 0xAAAAAAAA) * 1103515245 + 12345) / 65536) % 32767);
 		double r = (double)rnd / 32767;
 
 		return min + (int) (r * (max - min + 1));
 	}
 
-	private int decoCell(int tileType, int cell) {
+	private static int decoCell(int cell) {
+		int tileType = Dungeon.level.map[cell];
 		switch (tileType) {
 		case Terrain.GRASS:
 			return 3 * 16 + cellStableRandom(cell, 0, 2);
@@ -115,16 +117,7 @@ public class DungeonTilemap extends Tilemap {
 
 		case Terrain.WALL_DECO:
 			return 10 * 16 + cellStableRandom(cell, 0, 2);
-
-		case Terrain.ALCHEMY:
-			return 4 * 16 + 2;
-
-		case Terrain.EMPTY_WELL:
-			return 4 * 16 + 0;
-
-		case Terrain.WELL:
-			return 4 * 16 + 1;
-
+			
 		case Terrain.TOXIC_TRAP:
 			return 12 * 16 + 0;
 		case Terrain.FIRE_TRAP:
@@ -151,23 +144,23 @@ public class DungeonTilemap extends Tilemap {
 
 	private int[] buildDecoMap() {
 		for (int i = 0; i < mDecoMap.length; i++) {
-			mDecoMap[i] = decoCell(Dungeon.level.map[i], i);
+			mDecoMap[i] = decoCell(i);
 		}
 
 		return mDecoMap;
 	}
 
-	private int groundCell(int tileType, int cell) {
-
+	private static int groundCell(int cell) {
+		int tileType = Dungeon.level.map[cell];
+		
 		if (tileType >= Terrain.WATER_TILES) {
-			return 14 * 16 + tileType - Terrain.WATER_TILES;
+			return 13 * 16 + tileType - Terrain.WATER_TILES;
 		}
 
 		switch (tileType) {
 		case Terrain.EMPTY:
 		case Terrain.GRASS:
 		case Terrain.EMPTY_DECO:
-		case Terrain.EMPTY_WELL:
 		case Terrain.SECRET_ALARM_TRAP:
 		case Terrain.SECRET_FIRE_TRAP:
 		case Terrain.SECRET_GRIPPING_TRAP:
@@ -192,7 +185,6 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.BARRICADE:
 		case Terrain.HIGH_GRASS:
 		case Terrain.SIGN:
-		case Terrain.WELL:
 		case Terrain.STATUE:
 		case Terrain.BOOKSHELF:
 			return cellStableRandom(cell, 0, 2);
@@ -207,9 +199,17 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.SECRET_DOOR:
 			return 16 + cellStableRandom(cell, 0, 2);
 
+		case Terrain.ALCHEMY:
+			return 4 * 16 + cellStableRandom(cell, 6, 8);
+
+		case Terrain.EMPTY_WELL:
+			return 4 * 16 + cellStableRandom(cell, 0, 2);
+
+		case Terrain.WELL:
+			return 4 * 16 + cellStableRandom(cell, 3, 5);
+			
 		case Terrain.EMPTY_SP:
 		case Terrain.STATUE_SP:
-		case Terrain.ALCHEMY:
 			return 2 * 16 + cellStableRandom(cell, 0, 2);
 
 		case Terrain.CHASM_FLOOR:
@@ -230,7 +230,7 @@ public class DungeonTilemap extends Tilemap {
 
 	private int[] buildGroundMap() {
 		for (int i = 0; i < mGroundMap.length; i++) {
-			mGroundMap[i] = groundCell(Dungeon.level.map[i], i);
+			mGroundMap[i] = groundCell(i);
 		}
 
 		return mGroundMap;
@@ -273,9 +273,20 @@ public class DungeonTilemap extends Tilemap {
 				(pos / Dungeon.level.getWidth() + 0.5f) * SIZE);
 	}
 
-	public static Image tile(int index) {
-		Image img = new Image(instance.texture);
-		img.frame(instance.tileset.get(index));
+	public static CompositeImage tile(int cell) {
+		
+		CompositeImage img = new CompositeImage(instance.texture);
+		
+		if (instance.mGroundLayer != null && instance.mDecoLayer != null) {
+			img.frame(instance.getTileset().get(groundCell(cell)));
+			Image deco = new Image(instance.texture);
+			deco.frame(instance.getTileset().get(decoCell(cell)));
+			img.addLayer(deco);
+			return img;
+		}
+		
+		
+		img.frame(instance.getTileset().get(Dungeon.level.map[cell]));
 		return img;
 	}
 
@@ -325,8 +336,8 @@ public class DungeonTilemap extends Tilemap {
 
 	public void updateCell(int cell) {
 		if (mGroundLayer != null && mDecoLayer != null) {
-			mGroundMap[cell] = groundCell(Dungeon.level.map[cell], cell);
-			mDecoMap[cell] = decoCell(Dungeon.level.map[cell], cell);
+			mGroundMap[cell] = groundCell(cell);
+			mDecoMap[cell] = decoCell(cell);
 			mGroundLayer.updateRegion().union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
 			mDecoLayer.updateRegion().union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
 		} else {

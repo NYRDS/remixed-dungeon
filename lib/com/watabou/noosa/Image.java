@@ -140,6 +140,14 @@ public class Image extends Visual {
 		dirty = true;
 	}
 	
+	public void updateVerticesBuffer() {
+		if (dirty) {
+			verticesBuffer.position( 0 );
+			verticesBuffer.put( vertices );
+			dirty = false;
+		}
+	}
+	
 	@Override
 	public void draw() {
 		
@@ -156,11 +164,8 @@ public class Image extends Visual {
 			rm, gm, bm, am, 
 			ra, ga, ba, aa );
 		
-		if (dirty) {
-			verticesBuffer.position( 0 );
-			verticesBuffer.put( vertices );
-			dirty = false;
-		}
+		updateVerticesBuffer();
+		
 		script.drawQuad( verticesBuffer );	
 	}
 }

@@ -27,7 +27,7 @@ import android.graphics.RectF;
 public class Tilemap extends Visual {
 
 	protected SmartTexture texture;
-	protected TextureFilm tileset;
+	private TextureFilm tileset;
 	
 	protected int[] data;
 	protected int mapWidth;
@@ -154,5 +154,9 @@ public class Tilemap extends Visual {
 
 	public Rect updateRegion() {
 		return updated;
+	}
+
+	public TextureFilm getTileset() {
+		return tileset;
 	}
 }
