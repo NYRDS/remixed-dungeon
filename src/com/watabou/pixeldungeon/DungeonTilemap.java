@@ -25,7 +25,6 @@ import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
 
 public class DungeonTilemap extends Tilemap {
 
@@ -73,7 +72,7 @@ public class DungeonTilemap extends Tilemap {
 	private int decoCell(int tileType, int cell) {
 		switch (tileType) {
 		case Terrain.GRASS:
-			return 3 * 16 + cellStableRandom(cell, 0, 5);
+			return 3 * 16 + cellStableRandom(cell, 0, 2);
 		case Terrain.HIGH_GRASS:
 			return 3 * 16 + cellStableRandom(cell, 6, 8);
 
