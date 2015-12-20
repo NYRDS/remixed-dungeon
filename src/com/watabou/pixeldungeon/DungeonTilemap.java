@@ -116,6 +116,26 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.WELL:
 			return 4*16 + 1;
 			
+		case Terrain.TOXIC_TRAP:
+			return 12 * 16 + 0;
+		case Terrain.FIRE_TRAP:
+			return 12 * 16 + 1;
+		case Terrain.PARALYTIC_TRAP:
+			return 12 * 16 + 2;
+		case Terrain.INACTIVE_TRAP:
+			return 12 * 16 + 7;
+		case Terrain.POISON_TRAP:
+			return 12 * 16 + 3;
+		case Terrain.ALARM_TRAP:
+			return 12 * 16 + 4;
+		case Terrain.LIGHTNING_TRAP:
+			return 12 * 16 + 5;
+		case Terrain.GRIPPING_TRAP:
+			return 12 * 16 + 8;
+		case Terrain.SUMMONING_TRAP:
+			return 12 * 16 + 6;
+		
+			
 		default:
 			return 15;
 		}
@@ -148,6 +168,7 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.SECRET_POISON_TRAP:
 		case Terrain.SECRET_SUMMONING_TRAP:
 		case Terrain.SECRET_TOXIC_TRAP:
+		case Terrain.INACTIVE_TRAP:
 		case Terrain.ALARM_TRAP:
 		case Terrain.FIRE_TRAP:
 		case Terrain.GRIPPING_TRAP:
@@ -156,7 +177,6 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.POISON_TRAP:
 		case Terrain.SUMMONING_TRAP:
 		case Terrain.TOXIC_TRAP:
-		case Terrain.ALCHEMY:
 		case Terrain.ENTRANCE:
 		case Terrain.EXIT:
 		case Terrain.EMBERS:
@@ -167,7 +187,6 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.WELL:
 		case Terrain.STATUE:
 		case Terrain.BOOKSHELF:
-		case Terrain.SECRET_DOOR:
 			return Random.Int(0, 2);
 
 		case Terrain.WALL:
@@ -177,10 +196,12 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.LOCKED_DOOR:
 		case Terrain.LOCKED_EXIT:
 		case Terrain.UNLOCKED_EXIT:
+		case Terrain.SECRET_DOOR:
 			return 16 + Random.Int(0, 2);
 
 		case Terrain.EMPTY_SP:
 		case Terrain.STATUE_SP:
+		case Terrain.ALCHEMY:
 			return 2 * 16 + Random.Int(0, 2);
 
 		case Terrain.CHASM_FLOOR:
