@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
@@ -39,33 +38,44 @@ public class DungeonTilemap extends Tilemap {
 
 	int[] mGroundMap;
 	int[] mDecoMap;
-	
+
+	int mSize;
+
 	public DungeonTilemap() {
 		super(Dungeon.level.tilesTex(), new TextureFilm(Dungeon.level.tilesTex(), SIZE, SIZE));
 
 		int levelWidth = Dungeon.level.getWidth();
 		map(Dungeon.level.map, levelWidth);
 
+		mSize = Dungeon.level.getWidth() * Dungeon.level.getHeight();
+
 		String tilesEx = Dungeon.level.tilesTexEx();
 		if (tilesEx != null) {
 			mGroundLayer = new Tilemap(tilesEx, new TextureFilm(tilesEx, SIZE, SIZE));
-			mGroundMap = new int[Dungeon.level.getWidth() * Dungeon.level.getHeight()];
+			mGroundMap = new int[mSize];
 			mGroundLayer.map(buildGroundMap(), levelWidth);
 
 			mDecoLayer = new Tilemap(tilesEx, new TextureFilm(tilesEx, SIZE, SIZE));
-			mDecoMap = new int[Dungeon.level.getWidth() * Dungeon.level.getHeight()];
+			mDecoMap = new int[mSize];
 			mDecoLayer.map(buildDecoMap(), levelWidth);
 		}
 
 		instance = this;
 	}
 
-	private int decoCell(int tileType) {
+	private int cellStableRandom(int cell, int min, int max) {
+		int rnd = Math.abs((((cell ^ 0xAAAAAAAA) * 1103515245 + 12345) / 65536) % 32767);
+		double r = (double)rnd / 32767;
+
+		return min + (int) (r * (max - min + 1));
+	}
+
+	private int decoCell(int tileType, int cell) {
 		switch (tileType) {
 		case Terrain.GRASS:
-			return 3 * 16 + Random.Int(0, 5);
+			return 3 * 16 + cellStableRandom(cell, 0, 5);
 		case Terrain.HIGH_GRASS:
-			return 3 * 16 + Random.Int(6, 8);
+			return 3 * 16 + cellStableRandom(cell, 6, 8);
 
 		case Terrain.PEDESTAL:
 			return 8 * 16 + 0;
@@ -93,29 +103,29 @@ public class DungeonTilemap extends Tilemap {
 			return 5 * 16 + 6;
 
 		case Terrain.BARRICADE:
-			return 7*16 + Random.Int(3,5);
-		
+			return 7 * 16 + cellStableRandom(cell, 3, 5);
+
 		case Terrain.BOOKSHELF:
-			return 7*16 + Random.Int(0,2);
-			
+			return 7 * 16 + cellStableRandom(cell, 0, 2);
+
 		case Terrain.EMBERS:
-			return 6*16 + Random.Int(0,2);
-			
+			return 6 * 16 + cellStableRandom(cell, 0, 2);
+
 		case Terrain.EMPTY_DECO:
-			return 9*16 + Random.Int(0,2);
-			
+			return 9 * 16 + cellStableRandom(cell, 0, 2);
+
 		case Terrain.WALL_DECO:
-			return 10*16 + Random.Int(0,2);
-			
+			return 10 * 16 + cellStableRandom(cell, 0, 2);
+
 		case Terrain.ALCHEMY:
-			return 4*16 + 2;
-			
+			return 4 * 16 + 2;
+
 		case Terrain.EMPTY_WELL:
-			return 4*16 + 0;
-			
+			return 4 * 16 + 0;
+
 		case Terrain.WELL:
-			return 4*16 + 1;
-			
+			return 4 * 16 + 1;
+
 		case Terrain.TOXIC_TRAP:
 			return 12 * 16 + 0;
 		case Terrain.FIRE_TRAP:
@@ -134,8 +144,7 @@ public class DungeonTilemap extends Tilemap {
 			return 12 * 16 + 8;
 		case Terrain.SUMMONING_TRAP:
 			return 12 * 16 + 6;
-		
-			
+
 		default:
 			return 15;
 		}
@@ -143,13 +152,13 @@ public class DungeonTilemap extends Tilemap {
 
 	private int[] buildDecoMap() {
 		for (int i = 0; i < mDecoMap.length; i++) {
-			mDecoMap[i] = decoCell(Dungeon.level.map[i]);
+			mDecoMap[i] = decoCell(Dungeon.level.map[i], i);
 		}
 
 		return mDecoMap;
 	}
 
-	private int groundCell(int tileType) {
+	private int groundCell(int tileType, int cell) {
 
 		if (tileType >= Terrain.WATER_TILES) {
 			return 14 * 16 + tileType - Terrain.WATER_TILES;
@@ -187,7 +196,7 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.WELL:
 		case Terrain.STATUE:
 		case Terrain.BOOKSHELF:
-			return Random.Int(0, 2);
+			return cellStableRandom(cell, 0, 2);
 
 		case Terrain.WALL:
 		case Terrain.WALL_DECO:
@@ -197,12 +206,12 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.LOCKED_EXIT:
 		case Terrain.UNLOCKED_EXIT:
 		case Terrain.SECRET_DOOR:
-			return 16 + Random.Int(0, 2);
+			return 16 + cellStableRandom(cell, 0, 2);
 
 		case Terrain.EMPTY_SP:
 		case Terrain.STATUE_SP:
 		case Terrain.ALCHEMY:
-			return 2 * 16 + Random.Int(0, 2);
+			return 2 * 16 + cellStableRandom(cell, 0, 2);
 
 		case Terrain.CHASM_FLOOR:
 			return 11 * 16 + 0;
@@ -222,7 +231,7 @@ public class DungeonTilemap extends Tilemap {
 
 	private int[] buildGroundMap() {
 		for (int i = 0; i < mGroundMap.length; i++) {
-			mGroundMap[i] = groundCell(Dungeon.level.map[i]);
+			mGroundMap[i] = groundCell(Dungeon.level.map[i], i);
 		}
 
 		return mGroundMap;
@@ -312,17 +321,16 @@ public class DungeonTilemap extends Tilemap {
 		} else {
 			updated.set(0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight());
 		}
-		
+
 	}
 
 	public void updateCell(int cell) {
 		if (mGroundLayer != null && mDecoLayer != null) {
-			mGroundMap[cell] = groundCell(Dungeon.level.map[cell]);
-			mDecoMap[cell] = decoCell(Dungeon.level.map[cell]);
+			mGroundMap[cell] = groundCell(Dungeon.level.map[cell], cell);
+			mDecoMap[cell] = decoCell(Dungeon.level.map[cell], cell);
 			mGroundLayer.updateRegion().union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
 			mDecoLayer.updateRegion().union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
 		} else {
-		
 			updated.union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
 		}
 	}
