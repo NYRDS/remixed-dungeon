@@ -2,7 +2,7 @@
 <resources>
 
     <!-- GENERAL STRINGS VARIABLES -->
-    <string name="app_name">Pixel Dungeon Remix</string>
+    <string name="app_name">Remixed Pixel Dungeon</string>
 
     <!-- STRINGS OF IntroScene CLASS -->
     <string name="IntroScene_Txt">Many heroes of all kinds ventured into the Dungeon before you. Some of them have returned with treasures and magical artifacts, most have never been heard of since. But none have succeeded in retrieving the Amulet of Yendor, which is told to be hidden in the depths of the Dungeon.\n\nYou consider yourself ready for the challenge, but most importantly, you feel that fortune smiles on you. It\'s time to start your own adventure!</string>

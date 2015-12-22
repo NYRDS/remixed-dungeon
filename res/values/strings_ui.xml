@@ -78,4 +78,6 @@
     
     <!-- STRINGS OF ModsButton CLASS -->
     <string name="ModsButton_SelectMod">Select mod</string>
+    
+    <string name="RemixedPixelDungeonApp_sendCrash">Our game crashed...\n Sorry.\nPlease sent crash report to help us fix it.</string>
 </resources>
