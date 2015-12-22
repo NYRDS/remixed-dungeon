@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon;
+package com.nyrds.pixeldungeon.ml;
 
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;

@@ -50,7 +50,6 @@ public class SewerLevel extends RegularLevel {
 		return Assets.TILES_SEWERS_X;
 	}
 	
-	
 	@Override
 	public String waterTex() {
 		return Assets.WATER_SEWERS;
