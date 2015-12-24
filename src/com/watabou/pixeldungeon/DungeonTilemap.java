@@ -140,6 +140,9 @@ public class DungeonTilemap extends Tilemap {
 		case Terrain.SUMMONING_TRAP:
 			return 12 * 16 + 6;
 
+		case Terrain.SIGN:
+			return 7 * 16 + 6;
+			
 		default:
 			return 15;
 		}
