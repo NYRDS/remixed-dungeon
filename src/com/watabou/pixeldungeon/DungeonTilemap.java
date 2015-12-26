@@ -41,19 +41,17 @@ public class DungeonTilemap extends Tilemap {
 
 	private int mSize;
 
-	public DungeonTilemap() {
-		super(Dungeon.level.tilesTex(), new TextureFilm(Dungeon.level.tilesTex(), SIZE, SIZE));
+	public DungeonTilemap(String tiles, String tilesEx) {
+		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
 		instance = this;
 		
 		int levelWidth = Dungeon.level.getWidth();
 		map(Dungeon.level.map, levelWidth);
 
 		mSize = Dungeon.level.getWidth() * Dungeon.level.getHeight();
-
-		String tilesEx = Dungeon.level.tilesTexEx();
 		
 		if (tilesEx != null) {
-			if(ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesEx)) {
+			if(ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesEx) && ModdingMode.isResourceExistInMod(tiles)) {
 				return;
 			}
 			
