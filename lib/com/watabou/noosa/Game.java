@@ -106,7 +106,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected LinearLayout layout;
 	protected SurfaceHolder holder;
 
-	public static boolean paused = true;
+	public static volatile boolean paused = true;
 	protected static int difficulty;
 
 	// Accumulated touch events
@@ -165,10 +165,15 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		PendingIntent pi = PendingIntent.getActivity(getBaseContext(), piId, i, PendingIntent.FLAG_CANCEL_CURRENT);
 		AlarmManager mgr = (AlarmManager) getBaseContext().getSystemService(ContextWrapper.ALARM_SERVICE);
 		mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pi);
-
-		System.exit(0);
+		shutdown();
+		
 	}
 
+	public static void shutdown() {
+		paused = true;
+		System.exit(0);
+	}
+	
 	public static void toast(final String text, final Object... args) {
 		instance().runOnUiThread(new Runnable() {
 			@Override

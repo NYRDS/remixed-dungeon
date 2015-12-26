@@ -66,7 +66,7 @@ public class ExitButton extends Button {
 	@Override
 	protected void onClick() {
 		if (Game.scene() instanceof TitleScene) {
-			Game.instance().finish();
+			Game.shutdown();
 		} else {
 			PixelDungeon.switchNoFade( TitleScene.class );
 		}

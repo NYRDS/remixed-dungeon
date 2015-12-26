@@ -129,7 +129,7 @@ public class WndGame extends Window {
 		addButton( new RedButton( TXT_EXIT ) {
 			@Override
 			protected void onClick() {
-				Game.instance().finish();
+				Game.shutdown();
 			}
 		} );
 		
