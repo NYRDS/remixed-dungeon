@@ -53,4 +53,9 @@
         remix.21.2:\n
         - Ability to choose game mods (just reskins for now) ( Usable only by experienced modders)\n
         </string>
+        <string name="Welcome_Text_21_3">
+        remix.21.3:\n
+        - PD mini mod available to download (not yet completed but fun)\n
+        - Improved Sewers graphics
+        </string>
 </resources>

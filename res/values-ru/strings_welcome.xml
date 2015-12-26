@@ -50,4 +50,8 @@ remix.21:\n
   <string name="Welcome_Text_21_2">
 remix.21.2:\n
 - Возможность выбирать моды (на данном этапе просто рескины) (Пока этот режим полезен только опытным моддерам)\n</string>
+  <string name="Welcome_Text_21_3">
+remix.21.3:\n
+- Моды PD mini (еще в разработке) и The Dungeon of Heroes доступны для загрузки\n
+- Улучшена графика канализации</string>
 </resources>
