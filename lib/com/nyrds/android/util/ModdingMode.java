@@ -46,6 +46,10 @@ public class ModdingMode {
 		}
 	}
 	
+	public static boolean inMod() {
+		return !mActiveMod.equals(REMIXED);
+	}
+	
 	public static boolean isResourceExistInMod(String resName) {
 		if(!mActiveMod.equals(REMIXED)){
 			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName).exists();

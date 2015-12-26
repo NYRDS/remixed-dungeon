@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.noosa.tweeners.AlphaTweener;
@@ -33,24 +33,30 @@ public class DungeonTilemap extends Tilemap {
 
 	private static DungeonTilemap instance;
 
-	Tilemap mGroundLayer;
-	Tilemap mDecoLayer;
+	private Tilemap mGroundLayer;
+	private Tilemap mDecoLayer;
 
-	int[] mGroundMap;
-	int[] mDecoMap;
+	private int[] mGroundMap;
+	private int[] mDecoMap;
 
-	int mSize;
+	private int mSize;
 
 	public DungeonTilemap() {
 		super(Dungeon.level.tilesTex(), new TextureFilm(Dungeon.level.tilesTex(), SIZE, SIZE));
-
+		instance = this;
+		
 		int levelWidth = Dungeon.level.getWidth();
 		map(Dungeon.level.map, levelWidth);
 
 		mSize = Dungeon.level.getWidth() * Dungeon.level.getHeight();
 
 		String tilesEx = Dungeon.level.tilesTexEx();
+		
 		if (tilesEx != null) {
+			if(ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesEx)) {
+				return;
+			}
+			
 			mGroundLayer = new Tilemap(tilesEx, new TextureFilm(tilesEx, SIZE, SIZE));
 			mGroundMap = new int[mSize];
 			mGroundLayer.map(buildGroundMap(), levelWidth);
@@ -60,9 +66,13 @@ public class DungeonTilemap extends Tilemap {
 			mDecoLayer.map(buildDecoMap(), levelWidth);
 		}
 
-		instance = this;
+		
 	}
 
+	private static boolean useExTiles() {
+		return instance.mGroundLayer != null && instance.mDecoLayer != null;
+	}
+	
 	private static int cellStableRandom(int cell, int min, int max) {
 		int rnd = Math.abs((((cell ^ 0xAAAAAAAA) * 1103515245 + 12345) / 65536) % 32767);
 		double r = (double) rnd / 32767;
@@ -290,7 +300,7 @@ public class DungeonTilemap extends Tilemap {
 		if (tileType == -1) {
 			CompositeImage img = new CompositeImage(instance.texture);
 
-			if (instance.mGroundLayer != null && instance.mDecoLayer != null) {
+			if (useExTiles()) {
 				img.frame(instance.getTileset().get(currentGroundCell(cell)));
 				Image deco = new Image(instance.texture);
 				deco.frame(instance.getTileset().get(currentDecoCell(cell)));
@@ -303,7 +313,7 @@ public class DungeonTilemap extends Tilemap {
 		} else {
 			CompositeImage img = new CompositeImage(instance.texture);
 
-			if (instance.mGroundLayer != null && instance.mDecoLayer != null) {
+			if (useExTiles()) {
 				img.frame(instance.getTileset().get(groundCell(tileType,cell)));
 				Image deco = new Image(instance.texture);
 				deco.frame(instance.getTileset().get(decoCell(tileType,cell)));
@@ -323,37 +333,20 @@ public class DungeonTilemap extends Tilemap {
 
 	@Override
 	public void draw() {
-
-		if (mGroundLayer != null && mDecoLayer != null) {
+		if (useExTiles()) {
 			mGroundLayer.draw();
 			mDecoLayer.draw();
-			return;
 		} else {
 			super.draw();
-
-			NoosaScript script = NoosaScript.get();
-
-			texture.bind();
-
-			script.uModel.valueM4(matrix);
-			script.lighting(rm, gm, bm, am, ra, ga, ba, aa);
-
-			if (!updated.isEmpty()) {
-				updateVertices();
-			}
-
-			script.camera(camera);
-			script.drawQuadSet(quads, size);
 		}
 	}
 
 	public void updateAll() {
-		if (mGroundLayer != null && mDecoLayer != null) {
+		if (useExTiles()) {
 			buildGroundMap();
 			buildDecoMap();
 			mGroundLayer.updateRegion().set(0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight());
 			mDecoLayer.updateRegion().set(0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight());
-			return;
 		} else {
 			updated.set(0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight());
 		}
@@ -361,7 +354,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	public void updateCell(int cell) {
-		if (mGroundLayer != null && mDecoLayer != null) {
+		if (useExTiles()) {
 			mGroundMap[cell] = currentGroundCell(cell);
 			mDecoMap[cell] = currentDecoCell(cell);
 			mGroundLayer.updateRegion().union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
