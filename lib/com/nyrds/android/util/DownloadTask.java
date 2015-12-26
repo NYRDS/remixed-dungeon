@@ -39,15 +39,15 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 			Log.d(TAG, "downloaded file name: " + file);
 			
 			HttpURLConnection ucon = (HttpURLConnection) url.openConnection();
-						
+
+			ucon.setReadTimeout(2500);
+			ucon.setInstanceFollowRedirects(true);
 			ucon.connect();
 
 			int repCode = ucon.getResponseCode();
 			
 			if (repCode == HttpURLConnection.HTTP_OK) {
 				int bytesTotal = ucon.getContentLength();
-
-				ucon.setReadTimeout(5000);
 
 				Log.d(TAG, "bytes in file: " + bytesTotal);
 
