@@ -147,7 +147,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		getBaseContext().getResources().updateConfiguration(config,
 				getBaseContext().getResources().getDisplayMetrics());
 
-		parseStrings(String.format("strings_%s.json", lang));
+		String modStrings = String.format("strings_%s.json", lang);
+		
+		if(ModdingMode.isResourceExistInMod(modStrings)) {
+			parseStrings(modStrings);
+		} else if (ModdingMode.isResourceExistInMod("strings_en.json")) {
+			parseStrings(String.format("strings_en.json", lang));
+		}
 	}
 
 	public void doRestart() {

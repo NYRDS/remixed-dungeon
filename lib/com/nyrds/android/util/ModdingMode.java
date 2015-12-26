@@ -35,7 +35,6 @@ public class ModdingMode {
 		return mActiveMod;
 	}
 
-	
 	public static boolean isAssetExist(String resName) {
 		InputStream str;
 		try {
@@ -47,9 +46,16 @@ public class ModdingMode {
 		}
 	}
 	
-	public static boolean isResourceExist(String resName) {
+	public static boolean isResourceExistInMod(String resName) {
 		if(!mActiveMod.equals(REMIXED)){
 			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName).exists();
+		}
+		return false;
+	}
+	
+	public static boolean isResourceExist(String resName) {
+		if(isResourceExistInMod(resName)) {
+			return true;
 		} else {
 			return isAssetExist(resName);
 		}
