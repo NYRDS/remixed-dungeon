@@ -343,6 +343,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 
 	public static void activeMod(String mod) {
 		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
+		ModdingMode.selectMod(PixelDungeon.activeMod());
 	}
 	
 	public static String activeMod() {

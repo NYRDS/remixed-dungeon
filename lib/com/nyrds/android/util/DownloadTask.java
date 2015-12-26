@@ -46,7 +46,8 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 			
 			if (repCode == HttpURLConnection.HTTP_OK) {
 				int bytesTotal = ucon.getContentLength();
-				
+
+				ucon.setReadTimeout(5000);
 
 				Log.d(TAG, "bytes in file: " + bytesTotal);
 
@@ -56,11 +57,12 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
 				byte buffer[] = new byte[4096];
 				int count;
-				
+				int bytesDownloaded = 0;
 				while ((count = is.read(buffer)) != -1) {
 					fos.write(buffer, 0, count);
+					bytesDownloaded += count;
 					if(bytesTotal > 0){
-						publishProgress( (100 * count * 4096) / bytesTotal);
+						publishProgress( (100 * bytesDownloaded) / bytesTotal);
 					}
 				}
 

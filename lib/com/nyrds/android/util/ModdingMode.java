@@ -26,7 +26,7 @@ public class ModdingMode {
 
 	public static void selectMod(String mod) {
 		File modPath = FileSystem.getExternalStorageFile(mod);
-		if(modPath.exists() && modPath.isDirectory()) {
+		if((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
 			mActiveMod = mod;
 		}
 	}
