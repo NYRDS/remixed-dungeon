@@ -149,7 +149,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 		if(getParent()!=null) {
 			hide();
 		}
-		Game.scene().add(new WndModSelect());
+		Game.scene().add(new WndModDescription(ModdingMode.REMIXED));
 	}
 
 	protected void onSelect(int index) {
