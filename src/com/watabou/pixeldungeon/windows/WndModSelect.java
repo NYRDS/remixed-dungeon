@@ -15,13 +15,21 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class WndModSelect extends WndOptions implements DownloadStateListener {
+public class WndModSelect extends Window implements DownloadStateListener {
 
 	private static ArrayList<String> mMods = new ArrayList<>();
 
+	private static final int WIDTH			= 120;
+	private static final int MARGIN 		= 2;
+	private static final int BUTTON_HEIGHT	= 20;
+	
 	static private class ModDesc {
 		public String name;
 		public String link;
@@ -33,7 +41,33 @@ public class WndModSelect extends WndOptions implements DownloadStateListener {
 	private static Map<String, ModDesc> mModsMap = new HashMap<>();
 
 	public WndModSelect() {
-		super(Game.getVar(R.string.ModsButton_SelectMod), "", buildModsList().toArray(new String[0]));
+		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), 9 );
+		tfTitle.hardlight( TITLE_COLOR );
+		tfTitle.x = tfTitle.y = MARGIN;
+		tfTitle.maxWidth(WIDTH - MARGIN * 2);
+		tfTitle.measure();
+		add( tfTitle );
+		
+		float pos = tfTitle.y + tfTitle.height() + MARGIN;
+		
+		ArrayList<String> options = buildModsList(); 
+		
+		for (int i=0; i < options.size(); i++) {
+			final int index = i;
+			RedButton btn = new RedButton( options.get(index) ) {
+				@Override
+				protected void onClick() {
+					hide();
+					onSelect( index );
+				}
+			};
+			btn.setRect( MARGIN, pos, WIDTH - MARGIN * 2, BUTTON_HEIGHT );
+			add( btn );
+			
+			pos += BUTTON_HEIGHT + MARGIN;
+		}
+		
+		resize( WIDTH, (int)pos );
 	}
 
 	private static ArrayList<String> buildModsList() {
@@ -81,7 +115,6 @@ public class WndModSelect extends WndOptions implements DownloadStateListener {
 	}
 
 	protected void onSelect(int index) {
-		super.onSelect(index);
 		String option = mMods.get(index);
 
 		File modDir = FileSystem.getExternalStorageFile(option);
