@@ -27,6 +27,8 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
+import android.graphics.RectF;
+
 public class DungeonTilemap extends Tilemap {
 
 	public static final int SIZE = 16;
@@ -44,17 +46,18 @@ public class DungeonTilemap extends Tilemap {
 	public DungeonTilemap(String tiles, String tilesEx) {
 		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
 		instance = this;
-		
+
 		int levelWidth = Dungeon.level.getWidth();
 		map(Dungeon.level.map, levelWidth);
 
 		mSize = Dungeon.level.getWidth() * Dungeon.level.getHeight();
-		
+
 		if (tilesEx != null) {
-			if(ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesEx) && ModdingMode.isResourceExistInMod(tiles)) {
+			if (ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesEx)
+					&& ModdingMode.isResourceExistInMod(tiles)) {
 				return;
 			}
-			
+
 			mGroundLayer = new Tilemap(tilesEx, new TextureFilm(tilesEx, SIZE, SIZE));
 			mGroundMap = new int[mSize];
 			mGroundLayer.map(buildGroundMap(), levelWidth);
@@ -64,13 +67,12 @@ public class DungeonTilemap extends Tilemap {
 			mDecoLayer.map(buildDecoMap(), levelWidth);
 		}
 
-		
 	}
 
 	private static boolean useExTiles() {
 		return instance.mGroundLayer != null && instance.mDecoLayer != null;
 	}
-	
+
 	private static int cellStableRandom(int cell, int min, int max) {
 		int rnd = Math.abs((((cell ^ 0xAAAAAAAA) * 1103515245 + 12345) / 65536) % 32767);
 		double r = (double) rnd / 32767;
@@ -150,7 +152,7 @@ public class DungeonTilemap extends Tilemap {
 
 		case Terrain.SIGN:
 			return 7 * 16 + 6;
-			
+
 		default:
 			return 15;
 		}
@@ -292,33 +294,37 @@ public class DungeonTilemap extends Tilemap {
 	public static CompositeImage tile(int cell) {
 		return tile(cell, -1);
 	}
-	
+
+	private static CompositeImage createTileImage(int groundCell, int decoCell) {
+		CompositeImage img = new CompositeImage(instance.mGroundLayer.getTexture());
+
+		RectF frame = instance.mGroundLayer.getTileset().get(groundCell);
+		img.frame(frame);
+
+		frame = instance.mDecoLayer.getTileset().get(decoCell);
+		Image deco = new Image(instance.mDecoLayer.getTexture());
+		deco.frame(frame);
+		img.addLayer(deco);
+		return img;
+
+	}
+
 	public static CompositeImage tile(int cell, int tileType) {
 
 		if (tileType == -1) {
-			CompositeImage img = new CompositeImage(instance.texture);
-
 			if (useExTiles()) {
-				img.frame(instance.getTileset().get(currentGroundCell(cell)));
-				Image deco = new Image(instance.texture);
-				deco.frame(instance.getTileset().get(currentDecoCell(cell)));
-				img.addLayer(deco);
-				return img;
+				return createTileImage(currentGroundCell(cell), currentDecoCell(cell));
 			}
 
+			CompositeImage img = new CompositeImage(instance.getTexture());
 			img.frame(instance.getTileset().get(Dungeon.level.map[cell]));
 			return img;
 		} else {
-			CompositeImage img = new CompositeImage(instance.texture);
-
 			if (useExTiles()) {
-				img.frame(instance.getTileset().get(groundCell(tileType,cell)));
-				Image deco = new Image(instance.texture);
-				deco.frame(instance.getTileset().get(decoCell(tileType,cell)));
-				img.addLayer(deco);
-				return img;
+				return createTileImage(groundCell(tileType, cell), decoCell(tileType, cell));
 			}
 
+			CompositeImage img = new CompositeImage(instance.getTexture());
 			img.frame(instance.getTileset().get(tileType));
 			return img;
 		}

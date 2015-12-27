@@ -26,7 +26,7 @@ import android.graphics.RectF;
 
 public class Tilemap extends Visual {
 
-	protected SmartTexture texture;
+	private SmartTexture texture;
 	private TextureFilm tileset;
 	
 	protected int[] data;
@@ -46,7 +46,7 @@ public class Tilemap extends Visual {
 		
 		super( 0, 0, 0, 0 );
 		
-		this.texture = TextureCache.get( tx );
+		this.setTexture(TextureCache.get( tx ));
 		this.tileset = tileset;
 		
 		RectF r = tileset.get( 0 );
@@ -136,7 +136,7 @@ public class Tilemap extends Visual {
 		
 		NoosaScript script = NoosaScript.get();
 		
-		texture.bind();
+		getTexture().bind();
 		
 		script.uModel.valueM4( matrix );
 		script.lighting( 
@@ -158,5 +158,13 @@ public class Tilemap extends Visual {
 
 	public TextureFilm getTileset() {
 		return tileset;
+	}
+
+	public SmartTexture getTexture() {
+		return texture;
+	}
+
+	public void setTexture(SmartTexture texture) {
+		this.texture = texture;
 	}
 }
