@@ -166,11 +166,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		AlarmManager mgr = (AlarmManager) getBaseContext().getSystemService(ContextWrapper.ALARM_SERVICE);
 		mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pi);
 		shutdown();
-		
 	}
 
 	public  static void shutdown() {
-
+		paused = true;
 		if (instance.scene != null) {
 			instance.scene.pause();
 		}
