@@ -31,8 +31,8 @@
   <string name="InventoryScroll_No">No, he cambiado de opinión</string>
   <!--STRINGS OF BlankScroll CLASS-->
   <string name="BlankScroll_Name">Pergamino en blanco</string>
-  <string name="BlankScroll_Info">Un pergamino en blanco</string>
-  <string name="BlankScroll_ReallyBlank">Este pergamino está realmente en blanco</string>
+  <string name="BlankScroll_Info">Solo un pergamino en blanco. ¿Puede que pueda escribir en él con algo?</string>
+  <string name="BlankScroll_ReallyBlank">Este pergamino está en blanco</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
   <string name="ScrollOfChallenge_Name">Pergamino de Desafio</string>
   <string name="ScrollOfChallenge_Info">Cuando se lea en voz alta, este pergamino emitirá un rugido desafiante que despertará a todos los monstruos y los conducirá a la posición del lector. </string>

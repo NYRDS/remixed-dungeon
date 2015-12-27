@@ -195,4 +195,8 @@
   <string name="ChaosStaff_Name">vara de caos</string>
   <string name="ChaosStaff_Info">¡Una vara imbuida por el Poder del Caos! ¿Qué otra cosa puede soñar o temer un mago?</string>
   <string name="ChaosStaff_Gender">femenino</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">espada de sacrificio</string>
+  <string name="SacrificialSword_Info">A primera vista, esta vieja espada de bronce cubierta de óxido parece totalmente inútil. Pero en ella descansan algún tipo de poderes arcaicos. Esos poderes pueden convertir en tu esclavo a casi cualquier criatura. Solo necesitas encontrar la manera de despertarlos...</string>
+  <string name="SacrificialSword_Gender">masculino</string>
 </resources>

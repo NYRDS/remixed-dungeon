@@ -26,4 +26,15 @@ remix.20.1:\n
 remix.21:\n
 - Objetos de Caos Raro\n
 - El fuego líquido ahora es de verdad líquido</string>
+  <string name="Welcome_Text_21_1">
+remix.21.1:\n
+- Modo fácil (con anuncios)\n
+- Modo experto</string>
+  <string name="Welcome_Text_21_2">
+remix.21.2:\n
+- Posibilidad de elegir mods (de momento solo reskins) (Solo para modders experimentados)</string>
+  <string name="Welcome_Text_21_3">
+remix.21.3:\n
+- Pequño mod disponible para descargar (no completado, pero divertido)\n
+- Mejorados los gráficos de las cloacas</string>
 </resources>

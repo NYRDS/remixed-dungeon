@@ -24,7 +24,7 @@
   <string name="Bandit_Name">bandido loco</string>
   <string name="Bandit_Gender">masculino</string>
   <string name="Bandit_Name_Objective">bandido loco</string>
-  <string name="Bandit_Desc">Los niveles más bajos de la mazmorra siempre tienen un sitio oculto para todo tipo de criminales. No todos ellos pueden mantener la mente lúcida durante sus largos periódos sin luz solar. Hace mucho que esos bandidos y ladrones olvidaron quienes son y por qué roban.</string>
+  <string name="Bandit_Desc">Los niveles más bajos de la mazmorra siempre tienen un sitio oculto para todo tipo de criminales. No todos ellos pueden mantener la mente lúcida durante sus largos periodos sin luz solar. Hace mucho que esos bandidos y ladrones olvidaron quienes son y por qué roban.</string>
   <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">murciélago vampiro</string>
   <string name="Bat_Gender">masculino</string>
@@ -106,7 +106,7 @@
   <string name="MimicPie_Name">mímico</string>
   <string name="MimicPie_Gender">masculino</string>
   <string name="MimicPie_Name_Objective">mímico</string>
-  <string name="MimicPie_Desc">Los mímicos son criaturas mágicas que pueden adoptar la forma que deseen. Este parece una empanada grande y sabrosa. </string>
+  <string name="MimicPie_Desc">Los mímicos son criaturas mágicas que pueden adoptar la forma que deseen. Este parece una empanada grande y sabrosa.</string>
   <!--STRINGS OF Monk CLASS-->
   <string name="Monk_Name">monje enano</string>
   <string name="Monk_Gender">masculino</string>
@@ -226,17 +226,35 @@
   <string name="Larva_Name_Objective">larva del dios</string>
   <string name="Larva_Desc">Larva del Antiguo Dios</string>
   <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">huevo de araña</string>
   <string name="SpiderEgg_Gender">neutral</string>
+  <string name="SpiderEgg_Name_Objective">huevo de araña</string>
+  <string name="SpiderEgg_Desc">Este frágil huevo palpita débilmente. Dentro puedes ver algo con muchas patas.</string>
   <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">capullo de araña</string>
   <string name="SpiderNest_Gender">neutral</string>
+  <string name="SpiderNest_Name_Objective">capullo de araña</string>
+  <string name="SpiderNest_Desc">Este capullo está formado por una fina seda, y hay algo vivo en su interior.</string>
   <!--STRINGS OF SpiderServant CLASS-->
-  <string name="SpiderServant_Gender">neutral</string>
+  <string name="SpiderServant_Name">araña soldado</string>
+  <string name="SpiderServant_Gender">masculino</string>
+  <string name="SpiderServant_Name_Objective">araña soldado </string>
+  <string name="SpiderServant_Desc">Los soldados son las unidades más numerosas de la guarida de la araña. Nacieron para proteger su territorio. Estos soldados desarrollaron unas glándulas venenosas para envenenar a sus enemigos.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">araña obrera</string>
   <string name="SpiderExploding_Gender">masculino</string>
+  <string name="SpiderExploding_Name_Objective">araña obrera</string>
+  <string name="SpiderExploding_Desc">Incansables obreros durante épocas de paz, estas criaturas no dudarán en abalanzarse contra sus enemigos, cogiendo lo primero que tengan a mano y convirtiéndose así en bombas andantes. </string>
   <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">Psico-araña</string>
   <string name="SpiderMind_Gender">masculino</string>
+  <string name="SpiderMind_Name_Objective">Psico-Araña</string>
+  <string name="SpiderMind_Desc">Estas, aparentemente frágiles, arañas poseen poderes mentales únicos, lo que les permite controlar toda la colonia. Las psico-arañas pueden controlas cualquier criatura, pero son bastante cobardes.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">reina araña</string>
   <string name="SpiderQueen_Gender">femenino</string>
+  <string name="SpiderQueen_Name_Objective">reina araña</string>
+  <string name="SpiderQueen_Desc">El cuerpo de una hermosa mujer mezclado con el de una horrible araña. Todo ser viviente de esta guarida es su siervo. Conocer a esta extraordinaria dama puede ser una experiencia mortífera... ¡Porque eres un intruso!</string>
   <!--STRINGS OF WaterElemental CLASS-->
   <string name="WaterElemental_Name">elemental de agua</string>
   <string name="WaterElemental_Gender">masculino</string>
@@ -252,4 +270,9 @@
   <string name="EarthElemental_Gender">masculino</string>
   <string name="EarthElemental_Name_Objective">elemental de tierra</string>
   <string name="EarthElemental_Desc">Los elementales de tierra son masas de tierra movidas por las fuerzas de la naturaleza.</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">cristal flotante</string>
+  <string name="Crystal_Gender">masculino</string>
+  <string name="Crystal_Name_Objective">cristal flotante</string>
+  <string name="Crystal_Desc">Un gran cristal brillante flotando en el aire. Probablemente contenga una poderosa magia.</string>
 </resources>
