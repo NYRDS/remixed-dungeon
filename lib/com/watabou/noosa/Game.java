@@ -169,8 +169,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		
 	}
 
-	public static void shutdown() {
-		paused = true;
+	public  static void shutdown() {
+
+		if (instance.scene != null) {
+			instance.scene.pause();
+		}
+		
 		System.exit(0);
 	}
 	
@@ -526,7 +530,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public static String getVar(int id) {
 
-		if (instance.stringMap.containsKey(id)) {
+		if (instance!= null && instance.stringMap !=null && instance.stringMap.containsKey(id)) {
 			return instance.stringMap.get(id);
 		}
 

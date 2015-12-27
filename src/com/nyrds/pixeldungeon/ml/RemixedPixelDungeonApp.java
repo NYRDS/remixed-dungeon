@@ -14,5 +14,10 @@ public class RemixedPixelDungeonApp extends Application {
 	public void onCreate() {
 		super.onCreate();
 		ACRA.init(this);
+
+		try {
+			Class.forName("android.os.AsyncTask");
+		} catch (Throwable ignore) {
+		}
 	}
 }
