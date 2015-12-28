@@ -936,16 +936,20 @@ public class Hero extends Char {
 
 		return getCloserToEnemy();
 	}
-
+	
+	private boolean applySpecialTo(SpecialWeapon weapon, Char enemy) {
+		spend(attackDelay());
+		getSprite().attack(enemy.getPos());
+		weapon.applySpecial(this, enemy);
+		return false;
+	}
+	
 	private boolean actSpecialAttack(Attack action) {
 		SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
 		
 		if (weapon.getRange() == 1) {
 			if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
-				spend(attackDelay());
-				getSprite().attack(enemy.getPos());
-				weapon.applySpecial(this, enemy);
-				return false;
+				return applySpecialTo(weapon, enemy);
 			}
 			return getCloserToEnemy();
 		} else {
@@ -955,10 +959,7 @@ public class Hero extends Char {
 			for (int i = 1; i <= Math.min(Ballistica.distance, weapon.getRange()); i++) {
 				Char chr = Actor.findChar(Ballistica.trace[i]);
 				if (chr != null) {
-					spend(attackDelay());
-					getSprite().attack(chr.getPos());
-					weapon.applySpecial(this, chr);
-					return false;
+					return applySpecialTo(weapon, chr);
 				}
 			}
 
