@@ -19,6 +19,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SimpleButton;
@@ -183,7 +184,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			Game.scene().add(downloadProgress);
 		}
 		
-		if(!Game.isPaused()) {
+		if(!Game.isPaused() && Game.scene() instanceof TitleScene) {
 			downloadProgress.text(String.format("Downloading %s %d%%", selectedMod, percent));
 		}
 
