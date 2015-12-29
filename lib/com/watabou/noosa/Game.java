@@ -33,6 +33,7 @@ import java.util.Map;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import org.acra.ACRA;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -126,15 +127,21 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public static long getAvailableInternalMemorySize() {
 		File path = Environment.getDataDirectory();
 		StatFs stat = new StatFs(path.getPath());
+		long ret;
 		if (android.os.Build.VERSION.SDK_INT < 18) {
 			long blockSize = stat.getBlockSize();
 			long availableBlocks = stat.getAvailableBlocks();
-			return availableBlocks * blockSize;
+			ret = availableBlocks * blockSize;
+		}	else {
+			ret = stat.getAvailableBytes();
 		}
-		return stat.getAvailableBytes();
+		ACRA.getErrorReporter().putCustomData("FreeInternalMemorySize", Long.toString(ret));
+		return ret;
 	}
 
 	public void useLocale(String lang) {
+		ACRA.getErrorReporter().putCustomData("Locale", lang);
+		
 		Locale locale;
 		if (lang.equals("pt_BR")) {
 			locale = new Locale("pt", "BR");
