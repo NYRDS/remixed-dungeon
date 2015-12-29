@@ -54,7 +54,7 @@ public class WndChallenges extends Window {
 		boxes = new ArrayList<CheckBox>();
 		
 		float pos = title.height() + GAP;
-		for (int i=0; i < Challenges.NAMES.length; i++) {
+		for (int i=0; i < Challenges.MASKS.length; i++) {
 			
 			CheckBox cb = new CheckBox( Challenges.NAMES[i] );
 			cb.checked( (checked & Challenges.MASKS[i]) != 0 );
