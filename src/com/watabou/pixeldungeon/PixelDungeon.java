@@ -22,6 +22,8 @@ import java.util.Locale;
 
 import javax.microedition.khronos.opengles.GL10;
 
+import org.acra.ACRA;
+
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
@@ -344,6 +346,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public static void activeMod(String mod) {
 		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
 		ModdingMode.selectMod(PixelDungeon.activeMod());
+		ACRA.getErrorReporter().putCustomData("RPD_active_mod", mod);
 	}
 	
 	public static String activeMod() {
