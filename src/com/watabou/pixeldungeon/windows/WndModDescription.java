@@ -41,12 +41,14 @@ public class WndModDescription extends Window {
 		
 		if (!option.equals(ModdingMode.REMIXED)) {
 			title = PixelScene.createMultiline(9);
+			title.maxWidth(WIDTH);
 			title.text(Game.getVar(R.string.Mod_Name) + "\n ");
 			title.hardlight(Window.TITLE_COLOR);
 
 			place(title);
 
 			author = PixelScene.createMultiline(8);
+			author.maxWidth(WIDTH);
 			author.text(Game.getVar(R.string.Mods_CreatedBy) +"\n"+ Game.getVar(R.string.Mod_Author) + "\n ");
 
 			place(author);
@@ -54,6 +56,7 @@ public class WndModDescription extends Window {
 			final String siteUrl = Game.getVar(R.string.Mod_Link);
 			if (siteUrl.length() > 0) {
 				site = PixelScene.createMultiline(8);
+				site.maxWidth(WIDTH);
 				site.text(Game.getVar(R.string.Mods_AuthorSite)+"\n" + siteUrl + "\n ");
 				place(site);
 
@@ -72,6 +75,7 @@ public class WndModDescription extends Window {
 
 			if (emailUri.length() > 0) {
 				email = PixelScene.createMultiline(8);
+				email.maxWidth(WIDTH);
 				email.text(Game.getVar(R.string.Mods_AuthorEmail) + emailUri + "\n ");
 				place(email);
 
