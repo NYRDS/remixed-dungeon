@@ -177,8 +177,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public  static void shutdown() {
 		paused = true;
-		if (instance.scene != null) {
-			instance.scene.pause();
+		if (instance().scene != null) {
+			instance().scene.pause();
 		}
 		
 		System.exit(0);
@@ -408,7 +408,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	@Override
 	public void onDrawFrame(GL10 gl) {
 
-		if (width() == 0 || height() == 0) {
+		if (instance() == null || width() == 0 || height() == 0) {
 			return;
 		}
 
@@ -536,8 +536,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public static String getVar(int id) {
 
-		if (instance!= null && instance.stringMap !=null && instance.stringMap.containsKey(id)) {
-			return instance.stringMap.get(id);
+		if (instance()!= null && instance().stringMap !=null && instance().stringMap.containsKey(id)) {
+			return instance().stringMap.get(id);
 		}
 
 		try {
@@ -552,18 +552,18 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
 				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey && id != R.string.testDevice) {
-			if (instance.stringsMap.containsKey(id)) {
-				return instance.stringsMap.get(id);
+			if (instance().stringsMap.containsKey(id)) {
+				return instance().stringsMap.get(id);
 			}
 		}
 		return context.getResources().getStringArray(id);
 	}
 
-	public static Game instance() {
+	public synchronized static Game instance() {
 		return instance;
 	}
 
-	public static Game instance(Game instance) {
+	public synchronized static Game instance(Game instance) {
 		Game.instance = instance;
 		return instance;
 	}
@@ -599,7 +599,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public static void executeInGlThread(Runnable task) {
-		instance.view.queueEvent(task);
+		instance().view.queueEvent(task);
 	}
 	
 	protected static void removeEasyModeBanner() {

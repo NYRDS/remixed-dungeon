@@ -47,7 +47,6 @@ public abstract class GameWithGoogleIap extends Game {
 
 	public GameWithGoogleIap(Class<? extends Scene> c) {
 		super(c);
-		instance(this);
 	}
 
 	private static boolean isSmallScreen() {
