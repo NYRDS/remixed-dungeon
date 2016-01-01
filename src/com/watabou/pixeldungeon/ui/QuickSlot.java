@@ -35,10 +35,9 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class QuickSlot extends Button implements WndBag.Listener {
 
-	private static final String TXT_SELECT_ITEM = Game
-			.getVar(R.string.QuickSlot_SelectedItem);
+	private static final String TXT_SELECT_ITEM = Game.getVar(R.string.QuickSlot_SelectedItem);
 
-	private static ArrayList<QuickSlot> slots         = new ArrayList<QuickSlot>();
+	private static ArrayList<QuickSlot> slots = new ArrayList<QuickSlot>();
 	private static HashMap<Integer, Object> qsStorage = new HashMap<Integer, Object>();
 
 	// Either Item or Class<? extends Item>
@@ -51,9 +50,9 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	private Image crossM;
 
 	private boolean targeting = false;
-	private Item lastItem     = null;
-	private Char lastTarget   = null;
-	
+	private Item lastItem = null;
+	private Char lastTarget = null;
+
 	private int index;
 
 	public QuickSlot() {
@@ -147,10 +146,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 		if (quickslotItem() instanceof Item) {
 			return (Item) quickslotItem();
 		} else if (quickslotItem() != null) {
-			Item item = Dungeon.hero.belongings
-					.getItem((Class<? extends Item>) quickslotItem());
-			return item != null ? item : Item
-					.virtual((Class<? extends Item>) quickslotItem());
+			Item item = Dungeon.hero.belongings.getItem((Class<? extends Item>) quickslotItem());
+			return item != null ? item : Item.virtual((Class<? extends Item>) quickslotItem());
 		} else {
 			return null;
 		}
@@ -180,16 +177,13 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	}
 
 	private void enableSlot() {
-		slot.enable(itemInSlot != null
-				&& itemInSlot.quantity() > 0
-				&& (Dungeon.hero.belongings.backpack.contains(itemInSlot) || itemInSlot
-						.isEquipped(Dungeon.hero)));
+		slot.enable(itemInSlot != null && itemInSlot.quantity() > 0
+				&& (Dungeon.hero.belongings.backpack.contains(itemInSlot) || itemInSlot.isEquipped(Dungeon.hero)));
 	}
 
 	private void useTargeting() {
 
-		targeting = lastTarget != null && lastTarget.isAlive()
-				&& Dungeon.visible[lastTarget.getPos()];
+		targeting = lastTarget != null && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
 
 		if (targeting) {
 			if (Actor.all().contains(lastTarget)) {
@@ -203,9 +197,14 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	}
 
 	public static void refresh() {
-		for (QuickSlot slot : slots) {
-			slot.item(slot.select());
-		}
+		Game.executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				for (QuickSlot slot : slots) {
+					slot.item(slot.select());
+				}
+			}
+		});
 	}
 
 	public static void target(Item item, Char target) {
@@ -233,7 +232,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 		}
 		return null;
 	}
-	
+
 	public static Object getItem(int n) {
 		if (n < slots.size()) {
 			return slots.get(n).select();
@@ -255,7 +254,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	public static void cleanStorage() {
 		qsStorage.clear();
 	}
-	
+
 	private Object quickslotItem() {
 		return quickslotItem;
 	}
