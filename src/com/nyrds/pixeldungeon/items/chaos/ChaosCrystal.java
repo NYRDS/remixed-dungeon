@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
@@ -223,10 +224,10 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 	}
 
 	@Override
-	public void ownerDoesDamage(int damage) {
+	public void ownerDoesDamage(Char ch,int damage) {
 		if (cursed) {
 			if (charge > 0) {
-				ChaosCommon.doChaosMark(getCurUser().getPos(), charge);
+				ChaosCommon.doChaosMark(ch.getPos(), charge);
 			}
 		}
 	}

@@ -1022,7 +1022,7 @@ public class Hero extends Char {
 
 		for (Item item : belongings) {
 			if (item instanceof IChaosItem && item.isEquipped(this)) {
-				((IChaosItem) item).ownerDoesDamage(damage);
+				((IChaosItem) item).ownerDoesDamage(this,damage);
 			}
 		}
 

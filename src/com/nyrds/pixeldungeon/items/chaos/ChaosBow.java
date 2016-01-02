@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.utils.Bundle;
 
@@ -40,7 +41,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 	}
 	
 	@Override
-	public void ownerDoesDamage(int damage) {
+	public void ownerDoesDamage(Char ch,int damage) {
 		
 		if(cursed) {
 			return;

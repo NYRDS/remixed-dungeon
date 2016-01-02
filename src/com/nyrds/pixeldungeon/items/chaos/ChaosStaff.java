@@ -34,7 +34,7 @@ public class ChaosStaff extends Wand implements IChaosItem {
 	}
 
 	@Override
-	public void ownerDoesDamage(int damage) {
+	public void ownerDoesDamage(Char ch,int damage) {
 	}
 
 	private void selectImage() {
