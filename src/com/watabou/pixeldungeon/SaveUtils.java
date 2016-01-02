@@ -47,7 +47,7 @@ public class SaveUtils {
 	public static void loadGame(String slot, HeroClass heroClass) {
 		
 		GLog.toFile("Loading: class :%s slot: %s", heroClass.toString(), slot);
-		
+		Dungeon.deleteGame(true);
 		copyFromSaveSlot(slot, heroClass);
 		
 		InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
@@ -111,10 +111,11 @@ public class SaveUtils {
 	}
 	
 	public static void copyFromSaveSlot(String slot, HeroClass heroClass) {
-		Dungeon.deleteGame(true);
-		
 		String[] files = FileSystem.getInteralStorageFile(slot).list();
-
+		if(files == null) {
+			return;
+		}
+		
 		for (String file : files) {
 			if (isRelatedTo(file, heroClass)) {
 
