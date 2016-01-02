@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
@@ -19,7 +20,7 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 
 		if (!saving) {
 			for (int i = 0; i < 10; i++) {
-				if (!SaveUtils.slotUsed(slotNameFromIndex(i), Dungeon.heroClass)) {
+				if (!isSlotIndexUsed(i)) {
 					setEnabled(i, false);
 				}
 			}
@@ -33,6 +34,20 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 		}
 	}
 
+	private static boolean isSlotIndexUsed(int index) {
+		return		SaveUtils.slotUsed(slotNameFromIndex(index), Dungeon.heroClass)
+				||	SaveUtils.slotUsed(slotNameFromIndexAndMod(index), Dungeon.heroClass);
+	}
+	
+	private static String getSlotToLoad(int index) {
+		String slot = slotNameFromIndexAndMod(index);
+		if(SaveUtils.slotUsed(slot,Dungeon.heroClass)) {
+			return slot;
+		} else {
+			return slotNameFromIndex(index);
+		}
+	}
+	
 	private static String windowText() {
 		if (PixelDungeon.donated() == 0 && PixelDungeon.canDonate()) {
 			return Game.getVar(R.string.WndSaveSlotSelect_dontLike);
@@ -44,6 +59,14 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 		return Integer.toString(i + 1);
 	}
 
+	private static String slotNameFromIndexAndMod(int i) {
+		if(!ModdingMode.inMod()) {
+			return slotNameFromIndex(i);
+		} else {
+			return ModdingMode.activeMod()+"_"+slotNameFromIndex(i);
+		}
+	}
+	
 	private static String[] slotInfos() {
 		String[] ret = new String[10];
 
@@ -56,13 +79,12 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 
 	@Override
 	protected void onSelect(int index) {
-		slot = slotNameFromIndex(index);
-
 		final GameWithGoogleIap.IntersitialPoint returnTo = this;
 
 		if (saving) {
 			try {
 				Dungeon.saveAll();
+				slot = slotNameFromIndexAndMod(index);
 				SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 
 			} catch (Exception e) {
@@ -71,6 +93,8 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 		}
 		
 		Game.paused = true;
+		
+		slot = getSlotToLoad(index);
 		
 		if (PixelDungeon.donated() < 1) {
 			PixelDungeon.displaySaveAndLoadAd(returnTo);

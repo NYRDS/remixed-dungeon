@@ -17,6 +17,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -165,10 +166,17 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			new DownloadTask(this).execute(mModsMap.get(option).link, downloadTo);
 			return;
 		}
-
-		if (option.equals(PixelDungeon.activeMod())) {
+		
+		String prevMod = PixelDungeon.activeMod();
+		
+		if (option.equals(prevMod)) {
 			return;
 		}
+		
+		SaveUtils.copyAllClassesToSlot(prevMod);
+		SaveUtils.deleteGameAllClasses();
+		SaveUtils.copyAllClassesFromSlot(option);
+		
 		if (getParent() != null) {
 			hide();
 		}

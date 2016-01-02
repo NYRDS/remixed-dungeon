@@ -45,25 +45,11 @@ public class SaveUtils {
 	}
 
 	public static void loadGame(String slot, HeroClass heroClass) {
-
+		
 		GLog.toFile("Loading: class :%s slot: %s", heroClass.toString(), slot);
-
-		Dungeon.deleteGame(true);
-
-		String[] files = FileSystem.getInteralStorageFile(slot).list();
-
-		for (String file : files) {
-			if (isRelatedTo(file, heroClass)) {
-
-				String from = FileSystem.getInteralStorageFile(slot + "/" + file).getAbsolutePath();
-				String to = FileSystem.getInteralStorageFile(file).getAbsolutePath();
-
-				GLog.toFile("restoring file: %s, (%s -> %s)", file, from, to);
-
-				FileSystem.copyFile(from, to);
-			}
-		}
-
+		
+		copyFromSaveSlot(slot, heroClass);
+		
 		InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 		Game.switchScene(InterlevelScene.class);
 		Dungeon.heroClass = heroClass;
@@ -103,6 +89,43 @@ public class SaveUtils {
 
 	private static boolean isRelatedTo(String path,HeroClass cl) {
 		return ( path.endsWith(".dat") && hasClassTag(cl, path) ) || path.endsWith(gameFile(cl));
+	}
+
+	public static void copyAllClassesToSlot(String slot) {
+		for(HeroClass hc: HeroClass.values()) {
+			copySaveToSlot(slot,hc);
+		}
+	}
+	
+	public static void copyAllClassesFromSlot(String slot) {
+		for(HeroClass hc: HeroClass.values()) {
+			copyFromSaveSlot(slot,hc);
+		}
+	}
+	
+	public static void deleteGameAllClasses() {
+		for(HeroClass hc: HeroClass.values()) {
+			deleteLevels(hc);
+			deleteGameFile(hc);
+		}
+	}
+	
+	public static void copyFromSaveSlot(String slot, HeroClass heroClass) {
+		Dungeon.deleteGame(true);
+		
+		String[] files = FileSystem.getInteralStorageFile(slot).list();
+
+		for (String file : files) {
+			if (isRelatedTo(file, heroClass)) {
+
+				String from = FileSystem.getInteralStorageFile(slot + "/" + file).getAbsolutePath();
+				String to = FileSystem.getInteralStorageFile(file).getAbsolutePath();
+
+				GLog.toFile("restoring file: %s, (%s -> %s)", file, from, to);
+
+				FileSystem.copyFile(from, to);
+			}
+		}
 	}
 	
 	public static void copySaveToSlot(String slot, HeroClass cl) {
