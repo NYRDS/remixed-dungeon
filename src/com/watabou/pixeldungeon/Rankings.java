@@ -36,7 +36,7 @@ public enum Rankings {
 	
 	INSTANCE;
 	
-	public static final int TABLE_SIZE	= 6;
+	public static final int TABLE_SIZE	= 101;
 	
 	public static final String RANKINGS_FILE = "rankings.dat";
 	public static final String DETAILS_FILE  = "game_%d.dat";
