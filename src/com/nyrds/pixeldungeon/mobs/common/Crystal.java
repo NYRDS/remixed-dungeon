@@ -29,7 +29,7 @@ public class Crystal extends Mob {
 	private void adjustLevel(int depth) {
 		kind = (ctr++)%2;
 		
-		hp(ht(Dungeon.depth * 4));
+		hp(ht(Dungeon.depth * 4 + 1));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
 		maxLvl = depth + 2;
