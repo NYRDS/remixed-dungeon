@@ -60,18 +60,14 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements GameWithGoog
 	}
 
 	private static String slotNameFromIndexAndMod(int i) {
-		if(!ModdingMode.inMod()) {
-			return slotNameFromIndex(i);
-		} else {
-			return ModdingMode.activeMod()+"_"+slotNameFromIndex(i);
-		}
+		return ModdingMode.activeMod()+"_"+slotNameFromIndex(i);
 	}
 	
 	private static String[] slotInfos() {
 		String[] ret = new String[10];
 
 		for (int i = 0; i < ret.length; i++) {
-			ret[i] = SaveUtils.slotInfo(slotNameFromIndex(i), Dungeon.heroClass);
+			ret[i] = SaveUtils.slotInfo(getSlotToLoad(i), Dungeon.heroClass);
 		}
 
 		return ret;
