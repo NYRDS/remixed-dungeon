@@ -91,7 +91,7 @@ public class RankingsScene extends PixelScene {
 
 			float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
 
-			float top = align( rowHeight / 2);
+			float top = align(rowHeight / 2);
 
 			Text title = PixelScene.createText(TXT_TITLE, 9);
 			title.hardlight(Window.TITLE_COLOR);
@@ -107,32 +107,53 @@ public class RankingsScene extends PixelScene {
 				protected void onClick() {
 					super.onClick();
 					startFrom += recodrsPerPage;
-					
-					if(startFrom > Rankings.TABLE_SIZE - recodrsPerPage) {
+
+					if (startFrom > Rankings.TABLE_SIZE - recodrsPerPage) {
 						startFrom = Rankings.TABLE_SIZE - recodrsPerPage;
 					}
-					
-					if(startFrom > Rankings.INSTANCE.records.size()) {
+
+					if (startFrom > Rankings.INSTANCE.records.size()) {
 						startFrom -= recodrsPerPage;
 					}
-					
+
+					switch (PixelDungeon.donated()) {
+					case 0:
+						if (startFrom > 10) {
+							startFrom = 10;
+						}
+						break;
+
+					case 1:
+						if (startFrom > 25) {
+							startFrom = 25;
+						}
+						break;
+
+					case 2:
+						if (startFrom > 50) {
+							startFrom = 50;
+						}
+						break;
+					}
+
 					createRecords();
 				}
 			};
 			btnNext.setRect(w / 2 + GAP, h - btnHeight, w / 2 - GAP, btnHeight);
 			add(btnNext);
 
-			btnPrev = new RedButton("<"){
+			btnPrev = new RedButton("<") {
 				@Override
 				protected void onClick() {
 					super.onClick();
 					startFrom -= recodrsPerPage;
-					if(startFrom < 0) {
+					if (startFrom < 0) {
 						startFrom = 0;
 					}
 					createRecords();
 				}
-			};;
+			};
+
 			btnPrev.setRect(0, h - btnHeight, w / 2 - GAP, btnHeight);
 			add(btnPrev);
 
@@ -188,22 +209,22 @@ public class RankingsScene extends PixelScene {
 	private void createRecords() {
 		int w = Camera.main.width;
 		int h = Camera.main.height;
-		
+
 		float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
-		
+
 		float left = (w - Math.min(MAX_ROW_WIDTH, w)) / 2 + GAP;
 		float top = align(rowHeight / 2);
-		
+
 		int pos = 0;
-		
-		for(Record row: displayedRecords) {
+
+		for (Record row : displayedRecords) {
 			remove(row);
 		}
-		
+
 		displayedRecords.clear();
-		
-		for(int i = startFrom; i< startFrom + recodrsPerPage; ++i) {
-			if(i > Rankings.INSTANCE.records.size()-1) {
+
+		for (int i = startFrom; i < startFrom + recodrsPerPage; ++i) {
+			if (i > Rankings.INSTANCE.records.size() - 1) {
 				break;
 			}
 			Rankings.Record rec = Rankings.INSTANCE.records.get(i);
@@ -254,7 +275,7 @@ public class RankingsScene extends PixelScene {
 			position.text(Integer.toString(pos + 1));
 			position.measure();
 
-			desc.text(rec.mod + ": "+rec.info);
+			desc.text(rec.mod + ": " + rec.info);
 			desc.measure();
 
 			if (rec.win) {
