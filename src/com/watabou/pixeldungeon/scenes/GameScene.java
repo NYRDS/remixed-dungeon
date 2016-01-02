@@ -92,7 +92,7 @@ public class GameScene extends PixelScene {
 	private static final String TXT_GRASS = Game.getVar(R.string.GameScene_Grass);
 	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 
-	static GameScene scene;
+	static volatile GameScene scene;
 
 	private SkinnedBlock water;
 	private DungeonTilemap tiles;
@@ -464,8 +464,8 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void add(Blob gas) {
-		Actor.add(gas);
 		if (scene != null) {
+			Actor.add(gas);
 			scene.addBlobSprite(gas);
 		}
 	}
