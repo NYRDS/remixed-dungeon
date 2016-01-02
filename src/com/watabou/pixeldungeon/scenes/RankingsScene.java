@@ -91,7 +91,7 @@ public class RankingsScene extends PixelScene {
 
 			float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
 
-			float top = align((h - rowHeight * Rankings.INSTANCE.records.size()) / 2);
+			float top = align( rowHeight / 2);
 
 			Text title = PixelScene.createText(TXT_TITLE, 9);
 			title.hardlight(Window.TITLE_COLOR);
@@ -110,6 +110,10 @@ public class RankingsScene extends PixelScene {
 					
 					if(startFrom > Rankings.TABLE_SIZE - recodrsPerPage) {
 						startFrom = Rankings.TABLE_SIZE - recodrsPerPage;
+					}
+					
+					if(startFrom > Rankings.INSTANCE.records.size()) {
+						startFrom -= recodrsPerPage;
 					}
 					
 					createRecords();
@@ -188,7 +192,7 @@ public class RankingsScene extends PixelScene {
 		float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
 		
 		float left = (w - Math.min(MAX_ROW_WIDTH, w)) / 2 + GAP;
-		float top = align((h - rowHeight * Rankings.INSTANCE.records.size()) / 2);
+		float top = align(rowHeight / 2);
 		
 		int pos = 0;
 		
@@ -250,7 +254,7 @@ public class RankingsScene extends PixelScene {
 			position.text(Integer.toString(pos + 1));
 			position.measure();
 
-			desc.text(rec.info);
+			desc.text(rec.mod + ": "+rec.info);
 			desc.measure();
 
 			if (rec.win) {

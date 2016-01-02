@@ -86,6 +86,10 @@ public class Bundle {
 		return (float)data.optDouble( key );
 	}
 	
+	public String optString( String key, String defVal ) {
+		return data.optString(key, defVal);
+	}
+	
 	public String getString( String key ) {
 		return data.optString( key );
 	}

@@ -64,6 +64,7 @@ public enum Rankings {
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();
 		rec.score	    = score( winLevel  != gameOver.LOSE );
+		rec.mod			= PixelDungeon.activeMod();
 		
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now() );
 		try {
@@ -168,6 +169,7 @@ public enum Rankings {
 		private static final String SCORE	= "score";
 		private static final String TIER	= "tier";
 		private static final String GAME	= "gameFile";
+		private static final String MOD		= "mod";
 		
 		public String info;
 		public boolean win;
@@ -178,6 +180,7 @@ public enum Rankings {
 		public int score;
 		
 		public String gameFile;
+		public String mod;
 		
 		@Override
 		public void restoreFromBundle( Bundle bundle ) {
@@ -190,6 +193,7 @@ public enum Rankings {
 			armorTier	= bundle.getInt( TIER );
 			
 			gameFile	= bundle.getString( GAME );
+			mod			= bundle.optString(MOD, ModdingMode.REMIXED);
 		}
 		
 		@Override
@@ -203,6 +207,7 @@ public enum Rankings {
 			bundle.put( TIER, armorTier );
 			
 			bundle.put( GAME, gameFile );
+			bundle.put( MOD, mod );
 		}
 		
 		public boolean dontPack() {
