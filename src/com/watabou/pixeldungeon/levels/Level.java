@@ -1166,4 +1166,7 @@ public abstract class Level implements Bundlable {
 		
 		return -1;
 	}
+	
+	public void seal() {
+	}
 }

@@ -167,7 +167,7 @@ public class Goo extends Boss {
 	
 	@Override
 	public void move( int step ) {
-		((SewerBossLevel)Dungeon.level).seal();
+		Dungeon.level.seal();
 		super.move( step );
 	}
 	

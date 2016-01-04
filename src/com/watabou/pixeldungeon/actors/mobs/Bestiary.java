@@ -49,7 +49,14 @@ public class Bestiary {
 
 		try {
 			JSONObject levelDesc = mobsData.getJSONObject(levelKind);
-			JSONObject depthDesc = levelDesc.getJSONObject(Integer.toString(depth));
+			
+			String depthString = Integer.toString(depth);
+			
+			if(!levelDesc.has(depthString)) {
+				depthString = "any";
+			}
+			
+			JSONObject depthDesc = levelDesc.getJSONObject(depthString);
 
 			ArrayList<Float> chances = new ArrayList<>();
 			ArrayList<String> names = new ArrayList<>();
