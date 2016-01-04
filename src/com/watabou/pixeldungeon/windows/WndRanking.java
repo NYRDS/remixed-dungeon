@@ -179,12 +179,8 @@ public class WndRanking extends WndTabbed {
 			}
 			
 			pos += GAP + GAP;
-
-			pos = statSlot( this, difficultyToText(hero.getDifficulty()), "", pos );
 			
-			pos += GAP;
-
-			pos = statSlot( this, TXT_STR, Integer.toString( hero.effectiveSTR() ), pos );
+			pos = statSlot( this, difficultyToText(hero.getDifficulty()), "", pos );
 			
 			pos += GAP;
 			
