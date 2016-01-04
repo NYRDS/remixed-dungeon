@@ -7,5 +7,47 @@
    },
    "SewerBossLevel":{
       "any":{"Goo":1}
-   }
+   },
+   "PrisonLevel":{
+      "6":{"Skeleton":4,"Thief":2,"Swarm":1,"Shaman":0.2},
+      "7":{"Skeleton":3,"Thief":1,"Swarm":1,"Shaman":1,"Shadow":1},
+      "8":{"Skeleton":3,"Shaman":2,"Thief":1,"Swarm":1,"Shadow":1,"Bat":0.02},
+      "9":{"Skeleton":3,"Shaman":3,"Thief":1,"Swarm":1,"Shadow":1,"Bat":0.02,"Brute":0.01}
+   },
+   "PrisonBossLevel":{
+      "any":{"Tengu":1}
+   },
+   "SpiderLevel":{
+      "6":{"SpiderServant":1},
+      "7":{"SpiderServant":1,"SpiderExploding":0.5},
+      "8":{"SpiderServant":1,"SpiderExploding":0.5,"SpiderMind":0.2},
+      "9":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.3}
+      "10":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5}
+   },
+   "CavesLevel":{
+      "11":{"Bat":1,"Brute":0.2},
+      "12":{"Bat":1,"Brute":1,"Spinner":0.2},
+      "13":{"Bat":1,"Brute":3,"Spinner":1,"Shaman":1,"Elemental":0.02},
+      "14":{"Bat":1,"Brute":3,"Spinner":4,"Shaman":1,"Elemental":0.02,"Monk":0.01},
+   },
+   "CavesBossLevel":{
+      "any":{"DM300":1}
+   },
+   "CityLevel":{
+      "16":{"Elemental":1,"Monk":0.2,"Warlock":1},
+      "17":{"Elemental":1,"Monk":1,"Warlock":1},
+      "18":{"Elemental":1,"Monk":2,"Warlock":1,"Golem":1},
+      "19":{"Elemental":1,"Monk":2,"Warlock":1,"Golem":3,"Succubus":0.02},
+   },
+   "CityBossLevel":{
+      "any":{"King":1}
+   },
+   "HallsLevel":{
+      "22":{"Succubus":1,"Eye":1},
+      "23":{"Succubus":1,"Eye":2,"Scorpio":1},
+      "24":{"Succubus":1,"Eye":2,"Scorpio":3},
+   },
+   "HallsBossLevel":{
+      "any":{"Yog":1}
+   },
 }

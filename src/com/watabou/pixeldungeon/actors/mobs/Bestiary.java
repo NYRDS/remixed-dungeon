@@ -188,8 +188,8 @@ public class Bestiary {
 			classes = new Class<?>[] { Skeleton.class, Shaman.class, Thief.class, Swarm.class, Shadow.class };
 			break;
 		case 8:
-			chances = new float[] { 3, 2, 1, 1, 1, 1, 0.02f };
-			classes = new Class<?>[] { Skeleton.class, Shaman.class, Gnoll.class, Thief.class, Swarm.class,
+			chances = new float[] { 3, 2, 1, 1, 1, 0.02f };
+			classes = new Class<?>[] { Skeleton.class, Shaman.class, Thief.class, Swarm.class,
 					Shadow.class, Bat.class };
 			break;
 		case 9:
