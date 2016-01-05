@@ -177,6 +177,8 @@ public class Hero extends Char {
 
 	private int difficulty;
 
+	public String levelId;
+
 	public Hero() {
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);

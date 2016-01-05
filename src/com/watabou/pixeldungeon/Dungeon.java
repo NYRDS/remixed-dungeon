@@ -142,6 +142,7 @@ public class Dungeon {
 		
 		heroClass.initHero( hero );
 		hero.levelKind = "SewerLevel";
+		hero.levelId = DungeonGenerator.getEntryLevel();
 		
 		SaveUtils.deleteLevels(heroClass);
 	}

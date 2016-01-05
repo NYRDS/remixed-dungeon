@@ -3,99 +3,174 @@ package com.nyrds.pixeldungeon.utils;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.levels.CavesBossLevel;
+import com.watabou.pixeldungeon.levels.CavesLevel;
+import com.watabou.pixeldungeon.levels.CityBossLevel;
+import com.watabou.pixeldungeon.levels.CityLevel;
+import com.watabou.pixeldungeon.levels.DeadEndLevel;
+import com.watabou.pixeldungeon.levels.HallsBossLevel;
+import com.watabou.pixeldungeon.levels.HallsLevel;
+import com.watabou.pixeldungeon.levels.LastLevel;
+import com.watabou.pixeldungeon.levels.LastShopLevel;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.PrisonBossLevel;
+import com.watabou.pixeldungeon.levels.PrisonLevel;
+import com.watabou.pixeldungeon.levels.SewerBossLevel;
+import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 public class DungeonGenerator {
-	public static final String DEAD_END_LEVEL    = "DeadEndLevel";
-	public static final String LAST_LEVEL        = "LastLevel";
-	public static final String LAST_SHOP_LEVEL   = "LastShopLevel";
-	public static final String HALLS_BOSS_LEVEL  = "HallsBossLevel";
-	public static final String HALLS_LEVEL       = "HallsLevel";
-	public static final String CITY_BOSS_LEVEL   = "CityBossLevel";
-	public static final String CITY_LEVEL        = "CityLevel";
-	public static final String CAVES_BOSS_LEVEL  = "CavesBossLevel";
-	public static final String CAVES_LEVEL       = "CavesLevel";
+	public static final String DEAD_END_LEVEL = "DeadEndLevel";
+	public static final String LAST_LEVEL = "LastLevel";
+	public static final String LAST_SHOP_LEVEL = "LastShopLevel";
+	public static final String HALLS_BOSS_LEVEL = "HallsBossLevel";
+	public static final String HALLS_LEVEL = "HallsLevel";
+	public static final String CITY_BOSS_LEVEL = "CityBossLevel";
+	public static final String CITY_LEVEL = "CityLevel";
+	public static final String CAVES_BOSS_LEVEL = "CavesBossLevel";
+	public static final String CAVES_LEVEL = "CavesLevel";
 	public static final String PRISON_BOSS_LEVEL = "PrisonBossLevel";
-	public static final String PRISON_LEVEL      = "PrisonLevel";
-	public static final String SEWER_BOSS_LEVEL  = "SewerBossLevel";
-	public static final String SEWER_LEVEL       = "SewerLevel";
-	public static final String SPIDER_LEVEL      = "SpiderLevel";
-	
-	private static Map<String, LevelKind> levelTypes = levelTypes(); 
+	public static final String PRISON_LEVEL = "PrisonLevel";
+	public static final String SEWER_BOSS_LEVEL = "SewerBossLevel";
+	public static final String SEWER_LEVEL = "SewerLevel";
+	public static final String SPIDER_LEVEL = "SpiderLevel";
+
+	private static Map<String, LevelKind> levelTypes = levelTypes();
+
+	static JSONObject mDungeonMap;
+	static JSONObject mLevels;
+	static JSONObject mGraph;
+
+	static private HashMap<String, Class<? extends Level>> mLevelKindList;
+
+	private static void registerLevelClass(Class<? extends Level> levelClass) {
+		mLevelKindList.put(levelClass.getSimpleName(), levelClass);
+	}
+
+	private static void initLevelsMap() {
+
+		if (mLevelKindList != null) {
+			return;
+		}
+
+		mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon.json");
+
+		try {
+			mLevels = mDungeonMap.getJSONObject("Levels");
+			mGraph = mDungeonMap.getJSONObject("Graph");
+		} catch (JSONException e) {
+			throw new RuntimeException(e);
+		}
+
+		mLevelKindList = new HashMap<>();
+
+		registerLevelClass(SewerLevel.class);
+		registerLevelClass(SewerBossLevel.class);
+		registerLevelClass(SpiderLevel.class);
+		registerLevelClass(PrisonLevel.class);
+		registerLevelClass(PrisonBossLevel.class);
+		registerLevelClass(CavesLevel.class);
+		registerLevelClass(CavesBossLevel.class);
+		registerLevelClass(CityLevel.class);
+		registerLevelClass(CityBossLevel.class);
+		registerLevelClass(LastShopLevel.class);
+		registerLevelClass(HallsLevel.class);
+		registerLevelClass(HallsBossLevel.class);
+		registerLevelClass(LastLevel.class);
+		registerLevelClass(DeadEndLevel.class);
+	}
+
+	public static String getEntryLevel() {
+		try {
+			return mDungeonMap.getString("Entrance");
+		} catch (JSONException e) {
+			throw new RuntimeException(e);
+		}
+	}
 
 	public static Position ascend(Position current) {
+
+		initLevelsMap();
+
 		Position next = new Position();
 		next.levelDepth = current.levelDepth - 1;
-		next.levelKind  = depthToKind(next.levelDepth);
+		next.levelKind = depthToKind(next.levelDepth);
 		next.cellId = -1;
-		
-		if(current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth !=5) {
+
+		if (current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth != 5) {
 			next.levelKind = SPIDER_LEVEL;
 		}
-		
-		if(current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth ==5) {
+
+		if (current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth == 5) {
 			next.cellId = -2;
 		}
-		
+
 		return next;
 	}
-	
+
 	public static Position descend(Position current) {
+
+		initLevelsMap();
+
 		Position next = new Position();
 		next.levelDepth = current.levelDepth + 1;
-		next.levelKind  = depthToKind(next.levelDepth);
-		
-		
+		next.levelKind = depthToKind(next.levelDepth);
+
 		if (next.levelDepth == 6) {
 			if (current.cellId == Dungeon.level.secondaryExit) {
 				next.levelKind = SPIDER_LEVEL;
-				next.xs = 16 + (next.levelDepth-6) * 16;
-				next.ys = 16 + (next.levelDepth-6) * 16;
+				next.xs = 16 + (next.levelDepth - 6) * 16;
+				next.ys = 16 + (next.levelDepth - 6) * 16;
 			}
 		}
-		
-		if(current.levelKind.equals(SPIDER_LEVEL)) {
+
+		if (current.levelKind.equals(SPIDER_LEVEL)) {
 			next.levelKind = SPIDER_LEVEL;
 		}
-		
+
 		return next;
 	}
-	
+
 	public static Level createLevel(Position pos) {
-		if(!levelTypes.containsKey(pos.levelKind)) {
+		if (!levelTypes.containsKey(pos.levelKind)) {
 			GLog.w("Unknown level type: %s", pos.levelKind);
 			pos.levelKind = DEAD_END_LEVEL;
 			return createLevel(pos);
 		}
 		return levelTypes.get(pos.levelKind).create();
 	}
-	
+
 	private static Map<String, LevelKind> levelTypes() {
 		Map<String, LevelKind> lmap = new HashMap<String, LevelKind>();
-		
-		lmap.put(SEWER_LEVEL,          LevelKind.SEWER_LEVEL);
-		lmap.put(SEWER_BOSS_LEVEL,     LevelKind.SEWER_BOSS_LEVEL);
-		lmap.put(PRISON_LEVEL,         LevelKind.PRISON_LEVEL);
-		lmap.put(PRISON_BOSS_LEVEL,    LevelKind.PRISON_BOSS_LEVEL);
-		lmap.put(CAVES_LEVEL,          LevelKind.CAVES_LEVEL);
-		lmap.put(CAVES_BOSS_LEVEL,     LevelKind.CAVES_BOSS_LEVEL);
-		lmap.put(CITY_LEVEL,           LevelKind.CITY_LEVEL);
-		lmap.put(CITY_BOSS_LEVEL,      LevelKind.CITY_BOSS_LEVEL);
-		lmap.put(HALLS_LEVEL,          LevelKind.HALLS_LEVEL);
-		lmap.put(HALLS_BOSS_LEVEL,     LevelKind.HALLS_BOSS_LEVEL);
-		lmap.put(LAST_SHOP_LEVEL,      LevelKind.LAST_SHOP_LEVEL);
-		lmap.put(LAST_LEVEL,           LevelKind.LAST_LEVEL);
-		lmap.put(SPIDER_LEVEL,         LevelKind.SPIDER_LEVEL);
-		lmap.put(DEAD_END_LEVEL,       LevelKind.DEAD_END_LEVEL);
-		
+
+		lmap.put(SEWER_LEVEL, LevelKind.SEWER_LEVEL);
+		lmap.put(SEWER_BOSS_LEVEL, LevelKind.SEWER_BOSS_LEVEL);
+		lmap.put(PRISON_LEVEL, LevelKind.PRISON_LEVEL);
+		lmap.put(PRISON_BOSS_LEVEL, LevelKind.PRISON_BOSS_LEVEL);
+		lmap.put(CAVES_LEVEL, LevelKind.CAVES_LEVEL);
+		lmap.put(CAVES_BOSS_LEVEL, LevelKind.CAVES_BOSS_LEVEL);
+		lmap.put(CITY_LEVEL, LevelKind.CITY_LEVEL);
+		lmap.put(CITY_BOSS_LEVEL, LevelKind.CITY_BOSS_LEVEL);
+		lmap.put(HALLS_LEVEL, LevelKind.HALLS_LEVEL);
+		lmap.put(HALLS_BOSS_LEVEL, LevelKind.HALLS_BOSS_LEVEL);
+		lmap.put(LAST_SHOP_LEVEL, LevelKind.LAST_SHOP_LEVEL);
+		lmap.put(LAST_LEVEL, LevelKind.LAST_LEVEL);
+		lmap.put(SPIDER_LEVEL, LevelKind.SPIDER_LEVEL);
+		lmap.put(DEAD_END_LEVEL, LevelKind.DEAD_END_LEVEL);
+
 		return lmap;
 	}
 
 	private static String depthToKind(int depth) {
-		
+
 		switch (depth) {
 		case 1:
 		case 2:
@@ -141,27 +216,46 @@ public class DungeonGenerator {
 	}
 
 	public static void showStory(Level level) {
-		if(level.levelKind().equals(SPIDER_LEVEL)) {
-			WndStory.showChapter( WndStory.ID_SPIDERS );
-		}	else {
+		if (level.levelKind().equals(SPIDER_LEVEL)) {
+			WndStory.showChapter(WndStory.ID_SPIDERS);
+		} else {
 			switch (Dungeon.depth) {
 			case 1:
-				WndStory.showChapter( WndStory.ID_SEWERS );
+				WndStory.showChapter(WndStory.ID_SEWERS);
 				break;
 			case 6:
-				WndStory.showChapter( WndStory.ID_PRISON );
+				WndStory.showChapter(WndStory.ID_PRISON);
 				break;
 			case 11:
-				WndStory.showChapter( WndStory.ID_CAVES );
+				WndStory.showChapter(WndStory.ID_CAVES);
 				break;
 			case 16:
-				WndStory.showChapter( WndStory.ID_METROPOLIS );
+				WndStory.showChapter(WndStory.ID_METROPOLIS);
 				break;
 			case 22:
-				WndStory.showChapter( WndStory.ID_HALLS );
+				WndStory.showChapter(WndStory.ID_HALLS);
 				break;
 			}
 		}
-		
+
+	}
+
+	public static String guessLevelId(String levelKind, int levelDepth) {
+		try {
+			JSONArray ids = mLevels.names();
+			for (int i = 0; i < ids.length(); i++) {
+				String id = ids.getString(i);
+				JSONObject levelDesc = mLevels.getJSONObject(id);
+
+				if (levelDesc.has(levelKind)) {
+					if (levelDesc.getInt(levelKind) == levelDepth) {
+						return id;
+					}
+				}
+			}
+		} catch (JSONException e) {
+			throw new RuntimeException(e);
+		}
+		return "1";
 	}
 }

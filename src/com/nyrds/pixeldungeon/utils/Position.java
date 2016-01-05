@@ -8,11 +8,14 @@ public class Position implements Bundlable {
 	public int    levelDepth = -1;
 	public int    cellId     = -1;
 	public String levelKind  = "DeadEndLevel";
+	public String levelId;
 	public int    xs         = 32;
 	public int    ys         = 32;
 	
+	
 	static final String LEVEL_DEPTH = "levelDepth";
 	static final String LEVEL_KIND  = "levelKind";
+	static final String LEVEL_ID    = "levelId";
 	static final String CELL_ID     = "cellId";
 
 	public Position(String _levelKind, int _levelDepth, int _cellId){
@@ -33,6 +36,7 @@ public class Position implements Bundlable {
 		levelDepth = bundle.getInt(LEVEL_DEPTH);
 		levelKind  = bundle.getString(LEVEL_KIND);
 		cellId     = bundle.getInt(CELL_ID);
+		levelId    = bundle.optString(LEVEL_ID, DungeonGenerator.guessLevelId(levelKind,levelDepth));
 	}
 
 	@Override
