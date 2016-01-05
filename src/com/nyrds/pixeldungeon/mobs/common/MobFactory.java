@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Bat;
 import com.watabou.pixeldungeon.actors.mobs.Brute;
 import com.watabou.pixeldungeon.actors.mobs.Crab;
@@ -21,19 +22,24 @@ import com.watabou.pixeldungeon.actors.mobs.Gnoll;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
 import com.watabou.pixeldungeon.actors.mobs.King;
+import com.watabou.pixeldungeon.actors.mobs.Mimic;
+import com.watabou.pixeldungeon.actors.mobs.MimicPie;
 import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
+import com.watabou.pixeldungeon.actors.mobs.Piranha;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.Scorpio;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Shaman;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.actors.mobs.Spinner;
+import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.actors.mobs.Succubus;
 import com.watabou.pixeldungeon.actors.mobs.Swarm;
 import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
+import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.actors.mobs.Yog.BurningFist;
 import com.watabou.pixeldungeon.actors.mobs.Yog.Larva;
@@ -95,6 +101,12 @@ public class MobFactory {
 		registerMobClass(RottingFist.class);
 		
 		registerMobClass(FetidRat.class);
+		
+		registerMobClass(Wraith.class);
+		registerMobClass(Mimic.class);
+		registerMobClass(MimicPie.class);
+		registerMobClass(Statue.class);
+		registerMobClass(Piranha.class);
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {
@@ -114,9 +126,10 @@ public class MobFactory {
 		Class<? extends Mob> mobClass = mMobsList.get(selectedMobClass);
 		if(mobClass != null) {
 			return mobClass;
+		} else {
+			Game.toast("Unknown mob: [%s], spawning Rat instead",selectedMobClass);
+			return Rat.class;
 		}
-		
-		return null;
 	}
 
 }
