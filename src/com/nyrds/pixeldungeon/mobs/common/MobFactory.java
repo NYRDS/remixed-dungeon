@@ -39,6 +39,7 @@ import com.watabou.pixeldungeon.actors.mobs.Yog.BurningFist;
 import com.watabou.pixeldungeon.actors.mobs.Yog.Larva;
 import com.watabou.pixeldungeon.actors.mobs.Yog.RottingFist;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
+import com.watabou.utils.Random;
 
 
 public class MobFactory {
@@ -94,6 +95,14 @@ public class MobFactory {
 		registerMobClass(RottingFist.class);
 		
 		registerMobClass(FetidRat.class);
+	}
+	
+	public static Class<? extends Mob> mobClassRandom() {
+		if(mMobsList==null) {
+			initMobsMap();
+		}
+		
+		return Random.element(mMobsList.values());
 	}
 	
 	public static Class<? extends Mob> mobClassByName(String selectedMobClass) {
