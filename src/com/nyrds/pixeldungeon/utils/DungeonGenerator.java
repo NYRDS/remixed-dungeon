@@ -54,7 +54,6 @@ public class DungeonGenerator {
 	}
 
 	private static void initLevelsMap() {
-
 		if (mLevelKindList != null) {
 			return;
 		}
@@ -110,17 +109,25 @@ public class DungeonGenerator {
 
 	private static Position descendOrAscend(Position current, boolean descend) {
 		initLevelsMap();
-
+		
 		try {
+			
+			if(current.levelId.equals("unknown")) {
+				current.levelId = guessLevelId(current.levelKind, current.levelDepth);
+			}
+			
 			JSONArray currentLevel = mGraph.getJSONArray(current.levelId);
 
 			JSONArray nextLevelSet = currentLevel.getJSONArray(descend ? 0 : 1);
-
+			Position next = new Position();
 			int index = 0;
+			
+			next.cellId = -1;
 
-			if (descend) {
+			if (descend && current.levelId != getEntryLevel()) {
 				if (Dungeon.level != null) {
 					if (current.cellId == Dungeon.level.secondaryExit) {
+						next.cellId = -2;
 						index = 1;
 					}
 				}
@@ -130,7 +137,7 @@ public class DungeonGenerator {
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(nextLevelId);
 
-			Position next = new Position();
+			
 
 			next.levelId    = nextLevelId;
 			next.levelDepth = nextLevelDesc.getInt("depth");

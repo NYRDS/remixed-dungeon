@@ -224,6 +224,7 @@ public class Hero extends Char {
 	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
 	private static final String LEVEL_KIND = "levelKind";
+	private static final String LEVEL_ID = "levelId";
 	private static final String DIFFICULTY = "difficulty";
 	private static final String PETS = "pets";
 
@@ -254,6 +255,7 @@ public class Hero extends Char {
 		bundle.put(LEVEL, lvl);
 		bundle.put(EXPERIENCE, exp);
 		bundle.put(LEVEL_KIND, levelKind);
+		bundle.put(LEVEL_ID, levelId);
 		bundle.put(DIFFICULTY, getDifficulty());
 
 		refreshPets();
@@ -279,6 +281,7 @@ public class Hero extends Char {
 		lvl = bundle.getInt(LEVEL);
 		exp = bundle.getInt(EXPERIENCE);
 		levelKind = bundle.getString(LEVEL_KIND);
+		levelId   = bundle.optString(LEVEL_ID,"unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
 		Collection<Bundlable> _pets = bundle.getCollection(PETS);

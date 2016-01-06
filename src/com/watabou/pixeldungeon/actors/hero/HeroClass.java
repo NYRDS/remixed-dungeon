@@ -141,7 +141,7 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		//	initDebug(hero);
+		//initDebug(hero);
 		
 		if(PixelDungeon.isAlpha()) {
 			hero.collect(new SacrificialSword());
