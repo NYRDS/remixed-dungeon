@@ -208,7 +208,6 @@ public class RankingsScene extends PixelScene {
 
 	private void createRecords() {
 		int w = Camera.main.width;
-		int h = Camera.main.height;
 
 		float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
 
