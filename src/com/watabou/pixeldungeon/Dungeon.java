@@ -197,7 +197,7 @@ public class Dungeon {
 		initSizeDependentStuff(level.getWidth(),level.getHeight());
 		
 		level.reset();
-		switchLevel( level, level.entrance );
+		switchLevel( level, level.entrance, hero.levelId );
 	}
 	
 	public static String tip() {		
@@ -234,7 +234,7 @@ public class Dungeon {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static void switchLevel( final Level level, int pos ) {
+	public static void switchLevel( final Level level, int pos, String levelId ) {
 		
 		nightMode = new Date().getHours() < 7;
 		
@@ -249,6 +249,7 @@ public class Dungeon {
 		
 		hero.setPos(pos);
 		hero.levelKind = level.levelKind();
+		hero.levelId   = levelId;
 		
 		if(!level.cellValid(hero.getPos())) {
 			hero.setPos(level.entrance);

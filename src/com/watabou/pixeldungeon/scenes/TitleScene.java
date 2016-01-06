@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -31,11 +32,9 @@ import com.watabou.pixeldungeon.effects.Fireball;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
-import com.watabou.pixeldungeon.ui.ModdingButton;
 import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
-import com.nyrds.pixeldungeon.ml.R;
 
 public class TitleScene extends PixelScene {
 
@@ -168,15 +167,8 @@ public class TitleScene extends PixelScene {
 		btnPrefs.setPos(0, 0);
 		add(btnPrefs);
 
-		ModdingButton btnModding = new ModdingButton();
-		btnModding.setPos(0, btnPrefs.bottom() + 2);
-		
 		ModsButton btnMods = new ModsButton();
-		btnMods.setPos(0, btnModding.bottom() + 2);
-
-		if(PixelDungeon.isAlpha()) {
-			add(btnModding);
-		}
+		btnMods.setPos(0, btnPrefs.bottom() + 2);
 		
 		add(btnMods);
 		

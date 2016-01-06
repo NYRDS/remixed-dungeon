@@ -18,7 +18,6 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -142,9 +141,8 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 		
-		if (ModdingMode.mode()) {
-			initDebug(hero);
-		}
+		//	initDebug(hero);
+		
 		if(PixelDungeon.isAlpha()) {
 			hero.collect(new SacrificialSword());
 		}

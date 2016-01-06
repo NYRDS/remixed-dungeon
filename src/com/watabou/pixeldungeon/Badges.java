@@ -209,10 +209,8 @@ public class Badges {
 		local = restore( bundle );
 	}
 	
-	public static void saveLocal( Bundle bundle ) {
-		if (!ModdingMode.mode()) {
-			store( bundle, local );
-		}
+	public static void saveLocal( Bundle bundle ) { 
+		store( bundle, local );
 	}
 	
 	public static void loadGlobal() {
@@ -231,7 +229,7 @@ public class Badges {
 	}
 	
 	public static void saveGlobal() {
-		if (ModdingMode.mode()) {
+		if (ModdingMode.inMod()) {
 			return;
 		}
 		

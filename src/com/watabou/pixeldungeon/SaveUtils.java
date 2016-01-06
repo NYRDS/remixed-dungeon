@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon;
 import java.io.File;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -187,9 +186,6 @@ public class SaveUtils {
 
 	public static String gameFile(HeroClass cl) {
 
-		if (ModdingMode.mode()) {
-			return "modding.dat";
-		}
 		switch (cl) {
 		case WARRIOR:
 			return WR_GAME_FILE;
@@ -211,10 +207,6 @@ public class SaveUtils {
 	}
 
 	private static String _depthFile(HeroClass cl) {
-
-		if (ModdingMode.mode()) {
-			return "modding%d.dat";
-		}
 
 		switch (cl) {
 		case WARRIOR:

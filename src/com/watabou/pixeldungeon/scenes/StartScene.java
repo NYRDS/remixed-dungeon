@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import java.util.HashMap;
 import java.util.Locale;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -46,8 +47,6 @@ import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.R;
 
 public class StartScene extends PixelScene {
 
@@ -217,7 +216,7 @@ public class StartScene extends PixelScene {
 		unlockElf = new Group();
 		add(unlockElf);
 
-		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1) || ModdingMode.mode() )) {
+		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1) )) {
 			Text text = PixelScene
 					.createMultiline(TXT_UNLOCK, 9);
 			text.maxWidth((int) width);
@@ -233,7 +232,7 @@ public class StartScene extends PixelScene {
 
 		}
 
-		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) || ModdingMode.mode() )) {
+		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) )) {
 			Text text = PixelScene
 					.createMultiline(TXT_UNLOCK_ELF, 9);
 			text.maxWidth((int) width);

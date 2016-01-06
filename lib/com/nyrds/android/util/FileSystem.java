@@ -51,12 +51,6 @@ public class FileSystem {
 	}
 
 	static public File getFile(String fname) {
-		if (ModdingMode.mode()) {
-			File ret = getExternalStorageFile(fname);
-			if (ret.exists()) {
-				return ret;
-			}
-		}
 		return getInteralStorageFile(fname);
 	}
 

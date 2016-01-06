@@ -51,10 +51,6 @@ public enum Rankings {
 	
 	public void submit( gameOver winLevel ) {
 		
-		if(ModdingMode.mode()) {
-			return;
-		}
-		
 		load();
 		
 		Record rec = new Record();

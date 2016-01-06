@@ -10,19 +10,10 @@ import android.content.Context;
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
 	
-	static private boolean mMode = false;
 	static private String mActiveMod = REMIXED;
 	static private Context mContext;
 
 	static private boolean mTextRenderingMode = false;
-
-	public static boolean mode() {
-		return mMode;
-	}
-
-	public static void mode(boolean mMode) {
-		ModdingMode.mMode = mMode;
-	}
 
 	public static void selectMod(String mod) {
 		File modPath = FileSystem.getExternalStorageFile(mod);

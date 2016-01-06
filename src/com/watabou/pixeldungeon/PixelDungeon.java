@@ -65,10 +65,8 @@ public class PixelDungeon extends GameWithGoogleIap {
 		
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
-			PixelDungeon.moddingMode(false);
 		}
 		
-		ModdingMode.mode(PixelDungeon.moddingMode());
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
 		
@@ -352,15 +350,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public static String activeMod() {
 		return Preferences.INSTANCE.getString(Preferences.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
 	}
-	
-	public static boolean moddingMode() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_MODDING_MODE, false);
-	}
 
-	public static void moddingMode(boolean value) {
-		Preferences.INSTANCE.put(Preferences.KEY_MODDING_MODE, value);
-	}
-	
 	private static Boolean realtimeCached = null;
 	public static boolean realtime() {
 		if(realtimeCached == null) {

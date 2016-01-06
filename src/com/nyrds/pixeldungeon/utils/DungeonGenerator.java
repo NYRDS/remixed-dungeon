@@ -87,6 +87,7 @@ public class DungeonGenerator {
 	}
 
 	public static String getEntryLevelKind() {
+		initLevelsMap();
 		try {
 			return mLevels.getJSONObject(getEntryLevel()).getString("kind");
 		} catch (JSONException e) {
@@ -95,6 +96,7 @@ public class DungeonGenerator {
 	}
 
 	public static String getEntryLevel() {
+		initLevelsMap();
 		try {
 			return mDungeonMap.getString("Entrance");
 		} catch (JSONException e) {
@@ -112,22 +114,25 @@ public class DungeonGenerator {
 		try {
 			JSONArray currentLevel = mGraph.getJSONArray(current.levelId);
 
-			JSONArray nextLevelSet = currentLevel.getJSONArray(0);
+			JSONArray nextLevelSet = currentLevel.getJSONArray(descend ? 0 : 1);
 
 			int index = 0;
 
 			if (descend) {
-				if (current.cellId == Dungeon.level.secondaryExit) {
-					index = 1;
+				if (Dungeon.level != null) {
+					if (current.cellId == Dungeon.level.secondaryExit) {
+						index = 1;
+					}
 				}
 			}
 
-			String nextLevelId = nextLevelSet.getJSONArray(descend ? 0 : 1).getString(index);
+			String nextLevelId = nextLevelSet.getString(index);
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(nextLevelId);
 
 			Position next = new Position();
 
+			next.levelId    = nextLevelId;
 			next.levelDepth = nextLevelDesc.getInt("depth");
 			next.levelKind = nextLevelDesc.getString("kind");
 
@@ -147,8 +152,8 @@ public class DungeonGenerator {
 	}
 
 	public static Level createLevel(Position pos) {
-		Class <? extends Level> levelClass = mLevelKindList.get(pos.levelKind);
-		if (levelClass==null) {
+		Class<? extends Level> levelClass = mLevelKindList.get(pos.levelKind);
+		if (levelClass == null) {
 			GLog.w("Unknown level type: %s", pos.levelKind);
 			pos.levelKind = DEAD_END_LEVEL;
 			return createLevel(pos);
@@ -180,6 +185,8 @@ public class DungeonGenerator {
 	}
 
 	public static String guessLevelId(String levelKind, int levelDepth) {
+		initLevelsMap();
+
 		try {
 			JSONArray ids = mLevels.names();
 			for (int i = 0; i < ids.length(); i++) {

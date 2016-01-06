@@ -9,7 +9,7 @@
       "7":{"kind":"PrisonLevel", "depth":7,       "size":[32,32]},
       "8":{"kind":"PrisonLevel", "depth":8,       "size":[32,32]},
       "9":{"kind":"PrisonLevel", "depth":9,       "size":[32,32]},
-      "10":{"kind":"PrisonBossLevel", "depth":10, "size":[32,32]}
+      "10":{"kind":"PrisonBossLevel", "depth":10, "size":[32,32]},
       "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16]},
       "7s":{"kind":"SpiderLevel", "depth":7,      "size":[32,32]},
       "8s":{"kind":"SpiderLevel", "depth":8,      "size":[48,48]},
@@ -58,12 +58,12 @@
       "23":[["24"],["22"]],
       "24":[["25"],["23"]],
       "25":[["26"],["24"]],
-      "26":[[],["25"]]
+      "26":[[],["25"]],
       "6s":[["7s"],["5"]],
       "7s":[["8s"],["6s"]],
       "8s":[["9s"],["7s"]],
       "9s":[["10s"],["8s"]],
-      "10s":[[],["9s"]],
+      "10s":[[],["9s"]]
    },
    "Entrance":"1"
 }
