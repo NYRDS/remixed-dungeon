@@ -141,8 +141,9 @@ public class Dungeon {
 		Badges.reset();
 		
 		heroClass.initHero( hero );
-		hero.levelKind = "SewerLevel";
-		hero.levelId = DungeonGenerator.getEntryLevel();
+		
+		hero.levelKind = DungeonGenerator.getEntryLevelKind();
+		hero.levelId    = DungeonGenerator.getEntryLevel();
 		
 		SaveUtils.deleteLevels(heroClass);
 	}
@@ -650,7 +651,7 @@ public class Dungeon {
 	}
 	
 	public static Position currentPosition() {
-		return new Position(hero.levelKind, depth, hero.getPos());
+		return new Position(hero.levelKind, hero.levelId, depth, hero.getPos());
 	}
 
 	private static int difficulty;

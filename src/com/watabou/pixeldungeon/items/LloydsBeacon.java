@@ -24,6 +24,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -78,7 +79,10 @@ public class LloydsBeacon extends Item {
 		
 		returnTo = (Position) bundle.get(POSITION);
 		if(returnTo == null) { //pre remix.19.0 code, remove in future
-			returnTo = new Position("unknown",  bundle.getInt( DEPTH ),  bundle.getInt( POS ));
+			returnTo = new Position(DungeonGenerator.getEntryLevelKind(),
+									DungeonGenerator.getEntryLevel(),
+									bundle.getInt( DEPTH ),
+									bundle.getInt( POS ));
 		}
 	}
 	

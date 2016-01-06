@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.actors.mobs.Spinner;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.actors.mobs.Succubus;
 import com.watabou.pixeldungeon.actors.mobs.Swarm;
+import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
@@ -71,6 +72,7 @@ public class MobFactory {
 		registerMobClass(Shadow.class);
 		registerMobClass(Bat.class);
 		registerMobClass(Brute.class);
+		registerMobClass(Tengu.class);
 		
 		registerMobClass(SpiderServant.class);
 		registerMobClass(SpiderExploding.class);

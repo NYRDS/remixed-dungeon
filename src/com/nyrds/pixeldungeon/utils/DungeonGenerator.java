@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,13 +42,12 @@ public class DungeonGenerator {
 	public static final String SEWER_LEVEL = "SewerLevel";
 	public static final String SPIDER_LEVEL = "SpiderLevel";
 
-	private static Map<String, LevelKind> levelTypes = levelTypes();
-
 	static JSONObject mDungeonMap;
 	static JSONObject mLevels;
 	static JSONObject mGraph;
 
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
+	private static HashMap<String, Integer> mStoryMap;
 
 	private static void registerLevelClass(Class<? extends Level> levelClass) {
 		mLevelKindList.put(levelClass.getSimpleName(), levelClass);
@@ -88,6 +86,14 @@ public class DungeonGenerator {
 		registerLevelClass(DeadEndLevel.class);
 	}
 
+	public static String getEntryLevelKind() {
+		try {
+			return mLevels.getJSONObject(getEntryLevel()).getString("kind");
+		} catch (JSONException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 	public static String getEntryLevel() {
 		try {
 			return mDungeonMap.getString("Entrance");
@@ -97,147 +103,80 @@ public class DungeonGenerator {
 	}
 
 	public static Position ascend(Position current) {
+		return descendOrAscend(current, false);
+	}
 
+	private static Position descendOrAscend(Position current, boolean descend) {
 		initLevelsMap();
 
-		Position next = new Position();
-		next.levelDepth = current.levelDepth - 1;
-		next.levelKind = depthToKind(next.levelDepth);
-		next.cellId = -1;
+		try {
+			JSONArray currentLevel = mGraph.getJSONArray(current.levelId);
 
-		if (current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth != 5) {
-			next.levelKind = SPIDER_LEVEL;
+			JSONArray nextLevelSet = currentLevel.getJSONArray(0);
+
+			int index = 0;
+
+			if (descend) {
+				if (current.cellId == Dungeon.level.secondaryExit) {
+					index = 1;
+				}
+			}
+
+			String nextLevelId = nextLevelSet.getJSONArray(descend ? 0 : 1).getString(index);
+
+			JSONObject nextLevelDesc = mLevels.getJSONObject(nextLevelId);
+
+			Position next = new Position();
+
+			next.levelDepth = nextLevelDesc.getInt("depth");
+			next.levelKind = nextLevelDesc.getString("kind");
+
+			JSONArray levelSize = nextLevelDesc.getJSONArray("size");
+			next.xs = levelSize.getInt(0);
+			next.ys = levelSize.getInt(1);
+
+			return next;
+		} catch (JSONException e) {
+			throw new RuntimeException(e);
 		}
 
-		if (current.levelKind.equals(SPIDER_LEVEL) && next.levelDepth == 5) {
-			next.cellId = -2;
-		}
-
-		return next;
 	}
 
 	public static Position descend(Position current) {
-
-		initLevelsMap();
-
-		Position next = new Position();
-		next.levelDepth = current.levelDepth + 1;
-		next.levelKind = depthToKind(next.levelDepth);
-
-		if (next.levelDepth == 6) {
-			if (current.cellId == Dungeon.level.secondaryExit) {
-				next.levelKind = SPIDER_LEVEL;
-				next.xs = 16 + (next.levelDepth - 6) * 16;
-				next.ys = 16 + (next.levelDepth - 6) * 16;
-			}
-		}
-
-		if (current.levelKind.equals(SPIDER_LEVEL)) {
-			next.levelKind = SPIDER_LEVEL;
-		}
-
-		return next;
+		return descendOrAscend(current, true);
 	}
 
 	public static Level createLevel(Position pos) {
-		if (!levelTypes.containsKey(pos.levelKind)) {
+		Class <? extends Level> levelClass = mLevelKindList.get(pos.levelKind);
+		if (levelClass==null) {
 			GLog.w("Unknown level type: %s", pos.levelKind);
 			pos.levelKind = DEAD_END_LEVEL;
 			return createLevel(pos);
 		}
-		return levelTypes.get(pos.levelKind).create();
-	}
-
-	private static Map<String, LevelKind> levelTypes() {
-		Map<String, LevelKind> lmap = new HashMap<String, LevelKind>();
-
-		lmap.put(SEWER_LEVEL, LevelKind.SEWER_LEVEL);
-		lmap.put(SEWER_BOSS_LEVEL, LevelKind.SEWER_BOSS_LEVEL);
-		lmap.put(PRISON_LEVEL, LevelKind.PRISON_LEVEL);
-		lmap.put(PRISON_BOSS_LEVEL, LevelKind.PRISON_BOSS_LEVEL);
-		lmap.put(CAVES_LEVEL, LevelKind.CAVES_LEVEL);
-		lmap.put(CAVES_BOSS_LEVEL, LevelKind.CAVES_BOSS_LEVEL);
-		lmap.put(CITY_LEVEL, LevelKind.CITY_LEVEL);
-		lmap.put(CITY_BOSS_LEVEL, LevelKind.CITY_BOSS_LEVEL);
-		lmap.put(HALLS_LEVEL, LevelKind.HALLS_LEVEL);
-		lmap.put(HALLS_BOSS_LEVEL, LevelKind.HALLS_BOSS_LEVEL);
-		lmap.put(LAST_SHOP_LEVEL, LevelKind.LAST_SHOP_LEVEL);
-		lmap.put(LAST_LEVEL, LevelKind.LAST_LEVEL);
-		lmap.put(SPIDER_LEVEL, LevelKind.SPIDER_LEVEL);
-		lmap.put(DEAD_END_LEVEL, LevelKind.DEAD_END_LEVEL);
-
-		return lmap;
-	}
-
-	private static String depthToKind(int depth) {
-
-		switch (depth) {
-		case 1:
-		case 2:
-		case 3:
-		case 4:
-			return SEWER_LEVEL;
-		case 5:
-			return SEWER_BOSS_LEVEL;
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-			return PRISON_LEVEL;
-		case 10:
-			return PRISON_BOSS_LEVEL;
-		case 11:
-		case 12:
-		case 13:
-		case 14:
-			return CAVES_LEVEL;
-		case 15:
-			return CAVES_BOSS_LEVEL;
-		case 16:
-		case 17:
-		case 18:
-		case 19:
-			return CITY_LEVEL;
-		case 20:
-			return CITY_BOSS_LEVEL;
-		case 21:
-			return LAST_SHOP_LEVEL;
-		case 22:
-		case 23:
-		case 24:
-			return HALLS_LEVEL;
-		case 25:
-			return HALLS_BOSS_LEVEL;
-		case 26:
-			return LAST_LEVEL;
-		default:
-			return DEAD_END_LEVEL;
+		try {
+			return levelClass.newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			throw new RuntimeException(e);
 		}
 	}
 
 	public static void showStory(Level level) {
-		if (level.levelKind().equals(SPIDER_LEVEL)) {
-			WndStory.showChapter(WndStory.ID_SPIDERS);
-		} else {
-			switch (Dungeon.depth) {
-			case 1:
-				WndStory.showChapter(WndStory.ID_SEWERS);
-				break;
-			case 6:
-				WndStory.showChapter(WndStory.ID_PRISON);
-				break;
-			case 11:
-				WndStory.showChapter(WndStory.ID_CAVES);
-				break;
-			case 16:
-				WndStory.showChapter(WndStory.ID_METROPOLIS);
-				break;
-			case 22:
-				WndStory.showChapter(WndStory.ID_HALLS);
-				break;
-			}
+		if (mStoryMap == null) {
+			mStoryMap = new HashMap<>();
+			mStoryMap.put(SEWER_LEVEL, WndStory.ID_SEWERS);
+			mStoryMap.put(SPIDER_LEVEL, WndStory.ID_SPIDERS);
+			mStoryMap.put(PRISON_LEVEL, WndStory.ID_PRISON);
+			mStoryMap.put(CAVES_LEVEL, WndStory.ID_CAVES);
+			mStoryMap.put(CITY_LEVEL, WndStory.ID_METROPOLIS);
+			mStoryMap.put(HALLS_LEVEL, WndStory.ID_HALLS);
 		}
 
+		Integer id = mStoryMap.get(level.levelKind());
+		if (id == null) {
+			return;
+		}
+
+		WndStory.showChapter(id);
 	}
 
 	public static String guessLevelId(String levelKind, int levelDepth) {
@@ -247,8 +186,8 @@ public class DungeonGenerator {
 				String id = ids.getString(i);
 				JSONObject levelDesc = mLevels.getJSONObject(id);
 
-				if (levelDesc.has(levelKind)) {
-					if (levelDesc.getInt(levelKind) == levelDepth) {
+				if (levelDesc.getString("kind").equals(levelKind)) {
+					if (levelDesc.getInt("depth") == levelDepth) {
 						return id;
 					}
 				}

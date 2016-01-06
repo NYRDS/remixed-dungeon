@@ -18,14 +18,15 @@ public class Position implements Bundlable {
 	static final String LEVEL_ID    = "levelId";
 	static final String CELL_ID     = "cellId";
 
-	public Position(String _levelKind, int _levelDepth, int _cellId){
+	public Position(String _levelKind, String _levelId, int _levelDepth, int _cellId){
 		levelKind  = _levelKind;
+		levelId    = _levelId;
 		levelDepth = _levelDepth;
 		cellId     = _cellId;
 	}
 
 	public Position(Position pos) {
-		this(pos.levelKind, pos.levelDepth, pos.cellId);
+		this(pos.levelKind,pos.levelId, pos.levelDepth, pos.cellId);
 	}
 
 	public Position() {

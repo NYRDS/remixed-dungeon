@@ -167,6 +167,7 @@ public class Hero extends Char {
 	public int lvl = 1;
 	public int exp = 0;
 	public String levelKind;
+	public String levelId;
 
 	private ArrayList<Mob> visibleEnemies;
 	private Collection<Mob> pets = new ArrayList<Mob>();
@@ -176,8 +177,6 @@ public class Hero extends Char {
 	}
 
 	private int difficulty;
-
-	public String levelId;
 
 	public Hero() {
 		name = Game.getVar(R.string.Hero_Name);
