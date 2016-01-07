@@ -132,12 +132,24 @@ public class DungeonGenerator {
 					}
 				}
 			}
+			
+			if (descend == false) {
+				if(currentLevel.length()>2) {
+					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
+					switch (exitIndex) {
+					case 1:
+						next.cellId = -1;
+						break;
+					case 2:
+						next.cellId = -2;
+						break;
+					}
+				}
+			}
 
 			String nextLevelId = nextLevelSet.getString(index);
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(nextLevelId);
-
-			
 
 			next.levelId    = nextLevelId;
 			next.levelDepth = nextLevelDesc.getInt("depth");
