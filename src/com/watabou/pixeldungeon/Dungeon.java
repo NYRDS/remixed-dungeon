@@ -56,7 +56,6 @@ import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
-import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -152,18 +151,6 @@ public class Dungeon {
 		return (challenges & mask) != 0;
 	}
 	
-	public static Level testLevel() {
-		Dungeon.level = null;
-		
-		level = new SewerLevel();
-		
-		initSizeDependentStuff(64,64);
-		
-		level.create(64,64);
-		
-		return level;
-	}
-	
 	private static void updateStatistics() {
 		if (depth > Statistics.deepestFloor) {
 			Statistics.deepestFloor = depth;
@@ -180,7 +167,7 @@ public class Dungeon {
 		
 		Dungeon.level = null;
 		updateStatistics();
-		GLog.toFile("creating level: %s %d", pos.levelKind, pos.levelDepth);
+		GLog.toFile("creating level: %s %s %d", pos.levelId, pos.levelKind, pos.levelDepth);
 		Level level = DungeonGenerator.createLevel(pos);
 		
 		initSizeDependentStuff(pos.xs, pos.ys);
@@ -365,7 +352,7 @@ public class Dungeon {
 		
 		Position current =currentPosition();
 		
-		String saveTo = SaveUtils.depthFile( hero.heroClass, current.levelDepth, current.levelKind );		
+		String saveTo = SaveUtils.depthFileForSave( hero.heroClass, current.levelDepth, current.levelKind, current.levelId );
 		
 		GLog.toFile("saving level: %s", saveTo);
 		
@@ -474,7 +461,7 @@ public class Dungeon {
 	}
 	
 	public static Level loadLevel(Position next ) throws IOException {
-		String loadFrom = SaveUtils.depthFile( heroClass , next.levelDepth, next.levelKind);
+		String loadFrom = SaveUtils.depthFileForLoad( heroClass , next.levelDepth, next.levelKind, next.levelId);
 		
 		GLog.toFile("loading level: %s", loadFrom);
 		
@@ -491,8 +478,9 @@ public class Dungeon {
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
-		Level level = (Level)bundle.get( "level" );
+		Level level = Level.fromBundle(bundle, "level");
 		if(level != null){
+			level.levelId = next.levelId;
 			initSizeDependentStuff(level.getWidth(), level.getHeight());
 		} else {
 			GLog.toFile("cannot load %s !", loadFrom);

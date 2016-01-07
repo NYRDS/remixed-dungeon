@@ -140,9 +140,6 @@ public class SewerBossLevel extends RegularLevel {
 		
 		paintWater();
 		
-		secondaryExit = roomExit.random(this);
-		set(secondaryExit, Terrain.EXIT );
-		
 		paintGrass();
 		
 		placeTraps();

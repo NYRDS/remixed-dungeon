@@ -128,6 +128,8 @@ public abstract class Level implements Bundlable {
 	public int exit;
 	public int secondaryExit;
 	
+	public String levelId;
+	
 	public HashSet<Mob> mobs = new HashSet<Mob>();
 	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<Class<? extends Blob>, Blob>();
 	public SparseArray<Plant> plants = new SparseArray<Plant>();
@@ -154,6 +156,10 @@ public abstract class Level implements Bundlable {
 	private static final String HEIGHT = "height";
 	private static final String SECONDARY_EXIT = "secondaryExit";
 
+	public static Level fromBundle(Bundle bundle, String key) {
+		return (Level)bundle.get(key);
+	}
+	
 	public String levelKind() {
 		return this.getClass().getSimpleName();
 	}

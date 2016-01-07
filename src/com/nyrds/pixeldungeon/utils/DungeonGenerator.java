@@ -103,6 +103,14 @@ public class DungeonGenerator {
 		}
 	}
 
+	public static boolean needSecondaryExit(String levelId) {
+		try {
+			return mGraph.getJSONArray(levelId).getJSONArray(0).length() > 1;
+		} catch (JSONException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 	public static Position ascend(Position current) {
 		return descendOrAscend(current, false);
 	}
@@ -175,10 +183,13 @@ public class DungeonGenerator {
 		if (levelClass == null) {
 			GLog.w("Unknown level type: %s", pos.levelKind);
 			pos.levelKind = DEAD_END_LEVEL;
+			
 			return createLevel(pos);
 		}
 		try {
-			return levelClass.newInstance();
+			Level ret = levelClass.newInstance();
+			ret.levelId = pos.levelId;
+			return ret;
 		} catch (InstantiationException | IllegalAccessException e) {
 			throw new RuntimeException(e);
 		}

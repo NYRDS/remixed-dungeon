@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -34,6 +35,13 @@ public class BossExitPainter extends Painter {
 		
 		level.exit = room.top * level.getWidth() + (room.left + room.right) / 2;
 		set( level, level.exit, Terrain.LOCKED_EXIT );
+		
+		if(DungeonGenerator.needSecondaryExit(level.levelId)) {
+			do {
+				level.secondaryExit = room.random(level, 1);
+			} while (level.secondaryExit == level.exit);
+			set(level,level.secondaryExit, Terrain.EXIT);
+		}
 	}
 	
 }
