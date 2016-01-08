@@ -228,7 +228,7 @@ public class RankingsScene extends PixelScene {
 			}
 			Rankings.Record rec = Rankings.INSTANCE.records.get(i);
 
-			Record row = new Record(i, pos == Rankings.INSTANCE.lastRecord, rec);
+			Record row = new Record(i, i == Rankings.INSTANCE.lastRecord, rec);
 			row.setRect(left, top + pos * rowHeight, w - left * 2, rowHeight);
 			displayedRecords.add(row);
 			add(row);
