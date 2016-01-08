@@ -143,10 +143,6 @@ public enum HeroClass {
 		
 		//initDebug(hero);
 		
-		if(PixelDungeon.isAlpha()) {
-			hero.collect(new SacrificialSword());
-		}
-
 		QuickSlot.cleanStorage();
 	}
 
