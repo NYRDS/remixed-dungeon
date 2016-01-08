@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.Fireball;
 import com.watabou.pixeldungeon.ui.Archs;
+import com.watabou.pixeldungeon.ui.ChangelogButton;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.ModsButton;
@@ -181,6 +182,10 @@ public class TitleScene extends PixelScene {
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(w - btnExit.width(), 0);
 		add(btnExit);
+		
+		ChangelogButton btnChangelog = new ChangelogButton();
+		btnChangelog.setPos(w - btnChangelog.width(), btnExit.bottom() + 2);
+		add(btnChangelog);
 
 		fadeIn();
 	}
