@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.HashMap;
 
+import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker.Rotberry;
@@ -151,8 +152,9 @@ public class Generator {
 			Shuriken.class,
 			Boomerang.class,
 			Tamahawk.class,
-			Kusarigama.class};
-		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f };
+			Kusarigama.class,
+			SacrificialSword.class};
+		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f };
 		
 		Category.ARMOR.classes = new Class<?>[]{ 
 			ClothArmor.class, 
