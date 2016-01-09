@@ -7,6 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixedungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
@@ -83,6 +84,8 @@ public class DungeonGenerator {
 		registerLevelClass(HallsBossLevel.class);
 		registerLevelClass(LastLevel.class);
 		registerLevelClass(DeadEndLevel.class);
+		
+		registerLevelClass(PredesignedLevel.class);
 	}
 
 	public static String getEntryLevelKind() {
@@ -187,10 +190,16 @@ public class DungeonGenerator {
 			return createLevel(pos);
 		}
 		try {
-			Level ret = levelClass.newInstance();
+			Level ret;
+			if(levelClass == PredesignedLevel.class) {
+				String levelFile = mLevels.getJSONObject(pos.levelId).getString("file");
+				ret = new PredesignedLevel(levelFile);
+			} else {
+				ret = levelClass.newInstance();
+			}
 			ret.levelId = pos.levelId;
 			return ret;
-		} catch (InstantiationException | IllegalAccessException e) {
+		} catch (InstantiationException | IllegalAccessException | JSONException e) {
 			throw new RuntimeException(e);
 		}
 	}

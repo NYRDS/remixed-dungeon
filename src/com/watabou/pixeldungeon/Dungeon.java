@@ -173,7 +173,7 @@ public class Dungeon {
 
 		level.create(pos.xs, pos.ys);
 
-		Statistics.qualifiedForNoKilling = !bossLevel();
+		Statistics.qualifiedForNoKilling = !level.isBossLevel();
 
 		return level;
 	}

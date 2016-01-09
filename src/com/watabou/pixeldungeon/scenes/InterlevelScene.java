@@ -278,7 +278,7 @@ public class InterlevelScene extends PixelScene {
 			level = Dungeon.newLevel(next);
 		}
 		
-		Dungeon.switchLevel(level, level.entrance,next.levelId);
+		Dungeon.switchLevel(level, level.entrance, next.levelId);
 		
 		Dungeon.hero.spawnPets();
 	}
