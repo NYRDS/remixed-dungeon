@@ -144,10 +144,6 @@ public class CityBossLevel extends Level {
 	protected void createMobs() {	
 	}
 	
-	public Actor respawner() {
-		return null;
-	}
-	
 	@Override
 	protected void createItems() {
 		Item item = Bones.get();
@@ -163,8 +159,8 @@ public class CityBossLevel extends Level {
 	}
 	
 	@Override
-	public int randomRespawnCell() {
-		return -1;
+	public boolean isBossLevel() {
+		return true;
 	}
 	
 	@Override

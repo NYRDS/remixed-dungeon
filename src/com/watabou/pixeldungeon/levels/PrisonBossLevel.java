@@ -280,10 +280,6 @@ public class PrisonBossLevel extends RegularLevel {
 	protected void createMobs() {
 	}
 	
-	public Actor respawner() {
-		return null;
-	}
-	
 	@Override
 	protected void createItems() {
 
@@ -347,8 +343,8 @@ public class PrisonBossLevel extends RegularLevel {
 	}
 	
 	@Override
-	public int randomRespawnCell() {
-		return -1;
+	public boolean isBossLevel() {
+		return true;
 	}
 	
 	@Override

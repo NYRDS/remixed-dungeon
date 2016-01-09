@@ -243,7 +243,7 @@ public abstract class Level implements Bundlable {
 
 		initSizeDependentStuff();
 
-		if (!Dungeon.bossLevel()) {
+		if (!isBossLevel()) {
 			addItemToSpawn(Generator.random(Generator.Category.FOOD));
 			if (Dungeon.posNeeded()) {
 				addItemToSpawn(new PotionOfStrength());
@@ -273,9 +273,7 @@ public abstract class Level implements Bundlable {
 			if (Dungeon.depth > 1) {
 				switch (Random.Int(10)) {
 				case 0:
-					if (!Dungeon.bossLevel(Dungeon.depth + 1)) {
-						feeling = Feeling.CHASM;
-					}
+					feeling = Feeling.CHASM;
 					break;
 				case 1:
 					feeling = Feeling.WATER;
@@ -482,6 +480,10 @@ public abstract class Level implements Bundlable {
 	}
 
 	public Actor respawner() {
+		if(isBossLevel()) {
+			return null;
+		}
+		
 		return new Actor() {
 			@Override
 			protected boolean act() {
@@ -521,6 +523,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int randomRespawnCell() {
+		
+		if(isBossLevel()) {
+			return -1;
+		}
+		
 		int cell;
 		do {
 			cell = Random.Int(getLength());
@@ -1173,6 +1180,13 @@ public abstract class Level implements Bundlable {
 		return -1;
 	}
 	
+	public boolean isBossLevel () {
+		return false;
+	}
+
 	public void seal() {
+	}
+	
+	public void unseal() {
 	}
 }

@@ -190,10 +190,6 @@ public class SewerBossLevel extends RegularLevel {
 		mobs.add( mob );
 	}
 	
-	public Actor respawner() {
-		return null;
-	}
-	
 	@Override
 	protected void createItems() {
 		Item item = Bones.get();
@@ -261,5 +257,10 @@ public class SewerBossLevel extends RegularLevel {
 		default:
 			return super.tileDesc( tile );
 		}
+	}
+	
+	@Override
+	public boolean isBossLevel() {
+		return true;
 	}
 }

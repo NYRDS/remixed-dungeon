@@ -132,11 +132,7 @@ public class HallsBossLevel extends Level {
 	}
 	
 	@Override
-	protected void createMobs() {	
-	}
-	
-	public Actor respawner() {
-		return null;
+	protected void createMobs() {
 	}
 	
 	@Override
@@ -152,8 +148,8 @@ public class HallsBossLevel extends Level {
 	}
 	
 	@Override
-	public int randomRespawnCell() {
-		return -1;
+	public boolean isBossLevel() {
+		return true;
 	}
 	
 	@Override

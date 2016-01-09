@@ -69,92 +69,91 @@ public class Dungeon {
 	public static int potionOfStrength;
 	public static int scrollsOfUpgrade;
 	public static int arcaneStyli;
-	public static boolean dewVial;		// true if the dew vial can be spawned
-	public static int transmutation;	// depth number for a well of transmutation
-	
+	public static boolean dewVial; // true if the dew vial can be spawned
+	public static int transmutation; // depth number for a well of transmutation
+
 	public static int challenges;
-	
+
 	public static Hero hero;
 	public static Level level;
-	
+
 	public static int depth;
 	public static int gold;
 	// Reason of death
 	public static String resultDescription;
-	
+
 	public static HashSet<Integer> chapters;
-	
+
 	// Hero's field of view
 	public static boolean[] visible;
-	
+
 	public static boolean nightMode;
-	
+
 	private static boolean[] passable;
-	
+
 	public static HeroClass heroClass;
 
 	private static void initSizeDependentStuff(int w, int h) {
-		int size = w*h;
+		int size = w * h;
 		Actor.clear(size);
 		visible = new boolean[size];
 		passable = new boolean[size];
-		
-		Arrays.fill( visible, false );
-		
-		PathFinder.setMapSize( w, h );
+
+		Arrays.fill(visible, false);
+
+		PathFinder.setMapSize(w, h);
 	}
-	
+
 	public static void init() {
 		challenges = PixelDungeon.challenges();
-		
+
 		Scroll.initLabels();
 		Potion.initColors();
 		Wand.initWoods();
 		Ring.initGems();
-		
+
 		Statistics.reset();
 		Journal.reset();
-		
+
 		depth = 0;
 		gold = 0;
-		
+
 		potionOfStrength = 0;
 		scrollsOfUpgrade = 0;
 		arcaneStyli = 0;
 		dewVial = true;
-		transmutation = Random.IntRange( 6, 14 );
-		
+		transmutation = Random.IntRange(6, 14);
+
 		chapters = new HashSet<Integer>();
-		
+
 		Ghost.Quest.reset();
 		WandMaker.Quest.reset();
 		Blacksmith.Quest.reset();
 		Imp.Quest.reset();
-		
+
 		Room.shuffleTypes();
-		
+
 		hero = new Hero(difficulty);
 		hero.live();
-		
-		
+
 		Badges.reset();
-		
-		heroClass.initHero( hero );
-		
+
+		heroClass.initHero(hero);
+
 		hero.levelKind = DungeonGenerator.getEntryLevelKind();
-		hero.levelId   = DungeonGenerator.getEntryLevel();
-		
+		hero.levelId = DungeonGenerator.getEntryLevel();
+
 		SaveUtils.deleteLevels(heroClass);
 	}
-	
-	public static boolean isChallenged( int mask ) {
+
+	public static boolean isChallenged(int mask) {
 		return (challenges & mask) != 0;
 	}
-	
+
 	private static void updateStatistics() {
 		if (depth > Statistics.deepestFloor) {
 			Statistics.deepestFloor = depth;
-			
+
 			if (Statistics.qualifiedForNoKilling) {
 				Statistics.completedWithNoKilling = true;
 			} else {
@@ -162,44 +161,44 @@ public class Dungeon {
 			}
 		}
 	}
-	
+
 	public static Level newLevel(Position pos) {
-		
+
 		Dungeon.level = null;
 		updateStatistics();
 		GLog.toFile("creating level: %s %s %d", pos.levelId, pos.levelKind, pos.levelDepth);
 		Level level = DungeonGenerator.createLevel(pos);
-		
+
 		initSizeDependentStuff(pos.xs, pos.ys);
 
 		level.create(pos.xs, pos.ys);
-		
+
 		Statistics.qualifiedForNoKilling = !bossLevel();
-		
+
 		return level;
 	}
-	
+
 	public static void resetLevel() {
-		
-		initSizeDependentStuff(level.getWidth(),level.getHeight());
-		
+
+		initSizeDependentStuff(level.getWidth(), level.getHeight());
+
 		level.reset();
-		switchLevel( level, level.entrance, hero.levelId );
+		switchLevel(level, level.entrance, hero.levelId);
 	}
-	
-	public static String tip() {		
+
+	public static String tip() {
 		if (level instanceof DeadEndLevel) {
-			
+
 			return Game.getVar(R.string.Dungeon_DeadEnd);
-			
+
 		} else {
 			String[] tips = Game.getVars(R.array.Dungeon_Tips);
 			int index = depth - 1;
-			
-			if( index == -1) {
+
+			if (index == -1) {
 				return "Welcome to test level";
 			}
-			
+
 			if (index < tips.length) {
 				return tips[index];
 			} else {
@@ -207,96 +206,94 @@ public class Dungeon {
 			}
 		}
 	}
-	
+
 	public static boolean shopOnLevel() {
 		return depth == 6 || depth == 11 || depth == 16;
 	}
-	
+
 	public static boolean bossLevel() {
-		return bossLevel( depth );
+		if (Dungeon.level != null) {
+			return Dungeon.level.isBossLevel();
+		} else {
+			return false;
+		}
 	}
-	
-	public static boolean bossLevel( int depth ) {
-		return depth == 5 || depth == 10 || depth == 15 || depth == 20 || depth == 25;
-	}
-	
+
 	@SuppressWarnings("deprecation")
-	public static void switchLevel( final Level level, int pos, String levelId ) {
-		
+	public static void switchLevel(final Level level, int pos, String levelId) {
+
 		nightMode = new Date().getHours() < 7;
-		
+
 		Dungeon.level = level;
-		
+
 		Actor.init(level);
-		
+
 		Actor respawner = level.respawner();
 		if (respawner != null) {
-			Actor.add( level.respawner() );
+			Actor.add(level.respawner());
 		}
-		
+
 		hero.setPos(pos);
 		hero.levelKind = level.levelKind();
-		hero.levelId   = levelId;
-		
-		if(!level.cellValid(hero.getPos())) {
+		hero.levelId = levelId;
+
+		if (!level.cellValid(hero.getPos())) {
 			hero.setPos(level.entrance);
 		}
-		
-		Light light = hero.buff( Light.class );
-		hero.viewDistance = light == null ? level.viewDistance : Math.max( Light.DISTANCE, level.viewDistance );
-		
+
+		Light light = hero.buff(Light.class);
+		hero.viewDistance = light == null ? level.viewDistance : Math.max(Light.DISTANCE, level.viewDistance);
+
 		observe();
 	}
-	
+
 	public static boolean posNeeded() {
-		int[] quota = {4, 2, 9, 4, 14, 6, 19, 8, 24, 9};
-		return chance( quota, potionOfStrength );
+		int[] quota = { 4, 2, 9, 4, 14, 6, 19, 8, 24, 9 };
+		return chance(quota, potionOfStrength);
 	}
-	
+
 	public static boolean soeNeeded() {
-		int[] quota = {5, 3, 10, 6, 15, 9, 20, 12, 25, 13};
-		return chance( quota, scrollsOfUpgrade );
+		int[] quota = { 5, 3, 10, 6, 15, 9, 20, 12, 25, 13 };
+		return chance(quota, scrollsOfUpgrade);
 	}
-	
-	private static boolean chance( int[] quota, int number ) {
-		
-		for (int i=0; i < quota.length; i += 2) {
+
+	private static boolean chance(int[] quota, int number) {
+
+		for (int i = 0; i < quota.length; i += 2) {
 			int qDepth = quota[i];
 			if (depth <= qDepth) {
 				int qNumber = quota[i + 1];
-				return Random.Float() < (float)(qNumber - number) / (qDepth - depth + 1);
+				return Random.Float() < (float) (qNumber - number) / (qDepth - depth + 1);
 			}
 		}
-		
+
 		return false;
 	}
-	
-	public static boolean asNeeded() {
-		return Random.Int( 12 * (1 + arcaneStyli) ) < depth;
-	}
-	
-	
-    private static final String VERSION   = "version";
-	private static final String CHALLENGES= "challenges";
-    private static final String HERO      = "hero";
-    private static final String GOLD      = "gold";
-    private static final String DEPTH     = "depth";
-    private static final String LEVEL     = "level";
-    private static final String POS       = "potionsOfStrength";
-    private static final String SOU       = "scrollsOfEnhancement";
-    private static final String AS        = "arcaneStyli";
-    private static final String DV        = "dewVial";
-    private static final String WT        = "transmutation";
-    private static final String CHAPTERS  = "chapters";
-    private static final String QUESTS    = "quests";
-    private static final String BADGES    = "badges";
 
-	
-	public static void gameOver(){
-		Dungeon.deleteGame( true );
+	public static boolean asNeeded() {
+		return Random.Int(12 * (1 + arcaneStyli)) < depth;
 	}
-	
-	public static void saveGame( String fileName ) throws IOException {
+
+	private static final String VERSION = "version";
+	private static final String CHALLENGES = "challenges";
+	private static final String HERO = "hero";
+	private static final String GOLD = "gold";
+	private static final String DEPTH = "depth";
+	private static final String LEVEL = "level";
+	private static final String POS = "potionsOfStrength";
+	private static final String SOU = "scrollsOfEnhancement";
+	private static final String AS = "arcaneStyli";
+	private static final String DV = "dewVial";
+	private static final String WT = "transmutation";
+	private static final String CHAPTERS = "chapters";
+	private static final String QUESTS = "quests";
+	private static final String BADGES = "badges";
+
+	public static void gameOver() {
+		Dungeon.deleteGame(true);
+	}
+
+	public static void saveGame(String fileName) throws IOException {
 		Bundle bundle = new Bundle();
 
 		bundle.put(VERSION, Game.version);
@@ -345,141 +342,142 @@ public class Dungeon {
 		Bundle.write(bundle, output);
 		output.close();
 	}
-	
+
 	public static void saveLevel() throws IOException {
 		Bundle bundle = new Bundle();
-		bundle.put( LEVEL, level );
-		
-		Position current =currentPosition();
-		
-		String saveTo = SaveUtils.depthFileForSave( hero.heroClass, current.levelDepth, current.levelKind, current.levelId );
-		
+		bundle.put(LEVEL, level);
+
+		Position current = currentPosition();
+
+		String saveTo = SaveUtils.depthFileForSave(hero.heroClass, current.levelDepth, current.levelKind,
+				current.levelId);
+
 		GLog.toFile("saving level: %s", saveTo);
-		
-		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(saveTo)); 
-		Bundle.write( bundle, output );
+
+		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(saveTo));
+		Bundle.write(bundle, output);
 		output.close();
 	}
-	
+
 	public static void saveAll() throws IOException {
-		float MBytesAvaliable = Game.getAvailableInternalMemorySize()/1024f/1024f;
-		
-		if(MBytesAvaliable < 2){
+		float MBytesAvaliable = Game.getAvailableInternalMemorySize() / 1024f / 1024f;
+
+		if (MBytesAvaliable < 2) {
 			Game.toast("Low memory condition");
 			GLog.toFile("Low memory!!!");
 		}
-		
+
 		GLog.toFile("Saving: %5.2f MBytes available", MBytesAvaliable);
-		
+
 		if (hero.isAlive()) {
-			
+
 			Actor.fixTime();
-			saveGame( SaveUtils.gameFile( hero.heroClass ) );
+			saveGame(SaveUtils.gameFile(hero.heroClass));
 			saveLevel();
-			
-			GamesInProgress.set( hero.heroClass, depth, hero.lvl );
-			
+
+			GamesInProgress.set(hero.heroClass, depth, hero.lvl);
+
 		} else if (WndResurrect.instance != null) {
-			
+
 			WndResurrect.instance.hide();
-			Hero.reallyDie( WndResurrect.causeOfDeath );
+			Hero.reallyDie(WndResurrect.causeOfDeath);
 		}
 	}
-	
-	public static void loadGame( ) throws IOException {
+
+	public static void loadGame() throws IOException {
 		GLog.toFile("load Game");
-		loadGame( SaveUtils.gameFile( heroClass ), true );
+		loadGame(SaveUtils.gameFile(heroClass), true);
 	}
-	
-	public static void loadGameForRankings( String fileName ) throws IOException {
-		loadGame( fileName, false );
+
+	public static void loadGameForRankings(String fileName) throws IOException {
+		loadGame(fileName, false);
 	}
-	
-	public static void loadGame( String fileName, boolean fullLoad ) throws IOException {
-		GLog.toFile("load Game %s",fileName);
-		
-		Bundle bundle = gameBundle( fileName );
-		
-		Dungeon.challenges = bundle.getInt( CHALLENGES );
-		
+
+	public static void loadGame(String fileName, boolean fullLoad) throws IOException {
+		GLog.toFile("load Game %s", fileName);
+
+		Bundle bundle = gameBundle(fileName);
+
+		Dungeon.challenges = bundle.getInt(CHALLENGES);
+
 		Dungeon.level = null;
 		Dungeon.depth = -1;
-		
-		Scroll.restore( bundle );
-		Potion.restore( bundle );
-		Wand.restore( bundle );
-		Ring.restore( bundle );
-		
-		potionOfStrength = bundle.getInt( POS );
-		scrollsOfUpgrade = bundle.getInt( SOU );
-		arcaneStyli      = bundle.getInt( AS );
-		dewVial          = bundle.getBoolean( DV );
-		transmutation    = bundle.getInt( WT );
-		
+
+		Scroll.restore(bundle);
+		Potion.restore(bundle);
+		Wand.restore(bundle);
+		Ring.restore(bundle);
+
+		potionOfStrength = bundle.getInt(POS);
+		scrollsOfUpgrade = bundle.getInt(SOU);
+		arcaneStyli = bundle.getInt(AS);
+		dewVial = bundle.getBoolean(DV);
+		transmutation = bundle.getInt(WT);
+
 		if (fullLoad) {
 			chapters = new HashSet<Integer>();
-			int ids[] = bundle.getIntArray( CHAPTERS );
+			int ids[] = bundle.getIntArray(CHAPTERS);
 			if (ids != null) {
 				for (int id : ids) {
-					chapters.add( id );
+					chapters.add(id);
 				}
 			}
-			
-			Bundle quests = bundle.getBundle( QUESTS );
+
+			Bundle quests = bundle.getBundle(QUESTS);
 			if (!quests.isNull()) {
-				Ghost.Quest.restoreFromBundle( quests );
-				WandMaker.Quest.restoreFromBundle( quests );
-				Blacksmith.Quest.restoreFromBundle( quests );
-				Imp.Quest.restoreFromBundle( quests );
+				Ghost.Quest.restoreFromBundle(quests);
+				WandMaker.Quest.restoreFromBundle(quests);
+				Blacksmith.Quest.restoreFromBundle(quests);
+				Imp.Quest.restoreFromBundle(quests);
 			} else {
 				Ghost.Quest.reset();
 				WandMaker.Quest.reset();
 				Blacksmith.Quest.reset();
 				Imp.Quest.reset();
 			}
-			
-			Room.restoreRoomsFromBundle( bundle );
+
+			Room.restoreRoomsFromBundle(bundle);
 		}
-		
-		Bundle badges = bundle.getBundle( BADGES );
+
+		Bundle badges = bundle.getBundle(BADGES);
 		if (!badges.isNull()) {
-			Badges.loadLocal( badges );
+			Badges.loadLocal(badges);
 		} else {
 			Badges.reset();
 		}
-		
+
 		@SuppressWarnings("unused")
-		String version = bundle.getString( VERSION );
-		
-		hero = (Hero)bundle.get( HERO );
-		
-		gold = bundle.getInt( GOLD );
-		depth = bundle.getInt( DEPTH );
-		
-		Statistics.restoreFromBundle( bundle );
-		Journal.restoreFromBundle( bundle );
+		String version = bundle.getString(VERSION);
+
+		hero = (Hero) bundle.get(HERO);
+
+		gold = bundle.getInt(GOLD);
+		depth = bundle.getInt(DEPTH);
+
+		Statistics.restoreFromBundle(bundle);
+		Journal.restoreFromBundle(bundle);
 	}
-	
-	public static Level loadLevel(Position next ) throws IOException {
-		String loadFrom = SaveUtils.depthFileForLoad( heroClass , next.levelDepth, next.levelKind, next.levelId);
-		
+
+	public static Level loadLevel(Position next) throws IOException {
+		String loadFrom = SaveUtils.depthFileForLoad(heroClass, next.levelDepth, next.levelKind, next.levelId);
+
 		GLog.toFile("loading level: %s", loadFrom);
-		
+
 		InputStream input;
-		
-		if(FileSystem.getFile(loadFrom).exists()) {
+
+		if (FileSystem.getFile(loadFrom).exists()) {
 			input = new FileInputStream(FileSystem.getFile(loadFrom));
 			Dungeon.level = null;
 		} else {
 			GLog.toFile("File %s not found!", loadFrom);
 			return null;
 		}
-		
-		Bundle bundle = Bundle.read( input );
+
+		Bundle bundle = Bundle.read(input);
 		input.close();
-		
+
 		Level level = Level.fromBundle(bundle, "level");
-		if(level != null){
+		if (level != null) {
 			level.levelId = next.levelId;
 			initSizeDependentStuff(level.getWidth(), level.getHeight());
 		} else {
@@ -487,128 +485,128 @@ public class Dungeon {
 		}
 		return level;
 	}
-	
-	public static void deleteGame(boolean deleteLevels ) {
+
+	public static void deleteGame(boolean deleteLevels) {
 		GLog.toFile("deleteGame");
 		SaveUtils.deleteGameFile(heroClass);
-		
+
 		if (deleteLevels) {
 			SaveUtils.deleteLevels(heroClass);
 		}
-		
-		GamesInProgress.delete( heroClass );
+
+		GamesInProgress.delete(heroClass);
 	}
-	
-	public static Bundle gameBundle( String fileName ) throws IOException {
-		
+
+	public static Bundle gameBundle(String fileName) throws IOException {
+
 		InputStream input = new FileInputStream(FileSystem.getFile(fileName));
-		
-		Bundle bundle = Bundle.read( input );
+
+		Bundle bundle = Bundle.read(input);
 		input.close();
-		
+
 		return bundle;
 	}
-	
-	public static void preview( GamesInProgress.Info info, Bundle bundle ) {
-		info.depth = bundle.getInt( DEPTH );
+
+	public static void preview(GamesInProgress.Info info, Bundle bundle) {
+		info.depth = bundle.getInt(DEPTH);
 		if (info.depth == -1) {
-			info.depth = bundle.getInt( "maxDepth" );	// FIXME
+			info.depth = bundle.getInt("maxDepth"); // FIXME
 		}
-		Hero.preview( info, bundle.getBundle( HERO ) );
+		Hero.preview(info, bundle.getBundle(HERO));
 	}
-	
-	public static void fail( String desc ) {
+
+	public static void fail(String desc) {
 		resultDescription = desc;
-		if (hero.belongings.getItem( Ankh.class ) == null) { 
-			Rankings.INSTANCE.submit( Rankings.gameOver.LOSE);
+		if (hero.belongings.getItem(Ankh.class) == null) {
+			Rankings.INSTANCE.submit(Rankings.gameOver.LOSE);
 		}
 	}
-	
-	public static void win( String desc, gameOver kind ) {
-		
+
+	public static void win(String desc, gameOver kind) {
+
 		if (challenges != 0) {
 			Badges.validateChampion();
 		}
-		
+
 		resultDescription = desc;
-		Rankings.INSTANCE.submit( kind );
+		Rankings.INSTANCE.submit(kind);
 	}
-	
+
 	public static void observe() {
 
 		if (level == null) {
 			return;
 		}
-		
-		level.updateFieldOfView( hero );
-		System.arraycopy( level.fieldOfView, 0, visible, 0, visible.length );
-		
-		BArray.or( level.visited, visible, level.visited );
-		
+
+		level.updateFieldOfView(hero);
+		System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
+
+		BArray.or(level.visited, visible, level.visited);
+
 		GameScene.afterObserve();
 	}
 
-	private static void markActorsAsUnpassableIgnoreFov(){
+	private static void markActorsAsUnpassableIgnoreFov() {
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
-				int pos = ((Char)actor).getPos();
+				int pos = ((Char) actor).getPos();
 				passable[pos] = false;
 			}
 		}
 	}
-	
-	private static void markActorsAsUnpassable(boolean[] visible){
+
+	private static void markActorsAsUnpassable(boolean[] visible) {
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
-				int pos = ((Char)actor).getPos();
+				int pos = ((Char) actor).getPos();
 				if (visible[pos]) {
 					passable[pos] = false;
 				}
 			}
-		}		
+		}
 	}
-	
-	public static int findPath( Char ch, int from, int to, boolean pass[], boolean[] visible ) {
-		
-		if (level.adjacent( from, to )) {
-			return Actor.findChar( to ) == null && (pass[to] || level.avoid[to]) ? to : -1;
+
+	public static int findPath(Char ch, int from, int to, boolean pass[], boolean[] visible) {
+
+		if (level.adjacent(from, to)) {
+			return Actor.findChar(to) == null && (pass[to] || level.avoid[to]) ? to : -1;
 		}
-		
-		if (ch.flying || ch.buff( Amok.class ) != null) {
-			BArray.or( pass, level.avoid, passable );
+
+		if (ch.flying || ch.buff(Amok.class) != null) {
+			BArray.or(pass, level.avoid, passable);
 		} else {
-			System.arraycopy( pass, 0, passable, 0, level.getLength() );
+			System.arraycopy(pass, 0, passable, 0, level.getLength());
 		}
-		
-		if(visible != null){
+
+		if (visible != null) {
 			markActorsAsUnpassable(visible);
 		} else {
 			markActorsAsUnpassableIgnoreFov();
 		}
-		
-		return PathFinder.getStep( from, to, passable );
-		
+
+		return PathFinder.getStep(from, to, passable);
+
 	}
-	
-	public static int flee( Char ch, int cur, int from, boolean pass[], boolean[] visible ) {
-		
+
+	public static int flee(Char ch, int cur, int from, boolean pass[], boolean[] visible) {
+
 		if (ch.flying) {
-			BArray.or( pass, level.avoid, passable );
+			BArray.or(pass, level.avoid, passable);
 		} else {
-			System.arraycopy( pass, 0, passable, 0, level.getLength() );
+			System.arraycopy(pass, 0, passable, 0, level.getLength());
 		}
-		
-		if(visible != null){
+
+		if (visible != null) {
 			markActorsAsUnpassable(visible);
 		} else {
 			markActorsAsUnpassableIgnoreFov();
 		}
-		
+
 		passable[cur] = true;
-		
-		return PathFinder.getStepBack( cur, from, passable );
+
+		return PathFinder.getStepBack(cur, from, passable);
 	}
-	
+
 	public static void challengeAllMobs(Char ch, String sound) {
 
 		if (Dungeon.level == null) {
@@ -630,15 +628,14 @@ public class Dungeon {
 		}
 
 		if (ch.getSprite() != null) {
-			ch.getSprite().centerEmitter()
-					.start(Speck.factory(Speck.SCREAM), 0.3f, 3);
+			ch.getSprite().centerEmitter().start(Speck.factory(Speck.SCREAM), 0.3f, 3);
 		}
 		Sample.INSTANCE.play(sound);
 		if (ch instanceof Hero) {
 			Invisibility.dispel((Hero) ch);
 		}
 	}
-	
+
 	public static Position currentPosition() {
 		return new Position(hero.levelKind, hero.levelId, depth, hero.getPos());
 	}

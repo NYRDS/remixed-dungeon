@@ -132,9 +132,7 @@ public abstract class RegularLevel extends CommonLevel {
 		}
 		
 		specials = new ArrayList<Room.Type>( Room.SPECIALS );
-		if (Dungeon.bossLevel( Dungeon.depth + 1 )) {
-			specials.remove( Room.Type.WEAK_FLOOR );
-		}
+		
 		assignRoomType();
 		
 		paint();

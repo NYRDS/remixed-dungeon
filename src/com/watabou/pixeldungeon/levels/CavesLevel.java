@@ -150,10 +150,6 @@ public class CavesLevel extends RegularLevel {
 			}
 		}
 		
-		if (Dungeon.bossLevel( Dungeon.depth + 1 )) {
-			return;
-		}
-		
 		for (Room r : rooms) {
 			if (r.type == Type.STANDARD) {
 				for (Room n : r.neigbours) {

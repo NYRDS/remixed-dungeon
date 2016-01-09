@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -33,8 +32,7 @@ public class TrapsPainter extends Painter {
 		 
 		Integer traps[] = {
 			Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, 
-			Terrain.PARALYTIC_TRAP, Terrain.PARALYTIC_TRAP, 
-			!Dungeon.bossLevel( Dungeon.depth + 1 ) ? Terrain.CHASM : Terrain.SUMMONING_TRAP };
+			Terrain.PARALYTIC_TRAP, Terrain.PARALYTIC_TRAP, Terrain.CHASM, Terrain.SUMMONING_TRAP };
 		fill( level, room, Terrain.WALL );
 		fill( level, room, 1, Random.element( traps ) );
 		
