@@ -52,7 +52,7 @@ public class Fadeleaf extends Plant {
 		} else if (ch instanceof Mob) {
 			
 			int newPos = Dungeon.level.randomRespawnCell();
-			if (newPos != -1) {
+			if (Dungeon.level.cellValid(newPos)) {
 				ch.setPos(newPos);
 				ch.getSprite().place(ch.getPos());
 				ch.getSprite().setVisible(Dungeon.visible[pos]);

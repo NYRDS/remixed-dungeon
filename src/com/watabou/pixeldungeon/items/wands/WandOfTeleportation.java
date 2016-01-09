@@ -34,7 +34,12 @@ public class WandOfTeleportation extends Wand {
 
 	public static void teleport(Char ch) {
 		int pos = Dungeon.level.randomRespawnCell();
-
+		
+		if(!Dungeon.level.cellValid(pos)) {
+			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
+			return;
+		}
+		
 		ch.setPos(pos);
 		ch.getSprite().place(ch.getPos());
 		ch.getSprite().setVisible(Dungeon.visible[pos]);
