@@ -89,8 +89,8 @@ public abstract class Level implements Bundlable {
 		NONE, CHASM, WATER, GRASS
 	};
 
-	private static int width  = 32;
-	private static int height = 32;
+	protected int width  = 32;
+	protected int height = 32;
 
 	public static int[] NEIGHBOURS4;
 	public static int[] NEIGHBOURS8;
@@ -204,7 +204,7 @@ public abstract class Level implements Bundlable {
 		create(32, 32);
 	}
 
-	private void initSizeDependentStuff() {
+	protected void initSizeDependentStuff() {
 		NEIGHBOURS4 = new int[] { -getWidth(), +1, +getWidth(), -1 };
 		NEIGHBOURS8 = new int[] { +1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
@@ -560,7 +560,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	private void buildFlagMaps() {
+	protected void buildFlagMaps() {
 
 		for (int i = 0; i < getLength(); i++) {
 			int flags = Terrain.flags[map[i]];
@@ -627,7 +627,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	private void cleanWalls() {
+	protected void cleanWalls() {
 		for (int i = 0; i < getLength(); i++) {
 
 			boolean d = false;
