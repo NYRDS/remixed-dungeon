@@ -172,7 +172,7 @@ public class DungeonTilemap extends Tilemap {
 
 	private static int groundCell(int tileType, int cell) {
 		if (tileType >= Terrain.WATER_TILES) {
-			return 13 * 16 + tileType - Terrain.WATER_TILES;
+			return (13 + cellStableRandom(cell, 0, 2)) * 16 + tileType - Terrain.WATER_TILES;
 		}
 
 		switch (tileType) {
