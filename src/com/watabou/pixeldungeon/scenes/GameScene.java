@@ -458,26 +458,26 @@ public class GameScene extends PixelScene {
 	// -------------------------------------------------------
 
 	public static void add(Plant plant) {
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.addPlantSprite(plant);
 		}
 	}
 
 	public static void add(Blob gas) {
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			Actor.add(gas);
 			scene.addBlobSprite(gas);
 		}
 	}
 
 	public static void add(Heap heap) {
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.addHeapSprite(heap);
 		}
 	}
 
 	public static void discard(Heap heap) {
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.addDiscardedSprite(heap);
 		}
 	}
@@ -486,7 +486,7 @@ public class GameScene extends PixelScene {
 		level.mobs.add(mob);
 		Actor.add(mob);
 		Actor.occupyCell(mob);
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.addMobSprite(mob);
 		}
 	}
@@ -495,7 +495,7 @@ public class GameScene extends PixelScene {
 		level.mobs.add(mob);
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.addMobSprite(mob);
 		}
 	}
@@ -545,19 +545,19 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void updateMap() {
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.tiles.updateAll();
 		}
 	}
 
 	public static void updateMap(int cell) {
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.tiles.updateCell(cell);
 		}
 	}
 
 	public static void discoverTile(int pos, int oldValue) {
-		if (scene != null) {
+		if (scene != null && Dungeon.level != null) {
 			scene.tiles.discover(pos, oldValue);
 		}
 	}
