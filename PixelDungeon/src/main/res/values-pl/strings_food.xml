@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">ZJEDZ</string>
+  <string name="Food_Message">Jedzenie smakowało wybornie!</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">racja żywieniowa</string>
+  <string name="Ration_Info">Nic nadzwyczajnego: suszone mięso, trochę herbatników, itp.</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">usmażone mięso</string>
+  <string name="ChargrilledMeat_Info">Wygląda na smakowity stek</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">Zamrożone carpaccio</string>
+  <string name="FrozenCarpaccio_Info">To kawałek zamrożonego, suszonego mięsa. Jedynym sposobem by zjeść je, jest pokrojenie go w plastry. I jest niesamowicie dobre.</string>
+  <string name="FrozenCarpaccio_Info1">Widzisz, że twe dłonie znikają!</string>
+  <string name="FrozenCarpaccio_Info2">Czujesz jak twoja skóra twardnieje!</string>
+  <string name="FrozenCarpaccio_Info3">Odświeżenie!</string>
+  <string name="FrozenCarpaccio_Info4">Czujesz się znacznie lepiej!</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">tajemnicze mięso</string>
+  <string name="MysteryMeat_Info">Jesz na własne ryzyko!</string>
+  <string name="MysteryMeat_Info1">Oh to jest gorące!</string>
+  <string name="MysteryMeat_Info2">Nie czujesz swoich nóg!</string>
+  <string name="MysteryMeat_Info3">Nie czujesz się najlepiej.</string>
+  <string name="MysteryMeat_Info4">Czujesz się ociężały.</string>
+  <string name="MysteryMeat_Message">Jedzenie smakowało... dziwacznie.</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">Paskudztwo!</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">zgniłe mięso</string>
+  <string name="RottenMeat_Info">kawałek starego, zgniłego mięsa</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">zgniły pasztecik</string>
+  <string name="RottenPasty_Info">dawny pasztecik wygląda paskudnie</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">zgniła racja żywnościowa</string>
+  <string name="RottenRation_Info">dawno temu to można było zjeść</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">przeceniona racja żywieniowa</string>
+  <string name="OverpricedRation_Info">Wygląda dokładnie jak zwykła racja żywieniowa, ale jest mniejsza.</string>
+  <string name="OverpricedRation_Message">To jedzenie smakowało dobrze.</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">pasztecik</string>
+  <string name="Pasty_Info">Autentyczny pasztecik wypełniony wołowiną, który smakuje najlepiej z barszczem.</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">pasztecik</string>
+  <string name="PseudoPasty_Info">Autentyczny pasztecik wypełniony wołowiną, który smakuje najlepiej z barszczem.</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Assets_Prefix">rus_</string>
+  <string name="Utils_IsIndefinte">0</string>
+  
+  <string-array name="known_mods">
+    <item>[\"The Dungeon of Heroes\", \"https://github.com/NYRDS/The-dungeon-of-heroes-RPD-MOD/archive/tdoh.2.1.zip\"]</item>
+    <item>[\"PD Mini\", \"https://github.com/NYRDS/PD_mini-RPD-MOD/archive/mini.0.9.1.zip\"]</item>
+  </string-array>
+ 
+</resources>

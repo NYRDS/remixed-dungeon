@@ -1,0 +1,2 @@
+include ':googleplayservices_lib'
+include ':PixelDungeon'

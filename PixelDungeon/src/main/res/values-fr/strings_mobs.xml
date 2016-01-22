@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">La vraie description arrive bientôt !</string>
+  <string name="Mob_Died">Vous entendez quelque chose mourir au loin</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus">Ce %s dort</string>
+  <string name="Mob_StaWanderingStatus">Ce %s vagabonde</string>
+  <string name="Mob_StaHuntingStatus">Ce %s chasse</string>
+  <string name="Mob_StaFleeingStatus">Ce %s prend la fuite</string>
+  <string name="Mob_StaPassiveStatus">Ce %s est passif</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">scorpion d\'acide</string>
+  <string name="Acidic_Gender">mâle</string>
+  <string name="Acidic_Name_Objective">scorpion d\'acide</string>
+  <string name="Acidic_Desc">Ces énormes démons à la forme arachnide évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées depuis de longues distances.</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">rat albinos</string>
+  <string name="Albino_Gender">mâle</string>
+  <string name="Albino_Name_Objective">rat albinos</string>
+  <string name="Albino_Desc">Les rats géants sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre.</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">bandit fou</string>
+  <string name="Bandit_Gender">mâle</string>
+  <string name="Bandit_Name_Objective">bandit fou</string>
+  <string name="Bandit_Desc">Les profondeurs du donjon ont toujours étés une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardés la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oubliés qui ils étaient et pourquoi ils volaient.</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">chauve-souris vampire</string>
+  <string name="Bat_Gender">mâle</string>
+  <string name="Bat_Name_Objective">chauve-souris vampire</string>
+  <string name="Bat_Desc">Ces résidents des grottes, rapides et teigneux, peuvent vaincre des ennemis bien plus gros en regagnant leur santé à chaque morsure réussie.</string>
+  <string name="Bat_Defense">esquivé</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">gnoll brutal</string>
+  <string name="Brute_Name_Objective">gnoll brutal</string>
+  <string name="Brute_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils deviennent berzerk, infligeant encore plus de dommages à leurs ennemis.</string>
+  <string name="Brute_Gender">mâle</string>
+  <string name="Brute_Enraged">%s a la rage !</string>
+  <string name="Brute_StaEnraged">enragé</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">crabe des égouts</string>
+  <string name="Crab_Gender">mâle</string>
+  <string name="Crab_Name_Objective">crabe des égouts</string>
+  <string name="Crab_Desc">Ces énormes crabes sont au sommet de la chaîne alimentaire dans les égouts. Ils sont très rapides et leur exosquelette épais peut résister à des coups puissants.</string>
+  <string name="Crab_Defense">paré</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">mâle</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">Cette machine fut créée par les nains des siècles plus tôt. Puis les nains ont commencé à remplacer les machines par des golems, des élémentaires et même des démons. Cela a mené à la perte de leur civilisation. Le DM-300 et les autre machines étaient utilisés pour la construction, le minage, et dans certains cas, à la défense de la ville. </string>
+  <string name="DM300_Info1">Le DM-300 se répare !</string>
+  <string name="DM300_Info2">Echec de la mission. Extinction du système.</string>
+  <string name="DM300_Info3">Personnel non autorisé détecté.</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">élémentaire de feu</string>
+  <string name="Elemental_Gender">mâle</string>
+  <string name="Elemental_Name_Objective">élémentaire de feu</string>
+  <string name="Elemental_Desc">Les élémentaires de feu sont les résidus des invocations de plus grandes entités. Leur nature est trop chaotique pour être contrôlée, même par les démonologues les plus puissants.</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">oeil malsain</string>
+  <string name="Eye_Gender">neutre</string>
+  <string name="Eye_Name_Objective">oeil malsain</string>
+  <string name="Eye_Desc">L\'un des autres noms de ce démon est \"orbe de haine\", car lorsqu\'il aperçoit un ennemi, il utilise des gaz toxiques inconsciemment, en ignorant souvent ses alliés et leurs blessures.</string>
+  <string name="Eye_Kill">les gaz toxique de l\'%s vous ont tué...</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">gnoll scout</string>
+  <string name="Gnoll_Gender">mâle</string>
+  <string name="Gnoll_Name_Objective">gnoll scout</string>
+  <string name="Gnoll_Desc">Les gnolls sont des hommes-hyènes. Ils errent dans les égouts et les donjons, s\'aventurant à la surface pour mener des raids de temps en temps. Les scouts sont des membres courants de leur meute, ils ne sont pas aussi forts que les brutes et pas aussi intelligents que les shamans.</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">golem</string>
+  <string name="Golem_Gender">mâle</string>
+  <string name="Golem_Name_Objective">golem</string>
+  <string name="Golem_Desc">Les nains ont essayé de combiner leurs connaissances en bricolage avec leur nouveaux pouvoirs engageant les pouvoirs des élémentaires. Ils utilisèrent les esprits de la terre comme \"âme\" pour les corps mécaniques des golems, qu\'ils pensaient être les plus dociles de tous. Malgré cela, la plus petite erreur dans le rituel pouvait déclencher un débordement.</string>
+  <string name="Golem_Defense">bloqué</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">Flan</string>
+  <string name="Goo_Gender">femelle</string>
+  <string name="Goo_Name_Objective">Flan</string>
+  <string name="Goo_Desc">On ne sait pas grand chose du Flan. Il est même possible que ce ne soit pas une créature, mais plutôt un agglomérat de substances des égouts  qui auraient gagnés des rudiments de volonté propre.</string>
+  <string name="Goo_Info1">Le Flan se gonfle !</string>
+  <string name="Goo_Info2">glurp... glurp...</string>
+  <string name="Goo_Info3">GLURP-GLURP !</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">Roi des nains</string>
+  <string name="King_Gender">mâle</string>
+  <string name="King_Name_Objective">Roi des nains</string>
+  <string name="King_Desc">Le dernier souverain nain était connu pour sa profonde connaissance des choses sur le processus de la vie et de la mort. Il a persuadé des membres de la cour de participer à un rituel qui aurait dû leur donner la jeunesse éternelle. Au final, il fut le seul à l\'obtenir - avec une armée de morts-vivants en bonus.</string>
+  <string name="King_Defense">paré</string>
+  <string name="King_Info1">Tu ne peux pas me tuer, %s... Je suis... immortel...</string>
+  <string name="King_Info2">Levez-vous, esclaves !</string>
+  <string name="King_Info3">Comment osez-vous !</string>
+  <string name="Undead_Name">mort-vivant nain</string>
+  <string name="Undead_Gender">mâle</string>
+  <string name="Undead_Name_Objective">mort-vivant nain</string>
+  <string name="Undead_Desc">Ces nains morts-vivants, créés par le roi des nains, furent des membres de sa cour. Ils ressemblent à des squelettes portant une quantité impressionnante de poils sur le visage.</string>
+  <string name="Undead_Defense">bloqué</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">mime</string>
+  <string name="Mimic_Gender">mâle</string>
+  <string name="Mimic_Name_Objective">mime</string>
+  <string name="Mimic_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Dans les donjons, ils prennent très souvent la forme de coffres, car ils savent comment attirer les aventuriers.\";</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">mime</string>
+  <string name="MimicPie_Gender">mâle</string>
+  <string name="MimicPie_Name_Objective">mime</string>
+  <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs.;</string>
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">moine nain</string>
+  <string name="Monk_Gender">mâle</string>
+  <string name="Monk_Name_Objective">moine nain</string>
+  <string name="Monk_Desc">Ces moines sont des fanatiques, ils se sont dévoués à protéger les secrets de leur cité des intrus. Ils n\'utilisent pas d\'armure ou d\'armes, se reposant uniquement sur le combat à mains nues.</string>
+  <string name="Monk_Defense">paré</string>
+  <string name="Monk_Disarm">%1$s vous a arraché le %2$s des mains !</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">piranha géant</string>
+  <string name="Piranha_Gender">femelle</string>
+  <string name="Piranha_Name_Objective">piranha géant</string>
+  <string name="Piranha_Desc">Ces poissons carnivores ne sont pas des habitants naturels des eaux des sous-sols. Ils ont été amenés spécifiquement pour protéger les trésors submergés.</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">rat géant</string>
+  <string name="Rat_Gender">femelle</string>
+  <string name="Rat_Name_Objective">rat géant</string>
+  <string name="Rat_Desc">Les rats géants sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre.</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">scorpion</string>
+  <string name="Scorpio_Gender">mâle</string>
+  <string name="Scorpio_Name_Objective">scorpion</string>
+  <string name="Scorpio_Desc">Ces énormes arachnides démoniaques évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées sur de longues distances.</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">moine senior</string>
+  <string name="Senior_Gender">mâle</string>
+  <string name="Senior_Name_Objective">mâle senior</string>
+  <string name="Senior_Desc">Ces moines sont des fanatiques, ils se sont dévoués à protéger les secrets de leur cité des intrus. Ils n\'utilisent pas d\'armure ou d\'armes, se reposant uniquement sur le combat à mains nues.</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">ombre</string>
+  <string name="Shadow_Gender">femelle</string>
+  <string name="Shadow_Name_Objective">ombre</string>
+  <string name="Shadow_Desc">Les ombres errent silencieusement dans les ruines des anciennes prisons. Elles ne se montrent que rarement aux aventuriers, menant en général leur dernière aventure.</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">gnoll shaman</string>
+  <string name="Shaman_Gender">mâle</string>
+  <string name="Shaman_Name_Objective">gnoll shaman</string>
+  <string name="Shaman_Desc">les gnolls les plus intelligents peuvent maîtriser de la magie shamanique. Les gnoll shamans préfèrent les sorts de combat pour compenser leur manque de force, n\'hésitant pas à les utiliser sur ceux qui remettent leur statut en question dans la tribu.</string>
+  <string name="Shaman_Killed">L\'éclair du %s vous a tué...</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">brute au bouclier</string>
+  <string name="Shielded_Gender">mâle</string>
+  <string name="Shielded_Name_Objective">brute au bouclier</string>
+  <string name="Shielded_Defense">bloqué</string>
+  <string name="Shielded_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils deviennent furieux, infligeant encore plus de dommages à leurs ennemis.</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">squelette</string>
+  <string name="Skeleton_Gender">mâle</string>
+  <string name="Skeleton_Name_Objective">squelette</string>
+  <string name="Skeleton_Desc">Les squelettes sont composés des os cadavériques des aventuriers malchanceux et des résidents du donjon, animés par la magie noire venant des profondeurs. En les blessant suffisamment, ils se désintègreront dans une explosion osseuse.</string>
+  <string name="Skeleton_Defense">bloqué</string>
+  <string name="Skeleton_Killed">Vous avez été tué par l\'explosion des os...</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">tisseur des cavernes</string>
+  <string name="Spinner_Gender">mâle</string>
+  <string name="Spinner_Name_Objective">tisseur des cavernes</string>
+  <string name="Spinner_Desc">Ces araignées verdâtres et poilues évitent le combat direct, préférant attendre à distance alors que leurs victimes, prises dans leur toile, succombent lentement d\'une morsure empoisonnée.</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">statue animée</string>
+  <string name="Statue_Gender">femelle</string>
+  <string name="Statue_Name_Objective">statue animée</string>
+  <string name="Statue_Desc">On pourrait penser que ce n\'est qu\'une autre de ces statues un peu moches du donjon, mais ses yeux rouges luminescents la mettent à part. Tandis que la statue est faite de pierre, le %s qu\'elle porte a bien l\'air réel.</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">succube</string>
+  <string name="Succubus_Gender">mâle</string>
+  <string name="Succubus_Name_Objective">succube</string>
+  <string name="Succubus_Desc">Les succubes sont des démones séduisantes ( d\'un point de vue gothique ). En utilisant leur magie, elles peuvent envoûter un héros, qui deviendra incapable d\'attaquer quoi que ce soit avant la fin de l\'envoûtement.</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Name">essaim de mouches</string>
+  <string name="Swarm_Gender">mâle</string>
+  <string name="Swarm_Name_Objective">essaim de mouches</string>
+  <string name="Swarm_Desc">L\'essaim de mouches meurtrières bourdonne de colère. Chaque attaque non-magique le séparera en deux essaims plus petits, mais tout aussi dangereux.</string>
+  <string name="Swarm_Defense">esquivé</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">Tengu</string>
+  <string name="Tengu_Gender">mâle</string>
+  <string name="Tengu_Name_Objective">Tengu</string>
+  <string name="Tengu_Desc">Les Tengu sont les membres d\'un ancien clan d\'assassins, qui est aussi appelé Tengu. Ces assassins sont connus pour leur usage excessif de shurikens et de pièges.</string>
+  <string name="Tengu_Info1">Enfin libre...</string>
+  <string name="Tengu_Info2">Attrape ça, %s !</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">voleur fou</string>
+  <string name="Thief_Gender">mâle</string>
+  <string name="Thief_Name_Objective">voleur fou</string>
+  <string name="Thief_Desc">Les profondeurs du donjon ont toujours étés une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardés la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oubliés qui ils étaient et pourquoi ils volaient.</string>
+  <string name="Thief_Stole">%1$s vous a volé votre %2$s !</string>
+  <string name="Thief_Carries">
+Le %1$s transporte un %2$s. Volé visiblement.</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Name">sorcier nain</string>
+  <string name="Warlock_Gender">mâle</string>
+  <string name="Warlock_Name_Objective">sorcier nain</string>
+  <string name="Warlock_Desc">Quand les intérêts des nains sont passés de la mécanique à l\'art des arcanes, les sorciers sont arrivés au pouvoir dans la ville. Ils ont commencé avec la magie élémentaire, mais ont vite préféré la démonologie et la nécromancie.</string>
+  <string name="Warlock_Killed">La flèche des ténèbres du %s vous a tué...</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Name">spectre</string>
+  <string name="Wraith_Gender">mâle</string>
+  <string name="Wraith_Name_Objective">spectre</string>
+  <string name="Wraith_Desc">Un spectre est l\'esprit vengeur de quelqu\'un qui a péché, ou de quelqu\'un dont la tombe a été profanée. Etant une entité éternelle, il est très difficile de les frapper avec des armes normales.</string>
+  <string name="Wraith_Defense">esquivé</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">Yog-Dzewa</string>
+  <string name="Yog_Gender">mâle</string>
+  <string name="Yog_Name_Objective">Yog-Dzewa</string>
+  <string name="Yog_Desc">Yog-Dzewa est une divinité ancestrale, une puissante entité venant des méandres du chaos. Un siècle plus tôt, les nains ont gagné la guerre de justesse contre son armée de démons, mais furent incapables de tuer leur dieu. A la place, ils l\'ont enfermé dans les grands halls sous leur cité, espérant qu\'il soit trop faible pour revenir un jour.</string>
+  <string name="Yog_Info1">...</string>
+  <string name="Yog_Info2">L\'espoir n\'est qu\'une illusion...</string>
+  <string name="RottingFist_Name">poing pourissant</string>
+  <string name="RottingFist_Gender">mâle</string>
+  <string name="RottingFist_Name_Objective">poing pourissant</string>
+  <string name="RottingFist_Desc">Poing pourissant du dieu ancien</string>
+  <string name="BurningFist_Name">poing ardent</string>
+  <string name="BurningFist_Gender">mâle</string>
+  <string name="BurningFist_Name_Objective">poing ardent</string>
+  <string name="BurningFist_Desc">Poing ardent du dieu ancien</string>
+  <string name="Larva_Name">larve du dieu</string>
+  <string name="Larva_Gender">femelle</string>
+  <string name="Larva_Name_Objective">larve du dieu</string>
+  <string name="Larva_Desc">Larve du dieu ancien</string>
+</resources>

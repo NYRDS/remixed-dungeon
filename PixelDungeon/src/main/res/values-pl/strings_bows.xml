@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">Łuk jest bronią dystansową, prawie bezużyteczną (dla wszystkich oprócz elfów) w walce wręcz\n\n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">Drewniany Łuk</string>
+  <string name="WoodenBow_Info">Ten prosty, drewniany łuk może być użyteczny, o ile znajdziesz jakieś strzały</string>
+  <string name="WoodenBow_Gender">męski</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">Kompozytowy Łuk</string>
+  <string name="CompoundBow_Info">Strzały wystrzelone z łuku kompozytowego zadają ogromne obrażenia i są niezwykle celne, kosztem szybkości strzału</string>
+  <string name="CompoundBow_Gender">męski</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Name">Rubinowy Łuk</string>
+  <string name="RubyBow_Info">Tylko najlepsi łucznicy mogą użyć Rubinowego Łuku. Prawie każda strzała przebija się przez wroga, zostawiając wielką dziurę w jego ciele. Oczywiście by napiąć cięciwę potrzebna jest wielka siła.</string>
+  <string name="RubyBow_Gender">męski</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">Kołczan</string>
+  <string name="Quiver_Info">Kołczan</string>
+  <string name="Quiver_Gender">męski</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">Ognisty Kołczan</string>
+  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Gender">męski</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">Kołczan Trucizny</string>
+  <string name="PoisonQuiver_Info"></string>
+  <string name="Poisonuiver_Gender">męski</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">Kołczan na strzały paraliżujące</string>
+  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Gender">męski</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">strzała</string>
+  <string name="CommonArrow_Info">Zwykła drewniana strzała z żelaznym grotem</string>
+  <string name="CommonArrow_Gender">kobiecy</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">ognista strzała</string>
+  <string name="FireArrow_Info">Ta strzała wygląda na zwykłą, poza tym, że jej grot świeci ciepłym, czerwonym światłem.</string>
+  <string name="FireArrow_Gender">kobiecy</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">trująca strzała</string>
+  <string name="PoisonArrow_Info">Z grotu tej strzały ścieka lśniąca trucizna.</string>
+  <string name="PoisonArrow_Gender">kobieca</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">paraliżująca strzała</string>
+  <string name="ParalysisArrow_Info">Ta strzała wydziela słaby, ale znajomy, trujący smród.</string>
+  <string name="ParalysisArrow_Gender">kobiecy</string>
+</resources>

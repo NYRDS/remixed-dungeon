@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">ты</string>
+  <string name="Hero_Name_Objective">тебя</string>
+  <string name="Hero_Leave">Нельзя просто так взять и выйти из Pixel Dungeon.</string>
+  <string name="Hero_LevelUp">новый уровень!</string>
+  <string name="Hero_NewLevel">Твой уровень поднялся до %d! Теперь ты сильнее, а может даже и умнее. Тебе стало проще попадать по врагам и уклоняться от их атак.</string>
+  <string name="Hero_YouNowHave">Теперь у тебя есть %s</string>
+  <string name="Hero_SomethingElse">Здесь есть что-то ещё</string>
+  <string name="Hero_LockedChest">Сундук закрыт, и у тебя нет подходящего ключа</string>
+  <string name="Hero_LockedDoor">У тебя нет подходящего ключа</string>
+  <string name="Hero_NoticedSmth">Ты что-то заметил</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">поиск</string>
+  <string name="Hero_StaBurning">Тебя охватил огонь!</string>
+  <string name="Hero_StaParalysis">Тебя парализовало!</string>
+  <string name="Hero_StaPoison">Ты отравлен!</string>
+  <string name="Hero_StaOoze">Едкий ил поедает твою плоть. Смой его!</string>
+  <string name="Hero_StaRoots">Ты не можешь сдвинутся!</string>
+  <string name="Hero_StaWeakness">Тебя охватила слабость!</string>
+  <string name="Hero_StaBlindness">Тебя ослепили!</string>
+  <string name="Hero_StaFury">Ты впал в ярость!</string>
+  <string name="Hero_StaFurious">яростный</string>
+  <string name="Hero_StaCharm">Ты зачарован!</string>
+  <string name="Hero_StaCripple">Ты получил травму!</string>
+  <string name="Hero_StaBleeding">У тебя кровотечение!</string>
+  <string name="Hero_StaVertigo">У тебя кружится голова!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">воин</string>
+  <string name="HeroClass_Mag">маг</string>
+  <string name="HeroClass_Rog">вор</string>
+  <string name="HeroClass_Hun">охотница</string>
+  <string name="HeroClass_Elf">эльф</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Воины начинают с 11 очками Силы.</item>
+    <item>Воины начинают с уникальным коротким мечом. Который, в дальнейшем, можно \"перековать\" для улучшения другого оружия ближнего боя.</item>
+    <item>Воины плохо приспособлены к оружию дальнего боя.</item>
+    <item>Во время еды Воин восстанавливает немного здоровья.</item>
+    <item>Зелья Силы распознаны с самого начала.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Маги начинают с уникальной Палочкой Волшебных Снарядов. Которую, в дальнейшем, можно \"развоплотить\" для улучшения другой палочки.</item>
+    <item>Маги быстрее восполняют заряды волшебных палочек.</item>
+    <item>Во время еды любая пища восстанавливает 1 заряд для каждой палочки в инвентаре.</item>
+    <item>Маги могут использовать волшебные палочки в ближнем бою.</item>
+    <item>Свитки Опознания распознаны с самого начала.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Воры начинают с Кольцом Теней+1.</item>
+    <item>Воры узнают тип кольца при его надевании.</item>
+    <item>Воры - эксперты легкой брони,в ней они лучше уклоняются.</item>
+    <item>Воры - эксперты в нахождении скрытых дверей и ловушек.</item>
+    <item>Воры могут долгое время обходиться без еды.</item>
+    <item>Свитки Магической Картографии распознаны с самого начала.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Охотницы начинают с 15 очками Здоровья.</item>
+    <item>Охотницы начинают с уникальным улучшаемым бумерангом.</item>
+    <item>Охотницы хороши в обращении с оружием дальнего боя и получают бонус к урону за каждое очко Силы сверх требований этого оружия.</item>
+    <item>Охотницы восстанавливают больше здоровья от капель росы.</item>
+    <item>Охотницы чувствуют ближайших монстров, даже если те скрыты за препятствиями.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Эльфы начинают с 15 очками здоровья и 9 очками силы.</item>
+    <item>У Эльфов иммунитет к спутыванию.</item>
+    <item>Эльфы начинают с улучшенным деревянным луком и связкой стрел.</item>
+    <item>Эльфы восхитительно владеют луками и очень проворны.</item>
+    <item>Эльфы слабы с оружием ближнего боя.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">гладиатор</string>
+  <string name="HeroSubClass_DescGlad">Успешная атака ближнего боя позволяет, _Гладиатору_ начать серию комбо-ударов, в течение которой каждое последующее попадание наносит больше урона.</string>
+  <string name="HeroSubClass_NameBers">берсерк</string>
+  <string name="HeroSubClass_DescBers">Будучи сильно раненым, _Берсерк_ впадает в состояние дикой ярости, значительно повышая свой показатель урона.</string>
+  <string name="HeroSubClass_NameWarL">чернокнижник</string>
+  <string name="HeroSubClass_DescWarL">После убийства врага _Чернокнижник_ поглощает его душу, излечивая себя и утоляя голод.</string>
+  <string name="HeroSubClass_NameBatM">боевой маг</string>
+  <string name="HeroSubClass_DescBatM">Сражаясь с палочкой в руках, _Боевой Маг_ наносит дополнительный урон, зависящий от количества оставшихся зарядов. Каждое успешное попадание восстанавливает 1 заряд этой палочки.</string>
+  <string name="HeroSubClass_NameAssa">убийца</string>
+  <string name="HeroSubClass_DescAssa">При совершении неожиданной атаки _Убийца_ наносит своей цели дополнительный урон.</string>
+  <string name="HeroSubClass_NameFreR">бегун</string>
+  <string name="HeroSubClass_DescFreR">_Бегун_ двигается почти вдвое быстрее большинства монстров. В движущегося _Бегуна_ труднее попасть. Но лишь в тех случаях, когда он сыт и не перегружен.</string>
+  <string name="HeroSubClass_NameSnip">снайпер</string>
+  <string name="HeroSubClass_DescSnip">_Снайперы_ способны заметить прорехи в броне противника, практически игнорируя её при использовании оружия дальнего боя.</string>
+  <string name="HeroSubClass_NameWard">травница</string>
+  <string name="HeroSubClass_DescWard">За счёт своей близости к природе, _Травница_ может лучше собирать капли росы и семена с растений. Также контакт с высокой травой даёт ей временный бонус к броне.</string>
+  <string name="HeroSubClass_NameScout">следопыт</string>
+  <string name="HeroSubClass_DescScout">_Следопыты_  эльфов - мастера незаметности. Вытаптывание высокой травы дает им временный эффект невидимости. Также они быстрее, чем обычные Эльфы.</string>
+  <string name="HeroSubClass_NameShaman">шаман</string>
+  <string name="HeroSubClass_DescShaman">_Шаманы_ эльфов могут использовать посохи как оружие ближнего боя. При попадании в цель волшебство палочки может использоваться без потери заряда.</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /items/Wands-->
+  <!--STRINGS OF Wand CLASS-->
+  <string name="Wand_Name">%s 지팡이</string>
+  <string name="Wand_ACZap">공격</string>
+  <string name="Wand_Wood">이 가는 %s 지팡이는 오래된것 같습니다. 누가 이것을 사용했을때 효과를 알 수 있을까요?</string>
+  <string name="Wand_Damage">이 지팡이를 근접무기로 사용할때 평균 데미지는 타격당 %d 포인트 입니다.</string>
+  <string name="Wand_Weapon">당신은 이 지팡이를 근접무기로 사용할 수 있습니다.</string>
+  <string name="Wand_Fizzles">지금 이 지팡이를 사용하기 위해서는 충전해야 합니다.</string>
+  <string name="Wand_SelfTarget">자신을 목표로 할 수 없습니다.</string>
+  <string name="Wand_Prompt">공격할 방향을 선택하세요.</string>
+  <string-array name="Wand_Wood_Types">
+    <item>호랑가시나무</item>
+    <item>주목나무</item>
+    <item>흑단</item>
+    <item>벚나무</item>
+    <item>티크나무</item>
+    <item>마가목</item>
+    <item>버드나무</item>
+    <item>마호가니</item>
+    <item>대나무</item>
+    <item>베니어재</item>
+    <item>오크나무</item>
+    <item>자작나무</item>
+  </string-array>
+  <!--STRINGS OF WandOfAmok CLASS-->
+  <string name="WandOfAmok_Name">정신착란의 지팡이</string>
+  <string name="WandOfAmok_Info">지팡이에서 나온 보라색 광선은 타겟을 미친듯이 날뛰게 해서 주변에 있는 아무나 공격하게 합니다.</string>
+  <string name="WandOfAmok_Info1">아무일도 일어나지 않았습니다.</string>
+  <!--STRINGS OF WandOfAvalanche CLASS-->
+  <string name="WandOfAvalanche_Name">눈사태의 지팡이</string>
+  <string name="WandOfAvalanche_Info">눈사태의 지팡이의 목표지점이 벽(또는 다른고체 장애물)에 맞으면 해당지역에 돌이 무너집니다. 돌에 맞은 생물은 데미지를 입고 기절하게 됩니다.</string>
+  <string name="WandOfAvalanche_Info1">눈사태의 지팡이로 자살했습니다...</string>
+  <!--STRINGS OF WandOfBlink CLASS-->
+  <string name="WandOfBlink_Name">점멸의 지팡이</string>
+  <string name="WandOfBlink_Info">이 는 당신이 선택한 방향으로 순간이동 할 수 있습니다. 생물이나 무생물 장애물등은 순간이동을  차단합니다.</string>
+  <!--STRINGS OF WandOfDisintegration CLASS-->
+  <string name="WandOfDisintegration_Name">분해의 지팡이</string>
+  <string name="WandOfDisintegration_Info">이 지팡이에서 나가는 파괴적인 광선은 그 방향에 있는 모든 생물에게 각각의 피해를 입힙니다.</string>
+  <!--STRINGS OF WandOfFirebolt CLASS-->
+  <string name="WandOfFirebolt_Name">파이어볼트의 지팡이</string>
+  <string name="WandOfFirebolt_Info">이 지팡이는 마법의 불꽃으로 화재를 유발합니다. 가연성있는 지형/물체를 태우고 생물에게 적중시 지속적으로 화염데미지를 입힙니다.</string>
+  <string name="WandOfFirebolt_Info1">파이어볼트의 지팡이로 자살했습니다...</string>
+  <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="WandOfFlock_Name">무리의 지팡이</string>
+  <string name="WandOfFlock_Info">이 지팡이는 일시적으로 뚫을 수 없는 양무리를 소환합니다.</string>
+  <string name="Sheep_Name">양</string>
+  <string name="Sheep_Name_Objective">양</string>
+  <string name="Sheep_Gender">여성스런</string>
+  <string name="Sheep_Desc">이것은 마법의 양 입니다. 왜 마법이나구요? 당신은 그것을 죽일수 없습니다. 마법이 사라질때까지..</string>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>Baa!</item>
+    <item>Baa?</item>
+    <item>Baa.</item>
+    <item>Baa...</item>
+    <item>Bee...</item>
+    <item>Ble...</item>
+  </string-array>
+  <!--STRINGS OF WandOfLightning CLASS-->
+  <string name="WandOfLightning_Name">번개의 지팡이</string>
+  <string name="WandOfLightning_Info">이 지팡이는 서로 가까이있는 최대 4명의 생물에 전기 데미지를 가한다.</string>
+  <string name="WandOfLightning_Info1">번개의 지팡이로 자살했습니다...</string>
+  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_Name">매직미사일의 지팡이</string>
+  <string name="WandOfMagicMissile_Info">이 지팡이는 순수 마법에너지의 미사일을 발사합니다. 목표 생물에게 평균적인 데미지를 입힙니다.</string>
+  <string name="WandOfMagicMissile_ACDisenchant">마법해체</string>
+  <string name="WandOfMagicMissile_Info1">매직미사일의 지팡이로 자살했습니다.</string>
+  <string name="WandOfMagicMissile_SelectWand">업그레이드 할 지팡이를 선택하세요.</string>
+  <string name="WandOfMagicMissile_Desinchanted">매직미사일의 지팡이를 해체해서 나온 정수로 당신의 %s 을/를 업그레이드 합니다.</string>
+  <!--STRINGS OF WandOfPoison CLASS-->
+  <string name="WandOfPoison_Name">독의 지팡이</string>
+  <string name="WandOfPoison_Info">비틀린 나무가지의 사악한 저주는 목표물에 독이 스며들게 합니다. 독에 적중된 생물은 효과가 끝날때까지 지속적인 독에의한 피해를 입게 됩니다. 효과의 지속시간은 지팡이의 레벨에 따라 늘어납니다.</string>
+  <string name="WandOfPoison_Info1">아무일도 일어나지 않았습니다.</string>
+  <!--STRINGS OF WandOfRegrowth CLASS-->
+  <string name="WandOfRegrowth_Name">재생의 지팡이</string>
+  <string name="WandOfRegrowth_Info">\"한 생명이 끝날때 항상 새 생명이 성장하고.. 이 영원한 주기는 항상 유지된다!\"</string>
+  <string name="WandOfRegrowth_Info1">아무일도 일어나지 않았습니다.</string>
+  <!--STRINGS OF WandOfSlowness CLASS-->
+  <string name="WandOfSlowness_Name">둔화의 지팡이</string>
+  <string name="WandOfSlowness_Info">이 지팡이의 효과가 끝날때까지 목표물은 절반의 이동속도와 절반의 공격속도를 가지게 됩니다.</string>
+  <string name="WandOfSlowness_Info1">아무일도 일어나지 않았습니다.</string>
+  <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <string name="WandOfTelekinesis_Name">염력의 지팡이</string>
+  <string name="WandOfTelekinesis_Info">이 지팡이에서 나오는 염력은 수풀을 짓밟고, 닫힌문을 열고, 열려있는 문을 닫고, 트랩을 작동시키고 모든 타일에 영향을 미칠 것입니다. 또한 몬스터를 밀어냅니다.</string>
+  <string name="WandOfTelekinesis_YouNowHave">당신은 마법으로 %s 를 당신의 가방에 넣었습니다.</string>
+  <!--STRINGS OF WandOfTeleportation CLASS-->
+  <string name="WandOfTeleportation_Name">순간이동의 지팡이</string>
+  <string name="WandOfTeleportation_Info">이 지팡이에서 나온 광선은 생물의 의지와 상관없이 현재 층의 랜덤한 장소로 순간이동 합니다.</string>
+  <string name="WandOfTeleportation_Info1"> %2$s 어딘가로 %1$s 이/가 순간이동.</string>
+  <string name="WandOfTeleportation_Info2">아무일도 일어나지 않았습니다.</string>
+</resources>

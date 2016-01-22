@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">당신</string>
+  <string name="Hero_Name_Objective">당신</string>
+  <string name="Hero_Leave">아무도 픽셀 던전을 쉽게 빠져 나갈 수 없다.</string>
+  <string name="Hero_LevelUp">레벨 업!</string>
+  <string name="Hero_NewLevel">레벨 %d이 된걸 축하합니다! 이제 당신은 보다 더 건강해지고 집중력이 높아졌습니다. 적을 맞추거나 공격을 회피하기 쉬워졌습니다.</string>
+  <string name="Hero_YouNowHave">%s을/를 갖게 되었다</string>
+  <string name="Hero_SomethingElse">여기에 다른 무언가가 있다.</string>
+  <string name="Hero_LockedChest">이 상자는 잠겨 있고, 당신에게는 맞는 열쇠가 없다.</string>
+  <string name="Hero_LockedDoor">당신에게는 맞는 열쇠가 없다.</string>
+  <string name="Hero_NoticedSmth">당신은 무언가를 눈치챘다.</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">탐색</string>
+  <string name="Hero_StaBurning">당신에게 불이 붙었다!</string>
+  <string name="Hero_StaParalysis">당신은 마비되었다!</string>
+  <string name="Hero_StaPoison">당신은 중독되었다!</string>
+  <string name="Hero_StaOoze">부식성 점액이 당신의 살을 녹이고 있다. 씻어내라!</string>
+  <string name="Hero_StaRoots">당신은 움직일 수 없다!</string>
+  <string name="Hero_StaWeakness">당신은 힘이 약해짐을 느꼈다!</string>
+  <string name="Hero_StaBlindness">당신은 눈이 멀었다!</string>
+  <string name="Hero_StaFury">당신은 광란 상태에 빠졌다!</string>
+  <string name="Hero_StaFurious">광란</string>
+  <string name="Hero_StaCharm">당신은 매혹되었다!</string>
+  <string name="Hero_StaCripple">당신은 불구가 되었다!</string>
+  <string name="Hero_StaBleeding">당신은 피를 흘리고 있다!</string>
+  <string name="Hero_StaVertigo">주변이 빙글빙글 돈다!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">전사</string>
+  <string name="HeroClass_Mag">마법사</string>
+  <string name="HeroClass_Rog">도적</string>
+  <string name="HeroClass_Hun">사냥꾼</string>
+  <string name="HeroClass_Elf">엘프</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>전사는 힘 11로 시작한다.</item>
+    <item>전사는 유니크 숏 소드를 가지고 시작한다. 이 무기는 나중에 재련하여 다른 근접 무기를 업그레이드하는데 쓸 수 있다.</item>
+    <item>전사는 원거리 무기에 숙련되지 못하다.</item>
+    <item>어떤 음식이든 먹으면 약간의 체력을 회복한다.</item>
+    <item>힘의 물약을 식별한 채로 시작한다. </item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>마법사는 유니크 매직 미사일 완드를 가지고 시작한다. 나중에 다른 완드를 업그레이드하기 위해 이 완드의 마법을 풀 수 있다.</item>
+    <item>마법사는 완드의 마나를 빨리 회복시킨다.</item>
+    <item>어떤 음식이든 먹으면 가지고 있는 모든 완드의 마나를 1 회복시킨다.</item>
+    <item>마법사는 완드를 근접무기로 사용할 수 있다.</item>
+    <item>식별 주문서를 식별한 채로 시작한다.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>도적은 그림자의 반지+1을 가지고 시작한다.</item>
+    <item>도적은 반지를 착용하자마자 그 반지의 종류를 알아낼 수 있다.</item>
+    <item>도적은 가벼운 방어구에 숙련되어 있어, 착용하는 동안 회피율이 상승한다.</item>
+    <item>도적은숨겨진 함정이나 문을 찾아낼 확률이 높다.</item>
+    <item>도적은 음식 없이 더 오래 버틸 수 있다.</item>
+    <item>마법 지도 주문서를 식별한 채로 시작한다.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>사냥꾼은 체력 15로 시작한다.</item>
+    <item>사냥꾼은 업그레이드 가능한 유니크 부메랑을 가지고 시작한다.</item>
+    <item>사냥꾼은 투척무기에 숙련되어, 자신의 현재 힘이 투척무기의 요구치보다 높을 경우 데미지에 보너스를 받는다.</item>
+    <item>사냥꾼은 이슬에서 좀 더 많은 양의 체력을 회복한다.</item>
+    <item>사냥꾼은 근처에 있는 장애물 너머의 적을 인식할 수 있다.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>엘프는 체력 15와 힘 9로 시작한다.</item>
+    <item>엘프는 속박에 면역이다.</item>
+    <item>엘프는 업그레이드된 나무 활과 화살 더미를 가지고 시작한다.</item>
+    <item>엘프는 활에 대한 숙련도가 매우 높고 민첩하다</item>
+    <item>엘프는 근접 무기에 대한 숙련도가 떨어진다.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">검투사</string>
+  <string name="HeroSubClass_DescGlad">근접 무기를 이용한 공격에 성공하면 _검투사_는 연타를 시작하고, 다음 공격이 성공할 때 마다 추가로 데미지를 입힌다.</string>
+  <string name="HeroSubClass_NameBers">광전사</string>
+  <string name="HeroSubClass_DescBers">상처가 심하면, _광전사_는 광란 상태가 되며 공격력이 크게 상승한다.</string>
+  <string name="HeroSubClass_NameWarL">워락</string>
+  <string name="HeroSubClass_DescWarL">적을 죽이면, _워락_은 적의 영혼을 흡수하여, 상처를 치료하고 배를 채운다.</string>
+  <string name="HeroSubClass_NameBatM">배틀메이지</string>
+  <string name="HeroSubClass_DescBatM">지팡이를 장착하고 전투를 하면, _배틀메이지_는 현재 마나량에 비례한 추가 데미지를 입힌다. 공격이 성공할 때 마다 장착하고 있는 지팡이의 마나량이 1씩 회복된다.</string>
+  <string name="HeroSubClass_NameAssa">암살자</string>
+  <string name="HeroSubClass_DescAssa">기습공격을 할 경우, _암살자_는 대상에게 추가 데미지를 가한다.</string>
+  <string name="HeroSubClass_NameFreR">프리러너</string>
+  <string name="HeroSubClass_DescFreR">_프리러너_는 대부분의 몬스터들 보다도 거의 두 배 가까이 빠르게 움직일 수 있다. 그가 달릴때는 상당히 맞추기가 어렵다. 그러기 위해서는 무겁게 장비했거나 굶주린 상태가 아니어야 한다.</string>
+  <string name="HeroSubClass_NameSnip">저격수</string>
+  <string name="HeroSubClass_DescSnip">_저격수_는 적의 갑옷의 취약점을 파악할 수 있어서, 원거리 무기 사용시 이를 효과적으로 무시할 수 있다.</string>
+  <string name="HeroSubClass_NameWard">숲지기</string>
+  <string name="HeroSubClass_DescWard">자연의 힘과의 밀접한 교감은 _숲지기_에게 식물로부터 이슬과 씨앗을 수확할 수 있는 능력을 준다. 또한, 높게 자란 풀 위에 올라서면 일시적인 방어도 버프를 부여한다.</string>
+  <string name="HeroSubClass_NameScout">정찰병</string>
+  <string name="HeroSubClass_DescScout">엘프 _정찰병_은 은신의 달인이다. 높게 자란 풀 위에 올라서면 잠시동안 은신 상태가 된다. 또한 일반 엘프들 보다 빠르다.</string>
+  <string name="HeroSubClass_NameShaman">주술사</string>
+  <string name="HeroSubClass_DescShaman">엘프 _주술사_는 지팡이를 근접 무기로 사용할 수 있습니다. 타격에 성공시 완드의 마나를 소모하지 않고 지팡이의 힘을 적에게 가할 수 있습니다.</string>
+</resources>

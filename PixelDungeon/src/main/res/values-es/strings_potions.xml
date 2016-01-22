@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">poción %s</string>
+  <string name="Potion_Info">Este frasco contiene un turbio líquido %s. ¿Quién sabe qué pasará cuando lo bebas o lances?</string>
+  <string name="Potion_ACDrink">BEBER</string>
+  <string name="Potion_Harmfull">¡Poción dañina!</string>
+  <string name="Potion_Beneficial">Poción beneficiosa</string>
+  <string name="Potion_Yes">Sí, sé lo que estoy haciendo</string>
+  <string name="Potion_No">No, he cambiado de opinión</string>
+  <string name="Potion_SureDrink">¿Seguro que quieres beberla? En la mayoría de casos deberías lanzar estas pociones a tus enemigos.</string>
+  <string name="Potion_SureThrow">¿Seguro que quieres tirarla? Tendría mas sentido bebértela.</string>
+  <string name="Potion_Shatter">El frasco se rompe y el líquido %s salpica inofensivamente.</string>
+  <string-array name="Potion_Colors">
+    <item>turquesa</item>
+    <item>carmesí</item>
+    <item>celeste</item>
+    <item>jade</item>
+    <item>dorada</item>
+    <item>magenta</item>
+    <item>carbón</item>
+    <item>marfil</item>
+    <item>ámbar</item>
+    <item>bistre</item>
+    <item>índigo</item>
+    <item>plateada</item>
+  </string-array>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">Poción de Experiencia</string>
+  <string name="PotionOfExperience_Info">Las experiencias guardadas de múltiples batallas reducidas a forma liquida. Esta poción subirá tu nivel de experiencia instantáneamente.</string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">Poción de Escarcha</string>
+  <string name="PotionOfFrost_Info">Cuando se exponga al aire libre, este químico se evaporara en una nube congeladora, haciendo que cualquier criatura que entre en contacto con ella quede congelada, sin poder actuar ni moverse.</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">Poción Curativa</string>
+  <string name="PotionOfHealing_Info">Un elixir que restaura inmediatamente toda tu vida y te cura del veneno.</string>
+  <string name="PotionOfHealing_Apply">Tus heridas se curan completamente. </string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">Poción de Invisibilidad </string>
+  <string name="PotionOfInvisibility_Info">Beber esta poción te hará temporalmente invisible. Mientras estés invisible los enemigos no podrán verte. Atacar un enemigo, así como usar una varita o un pergamino ante los ojos de un enemigo, disipara el efecto.</string>
+  <string name="PotionOfInvisibility_Apply">¡Ves como tus manos se vuelven invisibles!</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">Poción de Levitación </string>
+  <string name="PotionOfLevitation_Info">Beber este curioso liquido hará que levites en el aire, pudiendo moverte sin problemas sobre trampas. Sin embargo, no puedes atravesar gases o llamas mientras estés en el aire.</string>
+  <string name="PotionOfLevitation_Apply">¡Estás flotando!</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">Poción de Llama Líquida</string>
+  <string name="PotionOfLiquidFlame_Info">Este frasco contiene un compuesto inestable que explota violentamente cuando se expone al aire libre.</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <string name="PotionOfMight_Name">Poción de Poder</string>
+  <string name="PotionOfMight_Info">Este potente líquido correrá por tus músculos, incrementando permanentemente tu fuerza en un punto y tu salud en 5 puntos</string>
+  <string name="PotionOfMight_Apply">Una fuerza recién descubierta recorre tu cuerpo.</string>
+  <string name="PotionOfMight_StaApply">+1 frz, +5 vida</string>
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">Poción de Visión Mental</string>
+  <string name="PotionOfMindVision_Info">Al tomar esta poción tu mente estará en sintonía con la firma psíquica de criaturas lejanas, permitiéndote sentir presencias biológicas a través de las paredes. Esta poción también te permitirá ver a través de paredes y puertas cercanas. </string>
+  <string name="PotionOfMindVision_Apply1">¡De alguna manera sientes la presencia de las mentes de otras criaturas!</string>
+  <string name="PotionOfMindVision_Apply2">De alguna manera puedes sentir que estás solo en este nivel, de momento.</string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <string name="PotionOfParalyticGas_Name">Poción de Gas Paralizante</string>
+  <string name="PotionOfParalyticGas_Info">Al ser expuesto al aire libre, el liquido de este frasco se vaporizará en una nube amarilla adormecedora. Cualquiera que inhale la nube quedará paralizado instantáneamente, sin poder moverse hasta después de que la nube desaparezca. Esta poción puede ser lanzada desde lejos para atrapar a los enemigos en la nube paralizante. </string>
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <string name="PotionOfPurity_Name">Poción de Purificación</string>
+  <string name="PotionOfPurity_Info">Este reactivo neutralizara rápidamente todos los gases dañinos en el área de efecto. Beberlo te otorgará inmunidad temporal a dichos gases.</string>
+  <string name="PotionOfPurity_Freshness">Sientes una frescura poco común en el aire.</string>
+  <string name="PotionOfPurity_NoSmell">¡Dejaste de sentir ningún olor!</string>
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">Poción de Fuerza</string>
+  <string name="PotionOfStrength_Info">Este potente liquido correrá por tus músculos, incrementando permanentemente tu fuerza en un punto.</string>
+  <string name="PotionOfStrength_Apply">Una fuerza recién descubierta recorre tu cuerpo.</string>
+  <string name="PotionOfStrength_StaApply">+1 frz</string>
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+  <string name="PotionOfToxicGas_Name">Poción de Gas Tóxico</string>
+  <string name="PotionOfToxicGas_Info">Abrir romper esta poción sellada hará que sus contenidos exploten en una mortal nube de gas verde toxico. Podrías decidir lanzar esta poción a enemigos lejanos, en lugar de abrirla a mano.</string>
+</resources>

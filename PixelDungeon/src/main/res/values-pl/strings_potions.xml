@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">%s mikstura</string>
+  <string name="Potion_Info">Ta flaszka zawiera ciecz, która jest %s. Kto wie co się stanie po jej wypiciu lub rzuceniu?</string>
+  <string name="Potion_ACDrink">WYPIJ</string>
+  <string name="Potion_Harmfull">Szkodliwa mikstura!</string>
+  <string name="Potion_Beneficial">Pozytywna mikstura</string>
+  <string name="Potion_Yes">Tak, wiem co robię</string>
+  <string name="Potion_No">Nie, zmieniłem zdanie</string>
+  <string name="Potion_SureDrink">Jesteś pewien, że chcesz to wypić? Najrozsądniej będzie jeśli rzucisz tym we wrogów.</string>
+  <string name="Potion_SureThrow">Czy jesteś pewien, że chcesz tym rzucić? Najrozsądniej będzie jeśli to wypijesz.</string>
+  <string name="Potion_Shatter">Flaszka roztrzaskuje się i %s ciecz rozpływa się nieszkodliwie</string>
+  <string-array name="Potion_Colors">
+    <item>turkusowa</item>
+    <item>karmazynowa</item>
+    <item>azurowa</item>
+    <item>jadeitowa</item>
+    <item>złota</item>
+    <item>magentowa</item>
+    <item>zwęglona</item>
+    <item>śnieżnobiała</item>
+    <item>bursztynowa</item>
+    <item>ciemnobrunatna</item>
+    <item>indigo</item>
+    <item>srebna</item>
+  </string-array>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">Mikstura Doświadczenia</string>
+  <string name="PotionOfExperience_Info">Przechowywane przez wieki doświadczenia uczestników wielu bitew zostały sprowadzone do ciekłej postaci. Ten wyciąg z czystej mądrości natychmiast zwiększy twój poziom doświadczenia.</string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">Mikstura Zimna</string>
+  <string name="PotionOfFrost_Info">Kiedy te chemikalia wejdą w kontakt z powietrzem, wyparują, tworząc lodowatą chmurę, sprawiając, że każda istota zostaje zamrożona po kontakcie z nią i nie może się ruszać dopóki lód się nie roztopi.</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">Mikstura Uzdrowienia</string>
+  <string name="PotionOfHealing_Info">Mikstura, która natychmiast przywróci ci całe zdrowie i wyleczy zatrucie.</string>
+  <string name="PotionOfHealing_Apply">Twe rany goją się natychmiastowo.</string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">Mikstura Niewidzialności</string>
+  <string name="PotionOfInvisibility_Info">Wypicie tej mikstury sprawi, że staniesz się tymczasowo niewidzialny. W tym stanie wrogowie nie będą mogli ciebie zobaczyć. Atakowanie, używanie kostura lub zwoju przed oczami wroga sprawi, że znów będziesz widoczny.</string>
+  <string name="PotionOfInvisibility_Apply">Widzisz, że twe dłonie znikają!</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">Mikstura Lewitacji</string>
+  <string name="PotionOfLevitation_Info">Wypicie tej dziwacznej mikstury sprawi, że będziesz lewitował w powietrzu, pozwalając ci na lot ponad przepaścią i pułapkami. Płomienie i gazy zapełniają powietrze i nie można przez nie przejść będąc w powietrzu.</string>
+  <string name="PotionOfLevitation_Apply">Wznosisz się w powietrze!</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">Mikstura Ciekłego Ognia</string>
+  <string name="PotionOfLiquidFlame_Info">Ta flaszka zawiera niestabilną, łatwopalną substancję, która wybuchnie żywym ogniem, jeśli wejdzie w kontakt z powietrzem.</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <string name="PotionOfMight_Name">Mikstura Potęgi</string>
+  <string name="PotionOfMight_Info">Ta potężna ciecz przesyci twe mięśnie, permanentnie zwiększając twą Siłę o jeden punkt i Życie o pięć punktów.</string>
+  <string name="PotionOfMight_Apply">Nowa siła przesyca twe ciało.</string>
+  <string name="PotionOfMight_StaApply">+1 siły, +5 hp</string>
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">Mikstura Telepatii</string>
+  <string name="PotionOfMindVision_Info">Po wypiciu tego, twój umysł będzie przestrojony na możliwość wykrywania fizycznych postaci dalekich istot, pozwalając na wyczucie ich obecności przez ściany. Ponadto ta mikstura pozwoli ci widzieć przez pobliskie ściany i drzwi.</string>
+  <string name="PotionOfMindVision_Apply1">Możesz jakoś wyczuć obecność umysłów innych istot!</string>
+  <string name="PotionOfMindVision_Apply2">Możesz jakoś stwierdzić, że aktualnie jesteś sam na tym poziomie.</string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <string name="PotionOfParalyticGas_Name">Mikstura Gazu Paraliżującego</string>
+  <string name="PotionOfParalyticGas_Info">Po kontakcie z powietrzem, płyn w tej flaszce wyparuje tworząc żółty obłok. Każdy kto weźmie wdech tej chmury zostanie natychmiast sparaliżowany. Nie będzie mógł się poruszać dopóki chmura nie zniknie. Ten przedmiot może zostać rzucony w odległych wrogów, by złapać ich w pułapkę gazu.</string>
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <string name="PotionOfPurity_Name">Mikstura Czystości</string>
+  <string name="PotionOfPurity_Info">Ten preparat szybko zneutralizuje wszystkie szkodliwe gazy w zasięgu działania. Wypicie tego gwarantuje tymczasową odporność na tego typu gazy.</string>
+  <string name="PotionOfPurity_Freshness">Czujesz niezwykłą świeżość w powietrzu</string>
+  <string name="PotionOfPurity_NoSmell">Przestałeś czuć jakiekolwiek zapachy!</string>
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">Mikstura Siły</string>
+  <string name="PotionOfStrength_Info">Ten potężny płyn zwiększy objętość twych mięśni, permanentnie zwiększając twoją Siłę o jeden punkt.</string>
+  <string name="PotionOfStrength_Apply">Nowa siła przepływa przez twe ciało.</string>
+  <string name="PotionOfStrength_StaApply">+1 do Siły</string>
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+  <string name="PotionOfToxicGas_Name">Mikstura Toksycznego Gazu</string>
+  <string name="PotionOfToxicGas_Info">Odkorkowanie lub zbicie flaszki zawierającej tę ciecz sprawi, że wybuchnie ona, tworząc śmiercionośną chmurę toksycznego, zielonego gazu. Możesz wybrać czy rzucić tą miksturą we wrogów zamiast odkorkowywać ją własnoręcznie</string>
+</resources>

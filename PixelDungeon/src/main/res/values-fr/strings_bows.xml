@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">L\'arc est une arme à distance, presque inutile (pour tout le monde sauf les elfes) à courte distance.\n \n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">arc en bois</string>
+  <string name="WoodenBow_Info">Ce simple arc en bois pourrait s\'avérer utile dès que vous aurez trouvé quelques flèches .</string>
+  <string name="WoodenBow_Gender">masculin</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">Arc à poulies</string>
+  <string name="CompoundBow_Info">Les flèches tirées avec un arc à poulies infligent une grande quantité de dommages et ont une précision améliorée en échange d\'un peu moins de vitesse.</string>
+  <string name="CompoundBow_Gender">masculin</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Name">arc rubis</string>
+  <string name="RubyBow_Info">Seuls les meilleurs archers peuvent utiliser l\'arc de rubis. Presque toutes les flèches transpercent l\'ennemi, laissant un énorme trou dans son corps. Mais une force élevée est requise pour tendre la corde.</string>
+  <string name="RubyBow_Gender">masculin</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">carquois</string>
+  <string name="Quiver_Info">carquois</string>
+  <string name="Quiver_Gender">masculin</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">carquois de feu</string>
+  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Gender">masculin</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">carquois de poison</string>
+  <string name="PoisonQuiver_Info"></string>
+  <string name="Poisonuiver_Gender">masculin</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">carquois paralysant</string>
+  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Gender">masculin</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">flèche</string>
+  <string name="CommonArrow_Info">Flèches en bois communes avec tête en fer.</string>
+  <string name="CommonArrow_Gender">féminin</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">flèche de feu</string>
+  <string name="FireArrow_Info">Cette flèche parait juste courante, excepté la tiède lumière rouge qui émane de sa tête.</string>
+  <string name="FireArrow_Gender">féminin</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">flèche empoisonnée</string>
+  <string name="PoisonArrow_Info">Des gouttes d\'un poison mortel brillent sur la tête de cette flèche.</string>
+  <string name="PoisonArrow_Gender">féminin</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">flèche paralysante</string>
+  <string name="ParalysisArrow_Info">Cette flèche libère une odeur très faible mais familière de curare.</string>
+  <string name="ParalysisArrow_Gender">féminin</string>
+</resources>

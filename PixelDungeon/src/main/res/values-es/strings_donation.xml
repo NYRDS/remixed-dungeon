@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">plata</string>
+  <string name="WndDonate_gold">oro</string>
+  <string name="WndDonate_ruby">rubí</string>
+  <string name="WndDonate_donate">donar:</string>
+  <string name="WndDonate_notConnected">sin conexión :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - Gratis para todos ahora y siempre .\n\nSin embargo puedes ayudarnos a hacer el juego aún mejor.\n\nAdemás de nuestras sinceras gracias obtendrás algunas mejoras decorativas.</string>
+  <string name="WndDonate_silverDonate">donación de plata</string>
+  <string name="WndDonate_goldDonate">donación de oro</string>
+  <string name="WndDonate_rubyDonate">donación de rubí</string>
+  <string name="WndDonate_silverDonateText">Cualquier donación ayudará al desarrollo del proyecto</string>
+  <string name="WndDonate_goldDonateText">Gracias por tu ayuda</string>
+  <string name="WndDonate_rubyDonateText">¡Tu generosidad nos ayudará a continuar mejorando Remixed Pixel Dungeon!</string>
+  <string name="WndDonate_silverDonateText2">Además, elimina los anuncios y desbloquea a la cazadora desde el principio.</string>
+  <string name="WndDonate_goldDonateText2">Además, desbloquea al elfo desde el principio.</string>
+  <string name="WndDonate_rubyDonateText2"></string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">estándar</string>
+  <string name="WndPremiumSettings_silver">plata</string>
+  <string name="WndPremiumSettings_gold">oro</string>
+  <string name="WndPremiumSettings_ruby">rubí</string>
+  <string name="WndPremiumSettings_chrome">Selecciona el material de la interfaz</string>
+  <string name="WndPremiumSettings_status">Selecciona el material de la barra de estado</string>
+  <string name="WndPremiumSettings_toolbar">Selecciona el material de la barra de herramientas</string>
+  <string name="WndPremiumSettings_banners">Seleccione material para el banner</string>
+  <string name="WndPremiumSettings_notAvailbale">Esta opción aún no está disponible.</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">por favor, considera donar</string>
+  <string name="DonateButton_thanks">¡Gracias por tu apoyo!</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">¿No te gusta la publicidad? Haz una donación y desaparecerán. Para siempre. </string>
+</resources>

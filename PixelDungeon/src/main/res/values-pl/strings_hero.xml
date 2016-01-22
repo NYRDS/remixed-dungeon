@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">Ty</string>
+  <string name="Hero_Name_Objective">Ty</string>
+  <string name="Hero_Leave">Jeden drogą prostą nie wychodzi z Pixel Dungeon!</string>
+  <string name="Hero_LevelUp">Awans!</string>
+  <string name="Hero_NewLevel">Gratuluje awansu na poziom %d! Teraz jesteś zdrowszy i bardziej skoncentrowany. Teraz jeszcze łatwiej będziesz atakował wrogów, oraz unikał ich ciosów.</string>
+  <string name="Hero_YouNowHave">Zebrałeś %s</string>
+  <string name="Hero_SomethingElse">Tu jeszcze coś jest</string>
+  <string name="Hero_LockedChest">Ta skrzynia jest zamknięta, a ty nie posiadasz pasującego klucza</string>
+  <string name="Hero_LockedDoor">Nie masz pasującego klucza</string>
+  <string name="Hero_NoticedSmth">Dostrzegłeś coś</string>
+  <string name="Hero_Wait">czekasz...</string>
+  <string name="Hero_Search">przeszukujesz</string>
+  <string name="Hero_StaBurning">Palisz się!</string>
+  <string name="Hero_StaParalysis">Jesteś sparaliżowany!</string>
+  <string name="Hero_StaPoison">Jesteś otruty!</string>
+  <string name="Hero_StaOoze">Żrąca substancja pożera twe ciało. Zmyj to w wodzie!</string>
+  <string name="Hero_StaRoots">Nie możesz się ruszyć!</string>
+  <string name="Hero_StaWeakness">Czujesz się osłabiony!</string>
+  <string name="Hero_StaBlindness">Jesteś oślepiony!</string>
+  <string name="Hero_StaFury">Stałeś się wściekły!</string>
+  <string name="Hero_StaFurious">Furia!</string>
+  <string name="Hero_StaCharm">Zostałeś zauroczony!</string>
+  <string name="Hero_StaCripple">Jesteś spowolniony!</string>
+  <string name="Hero_StaBleeding">Krwawisz!</string>
+  <string name="Hero_StaVertigo">Wszystko kręci się wokół ciebie!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">Wojownik</string>
+  <string name="HeroClass_Mag">Mag</string>
+  <string name="HeroClass_Rog">Złodziej</string>
+  <string name="HeroClass_Hun">Łowczyni</string>
+  <string name="HeroClass_Elf">Elf</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Wojownicy zaczyna z 11-stoma punktami Siły</item>
+    <item>Wojownicy zaczyna z unikalnym krótkim mieczem. Potem ten miecz może zostać \"przekuty\" by wzmocnić inną broń białą.</item>
+    <item>Wojownicy nie radzą sobie z bronią dystansową.</item>
+    <item>Każde zjedzone pożywienie przywraca trochę zdrowia.</item>
+    <item>Mikstura Siły jest zidentyfikowana na samym początku.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Magowie zaczynają z unikalnym Kosturem Magicznego Pocisku. Potem taki kostur może zostać \"wyładowany\" by wzmocnić inny kostur.</item>
+    <item>Magowie szybciej ładują swe kostury.</item>
+    <item>Każde zjedzone pożywienie przywraca 1 ładunek wszystkim kosturom w ekwipunku.</item>
+    <item>Magowie mogą używać kostury do walki wręcz.</item>
+    <item>Zwój Identyfikacji jest zidentyfikowany na samym początku.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Złodzieje zaczynają z Pierścieniem Cieni+1</item>
+    <item>Złodzieje identyfikują pierścień natychmiast po założeniu.</item>
+    <item>Złodzieje są biegli w posługiwaniu się lekkim pancerzem i lepiej unikają ataki wrogów jeśli takowy noszą</item>
+    <item>Złodzieje są biegli w odkrywaniu ukrytych przejść i pułapek.</item>
+    <item>Złodzieje wytrzymują dłużej bez jedzenia</item>
+    <item>Zwoje Magicznej Mapy są zidentyfikowane na samym początku.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Łowczynie zaczynają z 15-stoma punktami Życia.</item>
+    <item>Łowczynie zaczynają z unikatowym bumerangiem, który można ulepszać.</item>
+    <item>Łowczynie są biegłe w używaniu broni dystansowych i otrzymują bonus do obrażeń od nadmiernej Siły kiedy je używają. </item>
+    <item>Łowczynie otrzymują więcej życia z Kropel Rosy .</item>
+    <item>Łowczynie mogą wykryć sąsiednie potwory, nawet jeśli chowają się za przeszkodą.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Elfy zaczynają z 15-stoma punktami Życia ale z 9-cioma punktami Siły.</item>
+    <item>Elfy są odporne na unieruchomienie (nie mylić z paraliżem).</item>
+    <item>Elfy zaczynają z ulepszonym łukiem, sztyletem, zbroją i kilkoma strzałami.</item>
+    <item>Elfy są niezwykle biegłe w używaniu łuków i zręczne.</item>
+    <item>Elfy są mniej utalentowane jeśli chodzi o walkę wręcz.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladiator</string>
+  <string name="HeroSubClass_DescGlad">Udany atak wręcz _Gladiatora_ rozpoczyna kombinację, która zadaje więcej obrażeń z każdym kolejnym uderzeniem.</string>
+  <string name="HeroSubClass_NameBers">berserker</string>
+  <string name="HeroSubClass_DescBers">Kiedy _Berserker_ zostaje ciężko ranny wkracza w stan dzikiej furii zadając dodatkowe obrażenia wrogom.</string>
+  <string name="HeroSubClass_NameWarL">Czarnoksiężnik</string>
+  <string name="HeroSubClass_DescWarL">Po zabiciu wroga _Czarnoksiężnik_ pożera jego duszę. Leczy ona jego rany i syci jego głód.</string>
+  <string name="HeroSubClass_NameBatM">Mag Bitewny</string>
+  <string name="HeroSubClass_DescBatM">Kiedy _Bitewny Mag_ walczy wręcz za pomocą kostura zadaje dodatkowe obrażenia zależne od posiadanych ładunków. Ponadto każdy udany atak przywraca 1 ładunek jego kosturowi.</string>
+  <string name="HeroSubClass_NameAssa">zabójca</string>
+  <string name="HeroSubClass_DescAssa">Atakując z ukrycia _Zabójca_ zadaje dodatkowe obrażenia swej ofierze</string>
+  <string name="HeroSubClass_NameFreR">sprinter</string>
+  <string name="HeroSubClass_DescFreR">_Sprinter_ przemieszcza się prawie dwa razy szybciej niż większość potworów. Kiedy biegnie, Sprinter jest znacznie trudniejszy do trafienia. Żeby otrzymać te bonusy, musi być nieotoczony i nie może konać z głodu.</string>
+  <string name="HeroSubClass_NameSnip">snajper</string>
+  <string name="HeroSubClass_DescSnip">_Snajperzy_ mogą wykryć słabe punkty w opancerzeniu wroga, skutecznie ignorując go za pomocą broni dystansowej.</string>
+  <string name="HeroSubClass_NameWard">Strażniczka</string>
+  <string name="HeroSubClass_DescWard"> _Strażniczki_ czują silną więź z mocami natury. Fakt ten pozwala im na częstsze pozyskiwanie Kropel Rosy i nasion z roślin. Ponadto, chodzenie po wysokiej trawie daje im tymczasową premię do pancerza.</string>
+  <string name="HeroSubClass_NameScout">zwiadowca</string>
+  <string name="HeroSubClass_DescScout">Elficcy _Zwiadowcy_ są mistrzami skradania się. Chodzenie po wysokiej trawie daje im tymczasową premię Niewidzialności. Poruszają się też szybciej od zwykłych Elfów</string>
+  <string name="HeroSubClass_NameShaman">Szaman</string>
+  <string name="HeroSubClass_DescShaman">Elf _Szaman_ mozne uzywac rozdzki jako bron walki w recz ! Maa duze szanse na uderzenie wroga nie ponaszac straty ladunkow!</string>
+</resources>

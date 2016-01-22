@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Welcome_Title">¡Bienvenido!</string>
+  <string name="Welcome_Text">
+Remixed Pixel Dungeon es una modificación del Pixel Dungeon de código abierto de Watabou.\n El proyecto fue creado para dar a los jugadores una nueva experiencia y contenido.\n Otra parte importante de nuestro proyecto es desarrollar apoyo multilingüistico para el juego.\n Con cada actualización tratamos de mantenernos lo mas cerca posible de nuestra comunidad.\n Y si alguna vez tu idea es implementada en el juego... Gracias por tu creatividad =)\n La versión actual esta basada en Pixel Dungeon 1.7.2 y parcialmente en 1.7.5.\n Diferencias con el original:\n -Opción para cambiar de idioma.\n -Nuevo monstruo y NPC\n -El gas toxico y el fuego pueden interactuar con mas objetos\n -Nuevos tipos de «comida»\n -Nuevos objetos y nuevas propiedades para algunos objetos antiguos\n -Las semillas ahora se pueden comer =)\n - Elfos</string>
+  <string name="Welcome_Text_19">
+remix.17:\n
+- Nuevo tipo de mímico\n
+remix.18:\n
+- Elementales\n
+remix.19:\n
+- Arañas\n
+- Niveles de arañas\n
+- Reina Araña</string>
+  <string name="Welcome_Text_20">
+remix.20:\n
+- Nueva arma rara - Kusarigama\n
+- Nuevo enemigo raro\n 
+- Modo de juego dónde puedes guardar y cargar la partida\n
+- Y muchas cosas menos llamativas</string>
+  <string name="Welcome_Text_20_1">
+remix.20.1:\n
+- Pergamino de Dominación\n
+- Pergamino de Maldición</string>
+  <string name="Welcome_Text_20_2">
+remix.21:\n
+- Objetos de Caos Raro\n
+- El fuego líquido ahora es de verdad líquido</string>
+  <string name="Welcome_Text_21_1">
+remix.21.1:\n
+- Modo fácil (con anuncios)\n
+- Modo experto</string>
+  <string name="Welcome_Text_21_2">
+remix.21.2:\n
+- Posibilidad de elegir mods (de momento solo reskins) (Solo para modders experimentados)</string>
+  <string name="Welcome_Text_21_3">
+remix.21.3:\n
+- Pequño mod disponible para descargar (no completado, pero divertido)\n
+- Mejorados los gráficos de las cloacas</string>
+</resources>

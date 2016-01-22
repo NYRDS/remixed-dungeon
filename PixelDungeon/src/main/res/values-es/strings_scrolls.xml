@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">pergamino \"%s\"</string>
+  <string name="Scroll_Info">Este pergamino es indescifrable, y porta el titulo de la runa %s ¿Quién sabe que hará cuando se lea en voz alta?</string>
+  <string name="Scroll_ACRead">LEER</string>
+  <string name="Scroll_Blinded">No puedes leer un pergamino si estás cegado.</string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Selecciona un objeto</string>
+  <string name="InventoryScroll_Warning">¿De verdad quieres cancelar el uso de este pergamino? Se consumirá de todas formas.</string>
+  <string name="InventoryScroll_Yes">Si, soy positivo</string>
+  <string name="InventoryScroll_No">No, he cambiado de opinión</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Pergamino en blanco</string>
+  <string name="BlankScroll_Info">Solo un pergamino en blanco. ¿Puede que pueda escribir en él con algo?</string>
+  <string name="BlankScroll_ReallyBlank">Este pergamino está en blanco</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Pergamino de Desafio</string>
+  <string name="ScrollOfChallenge_Info">Cuando se lea en voz alta, este pergamino emitirá un rugido desafiante que despertará a todos los monstruos y los conducirá a la posición del lector. </string>
+  <string name="ScrollOfChallenge_Info1">¡El pergamino emite un rugido desafiante que resuena por toda la mazmorra!</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Pergamino de Identificación</string>
+  <string name="ScrollOfIdentify_Info">Revela permanentemente todos los secretos de un objeto.</string>
+  <string name="ScrollOfIdentify_InvTitle">Selecciona el objeto a identificar</string>
+  <string name="ScrollOfIdentify_Info1">Es %s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Pergamino de Nana</string>
+  <string name="ScrollOfLullaby_Info">Una melodía tranquilizadora sumirá en un sueño profundo a todas las criaturas en tu campo de visión, permitiéndote efectuar un ataque por sorpresa sobre ellas.</string>
+  <string name="ScrollOfLullaby_Info1">El pergamino emite una melodía tranquilizadora.</string>
+  <string name="ScrollOfLullaby_Info2">¡El pergamino emite una melodía tranquilizadora y el %s se duerme!</string>
+  <string name="ScrollOfLullaby_Info3">¡El pergamino emite una melodía tranquilizadora y los monstruos se duermen!</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Pergamino de Mapeo Mágico</string>
+  <string name="ScrollOfMagicMapping_Info">Cuando leas este pergamino una imagen clara como el agua quedará grabada en tu memoria, revelando la forma exacta de este nivel y todos sus secretos. La localización de los enemigos y objetos seguirá sin conocerse.</string>
+  <string name="ScrollOfMagicMapping_Layout">Ahora sabes que forma tiene este nivel.</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Pergamino de Imagen Espejo</string>
+  <string name="ScrollOfMirrorImage_Info">El encantamiento de este pergamino creará gemelos ilusorios del lector, los cuales perseguirán a sus enemigos.</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Pergamino de estallido Psiónico</string>
+  <string name="ScrollOfPsionicBlast_Info">Este pergamino contiene energía destructiva, que puede ser canalizada psionicamente para infligir daño masivo a todas las criaturas que estén en tu campo visual. Además, un destello de luz cegará temporalmente a todos los que estén en el área de efecto, incluyendo al lector del pergamino.</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Pergamino de Recarga</string>
+  <string name="ScrollOfRecharging_Info">Al ser liberado, el poder en  bruto de este pergamino recargará todo el poder las varitas del lector.</string>
+  <string name="ScrollOfRecharging_Info1a">Una oleada de energía recorre tu mochila, recargando tu varita</string>
+  <string name="ScrollOfRecharging_Info1b">Una oleada de energía recorre tu mochila, recargando tus varitas</string>
+  <string name="ScrollOfRecharging_Info2">Una oleada de energía recorre tu mochila, pero no pasa nada</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Pergamino de Remover Maldición</string>
+  <string name="ScrollOfRemoveCurse_Info">El encantamiento en este pergamino eliminara instantáneamente cualquier encantamiento maligno que te impida deshacerte de tus armas, armaduras, anillos y objetos.</string>
+  <string name="ScrollOfRemoveCurse_Proced">Tu mochila brilla con una luz purificadora, y una energía malévola se dispersa.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Tu mochila brilla con una luz purificadora, pero no pasa nada.</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">Pergamino de teletransportación</string>
+  <string name="ScrollOfTeleportation_Info">El hechizo en este pergamino transporta instantáneamente al lector a un lugar al azar en el nivel actual de la mazmorra. Puede ser utilizado para escapar de una situación peligrosa, pero un lector poco afortunado podría transportarse a sí mismo a un lugar aún mas peligroso.</string>
+  <string name="ScrollOfTeleportation_Teleport">En un segundo fuiste teletransportado a otro lugar de la mazmorra.</string>
+  <string name="ScrollOfTeleportation_NoTeleport">¡El fuerte aura mágica de este lugar impide que te teletransportes!</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Pergamino de Terror</string>
+  <string name="ScrollOfTerror_Info">Un destello de luz roja abrumará a todas las criaturas en tu campo visual, aterrorizándolas y haciendo que se den la vuelta y huyan. Atacar a un enemigo que está huyendo disipará el efecto.</string>
+  <string name="ScrollOfTerror_Info1">El pergamino emite un destello brillante de luz roja</string>
+  <string name="ScrollOfTerror_Info2">¡El pergamino emite un brillante destello de luz roja y los %s huyen!</string>
+  <string name="ScrollOfTerror_Info3">¡El pergamino emite un brillante destello de luz roja y los monstruos huyen!</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Pergamino de Mejora</string>
+  <string name="ScrollOfUpgrade_Info">Este pergamino mejorará un solo objeto, aumentando su calidad. Una varita incrementara su poder y su número de cargas; un arma infligirá mas daño o será más precisa; una armadura desviará golpes adicionales; el efecto de un anillo se intensificará. Además, las armas y armaduras requerirán menos fuerza para usarlas, y cualquier maldición en el objeto será eliminada.</string>
+  <string name="ScrollOfUpgrade_InvTitle">Selecciona un objeto para mejorarlo</string>
+  <string name="ScrollOfUpgrade_LooksBetter">tu %s ciertamente se ve mejor ahora</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Pergamino de Mejora de Arma</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Este pergamino mejorara un arma cuerpo a cuerpo, aumentando su calidad. A diferencia de  un pergamino de mejora normal, esta versión especializada jamás destruirá el encantamiento de un arma. En cambio, es posible que encante a un arma con un encantamiento al azar. </string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Selecciona un arma para mejorar</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">tu %s ciertamente se ve mejor ahora</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Pergamino de Dominación</string>
+  <string name="ScrollOfDomination_Info">Este pergamino acabará con la voluntad de una criatura en tu rango de visión, y luchará a tu lado hasta que muera. </string>
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Pergamino de Maldición </string>
+  <string name="ScrollOfCurse_Info">Este pergamino fue creado específicamente para castigar a aquellos ladrones tan estúpido como para usar magia que no pueden entender. Es totalmente inútil, e incluso puede resultar dañino para un aventurero normal, pero está muy bien valorado por los mercaderes. </string>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">숨겨진 발판이 발동했다!</string>
+  <string name="Level_TileChasm">틈</string>
+  <string name="Level_TileFloor">바닥</string>
+  <string name="Level_TileGrass">잔디</string>
+  <string name="Level_TileWater">물</string>
+  <string name="Level_TileWall">벽</string>
+  <string name="Level_TileClosedDoor">닫긴 문</string>
+  <string name="Level_TileOpenDoor">열린 문</string>
+  <string name="Level_TileEntrance">층 입구</string>
+  <string name="Level_TileExit">층 출구</string>
+  <string name="Level_TileEmbers">잿더미</string>
+  <string name="Level_TileLockedDoor">잠긴 문</string>
+  <string name="Level_TilePedestal">받침대</string>
+  <string name="Level_TileBarricade">바리케이드</string>
+  <string name="Level_TileHighGrass">높게 자란 풀</string>
+  <string name="Level_TileLockedExit">잠긴 층 출구</string>
+  <string name="Level_TileUnlockedExit">열린 층 출구</string>
+  <string name="Level_TileSign">표지판</string>
+  <string name="Level_TileWell">우물</string>
+  <string name="Level_TileEmptyWell">빈 우물</string>
+  <string name="Level_TileStatue">석상</string>
+  <string name="Level_TileToxicTrap">독가스 함정</string>
+  <string name="Level_TileFireTrap">화염 함정</string>
+  <string name="Level_TileParalyticTrap">마비가스 함정</string>
+  <string name="Level_TilePoisonTrap">맹독다트 함정</string>
+  <string name="Level_TileAlarmTrap">경보 함정</string>
+  <string name="Level_TileLightningTrap">번개 함정</string>
+  <string name="Level_TileGrippingTrap">속박 함정</string>
+  <string name="Level_TileSummoningTrap">소환 함정</string>
+  <string name="Level_TileInactiveTrap">발동된 함정</string>
+  <string name="Level_TileBookshelf">책장</string>
+  <string name="Level_TileAlchemy">연금솥</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">바닥이 보이지 않는다.</string>
+  <string name="Level_TileDescWater">불이 붙었다면, 물 속에 들어가 불을 끄세요.</string>
+  <string name="Level_TileDescEntrance">계단은 위를 향하고 있다.</string>
+  <string name="Level_TileDescExit">계단은 아래를 향하고 있다.</string>
+  <string name="Level_TileDescEmbers">바닥 전체가 잿더미다</string>
+  <string name="Level_TileDescHighGrass">빽빽한 초목이 시야를 방해한다.</string>
+  <string name="Level_TileDescLockedDoor">이 문은 잠겨 있습니다. 열기 위해서는 맞는 열쇠가 필요합니다.</string>
+  <string name="Level_TileDescLockedExit">무거운 빗장이 아래로 내려가는 계단을 가로막고 있다.</string>
+  <string name="Level_TileDescBarricade">나무 바리케이드가 단단히 가로막고 있지만 수년동안 바짝 말라 있다. 불에 탈까?</string>
+  <string name="Level_TileDescSign">여기서는 글씨가 보이지 않는다.</string>
+  <string name="Level_TileDescTrap">숨겨진 발판을 디디면 함정이 발동한다.</string>
+  <string name="Level_TileDescInactiveTrap">함정이 이미 발동해서 더 이상 위험하지 않다.</string>
+  <string name="Level_TileDescStatue">누군가 이곳을 꾸미고 싶어했지만, 당연히 던전의 분위기를 바꾸진 못했다.</string>
+  <string name="Level_TileDescAlchemy">여기다가 씨앗을 떨어뜨려 물약을 제조할 수 있다.</string>
+  <string name="Level_TileDescEmptyWell">우물은 말라있다.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileGrass">형광 이끼</string>
+  <string name="Caves_TileHighGrass">형광 버섯</string>
+  <string name="Caves_TileWater">한기가 들 정도로 차가운 물.</string>
+  <string name="Caves_TileDescEntrance">사다리는 위를 향하고 있다.</string>
+  <string name="Caves_TileDescExit">사다리는 아래를 향하고 있다.</string>
+  <string name="Caves_TileDescHighGrass">거대한 버섯들이 시야를 방해한다.</string>
+  <string name="Caves_TileDescDeco">어떤 광물의 광맥이 벽에 보인다. 금인가?</string>
+  <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">수상한 색의 물</string>
+  <string name="City_TileHighGrass">활짝 피어있는 꽃들</string>
+  <string name="City_TileDescEntrance">경사로는 위를 향하고 있다.</string>
+  <string name="City_TileDescExit">경사로는 아래를 향하고 있다.</string>
+  <string name="City_TileDescDeco">몇몇 타일이 사라지고 없다.</string>
+  <string name="City_TileDescEmptySP">두터운 카펫이 복도를 덮고 있다.</string>
+  <string name="City_TileDescStatue">이 석상은 영웅적인 풍채로 서 있는 어떤 드워프를 묘사하고 있다.</string>
+  <string name="City_TileDescBookshelf">다양한 학문과 관련된 책들이 책장을 채우고 있다.</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">차가운 용암</string>
+  <string name="Halls_TileGrass">화롯불이끼</string>
+  <string name="Halls_TileHighGrass">화롯불버섯</string>
+  <string name="Halls_TileStatue">기둥</string>
+  <string name="Halls_TileDescWater">용암처럼 보인다, 하지만 차가운데다가 만져도 괜찮은것 같다.</string>
+  <string name="Halls_TileDescStatue">진짜 인간 해골로 만들어진 기둥이다. 놀라워!</string>
+  <string name="Halls_TileDescBookshelf">고대의 언어로 쓰여진 책들이 책장에 가득하다.</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">차가운 용암</string>
+  <string name="LastLevel_TileGrass">화롯불이끼</string>
+  <string name="LastLevel_TileHighGrass">화롯불버섯</string>
+  <string name="LastLevel_TileStatue">기둥</string>
+  <string name="LastLevel_TileDescWater">용암처럼 보인다. 하지만 차갑고, 아마 만져도 괜찮을 것이다.</string>
+  <string name="LastLevel_TileDescStatue">이 기둥은 진짜 휴머노이드 해골로 만들어져 있다. 대박.</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">수상한 색의 물</string>
+  <string name="LastShopLevel_TileHighGrass">높이 피어있는 꽃들</string>
+  <string name="LastShopLevel_TileDescEntrance">위 층으로 향하는 경사로</string>
+  <string name="LastShopLevel_TileDescExit">아래의 지옥불로 향하는 경사로.</string>
+  <string name="LastShopLevel_TileDescDeco">타일 이가 여기저기 빠져 있다.</string>
+  <string name="LastShopLevel_TileDescEmptySP">두터운 카펫이 복도를 덮고 있다.</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">검고 차가운 물</string>
+  <string name="Prison_TileDescDeco">복도에 오래된 핏자국이 남아 있다.</string>
+  <string name="Prison_TileDescBookshelf">이건 아마 감옥 도서관의 흔적일 것이다. 불에 탈 것 같은데?</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">탁한 물</string>
+  <string name="Sewer_TileDescDeco">축축하고 누르스름한 이끼들이 복도를 뒤덮고 있다.</string>
+  <string name="Sewer_TileDescBookshelf">책장이 쓸모없는 싸구려 책들로 가득차있다. 불에 탈 것 같은데?</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">던져넣을 씨앗을 고르세요</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">틈</string>
+  <string name="Chasm_Yes">네, 내가 뭘 하려는지 잘 알고 있습니다.</string>
+  <string name="Chasm_No">아니요, 생각을 바꿨습니다.</string>
+  <string name="Chasm_Jump">정말로 이 틈 아래로 뛰어 들겠습니까? 죽을수도 있습니다.</string>
+  <string name="Chasm_Info">추락하여 사망했습니다...</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">함정이 날카로운 소리를 냈고 던전 전체에 울려퍼졌다!</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">번개 함정</string>
+  <string name="LightningTrap_Desc">당신은 번개 함정의 방전으로 사망했습니다...</string>
+</resources>

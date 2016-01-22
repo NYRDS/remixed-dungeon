@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">anneau de %s</string>
+  <string name="Ring_Info">Ce cercle de métal est orné d\'une grosse gemme %s qui scintille dans les ténèbres. Qui sait quels effets cela peut avoir mis au doigt ?</string>
+  <string name="Ring_Identify">Vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
+  <string-array name="Ring_Gems">
+    <item>diamant</item>
+    <item>opale</item>
+    <item>grenat</item>
+    <item>rubis</item>
+    <item>améthyste</item>
+    <item>topaze</item>
+    <item>onyx</item>
+    <item>tourmaline</item>
+    <item>émeraude</item>
+    <item>saphir</item>
+    <item>quartz</item>
+    <item>agate</item>
+  </string-array>
+  <string name="Ring_Info1">Vous ne pouvez porter que 2 anneaux à la fois</string>
+  <string name="Ring_Info2">Votre %s se resserre douloureusement autour de votre doigt</string>
+  <string name="Ring_Info3a">%1$s
+L\'%2$s est sur votre doigt %3$s.</string>
+  <string name="Ring_Info3b">, et parce qu\'il est maudit, vous n\'arrivez pas à l\'enlever</string>
+  <string name="Ring_Info4">%1$s
+Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
+  <string name="Ring_BuffKnown">C\'est un %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">Anneau de précision</string>
+  <string name="RingOfAccuracy_Info">Cet anneau augmente vos chances de toucher les ennemis.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">Anneau de détection</string>
+  <string name="RingOfDetection_Info">Cet anneau permet à son porteur de voir les pièges et les portes cachées sans prendre le temps de chercher. Les anneaux de détection maudits engourdiront vos sens, rendant la détection des pièges et des portes cachées plus difficiles, même en les cherchant activement.</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">Anneau des éléments</string>
+  <string name="RingOfElements_Info">Cet anneau octroie une résistance à différents éléments, tels que le feu, l\'électricité, les gaz, etc. et réduit aussi la durée des effets négatifs.</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">Anneau d\'esquive</string>
+  <string name="RingOfEvasion_Info">Cet anneau augmente vos chances d\'esquiver les attaques ennemies.</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">Anneau du marchandeur</string>
+  <string name="RingOfHaggler_Info">En fait, cet anneau n\'a aucun effet magique, mais il montrera aux marchands que son propriétaire fait partie de la guilde des voleurs. Habituellement, ils se pressent de faire des réductions pour obtenir la garantie d\'une immunité temporaire. Améliorer cet anneau ne donnera aucun bonus supplémentaire.</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">Anneau de célérité</string>
+  <string name="RingOfHaste_Info">Cet anneau accélère le cours du temps pour son porteur, lui permettant de tout faire un peu plus vite.</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">Anneau de l\'herbier</string>
+  <string name="RingOfHerbalism_Info">Cet anneau augmente vos chances de collecter la rosée et les graines des hautes herbes.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">Anneau de régénération</string>
+  <string name="RingOfMending_Info">Cet anneau augmente les propriétés régénératrices du corps, permettant à son porteur de se refaire une santé plus rapidement. Les anneaux de régénération maudits arrêteront la régénération naturelle du corps.</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">Anneau de pouvoir</string>
+  <string name="RingOfPower_Info">Vos sceptres deviendront plus puissants dans le champ d\'énergie qui émane de cet anneau. Les anneaux de pouvoir maudits vont les affaiblir à la place.</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">Anneau de satiété</string>
+  <string name="RingOfSatiety_Info">Porter cet anneau vous permettra de survivre plus longtemps à la famine. Les anneaux de satiété maudits auront l\'effet inverse.</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">Anneau des ténèbres</string>
+  <string name="RingOfShadows_Info">Les ennemis auront tendance à vous remarquer moins souvent si vous portez cet anneau. Les anneaux des ténèbres maudits vous feront remarquer par des ennemis qui en temps normal ne vous auraient pas vus. </string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">Anneau d\'épines</string>
+  <string name="RingOfThorns_Info">Bien que cet anneau de donne pas de vraies épines, un ennemi qui vous attaque sera lui même blessé par une partie des dommages qu\'il vous a infligés. Améliorer cet anneau ne donne aucun bonus supplémentaire.</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Anneau du sang de la pierre</string>
+  <string name="RingOfStoneWalking_Info">Cet anneau fait de pierre robuste passerait inaperçu. S\'il n\'y avait pas une goutte de sang liquide battant à la place d\'une gemme.</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Emmuré dans la pierre. A tout jamais.</string>
+  <!-- STRINGS OF SpiderCharm CLASS -->
+  <string name="SpiderCharm_Name">Spider Charm</string>
+  <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
+</resources>

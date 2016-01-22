@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="testDevice">28A84414B608E9C25DC2DDDF7E85B161</string>
+    <string name="saveLoadAdUnitId">ca-app-pub-4791779564989579/8957634845</string>
+    <string name="easyModeAdUnitId">ca-app-pub-4791779564989579/2728116843</string>
+    <string name="easyModeSmallScreenAdUnitId">ca-app-pub-4791779564989579/4419686049</string>
+    <string name="iapKey">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQRfPt11/KWsITVw7wAt6FSQjl2sK+JaiiGm83JLlq+j1DFaMRFtx52/zbjOt+fu6LaiH9tyjcaaJrGbq/YfMjr2z1yr7Qru83iqqXMsiMLKWuW+nSnQd5/yqJwRge8Oymz6m9ddCpyj5MbmMQ4pnh6eoGdeZaInuZh5TbuvP4004wAW1HYwvtkWl3p7SR+YcOGeQX1nfcTNflwFYunQLoKB+rQHjL3y+FTEJAUSISKDI47J1cOjFoN/upOsxIKHYyU8FI0mAq8lim6zkxa/kapojgpKw+UJNmJShnWzMutf/3JeVWVWFiXi6XX7aE0MJnfcMgU/IeI37f17au3ClQIDAQAB</string>
+</resources>

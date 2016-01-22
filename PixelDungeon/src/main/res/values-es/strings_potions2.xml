@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_ACMoisten">INPREGNAR</string>
+  <string name="Potion_SelectForMoisten">Selecciona el objeto que quieras impregnar. </string>
+  <string name="Potion_MoistenUseless">Parece que has malgastado esta poción.</string>
+  <string name="Potion_RuneDissaperaed">La runa ha desaparecido de %s.</string>
+  <string name="Potion_ArrowMoisten">Has impregnado las flechas satisfactoriamente.</string>
+  <string name="Potion_ItemFliesAway">%s se marcha volando de tus manos.</string>
+  <string name="Potion_FoodRefreshed">%s ahora parece comestible.</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">Księga</string>
+  <string name="Codex_ACRead">CZYTAJ</string>
+  <string name="Codex_Info">Jedna z wielu tajemniczych ksiąg, którą można znaleźć w każdej bibliotece.</string>
+  <string name="Codex_Blinded">Nie możesz czytać będąc oślepionym</string>
+  <string-array name="Codex_Story">
+    <item>A wtedy stworzył Watabou Pikselowe Lochy. A wtedy spojrzał na swe dzieło. A wtedy ujrzał, że było dobre!</item>
+    <item>Glif Odbicia powoduje odepchnięcie wroga, kiedy ten zaatakuje bohatera.</item>
+    <item>Glif Uroku oczaruje wroga na kilka tur. Bohater również będzie oczarowany, lecz nie dłużej niż wróg.</item>
+    <item>Glif Chaosu sprawi, że Bohater zostanie oświecony, zapali się, a wróg zostanie zamrożony w wypadku ataku.</item>
+    <item>Glif Duplikacji stworzy lustrzany obraz Bohatera, gdy zostanie zaatakowany, który będzie walczył dla pierwowzoru. Jednak projekcja może się pojawić też dosłownie W BOHATERZE, zabijając go natychmiastowo.</item>
+    <item>Glif Porażenia uwalnia elektryczny wybuch, który zrani wroga, który zaatakował gracza, po czym zrani Bohatera o połowę obrażeń zadanych wrogowi.</item>
+    <item>Glif Metabolizmu sprawi, że Bohater zostanie uleczony zanim zostanie zraniony przez wroga. Efekt występuje, jeśli Bohater nie kona z głodu. Leczenie za pomocą tego glifu szybciej zużywa punkty głodu.</item>
+    <item>Glif Smrodu uwalnia chmurę toksycznego gazu kiedy Bohater zostanie zaatakowany.</item>
+    <item>Glif Cierpienia sprawia, że gdy Bohater otrzyma obrażenia, zostaną one rozłożone w czasie (na przykład jeśli bohater otrzyma 24 punkty obrażeń, zamiast natychmiastowych strat, będzie otrzymywał 1 punkt obrażeń przez 24 tury, co daje możliwość szybkiego uleczenia ran przed zgonem)</item>
+    <item>Glif Teleportacji powoduje, że zaatakowanie Bohatera może go teleportować na dowolne pole w zasięgu wzroku. Nie działa na poziomach Bossów.</item>
+    <item>Glif Spętania powoduje, że zaatakowany Bohater otrzymuje Naturalną Zbroję, zwiększając znacznie odporność na ataki, lecz unieruchamia go w tym samym czasie.</item>
+    <item>Śmiercionośna broń ma szansę na natychmiastowe zabicie wroga (lub zadanie podwójnych obrażeń bossom)</item>
+    <item>Płonąca broń może podpalić wroga. Uwaga! Walka Płonącą bronią nie jest wskazana na łatwopalnym terenie!</item>
+    <item>Duchowa broń sprawi, że wróg może uciec kiedy zostanie zaatakowany.</item>
+    <item>Niestabilna broń może nałożyć na wroga efekt każdego możliwego zaklęcia.</item>
+    <item>Wampiryczna broń uleczy Bohatera o część obrażeń zadanych wrogowi.</item>
+    <item>Szczęśliwa broń prawie nie może zostać sparowana przez wroga i ma szansę na zadanie dodatkowych obrażeń.</item>
+    <item>Ogłuszająca broń może sparaliżować wroga</item>
+    <item>Przebijająca broń zadaje obrażenia nie tylko pierwszemu zaatakowanemu wrogowi, ale też wrogom stojącym za nim</item>
+    <item>Trująca broń może otruć wroga.</item>
+    <item>Zimna broń może spowolnić wroga, ale i uodpornić go na ogień.</item>
+    <item>Dzika broń może sprawić, że atak Bohatera będzie miał charakter obszarowy.</item>
+    <item>Ta książka została napisana w demonicznym języku</item>
+    <item>Ta książka została napisana w krasnoludzkim języku</item>
+    <item>Ta książka została napisana w elfickim języku</item>
+  </string-array>
+</resources>
