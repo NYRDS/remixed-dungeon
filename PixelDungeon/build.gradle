@@ -1,28 +1,39 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'pixeldungeon'
+            keyPassword 'qwerty'
+            storeFile file('C:/Users/mike/Desktop/keys/pixeldungeon')
+            storePassword 'qwerty666'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
         minSdkVersion 8
         targetSdkVersion 23
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_7
-            targetCompatibility JavaVersion.VERSION_1_7
-        }
+        signingConfig signingConfigs.release
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+        debug {
+            signingConfig signingConfigs.release
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+    dexOptions {
+        incremental false
+    }
+    productFlavors {
     }
 }
 

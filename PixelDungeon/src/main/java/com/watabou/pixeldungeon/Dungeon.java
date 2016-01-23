@@ -476,6 +476,10 @@ public class Dungeon {
 		Bundle bundle = Bundle.read(input);
 		input.close();
 
+		if(bundle==null) {
+			new RuntimeException("can not load level from "+loadFrom);
+		}
+
 		Level level = Level.fromBundle(bundle, "level");
 		if (level != null) {
 			level.levelId = next.levelId;

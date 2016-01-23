@@ -630,7 +630,7 @@ public abstract class RegularLevel extends CommonLevel {
 		super.storeInBundle( bundle );
 		bundle.put( "rooms", rooms );
 	}
-	
+
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
