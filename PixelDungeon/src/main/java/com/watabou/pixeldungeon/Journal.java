@@ -102,8 +102,8 @@ public class Journal {
 	
 	public static void restoreFromBundle( Bundle bundle ) {
 		records = new ArrayList<Record>();
-		for (Bundlable rec : bundle.getCollection( JOURNAL ) ) {
-			records.add( (Record) rec );
+		for (Record rec : bundle.getCollection( JOURNAL, Record.class ) ) {
+			records.add(  rec );
 		}
 	}
 	

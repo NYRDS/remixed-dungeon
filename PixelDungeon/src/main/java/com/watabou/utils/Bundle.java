@@ -177,17 +177,16 @@ public class Bundle {
 		}
 	}
 	
-	public Collection<Bundlable> getCollection( String key ) {
+	public <T extends Bundlable> Collection<T> getCollection( String key, Class<T> type ) {
 		
-		List<Bundlable> list = new ArrayList<Bundlable>();
+		List<T> list = new ArrayList<T>();
 		
 		try {
 			JSONArray array = data.getJSONArray( key );
 			for (int i=0; i < array.length(); i++) {
-				list.add( new Bundle( array.getJSONObject( i ) ).get() );
+				list.add(type.cast(new Bundle(array.getJSONObject(i)).get()));
 			}
 		} catch (JSONException e) {
-			
 		}
 		
 		return list;

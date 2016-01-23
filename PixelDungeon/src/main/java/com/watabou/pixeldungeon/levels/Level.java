@@ -337,29 +337,21 @@ public abstract class Level implements Bundlable {
 		
 		weakFloorCreated = false;
 
-		Collection<Bundlable> collection = bundle.getCollection(HEAPS);
-		for (Bundlable h : collection) {
-			Heap heap = (Heap) h;
+		for (Heap heap : bundle.getCollection(HEAPS,Heap.class)) {
 			heaps.put(heap.pos, heap);
 		}
 
-		collection = bundle.getCollection(PLANTS);
-		for (Bundlable p : collection) {
-			Plant plant = (Plant) p;
+		for (Plant plant : bundle.getCollection(PLANTS, Plant.class)) {
 			plants.put(plant.pos, plant);
 		}
 
-		collection = bundle.getCollection(MOBS);
-		for (Bundlable m : collection) {
-			Mob mob = (Mob) m;
+		for (Mob mob : bundle.getCollection(MOBS, Mob.class)) {
 			if (mob != null && mob.getPos() != -1) {
 				mobs.add(mob);
 			}
 		}
 
-		collection = bundle.getCollection(BLOBS);
-		for (Bundlable b : collection) {
-			Blob blob = (Blob) b;
+		for (Blob blob : bundle.getCollection(BLOBS, Blob.class)) {
 			blobs.put(blob.getClass(), blob);
 		}
 

@@ -132,10 +132,8 @@ public abstract class Char extends Actor {
 		hp(bundle.getInt( TAG_HP ));
 		ht(bundle.getInt( TAG_HT ));
 		
-		for (Bundlable b : bundle.getCollection( BUFFS )) {
-			if (b != null) {
-				((Buff)b).attachTo( this );
-			}
+		for (Buff b : bundle.getCollection( BUFFS, Buff.class )) {
+			if (b != null) b.attachTo(this);
 		}
 		
 		readCharData();

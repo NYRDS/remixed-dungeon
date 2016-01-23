@@ -145,8 +145,8 @@ public enum Rankings {
 			Bundle bundle = Bundle.read( input );
 			input.close();
 			
-			for (Bundlable record : bundle.getCollection( RECORDS )) {
-				records.add( (Record)record );
+			for (Record record : bundle.getCollection( RECORDS, Record.class )) {
+				records.add( record );
 			}
 			
 			lastRecord     = bundle.getInt( LATEST );	

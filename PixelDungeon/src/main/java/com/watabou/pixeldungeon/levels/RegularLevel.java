@@ -631,12 +631,11 @@ public abstract class RegularLevel extends CommonLevel {
 		bundle.put( "rooms", rooms );
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		
-		rooms = new HashSet<Room>( (Collection<? extends Room>) bundle.getCollection( "rooms" ) );
+		rooms = new HashSet<Room>( bundle.getCollection( "rooms", Room.class ) );
 		for (Room r : rooms) {
 			if (r.type == Type.WEAK_FLOOR) {
 				weakFloorCreated = true;

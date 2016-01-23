@@ -284,10 +284,10 @@ public class Hero extends Char {
 		levelId   = bundle.optString(LEVEL_ID,"unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
-		Collection<Bundlable> _pets = bundle.getCollection(PETS);
+		Collection<Mob> _pets = bundle.getCollection(PETS, Mob.class);
 
 		if (_pets != null) {
-			for (Bundlable pet : _pets) {
+			for (Mob pet : _pets) {
 				pets.add((Mob) pet);
 			}
 		}
