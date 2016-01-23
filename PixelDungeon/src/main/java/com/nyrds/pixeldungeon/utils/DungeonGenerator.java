@@ -7,7 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.pixedungeon.levels.PredesignedLevel;
+import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;

@@ -12,7 +12,7 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
@@ -230,9 +230,10 @@ public abstract class GameWithGoogleIap extends Game {
 		}
 
 		if (googleAdsUsable()) {
-			int st = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+			int st = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
 			if (st != ConnectionResult.SUCCESS) {
 				return;
+
 			}
 		}
 

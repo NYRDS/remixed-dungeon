@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
     android:versionCode="223"
@@ -13,8 +14,10 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="23" />
+        tools:overrideLibrary="com.google.android.gms.ads,
+                               com.google.android.gms,
+                               com.google.android.gms.base
+        "/>
 
     <uses-feature android:glEsVersion="0x00020000" />
 
