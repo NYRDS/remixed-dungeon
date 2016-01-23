@@ -23,7 +23,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
         debug {
-            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -39,7 +38,6 @@ android {
 
 dependencies {
     compile files('libs/acra.jar')
-    compile files('libs/android-support-v4.jar')
     compile 'com.google.android.gms:play-services-ads:8.4.0'
     compile 'com.google.android.gms:play-services-base:8.4.0'
 }
