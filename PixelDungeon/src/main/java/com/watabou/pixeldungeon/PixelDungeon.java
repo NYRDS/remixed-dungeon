@@ -400,9 +400,13 @@ public class PixelDungeon extends GameWithGoogleIap {
 			if (difficulty == 0) {
 				PixelDungeon.displayEasyModeBanner();
 			}
-			
+
 			if (difficulty < 2) {
 				PixelDungeon.initSaveAndLoadIntersitial();
+			}
+
+			if (difficulty >= 2) {
+				PixelDungeon.removeEasyModeBanner();
 			}
 		} else {
 			PixelDungeon.removeEasyModeBanner();

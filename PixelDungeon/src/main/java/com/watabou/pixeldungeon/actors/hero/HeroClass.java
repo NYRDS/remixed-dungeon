@@ -138,8 +138,8 @@ public enum HeroClass {
 	private static void initCommon(Hero hero) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
-		
-		initDebug(hero);
+
+		//initDebug(hero);
 		
 		QuickSlot.cleanStorage();
 	}
