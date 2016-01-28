@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
-    android:versionCode="224"
-    android:versionName="remix.21.5.alpha.2" >
+    android:versionCode="225"
+    android:versionName="remix.21.4.fix.1" >
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
