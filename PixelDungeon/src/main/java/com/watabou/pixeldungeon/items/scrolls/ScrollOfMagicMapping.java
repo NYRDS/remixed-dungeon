@@ -82,11 +82,6 @@ public class ScrollOfMagicMapping extends Scroll {
 	}
 	
 	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfMagicMapping_Info);
-	}
-	
-	@Override
 	public int price() {
 		return isKnown() ? 25 * quantity() : super.price();
 	}

@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
-import java.util.ArrayList;
-
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -12,6 +10,8 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+
 public class ScrollOfDomination extends Scroll {
 
 	@Override
@@ -20,9 +20,9 @@ public class ScrollOfDomination extends Scroll {
 		Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 		Invisibility.dispel(getCurUser());
 		
-		ArrayList<Mob> mobsInSight = new ArrayList<Mob>();
+		ArrayList<Mob> mobsInSight = new ArrayList<>();
 		
-		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+		for (Mob mob : Dungeon.level.mobs.toArray(new Mob[Dungeon.level.mobs.size()])) {
 			if (Dungeon.level.fieldOfView[mob.getPos()] && !(mob instanceof Boss) && !mob.isPet() && !(mob instanceof NPC)) {
 				mobsInSight.add(mob);
 			}

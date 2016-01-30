@@ -38,7 +38,7 @@ public class ScrollOfLullaby extends Scroll {
 		
 		int count = 0;
 		Mob affected = null;
-		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+		for (Mob mob : Dungeon.level.mobs.toArray(new Mob[Dungeon.level.mobs.size()])) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Buff.affect( mob, Sleep.class );
 				if (mob.buff( Sleep.class ) != null) {
@@ -62,12 +62,7 @@ public class ScrollOfLullaby extends Scroll {
 		
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfLullaby_Info);
-	}
-	
+
 	@Override
 	public int price() {
 		return isKnown() ? 50 * quantity() : super.price();

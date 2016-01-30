@@ -49,12 +49,7 @@ public class ScrollOfRecharging extends Scroll {
 		
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfRecharging_Info);
-	}
-	
+
 	public static void charge( Hero hero ) {
 		hero.getSprite().centerEmitter().burst( EnergyParticle.FACTORY, 15 );
 	}

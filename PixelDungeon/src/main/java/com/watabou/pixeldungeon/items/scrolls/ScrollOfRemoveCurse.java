@@ -60,12 +60,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 		
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfRemoveCurse_Info);
-	}
-	
+
 	public static boolean uncurse( Hero hero, Item... items ) {
 		
 		boolean procced = false;

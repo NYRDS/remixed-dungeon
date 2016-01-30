@@ -42,12 +42,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		
 		Badges.validateItemLevelAquired( item );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfIdentify_Info);
-	}
-	
+
 	@Override
 	public int price() {
 		return isKnown() ? 30 * quantity() : super.price();

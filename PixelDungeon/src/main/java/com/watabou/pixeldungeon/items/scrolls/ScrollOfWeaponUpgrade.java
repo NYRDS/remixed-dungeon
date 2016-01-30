@@ -50,9 +50,4 @@ public class ScrollOfWeaponUpgrade extends InventoryScroll {
 		
 		getCurUser().getSprite().emitter().start( Speck.factory( Speck.UP ), 0.2f, 3 );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfWeaponUpgrade_Info);
-	}
 }

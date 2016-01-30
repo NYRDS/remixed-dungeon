@@ -17,11 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
-import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -39,7 +37,7 @@ public class ScrollOfPsionicBlast extends Scroll {
 		Sample.INSTANCE.play( Assets.SND_BLAST );
 		Invisibility.dispel(getCurUser());
 		
-		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+		for (Mob mob : Dungeon.level.mobs.toArray(new Mob[Dungeon.level.mobs.size()])) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Buff.prolong( mob, Blindness.class, Random.Int( 3, 6 ) );
 				mob.damage( Random.IntRange( 1, mob.ht() * 2 / 3 ), this );
@@ -53,12 +51,7 @@ public class ScrollOfPsionicBlast extends Scroll {
 		
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfPsionicBlast_Info);
-	}
-	
+
 	@Override
 	public int price() {
 		return isKnown() ? 80 * quantity() : super.price();

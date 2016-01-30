@@ -35,9 +35,4 @@ public class ScrollOfChallenge extends Scroll {
 				
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfChallenge_Info);
-	}
 }

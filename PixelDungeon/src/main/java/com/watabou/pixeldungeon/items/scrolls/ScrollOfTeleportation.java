@@ -62,12 +62,7 @@ public class ScrollOfTeleportation extends Scroll {
 			
 		}
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfTeleportation_Info);
-	}
-	
+
 	@Override
 	public int price() {
 		return isKnown() ? 40 * quantity() : super.price();

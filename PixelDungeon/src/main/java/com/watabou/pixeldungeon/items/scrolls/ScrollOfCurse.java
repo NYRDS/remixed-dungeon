@@ -75,8 +75,7 @@ public class ScrollOfCurse extends Scroll {
 		setKnown();
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
-	
-	
+
 	@Override
 	public int price() {
 		return isKnown() ? 300 * quantity() : super.price();

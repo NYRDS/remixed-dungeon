@@ -52,9 +52,4 @@ public class ScrollOfUpgrade extends InventoryScroll {
 	public static void upgrade( Hero hero ) {
 		hero.getSprite().emitter().start( Speck.factory( Speck.UP ), 0.2f, 3 );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfUpgrade_Info);
-	}
 }

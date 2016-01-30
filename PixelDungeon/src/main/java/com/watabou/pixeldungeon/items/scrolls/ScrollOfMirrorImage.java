@@ -17,20 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
-import java.util.ArrayList;
-
-import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Random;
 
 public class ScrollOfMirrorImage extends Scroll {
 
@@ -39,25 +32,18 @@ public class ScrollOfMirrorImage extends Scroll {
 	
 	@Override
 	protected void doRead() {
-		
-		ArrayList<Integer> respawnPoints = new ArrayList<Integer>();
-		
-		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-			int p = getCurUser().getPos() + Level.NEIGHBOURS8[i];
-			if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
-				respawnPoints.add( p );
-			}
-		}
-		
+
 		int nImages = NIMAGES;
-		while (nImages > 0 && respawnPoints.size() > 0) {
-			int index = Random.index( respawnPoints );
-			
+		while (nImages > 0 ) {
+			int cell = Dungeon.level.getEmptyCellNextTo(getCurUser().getPos());
+
+			if(!Dungeon.level.cellValid(cell))
+				break;
+
 			MirrorImage mob = new MirrorImage(getCurUser());
 			GameScene.add(Dungeon.level, mob );
-			WandOfBlink.appear( mob, respawnPoints.get( index ) );
-			
-			respawnPoints.remove( index );
+			WandOfBlink.appear( mob, cell );
+
 			nImages--;
 		}
 		
@@ -69,10 +55,5 @@ public class ScrollOfMirrorImage extends Scroll {
 		Invisibility.dispel(getCurUser());
 		
 		getCurUser().spendAndNext( TIME_TO_READ );
-	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ScrollOfMirrorImage_Info);
 	}
 }
