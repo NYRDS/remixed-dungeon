@@ -65,7 +65,7 @@ public class Belongings implements Iterable<Item> {
 	
 	public void storeInBundle( Bundle bundle ) {
 		
-		backpack.storeInBundle( bundle );
+		backpack.storeInBundle(bundle);
 		
 		bundle.put( WEAPON, weapon );
 		bundle.put( ARMOR, armor );
@@ -76,7 +76,7 @@ public class Belongings implements Iterable<Item> {
 	public void restoreFromBundle( Bundle bundle ) {
 		
 		backpack.clear();
-		backpack.restoreFromBundle( bundle );
+		backpack.restoreFromBundle(bundle);
 		
 		weapon = (KindOfWeapon)bundle.get( WEAPON );
 		if (weapon != null) {
@@ -166,7 +166,19 @@ public class Belongings implements Iterable<Item> {
 	public Item randomUnequipped() {
 		return Random.element( backpack.items );
 	}
-	
+
+	public void removeItem(Item itemToRemove) {
+		Iterator<Item> it = iterator();
+
+		while(it.hasNext()) {
+			Item item = it.next();
+			if(item == itemToRemove) {
+				it.remove();
+				return;
+			}
+		}
+	}
+
 	public void resurrect( int depth ) {
 
 		for (Item item : backpack.items.toArray( new Item[0])) {

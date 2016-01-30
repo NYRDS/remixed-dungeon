@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -80,17 +79,9 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 		@Override
 		public void onSelect(Item item) {
 			if (item != null) {
+				item.removeItemFrom(getCurUser());
+				removeItemFrom(getCurUser());
 
-				if (item.isEquipped(getCurUser())) {
-					((EquipableItem) item).doUnequip(getCurUser(), true);
-				}
-
-				if(isEquipped(getCurUser())) {
-					doUnequip(getCurUser(), true);
-				}
-				
-				item.detach(getCurUser().belongings.backpack);
-				detach(getCurUser().belongings.backpack);
 				getCurUser().getSprite().operate(getCurUser().getPos());
 				getCurUser().spend(TIME_TO_FUSE);
 				getCurUser().busy();
@@ -155,7 +146,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 	public Item identify() {
 		identetifyLevel++;
 		return this;
-	};
+	}
 
 	@Override
 	public String name() {

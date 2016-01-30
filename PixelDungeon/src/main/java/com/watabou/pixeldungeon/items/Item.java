@@ -92,7 +92,7 @@ public class Item implements Bundlable {
 	};
 	
 	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = new ArrayList<String>();
+		ArrayList<String> actions = new ArrayList<>();
 		actions.add( AC_DROP );
 		actions.add( AC_THROW );
 		return actions;
@@ -113,7 +113,7 @@ public class Item implements Bundlable {
 	
 	public void doDrop( Hero hero ) {	
 		hero.spendAndNext( TIME_TO_DROP );			
-		Dungeon.level.drop( detachAll( hero.belongings.backpack ), hero.getPos() ).sprite.drop( hero.getPos() );	
+		Dungeon.level.drop( detachAll( hero.belongings.backpack ), hero.getPos() ).sprite.drop( hero.getPos() );
 	}
 	
 	public void doThrow( Hero hero ) {
@@ -293,16 +293,18 @@ public class Item implements Bundlable {
 	}
 	
 	public boolean isEquipped( Hero hero ) {
-		if(	this.equals(hero.belongings.weapon) ||
-			this.equals(hero.belongings.armor) ||
-			this.equals(hero.belongings.ring1) ||
-			this.equals(hero.belongings.ring2) ) {
-			return true;
-		}
-		
-		return false;
+		return this.equals(hero.belongings.weapon) ||
+				this.equals(hero.belongings.armor) ||
+				this.equals(hero.belongings.ring1) ||
+				this.equals(hero.belongings.ring2);
+
 	}
-	
+
+	public void removeItemFrom(Hero hero) {
+		onDetach();
+		hero.belongings.removeItem(this);
+	}
+
 	public Item identify() {
 		
 		levelKnown = true;
@@ -368,7 +370,7 @@ public class Item implements Bundlable {
 	public static Item virtual( Class<? extends Item> cl ) {
 		try {
 			
-			Item item = (Item)cl.newInstance();
+			Item item = cl.newInstance();
 			item.quantity(0);
 			return item;
 			
@@ -478,7 +480,8 @@ public class Item implements Bundlable {
 			reset( user.getPos(), cell, this, null, new Callback() {			
 				@Override
 				public void call() {
-					Item.this.detach( user.belongings.backpack ).onThrow( cell );
+					Item.this.detach(user.belongings.backpack);
+					Item.this.onThrow(cell);
 					user.spendAndNext( finalDelay );
 				}
 			} );
