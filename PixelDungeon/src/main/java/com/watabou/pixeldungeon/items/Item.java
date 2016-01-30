@@ -202,22 +202,25 @@ public class Item implements Bundlable {
 			
 			return null;
 			
-		} else
-		if (quantity() == 1) {
-
-			return detachAll( container );
-			
 		} else {
-			
-			quantity(quantity() - 1);
-			updateQuickslot();
-			
-			try { 
-				Item detached = getClass().newInstance();
-				detached.onDetach( );
-				return detached;
-			} catch (Exception e) {
-				return null;
+			if (quantity() == 1) {
+
+				return detachAll(container);
+
+			} else {
+
+				quantity(quantity() - 1);
+				updateQuickslot();
+
+				try {
+					Item detached = getClass().newInstance();
+					detached.onDetach();
+					return detached;
+				} catch (InstantiationException e) {
+					throw new RuntimeException(e);
+				} catch (IllegalAccessException e) {
+					throw new RuntimeException(e);
+				}
 			}
 		}
 	}
@@ -303,6 +306,7 @@ public class Item implements Bundlable {
 	public void removeItemFrom(Hero hero) {
 		onDetach();
 		hero.belongings.removeItem(this);
+		updateQuickslot();
 	}
 
 	public Item identify() {

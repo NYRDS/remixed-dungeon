@@ -18,10 +18,12 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
@@ -70,7 +72,7 @@ public enum HeroClass {
 	public static final String[] ELF_PERKS = Game
 			.getVars(R.array.HeroClass_ElfPerks);
 
-	private HeroClass(String title) {
+	HeroClass(String title) {
 		this.title = title;
 	}
 
@@ -124,6 +126,13 @@ public enum HeroClass {
 		hero.collect(new WandOfTeleportation().identify());
 		hero.collect(new WandOfLightning().identify().upgrade(10));
 		hero.collect(new WandOfFirebolt().identify());
+		hero.collect(new ChaosCrystal().identify().identify());
+		hero.collect(new ChaosCrystal().identify().identify());
+		hero.collect(new ChaosCrystal().identify().identify());
+
+		hero.collect(new Codex());
+		hero.collect(new Codex());
+		hero.collect(new Codex());
 		
 		for(int i = 0;i<50;i++) {
 			hero.collect(new PotionOfLiquidFlame().identify());
@@ -139,7 +148,7 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 
-		//initDebug(hero);
+		initDebug(hero);
 		
 		QuickSlot.cleanStorage();
 	}
@@ -371,9 +380,7 @@ public enum HeroClass {
 		if (spriteKind.equals(Assets.ELF_SCOUT))
 			return true;
 
-		if (spriteKind.equals(Assets.ELF_SHAMAN))
-			return true;
+		return spriteKind.equals(Assets.ELF_SHAMAN);
 
-		return false;
 	}
 }

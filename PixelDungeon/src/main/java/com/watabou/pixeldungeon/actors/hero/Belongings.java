@@ -17,12 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
-import java.util.Iterator;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -32,8 +30,11 @@ import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.Iterator;
 
 public class Belongings implements Iterable<Item> {
 
@@ -181,15 +182,15 @@ public class Belongings implements Iterable<Item> {
 
 	public void resurrect( int depth ) {
 
-		for (Item item : backpack.items.toArray( new Item[0])) {
+		for (Item item : backpack.items.toArray(new Item[backpack.items.size()])) {
 			if (item instanceof Key) {
-				if (((Key)item).depth == depth) {
-					item.detachAll( backpack );
+				if (((Key) item).depth == depth) {
+					item.detachAll(backpack);
 				}
 			} else if (item.unique) {
 
-			} else if (!item.isEquipped( owner )) {
-				item.detachAll( backpack );
+			} else if (!item.isEquipped(owner)) {
+				item.detachAll(backpack);
 			}
 		}
 		
@@ -278,20 +279,23 @@ public class Belongings implements Iterable<Item> {
 
 		@Override
 		public Item next() {
-			
 			while (index < backpackIndex) {
 				Item item = equipped[index++];
 				if (item != null) {
 					return item;
 				}
 			}
-			
+			index++;
 			return backpackIterator.next();
 		}
 
 		@Override
 		public void remove() {
-			switch (index) {
+			GLog.i(String.format("Removing %d", index));
+			if(index == 0) {
+				throw new IllegalStateException();
+			}
+			switch (index-1) {
 			case 0:
 				equipped[0] = weapon = null;
 				break;
