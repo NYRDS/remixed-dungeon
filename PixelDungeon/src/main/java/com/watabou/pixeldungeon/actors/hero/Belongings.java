@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -291,7 +290,6 @@ public class Belongings implements Iterable<Item> {
 
 		@Override
 		public void remove() {
-			GLog.i(String.format("Removing %d", index));
 			if(index == 0) {
 				throw new IllegalStateException();
 			}

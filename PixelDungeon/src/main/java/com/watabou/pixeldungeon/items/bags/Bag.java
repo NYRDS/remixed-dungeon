@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
@@ -184,7 +183,6 @@ public class Bag extends Item implements Iterable<Item> {
 			if (nested != null) {
 				nested.remove();
 			} else {
-				GLog.i(String.format("removing item %s", items.get(index-1).name()));
 				items.remove( index - 1);
 			}
 		}	

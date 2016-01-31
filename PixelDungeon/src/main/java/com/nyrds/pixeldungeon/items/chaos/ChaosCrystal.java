@@ -37,7 +37,7 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 	private static final float TIME_TO_FUSE = 10;
 
 	private int identetifyLevel = 0;
-	private int charge = 100;
+	private int charge = 0;
 
 	public ChaosCrystal() {
 		imageFile = "items/artifacts.png";
@@ -79,7 +79,6 @@ public class ChaosCrystal extends Artifact implements IChaosItem {
 		@Override
 		public void onSelect(Item item) {
 			if (item != null) {
-				GLog.i(String.format("Want to remove %s and %s", item.name(), name()));
 				item.removeItemFrom(getCurUser());
 				removeItemFrom(getCurUser());
 
