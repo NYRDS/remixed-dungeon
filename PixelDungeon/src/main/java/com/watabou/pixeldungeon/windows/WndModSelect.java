@@ -123,7 +123,6 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 			} catch (JSONException e) {
 				GLog.w(e.getMessage());
-				continue;
 			}
 		}
 

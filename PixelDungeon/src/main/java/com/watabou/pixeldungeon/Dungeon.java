@@ -154,11 +154,7 @@ public class Dungeon {
 		if (depth > Statistics.deepestFloor) {
 			Statistics.deepestFloor = depth;
 
-			if (Statistics.qualifiedForNoKilling) {
-				Statistics.completedWithNoKilling = true;
-			} else {
-				Statistics.completedWithNoKilling = false;
-			}
+			Statistics.completedWithNoKilling = Statistics.qualifiedForNoKilling;
 		}
 	}
 

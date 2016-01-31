@@ -332,7 +332,6 @@ public class InterlevelScene extends PixelScene {
 	private void problemWithSave() {
 		Dungeon.deleteGame(true);
 		Game.switchScene(StartScene.class);
-		return;
 	}
 
 	private void restore() throws IOException{

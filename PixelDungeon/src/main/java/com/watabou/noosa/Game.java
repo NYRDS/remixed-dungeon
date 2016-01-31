@@ -289,7 +289,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		} catch (JSONException e) {
 			toast("malformed json: [%s] in [%s] ignored ", line, resource);
 		}
-		return;
 	}
 
 	@Override

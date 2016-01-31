@@ -1,9 +1,5 @@
 package com.nyrds.pixeldungeon.spiders.levels;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
@@ -16,6 +12,10 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class SpiderLevel extends CommonLevel {
 	
@@ -69,11 +69,11 @@ public class SpiderLevel extends CommonLevel {
 		if(!cellValid(x,y)) {
 			return false;
 		}
-		
+
 		if(map[cell(x,y)] == type) {
 			return true;
 		}
-		
+
 		return false;
 	}
 	

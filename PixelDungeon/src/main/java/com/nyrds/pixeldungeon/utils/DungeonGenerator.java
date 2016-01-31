@@ -1,11 +1,5 @@
 package com.nyrds.pixeldungeon.utils;
 
-import java.util.HashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
@@ -26,6 +20,12 @@ import com.watabou.pixeldungeon.levels.SewerBossLevel;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndStory;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 public class DungeonGenerator {
 	public static final String DEAD_END_LEVEL = "DeadEndLevel";

@@ -47,10 +47,7 @@ public class SpiderQueen extends Boss {
 	
 	@Override
 	protected boolean canAttack(Char enemy) {
-		if (Dungeon.level.adjacent(getPos(), enemy.getPos()) && hp() > ht() / 2 ) {
-			return true;
-		}
-		return false;
+		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && hp() > ht() / 2;
 	}
 	
 	@Override

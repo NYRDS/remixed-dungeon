@@ -45,11 +45,8 @@ public abstract class Arrow extends MissileWeapon {
 		if (firedFrom != null) {
 			return true;
 		}
-		
-		if (Random.Float(1f) < 0.25f) {
-			return true;
-		}
-		return false;
+
+		return Random.Float(1f) < 0.25f;
 	}
 
 	@Override

@@ -1,10 +1,7 @@
 package com.watabou.noosa;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import android.graphics.Color;
+import android.util.Log;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -20,8 +17,11 @@ import com.nyrds.android.google.util.Purchase;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.PixelDungeon;
 
-import android.graphics.Color;
-import android.util.Log;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class GameWithGoogleIap extends Game {
 
@@ -54,11 +54,8 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static boolean needDisplaySmallScreenEasyModeIs() {
-		if (difficulty == 0 && (isSmallScreen() || android.os.Build.BRAND.contains("chromium")) && PixelDungeon.donated() == 0) {
-			return true;
-		}
+		return difficulty == 0 && (isSmallScreen() || android.os.Build.BRAND.contains("chromium")) && PixelDungeon.donated() == 0;
 
-		return false;
 	}
 
 	private static boolean googleAdsUsable() {
@@ -286,10 +283,7 @@ public abstract class GameWithGoogleIap extends Game {
 			return false;
 		}
 
-		if (ipAddr.equals("")) {
-			return false;
-		}
-		return true;
+		return !ipAddr.equals("");
 	}
 
 	public void initIap() {
