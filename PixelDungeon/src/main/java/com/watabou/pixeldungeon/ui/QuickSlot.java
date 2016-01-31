@@ -17,21 +17,23 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class QuickSlot extends Button implements WndBag.Listener {
 
@@ -91,7 +93,9 @@ public class QuickSlot extends Button implements WndBag.Listener {
 					} else {
 						lastItem = item;
 					}
-					item.execute(Dungeon.hero);
+					if (item != null) {
+						item.execute(Dungeon.hero);
+					}
 				}
 			}
 
@@ -183,7 +187,14 @@ public class QuickSlot extends Button implements WndBag.Listener {
 
 	private void useTargeting() {
 
-		targeting = lastTarget != null && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
+		updateTargetingState();
+
+		if(!targeting) {
+			if(lastItem instanceof Wand || lastItem instanceof Weapon) {
+				lastTarget = Dungeon.hero.getNearestEnemy();
+				updateTargetingState();
+			}
+		}
 
 		if (targeting) {
 			if (Actor.all().contains(lastTarget)) {
@@ -194,6 +205,10 @@ public class QuickSlot extends Button implements WndBag.Listener {
 				lastTarget = null;
 			}
 		}
+	}
+
+	private void updateTargetingState() {
+		targeting = lastTarget != null && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
 	}
 
 	public static void refresh() {

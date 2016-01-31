@@ -148,7 +148,7 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
 
-		initDebug(hero);
+		//initDebug(hero);
 		
 		QuickSlot.cleanStorage();
 	}
@@ -364,7 +364,7 @@ public enum HeroClass {
 
 		if (spriteKind.equals(Assets.ROGUE_FREERUNNER))
 			return true;
-		
+
 		if (spriteKind.equals(Assets.HUNTRESS))
 			return true;
 

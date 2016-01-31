@@ -1104,6 +1104,20 @@ public class Hero extends Char {
 		visibleEnemies = visible;
 	}
 
+	public Mob getNearestEnemy() {
+
+		Mob nearest = null;
+		int dist = Integer.MAX_VALUE;
+		for (Mob mob:visibleEnemies) {
+			int mobDist = Dungeon.level.distance(getPos(), mob.getPos());
+			if(mobDist<dist) {
+				dist = mobDist;
+				nearest = mob;
+			}
+		}
+		return nearest;
+	}
+
 	public int visibleEnemies() {
 		return visibleEnemies.size();
 	}

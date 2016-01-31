@@ -17,13 +17,14 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import java.util.ArrayList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class AttackIndicator extends Tag {
 	
