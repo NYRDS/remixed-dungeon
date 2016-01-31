@@ -17,17 +17,25 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
-import java.util.IllegalFormatException;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
-import com.watabou.pixeldungeon.items.weapon.enchantments.*;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Horror;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Instability;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Luck;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Paralysis;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Poison;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Slow;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -37,6 +45,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.IllegalFormatException;
 
 public class Weapon extends KindOfWeapon {
 
@@ -227,8 +237,7 @@ public class Weapon extends KindOfWeapon {
 		
 		public String name( String weaponName, int gender) {
 			try{
-				String res = String.format( TXT_NAME[gender], weaponName );
-				return res;
+				return String.format( TXT_NAME[gender], weaponName );
 			} catch (IllegalFormatException e){
 				GLog.w("ife in %s", getClass().getSimpleName());
 			} catch (NullPointerException e){

@@ -17,17 +17,17 @@
 
 package com.watabou.noosa.audio;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-
-import com.nyrds.android.util.ModdingMode;
-import com.watabou.noosa.Game;
-
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
+
+import com.nyrds.android.util.ModdingMode;
+import com.watabou.noosa.Game;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
 
 public enum Sample implements SoundPool.OnLoadCompleteListener {
 	

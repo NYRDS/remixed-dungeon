@@ -47,7 +47,6 @@ abstract public class CommonLevel extends Level {
 	}
 		
 	protected float[] trapChances() {
-		float[] chances = { 1, 1, 1, 1, 1, 1, 1, 1 };
-		return chances;
+		return new float[]{ 1, 1, 1, 1, 1, 1, 1, 1 };
 	}
 }

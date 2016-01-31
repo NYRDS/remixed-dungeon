@@ -17,11 +17,11 @@
 
 package com.watabou.glscripts;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.watabou.glwrap.Program;
 import com.watabou.glwrap.Shader;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Script extends Program {
 

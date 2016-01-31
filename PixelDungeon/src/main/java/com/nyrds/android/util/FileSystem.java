@@ -1,12 +1,12 @@
 package com.nyrds.android.util;
 
+import android.content.Context;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-
-import android.content.Context;
 
 public class FileSystem {
 
@@ -18,8 +18,7 @@ public class FileSystem {
 
 	static public File getInteralStorageFile(String fileName) {
 		File storageDir = m_context.getFilesDir();
-		File file = new File(storageDir, fileName);
-		return file;
+		return new File(storageDir, fileName);
 	}
 
 	static public String[] listInternalStorage() {
@@ -42,8 +41,7 @@ public class FileSystem {
 
 	static public File getExternalStorageFile(String fileName) {
 		File storageDir = m_context.getExternalFilesDir(null);
-		File file = new File(storageDir, fileName);
-		return file;
+		return new File(storageDir, fileName);
 	}
 
 	static public String getExternalStorageFileName(String fname) {

@@ -17,12 +17,11 @@
  */
 package com.watabou.pixeldungeon;
 
-import java.io.IOException;
-import java.util.Locale;
-
-import javax.microedition.khronos.opengles.GL10;
-
-import org.acra.ACRA;
+import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
@@ -38,11 +37,12 @@ import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
-import android.annotation.SuppressLint;
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.view.View;
+import org.acra.ACRA;
+
+import java.io.IOException;
+import java.util.Locale;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class PixelDungeon extends GameWithGoogleIap {
 //public class PixelDungeon extends Game {
@@ -106,11 +106,6 @@ public class PixelDungeon extends GameWithGoogleIap {
 		if (PixelDungeon.version() != Game.versionCode) {
 			switchScene(WelcomeScene.class);
 		}
-	}
-
-	@Override
-	public void onPause() {
-		super.onPause();
 	}
 
 	@Override

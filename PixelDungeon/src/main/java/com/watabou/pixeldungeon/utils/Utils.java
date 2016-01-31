@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import java.util.Locale;
-
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+
+import java.util.Locale;
 
 public class Utils {
 
@@ -88,8 +88,7 @@ public class Utils {
 		}
 		
 		try{
-			String paramValue = Game.getVar(strings.getField(className+"_"+paramName).getInt(null));
-			return paramValue;
+			return Game.getVar(strings.getField(className+"_"+paramName).getInt(null));
 		}catch (NoSuchFieldException e){
 			if(warnIfAbsent){
 				GLog.w("no defination for  %s_%s :(", className, paramName);

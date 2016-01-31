@@ -1,8 +1,8 @@
 package com.watabou.noosa;
 
-import java.util.regex.Pattern;
-
 import com.nyrds.android.util.ModdingMode;
+
+import java.util.regex.Pattern;
 
 public abstract class Text extends Visual {
 

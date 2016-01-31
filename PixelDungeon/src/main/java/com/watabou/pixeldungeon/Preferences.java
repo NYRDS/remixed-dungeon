@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.content.SharedPreferences;
+
 import com.nyrds.android.util.UserKey;
 import com.watabou.noosa.Game;
-
-import android.content.SharedPreferences;
 
 enum Preferences {
 

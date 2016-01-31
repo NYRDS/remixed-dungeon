@@ -199,8 +199,7 @@ public class SpiderLevel extends CommonLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			Heap.Type type = Heap.Type.SKELETON;
-			drop(Generator.random(), randomRespawnCell()).type = type;
+			drop(Generator.random(), randomRespawnCell()).type = Heap.Type.SKELETON;
 		}
 
 		for (Item item : itemsToSpawn) {
