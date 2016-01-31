@@ -17,8 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import java.util.Collections;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -26,11 +25,12 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+
+import java.util.Collections;
 
 public class WndJournal extends Window {
 	
@@ -43,10 +43,7 @@ public class WndJournal extends Window {
 	private static final int ITEM_HEIGHT	= 18;
 	
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
-	
-	private Text txtTitle;
-	private ScrollPane list;
-	
+
 	public WndJournal() {
 		
 		super();
@@ -62,12 +59,12 @@ public class WndJournal extends Window {
 		}
 		
 		resize( WIDTH, HEIGHT );
-		
-		txtTitle = PixelScene.createText( TXT_TITLE, 9 );
-		txtTitle.hardlight( Window.TITLE_COLOR );
+
+		Text txtTitle = PixelScene.createText(TXT_TITLE, 9);
+		txtTitle.hardlight(Window.TITLE_COLOR);
 		txtTitle.measure();
 		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (WIDTH - txtTitle.width()) / 2 );
-		add( txtTitle );
+		add(txtTitle);
 		
 		Component content = new Component();
 		
@@ -83,11 +80,11 @@ public class WndJournal extends Window {
 		}
 		
 		content.setSize( WIDTH, pos );
+
+		ScrollPane list = new ScrollPane(content);
+		add(list);
 		
-		list = new ScrollPane( content );
-		add( list );
-		
-		list.setRect( 0, txtTitle.height(), WIDTH, HEIGHT - txtTitle.height() );
+		list.setRect(0, txtTitle.height(), WIDTH, HEIGHT - txtTitle.height());
 	}
 	
 	private static class ListItem extends Component {

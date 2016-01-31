@@ -38,10 +38,6 @@ public class Assets {
 
 	private static final String BANNERS_PREFIX = Game.getVar(R.string.Assets_Prefix);
 
-	private static String CHROME = "chrome.png";
-	private static String STATUS = "status_pane.png";
-	private static String TOOLBAR = "toolbar.png";
-
 	public static final String ICONS = "icons.png";
 	public static final String HP_BAR = "hp_bar.png";
 	public static final String XP_BAR = "exp_bar.png";
@@ -238,7 +234,7 @@ public class Assets {
 	public static String getChrome() {
 		switch (chromeType) {
 		default:
-			return CHROME;
+			return "chrome.png";
 		case 1:
 			return "chrome_supporter_1.png";
 		case 2:
@@ -251,7 +247,7 @@ public class Assets {
 	public static String getStatus() {
 		switch (statusType) {
 		default:
-			return STATUS;
+			return "status_pane.png";
 		case 1:
 			return "status_pane_supporter_1.png";
 		case 2:
@@ -264,7 +260,7 @@ public class Assets {
 	public static String getToolbar() {
 		switch (toolbarType) {
 		default:
-			return TOOLBAR;
+			return "toolbar.png";
 		case 1:
 			return "toolbar_supporter_1.png";
 		case 2:

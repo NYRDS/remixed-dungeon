@@ -62,8 +62,7 @@ public class WndRanking extends WndTabbed {
 	
 	private Thread thread;
 	private String error = null;
-	private HeroSprite heroSprite;
-	
+
 	private Image busy;
 	
 	public WndRanking( final String gameFile ) {
@@ -153,11 +152,11 @@ public class WndRanking extends WndTabbed {
 			
 			Hero hero = Dungeon.hero;
 			String heroClass = hero.className();
-			
-			heroSprite = new HeroSprite(hero, false);
+
+			HeroSprite heroSprite = new HeroSprite(hero, false);
 			
 			IconTitle title = new IconTitle();
-			title.icon( heroSprite.avatar( hero ) );
+			title.icon( heroSprite.avatar(hero) );
 			title.label( Utils.format( TXT_TITLE, hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
 			title.color(0xCC33FF);

@@ -1,16 +1,16 @@
 package com.watabou.noosa;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-
-import com.watabou.glwrap.Matrix;
-
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Typeface;
 import android.text.TextPaint;
+
+import com.watabou.glwrap.Matrix;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class SystemText extends Text {
 
@@ -22,7 +22,6 @@ public class SystemText extends Text {
 
 	private static Set<SystemText> texts = new HashSet<SystemText>();
 
-	private float size;
 	private final static float oversample = 2f;
 	private boolean needWidth = false;
 	private float fontScale;
@@ -45,7 +44,7 @@ public class SystemText extends Text {
 
 		needWidth = multiline;
 
-		size = baseLine;
+		float size = baseLine;
 
 		if (size == 0) {
 			try {

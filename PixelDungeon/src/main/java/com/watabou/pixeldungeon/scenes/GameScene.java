@@ -101,11 +101,8 @@ public class GameScene extends PixelScene {
 
 	private GameLog log;
 
-	private BusyIndicator busy;
-
 	private static CellSelector cellSelector;
 
-	private Group terrain;
 	private Group ripples;
 	private Group plants;
 	private Group heaps;
@@ -137,7 +134,7 @@ public class GameScene extends PixelScene {
 
 		scene = this;
 
-		terrain = new Group();
+		Group terrain = new Group();
 		add(terrain);
 
 		water = new SkinnedBlock(Dungeon.level.getWidth() * DungeonTilemap.SIZE,
@@ -275,7 +272,7 @@ public class GameScene extends PixelScene {
 			GLog.w(TXT_NIGHT_MODE);
 		}
 
-		busy = new BusyIndicator();
+		BusyIndicator busy = new BusyIndicator();
 		busy.camera = uiCamera;
 		busy.x = 1;
 		busy.y = sb.bottom() + 1;

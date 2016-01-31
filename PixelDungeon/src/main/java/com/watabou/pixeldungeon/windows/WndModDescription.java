@@ -1,5 +1,8 @@
 package com.watabou.pixeldungeon.windows;
 
+import android.content.Intent;
+import android.net.Uri;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.input.Touchscreen.Touch;
@@ -11,21 +14,10 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
-import android.content.Intent;
-import android.net.Uri;
-
 public class WndModDescription extends Window {
 
 	private static final int WIDTH = 120;
 	private static final int GAP = 2;
-
-	private Text title;
-
-	private Text author;
-	private Text site;
-	private Text email;
-
-	private Text description;
 
 	private float yPos;
 
@@ -40,24 +32,24 @@ public class WndModDescription extends Window {
 		yPos = 0;
 		
 		if (!option.equals(ModdingMode.REMIXED)) {
-			title = PixelScene.createMultiline(9);
+			Text title = PixelScene.createMultiline(9);
 			title.maxWidth(WIDTH);
 			title.text(Game.getVar(R.string.Mod_Name) + "\n ");
 			title.hardlight(Window.TITLE_COLOR);
 
 			place(title);
 
-			author = PixelScene.createMultiline(8);
+			Text author = PixelScene.createMultiline(8);
 			author.maxWidth(WIDTH);
-			author.text(Game.getVar(R.string.Mods_CreatedBy) +"\n"+ Game.getVar(R.string.Mod_Author) + "\n ");
+			author.text(Game.getVar(R.string.Mods_CreatedBy) + "\n" + Game.getVar(R.string.Mod_Author) + "\n ");
 
 			place(author);
 
 			final String siteUrl = Game.getVar(R.string.Mod_Link);
 			if (siteUrl.length() > 0) {
-				site = PixelScene.createMultiline(8);
+				Text site = PixelScene.createMultiline(8);
 				site.maxWidth(WIDTH);
-				site.text(Game.getVar(R.string.Mods_AuthorSite)+"\n" + siteUrl + "\n ");
+				site.text(Game.getVar(R.string.Mods_AuthorSite) + "\n" + siteUrl + "\n ");
 				place(site);
 
 				TouchArea siteTouch = new TouchArea(site) {
@@ -74,7 +66,7 @@ public class WndModDescription extends Window {
 			final String emailUri = Game.getVar(R.string.Mod_Email);
 
 			if (emailUri.length() > 0) {
-				email = PixelScene.createMultiline(8);
+				Text email = PixelScene.createMultiline(8);
 				email.maxWidth(WIDTH);
 				email.text(Game.getVar(R.string.Mods_AuthorEmail) + emailUri + "\n ");
 				place(email);
@@ -93,7 +85,7 @@ public class WndModDescription extends Window {
 				add(emailTouch);
 			}
 
-			description = PixelScene.createMultiline(8);
+			Text description = PixelScene.createMultiline(8);
 			description.maxWidth(WIDTH);
 			description.text(Game.getVar(R.string.Mod_Description) + "\n ");
 			place(description);

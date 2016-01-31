@@ -56,13 +56,11 @@ public class WndStory extends Window {
 		CHAPTERS.put(ID_HALLS,      Game.getVar(R.string.WndStory_Halls));
 		CHAPTERS.put(ID_SPIDERS,    Game.getVar(R.string.WndStory_Spiders));
 	};
-	
-	private Text tf;
-	
+
 	public WndStory( String text ) {
 		super( 0, 0, Chrome.get( Chrome.Type.SCROLL ) );
-		
-		tf = PixelScene.createMultiline( text, 7 );
+
+		Text tf = PixelScene.createMultiline(text, 7);
 		tf.maxWidth(WIDTH - MARGIN * 2);
 		tf.measure();
 		tf.ra = bgR;
@@ -80,7 +78,7 @@ public class WndStory extends Window {
 		
 		Component content = new Component();
 		
-		content.add( tf );
+		content.add(tf);
 		
 		content.setSize(tf.width(), tf.height());
 		

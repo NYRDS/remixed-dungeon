@@ -17,10 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -30,6 +26,10 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 
 public abstract class Actor implements Bundlable {
 	

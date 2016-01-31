@@ -60,10 +60,6 @@ public class RankingsScene extends PixelScene {
 
 	private static final float GAP = 4;
 
-	private Archs archs;
-
-	private RedButton btnNext;
-	private RedButton btnPrev;
 	private int startFrom;
 
 	private ArrayList<Record> displayedRecords = new ArrayList<>();
@@ -80,7 +76,7 @@ public class RankingsScene extends PixelScene {
 		int w = Camera.main.width;
 		int h = Camera.main.height;
 
-		archs = new Archs();
+		Archs archs = new Archs();
 		archs.setSize(w, h);
 		add(archs);
 
@@ -101,7 +97,7 @@ public class RankingsScene extends PixelScene {
 
 			float btnHeight = rowHeight / 2;
 
-			btnNext = new RedButton(">") {
+			RedButton btnNext = new RedButton(">") {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -116,23 +112,23 @@ public class RankingsScene extends PixelScene {
 					}
 
 					switch (PixelDungeon.donated()) {
-					case 0:
-						if (startFrom > 10) {
-							startFrom = 10;
-						}
-						break;
+						case 0:
+							if (startFrom > 10) {
+								startFrom = 10;
+							}
+							break;
 
-					case 1:
-						if (startFrom > 25) {
-							startFrom = 25;
-						}
-						break;
+						case 1:
+							if (startFrom > 25) {
+								startFrom = 25;
+							}
+							break;
 
-					case 2:
-						if (startFrom > 50) {
-							startFrom = 50;
-						}
-						break;
+						case 2:
+							if (startFrom > 50) {
+								startFrom = 50;
+							}
+							break;
 					}
 
 					createRecords();
@@ -141,7 +137,7 @@ public class RankingsScene extends PixelScene {
 			btnNext.setRect(w / 2 + GAP, h - btnHeight, w / 2 - GAP, btnHeight);
 			add(btnNext);
 
-			btnPrev = new RedButton("<") {
+			RedButton btnPrev = new RedButton("<") {
 				@Override
 				protected void onClick() {
 					super.onClick();

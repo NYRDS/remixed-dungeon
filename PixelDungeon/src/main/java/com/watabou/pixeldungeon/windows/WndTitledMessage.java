@@ -27,11 +27,7 @@ public class WndTitledMessage extends Window {
 
 	private static final int WIDTH	= 120;
 	private static final int GAP	= 2;
-	private static final float MAX_HEIGHT = 120;
-	
-	private Text normal;
-	private Text highlighted;
-	
+
 	public WndTitledMessage( Image icon, String title, String message ) {
 		
 		this( new IconTitle( icon, title ), message );
@@ -45,8 +41,8 @@ public class WndTitledMessage extends Window {
 		add( titlebar );
 		
 		Highlighter hl = new Highlighter( message );
-		
-		normal = PixelScene.createMultiline( hl.text, 6 );
+
+		Text normal = PixelScene.createMultiline(hl.text, 6);
 		if (hl.isHighlighted()) {
 			normal.mask = hl.inverted();
 		}
@@ -55,19 +51,19 @@ public class WndTitledMessage extends Window {
 		normal.measure();
 		normal.x = titlebar.left();
 		normal.y = titlebar.bottom() + GAP;
-		add( normal );
+		add(normal);
 
 		if (hl.isHighlighted()) {
-			
-			highlighted = PixelScene.createMultiline( hl.text, 6 );
+
+			Text highlighted = PixelScene.createMultiline(hl.text, 6);
 			highlighted.mask = hl.mask;
 			highlighted.maxWidth(normal.getMaxWidth());
 			highlighted.measure();
 			highlighted.x = normal.x;
 			highlighted.y = normal.y;
-			add( highlighted );
+			add(highlighted);
 			
-			highlighted.hardlight( TITLE_COLOR );
+			highlighted.hardlight(TITLE_COLOR);
 		}
 		
 		resize( WIDTH, (int)(normal.y + normal.height()) );
