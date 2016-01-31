@@ -287,7 +287,7 @@ public class Hero extends Char {
 
 		if (_pets != null) {
 			for (Mob pet : _pets) {
-				pets.add((Mob) pet);
+				pets.add(pet);
 			}
 		}
 

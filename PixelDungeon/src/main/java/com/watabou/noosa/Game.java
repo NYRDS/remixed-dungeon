@@ -111,10 +111,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected static int difficulty;
 
 	// Accumulated touch events
-	protected ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
+	protected final ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
 
 	// Accumulated key events
-	protected ArrayList<KeyEvent> keysEvents = new ArrayList<KeyEvent>();
+	protected final ArrayList<KeyEvent> keysEvents = new ArrayList<KeyEvent>();
 
 	public Game(Class<? extends Scene> c) {
 		super();
@@ -159,7 +159,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		if(ModdingMode.isResourceExistInMod(modStrings)) {
 			parseStrings(modStrings);
 		} else if (ModdingMode.isResourceExistInMod("strings_en.json")) {
-			parseStrings(String.format("strings_en.json", lang));
+			parseStrings("strings_en.json");
 		}
 	}
 

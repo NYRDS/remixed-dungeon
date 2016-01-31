@@ -281,7 +281,7 @@ public abstract class Mob extends Char {
 			setEnemy(DUMMY);
 		}
 		
-		Terror terror = (Terror) buff(Terror.class);
+		Terror terror = buff(Terror.class);
 		if (terror != null) {
 			return terror.source;
 		}

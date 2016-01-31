@@ -106,7 +106,7 @@ public class Chasm {
 		// Destroy instead of kill to prevent dropping loot
 		mob.destroy();
 		
-		((MobSprite)mob.getSprite()).removeAllStates();
+		mob.getSprite().removeAllStates();
 		((MobSprite)mob.getSprite()).fall();
 		
 	}

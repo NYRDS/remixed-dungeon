@@ -17,27 +17,117 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.HashMap;
-
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker.Rotberry;
-import com.watabou.pixeldungeon.items.armor.*;
+import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.armor.ClothArmor;
+import com.watabou.pixeldungeon.items.armor.LeatherArmor;
+import com.watabou.pixeldungeon.items.armor.MailArmor;
+import com.watabou.pixeldungeon.items.armor.PlateArmor;
+import com.watabou.pixeldungeon.items.armor.ScaleArmor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.potions.*;
-import com.watabou.pixeldungeon.items.rings.*;
-import com.watabou.pixeldungeon.items.scrolls.*;
-import com.watabou.pixeldungeon.items.wands.*;
-import com.watabou.pixeldungeon.items.weapon.*;
-import com.watabou.pixeldungeon.items.weapon.melee.*;
-import com.watabou.pixeldungeon.items.weapon.missiles.*;
-import com.watabou.pixeldungeon.plants.*;
+import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
+import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
+import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfMight;
+import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
+import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
+import com.watabou.pixeldungeon.items.potions.PotionOfPurity;
+import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
+import com.watabou.pixeldungeon.items.rings.Ring;
+import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
+import com.watabou.pixeldungeon.items.rings.RingOfDetection;
+import com.watabou.pixeldungeon.items.rings.RingOfElements;
+import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
+import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
+import com.watabou.pixeldungeon.items.rings.RingOfHaste;
+import com.watabou.pixeldungeon.items.rings.RingOfHerbalism;
+import com.watabou.pixeldungeon.items.rings.RingOfMending;
+import com.watabou.pixeldungeon.items.rings.RingOfPower;
+import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
+import com.watabou.pixeldungeon.items.rings.RingOfShadows;
+import com.watabou.pixeldungeon.items.rings.RingOfThorns;
+import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfChallenge;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfLullaby;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
+import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.wands.WandOfAmok;
+import com.watabou.pixeldungeon.items.wands.WandOfAvalanche;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
+import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
+import com.watabou.pixeldungeon.items.wands.WandOfFlock;
+import com.watabou.pixeldungeon.items.wands.WandOfLightning;
+import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
+import com.watabou.pixeldungeon.items.wands.WandOfPoison;
+import com.watabou.pixeldungeon.items.wands.WandOfRegrowth;
+import com.watabou.pixeldungeon.items.wands.WandOfSlowness;
+import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
+import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
+import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
+import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.CompoundBow;
+import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
+import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
+import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
+import com.watabou.pixeldungeon.items.weapon.melee.Kusarigama;
+import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
+import com.watabou.pixeldungeon.items.weapon.melee.Mace;
+import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
+import com.watabou.pixeldungeon.items.weapon.melee.RubyBow;
+import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
+import com.watabou.pixeldungeon.items.weapon.melee.Spear;
+import com.watabou.pixeldungeon.items.weapon.melee.Sword;
+import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
+import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
+import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.CurareDart;
+import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
+import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.IncendiaryDart;
+import com.watabou.pixeldungeon.items.weapon.missiles.Javelin;
+import com.watabou.pixeldungeon.items.weapon.missiles.ParalysisArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.PoisonArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.Shuriken;
+import com.watabou.pixeldungeon.items.weapon.missiles.Tamahawk;
+import com.watabou.pixeldungeon.plants.Dreamweed;
+import com.watabou.pixeldungeon.plants.Earthroot;
+import com.watabou.pixeldungeon.plants.Fadeleaf;
+import com.watabou.pixeldungeon.plants.Firebloom;
+import com.watabou.pixeldungeon.plants.Icecap;
+import com.watabou.pixeldungeon.plants.Plant;
+import com.watabou.pixeldungeon.plants.Sorrowmoss;
+import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
+
+import java.util.HashMap;
 
 public class Generator {
 
@@ -245,7 +335,7 @@ public class Generator {
 	
 	public static Item random( Class<? extends Item> cl ) {
 		try {
-			return ((Item)cl.newInstance()).random();
+			return cl.newInstance().random();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

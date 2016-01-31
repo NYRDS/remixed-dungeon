@@ -121,7 +121,7 @@ public class SystemText extends Text {
 			xPos += xDelta;
 
 			if (maxWidth != Integer.MAX_VALUE
-					&& xPos > (float) (maxWidth / scale.x)) {
+					&& xPos > maxWidth / scale.x) {
 				if (lastWordOffset != startFrom) {
 					return lastWordOffset;
 				} else {
