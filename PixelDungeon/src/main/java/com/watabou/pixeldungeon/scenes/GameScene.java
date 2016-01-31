@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import java.io.IOException;
-import java.util.HashSet;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -80,6 +77,9 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.utils.Random;
+
+import java.io.IOException;
+import java.util.HashSet;
 
 public class GameScene extends PixelScene {
 

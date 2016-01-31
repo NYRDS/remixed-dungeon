@@ -62,7 +62,7 @@ public class Bestiary {
 				float chance = (float) depthDesc.getDouble(mobClassName);
 				chances.add(chance);
 			}
-			String selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[0]))];
+			String selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[chances.size()]))];
 			return MobFactory.mobClassByName(selectedMobClass);
 			
 		} catch (JSONException e) {

@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import java.util.ArrayList;
-
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.Tab;
+
+import java.util.ArrayList;
 
 public class WndTabbed extends Window {
 
@@ -74,7 +74,7 @@ public class WndTabbed extends Window {
 			width + chrome.marginHor(),
 			height + chrome.marginVer() );
 		
-		camera.resize( (int)chrome.width, (int)(chrome.marginTop() + height + tabHeight()) );
+		camera.resize( (int)chrome.width, chrome.marginTop() + height + tabHeight());
 		camera.x = (int)(Game.width() - camera.screenWidth()) / 2;
 		camera.y = (int)(Game.height() - camera.screenHeight()) / 2;
 		// <- super.resize(...)

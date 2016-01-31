@@ -17,13 +17,9 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import java.io.FileNotFoundException;
-
-
-
-
-import java.io.IOException;
-
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap.IntersitialPoint;
@@ -39,9 +35,9 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndStory;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.nyrds.pixeldungeon.utils.Position;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class InterlevelScene extends PixelScene {
 

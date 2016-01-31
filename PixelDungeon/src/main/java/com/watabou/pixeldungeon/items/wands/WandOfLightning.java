@@ -17,13 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -36,6 +33,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class WandOfLightning extends SimpleWand  {
 	
@@ -64,7 +64,7 @@ public class WandOfLightning extends SimpleWand  {
 		}
 		
 		affected.add( ch );
-		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.flying ? (int)(damage * 2) : damage, LightningTrap.LIGHTNING  );
+		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.flying ? damage * 2 : damage, LightningTrap.LIGHTNING  );
 		
 		ch.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
 		ch.getSprite().flash();

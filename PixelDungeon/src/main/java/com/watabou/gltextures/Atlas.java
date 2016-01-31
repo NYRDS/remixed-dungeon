@@ -17,10 +17,10 @@
 
 package com.watabou.gltextures;
 
+import android.graphics.RectF;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import android.graphics.RectF;
 
 public class Atlas {
 

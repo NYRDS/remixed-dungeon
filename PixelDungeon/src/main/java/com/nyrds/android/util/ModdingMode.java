@@ -1,11 +1,11 @@
 package com.nyrds.android.util;
 
+import android.content.Context;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import android.content.Context;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";

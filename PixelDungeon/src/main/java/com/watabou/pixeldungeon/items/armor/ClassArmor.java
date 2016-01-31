@@ -17,14 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
-import java.util.ArrayList;
-
-
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
+
+import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
 	
@@ -42,9 +41,9 @@ abstract public class ClassArmor extends Armor {
 	}
 	
 	public static Armor upgrade ( Hero owner, Armor armor ) {
-		
-		ClassArmor classArmor = null;
-		
+
+		ClassArmor classArmor;
+
 		switch (owner.heroClass) {
 		case WARRIOR:
 			classArmor = new WarriorArmor();

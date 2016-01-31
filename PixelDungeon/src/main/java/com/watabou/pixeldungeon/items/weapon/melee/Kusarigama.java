@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -16,6 +14,8 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Kusarigama extends SpecialWeapon {
 
@@ -47,8 +47,6 @@ public class Kusarigama extends SpecialWeapon {
 					Char chr = Actor.findChar(hitCell);
 					
 					if (chr != null) {
-						target = chr.getPos();
-
 						chr.move(Ballistica.trace[1]);
 						chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
 

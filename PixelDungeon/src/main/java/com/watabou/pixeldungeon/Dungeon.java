@@ -17,15 +17,6 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashSet;
-
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -63,6 +54,15 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashSet;
 
 public class Dungeon {
 
@@ -477,7 +477,7 @@ public class Dungeon {
 		input.close();
 
 		if(bundle==null) {
-			new RuntimeException("can not load level from "+loadFrom);
+			throw new RuntimeException("can not load level from "+loadFrom);
 		}
 
 		Level level = Level.fromBundle(bundle, "level");

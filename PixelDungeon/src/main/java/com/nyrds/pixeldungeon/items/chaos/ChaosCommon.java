@@ -32,7 +32,6 @@ public class ChaosCommon {
 			Sample.INSTANCE.play( Assets.SND_CRYSTAL );
 			GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
 			GameScene.add(Blob.seed(cell, charge, Random.element(blobs)));
-			charge = 0;
 		}
 	}
 }

@@ -17,13 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import java.util.ArrayList;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -32,6 +30,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import java.util.ArrayList;
 
 public class ShortSword extends MeleeWeapon {
 	
@@ -66,7 +66,7 @@ public class ShortSword extends MeleeWeapon {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action == AC_REFORGE) {
+		if (action.equals(AC_REFORGE)) {
 			
 			if (hero.belongings.weapon == this) {
 				equipped = true;

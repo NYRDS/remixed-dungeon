@@ -47,7 +47,7 @@ public class SpiderExploding extends MultiKindMob {
 	public int attackProc( Char enemy, int damage ) {
 		
 		try {
-			Plant plant  = (Plant) ((Class<?>) PLantClasses[getKind()]).newInstance();
+			Plant plant  = (Plant) PLantClasses[getKind()].newInstance();
 			plant.pos = enemy.getPos();
 			
 			plant.effect(enemy.getPos(),enemy);

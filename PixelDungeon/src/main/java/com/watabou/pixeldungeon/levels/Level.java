@@ -305,7 +305,7 @@ public abstract class Level implements Bundlable {
 
 	public void reset() {
 
-		for (Mob mob : mobs.toArray(new Mob[0])) {
+		for (Mob mob : mobs.toArray(new Mob[mobs.size()])) {
 			if (!mob.reset()) {
 				mobs.remove(mob);
 			}

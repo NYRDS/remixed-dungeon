@@ -35,12 +35,8 @@ public class WndInfoMob extends WndTitledMessage {
 	}
 	
 	private static String desc( Mob mob ) {
-		
-		StringBuilder builder = new StringBuilder( mob.description() );
-		
-		builder.append( "\n\n" + mob.state.status() + "." );
-		
-		return builder.toString();
+
+		return mob.description() + "\n\n" + mob.state.status() + ".";
 	}
 	
 	private static class MobTitle extends Component {

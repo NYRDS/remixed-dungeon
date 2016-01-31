@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.graphics.RectF;
+
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
@@ -26,8 +28,6 @@ import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
-
-import android.graphics.RectF;
 
 public class DungeonTilemap extends Tilemap {
 
