@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /levels-->
   <!--STRINGS OF Level CLASS-->
@@ -54,8 +54,8 @@
   <string name="Caves_TileGrass">Светящийся мох</string>
   <string name="Caves_TileHighGrass">Светящиеся грибы</string>
   <string name="Caves_TileWater">Ледяная вода.</string>
-  <string name="Caves_TileDescEntrance">Лестница ведёт вниз.</string>
-  <string name="Caves_TileDescExit">Лестница ведёт наверх.</string>
+  <string name="Caves_TileDescEntrance">Лестница ведёт наверх.</string>
+  <string name="Caves_TileDescExit">Лестница ведёт вниз.</string>
   <string name="Caves_TileDescHighGrass">Огромный гриб закрывает обзор.</string>
   <string name="Caves_TileDescDeco">На стене виднеется открытая жила какой-то руды. Золото?</string>
   <string name="Caves_TileDescBookshelf">Кому в подземелье мог понадобится книжный шкаф?</string>
