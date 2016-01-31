@@ -1,0 +1,3 @@
+[submodule "libs/acra"]
+	path = libs/acra
+	url = https://github.com/ACRA/acra

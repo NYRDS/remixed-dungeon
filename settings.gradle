@@ -1,1 +1,2 @@
-include ':PixelDungeon'
+include ':PixelDungeon', ':acra'
+project(':acra').projectDir = new File('libs/acra')
