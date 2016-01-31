@@ -63,7 +63,7 @@ public class Mimic extends Mob {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		items = new ArrayList<Item>( bundle.getCollection( ITEMS, Item.class ) );
+		items = new ArrayList<>(bundle.getCollection(ITEMS, Item.class));
 		adjustStats( bundle.getInt( LEVEL ) );
 	}
 	
@@ -140,7 +140,7 @@ public class Mimic extends Mob {
 		}
 		
 		Mimic m = new Mimic();
-		m.items = new ArrayList<Item>( items );
+		m.items = new ArrayList<>(items);
 		m.adjustStats( Dungeon.depth );
 		m.hp(m.ht());
 		m.setPos(pos);

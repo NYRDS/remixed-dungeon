@@ -264,7 +264,7 @@ public class BitmapTextMultiline extends BitmapText {
 		
 		public ArrayList<BitmapText> split() {
 			
-			lines = new ArrayList<BitmapText>();
+			lines = new ArrayList<>();
 					 
 			curLine = new StringBuilder();
 			curLineWidth = 0;

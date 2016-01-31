@@ -124,7 +124,7 @@ public class Dungeon {
 		dewVial = true;
 		transmutation = Random.IntRange(6, 14);
 
-		chapters = new HashSet<Integer>();
+		chapters = new HashSet<>();
 
 		Ghost.Quest.reset();
 		WandMaker.Quest.reset();
@@ -411,7 +411,7 @@ public class Dungeon {
 		transmutation = bundle.getInt(WT);
 
 		if (fullLoad) {
-			chapters = new HashSet<Integer>();
+			chapters = new HashSet<>();
 			int ids[] = bundle.getIntArray(CHAPTERS);
 			if (ids != null) {
 				for (int id : ids) {

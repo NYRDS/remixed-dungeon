@@ -18,7 +18,7 @@ public class SystemFloatingText extends SystemText {
 	
 	private int key = -1;
 	
-	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<ArrayList<SystemFloatingText>>();
+	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<>();
 	
 	public SystemFloatingText() {
 		super(null, 12 ,false);
@@ -88,7 +88,7 @@ public class SystemFloatingText extends SystemText {
 		
 		ArrayList<SystemFloatingText> stack = stacks.get( key );
 		if (stack == null) {
-			stack = new ArrayList<SystemFloatingText>();
+			stack = new ArrayList<>();
 			stacks.put( key, stack );
 		}
 		

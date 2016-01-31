@@ -25,7 +25,7 @@ import android.graphics.Rect;
 
 public class BitmapFilm {
 	
-	protected Map<Object,Rect> frames = new HashMap<Object, Rect>();
+	protected Map<Object,Rect> frames = new HashMap<>();
 	
 	public BitmapFilm( Bitmap bitmap ) {
 		add( null, new Rect( 0, 0, bitmap.getWidth(), bitmap.getHeight() ) );

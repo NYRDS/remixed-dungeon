@@ -169,7 +169,7 @@ public class Hero extends Char {
 	public String levelId;
 
 	private ArrayList<Mob> visibleEnemies;
-	private Collection<Mob> pets = new ArrayList<Mob>();
+	private Collection<Mob> pets = new ArrayList<>();
 
 	public void addPet(Mob pet) {
 		pets.add(pet);
@@ -186,7 +186,7 @@ public class Hero extends Char {
 
 		belongings = new Belongings(this);
 
-		visibleEnemies = new ArrayList<Mob>();
+		visibleEnemies = new ArrayList<>();
 	}
 
 	public Hero(int difficulty) {
@@ -228,7 +228,7 @@ public class Hero extends Char {
 	private static final String PETS = "pets";
 
 	private void refreshPets() {
-		ArrayList<Mob> alivePets = new ArrayList<Mob>();
+		ArrayList<Mob> alivePets = new ArrayList<>();
 		if (pets != null) {
 			for (Mob pet : pets) {
 				if (pet.isAlive()) {
@@ -1083,7 +1083,7 @@ public class Hero extends Char {
 	}
 
 	private void checkVisibleMobs() {
-		ArrayList<Mob> visible = new ArrayList<Mob>();
+		ArrayList<Mob> visible = new ArrayList<>();
 
 		boolean newMob = false;
 

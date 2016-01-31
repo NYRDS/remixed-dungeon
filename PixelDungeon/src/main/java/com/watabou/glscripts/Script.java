@@ -25,8 +25,8 @@ import java.util.Map;
 
 public class Script extends Program {
 
-	private static final Map<Class<? extends Script>,Script> all = 
-		new HashMap<Class<? extends Script>, Script>();
+	private static final Map<Class<? extends Script>,Script> all =
+			new HashMap<>();
 	
 	private static Script curScript = null;
 	private static Class<? extends Script> curScriptClass = null;

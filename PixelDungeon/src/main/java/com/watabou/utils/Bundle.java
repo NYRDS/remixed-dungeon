@@ -41,7 +41,7 @@ public class Bundle {
 
 	private static final String CLASS_NAME = "__className";
 	
-	private static Map<String,String> aliases = new HashMap<String, String>();
+	private static Map<String,String> aliases = new HashMap<>();
 	
 	private JSONObject data;
 	
@@ -179,7 +179,7 @@ public class Bundle {
 	
 	public <T extends Bundlable> Collection<T> getCollection( String key, Class<T> type ) {
 		
-		List<T> list = new ArrayList<T>();
+		List<T> list = new ArrayList<>();
 		
 		try {
 			JSONArray array = data.getJSONArray( key );

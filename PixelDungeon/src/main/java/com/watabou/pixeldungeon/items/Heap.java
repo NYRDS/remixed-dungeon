@@ -68,7 +68,7 @@ public class Heap implements Bundlable {
 	
 	public ItemSprite sprite;
 	
-	public LinkedList<Item> items = new LinkedList<Item>();
+	public LinkedList<Item> items = new LinkedList<>();
 	
 	public String imageFile() {
 		switch (type) {
@@ -393,7 +393,7 @@ public class Heap implements Bundlable {
 	public void restoreFromBundle( Bundle bundle ) {
 		pos   = bundle.getInt( POS );
 		type  = Type.valueOf( bundle.getString( TYPE ) );
-		items = new LinkedList<Item>(  bundle.getCollection( ITEMS, Item.class ) );
+		items = new LinkedList<>(bundle.getCollection(ITEMS, Item.class));
 	}
 
 	@Override

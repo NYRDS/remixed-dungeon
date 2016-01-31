@@ -245,7 +245,7 @@ public class WandMaker extends NPC {
 		public static void placeItem() {
 			if (alternative) {
 				
-				ArrayList<Heap> candidates = new ArrayList<Heap>();
+				ArrayList<Heap> candidates = new ArrayList<>();
 				for (Heap heap : Dungeon.level.allHeaps()) {
 					if (heap.type == Heap.Type.SKELETON && !Dungeon.visible[heap.pos]) {
 						candidates.add( heap );

@@ -99,7 +99,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 		mMods.clear();
 
 		File[] extList = FileSystem.listExternalStorage();
-		final ArrayList<String> mods = new ArrayList<String>();
+		final ArrayList<String> mods = new ArrayList<>();
 
 		String[] knownMods = Game.getVars(R.array.known_mods);
 

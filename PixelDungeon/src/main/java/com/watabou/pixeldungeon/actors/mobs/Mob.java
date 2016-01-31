@@ -131,16 +131,22 @@ public abstract class Mob extends Char {
 		super.restoreFromBundle(bundle);
 
 		String state = bundle.getString(STATE);
-		if (state.equals(Sleeping.TAG)) {
-			this.state = SLEEPEING;
-		} else if (state.equals(Wandering.TAG)) {
-			this.state = WANDERING;
-		} else if (state.equals(Hunting.TAG)) {
-			this.state = HUNTING;
-		} else if (state.equals(Fleeing.TAG)) {
-			this.state = FLEEING;
-		} else if (state.equals(Passive.TAG)) {
-			this.state = PASSIVE;
+		switch (state) {
+			case Sleeping.TAG:
+				this.state = SLEEPEING;
+				break;
+			case Wandering.TAG:
+				this.state = WANDERING;
+				break;
+			case Hunting.TAG:
+				this.state = HUNTING;
+				break;
+			case Fleeing.TAG:
+				this.state = FLEEING;
+				break;
+			case Passive.TAG:
+				this.state = PASSIVE;
+				break;
 		}
 
 		target = bundle.getInt(TARGET);
@@ -229,7 +235,7 @@ public abstract class Mob extends Char {
 	}
 	
 	private Char chooseEnemyFromFraction( Fraction enemyFraction ) {
-		HashSet<Mob> enemies = new HashSet<Mob>();
+		HashSet<Mob> enemies = new HashSet<>();
 		for (Mob mob : Dungeon.level.mobs) {
 			if (Dungeon.level.fieldOfView[mob.getPos()] && mob.fraction.equals(enemyFraction) && mob != this) {
 				enemies.add(mob);

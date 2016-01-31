@@ -38,7 +38,7 @@ public class Font extends TextureFilm {
 	
 	private boolean endOfRow = false;
 	
-	HashMap<Object, PointF> glyphShift = new HashMap<Object, PointF>();
+	HashMap<Object, PointF> glyphShift = new HashMap<>();
 	
 	protected Font( SmartTexture tx ) {
 		super( tx );

@@ -129,12 +129,12 @@ public abstract class Level implements Bundlable {
 	
 	public String levelId;
 	
-	public HashSet<Mob> mobs = new HashSet<Mob>();
-	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<Class<? extends Blob>, Blob>();
-	public SparseArray<Plant> plants = new SparseArray<Plant>();
-	private SparseArray<Heap> heaps = new SparseArray<Heap>();
+	public HashSet<Mob> mobs = new HashSet<>();
+	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<>();
+	public SparseArray<Plant> plants = new SparseArray<>();
+	private SparseArray<Heap> heaps = new SparseArray<>();
 	
-	protected ArrayList<Item> itemsToSpawn = new ArrayList<Item>();
+	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
 	public int color1 = 0x004400;
 	public int color2 = 0x88CC44;
@@ -316,10 +316,10 @@ public abstract class Level implements Bundlable {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 
-		mobs = new HashSet<Mob>();
-		heaps = new SparseArray<Heap>();
-		blobs = new HashMap<Class<? extends Blob>, Blob>();
-		plants = new SparseArray<Plant>();
+		mobs = new HashSet<>();
+		heaps = new SparseArray<>();
+		blobs = new HashMap<>();
+		plants = new SparseArray<>();
 
 		width = bundle.optInt(WIDTH, 32); // old levels compat
 		height = bundle.optInt(HEIGHT, 32);
@@ -359,7 +359,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void removePets() {
-		HashSet <Mob> nonPets = new HashSet<Mob>();
+		HashSet <Mob> nonPets = new HashSet<>();
 		
 		for(Mob mob:mobs) {
 			if(!mob.isPet()) {
@@ -1155,7 +1155,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getEmptyCellNextTo(int cell) {
-		ArrayList<Integer> candidates = new ArrayList<Integer>();
+		ArrayList<Integer> candidates = new ArrayList<>();
 		
 		for (int n : Level.NEIGHBOURS8) {
 			int p = n + cell;

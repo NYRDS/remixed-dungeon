@@ -26,7 +26,7 @@ public class WardenArmor extends ClassArmor {
 		image = 10;
 	}
 	
-	private HashMap<Callback, Mob> targets = new HashMap<Callback, Mob>();
+	private HashMap<Callback, Mob> targets = new HashMap<>();
 	
 	@Override
 	public String special() {

@@ -74,7 +74,7 @@ public class Swarm extends Mob {
 	public int defenseProc( Char enemy, int damage ) {
 
 		if (hp() >= damage + 2) {
-			ArrayList<Integer> candidates = new ArrayList<Integer>();
+			ArrayList<Integer> candidates = new ArrayList<>();
 			boolean[] passable = Dungeon.level.passable;
 			
 			for (int n : Level.NEIGHBOURS4) {

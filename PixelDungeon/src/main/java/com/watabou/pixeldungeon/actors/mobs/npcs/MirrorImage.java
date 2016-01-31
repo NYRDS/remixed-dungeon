@@ -103,7 +103,7 @@ public class MirrorImage extends NPC {
 	protected Char chooseEnemy() {
 		
 		if (getEnemy() == DUMMY || !getEnemy().isAlive()) {
-			HashSet<Mob> enemies = new HashSet<Mob>();
+			HashSet<Mob> enemies = new HashSet<>();
 			for (Mob mob:Dungeon.level.mobs) {
 				if (mob.hostile && Dungeon.level.fieldOfView[mob.getPos()] && !mob.isPet()) {
 					enemies.add( mob );
@@ -142,7 +142,7 @@ public class MirrorImage extends NPC {
 		return true;
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( ToxicGas.class );
 		IMMUNITIES.add( Burning.class );

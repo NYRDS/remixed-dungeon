@@ -151,7 +151,7 @@ public class Ghost extends NPC {
 		return true;
 	}
 		
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( Roots.class );
@@ -367,7 +367,7 @@ public class Ghost extends NPC {
 			Dungeon.level.drop( new RatSkull(), getPos() ).sprite.drop();
 		}
 		
-		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 		static {
 			IMMUNITIES.add( Paralysis.class );
 		}

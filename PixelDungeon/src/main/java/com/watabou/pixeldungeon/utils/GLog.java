@@ -40,7 +40,7 @@ public class GLog {
 	public static final String WARNING		= "** ";
 	public static final String HIGHLIGHT	= "@@ ";
 	
-	public static Signal<String> update = new Signal<String>();
+	public static Signal<String> update = new Signal<>();
 	
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;

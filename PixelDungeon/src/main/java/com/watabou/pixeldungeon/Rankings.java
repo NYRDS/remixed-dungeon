@@ -138,7 +138,7 @@ public enum Rankings {
 			return;
 		}
 		
-		records = new ArrayList<Rankings.Record>();
+		records = new ArrayList<>();
 		
 		try {
 			InputStream input = Game.instance().openFileInput( RANKINGS_FILE );

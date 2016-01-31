@@ -98,7 +98,7 @@ public abstract class Char extends Actor {
 	
 	public int viewDistance	= 8;
 	
-	private HashSet<Buff> buffs = new HashSet<Buff>();
+	private HashSet<Buff> buffs = new HashSet<>();
 	
 	@Override
 	protected boolean act() {
@@ -339,7 +339,7 @@ public abstract class Char extends Actor {
 	
 	@SuppressWarnings("unchecked")
 	public <T extends Buff> HashSet<T> buffs( Class<T> c ) {
-		HashSet<T> filtered = new HashSet<T>();
+		HashSet<T> filtered = new HashSet<>();
 		for (Buff b : buffs) {
 			if (c.isInstance( b )) {
 				filtered.add( (T)b );
@@ -488,7 +488,7 @@ public abstract class Char extends Actor {
 	public void move(int step) {
 		
 		if (buff(Vertigo.class) != null && Dungeon.level.adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
-			List<Integer> candidates = new ArrayList<Integer>();
+			List<Integer> candidates = new ArrayList<>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = getPos() + dir;
 				if (Dungeon.level.cellValid(p)) {
@@ -536,8 +536,8 @@ public abstract class Char extends Actor {
 		next();
 	}
 	
-	protected Set<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
-	protected Set<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	protected Set<Class<?>> IMMUNITIES = new HashSet<>();
+	protected Set<Class<?>> RESISTANCES = new HashSet<>();
 	
 	public Set<Class<?>> resistances() {
 		return RESISTANCES;

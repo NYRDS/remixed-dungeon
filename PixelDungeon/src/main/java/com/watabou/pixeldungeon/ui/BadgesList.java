@@ -32,7 +32,7 @@ import com.watabou.pixeldungeon.windows.WndBadge;
 
 public class BadgesList extends ScrollPane {
 
-	private ArrayList<ListItem> items = new ArrayList<ListItem>();
+	private ArrayList<ListItem> items = new ArrayList<>();
 	
 	public BadgesList( boolean global ) {
 		super( new Component() );

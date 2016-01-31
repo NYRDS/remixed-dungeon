@@ -26,7 +26,7 @@ public class SniperArmor extends ClassArmor {
 		image = 9;
 	}
 	
-	private HashMap<Callback, Mob> targets = new HashMap<Callback, Mob>();
+	private HashMap<Callback, Mob> targets = new HashMap<>();
 	
 	@Override
 	public String special() {

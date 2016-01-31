@@ -32,7 +32,7 @@ public class WndOptions extends Window {
 	private static final int MARGIN 		= 2;
 	private static final int BUTTON_HEIGHT	= 20;
 	
-	private ArrayList<TextButton> buttons = new ArrayList<TextButton>();
+	private ArrayList<TextButton> buttons = new ArrayList<>();
 	
 	public WndOptions( String title, String message, boolean systemFont, String... options ) {
 		super();

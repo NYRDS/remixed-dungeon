@@ -46,7 +46,7 @@ public class WndStory extends Window {
 	public static final int ID_HALLS		= 4;
 	public static final int ID_SPIDERS		= 5;
 	
-	private static final SparseArray<String> CHAPTERS = new SparseArray<String>();
+	private static final SparseArray<String> CHAPTERS = new SparseArray<>();
 	
 	static {
 		CHAPTERS.put(ID_SEWERS,     Game.getVar(R.string.WndStory_Sewers));

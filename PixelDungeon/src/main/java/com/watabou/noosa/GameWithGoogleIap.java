@@ -105,7 +105,7 @@ public abstract class GameWithGoogleIap extends Game {
 		}
 	}
 
-	private static Map<InterstitialAd, Boolean> mAdLoadInProgress = new HashMap<InterstitialAd, Boolean>();
+	private static Map<InterstitialAd, Boolean> mAdLoadInProgress = new HashMap<>();
 
 	private static void requestNewInterstitial(final InterstitialAd isAd) {
 
@@ -264,7 +264,7 @@ public abstract class GameWithGoogleIap extends Game {
 				if (mHelper == null)
 					return;
 
-				ArrayList<String> skuList = new ArrayList<String>();
+				ArrayList<String> skuList = new ArrayList<>();
 
 				skuList.add(SKU_LEVEL_1);
 				skuList.add(SKU_LEVEL_2);

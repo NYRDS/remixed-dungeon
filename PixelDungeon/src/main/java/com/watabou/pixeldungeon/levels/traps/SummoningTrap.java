@@ -56,7 +56,7 @@ public class SummoningTrap {
 		
 		// It's complicated here, because these traps can be activated in chain
 		
-		ArrayList<Integer> candidates = new ArrayList<Integer>();
+		ArrayList<Integer> candidates = new ArrayList<>();
 		
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			int p = pos + Level.NEIGHBOURS8[i];
@@ -65,7 +65,7 @@ public class SummoningTrap {
 			}
 		}
 		
-		ArrayList<Integer> respawnPoints = new ArrayList<Integer>();
+		ArrayList<Integer> respawnPoints = new ArrayList<>();
 		
 		while (nMobs > 0 && candidates.size() > 0) {
 			int index = Random.index( candidates );

@@ -22,7 +22,7 @@ public class ModdingMode {
 		}
 	}
 
-	public static final String activeMod() {
+	public static String activeMod() {
 		return mActiveMod;
 	}
 

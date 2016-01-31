@@ -122,7 +122,7 @@ public class SewerBossLevel extends RegularLevel {
 			}
 		}
 		
-		ArrayList<Room> candidates = new ArrayList<Room>();
+		ArrayList<Room> candidates = new ArrayList<>();
 		for (Room r : roomExit.neigbours) {
 			if (!roomExit.connected.containsKey( r ) &&
 				(roomExit.left == r.right || roomExit.right == r.left || roomExit.bottom == r.top)) {

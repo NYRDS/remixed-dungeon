@@ -42,7 +42,7 @@ public class HuntressArmor extends ClassArmor {
 		image = 8;
 	}
 	
-	private HashMap<Callback, Mob> targets = new HashMap<Callback, Mob>();
+	private HashMap<Callback, Mob> targets = new HashMap<>();
 	
 	@Override
 	public String special() {

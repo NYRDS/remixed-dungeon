@@ -39,8 +39,8 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	protected SoundPool pool = 
 		new SoundPool( MAX_STREAMS, AudioManager.STREAM_MUSIC, 0 );
 	
-	protected HashMap<Object, Integer> ids = 
-		new HashMap<Object, Integer>();
+	protected HashMap<Object, Integer> ids =
+			new HashMap<>();
 	
 	private boolean enabled = true;
 	

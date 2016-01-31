@@ -25,7 +25,7 @@ import com.watabou.utils.Bundle;
 
 public class GamesInProgress {
 
-	private static Map<HeroClass, Info> state = new HashMap<HeroClass, Info>();
+	private static Map<HeroClass, Info> state = new HashMap<>();
 	
 	public static Info checkFile(String file) {
 		Info info;
@@ -56,7 +56,7 @@ public class GamesInProgress {
 	}
 	
 	public static void removeAll() {
-		state = new HashMap<HeroClass, Info>();
+		state = new HashMap<>();
 	}
 	
 	public static void set( HeroClass cl, int depth, int level ) {

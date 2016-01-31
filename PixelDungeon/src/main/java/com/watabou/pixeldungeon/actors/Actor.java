@@ -81,12 +81,12 @@ public abstract class Actor implements Bundlable {
 	// **********************
 	// *** Static members ***
 	
-	private static HashSet<Actor> all = new HashSet<Actor>();
+	private static HashSet<Actor> all = new HashSet<>();
 	private static Actor current;
 	
 	private static float now = 0;
 	
-	private static Map<Integer, Char> chars = new HashMap<Integer, Char>();
+	private static Map<Integer, Char> chars = new HashMap<>();
 	
 	public static void clear(int len) {
 		

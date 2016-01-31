@@ -28,7 +28,7 @@ public class Group extends Gizmo {
 	public int length;
 	
 	public Group() {
-		members = new ArrayList<Gizmo>();
+		members = new ArrayList<>();
 		length = 0;
 	}
 	

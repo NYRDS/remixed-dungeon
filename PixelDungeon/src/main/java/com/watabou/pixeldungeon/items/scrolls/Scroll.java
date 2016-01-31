@@ -106,7 +106,7 @@ public abstract class Scroll extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void initLabels() {
-		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, getRunes(), images );
+		handler = new ItemStatusHandler<>((Class<? extends Scroll>[]) scrolls, getRunes(), images);
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -115,7 +115,7 @@ public abstract class Scroll extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<Scroll>( (Class<? extends Scroll>[])scrolls, getRunes(), images, bundle );
+		handler = new ItemStatusHandler<>((Class<? extends Scroll>[]) scrolls, getRunes(), images, bundle);
 	}
 	
 	public Scroll() {

@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class WndTabbed extends Window {
 
-	protected ArrayList<Tab> tabs = new ArrayList<Tab>();
+	protected ArrayList<Tab> tabs = new ArrayList<>();
 	protected Tab selected;
 	
 	public WndTabbed() {
@@ -83,7 +83,7 @@ public class WndTabbed extends Window {
 			remove( tab );
 		}
 		
-		ArrayList<Tab> tabs = new ArrayList<Tab>( this.tabs );
+		ArrayList<Tab> tabs = new ArrayList<>(this.tabs);
 		this.tabs.clear();
 		
 		for (Tab tab : tabs) {

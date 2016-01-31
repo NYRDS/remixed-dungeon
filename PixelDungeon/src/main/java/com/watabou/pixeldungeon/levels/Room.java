@@ -35,8 +35,8 @@ import com.watabou.utils.Rect;
 
 public class Room extends Rect implements Graph.Node, Bundlable {
 	
-	public HashSet<Room> neigbours = new HashSet<Room>();
-	public HashMap<Room, Door> connected = new HashMap<Room, Door>();
+	public HashSet<Room> neigbours = new HashSet<>();
+	public HashMap<Room, Door> connected = new HashMap<>();
 	
 	public int distance;
 	public int price = 1;
@@ -93,10 +93,10 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		}
 	};
 	
-	public static final ArrayList<Type> SPECIALS = new ArrayList<Type>( Arrays.asList(
-		Type.WEAK_FLOOR, Type.MAGIC_WELL, Type.CRYPT, Type.POOL, Type.GARDEN, Type.LIBRARY, Type.ARMORY,
-		Type.TREASURY, Type.TRAPS, Type.STORAGE, Type.STATUE, Type.LABORATORY, Type.VAULT
-	) );
+	public static final ArrayList<Type> SPECIALS = new ArrayList<>(Arrays.asList(
+			Type.WEAK_FLOOR, Type.MAGIC_WELL, Type.CRYPT, Type.POOL, Type.GARDEN, Type.LIBRARY, Type.ARMORY,
+			Type.TREASURY, Type.TRAPS, Type.STORAGE, Type.STATUE, Type.LABORATORY, Type.VAULT
+	));
 	
 	public Type type = Type.NULL;
 	

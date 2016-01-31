@@ -724,7 +724,7 @@ public class IabHelper {
     public void consumeAsync(Purchase purchase, OnConsumeFinishedListener listener) {
         checkNotDisposed();
         checkSetupDone("consume");
-        List<Purchase> purchases = new ArrayList<Purchase>();
+        List<Purchase> purchases = new ArrayList<>();
         purchases.add(purchase);
         consumeAsyncInternal(purchases, listener, null);
     }
@@ -896,7 +896,7 @@ public class IabHelper {
     int querySkuDetails(String itemType, Inventory inv, List<String> moreSkus)
                                 throws RemoteException, JSONException {
         logDebug("Querying SKU details.");
-        ArrayList<String> skuList = new ArrayList<String>();
+        ArrayList<String> skuList = new ArrayList<>();
         skuList.addAll(inv.getAllOwnedSkus(itemType));
         if (moreSkus != null) {
             for (String sku : moreSkus) {
@@ -947,7 +947,7 @@ public class IabHelper {
         flagStartAsync("consume");
         (new Thread(new Runnable() {
             public void run() {
-                final List<IabResult> results = new ArrayList<IabResult>();
+                final List<IabResult> results = new ArrayList<>();
                 for (Purchase purchase : purchases) {
                     try {
                         consume(purchase);

@@ -37,8 +37,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 
 	private static final String TXT_SELECT_ITEM = Game.getVar(R.string.QuickSlot_SelectedItem);
 
-	private static ArrayList<QuickSlot> slots = new ArrayList<QuickSlot>();
-	private static HashMap<Integer, Object> qsStorage = new HashMap<Integer, Object>();
+	private static ArrayList<QuickSlot> slots = new ArrayList<>();
+	private static HashMap<Integer, Object> qsStorage = new HashMap<>();
 
 	// Either Item or Class<? extends Item>
 	private Object quickslotItem;

@@ -38,7 +38,7 @@ public class GasesImmunity extends FlavourBuff {
 		return Game.getVar(R.string.GasesImmunity_Info);
 	}
 	
-	public static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	public static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );

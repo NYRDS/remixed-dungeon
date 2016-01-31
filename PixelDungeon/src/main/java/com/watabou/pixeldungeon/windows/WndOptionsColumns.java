@@ -15,7 +15,7 @@ public class WndOptionsColumns extends Window {
 	private static final int BUTTON_HEIGHT	= 20;
 	private static final int BUTTON_WIDTH	= 58;
 	
-	private ArrayList<TextButton> buttons = new ArrayList<TextButton>();
+	private ArrayList<TextButton> buttons = new ArrayList<>();
 		
 	public WndOptionsColumns( String title, String message, String... options ) {
 		super();

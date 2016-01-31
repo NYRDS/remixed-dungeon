@@ -18,9 +18,9 @@ public class SystemText extends Text {
 
 	protected TextPaint textPaint = new TextPaint();
 
-	private ArrayList<SystemTextLine> lineImage = new ArrayList<SystemTextLine>();
+	private ArrayList<SystemTextLine> lineImage = new ArrayList<>();
 
-	private static Set<SystemText> texts = new HashSet<SystemText>();
+	private static Set<SystemText> texts = new HashSet<>();
 
 	private final static float oversample = 2f;
 	private boolean needWidth = false;
@@ -86,7 +86,7 @@ public class SystemText extends Text {
 		texts.remove(this);
 	}
 
-	private ArrayList<Float> xCharPos = new ArrayList<Float>();
+	private ArrayList<Float> xCharPos = new ArrayList<>();
 
 	private float fontHeight;
 

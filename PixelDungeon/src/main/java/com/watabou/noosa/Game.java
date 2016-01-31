@@ -111,10 +111,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected static int difficulty;
 
 	// Accumulated touch events
-	protected final ArrayList<MotionEvent> motionEvents = new ArrayList<MotionEvent>();
+	protected final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
 
 	// Accumulated key events
-	protected final ArrayList<KeyEvent> keysEvents = new ArrayList<KeyEvent>();
+	protected final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
 	public Game(Class<? extends Scene> c) {
 		super();
@@ -208,9 +208,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	@SuppressLint("UseSparseArrays")
-	private Map<Integer, String> stringMap = new HashMap<Integer, String>();
+	private Map<Integer, String> stringMap = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
-	private Map<Integer, String[]> stringsMap = new HashMap<Integer, String[]>();
+	private Map<Integer, String[]> stringsMap = new HashMap<>();
 	private Map<String, Integer> keyToInt;
 
 	private void addMappingForClass(Class<?> clazz) {
@@ -230,7 +230,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	private void initTextMapping() {
 		long mapStart = System.nanoTime();
 
-		keyToInt = new HashMap<String, Integer>();
+		keyToInt = new HashMap<>();
 
 		addMappingForClass( R.string.class);
 		addMappingForClass( R.array.class);

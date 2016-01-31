@@ -17,9 +17,9 @@
 
 package com.watabou.noosa;
 
-import java.util.List;
-
 import android.graphics.RectF;
+
+import java.util.List;
 
 public class MovieClip extends Image {
 

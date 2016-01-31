@@ -20,7 +20,7 @@ public class MobSpriteDef extends MobSprite {
 	private int framesInRow;
 	private int kind;
 
-	static private Map<String, JSONObject> defMap = new HashMap<String, JSONObject>();
+	static private Map<String, JSONObject> defMap = new HashMap<>();
 
 	private String name;
 
@@ -76,7 +76,7 @@ public class MobSpriteDef extends MobSprite {
 
 		Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));
 
-		List<Integer> framesSeq = new ArrayList<Integer>(16);
+		List<Integer> framesSeq = new ArrayList<>(16);
 
 		JSONArray jsonFrames = jsonAnim.getJSONArray("frames");
 
