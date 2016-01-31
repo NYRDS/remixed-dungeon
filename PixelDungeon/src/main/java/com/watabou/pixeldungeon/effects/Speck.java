@@ -224,7 +224,6 @@ public class Speck extends Image {
 			scale.set( Random.Float( 1, 2 ) );
 			speed.set( 0, 64 );
 			lifespan = 0.2f;
-			y -= speed.y * lifespan;
 			break;
 			
 		case NOTE:

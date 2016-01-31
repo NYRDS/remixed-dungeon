@@ -458,7 +458,7 @@ public abstract class Char extends Actor {
 	
 	@Override
 	protected void onRemove() {
-		for (Buff buff : buffs.toArray( new Buff[0] )) {
+		for (Buff buff : buffs.toArray(new Buff[buffs.size()])) {
 			buff.detach();
 		}
 	}

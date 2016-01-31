@@ -97,7 +97,7 @@ public class MeleeWeapon extends Weapon {
 		} else {
 			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
-				info.append(" "+Game.getVar(R.string.MeleeWeapon_Info2c));
+				info.append(" ").append(Game.getVar(R.string.MeleeWeapon_Info2c));
 			}
 		}
 

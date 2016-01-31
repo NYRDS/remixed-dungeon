@@ -17,15 +17,13 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.HashSet;
-
+import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -43,6 +41,8 @@ import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.HashSet;
 
 public abstract class Mob extends Char {
 
@@ -357,7 +357,7 @@ public abstract class Mob extends Char {
 		if (rooted) {
 			return false;
 		}
-		int step = -1;
+		int step;
 
 		if (!isWallWalker()) {
 			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.passable,null);
@@ -374,7 +374,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected boolean getFurther(int target) {
-		int step = -1;
+		int step;
 
 		if (!isWallWalker()) {
 			step = Dungeon.flee(this, getPos(), target, Dungeon.level.passable,null);
@@ -505,7 +505,7 @@ public abstract class Mob extends Char {
 	@SuppressWarnings("unchecked")
 	protected void dropLoot() {
 		if (loot != null && Random.Float() < lootChance) {
-			Item item = null;
+			Item item;
 			if (loot instanceof Generator.Category) {
 
 				item = Generator.random((Generator.Category) loot);

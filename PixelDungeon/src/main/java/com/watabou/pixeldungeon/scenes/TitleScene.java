@@ -112,8 +112,6 @@ public class TitleScene extends PixelScene {
 		btnHighscores.setPos(w / 2, btnPlay.top());
 		add(btnHighscores);
 
-		float dashBaseline = h;
-
 		btnDonate = new DonateButton();
 
 		pleaseSupport = PixelScene.createText(8);
@@ -125,7 +123,7 @@ public class TitleScene extends PixelScene {
 		btnDonate.setPos((w - btnDonate.width()) / 2, pleaseSupport.y
 				- btnDonate.height());
 
-		dashBaseline = btnDonate.top() - DashboardItem.SIZE;
+		float dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 
 		if (PixelDungeon.landscape()) {
 			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline);

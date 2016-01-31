@@ -93,7 +93,7 @@ public class WndSettings extends Window {
 		super();
 		mInGame = inGame;
 
-		float curY = 0;
+		float curY;
 		
 		if (mInGame) {
 			curY = createZoomButtons();

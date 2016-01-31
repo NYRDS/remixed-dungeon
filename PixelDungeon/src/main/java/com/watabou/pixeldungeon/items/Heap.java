@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.Collection;
-import java.util.LinkedList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -46,6 +43,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.LinkedList;
 
 public class Heap implements Bundlable {
 
@@ -233,7 +232,7 @@ public class Heap implements Bundlable {
 		boolean burnt = false;
 		boolean evaporated = false;
 		
-		for (Item item : items.toArray( new Item[0] )) {
+		for (Item item : items.toArray(new Item[items.size()])) {
 			Item burntItem = item.burn(pos);
 			
 			if(!item.equals(burntItem) && !(item instanceof Dewdrop)){
@@ -273,7 +272,7 @@ public class Heap implements Bundlable {
 			return;
 		}
 		
-		for (Item item : items.toArray( new Item[0] )) {
+		for (Item item : items.toArray(new Item[items.size()])) {
 			Item frozenItem = item.freeze(pos);
 			
 			replaceOrRemoveItem(item, frozenItem);
@@ -293,7 +292,7 @@ public class Heap implements Bundlable {
 			return;
 		}
 		
-		for (Item item : items.toArray( new Item[0] )) {
+		for (Item item : items.toArray(new Item[items.size()])) {
 			Item toxicatedItem = item.poison(pos);
 
 			replaceOrRemoveItem(item, toxicatedItem);

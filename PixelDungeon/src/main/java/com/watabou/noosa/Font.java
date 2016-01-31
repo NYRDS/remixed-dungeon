@@ -1,13 +1,13 @@
 package com.watabou.noosa;
 
-import java.util.HashMap;
-
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.utils.PointF;
+
+import java.util.HashMap;
 
 public class Font extends TextureFilm {
 	public static final String SPECIAL_CHAR = 
@@ -157,7 +157,7 @@ public class Font extends TextureFilm {
 			lineBottom = findNextEmptyLine(bitmap, lineTop, color);
 			//GLog.w("Empty line: %d", lineBottom);
 			int charColumn = 0;
-			int charBorder = 0;
+			int charBorder;
 			
 			endOfRow = false;
 			while (! endOfRow){
@@ -219,7 +219,7 @@ public class Font extends TextureFilm {
 
 		// Fix for fonts without accentuation
 		if ((rec == null) && (ch > 126)) {
-			char tmp = ch;
+			char tmp;
 			String str = (ch + "")
 					.replaceAll("[àáâäãą]", "a")
 					.replaceAll("[èéêëę]", "e")

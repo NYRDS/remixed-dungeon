@@ -494,7 +494,7 @@ public abstract class RegularLevel extends CommonLevel {
 	@Override
 	public int randomRespawnCell() {
 		int count = 0;
-		int cell = -1;
+		int cell;
 		
 		while (true) {
 			
@@ -518,7 +518,7 @@ public abstract class RegularLevel extends CommonLevel {
 	@Override
 	public int randomDestination() {
 		
-		int cell = -1;
+		int cell;
 		
 		while (true) {
 			
@@ -544,7 +544,7 @@ public abstract class RegularLevel extends CommonLevel {
 		}
 		
 		for (int i=0; i < nItems; i++) {
-			Heap.Type type = null;
+			Heap.Type type;
 			switch (Random.Int( 20 )) {
 			case 0:
 				type = Heap.Type.SKELETON;

@@ -41,7 +41,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 		Sample.INSTANCE.play( Assets.SND_READ );
 		Invisibility.dispel(getCurUser());
 		
-		boolean procced = uncurse( getCurUser(), getCurUser().belongings.backpack.items.toArray( new Item[0] ) ); 
+		boolean procced = uncurse( getCurUser(), getCurUser().belongings.backpack.items.toArray(new Item[getCurUser().belongings.backpack.items.size()]));
 		procced = uncurse( getCurUser(), 
 			getCurUser().belongings.weapon, 
 			getCurUser().belongings.armor, 

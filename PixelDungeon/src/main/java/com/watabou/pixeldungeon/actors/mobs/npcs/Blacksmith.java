@@ -17,15 +17,13 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import java.util.Collection;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -43,6 +41,8 @@ import com.watabou.pixeldungeon.windows.WndBlacksmith;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.Collection;
 
 public class Blacksmith extends NPC {
 
@@ -286,7 +286,7 @@ public class Blacksmith extends NPC {
 		public static void spawn( Collection<Room> rooms ) {
 			if (!spawned && Dungeon.depth > 11 && Random.Int( 15 - Dungeon.depth ) == 0) {
 				
-				Room blacksmith = null;
+				Room blacksmith;
 				for (Room r : rooms) {
 					if (r.type == Type.STANDARD && r.width() > 4 && r.height() > 4) {
 						blacksmith = r;
