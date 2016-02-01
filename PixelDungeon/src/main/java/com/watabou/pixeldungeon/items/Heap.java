@@ -171,7 +171,6 @@ public class Heap implements Bundlable {
 				}
 			}
 			items.remove( item );
-			
 		}
 		
 		if (item instanceof Dewdrop) {

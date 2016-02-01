@@ -282,11 +282,7 @@ public class Item implements Bundlable {
 	public int visiblyUpgraded() {
 		return levelKnown ? level() : 0;
 	}
-	
-	public boolean visiblyCursed() {
-		return cursed && cursedKnown;
-	}
-	
+
 	public boolean isUpgradable() {
 		return true;
 	}
@@ -484,8 +480,8 @@ public class Item implements Bundlable {
 			reset( user.getPos(), cell, this, null, new Callback() {			
 				@Override
 				public void call() {
-					Item.this.detach(user.belongings.backpack);
-					Item.this.onThrow(cell);
+					Item item = Item.this.detach(user.belongings.backpack);
+					item.onThrow(cell);
 					user.spendAndNext( finalDelay );
 				}
 			} );
