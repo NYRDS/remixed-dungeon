@@ -1,11 +1,11 @@
 package com.nyrds.android.util;
 
-import java.util.UUID;
-
 import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.watabou.noosa.Game;
+
+import java.util.UUID;
 
 public class UserKey {
 	static UUID userId;
@@ -13,7 +13,7 @@ public class UserKey {
 	static Crypter crypter;
 	
 	static final String noKey="noKey";
-	
+
 	private static void init() {
 		SharedPreferences prefs = Game.instance().getPreferences( Game.MODE_PRIVATE );
 		
@@ -30,7 +30,15 @@ public class UserKey {
 		
 		crypter = new Crypter("RPD_UserKey_"+userId.toString());
 	}
-	
+
+	public static int someValue(){
+		if(userId == null){
+			init();
+		}
+
+		return (int)userId.getLeastSignificantBits();
+	}
+
 	public static String encrypt(String in){
 		if(crypter == null){
 			init();

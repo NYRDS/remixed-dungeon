@@ -59,7 +59,6 @@ public class PixelDungeon extends GameWithGoogleIap {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 
 		String placeModFilesHere = "placeModFilesHere";
 		

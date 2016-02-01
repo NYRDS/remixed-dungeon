@@ -10,11 +10,11 @@ public class Scrambler {
 	}
 	
 	static public int scramble(int in) {
-		return ( (in + k1) * k2 ) ^ k3;
+		return ( (in + k1) * k2 ) ^ k3 ^ UserKey.someValue();
 	}
 	
 	static public int descramble(int in) {
-		return ( in ^ k3 ) / k2 - k1;
+		return ( in ^ UserKey.someValue() ^ k3 ) / k2 - k1;
 	}
 	
 }
