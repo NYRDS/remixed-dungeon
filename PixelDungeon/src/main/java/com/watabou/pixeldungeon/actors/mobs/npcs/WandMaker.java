@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -62,6 +60,8 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndWandmaker;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class WandMaker extends NPC {
 
@@ -230,7 +230,8 @@ public class WandMaker extends NPC {
 				
 				WandMaker npc = new WandMaker();
 				do {
-					npc.setPos(room.random(level));
+					int cell = room.random(level);
+					npc.setPos(cell);
 				} while (level.map[npc.getPos()] == Terrain.ENTRANCE || level.map[npc.getPos()] == Terrain.SIGN);
 				level.mobs.add( npc );
 				Actor.occupyCell( npc );

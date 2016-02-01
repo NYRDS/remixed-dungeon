@@ -17,21 +17,44 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.levels.painters.*;
+import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
+import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;
+import com.watabou.pixeldungeon.levels.painters.BossExitPainter;
+import com.watabou.pixeldungeon.levels.painters.CryptPainter;
+import com.watabou.pixeldungeon.levels.painters.EntrancePainter;
+import com.watabou.pixeldungeon.levels.painters.ExitPainter;
+import com.watabou.pixeldungeon.levels.painters.GardenPainter;
+import com.watabou.pixeldungeon.levels.painters.LaboratoryPainter;
+import com.watabou.pixeldungeon.levels.painters.LibraryPainter;
+import com.watabou.pixeldungeon.levels.painters.MagicWellPainter;
+import com.watabou.pixeldungeon.levels.painters.Painter;
+import com.watabou.pixeldungeon.levels.painters.PassagePainter;
+import com.watabou.pixeldungeon.levels.painters.PitPainter;
+import com.watabou.pixeldungeon.levels.painters.PoolPainter;
+import com.watabou.pixeldungeon.levels.painters.RatKingPainter;
+import com.watabou.pixeldungeon.levels.painters.ShopPainter;
+import com.watabou.pixeldungeon.levels.painters.StandardPainter;
+import com.watabou.pixeldungeon.levels.painters.StatuePainter;
+import com.watabou.pixeldungeon.levels.painters.StoragePainter;
+import com.watabou.pixeldungeon.levels.painters.TrapsPainter;
+import com.watabou.pixeldungeon.levels.painters.TreasuryPainter;
+import com.watabou.pixeldungeon.levels.painters.TunnelPainter;
+import com.watabou.pixeldungeon.levels.painters.VaultPainter;
+import com.watabou.pixeldungeon.levels.painters.WeakFloorPainter;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
+
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Room extends Rect implements Graph.Node, Bundlable {
 	

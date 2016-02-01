@@ -149,7 +149,6 @@ public enum HeroClass {
 		hero.collect(new Ration());
 
 		//initDebug(hero);
-		
 		QuickSlot.cleanStorage();
 	}
 
