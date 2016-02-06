@@ -17,17 +17,17 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Calendar;
-import java.util.Date;
+import android.util.Log;
 
 import com.nyrds.android.util.FileSystem;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Signal;
 
-import android.util.Log;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
 
 public class GLog {
 

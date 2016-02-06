@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import com.watabou.input.Keys;
 import com.watabou.input.Keys.Key;
 import com.watabou.input.Touchscreen.Touch;
@@ -30,6 +28,9 @@ import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Window extends Group implements Signal.Listener<Key> {
 

@@ -17,11 +17,13 @@
 
 package com.watabou.noosa;
 
-import java.nio.FloatBuffer;
+import android.graphics.RectF;
+
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
-import android.graphics.RectF;
+
+import java.nio.FloatBuffer;
 
 public class NinePatch extends Visual {
 	

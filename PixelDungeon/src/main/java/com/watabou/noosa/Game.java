@@ -24,6 +24,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.content.res.Resources.NotFoundException;
@@ -35,6 +36,7 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.PermissionChecker;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -114,6 +116,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	// Accumulated key events
 	protected final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
+	private Runnable doOnResume;
+
 	public Game(Class<? extends Scene> c) {
 		super();
 		instance(this);
@@ -139,7 +143,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public void useLocale(String lang) {
 		ACRA.getErrorReporter().putCustomData("Locale", lang);
-		
+
 		Locale locale;
 		if (lang.equals("pt_BR")) {
 			locale = new Locale("pt", "BR");
@@ -153,7 +157,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 				getBaseContext().getResources().getDisplayMetrics());
 
 		String modStrings = String.format("strings_%s.json", lang);
-		
+
 		if(ModdingMode.isResourceExistInMod(modStrings)) {
 			parseStrings(modStrings);
 		} else if (ModdingMode.isResourceExistInMod("strings_en.json")) {
@@ -178,10 +182,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		if (instance().scene != null) {
 			instance().scene.pause();
 		}
-		
+
 		System.exit(0);
 	}
-	
+
 	public static void toast(final String text, final Object... args) {
 		instance().runOnUiThread(new Runnable() {
 			@Override
@@ -224,7 +228,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			keyToInt.put(name, key);
 		}
 	}
-	
+
 	private void initTextMapping() {
 		long mapStart = System.nanoTime();
 
@@ -242,7 +246,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		if (jsonFile == null) {
 			return;
 		}
-		
+
 		if(!jsonFile.exists()) {
 			return;
 		}
@@ -260,13 +264,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 			while ((line = br.readLine()) != null) {
 				JSONArray entry = new JSONArray(line);
-				
+
 				String keyString = entry.getString(0);
 				Integer key = keyToInt.get(keyString);
 				if(key == null){
 					toast("unknown key: [%s] in [%s] ignored ", keyString, resource);
 				}
-				
+
 				if (entry.length() == 2) {
 
 					String value = entry.getString(1);
@@ -338,6 +342,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		Music.INSTANCE.resume();
 		Sample.INSTANCE.resume();
+
+		if(doOnResume!=null) {
+			doOnResume.run();
+			doOnResume = null;
+		}
 	}
 
 	@Override
@@ -405,7 +414,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	@Override
 	public void onDrawFrame(GL10 gl) {
 
-		if (instance() == null || width() == 0 || height() == 0) {
+		if (instance() == null || width() == 0 || height() == 0 || paused) {
 			return;
 		}
 
@@ -424,19 +433,15 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	@Override
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
-
 		GLES20.glViewport(0, 0, width, height);
 
 		Game.width(width);
 		Game.height(height);
-
 	}
 
 	@Override
 	public void onSurfaceCreated(GL10 gl, EGLConfig config) {
 		GLES20.glEnable(GL10.GL_BLEND);
-		// For premultiplied alpha:
-		// GLES20.glBlendFunc( GL10.GL_ONE, GL10.GL_ONE_MINUS_SRC_ALPHA );
 		GLES20.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
 
 		GLES20.glEnable(GL10.GL_SCISSOR_TEST);
@@ -591,10 +596,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		Game.height = height;
 	}
 
-	public static void executeInGlThread(Runnable task) {
+	public static synchronized void executeInGlThread(Runnable task) {
 		instance().view.queueEvent(task);
 	}
-	
+
 	public void removeEasyModeBanner() {
 	}
 
@@ -602,5 +607,48 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void displayEasyModeBanner() {
+	}
+
+	private InterstitialPoint permissionsPoint;
+	public void doPermissionsRequest(InterstitialPoint returnTo,String[] permissions) {
+		boolean havePermissions = true;
+		for(String permission:permissions) {
+			int checkResult = ActivityCompat.checkSelfPermission(this, permission);
+			if (checkResult != PermissionChecker.PERMISSION_GRANTED) {
+					havePermissions = false;
+					break;
+			}
+		}
+		if(!havePermissions) {
+			int code = 0;
+			permissionsPoint = returnTo;
+			ActivityCompat.requestPermissions(this, permissions, code);
+		}	else {
+			returnTo.returnToWork(true);
+		}
+	}
+
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		boolean res = true;
+
+		if(permissions.length == 0) {
+			res = false;
+		}
+
+		for(int grant:grantResults) {
+			if(grant!= PackageManager.PERMISSION_GRANTED) {
+				res = false;
+				break;
+			}
+		}
+
+		final boolean result = res;
+		doOnResume = new Runnable() {
+			@Override
+			public void run() {
+				permissionsPoint.returnToWork(result);
+			}
+		};
+
 	}
 }

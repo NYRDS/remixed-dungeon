@@ -95,12 +95,12 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements Interstitial
 		if (PixelDungeon.donated() < 1) {
 			PixelDungeon.displaySaveAndLoadAd(returnTo);
 		} else {
-			returnToWork();
+			returnToWork(true);
 		}
 	}
 
 	@Override
-	public void returnToWork() {
+	public void returnToWork(boolean res) {
 		Game.executeInGlThread(new Runnable() {
 			@Override
 			public void run() {

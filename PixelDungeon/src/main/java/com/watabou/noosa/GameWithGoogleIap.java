@@ -112,7 +112,7 @@ public abstract class GameWithGoogleIap extends Game {
 
 		Boolean loadAlreadyInProgress = mAdLoadInProgress.get(isAd);
 
-		if (loadAlreadyInProgress != null && loadAlreadyInProgress.booleanValue()) {
+		if (loadAlreadyInProgress != null && loadAlreadyInProgress) {
 			return;
 		}
 
@@ -158,12 +158,12 @@ public abstract class GameWithGoogleIap extends Game {
 			@Override
 			public void run() {
 				if (isAd == null) {
-					work.returnToWork();
+					work.returnToWork(false);
 					return;
 				}
 
 				if (!isAd.isLoaded()) {
-					work.returnToWork();
+					work.returnToWork(false);
 					return;
 				}
 
@@ -171,7 +171,7 @@ public abstract class GameWithGoogleIap extends Game {
 					@Override
 					public void onAdClosed() {
 						requestNewInterstitial(isAd);
-						work.returnToWork();
+						work.returnToWork(true);
 					}
 				});
 				isAd.show();
@@ -187,7 +187,7 @@ public abstract class GameWithGoogleIap extends Game {
 		if(needDisplaySmallScreenEasyModeIs()) {
 			displayIsAd(work, mEasyModeSmallScreenAd);
 		} else {
-			work.returnToWork();
+			work.returnToWork(true);
 		}
 	}
 

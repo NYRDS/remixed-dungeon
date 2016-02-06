@@ -89,7 +89,7 @@ public class InterlevelScene extends PixelScene {
 	class LevelChanger extends Thread implements InterstitialPoint {
 
 		@Override
-		public void returnToWork() {
+		public void returnToWork(boolean result) {
 			if (phase == Phase.STATIC && error == null) {
 				phase = Phase.FADE_OUT;
 				timeLeft = TIME_TO_FADE;
