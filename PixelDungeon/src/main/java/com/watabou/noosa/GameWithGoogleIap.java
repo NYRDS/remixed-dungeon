@@ -53,19 +53,19 @@ public abstract class GameWithGoogleIap extends Game {
 		return (width() < 400 || height() < 400);
 	}
 
-	public static boolean needDisplaySmallScreenEasyModeIs() {
-		return difficulty == 0 && (isSmallScreen() || android.os.Build.BRAND.contains("chromium")) && PixelDungeon.donated() == 0;
-
+	private static boolean needDisplaySmallScreenEasyModeIs() {
+		return difficulty == 0 && isSmallScreen() && PixelDungeon.donated() == 0;
 	}
 
 	private static boolean googleAdsUsable() {
-		return android.os.Build.VERSION.SDK_INT >= 9 &&  !android.os.Build.BRAND.contains("chromium");
+		return android.os.Build.VERSION.SDK_INT >= 9 && !android.os.Build.BRAND.contains("chromium");
 	}
-	
-	public static void displayEasyModeBanner() {
+
+	@Override
+	public void displayEasyModeBanner() {
 		if (googleAdsUsable()) {
 			if (isConnectedToInternet()) {
-				if(isSmallScreen() || android.os.Build.BRAND.contains("chromium")) {
+				if(isSmallScreen()) {
 					initEasyModeIntersitial();
 				} else {
 					instance().runOnUiThread(new Runnable() {
@@ -89,7 +89,8 @@ public abstract class GameWithGoogleIap extends Game {
 		}
 	}
 
-	public static void removeEasyModeBanner() {
+	@Override
+	public  void removeEasyModeBanner() {
 		if (googleAdsUsable()) {
 			instance().runOnUiThread(new Runnable() {
 
@@ -183,7 +184,11 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public static void displayEasyModeSmallScreenAd(final IntersitialPoint work) {
-		displayIsAd(work, mEasyModeSmallScreenAd);
+		if(needDisplaySmallScreenEasyModeIs()) {
+			displayIsAd(work, mEasyModeSmallScreenAd);
+		} else {
+			work.returnToWork();
+		}
 	}
 
 	private static void initEasyModeIntersitial() {
@@ -203,7 +208,7 @@ public abstract class GameWithGoogleIap extends Game {
 		}
 	}
 
-	public static void initSaveAndLoadIntersitial() {
+	public void initSaveAndLoadIntersitial() {
 		if (googleAdsUsable() && isConnectedToInternet()) {
 			{
 				instance().runOnUiThread(new Runnable() {
@@ -453,7 +458,4 @@ public abstract class GameWithGoogleIap extends Game {
 		});
 	}
 
-	public interface IntersitialPoint {
-		public void returnToWork();
-	}
 }

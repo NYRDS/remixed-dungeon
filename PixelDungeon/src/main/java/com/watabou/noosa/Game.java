@@ -32,12 +32,11 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Looper;
 import android.os.StatFs;
 import android.os.Vibrator;
+import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.SurfaceHolder;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -74,7 +73,7 @@ import java.util.Map;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener {
+public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
 	private static Game instance;
 	private static Context context;
@@ -105,7 +104,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	protected GLSurfaceView view;
 	protected LinearLayout layout;
-	protected SurfaceHolder holder;
 
 	public static volatile boolean paused = true;
 	protected static int difficulty;
@@ -450,10 +448,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	}
 
-	public static boolean inMainThread() {
-		return Looper.myLooper() == Looper.getMainLooper();
-	}
-
 	public static boolean isPaused() {
 		return paused;
 	}
@@ -601,12 +595,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		instance().view.queueEvent(task);
 	}
 	
-	protected static void removeEasyModeBanner() {
-	}
-	
-	protected static void initSaveAndLoadIntersitial() {
+	public void removeEasyModeBanner() {
 	}
 
-	protected static void displayEasyModeBanner() {
+	public void initSaveAndLoadIntersitial() {
+	}
+
+	public void displayEasyModeBanner() {
 	}
 }

@@ -23,7 +23,6 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
@@ -39,7 +38,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 import org.acra.ACRA;
 
-import java.io.IOException;
 import java.util.Locale;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -68,17 +66,8 @@ public class PixelDungeon extends GameWithGoogleIap {
 		
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
-		
-		if(!FileSystem.getExternalStorageFile(placeModFilesHere).exists()) {
-			try {
-				FileSystem.getExternalStorageFile(placeModFilesHere).createNewFile();
-			} catch (IOException e) {
-				GLog.i(e.getMessage());
-				e.printStackTrace();
-			}
-		}
-		
-		PixelDungeon.instance().initIap();
+
+		initIap();
 		
 		if(PixelDungeon.uiLanguage().equals("ko")) {
 			PixelDungeon.classicFont(false);
@@ -392,18 +381,18 @@ public class PixelDungeon extends GameWithGoogleIap {
 		difficulty = _difficulty;
 		if (PixelDungeon.donated() == 0) {
 			if (difficulty == 0) {
-				PixelDungeon.displayEasyModeBanner();
+				instance().displayEasyModeBanner();
 			}
 
 			if (difficulty < 2) {
-				PixelDungeon.initSaveAndLoadIntersitial();
+				instance().initSaveAndLoadIntersitial();
 			}
 
 			if (difficulty >= 2) {
-				PixelDungeon.removeEasyModeBanner();
+				instance().removeEasyModeBanner();
 			}
 		} else {
-			PixelDungeon.removeEasyModeBanner();
+			instance().removeEasyModeBanner();
 		}
 		
 	}

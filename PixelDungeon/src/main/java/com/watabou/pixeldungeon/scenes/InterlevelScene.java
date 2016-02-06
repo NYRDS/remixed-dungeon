@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.GameWithGoogleIap.IntersitialPoint;
+import com.watabou.noosa.IntersitialPoint;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
@@ -157,12 +157,9 @@ public class InterlevelScene extends PixelScene {
 				error = ERR_GENERIC + "\n" + e.getMessage();
 
 			}
-			if(mode != Mode.CONTINUE && PixelDungeon.needDisplaySmallScreenEasyModeIs()) {
+			if(mode != Mode.CONTINUE) {
 				PixelDungeon.displayEasyModeSmallScreenAd(this);
-			} else {
-				returnToWork();
 			}
-
 		}
 		
 	}
