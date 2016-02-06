@@ -17,16 +17,13 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import java.util.HashSet;
-import java.util.Set;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -55,6 +52,9 @@ import com.watabou.pixeldungeon.windows.WndSadGhost;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Ghost extends NPC {
 
 	{
@@ -72,7 +72,6 @@ public class Ghost extends NPC {
 
 	
 	public Ghost() {
-		Sample.INSTANCE.load( Assets.SND_GHOST );
 	}
 	
 	@Override

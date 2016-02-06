@@ -29,7 +29,6 @@ public abstract class GameWithGoogleIap extends Game {
 	protected static final String SKU_LEVEL_2 = "supporter_level_2";
 	protected static final String SKU_LEVEL_3 = "supporter_level_3";
 
-	// The helper object
 	IabHelper mHelper = null;
 	Inventory mInventory = null;
 
@@ -42,7 +41,6 @@ public abstract class GameWithGoogleIap extends Game {
 		return m_iapReady;
 	}
 
-	// (arbitrary) request code for the purchase flow
 	static final int RC_REQUEST = (int) (Math.random() * 0xffff);
 
 	public GameWithGoogleIap(Class<? extends Scene> c) {
