@@ -63,28 +63,26 @@ public abstract class GameWithGoogleIap extends Game {
 
 	@Override
 	public void displayEasyModeBanner() {
-		if (googleAdsUsable()) {
-			if (isConnectedToInternet()) {
-				if(isSmallScreen()) {
-					initEasyModeIntersitial();
-				} else {
-					instance().runOnUiThread(new Runnable() {
-						@Override
-						public void run() {
-							if (instance().layout.getChildCount() == 1) {
-								AdView adView = new AdView(instance());
-								adView.setAdSize(AdSize.SMART_BANNER);
-								adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
-								adView.setBackgroundColor(Color.TRANSPARENT);
-								AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice))
-										.build();
-								instance().layout.addView(adView, 0);
-								adView.loadAd(adRequest);
-								needSceneRestart = true;
-							}
+		if (googleAdsUsable() && isConnectedToInternet()) {
+			if (isSmallScreen()) {
+				initEasyModeIntersitial();
+			} else {
+				instance().runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						if (instance().layout.getChildCount() == 1) {
+							AdView adView = new AdView(instance());
+							adView.setAdSize(AdSize.SMART_BANNER);
+							adView.setAdUnitId(getVar(R.string.easyModeAdUnitId));
+							adView.setBackgroundColor(Color.TRANSPARENT);
+							AdRequest adRequest = new AdRequest.Builder().addTestDevice(getVar(R.string.testDevice))
+									.build();
+							instance().layout.addView(adView, 0);
+							adView.loadAd(adRequest);
+							needSceneRestart = true;
 						}
-					});
-				}
+					}
+				});
 			}
 		}
 	}
