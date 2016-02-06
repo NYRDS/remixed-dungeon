@@ -1,5 +1,5 @@
 package com.watabou.noosa;
 
-public interface IntersitialPoint {
+public interface InterstitialPoint {
     public void returnToWork();
 }

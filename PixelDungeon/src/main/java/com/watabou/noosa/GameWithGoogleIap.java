@@ -152,7 +152,7 @@ public abstract class GameWithGoogleIap extends Game {
 
 	}
 
-	private static void displayIsAd(final IntersitialPoint work, final InterstitialAd isAd) {
+	private static void displayIsAd(final InterstitialPoint work, final InterstitialAd isAd) {
 		instance().runOnUiThread(new Runnable() {
 
 			@Override
@@ -179,11 +179,11 @@ public abstract class GameWithGoogleIap extends Game {
 		});
 	}
 
-	public static void displaySaveAndLoadAd(final IntersitialPoint work) {
+	public static void displaySaveAndLoadAd(final InterstitialPoint work) {
 		displayIsAd(work, mSaveAndLoadAd);
 	}
 
-	public static void displayEasyModeSmallScreenAd(final IntersitialPoint work) {
+	public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
 		if(needDisplaySmallScreenEasyModeIs()) {
 			displayIsAd(work, mEasyModeSmallScreenAd);
 		} else {

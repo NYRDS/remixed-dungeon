@@ -3,13 +3,13 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.IntersitialPoint;
+import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.ui.DonateButton;
 
-public class WndSaveSlotSelect extends WndOptionsColumns implements IntersitialPoint {
+public class WndSaveSlotSelect extends WndOptionsColumns implements InterstitialPoint {
 
 	private boolean saving;
 	private String slot;
@@ -75,7 +75,7 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements IntersitialP
 
 	@Override
 	protected void onSelect(int index) {
-		final IntersitialPoint returnTo = this;
+		final InterstitialPoint returnTo = this;
 
 		if (saving) {
 			try {
