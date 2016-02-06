@@ -29,5 +29,5 @@ android {
 dependencies {
     compile 'com.google.android.gms:play-services-ads:8.4.0'
     compile 'com.google.android.gms:play-services-base:8.4.0'
-    compile files('libs/acra-4.8.0.jar')
+    compile 'ch.acra:acra:4.8.1@aar'
 }

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="acra-4.8.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/PixelDungeon/build/intermediates/exploded-aar/ch.acra/acra/4.8.1/res" />
+      <root url="jar://$PROJECT_DIR$/PixelDungeon/build/intermediates/exploded-aar/ch.acra/acra/4.8.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.acra/acra/4.8.1/a668266c2c89663b536b63a3af48c2b77963b934/acra-4.8.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
