@@ -489,7 +489,7 @@ public class Hero extends Char {
 			}
 
 			if (PixelDungeon.realtime()) {
-				if (ready == false) {
+				if (!ready) {
 					ready();
 				}
 				spend(TICK);
@@ -668,7 +668,7 @@ public class Hero extends Char {
 				Item item = heap.pickUp();
 				item = item.pick(this, getPos());
 				if (item != null) {
-					if (item != null && item.doPickUp(this)) {
+					if (item.doPickUp(this)) {
 
 						itemPickedUp(item);
 
@@ -805,6 +805,9 @@ public class Hero extends Char {
 	}
 
 	private boolean actDescend(HeroAction.Descend action) {
+
+		refreshPets();
+
 		int stairs = action.dst;
 		if (getPos() == stairs && (getPos() == Dungeon.level.exit || getPos() == Dungeon.level.secondaryExit)) {
 
@@ -831,6 +834,9 @@ public class Hero extends Char {
 	}
 
 	private boolean actAscend(HeroAction.Ascend action) {
+
+		refreshPets();
+
 		int stairs = action.dst;
 		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
 

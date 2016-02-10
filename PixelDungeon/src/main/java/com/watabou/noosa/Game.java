@@ -368,10 +368,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		destroyGame();
 
 		Music.INSTANCE.mute();
 		Sample.INSTANCE.reset();
+
+		if (scene != null) {
+			scene.destroy();
+			scene = null;
+		}
 	}
 
 	@SuppressLint({ "Recycle", "ClickableViewAccessibility" })
@@ -455,15 +459,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public static boolean isPaused() {
 		return paused;
-	}
-
-	protected void destroyGame() {
-		if (scene != null) {
-			scene.destroy();
-			scene = null;
-		}
-
-		instance(null);
 	}
 
 	public static void resetScene() {
@@ -550,7 +545,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
 				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey && id != R.string.testDevice) {
-			if (instance().stringsMap.containsKey(id)) {
+			if (instance()!=null && instance().stringsMap.containsKey(id)) {
 				return instance().stringsMap.get(id);
 			}
 		}
