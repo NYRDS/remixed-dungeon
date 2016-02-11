@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.noosa.Game;
@@ -18,6 +16,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import java.util.ArrayList;
+
 public class SpiderCharm extends Artifact {
 	
 	public static final float TIME_TO_USE = 1;
@@ -25,7 +25,6 @@ public class SpiderCharm extends Artifact {
 	
 	public SpiderCharm() {
 		image = ItemSpriteSheet.SPIDER_CHARM;
-		unique = true;
 	}
 
 	@Override

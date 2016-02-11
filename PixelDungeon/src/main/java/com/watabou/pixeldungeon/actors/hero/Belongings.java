@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -186,7 +187,7 @@ public class Belongings implements Iterable<Item> {
 				if (((Key) item).depth == depth) {
 					item.detachAll(backpack);
 				}
-			} else if (item.unique) {
+			} else if (item instanceof Amulet) {
 
 			} else if (!item.isEquipped(owner)) {
 				item.detachAll(backpack);

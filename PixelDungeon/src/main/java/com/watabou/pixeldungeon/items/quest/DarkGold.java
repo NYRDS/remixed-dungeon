@@ -29,7 +29,6 @@ public class DarkGold extends Item {
 		image = ItemSpriteSheet.ORE;
 		
 		stackable = true;
-		unique = true;
 	}
 	
 	@Override

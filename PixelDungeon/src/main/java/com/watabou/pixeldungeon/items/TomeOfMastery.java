@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -35,6 +33,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndChooseWay;
 
+import java.util.ArrayList;
+
 public class TomeOfMastery extends Item {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.TomeOfMastery_Blinded);
@@ -46,8 +46,6 @@ public class TomeOfMastery extends Item {
 	{
 		stackable = false;
 		image = ItemSpriteSheet.MASTERY;
-		
-		unique = true;
 	}
 	
 	@Override

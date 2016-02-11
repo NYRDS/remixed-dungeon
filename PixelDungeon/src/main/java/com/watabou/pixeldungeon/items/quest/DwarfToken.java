@@ -29,7 +29,6 @@ public class DwarfToken extends Item {
 		image = ItemSpriteSheet.TOKEN;
 		
 		stackable = true;
-		unique = true;
 	}
 	
 	@Override

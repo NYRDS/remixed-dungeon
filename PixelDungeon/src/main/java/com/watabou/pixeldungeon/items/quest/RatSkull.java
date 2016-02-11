@@ -27,8 +27,6 @@ public class RatSkull extends Item {
 	{
 		name = Game.getVar(R.string.RatSkull_Name);
 		image = ItemSpriteSheet.SKULL;
-		
-		unique = true;
 	}
 	
 	@Override

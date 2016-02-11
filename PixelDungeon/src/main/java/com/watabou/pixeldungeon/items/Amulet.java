@@ -36,8 +36,6 @@ public class Amulet extends Item {
 	{
 		name = Game.getVar(R.string.Amulet_Name);
 		image = ItemSpriteSheet.AMULET;
-		
-		unique = true;
 	}
 	
 	@Override

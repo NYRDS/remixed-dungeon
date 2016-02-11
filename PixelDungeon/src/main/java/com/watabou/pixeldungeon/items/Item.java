@@ -80,10 +80,7 @@ public class Item implements Bundlable {
 	
 	public boolean cursed;
 	public boolean cursedKnown;
-	
-	// Unique items persist through revival
-	public boolean unique = false;
-	
+
 	private static Comparator<Item> itemComparator = new Comparator<Item>() {	
 		@Override
 		public int compare( Item lhs, Item rhs ) {

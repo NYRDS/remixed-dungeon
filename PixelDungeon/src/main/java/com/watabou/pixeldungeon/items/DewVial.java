@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -31,6 +29,8 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+
+import java.util.ArrayList;
 
 public class DewVial extends Item {
 
@@ -53,8 +53,6 @@ public class DewVial extends Item {
 		image = 0;
 		
 		defaultAction = AC_DRINK;
-		
-		unique = true;
 	}
 	
 	private int volume = 0;

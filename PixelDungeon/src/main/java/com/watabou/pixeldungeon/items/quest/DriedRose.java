@@ -27,8 +27,6 @@ public class DriedRose extends Item {
 	{
 		name = Game.getVar(R.string.DriedRose_Name);
 		image = ItemSpriteSheet.ROSE;
-		
-		unique = true;
 	}
 	
 	@Override

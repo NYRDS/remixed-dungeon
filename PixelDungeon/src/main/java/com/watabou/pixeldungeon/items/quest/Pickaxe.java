@@ -54,9 +54,7 @@ public class Pickaxe extends Weapon {
 	{
 		name = Game.getVar(R.string.Pickaxe_Name);
 		image = ItemSpriteSheet.PICKAXE;
-		
-		unique = true;
-		
+
 		defaultAction = AC_MINE;
 		
 		STR = 14;
