@@ -56,6 +56,7 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.HeroAction.Attack;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -1472,7 +1473,7 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		if(enemy instanceof Rat && buff(RatSkull.RatKingAuraBuff)!=null) {
+		if(enemy instanceof Rat && buff(RatSkull.RatKingAuraBuff.class)!=null) {
 			Rat rat = (Rat) enemy;
 			Mob.makePet(rat, this);
 		} else {
