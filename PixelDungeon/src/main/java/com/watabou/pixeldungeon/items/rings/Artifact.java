@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.rings;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -10,7 +8,11 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import java.util.ArrayList;
+
 public class Artifact extends EquipableItem {
+
+	public static final String AC_USE = Game.getVar(R.string.SpiderCharm_Use);
 
 	static final float TIME_TO_EQUIP = 1f;
 	protected Buff buff;

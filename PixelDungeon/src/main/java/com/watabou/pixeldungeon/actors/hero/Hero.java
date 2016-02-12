@@ -74,6 +74,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
@@ -1205,6 +1206,7 @@ public class Hero extends Char {
 		Char ch;
 		Heap heap;
 
+
 		if (Dungeon.level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
 			curAction = new HeroAction.Cook(cell);
@@ -1470,8 +1472,13 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		AttackIndicator.target(enemy);
-		attack(enemy);
+		if(enemy instanceof Rat && buff(RatSkull.RatKingAuraBuff)!=null) {
+			Rat rat = (Rat) enemy;
+			Mob.makePet(rat, this);
+		} else {
+			AttackIndicator.target(enemy);
+			attack(enemy);
+		}
 		curAction = null;
 
 		Invisibility.dispel(this);

@@ -17,18 +17,25 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class RatSkull extends Item {
-	
-	{
-		name = Game.getVar(R.string.RatSkull_Name);
+import java.util.ArrayList;
+
+public class RatSkull extends Artifact {
+
+	RatSkull() {
 		image = ItemSpriteSheet.SKULL;
 	}
-	
+
+	@Override
+	protected ArtifactBuff buff() {
+		return new RatKingAuraBuff();
+	}
+
+	public class RatKingAuraBuff extends ArtifactBuff {}
+
 	@Override
 	public boolean isUpgradable() {
 		return false;
