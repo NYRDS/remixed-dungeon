@@ -34,10 +34,4 @@ public class YogsEye extends Mob {
     public int dr() {
         return 2;
     }
-
-    @Override
-    public void die( Object cause ) {
-        Ghost.Quest.process( getPos() );
-        super.die( cause );
-    }
 }

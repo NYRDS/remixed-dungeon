@@ -1,28 +1,28 @@
 {
-   texture = "crab.png",
-   width = 16,
-   height = 16,
-   idle = {
-      fps = 5,
-      looped = true,
-      frames = [0,1,0,2]
+   "texture" = "crab.png",
+   "width" = 16,
+   "height" = 16,
+   "idle" = {
+      "fps" = 5,
+      "looped" = true,
+      "frames" = [0,1,0,2]
    },
-   run = {
-      fps = 15,
-      looped = true,
-      frames = [3,4,5,6]
+   "run" = {
+      "fps" = 15,
+      "looped" = true,
+      "frames" = [3,4,5,6]
    },
-   attack = {
-      fps = 12,
-      looped = false,
-      frames = [7,8,9]
+   "attack" = {
+      "fps" = 12,
+      "looped" = false,
+      "frames" = [7,8,9]
    },
-   die = {
-      fps = 12,
-      looped = false,
-      frames = [10,11,12,13]
+   "die" = {
+      "fps" = 12,
+      "looped" = false,
+      "frames" = [10,11,12,13]
    },
-   bloodColor = 0xFFFFEA80
+   "bloodColor" = 0xFFFFEA80
 }
 
 

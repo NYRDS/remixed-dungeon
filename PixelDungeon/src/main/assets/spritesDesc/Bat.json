@@ -1,25 +1,25 @@
 {
-   texture = "bat.png",
-   width = 15,
-   height = 15,
-   idle = {
-      fps = 8,
-      looped = true,
-      frames = [0,1]
+   "texture" = "bat.png",
+   "width" = 15,
+   "height" = 15,
+   "idle" = {
+      "fps" = 8,
+      "looped" = true,
+      "frames" = [0,1]
    },
-   run = {
-      fps = 12,
-      looped = true,
-      frames = [0,1]
+   "run" = {
+      "fps" = 12,
+      "looped" = true,
+      "frames" = [0,1]
    },
-   attack = {
-      fps = 12,
-      looped = false,
-      frames = [2,3,0,1]
+   "attack" = {
+      "fps" = 12,
+      "looped" = false,
+      "frames" = [2,3,0,1]
    },
-   die = {
-      fps = 15,
-      looped = false,
-      frames = [4,5,6]
+   "die = {
+      "fps" = 15,
+      "looped" = false,
+      "frames" = [4,5,6]
    }
 }
