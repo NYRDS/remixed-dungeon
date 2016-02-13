@@ -36,6 +36,11 @@ public class DriedRose extends Artifact {
 		}
 	}
 
+	@Override
+	public boolean isIdentified() {
+		return true;
+	}
+
 	public class OneWayLoveBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
@@ -44,7 +49,7 @@ public class DriedRose extends Artifact {
 
 		@Override
 		public String toString() {
-			return "One Way Love";
+			return "Rose";
 		}
 	}
 
@@ -56,7 +61,7 @@ public class DriedRose extends Artifact {
 
 		@Override
 		public String toString() {
-			return "One Way Cursed Love";
+			return "Cursed Rose";
 		}
 	}
 }

@@ -28,6 +28,11 @@ public class RatSkull extends Artifact {
 	}
 
 	@Override
+	public boolean isIdentified() {
+		return true;
+	}
+
+	@Override
 	protected ArtifactBuff buff() {
 		return new RatKingAuraBuff();
 	}
@@ -40,9 +45,8 @@ public class RatSkull extends Artifact {
 
 		@Override
 		public String toString() {
-			return "Rat king aura";
+			return "Rat aura";
 		}
-
 	}
 
 	@Override

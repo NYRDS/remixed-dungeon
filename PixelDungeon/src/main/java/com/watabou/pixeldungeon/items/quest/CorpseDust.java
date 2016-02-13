@@ -36,6 +36,11 @@ public class CorpseDust extends Artifact {
 	}
 
 	@Override
+	public boolean isIdentified() {
+		return true;
+	}
+
+	@Override
 	protected ArtifactBuff buff() {
 		return new UndeadRageAuraBuff();
 	}
