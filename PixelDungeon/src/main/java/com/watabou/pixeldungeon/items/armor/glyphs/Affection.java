@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
+import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.utils.GameMath;
@@ -34,31 +35,44 @@ import com.watabou.utils.Random;
 public class Affection extends Glyph {
 
 	private static final String TXT_AFFECTION = Game.getVar(R.string.Affection_Txt);
-	
-	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xFF4488 );
-	
-	@Override
-	public int proc( Armor armor, Char attacker, Char defender, int damage) {
 
-		int level = (int)GameMath.gate( 0, armor.level(), 6 );
-		
-		if (Dungeon.level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( level / 2 + 5 ) >= 4) {
-			
-			int duration = Random.IntRange( 2, 5 );
-			
-			Buff.affect( attacker, Charm.class, Charm.durationFactor( attacker ) * duration );
-			attacker.getSprite().centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
-			
-			Buff.affect( defender, Charm.class, Random.Float( Charm.durationFactor( defender ) * duration / 2, duration ) );
-			defender.getSprite().centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
+	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing(0xFF4488);
+
+	@Override
+	public int proc(Armor armor, Char attacker, Char defender, int damage) {
+
+		int level = (int) GameMath.gate(0, armor.level(), 6);
+
+		if (Dungeon.level.adjacent(attacker.getPos(), defender.getPos()) && Random.Int(level / 2 + 5) >= 4) {
+
+			int duration = Random.IntRange(2, 5);
+
+			float attackerFactor = 1;
+			float defenderFactor = 1;
+
+			if(defender.buff(DriedRose.OneWayLoveBuff.class)!= null) {
+				attackerFactor *= 2;
+				defenderFactor *= 0;
+			}
+
+			if(defender.buff(DriedRose.OneWayCursedLoveBuff.class)!=null) {
+				attackerFactor *= 0;
+				defenderFactor *= 2;
+			}
+
+			Buff.affect(attacker, Charm.class, Charm.durationFactor(attacker) * duration * attackerFactor);
+			attacker.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
+
+			Buff.affect(defender, Charm.class, Random.Float(Charm.durationFactor(defender) * duration / 2, duration) * defenderFactor);
+			defender.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 		}
-		
+
 		return damage;
 	}
-	
+
 	@Override
-	public String name( String weaponName) {
-		return String.format( TXT_AFFECTION, weaponName );
+	public String name(String weaponName) {
+		return String.format(TXT_AFFECTION, weaponName);
 	}
 
 	@Override

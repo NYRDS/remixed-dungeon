@@ -17,24 +17,27 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.rings.UsableArtifact;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class DriedRose extends UsableArtifact {
+public class DriedRose extends Artifact {
 
-    public DriedRose() {
-        image = ItemSpriteSheet.ROSE;
-    }
+	public DriedRose() {
+		image = ItemSpriteSheet.ROSE;
+	}
 
-    @Override
-    public void execute(final Hero ch, String action) {
-        setCurUser(ch);
+	@Override
+	protected ArtifactBuff buff() {
+		if (!cursed) {
+			return new OneWayLoveBuff();
+		} else {
+			return new OneWayCursedLoveBuff();
+		}
+	}
 
-        if (action.equals(AC_USE)) {
-            ch.belongings.removeItem(this);
+	public class OneWayLoveBuff extends ArtifactBuff {
+	}
 
-        }
-        super.execute(ch, action);
-    }
+	public class OneWayCursedLoveBuff extends ArtifactBuff {
+	}
 }

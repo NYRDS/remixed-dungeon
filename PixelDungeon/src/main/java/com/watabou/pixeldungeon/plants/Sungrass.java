@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
@@ -38,105 +39,116 @@ public class Sungrass extends Plant {
 
 	private static final String TXT_NAME = Game.getVar(R.string.Sungrass_Name);
 	private static final String TXT_DESC = Game.getVar(R.string.Sungrass_Desc);
-	
+
 	public Sungrass() {
 		image = 4;
 		plantName = TXT_NAME;
 	}
-	
-	public void effect( int pos, Char ch ) {
+
+	public void effect(int pos, Char ch) {
 		if (ch != null) {
-			Buff.affect( ch, Health.class );
+			Buff.affect(ch, Health.class);
 		}
-		
+
 		if (Dungeon.visible[pos]) {
-			CellEmitter.get( pos ).start( ShaftParticle.FACTORY, 0.2f, 3 );
+			CellEmitter.get(pos).start(ShaftParticle.FACTORY, 0.2f, 3);
 		}
 	}
-	
+
 	@Override
 	public String desc() {
 		return TXT_DESC;
 	}
-	
+
 	public static class Seed extends Plant.Seed {
 		{
 			plantName = TXT_NAME;
-			
+
 			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_SUNGRASS;
-			
+
 			plantClass = Sungrass.class;
 			alchemyClass = PotionOfHealing.class;
 		}
-		
+
 		@Override
 		public String desc() {
 			return TXT_DESC;
 		}
-		
+
 		@Override
-		public void execute( Hero hero, String action ) {
-			
-			super.execute( hero, action );
-			
-			if (action.equals( Food.AC_EAT )) {
-				Buff.affect(hero, Charm.class, Charm.durationFactor( hero ) * Random.IntRange( 10, 15 ) );
-				hero.hp(hero.hp() + Random.Int(0,  Math.max((hero.ht() - hero.hp()) / 4, 15) ));
+		public void execute(Hero hero, String action) {
+
+			super.execute(hero, action);
+
+			if (action.equals(Food.AC_EAT)) {
+				float duration = 1;
+
+				if (hero.buff(DriedRose.OneWayLoveBuff.class) != null) {
+					duration *= 0;
+				}
+
+				if (hero.buff(DriedRose.OneWayCursedLoveBuff.class) != null) {
+					duration *= 2;
+				}
+				
+				Buff.affect(hero, Charm.class, Charm.durationFactor(hero) * Random.IntRange(10, 15) * duration);
+
+				hero.hp(hero.hp() + Random.Int(0, Math.max((hero.ht() - hero.hp()) / 4, 15)));
 				if (hero.hp() > hero.ht()) {
 					hero.hp(hero.ht());
 				}
-				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+				hero.getSprite().emitter().start(Speck.factory(Speck.HEALING), 0.4f, 4);
 			}
 		}
 	}
-	
+
 	public static class Health extends Buff {
-		
+
 		private static final float STEP = 5f;
-		
+
 		private int pos;
-		
+
 		@Override
-		public boolean attachTo( Char target ) {
+		public boolean attachTo(Char target) {
 			pos = target.getPos();
-			return super.attachTo( target );
+			return super.attachTo(target);
 		}
-		
+
 		@Override
 		public boolean act() {
 			if (target.getPos() != pos || target.hp() >= target.ht()) {
 				detach();
 			} else {
-				target.hp(Math.min( target.ht(), target.hp() + target.ht() / 10 ));
-				target.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				target.hp(Math.min(target.ht(), target.hp() + target.ht() / 10));
+				target.getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
 			}
-			spend( STEP );
+			spend(STEP);
 			return true;
 		}
-		
+
 		@Override
 		public int icon() {
 			return BuffIndicator.HEALING;
 		}
-		
+
 		@Override
 		public String toString() {
 			return Game.getVar(R.string.Sungrass_Buff);
 		}
-		
-		private static final String POS	= "pos";
-		
+
+		private static final String POS = "pos";
+
 		@Override
-		public void storeInBundle( Bundle bundle ) {
-			super.storeInBundle( bundle );
-			bundle.put( POS, pos );
+		public void storeInBundle(Bundle bundle) {
+			super.storeInBundle(bundle);
+			bundle.put(POS, pos);
 		}
-		
+
 		@Override
-		public void restoreFromBundle( Bundle bundle ) {
-			super.restoreFromBundle( bundle );
-			pos = bundle.getInt( POS );
+		public void restoreFromBundle(Bundle bundle) {
+			super.restoreFromBundle(bundle);
+			pos = bundle.getInt(POS);
 		}
 	}
 }
