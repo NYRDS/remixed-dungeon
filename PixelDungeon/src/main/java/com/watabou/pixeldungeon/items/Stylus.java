@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -32,6 +30,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import java.util.ArrayList;
 
 public class Stylus extends Item {
 	

@@ -17,16 +17,16 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.particles.Emitter;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+
+import java.util.ArrayList;
 
 public class Torch extends Item {
 
