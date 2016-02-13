@@ -35,7 +35,7 @@ public class Fire extends Blob {
 	@Override
 	protected void evolve() {
 
-		boolean[] flamable = Dungeon.level.flamable;
+		boolean[] flamable = Dungeon.level.flammable;
 		
 		int from = getWidth() + 1;
 		int to   = getLength() - getWidth() - 1;

@@ -91,7 +91,7 @@ public class Sungrass extends Plant {
 				if (hero.buff(DriedRose.OneWayCursedLoveBuff.class) != null) {
 					duration *= 2;
 				}
-				
+
 				Buff.affect(hero, Charm.class, Charm.durationFactor(hero) * Random.IntRange(10, 15) * duration);
 
 				hero.hp(hero.hp() + Random.Int(0, Math.max((hero.ht() - hero.hp()) / 4, 15)));

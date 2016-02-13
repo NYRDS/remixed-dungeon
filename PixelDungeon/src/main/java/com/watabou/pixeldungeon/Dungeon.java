@@ -208,11 +208,7 @@ public class Dungeon {
 	}
 
 	public static boolean bossLevel() {
-		if (Dungeon.level != null) {
-			return Dungeon.level.isBossLevel();
-		} else {
-			return false;
-		}
+		return Dungeon.level != null && Dungeon.level.isBossLevel();
 	}
 
 	@SuppressWarnings("deprecation")

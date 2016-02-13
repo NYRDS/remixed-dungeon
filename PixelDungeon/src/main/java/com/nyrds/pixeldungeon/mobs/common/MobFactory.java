@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
-import java.util.HashMap;
-
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
@@ -29,9 +27,9 @@ import com.watabou.pixeldungeon.actors.mobs.Gnoll;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
 import com.watabou.pixeldungeon.actors.mobs.King;
+import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.MimicPie;
-import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
@@ -54,6 +52,8 @@ import com.watabou.pixeldungeon.actors.mobs.Yog.Larva;
 import com.watabou.pixeldungeon.actors.mobs.Yog.RottingFist;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.utils.Random;
+
+import java.util.HashMap;
 
 
 public class MobFactory {

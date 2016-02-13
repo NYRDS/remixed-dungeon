@@ -87,22 +87,22 @@ public abstract class Mob extends Char {
 	private static final String STATE = "state";
 	private static final String TARGET = "target";
 	private static final String ENEMY_SEEN = "enemy_seen";
-	private static final String FRACTION   = "fraction";
-	
+	private static final String FRACTION = "fraction";
+
 	protected Fraction fraction = Fraction.DUNGEON;
-	
+
 	public Mob() {
 		readCharData();
 	}
-	
+
 	public static Mob makePet(Mob pet, Hero hero) {
 		pet.fraction = Fraction.HEROES;
 		pet.setEnemy(DUMMY);
 		hero.addPet(pet);
-		
+
 		return pet;
 	}
-	
+
 	@Override
 	public void storeInBundle(Bundle bundle) {
 
@@ -154,9 +154,9 @@ public abstract class Mob extends Char {
 		if (bundle.contains(ENEMY_SEEN)) {
 			enemySeen = bundle.getBoolean(ENEMY_SEEN);
 		}
-		
+
 		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
-		
+
 	}
 
 	protected int getKind() {
@@ -166,26 +166,26 @@ public abstract class Mob extends Char {
 	public CharSprite sprite() {
 		CharSprite sprite = null;
 		try {
-			
-			String descName = "spritesDesc/"+getClass().getSimpleName()+".json";
-			if(ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
+
+			String descName = "spritesDesc/" + getClass().getSimpleName() + ".json";
+			if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
 				return new MobSpriteDef(descName, getKind());
 			}
-			
-			if(spriteClass instanceof Class){
-				sprite = (CharSprite) ((Class<?>)spriteClass).newInstance();
+
+			if (spriteClass instanceof Class) {
+				sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
 				sprite.selectKind(getKind());
 			}
-			
-			if(spriteClass instanceof String){
-				sprite = new MobSpriteDef((String)spriteClass, getKind());
+
+			if (spriteClass instanceof String) {
+				sprite = new MobSpriteDef((String) spriteClass, getKind());
 			}
-			
-			
-			if(sprite==null) {
+
+
+			if (sprite == null) {
 				throw new RuntimeException("spite must not be null");
 			}
-			
+
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -209,7 +209,7 @@ public abstract class Mob extends Char {
 		}
 
 		setEnemy(chooseEnemy());
-		
+
 		boolean enemyInFOV = getEnemy().isAlive() && Dungeon.level.cellValid(getEnemy().getPos()) && Dungeon.level.fieldOfView[getEnemy().getPos()]
 				&& getEnemy().invisible <= 0;
 
@@ -219,10 +219,10 @@ public abstract class Mob extends Char {
 	private Char chooseNearestEnemy() {
 
 		Char bestEnemy = Dungeon.hero;
-		int dist   = Dungeon.level.distance(getPos(), enemy.getPos());
-		
+		int dist = Dungeon.level.distance(getPos(), enemy.getPos());
+
 		for (Mob mob : Dungeon.level.mobs) {
-			if(mob != this) {
+			if (mob != this) {
 				int candidateDist = Dungeon.level.distance(getPos(), mob.getPos());
 				if (candidateDist <= dist) {
 					bestEnemy = mob;
@@ -230,88 +230,88 @@ public abstract class Mob extends Char {
 				}
 			}
 		}
-		
+
 		return bestEnemy;
 	}
-	
-	private Char chooseEnemyFromFraction( Fraction enemyFraction ) {
+
+	private Char chooseEnemyFromFraction(Fraction enemyFraction) {
 		HashSet<Mob> enemies = new HashSet<>();
 		for (Mob mob : Dungeon.level.mobs) {
 			if (Dungeon.level.fieldOfView[mob.getPos()] && mob.fraction.equals(enemyFraction) && mob != this) {
 				enemies.add(mob);
 			}
 		}
-		
+
 		if (enemies.size() > 0) {
 			return Random.element(enemies);
 		}
-		
+
 		return DUMMY;
 	}
-	
+
 	private Char chooseEnemyDungeon() {
 		if (getEnemy() == Dungeon.hero || getEnemy() == DUMMY) {
 			Char newEnemy = chooseEnemyFromFraction(Fraction.HEROES);
-			
-			if(newEnemy != DUMMY) {
+
+			if (newEnemy != DUMMY) {
 				return newEnemy;
 			}
 		}
-		
+
 		return Dungeon.hero;
 	}
-	
+
 	private Char chooseEnemyHeroes() {
-		if (getEnemy() == DUMMY ) {
+		if (getEnemy() == DUMMY) {
 			Char newEnemy = chooseEnemyFromFraction(Fraction.DUNGEON);
-			
-			if(newEnemy != DUMMY) {
+
+			if (newEnemy != DUMMY) {
 				return newEnemy;
 			}
-			
+
 			state = WANDERING;
 			target = Dungeon.hero.getPos();
-			
+
 			return DUMMY;
 		}
-		
+
 		return getEnemy();
 	}
-	
+
 	protected Char chooseEnemy() {
 		if (getEnemy() == null) {
 			setEnemy(DUMMY);
 		}
-		
-		if(!getEnemy().isAlive()) {
+
+		if (!getEnemy().isAlive()) {
 			setEnemy(DUMMY);
 		}
-		
+
 		Terror terror = buff(Terror.class);
 		if (terror != null) {
 			return terror.source;
 		}
-		
+
 		if (buff(Amok.class) != null) {
-			if(getEnemy()==Dungeon.hero) {
+			if (getEnemy() == Dungeon.hero) {
 				return chooseNearestEnemy();
 			}
 		}
-		
-		if(getEnemy() instanceof Mob) {
+
+		if (getEnemy() instanceof Mob) {
 			Mob enemyMob = (Mob) getEnemy();
-			if(enemyMob.fraction == fraction) {
+			if (enemyMob.fraction == fraction) {
 				setEnemy(DUMMY);
 			}
 		}
-		
+
 		switch (fraction) {
-		case DUNGEON:
-			return chooseEnemyDungeon();
-		case HEROES:
-			return chooseEnemyHeroes();
-		default:
-			return chooseEnemyDungeon();
+			case DUNGEON:
+				return chooseEnemyDungeon();
+			case HEROES:
+				return chooseEnemyHeroes();
+			default:
+				return chooseEnemyDungeon();
 		}
 	}
 
@@ -365,10 +365,14 @@ public abstract class Mob extends Char {
 		}
 		int step;
 
-		if (!isWallWalker()) {
-			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.passable,null);
+		if (isAbsoluteWalker()) {
+			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.allCells, null);
 		} else {
-			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.solid,null);
+			if (!isWallWalker()) {
+				step = Dungeon.findPath(this, getPos(), target, Dungeon.level.passable, null);
+			} else {
+				step = Dungeon.findPath(this, getPos(), target, Dungeon.level.solid, null);
+			}
 		}
 
 		if (step != -1) {
@@ -382,11 +386,16 @@ public abstract class Mob extends Char {
 	protected boolean getFurther(int target) {
 		int step;
 
-		if (!isWallWalker()) {
-			step = Dungeon.flee(this, getPos(), target, Dungeon.level.passable,null);
+		if (isAbsoluteWalker()) {
+			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.allCells, null);
 		} else {
-			step = Dungeon.flee(this, getPos(), target, Dungeon.level.solid,null);
+			if (!isWallWalker()) {
+				step = Dungeon.flee(this, getPos(), target, Dungeon.level.passable, null);
+			} else {
+				step = Dungeon.flee(this, getPos(), target, Dungeon.level.solid, null);
+			}
 		}
+
 		if (step != -1) {
 			move(step);
 			return true;
@@ -417,8 +426,8 @@ public abstract class Mob extends Char {
 		} else {
 			attack(enemy);
 		}
-		
-		spend(PixelDungeon.realtime() ? attackDelay()*10 : attackDelay());
+
+		spend(PixelDungeon.realtime() ? attackDelay() * 10 : attackDelay());
 
 		return !visible;
 	}
@@ -490,7 +499,7 @@ public abstract class Mob extends Char {
 	public void remove() {
 		super.die(this);
 	}
-	
+
 	@Override
 	public void die(Object cause) {
 
@@ -560,9 +569,9 @@ public abstract class Mob extends Char {
 	}
 
 	public interface AiState {
-		public boolean act(boolean enemyInFOV, boolean justAlerted);
+		boolean act(boolean enemyInFOV, boolean justAlerted);
 
-		public String status();
+		String status();
 	}
 
 	private class Sleeping implements AiState {
@@ -573,7 +582,7 @@ public abstract class Mob extends Char {
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			if (enemyInFOV
 					&& Random.Int(distance(getEnemy()) + getEnemy().stealth()
-							+ (getEnemy().flying ? 2 : 0)) == 0) {
+					+ (getEnemy().flying ? 2 : 0)) == 0) {
 
 				enemySeen = true;
 
@@ -616,7 +625,7 @@ public abstract class Mob extends Char {
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			if (enemyInFOV
 					&& (justAlerted || Random.Int(distance(getEnemy()) / 2
-							+ getEnemy().stealth()) == 0)) {
+					+ getEnemy().stealth()) == 0)) {
 
 				enemySeen = true;
 
@@ -629,7 +638,7 @@ public abstract class Mob extends Char {
 				enemySeen = false;
 
 				int oldPos = getPos();
-				if ( Dungeon.level.cellValid(target) && getCloser(target)) {
+				if (Dungeon.level.cellValid(target) && getCloser(target)) {
 					spend(1 / speed());
 					return moveSprite(oldPos, getPos());
 				} else {
@@ -746,30 +755,34 @@ public abstract class Mob extends Char {
 		return false;
 	}
 
+	public boolean isAbsoluteWalker() {
+		return false;
+	}
+
 	public boolean isPet() {
 		return fraction == Fraction.HEROES;
 	}
 
 	protected void swapPosition(final Hero hero) {
-		
+
 		int curPos = getPos();
-		
-		moveSprite( getPos(), hero.getPos() );
-		move( hero.getPos() );
-		
-		hero.getSprite().move( hero.getPos(), curPos );
-		hero.move( curPos );
-		
-		hero.spend( 1 / hero.speed() );
+
+		moveSprite(getPos(), hero.getPos());
+		move(hero.getPos());
+
+		hero.getSprite().move(hero.getPos(), curPos);
+		hero.move(curPos);
+
+		hero.spend(1 / hero.speed());
 		hero.busy();
 	}
-	
+
 	public boolean interact(Hero hero) {
 		if (fraction == Fraction.HEROES) {
 			swapPosition(hero);
 			return true;
 		}
-		
+
 		return false;
 	}
 
