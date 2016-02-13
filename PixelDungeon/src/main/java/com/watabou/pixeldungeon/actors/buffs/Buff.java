@@ -31,9 +31,9 @@ public class Buff extends Actor {
 	public Char target;
 	
 	interface itemAction{
-		public Item   act(Item srcItem);
-		public String actionText(Item srcItem);
-		public void   carrierFx();
+		Item   act(Item srcItem);
+		String actionText(Item srcItem);
+		void   carrierFx();
 	}
 	
 	public boolean attachTo( Char target ) {
@@ -43,13 +43,13 @@ public class Buff extends Actor {
 		}
 		
 		this.target = target;
-		target.add( this );
+		target.add(this);
 		
 		return true;
 	}
 	
 	public void detach() {
-		target.remove( this );
+		target.remove(this);
 	}
 	
 	@Override
@@ -69,10 +69,10 @@ public class Buff extends Actor {
 		} else {
 			try {
 				buff = buffClass.newInstance();
-				buff.attachTo( target );
+				buff.attachTo(target);
 				return buff;
 			} catch (Exception e) {
-				return null;
+				throw new RuntimeException(e);
 			}
 		}
 	}
@@ -137,7 +137,7 @@ public class Buff extends Actor {
 					actionText = action.actionText(srcItem);
 					action.carrierFx();
 				} else {
-					if (!srcItem.equals(item)) {
+					if (!item.equals(srcItem)) {
 						actionText = action.actionText(srcItem);
 						collectOrDropItem(item);
 
