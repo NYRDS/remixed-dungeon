@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.quest;
 
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class DriedRose extends Artifact {
 
@@ -36,8 +37,26 @@ public class DriedRose extends Artifact {
 	}
 
 	public class OneWayLoveBuff extends ArtifactBuff {
+		@Override
+		public int icon() {
+			return BuffIndicator.HEART;
+		}
+
+		@Override
+		public String toString() {
+			return "One Way Love";
+		}
 	}
 
 	public class OneWayCursedLoveBuff extends ArtifactBuff {
+		@Override
+		public int icon() {
+			return BuffIndicator.HEART;
+		}
+
+		@Override
+		public String toString() {
+			return "One Way Cursed Love";
+		}
 	}
 }

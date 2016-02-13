@@ -18,28 +18,23 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
-import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.quest.CorpseDust;
+import com.watabou.pixeldungeon.items.quest.DriedRose;
+import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
-import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
-import com.watabou.pixeldungeon.items.wands.WandOfLightning;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
-import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
@@ -116,38 +111,19 @@ public enum HeroClass {
 		
 		hero.collect(new LloydsBeacon());
 
-		hero.ht(1000);
-		hero.hp(1000);
-		hero.attackSkill = 1000;
-		hero.defenseSkill = 1000;
-		
-		hero.collect(new CommonArrow(100));
-
-		hero.collect(new WandOfTeleportation().identify());
-		hero.collect(new WandOfLightning().identify().upgrade(10));
-		hero.collect(new WandOfFirebolt().identify());
-		hero.collect(new ChaosCrystal().identify().identify());
-		hero.collect(new ChaosCrystal().identify().identify());
-		hero.collect(new ChaosCrystal().identify().identify());
-
-		hero.collect(new Codex());
-		hero.collect(new Codex());
-		hero.collect(new Codex());
-		
-		for(int i = 0;i<50;i++) {
-			hero.collect(new PotionOfLiquidFlame().identify());
-			hero.collect(new ScrollOfWeaponUpgrade().identify());
-			hero.collect(new ScrollOfIdentify().identify());
-			hero.collect(new ScrollOfMagicMapping().identify());
-			hero.collect(new ScrollOfDomination().identify());
-			hero.collect(new ScrollOfCurse().identify());
-		}
+		hero.ht(100);
+		hero.hp(100);
+		hero.attackSkill = 100;
+		hero.defenseSkill = 100;
+		hero.collect(new RatSkull());
+		hero.collect(new DriedRose());
+		hero.collect(new CorpseDust());
 	}
 
 	private static void initCommon(Hero hero) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		hero.collect(new Ration());
-		//initDebug(hero);
+		if(BuildConfig.DEBUG) initDebug(hero);
 		QuickSlot.cleanStorage();
 	}
 

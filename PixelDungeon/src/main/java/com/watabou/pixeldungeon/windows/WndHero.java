@@ -17,8 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import java.util.Locale;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
@@ -28,7 +27,6 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -39,6 +37,8 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
+
+import java.util.Locale;
 
 public class WndHero extends WndTabbed {
 	
