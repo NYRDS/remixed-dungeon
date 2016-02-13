@@ -1147,6 +1147,23 @@ public abstract class Level implements Bundlable {
 		return cell > 0 && cell < getLength();
 	}
 
+	public int getSolidCellNextTo(int cell) {
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		for (int n : Level.NEIGHBOURS8) {
+			int p = n + cell;
+			if (cellValid(p) && (solid[p]) && Actor.findChar( p ) == null) {
+				candidates.add( p );
+			}
+		}
+
+		if(candidates.size()>0) {
+			return Random.element(candidates);
+		}
+
+		return -1;
+	}
+
 	public int getEmptyCellNextTo(int cell) {
 		ArrayList<Integer> candidates = new ArrayList<>();
 		

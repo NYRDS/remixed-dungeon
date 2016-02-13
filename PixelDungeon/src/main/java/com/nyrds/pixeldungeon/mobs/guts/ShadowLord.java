@@ -1,7 +1,12 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Shadow;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 /**
@@ -21,6 +26,18 @@ public class ShadowLord extends Boss {
 	@Override
 	public boolean isAbsoluteWalker() {
 		return true;
+	}
+
+	public void spawnShadow() {
+		int cell = Dungeon.level.getSolidCellNextTo(getPos());
+
+		if (cell != -1) {
+			Mob mob = new Shadow();
+
+			mob.state = mob.WANDERING;
+			GameScene.add(Dungeon.level, mob, 2);
+			WandOfBlink.appear(mob, cell);
+		}
 	}
 
 	@Override
