@@ -18,42 +18,23 @@
 package com.watabou.pixeldungeon.items.quest;
 
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.pixeldungeon.items.rings.UsableArtifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-import java.util.ArrayList;
+public class DriedRose extends UsableArtifact {
 
-public class DriedRose extends Artifact {
-	
-	public DriedRose(){
-		image = ItemSpriteSheet.ROSE;
-	}
+    public DriedRose() {
+        image = ItemSpriteSheet.ROSE;
+    }
 
-	@Override
-	public void execute( final Hero ch, String action ) {
-		setCurUser(ch);
+    @Override
+    public void execute(final Hero ch, String action) {
+        setCurUser(ch);
 
-		if (action.equals( AC_USE )) {
-			ch.belongings.removeItem(this);
+        if (action.equals(AC_USE)) {
+            ch.belongings.removeItem(this);
 
-		}
-		super.execute( ch, action );
-	}
-
-	@Override
-	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_USE );
-		return actions;
-	}
-
-	@Override
-	public boolean isUpgradable() {
-		return false;
-	}
-	
-	@Override
-	public boolean isIdentified() {
-		return true;
-	}
+        }
+        super.execute(ch, action);
+    }
 }

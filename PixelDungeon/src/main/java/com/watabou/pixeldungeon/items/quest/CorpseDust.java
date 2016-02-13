@@ -17,11 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.rings.UsableArtifact;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class CorpseDust extends UsableArtifact  {
+public class CorpseDust extends Artifact {
 	
 	public CorpseDust() {
 		image = ItemSpriteSheet.DUST;
@@ -31,13 +30,9 @@ public class CorpseDust extends UsableArtifact  {
 	}
 
 	@Override
-	public void execute( final Hero ch, String action ) {
-		setCurUser(ch);
-
-		if (action.equals( AC_USE )) {
-			ch.belongings.removeItem(this);
-
-		}
-		super.execute( ch, action );
+	protected ArtifactBuff buff() {
+		return new UndeadAuraBuff ();
 	}
+
+	public class UndeadAuraBuff extends ArtifactBuff {}
 }

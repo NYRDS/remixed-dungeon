@@ -12,8 +12,6 @@ import java.util.ArrayList;
 
 public class Artifact extends EquipableItem {
 
-	public static final String AC_USE = Game.getVar(R.string.SpiderCharm_Use);
-
 	static final float TIME_TO_EQUIP = 1f;
 	protected Buff buff;
 
