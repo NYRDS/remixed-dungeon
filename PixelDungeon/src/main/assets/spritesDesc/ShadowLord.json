@@ -1,26 +1,26 @@
 {
-   "texture" = "mobs/yogs_heart.png",
-   "width" = 20,
-   "height" = 19,
+   "texture" = "mobs/shadowlord.png",
+   "width" = 16,
+   "height" = 16,
    "idle" = {
       "fps" = 5,
       "looped" = true,
-      "frames" = [0,1,3,4]
+      "frames" = [0,1]
    },
    "run" = {
       "fps" = 15,
       "looped" = true,
-      "frames" = [0,1,2,3]
+      "frames" = [2,3,4,3]
    },
    "attack" = {
       "fps" = 12,
       "looped" = false,
-      "frames" = [0,1]
+      "frames" = [5,6,7,8,9]
    },
    "die" = {
       "fps" = 12,
       "looped" = false,
-      "frames" = [4,5,6]
+      "frames" = [10,11,12,13,14,15]
    }
 }
 
