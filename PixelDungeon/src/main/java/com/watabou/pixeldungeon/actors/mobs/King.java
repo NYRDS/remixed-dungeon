@@ -138,7 +138,7 @@ public class King extends Boss {
 		
 		super.die( cause );
 		
-		Badges.validateBossSlain();
+		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
 		
 		yell(String.format(Game.getVar(R.string.King_Info1), Dungeon.hero.heroClass.title()));
 	}

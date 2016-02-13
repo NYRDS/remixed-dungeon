@@ -98,10 +98,10 @@ public class Tengu extends Boss {
 		
 		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
-		super.die( cause );
+		super.die(cause);
 		
-		Badges.validateBossSlain();
-		
+		Badges.validateBossSlain(Badge.BOSS_SLAIN_2);
+
 		say(Game.getVar(R.string.Tengu_Info1));
 	}
 	
