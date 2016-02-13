@@ -288,5 +288,47 @@
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name_Objective">floating crystal</string>
     <string name="Crystal_Desc">Big shining crystal floating in the air. Probably it is filled with powerful magic.</string>
+	
+	<!-- STRINGS OF Worm CLASS -->
+    <string name="Worm_Name">worm</string>
+    <string name="Worm_Gender">masculine</string>
+    <string name="Worm_Name_Objective">worm</string>
+    <string name="Worm_Desc">A big worm.</string>
+	
+	<!-- STRINGS OF GnollZombie CLASS -->
+    <string name="GnollZombie_Name">gnoll-zombie</string>
+    <string name="GnollZombie_Gender">masculine</string>
+    <string name="GnollZombie_Name_Objective">gnoll-zombie</string>
+    <string name="GnollZombie_Desc">That gnoll smells fishy.</string>
+	
+	<!-- STRINGS OF YogsBrain CLASS -->
+    <string name="YogsBrain_Name">Yog's brain</string>
+    <string name="YogsBrain_Gender">masculine</string>
+    <string name="YogsBrain_Name_Objective">Yog's brain</string>
+    <string name="YogsBrain_Desc">Huge pulsating brain.</string>
+	
+	<!-- STRINGS OF YogsEye CLASS -->
+    <string name="YogsEye_Name">Yog's eye</string>
+    <string name="YogsEye_Gender">masculine</string>
+    <string name="YogsEye_Name_Objective">Yog's eye</string>
+    <string name="YogsEye_Desc">That eye is sure big.</string>
+	
+	<!-- STRINGS OF YogsHeart CLASS -->
+    <string name="YogsHeart_Name">Yog's heart</string>
+    <string name="YogsHeart_Gender">masculine</string>
+    <string name="YogsHeart_Name_Objective">Yog's heart</string>
+    <string name="YogsHeart_Desc">I don't really think like winning that one over.</string>
+	
+	<!-- STRINGS OF YogsTeeth CLASS -->
+    <string name="YogsTeeth_Name">Yog's teeth</string>
+    <string name="YogsTeeth_Gender">masculine</string>
+    <string name="YogsTeeth_Name_Objective">Yog's teeth</string>
+    <string name="YogsTeeth_Desc">Well, that's sharp.</string>
+	
+	<!-- STRINGS OF ShadowLord CLASS -->
+    <string name="ShadowLord_Name">Shadow Lord</string>
+    <string name="ShadowLord_Gender">masculine</string>
+    <string name="ShadowLord_Name_Objective">Shadow Lord</string>
+    <string name="ShadowLord_Desc">Lord of the shadows, appereantly.</string>
     
 </resources>
