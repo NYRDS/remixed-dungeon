@@ -84,9 +84,9 @@ import java.util.List;
 
 public abstract class Level implements Bundlable {
 
-	public static enum Feeling {
+	public enum Feeling {
 		NONE, CHASM, WATER, GRASS
-	};
+	}
 
 	protected int width  = 32;
 	protected int height = 32;
@@ -110,7 +110,7 @@ public abstract class Level implements Bundlable {
 
 	public boolean[] passable;
 	public boolean[] losBlocking;
-	public boolean[] flamable;
+	public boolean[] flammable;
 	public boolean[] secret;
 	public boolean[] solid;
 	public boolean[] avoid;
@@ -118,6 +118,7 @@ public abstract class Level implements Bundlable {
 	public boolean[] pit;
 
 	public boolean[] nearWalls;
+	public boolean[] allCells;
 
 	public boolean[] discoverable;
 
@@ -183,14 +184,6 @@ public abstract class Level implements Bundlable {
 		return heaps.values();
 	}
 
-	public Heap getHeapByIndex(int index) {
-		return heaps.valueAt(index);
-	}
-
-	public int getHeapsCount() {
-		return heaps.size();
-	}
-
 	public int cell(int i, int j) {
 		int cell = j * getWidth() + i;
 		if(cellValid(cell)) {
@@ -220,7 +213,7 @@ public abstract class Level implements Bundlable {
 
 		passable = new boolean[getLength()];
 		losBlocking = new boolean[getLength()];
-		flamable = new boolean[getLength()];
+		flammable = new boolean[getLength()];
 		secret = new boolean[getLength()];
 		solid = new boolean[getLength()];
 		avoid = new boolean[getLength()];
@@ -557,7 +550,7 @@ public abstract class Level implements Bundlable {
 			int flags = Terrain.flags[map[i]];
 			passable[i] = (flags & Terrain.PASSABLE) != 0;
 			losBlocking[i] = (flags & Terrain.LOS_BLOCKING) != 0;
-			flamable[i] = (flags & Terrain.FLAMABLE) != 0;
+			flammable[i] = (flags & Terrain.FLAMABLE) != 0;
 			secret[i] = (flags & Terrain.SECRET) != 0;
 			solid[i] = (flags & Terrain.SOLID) != 0;
 			avoid[i] = (flags & Terrain.AVOID) != 0;
@@ -576,7 +569,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (int i = getWidth(); i < getLength() - getWidth(); i++) {
-
+			allCells[i] = true;
 			nearWalls[i] = false;
 			if (passable[i]) {
 				int count = 0;
@@ -654,7 +647,7 @@ public abstract class Level implements Bundlable {
 		int flags = Terrain.flags[terrain];
 		passable[cell] = (flags & Terrain.PASSABLE) != 0;
 		losBlocking[cell] = (flags & Terrain.LOS_BLOCKING) != 0;
-		flamable[cell] = (flags & Terrain.FLAMABLE) != 0;
+		flammable[cell] = (flags & Terrain.FLAMABLE) != 0;
 		secret[cell] = (flags & Terrain.SECRET) != 0;
 		solid[cell] = (flags & Terrain.SOLID) != 0;
 		avoid[cell] = (flags & Terrain.AVOID) != 0;
@@ -1152,6 +1145,23 @@ public abstract class Level implements Bundlable {
 
 	public boolean cellValid(int cell) {
 		return cell > 0 && cell < getLength();
+	}
+
+	public int getSolidCellNextTo(int cell) {
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		for (int n : Level.NEIGHBOURS8) {
+			int p = n + cell;
+			if (cellValid(p) && (solid[p]) && Actor.findChar( p ) == null) {
+				candidates.add( p );
+			}
+		}
+
+		if(candidates.size()>0) {
+			return Random.element(candidates);
+		}
+
+		return -1;
 	}
 
 	public int getEmptyCellNextTo(int cell) {

@@ -7,7 +7,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.pixeldungeon.items.rings.UsableArtifact;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -22,14 +22,13 @@ import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 
-public class ChaosCrystal extends Artifact implements IChaosItem {
+public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	private static final String IDENTETIFY_LEVEL_KEY = "identetifyLevel";
 	private static final String CHARGE_KEY = "charge";
 
 	public static final float TIME_TO_USE = 1;
 
-	public static final String AC_USE = Game.getVar(R.string.ChaosCrystal_Use);
 	public static final String AC_FUSE = Game.getVar(R.string.ChaosCrystal_Fuse);
 	private static final String TXT_SELECT_FOR_FUSE = Game.getVar(R.string.ChaosCrystal_SelectForFuse);
 

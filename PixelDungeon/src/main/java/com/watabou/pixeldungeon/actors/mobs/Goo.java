@@ -180,7 +180,7 @@ public class Goo extends Boss {
 		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
-		Badges.validateBossSlain();
+		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_1);
 		
 		yell(Game.getVar(R.string.Goo_Info2));
 	}

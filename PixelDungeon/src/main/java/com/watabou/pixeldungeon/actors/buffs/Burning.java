@@ -91,7 +91,7 @@ public class Burning extends Buff implements Hero.Doom {
 			detach();
 		}
 		
-		if (Dungeon.level.flamable[target.getPos()]) {
+		if (Dungeon.level.flammable[target.getPos()]) {
 			GameScene.add( Blob.seed( target.getPos(), 4, Fire.class ) );
 		}
 		

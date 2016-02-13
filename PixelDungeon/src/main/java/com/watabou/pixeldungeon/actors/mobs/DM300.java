@@ -17,14 +17,14 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -130,7 +130,7 @@ public class DM300 extends Boss {
 		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
-		Badges.validateBossSlain();
+		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 		
 		yell(Game.getVar(R.string.DM300_Info2));
 	}

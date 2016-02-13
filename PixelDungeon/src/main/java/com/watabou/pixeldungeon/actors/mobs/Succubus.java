@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
@@ -35,79 +36,91 @@ import com.watabou.pixeldungeon.sprites.SuccubusSprite;
 import com.watabou.utils.Random;
 
 public class Succubus extends Mob {
-	
-	private static final int BLINK_DELAY	= 5;
-	
+
+	private static final int BLINK_DELAY = 5;
+
 	private int delay = 0;
-	
+
 	public Succubus() {
 		spriteClass = SuccubusSprite.class;
-		
+
 		hp(ht(80));
 		defenseSkill = 25;
 		viewDistance = Light.DISTANCE;
-		
+
 		EXP = 12;
 		maxLvl = 25;
-		
+
 		loot = new ScrollOfLullaby();
 		lootChance = 0.05f;
-		
-		RESISTANCES.add( Leech.class );
-		IMMUNITIES.add( Sleep.class );
+
+		RESISTANCES.add(Leech.class);
+		IMMUNITIES.add(Sleep.class);
 	}
-	
+
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 15, 25 );
+		return Random.NormalIntRange(15, 25);
 	}
-	
+
 	@Override
-	public int attackProc( Char enemy, int damage ) {
-		
-		if (Random.Int( 3 ) == 0) {
-			Buff.affect( enemy, Charm.class, Charm.durationFactor( enemy ) * Random.IntRange( 2, 5 ) );
-			enemy.getSprite().centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
-			Sample.INSTANCE.play( Assets.SND_CHARMS );
+	public int attackProc(Char enemy, int damage) {
+
+		if (Random.Int(3) == 0) {
+			float duration = Charm.durationFactor(enemy) * Random.IntRange(2, 5);
+
+			if (enemy.buff(DriedRose.OneWayCursedLoveBuff.class) != null) {
+				duration *= 2;
+			}
+			Char target = enemy;
+
+			if (enemy.buff(DriedRose.OneWayLoveBuff.class) != null) {
+				target = this;
+			}
+
+			Buff.affect(target, Charm.class, duration);
+			enemy.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
+
+			Sample.INSTANCE.play(Assets.SND_CHARMS);
 		}
-		
+
 		return damage;
 	}
-	
+
 	@Override
-	protected boolean getCloser( int target ) {
-		if (Dungeon.level.fieldOfView[target] && Dungeon.level.distance( getPos(), target ) > 2 && delay <= 0) {
-			
-			blink( target );
-			spend( -1 / speed() );
+	protected boolean getCloser(int target) {
+		if (Dungeon.level.fieldOfView[target] && Dungeon.level.distance(getPos(), target) > 2 && delay <= 0) {
+
+			blink(target);
+			spend(-1 / speed());
 			return true;
-			
+
 		} else {
-			
+
 			delay--;
-			return super.getCloser( target );
-			
+			return super.getCloser(target);
+
 		}
 	}
-	
-	private void blink( int target ) {
-		
-		int cell = Ballistica.cast( getPos(), target, true, true );
-		
-		if (Actor.findChar( cell ) != null && Ballistica.distance > 1) {
+
+	private void blink(int target) {
+
+		int cell = Ballistica.cast(getPos(), target, true, true);
+
+		if (Actor.findChar(cell) != null && Ballistica.distance > 1) {
 			cell = Ballistica.trace[Ballistica.distance - 2];
 		}
-		
-		WandOfBlink.appear( this, cell );
-		
+
+		WandOfBlink.appear(this, cell);
+
 		delay = BLINK_DELAY;
 	}
-	
+
 	@Override
-	public int attackSkill( Char target ) {
+	public int attackSkill(Char target) {
 		return 40;
 	}
-	
+
 	@Override
 	public int dr() {
 		return 10;

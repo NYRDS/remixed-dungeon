@@ -12,8 +12,6 @@ import java.util.ArrayList;
 
 public class Artifact extends EquipableItem {
 
-	public static final String AC_USE = Game.getVar(R.string.SpiderCharm_Use);
-
 	static final float TIME_TO_EQUIP = 1f;
 	protected Buff buff;
 
@@ -42,12 +40,9 @@ public class Artifact extends EquipableItem {
 				equipCursed( hero );
 				GLog.n(String.format(Game.getVar(R.string.Ring_Info2), this));
 			}
-			
 			hero.spendAndNext( Artifact.TIME_TO_EQUIP );
 			return true;
-			
 		}
-
 	}
 
 	@Override
@@ -80,7 +75,7 @@ public class Artifact extends EquipableItem {
 	public boolean isEquipped( Hero hero ) {
 		return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
 	}
-	
+
 	public void activate( Char ch ) {
 		buff = buff();
 		if(buff != null) {

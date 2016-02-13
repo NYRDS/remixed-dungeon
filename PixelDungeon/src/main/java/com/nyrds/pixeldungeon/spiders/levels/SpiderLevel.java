@@ -157,7 +157,6 @@ public class SpiderLevel extends CommonLevel {
 	
 	@Override
 	protected void decorate() {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
