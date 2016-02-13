@@ -5,6 +5,7 @@ import java.util.HashMap;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
+import com.nyrds.pixeldungeon.mobs.guts.ShadowLord;
 import com.nyrds.pixeldungeon.mobs.guts.Worm;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
@@ -122,6 +123,7 @@ public class MobFactory {
 		registerMobClass(YogsHeart.class);
 		registerMobClass(YogsTeeth.class);
 		registerMobClass(ZombieGnoll.class);
+		registerMobClass(ShadowLord.class);
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {
