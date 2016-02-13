@@ -288,5 +288,47 @@
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name_Objective">floating crystal</string>
     <string name="Crystal_Desc">Big shining crystal floating in the air. Probably it is filled with powerful magic.</string>
+	
+	<!-- STRINGS OF Worm CLASS -->
+    <string name="Crystal_Name">worm</string>
+    <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name_Objective">worm</string>
+    <string name="Crystal_Desc">A big worm.</string>
+	
+	<!-- STRINGS OF GnollZombie CLASS -->
+    <string name="Crystal_Name">gnoll-zombie</string>
+    <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name_Objective">gnoll-zombie</string>
+    <string name="Crystal_Desc">That gnoll smells fishy.</string>
+	
+	<!-- STRINGS OF YogsBrain CLASS -->
+    <string name="Crystal_Name">Yog's brain</string>
+    <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name_Objective">Yog's brain</string>
+    <string name="Crystal_Desc">Huge pulsating brain.</string>
+	
+	<!-- STRINGS OF YogsEye CLASS -->
+    <string name="Crystal_Name">Yog's eye</string>
+    <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name_Objective">Yog's eye</string>
+    <string name="Crystal_Desc">That eye is sure big.</string>
+	
+	<!-- STRINGS OF YogsHeart CLASS -->
+    <string name="Crystal_Name">Yog's heart</string>
+    <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name_Objective">Yog's heart</string>
+    <string name="Crystal_Desc">I don't really think like winning that one over.</string>
+	
+	<!-- STRINGS OF YogsTeeth CLASS -->
+    <string name="Crystal_Name">Yog's teeth</string>
+    <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name_Objective">Yog's teeth</string>
+    <string name="Crystal_Desc">Well, that's sharp.</string>
+	
+	<!-- STRINGS OF ShadowLord CLASS -->
+    <string name="Crystal_Name">Shadow Lord</string>
+    <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name_Objective">Shadow Lord</string>
+    <string name="Crystal_Desc">Lord of the shadows, appereantly.</string>
     
 </resources>
