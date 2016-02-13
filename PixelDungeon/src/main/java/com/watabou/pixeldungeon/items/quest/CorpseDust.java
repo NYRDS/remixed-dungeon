@@ -17,28 +17,27 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.rings.UsableArtifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class CorpseDust extends Item {
+public class CorpseDust extends UsableArtifact  {
 	
-	{
-		name = Game.getVar(R.string.CorpseDust_Name);
+	public CorpseDust() {
 		image = ItemSpriteSheet.DUST;
-		
+
 		cursed = true;
 		cursedKnown = true;
 	}
-	
+
 	@Override
-	public boolean isUpgradable() {
-		return false;
-	}
-	
-	@Override
-	public boolean isIdentified() {
-		return true;
+	public void execute( final Hero ch, String action ) {
+		setCurUser(ch);
+
+		if (action.equals( AC_USE )) {
+			ch.belongings.removeItem(this);
+
+		}
+		super.execute( ch, action );
 	}
 }
