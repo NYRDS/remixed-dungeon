@@ -34,16 +34,6 @@ public class RatSkull extends Artifact {
 	public class RatKingAuraBuff extends ArtifactBuff {}
 
 	@Override
-	public boolean isUpgradable() {
-		return false;
-	}
-	
-	@Override
-	public boolean isIdentified() {
-		return true;
-	}
-	
-	@Override
 	public int price() {
 		return 100;
 	}
