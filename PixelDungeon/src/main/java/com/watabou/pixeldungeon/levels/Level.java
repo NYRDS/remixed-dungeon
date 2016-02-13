@@ -221,6 +221,7 @@ public abstract class Level implements Bundlable {
 		pit = new boolean[getLength()];
 
 		nearWalls = new boolean[getLength()];
+		allCells  = new boolean[getLength()];
 
 		discoverable = new boolean[getLength()];
 
