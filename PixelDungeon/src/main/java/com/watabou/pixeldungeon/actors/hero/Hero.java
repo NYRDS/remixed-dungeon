@@ -75,6 +75,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
@@ -282,7 +283,7 @@ public class Hero extends Char {
 		lvl = bundle.getInt(LEVEL);
 		exp = bundle.getInt(EXPERIENCE);
 		levelKind = bundle.getString(LEVEL_KIND);
-		levelId   = bundle.optString(LEVEL_ID,"unknown");
+		levelId = bundle.optString(LEVEL_ID, "unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
 		Collection<Mob> _pets = bundle.getCollection(PETS, Mob.class);
@@ -398,7 +399,7 @@ public class Hero extends Char {
 	}
 
 	public boolean inFury() {
-		return buff(Fury.class) != null;
+		return (buff(Fury.class) != null) || (buff(CorpseDust.UndeadRageAuraBuff.class) != null);
 	}
 
 	@Override
@@ -609,14 +610,11 @@ public class Hero extends Char {
 		} else {
 
 			if (Dungeon.level.fieldOfView[npc.getPos()] && getCloser(npc.getPos())) {
-
 				return true;
-
 			} else {
 				ready();
 				return false;
 			}
-
 		}
 	}
 
@@ -736,14 +734,14 @@ public class Hero extends Char {
 				}
 
 				switch (heap.type) {
-				case TOMB:
-					Sample.INSTANCE.play(Assets.SND_TOMB);
-					Camera.main.shake(1, 0.5f);
-					break;
-				case SKELETON:
-					break;
-				default:
-					Sample.INSTANCE.play(Assets.SND_UNLOCK);
+					case TOMB:
+						Sample.INSTANCE.play(Assets.SND_TOMB);
+						Camera.main.shake(1, 0.5f);
+						break;
+					case SKELETON:
+						break;
+					default:
+						Sample.INSTANCE.play(Assets.SND_UNLOCK);
 				}
 
 				spend(Key.TIME_TO_UNLOCK);
@@ -947,17 +945,17 @@ public class Hero extends Char {
 
 		return getCloserToEnemy();
 	}
-	
+
 	private boolean applySpecialTo(SpecialWeapon weapon, Char enemy) {
 		spend(attackDelay());
 		getSprite().attack(enemy.getPos());
 		weapon.applySpecial(this, enemy);
 		return false;
 	}
-	
+
 	private boolean actSpecialAttack(Attack action) {
 		SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
-		
+
 		if (weapon.getRange() == 1) {
 			if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 				return applySpecialTo(weapon, enemy);
@@ -994,46 +992,46 @@ public class Hero extends Char {
 			wep.proc(this, enemy, damage);
 
 			switch (subClass) {
-			case GLADIATOR:
-				if (wep instanceof MeleeWeapon) {
-					damage += Buff.affect(this, Combo.class).hit(enemy, damage);
-				}
-				break;
-			case BATTLEMAGE:
-				if (wep instanceof Wand) {
-					Wand wand = (Wand) wep;
-					if (wand.curCharges < wand.maxCharges && damage > 0) {
-
-						wand.curCharges++;
-						QuickSlot.refresh();
-
-						ScrollOfRecharging.charge(this);
+				case GLADIATOR:
+					if (wep instanceof MeleeWeapon) {
+						damage += Buff.affect(this, Combo.class).hit(enemy, damage);
 					}
-					damage += wand.curCharges;
-				}
-				break;
-			case SNIPER:
-				if (rangedWeapon != null) {
-					Buff.prolong(enemy, SnipersMark.class, attackDelay() * 1.1f);
-				}
-				break;
-			case SHAMAN:
-				if (wep instanceof Wand) {
-					Wand wand = (Wand) wep;
-					if (wand.affectTarget()) {
-						if (Random.Int(4) == 0) {
-							wand.zap(enemy.getPos());
+					break;
+				case BATTLEMAGE:
+					if (wep instanceof Wand) {
+						Wand wand = (Wand) wep;
+						if (wand.curCharges < wand.maxCharges && damage > 0) {
+
+							wand.curCharges++;
+							QuickSlot.refresh();
+
+							ScrollOfRecharging.charge(this);
+						}
+						damage += wand.curCharges;
+					}
+					break;
+				case SNIPER:
+					if (rangedWeapon != null) {
+						Buff.prolong(enemy, SnipersMark.class, attackDelay() * 1.1f);
+					}
+					break;
+				case SHAMAN:
+					if (wep instanceof Wand) {
+						Wand wand = (Wand) wep;
+						if (wand.affectTarget()) {
+							if (Random.Int(4) == 0) {
+								wand.zap(enemy.getPos());
+							}
 						}
 					}
-				}
-				break;
-			default:
+					break;
+				default:
 			}
 		}
 
 		for (Item item : belongings) {
 			if (item instanceof IChaosItem && item.isEquipped(this)) {
-				((IChaosItem) item).ownerDoesDamage(this,damage);
+				((IChaosItem) item).ownerDoesDamage(this, damage);
 			}
 		}
 
@@ -1116,9 +1114,9 @@ public class Hero extends Char {
 
 		Mob nearest = null;
 		int dist = Integer.MAX_VALUE;
-		for (Mob mob:visibleEnemies) {
+		for (Mob mob : visibleEnemies) {
 			int mobDist = Dungeon.level.distance(getPos(), mob.getPos());
-			if(mobDist<dist) {
+			if (mobDist < dist) {
 				dist = mobDist;
 				nearest = mob;
 			}
@@ -1191,11 +1189,8 @@ public class Hero extends Char {
 			return true;
 
 		} else {
-
 			return false;
-
 		}
-
 	}
 
 	public boolean handle(int cell) {
@@ -1206,7 +1201,6 @@ public class Hero extends Char {
 
 		Char ch;
 		Heap heap;
-
 
 		if (Dungeon.level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
@@ -1227,15 +1221,15 @@ public class Hero extends Char {
 		} else if ((heap = Dungeon.level.getHeap(cell)) != null) {
 
 			switch (heap.type) {
-			case HEAP:
-				curAction = new HeroAction.PickUp(cell);
-				break;
-			case FOR_SALE:
-				curAction = heap.size() == 1 && heap.peek().price() > 0 ? new HeroAction.Buy(cell)
-						: new HeroAction.PickUp(cell);
-				break;
-			default:
-				curAction = new HeroAction.OpenChest(cell);
+				case HEAP:
+					curAction = new HeroAction.PickUp(cell);
+					break;
+				case FOR_SALE:
+					curAction = heap.size() == 1 && heap.peek().price() > 0 ? new HeroAction.Buy(cell)
+							: new HeroAction.PickUp(cell);
+					break;
+				default:
+					curAction = new HeroAction.OpenChest(cell);
 			}
 
 		} else if (Dungeon.level.map[cell] == Terrain.LOCKED_DOOR || Dungeon.level.map[cell] == Terrain.LOCKED_EXIT) {
@@ -1352,9 +1346,7 @@ public class Hero extends Char {
 			} else if (buff instanceof Vertigo) {
 				GLog.w(Game.getVar(R.string.Hero_StaVertigo));
 				interrupt();
-			}
-
-			else if (buff instanceof Light) {
+			} else if (buff instanceof Light) {
 				getSprite().add(CharSprite.State.ILLUMINATED);
 			}
 		}
@@ -1473,7 +1465,7 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		if(enemy instanceof Rat && buff(RatSkull.RatKingAuraBuff.class)!=null) {
+		if (enemy instanceof Rat && buff(RatSkull.RatKingAuraBuff.class) != null) {
 			Rat rat = (Rat) enemy;
 			Mob.makePet(rat, this);
 		} else {

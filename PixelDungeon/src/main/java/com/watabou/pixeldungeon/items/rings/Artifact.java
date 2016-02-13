@@ -40,12 +40,9 @@ public class Artifact extends EquipableItem {
 				equipCursed( hero );
 				GLog.n(String.format(Game.getVar(R.string.Ring_Info2), this));
 			}
-			
 			hero.spendAndNext( Artifact.TIME_TO_EQUIP );
 			return true;
-			
 		}
-
 	}
 
 	@Override
@@ -78,7 +75,7 @@ public class Artifact extends EquipableItem {
 	public boolean isEquipped( Hero hero ) {
 		return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
 	}
-	
+
 	public void activate( Char ch ) {
 		buff = buff();
 		if(buff != null) {

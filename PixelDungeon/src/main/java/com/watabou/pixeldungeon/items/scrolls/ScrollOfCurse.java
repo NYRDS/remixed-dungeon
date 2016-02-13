@@ -42,7 +42,7 @@ public class ScrollOfCurse extends Scroll {
 			Vertigo.class,
 			Weakness.class
 		};
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void doRead() {

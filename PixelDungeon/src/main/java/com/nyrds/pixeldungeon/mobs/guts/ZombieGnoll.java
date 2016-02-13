@@ -1,9 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
-import com.nyrds.pixeldungeon.mobs.guts.sprites.ZombieGnollSprite;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
