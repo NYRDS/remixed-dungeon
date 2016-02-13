@@ -52,7 +52,7 @@ public class Bounce extends Glyph {
 						Actor.addDelayed( new Pushing( attacker, attacker.getPos(), newPos ), -1 );
 						
 						attacker.setPos(newPos);
-						// FIXME
+
 						if (attacker instanceof Mob) {
 							Dungeon.level.mobPress( (Mob)attacker );
 						} else {

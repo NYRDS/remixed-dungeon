@@ -35,11 +35,11 @@ public class SystemText extends Text {
 	}
 
 	public SystemText(String text, float baseLine, boolean multiline,
-			float scale) {
+	                  float scale) {
 		super(0, 0, 0, 0);
 
 		fontScale = scale;
-		
+
 		super.setScale(scale, scale);
 
 		needWidth = multiline;
@@ -47,12 +47,7 @@ public class SystemText extends Text {
 		float size = baseLine;
 
 		if (size == 0) {
-			try {
-				throw new Exception("zero sized font!!!");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			throw new RuntimeException("zero sized font!!!");
 		}
 
 		Typeface tf = Typeface.create((String) null, Typeface.BOLD);
@@ -70,17 +65,17 @@ public class SystemText extends Text {
 
 	private void destroyLines() {
 		for (SystemTextLine img : lineImage) {
-			if(getParent()!=null){
+			if (getParent() != null) {
 				getParent().remove(img);
 			}
 			img.destroy();
 		}
 	}
-	
+
 	@Override
 	public void destroy() {
 		destroyLines();
-		
+
 		text = null;
 		super.destroy();
 		texts.remove(this);
@@ -99,7 +94,7 @@ public class SystemText extends Text {
 		final int length = text.length();
 		int lastWordOffset = offset;
 
-		for (; offset < length;) {
+		for (; offset < length; ) {
 			final int codepoint = text.codePointAt(offset);
 			int codepointCharCount = Character.charCount(codepoint);
 
@@ -191,7 +186,7 @@ public class SystemText extends Text {
 
 					int offset = startLine;
 					int lineCounter = 0;
-					for (; offset < nextLine;) {
+					for (; offset < nextLine; ) {
 						final int codepoint = text.codePointAt(offset);
 						int codepointCharCount = Character.charCount(codepoint);
 
@@ -215,7 +210,7 @@ public class SystemText extends Text {
 							}
 							charIndex++;
 						}
-						
+
 						lineCounter++;
 						offset += codepointCharCount;
 					}
@@ -231,7 +226,7 @@ public class SystemText extends Text {
 /*			Log.d("SystemText", String.format(Locale.ROOT,
 					"%3.1f x %3.1f (max: %3.1f, lines: %d) -> %s", width,
 					height, maxWidth / scale.x, lineImage.size(), text));
-*/			
+*/
 		}
 	}
 
@@ -243,52 +238,52 @@ public class SystemText extends Text {
 		Matrix.scale(matrix, scale.x, scale.y);
 		Matrix.rotate(matrix, angle);
 	}
-	
+
 	private void updateParent() {
 		Group parent = getParent();
 		for (SystemTextLine img : lineImage) {
-			if(img.getParent() != parent){
-				if(img.getParent() != null){
+			if (img.getParent() != parent) {
+				if (img.getParent() != null) {
 					img.getParent().remove(img);
 				}
-				
-				if(parent != null) {
+
+				if (parent != null) {
 					parent.add(img);
 				}
 			}
 		}
 	}
-	
+
 	@Override
 	public void setParent(Group parent) {
 		super.setParent(parent);
-		
+
 		updateParent();
 	}
-	
+
 	@Override
 	public boolean setVisible(boolean visible) {
-		if(lineImage != null) {
+		if (lineImage != null) {
 			for (SystemTextLine img : lineImage) {
 				img.setVisible(visible);
 			}
 		}
 		return super.setVisible(visible);
 	}
-	
+
 	@Override
 	public void draw() {
 		measure();
 		if (lineImage != null) {
 			int line = 0;
-			
+
 			updateParent();
-			
+
 			for (SystemTextLine img : lineImage) {
 
 				// Log.d("SystemText", String.format(Locale.ROOT,
 				// "%3.1f x %3.1f -> %s", x, y, text));
-				
+
 				img.ra = ra;
 				img.ga = ga;
 				img.ba = ba;
@@ -297,7 +292,7 @@ public class SystemText extends Text {
 				img.bm = bm;
 				img.am = am;
 				img.aa = aa;
-				
+
 				img.setPos(x, y + (line * fontHeight) * scale.y);
 				img.setScale(scale.x / oversample, scale.x / oversample);
 
@@ -328,10 +323,10 @@ public class SystemText extends Text {
 	}
 
 	@Override
-	public void setScale(float x, float y){
+	public void setScale(float x, float y) {
 		super.setScale(fontScale * x, fontScale * y);
 	}
-	
+
 	public String text() {
 		return text;
 	}

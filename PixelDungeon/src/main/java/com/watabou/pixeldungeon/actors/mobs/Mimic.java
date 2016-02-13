@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -36,6 +33,9 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MimicSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mimic extends Mob {
 	
@@ -128,7 +128,7 @@ public class Mimic extends Mob {
 				Actor.addDelayed( new Pushing( ch, ch.getPos(), newPos ), -1 );
 				
 				ch.setPos(newPos);
-				// FIXME
+
 				if (ch instanceof Mob) {
 					level.mobPress( (Mob)ch );
 				} else {
