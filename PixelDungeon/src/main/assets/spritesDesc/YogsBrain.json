@@ -1,5 +1,5 @@
 {
-   texture = "guts/yogs_brain.png",
+   texture = "mobs/yogs_brain.png",
    width = 20,
    height = 20,
    idle = {

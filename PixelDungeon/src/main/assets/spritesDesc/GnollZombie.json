@@ -1,5 +1,5 @@
 {
-   texture = "guts/gnoll_zombie.png",
+   texture = "mobs/gnoll_zombie.png",
    width = 12,
    height = 15,
    idle = {
