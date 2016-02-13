@@ -30,8 +30,6 @@ public class CorpseDust extends Item {
 		
 		cursed = true;
 		cursedKnown = true;
-		
-		unique = true;
 	}
 	
 	@Override

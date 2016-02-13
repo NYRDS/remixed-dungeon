@@ -17,15 +17,13 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -36,6 +34,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+
+import java.util.ArrayList;
 
 public class LloydsBeacon extends Item {
 
@@ -54,7 +54,6 @@ public class LloydsBeacon extends Item {
 	
 	public LloydsBeacon() {
 		image = ItemSpriteSheet.BEACON;
-		unique = true;
 		returnTo = new Position();
 		returnTo.levelDepth = -1;	
 		

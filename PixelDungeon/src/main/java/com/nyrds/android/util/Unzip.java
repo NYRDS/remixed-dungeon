@@ -16,7 +16,7 @@ public class Unzip {
 	static public void ensureDir(String dir) {
 		File f = new File(dir);
 
-		if (!f.isDirectory()) {
+		if (!f.exists() || !f.isDirectory()) {
 			f.mkdirs();
 		}
 	}

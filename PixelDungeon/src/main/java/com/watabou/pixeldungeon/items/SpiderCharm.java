@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.noosa.Game;
@@ -18,14 +16,14 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import java.util.ArrayList;
+
 public class SpiderCharm extends Artifact {
-	
-	public static final float TIME_TO_USE = 1;
+
 	public static final String AC_USE = Game.getVar(R.string.SpiderCharm_Use);
 	
 	public SpiderCharm() {
 		image = ItemSpriteSheet.SPIDER_CHARM;
-		unique = true;
 	}
 
 	@Override
@@ -58,12 +56,9 @@ public class SpiderCharm extends Artifact {
 				GameScene.add(Dungeon.level, pet );
 				Actor.addDelayed( new Pushing( pet, ch.getPos(), pet.getPos() ), -1 );
 			}
-
-		} else {
-			
-			super.execute( ch, action );
-			
+			return;
 		}
+		super.execute( ch, action );
 	}
 	
 	@Override

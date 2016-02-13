@@ -56,6 +56,7 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.HeroAction.Attack;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -74,6 +75,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
@@ -489,7 +491,7 @@ public class Hero extends Char {
 			}
 
 			if (PixelDungeon.realtime()) {
-				if (ready == false) {
+				if (!ready) {
 					ready();
 				}
 				spend(TICK);
@@ -668,7 +670,7 @@ public class Hero extends Char {
 				Item item = heap.pickUp();
 				item = item.pick(this, getPos());
 				if (item != null) {
-					if (item != null && item.doPickUp(this)) {
+					if (item.doPickUp(this)) {
 
 						itemPickedUp(item);
 
@@ -805,6 +807,9 @@ public class Hero extends Char {
 	}
 
 	private boolean actDescend(HeroAction.Descend action) {
+
+		refreshPets();
+
 		int stairs = action.dst;
 		if (getPos() == stairs && (getPos() == Dungeon.level.exit || getPos() == Dungeon.level.secondaryExit)) {
 
@@ -831,6 +836,9 @@ public class Hero extends Char {
 	}
 
 	private boolean actAscend(HeroAction.Ascend action) {
+
+		refreshPets();
+
 		int stairs = action.dst;
 		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
 
@@ -1199,6 +1207,7 @@ public class Hero extends Char {
 		Char ch;
 		Heap heap;
 
+
 		if (Dungeon.level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
 			curAction = new HeroAction.Cook(cell);
@@ -1464,8 +1473,13 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		AttackIndicator.target(enemy);
-		attack(enemy);
+		if(enemy instanceof Rat && buff(RatSkull.RatKingAuraBuff.class)!=null) {
+			Rat rat = (Rat) enemy;
+			Mob.makePet(rat, this);
+		} else {
+			AttackIndicator.target(enemy);
+			attack(enemy);
+		}
 		curAction = null;
 
 		Invisibility.dispel(this);

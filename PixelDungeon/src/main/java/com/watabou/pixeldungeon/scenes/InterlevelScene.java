@@ -96,6 +96,8 @@ public class InterlevelScene extends PixelScene {
 		
 		@Override
 		public void run() {
+			Thread.currentThread().setName("LevelChanger");
+
 			try {
 				Generator.reset();
 					switch (mode) {
@@ -129,8 +131,11 @@ public class InterlevelScene extends PixelScene {
 				error = ERR_GENERIC + "\n" + e.getMessage();
 
 			}
+
 			if(mode != Mode.CONTINUE) {
 				PixelDungeon.displayEasyModeSmallScreenAd(this);
+			} else {
+				returnToWork(true);
 			}
 		}
 		

@@ -17,20 +17,36 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class DriedRose extends Item {
+import java.util.ArrayList;
+
+public class DriedRose extends Artifact {
 	
-	{
-		name = Game.getVar(R.string.DriedRose_Name);
+	public DriedRose(){
 		image = ItemSpriteSheet.ROSE;
-		
-		unique = true;
 	}
-	
+
+	@Override
+	public void execute( final Hero ch, String action ) {
+		setCurUser(ch);
+
+		if (action.equals( AC_USE )) {
+			ch.belongings.removeItem(this);
+
+		}
+		super.execute( ch, action );
+	}
+
+	@Override
+	public ArrayList<String> actions( Hero hero ) {
+		ArrayList<String> actions = super.actions( hero );
+		actions.add( AC_USE );
+		return actions;
+	}
+
 	@Override
 	public boolean isUpgradable() {
 		return false;
