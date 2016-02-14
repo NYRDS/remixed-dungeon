@@ -17,12 +17,10 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import java.util.ArrayList;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Item;
@@ -36,6 +34,8 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
+
+import java.util.ArrayList;
 
 public class WndCatalogus extends WndTabbed {
 	
@@ -96,14 +96,14 @@ public class WndCatalogus extends WndTabbed {
 					super.select( value );
 					WndCatalogus.showPotions = value;
 					updateList();
-				};
+				}
 			},
 			new LabeledTab(this,  TXT_SCROLLS ) {
 				public void select( boolean value ) {
 					super.select( value );
 					WndCatalogus.showPotions = !value;
 					updateList();
-				};
+				}
 			}
 		};
 		for (Tab tab : tabs) {

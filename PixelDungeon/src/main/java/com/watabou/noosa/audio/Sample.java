@@ -32,114 +32,116 @@ import java.util.Map;
 
 public enum Sample implements SoundPool.OnLoadCompleteListener {
 
-    INSTANCE;
+	INSTANCE;
 
-    public static final int MAX_STREAMS = 8;
-    String playOnComplete;
+	public static final int MAX_STREAMS = 8;
+	String playOnComplete;
 
-    @SuppressWarnings("deprecation")
-    protected SoundPool pool =
-            new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
+	@SuppressWarnings("deprecation")
+	protected SoundPool pool =
+			new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
 
-    protected Map<String, Integer> ids =
-            new HashMap<>();
+	protected Map<String, Integer> ids =
+			new HashMap<>();
 
-    AssetManager manager;
-    private boolean enabled = true;
+	private AssetManager manager;
+	private boolean enabled = true;
 
-    @SuppressWarnings("deprecation")
-    public void reset() {
+	@SuppressWarnings("deprecation")
+	public void reset() {
 
-        pool.release();
+		pool.release();
 
-        pool = new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
-        pool.setOnLoadCompleteListener(this);
+		pool = new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
+		pool.setOnLoadCompleteListener(this);
 
-        ids.clear();
-    }
+		ids.clear();
+	}
 
-    public void pause() {
-        if (pool != null) {
-            pool.autoPause();
-        }
-    }
+	public void pause() {
+		if (pool != null) {
+			pool.autoPause();
+		}
+	}
 
-    public void resume() {
-        if (pool != null) {
-            pool.setOnLoadCompleteListener(this);
-            manager = Game.instance().getAssets();
-            pool.autoResume();
-        }
-    }
+	public void resume() {
+		if (pool != null) {
+			pool.setOnLoadCompleteListener(this);
+			if (manager == null) {
+				manager = Game.instance().getAssets();
+			}
+			pool.autoResume();
+		}
+	}
 
-    public void load(String asset) {
+	public void load(String asset) {
 
-        if (!ids.containsKey(asset)) {
-            try {
-                String assetFile = "sound/" + asset;
-                int streamID;
+		if (!ids.containsKey(asset)) {
+			try {
+				String assetFile = "sound/" + asset;
+				int streamID;
 
-                File file = ModdingMode.getFile(assetFile);
-                if (file != null && file.exists()) {
-                    streamID = pool.load(file.getAbsolutePath(), 1);
-                } else {
-                    streamID = fromAsset(manager, assetFile);
-                }
+				File file = ModdingMode.getFile(assetFile);
+				if (file != null && file.exists()) {
+					streamID = pool.load(file.getAbsolutePath(), 1);
+				} else {
+					streamID = fromAsset(manager, assetFile);
+				}
 
-                ids.put(asset, streamID);
+				ids.put(asset, streamID);
 
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	}
 
-    private int fromAsset(AssetManager manager, String asset)
-            throws IOException {
-        AssetFileDescriptor fd = manager.openFd(asset);
-        int streamID = pool.load(fd, 1);
-        fd.close();
-        return streamID;
-    }
+	private int fromAsset(AssetManager manager, String asset)
+			throws IOException {
+		AssetFileDescriptor fd = manager.openFd(asset);
+		int streamID = pool.load(fd, 1);
+		fd.close();
+		return streamID;
+	}
 
-    public void unload(Object src) {
-        if (ids.containsKey(src)) {
-            pool.unload(ids.get(src));
-            ids.remove(src);
-        }
-    }
+	public void unload(Object src) {
+		if (ids.containsKey(src)) {
+			pool.unload(ids.get(src));
+			ids.remove(src);
+		}
+	}
 
-    public int play(String id) {
-        return play(id, 1, 1, 1);
-    }
+	public int play(String id) {
+		return play(id, 1, 1, 1);
+	}
 
-    public int play(String id, float volume) {
-        return play(id, volume, volume, 1);
-    }
+	public int play(String id, float volume) {
+		return play(id, volume, volume, 1);
+	}
 
-    public int play(String id, float leftVolume, float rightVolume, float rate) {
-        if (enabled && ids.containsKey(id)) {
-            return pool.play(ids.get(id), leftVolume, rightVolume, 0, 0, rate);
-        } else {
-            playOnComplete = id;
-            load(id);
-            return -1;
-        }
-    }
+	public int play(String id, float leftVolume, float rightVolume, float rate) {
+		if (enabled && ids.containsKey(id)) {
+			return pool.play(ids.get(id), leftVolume, rightVolume, 0, 0, rate);
+		} else {
+			playOnComplete = id;
+			load(id);
+			return -1;
+		}
+	}
 
-    public void enable(boolean value) {
-        enabled = value;
-    }
+	public void enable(boolean value) {
+		enabled = value;
+	}
 
-    public boolean isEnabled() {
-        return enabled;
-    }
+	public boolean isEnabled() {
+		return enabled;
+	}
 
-    @Override
-    public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
-        if (status == 0 && playOnComplete != null) {
-            play(playOnComplete);
-            playOnComplete = null;
-        }
-    }
+	@Override
+	public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+		if (status == 0 && playOnComplete != null) {
+			play(playOnComplete);
+			playOnComplete = null;
+		}
+	}
 }
