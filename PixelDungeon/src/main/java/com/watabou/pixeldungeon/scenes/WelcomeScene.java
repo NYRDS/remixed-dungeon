@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 
-//TODO: update this class with relevant info as new versions come out.
 public class WelcomeScene extends PixelScene {
 
 	private static final String TTL_Welcome = Game.getVar(R.string.Welcome_Title);
@@ -26,6 +25,7 @@ public class WelcomeScene extends PixelScene {
 	private static final String TXT_Welcome_21_2 = Game.getVar(R.string.Welcome_Text_21_2);
 	private static final String TXT_Welcome_21_3 = Game.getVar(R.string.Welcome_Text_21_3);
 	private static final String TXT_Welcome_21_4 = Game.getVar(R.string.Welcome_Text_21_4);
+	private static final String TXT_Welcome_21_5 = Game.getVar(R.string.Welcome_Text_21_5);
 
 	private static final int GAP = 4;
 
@@ -34,7 +34,7 @@ public class WelcomeScene extends PixelScene {
 		super.create();
 
 		String[] upds = { TXT_Welcome, TXT_Welcome_19, TXT_Welcome_20, TXT_Welcome_20_1, TXT_Welcome_21,
-				TXT_Welcome_21_1,TXT_Welcome_21_2, TXT_Welcome_21_3, TXT_Welcome_21_4 };
+				TXT_Welcome_21_1,TXT_Welcome_21_2, TXT_Welcome_21_3, TXT_Welcome_21_4, TXT_Welcome_21_5 };
 
 		Text[] updTexts = new Text[upds.length];
 
@@ -85,7 +85,7 @@ public class WelcomeScene extends PixelScene {
 
 		content.setSize(panel.innerWidth(), yPos);
 
-		RedButton okay = new RedButton("Okay!") {
+		RedButton okay = new RedButton(Game.getVar(R.string.Welcome_Ok)) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.version(Game.versionCode);

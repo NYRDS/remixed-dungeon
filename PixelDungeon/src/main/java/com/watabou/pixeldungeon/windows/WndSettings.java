@@ -73,7 +73,6 @@ public class WndSettings extends Window {
 	
 	private static final String TXT_EXPEREMENTAL_FONT = Game
 			.getVar(R.string.WndSettings_ExperementalFont);
-			;
 	private static final String TXT_CLASSIC_FONT = Game
 			.getVar(R.string.WndSettings_ClassicFont);
 
@@ -193,9 +192,9 @@ public class WndSettings extends Window {
 									}
 									PixelDungeon.uiLanguage(lang[index]);
 									
-								};
+								}
 							});
-				};
+				}
 			};
 			
 			localeButton.setRect(0, btnRealtime.bottom() + GAP, WIDTH,
@@ -315,7 +314,7 @@ public class WndSettings extends Window {
 			protected void onClick() {
 				PixelDungeon.classicFont(!PixelDungeon.classicFont());
 				createFontSelector(y);
-			};
+			}
 		};
 		
 		if(PixelDungeon.uiLanguage().equals("ko") ) {

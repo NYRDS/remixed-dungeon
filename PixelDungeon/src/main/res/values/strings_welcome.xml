@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="Welcome_Ok">Okay!</string>>
     <string name="Welcome_Title">Welcome!</string>
     <string name="Welcome_Text">
         Remixed Pixel Dungeon is a modification of Watabou\'s open source Pixel Dungeon.\n
@@ -61,5 +62,9 @@
         <string name="Welcome_Text_21_4">
         remix.21.4:\n
         - New rare weapon - sacrificial sword
+        </string>
+        <string name="Welcome_Text_21_5">
+        remix.21.5:\n
+        - New properties for old items
         </string>
 </resources>

@@ -17,14 +17,14 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import java.util.ArrayList;
-
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
+
+import java.util.ArrayList;
 
 public class WndOptions extends Window {
 
