@@ -84,9 +84,9 @@ public class WndSadGhost extends Window {
 	private void selectReward( Ghost ghost, Item item, Item reward ) {
 		
 		hide();
-		
-		item.detach( Dungeon.hero.belongings.backpack );
-		
+
+		Dungeon.hero.belongings.removeItem(item);
+
 		if (reward.doPickUp( Dungeon.hero )) {
 			GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
 		} else {
