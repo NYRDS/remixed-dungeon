@@ -68,7 +68,7 @@ public class CorpseDust extends Artifact {
 
 		@Override
 		public String toString() {
-			return Game.getVar(R.string.Fury_Info);
+			return Game.getVar(R.string.CorpseDust_UndeadRageAuraBuff);
 		}
 	}
 }

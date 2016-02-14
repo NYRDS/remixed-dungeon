@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -49,7 +51,7 @@ public class DriedRose extends Artifact {
 
 		@Override
 		public String toString() {
-			return "Rose";
+			return Game.getVar(R.string.DriedRose_OneWayLoveBuff);
 		}
 	}
 
@@ -61,7 +63,7 @@ public class DriedRose extends Artifact {
 
 		@Override
 		public String toString() {
-			return "Cursed Rose";
+			return Game.getVar(R.string.DriedRose_OneWayCursedLoveBuff);
 		}
 	}
 }
