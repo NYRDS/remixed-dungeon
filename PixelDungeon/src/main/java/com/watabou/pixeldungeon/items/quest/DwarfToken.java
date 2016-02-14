@@ -17,15 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class DwarfToken extends Item {
 	
 	{
-		name = Game.getVar(R.string.DwarfToken_Name);
 		image = ItemSpriteSheet.TOKEN;
 		
 		stackable = true;

@@ -46,7 +46,7 @@ public class DriedRose extends Artifact {
 	public class OneWayLoveBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
-			return BuffIndicator.HEART;
+			return BuffIndicator.ROSE;
 		}
 
 		@Override
@@ -58,7 +58,7 @@ public class DriedRose extends Artifact {
 	public class OneWayCursedLoveBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
-			return BuffIndicator.HEART;
+			return BuffIndicator.CURSED_ROSE;
 		}
 
 		@Override

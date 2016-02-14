@@ -17,15 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class DarkGold extends Item {
 	
 	{
-		name = Game.getVar(R.string.DarkGold_Name);
 		image = ItemSpriteSheet.ORE;
 		
 		stackable = true;

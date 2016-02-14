@@ -64,8 +64,8 @@ public class BuffIndicator extends Component {
 	public static final int DEFERRED	= 28;
 	public static final int VERTIGO		= 29;
 	public static final int ROSE        = 30;
-	public static final int CURSED_ROSE = 31;
-	public static final int RATTNESS    = 32;
+	public static final int CURSED_ROSE = ROSE;
+	public static final int RATTNESS    = HEART;
 	
 	public static final int SIZE	= 7;
 	

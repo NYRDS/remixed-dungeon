@@ -52,7 +52,6 @@ public class Pickaxe extends Weapon {
 	private static final Glowing BLOODY = new Glowing( 0x550000 );
 	
 	{
-		name = Game.getVar(R.string.Pickaxe_Name);
 		image = ItemSpriteSheet.PICKAXE;
 
 		defaultAction = AC_MINE;

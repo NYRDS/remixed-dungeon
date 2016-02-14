@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -40,12 +42,12 @@ public class RatSkull extends Artifact {
 	public class RatKingAuraBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
-			return BuffIndicator.HEART;
+			return BuffIndicator.RATTNESS;
 		}
 
 		@Override
 		public String toString() {
-			return "Rat aura";
+			return Game.getVar(R.string.RatSkull_Ratness);
 		}
 	}
 

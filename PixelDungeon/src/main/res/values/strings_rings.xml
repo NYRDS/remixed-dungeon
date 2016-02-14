@@ -103,8 +103,9 @@
     <string name="ChaosCrystal_BowFused">Crystal absorbs your bow, and took the form of a Bow</string>
     <string name="ChaosCrystal_StaffFused">Crystal absorbs your wand, and took the form of a Staff</string>
 
-    <string name="CorpseDust_UndeadRageAuraBuff">Undead rage aura</string>
-    <string name="DriedRose_OneWayLoveBuff">Rose</string>
-    <string name="DriedRose_OneWayCursedLoveBuff">Cursed Rose</string>
+    <string name="CorpseDust_UndeadRageAuraBuff">Bloodlust</string>
+    <string name="DriedRose_OneWayLoveBuff">Charming</string>
+    <string name="DriedRose_OneWayCursedLoveBuff">Amorous</string>
+    <string name="RatSkull_Ratness">Ratness</string>
     
 </resources>
