@@ -134,7 +134,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			long blockSize = stat.getBlockSize();
 			long availableBlocks = stat.getAvailableBlocks();
 			ret = availableBlocks * blockSize;
-		}	else {
+		} else {
 			ret = stat.getAvailableBytes();
 		}
 		ACRA.getErrorReporter().putCustomData("FreeInternalMemorySize", Long.toString(ret));
@@ -158,7 +158,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		String modStrings = String.format("strings_%s.json", lang);
 
-		if(ModdingMode.isResourceExistInMod(modStrings)) {
+		if (ModdingMode.isResourceExistInMod(modStrings)) {
 			parseStrings(modStrings);
 		} else if (ModdingMode.isResourceExistInMod("strings_en.json")) {
 			parseStrings("strings_en.json");
@@ -177,7 +177,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		shutdown();
 	}
 
-	public  static void shutdown() {
+	public static void shutdown() {
 		paused = true;
 		if (instance().scene != null) {
 			instance().scene.pause();
@@ -234,8 +234,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		keyToInt = new HashMap<>();
 
-		addMappingForClass( R.string.class);
-		addMappingForClass( R.array.class);
+		addMappingForClass(R.string.class);
+		addMappingForClass(R.array.class);
 
 		long mapEnd = System.nanoTime();
 		GLog.toFile("map creating time %f", (mapEnd - mapStart) / 1000000f);
@@ -247,7 +247,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			return;
 		}
 
-		if(!jsonFile.exists()) {
+		if (!jsonFile.exists()) {
 			return;
 		}
 
@@ -267,7 +267,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 				String keyString = entry.getString(0);
 				Integer key = keyToInt.get(keyString);
-				if(key == null){
+				if (key == null) {
 					toast("unknown key: [%s] in [%s] ignored ", keyString, resource);
 				}
 
@@ -343,7 +343,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		Music.INSTANCE.resume();
 		Sample.INSTANCE.resume();
 
-		if(doOnResume!=null) {
+		if (doOnResume != null) {
 			doOnResume.run();
 			doOnResume = null;
 		}
@@ -378,7 +378,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		}
 	}
 
-	@SuppressLint({ "Recycle", "ClickableViewAccessibility" })
+	@SuppressLint({"Recycle", "ClickableViewAccessibility"})
 	@Override
 	public boolean onTouch(View view, MotionEvent event) {
 		synchronized (motionEvents) {
@@ -529,7 +529,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public static String getVar(int id) {
 
-		if (instance()!= null && instance().stringMap !=null && instance().stringMap.containsKey(id)) {
+		if (instance() != null && instance().stringMap != null && instance().stringMap.containsKey(id)) {
 			return instance().stringMap.get(id);
 		}
 
@@ -545,7 +545,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
 				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey && id != R.string.testDevice) {
-			if (instance()!=null && instance().stringsMap.containsKey(id)) {
+			if (instance() != null && instance().stringsMap.containsKey(id)) {
 				return instance().stringsMap.get(id);
 			}
 		}
@@ -605,20 +605,21 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	private InterstitialPoint permissionsPoint;
-	public void doPermissionsRequest(InterstitialPoint returnTo,String[] permissions) {
+
+	public void doPermissionsRequest(InterstitialPoint returnTo, String[] permissions) {
 		boolean havePermissions = true;
-		for(String permission:permissions) {
+		for (String permission : permissions) {
 			int checkResult = ActivityCompat.checkSelfPermission(this, permission);
 			if (checkResult != PermissionChecker.PERMISSION_GRANTED) {
-					havePermissions = false;
-					break;
+				havePermissions = false;
+				break;
 			}
 		}
-		if(!havePermissions) {
+		if (!havePermissions) {
 			int code = 0;
 			permissionsPoint = returnTo;
 			ActivityCompat.requestPermissions(this, permissions, code);
-		}	else {
+		} else {
 			returnTo.returnToWork(true);
 		}
 	}
@@ -626,12 +627,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
 		boolean res = true;
 
-		if(permissions.length == 0) {
+		if (permissions.length == 0) {
 			res = false;
 		}
 
-		for(int grant:grantResults) {
-			if(grant!= PackageManager.PERMISSION_GRANTED) {
+		for (int grant : grantResults) {
+			if (grant != PackageManager.PERMISSION_GRANTED) {
 				res = false;
 				break;
 			}
