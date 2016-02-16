@@ -43,6 +43,11 @@ public class DriedRose extends Artifact {
 		return true;
 	}
 
+	@Override
+	public String info() {
+		return super.info() + "\n" + Game.getVar(R.string.DriedRose_Info2);
+	}
+
 	public class OneWayLoveBuff extends ArtifactBuff {
 		@Override
 		public int icon() {

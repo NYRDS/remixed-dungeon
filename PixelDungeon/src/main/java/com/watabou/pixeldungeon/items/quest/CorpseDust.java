@@ -45,6 +45,11 @@ public class CorpseDust extends Artifact {
 		return new UndeadRageAuraBuff();
 	}
 
+	@Override
+	public String info() {
+		return super.info() + "\n" + Game.getVar(R.string.CorpseDust_Info2);
+	}
+
 	public class UndeadRageAuraBuff extends ArtifactBuff {
 		@Override
 		public boolean act() {
