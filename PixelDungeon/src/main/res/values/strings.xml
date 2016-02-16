@@ -372,7 +372,7 @@
     <!-- PACKAGE /items/quest -->
     <!-- STRINGS OF CorpseDust CLASS -->
     <string name="CorpseDust_Name">corpse dust</string>
-    <string name="CorpseDust_Info">The ball of corpse dust doesn\'t differ outwardly from a regular dust ball. However, you know somehow that it\'s better to get rid of it as soon as possible.</string>
+    <string name="CorpseDust_Info">The ball of corpse dust doesn\'t differ outwardly from a regular dust ball. However, you know somehow that it\'s better to get rid of it as soon as possible. Maybe because just holding it makes you feel anxious and angry.</string>
 
     <!-- STRINGS OF DarkGold CLASS -->
     <string name="DarkGold_Name">dark gold ore</string>
@@ -380,7 +380,7 @@
 
     <!-- STRINGS OF DriedRose CLASS -->
     <string name="DriedRose_Name">dried rose</string>
-    <string name="DriedRose_Info">This rose dried up long ago, but it has somehow kept all its petals.</string>
+    <string name="DriedRose_Info">This rose dried up long time ago, yet it hasn\'t lost it\'s charm. It looks so pretty, that you almost feel that you want to keep it forever.</string>
 
     <!-- STRINGS OF DwarfToken CLASS -->
     <string name="DwarfToken_Name">dwarf token</string>
@@ -395,7 +395,7 @@
 
     <!-- STRINGS OF RatSkull CLASS -->
     <string name="RatSkull_Name">giant rat skull</string>
-    <string name="RatSkull_Info">It could be a nice hunting trophy, but it smells too bad to place it on a wall.</string>
+    <string name="RatSkull_Info">It could be a nice hunting trophy, but it smells too bad to place it on a wall. On the other hand, it demonstrates that owner is capable of killing rats, even big and smelly ones.</string>
 
     <!-- PACKAGE /actors/blobs -->
     <!-- STRINGS OF MissileWeapon CLASS -->
