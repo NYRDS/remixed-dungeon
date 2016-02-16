@@ -343,11 +343,11 @@ public class Item implements Bundlable {
 	public ItemSprite.Glowing glowing() {
 		return null;
 	}
-	
+
 	public String info() {
 		return desc();
 	}
-	
+
 	public String desc() {
 		return info;
 	}
