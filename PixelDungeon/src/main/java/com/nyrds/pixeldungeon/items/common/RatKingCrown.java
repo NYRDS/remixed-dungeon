@@ -30,7 +30,7 @@ public class RatKingCrown extends Artifact {
 
 		@Override
 		public String toString() {
-			return Game.getVar(R.string.RatSkull_Ratness);
+			return Game.getVar(R.string.RatKingCrown_Buff);
 		}
 	}
 }

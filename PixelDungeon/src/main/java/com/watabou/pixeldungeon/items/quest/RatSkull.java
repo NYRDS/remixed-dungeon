@@ -36,7 +36,7 @@ public class RatSkull extends Artifact {
 
 	@Override
 	protected ArtifactBuff buff() {
-		return new RatKingAuraBuff();
+		return new RatterAura();
 	}
 
 	@Override
@@ -44,15 +44,15 @@ public class RatSkull extends Artifact {
 		return super.info() + "\n\n" + Game.getVar(R.string.RatSkull_Info2);
 	}
 
-	public class RatKingAuraBuff extends ArtifactBuff {
+	public class RatterAura extends ArtifactBuff {
 		@Override
 		public int icon() {
-			return BuffIndicator.RATTNESS;
+			return BuffIndicator.RAT_SKULL;
 		}
 
 		@Override
 		public String toString() {
-			return Game.getVar(R.string.RatSkull_Ratness);
+			return Game.getVar(R.string.RatSkull_Buff);
 		}
 	}
 

@@ -68,12 +68,12 @@ public class CorpseDust extends Artifact {
 
 		@Override
 		public int icon() {
-			return BuffIndicator.FURY;
+			return BuffIndicator.BLOODLUST;
 		}
 
 		@Override
 		public String toString() {
-			return Game.getVar(R.string.CorpseDust_UndeadRageAuraBuff);
+			return Game.getVar(R.string.CorpseDust_Buff);
 		}
 	}
 }

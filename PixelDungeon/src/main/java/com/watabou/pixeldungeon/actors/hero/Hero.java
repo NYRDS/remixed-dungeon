@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
+import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -76,7 +77,6 @@ import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
-import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
@@ -701,14 +701,14 @@ public class Hero extends Char {
 
 	public void itemPickedUp(Item item) {
 		if (item instanceof Dewdrop) {
+			return;
+		}
 
+		if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
+				|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
+			GLog.p(TXT_YOU_NOW_HAVE, item.name());
 		} else {
-			if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
-					|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
-				GLog.p(TXT_YOU_NOW_HAVE, item.name());
-			} else {
-				GLog.i(TXT_YOU_NOW_HAVE, item.name());
-			}
+			GLog.i(TXT_YOU_NOW_HAVE, item.name());
 		}
 	}
 
@@ -1465,7 +1465,7 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		if (enemy instanceof Rat && buff(RatSkull.RatKingAuraBuff.class) != null) {
+		if (enemy instanceof Rat && buff(RatKingCrown.RatKingAuraBuff.class) != null) {
 			Rat rat = (Rat) enemy;
 			Mob.makePet(rat, this);
 		} else {

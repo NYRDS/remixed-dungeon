@@ -17,16 +17,20 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
+import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.sprites.RatSprite;
 import com.watabou.utils.Random;
 
 public class Rat extends Mob {
 
-	{
+	public Rat() {
 		spriteClass = RatSprite.class;
-		
 		hp(ht(8));
 		defenseSkill = 3;
 		
@@ -47,7 +51,18 @@ public class Rat extends Mob {
 	public int dr() {
 		return 1;
 	}
-	
+
+	@Override
+	protected boolean canAttack(Char enemy) {
+		if(enemy.buff(RatSkull.RatterAura.class) != null) {
+			new Flare( 5, 32 ).color( 0xFF0000, true ).show( getSprite(), 2f );
+			Terror terror = Buff.affect(this, Terror.class, Terror.DURATION);
+			terror.source = enemy;
+			return false;
+		}
+		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && !pacified;
+	}
+
 	@Override
 	public void die( Object cause ) {
 		Ghost.Quest.process( getPos() );
