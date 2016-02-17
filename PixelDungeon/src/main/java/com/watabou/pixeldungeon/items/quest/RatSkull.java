@@ -41,7 +41,7 @@ public class RatSkull extends Artifact {
 
 	@Override
 	public String info() {
-		return super.info() + "\n" + Game.getVar(R.string.RatSkull_Info2);
+		return super.info() + "\n\n" + Game.getVar(R.string.RatSkull_Info2);
 	}
 
 	public class RatKingAuraBuff extends ArtifactBuff {
