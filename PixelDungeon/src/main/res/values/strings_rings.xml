@@ -107,5 +107,9 @@
     <string name="DriedRose_OneWayLoveBuff">Charming</string>
     <string name="DriedRose_OneWayCursedLoveBuff">Amorous</string>
     <string name="RatSkull_Ratness">Ratness</string>
-    
+
+    <!-- STRINGS OF RatKingCrown CLASS -->
+    <string name="RatKingCrown_Name">Crown of rat king</string>
+    <string name="RatKingCrown_Info">Gold crown of His Ratness, symbol of everrating Power</string>
+
 </resources>

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
@@ -39,6 +40,9 @@ public class RatKing extends NPC {
 		
 		hp(ht(30));
 		EXP = 1;
+
+		lootChance = 1;
+		loot = new RatKingCrown();
 	}
 	
 	@Override
@@ -86,8 +90,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void add( Buff buff ) {
-		if(friendly()){
-		} else {
+		if (!friendly()) {
 			super.add(buff);
 		}
 	}

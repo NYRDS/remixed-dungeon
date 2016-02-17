@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class SacrificialSword extends SpecialWeapon {
 	{
