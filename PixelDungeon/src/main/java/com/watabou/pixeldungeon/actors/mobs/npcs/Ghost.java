@@ -324,7 +324,7 @@ public class Ghost extends NPC {
 	
 	public static class FetidRat extends Mob {
 
-		{
+		public FetidRat() {
 			spriteClass = FetidRatSprite.class;
 			
 			hp(ht(15));
@@ -334,6 +334,8 @@ public class Ghost extends NPC {
 			maxLvl = 5;	
 			
 			state = WANDERING;
+			lootChance = 1;
+			loot = new RatSkull();
 		}
 		
 		@Override
@@ -353,19 +355,10 @@ public class Ghost extends NPC {
 		
 		@Override
 		public int defenseProc( Char enemy, int damage ) {
-			
 			GameScene.add( Blob.seed( getPos(), 20, ParalyticGas.class ) );
-			
 			return super.defenseProc(enemy, damage);
 		}
-		
-		@Override
-		public void die( Object cause ) {
-			super.die( cause );
-			
-			Dungeon.level.drop( new RatSkull(), getPos() ).sprite.drop();
-		}
-		
+
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 		static {
 			IMMUNITIES.add( Paralysis.class );

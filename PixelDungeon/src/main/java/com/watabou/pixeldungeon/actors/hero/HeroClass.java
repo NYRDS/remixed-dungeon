@@ -18,6 +18,7 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -118,6 +119,7 @@ public enum HeroClass {
 		hero.collect(new RatSkull());
 		hero.collect(new DriedRose());
 		hero.collect(new CorpseDust());
+		hero.collect(new RatKingCrown());
 	}
 
 	private static void initCommon(Hero hero) {
