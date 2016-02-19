@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/rings-->
   <!--STRINGS OF Ring CLASS-->
@@ -84,4 +84,12 @@
   <string name="ChaosCrystal_SwordFused">Кристалл слился с твоим оружием и принял форму Меча</string>
   <string name="ChaosCrystal_BowFused">Кристалл слился с твоим оружием и принял форму Лука</string>
   <string name="ChaosCrystal_StaffFused">Кристалл слился с твоим оружием и принял форму Посоха</string>
+  <string name="CorpseDust_Buff">Жажда крови</string>
+  <string name="DriedRose_Buff">Очаровательный</string>
+  <string name="DriedRose_CursedBuff">Влюбчивый</string>
+  <string name="RatSkull_Buff">Крысобой</string>
+  <string name="RatKingCrown_Buff">Крыссность</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">Корона крысиного короля</string>
+  <string name="RatKingCrown_Info">Золотая корона Его Крыссности, символ его власти </string>
 </resources>
