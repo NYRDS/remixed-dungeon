@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Pixel Dungeon Remix</string>
+  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Многие искатели приключений и путешественники спускались в Подземелье до тебя. Некоторые возвращались, наделённые несметными богатствами и волшебными артефактами, но большинство попусту сгинуло. Но никому не удалось заполучить Амулет Эндора, согласно легендам, сокрытый в глубинах Подземелья.\n\nТы чувствуешь, что готов к этому испытанию и, что немаловажно, веришь, что удача на твоей стороне. Пришло время начать своё приключение!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -321,12 +321,14 @@
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">трупная пыль</string>
   <string name="CorpseDust_Info">Горстка трупной пыли неотличима от пыли обыкновенной. Хотя тебя не покидает чувство, что лучше от неё избавится как можно скорее.</string>
+  <string name="CorpseDust_Info2">Достаточно взять её в руку чтобы почувствовать беспокойство и гнев. </string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">самородок мракозлата</string>
   <string name="DarkGold_Info">Этот металл зовётся мрачным не из-за его цвета (он не отличим от простого золота), а из-за того, что тает на солнечном свету, в связи с чем его невозможно использовать на поверхности.</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">сухая роза</string>
   <string name="DriedRose_Info">Эта роза иссохла много лет тому назад, но, несмотря на это, сохранила каждый лепесток.</string>
+  <string name="DriedRose_Info2">Однако она не потеряла своего очарования. Она так прекрасна, что ты хочешь оставить её себе... Навсегда.</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">дворфийский жетон</string>
   <string name="DwarfToken_Info">Многие дворфы и их наиболее массивные творения носили эти маленькие металлические штучки. Для чего они нужны, остаётся загадкой. Может, это были украшения или, своего рода, удостоверения. Дворфы - странный народец.</string>
@@ -339,6 +341,7 @@
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">череп гигантской крысы</string>
   <string name="RatSkull_Info">Он мог бы стать неплохим трофеем, но не хотелось бы вешать на стену нечто столь зловонное.</string>
+  <string name="RatSkull_Info2">Но с другой стороны, сразу видно что его владелец может убивать крыс, даже больших и мерзких.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <string name="ConfusionGas_Info">Здесь витает облако дурманящего газа.</string>

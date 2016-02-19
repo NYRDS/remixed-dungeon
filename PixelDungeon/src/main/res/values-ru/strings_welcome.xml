@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
+  <string name="Welcome_Ok">Ладушки!</string>
   <string name="Welcome_Title">Добро пожаловать!</string>
   <string name="Welcome_Text">
 Remixed Pixel Dungeon - это модификация свободной Pixel Dungeon от Watabou.\n
@@ -57,4 +58,7 @@ remix.21.3:\n
   <string name="Welcome_Text_21_4">
 remix.21.4:\n
 - Новое редкое оружие - меч для жертвоприношений</string>
+  <string name="Welcome_Text_21_5">
+remix.21.5:\n
+- Новые свойства для старых предметов</string>
 </resources>
