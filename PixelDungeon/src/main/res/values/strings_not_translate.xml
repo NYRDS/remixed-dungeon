@@ -15,7 +15,7 @@
     <string name="Pet_Desc"></string>
     
     <string-array name="known_mods">
-        <item>[\"PD Mini\", \"https://github.com/NYRDS/PD_mini-RPD-MOD/archive/mini.0.9.1.zip\"]</item>
+        <item>[\"PD Mini\", \"https://github.com/NYRDS/PD_mini-RPD-MOD/archive/mini.0.10.zip\"]</item>
     </string-array>
     
     <string name = "Mod_Name"></string>
