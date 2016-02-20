@@ -382,7 +382,7 @@
     <!-- STRINGS OF DriedRose CLASS -->
     <string name="DriedRose_Name">dried rose</string>
     <string name="DriedRose_Info">This rose dried up long time ago, but it has somehow kept all its petals.</string>
-	<string name="DriedRose_Info2"> And it hasn\'t lost it\'s charm. It looks so pretty, that you almost feel that you want to keep it forever.</string>
+	<string name="DriedRose_Info2"> And it hasn\'t lost it\'s charm. It looks so pretty, that you want to keep it forever.</string>
 
     <!-- STRINGS OF DwarfToken CLASS -->
     <string name="DwarfToken_Name">dwarf token</string>

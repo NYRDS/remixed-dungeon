@@ -228,10 +228,5 @@ public class Ring extends Artifact {
 			
 			return true;
 		}
-		
-		@Override
-		public boolean dontPack(){
-			return true;
-		}
 	}
 }

@@ -93,6 +93,10 @@ public class Artifact extends EquipableItem {
 	}
 	
 	public class ArtifactBuff extends Buff {
+		@Override
+		public boolean dontPack(){
+			return true;
+		}
 	}
 
 	public String getText() {
