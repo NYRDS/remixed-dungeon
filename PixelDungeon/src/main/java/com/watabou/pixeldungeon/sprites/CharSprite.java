@@ -368,9 +368,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	}
 	
 	public void showSleep() {
-		if (emo instanceof EmoIcon.Sleep) {
-			
-		} else {
+		if (!(emo instanceof EmoIcon.Sleep)) {
 			removeEmo();
 			emo = new EmoIcon.Sleep( this );
 		}
@@ -383,11 +381,9 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	}
 	
 	public void showMindControl() {
-		if (emo instanceof EmoIcon.Controlled) {
-
-		} else {
+		if (!(emo instanceof EmoIcon.Controlled)) {
 			removeEmo();
-			
+
 			if(ch!= null && ch.isAlive()){
 				emo = new EmoIcon.Controlled(this);
 			}
@@ -395,9 +391,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	}
 
 	public void showAlert() {
-		if (emo instanceof EmoIcon.Alert) {
-			
-		} else {
+		if (!(emo instanceof EmoIcon.Alert)) {
 			removeEmo();
 			emo = new EmoIcon.Alert( this );
 		}
