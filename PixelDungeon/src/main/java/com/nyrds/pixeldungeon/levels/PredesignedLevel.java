@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.android.util.JsonHelper;
+import com.watabou.pixeldungeon.levels.CommonLevel;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.nyrds.android.util.JsonHelper;
-import com.watabou.pixeldungeon.levels.CommonLevel;
 
 public class PredesignedLevel extends CommonLevel {
 
