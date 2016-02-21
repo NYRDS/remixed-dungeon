@@ -1630,8 +1630,8 @@ public class Hero extends Char {
 		return (HeroSprite) getSprite();
 	}
 
-	public static interface Doom {
-		public void onDeath();
+	public interface Doom {
+		void onDeath();
 	}
 
 	public void updateLook() {
