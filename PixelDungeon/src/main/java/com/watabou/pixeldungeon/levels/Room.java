@@ -64,7 +64,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	public int distance;
 	public int price = 1;
 	
-	public static enum Type {
+	public enum Type {
 		NULL( null ),
 		STANDARD	( StandardPainter.class ),
 		ENTRANCE	( EntrancePainter.class ),

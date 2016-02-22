@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.utils;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
+import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
@@ -81,6 +82,7 @@ public class DungeonGenerator {
 		
 		registerLevelClass(PredesignedLevel.class);
 		registerLevelClass(GutsLevel.class);
+		registerLevelClass(ShadowLordLevel.class);
 	}
 
 	public static String getEntryLevelKind() {

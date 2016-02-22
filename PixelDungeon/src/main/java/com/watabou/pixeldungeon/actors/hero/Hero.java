@@ -95,6 +95,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -1417,7 +1418,7 @@ public class Hero extends Char {
 			if (discoverable[i]) {
 
 				visited[i] = true;
-				if ((Terrain.flags[terr] & Terrain.SECRET) != 0) {
+				if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
 					Dungeon.level.set(i, Terrain.discover(terr));
 					GameScene.updateMap(i);
 				}

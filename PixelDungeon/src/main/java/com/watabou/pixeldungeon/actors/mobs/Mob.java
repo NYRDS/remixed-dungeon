@@ -48,7 +48,6 @@ public abstract class Mob extends Char {
 
 	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
 
-	protected static final String TXT_NOTICE1 = "?!";
 	protected static final String TXT_RAGE = "#$%^";
 	protected static final String TXT_EXP = "%+dEXP";
 

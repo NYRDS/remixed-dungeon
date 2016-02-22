@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -51,7 +52,7 @@ public class ScrollOfMagicMapping extends Scroll {
 			if (discoverable[i]) {
 				
 				mapped[i] = true;
-				if ((Terrain.flags[terr] & Terrain.SECRET) != 0) {
+				if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
 					
 					Dungeon.level.set( i, Terrain.discover( terr ) );						
 					GameScene.updateMap( i );
