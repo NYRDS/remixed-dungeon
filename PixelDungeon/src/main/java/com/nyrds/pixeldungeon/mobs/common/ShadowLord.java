@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
@@ -114,6 +115,30 @@ public class ShadowLord extends Boss {
 		if (Math.random() < 0.1f) {
 			spawnWraith();
 			return;
+		}
+	}
+
+
+	@Override
+	protected boolean canAttack( Char enemy ) {
+		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
+	}
+
+	@Override
+	protected boolean doAttack( Char enemy ) {
+
+		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
+			return super.doAttack( enemy );
+		} else {
+
+			getSprite().zap( enemy.getPos() );
+
+			spend( 1 );
+
+			if (hit( this, enemy, true )) {
+				enemy.damage(damageRoll(), this);
+			}
+			return true;
 		}
 	}
 

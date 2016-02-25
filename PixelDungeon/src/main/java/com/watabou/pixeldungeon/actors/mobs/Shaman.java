@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
@@ -31,10 +31,9 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ShamanSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-public class Shaman extends Mob implements Callback {
+public class Shaman extends Mob {
 
 	private static final float TIME_TO_ZAP	= 2f;
 	
@@ -148,9 +147,4 @@ public class Shaman extends Mob implements Callback {
 			return !visible;
 		}
 	}
-	
-	@Override
-	public void call() {
-		next();
-	}	
 }

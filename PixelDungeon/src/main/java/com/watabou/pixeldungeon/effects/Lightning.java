@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import javax.microedition.khronos.opengles.GL10;
-
 import android.opengl.GLES20;
 
 import com.watabou.noosa.Game;
@@ -30,6 +28,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class Lightning extends Group {
 

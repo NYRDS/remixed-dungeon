@@ -2,6 +2,7 @@
    "texture" = "mobs/shadowlord.png",
    "width" = 16,
    "height" = 16,
+   "zapEffect" = "Shadow",
    "idle" = {
       "fps" = 5,
       "looped" = true,
@@ -15,7 +16,12 @@
    "attack" = {
       "fps" = 12,
       "looped" = false,
-      "frames" = [5,6,7,8,9]
+      "frames" = [4,5,6]
+    },
+   "zap" = {
+      "fps" = 12,
+      "looped" = false,
+      "frames" = [7,8,9]
    },
    "die" = {
       "fps" = 12,
