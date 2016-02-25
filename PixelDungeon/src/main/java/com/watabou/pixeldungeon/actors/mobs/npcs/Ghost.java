@@ -164,15 +164,11 @@ public class Ghost extends NPC {
 	public static class Quest {
 		
 		private static boolean spawned;
-		
 		private static boolean alternative;
-		
 		private static boolean given;
-
 		private static boolean processed;
 
 		private static int depth;
-		
 		private static int left2kill;
 		
 		public static Weapon weapon;

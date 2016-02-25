@@ -24,10 +24,10 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
@@ -108,10 +108,9 @@ public enum HeroClass {
 	}
 
 	private static void initDebug(Hero hero) {
-		hero.collect(new TomeOfMastery());
-		
-		hero.collect(new LloydsBeacon());
-
+		for(int i = 0;i<10;i++) {
+			hero.collect(new PotionOfMindVision());
+		}
 		hero.ht(100);
 		hero.hp(100);
 		hero.attackSkill = 100;

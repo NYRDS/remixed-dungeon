@@ -108,9 +108,9 @@ public class Item implements Bundlable {
 		}
 	}
 	
-	public void doDrop( Hero hero ) {	
-		hero.spendAndNext( TIME_TO_DROP );			
-		Dungeon.level.drop( detachAll( hero.belongings.backpack ), hero.getPos() ).sprite.drop( hero.getPos() );
+	public void doDrop( Hero hero ) {
+		hero.spendAndNext( TIME_TO_DROP );
+		Dungeon.level.drop( detachAll( hero.belongings.backpack ), hero.getPos() ).sprite.drop(hero.getPos());
 	}
 	
 	public void doThrow( Hero hero ) {
@@ -140,7 +140,7 @@ public class Item implements Bundlable {
 	protected void onThrow( int cell ) {
 		Heap heap = Dungeon.level.drop( this, cell );
 		if (!heap.isEmpty()) {
-			heap.sprite.drop( cell );
+			heap.sprite.drop(cell);
 		}
 	}
 	
@@ -293,11 +293,13 @@ public class Item implements Bundlable {
 				this.equals(hero.belongings.armor) ||
 				this.equals(hero.belongings.ring1) ||
 				this.equals(hero.belongings.ring2);
-
 	}
 
 	public void removeItemFrom(Hero hero) {
 		onDetach();
+		if(this instanceof EquipableItem) {
+			((EquipableItem)this).doUnequip(hero, false);
+		}
 		hero.belongings.removeItem(this);
 		updateQuickslot();
 	}
@@ -416,7 +418,6 @@ public class Item implements Bundlable {
 		if (this == QuickSlot.getItem(2)) {
 			bundle.put( QUICKSLOT_3, true );
 		}
-		
 	}
 	
 	@Override

@@ -16,70 +16,71 @@ public class Artifact extends EquipableItem {
 	protected Buff buff;
 
 	@Override
-	public boolean doEquip( Hero hero ) {
-		
+	public boolean doEquip(Hero hero) {
+		setCurUser(hero);
+
 		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null) {
-			
+
 			GLog.w(Game.getVar(R.string.Ring_Info1));
 			return false;
-			
+
 		} else {
-			
+
 			if (hero.belongings.ring1 == null) {
 				hero.belongings.ring1 = this;
 			} else {
 				hero.belongings.ring2 = this;
 			}
-			
-			detach( hero.belongings.backpack );
-			
-			activate( hero );
-			
+
+			detach(hero.belongings.backpack);
+
+			activate(hero);
+
 			cursedKnown = true;
 			if (cursed) {
-				equipCursed( hero );
+				equipCursed(hero);
 				GLog.n(String.format(Game.getVar(R.string.Ring_Info2), this));
 			}
-			hero.spendAndNext( Artifact.TIME_TO_EQUIP );
+			hero.spendAndNext(Artifact.TIME_TO_EQUIP);
 			return true;
 		}
 	}
 
 	@Override
-	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
-		if (super.doUnequip( hero, collect, single )) {
-			
+	public boolean doUnequip(Hero hero, boolean collect, boolean single) {
+		if (super.doUnequip(hero, collect, single)) {
+
 			if (hero.belongings.ring1 == this) {
 				hero.belongings.ring1 = null;
 			} else {
 				hero.belongings.ring2 = null;
 			}
-			
-			hero.remove( buff );
+
+			hero.remove(buff);
 			buff = null;
-			
+
 			return true;
 		} else {
 			return false;
 		}
 	}
-	
+
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		actions.add( isEquipped( hero ) ? AC_UNEQUIP : AC_EQUIP );
+	public ArrayList<String> actions(Hero hero) {
+		ArrayList<String> actions = super.actions(hero);
+		actions.add(isEquipped(hero) ? AC_UNEQUIP : AC_EQUIP);
 		return actions;
 	}
-	
+
 	@Override
-	public boolean isEquipped( Hero hero ) {
+	public boolean isEquipped(Hero hero) {
 		return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
 	}
 
-	public void activate( Char ch ) {
+	public void activate(Char ch) {
 		buff = buff();
-		if(buff != null) {
-			buff.attachTo( ch );
+		if (buff != null) {
+			buff.attachTo(ch);
 		}
 	}
 
@@ -87,14 +88,14 @@ public class Artifact extends EquipableItem {
 	public boolean isUpgradable() {
 		return false;
 	}
-	
+
 	protected ArtifactBuff buff() {
 		return null;
 	}
-	
+
 	public class ArtifactBuff extends Buff {
 		@Override
-		public boolean dontPack(){
+		public boolean dontPack() {
 			return true;
 		}
 	}

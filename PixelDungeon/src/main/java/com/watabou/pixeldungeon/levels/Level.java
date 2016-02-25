@@ -548,15 +548,15 @@ public abstract class Level implements Bundlable {
 	protected void buildFlagMaps() {
 
 		for (int i = 0; i < getLength(); i++) {
-			int flags = Terrain.flags[map[i]];
-			passable[i] = (flags & Terrain.PASSABLE) != 0;
-			losBlocking[i] = (flags & Terrain.LOS_BLOCKING) != 0;
-			flammable[i] = (flags & Terrain.FLAMABLE) != 0;
-			secret[i] = (flags & Terrain.SECRET) != 0;
-			solid[i] = (flags & Terrain.SOLID) != 0;
-			avoid[i] = (flags & Terrain.AVOID) != 0;
-			water[i] = (flags & Terrain.LIQUID) != 0;
-			pit[i] = (flags & Terrain.PIT) != 0;
+			int flags = TerrainFlags.flags[map[i]];
+			passable[i] = (flags & TerrainFlags.PASSABLE) != 0;
+			losBlocking[i] = (flags & TerrainFlags.LOS_BLOCKING) != 0;
+			flammable[i] = (flags & TerrainFlags.FLAMABLE) != 0;
+			secret[i] = (flags & TerrainFlags.SECRET) != 0;
+			solid[i] = (flags & TerrainFlags.SOLID) != 0;
+			avoid[i] = (flags & TerrainFlags.AVOID) != 0;
+			water[i] = (flags & TerrainFlags.LIQUID) != 0;
+			pit[i] = (flags & TerrainFlags.PIT) != 0;
 		}
 
 		int lastRow = getLength() - getWidth();
@@ -588,7 +588,7 @@ public abstract class Level implements Bundlable {
 			if (water[i]) {
 				int t = Terrain.WATER_TILES;
 				for (int j = 0; j < NEIGHBOURS4.length; j++) {
-					if ((Terrain.flags[map[i + NEIGHBOURS4[j]]] & Terrain.UNSTITCHABLE) != 0) {
+					if ((TerrainFlags.flags[map[i + NEIGHBOURS4[j]]] & TerrainFlags.UNSTITCHABLE) != 0) {
 						t += 1 << j;
 					}
 				}
@@ -602,7 +602,7 @@ public abstract class Level implements Bundlable {
 						map[i] = Terrain.CHASM_FLOOR_SP;
 					} else if (water[i - getWidth()]) {
 						map[i] = Terrain.CHASM_WATER;
-					} else if ((Terrain.flags[c] & Terrain.UNSTITCHABLE) != 0) {
+					} else if ((TerrainFlags.flags[c] & TerrainFlags.UNSTITCHABLE) != 0) {
 						map[i] = Terrain.CHASM_WALL;
 					} else {
 						map[i] = Terrain.CHASM_FLOOR;
@@ -645,14 +645,14 @@ public abstract class Level implements Bundlable {
 	public void set(int cell, int terrain) {
 		Painter.set(this, cell, terrain);
 
-		int flags = Terrain.flags[terrain];
-		passable[cell] = (flags & Terrain.PASSABLE) != 0;
-		losBlocking[cell] = (flags & Terrain.LOS_BLOCKING) != 0;
-		flammable[cell] = (flags & Terrain.FLAMABLE) != 0;
-		secret[cell] = (flags & Terrain.SECRET) != 0;
-		solid[cell] = (flags & Terrain.SOLID) != 0;
-		avoid[cell] = (flags & Terrain.AVOID) != 0;
-		pit[cell] = (flags & Terrain.PIT) != 0;
+		int flags = TerrainFlags.flags[terrain];
+		passable[cell] = (flags & TerrainFlags.PASSABLE) != 0;
+		losBlocking[cell] = (flags & TerrainFlags.LOS_BLOCKING) != 0;
+		flammable[cell] = (flags & TerrainFlags.FLAMABLE) != 0;
+		secret[cell] = (flags & TerrainFlags.SECRET) != 0;
+		solid[cell] = (flags & TerrainFlags.SOLID) != 0;
+		avoid[cell] = (flags & TerrainFlags.AVOID) != 0;
+		pit[cell] = (flags & TerrainFlags.PIT) != 0;
 		water[cell] = terrain == Terrain.WATER
 				|| terrain >= Terrain.WATER_TILES;
 	}
@@ -992,7 +992,7 @@ public abstract class Level implements Bundlable {
 			return Game.getVar(R.string.Level_TileWater);
 		}
 
-		if (tile != Terrain.CHASM && (Terrain.flags[tile] & Terrain.PIT) != 0) {
+		if (tile != Terrain.CHASM && (TerrainFlags.flags[tile] & TerrainFlags.PIT) != 0) {
 			return tileName(Terrain.CHASM);
 		}
 
@@ -1121,7 +1121,7 @@ public abstract class Level implements Bundlable {
 			if (tile >= Terrain.WATER_TILES) {
 				return tileDesc(Terrain.WATER);
 			}
-			if ((Terrain.flags[tile] & Terrain.PIT) != 0) {
+			if ((TerrainFlags.flags[tile] & TerrainFlags.PIT) != 0) {
 				return tileDesc(Terrain.CHASM);
 			}
 			return "";

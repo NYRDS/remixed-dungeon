@@ -1,7 +1,9 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
+import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
@@ -29,17 +31,10 @@ import java.util.HashMap;
 
 public class DungeonGenerator {
 	public static final String DEAD_END_LEVEL = "DeadEndLevel";
-	public static final String LAST_LEVEL = "LastLevel";
-	public static final String LAST_SHOP_LEVEL = "LastShopLevel";
-	public static final String HALLS_BOSS_LEVEL = "HallsBossLevel";
 	public static final String HALLS_LEVEL = "HallsLevel";
-	public static final String CITY_BOSS_LEVEL = "CityBossLevel";
 	public static final String CITY_LEVEL = "CityLevel";
-	public static final String CAVES_BOSS_LEVEL = "CavesBossLevel";
 	public static final String CAVES_LEVEL = "CavesLevel";
-	public static final String PRISON_BOSS_LEVEL = "PrisonBossLevel";
 	public static final String PRISON_LEVEL = "PrisonLevel";
-	public static final String SEWER_BOSS_LEVEL = "SewerBossLevel";
 	public static final String SEWER_LEVEL = "SewerLevel";
 	public static final String SPIDER_LEVEL = "SpiderLevel";
 
@@ -86,6 +81,8 @@ public class DungeonGenerator {
 		registerLevelClass(DeadEndLevel.class);
 		
 		registerLevelClass(PredesignedLevel.class);
+		registerLevelClass(GutsLevel.class);
+		registerLevelClass(ShadowLordLevel.class);
 	}
 
 	public static String getEntryLevelKind() {
@@ -135,7 +132,7 @@ public class DungeonGenerator {
 			
 			next.cellId = -1;
 
-			if (descend && current.levelId != getEntryLevel()) {
+			if (descend && !current.levelId.equals(getEntryLevel())) {
 				if (Dungeon.level != null) {
 					if (current.cellId == Dungeon.level.secondaryExit) {
 						next.cellId = -2;
@@ -144,7 +141,7 @@ public class DungeonGenerator {
 				}
 			}
 			
-			if (descend == false) {
+			if (!descend) {
 				if(currentLevel.length()>2) {
 					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
 					switch (exitIndex) {

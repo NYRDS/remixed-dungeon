@@ -82,10 +82,9 @@ public class WndWandmaker extends Window {
 	}
 	
 	private void selectReward( WandMaker wandmaker, Item item, Wand reward ) {
-		
 		hide();
 
-		Dungeon.hero.belongings.removeItem(item);
+		item.removeItemFrom(Dungeon.hero);
 
 		reward.identify();
 		if (reward.doPickUp( Dungeon.hero )) {
