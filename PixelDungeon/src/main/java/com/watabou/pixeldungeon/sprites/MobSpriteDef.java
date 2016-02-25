@@ -1,24 +1,32 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.android.util.JsonHelper;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.effects.Lightning;
+import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.utils.Callback;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import com.nyrds.android.util.JsonHelper;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.TextureFilm;
-import com.watabou.pixeldungeon.actors.Char;
-
 public class MobSpriteDef extends MobSprite {
 
-	private int bloodColor;
+	private int     bloodColor;
 	private boolean levitating;
-	private int framesInRow;
-	private int kind;
+	private int     framesInRow;
+	private int     kind;
+	private String  zapEffect;
+	Callback        zapCallback;
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
@@ -28,7 +36,7 @@ public class MobSpriteDef extends MobSprite {
 		super();
 
 		name = defName;
-		
+
 		if (!defMap.containsKey(name)) {
 			defMap.put(name, JsonHelper.readFile(name));
 		}
@@ -61,6 +69,17 @@ public class MobSpriteDef extends MobSprite {
 				zap = readAnimation(json, "zap", film);
 			} else {
 				zap = attack.clone();
+			}
+
+			if (json.has("zapEffect")) {
+				zapEffect = json.getString("zapEffect");
+
+				zapCallback = new Callback() {
+					@Override
+					public void call() {
+						ch.onZapComplete();
+					}
+				};
 			}
 
 		} catch (Exception e) {
@@ -104,6 +123,34 @@ public class MobSpriteDef extends MobSprite {
 		super.die();
 		if (levitating) {
 			remove(State.LEVITATING);
+		}
+	}
+
+	@Override
+	public void zap(int cell) {
+
+		turnTo(ch.getPos(), cell);
+		play(zap);
+
+		if (zapEffect != null) {
+			int[] points = new int[2];
+			points[0] = ch.getPos();
+			points[1] = cell;
+			if(zapEffect.equals("Lightning")) {
+				getParent().add(new Lightning(points, 2, zapCallback));
+				return;
+			}
+
+			if(zapEffect.equals("Shadow")) {
+				MagicMissile.shadow(getParent(), ch.getPos(), cell, zapCallback);
+				Sample.INSTANCE.play(Assets.SND_ZAP);
+				return;
+			}
+
+			if(zapEffect.equals("Fire")) {
+				MagicMissile.fire(getParent(), ch.getPos(), cell, zapCallback);
+				return;
+			}
 		}
 	}
 

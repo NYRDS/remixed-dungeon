@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.mobs.Shaman;
 import com.watabou.pixeldungeon.effects.Lightning;
+import com.watabou.utils.Callback;
 
 public class ShamanSprite extends MobSprite {
 	
@@ -55,7 +55,12 @@ public class ShamanSprite extends MobSprite {
 		
 		points[0] = ch.getPos();
 		points[1] = pos;
-		getParent().add( new Lightning( points, 2, (Shaman)ch ) );
+		getParent().add( new Lightning( points, 2, new Callback() {
+			@Override
+			public void call() {
+				ch.onZapComplete();
+			}
+		} ) );
 		
 		turnTo( ch.getPos(), pos );
 		play( zap );
