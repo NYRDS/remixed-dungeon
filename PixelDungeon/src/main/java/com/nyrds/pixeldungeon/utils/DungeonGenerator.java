@@ -31,19 +31,19 @@ import java.util.HashMap;
 
 public class DungeonGenerator {
 	public static final String DEAD_END_LEVEL = "DeadEndLevel";
-	public static final String HALLS_LEVEL = "HallsLevel";
-	public static final String CITY_LEVEL = "CityLevel";
-	public static final String CAVES_LEVEL = "CavesLevel";
-	public static final String PRISON_LEVEL = "PrisonLevel";
-	public static final String SEWER_LEVEL = "SewerLevel";
-	public static final String SPIDER_LEVEL = "SpiderLevel";
+	public static final String HALLS_LEVEL    = "HallsLevel";
+	public static final String CITY_LEVEL     = "CityLevel";
+	public static final String CAVES_LEVEL    = "CavesLevel";
+	public static final String PRISON_LEVEL   = "PrisonLevel";
+	public static final String SEWER_LEVEL    = "SewerLevel";
+	public static final String SPIDER_LEVEL   = "SpiderLevel";
 
 	static JSONObject mDungeonMap;
 	static JSONObject mLevels;
 	static JSONObject mGraph;
 
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
-	private static HashMap<String, Integer> mStoryMap;
+	private static HashMap<String, Integer>                mStoryMap;
 
 	private static void registerLevelClass(Class<? extends Level> levelClass) {
 		mLevelKindList.put(levelClass.getSimpleName(), levelClass);
@@ -79,7 +79,7 @@ public class DungeonGenerator {
 		registerLevelClass(HallsBossLevel.class);
 		registerLevelClass(LastLevel.class);
 		registerLevelClass(DeadEndLevel.class);
-		
+
 		registerLevelClass(PredesignedLevel.class);
 		registerLevelClass(GutsLevel.class);
 		registerLevelClass(ShadowLordLevel.class);
@@ -110,26 +110,26 @@ public class DungeonGenerator {
 			throw new RuntimeException(e);
 		}
 	}
-	
+
 	public static Position ascend(Position current) {
 		return descendOrAscend(current, false);
 	}
 
 	private static Position descendOrAscend(Position current, boolean descend) {
 		initLevelsMap();
-		
+
 		try {
-			
-			if(current.levelId.equals("unknown")) {
+
+			if (current.levelId.equals("unknown")) {
 				current.levelId = guessLevelId(current.levelKind, current.levelDepth);
 			}
-			
+
 			JSONArray currentLevel = mGraph.getJSONArray(current.levelId);
 
 			JSONArray nextLevelSet = currentLevel.getJSONArray(descend ? 0 : 1);
 			Position next = new Position();
 			int index = 0;
-			
+
 			next.cellId = -1;
 
 			if (descend && !current.levelId.equals(getEntryLevel())) {
@@ -140,17 +140,17 @@ public class DungeonGenerator {
 					}
 				}
 			}
-			
+
 			if (!descend) {
-				if(currentLevel.length()>2) {
+				if (currentLevel.length() > 2) {
 					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
 					switch (exitIndex) {
-					case 1:
-						next.cellId = -1;
-						break;
-					case 2:
-						next.cellId = -2;
-						break;
+						case 1:
+							next.cellId = -1;
+							break;
+						case 2:
+							next.cellId = -2;
+							break;
 					}
 				}
 			}
@@ -161,7 +161,7 @@ public class DungeonGenerator {
 
 			next.levelId    = nextLevelId;
 			next.levelDepth = nextLevelDesc.getInt("depth");
-			next.levelKind = nextLevelDesc.getString("kind");
+			next.levelKind  = nextLevelDesc.getString("kind");
 
 			JSONArray levelSize = nextLevelDesc.getJSONArray("size");
 			next.xs = levelSize.getInt(0);
@@ -183,12 +183,12 @@ public class DungeonGenerator {
 		if (levelClass == null) {
 			GLog.w("Unknown level type: %s", pos.levelKind);
 			pos.levelKind = DEAD_END_LEVEL;
-			
+
 			return createLevel(pos);
 		}
 		try {
 			Level ret;
-			if(levelClass == PredesignedLevel.class) {
+			if (levelClass == PredesignedLevel.class) {
 				String levelFile = mLevels.getJSONObject(pos.levelId).getString("file");
 				ret = new PredesignedLevel(levelFile);
 			} else {
