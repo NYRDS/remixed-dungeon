@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="Guts_TileGrass">Guts Grass</string>
+    <string name="Guts_TileHighGrass">Guts High Grass</string>
+    <string name="Guts_TileWater">Guts Water</string>>
+
+    <string name="Guts_TileDescEntrance">Guts Entrance</string>
+    <string name="Guts_TileDescExit">Guts Exit</string>
+    <string name="Guts_TileDescDeco">Guts Deco</string>
+
+    <string name="Guts_TileDescBookshelf">Guts Bookshelf</string>
+
+
+</resources>

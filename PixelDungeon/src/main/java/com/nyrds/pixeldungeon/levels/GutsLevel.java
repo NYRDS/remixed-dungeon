@@ -22,7 +22,7 @@ import com.watabou.utils.Rect;
 
 public class GutsLevel extends RegularLevel {
 
-	{
+	public GutsLevel() {
 		color1 = 0x534f3e;
 		color2 = 0xb9d661;
 
@@ -171,11 +171,11 @@ public class GutsLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.GRASS:
-			return Game.getVar(R.string.Caves_TileGrass);
+			return Game.getVar(R.string.Guts_TileGrass);
 		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileHighGrass);
+			return Game.getVar(R.string.Guts_TileHighGrass);
 		case Terrain.WATER:
-			return Game.getVar(R.string.Caves_TileWater);
+			return Game.getVar(R.string.Guts_TileWater);
 		default:
 			return super.tileName( tile );
 		}
@@ -185,15 +185,15 @@ public class GutsLevel extends RegularLevel {
 	public String tileDesc( int tile ) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.Caves_TileDescEntrance);
+			return Game.getVar(R.string.Guts_TileDescEntrance);
 		case Terrain.EXIT:
-			return Game.getVar(R.string.Caves_TileDescExit);
+			return Game.getVar(R.string.Guts_TileDescExit);
 		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileDescHighGrass);
+			return Game.getVar(R.string.Guts_TileHighGrass);
 		case Terrain.WALL_DECO:
-			return Game.getVar(R.string.Caves_TileDescDeco);
+			return Game.getVar(R.string.Guts_TileDescDeco);
 		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Caves_TileDescBookshelf);
+			return Game.getVar(R.string.Guts_TileDescBookshelf);
 		default:
 			return super.tileDesc( tile );
 		}
