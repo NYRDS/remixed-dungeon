@@ -1,17 +1,13 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
@@ -60,9 +56,11 @@ public class ShadowLord extends Boss {
 	}
 
 	public void twistLevel() {
+		Tools.buildSquareMaze(Dungeon.level,4);
+		return;
+		/*
 		for (int i = -5; i <= 5; i++) {
 			for (int j = -5; j <= 5; j++) {
-
 				if (i * i + j * j <= 25 && Math.random() < 0.25f) {
 					int x = getPos() % Dungeon.level.getWidth();
 					int y = getPos() / Dungeon.level.getHeight();
@@ -95,37 +93,38 @@ public class ShadowLord extends Boss {
 				}
 			}
 		}
-
+		*/
 	}
 
 	@Override
 	public void move(int step) {
 		super.move(step);
 
-		if (Math.random() < 0.1f) {
+		//if (Math.random() < 0.1f) {
 			twistLevel();
-			return;
-		}
-
-		if (Math.random() < 0.1f) {
-			spawnShadow();
-			return;
-		}
-
-		if (Math.random() < 0.1f) {
-			spawnWraith();
-			return;
-		}
+		//	return;
+		//}
 	}
 
 
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
+
+		return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 
 	@Override
 	protected boolean doAttack( Char enemy ) {
+
+		if (Math.random() < 0.1f) {
+			spawnShadow();
+			return true;
+		}
+
+		if (Math.random() < 0.1f) {
+			spawnWraith();
+			return true;
+		}
 
 		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
 			return super.doAttack( enemy );

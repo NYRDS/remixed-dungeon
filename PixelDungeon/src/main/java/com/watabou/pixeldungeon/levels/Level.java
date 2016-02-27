@@ -1141,11 +1141,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean cellValid(int x, int y) {
-		return x > 0 && y > 0 && x < getWidth() - 1 && y < getHeight() - 1;
+		return x >= 0 && y >= 0 && x < getWidth()  && y < getHeight();
 	}
 
 	public boolean cellValid(int cell) {
-		return cell > 0 && cell < getLength();
+		return cell >= 0 && cell < getLength();
 	}
 
 	public int getSolidCellNextTo(int cell) {
@@ -1158,11 +1158,7 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
-		if(candidates.size()>0) {
-			return Random.element(candidates);
-		}
-
-		return -1;
+		return oneCellFrom(candidates);
 	}
 
 	public int getEmptyCellNextTo(int cell) {
@@ -1174,12 +1170,8 @@ public abstract class Level implements Bundlable {
 				candidates.add( p );
 			}
 		}
-		
-		if(candidates.size()>0) {
-			return Random.element(candidates);
-		}
-		
-		return -1;
+
+		return oneCellFrom(candidates);
 	}
 	
 	public boolean isBossLevel () {
@@ -1190,5 +1182,48 @@ public abstract class Level implements Bundlable {
 	}
 	
 	public void unseal() {
+	}
+
+	public int getDistToNearestTerrain(int cell, int terr) {
+		int minima = getLength();
+		for(int i = 0;i<getLength();i++){
+			if(map[i]==terr) {
+				int delta = distance(cell, i);
+				if(delta<minima) {
+					minima = delta;
+				}
+			}
+		}
+		return minima;
+	}
+
+	public int getDistToNearestTerrain(int x,int y, int terr) {
+		return getDistToNearestTerrain(cell(x,y),terr);
+	}
+
+	public int getNearestTerrain(int x,int y, int terr) {
+		int minima = getDistToNearestTerrain(x,y,terr);
+
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		int cell = cell(x,y);
+		for(int i = 0;i<getLength();i++){
+			if(map[i]==terr) {
+				int delta = distance(cell, i);
+				if(delta==minima) {
+					candidates.add(i);
+				}
+			}
+		}
+
+		return oneCellFrom(candidates);
+	}
+
+	private int oneCellFrom(ArrayList<Integer> candidates) {
+		if(candidates.size()>0) {
+			return Random.element(candidates);
+		}
+
+		return -1;
 	}
 }

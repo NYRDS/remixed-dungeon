@@ -15,6 +15,10 @@ public class TerrainFlags {
 	public static final int   UNSTITCHABLE = 0x100;
 	public static final int[] flags        = new int[64];
 
+	public static boolean is(int terrain, int flag){
+		return (flags[terrain] & flag) == flag;
+	}
+
 	static {
 		flags[Terrain.CHASM] = AVOID | PIT | UNSTITCHABLE;
 		flags[Terrain.EMPTY] = PASSABLE;
