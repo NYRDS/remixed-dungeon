@@ -84,12 +84,13 @@ public class Warlock extends Mob implements Callback {
 	
 	private void blink(int epos) {
 
-		Ballistica.cast(epos, getPos(), true, false);
-
 		int cell = getPos();
+
+		Ballistica.cast(epos, cell, true, false);
+
 		for (int i = 1; i < 4; i++) {
 			int next = Ballistica.trace[i + 1];
-			if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
+			if (Dungeon.level.cellValid(next) && (Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
 				cell = next;
 				Dungeon.observe();
 			}
@@ -105,7 +106,6 @@ public class Warlock extends Mob implements Callback {
 				}
 			});
 		}
-		
 	}
 
 	@Override
