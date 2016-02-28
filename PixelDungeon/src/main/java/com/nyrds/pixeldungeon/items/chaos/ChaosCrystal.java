@@ -89,16 +89,19 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 					Item newItem = new ScrollOfWeaponUpgrade();
 					getCurUser().collect(newItem);
 					GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
-				}
-
-				if (item instanceof MeleeWeapon) {
-					getCurUser().collect(new ChaosSword());
-					GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
+					return;
 				}
 
 				if (item instanceof Bow) {
 					getCurUser().collect(new ChaosBow());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
+					return;
+				}
+
+				if (item instanceof MeleeWeapon) {
+					getCurUser().collect(new ChaosSword());
+					GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
+					return;
 				}
 
 				if (item instanceof Wand) {
@@ -150,24 +153,24 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	@Override
 	public String name() {
 		switch (identetifyLevel) {
-		default:
-			return super.name();
-		case 1:
-			return Game.getVar(R.string.ChaosCrystal_Name_1);
-		case 2:
-			return Game.getVar(R.string.ChaosCrystal_Name_2);
+			default:
+				return super.name();
+			case 1:
+				return Game.getVar(R.string.ChaosCrystal_Name_1);
+			case 2:
+				return Game.getVar(R.string.ChaosCrystal_Name_2);
 		}
 	}
 
 	@Override
 	public String info() {
 		switch (identetifyLevel) {
-		default:
-			return super.info();
-		case 1:
-			return Game.getVar(R.string.ChaosCrystal_Info_1);
-		case 2:
-			return Game.getVar(R.string.ChaosCrystal_Info_2);
+			default:
+				return super.info();
+			case 1:
+				return Game.getVar(R.string.ChaosCrystal_Info_1);
+			case 2:
+				return Game.getVar(R.string.ChaosCrystal_Info_2);
 		}
 	}
 
