@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.mechanics;
 
-import java.util.Arrays;
-
 import com.watabou.pixeldungeon.Dungeon;
+
+import java.util.Arrays;
 
 public final class ShadowCaster {
 

@@ -100,11 +100,14 @@ public class Tools {
 
 				if ((i - 1) % roomStep == roomStep/2 && (j - 1) % roomStep == roomStep/2 ) {
 					setCellIfEmpty(level, i, j, Terrain.EMBERS);
-					int doorCell = level.getNearestTerrain(i, j, Terrain.WALL);
-					if(level.getDistToNearestTerrain(doorCell,Terrain.DOOR)<2){
-						continue;
+					if(level.getDistToNearestTerrain(i,j,Terrain.DOOR)!=level.getDistToNearestTerrain(i,j,Terrain.WALL)){
+						int doorCell = level.getNearestTerrain(i, j, Terrain.WALL);
+						level.set(doorCell,Terrain.DOOR);
+						int secondDoorCell = level.getNearestTerrain(i, j, Terrain.WALL);
+						if(level.getDistToNearestTerrain(secondDoorCell,Terrain.DOOR)>1) {
+							level.set(secondDoorCell, Terrain.DOOR);
+						}
 					}
-					level.set(doorCell,Terrain.DOOR);
 					continue;
 				}
 

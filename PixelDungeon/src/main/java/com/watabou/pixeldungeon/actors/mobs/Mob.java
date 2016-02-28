@@ -386,7 +386,7 @@ public abstract class Mob extends Char {
 		int step;
 
 		if (isAbsoluteWalker()) {
-			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.allCells, null);
+			step = Dungeon.flee(this, getPos(), target, Dungeon.level.allCells, null);
 		} else {
 			if (!isWallWalker()) {
 				step = Dungeon.flee(this, getPos(), target, Dungeon.level.passable, null);
