@@ -17,9 +17,9 @@
 
 package com.watabou.utils;
 
+import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 
-import org.acra.ACRA;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -316,7 +316,7 @@ public class Bundle {
 			
 			return new Bundle( json );
 		} catch (Exception e) {
-			ACRA.getErrorReporter().putCustomData("Bundle Exception", e.getMessage() + "\n"+e.getStackTrace()+"\n");
+			Util.storeEventInAcra("Bundle Exception",e);
 			return null;
 		}
 	}
