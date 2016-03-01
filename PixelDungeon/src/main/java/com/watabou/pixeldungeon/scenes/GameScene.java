@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Camera;
@@ -480,6 +481,9 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void add(Level level, Mob mob) {
+		if (BuildConfig.DEBUG == true && (scene == null || Dungeon.level == null)) {
+			throw new RuntimeException("adding mob when level or scene not yet ready");
+		}
 		level.mobs.add(mob);
 		Actor.add(mob);
 		Actor.occupyCell(mob);
@@ -489,6 +493,9 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void add(Level level, Mob mob, float delay) {
+		if (BuildConfig.DEBUG == true && (scene == null || Dungeon.level == null)) {
+			throw new RuntimeException("adding mob when level or scene not yet ready");
+		}
 		level.mobs.add(mob);
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
