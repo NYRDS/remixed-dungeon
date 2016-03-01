@@ -559,9 +559,8 @@ public class Hero extends Char {
 	}
 
 	private void ready() {
-		if (getSprite() != null) {
-			getSprite().idle();
-		}
+		getSprite().idle();
+
 		curAction = null;
 		ready = true;
 

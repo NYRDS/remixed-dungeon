@@ -623,9 +623,8 @@ public class Dungeon {
 			}
 		}
 
-		if (ch.getSprite() != null) {
-			ch.getSprite().centerEmitter().start(Speck.factory(Speck.SCREAM), 0.3f, 3);
-		}
+		ch.getSprite().centerEmitter().start(Speck.factory(Speck.SCREAM), 0.3f, 3);
+
 		Sample.INSTANCE.play(sound);
 		if (ch instanceof Hero) {
 			Invisibility.dispel((Hero) ch);

@@ -329,16 +329,12 @@ public abstract class Mob extends Char {
 	public void add(Buff buff) {
 		super.add(buff);
 		if (buff instanceof Amok) {
-			if (getSprite() != null) {
-				getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			}
+			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
 			state = HUNTING;
 		} else if (buff instanceof Terror) {
 			state = FLEEING;
 		} else if (buff instanceof Sleep) {
-			if (getSprite() != null) {
-				new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-			}
+			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
 			state = SLEEPEING;
 			postpone(Sleep.SWS);
 		}
