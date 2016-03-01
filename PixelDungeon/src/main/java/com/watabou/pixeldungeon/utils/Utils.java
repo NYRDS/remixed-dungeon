@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.utils;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 
@@ -82,16 +83,15 @@ public class Utils {
 
 	
 	public static String getClassParam(String className ,String paramName, String defaultValue, boolean warnIfAbsent){
-		
 		if(className.length() == 0){ // isEmpty() require api level 9
 			return defaultValue;
 		}
-		
+
 		try{
 			return Game.getVar(strings.getField(className+"_"+paramName).getInt(null));
 		}catch (NoSuchFieldException e){
-			if(warnIfAbsent){
-				GLog.w("no defination for  %s_%s :(", className, paramName);
+			if(BuildConfig.DEBUG && warnIfAbsent){
+				GLog.w("no definition for  %s_%s :(", className, paramName);
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
