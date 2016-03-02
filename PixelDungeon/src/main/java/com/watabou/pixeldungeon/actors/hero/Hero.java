@@ -1316,39 +1316,37 @@ public class Hero extends Char {
 	public void add(Buff buff) {
 		super.add(buff);
 
-		if (getSprite() != null) {
-			if (buff instanceof Burning) {
-				GLog.w(Game.getVar(R.string.Hero_StaBurning));
-				interrupt();
-			} else if (buff instanceof Paralysis) {
-				GLog.w(Game.getVar(R.string.Hero_StaParalysis));
-				interrupt();
-			} else if (buff instanceof Poison) {
-				GLog.w(Game.getVar(R.string.Hero_StaPoison));
-				interrupt();
-			} else if (buff instanceof Ooze) {
-				GLog.w(Game.getVar(R.string.Hero_StaOoze));
-			} else if (buff instanceof Roots) {
-				GLog.w(Game.getVar(R.string.Hero_StaRoots));
-			} else if (buff instanceof Weakness) {
-				GLog.w(Game.getVar(R.string.Hero_StaWeakness));
-			} else if (buff instanceof Blindness) {
-				GLog.w(Game.getVar(R.string.Hero_StaBlindness));
-			} else if (buff instanceof Fury) {
-				GLog.w(Game.getVar(R.string.Hero_StaFury));
-				getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_StaFurious));
-			} else if (buff instanceof Charm) {
-				GLog.w(Game.getVar(R.string.Hero_StaCharm));
-			} else if (buff instanceof Cripple) {
-				GLog.w(Game.getVar(R.string.Hero_StaCripple));
-			} else if (buff instanceof Bleeding) {
-				GLog.w(Game.getVar(R.string.Hero_StaBleeding));
-			} else if (buff instanceof Vertigo) {
-				GLog.w(Game.getVar(R.string.Hero_StaVertigo));
-				interrupt();
-			} else if (buff instanceof Light) {
-				getSprite().add(CharSprite.State.ILLUMINATED);
-			}
+		if (buff instanceof Burning) {
+			GLog.w(Game.getVar(R.string.Hero_StaBurning));
+			interrupt();
+		} else if (buff instanceof Paralysis) {
+			GLog.w(Game.getVar(R.string.Hero_StaParalysis));
+			interrupt();
+		} else if (buff instanceof Poison) {
+			GLog.w(Game.getVar(R.string.Hero_StaPoison));
+			interrupt();
+		} else if (buff instanceof Ooze) {
+			GLog.w(Game.getVar(R.string.Hero_StaOoze));
+		} else if (buff instanceof Roots) {
+			GLog.w(Game.getVar(R.string.Hero_StaRoots));
+		} else if (buff instanceof Weakness) {
+			GLog.w(Game.getVar(R.string.Hero_StaWeakness));
+		} else if (buff instanceof Blindness) {
+			GLog.w(Game.getVar(R.string.Hero_StaBlindness));
+		} else if (buff instanceof Fury) {
+			GLog.w(Game.getVar(R.string.Hero_StaFury));
+			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_StaFurious));
+		} else if (buff instanceof Charm) {
+			GLog.w(Game.getVar(R.string.Hero_StaCharm));
+		} else if (buff instanceof Cripple) {
+			GLog.w(Game.getVar(R.string.Hero_StaCripple));
+		} else if (buff instanceof Bleeding) {
+			GLog.w(Game.getVar(R.string.Hero_StaBleeding));
+		} else if (buff instanceof Vertigo) {
+			GLog.w(Game.getVar(R.string.Hero_StaVertigo));
+			interrupt();
+		} else if (buff instanceof Light) {
+			getSprite().add(CharSprite.State.ILLUMINATED);
 		}
 
 		BuffIndicator.refreshHero();
