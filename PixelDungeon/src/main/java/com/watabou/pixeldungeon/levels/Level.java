@@ -646,6 +646,11 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	public void set(int x, int y, int terrain) {
+		int cell = cell(x,y);
+		set(cell,terrain);
+	}
+
 	public void set(int cell, int terrain) {
 		Painter.set(this, cell, terrain);
 

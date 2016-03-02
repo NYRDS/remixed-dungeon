@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -7,8 +8,6 @@ import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
-
-import java.util.Arrays;
 
 public class ShadowLordLevel extends Level {
 
@@ -31,24 +30,7 @@ public class ShadowLordLevel extends Level {
 
 	@Override
 	protected boolean build() {
-
-		Arrays.fill(map, Terrain.EMPTY);
-
-		for (int i = 1; i < width; i++) {
-			map[cell(i, 1)] = map[cell(i, height - 1)] = Terrain.WALL;
-		}
-
-		for (int i = 1; i < height; i++) {
-			map[cell(1, i)] = map[cell(width-1, i)] = Terrain.WALL;
-		}
-
-		entrance = cell(width/4,height/4);
-		map[entrance] = Terrain.ENTRANCE;
-
-		exit = -1;
-
-		map[cell(width/3,height/3)] = Terrain.SIGN;
-
+		Tools.makeEmptyLevel(this);
 		return true;
 	}
 
@@ -72,7 +54,6 @@ public class ShadowLordLevel extends Level {
 
 	@Override
 	protected void createItems() {
-
 	}
 
 	@Override
