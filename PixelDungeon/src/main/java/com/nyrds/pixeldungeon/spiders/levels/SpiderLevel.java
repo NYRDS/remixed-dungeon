@@ -38,7 +38,7 @@ public class SpiderLevel extends CommonLevel {
 
 	protected void createChambers() {
 
-		for (int i = 0; i < (Dungeon.depth - 4) * 2; ++i) {
+		for (int i = 0; i < Math.max((Dungeon.depth - 4) * 2 ,2); ++i) {
 
 			Chamber chamber;
 			boolean canDig;

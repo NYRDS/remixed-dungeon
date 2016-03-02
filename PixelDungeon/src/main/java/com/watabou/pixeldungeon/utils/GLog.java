@@ -59,7 +59,6 @@ public class GLog {
 				} catch (IOException e) {
 					readonlySd = true;
 					return;
-					//throw new RuntimeException("can't create new log file", e);
 				}
 			}
 			
@@ -69,7 +68,6 @@ public class GLog {
 			} catch (Exception e) {
 				readonlySd = true;
 				return;
-				//throw new RuntimeException("can't create log file", e);
 			}
 		}
 		
@@ -97,7 +95,14 @@ public class GLog {
 		
 		Log.i( TAG, text );
 		if(!Game.isPaused()) {
-			update.dispatch( text );
+			final String finalText = text;
+			Game.executeInGlThread(new Runnable() {
+				                       @Override
+				                       public void run() {
+					                       update.dispatch(finalText);
+				                       }
+			                       }
+			);
 		}
 	}
 	

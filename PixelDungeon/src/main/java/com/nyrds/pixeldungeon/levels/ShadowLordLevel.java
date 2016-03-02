@@ -67,7 +67,7 @@ public class ShadowLordLevel extends Level {
 	protected void createMobs() {
 		ShadowLord lord = new ShadowLord();
 		lord.setPos(cell(width/2,height / 2));
-		spawnMob(lord);
+		mobs.add(lord);
 	}
 
 	@Override

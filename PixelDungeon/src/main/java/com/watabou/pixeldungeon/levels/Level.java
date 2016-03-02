@@ -426,8 +426,12 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void spawnMob(Mob mob) {
-		Actor.occupyCell(mob);
-		GameScene.add(this, mob, 1);
+		if(GameScene.isSceneReady()) { // due to spider spawner ( need rewrite it )
+			Actor.occupyCell(mob);
+			GameScene.add(this, mob, 1);
+		} else {
+			mobs.add(mob);
+		}
 	}
 
 	protected Mob createMob() {
