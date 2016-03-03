@@ -18,7 +18,6 @@
 package com.watabou.utils;
 
 import com.nyrds.android.util.Util;
-import com.watabou.noosa.Game;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -72,7 +71,7 @@ public class Bundle {
 	}
 	
 	public boolean getBoolean( String key ) {
-		return data.optBoolean( key );
+		return data.optBoolean(key);
 	}
 	
 	public int getInt( String key ) {
@@ -142,7 +141,7 @@ public class Bundle {
 			int length = array.length();
 			int[] result = new int[length];
 			for (int i=0; i < length; i++) {
-				result[i] = array.getInt( i );
+				result[i] = array.getInt(i);
 			}
 			return result;
 		} catch (JSONException e) {
@@ -156,7 +155,7 @@ public class Bundle {
 			int length = array.length();
 			boolean[] result = new boolean[length];
 			for (int i=0; i < length; i++) {
-				result[i] = array.getBoolean( i );
+				result[i] = array.getBoolean(i);
 			}
 			return result;
 		} catch (JSONException e) {
@@ -188,6 +187,7 @@ public class Bundle {
 				list.add(type.cast(new Bundle(array.getJSONObject(i)).get()));
 			}
 		} catch (JSONException e) {
+			throw new RuntimeException("key:"+key);
 		}
 		
 		return list;
@@ -197,7 +197,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -205,7 +205,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -213,7 +213,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -221,7 +221,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -229,7 +229,7 @@ public class Bundle {
 		try {
 			data.put( key, bundle.data );
 		} catch (JSONException e) {
-
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -241,6 +241,7 @@ public class Bundle {
 				object.storeInBundle( bundle );
 				data.put( key, bundle.data );
 			} catch (JSONException e) {
+				throw new RuntimeException("key:"+key);
 			}
 		}
 	}
@@ -250,6 +251,7 @@ public class Bundle {
 			try {
 				data.put( key, value.name() );
 			} catch (JSONException e) {
+				throw new RuntimeException("key:"+key);
 			}
 		}
 	}
@@ -262,7 +264,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -274,7 +276,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -286,7 +288,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -301,9 +303,9 @@ public class Bundle {
 			}
 		}
 		try {
-			data.put( key, array );
+			data.put(key, array);
 		} catch (JSONException e) {
-			
+			throw new RuntimeException("key:"+key);
 		}
 	}
 	
@@ -320,18 +322,7 @@ public class Bundle {
 			return null;
 		}
 	}
-	
-	public static Bundle read( byte[] bytes ) {
-		try {
-			
-			JSONObject json = (JSONObject)new JSONTokener( new String( bytes ) ).nextValue();
-			return new Bundle( json );
-			
-		} catch (JSONException e) {
-			return null;
-		}
-	}
-	
+
 	public static boolean write( Bundle bundle, OutputStream stream ) {
 		try {
 			BufferedWriter writer = new BufferedWriter( new OutputStreamWriter( stream ) );
@@ -339,8 +330,7 @@ public class Bundle {
 			writer.close();
 			return true;
 		} catch (IOException e) {
-			Game.toast("bungle write failed: %s\n", e.getMessage());
-			return false;
+			throw new RuntimeException("bungle write failed: %s\n",e);
 		}
 	}
 	

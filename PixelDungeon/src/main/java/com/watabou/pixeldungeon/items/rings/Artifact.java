@@ -53,7 +53,11 @@ public class Artifact extends EquipableItem {
 			if (hero.belongings.ring1 == this) {
 				hero.belongings.ring1 = null;
 			} else {
-				hero.belongings.ring2 = null;
+				if (hero.belongings.ring2 == this) {
+					hero.belongings.ring2 = null;
+				} else { //WTF??
+					throw new RuntimeException("trying unequip ");
+				}
 			}
 
 			hero.remove(buff);

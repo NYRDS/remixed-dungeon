@@ -16,6 +16,11 @@ public class Util {
 	}
 
 	static public void storeEventInAcra(String eventKey,Exception e) {
-		ACRA.getErrorReporter().putCustomData(eventKey, e.getMessage() + "\n"+ Util.stackTraceToString(e)+"\n");
+		ACRA.getErrorReporter().putCustomData(eventKey, e.getMessage() + "\n" + Util.stackTraceToString(e) + "\n");
 	}
+
+	static public void storeEventInAcra(String eventKey,String str) {
+		ACRA.getErrorReporter().putCustomData(eventKey, str);
+	}
+
 }

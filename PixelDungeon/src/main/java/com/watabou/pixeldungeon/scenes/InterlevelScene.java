@@ -305,7 +305,7 @@ public class InterlevelScene extends PixelScene {
 
 	private void problemWithSave() {
 		Dungeon.deleteGame(true);
-		Game.switchScene(StartScene.class);
+		throw new RuntimeException("something wrong with save");
 	}
 
 	private void restore() throws IOException{
@@ -316,12 +316,10 @@ public class InterlevelScene extends PixelScene {
 
 		if (Dungeon.hero == null) {
 			problemWithSave();
-			return;
 		}
 
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
-			
 			Dungeon.switchLevel(Dungeon.loadLevel(Dungeon.currentPosition()), -1, Dungeon.hero.levelId);
 		} else {
 			Level level = Dungeon.loadLevel(Dungeon.currentPosition());
