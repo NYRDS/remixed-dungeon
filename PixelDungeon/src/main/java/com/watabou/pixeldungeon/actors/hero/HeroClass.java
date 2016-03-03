@@ -18,6 +18,7 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -27,13 +28,19 @@ import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.quest.RatSkull;
+import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
+import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.CompoundBow;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
+import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
@@ -104,8 +111,15 @@ public enum HeroClass {
 
 	private static void initDebug(Hero hero) {
 		for(int i = 0;i<10;i++) {
-			hero.collect(new ScrollOfMagicMapping());
+			hero.collect(new ScrollOfTerror());
 		}
+		hero.collect(new RatSkull());
+		hero.collect(new ChaosCrystal().identify().identify());
+		hero.collect(new RingOfEvasion());
+		hero.collect(new RingOfEvasion());
+		hero.collect(new Sword());
+		hero.collect(new CompoundBow());
+
 		hero.ht(100);
 		hero.hp(100);
 		hero.attackSkill = 100;
