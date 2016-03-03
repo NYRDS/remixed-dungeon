@@ -24,7 +24,7 @@
     <string name="ShadowLord_Name">shadow lord</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name_Objective">Shadow Lord</string>
-    <string name="ShadowLord_Desc">Creature made of pure evil and darkness, many believe that he is the Old God considering how powerfull he is. While others assumes that he is but a guardian of the Old God\'s chambers.</string>
+    <string name="ShadowLord_Desc">Creature made of pure evil and darkness, many believe that he is the Old God himself considering how powerfull he is. While others assumes that he is but a guardian of the Old God\'s chambers.</string>
 	
 	<!-- STRINGS OF Worm CLASS -->
     <string name="Worm_Name">worm</string>
