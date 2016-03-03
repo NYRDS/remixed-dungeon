@@ -32,14 +32,14 @@ public class MimicPie extends Mob {
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( LEVEL, level );
+		super.storeInBundle(bundle);
+		bundle.put(LEVEL, level);
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		adjustStats( bundle.getInt( LEVEL ) );
+		super.restoreFromBundle(bundle);
+		adjustStats(bundle.getInt(LEVEL));
 	}
 	
 	@Override
@@ -57,16 +57,22 @@ public class MimicPie extends Mob {
 		super.die(cause);
 		Dungeon.level.drop(new RottenPasty(), getPos());
 	}
-	
+
+	@Override
+	protected boolean act() {
+		if(buff(Levitation.class)==null) {
+			Buff.affect(this, Levitation.class, 1000000);
+		}
+		return super.act();
+	}
+
 	public void adjustStats( int level ) {
 		this.level = level;
-		
+
 		hp(ht((3 + level) * 5));
 		EXP = 2 + 2 * (level - 1) / 5;
 		defenseSkill = 2 * attackSkill( null ) / 3;
 		
 		enemySeen = true;
-		
-		Buff.affect( this, Levitation.class, 1000000 );
 	}
 }
