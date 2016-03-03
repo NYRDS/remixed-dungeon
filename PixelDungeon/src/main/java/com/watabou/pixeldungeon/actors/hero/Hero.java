@@ -56,6 +56,7 @@ import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.HeroAction.Attack;
+import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
@@ -235,7 +236,7 @@ public class Hero extends Char {
 		ArrayList<Mob> alivePets = new ArrayList<>();
 		if (pets != null) {
 			for (Mob pet : pets) {
-				if (pet.isAlive()) {
+				if (pet.isAlive() && pet.fraction() == Fraction.HEROES) {
 					alivePets.add(pet);
 				}
 			}
@@ -834,7 +835,6 @@ public class Hero extends Char {
 	}
 
 	private boolean actAscend(HeroAction.Ascend action) {
-
 		refreshPets();
 
 		int stairs = action.dst;

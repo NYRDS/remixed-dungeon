@@ -94,12 +94,20 @@ public abstract class Mob extends Char {
 		readCharData();
 	}
 
+	public Fraction fraction() {
+		return fraction;
+	}
+
 	public static Mob makePet(Mob pet, Hero hero) {
-		pet.fraction = Fraction.HEROES;
-		pet.setEnemy(DUMMY);
+		pet.setFraction(Fraction.HEROES);
 		hero.addPet(pet);
 
 		return pet;
+	}
+
+	public void setFraction(Fraction fr) {
+		fraction = fr;
+		setEnemy(DUMMY);
 	}
 
 	@Override

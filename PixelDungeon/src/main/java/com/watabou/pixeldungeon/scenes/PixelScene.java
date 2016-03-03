@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.BitmapCache;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -94,7 +93,7 @@ public class PixelScene extends Scene {
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;
 
-		GLog.i("%d %d %f", Game.width(), Game.height(), defaultZoom);
+		//GLog.i("%d %d %f", Game.width(), Game.height(), defaultZoom);
 
 		//Camera.reset(new PixelCamera(defaultZoom + PixelDungeon.zoom()));
 		Camera.reset(new PixelCamera(defaultZoom));

@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Fraction;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
 
@@ -49,5 +51,17 @@ public class Terror extends FlavourBuff {
 		if (terror != null && terror.cooldown() < DURATION) {
 			target.remove( terror );
 		}
+	}
+
+	@Override
+	public boolean attachTo(Char target) {
+		if(super.attachTo(target)) {
+			if(target instanceof Mob) {
+				Mob tgt = (Mob)target;
+				tgt.setFraction(Fraction.DUNGEON);
+			}
+			return true;
+		}
+		return false;
 	}
 }
