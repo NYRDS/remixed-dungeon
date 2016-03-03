@@ -480,6 +480,10 @@ public class GameScene extends PixelScene {
 		}
 	}
 
+	public static boolean isSceneReady() {
+		return scene != null && Dungeon.level != null;
+	}
+
 	public static void add(Level level, Mob mob) {
 		if (BuildConfig.DEBUG == true && (scene == null || Dungeon.level == null)) {
 			throw new RuntimeException("adding mob when level or scene not yet ready");
@@ -493,8 +497,13 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void add(Level level, Mob mob, float delay) {
-		if (BuildConfig.DEBUG == true && (scene == null || Dungeon.level == null)) {
-			throw new RuntimeException("adding mob when level or scene not yet ready");
+		if (BuildConfig.DEBUG == true ) {
+			if(scene == null) {
+				throw new RuntimeException("adding mob when scene not yet ready");
+			}
+			if(Dungeon.level == null) {
+				throw new RuntimeException("adding mob when level not yet ready");
+			}
 		}
 		level.mobs.add(mob);
 		Actor.addDelayed(mob, delay);

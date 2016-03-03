@@ -426,8 +426,12 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void spawnMob(Mob mob) {
-		Actor.occupyCell(mob);
-		GameScene.add(this, mob, 1);
+		if(GameScene.isSceneReady()) { // due to spider spawner ( need rewrite it )
+			Actor.occupyCell(mob);
+			GameScene.add(this, mob, 1);
+		} else {
+			mobs.add(mob);
+		}
 	}
 
 	protected Mob createMob() {
@@ -640,6 +644,11 @@ public abstract class Level implements Bundlable {
 
 			discoverable[i] = d;
 		}
+	}
+
+	public void set(int x, int y, int terrain) {
+		int cell = cell(x,y);
+		set(cell,terrain);
 	}
 
 	public void set(int cell, int terrain) {

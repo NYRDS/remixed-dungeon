@@ -166,4 +166,9 @@ public class ShadowLord extends Boss {
 		return 2;
 	}
 
+	@Override
+	public void die(Object cause) {
+		super.die(cause);
+		Tools.makeEmptyLevel(Dungeon.level);
+	}
 }

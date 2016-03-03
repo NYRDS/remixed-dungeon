@@ -59,7 +59,7 @@ public class InterlevelScene extends PixelScene {
 	private static final String ERR_GENERIC = Game
 			.getVar(R.string.InterLevelScene_ErrorGeneric);
 
-	public static enum Mode {
+	public enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
 	}
 
@@ -218,7 +218,7 @@ public class InterlevelScene extends PixelScene {
 					public void onBackPressed() {
 						super.onBackPressed();
 						Game.switchScene(StartScene.class);
-					};
+					}
 				});
 				error = null;
 			}

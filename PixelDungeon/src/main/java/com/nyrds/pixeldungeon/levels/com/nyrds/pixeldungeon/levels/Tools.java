@@ -6,18 +6,12 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
+import java.util.Arrays;
+
 /**
  * Created by mike on 27.02.2016.
  */
 public class Tools {
-
-	private static int squareMazeWallCellType() {
-		if (Math.random() < 0.9f) {
-			return Terrain.WALL;
-		} else {
-			return Terrain.WALL_DECO;
-		}
-	}
 
 	public static void buildSquareMaze(Level level,final int roomStep) {
 		int w = level.getWidth();
@@ -53,16 +47,7 @@ public class Tools {
 						setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
 						continue;
 					}
-/*
-					if (level.getDistToNearestTerrain(i, j, Terrain.DOOR) < roomStep/2) {
-						setCellIfEmpty(level, i, j, Terrain.WALL);
-						continue;
-					}
-					if(Math.random()<0.5f) {
-						setCellIfEmpty(level, i, j, Terrain.DOOR);
-						continue;
-					}
-					*/
+
 					setCellIfEmpty(level, i, j, Terrain.WALL);
 					continue;
 				}
@@ -73,16 +58,7 @@ public class Tools {
 						setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
 						continue;
 					}
-/*
-					if (level.getDistToNearestTerrain(i, j, Terrain.DOOR) < roomStep/2) {
-						setCellIfEmpty(level, i, j, Terrain.WALL);
-						continue;
-					}
-					if(Math.random()<0.5f) {
-						setCellIfEmpty(level, i, j, Terrain.DOOR);
-						continue;
-					}
-					*/
+
 					setCellIfEmpty(level, i, j, Terrain.WALL);
 					continue;
 				}
@@ -114,8 +90,7 @@ public class Tools {
 			}
 		}
 
-
-				GameScene.updateMap();
+		GameScene.updateMap();
 	}
 
 	private static void setCellIfEmpty(Level level, int x, int y, int terrain) {
@@ -123,5 +98,27 @@ public class Tools {
 		if (Actor.findChar(cell) == null) {
 			level.set(cell, terrain);
 		}
+	}
+
+	public static void makeEmptyLevel(Level level) {
+		int width = level.getWidth();
+		int height = level.getHeight();
+
+		Arrays.fill(level.map, Terrain.EMPTY);
+
+		for (int i = 1; i < level.getWidth(); i++) {
+			level.set(i, 1,        Terrain.WALL);
+			level.set(i, height-1, Terrain.WALL);
+		}
+
+		for (int i = 1; i < height; i++) {
+			level.set(1, i,        Terrain.WALL);
+			level.set(width-1, i , Terrain.WALL);
+		}
+
+		level.entrance = level.cell(width/4,height/4);
+		level.set(level.entrance,Terrain.ENTRANCE);
+
+		level.exit = -1;
 	}
 }
