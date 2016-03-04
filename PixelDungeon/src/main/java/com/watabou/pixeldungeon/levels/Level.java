@@ -426,11 +426,16 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void spawnMob(Mob mob) {
+		spawnMob(mob,0);
+	}
+
+	public void spawnMob(Mob mob, float delay) {
+		mobs.add(mob);
+		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
+
 		if(GameScene.isSceneReady()) { // due to spider spawner ( need rewrite it )
-			GameScene.add(this, mob, 1);
-		} else {
-			mobs.add(mob);
+			GameScene.addMobSprite(mob);
 		}
 	}
 
@@ -489,7 +494,7 @@ public abstract class Level implements Bundlable {
 					Mob mob = createMob();
 					mob.state = mob.WANDERING;
 					if (Dungeon.hero.isAlive() && mob.getPos() != -1) {
-						GameScene.add(Dungeon.level, mob);
+						spawnMob(mob);
 						if (Statistics.amuletObtained) {
 							mob.beckon(Dungeon.hero.getPos());
 						}
@@ -743,8 +748,9 @@ public abstract class Level implements Bundlable {
 
 	public void press(int cell, Char ch) {
 
-		if (pit[cell] && ch == Dungeon.hero) {
-			Chasm.heroFall(cell);
+		if (pit[cell] && ch instanceof Hero) {
+			Hero hero = (Hero)ch;
+			Chasm.heroFall(cell, hero);
 			return;
 		}
 

@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -85,7 +84,7 @@ public class SummoningTrap {
 			} while (mob.isWallWalker() == true);
 			
 			mob.state = mob.WANDERING;
-			GameScene.add(Dungeon.level, mob, DELAY );
+			Dungeon.level.spawnMob(mob, DELAY);
 			WandOfBlink.appear( mob, point );
 		}
 	}

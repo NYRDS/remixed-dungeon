@@ -17,14 +17,12 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import java.util.List;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
@@ -40,6 +38,8 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
+
+import java.util.List;
 
 public class PrisonBossLevel extends RegularLevel {
 
@@ -316,7 +316,7 @@ public class PrisonBossLevel extends RegularLevel {
 			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );
 			boss.state = boss.HUNTING;
 			boss.setPos(pos);
-			GameScene.add(Dungeon.level, boss );
+			Dungeon.level.spawnMob(boss);
 			boss.notice();
 			
 			mobPress( boss );

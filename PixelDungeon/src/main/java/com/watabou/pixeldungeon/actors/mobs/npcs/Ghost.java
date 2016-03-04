@@ -293,7 +293,7 @@ public class Ghost extends NPC {
 					FetidRat rat = new FetidRat();
 					rat.setPos(Dungeon.level.randomRespawnCell());
 					if (rat.getPos() != -1) {
-						GameScene.add(Dungeon.level, rat );
+						Dungeon.level.spawnMob(rat);
 						processed = true;
 					}
 					

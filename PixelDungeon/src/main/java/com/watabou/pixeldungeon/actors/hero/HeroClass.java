@@ -18,6 +18,7 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -28,6 +29,7 @@ import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
@@ -105,7 +107,11 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		for(int i = 0;i<10;i++) {
 			hero.collect(new ScrollOfMagicMapping());
+			hero.collect(new ScrollOfIdentify());
+			hero.collect(new ScrollOfDomination());
 		}
+
+		hero.collect(new ChaosCrystal());
 		hero.ht(100);
 		hero.hp(100);
 		hero.attackSkill = 100;

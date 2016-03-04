@@ -80,8 +80,8 @@ public class Yog extends Boss {
 			fist2.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
 		} while (!Dungeon.level.passable[fist1.getPos()] || !Dungeon.level.passable[fist2.getPos()] || fist1.getPos() == fist2.getPos());
 
-		GameScene.add(Dungeon.level, fist1);
-		GameScene.add(Dungeon.level, fist2);
+		Dungeon.level.spawnMob(fist1,0);
+		Dungeon.level.spawnMob(fist2,0);
 	}
 
 	@Override
@@ -108,8 +108,7 @@ public class Yog extends Boss {
 		if (Dungeon.level.cellValid(larvaPos)) {
 			Larva larva = new Larva();
 			larva.setPos(larvaPos);
-			
-			GameScene.add(Dungeon.level, larva);
+			Dungeon.level.spawnMob(larva, 0);
 			Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
 		}
 

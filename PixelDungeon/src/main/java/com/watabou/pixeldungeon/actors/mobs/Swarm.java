@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.ArrayList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -33,6 +32,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.SwarmSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Swarm extends Mob {
 
@@ -94,8 +95,7 @@ public class Swarm extends Mob {
 				if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
 					Door.enter( clone.getPos() );
 				}
-				
-				GameScene.add(Dungeon.level, clone, SPLIT_DELAY );
+				Dungeon.level.spawnMob(clone,SPLIT_DELAY);
 				Actor.addDelayed( new Pushing( clone, getPos(), clone.getPos() ), -1 );
 				
 				hp(hp() - clone.hp());

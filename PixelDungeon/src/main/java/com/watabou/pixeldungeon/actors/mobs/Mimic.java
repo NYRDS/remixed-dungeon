@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MimicSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -145,7 +144,7 @@ public class Mimic extends Mob {
 		m.hp(m.ht());
 		m.setPos(pos);
 		m.state = m.HUNTING;
-		GameScene.add(level, m, 1 );
+		level.spawnMob(m,1);
 		
 		m.getSprite().turnTo( pos, Dungeon.hero.getPos() );
 		

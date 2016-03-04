@@ -179,7 +179,7 @@ public class HallsBossLevel extends Level {
 			} while (
 				!passable[boss.getPos()] ||
 				Dungeon.visible[boss.getPos()]);
-			GameScene.add(Dungeon.level, boss );
+			Dungeon.level.spawnMob(boss);
 			boss.spawnFists();
 			
 			stairs = entrance;

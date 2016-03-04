@@ -88,8 +88,7 @@ public abstract class Actor implements Bundlable {
 	
 	private static Map<Integer, Char> chars = new HashMap<>();
 	
-	public static void clear(int len) {
-		
+	public static void clear() {
 		now = 0;
 		chars.clear();
 		all.clear();
@@ -114,7 +113,7 @@ public abstract class Actor implements Bundlable {
 	}
 	
 	public static void init(Level level) {
-		clear(level.getLength());
+		clear();
 		
 		addDelayed( Dungeon.hero, -Float.MIN_VALUE );
 		

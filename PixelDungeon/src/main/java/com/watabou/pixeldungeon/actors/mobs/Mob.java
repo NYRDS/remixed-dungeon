@@ -163,7 +163,6 @@ public abstract class Mob extends Char {
 		}
 
 		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
-
 	}
 
 	protected int getKind() {

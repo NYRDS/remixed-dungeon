@@ -62,14 +62,15 @@ public class Chasm {
 		);
 	}
 	
-	public static void heroFall( int pos ) {
+	public static void heroFall(int pos, Hero hero) {
 		
 		jumpConfirmed = false;
 				
 		Sample.INSTANCE.play( Assets.SND_FALLING );
-		
-		if (Dungeon.hero.isAlive()) {
-			Dungeon.hero.interrupt();
+		hero.releasePets();
+
+		if (hero.isAlive()) {
+			hero.interrupt();
 			InterlevelScene.mode = InterlevelScene.Mode.FALL;
 			if (Dungeon.level instanceof RegularLevel) {
 				Room room = ((RegularLevel)Dungeon.level).room( pos );
@@ -79,7 +80,7 @@ public class Chasm {
 			}
 			Game.switchScene( InterlevelScene.class );
 		} else {
-			Dungeon.hero.getSprite().setVisible(false);
+			hero.getSprite().setVisible(false);
 		}
 	}
 	
@@ -108,6 +109,5 @@ public class Chasm {
 		
 		mob.getSprite().removeAllStates();
 		((MobSprite)mob.getSprite()).fall();
-		
 	}
 }

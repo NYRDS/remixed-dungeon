@@ -219,7 +219,7 @@ public class CavesBossLevel extends Level {
 				!passable[boss.getPos()] ||
 				!outsideEntraceRoom( boss.getPos() ) ||
 				Dungeon.visible[boss.getPos()]);
-			GameScene.add(Dungeon.level, boss );
+			Dungeon.level.spawnMob( boss);
 			
 			set( arenaDoor, Terrain.WALL );
 			GameScene.updateMap( arenaDoor );

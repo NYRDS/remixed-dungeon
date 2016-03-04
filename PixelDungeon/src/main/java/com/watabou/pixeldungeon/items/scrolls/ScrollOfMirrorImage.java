@@ -41,7 +41,7 @@ public class ScrollOfMirrorImage extends Scroll {
 				break;
 
 			MirrorImage mob = new MirrorImage(getCurUser());
-			GameScene.add(Dungeon.level, mob );
+			Dungeon.level.spawnMob(mob);
 			WandOfBlink.appear( mob, cell );
 
 			nImages--;

@@ -175,8 +175,8 @@ public class King extends Boss {
 						
 						Undead undead = new Undead();
 						undead.setPos(j);
-						GameScene.add(Dungeon.level, undead );
-						
+						Dungeon.level.spawnMob(undead, 0);
+
 						WandOfBlink.appear( undead, j );
 						new Flare( 3, 32 ).color( 0x000000, false ).show( undead.getSprite(), 2f ) ;
 						

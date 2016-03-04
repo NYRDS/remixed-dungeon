@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
@@ -44,7 +43,8 @@ public class ShadowLord extends Boss {
 			Mob mob = new Shadow();
 
 			mob.state = mob.WANDERING;
-			GameScene.add(Dungeon.level, mob, 2);
+			Dungeon.level.spawnMob(mob,1);
+
 			WandOfBlink.appear(mob, cell);
 		}
 	}
@@ -56,7 +56,7 @@ public class ShadowLord extends Boss {
 			Mob mob = new Wraith();
 
 			mob.state = mob.WANDERING;
-			GameScene.add(Dungeon.level, mob, 2);
+			Dungeon.level.spawnMob(mob,1);
 			WandOfBlink.appear(mob, cell);
 		}
 	}

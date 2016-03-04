@@ -96,7 +96,7 @@ public class Dungeon {
 
 	private static void initSizeDependentStuff(int w, int h) {
 		int size = w * h;
-		Actor.clear(size);
+		Actor.clear();
 		visible = new boolean[size];
 		passable = new boolean[size];
 

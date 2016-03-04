@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Camera;
@@ -53,7 +52,6 @@ import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.plants.Plant;
@@ -419,10 +417,10 @@ public class GameScene extends PixelScene {
 		}
 	}
 
-	private void addMobSprite(Mob mob) {
+	public static void addMobSprite(Mob mob) {
 		CharSprite sprite = mob.sprite();
 		sprite.setVisible(Dungeon.visible[mob.getPos()]);
-		mobs.add(sprite);
+		scene.mobs.add(sprite);
 		sprite.link(mob);
 	}
 
@@ -482,35 +480,6 @@ public class GameScene extends PixelScene {
 
 	public static boolean isSceneReady() {
 		return scene != null && Dungeon.level != null;
-	}
-
-	public static void add(Level level, Mob mob) {
-		if (BuildConfig.DEBUG == true && (scene == null || Dungeon.level == null)) {
-			throw new RuntimeException("adding mob when level or scene not yet ready");
-		}
-		level.mobs.add(mob);
-		Actor.add(mob);
-		Actor.occupyCell(mob);
-		if (scene != null && Dungeon.level != null) {
-			scene.addMobSprite(mob);
-		}
-	}
-
-	public static void add(Level level, Mob mob, float delay) {
-		if (BuildConfig.DEBUG == true ) {
-			if(scene == null) {
-				throw new RuntimeException("adding mob when scene not yet ready");
-			}
-			if(Dungeon.level == null) {
-				throw new RuntimeException("adding mob when level not yet ready");
-			}
-		}
-		level.mobs.add(mob);
-		Actor.addDelayed(mob, delay);
-		Actor.occupyCell(mob);
-		if (scene != null && Dungeon.level != null) {
-			scene.addMobSprite(mob);
-		}
 	}
 
 	public static void add(EmoIcon icon) {

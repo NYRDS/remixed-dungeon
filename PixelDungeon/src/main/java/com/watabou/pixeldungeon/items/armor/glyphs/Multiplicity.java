@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.utils.Random;
@@ -49,7 +48,6 @@ public class Multiplicity extends Glyph {
 			if (Dungeon.level.cellValid(imgCell)) {
 				MirrorImage mob = new MirrorImage((Hero)defender);
 				Dungeon.level.spawnMob(mob);
-				GameScene.add(Dungeon.level, mob );
 				WandOfBlink.appear( mob, imgCell );
 				
 				defender.damage( Random.IntRange( 1, defender.ht() / 6 ), /*attacker*/ this );

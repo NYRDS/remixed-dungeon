@@ -244,6 +244,10 @@ public class Hero extends Char {
 		pets = alivePets;
 	}
 
+	public void releasePets() {
+		pets = new ArrayList<>();
+	}
+
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
@@ -1661,7 +1665,12 @@ public class Hero extends Char {
 		refreshPets();
 
 		for (Mob pet : pets) {
-			pet.setPos(getPos());
+			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
+			if(cell == -1){
+				cell = getPos();
+			}
+			pet.setPos(cell);
+
 			pet.state = pet.WANDERING;
 			Dungeon.level.spawnMob(pet);
 		}
