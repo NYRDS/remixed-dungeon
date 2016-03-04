@@ -70,11 +70,7 @@ public class SpiderLevel extends CommonLevel {
 			return false;
 		}
 
-		if(map[cell(x,y)] == type) {
-			return true;
-		}
-
-		return false;
+		return map[cell(x, y)] == type;
 	}
 	
 	private void connectChambers(Chamber a, Chamber b) {
