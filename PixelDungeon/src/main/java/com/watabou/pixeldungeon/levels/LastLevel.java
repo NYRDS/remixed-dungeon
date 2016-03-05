@@ -17,15 +17,15 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import java.util.Arrays;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
+
+import java.util.Arrays;
 
 public class LastLevel extends Level {
 

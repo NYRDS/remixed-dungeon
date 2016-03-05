@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
@@ -109,6 +110,7 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfIdentify());
 			hero.collect(new ScrollOfDomination());
+			hero.collect(new PotionOfLiquidFlame());
 		}
 
 		hero.collect(new ChaosCrystal());

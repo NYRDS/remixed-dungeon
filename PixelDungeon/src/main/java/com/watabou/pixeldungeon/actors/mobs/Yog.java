@@ -80,8 +80,8 @@ public class Yog extends Boss {
 			fist2.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
 		} while (!Dungeon.level.passable[fist1.getPos()] || !Dungeon.level.passable[fist2.getPos()] || fist1.getPos() == fist2.getPos());
 
-		Dungeon.level.spawnMob(fist1,0);
-		Dungeon.level.spawnMob(fist2,0);
+		Dungeon.level.spawnMob(fist1);
+		Dungeon.level.spawnMob(fist2);
 	}
 
 	@Override

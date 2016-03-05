@@ -3,8 +3,6 @@ package com.nyrds.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
@@ -59,10 +57,5 @@ public class ShadowLordLevel extends Level {
 	@Override
 	public boolean isBossLevel() {
 		return true;
-	}
-
-	private void doMagic(int cell) {
-		set(cell, Terrain.EMPTY_SP);
-		CellEmitter.get(cell).start(FlameParticle.FACTORY, 0.1f, 3);
 	}
 }

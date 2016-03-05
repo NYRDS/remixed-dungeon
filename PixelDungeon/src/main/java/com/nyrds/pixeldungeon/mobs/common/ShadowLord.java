@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
@@ -43,7 +44,7 @@ public class ShadowLord extends Boss {
 			Mob mob = new Shadow();
 
 			mob.state = mob.WANDERING;
-			Dungeon.level.spawnMob(mob,1);
+			Dungeon.level.spawnMob(mob, 1);
 
 			WandOfBlink.appear(mob, cell);
 		}
@@ -56,7 +57,7 @@ public class ShadowLord extends Boss {
 			Mob mob = new Wraith();
 
 			mob.state = mob.WANDERING;
-			Dungeon.level.spawnMob(mob,1);
+			Dungeon.level.spawnMob(mob, 1);
 			WandOfBlink.appear(mob, cell);
 		}
 	}
@@ -65,22 +66,21 @@ public class ShadowLord extends Boss {
 		Tools.buildSquareMaze(Dungeon.level, 4);
 	}
 
-
 	@Override
-	protected boolean canAttack( Char enemy ) {
+	protected boolean canAttack(Char enemy) {
 		return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 
 	@Override
-	protected boolean doAttack( Char enemy ) {
+	protected boolean doAttack(Char enemy) {
 
-		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
+		if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
 			return super.doAttack(enemy);
 		} else {
 
-			getSprite().zap( enemy.getPos() );
+			getSprite().zap(enemy.getPos());
 
-			spend( 1 );
+			spend(1);
 
 			if (hit(this, enemy, true)) {
 				enemy.damage(damageRoll(), this);
@@ -91,7 +91,7 @@ public class ShadowLord extends Boss {
 
 	private void blink(int epos) {
 
-		if(Dungeon.level.distance(getPos(),epos)==1) {
+		if (Dungeon.level.distance(getPos(), epos) == 1) {
 			int y = getPos() / Dungeon.level.getWidth();
 			int x = getPos() % Dungeon.level.getWidth();
 
@@ -101,11 +101,11 @@ public class ShadowLord extends Boss {
 			int dx = x - ex;
 			int dy = y - ey;
 
-			x += 2*dx;
-			y += 2*dy;
+			x += 2 * dx;
+			y += 2 * dy;
 
-			final int tgt = Dungeon.level.cell(x,y);
-			if(Dungeon.level.cellValid(tgt)) {
+			final int tgt = Dungeon.level.cell(x, y);
+			if (Dungeon.level.cellValid(tgt)) {
 				final Char ch = this;
 				fx(getPos(), new Callback() {
 					@Override
@@ -117,7 +117,7 @@ public class ShadowLord extends Boss {
 		}
 	}
 
-	protected void fx( int cell, Callback callback ) {
+	protected void fx(int cell, Callback callback) {
 		MagicMissile.purpleLight(getSprite().getParent(), getPos(), cell, callback);
 		Sample.INSTANCE.play(Assets.SND_ZAP);
 		getSprite().setVisible(false);
@@ -127,8 +127,8 @@ public class ShadowLord extends Boss {
 	public int defenseProc(Char enemy, int damage) {
 
 		int dmg = super.defenseProc(enemy, damage);
-		if (dmg > 0 && cooldown<0) {
-			state = PASSIVE;
+		if (dmg > 0 && cooldown < 0) {
+			state = FLEEING;
 			blink(enemy.getPos());
 			twistLevel();
 			cooldown = 20;
@@ -138,13 +138,17 @@ public class ShadowLord extends Boss {
 
 	@Override
 	protected boolean act() {
-
-		if(state==PASSIVE){
+		if (state == FLEEING) {
 			cooldown--;
-			if(cooldown<0){
-				spawnWraith();
-				spawnShadow();
-				state=WANDERING;
+			if (cooldown < 0) {
+				state = WANDERING;
+				for (int i = 0; i < 5; i++) {
+					if (Math.random() < 0.7) {
+						spawnWraith();
+					} else {
+						spawnShadow();
+					}
+				}
 				yell("Prepare yourself!");
 			}
 		}
@@ -170,5 +174,6 @@ public class ShadowLord extends Boss {
 	public void die(Object cause) {
 		super.die(cause);
 		Tools.makeEmptyLevel(Dungeon.level);
+		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 	}
 }

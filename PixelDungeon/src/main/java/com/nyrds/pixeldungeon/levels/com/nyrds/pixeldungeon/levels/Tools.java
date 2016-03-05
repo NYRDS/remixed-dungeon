@@ -83,6 +83,10 @@ public class Tools {
 						if(level.getDistToNearestTerrain(secondDoorCell,Terrain.DOOR)>1) {
 							level.set(secondDoorCell, Terrain.DOOR);
 						}
+						secondDoorCell = level.getNearestTerrain(i, j, Terrain.WALL);
+						if(level.getDistToNearestTerrain(secondDoorCell,Terrain.DOOR)>1) {
+							level.set(secondDoorCell, Terrain.DOOR);
+						}
 					}
 					continue;
 				}
@@ -119,6 +123,7 @@ public class Tools {
 		level.entrance = level.cell(width/4,height/4);
 		level.set(level.entrance,Terrain.ENTRANCE);
 
-		level.exit = -1;
+		level.exit = level.cell(width-width/4,height-height/4);
+		level.set(level.exit,Terrain.LOCKED_EXIT);
 	}
 }
