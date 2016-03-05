@@ -84,7 +84,6 @@ public class GLog {
 			logWriter.flush();
 		} catch (IOException e) {
 			readonlySd = true;
-			return;
 		}
 	}
 	

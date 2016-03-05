@@ -132,13 +132,9 @@ public class Armor extends EquipableItem {
 			
 			hero.belongings.armor = null;
 			hero.updateLook();
-			
 			return true;
-			
 		} else {
-			
 			return false;
-			
 		}
 	}
 	
@@ -170,11 +166,7 @@ public class Armor extends EquipableItem {
 		
 		return super.upgrade();
 	}
-	
-	public Item safeUpgrade() {
-		return upgrade( glyph != null );
-	}
-	
+
 	@Override
 	public Item degrade() {
 		DR -= tier;
@@ -319,11 +311,7 @@ public class Armor extends EquipableItem {
 		
 		return this;
 	}
-	
-	public boolean isInscribed() {
-		return glyph != null;
-	}
-	
+
 	@Override
 	public ItemSprite.Glowing glowing() {
 		return glyph != null ? glyph.glowing() : null;

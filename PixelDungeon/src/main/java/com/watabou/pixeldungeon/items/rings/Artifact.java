@@ -56,7 +56,7 @@ public class Artifact extends EquipableItem {
 				if (hero.belongings.ring2 == this) {
 					hero.belongings.ring2 = null;
 				} else { //WTF??
-					throw new RuntimeException("trying unequip ");
+					throw new RuntimeException("trying unequip unequipped artifact");
 				}
 			}
 

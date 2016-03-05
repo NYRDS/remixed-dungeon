@@ -298,11 +298,13 @@ public class Item implements Bundlable {
 	public void removeItemFrom(Hero hero) {
 		onDetach();
 		if(this instanceof EquipableItem) {
-			if((this.isEquipped(hero))) {
+			if(isEquipped(hero)) {
 				((EquipableItem) this).doUnequip(hero, false);
+			} else {
+				hero.belongings.removeItem(this);
 			}
 		}
-		hero.belongings.removeItem(this);
+
 		updateQuickslot();
 	}
 
