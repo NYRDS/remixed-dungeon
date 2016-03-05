@@ -25,15 +25,11 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.SwarmSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
 
 public class Swarm extends Mob {
 
@@ -62,7 +58,7 @@ public class Swarm extends Mob {
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
+		super.restoreFromBundle(bundle);
 		generation = bundle.getInt( GENERATION );
 	}
 	
@@ -75,30 +71,12 @@ public class Swarm extends Mob {
 	public int defenseProc( Char enemy, int damage ) {
 
 		if (hp() >= damage + 2) {
-			ArrayList<Integer> candidates = new ArrayList<>();
-			boolean[] passable = Dungeon.level.passable;
-			
-			for (int n : Level.NEIGHBOURS4) {
-				int p = n + getPos();
-				if (passable[p] && Actor.findChar( p ) == null) {
-					candidates.add( p );
-				}
-			}
-	
-			if (candidates.size() > 0) {
-				
-				Swarm clone = split();
-				clone.hp((hp() - damage) / 2);
-				clone.setPos(Random.element( candidates ));
-				clone.state = clone.HUNTING;
-				
-				if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
-					Door.enter( clone.getPos() );
-				}
-				Dungeon.level.spawnMob(clone,SPLIT_DELAY);
-				Actor.addDelayed( new Pushing( clone, getPos(), clone.getPos() ), -1 );
-				
-				hp(hp() - clone.hp());
+			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
+
+			if (Dungeon.level.cellValid(cell)) {
+				int cloneHp = split(cell, damage);
+
+				hp(hp() - cloneHp);
 			}
 		}
 		
@@ -109,24 +87,37 @@ public class Swarm extends Mob {
 	public int attackSkill( Char target ) {
 		return 12;
 	}
-	
-	private Swarm split() {
+
+	private int split(int cell, int damage) {
 		Swarm clone = new Swarm();
 		clone.generation = generation + 1;
-		if (buff( Burning.class ) != null) {
-			Buff.affect( clone, Burning.class ).reignite( clone );
+
+		clone.hp((hp() - damage) / 2);
+		clone.setPos(cell);
+		clone.state = clone.HUNTING;
+
+
+		if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
+			Door.enter(clone.getPos());
 		}
-		if (buff( Poison.class ) != null) {
-			Buff.affect( clone, Poison.class ).set( 2 );
+
+		Dungeon.level.spawnMob(clone, SPLIT_DELAY);
+		Actor.addDelayed(new Pushing(clone, getPos(), clone.getPos()), -1);
+
+		if (buff(Burning.class) != null) {
+			Buff.affect(clone, Burning.class).reignite(clone);
 		}
-		
-		if(isPet()) {
+		if (buff(Poison.class) != null) {
+			Buff.affect(clone, Poison.class).set(2);
+		}
+
+		if (isPet()) {
 			Mob.makePet(clone, Dungeon.hero);
 		}
-		
-		return clone;
+
+		return clone.hp();
 	}
-	
+
 	@Override
 	protected void dropLoot() {
 		if (Random.Int( 5 * (generation + 1) ) == 0) {
