@@ -83,7 +83,8 @@ public class GLog {
 			logWriter.write(text);
 			logWriter.flush();
 		} catch (IOException e) {
-			throw new RuntimeException("cant write to log file", e);
+			readonlySd = true;
+			return;
 		}
 	}
 	
