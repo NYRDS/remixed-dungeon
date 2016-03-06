@@ -66,11 +66,7 @@ public class SpiderLevel extends CommonLevel {
 	}
 
 	private boolean isCellIs(int x, int y, int type) {
-		if(!cellValid(x,y)) {
-			return false;
-		}
-
-		return map[cell(x, y)] == type;
+		return cellValid(x, y) && map[cell(x, y)] == type;
 	}
 	
 	private void connectChambers(Chamber a, Chamber b) {

@@ -426,7 +426,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void spawnMob(Mob mob) {
-		spawnMob(mob,0);
+		spawnMob(mob, 0);
 	}
 
 	public void spawnMob(Mob mob, float delay) {
@@ -1156,7 +1156,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean cellValid(int x, int y) {
-		return x >= 0 && y >= 0 && x < getWidth()  && y < getHeight();
+			return x > 0 && y > 0 && x < getWidth()-1  && y < getHeight()-1;
 	}
 
 	public boolean cellValid(int cell) {
