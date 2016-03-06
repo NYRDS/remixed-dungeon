@@ -82,21 +82,21 @@ import java.util.HashSet;
 
 public class GameScene extends PixelScene {
 
-	private static final String TXT_WELCOME = Game.getVar(R.string.GameScene_Welcome);
+	private static final String TXT_WELCOME      = Game.getVar(R.string.GameScene_Welcome);
 	private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
-	private static final String TXT_NIGHT_MODE = Game.getVar(R.string.GameScene_NightMode);
+	private static final String TXT_NIGHT_MODE   = Game.getVar(R.string.GameScene_NightMode);
 
-	private static final String TXT_CHASM = Game.getVar(R.string.GameScene_Chasm);
-	private static final String TXT_WATER = Game.getVar(R.string.GameScene_Water);
-	private static final String TXT_GRASS = Game.getVar(R.string.GameScene_Grass);
+	private static final String TXT_CHASM   = Game.getVar(R.string.GameScene_Chasm);
+	private static final String TXT_WATER   = Game.getVar(R.string.GameScene_Water);
+	private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
 	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 
 	static volatile GameScene scene;
 
-	private SkinnedBlock water;
+	private SkinnedBlock   water;
 	private DungeonTilemap tiles;
-	private FogOfWar fog;
-	private HeroSprite heroSprite;
+	private FogOfWar       fog;
+	private HeroSprite     heroSprite;
 
 	private GameLog log;
 
@@ -115,7 +115,7 @@ public class GameScene extends PixelScene {
 	private Group hats;
 
 	private Toolbar toolbar;
-	private Toast prompt;
+	private Toast   prompt;
 
 	private boolean sceneCreated = false;
 
@@ -252,16 +252,16 @@ public class GameScene extends PixelScene {
 			Sample.INSTANCE.play(Assets.SND_DESCEND);
 		}
 		switch (Dungeon.level.feeling) {
-		case CHASM:
-			GLog.w(TXT_CHASM);
-			break;
-		case WATER:
-			GLog.w(TXT_WATER);
-			break;
-		case GRASS:
-			GLog.w(TXT_GRASS);
-			break;
-		default:
+			case CHASM:
+				GLog.w(TXT_CHASM);
+				break;
+			case WATER:
+				GLog.w(TXT_WATER);
+				break;
+			case GRASS:
+				GLog.w(TXT_GRASS);
+				break;
+			default:
 		}
 		if (Dungeon.level instanceof RegularLevel
 				&& ((RegularLevel) Dungeon.level).secretDoors > Random.IntRange(3, 4)) {
@@ -278,25 +278,25 @@ public class GameScene extends PixelScene {
 		add(busy);
 
 		switch (InterlevelScene.mode) {
-		case RESURRECT:
-			WandOfBlink.appear(Dungeon.hero, Dungeon.level.entrance);
-			new Flare(8, 32).color(0xFFFF66, true).show(heroSprite, 2f);
-			break;
-		case RETURN:
-			WandOfBlink.appear(Dungeon.hero, Dungeon.hero.getPos());
-			break;
-		case FALL:
-			Chasm.heroLand();
-			break;
-		case DESCEND:
+			case RESURRECT:
+				WandOfBlink.appear(Dungeon.hero, Dungeon.level.entrance);
+				new Flare(8, 32).color(0xFFFF66, true).show(heroSprite, 2f);
+				break;
+			case RETURN:
+				WandOfBlink.appear(Dungeon.hero, Dungeon.hero.getPos());
+				break;
+			case FALL:
+				Chasm.heroLand();
+				break;
+			case DESCEND:
 
-			DungeonGenerator.showStory(Dungeon.level);
+				DungeonGenerator.showStory(Dungeon.level);
 
-			if (Dungeon.hero.isAlive() && Dungeon.depth != 22) {
-				Badges.validateNoKilling();
-			}
-			break;
-		default:
+				if (Dungeon.hero.isAlive() && Dungeon.depth != 22) {
+					Badges.validateNoKilling();
+				}
+				break;
+			default:
 		}
 
 		Camera.main.target = heroSprite;
@@ -554,9 +554,7 @@ public class GameScene extends PixelScene {
 			scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
 
 			for (Mob mob : Dungeon.level.mobs) {
-				if (mob.getSprite() != null) {
-					mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
-				}
+				mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
 			}
 		}
 	}

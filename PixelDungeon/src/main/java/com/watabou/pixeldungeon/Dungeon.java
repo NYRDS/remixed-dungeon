@@ -543,7 +543,14 @@ public class Dungeon {
 
 		BArray.or(level.visited, visible, level.visited);
 
-		GameScene.afterObserve();
+		Game.executeInGlThread(
+				new Runnable() {
+					@Override
+					public void run() {
+						GameScene.afterObserve();
+					}
+				}
+		);
 	}
 
 	private static void markActorsAsUnpassableIgnoreFov() {
