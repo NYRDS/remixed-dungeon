@@ -134,8 +134,8 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	@Override
 	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = super.actions(hero);
-		if (charge > 0 && identetifyLevel > 0) {
-			actions.add(AC_USE);
+		if (charge == 0 || identetifyLevel == 0) {
+			actions.remove(AC_USE);
 		}
 
 		if (charge >= 50 && identetifyLevel > 1) {
