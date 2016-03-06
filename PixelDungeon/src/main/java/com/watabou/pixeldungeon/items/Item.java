@@ -49,156 +49,156 @@ import java.util.Comparator;
 
 public class Item implements Bundlable {
 
-	private static final String TXT_PACK_FULL = Game.getVar(R.string.Item_PackFull);
+	private static final   String TXT_PACK_FULL = Game.getVar(R.string.Item_PackFull);
 	protected static final String TXT_DIR_THROW = Game.getVar(R.string.Item_DirThrow);
-	
-	private static final String TXT_TO_STRING		= "%s";
-	private static final String TXT_TO_STRING_X		= "%s x%d";
-	private static final String TXT_TO_STRING_LVL	= "%s%+d";
-	private static final String TXT_TO_STRING_LVL_X	= "%s%+d x%d";
-	
-	protected static final float TIME_TO_THROW		= 1.0f;
-	protected static final float TIME_TO_PICK_UP	= 1.0f;
-	protected static final float TIME_TO_DROP		= 0.5f;
-	
-	public static final String AC_DROP		= Game.getVar(R.string.Item_ACDrop);
-	public static final String AC_THROW		= Game.getVar(R.string.Item_ACThrow);
-	
+
+	private static final String TXT_TO_STRING       = "%s";
+	private static final String TXT_TO_STRING_X     = "%s x%d";
+	private static final String TXT_TO_STRING_LVL   = "%s%+d";
+	private static final String TXT_TO_STRING_LVL_X = "%s%+d x%d";
+
+	protected static final float TIME_TO_THROW   = 1.0f;
+	protected static final float TIME_TO_PICK_UP = 1.0f;
+	protected static final float TIME_TO_DROP    = 0.5f;
+
+	public static final String AC_DROP  = Game.getVar(R.string.Item_ACDrop);
+	public static final String AC_THROW = Game.getVar(R.string.Item_ACThrow);
+
 	public String defaultAction;
-	
+
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
-	
+
 	protected int image = 0;
 	protected String imageFile;
-	
-	public boolean stackable = false;
-	private int quantity = Scrambler.scramble(1);
-	
-	private int level = Scrambler.scramble(0);
-	public boolean levelKnown = false;
-	
+
+	public  boolean stackable = false;
+	private int     quantity  = Scrambler.scramble(1);
+
+	private int     level      = Scrambler.scramble(0);
+	public  boolean levelKnown = false;
+
 	public boolean cursed;
 	public boolean cursedKnown;
 
-	private static Comparator<Item> itemComparator = new Comparator<Item>() {	
+	private static Comparator<Item> itemComparator = new Comparator<Item>() {
 		@Override
-		public int compare( Item lhs, Item rhs ) {
-			return Generator.Category.order( lhs ) - Generator.Category.order( rhs );
+		public int compare(Item lhs, Item rhs) {
+			return Generator.Category.order(lhs) - Generator.Category.order(rhs);
 		}
 	};
-	
-	public ArrayList<String> actions( Hero hero ) {
+
+	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		actions.add( AC_DROP );
-		actions.add( AC_THROW );
+		actions.add(AC_DROP);
+		actions.add(AC_THROW);
 		return actions;
 	}
-	
-	public boolean doPickUp( Hero hero ) {
-		if (collect( hero.belongings.backpack )) {
-			
-			GameScene.pickUp( this );
-			Sample.INSTANCE.play( Assets.SND_ITEM );
-			hero.spendAndNext( TIME_TO_PICK_UP );
+
+	public boolean doPickUp(Hero hero) {
+		if (collect(hero.belongings.backpack)) {
+
+			GameScene.pickUp(this);
+			Sample.INSTANCE.play(Assets.SND_ITEM);
+			hero.spendAndNext(TIME_TO_PICK_UP);
 			return true;
-			
+
 		} else {
 			return false;
 		}
 	}
-	
-	public void doDrop( Hero hero ) {
-		hero.spendAndNext( TIME_TO_DROP );
-		Dungeon.level.drop( detachAll( hero.belongings.backpack ), hero.getPos() ).sprite.drop(hero.getPos());
-	}
-	
-	public void doThrow( Hero hero ) {
-		GameScene.selectCell( thrower );
-	}
-	
-	public void execute( Hero hero, String action ) {
-		
-		setCurUser(hero);
-		curItem = this;
-		
-		if (action.equals( AC_DROP )) {
-			
-			doDrop( hero );
-			
-		} else if (action.equals( AC_THROW )) {
-			
-			doThrow( hero );
-			
-		}
-	}
-	
-	public void execute( Hero hero ) {
-		execute( hero, defaultAction );
+
+	public void doDrop(Hero hero) {
+		hero.spendAndNext(TIME_TO_DROP);
+		Dungeon.level.drop(detachAll(hero.belongings.backpack), hero.getPos()).sprite.drop(hero.getPos());
 	}
 
-	protected void onThrow( int cell ) {
-		Heap heap = Dungeon.level.drop( this, cell );
+	public void doThrow(Hero hero) {
+		GameScene.selectCell(thrower);
+	}
+
+	public void execute(Hero hero, String action) {
+
+		setCurUser(hero);
+		curItem = this;
+
+		if (action.equals(AC_DROP)) {
+
+			doDrop(hero);
+
+		} else if (action.equals(AC_THROW)) {
+
+			doThrow(hero);
+
+		}
+	}
+
+	public void execute(Hero hero) {
+		execute(hero, defaultAction);
+	}
+
+	protected void onThrow(int cell) {
+		Heap heap = Dungeon.level.drop(this, cell);
 		if (!heap.isEmpty()) {
 			heap.sprite.drop(cell);
 		}
 	}
-	
-	public boolean collect( Bag container ) {
-		
+
+	public boolean collect(Bag container) {
+
 		ArrayList<Item> items = container.items;
-		
-		if (items.contains( this )) {
+
+		if (items.contains(this)) {
 			return true;
 		}
-		
-		for (Item item:items) {
-			if (item instanceof Bag && ((Bag)item).grab( this )) {
-				return collect( (Bag)item );
+
+		for (Item item : items) {
+			if (item instanceof Bag && ((Bag) item).grab(this)) {
+				return collect((Bag) item);
 			}
 		}
-		
+
 		if (stackable) {
-			
-			Class<?>c = getClass();
-			for (Item item:items) {
+
+			Class<?> c = getClass();
+			for (Item item : items) {
 				if (item.getClass() == c) {
 					item.quantity(item.quantity() + quantity());
 					item.updateQuickslot();
 					return true;
 				}
-			}	
-		}
-		
-		if (items.size() < container.size) {
-			
-			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
-				Badges.validateItemLevelAquired( this );
 			}
-			
-			items.add( this );	
+		}
+
+		if (items.size() < container.size) {
+
+			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
+				Badges.validateItemLevelAquired(this);
+			}
+
+			items.add(this);
 			QuickSlot.refresh();
-			Collections.sort( items, itemComparator );
+			Collections.sort(items, itemComparator);
 			return true;
-			
+
 		} else {
-			
-			GLog.n( TXT_PACK_FULL, name() );
+
+			GLog.n(TXT_PACK_FULL, name());
 			return false;
-			
+
 		}
 	}
-	
+
 	public boolean collect(Hero hero) {
-		return collect( hero.belongings.backpack );
+		return collect(hero.belongings.backpack);
 	}
-	
-	public final Item detach( Bag container ) {
-		
+
+	public final Item detach(Bag container) {
+
 		if (quantity() <= 0) {
-			
+
 			return null;
-			
+
 		} else {
 			if (quantity() == 1) {
 
@@ -221,61 +221,61 @@ public class Item implements Bundlable {
 			}
 		}
 	}
-	
-	public final Item detachAll( Bag container ) {
-		
+
+	public final Item detachAll(Bag container) {
+
 		for (Item item : container.items) {
 			if (item == this) {
-				container.items.remove( this );
-				item.onDetach( );
+				container.items.remove(this);
+				item.onDetach();
 				QuickSlot.refresh();
 				return this;
 			} else if (item instanceof Bag) {
-				Bag bag = (Bag)item;
-				if (bag.contains( this )) {
-					return detachAll( bag );
+				Bag bag = (Bag) item;
+				if (bag.contains(this)) {
+					return detachAll(bag);
 				}
 			}
 		}
-		
+
 		return this;
 	}
-	
-	protected void onDetach( ) {
+
+	protected void onDetach() {
 	}
-	
+
 	public Item upgrade() {
-		
+
 		cursed = false;
 		cursedKnown = true;
 		this.level(this.level() + 1);
-		
+
 		return this;
 	}
-	
-	public Item upgrade( int n ) {
-		for (int i=0; i < n; i++) {
+
+	public Item upgrade(int n) {
+		for (int i = 0; i < n; i++) {
 			upgrade();
 		}
-		
+
 		return this;
 	}
-	
+
 	public Item degrade() {
-		
+
 		this.level(this.level() - 1);
-		
+
 		return this;
 	}
-	
-	public Item degrade( int n ) {
-		for (int i=0; i < n; i++) {
+
+	public Item degrade(int n) {
+		for (int i = 0; i < n; i++) {
 			degrade();
 		}
-		
+
 		return this;
 	}
-	
+
 	public int visiblyUpgraded() {
 		return levelKnown ? level() : 0;
 	}
@@ -283,12 +283,12 @@ public class Item implements Bundlable {
 	public boolean isUpgradable() {
 		return true;
 	}
-	
+
 	public boolean isIdentified() {
 		return levelKnown && cursedKnown;
 	}
-	
-	public boolean isEquipped( Hero hero ) {
+
+	public boolean isEquipped(Hero hero) {
 		return this.equals(hero.belongings.weapon) ||
 				this.equals(hero.belongings.armor) ||
 				this.equals(hero.belongings.ring1) ||
@@ -297,55 +297,52 @@ public class Item implements Bundlable {
 
 	public void removeItemFrom(Hero hero) {
 		onDetach();
-		if(this instanceof EquipableItem) {
-			if(isEquipped(hero)) {
-				((EquipableItem) this).doUnequip(hero, false);
-			} else {
-				hero.belongings.removeItem(this);
-			}
+		cursed = false;
+		if (!(this instanceof EquipableItem) || !isEquipped(hero) || !((EquipableItem) this).doUnequip(hero, false)) {
+			hero.belongings.removeItem(this);
 		}
 
 		updateQuickslot();
 	}
 
 	public Item identify() {
-		
+
 		levelKnown = true;
 		cursedKnown = true;
-		
+
 		return this;
 	}
-	
-	public static void evoke( Hero hero ) {
-		hero.getSprite().emitter().burst( Speck.factory( Speck.EVOKE ), 5 );
+
+	public static void evoke(Hero hero) {
+		hero.getSprite().emitter().burst(Speck.factory(Speck.EVOKE), 5);
 	}
-	
+
 	@Override
 	public String toString() {
-		
+
 		if (levelKnown && level() != 0) {
 			if (quantity() > 1) {
-				return Utils.format( TXT_TO_STRING_LVL_X, name(), level(), quantity() );
+				return Utils.format(TXT_TO_STRING_LVL_X, name(), level(), quantity());
 			} else {
-				return Utils.format( TXT_TO_STRING_LVL, name(), level() );
+				return Utils.format(TXT_TO_STRING_LVL, name(), level());
 			}
 		} else {
 			if (quantity() > 1) {
-				return Utils.format( TXT_TO_STRING_X, name(), quantity() );
+				return Utils.format(TXT_TO_STRING_X, name(), quantity());
 			} else {
-				return Utils.format( TXT_TO_STRING, name() );
+				return Utils.format(TXT_TO_STRING, name());
 			}
 		}
 	}
-	
+
 	public String name() {
 		return name;
 	}
-	
+
 	public final String trueName() {
 		return name;
 	}
-	
+
 	public ItemSprite.Glowing glowing() {
 		return null;
 	}
@@ -357,167 +354,168 @@ public class Item implements Bundlable {
 	public String desc() {
 		return info;
 	}
-	
+
 	public int quantity() {
 		return Scrambler.descramble(quantity);
 	}
-	
-	public void quantity( int value ) {
+
+	public void quantity(int value) {
 		quantity = Scrambler.scramble(value);
 	}
-	
+
 	public int price() {
 		return 0;
 	}
-	
-	public static Item virtual( Class<? extends Item> cl ) {
+
+	public static Item virtual(Class<? extends Item> cl) {
 		try {
-			
+
 			Item item = cl.newInstance();
 			item.quantity(0);
 			return item;
-			
+
 		} catch (Exception e) {
 			return null;
 		}
 	}
-	
+
 	public Item random() {
 		return this;
 	}
-	
+
 	public String status() {
-		return quantity() != 1 ? Integer.toString( quantity() ) : null;
+		return quantity() != 1 ? Integer.toString(quantity()) : null;
 	}
-	
+
 	public void updateQuickslot() {
 		QuickSlot.refresh();
 	}
-	
-	private static final String QUANTITY		= "quantity";
-	private static final String LEVEL			= "level";
-	private static final String LEVEL_KNOWN		= "levelKnown";
-	private static final String CURSED			= "cursed";
-	private static final String CURSED_KNOWN	= "cursedKnown";
-	private static final String QUICKSLOT		= "quickslot";
-	private static final String QUICKSLOT_2		= "quickslot_2";
-	private static final String QUICKSLOT_3		= "quickslot_3";
-	
+
+	private static final String QUANTITY     = "quantity";
+	private static final String LEVEL        = "level";
+	private static final String LEVEL_KNOWN  = "levelKnown";
+	private static final String CURSED       = "cursed";
+	private static final String CURSED_KNOWN = "cursedKnown";
+	private static final String QUICKSLOT    = "quickslot";
+	private static final String QUICKSLOT_2  = "quickslot_2";
+	private static final String QUICKSLOT_3  = "quickslot_3";
+
 	@Override
-	public void storeInBundle( Bundle bundle ) {
-		bundle.put( QUANTITY,     quantity() );
-		bundle.put( LEVEL,        level() );
-		bundle.put( LEVEL_KNOWN,  levelKnown );
-		bundle.put( CURSED,       cursed );
-		bundle.put( CURSED_KNOWN, cursedKnown );
-		
+	public void storeInBundle(Bundle bundle) {
+		bundle.put(QUANTITY, quantity());
+		bundle.put(LEVEL, level());
+		bundle.put(LEVEL_KNOWN, levelKnown);
+		bundle.put(CURSED, cursed);
+		bundle.put(CURSED_KNOWN, cursedKnown);
+
 		if (this == QuickSlot.getItem(0)) {
-			bundle.put( QUICKSLOT, true );
+			bundle.put(QUICKSLOT, true);
 		}
-		
+
 		if (this == QuickSlot.getItem(1)) {
-			bundle.put( QUICKSLOT_2, true );
+			bundle.put(QUICKSLOT_2, true);
 		}
-		
+
 		if (this == QuickSlot.getItem(2)) {
-			bundle.put( QUICKSLOT_3, true );
+			bundle.put(QUICKSLOT_3, true);
 		}
 	}
-	
+
 	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		quantity(bundle.getInt( QUANTITY ));
-		levelKnown	= bundle.getBoolean( LEVEL_KNOWN );
-		cursedKnown	= bundle.getBoolean( CURSED_KNOWN );
-		
-		int level = bundle.getInt( LEVEL );
+	public void restoreFromBundle(Bundle bundle) {
+		quantity(bundle.getInt(QUANTITY));
+		levelKnown = bundle.getBoolean(LEVEL_KNOWN);
+		cursedKnown = bundle.getBoolean(CURSED_KNOWN);
+
+		int level = bundle.getInt(LEVEL);
 		if (level > 0) {
-			upgrade( level );
+			upgrade(level);
 		} else if (level < 0) {
-			degrade( -level );
+			degrade(-level);
 		}
-		
-		cursed	= bundle.getBoolean( CURSED );
-		
-		if (bundle.getBoolean( QUICKSLOT )) {
-			QuickSlot.selectItem(this,0);
+
+		cursed = bundle.getBoolean(CURSED);
+
+		if (bundle.getBoolean(QUICKSLOT)) {
+			QuickSlot.selectItem(this, 0);
 		}
-		
-		if (bundle.getBoolean( QUICKSLOT_2 )) {
-			QuickSlot.selectItem(this,1);
+
+		if (bundle.getBoolean(QUICKSLOT_2)) {
+			QuickSlot.selectItem(this, 1);
 		}
-		
-		if (bundle.getBoolean( QUICKSLOT_3 )) {
-			QuickSlot.selectItem(this,2);
+
+		if (bundle.getBoolean(QUICKSLOT_3)) {
+			QuickSlot.selectItem(this, 2);
 		}
 	}
-	
+
 	public boolean dontPack() {
 		return false;
 	}
-	
-	public void cast( final Hero user, int dst ) {
-		
+
+	public void cast(final Hero user, int dst) {
+
 		setCurUser(user);
-		
-		final int cell = Ballistica.cast( user.getPos(), dst, false, true );
-		user.getSprite().zap( cell );
+
+		final int cell = Ballistica.cast(user.getPos(), dst, false, true);
+		user.getSprite().zap(cell);
 		user.busy();
-		
-		Char enemy = Actor.findChar( cell );
-		QuickSlot.target( this, enemy );
-		
+
+		Char enemy = Actor.findChar(cell);
+		QuickSlot.target(this, enemy);
+
 		float delay = TIME_TO_THROW;
 		if (this instanceof MissileWeapon) {
 
 			// FIXME
-			delay *= ((MissileWeapon)this).speedFactor( user );
-			if (enemy != null && enemy.buff( SnipersMark.class ) != null) {
+			delay *= ((MissileWeapon) this).speedFactor(user);
+			if (enemy != null && enemy.buff(SnipersMark.class) != null) {
 				delay *= 0.5f;
 			}
 		}
 		final float finalDelay = delay;
-		
-		((MissileSprite)user.getSprite().getParent().recycle( MissileSprite.class )).
-			reset( user.getPos(), cell, this, null, new Callback() {			
-				@Override
-				public void call() {
-					Item item = Item.this.detach(user.belongings.backpack);
-					item.onThrow(cell);
-					user.spendAndNext( finalDelay );
-				}
-			} );
+
+		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
+				reset(user.getPos(), cell, this, null, new Callback() {
+					@Override
+					public void call() {
+						Item item = Item.this.detach(user.belongings.backpack);
+						item.onThrow(cell);
+						user.spendAndNext(finalDelay);
+					}
+				});
 	}
-	
-	private static Hero curUser = null;
-	protected static Item curItem = null;
-	protected static CellSelector.Listener thrower = new CellSelector.Listener() {	
+
+	private static   Hero                  curUser = null;
+	protected static Item                  curItem = null;
+	protected static CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
-		public void onSelect( Integer target ) {
+		public void onSelect(Integer target) {
 			if (target != null) {
-				curItem.cast( getCurUser(), target );
+				curItem.cast(getCurUser(), target);
 			}
 		}
+
 		@Override
 		public String prompt() {
 			return TXT_DIR_THROW;
 		}
 	};
-	
-	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent){
+
+	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
 
-	protected Item morphTo(Class<? extends Item> itemClass){
+	protected Item morphTo(Class<? extends Item> itemClass) {
 		try {
 			Item result = itemClass.newInstance();
 			result.quantity(quantity());
 			return result;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
-		} 
+		}
 	}
-	
+
 	public Item burn(int cell) {
 		return this;
 	}
@@ -538,18 +536,18 @@ public class Item implements Bundlable {
 		this.level = Scrambler.scramble(level);
 	}
 
-	public Item pick(Char ch,int pos) {
+	public Item pick(Char ch, int pos) {
 		return this;
 	}
 
 	public String imageFile() {
 		String customImageFile = ItemSpritesDescription.getImageFile(this);
-		
-		if(customImageFile!=null) {
+
+		if (customImageFile != null) {
 			return customImageFile;
 		}
-		
-		if(imageFile != null) {
+
+		if (imageFile != null) {
 			return imageFile;
 		}
 		return Assets.ITEMS;
@@ -557,14 +555,14 @@ public class Item implements Bundlable {
 
 	public int image() {
 		Integer customImageIndex = ItemSpritesDescription.getImageIndex(this);
-		
-		if(customImageIndex!=null) {
+
+		if (customImageIndex != null) {
 			return customImageIndex;
 		}
-		
+
 		return image;
 	}
-	
+
 	public boolean isFliesStraight() {
 		return ItemSpritesDescription.isFliesStraight(this);
 	}
