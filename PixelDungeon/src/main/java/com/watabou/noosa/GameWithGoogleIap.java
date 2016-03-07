@@ -14,6 +14,7 @@ import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
+import com.nyrds.pixeldungeon.ml.AnalyticsTrackers;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.PixelDungeon;
 
@@ -45,6 +46,9 @@ public abstract class GameWithGoogleIap extends Game {
 
 	public GameWithGoogleIap(Class<? extends Scene> c) {
 		super(c);
+		if(googleAnalyticsUsable()) {
+			AnalyticsTrackers.initialize(this);
+		}
 	}
 
 	private static boolean isSmallScreen() {
@@ -53,6 +57,10 @@ public abstract class GameWithGoogleIap extends Game {
 
 	private static boolean needDisplaySmallScreenEasyModeIs() {
 		return difficulty == 0 && isSmallScreen() && PixelDungeon.donated() == 0;
+	}
+
+	private static boolean googleAnalyticsUsable() {
+		return android.os.Build.VERSION.SDK_INT >= 9;
 	}
 
 	private static boolean googleAdsUsable() {
