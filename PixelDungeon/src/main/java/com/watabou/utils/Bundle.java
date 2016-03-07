@@ -114,7 +114,7 @@ public class Bundle {
 				return null;
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			Util.storeEventInAcra("Bundable.get",e);
 			return null;
 		}	
 	}
