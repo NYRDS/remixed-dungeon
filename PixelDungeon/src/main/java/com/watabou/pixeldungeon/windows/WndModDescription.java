@@ -95,7 +95,7 @@ public class WndModDescription extends Window {
 			@Override
 			protected void onClick() {
 				PixelDungeon.instance().doRestart();
-			};
+			}
 		};
 		
 		btn.setSize( Math.min( WIDTH, btn.reqWidth() ), 16 );
