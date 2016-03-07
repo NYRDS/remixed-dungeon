@@ -16,10 +16,16 @@ public class Util {
 	}
 
 	static public void storeEventInAcra(String eventKey,Exception e) {
+		if(!ACRA.isInitialised()){
+			return;
+		}
 		ACRA.getErrorReporter().putCustomData(eventKey, e.getMessage() + "\n" + Util.stackTraceToString(e) + "\n");
 	}
 
 	static public void storeEventInAcra(String eventKey,String str) {
+		if(!ACRA.isInitialised()){
+			return;
+		}
 		ACRA.getErrorReporter().putCustomData(eventKey, str);
 	}
 
