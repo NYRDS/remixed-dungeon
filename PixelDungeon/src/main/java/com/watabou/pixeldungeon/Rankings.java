@@ -185,7 +185,7 @@ public enum Rankings {
 			win		= bundle.getBoolean ( WIN    );
 			score	= bundle.getInt     ( SCORE  );
 			
-			heroClass	= HeroClass.restoreInBundle( bundle );
+			heroClass	= HeroClass.restoreFromBundle(bundle);
 			armorTier	= bundle.getInt( TIER );
 			
 			gameFile	= bundle.getString( GAME );

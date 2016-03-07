@@ -277,8 +277,8 @@ public class Hero extends Char {
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 
-		heroClass = HeroClass.restoreInBundle(bundle);
-		subClass = HeroSubClass.restoreInBundle(bundle);
+		heroClass = HeroClass.restoreFromBundle(bundle);
+		subClass = HeroSubClass.restoreFromBundle(bundle);
 
 		attackSkill = bundle.getInt(ATTACK);
 		defenseSkill = bundle.getInt(DEFENSE);

@@ -391,7 +391,7 @@ public class Dungeon {
 
 		Bundle bundle = gameBundle(fileName);
 
-		Util.storeEventInAcra("lastLoadedLevelData",bundle.toString());
+		Util.storeEventInAcra("lastLoadedGameData",bundle.toString());
 
 		Dungeon.challenges = bundle.getInt(CHALLENGES);
 

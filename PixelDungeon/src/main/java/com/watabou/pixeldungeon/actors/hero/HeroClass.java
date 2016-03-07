@@ -304,7 +304,7 @@ public enum HeroClass {
 		bundle.put(CLASS, toString());
 	}
 
-	public static HeroClass restoreInBundle(Bundle bundle) {
+	public static HeroClass restoreFromBundle(Bundle bundle) {
 		String value = bundle.getString(CLASS);
 		return value.length() > 0 ? valueOf(value) : ROGUE;
 	}
