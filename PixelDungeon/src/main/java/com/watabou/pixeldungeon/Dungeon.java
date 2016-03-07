@@ -18,7 +18,6 @@ t * Pixel Dungeon
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -386,12 +385,9 @@ public class Dungeon {
 		loadGame(fileName, false);
 	}
 
-	public static void loadGame(String fileName, boolean fullLoad) throws IOException {
-		GLog.toFile("load Game %s", fileName);
+	public static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
-		Bundle bundle = gameBundle(fileName);
-
-		Util.storeEventInAcra("lastLoadedGameData",bundle.toString());
+		//Util.storeEventInAcra("lastLoadedGameData",bundle.toString());
 
 		Dungeon.challenges = bundle.getInt(CHALLENGES);
 
@@ -451,6 +447,14 @@ public class Dungeon {
 
 		Statistics.restoreFromBundle(bundle);
 		Journal.restoreFromBundle(bundle);
+	}
+
+	public static void loadGame(String fileName, boolean fullLoad) throws IOException {
+		GLog.toFile("load Game %s", fileName);
+
+		Bundle bundle = gameBundle(fileName);
+
+		loadGameFromBundle(bundle, fullLoad);
 	}
 
 	public static Level loadLevel(Position next) throws IOException {
