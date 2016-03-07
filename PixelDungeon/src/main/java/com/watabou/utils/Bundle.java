@@ -187,7 +187,7 @@ public class Bundle {
 				list.add(type.cast(new Bundle(array.getJSONObject(i)).get()));
 			}
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 		
 		return list;
@@ -197,7 +197,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -205,7 +205,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -213,7 +213,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -221,7 +221,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -229,7 +229,7 @@ public class Bundle {
 		try {
 			data.put( key, bundle.data );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -241,7 +241,7 @@ public class Bundle {
 				object.storeInBundle( bundle );
 				data.put( key, bundle.data );
 			} catch (JSONException e) {
-				throw new RuntimeException("key:"+key);
+				throw new RuntimeException("key:"+key,e);
 			}
 		}
 	}
@@ -251,7 +251,7 @@ public class Bundle {
 			try {
 				data.put( key, value.name() );
 			} catch (JSONException e) {
-				throw new RuntimeException("key:"+key);
+				throw new RuntimeException("key:"+key,e);
 			}
 		}
 	}
@@ -264,7 +264,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -276,7 +276,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -288,7 +288,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -305,7 +305,7 @@ public class Bundle {
 		try {
 			data.put(key, array);
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key);
+			throw new RuntimeException("key:"+key,e);
 		}
 	}
 	
