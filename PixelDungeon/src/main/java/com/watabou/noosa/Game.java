@@ -26,8 +26,6 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.res.Configuration;
-import android.content.res.Resources.NotFoundException;
 import android.media.AudioManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -44,33 +42,20 @@ import android.widget.LinearLayout;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
 import org.acra.ACRA;
-import org.json.JSONArray;
-import org.json.JSONException;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Field;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -78,7 +63,6 @@ import javax.microedition.khronos.opengles.GL10;
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
 	private static Game instance;
-	private static Context context;
 
 	// Actual size of the screen
 	private static int width;
@@ -126,20 +110,20 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	@SuppressLint("NewApi")
 	@SuppressWarnings("deprecation")
-	public static long getAvailableInternalMemorySize() {
-		File path = Environment.getDataDirectory();
-		StatFs stat = new StatFs(path.getPath());
-		long ret;
-		if (android.os.Build.VERSION.SDK_INT < 18) {
-			long blockSize = stat.getBlockSize();
-			long availableBlocks = stat.getAvailableBlocks();
-			ret = availableBlocks * blockSize;
-		} else {
-			ret = stat.getAvailableBytes();
+		public static long getAvailableInternalMemorySize() {
+			File path = Environment.getDataDirectory();
+			StatFs stat = new StatFs(path.getPath());
+			long ret;
+			if (android.os.Build.VERSION.SDK_INT < 18) {
+				long blockSize = stat.getBlockSize();
+				long availableBlocks = stat.getAvailableBlocks();
+				ret = availableBlocks * blockSize;
+			} else {
+				ret = stat.getAvailableBytes();
+			}
+			ACRA.getErrorReporter().putCustomData("FreeInternalMemorySize", Long.toString(ret));
+			return ret;
 		}
-		ACRA.getErrorReporter().putCustomData("FreeInternalMemorySize", Long.toString(ret));
-		return ret;
-	}
 
 	public void useLocale(String lang) {
 		ACRA.getErrorReporter().putCustomData("Locale", lang);
@@ -151,18 +135,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			locale = new Locale(lang);
 		}
 
-		Configuration config = getBaseContext().getResources().getConfiguration();
-		config.locale = locale;
-		getBaseContext().getResources().updateConfiguration(config,
-				getBaseContext().getResources().getDisplayMetrics());
-
-		String modStrings = String.format("strings_%s.json", lang);
-
-		if (ModdingMode.isResourceExistInMod(modStrings)) {
-			parseStrings(modStrings);
-		} else if (ModdingMode.isResourceExistInMod("strings_en.json")) {
-			parseStrings("strings_en.json");
-		}
+		StringsManager.useLocale(locale, lang);
 	}
 
 	public void doRestart() {
@@ -209,95 +182,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return version.contains("alpha");
 	}
 
-	@SuppressLint("UseSparseArrays")
-	private Map<Integer, String> stringMap = new HashMap<>();
-	@SuppressLint("UseSparseArrays")
-	private Map<Integer, String[]> stringsMap = new HashMap<>();
-	private Map<String, Integer> keyToInt;
-
-	private void addMappingForClass(Class<?> clazz) {
-		for (Field f : clazz.getDeclaredFields()) {
-			int key;
-			try {
-				key = f.getInt(null);
-			} catch (IllegalAccessException | IllegalArgumentException e) {
-				throw new RuntimeException(e);
-			}
-			String name = f.getName();
-
-			keyToInt.put(name, key);
-		}
-	}
-
-	private void initTextMapping() {
-		long mapStart = System.nanoTime();
-
-		keyToInt = new HashMap<>();
-
-		addMappingForClass(R.string.class);
-		addMappingForClass(R.array.class);
-
-		long mapEnd = System.nanoTime();
-		GLog.toFile("map creating time %f", (mapEnd - mapStart) / 1000000f);
-	}
-
-	private void parseStrings(String resource) {
-		File jsonFile = ModdingMode.getFile(resource);
-		if (jsonFile == null) {
-			return;
-		}
-
-		if (!jsonFile.exists()) {
-			return;
-		}
-
-		if (keyToInt == null) {
-			initTextMapping();
-		}
-
-		String line = "";
-
-		try {
-			InputStream fis = new FileInputStream(jsonFile);
-			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
-			BufferedReader br = new BufferedReader(isr);
-
-			while ((line = br.readLine()) != null) {
-				JSONArray entry = new JSONArray(line);
-
-				String keyString = entry.getString(0);
-				Integer key = keyToInt.get(keyString);
-				if (key == null) {
-					toast("unknown key: [%s] in [%s] ignored ", keyString, resource);
-				}
-
-				if (entry.length() == 2) {
-
-					String value = entry.getString(1);
-					stringMap.put(key, value);
-				}
-
-				if (entry.length() > 2) {
-					String[] values = new String[entry.length() - 1];
-					for (int i = 1; i < entry.length(); i++) {
-						values[i - 1] = entry.getString(i);
-					}
-					stringsMap.put(key, values);
-				}
-			}
-			br.close();
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		} catch (JSONException e) {
-			toast("malformed json: [%s] in [%s] ignored ", line, resource);
-		}
-	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		context = getApplicationContext();
+		Context context = getApplicationContext();
+		StringsManager.setContext(context);
 
 		FileSystem.setContext(context);
 		ModdingMode.setContext(context);
@@ -528,28 +419,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public static String getVar(int id) {
-
-		if (instance() != null && instance().stringMap != null && instance().stringMap.containsKey(id)) {
-			return instance().stringMap.get(id);
-		}
-
-		try {
-			return context.getResources().getString(id);
-		} catch (NotFoundException notFound) {
-			GLog.w("resource not found: %s", notFound.getMessage());
-		}
-		return "";
+		return StringsManager.getVar(id);
 	}
 
 	public static String[] getVars(int id) {
-
-		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
-				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey && id != R.string.testDevice) {
-			if (instance() != null && instance().stringsMap.containsKey(id)) {
-				return instance().stringsMap.get(id);
-			}
-		}
-		return context.getResources().getStringArray(id);
+		return StringsManager.getVars(id);
 	}
 
 	public synchronized static Game instance() {
