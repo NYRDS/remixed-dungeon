@@ -1241,4 +1241,17 @@ public abstract class Level implements Bundlable {
 
 		return -1;
 	}
+
+	public int getRandomTerrainCell(int terrainType) {
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		for(int i = 0;i<getLength();i++){
+			if(map[i]==terrainType) {
+				candidates.add(i);
+			}
+		}
+
+		return oneCellFrom(candidates);
+	}
+
 }

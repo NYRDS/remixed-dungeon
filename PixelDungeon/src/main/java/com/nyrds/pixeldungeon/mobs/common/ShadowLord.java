@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
@@ -64,6 +65,8 @@ public class ShadowLord extends Boss {
 
 	public void twistLevel() {
 		Tools.buildSquareMaze(Dungeon.level, 4);
+
+		Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
 	}
 
 	@Override

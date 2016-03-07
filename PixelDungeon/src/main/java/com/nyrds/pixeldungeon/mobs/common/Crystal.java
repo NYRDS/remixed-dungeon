@@ -25,7 +25,15 @@ public class Crystal extends Mob {
 		
 		lootChance = 0.25f;
 	}
-	
+
+	static public Crystal makeShadowLordCrystal() {
+		Crystal crystal = new Crystal();
+		crystal.kind = 2;
+		crystal.lootChance = 0;
+
+		return crystal;
+	}
+
 	private void adjustLevel(int depth) {
 		kind = (ctr++)%2;
 		
