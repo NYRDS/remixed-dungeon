@@ -111,6 +111,7 @@ public class Bundle {
 				object.restoreFromBundle( this );
 				return object;
 			} else {
+				Util.storeEventInAcra("Bundable.get unknown class ",clName);
 				return null;
 			}
 		} catch (Exception e) {

@@ -42,6 +42,7 @@ import android.widget.LinearLayout;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -50,8 +51,6 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
-
-import org.acra.ACRA;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -121,12 +120,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			} else {
 				ret = stat.getAvailableBytes();
 			}
-			ACRA.getErrorReporter().putCustomData("FreeInternalMemorySize", Long.toString(ret));
+		    Util.storeEventInAcra("FreeInternalMemorySize", Long.toString(ret));
 			return ret;
 		}
 
 	public void useLocale(String lang) {
-		ACRA.getErrorReporter().putCustomData("Locale", lang);
+		Util.storeEventInAcra("Locale", lang);
 
 		Locale locale;
 		if (lang.equals("pt_BR")) {

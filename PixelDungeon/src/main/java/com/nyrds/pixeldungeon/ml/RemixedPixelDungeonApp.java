@@ -12,7 +12,9 @@ public class RemixedPixelDungeonApp extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		ACRA.init(this);
+		if(!BuildConfig.DEBUG) {
+			ACRA.init(this);
+		}
 
 		try {
 			Class.forName("android.os.AsyncTask");

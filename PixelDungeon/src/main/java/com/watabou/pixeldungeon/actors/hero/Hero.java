@@ -46,7 +46,6 @@ import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.GasesImmunity;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -1317,8 +1316,17 @@ public class Hero extends Char {
 	}
 
 	@Override
+	public void updateSpriteState(){
+		super.updateSpriteState();
+	}
+
+	@Override
 	public void add(Buff buff) {
 		super.add(buff);
+
+		if(!GameScene.isSceneReady()) {
+			return;
+		}
 
 		if (buff instanceof Burning) {
 			GLog.w(Game.getVar(R.string.Hero_StaBurning));
@@ -1349,8 +1357,6 @@ public class Hero extends Char {
 		} else if (buff instanceof Vertigo) {
 			GLog.w(Game.getVar(R.string.Hero_StaVertigo));
 			interrupt();
-		} else if (buff instanceof Light) {
-			getSprite().add(CharSprite.State.ILLUMINATED);
 		}
 
 		BuffIndicator.refreshHero();
@@ -1360,9 +1366,7 @@ public class Hero extends Char {
 	public void remove(Buff buff) {
 		super.remove(buff);
 
-		if (buff instanceof Light) {
-			getSprite().remove(CharSprite.State.ILLUMINATED);
-		} else if (buff instanceof Fury) {
+		if (buff instanceof Fury) {
 			getHeroSprite().updateState(this);
 		}
 

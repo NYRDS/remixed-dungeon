@@ -46,9 +46,6 @@ public abstract class GameWithGoogleIap extends Game {
 
 	public GameWithGoogleIap(Class<? extends Scene> c) {
 		super(c);
-		if(googleAnalyticsUsable()) {
-			AnalyticsTrackers.initialize(this);
-		}
 	}
 
 	private static boolean isSmallScreen() {
@@ -296,6 +293,9 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	public void initIap() {
+		if(googleAnalyticsUsable()) {
+			AnalyticsTrackers.initialize(this);
+		}
 		new Thread() {
 			@Override
 			public void run() {

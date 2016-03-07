@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -64,423 +65,429 @@ import java.util.Set;
 
 public abstract class Char extends Actor {
 
-	protected static final String TXT_HIT[]		= Game.getVars(R.array.Char_Hit);
-	protected static final String TXT_KILL[]    = Game.getVars(R.array.Char_Kill);
-	protected static final String TXT_DEFEAT[]	= Game.getVars(R.array.Char_Defeat);
-	
-	private static final String TXT_YOU_MISSED	= Game.getVar(R.string.Char_YouMissed);
-	private static final String TXT_SMB_MISSED	= Game.getVar(R.string.Char_SmbMissed);
-	
+	protected static final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
+	protected static final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
+	protected static final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
+
+	private static final String TXT_YOU_MISSED = Game.getVar(R.string.Char_YouMissed);
+	private static final String TXT_SMB_MISSED = Game.getVar(R.string.Char_SmbMissed);
+
 	private static final String TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
-	
+
 	private int pos = 0;
-	
+
 	private CharSprite sprite;
 
-	protected String name            = Game.getVar(R.string.Char_Name);
-	protected String name_objective  = Game.getVar(R.string.Char_Name_Objective);
-	
-	protected String description  = Game.getVar(R.string.Mob_Desc);
-	private   String defenceVerb  = null;
-	
-	protected int    gender          = Utils.NEUTER;
-	
+	protected String name           = Game.getVar(R.string.Char_Name);
+	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
+
+	protected String description = Game.getVar(R.string.Mob_Desc);
+	private   String defenceVerb = null;
+
+	protected int gender = Utils.NEUTER;
+
 	private int HT;
 	private int HP;
-	
-	protected float baseSpeed	= 1;
-	
-	public boolean paralysed	= false;
-	public boolean pacified		= false;
-	public boolean rooted		= false;
-	public boolean flying		= false;
-	public int invisible		= 0;
-	
-	public int viewDistance	= 8;
-	
-	private HashSet<Buff> buffs = new HashSet<>();
-	
+
+	protected float baseSpeed = 1;
+
+	public boolean paralysed = false;
+	public boolean pacified  = false;
+	public boolean rooted    = false;
+	public boolean flying    = false;
+	public int     invisible = 0;
+
+	public int viewDistance = 8;
+
+	protected HashSet<Buff> buffs = new HashSet<>();
+
 	@Override
 	protected boolean act() {
-		Dungeon.level.updateFieldOfView( this );
+		Dungeon.level.updateFieldOfView(this);
 		return false;
 	}
-	
-	private static final String POS			= "pos";
-	private static final String TAG_HP		= "HP";
-	private static final String TAG_HT		= "HT";
-	private static final String BUFFS		= "buffs";
-	
+
+	private static final String POS    = "pos";
+	private static final String TAG_HP = "HP";
+	private static final String TAG_HT = "HT";
+	private static final String BUFFS  = "buffs";
+
 	@Override
-	public void storeInBundle( Bundle bundle ) {
-		
-		super.storeInBundle( bundle );
-		
-		bundle.put( POS, getPos() );
-		bundle.put( TAG_HP, hp() );
-		bundle.put( TAG_HT, ht() );
-		bundle.put( BUFFS, buffs );
+	public void storeInBundle(Bundle bundle) {
+
+		super.storeInBundle(bundle);
+
+		bundle.put(POS, getPos());
+		bundle.put(TAG_HP, hp());
+		bundle.put(TAG_HT, ht());
+		bundle.put(BUFFS, buffs);
 	}
-	
+
 	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		
-		super.restoreFromBundle( bundle );
-		
-		setPos(bundle.getInt( POS ));
-		hp(bundle.getInt( TAG_HP ));
-		ht(bundle.getInt( TAG_HT ));
-		
-		for (Buff b : bundle.getCollection( BUFFS, Buff.class )) {
+	public void restoreFromBundle(Bundle bundle) {
+
+		super.restoreFromBundle(bundle);
+
+		setPos(bundle.getInt(POS));
+		hp(bundle.getInt(TAG_HP));
+		ht(bundle.getInt(TAG_HT));
+
+		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
 			if (b != null) b.attachTo(this);
 		}
-		
+
 		readCharData();
 	}
-	
-	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent){
+
+	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
-	
-	protected void readCharData(){
-				
-			name           = getClassParam("Name","Unnamed", true);
-			name_objective = getClassParam("Name_Objective", name, true);
-			
-			description    = getClassParam("Desc", description, true);
-			
-			gender = Utils.genderFromString(getClassParam("Gender","masculine",true));
-			
-			defenceVerb = getClassParam("Defense",null,false);
+
+	protected void readCharData() {
+
+		name = getClassParam("Name", "Unnamed", true);
+		name_objective = getClassParam("Name_Objective", name, true);
+
+		description = getClassParam("Desc", description, true);
+
+		gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
+
+		defenceVerb = getClassParam("Defense", null, false);
 	}
-	
-	public boolean attack( Char enemy ) {
-		
+
+	public boolean attack(Char enemy) {
+
 		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
-		
-		if (hit( this, enemy, false )) {
-			
+
+		if (hit(this, enemy, false)) {
+
 			if (visibleFight) {
-				GLog.i( TXT_HIT[gender], name, enemy.getName_objective() );
+				GLog.i(TXT_HIT[gender], name, enemy.getName_objective());
 			}
-			
+
 			// FIXME
-			int dr = this instanceof Hero && ((Hero)this).rangedWeapon != null && ((Hero)this).subClass == HeroSubClass.SNIPER ? 0 :
-				Random.IntRange( 0, enemy.dr() );
-			
+			int dr = this instanceof Hero && ((Hero) this).rangedWeapon != null && ((Hero) this).subClass == HeroSubClass.SNIPER ? 0 :
+					Random.IntRange(0, enemy.dr());
+
 			int dmg = damageRoll();
-			int effectiveDamage = Math.max( dmg - dr, 0 );
-			
-			effectiveDamage = attackProc( enemy, effectiveDamage );
-			effectiveDamage = enemy.defenseProc( this, effectiveDamage );
-			enemy.damage( effectiveDamage, this );
-			
+			int effectiveDamage = Math.max(dmg - dr, 0);
+
+			effectiveDamage = attackProc(enemy, effectiveDamage);
+			effectiveDamage = enemy.defenseProc(this, effectiveDamage);
+			enemy.damage(effectiveDamage, this);
+
 			if (visibleFight) {
-				Sample.INSTANCE.play( Assets.SND_HIT, 1, 1, Random.Float( 0.8f, 1.25f ) );
+				Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
 			}
-			
-			enemy.getSprite().bloodBurstA( getSprite().center(), effectiveDamage );
+
+			enemy.getSprite().bloodBurstA(getSprite().center(), effectiveDamage);
 			enemy.getSprite().flash();
-			
+
 			if (!enemy.isAlive() && visibleFight) {
 				if (enemy == Dungeon.hero) {
-					
+
 					if (Dungeon.hero.killerGlyph != null) {
-						
-						Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, Dungeon.hero.killerGlyph.name(), Dungeon.depth ) );
-						GLog.n( TXT_KILL[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name() );
-						
+
+						Dungeon.fail(Utils.format(ResultDescriptions.GLYPH, Dungeon.hero.killerGlyph.name(), Dungeon.depth));
+						GLog.n(TXT_KILL[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name());
+
 					} else {
 						if (this instanceof Boss) {
-							Dungeon.fail( Utils.format( ResultDescriptions.BOSS, name, Dungeon.depth ) );
+							Dungeon.fail(Utils.format(ResultDescriptions.BOSS, name, Dungeon.depth));
 						} else {
-							Dungeon.fail( Utils.format( ResultDescriptions.MOB, 
-								Utils.indefinite( name ), Dungeon.depth ) );
+							Dungeon.fail(Utils.format(ResultDescriptions.MOB,
+									Utils.indefinite(name), Dungeon.depth));
 						}
-						
-						GLog.n( TXT_KILL[gender], name );
+
+						GLog.n(TXT_KILL[gender], name);
 					}
-					
+
 				} else {
-					GLog.i( TXT_DEFEAT[gender], name, enemy.getName_objective() );
+					GLog.i(TXT_DEFEAT[gender], name, enemy.getName_objective());
 				}
 			}
-			
+
 			return true;
-			
+
 		} else {
-			
+
 			if (visibleFight) {
 				String defense = enemy.defenseVerb();
-				enemy.getSprite().showStatus( CharSprite.NEUTRAL, defense );
+				enemy.getSprite().showStatus(CharSprite.NEUTRAL, defense);
 				if (this == Dungeon.hero) {
-					GLog.i( TXT_YOU_MISSED, enemy.name, defense );
+					GLog.i(TXT_YOU_MISSED, enemy.name, defense);
 				} else {
-					GLog.i( TXT_SMB_MISSED, enemy.name, defense, name );
+					GLog.i(TXT_SMB_MISSED, enemy.name, defense, name);
 				}
-				
-				Sample.INSTANCE.play( Assets.SND_MISS );
+
+				Sample.INSTANCE.play(Assets.SND_MISS);
 			}
-			
+
 			return false;
-			
+
 		}
 	}
-	
-	public static boolean hit( Char attacker, Char defender, boolean magic ) {
-		float acuRoll = Random.Float( attacker.attackSkill( defender ) );
-		float defRoll = Random.Float( defender.defenseSkill( attacker ) );
+
+	public static boolean hit(Char attacker, Char defender, boolean magic) {
+		float acuRoll = Random.Float(attacker.attackSkill(defender));
+		float defRoll = Random.Float(defender.defenseSkill(attacker));
 		return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
 	}
-	
-	public int attackSkill( Char target ) {
+
+	public int attackSkill(Char target) {
 		return 0;
 	}
-	
-	public int defenseSkill( Char enemy ) {
+
+	public int defenseSkill(Char enemy) {
 		return 0;
 	}
-	
+
 	public String defenseVerb() {
-		if(defenceVerb!=null){
+		if (defenceVerb != null) {
 			return defenceVerb;
 		}
 		return Game.getVars(R.array.Char_StaDodged)[gender];
 	}
-	
+
 	public int dr() {
 		return 0;
 	}
-	
+
 	public int damageRoll() {
 		return 1;
 	}
-	
-	public int attackProc( Char enemy, int damage ) {
+
+	public int attackProc(Char enemy, int damage) {
 		return damage;
 	}
-	
-	public int defenseProc( Char enemy, int damage ) {
+
+	public int defenseProc(Char enemy, int damage) {
 		return damage;
 	}
-	
+
 	public float speed() {
-		return buff( Cripple.class ) == null ? baseSpeed : baseSpeed * 0.5f;
+		return buff(Cripple.class) == null ? baseSpeed : baseSpeed * 0.5f;
 	}
-	
-	public void damage( int dmg, Object src ) {
-		
+
+	public void damage(int dmg, Object src) {
+
 		if (hp() <= 0) {
 			return;
 		}
-		
-		Buff.detach( this, Frost.class );
-		
+
+		Buff.detach(this, Frost.class);
+
 		Class<?> srcClass = src.getClass();
-		if (immunities().contains( srcClass )) {
+		if (immunities().contains(srcClass)) {
 			dmg = 0;
-		} else if (resistances().contains( srcClass )) {
-			dmg = Random.IntRange( 0, dmg );
+		} else if (resistances().contains(srcClass)) {
+			dmg = Random.IntRange(0, dmg);
 		}
-		
-		if (buff( Paralysis.class ) != null) {
-			if (Random.Int( dmg ) >= Random.Int( hp() )) {
-				Buff.detach( this, Paralysis.class );
+
+		if (buff(Paralysis.class) != null) {
+			if (Random.Int(dmg) >= Random.Int(hp())) {
+				Buff.detach(this, Paralysis.class);
 				if (Dungeon.visible[getPos()]) {
-					GLog.i( TXT_OUT_OF_PARALYSIS, getName_objective() );
+					GLog.i(TXT_OUT_OF_PARALYSIS, getName_objective());
 				}
 			}
 		}
-		
+
 		hp(hp() - dmg);
 		if (dmg > 0 || src instanceof Char) {
-			getSprite().showStatus( hp() > ht() / 2 ? 
-				CharSprite.WARNING : 
-				CharSprite.NEGATIVE,
-				Integer.toString( dmg ) );
+			getSprite().showStatus(hp() > ht() / 2 ?
+							CharSprite.WARNING :
+							CharSprite.NEGATIVE,
+					Integer.toString(dmg));
 		}
 		if (hp() <= 0) {
-			die( src );
+			die(src);
 		}
 	}
-	
+
 	public void destroy() {
 		hp(0);
-		Actor.remove( this );
-		Actor.freeCell( getPos() );
+		Actor.remove(this);
+		Actor.freeCell(getPos());
 	}
-	
-	public void die( Object src ) {
+
+	public void die(Object src) {
 		destroy();
 		getSprite().die();
 	}
-	
+
 	public boolean isAlive() {
 		return hp() > 0;
 	}
-	
+
 	@Override
-	protected void spend( float time ) {
-		
+	protected void spend(float time) {
+
 		float timeScale = 1f;
-		if (buff( Slow.class ) != null) {
+		if (buff(Slow.class) != null) {
 			timeScale *= 0.5f;
 		}
-		if (buff( Speed.class ) != null) {
+		if (buff(Speed.class) != null) {
 			timeScale *= 2.0f;
 		}
-		
-		super.spend( time / timeScale );
+
+		super.spend(time / timeScale);
 	}
-	
+
 	public HashSet<Buff> buffs() {
 		return buffs;
 	}
-	
+
 	@SuppressWarnings("unchecked")
-	public <T extends Buff> HashSet<T> buffs( Class<T> c ) {
+	public <T extends Buff> HashSet<T> buffs(Class<T> c) {
 		HashSet<T> filtered = new HashSet<>();
 		for (Buff b : buffs) {
-			if (c.isInstance( b )) {
-				filtered.add( (T)b );
+			if (c.isInstance(b)) {
+				filtered.add((T) b);
 			}
 		}
 		return filtered;
 	}
-	
+
 	@SuppressWarnings("unchecked")
-	public <T extends Buff> T buff( Class<T> c ) {
+	public <T extends Buff> T buff(Class<T> c) {
 		for (Buff b : buffs) {
-			if (c.isInstance( b )) {
-				return (T)b;
+			if (c.isInstance(b)) {
+				return (T) b;
 			}
 		}
 		return null;
 	}
-	
-	
-	public void add( Buff buff ) {
-		
-		buffs.add( buff );
-		Actor.add( buff );
+
+
+	public void add(Buff buff) {
+
+		buffs.add(buff);
+		Actor.add(buff);
+
+		if (!GameScene.isSceneReady()) {
+			return;
+		}
 
 		if (buff instanceof Poison) {
 
-			CellEmitter.center( getPos() ).burst( PoisonParticle.SPLASH, 5 );
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
+			CellEmitter.center(getPos()).burst(PoisonParticle.SPLASH, 5);
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
 
 		} else if (buff instanceof Amok) {
 
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
 
 		} else if (buff instanceof Slow) {
 
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaSlowed));
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaSlowed));
 
 		} else if (buff instanceof MindVision) {
 
-			getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
-			getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
+			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
+			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
 
 		} else if (buff instanceof Paralysis) {
 
-			getSprite().add( CharSprite.State.PARALYSED );
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
+			getSprite().add(CharSprite.State.PARALYSED);
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
 
 		} else if (buff instanceof Terror) {
 
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaFrightened));
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaFrightened));
 
 		} else if (buff instanceof Roots) {
 
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
 
 		} else if (buff instanceof Cripple) {
 
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaCrippled));
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaCrippled));
 
 		} else if (buff instanceof Bleeding) {
 
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
 
 		} else if (buff instanceof Vertigo) {
 
-			getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaDizzy));
+			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaDizzy));
 
 		} else if (buff instanceof Sleep) {
 			getSprite().idle();
-		}
-
-		  else if (buff instanceof Burning) {
-			getSprite().add( CharSprite.State.BURNING );
+		} else if (buff instanceof Light) {
+			getSprite().add(CharSprite.State.ILLUMINATED);
+		} else if (buff instanceof Burning) {
+			getSprite().add(CharSprite.State.BURNING);
 		} else if (buff instanceof Levitation) {
-			getSprite().add( CharSprite.State.LEVITATING );
+			getSprite().add(CharSprite.State.LEVITATING);
 		} else if (buff instanceof Frost) {
-			getSprite().add( CharSprite.State.FROZEN );
+			getSprite().add(CharSprite.State.FROZEN);
 		} else if (buff instanceof Invisibility) {
 			if (!(buff instanceof Shadows)) {
-				getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
+				getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
 			}
-			getSprite().add( CharSprite.State.INVISIBLE );
+			getSprite().add(CharSprite.State.INVISIBLE);
 		}
 
 	}
-	
-	public void remove( Buff buff ) {
-		
-		buffs.remove( buff );
-		Actor.remove( buff );
+
+	public void remove(Buff buff) {
+
+		buffs.remove(buff);
+		Actor.remove(buff);
 
 		if (buff instanceof Burning) {
-			getSprite().remove( CharSprite.State.BURNING );
+			getSprite().remove(CharSprite.State.BURNING);
 		} else if (buff instanceof Levitation) {
-			getSprite().remove( CharSprite.State.LEVITATING );
+			getSprite().remove(CharSprite.State.LEVITATING);
 		} else if (buff instanceof Invisibility && invisible <= 0) {
-			getSprite().remove( CharSprite.State.INVISIBLE );
+			getSprite().remove(CharSprite.State.INVISIBLE);
 		} else if (buff instanceof Paralysis) {
-			getSprite().remove( CharSprite.State.PARALYSED );
+			getSprite().remove(CharSprite.State.PARALYSED);
 		} else if (buff instanceof Frost) {
-			getSprite().remove( CharSprite.State.FROZEN );
-		} 
-	}
-	
-	public void remove( Class<? extends Buff> buffClass ) {
-		for (Buff buff : buffs( buffClass )) {
-			remove( buff );
+			getSprite().remove(CharSprite.State.FROZEN);
+		} else if (buff instanceof Light) {
+			getSprite().remove(CharSprite.State.ILLUMINATED);
 		}
 	}
-	
+
+	public void remove(Class<? extends Buff> buffClass) {
+		for (Buff buff : buffs(buffClass)) {
+			remove(buff);
+		}
+	}
+
 	@Override
 	protected void onRemove() {
 		for (Buff buff : buffs.toArray(new Buff[buffs.size()])) {
 			buff.detach();
 		}
 	}
-	
+
 	public void updateSpriteState() {
-		for (Buff buff:buffs) {
+		for (Buff buff : buffs) {
 			if (buff instanceof Burning) {
-				getSprite().add( CharSprite.State.BURNING );
+				getSprite().add(CharSprite.State.BURNING);
 			} else if (buff instanceof Levitation) {
-				getSprite().add( CharSprite.State.LEVITATING );
+				getSprite().add(CharSprite.State.LEVITATING);
 			} else if (buff instanceof Invisibility) {
-				getSprite().add( CharSprite.State.INVISIBLE );
+				getSprite().add(CharSprite.State.INVISIBLE);
 			} else if (buff instanceof Paralysis) {
-				getSprite().add( CharSprite.State.PARALYSED );
+				getSprite().add(CharSprite.State.PARALYSED);
 			} else if (buff instanceof Frost) {
-				getSprite().add( CharSprite.State.FROZEN );
+				getSprite().add(CharSprite.State.FROZEN);
 			} else if (buff instanceof Light) {
-				getSprite().add( CharSprite.State.ILLUMINATED );
+				getSprite().add(CharSprite.State.ILLUMINATED);
 			}
 		}
 	}
-	
+
 	public int stealth() {
 		return 0;
 	}
 
 	public void move(int step) {
-		
+
 		if (buff(Vertigo.class) != null && Dungeon.level.adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 			List<Integer> candidates = new ArrayList<>();
 			for (int dir : Level.NEIGHBOURS8) {
@@ -491,58 +498,58 @@ public abstract class Char extends Actor {
 					}
 				}
 			}
-			
-			if(candidates.isEmpty()){ // Nowhere to move? just stay then
+
+			if (candidates.isEmpty()) { // Nowhere to move? just stay then
 				return;
 			}
-			
-			step = Random.element( candidates );
+
+			step = Random.element(candidates);
 		}
-		
+
 		if (Dungeon.level.map[getPos()] == Terrain.OPEN_DOOR) {
-			Door.leave( getPos() );
+			Door.leave(getPos());
 		}
-		
+
 		setPos(step);
-		
+
 		if (flying && Dungeon.level.map[getPos()] == Terrain.DOOR) {
-			Door.enter( getPos() );
+			Door.enter(getPos());
 		}
-		
+
 		if (this != Dungeon.hero) {
 			getSprite().setVisible(Dungeon.visible[getPos()]);
 		}
 	}
-	
-	public int distance( Char other ) {
-		return Dungeon.level.distance( getPos(), other.getPos() );
+
+	public int distance(Char other) {
+		return Dungeon.level.distance(getPos(), other.getPos());
 	}
-	
+
 	public void onMotionComplete() {
 		next();
 	}
-	
+
 	public void onAttackComplete() {
 		next();
 	}
-	
+
 	public void onOperateComplete() {
 		next();
 	}
-	
-	protected Set<Class<?>> IMMUNITIES = new HashSet<>();
+
+	protected Set<Class<?>> IMMUNITIES  = new HashSet<>();
 	protected Set<Class<?>> RESISTANCES = new HashSet<>();
-	
+
 	public Set<Class<?>> resistances() {
 		return RESISTANCES;
 	}
-	
+
 	public Set<Class<?>> immunities() {
 		return IMMUNITIES;
 	}
 
 	public CharSprite getSprite() {
-		if(sprite==null) {
+		if (sprite == null) {
 			throw new RuntimeException("Null Sprite!!!");
 		}
 		return sprite;

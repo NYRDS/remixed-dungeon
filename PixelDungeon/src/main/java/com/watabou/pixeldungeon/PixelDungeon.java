@@ -24,6 +24,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
@@ -35,8 +36,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.utils.GLog;
-
-import org.acra.ACRA;
 
 import java.util.Locale;
 
@@ -327,7 +326,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	public static void activeMod(String mod) {
 		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
 		ModdingMode.selectMod(PixelDungeon.activeMod());
-		ACRA.getErrorReporter().putCustomData("RPD_active_mod", mod);
+		Util.storeEventInAcra("RPD_active_mod", mod);
 	}
 	
 	public static String activeMod() {
@@ -381,11 +380,11 @@ public class PixelDungeon extends GameWithGoogleIap {
 		difficulty = _difficulty;
 		if (PixelDungeon.donated() == 0) {
 			if (difficulty == 0) {
-				instance().displayEasyModeBanner();
+				//instance().displayEasyModeBanner();
 			}
 
 			if (difficulty < 2) {
-				instance().initSaveAndLoadIntersitial();
+				//instance().initSaveAndLoadIntersitial();
 			}
 
 			if (difficulty >= 2) {

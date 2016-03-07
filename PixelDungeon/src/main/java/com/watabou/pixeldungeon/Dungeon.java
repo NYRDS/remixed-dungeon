@@ -18,6 +18,7 @@ t * Pixel Dungeon
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -387,7 +388,7 @@ public class Dungeon {
 
 	public static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
-		//Util.storeEventInAcra("lastLoadedGameData",bundle.toString());
+		Util.storeEventInAcra("lastLoadedGameData", bundle.toString());
 
 		Dungeon.challenges = bundle.getInt(CHALLENGES);
 
