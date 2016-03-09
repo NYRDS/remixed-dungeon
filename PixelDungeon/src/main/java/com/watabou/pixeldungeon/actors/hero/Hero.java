@@ -1417,11 +1417,8 @@ public class Hero extends Char {
 		boolean[] discoverable = Dungeon.level.discoverable;
 
 		for (int i = 0; i < length; i++) {
-
 			int terr = map[i];
-
 			if (discoverable[i]) {
-
 				visited[i] = true;
 				if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
 					Dungeon.level.set(i, Terrain.discover(terr));

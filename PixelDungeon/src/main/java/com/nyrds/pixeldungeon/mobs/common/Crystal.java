@@ -8,7 +8,9 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class Crystal extends Mob {
@@ -90,7 +92,13 @@ public class Crystal extends Mob {
 	protected boolean getFurther( int target ) {
 		return false;
 	}
-	
-	
 
+	@Override
+	public void die(Object cause) {
+		super.die(cause);
+		if(Dungeon.level.map[getPos()]== Terrain.PEDESTAL) {
+			Dungeon.level.set(getPos(),Terrain.EMBERS);
+			GameScene.updateMap(getPos());
+		}
+	}
 }

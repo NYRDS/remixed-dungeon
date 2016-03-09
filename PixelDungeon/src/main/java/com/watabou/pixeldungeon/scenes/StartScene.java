@@ -17,9 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import java.util.HashMap;
-import java.util.Locale;
-
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -47,6 +45,9 @@ import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
+
+import java.util.HashMap;
+import java.util.Locale;
 
 public class StartScene extends PixelScene {
 
@@ -333,18 +334,22 @@ public class StartScene extends PixelScene {
 				Game.getVar(R.string.StartScene_DifficultyExpert)) {
 			@Override
 			protected void onSelect(int index) {
-				Dungeon.setDifficulty(index);
-					startNewGame();
+					startNewGame(index);
 			}
 		};
 
 		add(difficultyOptions);
 	}
 	
-	private void startNewGame() {
-		
+	private void startNewGame(int difficulty) {
+
+		Dungeon.setDifficulty(difficulty);
 		Dungeon.hero = null;
 		Dungeon.heroClass = curClass;
+
+		EventCollector.logEvent("game","new", curClass.getClass().getSimpleName());
+		EventCollector.logEvent("game","mod",PixelDungeon.activeMod());
+		EventCollector.logEvent("game","difficulty",String.valueOf(difficulty));
 
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
 		

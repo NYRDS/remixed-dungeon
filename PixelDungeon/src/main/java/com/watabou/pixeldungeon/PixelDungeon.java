@@ -57,8 +57,6 @@ public class PixelDungeon extends GameWithGoogleIap {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		String placeModFilesHere = "placeModFilesHere";
-		
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
 		}
@@ -380,11 +378,11 @@ public class PixelDungeon extends GameWithGoogleIap {
 		difficulty = _difficulty;
 		if (PixelDungeon.donated() == 0) {
 			if (difficulty == 0) {
-				//instance().displayEasyModeBanner();
+				instance().displayEasyModeBanner();
 			}
 
 			if (difficulty < 2) {
-				//instance().initSaveAndLoadIntersitial();
+				instance().initSaveAndLoadIntersitial();
 			}
 
 			if (difficulty >= 2) {

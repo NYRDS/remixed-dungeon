@@ -43,6 +43,7 @@ import android.widget.LinearLayout;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -392,6 +393,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		}
 		scene = requestedScene;
 		scene.create();
+
+		EventCollector.logScene(scene.getClass().getCanonicalName());
 
 		Game.elapsed = 0f;
 		Game.timeScale = 1f;

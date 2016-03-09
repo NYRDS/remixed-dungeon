@@ -14,7 +14,7 @@ import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
-import com.nyrds.pixeldungeon.ml.AnalyticsTrackers;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.PixelDungeon;
 
@@ -294,7 +294,7 @@ public abstract class GameWithGoogleIap extends Game {
 
 	public void initIap() {
 		if(googleAnalyticsUsable()) {
-			AnalyticsTrackers.initialize(this);
+			EventCollector.init(this);
 		}
 		new Thread() {
 			@Override
@@ -368,6 +368,7 @@ public abstract class GameWithGoogleIap extends Game {
 	public void doPurchase(String sku) {
 		if (!m_iapReady) {
 			alert("Sorry, we not ready yet");
+			EventCollector.logEvent("fail","purchase not ready");
 			return;
 		}
 

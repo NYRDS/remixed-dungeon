@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -66,7 +67,14 @@ public class ShadowLord extends Boss {
 	public void twistLevel() {
 		Tools.buildSquareMaze(Dungeon.level, 4);
 
-		Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
+		int cell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
+		if(Dungeon.level.cellValid(cell)) {
+			if(Actor.findChar(cell)==null) {
+				Mob mob = Crystal.makeShadowLordCrystal();
+				Dungeon.level.spawnMob(mob);
+				WandOfBlink.appear(mob, cell);
+			}
+		}
 	}
 
 	@Override

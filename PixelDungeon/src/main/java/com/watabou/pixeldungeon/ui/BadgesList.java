@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import java.util.ArrayList;
-
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -29,6 +27,8 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndBadge;
+
+import java.util.ArrayList;
 
 public class BadgesList extends ScrollPane {
 

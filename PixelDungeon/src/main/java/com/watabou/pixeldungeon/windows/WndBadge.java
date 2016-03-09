@@ -53,7 +53,7 @@ public class WndBadge extends Window {
 		info.y = PixelScene.align(pos);
 		add(info);
 		
-		resize( (int)w, (int)(pos + MARGIN) );
+		resize( (int)w, (int)(pos + info.height() + MARGIN) );
 		
 		BadgeBanner.highlight( icon, badge.image );
 	}

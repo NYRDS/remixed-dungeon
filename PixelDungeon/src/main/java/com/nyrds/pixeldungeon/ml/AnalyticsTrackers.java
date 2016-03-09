@@ -29,7 +29,7 @@ public final class AnalyticsTrackers {
 
   public static synchronized void initialize(Context context) {
     if (sInstance != null) {
-      throw new IllegalStateException("Extra call to initialize analytics trackers");
+	    return;
     }
 
     sInstance = new AnalyticsTrackers(context);
@@ -43,30 +43,30 @@ public final class AnalyticsTrackers {
     return sInstance;
   }
 
-  private final Map<Target, Tracker> mTrackers = new HashMap<Target, Tracker>();
-  private final Context mContext;
+	private final Map<Target, Tracker> mTrackers = new HashMap<>();
+	private final Context mContext;
 
-  /**
-   * Don't instantiate directly - use {@link #getInstance()} instead.
-   */
-  private AnalyticsTrackers(Context context) {
-    mContext = context.getApplicationContext();
-  }
+	/**
+	 * Don't instantiate directly - use {@link #getInstance()} instead.
+	 */
+	private AnalyticsTrackers(Context context) {
+		mContext = context.getApplicationContext();
+	}
 
-  public synchronized Tracker get(Target target) {
-    if (!mTrackers.containsKey(target)) {
-      Tracker tracker;
-      switch (target) {
-        case APP:
-          tracker = GoogleAnalytics.getInstance(mContext).newTracker(R.xml.app_tracker);
-          tracker.enableAdvertisingIdCollection(true);
-          break;
-        default:
-          throw new IllegalArgumentException("Unhandled analytics target " + target);
-      }
-      mTrackers.put(target, tracker);
-    }
+	public synchronized Tracker get(Target target) {
+		if (!mTrackers.containsKey(target)) {
+			Tracker tracker;
+			switch (target) {
+				case APP:
+					tracker = GoogleAnalytics.getInstance(mContext).newTracker(R.xml.app_tracker);
+					tracker.enableAdvertisingIdCollection(true);
+					break;
+				default:
+					throw new IllegalArgumentException("Unhandled analytics target " + target);
+			}
+			mTrackers.put(target, tracker);
+		}
 
-    return mTrackers.get(target);
-  }
+		return mTrackers.get(target);
+	}
 }
