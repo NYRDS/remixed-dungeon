@@ -47,15 +47,15 @@ public enum Rankings {
 	public int wonNumber;
 	public int happyWonNumber;
 	
-	public enum gameOver{ LOSE, WIN_AMULET, WIN_HAPPY };
-	
-	public void submit( gameOver winLevel ) {
+	public enum gameOver{ LOSE, WIN_AMULET, WIN_HAPPY }
+
+	public void submit( gameOver winLevel, String resultDescription ) {
 		
 		load();
 		
 		Record rec = new Record();
 		
-		rec.info	    = Dungeon.resultDescription;
+		rec.info	    = resultDescription;
 		rec.win		    = winLevel  != gameOver.LOSE;
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();
@@ -129,6 +129,7 @@ public enum Rankings {
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (Exception e) {
+
 		}
 	}
 	

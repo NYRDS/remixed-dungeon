@@ -80,8 +80,6 @@ public class Dungeon {
 
 	public static int depth;
 	public static int gold;
-	// Reason of death
-	public static String resultDescription;
 
 	public static HashSet<Integer> chapters;
 
@@ -135,7 +133,6 @@ public class Dungeon {
 		Room.shuffleTypes();
 
 		hero = new Hero(difficulty);
-		hero.live();
 
 		Badges.reset();
 
@@ -521,9 +518,8 @@ public class Dungeon {
 	}
 
 	public static void fail(String desc) {
-		resultDescription = desc;
 		if (hero.belongings.getItem(Ankh.class) == null) {
-			Rankings.INSTANCE.submit(Rankings.gameOver.LOSE);
+			Rankings.INSTANCE.submit(Rankings.gameOver.LOSE, desc);
 		}
 	}
 
@@ -533,8 +529,7 @@ public class Dungeon {
 			Badges.validateChampion();
 		}
 
-		resultDescription = desc;
-		Rankings.INSTANCE.submit(kind);
+		Rankings.INSTANCE.submit(kind, desc);
 	}
 
 	public static void observe() {

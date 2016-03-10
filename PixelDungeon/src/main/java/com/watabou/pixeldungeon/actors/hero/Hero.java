@@ -191,6 +191,7 @@ public class Hero extends Char {
 		belongings = new Belongings(this);
 
 		visibleEnemies = new ArrayList<>();
+		live();
 	}
 
 	public Hero(int difficulty) {
@@ -312,7 +313,7 @@ public class Hero extends Char {
 		return subClass == null || subClass == HeroSubClass.NONE ? heroClass.title() : subClass.title();
 	}
 
-	public void live() {
+	private void live() {
 		Buff.affect(this, Regeneration.class);
 		Buff.affect(this, Hunger.class);
 	}
