@@ -1402,6 +1402,7 @@ public class Hero extends Char {
 			reallyDie(cause);
 		} else {
 			Dungeon.deleteGame(false);
+			while(belongings.removeItem(ankh));
 			GameScene.show(new WndResurrect(ankh, cause));
 		}
 	}
