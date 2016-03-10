@@ -15,7 +15,9 @@ public class EventCollector {
 	static public void init(Context context) {
 		if(mTracker == null) {
 			AnalyticsTrackers.initialize(context);
+
 			mTracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
+			mTracker.enableAdvertisingIdCollection(true);
 		}
 	}
 

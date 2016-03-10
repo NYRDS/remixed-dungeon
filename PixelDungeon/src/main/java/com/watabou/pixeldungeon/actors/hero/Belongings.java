@@ -168,16 +168,17 @@ public class Belongings implements Iterable<Item> {
 		return Random.element( backpack.items );
 	}
 
-	public void removeItem(Item itemToRemove) {
+	public boolean removeItem(Item itemToRemove) {
 		Iterator<Item> it = iterator();
 
 		while(it.hasNext()) {
 			Item item = it.next();
 			if(item == itemToRemove) {
 				it.remove();
-				return;
+				return true;
 			}
 		}
+		return false;
 	}
 
 	public void resurrect( int depth ) {
