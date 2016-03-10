@@ -57,11 +57,8 @@ public class Dewdrop extends Item {
 				hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 				hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 			}
-			
-		} else if (vial != null) {
-			
+		} else {
 			vial.collectDew( this );
-			
 		}
 		
 		Sample.INSTANCE.play( Assets.SND_DEWDROP );

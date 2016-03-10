@@ -35,19 +35,19 @@ public class TextButton extends Button {
 			icon.x = x + text.x - icon.width() - 2;
 			icon.y = y + (height - icon.height()) / 2;
 		}
-	};
-	
+	}
+
 	@Override
 	protected void onTouchDown() {
 		bg.brightness( 1.2f );
 		Sample.INSTANCE.play( Assets.SND_CLICK );
-	};
-	
+	}
+
 	@Override
 	protected void onTouchUp() {
 		bg.resetColor();
-	};
-	
+	}
+
 	public void enable( boolean value ) {
 		active = value;
 		text.alpha( value ? 1.0f : 0.3f );

@@ -1399,14 +1399,10 @@ public class Hero extends Char {
 
 		Ankh ankh = belongings.getItem(Ankh.class);
 		if (ankh == null) {
-
 			reallyDie(cause);
-
 		} else {
-
 			Dungeon.deleteGame(false);
 			GameScene.show(new WndResurrect(ankh, cause));
-
 		}
 	}
 

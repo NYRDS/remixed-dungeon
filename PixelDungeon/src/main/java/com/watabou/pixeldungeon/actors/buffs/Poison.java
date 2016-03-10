@@ -51,8 +51,8 @@ public class Poison extends Buff implements Hero.Doom {
 	
 	public void set( float duration ) {
 		this.left = duration;
-	};
-	
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.POISON;

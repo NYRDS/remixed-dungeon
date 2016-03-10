@@ -132,7 +132,7 @@ public enum Rankings {
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (Exception e) {
-
+			EventCollector.logException(e);
 		}
 	}
 	
@@ -159,6 +159,7 @@ public enum Rankings {
 			happyWonNumber = bundle.getInt( HAPPY );
 			
 		} catch (Exception e) {
+			EventCollector.logException(e);
 		}
 	}
 	

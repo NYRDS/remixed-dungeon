@@ -64,5 +64,5 @@ public class WndOptionsColumns extends Window {
 		buttons.get(i).enable(enabled);
 	}
 	
-	protected void onSelect( int index ) {};
+	protected void onSelect( int index ) {}
 }

@@ -186,6 +186,6 @@ public class Weightstone extends Item {
 			resize( WIDTH, (int)btnCancel.bottom() + MARGIN );
 		}
 		
-		protected void onSelect( int index ) {};
+		protected void onSelect( int index ) {}
 	}
 }

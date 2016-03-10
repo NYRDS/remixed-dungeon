@@ -43,7 +43,7 @@ public class LootIndicator extends Tag {
 		slot = new ItemSlot() {
 			protected void onClick() {
 				Dungeon.hero.handle( Dungeon.hero.getPos() );
-			};
+			}
 		};
 		slot.showParams( false );
 		add( slot );

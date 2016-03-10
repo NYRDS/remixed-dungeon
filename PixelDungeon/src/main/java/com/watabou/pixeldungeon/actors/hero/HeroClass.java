@@ -24,11 +24,13 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
@@ -111,8 +113,10 @@ public enum HeroClass {
 			hero.collect(new ScrollOfIdentify());
 			hero.collect(new ScrollOfDomination());
 			hero.collect(new PotionOfLiquidFlame());
+			hero.collect(new PotionOfToxicGas());
 		}
 
+		hero.collect(new Ankh());
 		hero.collect(new ChaosCrystal());
 		hero.ht(100);
 		hero.hp(100);

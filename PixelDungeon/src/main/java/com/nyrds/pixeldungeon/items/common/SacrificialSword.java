@@ -28,8 +28,8 @@ public class SacrificialSword extends SpecialWeapon {
 		
 		return new Glowing(0xFF4466, period);
 		
-	};
-	
+	}
+
 	private double baseChance(Hero hero) {
 		double armorPenalty = 1;
 		

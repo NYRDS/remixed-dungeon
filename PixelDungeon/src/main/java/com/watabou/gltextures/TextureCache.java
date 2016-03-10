@@ -28,6 +28,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.watabou.glwrap.Texture;
 
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,7 +66,7 @@ public class TextureCache {
 	public static SmartTexture createGradient(int width, int height,
 			int... colors) {
 
-		String key = "" + width + "x" + height + ":" + colors;
+		String key = "" + width + "x" + height + ":" + Arrays.toString(colors);
 
 		if (all.containsKey(key)) {
 

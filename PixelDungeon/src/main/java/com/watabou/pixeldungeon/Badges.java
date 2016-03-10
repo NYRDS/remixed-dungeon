@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
@@ -244,7 +245,7 @@ public class Badges {
 				output.close();
 				saveNeeded = false;
 			} catch (IOException e) {
-
+				EventCollector.logException(e);
 			}
 		}
 	}

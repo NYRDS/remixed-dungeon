@@ -164,8 +164,8 @@ public class Generator {
 			
 			return item instanceof Bag ? Integer.MAX_VALUE : Integer.MAX_VALUE - 1;
 		}
-	};
-	
+	}
+
 	private static HashMap<Category,Float> categoryProbs = new HashMap<>();
 	
 	static {

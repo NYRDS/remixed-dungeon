@@ -82,8 +82,8 @@ public class Button extends Component {
 	
 	protected boolean onLongClick() {
 		return false;
-	};
-	
+	}
+
 	@Override
 	protected void layout() {
 		hotArea.x = x;

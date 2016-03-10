@@ -77,13 +77,13 @@ public class WndHero extends WndTabbed {
 			public void select( boolean value ) {
 				super.select( value );
 				stats.setVisible(stats.active = selected);
-			};
+			}
 		} );
 		add( new LabeledTab( this, TXT_BUFFS ) {
 			public void select( boolean value ) {
 				super.select( value );
 				buffs.setVisible(buffs.active = selected);
-			};
+			}
 		} );
 		for (Tab tab : tabs) {
 			tab.setSize( TAB_WIDTH, tabHeight() );
