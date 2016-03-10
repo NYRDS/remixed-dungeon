@@ -18,6 +18,7 @@
 package com.watabou.utils;
 
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -115,6 +116,7 @@ public class Bundle {
 				return null;
 			}
 		} catch (Exception e) {
+			EventCollector.logException(e);
 			Util.storeEventInAcra("Bundable.get",e);
 			return null;
 		}	
@@ -132,6 +134,7 @@ public class Bundle {
 		try {
 			return Enum.valueOf( enumClass, data.getString( key ) );
 		} catch (JSONException e) {
+			EventCollector.logException(e);
 			return enumClass.getEnumConstants()[0];
 		}
 	}
@@ -146,6 +149,7 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
+			Util.storeEventInAcra("Bundable.getIntArray",e);
 			return null;
 		}
 	}
@@ -160,6 +164,7 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
+			Util.storeEventInAcra("Bundable.getBooleanArray",e);
 			return null;
 		}
 	}
@@ -174,6 +179,7 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
+			Util.storeEventInAcra("Bundable.getStringArray",e);
 			return null;
 		}
 	}
@@ -311,7 +317,6 @@ public class Bundle {
 	}
 	
 	public static Bundle read( InputStream stream ) {
-		
 		try {
 			BufferedReader reader = new BufferedReader( new InputStreamReader( stream ) );
 			JSONObject json = (JSONObject)new JSONTokener( reader.readLine() ).nextValue();

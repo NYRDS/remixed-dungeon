@@ -17,6 +17,8 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
+
 import java.util.ArrayList;
 
 public class Group extends Gizmo {
@@ -148,7 +150,7 @@ public class Group extends Gizmo {
 			try {
 				return add( c.newInstance() );
 			} catch (Exception e) {
-				e.printStackTrace();
+				EventCollector.logException(e);
 			}
 		}
 		

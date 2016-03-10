@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -126,10 +127,8 @@ public class InterlevelScene extends PixelScene {
 				error = ERR_FILE_NOT_FOUND;
 
 			} catch (IOException e) {
-
-				e.printStackTrace();
+				EventCollector.logException(e);
 				error = ERR_GENERIC + "\n" + e.getMessage();
-
 			}
 
 			if(mode != Mode.CONTINUE) {

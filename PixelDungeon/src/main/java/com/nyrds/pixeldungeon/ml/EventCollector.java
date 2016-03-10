@@ -34,5 +34,6 @@ public class EventCollector {
 
 	static public void logException(Exception e) {
 		mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(e.getClass().getCanonicalName()).set("traceback", Util.toString(e)).build() );
+		e.printStackTrace();
 	}
 }

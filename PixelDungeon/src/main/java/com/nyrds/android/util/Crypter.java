@@ -10,6 +10,8 @@ import javax.crypto.spec.SecretKeySpec;
 
 import android.util.Base64;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
+
 public class Crypter {
 	private String encryptionKey;
 
@@ -26,7 +28,7 @@ public class Crypter {
 					Base64.NO_WRAP|Base64.URL_SAFE);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			EventCollector.logException(e);
 		}
 		return plainText;
 	}
@@ -40,7 +42,7 @@ public class Crypter {
 			return new String(plainBytes);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			EventCollector.logException(e);
 		}
 		return encrypted;
 	}

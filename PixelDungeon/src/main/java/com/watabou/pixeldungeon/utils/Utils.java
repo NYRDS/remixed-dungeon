@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 
@@ -31,10 +32,8 @@ public class Utils {
 	static private Class <?> getR_Field(String field){
 		try {
 			return Class.forName("com.nyrds.pixeldungeon.ml.R$"+field);
-			//return Class.forName("com.nyrds.pixeldungeon.test.R$"+field);
 		} catch (ClassNotFoundException e) {// well this is newer happens :) 
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			EventCollector.logException(e);
 		}
 		return null;
 	}
