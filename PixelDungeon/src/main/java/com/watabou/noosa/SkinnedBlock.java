@@ -17,8 +17,9 @@
 
 package com.watabou.noosa;
 
-import com.watabou.glwrap.Texture;
 import android.graphics.RectF;
+
+import com.watabou.glwrap.Texture;
 
 public class SkinnedBlock extends Image {
 	
@@ -33,7 +34,7 @@ public class SkinnedBlock extends Image {
 		
 		texture.wrap( Texture.REPEAT, Texture.REPEAT );
 		
-		size( width, height );
+		size(width, height);
 	}
 	
 	@Override
@@ -53,8 +54,9 @@ public class SkinnedBlock extends Image {
 		float tw = 1f / texture.width;
 		float th = 1f / texture.height;
 		
-		float u0 = offsetX * tw;
-		float v0 = offsetY * th;
+		float u0 = wrapTexCoord(offsetX * tw);
+		float v0 = wrapTexCoord(offsetY * th);
+
 		float u1 = u0 + width * tw / scaleX;
 		float v1 = v0 + height * th / scaleY;
 		
@@ -72,7 +74,18 @@ public class SkinnedBlock extends Image {
 		
 		dirty = true;
 	}
-	
+
+	private float wrapTexCoord(float u0) {
+		if(u0 > 1) {
+			u0 = (float) (u0 - Math.floor(u0));
+		}
+
+		if(u0 < -1) {
+			u0 = (float) (u0 - Math.ceil(u0));
+		}
+		return u0;
+	}
+
 	public void offsetTo( float x, float y ) {
 		offsetX = x;
 		offsetY = y;

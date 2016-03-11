@@ -69,15 +69,5 @@ public class Archs extends Component {
 		
 		offsB = arcsBg.offsetY();
 		offsF = arcsFg.offsetY();
-
-		if(offsB > height) {
-			offsB -= height;
-			arcsBg.offsetTo(0,offsB);
-		}
-
-		if(offsF > height) {
-			offsF -= height;
-			arcsFg.offsetTo(0,offsF);
-		}
 	}
 }
