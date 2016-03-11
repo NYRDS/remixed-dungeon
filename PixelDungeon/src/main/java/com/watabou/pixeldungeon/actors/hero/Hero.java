@@ -314,8 +314,12 @@ public class Hero extends Char {
 	}
 
 	private void live() {
-		Buff.affect(this, Regeneration.class);
-		Buff.affect(this, Hunger.class);
+		if(buff(Regeneration.class)==null) {
+			Buff.affect(this, Regeneration.class);
+		}
+		if(buff(Hunger.class)==null) {
+			Buff.affect(this, Hunger.class);
+		}
 	}
 
 	public int tier() {
