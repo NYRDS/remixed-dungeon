@@ -1,5 +1,7 @@
 package com.nyrds.android.util;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
+
 import org.acra.ACRA;
 
 import java.io.PrintWriter;
@@ -20,6 +22,7 @@ public class Util {
 	}
 
 	static public void storeEventInAcra(String eventKey,Exception e) {
+		EventCollector.logException(e);
 		if(!ACRA.isInitialised()){
 			return;
 		}

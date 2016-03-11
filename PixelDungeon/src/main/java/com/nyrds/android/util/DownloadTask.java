@@ -9,6 +9,8 @@ import java.net.URL;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
+
 public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
 	private static final String TAG = "DownloadTask";
@@ -76,12 +78,8 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 			} else {
 				result = false;
 			}
-
-		} catch (IOException e) {
-			Log.d(TAG, "Error: " + e);
-		} catch (Throwable e) {
-			e.printStackTrace();
-			Log.d(TAG, "Unknown error: " + e);
+		} catch (Exception e) {
+			EventCollector.logException(e);
 		}
 
 		return result;

@@ -114,9 +114,10 @@ public enum HeroClass {
 			hero.collect(new ScrollOfDomination());
 			hero.collect(new PotionOfLiquidFlame());
 			hero.collect(new PotionOfToxicGas());
+			hero.collect(new Ankh());
 		}
 
-		hero.collect(new Ankh());
+
 		hero.collect(new ChaosCrystal());
 		hero.ht(100);
 		hero.hp(100);

@@ -25,6 +25,7 @@ import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.glwrap.Texture;
 
 import java.io.InputStream;
@@ -142,7 +143,7 @@ public class TextureCache {
 				return null;
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			EventCollector.logException(e);
 			return null;
 		}
 	}

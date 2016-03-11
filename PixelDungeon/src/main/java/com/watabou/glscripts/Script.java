@@ -17,6 +17,7 @@
 
 package com.watabou.glscripts;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.glwrap.Program;
 import com.watabou.glwrap.Shader;
 
@@ -41,7 +42,7 @@ public class Script extends Program {
 				try {
 					script = c.newInstance();
 				} catch (Exception e) {
-					e.printStackTrace();
+					EventCollector.logException(e);
 				}
 				all.put( c, script );
 			}

@@ -15,7 +15,9 @@ public class EventCollector {
 	static public void init(Context context) {
 		if(mTracker == null) {
 			AnalyticsTrackers.initialize(context);
+
 			mTracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
+			mTracker.enableAdvertisingIdCollection(true);
 		}
 	}
 
@@ -34,5 +36,6 @@ public class EventCollector {
 
 	static public void logException(Exception e) {
 		mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(e.getClass().getCanonicalName()).set("traceback", Util.toString(e)).build() );
+		e.printStackTrace();
 	}
 }
