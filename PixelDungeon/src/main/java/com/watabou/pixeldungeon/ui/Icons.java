@@ -58,7 +58,8 @@ public enum Icons {
 	HUNTRESS,
 	MODDING_MODE,
 	QUIVER,
-	MIND_CONTROL;
+	MIND_CONTROL,
+	GRAPHS;
 
 	
 	public Image get() {
@@ -168,13 +169,16 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 110, 45, 126, 61 ) );
 			break;
 		case MODDING_MODE:
-			icon.frame( icon.texture.uvRect( 0, 57, 12, 69) );
+			icon.frame( icon.texture.uvRect( 0, 58, 12, 70) );
 			break;
 		case QUIVER:
-			icon.frame( icon.texture.uvRect( 12,53,  22,63 ) );
+			icon.frame( icon.texture.uvRect( 13,54,  23,64 ) );
 			break;
 		case MIND_CONTROL:
 			icon.frame( icon.texture.uvRect( 13,69,  27,78 ) );
+			break;
+		case GRAPHS:
+			icon.frame( icon.texture.uvRect( 40,62,  52,74 ) );
 			break;
 		}
 		return icon;
