@@ -481,6 +481,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public void displayEasyModeBanner() {
 	}
 
+	public void initEventCollector() {
+	}
+
 	private InterstitialPoint permissionsPoint;
 
 	public void doPermissionsRequest(InterstitialPoint returnTo, String[] permissions) {

@@ -23,6 +23,10 @@ public class EventCollector {
 		}
 	}
 
+	static public void disable() {
+		mDisabled = true;
+	}
+
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
 			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).build());

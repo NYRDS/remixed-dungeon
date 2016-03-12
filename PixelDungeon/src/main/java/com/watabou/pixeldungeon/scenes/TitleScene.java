@@ -36,6 +36,7 @@ import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
+import com.watabou.pixeldungeon.ui.StaticsticsButton;
 
 public class TitleScene extends PixelScene {
 
@@ -184,6 +185,10 @@ public class TitleScene extends PixelScene {
 		ChangelogButton btnChangelog = new ChangelogButton();
 		btnChangelog.setPos(w - btnChangelog.width(), btnExit.bottom() + 2);
 		add(btnChangelog);
+
+		StaticsticsButton btnStats = new StaticsticsButton();
+		btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
+		add(btnStats);
 
 		fadeIn();
 	}

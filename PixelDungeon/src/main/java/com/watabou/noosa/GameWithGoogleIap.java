@@ -296,10 +296,18 @@ public abstract class GameWithGoogleIap extends Game {
 		return !ipAddr.toString().equals("");
 	}
 
-	public void initIap() {
+	@Override
+	public void initEventCollector() {
 		if(googleAnalyticsUsable()) {
 			EventCollector.init(this);
+		} else {
+			EventCollector.disable();
 		}
+	}
+
+	public void initIap() {
+		initEventCollector();
+
 		new Thread() {
 			@Override
 			public void run() {

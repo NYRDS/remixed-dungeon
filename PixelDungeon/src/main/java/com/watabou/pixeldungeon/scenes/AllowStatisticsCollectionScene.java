@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -69,6 +70,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, 100);
+				Game.instance().initEventCollector();
 				Game.switchScene(TitleScene.class);
 			}
 		};
@@ -76,7 +78,8 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 		RedButton deny = new RedButton(Game.getVar(R.string.AllowStatisticsCollectionScene_Deny)) {
 			@Override
 			protected void onClick() {
-				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, 100);
+				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, -100);
+				Game.instance().initEventCollector();
 				Game.switchScene(TitleScene.class);
 			}
 		};
