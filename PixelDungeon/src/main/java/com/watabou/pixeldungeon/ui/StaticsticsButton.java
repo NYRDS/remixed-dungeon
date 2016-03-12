@@ -20,7 +20,7 @@ public class StaticsticsButton extends Button {
 	protected void createChildren() {
 		super.createChildren();
 		
-		image = Icons.get(Icons.NYRDIE);
+		image = Icons.get(Icons.GRAPHS);
 		add( image );
 	}
 	
