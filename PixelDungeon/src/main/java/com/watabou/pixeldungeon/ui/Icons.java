@@ -178,7 +178,7 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 13,69,  27,78 ) );
 			break;
 		case GRAPHS:
-			icon.frame( icon.texture.uvRect( 40,62,  52,74 ) );
+			icon.frame( icon.texture.uvRect( 41,63,  51,73 ) );
 			break;
 		}
 		return icon;
