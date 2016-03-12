@@ -17,6 +17,7 @@ import com.nyrds.android.google.util.Purchase;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.Preferences;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -57,7 +58,10 @@ public abstract class GameWithGoogleIap extends Game {
 	}
 
 	private static boolean googleAnalyticsUsable() {
-		return android.os.Build.VERSION.SDK_INT >= 9;
+		if(Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) > 0) {
+			return android.os.Build.VERSION.SDK_INT >= 9;
+		}
+		return false;
 	}
 
 	private static boolean googleAdsUsable() {
@@ -289,7 +293,7 @@ public abstract class GameWithGoogleIap extends Game {
 			return false;
 		}
 
-		return !ipAddr.equals("");
+		return !ipAddr.toString().equals("");
 	}
 
 	public void initIap() {
@@ -304,7 +308,6 @@ public abstract class GameWithGoogleIap extends Game {
 				}
 			}
 		}.start();
-
 	}
 
 	private void checkPurchases() {

@@ -20,9 +20,10 @@ package com.watabou.pixeldungeon;
 import android.content.SharedPreferences;
 
 import com.nyrds.android.util.UserKey;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
-enum Preferences {
+public enum Preferences {
 
 	INSTANCE;
 	
@@ -46,6 +47,7 @@ enum Preferences {
 	public static final String KEY_PREMIUM_SETTINGS = "premium_settings";
 	public static final String KEY_REALTIME         = "realtime";
 	public static final String KEY_ACTIVE_MOD       = "active_mod";
+	public static final String KEY_COLLECT_STATS    = "collect_stats";
 	
 	
 	private SharedPreferences prefs;
@@ -57,7 +59,7 @@ enum Preferences {
 		return prefs;
 	}
 	
-	int getInt( String key, int defValue  ) {
+	public int getInt( String key, int defValue  ) {
 		String defVal = Integer.toString(defValue);
 		String propVal = getString(key, defVal);
 		try{
@@ -68,14 +70,14 @@ enum Preferences {
 		}
 	}
 	
-	boolean getBoolean( String key, boolean defValue  ) {
+	public boolean getBoolean( String key, boolean defValue  ) {
 		String defVal = Boolean.toString(defValue);
 		String propVal = getString(key, defVal);
 		
 		return Boolean.parseBoolean(propVal);
 	}
 	
-	boolean checkString(String key) {
+	public boolean checkString(String key) {
 		try{
 			get().getString( key, "");
 		} catch(ClassCastException e) {
@@ -102,7 +104,7 @@ enum Preferences {
 		return true;
 	}
 	
-	String getString( String key, String defValue ) {
+	public String getString( String key, String defValue ) {
 		
 		try{
 			String scrambledKey = UserKey.encrypt(key);
@@ -132,22 +134,22 @@ enum Preferences {
 		} catch (ClassCastException e) {
 			//just return default value when loading old preferences
 		} catch (Exception e) {
-
+			EventCollector.logException(e);
 		}
 		return defValue;
 	}
 	
-	void put( String key, int value ) {
+	public void put( String key, int value ) {
 		String val = Integer.toString(value);
 		put(key, val);
 	}
 	
-	void put( String key, boolean value ) {
+	public void put( String key, boolean value ) {
 		String val = Boolean.toString(value);
 		put(key,val);
 	}
 	
-	void put( String key, String value ) {
+	public void put( String key, String value ) {
 		String scrambledVal = UserKey.encrypt(value);
 		String scrambledKey = UserKey.encrypt(key);
 		get().edit().putString( scrambledKey, scrambledVal ).commit();

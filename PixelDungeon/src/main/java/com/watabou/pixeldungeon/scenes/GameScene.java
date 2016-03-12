@@ -339,7 +339,7 @@ public class GameScene extends PixelScene {
 
 	@Override
 	public synchronized void update() {
-		if (sceneCreated == false) {
+		if (!sceneCreated) {
 			return;
 		}
 
@@ -550,7 +550,7 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void afterObserve() {
-		if (scene != null && scene.sceneCreated == true) {
+		if (scene != null && scene.sceneCreated) {
 			scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
 
 			for (Mob mob : Dungeon.level.mobs) {

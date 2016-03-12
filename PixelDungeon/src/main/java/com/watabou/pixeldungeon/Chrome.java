@@ -56,8 +56,7 @@ public class Chrome {
 			return new NinePatch( Assets.getChrome(), 64, 22, 10, 14, 4, 7, 4, 6 );
 		case TAB_UNSELECTED:
 			return new NinePatch( Assets.getChrome(), 74, 22, 10, 14, 4, 7, 4, 6 );
-		default:
-			return null;
 		}
+		throw new RuntimeException("wrong chrome type");
 	}
 }
