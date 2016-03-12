@@ -13,37 +13,42 @@ import java.util.Arrays;
  */
 public class Tools {
 
-	public static void buildSquareMaze(Level level,final int roomStep) {
+	public static void buildShadowLordMaze(Level level, final int roomStep) {
 		int w = level.getWidth();
 		int h = level.getHeight();
 
-		for (int i = 0; i < w; i++) {
-			for (int j = 0; j < h; j++) {
-				if (i == 0 || j == 0 || i == w-1 || j == h-1) {
-					setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
-					continue;
-				}
+		if(level.cellValid(level.entrance)) {
+			level.set(level.entrance, Terrain.EMPTY_DECO);
+			level.set(level.exit, Terrain.EMPTY_DECO);
+		}
+		level.entrance = -1;
+		level.exit     = -1;
 
-				if (w-i <  roomStep || h-j < roomStep) {
-					setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
+		int im = (int) (Math.floor((float)(w)/roomStep)*roomStep+2);
+		int jm = (int) (Math.floor((float)(h)/roomStep)*roomStep+2);
+		for (int i = 0; i <im; i++) {
+			for (int j = 0; j <jm; j++) {
+				if (i == 0 || j == 0 || i == im-1 || j == jm-1) {
+					level.set(i, j, Terrain.WALL_DECO);
 					continue;
 				}
 
 				if ((i - 1) % roomStep == 0 && (j - 1) % roomStep == 0) {
-					setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
+					level.set(i, j, Terrain.WALL_DECO);
 					continue;
 				}
 
 				if ((i - 1) % roomStep == roomStep/2 && (j - 1) % roomStep == roomStep/2 ) {
 
-					setCellIfEmpty(level, i, j, Terrain.PEDESTAL);
+					if(level.get(i, j)!=Terrain.EMBERS) {
+						level.set(i, j, Terrain.PEDESTAL);
+					}
 					continue;
 				}
 
 				if ((i - 1) % roomStep == 0) {
 
-					if (TerrainFlags.is(level.map[level.cell(i - 1, j)], TerrainFlags.SOLID) ||
-							TerrainFlags.is(level.map[level.cell(i + 1, j)], TerrainFlags.SOLID)) {
+					if (TerrainFlags.is(level.get(i - 1, j), TerrainFlags.SOLID) || TerrainFlags.is(level.get(i + 1, j), TerrainFlags.SOLID)) {
 						setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
 						continue;
 					}
@@ -53,8 +58,8 @@ public class Tools {
 				}
 
 				if((j-1)%roomStep==0) {
-					if (TerrainFlags.is(level.map[level.cell(i, j-1)], TerrainFlags.SOLID) ||
-							TerrainFlags.is(level.map[level.cell(i, j + 1)], TerrainFlags.SOLID)) {
+					if (TerrainFlags.is(level.get(i, j-1), TerrainFlags.SOLID) ||
+							TerrainFlags.is(level.get(i, j + 1), TerrainFlags.SOLID)) {
 						setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
 						continue;
 					}
@@ -62,35 +67,30 @@ public class Tools {
 					setCellIfEmpty(level, i, j, Terrain.WALL);
 					continue;
 				}
-
-				setCellIfEmpty(level, i, j, Terrain.EMPTY);
 			}
 		}
 
-		for (int i = 0; i < w; i++) {
-			for (int j = 0; j < h; j++) {
-
-				if (w-i <  roomStep || h-j < roomStep) {
-					continue;
-				}
+		for (int i = 0; i < im; i++) {
+			for (int j = 0; j < jm; j++) {
 
 				if ((i - 1) % roomStep == roomStep/2 && (j - 1) % roomStep == roomStep/2 ) {
-					//setCellIfEmpty(level, i, j, Terrain.EMBERS);
-					if(level.getDistToNearestTerrain(i,j,Terrain.DOOR)!=level.getDistToNearestTerrain(i,j,Terrain.WALL)){
+
+					if(level.get(i,j)==Terrain.EMBERS) {
+						level.set(level.getNearestTerrain(i, j, Terrain.EMPTY), Terrain.GRASS);
+					}
+
+					if(level.getDistToNearestTerrain(i,j,Terrain.DOOR)!=level.getDistToNearestTerrain(i, j, Terrain.WALL)){
 						int doorCell = level.getNearestTerrain(i, j, Terrain.WALL);
 						level.set(doorCell,Terrain.DOOR);
-						int secondDoorCell = level.getNearestTerrain(i, j, Terrain.WALL);
-						if(level.getDistToNearestTerrain(secondDoorCell,Terrain.DOOR)>1) {
-							level.set(secondDoorCell, Terrain.DOOR);
-						}
-						secondDoorCell = level.getNearestTerrain(i, j, Terrain.WALL);
-						if(level.getDistToNearestTerrain(secondDoorCell,Terrain.DOOR)>1) {
-							level.set(secondDoorCell, Terrain.DOOR);
+						for(int k = 0;k<2;k++) {
+							int secondDoorCell = level.getNearestTerrain(i, j, Terrain.WALL);
+							if (level.getDistToNearestTerrain(secondDoorCell, Terrain.DOOR) > 1) {
+								level.set(secondDoorCell, Terrain.DOOR);
+							}
 						}
 					}
 					continue;
 				}
-
 			}
 		}
 
@@ -124,6 +124,6 @@ public class Tools {
 		level.set(level.entrance,Terrain.ENTRANCE);
 
 		level.exit = level.cell(width-width/4,height-height/4);
-		level.set(level.exit,Terrain.LOCKED_EXIT);
+		level.set(level.exit,Terrain.EXIT);
 	}
 }

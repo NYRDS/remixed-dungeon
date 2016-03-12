@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -53,26 +52,30 @@ public class ShadowLord extends Boss {
 	}
 
 	public void spawnWraith() {
-		int cell = Dungeon.level.getEmptyCellNextTo(getPos());
+		for (int i = 0; i < 4; i++) {
+			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
 
-		if (cell != -1) {
-			Mob mob = new Wraith();
+			if (cell != -1) {
+				Mob mob = new Wraith();
 
-			mob.state = mob.WANDERING;
-			Dungeon.level.spawnMob(mob, 1);
-			WandOfBlink.appear(mob, cell);
+				mob.state = mob.WANDERING;
+				Dungeon.level.spawnMob(mob, 1);
+				WandOfBlink.appear(mob, cell);
+			}
 		}
 	}
 
 	public void twistLevel() {
-		Tools.buildSquareMaze(Dungeon.level, 4);
+		Tools.buildShadowLordMaze(Dungeon.level, 6);
 
 		int cell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
-		if(Dungeon.level.cellValid(cell)) {
-			if(Actor.findChar(cell)==null) {
+		if (Dungeon.level.cellValid(cell)) {
+			if (Actor.findChar(cell) == null) {
 				Mob mob = Crystal.makeShadowLordCrystal();
 				Dungeon.level.spawnMob(mob);
 				WandOfBlink.appear(mob, cell);
+			} else {
+				damage(ht()/9, this);
 			}
 		}
 	}
@@ -135,16 +138,15 @@ public class ShadowLord extends Boss {
 	}
 
 	@Override
-	public int defenseProc(Char enemy, int damage) {
-
-		int dmg = super.defenseProc(enemy, damage);
+	public void damage(int dmg, Object src) {
 		if (dmg > 0 && cooldown < 0) {
 			state = FLEEING;
-			blink(enemy.getPos());
+			if (src instanceof Char) {
+				blink(((Char) src).getPos());
+			}
 			twistLevel();
-			cooldown = 20;
+			cooldown = 10;
 		}
-		return dmg;
 	}
 
 	@Override
@@ -153,13 +155,12 @@ public class ShadowLord extends Boss {
 			cooldown--;
 			if (cooldown < 0) {
 				state = WANDERING;
-				for (int i = 0; i < 5; i++) {
-					if (Math.random() < 0.7) {
-						spawnWraith();
-					} else {
-						spawnShadow();
-					}
+				if (Math.random() < 0.7) {
+					spawnWraith();
+				} else {
+					spawnShadow();
 				}
+
 				yell("Prepare yourself!");
 			}
 		}
@@ -185,6 +186,5 @@ public class ShadowLord extends Boss {
 	public void die(Object cause) {
 		super.die(cause);
 		Tools.makeEmptyLevel(Dungeon.level);
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 	}
 }

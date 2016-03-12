@@ -191,7 +191,6 @@ public class Hero extends Char {
 		belongings = new Belongings(this);
 
 		visibleEnemies = new ArrayList<>();
-		live();
 	}
 
 	public Hero(int difficulty) {
@@ -203,6 +202,7 @@ public class Hero extends Char {
 		} else {
 			hp(ht(30));
 		}
+		live();
 	}
 
 	@Override

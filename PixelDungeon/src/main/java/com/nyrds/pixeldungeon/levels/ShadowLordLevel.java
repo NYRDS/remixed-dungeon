@@ -4,8 +4,6 @@ import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.Random;
 
 public class ShadowLordLevel extends Level {
 
@@ -34,13 +32,6 @@ public class ShadowLordLevel extends Level {
 
 	@Override
 	protected void decorate() {
-		for (int i = 0; i < getLength(); i++) {
-			if (map[i] == Terrain.EMPTY && Random.Int(2) == 0) {
-				map[i] = Terrain.EMPTY_DECO;
-			} else if (map[i] == Terrain.WALL && Random.Int(8) == 0) {
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
 	}
 
 	@Override

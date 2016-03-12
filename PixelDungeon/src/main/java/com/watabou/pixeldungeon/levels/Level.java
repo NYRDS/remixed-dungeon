@@ -1254,4 +1254,13 @@ public abstract class Level implements Bundlable {
 		return oneCellFrom(candidates);
 	}
 
+	public int get(int i, int j) {
+		int cell = cell(i,j);
+		if(cellValid(cell)) {
+			return map[cell];
+		}
+		return -1;
+	}
+
+
 }
