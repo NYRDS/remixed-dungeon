@@ -8,6 +8,7 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -48,7 +49,6 @@ public class WelcomeScene extends PixelScene {
 		int h = Camera.main.height;
 
 		int pw = w - 10;
-		int ph = h - 50;
 
 		title.maxWidth(pw);
 		title.measure();
@@ -58,9 +58,13 @@ public class WelcomeScene extends PixelScene {
 		add(title);
 
 		NinePatch panel = Chrome.get(Chrome.Type.WINDOW);
-		panel.size(pw, ph);
+
 		panel.x = (w - pw) / 2;
-		panel.y = (h - ph) / 2;
+		panel.y = title.y + title.height() + GAP * 2;
+		int ph = (int) (h - panel.y - 22);
+
+		panel.size(pw, ph);
+
 		add(panel);
 
 		ScrollPane list = new ScrollPane(new Component());
@@ -80,7 +84,6 @@ public class WelcomeScene extends PixelScene {
 			updTexts[i].setPos(0, yPos);
 			yPos += updTexts[i].height() + GAP;
 			content.add(updTexts[i]);
-
 		}
 
 		content.setSize(panel.innerWidth(), yPos);
@@ -89,7 +92,9 @@ public class WelcomeScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				PixelDungeon.version(Game.versionCode);
-				Game.switchScene(TitleScene.class);
+				if(Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) == 0) {
+					Game.switchScene(AllowStatisticsCollectionScene.class);
+				}
 			}
 		};
 

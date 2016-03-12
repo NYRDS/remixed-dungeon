@@ -56,4 +56,16 @@
     <string name="YogsTeeth_Name_Objective">Yog\'s teeth</string>
     <string name="YogsTeeth_Desc">Enormous mouth of an Old God filled with razor-sharp teeth. A very fitting manifestation of his urge to destroy and devour all beings.</string>
 
+    <string name="AllowStatisticsCollectionScene_Title">Usage statistics collection</string>
+    <string name="AllowStatisticsCollectionScene_Request">If you allow, Remixed Pixel Dungeon will collect usage statistics. Those data will be used to:\n
+    - spot and fix various non-fatal glitches ( for fatal errors you will be explicitly asked to send report )\n
+    - game balance improvements\n
+    - fix devices specific performance issues\n
+    - publish funny statistics facts from time to time\n
+    You can change your decision at any time (using charts icon at main screen )
+    </string>
+
+    <string name="AllowStatisticsCollectionScene_Allow">Allow</string>
+    <string name="AllowStatisticsCollectionScene_Deny">Deny</string>
+
 </resources>
