@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.rings.RingOfMending;
 
@@ -47,4 +48,14 @@ public class Regeneration extends Buff {
 
         return true;
     }
+
+	@Override
+	public boolean attachTo( Char target ) {
+
+		if(target.buff(Regeneration.class) != null) {
+			return false;
+		}
+
+		return super.attachTo(target);
+	}
 }

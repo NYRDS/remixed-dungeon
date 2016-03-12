@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -30,6 +31,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
+import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
@@ -132,8 +134,24 @@ public abstract class Char extends Actor {
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
 
+		boolean hungerAttached = false;
+		boolean hungerBugSend = false;
+
 		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
-			if (b != null) b.attachTo(this);
+			if (b != null) {
+				if (b instanceof Hunger) {
+					if (hungerAttached == false) {
+						hungerAttached = true;
+					} else {
+						if (hungerAttached == true && hungerBugSend == false) {
+							EventCollector.logEvent("bug", "hunger count");
+							hungerBugSend = true;
+							continue;
+						}
+					}
+				}
+				b.attachTo(this);
+			}
 		}
 
 		readCharData();

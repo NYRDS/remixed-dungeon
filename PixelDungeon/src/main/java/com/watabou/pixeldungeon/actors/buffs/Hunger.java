@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
@@ -56,7 +57,7 @@ public class Hunger extends Buff implements Hero.Doom {
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
+		super.restoreFromBundle(bundle);
 		level = bundle.getFloat( LEVEL );
 	}
 	
@@ -176,6 +177,16 @@ public class Hunger extends Buff implements Hero.Doom {
 		} else {
 			return Game.getVar(R.string.Hunger_Info2);
 		}
+	}
+
+	@Override
+	public boolean attachTo( Char target ) {
+
+		if(target.buff(Hunger.class) != null) {
+			return false;
+		}
+
+		return super.attachTo(target);
 	}
 
 	@Override
