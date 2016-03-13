@@ -4,7 +4,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -13,9 +14,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
-public class Crystal extends Mob {
-
-	private int kind;
+public class Crystal extends MultiKindMob {
 
 	static private int ctr = 0;
 	
@@ -76,11 +75,19 @@ public class Crystal extends Mob {
 
 	@Override
 	public int attackProc( final Char enemy, int damage ) {
-		final Wand wand = ((Wand)loot);
-		
-		wand.mobWandUse(this, enemy.getPos());
-		
-		return 0;
+
+		if(kind < 2) {
+			final Wand wand = ((Wand) loot);
+
+			wand.mobWandUse(this, enemy.getPos());
+
+			return 0;
+		} else {
+			if (enemy == Dungeon.hero && Random.Int(2) == 0) {
+				Buff.prolong(enemy, Weakness.class, Weakness.duration(enemy));
+			}
+			return damage;
+		}
 	}
 	
 	@Override

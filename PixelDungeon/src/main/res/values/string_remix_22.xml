@@ -67,5 +67,6 @@
 
     <string name="AllowStatisticsCollectionScene_Allow">Allow</string>
     <string name="AllowStatisticsCollectionScene_Deny">Deny</string>
+    <string name="Darkness_Info"/>
 
 </resources>

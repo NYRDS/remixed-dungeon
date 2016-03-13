@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
@@ -14,6 +15,7 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
@@ -74,6 +76,23 @@ public class ShadowLord extends Boss {
 				Mob mob = Crystal.makeShadowLordCrystal();
 				Dungeon.level.spawnMob(mob);
 				WandOfBlink.appear(mob, cell);
+
+				int x,y;
+				x = cell % Dungeon.level.getWidth();
+				y = cell / Dungeon.level.getWidth();
+
+				Darkness darkness = (Darkness)Dungeon.level.blobs.get( Darkness.class );
+				if (darkness == null) {
+					darkness = new Darkness();
+					GameScene.addBlobSprite(darkness);
+				}
+
+				for (int i = x-2;i<=x+2;i++) {
+					for(int j=y-2;j<=y+2;j++) {
+						darkness.seed(i, j, 1);
+					}
+				}
+				Dungeon.level.blobs.put( Darkness.class, darkness );
 			} else {
 				damage(ht()/9, this);
 			}
@@ -139,13 +158,16 @@ public class ShadowLord extends Boss {
 
 	@Override
 	public void damage(int dmg, Object src) {
+		super.damage(dmg, src);
 		if (dmg > 0 && cooldown < 0) {
 			state = FLEEING;
 			if (src instanceof Char) {
 				blink(((Char) src).getPos());
 			}
-			twistLevel();
-			cooldown = 10;
+			if(src!=this) {
+				twistLevel();
+				cooldown = 10;
+			}
 		}
 	}
 
@@ -156,9 +178,9 @@ public class ShadowLord extends Boss {
 			if (cooldown < 0) {
 				state = WANDERING;
 				if (Math.random() < 0.7) {
-					spawnWraith();
+					//spawnWraith();
 				} else {
-					spawnShadow();
+					//spawnShadow();
 				}
 
 				yell("Prepare yourself!");
