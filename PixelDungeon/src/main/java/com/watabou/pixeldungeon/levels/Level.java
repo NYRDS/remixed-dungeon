@@ -1221,7 +1221,7 @@ public abstract class Level implements Bundlable {
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
-		int cell = cell(x,y);
+		int cell = cell(x, y);
 		for(int i = 0;i<getLength();i++){
 			if(map[i]==terr) {
 				int delta = distance(cell, i);
@@ -1262,5 +1262,64 @@ public abstract class Level implements Bundlable {
 		return -1;
 	}
 
+	public int cellX(int cell) {
+		return cell % width;
+	}
 
+	public int cellY(int cell) {
+		return cell / width;
+	}
+
+	public void fillAreaWith(Class<? extends Blob> blobClass, int cell, int xs, int ys, int amount) {
+		fillAreaWith(blobClass,cellX(cell),cellY(cell),xs,ys,amount);
+	}
+
+	public void fillAreaWith(Class<? extends Blob> blobClass, int x, int y, int xs, int ys, int amount) {
+		Blob blob = Dungeon.level.blobs.get( blobClass );
+		if (blob == null) {
+			try {
+				blob = blobClass.newInstance();
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+			GameScene.add(blob);
+		}
+
+		for (int i = x;i<=x+xs;i++) {
+			for(int j=y;j<=y+ys;j++) {
+				if(cellValid(i,j)) {
+					blob.seed(i, j, amount);
+				}
+			}
+		}
+		blobs.put(blobClass, blob);
+	}
+
+	public void clearAreaFrom(Class<? extends Blob> blobClass, int cell, int xs, int ys) {
+		clearAreaFrom(blobClass, cellX(cell), cellY(cell), xs, ys);
+	}
+
+	public void clearAreaFrom(Class<? extends Blob> blobClass, int x, int y, int xs, int ys) {
+		Blob blob = Dungeon.level.blobs.get( blobClass );
+		if (blob == null) {
+			return;
+		}
+
+		for (int i = x;i<=x+xs;i++) {
+			for(int j=y;j<=y+ys;j++) {
+				if(cellValid(i,j)) {
+					blob.clearBlob(cell(i, j));
+				}
+			}
+		}
+	}
+
+	public int blobAmoutAt(Class<? extends Blob> blobClass, int cell){
+		Blob blob = Dungeon.level.blobs.get( blobClass );
+		if (blob == null) {
+			return 0;
+		}
+
+		return blob.cur[cell];
+	}
 }

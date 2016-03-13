@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Darkness;
+import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -83,6 +85,7 @@ public class Crystal extends MultiKindMob {
 
 			return 0;
 		} else {
+			getSprite().zap(enemy.getPos());
 			if (enemy == Dungeon.hero && Random.Int(2) == 0) {
 				Buff.prolong(enemy, Weakness.class, Weakness.duration(enemy));
 			}
@@ -102,10 +105,19 @@ public class Crystal extends MultiKindMob {
 
 	@Override
 	public void die(Object cause) {
-		super.die(cause);
-		if(Dungeon.level.map[getPos()]== Terrain.PEDESTAL) {
-			Dungeon.level.set(getPos(),Terrain.EMBERS);
-			GameScene.updateMap(getPos());
+		int pos = getPos();
+
+		if(Dungeon.level.map[pos]== Terrain.PEDESTAL) {
+			Dungeon.level.set(pos,Terrain.EMBERS);
+			int x,y;
+			x = Dungeon.level.cellX(pos);
+			y = Dungeon.level.cellY(pos);
+
+			Dungeon.level.clearAreaFrom(Darkness.class, x - 2, y - 2, 5, 5);
+			Dungeon.level.fillAreaWith(Foliage.class, x - 2, y - 2, 5, 5, 1);
+
+			GameScene.updateMap();
 		}
+		super.die(cause);
 	}
 }

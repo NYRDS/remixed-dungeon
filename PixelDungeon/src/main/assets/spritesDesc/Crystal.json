@@ -2,6 +2,7 @@
    "texture" = "mobs/crystal.png",
    "width" = 16,
    "height" = 16,
+   "zapEffect" = "Shadow",
    "idle" = {
       "fps" = 6,
       "looped" = true,

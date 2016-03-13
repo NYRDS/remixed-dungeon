@@ -411,7 +411,8 @@ public class GameScene extends PixelScene {
 		(plant.sprite = (PlantSprite) plants.recycle(PlantSprite.class)).reset(plant);
 	}
 
-	public static void addBlobSprite(final Blob gas) {
+	private static void addBlobSprite(final Blob gas) {
+		if(isSceneReady())
 		if (gas.emitter == null) {
 			scene.gases.add(new BlobEmitter(gas));
 		}
