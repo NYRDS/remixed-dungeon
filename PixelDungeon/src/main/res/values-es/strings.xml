@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Pixel Dungeon Remix</string>
+  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Muchos héroes de todo tipo se han aventurado en la mazmorra antes que tu. Algunos de ellos han vuelto con tesoros y artefactos mágicos, pero de la mayoría no se ha vuelto a saber nada. Pero ninguno ha logrado recuperar el Amuleto de Yendor, él cual dicen que se encuentra escondido en las profundidades de la Mazmorra. \n\nCrees que estás listo para este desafío, pero aún más importante, sientes que la fortuna te sonríe. ¡Hora de empezar tu aventura!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -329,6 +329,7 @@
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">rosa seca</string>
   <string name="DriedRose_Info">Esta rosa se secó hace mucho, pero de alguna manera aún conserva sus pétalos.</string>
+  <string name="DriedRose_Info2">Y no ha perdido su encanto. Es tan bonita, que deseas guardarla para siempre</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">símbolo enano</string>
   <string name="DwarfToken_Info">Muchos enanos y algunas de sus mayores creaciones llevan estas pequeñas piezas de metal, no se sabe por qué. Quizá sea algún tipo de joya o de identificación. Los enanos son gente rara.</string>
@@ -341,6 +342,7 @@
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">cráneo de rata gigante</string>
   <string name="RatSkull_Info">Podría ser un buen trofeo de caza, pero huele demasiado mal como para colgarlo en una pared.</string>
+  <string name="RatSkull_Info2">Por otro lado, es muestra que su propietario es capaz de matar ratas, incluso las más grandes y malolientes.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <string name="ConfusionGas_Info">Una nube de gas de confusión flota en el aire.</string>
