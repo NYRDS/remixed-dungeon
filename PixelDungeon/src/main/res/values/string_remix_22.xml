@@ -11,7 +11,7 @@
 	
 
     <string name="AllowStatisticsCollectionScene_Title">Usage statistics collection</string>
-    <string name="AllowStatisticsCollectionScene_Request">If you'll allow, Remixed Pixel Dungeon will collect usage statistics. That data will be used to:\n
+    <string name="AllowStatisticsCollectionScene_Request">If you\'ll allow, Remixed Pixel Dungeon will collect usage statistics. That data will be used to:\n
     - spot and fix various minor glitches ( for fatal errors you will be explicitly asked to send report )\n
     - game balance improvements\n
     - fix device specific performance issues\n

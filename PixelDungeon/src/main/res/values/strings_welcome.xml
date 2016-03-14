@@ -67,9 +67,8 @@
         remix.21.5:\n
         - New properties for old items
         </string>
-		        <string name="Welcome_Text_22">
+        <string name="Welcome_Text_22">
         remix.22:\n
-        - New boss
-		- Implementation of google analytics
+        - New hidden boss
         </string>
 </resources>

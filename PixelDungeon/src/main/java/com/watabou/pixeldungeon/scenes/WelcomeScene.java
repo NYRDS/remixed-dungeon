@@ -27,6 +27,7 @@ public class WelcomeScene extends PixelScene {
 	private static final String TXT_Welcome_21_3 = Game.getVar(R.string.Welcome_Text_21_3);
 	private static final String TXT_Welcome_21_4 = Game.getVar(R.string.Welcome_Text_21_4);
 	private static final String TXT_Welcome_21_5 = Game.getVar(R.string.Welcome_Text_21_5);
+	private static final String TXT_Welcome_22 = Game.getVar(R.string.Welcome_Text_22);
 
 	private static final int GAP = 4;
 
@@ -35,7 +36,7 @@ public class WelcomeScene extends PixelScene {
 		super.create();
 
 		String[] upds = { TXT_Welcome, TXT_Welcome_19, TXT_Welcome_20, TXT_Welcome_20_1, TXT_Welcome_21,
-				TXT_Welcome_21_1,TXT_Welcome_21_2, TXT_Welcome_21_3, TXT_Welcome_21_4, TXT_Welcome_21_5 };
+				TXT_Welcome_21_1,TXT_Welcome_21_2, TXT_Welcome_21_3, TXT_Welcome_21_4, TXT_Welcome_21_5, TXT_Welcome_22 };
 
 		Text[] updTexts = new Text[upds.length];
 
