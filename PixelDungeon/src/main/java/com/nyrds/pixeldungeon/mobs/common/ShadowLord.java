@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -161,7 +163,7 @@ public class ShadowLord extends Boss {
 					spawnShadow();
 				}
 
-				yell("Prepare yourself!");
+				yell(Game.getVar(R.string.ShadowLord_Yell));
 			}
 		}
 		return super.act();
