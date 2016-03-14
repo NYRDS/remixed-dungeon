@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
+import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
@@ -108,7 +109,7 @@ public enum HeroClass {
 	}
 
 	private static void initDebug(Hero hero) {
-		for(int i = 0;i<10;i++) {
+		for(int i = 0;i<100;i++) {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfIdentify());
 			hero.collect(new ScrollOfDomination());
@@ -117,12 +118,15 @@ public enum HeroClass {
 			hero.collect(new Ankh());
 		}
 
+		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
+
+		hero.collect(new Glaive().upgrade(100));
 
 		hero.collect(new ChaosCrystal());
-		hero.ht(100);
-		hero.hp(100);
-		hero.attackSkill = 100;
-		hero.defenseSkill = 100;
+		hero.ht(1000);
+		hero.hp(1000);
+		hero.attackSkill = 1000;
+		hero.defenseSkill = 1000;
 
 	}
 

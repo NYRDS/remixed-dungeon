@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -29,11 +30,12 @@ public class ShadowLord extends Boss {
 
 	public ShadowLord() {
 		hp(ht(260));
-		defenseSkill = 34;
+		defenseSkill = 40;
 
-		EXP = 56;
+		EXP = 60;
 
 		lootChance = 0.5f;
+		loot = new ScrollOfWeaponUpgrade();
 	}
 
 	@Override
@@ -69,6 +71,10 @@ public class ShadowLord extends Boss {
 	}
 
 	public void twistLevel() {
+
+		if(!isAlive()) {
+			return;
+		}
 		Tools.buildShadowLordMaze(Dungeon.level, 6);
 
 		int cell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
@@ -168,9 +174,9 @@ public class ShadowLord extends Boss {
 			if (cooldown < 0) {
 				state = WANDERING;
 				if (Math.random() < 0.7) {
-					//spawnWraith();
+					spawnWraith();
 				} else {
-					//spawnShadow();
+					spawnShadow();
 				}
 
 				yell("Prepare yourself!");
@@ -197,17 +203,18 @@ public class ShadowLord extends Boss {
 
 	@Override
 	public int attackSkill(Char target) {
-		return 1;
+		return 30;
 	}
 
 	@Override
 	public int dr() {
-		return 2;
+		return 40;
 	}
 
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
+		yell("Aaaaa...");
 		Tools.makeEmptyLevel(Dungeon.level);
 	}
 }

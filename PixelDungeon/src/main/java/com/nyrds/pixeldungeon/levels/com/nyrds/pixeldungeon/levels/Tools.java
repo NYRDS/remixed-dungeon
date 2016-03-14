@@ -121,5 +121,7 @@ public class Tools {
 
 		level.exit = level.cell(width-width/4,height-height/4);
 		level.set(level.exit,Terrain.EXIT);
+
+		GameScene.updateMap();
 	}
 }
