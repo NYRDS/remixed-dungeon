@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
@@ -141,10 +142,15 @@ public enum Rankings {
 		if (records != null) {
 			return;
 		}
-		
+
 		records = new ArrayList<>();
-		
+
+		if(!FileSystem.getInteralStorageFile(RANKINGS_FILE).exists()) {
+			return;
+		}
+
 		try {
+
 			InputStream input = Game.instance().openFileInput( RANKINGS_FILE );
 			Bundle bundle = Bundle.read( input );
 			input.close();
