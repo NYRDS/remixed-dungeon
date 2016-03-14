@@ -48,7 +48,7 @@ public class Foliage extends Blob {
 				off[pos] = cur[pos];
 				volume += off[pos];
 				
-				if (map[pos] == Terrain.EMBERS) {
+				if (map[pos] == Terrain.EMBERS || map[pos] == Terrain.EMPTY) {
 					map[pos] = Terrain.GRASS;
 					regrowth = true;
 				}

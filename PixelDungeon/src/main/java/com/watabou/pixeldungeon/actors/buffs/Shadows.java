@@ -36,7 +36,6 @@ public class Shadows extends Invisibility {
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		bundle.put( LEFT, left );
-		
 	}
 	
 	@Override
@@ -71,11 +70,8 @@ public class Shadows extends Invisibility {
 			if (--left <= 0 || Dungeon.hero.visibleEnemies() > 0) {
 				detach();
 			}
-			
 		} else {
-			
 			detach();
-			
 		}
 		
 		return true;

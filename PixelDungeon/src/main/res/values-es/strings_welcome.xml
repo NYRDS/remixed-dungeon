@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
+  <string name="Welcome_Ok">¡Muy bien!</string>
   <string name="Welcome_Title">¡Bienvenido!</string>
   <string name="Welcome_Text">
 Remixed Pixel Dungeon es una modificación del Pixel Dungeon de código abierto de Watabou.\n El proyecto fue creado para dar a los jugadores una nueva experiencia y contenido.\n Otra parte importante de nuestro proyecto es desarrollar apoyo multilingüistico para el juego.\n Con cada actualización tratamos de mantenernos lo mas cerca posible de nuestra comunidad.\n Y si alguna vez tu idea es implementada en el juego... Gracias por tu creatividad =)\n La versión actual esta basada en Pixel Dungeon 1.7.2 y parcialmente en 1.7.5.\n Diferencias con el original:\n -Opción para cambiar de idioma.\n -Nuevo monstruo y NPC\n -El gas toxico y el fuego pueden interactuar con mas objetos\n -Nuevos tipos de «comida»\n -Nuevos objetos y nuevas propiedades para algunos objetos antiguos\n -Las semillas ahora se pueden comer =)\n - Elfos</string>
@@ -40,4 +41,8 @@ remix.21.3:\n
   <string name="Welcome_Text_21_4">
 remix.21.4:\n
 - Nueva arma rara - Espada de Sacrificio</string>
+  <string name="Welcome_Text_21_5">
+        remix.21.5:\n
+        - Nuevas propiedades para viejos objetos
+        </string>
 </resources>

@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -33,8 +30,15 @@ import com.watabou.pixeldungeon.sprites.MirrorSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MirrorImage extends NPC {
-	
+
+	// for restoreFromBundle
+	public MirrorImage() {
+	}
+
 	public MirrorImage(Hero hero) {
 		spriteClass = MirrorSprite.class;
 		state = HUNTING;

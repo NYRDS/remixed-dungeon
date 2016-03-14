@@ -2,9 +2,12 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Darkness;
+import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -13,9 +16,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
-public class Crystal extends Mob {
-
-	private int kind;
+public class Crystal extends MultiKindMob {
 
 	static private int ctr = 0;
 	
@@ -76,11 +77,20 @@ public class Crystal extends Mob {
 
 	@Override
 	public int attackProc( final Char enemy, int damage ) {
-		final Wand wand = ((Wand)loot);
-		
-		wand.mobWandUse(this, enemy.getPos());
-		
-		return 0;
+
+		if(kind < 2) {
+			final Wand wand = ((Wand) loot);
+
+			wand.mobWandUse(this, enemy.getPos());
+
+			return 0;
+		} else {
+			getSprite().zap(enemy.getPos());
+			if (enemy == Dungeon.hero && Random.Int(2) == 0) {
+				Buff.prolong(enemy, Weakness.class, Weakness.duration(enemy));
+			}
+			return damage;
+		}
 	}
 	
 	@Override
@@ -95,10 +105,19 @@ public class Crystal extends Mob {
 
 	@Override
 	public void die(Object cause) {
-		super.die(cause);
-		if(Dungeon.level.map[getPos()]== Terrain.PEDESTAL) {
-			Dungeon.level.set(getPos(),Terrain.EMBERS);
-			GameScene.updateMap(getPos());
+		int pos = getPos();
+
+		if(Dungeon.level.map[pos]== Terrain.PEDESTAL) {
+			Dungeon.level.set(pos,Terrain.EMBERS);
+			int x,y;
+			x = Dungeon.level.cellX(pos);
+			y = Dungeon.level.cellY(pos);
+
+			Dungeon.level.clearAreaFrom(Darkness.class, x - 2, y - 2, 5, 5);
+			Dungeon.level.fillAreaWith(Foliage.class, x - 2, y - 2, 5, 5, 1);
+
+			GameScene.updateMap();
 		}
+		super.die(cause);
 	}
 }

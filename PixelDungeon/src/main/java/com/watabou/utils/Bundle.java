@@ -92,7 +92,7 @@ public class Bundle {
 	}
 	
 	public String getString( String key ) {
-		return data.optString( key );
+		return data.optString(key);
 	}
 	
 	public Bundle getBundle( String key ) {
@@ -138,20 +138,18 @@ public class Bundle {
 			return enumClass.getEnumConstants()[0];
 		}
 	}
-	
-	public int[] getIntArray( String key ) {
-		try {
-			JSONArray array = data.getJSONArray( key );
-			int length = array.length();
-			int[] result = new int[length];
-			for (int i=0; i < length; i++) {
-				result[i] = array.getInt(i);
-			}
-			return result;
-		} catch (JSONException e) {
-			Util.storeEventInAcra("Bundable.getIntArray",e);
+
+	public int[] getIntArray(String key) {
+		JSONArray array = data.optJSONArray(key);
+		if (array == null) {
 			return null;
 		}
+		int length = array.length();
+		int[] result = new int[length];
+		for (int i = 0; i < length; i++) {
+			result[i] = array.optInt(i);
+		}
+		return result;
 	}
 	
 	public boolean[] getBooleanArray( String key ) {
@@ -179,7 +177,7 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			Util.storeEventInAcra("Bundable.getStringArray",e);
+			Util.storeEventInAcra("Bundable.getStringArray", e);
 			return null;
 		}
 	}

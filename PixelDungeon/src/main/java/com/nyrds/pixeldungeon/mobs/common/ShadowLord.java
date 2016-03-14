@@ -8,11 +8,15 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Darkness;
+import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -28,11 +32,12 @@ public class ShadowLord extends Boss {
 
 	public ShadowLord() {
 		hp(ht(260));
-		defenseSkill = 34;
+		defenseSkill = 40;
 
-		EXP = 56;
+		EXP = 60;
 
 		lootChance = 0.5f;
+		loot = new ScrollOfWeaponUpgrade();
 	}
 
 	@Override
@@ -68,6 +73,10 @@ public class ShadowLord extends Boss {
 	}
 
 	public void twistLevel() {
+
+		if(!isAlive()) {
+			return;
+		}
 		Tools.buildShadowLordMaze(Dungeon.level, 6);
 
 		int cell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
@@ -76,8 +85,14 @@ public class ShadowLord extends Boss {
 				Mob mob = Crystal.makeShadowLordCrystal();
 				Dungeon.level.spawnMob(mob);
 				WandOfBlink.appear(mob, cell);
+
+				int x, y;
+				x = Dungeon.level.cellX(cell);
+				y = Dungeon.level.cellY(cell);
+
+				Dungeon.level.fillAreaWith(Darkness.class, x - 2, y - 2, 5, 5, 1);
 			} else {
-				damage(ht()/9, this);
+				damage(ht() / 9, this);
 			}
 		}
 	}
@@ -108,11 +123,11 @@ public class ShadowLord extends Boss {
 	private void blink(int epos) {
 
 		if (Dungeon.level.distance(getPos(), epos) == 1) {
-			int y = getPos() / Dungeon.level.getWidth();
-			int x = getPos() % Dungeon.level.getWidth();
+			int y = Dungeon.level.cellX(getPos());
+			int x = Dungeon.level.cellY(getPos());
 
-			int ey = epos / Dungeon.level.getWidth();
-			int ex = epos % Dungeon.level.getWidth();
+			int ey = Dungeon.level.cellX(epos);
+			int ex = Dungeon.level.cellY(epos);
 
 			int dx = x - ex;
 			int dy = y - ey;
@@ -141,13 +156,16 @@ public class ShadowLord extends Boss {
 
 	@Override
 	public void damage(int dmg, Object src) {
-		if (dmg > 0 && cooldown < 0) {
-			state = FLEEING;
-			if (src instanceof Char) {
-				blink(((Char) src).getPos());
+		super.damage(dmg, src);
+		if (src != this) {
+			if (dmg > 0 && cooldown < 0) {
+				state = FLEEING;
+				if (src instanceof Char) {
+					blink(((Char) src).getPos());
+				}
+				twistLevel();
+				cooldown = 10;
 			}
-			twistLevel();
-			cooldown = 10;
 		}
 	}
 
@@ -166,6 +184,17 @@ public class ShadowLord extends Boss {
 				yell(Game.getVar(R.string.ShadowLord_Yell));
 			}
 		}
+
+		if (Dungeon.level.blobAmoutAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
+			getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
+			hp(Math.min(hp() + (ht() - hp()) / 4, ht()));
+		}
+
+		if (Dungeon.level.blobAmoutAt(Foliage.class, getPos()) > 0) {
+			getSprite().emitter().burst(Speck.factory(Speck.BONE), 1);
+			damage(1, this);
+		}
+
 		return super.act();
 	}
 
@@ -176,17 +205,18 @@ public class ShadowLord extends Boss {
 
 	@Override
 	public int attackSkill(Char target) {
-		return 1;
+		return 30;
 	}
 
 	@Override
 	public int dr() {
-		return 2;
+		return 40;
 	}
 
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
+		yell("Aaaaa...");
 		Tools.makeEmptyLevel(Dungeon.level);
 	}
 }
