@@ -30,6 +30,9 @@ public class ShadowLord extends Boss {
 
 	private int cooldown = -1;
 
+	private static final String TXT_INTRO = Game.getVar(R.string.ShadowLord_Intro);
+	private static final String TXT_DENY = Game.getVar(R.string.ShadowLord_Death);
+
 	public ShadowLord() {
 		hp(ht(260));
 		defenseSkill = 40;
@@ -181,7 +184,7 @@ public class ShadowLord extends Boss {
 					spawnShadow();
 				}
 
-				yell(Game.getVar(R.string.ShadowLord_Intro));
+				yell(TXT_INTRO);
 			}
 		}
 
@@ -216,7 +219,7 @@ public class ShadowLord extends Boss {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-		yell(Game.getVar(R.string.ShadowLord_Death));
+		yell(TXT_DENY);
 		Tools.makeEmptyLevel(Dungeon.level);
 	}
 }
