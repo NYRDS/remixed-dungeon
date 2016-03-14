@@ -181,7 +181,7 @@ public class ShadowLord extends Boss {
 					spawnShadow();
 				}
 
-				yell(Game.getVar(R.string.ShadowLord_Yell));
+				yell(Game.getVar(R.string.ShadowLord_Intro));
 			}
 		}
 
@@ -216,7 +216,7 @@ public class ShadowLord extends Boss {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-		yell("Aaaaa...");
+		yell(Game.getVar(R.string.ShadowLord_Death));
 		Tools.makeEmptyLevel(Dungeon.level);
 	}
 }
