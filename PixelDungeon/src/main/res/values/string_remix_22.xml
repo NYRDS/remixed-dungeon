@@ -5,12 +5,12 @@
     <string name="ShadowLord_Name">shadow lord</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name_Objective">Shadow Lord</string>
-    <string name="ShadowLord_Desc">Creature made of pure evil and darkness, many believe that he is the Old God himself considering how powerfull he is. While others assumes that he is but a guardian of the Old God\'s chambers.</string>
+    <string name="ShadowLord_Desc">Creature made of pure evil and darkness, many believe that he is the Old God himself considering how powerful he is. While others assumes that he is but a guardian of the Old God\'s chambers.</string>
 	<string name="ShadowLord_Intro">Prepare yourself!</string>
 	<string name="ShadowLord_Death">Nooooo...</string>
 	
 
-    <string name="AllowStatisticsCollectionScene_Title">Collecting usage statistics</string>
+    <string name="AllowStatisticsCollectionScene_Title">Usage statistics collection</string>
     <string name="AllowStatisticsCollectionScene_Request">If you'll allow, Remixed Pixel Dungeon will collect usage statistics. That data will be used to:\n
     - spot and fix various minor glitches ( for fatal errors you will be explicitly asked to send report )\n
     - game balance improvements\n
