@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- STRINGS OF GutsLevel & GutsBossLevel CLASS -->
-    <string name="Guts_TileGrass">Dried shrub</string>
-    <string name="Guts_TileHighGrass">Dried shrub</string>
-    <string name="Guts_TileWater">Weird slimy liquid</string>>
-    <string name="Guts_TileDescEntrance">Gaping hole in the ceiling leads up to the upper levels</string>
-    <string name="Guts_TileDescExit">Gaping hole in the floor leads down to the lower levels</string>
-    <string name="Guts_TileDescDeco">Looks like this place was... wounded</string>
-    <string name="Guts_TileDescBookshelf">That bookshelf completely covered in thick fleshy web, there is no way to reach any of the books</string>
-	
-	<!-- STRINGS OF WndStory CLASS -->
-	<string name="WndStory_Guts">Defeated, shattered in pieces, but not completely destroyed, the Old God was sealed away in the deepest levels of the dungeon. But recently the seal was broken, leaving passage, to the demon\'s nest, wide open. The nightmarish monsters, created by the Old God in his slumber was so numerous, that provided no way to escape they were forced to fuse together to form these grotesque halls. And as you walk upon their living flesh you can feel the beat of an Old God\'s heart echoing through them.</string>
-
-	<!-- Mob descriptions -->
-	<!-- STRINGS OF GnollZombie CLASS -->
-    <string name="GnollZombie_Name">gnoll-zombie</string>
-    <string name="GnollZombie_Gender">masculine</string>
-    <string name="GnollZombie_Name_Objective">gnoll-zombie</string>
-    <string name="GnollZombie_Desc">Twisted, broken body of a zombie gnoll no longer resembles humanoid or hyena. Just a heap of rotten flesh and bones filled with malicious urge to kill and consume. </string>
 	
     <!-- STRINGS OF ShadowLord CLASS -->
     <string name="ShadowLord_Name">shadow lord</string>
@@ -26,35 +7,6 @@
     <string name="ShadowLord_Name_Objective">Shadow Lord</string>
     <string name="ShadowLord_Desc">Creature made of pure evil and darkness, many believe that he is the Old God himself considering how powerfull he is. While others assumes that he is but a guardian of the Old God\'s chambers.</string>
 	
-	<!-- STRINGS OF Worm CLASS -->
-    <string name="Worm_Name">worm</string>
-    <string name="Worm_Gender">masculine</string>
-    <string name="Worm_Name_Objective">worm</string>
-    <string name="Worm_Desc">There is no way to tell how big this worm is. Partially emerging from the floor, body of that creature is covered in lumps of rotten flesh and slime. Giant mandibles gives you a clear idea of how that monster makes his way through the surface.</string>
-	
-	<!-- STRINGS OF YogsBrain CLASS -->
-    <string name="YogsBrain_Name">yog\'s brain</string>
-    <string name="YogsBrain_Gender">masculine</string>
-    <string name="YogsBrain_Name_Objective">Yog\'s brain</string>
-    <string name="YogsBrain_Desc">Brain of Yog-Dzewa. Source of all evil ever to come out of the dungeon. </string>
-	
-	<!-- STRINGS OF YogsEye CLASS -->
-    <string name="YogsEye_Name">yog\'s eye</string>
-    <string name="YogsEye_Gender">masculine</string>
-    <string name="YogsEye_Name_Objective">Yog\'s eye</string>
-    <string name="YogsEye_Desc">The eye of the Old God, allseeing gaze filled with eternal hatred. You can feel it watching right through your soul</string>
-	
-	<!-- STRINGS OF YogsHeart CLASS -->
-    <string name="YogsHeart_Name">yog\'s heart</string>
-    <string name="YogsHeart_Gender">masculine</string>
-    <string name="YogsHeart_Name_Objective">Yog\'s heart</string>
-    <string name="YogsHeart_Desc">For centuries people believed that only truly heartless creatures are cappable of acts of pure evil. And yet here it is, huge beating heart of an Old God himself.</string>
-	
-	<!-- STRINGS OF YogsTeeth CLASS -->
-    <string name="YogsTeeth_Name">yog\'s teeth</string>
-    <string name="YogsTeeth_Gender">masculine</string>
-    <string name="YogsTeeth_Name_Objective">Yog\'s teeth</string>
-    <string name="YogsTeeth_Desc">Enormous mouth of an Old God filled with razor-sharp teeth. A very fitting manifestation of his urge to destroy and devour all beings.</string>
 
     <string name="AllowStatisticsCollectionScene_Title">Usage statistics collection</string>
     <string name="AllowStatisticsCollectionScene_Request">If you allow, Remixed Pixel Dungeon will collect usage statistics. Those data will be used to:\n
@@ -67,6 +19,6 @@
 
     <string name="AllowStatisticsCollectionScene_Allow">Allow</string>
     <string name="AllowStatisticsCollectionScene_Deny">Deny</string>
-    <string name="Darkness_Info"/>
+    <string name="Darkness_Info">Looks like pieces of eternal darkness floating in the air</string>
 
 </resources>
