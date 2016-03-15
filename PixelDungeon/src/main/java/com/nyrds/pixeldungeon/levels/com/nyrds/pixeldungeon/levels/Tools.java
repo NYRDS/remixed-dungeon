@@ -104,9 +104,13 @@ public class Tools {
 		int width = level.getWidth();
 		int height = level.getHeight();
 
-		Arrays.fill(level.map, Terrain.EMPTY);
+		for (int i = 1; i < width; i++) {
+			for (int j = 1; j < height; j++) {
+				level.set(i, j, Terrain.EMPTY);
+			}
+		}
 
-		for (int i = 1; i < level.getWidth(); i++) {
+		for (int i = 1; i < width; i++) {
 			level.set(i, 1,        Terrain.WALL);
 			level.set(i, height-1, Terrain.WALL);
 		}
