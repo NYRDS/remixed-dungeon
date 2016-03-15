@@ -61,4 +61,7 @@ remix.21.4:\n
   <string name="Welcome_Text_21_5">
 remix.21.5:\n
 - Новые свойства для старых предметов</string>
+  <string name="Welcome_Text_22">
+remix.22:\n
+- Новый секретный босс</string>
 </resources>
