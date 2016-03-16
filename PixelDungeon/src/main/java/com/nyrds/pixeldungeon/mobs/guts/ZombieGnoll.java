@@ -10,11 +10,11 @@ import com.watabou.utils.Random;
  */
 public class ZombieGnoll extends Mob {
     {
-        hp(ht(12));
-        defenseSkill = 4;
+        hp(ht(100));
+        defenseSkill = 25;
 
-        EXP = 2;
-        maxLvl = 8;
+        EXP = 15;
+        maxLvl = 30;
 
         loot = Gold.class;
         lootChance = 0.5f;
@@ -22,12 +22,12 @@ public class ZombieGnoll extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(2, 5);
+        return Random.NormalIntRange(20, 35);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 11;
+        return 25;
     }
 
     @Override

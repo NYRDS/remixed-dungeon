@@ -14,11 +14,11 @@
 	<string name="WndStory_Guts">Defeated, shattered in pieces, but not completely destroyed, the Old God was sealed away in the deepest levels of the dungeon. But recently the seal was broken, leaving passage, to the demon\'s nest, wide open. The nightmarish monsters, created by the Old God in his slumber was so numerous, that provided no way to escape they were forced to fuse together to form these grotesque halls. And as you walk upon their living flesh you can feel the beat of an Old God\'s heart echoing through them.</string>
 
 	<!-- Mob descriptions -->
-	<!-- STRINGS OF GnollZombie CLASS -->
-    <string name="GnollZombie_Name">gnoll-zombie</string>
-    <string name="GnollZombie_Gender">masculine</string>
-    <string name="GnollZombie_Name_Objective">gnoll-zombie</string>
-    <string name="GnollZombie_Desc">Twisted, broken body of a zombie gnoll no longer resembles humanoid or hyena. Just a heap of rotten flesh and bones filled with malicious urge to kill and consume. </string>
+	<!-- STRINGS OF ZombieGnoll CLASS -->
+    <string name="ZombieGnoll_Name">gnoll-zombie</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
+    <string name="ZombieGnoll_Name_Objective">gnoll-zombie</string>
+    <string name="ZombieGnoll_Desc">Twisted, broken body of a zombie gnoll no longer resembles humanoid or hyena. Just a heap of rotten flesh and bones filled with malicious urge to kill and consume. </string>
 	
 	<!-- STRINGS OF Worm CLASS -->
     <string name="Worm_Name">worm</string>

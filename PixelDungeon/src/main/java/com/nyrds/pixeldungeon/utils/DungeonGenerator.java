@@ -37,6 +37,7 @@ public class DungeonGenerator {
 	public static final String PRISON_LEVEL   = "PrisonLevel";
 	public static final String SEWER_LEVEL    = "SewerLevel";
 	public static final String SPIDER_LEVEL   = "SpiderLevel";
+	public static final String GUTS_LEVEL     = "GutsLevel";
 
 	static JSONObject mDungeonMap;
 	static JSONObject mLevels;
@@ -210,6 +211,7 @@ public class DungeonGenerator {
 			mStoryMap.put(CAVES_LEVEL, WndStory.ID_CAVES);
 			mStoryMap.put(CITY_LEVEL, WndStory.ID_METROPOLIS);
 			mStoryMap.put(HALLS_LEVEL, WndStory.ID_HALLS);
+			mStoryMap.put(GUTS_LEVEL, WndStory.ID_GUTS);
 		}
 
 		Integer id = mStoryMap.get(level.levelKind());

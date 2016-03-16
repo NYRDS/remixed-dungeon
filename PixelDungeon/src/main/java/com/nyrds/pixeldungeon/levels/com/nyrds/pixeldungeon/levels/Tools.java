@@ -115,13 +115,13 @@ public class Tools {
 			level.set(i, height-1, Terrain.WALL);
 		}
 
-		for (int i = 1; i < height; i++) {
-			level.set(1, i,        Terrain.WALL);
-			level.set(width-1, i , Terrain.WALL);
+		for (int j = 1; j < height; j++) {
+			level.set(1, j,        Terrain.WALL);
+			level.set(width-1, j , Terrain.WALL);
 		}
 
 		level.entrance = level.cell(width/4,height/4);
-		level.set(level.entrance,Terrain.ENTRANCE);
+		level.set(level.entrance, Terrain.ENTRANCE);
 
 		level.exit = level.cell(width-width/4,height-height/4);
 		level.set(level.exit,Terrain.EXIT);
