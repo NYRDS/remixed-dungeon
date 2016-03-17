@@ -10,8 +10,8 @@ import com.watabou.utils.Random;
  */
 public class YogsBrain extends Mob {
     {
-        hp(ht(100));
-        defenseSkill = 10;
+        hp(ht(200));
+        defenseSkill = 30;
 
         EXP = 25;
 
@@ -21,12 +21,12 @@ public class YogsBrain extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(2, 5);
+        return Random.NormalIntRange(20, 40);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 11;
+        return 31;
     }
 
     @Override

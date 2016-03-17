@@ -10,10 +10,10 @@ import com.watabou.utils.Random;
  */
 public class YogsTeeth extends Mob {
     {
-        hp(ht(60));
-        defenseSkill = 24;
+        hp(ht(150));
+        defenseSkill = 44;
 
-        EXP = 16;
+        EXP = 26;
 
         loot = Gold.class;
         lootChance = 0.5f;
@@ -21,12 +21,12 @@ public class YogsTeeth extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(10, 50);
+        return Random.NormalIntRange(20, 60);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 26;
+        return 36;
     }
 
     @Override
