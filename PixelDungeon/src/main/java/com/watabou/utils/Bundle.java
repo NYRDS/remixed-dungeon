@@ -17,6 +17,7 @@
 
 package com.watabou.utils;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
@@ -211,7 +212,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -219,7 +220,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -227,7 +228,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -235,7 +236,7 @@ public class Bundle {
 		try {
 			data.put( key, value );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -243,7 +244,7 @@ public class Bundle {
 		try {
 			data.put( key, bundle.data );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -255,7 +256,7 @@ public class Bundle {
 				object.storeInBundle( bundle );
 				data.put( key, bundle.data );
 			} catch (JSONException e) {
-				throw new RuntimeException("key:"+key,e);
+				throw new TrackedRuntimeException("key:"+key,e);
 			}
 		}
 	}
@@ -265,7 +266,7 @@ public class Bundle {
 			try {
 				data.put( key, value.name() );
 			} catch (JSONException e) {
-				throw new RuntimeException("key:"+key,e);
+				throw new TrackedRuntimeException("key:"+key,e);
 			}
 		}
 	}
@@ -278,7 +279,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -290,7 +291,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -302,7 +303,7 @@ public class Bundle {
 			}
 			data.put( key, jsonArray );
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -319,7 +320,7 @@ public class Bundle {
 		try {
 			data.put(key, array);
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			throw new TrackedRuntimeException("key:"+key,e);
 		}
 	}
 	
@@ -343,7 +344,7 @@ public class Bundle {
 			writer.close();
 			return true;
 		} catch (IOException e) {
-			throw new RuntimeException("bungle write failed: %s\n",e);
+			throw new TrackedRuntimeException("bungle write failed: %s\n",e);
 		}
 	}
 	

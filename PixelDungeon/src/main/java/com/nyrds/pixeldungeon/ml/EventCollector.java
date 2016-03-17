@@ -52,4 +52,11 @@ public class EventCollector {
 			e.printStackTrace();
 		}
 	}
+
+	static public void logFatalException(Exception e,String desc) {
+		if(!mDisabled) {
+			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(desc + " " +Util.toString(e)).setFatal(true).build());
+			e.printStackTrace();
+		}
+	}
 }

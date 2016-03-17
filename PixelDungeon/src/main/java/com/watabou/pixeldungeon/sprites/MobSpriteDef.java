@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
@@ -84,7 +85,7 @@ public class MobSpriteDef extends MobSprite {
 
 		} catch (Exception e) {
 			Game.toast(String.format("Something bad happens when loading %s", name), e);
-			throw new RuntimeException(String.format("Something bad happens when loading %s", name), e);
+			throw new TrackedRuntimeException(String.format("Something bad happens when loading %s", name), e);
 		}
 
 		play(idle);
