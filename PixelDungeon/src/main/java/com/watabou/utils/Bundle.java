@@ -76,7 +76,7 @@ public class Bundle {
 	}
 	
 	public int getInt( String key ) {
-		return data.optInt( key );
+		return data.optInt(key);
 	}
 
 	public int optInt( String key, int val ) {
@@ -168,6 +168,10 @@ public class Bundle {
 	}
 	
 	public String[] getStringArray( String key ) {
+		if(!data.has(key)) {
+			return null;
+		}
+
 		try {
 			JSONArray array = data.getJSONArray( key );
 			int length = array.length();
@@ -183,7 +187,11 @@ public class Bundle {
 	}
 	
 	public <T extends Bundlable> Collection<T> getCollection( String key, Class<T> type ) {
-		
+
+		if(!data.has(key)) {
+			return null;
+		}
+
 		List<T> list = new ArrayList<>();
 		
 		try {
@@ -192,7 +200,8 @@ public class Bundle {
 				list.add(type.cast(new Bundle(array.getJSONObject(i)).get()));
 			}
 		} catch (JSONException e) {
-			throw new RuntimeException("key:"+key,e);
+			Util.storeEventInAcra("Bundable.getCollection", e);
+			return null;
 		}
 		
 		return list;
