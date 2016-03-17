@@ -37,12 +37,13 @@ public class MirrorImage extends NPC {
 
 	// for restoreFromBundle
 	public MirrorImage() {
-	}
-
-	public MirrorImage(Hero hero) {
 		spriteClass = MirrorSprite.class;
 		state = HUNTING;
 		setEnemy(DUMMY);
+	}
+
+	public MirrorImage(Hero hero) {
+		this();
 		
 		tier = hero.tier();
 		attack = hero.attackSkill( hero );
