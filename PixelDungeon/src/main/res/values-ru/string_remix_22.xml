@@ -3,7 +3,7 @@
   <!--STRINGS OF ShadowLord CLASS-->
   <string name="ShadowLord_Name">владыка теней</string>
   <string name="ShadowLord_Gender">masculine</string>
-  <string name="ShadowLord_Name_Objective">Владыка Теней</string>
+  <string name="ShadowLord_Name_Objective">Владыку Теней</string>
   <string name="ShadowLord_Desc">Это существо соткано из чистого зла и непроглядной тьмы. Многие верят что Владыка Теней и есть Старый Бог, ссылаясь на то, сколь он могущественен. Но, в то же время, прочие утверждают что он лишь охраняет вход в покои Старого Бога.</string>
   <string name="ShadowLord_Intro">Приготовься!</string>
   <string name="ShadowLord_Death">Нееееет...</string>

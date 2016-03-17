@@ -203,7 +203,7 @@ public class ShadowLord extends Boss {
 
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange(1, 2);
+		return Random.NormalIntRange(30, 40);
 	}
 
 	@Override
