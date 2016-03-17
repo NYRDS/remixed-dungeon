@@ -47,7 +47,16 @@ public class EventCollector {
 	}
 
 	static public void logException(Exception e) {
-		mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(Util.toString(e)).build());
-		e.printStackTrace();
+		if(!mDisabled) {
+			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(Util.toString(e)).build());
+			e.printStackTrace();
+		}
+	}
+
+	static public void logFatalException(Exception e,String desc) {
+		if(!mDisabled) {
+			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(desc + " " +Util.toString(e)).setFatal(true).build());
+			e.printStackTrace();
+		}
 	}
 }
