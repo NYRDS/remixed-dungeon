@@ -65,6 +65,10 @@ public abstract class Actor implements Bundlable {
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
+		if(Float.isInfinite(time) || Float.isNaN(time)) {
+			return;
+		}
+
 		bundle.put( TIME, time );
 	}
 	

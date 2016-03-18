@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Camera;
@@ -172,11 +173,18 @@ public class GameScene extends PixelScene {
 		add(mobs);
 
 		// hack to save bugged saves...
+		boolean buggedSave = false;
 		HashSet<Mob> filteredMobs = new HashSet<>();
 		for (Mob mob : Dungeon.level.mobs) {
 			if (mob.getPos() != -1) {
 				filteredMobs.add(mob);
+			}  else {
+				buggedSave = true;
 			}
+		}
+
+		if(buggedSave) {
+			EventCollector.logEvent("bug","bugged save","mob.pos==-1");
 		}
 
 		Dungeon.level.mobs = filteredMobs;
@@ -470,12 +478,16 @@ public class GameScene extends PixelScene {
 	public static void add(Heap heap) {
 		if (scene != null && Dungeon.level != null) {
 			scene.addHeapSprite(heap);
+		} else {
+			EventCollector.logException(new Exception("add(Heap)"));
 		}
 	}
 
 	public static void discard(Heap heap) {
 		if (scene != null && Dungeon.level != null) {
 			scene.addDiscardedSprite(heap);
+		} else {
+			EventCollector.logException(new Exception("discard(Heap)"));
 		}
 	}
 
@@ -530,18 +542,24 @@ public class GameScene extends PixelScene {
 	public static void updateMap() {
 		if (scene != null && Dungeon.level != null) {
 			scene.tiles.updateAll();
+		} else {
+			EventCollector.logException(new Exception("updateMap"));
 		}
 	}
 
 	public static void updateMap(int cell) {
 		if (scene != null && Dungeon.level != null) {
 			scene.tiles.updateCell(cell);
+		}else {
+			EventCollector.logException(new Exception("updateMap(int)"));
 		}
 	}
 
 	public static void discoverTile(int pos, int oldValue) {
 		if (scene != null && Dungeon.level != null) {
 			scene.tiles.discover(pos, oldValue);
+		}{
+			EventCollector.logException(new Exception("discoverTile"));
 		}
 	}
 
@@ -557,6 +575,8 @@ public class GameScene extends PixelScene {
 			for (Mob mob : Dungeon.level.mobs) {
 				mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
 			}
+		}else {
+			EventCollector.logException(new Exception("afterObserve()"));
 		}
 	}
 
@@ -647,6 +667,8 @@ public class GameScene extends PixelScene {
 	public void updateToolbar() {
 		if (toolbar != null) {
 			toolbar.updateLayout();
+		} else {
+			EventCollector.logException(new Exception("updateToolbar(int)"));
 		}
 	}
 }
