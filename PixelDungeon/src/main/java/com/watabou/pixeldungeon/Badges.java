@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shielded;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
+import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -53,7 +54,7 @@ import java.util.List;
 
 public class Badges {
 
-	public static enum Badge {
+	public enum Badge {
 		MONSTERS_SLAIN_1(Game.getVar(R.string.Badges_MonsterSlain1), 0),
 		MONSTERS_SLAIN_2(Game.getVar(R.string.Badges_MonsterSlain2), 1),
 		MONSTERS_SLAIN_3(Game.getVar(R.string.Badges_MonsterSlain3), 2),
@@ -75,6 +76,7 @@ public class Badges {
 		BAG_BOUGHT_SCROLL_HOLDER,
 		BAG_BOUGHT_WAND_HOLSTER,
 		BAG_BOUGHT_POTION_BELT,
+		BAG_BOUGHT_QUIVER,
 		ALL_BAGS_BOUGHT(Game.getVar(R.string.Badges_AllBags), 23),
 		DEATH_FROM_FIRE(Game.getVar(R.string.Badges_DeathFire), 24),
 		DEATH_FROM_POISON(Game.getVar(R.string.Badges_DeathPoison), 25),
@@ -155,17 +157,17 @@ public class Badges {
 		public String description;
 		public int image;
 
-		private Badge(String description, int image) {
+		Badge(String description, int image) {
 			this(description, image, false);
 		}
 
-		private Badge(String description, int image, boolean meta) {
+		Badge(String description, int image, boolean meta) {
 			this.description = description;
 			this.image = image;
 			this.meta = meta;
 		}
 
-		private Badge() {
+		Badge() {
 			this("", -1);
 		}
 	}
@@ -490,6 +492,8 @@ public class Badges {
 			badge = Badge.BAG_BOUGHT_WAND_HOLSTER;
 		} else if (bag instanceof PotionBelt) {
 			badge = Badge.BAG_BOUGHT_POTION_BELT;
+		} else if (bag instanceof Quiver) {
+			badge = Badge.BAG_BOUGHT_QUIVER;
 		}
 
 		if (badge != null) {
@@ -500,7 +504,8 @@ public class Badges {
 					local.contains(Badge.BAG_BOUGHT_SCROLL_HOLDER) &&
 					local.contains(Badge.BAG_BOUGHT_SEED_POUCH) &&
 					local.contains(Badge.BAG_BOUGHT_WAND_HOLSTER) &&
-					local.contains(Badge.BAG_BOUGHT_POTION_BELT)) {
+					local.contains(Badge.BAG_BOUGHT_POTION_BELT) &&
+					local.contains(Badge.BAG_BOUGHT_QUIVER)) {
 
 				badge = Badge.ALL_BAGS_BOUGHT;
 				local.add(badge);
