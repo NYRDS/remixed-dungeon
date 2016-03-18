@@ -342,7 +342,7 @@ public abstract class GameWithGoogleIap extends Game {
 	IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
 		@Override
 		public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
-			Log.d("GAME", "Query inventory finished.");
+			//Log.d("GAME", "Query inventory finished.");
 
 			// Have we been disposed of in the meantime? If so, quit.
 			if (mHelper == null)
@@ -376,7 +376,7 @@ public abstract class GameWithGoogleIap extends Game {
 		return null;
 	}
 
-	public void doPurchase(String sku) {
+	private void doPurchase(String sku) {
 		if (!m_iapReady) {
 			alert("Sorry, we not ready yet");
 			EventCollector.logEvent("fail","purchase not ready");
@@ -392,7 +392,6 @@ public abstract class GameWithGoogleIap extends Game {
 	/** Verifies the developer payload of a purchase. */
 	boolean verifyDeveloperPayload(Purchase p) {
 		String payload = p.getDeveloperPayload();
-		Log.d("GAME", payload);
 
 		return true;
 	}
@@ -420,7 +419,7 @@ public abstract class GameWithGoogleIap extends Game {
 	// Callback for when a purchase is finished
 	IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
 		public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
-			Log.d("GAME", "Purchase finished: " + result + ", purchase: " + purchase);
+			//Log.d("GAME", "Purchase finished: " + result + ", purchase: " + purchase);
 
 			// if we were disposed of in the meantime, quit.
 			if (mHelper == null)
@@ -437,7 +436,7 @@ public abstract class GameWithGoogleIap extends Game {
 				return;
 			}
 
-			Log.d("GAME", "Purchase successful!");
+			//Log.d("GAME", "Purchase successful!");
 
 			if (purchase.getSku().equals(SKU_LEVEL_1)) {
 				setDonationLevel(1);
@@ -456,8 +455,8 @@ public abstract class GameWithGoogleIap extends Game {
 	};
 
 	void complain(String message) {
+		EventCollector.logEvent("iap error",message);
 		Log.e("GAME", "**** IAP Error: " + message);
-		// alert("Error: " + message);
 	}
 
 	void alert(final String message) {
