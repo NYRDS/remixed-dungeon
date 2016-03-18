@@ -465,6 +465,8 @@ public class GameScene extends PixelScene {
 	public static void add(Plant plant) {
 		if (scene != null && Dungeon.level != null) {
 			scene.addPlantSprite(plant);
+		} else {
+			EventCollector.logException(new Exception("add(Plant)"));
 		}
 	}
 
@@ -472,6 +474,8 @@ public class GameScene extends PixelScene {
 		if (scene != null && Dungeon.level != null) {
 			Actor.add(gas);
 			scene.addBlobSprite(gas);
+		} else {
+			EventCollector.logException(new Exception("add(Blob)"));
 		}
 	}
 
