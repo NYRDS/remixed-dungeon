@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
@@ -50,8 +51,8 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.PseudoPasty;
-import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -159,7 +160,7 @@ public abstract class Level implements Bundlable {
 	public static Level fromBundle(Bundle bundle, String key) {
 		return (Level)bundle.get(key);
 	}
-	
+
 	public String levelKind() {
 		return this.getClass().getSimpleName();
 	}
@@ -168,7 +169,7 @@ public abstract class Level implements Bundlable {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
 			if (heap.isEmpty()) {
-				GLog.w("Empty heap at pos %d", pos);
+				EventCollector.logEvent("bug", "level", String.format("Empty heap at pos %d", pos));
 				return null;
 			}
 			return heap;
@@ -673,7 +674,7 @@ public abstract class Level implements Bundlable {
 
 	public Heap drop(Item item, int cell) {
 
-		if (Dungeon.isChallenged(Challenges.NO_FOOD) && item instanceof Ration) {
+		if (Dungeon.isChallenged(Challenges.NO_FOOD) && item instanceof Food) {
 			item = new Gold(item.price());
 		} else if (Dungeon.isChallenged(Challenges.NO_ARMOR)
 				&& item instanceof Armor) {
@@ -684,24 +685,25 @@ public abstract class Level implements Bundlable {
 		}
 
 		if ((map[cell] == Terrain.ALCHEMY) && !(item instanceof Plant.Seed)) {
-			int n;
-			do {
-				n = cell + NEIGHBOURS8[Random.Int(8)];
-			} while (map[n] != Terrain.EMPTY_SP);
-			cell = n;
+			int newCell = getEmptyCellNextTo(cell);
+			if(cellValid(newCell)) {
+				cell = newCell;
+			}
 		}
 
 		Heap heap = heaps.get(cell);
 		if (heap == null) {
-
 			heap = new Heap();
 			heap.pos = cell;
-			if (map[cell] == Terrain.CHASM
-					|| (Dungeon.level != null && pit[cell])) {
-				GameScene.discard(heap);
+			if (map[cell] == Terrain.CHASM || pit[cell]) {
+				if(GameScene.isSceneReady()) {
+					GameScene.discard(heap);
+				}
 			} else {
 				heaps.put(cell, heap);
-				GameScene.add(heap);
+				if(GameScene.isSceneReady()) {
+					GameScene.add(heap);
+				}
 			}
 
 		} else if (heap.type == Heap.Type.LOCKED_CHEST

@@ -473,7 +473,7 @@ public class GameScene extends PixelScene {
 	public static void add(Blob gas) {
 		if (scene != null && Dungeon.level != null) {
 			Actor.add(gas);
-			scene.addBlobSprite(gas);
+			addBlobSprite(gas);
 		} else {
 			EventCollector.logException(new Exception("add(Blob)"));
 		}
