@@ -37,7 +37,7 @@
       "26":{"kind":"LastLevel", "depth":26,       "size":[32,32]}
    },
    "Graph":{
-      "0":[["test_guts"],[]],
+      "0":[["1"],[]],
       "test_guts":[[],["1"],[2]],
       "test_sewers":[[],["2"],[2]],
       "shadow_lord_test":[["26"],["25"]],
