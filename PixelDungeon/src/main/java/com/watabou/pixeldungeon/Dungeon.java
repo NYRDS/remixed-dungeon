@@ -214,8 +214,6 @@ public class Dungeon {
 
 		nightMode = new Date().getHours() < 7;
 
-		Dungeon.level = level;
-
 		Actor.init(level);
 
 		Actor respawner = level.respawner();
@@ -233,6 +231,8 @@ public class Dungeon {
 
 		Light light = hero.buff(Light.class);
 		hero.viewDistance = light == null ? level.viewDistance : Math.max(Light.DISTANCE, level.viewDistance);
+
+		Dungeon.level = level;
 
 		observe();
 	}

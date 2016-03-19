@@ -355,6 +355,10 @@ public class GameScene extends PixelScene {
 			return;
 		}
 
+		if(Dungeon.level == null) {
+			return;
+		}
+
 		super.update();
 
 		water.offset(0, -5 * Game.elapsed);
