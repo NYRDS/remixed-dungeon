@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
@@ -84,6 +85,7 @@ public class DungeonGenerator {
 		registerLevelClass(PredesignedLevel.class);
 		registerLevelClass(GutsLevel.class);
 		registerLevelClass(ShadowLordLevel.class);
+		registerLevelClass(FakeLastLevel.class);
 	}
 
 	public static String getEntryLevelKind() {

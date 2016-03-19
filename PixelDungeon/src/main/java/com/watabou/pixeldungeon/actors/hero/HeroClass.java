@@ -119,7 +119,6 @@ public enum HeroClass {
 			hero.collect(new PotionOfLiquidFlame());
 			hero.collect(new PotionOfToxicGas());
 			hero.collect(new Ankh());
-			hero.collect(new RatKingCrown());
 		}
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);

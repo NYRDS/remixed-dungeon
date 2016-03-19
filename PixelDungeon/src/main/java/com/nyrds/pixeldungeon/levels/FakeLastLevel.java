@@ -15,19 +15,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.watabou.pixeldungeon.levels;
+package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.mobs.Mimic;
+import com.watabou.pixeldungeon.actors.mobs.MimicPie;
+import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.levels.HallsLevel;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
 
 import java.util.Arrays;
 
-public class LastLevel extends Level {
+public class FakeLastLevel extends Level {
 
 	private static final int SIZE = 7;
 	
@@ -62,6 +69,9 @@ public class LastLevel extends Level {
 		exit = entrance - getWidth() * SIZE;
 		map[exit] = Terrain.LOCKED_EXIT;
 
+		secondaryExit = entrance - getWidth() * SIZE + getWidth() * 2;
+		map[secondaryExit] = Terrain.EXIT;
+
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 		map[pedestal] = Terrain.PEDESTAL;
 		map[pedestal-1] = map[pedestal+1] = Terrain.STATUE_SP;
@@ -82,11 +92,14 @@ public class LastLevel extends Level {
 
 	@Override
 	protected void createMobs() {
+		Rat aMimic = new Rat();
+		aMimic.setPos(pedestal);
+		mobs.add(aMimic);
 	}
 
 	@Override
 	protected void createItems() {
-		drop( new Amulet(), pedestal );
+		/*drop( new Amulet(), pedestal );*/
 	}
 	
 	@Override
