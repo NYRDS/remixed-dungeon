@@ -20,5 +20,12 @@
          ],
    "tiles_x":"tiles_guts_x.png",
    "water":"water0.png",
-   "entrance":[1,1]
+   "entrance":[1,1],
+   "items" = [
+      {"kind"="ShortSword", "x"=4,"y"=4},
+      {"kind"="Dart","x"=5,"y"=5,"quantity"=10}
+   ],
+   "mobs" = [
+      {"kind"="Monk","x"=10,"y"=10}
+   ]
 }

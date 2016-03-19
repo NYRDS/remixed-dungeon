@@ -1,8 +1,10 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 
 import org.json.JSONArray;
@@ -60,6 +62,8 @@ public class PredesignedLevel extends CommonLevel {
 		}
 		buildFlagMaps();
 		cleanWalls();
+		createMobs();
+		createItems();
 	}
 
 	@Override
@@ -97,8 +101,6 @@ public class PredesignedLevel extends CommonLevel {
 		} catch (IllegalAccessException e) {
 			throw new RuntimeException(e);
 		}
-
-		//MobFactory
 	}
 
 	@Override
@@ -107,9 +109,27 @@ public class PredesignedLevel extends CommonLevel {
 			if (mLevelDesc.has("items")) {
 				JSONArray itemsDesc = mLevelDesc.getJSONArray("items");
 
+				for(int i=0;i<itemsDesc.length();++i) {
+					JSONObject itemDesc = itemsDesc.optJSONObject(i);
+					int x = itemDesc.getInt("x");
+					int y = itemDesc.getInt("y");
+
+					if(cellValid(x,y)) {
+						String kind = itemDesc.getString("kind");
+						Item item = ItemFactory.itemsClassByName(kind).newInstance();
+						if(itemDesc.has("quantity")) {
+							item.quantity(itemDesc.getInt("quantity"));
+						}
+						drop(item, cell(x, y));
+					}
+				}
 			}
 		} catch (JSONException e) {
 			throw new RuntimeException("bad items description", e);
+		} catch (InstantiationException e) {
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
+			throw new RuntimeException(e);
 		}
 	}
 
