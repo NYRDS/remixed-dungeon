@@ -566,7 +566,7 @@ public class GameScene extends PixelScene {
 	public static void discoverTile(int pos, int oldValue) {
 		if (scene != null && Dungeon.level != null) {
 			scene.tiles.discover(pos, oldValue);
-		}{
+		}else{
 			EventCollector.logException(new Exception("discoverTile"));
 		}
 	}
