@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
@@ -137,6 +138,13 @@ public class MobSpriteDef extends MobSprite {
 			int[] points = new int[2];
 			points[0] = ch.getPos();
 			points[1] = cell;
+
+			if(ItemFactory.isValidItemClass(zapEffect)) {
+				((MissileSprite)getParent().recycle( MissileSprite.class )).
+						reset(ch.getPos(), cell, ItemFactory.itemByName(zapEffect), null, zapCallback );
+				return;
+			}
+
 			if(zapEffect.equals("Lightning")) {
 				getParent().add(new Lightning(points, 2, zapCallback));
 				return;

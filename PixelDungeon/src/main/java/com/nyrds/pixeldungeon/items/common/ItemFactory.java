@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
@@ -155,13 +156,16 @@ import java.util.HashMap;
 public class ItemFactory {
 
 	static private HashMap <String, Class<? extends Item>> mItemsList;
-	
+
+	static  {
+		initItemsMap();
+	}
 	private static void registerItemClass(Class<? extends Item> itemClass) {
 		mItemsList.put(itemClass.getSimpleName(), itemClass);
 	}
 	
 	private static void initItemsMap() {
-		
+
 		mItemsList = new HashMap<>();
 
 		registerItemClass(Amulet.class);
@@ -314,19 +318,26 @@ public class ItemFactory {
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {
-		if(mItemsList==null) {
-			initItemsMap();
-		}
-		
 		return Random.element(mItemsList.values());
 	}
-	
-	public static Class<? extends Item> itemsClassByName(String selectedItemClass) {
-		
-		if(mItemsList==null) {
-			initItemsMap();
+
+	public static boolean isValidItemClass(String itemClass) {
+		return mItemsList.containsKey(itemClass);
+	}
+
+	public static Item itemByName(String selectedItemClass) {
+		try {
+			return itemsClassByName(selectedItemClass).newInstance();
+		} catch (InstantiationException e) {
+			throw new TrackedRuntimeException("", e);
+		} catch (IllegalAccessException e) {
+			throw new TrackedRuntimeException("", e);
 		}
-		
+	}
+
+
+		public static Class<? extends Item> itemsClassByName(String selectedItemClass) {
+
 		Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
 		if(itemClass != null) {
 			return itemClass;
