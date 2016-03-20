@@ -679,4 +679,10 @@ public class GameScene extends PixelScene {
 			EventCollector.logException(new Exception("updateToolbar(int)"));
 		}
 	}
+
+	@Override
+	public void resume() {
+		super.resume();
+		afterObserve();
+	}
 }

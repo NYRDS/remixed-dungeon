@@ -309,7 +309,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	@Override
 	public void onDrawFrame(GL10 gl) {
-
 		if (instance() == null || width() == 0 || height() == 0 || paused) {
 			return;
 		}
@@ -347,6 +346,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		SystemText.invalidate();
 		TextureCache.reload();
 
+		if(scene!=null) {
+			scene.resume();
+		}
 	}
 
 	public static boolean isPaused() {
