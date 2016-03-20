@@ -22,5 +22,8 @@
     <string name="AllowStatisticsCollectionScene_Allow">Allow</string>
     <string name="AllowStatisticsCollectionScene_Deny">Deny</string>
     <string name="Darkness_Info">Looks like pieces of eternal darkness floating in the air</string>
+    <string name="WndSelectLanguage_ImproveTranslation">Please help improve Remixed Pixel Dungeon translations</string>
+    <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
+    <string name="WndSelectLanguage_LinkToTranslationSite">Click here to join Remixed Pixel Dungeon translation team</string>
 
 </resources>
