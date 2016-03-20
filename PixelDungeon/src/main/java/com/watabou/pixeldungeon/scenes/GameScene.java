@@ -118,7 +118,7 @@ public class GameScene extends PixelScene {
 	private Toolbar toolbar;
 	private Toast   prompt;
 
-	private boolean sceneCreated = false;
+	private volatile boolean sceneCreated = false;
 
 	@Override
 	public void create() {
