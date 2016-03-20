@@ -14,6 +14,12 @@
 	<string name="WndStory_Guts">Defeated, shattered in pieces, but not completely destroyed, the Old God was sealed away in the deepest levels of the dungeon. But recently the seal was broken, leaving passage, to the demon\'s nest, wide open. The nightmarish monsters, created by the Old God in his slumber was so numerous, that provided no way to escape they were forced to fuse together to form these grotesque halls. And as you walk upon their living flesh you can feel the beat of an Old God\'s heart echoing through them.</string>
 
 	<!-- Mob descriptions -->
+	<!-- STRINGS OF MimicAmulet CLASS -->
+    <string name="MimicAmulet_Name">mimic</string>
+    <string name="MimicAmulet_Gender">masculine</string>
+    <string name="MimicAmulet_Name_Objective">mimic</string>
+    <string name="MimicAmulet_Desc">The most glorious moment of your adventuring carrier just turned out to be a trap.</string>
+	
 	<!-- STRINGS OF ZombieGnoll CLASS -->
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Gender">masculine</string>

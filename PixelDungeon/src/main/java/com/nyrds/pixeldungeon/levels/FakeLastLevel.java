@@ -17,7 +17,9 @@
  */
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -92,14 +94,16 @@ public class FakeLastLevel extends Level {
 
 	@Override
 	protected void createMobs() {
-		Rat aMimic = new Rat();
-		aMimic.setPos(pedestal);
-		mobs.add(aMimic);
+		/*MimicAmulet mimic = new MimicAmulet();
+		mimic.setPos(pedestal);
+		mimic.adjustStats(25);
+		mobs.add(mimic);
+		mimic.getSprite().turnTo(pedestal, Dungeon.hero.getPos());*/
 	}
 
 	@Override
 	protected void createItems() {
-		/*drop( new Amulet(), pedestal );*/
+		drop( new PseudoAmulet(), pedestal );
 	}
 	
 	@Override
