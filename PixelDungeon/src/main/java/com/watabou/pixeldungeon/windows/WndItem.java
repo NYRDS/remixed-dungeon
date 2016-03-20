@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -34,13 +35,15 @@ public class WndItem extends Window {
 	
 	private static final float GAP	= 2;
 	
-	private static final int WIDTH = 120;
+	private static final int WIDTH_P = 120;
+	private static final int WIDTH_L = 160;
 	
 	public WndItem( final WndBag owner, final Item item ) {	
 		
 		super();
-		
-		
+
+		int WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
+
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( Utils.capitalize( item.toString() ) );
@@ -51,14 +54,14 @@ public class WndItem extends Window {
 			titlebar.color( ItemSlot.UPGRADED );
 		} else if (item.levelKnown && item.level() < 0) {
 			titlebar.color( ItemSlot.DEGRADED );
-		}	
-		
+		}
+
 		Text info = PixelScene.createMultiline( item.info(), 6 );
 		info.maxWidth(WIDTH);
 		info.measure();
 		info.x = titlebar.left();
 		info.y = titlebar.bottom() + GAP;
-		add( info );
+		add(info);
 		 
 		float y = info.y + info.height() + GAP;
 		float x = 0;
@@ -72,7 +75,7 @@ public class WndItem extends Window {
 						item.execute( Dungeon.hero, action );
 						hide();
 						owner.hide();
-					};
+					}
 				};
 				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );
 				if (x + btn.width() > WIDTH) {
@@ -80,7 +83,7 @@ public class WndItem extends Window {
 					y += BUTTON_HEIGHT + GAP;
 				}
 				btn.setPos( x, y );
-				add( btn );
+				add(btn);
 				
 				x += btn.width() + GAP;
 			}
