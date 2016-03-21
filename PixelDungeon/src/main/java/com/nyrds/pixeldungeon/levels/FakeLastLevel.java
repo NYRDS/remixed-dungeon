@@ -71,8 +71,8 @@ public class FakeLastLevel extends Level {
 		exit = entrance - getWidth() * SIZE;
 		map[exit] = Terrain.LOCKED_EXIT;
 
-		secondaryExit = entrance - getWidth() * SIZE + getWidth() * 2;
-		map[secondaryExit] = Terrain.EXIT;
+		/*secondaryExit = entrance - getWidth() * SIZE + getWidth() * 2;
+		map[secondaryExit] = Terrain.EXIT;*/
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 		map[pedestal] = Terrain.PEDESTAL;

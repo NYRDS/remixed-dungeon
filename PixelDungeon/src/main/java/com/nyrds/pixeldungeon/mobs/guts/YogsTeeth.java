@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -8,7 +9,7 @@ import com.watabou.utils.Random;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class YogsTeeth extends Mob {
+public class YogsTeeth extends Boss {
     {
         hp(ht(150));
         defenseSkill = 44;
