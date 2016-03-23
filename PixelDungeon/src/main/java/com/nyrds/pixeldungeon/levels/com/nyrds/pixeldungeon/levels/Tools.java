@@ -128,4 +128,18 @@ public class Tools {
 
 		GameScene.updateMap();
 	}
+
+	public static void tileSplosion(Level level, int terrain, int position, int size){
+		int width = level.getWidth();
+		int height = level.getHeight();
+
+		for (int i = position - size; i < size; i++) {
+			for (int j = position - size; j < size; j++) {
+				if (i < width && j < height && i < 0 && j < 0){
+					level.set(i, j, terrain);
+				}
+			}
+		}
+
+	}
 }

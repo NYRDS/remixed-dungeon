@@ -16,7 +16,7 @@ public class ShadowLordLevel extends Level {
 
 	@Override
 	public String tilesTex() {
-		return Assets.TILES_PRISON;
+		return Assets.TILES_SHADOW_LORD;
 	}
 
 	@Override
