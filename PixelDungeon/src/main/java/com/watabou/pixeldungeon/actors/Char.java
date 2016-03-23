@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -140,10 +141,10 @@ public abstract class Char extends Actor {
 		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
 			if (b != null) {
 				if (b instanceof Hunger) {
-					if (hungerAttached == false) {
+					if (!hungerAttached) {
 						hungerAttached = true;
 					} else {
-						if (hungerAttached == true && hungerBugSend == false) {
+						if (!hungerBugSend) {
 							EventCollector.logEvent("bug", "hunger count");
 							hungerBugSend = true;
 							continue;
@@ -568,7 +569,7 @@ public abstract class Char extends Actor {
 
 	public CharSprite getSprite() {
 		if (sprite == null) {
-			throw new RuntimeException("Null Sprite!!!");
+			throw new TrackedRuntimeException("null sprite for "+ this.getClass().getCanonicalName());
 		}
 		return sprite;
 	}

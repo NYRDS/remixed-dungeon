@@ -20,59 +20,14 @@ package com.watabou.pixeldungeon.windows;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.ui.SystemRedButton;
-import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
-
-import java.util.ArrayList;
 
 public class WndOptions extends Window {
 
 	private static final int WIDTH			= 120;
 	private static final int MARGIN 		= 2;
 	private static final int BUTTON_HEIGHT	= 20;
-	
-	private ArrayList<TextButton> buttons = new ArrayList<>();
-	
-	public WndOptions( String title, String message, boolean systemFont, String... options ) {
-		super();
-		
-		Text tfTitle = PixelScene.createSystemText( title, 9 );
-		tfTitle.hardlight( TITLE_COLOR );
-		tfTitle.x = tfTitle.y = MARGIN;
-		tfTitle.maxWidth(WIDTH - MARGIN * 2);
-		tfTitle.measure();
-		add( tfTitle );
-		
-		Text tfMesage = PixelScene.createSystemText( message, 8 );
-		tfMesage.maxWidth(WIDTH - MARGIN * 2);
-		tfMesage.measure();
-		tfMesage.x = MARGIN;
-		tfMesage.y = tfTitle.y + tfTitle.height() + MARGIN;
-		add( tfMesage );
-		
-		float pos = tfMesage.y + tfMesage.height() + MARGIN;
-		
-		for (int i=0; i < options.length; i++) {
-			final int index = i;
-			SystemRedButton btn = new SystemRedButton( options[i]) {
-				@Override
-				protected void onClick() {
-					hide();
-					onSelect( index );
-				}
-			};
-			buttons.add(btn);
-			btn.setRect( MARGIN, pos, WIDTH - MARGIN * 2, BUTTON_HEIGHT );
-			add( btn );
-			
-			pos += BUTTON_HEIGHT + MARGIN;
-		}
-		
-		resize( WIDTH, (int)pos );
-	}
 
-	
 	public WndOptions( String title, String message, String... options ) {
 		super();
 		
@@ -101,7 +56,7 @@ public class WndOptions extends Window {
 					onSelect( index );
 				}
 			};
-			buttons.add(btn);
+
 			btn.setRect( MARGIN, pos, WIDTH - MARGIN * 2, BUTTON_HEIGHT );
 			add( btn );
 			
@@ -110,10 +65,6 @@ public class WndOptions extends Window {
 		
 		resize( WIDTH, (int)pos );
 	}
-	
-	public void setEnabled(int i, boolean enabled) {
-		buttons.get(i).enable(enabled);
-	}
-	
-	protected void onSelect( int index ) {};
+
+	protected void onSelect( int index ) {}
 }

@@ -120,7 +120,7 @@ public class Sungrass extends Plant {
 			if (target.getPos() != pos || target.hp() >= target.ht()) {
 				detach();
 			} else {
-				target.hp(Math.min(target.ht(), target.hp() + target.ht() / 10));
+				target.hp(Math.min(target.ht(), target.hp()+Math.max( target.ht() / 10, 1)));
 				target.getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
 			}
 			spend(STEP);

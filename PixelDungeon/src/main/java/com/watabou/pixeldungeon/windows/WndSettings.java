@@ -61,7 +61,7 @@ public class WndSettings extends Window {
 
 	private static final String TXT_SElECT_LANGUAGE = Game
 			.getVar(R.string.WndSettings_SelectLanguage);
-	
+
 	private static final String TXT_SECOND_QUICKSLOT = Game
 			.getVar(R.string.WndSettings_SecondQuickslot);
 	private static final String TXT_THIRD_QUICKSLOT = Game
@@ -181,7 +181,7 @@ public class WndSettings extends Window {
 				@Override
 				protected void onClick() {
 					PixelDungeon.scene().add(
-							new WndOptions(TXT_SElECT_LANGUAGE, "",true, "English",
+							new WndSelectLanguage(TXT_SElECT_LANGUAGE,  "English",
 									"Русский", "Français", "Polski", "Español","한국말","Português brasileiro") {
 								
 								@Override

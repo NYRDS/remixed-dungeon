@@ -67,15 +67,15 @@ import java.util.HashSet;
 
 public class Dungeon {
 
-	public static int potionOfStrength;
-	public static int scrollsOfUpgrade;
-	public static int arcaneStyli;
+	public static int     potionOfStrength;
+	public static int     scrollsOfUpgrade;
+	public static int     arcaneStyli;
 	public static boolean dewVial; // true if the dew vial can be spawned
-	public static int transmutation; // depth number for a well of transmutation
+	public static int     transmutation; // depth number for a well of transmutation
 
 	public static int challenges;
 
-	public static Hero hero;
+	public static Hero  hero;
 	public static Level level;
 
 	public static int depth;
@@ -214,8 +214,6 @@ public class Dungeon {
 
 		nightMode = new Date().getHours() < 7;
 
-		Dungeon.level = level;
-
 		Actor.init(level);
 
 		Actor respawner = level.respawner();
@@ -234,16 +232,18 @@ public class Dungeon {
 		Light light = hero.buff(Light.class);
 		hero.viewDistance = light == null ? level.viewDistance : Math.max(Light.DISTANCE, level.viewDistance);
 
+		Dungeon.level = level;
+
 		observe();
 	}
 
 	public static boolean posNeeded() {
-		int[] quota = { 4, 2, 9, 4, 14, 6, 19, 8, 24, 9 };
+		int[] quota = {4, 2, 9, 4, 14, 6, 19, 8, 24, 9};
 		return chance(quota, potionOfStrength);
 	}
 
 	public static boolean soeNeeded() {
-		int[] quota = { 5, 3, 10, 6, 15, 9, 20, 12, 25, 13 };
+		int[] quota = {5, 3, 10, 6, 15, 9, 20, 12, 25, 13};
 		return chance(quota, scrollsOfUpgrade);
 	}
 
@@ -264,20 +264,20 @@ public class Dungeon {
 		return Random.Int(12 * (1 + arcaneStyli)) < depth;
 	}
 
-	private static final String VERSION = "version";
+	private static final String VERSION    = "version";
 	private static final String CHALLENGES = "challenges";
-	private static final String HERO = "hero";
-	private static final String GOLD = "gold";
-	private static final String DEPTH = "depth";
-	private static final String LEVEL = "level";
-	private static final String POS = "potionsOfStrength";
-	private static final String SOU = "scrollsOfEnhancement";
-	private static final String AS = "arcaneStyli";
-	private static final String DV = "dewVial";
-	private static final String WT = "transmutation";
-	private static final String CHAPTERS = "chapters";
-	private static final String QUESTS = "quests";
-	private static final String BADGES = "badges";
+	private static final String HERO       = "hero";
+	private static final String GOLD       = "gold";
+	private static final String DEPTH      = "depth";
+	private static final String LEVEL      = "level";
+	private static final String POS        = "potionsOfStrength";
+	private static final String SOU        = "scrollsOfEnhancement";
+	private static final String AS         = "arcaneStyli";
+	private static final String DV         = "dewVial";
+	private static final String WT         = "transmutation";
+	private static final String CHAPTERS   = "chapters";
+	private static final String QUESTS     = "quests";
+	private static final String BADGES     = "badges";
 
 	public static void gameOver() {
 		Dungeon.deleteGame(true);
@@ -474,8 +474,8 @@ public class Dungeon {
 
 		input.close();
 
-		if(bundle==null) {
-			throw new RuntimeException("can not load level from "+loadFrom);
+		if (bundle == null) {
+			throw new RuntimeException("can not load level from " + loadFrom);
 		}
 
 		Level level = Level.fromBundle(bundle, "level");
@@ -543,14 +543,9 @@ public class Dungeon {
 
 		BArray.or(level.visited, visible, level.visited);
 
-		Game.executeInGlThread(
-				new Runnable() {
-					@Override
-					public void run() {
-						GameScene.afterObserve();
-					}
-				}
-		);
+		if (GameScene.isSceneReady()) {
+			GameScene.afterObserve();
+		}
 	}
 
 	private static void markActorsAsUnpassableIgnoreFov() {

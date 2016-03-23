@@ -347,7 +347,7 @@ public class StartScene extends PixelScene {
 		Dungeon.hero = null;
 		Dungeon.heroClass = curClass;
 
-		EventCollector.logEvent("game","new", curClass.getClass().getSimpleName());
+		EventCollector.logEvent("game","new", curClass.name());
 		EventCollector.logEvent("game","mod",PixelDungeon.activeMod());
 		EventCollector.logEvent("game","difficulty",String.valueOf(difficulty));
 

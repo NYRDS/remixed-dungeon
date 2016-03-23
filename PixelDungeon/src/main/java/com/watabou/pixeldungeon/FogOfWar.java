@@ -23,7 +23,6 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;
 import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.scenes.GameScene;
 
 import java.util.Arrays;
 
@@ -110,12 +109,6 @@ public class FogOfWar extends Image {
 			super( Bitmap.createBitmap( width2, height2, Bitmap.Config.ARGB_8888 ) );
 			filter( Texture.LINEAR, Texture.LINEAR );
 			TextureCache.add( FogOfWar.class, this );
-		}
-		
-		@Override
-		public void reload() {
-			super.reload();
-			GameScene.afterObserve();
 		}
 	}
 }

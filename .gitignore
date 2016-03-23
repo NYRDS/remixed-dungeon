@@ -35,4 +35,3 @@ proguard/
 build/
 
 /PixelDungeon/src/main/res/values/strings_api.xml
-/PixelDungeon/src/main/res/values/strings_api_dummy.xml

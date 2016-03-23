@@ -101,8 +101,9 @@ public class Bundle {
 	}
 	
 	private Bundlable get() {
+		String clName="no class";
 		try {
-			String clName = getString( CLASS_NAME );
+			clName = getString( CLASS_NAME );
 			if (aliases.containsKey( clName )) {
 				clName = aliases.get( clName );
 			}
@@ -117,7 +118,7 @@ public class Bundle {
 				return null;
 			}
 		} catch (Exception e) {
-			EventCollector.logException(e);
+			EventCollector.logException(e,clName);
 			Util.storeEventInAcra("Bundable.get",e);
 			return null;
 		}	

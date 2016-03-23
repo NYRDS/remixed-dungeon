@@ -6,8 +6,6 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import java.util.Arrays;
-
 /**
  * Created by mike on 27.02.2016.
  */
@@ -124,9 +122,11 @@ public class Tools {
 		level.set(level.entrance, Terrain.ENTRANCE);
 
 		level.exit = level.cell(width-width/4,height-height/4);
-		level.set(level.exit,Terrain.EXIT);
+		level.set(level.exit, Terrain.EXIT);
 
-		GameScene.updateMap();
+		if(GameScene.isSceneReady()) {
+			GameScene.updateMap();
+		}
 	}
 
 	public static void tileSplosion(Level level, int terrain, int position, int size){
