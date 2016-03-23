@@ -18,7 +18,7 @@
     <string name="MimicAmulet_Name">mimic</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name_Objective">mimic</string>
-    <string name="MimicAmulet_Desc">The most glorious moment of your adventuring carrier just turned out to be a trap.</string>
+    <string name="MimicAmulet_Desc">The most glorious moment of your adventuring career just turned out to be a trap.</string>
 	
 	<!-- STRINGS OF ZombieGnoll CLASS -->
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
