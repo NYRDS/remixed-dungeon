@@ -221,6 +221,6 @@ public class ShadowLord extends Boss {
 		super.die(cause);
 		yell(TXT_DENY);
 		Tools.makeEmptyLevel(Dungeon.level);
-		Tools.tileSplosion(Dungeon.level, Terrain.EMPTY_DECO, getPos(), 6);
+		//Tools.tileSplosion(Dungeon.level, Terrain.EMPTY_DECO, getPos(), 3);
 	}
 }

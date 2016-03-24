@@ -132,13 +132,12 @@ public class Tools {
 	public static void tileSplosion(Level level, int terrain, int position, int size){
 		int width = level.getWidth();
 		int height = level.getHeight();
-
-		for (int i = position - size; i < size; i++) {
-			for (int j = position - size; j < size; j++) {
-				if (i < width && j < height && i < 0 && j < 0){
-					level.set(i, j, terrain);
-				}
-			}
+		//j * getWidth() + i
+		for (int i = -size; i < size; i++){
+			//level.set(position - i, terrain);
+			//level.set(position + i, terrain);
+			level.set(position - width*i + i, terrain);
+			level.set(position + width*i + i, terrain);
 		}
 
 	}
