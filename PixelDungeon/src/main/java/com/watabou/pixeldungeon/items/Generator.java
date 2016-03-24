@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -326,10 +327,8 @@ public class Generator {
 			default:
 				return ((Item)cat.classes[Random.chances( cat.probs )].newInstance()).random();
 			}
-			
 		} catch (Exception e) {
-			throw new RuntimeException(e);
-
+			throw new TrackedRuntimeException("item generator",e);
 		}
 	}
 	
