@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -72,8 +73,24 @@ public class Yog extends Boss {
 	}
 
 	public void spawnFists() {
-		RottingFist fist1 = new RottingFist();
-		BurningFist fist2 = new BurningFist();
+        String [] secondaryBossArray = {"RottingFist", "BurningFist", "YogsBrain", "YogsEye", "YogsHeart", "YogsTeeth"};
+		String name1, name2;
+		Mob fist1, fist2;
+
+		do{
+			name1 = new Random().element(secondaryBossArray);
+			name2 = new Random().element(secondaryBossArray);
+		} while (name1 == name2);
+
+		Class<? extends Mob> boss1 = MobFactory.mobClassByName("YogsTeeth");
+		Class<? extends Mob> boss2 = MobFactory.mobClassByName(name2);
+
+		try{
+			fist1 = boss1.newInstance();
+			fist2 = boss2.newInstance();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
 
 		do {
 			fist1.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
@@ -313,7 +330,7 @@ public class Yog extends Boss {
 		{
 			spriteClass = LarvaSprite.class;
 
-			hp(ht(25));
+			hp(ht(50));
 			defenseSkill = 20;
 
 			EXP = 0;
