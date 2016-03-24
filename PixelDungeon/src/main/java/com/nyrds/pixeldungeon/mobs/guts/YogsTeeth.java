@@ -24,9 +24,6 @@ public class YogsTeeth extends Boss {
         defenseSkill = 44;
 
         EXP = 26;
-
-        loot = Gold.class;
-        lootChance = 0.5f;
     }
 
 
