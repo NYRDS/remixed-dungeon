@@ -73,7 +73,7 @@ public class Yog extends Boss {
 	}
 
 	public void spawnFists() {
-        String [] secondaryBossArray = {"RottingFist", "BurningFist", "YogsBrain", "YogsEye", "YogsHeart", "YogsTeeth"};
+        String [] secondaryBossArray = {"RottingFist", "BurningFist", "YogsBrain", "YogsHeart", "YogsTeeth"};
 		String name1, name2;
 		Mob fist1, fist2;
 
