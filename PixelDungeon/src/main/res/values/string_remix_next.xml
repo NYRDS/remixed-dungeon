@@ -19,14 +19,20 @@
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name_Objective">mimic</string>
     <string name="MimicAmulet_Desc">The most glorious moment of your adventuring career just turned out to be a trap.</string>
-	
-	<!-- STRINGS OF ZombieGnoll CLASS -->
+
+    <!-- STRINGS OF Nightmare CLASS -->
+    <string name="Nightmare_Name">nightmare</string>
+    <string name="Nightmare_Gender">masculine</string>
+    <string name="Nightmare_Name_Objective">nightmare</string>
+    <string name="Nightmare_Desc">Twisted, broken body of a zombie gnoll no longer resembles humanoid or hyena. Just a heap of rotten flesh and bones filled with malicious urge to kill and consume. </string>
+
+    <!-- STRINGS OF ZombieGnoll CLASS -->
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnoll-zombie</string>
     <string name="ZombieGnoll_Desc">Twisted, broken body of a zombie gnoll no longer resembles humanoid or hyena. Just a heap of rotten flesh and bones filled with malicious urge to kill and consume. </string>
-	
-	<!-- STRINGS OF Worm CLASS -->
+
+    <!-- STRINGS OF Worm CLASS -->
     <string name="Worm_Name">worm</string>
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name_Objective">worm</string>
