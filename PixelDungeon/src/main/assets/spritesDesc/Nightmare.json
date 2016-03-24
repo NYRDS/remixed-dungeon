@@ -1,0 +1,30 @@
+{
+   "texture" = "mobs/nightmare.png",
+   "width" = 16,
+   "height" = 18,
+   "idle" = {
+      "fps" = 3,
+      "looped" = true,
+      "frames" = [0, 1, 0, 0, 1]
+   },
+   "run" = {
+      "fps" = 5,
+      "looped" = true,
+      "frames" = [2, 3, 4, 3]
+   },
+   "attack" = {
+      "fps" = 12,
+      "looped" = false,
+      "frames" = [5, 5, 6, 7, 8, 5, 5]
+   },
+   "die" = {
+      "fps" = 7,
+      "looped" = false,
+      "frames" = [9, 9, 9, 10, 11]
+   }
+
+}
+
+
+
+
