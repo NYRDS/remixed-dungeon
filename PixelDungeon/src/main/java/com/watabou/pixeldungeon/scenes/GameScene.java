@@ -285,6 +285,8 @@ public class GameScene extends PixelScene {
 		busy.y = sb.bottom() + 1;
 		add(busy);
 
+		sceneCreated = true;
+
 		switch (InterlevelScene.mode) {
 			case RESURRECT:
 				WandOfBlink.appear(Dungeon.hero, Dungeon.level.entrance);
@@ -309,8 +311,6 @@ public class GameScene extends PixelScene {
 
 		Camera.main.target = heroSprite;
 		fadeIn();
-
-		sceneCreated = true;
 	}
 
 	public static void updateHeroSprite(Hero hero) {
