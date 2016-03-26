@@ -311,6 +311,7 @@ public class GameScene extends PixelScene {
 
 		Camera.main.target = heroSprite;
 		fadeIn();
+		Dungeon.observe();
 	}
 
 	public static void updateHeroSprite(Hero hero) {
