@@ -51,13 +51,13 @@ public abstract class Mob extends Char {
 	protected static final String TXT_RAGE = "#$%^";
 	protected static final String TXT_EXP = "%+dEXP";
 
-	public AiState SLEEPEING = new Sleeping();
+	public AiState SLEEPING = new Sleeping();
 	public AiState HUNTING = new Hunting();
 	public AiState WANDERING = new Wandering();
 	public AiState FLEEING = new Fleeing();
 	public AiState PASSIVE = new Passive();
 
-	public AiState state = SLEEPEING;
+	public AiState state = SLEEPING;
 
 	protected Object spriteClass;
 
@@ -115,7 +115,7 @@ public abstract class Mob extends Char {
 
 		super.storeInBundle(bundle);
 
-		if (state == SLEEPEING) {
+		if (state == SLEEPING) {
 			bundle.put(STATE, Sleeping.TAG);
 		} else if (state == WANDERING) {
 			bundle.put(STATE, Wandering.TAG);
@@ -140,7 +140,7 @@ public abstract class Mob extends Char {
 		String state = bundle.getString(STATE);
 		switch (state) {
 			case Sleeping.TAG:
-				this.state = SLEEPEING;
+				this.state = SLEEPING;
 				break;
 			case Wandering.TAG:
 				this.state = WANDERING;
@@ -342,7 +342,7 @@ public abstract class Mob extends Char {
 			state = FLEEING;
 		} else if (buff instanceof Sleep) {
 			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-			state = SLEEPEING;
+			state = SLEEPING;
 			postpone(Sleep.SWS);
 		}
 	}
@@ -460,7 +460,7 @@ public abstract class Mob extends Char {
 
 		Terror.recover(this);
 
-		if (state == SLEEPEING) {
+		if (state == SLEEPING) {
 			state = WANDERING;
 		}
 		alerted = true;

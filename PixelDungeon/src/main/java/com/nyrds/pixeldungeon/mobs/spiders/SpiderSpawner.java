@@ -25,14 +25,14 @@ public class SpiderSpawner {
 	static public void spawnEgg(Level level, int position) {
 		Mob mob = new SpiderEgg();
 		mob.setPos(position);
-		mob.state = mob.SLEEPEING;
+		mob.state = mob.SLEEPING;
 		level.spawnMob(mob);
 	}
 
 	static public void spawnNest(Level level, int position) {
 		Mob mob = new SpiderNest();
 		mob.setPos(position);
-		mob.state = mob.SLEEPEING;
+		mob.state = mob.SLEEPING;
 		level.spawnMob(mob);
 	}
 
