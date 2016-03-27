@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.mobs.guts;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -11,7 +10,7 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.utils.Random;
 
 /**
@@ -58,4 +57,16 @@ public class YogsHeart extends Boss {
 
         return super.defenseProc(enemy, damage);
     }
+
+	@Override
+	public boolean act() {
+
+		Mob mob = Dungeon.level.getRandomMob();
+
+		if(mob!=null && mob.isAlive() && !mob.isPet()) {
+			PotionOfHealing.heal(mob,0.2f);
+		}
+
+		return super.act();
+	}
 }
