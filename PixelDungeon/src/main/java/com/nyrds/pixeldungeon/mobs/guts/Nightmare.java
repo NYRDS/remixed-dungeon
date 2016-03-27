@@ -19,11 +19,10 @@ import com.watabou.utils.Random;
  */
 public class Nightmare extends Mob {
     {
-        hp(ht(50));
+        hp(ht(80));
         defenseSkill = 24;
 
         EXP = 0;
-
     }
 
 
@@ -42,12 +41,21 @@ public class Nightmare extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(10, 20);
+        return Random.NormalIntRange(20, 25);
     }
 
     @Override
     public int attackSkill( Char target ) { return 26; }
 
     @Override
-    public int dr() { return 2; }
+    public int dr() { return 10; }
+
+    @Override
+    protected boolean act(){
+        super.act();
+
+        state = HUNTING;
+
+        return true;
+    }
 }

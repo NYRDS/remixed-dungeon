@@ -24,7 +24,7 @@
     <string name="Nightmare_Name">nightmare</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">nightmare</string>
-    <string name="Nightmare_Desc">Twisted, broken body of a zombie gnoll no longer resembles humanoid or hyena. Just a heap of rotten flesh and bones filled with malicious urge to kill and consume. </string>
+    <string name="Nightmare_Desc">Grotesque creature made of twitching flesh tentacles. The Nightmares is a very manifestation of the Old God\'s sinister thoughts.</string>
 
     <!-- STRINGS OF ZombieGnoll CLASS -->
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
