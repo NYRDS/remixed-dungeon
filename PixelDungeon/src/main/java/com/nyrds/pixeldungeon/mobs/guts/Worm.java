@@ -21,16 +21,16 @@ public class Worm extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(2, 5);
+        return Random.NormalIntRange(12, 25);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 11;
+        return 20;
     }
 
     @Override
     public int dr() {
-        return 2;
+        return 50;
     }
 }

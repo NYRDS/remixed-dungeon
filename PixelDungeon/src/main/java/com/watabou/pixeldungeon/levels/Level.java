@@ -1325,4 +1325,8 @@ public abstract class Level implements Bundlable {
 
 		return blob.cur[cell];
 	}
+
+	public Mob getRandomMob() {
+		return Random.element(mobs);
+	}
 }

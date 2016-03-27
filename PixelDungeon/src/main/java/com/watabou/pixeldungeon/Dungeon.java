@@ -234,7 +234,7 @@ public class Dungeon {
 
 		Dungeon.level = level;
 
-		observe();
+		//observe();
 	}
 
 	public static boolean posNeeded() {
