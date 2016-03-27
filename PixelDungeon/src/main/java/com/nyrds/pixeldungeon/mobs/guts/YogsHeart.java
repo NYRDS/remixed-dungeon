@@ -1,8 +1,16 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Sleep;
+import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Yog;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
@@ -16,8 +24,9 @@ public class YogsHeart extends Boss {
 
         EXP = 12;
 
-        loot = Gold.class;
-        lootChance = 0.5f;
+        IMMUNITIES.add(Amok.class);
+        IMMUNITIES.add(Sleep.class);
+        IMMUNITIES.add(Terror.class);
     }
 
     @Override
@@ -32,6 +41,21 @@ public class YogsHeart extends Boss {
 
     @Override
     public int dr() {
-        return 2;
+        return 12;
+    }
+
+    @Override
+    public int defenseProc(Char enemy, int damage) {
+
+        int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
+
+        if (Dungeon.level.cellValid(larvaPos)) {
+            Yog.Larva larva = new Yog.Larva();
+            larva.setPos(larvaPos);
+            Dungeon.level.spawnMob(larva, 0);
+            Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
+        }
+
+        return super.defenseProc(enemy, damage);
     }
 }
