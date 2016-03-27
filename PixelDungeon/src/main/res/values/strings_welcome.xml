@@ -71,4 +71,11 @@
         remix.22:\n
         - New hidden boss
         </string>
+        <string name="Welcome_Text_23">
+        remix.23:\n
+        - Dungeon is now 32 levels deep (instead of 26)
+        - Hidden boss moved to level 25
+        - Greater variety of mini-bosses for a final fight (instead of 2 fists, Yog now can chose from a total of 5 mini bosses to spawn)
+        - New setting and monsters for levels 27-31
+        </string>
 </resources>
