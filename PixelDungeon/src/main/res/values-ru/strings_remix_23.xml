@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">Высохший кустарник.</string>
+  <string name="Guts_TileHighGrass">Высохший кустарник</string>
+  <string name="Guts_TileWater">Странная склизкая жидкость.</string>
+  <string name="Guts_TileDescEntrance">Дыра в потолке ведёт к верхним уровням.</string>
+  <string name="Guts_TileDescExit">Дыра в полу ведёт к нижним уровням.</string>
+  <string name="Guts_TileDescDeco">Похоже что эта стена была... ранена.</string>
+  <string name="Guts_TileDescBookshelf">Эта книжная полка покрыта паутиной наростов из плоти, ты не видишь ни единой книги, которую можно было бы достать.</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Поверженный, расколотый на куски, но всё же не уничтоженный до конца, Старый Бог был запечатан в глубинах подземелья. Но не так давно печать была сорвана, раскрыв проход в обитель демонов. Кошмарные монстры, рождаемые во снах Старого Бога, были столь многочисленны, что не имея возможности сбежать, они были вынужденны слиться воедино, образуя эти чудовищные залы. И с каждым шагом, по их трепещущей плоти, ты чувствуешь, как в них пульсирует сердце Старого Бога.</string>
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">мимик</string>
+  <string name="MimicAmulet_Gender">masculine</string>
+  <string name="MimicAmulet_Name_Objective">мимика</string>
+  <string name="MimicAmulet_Desc">Самый знаменательный момент в твоей приключенческой карьере только-что обернулся очередной ловушкой.</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">кошмар</string>
+  <string name="Nightmare_Gender">masculine</string>
+  <string name="Nightmare_Name_Objective">кошмара</string>
+  <string name="Nightmare_Desc">Омерзительное создание, выглядящее как пучок  щупалец сделанных из плоти. Кошмары являются воплощением зловещих мыслей Старого Бога.</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">гнолл-зомби</string>
+  <string name="ZombieGnoll_Gender">masculine</string>
+  <string name="ZombieGnoll_Name_Objective">гнолла-зомби</string>
+  <string name="ZombieGnoll_Desc">Исковерканное, изломанное тело гнолла-зомби более не напоминает ни гиену, ни гуманоида. Всё что осталось это груда гниющей плоти и костей, наполненная жаждой убивать и пожирать.</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">червь</string>
+  <string name="Worm_Gender">masculine</string>
+  <string name="Worm_Name_Objective">червя</string>
+  <string name="Worm_Desc">Даже частично скрытый под полом, этот червь кажется просто гигантским. Его тело покрыто ошмётками гниющей плоти, обмазанными слизью. Огромные жвала чудовища недвусмысленно намекают на то, каким образом он передвигается под поверхностью.</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">мозг Йога</string>
+  <string name="YogsBrain_Gender">masculine</string>
+  <string name="YogsBrain_Name_Objective">мозг Йога</string>
+  <string name="YogsBrain_Desc">Мозг Йог-Джевы. Источник всего зла, что когда-либо появлялось в подземелье.</string>
+  <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">глаз Йога</string>
+  <string name="YogsEye_Gender">masculine</string>
+  <string name="YogsEye_Name_Objective">глаз Йога</string>
+  <string name="YogsEye_Desc">Всевидящее око Старого Бога наполнено всеобъемлющей ненавистью. Ты чувствуешь как оно смотрит прямо сквозь твою душу.</string>
+  <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">сердце Йога</string>
+  <string name="YogsHeart_Gender">neuter</string>
+  <string name="YogsHeart_Name_Objective">сердце Йога</string>
+  <string name="YogsHeart_Desc">Испокон веков люди верили, что лишь бессердечные создания способны на по-настоящему злые поступки. Вопреки этому, ты видишь перед собой огромное бьющееся сердце Старого Бога.</string>
+  <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">пасть Йога</string>
+  <string name="YogsTeeth_Gender">femenine</string>
+  <string name="YogsTeeth_Name_Objective">пасть Йога</string>
+  <string name="YogsTeeth_Desc">Гигантская пасть Старого Бога усеяна бритвенно-острыми зубами. Весьма подходящее воплощение его жажды к разрушению и поглощению всего и вся.</string>
+</resources>
