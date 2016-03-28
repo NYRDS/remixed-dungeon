@@ -82,8 +82,8 @@ public class Yog extends Boss {
 			name2 = new Random().element(secondaryBossArray);
 		} while (name1 == name2);
 
-		Class<? extends Mob> boss1 = MobFactory.mobClassByName("YogsBrain");
-		Class<? extends Mob> boss2 = MobFactory.mobClassByName("YogsHeart");
+		Class<? extends Mob> boss1 = MobFactory.mobClassByName(name1);
+		Class<? extends Mob> boss2 = MobFactory.mobClassByName(name2);
 
 		try{
 			fist1 = boss1.newInstance();
