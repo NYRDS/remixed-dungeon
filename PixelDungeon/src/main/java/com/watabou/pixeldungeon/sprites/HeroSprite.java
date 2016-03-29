@@ -21,6 +21,7 @@ import android.graphics.RectF;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -37,7 +38,7 @@ import com.watabou.utils.PointF;
 
 public class HeroSprite extends CharSprite {
 
-	private static final int FRAME_WIDTH = 12;
+	private static final int FRAME_WIDTH  = 12;
 	private static final int FRAME_HEIGHT = 15;
 
 	private static final int RUN_FRAMERATE = 20;
@@ -50,7 +51,7 @@ public class HeroSprite extends CharSprite {
 	private Callback jumpCallback;
 
 	private Hat hat;
-	
+
 	private int lastTier = -1;
 
 	public HeroSprite(Hero hero) {
@@ -60,9 +61,9 @@ public class HeroSprite extends CharSprite {
 
 		texture(HeroClass.spritesheet(hero));
 		updateArmor(hero.tier());
-		
+
 		idle();
-		
+
 		//hat = new Hat.Test(this);
 		//hat.setVisible(true);
 	}

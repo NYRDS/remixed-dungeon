@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.noosa.tweeners.ScaleTweener;
 import com.watabou.pixeldungeon.DungeonTilemap;

@@ -23,6 +23,7 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 import com.watabou.input.Touchscreen.Touch;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
@@ -307,79 +308,79 @@ public class SurfaceScene extends PixelScene {
 	}
 	
 	private static class Pet extends MovieClip implements MovieClip.Listener {
-		
+
 		private Animation idle;
 		private Animation jump;
-		
+
 		public Pet() {
-			super( Assets.PET );
-			
-			TextureFilm frames = new TextureFilm( texture, 16, 16 );
-			
-			idle = new Animation( 2, true );
-			idle.frames( frames, 0, 0, 0, 0, 0, 0, 1 );
-			
-			jump = new Animation( 10, false );
-			jump.frames( frames, 2, 3, 4, 5, 6 );
-			
+			super(Assets.PET);
+
+			TextureFilm frames = new TextureFilm(texture, 16, 16);
+
+			idle = new Animation(2, true);
+			idle.frames(frames, 0, 0, 0, 0, 0, 0, 1);
+
+			jump = new Animation(10, false);
+			jump.frames(frames, 2, 3, 4, 5, 6);
+
 			listener = this;
-			
-			play( idle );
+
+			play(idle);
 		}
-		
+
 		public void jump() {
-			play( jump );
+			play(jump);
 		}
-		
+
 		@Override
-		public void onComplete( Animation anim ) {
+		public void onComplete(Animation anim) {
 			if (anim == jump) {
-				play( idle );
+				play(idle);
 			}
 		}
 	}
-	
+
 	private static class GrassPatch extends Image {
-		
-		public static final int WIDTH	= 16;
-		public static final int HEIGHT	= 14;
-		
+
+		public static final int WIDTH  = 16;
+		public static final int HEIGHT = 14;
+
 		private float tx;
 		private float ty;
-		
-		private double a = Random.Float( 5 );
+
+		private double a = Random.Float(5);
 		private double angle;
-		
+
 		private boolean forward;
-		
-		public GrassPatch( float tx, float ty, boolean forward ) {
-			
-			super( Assets.SURFACE );
-			
-			frame( 88 + Random.Int( 4 ) * WIDTH, 60, WIDTH, HEIGHT );
-			
+
+		public GrassPatch(float tx, float ty, boolean forward) {
+
+			super(Assets.SURFACE);
+
+			frame(88 + Random.Int(4) * WIDTH, 60, WIDTH, HEIGHT);
+
 			this.tx = tx;
 			this.ty = ty;
-			
+
 			this.forward = forward;
 		}
-		
+
 		@Override
 		public void update() {
 			super.update();
-			a += Random.Float( Game.elapsed * 5 );
-			angle = (2 + Math.cos( a )) * (forward ? +0.2 : -0.2);
-			
-			scale.y = (float)Math.cos( angle );
-			
-			x = tx + (float)Math.tan( angle ) * width;
+			a += Random.Float(Game.elapsed * 5);
+			angle = (2 + Math.cos(a)) * (forward ? +0.2 : -0.2);
+
+			scale.y = (float) Math.cos(angle);
+
+			x = tx + (float) Math.tan(angle) * width;
 			y = ty - scale.y * height;
 		}
-		
+
 		@Override
 		protected void updateMatrix() {
 			super.updateMatrix();
-			Matrix.skewX( matrix, (float)(angle / Matrix.G2RAD) );
+			Matrix.skewX(matrix, (float) (angle / Matrix.G2RAD));
 		}
 	}
 }

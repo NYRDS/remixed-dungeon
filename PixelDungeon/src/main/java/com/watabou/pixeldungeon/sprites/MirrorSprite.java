@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;

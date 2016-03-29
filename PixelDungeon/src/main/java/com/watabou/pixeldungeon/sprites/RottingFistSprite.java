@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;

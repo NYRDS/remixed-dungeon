@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.ModdingMode;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
