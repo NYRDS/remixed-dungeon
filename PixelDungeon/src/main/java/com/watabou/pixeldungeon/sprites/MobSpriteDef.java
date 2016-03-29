@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.sprites;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
@@ -19,6 +20,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -54,6 +56,17 @@ public class MobSpriteDef extends MobSprite {
 
 		try {
 			texture(json.getString("texture"));
+
+			if(json.has("layers")) {
+				JSONObject layers = json.getJSONObject("layers");
+
+				Iterator<?> names = layers.keys();
+
+				while( names.hasNext() ) {
+					String key = (String)names.next();
+					addLayer(TextureCache.get(layers.get(key)));
+				}
+			}
 
 			int width = json.getInt("width");
 

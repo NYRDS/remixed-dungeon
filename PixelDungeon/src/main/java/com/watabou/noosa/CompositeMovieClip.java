@@ -1,5 +1,7 @@
 package com.watabou.noosa;
 
+import com.watabou.gltextures.SmartTexture;
+
 import java.util.ArrayList;
 
 /**
@@ -7,14 +9,14 @@ import java.util.ArrayList;
  */
 public class CompositeMovieClip extends MovieClip {
 
-	private ArrayList<Image> mLayers;
+	private ArrayList<SmartTexture> mLayers;
 
 	public CompositeMovieClip() {
 		super();
 	}
 
-	public void addLayer(Image img) {
-		if(mLayers == null) {
+	public void addLayer(SmartTexture img) {
+		if (mLayers == null) {
 			mLayers = new ArrayList<>();
 		}
 		mLayers.add(img);
@@ -41,11 +43,9 @@ public class CompositeMovieClip extends MovieClip {
 		script.drawQuad( verticesBuffer );
 
 		if(mLayers!=null) {
-			for(Image img:mLayers) {
-				img.texture.bind();
-				img.updateVerticesBuffer();
-				script.drawQuad(img.verticesBuffer);
-
+			for(SmartTexture img:mLayers) {
+				img.bind();
+				script.drawQuad( verticesBuffer );
 			}
 		}
 	}

@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Animation;
+import com.watabou.noosa.CompositeMovieClip;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
@@ -44,7 +45,7 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip.Listener {
+public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 	
 	// Color constants for floating text
 	public static final int DEFAULT		= 0xFFFFFF;
