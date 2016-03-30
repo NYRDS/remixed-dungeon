@@ -15,7 +15,7 @@
   <string name="MimicAmulet_Name">мимик</string>
   <string name="MimicAmulet_Gender">masculine</string>
   <string name="MimicAmulet_Name_Objective">мимика</string>
-  <string name="MimicAmulet_Desc">Самый знаменательный момент в твоей приключенческой карьере только-что обернулся очередной ловушкой.</string>
+  <string name="MimicAmulet_Desc">Самый знаменательный момент в твоей приключенческой карьере только что обернулся очередной ловушкой.</string>
   <!--STRINGS OF Nightmare CLASS-->
   <string name="Nightmare_Name">кошмар</string>
   <string name="Nightmare_Gender">masculine</string>
