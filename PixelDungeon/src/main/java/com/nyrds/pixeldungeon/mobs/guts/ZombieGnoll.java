@@ -1,8 +1,14 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 /**
@@ -33,5 +39,27 @@ public class ZombieGnoll extends Mob {
     @Override
     public int dr() {
         return 2;
+    }
+
+    @Override
+    public void die(Object cause) {
+        super.die(cause);
+
+        if (Random.Int(3) == 1){
+            int gnollPosition = this.getPos();
+
+            if (Dungeon.level.cellValid(gnollPosition)) {
+                ZombieGnoll newGnoll = new ZombieGnoll();
+                newGnoll.setPos(gnollPosition);
+                Dungeon.level.spawnMob(newGnoll, 0);
+                //Actor.addDelayed(new Pushing(newGnoll, getPos(), newGnoll.getPos()), -1);
+
+                Sample.INSTANCE.play(Assets.SND_DEATH);
+            }
+        }
+
+        if (Dungeon.hero.lvl <= maxLvl + 2) {
+            dropLoot();
+        }
     }
 }
