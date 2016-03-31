@@ -38,7 +38,7 @@ import java.util.Arrays;
 
 public class FakeLastLevel extends Level {
 
-	private static final int SIZE = 7;
+	private static final int SIZE = 9;
 	
 	{
 		color1 = 0x801500;
@@ -61,14 +61,14 @@ public class FakeLastLevel extends Level {
 	protected boolean build() {
 
 		Arrays.fill( map, Terrain.WALL );
-		Painter.fill( this, 1, 1, SIZE, SIZE, Terrain.WATER );
-		Painter.fill( this, 2, 2, SIZE-2, SIZE-2, Terrain.EMPTY );
+		Painter.fill( this, 2, 2, SIZE-2, SIZE-2, Terrain.WATER );
+		Painter.fill( this, 3, 3, SIZE-4, SIZE-4, Terrain.EMPTY );
 		Painter.fill( this, SIZE/2, SIZE/2, 3, 3, Terrain.EMPTY_SP );
 		
 		entrance = SIZE * getWidth() + SIZE / 2 + 1;
 		map[entrance] = Terrain.ENTRANCE;
 
-		exit = entrance - getWidth() * SIZE;
+		exit = entrance - getWidth() * ( SIZE - 1 );
 		map[exit] = Terrain.LOCKED_EXIT;
 
 		/*secondaryExit = entrance - getWidth() * SIZE + getWidth() * 2;
@@ -137,12 +137,17 @@ public class FakeLastLevel extends Level {
 		case Terrain.STATUE_SP:
 			return Game.getVar(R.string.LastLevel_TileDescStatue);
 		default:
-			return super.tileDesc( tile );
+			return super.tileDesc(tile);
 		}
 	}
 	
 	@Override
 	public void addVisuals( Scene scene ) {
 		HallsLevel.addVisuals( this, scene );
+	}
+
+	@Override
+	public boolean isBossLevel() {
+		return true;
 	}
 }
