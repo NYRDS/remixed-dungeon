@@ -95,7 +95,13 @@ public class GutsLevel extends RegularLevel {
 			}
 		}
 	}
-	
+
+	@Override
+	public int nMobs() {
+		return 8 + Dungeon.depth % 5 + Random.Int( 4 );
+	}
+
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {
