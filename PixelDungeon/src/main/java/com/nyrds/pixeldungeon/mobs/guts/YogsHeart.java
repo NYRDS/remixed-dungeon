@@ -3,7 +3,9 @@ package com.nyrds.pixeldungeon.mobs.guts;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
@@ -23,6 +25,8 @@ public class YogsHeart extends Boss {
 
         EXP = 12;
 
+        IMMUNITIES.add(ToxicGas.class);
+        IMMUNITIES.add(Paralysis.class);
         IMMUNITIES.add(Amok.class);
         IMMUNITIES.add(Sleep.class);
         IMMUNITIES.add(Terror.class);

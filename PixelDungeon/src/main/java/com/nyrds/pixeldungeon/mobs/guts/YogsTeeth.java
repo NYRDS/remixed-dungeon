@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -32,6 +33,7 @@ public class YogsTeeth extends Boss {
 
         RESISTANCES.add(ToxicGas.class);
 
+        IMMUNITIES.add(Paralysis.class);
         IMMUNITIES.add(Amok.class);
         IMMUNITIES.add(Sleep.class);
         IMMUNITIES.add(Terror.class);

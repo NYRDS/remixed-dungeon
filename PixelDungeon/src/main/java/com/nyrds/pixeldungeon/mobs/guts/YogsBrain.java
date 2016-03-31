@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -35,7 +36,9 @@ public class YogsBrain extends Boss {
         EXP = 25;
 
         RESISTANCES.add( LightningTrap.Electricity.class );
+        RESISTANCES.add(ToxicGas.class);
 
+        IMMUNITIES.add(Paralysis.class);
         IMMUNITIES.add(Amok.class);
         IMMUNITIES.add(Sleep.class);
         IMMUNITIES.add(Terror.class);
