@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.items.guts;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -15,7 +17,10 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class PseudoAmulet extends Item {
 
 	public PseudoAmulet() {
+
 		image  = ItemSpriteSheet.AMULET;
+		name = Game.getVar(R.string.Amulet_Name);
+		info = Game.getVar(R.string.Amulet_Info);
 	}
 	
 	@Override
