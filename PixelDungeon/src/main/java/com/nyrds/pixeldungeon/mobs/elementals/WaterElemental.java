@@ -26,7 +26,8 @@ public class WaterElemental extends Mob {
 	
 	private void adjustLevel(int depth) {
 		kind = Math.min(depth/5, 4);
-		
+		if ( kind > 5 ) { kind = 5; }
+
 		hp(ht(depth * 5 + 1));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
