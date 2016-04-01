@@ -54,7 +54,7 @@ public class YogsTeeth extends Boss {
         //Double damage proc
         if (Random.Int(3) == 1){
             enemy.getSprite().bloodBurstA(getSprite().center(), 1000);
-            Sample.INSTANCE.play(Assets.SND_FALLING);
+            Sample.INSTANCE.play(Assets.SND_BITE);
             return damage*2;
         }
         return damage;
