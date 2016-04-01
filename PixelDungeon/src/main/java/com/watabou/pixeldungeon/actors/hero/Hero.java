@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -774,28 +775,21 @@ public class Hero extends Char {
 
 	private boolean actUnlock(HeroAction.Unlock action) {
 		int doorCell = action.dst;
-		if (Dungeon.level.adjacent(getPos(), doorCell)) {
 
+		if (Dungeon.level.adjacent(getPos(), doorCell)) {
 			theKey = null;
 			int door = Dungeon.level.map[doorCell];
 
 			if (door == Terrain.LOCKED_DOOR) {
-
 				theKey = belongings.getKey(IronKey.class, Dungeon.depth);
-
 			} else if (door == Terrain.LOCKED_EXIT) {
-
 				theKey = belongings.getKey(SkeletonKey.class, Dungeon.depth);
-
 			}
 
 			if (theKey != null) {
-
 				spend(Key.TIME_TO_UNLOCK);
 				getSprite().operate(doorCell);
-
 				Sample.INSTANCE.play(Assets.SND_UNLOCK);
-
 			} else {
 				GLog.w(TXT_LOCKED_DOOR);
 				ready();
@@ -804,9 +798,7 @@ public class Hero extends Char {
 			return false;
 
 		} else if (getCloser(doorCell)) {
-
 			return true;
-
 		} else {
 			ready();
 			return false;
@@ -1497,7 +1489,16 @@ public class Hero extends Char {
 			int doorCell = ((HeroAction.Unlock) curAction).dst;
 			int door = Dungeon.level.map[doorCell];
 
-			Dungeon.level.set(doorCell, door == Terrain.LOCKED_DOOR ? Terrain.DOOR : Terrain.UNLOCKED_EXIT);
+			switch (door) {
+				case Terrain.LOCKED_DOOR:
+					Dungeon.level.set(doorCell,Terrain.DOOR);
+					break;
+				case Terrain.LOCKED_EXIT:
+					Dungeon.level.set(doorCell,Terrain.UNLOCKED_EXIT);
+					break;
+				default:
+					EventCollector.logException(new Exception("trying to unlock tile:"+door));
+			}
 			GameScene.updateMap(doorCell);
 
 		} else if (curAction instanceof HeroAction.OpenChest) {

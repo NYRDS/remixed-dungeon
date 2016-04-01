@@ -19,6 +19,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -35,6 +36,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
@@ -113,6 +115,7 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfIdentify());
 			hero.collect(new ScrollOfDomination());
+			hero.collect(new ScrollOfMirrorImage());
 			hero.collect(new PotionOfLiquidFlame());
 			hero.collect(new PotionOfToxicGas());
 			hero.collect(new Ankh());

@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -16,6 +17,8 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
@@ -30,13 +33,13 @@ public class GutsLevel extends RegularLevel {
 	}
 
 	@Override
-	public String tilesTex() {
-		return Assets.TILES_CAVES;
+	public String tilesTexEx() {
+		return Assets.TILES_GUTS;
 	}
 
 	@Override
 	public String waterTex() {
-		return Assets.WATER_CAVES;
+		return Assets.WATER_GUTS;
 	}
 
 	protected boolean[] water() {
@@ -48,88 +51,42 @@ public class GutsLevel extends RegularLevel {
 	}
 
 	@Override
-	protected void assignRoomType() {
-		super.assignRoomType();
-
-		Blacksmith.Quest.spawn( rooms );
-	}
-
-	@Override
 	protected void decorate() {
 
-		for (Room room : rooms) {
-			if (room.type != Type.STANDARD) {
-				continue;
-			}
+		for (int i=0; i < getWidth(); i++) {
+			if (map[i] == Terrain.WALL &&
+					map[i + getWidth()] == Terrain.WATER &&
+					Random.Int( 4 ) == 0) {
 
-			if (room.width() <= 3 || room.height() <= 3) {
-				continue;
-			}
-
-			int s = room.square();
-
-			if (Random.Int( s ) > 8) {
-				int corner = (room.left + 1) + (room.top + 1) * getWidth();
-				if (map[corner - 1] == Terrain.WALL && map[corner - getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
-				}
-			}
-
-			if (Random.Int( s ) > 8) {
-				int corner = (room.right - 1) + (room.top + 1) * getWidth();
-				if (map[corner + 1] == Terrain.WALL && map[corner - getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
-				}
-			}
-
-			if (Random.Int( s ) > 8) {
-				int corner = (room.left + 1) + (room.bottom - 1) * getWidth();
-				if (map[corner - 1] == Terrain.WALL && map[corner + getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
-				}
-			}
-
-			if (Random.Int( s ) > 8) {
-				int corner = (room.right - 1) + (room.bottom - 1) * getWidth();
-				if (map[corner + 1] == Terrain.WALL && map[corner + getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
-				}
-			}
-
-			for (Room n : room.connected.keySet()) {
-				if ((n.type == Type.STANDARD || n.type == Type.TUNNEL) && Random.Int( 3 ) == 0) {
-					Painter.set( this, room.connected.get( n ), Terrain.EMPTY_DECO );
-				}
+				map[i] = Terrain.WALL_DECO;
 			}
 		}
-		
-		for (int i=getWidth() + 1; i < getLength() - getWidth(); i++) {
+
+		for (int i=getWidth(); i < getLength() - getWidth(); i++) {
+			if (map[i] == Terrain.WALL &&
+					map[i - getWidth()] == Terrain.WALL &&
+					map[i + getWidth()] == Terrain.WATER &&
+					Random.Int( 2 ) == 0) {
+
+				map[i] = Terrain.WALL_DECO;
+			}
+		}
+
+		for (int i=getWidth() + 1; i < getLength() - getWidth() - 1; i++) {
 			if (map[i] == Terrain.EMPTY) {
-				int n = 0;
-				if (map[i+1] == Terrain.WALL) {
-					n++;
-				}
-				if (map[i-1] == Terrain.WALL) {
-					n++;
-				}
-				if (map[i+getWidth()] == Terrain.WALL) {
-					n++;
-				}
-				if (map[i-getWidth()] == Terrain.WALL) {
-					n++;
-				}
-				if (Random.Int( 6 ) <= n) {
+
+				int count =
+						(map[i + 1] == Terrain.WALL ? 1 : 0) +
+								(map[i - 1] == Terrain.WALL ? 1 : 0) +
+								(map[i + getWidth()] == Terrain.WALL ? 1 : 0) +
+								(map[i - getWidth()] == Terrain.WALL ? 1 : 0);
+
+				if (Random.Int( 16 ) < count * count) {
 					map[i] = Terrain.EMPTY_DECO;
 				}
 			}
 		}
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WALL && Random.Int( 12 ) == 0) {
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
-		
+
 		while (true) {
 			int pos = roomEntrance.random(this);
 			if (pos != entrance) {
@@ -137,36 +94,14 @@ public class GutsLevel extends RegularLevel {
 				break;
 			}
 		}
-		
-		for (Room r : rooms) {
-			if (r.type == Type.STANDARD) {
-				for (Room n : r.neigbours) {
-					if (n.type == Type.STANDARD && !r.connected.containsKey( n )/* && Random.Int( 2 ) == 0*/) {
-						Rect w = r.intersect( n );
-						if (w.left == w.right && w.bottom - w.top >= 5) {
-							
-							w.top += 2;
-							w.bottom -= 1;
-							
-							w.right++;
-							
-							Painter.fill( this, w.left, w.top, 1, w.height(), Terrain.CHASM );
-							
-						} else if (w.top == w.bottom && w.right - w.left >= 5) {
-							
-							w.left += 2;
-							w.right -= 1;
-							
-							w.bottom++;
-							
-							Painter.fill( this, w.left, w.top, w.width(), 1, Terrain.CHASM );
-						}
-					}
-				}
-			}
-		}
 	}
-	
+
+	@Override
+	public int nMobs() {
+		return 8 + Dungeon.depth % 5 + Random.Int( 4 );
+	}
+
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {
@@ -198,72 +133,82 @@ public class GutsLevel extends RegularLevel {
 			return super.tileDesc( tile );
 		}
 	}
-	
+
 	@Override
 	public void addVisuals( Scene scene ) {
 		super.addVisuals( scene );
 		addVisuals( this, scene );
 	}
-	
+
 	public static void addVisuals( Level level, Scene scene ) {
 		for (int i=0; i < level.getLength(); i++) {
 			if (level.map[i] == Terrain.WALL_DECO) {
-				scene.add( new Vein( i ) );
+				scene.add( new Sink( i ) );
 			}
 		}
 	}
-	
-	private static class Vein extends Group {
-		
+
+	private static class Sink extends Emitter {
+
+
 		private int pos;
-		
-		private float delay;
-		
-		public Vein( int pos ) {
+		private float rippleDelay = 0;
+
+		private static final Emitter.Factory factory = new Factory() {
+
+			@Override
+			public void emit( Emitter emitter, int index, float x, float y ) {
+				WaterParticle p = (WaterParticle)emitter.recycle( WaterParticle.class );
+				p.reset( x, y );
+			}
+		};
+
+		public Sink( int pos ) {
 			super();
-			
+
 			this.pos = pos;
-			
-			delay = Random.Float( 2 );
+
+			PointF p = DungeonTilemap.tileCenterToWorld( pos );
+			pos( p.x - 2, p.y + 1, 4, 0 );
+
+			pour( factory, 0.02f );
 		}
-		
+
 		@Override
 		public void update() {
-			
 			if (setVisible(Dungeon.visible[pos])) {
-				
+
 				super.update();
-				
-				if ((delay -= Game.elapsed) <= 0) {
-					
-					delay = Random.Float();
-					
-					PointF p = DungeonTilemap.tileToWorld( pos );
-					((Sparkle)recycle( Sparkle.class )).reset( 
-						p.x + Random.Float( DungeonTilemap.SIZE ), 
-						p.y + Random.Float( DungeonTilemap.SIZE ) );
+
+				if ((rippleDelay -= Game.elapsed) <= 0) {
+					GameScene.ripple(pos + Dungeon.level.getWidth()).y -= DungeonTilemap.SIZE / 2;
+					rippleDelay = Random.Float( 0.2f, 0.3f );
 				}
 			}
 		}
 	}
-	
-	public static final class Sparkle extends PixelParticle {
-		
+
+	public static final class WaterParticle extends PixelParticle {
+
+		public WaterParticle() {
+			super();
+
+			acc.y = 50;
+			am = 0.5f;
+
+			color( ColorMath.random( 0xe6e600, 0x9fe05d ) );
+			size( 2 );
+		}
+
 		public void reset( float x, float y ) {
 			revive();
-			
+
 			this.x = x;
 			this.y = y;
-			
+
+			speed.set( Random.Float( -2, +2 ), 0 );
+
 			left = lifespan = 0.5f;
-		}
-		
-		@Override
-		public void update() {
-			super.update();
-			
-			float p = left / lifespan;
-			size( (am = p < 0.5f ? p * 2 : (1 - p) * 2) * 2 );
 		}
 	}
 }

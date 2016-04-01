@@ -48,15 +48,13 @@
       "24":{"Succubus":1,"Eye":2,"Scorpio":3}
    },
    "HallsBossLevel":{
-      "any":{"Yog":1}
+      "any":{"Yog":1,"YogsBrain":1,"YogsEye":1,"YogsHeart":1,"YogsTeeth":1}
    },
    "GutsLevel":{
-      "26":{"GnollZombie":2,"Worm":0.3,"Succubus":0.02},
-      "27":{"GnollZombie":1,"Worm":1,"Eye":1},
-      "28":{"GnollZombie":1,"Worm":2,"Elemental":0.02},
-	  "29":{"GnollZombie":1,"Worm":2}
-   },
-   "GutsBossLevel":{
-      "any":{"YogsBrain":1,"YogsEye":1,"YogsHeart":1,"YogsTeeth":1}
+      "26":{"ZombieGnoll":2,"Worm":0.3,"Succubus":0.02},
+      "27":{"ZombieGnoll":1,"Worm":1,"Eye":1},
+      "28":{"ZombieGnoll":1,"Worm":2,"Elemental":0.02},
+	  "29":{"ZombieGnoll":1,"Worm":2},
+      "30":{"ZombieGnoll":1,"Worm":2}
    }
 }

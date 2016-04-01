@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -72,16 +73,37 @@ public class Yog extends Boss {
 	}
 
 	public void spawnFists() {
-		RottingFist fist1 = new RottingFist();
-		BurningFist fist2 = new BurningFist();
+        String [] secondaryBossArray = {"RottingFist", "BurningFist", "YogsBrain", "YogsHeart", "YogsTeeth"};
+		String name1, name2, name3;
+		Mob fist1, fist2, fist3;
+
+		do{
+			name1 = new Random().element(secondaryBossArray);
+			name2 = new Random().element(secondaryBossArray);
+			name3 = new Random().element(secondaryBossArray);
+		} while (name1 == name2 || name2 == name3 || name1 == name3);
+
+		Class<? extends Mob> boss1 = MobFactory.mobClassByName(name1);
+		Class<? extends Mob> boss2 = MobFactory.mobClassByName(name2);
+		Class<? extends Mob> boss3 = MobFactory.mobClassByName(name3);
+
+		try{
+			fist1 = boss1.newInstance();
+			fist2 = boss2.newInstance();
+			fist3 = boss3.newInstance();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
 
 		do {
 			fist1.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
 			fist2.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
-		} while (!Dungeon.level.passable[fist1.getPos()] || !Dungeon.level.passable[fist2.getPos()] || fist1.getPos() == fist2.getPos());
+			fist3.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
+		} while (!Dungeon.level.passable[fist1.getPos()] || !Dungeon.level.passable[fist2.getPos()] || !Dungeon.level.passable[fist3.getPos()] || fist1.getPos() == fist2.getPos() || fist2.getPos() == fist3.getPos() || fist1.getPos() == fist3.getPos());
 
 		Dungeon.level.spawnMob(fist1);
 		Dungeon.level.spawnMob(fist2);
+		Dungeon.level.spawnMob(fist3);
 	}
 
 	@Override
@@ -313,7 +335,7 @@ public class Yog extends Boss {
 		{
 			spriteClass = LarvaSprite.class;
 
-			hp(ht(25));
+			hp(ht(50));
 			defenseSkill = 20;
 
 			EXP = 0;

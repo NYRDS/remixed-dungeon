@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.TenguSprite;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Tengu extends Boss {
@@ -170,6 +171,10 @@ public class Tengu extends Boss {
 	@Override
 	public void notice() {
 		super.notice();
-		yell(String.format(Game.getVar(R.string.Tengu_Info2), Dungeon.hero.heroClass.title()));
+		String tenguYell = Game.getVar(R.string.Tengu_Info2);
+		if (Dungeon.hero.heroClass.getGender() == Utils.FEMININE) {
+			tenguYell = Game.getVar(R.string.Tengu_Info3);
+		}
+		yell(String.format(tenguYell, Dungeon.hero.heroClass.title()));
 	}	
 }

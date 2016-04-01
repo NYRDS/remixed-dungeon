@@ -15,21 +15,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.watabou.pixeldungeon.levels;
+package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.mobs.Mimic;
+import com.watabou.pixeldungeon.actors.mobs.MimicPie;
+import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.levels.HallsLevel;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
 
 import java.util.Arrays;
 
-public class LastLevel extends Level {
+public class FakeLastLevel extends Level {
 
-	private static final int SIZE = 7;
+	private static final int SIZE = 9;
 	
 	{
 		color1 = 0x801500;
@@ -52,15 +61,18 @@ public class LastLevel extends Level {
 	protected boolean build() {
 
 		Arrays.fill( map, Terrain.WALL );
-		Painter.fill( this, 1, 1, SIZE, SIZE, Terrain.WATER );
-		Painter.fill( this, 2, 2, SIZE-2, SIZE-2, Terrain.EMPTY );
+		Painter.fill( this, 2, 2, SIZE-2, SIZE-2, Terrain.WATER );
+		Painter.fill( this, 3, 3, SIZE-4, SIZE-4, Terrain.EMPTY );
 		Painter.fill( this, SIZE/2, SIZE/2, 3, 3, Terrain.EMPTY_SP );
 		
 		entrance = SIZE * getWidth() + SIZE / 2 + 1;
 		map[entrance] = Terrain.ENTRANCE;
 
-		exit = entrance - getWidth() * SIZE;
+		exit = entrance - getWidth() * ( SIZE - 1 );
 		map[exit] = Terrain.LOCKED_EXIT;
+
+		/*secondaryExit = entrance - getWidth() * SIZE + getWidth() * 2;
+		map[secondaryExit] = Terrain.EXIT;*/
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 		map[pedestal] = Terrain.PEDESTAL;
@@ -82,11 +94,16 @@ public class LastLevel extends Level {
 
 	@Override
 	protected void createMobs() {
+		/*MimicAmulet mimic = new MimicAmulet();
+		mimic.setPos(pedestal);
+		mimic.adjustStats(25);
+		mobs.add(mimic);
+		mimic.getSprite().turnTo(pedestal, Dungeon.hero.getPos());*/
 	}
 
 	@Override
 	protected void createItems() {
-		drop( new Amulet(), pedestal );
+		drop( new PseudoAmulet(), pedestal );
 	}
 	
 	@Override
@@ -120,12 +137,17 @@ public class LastLevel extends Level {
 		case Terrain.STATUE_SP:
 			return Game.getVar(R.string.LastLevel_TileDescStatue);
 		default:
-			return super.tileDesc( tile );
+			return super.tileDesc(tile);
 		}
 	}
 	
 	@Override
 	public void addVisuals( Scene scene ) {
 		HallsLevel.addVisuals( this, scene );
+	}
+
+	@Override
+	public boolean isBossLevel() {
+		return true;
 	}
 }
