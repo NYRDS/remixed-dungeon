@@ -26,6 +26,9 @@
     <string name="Nightmare_Name_Objective">nightmare</string>
     <string name="Nightmare_Desc">Grotesque creature made of twitching flesh tentacles. The Nightmares is a very manifestation of the Old God\'s sinister thoughts.</string>
 
+    <!-- STRINGS OF TENGU CLASS -->
+    <string name="Tengu_Info3">Gotcha, %s!</string>
+
     <!-- STRINGS OF ZombieGnoll CLASS -->
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Gender">masculine</string>
