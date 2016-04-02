@@ -35,6 +35,16 @@ public class CompositeMovieClip extends MovieClip {
 		mLayers.add(layerDesc);
 	}
 
+	public void setLayerTexture(String id, SmartTexture img) {
+		if (mLayers != null) {
+			for (LayerDesc layer : mLayers) {
+				if (layer.id.equals(id)) {
+					layer.texture = img;
+				}
+			}
+		}
+	}
+
 	public void setLayerState(String id, boolean state) {
 		if (mLayers != null) {
 			for (LayerDesc layer : mLayers) {
