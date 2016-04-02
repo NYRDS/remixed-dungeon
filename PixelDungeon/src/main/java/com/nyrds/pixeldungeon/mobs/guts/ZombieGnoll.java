@@ -54,7 +54,6 @@ public class ZombieGnoll extends Mob {
                 ZombieGnoll newGnoll = new ZombieGnoll();
                 newGnoll.setPos(gnollPosition);
                 Dungeon.level.spawnMob(newGnoll, 0);
-                //Actor.addDelayed(new Pushing(newGnoll, getPos(), newGnoll.getPos()), -1);
                 CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);
                 Sample.INSTANCE.play(Assets.SND_DEATH);
             }
