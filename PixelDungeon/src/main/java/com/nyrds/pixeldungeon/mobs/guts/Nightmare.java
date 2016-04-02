@@ -19,7 +19,6 @@ public class Nightmare extends Mob {
         EXP = 0;
     }
 
-
     @Override
     public int attackProc( Char enemy, int damage ) {
         //Roots proc
