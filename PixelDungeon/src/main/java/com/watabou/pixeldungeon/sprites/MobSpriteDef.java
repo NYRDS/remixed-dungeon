@@ -20,7 +20,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -58,13 +57,11 @@ public class MobSpriteDef extends MobSprite {
 			texture(json.getString("texture"));
 
 			if(json.has("layers")) {
-				JSONObject layers = json.getJSONObject("layers");
+				JSONArray layers = json.getJSONArray("layers");
 
-				Iterator<?> names = layers.keys();
-
-				while( names.hasNext() ) {
-					String key = (String)names.next();
-					addLayer(TextureCache.get(layers.get(key)));
+				for(int i=0;i<layers.length();++i) {
+					JSONObject layer = layers.getJSONObject(i);
+					addLayer(layer.getString("id"),TextureCache.get(layer.get("texture")));
 				}
 			}
 
