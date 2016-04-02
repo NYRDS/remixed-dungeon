@@ -46,7 +46,6 @@ import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.EmoIcon;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.FloatingText;
-import com.watabou.pixeldungeon.effects.Hat;
 import com.watabou.pixeldungeon.effects.Ripple;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
@@ -113,7 +112,6 @@ public class GameScene extends PixelScene {
 	private Group spells;
 	private Group statuses;
 	private Group emoicons;
-	private Group hats;
 
 	private Toolbar toolbar;
 	private Toast   prompt;
@@ -167,7 +165,6 @@ public class GameScene extends PixelScene {
 		emitters = new Group();
 		effects = new Group();
 		emoicons = new Group();
-		hats = new Group();
 
 		mobs = new Group();
 		add(mobs);
@@ -220,7 +217,6 @@ public class GameScene extends PixelScene {
 		add(statuses);
 
 		add(emoicons);
-		add(hats);
 
 		add(new HealthIndicator());
 
@@ -506,10 +502,6 @@ public class GameScene extends PixelScene {
 
 	public static void add(EmoIcon icon) {
 		scene.emoicons.add(icon);
-	}
-
-	public static void add(Hat hat) {
-		scene.hats.add(hat);
 	}
 
 	public static void effect(Visual effect) {
