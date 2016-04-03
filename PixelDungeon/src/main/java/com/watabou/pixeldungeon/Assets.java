@@ -128,6 +128,8 @@ public class Assets {
 	public static final String TILES_CAVES = "tiles2.png";
 	public static final String TILES_CITY = "tiles3.png";
 	public static final String TILES_HALLS = "tiles4.png";
+	public static final String TILES_SHADOW_LORD = "tiles_shadow_lord.png";
+	public static final String TILES_GUTS = "tiles_guts_x.png";
 
 	public static final String WATER_SEWERS = "water0.png";
 	public static final String WATER_PRISON = "water1.png";
@@ -135,6 +137,7 @@ public class Assets {
 	public static final String WATER_CITY = "water3.png";
 	public static final String WATER_HALLS = "water4.png";
 	public static final String WATER_SPIDERS = "water_spider_nest.png";
+	public static final String WATER_GUTS = "water_guts.png";
 
 	public static final String BUFFS_SMALL = "buffs.png";
 	public static final String BUFFS_LARGE = "large_buffs.png";
@@ -195,6 +198,7 @@ public class Assets {
 	public static final String SND_SECRET = "snd_secret.mp3";
 	public static final String SND_BONES = "snd_bones.mp3";
 	public static final String SND_MIMIC = "snd_mimic.mp3";
+	public static final String SND_BITE = "snd_bite.mp3";
 	
 	public static final String SND_DOMINANCE = "snd_dominance.mp3";
 	public static final String SND_ROTTEN_DROP = "snd_rotten_drop.mp3";

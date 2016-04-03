@@ -3,51 +3,52 @@ package com.nyrds.pixeldungeon.mobs.guts;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class Worm extends Mob {
+public class Nightmare extends Mob {
+
     {
-        hp(ht(95));
-        defenseSkill = 15;
+        hp(ht(80));
+        defenseSkill = 24;
 
-        EXP = 18;
-
-        loot = Gold.class;
-        lootChance = 0.4f;
+        EXP = 0;
     }
 
     @Override
     public int attackProc( Char enemy, int damage ) {
         //Roots proc
-        if (Random.Int(7) == 1){
+        if (Random.Int(10) == 1){
             Buff.affect(enemy, Roots.class);
         }
-        //Poison proc
-        if (Random.Int(5) == 1){
-            Buff.affect(enemy, Poison.class);
+        //Paralysis proc
+        if (Random.Int(10) == 1){
+            Buff.affect(enemy, Paralysis.class);
         }
         return damage;
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(12, 25);
+        return Random.NormalIntRange(20, 25);
     }
 
     @Override
-    public int attackSkill( Char target ) {
-        return 20;
-    }
+    public int attackSkill( Char target ) { return 26; }
 
     @Override
-    public int dr() {
-        return 50;
+    public int dr() { return 10; }
+
+    @Override
+    protected boolean act(){
+        super.act();
+
+        state = HUNTING;
+
+        return true;
     }
 }

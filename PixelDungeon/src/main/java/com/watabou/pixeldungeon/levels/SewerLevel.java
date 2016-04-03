@@ -162,9 +162,9 @@ public class SewerLevel extends RegularLevel {
 			return super.tileDesc( tile );
 		}
 	}
-	
+
 	private static class Sink extends Emitter {
-		
+
 		private int pos;
 		private float rippleDelay = 0;
 		

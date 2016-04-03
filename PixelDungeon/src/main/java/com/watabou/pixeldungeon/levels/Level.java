@@ -392,13 +392,13 @@ public abstract class Level implements Bundlable {
 	}
 
 	public String tilesTex() {
-		return null;
+		return Assets.TILES_SEWERS;
 	}
 
 	public String tilesTexEx() {
 		return null;
 	}
-	
+
 	public String waterTex() {
 		return null;
 	}
@@ -1324,5 +1324,9 @@ public abstract class Level implements Bundlable {
 		}
 
 		return blob.cur[cell];
+	}
+
+	public Mob getRandomMob() {
+		return Random.element(mobs);
 	}
 }

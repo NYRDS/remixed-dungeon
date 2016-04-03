@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
@@ -37,6 +38,7 @@ public class DungeonGenerator {
 	public static final String PRISON_LEVEL   = "PrisonLevel";
 	public static final String SEWER_LEVEL    = "SewerLevel";
 	public static final String SPIDER_LEVEL   = "SpiderLevel";
+	public static final String GUTS_LEVEL     = "GutsLevel";
 
 	static JSONObject mDungeonMap;
 	static JSONObject mLevels;
@@ -83,6 +85,7 @@ public class DungeonGenerator {
 		registerLevelClass(PredesignedLevel.class);
 		registerLevelClass(GutsLevel.class);
 		registerLevelClass(ShadowLordLevel.class);
+		registerLevelClass(FakeLastLevel.class);
 	}
 
 	public static String getEntryLevelKind() {
@@ -210,6 +213,7 @@ public class DungeonGenerator {
 			mStoryMap.put(CAVES_LEVEL, WndStory.ID_CAVES);
 			mStoryMap.put(CITY_LEVEL, WndStory.ID_METROPOLIS);
 			mStoryMap.put(HALLS_LEVEL, WndStory.ID_HALLS);
+			mStoryMap.put(GUTS_LEVEL, WndStory.ID_GUTS);
 		}
 
 		Integer id = mStoryMap.get(level.levelKind());

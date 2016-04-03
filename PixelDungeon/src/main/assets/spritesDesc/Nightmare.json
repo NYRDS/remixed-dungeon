@@ -1,27 +1,28 @@
 {
-   "texture" = "mobs/worm.png",
+   "texture" = "mobs/nightmare.png",
    "width" = 16,
-   "height" = 16,
+   "height" = 18,
    "idle" = {
       "fps" = 3,
       "looped" = true,
-      "frames" = [4,5,5,5,4,5,5,6,5,4,3,1,0,2,3]
+      "frames" = [0, 1, 0, 0, 1]
    },
    "run" = {
       "fps" = 5,
       "looped" = true,
-      "frames" = [5,6,7,8]
+      "frames" = [2, 3, 4, 3]
    },
    "attack" = {
-      "fps" = 4,
+      "fps" = 12,
       "looped" = false,
-      "frames" = [9,10]
+      "frames" = [5, 5, 6, 7, 8, 5, 5]
    },
    "die" = {
-      "fps" = 4f,
+      "fps" = 7,
       "looped" = false,
-      "frames" = [11,12,13]
+      "frames" = [9, 9, 9, 10, 11]
    }
+
 }
 
 
