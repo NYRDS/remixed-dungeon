@@ -5,7 +5,7 @@
       {"id" = "head",      "texture" = "hero/head.png"},
       {"id" = "shield",    "texture" = "hero/no_shield.png"},
       {"id" = "weapon",    "texture" = "hero/no_weapon.png"}
-  },
+  ],
   
   "width"  = 16, 
   "height" = 15,
