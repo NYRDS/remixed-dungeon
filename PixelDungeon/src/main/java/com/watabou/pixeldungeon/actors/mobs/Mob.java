@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -336,6 +337,11 @@ public abstract class Mob extends Char {
 	@Override
 	public void add(Buff buff) {
 		super.add(buff);
+
+		if (!GameScene.isSceneReady()) {
+			return;
+		}
+
 		if (buff instanceof Amok) {
 			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
 			state = HUNTING;

@@ -1,6 +1,10 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -10,13 +14,26 @@ import com.watabou.utils.Random;
  */
 public class Worm extends Mob {
     {
-        hp(ht(45));
+        hp(ht(95));
         defenseSkill = 15;
 
         EXP = 18;
 
         loot = Gold.class;
-        lootChance = 0.5f;
+        lootChance = 0.4f;
+    }
+
+    @Override
+    public int attackProc( Char enemy, int damage ) {
+        //Roots proc
+        if (Random.Int(7) == 1){
+            Buff.affect(enemy, Roots.class);
+        }
+        //Poison proc
+        if (Random.Int(5) == 1){
+            Buff.affect(enemy, Poison.class);
+        }
+        return damage;
     }
 
     @Override
