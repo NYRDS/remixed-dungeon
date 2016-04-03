@@ -1,0 +1,16 @@
+{
+  "texture" = "hero/base.png",
+  "layers" = [
+      {"id" = "armor",     "texture" = "hero/no_armor.png"},
+      {"id" = "head",      "texture" = "hero/head.png"},
+      {"id" = "shield",    "texture" = "hero/no_shield.png"},
+      {"id" = "weapon",    "texture" = "hero/no_weapon.png"}
+  },
+  
+  "width"  = 16, 
+  "height" = 15,
+  "idle"   = { "fps" = 2,  "looped" = true,     "frames" = [0,0,0,1] },
+  "run"    = { "fps" = 14, "looped" = true,     "frames" = [6,7,8,9,10] },
+  "attack" = { "fps" = 11, "looped" = false,    "frames" = [2,3,4,5,0] }, 
+  "die"    = { "fps" = 11, "looped" = false,    "frames" = [11,12,13,14] }
+}
