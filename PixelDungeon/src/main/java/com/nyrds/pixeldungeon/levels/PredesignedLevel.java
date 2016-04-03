@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -22,7 +23,7 @@ public class PredesignedLevel extends CommonLevel {
 		mLevelDesc = JsonHelper.readFile(fileName);
 
 		if (mLevelDesc == null) {
-			throw new RuntimeException(String.format("Malformed level [%s] description", fileName));
+			throw new TrackedRuntimeException(String.format("Malformed level [%s] description", fileName));
 		}
 
 	}
@@ -57,8 +58,12 @@ public class PredesignedLevel extends CommonLevel {
 			JSONArray entranceDesc = mLevelDesc.getJSONArray("entrance");
 
 			entrance = cell(entranceDesc.getInt(0), entranceDesc.getInt(1));
+
+			JSONArray exitDesc = mLevelDesc.getJSONArray("exit");
+			exit = cell(exitDesc.getInt(0), exitDesc.getInt(1));
+
 		} catch (JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 		buildFlagMaps();
 		cleanWalls();
@@ -95,11 +100,11 @@ public class PredesignedLevel extends CommonLevel {
 				}
 			}
 		} catch (JSONException e) {
-			throw new RuntimeException("bad mob description", e);
+			throw new TrackedRuntimeException("bad mob description", e);
 		} catch (InstantiationException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		} catch (IllegalAccessException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -125,11 +130,11 @@ public class PredesignedLevel extends CommonLevel {
 				}
 			}
 		} catch (JSONException e) {
-			throw new RuntimeException("bad items description", e);
+			throw new TrackedRuntimeException("bad items description", e);
 		} catch (InstantiationException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		} catch (IllegalAccessException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
