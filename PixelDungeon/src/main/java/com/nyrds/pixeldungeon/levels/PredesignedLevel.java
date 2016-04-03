@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.CommonLevel;
+import com.watabou.utils.Bundle;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,16 +15,31 @@ import org.json.JSONObject;
 
 public class PredesignedLevel extends CommonLevel {
 
-	JSONObject mLevelDesc;
+	private JSONObject mLevelDesc;
+	private String     mDescFile;
 
-	public PredesignedLevel(String fileName) {
+	private final String descFileKey = "descFile";
+
+	{
 		color1 = 0x48763c;
 		color2 = 0x59994a;
+	}
 
-		mLevelDesc = JsonHelper.readFile(fileName);
+	//for restoreFromBundle
+	public PredesignedLevel() {
+		super();
+	}
+
+	public PredesignedLevel(String fileName) {
+		mDescFile = fileName;
+		readDescFile(mDescFile);
+	}
+
+	private void readDescFile(String descFile) {
+		mLevelDesc = JsonHelper.readFile(descFile);
 
 		if (mLevelDesc == null) {
-			throw new TrackedRuntimeException(String.format("Malformed level [%s] description", fileName));
+			throw new TrackedRuntimeException(String.format("Malformed level [%s] description", descFile));
 		}
 	}
 
@@ -72,6 +88,7 @@ public class PredesignedLevel extends CommonLevel {
 
 	@Override
 	protected boolean build() {
+
 		return true;
 	}
 
@@ -85,15 +102,15 @@ public class PredesignedLevel extends CommonLevel {
 			if (mLevelDesc.has("mobs")) {
 				JSONArray mobsDesc = mLevelDesc.getJSONArray("mobs");
 
-				for(int i=0;i<mobsDesc.length();++i) {
+				for (int i = 0; i < mobsDesc.length(); ++i) {
 					JSONObject mobDesc = mobsDesc.optJSONObject(i);
 					int x = mobDesc.getInt("x");
 					int y = mobDesc.getInt("y");
 
-					if(cellValid(x,y)) {
+					if (cellValid(x, y)) {
 						String kind = mobDesc.getString("kind");
 						Mob mob = MobFactory.mobClassByName(kind).newInstance();
-						mob.setPos(cell(x,y));
+						mob.setPos(cell(x, y));
 						spawnMob(mob);
 					}
 				}
@@ -111,15 +128,15 @@ public class PredesignedLevel extends CommonLevel {
 			if (mLevelDesc.has("items")) {
 				JSONArray itemsDesc = mLevelDesc.getJSONArray("items");
 
-				for(int i=0;i<itemsDesc.length();++i) {
+				for (int i = 0; i < itemsDesc.length(); ++i) {
 					JSONObject itemDesc = itemsDesc.optJSONObject(i);
 					int x = itemDesc.getInt("x");
 					int y = itemDesc.getInt("y");
 
-					if(cellValid(x,y)) {
+					if (cellValid(x, y)) {
 						String kind = itemDesc.getString("kind");
 						Item item = ItemFactory.itemsClassByName(kind).newInstance();
-						if(itemDesc.has("quantity")) {
+						if (itemDesc.has("quantity")) {
 							item.quantity(itemDesc.getInt("quantity"));
 						}
 						drop(item, cell(x, y));
@@ -138,4 +155,16 @@ public class PredesignedLevel extends CommonLevel {
 		return 0;
 	}
 
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(descFileKey, mDescFile);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		mDescFile = bundle.getString(descFileKey);
+		readDescFile(mDescFile);
+	}
 }
