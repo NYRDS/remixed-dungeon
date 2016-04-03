@@ -25,7 +25,6 @@ public class PredesignedLevel extends CommonLevel {
 		if (mLevelDesc == null) {
 			throw new TrackedRuntimeException(String.format("Malformed level [%s] description", fileName));
 		}
-
 	}
 
 	@Override
@@ -101,9 +100,7 @@ public class PredesignedLevel extends CommonLevel {
 			}
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException("bad mob description", e);
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException(e);
-		} catch (IllegalAccessException e) {
+		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
 	}
@@ -131,9 +128,7 @@ public class PredesignedLevel extends CommonLevel {
 			}
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException("bad items description", e);
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException(e);
-		} catch (IllegalAccessException e) {
+		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
 	}
