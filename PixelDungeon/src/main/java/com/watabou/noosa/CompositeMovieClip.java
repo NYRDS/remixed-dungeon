@@ -13,7 +13,7 @@ public class CompositeMovieClip extends MovieClip {
 
 	private class LayerDesc {
 		String id;
-		boolean enabled = false;
+		boolean enabled = true;
 		SmartTexture texture;
 
 		LayerDesc(String _id, SmartTexture _tex) {
