@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
@@ -92,7 +93,7 @@ public class Yog extends Boss {
 			fist2 = boss2.newInstance();
 			fist3 = boss3.newInstance();
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 
 		do {

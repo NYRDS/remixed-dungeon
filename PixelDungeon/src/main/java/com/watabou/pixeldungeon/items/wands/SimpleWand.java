@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.utils.Random;
 
 public abstract class SimpleWand extends Wand {
@@ -19,7 +20,7 @@ public abstract class SimpleWand extends Wand {
 		try {
 			return (SimpleWand) Random.element(variants).newInstance();
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 	

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -213,10 +214,8 @@ public class Item implements Bundlable {
 					Item detached = getClass().newInstance();
 					detached.onDetach();
 					return detached;
-				} catch (InstantiationException e) {
-					throw new RuntimeException(e);
-				} catch (IllegalAccessException e) {
-					throw new RuntimeException(e);
+				} catch (Exception e) {
+					throw new TrackedRuntimeException(e);
 				}
 			}
 		}
@@ -512,7 +511,7 @@ public class Item implements Bundlable {
 			result.quantity(quantity());
 			return result;
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 

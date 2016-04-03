@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -120,7 +121,7 @@ public class WndGame extends Window {
 				try {
 					Dungeon.saveAll();
 				} catch (Exception e) {
-					throw new RuntimeException(e);
+					throw new TrackedRuntimeException(e);
 				}
 				Game.switchScene( TitleScene.class );
 			}

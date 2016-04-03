@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items.rings;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -56,7 +57,7 @@ public class Artifact extends EquipableItem {
 				if (hero.belongings.ring2 == this) {
 					hero.belongings.ring2 = null;
 				} else { //WTF??
-					throw new RuntimeException("trying unequip unequipped artifact");
+					throw new TrackedRuntimeException("trying unequip unequipped artifact");
 				}
 			}
 

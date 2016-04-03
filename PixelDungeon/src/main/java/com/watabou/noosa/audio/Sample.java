@@ -23,6 +23,7 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Game;
 
 import java.io.File;
@@ -91,7 +92,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 				ids.put(asset, streamID);
 
 			} catch (IOException e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 	}

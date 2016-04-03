@@ -17,12 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -31,6 +29,9 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public abstract class Scroll extends Item {
 
@@ -134,7 +135,7 @@ public abstract class Scroll extends Item {
 		try {
 			return (Scroll) Random.element(inscribableScrolls).newInstance();
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 	

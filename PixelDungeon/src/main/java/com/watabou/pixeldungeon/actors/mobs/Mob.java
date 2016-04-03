@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -189,11 +190,11 @@ public abstract class Mob extends Char {
 
 
 			if (sprite == null) {
-				throw new RuntimeException("spite must not be null");
+				throw new TrackedRuntimeException("spite must not be null");
 			}
 
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 		return sprite;
 	}

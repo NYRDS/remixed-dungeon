@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
 
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class SystemText extends Text {
 		float size = baseLine;
 
 		if (size == 0) {
-			throw new RuntimeException("zero sized font!!!");
+			throw new TrackedRuntimeException("zero sized font!!!");
 		}
 
 		Typeface tf = Typeface.create((String) null, Typeface.BOLD);

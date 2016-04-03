@@ -1,14 +1,15 @@
 package com.watabou.pixeldungeon;
 
-import java.io.File;
-
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import java.io.File;
 
 public class SaveUtils {
 	private static final String RG_GAME_FILE = "rogue.dat";
@@ -39,7 +40,7 @@ public class SaveUtils {
 		case ELF:
 			return fname.contains("elf");
 		default:
-			throw new RuntimeException("unknown hero class!");
+			throw new TrackedRuntimeException("unknown hero class!");
 		}
 	}
 
@@ -198,7 +199,7 @@ public class SaveUtils {
 		case ELF:
 			return EL_GAME_FILE;
 		default:
-			throw new RuntimeException("unknown hero class!");
+			throw new TrackedRuntimeException("unknown hero class!");
 		}
 	}
 
@@ -229,7 +230,7 @@ public class SaveUtils {
 		case ELF:
 			return EL_DEPTH_FILE;
 		default:
-			throw new RuntimeException("unknown hero class!");
+			throw new TrackedRuntimeException("unknown hero class!");
 		}
 	}
 }

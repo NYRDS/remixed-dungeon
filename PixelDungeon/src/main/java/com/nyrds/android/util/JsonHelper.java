@@ -29,10 +29,10 @@ public class JsonHelper {
 			return (JSONObject) new JSONTokener(animationDef.toString()).nextValue();
 		} catch (JSONException e) {
 			Game.toast(e.getLocalizedMessage());
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		} catch (IOException e) {
 			Game.toast(e.getLocalizedMessage());
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 }

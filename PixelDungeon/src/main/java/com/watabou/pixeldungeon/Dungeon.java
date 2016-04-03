@@ -18,6 +18,7 @@ t * Pixel Dungeon
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -475,7 +476,7 @@ public class Dungeon {
 		input.close();
 
 		if (bundle == null) {
-			throw new RuntimeException("can not load level from " + loadFrom);
+			throw new TrackedRuntimeException("can not load level from " + loadFrom);
 		}
 
 		Level level = Level.fromBundle(bundle, "level");

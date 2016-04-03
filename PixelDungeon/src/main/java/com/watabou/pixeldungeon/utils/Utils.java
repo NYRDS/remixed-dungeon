@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.utils;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -74,7 +75,7 @@ public class Utils {
 				GLog.w("no defination for  %s_%s :(", className, paramName);
 			}
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 		
 		return defaultValues;
@@ -93,7 +94,7 @@ public class Utils {
 				GLog.w("no definition for  %s_%s :(", className, paramName);
 			}
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 		
 		return defaultValue;

@@ -336,7 +336,7 @@ public class Generator {
 		try {
 			return cl.newInstance().random();
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 	
