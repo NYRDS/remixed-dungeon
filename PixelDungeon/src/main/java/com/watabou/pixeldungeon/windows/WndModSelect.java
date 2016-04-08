@@ -69,7 +69,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
 						onDelete(index);
-					};
+					}
 				};
 				deleteBtn.setPos(WIDTH - deleteBtn.width() - MARGIN, pos);
 				additionalMargin = deleteBtn.width() + MARGIN;
@@ -103,10 +103,10 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 		String[] knownMods = Game.getVars(R.array.known_mods);
 
-		for (int i = 0; i < knownMods.length; i++) {
+		for (String knownMod : knownMods) {
 
 			try {
-				JSONArray modDesc = new JSONArray(knownMods[i]);
+				JSONArray modDesc = new JSONArray(knownMod);
 				ModDesc desc = new ModDesc();
 				desc.name = modDesc.getString(0);
 
