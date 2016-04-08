@@ -56,6 +56,14 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 		float pos = tfTitle.y + tfTitle.height() + MARGIN;
 
+		if(!PixelDungeon.isConnectedToInternet()) {
+			tfTitle.text("Please enable Internet access to download mods");
+			tfTitle.measure();
+			pos = tfTitle.y + tfTitle.height() + MARGIN;
+			resize(WIDTH, (int) pos);
+			return;
+		}
+
 		ArrayList<String> options = buildModsList();
 
 		for (int i = 0; i < options.size(); i++) {
