@@ -47,15 +47,14 @@ public class DungeonGenerator {
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
 	private static HashMap<String, Integer>                mStoryMap;
 
+	static {
+		initLevelsMap();
+	}
 	private static void registerLevelClass(Class<? extends Level> levelClass) {
 		mLevelKindList.put(levelClass.getSimpleName(), levelClass);
 	}
 
 	private static void initLevelsMap() {
-		if (mLevelKindList != null) {
-			return;
-		}
-
 		mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon.json");
 
 		try {
@@ -89,7 +88,6 @@ public class DungeonGenerator {
 	}
 
 	public static String getEntryLevelKind() {
-		initLevelsMap();
 		try {
 			return mLevels.getJSONObject(getEntryLevel()).getString("kind");
 		} catch (JSONException e) {
@@ -98,7 +96,6 @@ public class DungeonGenerator {
 	}
 
 	public static String getEntryLevel() {
-		initLevelsMap();
 		try {
 			return mDungeonMap.getString("Entrance");
 		} catch (JSONException e) {
@@ -119,8 +116,6 @@ public class DungeonGenerator {
 	}
 
 	private static Position descendOrAscend(Position current, boolean descend) {
-		initLevelsMap();
-
 		try {
 
 			if (current.levelId.equals("unknown")) {
@@ -225,8 +220,6 @@ public class DungeonGenerator {
 	}
 
 	public static String guessLevelId(String levelKind, int levelDepth) {
-		initLevelsMap();
-
 		try {
 			JSONArray ids = mLevels.names();
 			for (int i = 0; i < ids.length(); i++) {
