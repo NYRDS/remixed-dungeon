@@ -220,8 +220,14 @@ public class Badges {
 		if (global == null) {
 			try {
 				InputStream input = Game.instance().openFileInput(BADGES_FILE);
+
 				Bundle bundle = Bundle.read(input);
 				input.close();
+
+				if(bundle == null) {
+					global = new HashSet<>();
+					return;
+				}
 
 				global = restore(bundle);
 
