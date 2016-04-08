@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.SheepSprite;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.Callback;
@@ -102,7 +101,7 @@ public class WandOfFlock extends SimpleWand  {
 
 	public static class Sheep extends NPC {
 		
-		Sheep() {
+		public Sheep() {
 			super();
 			spriteClass = SheepSprite.class;
 		}
