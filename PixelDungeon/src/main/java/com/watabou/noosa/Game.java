@@ -56,6 +56,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
 import java.io.File;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -482,6 +484,17 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void displayEasyModeBanner() {
+	}
+
+	public static boolean isConnectedToInternet() {
+		InetAddress ipAddr;
+		try {
+			ipAddr = InetAddress.getByName("google.com");
+		} catch (UnknownHostException e) {
+			return false;
+		}
+
+		return !ipAddr.toString().equals("");
 	}
 
 	public void initEventCollector() {

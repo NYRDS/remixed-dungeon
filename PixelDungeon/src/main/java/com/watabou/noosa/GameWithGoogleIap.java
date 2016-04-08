@@ -19,8 +19,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -283,17 +281,6 @@ public abstract class GameWithGoogleIap extends Game {
 				mHelper.queryInventoryAsync(true, skuList, mGotInventoryListener);
 			}
 		});
-	}
-
-	private static boolean isConnectedToInternet() {
-		InetAddress ipAddr;
-		try {
-			ipAddr = InetAddress.getByName("google.com");
-		} catch (UnknownHostException e) {
-			return false;
-		}
-
-		return !ipAddr.toString().equals("");
 	}
 
 	@Override

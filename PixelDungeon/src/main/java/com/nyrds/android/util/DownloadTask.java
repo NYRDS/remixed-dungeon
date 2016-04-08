@@ -1,15 +1,15 @@
 package com.nyrds.android.util;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import android.os.AsyncTask;
 import android.util.Log;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 

@@ -56,6 +56,14 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 		float pos = tfTitle.y + tfTitle.height() + MARGIN;
 
+		if(!PixelDungeon.isConnectedToInternet()) {
+			tfTitle.text("Please enable Internet access to download mods");
+			tfTitle.measure();
+			pos = tfTitle.y + tfTitle.height() + MARGIN;
+			resize(WIDTH, (int) pos);
+			return;
+		}
+
 		ArrayList<String> options = buildModsList();
 
 		for (int i = 0; i < options.size(); i++) {
@@ -69,7 +77,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
 						onDelete(index);
-					};
+					}
 				};
 				deleteBtn.setPos(WIDTH - deleteBtn.width() - MARGIN, pos);
 				additionalMargin = deleteBtn.width() + MARGIN;
@@ -103,10 +111,10 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 		String[] knownMods = Game.getVars(R.array.known_mods);
 
-		for (int i = 0; i < knownMods.length; i++) {
+		for (String knownMod : knownMods) {
 
 			try {
-				JSONArray modDesc = new JSONArray(knownMods[i]);
+				JSONArray modDesc = new JSONArray(knownMod);
 				ModDesc desc = new ModDesc();
 				desc.name = modDesc.getString(0);
 
