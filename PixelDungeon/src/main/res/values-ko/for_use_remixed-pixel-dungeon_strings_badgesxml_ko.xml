@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF BadgesScene CLASS-->
   <string name="BadgesScene_Title">당신의 뱃지들</string>
   <!--STRINGS OF Badges CLASS-->
-  <string name="Badges_Info1">뱃지를 획득했다: %s</string>
-  <string name="Badges_Info2">새로운 슈퍼 뱃지 : %s</string>
-  <string name="Badges_Info3">새로운 뱃지: %s</string>
-  <string name="Badges_MonsterSlain1">적 10마리 섬멸</string>
-  <string name="Badges_MonsterSlain2">적 50 마리 섬멸</string>
-  <string name="Badges_MonsterSlain3">적 150 마리 섬멸</string>
+  <string name="Badges_Info1">뱃지 획득: %s</string>
+  <string name="Badges_Info2">새로운 슈퍼 뱃지 획득 : %s</string>
+  <string name="Badges_Info3">새로운 뱃지 획득 : %s</string>
+  <string name="Badges_MonsterSlain1">적 10마리 처치</string>
+  <string name="Badges_MonsterSlain2">적 50 마리 처치</string>
+  <string name="Badges_MonsterSlain3">적 150 마리 처치</string>
   <string name="Badges_MonsterSlain4">적 250 마리 섬멸</string>
   <string name="Badges_GoldColleted1">100 골드 수집</string>
   <string name="Badges_GoldColleted2">500 골드 수집</string>

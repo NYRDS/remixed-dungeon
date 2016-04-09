@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Pixel Dungeon Remix</string>
+  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">수많은 영웅들이 당신 이전에 던전으로 모험을 떠났다. 일부는 보물이나 마법 장비와 함께 돌아 오기도 했지만, 대부분은 그 이후로 소식이 끊겼다. 하지만 그 누구도 던전 가장 아래에 숨겨진 옌도르의 아뮬렛을 손에 넣는데 성공한 사람은 없다.\n\n당신은 이제 도전 모드를 활성화할 준비가 됐고, 보다 중요한건, 행운이 당신 편이라는 것이다. 이제 당신만의 모험을 떠날 시간이다!</string>
+  <string name="IntroScene_Txt">수많은 영웅들이 당신 이전에 던전으로 모험을 떠났다. 일부는 보물이나 마법 장비와 함께 돌아 오기도 했지만, 대부분은 그 이후로 소식이 끊겼다. 하지만 그 누구도 던전 가장 아래에 숨겨진 옌도르의 아뮬렛을 손에 넣는데 성공한 사람은 없다.\n\n당신은 이제 도전을 받아들일 준비가 되었다. 무엇보다도 행운의 여신이 당신에게 미소짓고 있다고 생각하기 때문이다. 이제 당신만의 모험을 떠날 시간이다!</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">여기서 끝내기로 하지</string>
   <string name="AmuletScene_Stay">아직 끝내긴 이르다</string>
-  <string name="AmuletScene_Txt">당신은 마침내 손에 옌도르의 아뮬렛을 거머 쥐었다. 이 힘을 이용하여 당신은 세상을 손에 넣을 수도있고 아니면 평화와 번영을 가져다 줄수도 있고 뭐그런 걸 할 수 있다. 어쨌든, 당신의 인생은 완전히 바뀔 것이고, 게임은 여기서 끝날 것이다. 아니면 그저 평범한 인간으로 좀 더 머무를 수도 있다.</string>
+  <string name="AmuletScene_Txt">당신은 마침내 손에 옌도르의 아뮬렛을 거머쥐었다. 이 힘을 이용하여 당신은 세상을 손에 넣을 수도있고 아니면 평화와 번영을 가져다 줄수도 있는 등 여러 가지 일을 할 수 있다. 어쨌든, 당신의 인생은 완전히 바뀔 것이고, 게임은 여기서 끝날 것이다. 아니면 그저 필멸자 상태로 좀 더 머무를 수도 있다.</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">Pixel Dungeon의 %d층에 오신걸 환영합니다!</string>
-  <string name="GameScene_WelcomeBack">Pixel Dungeon의 %d층에 다시 돌아오신걸 환영합니다!</string>
+  <string name="GameScene_WelcomeBack">Pixel Dungeon의 %d층에 돌아왔습니다!</string>
   <string name="GameScene_NightMode">조심하세요, 던전은 밤중엔 보다 더 위험합니다.</string>
   <string name="GameScene_Chasm">당신의 발자국 소리가 던전에 울려 퍼진다.</string>
   <string name="GameScene_Water">물 소리가 당신 주위에서 들려 온다.</string>

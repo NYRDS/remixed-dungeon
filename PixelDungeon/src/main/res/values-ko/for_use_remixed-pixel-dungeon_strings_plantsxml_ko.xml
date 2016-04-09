@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE pixeldungeon/plants-->
   <!--STRINGS OF Plant CLASS-->
   <string name="Plant_ACPlant">심는다</string>
-  <string name="Plant_Info"> %1$s를 심고 싶은 곳에 이 씨앗을 던지면 된다.\n\n%2$s</string>
+  <string name="Plant_Info"> %1$s를 심고 싶은 곳에 이 씨앗을 던지십시오.\n\n%2$s</string>
   <string name="Plant_Seed">%s 의 씨앗</string>
   <!--STRINGS OF Dreamweed CLASS-->
   <string name="Dreamweed_Name">꿈결초</string>

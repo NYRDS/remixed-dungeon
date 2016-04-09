@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/Wands-->
   <!--STRINGS OF Wand CLASS-->
   <string name="Wand_Name">%s 지팡이</string>
-  <string name="Wand_ACZap">공격</string>
-  <string name="Wand_Wood">이 가는 %s 지팡이는 오래된것 같습니다. 누가 이것을 사용했을때 효과를 알 수 있을까요?</string>
-  <string name="Wand_Damage">이 지팡이를 근접무기로 사용할때 평균 데미지는 타격당 %d 포인트 입니다.</string>
+  <string name="Wand_ACZap">발동</string>
+  <string name="Wand_Wood">이 가는 %s 지팡이는 오래된것 같습니다. 사용했을 때 어떤 일이 일어날까요?</string>
+  <string name="Wand_Damage">이 지팡이를 근접무기로 사용할때 평균 데미지는 타격당 %d 입니다.</string>
   <string name="Wand_Weapon">당신은 이 지팡이를 근접무기로 사용할 수 있습니다.</string>
   <string name="Wand_Fizzles">지금 이 지팡이를 사용하기 위해서는 충전해야 합니다.</string>
   <string name="Wand_SelfTarget">자신을 목표로 할 수 없습니다.</string>

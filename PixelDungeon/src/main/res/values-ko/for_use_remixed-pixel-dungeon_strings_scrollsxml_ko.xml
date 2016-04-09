@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
   <string name="Scroll_Name">\"%s\" 스크롤</string>
-  <string name="Scroll_Info">이 양피지는 판독할 수 없는 룬문자 %s로 덮여있습니다. 누가 이것을 소리내어 읽을때 효과를 알 수 있을까요?</string>
+  <string name="Scroll_Info">이 양피지는 판독할 수 없는 룬 문자 %s로 덮여있습니다. 누가 이것을 소리내어 읽을때 어떤 일이 일어날까요?</string>
   <string name="Scroll_ACRead">읽는다</string>
-  <string name="Scroll_Blinded">눈이 먼 상태에서 스크롤을 읽을 수 없습니다.</string>
+  <string name="Scroll_Blinded">눈이 먼 상태에서 스크롤을 읽을 수 없다</string>
   <string-array name="Scroll_Runes">
     <item>카우난</item>
     <item>소윌로</item>
     <item>라구즈</item>
-    <item>잉과즈</item>
-    <item>게보</item>
+    <item>잉그비</item>
+    <item>가이푸</item>
     <item>라이도</item>
     <item>이사즈</item>
-    <item>만나즈룬</item>
+    <item>만나즈</item>
     <item>나우디즈</item>
     <item>버카난</item>
     <item>오쌀란</item>
-    <item>티와즈 루</item>
+    <item>티와즈</item>
     <item>안수즈</item>
-    <item>에이하즈</item>
+    <item>아이하즈</item>
     <item>알기즈</item>
     <item>다가즈</item>
   </string-array>

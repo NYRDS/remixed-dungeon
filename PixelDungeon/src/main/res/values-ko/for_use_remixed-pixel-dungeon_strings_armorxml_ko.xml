@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
   <string name="Armor_EquipCursed">당신의 %s 이/가 몸을 고통스럽게 조여온다</string>
   <string name="Armor_Identify">당신은 이제 %1$s 을 식별할 수 있을 만큼 충분히 익숙해졌습니다. 이것은 %2$s 입니다.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
-  <string name="Armor_Incompatible">서로 다른 마법간의 상호작용으로 갑옷의 각인이 지워져 버렸다.</string>
-  <string name="Armor_Info1">이 %1$s 은/는 최대  \"%2$d\" 데미지를 흡수할 수 있다</string>
-  <string name="Armor_Info2">\n\n힘이 부족하여 당신의 움직임이 느려지고 방어능력이 떨어졌다.</string>
-  <string name="Armor_Info3">\n\n힘이 부족하여 이 갑옷을 입으면 움직임이 느려지고 방어 능력이 떨어질 것이다.</string>
+  <string name="Armor_Incompatible">서로 다른 마법간의 상호작용으로 갑옷의 각인이 지워져 버렸다!</string>
+  <string name="Armor_Info1">이 %1$s 은/는 공격 당 최대  \"%2$d\" 데미지를 흡수할 수 있다</string>
+  <string name="Armor_Info2">\n\n힘이 부족하여 움직임이 느려지고 방어능력이 떨어졌습니다.</string>
+  <string name="Armor_Info3">\n\n이 갑옷을 입기 위한 힘이 부족하여 착용하면 움직임이 느려지고 방어 능력이 떨어질 것이다.</string>
   <string name="Armor_Info4">\n\n일반적인 %1$s 은/는 최대 %2$d 데미지를 흡수하고 힘 %3$d을 필요로 한다.</string>
   <string name="Armor_Info5">아마 당신에게는 갑옷이 너무 무거워 보인다.</string>
   <string name="Armor_Info6">각인되어 있다.</string>
   <string name="Armor_Info7a">\n\n당신은 %1$s%2$s 을/를 착용하고 있다.</string>
-  <string name="Armor_Info7b">그리고 저주로 인해, 당신은 그것을 벗을 수가 없다.</string>
+  <string name="Armor_Info7b">그리고 저주로 인해 당신은 그것을 벗을 수가 없다.</string>
   <string name="Armor_Info8">\n\n %s안에 해로운 마법이 숨어있음을 느낄 수 있다.</string>
   <string name="Armor_Glyph">문양</string>
   <!--STRINGS OF ClassArmor CLASS-->
-  <string name="ClassArmor_Desc">쩔어 보인다!</string>
-  <string name="ClassArmor_LowHealt">쓰러지기 일보 직전입니다!!</string>
-  <string name="ClassArmor_NotEquipped">그 갑옷의 특별한 힘을 이용하기 위해서는 입고 있어야 합니다.</string>
+  <string name="ClassArmor_Desc">굉장해 보이는군!</string>
+  <string name="ClassArmor_LowHealt">쓰러지기 일보 직전입니다!</string>
+  <string name="ClassArmor_NotEquipped">갑옷의 특별한 힘을 이용하기 위해서는 입고 있어야 합니다.</string>
   <!--STRINGS OF ClothArmor CLASS-->
   <string name="ClothArmor_Name">천 갑옷</string>
-  <string name="ClothArmor_Desc">이 경갑옷은 기본적인 방어력을 제공한다.</string>
+  <string name="ClothArmor_Desc">이 가벼운 갑옷은 기본적인 방어력을 제공한다.</string>
   <!--STRINGS OF ElfArmor CLASS-->
   <string name="ElfArmor_Name">엘프의 망토</string>
-  <string name="ElfArmor_Desc">이 망토의 도움으로 엘프는 자연의 힘 자체를 소환할 수 있다. 단단한 바위 표면이라 할지라도, 큰 풀숲이 눈 깜짝할 새 자라서 보이는 적들을 옴짝달싹 못하게 해버릴 것이다.</string>
+  <string name="ElfArmor_Desc">이 망토의 도움으로 엘프는 자연의 힘 자체를 소환할 수 있다. 단단한 바위 표면을 뚫고 순식간에 기다란 풀숲이 자라나 시야 내의 모든 적들을 옴짝달싹 못하게 해 버릴 것이다.</string>
   <string name="ElfArmor_ACSpecial">자연의 부름</string>
   <string name="ElfArmor_NotElf">이 갑옷은 엘프만 착용 가능하다.</string>
   <!--STRINGS OF HuntressArmor CLASS-->

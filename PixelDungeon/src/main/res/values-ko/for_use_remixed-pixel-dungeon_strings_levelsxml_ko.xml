@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /levels-->
   <!--STRINGS OF Level CLASS-->
   <string name="Level_HiddenPlate">숨겨진 발판이 발동했다!</string>
-  <string name="Level_TileChasm">틈</string>
+  <string name="Level_TileChasm">낭떠러지</string>
   <string name="Level_TileFloor">바닥</string>
   <string name="Level_TileGrass">잔디</string>
   <string name="Level_TileWater">물</string>
