@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">Arbusto seco</string>
+  <string name="Guts_TileHighGrass">Arbusto seco</string>
+  <string name="Guts_TileWater">Líquido extraño baboso</string>
+  <string name="Guts_TileDescEntrance">Los agujeros en el techo llevan a los niveles superiores</string>
+  <string name="Guts_TileDescExit">Los agujeros en el piso llevan a los niveles inferiores</string>
+  <string name="Guts_TileDescDeco">Este lugar parece... herido</string>
+  <string name="Guts_TileDescBookshelf">Esta libreria está cubierta de una tela gruesa y carnosa, no hay forma de llegar a ninguno de los libros.</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Derrotado y destrozado en pedazos, pero no completamente destruido, el Antiguo Dios fue sellado en los niveles más profundos de la mazmorra. Pero, recientemente el sello se rompió, dando paso, a un nido de demonios. Las pesadillas, creadas por el Antiguo Dios en su sueño eran tan numerosas, que sin via de escapar se vieron obligadas a fusionarse forman estas salas grotescas. Al caminar sobre su carne viva se puede sentir el latido del Antiguo Dios haciendo eco a través de ella.</string>
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">mímico</string>
+  <string name="MimicAmulet_Gender">masculino</string>
+  <string name="MimicAmulet_Name_Objective">mímico</string>
+  <string name="MimicAmulet_Desc">El momento más glorioso de tu carrera como aventurero resultó ser una trampa.</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">pesadilla</string>
+  <string name="Nightmare_Gender">masculino</string>
+  <string name="Nightmare_Name_Objective">pesadilla</string>
+  <string name="Nightmare_Desc">Grotesca criatura hecha de tentáculos retorcidos de carne. Las pesadillas son una manifestación de los pensamientos del siniestro Antiguo Dios.</string>
+  <!--STRINGS OF TENGU CLASS-->
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">gnoll zombi</string>
+  <string name="ZombieGnoll_Gender">masculino</string>
+  <string name="ZombieGnoll_Name_Objective">gnoll zombi</string>
+  <string name="ZombieGnoll_Desc">El retorcido y quebrado cuerpo de un gnoll zombi, no tiene forma humanoide o de hiena. Solo es un montón de carne podrida y huesos llenos de deseo de matar y comer.</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">gusano</string>
+  <string name="Worm_Gender">masculino</string>
+  <string name="Worm_Name_Objective">gusano</string>
+  <string name="Worm_Desc">No hay forma para saber qué tan grande es este gusano. Emerge parcialmente de la planta, su está cubierto con trozos de carne podrida y limo. Sus mandíbulas gigantes te dan una idea clara de cómo este monstruo hace su camino a través de la superficie.</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">cerebro de Yog</string>
+  <string name="YogsBrain_Gender">masculino</string>
+  <string name="YogsBrain_Name_Objective">Cerebreo de Yog</string>
+  <string name="YogsBrain_Desc">Cerebro de Yog-Dzewa. Fuente de todo el mal que nunca ha salido de la mazmorra.</string>
+  <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">ojo de Yog</string>
+  <string name="YogsEye_Gender">masculino</string>
+  <string name="YogsEye_Name_Objective">Ojo de Yog</string>
+  <string name="YogsEye_Desc">El ojo del Antiguo Dios, con una mirada llena de eterno odio. Puedes sentir como ve a través de tu alma.</string>
+  <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">corazón de Yog</string>
+  <string name="YogsHeart_Gender">masculino</string>
+  <string name="YogsHeart_Name_Objective">Corazón de Yog</string>
+  <string name="YogsHeart_Desc">Por siglos las personas han creido que solo las criaturas sin corazón son capaces de actos de pura maldad. Pero aquí lo tienes, un gran corazón latiendo de un Antiguo Dios.</string>
+  <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">dientes de Yog</string>
+  <string name="YogsTeeth_Gender">masculino</string>
+  <string name="YogsTeeth_Name_Objective">Dientes de Yog</string>
+  <string name="YogsTeeth_Desc">La enorme boca del Antiguo Dios llena de afilados dientes. Un apropiada manifestación de su gran deseo de destruir y devorar a todos.</string>
+</resources>

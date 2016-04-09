@@ -323,6 +323,7 @@
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">polvo de cadáver</string>
   <string name="CorpseDust_Info">Este montón de polvo de cadáver no es diferente de cualquier otro. Sin embargo, sabes de alguna manera que cuanto antes te deshagas de él, mejor.</string>
+  <string name="CorpseDust_Info2">Quizás por tan sólo sujetarlo hace que te sientas ansioso y enfadado.</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">mineral de oro oscuro</string>
   <string name="DarkGold_Info">Este metal es llamado \"oscuro\" no por su color (ya que es similar al del oro normal), sino porque se derrite con la luz del sol, haciendo que sea inútil en la superficie.</string>
