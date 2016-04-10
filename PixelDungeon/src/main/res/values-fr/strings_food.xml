@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/food-->
   <!--STRINGS OF Food CLASS-->
@@ -29,13 +29,13 @@
   <string name="RottenFood_Message">dégoûtant !</string>
   <!--STRINGS OF RottenMeat CLASS-->
   <string name="RottenMeat_Name">viande pourrie</string>
-  <string name="RottenMeat_Info">morceau de viande pourrie</string>
+  <string name="RottenMeat_Info">Morceau de viande pourrie</string>
   <!--STRINGS OF RottenPasty CLASS-->
   <string name="RottenPasty_Name">pâté en croute pourri</string>
-  <string name="RottenPasty_Info">ce vieux pâté en croute a l\'air vraiment dégoutant</string>
+  <string name="RottenPasty_Info">Ce vieux pâté en croute a l\'air vraiment dégoutant</string>
   <!--STRINGS OF RottenRation CLASS-->
   <string name="RottenRation_Name">ration pourrie</string>
-  <string name="RottenRation_Info">on raconte qu\'un jour c\'était mangeable</string>
+  <string name="RottenRation_Info">On raconte qu\'un jour c\'était mangeable</string>
   <!--STRINGS OF OverpricedRation CLASS-->
   <string name="OverpricedRation_Name">ration hors de prix</string>
   <string name="OverpricedRation_Info">Ca ressemble à une ration normale mais en plus petit.</string>
@@ -43,7 +43,7 @@
   <!--STRINGS OF Pasty CLASS-->
   <string name="Pasty_Name">pâté en croute</string>
   <string name="Pasty_Info">L\'authentique pâté en croute de Cornouailles, avec sa farce traditionnelle de boeuf et de pommes de terre. </string>
-  <!--STRINGS OF Pasty CLASS-->
+  <!--STRINGS OF PseudoPasty CLASS-->
   <string name="PseudoPasty_Name">pâté en croute</string>
   <string name="PseudoPasty_Info">L\'authentique pâté en croute de Cornouailles, avec sa farce traditionnelle de boeuf et de pommes de terre. </string>
-  </resources>
+</resources>
