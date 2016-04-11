@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Mods_CreatedBy">제작자:</string>
+  <string name="Mods_AuthorSite">작가 홈페이지:</string>
+  <string name="Mods_AuthorEmail">작가의 이메일:</string>
+  <string name="Mods_RestartRequired">재시작하십시오</string>
+</resources>

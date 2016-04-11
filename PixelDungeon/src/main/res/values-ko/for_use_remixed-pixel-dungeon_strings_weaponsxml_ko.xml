@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
   <string name="Weapon_Identify">당신은 이제 %1$s 에 충분이 친숙해져 이것의 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
-  <string name="Weapon_Incompatible">서로 다른 타입의 마법간에 상호작용으로 갑옷의 각인을 지워져 버렸다</string>
+  <string name="Weapon_Incompatible">서로 다른 종류의 마법들의 작용으로 갑옷의 각인이 지워져 버렸다</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
@@ -188,4 +188,8 @@
   <string name="Kusarigama_Info">이 무기는 낫이 달린 사슬의 끝에 무거운 강철로 된 추가 달려있습니다.</string>
   <string name="Kusarigama_Gender">여성</string>
   <string name="Kusarigama_Pull">당기다</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <!--STRINGS OF ChaosBow CLASS-->
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <!--STRINGS OF SacrificialSword CLASS-->
 </resources>

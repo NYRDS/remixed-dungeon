@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">당신</string>
@@ -6,7 +6,7 @@
   <string name="Hero_Leave">아무도 픽셀 던전을 쉽게 빠져 나갈 수 없다.</string>
   <string name="Hero_LevelUp">레벨 업!</string>
   <string name="Hero_NewLevel">레벨 %d이 된걸 축하합니다! 이제 당신은 보다 더 건강해지고 집중력이 높아졌습니다. 적을 맞추거나 공격을 회피하기 쉬워졌습니다.</string>
-  <string name="Hero_YouNowHave">%s을/를 갖게 되었다</string>
+  <string name="Hero_YouNowHave">%s을/를 얻었다.</string>
   <string name="Hero_SomethingElse">여기에 다른 무언가가 있다.</string>
   <string name="Hero_LockedChest">이 상자는 잠겨 있고, 당신에게는 맞는 열쇠가 없다.</string>
   <string name="Hero_LockedDoor">당신에게는 맞는 열쇠가 없다.</string>

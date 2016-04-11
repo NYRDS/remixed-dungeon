@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/food-->
   <!--STRINGS OF Food CLASS-->
   <string name="Food_ACEat">먹는다</string>
-  <string name="Food_Message">그 음식은 꽤 맛있었다.</string>
+  <string name="Food_Message">이 음식은 맛있군!</string>
   <!--STRINGS OF Ration CLASS-->
   <string name="Ration_Name">비상 식량</string>
-  <string name="Ration_Info">특별히 고급스런건 없다: 말린 고기, 비스킷 몇 개 - 뭐 그런것들.</string>
+  <string name="Ration_Info">말린 고기, 비스킷 몇 개 등의 특별할 것 없는 식량입니다.</string>
   <!--STRINGS OF ChargrilledMeat CLASS-->
   <string name="ChargrilledMeat_Name">익힌 고기</string>
-  <string name="ChargrilledMeat_Info">고급 스테이크 같아 보인다.</string>
+  <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
   <!--STRINGS OF FrozenCarpaccio CLASS-->
   <string name="FrozenCarpaccio_Name">얼린 생고기</string>
   <string name="FrozenCarpaccio_Info">냉동시킨 고기 조각. 이걸 먹는 방법은 고기를 얇게 썰어서 먹는 것이다. 그리고 이렇게 먹으면 아주 맛이 좋다.</string>

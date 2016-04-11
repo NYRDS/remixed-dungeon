@@ -39,6 +39,9 @@ public class StringsManager {
 
 	private static void addMappingForClass(Class<?> clazz) {
 		for (Field f : clazz.getDeclaredFields()) {
+			if(f.isSynthetic()){
+				continue;
+			}
 			int key;
 			try {
 				key = f.getInt(null);

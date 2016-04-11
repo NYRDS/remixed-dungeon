@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
   <string name="Mob_Desc">진짜 설명은 곧 나옵니다!</string>
-  <string name="Mob_Died">저 멀리서 뭔가가 죽는 소리가 들립니다.</string>
+  <string name="Mob_Died">저 멀리서 뭔가가 죽는 소리가 들었다.</string>
   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
-  <string name="Mob_StaSleepingStatus">이 %s 은/는 자는중 입니다</string>
+  <string name="Mob_StaSleepingStatus">이 %s 은/는 자고 있습니다.</string>
   <string name="Mob_StaWanderingStatus">이 %s 은/는 방랑중 입니다</string>
   <string name="Mob_StaHuntingStatus">이 %s 은/는 사냥중 입니다</string>
   <string name="Mob_StaFleeingStatus">이 %s 은/는 혼비백산하고 있습니다.</string>
