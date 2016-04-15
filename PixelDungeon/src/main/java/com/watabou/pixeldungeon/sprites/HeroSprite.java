@@ -25,15 +25,14 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.noosa.Visual;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
-import com.watabou.utils.PointF;
 
 public class HeroSprite extends CharSprite {
 
@@ -49,7 +48,7 @@ public class HeroSprite extends CharSprite {
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
 
-	private int lastTier = -1;
+	private Armor lastArmor = null;
 
 	public HeroSprite(Hero hero) {
 		super();
@@ -57,7 +56,7 @@ public class HeroSprite extends CharSprite {
 		link(hero);
 
 		texture(HeroClass.spritesheet(hero));
-		updateArmor(hero.tier());
+		updateArmor(hero.belongings.armor);
 
 		idle();
 	}
@@ -66,16 +65,17 @@ public class HeroSprite extends CharSprite {
 		super();
 
 		texture(HeroClass.spritesheet(hero));
-		updateArmor(hero.tier());
+		updateArmor(hero.belongings.armor);
 
 		idle();
 	}
 
-	public void updateState(Hero hero) {
-		GameScene.updateHeroSprite(hero);
-	}
+	public void updateArmor(Armor armor) {
+		int tier = 0;
 
-	public void updateArmor(int tier) {
+		if(armor!=null) {
+			tier = armor.tier;
+		}
 
 		TextureFilm film = new TextureFilm(tiers(), tier, FRAME_WIDTH,
 				FRAME_HEIGHT);
@@ -168,43 +168,23 @@ public class HeroSprite extends CharSprite {
 	}
 
 	public Image avatar(Hero hero) {
-		if (hero.tier() == lastTier) {
+		if (hero.belongings.armor == lastArmor) {
 			return null;
 		}
 
-		RectF patch = tiers().get(hero.tier());
+		int tier = 0;
+		if(hero.belongings.armor!=null) {
+			tier = hero.belongings.armor.tier;
+		}
+
+		RectF patch = tiers().get(tier);
 		Image avatar = new Image(HeroClass.spritesheet(hero));
 		RectF frame = avatar.texture.uvRect(1, 0, FRAME_WIDTH, FRAME_HEIGHT);
 		frame.offset(patch.left, patch.top);
 		avatar.frame(frame);
-		lastTier = hero.tier();
+		lastArmor = hero.belongings.armor;
 		return avatar;
 
 	}
 
-	private static class JumpTweener extends Tweener {
-
-		public Visual visual;
-
-		public PointF start;
-		public PointF end;
-
-		public float height;
-
-		public JumpTweener(Visual visual, PointF pos, float height, float time) {
-			super(visual, time);
-
-			this.visual = visual;
-			start = visual.point();
-			end = pos;
-
-			this.height = height;
-		}
-
-		@Override
-		protected void updateValues(float progress) {
-			visual.point(PointF.inter(start, end, progress).offset(0,
-					-height * 4 * progress * (1 - progress)));
-		}
-	}
 }
