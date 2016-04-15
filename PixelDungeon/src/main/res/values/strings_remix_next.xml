@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Next remix strings placeholder -->
+    <!-- Mob descriptions -->
+    <!-- STRINGS OF AzutteronNPC CLASS -->
+    <string name="AzutteronNPC_Name">Azutteron</string>
+    <string name="AzutteronNPC_Gender">masculine</string>
+    <string name="AzutteronNPC_Objective">Azuterron</string>
+    <string name="AzutteronNPC_Desc">A mysterious figure shrouded by black mist.</string>
 
 </resources>
