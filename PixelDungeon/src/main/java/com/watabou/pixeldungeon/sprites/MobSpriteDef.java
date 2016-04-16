@@ -8,7 +8,6 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Lightning;
@@ -32,11 +31,6 @@ public class MobSpriteDef extends MobSprite {
 	private int     kind;
 	private String  zapEffect;
 	Callback        zapCallback;
-
-	private Animation fly;
-
-	private Tweener  jumpTweener;
-	private Callback jumpCallback;
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
@@ -179,6 +173,8 @@ public class MobSpriteDef extends MobSprite {
 			}
 		}
 	}
+
+
 
 	@Override
 	public int blood() {

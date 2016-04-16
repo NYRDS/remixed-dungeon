@@ -157,7 +157,7 @@ public class HeroSprite extends CharSprite {
 		return on;
 	}
 
-	public TextureFilm tiers() {
+	private TextureFilm tiers() {
 		if (tiers == null) {
 			// Sprites for all classes are the same in size
 			SmartTexture texture = TextureCache.get(Assets.ROGUE);
