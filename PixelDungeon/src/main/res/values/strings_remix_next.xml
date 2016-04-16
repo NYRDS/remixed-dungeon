@@ -7,7 +7,7 @@
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">Stranger</string>
     <string name="AzuterronNPC_Desc">A mysterious figure shrouded by black mist.</string>
-    <string name="AzuterronNPC_Quest_Start">Huh, why... oh, you can see me, don\'t you? That means you\'re not one of \"them\". I see you\'re not fond of all these monsters as well. Tell you what, if you\'ll help me out with a little problem, then I will offer you my assistance. Somewhere on this level you will find a beast of darkness, a \"Treacherous Spirit\". Slay it, take it\'s heart and come back to me. And one more thing, if you are interseted in purchasing my suplies, don\'t hesitate to ask</string>
+    <string name="AzuterronNPC_Quest_Start">Huh, why... oh, you can see me, don\'t you? That means you\'re not one of \"them\". I see you\'re not fond of all these monsters as well. Tell you what, if you\'ll help me out with a little problem, then I will offer you my assistance. Somewhere on this level you will find a beast of darkness, a _Treacherous Spirit_. Slay it, take it\'s _heart_ and come back to me. And one more thing, if you are interseted in purchasing my suplies, don\'t hesitate to ask</string>
     <string name="AzuterronNPC_Quest_Reminder">Help me and I\'ll help you.</string>
     <string name="AzuterronNPC_Quest_End">Excelent. Here take this potion, surely, you will find it benefitial.</string>
     <string name="Journal_Azuterron">Stranger</string>
