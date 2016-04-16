@@ -37,7 +37,9 @@ public class Journal {
 		GHOST					(Game.getVar(R.string.Journal_Ghost)),
 		WANDMAKER				(Game.getVar(R.string.Journal_Wandmaker)),
 		TROLL					(Game.getVar(R.string.Journal_Troll)),
-		IMP						(Game.getVar(R.string.Journal_Imp));
+		IMP						(Game.getVar(R.string.Journal_Imp)),
+		AZUTERRON				(Game.getVar(R.string.Journal_Azuterron));
+
 		
 		private String desc;
 		
