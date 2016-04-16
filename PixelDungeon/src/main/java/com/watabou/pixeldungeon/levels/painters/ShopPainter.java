@@ -146,6 +146,17 @@ public class ShopPainter extends Painter {
 			break;
 
 		case 27:
+			switch (Random.Int( 3 )) {
+				case 0:
+					items.add( new Glaive().identify() );
+					break;
+				case 1:
+					items.add( new WarHammer().identify() );
+					break;
+				case 2:
+					items.add( new PlateArmor().identify() );
+					break;
+			}
 			items.add( new PotionOfHealing() );
 			items.add( new PotionOfExperience());
 			items.add( new PotionOfMight());
