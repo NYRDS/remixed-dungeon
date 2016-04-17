@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.BadgesList;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ItemSlot;
@@ -153,8 +153,8 @@ public class WndRanking extends WndTabbed {
 			Hero hero = Dungeon.hero;
 			String heroClass = hero.className();
 
-			HeroSprite heroSprite = new HeroSprite(hero, false);
-			
+			HeroSpriteDef heroSprite = new HeroSpriteDef(hero, false);
+
 			IconTitle title = new IconTitle();
 			title.icon( heroSprite.avatar(hero) );
 			title.label( Utils.format( TXT_TITLE, hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );

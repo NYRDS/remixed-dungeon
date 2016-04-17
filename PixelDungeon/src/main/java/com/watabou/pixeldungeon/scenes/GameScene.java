@@ -58,7 +58,7 @@ import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DiscardedItemSprite;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
@@ -97,7 +97,7 @@ public class GameScene extends PixelScene {
 	private SkinnedBlock   water;
 	private DungeonTilemap tiles;
 	private FogOfWar       fog;
-	private HeroSprite     heroSprite;
+	private HeroSpriteDef  heroSprite;
 
 	private GameLog log;
 
@@ -313,7 +313,7 @@ public class GameScene extends PixelScene {
 
 	public static void updateHeroSprite(Hero hero) {
 
-		HeroSprite newHeroSprite = new HeroSprite(hero);
+		HeroSpriteDef newHeroSprite = new HeroSpriteDef(hero, false);
 		if (scene.heroSprite != null) {
 			scene.mobs.remove(scene.heroSprite);
 			scene.heroSprite.removeAllStates();

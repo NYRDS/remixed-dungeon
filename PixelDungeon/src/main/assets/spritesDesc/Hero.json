@@ -1,0 +1,13 @@
+{
+  "texture" = "hero/mage.png",
+  "width"   = 12,
+  "height"  = 15,
+
+"idle"    = { "fps" = 2,  "looped" = true,     "frames" = [0, 0, 0, 1, 0, 0, 1, 1] },
+"run"     = { "fps" = 20, "looped" = true,     "frames" = [2, 3, 4, 5, 6, 7] },
+"die"     = { "fps" = 20, "looped" = false,    "frames" = [8, 9, 10, 11, 12, 11] },
+"attack"  = { "fps" = 15, "looped" = false,    "frames" = [13, 14, 15, 0] },
+"zap"     = { "fps" = 15, "looped" = false,    "frames" = [13, 14, 15, 0] },
+"operate" = { "fps" = 8,  "looped" = false,    "frames" = [8, 9, 10, 11, 12, 11] },
+"fly"     = { "fps" = 1,  "looped" = true,     "frames" = [18] }
+}

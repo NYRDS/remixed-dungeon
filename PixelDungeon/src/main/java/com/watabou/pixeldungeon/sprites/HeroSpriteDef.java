@@ -2,8 +2,10 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
@@ -13,14 +15,17 @@ import com.watabou.utils.Callback;
  */
 public class HeroSpriteDef extends MobSpriteDef {
 
-	public HeroSpriteDef(String defName, int kind) {
-		super(defName, kind);
-	}
+	private static final int RUN_FRAMERATE = 20;
 
 	private Animation fly;
 
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
+
+	public HeroSpriteDef(Hero hero, boolean b) {
+		super("spritesDesc/Hero.json",0);
+		link(hero);
+	}
 
 	@Override
 	public void place(int p) {
@@ -70,5 +75,13 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 	}
 
+	public boolean sprint(boolean on) {
+		run.delay = on ? 0.625f / RUN_FRAMERATE : 1f / RUN_FRAMERATE;
+		return on;
+	}
+
+	public Image avatar(Hero hero) {
+		return null;
+	}
 
 }

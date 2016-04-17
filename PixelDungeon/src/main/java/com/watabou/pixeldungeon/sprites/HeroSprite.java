@@ -184,7 +184,6 @@ public class HeroSprite extends CharSprite {
 		avatar.frame(frame);
 		lastArmor = hero.belongings.armor;
 		return avatar;
-
 	}
 
 }

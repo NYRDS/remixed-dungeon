@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
@@ -95,7 +95,7 @@ public class WarriorArmor extends ClassArmor {
 				
 				final int dest = cell;
 				getCurUser().busy();
-				((HeroSprite)getCurUser().getSprite()).jump( getCurUser().getPos(), cell, new Callback() {
+				((HeroSpriteDef)getCurUser().getSprite()).jump( getCurUser().getPos(), cell, new Callback() {
 					@Override
 					public void call() {
 						getCurUser().move( dest );

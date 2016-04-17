@@ -105,7 +105,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.SurfaceScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -1632,8 +1632,8 @@ public class Hero extends Char {
 		return buff == null ? super.immunities() : GasesImmunity.IMMUNITIES;
 	}
 
-	public HeroSprite getHeroSprite() {
-		return (HeroSprite) getSprite();
+	public HeroSpriteDef getHeroSprite() {
+		return (HeroSpriteDef) getSprite();
 	}
 
 	public interface Doom {
