@@ -95,6 +95,8 @@ public class MobSpriteDef extends MobSprite {
 				};
 			}
 
+			loadAdditionalData(json,film, kind);
+
 		} catch (Exception e) {
 			Game.toast(String.format("Something bad happens when loading %s", name), e);
 			throw new TrackedRuntimeException(String.format("Something bad happens when loading %s", name), e);
@@ -103,7 +105,10 @@ public class MobSpriteDef extends MobSprite {
 		play(idle);
 	}
 
-	private Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
+	private void loadAdditionalData(JSONObject json, TextureFilm film, int kind) {
+	}
+
+	protected Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
 		JSONObject jsonAnim = root.getJSONObject(animKind);
 
 		Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));

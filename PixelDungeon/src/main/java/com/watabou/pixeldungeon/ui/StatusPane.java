@@ -80,8 +80,7 @@ public class StatusPane extends Component {
 		btnMenu = new MenuButton();
 		add( btnMenu );
 		
-		//avatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero );
-		avatar = new Image( Assets.HP_BAR );
+		avatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero );
 		add(avatar);
 
 		blood = new Emitter();

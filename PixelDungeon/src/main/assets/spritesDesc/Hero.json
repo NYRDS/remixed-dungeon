@@ -8,6 +8,7 @@
 "die"     = { "fps" = 20, "looped" = false,    "frames" = [8, 9, 10, 11, 12, 11] },
 "attack"  = { "fps" = 15, "looped" = false,    "frames" = [13, 14, 15, 0] },
 "zap"     = { "fps" = 15, "looped" = false,    "frames" = [13, 14, 15, 0] },
+
 "operate" = { "fps" = 8,  "looped" = false,    "frames" = [8, 9, 10, 11, 12, 11] },
 "fly"     = { "fps" = 1,  "looped" = true,     "frames" = [18] }
 }

@@ -313,7 +313,7 @@ public class GameScene extends PixelScene {
 
 	public static void updateHeroSprite(Hero hero) {
 
-		HeroSpriteDef newHeroSprite = new HeroSpriteDef(hero, false);
+		HeroSpriteDef newHeroSprite = new HeroSpriteDef(hero, true);
 		if (scene.heroSprite != null) {
 			scene.mobs.remove(scene.heroSprite);
 			scene.heroSprite.removeAllStates();

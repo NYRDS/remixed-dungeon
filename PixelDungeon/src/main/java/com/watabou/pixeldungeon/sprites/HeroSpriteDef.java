@@ -2,13 +2,18 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by mike on 16.04.2016.
@@ -22,10 +27,18 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
 
-	public HeroSpriteDef(Hero hero, boolean b) {
+	public HeroSpriteDef(Hero hero, boolean link) {
 		super("spritesDesc/Hero.json",0);
-		link(hero);
+		if(link) {
+			link(hero);
+		}
 	}
+
+	private void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
+		fly     = readAnimation(json, "fly", film);
+		operate = readAnimation(json, "operate", film);
+	}
+
 
 	@Override
 	public void place(int p) {
@@ -81,7 +94,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public Image avatar(Hero hero) {
-		return null;
+		CompositeImage avatar = new CompositeImage(texture);
+		avatar.frame(idle.frames[0]);
+		return avatar;
 	}
 
 }
