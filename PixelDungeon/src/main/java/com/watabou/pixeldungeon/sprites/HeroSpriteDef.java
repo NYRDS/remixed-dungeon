@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.CompositeImage;
@@ -21,6 +22,7 @@ import org.json.JSONObject;
 public class HeroSpriteDef extends MobSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
+	public static final String ARMOR_LAYER = "armor";
 
 	private Animation fly;
 
@@ -34,9 +36,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 	}
 
-	private void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
+	@Override
+	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 		fly     = readAnimation(json, "fly", film);
 		operate = readAnimation(json, "operate", film);
+
+		addLayer(ARMOR_LAYER, TextureCache.get("hero/armor/no_armor.png"));
 	}
 
 
@@ -56,7 +61,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public void updateArmor(Armor armor) {
-
+		if(armor!=null) {
+			setLayerState(ARMOR_LAYER,true);
+			setLayerTexture(ARMOR_LAYER, TextureCache.get("hero/armor/" + armor.getClass().getSimpleName() + ".png"));
+		} else {
+			setLayerState(ARMOR_LAYER,false);
+		}
 	}
 
 	public void jump(int from, int to, Callback callback) {

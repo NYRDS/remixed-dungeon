@@ -105,7 +105,7 @@ public class MobSpriteDef extends MobSprite {
 		play(idle);
 	}
 
-	private void loadAdditionalData(JSONObject json, TextureFilm film, int kind) {
+	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 	}
 
 	protected Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
