@@ -21,7 +21,7 @@ public class SpiritOfPain extends Mob {
 
     @Override
     public int attackSkill(Char target) {
-        return 40;
+        return 30;
     }
 
     @Override

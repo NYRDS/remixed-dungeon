@@ -58,7 +58,7 @@ public class TreacherousSpirit extends Mob {
 
     @Override
     public int attackSkill( Char target ) {
-        return 3500;
+        return 35;
     }
 
     @Override
