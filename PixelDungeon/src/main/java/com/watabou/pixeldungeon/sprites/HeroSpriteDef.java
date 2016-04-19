@@ -22,7 +22,13 @@ import org.json.JSONObject;
 public class HeroSpriteDef extends MobSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
-	public static final String ARMOR_LAYER = "armor";
+
+	// body goes as main texture
+	private static final String LAYER_ARMOR  = "armor";
+	private static final String LAYER_HEAD   = "head";
+	private static final String LAYER_DEATH  = "death";
+	private static final String LAYER_SHIELD = "shield";
+	private static final String LAYER_WEAPON = "weapon";
 
 	private Animation fly;
 
@@ -41,7 +47,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		fly     = readAnimation(json, "fly", film);
 		operate = readAnimation(json, "operate", film);
 
-		addLayer(ARMOR_LAYER, TextureCache.get("hero/armor/no_armor.png"));
+		addLayer(LAYER_ARMOR, TextureCache.get("hero/armor/no_armor.png"));
 	}
 
 
@@ -62,10 +68,10 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	public void updateArmor(Armor armor) {
 		if(armor!=null) {
-			setLayerState(ARMOR_LAYER,true);
-			setLayerTexture(ARMOR_LAYER, TextureCache.get("hero/armor/" + armor.getClass().getSimpleName() + ".png"));
+			setLayerState(LAYER_ARMOR,true);
+			setLayerTexture(LAYER_ARMOR, TextureCache.get("hero/armor/" + armor.getClass().getSimpleName() + ".png"));
 		} else {
-			setLayerState(ARMOR_LAYER,false);
+			setLayerState(LAYER_ARMOR,false);
 		}
 	}
 
