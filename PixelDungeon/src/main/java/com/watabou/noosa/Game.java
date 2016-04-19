@@ -543,4 +543,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		};
 
 	}
+	public static void displaySaveAndLoadAd(final InterstitialPoint work) {
+		work.returnToWork(true);
+	}
+
+	public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
+		work.returnToWork(true);
+	}
 }
