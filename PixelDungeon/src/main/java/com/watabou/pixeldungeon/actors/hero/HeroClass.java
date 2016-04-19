@@ -19,6 +19,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -121,7 +122,7 @@ public enum HeroClass {
 			hero.collect(new Ankh());
 		}
 
-		hero.collect(new WandOfFlock().upgrade(10).identify());
+		hero.collect(new HeartOfDarkness().identify());
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 
