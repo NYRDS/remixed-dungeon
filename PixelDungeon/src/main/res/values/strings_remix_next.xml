@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Mob descriptions -->
+    <!-- Mobs -->
     <!-- STRINGS OF AzuterronNPC CLASS -->
     <string name="AzuterronNPC_Name">Stranger</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -18,9 +18,13 @@
     <string name="TreacherousSpirit_Name_Objective">Trecherous spirit</string>
     <string name="TreacherousSpirit_Desc">Cloud of living darkness.</string>
 
-    <!-- Item descriptions -->
+    <!-- Items -->
     <!-- STRINGS OF HeartOfDarkness CLASS -->
     <string name="HeartOfDarkness_Name">Heart of darkness</string>
     <string name="HeartOfDarkness_Info">Black pulsating heart of the Trecherous Spirit.</string>
+
+    <!-- Buffs -->
+    <!-- STRINGS OF DarkVeil CLASS -->
+    <string name="DarkVeil_Buff">Dark veil</string>
 
 </resources>
