@@ -33,9 +33,7 @@ import java.util.Set;
 
 public class AzuterronNPC extends NPC {
 
-	{
-		flying = true;
-	}
+	{}
 	
 	private static final String TXT_QUEST_START = Game.getVar(R.string.AzuterronNPC_Quest_Start);
 	private static final String TXT_QUEST_END = Game.getVar(R.string.AzuterronNPC_Quest_End);
@@ -152,29 +150,24 @@ public class AzuterronNPC extends NPC {
 
 		private static boolean completed;
 		private static boolean given;
-		private static boolean processed = false;
+		private static boolean processed;
 
 		private static int depth;
-		private static int left2kill;
 
 		private static final String COMPLETED   = "completed";
 		private static final String NODE		= "azuterron";
-		private static final String LEFT2KILL	= "left2kill";
 		private static final String GIVEN		= "given";
 		private static final String PROCESSED	= "processed";
 		private static final String DEPTH		= "depth";
 
 		public static void storeInBundle( Bundle bundle ) {
-			
 			Bundle node = new Bundle();
 
+				node.put(GIVEN, given);
+				node.put(DEPTH, depth);
+				node.put(PROCESSED, processed);
+				node.put(COMPLETED, completed);
 
-				node.put( LEFT2KILL, left2kill );
-				node.put( GIVEN, given );
-				node.put( DEPTH, depth );
-				node.put( PROCESSED, processed );
-				node.put( COMPLETED, completed );
-			
 			bundle.put( NODE, node );
 		}
 		
@@ -182,11 +175,12 @@ public class AzuterronNPC extends NPC {
 			
 			Bundle node = bundle.getBundle( NODE );
 
-				left2kill = node.getInt( LEFT2KILL );
-				given	= node.getBoolean( GIVEN );
-				depth	= node.getInt( DEPTH );
-				processed	= node.getBoolean( PROCESSED );
-				completed = node.getBoolean( COMPLETED );
+			if (!node.isNull()) {
+			given	= node.getBoolean( GIVEN );
+			depth	= node.getInt( DEPTH );
+			processed	= node.getBoolean( PROCESSED );
+			completed = node.getBoolean( COMPLETED );
+			}
 		}
 
 		public static void process() {
