@@ -39,13 +39,13 @@ public class TreacherousSpirit extends Mob {
     public int attackProc( Char enemy, int damage ) {
         //Summon proc
         if (Random.Int(4) == 1){
-            int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
+            int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());
 
-            if (Dungeon.level.cellValid(larvaPos)) {
-                Yog.Larva larva = new Yog.Larva();
-                larva.setPos(larvaPos);
-                Dungeon.level.spawnMob(larva, 0);
-                Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
+            if (Dungeon.level.cellValid(spiritPos)) {
+                SpiritOfPain spirit = new SpiritOfPain();
+                spirit.setPos(spiritPos);
+                Dungeon.level.spawnMob(spirit, 0);
+                Actor.addDelayed(new Pushing(spirit, getPos(), spirit.getPos()), -1);
             }
         }
         return damage;
@@ -58,7 +58,7 @@ public class TreacherousSpirit extends Mob {
 
     @Override
     public int attackSkill( Char target ) {
-        return 35;
+        return 3500;
     }
 
     @Override

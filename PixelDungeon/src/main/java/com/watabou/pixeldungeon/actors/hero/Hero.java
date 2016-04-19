@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
+import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -62,6 +64,7 @@ import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -1052,6 +1055,18 @@ public class Hero extends Char {
 		Earthroot.Armor armor = buff(Earthroot.Armor.class);
 		if (armor != null) {
 			damage = armor.absorb(damage);
+		}
+
+		if (buff(HeartOfDarkness.HeartOfDarknessBuff.class) != null) {
+			int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());
+
+			if (Dungeon.level.cellValid(spiritPos)) {
+				SpiritOfPain spirit = new SpiritOfPain();
+				spirit.setPos(spiritPos);
+				Dungeon.level.spawnMob(spirit, 0);
+				Actor.addDelayed(new Pushing(spirit, getPos(), spirit.getPos()), -1);
+				Mob.makePet(spirit, this);
+			}
 		}
 
 		if (belongings.armor != null) {
