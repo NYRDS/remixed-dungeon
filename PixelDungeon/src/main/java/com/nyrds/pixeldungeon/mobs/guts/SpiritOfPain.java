@@ -17,6 +17,7 @@ public class SpiritOfPain extends Mob {
         EXP = 0;
 
         state = HUNTING;
+        flying = true;
     }
 
     @Override
