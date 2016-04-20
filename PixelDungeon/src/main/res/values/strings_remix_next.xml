@@ -27,4 +27,9 @@
     <!-- STRINGS OF DarkVeil CLASS -->
     <string name="DarkVeil_Buff">Dark veil</string>
 
+    <!-- Badges -->
+    <string name="Badges_Yog_Slain">Yog-Dzewa slain</string>
+    <string name="Badges_ShadowLord_Slain">Shadow Lord slain</string>
+    <string name="Badges_SpiderQueen_Slain">Spider Queen slain</string>
+
 </resources>

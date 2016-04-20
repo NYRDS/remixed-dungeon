@@ -1,7 +1,9 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -75,5 +77,11 @@ public class SpiderQueen extends Boss {
 	@Override
 	public int dr() {
 		return 10;
+	}
+
+	@Override
+	public void die(Object cause) {
+		super.die(cause);
+		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);
 	}
 }

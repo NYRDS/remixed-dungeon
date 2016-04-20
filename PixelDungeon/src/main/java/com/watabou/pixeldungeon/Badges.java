@@ -150,6 +150,9 @@ public class Badges {
 		CHAMPION(Game.getVar(R.string.Badges_Champion), 39, true),
 		SUPPORTER(Game.getVar(R.string.Badges_Supporter), 31, true),
 		IMMURED(Game.getVar(R.string.Badges_Immured), 64),
+		SPIDER_QUEEN_SLAIN(Game.getVar(R.string.Badges_SpiderQueen_Slain), 65),
+		SHADOW_LORD_SLAIN(Game.getVar(R.string.Badges_ShadowLord_Slain), 66),
+		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 67),
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT;
 
 		public boolean meta;

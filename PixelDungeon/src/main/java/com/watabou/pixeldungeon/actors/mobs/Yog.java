@@ -21,6 +21,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -154,6 +155,7 @@ public class Yog extends Boss {
 
 		GameScene.bossSlain();
 		Dungeon.level.drop(new SkeletonKey(), getPos()).sprite.drop();
+		Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
 		super.die(cause);
 
 		yell(Game.getVar(R.string.Yog_Info1));
