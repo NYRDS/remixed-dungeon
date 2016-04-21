@@ -40,14 +40,14 @@ public class ZombieGnoll extends Mob {
 
     @Override
     public int dr() {
-        return 2;
+        return 20;
     }
 
     @Override
     public void die(Object cause) {
         super.die(cause);
 
-        if (Random.Int(5) == 1){
+        if (Random.Int(100) > 37){
             int gnollPosition = this.getPos();
 
             if (Dungeon.level.cellValid(gnollPosition)) {
