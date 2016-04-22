@@ -12,7 +12,10 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.utils.Bundle;
+import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 /**
@@ -20,7 +23,7 @@ import com.watabou.utils.Random;
  */
 public class Wererat extends Mob {
 
-    private static final float TIME_TO_HATCH	= 2f;
+    private static final float TIME_TO_HATCH	= 4f;
 
     {
         hp(ht(100));
@@ -32,6 +35,24 @@ public class Wererat extends Mob {
         loot = Gold.class;
         lootChance = 0.2f;
         pacified = true;
+    }
+
+    private static final String RAT_TRANSFORMING_STATE = "rat_transforming_state";
+
+    private boolean transforming = false;
+
+    @Override
+    public void storeInBundle( Bundle bundle ) {
+        super.storeInBundle( bundle );
+
+        bundle.put(RAT_TRANSFORMING_STATE, transforming);
+    }
+
+    @Override
+    public void restoreFromBundle( Bundle bundle ) {
+
+        super.restoreFromBundle( bundle );
+        transforming = bundle.getBoolean(RAT_TRANSFORMING_STATE);
     }
 
     @Override
@@ -52,20 +73,39 @@ public class Wererat extends Mob {
     @Override
     public boolean act() {
         if (enemySeen){
-            GLog.n(Game.getVar(R.string.Goo_Info1));
-            spend( TIME_TO_HATCH );
-
-            int wereratPos = this.getPos();
-
-            if (Dungeon.level.cellValid(wereratPos)) {
-
-                WereratTransformed wererat = new WereratTransformed();
-                wererat.setPos(wereratPos);
-                Dungeon.level.spawnMob(wererat, 0);
-                Sample.INSTANCE.play(Assets.SND_CURSED);
-                die(this);
+            if(!transforming){
+                spend( TIME_TO_HATCH );
+                transforming = true;
+                if (Dungeon.visible[getPos()]) {
+                    getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
+                    GLog.n(Game.getVar(R.string.Wererat_Info1));
+                }
+                PlayZap();
+                return true;
+            }
+            else {
+                int wereratPos = this.getPos();
+                if (Dungeon.level.cellValid(wereratPos)) {
+                    WereratTransformed wererat = new WereratTransformed();
+                    wererat.setPos(wereratPos);
+                    Dungeon.level.spawnMob(wererat, 0);
+                    Sample.INSTANCE.play(Assets.SND_CURSED);die(this);
+                }
             }
         }
         return super.act();
+    }
+
+    @Override
+    public void onZapComplete() {
+        PlayZap();
+    }
+
+    public void PlayZap(){
+        this.getSprite().zap(getEnemy().getPos(), new Callback() {
+            @Override
+            public void call() {
+            }
+        });
     }
 }
