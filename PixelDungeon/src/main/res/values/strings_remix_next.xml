@@ -18,6 +18,19 @@
     <string name="TreacherousSpirit_Name_Objective">Trecherous spirit</string>
     <string name="TreacherousSpirit_Desc">Cloud of living darkness.</string>
 
+    <!-- STRINGS OF SpiritOfPain CLASS -->
+    <string name="SpiritOfPain_Name">spirit of pain</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
+    <string name="SpiritOfPain_Name_Objective">spirit of pain</string>
+    <string name="SpiritOfPain_Desc">A shard of living darkness.</string>
+
+    <!-- STRINGS OF Wererat CLASS -->
+    <string name="Wererat_Name">Wererat</string>
+    <string name="Wererat_Gender">feminine</string>
+    <string name="Wererat_Name_Objective">Wererat</string>
+    <string name="Wererat_Desc">Cute but slimy.</string>
+    <string name="Wererat_Info1">Wererat is twiching violently.</string>
+
     <!-- Items -->
     <!-- STRINGS OF HeartOfDarkness CLASS -->
     <string name="HeartOfDarkness_Name">Heart of darkness</string>
