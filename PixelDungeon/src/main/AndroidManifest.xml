@@ -4,7 +4,7 @@
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
     android:versionCode="263"
-    android:versionName="remix.23.1.alpha.3" >
+    android:versionName="remix.23.1.pre-alpha.4" >
 
     <uses-sdk tools:overrideLibrary="com.google.android.gms.ads,
                                      com.google.android.gms,

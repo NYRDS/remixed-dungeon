@@ -9,8 +9,10 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 
 import org.json.JSONException;
@@ -27,6 +29,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_ARMOR  = "armor";
 	private static final String LAYER_HEAD   = "head";
 	private static final String LAYER_DEATH  = "death";
+	private static final String LAYER_BODY   = "body";
 	private static final String LAYER_SHIELD = "shield";
 	private static final String LAYER_WEAPON = "weapon";
 
@@ -37,17 +40,41 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	public HeroSpriteDef(Hero hero, boolean link) {
 		super("spritesDesc/Hero.json",0);
+
+		String bodyDescriptor = bodyDescriptor(hero);
+		addLayer(LAYER_BODY, TextureCache.get("hero/body/"+bodyDescriptor+".png"));
+
+		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
+		addLayer(LAYER_HEAD,  TextureCache.get("hero/head/"+classDescriptor+".png"));
+
+		String armorDescriptor = hero.belongings.armor == null ? "no_armor" :  hero.belongings.armor.getClass().getSimpleName();
+		addLayer(LAYER_ARMOR, TextureCache.get("hero/armor/"+armorDescriptor+".png"));
+
+		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
+		addLayer(LAYER_DEATH, TextureCache.get("hero/death/"+deathDescriptor+".png"));
+
+
 		if(link) {
 			link(hero);
 		}
+	}
+
+	private String bodyDescriptor(Hero hero) {
+		if(hero.getGender()== Utils.FEMININE) {
+			return "woman";
+		}
+
+		if(hero.subClass.equals(HeroSubClass.WARLOCK)) {
+			return "warlock";
+		}
+
+		return "man";
 	}
 
 	@Override
 	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 		fly     = readAnimation(json, "fly", film);
 		operate = readAnimation(json, "operate", film);
-
-		addLayer(LAYER_ARMOR, TextureCache.get("hero/armor/no_armor.png"));
 	}
 
 

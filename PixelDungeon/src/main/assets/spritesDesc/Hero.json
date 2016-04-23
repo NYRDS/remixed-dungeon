@@ -1,5 +1,5 @@
 {
-  "texture" = "mage.png",
+  "texture" = "hero/base.png",
   "width"   = 12,
   "height"  = 15,
 
@@ -9,6 +9,6 @@
 "attack"  = { "fps" = 15, "looped" = false,    "frames" = [13, 14, 15, 0] },
 "zap"     = { "fps" = 15, "looped" = false,    "frames" = [13, 14, 15, 0] },
 
-"operate" = { "fps" = 8,  "looped" = false,    "frames" = [8, 9, 10, 11, 12, 11] },
+"operate" = { "fps" = 8,  "looped" = false,    "frames" = [16, 17, 16, 17] },
 "fly"     = { "fps" = 1,  "looped" = true,     "frames" = [18] }
 }
