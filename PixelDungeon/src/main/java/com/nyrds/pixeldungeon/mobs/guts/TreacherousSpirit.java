@@ -4,13 +4,16 @@ import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
@@ -34,13 +37,16 @@ public class TreacherousSpirit extends Mob {
 
     @Override
     public int attackProc( Char enemy, int damage ) {
-        //Roots proc
-        if (Random.Int(3) == 1){
-            Buff.affect(enemy, Roots.class);
-        }
-        //Paralysis proc
-        if (Random.Int(6) == 1){
-            Buff.affect(enemy, Poison.class);
+        //Summon proc
+        if (Random.Int(4) == 1){
+            int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());
+
+            if (Dungeon.level.cellValid(spiritPos)) {
+                SpiritOfPain spirit = new SpiritOfPain();
+                spirit.setPos(spiritPos);
+                Dungeon.level.spawnMob(spirit, 0);
+                Actor.addDelayed(new Pushing(spirit, getPos(), spirit.getPos()), -1);
+            }
         }
         return damage;
     }

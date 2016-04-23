@@ -68,6 +68,7 @@ public class BuffIndicator extends Component {
 	public static final int BLOODLUST   = 32;
 	public static final int RAT_SKULL   = 33;
 	public static final int RATTNESS    = 34;
+	public static final int DARKVEIL    = 35;
 
 	
 	public static final int SIZE	= 7;

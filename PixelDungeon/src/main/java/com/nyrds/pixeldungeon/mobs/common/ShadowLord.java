@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -221,6 +222,7 @@ public class ShadowLord extends Boss {
 		super.die(cause);
 		yell(TXT_DENY);
 		Tools.makeEmptyLevel(Dungeon.level);
+		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 		//Tools.tileSplosion(Dungeon.level, Terrain.EMPTY_DECO, getPos(), 3);
 	}
 }

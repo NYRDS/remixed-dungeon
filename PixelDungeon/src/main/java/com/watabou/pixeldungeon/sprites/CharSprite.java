@@ -190,6 +190,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		turnTo( ch.getPos(), cell );
 		play( zap );
 	}
+
+	public void zap( int cell, Callback callback ) {
+		animCallback = callback;
+		turnTo( ch.getPos(), cell );
+		play( zap );
+	}
 	
 	public void turnTo( int from, int to ) {
 		int fx = from % Dungeon.level.getWidth();
