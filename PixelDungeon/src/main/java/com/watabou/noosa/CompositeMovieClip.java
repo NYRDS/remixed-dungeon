@@ -63,18 +63,6 @@ public class CompositeMovieClip extends MovieClip {
 		if (mLayers != null) {
 			NoosaScript script = NoosaScript.get();
 
-			texture.bind();
-
-			script.camera(camera());
-
-			script.uModel.valueM4(matrix);
-			script.lighting(
-					rm, gm, bm, am,
-					ra, ga, ba, aa);
-
-			updateVerticesBuffer();
-
-			script.drawQuad(verticesBuffer);
 			for (LayerDesc layer : mLayers) {
 				if (layer.enabled) {
 					layer.texture.bind();

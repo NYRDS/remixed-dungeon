@@ -9,23 +9,12 @@ public class CompositeImage extends Image {
 	public CompositeImage() {
 		super();
 	}
-	
-	public CompositeImage( CompositeImage src ) {
-		this();
-		copy( src );
-	}
-	
+
 	public CompositeImage( Object tx ) {
 		this();
 		texture( tx );
 	}
-	
-	public CompositeImage( Object tx, int left, int top, int width, int height ) {
-		this( tx );
-		frame( texture.uvRect( left,  top,  left + width, top + height ) );
-	}
 
-	
 	public void addLayer(Image img) {
 		if(mLayers == null) {
 			mLayers = new ArrayList<>();
@@ -40,19 +29,6 @@ public class CompositeImage extends Image {
 
 		NoosaScript script = NoosaScript.get();
 
-		texture.bind();
-		
-		script.camera( camera() );
-		
-		script.uModel.valueM4( matrix );
-		script.lighting( 
-			rm, gm, bm, am, 
-			ra, ga, ba, aa );
-		
-		updateVerticesBuffer();
-		
-		script.drawQuad( verticesBuffer );
-		
 		if(mLayers!=null) {
 			for(Image img:mLayers) {
 				img.texture.bind();
