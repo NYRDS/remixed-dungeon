@@ -28,19 +28,6 @@ public class CompositeTextureImage extends Image {
 
 		NoosaScript script = NoosaScript.get();
 
-		texture.bind();
-
-		script.camera(camera());
-
-		script.uModel.valueM4(matrix);
-		script.lighting(
-				rm, gm, bm, am,
-				ra, ga, ba, aa);
-
-		updateVerticesBuffer();
-
-		script.drawQuad(verticesBuffer);
-
 		for (SmartTexture img : mLayers) {
 			img.bind();
 			script.drawQuad(verticesBuffer);
