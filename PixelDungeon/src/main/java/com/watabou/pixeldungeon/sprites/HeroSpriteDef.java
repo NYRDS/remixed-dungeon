@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.sprites;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.CompositeImage;
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
@@ -137,8 +137,14 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public Image avatar(Hero hero) {
-		CompositeImage avatar = new CompositeImage(texture);
+		CompositeTextureImage avatar = new CompositeTextureImage(texture);
 		avatar.frame(idle.frames[0]);
+
+		avatar.addLayer(getLayerTexture(LAYER_BODY));
+		avatar.addLayer(getLayerTexture(LAYER_HEAD));
+		avatar.addLayer(getLayerTexture(LAYER_ARMOR));
+		avatar.addLayer(getLayerTexture(LAYER_DEATH));
+
 		return avatar;
 	}
 

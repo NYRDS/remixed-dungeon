@@ -45,6 +45,17 @@ public class CompositeMovieClip extends MovieClip {
 		}
 	}
 
+	protected SmartTexture getLayerTexture(String id) {
+		if(mLayers!=null) {
+			for (LayerDesc layer : mLayers) {
+				if (layer.id.equals(id)) {
+					return layer.texture;
+				}
+			}
+		}
+		return null;
+	}
+
 	public void setLayerState(String id, boolean state) {
 		if (mLayers != null) {
 			for (LayerDesc layer : mLayers) {
