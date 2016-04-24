@@ -128,7 +128,7 @@ public class WndBlacksmith extends Window {
 		protected ItemSlot slot;
 		
 		public Item item = null;
-		
+
 		@Override
 		protected void createChildren() {
 			super.createChildren();

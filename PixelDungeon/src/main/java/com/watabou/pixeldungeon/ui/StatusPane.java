@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
@@ -29,6 +30,7 @@ import com.watabou.noosa.ui.Button;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -39,9 +41,9 @@ import com.watabou.pixeldungeon.windows.WndHero;
 
 public class StatusPane extends Component {
 	
-	private NinePatch shield;
-	private Image avatar;
-	private Emitter blood;
+	private NinePatch             shield;
+	private CompositeTextureImage avatar;
+	private Emitter               blood;
 	
 	private Image hp;
 	private Image exp;
@@ -59,7 +61,15 @@ public class StatusPane extends Component {
 	private Compass compass;
 	
 	private MenuButton btnMenu;
-	
+
+	private Hero hero;
+
+	public StatusPane(Hero _hero) {
+		super(true);
+		hero = _hero;
+		createChildren();
+	}
+
 	@Override
 	protected void createChildren() {
 		
@@ -69,7 +79,7 @@ public class StatusPane extends Component {
 		add( new TouchArea( 0, 1, 30, 30 ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Image sprite = Dungeon.hero.getSprite();
+				Image sprite = hero.getSprite();
 				if (!sprite.isVisible()) {
 					Camera.main.focusOn( sprite );
 				}
@@ -80,7 +90,7 @@ public class StatusPane extends Component {
 		btnMenu = new MenuButton();
 		add( btnMenu );
 		
-		avatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero );
+		avatar = hero.getHeroSprite().avatar();
 		add(avatar);
 
 		blood = new Emitter();
@@ -108,7 +118,7 @@ public class StatusPane extends Component {
 		depth.measure();
 		add( depth );
 		
-		Dungeon.hero.belongings.countIronKeys();
+		hero.belongings.countIronKeys();
 		keys = Text.createBasicText( PixelScene.font1x);
 		keys.hardlight( 0xCACFC2 );
 		add( keys );
@@ -119,7 +129,7 @@ public class StatusPane extends Component {
 		loot = new LootIndicator();
 		add( loot );
 		
-		buffs = new BuffIndicator( Dungeon.hero );
+		buffs = new BuffIndicator( hero );
 		add( buffs );
 	}
 	
@@ -157,7 +167,7 @@ public class StatusPane extends Component {
 	public void update() {
 		super.update();
 		
-		float health = (float)Dungeon.hero.hp() / Dungeon.hero.ht();
+		float health = (float)hero.hp() / hero.ht();
 		
 		if (health == 0) {
 			avatar.tint( 0x000000, 0.6f );
@@ -171,9 +181,9 @@ public class StatusPane extends Component {
 		}
 		
 		hp.Scale().x = health;
-		exp.Scale().x = (width / exp.width) * Dungeon.hero.exp / Dungeon.hero.maxExp();
+		exp.Scale().x = (width / exp.width) * hero.exp / hero.maxExp();
 		
-		if (Dungeon.hero.lvl != lastLvl) {
+		if (hero.lvl != lastLvl) {
 			
 			if (lastLvl != -1) {
 				Emitter emitter = (Emitter)recycle( Emitter.class );
@@ -182,7 +192,7 @@ public class StatusPane extends Component {
 				emitter.burst( Speck.factory( Speck.STAR ), 12 );
 			}
 			
-			lastLvl = Dungeon.hero.lvl;
+			lastLvl = hero.lvl;
 			level.text( Integer.toString( lastLvl ) );
 			level.measure();
 			level.x = PixelScene.align( 27.0f - level.width() / 2 );
@@ -196,24 +206,15 @@ public class StatusPane extends Component {
 			keys.measure();
 			keys.x = width - 8 - keys.width()    - 18;
 		}
+	}
 
-		updateAvatar();
-	}
-	
-	public void updateAvatar(){
-		Image newAvatar = Dungeon.hero.getHeroSprite().avatar( Dungeon.hero );
-		if(newAvatar != null){
-			avatar.copy(newAvatar);
-		}
-	}
-	
 	private static class MenuButton extends Button {
-		
+
 		private Image image;
-		
+
 		public MenuButton() {
 			super();
-			
+
 			width = image.width + 4;
 			height = image.height + 4;
 		}

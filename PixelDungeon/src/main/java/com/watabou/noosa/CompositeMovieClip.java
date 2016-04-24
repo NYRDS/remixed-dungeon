@@ -74,8 +74,6 @@ public class CompositeMovieClip extends MovieClip {
 		if (mLayers != null) {
 			NoosaScript script = NoosaScript.get();
 
-			texture.bind();
-
 			script.camera(camera());
 
 			script.uModel.valueM4(matrix);
@@ -85,7 +83,6 @@ public class CompositeMovieClip extends MovieClip {
 
 			updateVerticesBuffer();
 
-			script.drawQuad(verticesBuffer);
 			for (LayerDesc layer : mLayers) {
 				if (layer.enabled) {
 					layer.texture.bind();

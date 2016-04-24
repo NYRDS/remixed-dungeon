@@ -4,7 +4,6 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.CompositeTextureImage;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
@@ -41,34 +40,38 @@ public class HeroSpriteDef extends MobSpriteDef {
 	public HeroSpriteDef(Hero hero, boolean link) {
 		super("spritesDesc/Hero.json",0);
 
-		String bodyDescriptor = bodyDescriptor(hero);
-		addLayer(LAYER_BODY, TextureCache.get("hero/body/"+bodyDescriptor+".png"));
+		addLayer(LAYER_BODY, TextureCache.get(bodyDescriptor(hero)));
 
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
 		addLayer(LAYER_HEAD,  TextureCache.get("hero/head/"+classDescriptor+".png"));
 
-		String armorDescriptor = hero.belongings.armor == null ? "no_armor" :  hero.belongings.armor.getClass().getSimpleName();
-		addLayer(LAYER_ARMOR, TextureCache.get("hero/armor/"+armorDescriptor+".png"));
+		addLayer(LAYER_ARMOR, TextureCache.get(armorDescriptor(hero.belongings.armor)));
 
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		addLayer(LAYER_DEATH, TextureCache.get("hero/death/"+deathDescriptor+".png"));
-
 
 		if(link) {
 			link(hero);
 		}
 	}
 
+	private String armorDescriptor(Armor armor) {
+		String descriptor = armor == null ? "no_armor" :  armor.getClass().getSimpleName();
+		return "hero/armor/"+descriptor+".png";
+	}
+
 	private String bodyDescriptor(Hero hero) {
+		String descriptor = "man";
+
 		if(hero.getGender()== Utils.FEMININE) {
-			return "woman";
+			descriptor = "woman";
 		}
 
 		if(hero.subClass.equals(HeroSubClass.WARLOCK)) {
-			return "warlock";
+			descriptor = "warlock";
 		}
 
-		return "man";
+		return "hero/body/"+descriptor+".png";
 	}
 
 	@Override
@@ -76,7 +79,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 		fly     = readAnimation(json, "fly", film);
 		operate = readAnimation(json, "operate", film);
 	}
-
 
 	@Override
 	public void place(int p) {
@@ -94,12 +96,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public void updateArmor(Armor armor) {
-		if(armor!=null) {
-			setLayerState(LAYER_ARMOR,true);
-			setLayerTexture(LAYER_ARMOR, TextureCache.get("hero/armor/" + armor.getClass().getSimpleName() + ".png"));
-		} else {
-			setLayerState(LAYER_ARMOR,false);
-		}
+		setLayerTexture(LAYER_ARMOR, TextureCache.get(armorDescriptor(armor)));
+		avatar();
 	}
 
 	public void jump(int from, int to, Callback callback) {
@@ -125,7 +123,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 			if (jumpCallback != null) {
 				jumpCallback.call();
 			}
-
 		} else {
 			super.onComplete(tweener);
 		}
@@ -136,9 +133,15 @@ public class HeroSpriteDef extends MobSpriteDef {
 		return on;
 	}
 
-	public Image avatar(Hero hero) {
-		CompositeTextureImage avatar = new CompositeTextureImage(texture);
-		avatar.frame(idle.frames[0]);
+	private CompositeTextureImage avatar;
+
+	public CompositeTextureImage avatar() {
+		if(avatar==null) {
+			avatar = new CompositeTextureImage(texture);
+			avatar.frame(idle.frames[0]);
+		}
+
+		avatar.clearLayers();
 
 		avatar.addLayer(getLayerTexture(LAYER_BODY));
 		avatar.addLayer(getLayerTexture(LAYER_HEAD));

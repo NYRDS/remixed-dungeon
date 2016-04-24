@@ -156,7 +156,7 @@ public class WndRanking extends WndTabbed {
 			HeroSpriteDef heroSprite = new HeroSpriteDef(hero, false);
 
 			IconTitle title = new IconTitle();
-			title.icon( heroSprite.avatar(hero) );
+			title.icon( heroSprite.avatar() );
 			title.label( Utils.format( TXT_TITLE, hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
 			title.color(0xCC33FF);

@@ -225,7 +225,7 @@ public class GameScene extends PixelScene {
 
 		updateHeroSprite(Dungeon.hero);
 
-		StatusPane sb = new StatusPane();
+		StatusPane sb = new StatusPane(Dungeon.hero);
 		sb.camera = uiCamera;
 		sb.setSize(uiCamera.width, 0);
 		add(sb);
@@ -322,6 +322,7 @@ public class GameScene extends PixelScene {
 		scene.heroSprite = newHeroSprite;
 		scene.heroSprite.place(hero.getPos());
 		hero.updateLook();
+
 		scene.mobs.add(scene.heroSprite);
 	}
 

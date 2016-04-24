@@ -32,7 +32,7 @@ public class GoldIndicator extends Component {
 	private Text tf;
 	
 	private float time;
-	
+
 	@Override
 	protected void createChildren() {
 		tf = Text.createBasicText( PixelScene.font1x );

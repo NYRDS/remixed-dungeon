@@ -33,7 +33,7 @@ public class Archs extends Component {
 	private static float offsF = 0;
 	
 	public boolean reversed = false;
-	
+
 	@Override
 	protected void createChildren() {
 		arcsBg = new SkinnedBlock( 1, 1, Assets.ARCS_BG );

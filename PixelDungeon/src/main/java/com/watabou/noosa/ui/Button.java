@@ -31,7 +31,7 @@ public class Button extends Component {
 	protected float pressTime;
 	
 	protected boolean processed;
-	
+
 	@Override
 	protected void createChildren() {
 		hotArea = new TouchArea( 0, 0, 0, 0 ) {

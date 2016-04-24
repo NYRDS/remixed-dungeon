@@ -6,55 +6,62 @@ import java.util.ArrayList;
 
 public class CompositeTextureImage extends Image {
 
-	private ArrayList<SmartTexture> mLayers;
+	private ArrayList<SmartTexture> mLayers = new ArrayList<>();
 
 	public CompositeTextureImage() {
 		super();
 	}
 
-	public CompositeTextureImage(CompositeTextureImage src ) {
+	public CompositeTextureImage(Object tx) {
 		this();
-		copy( src );
+		texture(tx);
 	}
-
-	public CompositeTextureImage(Object tx ) {
-		this();
-		texture( tx );
-	}
-
 
 	public void addLayer(SmartTexture img) {
-		if(mLayers == null) {
-			mLayers = new ArrayList<>();
-		}
 		mLayers.add(img);
 	}
 
 	@Override
 	public void draw() {
-		
+
 		super.draw();
 
 		NoosaScript script = NoosaScript.get();
 
 		texture.bind();
-		
-		script.camera( camera() );
-		
-		script.uModel.valueM4( matrix );
-		script.lighting( 
-			rm, gm, bm, am, 
-			ra, ga, ba, aa );
-		
+
+		script.camera(camera());
+
+		script.uModel.valueM4(matrix);
+		script.lighting(
+				rm, gm, bm, am,
+				ra, ga, ba, aa);
+
 		updateVerticesBuffer();
-		
-		script.drawQuad( verticesBuffer );
-		
-		if(mLayers!=null) {
-			for(SmartTexture img:mLayers) {
-				img.bind();
-				script.drawQuad( verticesBuffer );
+
+		script.drawQuad(verticesBuffer);
+
+		for (SmartTexture img : mLayers) {
+			img.bind();
+			script.drawQuad(verticesBuffer);
+		}
+	}
+
+	@Override
+	public void copy(Image other) {
+		super.copy(other);
+		if (other instanceof CompositeTextureImage) {
+			CompositeTextureImage src = (CompositeTextureImage) other;
+
+			mLayers.clear();
+
+			for (SmartTexture img : src.mLayers) {
+				addLayer(img);
 			}
 		}
+	}
+
+	public void clearLayers() {
+		mLayers.clear();
 	}
 }

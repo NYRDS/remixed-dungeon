@@ -40,7 +40,7 @@ public class IconTitle extends Component {
 	}
 	
 	public IconTitle( Item item ) {
-		this( 
+		this(
 			new ItemSprite( item ), 
 			Utils.capitalize( item.toString() ) );
 	}
