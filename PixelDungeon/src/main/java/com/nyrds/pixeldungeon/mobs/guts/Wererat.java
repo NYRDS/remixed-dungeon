@@ -29,11 +29,9 @@ public class Wererat extends Mob {
         hp(ht(100));
         defenseSkill = 25;
 
-        EXP = 15;
+        EXP = 1;
         maxLvl = 30;
 
-        loot = Gold.class;
-        lootChance = 0.2f;
         pacified = true;
     }
 
@@ -89,8 +87,9 @@ public class Wererat extends Mob {
                     WereratTransformed wererat = new WereratTransformed();
                     wererat.setPos(wereratPos);
                     Dungeon.level.spawnMob(wererat, 0);
-                    Sample.INSTANCE.play(Assets.SND_CURSED);die(this);
+                    Sample.INSTANCE.play(Assets.SND_CURSED);
                 }
+                die(this);
             }
         }
         return super.act();

@@ -31,6 +31,12 @@
     <string name="Wererat_Desc">Cute but slimy.</string>
     <string name="Wererat_Info1">Wererat is twiching violently.</string>
 
+    <!-- STRINGS OF Wererat CLASS -->
+    <string name="WereratTransformed_Name">Wererat</string>
+    <string name="WereratTransformed_Gender">feminine</string>
+    <string name="WereratTransformed_Name_Objective">Wererat</string>
+    <string name="WereratTransformed_Desc">Not as cute, twice as slimy.</string>
+
     <!-- Items -->
     <!-- STRINGS OF HeartOfDarkness CLASS -->
     <string name="HeartOfDarkness_Name">Heart of darkness</string>
