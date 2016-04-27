@@ -90,6 +90,7 @@ public class Wererat extends Mob {
                     Sample.INSTANCE.play(Assets.SND_CURSED);
                 }
                 die(this);
+                return true;
             }
         }
         return super.act();
