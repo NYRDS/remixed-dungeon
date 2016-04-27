@@ -13,16 +13,18 @@ public class WereratTransformed extends Mob {
         hp(ht(300));
         defenseSkill = 35;
 
-        EXP = 35;
-        maxLvl = 31;
+        EXP = 25;
+        maxLvl = 35;
 
         loot = Gold.class;
-        lootChance = 0.2f;
+        lootChance = 0.7f;
+
+        state = HUNTING;
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(40, 55);
+        return Random.NormalIntRange(40, 60);
     }
 
     @Override
