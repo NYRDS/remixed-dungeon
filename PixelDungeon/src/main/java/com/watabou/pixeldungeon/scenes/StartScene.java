@@ -414,8 +414,8 @@ public class StartScene extends PixelScene {
 		private static final int BASIC_NORMAL = 0x444444;
 		private static final int BASIC_HIGHLIGHTED = 0xCACFC2;
 
-		private static final int MASTERY_NORMAL = 0x666644;
-		private static final int MASTERY_HIGHLIGHTED = 0xFFFF88;
+		private static final int MASTERY_NORMAL = 0x7711AA;
+		private static final int MASTERY_HIGHLIGHTED = 0xCC33FF;
 
 		private static final int WIDTH = 24;
 		private static final int HEIGHT = 28;

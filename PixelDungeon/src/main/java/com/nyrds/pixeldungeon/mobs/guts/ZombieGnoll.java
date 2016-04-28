@@ -18,19 +18,19 @@ import com.watabou.utils.Random;
  */
 public class ZombieGnoll extends Mob {
     {
-        hp(ht(100));
+        hp(ht(140));
         defenseSkill = 25;
 
-        EXP = 15;
-        maxLvl = 30;
+        EXP = 7;
+        maxLvl = 35;
 
         loot = Gold.class;
-        lootChance = 0.2f;
+        lootChance = 0.02f;
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(20, 35);
+        return Random.NormalIntRange(10, 25);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class ZombieGnoll extends Mob {
     public void die(Object cause) {
         super.die(cause);
 
-        if (Random.Int(100) > 37){
+        if (Random.Int(100) > 45){
             int gnollPosition = this.getPos();
 
             if (Dungeon.level.cellValid(gnollPosition)) {
