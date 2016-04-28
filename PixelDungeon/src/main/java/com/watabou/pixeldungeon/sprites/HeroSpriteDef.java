@@ -17,6 +17,9 @@ import com.watabou.utils.Callback;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by mike on 16.04.2016.
  */
@@ -34,24 +37,52 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private Animation fly;
 
+	private static final String[] layersOrder = {
+		LAYER_BODY,
+		LAYER_HEAD,
+		LAYER_ARMOR,
+		LAYER_DEATH
+	};
+
+	Map<String,String> layersDesc = new HashMap<>();
+
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
+
+	public HeroSpriteDef(String[] lookDesc){
+		super("spritesDesc/Hero.json",0);
+		applyLayersDesc(lookDesc);
+	}
 
 	public HeroSpriteDef(Hero hero, boolean link) {
 		super("spritesDesc/Hero.json",0);
 
-		addLayer(LAYER_BODY, TextureCache.get(bodyDescriptor(hero)));
-
-		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
-		addLayer(LAYER_HEAD,  TextureCache.get("hero/head/"+classDescriptor+".png"));
-
-		addLayer(LAYER_ARMOR, TextureCache.get(armorDescriptor(hero.belongings.armor)));
-
-		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
-		addLayer(LAYER_DEATH, TextureCache.get("hero/death/"+deathDescriptor+".png"));
-
+		createLayersDesc(hero);
+		applyLayersDesc(getLayersDesc());
 		if(link) {
 			link(hero);
+		}
+	}
+
+	public void createLayersDesc(Hero hero) {
+
+		layersDesc.clear();
+		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
+
+		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
+		layersDesc.put(LAYER_HEAD,"hero/head/"+classDescriptor+".png");
+		layersDesc.put(LAYER_ARMOR,armorDescriptor(hero.belongings.armor));
+		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
+		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
+	}
+
+	public String[] getLayersDesc() {
+		return layersDesc.values().toArray(new String[0]);
+	}
+
+	public void applyLayersDesc(String[] lookDesc) {
+		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
+			addLayer(layersOrder[i],TextureCache.get(lookDesc[i]));
 		}
 	}
 
@@ -83,7 +114,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 	@Override
 	public void place(int p) {
 		super.place(p);
-		Camera.main.target = this;
+		if(ch instanceof Hero) {
+			Camera.main.target = this;
+		}
 	}
 
 	@Override
@@ -96,7 +129,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public void updateArmor(Armor armor) {
-		setLayerTexture(LAYER_ARMOR, TextureCache.get(armorDescriptor(armor)));
+		layersDesc.put(LAYER_ARMOR,armorDescriptor(armor));
+		applyLayersDesc(getLayersDesc());
 		avatar();
 	}
 
@@ -150,5 +184,4 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		return avatar;
 	}
-
 }
