@@ -23,7 +23,6 @@ import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -37,7 +36,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
-import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
@@ -224,64 +222,6 @@ public enum HeroClass {
 		return title;
 	}
 
-	public static String spritesheet(Hero hero) {
-		switch (hero.heroClass) {
-		case WARRIOR:
-			switch (hero.subClass) {
-			case BERSERKER:
-				if (hero.inFury()) {
-					return Assets.WARRIOR_BERSERK_IN_FURY;
-				}
-				return Assets.WARRIOR_BERSERK;
-			case GLADIATOR:
-				return Assets.WARRIOR_GLADIATOR;
-
-			default:
-				return Assets.WARRIOR;
-			}
-		case MAGE:
-			switch (hero.subClass) {
-			case BATTLEMAGE:
-				return Assets.MAGE_BATTLEMAGE;
-			case WARLOCK:
-				return Assets.MAGE_WARLOCK;
-			default:
-				return Assets.MAGE;
-			}
-		case ROGUE:
-			switch (hero.subClass) {
-			case ASSASSIN:
-				return Assets.ROGUE_ASSASIN;
-			case FREERUNNER:
-				return Assets.ROGUE_FREERUNNER;
-			default:
-				return Assets.ROGUE;
-			}
-		case HUNTRESS:
-			switch (hero.subClass) {
-			case SNIPER:
-				return Assets.HUNTRESS_SNIPER;
-			case WARDEN:
-				return Assets.HUNTRESS_WARDEN;
-
-			default:
-				return Assets.HUNTRESS;
-			}
-		case ELF:
-			switch (hero.subClass) {
-			case SCOUT:
-				return Assets.ELF_SCOUT;
-			case SHAMAN:
-				return Assets.ELF_SHAMAN;
-
-			default:
-				return Assets.ELF;
-			}
-		}
-
-		return null;
-	}
-
 	public String[] perks() {
 
 		switch (this) {
@@ -322,55 +262,5 @@ public enum HeroClass {
 	public static HeroClass restoreFromBundle(Bundle bundle) {
 		String value = bundle.getString(CLASS);
 		return value.length() > 0 ? valueOf(value) : ROGUE;
-	}
-
-	public static boolean isSpriteSheet(String spriteKind) {
-		if (spriteKind.equals(Assets.WARRIOR))
-			return true;
-
-		if (spriteKind.equals(Assets.WARRIOR_BERSERK))
-			return true;
-
-		if (spriteKind.equals(Assets.WARRIOR_BERSERK_IN_FURY))
-			return true;
-
-		if (spriteKind.equals(Assets.WARRIOR_GLADIATOR))
-			return true;
-
-		if (spriteKind.equals(Assets.MAGE))
-			return true;
-
-		if (spriteKind.equals(Assets.MAGE_BATTLEMAGE))
-			return true;
-
-		if (spriteKind.equals(Assets.MAGE_WARLOCK))
-			return true;
-
-		if (spriteKind.equals(Assets.ROGUE))
-			return true;
-
-		if (spriteKind.equals(Assets.ROGUE_ASSASIN))
-			return true;
-
-		if (spriteKind.equals(Assets.ROGUE_FREERUNNER))
-			return true;
-
-		if (spriteKind.equals(Assets.HUNTRESS))
-			return true;
-
-		if (spriteKind.equals(Assets.HUNTRESS_SNIPER))
-			return true;
-
-		if (spriteKind.equals(Assets.HUNTRESS_WARDEN))
-			return true;
-
-		if (spriteKind.equals(Assets.ELF))
-			return true;
-
-		if (spriteKind.equals(Assets.ELF_SCOUT))
-			return true;
-
-		return spriteKind.equals(Assets.ELF_SHAMAN);
-
 	}
 }

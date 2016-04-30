@@ -77,7 +77,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public String[] getLayersDesc() {
-		return layersDesc.values().toArray(new String[0]);
+		java.util.Collection<String> var = layersDesc.values();
+		return var.toArray(new String[var.size()]);
 	}
 
 	public void applyLayersDesc(String[] lookDesc) {
