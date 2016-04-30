@@ -110,8 +110,13 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		HeroSpriteDef s = new HeroSpriteDef(lookDesc);
-		return s;
+		if(lookDesc!=null) {
+			HeroSpriteDef s = new HeroSpriteDef(lookDesc);
+			return s;
+		} else { // handle old saves
+			lookDesc = Dungeon.hero.getHeroSprite().getLayersDesc();
+			return sprite();
+		}
 	}
 
 	@Override
