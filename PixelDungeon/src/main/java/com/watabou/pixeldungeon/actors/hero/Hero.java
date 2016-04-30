@@ -1097,7 +1097,6 @@ public class Hero extends Char {
 		if (subClass == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
 			if (buff(Fury.class) == null) {
 				Buff.affect(this, Fury.class);
-				GameScene.updateHeroSprite(this);
 				ready();
 			}
 		}
@@ -1377,10 +1376,6 @@ public class Hero extends Char {
 	@Override
 	public void remove(Buff buff) {
 		super.remove(buff);
-
-		if (buff instanceof Fury) {
-			GameScene.updateHeroSprite(this);
-		}
 
 		BuffIndicator.refreshHero();
 	}
