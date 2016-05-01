@@ -44,7 +44,7 @@ public class StatusPane extends Component {
 	private NinePatch             shield;
 	private CompositeTextureImage avatar;
 	private Emitter               blood;
-	
+
 	private Image hp;
 	private Image exp;
 	
@@ -102,8 +102,8 @@ public class StatusPane extends Component {
 		
 		compass = new Compass( Dungeon.level.exit );
 		add( compass );
-		
-		hp = new Image( Assets.HP_BAR );	
+
+		hp = new Image( Assets.HP_BAR );
 		add( hp );
 		
 		exp = new Image( Assets.XP_BAR );
@@ -145,7 +145,7 @@ public class StatusPane extends Component {
 		
 		compass.x = avatar.x + avatar.width / 2 - compass.origin.x;
 		compass.y = avatar.y + avatar.height / 2 - compass.origin.y;
-		
+
 		hp.x = 30;
 		hp.y = 3;
 		
@@ -168,7 +168,7 @@ public class StatusPane extends Component {
 		super.update();
 		
 		float health = (float)hero.hp() / hero.ht();
-		
+
 		if (health == 0) {
 			avatar.tint( 0x000000, 0.6f );
 			blood.on = false;
@@ -179,7 +179,7 @@ public class StatusPane extends Component {
 			avatar.resetColor();
 			blood.on = false;
 		}
-		
+
 		hp.Scale().x = health;
 		exp.Scale().x = (width / exp.width) * hero.exp / hero.maxExp();
 		

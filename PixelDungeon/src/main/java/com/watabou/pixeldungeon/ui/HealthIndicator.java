@@ -30,10 +30,10 @@ public class HealthIndicator extends Component {
 	public static HealthIndicator instance;
 	
 	private Char target;
-	
+
 	private Image bg;
 	private Image level;
-	
+
 	public HealthIndicator() {
 		super();
 		
@@ -45,7 +45,7 @@ public class HealthIndicator extends Component {
 		bg = new Image( TextureCache.createSolid( 0xFFcc0000 ) );
 		bg.Scale().y = HEIGHT;
 		add( bg );
-		
+
 		level = new Image( TextureCache.createSolid( 0xFF00cc00 ) );
 		level.Scale().y = HEIGHT;
 		add( level );

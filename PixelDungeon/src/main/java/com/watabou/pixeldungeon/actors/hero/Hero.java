@@ -169,7 +169,7 @@ public class Hero extends Char {
 	private int STR;
 	public boolean weakened = false;
 
-	public float awareness;
+	private float awareness;
 
 	public int lvl = 1;
 	public int exp = 0;
@@ -412,7 +412,7 @@ public class Hero extends Char {
 		return dr;
 	}
 
-	public boolean inFury() {
+	private boolean inFury() {
 		return (buff(Fury.class) != null) || (buff(CorpseDust.UndeadRageAuraBuff.class) != null);
 	}
 
@@ -1391,7 +1391,6 @@ public class Hero extends Char {
 
 	@Override
 	public void die(Object cause) {
-
 		curAction = null;
 
 		DewVial.autoDrink(this);
