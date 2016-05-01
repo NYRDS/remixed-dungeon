@@ -26,7 +26,23 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
+import com.watabou.pixeldungeon.items.armor.BerserkArmor;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
+import com.watabou.pixeldungeon.items.armor.ElfArmor;
+import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
+import com.watabou.pixeldungeon.items.armor.HuntressArmor;
+import com.watabou.pixeldungeon.items.armor.LeatherArmor;
+import com.watabou.pixeldungeon.items.armor.MageArmor;
+import com.watabou.pixeldungeon.items.armor.MailArmor;
+import com.watabou.pixeldungeon.items.armor.PlateArmor;
+import com.watabou.pixeldungeon.items.armor.RogueArmor;
+import com.watabou.pixeldungeon.items.armor.ScaleArmor;
+import com.watabou.pixeldungeon.items.armor.ScoutArmor;
+import com.watabou.pixeldungeon.items.armor.ShamanArmor;
+import com.watabou.pixeldungeon.items.armor.SniperArmor;
+import com.watabou.pixeldungeon.items.armor.WardenArmor;
+import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
@@ -111,22 +127,39 @@ public enum HeroClass {
 
 	private static void initDebug(Hero hero) {
 		for(int i = 0;i<100;i++) {
-			hero.collect(new ScrollOfMagicMapping());
-			hero.collect(new ScrollOfIdentify());
-			hero.collect(new ScrollOfDomination());
-			hero.collect(new ScrollOfMirrorImage());
-			hero.collect(new PotionOfLiquidFlame());
-			hero.collect(new PotionOfToxicGas());
-			hero.collect(new Ankh());
+			//hero.collect(new ScrollOfMagicMapping());
+			//hero.collect(new ScrollOfIdentify());
+			//hero.collect(new ScrollOfDomination());
+			//hero.collect(new ScrollOfMirrorImage());
+			//hero.collect(new PotionOfLiquidFlame());
+			//hero.collect(new PotionOfToxicGas());
+			//hero.collect(new Ankh());
 		}
 
-		hero.collect(new HeartOfDarkness());
+		//hero.collect(new HeartOfDarkness());
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 
-		hero.collect(new Glaive().upgrade(100));
+		//hero.collect(new Glaive().upgrade(100));
+		hero.collect(new TomeOfMastery());
+		hero.collect(new ScaleArmor().upgrade(100));
+		hero.collect(new LeatherArmor().upgrade(100));
+		hero.collect(new PlateArmor().upgrade(100));
+		hero.collect(new MailArmor().upgrade(100));
+		hero.collect(new BattleMageArmor().upgrade(100));
+		hero.collect(new BerserkArmor().upgrade(100));
+		hero.collect(new ElfArmor().upgrade(100));
+		hero.collect(new GladiatorArmor().upgrade(100));
+		hero.collect(new MageArmor().upgrade(100));
+		hero.collect(new HuntressArmor().upgrade(100));
+		hero.collect(new RogueArmor().upgrade(100));
+		hero.collect(new ScoutArmor().upgrade(100));
+		hero.collect(new ShamanArmor().upgrade(100));
+		hero.collect(new SniperArmor().upgrade(100));
+		hero.collect(new WardenArmor().upgrade(100));
+		hero.collect(new WarriorArmor().upgrade(100));
 
-		hero.collect(new ChaosCrystal());
+		//hero.collect(new ChaosCrystal());
 		hero.ht(1000);
 		hero.hp(1000);
 		hero.attackSkill = 1000;
