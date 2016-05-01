@@ -23,6 +23,7 @@ public class WardenArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.HuntressArmor_ACSpecial); 
 	
 	{
+		name = Game.getVar(R.string.HuntressArmor_Name);
 		image = 16;
 	}
 	

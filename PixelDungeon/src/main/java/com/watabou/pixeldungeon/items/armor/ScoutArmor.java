@@ -20,7 +20,9 @@ public class ScoutArmor extends ClassArmor {
 	private static final String TXT_NOT_ELF = Game.getVar(R.string.ElfArmor_NotElf);
 	private static final String AC_SPECIAL = Game.getVar(R.string.ElfArmor_ACSpecial); 
 	
-	public ScoutArmor() {
+	public ScoutArmor()
+	{
+		name = Game.getVar(R.string.ElfArmor_Name);
 		image = 18;
 	}	
 	

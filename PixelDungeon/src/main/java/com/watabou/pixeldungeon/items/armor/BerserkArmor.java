@@ -32,6 +32,7 @@ public class BerserkArmor extends ClassArmor {
 	private static final String TXT_NOT_WARRIOR	= Game.getVar(R.string.WarriorArmor_NotWarrior);
 	
 	{
+		name = Game.getVar(R.string.WarriorArmor_Name);
 		image = 6;
 	}
 	

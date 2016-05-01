@@ -23,6 +23,7 @@ public class BattleMageArmor extends ClassArmor {
 	private static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
 	
 	{
+		name = Game.getVar(R.string.MageArmor_Name);
 		image = 12;
 	}
 	

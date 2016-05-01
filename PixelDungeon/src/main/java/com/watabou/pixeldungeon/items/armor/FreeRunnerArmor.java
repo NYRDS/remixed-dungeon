@@ -26,6 +26,7 @@ public class FreeRunnerArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.RogueArmor_ACSpecial); 
 	
 	{
+		name = Game.getVar(R.string.RogueArmor_Name);
 		image = 9;
 	}
 	
