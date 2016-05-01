@@ -45,7 +45,7 @@ public class Mimic extends Mob {
 		
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
-	
+
 	public ArrayList<Item> items;
 	
 	private static final String LEVEL	= "level";

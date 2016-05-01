@@ -26,9 +26,9 @@ import android.view.MotionEvent;
 public class Touchscreen {
 	
 	public static Signal<Touch> event = new Signal<>(true);
-	
+
 	public static HashMap<Integer,Touch> pointers = new HashMap<>();
-	
+
 	public static float x;
 	public static float y;
 	public static boolean touched;

@@ -28,7 +28,7 @@ public class Tilemap extends Visual {
 
 	private SmartTexture texture;
 	private TextureFilm tileset;
-	
+
 	protected int[] data;
 	protected int mapWidth;
 	protected int mapHeight;
@@ -36,7 +36,7 @@ public class Tilemap extends Visual {
 	
 	private float cellW;
 	private float cellH;
-	
+
 	protected float[] vertices;
 	protected FloatBuffer quads;
 	

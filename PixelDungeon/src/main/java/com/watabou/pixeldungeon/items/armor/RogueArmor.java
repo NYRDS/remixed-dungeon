@@ -70,7 +70,7 @@ public class RogueArmor extends ClassArmor {
 	public String desc() {
 		return Game.getVar(R.string.RogueArmor_Desc);
 	}
-	
+
 	protected static CellSelector.Listener teleporter = new  CellSelector.Listener() {
 		
 		@Override

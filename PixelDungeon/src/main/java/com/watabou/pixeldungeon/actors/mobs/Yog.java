@@ -80,9 +80,9 @@ public class Yog extends Boss {
 		Mob fist1, fist2, fist3;
 
 		do{
-			name1 = new Random().element(secondaryBossArray);
-			name2 = new Random().element(secondaryBossArray);
-			name3 = new Random().element(secondaryBossArray);
+			name1 = Random.element(secondaryBossArray);
+			name2 = Random.element(secondaryBossArray);
+			name3 = Random.element(secondaryBossArray);
 		} while (name1 == name2 || name2 == name3 || name1 == name3);
 
 		Class<? extends Mob> boss1 = MobFactory.mobClassByName(name1);

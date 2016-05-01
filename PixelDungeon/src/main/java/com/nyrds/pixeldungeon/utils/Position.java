@@ -11,8 +11,8 @@ public class Position implements Bundlable {
 	public String levelId;
 	public int    xs         = 32;
 	public int    ys         = 32;
-	
-	
+
+
 	static final String LEVEL_DEPTH = "levelDepth";
 	static final String LEVEL_KIND  = "levelKind";
 	static final String LEVEL_ID    = "levelId";

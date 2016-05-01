@@ -31,7 +31,7 @@ public class IconTitle extends Component {
 	private static final float FONT_SIZE = 9;
 	
 	private static final float GAP = 2;
-	
+
 	protected Image imIcon;
 	protected Text tfLabel;
 	

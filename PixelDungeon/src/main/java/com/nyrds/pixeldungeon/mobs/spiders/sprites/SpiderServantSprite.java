@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.sprites.MobSprite;
 
 public class SpiderServantSprite extends MobSprite {
-	
+
 	static final int framesInRow = 16;
 	
 	@Override

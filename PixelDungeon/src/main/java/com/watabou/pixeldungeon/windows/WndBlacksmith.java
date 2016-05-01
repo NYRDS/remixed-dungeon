@@ -102,7 +102,7 @@ public class WndBlacksmith extends Window {
 		
 		resize( WIDTH, (int)btnReforge.bottom() );
 	}
-	
+
 	protected WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {

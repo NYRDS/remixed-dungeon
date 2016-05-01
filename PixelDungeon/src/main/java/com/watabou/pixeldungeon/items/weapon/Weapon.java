@@ -58,7 +58,7 @@ public class Weapon extends KindOfWeapon {
 	public int		STR	= 10;
 	public float	ACU	= 1;
 	public float	DLY	= 1f;
-	
+
 	protected int  gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
 
 	

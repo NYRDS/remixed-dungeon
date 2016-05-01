@@ -44,7 +44,7 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
 
 public class Potion extends Item {
-	
+
 	public static final String AC_DRINK	  = Game.getVar(R.string.Potion_ACDrink);
 	public static final String AC_MOISTEN = Game.getVar(R.string.Potion_ACMoisten);
 	
@@ -57,7 +57,7 @@ public class Potion extends Item {
 	
 	private static final String TXT_SELECT_FOR_MOISTEN = Game.getVar(R.string.Potion_SelectForMoisten);
 	private static final String TXT_MOISTEN_USELESS    = Game.getVar(R.string.Potion_MoistenUseless);
-	
+
 	protected static final String TXT_RUNE_DISAPPEARED    = Game.getVar(R.string.Potion_RuneDissaperaed);
 	protected static final String TXT_ARROW_MOISTEN       = Game.getVar(R.string.Potion_ArrowMoisten);
 	protected static final String TXT_ITEM_FLIES_AWAY     = Game.getVar(R.string.Potion_ItemFliesAway);
@@ -318,7 +318,7 @@ public class Potion extends Item {
 		return handler.known().size() == potions.length;
 	}
 	
-	protected void splash( int cell ) {		
+	protected void splash( int cell ) {
 		final int color = ItemSprite.pick( image, 8, 10 );
 		Splash.at( cell, color, 5 );
 	}

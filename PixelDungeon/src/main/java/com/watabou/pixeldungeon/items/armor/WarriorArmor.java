@@ -75,7 +75,7 @@ public class WarriorArmor extends ClassArmor {
 	public String desc() {
 		return Game.getVar(R.string.WarriorArmor_Desc);
 	}
-	
+
 	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
 		
 		@Override

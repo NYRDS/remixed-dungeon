@@ -34,7 +34,7 @@ public class Codex extends Item {
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Codex_Blinded);
 	
 	public static final float TIME_TO_READ = 1;
-	
+
 	public static final String AC_READ	= Game.getVar(R.string.Codex_ACRead);
 
 	private static String idTag = "id";

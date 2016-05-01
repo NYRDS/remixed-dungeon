@@ -55,7 +55,7 @@ public class PixelScene extends Scene {
 
 	public static Font font1x;
 	public static Font font25x;
-	
+
 	public static Font font;
 
 	@Override

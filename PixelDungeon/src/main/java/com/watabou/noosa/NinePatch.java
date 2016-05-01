@@ -26,20 +26,20 @@ import com.watabou.glwrap.Quad;
 import java.nio.FloatBuffer;
 
 public class NinePatch extends Visual {
-	
+
 	public SmartTexture texture;
-	
+
 	protected float[] vertices;
 	protected FloatBuffer verticesBuffer;
-	
+
 	protected RectF outterF;
 	protected RectF innerF;
-	
+
 	protected int marginLeft;
 	protected int marginRight;
 	protected int marginTop;
 	protected int marginBottom;
-	
+
 	protected float nWidth;
 	protected float nHeight;
 	

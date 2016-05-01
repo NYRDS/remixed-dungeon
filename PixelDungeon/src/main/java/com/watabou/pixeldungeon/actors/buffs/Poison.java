@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public class Poison extends Buff implements Hero.Doom {
-	
+
 	protected float left;
 	
 	private static final String LEFT	= "left";

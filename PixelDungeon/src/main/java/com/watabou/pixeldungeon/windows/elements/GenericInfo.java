@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
 public class GenericInfo {
-	
+
 	static final int WIDTH      = 120;
 	static final int GAP        = 2;
 	static final int MAX_HEIGHT = 120;

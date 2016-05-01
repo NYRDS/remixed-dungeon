@@ -18,14 +18,14 @@
 package com.watabou.noosa;
 
 public class Gizmo {
-	
+
 	public boolean exists;
 	public boolean alive;
 	public boolean active;
 	private boolean visible;
 	
 	private Group parent;
-	
+
 	public Camera camera;
 	
 	public Gizmo() {

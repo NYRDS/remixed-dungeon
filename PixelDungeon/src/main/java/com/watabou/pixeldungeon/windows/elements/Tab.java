@@ -18,7 +18,7 @@ public class Tab extends Button {
 	protected final int CUT = 5;
 	
 	protected boolean selected;
-	
+
 	protected NinePatch bg;
 	
 	@Override

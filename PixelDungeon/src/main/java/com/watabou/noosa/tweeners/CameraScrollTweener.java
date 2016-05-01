@@ -23,7 +23,7 @@ import com.watabou.utils.PointF;
 public class CameraScrollTweener extends Tweener {
 
 	public Camera camera;
-	
+
 	public PointF start;
 	public PointF end;
 	

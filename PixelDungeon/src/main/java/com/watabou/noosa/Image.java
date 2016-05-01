@@ -29,7 +29,7 @@ public class Image extends Visual {
 
 	public SmartTexture texture;
 	protected RectF frame;
-	
+
 	public boolean flipHorizontal;
 	public boolean flipVertical;
 	

@@ -75,11 +75,11 @@ public class WndBag extends WndTabbed {
 		FUSEABLE, 
 		UPGRADABLE_WEAPON
 	}
-	
+
 
 	protected static final int COLS_P	= 4;
 	protected static final int COLS_L	= 6;
-	
+
 	protected static final int SLOT_SIZE	= 28;
 	protected static final int SLOT_MARGIN	= 1;
 	
@@ -89,7 +89,7 @@ public class WndBag extends WndTabbed {
 	private Listener listener;
 	private WndBag.Mode mode;
 	private String title;
-	
+
 	protected int count;
 	protected int col;
 	protected int row;

@@ -67,17 +67,17 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 	protected Animation operate;
 	protected Animation zap;
 	protected Animation die;
-	
+
 	protected Callback animCallback;
-	
+
 	protected Tweener motion;
-	
+
 	protected Emitter burning;
 	protected Emitter levitation;
-	
+
 	protected IceBlock iceBlock;
 	protected TorchHalo halo;
-	
+
 	protected EmoIcon emo;
 	
 	private float flashTime = 0;

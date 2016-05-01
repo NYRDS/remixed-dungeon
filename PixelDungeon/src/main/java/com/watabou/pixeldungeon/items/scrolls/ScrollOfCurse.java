@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.utils.Random;
 
 public class ScrollOfCurse extends Scroll {
-	
+
 	static Class<?> badBuffs[] = {
 			Blindness.class,
 			Charm.class,
