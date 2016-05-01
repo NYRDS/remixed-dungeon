@@ -38,7 +38,7 @@ public enum HeroSubClass {
 	private String title;
 	private String desc;
 	
-	private HeroSubClass( String title, String desc ) {
+	HeroSubClass(String title, String desc) {
 		this.title = title;
 		this.desc  = desc;
 	}

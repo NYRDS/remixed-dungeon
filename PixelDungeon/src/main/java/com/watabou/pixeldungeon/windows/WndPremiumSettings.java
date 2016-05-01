@@ -55,9 +55,9 @@ public class WndPremiumSettings extends Window {
 									PixelDungeon.scene().add(
 											new WndMessage(NOT_AVALIABLE));
 								}
-							};
+							}
 						});
-			};
+			}
 		};
 
 		btn.setRect(0, curBottom, WIDTH, BTN_HEIGHT);

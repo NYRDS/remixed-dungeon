@@ -136,7 +136,7 @@ public class SurfaceScene extends PixelScene {
 		window.add( new TouchArea( sky ) {
 			protected void onClick( Touch touch ) {
 				pet.jump();
-			};
+			}
 		} );
 		
 		for (int i=0; i < nPatches; i++) {

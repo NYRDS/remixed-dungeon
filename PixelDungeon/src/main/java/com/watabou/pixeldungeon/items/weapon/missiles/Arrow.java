@@ -105,5 +105,5 @@ public abstract class Arrow extends MissileWeapon {
 	@Override
 	public String imageFile() {
 		return "items/arrows.png";
-	};
+	}
 }

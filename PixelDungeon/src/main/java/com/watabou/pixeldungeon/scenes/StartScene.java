@@ -566,7 +566,7 @@ public class StartScene extends PixelScene {
 						super.onBackPressed();
 						image.copy(Icons.get(PixelDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
 								: Icons.CHALLENGE_OFF));
-					};
+					}
 				});
 			} else {
 				StartScene.this.add(new WndMessage(TXT_WIN_THE_GAME));

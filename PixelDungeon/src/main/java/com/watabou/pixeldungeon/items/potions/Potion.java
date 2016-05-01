@@ -161,7 +161,7 @@ public class Potion extends Item {
 								if (index == 0) {
 									drink( hero );
 								}
-							};
+							}
 						}
 					);
 					
@@ -197,7 +197,7 @@ public class Potion extends Item {
 						if (index == 0) {
 							Potion.super.doThrow( hero );
 						}
-					};
+					}
 				}
 			);
 			
