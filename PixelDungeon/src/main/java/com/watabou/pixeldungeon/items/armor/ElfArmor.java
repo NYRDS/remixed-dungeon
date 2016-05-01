@@ -20,7 +20,7 @@ public class ElfArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.ElfArmor_ACSpecial); 
 	
 	public ElfArmor() {
-		image = 15;
+		image = 17;
 	}	
 	
 	@Override

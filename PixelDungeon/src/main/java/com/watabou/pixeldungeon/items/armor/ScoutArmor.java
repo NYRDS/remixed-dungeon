@@ -21,7 +21,7 @@ public class ScoutArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.ElfArmor_ACSpecial); 
 	
 	public ScoutArmor() {
-		image = 16;
+		image = 18;
 	}	
 	
 	@Override

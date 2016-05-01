@@ -39,7 +39,7 @@ public class HuntressArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.HuntressArmor_ACSpecial); 
 	
 	{
-		image = 12;
+		image = 14;
 	}
 	
 	private HashMap<Callback, Mob> targets = new HashMap<>();

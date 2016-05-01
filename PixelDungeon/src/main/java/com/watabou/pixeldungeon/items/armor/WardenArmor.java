@@ -23,7 +23,7 @@ public class WardenArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.HuntressArmor_ACSpecial); 
 	
 	{
-		image = 14;
+		image = 16;
 	}
 	
 	private HashMap<Callback, Mob> targets = new HashMap<>();

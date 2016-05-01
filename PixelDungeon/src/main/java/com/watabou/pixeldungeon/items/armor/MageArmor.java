@@ -39,7 +39,7 @@ public class MageArmor extends ClassArmor {
 	private static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
 	
 	{
-		image = 9;
+		image = 11;
 	}
 	
 	@Override

@@ -23,7 +23,7 @@ public class WarlockArmor extends ClassArmor {
 	private static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
 	
 	{
-		image = 11;
+		image = 13;
 	}
 	
 	@Override

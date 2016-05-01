@@ -21,7 +21,7 @@ public class ShamanArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.ElfArmor_ACSpecial); 
 	
 	public ShamanArmor() {
-		image = 17;
+		image = 19;
 	}	
 	
 	@Override
