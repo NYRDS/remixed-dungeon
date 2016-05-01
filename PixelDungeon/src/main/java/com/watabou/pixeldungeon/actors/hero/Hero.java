@@ -1650,7 +1650,7 @@ public class Hero extends Char {
 	}
 
 	public void updateLook() {
-		getHeroSprite().updateArmor(belongings.armor);
+		getHeroSprite().heroUpdated(this);
 		ready();
 	}
 

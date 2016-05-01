@@ -130,7 +130,7 @@ public class TomeOfMastery extends Item {
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		
 		getCurUser().checkIfFurious();
-		GameScene.updateHeroSprite(getCurUser());
+		getCurUser().getHeroSprite().heroUpdated(getCurUser());
 		
 		getCurUser().spendAndNext( TomeOfMastery.TIME_TO_READ );
 		getCurUser().busy();

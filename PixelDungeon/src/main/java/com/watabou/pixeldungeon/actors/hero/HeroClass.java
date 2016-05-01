@@ -120,6 +120,8 @@ public enum HeroClass {
 			hero.collect(new Ankh());
 		}
 
+
+		hero.collect(new TomeOfMastery());
 		hero.collect(new HeartOfDarkness());
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);

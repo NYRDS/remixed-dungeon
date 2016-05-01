@@ -26,6 +26,14 @@ public class CompositeMovieClip extends MovieClip {
 		super();
 	}
 
+	public void clearLayers() {
+		if (mLayers == null) {
+			mLayers = new ArrayList<>();
+		}
+
+		mLayers.clear();
+	}
+
 	public void addLayer(String id, SmartTexture img) {
 		if (mLayers == null) {
 			mLayers = new ArrayList<>();

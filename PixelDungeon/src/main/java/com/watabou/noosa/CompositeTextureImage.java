@@ -34,20 +34,6 @@ public class CompositeTextureImage extends Image {
 		}
 	}
 
-	@Override
-	public void copy(Image other) {
-		super.copy(other);
-		if (other instanceof CompositeTextureImage) {
-			CompositeTextureImage src = (CompositeTextureImage) other;
-
-			mLayers.clear();
-
-			for (SmartTexture img : src.mLayers) {
-				addLayer(img);
-			}
-		}
-	}
-
 	public void clearLayers() {
 		mLayers.clear();
 	}

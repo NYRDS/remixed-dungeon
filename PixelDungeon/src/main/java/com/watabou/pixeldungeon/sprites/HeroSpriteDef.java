@@ -76,12 +76,19 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
 	}
 
+	public void heroUpdated(Hero hero) {
+		createLayersDesc(hero);
+		applyLayersDesc(getLayersDesc());
+		avatar();
+	}
+
 	public String[] getLayersDesc() {
 		java.util.Collection<String> var = layersDesc.values();
 		return var.toArray(new String[var.size()]);
 	}
 
 	public void applyLayersDesc(String[] lookDesc) {
+		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
 			addLayer(layersOrder[i],TextureCache.get(lookDesc[i]));
 		}
@@ -129,12 +136,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 		if(ch instanceof Hero) {
 			Camera.main.target = this;
 		}
-	}
-
-	public void updateArmor(Armor armor) {
-		layersDesc.put(LAYER_ARMOR,armorDescriptor(armor));
-		applyLayersDesc(getLayersDesc());
-		avatar();
 	}
 
 	public void jump(int from, int to, Callback callback) {
