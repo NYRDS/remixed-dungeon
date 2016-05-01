@@ -26,6 +26,7 @@ import java.util.Map;
 public class HeroSpriteDef extends MobSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
+	private CompositeTextureImage avatar;
 
 	// body goes as main texture
 	private static final String LAYER_ARMOR  = "armor";
@@ -65,7 +66,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public void createLayersDesc(Hero hero) {
-
 		layersDesc.clear();
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
 
@@ -126,7 +126,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 		if (ch.flying) {
 			play(fly);
 		}
-		Camera.main.target = this;
+		if(ch instanceof Hero) {
+			Camera.main.target = this;
+		}
 	}
 
 	public void updateArmor(Armor armor) {
@@ -167,8 +169,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 		run.delay = on ? 0.625f / RUN_FRAMERATE : 1f / RUN_FRAMERATE;
 		return on;
 	}
-
-	private CompositeTextureImage avatar;
 
 	public CompositeTextureImage avatar() {
 		if(avatar==null) {
