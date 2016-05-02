@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">Du kannst %1$s nun identifizieren. Es handelt sich um %2$s.</string>
+  <string name="Weapon_Incompatible">Die Wechselwirkung verschiedener Magietypen hat die Verzauberung dieser Waffe aufgehoben.</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>%s des Todes</item>
+    <item>%s des Todes</item>
+    <item>%s des Todes</item>
+  </string-array>
+  <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>%s der Flammen</item>
+    <item>%s der Flammen</item>
+    <item>%s der Flammen</item>
+  </string-array>
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>%s der Geister</item>
+    <item>%s der Geister</item>
+    <item>%s der Geister</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>%s der Unbeständigkeit</item>
+    <item>%s der Unbeständigkeit</item>
+    <item>%s der Unbeständigkeit</item>
+  </string-array>
+  <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>%s der Blutsauger</item>
+    <item>%s der Blutsauger</item>
+    <item>%s der Blutsauger</item>
+  </string-array>
+  <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>%s des Glücks</item>
+    <item>%s des Glücks</item>
+    <item>%s des Glücks</item>
+  </string-array>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>%s der Erstarrung</item>
+    <item>%s der Erstarrung</item>
+    <item>%s der Erstarrung</item>
+  </string-array>
+  <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>%s mit Spitze</item>
+    <item>%s mit Spitze</item>
+    <item>%s mit Spitze</item>
+  </string-array>
+  <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>%s mit Gift</item>
+    <item>%s mit Gift</item>
+    <item>%s mit Gift</item>
+  </string-array>
+  <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>%s aus Eis</item>
+    <item>%s aus Eis</item>
+    <item>%s aus Eis</item>
+  </string-array>
+  <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>%s der Wut</item>
+    <item>%s der Wut</item>
+    <item>%s der Wut</item>
+  </string-array>
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">%1$s: %2$s Nahkampfwaffe der Stufe %3$d</string>
+  <string name="MeleeWeapon_Info1b">eine</string>
+  <string name="MeleeWeapon_Info1c">eine verbesserte</string>
+  <string name="MeleeWeapon_Info1d">eine schlechtere</string>
+  <string name="MeleeWeapon_Info2a">Der typische Schaden dieser Waffe sind %d pro Treffer.</string>
+  <string name="MeleeWeapon_Info2b">Der typische Schaden dieser Waffe sind %1$d pro Treffer, normalerweise benötigt ein Angriff %2$d Stärkepunkte.</string>
+  <string name="MeleeWeapon_Info2c">Diese Waffe ist vermutlich zu schwer für dich.</string>
+  <string name="MeleeWeapon_Info3a">Dies ist eine eher %s Waffe.</string>
+  <string name="MeleeWeapon_Info3b">schnelle</string>
+  <string name="MeleeWeapon_Info3c">langsame</string>
+  <string name="MeleeWeapon_Info3d">und</string>
+  <string name="MeleeWeapon_Info3e">aber</string>
+  <string name="MeleeWeapon_Info3f">genaue</string>
+  <string name="MeleeWeapon_Info3g">ungenaue</string>
+  <string name="MeleeWeapon_Info4a">Die Attribute der Waffe wurden abgestimmt, sie ist jetzt schneller.</string>
+  <string name="MeleeWeapon_Info4b">Die Attribute der Waffe wurden abgestimmt, sie ist jetzt genauer.</string>
+  <string name="MeleeWeapon_Info5">Die Waffe ist verzaubert.</string>
+  <string name="MeleeWeapon_Info6a">%s: Aufgrund deiner unzulänglichen Stärke sind die Angriffsgenauigkeit und -geschwindigkeit der Waffe verringert.</string>
+  <string name="MeleeWeapon_Info6b">%s: Aufgrund deiner übermäßigen Stärke sind die Angriffsgenauigkeit und -geschwindigkeit der Waffe erhöht.</string>
+  <string name="MeleeWeapon_Info7a">%1$s ausgerüstet. %2$s</string>
+  <string name="MeleeWeapon_Info7b">Und weil diese Waffe verflucht ist, kannst du sie leider nicht loslassen.</string>
+  <string name="MeleeWeapon_Info7c">%s strahlt ein Gefühl von dunkler Magie aus.</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">Streitaxt</string>
+  <string name="BattleAxe_Info">Der enorme stählerne Kopf dieser Axt bringt eine beachtliche Kraft in jeden deiner Schläge.</string>
+  <string name="BattleAxe_Gender">feminin</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">Dolch</string>
+  <string name="Dagger_Info">Ein einfacher eisener Dolch mit einem stark abgenützten Holzgriff.</string>
+  <string name="Dagger_Gender">maskulin</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">Glefe</string>
+  <string name="Glaive_Info">Eine Waffe aus einer Schwertklinge, die am Ende einer Stange befestigt ist.</string>
+  <string name="Glaive_Gender">feminin</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">Schlagring</string>
+  <string name="Knuckles_Info">Ein Stück Eisen mit Löchern für deine Finger.</string>
+  <string name="Knuckles_Gender">maskulin</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">Langschwert</string>
+  <string name="Longsword_Info">Diese gewaltige Klinge verursacht aufgrund ihres Gewichts mit jedem Schnitt schweren Schaden.</string>
+  <string name="Longsword_Gender">neutrum</string>
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">Morgenstern</string>
+  <string name="Mace_Info">Der eiserne Kopf dieser Waffe verursacht erheblichen Schaden.</string>
+  <string name="Mace_Gender">maskulin</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">Kampfstab</string>
+  <string name="Quarterstaff_Info">Ein mit Eisen beschlagener Laubholzstab.</string>
+  <string name="Quarterstaff_Gender">maskulin</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">Kurzschwert</string>
+  <string name="ShortSword_Info">Dieses Schwert ist in der Tat sehr kurz. Nur wenige Zentimeter länger als ein Dolch.</string>
+  <string name="ShortSword_ACReforge">WIEDERVERWERTEN</string>
+  <string name="ShortSword_Select">Wähle eine Waffe die du verbessern möchtest</string>
+  <string name="ShortSword_Reforged">Du hast dein Kurzschwert zerlegt. %s wurde verbessert.</string>
+  <string name="ShortSword_NotBoomerang">Du kannst auf diese Weise keinen Bumerang verbessern.</string>
+  <string name="ShortSword_Gender">neutrum</string>
+  <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">Speer</string>
+  <string name="Spear_Info">Ein schmaler Stab aus Holz mit einer geschliffenen Eisenspitze.</string>
+  <string name="Spear_Gender">maskulin</string>
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">Schwert</string>
+  <string name="Sword_Info">Diese rasiermesserscharfe Stahlklinge glänzt auf beruhigende Weise.</string>
+  <string name="Sword_Gender">neutrum</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">Kampfhammer</string>
+  <string name="WarHammer_Info">Nur wenige Kreaturen können dem schmetternden Schlag dieser gewaltigen Masse aus Blei und Stahl standhalten, aber nur die stärksten Abenteurer können sie effizient einsetzen.</string>
+  <string name="WarHammer_Gender">maskulin</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">Fernkampfwaffe</string>
+  <string name="MissileWeapon_Yes">Ja, ich weiß was ich tue.</string>
+  <string name="MissileWeapon_No">Nein, ich habe meine Meinung geändert.</string>
+  <string name="MissileWeapon_Sure">Willst du sie wirklich als Nahkampfwaffe ausrüsten?</string>
+  <string name="MissileWeapon_Info1">
+Der durschnittliche Schaden dieser Waffe ist %d pro Treffer.</string>
+  <string name="MissileWeapon_Info2">%s: Aufgrund deiner unzulänglichen Stärke sind die Angriffsgenauigkeit und -geschwindigkeit der Waffe verringert.</string>
+  <string name="MissileWeapon_Info3">%s: Aufgrund deiner übermäßigen Stärke sind die Angriffsgenauigkeit und -geschwindigkeit der Waffe erhöht.</string>
+  <string name="MissileWeapon_Info4">
+%s ausgerüstet.</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name">Bumerang</string>
+  <string name="Boomerang_Info">Auf den Gegner geworfen findet dieses hölzerne Wurfgeschoss wieder zurück in die Hand des Angreifes.</string>
+  <string name="Boomerang_Gender">maskulin</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">Vergifteter Pfeil</string>
+  <string name="CurareDart_Info">Diese kleinen Pfeile machen nicht viel Schaden, dafür aber können sie den Gegner lähmen.</string>
+  <string name="CurareDart_Gender">maskulin</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">Pfeil</string>
+  <string name="Dart_Info">Diese kleinen Metallspitzen sind für eine stabile Flugbahn gefertigt und piksen den Gegner gewaltig.</string>
+  <string name="Dart_Gender">maskulin</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">Feuerpfeil</string>
+  <string name="IncendiaryDart_Info">Jede dieser Pfeilspitzen ist dafür gemacht, solange in einem Gegner zu verweilen, bis dieser in hellen Flammen aufgeht.</string>
+  <string name="IncendiaryDart_Gender">männlich</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">Wurfspeer</string>
+  <string name="Javelin_Info">Dieses Stück Metall ist so gebaut, dass das spitze Ende im Flug immer nach vorne zeigt.</string>
+  <string name="Javelin_Gender">maskulin</string>
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">Wurfstern</string>
+  <string name="Shuriken_Info">Sternenförmige Metallstücke mit rasiermesserscharfen Klingen machen erheblichen Schaden, wenn sie einen Gegner treffen. Sie können sehr schnell geworfen werden.</string>
+  <string name="Shuriken_Gender">männlich</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">Tomahawk</string>
+  <string name="Tamahawk_Info">Diese Wurfaxt ist nicht besonders schwer, aber benötigt dennoch relativ viel Kraft um effizient eingesetzt werden zu können.</string>
+  <string name="Tamahawk_Gender">maskulin</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <!--STRINGS OF ChaosSword CLASS-->
+  <!--STRINGS OF ChaosBow CLASS-->
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <!--STRINGS OF SacrificialSword CLASS-->
+</resources>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_ACMoisten">INUMIDIRE</string>
+  <string name="Potion_SelectForMoisten">Selezionare item per inumidire</string>
+  <string name="Potion_MoistenUseless">Sembra che tu volessi proprio questa pozione.</string>
+  <string name="Potion_RuneDissaperaed">Runa scomparsa dal %s.</string>
+  <string name="Potion_ArrowMoisten">Hai inumidito con successo le freccie.</string>
+  <string name="Potion_ItemFliesAway">%s appena volato via dalle vostre mani.</string>
+  <string name="Potion_FoodRefreshed">%s ora sembra commestibile</string>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">arbusto secco</string>
+  <string name="Guts_TileHighGrass">arbusto secco</string>
+  <string name="Guts_TileWater">Strano liquido viscido</string>
+  <string name="Guts_TileDescEntrance">il buco nel soffitto conduce ai piani superiori</string>
+  <string name="Guts_TileDescExit">il buco nel pavimento conduce ai piani inferiori</string>
+  <string name="Guts_TileDescDeco">Assomiglia a questo posto era... ferito</string>
+  <string name="Guts_TileDescBookshelf">Questo scaffale è completamente rivestito in una fitta rete carnosa, non c\'è modo di raggiungere un qualsiasi libro</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Sconfitto, a pezzi, ma non completamente distrutto, il vecchio Dio era sigillato lontano nel più profondo livello della prigione. Ma recentemente il sigilla è stato rotto, lasciando il passaggio, dal nido del demone, grande e aperto. I mostri dell\'incubo, creato dal vecchio Dio nel suo sonno erano così numerosi, a condizione che non ci fosse una via d\'uscita, loro erano forzati ad essere fusi insieme/tra loro da questo grottesco palazzo. E appena tu camminerai sopra le loro carni vive tu potrai sentire il battito del cuore di un vecchio Dio rieccheggiare tra loro.</string>
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">imitatore</string>
+  <string name="MimicAmulet_Gender">maschile</string>
+  <string name="MimicAmulet_Name_Objective">imitatore</string>
+  <string name="MimicAmulet_Desc">il momento più glorioso della sua carriera  d\'avventure è stato appena si è rivelato ad essere una trappola.</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">incubo</string>
+  <string name="Nightmare_Gender">maschile</string>
+  <string name="Nightmare_Name_Objective">incubo</string>
+  <string name="Nightmare_Desc">creatura grottesca fatta di spasmi tentacoli carne. Gli incubi è una manifestazione di pensieri sinistri del vecchio dio.</string>
+  <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">Gotcha, %s!</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">gnoll zombie</string>
+  <string name="ZombieGnoll_Gender">maschile</string>
+  <string name="ZombieGnoll_Name_Objective">gnoll zombie</string>
+  <string name="ZombieGnoll_Desc">Contorto, corpo spezzato di un gnoll zombi non assomiglia più umanoide o iene. Solo un mucchio di carne marcia e ossa piene di voglia dannoso per uccidere e consumare.</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">Verme</string>
+  <string name="Worm_Gender">maschile</string>
+  <string name="Worm_Name_Objective">Verme</string>
+  <string name="Worm_Desc">Non vi è alcun modo di sapere quanto è grande questo verme. Parzialmente emerge dal pavimento, il corpo di quella creatura è coperto in grumi di carne marcia e melma. mandibole giganti ti dà una chiara idea di come quel mostro fa la sua strada attraverso la superficie.</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">Il cervello di Yog</string>
+  <string name="YogsBrain_Gender">maschile</string>
+  <string name="YogsBrain_Name_Objective">Il cervello di Yog</string>
+  <string name="YogsBrain_Desc">il cervello di Yog-Dzewa. fonte di ogni male non deve mai venire fuori dal dungeon</string>
+  <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">l\'occhio di yog</string>
+  <string name="YogsEye_Gender">maschile</string>
+  <string name="YogsEye_Name_Objective">l\'occhio di yog</string>
+  <string name="YogsEye_Desc">L\'occhio del Vecchio Dio, allseeing sguardo pieno di odio eterno. Si può sentire a guardare a destra attraverso la tua anima</string>
+  <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">il cuore di yog</string>
+  <string name="YogsHeart_Gender">maschile</string>
+  <string name="YogsHeart_Name_Objective">il cuore di yog</string>
+  <string name="YogsHeart_Desc">Per secoli la gente ha creduto che solo una creatura davvero senza cuore sono cappable di atti di pura malvagità. Eppure eccolo qui, enorme cuore pulsante di un vecchio Dio stesso.</string>
+  <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">denti di yog</string>
+  <string name="YogsTeeth_Gender">maschile</string>
+  <string name="YogsTeeth_Name_Objective">denti di yog</string>
+  <string name="YogsTeeth_Desc">enorme bocca di un vecchio Dio pieno di denti affilati come rasoi. Una manifestazione molto montaggio della sua voglia di distruggere e divorare tutti gli esseri.</string>
+</resources>

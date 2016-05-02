@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Welcome_Ok">Okay!</string>
+  <string name="Welcome_Title">Herzlich willkommen!</string>
+  <string name="Welcome_Text">Remixed Pixel Dungeon ist eine Modifikation von Watabou\'s open source Pixel Dungeon.\n Dieses Projekt wurde erstellt um Spieler mit neuen Erfahrungen und Inhalten zu versorgen.\n Ein anderer, wichtiger Bestandteil unseres Projekt ist es, eine Mehrsprachenunterstützung für das Spiel zu entwickeln.\n Wir versuchen mit jedem Update so nahe wie möglich an unserer Community zu bleiben.\n Und falls Sie eines Tages sehen, dass ihre Idee in das Spiel übernommen wurde... Danke für ihre Kreativität =)\n Die aktuelle Version basiert auf Pixel Dungeon 1.7.2 und teilweise 1.7.5.\n Unterschiede zum Original: \n - Die Möglichkeit die Sprache zu ändern. (aktuell unterstützt: Englisch, Russisch)\n - Neues Monster und NPC\n - Giftiges Gas und Feuer können nun mit mehr Gegenständen interagieren\n - Neue Arten von «Nahrung»\n - Neue Gegenstände und neue Eigenschaften bei einigen alten Gegenständen\n - Samen können jetzt auch gegessen werden =)\n </string>
+  <string name="Welcome_Text_19">
+remix.17:\n
+-Neue Mimicart\n
+remix.18:\n
+-Elementare\n
+remix.19\n
+-Spinnen\n
+-Spinnenlevels\n
+-Spinnenkönigin\n </string>
+  <string name="Welcome_Text_20">
+remix.20:\n
+-Neue seltene Waffe - Kusarigama\n
+-Neues seltenes Monster\n
+-Spielmodus, bei dem du deinen Spielstand speichern und laden kannst\n
+-Und viel mehr Dinge, die nicht groß auffallen\n </string>
+  <string name="Welcome_Text_20_1">
+remix.20.1:\n
+- Schriftrolle der Herrschaft
+- Schriftrolle des Fluches</string>
+  <string name="Welcome_Text_20_2">
+remix.21:\n
+- Seltene Chaos Items\n
+- Flüssige Flamme jetzt wirklich flüssig\n </string>
+  <string name="Welcome_Text_21_1">
+remix.21.1:\n
+- Einfacher Modus (mit Werbung)\n
+-Expertenmodus\n </string>
+  <string name="Welcome_Text_21_2">
+remix.21.2:\n
+- Fähigkeit Mods auszuwählen (Bis jetzt nur Texturänderungen) (Nur für erfahrene Modder benutzbar)\n </string>
+  <string name="Welcome_Text_21_3">
+remix.21.3:\n
+- PD mini Mod verfügbar zum Download (noch nicht fertig aber spaßig)
+- Verbesserte Abwasserkanalgrafiken </string>
+  <string name="Welcome_Text_21_4">
+remix.21.4:\n
+-Neue seltene Waffe - Opferklinge </string>
+  <string name="Welcome_Text_21_5">
+remix.21.5:\n
+- Neue Eigenschaften für alte Gegenstände</string>
+  <string name="Welcome_Text_22">
+remix.22:\n
+- Neuer versteckter Boss </string>
+</resources>

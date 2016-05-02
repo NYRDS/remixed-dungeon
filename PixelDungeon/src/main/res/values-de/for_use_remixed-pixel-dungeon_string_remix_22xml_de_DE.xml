@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ShadowLord CLASS-->
+  <string name="ShadowLord_Name">Schattenlord</string>
+  <string name="ShadowLord_Gender">männlich</string>
+  <string name="ShadowLord_Name_Objective">Schattenlord</string>
+  <string name="ShadowLord_Desc">Kreatur gemacht aus purem Übel und Dunkelheit, viele glauben, dass er der alte Gott selbst ist, berücksichtigt man, wie stark er ist. Wärend andere vermuten, dass er aber der Wächter der Kammer des alten Gottes ist.</string>
+  <string name="ShadowLord_Intro">Bereite dich vor!</string>
+  <string name="ShadowLord_Death">Neeeeeeeiiiiiiiinnnnn...</string>
+  <string name="AllowStatisticsCollectionScene_Title">Verwendungsstatistiksammlung</string>
+  <string name="AllowStatisticsCollectionScene_Request">Wenn du Remixed Pixel Dungeon erlaubst Verwendungsstatistiken zu sammeln, werden die Daten verwendet um:\n
+- Verschiedene geringe Störungen ausfindig zu machen und zu beseitigen ( bei blockierenden Fehlern wirdt di ausdrücklich gefragt, einen Bericht zu senden )\n
+- Spiel-Balance-Verbesserungen\n
+- Gerätespezifische Performancefehler zu beheben\n
+- Lustige Statistiktatsachen von Zeit zu Zeit zu veröffentlichen\n
+Du kannst deine Entscheidung jederzeit ändern (Klicke auf das Diagrammsymbol beim Titelbildschirm ) </string>
+  <string name="AllowStatisticsCollectionScene_Allow">Erlauben</string>
+  <string name="AllowStatisticsCollectionScene_Deny">Verweigern</string>
+  <string name="Darkness_Info">Sieht aus als ob Stücke ewiger Dunkelheit in der Luft schweben</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Bitte hilf die Übersetzungen von Remixed Pixel Dungeon zu verbessern</string>
+  <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Klicke hier um dem Remixed Pixel Dungeon Übersetzungsteam beizutreten</string>
+</resources>

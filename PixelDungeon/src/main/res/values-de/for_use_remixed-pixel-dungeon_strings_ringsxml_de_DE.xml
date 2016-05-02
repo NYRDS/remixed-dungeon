@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">%sring</string>
+  <string name="Ring_Info">Dieser metallene Ring ist mit einem großen %s Edelstein verziert, der ihm Dunkeln glitzert. Was wird passieren wenn du ihn anlegst?</string>
+  <string name="Ring_Identify">Du bist nun vertraut genug mit deinem %1$s, um ihn zu identifizieren. Es ist ein %2$s.</string>
+  <string-array name="Ring_Gems">
+    <item>Diamant</item>
+    <item>Opal</item>
+    <item>Granat</item>
+    <item>Rubin</item>
+    <item>Amethyst</item>
+    <item>Topaz</item>
+    <item>Onyx</item>
+    <item>Turmalin</item>
+    <item>Smaragd</item>
+    <item>Saphir</item>
+    <item>Quarz</item>
+    <item>Achat</item>
+  </string-array>
+  <string name="Ring_Info1">Du kannst nur 2 Ringe gleichzeitig tragen</string>
+  <string name="Ring_Info2">Dein %s schneidet sich schmerzhaft ins Fleisch deines Fingers</string>
+  <string name="Ring_Info3a">%1$s\n\nDer %2$s ist auf deinem Finger %3$s.</string>
+  <string name="Ring_Info3b">, und da er verflucht ist, kannst du ihn nicht entfernen.</string>
+  <string name="Ring_Info4">%1$s\n\nDu spürst, dass eine bösartige Magie in diesem %2$s lauert.</string>
+  <string name="Ring_BuffKnown">Dies ist ein %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">Präzisionsring</string>
+  <string name="RingOfAccuracy_Info">Dieser Ring erhöht deine Chance den Feind zu treffen.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">Wahrnehmungsring</string>
+  <string name="RingOfDetection_Info">Träger dieses Rings bemerken Geheimnisse wie versteckte Fallen und Türen ohne danach suchen zu müssen. Defekte Wahrnehmungsringe trüben jedoch deine Sinne und erschweren dir - auch die aktive - Suche nach Geheimnissen erheblich.</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">Ring der Elemente</string>
+  <string name="RingOfElements_Info">Dieser Ring ermöglicht es dem Träger Schaden aus Elementen wie Feuer, Elektrizität, Gas etc. besser zu widerstehen. Weiters dauern negative Effekte kürzer an.</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">Ausweichungsring</string>
+  <string name="RingOfEvasion_Info">Dieser Ring erhöht deine Chance feindlichen Attacken auszuweichen.</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">Diebesgilden-Ring</string>
+  <string name="RingOfHaggler_Info">Dieser Diebesgilden-Ring verfügt über keinerlei magischen Effekte, wirkt aber auf Händler einschüchternd. Diese ziehen es jedenfalls vor dem Träger bessere Preise zu machen als einen Diebstahl ihrer Waren zu riskieren. Da dieser Ring nicht magischer Natur ist wäre jeglicher Verbesserungsversuch ohne Effekt.</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">Ring der Hast</string>
+  <string name="RingOfHaste_Info">Dieser Ring beschleunigt die allgemeine Zeitwahrnehmung des Trägers wodurch jegliche Aktionen ein wenig schneller durchgeführt werden.</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">Ring der Pflanzenkunde</string>
+  <string name="RingOfHerbalism_Info">Dieser Ring erhöht deine Chance Tautropfen und Samen in zertrampeltem Gras zu finden.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">Heilungsring</string>
+  <string name="RingOfMending_Info">Dieser Ring erhöht die körpereigenen Regenerationskräfte wodurch sich Wunden schneller schließen. Defekte Heilungsringe hingegen bremsen bzw. stoppen die Regeneration.</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">Ring der Kraft</string>
+  <string name="RingOfPower_Info">Die Wirkung deiner Zauberstäbe werden durch das vom Ring ausgehende Energiefeld verstärkt. Defekte Ringe der Kraft schwächen deine Zauberstäbe jedoch erheblich.</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">Sättigungsring</string>
+  <string name="RingOfSatiety_Info">Mit diesem Ring kannst du länger ohne Nahrung aushalten. Defekte Sättigungsringe haben jedoch den gegenteiligen Effekt.</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">Schattenring</string>
+  <string name="RingOfShadows_Info">Solange du diesen Ring trägst werden Gegner deine Anwesenheit später oder gar nicht bemerken. Defekte Schattenringe verraten dich jedoch sogar an Gegner die dich ansonsten womöglich nicht entdeckt hätten.</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">Dornenring</string>
+  <string name="RingOfThorns_Info">Obwohl dieser Ring keine echten Dornen aufweist wird ein Teil des Schadens eines gegnerischen Angriffs auf deinen Gegner zurückgeworfen. Diesen Ring aufzuwerten bringt keine weiteren Vorteile.</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Steinblutsring</string>
+  <string name="RingOfStoneWalking_Info">Dieser sonderbare Ring ist aus einer Art massiven Steins gefertigt. Was du zuerst für einen Rubin gehalten hast ist in Wirklichkeit flüssiges Blut das an Ort und Stelle gebunden ist. Im Inneren kannst du einen Pfeil erkennen der auf etwas, das wie eine Wand mit einem gebrochen Herzen erscheint, zeigt. Was wird beim Anlegen des Rings passieren?</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Eingemauert in Stein. Für immer.</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Spinnenanhänger</string>
+  <string name="SpiderCharm_Info">Dieser exotische Anhänger wird von einer mysteriösen Aura umgeben. Wer weiß was mit dem Träger des Anhängers passieren wird?</string>
+  <string name="SpiderCharm_Use">Benutze</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">Sonderbarer Kristall</string>
+  <string name="ChaosCrystal_Name_1">Chaos Kristall</string>
+  <string name="ChaosCrystal_Name_2">Chaos Kristall</string>
+  <string name="ChaosCrystal_Info">Du fühlst Energie durch deine Hände strömen während du ihn hältst.</string>
+  <string name="ChaosCrystal_Info_1">Chaotische Kräfte fließen durch diesen Kristall. Er könnte nützlich sein.</string>
+  <string name="ChaosCrystal_Info_2">Ja! Nun weißt du, dass du ihn mit einem deiner Gegenstände verbinden kannst, aber was sollst du nun tun?</string>
+  <string name="ChaosCrystal_Use">Benutze</string>
+  <string name="ChaosCrystal_Fuse">Verbinden</string>
+  <string name="ChaosCrystal_Prompt">Wähle den Ort an dem du die Chaos Markierung platzieren willst</string>
+  <string name="ChaosCrystal_SelectForFuse">Wähle den Gegenstand mit dem du den Chaos Kristall verbinden willst</string>
+  <string name="ChaosCrystal_ScrollFused">Der Kristall wurde von der Rune auf der Schriftrolle  absorbiert, nun ist es ein %s</string>
+  <string name="ChaosCrystal_SwordFused">Der Kristall absorbiert deine Waffe und hat die Gestalt eines Schwertes angenommen</string>
+  <string name="ChaosCrystal_BowFused">Der Kristall absorbiert deine Waffe und hat die Gestalt eines Bogens angenommen</string>
+  <string name="ChaosCrystal_StaffFused">Der Kristall absorbiert deinen Zauberstab und hat die Gestalt eines Zauberstabs angenommen</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+</resources>

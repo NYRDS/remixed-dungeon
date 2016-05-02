@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">Ist durch %1$s auf Ebene %2$d gestorben</string>
+  <string name="ResultDescriptions_Boss">Ist von dem %1$s auf Ebene %2$d getötet worden</string>
+  <string name="ResultDescriptions_Wand">Ist durch seine eigene %1$s auf Ebene %2$d gestorben</string>
+  <string name="ResultDescriptions_Glyph">Ist von dem %1$s auf Ebene %2$d getötet worden</string>
+  <string name="ResultDescriptions_Trap">Ist durch eine Entladung von %1$s auf Ebene %2$d gestorben</string>
+  <string name="ResultDescriptions_Burning">Ist auf Ebene %d verbrannt</string>
+  <string name="ResultDescriptions_Hunger">Ist auf Ebene %d verhungert</string>
+  <string name="ResultDescriptions_Poison">Ist auf Ebene %d durch Gift gestorben</string>
+  <string name="ResultDescriptions_Gas">Ist auf Ebene %d durch giftige Gase gestorben</string>
+  <string name="ResultDescriptions_Bleeding">Ist auf Ebene %d verblutet.</string>
+  <string name="ResultDescriptions_Ooze">Ist auf Ebene %d durch Säure gestorben</string>
+  <string name="ResultDescriptions_Fall">Ist auf Ebene %d in den Tod gestürzt</string>
+  <string name="ResultDescriptions_Win">Hat das Amulett von Yendor erlangt</string>
+  <string name="ResultDescriptions_Immured">Eingemauert in Stein auf Ebene %d</string>
+</resources>

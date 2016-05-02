@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">Ein Bogen ist eine Fernkampfwaffe, welche auf kurze Distanz (für alle ausser Elfen) nutzlos ist.\n\n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">Holzbogen</string>
+  <string name="WoodenBow_Info">Dieser einfache Holzbogen könnte sich als hilfreich erweisen, wenn du erst mal Pfeile gefunden hast.</string>
+  <string name="WoodenBow_Gender">männlich</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">Compoundbogen</string>
+  <string name="CompoundBow_Info">Pfeile die mit einem Verbundbogen abgeschossen werden verursachen mehr Schaden und sind treffsicherer, auf kosten von Geschwindigkeit.</string>
+  <string name="CompoundBow_Gender">männlich</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Name">Rubinbogen</string>
+  <string name="RubyBow_Info">Nur die besten Bogenschützen können den Rubinbogen benutzen. So gut wie jeder Pfeil durchdringt, ein großes Loch in seinem Körper hinterlassend, den Feind. Aber wie viel Kraft braucht es um den Bogen zu spannen.</string>
+  <string name="RubyBow_Gender">männlich</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">Köcher</string>
+  <string name="Quiver_Info">Lederköcher, geeignet um beliebige Pfeile zu beinhalten</string>
+  <string name="Quiver_Gender">männlich</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">Feuerköcher</string>
+  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Gender">männlich</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">Giftköcher</string>
+  <string name="PoisonQuiver_Info"></string>
+  <string name="Poisonuiver_Gender">männlich</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">Lähmköcher</string>
+  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Gender">männlich</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">Pfeil</string>
+  <string name="CommonArrow_Info">Gewöhnlicher Holzpfeil mit Eisenspitze.</string>
+  <string name="CommonArrow_Gender">weiblich</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">Feuerpfeil</string>
+  <string name="FireArrow_Info">Dieser Pfeil sieht bis auf das warme, rote Licht, das seine Spitze ausstrahlt normal aus.</string>
+  <string name="FireArrow_Gender">weiblich</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">Giftpfeil</string>
+  <string name="PoisonArrow_Info">Tödliche Gifttropfen glänzen auf der Pfeilspitze. </string>
+  <string name="PoisonArrow_Gender">weiblich</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">Lähmpfeil</string>
+  <string name="ParalysisArrow_Info">Dieser Pfeil verströmt einen schwachen aber vertrauten heilsamen Geruch.</string>
+  <string name="ParalysisArrow_Gender">weiblich</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Name">Frostpfeil</string>
+  <string name="FrostArrow_Info">Du fühlst eine eiskalte Aura welche von der Pfeilspitze ausgeht.</string>
+  <string name="FrostArrow_Gender">weiblich</string>
+</resources>
