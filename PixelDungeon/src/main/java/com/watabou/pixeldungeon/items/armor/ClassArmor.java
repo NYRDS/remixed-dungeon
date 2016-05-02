@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.armor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
@@ -43,30 +44,14 @@ abstract public class ClassArmor extends Armor {
 	public static Armor upgrade ( Hero owner, Armor armor ) {
 
 		ClassArmor classArmor;
-
-		switch (owner.heroClass) {
-		case WARRIOR:
-			classArmor = new WarriorArmor();
-			break;
-		case ROGUE:
-			classArmor = new RogueArmor();
-			break;
-		case MAGE:
-			classArmor = new MageArmor();
-			break;
-		case HUNTRESS:
-			classArmor = new HuntressArmor();
-			break;
-		case ELF:
-			classArmor = new ElfArmor();
-			break;
-			
-		default:
-			return armor;
+		if(owner.subClass == HeroSubClass.NONE) {
+			classArmor = owner.heroClass.classArmor();
+		} else {
+			classArmor = owner.subClass.classArmor();
 		}
-		
+
 		classArmor.STR = armor.STR;
-		classArmor.DR = armor.DR;
+		classArmor.DR  = armor.DR;
 		
 		classArmor.inscribe( armor.glyph );
 		
@@ -101,7 +86,7 @@ abstract public class ClassArmor extends Armor {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action == special()) {
+		if (action.equals(special())) {
 			
 			if (hero.hp() < 3) {
 				GLog.w( TXT_LOW_HEALTH );
