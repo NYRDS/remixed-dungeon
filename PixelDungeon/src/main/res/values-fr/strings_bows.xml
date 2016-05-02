@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">L\'arc est une arme à distance, presque inutile (pour tout le monde sauf les elfes) à courte distance.\n \n</string>
@@ -46,4 +46,8 @@
   <string name="ParalysisArrow_Name">flèche paralysante</string>
   <string name="ParalysisArrow_Info">Cette flèche libère une odeur très faible mais familière de curare.</string>
   <string name="ParalysisArrow_Gender">féminin</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Name">flèche de froid</string>
+  <string name="FrostArrow_Info">Vous pouvez ressentir une aura glaçante émaner de la flèche</string>
+  <string name="FrostArrow_Gender">féminin</string>
 </resources>

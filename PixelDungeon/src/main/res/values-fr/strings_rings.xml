@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/rings-->
   <!--STRINGS OF Ring CLASS-->
@@ -67,7 +67,13 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
   <string name="RingOfStoneWalking_Name">Anneau du sang de la pierre</string>
   <string name="RingOfStoneWalking_Info">Cet anneau fait de pierre robuste passerait inaperçu. S\'il n\'y avait pas une goutte de sang liquide battant à la place d\'une gemme.</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Emmuré dans la pierre. A tout jamais.</string>
-  <!-- STRINGS OF SpiderCharm CLASS -->
-  <string name="SpiderCharm_Name">Spider Charm</string>
-  <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Charme de l\'Araignée</string>
+  <string name="SpiderCharm_Info">Cet objet exotique est entourée d\'une aura mystérieuse. Qui sait, peut -être qu\'il se passera quelque chose pour la personne qui le portera ?</string>
+  <string name="SpiderCharm_Use">UTILISER</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">Cristal étrange</string>
+  <string name="ChaosCrystal_Name_1">Cristal chaotique</string>
+  <string name="ChaosCrystal_Name_2">Cristal du Chaos</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
 </resources>
