@@ -76,7 +76,6 @@ public class CompositeMovieClip extends MovieClip {
 
 	@Override
 	public void draw() {
-
 		super.draw();
 
 		if (mLayers != null) {

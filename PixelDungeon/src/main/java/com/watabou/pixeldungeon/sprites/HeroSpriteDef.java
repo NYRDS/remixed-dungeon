@@ -27,6 +27,7 @@ import java.util.Map;
 public class HeroSpriteDef extends MobSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
+	private static final String HERO_EMPTY_PNG = "hero/empty.png";
 	private CompositeTextureImage avatar;
 
 	// body goes as main texture
@@ -73,6 +74,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
 		if (hero.belongings.armor == null || !(hero.belongings.armor instanceof ClassArmor)) {
 			layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
+		} else {
+			layersDesc.put(LAYER_HEAD, HERO_EMPTY_PNG);
 		}
 		layersDesc.put(LAYER_ARMOR,armorDescriptor(hero.belongings.armor));
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
@@ -86,8 +89,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public String[] getLayersDesc() {
-		java.util.Collection<String> var = layersDesc.values();
-		return var.toArray(new String[var.size()]);
+		String [] ret = new String[layersOrder.length];
+		for(int i = 0;i<layersOrder.length;++i){
+			ret[i] = layersDesc.get(layersOrder[i]);
+		}
+
+		return ret;
 	}
 
 	public void applyLayersDesc(String[] lookDesc) {
@@ -98,8 +105,10 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	private String armorDescriptor(Armor armor) {
-		String descriptor = armor == null ? "no_armor" :  armor.getClass().getSimpleName();
-		return "hero/armor/"+descriptor+".png";
+		if(armor==null) {
+			return HERO_EMPTY_PNG;
+		}
+		return "hero/armor/"+armor.getClass().getSimpleName()+".png";
 	}
 
 	private String bodyDescriptor(Hero hero) {
@@ -181,6 +190,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 
 		avatar.clearLayers();
+
 
 		avatar.addLayer(getLayerTexture(LAYER_BODY));
 		avatar.addLayer(getLayerTexture(LAYER_HEAD));
