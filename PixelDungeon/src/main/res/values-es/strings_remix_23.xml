@@ -22,6 +22,7 @@
   <string name="Nightmare_Name_Objective">pesadilla</string>
   <string name="Nightmare_Desc">Grotesca criatura hecha de tentáculos retorcidos de carne. Las pesadillas son una manifestación de los pensamientos del siniestro Antiguo Dios.</string>
   <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">Atrapado, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Name">gnoll zombi</string>
   <string name="ZombieGnoll_Gender">masculino</string>
