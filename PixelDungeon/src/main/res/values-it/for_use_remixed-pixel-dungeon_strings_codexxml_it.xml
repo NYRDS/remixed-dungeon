@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">Codex</string>
+  <string name="Codex_ACRead">LEGGI</string>
+  <string name="Codex_Info">Uno dei tanti libri che possono essere trovati in qualsiasi libreria</string>
+  <string name="Codex_Blinded">Non puoi leggere mentre sei acciecato</string>
+  <string-array name="Codex_Story">
+    <item>E creato Watabou Pixel Dungeon. E guardò la sua opera. E vide che era cosa buona!</item>
+    <item>Glifo rimbalzo  - Causa ai nemici di essere respinti indietro dopo aver colpito l\'Eroe.</item>
+    <item>Glifo affetto  - Il nemico sarà affascinato per pochi turni, mentre l\'eroe sarà affascinato per pochi turni pure, ma mai più che il nemico.</item>
+    <item>Glifo anti-entropia - L\'eroe sarà illuminato e prenderà fuoco, e il nemico sarà congelato.</item>
+    <item>Glifo molteplicità - Questo effetto fa sì che l\'Eroe generi un\'immagine speculare ma danneggiata. Questo può uccidere l\'Eroe.</item>
+    <item>Glifo potenziale - Questo scatena una sorta di colpo di fulmine che potrebbe danneggiare il nemico che ha attaccato il giocatore e potrebbe danneggiare l\'eroe con in media la metà del danno fatto al nemico.</item>
+    <item>Glifo metabolismo  - L\'eroe sarà parzialmente guarito, prima di applicare il danno nemico. Si applica solo se l\'eroe non sta morendo di fame. La fame dell\'eroe crescerà anche più velocemente.</item>
+    <item>Glifo cattivo odore - L\'Eroe rilascerà una nube di gas tossico quando viene colpito.</item>
+    <item>Glifo viscosità - L\'eroe otterrà il danno differito debuff, che farà sì che l\'eroe riceva 1 danno per turno, invece di ricevere l\'intera quantità in un solo colpo.</item>
+    <item>Glifo dislocamento - Ogni volta che l\'eroe è colpito, c\'è la possibilità che l\'eroe sarà teletrasportato a una tessera visibile casuale. Questo glifo non funziona su livelli boss.</item>
+    <item>Glifo aggrovigliamento - L\'eroe può ricevere armatura erbacea, ma potrebbe essere radicato anche allo stesso tempo.</item>
+    <item>Arma Grim - Il colpo andato a segno, può immediatamente uccidere il bersaglio (o fornire fino a 2x danni a un boss).</item>
+    <item>Arma ardente - Il colpo andato a segno, infligge danno in più all\'obbiettivo e può bruciarlo.</item>
+    <item>Arma Eldritch - Se il colpo è andato a segno, il nemico può fuggire in preda al terrore.</item>
+    <item>Arma instabile - Se il colpo è andato a segno, può applicare l\'effetto di qualsiasi incantesimo casuale.</item>
+    <item>Arma del Vampiro - Se il colpo è andato a segno, può guarire l\'Eroe per una parte del danno inflitto al nemico.</item>
+    <item>Arma fortunata - ignora quasi completamente l\'arma nemica, e fa molti più danni.</item>
+    <item>Arma stordimento - Se il colpo è andato a segno, può paralizzare bersaglio.</item>
+    <item>Arma penetrante - Se il colpo è andato a segno, può danneggiare tutti i nemici in linea retta dietro il bersaglio.</item>
+    <item>Arma velenosa - Se il colpo è andato a segno, è possibile che il bersaglio rimanga avvelenato.</item>
+    <item>Arma agghiacciante - Se il colpo è andato a segno, può rallentare il bersaglio e gli impedirà di bruciare.</item>
+    <item>Arma selvaggia - Se il colpo è andato a segno, può danneggiare tutti i nemici adiacenti al bersaglio.</item>
+    <item>Questo libro, è scritto in un linguaggio demoniaco</item>
+    <item>Questo libro, è scritto in un linguaggio nano</item>
+    <item>Questo libro, è scritto in un linguaggio elfico</item>
+  </string-array>
+</resources>

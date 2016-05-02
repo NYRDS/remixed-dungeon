@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">Questo arco è un arma da lontano. Inutile per tutti a breve distanza, ad eccezione degli elfi.
+Avere un arco ecuipaggiato ti consente di scagliare frecce.\n\n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">arco di legno</string>
+  <string name="WoodenBow_Info">Questo semplice arco di legno potrebbe dimostrarsi utile, non appena troverai delle frecce.</string>
+  <string name="WoodenBow_Gender">maschile</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">arco composto</string>
+  <string name="CompoundBow_Info">Le frecce lanciate da questo arco composto infliggono un grande ammontare di danno e hanno una precisione migliore rispetto ad un arco di legno al prezzo di un calo di velocità.</string>
+  <string name="CompoundBow_Gender">maschile</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Name">arco di rubino</string>
+  <string name="RubyBow_Info">Solo i migliori arcieri possono usare quest\'arco di rubino. Quasi tutte le frecce trapassano il nemico, lasciando un enorme buco nel suo petto, ma un\'enorme forza è necessaria per tenderlo.</string>
+  <string name="RubyBow_Gender">maschile</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">faretra</string>
+  <string name="Quiver_Info">Faretra di pelle adatta a contenere un qualsiasi ammontare di frecce</string>
+  <string name="Quiver_Gender">maschile</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">faretra di fuoco</string>
+  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Gender">maschile</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">faretra di veleno</string>
+  <string name="PoisonQuiver_Info"></string>
+  <string name="Poisonuiver_Gender">maschile</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">faretra paralizzante</string>
+  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Gender">maschile</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">freccia</string>
+  <string name="CommonArrow_Info">Comune freccia di legno con una punta di metallo.</string>
+  <string name="CommonArrow_Gender">femminile</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">freccia di fuoco</string>
+  <string name="FireArrow_Info">Questa freccia sembra normale, tranne per la calda luce rossa che irradia dalla sua testa.</string>
+  <string name="FireArrow_Gender">femminile</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">freccia velenosa</string>
+  <string name="PoisonArrow_Info">Una goccia di veleno mortale brilla sulla testa di questa freccia.</string>
+  <string name="PoisonArrow_Gender">femminile</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">freccia paralizzante</string>
+  <string name="ParalysisArrow_Info">Questa freccia è imbevuta di curare.</string>
+  <string name="ParalysisArrow_Gender">femminile</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Name">freccia di ghiaccio</string>
+  <string name="FrostArrow_Info">Puoi sentire un\'aurea ghiacciata venire emanata dalla punta di questa freccia.</string>
+  <string name="FrostArrow_Gender">femminile</string>
+</resources>

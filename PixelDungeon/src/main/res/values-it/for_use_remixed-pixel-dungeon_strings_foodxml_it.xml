@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">MANGIA</string>
+  <string name="Food_Message">Quella roba era deliziosa!</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">razione di cibo</string>
+  <string name="Ration_Info">Niente di Stravagante qui: carne secca, qualche biscotto - cose cosi.</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">carne grigliata</string>
+  <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">carpaccio congelato</string>
+  <string name="FrozenCarpaccio_Info">E \'un pezzo di carne cruda congelata.L\'unico modo di mangiarlo è tagliandolo a fette sottili. in questo modo è sorprendentemente buono.</string>
+  <string name="FrozenCarpaccio_Info1">Vedi le mani che diventano invisibili!</string>
+  <string name="FrozenCarpaccio_Info2">Ti senti la pelle che si indurisce!</string>
+  <string name="FrozenCarpaccio_Info3">Rinfrescante!</string>
+  <string name="FrozenCarpaccio_Info4">Ti senti meglio!</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">Carne Misteriosa</string>
+  <string name="MysteryMeat_Info">mangialo a tuo rischio!</string>
+  <string name="MysteryMeat_Info1">Oh è caldo!</string>
+  <string name="MysteryMeat_Info2">Non ti senti le gambe!</string>
+  <string name="MysteryMeat_Info3">Non ti senti bene.</string>
+  <string name="MysteryMeat_Info4">ti sei farcito.</string>
+  <string name="MysteryMeat_Message">Quel cibo assaggiato...è strano</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">Disgustoso!</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">carne marcia</string>
+  <string name="RottenMeat_Info">pezzo di carne marcia</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">pasto marcio</string>
+  <string name="RottenPasty_Info">ex-pasto sembra così disgustoso</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">razione marcia</string>
+  <string name="RottenRation_Info">una volta poteva essere mangiato</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">troppo costosa il cibo a razione</string>
+  <string name="OverpricedRation_Info">Sembra come una razione base del cibo, ma più piccola.</string>
+  <string name="OverpricedRation_Message">questo cibo è gustoso.</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">pasticcio</string>
+  <string name="Pasty_Info">Questo è un\'autentico pasto Cornish con ripieno di carne e patate.</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">pasticcio</string>
+  <string name="PseudoPasty_Info">Questo è un\'autentico pasto Cornish con ripieno di carne e patate.</string>
+</resources>

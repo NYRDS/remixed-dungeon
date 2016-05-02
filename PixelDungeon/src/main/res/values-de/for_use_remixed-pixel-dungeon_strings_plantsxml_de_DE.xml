@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">PFLANZEN</string>
+  <string name="Plant_Info">Wirf diesen Samen an den Ort, wo du dies wachsen lassen willst: %1$s.\n\n%2$s</string>
+  <string name="Plant_Seed">Ein Samen von %s</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">Traumkraut</string>
+  <string name="Dreamweed_Desc">Wenn man ein Traumkraut berührt, sondert es eine glitzernde Wolke aus verwirrendem Gas ab.</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">Erdwurzel</string>
+  <string name="Earthroot_Desc">Wenn eine Kreatur eine Erdwurzel berührt, erschaffen ihre Wurzeln eine Art natürliche Rüstung an der Kreatur.</string>
+  <string name="Earthroot_Buff">pflanzliche Rüstung</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">Verblassendes Blatt</string>
+  <string name="Fadeleaf_Desc">Das berühren eines Verblassenden Blattes, teleportiert irgendeine Kreatur an einen zufälligen Platz der aktuellen Ebene.</string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">Feuerblüte</string>
+  <string name="Firebloom_Desc">Wenn etwas eine Feuerblüte berührt, geht es in Flammen auf.</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">Gletscherblume</string>
+  <string name="Icecap_Desc">Nach dem Berühren einer Gletscherblume, scheidet sie Pollen aus, die alles in ihrer Nähe einfrieren.</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">Sorgenmoos</string>
+  <string name="Sorrowmoss_Desc">Sorgenmoos ist eine Blume (kein Moos) mit rasiermesserscharfen Blumenblättern, die mit tödlichem Gift überzogen sind.</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">Sonnengras</string>
+  <string name="Sungrass_Desc">Sonnengras ist für dessen Samens Heilungs Eigenschaft bekannt.</string>
+  <string name="Sungrass_Buff">pflanzliche Heilung</string>
+</resources>

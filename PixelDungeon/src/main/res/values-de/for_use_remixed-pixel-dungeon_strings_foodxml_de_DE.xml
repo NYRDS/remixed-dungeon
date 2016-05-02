@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">ESSEN</string>
+  <string name="Food_Message">Dieses Essen schmeckt köstlich!</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">Nahrungsration</string>
+  <string name="Ration_Info">Nichts ausgefallenes: getrocknetes Fleisch, einige Kekse - solche Dinge eben.</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">Geröstetes Fleisch</string>
+  <string name="ChargrilledMeat_Info">Es sieht nach einem annehmbaren Steak aus.</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">Gefrorene Fleischscheiben</string>
+  <string name="FrozenCarpaccio_Info">Ein Stück gefrorenes Fleisch. Man kann es nur essen, wenn man dünne Scheiben davon abschneidet. Und dadurch schmeckt es überraschend gut.</string>
+  <string name="FrozenCarpaccio_Info1">Du siehst, wie deine Hände unsichtbar werden!</string>
+  <string name="FrozenCarpaccio_Info2">Du spürst, wie deine Haut fester wird!</string>
+  <string name="FrozenCarpaccio_Info3">Erfrischend!</string>
+  <string name="FrozenCarpaccio_Info4">Du fühlst dich besser!</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">Geheimnisvolles Fleisch</string>
+  <string name="MysteryMeat_Info">Essen auf eigene Gefahr!</string>
+  <string name="MysteryMeat_Info1">Au, das ist heiß!</string>
+  <string name="MysteryMeat_Info2">Du spürst deine Beine nicht mehr.</string>
+  <string name="MysteryMeat_Info3">Du fühlst dich nicht gut.</string>
+  <string name="MysteryMeat_Info4">Du bist pappsatt.</string>
+  <string name="MysteryMeat_Message">Dieses Essen schmeckte... komisch.</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">widerlich!</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">vergammeltes Fleisch</string>
+  <string name="RottenMeat_Info">ein Stück vergammeltes Fleisch</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">Vergammelte Pastete</string>
+  <string name="RottenPasty_Info">es könnte einmal eine Pastete gewesen sein, jetzt ist es nur noch ekelhaft</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">vergammelte Essensration</string>
+  <string name="RottenRation_Info">ab und zu kann man das essen</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">Überteuerte Essensration</string>
+  <string name="OverpricedRation_Info">Es sieht genauso aus wie eine normale Essensration, nur kleiner.</string>
+  <string name="OverpricedRation_Message">Das Essen hat gut geschmeckt.</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">Pastete</string>
+  <string name="Pasty_Info">Dies ist eine Fleischpastete gefüllt mit Rindfleisch und Kartoffeln.</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">Pastete</string>
+  <string name="PseudoPasty_Info">Dies ist eine original cornwallsche Fleischpastete mit einer traditionellen Füllung aus Rindfleisch und Kartoffeln.</string>
+</resources>

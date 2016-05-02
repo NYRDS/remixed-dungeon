@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">Deine %s schnürt dich schmerzhaft ein.</string>
+  <string name="Armor_Identify">Du bist nun vertraut genug mit deiner %1$s um sie zu identifizieren. Es ist eine %2$s.</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">Eine Überlagerung verschiedener Magiearten hat die Glyphe von dieser Rüstung entfernt.</string>
+  <string name="Armor_Info1">Diese %1$s bietet bis zu \"%2$d\" Schadensreduzierung pro Angriff.</string>
+  <string name="Armor_Info2">
+\n\nDeine Stärke ist zu gering. Daher sind deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit verringert, solange du diese Rüstung anhast.</string>
+  <string name="Armor_Info3">
+\n\nDa deine Stärke zu gering ist, wird das Tragen dieser Rüstung deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit verringern.</string>
+  <string name="Armor_Info4">
+\n\nEine typische %1$s absorbiert bis zu %2$d Schadenspunkte pro Angriff und benötigt %3$d Stärkepunkte.</string>
+  <string name="Armor_Info5">Diese Rüstung ist wahrscheinlich zu schwer für dich.</string>
+  <string name="Armor_Info6">Sie hat eine Gravur.</string>
+  <string name="Armor_Info7a">
+\n\n Du trägst die %1$s%2$s.</string>
+  <string name="Armor_Info7b">, und da sie verflucht ist, kannst du sie nicht entfernen.</string>
+  <string name="Armor_Info8">
+\n\nDu spürst, dass eine bösartige Magie in dieser %s lauert.</string>
+  <string name="Armor_Glyph">Glyphe</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">Dieser Gegenstand sieht großartig aus.</string>
+  <string name="ClassArmor_LowHealt">Deine Lebensenergie ist zu niedrig.</string>
+  <string name="ClassArmor_NotEquipped">Du musst diese Rüstung tragen um ihre besondere Kraft nutzen zu können.</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">Stoffrüstung</string>
+  <string name="ClothArmor_Desc">Diese leichte Rüstung bietet einfachen Schutz.</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Umhang des Elfen</string>
+  <string name="ElfArmor_Desc">Mit Hilfe dieses Umhangs kann ein Elf die Kräfte der Natur beschwören. Hohes Gras wird in einem Sekundenbruchteil wachsen, sogar massiven Stein durchdringen und Gegner im Sichtfeld bewegungsunfähig machen.</string>
+  <string name="ElfArmor_ACSpecial">RUF DER NATUR</string>
+  <string name="ElfArmor_NotElf">Nur Elfen können diese Rüstung nutzen!</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">Seidenhülle der Jägerin</string>
+  <string name="HuntressArmor_Desc">Eine Jägerin in solch einem Umhang kann einen Fächer aus geisterhaften Klingen erschaffen. Jede dieser Klingen wird einen einzelnen Gegner im Sichtfeld anvisieren und Schaden an ihm verursachen.  Dieser Schaden hängt von ihrer momentan ausgerüsteten Nahkampfwaffe ab.</string>
+  <string name="HuntressArmor_ACSpecial">GEISTERHAFTE KLINGEN</string>
+  <string name="HuntressArmor_NoEnemies">Es ist kein Gegner zu sehen.</string>
+  <string name="HuntressArmor_NotHuntress">Diese Rüstung kann nur von Jägerinnen benutzt werden!</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">Lederrüstung</string>
+  <string name="LeatherArmor_Desc">Eine Rüstung hergestellt aus gegerbter Monsterhaut. Sie ist nicht so leicht wie Stoffrüstung, bietet dafür aber besseren Schutz.</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">Magierrobe</string>
+  <string name="MageArmor_Desc">Ein Magier kann den Zauber \"geschmolzene Erde\" wirken während er diese prächtige Rüstung trägt: Alle Feinde in seinem Sichtfeld werden in Flammen ausgehen und können sich gleichzeitig nicht mehr bewegen.</string>
+  <string name="MageArmor_ACSpecial">GESCHMOLZENE ERDE</string>
+  <string name="MageArmor_NotMage">Nur Magier können diese Rüstung nutzen.</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">Kettenrüstung</string>
+  <string name="MailArmor_Desc">Verwobene Kettenglieder bilden eine harte und doch gleichzeitig flexible Rüstung.</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">Plattenrüstung</string>
+  <string name="PlateArmor_Desc">Wuchtige Metallplatten wurden zu einem Anzug verbunden der unvergleichlichen Schutz für jeden Abenteurer bietet, der stark genug ist sein erdrückendes Gewicht zu ertragen.</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">Schurkentracht</string>
+  <string name="RogueArmor_Desc">Während er dieses dunkle Kleidungsstück trägt, kann ein Schurke den sogenannten \"Rauchbomben\"-Trick anweden ( bei dem allerdings keine echten Explosionen vorkommen ): Er blendet Gegner, welche ihn sehen können, und springt dann zur Seite.</string>
+  <string name="RogueArmor_ACSpecial">RAUCHBOMBE</string>
+  <string name="RogueArmor_NotRogue">Nur Schurken können diese Rüstung nutzen!</string>
+  <string name="RogueArmor_Fov">Du kannst nur an einen leeren Platz in deinem Sichtfeld springen.</string>
+  <string name="RogueArmor_Prompt">Wähle den Ort, zu dem du springen willst.</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">Schuppenrüstung</string>
+  <string name="ScaleArmor_Desc">Die Metallplättchen, die auf eine Lederjacke aufgenäht wurden, gewähren eine flexible und doch auch schützende Panzerung.</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">Kriegerrüstung</string>
+  <string name="WarriorArmor_Desc">Obwohl diese Rüstung schwer aussieht, erlaubt sie einem Krieger, mit einem heldenhaften Sprung zu einem anvisierten Platz zu springen und dabei alle angrenzenden Feinde niederzuschlagen und zu lähmen.</string>
+  <string name="WarriorArmor_ACSpecial">HELDENHAFTER SPRUNG</string>
+  <string name="WarriorArmor_NotWarrior">Nur Krieger können diese Rüstung nutzen.</string>
+  <string name="WarriorArmor_Prompt">Wähle die Richtung für deinen Sprung.</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">%s der Zuneigung</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">%s der negativen Entropie</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">%s des Rückstoßes</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">%s des Verdrängens</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">%s der Verschränkung</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">%s des Metabolismus</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">%s der Vervielfältigung</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">%s der Macht</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">%s des fauligen Geruches</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">%s der Zähigkeit</string>
+  <string name="Viscosity_Status">%d verzögert</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Verzögerter Schaden (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s hat dich getötet...</string>
+</resources>

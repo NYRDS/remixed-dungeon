@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">il/la tuo/a %s ti comprime dolorosamente</string>
+  <string name="Armor_Identify">hai abbastanza confidenza con il/la tuo/a %1$s per identificarlo/a. È %2$s..</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">L\'interazione di diversi tipi di magia ha cancellato il glifo su questa armatura!</string>
+  <string name="Armor_Info1">Questa %1$s fornisce un assorbimento del danno fino a \"%2$d\" punti per attacco.</string>
+  <string name="Armor_Info2">
+\n\nA causa della tua forza insufficiente la tua velocità di movimento e le tue abilità difensive sono diminuite.</string>
+  <string name="Armor_Info3">
+\n\nA causa della tua forza insufficiente indossare questa armatura diminuirà la tua velocità di movimento e le tue capacità difensive.</string>
+  <string name="Armor_Info4">
+\n\nTipica %1$s provvede un assorbimento del danno fino a %2$d punti per attacco e richiede %3$d punti di forza.</string>
+  <string name="Armor_Info5">Probabilmente questa armatura è troppo pesante per te.</string>
+  <string name="Armor_Info6">È inscritto/a.</string>
+  <string name="Armor_Info7a">
+\n\nStai indossando il/l\' %1$s%2$s.</string>
+  <string name="Armor_Info7b">, e poiché è maledetto/a, non sei in grado di toglierlo/a.</string>
+  <string name="Armor_Info8">
+\n\nPuoi sentire una magia malevola celarsi all\'interno del/dello/della/dell\' %s.</string>
+  <string name="Armor_Glyph">glifo</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">Sembra fantastico!</string>
+  <string name="ClassArmor_LowHealt">La tua vita è troppo bassa.</string>
+  <string name="ClassArmor_NotEquipped">Devi indossare questa armatura per usare il suo potere speciale!</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">armatura in stoffa</string>
+  <string name="ClothArmor_Desc">Questa armatura leggera offre una protezione base.</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Mantello elfico</string>
+  <string name="ElfArmor_Desc">Con l\'aiuto di questo mantello, l\'elfo può evocare le forze della natura stessa. L\'erba alta crescerà in un lampo, anche attraverso la roccia solida, immobilizzando tutti i nemici in vista.</string>
+  <string name="ElfArmor_ACSpecial">RICHIAMO DELLA NATURA</string>
+  <string name="ElfArmor_NotElf">Solo gli elfi possono usare questa armatura!</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">mantello della cacciatrice</string>
+  <string name="HuntressArmor_Desc">Una cacciatrice in tale mantello può creare un ventaglio di lame spettrali. Ognuna di queste lame prenderà di mira un solo nemico nel campo visivo della cacciatrice, infliggendo danno a seconda dell\'arma da mischia equipaggiata al momento.</string>
+  <string name="HuntressArmor_ACSpecial">LAME SPETTRALI</string>
+  <string name="HuntressArmor_NoEnemies">Nessun nemico in vista</string>
+  <string name="HuntressArmor_NotHuntress">Solo la cacciatrice può usare quest\'armatura!</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">armatura in pelle</string>
+  <string name="LeatherArmor_Desc">Armatura fatta con pelle di mostro conciata. Non leggera quanto l\'armatura in stoffa ma fornisce una protezione migliore.</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">tunica del mago</string>
+  <string name="MageArmor_Desc">Indossando questa splendida tunica, un mago può lanciare un incantesimo della terra bruciata: tutti i nemici nel campo visivo prenderanno fuoco e non saranno capaci di muoversi allo stesso tempo.</string>
+  <string name="MageArmor_ACSpecial">TERRA BRUCIATA</string>
+  <string name="MageArmor_NotMage">Solo i maghi possono usare quest\'armatura!</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">armatura a maglia</string>
+  <string name="MailArmor_Desc">Maglie metalliche intrecciate per fare un\'armatura flessibile ma robusta.</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">armatura a piastre</string>
+  <string name="PlateArmor_Desc">Enormi piastre di metallo sono unite insieme in un\'armatura che fornisce una protezione impareggiabile a qualsiasi avventuriero forte abbastanza da sostenere il suo peso schiacciante.</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">veste da furfante</string>
+  <string name="RogueArmor_Desc">Indossando questa veste scura, un furfante può eseguire una mossa chiamata \"bomba fumogena\" (anche se non sono usati veri esplosivi): acceca i nemici che possono vederlo e salta da un\'altra parte.</string>
+  <string name="RogueArmor_ACSpecial">BOMBA FUMOGENA</string>
+  <string name="RogueArmor_NotRogue">Solo i furfanti possono indossare quest\'armatura!</string>
+  <string name="RogueArmor_Fov">Puoi saltare soltanto in una posizione vuota nel tuo campo visivo</string>
+  <string name="RogueArmor_Prompt">Scegli una posizione dove saltare</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">armatura a scaglie</string>
+  <string name="ScaleArmor_Desc">Le scaglie metalliche cucite su una veste di pelle creano un\'armatura flessibile ma protettiva.</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">armatura del guerriero</string>
+  <string name="WarriorArmor_Desc">Sebbene quest\'armatura sembri pesante, permette a un guerriero di eseguire uno slancio eroico verso una posizione selezionata, sbattendo a terra per stordire tutti i nemici vicini.</string>
+  <string name="WarriorArmor_ACSpecial">SLANCIO EROICO</string>
+  <string name="WarriorArmor_NotWarrior">Solo i guerrieri possono indossare quest\'armatura!</string>
+  <string name="WarriorArmor_Prompt">Scegli la direzione dello slancio</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">%s dell\'affetto</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">%s dell\'anti-entropia</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">%s del rimbalzo</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">%s del dislocamento</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">%s dell\'aggrovigliamento</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">%s del metabolismo</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">%s della molteplicità</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">%s del potenziale</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">%s del fetore</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">%s della viscosità</string>
+  <string name="Viscosity_Status">differito %d</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Danno differito (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s ti ha ucciso...</string>
+</resources>

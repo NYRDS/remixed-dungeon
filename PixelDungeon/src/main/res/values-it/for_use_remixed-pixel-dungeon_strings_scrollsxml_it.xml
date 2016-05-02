@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">Pergamena \"%s\"</string>
+  <string name="Scroll_Info">Questa pergamena è coperta con una scrittura indecifrabile, e porta un titolo di runa %s. Chi sa che cosa farà quando si legge ad alta voce?</string>
+  <string name="Scroll_ACRead">LEGGI</string>
+  <string name="Scroll_Blinded">Non è possibile leggere una pergamena mentre sei accecato</string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Seleziona un item</string>
+  <string name="InventoryScroll_Warning">Vuoi davvero cancellare questa pergamena? Sarà comunque consumata.</string>
+  <string name="InventoryScroll_Yes">Si,sono positivo
+</string>
+  <string name="InventoryScroll_No">No, ho cambiato idea</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Pergamena vuota</string>
+  <string name="BlankScroll_Info">una pergamena vuota. Forse ci sarà qualcosa in grado di scrivere su di essa?</string>
+  <string name="BlankScroll_ReallyBlank">Questa pergamena è vuota</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Pergamena della Sfida</string>
+  <string name="ScrollOfChallenge_Info1">la pergamena emette un ruggito impegnativo, che riecheggia in tutto il Dungeon!</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Pergamena dell\'identità</string>
+  <string name="ScrollOfIdentify_Info">rivela definitivamente tutti i segreti di un singolo elemento.</string>
+  <string name="ScrollOfIdentify_InvTitle">Seleziona un item da identificare</string>
+  <string name="ScrollOfIdentify_Info1">questo è %s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Pergamena del sonno</string>
+  <string name="ScrollOfLullaby_Info">Una melodia rilassante metterà tutte le creature nel vostro campo visivo in un sonno profondo, dandovi la possibilità di fuggire o fare un attacco a sorpresa contro di loro.</string>
+  <string name="ScrollOfLullaby_Info1">la pergamena emette una melodia rilassante.</string>
+  <string name="ScrollOfLullaby_Info2">la pergamena emette una melodia rilassante e %s si addormenta!</string>
+  <string name="ScrollOfLullaby_Info3">la pergamena emette una melodia rilassante e i mostri si addormentano!</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Pergamena della Magia Mappata</string>
+  <string name="ScrollOfMagicMapping_Info">Quando questa pergamena viene letta, l\'immagine di una chiarezza cristallina rimarrà impressa nella vostra memoria, per segnalare la disposizione precisa del livello e rivelando tutti i segreti nascosti. Le posizioni di oggetti e creature rimarranno sconosciute.</string>
+  <string name="ScrollOfMagicMapping_Layout">Ora siete a conoscenza del layout del livello</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Pergamena dell\'immagine riflessa</string>
+  <string name="ScrollOfMirrorImage_Info">L\'incantesimo su questa pergamena creerà gemelli illusori, che inseguiranno i suoi nemici.</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Pergamena di Esplosione psichica</string>
+  <string name="ScrollOfPsionicBlast_Info">Questa pergamena contiene energia distruttiva, che può essere incanalata psionicamente per infliggere un danno enorme per tutte le creature all\'interno del campo di vista. Un flash che accompagna la luce sarà temporaneamente ciechi tutti nella zona di effetti, tra cui il lettore della pergamena</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Pergamena di ricarica</string>
+  <string name="ScrollOfRecharging_Info">Il potere magico grezzo legata a questa pergamena verrà, quando viene rilasciato, ricaricare tutte le bacchette del lettore a piena potenza.</string>
+  <string name="ScrollOfRecharging_Info1a">un aumento di corsi di energia attraverso il vostro pacco, ricarica la tua bacchetta</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Pergamena di Rimozione Maledizione</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+</resources>

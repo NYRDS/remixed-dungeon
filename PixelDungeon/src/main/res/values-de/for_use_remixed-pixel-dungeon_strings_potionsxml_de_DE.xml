@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">%ser Trank</string>
+  <string name="Potion_Info">Diese Flasche enthält eine %se Flüssigkeit. Wer weiß, was sie tun wird, wenn du sie trinkst oder wirfst?</string>
+  <string name="Potion_ACDrink">TRINKEN</string>
+  <string name="Potion_Harmfull">Schädlicher Trank!</string>
+  <string name="Potion_Beneficial">Nützlicher Trank!</string>
+  <string name="Potion_Yes">Ja, ich weiß, was ich tue</string>
+  <string name="Potion_No">Nein, ich habe es mir anders überlegt</string>
+  <string name="Potion_SureDrink">Bist du sicher, dass du es trinken möchtest. In den meisten Fällen solltest du solche Tränke auf deine Feinde werfen.</string>
+  <string name="Potion_SureThrow">Bist du sicher, dass du es werfen möchtest? In den meisten Fällen ist es sinnvoll, es zu trinken.</string>
+  <string name="Potion_Shatter">Das Glas zerbricht und %se Flüssigkeit breitet sich harmlos aus</string>
+  <string-array name="Potion_Colors">
+    <item>Türkiser</item>
+    <item>Purpurner</item>
+    <item>Himmelblauer</item>
+    <item>Grüner</item>
+    <item>Goldener</item>
+    <item>Violetter</item>
+    <item>Dunkelgrauer</item>
+    <item>Elfenbeinfarbener</item>
+    <item>Bernsteinfarbener</item>
+    <item>Brauner</item>
+    <item>indigoblauer</item>
+    <item>Silberner</item>
+  </string-array>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">Erfahrungstrank</string>
+  <string name="PotionOfExperience_Info">Die Geschichten unzähliger Schlachten in flüssiger Form - dieser Trank wird deine Erfahrung auf die nächste Stufe erhöhen.</string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">Frosttrank</string>
+  <string name="PotionOfFrost_Info">Sobald diese Chemikalie mit Luft in Berührung kommt verwandelt sie sich in eine Frostwolke die jegliche Kreatur die sie umgibt auf der Stelle einfriert - und ihr damit jegliche Möglichkeit der Bewegung oder Handelns versagt.</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">Heiltrank</string>
+  <string name="PotionOfHealing_Info">Ein Elixier das dich zur Gänze heilt und jeglicher Vergiftung neutralisiert.</string>
+  <string name="PotionOfHealing_Apply">Deine Wunden heilen vollständig.</string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">Unsichtbarkeitstrank</string>
+  <string name="PotionOfInvisibility_Info">Dieser Trank macht dich vorübergehend unsichtbar. Solange du unsichtbar bist können dich deine Feinde nicht erkennen. Sobald du einen Feind attackierst, einen Zauberstab oder eine Schriftrolle benutzt wird die Wirkung dieses Effekts verpuffen.</string>
+  <string name="PotionOfInvisibility_Apply">Du siehst, wie deine Hände unsichtbar werden!</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">Schwebetrank</string>
+  <string name="PotionOfLevitation_Info">Der Genuß dieser wunderlichen Flüssigkeit erlaubt es dir zu Schweben und unbeschadet über Fallen zu gelangen. Flammen und Gase können jedoch nicht ohne Schaden schwebend überwunden werden.</string>
+  <string name="PotionOfLevitation_Apply">Du schwebst in die Luft!</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">Flammentrank</string>
+  <string name="PotionOfLiquidFlame_Info">Dieses Fläschchen enthält eine sehr instabile Verbindung die sich sofort in Flammen verwandelt sobald sie mit Luft in Kontakt kommt.</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <string name="PotionOfMight_Name">Machttrank</string>
+  <string name="PotionOfMight_Info">Dieser kräftigende Trank wird durch deine Muskeln strömen und deine Stärke um einen und deine Gesundheit um fünf Punkte erhöhen.</string>
+  <string name="PotionOfMight_Apply">Neu entdeckte Stärke flutet durch deinen Körper.</string>
+  <string name="PotionOfMight_StaApply">+1 Stä, +5 TP</string>
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">Trank des Gedankenlesens</string>
+  <string name="PotionOfMindVision_Info">Nachdem du dies getrunken hast, wird dein Geist eins mit den physischen Signaturen entfernter Kreaturen und ermöglicht dir diese durch Wände wahrzunehmen. Weiters erlaubt dir dieser Trank durch naheliegende Wände und Türen zu sehen.</string>
+  <string name="PotionOfMindVision_Apply1">Du kannst irgendwie die geistige Präsenz anderer Kreaturen fühlen!</string>
+  <string name="PotionOfMindVision_Apply2">Du kannst irgendwie spüren, dass du auf dieser Ebene allein bist.</string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <string name="PotionOfParalyticGas_Name">Lähmungsgastrank</string>
+  <string name="PotionOfParalyticGas_Info">Sobald diese Chemikalie mit Luft in Berührung kommt verwandelt sie sich in einen gelben Dunst. Jegliche Kreatur die diesen Nebel einatmet wird auf der Stelle paralysiert und kann sich, bis nach einer gewissen Zeit nachdem sich der Nebel verflüchtigt hat, nicht mehr bewegen. Dieser Gegenstand kann auf entfernte Gegner geworfen werden um sie im Wirkungsradius des Gases gefangen zu halten.</string>
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <string name="PotionOfPurity_Name">Purifizierungstrank</string>
+  <string name="PotionOfPurity_Info">Dieses Gegengift wird schnell alle gefährlichen Gase im Wirkungsbereich neutralisieren. Wenn man es trinkt wird man einige Zeit gegen solche Gase immun.</string>
+  <string name="PotionOfPurity_Freshness">Du bemerkst eine ungewöhnliche Frische in der Luft.</string>
+  <string name="PotionOfPurity_NoSmell">Du kannst keine Gerüche mehr wahrnehmen!</string>
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">Stärketrank</string>
+  <string name="PotionOfStrength_Info">Dieser kräftigende Trank wird durch deine Muskeln strömen und deine Stärke um einen Punkt erhöhen.</string>
+  <string name="PotionOfStrength_Apply">Neu entdeckte Stärke flutet durch deinen Körper.</string>
+  <string name="PotionOfStrength_StaApply">+1 Stä</string>
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+  <string name="PotionOfToxicGas_Name">Giftgastrank</string>
+  <string name="PotionOfToxicGas_Info">Das Entkorken oder Schütteln dieses unter Druck stehenden Glases würde dazu führen, dass der Inhalt in einer tödlichen Wolke grünen Giftgases explodiert. Du könntest es auf entfernte Gegner werfen anstatt es zu entkorken.</string>
+</resources>
