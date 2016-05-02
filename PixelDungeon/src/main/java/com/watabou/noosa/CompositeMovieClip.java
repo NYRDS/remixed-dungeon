@@ -1,6 +1,6 @@
 package com.watabou.noosa;
 
-import com.watabou.gltextures.SmartTexture;
+import com.watabou.glwrap.Texture;
 
 import java.util.ArrayList;
 
@@ -14,9 +14,9 @@ public class CompositeMovieClip extends MovieClip {
 	private class LayerDesc {
 		String id;
 		boolean enabled = true;
-		SmartTexture texture;
+		Texture texture;
 
-		LayerDesc(String _id, SmartTexture _tex) {
+		LayerDesc(String _id, Texture _tex) {
 			id = _id;
 			texture = _tex;
 		}
@@ -34,7 +34,7 @@ public class CompositeMovieClip extends MovieClip {
 		mLayers.clear();
 	}
 
-	public void addLayer(String id, SmartTexture img) {
+	public void addLayer(String id, Texture img) {
 		if (mLayers == null) {
 			mLayers = new ArrayList<>();
 		}
@@ -43,7 +43,7 @@ public class CompositeMovieClip extends MovieClip {
 		mLayers.add(layerDesc);
 	}
 
-	public void setLayerTexture(String id, SmartTexture img) {
+	public void setLayerTexture(String id, Texture img) {
 		if (mLayers != null) {
 			for (LayerDesc layer : mLayers) {
 				if (layer.id.equals(id)) {
@@ -53,7 +53,7 @@ public class CompositeMovieClip extends MovieClip {
 		}
 	}
 
-	protected SmartTexture getLayerTexture(String id) {
+	protected Texture getLayerTexture(String id) {
 		if(mLayers!=null) {
 			for (LayerDesc layer : mLayers) {
 				if (layer.id.equals(id)) {

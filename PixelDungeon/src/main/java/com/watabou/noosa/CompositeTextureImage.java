@@ -1,12 +1,12 @@
 package com.watabou.noosa;
 
-import com.watabou.gltextures.SmartTexture;
+import com.watabou.glwrap.Texture;
 
 import java.util.ArrayList;
 
 public class CompositeTextureImage extends Image {
 
-	private ArrayList<SmartTexture> mLayers = new ArrayList<>();
+	private ArrayList<Texture> mLayers = new ArrayList<>();
 
 	public CompositeTextureImage() {
 		super();
@@ -17,7 +17,7 @@ public class CompositeTextureImage extends Image {
 		texture(tx);
 	}
 
-	public void addLayer(SmartTexture img) {
+	public void addLayer(Texture img) {
 		mLayers.add(img);
 	}
 
@@ -28,7 +28,7 @@ public class CompositeTextureImage extends Image {
 
 		NoosaScript script = NoosaScript.get();
 
-		for (SmartTexture img : mLayers) {
+		for (Texture img : mLayers) {
 			img.bind();
 			script.drawQuad(verticesBuffer);
 		}
