@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -70,7 +71,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
 
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
-		layersDesc.put(LAYER_HEAD,"hero/head/"+classDescriptor+".png");
+		if (hero.belongings.armor == null || !(hero.belongings.armor instanceof ClassArmor)) {
+			layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
+		}
 		layersDesc.put(LAYER_ARMOR,armorDescriptor(hero.belongings.armor));
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
