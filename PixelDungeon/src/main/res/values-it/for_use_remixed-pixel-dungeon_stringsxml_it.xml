@@ -84,6 +84,14 @@
     <item>Il testo è scritto in linguaggio demoniaco.</item>
   </string-array>
   <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>Sulla dieta</item>
+    <item>La fede è la mia armatura</item>
+    <item>Pharmacophobia</item>
+    <item>terra sterile</item>
+    <item>Swarm intelligence</item>
+    <item>nel buio</item>
+  </string-array>
   <!--STRINGS OF Journal CLASS-->
   <string name="Journal_WellHealt">Bene della Salute</string>
   <string name="Journal_WellAwareness">Bene della Consapevolezza</string>
@@ -104,6 +112,7 @@
   <!--STRINGS OF WndChallenges CLASS-->
   <string name="WndChallenges_Title">Sfide</string>
   <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">Quale modo seguirete?</string>
   <string name="WndChooseWay_Cancel">Deciderò dopo</string>
   <!--STRINGS OF WndClass CLASS-->
   <string name="WndClass_Mastery">Padronanza</string>
@@ -121,6 +130,7 @@
   <string name="WndGame_Load">Carica</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">stati</string>
+  <string name="WndHero_Buffs">Buffs</string>
   <string name="WndHero_Exp">Esperienza</string>
   <string name="WndHero_Str">Forza</string>
   <string name="WndHero_Health">Salute</string>
@@ -139,9 +149,12 @@
   <string name="WndInfoItem_CrystalChest">Cassa in cristallo </string>
   <string name="WndInfoItem_Tomb">Tomba</string>
   <string name="WndInfoItem_Skeleton">resti scheletrici</string>
+  <string name="WndInfoItem_WontKnow">Non si sa cosa c\'è dentro fino a quando lo si apre!</string>
+  <string name="WndInfoItem_NeedKey">Ma per aprirlo è necessaria una chiave d\'oro.</string>
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">Diario</string>
   <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Error">Impossibile caricare ulteriori informazioni</string>
   <string name="WndRanking_Stats">stati</string>
   <string name="WndRanking_Items">Items</string>
   <string name="WndRanking_Badges">Encomio</string>
@@ -155,10 +168,16 @@
   <string name="WndRanking_StaGold">Oro raccolto</string>
   <string name="WndRanking_StaFood">cibo mangiato</string>
   <string name="WndRanking_StaAlchemy">Pozioni cotte</string>
+  <string name="WndRanking_StaAnkhs">ankh Usato</string>
   <!--STRINGS OF WndResurrect CLASS-->
+  <string name="WndResurrect_Message">Sei morto, ma è stata data un\'altra possibilità di sconfiggere questo dungeon. Vuoi riprendere?</string>
+  <string name="WndResurrect_Yes">Sì, mi batterò!</string>
+  <string name="WndResurrect_No">No, mi arrendo</string>
   <!--STRINGS OF WndSadGhost CLASS-->
+  <string name="WndSadGhost_Rose">Sì! Sì!!! è questo! Si prega di darlo a me! E si può prendere uno di questi elementi, forse sarà utile a voi nel vostro viaggio...</string>
   <string name="WndSadGhost_Wepon">Arma fantasma</string>
   <string name="WndSadGhost_Armor">Armatura fantasma</string>
+  <string name="WndSadGhost_Farewell">Addio, avventuriero!</string>
   <!--STRINGS OF WndStory CLASS-->
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">IN VENDITA: %1$s - %2$dg</string>
@@ -167,6 +186,8 @@
   <string name="WndTradeItem_Sell1">vendi 1 per %dg</string>
   <string name="WndTradeItem_SellAll">Vendi tutto per %dg</string>
   <string name="WndTradeItem_Cancel">Non importa</string>
+  <string name="WndTradeItem_Sold">Hai venduto la tua %1$s per %2$dg</string>
+  <string name="WndTradeItem_Bought">Hai comprato %1$s per %2$dg</string>
   <!--STRINGS OF WndWandmaker CLASS-->
   <string name="WndWandmaker_Battle">Bacchetta da battaglia</string>
   <string name="WndWandmaker_NonBattle">bacchetta d\'utilità </string>
