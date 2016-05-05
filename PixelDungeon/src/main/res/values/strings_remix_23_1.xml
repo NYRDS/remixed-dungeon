@@ -28,14 +28,14 @@
     <string name="Wererat_Name">Wererat</string>
     <string name="Wererat_Gender">feminine</string>
     <string name="Wererat_Name_Objective">Wererat</string>
-    <string name="Wererat_Desc">Cute but slimy.</string>
+    <string name="Wererat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms with every move.</string>
     <string name="Wererat_Info1">Wererat is twiching violently.</string>
 
     <!-- STRINGS OF Wererat CLASS -->
     <string name="WereratTransformed_Name">Wererat</string>
     <string name="WereratTransformed_Gender">feminine</string>
     <string name="WereratTransformed_Name_Objective">Wererat</string>
-    <string name="WereratTransformed_Desc">Not as cute, twice as slimy.</string>
+    <string name="WereratTransformed_Desc">A horrible beast that emerged from the rat's corpse bears no resemblance to a rodent or any other animal you ever saw. Enormous mouth, full of razor-sharp teeth, occupies most of it's body.</string>
 
 	<!-- STRINGS OF ZombieGnoll CLASS -->
 	<string name="ZombieGnoll_Info">Gnoll-zombie has risen from the dead!</string>
