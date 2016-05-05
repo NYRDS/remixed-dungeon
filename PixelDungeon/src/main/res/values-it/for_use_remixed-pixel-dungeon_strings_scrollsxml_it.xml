@@ -36,6 +36,7 @@
   <string name="BlankScroll_ReallyBlank">Questa pergamena è vuota</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
   <string name="ScrollOfChallenge_Name">Pergamena della Sfida</string>
+  <string name="ScrollOfChallenge_Info">Quando si legge ad alta voce, questa pergamena scatenerà un boato impegnativo che risveglierà tutti i mostri e li avvisa della posizione del lettore.</string>
   <string name="ScrollOfChallenge_Info1">la pergamena emette un ruggito impegnativo, che riecheggia in tutto il Dungeon!</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
   <string name="ScrollOfIdentify_Name">Pergamena dell\'identità</string>
@@ -62,12 +63,35 @@
   <string name="ScrollOfRecharging_Name">Pergamena di ricarica</string>
   <string name="ScrollOfRecharging_Info">Il potere magico grezzo legata a questa pergamena verrà, quando viene rilasciato, ricaricare tutte le bacchette del lettore a piena potenza.</string>
   <string name="ScrollOfRecharging_Info1a">un aumento di corsi di energia attraverso il vostro pacco, ricarica la tua bacchetta</string>
+  <string name="ScrollOfRecharging_Info1b">un aumento di corsi di energia attraversa il vostro pacco, e ricarica le tue bacchette</string>
+  <string name="ScrollOfRecharging_Info2">un aumento di corsi di energia attraversa il vostro pacco, ma non succede nulla</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
   <string name="ScrollOfRemoveCurse_Name">Pergamena di Rimozione Maledizione</string>
+  <string name="ScrollOfRemoveCurse_Proced">Il tuo pacco si illumina, e disperde un\'energia malevole</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Il tuo pacco si illumina, ma non succede nulla.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">Pergamena di Teletrasporto</string>
+  <string name="ScrollOfTeleportation_Teleport">In un batter d\'occhio si sono teletrasportati in un\'altra posizione del dungeon</string>
+  <string name="ScrollOfTeleportation_NoTeleport">la forte aura magica di questo luogo impedisce il teletrasporto!</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Pergamena del Terrore</string>
+  <string name="ScrollOfTerror_Info">Un lampo di luce rossa sopraffane tutte le creature nel vostro campo visivo con il terrore, e si gireranno e fuggiranno. Attaccare un nemico in fuga farà dissipare l\'effetto.</string>
+  <string name="ScrollOfTerror_Info1">La pergamena emette un brillante lampo di luce rossa</string>
+  <string name="ScrollOfTerror_Info2">La pergamena emette un brillante lampo di luce rossa e L\' %s fugge!</string>
+  <string name="ScrollOfTerror_Info3">La pergamena emette un brillante lampo di luce rossa e i mostri fuggiscono</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Pergamena d\'aggiornamento</string>
+  <string name="ScrollOfUpgrade_InvTitle">Seleziona un item d\'aggiornare</string>
+  <string name="ScrollOfUpgrade_LooksBetter">La tua %s sembra migliore ora</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Pergamena d\'aggiornamento arma</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Questa pergamena aggiornerà un\'arma da mischia, migliorandone la qualità. A differenza di una normale pergamena d\'aggiornamento, questa versione speciale non potrà distruggere l\'incantesimo su l\'arma. Al contrario, è in grado di permeare l\'arma con un incantesimo casuale.</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Seleziona un\'arma per l\'aggiornamento</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">La tua %s sembra migliore ora</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Pergamena di Dominazione</string>
+  <string name="ScrollOfDomination_Info">Questa pergamena piegherà la volontà di una creatura. La creatura combatterà per te fino alla morte.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Pergamena di Sventura</string>
+  <string name="ScrollOfCurse_Info">Questa pergamena creata appositamente per punire i ladri abbastanza stupidi per provare l\'uso della magia che riesco a capire. magia di scorrimento del tutto inutile e anche dannoso per un\'avventuriero regolare, ma valutata abbastanza bene dai commercianti.</string>
 </resources>

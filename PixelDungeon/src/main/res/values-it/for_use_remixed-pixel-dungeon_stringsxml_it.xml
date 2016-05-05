@@ -104,7 +104,9 @@
   <string name="Journal_Troll">fabbro troll</string>
   <string name="Journal_Imp">diavoletto ambizioso</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Prompt">OK, un\'accordo è un\'accordo, dato quello che posso fare per te: posso riforgiare 2 item e trasformando in uno di qualità migliore.</string>
   <string name="WndBlacksmith_Select">Seleziona un item da riforgiare</string>
+  <string name="WndBlacksmith_Reforge">Riforgia</string>
   <!--STRINGS OF WndCatalogus CLASS-->
   <string name="WndCatalogus_Potions">pozioni</string>
   <string name="WndCatalogus_Scrolls">Pagina</string>
@@ -151,6 +153,7 @@
   <string name="WndInfoItem_Skeleton">resti scheletrici</string>
   <string name="WndInfoItem_WontKnow">Non si sa cosa c\'è dentro fino a quando lo si apre!</string>
   <string name="WndInfoItem_NeedKey">Ma per aprirlo è necessaria una chiave d\'oro.</string>
+  <string name="WndInfoItem_Inside">Si può vedere %s dentro, ma per aprire la cassa è necessaria una chiave d\'oro.</string>
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">Diario</string>
   <!--STRINGS OF WndRanking CLASS-->
@@ -175,6 +178,7 @@
   <string name="WndResurrect_No">No, mi arrendo</string>
   <!--STRINGS OF WndSadGhost CLASS-->
   <string name="WndSadGhost_Rose">Sì! Sì!!! è questo! Si prega di darlo a me! E si può prendere uno di questi elementi, forse sarà utile a voi nel vostro viaggio...</string>
+  <string name="WndSadGhost_Rat">SI! la brutta creature è finalmente uccisa e posso finalmente riposare...si prega di prendere uno di questi item, forse sarà utile a voi nel vostro viaggio...</string>
   <string name="WndSadGhost_Wepon">Arma fantasma</string>
   <string name="WndSadGhost_Armor">Armatura fantasma</string>
   <string name="WndSadGhost_Farewell">Addio, avventuriero!</string>
