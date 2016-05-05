@@ -7,6 +7,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Pushing;
@@ -26,13 +27,15 @@ public class Wererat extends Mob {
     private static final float TIME_TO_HATCH	= 4f;
 
     {
-        hp(ht(100));
+        hp(ht(140));
         defenseSkill = 25;
 
         EXP = 1;
         maxLvl = 30;
 
         pacified = true;
+
+        IMMUNITIES.add(ToxicGas.class);
     }
 
     private static final String RAT_TRANSFORMING_STATE = "rat_transforming_state";

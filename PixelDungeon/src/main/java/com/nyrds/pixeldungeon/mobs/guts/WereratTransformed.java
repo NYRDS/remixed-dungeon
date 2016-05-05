@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -10,7 +11,7 @@ import com.watabou.utils.Random;
  */
 public class WereratTransformed extends Mob {
     {
-        hp(ht(300));
+        hp(ht(360));
         defenseSkill = 35;
 
         EXP = 25;
@@ -20,11 +21,13 @@ public class WereratTransformed extends Mob {
         lootChance = 0.7f;
 
         state = HUNTING;
+
+        IMMUNITIES.add(Paralysis.class);
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(40, 60);
+        return Random.NormalIntRange(50, 80);
     }
 
     @Override

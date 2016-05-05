@@ -58,7 +58,7 @@ public class Yog extends Boss {
 	public Yog() {
 		spriteClass = YogSprite.class;
 
-		hp(ht(300));
+		hp(ht(500));
 
 		EXP = 50;
 
@@ -174,12 +174,12 @@ public class Yog extends Boss {
 
 	public static class RottingFist extends Boss {
 
-		private static final int REGENERATION = 4;
+		private static final int REGENERATION = 10;
 
 		{
 			spriteClass = RottingFistSprite.class;
 
-			hp(ht(300));
+			hp(ht(400));
 			defenseSkill = 25;
 
 			EXP = 0;
@@ -209,7 +209,7 @@ public class Yog extends Boss {
 
 		@Override
 		public int damageRoll() {
-			return Random.NormalIntRange(24, 36);
+			return Random.NormalIntRange(34, 46);
 		}
 
 		@Override
@@ -249,7 +249,7 @@ public class Yog extends Boss {
 		{
 			spriteClass = BurningFistSprite.class;
 
-			hp(ht(200));
+			hp(ht(300));
 			defenseSkill = 25;
 
 			EXP = 0;
@@ -279,7 +279,7 @@ public class Yog extends Boss {
 
 		@Override
 		public int damageRoll() {
-			return Random.NormalIntRange(20, 32);
+			return Random.NormalIntRange(40, 62);
 		}
 
 		@Override
@@ -338,7 +338,7 @@ public class Yog extends Boss {
 		{
 			spriteClass = LarvaSprite.class;
 
-			hp(ht(50));
+			hp(ht(120));
 			defenseSkill = 20;
 
 			EXP = 0;
@@ -353,7 +353,7 @@ public class Yog extends Boss {
 
 		@Override
 		public int damageRoll() {
-			return Random.NormalIntRange(15, 20);
+			return Random.NormalIntRange(25, 30);
 		}
 
 		@Override
