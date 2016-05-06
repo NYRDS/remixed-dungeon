@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
-import com.nyrds.pixeldungeon.mobs.guts.Wererat;
+import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
 import com.nyrds.pixeldungeon.mobs.guts.Worm;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
@@ -128,7 +128,7 @@ public class MobFactory {
 		registerMobClass(ZombieGnoll.class);
 		registerMobClass(ShadowLord.class);
 		registerMobClass(Nightmare.class);
-		registerMobClass(Wererat.class);
+		registerMobClass(SuspiciousRat.class);
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {

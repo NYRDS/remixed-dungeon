@@ -22,7 +22,7 @@ import com.watabou.utils.Random;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class Wererat extends Mob {
+public class SuspiciousRat extends Mob {
 
     private static final float TIME_TO_HATCH	= 4f;
 
@@ -79,7 +79,7 @@ public class Wererat extends Mob {
                 transforming = true;
                 if (Dungeon.visible[getPos()]) {
                     getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
-                    GLog.n(Game.getVar(R.string.Wererat_Info1));
+                    GLog.n(Game.getVar(R.string.Suspicious_Rat_Info1));
                 }
                 PlayZap();
                 return true;
@@ -87,9 +87,9 @@ public class Wererat extends Mob {
             else {
                 int wereratPos = this.getPos();
                 if (Dungeon.level.cellValid(wereratPos)) {
-                    WereratTransformed wererat = new WereratTransformed();
-                    wererat.setPos(wereratPos);
-                    Dungeon.level.spawnMob(wererat, 0);
+                    PseudoRat mob = new PseudoRat();
+                    mob.setPos(wereratPos);
+                    Dungeon.level.spawnMob(mob, 0);
                     Sample.INSTANCE.play(Assets.SND_CURSED);
                 }
                 die(this);

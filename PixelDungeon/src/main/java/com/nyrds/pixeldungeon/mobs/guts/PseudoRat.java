@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class WereratTransformed extends Mob {
+public class PseudoRat extends Mob {
     {
         hp(ht(360));
         defenseSkill = 35;

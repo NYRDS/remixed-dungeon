@@ -25,17 +25,17 @@
     <string name="SpiritOfPain_Desc">A shard of living darkness.</string>
 
     <!-- STRINGS OF Wererat CLASS -->
-    <string name="Wererat_Name">Wererat</string>
-    <string name="Wererat_Gender">feminine</string>
-    <string name="Wererat_Name_Objective">Wererat</string>
-    <string name="Wererat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms with every move.</string>
-    <string name="Wererat_Info1">Wererat is twiching violently.</string>
+    <string name="Suspicious_Rat_Name">Suspicious rat</string>
+    <string name="Suspicious_Rat_Gender">feminine</string>
+    <string name="Suspicious_Rat_Name_Objective">Suspicious rat</string>
+    <string name="Suspicious_Rat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms when it moves.</string>
+    <string name="Suspicious_Rat_Info1">Wererat is twitching violently.</string>
 
     <!-- STRINGS OF Wererat CLASS -->
-    <string name="WereratTransformed_Name">Wererat</string>
-    <string name="WereratTransformed_Gender">feminine</string>
-    <string name="WereratTransformed_Name_Objective">Wererat</string>
-    <string name="WereratTransformed_Desc">A horrible beast that emerged from the rat's corpse bears no resemblance to a rodent or any other animal you ever saw. Enormous mouth, full of razor-sharp teeth, occupies most of it's body.</string>
+    <string name="Pseudo_Rat_Name">Pseudo-rat</string>
+    <string name="Pseudo_Rat_Gender">feminine</string>
+    <string name="Pseudo_Rat_Name_Objective">Pseudo-rat</string>
+    <string name="Pseudo_Rat_Desc">A horrible beast that emerged from the rat\'s corpse bears no resemblance to a rodent or any other animal you ever saw. Enormous mouth, full of razor-sharp teeth, occupies most of it\'s body.</string>
 
 	<!-- STRINGS OF ZombieGnoll CLASS -->
 	<string name="ZombieGnoll_Info">Gnoll-zombie has risen from the dead!</string>
@@ -43,7 +43,7 @@
     <!-- Items -->
     <!-- STRINGS OF HeartOfDarkness CLASS -->
     <string name="HeartOfDarkness_Name">Heart of darkness</string>
-    <string name="HeartOfDarkness_Info">Black pulsating heart of the Trecherous Spirit.</string>
+    <string name="HeartOfDarkness_Info">Black pulsating heart of the Treacherous Spirit.</string>
 
     <!-- Buffs -->
     <!-- STRINGS OF DarkVeil CLASS -->
