@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.scenes;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;

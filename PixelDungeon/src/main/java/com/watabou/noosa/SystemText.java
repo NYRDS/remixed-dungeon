@@ -45,15 +45,13 @@ public class SystemText extends Text {
 
 		needWidth = multiline;
 
-		float size = baseLine;
-
-		if (size == 0) {
+		if (baseLine == 0) {
 			throw new TrackedRuntimeException("zero sized font!!!");
 		}
 
 		Typeface tf = Typeface.create((String) null, Typeface.BOLD);
 
-		textPaint.setTextSize(size * oversample);
+		textPaint.setTextSize(baseLine * oversample);
 		textPaint.setAntiAlias(true);
 
 		textPaint.setTypeface(tf);

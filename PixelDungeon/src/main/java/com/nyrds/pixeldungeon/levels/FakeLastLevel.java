@@ -19,15 +19,9 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.mobs.Mimic;
-import com.watabou.pixeldungeon.actors.mobs.MimicPie;
-import com.watabou.pixeldungeon.actors.mobs.Rat;
-import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.HallsLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;

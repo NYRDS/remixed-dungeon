@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
-import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;

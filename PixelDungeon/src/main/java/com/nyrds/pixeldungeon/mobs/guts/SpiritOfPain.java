@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.sprites.LarvaSprite;
 import com.watabou.utils.Random;
 
 /**
