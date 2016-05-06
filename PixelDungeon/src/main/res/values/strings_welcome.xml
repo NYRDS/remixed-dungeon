@@ -78,4 +78,13 @@
         - Greater variety of mini-bosses for a final fight (instead of 2 fists, Yog now can chose from a total of 5 mini bosses to spawn)\n
         - New setting and monsters for levels 27-31
         </string>
+		<string name="Welcome_Text_23_1">
+        remix.23.1:\n
+        - There is new shop, NPC and quest on level 27\n
+        - New monster for Demon Nest (27-31)\n
+        - All monsters and bosses on levels 27-32 and they're abilities became stronger\n
+		- Updated boss badges\n
+		- Several minor visual upgrades\n
+		- Various bug fixes\n
+        </string>
 </resources>
