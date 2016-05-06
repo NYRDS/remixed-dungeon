@@ -51,10 +51,10 @@
       "any":{"Yog":1,"YogsBrain":1,"YogsEye":1,"YogsHeart":1,"YogsTeeth":1}
    },
    "GutsLevel":{
-      "26":{"Wererat":1,"ZombieGnoll":2,"Worm":0.3,"Succubus":0.02},
-      "27":{"Wererat":2,"ZombieGnoll":1,"Worm":1,"Eye":1},
-      "28":{"Wererat":1,"ZombieGnoll":1,"Worm":2,"Elemental":0.02},
-	  "29":{"Wererat":2,"ZombieGnoll":1,"Worm":2},
-      "30":{"Wererat":1,"ZombieGnoll":1,"Worm":2}
+      "26":{"SuspiciousRat":1,"ZombieGnoll":2,"Worm":0.3,"Succubus":0.02},
+      "27":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":1,"Eye":1},
+      "28":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2,"Elemental":0.02},
+	  "29":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":2},
+      "30":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2}
    }
 }

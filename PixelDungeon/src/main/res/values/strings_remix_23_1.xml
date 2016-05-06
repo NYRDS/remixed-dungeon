@@ -24,18 +24,18 @@
     <string name="SpiritOfPain_Name_Objective">spirit of pain</string>
     <string name="SpiritOfPain_Desc">A shard of living darkness.</string>
 
-    <!-- STRINGS OF Wererat CLASS -->
-    <string name="Suspicious_Rat_Name">Suspicious rat</string>
-    <string name="Suspicious_Rat_Gender">feminine</string>
-    <string name="Suspicious_Rat_Name_Objective">Suspicious rat</string>
-    <string name="Suspicious_Rat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms when it moves.</string>
-    <string name="Suspicious_Rat_Info1">Suspicious rat is twitching violently.</string>
+    <!-- STRINGS OF SuspiciousRat CLASS -->
+    <string name="SuspiciousRat_Name">Suspicious rat</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
+    <string name="SuspiciousRat_Name_Objective">Suspicious rat</string>
+    <string name="SuspiciousRat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms when it moves.</string>
+    <string name="SuspiciousRat_Info1">Suspicious rat is twitching violently.</string>
 
-    <!-- STRINGS OF Wererat CLASS -->
-    <string name="Pseudo_Rat_Name">Pseudo-rat</string>
-    <string name="Pseudo_Rat_Gender">feminine</string>
-    <string name="Pseudo_Rat_Name_Objective">Pseudo-rat</string>
-    <string name="Pseudo_Rat_Desc">A horrible beast that emerged from the rat\'s corpse bears no resemblance to a rodent or any other animal you ever saw. Enormous mouth, full of razor-sharp teeth, occupies most of it\'s body.</string>
+    <!-- STRINGS OF PseudoRat CLASS -->
+    <string name="PseudoRat_Name">Pseudo-rat</string>
+    <string name="PseudoRat_Gender">feminine</string>
+    <string name="PseudoRat_Name_Objective">Pseudo-rat</string>
+    <string name="PseudoRat_Desc">A horrible beast that emerged from the rat\'s corpse bears no resemblance to a rodent or any other animal you ever saw. Enormous mouth, full of razor-sharp teeth, occupies most of it\'s body.</string>
 
 	<!-- STRINGS OF ZombieGnoll CLASS -->
 	<string name="ZombieGnoll_Info">Gnoll-zombie has risen from the dead!</string>

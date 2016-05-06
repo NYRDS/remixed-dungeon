@@ -79,7 +79,7 @@ public class SuspiciousRat extends Mob {
                 transforming = true;
                 if (Dungeon.visible[getPos()]) {
                     getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
-                    GLog.n(Game.getVar(R.string.Suspicious_Rat_Info1));
+                    GLog.n(Game.getVar(R.string.SuspiciousRat_Info1));
                 }
                 PlayZap();
                 return true;
