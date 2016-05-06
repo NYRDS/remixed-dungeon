@@ -36,7 +36,7 @@ public class Window extends Group implements Signal.Listener<Key> {
 
 	protected int width;
 	protected int height;
-	
+
 	protected TouchArea blocker;
 	protected NinePatch chrome;
 	

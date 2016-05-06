@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
@@ -32,6 +32,7 @@ public class GladiatorArmor extends ClassArmor {
 	private static final String TXT_NOT_WARRIOR	= Game.getVar(R.string.WarriorArmor_NotWarrior);
 	
 	{
+		name = Game.getVar(R.string.WarriorArmor_Name);
 		image = 7;
 	}
 	
@@ -59,7 +60,7 @@ public class GladiatorArmor extends ClassArmor {
 	public String desc() {
 		return Game.getVar(R.string.WarriorArmor_Desc);
 	}
-	
+
 	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
 		
 		@Override
@@ -79,7 +80,7 @@ public class GladiatorArmor extends ClassArmor {
 				
 				final int dest = cell;
 				getCurUser().busy();
-				((HeroSprite)getCurUser().getSprite()).jump( getCurUser().getPos(), cell, new Callback() {
+				((HeroSpriteDef)getCurUser().getSprite()).jump( getCurUser().getPos(), cell, new Callback() {
 					@Override
 					public void call() {
 						getCurUser().move( dest );

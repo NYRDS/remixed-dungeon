@@ -56,7 +56,7 @@ public class WndInfoMob extends WndTitledMessage {
 		private float hp;
 		
 		public MobTitle( Mob mob ) {
-			
+
 			hp = (float)mob.hp() / mob.ht();
 			
 			name = PixelScene.createText( Utils.capitalize( mob.getName() ), 9 );

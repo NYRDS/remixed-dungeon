@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.NinePatch;
 
 public class Chrome {
@@ -57,6 +58,6 @@ public class Chrome {
 		case TAB_UNSELECTED:
 			return new NinePatch( Assets.getChrome(), 74, 22, 10, 14, 4, 7, 4, 6 );
 		}
-		throw new RuntimeException("wrong chrome type");
+		throw new TrackedRuntimeException("wrong chrome type");
 	}
 }

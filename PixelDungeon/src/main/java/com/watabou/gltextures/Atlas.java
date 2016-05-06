@@ -25,9 +25,9 @@ import java.util.Map;
 public class Atlas {
 
 	public SmartTexture tx;
-	
+
 	protected Map<Object,RectF> namedFrames;
-	
+
 	protected float uvLeft;
 	protected float uvTop;
 	protected float uvWidth;

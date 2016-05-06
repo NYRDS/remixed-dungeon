@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">%s pozione</string>
+  <string name="Potion_Info">Questa boccetta contiene liquido un vorticoso %s.Chi sa che cosa farà quando bevuto o gettato atterra?</string>
+  <string name="Potion_ACDrink">BEVI</string>
+  <string name="Potion_Harmfull">Pozione Malefica!</string>
+  <string name="Potion_Beneficial">Pozione Benefica</string>
+  <string name="Potion_Yes">Sì, so quello che faccio</string>
+  <string name="Potion_No">No, ho cambiato idea</string>
+  <string name="Potion_SureDrink">Sei sicuro di voler bere? Nella maggior parte dei casi si dovrebbe buttare tali pozioni contro i nemici.</string>
+  <string name="Potion_SureThrow">Sei sicuro di voler buttare? Nella maggior parte dei casi ha senso bere.</string>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">Pozione d\'Esperienza </string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">Pozione di Gelo</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">Pozione di Guarigione</string>
+  <string name="PotionOfHealing_Info">Un elisir che ti fa tornare in piena salute e cura il veleno.</string>
+  <string name="PotionOfHealing_Apply">Le ferite guariscono completamente.</string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">Pozione d\'Invisibilità</string>
+  <string name="PotionOfInvisibility_Apply">Vedi le mani che diventano invisibili!</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">Pozione di Levitazione</string>
+  <string name="PotionOfLevitation_Apply">Stai fluttuando in aria!</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">Pozione di Fiamma liquefatta </string>
+  <string name="PotionOfLiquidFlame_Info">Questa boccetta contiene un composto instabile che scoppia violentemente in fiamme in esposizione all\'aria aperta.</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <string name="PotionOfMight_Name">Pozione di Vigore</string>
+  <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">Pozione di visione mentale</string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <string name="PotionOfParalyticGas_Name">Pozione di Gas Paralitico</string>
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <string name="PotionOfPurity_Name">Pozione di Purificazione</string>
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">Pozione di Forza</string>
+  <string name="PotionOfStrength_StaApply">+1 forza</string>
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+  <string name="PotionOfToxicGas_Name">Pozione di Gas Tossico</string>
+</resources>

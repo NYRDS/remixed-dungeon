@@ -29,7 +29,7 @@ public class Texture {
 
 	public static final int NEAREST	= GLES20.GL_NEAREST;
 	public static final int LINEAR	= GLES20.GL_LINEAR;
-	
+
 	public static final int REPEAT	= GLES20.GL_REPEAT;
 	public static final int MIRROR	= GLES20.GL_MIRRORED_REPEAT;
 	public static final int CLAMP	= GLES20.GL_CLAMP_TO_EDGE;

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Gioca</string>
+  <string name="TitleScene_Highscores">Punteggi Migliori</string>
+  <string name="TitleScene_Badges">Medaglie</string>
+  <string name="TitleScene_About">Circa</string>
+  <string name="TitleScene_InternalStorageLow">Non abbastanza spazio\n nella memoria interna\n Il tuo progresso potrebbe andare perso!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon di NYRDS Basato su Pixel Dungeon Source di Watabou.\n\n Codice &amp; grafica: Watabou &amp; NYRDS &amp; ThEnigma314\n\nMusica: Cube_Code\n\nRingraziamenti Speciali a : rodriformiga per PD i18n codice\n\nE-Mail a:\n\n</string>
+  <string name="AboutScene_OurSite">Nostro sito web:</string>
+  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">Spedici E-Mail</string>
+  <string name="AboutScene_TranslatedBy">English - primary localization for Remixed Pixel Dungeon maintained by NYRDS\nSpecical thanks to:\GB1975ITA267901</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">Migliori Classificati</string>
+  <string name="RankingsScene_Total">Partite totali giocate:</string>
+  <string name="RankingsScene_NoGames">Non sono state ancora giocate partite.</string>
+  <string name="RankingsScene_NoInfo">Nessuna informazione aggiuntiva</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Carica partita</string>
+  <string name="StartScene_New">Nuova partita</string>
+  <string name="StartScene_Erase">Cancella la partita corrente</string>
+  <string name="StartScene_Depth">profondità: %1$d\nLivello: %2$d</string>
+  <string name="StartScene_Really">Vuoi veramente iniziare una nuova partita?</string>
+  <string name="StartScene_Warning">I progressi della tua partita corrente saranno cancellati.</string>
+  <string name="StartScene_Yes">Si, inizia una nuova partita</string>
+  <string name="StartScene_No">No, ritorna al menù principale</string>
+  <string name="StartScene_Unlock">Per sbloccare questa classe del personaggio, uccidi il 3^ boss con qualsiasi altra classe </string>
+  <string name="StartScene_UnlockElf"> Per sbloccare questa classe del personaggio, uccidi il 4^ boss con qualsiasi altra classe </string>
+  <string name="StartScene_WinGame">Per sbloccare \"Sfide\", vinci il gioco con qualsiasi altra classe </string>
+  <string name="StartScene_DifficultySelect">Scegli il tuo destino</string>
+  <string name="StartScene_DifficultyEasy">Facile (con pubblicità)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">Normale con salvataggi (e pubblicità)</string>
+  <string name="StartScene_DifficultyNormal">Normale</string>
+  <string name="StartScene_DifficultyExpert">Esperto</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">Scendendo...</string>
+  <string name="InterLevelScene_Ascending">Salendo...</string>
+  <string name="InterLevelScene_Loading">Caricando...</string>
+  <string name="InterLevelScene_Resurrecting">Risorgendo...</string>
+  <string name="InterLevelScene_Returning">Ritornando...</string>
+  <string name="InterLevelScene_Falling">Cadendo...</string>
+  <string name="InterLevelScene_FileNotFound">File non trovato. Per qualche ragione...</string>
+  <string name="InterLevelScene_ErrorGeneric">Qualcosa è andato storto...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Partita Finita</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">Zoom predefinito</string>
+  <string name="WndSettings_TextScaleDefault">font predefinito</string>
+  <string name="WndSettings_ScaleUp">Aumentare UI</string>
+  <string name="WndSettings_Immersive">Modalità coinvolgente</string>
+  <string name="WndSettings_Music">Musica</string>
+  <string name="WndSettings_Sound">Suono FX</string>
+  <string name="WndSettings_Brightness">Luminosità</string>
+  <string name="WndSettings_SwitchPort">passa a ritratto</string>
+  <string name="WndSettings_SwitchLand">Passa a paesaggio</string>
+  <string name="WndSettings_SelectLanguage">Seleziona Lingua</string>
+  <string name="WndSettings_SecondQuickslot">Seconda posizione veloce</string>
+  <string name="WndSettings_ThirdQuickslot">Terza posizione veloce</string>
+  <string name="WndSettings_ExperementalFont">Nuovo Font</string>
+  <string name="WndSettings_ClassicFont">Font Classica</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">Seleziona Pozizione</string>
+  <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">Seleziona modifica</string>
+</resources>

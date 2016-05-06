@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_ACMoisten">BENETZEN</string>
+  <string name="Potion_SelectForMoisten">Wähle einen Gegenstand zum Benetzen aus</string>
+  <string name="Potion_MoistenUseless">Es sieht so aus, als ob du diesen Trank gerade verschwendet hättest.</string>
+  <string name="Potion_RuneDissaperaed">Die Rune ist von %s verschwunden.</string>
+  <string name="Potion_ArrowMoisten">Du hast die Pfeile erfolgreich benetzt.</string>
+  <string name="Potion_ItemFliesAway">%s fliegt dir gerade aus deinen Händen.</string>
+  <string name="Potion_FoodRefreshed">%s sieht nun genießbar aus</string>
+</resources>

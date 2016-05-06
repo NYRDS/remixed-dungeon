@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Незнакомец</string>
+  <string name="AzuterronNPC_Gender">masculine</string>
+  <string name="AzuterronNPC_Name_Objective">Незнакомца</string>
+  <string name="AzuterronNPC_Desc">Загадочная фигура сокрытая чёрным туманом.</string>
+  <string name="AzuterronNPC_Quest_Start">Хм, что... о, ты меня видишь, так ведь? Стало быть ты не \"один из них\". Я так понимаю ты тоже не в восторге от этого засилья монстров. Знаешь что, если бы ты мне помог с одним дельцом, я в долгу не останусь. Где-то на этом уровне притаился _Предательский дух_. Убей его и принеси мне его _сердце_. И конечно если ты захочешь приобрести что-то из моих запасов, только спроси.</string>
+  <string name="AzuterronNPC_Quest_Reminder">Помоги мне и я помогу тебе.</string>
+  <string name="AzuterronNPC_Quest_End">Превосходно. Вот, возьми это зелье, я уверен оно тебе пригодится.</string>
+  <string name="Journal_Azuterron">Незнакомец</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Предательский дух</string>
+  <string name="TreacherousSpirit_Gender">masculine</string>
+  <string name="TreacherousSpirit_Name_Objective">Предательского духа</string>
+  <string name="TreacherousSpirit_Desc">Это чудовищное создание выглядит как ожившее облако тьмы. Его гигантский глаз сверлит тебя взглядом, кротко вздрагивая от каждого твоего движения.</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">дух боли</string>
+  <string name="SpiritOfPain_Gender">masculine</string>
+  <string name="SpiritOfPain_Name_Objective">духа боли</string>
+  <string name="SpiritOfPain_Desc">Осколок ожившей тьмы.</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">подозрительная крыса</string>
+  <string name="SuspiciousRat_Gender">feminine</string>
+  <string name="SuspiciousRat_Name_Objective">подозрительную крысу</string>
+  <string name="SuspiciousRat_Desc">Увидеть крысу в подземельях не такая уж и редкость, но вот как она забралась на столько глубоко... Ты замечаешь как при движении тело крысы сотрясают спазмы.</string>
+  <string name="SuspiciousRat_Info1">Подозрительная крыса судорожно трясётся.</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Псевдо-крыса</string>
+  <string name="PseudoRat_Gender">feminine</string>
+  <string name="PseudoRat_Name_Objective">Псевдо-крысу</string>
+  <string name="PseudoRat_Desc">Ужасающий зверь вырвавшийся из трупика крысы не имеет ничего общего ни с грызунами, ни с какими-либо другими животными которых ты видел. Большущая пасть, усеянная бритвенно-острыми зубами, занимает значительную часть его тела.</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Гнолл-зомби восстал из мёртвых!</string>
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Сердце тьмы</string>
+  <string name="HeartOfDarkness_Info">Чёрное пульсирующее сердце Предательского духа.</string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Тёмная вуаль</string>
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Йог-Джева побеждён</string>
+  <string name="Badges_ShadowLord_Slain">Владыка Теней побеждён</string>
+  <string name="Badges_SpiderQueen_Slain">Королева Пауков побеждена</string>
+</resources>

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -39,14 +40,12 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.EmoIcon;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.FloatingText;
-import com.watabou.pixeldungeon.effects.Hat;
 import com.watabou.pixeldungeon.effects.Ripple;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
@@ -58,7 +57,7 @@ import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DiscardedItemSprite;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
@@ -97,7 +96,7 @@ public class GameScene extends PixelScene {
 	private SkinnedBlock   water;
 	private DungeonTilemap tiles;
 	private FogOfWar       fog;
-	private HeroSprite     heroSprite;
+	private HeroSpriteDef  heroSprite;
 
 	private GameLog log;
 
@@ -113,7 +112,6 @@ public class GameScene extends PixelScene {
 	private Group spells;
 	private Group statuses;
 	private Group emoicons;
-	private Group hats;
 
 	private Toolbar toolbar;
 	private Toast   prompt;
@@ -167,7 +165,6 @@ public class GameScene extends PixelScene {
 		emitters = new Group();
 		effects = new Group();
 		emoicons = new Group();
-		hats = new Group();
 
 		mobs = new Group();
 		add(mobs);
@@ -220,15 +217,18 @@ public class GameScene extends PixelScene {
 		add(statuses);
 
 		add(emoicons);
-		add(hats);
 
 		add(new HealthIndicator());
 
 		add(cellSelector = new CellSelector(tiles));
 
-		updateHeroSprite(Dungeon.hero);
+		scene.heroSprite = new HeroSpriteDef(Dungeon.hero, true);;
+		scene.heroSprite.place(Dungeon.hero.getPos());
+		Dungeon.hero.updateLook();
 
-		StatusPane sb = new StatusPane();
+		scene.mobs.add(scene.heroSprite);
+
+		StatusPane sb = new StatusPane(Dungeon.hero);
 		sb.camera = uiCamera;
 		sb.setSize(uiCamera.width, 0);
 		add(sb);
@@ -314,20 +314,6 @@ public class GameScene extends PixelScene {
 		Dungeon.observe();
 	}
 
-	public static void updateHeroSprite(Hero hero) {
-
-		HeroSprite newHeroSprite = new HeroSprite(hero);
-		if (scene.heroSprite != null) {
-			scene.mobs.remove(scene.heroSprite);
-			scene.heroSprite.removeAllStates();
-		}
-
-		scene.heroSprite = newHeroSprite;
-		scene.heroSprite.place(hero.getPos());
-		hero.updateLook();
-		scene.mobs.add(scene.heroSprite);
-	}
-
 	public void destroy() {
 
 		scene = null;
@@ -342,7 +328,7 @@ public class GameScene extends PixelScene {
 			Dungeon.saveAll();
 			Badges.saveGlobal();
 		} catch (IOException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -506,10 +492,6 @@ public class GameScene extends PixelScene {
 
 	public static void add(EmoIcon icon) {
 		scene.emoicons.add(icon);
-	}
-
-	public static void add(Hat hat) {
-		scene.hats.add(hat);
 	}
 
 	public static void effect(Visual effect) {

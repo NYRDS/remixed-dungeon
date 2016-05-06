@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -45,7 +46,7 @@ public class StringsManager {
 			try {
 				key = f.getInt(null);
 			} catch (IllegalAccessException | IllegalArgumentException e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 			String name = f.getName();
 
@@ -111,7 +112,7 @@ public class StringsManager {
 			}
 			br.close();
 		} catch (IOException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		} catch (JSONException e) {
 			Game.toast("malformed json: [%s] in [%s] ignored ", line, resource);
 		}

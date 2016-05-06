@@ -57,7 +57,7 @@ public class WndStory extends Window {
 		CHAPTERS.put(ID_HALLS,      Game.getVar(R.string.WndStory_Halls));
 		CHAPTERS.put(ID_SPIDERS,    Game.getVar(R.string.WndStory_Spiders));
 		CHAPTERS.put(ID_GUTS,       Game.getVar(R.string.WndStory_Guts));
-	};
+	}
 
 	public WndStory( String text ) {
 		super( 0, 0, Chrome.get( Chrome.Type.SCROLL ) );

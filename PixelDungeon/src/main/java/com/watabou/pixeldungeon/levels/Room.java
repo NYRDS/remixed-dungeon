@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
 import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;
@@ -92,7 +93,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		
 		private Method paint;
 		
-		private Type( Class<? extends Painter> painter ) {
+		Type(Class<? extends Painter> painter) {
 			if(painter==null) {
 				return;
 			}
@@ -100,7 +101,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 			try {
 				paint = painter.getMethod( "paint", Level.class, Room.class );
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 		
@@ -111,11 +112,11 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 			try {
 				paint.invoke( null, level, room );
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
-	};
-	
+	}
+
 	public static final ArrayList<Type> SPECIALS = new ArrayList<>(Arrays.asList(
 			Type.WEAK_FLOOR, Type.MAGIC_WELL, Type.CRYPT, Type.POOL, Type.GARDEN, Type.LIBRARY, Type.ARMORY,
 			Type.TREASURY, Type.TRAPS, Type.STORAGE, Type.STATUE, Type.LABORATORY, Type.VAULT
@@ -257,7 +258,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	public static class Door extends Point {
 		
-		public static enum Type {
+		public enum Type {
 			EMPTY, TUNNEL, REGULAR, UNLOCKED, HIDDEN, BARRICADE, LOCKED
 		}
 		public Type type = Type.EMPTY;

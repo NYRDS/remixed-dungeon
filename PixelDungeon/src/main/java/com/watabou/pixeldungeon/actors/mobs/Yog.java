@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -56,7 +58,7 @@ public class Yog extends Boss {
 	public Yog() {
 		spriteClass = YogSprite.class;
 
-		hp(ht(300));
+		hp(ht(500));
 
 		EXP = 50;
 
@@ -78,9 +80,9 @@ public class Yog extends Boss {
 		Mob fist1, fist2, fist3;
 
 		do{
-			name1 = new Random().element(secondaryBossArray);
-			name2 = new Random().element(secondaryBossArray);
-			name3 = new Random().element(secondaryBossArray);
+			name1 = Random.element(secondaryBossArray);
+			name2 = Random.element(secondaryBossArray);
+			name3 = Random.element(secondaryBossArray);
 		} while (name1 == name2 || name2 == name3 || name1 == name3);
 
 		Class<? extends Mob> boss1 = MobFactory.mobClassByName(name1);
@@ -92,7 +94,7 @@ public class Yog extends Boss {
 			fist2 = boss2.newInstance();
 			fist3 = boss3.newInstance();
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 
 		do {
@@ -153,6 +155,7 @@ public class Yog extends Boss {
 
 		GameScene.bossSlain();
 		Dungeon.level.drop(new SkeletonKey(), getPos()).sprite.drop();
+		Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
 		super.die(cause);
 
 		yell(Game.getVar(R.string.Yog_Info1));
@@ -171,12 +174,12 @@ public class Yog extends Boss {
 
 	public static class RottingFist extends Boss {
 
-		private static final int REGENERATION = 4;
+		private static final int REGENERATION = 10;
 
 		{
 			spriteClass = RottingFistSprite.class;
 
-			hp(ht(300));
+			hp(ht(400));
 			defenseSkill = 25;
 
 			EXP = 0;
@@ -206,7 +209,7 @@ public class Yog extends Boss {
 
 		@Override
 		public int damageRoll() {
-			return Random.NormalIntRange(24, 36);
+			return Random.NormalIntRange(34, 46);
 		}
 
 		@Override
@@ -246,7 +249,7 @@ public class Yog extends Boss {
 		{
 			spriteClass = BurningFistSprite.class;
 
-			hp(ht(200));
+			hp(ht(300));
 			defenseSkill = 25;
 
 			EXP = 0;
@@ -276,7 +279,7 @@ public class Yog extends Boss {
 
 		@Override
 		public int damageRoll() {
-			return Random.NormalIntRange(20, 32);
+			return Random.NormalIntRange(40, 62);
 		}
 
 		@Override
@@ -335,7 +338,7 @@ public class Yog extends Boss {
 		{
 			spriteClass = LarvaSprite.class;
 
-			hp(ht(50));
+			hp(ht(120));
 			defenseSkill = 20;
 
 			EXP = 0;
@@ -350,7 +353,7 @@ public class Yog extends Boss {
 
 		@Override
 		public int damageRoll() {
-			return Random.NormalIntRange(15, 20);
+			return Random.NormalIntRange(25, 30);
 		}
 
 		@Override

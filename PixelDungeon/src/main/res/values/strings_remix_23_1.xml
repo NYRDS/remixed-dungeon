@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Mobs -->
+    <!-- STRINGS OF AzuterronNPC CLASS -->
+    <string name="AzuterronNPC_Name">Stranger</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
+    <string name="AzuterronNPC_Name_Objective">Stranger</string>
+    <string name="AzuterronNPC_Desc">A mysterious figure shrouded by black mist.</string>
+    <string name="AzuterronNPC_Quest_Start">Huh, why... oh, you can see me, don\'t you? That means you\'re not one of \"them\". I see you\'re not fond of all these monsters as well. Tell you what, if you\'ll help me out with a little problem, then I will offer you my assistance. Somewhere on this level you will find a beast of darkness, a _Treacherous Spirit_. Slay it, take it\'s _heart_ and come back to me. And one more thing, if you are interested in purchasing my supplies, don\'t hesitate to ask</string>
+    <string name="AzuterronNPC_Quest_Reminder">Help me and I\'ll help you.</string>
+    <string name="AzuterronNPC_Quest_End">Excellent. Here take this potion, surely, you will find it beneficial.</string>
+    <string name="Journal_Azuterron">Stranger</string>
+
+    <!-- STRINGS OF TreacherousSpirit CLASS -->
+    <string name="TreacherousSpirit_Name">Treacherous spirit</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
+    <string name="TreacherousSpirit_Name_Objective">Treacherous spirit</string>
+    <string name="TreacherousSpirit_Desc">This monstrous creature looks like a cloud of a living darkness. It\'s lidless eye staring at you, pulsating with each your move.</string>
+
+    <!-- STRINGS OF SpiritOfPain CLASS -->
+    <string name="SpiritOfPain_Name">spirit of pain</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
+    <string name="SpiritOfPain_Name_Objective">spirit of pain</string>
+    <string name="SpiritOfPain_Desc">A shard of living darkness.</string>
+
+    <!-- STRINGS OF SuspiciousRat CLASS -->
+    <string name="SuspiciousRat_Name">Suspicious rat</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
+    <string name="SuspiciousRat_Name_Objective">Suspicious rat</string>
+    <string name="SuspiciousRat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms when it moves.</string>
+    <string name="SuspiciousRat_Info1">Suspicious rat is twitching violently.</string>
+
+    <!-- STRINGS OF PseudoRat CLASS -->
+    <string name="PseudoRat_Name">Pseudo-rat</string>
+    <string name="PseudoRat_Gender">feminine</string>
+    <string name="PseudoRat_Name_Objective">Pseudo-rat</string>
+    <string name="PseudoRat_Desc">A horrible beast that emerged from the rat\'s corpse bears no resemblance to a rodent or any other animal you ever saw. Enormous mouth, full of razor-sharp teeth, occupies most of it\'s body.</string>
+
+	<!-- STRINGS OF ZombieGnoll CLASS -->
+	<string name="ZombieGnoll_Info">Gnoll-zombie has risen from the dead!</string>
+	
+    <!-- Items -->
+    <!-- STRINGS OF HeartOfDarkness CLASS -->
+    <string name="HeartOfDarkness_Name">Heart of darkness</string>
+    <string name="HeartOfDarkness_Info">Black pulsating heart of the Treacherous Spirit.</string>
+
+    <!-- Buffs -->
+    <!-- STRINGS OF DarkVeil CLASS -->
+    <string name="DarkVeil_Buff">Dark veil</string>
+
+    <!-- Badges -->
+    <string name="Badges_Yog_Slain">Yog-Dzewa slain</string>
+    <string name="Badges_ShadowLord_Slain">Shadow Lord slain</string>
+    <string name="Badges_SpiderQueen_Slain">Spider Queen slain</string>
+
+</resources>

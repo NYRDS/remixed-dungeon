@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
@@ -1283,7 +1284,7 @@ public abstract class Level implements Bundlable {
 			try {
 				blob = blobClass.newInstance();
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 			GameScene.add(blob);
 		}

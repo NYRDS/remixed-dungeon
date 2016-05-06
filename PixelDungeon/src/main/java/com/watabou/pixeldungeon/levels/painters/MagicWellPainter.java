@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfHealth;
@@ -56,7 +57,7 @@ public class MagicWellPainter extends Painter {
 			try {
 				water = waterClass.newInstance();
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 		water.seed( c.x + level.getWidth() * c.y, 1 );

@@ -18,28 +18,37 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
-import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
+import com.watabou.pixeldungeon.items.armor.BerserkArmor;
+import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
+import com.watabou.pixeldungeon.items.armor.ElfArmor;
+import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
+import com.watabou.pixeldungeon.items.armor.HuntressArmor;
+import com.watabou.pixeldungeon.items.armor.LeatherArmor;
+import com.watabou.pixeldungeon.items.armor.MageArmor;
+import com.watabou.pixeldungeon.items.armor.MailArmor;
+import com.watabou.pixeldungeon.items.armor.PlateArmor;
+import com.watabou.pixeldungeon.items.armor.RogueArmor;
+import com.watabou.pixeldungeon.items.armor.ScaleArmor;
+import com.watabou.pixeldungeon.items.armor.ScoutArmor;
+import com.watabou.pixeldungeon.items.armor.ShamanArmor;
+import com.watabou.pixeldungeon.items.armor.SniperArmor;
+import com.watabou.pixeldungeon.items.armor.WardenArmor;
+import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
-import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
-import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
@@ -52,11 +61,13 @@ import com.watabou.utils.Bundle;
 
 public enum HeroClass {
 
-	WARRIOR(Game.getVar(R.string.HeroClass_War)), MAGE(Game
-			.getVar(R.string.HeroClass_Mag)), ROGUE(Game
-			.getVar(R.string.HeroClass_Rog)), HUNTRESS(Game
-			.getVar(R.string.HeroClass_Hun)), ELF(Game
-			.getVar(R.string.HeroClass_Elf));
+	WARRIOR(Game.getVar(R.string.HeroClass_War),WarriorArmor.class),
+	MAGE(Game.getVar(R.string.HeroClass_Mag),MageArmor.class),
+	ROGUE(Game.getVar(R.string.HeroClass_Rog),RogueArmor.class),
+	HUNTRESS(Game.getVar(R.string.HeroClass_Hun),HuntressArmor.class),
+	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class);
+
+	private final Class<? extends ClassArmor> armorClass;
 
 	private String title;
 
@@ -71,8 +82,9 @@ public enum HeroClass {
 	public static final String[] ELF_PERKS = Game
 			.getVars(R.array.HeroClass_ElfPerks);
 
-	HeroClass(String title) {
+	HeroClass(String title, Class<? extends ClassArmor> armorClass) {
 		this.title = title;
+		this.armorClass = armorClass;
 	}
 
 	public void initHero(Hero hero) {
@@ -112,22 +124,39 @@ public enum HeroClass {
 
 	private static void initDebug(Hero hero) {
 		for(int i = 0;i<100;i++) {
-			hero.collect(new ScrollOfMagicMapping());
-			hero.collect(new ScrollOfIdentify());
-			hero.collect(new ScrollOfDomination());
-			hero.collect(new ScrollOfMirrorImage());
-			hero.collect(new PotionOfLiquidFlame());
-			hero.collect(new PotionOfToxicGas());
-			hero.collect(new Ankh());
+			//hero.collect(new ScrollOfMagicMapping());
+			//hero.collect(new ScrollOfIdentify());
+			//hero.collect(new ScrollOfDomination());
+			//hero.collect(new ScrollOfMirrorImage());
+			//hero.collect(new PotionOfLiquidFlame());
+			//hero.collect(new PotionOfToxicGas());
+			//hero.collect(new Ankh());
 		}
 
-		hero.collect(new WandOfFlock().upgrade(10).identify());
+		//hero.collect(new HeartOfDarkness());
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 
-		hero.collect(new Glaive().upgrade(100));
+		//hero.collect(new Glaive().upgrade(100));
+		hero.collect(new TomeOfMastery());
+		hero.collect(new ScaleArmor().upgrade(100));
+		hero.collect(new LeatherArmor().upgrade(100));
+		hero.collect(new PlateArmor().upgrade(100));
+		hero.collect(new MailArmor().upgrade(100));
+		hero.collect(new BattleMageArmor().upgrade(100));
+		hero.collect(new BerserkArmor().upgrade(100));
+		hero.collect(new ElfArmor().upgrade(100));
+		hero.collect(new GladiatorArmor().upgrade(100));
+		hero.collect(new MageArmor().upgrade(100));
+		hero.collect(new HuntressArmor().upgrade(100));
+		hero.collect(new RogueArmor().upgrade(100));
+		hero.collect(new ScoutArmor().upgrade(100));
+		hero.collect(new ShamanArmor().upgrade(100));
+		hero.collect(new SniperArmor().upgrade(100));
+		hero.collect(new WardenArmor().upgrade(100));
+		hero.collect(new WarriorArmor().upgrade(100));
 
-		hero.collect(new ChaosCrystal());
+		//hero.collect(new ChaosCrystal());
 		hero.ht(1000);
 		hero.hp(1000);
 		hero.attackSkill = 1000;
@@ -223,64 +252,6 @@ public enum HeroClass {
 		return title;
 	}
 
-	public static String spritesheet(Hero hero) {
-		switch (hero.heroClass) {
-		case WARRIOR:
-			switch (hero.subClass) {
-			case BERSERKER:
-				if (hero.inFury()) {
-					return Assets.WARRIOR_BERSERK_IN_FURY;
-				}
-				return Assets.WARRIOR_BERSERK;
-			case GLADIATOR:
-				return Assets.WARRIOR_GLADIATOR;
-
-			default:
-				return Assets.WARRIOR;
-			}
-		case MAGE:
-			switch (hero.subClass) {
-			case BATTLEMAGE:
-				return Assets.MAGE_BATTLEMAGE;
-			case WARLOCK:
-				return Assets.MAGE_WARLOCK;
-			default:
-				return Assets.MAGE;
-			}
-		case ROGUE:
-			switch (hero.subClass) {
-			case ASSASSIN:
-				return Assets.ROGUE_ASSASIN;
-			case FREERUNNER:
-				return Assets.ROGUE_FREERUNNER;
-			default:
-				return Assets.ROGUE;
-			}
-		case HUNTRESS:
-			switch (hero.subClass) {
-			case SNIPER:
-				return Assets.HUNTRESS_SNIPER;
-			case WARDEN:
-				return Assets.HUNTRESS_WARDEN;
-
-			default:
-				return Assets.HUNTRESS;
-			}
-		case ELF:
-			switch (hero.subClass) {
-			case SCOUT:
-				return Assets.ELF_SCOUT;
-			case SHAMAN:
-				return Assets.ELF_SHAMAN;
-
-			default:
-				return Assets.ELF;
-			}
-		}
-
-		return null;
-	}
-
 	public String[] perks() {
 
 		switch (this) {
@@ -323,53 +294,11 @@ public enum HeroClass {
 		return value.length() > 0 ? valueOf(value) : ROGUE;
 	}
 
-	public static boolean isSpriteSheet(String spriteKind) {
-		if (spriteKind.equals(Assets.WARRIOR))
-			return true;
-
-		if (spriteKind.equals(Assets.WARRIOR_BERSERK))
-			return true;
-
-		if (spriteKind.equals(Assets.WARRIOR_BERSERK_IN_FURY))
-			return true;
-
-		if (spriteKind.equals(Assets.WARRIOR_GLADIATOR))
-			return true;
-
-		if (spriteKind.equals(Assets.MAGE))
-			return true;
-
-		if (spriteKind.equals(Assets.MAGE_BATTLEMAGE))
-			return true;
-
-		if (spriteKind.equals(Assets.MAGE_WARLOCK))
-			return true;
-
-		if (spriteKind.equals(Assets.ROGUE))
-			return true;
-
-		if (spriteKind.equals(Assets.ROGUE_ASSASIN))
-			return true;
-
-		if (spriteKind.equals(Assets.ROGUE_FREERUNNER))
-			return true;
-
-		if (spriteKind.equals(Assets.HUNTRESS))
-			return true;
-
-		if (spriteKind.equals(Assets.HUNTRESS_SNIPER))
-			return true;
-
-		if (spriteKind.equals(Assets.HUNTRESS_WARDEN))
-			return true;
-
-		if (spriteKind.equals(Assets.ELF))
-			return true;
-
-		if (spriteKind.equals(Assets.ELF_SCOUT))
-			return true;
-
-		return spriteKind.equals(Assets.ELF_SHAMAN);
-
+	public ClassArmor classArmor() {
+		try {
+			return armorClass.newInstance();
+		} catch (Exception e) {
+			throw new TrackedRuntimeException(e);
+		}
 	}
 }

@@ -73,7 +73,7 @@ public class ModdingMode {
 			}
 			return mContext.getAssets().open(resName);
 		} catch (IOException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 

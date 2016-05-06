@@ -23,7 +23,8 @@ public class SniperArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.HuntressArmor_ACSpecial); 
 	
 	{
-		image = 9;
+		name = Game.getVar(R.string.HuntressArmor_Name);
+		image = 15;
 	}
 	
 	private HashMap<Callback, Mob> targets = new HashMap<>();

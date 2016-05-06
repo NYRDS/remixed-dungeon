@@ -36,8 +36,8 @@ public class SpellSprite extends Image {
 	
 	private enum Phase {
 		FADE_IN, STATIC, FADE_OUT
-	};
-	
+	}
+
 	private static final float FADE_IN_TIME		= 0.2f;
 	private static final float STATIC_TIME		= 0.8f;
 	private static final float FADE_OUT_TIME	= 0.4f;

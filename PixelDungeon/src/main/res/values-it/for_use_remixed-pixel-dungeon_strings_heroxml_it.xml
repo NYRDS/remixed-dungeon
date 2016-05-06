@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">tu</string>
+  <string name="Hero_Name_Objective">tu</string>
+  <string name="Hero_Leave">Non si può lasciare così semplicemente Pixel Dungeon</string>
+  <string name="Hero_LevelUp">salito di livello!</string>
+  <string name="Hero_NewLevel">Benvenuti al livello %d! Ora sei più sano e più concentrato. Adesso è più facile per voi colpire i nemici e schivare i loro attacchi.</string>
+  <string name="Hero_YouNowHave">Tu ora hai %s</string>
+  <string name="Hero_SomethingElse">C\'è qualcos\'altro qui</string>
+  <string name="Hero_LockedChest">Questo cassa è bloccata e non si dispone della chiave corrispondente</string>
+  <string name="Hero_LockedDoor">Non si dispone della chiave corrispondente</string>
+  <string name="Hero_NoticedSmth">Hai notato qualcosa</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">cerca</string>
+  <string name="Hero_StaBurning">Tu prendi fuoco</string>
+  <string name="Hero_StaParalysis">Tu sei paralizzato</string>
+  <string name="Hero_StaPoison">Sei stato avvelenato!</string>
+  <string name="Hero_StaOoze">Melma caustica divora la tua carne. Lavala via!</string>
+  <string name="Hero_StaRoots">Non ti puoi muovere</string>
+  <string name="Hero_StaWeakness">Ti senti debole!</string>
+  <string name="Hero_StaBlindness">Tu sei acciecato</string>
+  <string name="Hero_StaFury">Diventi furioso!</string>
+  <string name="Hero_StaFurious">furioso</string>
+  <string name="Hero_StaCharm">Sei affascinato!</string>
+  <string name="Hero_StaCripple">Sei paralizzato!</string>
+  <string name="Hero_StaBleeding">Stai sanguinando!</string>
+  <string name="Hero_StaVertigo">Tutto gira intorno a te!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">Guerriero</string>
+  <string name="HeroClass_Mag">mago</string>
+  <string name="HeroClass_Rog">furfante</string>
+  <string name="HeroClass_Hun">cacciatrice</string>
+  <string name="HeroClass_Elf">elfo</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>I guerrieri iniziano con 11 punti di forza.</item>
+    <item>I guerrieri iniziano con una spada corta unico. Questa spada può essere \"riforgiata\" successivamente per aggiornare un\'altra arma da mischia.</item>
+    <item>I guerrieri sono meno abili con armi da lancio.</item>
+    <item>Ogni pezzo di cibo ripristina alcuni punti salute se consumato.</item>
+    <item>Le pozioni di forza si identificano fin dall\'inizio.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>I maghi iniziano con un\'unica bacchetta di Missile magico. Questa bacchetta può essere dopo \"disincantata\" per aggiornare un\'altra bacchetta.</item>
+    <item>I maghi ricaricano le loro bacchette più velocemente.</item>
+    <item>Quando mangiato, ogni pezzo di cibo ripristina addebito di 1 per tutte le bacchette nell\'inventario.</item>
+    <item>I maghi possono usare le bacchette come arma da mischia.</item>
+    <item>Pergamene di Identificazione si identificano fin dall\'inizio.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>I furfanti iniziano con un anello di Ombre +1.</item>
+    <item>I furfanti identificano il tipo di un anello equipaggiandolo.</item>
+    <item>I furfanti sono abili con armature leggere, schivando meglio mentre lo indossano.</item>
+    <item>I furfanti sono in grado di rilevare porte nascoste e trappole.</item>
+    <item>I furfanti possono andare senza cibo più a lungo.</item>
+    <item>Pergamene di Magia di mappatura si identificano fin dall\'inizio.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Le cacciatrici iniziano con 15 punti di salute.</item>
+    <item>Le cacciatrici iniziano con un boomerang aggiornabile unico.</item>
+    <item>Le cacciatrici sono abili con armi da tiro ed ottengono un bonus di danno per la forza eccessiva quando li utilizzano.</item>
+    <item>Le cacciatrici guadagnano più salute da gocce di rugiada.</item>
+    <item>Le cacciatrici avvertono mostri vicini, anche se sono nascosti dietro ostacoli.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Gli elfi iniziano con 15 HP e 9 STR.</item>
+    <item>Gli elfi sono immuni dal radicamento.</item>
+    <item>Gli elfi iniziano con un arco in legno aggiornato e un sacco di frecce.</item>
+    <item>Gli elfi sono estremamente abile con archi e sono agili.</item>
+    <item>Gli elfi sono meno abili con le armi da mischia.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladiatore</string>
+  <string name="HeroSubClass_DescGlad">Un attacco di successo con un arma da mischia permette al _Gladiatore_ di iniziare una combo, in cui ogni successivo colpo andato a segno infligge più danni.</string>
+  <string name="HeroSubClass_NameBers">berserker</string>
+  <string name="HeroSubClass_DescBers">Quando gravemente ferito, il _Berserker_ entra in uno stato di furia selvaggia che aumenta in modo significativo la sua produzione di danni.</string>
+  <string name="HeroSubClass_NameWarL">stregone</string>
+  <string name="HeroSubClass_DescWarL">Dopo aver ucciso un nemico lo _Stregone_ consuma la sua anima. Guarisce le ferite e soddisfa la sua fame.</string>
+  <string name="HeroSubClass_NameBatM">Mago-Combattente</string>
+  <string name="HeroSubClass_DescBatM">Quando si combatte con una bacchetta in mano, il _Mago-combattente_ infligge danno aggiuntivo a seconda del numero attuale di cariche. Ogni colpo andato a segno restituisce 1 carica per questa bacchetta.</string>
+  <string name="HeroSubClass_NameAssa">assassino</string>
+  <string name="HeroSubClass_DescAssa">Quando si esegue un attacco a sorpresa, l\' _Assassino_ infligge ulteriori danni al suo bersaglio.</string>
+  <string name="HeroSubClass_NameFreR">freerunner</string>
+  <string name="HeroSubClass_DescFreR">Il _Freerunner_ può muoversi quasi il doppio più velocemente, rispetto alla maggior parte dei mostri. Quando è in movimento, il Freerunner è molto più difficile da colpire. Per questo egli deve essere svincolato e non morire di fame.</string>
+  <string name="HeroSubClass_NameSnip">tiratore</string>
+  <string name="HeroSubClass_DescSnip">I _Tiratori_ sono in grado di rilevare i punti deboli nell\' armatura di un nemico, di fatto ignora quando si usa un\'arma missile.</string>
+  <string name="HeroSubClass_NameWard">custode</string>
+  <string name="HeroSubClass_DescWard">Avere un forte legame con le forze della natura dà ai _Custodi_ una capacità di raccogliere gocce di rugiada e semi di piante. Calpestando anche un erba alta concede loro una armatura buff temporanea.</string>
+  <string name="HeroSubClass_NameScout">esploratore</string>
+  <string name="HeroSubClass_DescScout">_Esploratori_ elfici sono maestri di azioni furtive. Calpestare l\'erba alta concede loro un buff invisibilità temporanea. Inoltre sono anche più veloce di regolari Elfi.</string>
+  <string name="HeroSubClass_NameShaman">sciamano</string>
+  <string name="HeroSubClass_DescShaman">_Sciamani_ elfici possono usare le bacchette come armi da mischia. Colpi di successo hanno la possibilità di attivare il potere della bacchetta su un bersaglio senza l\'utilizzo di una carica.</string>
+</resources>

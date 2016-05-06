@@ -43,9 +43,9 @@ public class ItemSprite extends MovieClip {
 	public static final int SIZE	= 16;
 	
 	private static final float DROP_INTERVAL = 0.4f;
-	
+
 	protected TextureFilm film;
-	
+
 	public Heap heap;
 	
 	private Glowing glowing;

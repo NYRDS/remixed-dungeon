@@ -42,7 +42,7 @@ public abstract class RegularLevel extends CommonLevel {
 	
 	protected Room roomEntrance;
 	protected Room roomExit;
-	
+
 	protected List<Room.Type> specials;
 	
 	public int secretDoors;
@@ -296,8 +296,8 @@ public abstract class RegularLevel extends CommonLevel {
 	
 	protected abstract boolean[] water();
 	protected abstract boolean[] grass();
-	
-	
+
+
 	protected int minRoomSize = 7;
 	protected int maxRoomSize = 9;
 	

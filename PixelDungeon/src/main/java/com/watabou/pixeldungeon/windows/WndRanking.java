@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.BadgesList;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ItemSlot;
@@ -153,10 +153,10 @@ public class WndRanking extends WndTabbed {
 			Hero hero = Dungeon.hero;
 			String heroClass = hero.className();
 
-			HeroSprite heroSprite = new HeroSprite(hero, false);
-			
+			HeroSpriteDef heroSprite = new HeroSpriteDef(hero, false);
+
 			IconTitle title = new IconTitle();
-			title.icon( heroSprite.avatar(hero) );
+			title.icon( heroSprite.avatar() );
 			title.label( Utils.format( TXT_TITLE, hero.lvl, heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
 			title.color(0xCC33FF);
@@ -362,12 +362,12 @@ public class WndRanking extends WndTabbed {
 		protected void onTouchDown() {
 			bg.brightness( 1.5f );
 			Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
-		};
-		
+		}
+
 		protected void onTouchUp() {
 			bg.brightness( 1.0f );
-		};
-		
+		}
+
 		@Override
 		protected void onClick() {
 			Game.scene().add( new WndItem( null, item ) );

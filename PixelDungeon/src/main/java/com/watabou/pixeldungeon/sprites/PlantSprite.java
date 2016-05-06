@@ -30,7 +30,7 @@ public class PlantSprite extends Image {
 
 	private static final float DELAY = 0.2f;
 	
-	private static enum State {
+	private enum State {
 		GROWING, NORMAL, WITHERING
 	}
 	private State state = State.NORMAL;

@@ -30,6 +30,14 @@ public class Component extends Group {
 		super();
 		createChildren();
 	}
+
+	public Component(boolean skip) {
+		super();
+		if(!skip) {
+			createChildren();
+		}
+	}
+
 	
 	public Component setPos( float x, float y ) {
 		this.x = x;

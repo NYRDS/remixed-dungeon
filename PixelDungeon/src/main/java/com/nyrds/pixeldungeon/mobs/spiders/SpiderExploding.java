@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderExplodingSprite;
 import com.watabou.pixeldungeon.actors.Char;
@@ -55,7 +56,7 @@ public class SpiderExploding extends MultiKindMob {
 			die(this);
 			
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		} 
 		return damage;
 	}

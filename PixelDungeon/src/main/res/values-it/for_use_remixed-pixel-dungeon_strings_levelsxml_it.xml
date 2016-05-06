@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">Una lastra a pressione nascosta!</string>
+  <string name="Level_TileChasm">abisso</string>
+  <string name="Level_TileFloor">Pavimento</string>
+  <string name="Level_TileGrass">Erba</string>
+  <string name="Level_TileWater">Acqua</string>
+  <string name="Level_TileWall">Muro</string>
+  <string name="Level_TileClosedDoor">Porta chiusa</string>
+  <string name="Level_TileOpenDoor">Porta aperta</string>
+  <string name="Level_TileEntrance">ingresso nella profondità</string>
+  <string name="Level_TileExit">uscita dalle profondità</string>
+  <string name="Level_TileEmbers">Brace</string>
+  <string name="Level_TileLockedDoor">Porta bloccata</string>
+  <string name="Level_TilePedestal">Piedistallo</string>
+  <string name="Level_TileBarricade">Barricata</string>
+  <string name="Level_TileHighGrass">Erba alta</string>
+  <string name="Level_TileLockedExit">uscita dalle profondità chiusa</string>
+  <string name="Level_TileUnlockedExit">uscita dalle profondità aperta</string>
+  <string name="Level_TileSign">Cartello</string>
+  <string name="Level_TileWell">Pozzo</string>
+  <string name="Level_TileEmptyWell">Pozzo vuoto</string>
+  <string name="Level_TileStatue">Statua</string>
+  <string name="Level_TileToxicTrap">Trappola di gas tossico.</string>
+  <string name="Level_TileFireTrap">Trappola di fuoco</string>
+  <string name="Level_TileParalyticTrap">trappola a gas Paralitico</string>
+  <string name="Level_TilePoisonTrap">trappola con darti avvelenati</string>
+  <string name="Level_TileAlarmTrap">trappola d\'allarme</string>
+  <string name="Level_TileLightningTrap">trappola con fulmine</string>
+  <string name="Level_TileGrippingTrap">trappola con presa</string>
+  <string name="Level_TileSummoningTrap">trappola d\'invocazione</string>
+  <string name="Level_TileInactiveTrap">trappola innescata</string>
+  <string name="Level_TileBookshelf">Libreria</string>
+  <string name="Level_TileAlchemy">Pentola alchemica</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">Non riesci a vederne il fondo.</string>
+  <string name="Level_TileDescWater">Nel caso tu fossi in fiamme cammina nell\'acqua per spegnere il fuoco.</string>
+  <string name="Level_TileDescEntrance">Le scale che portano su conducono in una profondità maggiore</string>
+  <string name="Level_TileDescExit">Le scale che portano giù conducono in una profondità minore</string>
+  <string name="Level_TileDescEmbers">le ceneri coprono la porta</string>
+  <string name="Level_TileDescHighGrass">Una densa vegetazione blocca la visuale.</string>
+  <string name="Level_TileDescLockedDoor">La porta è chiusa, hai bisogno di una chiave adatta per aprirla.</string>
+  <string name="Level_TileDescLockedExit">Delle barre pesanti bloccano le scale che conducono sotto</string>
+  <string name="Level_TileDescBarricade">La barricata di legno  è impostata con forza ma è secca dagli anni.  
+Potrebbe bruciare?</string>
+  <string name="Level_TileDescSign">Non riesci a leggere il testo da qui</string>
+  <string name="Level_TileDescTrap">se fai un passo (o cammini) sulla lastra a pressione attiverai la trappola.</string>
+  <string name="Level_TileDescInactiveTrap">La trappola è stata attivata prima e non è più pericolosa.</string>
+  <string name="Level_TileDescStatue">Qualcuno voleva decorare questo luogo, ha fallito, ovviamente.</string>
+  <string name="Level_TileDescAlchemy">Metti dei semi qui per cucinare una pozione</string>
+  <string name="Level_TileDescEmptyWell">Il pozzo può funzionare a secco.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileGrass">muschio fluorescente</string>
+  <string name="Caves_TileHighGrass">Funghi fosforescenti</string>
+  <string name="Caves_TileWater">Acqua Ghiacciata</string>
+  <string name="Caves_TileDescEntrance">Questa scala porta al piano superiore.</string>
+  <string name="Caves_TileDescExit">Questa scala porta al piano inferiore.</string>
+  <string name="Caves_TileDescHighGrass">Un grande fungo oscura la visuale.</string>
+  <string name="Caves_TileDescDeco">una vena di materiale è visibile sulla parete. sarà oro?</string>
+  <string name="Caves_TileDescBookshelf">A chi servirebbe una libreria dentro una caverna?</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">acqua colorata sospettosa</string>
+  <string name="City_TileHighGrass">fiori Alti che sbocciano</string>
+  <string name="City_TileDescEntrance">Una rampa conduce fino alla profondità superiore.</string>
+  <string name="City_TileDescExit">Una rampa conduce fino alla profondità inferiore.</string>
+  <string name="City_TileDescDeco">Diverse piastrelle mancanti qui.</string>
+  <string name="City_TileDescEmptySP">una moquette spessa copre il pavimento.</string>
+  <string name="City_TileDescStatue">La statua raffigura alcuni nani in un atteggiamento eroico.</string>
+  <string name="City_TileDescBookshelf">una fila di libri su diverse discipline riempiono la libreria.</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">Lava fredda</string>
+  <string name="Halls_TileGrass">Muschio Di fuoco</string>
+  <string name="Halls_TileHighGrass">Fungo di fuoco</string>
+  <string name="Halls_TileStatue">Pilastro</string>
+  <string name="Halls_TileDescWater">Sembra lava ma è fredda ed è probabilmente sicura da toccare</string>
+  <string name="Halls_TileDescStatue">La colonna è formata da reali teschi umanoidi. Stupendo.</string>
+  <string name="Halls_TileDescBookshelf">Libri in lingue antiche nella libreria.</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">Lava fredda</string>
+  <string name="LastLevel_TileGrass">Muschio Di fuoco</string>
+  <string name="LastLevel_TileHighGrass">Fungo di fuoco</string>
+  <string name="LastLevel_TileStatue">Pilastro </string>
+  <string name="LastLevel_TileDescWater">Sembra lava ma è fredda ed è probabilmente sicura da toccare</string>
+  <string name="LastLevel_TileDescStatue">La colonna è formata da reali teschi umanoidi. Stupendo.</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">acqua colorata sospettosa</string>
+  <string name="LastShopLevel_TileHighGrass">fiori Alti che sbocciano</string>
+  <string name="LastShopLevel_TileDescEntrance">Una rampa conduce fino alla profondità superiore.</string>
+  <string name="LastShopLevel_TileDescExit">Una rampa conduce all\'inferno.</string>
+  <string name="LastShopLevel_TileDescDeco">Diverse piastrelle mancanti qui.</string>
+  <string name="LastShopLevel_TileDescEmptySP">una moquette spessa copre il pavimento.</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">Acqua scura fredda</string>
+  <string name="Prison_TileDescDeco">Ci sono vecchie macchie di sangue sul pavimento.</string>
+  <string name="Prison_TileDescBookshelf">Questo è probabilmente un residuo di una biblioteca carceraria. Potrebbe bruciare?</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">acqua torbida</string>
+  <string name="Sewer_TileDescDeco">Un muschio giallastro copre il pavimento.</string>
+  <string name="Sewer_TileDescBookshelf">La libreria è piena di libri inutili a basso costo. Potrebbe bruciare?</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">Seleziona un seme da lanciare</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">abisso</string>
+  <string name="Chasm_Yes">Sì, so quello che faccio</string>
+  <string name="Chasm_No">No, ho cambiato idea</string>
+  <string name="Chasm_Jump">Vuoi davvero fare un salto nel baratro? Probabilmente si può morire.</string>
+  <string name="Chasm_Info">Sei caduto da un posto alto...</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">La trappola emette un suono acuto che riecheggia per tutto il dungeon!</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">trappola con fulmine</string>
+  <string name="LightningTrap_Desc">Sei stato ucciso dalla scarica di una trappola con fulmine</string>
+</resources>

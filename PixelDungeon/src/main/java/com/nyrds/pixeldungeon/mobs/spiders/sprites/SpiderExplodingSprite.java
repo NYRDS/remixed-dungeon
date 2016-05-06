@@ -1,11 +1,12 @@
 package com.nyrds.pixeldungeon.mobs.spiders.sprites;
 
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.sprites.MobSprite;
 
 public class SpiderExplodingSprite extends MobSprite {
-	
+
 	static final int framesInRow = 16;
 	
 	@Override

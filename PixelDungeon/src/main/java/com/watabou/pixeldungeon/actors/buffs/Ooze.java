@@ -28,7 +28,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class Ooze extends Buff {
 	
 	private static final String TXT_DEATH = Game.getVar(R.string.Ooze_Death);
-	
+
 	public int damage	= 1;
 	
 	@Override

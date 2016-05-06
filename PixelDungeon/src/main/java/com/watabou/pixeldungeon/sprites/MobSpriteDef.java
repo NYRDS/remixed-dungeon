@@ -3,6 +3,8 @@ package com.watabou.pixeldungeon.sprites;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
@@ -54,6 +56,15 @@ public class MobSpriteDef extends MobSprite {
 		try {
 			texture(json.getString("texture"));
 
+			if(json.has("layers")) {
+				JSONArray layers = json.getJSONArray("layers");
+
+				for(int i=0;i<layers.length();++i) {
+					JSONObject layer = layers.getJSONObject(i);
+					addLayer(layer.getString("id"),TextureCache.get(layer.get("texture")));
+				}
+			}
+
 			int width = json.getInt("width");
 
 			TextureFilm film = new TextureFilm(texture, width, json.getInt("height"));
@@ -84,6 +95,8 @@ public class MobSpriteDef extends MobSprite {
 				};
 			}
 
+			loadAdditionalData(json,film, kind);
+
 		} catch (Exception e) {
 			Game.toast(String.format("Something bad happens when loading %s", name), e);
 			throw new TrackedRuntimeException(String.format("Something bad happens when loading %s", name), e);
@@ -92,7 +105,10 @@ public class MobSpriteDef extends MobSprite {
 		play(idle);
 	}
 
-	private Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
+	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
+	}
+
+	protected Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
 		JSONObject jsonAnim = root.getJSONObject(animKind);
 
 		Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));
@@ -162,6 +178,8 @@ public class MobSpriteDef extends MobSprite {
 			}
 		}
 	}
+
+
 
 	@Override
 	public int blood() {

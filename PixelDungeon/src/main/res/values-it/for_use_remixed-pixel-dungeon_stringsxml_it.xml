@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">Remixed Pixel Dungeon</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">Molti eroi di ogni genere si sono avventurati nel Dungeon prima di te. Qualcuno di questi è tornato con tesori e artefatti magici, della maggior parte non si è più sentito parlare. Ma nessuno è riuscito nell\'impresa di rinvenire l\'Amuleto di Yendor, che si dice essere nascosto nelle profondità del Dungeon.\n\nTi credi pronto per ls sfida, ma ancora più importante, credi che la fortuna ti sorrida. È tempo di iniziare la tua personale avventura.</string>
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Exit">E\' abbastanza per oggi</string>
+  <string name="AmuletScene_Stay">Non ho ancora finito</string>
+  <string name="AmuletScene_Txt">Finalmente lo brandisci, l\'Amuleto di Yendor. Con il suo potere puoi dominare il mondo e portare pace e prosperità ai popoli e roba del genere. In ogni caso, la tua vita cambierà per sempre e questo gioco finirà qui. Oppure puoi rimanere un mero mortale per poco più.</string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Benvenuto al livello %d di Pixel Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Bentornato al livello %d di Pixel Dungeon!</string>
+  <string name="GameScene_NightMode">Fai attenzione, il Dungeon è ancora più pericoloso di notte!</string>
+  <string name="GameScene_Chasm">I tuoi passi riecheggiano nel dungeon.</string>
+  <string name="GameScene_Water">Puoi udire l\'acqua intorno a te.</string>
+  <string name="GameScene_Grass">L\'odore di vegetazione è acuto nell\'aria.</string>
+  <string name="GameScene_Secrets">L\'atmosfera suggerisce che il piano nasconda diversi segreti.</string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">mob</string>
+  <string name="Char_Name_Objective">mob</string>
+  <string-array name="Char_Hit">
+    <item>%1$s colpisce %2$s</item>
+    <item>%1$s colpisce %2$s</item>
+    <item>%1$s colpisce %2$s</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s ti ha ucciso...</item>
+    <item>%s ti ha ucciso...</item>
+    <item>%s ti ha ucciso...</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s ha sconfitto %2$s</item>
+    <item>%1$s ha sconfitto %2$s</item>
+    <item>%1$s ha sconfitto %2$s</item>
+  </string-array>
+  <string name="Char_YouMissed">%1$s %2$s il tuo attacco</string>
+  <string name="Char_SmbMissed">%1$s %2$s l\'attacco di %3$s</string>
+  <string name="Char_OutParalysis">Il dolore porta %s fuori dalla paralisi</string>
+  <string-array name="Char_StaDodged">
+    <item>ha schivato</item>
+    <item>ha schivato</item>
+    <item>ha schivato</item>
+  </string-array>
+  <string name="Char_StaPoisoned">avvelenato</string>
+  <string name="Char_StaAmok">follia</string>
+  <string name="Char_StaSlowed">rallentato</string>
+  <string name="Char_StaMind">mente</string>
+  <string name="Char_StaVision">visione</string>
+  <string name="Char_StaParalysed">paralisi</string>
+  <string name="Char_StaFrightened">terrorizzato</string>
+  <string name="Char_StaRooted">radicato</string>
+  <string name="Char_StaCrippled">storpiato</string>
+  <string name="Char_StaBleeding">sanguinante</string>
+  <string name="Char_StaDizzy">allucinato</string>
+  <string name="Char_StaInvisible">invisibile</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">Il testo è indecifrabile...</string>
+  <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
+  <string-array name="Dungeon_Tips">
+    <item>Non sopravvalutare la tua forza, Usa armi e armature adatte a te.</item>
+    <item>Non tutte le porte si notano a prima vista. Se sei bloccato, cerca porte nascoste.</item>
+    <item>Ricorda che aumentare la tua forza non è l\'unico modo per accedere ad equipaggiamento migliore, puoi anche diminuirne la forza richiesta con Pergamene di Potenziamento.</item>
+    <item>Puoi spendere il tuo oro in mercati di livelli più avanzati del dungeon. Il primo è al piano 6.</item>
+    <item>In guardia! Goo è vicino!</item>
+    <item>Pixel-Mart - ciò che ti serve per un\'avventura fruttuosa!</item>
+    <item>Identifica le tue pozioni e pergamente il prima possibile. Non ridurti al momento in cui ti serviranno davvero.</item>
+    <item>Essere affamati non è doloroso, ma morire di fame lo è.</item>
+    <item>Gli attacchi a sorpresa colpiranno con maggiore probabilità. Per esempio, puoi tendere un imboscata ai nemici aspettandoli dietro a porte chiuse.</item>
+    <item>Non lasciare uscire il Tengu!</item>
+    <item>Pixel-Mart. Spendi denaro. Vivi più a lungo.</item>
+    <item>Quando sei attaccato da più mostri, ritirati dietro una porta.</item>
+    <item>Se bruci mentre leviti, non puoi estinguere il fuoco nell\'acqua.</item>
+    <item>Non ha senso possedere più di un Ankh alla volta, li perderai nella resurrezione.</item>
+    <item>PERICOLO! I macchinari pesanti possono causare infortuni, perdita di arti o morte!</item>
+    <item>Pixel-Mart. Una vita più sicura nei dungeon.</item>
+    <item>Quando potenzi un oggetto incantato, c\'è la possibilità di distruggere quell\'incantesimo.</item>
+    <item>Un pozzo della trasmutazione può farti ottenere oggetti che non potresti ottenere altrimenti.</item>
+    <item>L\'unico modo di potenziare un arma è usare una Pergamena di Potenziamento delle Armi.</item>
+    <item>Le armi non sono ammesse al cospetto di Sua Mestà!</item>
+    <item>Pixel-Mart. Prezzi speciali per Cacciatori di Demoni!</item>
+    <item>Il testo è scritto in linguaggio demoniaco.</item>
+    <item>Il testo è scritto in linguaggio demoniaco.</item>
+    <item>Il testo è scritto in linguaggio demoniaco.</item>
+  </string-array>
+  <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>Sulla dieta</item>
+    <item>La fede è la mia armatura</item>
+    <item>Pharmacophobia</item>
+    <item>terra sterile</item>
+    <item>Swarm intelligence</item>
+    <item>nel buio</item>
+  </string-array>
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_WellHealt">Bene della Salute</string>
+  <string name="Journal_WellAwareness">Bene della Consapevolezza</string>
+  <string name="Journal_WellTransmut">bene di Trasmutazione</string>
+  <string name="Journal_Alchemy">Pentola alchemica</string>
+  <string name="Journal_Garden">Giardino</string>
+  <string name="Journal_Statue">Statua Animata</string>
+  <string name="Journal_Ghost">fantasma triste</string>
+  <string name="Journal_Wandmaker">vecchio wandmaker</string>
+  <string name="Journal_Troll">fabbro troll</string>
+  <string name="Journal_Imp">diavoletto ambizioso</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Prompt">OK, un\'accordo è un\'accordo, dato quello che posso fare per te: posso riforgiare 2 item e trasformando in uno di qualità migliore.</string>
+  <string name="WndBlacksmith_Select">Seleziona un item da riforgiare</string>
+  <string name="WndBlacksmith_Reforge">Riforgia</string>
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">pozioni</string>
+  <string name="WndCatalogus_Scrolls">Pagina</string>
+  <string name="WndCatalogus_Title">Cataloghi</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <string name="WndChallenges_Title">Sfide</string>
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">Quale modo seguirete?</string>
+  <string name="WndChooseWay_Cancel">Deciderò dopo</string>
+  <!--STRINGS OF WndClass CLASS-->
+  <string name="WndClass_Mastery">Padronanza</string>
+  <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">ERRORE</string>
+  <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">Impostazioni</string>
+  <string name="WndGame_Challenges">Sfide</string>
+  <string name="WndGame_Ranking">classifiche</string>
+  <string name="WndGame_Start">Inizia nuova partita</string>
+  <string name="WndGame_menu">Menu principale </string>
+  <string name="WndGame_Exit">Esci da Pixel Dungeon</string>
+  <string name="WndGame_Return">Ritorna nel gioco</string>
+  <string name="WndGame_Save">Salva</string>
+  <string name="WndGame_Load">Carica</string>
+  <!--STRINGS OF WndHero CLASS-->
+  <string name="WndHero_Stats">stati</string>
+  <string name="WndHero_Buffs">Buffs</string>
+  <string name="WndHero_Exp">Esperienza</string>
+  <string name="WndHero_Str">Forza</string>
+  <string name="WndHero_Health">Salute</string>
+  <string name="WndHero_Gold">Oro raccolto</string>
+  <string name="WndHero_Depth">Profondità massima</string>
+  <string name="WndHero_StaTitle">Livello %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">Cataloghi</string>
+  <string name="WndHero_StaJournal">Diario</string>
+  <!--STRINGS OF WndImp CLASS-->
+  <string name="WndImp_Reward">Prendi l\'anello</string>
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <string name="WndInfoCell_Nothing">Non c\'è niente qui.</string>
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">Cassa</string>
+  <string name="WndInfoItem_LockedChest">Cassa bloccata</string>
+  <string name="WndInfoItem_CrystalChest">Cassa in cristallo </string>
+  <string name="WndInfoItem_Tomb">Tomba</string>
+  <string name="WndInfoItem_Skeleton">resti scheletrici</string>
+  <string name="WndInfoItem_WontKnow">Non si sa cosa c\'è dentro fino a quando lo si apre!</string>
+  <string name="WndInfoItem_NeedKey">Ma per aprirlo è necessaria una chiave d\'oro.</string>
+  <string name="WndInfoItem_Inside">Si può vedere %s dentro, ma per aprire la cassa è necessaria una chiave d\'oro.</string>
+  <!--STRINGS OF WndJournal CLASS-->
+  <string name="WndJournal_Title">Diario</string>
+  <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Error">Impossibile caricare ulteriori informazioni</string>
+  <string name="WndRanking_Stats">stati</string>
+  <string name="WndRanking_Items">Items</string>
+  <string name="WndRanking_Badges">Encomio</string>
+  <string name="WndRanking_StaTitle">Livello %1$d %2$s</string>
+  <string name="WndRanking_StaChallenges">Sfide</string>
+  <string name="WndRanking_StaHealth">Salute</string>
+  <string name="WndRanking_StaStr">Forza</string>
+  <string name="WndRanking_StaDuration">Durata di gioco</string>
+  <string name="WndRanking_StaDepth">Profondità massima</string>
+  <string name="WndRanking_StaEnemies">Mobs uccisi</string>
+  <string name="WndRanking_StaGold">Oro raccolto</string>
+  <string name="WndRanking_StaFood">cibo mangiato</string>
+  <string name="WndRanking_StaAlchemy">Pozioni cotte</string>
+  <string name="WndRanking_StaAnkhs">ankh Usato</string>
+  <!--STRINGS OF WndResurrect CLASS-->
+  <string name="WndResurrect_Message">Sei morto, ma è stata data un\'altra possibilità di sconfiggere questo dungeon. Vuoi riprendere?</string>
+  <string name="WndResurrect_Yes">Sì, mi batterò!</string>
+  <string name="WndResurrect_No">No, mi arrendo</string>
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <string name="WndSadGhost_Rose">Sì! Sì!!! è questo! Si prega di darlo a me! E si può prendere uno di questi elementi, forse sarà utile a voi nel vostro viaggio...</string>
+  <string name="WndSadGhost_Rat">SI! la brutta creature è finalmente uccisa e posso finalmente riposare...si prega di prendere uno di questi item, forse sarà utile a voi nel vostro viaggio...</string>
+  <string name="WndSadGhost_Wepon">Arma fantasma</string>
+  <string name="WndSadGhost_Armor">Armatura fantasma</string>
+  <string name="WndSadGhost_Farewell">Addio, avventuriero!</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <string name="WndTradeItem_Sale">IN VENDITA: %1$s - %2$dg</string>
+  <string name="WndTradeItem_Buy">Compra per %dg</string>
+  <string name="WndTradeItem_Sell">vendi per %dg</string>
+  <string name="WndTradeItem_Sell1">vendi 1 per %dg</string>
+  <string name="WndTradeItem_SellAll">Vendi tutto per %dg</string>
+  <string name="WndTradeItem_Cancel">Non importa</string>
+  <string name="WndTradeItem_Sold">Hai venduto la tua %1$s per %2$dg</string>
+  <string name="WndTradeItem_Bought">Hai comprato %1$s per %2$dg</string>
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Battle">Bacchetta da battaglia</string>
+  <string name="WndWandmaker_NonBattle">bacchetta d\'utilità </string>
+  <string name="WndWandmaker_Farawell">Buona fortuna nella vostra missione, %s!</string>
+  <!--STRINGS OF QuickSlot CLASS-->
+  <!--STRINGS OF Item CLASS-->
+  <string name="Item_Name">smth</string>
+  <string name="Item_Info">smth</string>
+  <string name="Item_ACDrop">GETTA</string>
+  <string name="Item_ACThrow">LANCIA</string>
+  <string name="Item_DirThrow">Scegliere la direzione di tiro</string>
+  <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">EQUIPAGGIA</string>
+  <string name="EquipableItem_ACUnequip">DISEQUIPPAGIA</string>
+  <!--STRINGS OF Heap CLASS-->
+  <string name="Heap_Mimic">Questo è un imitatore!</string>
+  <!--STRINGS OF Amulet CLASS-->
+  <string name="Amulet_Name">Amuleto di Yendor </string>
+  <string name="Amulet_ACEnd">FINE DEL GIOCO</string>
+  <!--STRINGS OF Ankh CLASS-->
+  <!--STRINGS OF ArmorKit CLASS-->
+  <string name="ArmorKit_ACAplly">APPLICA</string>
+  <string name="ArmorKit_SelectArmor">seleziona l\'armatura d\'aggiornare</string>
+  <!--STRINGS OF Dewdrop CLASS-->
+  <!--STRINGS OF DewVial CLASS-->
+  <string name="DewVial_ACDRINK">BEVI</string>
+  <!--STRINGS OF Gold CLASS-->
+  <string name="Gold_Name">oro</string>
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <!--STRINGS OF Stylus CLASS-->
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_ACRead">LEGGI</string>
+  <!--STRINGS OF Torch CLASS-->
+  <!--STRINGS OF Weightstone CLASS-->
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <!--STRINGS OF Keyring CLASS-->
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <!--STRINGS OF SeedPouch CLASS-->
+  <!--STRINGS OF WandHolster CLASS-->
+  <!--STRINGS OF PotionBelt CLASS-->
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <!--STRINGS OF IronKey CLASS-->
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <!--STRINGS OF DarkGold CLASS-->
+  <!--STRINGS OF DriedRose CLASS-->
+  <!--STRINGS OF DwarfToken CLASS-->
+  <!--STRINGS OF Pickaxe CLASS-->
+  <!--STRINGS OF RatSkull CLASS-->
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Foliage CLASS-->
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <!--STRINGS OF ToxicGas CLASS-->
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <!--STRINGS OF Web CLASS-->
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <!--STRINGS OF Barkskin CLASS-->
+  <!--STRINGS OF Bleeding CLASS-->
+  <!--STRINGS OF Blindness CLASS-->
+  <!--STRINGS OF Burning CLASS-->
+  <!--STRINGS OF Charm CLASS-->
+  <!--STRINGS OF Combo CLASS-->
+  <!--STRINGS OF Cripple CLASS-->
+  <!--STRINGS OF Frost CLASS-->
+  <!--STRINGS OF Fury CLASS-->
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <!--STRINGS OF Hunger CLASS-->
+  <!--STRINGS OF Invisibility CLASS-->
+  <!--STRINGS OF Levitation CLASS-->
+  <!--STRINGS OF Light CLASS-->
+  <!--STRINGS OF MindVision CLASS-->
+  <!--STRINGS OF Ooze CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Roots CLASS-->
+  <!--STRINGS OF Shadows CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF SnipersMark CLASS-->
+  <!--STRINGS OF Vertigo CLASS-->
+  <!--STRINGS OF Weakness CLASS-->
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+</resources>

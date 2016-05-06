@@ -17,16 +17,14 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.MirrorSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -37,52 +35,41 @@ public class MirrorImage extends NPC {
 
 	// for restoreFromBundle
 	public MirrorImage() {
-		spriteClass = MirrorSprite.class;
 		state = HUNTING;
 		setEnemy(DUMMY);
 	}
 
 	public MirrorImage(Hero hero) {
 		this();
-		
-		tier = hero.tier();
 		attack = hero.attackSkill( hero );
 		damage = hero.damageRoll();
-		
-		spriteKind = HeroClass.spritesheet(hero);
+
+		lookDesc = hero.getHeroSprite().getLayersDesc();
 	}
-	
-	public int tier;
-	
-	private int attack;
-	private int damage;
-	private String spriteKind;
-	
-	private static final String TIER	= "tier";
+
+	private int                attack;
+	private int                damage;
+	private String[]           lookDesc;
+
 	private static final String ATTACK	= "attack";
 	private static final String DAMAGE	= "damage";
-	private static final String SPRITE  = "spriteKind";
-	
+	private static final String LOOK    = "look";
+
+
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( TIER, tier );
 		bundle.put( ATTACK, attack );
 		bundle.put( DAMAGE, damage );
-		bundle.put( SPRITE, spriteKind );
+		bundle.put(LOOK, lookDesc);
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		tier = bundle.getInt( TIER );
 		attack = bundle.getInt( ATTACK );
 		damage = bundle.getInt( DAMAGE );
-		spriteKind = bundle.getString( SPRITE );
-		
-		if(! HeroClass.isSpriteSheet(spriteKind)) {
-			spriteKind = Assets.WARRIOR;
-		}
+		lookDesc = bundle.getStringArray(LOOK);
 	}
 	
 	@Override
@@ -123,11 +110,13 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		assert (spriteKind != null);
-		MirrorSprite s = new MirrorSprite();
-		s.texture(spriteKind);
-		s.updateArmor(tier);
-		return s;
+		if(lookDesc!=null) {
+			HeroSpriteDef s = new HeroSpriteDef(lookDesc);
+			return s;
+		} else { // handle old saves
+			lookDesc = Dungeon.hero.getHeroSprite().getLayersDesc();
+			return sprite();
+		}
 	}
 
 	@Override

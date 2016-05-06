@@ -23,7 +23,7 @@ import com.watabou.utils.PointF;
 public class ScaleTweener extends Tweener {
 
 	public Visual visual;
-	
+
 	public PointF start;
 	public PointF end;
 	

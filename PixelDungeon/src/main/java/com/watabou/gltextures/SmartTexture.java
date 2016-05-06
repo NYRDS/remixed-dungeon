@@ -25,10 +25,10 @@ public class SmartTexture extends Texture {
 
 	public int width;
 	public int height;
-	
+
 	public int fModeMin;
 	public int fModeMax;
-	
+
 	public int wModeH;
 	public int wModeV;
 	

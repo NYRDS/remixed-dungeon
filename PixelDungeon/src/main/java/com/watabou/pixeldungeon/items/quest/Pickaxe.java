@@ -42,9 +42,9 @@ import com.watabou.utils.Callback;
 import java.util.ArrayList;
 
 public class Pickaxe extends Weapon {
-	
+
 	public static final String AC_MINE	= Game.getVar(R.string.Pickaxe_ACMine);
-	
+
 	public static final float TIME_TO_MINE = 2;
 	
 	private static final String TXT_NO_VEIN = Game.getVar(R.string.Pickaxe_NoVein);

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -304,7 +305,7 @@ public class InterlevelScene extends PixelScene {
 
 	private void problemWithSave() {
 		Dungeon.deleteGame(true);
-		throw new RuntimeException("something wrong with save");
+		throw new TrackedRuntimeException("something wrong with save");
 	}
 
 	private void restore() throws IOException{

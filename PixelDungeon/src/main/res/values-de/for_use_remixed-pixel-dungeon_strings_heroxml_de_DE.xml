@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">du</string>
+  <string name="Hero_Name_Objective">du</string>
+  <string name="Hero_Leave">Man verlässt Pixel Dungeon nicht einfach so.</string>
+  <string name="Hero_LevelUp">Level up!</string>
+  <string name="Hero_NewLevel">Du hast Level %d erreicht! Du hast nun mehr Lebenskraft und kannst dich besser konzentrieren. Es ist einfacher für dich geworden einen Gegner zu treffen und seinen Angriffen auszuweichen.</string>
+  <string name="Hero_YouNowHave">Du hast %s gefunden</string>
+  <string name="Hero_SomethingElse">Da liegt noch mehr</string>
+  <string name="Hero_LockedChest">Die Truhe ist verschlossen, und du hast keinen passenden Schlüssel</string>
+  <string name="Hero_LockedDoor">Du hast keinen passenden Schlüssel</string>
+  <string name="Hero_NoticedSmth">Du bemerkst etwas</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">suchen</string>
+  <string name="Hero_StaBurning">Du fängst Feuer!</string>
+  <string name="Hero_StaParalysis">Du bist paralysiert!</string>
+  <string name="Hero_StaPoison">Du bist vergiftet!</string>
+  <string name="Hero_StaOoze">Ätzender Schlamm frisst sich in dein Fleisch. Wasch ihn ab!</string>
+  <string name="Hero_StaRoots">Du kannst dich nicht bewegen!</string>
+  <string name="Hero_StaWeakness">Du fühlst dich geschwächt!</string>
+  <string name="Hero_StaBlindness">Du bist geblendet!</string>
+  <string name="Hero_StaFury">Du wirst wütend!</string>
+  <string name="Hero_StaFurious">wütend</string>
+  <string name="Hero_StaCharm">Du bist verzaubert!</string>
+  <string name="Hero_StaCripple">Du bist verkrüppelt</string>
+  <string name="Hero_StaBleeding">Du blutest!</string>
+  <string name="Hero_StaVertigo">Alles dreht sich um dich!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">Krieger</string>
+  <string name="HeroClass_Mag">Magier</string>
+  <string name="HeroClass_Rog">Schurke</string>
+  <string name="HeroClass_Hun">Jägerin</string>
+  <string name="HeroClass_Elf">Elf</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Krieger beginnen mit 11 Stärkepunkten.</item>
+    <item>Krieger starten mit einem einzigartigen Schwert. Dieses Schwert kann später \"umgeschmiedet\" werden um eine andere Nahkampfwaffe zu verbessern.</item>
+    <item>Krieger sind weniger effektiv im Umgang mit Fernkampfwaffen.</item>
+    <item>Jede Form von Nahrung gibt beim Verzehr etwas Gesundheit zurück.</item>
+    <item>Stärketränke sind von Beginn an bekannt.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Magier beginnen mit einem einzigartigen Zauberstab der magischen Geschosse. Dieser Zauberstab kann später \"entzaubert\" werden um einen anderen Zauberstab aufzuwerten.</item>
+    <item>Magier laden ihre Zauberstäbe schneller auf.</item>
+    <item>Jedes Nahrungsmittel stellt beim Essen 1 Ladung bei allen Zauberstäben im Rucksack wieder her.</item>
+    <item>Magiere können ihre Zauberstäbe als Nahkampfwaffe nutzen.</item>
+    <item>Identifizierungsrollen sind bereits zu Beginn bekannt.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Rouges beginnen mit einem Schattenring+1.</item>
+    <item>Rouges identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </item>
+    <item>Rouges sind am besten mit leichter Rüstung, weichen besser aus, wenn sie sie tragen </item>
+    <item>Rouges sind am besten im versteckte Türen und Fallen finden</item>
+    <item>Rouges können es länger ohne Essen aushalten </item>
+    <item>Schriftrollen der Magischen Diagramme sind schon zu Beginn bekannt. </item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Jägerinnen beginnen mit 15 Lebenspunkten.</item>
+    <item>Jägerinnen beginnen mit einem einzigartigen aufwertbaren Bummerang.</item>
+    <item>Jägerinnen sind effektiv im Umgang mit Fernkampfwaffen und erhalten einen Schadensbonus beim Benutzen, wenn ihre Stärke die erforderliche Stärke für die Waffe übersteigt.</item>
+    <item>Jägerinnen erhalten mehr Gesundheit von Tautropfen.</item>
+    <item>Jägerinnen spüren benachbarte Monster sogar dann, wenn sie hinter Hindernissen versteckt sind.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Elfen beginnen mit 15HP und 9 STR.</item>
+    <item>Elfen sind immun gegen Anwurzelung.</item>
+    <item>Elfen beginnen mit einem verbesserten Holzbogen und einem Haufen Pfeilen.</item>
+    <item>Elfen sind extrem Erfahren mit Bögen und beweglich.</item>
+    <item>Elfen sind weniger Erfahren mit Nahkampfwaffen.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">Gladiator</string>
+  <string name="HeroSubClass_DescGlad">Ein erfolgreicher Angriff mit einer Nahkampfwaffe erlaubt es dem _Gladiator_ , einen Komboangriff einzusetzen, in dem jeder erfolgreiche Treffer mehr Schaden verursacht.</string>
+  <string name="HeroSubClass_NameBers">Berserker</string>
+  <string name="HeroSubClass_DescBers">Wenn ein _Berserker_ schwer verletzt ist, erreicht er einen Zustand wilder Wut, in dem sein Schaden deutlich erhöht ist.</string>
+  <string name="HeroSubClass_NameWarL">Hexenmeister</string>
+  <string name="HeroSubClass_DescWarL">Wenn ein _Hexenmeister_ einen Gegner tötet nimmt er seine Seele in sich auf. Sie heilt seine Wunde und sättigt ihn.</string>
+  <string name="HeroSubClass_NameBatM">Kampfmagier</string>
+  <string name="HeroSubClass_DescBatM">Während er mit einem Zauberstab in der Hand kämpft, verursacht der _Kampfmagier_ zusätzlichen Schaden abhängig von der aktuellen Aufladung. Jeder erfolgreiche Treffer stellt eine Aufladung des Zauberstabes wieder her.</string>
+  <string name="HeroSubClass_NameAssa">Assassine</string>
+  <string name="HeroSubClass_DescAssa">Der _Assassine_ verursacht zusätzlichen Schaden an seinem Ziel während er einen Überraschungsangriff ausführt.</string>
+  <string name="HeroSubClass_NameFreR">Windläufer</string>
+  <string name="HeroSubClass_DescFreR">Der _Windläufer_ kann fast doppelt so schnell laufen wie die meisten Monster. Während er rennt ist der Freerunner deutlich schwerer zu treffen. Dafür darf er nicht überladen sein und nicht am verhungern.</string>
+  <string name="HeroSubClass_NameSnip">Scharfschütze</string>
+  <string name="HeroSubClass_DescSnip">_Scharfschützen_ sind dazu in der Lage, Schwachpunkte in der gegnerischen Rüstung zu erkennen und diese effektiv zu umgehen wenn sie eine Fernkampfwaffe nutzen.</string>
+  <string name="HeroSubClass_NameWard">Bewahrer</string>
+  <string name="HeroSubClass_DescWard">_Bewahrer_ haben eine starke Bindung zu den Kräften der Natur. Sie besitzen die Fähigkeit, Tautropfen und Samen von Pflanzen zu sammeln. Zusätzlich erhalten sie eine temporäre Rüstungsverbesserung, wenn sie hohes Gras niedertreten.</string>
+  <string name="HeroSubClass_NameScout">Späher</string>
+  <string name="HeroSubClass_DescScout">Elfen_Späher_sind Meister der Heimlichkeit. Wenn sie hohes Gras zertrampeln, bietet dies ihnen einen vorrübergehenden Unsichtbarkeitseffekt. Ausserdem sind sie noch schneller als normale Elfen.</string>
+  <string name="HeroSubClass_NameShaman">Schamane</string>
+  <string name="HeroSubClass_DescShaman">Elfen_Schamanen_ können Zauberstäbe als Nahkampfwaffe benutzen. Erfolgreiche treffer haben eine Chance, die Fahigkeit die Kraft des Zauberstabes auf ein Ziel zu aktivieren, ohne eine Ladung zu benutzen.</string>
+</resources>

@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분이 친숙해져 이것의 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
+  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분이 익숙해져 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
   <string name="Weapon_Incompatible">서로 다른 종류의 마법들의 작용으로 갑옷의 각인이 지워져 버렸다</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->

@@ -24,13 +24,11 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
-import com.watabou.pixeldungeon.sprites.RatSprite;
 import com.watabou.utils.Random;
 
 public class Rat extends Mob {
 
 	public Rat() {
-		spriteClass = RatSprite.class;
 		hp(ht(8));
 		defenseSkill = 3;
 		

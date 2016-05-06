@@ -10,7 +10,7 @@ public class Chamber {
 	int x;
 	int y;
 	int r;
-	
+
 	int shape    = 0;
 	int interior = 0;
 

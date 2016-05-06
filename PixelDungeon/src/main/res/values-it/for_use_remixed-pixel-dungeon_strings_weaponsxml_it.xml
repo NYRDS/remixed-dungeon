@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">Hai abbastanza confidenza con %1$s per procedere all\'identificazione. È %2$s..</string>
+  <string name="Weapon_Incompatible">L\'interazione di diversi tipi di magia ha annullato l\'incantesimo su questa arma</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>Lugubre %s</item>
+    <item>Lugubre %s</item>
+    <item>Lugubre %s</item>
+  </string-array>
+  <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>Ardente%s</item>
+    <item>Ardente%s</item>
+    <item>Ardente%s</item>
+  </string-array>
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>Soprannaturale %s</item>
+    <item>Soprannaturale %s</item>
+    <item>Soprannaturale %s</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>Instabile %s</item>
+    <item>Instabile %s</item>
+    <item>Instabile %s</item>
+  </string-array>
+  <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>del Vampiro %s</item>
+    <item>del Vampiro %s</item>
+    <item>del Vampiro %s</item>
+  </string-array>
+  <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>della Fortuna %s</item>
+    <item>della Fortuna %s</item>
+    <item>della Fortuna %s</item>
+  </string-array>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>Stordente %s</item>
+    <item>Stordente %s</item>
+    <item>Stordente %s</item>
+  </string-array>
+  <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>Perforante %s</item>
+    <item>Perforante %s</item>
+    <item>Perforante %s</item>
+  </string-array>
+  <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>Velenoso %s</item>
+    <item>Velenoso %s</item>
+    <item>Velenoso %s</item>
+  </string-array>
+  <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>del Freddo %s</item>
+    <item>del Freddo %s</item>
+    <item>del Freddo %s</item>
+  </string-array>
+  <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>della Natura %s</item>
+    <item>della Natura %s</item>
+    <item>della Natura %s</item>
+  </string-array>
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">%1$s è %2$s livello-%3$d arma da mischia.</string>
+  <string name="MeleeWeapon_Info1b">un </string>
+  <string name="MeleeWeapon_Info1c">un potenziato</string>
+  <string name="MeleeWeapon_Info1d">un degradato</string>
+  <string name="MeleeWeapon_Info2a">il suo massimo danno è di %d punti per colpo.</string>
+  <string name="MeleeWeapon_Info2b">Il suo normale massimo danno è di %1$d punti per colpo e usualmente richiede %2$d punti di forza</string>
+  <string name="MeleeWeapon_Info2c">Questa arma è probabilmente troppo pesante per te.</string>
+  <string name="MeleeWeapon_Info3a">Questa è un\'arma piuttosto %s .</string>
+  <string name="MeleeWeapon_Info3b">veloce</string>
+  <string name="MeleeWeapon_Info3c">lenta</string>
+  <string name="MeleeWeapon_Info3d">e </string>
+  <string name="MeleeWeapon_Info3e">ma </string>
+  <string name="MeleeWeapon_Info3f">precisa</string>
+  <string name="MeleeWeapon_Info3g">imprecisa</string>
+  <string name="MeleeWeapon_Info4a">E\' stata bilanciata per renderla più veloce.</string>
+  <string name="MeleeWeapon_Info4b">E\' stata bilanciata per renderla più precisa.</string>
+  <string name="MeleeWeapon_Info5">E\' incantata.</string>
+  <string name="MeleeWeapon_Info6a">A causa della tua forza inadeguata, la precisione e velocità del tuo attacco con questa %s i diminuita.</string>
+  <string name="MeleeWeapon_Info6b">A causa dell\'eccesso di forza il danno del tuo attacco con questa %s è aumentato.</string>
+  <string name="MeleeWeapon_Info7a">tu tieni le %1$s a portata di mano%2$s.</string>
+  <string name="MeleeWeapon_Info7b">,e dato che questo è maledetto,tu sei impedito dal andartene</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">ascia da battaglia</string>
+  <string name="BattleAxe_Info">un enorme elmo d\'acciaio di questa battaglia mette un notevole peso alle spalle ad ogni colpo</string>
+  <string name="BattleAxe_Gender">mascolino</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">pugnale</string>
+  <string name="Dagger_Info">un semplice pugnale di ferro con un manico di legno ben messo</string>
+  <string name="Dagger_Gender">mascolino</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">falcione</string>
+  <string name="Glaive_Gender">Femmina</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">tirapugni </string>
+  <string name="Knuckles_Gender">mascolino</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">spada lunga</string>
+  <string name="Longsword_Gender">mascolino</string>
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">mazza</string>
+  <string name="Mace_Gender">Femmina</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">Bastone</string>
+  <string name="Quarterstaff_Gender">mascolino</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">spada corta</string>
+  <string name="ShortSword_ACReforge">riforgia</string>
+  <string name="ShortSword_Select">seleziona l\'arma che vuoi aggiornare</string>
+  <string name="ShortSword_Gender">mascolino</string>
+  <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">lancia</string>
+  <string name="Spear_Gender">neutro</string>
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">spada</string>
+  <string name="Sword_Gender">mascolino</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">martello da guerra</string>
+  <string name="WarHammer_Gender">mascolino</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">arma missile</string>
+  <string name="MissileWeapon_Yes">Sì, so quello che faccio</string>
+  <string name="MissileWeapon_No">No, ho cambiato idea</string>
+  <string name="MissileWeapon_Sure">Vuoi davvero equipaggiarla come arma da mischia?</string>
+  <string name="MissileWeapon_Info2">A causa della tua forza inadeguata, la precisione e velocità del tuo attacco con questa %s i diminuita.</string>
+  <string name="MissileWeapon_Info3">A causa dell\'eccesso di forza il danno del tuo attacco con questa %s è aumentato.</string>
+  <string name="MissileWeapon_Info4">\n\nTieni il %s a portata di mano.</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name">bumerang</string>
+  <string name="Boomerang_Gender">mascolino</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">dardo curatore</string>
+  <string name="CurareDart_Gender">mascolino</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">Dardo</string>
+  <string name="Dart_Gender">mascolino</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">Dardo incendiario</string>
+  <string name="IncendiaryDart_Gender">mascolino</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">giavellotto</string>
+  <string name="Javelin_Gender">neutro</string>
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">shuriken</string>
+  <string name="Shuriken_Gender">mascolino</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">tomahawk</string>
+  <string name="Tamahawk_Gender">mascolino</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">kusarigama</string>
+  <string name="Kusarigama_Gender">Femmina</string>
+  <string name="Kusarigama_Pull">Tira</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">Spada del caos</string>
+  <string name="ChaosSword_Gender">mascolino</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">Arco del caos</string>
+  <string name="ChaosBow_Gender">mascolino</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">Vega del caos</string>
+  <string name="ChaosStaff_Gender">mascolino</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">Spada del sacrificio</string>
+  <string name="SacrificialSword_Gender">mascolino</string>
+</resources>

@@ -38,7 +38,7 @@ public class ItemSlot extends Button {
 	
 	private static final float ENABLED	= 1.0f;
 	private static final float DISABLED	= 0.3f;
-	
+
 	protected ItemSprite icon;
 	protected Text topLeft;
 	protected Text topRight;

@@ -31,7 +31,7 @@ import java.util.ArrayList;
 public class Torch extends Item {
 
 	public static final String AC_LIGHT	= Game.getVar(R.string.Torch_ACLight);
-	
+
 	public static final float TIME_TO_LIGHT = 1;
 	
 	{

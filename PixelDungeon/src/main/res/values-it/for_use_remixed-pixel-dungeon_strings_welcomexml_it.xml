@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Welcome_Ok">Vabbene!</string>
+  <string name="Welcome_Title">Benvenuto!</string>
+  <string name="Welcome_Text">
+Remixed Pixel Dungeon è una modifica dell\'open source Pixel Dungeon di Watabu.\n
+Il Progetto è stato creato per fornire ai giocatori nuove esperienze e contenuti.\n
+Un\'altra importante parte del nostro progetto è lo sviluppo di un supporto multilingue per il gioco.\n
+Con ogni aggiornamento proviamo a stare più vicino possibile alla nostra comunità.\n
+E se un giorno vedrai la tua idea implementata all\'interno del gioco.... Grazie per la tua creatività =)\n
+La versione corrente è basata su Pixel Dungeon 1.7.2 e parzialmente sulla 1.7.5.\n 
+Differenze con l\'originale: \n
+- Opzione per cambiare la lingua.\n
+- Nuovi mostri e NPC\n
+- Gas tossico e fuoco interagiscono con più oggetti\n
+- Nuovi tipi di «cibo»\n
+- Nuovi oggetti e nuove proprietà per alcuni vecchi oggetti\n
+- i Semi possono essere mangiati adesso =)\n
+- Elfi</string>
+  <string name="Welcome_Text_19">
+remix.17:\n
+- Nuovo tipo di replica\n
+remix.18:\n
+- Elementali\n
+remix.19:\n
+- Ragni\n
+- Livelli di ragni\n
+- Regina ragno\n</string>
+  <string name="Welcome_Text_20">
+remix.20:\n
+- Nuova arma rara - kusarigama\n
+- Nuovi personaggi rari\n
+- Modalità di gioco dove è possibile salvare e caricare il gioco\n
+- E molte altre cose di poco conto\n</string>
+  <string name="Welcome_Text_20_1">
+        remix.20.1:\n
+        - Pergamena della Dominazione\n
+        - Pergamena della Maledizione\n
+        </string>
+  <string name="Welcome_Text_20_2">
+        remix.21:\n
+        - Oggetti Chaos rari \n
+        - Fiamma liquida ora davvero liquida\n
+        </string>
+  <string name="Welcome_Text_21_1">
+        remix.21.1:\n
+        - Modalità facile (con annunci)\n
+        - Modalità esperto\n
+        </string>
+  <string name="Welcome_Text_21_2">
+        remix.21.2:\n
+        - Possibilità di scegliere mod del gioco (solo Reskins per ora) (utilizzabile solo da modders esperti)\n
+        </string>
+  <string name="Welcome_Text_21_3">
+        remix.21.3:\n
+        - PD mini mod disponibile per il download (non ancora completato ma divertente)\n
+        - Migliorata la grafica delle Fognature
+        </string>
+  <string name="Welcome_Text_21_4">
+        remix.21.4:\n
+        - Nuova arma rara - spada sacrificale
+        </string>
+  <string name="Welcome_Text_21_5">
+remix.21.5:\n
+- Nuove proprietà per i vecchi items
+</string>
+  <string name="Welcome_Text_22">
+remix.22:\n
+- Nuovo boss nascosto
+</string>
+</resources>

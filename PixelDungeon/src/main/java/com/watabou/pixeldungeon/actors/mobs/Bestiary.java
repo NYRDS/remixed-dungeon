@@ -17,16 +17,17 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.noosa.Game;
+import com.watabou.utils.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.noosa.Game;
-import com.watabou.utils.Random;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Bestiary {
 
@@ -36,7 +37,7 @@ public class Bestiary {
 		if (mobsData == null) {
 			mobsData = JsonHelper.readFile("levelsDesc/Bestiary.json");
 			if (mobsData == null) {
-				throw new RuntimeException("malformed levelsDesc/Bestiary.json");
+				throw new TrackedRuntimeException("malformed levelsDesc/Bestiary.json");
 			}
 		}
 
@@ -76,7 +77,7 @@ public class Bestiary {
 		try {
 			return cl.newInstance();
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -100,7 +101,7 @@ public class Bestiary {
 		try {
 			return cl.newInstance();
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 }

@@ -43,6 +43,7 @@ import android.widget.LinearLayout;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.glscripts.Script;
@@ -377,7 +378,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			try {
 				switchScene(sceneClass.newInstance());
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 
@@ -541,5 +542,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			}
 		};
 
+	}
+	public static void displaySaveAndLoadAd(final InterstitialPoint work) {
+		work.returnToWork(true);
+	}
+
+	public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
+		work.returnToWork(true);
 	}
 }

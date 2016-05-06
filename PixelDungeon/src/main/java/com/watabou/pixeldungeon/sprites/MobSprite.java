@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.noosa.tweeners.ScaleTweener;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -31,9 +32,11 @@ public class MobSprite extends CharSprite {
 	
 	@Override
 	public void update() {
-		Mob mob = (Mob)ch;
-		sleeping = mob != null && mob.state == mob.SLEEPING;
-		controlled = mob!=null && mob.isPet();
+		if(ch instanceof  Mob) {
+			Mob mob = (Mob) ch;
+			sleeping = mob.state == mob.SLEEPING;
+			controlled = mob.isPet();
+		}
 		super.update();
 	}
 	

@@ -49,23 +49,17 @@ public class ArmorKit extends Item {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		//if(hero.heroClass != HeroClass.ELF) {
-			actions.add( AC_APPLY );
-		//}
+		actions.add( AC_APPLY );
 		return actions;
 	}
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action == AC_APPLY) {
-
+		if (action.equals(AC_APPLY)) {
 			setCurUser(hero);
 			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR, TXT_SELECT_ARMOR );
-			
 		} else {
-			
 			super.execute( hero, action );
-			
 		}
 	}
 	
@@ -91,12 +85,9 @@ public class ArmorKit extends Item {
 		
 		Armor classArmor = ClassArmor.upgrade( getCurUser(), armor );
 		if (getCurUser().belongings.armor == armor) {
-			
 			getCurUser().belongings.armor = classArmor;
 			getCurUser().updateLook();
-			
 		} else {
-			
 			armor.detach( getCurUser().belongings.backpack );
 			getCurUser().collect(classArmor);			
 		}

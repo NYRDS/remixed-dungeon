@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -370,7 +371,7 @@ public class Armor extends EquipableItem {
 			try {
 				return ((Class<Glyph>)glyphs[ Random.chances( chances ) ]).newInstance();
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 		

@@ -60,7 +60,7 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndBag extends WndTabbed {
 	
-	public static enum Mode {
+	public enum Mode {
 		ALL,
 		UNIDENTIFED,
 		UPGRADEABLE,
@@ -75,11 +75,11 @@ public class WndBag extends WndTabbed {
 		FUSEABLE, 
 		UPGRADABLE_WEAPON
 	}
-	
+
 
 	protected static final int COLS_P	= 4;
 	protected static final int COLS_L	= 6;
-	
+
 	protected static final int SLOT_SIZE	= 28;
 	protected static final int SLOT_MARGIN	= 1;
 	
@@ -89,7 +89,7 @@ public class WndBag extends WndTabbed {
 	private Listener listener;
 	private WndBag.Mode mode;
 	private String title;
-	
+
 	protected int count;
 	protected int col;
 	protected int row;
@@ -404,12 +404,12 @@ public class WndBag extends WndTabbed {
 		protected void onTouchDown() {
 			bg.brightness( 1.5f );
 			Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
-		};
-		
+		}
+
 		protected void onTouchUp() {
 			bg.brightness( 1.0f );
-		};
-		
+		}
+
 		@Override
 		protected void onClick() {
 			if (listener != null) {

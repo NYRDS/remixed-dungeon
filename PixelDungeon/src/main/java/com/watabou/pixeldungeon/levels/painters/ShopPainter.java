@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
@@ -37,7 +38,9 @@ import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
+import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
@@ -141,6 +144,23 @@ public class ShopPainter extends Painter {
 			items.add( new Torch() );
 			items.add( new Torch() );
 			break;
+
+		case 27:
+			switch (Random.Int( 3 )) {
+				case 0:
+					items.add( new Glaive().identify() );
+					break;
+				case 1:
+					items.add( new WarHammer().identify() );
+					break;
+				case 2:
+					items.add( new PlateArmor().identify() );
+					break;
+			}
+			items.add( new PotionOfHealing() );
+			items.add( new PotionOfExperience());
+			items.add( new PotionOfMight());
+			break;
 		}
 		
 		items.add( new PotionOfHealing() );
@@ -170,8 +190,12 @@ public class ShopPainter extends Painter {
 		do {
 			pos = room.random(level);
 		} while (level.getHeap( pos ) != null);
-		
+
+
 		Mob shopkeeper = level instanceof LastShopLevel ? new ImpShopkeeper() : new Shopkeeper();
+		if (Dungeon.depth == 27) {
+			shopkeeper = new AzuterronNPC();
+		}
 		shopkeeper.setPos(pos);
 		level.mobs.add( shopkeeper );
 		

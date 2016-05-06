@@ -9,9 +9,9 @@ import java.util.UUID;
 
 public class UserKey {
 	static UUID userId;
-	
+
 	static Crypter crypter;
-	
+
 	static final String noKey="noKey";
 
 	private static void init() {

@@ -27,7 +27,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class Combo extends Buff {
 	
 	private static String TXT_COMBO = Game.getVar(R.string.Combo_Combo);
-	
+
 	public int count = 0;
 	
 	@Override

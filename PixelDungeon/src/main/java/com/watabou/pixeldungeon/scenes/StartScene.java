@@ -414,8 +414,8 @@ public class StartScene extends PixelScene {
 		private static final int BASIC_NORMAL = 0x444444;
 		private static final int BASIC_HIGHLIGHTED = 0xCACFC2;
 
-		private static final int MASTERY_NORMAL = 0x666644;
-		private static final int MASTERY_HIGHLIGHTED = 0xFFFF88;
+		private static final int MASTERY_NORMAL = 0x7711AA;
+		private static final int MASTERY_HIGHLIGHTED = 0xCC33FF;
 
 		private static final int WIDTH = 24;
 		private static final int HEIGHT = 28;
@@ -566,7 +566,7 @@ public class StartScene extends PixelScene {
 						super.onBackPressed();
 						image.copy(Icons.get(PixelDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
 								: Icons.CHALLENGE_OFF));
-					};
+					}
 				});
 			} else {
 				StartScene.this.add(new WndMessage(TXT_WIN_THE_GAME));

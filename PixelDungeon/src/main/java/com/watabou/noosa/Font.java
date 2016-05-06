@@ -10,18 +10,18 @@ import com.watabou.utils.PointF;
 import java.util.HashMap;
 
 public class Font extends TextureFilm {
-	public static final String SPECIAL_CHAR = 
+	public static final String SPECIAL_CHAR =
 	"àáâäãèéêëìíîïòóôöõùúûüñçÀÁÂÄÃÈÉÊËÌÍÎÏÒÓÔÖÕÙÚÛÜÑÇº¿¡";
 
-	public static final String LATIN_UPPER = 
+	public static final String LATIN_UPPER =
 	" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	public static final String LATIN_FULL = LATIN_UPPER +
 	"[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
-	
+
 	public static final String CYRILLIC_UPPER =
 	"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-	
+
 	public static final String CYRILLIC_LOWER =
 	"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
 	
@@ -31,7 +31,7 @@ public class Font extends TextureFilm {
 	
 	public float tracking = 0;
 	public float baseLine;
-	
+
 	public boolean autoUppercase = false;
 	
 	public float lineHeight;

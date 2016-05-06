@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
+import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -62,6 +64,7 @@ import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -105,7 +108,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.SurfaceScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -166,7 +169,7 @@ public class Hero extends Char {
 	private int STR;
 	public boolean weakened = false;
 
-	public float awareness;
+	private float awareness;
 
 	public int lvl = 1;
 	public int exp = 0;
@@ -409,7 +412,7 @@ public class Hero extends Char {
 		return dr;
 	}
 
-	public boolean inFury() {
+	private boolean inFury() {
 		return (buff(Fury.class) != null) || (buff(CorpseDust.UndeadRageAuraBuff.class) != null);
 	}
 
@@ -1054,6 +1057,18 @@ public class Hero extends Char {
 			damage = armor.absorb(damage);
 		}
 
+		if (buff(HeartOfDarkness.HeartOfDarknessBuff.class) != null) {
+			int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());
+
+			if (Dungeon.level.cellValid(spiritPos)) {
+				SpiritOfPain spirit = new SpiritOfPain();
+				spirit.setPos(spiritPos);
+				Dungeon.level.spawnMob(spirit, 0);
+				Actor.addDelayed(new Pushing(spirit, getPos(), spirit.getPos()), -1);
+				Mob.makePet(spirit, this);
+			}
+		}
+
 		if (belongings.armor != null) {
 			damage = belongings.armor.proc(enemy, this, damage);
 		}
@@ -1082,7 +1097,6 @@ public class Hero extends Char {
 		if (subClass == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
 			if (buff(Fury.class) == null) {
 				Buff.affect(this, Fury.class);
-				getHeroSprite().updateState(this);
 				ready();
 			}
 		}
@@ -1363,10 +1377,6 @@ public class Hero extends Char {
 	public void remove(Buff buff) {
 		super.remove(buff);
 
-		if (buff instanceof Fury) {
-			getHeroSprite().updateState(this);
-		}
-
 		BuffIndicator.refreshHero();
 	}
 
@@ -1381,7 +1391,6 @@ public class Hero extends Char {
 
 	@Override
 	public void die(Object cause) {
-
 		curAction = null;
 
 		DewVial.autoDrink(this);
@@ -1632,8 +1641,8 @@ public class Hero extends Char {
 		return buff == null ? super.immunities() : GasesImmunity.IMMUNITIES;
 	}
 
-	public HeroSprite getHeroSprite() {
-		return (HeroSprite) getSprite();
+	public HeroSpriteDef getHeroSprite() {
+		return (HeroSpriteDef) getSprite();
 	}
 
 	public interface Doom {
@@ -1641,7 +1650,7 @@ public class Hero extends Char {
 	}
 
 	public void updateLook() {
-		getHeroSprite().updateArmor(tier());
+		getHeroSprite().heroUpdated(this);
 		ready();
 	}
 

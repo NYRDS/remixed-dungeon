@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">%s anello</string>
+  <string name="Ring_Info">L\'anello di metallo è adornato da una grande gemma %s che brilla nell\'oscurità. Chissà che effetto ha quando indossato?</string>
+  <string name="Ring_Identify">hai abbastanza familiarità con %1$s da identificarlo. È %2$s.</string>
+  <string name="Ring_Info1">Puoi indossare solo 2 anelli alla volta.</string>
+  <string name="Ring_Info2">Il tuo %s si restringe dolorosamente attorno al tuo dito.</string>
+  <string name="Ring_Info3a">%1$s\n\nIl %2$s è nel tuo dito %3$s.</string>
+  <string name="Ring_Info3b">, e siccome è maledetto, non hai la capacità di rimuoverlo</string>
+  <string name="Ring_Info4">%1$s\n\Si può sentire una magia maligna agguato all\'interno del %2$s.</string>
+  <string name="Ring_BuffKnown">questo è un %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">Anello della Precisione</string>
+  <string name="RingOfAccuracy_Info">Questo anello aumenta la possibilità di colpire il nemico.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">Anello di rilevamento</string>
+  <string name="RingOfDetection_Info">questo anello permetterà a chi lo indossa di notare segreti nascosti - trappole e porte segrete - senza prendere tempo per la ricerca. Anelli degradati di rilevazione verranno spenti, rendendo più difficile notare segreti anche quando alla ricerca di loro</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">anello degli elementi</string>
+  <string name="RingOfElements_Info">Questo anello fornisce la resistenza a diversi elementi, come il fuoco, elettricità, gas ecc...Inoltre diminuisce la durata degli effetti negativi.</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">Anello d\'Evasione</string>
+  <string name="RingOfEvasion_Info">Questo anello aumenta la possibilità di schivare l\'attacco nemico.</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">Anello di Haggler</string>
+  <string name="RingOfHaggler_Info">In realtà questo anello non fornisce alcun effetto magico, ma dimostra ai negozianti e fornitori, che il proprietario dell\'anello  Di solito sono felici di fare uno sconto in cambio d\'immunità temporanea. Aggiornamento di questo anello non darà alcun bonus aggiuntivi.</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">Anello di Rapidità</string>
+  <string name="RingOfHaste_Info">Questo anello accelera il flusso di chi la indossa di tempo, permettendo di eseguire tutte le azioni un po \'più veloce.</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">Anello di Erboristeria</string>
+  <string name="RingOfHerbalism_Info">Questo anello aumenta la probabilità di raccogliere rugiada e semi di erba calpestata.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">Anello di Mending</string>
+  <string name="RingOfMending_Info">Questo anello aumenta le proprietà rigenerative del corpo, permettendo di recuperare la salute perduta ad un ritmo accelerato. Anelli degradati diminuiranno o addirittura fermeranno la propria rigenerazione naturale.</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">Anello del Potere</string>
+  <string name="RingOfPower_Info">Le bacchette diventeranno più potenti nel campo di energia che si irradia da questo anello. Anelli degradati di forza di volontà, invece indebolisce le bacchette.</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">Anello di sazietà</string>
+  <string name="RingOfSatiety_Info">Indossare questo anello si può andare senza cibo più a lungo. Anelli degradati di sazietà causerà l\'effetto opposto.</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">Anello dell\'Ombra</string>
+  <string name="RingOfShadows_Info">I nemici saranno meno propensi a notare se si indossa questo anello. Anelli degradati d\'ombra avviserà i nemici che non hanno notato la tua presenza.</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">Anello di Spine</string>
+  <string name="RingOfThorns_Info">Anche se questo anello non fornisce spine reali, un nemico che ti attacca sarà a sua volta ferito da una frazione del danno che infligge. Aggiornamento di questo anello non darà alcun bonus aggiuntivi.</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Anello della Pietra di Sangue</string>
+  <string name="RingOfStoneWalking_Info">Questo strano anello è fatto di qualche pietra robusta. Quello che primo pensiero è stato un rubino è in realtà sangue liquido che si terrà a posto! All\'interno si trova una freccia che punta a quello che sembra essere un muro, insieme con il cuore spezzato ... Che cosa potrebbe fare?</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Sei stato murato nella pietra. Per sempre.</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Ragno Amuleto</string>
+  <string name="SpiderCharm_Info">Questo gingillo esotico è avvolta da un\'aura di mistero. Chi lo sa, che cosa potrebbe accadere a chi lo indossa?</string>
+  <string name="SpiderCharm_Use">USA</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">strano cristallo</string>
+  <string name="ChaosCrystal_Name_1">Cristallo Caotico</string>
+  <string name="ChaosCrystal_Name_2">Cristallo del caos</string>
+  <string name="ChaosCrystal_Info">Senti i flussi d\'energia, che ti attraversano le mani mentre lo impugni.</string>
+  <string name="ChaosCrystal_Info_1">Poteri del flusso Caotico attraversano questo cristallo. Forse potrebbe essere utile.</string>
+  <string name="ChaosCrystal_Info_2">Sì! Ora si sa, che si può fondere con uno dei tuoi item, ma quali sono le prospettive?</string>
+  <string name="ChaosCrystal_Use">USA</string>
+  <string name="ChaosCrystal_Fuse">FONDI</string>
+  <string name="ChaosCrystal_Prompt">Scegli il posto per impostare il segno del caos</string>
+  <string name="ChaosCrystal_SelectForFuse">Scegli item da fondere con Cristallo del Caos</string>
+  <string name="ChaosCrystal_ScrollFused">Il Cristallo ha assorbito la runa incisa sulla pergamena, ed ora è un %s</string>
+  <string name="ChaosCrystal_SwordFused">il Cristallo assorbe la vostra arma, e ha preso la forma di una spada</string>
+  <string name="ChaosCrystal_BowFused">Il Cristallo assorbe l\'arco, e ha preso la forma di un arco</string>
+  <string name="ChaosCrystal_StaffFused">il Cristallo assorbe la tua bacchetta, e ha preso la forma di una bacchetta</string>
+  <string name="CorpseDust_Buff">sete di sangue</string>
+  <string name="DriedRose_Buff">affascinante</string>
+  <string name="DriedRose_CursedBuff">Amorous</string>
+  <string name="RatSkull_Buff">Ratto</string>
+  <string name="RatKingCrown_Buff">Ratness</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">Corona di re Ratto</string>
+  <string name="RatKingCrown_Info">corona d\'oro della sua Ratness, simbolo di potenza assoluta</string>
+</resources>

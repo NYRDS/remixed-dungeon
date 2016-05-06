@@ -328,9 +328,10 @@ public class Bundle {
 	public static Bundle read( InputStream stream ) {
 		try {
 			BufferedReader reader = new BufferedReader( new InputStreamReader( stream ) );
-			JSONObject json = (JSONObject)new JSONTokener( reader.readLine() ).nextValue();
+			String line = reader.readLine();
+			Util.storeEventInAcra("Bundle read line",line);
+			JSONObject json = (JSONObject)new JSONTokener(line).nextValue();
 			reader.close();
-			
 			return new Bundle( json );
 		} catch (Exception e) {
 			Util.storeEventInAcra("Bundle Exception",e);

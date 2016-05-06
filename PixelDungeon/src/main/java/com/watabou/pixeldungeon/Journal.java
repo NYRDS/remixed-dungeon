@@ -17,16 +17,16 @@
  */
 package com.watabou.pixeldungeon;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
+import java.util.ArrayList;
+
 public class Journal {
 
-	public static enum Feature {
+	public enum Feature {
 		WELL_OF_HEALTH			(Game.getVar(R.string.Journal_WellHealt)),
 		WELL_OF_AWARENESS		(Game.getVar(R.string.Journal_WellAwareness)),
 		WELL_OF_TRANSMUTATION	(Game.getVar(R.string.Journal_WellTransmut)),
@@ -37,19 +37,21 @@ public class Journal {
 		GHOST					(Game.getVar(R.string.Journal_Ghost)),
 		WANDMAKER				(Game.getVar(R.string.Journal_Wandmaker)),
 		TROLL					(Game.getVar(R.string.Journal_Troll)),
-		IMP						(Game.getVar(R.string.Journal_Imp));
+		IMP						(Game.getVar(R.string.Journal_Imp)),
+		AZUTERRON				(Game.getVar(R.string.Journal_Azuterron));
+
 		
 		private String desc;
 		
-		private Feature( String desc ) {
+		Feature(String desc) {
 			this.desc = desc;
 		}
 
 		public String desc() {
 			return desc;
 		}
-	};
-	
+	}
+
 	public static class Record implements Comparable<Record>, Bundlable {
 		
 		private static final String FEATURE	= "feature";

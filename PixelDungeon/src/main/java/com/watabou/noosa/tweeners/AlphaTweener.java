@@ -22,7 +22,7 @@ import com.watabou.noosa.Visual;
 public class AlphaTweener extends Tweener {
 
 	public Visual image;
-	
+
 	public float start;
 	public float delta;
 	

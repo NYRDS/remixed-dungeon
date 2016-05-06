@@ -18,8 +18,10 @@ t * Pixel Dungeon
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
@@ -202,7 +204,7 @@ public class Dungeon {
 	}
 
 	public static boolean shopOnLevel() {
-		return depth == 6 || depth == 11 || depth == 16;
+		return depth == 6 || depth == 11 || depth == 16 || depth == 27;
 	}
 
 	public static boolean bossLevel() {
@@ -310,6 +312,7 @@ public class Dungeon {
 		WandMaker.Quest.storeInBundle(quests);
 		Blacksmith.Quest.storeInBundle(quests);
 		Imp.Quest.storeInBundle(quests);
+		AzuterronNPC.Quest.storeInBundle(quests);
 		bundle.put(QUESTS, quests);
 
 		Room.storeRoomsInBundle(bundle);
@@ -418,11 +421,13 @@ public class Dungeon {
 				WandMaker.Quest.restoreFromBundle(quests);
 				Blacksmith.Quest.restoreFromBundle(quests);
 				Imp.Quest.restoreFromBundle(quests);
+				AzuterronNPC.Quest.restoreFromBundle(quests);
 			} else {
 				Ghost.Quest.reset();
 				WandMaker.Quest.reset();
 				Blacksmith.Quest.reset();
 				Imp.Quest.reset();
+				AzuterronNPC.Quest.reset();
 			}
 
 			Room.restoreRoomsFromBundle(bundle);
@@ -475,7 +480,7 @@ public class Dungeon {
 		input.close();
 
 		if (bundle == null) {
-			throw new RuntimeException("can not load level from " + loadFrom);
+			throw new TrackedRuntimeException("can not load level from " + loadFrom);
 		}
 
 		Level level = Level.fromBundle(bundle, "level");

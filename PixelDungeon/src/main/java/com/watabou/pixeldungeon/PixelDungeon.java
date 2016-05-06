@@ -51,6 +51,10 @@ public class PixelDungeon extends GameWithGoogleIap {
 		com.watabou.utils.Bundle.addAlias(
 				com.watabou.pixeldungeon.items.food.Ration.class,
 				"com.watabou.pixeldungeon.items.food.Food");
+		// remix 23.1.alpha
+		com.watabou.utils.Bundle.addAlias(
+				com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat.class,
+				"com.nyrds.pixeldungeon.mobs.guts.Wererat");
 	}
 
 	@Override

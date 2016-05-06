@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -180,7 +181,7 @@ public class Plant implements Bundlable {
 				plant.pos = pos;
 				return plant;
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 

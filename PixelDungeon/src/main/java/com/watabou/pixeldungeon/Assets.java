@@ -42,22 +42,6 @@ public class Assets {
 	public static final String HP_BAR = "hp_bar.png";
 	public static final String XP_BAR = "exp_bar.png";
 
-	public static final String WARRIOR = "warrior.png";
-	public static final String WARRIOR_BERSERK = "berserk.png";
-	public static final String WARRIOR_BERSERK_IN_FURY = "berserk_in_fury.png";
-	public static final String WARRIOR_GLADIATOR = "gladiator.png";
-	public static final String MAGE = "mage.png";
-	public static final String MAGE_BATTLEMAGE = "battle_mage.png";
-	public static final String MAGE_WARLOCK = "mage_warlock.png";
-	public static final String ROGUE = "rogue.png";
-	public static final String ROGUE_ASSASIN = "rogue_asassin.png";
-	public static final String ROGUE_FREERUNNER = "rogue_freerunner.png";
-	public static final String HUNTRESS = "ranger.png";
-	public static final String HUNTRESS_SNIPER = "sniper.png";
-	public static final String HUNTRESS_WARDEN = "warden.png";
-	public static final String ELF = "elf.png";
-	public static final String ELF_SCOUT = "elf_scout.png";
-	public static final String ELF_SHAMAN = "elf_shaman.png";
 	public static final String AVATARS = "avatars.png";
 	public static final String PET = "pet.png";
 

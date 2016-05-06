@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -57,7 +58,7 @@ public class Weapon extends KindOfWeapon {
 	public int		STR	= 10;
 	public float	ACU	= 1;
 	public float	DLY	= 1f;
-	
+
 	protected int  gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
 
 	
@@ -267,7 +268,7 @@ public class Weapon extends KindOfWeapon {
 			try {
 				return ((Class<Enchantment>)enchants[ Random.chances( chances ) ]).newInstance();
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 		

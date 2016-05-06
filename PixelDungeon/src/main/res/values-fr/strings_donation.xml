@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">argent</string>
@@ -13,6 +13,9 @@
   <string name="WndDonate_silverDonateText">Tout don aidera le développement du projet</string>
   <string name="WndDonate_goldDonateText">Merci pour votre aide</string>
   <string name="WndDonate_rubyDonateText">Votre générosité nous aidera à continuer à améliorer Remixed Pixel Dungeon!</string>
+  <string name="WndDonate_silverDonateText2">Désactive aussi toutes les pubs dans tous les modes de jeu et débloque la Chasseresse dès le départ</string>
+  <string name="WndDonate_goldDonateText2">Débloque également l\'Elfe dès le début du jeu</string>
+  <string name="WndDonate_rubyDonateText2"></string>
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">standard</string>
   <string name="WndPremiumSettings_silver">argent</string>
@@ -21,8 +24,10 @@
   <string name="WndPremiumSettings_chrome">gui</string>
   <string name="WndPremiumSettings_status">bar matérielle</string>
   <string name="WndPremiumSettings_toolbar">barre d\'outils</string>
-  <string name="WndPremiumSettings_notAvailbale">Cette option n\'est pas disponible pour l\'instant</string>
+  <string name="WndPremiumSettings_notAvailbale">Cette option n\'est pas encore disponible</string>
   <!--STRINGS OF DonateButton CLASS-->
   <string name="DonateButton_pleaseDonate">s\'il vous plaît, envisagez de faire un don</string>
   <string name="DonateButton_thanks">Merci pour votre aide!</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">Vous n\'aimez pas les pubs ? Faites un don, et elles disparaîtront. Pour toujours.</string>
 </resources>

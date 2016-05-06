@@ -26,7 +26,7 @@ import com.watabou.glwrap.Quad;
 import com.watabou.glwrap.Uniform;
 
 public class NoosaScript extends Script {
-	
+
 	public Uniform uCamera;
 	public Uniform uModel;
 	public Uniform uTex;

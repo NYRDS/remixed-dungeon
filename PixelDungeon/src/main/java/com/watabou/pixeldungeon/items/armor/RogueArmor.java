@@ -43,7 +43,7 @@ public class RogueArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.RogueArmor_ACSpecial); 
 	
 	{
-		image = 16;
+		image = 8;
 	}
 	
 	@Override
@@ -70,7 +70,7 @@ public class RogueArmor extends ClassArmor {
 	public String desc() {
 		return Game.getVar(R.string.RogueArmor_Desc);
 	}
-	
+
 	protected static CellSelector.Listener teleporter = new  CellSelector.Listener() {
 		
 		@Override

@@ -30,7 +30,7 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class Bleeding extends Buff {
-	
+
 	protected int level;
 	
 	private static final String LEVEL	= "level";

@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -84,7 +85,7 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements Interstitial
 				SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				throw new TrackedRuntimeException(e);
 			}
 		}
 		

@@ -45,7 +45,7 @@ public class YogsTeeth extends Boss {
         //Life drain proc
         if (Random.Int(3) == 1){
             CellEmitter.center(this.getPos()).start(Speck.factory(Speck.HEALING), 0.3f, 3);
-            this.hp(this.hp() + damage / 2);
+            this.hp(this.hp() + damage );
         }
         //Bleeding proc
         if (Random.Int(3) == 1){
@@ -62,7 +62,7 @@ public class YogsTeeth extends Boss {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(10, 30);
+        return Random.NormalIntRange(40, 40);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
@@ -61,7 +62,7 @@ public class DungeonGenerator {
 			mLevels = mDungeonMap.getJSONObject("Levels");
 			mGraph = mDungeonMap.getJSONObject("Graph");
 		} catch (JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 
 		mLevelKindList = new HashMap<>();
@@ -91,7 +92,7 @@ public class DungeonGenerator {
 		try {
 			return mLevels.getJSONObject(getEntryLevel()).getString("kind");
 		} catch (JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -99,7 +100,7 @@ public class DungeonGenerator {
 		try {
 			return mDungeonMap.getString("Entrance");
 		} catch (JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -107,7 +108,7 @@ public class DungeonGenerator {
 		try {
 			return mGraph.getJSONArray(levelId).getJSONArray(0).length() > 1;
 		} catch (JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -167,7 +168,7 @@ public class DungeonGenerator {
 
 			return next;
 		} catch (JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 
 	}
@@ -195,7 +196,7 @@ public class DungeonGenerator {
 			ret.levelId = pos.levelId;
 			return ret;
 		} catch (InstantiationException | IllegalAccessException | JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -233,7 +234,7 @@ public class DungeonGenerator {
 				}
 			}
 		} catch (JSONException e) {
-			throw new RuntimeException(e);
+			throw new TrackedRuntimeException(e);
 		}
 		return "1";
 	}

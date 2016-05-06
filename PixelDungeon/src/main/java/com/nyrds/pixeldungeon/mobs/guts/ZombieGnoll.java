@@ -1,15 +1,20 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
@@ -18,19 +23,22 @@ import com.watabou.utils.Random;
  */
 public class ZombieGnoll extends Mob {
     {
-        hp(ht(100));
-        defenseSkill = 25;
+        hp(ht(210));
+        defenseSkill = 27;
 
-        EXP = 15;
-        maxLvl = 30;
+        EXP = 7;
+        maxLvl = 35;
 
         loot = Gold.class;
-        lootChance = 0.2f;
+        lootChance = 0.02f;
+
+        IMMUNITIES.add(Paralysis.class);
+        IMMUNITIES.add(ToxicGas.class);
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(20, 35);
+        return Random.NormalIntRange(15, 35);
     }
 
     @Override
@@ -40,14 +48,14 @@ public class ZombieGnoll extends Mob {
 
     @Override
     public int dr() {
-        return 2;
+        return 20;
     }
 
     @Override
     public void die(Object cause) {
         super.die(cause);
 
-        if (Random.Int(5) == 1){
+        if (Random.Int(100) > 45){
             int gnollPosition = this.getPos();
 
             if (Dungeon.level.cellValid(gnollPosition)) {
@@ -56,6 +64,10 @@ public class ZombieGnoll extends Mob {
                 Dungeon.level.spawnMob(newGnoll, 0);
                 CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);
                 Sample.INSTANCE.play(Assets.SND_DEATH);
+                if (Dungeon.visible[getPos()]) {
+                    getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
+                    GLog.n(Game.getVar(R.string.ZombieGnoll_Info));
+                }
             }
         }
 

@@ -38,9 +38,9 @@ import java.util.ArrayList;
 public class TomeOfMastery extends Item {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.TomeOfMastery_Blinded);
-	
+
 	public static final float TIME_TO_READ = 10;
-	
+
 	public static final String AC_READ	= Game.getVar(R.string.TomeOfMastery_ACRead);
 	
 	{
@@ -130,7 +130,7 @@ public class TomeOfMastery extends Item {
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		
 		getCurUser().checkIfFurious();
-		GameScene.updateHeroSprite(getCurUser());
+		getCurUser().getHeroSprite().heroUpdated(getCurUser());
 		
 		getCurUser().spendAndNext( TomeOfMastery.TIME_TO_READ );
 		getCurUser().busy();

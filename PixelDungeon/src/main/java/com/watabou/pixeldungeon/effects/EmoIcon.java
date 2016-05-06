@@ -28,9 +28,9 @@ public class EmoIcon extends Image {
 
 	protected float maxSize = 2;
 	protected float timeScale = 1;
-	
+
 	protected boolean growing	= true;
-	
+
 	protected CharSprite owner;
 	
 	public EmoIcon( CharSprite owner ) {

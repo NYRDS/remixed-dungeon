@@ -26,7 +26,7 @@ import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
 public class ScrollPane extends Component {
-			
+
 	protected TouchController controller;
 	protected Component content;
 	

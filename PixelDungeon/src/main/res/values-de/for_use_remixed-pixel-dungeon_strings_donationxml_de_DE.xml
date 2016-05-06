@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">Silber</string>
+  <string name="WndDonate_gold">Gold</string>
+  <string name="WndDonate_ruby">Rubin</string>
+  <string name="WndDonate_donate">Spenden:</string>
+  <string name="WndDonate_notConnected">Keine Internetverbindung :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - für jeden kostenlos und wird es auch immer bleiben.\n\Allerdings können Sie uns dabei helfen, das Spiel noch besser zu machen.\n\Neben unserem herzlichen Dank bekommst du auch einige kosmetische Verbesserungen.</string>
+  <string name="WndDonate_silverDonate">Silberspende</string>
+  <string name="WndDonate_goldDonate">Goldspende</string>
+  <string name="WndDonate_rubyDonate">Rubinspende</string>
+  <string name="WndDonate_silverDonateText">Jede Spende wird zur Entwicklung des Projekts beitragen</string>
+  <string name="WndDonate_goldDonateText">Vielen Dank für ihre Unterstützung</string>
+  <string name="WndDonate_rubyDonateText">Ihre großzügigkeit wird uns helften, Remixed Pixel Dungeon weiter zu verbessern!</string>
+  <string name="WndDonate_silverDonateText2">Entfernt auch die Werbung in allen Spielmodi und macht die Jägerin von Anfang an verfügbar.</string>
+  <string name="WndDonate_goldDonateText2">Schaltet auch den Elf von Anfang an frei.</string>
+  <string name="WndDonate_rubyDonateText2"></string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">Standard</string>
+  <string name="WndPremiumSettings_silver">Silber</string>
+  <string name="WndPremiumSettings_gold">Gold</string>
+  <string name="WndPremiumSettings_ruby">Rubin</string>
+  <string name="WndPremiumSettings_chrome">Wähle das Material der Benutzeroberfläche</string>
+  <string name="WndPremiumSettings_status">Wähle das Material der Statusleiste</string>
+  <string name="WndPremiumSettings_toolbar">Wähle das Material der Schnellzugriffsleiste</string>
+  <string name="WndPremiumSettings_banners">Wähle das Material der Banner</string>
+  <string name="WndPremiumSettings_notAvailbale">Diese Option ist noch nicht verfügbar</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">Bitte erwägen Sie es zu spenden</string>
+  <string name="DonateButton_thanks">Danke für Ihre Unterstützung!</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">Du magst keine Werbung? Spende einen beliebigen Betrag und sie wird verschwinden. Für immer.</string>
+</resources>
