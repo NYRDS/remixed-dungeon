@@ -222,7 +222,7 @@ public class GameScene extends PixelScene {
 
 		add(cellSelector = new CellSelector(tiles));
 
-		scene.heroSprite = new HeroSpriteDef(Dungeon.hero, true);;
+		scene.heroSprite = new HeroSpriteDef(Dungeon.hero, true);
 		scene.heroSprite.place(Dungeon.hero.getPos());
 		Dungeon.hero.updateLook();
 

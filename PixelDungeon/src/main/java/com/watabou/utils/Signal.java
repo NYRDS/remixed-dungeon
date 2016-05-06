@@ -86,7 +86,7 @@ public class Signal<T> {
 		canceled = true;
 	}
 	
-	public static interface Listener<T> {
-		public void onSignal( T t );
+	public interface Listener<T> {
+		void onSignal(T t);
 	}
 }

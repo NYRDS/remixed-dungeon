@@ -58,7 +58,7 @@ abstract public class Tweener extends Gizmo {
 	
 	abstract protected void updateValues( float progress );
 	
-	public static interface Listener {
+	public interface Listener {
 		void onComplete( Tweener tweener );
 	}
 }
