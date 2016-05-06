@@ -29,7 +29,7 @@
     <string name="Suspicious_Rat_Gender">feminine</string>
     <string name="Suspicious_Rat_Name_Objective">Suspicious rat</string>
     <string name="Suspicious_Rat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms when it moves.</string>
-    <string name="Suspicious_Rat_Info1">Wererat is twitching violently.</string>
+    <string name="Suspicious_Rat_Info1">Suspicious rat is twitching violently.</string>
 
     <!-- STRINGS OF Wererat CLASS -->
     <string name="Pseudo_Rat_Name">Pseudo-rat</string>
