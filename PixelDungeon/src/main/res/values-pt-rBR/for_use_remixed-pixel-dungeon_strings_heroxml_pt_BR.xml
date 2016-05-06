@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">você</string>
@@ -38,7 +38,6 @@
     <item>Guerreiros são menos hábeis com armas de arremesso.</item>
     <item>Qualquer pedaço de comida recupera um pouco de vida quando comidos.</item>
     <item>Poções de Força são identificadas desde o início.</item>
-    <item>àáâäãą èéêëę ìíîï òóôöõ ùúûüñń çćłśźż ÀÁÂÄÃĄ ÈÉÊËĘ ÌÍÎÏ ÒÓÔÖÕ ÙÚÛÜÑŃ ÇĆŁŚŹŻº</item>
   </string-array>
   <string-array name="HeroClass_MagPerks">
     <item>Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se tranformar em outra varinha.</item>
@@ -62,6 +61,13 @@
     <item>Caçadoras ganham mais vida a partir de gotas de orvalho.</item>
     <item>Caçadoras podem sentir monstros por perto, mesmo que eles estejam escondidos atrás de obstáculos.</item>
   </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Elfos começam com 15 de vida e 9 de força</item>
+    <item>Elfos são imunes ao enraizamento</item>
+    <item>Elfos começam com um arco de madeira melhorado e um monte de flechas</item>
+    <item>Elfos são peritos com arcos e ágeis</item>
+    <item>Elfos são menos experientes com armas corpo a corpo</item>
+  </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiador</string>
   <string name="HeroSubClass_DescGlad">Um ataque bem sucedido com arma branca permite que o _Gladiador_ inicie um combo, onde no próximo ataque causa mais danos</string>
@@ -80,5 +86,7 @@
   <string name="HeroSubClass_NameWard">guarda</string>
   <string name="HeroSubClass_DescWard">Tendo uma forte ligação com as forças da natureza o _Guarda_ tem uma capacidade de conseguir gotas de orvalho e sementes de plantas. Também, pisar em grama alta concede um escudo temporário.</string>
   <string name="HeroSubClass_NameScout">escoteiro</string>
+  <string name="HeroSubClass_DescScout">_Escoteiros_ Élficos são mestres da furtividade. Entrar na grama alta lhes concede um bônus temporário de invisibilidade. Eles também são mais rápidos que Elfos normais.</string>
   <string name="HeroSubClass_NameShaman">xamã</string>
+  <string name="HeroSubClass_DescShaman">_Xamãs_ Élficos podem usar varinhas como armas corpo a corpo. Ataques sucedidos possuem uma chance de ativar o poder da varinha no alvo, mesmo sem carga.</string>
 </resources>

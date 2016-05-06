@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Pixel Dungeon Remix</string>
+  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Muitos heróis de todos os tipos se aventuraram na caverna antes de você. Alguns deles voltaram com tesouros e artefatos mágicos, mas nunca mais se ouviu falar da maioria deles. E nenhum conseguiu recuperar o Amuleto de Yendor, que dizem estar escondido nas profundezas do calabouço.\n\nVocê se considera pronto para o desafio, e o mais importante, você sente que a sorte sorri para você. Está na hora de iniciar a sua própria aventura!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -91,7 +91,6 @@
     <item>Terra estéril</item>
     <item>Inteligência coletiva</item>
     <item>Nas trevas</item>
-    <item>Runas proibidas</item>
   </string-array>
   <!--STRINGS OF Journal CLASS-->
   <string name="Journal_WellHealt">Bem de Vida</string>
