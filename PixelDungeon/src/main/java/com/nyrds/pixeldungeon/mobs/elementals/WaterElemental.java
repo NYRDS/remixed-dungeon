@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
 
 public class WaterElemental extends Mob {
@@ -65,7 +66,16 @@ public class WaterElemental extends Mob {
 		
 		return damage;
 	}
-	
+
+	@Override
+	public float speed() {
+		if(TerrainFlags.is(Dungeon.level.map[getPos()], TerrainFlags.LIQUID)) {
+			return super.speed() * 2f;
+		} else {
+			return super.speed() * 0.5f;
+		}
+	}
+
 	@Override
 	public boolean act() {
 		if (Dungeon.level.water[getPos()] && hp() < ht()) {

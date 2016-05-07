@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
@@ -43,7 +44,16 @@ public class EarthElemental extends Mob {
 	public int getKind() {
 		return kind;
 	}
-	
+
+	@Override
+	public float speed() {
+		if(TerrainFlags.is(Dungeon.level.map[getPos()], TerrainFlags.LIQUID)) {
+			return super.speed() * 0.5f;
+		} else {
+			return super.speed();
+		}
+	}
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange(hp() / 5, ht() / 5);
@@ -70,7 +80,7 @@ public class EarthElemental extends Mob {
 					|| c == Terrain.EMPTY_DECO || c == Terrain.GRASS
 					|| c == Terrain.HIGH_GRASS) {
 				
-				GameScene.add(Blob.seed(cell, EXP * 15, Regrowth.class));
+				GameScene.add(Blob.seed(cell, Math.max(EXP,10) * 15, Regrowth.class));
 			}
 		}
 		return damage;
