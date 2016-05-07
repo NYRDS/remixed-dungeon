@@ -67,7 +67,11 @@ public class Crystal extends MultiKindMob {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 1000;
+		if(kind < 2 ) {
+			return 1000;
+		} else {
+			return target.attackSkill(this);
+		}
 	}
 	
 	@Override
