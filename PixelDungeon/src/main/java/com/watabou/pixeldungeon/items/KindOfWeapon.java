@@ -17,15 +17,15 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class KindOfWeapon extends EquipableItem {
 
@@ -97,7 +97,7 @@ public class KindOfWeapon extends EquipableItem {
 		return Random.NormalIntRange( MIN, MAX );
 	}
 	
-	public float acuracyFactor( Hero hero ) {
+	public float accuracyFactor(Hero hero ) {
 		return 1f;
 	}
 	

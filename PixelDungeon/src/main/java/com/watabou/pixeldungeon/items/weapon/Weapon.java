@@ -107,7 +107,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public float acuracyFactor( Hero hero ) {
+	public float accuracyFactor(Hero hero ) {
 		
 		int encumbrance = STR - hero.effectiveSTR();
 		
@@ -137,13 +137,13 @@ public class Weapon extends KindOfWeapon {
 	@Override
 	public float speedFactor( Hero hero ) {
 
-		int encumrance = STR - hero.effectiveSTR();
+		int encumbrance = STR - hero.effectiveSTR();
 		if (this instanceof MissileWeapon && hero.heroClass == HeroClass.HUNTRESS) {
-			encumrance -= 2;
+			encumbrance -= 2;
 		}
 		
 		return 
-			(encumrance > 0 ? (float)(DLY * Math.pow( 1.2, encumrance )) : DLY) * 
+			(encumbrance > 0 ? (float)(DLY * Math.pow( 1.2, encumbrance )) : DLY) *
 			(imbue == Imbue.SPEED ? 0.6f : 1.0f);
 	}
 	
