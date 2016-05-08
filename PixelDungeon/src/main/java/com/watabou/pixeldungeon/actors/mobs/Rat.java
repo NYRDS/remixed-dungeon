@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -61,8 +60,8 @@ public class Rat extends Mob {
 				return false;
 			}
 		}
-		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && !pacified;
-	}
+		return super.canAttack(enemy);
+}
 
 	@Override
 	public void die( Object cause ) {
