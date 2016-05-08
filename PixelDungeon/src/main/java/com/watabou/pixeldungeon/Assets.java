@@ -53,7 +53,6 @@ public class Assets {
 
 	public static final String RAT = "rat.png";
 	public static final String GNOLL = "gnoll.png";
-	public static final String CRAB = "crab.png";
 	public static final String GOO = "goo.png";
 	public static final String SWARM = "swarm.png";
 	public static final String SKELETON = "skeleton.png";
@@ -62,15 +61,11 @@ public class Assets {
 	public static final String TENGU = "tengu.png";
 	public static final String SHEEP = "sheep.png";
 	public static final String KEEPER = "shopkeeper.png";
-	public static final String BAT = "bat.png";
 	public static final String BRUTE = "brute.png";
 	public static final String SPINNER = "spinner.png";
 	public static final String DM300 = "dm300.png";
 	public static final String WRAITH = "wraith.png";
 	public static final String ELEMENTAL = "elemental.png";
-	public static final String WATER_ELEMENTAL = "water_elemental.png";
-	public static final String AIR_ELEMENTAL = "air_elemental.png";
-	public static final String EARTH_ELEMENTAL = "earth_elemental.png";
 	public static final String MONK = "monk.png";
 	public static final String WARLOCK = "warlock.png";
 	public static final String GOLEM = "golem.png";
@@ -128,10 +123,7 @@ public class Assets {
 	public static final String SPELL_ICONS = "spell_icons.png";
 
 	public static final String FONTS1X = "font1x.png";
-	public static final String FONTS15X = "font15x.png";
-	public static final String FONTS2X = "font2x.png";
 	public static final String FONTS25X = "font25x.png";
-	public static final String FONTS3X = "font3x.png";
 
 	public static final String THEME = "theme.mp3";
 	public static final String TUNE = "game.mp3";

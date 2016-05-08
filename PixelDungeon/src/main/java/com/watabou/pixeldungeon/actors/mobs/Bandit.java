@@ -22,14 +22,11 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.BanditSprite;
 import com.watabou.utils.Random;
 
+
 public class Bandit extends Thief {
-	
-	public Item item;
-	
 	{
 		spriteClass = BanditSprite.class;
 	}

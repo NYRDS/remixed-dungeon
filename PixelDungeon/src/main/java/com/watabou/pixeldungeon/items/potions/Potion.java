@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -30,7 +27,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -42,6 +38,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Potion extends Item {
 
@@ -388,10 +387,6 @@ public class Potion extends Item {
 	}
 	
 	protected void moistenArrow(Arrow arrow) {
-		moistenUseless();
-	}
-	
-	protected void moistenFood(Food food) {
 		moistenUseless();
 	}
 	

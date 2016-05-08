@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -29,11 +27,11 @@ import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+
 public class Codex extends Item {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Codex_Blinded);
-	
-	public static final float TIME_TO_READ = 1;
 
 	public static final String AC_READ	= Game.getVar(R.string.Codex_ACRead);
 
