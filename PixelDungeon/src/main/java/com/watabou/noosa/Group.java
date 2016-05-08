@@ -17,161 +17,154 @@
 
 package com.watabou.noosa;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import android.support.annotation.NonNull;
+
+import com.nyrds.android.util.TrackedRuntimeException;
 
 import java.util.ArrayList;
 
 public class Group extends Gizmo {
 
 	protected ArrayList<Gizmo> members;
-	
+
 	// Accessing it is a little faster, 
 	// than calling memebers.getSize()
 	public int length;
-	
+
 	public Group() {
 		members = new ArrayList<>();
 		length = 0;
 	}
-	
+
 	@Override
 	public void destroy() {
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
 			if (g != null) {
 				g.destroy();
 			}
 		}
-		
+
 		members.clear();
 		members = null;
 		length = 0;
 	}
-	
+
 	@Override
 	public void update() {
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.active) {
 				g.update();
 			}
 		}
 	}
-	
+
 	@Override
 	public void draw() {
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.getVisible()) {
 				g.draw();
 			}
 		}
 	}
-	
+
 	@Override
 	public void kill() {
 		// A killed group keeps all its members,
 		// but they get killed too
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
 			if (g != null && g.exists) {
 				g.kill();
 			}
 		}
-		
+
 		super.kill();
 	}
-	
-	public int indexOf( Gizmo g ) {
-		return members.indexOf( g );
+
+	public int indexOf(Gizmo g) {
+		return members.indexOf(g);
 	}
-	
-	public Gizmo add( Gizmo g ) {
-		
+
+	public Gizmo add(Gizmo g) {
+
 		if (g.getParent() == this) {
 			return g;
 		}
-		
+
 		if (g.getParent() != null) {
-			g.getParent().remove( g );
+			g.getParent().remove(g);
 		}
-		
+
 		// Trying to find an empty space for a new member
-		for (int i=0; i < length; i++) {
-			if (members.get( i ) == null) {
-				members.set( i, g );
+		for (int i = 0; i < length; i++) {
+			if (members.get(i) == null) {
+				members.set(i, g);
 				g.setParent(this);
 				return g;
 			}
 		}
-		
-		members.add( g );
+
+		members.add(g);
 		g.setParent(this);
 		length++;
 		return g;
 	}
-	
-	public Gizmo addToBack( Gizmo g ) {
-		
+
+	public Gizmo addToBack(Gizmo g) {
+
 		if (g.getParent() == this) {
-			sendToBack( g );
+			sendToBack(g);
 			return g;
 		}
-		
+
 		if (g.getParent() != null) {
-			g.getParent().remove( g );
+			g.getParent().remove(g);
 		}
-		
-		if (members.get( 0 ) == null) {
-			members.set( 0, g );
+
+		if (members.get(0) == null) {
+			members.set(0, g);
 			g.setParent(this);
 			return g;
 		}
-		
-		members.add( 0, g );
+
+		members.add(0, g);
 		g.setParent(this);
 		length++;
 		return g;
 	}
-	
-	public Gizmo recycle( Class<? extends Gizmo> c ) {
 
-		Gizmo g = getFirstAvailable( c );
+	public Gizmo recycle(@NonNull Class<? extends Gizmo> c) {
+
+		Gizmo g = getFirstAvailable(c);
 		if (g != null) {
-			
 			return g;
-			
-		} else if (c == null) {
-			
-			return null;
-			
-		} else {
-			
-			try {
-				return add( c.newInstance() );
-			} catch (Exception e) {
-				EventCollector.logException(e);
-			}
 		}
-		
-		return null;
+
+		try {
+			return add(c.newInstance());
+		} catch (Exception e) {
+			throw new TrackedRuntimeException(e);
+		}
 	}
-	
+
 	// Fast removal - replacing with null
-	public Gizmo erase( Gizmo g ) {
-		int index = members.indexOf( g );
+	public Gizmo erase(Gizmo g) {
+		int index = members.indexOf(g);
 		if (index != -1) {
-			members.set( index, null );
+			members.set(index, null);
 			g.setParent(null);
 			return g;
 		} else {
 			return null;
 		}
 	}
-	
+
 	// Real removal
-	public Gizmo remove( Gizmo g ) {
-		if (members.remove( g )) {
+	public Gizmo remove(Gizmo g) {
+		if (members.remove(g)) {
 			length--;
 			g.setParent(null);
 			return g;
@@ -179,11 +172,11 @@ public class Group extends Gizmo {
 			return null;
 		}
 	}
-	
-	public Gizmo replace( Gizmo oldOne, Gizmo newOne ) {
-		int index = members.indexOf( oldOne );
+
+	public Gizmo replace(Gizmo oldOne, Gizmo newOne) {
+		int index = members.indexOf(oldOne);
 		if (index != -1) {
-			members.set( index, newOne );
+			members.set(index, newOne);
 			newOne.setParent(this);
 			oldOne.setParent(null);
 			return newOne;
@@ -191,58 +184,58 @@ public class Group extends Gizmo {
 			return null;
 		}
 	}
-	
-	public Gizmo getFirstAvailable( Class<? extends Gizmo> c ) {
-		
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
-			if (g != null && !g.exists && ((c == null) || g.getClass() == c)) {
+
+	public Gizmo getFirstAvailable(@NonNull Class<? extends Gizmo> c) {
+
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
+			if (g != null && !g.exists && g.getClass() == c) {
 				return g;
 			}
 		}
-		
+
 		return null;
 	}
-	
+
 	public int countLiving() {
-		
+
 		int count = 0;
-		
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
+
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.alive) {
 				count++;
 			}
 		}
-		
+
 		return count;
 	}
-	
+
 	public int countDead() {
-		
+
 		int count = 0;
-		
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
+
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
 			if (g != null && !g.alive) {
 				count++;
 			}
 		}
-		
+
 		return count;
 	}
-	
+
 	public Gizmo random() {
 		if (length > 0) {
-			return members.get( (int)(Math.random() * length) );
+			return members.get((int) (Math.random() * length));
 		} else {
 			return null;
 		}
 	}
-	
+
 	public void clear() {
-		for (int i=0; i < length; i++) {
-			Gizmo g = members.get( i );
+		for (int i = 0; i < length; i++) {
+			Gizmo g = members.get(i);
 			if (g != null) {
 				g.setParent(null);
 			}
@@ -250,21 +243,21 @@ public class Group extends Gizmo {
 		members.clear();
 		length = 0;
 	}
-	
-	public Gizmo bringToFront( Gizmo g ) {
-		if (members.contains( g )) {
-			members.remove( g );
-			members.add( g );
+
+	public Gizmo bringToFront(Gizmo g) {
+		if (members.contains(g)) {
+			members.remove(g);
+			members.add(g);
 			return g;
 		} else {
 			return null;
 		}
 	}
-	
-	public Gizmo sendToBack( Gizmo g ) {
-		if (members.contains( g )) {
-			members.remove( g );
-			members.add( 0, g );
+
+	public Gizmo sendToBack(Gizmo g) {
+		if (members.contains(g)) {
+			members.remove(g);
+			members.add(0, g);
 			return g;
 		} else {
 			return null;
