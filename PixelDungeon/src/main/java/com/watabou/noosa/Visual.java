@@ -17,6 +17,7 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Point;
@@ -226,6 +227,11 @@ public class Visual extends Gizmo {
 	// true if its bounding box intersects its camera's bounds
 	public boolean isVisible() {
 		Camera c = camera();
+		if(c==null) {
+			EventCollector.logException(new Exception("null camera"));
+			return false;
+		}
+
 		float cx = c.scroll.x;
 		float cy = c.scroll.y;
 		float w = width();
