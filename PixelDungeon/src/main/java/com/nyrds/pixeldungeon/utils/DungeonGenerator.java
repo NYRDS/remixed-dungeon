@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
 import com.watabou.pixeldungeon.levels.CavesLevel;
 import com.watabou.pixeldungeon.levels.CityBossLevel;
@@ -56,7 +57,12 @@ public class DungeonGenerator {
 	}
 
 	private static void initLevelsMap() {
-		mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon.json");
+		if(PixelDungeon.isAlpha()) {
+			mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon_alpha.json");
+		} else {
+			mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon.json");
+		}
+
 
 		try {
 			mLevels = mDungeonMap.getJSONObject("Levels");
