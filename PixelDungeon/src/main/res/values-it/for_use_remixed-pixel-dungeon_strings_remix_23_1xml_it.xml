@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Sconosciuto</string>
+  <string name="AzuterronNPC_Gender">maschile</string>
+  <string name="AzuterronNPC_Name_Objective">Sconosciuto</string>
+  <string name="AzuterronNPC_Desc">Una misteriosa figura avvolta da una nebbia nera.</string>
+  <string name="AzuterronNPC_Quest_Reminder">Aiutami e io ti aiuterò.</string>
+  <string name="AzuterronNPC_Quest_End">Eccelente. Prendi questa pozione, sicuramente, la troverete utile.</string>
+  <string name="Journal_Azuterron">Sconosciuto</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Spirito sleale</string>
+  <string name="TreacherousSpirit_Gender">maschile</string>
+  <string name="TreacherousSpirit_Name_Objective">Spirito sleale</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">Spirito del dolore</string>
+  <string name="SpiritOfPain_Gender">maschile</string>
+  <string name="SpiritOfPain_Name_Objective">Spirito del dolore</string>
+  <string name="SpiritOfPain_Desc">Scheggia di tenebra vivente.</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">ratto sospettoso</string>
+  <string name="SuspiciousRat_Gender">femminile</string>
+  <string name="SuspiciousRat_Name_Objective">ratto sospettoso</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Ratto falso</string>
+  <string name="PseudoRat_Gender">femminile</string>
+  <string name="PseudoRat_Name_Objective">Ratto falso</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Cuore tenebroso</string>
+  <string name="HeartOfDarkness_Info">Cuore nero pulsante dello Spirito Sleale.</string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Velo scuro</string>
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Yog-Dzewa ucciso</string>
+  <string name="Badges_ShadowLord_Slain">Signore Dell\'Ombra ucciso</string>
+  <string name="Badges_SpiderQueen_Slain">Ragno Regina uccisa</string>
+</resources>

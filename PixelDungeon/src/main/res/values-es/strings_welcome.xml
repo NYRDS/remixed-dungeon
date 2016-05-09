@@ -45,4 +45,24 @@ remix.21.4:\n
         remix.21.5:\n
         - Nuevas propiedades para viejos objetos
         </string>
+  <string name="Welcome_Text_22">
+        remix.22:\n
+        - Nuevo jefe oculto
+        </string>
+  <string name="Welcome_Text_23">
+        remix.23:\n
+        - La Mazmorra tiene ahora 32 niveles de profundidad (en lugar de 26)\n
+        - Jefe oculto movido al nivel 25\n
+        - Gran variedad de mini jefes para la pelea final (en lugar de los 2 puños, Yog ahora puede escoger entre un total de 5 mini jefes a crear)\n
+        - Nueva configuración y mounstros de niveles 27-31
+       </string>
+  <string name="Welcome_Text_23_1">
+        remix.23.1:\n
+        - Nueva tienda, NPC y busqueda en el nivel 27\n
+        - Nuevo mounstro para el Nido de Demonios (27-31)\n
+        - Todos los mounstros, jefes de los niveles 27-32 y sus habilidades se hicieron más fuertes\n
+		- Insigneas de los jefes actualizadas\n
+		- Algunas actualizaciones visuales menores\n
+		- Varias correcciones de errores\n
+        </string>
 </resources>

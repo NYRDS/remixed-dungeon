@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Desconocido</string>
+  <string name="AzuterronNPC_Gender">masculino</string>
+  <string name="AzuterronNPC_Name_Objective">Desconocido</string>
+  <string name="AzuterronNPC_Desc">Una misteriosa figura cubiertaa por niebla negra.</string>
+  <string name="AzuterronNPC_Quest_Start">Eh, ¿espera... oh, puedes verme?, Eso significa que no eres uno de \"ellos\". Veo que no eres un aficcionado contra esos monstruos. Si me ayudas con un pequeño problema, entonces te ofreceré mi ayuda. En algún lugar de este nivel se encuentra una bestia de la oscuridad, un _Espíritu Traicionero_. Matalo, toma su corazón y regresa conmigo. Una cosa más, si está interesado en comprar mis suministros, no dude en preguntar...</string>
+  <string name="AzuterronNPC_Quest_Reminder">Ayudame y te ayudaré.</string>
+  <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te sera util.</string>
+  <string name="Journal_Azuterron">Desconocido</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Espíritu traicionero</string>
+  <string name="TreacherousSpirit_Gender">masculino</string>
+  <string name="TreacherousSpirit_Name_Objective">Espíritu traicionero</string>
+  <string name="TreacherousSpirit_Desc">Esta monstruosa criatura parecida a una nube oscura viviente. Su ojo sin párpado mirandote, palpitando con cada uno de sus movimientos.</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">espíritu adolorido</string>
+  <string name="SpiritOfPain_Gender">masculino</string>
+  <string name="SpiritOfPain_Name_Objective">espíritu adolorido</string>
+  <string name="SpiritOfPain_Desc">Un fragmento de la oscuridad viviente.</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">Rata sospechosa</string>
+  <string name="SuspiciousRat_Gender">femenino</string>
+  <string name="SuspiciousRat_Name_Objective">Rata sospechosa</string>
+  <string name="SuspiciousRat_Desc">Las ratas no son poco comunes en las mazmorras, pero para que habiten tan profundo... Puedes ver cómo todo su cuerpo se mueve con espasmos.</string>
+  <string name="SuspiciousRat_Info1">Rata sospechosa se mueve violentamente.</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Pseudo-rata</string>
+  <string name="PseudoRat_Gender">femenino</string>
+  <string name="PseudoRat_Name_Objective">Pseudo-rata</string>
+  <string name="PseudoRat_Desc">Una bestia horrible que salió del cadáver de la rata, no se parece a un roedor u otro animal que hayas visto. Boca enorme, llena de dientes afilados, que ocupan la mayor parte del cuerpo.</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">¡Gnoll-zombi ha regresado de la muerte!</string>
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Corazón de la oscuridad</string>
+  <string name="HeartOfDarkness_Info">Palpitante corazón negro del Espíritu Traicionero.</string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Velo oscuro</string>
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Yog-Dzewa asesinado</string>
+  <string name="Badges_ShadowLord_Slain">Maestro de las Sombras asesinado</string>
+  <string name="Badges_SpiderQueen_Slain">Reina Araña asesinada</string>
+</resources>
