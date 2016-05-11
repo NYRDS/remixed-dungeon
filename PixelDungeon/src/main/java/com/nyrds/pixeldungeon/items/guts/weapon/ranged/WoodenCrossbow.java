@@ -20,9 +20,9 @@ package com.nyrds.pixeldungeon.items.guts.weapon.ranged;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 
-public class WoddenCrossbow extends Bow {
+public class WoodenCrossbow extends Bow {
 
-	public WoddenCrossbow() {
+	public WoodenCrossbow() {
 
 		super( 2, 1.2f, 1.6f );
 		imageFile = "items/ranged.png";
