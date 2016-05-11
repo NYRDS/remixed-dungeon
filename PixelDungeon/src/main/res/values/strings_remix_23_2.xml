@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="BroadSword_Name">Broadsword</string>
+    <string name="BroadSword_Info">A broad sword.</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Halberd</string>
+    <string name="Halberd_Info">A tiny axe on top of a spear.</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Gothic armor</string>
+    <string name="GothicArmor_Info">A gothic armor.</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">Wooden crossbow</string>
+    <string name="WoodenCrossbow_Info">A crossbow made of wood.</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Composite crossbow</string>
+    <string name="CompositeCrossbow_Info">A crossbow made of composite material.</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Ruby crossbow</string>
+    <string name="RubyCrossbow_Info">A crossbow made of Ruby.</string>
 
 </resources>

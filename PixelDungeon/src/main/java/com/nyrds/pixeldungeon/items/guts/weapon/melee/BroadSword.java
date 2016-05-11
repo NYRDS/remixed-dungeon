@@ -31,9 +31,5 @@ public class BroadSword extends MeleeWeapon {
 	public BroadSword() {
 		super( 6, 1f, 1f );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Longsword_Info);
-	}
+
 }

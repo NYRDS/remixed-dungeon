@@ -31,9 +31,4 @@ public class Halberd extends MeleeWeapon {
 	public Halberd() {
 		super( 6, 1.1f, 1.2f );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Longsword_Info);
-	}
 }
