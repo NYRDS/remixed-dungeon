@@ -113,7 +113,13 @@ public class MirrorImage extends NPC {
 		if(lookDesc!=null) {
 			return new HeroSpriteDef(lookDesc);
 		} else { // handle old saves
-			lookDesc = Dungeon.hero.getHeroSprite().getLayersDesc();
+			if(Dungeon.hero != null) {
+				lookDesc = Dungeon.hero.getHeroSprite().getLayersDesc();
+			} else { // dirty hack here
+				Hero hero = new Hero();
+				lookDesc = new HeroSpriteDef(hero, false).getLayersDesc();
+			}
+
 			return sprite();
 		}
 	}
