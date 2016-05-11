@@ -3,7 +3,7 @@
   <!--PACKAGE /items/potions-->
   <!--STRINGS OF Potion CLASS-->
   <string name="Potion_Name">%s pozione</string>
-  <string name="Potion_Info">Questa boccetta contiene liquido un vorticoso %s.Chi sa che cosa farà quando bevuto o gettato atterra?</string>
+  <string name="Potion_Info">Questa boccetta contiene un vorticoso liquido %s. Chi sa che cosa farà quando bevuto o gettato atterra?</string>
   <string name="Potion_ACDrink">BEVI</string>
   <string name="Potion_Harmfull">Pozione Malefica!</string>
   <string name="Potion_Beneficial">Pozione Benefica</string>
@@ -11,19 +11,23 @@
   <string name="Potion_No">No, ho cambiato idea</string>
   <string name="Potion_SureDrink">Sei sicuro di voler bere? Nella maggior parte dei casi si dovrebbe buttare tali pozioni contro i nemici.</string>
   <string name="Potion_SureThrow">Sei sicuro di voler buttare? Nella maggior parte dei casi ha senso bere.</string>
+  <string name="Potion_Shatter">La boccetta si frantuma e un liquido %s si sparge senza provocare danno</string>
   <!--STRINGS OF PotionOfExperience CLASS-->
   <string name="PotionOfExperience_Name">Pozione d\'Esperienza </string>
   <!--STRINGS OF PotionOfFrost CLASS-->
   <string name="PotionOfFrost_Name">Pozione di Gelo</string>
+  <string name="PotionOfFrost_Info">All\'esposizione con l\'aria aperta, questo intruglio evaporerà in una nuvola congelante, causando a ogni creatura che ne verrà a contatto di essere congelata sul posto, impossibilitata a muoversi o a compiere azioni.</string>
   <!--STRINGS OF PotionOfHealing CLASS-->
   <string name="PotionOfHealing_Name">Pozione di Guarigione</string>
   <string name="PotionOfHealing_Info">Un elisir che ti fa tornare in piena salute e cura il veleno.</string>
   <string name="PotionOfHealing_Apply">Le ferite guariscono completamente.</string>
   <!--STRINGS OF PotionOfInvisibility CLASS-->
   <string name="PotionOfInvisibility_Name">Pozione d\'Invisibilità</string>
+  <string name="PotionOfInvisibility_Info">Bere questa pozione ti renderà temporaneamente invisibile. Mentre sei invisibile, i nemici non saranno in grado di vederti. Attaccare un nemico o usare una bacchetta o una pergamena vicino a loro annullerà l\'effetto.</string>
   <string name="PotionOfInvisibility_Apply">Vedi le mani che diventano invisibili!</string>
   <!--STRINGS OF PotionOfLevitation CLASS-->
   <string name="PotionOfLevitation_Name">Pozione di Levitazione</string>
+  <string name="PotionOfLevitation_Info">Bere questo curioso liquido ti renderà capace di levitare in aria, capace di passare senza sforzo sopra le trappole. Le fiamme e i gas colmano l\'aria però, e non possono quindi essere evitate mentre sei in aria.</string>
   <string name="PotionOfLevitation_Apply">Stai fluttuando in aria!</string>
   <!--STRINGS OF PotionOfLiquidFlame CLASS-->
   <string name="PotionOfLiquidFlame_Name">Pozione di Fiamma liquefatta </string>

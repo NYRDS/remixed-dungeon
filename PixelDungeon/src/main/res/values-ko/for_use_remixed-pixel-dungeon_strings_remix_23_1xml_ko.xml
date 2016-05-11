@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">이방인</string>
+  <string name="AzuterronNPC_Gender">남성</string>
+  <string name="AzuterronNPC_Name_Objective">이방인</string>
+  <string name="AzuterronNPC_Desc">이상한 형체가 검은 안개에 둘러싸여 있다.</string>
+  <string name="AzuterronNPC_Quest_Start">앗, 뭐지... 오, 넌 날 볼 수 있구나? 그렇다면 \"저들\"은 아니란 말이겠군. 저기 널려있는 괴물들도 아닐 테고. 괜찮다면, 내 골칫거리를 좀 해결해주면 보상해 줄 수도 있어. 이 층 어딘가에 어둠의 괴수인 _위험한 혼령_  이 있을거야. 그것을 죽이고 _심장_을 가져 와. 또 한가지, 내 물건들을 사고 싶다면 언제든지 말만 해.</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <!--STRINGS OF PseudoRat CLASS-->
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <!--Badges-->
+</resources>
