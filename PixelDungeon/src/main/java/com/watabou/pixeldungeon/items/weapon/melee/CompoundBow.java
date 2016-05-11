@@ -7,7 +7,8 @@ public class CompoundBow extends Bow {
 
 	public CompoundBow() {
 		super( 3, 0.8f, 1.5f );
-		image = ItemSpriteSheet.BOW_COMPOUND;
+		imageFile = "items/ranged.png";
+		image = 2;
 	}
 	
 	@Override
