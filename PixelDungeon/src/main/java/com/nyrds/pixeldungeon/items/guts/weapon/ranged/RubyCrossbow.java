@@ -38,7 +38,7 @@ public class RubyCrossbow extends Bow {
 
 	@Override
 	public double dmgFactor() {
-		return 1 + level() * 0.1;
+		return 1 + level() * 1.1;
 	}
 
 	public double dlyFactor() {

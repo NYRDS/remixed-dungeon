@@ -19,6 +19,12 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoddenCrossbow;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -47,6 +53,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -123,7 +130,7 @@ public enum HeroClass {
 	}
 
 	private static void initDebug(Hero hero) {
-		for(int i = 0;i<100;i++) {
+		for(int i = 0;i<12;i++) {
 			//hero.collect(new ScrollOfMagicMapping());
 			//hero.collect(new ScrollOfIdentify());
 			//hero.collect(new ScrollOfDomination());
@@ -131,6 +138,9 @@ public enum HeroClass {
 			//hero.collect(new PotionOfLiquidFlame());
 			//hero.collect(new PotionOfToxicGas());
 			//hero.collect(new Ankh());
+			hero.collect(new PotionOfStrength());
+			hero.collect(new ScrollOfUpgrade());
+			hero.collect(new CommonArrow());
 		}
 
 		//hero.collect(new HeartOfDarkness());
@@ -139,22 +149,12 @@ public enum HeroClass {
 
 		//hero.collect(new Glaive().upgrade(100));
 		hero.collect(new TomeOfMastery());
-		hero.collect(new ScaleArmor().upgrade(100));
-		hero.collect(new LeatherArmor().upgrade(100));
-		hero.collect(new PlateArmor().upgrade(100));
-		hero.collect(new MailArmor().upgrade(100));
-		hero.collect(new BattleMageArmor().upgrade(100));
-		hero.collect(new BerserkArmor().upgrade(100));
-		hero.collect(new ElfArmor().upgrade(100));
-		hero.collect(new GladiatorArmor().upgrade(100));
-		hero.collect(new MageArmor().upgrade(100));
-		hero.collect(new HuntressArmor().upgrade(100));
-		hero.collect(new RogueArmor().upgrade(100));
-		hero.collect(new ScoutArmor().upgrade(100));
-		hero.collect(new ShamanArmor().upgrade(100));
-		hero.collect(new SniperArmor().upgrade(100));
-		hero.collect(new WardenArmor().upgrade(100));
-		hero.collect(new WarriorArmor().upgrade(100));
+		hero.collect(new GothicArmor());
+		hero.collect(new BroadSword());
+		hero.collect(new Halberd());
+		hero.collect(new WoddenCrossbow());
+		hero.collect(new CompositeCrossbow());
+		hero.collect(new RubyCrossbow());
 
 		//hero.collect(new ChaosCrystal());
 		hero.ht(1000);

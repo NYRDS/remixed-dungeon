@@ -17,8 +17,6 @@
  */
 package com.nyrds.pixeldungeon.items.guts.armor;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.armor.Armor;
 
 
@@ -26,11 +24,7 @@ public class GothicArmor extends Armor {
 
 	public GothicArmor() {
 		super( 6 );
-		image = 4;
+		image = 20;
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.PlateArmor_Desc);
-	}
+
 }
