@@ -5,6 +5,12 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
+import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -315,6 +321,12 @@ public class ItemFactory {
 		registerItemClass(GoldenKey.class);
 		registerItemClass(IronKey.class);
 		registerItemClass(DarkGold.class);
+		registerItemClass(GothicArmor.class);
+		registerItemClass(BroadSword.class);
+		registerItemClass(Halberd.class);
+		registerItemClass(WoodenCrossbow.class);
+		registerItemClass(CompositeCrossbow.class);
+		registerItemClass(RubyCrossbow.class);
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {

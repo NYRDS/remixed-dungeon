@@ -19,6 +19,12 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
+import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker.Rotberry;
@@ -244,16 +250,19 @@ public class Generator {
 			Boomerang.class,
 			Tamahawk.class,
 			Kusarigama.class,
-			SacrificialSword.class};
-		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f };
+			SacrificialSword.class,
+			BroadSword.class,
+		    Halberd.class};
+		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f, 1, 1 };
 		
 		Category.ARMOR.classes = new Class<?>[]{ 
 			ClothArmor.class, 
 			LeatherArmor.class, 
 			MailArmor.class, 
 			ScaleArmor.class, 
-			PlateArmor.class };
-		Category.ARMOR.probs = new float[]{ 1, 1, 1, 1, 1 };
+			PlateArmor.class,
+			GothicArmor.class};
+		Category.ARMOR.probs = new float[]{ 1, 1, 1, 1, 1, 1 };
 		
 		Category.FOOD.classes = new Class<?>[]{ 
 			Ration.class, 
@@ -289,10 +298,13 @@ public class Generator {
 		
 		Category.RANGED.classes = new Class<?>[] {
 				WoodenBow.class,
+				WoodenCrossbow.class,
 				CompoundBow.class,
-				RubyBow.class
+				CompositeCrossbow.class,
+				RubyBow.class,
+				RubyCrossbow.class
 		};
-		Category.RANGED.probs = new float[]{ 5, 3, 1 };
+		Category.RANGED.probs = new float[]{ 3, 4, 3, 3, 1, 1 };
 		
 		Category.BULLETS.classes = new Class<?>[] {
 				CommonArrow.class,
