@@ -35,3 +35,4 @@ proguard/
 build/
 
 /PixelDungeon/src/main/res/values/strings_api.xml
+.idea/
