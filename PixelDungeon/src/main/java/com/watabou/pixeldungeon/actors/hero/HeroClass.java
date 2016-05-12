@@ -39,7 +39,9 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -128,7 +130,8 @@ public enum HeroClass {
 			//hero.collect(new ScrollOfDomination());
 			//hero.collect(new ScrollOfMirrorImage());
 			//hero.collect(new PotionOfLiquidFlame());
-			//hero.collect(new PotionOfToxicGas());
+			hero.collect(new PotionOfToxicGas());
+			hero.collect(new PotionOfHealing());
 			//hero.collect(new Ankh());
 			hero.collect(new PotionOfStrength());
 			hero.collect(new ScrollOfUpgrade());
@@ -141,13 +144,7 @@ public enum HeroClass {
 
 		//hero.collect(new Glaive().upgrade(100));
 		hero.collect(new TomeOfMastery());
-		hero.collect(new ChaosArmor().identify());
-		hero.collect(new ChaosSword().identify());
 		hero.collect(new Halberd());
-		hero.collect(new WoodenCrossbow());
-		hero.collect(new CompositeCrossbow());
-		hero.collect(new RubyCrossbow());
-		hero.collect(new RubyBow());
 		hero.collect(new WoodenBow());
 		hero.collect(new CompoundBow());
 
