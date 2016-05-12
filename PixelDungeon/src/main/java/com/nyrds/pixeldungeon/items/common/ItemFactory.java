@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
 import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
@@ -327,6 +328,7 @@ public class ItemFactory {
 		registerItemClass(WoodenCrossbow.class);
 		registerItemClass(CompositeCrossbow.class);
 		registerItemClass(RubyCrossbow.class);
+		registerItemClass(ChaosArmor.class);
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {

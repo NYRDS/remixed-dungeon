@@ -7,6 +7,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.rings.UsableArtifact;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
@@ -107,6 +108,12 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 				if (item instanceof Wand) {
 					getCurUser().collect(new ChaosStaff());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
+				}
+
+				if (item instanceof Armor) {
+					getCurUser().collect(new ChaosArmor());
+					GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
+					return;
 				}
 			}
 		}
