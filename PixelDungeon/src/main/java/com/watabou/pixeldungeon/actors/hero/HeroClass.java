@@ -19,8 +19,8 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword;
+import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
+import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
@@ -140,8 +140,8 @@ public enum HeroClass {
 
 		//hero.collect(new Glaive().upgrade(100));
 		hero.collect(new TomeOfMastery());
-		hero.collect(new GothicArmor());
-		hero.collect(new BroadSword());
+		hero.collect(new ChaosArmor());
+		hero.collect(new ChaosSword());
 		hero.collect(new Halberd());
 		hero.collect(new WoodenCrossbow());
 		hero.collect(new CompositeCrossbow());
