@@ -105,16 +105,18 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 					return;
 				}
 
-				if (item instanceof Wand) {
-					getCurUser().collect(new ChaosStaff());
-					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
-				}
-
 				if (item instanceof Armor) {
 					getCurUser().collect(new ChaosArmor());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
 					return;
 				}
+
+				if (item instanceof Wand) {
+					getCurUser().collect(new ChaosStaff());
+					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
+				}
+
+
 			}
 		}
 	};
