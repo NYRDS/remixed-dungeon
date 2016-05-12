@@ -140,8 +140,8 @@ public enum HeroClass {
 
 		//hero.collect(new Glaive().upgrade(100));
 		hero.collect(new TomeOfMastery());
-		hero.collect(new ChaosArmor());
-		hero.collect(new ChaosSword());
+		hero.collect(new ChaosArmor().identify());
+		hero.collect(new ChaosSword().identify());
 		hero.collect(new Halberd());
 		hero.collect(new WoodenCrossbow());
 		hero.collect(new CompositeCrossbow());
