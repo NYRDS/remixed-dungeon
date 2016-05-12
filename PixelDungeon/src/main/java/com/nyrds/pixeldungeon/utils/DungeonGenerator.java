@@ -165,7 +165,7 @@ public class DungeonGenerator {
 				index = nextLevelSet.length() - 1;
 				EventCollector.logEvent("DungeonGenerator","wrong next level index");
 			}
-			
+
 			String nextLevelId = nextLevelSet.getString(index);
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(nextLevelId);
