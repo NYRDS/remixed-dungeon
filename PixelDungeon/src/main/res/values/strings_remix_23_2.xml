@@ -9,10 +9,6 @@
     <string name="Halberd_Name">Halberd</string>
     <string name="Halberd_Info">A tiny axe on top of a spear.</string>
 
-    <!-- STRINGS OF GothicArmor CLASS -->
-    <string name="GothicArmor_Name">Gothic armor</string>
-    <string name="GothicArmor_Info">A gothic armor.</string>
-
     <!-- STRINGS OF WoodenCrossbow CLASS -->
     <string name="WoodenCrossbow_Name">Wooden crossbow</string>
     <string name="WoodenCrossbow_Info">A crossbow made of wood.</string>
@@ -24,5 +20,16 @@
     <!-- STRINGS OF RubyCrossbow CLASS -->
     <string name="RubyCrossbow_Name">Ruby crossbow</string>
     <string name="RubyCrossbow_Info">A crossbow made of Ruby.</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Gothic armor</string>
+    <string name="GothicArmor_Info">A gothic armor.</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Chaos armor</string>
+    <string name="ChaosArmor_Info">A Chaos armor.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">Crystal absorbs your armor, and took the form of a plate armor</string>
 
 </resources>
