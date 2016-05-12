@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
+import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
@@ -150,7 +151,7 @@ public enum HeroClass {
 		hero.collect(new WoodenBow());
 		hero.collect(new CompoundBow());
 
-		//hero.collect(new ChaosCrystal());
+		hero.collect(new ChaosCrystal().identify().identify());
 		hero.ht(1000);
 		hero.hp(1000);
 		hero.attackSkill = 1000;
