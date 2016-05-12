@@ -30,6 +30,6 @@
     <string name="ChaosArmor_Info">A Chaos armor.</string>
 
     <!-- STRINGS OF ChaosCrystal CLASS -->
-    <string name="ChaosCrystal_ArmorFused">Crystal absorbs your armor, and took the form of a plate armor</string>
+    <string name="ChaosCrystal_ArmorFused">Crystal absorbs your armor, and took the form of a laminated armor</string>
 
 </resources>
