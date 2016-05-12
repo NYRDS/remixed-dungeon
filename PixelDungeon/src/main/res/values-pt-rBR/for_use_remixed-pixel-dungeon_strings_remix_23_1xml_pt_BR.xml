@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Estranho</string>
+  <string name="AzuterronNPC_Gender">masculino</string>
+  <string name="AzuterronNPC_Name_Objective">Estranho</string>
+  <string name="AzuterronNPC_Quest_Reminder">Ajude-me e eu lhe ajudarei.</string>
+  <string name="AzuterronNPC_Quest_End">Excelente. Pegue esta poção, certamente você a achará útil.</string>
+  <string name="Journal_Azuterron">Estranho</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Gender">masculino</string>
+  <string name="TreacherousSpirit_Desc">Esta criatura monstruosa parece uma nuvem de pura escuridão. Seus olhos arregalados lhe encaram, pulsando à cada movimento seu.</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">espírito da dor</string>
+  <string name="SpiritOfPain_Gender">masculino</string>
+  <string name="SpiritOfPain_Name_Objective">espírito da dor</string>
+  <string name="SpiritOfPain_Desc">Um fragmento de pura escuridão.</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">Rato suspeito</string>
+  <string name="SuspiciousRat_Gender">feminino</string>
+  <string name="SuspiciousRat_Name_Objective">Rato suspeito</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Pseudo rato</string>
+  <string name="PseudoRat_Gender">feminino</string>
+  <string name="PseudoRat_Name_Objective">Pseudo rato</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Coração da escuridão</string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Matador do Yog-Dzewa</string>
+  <string name="Badges_ShadowLord_Slain">Matador do Lorde das Sombras</string>
+  <string name="Badges_SpiderQueen_Slain">Matador da Aranha Rainha</string>
+</resources>
