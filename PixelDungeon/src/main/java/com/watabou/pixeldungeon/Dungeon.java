@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -387,9 +386,6 @@ public class Dungeon {
 	}
 
 	public static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
-
-		Util.storeEventInAcra("lastLoadedGameData", bundle.toString());
-
 		Dungeon.challenges = bundle.getInt(CHALLENGES);
 
 		Dungeon.level = null;
