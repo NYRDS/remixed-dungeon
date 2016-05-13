@@ -19,91 +19,92 @@ import com.watabou.utils.Random;
  */
 public class SuspiciousRat extends Mob {
 
-    private static final float TIME_TO_HATCH	= 4f;
+	private static final float TIME_TO_HATCH = 4f;
 
-    {
-        hp(ht(140));
-        defenseSkill = 25;
+	{
+		hp(ht(140));
+		defenseSkill = 25;
 
-        EXP = 1;
-        maxLvl = 30;
+		EXP = 1;
+		maxLvl = 30;
 
-        pacified = true;
+		pacified = true;
 
-        IMMUNITIES.add(ToxicGas.class);
-    }
+		IMMUNITIES.add(ToxicGas.class);
+	}
 
-    private static final String RAT_TRANSFORMING_STATE = "rat_transforming_state";
+	private static final String RAT_TRANSFORMING_STATE = "rat_transforming_state";
 
-    private boolean transforming = false;
+	private boolean transforming = false;
 
-    @Override
-    public void storeInBundle( Bundle bundle ) {
-        super.storeInBundle( bundle );
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
 
-        bundle.put(RAT_TRANSFORMING_STATE, transforming);
-    }
+		bundle.put(RAT_TRANSFORMING_STATE, transforming);
+	}
 
-    @Override
-    public void restoreFromBundle( Bundle bundle ) {
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
 
-        super.restoreFromBundle( bundle );
-        transforming = bundle.getBoolean(RAT_TRANSFORMING_STATE);
-    }
+		super.restoreFromBundle(bundle);
+		transforming = bundle.getBoolean(RAT_TRANSFORMING_STATE);
+	}
 
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(10, 15);
-    }
+	@Override
+	public int damageRoll() {
+		return Random.NormalIntRange(10, 15);
+	}
 
-    @Override
-    public int attackSkill( Char target ) {
-        return 25;
-    }
+	@Override
+	public int attackSkill(Char target) {
+		return 25;
+	}
 
-    @Override
-    public int dr() {
-        return 2;
-    }
+	@Override
+	public int dr() {
+		return 2;
+	}
 
-    @Override
-    public boolean act() {
-        if (enemySeen){
-            if(!transforming){
-                spend( TIME_TO_HATCH );
-                transforming = true;
-                if (Dungeon.visible[getPos()]) {
-                    getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
-                    GLog.n(Game.getVar(R.string.SuspiciousRat_Info1));
-                }
-                PlayZap();
-                return true;
-            }
-            else {
-                int wereratPos = this.getPos();
-                if (Dungeon.level.cellValid(wereratPos)) {
-                    PseudoRat mob = new PseudoRat();
-                    mob.setPos(wereratPos);
-                    Dungeon.level.spawnMob(mob, 0);
-                    Sample.INSTANCE.play(Assets.SND_CURSED);
-                }
-                die(this);
-                return true;
-            }
-        }
-        return super.act();
-    }
+	@Override
+	public boolean act() {
+		if (enemySeen) {
+			if (!transforming) {
+				spend(TIME_TO_HATCH);
+				transforming = true;
+				if (Dungeon.visible[getPos()]) {
+					getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
+					GLog.n(Game.getVar(R.string.SuspiciousRat_Info1));
+				}
+				PlayZap();
+				return true;
+			} else {
+				int wereratPos = this.getPos();
+				if (Dungeon.level.cellValid(wereratPos)) {
+					PseudoRat mob = new PseudoRat();
+					mob.setPos(wereratPos);
+					Dungeon.level.spawnMob(mob, 0);
+					Sample.INSTANCE.play(Assets.SND_CURSED);
+				}
+				die(this);
+				return true;
+			}
+		}
+		return super.act();
+	}
 
-    @Override
-    public void onZapComplete() {
-        PlayZap();
-    }
+	@Override
+	public void onZapComplete() {
+		PlayZap();
+	}
 
-    public void PlayZap(){
-        this.getSprite().zap(getEnemy().getPos(), new Callback() {
-            @Override
-            public void call() {
-            }
-        });
-    }
+	public void PlayZap() {
+		getSprite().zap(
+				getEnemy().getPos(),
+				new Callback() {
+					@Override
+					public void call() {
+					}
+				});
+	}
 }
