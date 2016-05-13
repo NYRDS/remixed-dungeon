@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
@@ -50,6 +51,9 @@ public class MobSpriteDef extends MobSprite {
 
 	@Override
 	public void selectKind(int kind) {
+
+		Util.storeEventInAcra("selectKind", name);
+
 		this.kind = kind;
 		JSONObject json = defMap.get(name);
 

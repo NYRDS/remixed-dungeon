@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -158,6 +159,11 @@ public class DungeonGenerator {
 							break;
 					}
 				}
+			}
+
+			if(index >= nextLevelSet.length()) {
+				index = nextLevelSet.length() - 1;
+				EventCollector.logEvent("DungeonGenerator","wrong next level index");
 			}
 
 			String nextLevelId = nextLevelSet.getString(index);
