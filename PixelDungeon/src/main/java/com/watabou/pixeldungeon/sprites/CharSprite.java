@@ -148,19 +148,20 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 	
 	public void move( int from, int to ) {
 		play( run );
-		
-		motion = new PosTweener( this, worldToCamera( to ), MOVE_INTERVAL );
-		motion.listener = this;
-		getParent().add( motion );
 
-		isMoving = true;
-		
-		turnTo( from , to );
-		
-		if (getVisible() && Dungeon.level.water[from] && !ch.flying) {
-			GameScene.ripple( from );
+		if(getParent()!=null) {
+			motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
+			motion.listener = this;
+			getParent().add(motion);
+
+			isMoving = true;
+
+			turnTo(from, to);
+
+			if (getVisible() && Dungeon.level.water[from] && !ch.flying) {
+				GameScene.ripple(from);
+			}
 		}
-		
 		ch.onMotionComplete();
 	}
 	

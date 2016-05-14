@@ -38,6 +38,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Vector;
 
 public class Bundle {
 
@@ -191,7 +192,7 @@ public class Bundle {
 	public <T extends Bundlable> Collection<T> getCollection( String key, Class<T> type ) {
 
 		if(!data.has(key)) {
-			return null;
+			return new Vector<T>();
 		}
 
 		List<T> list = new ArrayList<>();
@@ -203,7 +204,7 @@ public class Bundle {
 			}
 		} catch (JSONException e) {
 			Util.storeEventInAcra("Bundable.getCollection", e);
-			return null;
+			return new Vector<T>();
 		}
 		
 		return list;

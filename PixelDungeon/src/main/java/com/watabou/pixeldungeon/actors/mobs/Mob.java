@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
@@ -799,7 +801,7 @@ public abstract class Mob extends Char {
 		return enemy;
 	}
 
-	protected void setEnemy(Char enemy) {
+	protected void setEnemy(@NonNull Char enemy) {
 		this.enemy = enemy;
 	}
 }
