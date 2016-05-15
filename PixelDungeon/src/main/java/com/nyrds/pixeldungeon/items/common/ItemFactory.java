@@ -70,6 +70,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
 import com.watabou.pixeldungeon.items.potions.PotionOfPurity;
@@ -329,6 +330,7 @@ public class ItemFactory {
 		registerItemClass(CompositeCrossbow.class);
 		registerItemClass(RubyCrossbow.class);
 		registerItemClass(ChaosArmor.class);
+		registerItemClass(PotionOfMight.class);
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {
