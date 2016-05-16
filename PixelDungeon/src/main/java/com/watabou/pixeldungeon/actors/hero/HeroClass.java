@@ -21,7 +21,8 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
-import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
+import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
@@ -39,18 +40,13 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
-import com.watabou.pixeldungeon.items.weapon.melee.CompoundBow;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
-import com.watabou.pixeldungeon.items.weapon.melee.RubyBow;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
@@ -124,29 +120,19 @@ public enum HeroClass {
 	}
 
 	private static void initDebug(Hero hero) {
-		for(int i = 0;i<12;i++) {
-			//hero.collect(new ScrollOfMagicMapping());
-			//hero.collect(new ScrollOfIdentify());
-			//hero.collect(new ScrollOfDomination());
-			//hero.collect(new ScrollOfMirrorImage());
-			//hero.collect(new PotionOfLiquidFlame());
-			hero.collect(new PotionOfToxicGas());
-			hero.collect(new PotionOfHealing());
-			//hero.collect(new Ankh());
-			hero.collect(new PotionOfStrength());
-			hero.collect(new ScrollOfUpgrade());
-			hero.collect(new CommonArrow());
+		for(int i = 0;i<100;i++) {
+			hero.collect(new ScrollOfMagicMapping());
 		}
-
-		//hero.collect(new HeartOfDarkness());
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 
-		//hero.collect(new Glaive().upgrade(100));
-		hero.collect(new TomeOfMastery());
-		hero.collect(new Halberd());
-		hero.collect(new WoodenBow());
-		hero.collect(new CompoundBow());
+		hero.collect(new Claymore().upgrade(100));
+		hero.collect(new GothicArmor());
+		hero.collect(new ChaosArmor());
+		hero.collect(new Halberd().upgrade(100));
+		hero.collect(new WoodenCrossbow());
+		hero.collect(new RubyCrossbow());
+		hero.collect(new CompositeCrossbow());
 
 		hero.collect(new ChaosCrystal().identify().identify());
 		hero.ht(1000);
