@@ -2,7 +2,7 @@
 <resources>
     
     <!-- STRINGS OF Bow CLASS -->
-    <string name="Bow_Info1">This bow is a ranged weapon. It is useless for everybody but elves at very close range. Having a bow equipped allows you to fire arrows.\n\n</string>
+    <string name="Bow_Info1">This is a ranged weapon. It is useless for everybody but elves at very close range. Having a bow equipped allows you to fire arrows.\n\n</string>
     
     <!-- STRINGS OF WoodenBow CLASS -->
     <string name="WoodenBow_Name">wooden bow</string>
