@@ -2,34 +2,39 @@
 <resources>
     <!-- Items -->
     <!-- STRINGS OF BroadSword CLASS -->
-    <string name="BroadSword_Name">Broadsword</string>
-    <string name="BroadSword_Info">A broad sword.</string>
+    <string name="BroadSword_Name">Claymore</string>
+    <string name="BroadSword_Info">This massive sword should be able to cut through anything.</string>
+    <string name="BroadSword_Gender">feminine</string>
 
     <!-- STRINGS OF Halberd CLASS -->
     <string name="Halberd_Name">Halberd</string>
-    <string name="Halberd_Info">A tiny axe on top of a spear.</string>
+    <string name="Halberd_Info">A polearm consisting of an axe on the end of a pole.</string>
+    <string name="Halberd_Gender">feminine</string>
 
     <!-- STRINGS OF WoodenCrossbow CLASS -->
     <string name="WoodenCrossbow_Name">Wooden crossbow</string>
-    <string name="WoodenCrossbow_Info">A crossbow made of wood.</string>
+    <string name="WoodenCrossbow_Info">A basic wooden crossbow, looks like it designed to shoot bow arrows.</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
 
     <!-- STRINGS OF CompositeCrossbow CLASS -->
     <string name="CompositeCrossbow_Name">Composite crossbow</string>
-    <string name="CompositeCrossbow_Info">A crossbow made of composite material.</string>
+    <string name="CompositeCrossbow_Info">This reinforced crossbow proves to be a more efficient tool compared to it's wooden counterpart.</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
 
     <!-- STRINGS OF RubyCrossbow CLASS -->
     <string name="RubyCrossbow_Name">Ruby crossbow</string>
-    <string name="RubyCrossbow_Info">A crossbow made of Ruby.</string>
+    <string name="RubyCrossbow_Info">This deadly weapon is truly a masterpiece of dwarven engineering.</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
 
     <!-- STRINGS OF GothicArmor CLASS -->
     <string name="GothicArmor_Name">Gothic armor</string>
-    <string name="GothicArmor_Info">A gothic armor.</string>
+    <string name="GothicArmor_Info">A gothic armor is a pinnacle of the art of armor forging.</string>
 
     <!-- STRINGS OF ChaosArmor CLASS -->
     <string name="ChaosArmor_Name">Chaos armor</string>
-    <string name="ChaosArmor_Info">A Chaos armor.</string>
+    <string name="ChaosArmor_Info">A blood red plates of this armor is sewed together with dark red chains. It irradiates chaotic energy as you touch it.</string>
 
     <!-- STRINGS OF ChaosCrystal CLASS -->
-    <string name="ChaosCrystal_ArmorFused">Crystal absorbs your armor, and took the form of a laminated armor</string>
+    <string name="ChaosCrystal_ArmorFused">Crystal absorbs your armor, and took the form of composite armor</string>
 
 </resources>
