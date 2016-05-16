@@ -59,7 +59,7 @@ public class WarlockArmor extends ClassArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.MAGE && hero.subClass == HeroSubClass.BATTLEMAGE) {
+		if (hero.heroClass == HeroClass.MAGE && hero.subClass == HeroSubClass.WARLOCK) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( TXT_NOT_MAGE );
