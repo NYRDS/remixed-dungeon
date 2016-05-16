@@ -44,6 +44,7 @@
     <!-- STRINGS OF HeartOfDarkness CLASS -->
     <string name="HeartOfDarkness_Name">Heart of darkness</string>
     <string name="HeartOfDarkness_Info">Black pulsating heart of the Treacherous Spirit.</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
 
     <!-- Buffs -->
     <!-- STRINGS OF DarkVeil CLASS -->
