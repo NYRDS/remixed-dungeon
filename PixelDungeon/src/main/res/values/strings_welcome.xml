@@ -87,4 +87,10 @@
 		- Several minor visual upgrades\n
 		- Various bug fixes\n
         </string>
+        <string name="Welcome_Text_23_2">
+        remix.23.2:\n
+        - Added Tier 6 weapons and armor\n
+        - Added crossbows\n
+        - Added Chaos Armor\n
+        </string>
 </resources>
