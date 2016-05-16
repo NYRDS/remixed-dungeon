@@ -55,6 +55,10 @@ public class PixelDungeon extends GameWithGoogleIap {
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat.class,
 				"com.nyrds.pixeldungeon.mobs.guts.Wererat");
+		// remix 23.2.alpha
+		com.watabou.utils.Bundle.addAlias(
+				com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore.class,
+				"com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword");
 	}
 
 	@Override

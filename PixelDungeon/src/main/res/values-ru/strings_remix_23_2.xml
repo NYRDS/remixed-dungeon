@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Клеймор</string>
+    <string name="Claymore_Info">Этот  увесистый меч должен быть в состоянии разрубить всё что угодно.</string>
+    <string name="Claymore_Gender">feminine</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Алебарда</string>
+    <string name="Halberd_Info">Древковое оружие с топориком на конце древка.</string>
+    <string name="Halberd_Gender">feminine</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">Деревянный арбалет</string>
+    <string name="WoodenCrossbow_Info">С виду типичный деревянный арбалет, но похоже, что он предназначен для стрельбы стрелами от лука.</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Составной арбалет</string>
+    <string name="CompositeCrossbow_Info">Этот укреплённый арбалет зарекомендовал себя как более эффективное орудие, нежели его деревянный собрат.</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Рубиновый арбалет</string>
+    <string name="RubyCrossbow_Info">Это смертоносное оружие воистину является чудом дворфиской инженерии.</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Готический доспех</string>
+    <string name="GothicArmor_Info">Готическая броня это венец искусства ковки латной брони.</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Доспехи Хаоса</string>
+    <string name="ChaosArmor_Info">Эти доспехи состоят из кроваво-красных пластин скреплённых тёмно-красными цепями. Они излучают хаотическую энергию, когда ты их касаешься.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">Кристалл слился с твоей бронёй и принял форму пластинчатого доспеха.</string>
+
+</resources>
