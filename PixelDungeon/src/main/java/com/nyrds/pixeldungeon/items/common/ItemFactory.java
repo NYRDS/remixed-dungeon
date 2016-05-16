@@ -7,7 +7,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
@@ -324,7 +324,7 @@ public class ItemFactory {
 		registerItemClass(IronKey.class);
 		registerItemClass(DarkGold.class);
 		registerItemClass(GothicArmor.class);
-		registerItemClass(BroadSword.class);
+		registerItemClass(Claymore.class);
 		registerItemClass(Halberd.class);
 		registerItemClass(WoodenCrossbow.class);
 		registerItemClass(CompositeCrossbow.class);

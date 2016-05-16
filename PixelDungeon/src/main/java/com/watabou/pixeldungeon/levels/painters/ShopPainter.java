@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.watabou.pixeldungeon.Dungeon;
@@ -151,7 +151,7 @@ public class ShopPainter extends Painter {
 		case 27:
 			switch (Random.Int( 3 )) {
 				case 0:
-					items.add( new BroadSword().identify() );
+					items.add( new Claymore().identify() );
 					break;
 				case 1:
 					items.add( new Halberd().identify() );

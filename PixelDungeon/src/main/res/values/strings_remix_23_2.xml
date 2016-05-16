@@ -2,9 +2,9 @@
 <resources>
     <!-- Items -->
     <!-- STRINGS OF BroadSword CLASS -->
-    <string name="BroadSword_Name">Claymore</string>
-    <string name="BroadSword_Info">This massive sword should be able to cut through anything.</string>
-    <string name="BroadSword_Gender">feminine</string>
+    <string name="Claymore_Name">Claymore</string>
+    <string name="Claymore_Info">This massive sword should be able to cut through anything.</string>
+    <string name="Claymore_Gender">feminine</string>
 
     <!-- STRINGS OF Halberd CLASS -->
     <string name="Halberd_Name">Halberd</string>
@@ -18,7 +18,7 @@
 
     <!-- STRINGS OF CompositeCrossbow CLASS -->
     <string name="CompositeCrossbow_Name">Composite crossbow</string>
-    <string name="CompositeCrossbow_Info">This reinforced crossbow proves to be a more efficient tool compared to it's wooden counterpart.</string>
+    <string name="CompositeCrossbow_Info">This reinforced crossbow proves to be a more efficient tool compared to it\'s wooden counterpart.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
 
     <!-- STRINGS OF RubyCrossbow CLASS -->

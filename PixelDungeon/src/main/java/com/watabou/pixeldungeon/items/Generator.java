@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
@@ -251,7 +251,7 @@ public class Generator {
 			Tamahawk.class,
 			Kusarigama.class,
 			SacrificialSword.class,
-			BroadSword.class,
+			Claymore.class,
 		    Halberd.class};
 		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f, 1, 1 };
 		
