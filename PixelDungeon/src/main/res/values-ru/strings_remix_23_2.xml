@@ -32,7 +32,7 @@
 
     <!-- STRINGS OF ChaosArmor CLASS -->
     <string name="ChaosArmor_Name">Доспехи Хаоса</string>
-    <string name="ChaosArmor_Info">Эти доспехи состоят из кроваво-красных пластин скреплённых тёмно-красными цепями. Он излучает хаотическую энергию, когда ты его касаешься.</string>
+    <string name="ChaosArmor_Info">Эти доспехи состоят из кроваво-красных пластин скреплённых тёмно-красными цепями. Они излучают хаотическую энергию, когда ты их касаешься.</string>
 
     <!-- STRINGS OF ChaosCrystal CLASS -->
     <string name="ChaosCrystal_ArmorFused">Кристалл слился с твоей бронёй и принял форму пластинчатого доспеха.</string>
