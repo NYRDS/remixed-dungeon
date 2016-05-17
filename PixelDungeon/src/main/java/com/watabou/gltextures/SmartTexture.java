@@ -19,6 +19,8 @@ package com.watabou.gltextures;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;
+import android.support.annotation.NonNull;
+
 import com.watabou.glwrap.Texture;
 
 public class SmartTexture extends Texture {
@@ -36,11 +38,11 @@ public class SmartTexture extends Texture {
 	
 	public Atlas atlas;
 	
-	public SmartTexture( Bitmap bitmap ) {
+	public SmartTexture(@NonNull Bitmap bitmap ) {
 		this( bitmap, NEAREST, CLAMP );
 	}
 
-	public SmartTexture( Bitmap bitmap, int filtering, int wrapping ) {
+	public SmartTexture(@NonNull Bitmap bitmap, int filtering, int wrapping ) {
 		
 		super();
 		

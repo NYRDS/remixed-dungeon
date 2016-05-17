@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundlable;
@@ -69,7 +71,7 @@ public class Journal {
 		}
 
 		@Override
-		public int compareTo( Record another ) {
+		public int compareTo(@NonNull Record another ) {
 			return another.depth - depth;
 		}
 
