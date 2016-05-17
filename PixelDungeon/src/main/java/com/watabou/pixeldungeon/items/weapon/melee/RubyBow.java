@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
 public class RubyBow extends Bow {
 
 	public RubyBow() {

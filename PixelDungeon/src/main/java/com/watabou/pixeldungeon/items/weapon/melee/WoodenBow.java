@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class WoodenBow extends Bow {
 
