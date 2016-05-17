@@ -25,7 +25,7 @@ import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Texture;
 
 import java.io.InputStream;
@@ -129,23 +129,18 @@ public class TextureCache {
 	}
 
 	public static Bitmap getBitmap(Object src) {
-		try {
-			if (src instanceof String) {
-				InputStream stream = ModdingMode.getInputStream((String) src);
-				if(stream != null){
-					return BitmapFactory.decodeStream(stream);
-				} else {
-					return null;
-				}
-			} else if (src instanceof Bitmap) {
-				return (Bitmap) src;
-			} else {
-				return null;
+		if (src instanceof String) {
+			String resName = (String) src;
+			InputStream stream = ModdingMode.getInputStream(resName);
+			if(stream != null){
+				return BitmapFactory.decodeStream(stream);
 			}
-		} catch (Exception e) {
-			EventCollector.logException(e);
-			return null;
+			throw new TrackedRuntimeException("Failed to load "+ resName + "(mod: "+ ModdingMode.activeMod() + ")");
+		} else if (src instanceof Bitmap) {
+			return (Bitmap) src;
 		}
+
+		throw new TrackedRuntimeException("Bad resource source for Bitmap "+ src.getClass().getName());
 	}
 
 	public static boolean contains(Object key) {
