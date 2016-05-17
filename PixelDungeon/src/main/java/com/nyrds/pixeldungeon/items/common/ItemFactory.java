@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
+import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -331,6 +332,7 @@ public class ItemFactory {
 		registerItemClass(RubyCrossbow.class);
 		registerItemClass(ChaosArmor.class);
 		registerItemClass(PotionOfMight.class);
+		registerItemClass(HeartOfDarkness.class);
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {
