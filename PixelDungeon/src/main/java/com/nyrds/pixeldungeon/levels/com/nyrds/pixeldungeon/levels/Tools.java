@@ -17,10 +17,10 @@ public class Tools {
 
 		if(level.cellValid(level.entrance)) {
 			level.set(level.entrance, Terrain.EMPTY_DECO);
-			level.set(level.exit, Terrain.EMPTY_DECO);
+			level.set(level.getExit(0), Terrain.EMPTY_DECO);
 		}
 		level.entrance = -1;
-		level.exit     = -1;
+		level.setExit(-1,0);
 
 		int im = (int) (Math.floor((float)(w)/roomStep)*roomStep+2);
 		int jm = (int) (Math.floor((float)(h)/roomStep)*roomStep+2);
@@ -121,8 +121,8 @@ public class Tools {
 		level.entrance = level.cell(width/4,height/4);
 		level.set(level.entrance, Terrain.ENTRANCE);
 
-		level.exit = level.cell(width-width/4,height-height/4);
-		level.set(level.exit, Terrain.EXIT);
+		level.setExit(level.cell(width-width/4,height-height/4),0);
+		level.set(level.getExit(0), Terrain.EXIT);
 
 		if(GameScene.isSceneReady()) {
 			GameScene.updateMap();

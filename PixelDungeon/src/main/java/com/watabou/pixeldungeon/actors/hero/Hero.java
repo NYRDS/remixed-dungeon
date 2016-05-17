@@ -813,7 +813,7 @@ public class Hero extends Char {
 		refreshPets();
 
 		int stairs = action.dst;
-		if (getPos() == stairs && (getPos() == Dungeon.level.exit || getPos() == Dungeon.level.secondaryExit)) {
+		if (getPos() == stairs && Dungeon.level.isExit(getPos())) {
 
 			curAction = null;
 
@@ -1250,7 +1250,7 @@ public class Hero extends Char {
 
 			curAction = new HeroAction.Unlock(cell);
 
-		} else if (cell == Dungeon.level.exit || cell == Dungeon.level.secondaryExit) {
+		} else if (Dungeon.level.isExit(cell)) {
 
 			curAction = new HeroAction.Descend(cell);
 

@@ -86,6 +86,18 @@ import java.util.List;
 
 public abstract class Level implements Bundlable {
 
+	public int getExit(Integer index) {
+		return exitMap.get(index);
+	}
+
+	public void setExit(int exit, Integer index) {
+		exitMap.put(index,exit);
+	}
+
+	public boolean isExit(int pos) {
+		return exitMap.containsValue(pos);
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS
 	}
@@ -126,9 +138,9 @@ public abstract class Level implements Bundlable {
 
 	public Feeling feeling = Feeling.NONE;
 
-	public int entrance;
-	public int exit;
-	public int secondaryExit;
+	public  int entrance;
+
+	private HashMap<Integer, Integer> exitMap = new HashMap<>();
 	
 	public String levelId;
 	
@@ -327,9 +339,10 @@ public abstract class Level implements Bundlable {
 		mapped = bundle.getBooleanArray(MAPPED);
 
 		entrance = bundle.getInt(ENTRANCE);
-		exit = bundle.getInt(EXIT);
-		secondaryExit = bundle.optInt(SECONDARY_EXIT, -1);
-		
+
+		setExit(bundle.getInt(EXIT), 0);
+		setExit(bundle.optInt(SECONDARY_EXIT, -1),1);
+
 		weakFloorCreated = false;
 
 		for (Heap heap : bundle.getCollection(HEAPS,Heap.class)) {
@@ -372,8 +385,9 @@ public abstract class Level implements Bundlable {
 		bundle.put(VISITED, visited);
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
-		bundle.put(EXIT, exit);
-		bundle.put(SECONDARY_EXIT, secondaryExit);
+
+		//bundle.put(EXIT,);
+
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());
 		

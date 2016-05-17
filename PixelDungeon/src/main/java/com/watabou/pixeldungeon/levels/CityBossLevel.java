@@ -100,8 +100,8 @@ public class CityBossLevel extends Level {
 			map[i] = Terrain.EMPTY_SP;
 		}
 		
-		exit = (TOP - 1) * getWidth() + _Center();
-		map[exit] = Terrain.LOCKED_EXIT;
+		setExit((TOP - 1) * getWidth() + _Center(),0);
+		map[getExit(0)] = Terrain.LOCKED_EXIT;
 		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
 		map[arenaDoor] = Terrain.DOOR;

@@ -107,11 +107,11 @@ public class CavesBossLevel extends Level {
 			
 			if (top < topMost) {
 				topMost = top;
-				exit = Random.Int( left, right ) + (top - 1) * getWidth();
+				setExit(Random.Int( left, right ) + (top - 1) * getWidth(),0);
 			}
 		}
 		
-		map[exit] = Terrain.LOCKED_EXIT;
+		map[getExit(0)] = Terrain.LOCKED_EXIT;
 		
 		for (int i=0; i < getLength(); i++) {
 			if (map[i] == Terrain.EMPTY && Random.Int( 6 ) == 0) {

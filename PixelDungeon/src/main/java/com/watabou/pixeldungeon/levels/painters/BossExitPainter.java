@@ -33,14 +33,17 @@ public class BossExitPainter extends Painter {
 			door.set( Room.Door.Type.REGULAR );
 		}
 		
-		level.exit = room.top * level.getWidth() + (room.left + room.right) / 2;
-		set( level, level.exit, Terrain.LOCKED_EXIT );
+		level.setExit(room.top * level.getWidth() + (room.left + room.right) / 2,0);
+		set( level, level.getExit(0), Terrain.LOCKED_EXIT );
 		
 		if(DungeonGenerator.needSecondaryExit(level.levelId)) {
+			/*
+			int secondaryExit;
 			do {
-				level.secondaryExit = room.random(level, 1);
-			} while (level.secondaryExit == level.exit);
+				seco = room.random(level, 1);
+			} while (secondaryExit == level.getExit());
 			set(level,level.secondaryExit, Terrain.EXIT);
+			*/
 		}
 	}
 	

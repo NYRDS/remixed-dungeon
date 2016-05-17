@@ -140,10 +140,13 @@ public class DungeonGenerator {
 
 			if (descend && !current.levelId.equals(getEntryLevel())) {
 				if (Dungeon.level != null) {
+					//TODO
+					/*
 					if (current.cellId == Dungeon.level.secondaryExit) {
 						next.cellId = -2;
 						index = 1;
 					}
+					*/
 				}
 			}
 

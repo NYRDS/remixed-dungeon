@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -35,6 +32,9 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SewerBossLevel extends RegularLevel {
 
@@ -159,7 +159,7 @@ public class SewerBossLevel extends RegularLevel {
 		int start = roomExit.top * getWidth() + roomExit.left + 1;
 		int end = start + roomExit.width() - 1;
 		for (int i=start; i < end; i++) {
-			if (i != exit && i != secondaryExit) {
+			if (isExit(i)) {
 				map[i] = Terrain.WALL_DECO;
 				map[i + getWidth()] = Terrain.WATER;
 			} else {

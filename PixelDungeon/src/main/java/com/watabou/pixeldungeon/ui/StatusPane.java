@@ -100,7 +100,7 @@ public class StatusPane extends Component {
 		blood.on = false;
 		add( blood );
 		
-		compass = new Compass( Dungeon.level.exit );
+		compass = new Compass(Dungeon.level.getExit(0));
 		add( compass );
 
 		hp = new Image( Assets.HP_BAR );

@@ -75,7 +75,7 @@ public class PredesignedLevel extends CommonLevel {
 			entrance = cell(entranceDesc.getInt(0), entranceDesc.getInt(1));
 
 			JSONArray exitDesc = mLevelDesc.getJSONArray("exit");
-			exit = cell(exitDesc.getInt(0), exitDesc.getInt(1));
+			setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)),0);
 
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);

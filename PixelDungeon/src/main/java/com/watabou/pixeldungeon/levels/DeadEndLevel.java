@@ -63,7 +63,7 @@ public class DeadEndLevel extends Level {
 		entrance = SIZE * getWidth() + SIZE / 2 + 1;
 		map[entrance] = Terrain.ENTRANCE;
 		
-		exit = -1;
+		setExit(-1,0);
 		
 		map[(SIZE / 2 + 1) * (getWidth() + 1)] = Terrain.SIGN;
 		

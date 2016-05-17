@@ -88,7 +88,7 @@ public class HallsBossLevel extends Level {
 			Painter.fill( this, 2 + i * 4, top, 4, bottom - top + 1, Terrain.EMPTY );
 			
 			if (i == 2) {
-				exit = (i * 4 + 3) + (top - 1) * getWidth() ;
+				setExit((i * 4 + 3) + (top - 1) * getWidth(),0);
 			}
 			
 			for (int j=0; j < 4; j++) {
@@ -99,7 +99,7 @@ public class HallsBossLevel extends Level {
 			}
 		}
 		
-		map[exit] = Terrain.LOCKED_EXIT;
+		map[getExit(0)] = Terrain.LOCKED_EXIT;
 		
 		Painter.fill( this, _RoomLeft() - 1, _RoomTop() - 1, 
 			_RoomRight() - _RoomLeft() + 3, _RoomBottom() - _RoomTop() + 3, Terrain.WALL );

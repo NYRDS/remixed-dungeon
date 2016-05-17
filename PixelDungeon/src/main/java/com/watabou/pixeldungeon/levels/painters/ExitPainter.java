@@ -33,14 +33,17 @@ public class ExitPainter extends Painter {
 			door.set( Room.Door.Type.REGULAR );
 		}
 		
-		level.exit = room.random(level, 1 );
-		set( level, level.exit, Terrain.EXIT );
+		level.setExit(room.random(level, 1 ),0);
+		set( level, level.getExit(0), Terrain.EXIT );
 		
 		if(DungeonGenerator.needSecondaryExit(level.levelId)) {
+			//TODO
+			/*
 			do {
 				level.secondaryExit = room.random(level, 0);
-			} while (level.secondaryExit == level.exit);
+			} while (level.secondaryExit == level.getExit());
 			set(level,level.secondaryExit, Terrain.EXIT);
+			*/
 		}
 	}
 	
