@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
@@ -116,7 +118,13 @@ public class WaterOfTransmutation extends WellWater {
 		} else if (w instanceof WarHammer) {
 			n = new Glaive();
 		}
-		
+
+		else if (w instanceof Claymore) {
+			n = new Halberd();
+		} else if (w instanceof Halberd) {
+			n = new Claymore();
+		}
+
 		if (n != null) {
 			
 			int level = w.level();
