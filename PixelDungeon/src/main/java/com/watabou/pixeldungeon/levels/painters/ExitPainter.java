@@ -24,27 +24,32 @@ import com.watabou.pixeldungeon.levels.Terrain;
 
 public class ExitPainter extends Painter {
 
-	public static void paint( Level level, Room room ) {
+	public static void paint(Level level, Room room) {
 
-		fill( level, room, Terrain.WALL );
-		fill( level, room, 1, Terrain.EMPTY );
-		
+		fill(level, room, Terrain.WALL);
+		fill(level, room, 1, Terrain.EMPTY);
+
 		for (Room.Door door : room.connected.values()) {
-			door.set( Room.Door.Type.REGULAR );
+			door.set(Room.Door.Type.REGULAR);
 		}
-		
-		level.setExit(room.random(level, 1 ),0);
-		set( level, level.getExit(0), Terrain.EXIT );
-		
-		if(DungeonGenerator.needSecondaryExit(level.levelId)) {
-			//TODO
-			/*
+
+		level.setExit(room.random(level, 1), 0);
+		set(level, level.getExit(0), Terrain.EXIT);
+
+		int exitCount = DungeonGenerator.exitCount(level.levelId);
+
+		for (int index = 1; index < exitCount; ++index) {
+			int exitCandidate = -1;
 			do {
-				level.secondaryExit = room.random(level, 0);
-			} while (level.secondaryExit == level.getExit());
-			set(level,level.secondaryExit, Terrain.EXIT);
-			*/
+				exitCandidate = room.random(level, 0);
+			} while (level.map[exitCandidate] == Terrain.EXIT ||
+					level.map[exitCandidate] == Terrain.LOCKED_EXIT ||
+					level.map[exitCandidate] == Terrain.UNLOCKED_EXIT);
+
+			level.setExit(exitCandidate, index);
+			set(level, exitCandidate, Terrain.EXIT);
 		}
+
 	}
-	
+
 }

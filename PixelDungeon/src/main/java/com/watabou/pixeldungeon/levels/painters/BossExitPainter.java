@@ -35,15 +35,19 @@ public class BossExitPainter extends Painter {
 		
 		level.setExit(room.top * level.getWidth() + (room.left + room.right) / 2,0);
 		set( level, level.getExit(0), Terrain.LOCKED_EXIT );
-		
-		if(DungeonGenerator.needSecondaryExit(level.levelId)) {
-			/*
-			int secondaryExit;
+
+		int exitCount = DungeonGenerator.exitCount(level.levelId);
+
+		for (int index = 1; index < exitCount; ++index) {
+			int exitCandidate = -1;
 			do {
-				seco = room.random(level, 1);
-			} while (secondaryExit == level.getExit());
-			set(level,level.secondaryExit, Terrain.EXIT);
-			*/
+				exitCandidate = room.random(level, 0);
+			} while (level.map[exitCandidate] == Terrain.EXIT ||
+					level.map[exitCandidate] == Terrain.LOCKED_EXIT ||
+					level.map[exitCandidate] == Terrain.UNLOCKED_EXIT);
+
+			level.setExit(exitCandidate, index);
+			set(level, exitCandidate, Terrain.EXIT);
 		}
 	}
 	

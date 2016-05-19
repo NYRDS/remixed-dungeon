@@ -98,6 +98,16 @@ public abstract class Level implements Bundlable {
 		return exitMap.containsValue(pos);
 	}
 
+	public int exitIndex(int pos) {
+		for(Integer index: exitMap.keySet()) {
+			if(exitMap.get(index)==pos) {
+				return index;
+			}
+		}
+		throw new TrackedRuntimeException(new Exception("no exit at this cell"));
+	}
+
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS
 	}

@@ -111,9 +111,9 @@ public class DungeonGenerator {
 		}
 	}
 
-	public static boolean needSecondaryExit(String levelId) {
+	public static int exitCount(String levelId) {
 		try {
-			return mGraph.getJSONArray(levelId).getJSONArray(0).length() > 1;
+			return mGraph.getJSONArray(levelId).getJSONArray(0).length();
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
 		}
@@ -139,28 +139,18 @@ public class DungeonGenerator {
 			next.cellId = -1;
 
 			if (descend && !current.levelId.equals(getEntryLevel())) {
-				if (Dungeon.level != null) {
-					//TODO
-					/*
-					if (current.cellId == Dungeon.level.secondaryExit) {
-						next.cellId = -2;
+				if (Dungeon.level != null) { // first descend
+					if(Dungeon.level.isExit(current.cellId)) {
+						next.cellId = -Dungeon.level.exitIndex(current.cellId);
 						index = 1;
 					}
-					*/
 				}
 			}
 
 			if (!descend) {
 				if (currentLevel.length() > 2) {
 					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
-					switch (exitIndex) {
-						case 1:
-							next.cellId = -1;
-							break;
-						case 2:
-							next.cellId = -2;
-							break;
-					}
+					next.cellId = -exitIndex;
 				}
 			}
 
