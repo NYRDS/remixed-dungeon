@@ -283,7 +283,7 @@ public class InterlevelScene extends PixelScene {
 			level = Dungeon.newLevel(next);
 		}
 
-		int exitIndex = -next.cellId - 1;
+		int exitIndex = -(next.cellId + 1);
 
 		Dungeon.switchLevel(level, level.getExit(exitIndex), next.levelId);
 

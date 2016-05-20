@@ -350,9 +350,15 @@ public abstract class Level implements Bundlable {
 
 		entrance = bundle.getInt(ENTRANCE);
 
-		setExit(bundle.getInt(EXIT), 0);
-		setExit(bundle.optInt(SECONDARY_EXIT, -1),1);
-
+		int exits[] = bundle.getIntArray(EXIT);
+		if(exits!=null) {
+			for(int i=0;i<exits.length;++i) {
+				setExit(exits[i],i);
+			}
+		} else {
+			setExit(bundle.getInt(EXIT), 0);
+			setExit(bundle.optInt(SECONDARY_EXIT, -1), 1);
+		}
 		weakFloorCreated = false;
 
 		for (Heap heap : bundle.getCollection(HEAPS,Heap.class)) {
@@ -396,7 +402,13 @@ public abstract class Level implements Bundlable {
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
 
-		//bundle.put(EXIT,);
+		int []exits = new int[exitMap.size()];
+
+		for(int i =0;i<exitMap.size();++i){
+			exits[i] = exitMap.get(i);
+		}
+
+		bundle.put(EXIT,exits);
 
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());

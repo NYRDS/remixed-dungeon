@@ -139,9 +139,9 @@ public class DungeonGenerator {
 			next.cellId = -1;
 
 			if (descend && !current.levelId.equals(getEntryLevel())) {
-				if (Dungeon.level != null) { // first descend
+				if (Dungeon.level != null) { // not first descend
 					if(Dungeon.level.isExit(current.cellId)) {
-						next.cellId = -Dungeon.level.exitIndex(current.cellId);
+						next.cellId = -(Dungeon.level.exitIndex(current.cellId) + 1);
 						index = 1;
 					}
 				}
