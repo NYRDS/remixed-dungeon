@@ -141,8 +141,8 @@ public class DungeonGenerator {
 			if (descend && !current.levelId.equals(getEntryLevel())) {
 				if (Dungeon.level != null) { // not first descend
 					if(Dungeon.level.isExit(current.cellId)) {
-						next.cellId = -(Dungeon.level.exitIndex(current.cellId) + 1);
-						index = 1;
+						index = Dungeon.level.exitIndex(current.cellId);
+						next.cellId = -(index + 1);
 					}
 				}
 			}
