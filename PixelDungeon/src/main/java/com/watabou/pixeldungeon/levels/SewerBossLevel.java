@@ -159,7 +159,7 @@ public class SewerBossLevel extends RegularLevel {
 		int start = roomExit.top * getWidth() + roomExit.left + 1;
 		int end = start + roomExit.width() - 1;
 		for (int i=start; i < end; i++) {
-			if (isExit(i)) {
+			if (!isExit(i)) {
 				map[i] = Terrain.WALL_DECO;
 				map[i + getWidth()] = Terrain.WATER;
 			} else {
