@@ -357,8 +357,12 @@ public abstract class Level implements Bundlable {
 			}
 		} else {
 			setExit(bundle.getInt(EXIT), 0);
-			setExit(bundle.optInt(SECONDARY_EXIT, -1), 1);
+			int secondaryExit = bundle.optInt(SECONDARY_EXIT, -1);
+			if(cellValid(secondaryExit)) {
+				setExit(secondaryExit, 1);
+			}
 		}
+
 		weakFloorCreated = false;
 
 		for (Heap heap : bundle.getCollection(HEAPS,Heap.class)) {
