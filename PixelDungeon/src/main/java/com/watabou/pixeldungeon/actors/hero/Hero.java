@@ -843,7 +843,7 @@ public class Hero extends Char {
 		int stairs = action.dst;
 		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
 
-			if (Dungeon.depth == 1) {
+			if (Dungeon.depth == 0) {
 
 				if (belongings.getItem(Amulet.class) == null) {
 					GameScene.show(new WndMessage(TXT_LEAVE));
