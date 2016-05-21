@@ -21,5 +21,5 @@
    "tiles":"tiles0.png",
    "water":"water0.png",
    "entrance":[1,1],
-   "exit":[3,3]
+   "multiexit":[[3,3],[5,5],[7,7],[9,9]]
 }
