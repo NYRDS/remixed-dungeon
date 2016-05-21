@@ -98,7 +98,7 @@ public class LloydsBeacon extends Item {
 	@Override
 	public void execute( Hero hero, String action ) {
 		
-		if (action == AC_SET || action == AC_RETURN) {
+		if (action.equals(AC_SET) || action.equals(AC_RETURN)) {
 			
 			if (Dungeon.bossLevel()) {
 				hero.spend( LloydsBeacon.TIME_TO_USE );
@@ -114,7 +114,7 @@ public class LloydsBeacon extends Item {
 			}
 		}
 		
-		if (action == AC_SET) {
+		if (action.equals(AC_SET)) {
 			
 			returnTo = Dungeon.currentPosition();
 			
@@ -126,7 +126,7 @@ public class LloydsBeacon extends Item {
 			
 			GLog.i( TXT_RETURN );
 			
-		} else if (action == AC_RETURN) {
+		} else if (action.equals(AC_RETURN)) {
 			if (returnTo.levelDepth == Dungeon.depth && returnTo.levelKind.equals(hero.levelKind)) {
 				reset();
 				WandOfBlink.appear( hero, returnTo.cellId );

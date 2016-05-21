@@ -18,7 +18,7 @@ t * Pixel Dungeon
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -468,7 +468,7 @@ public class Dungeon {
 			Dungeon.level = null;
 		} else {
 			GLog.toFile("File %s not found!", loadFrom);
-			return null;
+			return newLevel(next);
 		}
 
 		Bundle bundle = Bundle.read(input);
@@ -476,7 +476,8 @@ public class Dungeon {
 		input.close();
 
 		if (bundle == null) {
-			throw new TrackedRuntimeException("can not load level from " + loadFrom);
+			EventCollector.logEvent("Dungeon.loadLevel","read fail");
+			return newLevel(next);
 		}
 
 		Level level = Level.fromBundle(bundle, "level");
@@ -484,7 +485,8 @@ public class Dungeon {
 			level.levelId = next.levelId;
 			initSizeDependentStuff(level.getWidth(), level.getHeight());
 		} else {
-			GLog.toFile("cannot load %s !", loadFrom);
+			EventCollector.logEvent("Dungeon.loadLevel","fromBundle fail");
+			return newLevel(next);
 		}
 		return level;
 	}
