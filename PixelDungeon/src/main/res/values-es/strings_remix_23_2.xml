@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Claymore</string>
+    <string name="Claymore_Info">Esta enorme espada es capaz de cortar cualquier cosa.</string>
+    <string name="Claymore_Gender">femenino</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Alabarda</string>
+    <string name="Halberd_Info">Un arma de asta con una hacha en el extremo del poste.</string>
+    <string name="Halberd_Gender">femenino</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">Ballesta de madera</string>
+    <string name="WoodenCrossbow_Info">Una básica ballesta de madera, parece que fué diseñada para disparar flechas de arco.</string>
+    <string name="WoodenCrossbow_Gender">masculino</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Ballesta compuesta</string>
+    <string name="CompositeCrossbow_Info">Esta ballesta reforzada es una herramienta más eficaz comparandola con una hecha de madera.</string>
+    <string name="CompositeCrossbow_Gender">masculino</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Ballesta de rubi</string>
+    <string name="RubyCrossbow_Info">Esta arma mortal realmente una obra maestra de la ingeniería enana.</string>
+    <string name="RubyCrossbow_Gender">masculino</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Armadura gotica</string>
+    <string name="GothicArmor_Info">Una armadura gótica que es el pináculo del arte en la forja de armaduras.</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Armadura de caos</string>
+    <string name="ChaosArmor_Info">Las placas color rojo sangre de esta armadura unidas con cadenas de color rojo oscuro. Irradia energía caótica al tocarla.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">El cristal absorbe tu armadura, tomando la forma de una armadura compuesta</string>
+
+</resources>
