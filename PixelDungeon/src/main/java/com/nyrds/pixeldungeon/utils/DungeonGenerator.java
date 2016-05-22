@@ -155,7 +155,7 @@ public class DungeonGenerator {
 			}
 
 			if(index >= nextLevelSet.length()) {
-				index = nextLevelSet.length() - 1;
+				index = 0;
 				EventCollector.logEvent("DungeonGenerator","wrong next level index");
 			}
 
