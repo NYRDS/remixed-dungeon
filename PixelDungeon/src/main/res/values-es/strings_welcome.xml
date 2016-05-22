@@ -65,4 +65,10 @@ remix.21.4:\n
 		- Algunas actualizaciones visuales menores\n
 		- Varias correcciones de errores\n
         </string>
+  <string name="Welcome_Text_23_2">
+        remix.23.2:\n
+        - Armas y armaduras de nivel 6 añadidas\n
+        - Ballestas añadidas\n
+        - Armadura de Caos añadida\n
+        </string>
 </resources>
