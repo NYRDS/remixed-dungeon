@@ -31,12 +31,13 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private CompositeTextureImage avatar;
 
 	// body goes as main texture
-	private static final String LAYER_ARMOR  = "armor";
-	private static final String LAYER_HEAD   = "head";
-	private static final String LAYER_DEATH  = "death";
-	private static final String LAYER_BODY   = "body";
-	private static final String LAYER_SHIELD = "shield";
-	private static final String LAYER_WEAPON = "weapon";
+	private static final String LAYER_ARMOR     = "armor";
+	private static final String LAYER_HEAD      = "head";
+	private static final String LAYER_DEATH     = "death";
+	private static final String LAYER_BODY      = "body";
+	private static final String LAYER_SHIELD    = "shield";
+	private static final String LAYER_WEAPON    = "weapon";
+	private static final String LAYER_ACCESSORY = "accessory";
 
 	private Animation fly;
 
@@ -44,7 +45,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 		LAYER_BODY,
 		LAYER_HEAD,
 		LAYER_ARMOR,
-		LAYER_DEATH
+		LAYER_DEATH,
+		LAYER_ACCESSORY
 	};
 
 	Map<String,String> layersDesc = new HashMap<>();
@@ -80,6 +82,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_ARMOR,armorDescriptor(hero.belongings.armor));
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
+
+		layersDesc.put(LAYER_ACCESSORY,"hero/accessories/bow_tie.png");
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -196,6 +200,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		avatar.addLayer(getLayerTexture(LAYER_HEAD));
 		avatar.addLayer(getLayerTexture(LAYER_ARMOR));
 		avatar.addLayer(getLayerTexture(LAYER_DEATH));
+		avatar.addLayer(getLayerTexture(LAYER_ACCESSORY));
 
 		return avatar;
 	}
