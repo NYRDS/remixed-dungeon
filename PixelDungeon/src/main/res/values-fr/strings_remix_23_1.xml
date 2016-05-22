@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Etranger</string>
+  <string name="AzuterronNPC_Gender">mâle</string>
+  <string name="AzuterronNPC_Name_Objective">Etranger</string>
+  <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
+  <string name="AzuterronNPC_Quest_Start">Hein, quoi ... oh, tu peux me voir, n\'est-ce pas ? Cela veut dire que tu n\'es pas l\'un d\'\"eux\". Je vois que tu n\'es pas friand de tous ces monstres. Tu sais quoi, si tu résous mon petit problème, je t\'offrirais mon aide. Quelque part dans cet étage, tu trouveras une créature des Ténèbres, un _Esprit Perfide_. Tues-le, prends son _cœur_ et reviens vers moi. Une dernière chose, si tu est intéressé par mon équipement, n\'hésite pas à demander</string>
+  <string name="AzuterronNPC_Quest_Reminder">Aides-moi et je t\'aiderais.</string>
+  <string name="AzuterronNPC_Quest_End">Excellent. Prends cette potion, tu la trouveras bénéfique</string>
+  <string name="Journal_Azuterron">Etranger</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Esprit Perfide</string>
+  <string name="TreacherousSpirit_Gender">mâle</string>
+  <string name="TreacherousSpirit_Name_Objective">Esprit Perfide</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <!--STRINGS OF PseudoRat CLASS-->
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <!--Badges-->
+</resources>
