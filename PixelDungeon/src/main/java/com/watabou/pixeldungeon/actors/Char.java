@@ -569,7 +569,7 @@ public abstract class Char extends Actor {
 
 	public CharSprite getSprite() {
 		if (sprite == null) {
-			throw new TrackedRuntimeException("null sprite for "+ this.getClass().getCanonicalName());
+			throw new TrackedRuntimeException("null sprite for "+ this.getClass().getSimpleName());
 		}
 		return sprite;
 	}
