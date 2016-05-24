@@ -5,6 +5,7 @@ import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Unzip;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -56,7 +57,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 		float pos = tfTitle.y + tfTitle.height() + MARGIN;
 
-		if(!PixelDungeon.isConnectedToInternet()) {
+		if(!Util.isConnectedToInternet()) {
 			tfTitle.text("Please enable Internet access to download mods");
 			tfTitle.measure();
 			pos = tfTitle.y + tfTitle.height() + MARGIN;
