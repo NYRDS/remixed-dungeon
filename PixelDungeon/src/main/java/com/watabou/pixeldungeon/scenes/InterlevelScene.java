@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
@@ -28,7 +29,6 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.items.Generator;
@@ -133,12 +133,11 @@ public class InterlevelScene extends PixelScene {
 			}
 
 			if(mode != Mode.CONTINUE) {
-				PixelDungeon.displayEasyModeSmallScreenAd(this);
+				Ads.displayEasyModeSmallScreenAd(this);
 			} else {
 				returnToWork(true);
 			}
 		}
-		
 	}
 	
 	@Override

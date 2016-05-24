@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Ads;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.Dungeon;
@@ -94,7 +95,7 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements Interstitial
 		slot = getSlotToLoad(index);
 		
 		if (PixelDungeon.donated() < 1) {
-			PixelDungeon.displaySaveAndLoadAd(returnTo);
+			Ads.displaySaveAndLoadAd(returnTo);
 		} else {
 			returnToWork(true);
 		}
