@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -42,7 +43,7 @@ public class FreeRunnerArmor extends ClassArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.ROGUE) {
+		if (hero.heroClass == HeroClass.ROGUE && hero.subClass == HeroSubClass.FREERUNNER) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( TXT_NOT_ROGUE );
