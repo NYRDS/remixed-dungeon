@@ -99,7 +99,7 @@ public class WndDonate extends WndTabbed {
 				String price = Iap.getDonationPriceString(level);
 				String btnText;
 				if( price != null ) {
-					btnText = DONATE + price;
+					btnText = DONATE + " "+ price;
 				} else {
 					btnText = NOT_CONNECTED;
 				}
