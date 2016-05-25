@@ -54,23 +54,26 @@ public class Armor extends EquipableItem {
 	private static final String TXT_TO_STRING       = Game.getVar(R.string.Armor_ToString);
 	
 	private static final String TXT_INCOMPATIBLE    = Game.getVar(R.string.Armor_Incompatible);
-	
+
+	public boolean hasHelmet;
+
 	public int tier;
 	
 	public int STR;
 	public int DR;
-	
+
 	private int hitsToKnow = 10;
 	
 	public Glyph glyph;
 	
 	public Armor( int tier ) {
 		imageFile = "items/armor.png";
-		
+
 		this.tier = tier;
 		
 		STR = typicalSTR();
 		DR = typicalDR();
+		hasHelmet = false;
 	}
 	
 	private static final String GLYPH	= "glyph";

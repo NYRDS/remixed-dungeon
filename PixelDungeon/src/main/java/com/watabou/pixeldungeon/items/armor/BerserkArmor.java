@@ -34,6 +34,7 @@ public class BerserkArmor extends ClassArmor {
 	{
 		name = Game.getVar(R.string.WarriorArmor_Name);
 		image = 6;
+		hasHelmet = true;
 	}
 	
 	@Override

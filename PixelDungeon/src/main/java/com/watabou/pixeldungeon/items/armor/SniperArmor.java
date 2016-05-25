@@ -25,6 +25,7 @@ public class SniperArmor extends ClassArmor {
 	{
 		name = Game.getVar(R.string.HuntressArmor_Name);
 		image = 15;
+		hasHelmet = true;
 	}
 	
 	private HashMap<Callback, Mob> targets = new HashMap<>();

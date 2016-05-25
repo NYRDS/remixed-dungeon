@@ -21,6 +21,7 @@ public class ElfArmor extends ClassArmor {
 	
 	public ElfArmor() {
 		image = 17;
+		hasHelmet = true;
 	}	
 	
 	@Override

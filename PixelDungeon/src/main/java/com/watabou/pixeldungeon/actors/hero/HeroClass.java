@@ -32,12 +32,18 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.armor.BerserkArmor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
+import com.watabou.pixeldungeon.items.armor.FreeRunnerArmor;
+import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
+import com.watabou.pixeldungeon.items.armor.ShamanArmor;
+import com.watabou.pixeldungeon.items.armor.SniperArmor;
+import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
@@ -128,15 +134,18 @@ public enum HeroClass {
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 
+		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().upgrade(100));
-		hero.collect(new GothicArmor());
-		hero.collect(new ChaosArmor());
-		hero.collect(new Halberd().upgrade(100));
-		hero.collect(new WoodenCrossbow());
-		hero.collect(new RubyCrossbow());
-		hero.collect(new CompositeCrossbow());
 
-		hero.collect(new ChaosCrystal().identify().identify());
+		hero.collect(new ElfArmor());
+		hero.collect(new BerserkArmor());
+		hero.collect(new FreeRunnerArmor());
+		hero.collect(new GladiatorArmor());
+		hero.collect(new HuntressArmor());
+		hero.collect(new ShamanArmor());
+		hero.collect(new SniperArmor());
+		hero.collect(new WardenArmor());
+
 		hero.ht(1000);
 		hero.hp(1000);
 		hero.attackSkill = 1000;
