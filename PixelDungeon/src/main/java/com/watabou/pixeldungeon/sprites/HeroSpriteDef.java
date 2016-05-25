@@ -80,11 +80,13 @@ public class HeroSpriteDef extends MobSpriteDef {
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
-		layersDesc.put(LAYER_HAIR, "hero/head/hair/" + classDescriptor + "_HAIR.png");
 		if (hero.belongings.armor  != null && hero.belongings.armor.hasHelmet) {
+			layersDesc.put(LAYER_HAIR, HERO_EMPTY_PNG);
 			layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor));
 		} else {
+			layersDesc.put(LAYER_HAIR, "hero/head/hair/" + classDescriptor + "_HAIR.png");
 			layersDesc.put(LAYER_HELMET, HERO_EMPTY_PNG);
+
 		}
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
