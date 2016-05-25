@@ -20,13 +20,7 @@ public abstract class GameWithGoogleIap extends Game {
 			initEventCollector();
 		}
 	}
-
-	@Override
-	public void initIap() {
-		mIap.initIap();
-	}
-
-
+	
 	private static boolean googleAnalyticsUsable() {
 		if(Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) > 0) {
 			return android.os.Build.VERSION.SDK_INT >= 9;
@@ -41,11 +35,5 @@ public abstract class GameWithGoogleIap extends Game {
 		} else {
 			EventCollector.disable();
 		}
-	}
-
-	public abstract void setDonationLevel(int level);
-
-	public static GameWithGoogleIap instance() {
-		return (GameWithGoogleIap) Game.instance();
 	}
 }

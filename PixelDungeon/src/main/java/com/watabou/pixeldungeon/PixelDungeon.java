@@ -74,7 +74,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
 
-		initIap();
+		Iap.initIap();
 		
 		if(PixelDungeon.uiLanguage().equals("ko")) {
 			PixelDungeon.classicFont(false);
@@ -361,7 +361,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	/*
 	 * <---Purchases
 	 */
-	public void setDonationLevel(int level) {
+	static public void setDonationLevel(int level) {
 		
 		if(level > 0) {
 			Ads.removeEasyModeBanner();

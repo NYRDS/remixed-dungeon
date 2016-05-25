@@ -449,10 +449,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return instance;
 	}
 
-//---Iap---
-	public void initIap() {}
-//---
-
 	public static int width() {
 		return width;
 	}

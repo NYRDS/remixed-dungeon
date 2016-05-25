@@ -103,21 +103,21 @@ public class Iap {
 	}
 
 	private static void checkPurchases() {
-		PixelDungeon.instance().setDonationLevel(0);
+		PixelDungeon.setDonationLevel(0);
 
 		Purchase check = mInventory.getPurchase(SKU_LEVEL_1);
 		if (check != null && verifyDeveloperPayload(check)) {
-			PixelDungeon.instance().setDonationLevel(1);
+			PixelDungeon.setDonationLevel(1);
 		}
 
 		check = mInventory.getPurchase(SKU_LEVEL_2);
 		if (check != null && verifyDeveloperPayload(check)) {
-			PixelDungeon.instance().setDonationLevel(2);
+			PixelDungeon.setDonationLevel(2);
 		}
 
 		check = mInventory.getPurchase(SKU_LEVEL_3);
 		if (check != null && verifyDeveloperPayload(check)) {
-			PixelDungeon.instance().setDonationLevel(3);
+			PixelDungeon.setDonationLevel(3);
 		}
 	}
 
@@ -203,15 +203,15 @@ public class Iap {
 			}
 
 			if (purchase.getSku().equals(SKU_LEVEL_1)) {
-				PixelDungeon.instance().setDonationLevel(1);
+				PixelDungeon.setDonationLevel(1);
 			}
 
 			if (purchase.getSku().equals(SKU_LEVEL_2)) {
-				PixelDungeon.instance().setDonationLevel(2);
+				PixelDungeon.setDonationLevel(2);
 			}
 
 			if (purchase.getSku().equals(SKU_LEVEL_3)) {
-				PixelDungeon.instance().setDonationLevel(3);
+				PixelDungeon.setDonationLevel(3);
 			}
 
 			m_iapReady = true;
