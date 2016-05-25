@@ -33,6 +33,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 	// body goes as main texture
 	private static final String LAYER_ARMOR     = "armor";
 	private static final String LAYER_HEAD      = "head";
+	private static final String LAYER_HAIR      = "hair";
+	private static final String LAYER_HELMET      = "helmet";
 	private static final String LAYER_DEATH     = "death";
 	private static final String LAYER_BODY      = "body";
 	private static final String LAYER_SHIELD    = "shield";
@@ -45,6 +47,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 		LAYER_BODY,
 		LAYER_HEAD,
 		LAYER_ARMOR,
+		LAYER_HAIR,
+		LAYER_HELMET,
 		LAYER_DEATH,
 		LAYER_ACCESSORY
 	};
@@ -74,16 +78,18 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
 
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
-		if (hero.belongings.armor == null || !(hero.belongings.armor instanceof ClassArmor)) {
-			layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
+		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
+		layersDesc.put(LAYER_HAIR, "hero/head/hair/" + classDescriptor + "_HAIR.png");
+		if (hero.belongings.armor  != null && hero.belongings.armor.hasHelmet) {
+			layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor));
 		} else {
-			layersDesc.put(LAYER_HEAD, HERO_EMPTY_PNG);
+			layersDesc.put(LAYER_HELMET, HERO_EMPTY_PNG);
 		}
-		layersDesc.put(LAYER_ARMOR,armorDescriptor(hero.belongings.armor));
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
 
-		layersDesc.put(LAYER_ACCESSORY,"hero/accessories/bow_tie.png");
+		layersDesc.put(LAYER_ACCESSORY,"hero/accessories/shades.png");
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -113,6 +119,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 			return HERO_EMPTY_PNG;
 		}
 		return "hero/armor/"+armor.getClass().getSimpleName()+".png";
+	}
+	private String classHelmetDescriptor(Armor armor) {
+		if(armor==null) {
+			return HERO_EMPTY_PNG;
+		}
+		return "hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
 	}
 
 	private String bodyDescriptor(Hero hero) {
@@ -199,6 +211,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 		avatar.addLayer(getLayerTexture(LAYER_BODY));
 		avatar.addLayer(getLayerTexture(LAYER_HEAD));
 		avatar.addLayer(getLayerTexture(LAYER_ARMOR));
+		avatar.addLayer(getLayerTexture(LAYER_HAIR));
+		avatar.addLayer(getLayerTexture(LAYER_HELMET));
 		avatar.addLayer(getLayerTexture(LAYER_DEATH));
 		avatar.addLayer(getLayerTexture(LAYER_ACCESSORY));
 
