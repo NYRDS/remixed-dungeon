@@ -24,6 +24,7 @@ public class ShamanArmor extends ClassArmor {
 	{
 		name = Game.getVar(R.string.ElfArmor_Name);
 		image = 19;
+		hasHelmet = true;
 	}	
 	
 	@Override
