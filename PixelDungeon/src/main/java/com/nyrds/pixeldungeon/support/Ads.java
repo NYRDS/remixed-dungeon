@@ -23,9 +23,6 @@ public class Ads {
 	static InterstitialAd mSaveAndLoadAd;
 	static InterstitialAd mEasyModeSmallScreenAd;
 
-	public Ads() {
-	}
-
 	private static boolean isSmallScreen() {
 		return (Game.width() < 400 || Game.height() < 400);
 	}

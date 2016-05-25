@@ -25,10 +25,10 @@ import android.view.View;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.items.ItemSpritesDescription;
@@ -43,8 +43,7 @@ import java.util.Locale;
 
 import javax.microedition.khronos.opengles.GL10;
 
-public class PixelDungeon extends GameWithGoogleIap {
-//public class PixelDungeon extends Game {
+public class PixelDungeon extends Game {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -67,6 +66,8 @@ public class PixelDungeon extends GameWithGoogleIap {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		EventCollector.init(this);
+
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
 		}
@@ -74,7 +75,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
 
-		Iap.initIap();
+		Iap.initIap(this);
 		
 		if(PixelDungeon.uiLanguage().equals("ko")) {
 			PixelDungeon.classicFont(false);
@@ -119,11 +120,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 
 	public static boolean canDonate() {
-		if(! (instance() instanceof GameWithGoogleIap) ) {
-			return true;
-		} else {
-			return Iap.isReady();
-		}
+		return Iap.isReady();
 	}
 	
 	/*
