@@ -9,6 +9,7 @@ import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
+import com.nyrds.android.google.util.SkuDetails;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -17,6 +18,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by mike on 24.05.2016.
@@ -71,13 +73,17 @@ public class Iap {
 	}
 
 	private static void queryDonations() {
-		ArrayList<String> skuList = new ArrayList<>();
+		try {
+			List<String> items = new ArrayList<>();
 
-		skuList.add(SKU_LEVEL_1);
-		skuList.add(SKU_LEVEL_2);
-		skuList.add(SKU_LEVEL_3);
+			items.add(SKU_LEVEL_1);
+			items.add(SKU_LEVEL_2);
+			items.add(SKU_LEVEL_3);
 
-		mHelper.queryInventoryAsync(true, skuList, mGotInventoryListener);
+			mHelper.queryInventoryAsync(true, items, null, mGotInventoryListener);
+		} catch (IabHelper.IabAsyncInProgressException e) {
+			EventCollector.logException(e);
+		}
 	}
 
 
@@ -136,18 +142,27 @@ public class Iap {
 		}
 	};
 
+	static String formatSkuPrice(SkuDetails sku) {
+		if(sku == null) {
+			return null;
+		}
+		return sku.getPrice() + sku.getPriceCurrencyCode();
+	}
+
 	public static String getDonationPriceString(int level) {
 		if (mInventory == null) {
 			return null;
 		}
 
+		mInventory.getSkuDetails(SKU_LEVEL_1);
+
 		switch (level) {
 			case 1:
-				return mInventory.getSkuDetails(SKU_LEVEL_1).getPrice();
+				return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_1));
 			case 2:
-				return mInventory.getSkuDetails(SKU_LEVEL_2).getPrice();
+				return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_2));
 			case 3:
-				return mInventory.getSkuDetails(SKU_LEVEL_3).getPrice();
+				return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_3));
 		}
 		return null;
 	}
@@ -161,7 +176,11 @@ public class Iap {
 		String payload = "";
 
 		m_iapReady = false;
-		mHelper.launchPurchaseFlow(mContext, sku, RC_REQUEST, mPurchaseFinishedListener, payload);
+		try {
+			mHelper.launchPurchaseFlow(mContext, sku, RC_REQUEST, mPurchaseFinishedListener, payload);
+		} catch (IabHelper.IabAsyncInProgressException e) {
+			EventCollector.logException(e);
+		}
 	}
 
 	static boolean verifyDeveloperPayload(Purchase p) {
