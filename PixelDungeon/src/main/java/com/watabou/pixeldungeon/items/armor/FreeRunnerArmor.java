@@ -28,7 +28,6 @@ public class FreeRunnerArmor extends ClassArmor {
 	{
 		name = Game.getVar(R.string.RogueArmor_Name);
 		image = 9;
-		hasHelmet = true;
 	}
 	
 	@Override
