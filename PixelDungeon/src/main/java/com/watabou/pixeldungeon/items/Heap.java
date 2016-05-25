@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -67,7 +69,8 @@ public class Heap implements Bundlable {
 	public int pos = 0;
 	
 	public ItemSprite sprite;
-	
+
+	@NonNull
 	public LinkedList<Item> items = new LinkedList<>();
 	
 	public String imageFile() {
@@ -192,18 +195,14 @@ public class Heap implements Bundlable {
 		}
 	}
 	
-	private boolean replaceOrRemoveItem(Item item, Item newItem){
+	private void replaceOrRemoveItem(Item item, Item newItem){
 		if(newItem == null){
 			items.remove(item);
-			return true;
 		}else{
 			if(!item.equals(newItem) ){
 				replace(item, newItem);
-				return true;
 			}
 		}
-		return false;
-
 	}
 	
 	private void updateHeap(){
@@ -366,12 +365,12 @@ public class Heap implements Bundlable {
 		Sample.INSTANCE.play( Assets.SND_BURNING );
 	}
 	
-	public static void evaporateFX( int pos ) {
+	private static void evaporateFX(int pos) {
 		CellEmitter.get( pos ).burst( Speck.factory( Speck.STEAM ), 5 );
 	}
 	
 	public boolean isEmpty() {
-		return items == null || items.size() == 0;
+		return items.size() == 0;
 	}
 	
 	public void destroy() {
@@ -380,7 +379,6 @@ public class Heap implements Bundlable {
 			sprite.kill();
 		}
 		items.clear();
-		items = null;
 	}
 
 	private static final String POS		= "pos";
