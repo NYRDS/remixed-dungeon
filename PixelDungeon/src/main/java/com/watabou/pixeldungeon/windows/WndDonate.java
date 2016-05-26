@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
@@ -95,17 +96,17 @@ public class WndDonate extends WndTabbed {
 			pos += GAP;
 
 			if (PixelDungeon.donated() < level) {
-				String price = PixelDungeon.instance().getPriceString(level);
+				String price = Iap.getDonationPriceString(level);
 				String btnText;
 				if( price != null ) {
-					btnText = DONATE + price;
+					btnText = DONATE + " "+ price;
 				} else {
 					btnText = NOT_CONNECTED;
 				}
 				RedButton donate = new RedButton(btnText) {
 					@Override
 					protected void onClick() {
-						PixelDungeon.donate(level);
+						Iap.donate(level);
 					}
 				};
 				
