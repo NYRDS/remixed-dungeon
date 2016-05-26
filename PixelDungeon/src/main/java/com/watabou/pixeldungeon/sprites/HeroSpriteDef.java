@@ -82,7 +82,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 
-		if(hero.belongings.armor  == null || (hero.belongings.armor  != null && !hero.belongings.armor.coverHair) || (hero.belongings.accessory  != null && !hero.belongings.accessory.isCoverHair()))
+		if(hero.belongings.armor  == null
+				|| (hero.belongings.armor  != null && !hero.belongings.armor.isCoverHair())
+				|| (hero.belongings.accessory  != null && !hero.belongings.accessory.isCoverHair()))
 		{
 			hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png";
 		}
@@ -134,7 +136,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private String classHelmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.hasHelmet){
+			if(hero.belongings.armor.isHasHelmet()){
 				return "hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
 			}
 		}
