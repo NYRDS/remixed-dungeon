@@ -26,6 +26,7 @@ public class WardenArmor extends ClassArmor {
 		name = Game.getVar(R.string.HuntressArmor_Name);
 		image = 16;
 		hasHelmet = true;
+		coverHair = true;
 	}
 	
 	private HashMap<Callback, Mob> targets = new HashMap<>();

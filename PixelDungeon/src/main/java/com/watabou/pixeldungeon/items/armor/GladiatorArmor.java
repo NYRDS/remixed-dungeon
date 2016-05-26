@@ -35,6 +35,7 @@ public class GladiatorArmor extends ClassArmor {
 		name = Game.getVar(R.string.WarriorArmor_Name);
 		image = 7;
 		hasHelmet = true;
+		coverHair = true;
 	}
 	
 	@Override

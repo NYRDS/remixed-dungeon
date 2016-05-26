@@ -41,6 +41,7 @@ public class HuntressArmor extends ClassArmor {
 	{
 		image = 14;
 		hasHelmet = true;
+		coverHair = true;
 	}
 	
 	private HashMap<Callback, Mob> targets = new HashMap<>();

@@ -56,6 +56,7 @@ public class Armor extends EquipableItem {
 	private static final String TXT_INCOMPATIBLE    = Game.getVar(R.string.Armor_Incompatible);
 
 	public boolean hasHelmet;
+	public boolean coverHair;
 
 	public int tier;
 	
@@ -74,6 +75,7 @@ public class Armor extends EquipableItem {
 		STR = typicalSTR();
 		DR = typicalDR();
 		hasHelmet = false;
+		coverHair = false;
 	}
 	
 	private static final String GLYPH	= "glyph";
