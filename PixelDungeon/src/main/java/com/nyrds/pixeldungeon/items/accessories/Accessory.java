@@ -7,6 +7,10 @@ public class Accessory {
 
 	protected boolean coverHair;
 
+	public String getLayerFile() {
+		return "hero/accessories/"+ getClass().getSimpleName() + ".png";
+	}
+
     Accessory (){
         coverHair = false;
     }
