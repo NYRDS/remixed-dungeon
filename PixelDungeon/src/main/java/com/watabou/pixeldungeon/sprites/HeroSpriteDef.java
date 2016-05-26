@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -83,7 +82,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 
-		if(hero.belongings.armor  == null || (hero.belongings.armor  != null && !hero.belongings.armor.coverHair) || (hero.belongings.accessory  != null && !hero.belongings.accessory.coverHair))
+		if(hero.belongings.armor  == null || (hero.belongings.armor  != null && !hero.belongings.armor.coverHair) || (hero.belongings.accessory  != null && !hero.belongings.accessory.isCoverHair()))
 		{
 			hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png";
 		}

@@ -5,10 +5,13 @@ package com.nyrds.pixeldungeon.items.accessories;
  */
 public class Accessory {
 
-    public boolean coverHair;
+	protected boolean coverHair;
 
     Accessory (){
         coverHair = false;
     }
 
+	public boolean isCoverHair() {
+		return coverHair;
+	}
 }
