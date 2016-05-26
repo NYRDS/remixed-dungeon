@@ -79,24 +79,22 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
 
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
+		String hairDescriptor = HERO_EMPTY_PNG;
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 
-			if(hero.belongings.armor  != null && !hero.belongings.armor.coverHair){
-				layersDesc.put(LAYER_HAIR, "hero/head/hair/" + classDescriptor + "_HAIR.png");
-			}
-			else {
-				layersDesc.put(LAYER_HAIR, HERO_EMPTY_PNG);
-			}
+		if(hero.belongings.armor  == null || (hero.belongings.armor  != null && !hero.belongings.armor.coverHair) || (hero.belongings.accessory  != null && !hero.belongings.accessory.coverHair))
+		{
+			hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png";
+		}
 
-			layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor, hero));
-
+		layersDesc.put(LAYER_HAIR, hairDescriptor);
+		layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor, hero));
 
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
-
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor(hero.belongings.accessory));
-		//layersDesc.put(LAYER_ACCESSORY,"hero/accessories/shades.png");
+
 	}
 
 	public void heroUpdated(Hero hero) {
