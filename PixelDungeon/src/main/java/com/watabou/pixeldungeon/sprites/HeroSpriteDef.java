@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
@@ -80,18 +81,22 @@ public class HeroSpriteDef extends MobSpriteDef {
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
-		if (hero.belongings.armor  != null && hero.belongings.armor.hasHelmet) {
-			layersDesc.put(LAYER_HAIR, HERO_EMPTY_PNG);
-			layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor));
-		} else {
-			layersDesc.put(LAYER_HAIR, "hero/head/hair/" + classDescriptor + "_HAIR.png");
-			layersDesc.put(LAYER_HELMET, HERO_EMPTY_PNG);
 
-		}
+			if(hero.belongings.armor  != null && !hero.belongings.armor.coverHair){
+				layersDesc.put(LAYER_HAIR, "hero/head/hair/" + classDescriptor + "_HAIR.png");
+			}
+			else {
+				layersDesc.put(LAYER_HAIR, HERO_EMPTY_PNG);
+			}
+
+			layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor, hero));
+
+
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
 
-		layersDesc.put(LAYER_ACCESSORY,"hero/accessories/shades.png");
+		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor(hero.belongings.accessory));
+		//layersDesc.put(LAYER_ACCESSORY,"hero/accessories/shades.png");
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -116,17 +121,27 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 	}
 
+	private String accessoryDescriptor(Accessory accessory) {
+		if(accessory==null) {
+			return HERO_EMPTY_PNG;
+		}
+		return "hero/accessories/"+accessory.getClass().getSimpleName()+".png";
+	}
+
 	private String armorDescriptor(Armor armor) {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
 		return "hero/armor/"+armor.getClass().getSimpleName()+".png";
 	}
-	private String classHelmetDescriptor(Armor armor) {
-		if(armor==null) {
-			return HERO_EMPTY_PNG;
+
+	private String classHelmetDescriptor(Armor armor, Hero hero) {
+		if(armor!=null) {
+			if(hero.belongings.armor.hasHelmet){
+				return "hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
+			}
 		}
-		return "hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
+			return HERO_EMPTY_PNG;
 	}
 
 	private String bodyDescriptor(Hero hero) {
