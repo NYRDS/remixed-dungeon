@@ -72,18 +72,22 @@ public class Iap {
 		});
 	}
 
-	private static void queryDonations() {
+	public static void queryItemsPrice(List<String> items) {
 		try {
-			List<String> items = new ArrayList<>();
-
-			items.add(SKU_LEVEL_1);
-			items.add(SKU_LEVEL_2);
-			items.add(SKU_LEVEL_3);
-
 			mHelper.queryInventoryAsync(true, items, null, mGotInventoryListener);
 		} catch (IabHelper.IabAsyncInProgressException e) {
 			EventCollector.logException(e);
 		}
+	}
+
+	private static void queryDonations() {
+		List<String> donations = new ArrayList<>();
+
+		donations.add(SKU_LEVEL_1);
+		donations.add(SKU_LEVEL_2);
+		donations.add(SKU_LEVEL_3);
+
+		queryItemsPrice(donations);
 	}
 
 
@@ -148,6 +152,7 @@ public class Iap {
 		}
 		return sku.getPrice() + sku.getPriceCurrencyCode();
 	}
+
 
 	public static String getDonationPriceString(int level) {
 		if (mInventory == null) {
