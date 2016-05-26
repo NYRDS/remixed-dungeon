@@ -4,7 +4,7 @@
     <!-- STRINGS OF BroadSword CLASS -->
     <string name="Claymore_Name">Claymore</string>
     <string name="Claymore_Info">This massive sword should be able to cut through anything.</string>
-    <string name="Claymore_Gender">feminine</string>
+    <string name="Claymore_Gender">masculine</string>
 
     <!-- STRINGS OF Halberd CLASS -->
     <string name="Halberd_Name">Halberd</string>
