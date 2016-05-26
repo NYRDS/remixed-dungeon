@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">Questo arco è un arma da lontano. Inutile per tutti a breve distanza, ad eccezione degli elfi.
-Avere un arco ecuipaggiato ti consente di scagliare frecce.\n\n</string>
+  <string name="Bow_Info1">Questa è un\'arma a distanza. È inutile per chiunque a parte gli elfi a portata molto vicina. Avere un arco equipaggiato ti permette di tirare freccie. \n\n</string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">arco di legno</string>
   <string name="WoodenBow_Info">Questo semplice arco di legno potrebbe dimostrarsi utile, non appena troverai delle frecce.</string>

@@ -67,10 +67,12 @@
   <string name="ScrollOfRecharging_Info2">un aumento di corsi di energia attraversa il vostro pacco, ma non succede nulla</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
   <string name="ScrollOfRemoveCurse_Name">Pergamena di Rimozione Maledizione</string>
+  <string name="ScrollOfRemoveCurse_Info">L\'incantesimo di questa pergamena rimuoverà all\'istante dalle armi, dalle armature, dagli anelli e dagli oggetti equipaggiati ogni magia maligna che potrebbero impedire al proprietario di toglierli.</string>
   <string name="ScrollOfRemoveCurse_Proced">Il tuo pacco si illumina, e disperde un\'energia malevole</string>
   <string name="ScrollOfRemoveCurse_NoProced">Il tuo pacco si illumina, ma non succede nulla.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
   <string name="ScrollOfTeleportation_Name">Pergamena di Teletrasporto</string>
+  <string name="ScrollOfTeleportation_Info">La magia su questa pergamena teletrasporterà istantaneamente chi la legge in un punto qualsiasi del dungeon. Può essere usata per scappare da una situazione pericolosa, ma un lettore sfortunato potrebbe ritrovarsi in una situazione ancora peggiore.</string>
   <string name="ScrollOfTeleportation_Teleport">In un batter d\'occhio si sono teletrasportati in un\'altra posizione del dungeon</string>
   <string name="ScrollOfTeleportation_NoTeleport">la forte aura magica di questo luogo impedisce il teletrasporto!</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
@@ -81,6 +83,7 @@
   <string name="ScrollOfTerror_Info3">La pergamena emette un brillante lampo di luce rossa e i mostri fuggiscono</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">Pergamena d\'aggiornamento</string>
+  <string name="ScrollOfUpgrade_Info">Questa pergamena migliorerà un singolo oggetto, aumentando la sua qualità. Una bacchetta aumenterà in potenza e in numero di cariche; un\'arma infliggerà più danno o colpirà più spesso; un\'armatura parerà un maggiore numero di colpi; l\'effetto di un anello su chi lo indossa diverrà più intenso. Inoltre le armi e le armature richiederanno meno forza per essere usate e ogni maledizione presente sull\'oggetto svanirà.</string>
   <string name="ScrollOfUpgrade_InvTitle">Seleziona un item d\'aggiornare</string>
   <string name="ScrollOfUpgrade_LooksBetter">La tua %s sembra migliore ora</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
