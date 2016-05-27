@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-
+    signingConfigs {
+    }
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '23.0.3'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
         minSdkVersion 9
@@ -31,6 +32,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-base:8.4.0'
     compile 'com.google.android.gms:play-services-analytics:8.4.0'
     compile 'ch.acra:acra:4.8.1@aar'
-    compile "com.android.support:support-v4"
-
+    compile 'com.android.support:support-v4'
 }
