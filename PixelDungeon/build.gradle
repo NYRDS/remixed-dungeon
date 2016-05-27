@@ -6,7 +6,7 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 23
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
     }
