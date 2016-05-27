@@ -2,6 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
+        release {
+            keyAlias 'testKey'
+            keyPassword '123456'
+            storeFile file('testKey/test.jks')
+            storePassword '123456'
+        }
     }
     compileSdkVersion 23
     buildToolsVersion '23.0.3'
@@ -13,6 +19,7 @@ android {
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
