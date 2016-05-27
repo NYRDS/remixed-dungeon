@@ -5,6 +5,7 @@ import android.content.Context;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.nyrds.android.util.Util;
+import com.watabou.pixeldungeon.Preferences;
 
 /**
  * Created by mike on 09.03.2016.
@@ -13,8 +14,21 @@ public class EventCollector {
 	static private Tracker mTracker;
 	static private boolean mDisabled = true;
 
+	private static boolean googleAnalyticsUsable() {
+		if(Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) > 0) {
+			return android.os.Build.VERSION.SDK_INT >= 9;
+		}
+		return false;
+	}
+
 	static public void init(Context context) {
 		if (mTracker == null) {
+
+			if(!googleAnalyticsUsable()) {
+				EventCollector.disable();
+				return;
+			}
+
 			AnalyticsTrackers.initialize(context);
 
 			mTracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);

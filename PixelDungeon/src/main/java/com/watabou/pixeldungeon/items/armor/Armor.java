@@ -55,8 +55,8 @@ public class Armor extends EquipableItem {
 	
 	private static final String TXT_INCOMPATIBLE    = Game.getVar(R.string.Armor_Incompatible);
 
-	public boolean hasHelmet;
-	public boolean coverHair;
+	protected boolean hasHelmet;
+	protected boolean coverHair;
 
 	public int tier;
 	
@@ -322,7 +322,15 @@ public class Armor extends EquipableItem {
 	public ItemSprite.Glowing glowing() {
 		return glyph != null ? glyph.glowing() : null;
 	}
-	
+
+	public boolean isHasHelmet() {
+		return hasHelmet;
+	}
+
+	public boolean isCoverHair() {
+		return coverHair;
+	}
+
 	public static abstract class Glyph implements Bundlable {
 		
 		private static final Class<?>[] glyphs = new Class<?>[]{ 

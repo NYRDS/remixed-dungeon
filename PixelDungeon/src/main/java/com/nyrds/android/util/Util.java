@@ -6,6 +6,8 @@ import org.acra.ACRA;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * Created by mike on 01.03.2016.
@@ -36,4 +38,14 @@ public class Util {
 		ACRA.getErrorReporter().putCustomData(eventKey, str);
 	}
 
+	public static boolean isConnectedToInternet() {
+		InetAddress ipAddr;
+		try {
+			ipAddr = InetAddress.getByName("google.com");
+		} catch (UnknownHostException e) {
+			return false;
+		}
+
+		return !ipAddr.toString().equals("");
+	}
 }

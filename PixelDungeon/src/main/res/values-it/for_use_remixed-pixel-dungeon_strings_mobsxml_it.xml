@@ -34,6 +34,7 @@
   <!--STRINGS OF Brute CLASS-->
   <string name="Brute_Name">gnoll bruto</string>
   <string name="Brute_Name_Objective">gnoll bruto</string>
+  <string name="Brute_Desc">I bruti sono i più grandi, i più forti e i più duri di tutti gli gnoll. Quando gravemente feriti, si infuriano, infliggendo danni maggiori ai loro nemici.</string>
   <string name="Brute_Gender">mascolino</string>
   <string name="Brute_Enraged">%s è Infuriato!</string>
   <string name="Brute_StaEnraged">Infuriato</string>
@@ -41,11 +42,13 @@
   <string name="Crab_Name">granchio delle fogne</string>
   <string name="Crab_Gender">mascolino</string>
   <string name="Crab_Name_Objective">granchio delle fogne</string>
+  <string name="Crab_Desc">Questi enormi granchi sono in cima alla catena alimentare delle fogne. Sono estremamente veloci e i loro duri esoscheletri posso sopportare duri colpi.</string>
   <string name="Crab_Defense">parata</string>
   <!--STRINGS OF DM300 CLASS-->
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">mascolino</string>
   <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">Questa macchina fu creata dai Nani parecchi secoli fa. Più tardi, i Nani hanno cominciato a rimpiazzare i macchinari con golem, elementali e persino demoni. Alla fine ciò ha portato il declino della loro civiltà. La DM-300 e altre simili macchine erano tipicamente usate per la costruzione e lo scavo e, in alcuni casi, per la difesa della città.</string>
   <string name="DM300_Info1">DM-300 si è riparato</string>
   <string name="DM300_Info2">Missione Fallita. Chiudi.</string>
   <string name="DM300_Info3">personale non autorizzato rilevato.</string>
@@ -53,23 +56,29 @@
   <string name="Elemental_Name">elementale del fuoco</string>
   <string name="Elemental_Gender">mascolino</string>
   <string name="Elemental_Name_Objective">Elementale del fuoco</string>
+  <string name="Elemental_Desc">Gli elementali del fuoco erranti sono un sottoprodotto dell\'evocazione di più grandi entità. Sono troppo caotici nella loro forma per essere controllati anche dal più potente demonologo.</string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">malocchio </string>
   <string name="Eye_Gender">neutro</string>
   <string name="Eye_Name_Objective">Malocchio</string>
+  <string name="Eye_Desc">Uno degli altri nomi di questo demone è \"sfera d\'odio\" perché quando vede un nemico, usa il suo raggio mortale sconsideratamente, spesso ignorando i suoi alleati e ferendoli.</string>
+  <string name="Eye_Kill">%s\'s raggio mortale ti ha ucciso...</string>
   <!--STRINGS OF Gnoll CLASS-->
-  <string name="Gnoll_Name">gnoll scout</string>
+  <string name="Gnoll_Name">gnoll esploratore</string>
   <string name="Gnoll_Gender">mascolino</string>
-  <string name="Gnoll_Name_Objective">gnoll scout</string>
+  <string name="Gnoll_Name_Objective">gnoll esploratore</string>
+  <string name="Gnoll_Desc">Gli gnoll sono delle iene umanoidi. Essi dimorano nelle fogne e nei dungeon, avventurandosi di tanto in tanto in superficie per razziarla. Gli gnoll esploratori sono membri semplici del loro branco, non sono ne forti come i bruti ne intelligenti come GOI sciamani.</string>
   <!--STRINGS OF Golem CLASS-->
   <string name="Golem_Name">golem</string>
   <string name="Golem_Gender">mascolino</string>
   <string name="Golem_Name_Objective">Golem</string>
+  <string name="Golem_Desc">I nani provarono a combinare la loro conoscenza nei meccanismi con il loro nuovo potere di fusione degli elementi, Hanno usato spiriti della terra come \"anima\" per i corpi meccanici dei golem, che furono creduti come i più controllabili. Nonostante questo, il più piccolo errore nel rituale potrebbe causare un esplosione.</string>
   <string name="Golem_Defense">Bloccato</string>
   <!--STRINGS OF Goo CLASS-->
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">Femmina</string>
   <string name="Goo_Name_Objective">Goo</string>
+  <string name="Goo_Desc">Si conosce poco di Goo. È probabile che non sia nemmeno una creatura, ma piuttosto un conglomerato di sostante provenienti dalle fogne che ha guadagnato principi di volontà propria. In ogni caso, è ovvio che è opera di magia nera.</string>
   <string name="Goo_Info1">Goo si sta pompando!</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -78,6 +87,7 @@
   <string name="King_Name">re dei nani</string>
   <string name="King_Gender">mascolino</string>
   <string name="King_Name_Objective">Re dei Nani</string>
+  <string name="King_Desc">L\'ultimo re dei Nani era conosciuto per la sua profonda conoscenza dei processi di vita e di morte. Ha persuaso i membri della sua corte a partecipare in un rituale, che avrebbe dovuto donare loro eterna giovinezza. Alla fine fu l\'unico ad ottenerla, con un\'armata di non-morti in omaggio.</string>
   <string name="King_Defense">parata</string>
   <string name="King_Info1">Non puoi uccidermi,%s...Io sono....Immortale...</string>
   <string name="King_Info2">sorgete, SCHIAVI!</string>
@@ -85,24 +95,30 @@
   <string name="Undead_Name">nano zombie</string>
   <string name="Undead_Gender">mascolino</string>
   <string name="Undead_Name_Objective">nano zombie</string>
+  <string name="Undead_Desc">Questi nani non-morti, risorti dalla volontà del Re dei Nani, furono membri della sua corte. Appaiono ora come scheletri, dotati di una sorprendente barba.</string>
   <string name="Undead_Defense">Bloccato</string>
   <!--STRINGS OF Mimic CLASS-->
-  <string name="Mimic_Name">imitatore</string>
+  <string name="Mimic_Name">replicante</string>
   <string name="Mimic_Gender">mascolino</string>
-  <string name="Mimic_Name_Objective">imitatore</string>
+  <string name="Mimic_Name_Objective">replicante</string>
+  <string name="Mimic_Desc">I Replicanti sono creature magiche che possono prendere qualsiasi forma essi desiderino. Nei dungeon scelgono quasi sempre la forma di bauli del tesoro, poiché sanno come attirare un avventuriero.</string>
   <!--STRINGS OF MimicPie CLASS-->
-  <string name="MimicPie_Name">imitatore</string>
+  <string name="MimicPie_Name">replicante</string>
   <string name="MimicPie_Gender">mascolino</string>
-  <string name="MimicPie_Name_Objective">imitatore</string>
+  <string name="MimicPie_Name_Objective">replicante</string>
+  <string name="MimicPie_Desc">I Replicanti sono creature magiche possono prendere qualsiasi forma essi desiderino. Questo qui assomiglia a un grande e saporito pasticcio.</string>
   <!--STRINGS OF Monk CLASS-->
   <string name="Monk_Name">Monaco Nano</string>
   <string name="Monk_Gender">mascolino</string>
   <string name="Monk_Name_Objective">Monaco Nano</string>
+  <string name="Monk_Desc">Questi monaci sono dei fanatici, che hanno dedicato loro stessi nel proteggere i segreti della loro città da tutti gli stranieri. Non usano alcuna armatura o arma, affidandosi solamente all\'arte del combattimento corpo a corpo.</string>
   <string name="Monk_Defense">Parata</string>
+  <string name="Monk_Disarm">%1$s ti ha tolto %2$s dalle tue mani!</string>
   <!--STRINGS OF Piranha CLASS-->
   <string name="Piranha_Name">Piranha gigante</string>
   <string name="Piranha_Gender">Femmina</string>
   <string name="Piranha_Name_Objective">Piranha gigante</string>
+  <string name="Piranha_Desc">Questi pesci carnivori non sono abitanti naturali delle pozze sotterranee. Sono stati allevati specificamente per proteggere le camere del tesoro allagate.</string>
   <!--STRINGS OF Rat CLASS-->
   <string name="Rat_Name">topo marsupiale</string>
   <string name="Rat_Gender">Femmina</string>
@@ -117,24 +133,29 @@
   <string name="Senior_Name">Monaco anziano</string>
   <string name="Senior_Gender">mascolino</string>
   <string name="Senior_Name_Objective">Monaco anziano</string>
+  <string name="Senior_Desc">Questi monaci sono dei fanatici, che hanno dedicato loro stessi nel proteggere i segreti della loro città da tutti gli stranieri. Non usano alcuna armatura o arma, affidandosi solamente all\'arte del combattimento corpo a corpo. Questo particolare monaco è divenuto esperto nell\'inibire i suoi nemici.</string>
   <!--STRINGS OF Shadow CLASS-->
   <string name="Shadow_Name">Ombra</string>
   <string name="Shadow_Gender">Femmina</string>
   <string name="Shadow_Name_Objective">Ombra</string>
+  <string name="Shadow_Desc">Le Ombre vagano silenziosamente per le rovine dell\'antica prigione, mostrandosi solo occasionalmente agli avventurieri, solitamente nella loro ultima avventura.</string>
   <!--STRINGS OF Shaman CLASS-->
   <string name="Shaman_Name">gnoll sciamano</string>
   <string name="Shaman_Gender">mascolino</string>
   <string name="Shaman_Name_Objective">gnoll sciamano</string>
+  <string name="Shaman_Desc">Gli gnoll più intelligenti posso imparare la magia sciamanica. Gli gnoll sciamani preferiscono magie d\'attacco per compensare la loro mancanza di forza, non esitando ad usarle su coloro che mettono in dubbio il loro prestigio nella tribù.</string>
   <string name="Shaman_Killed">%s\'s fulmine ti ha ucciso....</string>
   <!--STRINGS OF Shielded CLASS-->
   <string name="Shielded_Name">Bruto schermato</string>
   <string name="Shielded_Gender">mascolino</string>
   <string name="Shielded_Name_Objective">Bruto schermato</string>
   <string name="Shielded_Defense">Bloccato</string>
+  <string name="Shielded_Desc">I bruti sono i più grandi, i più forti e i più duri di tutti gli gnoll. Quando gravemente feriti, si infuriano, infliggendo danni maggiori ai loro nemici. Questo bruto porta con se uno scudo gigante!</string>
   <!--STRINGS OF Skeleton CLASS-->
   <string name="Skeleton_Name">Scheletro</string>
   <string name="Skeleton_Gender">mascolino</string>
   <string name="Skeleton_Name_Objective">Scheletro</string>
+  <string name="Skeleton_Desc">Gli scheletri sono composti dalle ossa di avventurieri sfortunati e degli abitanti del dungeon, animati dalle emanazioni di magia maligna provenienti dai pieni inferiori. Dopo essere stati danneggiati abbastanza, si disintegrano in un esplosioni di ossa.</string>
   <string name="Skeleton_Defense">Bloccato</string>
   <string name="Skeleton_Killed">sei stato ucciso dall\'esplosione di ossa...</string>
   <!--STRINGS OF Spinner CLASS-->

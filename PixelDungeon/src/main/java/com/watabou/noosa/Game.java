@@ -56,8 +56,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
 import java.io.File;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -78,7 +76,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	// Current scene
 	protected Scene scene;
 	// true if scene switch is requested
-	protected boolean requestedReset = true;
+	protected        boolean requestedReset   = true;
 	protected static boolean needSceneRestart = false;
 
 	// New scene class
@@ -93,7 +91,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public static float elapsed = 0f;
 
 	protected GLSurfaceView view;
-	protected LinearLayout layout;
+	private   LinearLayout  layout;
 
 	public static volatile boolean paused = true;
 	protected static int difficulty;
@@ -128,6 +126,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		    Util.storeEventInAcra("FreeInternalMemorySize", Long.toString(ret));
 			return ret;
 		}
+
+	public static void setNeedSceneRestart(boolean needSceneRestart) {
+		Game.needSceneRestart = needSceneRestart;
+	}
+
+	public static int getDifficulty() {
+		return difficulty;
+	}
 
 	public void useLocale(String lang) {
 		Util.storeEventInAcra("Locale", lang);
@@ -219,10 +225,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		if (android.os.Build.VERSION.SDK_INT >= 9) {
 			layout = new LinearLayout(this);
-			layout.setOrientation(LinearLayout.VERTICAL);
-			layout.addView(view);
+			getLayout().setOrientation(LinearLayout.VERTICAL);
+			getLayout().addView(view);
 
-			setContentView(layout);
+			setContentView(getLayout());
 		} else {
 			setContentView(view);
 		}
@@ -443,20 +449,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return instance;
 	}
 
-	public static void donate(int level) {
-	}
-
-	public String getPriceString(int level) {
-		return null;
-	}
-
-	public void initIap() {
-	}
-
-	public boolean iapReady() {
-		return false;
-	}
-
 	public static int width() {
 		return width;
 	}
@@ -475,26 +467,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public static synchronized void executeInGlThread(Runnable task) {
 		instance().view.queueEvent(task);
-	}
-
-	public void removeEasyModeBanner() {
-	}
-
-	public void initSaveAndLoadIntersitial() {
-	}
-
-	public void displayEasyModeBanner() {
-	}
-
-	public static boolean isConnectedToInternet() {
-		InetAddress ipAddr;
-		try {
-			ipAddr = InetAddress.getByName("google.com");
-		} catch (UnknownHostException e) {
-			return false;
-		}
-
-		return !ipAddr.toString().equals("");
 	}
 
 	public void initEventCollector() {
@@ -543,11 +515,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		};
 
 	}
-	public static void displaySaveAndLoadAd(final InterstitialPoint work) {
-		work.returnToWork(true);
-	}
 
-	public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
-		work.returnToWork(true);
+	public LinearLayout getLayout() {
+		return layout;
 	}
 }

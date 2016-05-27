@@ -6,18 +6,18 @@
   <string name="Plant_Info">Gettare questo seme nel il luogo in cui si vuol far crescere %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">Seme di %s</string>
   <!--STRINGS OF Dreamweed CLASS-->
-  <string name="Dreamweed_Name">marijuana</string>
-  <string name="Dreamweed_Desc">Dopo aver toccato un Dreamweed che secerne una confusa nube di gas scintillante.</string>
+  <string name="Dreamweed_Name">Erbasogno</string>
+  <string name="Dreamweed_Desc">Dopo aver toccato l\'Erbasogno essa secerne una scintillante nuvola di gas confondente.</string>
   <!--STRINGS OF Earthroot CLASS-->
-  <string name="Earthroot_Name">radice della terra</string>
-  <string name="Earthroot_Desc">Quando una creatura tocca una radice di terra, le radici creano una sorta di armatura naturale intorno ad esso.</string>
+  <string name="Earthroot_Name">radicaterra</string>
+  <string name="Earthroot_Desc">Quando una creatura tocca una radicaterra, le radici creano una sorta di armatura naturale intorno ad essa.</string>
   <string name="Earthroot_Buff">armatura di erbe</string>
   <!--STRINGS OF Fadeleaf CLASS-->
-  <string name="Fadeleaf_Name">foglia dello svanimento</string>
-  <string name="Fadeleaf_Desc">Toccando un Fadeleaf farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
+  <string name="Fadeleaf_Name">Svanifoglia</string>
+  <string name="Fadeleaf_Desc">Toccare una Svanifoglia farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
   <!--STRINGS OF Firebloom CLASS-->
-  <string name="Firebloom_Name">fiore di fuoco</string>
-  <string name="Firebloom_Desc">Quando qualcosa tocca un Fiore di fuoco, scoppia in fiamme.</string>
+  <string name="Firebloom_Name">Fuocofiore</string>
+  <string name="Firebloom_Desc">Quando qualcosa tocca un Fuocofiore, scoppia in fiamme.</string>
   <!--STRINGS OF Icecap CLASS-->
   <string name="Icecap_Name">Calotta ghiacciata</string>
   <string name="Icecap_Desc">Al momento di toccare una Calotta glaciale espella un polline, che congela tutto nelle sue vicinanze</string>

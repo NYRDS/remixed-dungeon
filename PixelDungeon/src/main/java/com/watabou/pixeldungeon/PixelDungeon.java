@@ -25,8 +25,10 @@ import android.view.View;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.GameWithGoogleIap;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.items.ItemSpritesDescription;
@@ -41,8 +43,7 @@ import java.util.Locale;
 
 import javax.microedition.khronos.opengles.GL10;
 
-public class PixelDungeon extends GameWithGoogleIap {
-//public class PixelDungeon extends Game {
+public class PixelDungeon extends Game {
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -65,6 +66,8 @@ public class PixelDungeon extends GameWithGoogleIap {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		EventCollector.init(this);
+
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
 		}
@@ -72,7 +75,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
 
-		initIap();
+		Iap.initIap(this);
 		
 		if(PixelDungeon.uiLanguage().equals("ko")) {
 			PixelDungeon.classicFont(false);
@@ -117,11 +120,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 	}
 
 	public static boolean canDonate() {
-		if(! (instance() instanceof GameWithGoogleIap) ) {
-			return true;
-		} else {
-			return instance().iapReady();
-		}
+		return Iap.isReady();
 	}
 	
 	/*
@@ -148,7 +147,7 @@ public class PixelDungeon extends GameWithGoogleIap {
 			@Override
 			public void run() {
 				updateImmersiveMode();
-				needSceneRestart = true;
+				setNeedSceneRestart(true);
 			}
 		});
 	}
@@ -359,10 +358,10 @@ public class PixelDungeon extends GameWithGoogleIap {
 	/*
 	 * <---Purchases
 	 */
-	public void setDonationLevel(int level) {
+	static public void setDonationLevel(int level) {
 		
 		if(level > 0) {
-			removeEasyModeBanner();
+			Ads.removeEasyModeBanner();
 		}
 		
 		if (level < donated()) {
@@ -384,21 +383,24 @@ public class PixelDungeon extends GameWithGoogleIap {
 
 	public static void setDifficulty(int _difficulty) {
 		difficulty = _difficulty;
-		if (PixelDungeon.donated() == 0) {
-			if (difficulty == 0) {
-				instance().displayEasyModeBanner();
-			}
 
-			if (difficulty < 2) {
-				instance().initSaveAndLoadIntersitial();
-			}
-
-			if (difficulty >= 2) {
-				instance().removeEasyModeBanner();
-			}
-		} else {
-			instance().removeEasyModeBanner();
+		if(donated() > 0) {
+			Ads.removeEasyModeBanner();
+			return;
 		}
-		
+
+		if (PixelDungeon.donated() == 0) {
+			if (getDifficulty() == 0) {
+				Ads.displayEasyModeBanner();
+			}
+
+			if (getDifficulty() < 2) {
+				Ads.initSaveAndLoadIntersitial();
+			}
+
+			if (getDifficulty() >= 2) {
+				Ads.removeEasyModeBanner();
+			}
+		}
 	}
 }

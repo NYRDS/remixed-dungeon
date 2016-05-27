@@ -5,10 +5,17 @@ package com.nyrds.pixeldungeon.items.accessories;
  */
 public class Accessory {
 
-    public boolean coverHair;
+	protected boolean coverHair;
+
+	public String getLayerFile() {
+		return "hero/accessories/"+ getClass().getSimpleName() + ".png";
+	}
 
     Accessory (){
         coverHair = false;
     }
 
+	public boolean isCoverHair() {
+		return coverHair;
+	}
 }
