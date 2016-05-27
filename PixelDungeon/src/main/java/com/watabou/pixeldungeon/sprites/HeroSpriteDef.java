@@ -35,7 +35,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_ARMOR     = "armor";
 	private static final String LAYER_HEAD      = "head";
 	private static final String LAYER_HAIR      = "hair";
-	private static final String LAYER_HELMET      = "helmet";
+	private static final String LAYER_HELMET    = "helmet";
 	private static final String LAYER_DEATH     = "death";
 	private static final String LAYER_BODY      = "body";
 	private static final String LAYER_SHIELD    = "shield";
