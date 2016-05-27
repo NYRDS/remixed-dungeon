@@ -218,7 +218,7 @@ public class Armor extends EquipableItem {
 		
 		if (levelKnown) {
 			info.append(p);
-			info.append(Utils.capitalize(String.format(Game.getVar(R.string.Armor_Info1), name, Math.max( DR, 0 ))));
+			info.append(Utils.capitalize(Utils.format(Game.getVar(R.string.Armor_Info1), name, Math.max( DR, 0 ))));
 			
 			if (STR > Dungeon.hero.effectiveSTR()) {
 				if (isEquipped( Dungeon.hero )) {
@@ -228,7 +228,7 @@ public class Armor extends EquipableItem {
 				}
 			}
 		} else {
-			info.append(String.format(Game.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
+			info.append(Utils.format(Game.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
 				info.append(Game.getVar(R.string.Armor_Info5));
 			}
@@ -239,11 +239,11 @@ public class Armor extends EquipableItem {
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append(String.format(Game.getVar(R.string.Armor_Info7a), name,  
+			info.append(Utils.format(Game.getVar(R.string.Armor_Info7a), name,
 				(cursed ? Game.getVar(R.string.Armor_Info7b) : "") )); 
 		} else {
 			if (cursedKnown && cursed) {
-				info.append(String.format(Game.getVar(R.string.Armor_Info8), name));
+				info.append(Utils.format(Game.getVar(R.string.Armor_Info8), name));
 			}
 		}
 		

@@ -39,6 +39,7 @@ import com.watabou.pixeldungeon.levels.CityBossLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.KingSprite;
 import com.watabou.pixeldungeon.sprites.UndeadSprite;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -140,7 +141,7 @@ public class King extends Boss {
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
 		
-		yell(String.format(Game.getVar(R.string.King_Info1), Dungeon.hero.heroClass.title()));
+		yell(Utils.format(Game.getVar(R.string.King_Info1), Dungeon.hero.heroClass.title()));
 	}
 	
 	private int maxArmySize() {

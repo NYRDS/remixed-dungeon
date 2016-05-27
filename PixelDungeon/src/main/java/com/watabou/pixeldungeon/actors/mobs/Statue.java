@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.sprites.StatueSprite;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -144,6 +145,6 @@ public class Statue extends Mob {
 
 	@Override
 	public String description() {
-		return String.format(Game.getVar(R.string.Statue_Desc), weapon.name());
+		return Utils.format(Game.getVar(R.string.Statue_Desc), weapon.name());
 	}	
 }

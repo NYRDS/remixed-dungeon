@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Potential extends Glyph {
@@ -63,7 +64,7 @@ public class Potential extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_POTENTIAL, weaponName );
+		return Utils.format( TXT_POTENTIAL, weaponName );
 	}
 
 	@Override

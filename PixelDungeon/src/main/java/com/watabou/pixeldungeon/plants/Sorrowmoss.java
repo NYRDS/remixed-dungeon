@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class Sorrowmoss extends Plant {
 
@@ -60,7 +61,7 @@ public class Sorrowmoss extends Plant {
 		{
 			plantName = TXT_NAME;
 			
-			name = String.format(TXT_SEED, plantName);
+			name = Utils.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_SORROWMOSS;
 			
 			plantClass = Sorrowmoss.class;

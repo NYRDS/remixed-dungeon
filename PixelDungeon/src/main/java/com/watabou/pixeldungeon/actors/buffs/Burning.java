@@ -71,7 +71,7 @@ public class Burning extends Buff implements Hero.Doom {
 		}
 		@Override
 		public String actionText(Item srcItem) {
-			return String.format(TXT_BURNS_UP, srcItem.toString());
+			return Utils.format(TXT_BURNS_UP, srcItem.toString());
 		}
 	}
 		

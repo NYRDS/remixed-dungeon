@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class Fadeleaf extends Plant {
 
@@ -73,7 +74,7 @@ public class Fadeleaf extends Plant {
 		{
 			plantName = TXT_NAME;
 			
-			name = String.format(TXT_SEED, plantName);
+			name = Utils.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_FADELEAF;
 			
 			plantClass = Fadeleaf.class;

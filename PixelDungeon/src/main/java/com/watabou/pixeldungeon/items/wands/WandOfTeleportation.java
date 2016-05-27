@@ -17,17 +17,18 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 
 public class WandOfTeleportation extends Wand {
@@ -43,7 +44,7 @@ public class WandOfTeleportation extends Wand {
 		ch.setPos(pos);
 		ch.getSprite().place(ch.getPos());
 		ch.getSprite().setVisible(Dungeon.visible[pos]);
-		GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), getCurUser().getName(),
+		GLog.i(Utils.format(Game.getVar(R.string.WandOfTeleportation_Info1), getCurUser().getName(),
 				ch.getName_objective()));
 	}
 

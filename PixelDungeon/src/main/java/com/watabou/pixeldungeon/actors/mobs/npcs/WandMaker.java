@@ -314,7 +314,7 @@ public class WandMaker extends NPC {
 			{
 				plantName = TXT_NAME;
 				
-				name = String.format(TXT_SEED, plantName);
+				name = Utils.format(TXT_SEED, plantName);
 				image = ItemSpriteSheet.SEED_ROTBERRY;
 				
 				plantClass = Rotberry.class;

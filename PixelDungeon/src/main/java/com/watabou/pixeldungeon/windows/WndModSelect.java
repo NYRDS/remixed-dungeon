@@ -18,6 +18,7 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -204,7 +205,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 					Game.scene().add(downloadProgress);
 				}
 
-				downloadProgress.text(String.format("Downloading %s %d%%", selectedMod, percent));
+				downloadProgress.text(Utils.format("Downloading %s %d%%", selectedMod, percent));
 			}
 		});
 	}
@@ -243,7 +244,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 									break;
 								} else {
 									Game.scene()
-											.add(new WndError(String.format(
+											.add(new WndError(Utils.format(
 													"Something gone wrong when placing mod in %s, please do so manually",
 													modDir)));
 								}
@@ -251,10 +252,10 @@ public class WndModSelect extends Window implements DownloadStateListener {
 						}
 						Game.scene().add(new WndModSelect());
 					} else {
-						Game.scene().add(new WndError(String.format("unzipping %s failed", downloadTo)));
+						Game.scene().add(new WndError(Utils.format("unzipping %s failed", downloadTo)));
 					}
 				} else {
-					Game.scene().add(new WndError(String.format("Downloading %s failed", selectedMod)));
+					Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 
 				}
 			}

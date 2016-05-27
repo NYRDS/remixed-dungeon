@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 
 import org.json.JSONArray;
@@ -102,8 +103,8 @@ public class MobSpriteDef extends MobSprite {
 			loadAdditionalData(json,film, kind);
 
 		} catch (Exception e) {
-			Game.toast(String.format("Something bad happens when loading %s", name), e);
-			throw new TrackedRuntimeException(String.format("Something bad happens when loading %s", name), e);
+			Game.toast(Utils.format("Something bad happens when loading %s", name), e);
+			throw new TrackedRuntimeException(Utils.format("Something bad happens when loading %s", name), e);
 		}
 
 		play(idle);

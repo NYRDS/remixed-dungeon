@@ -43,6 +43,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -623,7 +624,7 @@ public abstract class Mob extends Char {
 
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaSleepingStatus),
+			return Utils.format(Game.getVar(R.string.Mob_StaSleepingStatus),
 					getName());
 		}
 	}
@@ -663,7 +664,7 @@ public abstract class Mob extends Char {
 
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaWanderingStatus),
+			return Utils.format(Game.getVar(R.string.Mob_StaWanderingStatus),
 					getName());
 		}
 	}
@@ -703,7 +704,7 @@ public abstract class Mob extends Char {
 
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaHuntingStatus),
+			return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
 					getName());
 		}
 	}
@@ -739,7 +740,7 @@ public abstract class Mob extends Char {
 
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaFleeingStatus),
+			return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus),
 					getName());
 		}
 	}
@@ -757,7 +758,7 @@ public abstract class Mob extends Char {
 
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaPassiveStatus),
+			return Utils.format(Game.getVar(R.string.Mob_StaPassiveStatus),
 					getName());
 		}
 	}

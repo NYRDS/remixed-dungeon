@@ -238,7 +238,7 @@ public class Weapon extends KindOfWeapon {
 		
 		public String name( String weaponName, int gender) {
 			try{
-				return String.format( TXT_NAME[gender], weaponName );
+				return Utils.format( TXT_NAME[gender], weaponName );
 			} catch (IllegalFormatException e){
 				GLog.w("ife in %s", getClass().getSimpleName());
 			} catch (NullPointerException e){

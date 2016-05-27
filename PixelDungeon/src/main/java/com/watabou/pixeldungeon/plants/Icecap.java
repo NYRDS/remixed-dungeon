@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
@@ -67,7 +68,7 @@ public class Icecap extends Plant {
 		{
 			plantName = TXT_NAME;
 			
-			name = String.format(TXT_SEED, plantName);
+			name = Utils.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_ICECAP;
 			
 			plantClass = Icecap.class;

@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
@@ -137,7 +138,7 @@ public class Bag extends Item implements Iterable<Item> {
 
 	@Override
 	public String desc() {
-		return String.format(super.desc(),size);
+		return Utils.format(super.desc(),size);
 	}
 	
 	@Override

@@ -124,7 +124,7 @@ public class SystemText extends Text {
 			}
 		}
 		xCharPos.add(xPos);
-		// Log.d("SystemText", String.format("eot"));
+		// Log.d("SystemText", Utils.format("eot"));
 		return offset;
 	}
 
@@ -139,7 +139,7 @@ public class SystemText extends Text {
 		}
 
 		if (fontHeight > 0) {
-			// Log.d("SystemText", String.format("xscale: %3.2f %s", scale.x,
+			// Log.d("SystemText", Utils.format("xscale: %3.2f %s", scale.x,
 			// text));
 
 			destroyLines();
@@ -154,10 +154,10 @@ public class SystemText extends Text {
 			while (startLine < text.length()) {
 				int nextLine = fillLine(startLine);
 				/*
-				 * Log.d("SystemText", String.format(Locale.ROOT, "width: %d",
+				 * Log.d("SystemText", Utils.format(Locale.ROOT, "width: %d",
 				 * maxWidth));
 				 * 
-				 * Log.d("SystemText", String.format(Locale.ROOT,
+				 * Log.d("SystemText", Utils.format(Locale.ROOT,
 				 * "processed: %d - %d -> %s", startLine, nextLine,
 				 * text.substring(startLine, nextLine)));
 				 */
@@ -168,7 +168,7 @@ public class SystemText extends Text {
 					width = Math.max(lineWidth, width);
 
 					// Log.d("SystemText",
-					// String.format(Locale.ROOT, "lineWidth : %3f %3f",
+					// Utils.format(Locale.ROOT, "lineWidth : %3f %3f",
 					// lineWidth, width));
 				}
 
@@ -195,7 +195,7 @@ public class SystemText extends Text {
 							if (mask == null
 									|| (charIndex < mask.length && mask[charIndex])) {
 								// Log.d("SystemText",
-								// String.format("symbol: %s %d %d %3.1f",
+								// Utils.format("symbol: %s %d %d %3.1f",
 								// text.substring(offset, offset
 								// + codepointCharCount), offset, charIndex,
 								// xCharPos.get(lineCounter) ));
@@ -222,7 +222,7 @@ public class SystemText extends Text {
 				startLine = nextLine;
 			}
 			
-/*			Log.d("SystemText", String.format(Locale.ROOT,
+/*			Log.d("SystemText", Utils.format(Locale.ROOT,
 					"%3.1f x %3.1f (max: %3.1f, lines: %d) -> %s", width,
 					height, maxWidth / scale.x, lineImage.size(), text));
 */

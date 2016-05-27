@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Stench extends Glyph {
@@ -52,7 +53,7 @@ public class Stench extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_STENCH, weaponName );
+		return Utils.format( TXT_STENCH, weaponName );
 	}
 	
 	@Override

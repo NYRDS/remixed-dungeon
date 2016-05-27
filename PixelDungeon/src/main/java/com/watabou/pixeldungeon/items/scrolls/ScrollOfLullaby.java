@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class ScrollOfLullaby extends Scroll {
 	
@@ -53,7 +54,7 @@ public class ScrollOfLullaby extends Scroll {
 			GLog.i(Game.getVar(R.string.ScrollOfLullaby_Info1));
 			break;
 		case 1:
-			GLog.i(String.format(Game.getVar(R.string.ScrollOfLullaby_Info2), affected.getName()));
+			GLog.i(Utils.format(Game.getVar(R.string.ScrollOfLullaby_Info2), affected.getName()));
 			break;
 		default:
 			GLog.i(Game.getVar(R.string.ScrollOfLullaby_Info3));

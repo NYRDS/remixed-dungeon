@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -125,20 +126,20 @@ public class Ring extends Artifact {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : String.format(Game.getVar(R.string.Ring_Name), gem);
+		return isKnown() ? name : Utils.format(Game.getVar(R.string.Ring_Name), gem);
 	}
 	
 	@Override
 	public String desc() {
-		return String.format(Game.getVar(R.string.Ring_Info), gem);
+		return Utils.format(Game.getVar(R.string.Ring_Info), gem);
 	}
 	
 	@Override
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
-			return String.format(Game.getVar(R.string.Ring_Info3a), desc(), name(), (cursed ? Game.getVar(R.string.Ring_Info3b) : "."));
+			return Utils.format(Game.getVar(R.string.Ring_Info3a), desc(), name(), (cursed ? Game.getVar(R.string.Ring_Info3b) : "."));
 		} else if (cursed && cursedKnown) {
-			return String.format(Game.getVar(R.string.Ring_Info4), desc(), name());
+			return Utils.format(Game.getVar(R.string.Ring_Info4), desc(), name());
 		} else {
 			return desc();
 		}

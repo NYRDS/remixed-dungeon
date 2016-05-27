@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
@@ -153,7 +154,7 @@ public class ItemSprite extends MovieClip {
 			speed.offset( (px-x) / DROP_INTERVAL, (py-y) / DROP_INTERVAL );
 			
 			Log.d( "GAME", toString() );
-			Log.d( "GAME", String.format(Game.getVar(R.string.ItemSprite_Info1), speed.x, speed.y ) );
+			Log.d( "GAME", Utils.format(Game.getVar(R.string.ItemSprite_Info1), speed.x, speed.y ) );
 		}
 	}
 	

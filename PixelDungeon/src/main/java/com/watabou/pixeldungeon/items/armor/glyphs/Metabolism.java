@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Metabolism extends Glyph {
@@ -66,7 +67,7 @@ public class Metabolism extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_METABOLISM, weaponName );
+		return Utils.format( TXT_METABOLISM, weaponName );
 	}
 
 	@Override

@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class Frost extends FlavourBuff {
 
@@ -39,7 +40,7 @@ public class Frost extends FlavourBuff {
 
 		public String actionText(Item srcItem) {
 			if(srcItem instanceof Potion) {
-				return String.format(TXT_SHATTERS, srcItem.toString());
+				return Utils.format(TXT_SHATTERS, srcItem.toString());
 			}
 			return null;
 		}

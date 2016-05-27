@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
@@ -258,7 +259,7 @@ public class Potion extends Item {
 	}
 
 	public void shatter( int cell ) {
-		GLog.i(String.format(Game.getVar(R.string.Potion_Shatter), color()));
+		GLog.i(Utils.format(Game.getVar(R.string.Potion_Shatter), color()));
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		splash( cell );
 	}
@@ -287,12 +288,12 @@ public class Potion extends Item {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : String.format(Game.getVar(R.string.Potion_Name), color);
+		return isKnown() ? name : Utils.format(Game.getVar(R.string.Potion_Name), color);
 	}
 	
 	@Override
 	public String info() {
-		return isKnown() ? desc() : String.format(Game.getVar(R.string.Potion_Info), color);
+		return isKnown() ? desc() : Utils.format(Game.getVar(R.string.Potion_Info), color);
 	}
 	
 	@Override

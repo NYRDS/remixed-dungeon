@@ -73,6 +73,7 @@ import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -192,7 +193,7 @@ public abstract class Level implements Bundlable {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
 			if (heap.isEmpty()) {
-				EventCollector.logEvent("bug", "level", String.format("Empty heap at pos %d", pos));
+				EventCollector.logEvent("bug", "level", Utils.format("Empty heap at pos %d", pos));
 				return null;
 			}
 			return heap;

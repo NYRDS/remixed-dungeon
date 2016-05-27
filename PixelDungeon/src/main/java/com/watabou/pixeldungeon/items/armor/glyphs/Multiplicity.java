@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Multiplicity extends Glyph {
@@ -61,7 +62,7 @@ public class Multiplicity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_MULTIPLICITY, weaponName );
+		return Utils.format( TXT_MULTIPLICITY, weaponName );
 	}
 
 	@Override

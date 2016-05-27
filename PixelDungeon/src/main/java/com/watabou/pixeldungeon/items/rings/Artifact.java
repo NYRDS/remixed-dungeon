@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class Artifact extends EquipableItem {
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed(hero);
-				GLog.n(String.format(Game.getVar(R.string.Ring_Info2), this));
+				GLog.n(Utils.format(Game.getVar(R.string.Ring_Info2), this));
 			}
 			hero.spendAndNext(Artifact.TIME_TO_EQUIP);
 			return true;

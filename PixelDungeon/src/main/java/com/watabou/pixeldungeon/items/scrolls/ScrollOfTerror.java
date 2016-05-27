@@ -17,17 +17,18 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class ScrollOfTerror extends Scroll {
 
@@ -55,7 +56,7 @@ public class ScrollOfTerror extends Scroll {
 			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info1));
 			break;
 		case 1:
-			GLog.i(String.format(Game.getVar(R.string.ScrollOfTerror_Info2), affected.getName()));
+			GLog.i(Utils.format(Game.getVar(R.string.ScrollOfTerror_Info2), affected.getName()));
 			break;
 		default:
 			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info3));

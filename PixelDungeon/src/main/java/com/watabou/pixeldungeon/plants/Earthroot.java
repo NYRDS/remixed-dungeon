@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public class Earthroot extends Plant {
@@ -64,7 +65,7 @@ public class Earthroot extends Plant {
 		{
 			plantName = TXT_NAME;
 			
-			name = String.format(TXT_SEED, plantName);
+			name = Utils.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_EARTHROOT;
 			
 			plantClass = Earthroot.class;

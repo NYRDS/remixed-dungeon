@@ -41,7 +41,7 @@ public class Texture {
 		GLES20.glGenTextures( 1, ids, 0 );
 		id = ids[0];
 		
-		//Log.i("texture",String.format("creating %d", id));
+		//Log.i("texture",Utils.format("creating %d", id));
 		bind();
 	}
 	
@@ -72,7 +72,7 @@ public class Texture {
 		if(id != 0) {
 			int[] ids = {id};
 			GLES20.glDeleteTextures( 1, ids, 0 );
-			//Log.i("texture",String.format("deleting %d", id));
+			//Log.i("texture",Utils.format("deleting %d", id));
 		}
 	}
 	

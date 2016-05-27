@@ -138,7 +138,7 @@ public class Thief extends Mob {
 		String desc = Game.getVar(R.string.Thief_Desc);
 		
 		if (item != null) {
-			desc += String.format( TXT_CARRIES, Utils.capitalize( this.getName() ), item.name() );
+			desc += Utils.format( TXT_CARRIES, Utils.capitalize( this.getName() ), item.name() );
 		}
 		
 		return desc;

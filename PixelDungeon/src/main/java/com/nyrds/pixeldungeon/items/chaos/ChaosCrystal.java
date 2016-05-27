@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
-import android.annotation.SuppressLint;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -18,6 +16,7 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
@@ -183,11 +182,10 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		}
 	}
 
-	@SuppressLint("DefaultLocale")
 	@Override
 	public String getText() {
 		if (identetifyLevel > 0) {
-			return String.format("%d/100", charge);
+			return Utils.format("%d/100", charge);
 		} else {
 			return null;
 		}

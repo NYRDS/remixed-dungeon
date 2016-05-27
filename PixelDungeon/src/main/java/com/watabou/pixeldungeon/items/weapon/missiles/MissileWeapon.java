@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.ArrayList;
@@ -138,20 +139,20 @@ public class MissileWeapon extends Weapon {
 		
 		StringBuilder info = new StringBuilder( desc() );
 		
-		info.append(String.format(Game.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
+		info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
 		info.append(" ");
 
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.effectiveSTR()) {
-				info.append(String.format(Game.getVar(R.string.MissileWeapon_Info2), name));
+				info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info2), name));
 			}
 			if (STR < Dungeon.hero.effectiveSTR()) {
-				info.append(String.format(Game.getVar(R.string.MissileWeapon_Info3), name));
+				info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info3), name));
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append(String.format(Game.getVar(R.string.MissileWeapon_Info4), name)); 
+			info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info4), name));
 		}
 		
 		return info.toString();

@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfIdentify extends InventoryScroll {
@@ -38,7 +39,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		getCurUser().getSprite().getParent().add( new Identification( getCurUser().getSprite().center().offset( 0, -16 ) ) );
 		
 		item.identify();
-		GLog.i(String.format(Game.getVar(R.string.ScrollOfIdentify_Info1), item));
+		GLog.i(Utils.format(Game.getVar(R.string.ScrollOfIdentify_Info1), item));
 		
 		Badges.validateItemLevelAquired( item );
 	}

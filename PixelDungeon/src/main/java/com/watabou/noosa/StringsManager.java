@@ -9,6 +9,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -124,7 +125,7 @@ public class StringsManager {
 		context.getResources().updateConfiguration(config,
 				context.getResources().getDisplayMetrics());
 
-		String modStrings = String.format("strings_%s.json", lang);
+		String modStrings = Utils.format("strings_%s.json", lang);
 
 		if (ModdingMode.isResourceExistInMod(modStrings)) {
 			parseStrings(modStrings);

@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -64,7 +65,7 @@ public class Sungrass extends Plant {
 		{
 			plantName = TXT_NAME;
 
-			name = String.format(TXT_SEED, plantName);
+			name = Utils.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_SUNGRASS;
 
 			plantClass = Sungrass.class;

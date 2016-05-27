@@ -48,8 +48,7 @@ public enum Preferences {
 	public static final String KEY_REALTIME         = "realtime";
 	public static final String KEY_ACTIVE_MOD       = "active_mod";
 	public static final String KEY_COLLECT_STATS    = "collect_stats";
-	
-	
+
 	private SharedPreferences prefs;
 	
 	private SharedPreferences get() {
