@@ -94,7 +94,14 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
-		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor(hero.belongings.accessory));
+		if (hero.belongings.accessory  == null)
+		{
+			layersDesc.put(LAYER_ACCESSORY, HERO_EMPTY_PNG);
+		}
+		else{
+			layersDesc.put(LAYER_ACCESSORY, hero.belongings.accessory.getLayerFile());
+		}
+
 
 	}
 
@@ -118,13 +125,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
 			addLayer(layersOrder[i],TextureCache.get(lookDesc[i]));
 		}
-	}
-
-	private String accessoryDescriptor(Accessory accessory) {
-		if(accessory==null) {
-			return HERO_EMPTY_PNG;
-		}
-		return "hero/accessories/"+accessory.getClass().getSimpleName()+".png";
 	}
 
 	private String armorDescriptor(Armor armor) {
