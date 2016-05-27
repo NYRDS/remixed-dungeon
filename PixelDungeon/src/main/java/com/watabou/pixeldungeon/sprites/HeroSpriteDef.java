@@ -31,23 +31,25 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private CompositeTextureImage avatar;
 
 	// body goes as main texture
-	private static final String LAYER_ARMOR     = "armor";
-	private static final String LAYER_HEAD      = "head";
-	private static final String LAYER_HAIR      = "hair";
-	private static final String LAYER_HELMET    = "helmet";
-	private static final String LAYER_DEATH     = "death";
-	private static final String LAYER_BODY      = "body";
-	private static final String LAYER_SHIELD    = "shield";
-	private static final String LAYER_WEAPON    = "weapon";
-	private static final String LAYER_ACCESSORY = "accessory";
+	private static final String LAYER_ARMOR       = "armor";
+	private static final String LAYER_HEAD        = "head";
+	private static final String LAYER_HAIR        = "hair";
+	private static final String LAYER_FACIAL_HAIR = "facial_hair";
+	private static final String LAYER_HELMET      = "helmet";
+	private static final String LAYER_DEATH       = "death";
+	private static final String LAYER_BODY        = "body";
+	private static final String LAYER_SHIELD      = "shield";
+	private static final String LAYER_WEAPON      = "weapon";
+	private static final String LAYER_ACCESSORY   = "accessory";
 
 	private Animation fly;
 
 	private static final String[] layersOrder = {
 		LAYER_BODY,
 		LAYER_HEAD,
-		LAYER_ARMOR,
 		LAYER_HAIR,
+		LAYER_ARMOR,
+		LAYER_FACIAL_HAIR,
 		LAYER_HELMET,
 		LAYER_DEATH,
 		LAYER_ACCESSORY
@@ -79,16 +81,22 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
 		String hairDescriptor = HERO_EMPTY_PNG;
+		String facialHairDescriptor = HERO_EMPTY_PNG;
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 
 		if(hero.belongings.armor  == null
-				|| (hero.belongings.armor  != null && !hero.belongings.armor.isCoverHair())
-				|| (hero.belongings.accessory  != null && !hero.belongings.accessory.isCoverHair()))
+				|| (hero.belongings.armor  != null && !hero.belongings.armor.isCoveringHair())
+				|| (hero.belongings.accessory  != null && !hero.belongings.accessory.isCoveringHair()))
 		{
 			hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png";
 		}
+		if(classDescriptor.equals("MAGE_BATTLEMAGE") || classDescriptor.equals("WARRIOR_BERSERKER"))
+		{
+			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+		}
 
+		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
 		layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor, hero));
 
@@ -226,8 +234,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		avatar.addLayer(getLayerTexture(LAYER_BODY));
 		avatar.addLayer(getLayerTexture(LAYER_HEAD));
-		avatar.addLayer(getLayerTexture(LAYER_ARMOR));
 		avatar.addLayer(getLayerTexture(LAYER_HAIR));
+		avatar.addLayer(getLayerTexture(LAYER_ARMOR));
+		avatar.addLayer(getLayerTexture(LAYER_FACIAL_HAIR));
 		avatar.addLayer(getLayerTexture(LAYER_HELMET));
 		avatar.addLayer(getLayerTexture(LAYER_DEATH));
 		avatar.addLayer(getLayerTexture(LAYER_ACCESSORY));

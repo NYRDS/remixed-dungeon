@@ -327,7 +327,7 @@ public class Armor extends EquipableItem {
 		return hasHelmet;
 	}
 
-	public boolean isCoverHair() {
+	public boolean isCoveringHair() {
 		return coverHair;
 	}
 

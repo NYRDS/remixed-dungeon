@@ -15,7 +15,7 @@ public class Accessory {
         coverHair = false;
     }
 
-	public boolean isCoverHair() {
+	public boolean isCoveringHair() {
 		return coverHair;
 	}
 }
