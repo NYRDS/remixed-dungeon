@@ -24,9 +24,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.ui.Button;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -87,7 +85,7 @@ public class StatusPane extends Component {
 			}
 		} );
 		
-		btnMenu = new MenuButton();
+		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
 		add( btnMenu );
 		
 		avatar = hero.getHeroSprite().avatar();
@@ -208,47 +206,4 @@ public class StatusPane extends Component {
 		}
 	}
 
-	private static class MenuButton extends Button {
-
-		private Image image;
-
-		public MenuButton() {
-			super();
-
-			width = image.width + 4;
-			height = image.height + 4;
-		}
-		
-		@Override
-		protected void createChildren() {
-			super.createChildren();
-			
-			image = new Image( Assets.getStatus(), 114, 3, 12, 11 );
-			add( image );
-		}
-		
-		@Override
-		protected void layout() {
-			super.layout();
-			
-			image.x = x + 2;
-			image.y = y + 2;
-		}
-		
-		@Override
-		protected void onTouchDown() {
-			image.brightness( 1.5f );
-			Sample.INSTANCE.play( Assets.SND_CLICK );
-		}
-		
-		@Override
-		protected void onTouchUp() {
-			image.resetColor();
-		}
-		
-		@Override
-		protected void onClick() {
-			GameScene.show( new WndGame() );
-		}
-	}
 }
