@@ -59,6 +59,7 @@ public class StatusPane extends Component {
 	private Compass compass;
 	
 	private MenuButton btnMenu;
+	private MenuButton btnHats;
 
 	private Hero hero;
 
@@ -87,6 +88,9 @@ public class StatusPane extends Component {
 		
 		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
 		add( btnMenu );
+
+		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
+		add( btnHats );
 		
 		avatar = hero.getHeroSprite().avatar();
 		add(avatar);
@@ -159,6 +163,7 @@ public class StatusPane extends Component {
 		buffs.setPos( 32, 11 );
 		
 		btnMenu.setPos( width - btnMenu.width(), 1 );
+		btnHats.setPos( width - btnHats.width(), btnMenu.bottom() + 1 );
 	}
 	
 	@Override
