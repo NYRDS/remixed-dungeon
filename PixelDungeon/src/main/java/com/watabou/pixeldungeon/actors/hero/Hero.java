@@ -1649,7 +1649,7 @@ public class Hero extends Char {
 		return Scrambler.descramble(lvl);
 	}
 
-	public void lvl(int lvl) {
+	private void lvl(int lvl) {
 		this.lvl = Scrambler.scramble(lvl);
 	}
 

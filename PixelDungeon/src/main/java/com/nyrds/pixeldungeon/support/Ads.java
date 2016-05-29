@@ -20,8 +20,8 @@ import java.util.Map;
  * Created by mike on 24.05.2016.
  */
 public class Ads {
-	static InterstitialAd mSaveAndLoadAd;
-	static InterstitialAd mEasyModeSmallScreenAd;
+	private static InterstitialAd mSaveAndLoadAd;
+	private static InterstitialAd mEasyModeSmallScreenAd;
 
 	private static boolean isSmallScreen() {
 		return (Game.width() < 400 || Game.height() < 400);

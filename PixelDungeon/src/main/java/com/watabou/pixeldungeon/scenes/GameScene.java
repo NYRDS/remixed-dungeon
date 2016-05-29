@@ -91,7 +91,7 @@ public class GameScene extends PixelScene {
 	private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
 	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 
-	static volatile GameScene scene;
+	private static volatile GameScene scene;
 
 	private SkinnedBlock   water;
 	private DungeonTilemap tiles;

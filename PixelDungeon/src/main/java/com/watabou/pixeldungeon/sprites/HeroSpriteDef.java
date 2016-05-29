@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.sprites;
 
-import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;

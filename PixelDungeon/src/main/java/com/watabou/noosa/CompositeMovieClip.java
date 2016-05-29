@@ -22,11 +22,11 @@ public class CompositeMovieClip extends MovieClip {
 		}
 	}
 
-	public CompositeMovieClip() {
+	protected CompositeMovieClip() {
 		super();
 	}
 
-	public void clearLayers() {
+	protected void clearLayers() {
 		if (mLayers == null) {
 			mLayers = new ArrayList<>();
 		}
@@ -34,7 +34,7 @@ public class CompositeMovieClip extends MovieClip {
 		mLayers.clear();
 	}
 
-	public void addLayer(String id, Texture img) {
+	protected void addLayer(String id, Texture img) {
 		if (mLayers == null) {
 			mLayers = new ArrayList<>();
 		}

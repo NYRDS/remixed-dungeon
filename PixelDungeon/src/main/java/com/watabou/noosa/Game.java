@@ -80,27 +80,27 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected static boolean needSceneRestart = false;
 
 	// New scene class
-	protected Class<? extends Scene> sceneClass;
+	private Class<? extends Scene> sceneClass;
 
 	// Current time in milliseconds
-	protected long now;
+	private   long now;
 	// Milliseconds passed since previous update
-	protected long step;
+	private   long step;
 
-	public static float timeScale = 1f;
-	public static float elapsed = 0f;
+	private static float timeScale = 1f;
+	public static  float elapsed   = 0f;
 
-	protected GLSurfaceView view;
-	private   LinearLayout  layout;
+	private GLSurfaceView view;
+	private LinearLayout  layout;
 
 	public static volatile boolean paused = true;
 	protected static int difficulty;
 
 	// Accumulated touch events
-	protected final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
+	private final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
 
 	// Accumulated key events
-	protected final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
+	private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
 	private Runnable doOnResume;
 
@@ -377,7 +377,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return instance().scene;
 	}
 
-	protected void step() {
+	private void step() {
 
 		if (requestedReset) {
 			requestedReset = false;
@@ -391,11 +391,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		update();
 	}
 
-	protected void draw() {
+	private void draw() {
 		scene.draw();
 	}
 
-	protected void switchScene(Scene requestedScene) {
+	private void switchScene(Scene requestedScene) {
 
 		SystemText.invalidate();
 		Camera.reset();
@@ -412,7 +412,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		Game.timeScale = 1f;
 	}
 
-	protected void update() {
+	private void update() {
 		Game.elapsed = Game.timeScale * step * 0.001f;
 
 		synchronized (motionEvents) {
@@ -444,7 +444,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return instance;
 	}
 
-	public synchronized static Game instance(Game instance) {
+	private synchronized static Game instance(Game instance) {
 		Game.instance = instance;
 		return instance;
 	}
@@ -453,7 +453,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return width;
 	}
 
-	public static void width(int width) {
+	private static void width(int width) {
 		Game.width = width;
 	}
 
@@ -461,7 +461,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return height;
 	}
 
-	public static void height(int height) {
+	private static void height(int height) {
 		Game.height = height;
 	}
 

@@ -27,8 +27,8 @@ import java.util.Locale;
 
 public class Utils {
 
-	protected static final Class<?> strings      = getR_Field("string");
-	protected static final Class<?> stringArrays = getR_Field("array");
+	private static final Class<?> strings      = getR_Field("string");
+	private static final Class<?> stringArrays = getR_Field("array");
 	
 	static private Class <?> getR_Field(String field){
 		try {
@@ -47,7 +47,7 @@ public class Utils {
 		return String.format( Locale.ENGLISH, format, args );
 	}
 
-	public static String VOWELS	= "aoeiu";
+	private static String VOWELS = "aoeiu";
 	
 	public static String indefinite( String noun ) {
 		//In a pt_BR language(and another), there is no specific rule.

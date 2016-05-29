@@ -19,14 +19,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
-import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
-import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
-import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
-import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
-import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -75,15 +68,15 @@ public enum HeroClass {
 
 	private String title;
 
-	public static final String[] WAR_PERKS = Game
+	private static final String[] WAR_PERKS = Game
 			.getVars(R.array.HeroClass_WarPerks);
-	public static final String[] MAG_PERKS = Game
+	private static final String[] MAG_PERKS = Game
 			.getVars(R.array.HeroClass_MagPerks);
-	public static final String[] ROG_PERKS = Game
+	private static final String[] ROG_PERKS = Game
 			.getVars(R.array.HeroClass_RogPerks);
-	public static final String[] HUN_PERKS = Game
+	private static final String[] HUN_PERKS = Game
 			.getVars(R.array.HeroClass_HunPerks);
-	public static final String[] ELF_PERKS = Game
+	private static final String[] ELF_PERKS = Game
 			.getVars(R.array.HeroClass_ElfPerks);
 
 	HeroClass(String title, Class<? extends ClassArmor> armorClass) {
