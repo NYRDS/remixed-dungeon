@@ -21,6 +21,12 @@ android {
         release {
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            minifyEnabled false
+        }
+        debug {
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -31,6 +37,16 @@ android {
         abortOnError false
     }
     productFlavors {
+        GooglePlay {
+        }
+        ChromeWebStore {
+        }
+        Amazon {
+        }
+        Fdroid {
+        }
+        Yandex {
+        }
     }
 }
 
