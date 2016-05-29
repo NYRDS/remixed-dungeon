@@ -183,7 +183,7 @@ public class StatusPane extends Component {
 		hp.Scale().x = health;
 		exp.Scale().x = (width / exp.width) * hero.exp / hero.maxExp();
 		
-		if (hero.lvl != lastLvl) {
+		if (hero.lvl() != lastLvl) {
 			
 			if (lastLvl != -1) {
 				Emitter emitter = (Emitter)recycle( Emitter.class );
@@ -192,7 +192,7 @@ public class StatusPane extends Component {
 				emitter.burst( Speck.factory( Speck.STAR ), 12 );
 			}
 			
-			lastLvl = hero.lvl;
+			lastLvl = hero.lvl();
 			level.text( Integer.toString( lastLvl ) );
 			level.measure();
 			level.x = PixelScene.align( 27.0f - level.width() / 2 );

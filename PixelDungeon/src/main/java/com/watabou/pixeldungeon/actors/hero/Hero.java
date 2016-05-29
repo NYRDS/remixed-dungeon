@@ -171,8 +171,8 @@ public class Hero extends Char {
 
 	private float awareness;
 
-	public int lvl = 1;
-	public int exp = 0;
+	private int lvl = Scrambler.scramble(1);
+	public  int exp = 0;
 	public String levelKind;
 	public String levelId;
 
@@ -264,7 +264,7 @@ public class Hero extends Char {
 
 		bundle.put(STRENGTH, STR());
 
-		bundle.put(LEVEL, lvl);
+		bundle.put(LEVEL, lvl());
 		bundle.put(EXPERIENCE, exp);
 		bundle.put(LEVEL_KIND, levelKind);
 		bundle.put(LEVEL_ID, levelId);
@@ -290,7 +290,7 @@ public class Hero extends Char {
 		STR(bundle.getInt(STRENGTH));
 		updateAwareness();
 
-		lvl = bundle.getInt(LEVEL);
+		lvl(bundle.getInt(LEVEL));
 		exp = bundle.getInt(EXPERIENCE);
 		levelKind = bundle.getString(LEVEL_KIND);
 		levelId = bundle.optString(LEVEL_ID, "unknown");
@@ -1275,14 +1275,14 @@ public class Hero extends Char {
 		boolean levelUp = false;
 		while (this.exp >= maxExp()) {
 			this.exp -= maxExp();
-			lvl++;
+			lvl(lvl() + 1);
 
 			ht(ht() + 5);
 			hp(hp() + 5);
 			attackSkill++;
 			defenseSkill++;
 
-			if (lvl < 10) {
+			if (lvl() < 10) {
 				updateAwareness();
 			}
 
@@ -1291,7 +1291,7 @@ public class Hero extends Char {
 
 		if (levelUp) {
 
-			GLog.p(TXT_NEW_LEVEL, lvl);
+			GLog.p(TXT_NEW_LEVEL, lvl());
 			getSprite().showStatus(CharSprite.POSITIVE, TXT_LEVEL_UP);
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
@@ -1312,14 +1312,14 @@ public class Hero extends Char {
 
 	public int maxExp() {
 		if (getDifficulty() != 0) {
-			return 5 + lvl * 5;
+			return 5 + lvl() * 5;
 		} else {
-			return 5 + lvl * 4;
+			return 5 + lvl() * 4;
 		}
 	}
 
 	void updateAwareness() {
-		awareness = (float) (1 - Math.pow((heroClass == HeroClass.ROGUE ? 0.85 : 0.90), (1 + Math.min(lvl, 9)) * 0.5));
+		awareness = (float) (1 - Math.pow((heroClass == HeroClass.ROGUE ? 0.85 : 0.90), (1 + Math.min(lvl(), 9)) * 0.5));
 	}
 
 	public boolean isStarving() {
@@ -1643,6 +1643,14 @@ public class Hero extends Char {
 
 	public HeroSpriteDef getHeroSprite() {
 		return (HeroSpriteDef) getSprite();
+	}
+
+	public int lvl() {
+		return Scrambler.descramble(lvl);
+	}
+
+	public void lvl(int lvl) {
+		this.lvl = Scrambler.scramble(lvl);
 	}
 
 	public interface Doom {

@@ -310,19 +310,19 @@ public class Badges {
 	public static void validateLevelReached() {
 		Badge badge = null;
 
-		if (!local.contains(Badge.LEVEL_REACHED_1) && Dungeon.hero.lvl >= 6) {
+		if (!local.contains(Badge.LEVEL_REACHED_1) && Dungeon.hero.lvl() >= 6) {
 			badge = Badge.LEVEL_REACHED_1;
 			local.add(badge);
 		}
-		if (!local.contains(Badge.LEVEL_REACHED_2) && Dungeon.hero.lvl >= 12) {
+		if (!local.contains(Badge.LEVEL_REACHED_2) && Dungeon.hero.lvl() >= 12) {
 			badge = Badge.LEVEL_REACHED_2;
 			local.add(badge);
 		}
-		if (!local.contains(Badge.LEVEL_REACHED_3) && Dungeon.hero.lvl >= 18) {
+		if (!local.contains(Badge.LEVEL_REACHED_3) && Dungeon.hero.lvl() >= 18) {
 			badge = Badge.LEVEL_REACHED_3;
 			local.add(badge);
 		}
-		if (!local.contains(Badge.LEVEL_REACHED_4) && Dungeon.hero.lvl >= 24) {
+		if (!local.contains(Badge.LEVEL_REACHED_4) && Dungeon.hero.lvl() >= 24) {
 			badge = Badge.LEVEL_REACHED_4;
 			local.add(badge);
 		}

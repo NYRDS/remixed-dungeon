@@ -110,7 +110,7 @@ public class WndHero extends WndTabbed {
 			Hero hero = Dungeon.hero; 
 
 			Text title = PixelScene.createText( 
-				Utils.format( TXT_TITLE, hero.lvl, hero.className() ).toUpperCase( Locale.ENGLISH ), 9 );
+				Utils.format( TXT_TITLE, hero.lvl(), hero.className() ).toUpperCase( Locale.ENGLISH ), 9 );
 			title.hardlight( TITLE_COLOR );
 			title.measure();
 			add( title );

@@ -500,7 +500,7 @@ public abstract class Mob extends Char {
 				Badges.validateNightHunter();
 			}
 
-			if (Dungeon.hero.lvl <= maxLvl && EXP > 0) {
+			if (Dungeon.hero.lvl() <= maxLvl && EXP > 0) {
 				Dungeon.hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
 						EXP);
 				Dungeon.hero.earnExp(EXP);
@@ -517,7 +517,7 @@ public abstract class Mob extends Char {
 
 		super.die(cause);
 
-		if (Dungeon.hero.lvl <= maxLvl + 2) {
+		if (Dungeon.hero.lvl() <= maxLvl + 2) {
 			dropLoot();
 		}
 

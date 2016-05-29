@@ -17,6 +17,8 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -157,6 +159,7 @@ public class Dungeon {
 		}
 	}
 
+	@NonNull
 	public static Level newLevel(Position pos) {
 
 		Dungeon.level = null;
@@ -234,8 +237,6 @@ public class Dungeon {
 		hero.viewDistance = light == null ? level.viewDistance : Math.max(Light.DISTANCE, level.viewDistance);
 
 		Dungeon.level = level;
-
-		//observe();
 	}
 
 	public static boolean posNeeded() {
@@ -367,7 +368,7 @@ public class Dungeon {
 			saveGame(SaveUtils.gameFile(hero.heroClass));
 			saveLevel();
 
-			GamesInProgress.set(hero.heroClass, depth, hero.lvl);
+			GamesInProgress.set(hero.heroClass, depth, hero.lvl());
 
 		} else if (WndResurrect.instance != null) {
 
@@ -481,13 +482,14 @@ public class Dungeon {
 		}
 
 		Level level = Level.fromBundle(bundle, "level");
-		if (level != null) {
-			level.levelId = next.levelId;
-			initSizeDependentStuff(level.getWidth(), level.getHeight());
-		} else {
-			EventCollector.logEvent("Dungeon.loadLevel","fromBundle fail");
-			return newLevel(next);
+
+		if(level == null) {
+			level = newLevel(next);
 		}
+
+		level.levelId = next.levelId;
+		initSizeDependentStuff(level.getWidth(), level.getHeight());
+
 		return level;
 	}
 

@@ -46,7 +46,7 @@ public class SacrificialSword extends SpecialWeapon {
 			classBonus = 2.0;
 		}
 
-		return (0.25 + (hero.lvl * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
+		return (0.25 + (hero.lvl() * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
 	}
 	
 	public void applySpecial(Hero hero, Char tgt ) {
