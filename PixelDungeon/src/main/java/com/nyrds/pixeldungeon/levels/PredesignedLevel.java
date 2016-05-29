@@ -71,24 +71,7 @@ public class PredesignedLevel extends CommonLevel {
 				set(i, map.getInt(i));
 			}
 
-			JSONArray entranceDesc = mLevelDesc.getJSONArray("entrance");
-
-			entrance = cell(entranceDesc.getInt(0), entranceDesc.getInt(1));
-
-			if(mLevelDesc.has("exit")) {
-				JSONArray exitDesc = mLevelDesc.getJSONArray("exit");
-				setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)), 0);
-				return;
-			}
-
-			if(mLevelDesc.has("multiexit")){
-				JSONArray multiExitDesc = mLevelDesc.getJSONArray("multiexit");
-				for(int i=0;i<multiExitDesc.length();++i) {
-					JSONArray exitDesc = multiExitDesc.getJSONArray(i);
-					setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)), i);
-				}
-				return;
-			}
+			setupLinks();
 
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
@@ -97,6 +80,26 @@ public class PredesignedLevel extends CommonLevel {
 		cleanWalls();
 		createMobs();
 		createItems();
+	}
+
+	private void setupLinks() throws JSONException {
+		JSONArray entranceDesc = mLevelDesc.getJSONArray("entrance");
+
+		entrance = cell(entranceDesc.getInt(0), entranceDesc.getInt(1));
+
+		if(mLevelDesc.has("exit")) {
+			JSONArray exitDesc = mLevelDesc.getJSONArray("exit");
+			setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)), 0);
+			return;
+		}
+
+		if(mLevelDesc.has("multiexit")){
+			JSONArray multiExitDesc = mLevelDesc.getJSONArray("multiexit");
+			for(int i=0;i<multiExitDesc.length();++i) {
+				JSONArray exitDesc = multiExitDesc.getJSONArray(i);
+				setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)), i);
+			}
+		}
 	}
 
 	@Override
