@@ -11,6 +11,8 @@ import java.util.Map;
 public class Accessory {
 
 	protected boolean coverHair;
+	protected int image = 0;
+	protected String imageFile;
 
 	static final private Map<String,Class<? extends Accessory>> allAccessoriesList = new HashMap<>();
 
@@ -39,6 +41,7 @@ public class Accessory {
 	}
 
     Accessory (){
+		imageFile = "items/accessories.png";
         coverHair = false;
     }
 

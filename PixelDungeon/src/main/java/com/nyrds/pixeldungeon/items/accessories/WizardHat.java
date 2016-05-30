@@ -7,6 +7,7 @@ public class WizardHat extends Accessory{
 
     {
         coverHair = true;
+        image = 4;
     }
 
 }

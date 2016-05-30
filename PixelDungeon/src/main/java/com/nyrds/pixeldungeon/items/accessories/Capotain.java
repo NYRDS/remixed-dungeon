@@ -7,6 +7,7 @@ public class Capotain extends Accessory{
 
     {
         coverHair = true;
+        image = 5;
     }
 
 }

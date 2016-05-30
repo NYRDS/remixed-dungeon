@@ -5,6 +5,6 @@ package com.nyrds.pixeldungeon.items.accessories;
  */
 public class Shades extends Accessory{
 
-    {}
+    {image = 4;}
 
 }

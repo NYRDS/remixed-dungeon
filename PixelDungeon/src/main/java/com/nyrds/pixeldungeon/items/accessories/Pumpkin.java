@@ -7,6 +7,7 @@ public class Pumpkin extends Accessory{
 
     {
         coverHair = true;
+        image = 2;
     }
 
 }
