@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
@@ -103,7 +104,7 @@ public class WndDonate extends WndTabbed {
 				} else {
 					btnText = NOT_CONNECTED;
 				}
-				RedButton donate = new RedButton(btnText) {
+				SystemRedButton donate = new SystemRedButton(btnText) {
 					@Override
 					protected void onClick() {
 						Iap.donate(level);

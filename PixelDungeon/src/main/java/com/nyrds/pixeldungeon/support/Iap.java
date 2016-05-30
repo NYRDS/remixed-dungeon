@@ -153,7 +153,7 @@ public class Iap {
 		if(sku == null) {
 			return null;
 		}
-		return sku.getPrice() + sku.getPriceCurrencyCode();
+		return sku.getPrice() + "("+ sku.getPriceCurrencyCode()+")";
 	}
 
 
