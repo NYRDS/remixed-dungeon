@@ -13,7 +13,7 @@ public class WndHats extends Window {
 
 		int yPos = 0;
 
-		Text tfTitle = PixelScene.createMultiline("Accessory inventory", 9);
+		Text tfTitle = PixelScene.createMultiline("Accessories", 9);
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = MARGIN;
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);

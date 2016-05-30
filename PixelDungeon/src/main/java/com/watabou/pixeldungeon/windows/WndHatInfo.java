@@ -15,7 +15,7 @@ public class WndHatInfo extends Window {
 
 		int yPos = 0;
 
-		Text tfTitle = PixelScene.createMultiline("Accessory inventory", 9);
+		Text tfTitle = PixelScene.createMultiline("Hat", 9);
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = MARGIN;
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
