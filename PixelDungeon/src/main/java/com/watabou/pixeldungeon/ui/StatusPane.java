@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndGame;
+import com.watabou.pixeldungeon.windows.WndHats;
 import com.watabou.pixeldungeon.windows.WndHero;
 
 public class StatusPane extends Component {
@@ -89,7 +90,7 @@ public class StatusPane extends Component {
 		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
 		add( btnMenu );
 
-		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
+		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndHats.class);
 		add( btnHats );
 		
 		avatar = hero.getHeroSprite().avatar();
@@ -156,7 +157,7 @@ public class StatusPane extends Component {
 		
 		keys.y = 6;
 		
-		danger.setPos( width - danger.width(), 20 );
+		danger.setPos( width - danger.width(), 40 );
 		
 		loot.setPos( width - loot.width(),  danger.bottom() + 2 );
 		
