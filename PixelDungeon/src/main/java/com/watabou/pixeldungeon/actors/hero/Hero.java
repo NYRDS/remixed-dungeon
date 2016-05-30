@@ -1003,14 +1003,14 @@ public class Hero extends Char {
 				case BATTLEMAGE:
 					if (wep instanceof Wand) {
 						Wand wand = (Wand) wep;
-						if (wand.curCharges < wand.maxCharges && damage > 0) {
+						if (wand.curCharges() < wand.maxCharges() && damage > 0) {
 
-							wand.curCharges++;
+							wand.curCharges(wand.curCharges() + 1);
 							QuickSlot.refresh();
 
 							ScrollOfRecharging.charge(this);
 						}
-						damage += wand.curCharges;
+						damage += wand.curCharges();
 					}
 					break;
 				case SNIPER:

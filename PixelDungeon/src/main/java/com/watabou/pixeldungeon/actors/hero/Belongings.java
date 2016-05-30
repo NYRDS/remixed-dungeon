@@ -223,8 +223,8 @@ public class Belongings implements Iterable<Item> {
 		for (Item item : this) {
 			if (item instanceof Wand) {
 				Wand wand = (Wand)item;
-				if (wand.curCharges < wand.maxCharges) {
-					wand.curCharges = full ? wand.maxCharges : wand.curCharges + 1;
+				if (wand.curCharges() < wand.maxCharges()) {
+					wand.curCharges(full ? wand.maxCharges() : wand.curCharges() + 1);
 					count++;
 					
 					wand.updateQuickslot();
@@ -242,8 +242,8 @@ public class Belongings implements Iterable<Item> {
 		for (Item item : this) {
 			if (item instanceof Wand) {
 				Wand wand = (Wand)item;
-				if (wand.curCharges > 0) {
-					wand.curCharges--;
+				if (wand.curCharges() > 0) {
+					wand.curCharges(wand.curCharges() - 1);
 					count++;
 					
 					wand.updateQuickslot();

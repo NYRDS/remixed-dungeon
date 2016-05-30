@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -64,8 +65,8 @@ public abstract class Wand extends KindOfWeapon {
 
 	private static final float TIME_TO_ZAP = 1f;
 
-	public int maxCharges = initialCharges();
-	public int curCharges = maxCharges;
+	private int maxCharges = Scrambler.scramble(initialCharges());
+	private int curCharges = Scrambler.scramble(maxCharges());
 	
 	protected Char wandUser;
 
@@ -126,11 +127,10 @@ public abstract class Wand extends KindOfWeapon {
 	@Override
 	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = super.actions(hero);
-		if (curCharges > 0 || !curChargeKnown) {
+		if (curCharges() > 0 || !curChargeKnown) {
 			actions.add(AC_ZAP);
 		}
-		
-		
+
 		actions.remove(AC_EQUIP);
 		actions.remove(AC_UNEQUIP);
 		
@@ -283,7 +283,7 @@ public abstract class Wand extends KindOfWeapon {
 	@Override
 	public String status() {
 		if (levelKnown) {
-			return (curChargeKnown ? curCharges : "?") + "/" + maxCharges;
+			return (curChargeKnown ? curCharges() : "?") + "/" + maxCharges();
 		} else {
 			return null;
 		}
@@ -295,7 +295,7 @@ public abstract class Wand extends KindOfWeapon {
 		super.upgrade();
 
 		updateLevel();
-		curCharges = Math.min(curCharges + 1, maxCharges);
+		curCharges(Math.min(curCharges() + 1, maxCharges()));
 		updateQuickslot();
 
 		return this;
@@ -312,8 +312,8 @@ public abstract class Wand extends KindOfWeapon {
 	}
 
 	protected void updateLevel() {
-		maxCharges = Math.min(initialCharges() + level(), 9);
-		curCharges = Math.min(curCharges, maxCharges);
+		maxCharges(Math.min(initialCharges() + level(), 9));
+		curCharges(Math.min(curCharges(), maxCharges()));
 
 		calculateDamage();
 	}
@@ -347,7 +347,7 @@ public abstract class Wand extends KindOfWeapon {
 	}
 
 	protected void wandUsed() {
-		curCharges--;
+		curCharges(curCharges() - 1);
 		updateQuickslot();
 
 		getCurUser().spendAndNext(TIME_TO_ZAP);
@@ -395,16 +395,16 @@ public abstract class Wand extends KindOfWeapon {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-		bundle.put(MAX_CHARGES, maxCharges);
-		bundle.put(CUR_CHARGES, curCharges);
+		bundle.put(MAX_CHARGES, maxCharges());
+		bundle.put(CUR_CHARGES, curCharges());
 		bundle.put(CUR_CHARGE_KNOWN, curChargeKnown);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		maxCharges = bundle.getInt(MAX_CHARGES);
-		curCharges = bundle.getInt(CUR_CHARGES);
+		maxCharges(bundle.getInt(MAX_CHARGES));
+		curCharges(bundle.getInt(CUR_CHARGES));
 		curChargeKnown = bundle.getBoolean(CUR_CHARGE_KNOWN);
 	}
 
@@ -413,7 +413,7 @@ public abstract class Wand extends KindOfWeapon {
 
 		QuickSlot.target(curItem, Actor.findChar(cell));
 
-		if (curCharges > 0) {
+		if (curCharges() > 0) {
 
 			getCurUser().busy();
 
@@ -468,6 +468,22 @@ public abstract class Wand extends KindOfWeapon {
 		}
 	};
 
+	public int curCharges() {
+		return Scrambler.descramble(curCharges);
+	}
+
+	public void curCharges(int curCharges) {
+		this.curCharges = Scrambler.scramble(curCharges);
+	}
+
+	public int maxCharges() {
+		return Scrambler.descramble(maxCharges);
+	}
+
+	public void maxCharges(int maxCharges) {
+		this.maxCharges = Scrambler.scramble(maxCharges);
+	}
+
 	protected class Charger extends Buff {
 		private static final float TIME_TO_CHARGE = 40f;
 
@@ -487,8 +503,8 @@ public abstract class Wand extends KindOfWeapon {
 		@Override
 		public boolean act() {
 
-			if (curCharges < maxCharges) {
-				curCharges++;
+			if (curCharges() < maxCharges()) {
+				curCharges(curCharges() + 1);
 				updateQuickslot();
 			}
 
