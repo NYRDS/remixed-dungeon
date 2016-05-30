@@ -11,6 +11,7 @@ import com.nyrds.android.google.util.Inventory;
 import com.nyrds.android.google.util.Purchase;
 import com.nyrds.android.google.util.SkuDetails;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -67,7 +68,7 @@ public class Iap {
 				if (mHelper == null)
 					return;
 
-				queryDonations();
+				queryItems();
 			}
 		});
 	}
@@ -80,12 +81,14 @@ public class Iap {
 		}
 	}
 
-	private static void queryDonations() {
+	private static void queryItems() {
 		List<String> donations = new ArrayList<>();
 
 		donations.add(SKU_LEVEL_1);
 		donations.add(SKU_LEVEL_2);
 		donations.add(SKU_LEVEL_3);
+
+		donations.addAll(Accessory.getAccessoriesList());
 
 		queryItemsPrice(donations);
 	}
