@@ -3,6 +3,7 @@ package com.watabou.noosa;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
@@ -53,6 +54,7 @@ public class SystemText extends Text {
 
 		textPaint.setTextSize(baseLine * oversample);
 		textPaint.setAntiAlias(true);
+		textPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 
 		textPaint.setTypeface(tf);
 
@@ -134,18 +136,13 @@ public class SystemText extends Text {
 			return;
 		}
 
-		if (needWidth == true && maxWidth == Integer.MAX_VALUE) {
+		if (needWidth && maxWidth == Integer.MAX_VALUE) {
 			return;
 		}
 
 		if (fontHeight > 0) {
-			// Log.d("SystemText", Utils.format("xscale: %3.2f %s", scale.x,
-			// text));
-
 			destroyLines();
-
 			lineImage.clear();
-
 			width = height = 0;
 
 			int charIndex = 0;
@@ -153,23 +150,12 @@ public class SystemText extends Text {
 
 			while (startLine < text.length()) {
 				int nextLine = fillLine(startLine);
-				/*
-				 * Log.d("SystemText", Utils.format(Locale.ROOT, "width: %d",
-				 * maxWidth));
-				 * 
-				 * Log.d("SystemText", Utils.format(Locale.ROOT,
-				 * "processed: %d - %d -> %s", startLine, nextLine,
-				 * text.substring(startLine, nextLine)));
-				 */
+
 				float lineWidth = 0;
 
 				if (nextLine > 0) {
 					lineWidth = xCharPos.get(xCharPos.size() - 1);
 					width = Math.max(lineWidth, width);
-
-					// Log.d("SystemText",
-					// Utils.format(Locale.ROOT, "lineWidth : %3f %3f",
-					// lineWidth, width));
 				}
 
 				height += fontHeight;
@@ -194,16 +180,10 @@ public class SystemText extends Text {
 						} else {
 							if (mask == null
 									|| (charIndex < mask.length && mask[charIndex])) {
-								// Log.d("SystemText",
-								// Utils.format("symbol: %s %d %d %3.1f",
-								// text.substring(offset, offset
-								// + codepointCharCount), offset, charIndex,
-								// xCharPos.get(lineCounter) ));
 
 								canvas.drawText(
 										text.substring(offset, offset + codepointCharCount),
 										xCharPos.get(lineCounter) * oversample,
-										// textPaint.descent() * oversample,
 										(fontHeight) * oversample - textPaint.descent(),
 										textPaint);
 							}
@@ -279,9 +259,6 @@ public class SystemText extends Text {
 			updateParent();
 
 			for (SystemTextLine img : lineImage) {
-
-				// Log.d("SystemText", String.format(Locale.ROOT,
-				// "%3.1f x %3.1f -> %s", x, y, text));
 
 				img.ra = ra;
 				img.ga = ga;
