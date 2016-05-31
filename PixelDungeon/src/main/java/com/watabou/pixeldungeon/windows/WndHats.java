@@ -14,6 +14,7 @@ public class WndHats extends Window {
 
 	private static final int WIDTH = 120;
 	private static final int MARGIN = 2;
+	private static final int ICON_GAP = 28;
 	private static final int BUTTON_HEIGHT = 20;
 
 	public WndHats() {
@@ -31,13 +32,24 @@ public class WndHats extends Window {
 
 		List<String> hats = Accessory.getAccessoriesList();
 
+
 		for (final String item: hats) {
 			String price = Iap.getSkuPrice(item);
-			if(price!=null) {
+			//if(price!=null) {
 
 				Image hat = Accessory.getByName(item).getImage();
 				hat.setPos(0,yPos);
 				add(hat);
+
+				Text info = PixelScene.createMultiline("Stuff that kinda written in here, like a description or something", 8 );
+
+				info.hardlight(0xFFFF00);
+				info.x = hat.x + hat.width();
+				info.y =  hat.y;
+				info.maxWidth(WIDTH - ICON_GAP);
+				info.measure();
+
+				add(info);
 
 				RedButton rb = new RedButton(item + " " + price) {
 					@Override
@@ -47,11 +59,11 @@ public class WndHats extends Window {
 					}
 				};
 
-				rb.setRect(hat.width() + MARGIN,yPos,WIDTH - hat.width() - MARGIN * 2, BUTTON_HEIGHT );
+				rb.setRect(hat.width() + MARGIN,info.y + info.height(),WIDTH - hat.width() - MARGIN * 2, BUTTON_HEIGHT );
 
 				add(rb);
-				yPos += rb.height() + MARGIN;
-			}
+				yPos += rb.height() + info.height() + MARGIN;
+			//}
 		}
 
 		resize( WIDTH,  yPos);
