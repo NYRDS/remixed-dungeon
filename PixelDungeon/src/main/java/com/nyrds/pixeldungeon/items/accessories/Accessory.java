@@ -1,5 +1,8 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.watabou.noosa.Image;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,5 +50,17 @@ public class Accessory {
 
 	public boolean isCoveringHair() {
 		return coverHair;
+	}
+
+	public static Accessory getByName(String name) {
+		try {
+			return allAccessoriesList.get(name).newInstance();
+		} catch (Exception e) {
+			throw new TrackedRuntimeException(e);
+		}
+	}
+
+	public Image getImage() {
+		return new Image(imageFile, image*32, 0, 32,32);
 	}
 }

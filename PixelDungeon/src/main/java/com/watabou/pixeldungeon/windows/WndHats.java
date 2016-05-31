@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.support.Iap;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -33,6 +34,11 @@ public class WndHats extends Window {
 		for (final String item: hats) {
 			String price = Iap.getSkuPrice(item);
 			if(price!=null) {
+
+				Image hat = Accessory.getByName(item).getImage();
+				hat.setPos(0,yPos);
+				add(hat);
+
 				RedButton rb = new RedButton(item + " " + price) {
 					@Override
 					protected void onClick() {
@@ -41,7 +47,7 @@ public class WndHats extends Window {
 					}
 				};
 
-				rb.setRect(0,yPos,WIDTH - MARGIN * 2, BUTTON_HEIGHT );
+				rb.setRect(hat.width() + MARGIN,yPos,WIDTH - hat.width() - MARGIN * 2, BUTTON_HEIGHT );
 
 				add(rb);
 				yPos += rb.height() + MARGIN;
