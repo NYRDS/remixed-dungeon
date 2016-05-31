@@ -61,6 +61,6 @@ public class Accessory {
 	}
 
 	public Image getImage() {
-		return new Image(imageFile, image*32, 0, 32,32);
+		return new Image(imageFile, image*28, 0, 28,28);
 	}
 }
