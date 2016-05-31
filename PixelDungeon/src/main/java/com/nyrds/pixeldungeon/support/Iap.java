@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -20,6 +21,7 @@ import com.watabou.pixeldungeon.PixelDungeon;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by mike on 24.05.2016.
@@ -82,15 +84,19 @@ public class Iap {
 	}
 
 	private static void queryItems() {
-		List<String> donations = new ArrayList<>();
+		List<String> items = new ArrayList<>();
 
-		donations.add(SKU_LEVEL_1);
-		donations.add(SKU_LEVEL_2);
-		donations.add(SKU_LEVEL_3);
+		items.add(SKU_LEVEL_1);
+		items.add(SKU_LEVEL_2);
+		items.add(SKU_LEVEL_3);
 
-		donations.addAll(Accessory.getAccessoriesList());
+		List<String> accessories = Accessory.getAccessoriesList();
 
-		queryItemsPrice(donations);
+		for (String item: accessories) {
+			items.add(item.toLowerCase(Locale.ROOT));
+		}
+
+		queryItemsPrice(items);
 	}
 
 
@@ -149,6 +155,7 @@ public class Iap {
 		}
 	};
 
+	@Nullable
 	static String formatSkuPrice(SkuDetails sku) {
 		if(sku == null) {
 			return null;
@@ -156,13 +163,20 @@ public class Iap {
 		return sku.getPrice() + "("+ sku.getPriceCurrencyCode()+")";
 	}
 
-
-	public static String getDonationPriceString(int level) {
+	@Nullable
+	public static String getSkuPrice(String item) {
 		if (mInventory == null) {
 			return null;
 		}
 
-		mInventory.getSkuDetails(SKU_LEVEL_1);
+		return formatSkuPrice(mInventory.getSkuDetails(item.toLowerCase(Locale.ROOT)));
+	}
+
+	@Nullable
+	public static String getDonationPriceString(int level) {
+		if (mInventory == null) {
+			return null;
+		}
 
 		switch (level) {
 			case 1:
@@ -175,7 +189,7 @@ public class Iap {
 		return null;
 	}
 
-	private static void doPurchase(String sku) {
+	public static void doPurchase(String sku) {
 		if (!m_iapReady) {
 			EventCollector.logEvent("fail","purchase not ready");
 			return;
@@ -185,7 +199,7 @@ public class Iap {
 
 		m_iapReady = false;
 		try {
-			mHelper.launchPurchaseFlow(mContext, sku, RC_REQUEST, mPurchaseFinishedListener, payload);
+			mHelper.launchPurchaseFlow(mContext, sku.toLowerCase(Locale.ROOT), RC_REQUEST, mPurchaseFinishedListener, payload);
 		} catch (IabHelper.IabAsyncInProgressException e) {
 			EventCollector.logException(e);
 		}
