@@ -14,7 +14,7 @@
 	
 	<!-- STRINGS OF Capotain CLASS -->
     <string name="Capotain_Name">Capotain</string>
-    <string name="Capotain_Info">Is an accessory, Solomon Cane would've been proud of.</string>
+    <string name="Capotain_Info">Is an accessory, Solomon Cane would\'ve been proud of.</string>
 	
 	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
