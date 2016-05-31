@@ -32,8 +32,8 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 	private static ArrayList<String> mMods = new ArrayList<>();
 
-	private static final int WIDTH = 120;
-	private static final int MARGIN = 2;
+	private static final int WIDTH         = 120;
+	private static final int MARGIN        = 2;
 	private static final int BUTTON_HEIGHT = 20;
 
 	private Text downloadProgress;
@@ -57,14 +57,6 @@ public class WndModSelect extends Window implements DownloadStateListener {
 		add(tfTitle);
 
 		float pos = tfTitle.y + tfTitle.height() + MARGIN;
-
-		if(!Util.isConnectedToInternet()) {
-			tfTitle.text("Please enable Internet access to download mods");
-			tfTitle.measure();
-			pos = tfTitle.y + tfTitle.height() + MARGIN;
-			resize(WIDTH, (int) pos);
-			return;
-		}
 
 		ArrayList<String> options = buildModsList();
 
@@ -169,23 +161,27 @@ public class WndModSelect extends Window implements DownloadStateListener {
 		File modDir = FileSystem.getExternalStorageFile(option);
 
 		if (!modDir.exists() && !option.equals(ModdingMode.REMIXED)) {
+			if (!Util.isConnectedToInternet()) {
+				PixelDungeon.scene().add(new WndError("Please enable Internet access to download mods"));
+				return;
+			}
 			selectedMod = mModsMap.get(option).name;
 			downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
 
 			new DownloadTask(this).execute(mModsMap.get(option).link, downloadTo);
 			return;
 		}
-		
+
 		String prevMod = PixelDungeon.activeMod();
-		
+
 		if (option.equals(prevMod)) {
 			return;
 		}
-		
+
 		SaveUtils.copyAllClassesToSlot(prevMod);
 		SaveUtils.deleteGameAllClasses();
 		SaveUtils.copyAllClassesFromSlot(option);
-		
+
 		if (getParent() != null) {
 			hide();
 		}
