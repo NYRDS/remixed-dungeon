@@ -39,7 +39,7 @@ public class WndHats extends Window {
 
 		for (final String item: hats) {
 			String price = Iap.getSkuPrice(item);
-			//if(price!=null) {
+			if(price!=null) {
 
 				Image hat = Accessory.getByName(item).getImage();
 				hat.setPos(0,yPos);
@@ -53,7 +53,7 @@ public class WndHats extends Window {
 				info.maxWidth(WIDTH - (int)hat.width());
 				info.measure();
 
-			content.add(info);
+			    content.add(info);
 
 				RedButton rb = new RedButton(item + " " + price) {
 					@Override
@@ -65,12 +65,12 @@ public class WndHats extends Window {
 
 				rb.setRect(hat.width(),info.y + info.height() + MARGIN, WIDTH / 2, BUTTON_HEIGHT );
 
-			content.add(rb);
+			    content.add(rb);
 				yPos += rb.height() + info.height() + MARGIN * 8;
-			//}
+			}
 		}
 
-		int h = (int) Math.min(HEIGHT - MARGIN, yPos);
+		int h = Math.min(HEIGHT - MARGIN, yPos);
 
 		resize( WIDTH,  h);
 
