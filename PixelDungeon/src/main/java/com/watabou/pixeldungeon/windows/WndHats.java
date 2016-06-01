@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
@@ -25,7 +26,7 @@ public class WndHats extends Window {
 
 	private static final int WIDTH = 120;
 	private static final int HEIGHT_PORTRAIT = 180;
-	private static final int HEIGHT_LANDSCAPE = 160;
+	private static final int HEIGHT_LANDSCAPE = (int)PixelScene.MIN_HEIGHT_L;
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 14;
 
@@ -108,6 +109,7 @@ public class WndHats extends Window {
 		}
 
 		int h = Math.min(HEIGHT - MARGIN, yPos);
+
 
 		resize( WIDTH,  h);
 
