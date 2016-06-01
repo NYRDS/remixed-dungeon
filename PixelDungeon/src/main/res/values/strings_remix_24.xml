@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- STRINGS OF GutsLevel & GutsBossLevel CLASS -->
-
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
     <string name="BowTie_Name">Bow Tie</string>
@@ -39,5 +36,4 @@
 	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Wizard Hat</string>
     <string name="WizardHat_Info">Is an accessory.</string>
-
 </resources>
