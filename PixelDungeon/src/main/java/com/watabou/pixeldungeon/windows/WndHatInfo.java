@@ -9,11 +9,14 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
+import com.watabou.pixeldungeon.ui.SystemRedButton;
+import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -21,15 +24,15 @@ import java.util.List;
 
 public class WndHatInfo extends Window {
 
-	private static final int WIDTH = 120;
-	private static final int HEIGHT = 180;
+	private static final int WIDTH = 100;
+	private static final int HEIGHT = 160;
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 16;
 
 	public WndHatInfo(final String accessory, String price ) {
 		int yPos = 0;
 
-		Text tfTitle = PixelScene.createMultiline("OMG", 17);
+		Text tfTitle = PixelScene.createMultiline(Accessory.getByName(accessory).name(), 11);
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
 		tfTitle.measure();
@@ -39,13 +42,9 @@ public class WndHatInfo extends Window {
 		yPos += tfTitle.height() + MARGIN;
 		add(tfTitle);
 
-		List<String> hats = Accessory.getAccessoriesList();
-
-		Component content = new Component();
-
 		Image hat = Accessory.getByName(accessory).getImage();
 		hat.setPos(0,yPos);
-		content.add(hat);
+		add(hat);
 
 		Text info = PixelScene.createMultiline(Accessory.getByName(accessory).desc(), 9 );
 
@@ -55,9 +54,10 @@ public class WndHatInfo extends Window {
 		info.maxWidth(WIDTH - (int)hat.width());
 		info.measure();
 
-		content.add(info);
+		yPos += info.height() + MARGIN;
+		add(info);
 
-		RedButton rb = new RedButton(Accessory.getByName(accessory).name() + " " + price) {
+		TextButton rb = new SystemRedButton(price) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -67,18 +67,13 @@ public class WndHatInfo extends Window {
 
 		rb.setRect(hat.width(),info.y + info.height() + MARGIN, WIDTH / 2, BUTTON_HEIGHT );
 
-		content.add(rb);
+		yPos += BUTTON_HEIGHT + MARGIN;
+		add(rb);
 
 		int h = Math.min(HEIGHT - MARGIN, yPos);
 
 		resize( WIDTH,  h);
 
-		content.setSize(WIDTH, yPos);
-		ScrollPane list = new ScrollPane(content);
-
-		add(list);
-
-		list.setRect(0, tfTitle.y + tfTitle.height() + MARGIN, WIDTH, HEIGHT - tfTitle.height() - MARGIN * 2);
 
 /*
 		int yPos = 0;
