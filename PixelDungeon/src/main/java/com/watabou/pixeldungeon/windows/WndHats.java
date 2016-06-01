@@ -1,7 +1,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -45,17 +47,17 @@ public class WndHats extends Window {
 				hat.setPos(0,yPos);
 				content.add(hat);
 
-				Text info = PixelScene.createMultiline("Stuff that kinda written in here, like a description or something", 9 );
+				Text info = PixelScene.createMultiline(Accessory.getByName(item).desc(), 9 );
 
 				info.hardlight(0xFFFFFF);
 				info.x = hat.x + hat.width();
-				info.y =  hat.y;
+				info.y = hat.y;
 				info.maxWidth(WIDTH - (int)hat.width());
 				info.measure();
 
 			    content.add(info);
 
-				RedButton rb = new RedButton(item + " " + price) {
+				RedButton rb = new RedButton(Accessory.getByName(item).name() + price) {
 					@Override
 					protected void onClick() {
 						super.onClick();
@@ -67,6 +69,19 @@ public class WndHats extends Window {
 
 			    content.add(rb);
 				yPos += rb.height() + info.height() + MARGIN * 8;
+			}
+			else{
+				Text info = PixelScene.createMultiline( Game.getVar(R.string.NoConnection_Msg), 10 );
+
+				info.hardlight(0xFFFFFF);
+				info.x = MARGIN;
+				info.y = yPos;
+				info.maxWidth(WIDTH - MARGIN * 2);
+				info.measure();
+
+				content.add(info);
+				yPos = yPos * 5;
+				break;
 			}
 		}
 
