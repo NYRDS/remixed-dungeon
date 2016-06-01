@@ -10,6 +10,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -23,10 +24,12 @@ import java.util.List;
 public class WndHats extends Window {
 
 	private static final int WIDTH = 120;
-	private static final int HEIGHT = 180;
+	private static final int HEIGHT_PORTRAIT = 180;
+	private static final int HEIGHT_LANDSCAPE = 160;
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 14;
 
+	private int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
 	public WndHats() {
 
 		int yPos = 0;
