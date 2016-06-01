@@ -3,11 +3,11 @@
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
     <string name="BowTie_Name">Bow Tie</string>
-    <string name="BowTie_Info">Is an accessory.</string>
+    <string name="BowTie_Info">Is an accessory. Pinky and sparkly</string>
 	
 	<!-- STRINGS OF Shades CLASS -->
     <string name="Shades_Name">Shades</string>
-    <string name="Shades_Info">Is an accessory.</string>
+    <string name="Shades_Info">Is an accessory. Oooh yeaaah.</string>
 	
 	<!-- STRINGS OF Capotain CLASS -->
     <string name="Capotain_Name">Capotain</string>
@@ -15,25 +15,29 @@
 	
 	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
-    <string name="Fez_Info">Is an accessory.</string>
+    <string name="Fez_Info">Is an accessory. It\'s a hat, and not name for a game by pretentious meanie</string>
 	
 	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">Neko Ears</string>
-    <string name="NekoEars_Info">Is an accessory.</string>
+    <string name="NekoEars_Info">Is an accessory. Kawaii</string>
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Rabbit Ears</string>
-    <string name="RabbitEars_Info">Is an accessory.</string>
+    <string name="RabbitEars_Info">Is an accessory. Extravaganza it is, it is</string>
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Pumpkin</string>
-    <string name="Pumpkin_Info">Is an accessory.</string>
+    <string name="Pumpkin_Info">Is an accessory. That\'s no a halloween time yet</string>
 	
 	<!-- STRINGS OF SleepyHat CLASS -->
     <string name="SleepyHat_Name">Sleepy Hat</string>
-    <string name="SleepyHat_Info">Is an accessory.</string>
+    <string name="SleepyHat_Info">Is an accessory. Sho sho shleepy</string>
 	
 	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Wizard Hat</string>
-    <string name="WizardHat_Info">Is an accessory.</string>
+    <string name="WizardHat_Info">Is an accessory. Dem starts</string>
+
+    <!-- System Messages-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="NoConnection_Msg">Unable to connect to Google Play.</string>
 </resources>
