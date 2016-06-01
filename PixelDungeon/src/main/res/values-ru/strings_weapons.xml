@@ -188,7 +188,7 @@
   <string name="Kusarigama_Pull">ПОДТЯНУТЬ</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">меч хаоса</string>
-  <string name="ChaosSword_Info">Клинок это меча создан из чистого Хаоса и иногда слегка подрагивает в предвкушении. Великая сила, сокрытая в этом оружии, может рассечь пополам почти всё, что угодно. Однако, чтобы совладать с ней, нужно великое мастерство. </string>
+  <string name="ChaosSword_Info">Клинок этого меча создан из чистого Хаоса и иногда слегка подрагивает в предвкушении. Великая сила, сокрытая в этом оружии, может рассечь пополам почти всё, что угодно. Однако, чтобы совладать с ней, нужно великое мастерство. </string>
   <string name="ChaosSword_Gender">masculine</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">лук хаоса</string>
