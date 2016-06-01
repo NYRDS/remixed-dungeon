@@ -46,21 +46,21 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
-	
+
 	// Color constants for floating text
-	public static final int DEFAULT		= 0xFFFFFF;
-	public static final int POSITIVE	= 0x00FF00;
-	public static final int NEGATIVE	= 0xFF0000;
-	public static final int WARNING		= 0xFF8800;
-	public static final int NEUTRAL		= 0xFFFF00;
-	
-	private static final float MOVE_INTERVAL	= 0.1f;
-	private static final float FLASH_INTERVAL	= 0.05f;	
-	
+	public static final int DEFAULT  = 0xFFFFFF;
+	public static final int POSITIVE = 0x00FF00;
+	public static final int NEGATIVE = 0xFF0000;
+	public static final int WARNING  = 0xFF8800;
+	public static final int NEUTRAL  = 0xFFFF00;
+
+	private static final float MOVE_INTERVAL  = 0.1f;
+	private static final float FLASH_INTERVAL = 0.05f;
+
 	public enum State {
 		BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
 	}
-	
+
 	protected Animation idle;
 	protected Animation run;
 	protected Animation attack;
@@ -75,81 +75,81 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 	protected Emitter burning;
 	protected Emitter levitation;
 
-	protected IceBlock iceBlock;
+	protected IceBlock  iceBlock;
 	protected TorchHalo halo;
 
 	protected EmoIcon emo;
-	
+
 	private float flashTime = 0;
-	
-	protected boolean sleeping = false;
+
+	protected boolean sleeping   = false;
 	protected boolean controlled = false;
-	
+
 	// Char owner
 	public Char ch;
-	
+
 	// The sprite is currently in motion
 	public boolean isMoving = false;
-	
+
 	public CharSprite() {
 		super();
 		listener = this;
 	}
-	
-	public void link( Char ch ) {
+
+	public void link(Char ch) {
 		this.ch = ch;
 		ch.setSprite(this);
-		
-		place( ch.getPos() );
-		turnTo( ch.getPos(), Random.Int( Dungeon.level.getLength() ) );
-		
+
+		place(ch.getPos());
+		turnTo(ch.getPos(), Random.Int(Dungeon.level.getLength()));
+
 		ch.updateSpriteState();
 	}
-	
-	public PointF worldToCamera( int cell ) {
-		
+
+	public PointF worldToCamera(int cell) {
+
 		final int csize = DungeonTilemap.SIZE;
-		
+
 		return new PointF(
-			((cell % Dungeon.level.getWidth()) + 0.5f) * csize - width * 0.5f,
-			((cell / Dungeon.level.getWidth()) + 1.0f) * csize - height
+				((cell % Dungeon.level.getWidth()) + 0.5f) * csize - width * 0.5f,
+				((cell / Dungeon.level.getWidth()) + 1.0f) * csize - height
 		);
 	}
-	
-	public void place( int cell ) {
-		point( worldToCamera( cell ) );
+
+	public void place(int cell) {
+		point(worldToCamera(cell));
 	}
-	
-	public void showStatus( int color, String text, Object... args ) {
+
+	public void showStatus(int color, String text, Object... args) {
 		if (getVisible()) {
 			if (args.length > 0) {
-				text = Utils.format( text, args );
+				text = Utils.format(text, args);
 			}
-			
-			if(ModdingMode.getClassicTextRenderingMode()) {
+
+			if (ModdingMode.getClassicTextRenderingMode()) {
 				if (ch != null) {
-					FloatingText.show( x + width * 0.5f, y, ch.getPos(), text, color );
+					FloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
 				} else {
-					FloatingText.show( x + width * 0.5f, y, text, color );
+					FloatingText.show(x + width * 0.5f, y, text, color);
 				}
-			}	else {
+			} else {
 				if (ch != null) {
-					SystemFloatingText.show( x + width * 0.5f, y, ch.getPos(), text, color );
+					SystemFloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
 				} else {
-					SystemFloatingText.show( x + width * 0.5f, y, text, color );
-				}				
+					SystemFloatingText.show(x + width * 0.5f, y, text, color);
+				}
 			}
 		}
 	}
-	
-	public void idle() {
-		play( idle );
-	}
-	
-	public void move( int from, int to ) {
-		play( run );
 
-		if(getParent()!=null) {
+	public void idle() {
+		play(idle);
+	}
+
+	public void move(int from, int to) {
+		play(run);
+
+		if (getParent() != null) {
 			motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
 			motion.listener = this;
 			getParent().add(motion);
@@ -164,41 +164,41 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		}
 		ch.onMotionComplete();
 	}
-	
+
 	public void interruptMotion() {
 		if (motion != null) {
-			onComplete( motion );
+			onComplete(motion);
 		}
 	}
-	
-	public void attack( int cell ) {
-		turnTo( ch.getPos(), cell );
-		play( attack );
-	}
-	
-	public void attack( int cell, Callback callback ) {
-		animCallback = callback;
-		turnTo( ch.getPos(), cell );
-		play( attack );
-	}
-	
-	public void operate( int cell ) {
-		turnTo( ch.getPos(), cell );
-		play( operate );
-	}
-	
-	public void zap( int cell ) {
-		turnTo( ch.getPos(), cell );
-		play( zap );
+
+	public void attack(int cell) {
+		turnTo(ch.getPos(), cell);
+		play(attack);
 	}
 
-	public void zap( int cell, Callback callback ) {
+	public void attack(int cell, Callback callback) {
 		animCallback = callback;
-		turnTo( ch.getPos(), cell );
-		play( zap );
+		turnTo(ch.getPos(), cell);
+		play(attack);
 	}
-	
-	public void turnTo( int from, int to ) {
+
+	public void operate(int cell) {
+		turnTo(ch.getPos(), cell);
+		play(operate);
+	}
+
+	public void zap(int cell) {
+		turnTo(ch.getPos(), cell);
+		play(zap);
+	}
+
+	public void zap(int cell, Callback callback) {
+		animCallback = callback;
+		turnTo(ch.getPos(), cell);
+		play(zap);
+	}
+
+	public void turnTo(int from, int to) {
 		int fx = from % Dungeon.level.getWidth();
 		int tx = to % Dungeon.level.getWidth();
 		if (tx > fx) {
@@ -207,92 +207,92 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 			flipHorizontal = true;
 		}
 	}
-	
+
 	public void die() {
 		sleeping = false;
-		play( die );
-		
+		play(die);
+
 		removeEmo();
 	}
-	
+
 	public Emitter emitter() {
 		Emitter emitter = GameScene.emitter();
-		emitter.pos( this );
+		emitter.pos(this);
 		return emitter;
 	}
-	
+
 	public Emitter centerEmitter() {
 		Emitter emitter = GameScene.emitter();
-		emitter.pos( center() );
+		emitter.pos(center());
 		return emitter;
 	}
-	
+
 	public Emitter bottomEmitter() {
 		Emitter emitter = GameScene.emitter();
-		emitter.pos( x, y + height, width, 0 );
+		emitter.pos(x, y + height, width, 0);
 		return emitter;
 	}
-	
-	public void burst( final int color, int n ) {
+
+	public void burst(final int color, int n) {
 		if (getVisible()) {
-			Splash.at( center(), color, n );
+			Splash.at(center(), color, n);
 		}
 	}
-	
-	public void bloodBurstA( PointF from, int damage ) {
+
+	public void bloodBurstA(PointF from, int damage) {
 		if (getVisible()) {
 			PointF c = center();
-			int n = (int)Math.min( 9 * Math.sqrt( (double)damage / ch.ht() ), 9 );
-			Splash.at( c, PointF.angle( from, c ), 3.1415926f / 2, blood(), n );
+			int n = (int) Math.min(9 * Math.sqrt((double) damage / ch.ht()), 9);
+			Splash.at(c, PointF.angle(from, c), 3.1415926f / 2, blood(), n);
 		}
 	}
-	
+
 	// Blood color
 	public int blood() {
 		return 0xFFBB0000;
 	}
-	
+
 	public void flash() {
 		ra = ba = ga = 1f;
 		flashTime = FLASH_INTERVAL;
 	}
-	
-	public void add( State state ) {
+
+	public void add(State state) {
 		switch (state) {
-		case BURNING:
-			burning = emitter();
-			burning.pour( FlameParticle.FACTORY, 0.06f );
-			if (getVisible()) {
-				Sample.INSTANCE.play( Assets.SND_BURNING );
-			}
-			break;
-		case LEVITATING:
-			levitation = emitter();
-			levitation.pour( Speck.factory( Speck.JET ), 0.02f );
-			break;
-		case INVISIBLE:
-			PotionOfInvisibility.melt( ch );
-			break;
-		case PARALYSED:
-			paused = true;
-			break;
-		case FROZEN:
-			iceBlock = IceBlock.freeze( this );
-			paused = true;
-			break;
-		case ILLUMINATED:
-			GameScene.effect( halo = new TorchHalo( this ) );
-			break;
+			case BURNING:
+				burning = emitter();
+				burning.pour(FlameParticle.FACTORY, 0.06f);
+				if (getVisible()) {
+					Sample.INSTANCE.play(Assets.SND_BURNING);
+				}
+				break;
+			case LEVITATING:
+				levitation = emitter();
+				levitation.pour(Speck.factory(Speck.JET), 0.02f);
+				break;
+			case INVISIBLE:
+				PotionOfInvisibility.melt(ch);
+				break;
+			case PARALYSED:
+				paused = true;
+				break;
+			case FROZEN:
+				iceBlock = IceBlock.freeze(this);
+				paused = true;
+				break;
+			case ILLUMINATED:
+				GameScene.effect(halo = new TorchHalo(this));
+				break;
 		}
 	}
-	
+
 	private void removeEmo() {
 		if (emo != null) {
 			emo.killAndErase();
 			emo = null;
-		}		
+		}
 	}
-	
+
 	public void removeAllStates() {
 		remove(State.BURNING);
 		remove(State.LEVITATING);
@@ -301,57 +301,57 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		remove(State.ILLUMINATED);
 		removeEmo();
 	}
-	
-	public void remove( State state ) {
+
+	public void remove(State state) {
 		switch (state) {
-		case BURNING:
-			if (burning != null) {
-				burning.on = false;
-				burning = null;
-			}
-			break;
-		case LEVITATING:
-			if (levitation != null) {
-				levitation.on = false;
-				levitation = null;
-			}
-			break;
-		case INVISIBLE:
-			alpha( 1f );
-			break;
-		case PARALYSED:
-			paused = false;
-			break;
-		case FROZEN:
-			if (iceBlock != null) {
-				iceBlock.melt();
-				iceBlock = null;
-			}
-			paused = false;
-			break;
-		case ILLUMINATED:
-			if (halo != null) {
-				halo.putOut();
-			}
-			break;
+			case BURNING:
+				if (burning != null) {
+					burning.on = false;
+					burning = null;
+				}
+				break;
+			case LEVITATING:
+				if (levitation != null) {
+					levitation.on = false;
+					levitation = null;
+				}
+				break;
+			case INVISIBLE:
+				alpha(1f);
+				break;
+			case PARALYSED:
+				paused = false;
+				break;
+			case FROZEN:
+				if (iceBlock != null) {
+					iceBlock.melt();
+					iceBlock = null;
+				}
+				paused = false;
+				break;
+			case ILLUMINATED:
+				if (halo != null) {
+					halo.putOut();
+				}
+				break;
 		}
 	}
-	
+
 	@Override
 	public void update() {
-		
+
 		super.update();
-		
+
 		if (paused && listener != null) {
-			listener.onComplete( curAnim );
+			listener.onComplete(curAnim);
 		}
-		
+
 		if (flashTime > 0 && (flashTime -= Game.elapsed) <= 0) {
 			resetColor();
 		}
-		
+
 		boolean visible = getVisible();
-		
+
 		if (burning != null) {
 			burning.setVisible(visible);
 		}
@@ -366,34 +366,34 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		} else {
 			hideSleep();
 		}
-		
-		if(controlled) {
+
+		if (controlled) {
 			showMindControl();
 		}
-			
+
 		if (emo != null) {
 			emo.setVisible(visible);
 		}
 	}
-	
+
 	public void showSleep() {
 		if (!(emo instanceof EmoIcon.Sleep)) {
 			removeEmo();
-			emo = new EmoIcon.Sleep( this );
+			emo = new EmoIcon.Sleep(this);
 		}
 	}
-	
+
 	public void hideSleep() {
 		if (emo instanceof EmoIcon.Sleep) {
 			removeEmo();
 		}
 	}
-	
+
 	public void showMindControl() {
 		if (!(emo instanceof EmoIcon.Controlled)) {
 			removeEmo();
 
-			if(ch!= null && ch.isAlive()){
+			if (ch != null && ch.isAlive()) {
 				emo = new EmoIcon.Controlled(this);
 			}
 		}
@@ -402,57 +402,57 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 	public void showAlert() {
 		if (!(emo instanceof EmoIcon.Alert)) {
 			removeEmo();
-			emo = new EmoIcon.Alert( this );
+			emo = new EmoIcon.Alert(this);
 		}
 	}
-	
+
 	public void hideAlert() {
 		if (emo instanceof EmoIcon.Alert) {
 			removeEmo();
 		}
 	}
-	
+
 	@Override
 	public void kill() {
 		super.kill();
 		removeEmo();
 	}
-	
+
 	@Override
-	public void onComplete( Tweener tweener ) {
+	public void onComplete(Tweener tweener) {
 		if (tweener == motion) {
-			
+
 			isMoving = false;
-			
+
 			motion.killAndErase();
 			motion = null;
 		}
 	}
 
 	@Override
-	public void onComplete( Animation anim ) {
-		
+	public void onComplete(Animation anim) {
+
 		if (animCallback != null) {
 			animCallback.call();
 			animCallback = null;
 		} else {
-			
-			if (anim == attack ) {
-				
+
+			if (anim == attack) {
+
 				idle();
 				ch.onAttackComplete();
-				
-			} else if(anim == zap) {
+
+			} else if (anim == zap) {
 				idle();
 				ch.onZapComplete();
-				
+
 			} else if (anim == operate) {
-				
+
 				idle();
 				ch.onOperateComplete();
-				
+
 			}
-			
+
 		}
 	}
 
