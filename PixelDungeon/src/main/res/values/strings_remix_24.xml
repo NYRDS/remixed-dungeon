@@ -41,4 +41,5 @@
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndHats_Title">Accessories</string>
     <string name="WndHats_NoConnectionMsg">Unable to connect to Google Play.</string>
+    <string name="WndHats_InfoButton">Examine</string>
 </resources>
