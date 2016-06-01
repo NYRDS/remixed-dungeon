@@ -25,7 +25,7 @@ public class WndHats extends Window {
 
 		int yPos = 0;
 
-		Text tfTitle = PixelScene.createMultiline("Accessories", 10);
+		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_Title), 10);
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
 		tfTitle.measure();
@@ -71,7 +71,7 @@ public class WndHats extends Window {
 				yPos += rb.height() + info.height() + MARGIN * 8;
 			}
 			else{
-				Text info = PixelScene.createMultiline( Game.getVar(R.string.NoConnection_Msg), 10 );
+				Text info = PixelScene.createMultiline( Game.getVar(R.string.WndHats_NoConnectionMsg), 10 );
 
 				info.hardlight(0xFFFFFF);
 				info.x = MARGIN;
