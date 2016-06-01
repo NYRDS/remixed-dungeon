@@ -76,10 +76,6 @@ public class Group extends Gizmo {
 		super.kill();
 	}
 
-	public int indexOf(Gizmo g) {
-		return members.indexOf(g);
-	}
-
 	public Gizmo add(Gizmo g) {
 
 		if (g.getParent() == this) {
