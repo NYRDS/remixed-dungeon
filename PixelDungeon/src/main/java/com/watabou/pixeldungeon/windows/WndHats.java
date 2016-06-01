@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
+import android.util.Log;
+
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
@@ -7,6 +9,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
@@ -41,7 +44,7 @@ public class WndHats extends Window {
 		Component content = new Component();
 
 		for (final String item: hats) {
-			String price = Iap.getSkuPrice(item);
+			final String price = "9999";// Iap.getSkuPrice(item);
 			if(price!=null) {
 
 				Image hat = Accessory.getByName(item).getImage();
@@ -62,7 +65,8 @@ public class WndHats extends Window {
 					@Override
 					protected void onClick() {
 						super.onClick();
-						Iap.doPurchase(item);
+						GameScene.show( new WndHatInfo(item, price) );
+						//Iap.doPurchase(item);
 					}
 				};
 
@@ -92,6 +96,7 @@ public class WndHats extends Window {
 
 		content.setSize(WIDTH, yPos);
 		ScrollPane list = new ScrollPane(content);
+		list.dontCatchTouch();
 
 		add(list);
 

@@ -25,7 +25,9 @@ public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Tou
 	
 	// Its target can be toucharea itself
 	public Visual target;
-	
+
+	private boolean catchTouch = true;
+
 	protected Touchscreen.Touch touch = null;
 	
 	public TouchArea( Visual target ) {
@@ -44,6 +46,10 @@ public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Tou
 		Touchscreen.event.add( this );
 	}
 
+	public void dontCatchTouch() {
+		catchTouch = false;
+	}
+
 	@Override
 	public void onSignal( Touch touch ) {
 		
@@ -55,8 +61,10 @@ public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Tou
 		
 		if (hit) {
 
-			Touchscreen.event.cancel();
-			
+			if(catchTouch) {
+				Touchscreen.event.cancel();
+			}
+
 			if (touch.down) {
 				
 				if (this.touch == null) {

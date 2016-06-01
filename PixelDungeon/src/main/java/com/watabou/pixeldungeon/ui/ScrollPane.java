@@ -34,7 +34,7 @@ public class ScrollPane extends Component {
 	protected float minY;
 	protected float maxX;
 	protected float maxY;
-	
+
 	public ScrollPane( Component content ) {
 		super();
 		
@@ -47,7 +47,11 @@ public class ScrollPane extends Component {
 		content.camera = new Camera( 0, 0, 1, 1, PixelScene.defaultZoom );
 		Camera.add( content.camera );
 	}
-	
+
+	public void dontCatchTouch() {
+		controller.dontCatchTouch();
+	}
+
 	@Override
 	public void destroy() {
 		super.destroy();
