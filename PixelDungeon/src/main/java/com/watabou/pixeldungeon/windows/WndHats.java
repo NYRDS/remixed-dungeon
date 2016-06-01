@@ -8,8 +8,9 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
+import com.watabou.pixeldungeon.ui.SystemRedButton;
+import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 import java.util.List;
@@ -57,7 +58,7 @@ public class WndHats extends Window {
 
 			    content.add(info);
 
-				RedButton rb = new RedButton(Accessory.getByName(item).name() + price) {
+				TextButton rb = new SystemRedButton(Accessory.getByName(item).name() + " " + price) {
 					@Override
 					protected void onClick() {
 						super.onClick();
