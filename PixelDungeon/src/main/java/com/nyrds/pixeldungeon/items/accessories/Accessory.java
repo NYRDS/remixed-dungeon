@@ -1,7 +1,10 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,6 +19,9 @@ public class Accessory {
 	protected boolean coverHair;
 	protected int image = 0;
 	protected String imageFile;
+
+	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
+	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
 
 	static final private Map<String,Class<? extends Accessory>> allAccessoriesList = new HashMap<>();
 
@@ -60,7 +66,18 @@ public class Accessory {
 		}
 	}
 
+	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
+		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+	}
+
 	public Image getImage() {
 		return new Image(imageFile, image*28, 0, 28,28);
+	}
+
+	public String desc() {
+		return info;
+	}
+	public String name() {
+		return name;
 	}
 }
