@@ -25,34 +25,26 @@ import java.util.ArrayList;
 
 public class Group extends Gizmo {
 
-	protected ArrayList<Gizmo> members;
-
-	// Accessing it is a little faster, 
-	// than calling memebers.getSize()
-	public int length;
+	@NonNull
+	protected ArrayList<Gizmo> members = new ArrayList<>();
 
 	public Group() {
-		members = new ArrayList<>();
-		length = 0;
 	}
 
 	@Override
 	public void destroy() {
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null) {
 				g.destroy();
 			}
 		}
-
 		members.clear();
-		members = null;
-		length = 0;
 	}
 
 	@Override
 	public void update() {
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.active) {
 				g.update();
@@ -62,7 +54,7 @@ public class Group extends Gizmo {
 
 	@Override
 	public void draw() {
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.getVisible()) {
 				g.draw();
@@ -74,7 +66,7 @@ public class Group extends Gizmo {
 	public void kill() {
 		// A killed group keeps all its members,
 		// but they get killed too
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null && g.exists) {
 				g.kill();
@@ -98,18 +90,8 @@ public class Group extends Gizmo {
 			g.getParent().remove(g);
 		}
 
-		// Trying to find an empty space for a new member
-		for (int i = 0; i < length; i++) {
-			if (members.get(i) == null) {
-				members.set(i, g);
-				g.setParent(this);
-				return g;
-			}
-		}
-
 		members.add(g);
 		g.setParent(this);
-		length++;
 		return g;
 	}
 
@@ -124,15 +106,8 @@ public class Group extends Gizmo {
 			g.getParent().remove(g);
 		}
 
-		if (members.get(0) == null) {
-			members.set(0, g);
-			g.setParent(this);
-			return g;
-		}
-
 		members.add(0, g);
 		g.setParent(this);
-		length++;
 		return g;
 	}
 
@@ -152,20 +127,12 @@ public class Group extends Gizmo {
 
 	// Fast removal - replacing with null
 	public Gizmo erase(Gizmo g) {
-		int index = members.indexOf(g);
-		if (index != -1) {
-			members.set(index, null);
-			g.setParent(null);
-			return g;
-		} else {
-			return null;
-		}
+		return remove(g);
 	}
 
 	// Real removal
 	public Gizmo remove(Gizmo g) {
 		if (members.remove(g)) {
-			length--;
 			g.setParent(null);
 			return g;
 		} else {
@@ -173,21 +140,10 @@ public class Group extends Gizmo {
 		}
 	}
 
-	public Gizmo replace(Gizmo oldOne, Gizmo newOne) {
-		int index = members.indexOf(oldOne);
-		if (index != -1) {
-			members.set(index, newOne);
-			newOne.setParent(this);
-			oldOne.setParent(null);
-			return newOne;
-		} else {
-			return null;
-		}
-	}
 
 	public Gizmo getFirstAvailable(@NonNull Class<? extends Gizmo> c) {
 
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null && !g.exists && g.getClass() == c) {
 				return g;
@@ -201,7 +157,7 @@ public class Group extends Gizmo {
 
 		int count = 0;
 
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.alive) {
 				count++;
@@ -211,37 +167,14 @@ public class Group extends Gizmo {
 		return count;
 	}
 
-	public int countDead() {
-
-		int count = 0;
-
-		for (int i = 0; i < length; i++) {
-			Gizmo g = members.get(i);
-			if (g != null && !g.alive) {
-				count++;
-			}
-		}
-
-		return count;
-	}
-
-	public Gizmo random() {
-		if (length > 0) {
-			return members.get((int) (Math.random() * length));
-		} else {
-			return null;
-		}
-	}
-
 	public void clear() {
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null) {
 				g.setParent(null);
 			}
 		}
 		members.clear();
-		length = 0;
 	}
 
 	public Gizmo bringToFront(Gizmo g) {
@@ -262,5 +195,9 @@ public class Group extends Gizmo {
 		} else {
 			return null;
 		}
+	}
+
+	public int getLength() {
+		return members.size();
 	}
 }

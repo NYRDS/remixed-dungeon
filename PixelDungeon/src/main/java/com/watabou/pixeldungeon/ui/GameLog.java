@@ -92,13 +92,13 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		}
 		
 		int texts = 0;
-		for (int i = 0; i<length;i++) {
+		for (int i = 0; i< getLength(); i++) {
 			if(members.get( i ) instanceof Text)
 			texts++;
 		}
 		
 		if (texts > MAX_MESSAGES) {
-			for(int i = 0; i< length; i++) {
+			for(int i = 0; i< getLength(); i++) {
 				if(members.get( i ) instanceof Text) {
 					remove ( members.get( i ) );
 					break;
@@ -112,7 +112,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	@Override
 	protected void layout() {
 		float pos = y;
-		for (int i=length-1; i >= 0; i--) {
+		for (int i = getLength() -1; i >= 0; i--) {
 			Visual entry = (Visual) members.get( i );
 			if(entry instanceof Text) {
 				entry.x = x;
