@@ -1,26 +1,14 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.ui.ItemSlot;
-import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.Utils;
-
-import java.util.List;
 
 public class WndHatInfo extends Window {
 
@@ -32,7 +20,9 @@ public class WndHatInfo extends Window {
 	public WndHatInfo(final String accessory, String price ) {
 		int yPos = 0;
 
-		Text tfTitle = PixelScene.createMultiline(Accessory.getByName(accessory).name(), 11);
+		final Accessory item = Accessory.getByName(accessory);
+
+		Text tfTitle = PixelScene.createMultiline(item.name(), 11);
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
 		tfTitle.measure();
@@ -42,11 +32,11 @@ public class WndHatInfo extends Window {
 		yPos += tfTitle.height() + MARGIN;
 		add(tfTitle);
 
-		Image hat = Accessory.getByName(accessory).getImage();
+		Image hat = item.getImage();
 		hat.setPos(0,yPos);
 		add(hat);
 
-		Text info = PixelScene.createMultiline(Accessory.getByName(accessory).desc(), 9 );
+		Text info = PixelScene.createMultiline(item.desc(), 9 );
 
 		info.hardlight(0xFFFFFF);
 		info.x = hat.x + hat.width();
@@ -61,7 +51,19 @@ public class WndHatInfo extends Window {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				Iap.doPurchase(accessory);
+
+				if(item.haveIt()) {
+					Dungeon.hero.getHeroSprite().wearAccessory(item);
+					return;
+				}
+
+				Iap.doPurchase(accessory, new Iap.IapCallback() {
+					@Override
+					public void onPurchaseOk() {
+						item.gotIt();
+						text("Equip");
+					}
+				});
 			}
 		};
 
