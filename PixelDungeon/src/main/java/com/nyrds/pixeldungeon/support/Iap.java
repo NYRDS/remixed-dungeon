@@ -122,7 +122,7 @@ public class Iap {
 	}
 
 
-	private static boolean checkPurchase(String item) {
+	public static boolean checkPurchase(String item) {
 		Purchase check = mInventory.getPurchase(item.toLowerCase(Locale.ROOT));
 		if(check != null && verifyDeveloperPayload(check)) {
 			return true;
@@ -160,6 +160,7 @@ public class Iap {
 
 			mInventory = inventory;
 			checkPurchases();
+			Accessory.check();
 			m_iapReady = true;
 		}
 	};

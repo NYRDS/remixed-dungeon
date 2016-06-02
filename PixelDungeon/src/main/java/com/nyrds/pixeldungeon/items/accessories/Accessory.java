@@ -87,16 +87,25 @@ public class Accessory {
 		return "Accessory"+getClass().getSimpleName();
 	}
 
-	public boolean haveIt() {
-
-		if(Iap.isReady()) {
-
+	static public void check() {
+		for(String item:allAccessoriesList.keySet()) {
+			if(Iap.checkPurchase(item)) {
+				getByName(item).ownIt(true);
+			}   else {
+				getByName(item).ownIt(false);
+			}
 		}
+	}
 
+	public boolean haveIt() {
 		return Preferences.INSTANCE.getString(prefProperty(),"").equals(getClass().getSimpleName());
 	}
 
-	public void gotIt() {
-		Preferences.INSTANCE.put(prefProperty(),getClass().getSimpleName());
+	public void ownIt(boolean reallyOwn) {
+		if(reallyOwn) {
+			Preferences.INSTANCE.put(prefProperty(), getClass().getSimpleName());
+		} else {
+			Preferences.INSTANCE.put(prefProperty(), "");
+		}
 	}
 }
