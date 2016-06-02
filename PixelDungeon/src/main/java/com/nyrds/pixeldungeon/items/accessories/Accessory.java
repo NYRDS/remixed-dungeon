@@ -119,7 +119,7 @@ public class Accessory {
 
 	static public Accessory equipped() {
 		String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(),"");
-		if(itemName!=null) {
+		if(!itemName.equals("")) {
 			return getByName(itemName);
 		}
 

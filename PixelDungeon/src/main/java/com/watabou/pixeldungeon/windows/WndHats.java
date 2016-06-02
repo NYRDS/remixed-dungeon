@@ -1,8 +1,5 @@
 package com.watabou.pixeldungeon.windows;
 
-import android.util.DisplayMetrics;
-import android.util.Log;
-
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
@@ -16,7 +13,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
-import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -50,10 +46,17 @@ public class WndHats extends Window {
 		Component content = new Component();
 
 		for (final String item: hats) {
-			final String price = "$ 999.99";// Iap.getSkuPrice(item);
+			//final String price = "$ 999.99";// Iap.getSkuPrice(item);
+			String price =  Iap.getSkuPrice(item);
 			if(price!=null) {
 
-				Image hat = Accessory.getByName(item).getImage();
+				Accessory accessory = Accessory.getByName(item);
+
+				if(accessory.haveIt()) {
+					price = "have it!";
+				}
+
+				Image hat = accessory.getImage();
 				hat.setPos(0,yPos);
 				content.add(hat);
 
@@ -69,7 +72,7 @@ public class WndHats extends Window {
 
 			    content.add(info);
 
-				SystemText priceTag = new SystemText(14);
+				SystemText priceTag = new SystemText(12);
 				priceTag.text(price);
 
 				priceTag.hardlight(0xFFFF00);
@@ -80,11 +83,13 @@ public class WndHats extends Window {
 
 				content.add(priceTag);
 
+				final String finalPrice = price;
 				TextButton rb = new RedButton(Game.getVar(R.string.WndHats_InfoButton)) {
 					@Override
 					protected void onClick() {
 						super.onClick();
-						GameScene.show( new WndHatInfo(item, price) );
+
+						GameScene.show( new WndHatInfo(item, finalPrice) );
 					}
 				};
 

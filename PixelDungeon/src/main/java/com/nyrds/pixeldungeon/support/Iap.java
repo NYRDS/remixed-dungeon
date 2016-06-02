@@ -210,6 +210,11 @@ public class Iap {
 		m_iapReady = false;
 		try {
 			mHelper.launchPurchaseFlow(mContext, sku.toLowerCase(Locale.ROOT), RC_REQUEST, mPurchaseFinishedListener, payload);
+
+			//TODO remove me in production!!!
+			callback.onPurchaseOk();
+			m_iapReady = true;
+
 		} catch (IabHelper.IabAsyncInProgressException e) {
 			EventCollector.logException(e);
 		}
@@ -237,12 +242,12 @@ public class Iap {
 
 	static IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
 		public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
+			m_iapReady = true;
 			if (mHelper == null)
 				return;
 
 			if (result.isFailure()) {
 				complain("Error purchasing: " + result);
-				m_iapReady = true;
 				return;
 			}
 
@@ -267,7 +272,6 @@ public class Iap {
 				mIapCallback.onPurchaseOk();
 				mIapCallback = null;
 			}
-			m_iapReady = true;
 		}
 	};
 

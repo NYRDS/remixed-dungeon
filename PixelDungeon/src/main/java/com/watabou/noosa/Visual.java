@@ -17,7 +17,6 @@
 
 package com.watabou.noosa;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Point;
@@ -228,7 +227,6 @@ public class Visual extends Gizmo {
 	public boolean isVisible() {
 		Camera c = camera();
 		if(c==null) {
-			EventCollector.logException(new Exception("null camera"));
 			return false;
 		}
 

@@ -17,7 +17,7 @@ public class WndHatInfo extends Window {
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 16;
 
-	public WndHatInfo(final String accessory, String price ) {
+	public WndHatInfo(final String accessory, String text ) {
 		int yPos = 0;
 
 		final Accessory item = Accessory.getByName(accessory);
@@ -47,7 +47,13 @@ public class WndHatInfo extends Window {
 		yPos += info.height() + MARGIN;
 		add(info);
 
-		TextButton rb = new SystemRedButton(price) {
+		String buttonText = text;
+
+		if(item.haveIt()) {
+			buttonText = "equip";
+		}
+
+		TextButton rb = new SystemRedButton(buttonText) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -76,21 +82,5 @@ public class WndHatInfo extends Window {
 		int h = Math.min(HEIGHT - MARGIN, yPos);
 
 		resize( WIDTH,  h);
-
-
-/*
-		int yPos = 0;
-
-		Text tfTitle = PixelScene.createMultiline("Hat", 9);
-		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.x = tfTitle.y = MARGIN;
-		tfTitle.maxWidth(WIDTH - MARGIN * 2);
-		tfTitle.measure();
-
-		yPos += tfTitle.height() + MARGIN;
-		add(tfTitle);
-
-		resize( WIDTH,  yPos);
-*/
 	}
 }
