@@ -22,100 +22,98 @@ import com.watabou.input.Touchscreen.Touch;
 import com.watabou.utils.Signal;
 
 public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Touch> {
-	
-	// Its target can be toucharea itself
-	public Visual target;
 
-	private boolean catchTouch = true;
+    // Its target can be toucharea itself
+    public Visual target;
 
-	protected Touchscreen.Touch touch = null;
-	
-	public TouchArea( Visual target ) {
-		super( 0, 0, 0, 0 );
-		this.target = target;
-		
-		Touchscreen.event.add( this );
-	}
-	
-	public TouchArea( float x, float y, float width, float height ) {
-		super( x, y, width, height );
-		this.target = this;
-		
-		setVisible(false);
-		
-		Touchscreen.event.add( this );
-	}
+    private boolean catchTouch = true;
 
-	public void dontCatchTouch() {
-		catchTouch = false;
-	}
+    protected Touchscreen.Touch touch = null;
 
-	@Override
-	public void onSignal( Touch touch ) {
-		
-		if (!isActive()) {
-			return;
-		}
-		
-		boolean hit = touch != null && target.overlapsScreenPoint( (int)touch.start.x, (int)touch.start.y );
-		
-		if (hit) {
 
-			if(catchTouch) {
-				Touchscreen.event.cancel();
-			}
+    public TouchArea(Visual target) {
+        super(0, 0, 0, 0);
+        this.target = target;
 
-			if (touch.down) {
-				
-				if (this.touch == null) {
-					this.touch = touch;
-				}
-				onTouchDown( touch );
-				
-			} else {
-				
-				onTouchUp( touch );
-				
-				if (this.touch == touch) {
-					this.touch = null;
-					onClick( touch );
-				}
+        Touchscreen.event.add(this);
+    }
 
-			}
-			
-		} else {
-			
-			if (touch == null && this.touch != null) {
-				onDrag( this.touch );
-			}
-			
-			else if (this.touch != null && !touch.down) {
-				onTouchUp( touch );
-				this.touch = null;
-			}
-			
-		}
-	}
-	
-	protected void onTouchDown( Touch touch ) {
-	}
-	
-	protected void onTouchUp( Touch touch ) {
-	}
-	
-	protected void onClick( Touch touch ) {
-	}
-	
-	protected void onDrag( Touch touch ) {
-	}
-	
-	public void reset() {
-		touch = null;
-	}
-	
-	@Override
-	public void destroy() {
-		Touchscreen.event.remove( this );
-		super.destroy();
-	}
+    public TouchArea(float x, float y, float width, float height) {
+        super(x, y, width, height);
+        this.target = this;
+
+        setVisible(false);
+
+        Touchscreen.event.add(this);
+    }
+
+    public void dontCatchTouch() {
+        catchTouch = false;
+    }
+
+    @Override
+    public void onSignal(Touch touch) {
+
+        if (!isActive()) {
+            return;
+        }
+
+        boolean hit = touch != null && target.overlapsScreenPoint((int) touch.start.x, (int) touch.start.y);
+
+        if (hit) {
+
+            if (catchTouch) {
+                Touchscreen.event.cancel();
+            }
+
+            if (touch.down) {
+
+                if (this.touch == null) {
+                    this.touch = touch;
+                }
+                onTouchDown(touch);
+
+            } else {
+
+                onTouchUp(touch);
+
+                if (this.touch == touch) {
+                    this.touch = null;
+                    onClick(touch);
+                }
+
+            }
+
+        } else {
+
+            if (touch == null && this.touch != null) {
+                onDrag(this.touch);
+            } else if (this.touch != null && !touch.down) {
+                onTouchUp(touch);
+                this.touch = null;
+            }
+        }
+    }
+
+    protected void onTouchDown(Touch touch) {
+    }
+
+    protected void onTouchUp(Touch touch) {
+    }
+
+    protected void onClick(Touch touch) {
+    }
+
+    protected void onDrag(Touch touch) {
+    }
+
+    public void reset() {
+        touch = null;
+    }
+
+    @Override
+    public void destroy() {
+        Touchscreen.event.remove(this);
+        super.destroy();
+    }
 }

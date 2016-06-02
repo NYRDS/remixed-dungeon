@@ -17,6 +17,7 @@
 
 package com.watabou.noosa.ui;
 
+import com.watabou.input.Touchscreen;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TouchArea;
@@ -52,6 +53,14 @@ public class Button extends Component {
 				if (!processed) {
 					Button.this.onClick();
 				}
+			}
+
+			@Override
+			public void onSignal(Touch touch) {
+				if(!isVisible()) {
+					return;
+				}
+				super.onSignal(touch);
 			}
 		};
 		add( hotArea );

@@ -37,7 +37,7 @@ public class ScrollPane extends Component {
 
 	public ScrollPane( Component content ) {
 		super();
-		
+
 		this.content = content;
 		addToBack( content );
 		

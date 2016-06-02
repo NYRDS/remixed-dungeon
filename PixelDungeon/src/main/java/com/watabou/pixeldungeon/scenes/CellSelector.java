@@ -35,7 +35,6 @@ public class CellSelector extends TouchArea {
 	public CellSelector( DungeonTilemap map ) {
 		super( map );
 		camera = map.camera();
-		
 		dragThreshold = PixelScene.defaultZoom * DungeonTilemap.SIZE / 2;
 	}
 	
