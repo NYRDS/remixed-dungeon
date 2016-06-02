@@ -2,8 +2,10 @@ package com.nyrds.pixeldungeon.items.accessories;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
@@ -79,5 +81,22 @@ public class Accessory {
 	}
 	public String name() {
 		return name;
+	}
+
+	private String prefProperty() {
+		return "Accessory"+getClass().getSimpleName();
+	}
+
+	public boolean haveIt() {
+
+		if(Iap.isReady()) {
+
+		}
+
+		return Preferences.INSTANCE.getString(prefProperty(),"").equals(getClass().getSimpleName());
+	}
+
+	public void gotIt() {
+		Preferences.INSTANCE.put(prefProperty(),getClass().getSimpleName());
 	}
 }
