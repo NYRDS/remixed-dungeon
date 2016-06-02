@@ -108,4 +108,21 @@ public class Accessory {
 			Preferences.INSTANCE.put(prefProperty(), "");
 		}
 	}
+
+	public void equip (){
+		if(!haveIt()) {
+			return;
+		}
+
+		Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());
+	}
+
+	static public Accessory equipped() {
+		String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(),"");
+		if(itemName!=null) {
+			return getByName(itemName);
+		}
+
+		return null;
+	}
 }

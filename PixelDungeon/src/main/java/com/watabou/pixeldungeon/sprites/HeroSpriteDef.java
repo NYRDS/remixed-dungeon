@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
@@ -84,9 +85,11 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 
+		Accessory accessory = Accessory.equipped();
+
 		if(hero.belongings.armor  == null
 				|| (hero.belongings.armor  != null && !hero.belongings.armor.isCoveringHair())
-				|| (hero.belongings.accessory  != null && !hero.belongings.accessory.isCoveringHair()))
+				|| (accessory  != null && !accessory.isCoveringHair()))
 		{
 			hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png";
 		}
@@ -102,15 +105,14 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
-		if (hero.belongings.accessory  == null)
+
+		if (accessory  == null)
 		{
 			layersDesc.put(LAYER_ACCESSORY, HERO_EMPTY_PNG);
 		}
 		else{
-			layersDesc.put(LAYER_ACCESSORY, hero.belongings.accessory.getLayerFile());
+			layersDesc.put(LAYER_ACCESSORY, accessory.getLayerFile());
 		}
-
-
 	}
 
 	public void heroUpdated(Hero hero) {

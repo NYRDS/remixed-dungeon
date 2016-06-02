@@ -53,14 +53,15 @@ public class WndHatInfo extends Window {
 				super.onClick();
 
 				if(item.haveIt()) {
-					Dungeon.hero.getHeroSprite().wearAccessory(item);
+					item.equip();
+					Dungeon.hero.updateLook();
 					return;
 				}
 
 				Iap.doPurchase(accessory, new Iap.IapCallback() {
 					@Override
 					public void onPurchaseOk() {
-						item.gotIt();
+						item.ownIt(true);
 						text("Equip");
 					}
 				});

@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
-import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -49,8 +48,7 @@ public class Belongings implements Iterable<Item> {
 	public Armor armor = null;
 	public Artifact ring1 = null;
 	public Artifact ring2 = null;
-	public Accessory accessory = null;
-	
+
 	public Belongings( Hero owner ) {
 		this.owner = owner;
 		
