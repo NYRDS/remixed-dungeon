@@ -40,6 +40,8 @@ public class Iap {
 
 	private static volatile boolean m_iapReady = false;
 
+	private static IapCallback mIapCallback = null;
+
 	private static boolean googleIapUsable() {
 		return android.os.Build.VERSION.SDK_INT >= 9;
 	}
@@ -119,21 +121,28 @@ public class Iap {
 		}.start();
 	}
 
+
+	private static boolean checkPurchase(String item) {
+		Purchase check = mInventory.getPurchase(item.toLowerCase(Locale.ROOT));
+		if(check != null && verifyDeveloperPayload(check)) {
+			return true;
+		}
+
+		return false;
+	}
+
 	private static void checkPurchases() {
 		PixelDungeon.setDonationLevel(0);
 
-		Purchase check = mInventory.getPurchase(SKU_LEVEL_1);
-		if (check != null && verifyDeveloperPayload(check)) {
+		if(checkPurchase(SKU_LEVEL_1)) {
 			PixelDungeon.setDonationLevel(1);
 		}
 
-		check = mInventory.getPurchase(SKU_LEVEL_2);
-		if (check != null && verifyDeveloperPayload(check)) {
+		if(checkPurchase(SKU_LEVEL_2)) {
 			PixelDungeon.setDonationLevel(2);
 		}
 
-		check = mInventory.getPurchase(SKU_LEVEL_3);
-		if (check != null && verifyDeveloperPayload(check)) {
+		if(checkPurchase(SKU_LEVEL_3)) {
 			PixelDungeon.setDonationLevel(3);
 		}
 	}
@@ -189,7 +198,7 @@ public class Iap {
 		return null;
 	}
 
-	public static void doPurchase(String sku) {
+	public static void doPurchase(String sku, IapCallback callback) {
 		if (!m_iapReady) {
 			EventCollector.logEvent("fail","purchase not ready");
 			return;
@@ -214,13 +223,13 @@ public class Iap {
 	public static void donate(int level) {
 		switch (level) {
 			case 1:
-				doPurchase(SKU_LEVEL_1);
+				doPurchase(SKU_LEVEL_1,null);
 				break;
 			case 2:
-				doPurchase(SKU_LEVEL_2);
+				doPurchase(SKU_LEVEL_2,null);
 				break;
 			case 3:
-				doPurchase(SKU_LEVEL_3);
+				doPurchase(SKU_LEVEL_3,null);
 				break;
 		}
 	}
@@ -241,18 +250,22 @@ public class Iap {
 				return;
 			}
 
-			if (purchase.getSku().equals(SKU_LEVEL_1)) {
-				PixelDungeon.setDonationLevel(1);
-			}
+			if(mIapCallback == null) {
+				if (purchase.getSku().equals(SKU_LEVEL_1)) {
+					PixelDungeon.setDonationLevel(1);
+				}
 
-			if (purchase.getSku().equals(SKU_LEVEL_2)) {
-				PixelDungeon.setDonationLevel(2);
-			}
+				if (purchase.getSku().equals(SKU_LEVEL_2)) {
+					PixelDungeon.setDonationLevel(2);
+				}
 
-			if (purchase.getSku().equals(SKU_LEVEL_3)) {
-				PixelDungeon.setDonationLevel(3);
+				if (purchase.getSku().equals(SKU_LEVEL_3)) {
+					PixelDungeon.setDonationLevel(3);
+				}
+			} else {
+				mIapCallback.onPurchaseOk();
+				mIapCallback = null;
 			}
-
 			m_iapReady = true;
 		}
 	};
@@ -260,6 +273,10 @@ public class Iap {
 	static void complain(String message) {
 		EventCollector.logEvent("iap error",message);
 		Log.e("GAME", "**** IAP Error: " + message);
+	}
+
+	public interface IapCallback {
+		void onPurchaseOk();
 	}
 
 }
