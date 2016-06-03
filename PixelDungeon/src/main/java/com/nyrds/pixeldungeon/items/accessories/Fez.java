@@ -7,7 +7,7 @@ public class Fez extends Accessory{
 
     {
         coverHair = true;
-        image = 8;
+        image = 9;
     }
 
 }

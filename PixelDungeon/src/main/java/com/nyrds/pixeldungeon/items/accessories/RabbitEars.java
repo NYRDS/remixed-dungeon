@@ -5,6 +5,6 @@ package com.nyrds.pixeldungeon.items.accessories;
  */
 public class RabbitEars extends Accessory{
 
-    {image = 6;}
+    {image = 7;}
 
 }

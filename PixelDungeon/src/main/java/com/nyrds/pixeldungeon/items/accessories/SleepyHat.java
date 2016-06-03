@@ -7,7 +7,7 @@ public class SleepyHat extends Accessory{
 
     {
         coverHair = true;
-        image = 3;
+        image = 4;
     }
 
 }

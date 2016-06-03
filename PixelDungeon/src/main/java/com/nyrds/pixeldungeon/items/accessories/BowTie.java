@@ -5,6 +5,6 @@ package com.nyrds.pixeldungeon.items.accessories;
  */
 public class BowTie extends Accessory{
 
-    {image = 1;}
+    {image = 2;}
 
 }

@@ -5,6 +5,6 @@ package com.nyrds.pixeldungeon.items.accessories;
  */
 public class NekoEars extends Accessory{
 
-    {image = 7;}
+    {image = 8;}
 
 }
