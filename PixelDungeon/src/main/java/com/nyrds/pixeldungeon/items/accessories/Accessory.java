@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -123,6 +124,7 @@ public class Accessory {
 
 	public static void unequip (){
 		Preferences.INSTANCE.put(Accessory.class.getSimpleName(), "");
+		Dungeon.hero.updateLook();
 	}
 
 	static public Accessory equipped() {
