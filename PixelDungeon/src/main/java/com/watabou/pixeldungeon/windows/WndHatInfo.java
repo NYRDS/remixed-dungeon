@@ -44,6 +44,8 @@ public class WndHatInfo extends Window {
 
 		Image hat = hero.getHeroSprite().avatar();//item.getImage();
 		hat.setPos(0,yPos);
+		hat.x = hat.x * 2;
+		hat.y = hat.y * 2;
 		add(hat);
 
 		Text info = PixelScene.createMultiline(item.desc(), 9 );
@@ -60,7 +62,7 @@ public class WndHatInfo extends Window {
 		String buttonText = text;
 
 		if(item.haveIt()) {
-			buttonText = Game.getVar(R.string.WndHats_EquipButton);
+			buttonText = Game.getVar(R.string.WndHats_BackButton);
 		}
 
 		TextButton rb = new SystemRedButton(buttonText) {
@@ -69,8 +71,7 @@ public class WndHatInfo extends Window {
 				super.onClick();
 
 				if(item.haveIt()) {
-					item.equip();
-					Dungeon.hero.updateLook();
+					onBackPressed();
 					return;
 				}
 
@@ -78,9 +79,11 @@ public class WndHatInfo extends Window {
 					@Override
 					public void onPurchaseOk() {
 						item.ownIt(true);
-						text(Game.getVar(R.string.WndHats_EquipButton));
+						onBackPressed();
 					}
 				});
+
+				item.ownIt(true);
 			}
 		};
 

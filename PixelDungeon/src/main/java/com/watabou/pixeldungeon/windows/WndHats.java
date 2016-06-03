@@ -8,6 +8,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -25,6 +26,7 @@ public class WndHats extends Window {
 	private static final int HEIGHT_LANDSCAPE = (int)PixelScene.MIN_HEIGHT_L;
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 14;
+	public Image slot;
 
 	private int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
 	public WndHats() {
@@ -33,15 +35,7 @@ public class WndHats extends Window {
 
 		String equippedName = "";
 
-		Image slot;
-
-		if(Accessory.equipped()!=null){
-			equippedName = ": " + Accessory.equipped().name();
-			slot = Accessory.equipped().getImage();
-		}
-		else{
-			slot = Accessory.getSlotImage();
-		}
+		if(updateSlotImage()) {equippedName = Accessory.equipped().name();}
 
 		//"Equipped Accessory" slot
 		//Title
@@ -63,6 +57,7 @@ public class WndHats extends Window {
 			protected void onClick() {
 				super.onClick();
 				Accessory.unequip();
+				updateSlotImage();
 			}
 		};
 
@@ -93,7 +88,7 @@ public class WndHats extends Window {
 				Accessory accessory = Accessory.getByName(item);
 
 				if(accessory.haveIt()) {
-					price = "have it!";
+					price = Game.getVar(R.string.WndHats_Purchased);
 				}
 
 				//Image
@@ -126,13 +121,27 @@ public class WndHats extends Window {
 
 				content.add(priceTag);
 
+				String buttonText = Game.getVar(R.string.WndHats_InfoButton);
+				final Accessory finalAccessory = accessory;
+
+				if(accessory.haveIt()) {
+					buttonText = Game.getVar(R.string.WndHats_EquipButton);
+				}
+
 				//Examine Button
 				final String finalPrice = price;
-				TextButton rb = new RedButton(Game.getVar(R.string.WndHats_InfoButton)) {
+				TextButton rb = new RedButton(buttonText) {
 					@Override
 					protected void onClick() {
 						super.onClick();
 
+						if(finalAccessory.haveIt()) {
+							finalAccessory.equip();
+							Dungeon.hero.updateLook();
+							updateSlotImage();
+							onBackPressed();
+							return;
+						}
 						GameScene.show( new WndHatInfo(item, finalPrice) );
 					}
 				};
@@ -173,5 +182,16 @@ public class WndHats extends Window {
 
 		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
 
+	}
+
+	public boolean updateSlotImage(){
+		if(Accessory.equipped()!=null){
+			slot = Accessory.equipped().getImage();
+			return true;
+		}
+		else{
+			slot = Accessory.getSlotImage();
+			return false;
+		}
 	}
 }
