@@ -31,23 +31,63 @@ public class WndHats extends Window {
 
 		int yPos = 0;
 
-		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_Title), 10);
-		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.maxWidth(WIDTH - MARGIN * 2);
-		tfTitle.measure();
-		tfTitle.x = WIDTH/2 - tfTitle.width()/2;
-		tfTitle.y = MARGIN;
+		String equippedName = "";
 
-		yPos += tfTitle.height() + MARGIN;
-		add(tfTitle);
+		Image slot;
+
+		if(Accessory.equipped()!=null){
+			equippedName = ": " + Accessory.equipped().name();
+			slot = Accessory.equipped().getImage();
+		}
+		else{
+			slot = Accessory.getSlotImage();
+		}
+
+		//"Equipped Accessory" slot
+		//Title
+		Text slotTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_SlotTitle) + equippedName, 10);
+		slotTitle.hardlight(0xFFFFFF);
+		slotTitle.maxWidth(WIDTH - MARGIN * 2);
+		slotTitle.measure();
+		slotTitle.x = (WIDTH - slotTitle.width()) / 2;
+		slotTitle.y = MARGIN;
+		add(slotTitle);
+
+		//Image
+		slot.setPos(MARGIN, slotTitle.height() + MARGIN * 2);
+		add(slot);
+
+		//Unequip Button
+		TextButton sb = new RedButton(Game.getVar(R.string.WndHats_UnequipButton)) {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				Accessory.unequip();
+			}
+		};
+
+		sb.setRect(slot.x + slot.width() * 2 + MARGIN, slot.y , slot.width() * 2, slot.height() / 2 );
+
+		add(sb);
+
+		//List of Accessories
+		//Title
+		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_ListTitle), 10);
+		listTitle.hardlight(TITLE_COLOR);
+		listTitle.maxWidth(WIDTH - MARGIN * 2);
+		listTitle.measure();
+		listTitle.x = (WIDTH - listTitle.width()) / 2;
+		listTitle.y = slot.y + slot.height() + MARGIN * 2;
+
+		add(listTitle);
 
 		List<String> hats = Accessory.getAccessoriesList();
 
 		Component content = new Component();
 
+		//List
 		for (final String item: hats) {
-			//final String price = "$ 999.99";// Iap.getSkuPrice(item);
-			String price =  Iap.getSkuPrice(item);
+			String price =  "$ 999";// Iap.getSkuPrice(item);
 			if(price!=null) {
 
 				Accessory accessory = Accessory.getByName(item);
@@ -56,12 +96,14 @@ public class WndHats extends Window {
 					price = "have it!";
 				}
 
+				//Image
 				Image hat = accessory.getImage();
 				hat.setPos(0,yPos);
 				content.add(hat);
 
 				String hatText = Accessory.getByName(item).name() + "\n" + Accessory.getByName(item).desc();
 
+				//Text
 				Text info = PixelScene.createMultiline(hatText, 10 );
 
 				info.hardlight(0xFFFFFF);
@@ -72,6 +114,7 @@ public class WndHats extends Window {
 
 			    content.add(info);
 
+				//Pricetag
 				SystemText priceTag = new SystemText(12);
 				priceTag.text(price);
 
@@ -83,6 +126,7 @@ public class WndHats extends Window {
 
 				content.add(priceTag);
 
+				//Examine Button
 				final String finalPrice = price;
 				TextButton rb = new RedButton(Game.getVar(R.string.WndHats_InfoButton)) {
 					@Override
@@ -99,6 +143,7 @@ public class WndHats extends Window {
 				yPos += rb.height() + info.height() + MARGIN * 9;
 			}
 			else{
+				//"No connection" Message
 				Text info = PixelScene.createMultiline( Game.getVar(R.string.WndHats_NoConnectionMsg), 10 );
 
 				info.hardlight(0xFFFFFF);
@@ -115,6 +160,8 @@ public class WndHats extends Window {
 
 		int h = Math.min(HEIGHT - MARGIN, yPos);
 
+		float topGap = listTitle.y + listTitle.height() + MARGIN;
+		float BottomGap = slotTitle.height() + slot.height() + listTitle.height() + MARGIN * 5;
 
 		resize( WIDTH,  h);
 
@@ -124,7 +171,7 @@ public class WndHats extends Window {
 
 		add(list);
 
-		list.setRect(0, tfTitle.y + tfTitle.height() + MARGIN, WIDTH, HEIGHT - tfTitle.height() - MARGIN * 2);
+		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
 
 	}
 }
