@@ -7,7 +7,9 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -34,7 +36,13 @@ public class WndHatInfo extends Window {
 		yPos += tfTitle.height() + MARGIN;
 		add(tfTitle);
 
-		Image hat = item.getImage();
+		Hero hero = new Hero();
+		hero.heroClass = Dungeon.heroClass;
+		hero.belongings = Dungeon.hero.belongings;
+		hero.setPos(Dungeon.hero.getPos());
+		hero.setSprite(new HeroSpriteDef(hero, true));
+
+		Image hat = hero.getHeroSprite().previewAvatar(item);//item.getImage();
 		hat.setPos(0,yPos);
 		add(hat);
 
