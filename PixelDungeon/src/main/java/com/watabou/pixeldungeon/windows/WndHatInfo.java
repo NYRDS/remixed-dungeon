@@ -40,9 +40,9 @@ public class WndHatInfo extends Window {
 		hero.heroClass = Dungeon.heroClass;
 		hero.belongings = Dungeon.hero.belongings;
 		hero.setPos(Dungeon.hero.getPos());
-		hero.setSprite(new HeroSpriteDef(hero, true));
+		hero.setSprite(new HeroSpriteDef(hero, item));
 
-		Image hat = hero.getHeroSprite().previewAvatar(item);//item.getImage();
+		Image hat = hero.getHeroSprite().avatar();//item.getImage();
 		hat.setPos(0,yPos);
 		add(hat);
 

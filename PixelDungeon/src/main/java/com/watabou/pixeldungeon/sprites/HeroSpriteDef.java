@@ -29,7 +29,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final int RUN_FRAMERATE = 20;
 	private static final String HERO_EMPTY_PNG = "hero/empty.png";
 	private CompositeTextureImage avatar;
-	private CompositeTextureImage previewAvatar;
 
 	// body goes as main texture
 	private static final String LAYER_ARMOR       = "armor";
@@ -68,7 +67,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	public HeroSpriteDef(Hero hero, boolean link) {
 		super("spritesDesc/Hero.json",0);
-
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
 		if(link) {
@@ -76,7 +74,18 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 	}
 
+	public HeroSpriteDef(Hero hero, Accessory accessory) {
+		super("spritesDesc/Hero.json",0);
+		createLayersDesc(hero, accessory);
+		applyLayersDesc(getLayersDesc());
+	}
+
 	public void createLayersDesc(Hero hero) {
+		Accessory accessory = Accessory.equipped();
+		createLayersDesc(hero, accessory);
+	}
+
+	public void createLayersDesc(Hero hero, Accessory accessory) {
 		layersDesc.clear();
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
 
@@ -85,8 +94,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 		String facialHairDescriptor = HERO_EMPTY_PNG;
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
-
-		Accessory accessory = Accessory.equipped();
 
 		if(hero.belongings.armor  == null
 				|| (hero.belongings.armor  != null && !hero.belongings.armor.isCoveringHair())
@@ -245,28 +252,5 @@ public class HeroSpriteDef extends MobSpriteDef {
 		avatar.addLayer(getLayerTexture(LAYER_ACCESSORY));
 
 		return avatar;
-	}
-
-	public CompositeTextureImage previewAvatar(Accessory item) {
-		layersDesc.put(LAYER_ACCESSORY, item.getLayerFile());
-
-		if(previewAvatar==null) {
-			previewAvatar = new CompositeTextureImage(texture);
-			previewAvatar.frame(idle.frames[0]);
-		}
-
-		previewAvatar.clearLayers();
-
-
-		previewAvatar.addLayer(getLayerTexture(LAYER_BODY));
-		previewAvatar.addLayer(getLayerTexture(LAYER_HEAD));
-		previewAvatar.addLayer(getLayerTexture(LAYER_HAIR));
-		previewAvatar.addLayer(getLayerTexture(LAYER_ARMOR));
-		previewAvatar.addLayer(getLayerTexture(LAYER_FACIAL_HAIR));
-		previewAvatar.addLayer(getLayerTexture(LAYER_HELMET));
-		previewAvatar.addLayer(getLayerTexture(LAYER_DEATH));
-		previewAvatar.addLayer(getLayerTexture(LAYER_ACCESSORY));
-
-		return previewAvatar;
 	}
 }
