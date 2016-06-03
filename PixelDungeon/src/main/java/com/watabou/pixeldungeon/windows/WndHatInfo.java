@@ -1,7 +1,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -50,7 +52,7 @@ public class WndHatInfo extends Window {
 		String buttonText = text;
 
 		if(item.haveIt()) {
-			buttonText = "equip";
+			buttonText = Game.getVar(R.string.WndHats_EquipButton);
 		}
 
 		TextButton rb = new SystemRedButton(buttonText) {
@@ -68,7 +70,7 @@ public class WndHatInfo extends Window {
 					@Override
 					public void onPurchaseOk() {
 						item.ownIt(true);
-						text("Equip");
+						text(Game.getVar(R.string.WndHats_EquipButton));
 					}
 				});
 			}

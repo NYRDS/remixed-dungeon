@@ -39,7 +39,12 @@
 
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
-    <string name="WndHats_Title">Accessories</string>
+    <string name="WndHats_ListTitle">List of Accessories</string>
+    <string name="WndHats_SlotTitle">Equipped</string>
     <string name="WndHats_NoConnectionMsg">Unable to connect to Google Play.</string>
     <string name="WndHats_InfoButton">Examine</string>
+    <string name="WndHats_BuyButton">Buy</string>
+    <string name="WndHats_EquipButton">Equip</string>
+    <string name="WndHats_UnequipButton">Unequip</string>
+
 </resources>
