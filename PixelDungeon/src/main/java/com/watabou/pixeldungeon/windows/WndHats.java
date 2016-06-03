@@ -58,6 +58,7 @@ public class WndHats extends Window {
 				super.onClick();
 				Accessory.unequip();
 				updateSlotImage();
+				onBackPressed();
 			}
 		};
 
@@ -149,7 +150,7 @@ public class WndHats extends Window {
 				rb.setRect(info.x, info.y + info.height() + MARGIN * 2, WIDTH - hat.width() - MARGIN, BUTTON_HEIGHT );
 
 			    content.add(rb);
-				yPos += rb.height() + info.height() + MARGIN * 9;
+				yPos += rb.height() + info.height() + MARGIN * 4;
 			}
 			else{
 				//"No connection" Message

@@ -44,8 +44,7 @@ public class WndHatInfo extends Window {
 
 		Image hat = hero.getHeroSprite().avatar();//item.getImage();
 		hat.setPos(0,yPos);
-		hat.x = hat.x * 2;
-		hat.y = hat.y * 2;
+		hat.setScale(2, 2);
 		add(hat);
 
 		Text info = PixelScene.createMultiline(item.desc(), 9 );
