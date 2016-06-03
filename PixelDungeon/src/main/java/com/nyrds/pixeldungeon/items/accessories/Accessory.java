@@ -20,7 +20,7 @@ public class Accessory {
 
 	protected boolean coverHair;
 	protected int image = 0;
-	protected String imageFile;
+	protected static String imageFile = "items/accessories.png";
 
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
@@ -52,7 +52,7 @@ public class Accessory {
 	}
 
     Accessory (){
-		imageFile = "items/accessories.png";
+		//imageFile = "items/accessories.png";
         coverHair = false;
     }
 
@@ -74,6 +74,10 @@ public class Accessory {
 
 	public Image getImage() {
 		return new Image(imageFile, image*28, 0, 28,28);
+	}
+
+	public static Image getSlotImage() {
+		return new Image(imageFile, 0, 0, 28,28);
 	}
 
 	public String desc() {
@@ -115,6 +119,10 @@ public class Accessory {
 		}
 
 		Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());
+	}
+
+	public static void unequip (){
+		Preferences.INSTANCE.put(Accessory.class.getSimpleName(), "");
 	}
 
 	static public Accessory equipped() {
