@@ -57,8 +57,8 @@ public class WndHats extends Window {
 			protected void onClick() {
 				super.onClick();
 				Accessory.unequip();
-				updateSlotImage();
 				onBackPressed();
+				GameScene.show( new WndHats() );
 			}
 		};
 
@@ -83,7 +83,7 @@ public class WndHats extends Window {
 
 		//List
 		for (final String item: hats) {
-			String price =  "$ 999";// Iap.getSkuPrice(item);
+			String price =  Iap.getSkuPrice(item);
 			if(price!=null) {
 
 				Accessory accessory = Accessory.getByName(item);
@@ -129,6 +129,8 @@ public class WndHats extends Window {
 					buttonText = Game.getVar(R.string.WndHats_EquipButton);
 				}
 
+				final Window currentWindow = this;
+
 				//Button
 				final String finalPrice = price;
 				TextButton rb = new RedButton(buttonText) {
@@ -139,11 +141,10 @@ public class WndHats extends Window {
 						if(finalAccessory.haveIt()) {
 							finalAccessory.equip();
 							Dungeon.hero.updateLook();
-							updateSlotImage();
 							onBackPressed();
 							return;
 						}
-						GameScene.show( new WndHatInfo(item, finalPrice) );
+						GameScene.show( new WndHatInfo(item, finalPrice, currentWindow) );
 					}
 				};
 

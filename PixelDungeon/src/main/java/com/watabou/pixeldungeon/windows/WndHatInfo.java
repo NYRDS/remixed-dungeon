@@ -23,7 +23,7 @@ public class WndHatInfo extends Window {
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 16;
 
-	public WndHatInfo(final String accessory, String price ) {
+	public WndHatInfo(final String accessory, String price, final Window parent ) {
 		int yPos = 0;
 
 		final Accessory item = Accessory.getByName(accessory);
@@ -87,11 +87,12 @@ public class WndHatInfo extends Window {
 					@Override
 					public void onPurchaseOk() {
 						item.ownIt(true);
+						item.equip();
+						Dungeon.hero.updateLook();
 						onBackPressed();
+						parent.hide();
 					}
 				});
-
-				item.ownIt(true);
 			}
 		};
 
