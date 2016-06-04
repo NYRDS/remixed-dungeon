@@ -23,6 +23,7 @@ import android.graphics.Canvas;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
+import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -94,7 +95,7 @@ public class TextureCache {
 		all.put(key, tx);
 	}
 
-	public static SmartTexture get(Object src) {
+	public static SmartTexture get(@NonNull Object src) {
 
 		if (all.containsKey(src)) {
 
