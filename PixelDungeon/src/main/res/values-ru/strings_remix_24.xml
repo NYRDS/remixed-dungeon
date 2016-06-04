@@ -39,7 +39,7 @@
 
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
-    <string name="WndHats_ListTitle">Список Акссессуаров</string>
+    <string name="WndHats_ListTitle">Список Аксессуаров</string>
     <string name="WndHats_SlotTitle">Надето</string>
     <string name="WndHats_NoConnectionMsg">Не удаётся соединиться с Google Play.</string>
     <string name="WndHats_Purchased">Есть!</string>
