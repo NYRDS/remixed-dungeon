@@ -37,7 +37,7 @@
   <string name="Level_TileDefault">\?\?\?</string>
   <string name="Level_TileDescChasm">Du kannst den Boden nicht erkennen.</string>
   <string name="Level_TileDescWater">Wenn du Feuer gefangen hast, stelle dich in Wasser um das Feuer zu löschen.</string>
-  <string name="Level_TileDescEntrance">Treffen führen nach oben in eine höhere Ebene.</string>
+  <string name="Level_TileDescEntrance">Treppen führen nach oben in eine höhere Ebene.</string>
   <string name="Level_TileDescExit">Treppen führen nach unten in eine tiefere Ebene.</string>
   <string name="Level_TileDescEmbers">Glühende Kohlen bedecken den Boden.</string>
   <string name="Level_TileDescHighGrass">Dichter Pflanzenbewuchs versperrt die Sicht.</string>
@@ -58,7 +58,7 @@
   <string name="Caves_TileDescExit">Die Leiter führt nach unten in eine tiefere Ebene.</string>
   <string name="Caves_TileDescHighGrass">Riesige Pilze versperren die Sicht.</string>
   <string name="Caves_TileDescDeco">Eine Erzader ist in der Wand sichtbar. Gold?</string>
-  <string name="Caves_TileDescBookshelf">Wer braucht denn ein Buchregal in einer Höhle?</string>
+  <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
   <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
   <string name="City_TileWater">Merkwürdig gefärbtes Wasser</string>
   <string name="City_TileHighGrass">Große blühende Blumen</string>
@@ -66,23 +66,23 @@
   <string name="City_TileDescExit">Eine Rampe führt in eine tiefere Ebene.</string>
   <string name="City_TileDescDeco">Mehrere Bodenplatten fehlen hier.</string>
   <string name="City_TileDescEmptySP">Ein dicker Teppich bedeckt den Bode.</string>
-  <string name="City_TileDescStatue">Die Statue zeigt seinen Zwergen in einer heroischen Pose.</string>
+  <string name="City_TileDescStatue">Die Statue zeigt einen Zwerg in einer heroischen Pose.</string>
   <string name="City_TileDescBookshelf">Mehrere Reihen Bücher aus den verschiedenen Fachrichtungen füllen das Bücherregal.</string>
   <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
   <string name="Halls_TileWater">Erkaltete Lava</string>
   <string name="Halls_TileGrass">Aschemoos</string>
   <string name="Halls_TileHighGrass">Aschepilz</string>
-  <string name="Halls_TileStatue">Kissen</string>
+  <string name="Halls_TileStatue">Säule</string>
   <string name="Halls_TileDescWater">Es schaut nach Lava aus, aber sie ist kalt und wahrscheinlich kann man sie gefahrlos berühren.</string>
-  <string name="Halls_TileDescStatue">Dieses Kissen ist aus echter Menschenhaut gemacht. Beeindruckend.</string>
+  <string name="Halls_TileDescStatue">Diese Säule ist aus echter Menschenhaut gemacht. Beeindruckend.</string>
   <string name="Halls_TileDescBookshelf">Bücher in verschiedenen Sprachen vermodern im Bücherregal.</string>
   <!--STRINGS OF LastLevel CLASS-->
   <string name="LastLevel_TileWater">Erkaltete Lava</string>
   <string name="LastLevel_TileGrass">Aschemoos</string>
   <string name="LastLevel_TileHighGrass">Aschepilz</string>
-  <string name="LastLevel_TileStatue">Kissen</string>
+  <string name="LastLevel_TileStatue">Säule</string>
   <string name="LastLevel_TileDescWater">Es schaut nach Lava aus, aber sie ist kalt und wahrscheinlich kann man sie gefahrlos berühren.</string>
-  <string name="LastLevel_TileDescStatue">Dieses Kissen ist aus echter Menschenhaut gemacht. Beeindruckend.</string>
+  <string name="LastLevel_TileDescStatue">Diese Säule ist aus echter Menschenhaut gemacht. Beeindruckend.</string>
   <!--STRINGS OF LastShopLevel CLASS-->
   <string name="LastShopLevel_TileWater">Merkwürdig gefärbtes Wasser</string>
   <string name="LastShopLevel_TileHighGrass">Große blühende Blumen</string>
@@ -97,7 +97,7 @@
   <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
   <string name="Sewer_TileWater">Schlammiges Wasser</string>
   <string name="Sewer_TileDescDeco">Nasses gelbes Moos bedeckt den Boden.</string>
-  <string name="Sewer_TileDescBookshelf">Das Buchregal ist vollgestellt mit billigen nutzlosen Büchern. Ob sie brennen?</string>
+  <string name="Sewer_TileDescBookshelf">Das Bücherregal ist vollgestellt mit billigen nutzlosen Büchern. Ob sie brennen?</string>
   <!--PACKAGE /levels/features-->
   <!--STRINGS OF AlchemyPot CLASS-->
   <string name="AlchemyPot_SelectSeed">Wähle einen Samen aus um ihn zu werfen.</string>

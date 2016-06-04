@@ -8,7 +8,7 @@
   <string name="Armor_Incompatible">Eine Überlagerung verschiedener Magiearten hat die Glyphe von dieser Rüstung entfernt.</string>
   <string name="Armor_Info1">Diese %1$s bietet bis zu \"%2$d\" Schadensreduzierung pro Angriff.</string>
   <string name="Armor_Info2">
-\n\nDeine Stärke ist zu gering. Daher sind deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit verringert, solange du diese Rüstung anhast.</string>
+\n\nDeine Stärke ist zu gering. Deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit sind verringert, solange du diese Rüstung anhast.</string>
   <string name="Armor_Info3">
 \n\nDa deine Stärke zu gering ist, wird das Tragen dieser Rüstung deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit verringern.</string>
   <string name="Armor_Info4">
@@ -44,7 +44,7 @@
   <string name="LeatherArmor_Desc">Eine Rüstung hergestellt aus gegerbter Monsterhaut. Sie ist nicht so leicht wie Stoffrüstung, bietet dafür aber besseren Schutz.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">Magierrobe</string>
-  <string name="MageArmor_Desc">Ein Magier kann den Zauber \"geschmolzene Erde\" wirken während er diese prächtige Rüstung trägt: Alle Feinde in seinem Sichtfeld werden in Flammen ausgehen und können sich gleichzeitig nicht mehr bewegen.</string>
+  <string name="MageArmor_Desc">Ein Magier kann den Zauber \"geschmolzene Erde\" wirken während er diese prächtige Rüstung trägt. Alle Feinde in seinem Sichtfeld werden in Flammen aufgehen und können sich gleichzeitig nicht mehr bewegen.</string>
   <string name="MageArmor_ACSpecial">GESCHMOLZENE ERDE</string>
   <string name="MageArmor_NotMage">Nur Magier können diese Rüstung nutzen.</string>
   <!--STRINGS OF MailArmor CLASS-->

@@ -19,7 +19,7 @@
   <string name="Albino_Name">Albino Rattenjäger</string>
   <string name="Albino_Gender">männlich</string>
   <string name="Albino_Name_Objective">Albino Rattenkrieger</string>
-  <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte, scheint ein Albino zu sein. Sie hat ausserdem unnormal scharfe Zähne.</string>
+  <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte, scheint ein Albino zu sein. Sie hat ausserdem aussergewöhnlich  scharfe Zähne.</string>
   <!--STRINGS OF Bandit CLASS-->
   <string name="Bandit_Name">Verrückter Bandit</string>
   <string name="Bandit_Gender">männlich</string>
@@ -56,7 +56,7 @@
   <string name="Elemental_Name">Feuerwandler</string>
   <string name="Elemental_Gender">männlich</string>
   <string name="Elemental_Name_Objective">Feuerwandler</string>
-  <string name="Elemental_Desc">Umherziehende Feuer Elementare sind ein Nebenprodukt von mächtigeren Beschwörungen. Ihre chaotische Natur macht es selbst für die mächtigsten Dämonologen zu schwierig, sie zu kontrollieren.</string>
+  <string name="Elemental_Desc">Umherziehende Feuerwandler sind ein Nebenprodukt von mächtigeren Beschwörungen. Ihre chaotische Natur macht es selbst für die mächtigsten Dämonologen zu schwierig, sie zu kontrollieren. </string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">Dunkler Starrer</string>
   <string name="Eye_Gender">geschlechtslos</string>
@@ -78,7 +78,7 @@
   <string name="Goo_Name">Glibber</string>
   <string name="Goo_Gender">weiblich</string>
   <string name="Goo_Name_Objective">Glibber</string>
-  <string name="Goo_Desc">Wenig ist über die Schmiere bekannt. Es könnte möglich sein, dass sie nicht einmal eine Kreatur, sondern ein Konglomerat aus Substanzen der Abwasserkanäle die einen freien Willen gewannen. Es ist offensichtlich, dass dunkle Magie hier am Werk ist.</string>
+  <string name="Goo_Desc">Wenig ist über den Glibber bekannt. Es könnte möglich sein, dass sie nicht einmal eine Kreatur, sondern ein Konglomerat aus Substanzen der Abwasserkanäle die einen freien Willen gewannen. Es ist offensichtlich, dass dunkle Magie hier am Werk ist.</string>
   <string name="Goo_Info1">Glibber lädt sich auf!</string>
   <string name="Goo_Info2">glurp...glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -87,7 +87,7 @@
   <string name="King_Name">Zwergenkönig</string>
   <string name="King_Gender">männlich</string>
   <string name="King_Name_Objective">Zwergenkönig</string>
-  <string name="King_Desc">Der letzte Zwergenkönig war bekannt für sein weit reichendes Verständnis der Prozesse des Lebens und des Todes.Er überzeugte Mitglieder seines Gerichts an einem Ritual teilzunehmen, welches ihnen ewige Jugend bewilligen sollte. Am Ende war er der Einzige, der sie bekam - und eine Armee der Untoten als ein Bonus.</string>
+  <string name="King_Desc">Der letzte Zwergenkönig war bekannt für sein weit reichendes Verständnis der Prozesse des Lebens und des Todes.Er überzeugte Mitglieder seines Gerichts an einem Ritual teilzunehmen, welches ihnen ewige Jugend bewilligen sollte. Am Ende war er der Einzige, der sie bekam - und eine Armee der Untoten als Bonus.</string>
   <string name="King_Defense">parriert</string>
   <string name="King_Info1">Ihr könnt mich nicht töten, %s... ich bin... unsterblich...</string>
   <string name="King_Info2">Erhebt euch, Sklaven!</string>
@@ -98,12 +98,12 @@
   <string name="Undead_Desc">Diese untoten Zwerge, erschaffen durch den Willen des Zwergenkönigs, waren einst Mitglieder seines Rates. Sie sehen aus wie Skelette mit einer beeindruckender Gesichtsbehaarung.</string>
   <string name="Undead_Defense">abgeblockt</string>
   <!--STRINGS OF Mimic CLASS-->
-  <string name="Mimic_Name">Nachmacher</string>
+  <string name="Mimic_Name">Imitator </string>
   <string name="Mimic_Gender">männlich</string>
-  <string name="Mimic_Name_Objective">Nachmacher</string>
-  <string name="Mimic_Desc">Imitatoren sind magische Kreaturen, die jede beliebige Form annehmen können. In Verließen wählen sie fast immer die Form einer Schatztruhe an, weil sie wissen, wie man einen Abenteurer zu sich winken kann.\";</string>
+  <string name="Mimic_Name_Objective">Imitator </string>
+  <string name="Mimic_Desc">Imitatoren sind magische Kreaturen, die jede beliebige Form annehmen können. In Verließen wählen sie fast immer die Form einer Schatztruhe,  weil sie wissen das man damit Abenteurer zu sich locken kann.</string>
   <!--STRINGS OF MimicPie CLASS-->
-  <string name="MimicPie_Name">Imitator</string>
+  <string name="MimicPie_Name">Nachmacher</string>
   <string name="MimicPie_Gender">männlich</string>
   <string name="MimicPie_Name_Objective">Imitator</string>
   <string name="MimicPie_Desc">Imitatoren sind magische Wesen, die jede beliebige Form annehmen können. Dieser hier sieht wie eine große leckere Pastete aus.</string>
@@ -167,10 +167,13 @@
   <string name="Statue_Name">beseelte Statue</string>
   <string name="Statue_Gender">weiblich</string>
   <string name="Statue_Name_Objective">beseelte Statue</string>
+  <string name="Statue_Desc">Während du denkst das es wieder nur eine hässliche Statue ist, stellst du fest das die Augen rot leuchten.
+Die Statue ist aus Stein während _%s_ echt aussieht.</string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">Sukkubus</string>
   <string name="Succubus_Gender">männlich</string>
   <string name="Succubus_Name_Objective">Sukkubus</string>
+  <string name="Succubus_Desc">Die verführerische Dämonin (auf eine gothische Art ) benutzt ihren Zauber um den Helden zu betören. Durch diesen Zauber kann der Held nicht angreifen bis der Zauber aufhört.</string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Name">Fliegenschwarm</string>
   <string name="Swarm_Gender">männlich</string>
@@ -190,15 +193,20 @@
   <string name="Thief_Name_Objective">Verrückter Dieb</string>
   <string name="Thief_Desc">Die tieferen Ebenen der Gewölbe waren immer ein Versteck für alle möglichen Verbrecher. Nicht alle konnten während ihrer ausgedehnten Aufenthalte im Dunkeln, weit weg vom Tageslicht, einen klaren Verstand bewahren. Vor langer Zeit vergaßen diese verrückten Diebe und Banditen wer sie sind und warum sie stehlen.</string>
   <string name="Thief_Stole">%1$s hat %2$s von dir gestohlen!</string>
+  <string name="Thief_Carries">
+\n\n%1$s trägt  _%2$s_. Wahrscheinlich gestolen.</string>
   <!--STRINGS OF Warlock CLASS-->
   <string name="Warlock_Name">Zwergenhexenmeister</string>
   <string name="Warlock_Gender">männlich</string>
   <string name="Warlock_Name_Objective">Zwergenhexenmeister</string>
+  <string name="Warlock_Desc">Als sich das Interesse der Zwerge vom Maschinenbau zur obskuren Kunst wandelte, kamen die Hexenmeister an die Macht. Es fing alles mit Elementar Zauber an, wurde doch schnell zu Dämonologie und Nekromantie.</string>
   <string name="Warlock_Killed">%s\'s Schattenblitz hat dich getötet...</string>
   <!--STRINGS OF Wraith CLASS-->
   <string name="Wraith_Name">Geist</string>
   <string name="Wraith_Gender">männlich</string>
   <string name="Wraith_Name_Objective">Geist</string>
+  <string name="Wraith_Desc">Ein Geist ist eine rachsüchtige Seele eines Sünders, dessen Grab oder Ruhestätte gestört worden ist.
+Da es sich um eine spirituelle Einheit handelt, ist es sehr schwer sie mit einer gewöhnlichen Waffe zu treffen.</string>
   <string name="Wraith_Defense">ausgewichen</string>
   <!--STRINGS OF Yog CLASS-->
   <string name="Yog_Name">Yog-Dzewa</string>
@@ -261,4 +269,5 @@
   <string name="Crystal_Name">Sonderbarer Kristall</string>
   <string name="Crystal_Gender">männlich</string>
   <string name="Crystal_Name_Objective">Sonderbarer Kristall</string>
+  <string name="Crystal_Desc">Ein grosser leuchtender Kristall schwebt in der Luft. Wahrscheinlich steckt ein starker Zauber drin.</string>
 </resources>
