@@ -42,7 +42,7 @@ public class WndHats extends Window {
 
 		//"Equipped Accessory" slot
 		//Title
-		Text slotTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_SlotTitle) + equippedName, 10);
+		Text slotTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_SlotTitle) + equippedName, 9);
 		slotTitle.hardlight(0xFFFFFF);
 		slotTitle.maxWidth(WIDTH - MARGIN * 2);
 		slotTitle.measure();
@@ -71,7 +71,7 @@ public class WndHats extends Window {
 
 		//List of Accessories
 		//Title
-		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_ListTitle), 10);
+		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_ListTitle), 9);
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - MARGIN * 2);
 		listTitle.measure();
@@ -103,7 +103,7 @@ public class WndHats extends Window {
 			String hatText = Accessory.getByName(item).name() + "\n" + Accessory.getByName(item).desc();
 
 			//Text
-			Text info = PixelScene.createMultiline(hatText, 10);
+			Text info = PixelScene.createMultiline(hatText, 8);
 
 			info.hardlight(0xFFFFFF);
 			info.x = hat.x + hat.width() + MARGIN;

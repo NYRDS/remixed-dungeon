@@ -63,10 +63,10 @@ public class WndHatInfo extends Window {
 
 		//Preview Image
 		Image preview = hero.getHeroSprite().avatar();
-		preview.setPos(WIDTH / 4 - preview.width() / 2,yPos);
-		preview.setScale(4, 4);
+		preview.setPos(WIDTH / 2 - preview.width(),yPos);
+		preview.setScale(2, 2);
 		add(preview);
-		yPos += preview.height() + MARGIN * 4;
+		yPos += preview.height() + MARGIN * 2;
 
 		//Button
 		String buttonText = Game.getVar(R.string.WndHats_BuyButton);
