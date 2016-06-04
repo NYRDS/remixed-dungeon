@@ -35,7 +35,7 @@ public class WndHats extends Window {
 
 		String equippedName = "";
 
-		if(updateSlotImage()) {equippedName = Accessory.equipped().name();}
+		if(updateSlotImage()) {equippedName = ": " + Accessory.equipped().name();}
 
 		//"Equipped Accessory" slot
 		//Title
