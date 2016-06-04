@@ -36,8 +36,8 @@ public class Accessory {
 		registerAccessory(Fez.class);
 		registerAccessory(Pumpkin.class);
 		registerAccessory(Capotain.class);
-		registerAccessory(BowTie.class);
-		registerAccessory(SleepyHat.class);
+		registerAccessory(Bowknot.class);
+		registerAccessory(Nightcap.class);
 		registerAccessory(RabbitEars.class);
 		registerAccessory(WizardHat.class);
 		registerAccessory(Shades.class);
