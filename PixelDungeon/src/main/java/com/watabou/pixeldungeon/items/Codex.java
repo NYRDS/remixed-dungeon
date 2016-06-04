@@ -43,6 +43,7 @@ public class Codex extends Item {
 	public Codex(){
 		stackable = false;
 		image     = ItemSpriteSheet.CODEX;
+		//TODO Need rework this. Transifex just hates string-arrays
 		maxId     = Game.getVars(R.array.Codex_Story).length;
 		id        = Random.Int(maxId);
 	}
