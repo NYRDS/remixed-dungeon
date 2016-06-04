@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Бант</string>
+    <string name="Bowknot_Info">Заколка с милой розовой ленточкой завязанной в узел бантиком.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Тёмные очки</string>
+    <string name="Shades_Info">Есть люди, которые говорят, дескать подземелья слишком тёмные, чтобы носить тёмные очки. Эти люди просто недостаточно клёвые.</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Пуританская Шляпа</string>
+    <string name="Capotain_Info">Высокая шляпа, опоясанная кожаным ремешком. Обычно данный головной убор приписывают приверженцам пуританской веры. Но не обязательно быть религиозным чтобы её носить. Что странно, на ней есть бирка на которой написано \"Соломон\".</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Феска</string>
+    <string name="Fez_Info">Шапочка в виде усечённого конуса из красной ткани с кисточкой на макушке. И нет, она не может сделать мир трёхмерным.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Нэко-ушки</string>
+    <string name="NekoEars_Info">Иногда хочется смыть с себя останки монстров и грязищу и просто чувствовать себя кавайным и пушистым... Ну или можно ограничится ношением кавайных кошачьих ушек.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Крольчьи ушки</string>
+    <string name="RabbitEars_Info">Существует поверье, что кролики являются прирождёнными счастливчиками и что человеку, заполучившему часть такого кролика, будет сопутствовать присущая зверю удача.  С другой стороны быть убитым ради твоих ушей, из которых сделают украшение, не особо счастливое событие.</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Тыква</string>
+    <string name="Pumpkin_Info">Давным давно, Люди-тыквы были гордым и процветающим народом. Но всё изменилось, когда пришли люди, оставляющие за собой лишь разруху. Теперь единственным напоминанием о тех страшных событиях служат отрубленные, выскобленные головы Людей-тыкв.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Ночной колпак</string>
+    <string name="Nightcap_Info">Покорять подземелья в ночную пору должно быть крайне утомительным занятием. Как насчёт того, чтобы  одеть это уютную тёплую шапочку и расслабиться, и пусть весь мир подождёт.</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Шляпа волшебника</string>
+    <string name="WizardHat_Info">Восхитительная шёлковая шляпа, украшенная звёздными узорами. Когда-то считалось, что величайшие волшебники носили особые одеяния, которые увеличивали их волшебные силы. Эта шляпа конечно не даёт фактического прироста к магическим способностям, но когда ты её носишь, то почти чувствуешь что давняя молва не врёт.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Список Акссессуаров</string>
+    <string name="WndHats_SlotTitle">Надето</string>
+    <string name="WndHats_NoConnectionMsg">Не удаётся соединиться с Google Play.</string>
+    <string name="WndHats_Purchased">Есть!</string>
+
+    <string name="WndHats_BackButton">Назад</string>
+    <string name="WndHats_BuyButton">Купить</string>
+    <string name="WndHats_EquipButton">Надеть</string>
+    <string name="WndHats_InfoButton">Просмотреть</string>
+    <string name="WndHats_UnequipButton">Снять</string>
+</resources>
