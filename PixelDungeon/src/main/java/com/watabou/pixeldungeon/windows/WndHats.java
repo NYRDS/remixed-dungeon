@@ -103,7 +103,7 @@ public class WndHats extends Window {
 			String hatText = Accessory.getByName(item).name() + "\n" + Accessory.getByName(item).desc();
 
 			//Text
-			Text info = PixelScene.createMultiline(hatText, 8);
+			Text info = PixelScene.createMultiline(hatText, 7);
 
 			info.hardlight(0xFFFFFF);
 			info.x = hat.x + hat.width() + MARGIN;
