@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -111,6 +112,15 @@ public class PixelDungeon extends Game {
 
 		if (hasFocus) {
 			updateImmersiveMode();
+		}
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		GLog.i("onActivityResult(" + requestCode + "," + resultCode + "," + data);
+
+		if(!Iap.onActivityResult(requestCode, resultCode, data)) {
+			super.onActivityResult(requestCode, resultCode, data);
 		}
 	}
 

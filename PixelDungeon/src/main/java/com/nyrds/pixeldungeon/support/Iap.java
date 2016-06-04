@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
@@ -208,16 +209,16 @@ public class Iap {
 		String payload = "";
 
 		m_iapReady = false;
-		//try {
-			//mHelper.launchPurchaseFlow(mContext, sku.toLowerCase(Locale.ROOT), RC_REQUEST, mPurchaseFinishedListener, payload);
-
+		try {
+			mHelper.launchPurchaseFlow(mContext, sku.toLowerCase(Locale.ROOT), RC_REQUEST, mPurchaseFinishedListener, payload);
+			/*
 			//TODO remove me in production!!!
 			callback.onPurchaseOk();
 			m_iapReady = true;
-
-		//} catch (IabHelper.IabAsyncInProgressException e) {
-		//	EventCollector.logException(e);
-		//}
+			*/
+		} catch (IabHelper.IabAsyncInProgressException e) {
+			EventCollector.logException(e);
+		}
 	}
 
 	static boolean verifyDeveloperPayload(Purchase p) {
@@ -278,6 +279,17 @@ public class Iap {
 	static void complain(String message) {
 		EventCollector.logEvent("iap error",message);
 		Log.e("GAME", "**** IAP Error: " + message);
+	}
+
+	public static boolean onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (mHelper == null) return false;
+
+		// Pass on the activity result to the helper for handling
+		if (!mHelper.handleActivityResult(requestCode, resultCode, data)) {
+			return false;
+		}
+
+		return true;
 	}
 
 	public interface IapCallback {
