@@ -2,8 +2,8 @@
 <resources>
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
-    <string name="BowTie_Name">Bowknot</string>
-    <string name="BowTie_Info">A pretty pink, sparkly ribbon tied in a knot and attached to a hair pin.</string>
+    <string name="Bowknot_Name">Bowknot</string>
+    <string name="Bowknot_Info">A pretty pink, sparkly ribbon tied in a knot and attached to a hair pin.</string>
 	
 	<!-- STRINGS OF Shades CLASS -->
     <string name="Shades_Name">Shades</string>
@@ -30,8 +30,8 @@
     <string name="Pumpkin_Info">Back in a day Pumpkin people were proud and prosperous nation. But after humans came everything ended up in ruins. And severed carved heads of long gone Pumpkin tribes serves as remainder of those terrible events.</string>
 	
 	<!-- STRINGS OF SleepyHat CLASS -->
-    <string name="SleepyHat_Name">Sleepy Hat</string>
-    <string name="SleepyHat_Info">Conquering dungeons in the night must be a very tiring business. How about put on a warm, cosy hat and relax, so that all your worries would go away.</string>
+    <string name="Nightcap_Name">Nightcap</string>
+    <string name="Nightcap_Info">Conquering dungeons in the night must be a very tiring business. How about put on a warm, cosy hat and relax, so that all your worries would go away.</string>
 	
 	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Wizard Hat</string>
