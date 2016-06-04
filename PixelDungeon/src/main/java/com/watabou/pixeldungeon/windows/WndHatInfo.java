@@ -37,7 +37,8 @@ public class WndHatInfo extends Window {
 		add(tfTitle);
 
 		Hero hero = new Hero();
-		hero.heroClass = Dungeon.heroClass;
+		hero.heroClass = Dungeon.hero.heroClass;
+		hero.subClass = Dungeon.hero.subClass;
 		hero.belongings = Dungeon.hero.belongings;
 		hero.setPos(Dungeon.hero.getPos());
 		hero.setSprite(new HeroSpriteDef(hero, item));
