@@ -5,11 +5,13 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -21,21 +23,12 @@ public class WndHatInfo extends Window {
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 16;
 
-	public WndHatInfo(final String accessory, String text ) {
+	public WndHatInfo(final String accessory, String price ) {
 		int yPos = 0;
 
 		final Accessory item = Accessory.getByName(accessory);
 
-		Text tfTitle = PixelScene.createMultiline(item.name(), 11);
-		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.maxWidth(WIDTH - MARGIN * 2);
-		tfTitle.measure();
-		tfTitle.x = (WIDTH - tfTitle.width())/2;
-		tfTitle.y = MARGIN;
-
-		yPos += tfTitle.height() + MARGIN;
-		add(tfTitle);
-
+		// Dummy Hero
 		Hero hero = new Hero();
 		hero.heroClass = Dungeon.hero.heroClass;
 		hero.subClass = Dungeon.hero.subClass;
@@ -43,29 +36,44 @@ public class WndHatInfo extends Window {
 		hero.setPos(Dungeon.hero.getPos());
 		hero.setSprite(new HeroSpriteDef(hero, item));
 
-		Image hat = hero.getHeroSprite().avatar();//item.getImage();
-		hat.setPos(0,yPos);
-		hat.setScale(2, 2);
-		add(hat);
+		// Title
+		Text tfTitle = PixelScene.createMultiline(item.name(), 11);
+		tfTitle.hardlight(TITLE_COLOR);
+		tfTitle.maxWidth(WIDTH - MARGIN * 2);
+		tfTitle.measure();
+		tfTitle.x = (WIDTH - tfTitle.width())/2;
+		tfTitle.y = MARGIN;
+		add(tfTitle);
 
-		Text info = PixelScene.createMultiline(item.desc(), 9 );
+		yPos += tfTitle.height() + MARGIN;
 
-		info.hardlight(0xFFFFFF);
-		info.x = hat.x + hat.width();
-		info.y = hat.y;
-		info.maxWidth(WIDTH - (int)hat.width());
-		info.measure();
+		//Pricetag
+		SystemText priceTag = new SystemText(12);
+		priceTag.text(price);
 
-		yPos += info.height() + MARGIN;
-		add(info);
+		priceTag.hardlight(0xFFFF00);
+		priceTag.maxWidth(WIDTH - MARGIN * 2);
+		priceTag.measure();
+		priceTag.x = (WIDTH - priceTag.width())/2;
+		priceTag.y = yPos;
+		add(priceTag);
 
-		String buttonText = text;
+		yPos += priceTag.height() + MARGIN * 2;
 
+		//Preview Image
+		Image preview = hero.getHeroSprite().avatar();
+		preview.setPos(WIDTH / 4 - preview.width() / 2,yPos);
+		preview.setScale(4, 4);
+		add(preview);
+		yPos += preview.height() + MARGIN * 4;
+
+		//Button
+		String buttonText = Game.getVar(R.string.WndHats_BuyButton);
 		if(item.haveIt()) {
 			buttonText = Game.getVar(R.string.WndHats_BackButton);
 		}
 
-		TextButton rb = new SystemRedButton(buttonText) {
+		TextButton rb = new RedButton(buttonText) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -87,13 +95,13 @@ public class WndHatInfo extends Window {
 			}
 		};
 
-		rb.setRect(hat.width(),info.y + info.height() + MARGIN, WIDTH / 2, BUTTON_HEIGHT );
+		rb.setRect(WIDTH / 4, preview.y + preview.height() + MARGIN * 2, WIDTH / 2, BUTTON_HEIGHT );
 
 		yPos += BUTTON_HEIGHT + MARGIN;
 		add(rb);
 
+		//Resizing window
 		int h = Math.min(HEIGHT - MARGIN, yPos);
-
 		resize( WIDTH,  h);
 	}
 }
