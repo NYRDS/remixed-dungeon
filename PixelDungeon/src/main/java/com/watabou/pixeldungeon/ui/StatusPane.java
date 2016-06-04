@@ -91,11 +91,14 @@ public class StatusPane extends Component {
 		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
 		add( btnMenu );
 
-		if(Flavours.haveHats()) {
-			btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
-			add(btnHats);
+		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
+
+		if(!Flavours.haveHats()) {
+			btnHats.enable(false);
 		}
-		
+
+		add(btnHats);
+
 		avatar = hero.getHeroSprite().avatar();
 		add(avatar);
 
