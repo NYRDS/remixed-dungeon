@@ -3,11 +3,8 @@ package com.nyrds.pixeldungeon.items.accessories;
 /**
  * Created by DeadDie on 26.05.2016
  */
-public class SleepyHat extends Accessory{
+public class Bowknot extends Accessory{
 
-    {
-        coverHair = true;
-        image = 4;
-    }
+    {image = 2;}
 
 }

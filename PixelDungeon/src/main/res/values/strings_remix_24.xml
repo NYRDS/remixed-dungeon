@@ -2,40 +2,40 @@
 <resources>
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
-    <string name="BowTie_Name">Bow Tie</string>
-    <string name="BowTie_Info">Is an accessory. Pinky and sparkly</string>
+    <string name="Bowknot_Name">Bowknot</string>
+    <string name="Bowknot_Info">A pretty pink, sparkly ribbon tied in a knot and attached to a hair pin.</string>
 	
 	<!-- STRINGS OF Shades CLASS -->
     <string name="Shades_Name">Shades</string>
-    <string name="Shades_Info">Is an accessory. Oooh yeaaah.</string>
+    <string name="Shades_Info">Some people say that dungeons are to dark to wear those. And you say that those people aren't cool enough.</string>
 	
 	<!-- STRINGS OF Capotain CLASS -->
     <string name="Capotain_Name">Capotain</string>
-    <string name="Capotain_Info">Is an accessory, Solomon Cane would\'ve been proud of.</string>
+    <string name="Capotain_Info">A tall-crowned, narrow-brimmed hat. It's usually associated with Puritans, but you don't have to be religious to wear it. For some reason it has nameplate, that says "Solomon".</string>
 	
 	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
-    <string name="Fez_Info">Is an accessory. It\'s a hat, and not name for a game by pretentious meanie</string>
+    <string name="Fez_Info">It's a felt headdress in the shape of a truncated cone made of red felt,  with a tassel attached to the top. And no, it doesn't make world 3-dimensional.</string>
 	
 	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">Neko Ears</string>
-    <string name="NekoEars_Info">Is an accessory. Kawaii</string>
+    <string name="NekoEars_Info">Sometimes you want to wash off all that monster blood and dirt and just feel cute and fluffy... Or at very least you can wear cute cat ears.</string>
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Rabbit Ears</string>
-    <string name="RabbitEars_Info">Is an accessory. Extravaganza it is, it is</string>
+    <string name="RabbitEars_Info">It's a well known belief that rabbits is a lucky beast, and their luck would transfer to those who obtained part of a rabbit's body. On a second thought being killed for decoration made out of your ears doesn't particularly lucky.</string>
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Pumpkin</string>
-    <string name="Pumpkin_Info">Is an accessory. That\'s no a halloween time yet</string>
+    <string name="Pumpkin_Info">Back in a day Pumpkin people were proud and prosperous nation. But after humans came everything ended up in ruins. And severed carved heads of long gone Pumpkin tribes serves as remainder of those terrible events.</string>
 	
 	<!-- STRINGS OF SleepyHat CLASS -->
-    <string name="SleepyHat_Name">Sleepy Hat</string>
-    <string name="SleepyHat_Info">Is an accessory. Sho sho shleepy</string>
+    <string name="Nightcap_Name">Nightcap</string>
+    <string name="Nightcap_Info">Conquering dungeons in the night must be a very tiring business. How about put on a warm, cosy hat and relax, so that all your worries would go away.</string>
 	
 	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Wizard Hat</string>
-    <string name="WizardHat_Info">Is an accessory. Dem starts</string>
+    <string name="WizardHat_Info">A beautiful silk hat decorated with star ornaments. Back in the old, some believed that the greatest wizards wore specially crafted clothing that increased their power. But it doesn't actually buffs your magical capabilities, but it's sure feels like it.</string>
 
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->

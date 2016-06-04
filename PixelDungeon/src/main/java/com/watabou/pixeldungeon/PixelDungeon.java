@@ -61,6 +61,14 @@ public class PixelDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore.class,
 				"com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword");
+		// remix 24
+		com.watabou.utils.Bundle.addAlias(
+				com.nyrds.pixeldungeon.items.accessories.Bowknot.class,
+				"com.nyrds.pixeldungeon.items.accessories.BowTie");
+		// remix 24
+		com.watabou.utils.Bundle.addAlias(
+				com.nyrds.pixeldungeon.items.accessories.Nightcap.class,
+				"com.nyrds.pixeldungeon.items.accessories.SleepyHat");
 	}
 
 	@Override
