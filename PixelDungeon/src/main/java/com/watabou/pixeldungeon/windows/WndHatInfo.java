@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -47,18 +46,20 @@ public class WndHatInfo extends Window {
 
 		yPos += tfTitle.height() + MARGIN;
 
-		//Pricetag
-		SystemText priceTag = new SystemText(12);
-		priceTag.text(price);
+		if(price!=null) {
+			//Pricetag
+			SystemText priceTag = new SystemText(12);
+			priceTag.text(price);
 
-		priceTag.hardlight(0xFFFF00);
-		priceTag.maxWidth(WIDTH - MARGIN * 2);
-		priceTag.measure();
-		priceTag.x = (WIDTH - priceTag.width())/2;
-		priceTag.y = yPos;
-		add(priceTag);
+			priceTag.hardlight(0xFFFF00);
+			priceTag.maxWidth(WIDTH - MARGIN * 2);
+			priceTag.measure();
+			priceTag.x = (WIDTH - priceTag.width()) / 2;
+			priceTag.y = yPos;
+			add(priceTag);
 
-		yPos += priceTag.height() + MARGIN * 2;
+			yPos += priceTag.height() + MARGIN * 2;
+		}
 
 		//Preview Image
 		Image preview = hero.getHeroSprite().avatar();
@@ -95,6 +96,10 @@ public class WndHatInfo extends Window {
 				});
 			}
 		};
+
+		if(!item.haveIt() && price == null) {
+			rb.enable(false);
+		}
 
 		rb.setRect(WIDTH / 4, preview.y + preview.height() + MARGIN * 2, WIDTH / 2, BUTTON_HEIGHT );
 

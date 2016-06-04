@@ -21,21 +21,24 @@ import java.util.List;
 
 public class WndHats extends Window {
 
-	private static final int WIDTH = 120;
-	private static final int HEIGHT_PORTRAIT = 180;
-	private static final int HEIGHT_LANDSCAPE = (int)PixelScene.MIN_HEIGHT_L;
-	private static final int MARGIN = 2;
-	private static final int BUTTON_HEIGHT = 14;
+	private static final int WIDTH            = 120;
+	private static final int HEIGHT_PORTRAIT  = 180;
+	private static final int HEIGHT_LANDSCAPE = (int) PixelScene.MIN_HEIGHT_L;
+	private static final int MARGIN           = 2;
+	private static final int BUTTON_HEIGHT    = 14;
 	public Image slot;
 
 	private int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
+
 	public WndHats() {
 
 		int yPos = 0;
 
 		String equippedName = "";
 
-		if(updateSlotImage()) {equippedName = ": " + Accessory.equipped().name();}
+		if (updateSlotImage()) {
+			equippedName = ": " + Accessory.equipped().name();
+		}
 
 		//"Equipped Accessory" slot
 		//Title
@@ -58,11 +61,11 @@ public class WndHats extends Window {
 				super.onClick();
 				Accessory.unequip();
 				onBackPressed();
-				GameScene.show( new WndHats() );
+				GameScene.show(new WndHats());
 			}
 		};
 
-		sb.setRect(slot.x + slot.width() * 2 + MARGIN, slot.y , slot.width() * 2, slot.height() / 2 );
+		sb.setRect(slot.x + slot.width() * 2 + MARGIN, slot.y, slot.width() * 2, slot.height() / 2);
 
 		add(sb);
 
@@ -82,34 +85,37 @@ public class WndHats extends Window {
 		Component content = new Component();
 
 		//List
-		for (final String item: hats) {
-			String price =  Iap.getSkuPrice(item);
-			if(price!=null) {
+		for (final String item : hats) {
+			String price = Iap.getSkuPrice(item);
+			Accessory accessory = Accessory.getByName(item);
 
-				Accessory accessory = Accessory.getByName(item);
+			if (accessory.haveIt()) {
+				price = Game.getVar(R.string.WndHats_Purchased);
+			}
 
-				if(accessory.haveIt()) {
-					price = Game.getVar(R.string.WndHats_Purchased);
-				}
+			//Image
+			Image hat = accessory.getImage();
+			hat.setPos(0, yPos);
+			content.add(hat);
 
-				//Image
-				Image hat = accessory.getImage();
-				hat.setPos(0,yPos);
-				content.add(hat);
+			float rbY = hat.bottom();
 
-				String hatText = Accessory.getByName(item).name() + "\n" + Accessory.getByName(item).desc();
+			String hatText = Accessory.getByName(item).name() + "\n" + Accessory.getByName(item).desc();
 
-				//Text
-				Text info = PixelScene.createMultiline(hatText, 10 );
+			//Text
+			Text info = PixelScene.createMultiline(hatText, 10);
 
-				info.hardlight(0xFFFFFF);
-				info.x = hat.x + hat.width() + MARGIN;
-				info.y = hat.y;
-				info.maxWidth(WIDTH - (int)hat.width() - MARGIN);
-				info.measure();
+			info.hardlight(0xFFFFFF);
+			info.x = hat.x + hat.width() + MARGIN;
+			info.y = hat.y;
+			info.maxWidth(WIDTH - (int) hat.width() - MARGIN);
+			info.measure();
 
-			    content.add(info);
+			content.add(info);
 
+			rbY = Math.max(rbY, info.bottom());
+
+			if (price != null) {
 				//Pricetag
 				SystemText priceTag = new SystemText(12);
 				priceTag.text(price);
@@ -117,56 +123,44 @@ public class WndHats extends Window {
 				priceTag.hardlight(0xFFFF00);
 				priceTag.x = hat.x;
 				priceTag.y = hat.y + hat.height();
-				priceTag.maxWidth((int)hat.width());
+				priceTag.maxWidth((int) hat.width());
 				priceTag.measure();
 
 				content.add(priceTag);
 
-				String buttonText = Game.getVar(R.string.WndHats_InfoButton);
-				final Accessory finalAccessory = accessory;
+				rbY = Math.max(rbY, priceTag.bottom());
+			}
 
-				if(accessory.haveIt()) {
-					buttonText = Game.getVar(R.string.WndHats_EquipButton);
-				}
+			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
+			final Accessory finalAccessory = accessory;
 
-				final Window currentWindow = this;
+			if (accessory.haveIt()) {
+				buttonText = Game.getVar(R.string.WndHats_EquipButton);
+			}
 
-				//Button
-				final String finalPrice = price;
-				TextButton rb = new RedButton(buttonText) {
-					@Override
-					protected void onClick() {
-						super.onClick();
+			final Window currentWindow = this;
 
-						if(finalAccessory.haveIt()) {
-							finalAccessory.equip();
-							Dungeon.hero.updateLook();
-							onBackPressed();
-							return;
-						}
-						GameScene.show( new WndHatInfo(item, finalPrice, currentWindow) );
+			//Button
+			final String finalPrice = price;
+			TextButton rb = new RedButton(buttonText) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+
+					if (finalAccessory.haveIt()) {
+						finalAccessory.equip();
+						Dungeon.hero.updateLook();
+						onBackPressed();
+						return;
 					}
-				};
+					GameScene.show(new WndHatInfo(item, finalPrice, currentWindow));
+				}
+			};
 
-				rb.setRect(info.x, info.y + info.height() + MARGIN * 2, WIDTH - hat.width() - MARGIN, BUTTON_HEIGHT );
+			rb.setRect(info.x, rbY, WIDTH - hat.width() - MARGIN, BUTTON_HEIGHT);
 
-			    content.add(rb);
-				yPos += rb.height() + info.height() + MARGIN * 4;
-			}
-			else{
-				//"No connection" Message
-				Text info = PixelScene.createMultiline( Game.getVar(R.string.WndHats_NoConnectionMsg), 10 );
-
-				info.hardlight(0xFFFFFF);
-				info.x = MARGIN;
-				info.y = yPos;
-				info.maxWidth(WIDTH - MARGIN * 2);
-				info.measure();
-
-				content.add(info);
-				yPos = yPos * 5;
-				break;
-			}
+			content.add(rb);
+			yPos = (int) (rb.bottom() + MARGIN * 2);
 		}
 
 		int h = Math.min(HEIGHT - MARGIN, yPos);
@@ -174,7 +168,7 @@ public class WndHats extends Window {
 		float topGap = listTitle.y + listTitle.height() + MARGIN;
 		float BottomGap = slotTitle.height() + slot.height() + listTitle.height() + MARGIN * 5;
 
-		resize( WIDTH,  h);
+		resize(WIDTH, h);
 
 		content.setSize(WIDTH, yPos);
 		ScrollPane list = new ScrollPane(content);
@@ -186,12 +180,11 @@ public class WndHats extends Window {
 
 	}
 
-	public boolean updateSlotImage(){
-		if(Accessory.equipped()!=null){
+	public boolean updateSlotImage() {
+		if (Accessory.equipped() != null) {
 			slot = Accessory.equipped().getImage();
 			return true;
-		}
-		else{
+		} else {
 			slot = Accessory.getSlotImage();
 			return false;
 		}

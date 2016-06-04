@@ -254,4 +254,8 @@ public class Visual extends Gizmo {
 	public void Scale(PointF scale) {
 		this.scale = scale;
 	}
+
+	public float bottom() {
+		return y + height();
+	}
 }

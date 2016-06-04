@@ -168,4 +168,8 @@ public class Image extends Visual {
 		
 		script.drawQuad( verticesBuffer );	
 	}
+
+	public float bottom() {
+		return y + height();
+	}
 }
