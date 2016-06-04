@@ -12,10 +12,11 @@ import com.watabou.pixeldungeon.scenes.GameScene;
  */
 class MenuButton extends Button {
 
-	private Image image;
+	private Image                   image;
 	private Class<? extends Window> wndClass;
+	private boolean enabled = true;
 
-	public MenuButton(Image _image, Class<? extends Window> _wndClass ) {
+	public MenuButton(Image _image, Class<? extends Window> _wndClass) {
 		super();
 
 		image = _image;
@@ -37,21 +38,35 @@ class MenuButton extends Button {
 
 	@Override
 	protected void onTouchDown() {
-		image.brightness(1.5f);
-		Sample.INSTANCE.play(Assets.SND_CLICK);
+		if (enabled) {
+			image.brightness(1.5f);
+			Sample.INSTANCE.play(Assets.SND_CLICK);
+		}
+	}
+
+	public void enable(boolean val) {
+		enabled = val;
+		if(!enabled) {
+			image.brightness(0.5f);
+		}
 	}
 
 	@Override
 	protected void onTouchUp() {
-		image.resetColor();
+		if (enabled) {
+			image.resetColor();
+		}
 	}
 
 	@Override
 	protected void onClick() {
-		try {
-			GameScene.show(wndClass.newInstance());
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
+		if (enabled) {
+			try {
+				GameScene.show(wndClass.newInstance());
+
+			} catch (Exception e) {
+				throw new TrackedRuntimeException(e);
+			}
 		}
 	}
 }

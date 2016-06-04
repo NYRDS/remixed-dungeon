@@ -60,8 +60,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
 
-	public Accessory previewAccessory;
-
 	public HeroSpriteDef(String[] lookDesc){
 		super("spritesDesc/Hero.json",0);
 		applyLayersDesc(lookDesc);
@@ -98,7 +96,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 		String hairDescriptor = HERO_EMPTY_PNG;
 		String helmetDescriptor = HERO_EMPTY_PNG;
 
-		if(classDescriptor.equals("MAGE_WARLOCK") || classDescriptor.equals("MAGE_BATTLEMAGE") || classDescriptor.equals("WARRIOR_BERSERKER")){
+		if(classDescriptor.equals("MAGE_WARLOCK")
+				|| classDescriptor.equals("MAGE_BATTLEMAGE")
+				|| classDescriptor.equals("WARRIOR_BERSERKER")){
 			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
@@ -113,7 +113,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 			if(accessory.isCoveringHair()){
 				drawHair = false;
 			}
-
 		}
 
 		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
@@ -126,6 +125,17 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
+	}
+
+	public void createStatueSprite(Armor armor) {
+		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
+		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
+		layersDesc.put(LAYER_HAIR,        HERO_EMPTY_PNG);
+		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
+		layersDesc.put(LAYER_FACIAL_HAIR, HERO_EMPTY_PNG);
+		layersDesc.put(LAYER_HELMET,      HERO_EMPTY_PNG);
+		layersDesc.put(LAYER_DEATH,       "hero/death/statue.png");
+		layersDesc.put(LAYER_ACCESSORY,   HERO_EMPTY_PNG);
 	}
 
 	public void heroUpdated(Hero hero) {

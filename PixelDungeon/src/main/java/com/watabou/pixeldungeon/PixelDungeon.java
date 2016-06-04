@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -138,7 +139,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return Iap.isReady();
+		return Flavours.haveDonations() && Iap.isReady();
 	}
 	
 	/*

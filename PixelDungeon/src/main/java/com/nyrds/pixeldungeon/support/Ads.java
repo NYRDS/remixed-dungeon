@@ -7,6 +7,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -32,7 +33,8 @@ public class Ads {
 	}
 
 	private static boolean googleAdsUsable() {
-		return android.os.Build.VERSION.SDK_INT >= 9 && !android.os.Build.BRAND.contains("chromium");
+		return android.os.Build.VERSION.SDK_INT >= 9
+				&& Flavours.haveAds();
 	}
 
 	public static void displayEasyModeBanner() {
