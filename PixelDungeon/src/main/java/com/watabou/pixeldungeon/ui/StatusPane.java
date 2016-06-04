@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.android.util.Flavours;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.CompositeTextureImage;
@@ -90,8 +91,10 @@ public class StatusPane extends Component {
 		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
 		add( btnMenu );
 
-		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
-		add( btnHats );
+		if(Flavours.haveHats()) {
+			btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
+			add(btnHats);
+		}
 		
 		avatar = hero.getHeroSprite().avatar();
 		add(avatar);
