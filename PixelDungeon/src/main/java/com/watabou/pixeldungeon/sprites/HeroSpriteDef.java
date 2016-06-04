@@ -60,6 +60,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
 
+	public Accessory previewAccessory;
+
 	public HeroSpriteDef(String[] lookDesc){
 		super("spritesDesc/Hero.json",0);
 		applyLayersDesc(lookDesc);
@@ -87,40 +89,43 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	public void createLayersDesc(Hero hero, Accessory accessory) {
 		layersDesc.clear();
-		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
+		boolean drawHair = true;
 
+		String accessoryDescriptor = HERO_EMPTY_PNG;
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
-		String hairDescriptor = HERO_EMPTY_PNG;
+		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		String facialHairDescriptor = HERO_EMPTY_PNG;
-		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
+		String hairDescriptor = HERO_EMPTY_PNG;
+		String helmetDescriptor = HERO_EMPTY_PNG;
 
-		if(hero.belongings.armor  == null
-				|| (hero.belongings.armor  != null && !hero.belongings.armor.isCoveringHair())
-				|| (accessory  != null && !accessory.isCoveringHair()))
-		{
-			hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png";
-		}
-
-		if(classDescriptor.equals("MAGE_WARLOCK") || classDescriptor.equals("MAGE_BATTLEMAGE") || classDescriptor.equals("WARRIOR_BERSERKER"))
-		{
+		if(classDescriptor.equals("MAGE_WARLOCK") || classDescriptor.equals("MAGE_BATTLEMAGE") || classDescriptor.equals("WARRIOR_BERSERKER")){
 			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
-		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
-		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_HELMET, classHelmetDescriptor(hero.belongings.armor, hero));
-
-		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
-		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
-
-		if (accessory  == null)
-		{
-			layersDesc.put(LAYER_ACCESSORY, HERO_EMPTY_PNG);
+		if (accessory  == null){
+			if(hero.belongings.armor  != null && hero.belongings.armor.isCoveringHair()){
+				helmetDescriptor = classHelmetDescriptor(hero.belongings.armor, hero);
+				drawHair = false;
+			}
 		}
 		else{
-			layersDesc.put(LAYER_ACCESSORY, accessory.getLayerFile());
+			accessoryDescriptor = accessory.getLayerFile();
+			if(accessory.isCoveringHair()){
+				drawHair = false;
+			}
+
 		}
+
+		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
+
+		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
+		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
+		layersDesc.put(LAYER_HAIR, hairDescriptor);
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
+		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
+		layersDesc.put(LAYER_HELMET, helmetDescriptor);
+		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
+		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 	}
 
 	public void heroUpdated(Hero hero) {
