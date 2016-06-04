@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <!--STRINGS OF WndStory CLASS-->
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">Imitator</string>
+  <string name="MimicAmulet_Gender">männlich</string>
+  <string name="MimicAmulet_Name_Objective">Imitator </string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Gender">männlich</string>
+  <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">Hab dich, %s!</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Gender">männlich</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">Wurm</string>
+  <string name="Worm_Gender">männlich</string>
+  <string name="Worm_Name_Objective">Wurm</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Gender">männlich</string>
+  <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">yog\'s Auge</string>
+  <string name="YogsEye_Gender">männlich</string>
+  <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name_Objective">Yog\'s Herz</string>
+  <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name_Objective">Yog\'s Zähne</string>
+</resources>

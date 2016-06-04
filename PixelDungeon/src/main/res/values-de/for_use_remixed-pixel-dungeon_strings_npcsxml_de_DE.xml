@@ -42,9 +42,15 @@
   <string name="Imp_Name">Ehrgeiziger Kobold</string>
   <string name="Imp_Desc">Kobolde sind niedrige Dämonen. Sie sind weder bekannt wegen ihrer Stärke oder ihrem magischen Talent, aber sie sind recht intelligent und gesellig. Viele Kobolde bevorzugen es unter Nicht-Dämonen zu leben.</string>
   <string name="Imp_Defense">ausgewichen</string>
+  <string name="Imp_Golems1">Bist du ein Abenteurer ? Ich mag Abenteurer. Du kannst dich immer auf sie verlassen wenn etwas getötet werden muss. Hab ich recht ? Natürlich nur für eine Belohnung ;)\nIn. In meinem Fall sind es _golems_ die getötet werden müssen. Wie du siehst bau ich mir hier gerade ein kleines Geschäft auf, aber diese Golems sind einfach schlecht für das Geschäft. Es ist wirklich schwer mit einem Haufen Granit zu verhandeln. Also ... könntest du _6 von denen_ töten dann bekommst du eine Belohnung.</string>
+  <string name="Imp_Golems2">Wie läuft die Golem Jagd ?</string>
+  <string name="Imp_Monks1">Bist du ein Abenteurer ? Ich mag Abenteurer. Du kannst dich immer auf sie verlassen wenn etwas getötet werden muss. Hab ich recht ? Natürlich nur für eine Belohnung ;)\nIn. In meinem Fall sind es _Mönche_ die getötet werden müssen. Wie du siehst bau ich mir hier gerade ein kleines Geschäft auf, aber diese Mönche kaufen nie etwas und verschrecken nur andere Kunden. Also ... könntest du _ 8 von denen_ töten, dann bekommst du eine Belohnung.</string>
+  <string name="Imp_Monks2">Oh, du lebst noch. Ich wusste doch das dein Kung-Fu besser ist als ihres :) Aber vergiess nicht dir eine Mönch Abzeichen zu holen.</string>
+  <string name="Imp_Cya">Aufwiedersehen  %s!</string>
   <string name="Imp_Hey">Psst, %s!</string>
   <!--STRINGS OF ImpShopkeeper CLASS-->
   <string name="ImpShopkeeper_Name">Ehrgeiziger Kobold</string>
+  <string name="ImpShopkeeper_Desc">Kobolde sind niedere Dämonen. Sie sind weder bekannt wegen ihrer Stärke oder ihrem magischen Talent. Denoch  sind sie recht intelligent und gesellig. Viele Kobolde bevorzugen es unter Nicht-Dämonen zu leben und mit ihnen Geschäfte zu machen.</string>
   <string name="ImpShopkeeper_Greetings">Hallo, Freund!</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">Spiegelbild</string>
@@ -55,14 +61,23 @@
   <string name="RatKing_Name">Rattenkönig</string>
   <string name="RatKing_Desc">Diese Ratte ist ein wenig größer als andere Beutelratten und sie trägt eine kleine Krone auf ihrem Kopf.</string>
   <string name="RatKing_Info1">Ich schlafe nicht!</string>
+  <string name="RatKing_Info2">Was ist das? Ich habe keine Zeit für so einen Unsinn. Mein Königreich regiert sich nicht von selbst.</string>
+  <string name="RatKing_Info3">Wie kannst du kümmerliche Kreatur es wagen unseren Rattenkönig zu stören.</string>
   <string name="RatKing_Died">Der König ist tot. Lang lebe der König!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <string name="Shopkeeper_Name">Krämer</string>
+  <string name="Shopkeeper_Desc">Dieser dicke Typ sieht eher danach aus als würde er in einer grossen Stadt handel treiben als in einem Verliess.
+Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
   <string name="Shopkeeper_Sell">Wähle einen Gegenstand zum Verkaufen</string>
   <!--STRINGS OF WandMaker CLASS-->
   <string name="WandMaker_Name">alter Zauberstabmacher</string>
+  <string name="WandMaker_Desc">Dieser alte aber kräftige Gentleman schaut leicht verstört aus. Er wird durch ein magisches Schild beschützt.</string>
   <string name="WandMaker_Defense">absorbiert</string>
+  <string name="WandMaker_Berry1">Oh was eine angehnme Überraschung eine so anständige Person an so einem Ort zu treffen.
+Ich bin hier weil ich eine seltene Zutat suche a _Rotberry seed_. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
   <string name="WandMaker_Berry2">Hattest du Glück mit den Rottbeerensamen, %s? Nein? Kein Problem, ich habs nicht eilig.</string>
+  <string name="WandMaker_Dust1">Oh was eine angehnme Überraschung eine so anständige Person an so einem Ort zu treffen.
+Ich bin hier weil ich eine seltene Zutat suche a_corpse dust_. Meistens bei Überresten von Skelletten auffindbar von denen es hier eine Menge gibt. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
   <string name="WandMaker_RotberryName">Rottbeere</string>
   <string name="WandMaker_RotberryDesc">Die Beeren dieses Strauchs schmecken wie süßer, süßer Tod.</string>
   <string name="WandMaker_RotberryInfo">Der Samen entfesselt ein Brüllen das durch den gesamten Dungeon hallt!</string>

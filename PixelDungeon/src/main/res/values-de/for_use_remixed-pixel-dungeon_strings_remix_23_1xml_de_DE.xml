@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Fremder</string>
+  <string name="AzuterronNPC_Gender">männlich</string>
+  <string name="AzuterronNPC_Name_Objective">Fremder</string>
+  <string name="Journal_Azuterron">Fremder</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Gender">männlich</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">Merkwürdige Ratte</string>
+  <string name="SuspiciousRat_Gender">weiblich</string>
+  <string name="SuspiciousRat_Name_Objective">Merkwürdige Ratte</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Gender">weiblich</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Herz der Dunkelheit</string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Dunkeler Schleier</string>
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Yog-Dzewa getötet </string>
+</resources>
