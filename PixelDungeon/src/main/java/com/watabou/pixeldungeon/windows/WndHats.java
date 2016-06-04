@@ -129,7 +129,7 @@ public class WndHats extends Window {
 					buttonText = Game.getVar(R.string.WndHats_EquipButton);
 				}
 
-				//Examine Button
+				//Button
 				final String finalPrice = price;
 				TextButton rb = new RedButton(buttonText) {
 					@Override
