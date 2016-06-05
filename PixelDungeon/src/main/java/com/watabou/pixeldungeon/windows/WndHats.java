@@ -95,25 +95,24 @@ public class WndHats extends Window {
 
 			//Image
 			Image hat = accessory.getImage();
-			hat.setPos(0, yPos);
+			hat.setPos(MARGIN, yPos);
 			content.add(hat);
 
 			float rbY = hat.bottom();
 
-			String hatText = Accessory.getByName(item).name() + "\n" + Accessory.getByName(item).desc();
-
 			//Text
-			Text info = PixelScene.createMultiline(hatText, 7);
+			String hatName = Accessory.getByName(item).name();
 
-			info.hardlight(0xFFFFFF);
-			info.x = hat.x + hat.width() + MARGIN;
-			info.y = hat.y;
-			info.maxWidth(WIDTH - (int) hat.width() - MARGIN);
-			info.measure();
+			Text name = PixelScene.createMultiline(hatName, 7);
 
-			content.add(info);
+			name.hardlight(0xFFFFFF);
 
-			rbY = Math.max(rbY, info.bottom());
+			name.y = hat.y + MARGIN;
+			name.maxWidth(WIDTH - MARGIN);
+			name.measure();
+			name.x = hat.x + hat.width() + MARGIN;
+
+			content.add(name);
 
 			if (price != null) {
 				//Pricetag
@@ -121,10 +120,10 @@ public class WndHats extends Window {
 				priceTag.text(price);
 
 				priceTag.hardlight(0xFFFF00);
-				priceTag.x = hat.x;
-				priceTag.y = hat.y + hat.height();
+				priceTag.y = name.bottom() + MARGIN;
 				priceTag.maxWidth((int) hat.width());
 				priceTag.measure();
+				priceTag.x = name.x;
 
 				content.add(priceTag);
 
@@ -157,7 +156,7 @@ public class WndHats extends Window {
 				}
 			};
 
-			rb.setRect(info.x, rbY, WIDTH - hat.width() - MARGIN, BUTTON_HEIGHT);
+			rb.setRect(WIDTH / 4, rbY, WIDTH / 2, BUTTON_HEIGHT);
 
 			content.add(rb);
 			yPos = (int) (rb.bottom() + MARGIN * 2);

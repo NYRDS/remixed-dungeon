@@ -17,14 +17,12 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndHatInfo extends Window {
 
-	private static final int WIDTH = 100;
+	private static final int WIDTH = 110;
 	private static final int HEIGHT = 160;
 	private static final int MARGIN = 2;
 	private static final int BUTTON_HEIGHT = 16;
 
 	public WndHatInfo(final String accessory, String price, final Window parent ) {
-		int yPos = 0;
-
 		final Accessory item = Accessory.getByName(accessory);
 
 		// Dummy Hero
@@ -38,35 +36,42 @@ public class WndHatInfo extends Window {
 		// Title
 		Text tfTitle = PixelScene.createMultiline(item.name(), 11);
 		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.maxWidth(WIDTH - MARGIN * 2);
+		tfTitle.maxWidth(WIDTH - MARGIN);
 		tfTitle.measure();
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
 		tfTitle.y = MARGIN;
 		add(tfTitle);
 
-		yPos += tfTitle.height() + MARGIN;
+		//Pricetag
+		SystemText priceTag = new SystemText(12);
+		priceTag.text(price);
 
-		if(price!=null) {
-			//Pricetag
-			SystemText priceTag = new SystemText(12);
-			priceTag.text(price);
-
-			priceTag.hardlight(0xFFFF00);
-			priceTag.maxWidth(WIDTH - MARGIN * 2);
-			priceTag.measure();
-			priceTag.x = (WIDTH - priceTag.width()) / 2;
-			priceTag.y = yPos;
-			add(priceTag);
-
-			yPos += priceTag.height() + MARGIN * 2;
-		}
+		priceTag.hardlight(0xFFFF00);
+		priceTag.maxWidth(WIDTH - MARGIN);
+		priceTag.measure();
+		priceTag.x = (WIDTH - priceTag.width()) / 2;
+		priceTag.y = tfTitle.bottom() + MARGIN;
+		add(priceTag);
 
 		//Preview Image
 		Image preview = hero.getHeroSprite().avatar();
-		preview.setPos(WIDTH / 2 - preview.width(),yPos);
+		preview.setPos(WIDTH / 2 - preview.width(), priceTag.bottom() + MARGIN);
 		preview.setScale(2, 2);
 		add(preview);
-		yPos += preview.height() + MARGIN * 2;
+
+		//Text
+		String hatText = Accessory.getByName(accessory).desc();
+
+		Text info = PixelScene.createMultiline(hatText, 7);
+
+		info.hardlight(0xFFFFFF);
+
+		info.y = preview.bottom() + MARGIN;
+		info.maxWidth(WIDTH - MARGIN);
+		info.measure();
+		info.x = (WIDTH - info.width()) / 2 ;
+
+		add(info);
 
 		//Button
 		String buttonText = Game.getVar(R.string.WndHats_BuyButton);
@@ -101,13 +106,11 @@ public class WndHatInfo extends Window {
 			rb.enable(false);
 		}
 
-		rb.setRect(WIDTH / 4, preview.y + preview.height() + MARGIN * 2, WIDTH / 2, BUTTON_HEIGHT );
-
-		yPos += BUTTON_HEIGHT + MARGIN;
+		rb.setRect(WIDTH / 4, info.bottom() + MARGIN, WIDTH / 2, BUTTON_HEIGHT);
 		add(rb);
 
 		//Resizing window
-		int h = Math.min(HEIGHT - MARGIN, yPos);
+		int h = Math.min(HEIGHT - MARGIN, (int) rb.bottom());
 		resize( WIDTH,  h);
 	}
 }
