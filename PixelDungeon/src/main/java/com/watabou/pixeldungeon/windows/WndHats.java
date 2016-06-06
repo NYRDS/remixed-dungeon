@@ -98,7 +98,7 @@ public class WndHats extends Window {
 			hat.setPos(MARGIN, yPos);
 			content.add(hat);
 
-			float rbY = hat.bottom();
+
 
 			//Text
 			String hatName = Accessory.getByName(item).name();
@@ -113,6 +113,7 @@ public class WndHats extends Window {
 			name.x = hat.x + hat.width() + MARGIN;
 
 			content.add(name);
+			float rbY = name.bottom() + MARGIN * 2;
 
 			if (price != null) {
 				//Pricetag
@@ -127,7 +128,7 @@ public class WndHats extends Window {
 
 				content.add(priceTag);
 
-				rbY = Math.max(rbY, priceTag.bottom());
+				//rbY = priceTag.bottom() + MARGIN;
 			}
 
 			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
@@ -156,7 +157,8 @@ public class WndHats extends Window {
 				}
 			};
 
-			rb.setRect(WIDTH / 4, rbY, WIDTH / 2, BUTTON_HEIGHT);
+			rb.setRect(slot.x + slot.width() * 2 + MARGIN, rbY, slot.width() * 2, slot.height() / 2);
+			//rb.setRect(WIDTH / 4, rbY, WIDTH / 2, BUTTON_HEIGHT);
 
 			content.add(rb);
 			yPos = (int) (rb.bottom() + MARGIN * 2);
