@@ -93,4 +93,10 @@
         - Added crossbows\n
         - Added Chaos Armor\n
         </string>
+        <string name="Welcome_Text_24">
+        remix.24:\n
+        - We got Hats!(Vanity items)\n
+        - Various bug fixes\n
+        - Updated translations\n
+        </string>
 </resources>
