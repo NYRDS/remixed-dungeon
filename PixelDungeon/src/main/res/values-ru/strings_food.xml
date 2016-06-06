@@ -45,5 +45,5 @@
   <string name="Pasty_Info">Традиционный Корнуоллский пирог с начинкой из говядины и картофеля.</string>
   <!--STRINGS OF PseudoPasty CLASS-->
   <string name="PseudoPasty_Name">пирог</string>
-  <string name="PseudoPasty_Info">Это подлинный корнуоллский пирог с традиционной начинкой из говядины и картофеля.</string>
+  <string name="PseudoPasty_Info">Традиционный Корнуоллский пирог с начинкой из говядины и картофеля.</string>
 </resources>
