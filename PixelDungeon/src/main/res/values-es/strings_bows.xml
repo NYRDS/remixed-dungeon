@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">El arco es un arma a distancia, ineficaz a corta distancia (excepto para los elfos). Tener un arco equipado te permite disparar flechas. \n\n</string>
+  <string name="Bow_Info1">Es un arma a distancia. Inútil para todos a corto alcance, excepto para los elfos. Tener un arco equipado permite disparar flechas.\n\n</string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">arco de madera</string>
   <string name="WoodenBow_Info">Este simple arco de madera podría llegar a ser útil, una vez encuentres algunas flechas.</string>
