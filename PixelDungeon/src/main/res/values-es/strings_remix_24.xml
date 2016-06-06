@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Moño</string>
+    <string name="Bowknot_Info">Una bonita cinta rosada brillante hecha un nudo y puesta en un pin para cabello.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Gafas</string>
+    <string name="Shades_Info">Algunas personas dicen las mazmorras son muy oscuras para llevarlas. Y tu dices que esas personas no son guay.</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Tricornio</string>
+    <string name="Capotain_Info">Un sombrero alto de ala pequeña. Por lo general lo usan los puritanos, pero no se debe de ser religioso para usarlo. Por alguna razón, tiene una placa de identificación, dice \"Salomón\".</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Fez</string>
+    <string name="Fez_Info">Es un tocado de fieltro en forma de cono truncado, esta hecho de fieltro rojo con una borla pegada en la tapa. Y no, no hace un mundo de 3 dimensiones.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Orejas de Gato</string>
+    <string name="NekoEars_Info">A veces quieres lavar toda la sangre de monstruo y suciedad o simplemente te sientes lindo y esponjoso... al menos puedes usar oídos de gato. </string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Orejas de Conejo</string>
+    <string name="RabbitEars_Info">Es una creencia muy conocida que los conejos son de la suerte, y su suerte puede obtenerse a través de alguna parte de su cuerpo. Pero bueno, las orejas no son particularmente de la suerte.</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Calabaza</string>
+    <string name="Pumpkin_Info">En el pasado las personas-calabaza eran una nación grande y próspera. Pero después llegaron los seres humanos, todo terminó en ruinas. Las calabazas cortadas y talladas de la tribu sirven como recordatorio de ese terrible suceso.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Gorro de dormir</string>
+    <string name="Nightcap_Info">El conquistar una mazmorra por la noche es una tarea muy agotadora. ¿Por qué no ponerse en un ambiente cálido, acogedor y un sombrero para relajarse de forma que todas las preocupaciones se vayan?</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Sombrero de Mago</string>
+    <string name="WizardHat_Info">Un sombrero de seda hermoso, decorado con estrellas. Anteriormente se creía que los grandes magos llevaban ropa especial que aumentaba sus habilidades mágicas. Pero en realidad no lo hacia, pero de seguro se sentían así.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Lista de Accesorios</string>
+    <string name="WndHats_SlotTitle">Equipado</string>
+    <string name="WndHats_NoConnectionMsg">Incapaz de conectar con Google Play</string>
+    <string name="WndHats_Purchased">¡Lo tengo!</string>
+
+    <string name="WndHats_BackButton">Regresar</string>
+    <string name="WndHats_BuyButton">Comprar</string>
+    <string name="WndHats_EquipButton">Equipar</string>
+    <string name="WndHats_InfoButton">Examinar</string>
+    <string name="WndHats_UnequipButton">Desequipar</string>
+</resources>
