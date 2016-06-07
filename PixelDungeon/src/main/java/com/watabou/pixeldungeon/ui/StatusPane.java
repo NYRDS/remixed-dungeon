@@ -108,9 +108,16 @@ public class StatusPane extends Component {
 		blood.autoKill = false;
 		blood.on = false;
 		add( blood );
-		
-		compass = new Compass(Dungeon.level.getExit(0));
-		add( compass );
+
+		int mainExit = Dungeon.level.entrance;
+
+		if(Dungeon.level.hasExit(0)) {
+			mainExit = Dungeon.level.getExit(0);
+		}
+
+		compass = new Compass(mainExit);
+		add(compass);
+
 
 		hp = new Image( Assets.HP_BAR );
 		add( hp );

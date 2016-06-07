@@ -41,6 +41,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Shadows;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroAction;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -88,7 +89,15 @@ import java.util.List;
 public abstract class Level implements Bundlable {
 
 	public int getExit(Integer index) {
-		return exitMap.get(index);
+		if(hasExit(index)) {
+			return exitMap.get(index);
+		} else {
+			throw new TrackedRuntimeException("no exit with index: " + index.toString());
+		}
+	}
+
+	public boolean hasExit(Integer index) {
+		return exitMap.containsKey(index);
 	}
 
 	public void setExit(int exit, Integer index) {

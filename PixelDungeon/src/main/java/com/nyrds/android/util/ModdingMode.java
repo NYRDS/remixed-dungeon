@@ -1,6 +1,7 @@
 package com.nyrds.android.util;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -65,7 +66,7 @@ public class ModdingMode {
 	
 	public static InputStream getInputStream(String resName) {
 		try {
-			if (!mActiveMod.equals(REMIXED)) {
+			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
 				File file = FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);
 				if (file.exists()) {
 					return new FileInputStream(file);
@@ -75,6 +76,13 @@ public class ModdingMode {
 		} catch (IOException e) {
 			throw new TrackedRuntimeException(e);
 		}
+	}
+
+	public static boolean isModdingAllowed(String resName){
+		if(resName.contains("accessories") || resName.contains("banners")){
+			return false;
+		}
+		return true;
 	}
 
 	public static void setContext(Context context) {
