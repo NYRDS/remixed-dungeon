@@ -205,15 +205,11 @@ public class Iap {
 		}
 
 		String payload = "";
+		mIapCallback = callback;
 
 		m_iapReady = false;
 		try {
 			mHelper.launchPurchaseFlow(mContext, sku.toLowerCase(Locale.ROOT), RC_REQUEST, mPurchaseFinishedListener, payload);
-			/*
-			//TODO remove me in production!!!
-			callback.onPurchaseOk();
-			m_iapReady = true;
-			*/
 		} catch (IabHelper.IabAsyncInProgressException e) {
 			EventCollector.logException(e);
 		}
