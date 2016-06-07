@@ -43,8 +43,8 @@ public class Iap {
 
 	private static IapCallback mIapCallback = null;
 
-	private static boolean googleIapUsable() {
-		return android.os.Build.VERSION.SDK_INT >= 9;
+	public static boolean googleIapUsable() {
+		return GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(mContext) == ConnectionResult.SUCCESS;
 	}
 
 	public static boolean isReady() {
@@ -106,10 +106,8 @@ public class Iap {
 	public static void initIap(Activity context) {
 		mContext = context;
 
-		if (googleIapUsable()) {
-			if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(mContext) != ConnectionResult.SUCCESS) {
-				return; // no services - no iap :(
-			}
+		if (!googleIapUsable()) {
+			return; // no services - no iap :(
 		}
 
 		new Thread() {
