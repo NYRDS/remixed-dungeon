@@ -84,9 +84,7 @@ public class Gizmo {
 	
 	public void killAndErase() {
 		kill();
-		if (parent != null) {
-			parent.erase( this );
-		}
+		remove();
 	}
 	
 	public void remove() {

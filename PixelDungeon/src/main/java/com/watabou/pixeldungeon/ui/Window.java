@@ -105,7 +105,7 @@ public class Window extends Group implements Signal.Listener<Key> {
 	}
 	
 	public void hide() {
-		getParent().erase( this );
+		getParent().remove( this );
 		destroy();
 	}
 	

@@ -121,11 +121,6 @@ public class Group extends Gizmo {
 		}
 	}
 
-	// Fast removal - replacing with null
-	public Gizmo erase(Gizmo g) {
-		return remove(g);
-	}
-
 	// Real removal
 	public Gizmo remove(Gizmo g) {
 		if (members.remove(g)) {
@@ -135,7 +130,6 @@ public class Group extends Gizmo {
 			return null;
 		}
 	}
-
 
 	public Gizmo getFirstAvailable(@NonNull Class<? extends Gizmo> c) {
 
