@@ -128,15 +128,13 @@ public class SaveUtils {
 			}
 		}
 	}
-	
-	public static void copySaveToSlot(String slot, HeroClass cl) {
-		GLog.toFile("Saving: class :%s slot: %s", cl.toString(), slot);
-		
+
+	public static void deleteSaveFromSlot(String slot, HeroClass cl) {
 		File slotDir = FileSystem.getInteralStorageFile(slot)
 				.getAbsoluteFile();
-		
+
 		File[] slotFiles = slotDir.listFiles();
-		
+
 		if (slotFiles != null) {
 			for (File file : slotFiles) {
 				String path = file.getAbsolutePath();
@@ -148,6 +146,12 @@ public class SaveUtils {
 				}
 			}
 		}
+	}
+
+	public static void copySaveToSlot(String slot, HeroClass cl) {
+		GLog.toFile("Saving: class :%s slot: %s", cl.toString(), slot);
+
+		deleteSaveFromSlot(slot, cl);
 
 		String[] files = Game.instance().fileList();
 
