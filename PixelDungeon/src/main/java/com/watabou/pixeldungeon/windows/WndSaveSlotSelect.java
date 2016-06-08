@@ -6,24 +6,79 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.DonateButton;
+import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.TextButton;
+import com.watabou.pixeldungeon.ui.Window;
 
-public class WndSaveSlotSelect extends WndOptionsColumns implements InterstitialPoint {
+import java.util.ArrayList;
+
+public class WndSaveSlotSelect extends Window implements InterstitialPoint {
+
+	private static final int WIDTH			= 120;
+	private static final int MARGIN 		= 2;
+	private static final int BUTTON_HEIGHT	= 20;
+	private static final int BUTTON_WIDTH	= 58;
 
 	private boolean saving;
 	private String slot;
 
+	private ArrayList<TextButton> buttons = new ArrayList<>();
+
 	WndSaveSlotSelect(boolean _saving) {
-		super(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), windowText(), slotInfos());
+		String options[] = slotInfos();
+
+		Text tfTitle = PixelScene.createMultiline( Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), 9 );
+		tfTitle.hardlight( TITLE_COLOR );
+		tfTitle.x = tfTitle.y = MARGIN;
+		tfTitle.maxWidth(WIDTH - MARGIN * 2);
+		tfTitle.measure();
+		add( tfTitle );
+
+		Text tfMesage = PixelScene.createMultiline( windowText(), 8 );
+		tfMesage.maxWidth(WIDTH - MARGIN * 2);
+		tfMesage.measure();
+		tfMesage.x = MARGIN;
+		tfMesage.y = tfTitle.y + tfTitle.height() + MARGIN;
+		add( tfMesage );
+
+		float pos = tfMesage.y + tfMesage.height() + MARGIN;
+
+		for (int i = 0; i < options.length / 2 + 1; i++) {
+			for(int j =0;j<2;j++) {
+				final int index = i*2+j;
+				if(!(index<options.length)) {
+					break;
+				}
+				RedButton btn = new RedButton( options[index] ) {
+					@Override
+					protected void onClick() {
+						hide();
+						onSelect( index );
+					}
+				};
+				buttons.add(btn);
+
+				btn.setRect( MARGIN + j*(BUTTON_WIDTH+MARGIN), pos, BUTTON_WIDTH, BUTTON_HEIGHT );
+				add( btn );
+			}
+			pos += BUTTON_HEIGHT + MARGIN;
+		}
+
+		resize( WIDTH, (int)pos );
+
+
 		saving = _saving;
 
 		if (!saving) {
 			for (int i = 0; i < 10; i++) {
 				if (!isSlotIndexUsed(i)) {
-					setEnabled(i, false);
+					buttons.get(i).enable(false);
 				}
 			}
 		}
@@ -75,7 +130,6 @@ public class WndSaveSlotSelect extends WndOptionsColumns implements Interstitial
 		return ret;
 	}
 
-	@Override
 	protected void onSelect(int index) {
 		final InterstitialPoint returnTo = this;
 
