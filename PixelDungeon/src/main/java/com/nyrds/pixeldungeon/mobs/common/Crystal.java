@@ -70,7 +70,7 @@ public class Crystal extends MultiKindMob {
 		if(kind < 2 ) {
 			return 1000;
 		} else {
-			return target.attackSkill(this);
+			return 35;
 		}
 	}
 	
