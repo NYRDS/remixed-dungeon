@@ -73,12 +73,22 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				buttons.add(btn);
 
 				if (!options[index].isEmpty()) {
-					final float finalPos = pos;
 					SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 						protected void onClick() {
-							SaveUtils.deleteSaveFromSlot(slotNameFromIndexAndMod(index), Dungeon.heroClass);
-							WndSaveSlotSelect.this.hide();
-							GameScene.show(new WndSaveSlotSelect(_saving));
+							final int slotIndex = index;
+							WndOptions reallyDelete = new WndOptions(Game.getVar(R.string.WndSaveSlotSelect_Delete_Title), "",
+									Game.getVar(R.string.WndSaveSlotSelect_Delete_Yes),
+									Game.getVar(R.string.WndSaveSlotSelect_Delete_No)) {
+								@Override
+								protected void onSelect(int index) {
+									if(index==0) {
+										SaveUtils.deleteSaveFromSlot(slotNameFromIndexAndMod(slotIndex), Dungeon.heroClass);
+										WndSaveSlotSelect.this.hide();
+										GameScene.show(new WndSaveSlotSelect(_saving));
+									}
+								}
+							};
+							GameScene.show(reallyDelete);
 						}
 					};
 					deleteBtn.setPos(x + BUTTON_WIDTH - deleteBtn.width() - MARGIN, pos);

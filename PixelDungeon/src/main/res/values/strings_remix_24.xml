@@ -49,4 +49,7 @@
     <string name="WndHats_EquipButton">Equip</string>
     <string name="WndHats_InfoButton">Examine</string>
     <string name="WndHats_UnequipButton">Unequip</string>
+    <string name="WndSaveSlotSelect_Delete_Yes">Yes, delete it!</string>
+    <string name="WndSaveSlotSelect_Delete_No">No</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Are you really want to delete this save?</string>
 </resources>
