@@ -42,6 +42,7 @@ public class Accessory {
 		registerAccessory(WizardHat.class);
 		registerAccessory(Shades.class);
 		registerAccessory(NekoEars.class);
+		registerAccessory(PirateSet.class);
 	}
 
 	public static List<String> getAccessoriesList() {

@@ -37,6 +37,11 @@
     <string name="WizardHat_Name">Wizard Hat</string>
     <string name="WizardHat_Info">A beautiful silk hat decorated with star ornaments. Back in the old, some believed that the greatest wizards wore specially crafted clothing that increased their power. But it doesn\'t actually buffs your magical capabilities, but it\'s sure feels like it.</string>
 
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Pirate Set</string>
+    <string name="PirateSet_Info">Arr! Do ya feel like a matey... or ya just damn landlubber. I hope you're not, that stuff is for pirates after all, I mean... Arr! </string>
+
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndHats_ListTitle">List of Accessories</string>
@@ -49,7 +54,8 @@
     <string name="WndHats_EquipButton">Equip</string>
     <string name="WndHats_InfoButton">Examine</string>
     <string name="WndHats_UnequipButton">Unequip</string>
+
     <string name="WndSaveSlotSelect_Delete_Yes">Yes, delete it!</string>
     <string name="WndSaveSlotSelect_Delete_No">No</string>
-    <string name="WndSaveSlotSelect_Delete_Title">Are you really want to delete this save?</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Are you sure, you want to delete this save state?</string>
 </resources>
