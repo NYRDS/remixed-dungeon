@@ -131,6 +131,8 @@ public class MobFactory {
 		registerMobClass(Nightmare.class);
 		registerMobClass(SuspiciousRat.class);
 
+		registerMobClass(ArmoredStatue.class);
+
 		registerMobClass(Hedgehog.class);
 	}
 	
