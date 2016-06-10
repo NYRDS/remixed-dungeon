@@ -64,7 +64,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		super("spritesDesc/Hero.json",0);
 		applyLayersDesc(lookDesc);
 	}
-	
+
 	public HeroSpriteDef(Armor armor){
 		super("spritesDesc/ArmoredStatue.json",0);
 		createStatueSprite(armor);
