@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">대검</string>
+    <string name="Claymore_Info">이 거대한 무기는 모든걸 베어버릴 수 있을 것이다.</string>
+    <string name="Claymore_Gender">여성</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">미늘창</string>
+    </resources>
