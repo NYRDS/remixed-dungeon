@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
@@ -30,11 +31,16 @@ public class ArmoredStatue extends Mob {
 		EXP = 0;
 		state = PASSIVE;
 
+		name = Game.getVar(R.string.Statue_Name);
+		name_objective = Game.getVar(R.string.Statue_Name_Objective);
+		gender = Utils.genderFromString(Game.getVar(R.string.Statue_Gender));
+
 		do {
 			armor = (Armor) Generator.random( Generator.Category.ARMOR );
 		} while (!(armor instanceof Armor) || armor.level() < 0);
 
-		UpdateSprite();
+		armor.identify();
+		armor.inscribe( Armor.Glyph.random() );
 
 		hp(ht(15 + Dungeon.depth * 5));
 		defenseSkill = 4 + Dungeon.depth;
@@ -46,24 +52,18 @@ public class ArmoredStatue extends Mob {
 		IMMUNITIES.add( Leech.class );
 	}
 
-	private String[]           lookDesc;
-
 	private static final String ARMOR	= "armor";
-	private static final String LOOK    = "look";
-
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		bundle.put( ARMOR, armor );
-		bundle.put(LOOK, lookDesc);
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		armor = (Armor) bundle.get( ARMOR );
-		lookDesc = bundle.getStringArray(LOOK);
 	}
 	
 	@Override
@@ -129,17 +129,12 @@ public class ArmoredStatue extends Mob {
 
 	@Override
 	public CharSprite sprite() {
-		return new HeroSpriteDef(UpdateSprite());
+		if(armor !=null)
+		{
+			return new HeroSpriteDef(armor);
 		}
-
-	public String[] UpdateSprite(){
-		if(lookDesc == null) {
-		Hero hero = new Hero();
-		hero.setPos(Dungeon.hero.getPos());
-		hero.setSprite(new HeroSpriteDef(armor));
-
-		lookDesc = hero.getHeroSprite().getLayersDesc();
-	}
-		return lookDesc;
+		else{
+			return new HeroSpriteDef(new ClothArmor());
+		}
 	}
 }
