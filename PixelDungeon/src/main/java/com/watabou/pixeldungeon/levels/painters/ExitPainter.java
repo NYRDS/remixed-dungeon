@@ -17,12 +17,17 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 
 public class ExitPainter extends Painter {
+
+	private static int counter;
+
+	public static void resetCounter() {
+		counter = 0;
+	}
 
 	public static void paint(Level level, Room room) {
 
@@ -33,9 +38,11 @@ public class ExitPainter extends Painter {
 			door.set(Room.Door.Type.REGULAR);
 		}
 
-		level.setExit(room.random(level, 1), 0);
-		set(level, level.getExit(0), Terrain.EXIT);
+		level.setExit(room.random(level, 1), counter);
+		set(level, level.getExit(counter), Terrain.EXIT);
 
+		counter++;
+		/*
 		int exitCount = DungeonGenerator.exitCount(level.levelId);
 
 		for (int index = 1; index < exitCount; ++index) {
@@ -49,7 +56,7 @@ public class ExitPainter extends Painter {
 			level.setExit(exitCandidate, index);
 			set(level, exitCandidate, Terrain.EXIT);
 		}
-
+		*/
 	}
 
 }
