@@ -69,7 +69,7 @@ public class StatuePainter extends Painter {
 		Mob statue;
 		//Statue type proc
 		if (Random.Int(10) > 5){
-			statue = new Statue();
+			statue = new ArmoredStatue();
 		}
 		else{
 			statue = new ArmoredStatue();
