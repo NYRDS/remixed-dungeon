@@ -69,13 +69,12 @@ public class StatuePainter extends Painter {
 		Mob statue;
 		//Statue type proc
 		if (Random.Int(10) > 5){
-			statue = new ArmoredStatue();
+			statue = new Statue();
 		}
 		else{
 			statue = new ArmoredStatue();
 		}
 
-		statue = new Statue();
 		statue.setPos(cx + cy * level.getWidth());
 		level.mobs.add( statue );
 		Actor.occupyCell( statue );
