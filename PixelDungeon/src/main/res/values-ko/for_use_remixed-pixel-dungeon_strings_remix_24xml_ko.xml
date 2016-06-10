@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">나비리본</string>
+    <string name="Bowknot_Info">머리핀에 달린 귀여운 분홍색 반짝이 리본이다.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">그림자</string>
+    <string name="Shades_Info">몇몇 사람들은 던전에서 그런 옷을 입어봤자 무슨 소용이냐고 묻는다. 당신은 그런 사람들에게 뭘 모른다며 비웃어도 된다.</string>
+	
+	</resources>
