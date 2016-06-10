@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Desc">You couldn\'t even start thinking that it\'s just another ugly statue. It\'s not just red glowing eyes, but the fact that nobody would just equip it with actual _%s_ like that.</string>
+
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
     <string name="Bowknot_Name">Bowknot</string>
