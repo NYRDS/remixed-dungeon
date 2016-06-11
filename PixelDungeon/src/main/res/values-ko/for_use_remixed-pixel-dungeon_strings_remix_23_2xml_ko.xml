@@ -8,4 +8,17 @@
 
     <!-- STRINGS OF Halberd CLASS -->
     <string name="Halberd_Name">미늘창</string>
+    <string name="Halberd_Info">끝에 도끼가 달린 냉병기이다.</string>
+    <string name="Halberd_Gender">여성</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">나무 쇠뇌</string>
+    <string name="WoodenCrossbow_Info">간단한 나무 쇠뇌다. 특이하게도 볼트 대신 일반 화살을 발사할 수 있게 만들어져 있다.</string>
+    <string name="WoodenCrossbow_Gender">남성</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">합성 쇠뇌</string>
+    <string name="CompositeCrossbow_Info">이 개조된 쇠뇌는 나무 쇠뇌에 비해서 더 효율적인 도구임이 입증된 바 있다.</string>
+    <string name="CompositeCrossbow_Gender">남성</string>
+
     </resources>

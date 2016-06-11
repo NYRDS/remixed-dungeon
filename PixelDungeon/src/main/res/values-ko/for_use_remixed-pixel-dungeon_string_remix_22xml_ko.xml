@@ -7,4 +7,9 @@
   <string name="ShadowLord_Desc">순수한 악과 어둠의 결정체로 만들어진 생물체입니다. 그것의 강력함으로 미루어 고대신 그 자체라는 의견과, 단지 고대신의 문지기들 중 하나라는 의견과의 논쟁이 끊이지 않고 있습니다.</string>
   <string name="ShadowLord_Intro">전투를 준비하십시오!</string>
   <string name="ShadowLord_Death">안돼애애애애...</string>
+  <string name="AllowStatisticsCollectionScene_Title">사용 통계 수집</string>
+  <string name="AllowStatisticsCollectionScene_Allow">허용</string>
+  <string name="AllowStatisticsCollectionScene_Deny">거부</string>
+  <string name="Darkness_Info">영원한 어둠의 조각이 공중에 피어오른다.</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Remixed Pixel Dungeon의 번역을 도와주십시오.</string>
 </resources>

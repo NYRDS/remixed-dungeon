@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
+  <string name="Welcome_Ok">알겠습니다!</string>
   <string name="Welcome_Title">환영합니다!</string>
   <string name="Welcome_Text">
         Remixed Pixel Dungeon은 Watabou의 오픈 소스 게임 Pixel Dungeon의 수정판입니다.\n
         이 프로젝트는 플레이어에게 새로운 경험과 콘텐츠를 제공하기 위해 만들어졌습니다.\n
         프로젝트의 또 다른 중요점은, 다국어 지원을 지원하는 것입니다.\n
-        매 업데이트마다 우리는 커뮤니티와 가까움을 유지하려 노력합니다.\n
+        매 업데이트마다 우리는 커뮤니티와 소통을 유지하려 노력합니다.\n
         그리고 언젠가 당신의 아이디어가 게임에 반영된다면... 당신의 창조력에 감사드립니다.=)\n
         현재 버전은 Pixel Dungeon 1.7.2에 기반을 두고 있으며 부분적으로 1.7.5의 요소를 포함합니다.\n 
         오리지널과 차이점: \n
@@ -21,10 +22,41 @@
         리믹스.17:\n
         - 새로운 미믹 종류\n
         리믹스.18:\n
-        - 엘리멘탈\n
+        - 정령들\n
         리믹스.19:\n
-        - 거미\n
-        - 거미 레벨\n
+        - 거미들\n
+        - 거미 테마 레벨\n
         - 거미 여왕\n
         </string>
+  <string name="Welcome_Text_20">
+리믹스.20:\n
+ - 새로운 희귀 무기 - 갈고리낫\n
+ - 새로운 희귀 몬스터\n
+ - 게임을 저장하고 불러올 수 있는 신규 모드\n
+ - 그 외 눈치채기 어려운 변경점들\n</string>
+  <string name="Welcome_Text_20_1">
+리믹스.20.1:\n
+ - 지배의 스크롤\n
+ - 저주의 스크롤</string>
+  <string name="Welcome_Text_20_2">
+리믹스.21:
+ - 희귀한 혼돈의 아이템
+ - 액체 화염은 이제 진짜 액체입니다.</string>
+  <string name="Welcome_Text_21_1">
+리믹스.21.1:\n
+ - 쉬움 모드 (광고 있음)\n
+ - 전문가 모드</string>
+  <string name="Welcome_Text_21_2">
+리믹스.21.2:
+- 게임 모드를 선택할 수 있음(현재는 리스킨만 지원) (숙련된 모더들에게만 추천)</string>
+  <string name="Welcome_Text_21_3">
+remix.21.3:\n
+ - 미니 픽던 모드를 다운로드 받을 수 있음(미완성 된 버전이지만 재미있음)
+ - 하수구 그래픽 개선</string>
+  <string name="Welcome_Text_21_4">
+리믹스.21.4:\n
+ - 신규 희귀 무기 - 희생의 검</string>
+  <string name="Welcome_Text_21_5">
+ 리믹스.21.5:\n
+ - 오래된 아이템의 새로운 기능 구현</string>
 </resources>

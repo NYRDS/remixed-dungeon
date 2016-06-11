@@ -9,4 +9,20 @@
     <string name="Shades_Name">그림자</string>
     <string name="Shades_Info">몇몇 사람들은 던전에서 그런 옷을 입어봤자 무슨 소용이냐고 묻는다. 당신은 그런 사람들에게 뭘 모른다며 비웃어도 된다.</string>
 	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">카포텡</string>
+    <string name="Capotain_Info">길이가 길고 챙이 좁은 모자다. 대부분 청교도들이 쓰는 모자이지만, 굳이 그것에 연연할 필요는 없다. 무슨 이유인지 \"솔로몬\"이라는 이름표가 붙어있다.</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">페즈</string>
+    <string name="Fez_Info">윗부분이 잘린 원뿔 모양의 붉은 펠트 머리덮개로, 꼭대기에 장식이 달려 있다. 당연히 세상이 3차원이 되는 마법 같은건 걸려있지 않다.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">고양이 귀 머리띠</string>
+    <string name="NekoEars_Info">가끔은 괴물들의 피와 흙을 씻어내고 귀여운 척을 할 수도 있다... 대신 귀여운 고양이 귀를 쓸 수도 있고.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">토끼 귀 머리띠</string>
+    <string name="RabbitEars_Info">전설에 따르면 토끼들은 운이 좋은 짐승으로 알려져 있다. 아니면 토끼의 몸 일부를 가지는 게 행운을 가져다 준다는 믿음이 있다. 생각해 보니 잡혀서 장식으로 만들어진 토끼한테는 그다지 운이 좋다곤 할  수 없을 듯 하다.</string>
+	
 	</resources>
