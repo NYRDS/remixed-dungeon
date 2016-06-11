@@ -9,6 +9,7 @@ import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -97,6 +98,7 @@ public class WndHatInfo extends Window {
 						Dungeon.hero.updateLook();
 						onBackPressed();
 						parent.hide();
+						GameScene.show(new WndHats());
 					}
 				});
 			}
