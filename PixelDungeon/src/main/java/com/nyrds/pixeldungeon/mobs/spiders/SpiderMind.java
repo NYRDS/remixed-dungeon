@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderMindSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -31,9 +30,6 @@ public class SpiderMind extends Mob {
 	};
 	
 	public SpiderMind() {
-		
-		spriteClass = SpiderMindSprite.class;
-		
 		hp(ht(5));
 		defenseSkill = 1;
 		baseSpeed = 0.8f;

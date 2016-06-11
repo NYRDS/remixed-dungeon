@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderExplodingSprite;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.plants.Dreamweed;
@@ -28,9 +27,6 @@ public class SpiderExploding extends MultiKindMob {
 	};
 	
 	public SpiderExploding() {
-		
-		spriteClass = SpiderExplodingSprite.class;
-		
 		hp(ht(5));
 		defenseSkill = 1;
 		baseSpeed = 2f;

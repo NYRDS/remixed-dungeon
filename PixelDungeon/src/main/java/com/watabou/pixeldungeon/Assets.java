@@ -89,18 +89,15 @@ public class Assets {
 	public static final String MIMIC = "mimic.png";
 	public static final String MIMIC_PIE = "mimic_pie.png";
 	public static final String SHADOW = "shadow.png";
-	
-	public static final String SPIDER_SERVANT = "spider_servant.png";
-	public static final String SPIDER_MIND = "spider_mind.png";
+
 	public static final String SPIDER_QUEEN = "spider_queen.png";
 	public static final String SPIDER_EGG = "spider_egg.png";	
-	public static final String SPIDER_NEST = "spider_nest.png";	
-	public static final String SPIDER_EXPLODING = "spider_exploding.png";	
-	
+	public static final String SPIDER_NEST = "spider_nest.png";
+
 	public static final String ITEMS = "items.png";
 	public static final String PLANTS = "plants.png";
 
-	public static final String TILES_SPIDER_NEST = "tiles_spider_nest.png";
+	public static final String TILES_SPIDER_NEST_X = "tiles_spider_nest_x.png";
 	public static final String TILES_SEWERS = "tiles0.png";
 	public static final String TILES_SEWERS_X = "tiles0_x.png";
 	public static final String TILES_PRISON = "tiles1.png";

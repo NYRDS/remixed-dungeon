@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderServantSprite;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -12,9 +11,6 @@ import com.watabou.utils.Random;
 public class SpiderServant extends MultiKindMob {
 	
 	public SpiderServant() {
-		
-		spriteClass = SpiderServantSprite.class;
-		
 		hp(ht(25));
 		defenseSkill = 5;
 		baseSpeed = 1.1f;

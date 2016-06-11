@@ -25,8 +25,8 @@ public class SpiderLevel extends CommonLevel {
 	}
 
 	@Override
-	public String tilesTex() {
-		return Assets.TILES_SPIDER_NEST;
+	public String tilesTexEx() {
+		return Assets.TILES_SPIDER_NEST_X;
 	}
 
 	@Override
