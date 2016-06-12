@@ -18,7 +18,7 @@ public class SpiderServant extends MultiKindMob {
 		EXP = 2;
 		maxLvl = 9;
 		
-		kind = Random.IntRange(0, 1);
+		kind = 0;
 		
 		loot = new MysteryMeat();
 		lootChance = 0.067f;
@@ -26,22 +26,9 @@ public class SpiderServant extends MultiKindMob {
 	
 	@Override
 	public int attackProc( Char enemy, int damage ) {
-		
-		switch (getKind()) {
-			case 0:
-				if (Random.Int( 4 ) == 0) {
-					Buff.affect( enemy, Poison.class ).set( Random.Int( 2, 3 ) * Poison.durationFactor( enemy ) );
-				}
-			break;
-			
-			case 1:
-				if (Random.Int( 10 ) == 0) {
-					Buff.prolong( enemy, Paralysis.class, 3);
-				}				
-				
-			break;
+		if (Random.Int( 4 ) == 0) {
+			Buff.affect(enemy, Poison.class).set(Random.Int(2, 3) * Poison.durationFactor(enemy));
 		}
-		
 		return damage;
 	}
 	
