@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -45,6 +46,12 @@ public class SpiderSoldier extends MultiKindMob {
 	@Override
 	public int dr() {
 		return 7;
+	}
+
+	@Override
+	public void die( Object cause ) {
+		super.die( cause );
+		Badges.validateRare( this );
 	}
 
 }
