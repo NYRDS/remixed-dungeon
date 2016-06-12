@@ -199,6 +199,11 @@ public class Iap {
 	}
 
 	public static void doPurchase(String sku, IapCallback callback) {
+		if(BuildConfig.DEBUG) {
+			callback.onPurchaseOk();
+			return;
+		}
+
 		if (!m_iapReady) {
 			EventCollector.logEvent("fail","purchase not ready");
 			return;

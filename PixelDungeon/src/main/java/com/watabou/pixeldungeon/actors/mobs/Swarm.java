@@ -18,15 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.sprites.SwarmSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -43,8 +36,6 @@ public class Swarm extends Mob {
 		
 		flying = true;
 	}
-	
-	private static final float SPLIT_DELAY	= 1f;
 
 	int generation	= 0;
 	
@@ -74,7 +65,7 @@ public class Swarm extends Mob {
 			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
 
 			if (Dungeon.level.cellValid(cell)) {
-				int cloneHp = split(cell, damage);
+				int cloneHp = split(cell, damage).hp();
 
 				hp(hp() - cloneHp);
 			}
@@ -88,34 +79,11 @@ public class Swarm extends Mob {
 		return 12;
 	}
 
-	private int split(int cell, int damage) {
-		Swarm clone = new Swarm();
+	@Override
+	public Mob split(int cell, int damage) {
+		Swarm clone = (Swarm) super.split(cell, damage);
 		clone.generation = generation + 1;
-
-		clone.hp((hp() - damage) / 2);
-		clone.setPos(cell);
-		clone.state = clone.HUNTING;
-
-
-		if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
-			Door.enter(clone.getPos());
-		}
-
-		Dungeon.level.spawnMob(clone, SPLIT_DELAY);
-		Actor.addDelayed(new Pushing(clone, getPos(), clone.getPos()), -1);
-
-		if (buff(Burning.class) != null) {
-			Buff.affect(clone, Burning.class).reignite(clone);
-		}
-		if (buff(Poison.class) != null) {
-			Buff.affect(clone, Poison.class).set(2);
-		}
-
-		if (isPet()) {
-			Mob.makePet(clone, Dungeon.hero);
-		}
-
-		return clone.hp();
+		return clone;
 	}
 
 	@Override

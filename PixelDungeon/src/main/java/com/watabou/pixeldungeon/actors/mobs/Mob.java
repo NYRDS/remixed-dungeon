@@ -28,17 +28,23 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
@@ -55,6 +61,7 @@ public abstract class Mob extends Char {
 
 	protected static final String TXT_RAGE = "#$%^";
 	protected static final String TXT_EXP = "%+dEXP";
+	private static final float SPLIT_DELAY = 1f;
 
 	public AiState SLEEPING = new Sleeping();
 	public AiState HUNTING = new Hunting();
@@ -528,6 +535,39 @@ public abstract class Mob extends Char {
 
 	protected Object loot = null;
 	protected float lootChance = 0;
+
+	public Mob split(int cell, int damage) {
+		Mob clone;
+		try {
+			clone = getClass().newInstance();
+		} catch (Exception e) {
+			throw new TrackedRuntimeException("split issue");
+		}
+
+		clone.hp((hp() - damage) / 2);
+		clone.setPos(cell);
+		clone.state = clone.HUNTING;
+
+		if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
+			Door.enter(clone.getPos());
+		}
+
+		Dungeon.level.spawnMob(clone, SPLIT_DELAY);
+		Actor.addDelayed(new Pushing(clone, getPos(), clone.getPos()), -1);
+
+		if (buff(Burning.class) != null) {
+			Buff.affect(clone, Burning.class).reignite(clone);
+		}
+		if (buff(Poison.class) != null) {
+			Buff.affect(clone, Poison.class).set(2);
+		}
+
+		if (isPet()) {
+			Mob.makePet(clone, Dungeon.hero);
+		}
+
+		return clone;
+	}
 
 	@SuppressWarnings("unchecked")
 	protected void dropLoot() {
