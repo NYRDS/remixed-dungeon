@@ -773,7 +773,8 @@ public class Badges {
 				global.contains(Badge.RARE_BANDIT) &&
 				global.contains(Badge.RARE_SHIELDED) &&
 				global.contains(Badge.RARE_SENIOR) &&
-				global.contains(Badge.RARE_ACIDIC)) {
+				global.contains(Badge.RARE_ACIDIC) &&
+				global.contains(Badge.RARE_SPIDER_SOLDIER)) {
 
 			badge = Badge.RARE;
 			displayBadge(badge);
