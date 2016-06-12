@@ -20,6 +20,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderSoldier;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Random;
 
@@ -95,6 +97,8 @@ public class Bestiary {
 				cl = Senior.class;
 			} else if (cl == Scorpio.class) {
 				cl = Acidic.class;
+			} else if (cl == SpiderServant.class) {
+				cl = SpiderSoldier.class;
 			}
 		}
 		
