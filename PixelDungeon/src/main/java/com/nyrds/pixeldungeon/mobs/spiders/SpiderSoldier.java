@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -8,17 +9,17 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
 
-public class SpiderServant extends MultiKindMob {
-	
-	public SpiderServant() {
-		hp(ht(25));
-		defenseSkill = 5;
-		baseSpeed = 1.1f;
+public class SpiderSoldier extends MultiKindMob {
+
+	public SpiderSoldier() {
+		hp(ht(35));
+		defenseSkill = 15;
+		baseSpeed = 1.2f;
 		
-		EXP = 2;
-		maxLvl = 9;
+		EXP = 4;
+		maxLvl = 10;
 		
-		kind = 0;
+		kind = 1;
 		
 		loot = new MysteryMeat();
 		lootChance = 0.067f;
@@ -26,25 +27,31 @@ public class SpiderServant extends MultiKindMob {
 	
 	@Override
 	public int attackProc( Char enemy, int damage ) {
-		if (Random.Int( 4 ) == 0) {
-			Buff.affect(enemy, Poison.class).set(Random.Int(2, 3) * Poison.durationFactor(enemy));
+		if (Random.Int( 10 ) == 0) {
+			Buff.prolong( enemy, Paralysis.class, 3);
 		}
 		return damage;
 	}
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 4, 6 );
+		return Random.NormalIntRange( 8, 14 );
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 11;
+		return 17;
 	}
 	
 	@Override
 	public int dr() {
-		return 5;
+		return 7;
+	}
+
+	@Override
+	public void die( Object cause ) {
+		super.die( cause );
+		Badges.validateRare( this );
 	}
 
 }
