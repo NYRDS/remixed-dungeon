@@ -103,7 +103,6 @@ import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.SurfaceScene;
@@ -1043,6 +1042,7 @@ public class Hero extends Char {
 
 	@Override
 	public int defenseProc(Char enemy, int damage) {
+		damage = super.defenseProc(enemy, damage);
 
 		RingOfThorns.Thorns thorns = buff(RingOfThorns.Thorns.class);
 		if (thorns != null) {
@@ -1050,11 +1050,6 @@ public class Hero extends Char {
 			if (dmg > 0) {
 				enemy.damage(dmg, thorns);
 			}
-		}
-
-		Earthroot.Armor armor = buff(Earthroot.Armor.class);
-		if (armor != null) {
-			damage = armor.absorb(damage);
 		}
 
 		if (buff(HeartOfDarkness.HeartOfDarknessBuff.class) != null) {

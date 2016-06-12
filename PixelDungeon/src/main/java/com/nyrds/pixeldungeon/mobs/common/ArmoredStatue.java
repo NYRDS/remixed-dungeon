@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -7,16 +9,13 @@ import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -25,6 +24,7 @@ import com.watabou.utils.Random;
 
 public class ArmoredStatue extends Mob {
 
+	@NonNull
 	private Armor armor;
 
 	public ArmoredStatue() {
@@ -87,6 +87,12 @@ public class ArmoredStatue extends Mob {
 	@Override
 	public int attackSkill( Char target ) {
 		return (int)((9 + Dungeon.depth) * 2);
+	}
+
+	@Override
+	public int defenseProc(Char enemy, int damage) {
+		damage = super.defenseProc(enemy, damage);
+		return armor.proc(enemy, this, damage);
 	}
 
 	@Override

@@ -54,6 +54,7 @@ import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
+import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -281,6 +282,12 @@ public abstract class Char extends Actor {
 	}
 
 	public int defenseProc(Char enemy, int damage) {
+
+		Earthroot.Armor armor = buff(Earthroot.Armor.class);
+		if (armor != null) {
+			damage = armor.absorb(damage);
+		}
+
 		return damage;
 	}
 

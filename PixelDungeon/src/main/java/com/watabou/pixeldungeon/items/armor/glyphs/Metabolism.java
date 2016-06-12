@@ -51,13 +51,12 @@ public class Metabolism extends Glyph {
 
 				if (hunger != null && !hunger.isStarving()) {
 
-					hunger.satisfy( -Hunger.STARVING / 10 );
+					hunger.satisfy(-Hunger.STARVING / 10);
 					BuffIndicator.refreshHero();
-					
+				}
 					defender.hp(defender.hp() + healing);
 					defender.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 					defender.getSprite().showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
-				}
 			}
 
 		}

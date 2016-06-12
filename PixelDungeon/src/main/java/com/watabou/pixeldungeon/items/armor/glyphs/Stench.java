@@ -43,9 +43,7 @@ public class Stench extends Glyph {
 		int level = Math.max( 0, armor.level() );
 		
 		if (Dungeon.level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( level + 5 ) >= 4) {
-			
 			GameScene.add( Blob.seed( attacker.getPos(), 20, ToxicGas.class ) );
-			
 		}
 		
 		return damage;
