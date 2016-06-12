@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderSoldier;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
@@ -126,6 +127,7 @@ public class Badges {
 		RARE_SHIELDED,
 		RARE_SENIOR,
 		RARE_ACIDIC,
+		RARE_SPIDER_SOLDIER,
 		RARE(Game.getVar(R.string.Badges_RareAll), 37, true),
 		VICTORY_WARRIOR,
 		VICTORY_MAGE,
@@ -759,6 +761,8 @@ public class Badges {
 			badge = Badge.RARE_SENIOR;
 		} else if (mob instanceof Acidic) {
 			badge = Badge.RARE_ACIDIC;
+		} else if (mob instanceof SpiderSoldier) {
+			badge = Badge.RARE_SPIDER_SOLDIER;
 		}
 		if (!global.contains(badge)) {
 			global.add(badge);
