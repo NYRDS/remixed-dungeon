@@ -2,6 +2,9 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">animated statue</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
+    <string name="ArmoredStatue_Name_Objective">animated statue</string>
     <string name="ArmoredStatue_Desc">You couldn\'t even start thinking that it\'s just another ugly statue. It\'s not just red glowing eyes, but the fact that nobody would put an actual _%s_ on such thing.</string>
 
     <!-- STRINGS OF SpiderSoldier -->
