@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderSoldier;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Random;
 
@@ -100,7 +100,7 @@ public class Bestiary {
 			} else if (cl == Scorpio.class) {
 				cl = Acidic.class;
 			} else if (cl == SpiderServant.class) {
-				cl = SpiderSoldier.class;
+				cl = SpiderGuard.class;
 			} else if (cl == SpiderMind.class) {
 				cl = SpiderMindAmber.class;
 			}

@@ -20,9 +20,8 @@ package com.watabou.pixeldungeon;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderSoldier;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
@@ -764,7 +763,7 @@ public class Badges {
 			badge = Badge.RARE_SENIOR;
 		} else if (mob instanceof Acidic) {
 			badge = Badge.RARE_ACIDIC;
-		} else if (mob instanceof SpiderSoldier) {
+		} else if (mob instanceof SpiderGuard) {
 			badge = Badge.RARE_SPIDER_SOLDIER;
 		} else if (mob instanceof SpiderMindAmber) {
 			badge = Badge.RARE_SPIDER_MIND;
