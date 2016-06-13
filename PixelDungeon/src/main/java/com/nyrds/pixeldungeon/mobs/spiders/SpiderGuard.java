@@ -9,9 +9,9 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
 
-public class SpiderSoldier extends MultiKindMob {
+public class SpiderGuard extends MultiKindMob {
 
-	public SpiderSoldier() {
+	public SpiderGuard() {
 		hp(ht(35));
 		defenseSkill = 15;
 		baseSpeed = 1.2f;
