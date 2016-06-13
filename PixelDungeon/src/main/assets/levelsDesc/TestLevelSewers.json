@@ -23,14 +23,9 @@
    "entrance":[1,1],
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
     "mobs" = [
-      {"kind"="Albino","x"=10,"y"=10},
-	  {"kind"="Bandit","x"=10,"y"=9},
-	  {"kind"="Shielded","x"=10,"y"=8},
-	  {"kind"="Senior","x"=10,"y"=7},
-	  {"kind"="Acidic","x"=10,"y"=6},
-	  {"kind"="SpiderSoldier","x"=5,"y"=10},
-	  {"kind"="SpiderMindAmber","x"=4,"y"=10},
       {"kind"="ArmoredStatue","x"=3,"y"=10},
+      {"kind"="ArmoredStatue","x"=4,"y"=3},
+      {"kind"="ArmoredStatue","x"=6,"y"=2},
       {"kind"="ArmoredStatue","x"=3,"y"=8},
       {"kind"="ArmoredStatue","x"=4,"y"2}
    ]
