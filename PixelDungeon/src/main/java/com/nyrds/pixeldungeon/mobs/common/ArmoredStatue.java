@@ -31,10 +31,6 @@ public class ArmoredStatue extends Mob {
 		EXP = 0;
 		state = PASSIVE;
 
-		name = Game.getVar(R.string.Statue_Name);
-		name_objective = Game.getVar(R.string.Statue_Name_Objective);
-		gender = Utils.genderFromString(Game.getVar(R.string.Statue_Gender));
-
 		do {
 			armor = (Armor) Generator.random( Generator.Category.ARMOR );
 		} while (!(armor instanceof Armor) || armor.level() < 0);
