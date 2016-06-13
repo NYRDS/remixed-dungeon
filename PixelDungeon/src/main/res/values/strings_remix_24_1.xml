@@ -8,8 +8,13 @@
     <string name="SpiderGuard_Name">spider guard</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name_Objective">spider guard</string>
-    <string name="SpiderGuard_Desc">These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.</string>
+    <string name="SpiderGuard_Desc">Much like soldier the spider guards are sworn to protect their kingdom. The guard\'s venom is used to immobilize their targets causing paralysis.</string>
 
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderMindAmber_Name">amber spider</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
+    <string name="SpiderMindAmber_Name_Objective">amber spider</string>
+    <string name="SpiderMindAmber_Desc">Amber spiders are the mysterious and rare creatures that poses psychic powers similar to a psi-spiders, but are much tougher than their regular brethren. Name "amber" refers to the color of their giant brain-sacks, that being revealed before their victims, as Amber Spiders strikes with their powers.</string>
 
     <!-- STRINGS OF SpiderMindAmber -->
 
