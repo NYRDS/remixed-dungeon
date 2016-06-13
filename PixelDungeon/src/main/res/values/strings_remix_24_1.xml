@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Desc">You couldn\'t even start thinking that it\'s just another ugly statue. It\'s not just red glowing eyes, but the fact that nobody would just equip it with actual _%s_ like that.</string>
+
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">spider guard</string>
+    <string name="SpiderGuard_Gender">masculine</string>
+    <string name="SpiderGuard_Name_Objective">spider guard</string>
+    <string name="SpiderGuard_Desc">These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.</string>
+
+
+    <!-- STRINGS OF SpiderMindAmber -->
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">Yes, delete it!</string>
+    <string name="WndSaveSlotSelect_Delete_No">No</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Are you sure, you want to delete this save state?</string>
+</resources>

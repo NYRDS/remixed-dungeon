@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Mobs descriptions -->
-    <!-- STRINGS OF ArmoredStatue -->
-    <string name="ArmoredStatue_Desc">You couldn\'t even start thinking that it\'s just another ugly statue. It\'s not just red glowing eyes, but the fact that nobody would just equip it with actual _%s_ like that.</string>
-
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
     <string name="Bowknot_Name">Bowknot</string>
@@ -58,8 +54,4 @@
     <string name="WndHats_EquipButton">Equip</string>
     <string name="WndHats_InfoButton">Examine</string>
     <string name="WndHats_UnequipButton">Unequip</string>
-
-    <string name="WndSaveSlotSelect_Delete_Yes">Yes, delete it!</string>
-    <string name="WndSaveSlotSelect_Delete_No">No</string>
-    <string name="WndSaveSlotSelect_Delete_Title">Are you sure, you want to delete this save state?</string>
 </resources>
