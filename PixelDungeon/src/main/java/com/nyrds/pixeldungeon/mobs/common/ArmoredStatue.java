@@ -130,7 +130,7 @@ public class ArmoredStatue extends Mob {
 
 	@Override
 	public String description() {
-		return Utils.format(Game.getVar(R.string.Statue_Desc), armor.name());
+		return Utils.format(Game.getVar(R.string.ArmoredStatue_Desc), armor.name());
 	}
 
 	@Override
