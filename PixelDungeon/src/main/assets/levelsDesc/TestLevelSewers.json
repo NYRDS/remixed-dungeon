@@ -23,10 +23,12 @@
    "entrance":[1,1],
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
     "mobs" = [
-      {"kind"="ArmoredStatue","x"=3,"y"=10},
-      {"kind"="ArmoredStatue","x"=4,"y"=3},
-      {"kind"="ArmoredStatue","x"=6,"y"=2},
-      {"kind"="ArmoredStatue","x"=3,"y"=8},
-      {"kind"="ArmoredStatue","x"=4,"y"2}
+      {"kind"="ArmoredStatue","x"=10,"y"=10},
+	  {"kind"="ArmoredStatue","x"=10,"y"=9},
+	  {"kind"="ArmoredStatue","x"=10,"y"=8},
+	  {"kind"="ArmoredStatue","x"=10,"y"=7},
+	  {"kind"="ArmoredStatue","x"=10,"y"=6},
+	  {"kind"="ArmoredStatue","x"=5,"y"=10},
+	  {"kind"="ArmoredStatue","x"=4,"y"=10}
    ]
 }
