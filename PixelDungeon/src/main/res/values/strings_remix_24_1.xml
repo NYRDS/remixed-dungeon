@@ -2,7 +2,7 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ArmoredStatue -->
-    <string name="ArmoredStatue_Desc">You couldn\'t even start thinking that it\'s just another ugly statue. It\'s not just red glowing eyes, but the fact that nobody would just equip it with actual _%s_ like that.</string>
+    <string name="ArmoredStatue_Desc">You couldn\'t even start thinking that it\'s just another ugly statue. It\'s not just red glowing eyes, but the fact that nobody would put an actual _%s_ on such thing.</string>
 
     <!-- STRINGS OF SpiderSoldier -->
     <string name="SpiderGuard_Name">spider guard</string>
@@ -10,13 +10,11 @@
     <string name="SpiderGuard_Name_Objective">spider guard</string>
     <string name="SpiderGuard_Desc">Much like soldier the spider guards are sworn to protect their kingdom. The guard\'s venom is used to immobilize their targets causing paralysis.</string>
 
-    <!-- STRINGS OF SpiderSoldier -->
+    <!-- STRINGS OF SpiderMindAmber -->
     <string name="SpiderMindAmber_Name">amber spider</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name_Objective">amber spider</string>
     <string name="SpiderMindAmber_Desc">Amber spiders are the mysterious and rare creatures that poses psychic powers similar to a psi-spiders, but are much tougher than their regular brethren. Name "amber" refers to the color of their giant brain-sacks, that being revealed before their victims, as Amber Spiders strikes with their powers.</string>
-
-    <!-- STRINGS OF SpiderMindAmber -->
 
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
