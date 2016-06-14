@@ -317,7 +317,7 @@ public class WndSettings extends Window {
 			}
 		};
 		
-		if(PixelDungeon.uiLanguage().equals("ko") ) {
+		if(PixelDungeon.uiLanguage().equals("ko") || PixelDungeon.uiLanguage().equals("zh")) {
 			btnFontMode.enable(false);
 		}
 		
