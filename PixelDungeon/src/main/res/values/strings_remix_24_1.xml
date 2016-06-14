@@ -19,6 +19,11 @@
     <string name="SpiderMindAmber_Name_Objective">amber spider</string>
     <string name="SpiderMindAmber_Desc">Amber spiders are the mysterious and rare creatures that poses psychic powers similar to a psi-spiders, but are much tougher than their regular brethren. Name "amber" refers to the color of their giant brain-sacks, that being revealed before their victims, as Amber Spiders strikes with their powers.</string>
 
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Pirate Set</string>
+    <string name="PirateSet_Info">Arr! Do ya feel like a matey... or ya just damn landlubber!? I hope you\'re not, that stuff is for pirates after all, I mean... Arr! </string>
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndSaveSlotSelect_Delete_Yes">Yes, delete it!</string>

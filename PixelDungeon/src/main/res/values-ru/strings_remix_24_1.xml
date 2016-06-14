@@ -19,6 +19,11 @@
     <string name="SpiderMindAmber_Name_Objective">янтарного паука</string>
     <string name="SpiderMindAmber_Desc">Янтарные пауки, это редкие загадочные существа, они обладают пси способностями подобно обычным пси-паукам, но при этом они гораздо сильнее физически. Название "янтарный" происходит от цвета их "мозговых коконов", которые открываются взору жертвы в тот момент, когда янтарный паук использует свои спосбности.</string>
 
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Пиратский Набор</string>
+    <string name="PirateSet_Info">Арр! Чувствуешь в себе силы присоедениться к нашим парням!? Или ты просто очередная сухопутная крыса?. Надеюсь что нет, эта штуковина ведь только для пиратов, эээ в смысле... Арр! </string>
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndSaveSlotSelect_Delete_Yes">Да, удалить!</string>
