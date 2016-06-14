@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Welcome_Ok">棒极了！</string>
+  <string name="Welcome_Title">欢迎！</string>
+  <string name="Welcome_Text">
+混合的像素地牢是基于Watabou所制作的开源像素地牢的一个MOD。
+
+这个MOD是为了给玩家们提供新的内容和体验而制作的。
+
+我们这个MOD的另一个重要成分是使游戏支持多种语言。
+
+我们的每一次更新都尽力让我们与玩家靠得更近。
+
+也许有一天，你将会看到你的点子出现在这个游戏里……谢谢你们的创意=）
+
+现在的版本是基于像素地牢1.7.2版和部分1.7.5版。
+
+和原版的差异：
+- 改变语言的选项
+- 新的怪物和NPC
+- 毒气和烈焰能对更多物品造成影响了
+- 新的“食物”种类
+- 新物品和老物品的新特性
+- 现在可以吃种子了 = ）
+- 新的职业：精灵</string>
+  <string name="Welcome_Text_19">
+remix.17：
+- 新的拟形怪种类
+remix.18：
+- 元素生物
+remix.19：
+- 多种蜘蛛
+- 蜘蛛巢穴
+- 蜘蛛女王</string>
+  <string name="Welcome_Text_20">
+remix.20：
+- 新的稀有武器 - 锁镰
+- 新的稀有怪物
+- 能够存读档的游戏模式
+- 更多难以注意到的小玩意</string>
+  <string name="Welcome_Text_20_1">
+remix.20.1：
+- 支配卷轴
+- 诅咒卷轴</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">食用</string>
+  <string name="Food_Message">这份食物吃起来异常地美味！</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">口粮</string>
+  <string name="Ration_Info">里面没什么有趣的东西：一些饼和肉干——这样的东西</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">烤肉</string>
+  <string name="ChargrilledMeat_Info">看起来是块像样的肉排</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">冻肉</string>
+  <string name="FrozenCarpaccio_Info">这是份冰冻生肉片。它只能切成薄片取食，但是令人意外的美味。</string>
+  <string name="FrozenCarpaccio_Info1">你看到你的手隐形了！</string>
+  <string name="FrozenCarpaccio_Info2">你感到你的皮肤变硬了！</string>
+  <string name="FrozenCarpaccio_Info3">精神焕发！</string>
+  <string name="FrozenCarpaccio_Info4">你感觉好多了！</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">神秘肉</string>
+  <string name="MysteryMeat_Info">食用有风险！</string>
+  <string name="MysteryMeat_Info1">嗷嗷嗷！好烫啊！！！</string>
+  <string name="MysteryMeat_Info2">你的腿失去了知觉！</string>
+  <string name="MysteryMeat_Info3">你感觉有点糟糕……</string>
+  <string name="MysteryMeat_Info4">你吃撑了。</string>
+  <string name="MysteryMeat_Message">这玩意吃起来……有点奇怪。</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">好恶心！</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">腐烂肉</string>
+  <string name="RottenMeat_Info">一份腐烂的肉</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">腐烂馅饼</string>
+  <string name="RottenPasty_Info">这馅饼看起来十分恶心</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">腐烂口粮</string>
+  <string name="RottenRation_Info">从前，这也是一份能吃的口粮</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">高价口粮</string>
+  <string name="OverpricedRation_Info">这看起来就是一份普通的口粮，虽然小了一些</string>
+  <string name="OverpricedRation_Message">这份食物吃起来还不错。</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">馅饼</string>
+  <string name="Pasty_Info">这是个正宗康沃尔馅饼，里面填满了传统的牛肉和土豆馅料。</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">馅饼</string>
+  <string name="PseudoPasty_Info">这是个正宗康沃尔馅饼，里面填满了传统的牛肉和土豆馅料。</string>
+</resources>

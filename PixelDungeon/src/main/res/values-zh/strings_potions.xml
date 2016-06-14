@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">%s 药水</string>
+  <string name="Potion_Info">这个瓶子里装着不断旋转的 %s液体。谁知道饮用或投掷它时会怎么样呢？</string>
+  <string name="Potion_ACDrink">饮用</string>
+  <string name="Potion_Harmfull">这个药水是有害的！</string>
+  <string name="Potion_Beneficial">有益药水</string>
+  <string name="Potion_Yes">是的，我知道我在做什么</string>
+  <string name="Potion_No">不，我改主意了</string>
+  <string name="Potion_SureDrink">你真的确认你想要喝这瓶药水吗？在大多数情况下你应该将这种药水扔向你的敌人。</string>
+  <string name="Potion_SureThrow">你真的想要投掷这瓶药水吗？在大多数情况下把它喝下去会更有用。</string>
+  <string name="Potion_Shatter">瓶子碎裂开来，%s 色液体无害地溅出了。</string>
+  <string-array name="Potion_Colors">
+    <item>青绿</item>
+    <item>猩红</item>
+    <item>湛青</item>
+    <item>翡翠</item>
+    <item>金黄</item>
+    <item>品红</item>
+    <item>煤黑</item>
+    <item>乳白</item>
+    <item>琥珀</item>
+    <item>深褐</item>
+    <item>靛蓝</item>
+    <item>银灰</item>
+  </string-array>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">经验药水</string>
+  <string name="PotionOfExperience_Info">无数传奇战斗的经历被凝缩为液态，这种药水能够瞬间提升你的等级。</string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">霜冻药水</string>
+  <string name="PotionOfFrost_Info">一旦暴露在空气中，这种化学品会挥发成为一片冰冷的气雾，使任何接触它的生物冻结在原地无法行动。</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">治疗药水</string>
+  <string name="PotionOfHealing_Info">一瓶能让你瞬间回满生命值并清除毒素的万能药剂。</string>
+  <string name="PotionOfHealing_Apply">你的伤口完全愈合了。</string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">隐形药水</string>
+  <string name="PotionOfInvisibility_Info">饮用这种药水会使你暂时隐形。隐身时，敌人将无法看见你。攻击敌人，或在敌人面前使用法杖和卷轴，会让隐形效果立即消失。</string>
+  <string name="PotionOfInvisibility_Apply">你看到你的手隐形了！</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">漂浮药水</string>
+  <string name="PotionOfLevitation_Info">饮用这种奇怪的药水能让你漂浮到空中，从而轻易地越过陷阱和裂隙。然而当火焰和气体充斥在空气当中时，在空中漂浮并不能避免它们的危险。</string>
+  <string name="PotionOfLevitation_Apply">你漂浮到了空中！</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">液火药水</string>
+  <string name="PotionOfLiquidFlame_Info">这个瓶子里装着一种不稳定的化合物，一旦暴露在空气中就会猛烈地燃烧起来。</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <string name="PotionOfMight_Name">根骨药水</string>
+  <string name="PotionOfMight_Info">这种强力的液体会冲刷你的根骨，永久性增加1点力量值和5点生命上限。</string>
+  <string name="PotionOfMight_Apply">新生的力量从你身体中喷涌而出。</string>
+  <string name="PotionOfMight_StaApply">+1力量，+5生命上限</string>
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">灵视药水</string>
+  <string name="PotionOfMindVision_Info">喝下这瓶药水后，你的心灵将与大范围内的生物精神同调，让你能感受到围墙背后的生体所在。该药水还能够让你的视野无视身边门墙的阻挡。</string>
+  <string name="PotionOfMindVision_Apply1">你可以以某种方式感受到其他生物的存在！</string>
+  <string name="PotionOfMindVision_Apply2">你以某种方式感受到现在只有你在这一楼层。</string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <string name="PotionOfParalyticGas_Name">麻痹气体药水</string>
+  <string name="PotionOfParalyticGas_Info">烧瓶里的液体一旦暴露于空气中，就会气化成一片令人失去知觉的黄色云雾。任何吸入气雾的生物都可能立即麻痹，直到云雾消散后一段时间才能行动。可以把它扔到远处的敌群中，让它们处于气体的影响中。</string>
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <string name="PotionOfPurity_Name">净化药水</string>
+  <string name="PotionOfPurity_Info">这种药水会迅速中和掉作用区域内的一切有害气体。饮用它将使你暂时免疫这些气体。</string>
+  <string name="PotionOfPurity_Freshness">你感受到了空气中不寻常的清新气息。</string>
+  <string name="PotionOfPurity_NoSmell">你什么也闻不到了！</string>
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">力量药水</string>
+  <string name="PotionOfStrength_Info">这种强力的液体会冲刷你的肌肉，永久性增加1点力量。</string>
+  <string name="PotionOfStrength_Apply">新生的力量从你身体中喷涌而出。</string>
+  <string name="PotionOfStrength_StaApply">+1力量</string>
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+  <string name="PotionOfToxicGas_Name">毒气药水</string>
+  <string name="PotionOfToxicGas_Info">打开或摔碎这个密封的药瓶将导致内容物爆发成一团致命的的绿色毒云。你应该选择从远处将这瓶药剂扔向敌人，而不是手动开封。</string>
+</resources>

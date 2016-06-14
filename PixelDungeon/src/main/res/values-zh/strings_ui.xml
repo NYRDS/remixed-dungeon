@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">开始游戏</string>
+  <string name="TitleScene_Highscores">最高分数</string>
+  <string name="TitleScene_Badges">成就</string>
+  <string name="TitleScene_About">关于</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_OurSite">我们的网址：</string>
+  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">发送邮件</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_NoGames">还没进行过游戏</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">读取进度</string>
+  <string name="StartScene_New">新游戏</string>
+  <string name="StartScene_Erase">清除进度</string>
+  <string name="StartScene_Depth">层数：%1$d，等级: %2$d
+</string>
+  <string name="StartScene_Really">确定要重新开始？</string>
+  <string name="StartScene_Warning"> 你当前的进度会被清除。</string>
+  <string name="StartScene_Yes">是的，重新开始</string>
+  <string name="StartScene_No">不，返回主菜单</string>
+  <string name="StartScene_Unlock">使用其他角色击败第3个boss来解锁这个角色</string>
+  <string name="StartScene_UnlockElf">使用其他角色击败第4个boss来解锁这个角色</string>
+  <string name="StartScene_WinGame">使用任意角色完成游戏来解锁“挑战”。</string>
+  <string name="StartScene_DifficultySelect">选择难度</string>
+  <string name="StartScene_DifficultyEasy">简单(带广告)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">可保存的普通(带广告)</string>
+  <string name="StartScene_DifficultyNormal">普通</string>
+  <string name="StartScene_DifficultyExpert">困难</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">下楼中...</string>
+  <string name="InterLevelScene_Ascending">上楼中...</string>
+  <string name="InterLevelScene_Loading">加载中...</string>
+  <string name="InterLevelScene_Resurrecting">复活中...</string>
+  <string name="InterLevelScene_Returning">返回中...</string>
+  <string name="InterLevelScene_Falling">坠落中...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">游戏结束</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_Brightness">明亮模式</string>
+  <string name="WndSettings_SelectLanguage">选择语言</string>
+  <string name="WndSettings_SecondQuickslot">第二快捷栏</string>
+  <string name="WndSettings_ThirdQuickslot">第三快捷栏</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">选择mod</string>
+</resources>

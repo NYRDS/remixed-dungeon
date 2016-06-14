@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">一个隐藏的压力板发出了响声！</string>
+  <string name="Level_TileChasm">裂缝</string>
+  <string name="Level_TileFloor">楼层</string>
+  <string name="Level_TileGrass">草</string>
+  <string name="Level_TileWater">水</string>
+  <string name="Level_TileWall">墙</string>
+  <string name="Level_TileClosedDoor">关着的门</string>
+  <string name="Level_TileOpenDoor">开着的门</string>
+  <string name="Level_TileEntrance">楼层入口</string>
+  <string name="Level_TileExit">楼层出口</string>
+  <string name="Level_TileEmbers">灰烬</string>
+  <string name="Level_TileLockedDoor">上锁的门</string>
+  <string name="Level_TilePedestal">台座</string>
+  <string name="Level_TileBarricade">路障</string>
+  <string name="Level_TileHighGrass">高草</string>
+  <string name="Level_TileLockedExit">锁住的楼层出口</string>
+  <string name="Level_TileUnlockedExit">未上锁的楼层出口</string>
+  <string name="Level_TileSign">标牌</string>
+  <string name="Level_TileWell">井</string>
+  <string name="Level_TileEmptyWell">空井</string>
+  <string name="Level_TileStatue">雕像</string>
+  <string name="Level_TileToxicTrap">毒气陷阱</string>
+  <string name="Level_TileFireTrap">烈焰陷阱</string>
+  <string name="Level_TileParalyticTrap">麻痹气体陷阱</string>
+  <string name="Level_TilePoisonTrap">毒镖陷阱</string>
+  <string name="Level_TileAlarmTrap">警报陷阱</string>
+  <string name="Level_TileLightningTrap">闪电陷阱</string>
+  <string name="Level_TileGrippingTrap">捕猎陷阱</string>
+  <string name="Level_TileSummoningTrap">召唤陷阱</string>
+  <string name="Level_TileInactiveTrap">已触发的的陷阱</string>
+  <string name="Level_TileBookshelf">书架</string>
+  <string name="Level_TileAlchemy">炼药台</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">你看不到底。</string>
+  <string name="Level_TileDescWater">着火的时候踩进水里可以灭火。</string>
+  <string name="Level_TileDescEntrance">通向上一层的楼梯。</string>
+  <string name="Level_TileDescExit">通向下一层的楼梯。</string>
+  <string name="Level_TileDescEmbers">灰烬覆盖在地面上。</string>
+  <string name="Level_TileDescHighGrass">茂密的植被阻挡了视线。</string>
+  <string name="Level_TileDescLockedDoor">这扇门锁上了，你需要一把配对的钥匙来打开它。</string>
+  <string name="Level_TileDescLockedExit">沉重的铁栏杆封锁住了向下的楼梯。</string>
+  <string name="Level_TileDescBarricade">木栅栏依然坚固，但早已风干多年。烧了怎么样？</string>
+  <string name="Level_TileDescSign">你从这里看不到上面写着什么。</string>
+  <string name="Level_TileDescTrap">踩到隐藏的压力板会启动这个陷阱。</string>
+  <string name="Level_TileDescInactiveTrap">这个陷阱已经被触发过了，现在不再危险。</string>
+  <string name="Level_TileDescStatue">有人想装饰一下这里，但显然他没能成功。</string>
+  <string name="Level_TileDescAlchemy">将一些种子投入这里来酿造药水。</string>
+  <string name="Level_TileDescEmptyWell">这口井已经枯竭了。</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileGrass">荧光苔藓</string>
+  <string name="Caves_TileHighGrass">荧光蘑菇</string>
+  <string name="Caves_TileWater">冰冷刺骨的水。</string>
+  <string name="Caves_TileDescEntrance">通向上一层的梯子。</string>
+  <string name="Caves_TileDescExit">通向下一层的梯子。</string>
+  <string name="Caves_TileDescHighGrass">巨大的蘑菇阻挡了视线。</string>
+  <string name="Caves_TileDescDeco">一些矿脉在墙上清晰可见。金子？</string>
+  <string name="Caves_TileDescBookshelf">谁会需要在矿洞里放个书架？</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">有着可疑颜色的水</string>
+  <string name="City_TileHighGrass">茂盛开放的花朵</string>
+  <string name="City_TileDescEntrance">通向上一层的斜坡。</string>
+  <string name="City_TileDescExit">通向下一层的斜坡。</string>
+  <string name="City_TileDescDeco">这里的地面少了几块地砖。</string>
+  <string name="City_TileDescEmptySP">厚厚的地毯覆盖在地面。</string>
+  <string name="City_TileDescStatue">这座雕像展示了一些摆出英勇姿态的矮人。</string>
+  <string name="City_TileDescBookshelf">不同学科的书排满了书架。</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">冷岩浆</string>
+  <string name="Halls_TileGrass">灰烬苔藓</string>
+  <string name="Halls_TileHighGrass">灰烬真菌</string>
+  <string name="Halls_TileStatue">台柱</string>
+  <string name="Halls_TileDescWater">这看起来像是岩浆，不过是冰凉的，应该可以触碰。</string>
+  <string name="Halls_TileDescStatue">这根柱子是由真正的类人生物头骨制成的，真酷。</string>
+  <string name="Halls_TileDescBookshelf">用远古语言写就的书籍堆积在书架里。</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">冷岩浆</string>
+  <string name="LastLevel_TileGrass">灰烬苔藓</string>
+  <string name="LastLevel_TileHighGrass">灰烬真菌</string>
+  <string name="LastLevel_TileStatue">台柱</string>
+  <string name="LastLevel_TileDescWater">这看起来像是岩浆，不过是冰凉的，应该可以触碰。</string>
+  <string name="LastLevel_TileDescStatue">这根柱子是由真正的类人生物头骨制成的，真酷。</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">有着可疑颜色的水</string>
+  <string name="LastShopLevel_TileHighGrass">茂盛开放的花朵</string>
+  <string name="LastShopLevel_TileDescEntrance">通向上一层的斜坡。</string>
+  <string name="LastShopLevel_TileDescExit">通向地狱的斜坡。</string>
+  <string name="LastShopLevel_TileDescDeco">这里的地面少了几块地砖。</string>
+  <string name="LastShopLevel_TileDescEmptySP">厚厚的地毯覆盖在地面。</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">又黑又冷的水</string>
+  <string name="Prison_TileDescDeco">这里的地板上有干涸的血迹。</string>
+  <string name="Prison_TileDescBookshelf">这个书架可能是监狱图书馆的残留物。烧掉怎么样？</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">浑浊的水</string>
+  <string name="Sewer_TileDescDeco">湿润的黄色苔藓覆盖着地板。</string>
+  <string name="Sewer_TileDescBookshelf">这个书架装满了廉价的无用书籍。烧掉怎么样？</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">选择你要投掷的种子</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">裂缝</string>
+  <string name="Chasm_Yes">是的，我知道我在做什么</string>
+  <string name="Chasm_No">不，我改主意了</string>
+  <string name="Chasm_Jump">你真的要跳到裂缝当中吗？这样做可能会让你死掉。</string>
+  <string name="Chasm_Info">你摔死了……</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">这个陷阱发出的刺耳声音回荡在地牢中！</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">闪电陷阱</string>
+  <string name="LightningTrap_Desc">你被闪电陷阱的电击杀死了……</string>
+</resources>

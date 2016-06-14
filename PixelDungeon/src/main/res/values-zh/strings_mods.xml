@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Mods_CreatedBy">创建者：</string>
+  <string name="Mods_AuthorSite">作者网站：</string>
+  <string name="Mods_AuthorEmail">作者电子邮件：</string>
+  <string name="Mods_RestartRequired">需要重新启动游戏</string>
+</resources>

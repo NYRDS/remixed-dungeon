@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">白银</string>
+  <string name="WndDonate_gold">黄金</string>
+  <string name="WndDonate_ruby">红宝石</string>
+  <string name="WndDonate_donate">捐献：</string>
+  <string name="WndDonate_notConnected">无网络连接:(</string>
+  <string name="WndDonate_commonDonateText">混合的像素地牢——永远对所有人免费。
+但是，你能帮我们让这个游戏变得更好。
+除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
+  <string name="WndDonate_silverDonate">白银级捐献</string>
+  <string name="WndDonate_goldDonate">黄金级捐献</string>
+  <string name="WndDonate_rubyDonate">红宝石级捐献</string>
+  <string name="WndDonate_silverDonateText">任何捐献都将帮助这个游戏的开发者</string>
+  <string name="WndDonate_goldDonateText">感谢您的帮助！</string>
+  <string name="WndDonate_rubyDonateText">您的慷慨将会帮助我们改善混合的像素地牢！</string>
+  <string name="WndDonate_silverDonateText2">会使所有模式的广告失效并从一开始就解锁女猎手职业。</string>
+  <string name="WndDonate_goldDonateText2">从一开始就解锁精灵职业。</string>
+  <string name="WndDonate_rubyDonateText2"></string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">标准</string>
+  <string name="WndPremiumSettings_silver">白银</string>
+  <string name="WndPremiumSettings_gold">黄金</string>
+  <string name="WndPremiumSettings_ruby">红宝石</string>
+  <string name="WndPremiumSettings_chrome">选择界面材质</string>
+  <string name="WndPremiumSettings_status">选择状态栏材质</string>
+  <string name="WndPremiumSettings_toolbar">选择工具栏材质</string>
+  <string name="WndPremiumSettings_notAvailbale">这个选项暂时无法使用</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">请考虑捐献</string>
+  <string name="DonateButton_thanks">感谢您的支持！</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">不喜欢广告？进行捐献吧！广告会消失，永远的。</string>
+</resources>

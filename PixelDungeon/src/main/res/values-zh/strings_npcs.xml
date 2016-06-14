@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Name">巨魔铁匠</string>
+  <string name="Blacksmith_Desc">这只巨魔看起来和任何其他巨魔一样：又高又瘦，皮肤的色泽和纹理看起来就像石头一样。这位巨魔铁匠正拿着一把与他体型不相称的小锤子不停地修补。</string>
+  <string name="Blacksmith_Gold1">嘿，人类！想要做个有用点的人吗？拿着这个镐子给我挖点_暗金矿_，只要_15块_。什么？我要如何报答你？你……真是贪婪。 好吧，好吧，我没钱付给你，但我可以给你锻造。想想你有多走运吧，我可是这附近唯一的铁匠。</string>
+  <string name="Blacksmith_Blood1">嘿，人类！想要做个有用点的人吗？拿着这个镐子给我_杀一只蝙蝠_，我需要镐头沾上蝙蝠的血。什么？我要如何报答你？你……真是贪婪。 好吧，好吧，我没钱付给你，但我可以给你锻造。想想你有多走运吧，我可是这附近唯一的铁匠。</string>
+  <string name="Blacksmith_Txt2">你在逗我玩吗？我的镐子呢？</string>
+  <string name="Blacksmith_Txt3">暗金矿，15个，我认真的。这难道很难吗？</string>
+  <string name="Blacksmith_Txt4">我说了我需要镐子上沾有蝙蝠血，赶快！</string>
+  <string name="Blacksmith_Completed">噢，你终于回来了……总比回不来要好。</string>
+  <string name="Blacksmith_GetLost">我很忙，快滚吧！</string>
+  <string name="Blacksmith_LooksBetter">你的 %s 看起来更强大了</string>
+  <string name="Blacksmith_Verify1">选择2个不一样的，不是2次一样的！</string>
+  <string name="Blacksmith_Verify2">选择2件相同类型的物品！</string>
+  <string name="Blacksmith_Verify3">我要知道我在拿什么干活，先拿去鉴定！</string>
+  <string name="Blacksmith_Verify4">我可不碰诅咒的物品！</string>
+  <string name="Blacksmith_Verify5">这是个垃圾，质量太差了！</string>
+  <string name="Blacksmith_Verify6">我无法重铸这些物品！</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Name">悲伤幽灵</string>
+  <string name="Ghost_Desc">这个幽灵已经几乎不能被看见了。它看起来像是由一片无形的昏暗光斑和一张悲痛的面孔所组成的。</string>
+  <string name="Ghost_Rose1">你好冒险者……曾经我也像你一样——强壮而自信……虽然现在我已经死了……但是我无法离开这个地方……除非我拿到我的_枯干玫瑰_……那是对我非常重要的东西……一些怪物从我的身体偷走了它……</string>
+  <string name="Ghost_Rose2">求求你……帮帮我……找到那朵玫瑰……</string>
+  <string name="Ghost_Rat1">你好冒险者……曾经我也像你一样——强壮而自信……虽然现在我已经死了……但是我无法离开这个地方……除非我完成我的复仇……杀死_腐臭老鼠_，那个带走我生命的东西……</string>
+  <string name="Ghost_Rat2">求求你……帮帮我……杀死那个令人憎恨的东西……</string>
+  <string name="Ghost_Defense">回避</string>
+  <string name="FetidRat_Name">腐臭老鼠</string>
+  <string name="FetidRat_Name_Objective">腐臭老鼠</string>
+  <string name="FetidRat_Gender">feminine</string>
+  <string name="FetidRat_Desc">这只有袋的老鼠比通常的更大。他身边围绕着一圈恶臭云雾。</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Name">刺猬</string>
+  <string name="Hedgehog_Desc">这只刺猬看起来十分紧张。</string>
+  <string name="Hedgehog_Info1">你也在找熊吗？</string>
+  <string name="Hedgehog_Info2">雾中的马怎么样？</string>
+  <string name="Hedgehog_Info3">你喜欢用树莓果酱配茶吗？</string>
+  <string name="Hedgehog_Info4">拿上这个派吧</string>
+  <string name="Hedgehog_ImLate">我来晚了，实在太晚了……</string>
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Name">野心勃勃的小鬼</string>
+  <string name="Imp_Desc">小鬼是一种低等恶魔。它们的力量和魔法并不是特别强，但是它们异常的睿智及友善。许多小鬼更倾向于在非恶魔中生活。</string>
+  <string name="Imp_Defense">待会再说</string>
+  <string name="Imp_Golems2">你的魔像狩猎进行的怎么样了？</string>
+  <string name="Imp_Cya">下次见，%s！</string>
+  <string name="Imp_Hey">这里，%s！</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Name">野心勃勃的小鬼</string>
+  <string name="ImpShopkeeper_Greetings">你好，朋友！</string>
+  <!--STRINGS OF MirrorImage CLASS-->
+  <string name="MirrorImage_Name">镜像</string>
+  <string name="MirrorImage_Name_Objective">镜像</string>
+  <string name="MirrorImage_Gender">masculine</string>
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Name">鼠王</string>
+  <string name="RatKing_Info1">我可没在睡觉</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <!--STRINGS OF WandMaker CLASS-->
+</resources>

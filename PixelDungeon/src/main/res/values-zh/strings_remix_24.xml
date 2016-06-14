@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">蝴蝶结</string>
+    <string name="Bowknot_Info">一个美丽闪亮的粉色丝带打成了一个结，系在了一个发夹上。</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">墨镜</string>
+    <string name="Shades_Info">有人说地牢里太黑不应该戴着这玩意，可是你说这是他们不够酷。</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">朝圣平顶帽</string>
+    <string name="Capotain_Info">一顶高高的,窄边的冠冕。它通常和基督教徒有关，但你并不需要虔诚的戴上它。出于某些原因它上边带着铭牌，写着“所罗门”。</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">土耳其毡帽</string>
+    <!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">猫耳</string>
+    <!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">兔耳</string>
+    <!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">南瓜</string>
+    <!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">睡帽</string>
+    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">巫师帽</string>
+    <string name="WndHats_NoConnectionMsg">无法连接到Google Play服务</string>
+    <string name="WndHats_BackButton">返回</string>
+    <string name="WndHats_BuyButton">购买</string>
+    <string name="WndHats_EquipButton">装备</string>
+    <string name="WndHats_InfoButton">检查</string>
+    </resources>

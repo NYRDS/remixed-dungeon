@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ShadowLord CLASS-->
+  <string name="ShadowLord_Name">暗影领主</string>
+  <string name="ShadowLord_Gender">masculine</string>
+  <string name="ShadowLord_Name_Objective">暗影领主</string>
+  <string name="ShadowLord_Desc">由纯粹的恶意和黑暗构成的生物。许多人因为他的强大坚信他就是古神本尊。而其他人则认为他不过是古神内庭的守护者之一</string>
+  <string name="ShadowLord_Intro">做好准备！</string>
+  <string name="ShadowLord_Death">不！！！！！！</string>
+  <string name="AllowStatisticsCollectionScene_Title">用户使用统计报告</string>
+  <string name="AllowStatisticsCollectionScene_Request">如果您允许，混合的像素地牢将收集您的使用情况统计信息。这份数据将会用于：
+-发现和修复各种小错误（遇到致命性错误时您将会收到发送错误报告的请求）
+-游戏平衡性的改善
+-修复特定设备的机能问题
+-偶尔发布一些有趣的统计数据
+您可以随时改变您的决定（点击主界面的统计表图标）</string>
+  <string name="AllowStatisticsCollectionScene_Allow">允许</string>
+  <string name="AllowStatisticsCollectionScene_Deny">拒绝</string>
+  <string name="WndSelectLanguage_ImproveTranslation">请帮助我们改善混合的像素地牢的翻译</string>
+  <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">点击这里来加入混合的像素地牢的翻译团队</string>
+</resources>

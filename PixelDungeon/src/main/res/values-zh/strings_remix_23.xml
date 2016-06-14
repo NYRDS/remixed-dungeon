@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">干枯灌木</string>
+  <string name="Guts_TileHighGrass">干枯灌木</string>
+  <string name="Guts_TileWater">奇怪的粘稠液体</string>
+  <string name="Guts_TileDescEntrance">天花板上的大洞是通往上层的</string>
+  <string name="Guts_TileDescExit">地上的大洞会通往更深层</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">拟形怪</string>
+  <string name="MimicAmulet_Gender">masculine</string>
+  <string name="MimicAmulet_Name_Objective">拟形怪</string>
+  <string name="MimicAmulet_Desc">你冒险旅程中最光荣的时刻原来是个陷阱。</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">梦魇</string>
+  <string name="Nightmare_Gender">masculine</string>
+  <string name="Nightmare_Name_Objective">梦魇</string>
+  <!--STRINGS OF TENGU CLASS-->
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">豺狼僵尸</string>
+  <string name="ZombieGnoll_Gender">masculine</string>
+  <string name="ZombieGnoll_Name_Objective">豺狼僵尸</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">古神幼虫</string>
+  <string name="Worm_Gender">masculine</string>
+  <string name="Worm_Name_Objective">古神幼虫</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">Yog之脑</string>
+  <string name="YogsBrain_Gender">masculine</string>
+  <string name="YogsBrain_Name_Objective">Yog之脑</string>
+  <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">Yog之眼</string>
+  <string name="YogsEye_Gender">masculine</string>
+  <string name="YogsEye_Name_Objective">Yog之眼</string>
+  <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">Yog之心</string>
+  <string name="YogsHeart_Gender">masculine</string>
+  <string name="YogsHeart_Name_Objective">Yog之心</string>
+  <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">Yog之牙</string>
+  <string name="YogsTeeth_Gender">masculine</string>
+  <string name="YogsTeeth_Name_Objective">Yog之牙</string>
+</resources>

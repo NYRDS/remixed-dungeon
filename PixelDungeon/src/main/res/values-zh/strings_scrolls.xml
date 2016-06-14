@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">\"%s\" 卷轴</string>
+  <string name="Scroll_Info">这张羊皮纸上写满了难以破译的文字，并带有 %s 的符文标题。谁能知道高声吟唱它会发生什么？</string>
+  <string name="Scroll_ACRead">阅读</string>
+  <string name="Scroll_Blinded">你在目盲时不能阅读</string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">选择一个物品</string>
+  <string name="InventoryScroll_No">不，我改主意了</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">空白卷轴</string>
+  <string name="BlankScroll_Info">只是一张空白卷轴而已，或许你可以写点什么上去？</string>
+  <string name="BlankScroll_ReallyBlank">这张卷轴是空白的。</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">挑战卷轴</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+</resources>

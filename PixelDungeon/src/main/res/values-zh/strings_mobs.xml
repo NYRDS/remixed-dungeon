@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">真正的说明即将到来！</string>
+  <string name="Mob_Died">你听到有什么东西在远处死去了</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus">这个 %s 正在睡觉</string>
+  <string name="Mob_StaWanderingStatus">这个 %s 正在游荡</string>
+  <string name="Mob_StaHuntingStatus">这个 %s 正在追猎</string>
+  <string name="Mob_StaFleeingStatus">这个 %s 正在逃跑</string>
+  <string name="Mob_StaPassiveStatus">这个%s是和平的</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">酸蚀蝎子</string>
+  <string name="Acidic_Gender">masculine</string>
+  <string name="Acidic_Name_Objective">酸蚀蝎子</string>
+  <string name="Acidic_Desc">这些巨大的节肢类恶魔生物会尽可能的避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">白化老鼠</string>
+  <string name="Albino_Gender">masculine</string>
+  <string name="Albino_Name_Objective">白化老鼠</string>
+  <string name="Albino_Desc">啮齿小鼠是极具侵略性却比较弱小的下水道居民，只有在拥有大量数量时才会造成威胁。这只特殊的老鼠看起来得了白化病，并且拥有异常尖利的牙齿。</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">疯狂强盗</string>
+  <string name="Bandit_Gender">masculine</string>
+  <string name="Bandit_Name_Objective">疯狂强盗</string>
+  <string name="Bandit_Desc">地牢的深处总是各式罪犯的藏身之地。不是所有人都能在漫长的岁月中保持清醒的神智，在很久以前，这些疯狂的小偷和强盗就已经忘记了自己是谁，为什么要偷东西。这个强盗看起来在他的匕首上涂了什么东西！</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">吸血蝙蝠</string>
+  <string name="Bat_Gender">masculine</string>
+  <string name="Bat_Name_Objective">吸血蝙蝠</string>
+  <string name="Bat_Desc">这些敏捷且坚韧的洞穴穹顶居民能够通过每次成功的攻击来恢复自己的生命，从而打败比它们强大的对手。</string>
+  <string name="Bat_Defense">回避</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">豺狼暴徒</string>
+  <string name="Brute_Name_Objective">豺狼暴徒</string>
+  <string name="Brute_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，他们会变得狂暴，对他们的敌人造成大量伤害。</string>
+  <string name="Brute_Gender">masculine</string>
+  <string name="Brute_Enraged">%s被激怒了！</string>
+  <string name="Brute_StaEnraged">激怒</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">下水道螃蟹</string>
+  <string name="Crab_Gender">masculine</string>
+  <string name="Crab_Name_Objective">下水道螃蟹</string>
+  <string name="Crab_Desc">这些巨型的螃蟹位居下水道食物链的顶端。它们行动极其迅速，并且厚重的甲壳能承受沉重的打击。</string>
+  <string name="Crab_Defense">招架</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">masculine</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">数个世纪前矮人们制造了这个机器。但此后，矮人们开始使用魔像、元素生物甚至是恶魔来替换机器，最终导致其文明的衰败。DM-300及类似的机器通常用于建设和挖掘，在某些情况下，也会用于城防。</string>
+  <string name="DM300_Info1">DM-300修复了自己！</string>
+  <string name="DM300_Info2">任务失败，系统关闭。</string>
+  <string name="DM300_Info3">检测到未授权人员。</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">火元素</string>
+  <string name="Elemental_Gender">masculine</string>
+  <string name="Elemental_Name_Objective">火元素</string>
+  <string name="Elemental_Desc">这些游荡的火元素是在召唤某种更强大存在时的副产品。由于其特性太过混乱，以至于最强大的恶魔学者都无法驱使。</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">邪眼</string>
+  <string name="Eye_Gender">无性</string>
+  <string name="Eye_Name_Objective">邪眼</string>
+  <string name="Eye_Desc">这种恶魔的另一个别名为\"憎恶之球\"，因为它一旦看到敌人就会毫无顾忌地使用它们的死亡凝视，即使这会伤害到它的友军。</string>
+  <string name="Eye_Kill">%s的死亡凝视杀死了你……</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">豺狼斥候</string>
+  <string name="Gnoll_Gender">masculine</string>
+  <string name="Gnoll_Name_Objective">豺狼斥候</string>
+  <string name="Gnoll_Desc">豺狼人是像鬣狗一样的人型生物。他们居住在下水道和地牢中，不时向上突袭试图向地表发起进攻。豺狼斥候是它们种群里最普通的一员，它们不像暴徒们那样强壮，也没有萨满们那么聪明。</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">魔像</string>
+  <string name="Golem_Gender">masculine</string>
+  <string name="Golem_Name_Objective">魔像</string>
+  <string name="Golem_Desc">矮人们尝试将他们关于机械的知识与新发现的元素力量相结合。土地之灵作为公认的最容易掌控的元素之灵，被用来当作机械的\"灵魂\"。即使这样，仪式中任何细微的失误都会造成严重的爆炸。</string>
+  <string name="Golem_Defense">格挡</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">粘咕</string>
+  <string name="Goo_Gender">feminine</string>
+  <string name="Goo_Name_Objective">粘咕</string>
+  <string name="Goo_Desc">我们对粘咕所知甚少。它甚至很有可能不是一个生物，而是拥有基础智能的下水道物质聚合物。无论如何，很明显是黑暗魔法造就了这个东西。</string>
+  <string name="Goo_Info1">粘咕正在不断地抽动！</string>
+  <string name="Goo_Info2">咕……咕……</string>
+  <string name="Goo_Info3">咕-咕！</string>
+  <string name="Goo_StaInfo1">！！！</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">矮人国王</string>
+  <string name="King_Gender">masculine</string>
+  <string name="King_Name_Objective">矮人国王</string>
+  <string name="King_Desc">这位最后的矮人国王以对生死机制的透彻理解而闻名。他说服王国的皇室成员参加了一场本应让他们所有人获得永生的仪式。最终成功的仅他一人——还获得了一支死灵军队。</string>
+  <string name="King_Defense">招架</string>
+  <string name="King_Info1">你不可能杀掉我，%s…我是…不朽的…</string>
+  <string name="King_Info2">复苏吧，奴隶们！</string>
+  <string name="King_Info3">你好大的胆子！</string>
+  <string name="Undead_Name">矮人亡灵</string>
+  <string name="Undead_Gender">masculine</string>
+  <string name="Undead_Name_Objective">矮人亡灵</string>
+  <string name="Undead_Desc">由矮人国王的意志唤醒的矮人亡灵，曾经的皇室成员，以长着厚实胡须的骷髅的姿态出现。</string>
+  <string name="Undead_Defense">格挡</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">拟形怪</string>
+  <string name="Mimic_Gender">masculine</string>
+  <string name="Mimic_Name_Objective">拟形怪</string>
+  <string name="Mimic_Desc">拟形怪是一种能够变成任何形态的魔法生物。在地牢里它们几乎一直以宝箱形态出现，因为它们明白怎样才能引诱到到冒险者。</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">拟形怪</string>
+  <string name="MimicPie_Gender">masculine</string>
+  <string name="MimicPie_Name_Objective">拟形怪</string>
+  <string name="MimicPie_Desc">拟形怪是一种能够变成任何形态的魔法生物。这一只看起来像一大块美味的烧饼。</string>
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">矮人武僧</string>
+  <string name="Monk_Gender">masculine</string>
+  <string name="Monk_Name_Objective">矮人武僧</string>
+  <string name="Monk_Desc">这些武僧都是些狂信徒，他们会倾其所能从一切异族手中保护他们城市的秘密。他们不使用任何盔甲亦或武器，单纯依靠徒手格斗技巧来战斗。</string>
+  <string name="Monk_Defense">招架</string>
+  <string name="Monk_Disarm">%1$s将你手中的%2$s击飞了！</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">巨型食人鱼</string>
+  <string name="Piranha_Gender">feminine</string>
+  <string name="Piranha_Name_Objective">巨型食人鱼</string>
+  <string name="Piranha_Desc">这些肉食性鱼类不是地下水池中的天然生物。它们被专门培育用来保护被水淹没的储藏室。</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">啮齿小鼠</string>
+  <string name="Rat_Gender">feminine</string>
+  <string name="Rat_Name_Objective">啮齿小鼠</string>
+  <string name="Rat_Desc">啮齿小鼠是极具侵略性却比较弱小的下水道居民，只有在拥有大量数量时才会造成威胁。</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">蝎子</string>
+  <string name="Scorpio_Gender">masculine</string>
+  <string name="Scorpio_Name_Objective">蝎子</string>
+  <string name="Scorpio_Desc">这些巨大的节肢类恶魔生物会尽可能的避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">武僧大师</string>
+  <string name="Senior_Gender">masculine</string>
+  <string name="Senior_Name_Objective">武僧大师</string>
+  <string name="Senior_Desc">这些武僧都是些狂信徒，他们会倾其所能从一切异族手中保护他们城市的秘密。他们不使用任何盔甲亦或武器，单纯依靠徒手格斗技巧来战斗。这个特别的武僧掌握了致残对手的技巧。</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">阴影</string>
+  <string name="Shadow_Gender">feminine</string>
+  <string name="Shadow_Name_Objective">阴影</string>
+  <string name="Shadow_Desc">阴影通常默默徘徊在古代监狱的遗迹中，只是偶尔会出现在冒险者眼前，而通常这将会是这位冒险者的最后一次冒险。</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">豺狼萨满</string>
+  <string name="Shaman_Gender">masculine</string>
+  <string name="Shaman_Name_Objective">豺狼萨满</string>
+  <string name="Shaman_Desc">只有那些最聪明的豺狼人才能掌握萨满魔法。豺狼萨满更喜欢用战斗魔法来弥补力量上的不足。任何敢于质疑它们在部落里地位的人都会被萨满用法术毫不留情地消灭。</string>
+  <string name="Shaman_Killed">%s的闪电杀死了你……</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">持盾暴徒</string>
+  <string name="Shielded_Gender">masculine</string>
+  <string name="Shielded_Name_Objective">持盾暴徒</string>
+  <string name="Shielded_Defense">格挡</string>
+  <string name="Shielded_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，他们会变得狂暴，对他们的敌人造成大量伤害。这个豺狼暴徒举着一面巨型盾牌！</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">骷髅</string>
+  <string name="Skeleton_Gender">masculine</string>
+  <string name="Skeleton_Name_Objective">骷髅</string>
+  <string name="Skeleton_Desc">骷髅是从那些悲惨的冒险者及地牢原住民尸骨的聚合物产生的，来自下层地牢的邪恶力量将它们从死亡中唤起。在吸收了足够的伤害之后，它们就会在骨头的爆炸中消解。</string>
+  <string name="Skeleton_Defense">格挡</string>
+  <string name="Skeleton_Killed">你被骨头的爆炸杀死了……</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">洞穴纺织者</string>
+  <string name="Spinner_Gender">masculine</string>
+  <string name="Spinner_Name_Objective">洞穴纺织者</string>
+  <string name="Spinner_Desc">这些有着许多绿色绒毛的洞穴蜘蛛会试着去躲避直接的战斗，它们更喜欢在远处等待其猎物卷入蜘网，在毒素中慢慢死去。</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">活化石像</string>
+  <string name="Statue_Gender">feminine</string>
+  <string name="Statue_Name_Objective">活化石像</string>
+  <string name="Statue_Desc">你以为这只是地牢里的另一座丑陋的雕像，但它发出红光的眼睛让你放弃了刚才的想法。 尽管雕像本身是用石头做的，但它手上握着_%s_，看起来像是真的。</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">魅魔</string>
+  <string name="Succubus_Gender">masculine</string>
+  <string name="Succubus_Name_Objective">魅魔</string>
+  <string name="Succubus_Desc">魅魔是外表诱人(带有些哥特风格)的女性恶魔。魅魔可以通过使用魔法魅惑英雄，使英雄在魅惑消退前无法攻击它。</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Gender">masculine</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Gender">masculine</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Gender">masculine</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Gender">masculine</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Gender">masculine</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Gender">masculine</string>
+  <string name="RottingFist_Gender">masculine</string>
+  <string name="BurningFist_Gender">masculine</string>
+  <string name="Larva_Gender">feminine</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <!--STRINGS OF SpiderNest CLASS-->
+  <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Gender">masculine</string>
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Gender">masculine</string>
+  <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Gender">masculine</string>
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Gender">feminine</string>
+  <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Gender">masculine</string>
+  <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Gender">masculine</string>
+  <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Gender">masculine</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Gender">masculine</string>
+</resources>

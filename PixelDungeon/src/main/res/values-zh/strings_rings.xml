@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">%s 戒指</string>
+  <string name="Ring_Info">这个金属环上装饰着一大颗 %s ，在黑暗中熠熠生光。谁知道戴上后会有什么效果呢？</string>
+  <string name="Ring_Identify">你现在对于你的 %1$s 足够熟悉以鉴定它。它是 %2$s。</string>
+  <string-array name="Ring_Gems">
+    <item>钻石</item>
+    <item>蛋白石</item>
+    <item>石榴石</item>
+    <item>红宝石</item>
+    <item>紫水晶</item>
+    <item>黄晶玉</item>
+    <item>缟玛瑙</item>
+    <item>电气石</item>
+    <item>祖母绿</item>
+    <item>蓝宝石</item>
+    <item>石英</item>
+    <item>玛瑙</item>
+  </string-array>
+  <string name="Ring_Info1">你最多只能同时佩戴2枚戒指</string>
+  <string name="Ring_Info2">你的 %s 令你痛苦的紧紧箍住了你的手指</string>
+  <string name="Ring_Info3a">%1$s
+这个 %2$s 正 %3$s 的在你的手指头上。</string>
+  <string name="Ring_Info3b">，并且因为它被诅咒了，你无力去脱卸它。</string>
+  <string name="Ring_Info4">%1$s
+你能感受到 %2$s 中潜伏着一股恶意的魔力。</string>
+  <string name="Ring_BuffKnown">这是一枚%s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">精准之戒</string>
+  <string name="RingOfAccuracy_Info">这枚戒指能增加你击中敌人的几率。</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">探查之戒</string>
+  <string name="RingOfDetection_Info">戴上这枚戒指能让佩戴者减少侦测隐藏门和陷阱所需时间。负向等级的探查之戒会使你的感知变得迟钝，当你主动探查时会更难注意到隐藏门和陷阱。</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">元素之戒</string>
+  <string name="RingOfElements_Info">这枚戒指能够提供对不同元素的抗性，例如火、电、毒气等。同时它也能减少负面状态的持续时间。</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">闪避之戒</string>
+  <string name="RingOfEvasion_Info">这枚戒指能够增加你闪避敌人攻击的几率。</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">折扣戒指</string>
+  <string name="RingOfHaggler_Info">事实上这枚戒指不提供任何魔法效果，但它是盗贼工会成员的证明。通常商人们十分乐意为临时的保护提供折扣。升级这枚戒指并不会带来额外加成。</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">极速戒指</string>
+  <string name="RingOfHaste_Info">这枚戒指能够加快佩戴者的时间流速，使他们的任何行动都更快一些。</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">药草之戒</string>
+  <string name="RingOfHerbalism_Info">这枚戒指能增加你在踩踏高草时获得露珠和种子的几率。</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">愈合之戒</string>
+  <string name="RingOfMending_Info">这枚戒指能提高佩戴者的身体再生速率，使他们能更快的回复损失的生命值。负向等级的愈合之戒会使佩戴者的自然再生速度减慢甚至停止。</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">威能之戒</string>
+  <string name="RingOfPower_Info">处在这枚戒指的能量力场下，你的法杖将会变得更有威力。与之相反，负向等级的威能之戒将会使你的法杖威力更弱。</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">饱足之戒</string>
+  <string name="RingOfSatiety_Info">佩戴这枚戒指能使你更耐饿。负向等级的饱足之戒会造成相反的效果。</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">暗影之戒</string>
+  <string name="RingOfShadows_Info">当你佩戴着这枚戒指时敌人会更难注意到你。负向等级的暗影之戒会使附近的敌人更容易发现你的存在。</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">荆棘之戒</string>
+  <string name="RingOfThorns_Info">虽然这枚戒指并没有真正的荆棘，但当敌人攻击你时，他们所造成伤害的一小部分会反馈回他们身上。升级这枚戒指不会给予任何额外加成。</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">石血之戒</string>
+  <string name="RingOfStoneWalking_Info">这枚奇怪的戒指是由某种坚硬的石头制成的。 你一开始认为是红宝石的镶嵌物事实上是被密封的血液。在这血液之中，有一个箭头指向一堵带着一颗破碎之心的墙……这枚戒指可以做什么？</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">你永远的与墙融为了一体。</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">蜘蛛挂坠</string>
+  <string name="SpiderCharm_Info">这个奇异的小饰品被神秘的灵光围绕着。谁会知道戴着它的人会发生什么事？</string>
+  <string name="SpiderCharm_Use">使用</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">奇怪的水晶</string>
+  <string name="ChaosCrystal_Name_1">混乱水晶</string>
+  <string name="ChaosCrystal_Name_2">混沌晶石</string>
+  <string name="ChaosCrystal_Info">当你握着它时，你能感受到有一股能量流穿过了你的手。</string>
+  <string name="ChaosCrystal_Info_1">混乱的能量在这枚水晶中流淌，也许它能派上什么用场。</string>
+  <string name="ChaosCrystal_Info_2">棒极了！现在你知道你能把它和你的一件物品融合。可是融合后会发生什么？</string>
+  <string name="ChaosCrystal_Use">使用</string>
+  <string name="ChaosCrystal_Fuse">融合</string>
+  <string name="ChaosCrystal_Prompt">选择一个地点设置混沌标记</string>
+  <string name="ChaosCrystal_SelectForFuse">选择你要与混沌晶石融合的物品</string>
+  <string name="ChaosCrystal_ScrollFused">镌刻在卷轴上的符文吸收了这枚晶石，现在它变成了%s</string>
+  <string name="ChaosCrystal_SwordFused">水晶吸收了你的武器，并化成了一把剑形态。</string>
+  <string name="ChaosCrystal_BowFused">水晶吸收了你的弓，并化成了一把弓的形态。</string>
+  <string name="ChaosCrystal_StaffFused">水晶吸收了你的法杖，并化成了一根法杖的形态。</string>
+  <string name="CorpseDust_Buff">嗜血</string>
+  <string name="DriedRose_Buff">迷人</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">鼠王之冠</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">书</string>
+  <string name="Codex_ACRead">阅读</string>
+  <string name="Codex_Info">你在任何图书馆都能找到的书之一</string>
+  <string name="Codex_Blinded">你在目盲时不能阅读</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">你周身的 %s 在令人痛苦的紧缩着</string>
+  <string name="Armor_Identify">你现在对于你的 %1$s 足够熟悉以鉴定它。它是 %2$s。</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">不同属性魔法的冲突消除了这件护甲上的刻印！</string>
+  <string name="Armor_Info1">这件 %1$s 对受到的每次攻击提供最高 \"%2$d\" 点的伤害减免。</string>
+  <string name="Armor_Info2">
+因为你的力量不足，你的移动速度和防御能力降低了。</string>
+  <string name="Armor_Info3">
+因为你的力量不足，装备这件护甲会降低你的移动速度和防御能力。</string>
+  <string name="Armor_Info4">
+一般情况下 %1$s 对受到的每次攻击提供最高 %2$d 点的伤害减免，并需要 %3$d 点力量来装备。</string>
+  <string name="Armor_Info5">也许这件护甲对你来说太重了。</string>
+  <string name="Armor_Info6">它是被刻印的</string>
+  <string name="Armor_Info7a">
+你正在装备着 %1$s%2$s。</string>
+  <string name="Armor_Info7b">，并且因为它被诅咒了，你无力去脱卸它。</string>
+  <string name="Armor_Info8">
+你能感受到 %s 中潜伏着一股恶意的魔力。</string>
+  <string name="Armor_Glyph">刻印</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">这东西看起来太棒了！</string>
+  <string name="ClassArmor_LowHealt">你的生命值太低了！</string>
+  <string name="ClassArmor_NotEquipped">你需要穿上这件护甲来使用它的特殊能力！</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">布甲</string>
+  <string name="ClothArmor_Desc">这件轻便的护甲能够提供基础的保护。</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">精灵披风</string>
+  <string name="ElfArmor_Desc">在这件披风的帮助下，精灵可以召唤自然的力量。高草能在眨眼间长出并困住视野中的敌人，即使有坚硬的石头阻挡着。</string>
+  <string name="ElfArmor_ACSpecial">自然呼唤</string>
+  <string name="ElfArmor_NotElf">只有精灵能使用这件护甲！</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">猎人斗篷</string>
+  <string name="HuntressArmor_Desc">在这样一件斗篷保护下的女猎手可以创造一片扇形的灵能之刃。每一把灵能之刃都会飞向女猎手视野中的一个敌人，造成的伤害取决于她当前装备的近战武器。</string>
+  <string name="HuntressArmor_ACSpecial">灵能之刃</string>
+  <string name="HuntressArmor_NoEnemies">视野内没有敌人</string>
+  <string name="HuntressArmor_NotHuntress">只有女猎手能使用这件护甲！</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">皮甲</string>
+  <string name="LeatherArmor_Desc">由鞣制怪物皮制造的护甲。没有布甲那么轻，但可以提供更好的防护。</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">法师长袍</string>
+  <string name="MageArmor_Desc">穿着这件华丽的长袍，法师能够施放一种融化大地的魔法：所有在他视野内的敌人将被烈焰点燃并无法移动。</string>
+  <string name="MageArmor_ACSpecial">熔融大地</string>
+  <string name="MageArmor_NotMage">只有法师能使用这件护甲！</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">链甲</string>
+  <string name="MailArmor_Desc">由相扣的金属环制成的牢固又灵活的一套护甲。</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">板甲</string>
+  <string name="PlateArmor_Desc">巨大厚重的金属板拼接而成，为那些能够承受它惊人重量的冒险者提供无与伦比的保护。</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">盗贼外套</string>
+  <string name="RogueArmor_Desc">穿着这件漆黑的外套，盗贼可以完成一个叫做“烟雾爆弹”的小把戏（虽然使用时并不会爆炸）：他会致盲能看到他的敌人并跳到一边。</string>
+  <string name="RogueArmor_ACSpecial">烟雾爆弹</string>
+  <string name="RogueArmor_NotRogue">只有盗贼能使用这件护甲！</string>
+  <string name="RogueArmor_Fov">你只能跳到你视野中的一个空位置</string>
+  <string name="RogueArmor_Prompt">选择你要跳跃到的位置</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">鳞甲</string>
+  <string name="ScaleArmor_Desc">相迭的金属鳞片缝制在皮背心上，做出了一套灵活的防护装甲。</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">战士装甲</string>
+  <string name="WarriorArmor_Desc">虽然这套盔甲看起来很重，但它能让一个战士向一个位置施展英勇跳跃，重击地面并击晕周围的敌人。</string>
+  <string name="WarriorArmor_ACSpecial">英勇跳跃</string>
+  <string name="WarriorArmor_NotWarrior">只有战士能使用这件护甲！</string>
+  <string name="WarriorArmor_Prompt">选择你要跳跃到的位置</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">魅惑之 %s</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">反熵之 %s</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">反弹之 %s</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">位移之 %s</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">缠绕之 %s</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">代谢之 %s</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">分身之 %s</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">电势之 %s</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">恶臭之 %s</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">粘稠之 %s</string>
+  <string name="Viscosity_Status">延缓 %d 点伤害</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">延缓的伤害 (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s 杀了你……</string>
+</resources>

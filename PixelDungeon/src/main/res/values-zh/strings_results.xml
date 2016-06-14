@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">在第 %2$d 层被 %1$s 杀死了</string>
+  <string name="ResultDescriptions_Boss">在第 %2$d 层被 %1$s 杀死了</string>
+  <string name="ResultDescriptions_Wand">在第 %2$d 层被你自己的 %1$s 杀死了</string>
+  <string name="ResultDescriptions_Glyph">在第 %2$d 层被 %1$s 杀死</string>
+  <string name="ResultDescriptions_Trap">在第 %2$d 层被 %1$s 的电击杀死了</string>
+  <string name="ResultDescriptions_Burning">在第 %d 层燃烧殆尽</string>
+  <string name="ResultDescriptions_Hunger">在第 %d 层饿死</string>
+  <string name="ResultDescriptions_Poison">在第 %d 层死于剧毒</string>
+  <string name="ResultDescriptions_Gas">在第 %d 层死于毒气</string>
+  <string name="ResultDescriptions_Bleeding">在第 %d 层失血过多而死</string>
+  <string name="ResultDescriptions_Ooze">在第%d层被腐蚀污泥杀死了</string>
+  <string name="ResultDescriptions_Fall">在第 %d 层摔死</string>
+  <string name="ResultDescriptions_Win">获得Yendor护符</string>
+  <string name="ResultDescriptions_Immured">在第%d层被囚禁于墙中</string>
+</resources>

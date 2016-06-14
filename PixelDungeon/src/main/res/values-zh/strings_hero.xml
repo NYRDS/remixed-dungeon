@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">你</string>
+  <string name="Hero_Name_Objective">你</string>
+  <string name="Hero_Leave">没有人会轻易地离开像素地牢。</string>
+  <string name="Hero_LevelUp">升级！</string>
+  <string name="Hero_NewLevel">恭喜你升到了 %d 级！现在你变得更为健康且专注。这让你更容易击中敌人和闪避敌人攻击。</string>
+  <string name="Hero_YouNowHave">你获得了 %s</string>
+  <string name="Hero_SomethingElse">这里还有其他的东西</string>
+  <string name="Hero_LockedChest">这个宝箱锁上了，可是你没有配对的钥匙</string>
+  <string name="Hero_LockedDoor">你没有配对的钥匙</string>
+  <string name="Hero_NoticedSmth">你注意到了什么</string>
+  <string name="Hero_Wait">……</string>
+  <string name="Hero_Search">搜寻</string>
+  <string name="Hero_StaBurning">你着火了！</string>
+  <string name="Hero_StaParalysis">你麻痹了！</string>
+  <string name="Hero_StaPoison">你中毒了！</string>
+  <string name="Hero_StaOoze">腐蚀污泥正在侵蚀你的肉体！快洗掉它！</string>
+  <string name="Hero_StaRoots">你无法移动！</string>
+  <string name="Hero_StaWeakness">你感觉自己变虚弱了！</string>
+  <string name="Hero_StaBlindness">你看不见了！</string>
+  <string name="Hero_StaFury">你陷入了暴怒！</string>
+  <string name="Hero_StaFurious">暴怒</string>
+  <string name="Hero_StaCharm">你被魅惑了！</string>
+  <string name="Hero_StaCripple">你残废了！</string>
+  <string name="Hero_StaBleeding">你在流血！</string>
+  <string name="Hero_StaVertigo">你周围的一切都在旋转！</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">战士</string>
+  <string name="HeroClass_Mag">法师</string>
+  <string name="HeroClass_Rog">盗贼</string>
+  <string name="HeroClass_Hun">女猎手</string>
+  <string name="HeroClass_Elf">精灵</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>战士开始时拥有11点力量。</item>
+    <item>战士开始时拥有一把独特的短剑， 这把短剑能被“重铸”以升级其他的近战武器.</item>
+    <item>战士不擅长远程武器。</item>
+    <item>战士每次进食都会回复一些生命值。</item>
+    <item>力量药水在游戏开始时就已经鉴定了。</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>法师开始时拥有一把独特的魔法飞弹法杖。这把法杖在之后能够“祛魔”以升级其他法杖</item>
+    <item>法师能更快的为他们的法杖充能。</item>
+    <item>法师每次进食都会为他们包裹里的所有的法杖恢复1点充能</item>
+    <item>法师能将法杖作为近战武器使用</item>
+    <item>鉴定卷轴在游戏开始时就已经鉴定了</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>盗贼开始时拥有一枚+1的暗影戒指。</item>
+    <item>盗贼在装备戒指时自动鉴定其类型。</item>
+    <item>盗贼精通轻甲，当穿着轻甲时更容易闪避攻击。</item>
+    <item>盗贼精通侦测隐藏门与陷阱。</item>
+    <item>盗贼更加耐饿。</item>
+    <item>魔法地图卷轴在游戏开始时就已经鉴定了。</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>女猎手开始时拥有15点生命值。</item>
+    <item>女猎手开始时拥有一把独特的可升级的回旋镖。</item>
+    <item>女猎手精通远程武器，并且在使用远程武器时可以获得基于额外 力量值得伤害加成。</item>
+    <item>女猎手能从露珠中获得更多生命值。</item>
+    <item>女猎手可以隔着障碍物感知到附近的敌人。</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>精灵开始时拥有15点生命值和9点力量。</item>
+    <item>精灵免疫缠绕状态。</item>
+    <item>精灵开局时拥有一把升级过的木弓和一些箭。</item>
+    <item>精灵十分敏捷，并且十分精通弓箭。</item>
+    <item>精灵不擅长近战武器。</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">角斗士</string>
+  <string name="HeroSubClass_DescGlad">一次成功的近战攻击可以让_角斗士_开始连击，在接下来每次成功的攻击中都会造成更多伤害。</string>
+  <string name="HeroSubClass_NameBers">狂战士</string>
+  <string name="HeroSubClass_DescBers">当_狂战士_受到严重伤害时，会进入一种狂暴状态中，这会显著的提高他的伤害输出</string>
+  <string name="HeroSubClass_NameWarL">术士</string>
+  <string name="HeroSubClass_DescWarL">_术士_在杀死一个敌人后，会将消耗它们的灵魂来治愈自己的伤口并回复饥饿。</string>
+  <string name="HeroSubClass_NameBatM">战斗法师</string>
+  <string name="HeroSubClass_DescBatM">当_战斗法师_使用手里的法杖近战时，将会造成等同于当前法杖充能数的额外伤害。每次成功的攻击将会回复这支法杖的1点充能。</string>
+  <string name="HeroSubClass_NameAssa">刺客</string>
+  <string name="HeroSubClass_DescAssa">当_刺客_进行偷袭时，能对敌人造成额外伤害。</string>
+  <string name="HeroSubClass_NameFreR">疾行者</string>
+  <string name="HeroSubClass_DescFreR">当_疾行者_处于不负重且不饥饿的情况下，能以绝大多数的怪物两倍的速度移动，并在奔跑时更难被击中。</string>
+  <string name="HeroSubClass_NameSnip">狙击手</string>
+  <string name="HeroSubClass_DescSnip">_狙击手_能够发现敌人的护甲的弱点，当使用远程武器时能有效地无视敌人护甲。</string>
+  <string name="HeroSubClass_NameWard">守望者</string>
+  <string name="HeroSubClass_DescWard">与自然之力强大的联系让_守望者_能从植物中收集露珠和种子，并且在踩踏高草时获得临时的护甲增益。</string>
+  <string name="HeroSubClass_NameScout">斥候</string>
+  <string name="HeroSubClass_DescScout">精灵_斥候_是隐匿的大师，踩踏高草会让他们获得一个暂时的隐身状态，并且他们比通常的精灵更快。</string>
+  <string name="HeroSubClass_NameShaman">萨满</string>
+  <string name="HeroSubClass_DescShaman">精灵_萨满_能够将法杖作为近战武器使用。成功的攻击将有机会不消耗充能的对敌人释放法杖的能量。</string>
+</resources>

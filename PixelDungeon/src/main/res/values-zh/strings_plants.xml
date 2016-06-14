@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">种植</string>
+  <string name="Plant_Info">将这个种子扔到你想种的地方%1$s.\n\n%2$s</string>
+  <string name="Plant_Seed">%s种子</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">致幻草</string>
+  <string name="Dreamweed_Desc">一旦接触到致幻草，它将隐秘地释放出一片闪光的混乱气体云。</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name"> 地缚根</string>
+  <string name="Earthroot_Desc">当碰到地缚种后，它的根系会在你周边形成某种无法移动的天然护甲。</string>
+  <string name="Earthroot_Buff">植被护甲</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">消逝草</string>
+  <string name="Fadeleaf_Desc">触碰到消逝草的任何生物都会被传送至当前层的一个随机地点。</string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">烈焰花</string>
+  <string name="Firebloom_Desc">烈焰花被任何物品触碰到时，都会化为一团火焰。</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">冰盖花</string>
+  <string name="Icecap_Desc">冰冠花在被接触到时会喷射出一团能够冰冻周围任何东西的花粉。</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">断肠苔</string>
+  <string name="Sorrowmoss_Desc">断肠苔并不是一种苔藓，而是一种有极强毒性，花瓣利如刀片的花。</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">阳春草</string>
+  <string name="Sungrass_Desc">阳春草因其汁液缓慢但显著的疗伤效果而家喻户晓。</string>
+  <string name="Sungrass_Buff">草药疗养</string>
+</resources>

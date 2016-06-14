@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">你现在对于你的 %1$s 足够熟悉以鉴定它。它是 %2$s。</string>
+  <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>冷酷%s</item>
+    <item>冷酷%s</item>
+    <item>冷酷%s</item>
+  </string-array>
+  <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>炽烈%s</item>
+    <item>炽烈%s</item>
+    <item>炽烈%s</item>
+  </string-array>
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>可怖%s</item>
+    <item>可怖%s</item>
+    <item>可怖%s</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>紊乱%s</item>
+    <item>紊乱%s</item>
+    <item>紊乱%s</item>
+  </string-array>
+  <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>饮血%s</item>
+    <item>饮血%s</item>
+    <item>饮血%s</item>
+  </string-array>
+  <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>幸运%s</item>
+    <item>幸运%s</item>
+    <item>幸运%s</item>
+  </string-array>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>重击%s</item>
+    <item>重击%s</item>
+    <item>重击%s</item>
+  </string-array>
+  <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>穿刺%s</item>
+    <item>穿刺%s</item>
+    <item>穿刺%s</item>
+  </string-array>
+  <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>淬毒%s</item>
+    <item>淬毒%s</item>
+    <item>淬毒%s</item>
+  </string-array>
+  <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>冰寒%s</item>
+    <item>冰寒%s</item>
+    <item>冰寒%s</item>
+  </string-array>
+  <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>狂乱%s</item>
+    <item>狂乱%s</item>
+    <item>狂乱%s</item>
+  </string-array>
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s的%3$d阶近战武器。</string>
+  <string name="MeleeWeapon_Info1b">一把</string>
+  <string name="MeleeWeapon_Info1c">一把升级过的</string>
+  <string name="MeleeWeapon_Info1d">一把负等级的</string>
+  <string name="MeleeWeapon_Info2a">它的平均伤害是%d点。</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Gender">masculine</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Gender">masculine</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Gender">feminine</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Gender">masculine</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Gender">masculine</string>
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Gender">feminine</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Gender">masculine</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Gender">masculine</string>
+  <!--STRINGS OF Spear CLASS-->
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Gender">masculine</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Gender">masculine</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Gender">masculine</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Gender">masculine</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Gender">masculine</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Gender">masculine</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Gender">masculine</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Gender">masculine</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Gender">feminine</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Gender">masculine</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Gender">masculine</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Gender">masculine</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Gender">masculine</string>
+</resources>

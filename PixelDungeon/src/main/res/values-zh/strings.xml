@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">混合的像素地牢</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">在你之前已经有许多的英雄们向这个地牢进发。有些人带着财宝和魔法物品满足而归，可是他们大部分人却彻底的失去了音讯。
+
+然而，从未有人成功取回Yendor护符——那个据说被藏在地牢深处的东西。
+
+你认为你已经准备好面对这个挑战了，更重要的是，你感受到了命运对你的眷顾。现在，是时候开始属于你自己的冒险了！</string>
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Exit">让这一切结束吧</string>
+  <string name="AmuletScene_Stay">我暂时不那么做</string>
+  <string name="AmuletScene_Txt">你终于把它握在了手中——Yendor护符。通过它的力量，你可以征服世界，为人们带去和平与繁荣，或是其他任何事。无论如何，你的命运被永远的改变了，游戏也将要结束。或者，你也可以作为一个凡人再在这里逗留一会。</string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">欢迎来到像素地牢的%d层！</string>
+  <string name="GameScene_WelcomeBack">欢迎回到像素地牢的%d层</string>
+  <string name="GameScene_NightMode">万分小心，这个地牢在晚上会变得更加危险！</string>
+  <string name="GameScene_Chasm">你的脚步声在地牢中回响。</string>
+  <string name="GameScene_Water">你听到周围流水的声音。</string>
+  <string name="GameScene_Grass">空气中弥漫着青草的气息。</string>
+  <string name="GameScene_Secrets">诡异的气氛，这一层肯定隐藏了许多秘密。</string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">怪物</string>
+  <string name="Char_Name_Objective">怪物</string>
+  <string-array name="Char_Hit">
+    <item>%1$s 攻击了 %2$s</item>
+    <item>%1$s 攻击了 %2$s</item>
+    <item>%1$s 攻击了 %2$s</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s 杀了你...</item>
+    <item>%s 杀了你....</item>
+    <item>%s 杀了你....</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s 击败了 %2$s</item>
+    <item>%1$s 击败了 %2$s</item>
+    <item>%1$s 击败了 %2$s</item>
+  </string-array>
+  <string name="Char_YouMissed">%1$s %2$s 了你的攻击</string>
+  <string name="Char_SmbMissed">%1$s %2$s 了 %3$s 的攻击</string>
+  <string-array name="Char_StaDodged">
+    <item>闪避</item>
+    <item>闪避</item>
+    <item>闪避</item>
+  </string-array>
+  <string name="Char_StaPoisoned">剧毒</string>
+  <string name="Char_StaAmok">狂乱</string>
+  <string name="Char_StaSlowed">缓速</string>
+  <string name="Char_StaMind">全视</string>
+  <string name="Char_StaVision">幻象</string>
+  <string name="Char_StaParalysed">麻痹</string>
+  <string name="Char_StaFrightened">恐惧</string>
+  <string name="Char_StaRooted">缠绕</string>
+  <string name="Char_StaCrippled">残疾</string>
+  <string name="Char_StaBleeding">流血</string>
+  <string name="Char_StaDizzy">眩晕</string>
+  <string name="Char_StaInvisible">隐形</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">这些文字难以辨认...</string>
+  <string name="Dungeon_DeadEnd">你来这做什么？！</string>
+  <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>缩餐节食</item>
+    <item>信念护体r</item>
+    <item>恐药异症</item>
+    <item>荒芜之地</item>
+    <item>群体智能</item>
+    <item>没入黑暗</item>
+  </string-array>
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_WellHealt">生命之泉</string>
+  <string name="Journal_WellAwareness">全知之水</string>
+  <string name="Journal_WellTransmut">转化之井</string>
+  <string name="Journal_Alchemy">炼药台</string>
+  <string name="Journal_Garden">花园</string>
+  <string name="Journal_Statue">活化石像</string>
+  <string name="Journal_Ghost">悲伤幽灵</string>
+  <string name="Journal_Wandmaker">老杖匠</string>
+  <string name="Journal_Troll">布莱克史密斯铁匠</string>
+  <string name="Journal_Imp">野心勃勃的小鬼</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">药水</string>
+  <string name="WndCatalogus_Scrolls">卷轴</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <string name="WndChallenges_Title">挑战</string>
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">你选择哪条道路？</string>
+  <string name="WndChooseWay_Cancel">我待会再决定</string>
+  <!--STRINGS OF WndClass CLASS-->
+  <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">未知错误</string>
+  <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">设置</string>
+  <string name="WndGame_Challenges">挑战</string>
+  <string name="WndGame_Ranking">排名</string>
+  <string name="WndGame_Start">开始新游戏</string>
+  <string name="WndGame_menu">主菜单</string>
+  <string name="WndGame_Exit">关闭游戏</string>
+  <string name="WndGame_Return">返回游戏</string>
+  <string name="WndGame_Save">保存</string>
+  <string name="WndGame_Load">读取</string>
+  <!--STRINGS OF WndHero CLASS-->
+  <string name="WndHero_Stats">属性</string>
+  <string name="WndHero_Buffs">状态</string>
+  <string name="WndHero_Exp">经验</string>
+  <string name="WndHero_Str">力量</string>
+  <string name="WndHero_Health">生命</string>
+  <string name="WndHero_Gold">收集的金币</string>
+  <string name="WndHero_Depth">最高层数</string>
+  <string name="WndHero_StaJournal">经历</string>
+  <!--STRINGS OF WndImp CLASS-->
+  <string name="WndImp_Reward">收下戒指</string>
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <string name="WndInfoCell_Nothing">那啥也没有。</string>
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">宝箱</string>
+  <string name="WndInfoItem_LockedChest">上锁的宝箱</string>
+  <string name="WndInfoItem_CrystalChest">水晶宝箱</string>
+  <string name="WndInfoItem_Tomb">坟墓</string>
+  <string name="WndInfoItem_Skeleton">骸骨</string>
+  <string name="WndInfoItem_WontKnow">直到你打开前你都不会知道里面装有什么！</string>
+  <string name="WndInfoItem_NeedKey">但你需要一把金钥匙来打开它。</string>
+  <string name="WndInfoItem_Inside">你能看到里面有 %s，但是打开这个宝箱需要一把金钥匙。</string>
+  <!--STRINGS OF WndJournal CLASS-->
+  <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Stats">属性</string>
+  <string name="WndRanking_Items">物品</string>
+  <string name="WndRanking_Badges">徽章</string>
+  <string name="WndRanking_StaChallenges">挑战</string>
+  <string name="WndRanking_StaHealth">生命</string>
+  <string name="WndRanking_StaStr">力量</string>
+  <string name="WndRanking_StaDuration">游戏时长</string>
+  <string name="WndRanking_StaDepth">最高层数</string>
+  <string name="WndRanking_StaEnemies">杀死的怪物数</string>
+  <string name="WndRanking_StaGold">收集的金币数</string>
+  <string name="WndRanking_StaFood">食物消耗量</string>
+  <string name="WndRanking_StaAlchemy">酿造的药水数</string>
+  <string name="WndRanking_StaAnkhs">十字架使用量</string>
+  <!--STRINGS OF WndResurrect CLASS-->
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <!--STRINGS OF WndStory CLASS-->
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Battle">战斗法杖</string>
+  <string name="WndWandmaker_NonBattle">辅助法杖</string>
+  <!--STRINGS OF QuickSlot CLASS-->
+  <!--STRINGS OF Item CLASS-->
+  <string name="Item_ACDrop">扔下</string>
+  <string name="Item_ACThrow">投掷</string>
+  <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">装备</string>
+  <string name="EquipableItem_ACUnequip">取下</string>
+  <string name="EquipableItem_Unequip">你不能取下被诅咒的 %s！</string>
+  <!--STRINGS OF Heap CLASS-->
+  <string name="Heap_Mimic">这是一个拟形怪！</string>
+  <!--STRINGS OF Amulet CLASS-->
+  <string name="Amulet_Name">Yendor护符</string>
+  <string name="Amulet_ACEnd">结束游戏</string>
+  <!--STRINGS OF Ankh CLASS-->
+  <string name="Ankh_Name">十字架</string>
+  <!--STRINGS OF ArmorKit CLASS-->
+  <!--STRINGS OF Dewdrop CLASS-->
+  <!--STRINGS OF DewVial CLASS-->
+  <string name="DewVial_Name">露珠瓶</string>
+  <string name="DewVial_ACDRINK">饮用</string>
+  <!--STRINGS OF Gold CLASS-->
+  <string name="Gold_Name">金币</string>
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <string name="LloidsBeacon_ACSet">设置</string>
+  <string name="LloidsBeacon_ACReturn">返回</string>
+  <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_Name">奥术刻笔</string>
+  <string name="Stylus_ACInscribe"> 镌刻</string>
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_ACRead">阅读</string>
+  <!--STRINGS OF Torch CLASS-->
+  <string name="Torch_Name">火把</string>
+  <string name="Torch_ACLight">点燃</string>
+  <!--STRINGS OF Weightstone CLASS-->
+  <string name="Weightstone_Name">磨刀石</string>
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <!--STRINGS OF Keyring CLASS-->
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <string name="ScrollHolder_Name">卷轴筒</string>
+  <!--STRINGS OF SeedPouch CLASS-->
+  <string name="SeedPouch_Name">种子袋</string>
+  <!--STRINGS OF WandHolster CLASS-->
+  <string name="WandHolster_Name">法杖套</string>
+  <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Name">药水带</string>
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <string name="GoldenKey_Name">金钥匙</string>
+  <!--STRINGS OF IronKey CLASS-->
+  <string name="IronKey_Name">铁钥匙</string>
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <string name="CorpseDust_Name">尸尘</string>
+  <!--STRINGS OF DarkGold CLASS-->
+  <string name="DarkGold_Name">暗金矿</string>
+  <!--STRINGS OF DriedRose CLASS-->
+  <string name="DriedRose_Name">枯干玫瑰</string>
+  <!--STRINGS OF DwarfToken CLASS-->
+  <string name="DwarfToken_Name">矮人徽记</string>
+  <!--STRINGS OF Pickaxe CLASS-->
+  <string name="Pickaxe_Gender">feminine</string>
+  <!--STRINGS OF RatSkull CLASS-->
+  <string name="RatSkull_Name">巨大老鼠头骨</string>
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Foliage CLASS-->
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <!--STRINGS OF ToxicGas CLASS-->
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <!--STRINGS OF Web CLASS-->
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <string name="Amok_Info">狂乱</string>
+  <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">树肤</string>
+  <!--STRINGS OF Bleeding CLASS-->
+  <string name="Bleeding_Info">流血</string>
+  <string name="Bleeding_Death">你流血而死……</string>
+  <!--STRINGS OF Blindness CLASS-->
+  <string name="Blindness_Info">目盲</string>
+  <!--STRINGS OF Burning CLASS-->
+  <string name="Burning_Info">燃烧</string>
+  <string name="Burning_Burns">%s 被烧掉了！</string>
+  <string name="Burning_Death">你燃烧殆尽了……</string>
+  <!--STRINGS OF Charm CLASS-->
+  <string name="Charm_Info">魅惑</string>
+  <!--STRINGS OF Combo CLASS-->
+  <string name="Combo_Info">连击</string>
+  <string name="Combo_Combo">%d 连击！</string>
+  <!--STRINGS OF Cripple CLASS-->
+  <string name="Cripple_Info">残疾</string>
+  <!--STRINGS OF Frost CLASS-->
+  <string name="Frost_Info">冰冻</string>
+  <!--STRINGS OF Fury CLASS-->
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <string name="GasesImmunity_Info">免疫气体</string>
+  <!--STRINGS OF Hunger CLASS-->
+  <string name="Hunger_Death">你饿死了……</string>
+  <!--STRINGS OF Invisibility CLASS-->
+  <string name="Invisibility_Info">隐形</string>
+  <!--STRINGS OF Levitation CLASS-->
+  <string name="Levitation_Info">漂浮</string>
+  <!--STRINGS OF Light CLASS-->
+  <!--STRINGS OF MindVision CLASS-->
+  <string name="MindVision_Info">灵视</string>
+  <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Info">腐蚀污泥</string>
+  <string name="Ooze_Death">%s 杀了你……</string>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string name="Paralysis_Info">麻痹</string>
+  <!--STRINGS OF Poison CLASS-->
+  <string name="Poison_Info">剧毒</string>
+  <string name="Poison_Death">你被剧毒杀死了……</string>
+  <!--STRINGS OF Roots CLASS-->
+  <string name="Roots_Info">缠绕</string>
+  <!--STRINGS OF Shadows CLASS-->
+  <string name="Shadows_Info">暗影融合</string>
+  <!--STRINGS OF Slow CLASS-->
+  <string name="Slow_Info">缓速</string>
+  <!--STRINGS OF SnipersMark CLASS-->
+  <!--STRINGS OF Vertigo CLASS-->
+  <string name="Vertigo_Info">眩晕</string>
+  <!--STRINGS OF Weakness CLASS-->
+  <string name="Weakness_Info">虚弱</string>
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <string name="Belongings_Name">背包</string>
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+  <string name="Toolbar_Info1">你不知道那里有什么。</string>
+</resources>

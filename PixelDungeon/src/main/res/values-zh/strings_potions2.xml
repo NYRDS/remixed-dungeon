@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_ACMoisten">浸润</string>
+  <string name="Potion_SelectForMoisten">选择你要浸润的物品</string>
+  <string name="Potion_MoistenUseless">看起来你只是在浪费这瓶药水。</string>
+  <string name="Potion_RuneDissaperaed">符文从 %s 上消失了</string>
+  <string name="Potion_ArrowMoisten">你成功的浸润了这些箭。</string>
+  <string name="Potion_ItemFliesAway">%s 从你的手中飘走了。</string>
+  <string name="Potion_FoodRefreshed">%s 现在看起来能吃了</string>
+</resources>
