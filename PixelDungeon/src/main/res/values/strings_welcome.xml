@@ -99,4 +99,16 @@
         - Various bug fixes\n
         - Updated translations\n
         </string>
+        <string name="Welcome_Text_24_1">
+        remix.24.1:\n
+        --Game--\n
+        - New mob: Armored Statue\n
+        - New rares: Spider Guard (rare of Spider Soldier) and Amber Spider(rare of Psi-spider)\n
+        - Players can now delete saved files\n
+        - Updated visuals for Spider Lair\n
+        --Vanity Items--\n
+        - Buying new item automatically equips item\n
+        - New item "Pirate Set"\n
+        - Updated visuals for Neko Ears and Rabbit Ears\n
+        </string>
 </resources>
