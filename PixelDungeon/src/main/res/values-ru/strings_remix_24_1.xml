@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">ожившая статуя</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
+    <string name="ArmoredStatue_Name_Objective">статую</string>
+    <string name="ArmoredStatue_Desc">Вряд ли кому-то могло показаться что это очередная обычная статуя. И дело не столько в святящихся красных глазах, но в факте того что никто, в здравом уме, не стал бы одевать статую в _%s_.</string>
+
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">паук-страж</string>
+    <string name="SpiderGuard_Gender">masculine</string>
+    <string name="SpiderGuard_Name_Objective">паука-стража</string>
+    <string name="SpiderGuard_Desc">Подобно паукам-солдатам, стражи призваны защищать покой своего царства. Их яд вызывает временный паралич, что превращает укушенного в лёгкую добычу.</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">янтарный паук</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
+    <string name="SpiderMindAmber_Name_Objective">янтарного паука</string>
+    <string name="SpiderMindAmber_Desc">Янтарные пауки, это редкие загадочные существа, они обладают пси способностями подобно обычным пси-паукам, но при этом они гораздо сильнее физически. Название "янтарный" происходит от цвета их "мозговых коконов", которые открываются взору жертвы в тот момент, когда янтарный паук использует свои спосбности.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">Да, удалить!</string>
+    <string name="WndSaveSlotSelect_Delete_No">Нет</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Вы уверены что хотите удалить это сохранение?</string>
+</resources>
