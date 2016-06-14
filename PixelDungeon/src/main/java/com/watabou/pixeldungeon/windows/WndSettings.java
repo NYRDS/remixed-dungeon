@@ -182,12 +182,12 @@ public class WndSettings extends Window {
 				protected void onClick() {
 					PixelDungeon.scene().add(
 							new WndSelectLanguage(TXT_SElECT_LANGUAGE,  "English",
-									"Русский", "Français", "Polski", "Español","한국말","Português brasileiro","Italiano","Deutsch(73%)") {
+									"Русский", "Français", "Polski", "Español","한국말","Português brasileiro","Italiano","Deutsch(73%)","简体中文(72%)") {
 								
 								@Override
 								protected void onSelect(int index) {
-									String lang[] = { "en", "ru", "fr", "pl", "es","ko","pt_BR","it","de"};
-									if(lang[index].equals("ko")) {
+									String lang[] = { "en", "ru", "fr", "pl", "es","ko","pt_BR","it","de","zh"};
+									if(lang[index].equals("ko") || lang[index].equals("zh")) {
 										PixelDungeon.classicFont(false);
 									}
 									PixelDungeon.uiLanguage(lang[index]);
