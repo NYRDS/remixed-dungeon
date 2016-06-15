@@ -24,6 +24,13 @@
       "9":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.3},
       "10":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5}
    },
+   "NecroLevel":{
+      "6":{"Rat":1},
+      "7":{"Rat":1},
+      "8":{"Rat":1},
+      "9":{"Rat":1},
+      "10":{"Rat":1}
+   },
    "CavesLevel":{
       "11":{"Bat":1,"Brute":0.2},
       "12":{"Bat":1,"Brute":1,"Spinner":0.2},
