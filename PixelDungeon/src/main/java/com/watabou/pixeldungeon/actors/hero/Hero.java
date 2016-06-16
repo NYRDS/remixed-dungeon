@@ -1621,7 +1621,7 @@ public class Hero extends Char {
 	public void resurrect(int resetLevel) {
 
 		hp(ht());
-		Dungeon.gold = 0;
+		Dungeon.gold(0);
 		exp = 0;
 
 		belongings.resurrect(resetLevel);

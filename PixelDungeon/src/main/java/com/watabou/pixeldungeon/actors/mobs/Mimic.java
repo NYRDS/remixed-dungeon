@@ -79,9 +79,9 @@ public class Mimic extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		if (enemy == Dungeon.hero && Random.Int( 3 ) == 0) {
-			Gold gold = new Gold( Random.Int( Dungeon.gold / 10, Dungeon.gold / 2 ) );
+			Gold gold = new Gold( Random.Int( Dungeon.gold() / 10, Dungeon.gold() / 2 ) );
 			if (gold.quantity() > 0) {
-				Dungeon.gold -= gold.quantity();
+				Dungeon.gold(Dungeon.gold() - gold.quantity());
 				Dungeon.level.drop( gold, Dungeon.hero.getPos() ).sprite.drop();
 			}
 		}
