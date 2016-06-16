@@ -29,12 +29,14 @@ public class GoldenSword extends SpecialWeapon {
 	}
 
 	@Override
-	public void applySpecial(Hero hero, Char tgt ) {
+	public void proc( Char attacker, Char defender, int damage ) {
 		//Gold proc
 		if (Random.Int(10) == 1){
-		int price = this.price() / 10;
-		if ( price > 500) { price = 500;}
-			Dungeon.level.drop(new Gold(price), tgt.getPos());
+			int price = this.price() / 10;
+			if ( price > 500) { price = 500;}
+			Dungeon.level.drop(new Gold(price), defender.getPos());
 		}
+		usedForHit();
 	}
+
 }

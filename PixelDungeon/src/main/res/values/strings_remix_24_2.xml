@@ -5,5 +5,10 @@
     <string name="GoldenSword_Name">golden sword</string>
     <string name="GoldenSword_Info">Now that's shiny alright.</string>
     <string name="GoldenSword_Gender">masculine</string>
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">golden statue</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name_Objective">golden statue</string>
+    <string name="GoldenStatue_Desc">So shiny... and it's _%s_, even more shinier.</string>
 
 </resources>
