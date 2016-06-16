@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
@@ -252,8 +253,9 @@ public class Generator {
 			Kusarigama.class,
 			SacrificialSword.class,
 			Claymore.class,
-		    Halberd.class};
-		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f, 1, 1 };
+		    Halberd.class,
+			GoldenSword.class,};
+		Category.WEAPON.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f, 1, 1, 0.1f};
 		
 		Category.ARMOR.classes = new Class<?>[]{ 
 			ClothArmor.class, 

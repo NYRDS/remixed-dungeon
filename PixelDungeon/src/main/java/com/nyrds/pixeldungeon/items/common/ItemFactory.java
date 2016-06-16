@@ -337,6 +337,7 @@ public class ItemFactory {
 		registerItemClass(ChaosArmor.class);
 		registerItemClass(PotionOfMight.class);
 		registerItemClass(HeartOfDarkness.class);
+		registerItemClass(GoldenSword.class);
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {
