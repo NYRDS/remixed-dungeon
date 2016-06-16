@@ -44,7 +44,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class GoldenStatue extends Statue {
+public class GoldenStatue extends Mob {
 
 	private Weapon weapon;
 
