@@ -9,6 +9,6 @@
     <string name="GoldenStatue_Name">golden statue</string>
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name_Objective">golden statue</string>
-    <string name="GoldenStatue_Desc">So shiny... and it's _%s_, even more shinier.</string>
+    <string name="GoldenStatue_Desc">So shiny... and it\'s _%s_, even more shinier.</string>
 
 </resources>
