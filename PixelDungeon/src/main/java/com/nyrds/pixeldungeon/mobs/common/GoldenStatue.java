@@ -24,7 +24,12 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.Generator;
@@ -59,6 +64,16 @@ public class GoldenStatue extends Statue {
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
 		IMMUNITIES.add( Leech.class );
+	}
+
+	@Override
+	public int attackProc( Char enemy, int damage ) {
+
+		if (Random.Int( 10 ) == 1) {
+			Buff.affect( enemy, Burning.class ).reignite( enemy );
+		}
+
+		return damage;
 	}
 
 	@Override
