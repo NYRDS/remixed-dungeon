@@ -3,7 +3,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF GoldenSword -->
     <string name="GoldenSword_Name">golden sword</string>
-    <string name="GoldenSword_Info">Now that's shiny alright.</string>
+    <string name="GoldenSword_Info">Now that\'s shiny alright.</string>
     <string name="GoldenSword_Gender">masculine</string>
     <!-- STRINGS OF GoldenStatue CLASS -->
     <string name="GoldenStatue_Name">golden statue</string>
