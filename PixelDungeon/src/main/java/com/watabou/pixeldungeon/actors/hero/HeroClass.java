@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
+import com.watabou.pixeldungeon.items.armor.ScaleArmor;
 import com.watabou.pixeldungeon.items.armor.ShamanArmor;
 import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
@@ -130,14 +131,7 @@ public enum HeroClass {
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().upgrade(100));
 
-		hero.collect(new ElfArmor());
-		hero.collect(new BerserkArmor());
-		hero.collect(new FreeRunnerArmor());
-		hero.collect(new GladiatorArmor());
-		hero.collect(new HuntressArmor());
-		hero.collect(new ShamanArmor());
-		hero.collect(new SniperArmor());
-		hero.collect(new WardenArmor());
+		hero.collect(new ScaleArmor().upgrade(5));
 
 		hero.ht(1000);
 		hero.hp(1000);
