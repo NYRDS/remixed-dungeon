@@ -29,8 +29,7 @@ public class SpiderMindAmber extends MultiKindMob {
 		Roots.class,
 		Slow.class,
 		Vertigo.class,
-		Weakness.class,
-		Burning.class
+		Weakness.class
 	};
 
 	public SpiderMindAmber() {
