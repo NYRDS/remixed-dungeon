@@ -70,7 +70,7 @@ public class Chasm {
 		hero.releasePets();
 
 		if (hero.isAlive()) {
-			hero.interrupt();
+			hero.clearActions();
 			InterlevelScene.mode = InterlevelScene.Mode.FALL;
 			if (Dungeon.level instanceof RegularLevel) {
 				Room room = ((RegularLevel)Dungeon.level).room( pos );
