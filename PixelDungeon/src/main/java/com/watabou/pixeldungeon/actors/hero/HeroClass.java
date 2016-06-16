@@ -130,10 +130,10 @@ public enum HeroClass {
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 
 		hero.collect(new TomeOfMastery());
-		hero.collect(new Claymore().upgrade(100));
+		hero.collect(new Claymore().identify().upgrade(100));
 
-		hero.collect(new ScaleArmor().upgrade(5));
-		hero.collect(new GoldenSword().upgrade(5));
+		hero.collect(new ScaleArmor().identify().upgrade(5));
+		hero.collect(new GoldenSword().identify().upgrade(5));
 
 		hero.ht(1000);
 		hero.hp(1000);

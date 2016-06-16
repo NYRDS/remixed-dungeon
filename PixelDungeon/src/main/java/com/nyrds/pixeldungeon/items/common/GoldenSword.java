@@ -22,31 +22,7 @@ public class GoldenSword extends SpecialWeapon {
 	
 	@Override
 	public Glowing glowing() {
-		
-		float period = (float) Math.max(0.1, 0.1/baseChance(Dungeon.hero));
-		//GLog.i("base chance: %.3f %.3f",baseChance(Dungeon.hero), period);
-		
-		return new Glowing(0xFF4466, period);
-		
+		float period = 1;
+		return new Glowing(0xFFFF66, period);
 	}
-
-	private double baseChance(Hero hero) {
-		double armorPenalty = 1;
-
-		if(hero.belongings.armor != null) {
-			armorPenalty += hero.belongings.armor.tier;
-		}
-
-		double classBonus = 1;
-		if(hero.subClass == HeroSubClass.WARDEN ) {
-			classBonus = 1.5;
-		}
-
-		if(hero.subClass == HeroSubClass.SHAMAN) {
-			classBonus = 2.0;
-		}
-
-		return (0.25 + (hero.lvl() * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
-	}
-
 }
