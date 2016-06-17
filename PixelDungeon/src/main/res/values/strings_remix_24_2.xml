@@ -5,10 +5,23 @@
     <string name="GoldenSword_Name">golden sword</string>
     <string name="GoldenSword_Info">Now that\'s shiny alright.</string>
     <string name="GoldenSword_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
     <!-- STRINGS OF GoldenStatue CLASS -->
     <string name="GoldenStatue_Name">golden statue</string>
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name_Objective">golden statue</string>
     <string name="GoldenStatue_Desc">So shiny... and it\'s _%s_, even more shinier.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">necromancer</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
+    <string name="NecromancerNPC_Name_Objective">necromancer</string>
+    <string name="NecromancerNPC_Desc">That guy kinda reminds me of someone.</string>
+    <string name="NecromancerNPC_Intro">Duuude there\'s like gonna be a necropolis... DUDE!</string>
+    <string name="NecromancerNPC_Message1">I like can\'t wait.</string>
+    <string name="NecromancerNPC_Message2">You look stupid.</string>
+    <string name="NecromancerNPC_Message3">You smell funny.</string>
+    <string name="NecromancerNPC_Message4">Bite me.</string>
 
 </resources>

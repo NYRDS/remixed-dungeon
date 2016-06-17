@@ -10,18 +10,26 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.HedgehogSprite;
+import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class NecromancerNPC extends NPC {
 
+	private static final String TXT_INTRO = Game.getVar(R.string.NecromancerNPC_Intro);
+	private static final String TXT_MESSAGE1 = Game.getVar(R.string.NecromancerNPC_Message1);
+	private static final String TXT_MESSAGE2 = Game.getVar(R.string.NecromancerNPC_Message2);
+	private static final String TXT_MESSAGE3 = Game.getVar(R.string.NecromancerNPC_Message3);
+	private static final String TXT_MESSAGE4 = Game.getVar(R.string.NecromancerNPC_Message4);
+
+	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3, TXT_MESSAGE4};
+
 	{
 		flying = false;
 		state = WANDERING;
 	}
-
-	String[] phrases = {"Yo", "Sup", "Hey man", "I'd be delighted", "Okami yo waga teki wo kurau!", "Glory to the scourge!"};
 	
 	@Override
 	protected Char chooseEnemy() {
@@ -35,9 +43,24 @@ public class NecromancerNPC extends NPC {
 	@Override
 	public void add( Buff buff ) {
 	}
-	
+
+	private static String introduced_tag = "introduced";
+
 	private static boolean spawned;
-	
+	private boolean introduced = false;
+
+	@Override
+	public void storeInBundle( Bundle bundle ) {
+		super.storeInBundle(bundle);
+		bundle.put(introduced_tag, introduced);
+	}
+
+	@Override
+	public void restoreFromBundle( Bundle bundle ) {
+		super.restoreFromBundle(bundle);
+		introduced = bundle.getBoolean(introduced_tag);
+	}
+
 	public static void spawn( RegularLevel level ) {
 		if (!spawned && Dungeon.depth == 7) {
 			NecromancerNPC necro = new NecromancerNPC();
@@ -55,9 +78,15 @@ public class NecromancerNPC extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		int index = Random.Int(0, phrases.length);
-		say(phrases[index]);
-		
+		if (!introduced)
+		{
+			GameScene.show( new WndQuest( this, TXT_INTRO ) );
+			introduced = true;
+		}
+		else{
+			int index = Random.Int(0, TXT_PHRASES.length);
+			say(TXT_PHRASES[index]);
+		}
 		return true;
 	}
 
