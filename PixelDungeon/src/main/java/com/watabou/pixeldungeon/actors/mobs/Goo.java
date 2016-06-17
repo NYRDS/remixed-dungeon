@@ -40,12 +40,12 @@ import com.watabou.utils.Random;
 
 public class Goo extends Boss {
 
-	private static final float PUMP_UP_DELAY	= 2f;
+	private static final float PUMP_UP_DELAY	= 2.2f;
 	
 	public Goo() {
-		hp(ht(80));
-		EXP = 10;
-		defenseSkill = 12;
+		hp(ht(65));
+		EXP = 8;
+		defenseSkill = 10;
 		spriteClass = GooSprite.class;
 		
 		float dice = Random.Float();
@@ -57,7 +57,7 @@ public class Goo extends Boss {
 			loot = new RingOfStoneWalking();
 		}
 		
-		lootChance = 0.5f;
+		lootChance = 0.7f;
 		
 		RESISTANCES.add( ToxicGas.class );
 	}
@@ -83,15 +83,15 @@ public class Goo extends Boss {
 	@Override
 	public int damageRoll() {
 		if (pumpedUp) {
-			return Random.NormalIntRange( 5, 30 );
+			return Random.NormalIntRange( 5, 20 );
 		} else {
-			return Random.NormalIntRange( 2, 12 );
+			return Random.NormalIntRange( 2, 10 );
 		}
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return pumpedUp ? 30 : 15;
+		return pumpedUp ? 25 : 10;
 	}
 	
 	@Override
