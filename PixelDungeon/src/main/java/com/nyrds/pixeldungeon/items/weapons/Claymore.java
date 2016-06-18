@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.items.guts.weapon.melee;
+package com.nyrds.pixeldungeon.items.weapons;
 
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 

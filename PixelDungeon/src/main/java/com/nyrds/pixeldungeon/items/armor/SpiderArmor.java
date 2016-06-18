@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.items.common.armor;
+package com.nyrds.pixeldungeon.items.armor;
 
 import com.watabou.pixeldungeon.items.armor.Armor;
 

@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.items.common;
+package com.nyrds.pixeldungeon.items.weapons;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
