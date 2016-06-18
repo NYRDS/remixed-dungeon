@@ -1,0 +1,12 @@
+package com.nyrds.pixeldungeon.items.common.armor;
+
+import com.watabou.pixeldungeon.items.armor.Armor;
+
+public class SpiderArmor extends Armor {
+
+	public SpiderArmor() {
+		super( 2 );
+		image = 21;
+	}
+
+}
