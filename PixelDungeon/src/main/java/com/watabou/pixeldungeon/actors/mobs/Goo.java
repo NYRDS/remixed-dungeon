@@ -51,8 +51,6 @@ public class Goo extends Boss {
 		float dice = Random.Float();
 		if( dice < 0.33 ) {
 			loot = new LloydsBeacon();
-		} else if (dice < 0.66) {
-			loot = new SpiderCharm();
 		} else {
 			loot = new RingOfStoneWalking();
 		}
