@@ -1,16 +1,15 @@
-
-package com.nyrds.pixeldungeon.items.weapons;
+package com.nyrds.pixeldungeon.items.guts.weapon.ranged;
 
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 
-public class WoodenCrossbow extends Bow {
 
-	public WoodenCrossbow() {
+public class CompositeCrossbow extends Bow {
 
-		super( 2, 1.2f, 1.6f );
+	public CompositeCrossbow() {
+		super(4, 1.1f, 1.6f);
 		imageFile = "items/ranged.png";
-		image = 1;
+		image = 3;
 	}
 
 	@Override
@@ -20,11 +19,15 @@ public class WoodenCrossbow extends Bow {
 
 	@Override
 	public double acuFactor() {
-		return 1 + level() * 0.15;
+		return 1 + level() * 0.5;
 	}
 
 	@Override
 	public double dmgFactor() {
-		return 1 + level() * 0.35;
+		return 1 + level() * 0.75;
+	}
+
+	public double dlyFactor() {
+		return 1.1;
 	}
 }
