@@ -41,8 +41,9 @@ public class TomeOfMastery extends Item {
 
 	public static final float TIME_TO_READ = 10;
 
-	public static final String AC_READ	= Game.getVar(R.string.TomeOfMastery_ACRead);
-	
+	public static final String AC_READ                 = Game.getVar(R.string.TomeOfMastery_ACRead);
+	private static final String TXT_WAY_ALREADY_CHOSEN = Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen);
+
 	{
 		stackable = false;
 		image = ItemSpriteSheet.MASTERY;
@@ -64,7 +65,12 @@ public class TomeOfMastery extends Item {
 				GLog.w( TXT_BLINDED );
 				return;
 			}
-			
+
+			if(hero.subClass != HeroSubClass.NONE) {
+				GLog.w( TXT_WAY_ALREADY_CHOSEN );
+				return;
+			}
+
 			setCurUser(hero);
 			
 			HeroSubClass way1 = null;

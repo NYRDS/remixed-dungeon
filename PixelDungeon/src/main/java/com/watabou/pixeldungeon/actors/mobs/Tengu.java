@@ -93,10 +93,9 @@ public class Tengu extends Boss {
 			badgeToCheck = Badge.MASTERY_ELF;
 			break;
 		}
-		if (!Badges.isUnlocked( badgeToCheck ) || Dungeon.hero.getDifficulty() >= 3) {
-			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
-		}
-		
+
+		Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
+
 		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		super.die(cause);
