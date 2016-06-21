@@ -16,6 +16,7 @@ public class GoldenSword extends SpecialWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 5;
+		enchatable = false;
 	}
 
 	public GoldenSword() {
