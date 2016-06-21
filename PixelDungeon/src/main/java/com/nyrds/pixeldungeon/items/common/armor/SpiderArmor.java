@@ -7,6 +7,6 @@ public class SpiderArmor extends Armor {
 	public SpiderArmor() {
 		super( 2 );
 		image = 21;
+		hasHelmet = true;
 	}
-
 }
