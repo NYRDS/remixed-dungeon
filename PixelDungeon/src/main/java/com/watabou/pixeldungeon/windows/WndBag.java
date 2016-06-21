@@ -205,7 +205,7 @@ public class WndBag extends WndTabbed {
 		if (container == Dungeon.hero.belongings.backpack) {
 			row = nRows - 1;
 			col = nCols - 1;
-			placeItem( new Gold( Dungeon.gold ) );
+			placeItem( new Gold(Dungeon.gold()) );
 		}
 	}
 	

@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -82,7 +83,7 @@ public class Dungeon {
 	public static Level level;
 
 	public static int depth;
-	public static int gold;
+	private static int scrambledGold;
 
 	public static HashSet<Integer> chapters;
 
@@ -118,7 +119,7 @@ public class Dungeon {
 		Journal.reset();
 
 		depth = 0;
-		gold = 0;
+		gold(0);
 
 		potionOfStrength = 0;
 		scrollsOfUpgrade = 0;
@@ -291,7 +292,7 @@ public class Dungeon {
 		bundle.put(VERSION, Game.version);
 		bundle.put(CHALLENGES, challenges);
 		bundle.put(HERO, hero);
-		bundle.put(GOLD, gold);
+		bundle.put(GOLD, gold());
 		bundle.put(DEPTH, depth);
 
 		bundle.put(POS, potionOfStrength);
@@ -442,7 +443,7 @@ public class Dungeon {
 
 		hero = (Hero) bundle.get(HERO);
 
-		gold = bundle.getInt(GOLD);
+		gold(bundle.getInt(GOLD));
 		depth = bundle.getInt(DEPTH);
 
 		Statistics.restoreFromBundle(bundle);
@@ -653,4 +654,11 @@ public class Dungeon {
 		PixelDungeon.setDifficulty(difficulty);
 	}
 
+	public static int gold() {
+		return Scrambler.descramble(scrambledGold);
+	}
+
+	public static void gold(int value) {
+		scrambledGold = Scrambler.scramble(value);
+	}
 }

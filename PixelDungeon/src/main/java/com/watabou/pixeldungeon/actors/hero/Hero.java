@@ -817,7 +817,7 @@ public class Hero extends Char {
 		int stairs = action.dst;
 		if (getPos() == stairs && Dungeon.level.isExit(getPos())) {
 
-			curAction = null;
+			clearActions();
 
 			Hunger hunger = buff(Hunger.class);
 			if (hunger != null && !hunger.isStarving()) {
@@ -860,7 +860,7 @@ public class Hero extends Char {
 
 			} else {
 
-				curAction = null;
+				clearActions();
 
 				Hunger hunger = buff(Hunger.class);
 				if (hunger != null && !hunger.isStarving()) {
@@ -1394,7 +1394,7 @@ public class Hero extends Char {
 
 	@Override
 	public void die(Object cause) {
-		curAction = null;
+		clearActions();
 
 		DewVial.autoDrink(this);
 		if (isAlive()) {
@@ -1413,6 +1413,11 @@ public class Hero extends Char {
 			while(belongings.removeItem(ankh));
 			GameScene.show(new WndResurrect(ankh, cause));
 		}
+	}
+
+	public void clearActions() {
+		curAction  = null;
+		lastAction = null;
 	}
 
 	public static void reallyDie(Object cause) {
@@ -1624,7 +1629,7 @@ public class Hero extends Char {
 	public void resurrect(int resetLevel) {
 
 		hp(ht());
-		Dungeon.gold = 0;
+		Dungeon.gold(0);
 		exp = 0;
 
 		belongings.resurrect(resetLevel);

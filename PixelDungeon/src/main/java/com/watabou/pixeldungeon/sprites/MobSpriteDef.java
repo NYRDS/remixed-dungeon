@@ -10,7 +10,10 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.effects.DeathRay;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -156,6 +159,10 @@ public class MobSpriteDef extends MobSprite {
 		play(zap);
 
 		if (zapEffect != null) {
+			if (!Dungeon.visible[ch.getPos()] && Dungeon.visible[cell]){
+				return;
+			}
+
 			int[] points = new int[2];
 			points[0] = ch.getPos();
 			points[1] = cell;
@@ -181,10 +188,13 @@ public class MobSpriteDef extends MobSprite {
 				MagicMissile.fire(getParent(), ch.getPos(), cell, zapCallback);
 				return;
 			}
+
+			if(zapEffect.equals("DeathRay")) {
+				getParent().add(new DeathRay(center(), DungeonTilemap.tileCenterToWorld(cell)));
+				return;
+			}
 		}
 	}
-
-
 
 	@Override
 	public int blood() {
