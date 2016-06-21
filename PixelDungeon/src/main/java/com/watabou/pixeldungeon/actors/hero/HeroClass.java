@@ -134,6 +134,7 @@ public enum HeroClass {
 		hero.collect(new Claymore().identify().upgrade(100));
 
 		hero.collect(new SpiderArmor().identify());
+		hero.collect(new GladiatorArmor().identify());
 		hero.collect(new GoldenSword().identify().upgrade(5));
 
 		hero.ht(1000);
