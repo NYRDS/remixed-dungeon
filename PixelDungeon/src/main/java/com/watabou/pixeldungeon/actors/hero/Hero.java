@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
+import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -37,6 +38,8 @@ import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.Web;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -1078,6 +1081,11 @@ public class Hero extends Char {
 
 		checkIfFurious();
 		interrupt();
+
+		if (belongings.armor instanceof SpiderArmor)
+		{
+			GameScene.add( Blob.seed( getPos(), Random.Int( 5, 7 ), Web.class ) );
+		}
 
 		for (Item item : belongings) {
 			if (item instanceof IChaosItem && item.isEquipped(this)) {
