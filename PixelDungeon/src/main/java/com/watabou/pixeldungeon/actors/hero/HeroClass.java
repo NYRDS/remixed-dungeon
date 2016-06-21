@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
+import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
@@ -132,13 +133,13 @@ public enum HeroClass {
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().identify().upgrade(100));
 
-		hero.collect(new ScaleArmor().identify().upgrade(5));
+		hero.collect(new SpiderArmor().identify());
 		hero.collect(new GoldenSword().identify().upgrade(5));
 
 		hero.ht(1000);
 		hero.hp(1000);
 		hero.attackSkill = 1000;
-		hero.defenseSkill = 1000;
+		//hero.defenseSkill = 1000;
 
 	}
 
