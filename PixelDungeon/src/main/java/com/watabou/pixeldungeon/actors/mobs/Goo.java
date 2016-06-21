@@ -43,9 +43,9 @@ public class Goo extends Boss {
 	private static final float PUMP_UP_DELAY	= 2.2f;
 	
 	public Goo() {
-		hp(ht(65));
-		EXP = 8;
-		defenseSkill = 10;
+		hp(ht(68));
+		EXP = 9;
+		defenseSkill = 12;
 		spriteClass = GooSprite.class;
 		
 		float dice = Random.Float();
@@ -55,7 +55,7 @@ public class Goo extends Boss {
 			loot = new RingOfStoneWalking();
 		}
 		
-		lootChance = 0.7f;
+		lootChance = 0.8f;
 		
 		RESISTANCES.add( ToxicGas.class );
 	}
@@ -81,9 +81,9 @@ public class Goo extends Boss {
 	@Override
 	public int damageRoll() {
 		if (pumpedUp) {
-			return Random.NormalIntRange( 5, 20 );
+			return Random.NormalIntRange( 6, 20 );
 		} else {
-			return Random.NormalIntRange( 2, 10 );
+			return Random.NormalIntRange( 3, 10 );
 		}
 	}
 	
