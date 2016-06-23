@@ -24,6 +24,7 @@
   <string name="WndPremiumSettings_status">스테이터스 바 소재 선택</string>
   <string name="WndPremiumSettings_toolbar">툴 바 소재 선택</string>
   <string name="WndPremiumSettings_banners">배너 소재 선택</string>
+  <string name="WndPremiumSettings_notAvailbale">이 옵션은 아직 선택할 수 없음</string>
   <!--STRINGS OF DonateButton CLASS-->
   <string name="DonateButton_pleaseDonate">기부 부탁드립니다</string>
   <string name="DonateButton_thanks">당신의 후원에 감사드립니다!!</string>

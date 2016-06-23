@@ -63,7 +63,7 @@
   </string-array>
   <string-array name="HeroClass_ElfPerks">
     <item>Elfy zaczynają z 15-stoma punktami Życia ale z 9-cioma punktami Siły.</item>
-    <item>Elfy są odporne na unieruchomienie (nie mylić z paraliżem).</item>
+    <item>Elfy są odporne na unieruchomienie.</item>
     <item>Elfy zaczynają z ulepszonym łukiem, sztyletem, zbroją i kilkoma strzałami.</item>
     <item>Elfy są niezwykle biegłe w używaniu łuków i zręczne.</item>
     <item>Elfy są mniej utalentowane jeśli chodzi o walkę wręcz.</item>

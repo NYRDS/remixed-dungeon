@@ -17,6 +17,7 @@
   <string name="MimicAmulet_Desc">당신이 한 모험의 가장 영광스러운 순간은 그저 함정이었을 뿐이었다.</string>
   <!--STRINGS OF Nightmare CLASS-->
   <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">잡았다, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <!--STRINGS OF Worm CLASS-->
   <!--STRINGS OF YogsBrain CLASS-->
