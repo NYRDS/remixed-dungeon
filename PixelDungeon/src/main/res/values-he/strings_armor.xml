@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_Info6">זה חרוט. </string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">הדבר נראה מדהים! </string>
+  <string name="ClassArmor_LowHealt">רמת הבריאות שלך היא נמוכה מדי! </string>
+  <string name="ClassArmor_NotEquipped">אתה צריך ללבוש את השיריון הזה, על מנת להשתמש ביכולות מיוחדות שלו.</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">שריון בד </string>
+  <string name="ClothArmor_Desc">שריון קל משקל זה מציע הגנה בסיסית. </string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">גלימה אלפית </string>
+  <string name="ElfArmor_NotElf">רק אלפים יכולים להשתמש בשיריון הזה</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">גלימת הציידת</string>
+  <string name="HuntressArmor_ACSpecial">להבים ספקטראליים</string>
+  <string name="HuntressArmor_NoEnemies">אין אויבים בטווח הראיה </string>
+  <string name="HuntressArmor_NotHuntress">רק ציידת יכולה להשתמש בשיריון הזה</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">שריון עור</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">גלימת קוסם </string>
+  <string name="MageArmor_ACSpecial">אדמה המותכת</string>
+  <string name="MageArmor_NotMage">רק קוסמים יכולים להשתמש שריון זה</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">שריון שרשראות </string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">שריון לוחות</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">תלבושת נוכל</string>
+  <string name="RogueArmor_ACSpecial">פצצת עשן</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <!--STRINGS OF Bounce CLASS-->
+  <!--STRINGS OF Displacement CLASS-->
+  <!--STRINGS OF Entanglement CLASS-->
+  <!--STRINGS OF Metabolism CLASS-->
+  <!--STRINGS OF Multiplicity CLASS-->
+  <!--STRINGS OF Potential CLASS-->
+  <!--STRINGS OF Stench CLASS-->
+  <!--STRINGS OF Viscosity CLASS-->
+  <!--STRINGS OF DeferedDamage CLASS-->
+</resources>

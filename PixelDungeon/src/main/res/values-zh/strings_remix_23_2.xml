@@ -11,17 +11,17 @@
     <string name="Halberd_Gender">feminine</string>
 
     <!-- STRINGS OF WoodenCrossbow CLASS -->
-    <string name="WoodenCrossbow_Name">木制十字弓</string>
-    <string name="WoodenCrossbow_Info">一种基础的木制十字弓，看起来是设计用来发射弓箭的。</string>
+    <string name="WoodenCrossbow_Name">木制弩</string>
+    <string name="WoodenCrossbow_Info">一种基础的木制弩，看起来是设计用来发射弓箭的。</string>
     <string name="WoodenCrossbow_Gender">masculine</string>
 
     <!-- STRINGS OF CompositeCrossbow CLASS -->
-    <string name="CompositeCrossbow_Name">复合十字弓</string>
-    <string name="CompositeCrossbow_Info">这种加强版的十字弓和木头做的相比更有效率。</string>
+    <string name="CompositeCrossbow_Name">复合弩</string>
+    <string name="CompositeCrossbow_Info">这种加强版的弩和木头做的相比更有效率。</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
 
     <!-- STRINGS OF RubyCrossbow CLASS -->
-    <string name="RubyCrossbow_Name">红宝石十字弓</string>
+    <string name="RubyCrossbow_Name">红宝石弩</string>
     <string name="RubyCrossbow_Info">这个致命的武器确实是矮人工程师的杰作。</string>
     <string name="RubyCrossbow_Gender">masculine</string>
 

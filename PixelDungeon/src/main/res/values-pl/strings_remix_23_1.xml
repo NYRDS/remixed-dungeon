@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Nieznajomy</string>
+  <string name="AzuterronNPC_Gender">męski</string>
+  <string name="AzuterronNPC_Name_Objective">Nieznajomy</string>
+  <string name="AzuterronNPC_Desc">tajemnicza figura owiana czarną mgłą.</string>
+  <string name="AzuterronNPC_Quest_Reminder">Pomóż mi, a ja ci pomóc</string>
+  <string name="AzuterronNPC_Quest_End">Co ciekawe Tutaj tak bardzo napój, pewno,  ty znajdzie to korzystne.</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">wiarołomny dusza</string>
+  <string name="TreacherousSpirit_Gender">męski</string>
+  <string name="TreacherousSpirit_Name_Objective">wiarołomny dusza</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">dusza bóli</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <!--STRINGS OF PseudoRat CLASS-->
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <!--Badges-->
+</resources>

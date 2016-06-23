@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">Codex</string>
+  <string name="Codex_ACRead">LESEN</string>
+  <string name="Codex_Info">Eines von vielen Büchern das man in der Bibliothek finden kann</string>
+  <string name="Codex_Blinded">Du kannst nicht lesen während du geblendet bist</string>
+</resources>

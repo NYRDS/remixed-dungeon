@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">Arco de madera</string>
+  <string name="WoodenBow_Info">Este simple arco de madera pudiera ser útil, una vez que encuentres flechas.</string>
+  <string name="WoodenBow_Gender">masculino</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">Arco compuesto</string>
+  <string name="CompoundBow_Gender">masculino</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Gender">masculino</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Info"></string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Info"></string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Info"></string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <!--STRINGS OF FireArrow CLASS-->
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <!--STRINGS OF FrostArrow CLASS-->
+</resources>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Welcome_Title">Bem vindo!</string>
+  <string name="Welcome_Text">
+Remixed Pixel Dungeon é uma modificação de Pixel Dungeon open source por Watabou.\n
+Este projeto foi feito para oferecer uma nova experiência e contudo aos jogadores.\n
+Uma outra importante parte do projeto é desenvolver o suporte multi línguas para o jogo.\n
+Com cada atualização tentamos nos manter o mais próximo possível da comunidade.\n
+E se um dia você ver sua ideia implementada no jogo... Obrigado pela criatividade =)\n
+Versão atual baseada em Pixel Dungeon 1.7.2 e parcialmente 1.7.5.\n
+Diferenças do original: \n
+-Opção de mudar de língua\n
+-Novos monstros e NPC\'s\n
+-Gás tóxico e Fogo capazes de interagir com mais itens\n
+-Novos tipos de «comida»\n
+-Novos itens e novas propriedades para alguns itens antigos\n
+-Sementes podem ser comidas agora =)\n
+-Elfos
+</string>
+  <string name="Welcome_Text_19">
+remix.17:\n
+-Novo tipo de mímico\n
+remix.18:\n
+-Elementais\n
+remix.19:\n
+-Aranhas\n
+-Níveis de aranha\n
+-Aranha Rainha\n</string>
+  <string name="Welcome_Text_20">
+        remix.20:\n
+        - Novos itens raros - kusarigama\n
+        - Novos mobs raros\n
+        - O jogo permite Salvar e Carregar\n
+        - E muitas outras coisas não visíveis\n
+        </string>
+  <string name="Welcome_Text_20_1">
+remix.20.1:\n
+- Pergaminho de Dominação\n
+- Pergaminho de Madilção\n
+</string>
+  <string name="Welcome_Text_20_2">
+remix.21:\n
+- Itens raros do Caos\n
+- O Líquido inflamável esta realmente líquido agora\n
+</string>
+  <string name="Welcome_Text_21_1">
+        remix.21.1:\n
+        - Modo Fácil (com propaganda)\n
+        - Modo Expert\n
+        </string>
+  <string name="Welcome_Text_21_2">
+        remix.21.2:\n
+        - Possibilidade de escolher game mods (somente remodelagem visual por enquanto) ( Usável apenas para jogadores experientes)\n
+        </string>
+</resources>

@@ -4,7 +4,7 @@
     <!-- STRINGS OF BroadSword CLASS -->
     <string name="Claymore_Name">Клеймор</string>
     <string name="Claymore_Info">Этот  увесистый меч должен быть в состоянии разрубить всё что угодно.</string>
-    <string name="Claymore_Gender">masculine</string>
+    <string name="Claymore_Gender">feminine</string>
 
     <!-- STRINGS OF Halberd CLASS -->
     <string name="Halberd_Name">Алебарда</string>

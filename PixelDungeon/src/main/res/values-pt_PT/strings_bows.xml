@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <!--STRINGS OF WoodenBow CLASS-->
+  <!--STRINGS OF CompoundBow CLASS-->
+  <!--STRINGS OF RubyBow CLASS-->
+  <!--STRINGS OF Quiver CLASS-->
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Info"></string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Info"></string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Info"></string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Gender">feminino</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Gender">feminino</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Gender">feminino</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Gender">feminino</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Gender">feminino</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">Αυτό είναι ένα όπλο απόστασης. Είναι άχρηστο για όλους εκτός από τα ξωτικά σε πολύ κοντινή απόσταση. Έχοντας ένα τόξο σας επιτρέπει να ρίχνετε βέλη φωτιάς.\n\n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">ξύλινο τόξο</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <!--STRINGS OF RubyBow CLASS-->
+  <!--STRINGS OF Quiver CLASS-->
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Info"></string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Info"></string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Info"></string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <!--STRINGS OF FireArrow CLASS-->
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <!--STRINGS OF FrostArrow CLASS-->
+</resources>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
@@ -90,4 +90,6 @@
   <string name="ScrollOfWeaponUpgrade_Info">Ten zwój ulepszy broń białą, polepszając jej jakość. W przeciwieństwie do zwykłego Zwoju Ulepszenia, ta wyspecjalizowana wersja nigdy nie zniszczy zaklęcia na broni. Przeciwnie, jest w stanie zakląć niezaklęty przedmiot losowym efektem.</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Wybierz broń do ulepszenia</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">%s wygląda teraz zdecydowanie lepiej</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
 </resources>

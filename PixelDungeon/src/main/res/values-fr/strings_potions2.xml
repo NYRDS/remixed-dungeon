@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/potions additional strings-->
   <string name="Potion_ACMoisten">Humidifier</string>
@@ -7,4 +7,5 @@
   <string name="Potion_RuneDissaperaed">Rune disparu de %s</string>
   <string name="Potion_ArrowMoisten">Vous succesifully flèches humides.</string>
   <string name="Potion_ItemFliesAway">%s juste fichiers loin de vos mains</string>
+  <string name="Potion_FoodRefreshed">%s semble maintenant comestible</string>
 </resources>

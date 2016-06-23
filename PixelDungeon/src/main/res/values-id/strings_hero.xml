@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">anda</string>
+  <string name="Hero_Name_Objective">anda</string>
+  <string name="Hero_Leave">Satu hal simpel anda tidak bisa meninggalkan Pixel Dungeon.</string>
+  <string name="Hero_LevelUp">naik level!</string>
+  <string name="Hero_NewLevel">Selamat datang di level %d! Sekarang anda lebih segar dan fokus. Lebih mudah untuk anda mengenai musuh dan menghindari serangan mereka.</string>
+  <string name="Hero_YouNowHave">Sekarang anda punya %s</string>
+  <string name="Hero_SomethingElse">Ada sesuatu lagi di sini</string>
+  <string name="Hero_LockedChest">Peti ini terkunci dan anda tidak punya kunci yang cocok</string>
+  <string name="Hero_LockedDoor">Anda tidak punya kunci yang cocok</string>
+  <string name="Hero_NoticedSmth">Anda menyadari sesuatu</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">cari</string>
+  <string name="Hero_StaBurning">Anda terbakar!</string>
+  <string name="Hero_StaParalysis">Anda beku!</string>
+  <string name="Hero_StaPoison">Anda keracunan!</string>
+  <string name="Hero_StaRoots">Anda tidak bisa bergerak!</string>
+  <string name="Hero_StaWeakness">Anda merasa melemah!</string>
+  <string name="Hero_StaBlindness">Anda buta!</string>
+  <string name="Hero_StaFury">Anda sangat marah!</string>
+  <string name="Hero_StaFurious">sangat marah</string>
+  <string name="Hero_StaBleeding">Anda berdarah!</string>
+  <string name="Hero_StaVertigo">Semuanya berputar di sekeliling anda!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">pejuang</string>
+  <string name="HeroClass_Mag">penyihir</string>
+  <string name="HeroClass_Rog">penjahat</string>
+  <string name="HeroClass_Hun">pemburu</string>
+  <string name="HeroClass_Elf">elf</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Pejuang mulai dengan 11 poin Kekuatan.</item>
+    <item>Pejuang mulai dengan pedang pendek unik. Pedang ini dapat \"dilebur\" nanti untuk memperbaharui senjata jarak pendek lain .</item>
+    <item>Pejuang kurang pandai menggunakan senjata jarak jauh .</item>
+    <item>Jenis makanan apapun memulihkan nyawa saat dimakan.</item>
+    <item>Ramuan Kekuatan sudah diketahui dari awal.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Penyihir mulai dengan tongkat misil unik. Tongkat ini dapat \"diturunkan\" untuk memperbaharui tongkat lain.</item>
+    <item>Penyihir mengecas tongkat mereka lebih cepat.</item>
+    <item>Saat makan, jenis makanan apapun mengecas 1 poin semua tongkat yang ada di inventaris.</item>
+    <item>Penyihir dapat menggunakan tongkat untuk senjat jarak dekat.</item>
+    <item>Gulungan Identifikasi suda diketahui dari awal.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Penjahat mulai dengan cincin kegelapan+1.</item>
+    <item>Penjahat dapat mengetahui cincin secara langsung saat memakainya.</item>
+    <item>Penjahat pandai dengan proteksi ringan, menghindari lebih baik saat memakainya.</item>
+    <item>Penjahat pandai mendeteksi pintu dan jebakan tersembunyi.</item>
+    <item>Penjahat dapat menahan lapar lebih lama.</item>
+    <item>Gulungan Pemetaan Sihir sudah diketahui dari awal.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladiator</string>
+  <string name="HeroSubClass_DescGlad">Serangan berhasil dengan senjata jarak dekat memperbolehkan _Gladiator_ untuk memulai sebuah kombo, dengan setiap serangan berhasil mengakibatkan serangan lebih kuat.</string>
+  <string name="HeroSubClass_NameBers">pengamuk</string>
+  <string name="HeroSubClass_DescBers">Saat terluka parah, _Pengamuk_ akan masuk ke status sangat marah yang akan meningkatkan serangannya.</string>
+  <string name="HeroSubClass_NameWarL">dukun</string>
+  <string name="HeroSubClass_DescWarL">Setelah membunuh musuh _Dukun_ akan mengambil roh musuh tersebut. Roh itu akan menyembuhkan luka dukun dan memuaskan kelaparannya.</string>
+  <string name="HeroSubClass_NameBatM">ahli sihir</string>
+  <string name="HeroSubClass_DescBatM">Saat bertarung dengan tongkat di tangannya, _Ahli sihir_ akan mengakibatkan serangan tambahan tergantung pada sisa energinya. Setiap serangan yang berhasil mengecas 1 poin tenaga ke tongkat itu.</string>
+  <string name="HeroSubClass_NameAssa">pembunuh</string>
+  <string name="HeroSubClass_DescAssa">Saat melakukan serangan tiba-tiba, _Pembunuh_ akan mengakibatkan serang lebih besar ke targetnya.</string>
+  <string name="HeroSubClass_NameSnip">penembak jitu</string>
+  <string name="HeroSubClass_DescSnip">_Penembak jitu_ dapat mendeteksi titik kelemahan di baju zirah musuh, sangat efektif menyerang musuh itu dengan senjata jarak jauh.</string>
+  <string name="HeroSubClass_NameShaman">dukun</string>
+</resources>

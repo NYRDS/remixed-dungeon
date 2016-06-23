@@ -42,4 +42,47 @@ remix.20：
 remix.20.1：
 - 支配卷轴
 - 诅咒卷轴</string>
+  <string name="Welcome_Text_20_2">
+remix.21：
+- 稀有的混沌物品
+- 液火现在真的像是液体了</string>
+  <string name="Welcome_Text_21_1">
+remix.21.1：
+- 简单模式(带广告)
+- 专家模式</string>
+  <string name="Welcome_Text_21_2">
+remix.21.2：
+- 能够选择游戏MOD(只是现在植入的)(只适用于熟练的MOD制作者)</string>
+  <string name="Welcome_Text_21_3">
+remix.21.3：
+- PD mini现在可以下载了(虽然没有完成但很有趣)
+- 改善下水道地区的贴图</string>
+  <string name="Welcome_Text_21_4">
+remix.21.4：
+- 新的稀有武器——牺牲之剑</string>
+  <string name="Welcome_Text_21_5">
+remix.21.5：
+- 旧物品的新特性</string>
+  <string name="Welcome_Text_22">
+remix.22：
+- 新的隐藏BOSS</string>
+  <string name="Welcome_Text_23">
+remix.23：
+- 地牢现在有32层深了(而不是26层)
+- 隐藏的BOSS移到了25层
+- 更多的小BOSS会加入最终战中(Yog现在能从总共5个小BOSS中选择，而不是两个拳头)
+- 新的设置选项，27层-31层增加新怪物</string>
+  <string name="Welcome_Text_23_1">
+remix.23.1：
+- 在27层有了新的NPC，任务和商店
+- 恶魔巢穴(27层-31层)有了新的怪物
+- 27层-32层的所有怪物和BOSS都增强了
+  - 增加新的BOSS徽章
+  - 一些画面小细节的改进
+  - 修复了一些bug</string>
+  <string name="Welcome_Text_23_2">
+remix.23.：
+- 增加6阶武器和护甲
+- 增加弩
+- 增加混沌护甲</string>
 </resources>

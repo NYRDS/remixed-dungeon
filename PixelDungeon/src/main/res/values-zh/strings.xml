@@ -40,6 +40,7 @@
   </string-array>
   <string name="Char_YouMissed">%1$s %2$s 了你的攻击</string>
   <string name="Char_SmbMissed">%1$s %2$s 了 %3$s 的攻击</string>
+  <string name="Char_OutParalysis">疼痛使%s的麻痹解除了</string>
   <string-array name="Char_StaDodged">
     <item>闪避</item>
     <item>闪避</item>
@@ -81,15 +82,19 @@
   <string name="Journal_Troll">布莱克史密斯铁匠</string>
   <string name="Journal_Imp">野心勃勃的小鬼</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Select">选择一个物品重铸</string>
+  <string name="WndBlacksmith_Reforge">重铸它们</string>
   <!--STRINGS OF WndCatalogus CLASS-->
   <string name="WndCatalogus_Potions">药水</string>
   <string name="WndCatalogus_Scrolls">卷轴</string>
+  <string name="WndCatalogus_Title">目录</string>
   <!--STRINGS OF WndChallenges CLASS-->
   <string name="WndChallenges_Title">挑战</string>
   <!--STRINGS OF WndChooseWay CLASS-->
   <string name="WndChooseWay_Message">你选择哪条道路？</string>
   <string name="WndChooseWay_Cancel">我待会再决定</string>
   <!--STRINGS OF WndClass CLASS-->
+  <string name="WndClass_Mastery">掌握</string>
   <!--STRINGS OF WndError CLASS-->
   <string name="WndError_Title">未知错误</string>
   <!--STRINGS OF WndGame CLASS-->
@@ -110,6 +115,7 @@
   <string name="WndHero_Health">生命</string>
   <string name="WndHero_Gold">收集的金币</string>
   <string name="WndHero_Depth">最高层数</string>
+  <string name="WndHero_StaCatalogus">目录</string>
   <string name="WndHero_StaJournal">经历</string>
   <!--STRINGS OF WndImp CLASS-->
   <string name="WndImp_Reward">收下戒指</string>
@@ -182,9 +188,11 @@
   <string name="Torch_ACLight">点燃</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">磨刀石</string>
+  <string name="Weightstone_Accurate">你将你的%s磨得更精准了</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
   <!--STRINGS OF Keyring CLASS-->
+  <string name="Keyring_Info">这是一个铜钥匙圈，它能让你将你的钥匙和其他物品分开存放。</string>
   <!--STRINGS OF ScrollHolder CLASS-->
   <string name="ScrollHolder_Name">卷轴筒</string>
   <!--STRINGS OF SeedPouch CLASS-->
@@ -212,6 +220,7 @@
   <string name="Pickaxe_Gender">feminine</string>
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">巨大老鼠头骨</string>
+  <string name="RatSkull_Info2">另一方面，这表明它的所有者拥有杀死老鼠的能力，即使是这么大而难闻的。</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <!--STRINGS OF Fire CLASS-->

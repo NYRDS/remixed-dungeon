@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Horror CLASS-->
+  <!--STRINGS OF Instability CLASS-->
+  <!--STRINGS OF Leech CLASS-->
+  <!--STRINGS OF Luck CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Piercing CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF Swing CLASS-->
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <!--STRINGS OF BattleAxe CLASS-->
+  <!--STRINGS OF Dagger CLASS-->
+  <!--STRINGS OF Glaive CLASS-->
+  <!--STRINGS OF Knuckles CLASS-->
+  <!--STRINGS OF Longsword CLASS-->
+  <!--STRINGS OF Mace CLASS-->
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <!--STRINGS OF ShortSword CLASS-->
+  <!--STRINGS OF Spear CLASS-->
+  <!--STRINGS OF Sword CLASS-->
+  <!--STRINGS OF WarHammer CLASS-->
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Yes">Так, я знаю що роблю.</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <!--STRINGS OF CurareDart CLASS-->
+  <!--STRINGS OF Dart CLASS-->
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <!--STRINGS OF Javelin CLASS-->
+  <!--STRINGS OF Shuriken CLASS-->
+  <!--STRINGS OF Tamahawk CLASS-->
+  <!--STRINGS OF Kusarigama CLASS-->
+  <!--STRINGS OF ChaosSword CLASS-->
+  <!--STRINGS OF ChaosBow CLASS-->
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <!--STRINGS OF SacrificialSword CLASS-->
+</resources>

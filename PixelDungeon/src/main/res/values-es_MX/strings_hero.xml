@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">tu</string>
+  <string name="Hero_Name_Objective">tu</string>
+  <string name="Hero_Leave">Uno simplemente no deja Pixel Dungeon.</string>
+  <string name="Hero_LevelUp">Subiste de nivel!</string>
+  <string name="Hero_YouNowHave">Ahora tienes %s</string>
+  <string name="Hero_SomethingElse">Hay algo mas aqui</string>
+  <string name="Hero_LockedChest">Este cofre esta cerrado y tu no tienes su llave.</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <!--STRINGS OF HeroSubClass CLASS-->
+</resources>

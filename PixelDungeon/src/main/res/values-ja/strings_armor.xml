@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_Info5">あなたにとって、この鎧は重い。</string>
+  <string name="Armor_Info6">それは記入される。</string>
+  <string name="Armor_Glyph">象形文字</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">アイテムがよく見える！</string>
+  <string name="ClassArmor_LowHealt">あなたは不健康だ！</string>
+  <string name="ClassArmor_NotEquipped">この鎧をつけるとあなたはパワーアップするだろう。</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">布製の鎧</string>
+  <string name="ClothArmor_Desc">この軽い鎧は普通の性能だ。</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">エルヴンマント</string>
+  <string name="ElfArmor_ACSpecial">自然を呼び出す</string>
+  <string name="ElfArmor_NotElf">エルフだけがこの鎧を使うことができます。</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">女猟師のマント</string>
+  <string name="HuntressArmor_ACSpecial">スペクトルブレード</string>
+  <string name="HuntressArmor_NotHuntress">女猟師だけがこの鎧を使うことができます。</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">皮製の鎧</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">魔術師のローブ</string>
+  <string name="MageArmor_ACSpecial">モルテンアース</string>
+  <string name="MageArmor_NotMage">魔術師だけがこの鎧を使うことができます！</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">メイルアーマー</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">プレートアーマー</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">ローグの服</string>
+  <string name="RogueArmor_ACSpecial">発煙筒</string>
+  <string name="RogueArmor_NotRogue">ローグだけがこの鎧を使うことができます！</string>
+  <string name="RogueArmor_Fov">あなたは跳んでフィールドを眺めることができます。</string>
+  <string name="RogueArmor_Prompt">跳ぶ場所を選んでください。</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">骨の鎧</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">戦士の鎧服</string>
+  <string name="WarriorArmor_ACSpecial">英雄の跳躍</string>
+  <string name="WarriorArmor_NotWarrior">戦士だけがこの鎧を使うことができます！</string>
+  <string name="WarriorArmor_Prompt">跳躍する方向を選んでください。</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <!--STRINGS OF Bounce CLASS-->
+  <!--STRINGS OF Displacement CLASS-->
+  <!--STRINGS OF Entanglement CLASS-->
+  <!--STRINGS OF Metabolism CLASS-->
+  <!--STRINGS OF Multiplicity CLASS-->
+  <!--STRINGS OF Potential CLASS-->
+  <!--STRINGS OF Stench CLASS-->
+  <!--STRINGS OF Viscosity CLASS-->
+  <!--STRINGS OF DeferedDamage CLASS-->
+</resources>

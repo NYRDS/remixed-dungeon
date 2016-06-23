@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Codex CLASS-->
   <string name="Codex_Name">Codex</string>
@@ -7,29 +7,40 @@
   <string name="Codex_Blinded">No puedes leer mientras estás cegado.</string>
   <string-array name="Codex_Story">
     <item>Y creó Watabou Pixel Dungeon. Y miró su trabajo. ¡Y vio que era bueno!</item>
-    <item>Glifo de Rebote - Hace que los enemigos retrocedan al golpear al heroe.</item>
-    <item>Glifo de afecto - El enemigo quedará encantado durante algunos turnos. El héroe también, pero menos que el enemigo.</item>
-    <item>Glifo de anti-entropía - El héroe se iluminará y arderá en llamas, mientras que el enemigo se congelará.</item>
-    <item>Glifo de multiplicación - El héroe invocará una copia de si mismo, pero recibirá daño. Esto puede matar al héroe.</item>
-    <item>Glifo potencial- Esto desatará una especie de relámpago explosivo que dañará al enemigo que atacó al héroe, pero el héroe recibirá la mitad del daño causado.</item>
-    <item>Glifo de metabolismo - El héroe será parcialmente curado antes de recibir el daño de un enemigo. Sólo se aplicará si el héroe no está muriendo de hambre. Además, el hambre del héroe crecerá más deprisa.</item>
-    <item>Glifo de fetidez - El héroe liberará una nube de gas tóxico cuando sea golpeado.</item>
-    <item>Glifo de viscosidad - El héroe obtendrá la desventaja de daño diferido, lo que hará que reciba 1 punto de daño por turno en lugar de todo e daño a la vez.</item>
-    <item>Glifo de desplazamiento - Cuando el héroe sea golpeado hay una posibilidad de que sea transportado a una casilla visible al azar. No funciona en los niveles con jefes.</item>
-    <item>Glifo de enredo - El héroe puede recibir armadura orgánica, pero quedará enraizado al mismo tiempo.</item>
-    <item>Arma macabra -  Al golpear con éxito puede matar instantáneamente al objetivo (o hacer el x2 de daño a un jefe) </item>
-    <item>Arma ardiente - Al golpear con éxito hace daño extra y puede quemar al objetivo. </item>
-    <item>Arma aterradora - Al golpear con éxito el enemigo puede que huya aterrorizado.</item>
-    <item>Arma inestable - Al golpear con éxito puede aplicar el efecto de un encantamiento al azar.</item>
-    <item>Arma vampírica - Al golpear con éxito puede curar al héroe parte del daño causado al enemigo.</item>
-    <item>Arma con suerte - Ignora casi completamente el arma del enemigo, y hace mucho más daño.</item>
-    <item>Arma paralizante - Al golpear con éxito puede paralizar al objetivo.</item>
-    <item>Arma perforante -  Al golpear con éxito puede dañar a todos los enemigos que estén en línea detrás del objetivo.</item>
-    <item>Arma venenosa - Al golpear con éxito puede envenenar al objetivo.</item>
-    <item>Arma gélida - Al golpear con éxito puede ralentizar al objetivo y evitar que se queme.</item>
-    <item>Arma salvaje -Al golpear con éxito puede dañar a todos los enemigos adyacentes al objetivo.</item>
-    <item>Este libro está escrito en lenguaje demoníaco.</item>
-    <item>Este libro está escrito en la lengua de los enanos. </item>
-    <item>Este libro está escrito en élfico.</item>
+    <item>Glifo de Rebote - Causa que el enemigo retrocedan si golpean al héroe.</item>
+    <item>Glifo de Afecto - El enemigo es encantado por algunos turnos, el héroe también es encantado por algunos turnos, pero no más que el enemigo.</item>
+    <item>Glifo Anti-entropía - El héroe es iluminado e incendiado, el enemigo es congelado.</item>
+    <item>Glifo de Multiplicación - Este efecto hace que el héroe cree copias, pero recibirá daño. Esto puede matar al héroe</item>
+    <item>Glifo de Potencia - Esto lanzara una especie de rayo explosivo dañando al enemigo que golpeo al héroe, pero el héroe recibirá la mitad del daño.</item>
+    <item>Glifo de Metabolismo - El héroe se cura de forma parcial antes de atacar a un enemigo, pero el hambre incrementa más rápido. Solo funciona si no se esta muriendo de hambre.</item>
+    <item>Glifo de Hedor - El héroe expulsa una nube toxica de gas cuando es golpeado.</item>
+    <item>Glifo de Viscosidad - El héroe obtiene la desventaja de daño diferido, el héroe recibe 1 de daño por turno, en lugar de recibir todo el daño de golpe.</item>
+    <item>Glifo de Desplazamiento - Cuando el héroe es golpeado es posible que sea transportado a una ubicación visible aleatoria. Este glifo no funciona en los niveles de los jefes..</item>
+    <item>Glifo de Enraizado - El héroe recibe una armadura orgánica, pero quedara enraizado al mismo tiempo.</item>
+    <item>Arma sombría - Un golpe exitoso, puede matar instantáneamente (o causar doble daño contra un jefe).</item>
+    <item>Arma ígnea - Un golpe exitoso, puede causar daño extra y quemar al enemigo.</item>
+    <item>Arma siniestra - Un golpe exitosos, puede hacer huir de terror al enemigo.</item>
+    <item>Arma inestable - Un golpe exitoso, puede aplicar el efecto de un hechizo al azar.</item>
+    <item>Arma vampiro - Un golpe exitoso, puede curar al parcialmente al héroe en base al daño producido al enemigo.</item>
+    <item>Arma de la suerte - Puede ignorar por completo la armadura del enemigo y hacer mucho mas daño.</item>
+    <item>Arma contundente - Un golpe exitoso, puede paralizar al objetivo.</item>
+    <item>Arma perforante -  Un golpe exitoso, puede dañar a los enemigos en linea recta detrás del objetivo.</item>
+    <item>Arma venenosa - Un golpe exitoso, puede envenenar al objetivo.</item>
+    <item>Arma congelante - Un golpe exitoso, puede ralentizar al enemigo y prevenir que se queme.</item>
+    <item>Arma salvaje - Un golpe exitoso, puede dañar los enemigos cercanos al objetivo.</item>
+    <item>Este libro esta escrito en lengua demoníaca</item>
+    <item>Este libro esta escrito en lengua enana</item>
+    <item>Este libro esta escrito en lengua élfica</item>
+    <item>Ella se detuvo, congelada, frente a la pesada puerta de roble, observó la luz que emergía del otro lado de la puerta. Desde un rincón olvidado de su mente, la reconoció.\n
+\"La luz del sol...\" murmuró para sí misma. ¿Cuánto tiempo había pasado? En la eterna penumbra de la mazmorra… hacía mucho tiempo que había dejado de lado el seguimiento de los días. La luz iluminó sus recuerdos en desuso. Se acordó de su entrenamiento, sus largas jornadas de ardua práctica con el sonido de las cuchillas, haciendo revisiones y elaborando mapas. Se acordó de los mantras y las disciplinas para retener cierto nivel de cordura mientras se aventuraba en las profundidades desconocidas. Lo que ella no recordaba, lo que no podía recordar, era a las personas.\n
+Se acordó de sus voces, sus reglas y de sus advertencias, pero no de sus rostros, ni de su contacto con ellos.\n
+El dolor le había entrenado. Recordando los peligros, solamente los peligros. Animales rabiosos, no muertos, bandidos locos y ninjas astutos habían caído ante ella. Se había cortado, quemado, apuñalado y envenenado caminando entre abominaciones, demonios, mecanismos abominables y nigromantes dementes. Incluso los dioses habían caído ante ella.\n
+Ella había rastreado Yog a través del cielo y el infierno, antes de silenciar sus malvados susurros para siempre. Incluso en ese entonces, aún había trabajo por hacer. Yog solo era sirviente de otro dios más oculto y poderoso.\n
+Así se adentró más profundo, mucho más profundo. El diario del viejo mago, todavía irradiando energía, le había mostrado el camino. Con la magia entre sus páginas, viajó a una nueva tierra, un pequeño pueblo instalado en un enorme bosque. Allí, finalmente siguió al mal hasta su fuente en el laberinto, venciendo a todos los que se ponían frente a ella.\n
+Ahora, con la tenue luz del día, se observó en un charco de agua de la mazmorra. Su cuerpo estaba deformado, casi irreconocible por el uso de la magia. Su piel, pálida al punto de la translucidez, estaba cubierta de suciedad, mugre y hollín. Su collar de anillos podría pagar el rescate de varios reyes y su funda de varitas mágicas contenía suficiente energía para arrasar con ejércitos. Ella tomó sus armas, literalmente, eran lo suficientemente filosas como para cortar a los mismos dioses. En verdad, se había convertido en una maestra de ese reino oscuro, de ese desierto de la desesperación.\n
+Ella había perseguido al mal por todos los rincones del multiverso, pero ahora estaba paralizada por el miedo. ¿Y si le rechazan? ¿Y si no lo hacían? ¿Cómo podía volver interactuar con estas personas? Demonios, había perdido la cuenta de las veces que la muerte la había reclamado, sólo para alejada por sus heladas garras.\n
+No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz, y descendió a la oscuridad, quizá por última vez.\n
+\n\n\tby drazool desde reddit
+</item>
   </string-array>
 </resources>

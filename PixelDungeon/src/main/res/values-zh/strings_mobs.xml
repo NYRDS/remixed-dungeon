@@ -205,5 +205,8 @@
   <!--STRINGS OF EarthElemental CLASS-->
   <string name="EarthElemental_Gender">masculine</string>
   <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">悬浮水晶</string>
   <string name="Crystal_Gender">masculine</string>
+  <string name="Crystal_Name_Objective">悬浮水晶</string>
+  <string name="Crystal_Desc">巨大闪亮的水晶悬浮在空中。也许它充满了强大的魔法。</string>
 </resources>

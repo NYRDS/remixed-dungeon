@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">Το %s σας συσφίγγεται τριγύρω σας και σας δημιουργεί πόνο</string>
+  <string name="Armor_Identify">Είστε πια εξοικειωμένος στην αναγνώριση του %1$s σας. Είναι %2$s.</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Info5">Πιθανώς αυτή η πανοπλία να είναι υπερβολικά βαριά για εσάς.</string>
+  <string name="Armor_Info6">Είναι χαραγμένο.</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">Το πράγμα είναι τέλειο!</string>
+  <string name="ClassArmor_LowHealt">Η υγεία σας είναι κρισίμως χαμηλή!</string>
+  <string name="ClassArmor_NotEquipped">Πρέπει να φοράτε αυτή την πανοπλία για να χρησιμοποιήσετε την ειδική της δύναμη!</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <!--STRINGS OF ElfArmor CLASS-->
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <!--STRINGS OF MageArmor CLASS-->
+  <!--STRINGS OF MailArmor CLASS-->
+  <!--STRINGS OF PlateArmor CLASS-->
+  <!--STRINGS OF RogueArmor CLASS-->
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <!--STRINGS OF Bounce CLASS-->
+  <!--STRINGS OF Displacement CLASS-->
+  <!--STRINGS OF Entanglement CLASS-->
+  <!--STRINGS OF Metabolism CLASS-->
+  <!--STRINGS OF Multiplicity CLASS-->
+  <!--STRINGS OF Potential CLASS-->
+  <!--STRINGS OF Stench CLASS-->
+  <!--STRINGS OF Viscosity CLASS-->
+  <!--STRINGS OF DeferedDamage CLASS-->
+</resources>

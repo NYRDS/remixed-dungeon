@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Welcome_Ok">Ok!</string>
+  <string name="Welcome_Title">Selamat Datang!</string>
+  <string name="Welcome_Text_21_4">
+        remix.21.4:\n
+        - Senjata langka baru - pedang pengorbanan
+        </string>
+</resources>

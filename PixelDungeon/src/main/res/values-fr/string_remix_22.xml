@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ShadowLord CLASS-->
+  <string name="ShadowLord_Name">seigneur de l\'ombre</string>
+  <string name="ShadowLord_Gender">masculin</string>
+  <string name="ShadowLord_Name_Objective">Seigneur de l\'ombre</string>
+  <string name="ShadowLord_Intro">En garde !</string>
+  <string name="ShadowLord_Death">Nooooon...</string>
+</resources>

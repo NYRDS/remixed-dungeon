@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">Łuk jest bronią dystansową, prawie bezużyteczną (dla wszystkich oprócz elfów) w walce wręcz\n\n</string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">Drewniany Łuk</string>
   <string name="WoodenBow_Info">Ten prosty, drewniany łuk może być użyteczny, o ile znajdziesz jakieś strzały</string>
@@ -46,4 +45,5 @@
   <string name="ParalysisArrow_Name">paraliżująca strzała</string>
   <string name="ParalysisArrow_Info">Ta strzała wydziela słaby, ale znajomy, trujący smród.</string>
   <string name="ParalysisArrow_Gender">kobiecy</string>
+  <!--STRINGS OF FrostArrow CLASS-->
 </resources>

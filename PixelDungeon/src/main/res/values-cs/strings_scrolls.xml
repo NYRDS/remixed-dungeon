@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">Svitek \"%s\"</string>
+  <string name="Scroll_Info">Tento pergamen je pokryt nerozluštitelným písmem a nese název runy %s. Kdo ví co se stane když se přečte nahlas?</string>
+  <string name="Scroll_ACRead">PŘEČÍST</string>
+  <string name="Scroll_Blinded">Nemůžeš číst svitky když jsi oslepen</string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Vyber předmět</string>
+  <string name="InventoryScroll_Warning">Opravdu chceš přestat používat tento svitek? Bude i tak spotřebován. </string>
+  <string name="InventoryScroll_Yes">Ano,chci přestat</string>
+  <string name="InventoryScroll_No">Ne,změnil jsem svůj názor</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Prázdný Svitek</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Scroll of Challenge</string>
+  <string name="ScrollOfChallenge_Info">Pokud se svitek přečte nahlas,vypustí vyzývající řev,který probudí všechny monstra a nasměruje je na čtenářovu pozici.</string>
+  <string name="ScrollOfChallenge_Info1">Tento svitek vypustil vyzývající řev,který je slyšet v celém žaláři!</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Svitek Identifikace</string>
+  <string name="ScrollOfIdentify_Info">Permanentně odhalí všechny tajemství jednoho předmětu.</string>
+  <string name="ScrollOfIdentify_InvTitle">Vyber předmět pro identifikaci</string>
+  <string name="ScrollOfIdentify_Info1">Je to %s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Svitek Ukolébání</string>
+  <string name="ScrollOfLullaby_Info">Uklidňující melodie uloží všechny bytosti ve tvém rozhledu do hlubokého spánku,dávajíc ti šanci uprchnout nebo provést překvapivý útok.</string>
+  <string name="ScrollOfLullaby_Info1">Svitek pronesl uklidňující melodii.</string>
+  <string name="ScrollOfLullaby_Info2">Svitek pronesl uklidňující melodii a %s usnuli!</string>
+  <string name="ScrollOfLullaby_Info3">Svitek pronesl uklidňující melodii a monstra usnula!</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Svitek Magické Mapy</string>
+  <string name="ScrollOfMagicMapping_Info">Když je tento svitek přečten,obraz křišťálové čistoty bude zapamatován,upozorňujíc tě na rozložení patra a odhalení všech schovaných tajemství.Pozice předmětů a bytostí bude neznámá.</string>
+  <string name="ScrollOfMagicMapping_Layout">Nyní jste si jist rozložením patra.</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Svitek Zrcadlového Obrazu</string>
+  <string name="ScrollOfMirrorImage_Info">Zakletí na tomto svitku vytvoří iluzi dvojčat čtenáře,které budou honit jeho nepřátele.</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Svitek Psionického Výbuchu</string>
+  <string name="ScrollOfPsionicBlast_Info">Svitek obsahuje destruktivní energii,která může být psionicky nasměrována aby napáchala masivní poškození všem bytostem ve tvém rozhledu.Doprovodný záblesk světla oslepí všechny v oblasti působení,včetně čtenáře svitku.</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Svitek Dobítí</string>
+  <string name="ScrollOfRecharging_Info">Magická síla vázána k tomuto pergamenu,když dobita,doplní všechny čtenářovi hůlky do plné síly.</string>
+  <string name="ScrollOfRecharging_Info1a">energie putuje skrz tvůj batoh,dobíjejíc tvojí hůlku</string>
+  <string name="ScrollOfRecharging_Info1b">energie putuje skrz tvůj batoh,dobíjejíc tvé hůlky</string>
+  <string name="ScrollOfRecharging_Info2">energie putuje skrz tvůj batoh,ale nic se neděje</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Svitek Očištění od Prokletí</string>
+  <string name="ScrollOfRemoveCurse_Info">Zakletí tohoto svitku instantně odendá z čtenářovi zbraně,brnění,prstenu a nesených předmětů jakékoli špatné okouzlení ,které může bránit čtenářovi předměty sundat.</string>
+  <string name="ScrollOfRemoveCurse_Proced">Tvůj batoh zasvitl očisťujícím světlem a zlá energie byla vypuštěna.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Tvůj batoh zasvitil očisťujícím světlem,ale nic se nestalo</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">Svitek Teleportace</string>
+  <string name="ScrollOfTeleportation_Info">Kouzlo tohoto pergamenu instantně teleportuje čtenáře na náhodnou pozici v žaláři.To může být použito pro útěk z nebezpečných situací,ale nešťastný čtenář se může objevit v ještě mnohem nebezpečnější situaci.</string>
+  <string name="ScrollOfTeleportation_Teleport">Během mrknutí oka si byl teleportován na další pozici na současném patře.</string>
+  <string name="ScrollOfTeleportation_NoTeleport">Silná magická aura tohoto místa ti zabraňuje teleportovat se</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Svitek Terorizace</string>
+  <string name="ScrollOfTerror_Info">Záblesk červeného světla přemůže všechny monstra ve tvém rozhledu terorem,kteří se otočí a uprchnou.Zaútočení na prchající nepřítele efekt zruší.</string>
+  <string name="ScrollOfTerror_Info1">Svitek vypustil brilantní záblesk červeného světla</string>
+  <string name="ScrollOfTerror_Info2">Svitek vypustil brilantní záblesk červeného světla a %s prchají!</string>
+  <string name="ScrollOfTerror_Info3">Svitek vypustil brilantní záblesk červeného světla a monstra uprchla!</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Svitek Vylepšení</string>
+  <string name="ScrollOfUpgrade_Info">Tento svitek vylepší jeden předmět,vylepšujíc mu kvalitu.Hůlce se zlepší síla a její max. počet nabití; brnění odrazí více ran; efekt na nositelově prstenu se zvýší.Zbraně a brnění také budou potřebovat méně síly k použití a všechny prokletí na předmětu budou zvednuty.</string>
+  <string name="ScrollOfUpgrade_InvTitle">Vyber předmět k vylepšení</string>
+  <string name="ScrollOfUpgrade_LooksBetter">Tvůj %s vypadá teď lépe</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Svitek Vylepšení Zbraně</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Tento svitek vylepší zbraň na blízko,zlepšující její kvalito.V porovnání s regulárním Svitkem Vylepšení,tato specializovaná verze nikdy nezničí očarování zbraně.Naopak je schopen naplnit neočarovanou zbraň náhodným očarováním.</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Vyber zbraň k vylepšení</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">Tvůj %s vypadá teď lépe</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+</resources>

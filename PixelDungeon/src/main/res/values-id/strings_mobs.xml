@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">Deskripsi sebenarnya akan datang!</string>
+  <string name="Mob_Died">Anda mendengar ada sesuatu mati di kejauhan</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus"> %s ini sedang tidur</string>
+  <string name="Mob_StaWanderingStatus"> %s ini sedang berkelana</string>
+  <string name="Mob_StaHuntingStatus"> %s ini sedang berburu</string>
+  <string name="Mob_StaFleeingStatus"> %s ini sedang melarikan diri</string>
+  <string name="Mob_StaPassiveStatus"> %s ini sedang pasif</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">skorpio beracun</string>
+  <string name="Acidic_Gender">maskulin</string>
+  <string name="Acidic_Name_Objective">skorpio beracun</string>
+  <string name="Acidic_Desc">Arakhinida raksasa ini adalah makhluk yang menghindari serangan jarak dekat dengan segala cara, menembak duri bergerigi yang melumpuhkan dari jarak jauh.</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">tikus albino</string>
+  <string name="Albino_Gender">maskulin</string>
+  <string name="Albino_Name_Objective">tikus albino</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">penjahat gila</string>
+  <string name="Bandit_Gender">maskulin</string>
+  <string name="Bandit_Name_Objective">penjahat gila</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">kelelawar vampir</string>
+  <string name="Bat_Gender">maskulin</string>
+  <string name="Bat_Name_Objective">kelelawar vampir</string>
+  <string name="Bat_Desc">Makhluk cepat dan gigih ini adalah penghuni dari gua yang dapat mengalahkan musuh yang lebih besar dengan cara mengisi nyawa mereka dengan tiap serangan sukses mereka.</string>
+  <string name="Bat_Defense">menghindar</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">gnoll besar</string>
+  <string name="Brute_Name_Objective">gnoll besar</string>
+  <string name="Brute_Desc">Gnoll besar adalah yang terbesar, terkuat dan tertangguh dari gnoll lainnya. Saat sedikit terluka, mereka akan mengamuk, menyebabkan serangan lebih besar ke musuh mereka.</string>
+  <string name="Brute_Gender">maskulin</string>
+  <string name="Brute_Enraged">%s menjadi marah!</string>
+  <string name="Brute_StaEnraged">marah</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">kepiting saluran</string>
+  <string name="Crab_Gender">maskulin</string>
+  <string name="Crab_Name_Objective">kepiting saluran</string>
+  <string name="Crab_Desc">Kepiting besar ini adalah puncak rantai makanan di saluran bawah tanah. Mereka sangat cepat dan tulang tebal mereka dapat menahan serangan berat.</string>
+  <string name="Crab_Defense">tertangkis</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">maskulin</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">Mesin ini dibuat oleh para kurcaci beberapa abad yang lalu. Lalu, setelah para kurcaci mulai mengganti mesin dengan monster batu, elemental dan setan. Itu membuat peradaban mereka mengarah ke penolakan. DM-300 dan mesin lainnya digunakan untuk konstruksi dan menambang, dan dalam keadaan tertentu, untuk pertahanan kota.</string>
+  <string name="DM300_Info1">DM-300 membetulkan diri sendiri!</string>
+  <string name="DM300_Info2">Misi gagal. Mematikan.</string>
+  <string name="DM300_Info3">Personil tak terautorisasi terditeksi.</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">elemental api</string>
+  <string name="Elemental_Gender">maskulin</string>
+  <string name="Elemental_Name_Objective">elemental api</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">mata jahat</string>
+  <string name="Eye_Gender">netral</string>
+  <string name="Eye_Name_Objective">mata jahat</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">gnoll pengintai</string>
+  <string name="Gnoll_Gender">maskulin</string>
+  <string name="Gnoll_Name_Objective">gnoll pengintai</string>
+  <string name="Gnoll_Desc">Gnoll adalah manusia setengah hyena. Mereka tinggal di saluran dan penjara bawah tanah, mencoba menyerang permukaan dari waktu ke waktu. Gnoll pengintai adalah anggota biasa dari kelompok mereka, mereka tak sekuat gnoll besar dan tak sepintar dukun.</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">monster batu</string>
+  <string name="Golem_Gender">maskulin</string>
+  <string name="Golem_Name_Objective">monster batu</string>
+  <string name="Golem_Desc">Para kurcaci mencoba menggabungkan pengetahuan mereka tentang mekanisme dengan kekuatan elemental baru mereka. Mereka menggunakan roh bumi sebagai jiwa yang memasuki tubuh monster batu itu. Meskipun, kesalahan terkecil dalam ritual dapat menyebabkan kekacauan.</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">Lendir</string>
+  <string name="Goo_Name_Objective">Lendir</string>
+  <string name="Goo_Info1">Lendir sedang memompa diri!</string>
+  <string name="Goo_Info2">glurp... glurp...</string>
+  <string name="Goo_Info3">GLURP-GLURP!</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">Raja Kurcaci</string>
+  <string name="King_Gender">maskulin</string>
+  <string name="King_Name_Objective">Raja Kurcaci</string>
+  <string name="King_Defense">tertangkis</string>
+  <string name="King_Info1">Kau tidak dapat membunuhku, %s... aku... abadi...</string>
+  <string name="King_Info2">Bangkitlah, budakku!</string>
+  <string name="King_Info3">Beraninya kau!</string>
+  <string name="Undead_Name">mayat hidup kurcaci</string>
+  <string name="Undead_Gender">maskulin</string>
+  <string name="Undead_Name_Objective">mayat hidup kurcaci</string>
+  <string name="Undead_Desc">Mayat hidup kurcaci ini, dihidupkan oleh kemauan dari Raja Kurcaci, dulunya anggota dari makhamahnya. Mereka terlihat sebagai tulang belulang dengan rambut palsu yang menarik perhatian.</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">mimik</string>
+  <string name="Mimic_Gender">maskulin</string>
+  <string name="Mimic_Name_Objective">mimik</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">biksu kurcaci</string>
+  <string name="Monk_Gender">maskulin</string>
+  <string name="Monk_Name_Objective">biksu kurcaci</string>
+  <string name="Monk_Desc">Biksu ini adalah fanatik, yang membaktikan diri mereka untuk menjaga rahasia kota mereka dari semua makhluk asing. Mereka tidak menggunakan pengaman atau senjata, hanya mengandalkan seni dari pertempuran tangan.</string>
+  <string name="Monk_Defense">tertangkis</string>
+  <string name="Monk_Disarm">%1$s telah menjatuhkan %2$s dari tangan anda!</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">piranha raksasa</string>
+  <string name="Piranha_Name_Objective">piranha raksasa</string>
+  <string name="Piranha_Desc">Ikan karnivora ini tidak alami penghuni dari kolam bawah tanah. Mereka dibesarkan secara khusus untuk menjaga ruang harta karun tergenang.</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">tikus marsupiral</string>
+  <string name="Rat_Name_Objective">tikus marsupiral</string>
+  <string name="Rat_Desc">Tikus marsupial bersifat agresif, tapi penghuni lemah di saluran bawah tanah. Mereka dapat menjadi berbahaya dalam jumlah banyak.</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">skorpio</string>
+  <string name="Scorpio_Gender">maskulin</string>
+  <string name="Scorpio_Name_Objective">skorpio</string>
+  <string name="Scorpio_Desc">Arakhinida raksasa ini adalah makhluk yang menghindari serangan jarak dekat dengan segala cara, menembak duri bergerigi yang melumpuhkan dari jarak jauh.</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">biksu senior</string>
+  <string name="Senior_Gender">maskulin</string>
+  <string name="Senior_Name_Objective">biksu senior</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">bayangan</string>
+  <string name="Shadow_Name_Objective">bayangan</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">dukun gnoll</string>
+  <string name="Shaman_Gender">maskulin</string>
+  <string name="Shaman_Name_Objective">dukun gnoll</string>
+  <string name="Shaman_Desc">Gnoll paling pintar dapat menguasai sihir perdukunan. Dukun gnoll memilih untuk bertarung dengan mantra perang untuk mengimbangi kekuatannya yang lemah, tidak ragu untuk mereka yang mempertanyakan status mereka di suku mereka.</string>
+  <string name="Shaman_Killed">sambaran petir %s\'s membunuh anda...</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">gnoll berperisai</string>
+  <string name="Shielded_Gender">maskulin</string>
+  <string name="Shielded_Name_Objective">gnoll berperisai</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">tulang belulang</string>
+  <string name="Skeleton_Name_Objective">tulang belulang</string>
+  <string name="Skeleton_Desc">Tulang belulang terbuat dari tulang mayat dari petualang dan penghuni penjara yang tidak beruntung, dirasuki oleh sihir jahat dari bawah. Setelah mereka cukup terluka, mereka akan hancur dalam ledakan tulang.</string>
+  <string name="Skeleton_Killed">Anda terbunuh karena ledakan tulang...</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">laba-laba gua</string>
+  <string name="Spinner_Gender">maskulin</string>
+  <string name="Spinner_Name_Objective">laba-laba gua</string>
+  <string name="Spinner_Desc">Laba-laba gua kehijauan berbulu ini mencoba untuk menghindari pertarungan langsung, memilih untuk menunggu agak jauh saat korban mereka, terlilit di dalam jaring laba-laba, perlahan akan mati karena gigitan beracunnya.</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">patung tersihir</string>
+  <string name="Statue_Name_Objective">patung tersihir</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <!--STRINGS OF Swarm CLASS-->
+  <!--STRINGS OF Tengu CLASS-->
+  <!--STRINGS OF Thief CLASS-->
+  <!--STRINGS OF Warlock CLASS-->
+  <!--STRINGS OF Wraith CLASS-->
+  <!--STRINGS OF Yog CLASS-->
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <!--STRINGS OF SpiderNest CLASS-->
+  <!--STRINGS OF SpiderServant CLASS-->
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <!--STRINGS OF SpiderMind CLASS-->
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <!--STRINGS OF WaterElemental CLASS-->
+  <!--STRINGS OF AirElemental CLASS-->
+  <!--STRINGS OF EarthElemental CLASS-->
+  <!--STRINGS OF Crystal CLASS-->
+</resources>

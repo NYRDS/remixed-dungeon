@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">vous</string>
@@ -61,6 +61,13 @@
     <item>Les chasseresses gagnent plus de points de vie en buvant la rosée.</item>
     <item>Les chasseresses détectent les monstres à proximité même s\'ils sont cachés par des obstacles.</item>
   </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Les Elfes commencent avec 15 poins de vie et 9 points de force.</item>
+    <item>Les Elfes sont immunisés à l\'enracinement.</item>
+    <item>Les Elfes commencent avec un arc en bois amélioré et un tas de flèches.</item>
+    <item>Les Elfes sont très efficaces avec des arcs et sont agiles.</item>
+    <item>Les Elfes sont moins efficaces avec les armes de mêlée.</item>
+  </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiateur</string>
   <string name="HeroSubClass_DescGlad">Une attaque réussie avec une arme de mélée permet au _Gladiateur_ de commencer un combo, durant lequel chaque nouvelle attaque réussie inflige plus de dégâts.</string>
@@ -78,4 +85,8 @@
   <string name="HeroSubClass_DescSnip">Les _Snipers_ sont capables de détecter les points faibles dans l\'armure d\'un ennemi, ignorant cette protection lors de l\'utilisation d\'armes à distance. </string>
   <string name="HeroSubClass_NameWard">gardienne</string>
   <string name="HeroSubClass_DescWard">Les _Gardiennes_ ont une forte connexion avec les forces de la nature, ce qui leur donne la possibilité de collecter de la rosée et des graines sur les plantes. Fouler des herbes hautes leur octroie par ailleurs un bonus d\'armure temporaire.</string>
+  <string name="HeroSubClass_NameScout">scout</string>
+  <string name="HeroSubClass_DescScout">Les Elfes _Scouts_ sont les maîtres de la discrétion. Piétiner les hautes herbes leur octroie un bonus d\'invisibilité temporaire. Ils sont également plus rapides que les Elfes classiques.</string>
+  <string name="HeroSubClass_NameShaman">shaman</string>
+  <string name="HeroSubClass_DescShaman">Les Elfes _Shamans_ peuvent utiliser les sceptres comme armes de mêlée. Des coups réussis ont une chance d\'activer le pouvoir du sceptre sur une cible sans utiliser de charge.</string>
 </resources>

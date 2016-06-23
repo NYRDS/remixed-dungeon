@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF BadgesScene CLASS-->
+  <string name="BadgesScene_Title">Jouw insignes</string>
+  <!--STRINGS OF Badges CLASS-->
+  <string name="Badges_Info1">Nieuw insigne %s</string>
+  <!--<string name="Badges_BagSeed"></string>-->
+  <!--<string name="Badges_BagSroll"></string>-->
+  <!--<string name="Badges_BagWand"></string>-->
+  <!--<string name="Badges_BossSlain1War"></string>-->
+  <!--<string name="Badges_BossSlain1Mag"></string>-->
+  <!--<string name="Badges_BossSlain1Rog"></string>-->
+  <!--<string name="Badges_BossSlain1Hun"></string>-->
+  <!--<string name="Badges_BossSlain3Glad"></string>-->
+  <!--<string name="Badges_BossSlain3Bers"></string>-->
+  <!--<string name="Badges_BossSlain3WarL"></string>-->
+  <!--<string name="Badges_BossSlain3BatM"></string>-->
+  <!--<string name="Badges_BossSlain3FreR"></string>-->
+  <!--<string name="Badges_BossSlain3Assa"></string>-->
+  <!--<string name="Badges_BossSlain3Snip"></string>-->
+  <!--<string name="Badges_BossSlain3Ward"></string>-->
+  <!--<string name="Badges_MasteryWar"></string>-->
+  <!--<string name="Badges_MasteryMag"></string>-->
+  <!--<string name="Badges_MasteryRog"></string>-->
+  <!--<string name="Badges_MasteryHun"></string>-->
+  <!--<string name="Badges_RareAlbino"></string>-->
+  <!--<string name="Badges_RareBandit"></string>-->
+  <!--<string name="Badges_RareShielded"></string>-->
+  <!--<string name="Badges_RareSenior"></string>-->
+  <!--<string name="Badges_RareAcidid"></string>-->
+  <!--<string name="Badges_VictoryWar"></string>-->
+  <!--<string name="Badges_VictoryMag"></string>-->
+  <!--<string name="Badges_VictoryRog"></string>-->
+  <!--<string name="Badges_VictoryHun"></string>-->
+</resources>
