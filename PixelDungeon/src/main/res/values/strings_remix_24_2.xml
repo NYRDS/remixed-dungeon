@@ -5,6 +5,10 @@
     <string name="GoldenSword_Name">golden sword</string>
     <string name="GoldenSword_Info">Usually weapon made of such soft metal as gold won\'t be considered anything but decoration. Despite that this blade seems to be able to cut through things pretty well.</string>
     <string name="GoldenSword_Gender">masculine</string>
+    <!-- STRINGS OF SpiderArmor -->
+    <string name="SpiderArmor_Name">spider armor</string>
+    <string name="SpiderArmor_Info">Creepy and spooky.</string>
+    <string name="SpiderArmor_Gender">masculine</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF GoldenStatue CLASS -->
