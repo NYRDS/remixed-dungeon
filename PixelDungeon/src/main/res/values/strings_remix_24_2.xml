@@ -3,7 +3,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF GoldenSword -->
     <string name="GoldenSword_Name">golden sword</string>
-    <string name="GoldenSword_Info">Now that\'s shiny alright.</string>
+    <string name="GoldenSword_Info">Usually weapon made of such soft metal as gold won\'t be considered anything but decoration. Despite that this blade seems to be able to cut through things pretty well.</string>
     <string name="GoldenSword_Gender">masculine</string>
 
     <!-- Mobs descriptions -->
@@ -11,17 +11,17 @@
     <string name="GoldenStatue_Name">golden statue</string>
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name_Objective">golden statue</string>
-    <string name="GoldenStatue_Desc">So shiny... and it\'s _%s_, even more shinier.</string>
+    <string name="GoldenStatue_Desc">It\'s truly hard to believe that, this magnificent statue isn\'t just a decoration, but a malicious creature waiting for unsuspecting adventurer. At first glance you could've sworn that it\'s _%s_ was just part of it\'s arm.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
     <string name="NecromancerNPC_Name">necromancer</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Name_Objective">necromancer</string>
-    <string name="NecromancerNPC_Desc">That guy kinda reminds me of someone.</string>
-    <string name="NecromancerNPC_Intro">Duuude there\'s like gonna be a necropolis... DUDE! I\'m so cool huh? (Such messages obviously not gonna get into final version of the game)</string>
-    <string name="NecromancerNPC_Message1">I like can\'t wait.</string>
-    <string name="NecromancerNPC_Message2">You look stupid.</string>
-    <string name="NecromancerNPC_Message3">You smell funny.</string>
-    <string name="NecromancerNPC_Message4">Bite me.</string>
+    <string name="NecromancerNPC_Desc"></string>
+    <string name="NecromancerNPC_Intro"></string>
+    <string name="NecromancerNPC_Message1">The time is running out.</string>
+    <string name="NecromancerNPC_Message2">We must be ready.</string>
+    <string name="NecromancerNPC_Message3">I can hear the call of the dead.</string>
+    <string name="NecromancerNPC_Message4">Evil forces lurks inside the Necropolis.</string>
 
 </resources>
