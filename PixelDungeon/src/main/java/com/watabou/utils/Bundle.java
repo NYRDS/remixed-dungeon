@@ -200,7 +200,10 @@ public class Bundle {
 		try {
 			JSONArray array = data.getJSONArray( key );
 			for (int i=0; i < array.length(); i++) {
-				list.add(type.cast(new Bundle(array.getJSONObject(i)).get()));
+				Object storedObject = new Bundle(array.getJSONObject(i)).get();
+				if(storedObject!=null) {
+					list.add(type.cast(storedObject));
+				}
 			}
 		} catch (JSONException e) {
 			Util.storeEventInAcra("Bundable.getCollection", e);
