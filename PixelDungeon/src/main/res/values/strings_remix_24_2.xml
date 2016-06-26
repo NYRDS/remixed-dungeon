@@ -15,7 +15,7 @@
     <string name="GoldenStatue_Name">golden statue</string>
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name_Objective">golden statue</string>
-    <string name="GoldenStatue_Desc">It\'s truly hard to believe that, this magnificent statue isn\'t just a decoration, but a malicious creature waiting for unsuspecting adventurer. At first glance you could've sworn that it\'s _%s_ was just part of it\'s arm.</string>
+    <string name="GoldenStatue_Desc">It\'s truly hard to believe that, this magnificent statue isn\'t just a decoration, but a malicious creature waiting for unsuspecting adventurer. At first glance you could\'ve sworn that it\'s _%s_ was just part of it\'s arm.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
     <string name="NecromancerNPC_Name">necromancer</string>
