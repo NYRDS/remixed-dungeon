@@ -84,6 +84,8 @@ public class Dungeon {
 
 	public static int depth;
 	private static int scrambledGold;
+	private static boolean loading = false;
+
 
 	public static HashSet<Integer> chapters;
 
@@ -459,6 +461,8 @@ public class Dungeon {
 	}
 
 	public static Level loadLevel(Position next) throws IOException {
+		loading = true;
+
 		String loadFrom = SaveUtils.depthFileForLoad(heroClass, next.levelDepth, next.levelKind, next.levelId);
 
 		GLog.toFile("loading level: %s", loadFrom);
@@ -490,6 +494,8 @@ public class Dungeon {
 
 		level.levelId = next.levelId;
 		initSizeDependentStuff(level.getWidth(), level.getHeight());
+
+		loading = false;
 
 		return level;
 	}
@@ -660,5 +666,9 @@ public class Dungeon {
 
 	public static void gold(int value) {
 		scrambledGold = Scrambler.scramble(value);
+	}
+
+	public static boolean isLoading() {
+		return loading;
 	}
 }
