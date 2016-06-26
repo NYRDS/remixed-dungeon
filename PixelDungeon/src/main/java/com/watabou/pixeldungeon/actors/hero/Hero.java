@@ -1084,7 +1084,10 @@ public class Hero extends Char {
 
 		if (belongings.armor instanceof SpiderArmor)
 		{
-			GameScene.add( Blob.seed( getPos(), Random.Int( 5, 7 ), Web.class ) );
+			//Armor proc
+			if (Random.Int(100) < 50){
+				GameScene.add( Blob.seed( getPos(), Random.Int( 5, 7 ), Web.class ) );
+			}
 		}
 
 		for (Item item : belongings) {
