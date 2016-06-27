@@ -44,4 +44,6 @@
   <string name="Pasty_Name">pasztecik</string>
   <string name="Pasty_Info">Autentyczny pasztecik wypełniony wołowiną, który smakuje najlepiej z barszczem.</string>
   <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">pasztecik</string>
+  <string name="PseudoPasty_Info">Autentyczny Kornwalijski pasztecik z tradycyjnym wypełnieniem złożonym z piwa i ziemniaków.</string>
 </resources>
