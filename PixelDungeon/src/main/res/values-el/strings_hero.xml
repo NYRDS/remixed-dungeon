@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--STRINGS OF Hero CLASS-->
-  <string name="Hero_Name">εσείς</string>
-  <string name="Hero_Name_Objective">εσείς</string>
-  <string name="Hero_Leave">Δεν μπορεί κάποιος να φύγει έτσι απλά.</string>
-  <!--STRINGS OF HeroClass CLASS-->
-  <!--STRINGS OF HeroSubClass CLASS-->
-</resources>

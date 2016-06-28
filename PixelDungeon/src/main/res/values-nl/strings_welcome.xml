@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <string name="Welcome_Title">Welkom!</string>
-  <string name="Welcome_Text">Remixed Pixel Dungeon is een modificatie van Watabou\'s open-source Pixel Dungeon.\n Dit project werd gemaakt om spelers een nieuwe ervaring en inhoud te voorzien.\n Een ander belangerijk gedeelte van ons ons project is het ontwikkelen van meertalige ondersteuning.\n Bij elke update proberen we zo dicht mogelijk bij onze spelers te zijn.\n En als je ooit je idee in het spel geïmplementeerd ziet, bedankt voor de creativiteit =)\n De huidige versie is gebaseerd op Pixel Dungeon 1.7.2 en beschikt over een aantal functies van 1.7.5.\n Verschillen met de originele versie:\n - Een optie om de taal te veranderen. (momenteel ondersteund: Engels, Russisch)\n - Een nieuw monster en NPC. \n - Giftig gas en vuur kan nu met meer items inwerken.\n - Nieuwe soorten voedsel.\n - Nieuwe items en eigenschappen voor oudere items.\n - Nu kan je ook zaadjes eten =)</string>
-</resources>

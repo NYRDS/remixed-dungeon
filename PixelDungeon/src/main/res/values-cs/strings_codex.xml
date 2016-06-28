@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--STRINGS OF Codex CLASS-->
-  <string name="Codex_Name">Kodex</string>
-  <string name="Codex_ACRead">ČTI</string>
-  <string name="Codex_Info">Jedna ze spousty knih může být nalezena v knihovně</string>
-  <string name="Codex_Blinded">Nemůžeš číst,když jsi oslepen</string>
-</resources>

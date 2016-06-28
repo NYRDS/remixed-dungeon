@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--PACKAGE /items/potions additional strings-->
-  <string name="Potion_ACMoisten">HUMEDECER</string>
-  <string name="Potion_SelectForMoisten">Selecciona un articulo para humedecer.</string>
-  <string name="Potion_MoistenUseless">Parece que acabas de desperdiciar este poción.</string>
-  <string name="Potion_RuneDissaperaed">La runa desapareció de %s.</string>
-  <string name="Potion_ArrowMoisten">Tu humedeces las flechas de manera exitosa.</string>
-</resources>

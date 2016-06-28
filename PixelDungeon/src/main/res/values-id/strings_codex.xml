@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--STRINGS OF Codex CLASS-->
-  <string name="Codex_ACRead">BACA</string>
-  <string name="Codex_Info">Salah satu dari banyak buku yang ada di perpustakaan manapun</string>
-  <string name="Codex_Blinded">Anda tidak bisa membaca saat buta</string>
-</resources>
