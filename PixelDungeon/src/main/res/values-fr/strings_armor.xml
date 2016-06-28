@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
@@ -29,6 +29,10 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
   <string name="ClothArmor_Name">armure de vêtements</string>
   <string name="ClothArmor_Desc">Cette armure légère offre une protection basique.</string>
   <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Elven manteau</string>
+  <string name="ElfArmor_Desc">Avec l\'aide de ce manteau elfe peut invoquer les forces de la nature elle-même. Haute herbe va pousser en un clin même à travers la pierre solide immobiliser tous les ennemis dans un spectacle.</string>
+  <string name="ElfArmor_ACSpecial">NATURE APPEL</string>
+  <string name="ElfArmor_NotElf">Seulement elfes peuvent utiliser cette armure!</string>
   <!--STRINGS OF HuntressArmor CLASS-->
   <string name="HuntressArmor_Name">cape de la chasseresse</string>
   <string name="HuntressArmor_Desc">Une chasseresse équipée de cette cape peut créer de multiples lames spectrales. Chacune de ces lames ciblera un seul ennemi dans le champ de vision de la chasseresse, infligeant des dommages en fonction de son arme de mélée actuellement équipée.</string>

@@ -75,5 +75,10 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
   <string name="ChaosCrystal_Name">Cristal étrange</string>
   <string name="ChaosCrystal_Name_1">Cristal chaotique</string>
   <string name="ChaosCrystal_Name_2">Cristal du Chaos</string>
+  <string name="ChaosCrystal_Info">Vous sentez des courants d\'énergie parcourir vos mains tandis que vous le portez.</string>
+  <string name="ChaosCrystal_SwordFused">Le cristal à absorbé votre arme, et à pris la forme d\'une épée.</string>
+  <string name="ChaosCrystal_BowFused">Le cristal à absorbé votre arme, et à pris la forme d\'un arc.</string>
+  <string name="ChaosCrystal_StaffFused">Le cristal à absorbé votre arme, et à pris la forme d\'un bâton.</string>
   <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">Couronne du Roi des rats</string>
 </resources>

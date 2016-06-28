@@ -17,12 +17,14 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.WebParticle;
 
@@ -30,7 +32,6 @@ public class Web extends Blob {
 	
 	@Override
 	protected void evolve() {
-		
 		for (int i=0; i < getLength(); i++) {
 			
 			int offv = cur[i] > 0 ? cur[i] - 1 : 0;
@@ -39,9 +40,21 @@ public class Web extends Blob {
 			if (offv > 0) {
 				
 				volume += offv;
-				
+
 				Char ch = Actor.findChar( i );
+				boolean rootable = false;
+
 				if (ch != null) {
+					rootable = true;
+					if(ch instanceof Hero)
+					{
+						if (((Hero) ch).belongings.armor instanceof SpiderArmor){
+							rootable = false;
+						}
+					}
+				}
+
+				if (rootable){
 					Buff.prolong( ch, Roots.class, TICK );
 				}
 			}

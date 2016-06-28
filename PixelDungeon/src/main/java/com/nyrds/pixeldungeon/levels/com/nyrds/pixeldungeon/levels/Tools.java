@@ -129,6 +129,47 @@ public class Tools {
 		}
 	}
 
+	public static void makeShadowLordLevel(Level level) {
+		int width = level.getWidth();
+		int height = level.getHeight();
+
+		for (int i = 1; i < width; i++) {
+			for (int j = 1; j < height; j++) {
+				level.set(i, j, Terrain.EMPTY);
+			}
+		}
+
+		for (int i = 1; i < width; i++) {
+			level.set(i, 1,        Terrain.WALL);
+			level.set(i, height-1, Terrain.WALL);
+		}
+
+		for (int j = 1; j < height; j++) {
+			level.set(1, j,        Terrain.WALL);
+			level.set(width-1, j , Terrain.WALL);
+		}
+
+		for (int i = width/4; i < width/2 + width/4; i++) {
+			level.set(i, height/4,        Terrain.WALL);
+			level.set(i, height/2 + height/4 - 1, Terrain.WALL);
+		}
+
+		for (int j = height/4; j < height/2 + height/4; j++) {
+			level.set(width/4, j,        Terrain.WALL);
+			level.set(width/2 + width/4 - 1, j , Terrain.WALL);
+		}
+
+		level.entrance = level.cell(width/4 + 1,height/4 + 1);
+		level.set(level.entrance, Terrain.ENTRANCE);
+
+		level.setExit(level.cell(width-width/4 + 1,height-height/4 + 1),0);
+		level.set(level.getExit(0), Terrain.EXIT);
+
+		if(GameScene.isSceneReady()) {
+			GameScene.updateMap();
+		}
+	}
+
 	public static void tileSplosion(Level level, int terrain, int position, int size){
 		int width = level.getWidth();
 		int height = level.getHeight();

@@ -7,6 +7,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -53,7 +54,7 @@ public class ZombieGnoll extends Mob {
     public void die(Object cause) {
         super.die(cause);
 
-        if (Random.Int(100) > 45){
+        if (Random.Int(100) > 45 && cause != Burning.class){
             int gnollPosition = this.getPos();
 
             if (Dungeon.level.cellValid(gnollPosition)) {

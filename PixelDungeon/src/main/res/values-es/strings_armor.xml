@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
   <string name="Armor_EquipCursed">tu %s se encoge alrededor de ti dolorosamente</string>
-  <string name="Armor_Identify">te has familiarizado con %1$s y lo identificas. Es %2$s.</string>
+  <string name="Armor_Identify">te has familiarizado con %1$s y la identificas. Es %2$s.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">¡La influencia de diferentes tipos de magia ha borrado el glifo de esta armadura!</string>
   <string name="Armor_Info1">Esta %1$s absorbe hasta \"%2$d\" puntos de daño por ataque.</string>
@@ -29,7 +29,7 @@
   <string name="ClothArmor_Name">armadura de tela</string>
   <string name="ClothArmor_Desc">Esta armadura ligera ofrece una protección básica. </string>
   <!--STRINGS OF ElfArmor CLASS-->
-  <string name="ElfArmor_Name">manto élfico</string>
+  <string name="ElfArmor_Name">capa élfica</string>
   <string name="ElfArmor_Desc">Con ayuda de este manto los elfos pueden convocar a las mismísimas fuerzas de la naturaleza. La hierba crecerá en un abrir y cerrar de ojos, inmovilizando a todos los enemigos en su campo de visión.</string>
   <string name="ElfArmor_ACSpecial">LLAMADA DE LA NATURALEZA</string>
   <string name="ElfArmor_NotElf">¡Sólo los elfos pueden usar esta armadura!</string>
@@ -54,7 +54,7 @@
   <string name="PlateArmor_Name">armadura de placas</string>
   <string name="PlateArmor_Desc">Esta armadura, compuesta de enormes placas de metal, ofrece una protección inigualable, pero sólo a aquellos con la fuerza suficiente para cargar con su asombroso peso.</string>
   <!--STRINGS OF RogueArmor CLASS-->
-  <string name="RogueArmor_Name">atuendo de granuja</string>
+  <string name="RogueArmor_Name">ropa de granuja</string>
   <string name="RogueArmor_Desc">Vistiendo este oscuro atuendo, un granuja puede llevar a cabo un truco, que se llama \"bomba de humo\" (aunque no se usa ningún explosivo real): ciega a los enemigos que pudieron verle y se hace a un lado.</string>
   <string name="RogueArmor_ACSpecial">BOMBA DE HUMO</string>
   <string name="RogueArmor_NotRogue">¡Sólo los granujas puede usar esta armadura!</string>
@@ -93,5 +93,5 @@
   <string name="Viscosity_Status">%d diferido</string>
   <!--STRINGS OF DeferedDamage CLASS-->
   <string name="DeferedDamage_Defered_Txt">Daño diferido (%d)</string>
-  <string name="DeferedDamage_Killed_Txt">%s te ha matado..</string>
+  <string name="DeferedDamage_Killed_Txt">%s te ha matado...</string>
 </resources>

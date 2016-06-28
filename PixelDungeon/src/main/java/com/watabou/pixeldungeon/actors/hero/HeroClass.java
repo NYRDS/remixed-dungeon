@@ -19,6 +19,8 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.GoldenSword;
+import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
@@ -45,6 +47,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -124,19 +127,22 @@ public enum HeroClass {
 		for(int i = 0;i<100;i++) {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new PotionOfToxicGas());
+			hero.collect(new ScrollOfWeaponUpgrade());
 		}
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 
 		hero.collect(new TomeOfMastery());
-		hero.collect(new Claymore().upgrade(100));
+		hero.collect(new Claymore().identify().upgrade(100));
 
-		hero.collect(new ScaleArmor().upgrade(5));
+		hero.collect(new SpiderArmor().identify());
+		hero.collect(new GladiatorArmor().identify());
+		hero.collect(new GoldenSword().identify().upgrade(5));
 
 		hero.ht(1000);
 		hero.hp(1000);
 		hero.attackSkill = 1000;
-		hero.defenseSkill = 1000;
+		//hero.defenseSkill = 1000;
 
 	}
 

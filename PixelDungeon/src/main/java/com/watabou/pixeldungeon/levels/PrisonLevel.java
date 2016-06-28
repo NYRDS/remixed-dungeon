@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;
@@ -72,6 +73,7 @@ public class PrisonLevel extends RegularLevel {
 		super.createMobs();
 		
 		WandMaker.Quest.spawn( this, roomEntrance );
+		NecromancerNPC.spawn(this);
 	}
 	
 	@Override

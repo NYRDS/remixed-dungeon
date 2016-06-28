@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">고문서</string>
+  <string name="Codex_ACRead">읽는다</string>
+  <string name="Codex_Info">도서관에서 볼 수 있는 많은 책들 중 하나이다.</string>
+  <string name="Codex_Blinded">눈이 먼 상태에서는 읽을 수 없다</string>
+</resources>

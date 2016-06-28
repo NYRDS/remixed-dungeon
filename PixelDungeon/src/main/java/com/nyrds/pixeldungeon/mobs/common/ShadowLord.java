@@ -81,6 +81,7 @@ public class ShadowLord extends Boss {
 		if(!isAlive()) {
 			return;
 		}
+		Tools.makeEmptyLevel(Dungeon.level);
 		Tools.buildShadowLordMaze(Dungeon.level, 6);
 
 		int cell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);

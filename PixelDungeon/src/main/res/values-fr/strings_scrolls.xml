@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
@@ -90,4 +90,10 @@
   <string name="ScrollOfWeaponUpgrade_Info">Le parchemin va améliorer une arme de mélée, augmentant sa qualité. Par rapport à un parchemin d\'amélioration classique, cette version spécialisée n\'enlèvera jamais l\'enchantement d\'une arme, au contraire, elle peut même octroyer une arme non-enchantée avec un enchantement aléatoire.</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Choisissez une arme à améliorer</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">votre %s a l\'air mieux maintenant</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Parchemin de Domination</string>
+  <string name="ScrollOfDomination_Info">Ce parchemin pliera la créature en face de vous à votre volonté. La créature combattra pour vous jusqu’à la mort.</string>
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Parchemin de malédiction</string>
+  <string name="ScrollOfCurse_Info">Ce parchemin fut créé spécialement pour punir les voleurs assez stupides pour essayer d\'utiliser la magie qu\'ils ne peuvent pas comprendre. La magie du parchemin est totalement inutile et encore plus douloureuse pour un aventurier, mais très estimé par les marchands.</string>
 </resources>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF TitleScene CLASS-->
   <string name="TitleScene_Play">Graj</string>
@@ -7,12 +7,8 @@
   <string name="TitleScene_About">o Grze</string>
   <string name="TitleScene_InternalStorageLow">Masz za mało miejsca\n w Twojej pamięci\n Twoje postępy mogą zostać utracone!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt">Remixed Pixel Dungeon stworzony przez NYRDS, bazujący na bazie danych Pixel Dungeon od Watabou.\n\n Kod &amp; grafika: Watabou  &amp; NYRDS &amp; ThEnigma314\n\nMuzyka: Cube_Code\n\nSpecjalne podziękowania dla: rodriformiga za kod PD l18n \n\nNapisz do nas:\n\n</string>
-  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">Wyślij E-Mail</string>
-  <string name="AboutScene_TranslatedBy">Specjalne podziękowania dla:\n dla Łukasza Piętki ( tramer008@gmail.com ) za pomoc w procesie tłumaczenia gry.</string>
-  
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
   <string name="RankingsScene_Total">Do tej pory rozegrano gier:</string>
@@ -59,4 +55,6 @@
   <string name="WndSettings_ThirdQuickslot">Trzeci quickslot</string>
   <string name="WndSettings_ExperementalFont">Nowa Czcionka</string>
   <string name="WndSettings_ClassicFont">Klasyczna Czcionka</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <!--STRINGS OF ModsButton CLASS-->
 </resources>

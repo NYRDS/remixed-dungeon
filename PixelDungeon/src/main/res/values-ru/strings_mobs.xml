@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
@@ -273,5 +273,5 @@
   <string name="Crystal_Name">парящий кристалл</string>
   <string name="Crystal_Gender">masculine</string>
   <string name="Crystal_Name_Objective">парящий кристалл</string>
-  <string name="Crystal_Desc">Большой сияющий кристалл парит в воздухе. Наверное он наполнен магией.</string>
+  <string name="Crystal_Desc">Большой сияющий кристалл парит в воздухе. Наверное, он наполнен магией.</string>
 </resources>

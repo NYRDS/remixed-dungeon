@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Miecz obusieczny</string>
+    <string name="Claymore_Info">Ten masywny miecz powinien być zdolny do przecięcia wszystkiego.</string>
+    <string name="Claymore_Gender">kobieca</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Halabarda</string>
+    <string name="Halberd_Info">Broń drzewcowa składająca się z toporu na końcu kija.</string>
+    <string name="Halberd_Gender">kobieca</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">Drewniana kusza</string>
+    <string name="WoodenCrossbow_Info">Podstawowa drewniana kusza, wygląda na to że została zaprojektowana z myślą o strzelaniu strzałami do łuku.</string>
+    <string name="WoodenCrossbow_Gender">męski</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Kusza kompozytowa</string>
+    <string name="CompositeCrossbow_Info">Ta wzmocniona kusza wydaje się być efektywniejszym narzędziem niż jej drewniany odpowiednik.</string>
+    <string name="CompositeCrossbow_Gender">męski</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Rubinowa kusza</string>
+    <string name="RubyCrossbow_Info">Ta zabójcza broń jest prawdziwym arcydziełem krasnoludzkiej inżynieri.</string>
+    <string name="RubyCrossbow_Gender">męski</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Gotycka zbroja</string>
+    <string name="GothicArmor_Info">Gotycka zbroja jest szczytem sztuki wykuwania pancerza.</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Zbroja Chaosu</string>
+    <string name="ChaosArmor_Info">Krwistoczerwone płytki tej zbroji są ze sobą połączone ciemnoczerwonymi łańcuchami. Emanuje chaotyczną energią przy dotknięciu.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">Kryształ absorbuje twoją zbroję i przyjmuje formę kompozytowego pancerza.</string>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">Wysuszony krzew</string>
+  <string name="Guts_TileHighGrass">Wysuszony krzew</string>
+  <string name="Guts_TileWater">Dziwny glutowaty płyn</string>
+  <string name="Guts_TileDescEntrance">Olbrzymi otwór w suficie prowadzi na wyższe poziomy</string>
+  <string name="Guts_TileDescExit">Olbrzymi otwór w podłodze prowadzi na niższe poziomy</string>
+  <string name="Guts_TileDescDeco">Wygląda na to, że to miejsce zostało... ranne</string>
+  <string name="Guts_TileDescBookshelf">Półka na książki został całkowicie pokryta grubą, mięsistą siecią. przez co nie można sięgnąć do żadnej z książek</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Pokonany, rozbity na kawałki, ale nie całkowicie zniszczony, Stary Bóg został zapieczętowany w najgłębszych poziomach lochów. Lecz niedawno pieczęć został złamana, pozostawiając przejście do gniazda demonów całkowicie otwartą. Koszmarne potwory, stworzone przez Starego Boga w jego śnie były tak liczne, że pozbawione drogi ucieczki były zmuszone do łączenia się ze sobą, by uformować te groteskowe korytarze. Idąc po ich żyjących ciałach, możesz poczuć uderzenia serca Starego Boga, niosące się echem przez sale.</string>
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">naśladowca</string>
+  <string name="MimicAmulet_Gender">męski</string>
+  <string name="MimicAmulet_Name_Objective">naśladowca</string>
+  <string name="MimicAmulet_Desc">Najbardziej chwalebny moment twojej przygody właśnie okazał się być pułapką.</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">koszmar</string>
+  <string name="Nightmare_Gender">męski</string>
+  <string name="Nightmare_Name_Objective">koszmar</string>
+  <string name="Nightmare_Desc">Groteskowa kreatura złożona z drgających, mięsistych macek. Te istoty, zwane Koszmarami są przedstawieniem złowieszczych myśli Starego Boga.</string>
+  <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">Mam cię, %s!</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">Gnoll-Zombie</string>
+  <string name="ZombieGnoll_Gender">męski</string>
+  <string name="ZombieGnoll_Name_Objective">Gnoll-Zombie</string>
+  <string name="ZombieGnoll_Desc">Pogięte i złamane ciało gnolla zombie nie przypomina już humanoida albo hieny. Jest to tylko kawał zgniłego mięsa i kości, wypełniony żądzą zabijania i konsumpcji.</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">robak</string>
+  <string name="Worm_Gender">męski</string>
+  <string name="Worm_Name_Objective">robak</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <!--STRINGS OF YogsEye CLASS-->
+  <!--STRINGS OF YogsHeart CLASS-->
+  <!--STRINGS OF YogsTeeth CLASS-->
+</resources>

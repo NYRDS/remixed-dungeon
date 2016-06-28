@@ -109,9 +109,11 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 
 		if (accessory  == null){
-			if(hero.belongings.armor  != null && hero.belongings.armor.isCoveringHair()){
+			if(hero.belongings.armor  != null && hero.belongings.armor.isHasHelmet()){
 				helmetDescriptor = classHelmetDescriptor(hero.belongings.armor, hero);
-				drawHair = false;
+				if(hero.belongings.armor.isCoveringHair()){
+					drawHair = false;
+				}
 			}
 		}
 		else{

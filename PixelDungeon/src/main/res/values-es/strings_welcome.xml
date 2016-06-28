@@ -71,4 +71,22 @@ remix.21.4:\n
         - Ballestas añadidas\n
         - Armadura de Caos añadida\n
         </string>
+  <string name="Welcome_Text_24">
+        remix.24:\n
+        - Llegaron los sombreros!(Objetos de vanidad)\n
+        - Arreglos varios de errores\n
+        - Actualización de idiomas\n
+        </string>
+  <string name="Welcome_Text_24_1">
+        remix.24.1:\n
+        --Juego--\n
+        - Nuevo enemigo: Estatua Armada\n
+        - Nuevas rarezas: Araña Guarda (tipo raro de Soldado Araña) y Araña Ambar (tipo raro de Psi-araña)\n
+        - Ahora puedes eliminar partidas guardadas\n
+        - Actulización visual de la Guarida Aracnida\n
+        --Objetos de vanidad--\n
+        - Al comprar un nuevo objeto se equipa automáticamente\n
+        - Nuevo objeto \"Conjunto Pirata\"\n
+        - Actualización visual para las Orejas de gato y Orejas de conejo\n
+        </string>
 </resources>

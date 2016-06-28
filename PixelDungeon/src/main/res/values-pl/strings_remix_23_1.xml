@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Nieznajomy</string>
+  <string name="AzuterronNPC_Gender">męski</string>
+  <string name="AzuterronNPC_Name_Objective">Nieznajomy</string>
+  <string name="AzuterronNPC_Desc">tajemnicza figura owiana czarną mgłą.</string>
+  <string name="AzuterronNPC_Quest_Start">Huh, dlaczego... oh, możesz mnie zobaczyć, czyż nie? To znaczy, że nie jesteś jednym z \"nich\". Widzę, że także nie lubisz tych wszystkich potworów. Wiesz co, jeśli pomożesz mi z małym problemem, zaoferuję ci moje wsparcie. Gdzieś na tym poziomie znajdziesz cienistą bestię, _Zdradliwego Ducha_. Zabij go, weź jego _serce_ i wróć do mnie. I jeszcze jedno, jeśli jesteś zainteresowany kupnem moich artykułów, nie wahaj się pytać.</string>
+  <string name="AzuterronNPC_Quest_Reminder">Pomóż mi, a ja ci pomóc</string>
+  <string name="AzuterronNPC_Quest_End">Co ciekawe Tutaj tak bardzo napój, pewno,  ty znajdzie to korzystne.</string>
+  <string name="Journal_Azuterron">Nieznajomy</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">wiarołomny dusza</string>
+  <string name="TreacherousSpirit_Gender">męski</string>
+  <string name="TreacherousSpirit_Name_Objective">wiarołomny dusza</string>
+  <string name="TreacherousSpirit_Desc">Ta gigantyczna kreatura wygląda jak chmura żyjącej ciemności. Jej oko pozbawione powieki wpatruje się w ciebie, pulsując z każdym twoim ruchem.</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">dusza bóli</string>
+  <string name="SpiritOfPain_Gender">męski</string>
+  <string name="SpiritOfPain_Name_Objective">dusza bólu</string>
+  <string name="SpiritOfPain_Desc">Odłamek żyjącej ciemności.</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">Podejrzany szczur.</string>
+  <string name="SuspiciousRat_Gender">kobieca</string>
+  <string name="SuspiciousRat_Name_Objective">Podejrzany szczur</string>
+  <string name="SuspiciousRat_Desc">Szczur nie jest niespotykanym zjawiskiem w lochach, ale żeby zapuścił się tak daleko... Możesz zobaczyć jak jego całe ciało drga, gdy się porusza.</string>
+  <string name="SuspiciousRat_Info1">Podejrzany szczur gwałtownie drga.</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Pseudo-szczur</string>
+  <string name="PseudoRat_Gender">kobieca</string>
+  <string name="PseudoRat_Name_Objective">Pseudo-szczur</string>
+  <string name="PseudoRat_Desc">Okropna bestia wyłoniła się z cielska szczura, nie nosząc żadnych oznak podobieństwa do gryzonia ani do żadnego innego zwierzęcia jakie kiedykolwiek widziałeś. Większość jej ciała zajmują ogromne usta, pełne ostrych jak brzytwa zębów.</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Zombie-Gnoll powstał z martwych!</string>
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Serce ciemności</string>
+  <string name="HeartOfDarkness_Info">Czane, pulsujące serce Zdradliwego Ducha.</string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Czarny welon</string>
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Yog-Dzewa uśmiercił</string>
+  <string name="Badges_ShadowLord_Slain">Władca Cienia uśmiercił</string>
+  <string name="Badges_SpiderQueen_Slain">Królowa pająków uśmierciła</string>
+</resources>

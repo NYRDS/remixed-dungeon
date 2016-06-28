@@ -26,6 +26,7 @@
   <string name="WndPremiumSettings_chrome">选择界面材质</string>
   <string name="WndPremiumSettings_status">选择状态栏材质</string>
   <string name="WndPremiumSettings_toolbar">选择工具栏材质</string>
+  <string name="WndPremiumSettings_banners">选择标题材质</string>
   <string name="WndPremiumSettings_notAvailbale">这个选项暂时无法使用</string>
   <!--STRINGS OF DonateButton CLASS-->
   <string name="DonateButton_pleaseDonate">请考虑捐献</string>

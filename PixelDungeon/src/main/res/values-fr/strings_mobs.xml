@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
@@ -225,4 +225,15 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Larva_Gender">femelle</string>
   <string name="Larva_Name_Objective">larve du dieu</string>
   <string name="Larva_Desc">Larve du dieu ancien</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">Œuf d\'araignée</string>
+  <!--STRINGS OF SpiderNest CLASS-->
+  <!--STRINGS OF SpiderServant CLASS-->
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <!--STRINGS OF SpiderMind CLASS-->
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <!--STRINGS OF WaterElemental CLASS-->
+  <!--STRINGS OF AirElemental CLASS-->
+  <!--STRINGS OF EarthElemental CLASS-->
+  <!--STRINGS OF Crystal CLASS-->
 </resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">golden sword</string>
+    <string name="GoldenSword_Info">Usually weapon made of such soft metal as gold won\'t be considered anything but decoration. Despite that this blade seems to be able to cut through things pretty well.</string>
+    <string name="GoldenSword_Gender">masculine</string>
+    <!-- STRINGS OF SpiderArmor -->
+    <string name="SpiderArmor_Name">spider armor</string>
+    <string name="SpiderArmor_Info">Creepy and spooky.</string>
+    <string name="SpiderArmor_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">golden statue</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name_Objective">golden statue</string>
+    <string name="GoldenStatue_Desc">It\'s truly hard to believe that, this magnificent statue isn\'t just a decoration, but a malicious creature waiting for unsuspecting adventurer. At first glance you could\'ve sworn that it\'s _%s_ was just part of it\'s arm.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">necromancer</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
+    <string name="NecromancerNPC_Name_Objective">necromancer</string>
+    <string name="NecromancerNPC_Desc"></string>
+    <string name="NecromancerNPC_Intro"></string>
+    <string name="NecromancerNPC_Message1">The time is running out.</string>
+    <string name="NecromancerNPC_Message2">We must be ready.</string>
+    <string name="NecromancerNPC_Message3">I can hear the call of the dead.</string>
+    <string name="NecromancerNPC_Message4">Evil forces lurks inside the Necropolis.</string>
+
+</resources>

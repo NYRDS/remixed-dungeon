@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">은</string>
+  <string name="WndDonate_gold">골드</string>
+  <string name="WndDonate_ruby">루비</string>
+  <string name="WndDonate_donate">기부하세요:</string>
+  <string name="WndDonate_notConnected">연결 안됨 :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - 모두에게 무료이고 앞으로도 계속 그럴것 입니다.\n\n하지만, 여러분은 저희가 보다 나은 게임을 만드는데 도와 주실수 있습니다.\n\n또한 저희 감사의 표시로 도움을 주신 분들께 몇몇 장식품을 증정해 드립니다. 모든 번역의 저작권은 Henry Yi, hhaakpk@naver.com에게 있습니다.</string>
+  <string name="WndDonate_silverDonate">은 기부</string>
+  <string name="WndDonate_goldDonate">금 기부</string>
+  <string name="WndDonate_rubyDonate">루비 기부</string>
+  <string name="WndDonate_silverDonateText">어떤한 기부라도 저희 개발 프로젝트에 도움이 됩니다.</string>
+  <string name="WndDonate_goldDonateText">당신의 도움에 감사드립니다.</string>
+  <string name="WndDonate_rubyDonateText">당신의 관대함은 저희가 계속하여 Remixed Pixel Dungeon을 향상시켜 나가는데 큰 도움이 됩니다.</string>
+  <string name="WndDonate_silverDonateText2">또한 모든 게임 모드에서 광고를 없애주며, 처음부터 사냥꾼을 해금합니다.</string>
+  <string name="WndDonate_rubyDonateText2"></string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">표준</string>
+  <string name="WndPremiumSettings_silver">은</string>
+  <string name="WndPremiumSettings_gold">금</string>
+  <string name="WndPremiumSettings_ruby">루비</string>
+  <string name="WndPremiumSettings_chrome">GUI 소재 선택</string>
+  <string name="WndPremiumSettings_status">스테이터스 바 소재 선택</string>
+  <string name="WndPremiumSettings_toolbar">툴 바 소재 선택</string>
+  <string name="WndPremiumSettings_banners">배너 소재 선택</string>
+  <string name="WndPremiumSettings_notAvailbale">이 옵션은 아직 선택할 수 없음</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">기부 부탁드립니다</string>
+  <string name="DonateButton_thanks">당신의 후원에 감사드립니다!!</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+</resources>
