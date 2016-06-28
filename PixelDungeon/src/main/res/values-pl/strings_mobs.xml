@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
@@ -224,4 +224,35 @@
   <string name="Larva_Gender">kobiecy</string>
   <string name="Larva_Name_Objective">larwa boga</string>
   <string name="Larva_Desc">Larwa Prastarego Boga</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">Pajęcze jajo</string>
+  <string name="SpiderEgg_Name_Objective">Pajęcze jajo</string>
+  <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">Pajęczy kokon</string>
+  <string name="SpiderNest_Name_Objective">Pajęczy kokon</string>
+  <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Name">Pajęczy żołnierz</string>
+  <string name="SpiderServant_Name_Objective">Pajęczy żołnierz</string>
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">Pająk robotnik</string>
+  <string name="SpiderExploding_Name_Objective">Pająk robotnik</string>
+  <!--STRINGS OF SpiderMind CLASS-->
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">Królowa pająków</string>
+  <string name="SpiderQueen_Name_Objective">Królowa pająków</string>
+  <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">Żywiołak wody</string>
+  <string name="WaterElemental_Name_Objective">Żywiołak wody</string>
+  <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">Żywiołak powietrza</string>
+  <string name="AirElemental_Name_Objective">Żywiołak powietrza</string>
+  <string name="AirElemental_Desc">Żywiołaki powietrza to magiczne istoty powstające z ożywionego powietrza</string>
+  <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">Żywiołak ziemi</string>
+  <string name="EarthElemental_Name_Objective">Żywiołak ziemi</string>
+  <string name="EarthElemental_Desc">Żywiołaki ziemi to ziemia uformowana skoncentrowanymi siłami natury</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">Lewitujący kryształ</string>
+  <string name="Crystal_Name_Objective">Lewitujący kryształ</string>
+  <string name="Crystal_Desc">Duży, świecący kryształ lewitujący w powietrzu. Prawdopodopodobnie wypełniony potężną magią.</string>
 </resources>

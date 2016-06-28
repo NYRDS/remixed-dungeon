@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">Jouw %s vernauwt zich pijnlijk om je lichaam</string>
+  <string name="Armor_Identify">Je bent nu bekend genoeg met je %1$s om het te identificeren. Het is %2$s.</string>
+  <string name="Armor_ToString">%1$s : %2$d</string>
+  <string name="Armor_Incompatible">De interactie tussen verschillende typen magie heeft de glyph van dit stuk pantser verwijderd!</string>
+  <string name="Armor_Info1">Deze %1$s absorbeert schade tot \"%2$d\" punten per aanval</string>
+  <string name="Armor_Info2">\n\n Doordat je niet genoeg kracht hebt is je bewegingssnelheid en verdediging verminderd.</string>
+  <string name="Armor_Info3">\n\n Doordat je niet genoeg kracht hebt zal het dragen van dit stuk pantser jouw bewegingssnelheid en verdediging verminderen.</string>
+  <string name="Armor_Info4">\n\n Typisch %1$s geeft absorbtie van schade tot %2$d punten en heeft %3$d punten van kracht nodig</string>
+  <string name="Armor_Info5">Dit stuk pantser is waarschijnlijk te zwaar voor jouw.</string>
+  <string name="Armor_Info6">Het is ingeschreven</string>
+  <string name="Armor_Info7a">\n\nJij draagt de %1$s%2$s</string>
+  <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet verwijderen</string>
+  <string name="Armor_Info8">\n\n Je voelt de kwaadaardige magie in de %s</string>
+  <string name="Armor_Glyph">Glyph</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">Dit ding ziet er geweldig uit!</string>
+  <string name="ClassArmor_LowHealt">Je gezondheid is te laag!</string>
+  <string name="ClassArmor_NotEquipped">Je moet het pantser dragen om zijn speciale krachten te gebruiken!</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">Stoffen pantser</string>
+  <string name="ClothArmor_Desc">Dit lichtgewicht pantser biedt basis protectie</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Elf mantel</string>
+  <string name="ElfArmor_Desc">Met de hulp van deze mantel, kunnen elven de krachten van moeder natuur oproepen. Hoog gras groeit in een flits, zelfs door massief steen, en stopt alle tegenstanders in zicht.</string>
+  <string name="ElfArmor_ACSpecial">OPROEP VAN DE NATUUR</string>
+  <string name="ElfArmor_NotElf">Alleen elven kunnen dit pantser dragen!</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">Jagers mantel</string>
+  <string name="HuntressArmor_Desc">Een jager in zo\'n mantel kan een waaier van spectrale zwaarden maken. Elk van deze zwaarden vallen èèn tegenstander in zicht aan, en doen schade aan de hand van het wapen dat je aan hebt</string>
+  <string name="HuntressArmor_ACSpecial">SPECTRALE ZWAARDEN</string>
+  <string name="HuntressArmor_NoEnemies">Geen tegenstanders in zicht</string>
+  <string name="HuntressArmor_NotHuntress">Alleen jagers kunnen dit pantser dragen!</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">Leren pantser</string>
+  <string name="LeatherArmor_Desc">Pantser gemaakt van gelooide monsterhuid. Niet zo licht als stoffen pantser maar geeft betere verdediging</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">Magisch gewaad</string>
+  <string name="MageArmor_Desc">Als je dit magische gewaad draagt als magiër, kan je de toverspreuk van gesmolten aarde gebruiken: alle tegenstanders in zicht worden in de fik gezet en kunnen niet bewegen</string>
+  <string name="MageArmor_ACSpecial">GESMOLTEN AARDE</string>
+  <string name="MageArmor_NotMage">Alleen magiërs kunnen dit pantser gebruiken!</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">Maliënkolder</string>
+  <string name="MailArmor_Desc">Ingehaakte ijzeren bindingen zorgen voor een sterke maar flexibel stuk pantser</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">Pantserplaat</string>
+  <string name="PlateArmor_Desc">Enorme platen metaal zijn verbonden tot een pantser dat ongeevenaarde verdediging biedt voor elke ontdekker die zijn enorme gewicht kan tillen.</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">Schurkengewaad</string>
+  <string name="RogueArmor_Desc">Wanneer hij dit gewaad draagt kan een schurk een truc doen genaamd \"rookbom\" (al worden er geen explosieven gebruikt) : hij verblind alle tegenstanders die hem kunnen zien en springt opzij</string>
+  <string name="RogueArmor_ACSpecial">ROOKBOM</string>
+  <string name="RogueArmor_NotRogue">Alleen schurken kunnen dit pantser dragen!</string>
+  <string name="RogueArmor_Fov">Je kunt alleen naar een lege locatie in jouw zicht springen.</string>
+  <string name="RogueArmor_Prompt">Kies de plaats waar je naar toe wil springen</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">Geschubd pantser</string>
+  <string name="ScaleArmor_Desc">De metalen schubben die op het leren vest zijn genaaid maken voor een flexibel maar sterk pantser</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">Krijgerspantser</string>
+  <string name="WarriorArmor_Desc">Dit pantser ziet er misschien zwaar uit, maar het staat een krijger toe om een heldhaftige sprong te maken naar een locatie, en bedwelmt alle naburige tegenstanders</string>
+  <string name="WarriorArmor_ACSpecial">HELDHAFTIGE SPRONG</string>
+  <string name="WarriorArmor_NotWarrior">Alleen krijgers kunnen dit pantser gebruiken!</string>
+  <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">%s van genegenheid</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">%s van anti-entropie</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">%s van stuiteren</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">%s van verplaatsing</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">%s van verstrikking</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">%s van stofwisseling</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">%s van multiplicatie</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">%s van potentie</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">%s van stank</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">%s van viscositeit</string>
+  <string name="Viscosity_Status">Uitgesteld %d</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Uitgestelde schade (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s heeft jouw vermoord......</string>
+</resources>

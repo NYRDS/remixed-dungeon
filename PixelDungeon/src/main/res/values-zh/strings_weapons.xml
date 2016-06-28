@@ -117,10 +117,13 @@
   <!--STRINGS OF Kusarigama CLASS-->
   <string name="Kusarigama_Gender">feminine</string>
   <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">混沌剑</string>
   <string name="ChaosSword_Gender">masculine</string>
   <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">混沌弓</string>
   <string name="ChaosBow_Gender">masculine</string>
   <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">混沌法杖</string>
   <string name="ChaosStaff_Gender">masculine</string>
   <!--STRINGS OF SacrificialSword CLASS-->
   <string name="SacrificialSword_Gender">masculine</string>

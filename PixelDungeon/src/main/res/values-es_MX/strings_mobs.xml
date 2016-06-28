@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">Descripción real próximamente!</string>
+  <string name="Mob_Died">Escuchas que algo murió a lo lejos</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <!--STRINGS OF Albino CLASS-->
+  <!--STRINGS OF Bandit CLASS-->
+  <!--STRINGS OF Bat CLASS-->
+  <!--STRINGS OF Brute CLASS-->
+  <!--STRINGS OF Crab CLASS-->
+  <!--STRINGS OF DM300 CLASS-->
+  <!--STRINGS OF Elemental CLASS-->
+  <!--STRINGS OF Eye CLASS-->
+  <!--STRINGS OF Gnoll CLASS-->
+  <!--STRINGS OF Golem CLASS-->
+  <!--STRINGS OF Goo CLASS-->
+  <!--STRINGS OF King CLASS-->
+  <!--STRINGS OF Mimic CLASS-->
+  <!--STRINGS OF MimicPie CLASS-->
+  <!--STRINGS OF Monk CLASS-->
+  <!--STRINGS OF Piranha CLASS-->
+  <!--STRINGS OF Rat CLASS-->
+  <!--STRINGS OF Scorpio CLASS-->
+  <!--STRINGS OF Senior CLASS-->
+  <!--STRINGS OF Shadow CLASS-->
+  <!--STRINGS OF Shaman CLASS-->
+  <!--STRINGS OF Shielded CLASS-->
+  <!--STRINGS OF Skeleton CLASS-->
+  <!--STRINGS OF Spinner CLASS-->
+  <!--STRINGS OF Statue CLASS-->
+  <!--STRINGS OF Succubus CLASS-->
+  <!--STRINGS OF Swarm CLASS-->
+  <!--STRINGS OF Tengu CLASS-->
+  <!--STRINGS OF Thief CLASS-->
+  <!--STRINGS OF Warlock CLASS-->
+  <!--STRINGS OF Wraith CLASS-->
+  <!--STRINGS OF Yog CLASS-->
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <!--STRINGS OF SpiderNest CLASS-->
+  <!--STRINGS OF SpiderServant CLASS-->
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <!--STRINGS OF SpiderMind CLASS-->
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <!--STRINGS OF WaterElemental CLASS-->
+  <!--STRINGS OF AirElemental CLASS-->
+  <!--STRINGS OF EarthElemental CLASS-->
+  <!--STRINGS OF Crystal CLASS-->
+</resources>

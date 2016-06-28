@@ -11,7 +11,10 @@
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">发送邮件</string>
   <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">最高纪录</string>
+  <string name="RankingsScene_Total">总游戏次数</string>
   <string name="RankingsScene_NoGames">还没进行过游戏</string>
+  <string name="RankingsScene_NoInfo">没有其他信息</string>
   <!--STRINGS OF StartScene CLASS-->
   <string name="StartScene_Load">读取进度</string>
   <string name="StartScene_New">新游戏</string>
@@ -42,11 +45,22 @@
   <!--STRINGS OF WndSettings CLASS-->
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">默认缩放级别</string>
+  <string name="WndSettings_TextScaleDefault">默认字体</string>
+  <string name="WndSettings_ScaleUp">平滑界面</string>
+  <string name="WndSettings_Immersive">沉浸模式</string>
+  <string name="WndSettings_Music">音乐</string>
+  <string name="WndSettings_Sound">音效</string>
   <string name="WndSettings_Brightness">明亮模式</string>
+  <string name="WndSettings_SwitchPort">转换为竖屏</string>
+  <string name="WndSettings_SwitchLand">转换为横屏</string>
   <string name="WndSettings_SelectLanguage">选择语言</string>
   <string name="WndSettings_SecondQuickslot">第二快捷栏</string>
   <string name="WndSettings_ThirdQuickslot">第三快捷栏</string>
+  <string name="WndSettings_ExperementalFont">新字体</string>
+  <string name="WndSettings_ClassicFont">经典字体</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">选择空格</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">选择mod</string>
 </resources>

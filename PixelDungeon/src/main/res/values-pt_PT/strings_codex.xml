@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_ACRead">LER</string>
+  <string name="Codex_Blinded">Você não pode ler enquanto estiver cego</string>
+</resources>

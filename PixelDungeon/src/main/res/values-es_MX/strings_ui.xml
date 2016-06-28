@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Jugar</string>
+  <string name="TitleScene_Highscores">Puntajes Altos</string>
+  <string name="TitleScene_Badges">Medallas</string>
+  <string name="TitleScene_About">Acerca</string>
+  <string name="TitleScene_InternalStorageLow">No hay espacio suficiente en tu almacenamiento interno\n Tu progreso puede perderse!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <!--STRINGS OF RankingsScene CLASS-->
+  <!--STRINGS OF StartScene CLASS-->
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <!--STRINGS OF WndSettings CLASS-->
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <!--STRINGS OF ModsButton CLASS-->
+</resources>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_ACRead">LER</string>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <!--STRINGS OF BlankScroll CLASS-->
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+</resources>

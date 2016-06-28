@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Txt2">Benimle dalga mı geçiyorsun? Kazmam nerede?!</string>
+  <string name="Blacksmith_GetLost">Meşgulüm. Kaybol!</string>
+  <string name="Blacksmith_Verify1">2 farklı eşya seç, aynısını iki defa değil.</string>
+  <string name="Blacksmith_Verify5">Çöp, kalitesi çok düşük.</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Rose2">Lütfen... Bana yardım et... Gülü bul...</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Golems2">Golem safarin ne alemde?</string>
+  <string name="Imp_Cya">Görüşürüz, %s!</string>
+  <string name="Imp_Hey">Psst, %s!</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <!--STRINGS OF MirrorImage CLASS-->
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Info1">Uyumuyorum!</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <string name="Shopkeeper_Sell">Satmak için bir eşya seç</string>
+  <!--STRINGS OF WandMaker CLASS-->
+</resources>

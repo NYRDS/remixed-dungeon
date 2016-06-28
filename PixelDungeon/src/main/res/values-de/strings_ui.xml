@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Spielen</string>
+  <string name="TitleScene_Highscores">Rekorde</string>
+  <string name="TitleScene_Badges">Abzeichen</string>
+  <string name="TitleScene_About">Über</string>
+  <string name="TitleScene_InternalStorageLow">Nicht genügend Platz\n im internen Speicher\n Dein Fortschritt kann verloren gehen!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">E-Mail senden</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">Spitzenplatzierungen</string>
+  <string name="RankingsScene_Total">Gespielte Spiele (insgesamt): </string>
+  <string name="RankingsScene_NoGames">Es wurden bisher keine Spiele gespielt.</string>
+  <string name="RankingsScene_NoInfo">Keine zusätzlichen Informationen</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Spiel laden</string>
+  <string name="StartScene_New">Neues Spiel</string>
+  <string name="StartScene_Erase">Aktuelles Spiel löschen</string>
+  <string name="StartScene_Depth">Tiefe: %1$d\nLevel: %2$d</string>
+  <string name="StartScene_Really">Willst du wirklich ein neues Spiel starten?</string>
+  <string name="StartScene_Warning">Dein aktueller Spielfortschritt wird gelöscht.</string>
+  <string name="StartScene_Yes">Ja, starte ein neues Spiel</string>
+  <string name="StartScene_No">Nein, kehr zum Hauptmenü zurück</string>
+  <string name="StartScene_Unlock">Um diese Klasse freizuschalten, besiege den 3. Endgegner mit einer beliebigen anderen Klasse</string>
+  <string name="StartScene_UnlockElf">Um diese Klasse freizuschalten, besieg den 4. Endgegner mit einer beliebigen anderen Klasse</string>
+  <string name="StartScene_WinGame">Um »Herausforderungen« freizuschalten, gewinne das Spiel mit einer beliebigen Klasse.</string>
+  <string name="StartScene_DifficultyNormal">Normal</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">Absteigen ...</string>
+  <string name="InterLevelScene_Ascending">Aufsteigen ...</string>
+  <string name="InterLevelScene_Loading">Laden ...</string>
+  <string name="InterLevelScene_Resurrecting">Wiederbeleben ...</string>
+  <string name="InterLevelScene_Returning">Zurückkehren ...</string>
+  <string name="InterLevelScene_Falling">Fallen ...</string>
+  <string name="InterLevelScene_FileNotFound">Datei nicht gefunden, aus irgendeinem Grund ...</string>
+  <string name="InterLevelScene_ErrorGeneric">Irgendwas ist schief gelaufen ...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Spiel vorbei</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">Standardzoom</string>
+  <string name="WndSettings_TextScaleDefault">Standardschrift</string>
+  <string name="WndSettings_ScaleUp">Benutzeroberfläche vergrößern</string>
+  <string name="WndSettings_Immersive">Immersionsmodus</string>
+  <string name="WndSettings_Music">Musik</string>
+  <string name="WndSettings_Sound">Toneffekte</string>
+  <string name="WndSettings_Brightness">Helligkeit</string>
+  <string name="WndSettings_SwitchPort">Zum Portrait wechseln</string>
+  <string name="WndSettings_SwitchLand">Zur Landschaft wechseln</string>
+  <string name="WndSettings_SelectLanguage">Sprache wählen</string>
+  <string name="WndSettings_SecondQuickslot">Zweiter Quickslot</string>
+  <string name="WndSettings_ThirdQuickslot">Dritter Quickslot</string>
+  <string name="WndSettings_ExperementalFont">Neue Schrift</string>
+  <string name="WndSettings_ClassicFont">Klassische Schrift</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <!--STRINGS OF ModsButton CLASS-->
+</resources>

@@ -23,15 +23,18 @@
   <string name="SuspiciousRat_Name">多疑老鼠</string>
   <string name="SuspiciousRat_Gender">feminine</string>
   <string name="SuspiciousRat_Name_Objective">多疑老鼠</string>
-  <string name="SuspiciousRat_Desc">老鼠在地牢中并不少见，可是居住在如此深的地方……当它移动时，你能清楚的看到它整个身体是如何痉挛的。</string>
+  <string name="SuspiciousRat_Desc">老鼠在地牢中并不少见，可是居住在如此深的地方……当它移动时，你能清楚的看到它整个身体是如何颤动的。</string>
   <string name="SuspiciousRat_Info1">多疑老鼠正在猛烈的抽搐。</string>
   <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">伪鼠</string>
   <string name="PseudoRat_Gender">feminine</string>
+  <string name="PseudoRat_Name_Objective">伪鼠</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Info">豺狼僵尸死而复生了！</string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">黑暗之心</string>
+  <string name="HeartOfDarkness_Info">黑暗的，跳动着的奸诈幽灵心脏</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
   <string name="DarkVeil_Buff">暗黑面纱</string>

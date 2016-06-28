@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">Tombol tak terlihat terpencet!</string>
+  <string name="Level_TileChasm">Jurang</string>
+  <string name="Level_TileFloor">Lantai</string>
+  <string name="Level_TileGrass">Rumput</string>
+  <string name="Level_TileWater">Air</string>
+  <string name="Level_TileWall">Tembok</string>
+  <string name="Level_TileClosedDoor">Pintut tertutup</string>
+  <string name="Level_TileOpenDoor">Pintu terbuka</string>
+  <string name="Level_TileEntrance">Pintu masuk tingkat</string>
+  <string name="Level_TileExit">Pintu keluar tingkat</string>
+  <string name="Level_TileLockedDoor">Pintu terkunci</string>
+  <string name="Level_TileHighGrass">Rumput tinggi</string>
+  <string name="Level_TileSign">Tulisan</string>
+  <string name="Level_TileWell">Sumur</string>
+  <string name="Level_TileEmptyWell">Sumur kosong</string>
+  <string name="Level_TileStatue">Patung</string>
+  <string name="Level_TileToxicTrap">Jebakan gas beracun</string>
+  <string name="Level_TileFireTrap">Jebakan api</string>
+  <string name="Level_TileParalyticTrap">Jebakan gas pembeku</string>
+  <string name="Level_TilePoisonTrap">Jebakan panah beracun</string>
+  <string name="Level_TileAlarmTrap">Jebakan alaram</string>
+  <string name="Level_TileLightningTrap">Jebakan petir</string>
+  <string name="Level_TileBookshelf">Rak buku</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">Anda tidak dapat melihat dasarnya.</string>
+  <string name="Level_TileDescWater">Saat terbakar injak air untuk memadamkan api.</string>
+  <string name="Level_TileDescEntrance">Tangga yang membawa ke tempat yang lebih tinggi.</string>
+  <string name="Level_TileDescExit">Tangga yang membawa ke tempat yang lebih dalam.</string>
+  <string name="Level_TileDescHighGrass">Vegetasi tebal menghalangi pandangan.</string>
+  <string name="Level_TileDescLockedDoor">Pintu ini terkunci, anda butuh kunci yang cocok untuk membukanya.</string>
+  <string name="Level_TileDescSign">Anda tidak dapat membaca tulisan itu dari sini.</string>
+  <string name="Level_TileDescTrap">Menginjak tombol tidak terlihat akan mengaktivasi jebakan.</string>
+  <string name="Level_TileDescAlchemy">Letakkan beberapa biji di sini untuk membuat ramuan.</string>
+  <string name="Level_TileDescEmptyWell">Sumur ini sudah kering.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileWater">Air yang sangat dingin.</string>
+  <string name="Caves_TileDescEntrance">Tangga yang membawa ke tempat yang lebih tinggi.</string>
+  <string name="Caves_TileDescExit">Tangga yang membawa ke tempat yang lebih dalam.</string>
+  <string name="Caves_TileDescHighGrass">Jamur besar menghalangi pandangan.</string>
+  <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
+  <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">Air berwarna mencurigakan</string>
+  <string name="City_TileHighGrass">Bunga mekar tinggi</string>
+  <string name="City_TileDescEntrance">Tanjakan yang membawa ke tempat yang lebih tinggi.</string>
+  <string name="City_TileDescExit">Tanjakan yang membawa ke tempat yang lebih dalam.</string>
+  <string name="City_TileDescDeco">Beberapa ubin copot di sini.</string>
+  <string name="City_TileDescEmptySP">Karpet tebal menutupi lantai.</string>
+  <string name="City_TileDescStatue">Patung ini menggambarkan seorang kurcaci berdiri dengan pose heroik.</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">Lava dingin</string>
+  <string name="Halls_TileStatue">Tiang</string>
+  <string name="Halls_TileDescWater">Itu terlihat seperti lava, tapi itu dingin dan mungkin aman disentuh.</string>
+  <string name="Halls_TileDescStatue">Tiang ini dibuat dari tengkorak manusia sungguhan. Menakjubkan.</string>
+  <string name="Halls_TileDescBookshelf">Buku dengan bahasa kuno membara di dalam rak buku.</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">Lava dingin</string>
+  <string name="LastLevel_TileStatue">Tiang</string>
+  <string name="LastLevel_TileDescWater">Itu terlihat seperti lava, tapi itu dingin dan mungkin aman disentuh.</string>
+  <string name="LastLevel_TileDescStatue">Tiang ini dibuat dari tengkorak manusia sungguhan. Menakjubkan.</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">Air berwarna mencurigakan</string>
+  <string name="LastShopLevel_TileHighGrass">Bunga mekar tinggi</string>
+  <string name="LastShopLevel_TileDescEntrance">Tanjakan yang membawa ke tempat yang lebih tinggi.</string>
+  <string name="LastShopLevel_TileDescExit">Tanjakan yang membawa ke tempat yang lebih dalam.</string>
+  <string name="LastShopLevel_TileDescDeco">Beberapa ubin copot di sini.</string>
+  <string name="LastShopLevel_TileDescEmptySP">Karpet tebal menutupi lantai.</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">Air gelap yang dingin.</string>
+  <string name="Prison_TileDescDeco">Ada ceceran darah di atas lantai.</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">Air kotor</string>
+  <string name="Sewer_TileDescDeco">Lumut basah kekuningan menutupi lantai ini.</string>
+  <string name="Sewer_TileDescBookshelf">Rak buku ini menyimpan buku murah tidak berguna. Mungkinkah ini terbakar?</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">Pilih biji untuk dilempar</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">Jurang</string>
+  <string name="Chasm_Yes">Ya, aku yakin apa yang kulakukan</string>
+  <string name="Chasm_No">Tidak, aku berubah pikiran</string>
+  <string name="Chasm_Jump">Apakah anda yakin akan melompat ke dalam jurang? Anda mungkin dapat mati.</string>
+  <string name="Chasm_Info">Anda jatuh hingga mati...</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">Jebakan ini mengeluarkan suara keras yang bergema ke seluruh pelosok tingkat ini!</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">jebakan petir</string>
+  <string name="LightningTrap_Desc">Anda tersambar hingga terbunuh oleh jebakan petir...</string>
+</resources>

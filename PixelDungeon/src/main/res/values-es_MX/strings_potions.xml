@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">poción %s</string>
+  <string name="Potion_ACDrink">TOMA</string>
+  <string name="Potion_Harmfull">Poción dañina!</string>
+  <string name="Potion_Beneficial">Poción benefica</string>
+  <string name="Potion_Yes">Si, se lo que estoy haciendo.</string>
+  <string name="Potion_No">No, cambie de parecer</string>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+</resources>

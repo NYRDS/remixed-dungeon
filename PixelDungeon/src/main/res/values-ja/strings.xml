@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <!--STRINGS OF IntroScene CLASS-->
+  <!--STRINGS OF AmuletScene CLASS-->
+  <!--STRINGS OF GameScene CLASS-->
+  <!--STRINGS OF Char CLASS-->
+  <!--STRINGS OF Dungeon CLASS-->
+  <!--STRINGS OF Challenges CLASS-->
+  <!--STRINGS OF Journal CLASS-->
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <!--STRINGS OF WndChallenges CLASS-->
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <!--STRINGS OF WndClass CLASS-->
+  <!--STRINGS OF WndError CLASS-->
+  <!--STRINGS OF WndGame CLASS-->
+  <!--STRINGS OF WndHero CLASS-->
+  <!--STRINGS OF WndImp CLASS-->
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <!--STRINGS OF WndJournal CLASS-->
+  <!--STRINGS OF WndRanking CLASS-->
+  <!--STRINGS OF WndResurrect CLASS-->
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <!--STRINGS OF WndStory CLASS-->
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <!--STRINGS OF QuickSlot CLASS-->
+  <!--STRINGS OF Item CLASS-->
+  <!--STRINGS OF EquipableItem CLASS-->
+  <!--STRINGS OF Heap CLASS-->
+  <!--STRINGS OF Amulet CLASS-->
+  <!--STRINGS OF Ankh CLASS-->
+  <!--STRINGS OF ArmorKit CLASS-->
+  <!--STRINGS OF Dewdrop CLASS-->
+  <!--STRINGS OF DewVial CLASS-->
+  <!--STRINGS OF Gold CLASS-->
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <!--STRINGS OF Stylus CLASS-->
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <!--STRINGS OF Torch CLASS-->
+  <!--STRINGS OF Weightstone CLASS-->
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <!--STRINGS OF Keyring CLASS-->
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <!--STRINGS OF SeedPouch CLASS-->
+  <!--STRINGS OF WandHolster CLASS-->
+  <!--STRINGS OF PotionBelt CLASS-->
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <!--STRINGS OF IronKey CLASS-->
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <!--STRINGS OF DarkGold CLASS-->
+  <!--STRINGS OF DriedRose CLASS-->
+  <!--STRINGS OF DwarfToken CLASS-->
+  <!--STRINGS OF Pickaxe CLASS-->
+  <!--STRINGS OF RatSkull CLASS-->
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Foliage CLASS-->
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <!--STRINGS OF ToxicGas CLASS-->
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <!--STRINGS OF Web CLASS-->
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <!--STRINGS OF Barkskin CLASS-->
+  <!--STRINGS OF Bleeding CLASS-->
+  <!--STRINGS OF Blindness CLASS-->
+  <!--STRINGS OF Burning CLASS-->
+  <!--STRINGS OF Charm CLASS-->
+  <!--STRINGS OF Combo CLASS-->
+  <!--STRINGS OF Cripple CLASS-->
+  <!--STRINGS OF Frost CLASS-->
+  <!--STRINGS OF Fury CLASS-->
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <!--STRINGS OF Hunger CLASS-->
+  <!--STRINGS OF Invisibility CLASS-->
+  <!--STRINGS OF Levitation CLASS-->
+  <!--STRINGS OF Light CLASS-->
+  <!--STRINGS OF MindVision CLASS-->
+  <!--STRINGS OF Ooze CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Roots CLASS-->
+  <!--STRINGS OF Shadows CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF SnipersMark CLASS-->
+  <!--STRINGS OF Vertigo CLASS-->
+  <!--STRINGS OF Weakness CLASS-->
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+</resources>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">Κώδιξ</string>
+  <string name="Codex_ACRead">ΔΙΑΒΆΣΤΕ</string>
+  <string name="Codex_Info">Ένα από τα πολλά βιβλία που μπορούν να βρεθούν σε κάθε βιβλιοθήκη</string>
+</resources>

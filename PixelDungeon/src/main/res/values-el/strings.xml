@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">Ανασκευασμένα Μπουντρούμια εικονοστοιχείων</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Txt">Επιτέλους κρατάτε στα χέρια σας το Φυλακτό του Yendor. Χρησιμοποιώντας τη δύναμη του μπορείτε ή να καταλάβετε τον κόσμο ή να φέρετε είρηνη και ευημερία στους ανθρώπους ή στο κάθε τι. Πέραν τούτου, η ζωή σας θα αλλάξει για πάντα και το παιχνίδι θα τελειώσει εδώ. Ή μπορείτε να μείνετε απλώς θνητός για λίγο παραπάνω.</string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Καλώς ήλθατε στο %dο επίπεδο των Μπουντρουμιών Εικονοστοιχείων</string>
+  <string name="GameScene_WelcomeBack">Καλώς ήλθατε πίσω στο επίπεδο %d τών Μπουντρουμιών Εικονοστοιχείων</string>
+  <string name="GameScene_NightMode">Να είστε πιο προσεκτικός, αφού τη νύχτα τα μπουντρούμια είναι πολύ πιο επικίνδυνα!</string>
+  <string name="GameScene_Chasm">Τα βήματά σας ηχούν σ\'όλο το μπουντρούμι.</string>
+  <string name="GameScene_Water">Ακούτε το νερό να πιτσιλά τριγύρω σας.</string>
+  <string name="GameScene_Secrets">Η ατμόσφαιρα υπαινίσει ότι ο όροφος κρύβει πόλλα μυστικά.</string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_OutParalysis">Ο πόνος ξεπέρασε την παράλυση από τον/την %s</string>
+  <string name="Char_StaPoisoned">δηλητηριασμένος</string>
+  <string name="Char_StaMind">νους</string>
+  <string name="Char_StaVision">όραση</string>
+  <string name="Char_StaParalysed">παράλυτος</string>
+  <string name="Char_StaFrightened">τρομοκρατημένος</string>
+  <string name="Char_StaBleeding">ματωμένος</string>
+  <string name="Char_StaDizzy">ζαλισμένος</string>
+  <string name="Char_StaInvisible">αόρατος</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">Το κείμενο είναι δυσανάγνωστο...</string>
+  <string name="Dungeon_DeadEnd">Τι κάνετε έδω πέρα;</string>
+  <!--STRINGS OF Challenges CLASS-->
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_Garden">Κήπος</string>
+  <string name="Journal_Statue">Ζωηρό άγαλμα</string>
+  <string name="Journal_Ghost">Λυπημένο φάντασμα</string>
+  <string name="Journal_Troll">Σιδηρουργος τρολ</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Prompt">Εντάξει, μια συμφωνία είναι συμφωνία, να τι θα κάνω για σένα: μπορώ να αναπλάσω 2 αντικείμενα και να τα μεταποιήσω σε ένα καλύτερης ποιότητας.</string>
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">Φίλτρα</string>
+  <string name="WndCatalogus_Scrolls">Περγαμινές</string>
+  <string name="WndCatalogus_Title">Κατάλογοι</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <string name="WndChallenges_Title">Προκλήσεις</string>
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">Ποιά πορεία θα ακολουθήσετε;</string>
+  <string name="WndChooseWay_Cancel">Θα αποφασίσω αργότερα</string>
+  <!--STRINGS OF WndClass CLASS-->
+  <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">ΠΡΌΒΛΗΜΑ</string>
+  <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">Ρυθμίσεις</string>
+  <string name="WndGame_Challenges">Προκλήσεις</string>
+  <string name="WndGame_Ranking">Βαθμολογίες</string>
+  <string name="WndGame_Start">Ξεκινήστε νέο παιχνίδι</string>
+  <string name="WndGame_menu">Κύριο Μενού</string>
+  <string name="WndGame_Exit">Έξοδος από το παιχνίδι</string>
+  <string name="WndGame_Return">Επιστροφή στο Παιχνίδι</string>
+  <string name="WndGame_Save">Αποθήκευση</string>
+  <string name="WndGame_Load">Φόρτωση</string>
+  <!--STRINGS OF WndHero CLASS-->
+  <string name="WndHero_Stats">Στατιστικά</string>
+  <string name="WndHero_Exp">Εμπειρία</string>
+  <string name="WndHero_Str">Δύναμη</string>
+  <string name="WndHero_Health">Υγεία</string>
+  <string name="WndHero_Gold">Χρυσός που Συλλέχθηκε</string>
+  <string name="WndHero_Depth">Μέγιστο Βάθος</string>
+  <string name="WndHero_StaTitle">Επίπεδο %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">Κατάλογοι</string>
+  <string name="WndHero_StaJournal">Ημερολόγιο</string>
+  <!--STRINGS OF WndImp CLASS-->
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">Σεντούκι</string>
+  <string name="WndInfoItem_LockedChest">Κλειδωμένο Σεντούκι</string>
+  <string name="WndInfoItem_CrystalChest">Κρυστάλλινο Σεντούκι</string>
+  <string name="WndInfoItem_Tomb">Τάφος</string>
+  <!--STRINGS OF WndJournal CLASS-->
+  <string name="WndJournal_Title">Ημερολόγιο</string>
+  <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Stats">Στατιστικά</string>
+  <string name="WndRanking_Items">Αντικείμενα</string>
+  <string name="WndRanking_Badges">Σήματα</string>
+  <string name="WndRanking_StaTitle">Επίπεδο %1$d %2$s</string>
+  <string name="WndRanking_StaChallenges">Προκλήσεις</string>
+  <string name="WndRanking_StaHealth">Υγεία</string>
+  <string name="WndRanking_StaStr">Δύναμη</string>
+  <string name="WndRanking_StaDuration">Χρόνος Παιχνιδιού</string>
+  <string name="WndRanking_StaDepth">Μέγιστο Βάθος</string>
+  <!--STRINGS OF WndResurrect CLASS-->
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <!--STRINGS OF WndStory CLASS-->
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <!--STRINGS OF QuickSlot CLASS-->
+  <!--STRINGS OF Item CLASS-->
+  <!--STRINGS OF EquipableItem CLASS-->
+  <!--STRINGS OF Heap CLASS-->
+  <!--STRINGS OF Amulet CLASS-->
+  <!--STRINGS OF Ankh CLASS-->
+  <!--STRINGS OF ArmorKit CLASS-->
+  <!--STRINGS OF Dewdrop CLASS-->
+  <!--STRINGS OF DewVial CLASS-->
+  <!--STRINGS OF Gold CLASS-->
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <!--STRINGS OF Stylus CLASS-->
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <!--STRINGS OF Torch CLASS-->
+  <!--STRINGS OF Weightstone CLASS-->
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <!--STRINGS OF Keyring CLASS-->
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <!--STRINGS OF SeedPouch CLASS-->
+  <!--STRINGS OF WandHolster CLASS-->
+  <!--STRINGS OF PotionBelt CLASS-->
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <!--STRINGS OF IronKey CLASS-->
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <!--STRINGS OF DarkGold CLASS-->
+  <!--STRINGS OF DriedRose CLASS-->
+  <!--STRINGS OF DwarfToken CLASS-->
+  <!--STRINGS OF Pickaxe CLASS-->
+  <!--STRINGS OF RatSkull CLASS-->
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Foliage CLASS-->
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <!--STRINGS OF ToxicGas CLASS-->
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <!--STRINGS OF Web CLASS-->
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <!--STRINGS OF Barkskin CLASS-->
+  <!--STRINGS OF Bleeding CLASS-->
+  <!--STRINGS OF Blindness CLASS-->
+  <!--STRINGS OF Burning CLASS-->
+  <!--STRINGS OF Charm CLASS-->
+  <!--STRINGS OF Combo CLASS-->
+  <!--STRINGS OF Cripple CLASS-->
+  <!--STRINGS OF Frost CLASS-->
+  <!--STRINGS OF Fury CLASS-->
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <!--STRINGS OF Hunger CLASS-->
+  <!--STRINGS OF Invisibility CLASS-->
+  <!--STRINGS OF Levitation CLASS-->
+  <!--STRINGS OF Light CLASS-->
+  <!--STRINGS OF MindVision CLASS-->
+  <!--STRINGS OF Ooze CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Roots CLASS-->
+  <!--STRINGS OF Shadows CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF SnipersMark CLASS-->
+  <!--STRINGS OF Vertigo CLASS-->
+  <!--STRINGS OF Weakness CLASS-->
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+</resources>

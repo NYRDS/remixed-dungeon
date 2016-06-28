@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">Gizli basınç plakasından \"tık\" sesi gelir!</string>
+  <string name="Level_TileChasm">Uçurum</string>
+  <string name="Level_TileFloor">Zemin</string>
+  <string name="Level_TileGrass">Çim</string>
+  <string name="Level_TileWater">Su</string>
+  <string name="Level_TileWall">Duvar</string>
+  <string name="Level_TileClosedDoor">Kapalı kapı</string>
+  <string name="Level_TileOpenDoor">Açık kapı</string>
+  <string name="Level_TileEntrance">Derinliğin girişi</string>
+  <string name="Level_TileExit">Derinliğin çıkışı</string>
+  <string name="Level_TileEmbers">Köz</string>
+  <string name="Level_TileLockedDoor">Kilitli kapı</string>
+  <string name="Level_TilePedestal">Kaide</string>
+  <string name="Level_TileBarricade">Barikat</string>
+  <string name="Level_TileHighGrass">Yüksek otlar</string>
+  <string name="Level_TileLockedExit">Kilitli derinlik çıkışı</string>
+  <string name="Level_TileUnlockedExit">Kilidi açılmış derinlik çıkışı</string>
+  <string name="Level_TileSign">Tabela</string>
+  <string name="Level_TileWell">Kuyu</string>
+  <string name="Level_TileEmptyWell">Boş kuyu</string>
+  <string name="Level_TileStatue">Heykel</string>
+  <string name="Level_TileToxicTrap">Zehirli gaz tuzağı</string>
+  <string name="Level_TileFireTrap">Ateş tuzağı</string>
+  <string name="Level_TileParalyticTrap">Felç eden gaz tuzağı</string>
+  <string name="Level_TilePoisonTrap">Zehirli dart tuzağı</string>
+  <string name="Level_TileAlarmTrap">Alarmlı tuzak</string>
+  <string name="Level_TileLightningTrap">Yıldırım tuzağı</string>
+  <string name="Level_TileGrippingTrap">Kapan</string>
+  <string name="Level_TileSummoningTrap">çağırıcı tuzak</string>
+  <string name="Level_TileInactiveTrap">Tetiklenmiş tuzak</string>
+  <string name="Level_TileBookshelf">Kitaplık</string>
+  <string name="Level_TileAlchemy">Simya şisesi</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">Aşağıyı göremezsin.</string>
+  <string name="Level_TileDescLockedDoor">Bu kapı kilitli, açmak için eşleşen bi anahtara ihtiyacın var.</string>
+  <string name="Level_TileDescSign">Yazıyı buradan okuyamazsın.</string>
+  <string name="Level_TileDescInactiveTrap">Tuzak daha önceden tetiklenmiş ve artık tehlikeli değil.</string>
+  <string name="Level_TileDescAlchemy">İksir yapmak için buraya birkaç tohum bırak.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileWater">Dondurucu soğuk su.</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">Soğuk lav</string>
+  <string name="Halls_TileHighGrass">Mantar közü</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">Soğuk lav</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">Karanlık soğuk su.</string>
+  <string name="Prison_TileDescDeco">yerde eski kan lekeleri var.</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">Bulanık su</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">Fırlatmak için bir tohum seç</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">Uçurum</string>
+  <string name="Chasm_Yes">Evet, ne yaptığımı biliyorum</string>
+  <string name="Chasm_No">Hayır, fikrimi değiştirdim</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">yıldırım tuzağı</string>
+</resources>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/food-->
   <!--STRINGS OF Food CLASS-->
@@ -44,6 +44,4 @@
   <string name="Pasty_Name">pasztecik</string>
   <string name="Pasty_Info">Autentyczny pasztecik wypełniony wołowiną, który smakuje najlepiej z barszczem.</string>
   <!--STRINGS OF PseudoPasty CLASS-->
-  <string name="PseudoPasty_Name">pasztecik</string>
-  <string name="PseudoPasty_Info">Autentyczny pasztecik wypełniony wołowiną, który smakuje najlepiej z barszczem.</string>
 </resources>

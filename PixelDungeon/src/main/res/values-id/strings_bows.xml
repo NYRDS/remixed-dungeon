@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">busur kayu</string>
+  <string name="WoodenBow_Info">Busur kayu sederhana ini dapat dibuktikan berguna bila anda menemukan beberapa anak panah.</string>
+  <string name="WoodenBow_Gender">maskulin</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">busur gabungan</string>
+  <string name="CompoundBow_Info">Anak panah diluncurkan dari busur gabungan menyebabkan serangan yang kuat dan telah diperbaharui akurasinya dengan harga beberapa kecepatan.</string>
+  <string name="CompoundBow_Gender">maskulin</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Gender">maskulin</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">kantung panah</string>
+  <string name="Quiver_Info">Kantung panah yang terbuat dari kulit cocok untuk menampung anak panah</string>
+  <string name="Quiver_Gender">maskulin</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">kantung panah api</string>
+  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Gender">maskulin</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">kantung panah beracun</string>
+  <string name="PoisonQuiver_Info"></string>
+  <string name="Poisonuiver_Gender">maskulin</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">kantung panah melumpuhkan</string>
+  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Gender">maskulin</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">anak panah</string>
+  <string name="CommonArrow_Info">Anak panah biasa dengan besi sebagai ujungnya.</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">anak panah api</string>
+  <string name="FireArrow_Info">Anak panah ini terlihat biasa, kecuali cahaya beradiasi merah hangat di ujungnya.</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">anak panah beracun</string>
+  <string name="PoisonArrow_Info">Racun mematikan di ujung anak panah.</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">anak panah melumpuhkan</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+</resources>

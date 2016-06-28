@@ -31,7 +31,7 @@
 	
 	<!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">Ночной колпак</string>
-    <string name="Nightcap_Info">Покорять подземелья в ночную пору должно быть крайне утомительным занятием. Как насчёт того, чтобы одеть уютную тёплую шапочку и расслабиться, и пусть весь мир подождёт.</string>
+    <string name="Nightcap_Info">Покорять подземелья в ночную пору должно быть крайне утомительным занятием. Как насчёт того, чтобы  одеть это уютную тёплую шапочку и расслабиться, и пусть весь мир подождёт.</string>
 	
 	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Шляпа волшебника</string>
@@ -39,7 +39,7 @@
 
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
-    <string name="WndHats_ListTitle">Список Аксессуаров</string>
+    <string name="WndHats_ListTitle">Список Акссессуаров</string>
     <string name="WndHats_SlotTitle">Надето</string>
     <string name="WndHats_NoConnectionMsg">Не удаётся соединиться с Google Play.</string>
     <string name="WndHats_Purchased">Есть!</string>

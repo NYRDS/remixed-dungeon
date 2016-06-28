@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Pixel Dungeon Remix</string>
+  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Wielu bohaterów każdego rodzaju udało się w podróż do Lochu przed tobą. Niektórzy z nich powrócili przynosząc ze sobą skarby i magiczne artefakty, lecz o większości już nigdy więcej nie słyszano. Ale nikomu jeszcze się nie udało zdobyć Amuletu Yendoru, który o ile wiadomo spoczywa w głębiach Lochu.\n\nUważasz, że jesteś gotowy podjąć to wyzwanie, ale co najważniejsze, czujesz że fortuna uśmiecha się do ciebie. Czas rozpocząć własną przygodę!</string>
   <!--STRINGS OF AmuletScene CLASS-->

@@ -26,6 +26,8 @@
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
   <string name="InventoryScroll_Title">选择一个物品</string>
+  <string name="InventoryScroll_Warning">你真的确认你要取消这张卷轴的使用吗？这将会浪费掉它的。</string>
+  <string name="InventoryScroll_Yes"> 是的，我十分确定</string>
   <string name="InventoryScroll_No">不，我改主意了</string>
   <!--STRINGS OF BlankScroll CLASS-->
   <string name="BlankScroll_Name">空白卷轴</string>
@@ -33,17 +35,39 @@
   <string name="BlankScroll_ReallyBlank">这张卷轴是空白的。</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
   <string name="ScrollOfChallenge_Name">挑战卷轴</string>
+  <string name="ScrollOfChallenge_Info">当你大声吟诵时，这张卷轴将会释放出一声挑衅的咆哮，这声咆哮将会惊醒所有怪物并提醒他们阅读者的位置。</string>
+  <string name="ScrollOfChallenge_Info1">这个卷轴中发出的挑衅怒吼回荡在地牢中！</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">鉴定卷轴</string>
+  <string name="ScrollOfIdentify_Info">永久的揭示一件物品的所有秘密。</string>
+  <string name="ScrollOfIdentify_InvTitle">选择你要鉴定的物品</string>
+  <string name="ScrollOfIdentify_Info1">这是%s</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">催眠卷轴</string>
+  <string name="ScrollOfLullaby_Info">一段舒缓的旋律会让你视野中的所有敌人陷入沉睡中，让你有机会逃跑或是突袭他们。</string>
+  <string name="ScrollOfLullaby_Info1">这张卷轴发出了一种舒缓的旋律。</string>
+  <string name="ScrollOfLullaby_Info2">这张卷轴发出了一种舒缓的旋律使%s陷入了沉睡！</string>
+  <string name="ScrollOfLullaby_Info3">这张卷轴发出了一种舒缓的旋律使怪物陷入了沉睡！</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">魔法地图卷轴</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">镜像卷轴</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">灵能爆破卷轴</string>
   <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">充能卷轴</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">除咒卷轴</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">传送卷轴</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">恐惧卷轴</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">升级卷轴</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">武器强化卷轴</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">支配卷轴</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">诅咒卷轴</string>
 </resources>

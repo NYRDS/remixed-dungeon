@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/rings-->
   <!--STRINGS OF Ring CLASS-->
@@ -65,7 +65,8 @@
   <string name="RingOfStoneWalking_Name">Pierścień Krwawego Kamienia</string>
   <string name="RingOfStoneWalking_Info">Ten pierścień jest zrobiony z ciemnego kamienia i wyglądałby zwyczajnie, gdyby nie kropla pulsującej krwi, która zastępuje klejnot.</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Uwięziony w kamieniu. Na zawsze.</string>
-  <!-- STRINGS OF SpiderCharm CLASS -->
-  <string name="SpiderCharm_Name">Spider Charm</string>
-  <string name="SpiderCharm_Info">This exotic trinket is shrouded by aura of mystery. Who knows, what might happen to one who wears it?</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Info">Ta egzotyczna błyskotka otoczona jest aurą tajemnic. Kto wie, co może się przydarzyć temu, kto to założy? </string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <!--STRINGS OF RatKingCrown CLASS-->
 </resources>

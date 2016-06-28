@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">plata</string>
+  <string name="WndDonate_gold">oro</string>
+  <string name="WndDonate_ruby">Rubi</string>
+  <string name="WndDonate_donate">dona:</string>
+  <string name="WndDonate_notConnected">sin conexión :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon -  gratis para todos y siempre lo sera.\n\nSin embargo, puedes ayudarnos a hacer el juego aun mejor.\n\nAparte de nuestras sentidas gracias recibirás algunas mejoras cosméticas.</string>
+  <string name="WndDonate_silverDonate">donación plata</string>
+  <string name="WndDonate_silverDonateText">Toda donación ayudara al desarrollo del proyecto.</string>
+  <string name="WndDonate_rubyDonateText2"></string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <!--STRINGS OF DonateButton CLASS-->
+  <!--STRINGS OF WndSaveSlotSelect-->
+</resources>

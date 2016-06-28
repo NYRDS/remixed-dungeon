@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
@@ -64,6 +64,8 @@ Moi, j\'aurai besoin de tuer des moines. Vous voyez, j\'aimerais établir un pet
   <string name="RatKing_Desc">Ce rat est un peu plus grand que les autres et porte une petite couronne sur la tête.</string>
   <string name="RatKing_Info1">Je ne dormais pas !</string>
   <string name="RatKing_Info2">Qu\'est ce que c\'est ? Je n\'ai pas le temps pour ces calomnies. Mon royaume ne va pas se gouverner tout seul !</string>
+  <string name="RatKing_Info3">Comment osez-vous, créature chétive, perturber Notre Ratness?!</string>
+  <string name="RatKing_Died">Roi est mort. Vive le roi!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <string name="Shopkeeper_Name">marchand</string>
   <string name="Shopkeeper_Desc">Ce mec un peu épais aurait l\'air plus approprié dans un quartier marchand d\'une grande ville plutôt qu\'un donjon. Ses prix expliquent pourquoi il préfère établir son business ici.</string>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/Wands-->
+  <!--STRINGS OF Wand CLASS-->
+  <string name="Wand_Name">%s Zauberstab</string>
+  <string name="Wand_ACZap">zappen</string>
+  <string name="Wand_Wood">Dieser %s Zauberstab fühlt sich warm an. Was wohl passiert wenn man ihn benutzt?</string>
+  <string name="Wand_Damage">Wenn dieser Zauberstab im Nahkampf benutzt wird, beträgt der durchschnittliche Schaden %d Punkte pro Treffer.</string>
+  <string name="Wand_Weapon">Du kannst diesen Zauberstab als Nahkampfwaffe benutzen.</string>
+  <string name="Wand_Fizzles">Dein Zauberstab funkelt nur, seine Ladungen sind wohl verbraucht.</string>
+  <string name="Wand_SelfTarget">Du kannst dich nicht selber anvisieren</string>
+  <string name="Wand_Prompt">Entscheide wohin du zappen möchtest</string>
+  <!--STRINGS OF WandOfAmok CLASS-->
+  <string name="WandOfAmok_Name">Zauberstab des Amoklaufs</string>
+  <string name="WandOfAmok_Info">Das blutrote Licht dieses Zauberstabs lässt das Ziel amoklaufen, sodass es alle Kreaturen in Reichweite angreift.</string>
+  <string name="WandOfAmok_Info1">Es passierte nichts</string>
+  <!--STRINGS OF WandOfAvalanche CLASS-->
+  <string name="WandOfAvalanche_Name">Zauberstab der Lawine</string>
+  <string name="WandOfAvalanche_Info">Wenn eine Ladung dieses Zauberstabs auf eine Wand trifft (oder ein anderes Hinderniss), entsteht eine Steinlawine die allen Kreaturen im Effektbereich Schaden zufügt und betäubt.</string>
+  <string name="WandOfAvalanche_Info1">Du hast dich mit dem Zauberstab der Lawine selbst getötet...</string>
+  <!--STRINGS OF WandOfBlink CLASS-->
+  <string name="WandOfBlink_Name">Zauberstab des Blinkens</string>
+  <string name="WandOfBlink_Info">Dieser Zauberstab erlaubt es dir, dich in eine gewünschte Richtung zu teleportieren. Kreaturen und Hindernisse blocken den Teleport.</string>
+  <!--STRINGS OF WandOfDisintegration CLASS-->
+  <string name="WandOfDisintegration_Name">Zauberstab der Auflösung</string>
+  <string name="WandOfDisintegration_Info">Dieser Zauberstab erzeugt einen Strahl destruktiver Energie, welcher durch alle Kreaturen geht. Je mehr Ziele vom Strahl getroffen werden, umso größer der verursachte Schaden.</string>
+  <!--STRINGS OF WandOfFirebolt CLASS-->
+  <string name="WandOfFirebolt_Name">Zauberstab des Feuerballs</string>
+  <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="Sheep_Name">Schaf</string>
+  <!--STRINGS OF WandOfLightning CLASS-->
+  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_SelectWand">Wähle einen Zauberstab den du verbessern möchtest</string>
+  <!--STRINGS OF WandOfPoison CLASS-->
+  <!--STRINGS OF WandOfRegrowth CLASS-->
+  <string name="WandOfRegrowth_Info1">Es passierte nichts</string>
+  <!--STRINGS OF WandOfSlowness CLASS-->
+  <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <!--STRINGS OF WandOfTeleportation CLASS-->
+  <string name="WandOfTeleportation_Info2">Es passierte nichts</string>
+</resources>

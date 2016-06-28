@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Completed">Oh, Anda telah kembali... Lebih baik terlambat daripada tidak sama sekali.</string>
+  <string name="Blacksmith_GetLost">Saya sedang sibuk. Pergilah!</string>
+  <string name="Blacksmith_Verify4">Saya tidak bekerja dengan benda terkutuk!</string>
+  <string name="Blacksmith_Verify5">Ini adalah sampah, kualitasnya terlalu buruk!</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Name">hantu sedih</string>
+  <string name="Ghost_Rose1">Halo petualang... Dulu aku sama seperti Anda - kuat dan percaya diri... tapi sekarang saya sudah mati... Tapi saya tidak bisa meninggalkan tempat ini... Tidak sampai aku menemukan _bunga rose keringku_... Itu sangat berguna untukku... Beberapa monster mencurinya dari tubuhku...</string>
+  <string name="Ghost_Rose2">Tolong... Bantu saya... Carikan bunga itu...</string>
+  <string name="Ghost_Defense">menghindar</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Name">landak</string>
+  <string name="Hedgehog_Desc">Landak itu kelihatan malu.</string>
+  <string name="Hedgehog_Info1">Apa Anda mencari beruang juga?</string>
+  <string name="Hedgehog_Info3">Apa Anda ingin teh dengan selai raspberry?</string>
+  <string name="Hedgehog_Info4">Ampil kue pie ini</string>
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Cya">Sampai jumpa, %s!</string>
+  <string name="Imp_Hey">Psst, %s!</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Greetings">Hai, teman!</string>
+  <!--STRINGS OF MirrorImage CLASS-->
+  <string name="MirrorImage_Gender">maskulin</string>
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Name">raja tikus</string>
+  <string name="RatKing_Desc">Tikus ini lebih besar dari tikus marsupial dan memakai mahkota kecil di kepalanya.</string>
+  <string name="RatKing_Info1">Saya tidak tidur!</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <!--STRINGS OF WandMaker CLASS-->
+</resources>

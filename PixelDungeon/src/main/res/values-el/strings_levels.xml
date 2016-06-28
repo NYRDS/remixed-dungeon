@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">Ένα κρυμμένο πλακάκι πίεσης ενεργοποιήθηκε!</string>
+  <string name="Level_TileFloor">Πάτωμα</string>
+  <string name="Level_TileGrass">Χορτάρι</string>
+  <string name="Level_TileWater">Νερό</string>
+  <string name="Level_TileWall">Τοίχος</string>
+  <string name="Level_TileClosedDoor">Κλειστή πόρτα</string>
+  <string name="Level_TileOpenDoor">Ανοιχτή πόρτα</string>
+  <string name="Level_TileLockedDoor">ΚΛειδωμένη πόρτα</string>
+  <string name="Level_TileWell">Πηγάδι</string>
+  <string name="Level_TileEmptyWell">Άδειο πηγάδι</string>
+  <string name="Level_TileStatue">Άγαλμα</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <!--STRINGS OF LastLevel CLASS-->
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <!--STRINGS OF Chasm CLASS-->
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <!--STRINGS OF LightningTrap CLASS-->
+</resources>

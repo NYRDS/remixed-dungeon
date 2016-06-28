@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
@@ -188,7 +188,7 @@
   <string name="Kusarigama_Pull">ПОДТЯНУТЬ</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">меч хаоса</string>
-  <string name="ChaosSword_Info">Клинок этого меча создан из чистого Хаоса и иногда слегка подрагивает в предвкушении. Великая сила, сокрытая в этом оружии, может рассечь пополам почти всё, что угодно. Однако, чтобы совладать с ней, нужно великое мастерство. </string>
+  <string name="ChaosSword_Info">Клинок это меча создан из чистого Хаоса и иногда слегка подрагивает в предвкушении. Великая сила, сокрытая в этом оружии, может рассечь пополам почти всё, что угодно. Однако, чтобы совладать с ней, нужно великое мастерство. </string>
   <string name="ChaosSword_Gender">masculine</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">лук хаоса</string>
@@ -199,7 +199,7 @@
   <string name="ChaosStaff_Info">Посох, пропитанный силой Хаоса! О чём ещё может мечтать маг, и чего ещё бояться?</string>
   <string name="ChaosStaff_Gender">masculine</string>
   <!--STRINGS OF SacrificialSword CLASS-->
-  <string name="SacrificialSword_Name">Меч для жертвоприношений</string>
-  <string name="SacrificialSword_Info">На первый взгляд этот старый бронзовый меч, покртый потеками патины, совершенно бесполезен. Но какие-то старые, архаичные силы спят внутри. Они могут превратить почти любое существо в безвольного раба. Нужно лишь найти способ их пробудить...</string>
+  <string name="SacrificialSword_Name">жертвенный меч</string>
+  <string name="SacrificialSword_Info">На первый взгляд, этот старый бронзовый меч с потёками патины совершенно бесполезен. Но внутри него спят какие-то древние, архаичные силы, способные превратить почти любое существо в безвольного раба. Нужно лишь найти способ их пробудить...</string>
   <string name="SacrificialSword_Gender">masculine</string>
 </resources>

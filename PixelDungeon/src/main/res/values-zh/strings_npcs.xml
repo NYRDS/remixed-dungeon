@@ -39,21 +39,29 @@
   <string name="Hedgehog_Info4">拿上这个派吧</string>
   <string name="Hedgehog_ImLate">我来晚了，实在太晚了……</string>
   <!--STRINGS OF Imp CLASS-->
-  <string name="Imp_Name">野心勃勃的小鬼</string>
-  <string name="Imp_Desc">小鬼是一种低等恶魔。它们的力量和魔法并不是特别强，但是它们异常的睿智及友善。许多小鬼更倾向于在非恶魔中生活。</string>
-  <string name="Imp_Defense">待会再说</string>
+  <string name="Imp_Name">野心勃勃的小恶魔</string>
+  <string name="Imp_Desc">小恶魔是一种低等恶魔。它们并没有强大的的力量或魔法，但是它们十分的睿智且善于交际。许多小恶魔更倾向于在没有其他恶魔的环境中生活。</string>
+  <string name="Imp_Defense">回避</string>
+  <string name="Imp_Golems1">你是个冒险家吗？我爱冒险家！你们总能解决那些需要被干掉的东西，对吗？当然是在有赏金的前提下：)
+对我来说，我需要你干掉一些_魔像_。你看，我要在这地方弄点小本生意，但那些愚蠢的魔像只会把我的生意弄糟！我和这些到处游荡的花岗岩块根本无法交流，真是该死！所以，请杀死…呃…_6个魔像_，奖励就是你的了。</string>
   <string name="Imp_Golems2">你的魔像狩猎进行的怎么样了？</string>
+  <string name="Imp_Monks1">你是个冒险家吗？我爱冒险家！你们总能解决那些需要被干掉的东西，对吗？当然是在有赏金的前提下：)
+对我来说，我需要你干掉一些_武僧_。你看，我要在这地方弄点小本生意，但那些武僧疯子根本不会照顾我的生意，还会吓跑我的顾客！所以，请杀死…呃…_8个武僧_，奖励就是你的了。</string>
+  <string name="Imp_Monks2">噢，你还活着！我就知道你的功夫比他们更强：)只是别忘了拿走他们的武僧徽记。</string>
   <string name="Imp_Cya">下次见，%s！</string>
   <string name="Imp_Hey">这里，%s！</string>
   <!--STRINGS OF ImpShopkeeper CLASS-->
-  <string name="ImpShopkeeper_Name">野心勃勃的小鬼</string>
+  <string name="ImpShopkeeper_Name">野心勃勃的小恶魔</string>
+  <string name="ImpShopkeeper_Desc">小恶魔是一种低等恶魔。它们并没有强大的的力量或魔法，但是它们十分的睿智且善于交际。许多小恶魔更倾向于在没有其他恶魔的环境中生活，与那些非恶魔进行交易。</string>
   <string name="ImpShopkeeper_Greetings">你好，朋友！</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">镜像</string>
   <string name="MirrorImage_Name_Objective">镜像</string>
   <string name="MirrorImage_Gender">masculine</string>
+  <string name="MirrorImage_Desc">这个镜像与你十分相似，但是他们更黯淡且在微微震颤。</string>
   <!--STRINGS OF RatKing CLASS-->
   <string name="RatKing_Name">鼠王</string>
+  <string name="RatKing_Desc">这只老鼠比普通的老鼠更大，并且头上戴着一个小小的皇冠。</string>
   <string name="RatKing_Info1">我可没在睡觉</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <!--STRINGS OF WandMaker CLASS-->

@@ -2,7 +2,7 @@
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
   <string name="ShadowLord_Name">暗影领主</string>
-  <string name="ShadowLord_Gender">masculine</string>
+  <string name="ShadowLord_Gender">男性化</string>
   <string name="ShadowLord_Name_Objective">暗影领主</string>
   <string name="ShadowLord_Desc">由纯粹的恶意和黑暗构成的生物。许多人因为他的强大坚信他就是古神本尊。而其他人则认为他不过是古神内庭的守护者之一</string>
   <string name="ShadowLord_Intro">做好准备！</string>
@@ -16,6 +16,7 @@
 您可以随时改变您的决定（点击主界面的统计表图标）</string>
   <string name="AllowStatisticsCollectionScene_Allow">允许</string>
   <string name="AllowStatisticsCollectionScene_Deny">拒绝</string>
+  <string name="Darkness_Info">像是永恒黑暗的碎片漂浮在空中</string>
   <string name="WndSelectLanguage_ImproveTranslation">请帮助我们改善混合的像素地牢的翻译</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">点击这里来加入混合的像素地牢的翻译团队</string>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">estátua animada</string>
+    <string name="ArmoredStatue_Name_Objective">estátua animada</string>
+    </resources>

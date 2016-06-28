@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">마른 덤불</string>
+  <string name="Guts_TileHighGrass">마른 덤불</string>
+  <string name="Guts_TileWater">이상한 점액질 액체</string>
+  <string name="Guts_TileDescEntrance">빨아들이는 구멍이 던전의 높은 곳으로 향하게 한다.</string>
+  <string name="Guts_TileDescExit">빨아들이는 구멍이 던전의 아래층으로 향하게 한다.</string>
+  <string name="Guts_TileDescDeco">이 장소는 좀...잘못된 것 같다.</string>
+  <string name="Guts_TileDescBookshelf">그 책장은 완전히 두꺼운 살점 그물로 덮혀 있어, 책을 꺼낼 방법이 없다.</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">미믹</string>
+  <string name="MimicAmulet_Gender">남성</string>
+  <string name="MimicAmulet_Name_Objective">미믹</string>
+  <string name="MimicAmulet_Desc">당신이 한 모험의 가장 영광스러운 순간은 그저 함정이었을 뿐이었다.</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">잡았다, %s!</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <!--STRINGS OF Worm CLASS-->
+  <!--STRINGS OF YogsBrain CLASS-->
+  <!--STRINGS OF YogsEye CLASS-->
+  <!--STRINGS OF YogsHeart CLASS-->
+  <!--STRINGS OF YogsTeeth CLASS-->
+</resources>
