@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
@@ -181,7 +183,7 @@ public class Hero extends Char {
 	private ArrayList<Mob> visibleEnemies;
 	private Collection<Mob> pets = new ArrayList<>();
 
-	public void addPet(Mob pet) {
+	public void addPet(@NonNull Mob pet) {
 		pets.add(pet);
 	}
 

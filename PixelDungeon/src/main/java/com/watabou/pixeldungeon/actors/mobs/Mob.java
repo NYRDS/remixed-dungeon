@@ -110,7 +110,7 @@ public abstract class Mob extends Char {
 		return fraction;
 	}
 
-	public static Mob makePet(Mob pet, Hero hero) {
+	public static Mob makePet(@NonNull Mob pet, @NonNull Hero hero) {
 		pet.setFraction(Fraction.HEROES);
 		hero.addPet(pet);
 
