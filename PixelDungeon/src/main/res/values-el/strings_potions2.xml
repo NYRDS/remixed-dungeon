@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--PACKAGE /items/potions additional strings-->
-  <string name="Potion_ACMoisten">ΥΓΡΟΠΟΙΉΣΤΕ</string>
-  <string name="Potion_SelectForMoisten">Επιλέξτε ένα αντικείμενο για να το υγροποιήσετε</string>
-</resources>

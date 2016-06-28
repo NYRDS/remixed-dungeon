@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--STRINGS OF ShadowLord CLASS-->
-  <string name="ShadowLord_Intro">Kendinizi hazırlayın!</string>
-  <string name="ShadowLord_Death">Hayıııır...</string>
-  <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
-  <string name="WndSelectLanguage_LinkToTranslationSite"> Remixed Pixel Dungeon çeviri ekibine katılmak için buraya tıklayın</string>
-</resources>

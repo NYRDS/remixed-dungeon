@@ -47,4 +47,7 @@
   <string name="ParalysisArrow_Info">Ta strzała wydziela słaby, ale znajomy, trujący smród.</string>
   <string name="ParalysisArrow_Gender">kobiecy</string>
   <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Name">lodowa strzała</string>
+  <string name="FrostArrow_Info">Możesz poczuć mroźną aurę, emanującą z grotu strzały</string>
+  <string name="FrostArrow_Gender">kobiecy</string>
 </resources>

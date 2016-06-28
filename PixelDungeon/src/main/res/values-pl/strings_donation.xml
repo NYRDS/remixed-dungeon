@@ -13,6 +13,8 @@
   <string name="WndDonate_silverDonateText">Każda darowizna pomaga nam w ulepszaniu projektu</string>
   <string name="WndDonate_goldDonateText">Dziękujemy za Twoje wsparcie</string>
   <string name="WndDonate_rubyDonateText">Twoja hojność pomoże nam w kontynuowaniu ulepszania Remixed Pixel Dungeon!</string>
+  <string name="WndDonate_silverDonateText2">Wyłącza również reklamy we wszystkicgh trybach gry i obklokowuje łowczynię.</string>
+  <string name="WndDonate_goldDonateText2">Także odblokowuje elfa na początku gry.</string>
   <string name="WndDonate_rubyDonateText2"></string>
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">standardowy</string>
@@ -23,8 +25,10 @@
   <string name="WndPremiumSettings_status">Wybierz materiał paska statusu</string>
   <string name="WndPremiumSettings_toolbar">Wybierz materiał paska narzędzi</string>
   <string name="WndPremiumSettings_banners">Wybierz materiał bannera</string>
+  <string name="WndPremiumSettings_notAvailbale">Ta opcja jeszcze nie jest dostępna</string>
   <!--STRINGS OF DonateButton CLASS-->
   <string name="DonateButton_pleaseDonate">Prosimy o darowiznę</string>
   <string name="DonateButton_thanks">Dziękujemy za Twe wsparcie!</string>
   <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">Nie lubisz reklam? Złóż jakąkolwiek darowiznę i znikną. Na zawsze.</string>
 </resources>

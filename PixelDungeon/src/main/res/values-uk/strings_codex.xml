@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--STRINGS OF Codex CLASS-->
-  <string name="Codex_Name">Кодекс</string>
-  <string name="Codex_ACRead">ЧИТАТИ</string>
-  <string name="Codex_Info">Одна з багатьох книг, які можна знайти в будь-якій бібліотеці</string>
-  <string name="Codex_Blinded">Ти не можеш читати, поки ти осліплений</string>
-</resources>

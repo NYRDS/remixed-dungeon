@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-  <!--STRINGS OF ResultDescriptions CLASS-->
-  <string name="ResultDescriptions_Mob">Matado por %1$s en el nivel %2$d</string>
-</resources>

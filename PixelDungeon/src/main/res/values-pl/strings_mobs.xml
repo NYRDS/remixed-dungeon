@@ -226,33 +226,52 @@
   <string name="Larva_Desc">Larwa Prastarego Boga</string>
   <!--STRINGS OF SpiderEgg CLASS-->
   <string name="SpiderEgg_Name">Pajęcze jajo</string>
+  <string name="SpiderEgg_Gender">nijaki</string>
   <string name="SpiderEgg_Name_Objective">Pajęcze jajo</string>
+  <string name="SpiderEgg_Desc">To delikatne jajo pulsuje przez krótką chwilę, w jego wnętrzu możesz dostrzec coś z dużą ilością nóg.</string>
   <!--STRINGS OF SpiderNest CLASS-->
   <string name="SpiderNest_Name">Pajęczy kokon</string>
+  <string name="SpiderNest_Gender">nijaki</string>
   <string name="SpiderNest_Name_Objective">Pajęczy kokon</string>
+  <string name="SpiderNest_Desc">Ten kokon jest zrobiony z najcieńszego jedwabiu i okrywa coś żywego.</string>
   <!--STRINGS OF SpiderServant CLASS-->
   <string name="SpiderServant_Name">Pajęczy żołnierz</string>
+  <string name="SpiderServant_Gender">męski</string>
   <string name="SpiderServant_Name_Objective">Pajęczy żołnierz</string>
+  <string name="SpiderServant_Desc">Żołnierze są najliczniejszą grupą w łożu pająków, zrodzeni by chronić ich terytorium. Szczękoczułki żołnierzy wykształciły trujące gruczoły by zatruwać ich przeciwników.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
   <string name="SpiderExploding_Name">Pająk robotnik</string>
+  <string name="SpiderExploding_Gender">męski</string>
   <string name="SpiderExploding_Name_Objective">Pająk robotnik</string>
+  <string name="SpiderExploding_Desc">Ciężko pracując w czasach pokoju, te stworzenia nie zawahają się wszarżować w przeciwnika, chwytając w biegu pierwszą roślinę na jaką się natkną, samemu zmieniając się w żywą bombę.</string>
   <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">Pająk Telepata</string>
+  <string name="SpiderMind_Gender">męski</string>
+  <string name="SpiderMind_Name_Objective">Pająk Telepata</string>
+  <string name="SpiderMind_Desc">Te pozornie delikatne pająki posiadają unikalne moze psychiczne, pozwalające im na kontrolowanie całej kolonii. Pająk Telepata jest zdolny do kontrolowania każdej żywej istoty, jednakże jest on tchórzem.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
   <string name="SpiderQueen_Name">Królowa pająków</string>
+  <string name="SpiderQueen_Gender">kobieca</string>
   <string name="SpiderQueen_Name_Objective">Królowa pająków</string>
+  <string name="SpiderQueen_Desc">Ciało pięknej kobiety skrzyżowane z ohydnym pająkiem. Każda żyjąca istota w tym legowisku jest jej służącym. Spotkanie tej niezwykłej damy może zmienić się w śmiertelne doświadczenie. Jesteś bowiem intruzem!</string>
   <!--STRINGS OF WaterElemental CLASS-->
   <string name="WaterElemental_Name">Żywiołak wody</string>
+  <string name="WaterElemental_Gender">męski</string>
   <string name="WaterElemental_Name_Objective">Żywiołak wody</string>
+  <string name="WaterElemental_Desc">Wodne żywiołaki mogą być znalezione w pobliżu dużych skupisk wodnych. Zazwyczaj te magicznie złączone fale tylko przechadzają się w pobliżu.</string>
   <!--STRINGS OF AirElemental CLASS-->
   <string name="AirElemental_Name">Żywiołak powietrza</string>
+  <string name="AirElemental_Gender">męski</string>
   <string name="AirElemental_Name_Objective">Żywiołak powietrza</string>
   <string name="AirElemental_Desc">Żywiołaki powietrza to magiczne istoty powstające z ożywionego powietrza</string>
   <!--STRINGS OF EarthElemental CLASS-->
   <string name="EarthElemental_Name">Żywiołak ziemi</string>
+  <string name="EarthElemental_Gender">męski</string>
   <string name="EarthElemental_Name_Objective">Żywiołak ziemi</string>
   <string name="EarthElemental_Desc">Żywiołaki ziemi to ziemia uformowana skoncentrowanymi siłami natury</string>
   <!--STRINGS OF Crystal CLASS-->
   <string name="Crystal_Name">Lewitujący kryształ</string>
+  <string name="Crystal_Gender">męski</string>
   <string name="Crystal_Name_Objective">Lewitujący kryształ</string>
   <string name="Crystal_Desc">Duży, świecący kryształ lewitujący w powietrzu. Prawdopodopodobnie wypełniony potężną magią.</string>
 </resources>
