@@ -86,7 +86,7 @@ public class GladiatorArmor extends ClassArmor {
 					@Override
 					public void call() {
 						getCurUser().move( dest );
-						Dungeon.level.pressHero( dest, getCurUser() );
+						Dungeon.level.press( dest, getCurUser() );
 						Dungeon.observe();
 						
 						for (int i=0; i < Level.NEIGHBOURS8.length; i++) {

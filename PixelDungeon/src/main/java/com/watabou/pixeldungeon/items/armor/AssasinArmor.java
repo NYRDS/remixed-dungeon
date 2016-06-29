@@ -83,7 +83,7 @@ public class AssasinArmor extends ClassArmor {
 				WandOfBlink.appear( getCurUser(), target );
 				CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
 				Sample.INSTANCE.play( Assets.SND_PUFF );
-				Dungeon.level.pressHero( target, getCurUser() );
+				Dungeon.level.press( target, getCurUser() );
 				Dungeon.observe();
 				
 				getCurUser().spendAndNext( Actor.TICK );

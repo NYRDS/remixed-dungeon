@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -769,7 +771,7 @@ public abstract class Level implements Bundlable {
 		heap.drop(item);
 
 		if (Dungeon.level != null) {
-			pressHero(cell, null);
+			itemPress(cell);
 		}
 
 		return heap;
@@ -840,7 +842,11 @@ public abstract class Level implements Bundlable {
 		charPress(cell, hero);
 	}
 
-	public void charPress(int cell, Char actor) {
+	public void itemPress(int cell) {
+		charPress(cell, null);
+	}
+
+	public void charPress(int cell, @Nullable Char actor) {
 
 		boolean trap = true;
 		switch (map[cell]) {
