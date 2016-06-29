@@ -130,7 +130,7 @@ public class LloydsBeacon extends Item {
 			if (returnTo.levelDepth == Dungeon.depth && returnTo.levelKind.equals(hero.levelKind)) {
 				reset();
 				WandOfBlink.appear( hero, returnTo.cellId );
-				Dungeon.level.press( returnTo.cellId, hero );
+				Dungeon.level.pressHero( returnTo.cellId, hero );
 				Dungeon.observe();
 			} else {
 				InterlevelScene.mode = InterlevelScene.Mode.RETURN;

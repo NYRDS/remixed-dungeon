@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -24,8 +25,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -203,9 +203,9 @@ public class CavesBossLevel extends Level {
 	}
 	
 	@Override
-	public void press( int cell, Char hero ) {
+	public void pressHero(int cell, Hero hero ) {
 		
-		super.press( cell, hero );
+		super.pressHero( cell, hero );
 		
 		if (!enteredArena && outsideEntraceRoom( cell ) && hero == Dungeon.hero) {
 			

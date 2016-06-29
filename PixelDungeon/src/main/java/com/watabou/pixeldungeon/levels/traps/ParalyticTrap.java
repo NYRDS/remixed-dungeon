@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
+import android.support.annotation.Nullable;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -27,7 +29,7 @@ public class ParalyticTrap {
 
 	// 0xCCCC55
 	
-	public static void trigger( int pos, Char ch ) {
+	public static void trigger( int pos, @Nullable Char ch ) {
 		
 		GameScene.add( Blob.seed( pos, 80 + 5 * Dungeon.depth, ParalyticGas.class ) );
 		

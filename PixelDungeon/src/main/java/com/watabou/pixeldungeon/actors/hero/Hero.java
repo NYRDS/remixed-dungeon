@@ -1469,7 +1469,7 @@ public class Hero extends Char {
 			} else {
 				Sample.INSTANCE.play(Assets.SND_STEP);
 			}
-			Dungeon.level.press(getPos(), this);
+			Dungeon.level.pressHero(getPos(), this);
 		}
 	}
 

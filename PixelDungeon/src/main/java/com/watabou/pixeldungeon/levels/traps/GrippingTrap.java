@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
+import android.support.annotation.Nullable;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -27,7 +29,7 @@ import com.watabou.utils.Random;
 
 public class GrippingTrap {
 	
-	public static void trigger( int pos, Char c ) {
+	public static void trigger( int pos, @Nullable Char c ) {
 		
 		if (c != null) {
 			int damage = Math.max( 0,  (Dungeon.depth + 3) - Random.IntRange( 0, c.dr() / 2 ) );

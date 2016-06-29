@@ -127,12 +127,8 @@ public class Mimic extends Mob {
 				Actor.addDelayed( new Pushing( ch, ch.getPos(), newPos ), -1 );
 				
 				ch.setPos(newPos);
+				level.press(newPos, ch);
 
-				if (ch instanceof Mob) {
-					level.mobPress( (Mob)ch );
-				} else {
-					level.press( newPos, ch );
-				}
 			} else {
 				return null;
 			}
