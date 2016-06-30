@@ -148,22 +148,22 @@ public class NecroLevel extends RegularLevel {
 	public static void addVisuals( Level level, Scene scene ) {
 		for (int i=0; i < level.getLength(); i++) {
 			if (level.map[i] == Terrain.WALL_DECO) {
-				scene.add( new Torch( i ) );
+				scene.add( new Candle( i ) );
 			}
 		}
 	}
 
-	private static class Torch extends Emitter {
+	private static class Candle extends Emitter {
 
 		private int pos;
 
-		public Torch( int pos ) {
+		public Candle( int pos ) {
 			super();
 
 			this.pos = pos;
 
 			PointF p = DungeonTilemap.tileCenterToWorld( pos );
-			pos( p.x - 1, p.y + 3, 2, 0 );
+			pos( p.x - 1, p.y + 6, 2, 0 );
 
 			pour( FlameParticle.FACTORY, 0.15f );
 
