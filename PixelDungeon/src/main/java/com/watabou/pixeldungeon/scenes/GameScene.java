@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -112,6 +113,8 @@ public class GameScene extends PixelScene {
 	private Group spells;
 	private Group statuses;
 	private Group emoicons;
+
+	private Group objects;
 
 	private Toolbar toolbar;
 	private Toast   prompt;
@@ -217,6 +220,9 @@ public class GameScene extends PixelScene {
 		add(statuses);
 
 		add(emoicons);
+
+		objects = new Group();
+		add(objects);
 
 		add(new HealthIndicator());
 
@@ -468,6 +474,10 @@ public class GameScene extends PixelScene {
 		} else {
 			EventCollector.logException(new Exception("add(Blob)"));
 		}
+	}
+
+	public static void add(LevelObject obj) {
+
 	}
 
 	public static void add(Heap heap) {
