@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 
 public class ExitPainter extends Painter {
 
-	private static int counter;
+	protected static int counter;
 
 	public static void resetCounter() {
 		counter = 0;
@@ -42,21 +42,6 @@ public class ExitPainter extends Painter {
 		set(level, level.getExit(counter), Terrain.EXIT);
 
 		counter++;
-		/*
-		int exitCount = DungeonGenerator.exitCount(level.levelId);
-
-		for (int index = 1; index < exitCount; ++index) {
-			int exitCandidate = -1;
-			do {
-				exitCandidate = room.random(level, 0);
-			} while (level.map[exitCandidate] == Terrain.EXIT ||
-					level.map[exitCandidate] == Terrain.LOCKED_EXIT ||
-					level.map[exitCandidate] == Terrain.UNLOCKED_EXIT);
-
-			level.setExit(exitCandidate, index);
-			set(level, exitCandidate, Terrain.EXIT);
-		}
-		*/
 	}
 
 }

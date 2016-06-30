@@ -148,20 +148,27 @@ public abstract class RegularLevel extends CommonLevel {
 		return true;
 	}
 
-	private void placeSecondaryExits() {
+	protected void placeSecondaryExits() {
 		int exitCount = DungeonGenerator.exitCount(levelId);
 
 		for(int i = 1;i<exitCount;++i) {
 			Room secondaryExit;
 			do {
-				secondaryExit = Random.element( rooms );
-			} while (secondaryExit.type == Type.ENTRANCE ||
-					 secondaryExit.type == Type.EXIT ||
-					 secondaryExit.type == Type.BOSS_EXIT ||
-					 roomExit.width() < 4 ||
-					 roomExit.height() < 4
+				secondaryExit = Random.element(rooms);
+			} while (secondaryExit.type != Type.NULL ||
+					roomExit.width() < 4 ||
+					roomExit.height() < 4
 					);
-				secondaryExit.type = Type.EXIT;
+			secondaryExit.type = Type.EXIT;
+
+			Graph.buildDistanceMap(rooms, secondaryExit);
+			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
+
+			Room room = roomEntrance;
+			for (Room next : path) {
+				room.connect(next);
+				room = next;
+			}
 		}
 	}
 
@@ -359,14 +366,24 @@ public abstract class RegularLevel extends CommonLevel {
 			
 		}
 	}
-	
+
+	private void paintRoom(Room r) {
+		placeDoors( r );
+		r.type.paint( this, r );
+	}
+
 	protected void paint() {
 		ExitPainter.resetCounter();
 
 		for (Room r : rooms) {
-			if (r.type != Type.NULL) {
-				placeDoors( r );
-				r.type.paint( this, r );
+			if(r.type==Type.BOSS_EXIT) {
+				paintRoom(r);
+			}
+		}
+
+		for (Room r : rooms) {
+			if (r.type != Type.NULL && r.type != Type.BOSS_EXIT) {
+				paintRoom(r);
 			} else {
 				if (feeling == Feeling.CHASM && Random.Int( 2 ) == 0) {
 					Painter.fill( this, r, Terrain.WALL );
