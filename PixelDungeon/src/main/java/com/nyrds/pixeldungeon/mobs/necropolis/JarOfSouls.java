@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 
-//Supposed to periodically summon undead creatures
+//Supposed to periodically	 summon undead creatures
 public class JarOfSouls extends Mob {
 
 	public JarOfSouls() {
