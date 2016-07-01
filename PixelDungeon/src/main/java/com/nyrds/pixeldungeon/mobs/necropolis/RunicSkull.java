@@ -7,11 +7,17 @@ import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Sleep;
+import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -28,6 +34,14 @@ public class RunicSkull extends MultiKindMob {
 		((Wand)loot).upgrade(Dungeon.depth);
 		
 		lootChance = 0.25f;
+
+		IMMUNITIES.add( Paralysis.class );
+		IMMUNITIES.add( ToxicGas.class );
+		IMMUNITIES.add( Terror.class );
+		IMMUNITIES.add( Death.class );
+		IMMUNITIES.add( Amok.class );
+		IMMUNITIES.add( Blindness.class );
+		IMMUNITIES.add( Sleep.class );
 	}
 
 	static public RunicSkull makeShadowLordCrystal() {
