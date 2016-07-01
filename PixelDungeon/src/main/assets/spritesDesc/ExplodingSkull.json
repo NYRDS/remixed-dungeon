@@ -1,5 +1,5 @@
 {
-  "texture" = "spider_exploding.png",
+  "texture" = "mobs/exploding_skull.png",
   "width"  = 16, 
   "height" = 16,
   "idle"   = { "fps" = 5,  "looped" = true,     "frames" = [0, 1, 2, 3] },
