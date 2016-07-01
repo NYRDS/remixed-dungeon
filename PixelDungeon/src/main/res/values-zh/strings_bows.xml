@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">这是一个远程武器。除了精灵没有任何人能在近距离使用。装备一把弓让你能够发射箭矢
+  <string name="Bow_Info1">这是一个远程武器。除了精灵没有任何人能在极近距离正常使用。装备一把弓让你能够发射箭矢
 </string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">木弓</string>

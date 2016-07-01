@@ -22,6 +22,8 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF PirateSet CLASS -->
     <string name="PirateSet_Name">Set Pirata</string>
+    <string name="PirateSet_Info">¡Arr! ¿¡Sientes que eres un pirata... o solo como cachorro de mar!? Espero que no sea así, despues de todo es solo para piratas de verdad, quiero decir... ¡Arr!</string>
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndSaveSlotSelect_Delete_Yes">Si, estoy seguro!</string>

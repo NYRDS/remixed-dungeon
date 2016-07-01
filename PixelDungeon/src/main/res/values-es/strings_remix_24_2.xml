@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">espada dorada</string>
+    <string name="GoldenSword_Info">Usualmente un arma hecha de metal blando como el oro, es considerado más como una decoración. A pesar de eso, la hoja de la espada parece ser capaz de cortar bastante bien.</string>
+    <string name="GoldenSword_Gender">masculino</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">estatua dorada</string>
+    <string name="GoldenStatue_Gender">femenino</string>
+    <string name="GoldenStatue_Name_Objective">estatua dorada</string>
+    <string name="GoldenStatue_Desc">Es realmente difícil creer que, esta magnífica estatua no es sólo un adorno, es una criatura maliciosa esperando por un aventurero desprevenido. Al verla por primera vez podrías haber jurado que la _%s_ era una parte la mano.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">nigromante</string>
+    <string name="NecromancerNPC_Gender">masculino</string>
+    <string name="NecromancerNPC_Name_Objective">nigromante</string>
+    <string name="NecromancerNPC_Desc">Este hombre de mediana edad parece estar algo molesto y emocionado al mismo tiempo. Lleva una armadura compuesta hecha de fragmentos de hueso.</string>
+    <string name="NecromancerNPC_Intro">¡Ah! ¡Es un suceso tan raro! Un compañero aventurero que no esta muerto. ¡Impresionante! Oh... Perdoneme, en algunos momentos me siento muy emocionado. Como puede ver, soy un nigromate. A pesar de que estudio a los muertos y esto mismo es lo que hago para vivir, ver lo mismo una y otra vez, con el tiempo se vuelve... muy aburrido. Pero por eso mismo es que estoy aquí. Según mis cálculos en un par de semanas, en algún lugar de la mazmorra, algo impresionante va a pasar. Un _Necrópolis_, una antigua ciudad de los muertos va a abrir sus puertas. Y... realmente no puedo decir mucho, he perdido bastante tiempo. Tengo que estar listo, vuelve más tarde.</string>
+    <string name="NecromancerNPC_Message1">Falta tan poco tiempo, tan poco tiempo...</string>
+    <string name="NecromancerNPC_Message2">Tengo que estar listo.</string>
+    <string name="NecromancerNPC_Message3">Puedo escuchar los susurros de la muerte.</string>
+    <string name="NecromancerNPC_Message4">Hay algo muy especial dentro de la Necrópolis.</string>
+
+</resources>

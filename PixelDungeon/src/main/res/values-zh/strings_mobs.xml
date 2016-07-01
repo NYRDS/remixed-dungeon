@@ -5,10 +5,10 @@
   <string name="Mob_Desc">真正的说明即将到来！</string>
   <string name="Mob_Died">你听到有什么东西在远处死去了</string>
   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
-  <string name="Mob_StaSleepingStatus">这个 %s 正在睡觉</string>
-  <string name="Mob_StaWanderingStatus">这个 %s 正在游荡</string>
-  <string name="Mob_StaHuntingStatus">这个 %s 正在追猎</string>
-  <string name="Mob_StaFleeingStatus">这个 %s 正在逃跑</string>
+  <string name="Mob_StaSleepingStatus">这个%s正在睡觉</string>
+  <string name="Mob_StaWanderingStatus">这个%s正在游荡</string>
+  <string name="Mob_StaHuntingStatus">这个%s正在追猎</string>
+  <string name="Mob_StaFleeingStatus">这个%s正在逃跑</string>
   <string name="Mob_StaPassiveStatus">这个%s是和平的</string>
   <!--STRINGS OF Acidic CLASS-->
   <string name="Acidic_Name">酸蚀蝎子</string>
@@ -59,7 +59,7 @@
   <string name="Elemental_Desc">这些游荡的火元素是在召唤某种更强大存在时的副产品。由于其特性太过混乱，以至于最强大的恶魔学者都无法驱使。</string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">邪眼</string>
-  <string name="Eye_Gender">无性</string>
+  <string name="Eye_Gender">neuter</string>
   <string name="Eye_Name_Objective">邪眼</string>
   <string name="Eye_Desc">这种恶魔的另一个别名为\"憎恶之球\"，因为它一旦看到敌人就会毫无顾忌地使用它们的死亡凝视，即使这会伤害到它的友军。</string>
   <string name="Eye_Kill">%s的死亡凝视杀死了你……</string>
@@ -174,36 +174,97 @@
   <string name="Succubus_Name_Objective">魅魔</string>
   <string name="Succubus_Desc">魅魔是外表诱人(带有些哥特风格)的女性恶魔。魅魔可以通过使用魔法魅惑英雄，使英雄在魅惑消退前无法攻击它。</string>
   <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Name">蝇群</string>
   <string name="Swarm_Gender">masculine</string>
+  <string name="Swarm_Name_Objective">蝇群</string>
+  <string name="Swarm_Defense">回避</string>
   <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">天狗</string>
   <string name="Tengu_Gender">masculine</string>
+  <string name="Tengu_Name_Objective">天狗</string>
+  <string name="Tengu_Desc">天狗是一个叫“天狗”的古代刺客组织的成员，这些刺客以精通手里剑和陷阱而著称。</string>
+  <string name="Tengu_Info1">终于自由了……</string>
+  <string name="Tengu_Info2">你是我的了，%s！</string>
   <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">疯狂小偷</string>
   <string name="Thief_Gender">masculine</string>
+  <string name="Thief_Name_Objective">疯狂小偷</string>
+  <string name="Thief_Desc">地牢的深处总是各式罪犯的藏身之地。不是所有人都能在漫长的岁月中保持清醒的神智，在很久以前，这些疯狂的小偷和强盗就已经忘记了自己是谁，为什么要偷东西。</string>
+  <string name="Thief_Stole">%1$s把%2$s从你身上偷走了！</string>
+  <string name="Thief_Carries">
+%1$s携带着_%2$s_，明显是偷来的。</string>
   <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Name">矮人术士</string>
   <string name="Warlock_Gender">masculine</string>
+  <string name="Warlock_Name_Objective">矮人术士</string>
+  <string name="Warlock_Desc">当矮人们的兴趣由工程转向奥术时，城市中的权力开始被术士掌握。他们最开始研究元素魔法，但不久就转为研究恶魔学和死灵术。</string>
+  <string name="Warlock_Killed">%s的暗影箭杀死了你……</string>
   <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Name">鬼魂</string>
   <string name="Wraith_Gender">masculine</string>
+  <string name="Wraith_Name_Objective">鬼魂</string>
+  <string name="Wraith_Desc">怨灵来自于被惊扰的墓穴中渴望复仇的罪人之魂。其飘渺的存在使它很难被通常武器击中。</string>
+  <string name="Wraith_Defense">回避</string>
   <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">Yog-Dzewa</string>
   <string name="Yog_Gender">masculine</string>
+  <string name="Yog_Name_Objective">Yog-Dzewa</string>
+  <string name="Yog_Desc">Yog-Dzewa是一位上古之神，来源于混沌中的强大存在。一个世纪前，古代矮人们虽然勉强赢得了与恶魔军团的战争，却无法将古神杀死。作为替代方案，矮人们将它封印在城市下的大堂中，并相信虚弱的它无法再度复苏。</string>
+  <string name="Yog_Info1">……</string>
+  <string name="Yog_Info2">希望的存在只是幻觉……</string>
+  <string name="RottingFist_Name">腐烂之拳</string>
   <string name="RottingFist_Gender">masculine</string>
+  <string name="RottingFist_Name_Objective">腐烂之拳</string>
+  <string name="RottingFist_Desc">上古之神的腐烂之拳</string>
+  <string name="BurningFist_Name">燃烧之拳</string>
   <string name="BurningFist_Gender">masculine</string>
+  <string name="BurningFist_Name_Objective">燃烧之拳</string>
+  <string name="BurningFist_Desc">上古之神的燃烧之拳</string>
+  <string name="Larva_Name">古神幼虫</string>
   <string name="Larva_Gender">feminine</string>
+  <string name="Larva_Name_Objective">古神幼虫</string>
+  <string name="Larva_Desc">古神的幼虫</string>
   <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">蜘蛛蛋</string>
+  <string name="SpiderEgg_Gender">neuter</string>
+  <string name="SpiderEgg_Name_Objective">蜘蛛蛋</string>
+  <string name="SpiderEgg_Desc">这颗脆弱的蛋在轻微的颤动，你能看到其中有个有许多条腿的东西。</string>
   <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">蜘蛛茧</string>
+  <string name="SpiderNest_Gender">neuter</string>
+  <string name="SpiderNest_Name_Objective">蜘蛛茧</string>
+  <string name="SpiderNest_Desc">这个茧是由最细的丝线织成的，其中藏着一些活着的东西。</string>
   <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Name">蜘蛛士兵</string>
   <string name="SpiderServant_Gender">masculine</string>
+  <string name="SpiderServant_Name_Objective">蜘蛛士兵</string>
+  <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是他们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
   <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">蜘蛛工人</string>
   <string name="SpiderExploding_Gender">masculine</string>
+  <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
+  <string name="SpiderExploding_Desc">这些蜘蛛工人在和平时期一直努力工作，可是一旦遇到敌人，就会毫不犹豫的抓起自己路过的第一株植物，并把自己当成活体炸弹冲向他们。</string>
   <!--STRINGS OF SpiderMind CLASS-->
   <string name="SpiderMind_Gender">masculine</string>
   <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">蜘蛛女王</string>
   <string name="SpiderQueen_Gender">feminine</string>
+  <string name="SpiderQueen_Name_Objective">蜘蛛女王</string>
   <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">水元素</string>
   <string name="WaterElemental_Gender">masculine</string>
+  <string name="WaterElemental_Name_Objective">水元素</string>
+  <string name="WaterElemental_Desc">水元素会在有大量水体存在的环境中出现。通常这些由魔法结合而成的水浪只会在附近徘徊。</string>
   <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">气元素</string>
   <string name="AirElemental_Gender">masculine</string>
+  <string name="AirElemental_Name_Objective">气元素</string>
+  <string name="AirElemental_Desc">气元素是由有生命的气体构成的飞行魔法生物。</string>
   <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">地元素</string>
   <string name="EarthElemental_Gender">masculine</string>
+  <string name="EarthElemental_Name_Objective">地元素</string>
+  <string name="EarthElemental_Desc">地元素是由凝缩的自然之力所操纵着的的土块。</string>
   <!--STRINGS OF Crystal CLASS-->
   <string name="Crystal_Name">悬浮水晶</string>
   <string name="Crystal_Gender">masculine</string>

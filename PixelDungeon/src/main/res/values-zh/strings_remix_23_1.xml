@@ -29,12 +29,13 @@
   <string name="PseudoRat_Name">伪鼠</string>
   <string name="PseudoRat_Gender">feminine</string>
   <string name="PseudoRat_Name_Objective">伪鼠</string>
+  <string name="PseudoRat_Desc">这只从老鼠尸体中出现的可怕野兽不像你见过的任何动物，排满了尖利牙齿的巨嘴占据了它的大部分身体。</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Info">豺狼僵尸死而复生了！</string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">黑暗之心</string>
-  <string name="HeartOfDarkness_Info">黑暗的，跳动着的奸诈幽灵心脏</string>
+  <string name="HeartOfDarkness_Info">黑暗的，跳动着的奸诈幽灵之心</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
   <string name="DarkVeil_Buff">暗黑面纱</string>
