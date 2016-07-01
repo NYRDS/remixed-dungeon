@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -101,18 +100,9 @@ public class SewerLevel extends RegularLevel {
 			}
 		}
 		
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				Sign sign = new Sign();
-				sign.setPos(pos);
-				addLevelObject(sign);
-				//map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
+		placeEntranceSign();
 	}
-	
+
 	@Override
 	protected void createMobs() {
 		super.createMobs();

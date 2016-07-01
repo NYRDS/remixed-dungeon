@@ -188,7 +188,11 @@ public class Dungeon {
 	}
 
 	public static String tip() {
-		if (level instanceof DeadEndLevel) {
+		return tip(level);
+	}
+
+	public static String tip(Level _level) {
+		if (_level instanceof DeadEndLevel) {
 
 			return Game.getVar(R.string.Dungeon_DeadEnd);
 

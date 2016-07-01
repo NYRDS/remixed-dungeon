@@ -604,6 +604,7 @@ public class Hero extends Char {
 			return true;
 
 		} else {
+			//TODO remove this in future
 			if (Dungeon.level.map[getPos()] == Terrain.SIGN) {
 				GameScene.show(new WndMessage(Dungeon.tip()));
 			}
@@ -1202,6 +1203,7 @@ public class Hero extends Char {
 
 			LevelObject obj = Dungeon.level.objects.get(step);
 			if(obj!=null) {
+				interrupt();
 				if(obj.interact(this)==false) {
 					return false;
 				}

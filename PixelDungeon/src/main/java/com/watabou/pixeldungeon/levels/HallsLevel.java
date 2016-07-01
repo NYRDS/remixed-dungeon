@@ -17,10 +17,9 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import javax.microedition.khronos.opengles.GL10;
-
 import android.opengl.GLES20;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;
@@ -28,11 +27,12 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class HallsLevel extends RegularLevel {
 
@@ -102,14 +102,8 @@ public class HallsLevel extends RegularLevel {
 				
 			}
 		}
-		
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
+
+		placeEntranceSign();
 	}
 	
 	@Override

@@ -5,16 +5,19 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
-public class LevelObject implements Bundlable {
+public abstract class LevelObject implements Bundlable {
 
 	private static final String POS = "pos";
 	private              int    pos = 0;
 	
 	public LevelObjectSprite sprite;
 
-	public int image() {
-		return 0;
+
+	public LevelObject(int pos) {
+		this.pos = pos;
 	}
+
+	abstract public int image();
 
 	public boolean interact( Hero hero ) {return true;}
 
@@ -43,4 +46,6 @@ public class LevelObject implements Bundlable {
 	public void setPos(int pos) {
 		this.pos = pos;
 	}
+
+	public abstract String desc();
 }

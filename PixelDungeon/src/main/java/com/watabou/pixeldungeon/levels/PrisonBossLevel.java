@@ -255,14 +255,8 @@ public class PrisonBossLevel extends RegularLevel {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-		
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
+
+		placeEntranceSign();
 		
 		Point door = roomExit.entrance();
 		arenaDoor = door.x + door.y * getWidth();

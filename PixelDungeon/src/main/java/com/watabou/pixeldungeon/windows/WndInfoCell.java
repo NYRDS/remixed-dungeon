@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -65,6 +66,14 @@ public class WndInfoCell extends Window {
 		StringBuilder desc = new StringBuilder( Dungeon.level.tileDesc( tile ) );
 		
 		final char newLine = '\n';
+
+		LevelObject obj = Dungeon.level.objects.get(cell);
+
+		if(obj != null) {
+			desc.append(newLine);
+			desc.append(obj.desc());
+		}
+
 		for (Blob blob:Dungeon.level.blobs.values()) {
 			if (blob.cur[cell] > 0 && blob.tileDesc() != null) {
 				if (desc.length() > 0) {
@@ -73,7 +82,7 @@ public class WndInfoCell extends Window {
 				desc.append( blob.tileDesc() );
 			}
 		}
-		
+
 		info.text( desc.length() > 0 ? desc.toString() : TXT_NOTHING );
 		info.maxWidth(WIDTH);
 		info.measure();

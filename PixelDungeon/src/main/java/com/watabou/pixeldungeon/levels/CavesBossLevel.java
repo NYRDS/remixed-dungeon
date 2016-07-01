@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -178,7 +179,7 @@ public class CavesBossLevel extends Level {
 		do {
 			sign = Random.Int( _RoomLeft(), _RoomRight() ) + Random.Int( _RoomTop(), _RoomBottom() ) * getWidth();
 		} while (sign == entrance);
-		map[sign] = Terrain.SIGN;
+		addLevelObject(new Sign(sign,Dungeon.tip(this)));
 	}
 	
 	@Override

@@ -141,14 +141,8 @@ public class CavesLevel extends RegularLevel {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-		
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
+
+		placeEntranceSign();
 		
 		for (Room r : rooms) {
 			if (r.type == Type.STANDARD) {
