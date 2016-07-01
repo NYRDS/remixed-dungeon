@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
@@ -1172,6 +1173,7 @@ public class Hero extends Char {
 					interrupt();
 					return false;
 				}
+
 				if (wallWalkerBuff == null && (Dungeon.level.passable[target] || Dungeon.level.avoid[target])) {
 					step = target;
 				}
@@ -1197,6 +1199,13 @@ public class Hero extends Char {
 		if (step != -1) {
 
 			int oldPos = getPos();
+
+			LevelObject obj = Dungeon.level.objects.get(step);
+			if(obj!=null) {
+				if(obj.interact(this)==false) {
+					return false;
+				}
+			}
 
 			move(step);
 			getSprite().move(oldPos, getPos());

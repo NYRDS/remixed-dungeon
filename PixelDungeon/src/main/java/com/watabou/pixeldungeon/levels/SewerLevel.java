@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.Sign;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;
@@ -24,7 +26,6 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.bags.Keyring;
@@ -103,7 +104,10 @@ public class SewerLevel extends RegularLevel {
 		while (true) {
 			int pos = roomEntrance.random(this);
 			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
+				Sign sign = new Sign();
+				sign.setPos(pos);
+				addLevelObject(sign);
+				//map[pos] = Terrain.SIGN;
 				break;
 			}
 		}

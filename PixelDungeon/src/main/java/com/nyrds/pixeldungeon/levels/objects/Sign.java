@@ -9,12 +9,17 @@ import com.watabou.pixeldungeon.windows.WndMessage;
  */
 public class Sign extends LevelObject {
 
-
-
 	@Override
-	public void interact(Hero hero) {
+	public boolean interact(Hero hero) {
 		super.interact(hero);
 
 		GameScene.show(new WndMessage("Yay!"));
+
+		return true;
+	}
+
+	@Override
+	public int image() {
+		return 0;
 	}
 }

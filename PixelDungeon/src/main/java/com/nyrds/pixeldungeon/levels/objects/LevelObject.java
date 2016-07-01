@@ -1,29 +1,22 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
-public class LevelObject implements Bundlable, Placeable {
+public class LevelObject implements Bundlable {
 
-	private static final String POS		= "pos";
-	public int pos                      = 0;
+	private static final String POS = "pos";
+	private              int    pos = 0;
 	
 	public LevelObjectSprite sprite;
 
-	public String imageFile() {
-		return Assets.ITEMS;
-	}
-	
 	public int image() {
-		return ItemSpriteSheet.CODEX;
+		return 0;
 	}
 
-	public void interact( Hero hero ) {}
-	
+	public boolean interact( Hero hero ) {return true;}
 
 	public void burn() {}
 	public void freeze() {}
@@ -31,15 +24,23 @@ public class LevelObject implements Bundlable, Placeable {
 
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		pos   = bundle.getInt( POS );
+		setPos(bundle.getInt( POS ));
 	}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( POS, pos );
+		bundle.put( POS, getPos());
 	}
 	
 	public boolean dontPack() {
 		return false;
+	}
+
+	public int getPos() {
+		return pos;
+	}
+
+	public void setPos(int pos) {
+		this.pos = pos;
 	}
 }

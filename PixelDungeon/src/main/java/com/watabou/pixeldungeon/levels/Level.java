@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.levels;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
@@ -169,6 +170,7 @@ public abstract class Level implements Bundlable {
 	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<>();
 	public SparseArray<Plant> plants = new SparseArray<>();
 	private SparseArray<Heap> heaps = new SparseArray<>();
+	public SparseArray<LevelObject> objects = new SparseArray<>();
 	
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -190,6 +192,7 @@ public abstract class Level implements Bundlable {
 	private static final String WIDTH = "width";
 	private static final String HEIGHT = "height";
 	private static final String SECONDARY_EXIT = "secondaryExit";
+	private static final String OBJECTS = "objects";
 
 	public static Level fromBundle(Bundle bundle, String key) {
 		return (Level)bundle.get(key);
@@ -384,6 +387,10 @@ public abstract class Level implements Bundlable {
 			plants.put(plant.pos, plant);
 		}
 
+		for (LevelObject object: bundle.getCollection(OBJECTS, LevelObject.class)) {
+			objects.put(object.getPos(), object);
+		}
+
 		for (Mob mob : bundle.getCollection(MOBS, Mob.class)) {
 			if (mob != null && mob.getPos() != -1) {
 				mobs.add(mob);
@@ -427,6 +434,7 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());
+		bundle.put(OBJECTS, objects.values());
 		
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
@@ -777,7 +785,15 @@ public abstract class Level implements Bundlable {
 		return heap;
 	}
 
-	public Plant plant(Plant.Seed seed, int pos) {
+	public void addLevelObject(LevelObject obj) {
+		objects.put(obj.getPos(), obj);
+
+		if(GameScene.isSceneReady()) {
+			GameScene.add(obj);
+		}
+	}
+
+	public void plant(Plant.Seed seed, int pos) {
 
 		Plant plant = plants.get(pos);
 		if (plant != null) {
@@ -789,8 +805,6 @@ public abstract class Level implements Bundlable {
 		if(GameScene.isSceneReady()) {
 			GameScene.add(plant);
 		}
-
-		return plant;
 	}
 
 	public void uproot(int pos) {

@@ -20,43 +20,36 @@ package com.nyrds.pixeldungeon.levels.objects.sprites;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.PointF;
 
 public class LevelObjectSprite extends Image {
 
+	private static final int SIZE = 16;
+
 	private static TextureFilm frames;
 
 	private int pos = -1;
 
 	public LevelObjectSprite() {
-		super( Assets.PLANTS );
+		super("levelObjects/objects.png");
 
 		if (frames == null) {
-			// Hardcoded size
-			frames = new TextureFilm( texture, 16, 16 );
+			frames = new TextureFilm( texture, SIZE, SIZE );
 		}
 
-		// Hardcoded origin
-		origin.set( 8, 12 );
-	}
-
-	public LevelObjectSprite(int image ) {
-		this();
-		reset( image );
+		origin.set(SIZE/2, SIZE/2);
 	}
 
 	public void reset(LevelObject object ) {
-		
 		revive();
 		
 		reset( object.image() );
 		alpha( 1f );
 		
-		pos = object.pos;
-		PointF p = DungeonTilemap.tileToWorld( object.pos );
+		pos = object.getPos();
+		PointF p = DungeonTilemap.tileToWorld(object.getPos());
 		x = p.x;
 		y = p.y;
 	}

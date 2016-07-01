@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -153,8 +154,7 @@ public class GameScene extends PixelScene {
 		plants = new Group();
 		add(plants);
 
-		int size = Dungeon.level.plants.size();
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < Dungeon.level.plants.size(); i++) {
 			addPlantSprite(Dungeon.level.plants.valueAt(i));
 		}
 
@@ -223,6 +223,10 @@ public class GameScene extends PixelScene {
 
 		objects = new Group();
 		add(objects);
+
+		for (int i = 0; i < Dungeon.level.objects.size(); i++) {
+			addLevelObjectSprite(Dungeon.level.objects.valueAt(i));
+		}
 
 		add(new HealthIndicator());
 
@@ -398,6 +402,10 @@ public class GameScene extends PixelScene {
 		}
 	}
 
+	private void addLevelObjectSprite(LevelObject obj) {
+		(obj.sprite = (LevelObjectSprite) objects.recycle(LevelObjectSprite.class)).reset(obj);
+	}
+
 	private void addHeapSprite(Heap heap) {
 		ItemSprite sprite = heap.sprite = (ItemSprite) heaps.recycle(ItemSprite.class);
 		sprite.revive();
@@ -477,11 +485,15 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void add(LevelObject obj) {
-
+		if (isSceneReady()) {
+			scene.addLevelObjectSprite(obj);
+		} else {
+			throw new TrackedRuntimeException("add(LevelObject)");
+		}
 	}
 
 	public static void add(Heap heap) {
-		if (scene != null && Dungeon.level != null) {
+		if (isSceneReady()) {
 			scene.addHeapSprite(heap);
 		} else {
 			EventCollector.logException(new Exception("add(Heap)"));
@@ -489,7 +501,7 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void discard(Heap heap) {
-		if (scene != null && Dungeon.level != null) {
+		if (isSceneReady()) {
 			scene.addDiscardedSprite(heap);
 		} else {
 			EventCollector.logException(new Exception("discard(Heap)"));
@@ -541,7 +553,7 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void updateMap() {
-		if (scene != null && Dungeon.level != null) {
+		if (isSceneReady()) {
 			scene.tiles.updateAll();
 		} else {
 			EventCollector.logException(new Exception("updateMap"));
@@ -549,7 +561,7 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void updateMap(int cell) {
-		if (scene != null && Dungeon.level != null) {
+		if (isSceneReady()) {
 			scene.tiles.updateCell(cell);
 		}else {
 			EventCollector.logException(new Exception("updateMap(int)"));
@@ -557,7 +569,7 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void discoverTile(int pos, int oldValue) {
-		if (scene != null && Dungeon.level != null) {
+		if (isSceneReady()) {
 			scene.tiles.discover(pos, oldValue);
 		}else{
 			EventCollector.logException(new Exception("discoverTile"));
