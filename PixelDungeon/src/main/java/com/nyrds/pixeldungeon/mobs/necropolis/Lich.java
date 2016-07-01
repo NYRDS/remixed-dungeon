@@ -2,8 +2,11 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
@@ -19,10 +22,13 @@ public class Lich extends Mob {
         EXP = 20;
         defenseSkill = 20;
 
-        IMMUNITIES.add(Paralysis.class);
-        IMMUNITIES.add(ToxicGas.class);
+        IMMUNITIES.add( Paralysis.class );
+        IMMUNITIES.add( ToxicGas.class );
         IMMUNITIES.add( Terror.class );
         IMMUNITIES.add( Death.class );
+        IMMUNITIES.add( Amok.class );
+        IMMUNITIES.add( Blindness.class );
+        IMMUNITIES.add( Sleep.class );
     }
 
     @Override
