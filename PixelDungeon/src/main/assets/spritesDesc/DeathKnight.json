@@ -1,7 +1,7 @@
 {
    "texture" = "mobs/death_knight.png",
    "width" = 12,
-   "height" = 15,
+   "height" = 16,
    "idle" = {
       "fps" = 3,
       "looped" = true,

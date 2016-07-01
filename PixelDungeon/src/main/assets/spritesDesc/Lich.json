@@ -1,7 +1,7 @@
 {
    "texture" = "mobs/lich.png",
-   "width" = 12,
-   "height" = 15,
+   "width" = 16,
+   "height" = 16,
    "idle" = {
       "fps" = 4,
       "looped" = true,
