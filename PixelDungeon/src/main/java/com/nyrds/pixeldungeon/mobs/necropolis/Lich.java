@@ -3,8 +3,11 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.utils.Random;
 
 /**
@@ -12,32 +15,29 @@ import com.watabou.utils.Random;
  */
 public class Lich extends Mob {
     {
-        hp(ht(210));
-        defenseSkill = 27;
-
-        EXP = 7;
-        maxLvl = 35;
-
-        loot = Gold.class;
-        lootChance = 0.02f;
+        hp(ht(120));
+        EXP = 20;
+        defenseSkill = 20;
 
         IMMUNITIES.add(Paralysis.class);
         IMMUNITIES.add(ToxicGas.class);
+        IMMUNITIES.add( Terror.class );
+        IMMUNITIES.add( Death.class );
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(15, 35);
+        return Random.NormalIntRange( 8, 15 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 25;
+        return 20;
     }
 
     @Override
     public int dr() {
-        return 20;
+        return 5;
     }
 
 
