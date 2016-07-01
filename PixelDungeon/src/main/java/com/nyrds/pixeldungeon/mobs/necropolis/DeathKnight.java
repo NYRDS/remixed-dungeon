@@ -2,7 +2,9 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
@@ -27,6 +29,16 @@ public class DeathKnight extends Mob {
         IMMUNITIES.add(ToxicGas.class);
         IMMUNITIES.add( Terror.class );
         IMMUNITIES.add( Death.class );
+    }
+
+    @Override
+    public int attackProc( Char enemy, int damage ) {
+
+        //Paralysis proc
+        if (Random.Int(10) == 1){
+            Buff.affect(enemy, Paralysis.class);
+        }
+        return damage;
     }
 
     @Override
