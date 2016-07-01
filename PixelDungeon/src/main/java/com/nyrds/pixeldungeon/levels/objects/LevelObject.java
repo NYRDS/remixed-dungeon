@@ -8,7 +8,7 @@ import com.watabou.utils.Bundle;
 public abstract class LevelObject implements Bundlable {
 
 	private static final String POS = "pos";
-	private              int    pos = 0;
+	private              int    pos = -1;
 	
 	public LevelObjectSprite sprite;
 
@@ -48,4 +48,6 @@ public abstract class LevelObject implements Bundlable {
 	}
 
 	public abstract String desc();
+
+	public abstract String name();
 }

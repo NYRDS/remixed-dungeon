@@ -18,12 +18,13 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -59,7 +60,9 @@ public class WndInfoCell extends Window {
 		titlebar.label( Dungeon.level.tileName( tile ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
+
+		float yPos = titlebar.bottom();
+
 		Text info = PixelScene.createMultiline( 6 );
 		add( info );
 		
@@ -70,6 +73,11 @@ public class WndInfoCell extends Window {
 		LevelObject obj = Dungeon.level.objects.get(cell);
 
 		if(obj != null) {
+			LevelObjectSprite sprite = new LevelObjectSprite();
+			sprite.reset(obj);
+			sprite.setPos(0,0);
+			add(sprite);
+
 			desc.append(newLine);
 			desc.append(obj.desc());
 		}
@@ -87,8 +95,8 @@ public class WndInfoCell extends Window {
 		info.maxWidth(WIDTH);
 		info.measure();
 		info.x = titlebar.left();
-		info.y = titlebar.bottom() + GAP;
+		info.y = yPos + GAP;
 		
-		resize( WIDTH, (int)(info.y + info.height()) );
+		resize( WIDTH, (int)(info.bottom()) );
 	}
 }
