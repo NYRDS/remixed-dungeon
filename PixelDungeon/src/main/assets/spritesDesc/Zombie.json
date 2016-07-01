@@ -1,0 +1,30 @@
+{
+   "texture" = "mobs/zombie.png",
+   "width" = 12,
+   "height" = 15,
+   "idle" = {
+      "fps" = 4,
+      "looped" = true,
+      "frames" = [ 0, 0, 1, 0, 1]
+   },
+   "run" = {
+      "fps" = 8,
+      "looped" = true,
+      "frames" = [2, 3, 4, 5]
+   },
+   "attack" = {
+      "fps" = 12,
+      "looped" = false,
+      "frames" = [6, 7]
+   },
+   "die" = {
+      "fps" = 6,
+      "looped" = false,
+      "frames" = [8, 9, 10]
+   }
+
+}
+
+
+
+
