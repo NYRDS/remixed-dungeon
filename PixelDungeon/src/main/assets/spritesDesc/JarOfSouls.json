@@ -1,0 +1,15 @@
+{
+  "texture" = "mobs/jar_of_souls.png",  
+  "width"  = 16, 
+  "height" = 16,
+  
+  "idle"   = { "fps" = 4,  "looped" = true,     "frames" = [0,0,0,0,1,1] },
+  "run"    = { "fps" = 1,  "looped" = true,     "frames" = [0] },
+  "attack" = { "fps" = 1,  "looped" = true,     "frames" = [0] },
+  "zap"    = { "fps" = 11, "looped" = true,     "frames" = [0,1,2,3,4,5] },
+  "die"    = { "fps" = 3,  "looped" = false,    "frames" = [6,7] }
+}
+
+
+
+

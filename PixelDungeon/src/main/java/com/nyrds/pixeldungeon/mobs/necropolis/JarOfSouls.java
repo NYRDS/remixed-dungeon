@@ -4,17 +4,23 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderNestSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
+import com.watabou.utils.Callback;
 
-//Supposed to periodically	 summon undead creatures
+//Supposed to periodically summon undead creatures
 public class JarOfSouls extends Mob {
 
 	public JarOfSouls() {
 		
 		spriteClass = SpiderNestSprite.class;
 		
-		hp(ht(10));
+		hp(ht(60));
 		defenseSkill = 1;
 		baseSpeed = 0f;
 		
@@ -25,6 +31,12 @@ public class JarOfSouls extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.2f;
+
+		IMMUNITIES.add(Paralysis.class);
+		IMMUNITIES.add(Burning.class);
+		IMMUNITIES.add(ToxicGas.class);
+		IMMUNITIES.add( Terror.class );
+		IMMUNITIES.add( Death.class );
 	}
 	
 	@Override
@@ -42,10 +54,8 @@ public class JarOfSouls extends Mob {
 		super.act();
 		
 		Mob newSpider = SpiderSpawner.spawnRandomSpider(Dungeon.level, getPos());
-		
-		if(isPet()) {
-			Mob.makePet(newSpider, Dungeon.hero);
-		}
+
+		PlayZap();
 		state = SLEEPING;
 		
 		postpone(20);
@@ -56,5 +66,15 @@ public class JarOfSouls extends Mob {
 	@Override
 	public int dr() {
 		return 0;
+	}
+
+	public void PlayZap() {
+		getSprite().zap(
+				getEnemy().getPos(),
+				new Callback() {
+					@Override
+					public void call() {
+					}
+				});
 	}
 }
