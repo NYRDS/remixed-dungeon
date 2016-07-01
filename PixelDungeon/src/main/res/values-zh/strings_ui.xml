@@ -40,6 +40,8 @@
   <string name="InterLevelScene_Resurrecting">复活中...</string>
   <string name="InterLevelScene_Returning">返回中...</string>
   <string name="InterLevelScene_Falling">坠落中...</string>
+  <string name="InterLevelScene_FileNotFound">因为一些原因，存档没有找到……</string>
+  <string name="InterLevelScene_ErrorGeneric">发生错误了……</string>
   <!--STRINGS OF SurfaceScene CLASS-->
   <string name="SurfaceScene_GameOver">游戏结束</string>
   <!--STRINGS OF WndSettings CLASS-->

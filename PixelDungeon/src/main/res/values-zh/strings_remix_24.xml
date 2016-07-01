@@ -29,7 +29,9 @@
     <string name="Pumpkin_Name">南瓜</string>
     <!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">睡帽</string>
-    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="Nightcap_Info">在夜晚征服地牢想必是十分疲累的事。那为何不带上一顶温暖舒适的帽子好好休息一下，抛开自己的烦恼呢？</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">巫师帽</string>
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
