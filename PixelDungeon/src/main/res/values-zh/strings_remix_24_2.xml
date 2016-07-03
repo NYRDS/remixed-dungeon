@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">黄金剑</string>
+    <string name="GoldenSword_Info">通常用这种柔软的金属制造而成的武器只会被视为装饰品，尽管它的剑刃看起来能轻易的切断物品。</string>
+    <string name="GoldenSword_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">金制雕像</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name_Objective">金制雕像</string>
+    <string name="GoldenStatue_Desc">虽然难以置信，但这尊瑰丽的雕像不仅仅是个装饰品，而是对掉以轻心的冒险者怀有深深恶意的生物。你发誓当你第一眼看到它时，那把_%s_只是它手臂的一部分。</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">死灵法师</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
+    <string name="NecromancerNPC_Name_Objective">死灵法师</string>
+    <string name="NecromancerNPC_Desc">这个中年男人看起来有点恼怒和激动。他穿着用骨片制成的混合甲。</string>
+    <string name="NecromancerNPC_Message3">我能听到死者的呼唤。</string>
+    <string name="NecromancerNPC_Message4">在大墓地里有个十分特别的东西。</string>
+
+</resources>

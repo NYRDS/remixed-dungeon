@@ -111,4 +111,14 @@
         - New item "Pirate Set"\n
         - Updated visuals for Neko Ears and Rabbit Ears\n
         </string>
+        <string name="Welcome_Text_24_2">
+        remix.24.2:\n
+        - New mob: Golden Statue (rare statue)\n
+        - New item: Golden Sword (can be found as rare loot drop, or also can be found as loot from golden statue with drop rate 100%)\n
+        - New NPC: Necromancer (He\'s got exciting news to tell you. Find him at level 7)\n
+        - Goo has been nerfed\n
+        - Tengu now drops Tome every time. Subclasses can\'t use tome to change their specialty\n
+        - Shadow Lord gets a more sensible starting room (now players can\'t run past him to reach next level, you have to fight)\n
+        - Spider Charm gets updated sprite and now drops by a Spider Queen (Previously you could\'ve get it from Goo)\n
+        </string>
 </resources>

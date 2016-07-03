@@ -2,7 +2,7 @@
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
   <string name="ShadowLord_Name">暗影领主</string>
-  <string name="ShadowLord_Gender">男性化</string>
+  <string name="ShadowLord_Gender">masculine</string>
   <string name="ShadowLord_Name_Objective">暗影领主</string>
   <string name="ShadowLord_Desc">由纯粹的恶意和黑暗构成的生物。许多人因为他的强大坚信他就是古神本尊。而其他人则认为他不过是古神内庭的守护者之一</string>
   <string name="ShadowLord_Intro">做好准备！</string>

@@ -78,6 +78,21 @@
   <string name="MeleeWeapon_Info1c">一把升级过的</string>
   <string name="MeleeWeapon_Info1d">一把负等级的</string>
   <string name="MeleeWeapon_Info2a">它的平均伤害是%d点。</string>
+  <string name="MeleeWeapon_Info2b">一般情况下这把武器每次攻击能造成平均%1$d点的伤害，并需要 %2$d 点力量来装备。</string>
+  <string name="MeleeWeapon_Info2c">也许这把武器对你来说太重了。</string>
+  <string name="MeleeWeapon_Info3a">这是一把比较%s的武器。</string>
+  <string name="MeleeWeapon_Info3b">快速</string>
+  <string name="MeleeWeapon_Info3c">缓慢</string>
+  <string name="MeleeWeapon_Info3d">并且</string>
+  <string name="MeleeWeapon_Info3e">但是</string>
+  <string name="MeleeWeapon_Info3f">精准</string>
+  <string name="MeleeWeapon_Info3g">不太精准</string>
+  <string name="MeleeWeapon_Info4a">它被打磨得更快速了。</string>
+  <string name="MeleeWeapon_Info4b">它被打磨得更精准了。</string>
+  <string name="MeleeWeapon_Info5">它是附过魔的。</string>
+  <string name="MeleeWeapon_Info6a">
+因为你的力量不足，你在使用这把%s攻击时精准和速度会降低。</string>
+  <string name="MeleeWeapon_Info7a">你%2$s握着这把%1$s。</string>
   <!--STRINGS OF BattleAxe CLASS-->
   <string name="BattleAxe_Gender">masculine</string>
   <!--STRINGS OF Dagger CLASS-->
@@ -95,6 +110,7 @@
   <!--STRINGS OF ShortSword CLASS-->
   <string name="ShortSword_Gender">masculine</string>
   <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Gender">neuter</string>
   <!--STRINGS OF Sword CLASS-->
   <string name="Sword_Gender">masculine</string>
   <!--STRINGS OF WarHammer CLASS-->
@@ -110,6 +126,7 @@
   <!--STRINGS OF IncendiaryDart CLASS-->
   <string name="IncendiaryDart_Gender">masculine</string>
   <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Gender">neuter</string>
   <!--STRINGS OF Shuriken CLASS-->
   <string name="Shuriken_Gender">masculine</string>
   <!--STRINGS OF Tamahawk CLASS-->
@@ -126,5 +143,6 @@
   <string name="ChaosStaff_Name">混沌法杖</string>
   <string name="ChaosStaff_Gender">masculine</string>
   <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">献祭之剑</string>
   <string name="SacrificialSword_Gender">masculine</string>
 </resources>

@@ -32,5 +32,5 @@
   <string name="DonateButton_pleaseDonate">请考虑捐献</string>
   <string name="DonateButton_thanks">感谢您的支持！</string>
   <!--STRINGS OF WndSaveSlotSelect-->
-  <string name="WndSaveSlotSelect_dontLike">不喜欢广告？进行捐献吧！广告会消失，永远的。</string>
+  <string name="WndSaveSlotSelect_dontLike">不喜欢广告？进行捐献吧！广告会永远的消失。</string>
 </resources>
