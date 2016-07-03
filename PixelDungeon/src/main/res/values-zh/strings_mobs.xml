@@ -245,11 +245,15 @@
   <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
   <string name="SpiderExploding_Desc">这些蜘蛛工人在和平时期一直努力工作，可是一旦遇到敌人，就会毫不犹豫的抓起自己路过的第一株植物，并把自己当成活体炸弹冲向他们。</string>
   <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">心控蜘蛛</string>
   <string name="SpiderMind_Gender">masculine</string>
+  <string name="SpiderMind_Name_Objective">心控蜘蛛</string>
+  <string name="SpiderMind_Desc">这些看似脆弱的蜘蛛掌握着独一无二的精神力量，甚至能操控一个群体。心控蜘蛛能够控制所有活着的生物，但是它们都是懦夫。</string>
   <!--STRINGS OF SpiderQueen CLASS-->
   <string name="SpiderQueen_Name">蜘蛛女王</string>
   <string name="SpiderQueen_Gender">feminine</string>
   <string name="SpiderQueen_Name_Objective">蜘蛛女王</string>
+  <string name="SpiderQueen_Desc">由美丽的女性和可怖的蜘蛛交织而成的身体。在巢穴中所有活着的存在都是她的侍从，与这位特别的女士的邂逅也许会让你丧命，因为你是这里的入侵者！</string>
   <!--STRINGS OF WaterElemental CLASS-->
   <string name="WaterElemental_Name">水元素</string>
   <string name="WaterElemental_Gender">masculine</string>

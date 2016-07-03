@@ -2,9 +2,10 @@
 <resources>
   <!--STRINGS OF TitleScene CLASS-->
   <string name="TitleScene_Play">开始游戏</string>
-  <string name="TitleScene_Highscores">最高分数</string>
+  <string name="TitleScene_Highscores">排行榜</string>
   <string name="TitleScene_Badges">成就</string>
   <string name="TitleScene_About">关于</string>
+  <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，你的进度可能会丢失！</string>
   <!--STRINGS OF AboutScene CLASS-->
   <string name="AboutScene_OurSite">我们的网址：</string>
   <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
@@ -29,10 +30,10 @@
   <string name="StartScene_UnlockElf">使用其他角色击败第4个boss来解锁这个角色</string>
   <string name="StartScene_WinGame">使用任意角色完成游戏来解锁“挑战”。</string>
   <string name="StartScene_DifficultySelect">选择难度</string>
-  <string name="StartScene_DifficultyEasy">简单(带广告)</string>
-  <string name="StartScene_DifficultyNormalWithSaves">可保存的普通(带广告)</string>
-  <string name="StartScene_DifficultyNormal">普通</string>
-  <string name="StartScene_DifficultyExpert">困难</string>
+  <string name="StartScene_DifficultyEasy">简单模式(有广告)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">带存档的普通模式(有广告)</string>
+  <string name="StartScene_DifficultyNormal">普通模式</string>
+  <string name="StartScene_DifficultyExpert">专家模式</string>
   <!--STRINGS OF InterLevelScene CLASS-->
   <string name="InterLevelScene_Descending">下楼中...</string>
   <string name="InterLevelScene_Ascending">上楼中...</string>
@@ -48,7 +49,7 @@
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>
   <string name="WndSettings_ZoomDef">默认缩放级别</string>
-  <string name="WndSettings_TextScaleDefault">默认字体</string>
+  <string name="WndSettings_TextScaleDefault">默认字体大小</string>
   <string name="WndSettings_ScaleUp">平滑界面</string>
   <string name="WndSettings_Immersive">沉浸模式</string>
   <string name="WndSettings_Music">音乐</string>
