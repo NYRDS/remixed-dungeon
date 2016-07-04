@@ -24,6 +24,7 @@ public class BattleMageArmor extends ClassArmor {
 	
 	{
 		name = Game.getVar(R.string.MageArmor_Name);
+		hasCollar = true;
 		image = 12;
 	}
 	
