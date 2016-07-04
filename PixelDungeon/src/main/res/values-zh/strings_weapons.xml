@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">你现在对于你的 %1$s 足够熟悉以鉴定它。它是 %2$s。</string>
+  <string name="Weapon_Identify">你现在对于你的%1$s足够熟悉以鉴定它。它是%2$s。</string>
   <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
@@ -92,26 +92,47 @@
   <string name="MeleeWeapon_Info5">它是附过魔的。</string>
   <string name="MeleeWeapon_Info6a">
 因为你的力量不足，你在使用这把%s攻击时精准和速度会降低。</string>
+  <string name="MeleeWeapon_Info6b">因为你额外的力量，你在使用这把%s攻击时伤害增加了。</string>
   <string name="MeleeWeapon_Info7a">你%2$s握着这把%1$s。</string>
+  <string name="MeleeWeapon_Info7b">，并且因为它被诅咒了，你无法放下它。</string>
+  <string name="MeleeWeapon_Info7c">你能感受到%s中潜伏着一股恶意的魔力。</string>
   <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">战斧</string>
+  <string name="BattleAxe_Info">这把有着巨大钢制头部的战斧能将庞大的力量倾注在每次挥舞之中。</string>
   <string name="BattleAxe_Gender">masculine</string>
   <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">匕首</string>
+  <string name="Dagger_Info">一把木柄严重磨损的简易铁匕首。</string>
   <string name="Dagger_Gender">masculine</string>
   <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">剑刃戟</string>
+  <string name="Glaive_Info">一把在末端装有剑刃的长柄武器。</string>
   <string name="Glaive_Gender">feminine</string>
   <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">指虎</string>
+  <string name="Knuckles_Info">一块专门塑成契合指节形状的铁片</string>
   <string name="Knuckles_Gender">masculine</string>
   <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">长剑</string>
   <string name="Longsword_Gender">masculine</string>
   <!--STRINGS OF Mace CLASS-->
   <string name="Mace_Gender">feminine</string>
   <!--STRINGS OF Quarterstaff CLASS-->
   <string name="Quarterstaff_Gender">masculine</string>
   <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">短剑</string>
+  <string name="ShortSword_Info">它确实十分短，只比匕首长那么几英寸。</string>
+  <string name="ShortSword_ACReforge">重铸</string>
+  <string name="ShortSword_Select">选择你要强化的武器</string>
+  <string name="ShortSword_Reforged">你将你的短剑重铸以升级你的%s</string>
+  <string name="ShortSword_NotBoomerang">你不能通过这个方式升级回旋镖</string>
   <string name="ShortSword_Gender">masculine</string>
   <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">长矛</string>
+  <string name="Spear_Info">这是一根装着锋锐铁刺的细长木杆。</string>
   <string name="Spear_Gender">neuter</string>
   <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">单手剑</string>
   <string name="Sword_Gender">masculine</string>
   <!--STRINGS OF WarHammer CLASS-->
   <string name="WarHammer_Gender">masculine</string>
@@ -138,11 +159,14 @@
   <string name="ChaosSword_Gender">masculine</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">混沌弓</string>
+  <string name="ChaosBow_Info">一把充斥着混沌之力的骇人魔弓，每一发从它这里射出的箭矢都会携带有一些混沌能量。可是一旦失手……</string>
   <string name="ChaosBow_Gender">masculine</string>
   <!--STRINGS OF ChaosStaff CLASS-->
   <string name="ChaosStaff_Name">混沌法杖</string>
+  <string name="ChaosStaff_Info">与混沌之力融合的法杖！这是令法师梦寐以求或敬而远之的。</string>
   <string name="ChaosStaff_Gender">masculine</string>
   <!--STRINGS OF SacrificialSword CLASS-->
   <string name="SacrificialSword_Name">献祭之剑</string>
+  <string name="SacrificialSword_Info">这把锈渍斑斑的老旧青铜剑看起来相当无用，可是你感到其中沉睡着某种古老的力量。这种力量能够将几乎任何生物变成无意识的奴隶，如果能找到唤醒它的方法的话……</string>
   <string name="SacrificialSword_Gender">masculine</string>
 </resources>
