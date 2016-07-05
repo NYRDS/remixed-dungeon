@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -80,6 +82,7 @@ public abstract class Char extends Actor {
 
 	private int pos = 0;
 
+	@NonNull
 	private CharSprite sprite;
 
 	protected String name           = Game.getVar(R.string.Char_Name);
@@ -581,7 +584,7 @@ public abstract class Char extends Actor {
 		return sprite;
 	}
 
-	public void setSprite(CharSprite sprite) {
+	public void setSprite(@NonNull CharSprite sprite) {
 		this.sprite = sprite;
 	}
 

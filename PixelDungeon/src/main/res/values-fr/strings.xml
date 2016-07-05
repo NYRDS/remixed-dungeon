@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remix de Pixel Dungeon</string>
@@ -129,6 +129,8 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="WndGame_menu">Menu principal</string>
   <string name="WndGame_Exit">Quitter Pixel Dungeon</string>
   <string name="WndGame_Return">Revenir à la partie</string>
+  <string name="WndGame_Save">Sauvegarder</string>
+  <string name="WndGame_Load">Charger</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">Statistiques</string>
   <string name="WndHero_Buffs">Bonus</string>
@@ -191,6 +193,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="WndStory_Metropolis">La métropole naine était la plus grande de toutes les cités-états naines. Lors de son apogée, l\'armée mécanique des nains repoussa avec succès l\'invasion du dieu ancien et son armée de démons. Mais on raconte que les guerriers qui en sont revenus ont apportés les graines de la corruption avec eux, et que la victoire n\'était que le début de la fin de ce royaume souterrain.</string>
   <string name="WndStory_Halls">Ces niveaux sont les vestiges des banlieues de la métropole naine. Après la victoire coûteuse dans la guerre contre l\'ancien dieu, les nains furent trop affaiblis pour se débarrasser des démons restants. Peu à peu les démons se sont attachés à cet endroit qu\'on appelle désormais le Hall des Démons.
 Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
+  <string name="WndStory_Spiders">Il y a des années, il y avait une mine, remplie de pierres magiques. Mais quand les veines de minerais se sont asséchées les mineurs sont partis, laissant derrière eux un grand réseau de tunnels. Éventuellement, cet endroit fut habité par des araignées. Mais même ces créatures tapies dans le noir ne sont pas suffisantes pour effrayer les plus braves et les plus fous qui recherchent les trésors qui peuvent se trouver dans les mines. La taille du danger est toujours proportionnelle à la quantité de rumeurs à propos d’artefacts magiques. Il était une fois, une sorcière maléfique errant dans les tunnels pour échapper à ses persécuteurs. Mais les gens superstitieux n\'osent pas entrer dans les ténèbres. Donc ils ont décidé d\'attendre. Mais elle ne s\'est jamais montrée. Peut-être la sorcière avait trouvé un autre moyen de sortir, peut-être a-t-elle réussi à se glisser parmi les gardes ... ou elle a péri, entourée par les bruissements des créatures de la nuit</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">A VENDRE : %1$s - %2$dor</string>
   <string name="WndTradeItem_Buy">Acheter pour %dor</string>
@@ -321,12 +324,14 @@ Cette balise a été installée quelque part au %de étage du Pixel Dungeon.</st
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">Poussière des morts</string>
   <string name="CorpseDust_Info">Ce tas de poussière cadavérique ne se démarque pas plus qu\'un tas de poussière lambda. Mais bon, vous sentez qu\'il vaudrait mieux vous en débarrasser au plus vite.</string>
+  <string name="CorpseDust_Info2">Peut-être parce que le simple fait de la tenir te rend anxieux et énervé</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">minerai noir</string>
   <string name="DarkGold_Info">Ce métal n\'est pas appelé noir à cause de sa couleur (en fait, on dirait de l\'or), mais il fond à la lumière du jour, le rendant inutile à la surface.</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">rose séchée</string>
   <string name="DriedRose_Info">La rose est fanée depuis longtemps, mais elle a réussi à garder toutes ses pétales.</string>
+  <string name="DriedRose_Info2">Et il n\'a pas perdu son charme. Il a l\'air si beau, que vous voulez le garder pour toujours</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">Jeton de nain</string>
   <string name="DwarfToken_Info">Beaucoup de nains et de créations naines portent ces petits bouts de métal, on n\'en connaît cependant pas l\'utilité. Peut-être que ce sont des bijoux ou des espèces de cartes d\'identités. Les nains sont bizarres.</string>
@@ -334,10 +339,12 @@ Cette balise a été installée quelque part au %de étage du Pixel Dungeon.</st
   <string name="Pickaxe_Name">pioche</string>
   <string name="Pickaxe_Info">C\'est un outil grand et robuste fait pour casser la pierre. Il pourrait peut-être servir d\'arme.</string>
   <string name="Pickaxe_ACMine">MINER</string>
+  <string name="Pickaxe_Gender">féminin</string>
   <string name="Pickaxe_NoVein">Il n\'y a aucune veine de minerai noir à proximité</string>
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">crâne de rat géant</string>
   <string name="RatSkull_Info">Cela aurait pu être un beau trophée de chasse, mais l\'odeur qui s\'en dégage est trop désagréable pour être accroché sur un mur.</string>
+  <string name="RatSkull_Info2">D\'un autre côté, il montre que son possesseur et capable de tuer des rats, même les plus gros et odorants</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <string name="ConfusionGas_Info">Un nuage de gaz de confusion flotte par ici.</string>

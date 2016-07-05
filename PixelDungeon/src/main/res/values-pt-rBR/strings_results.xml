@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">Morto por %1$s no nível %2$d</string>
+  <string name="ResultDescriptions_Boss">Morto pelo %1$s no nível %2$d</string>
+  <string name="ResultDescriptions_Wand">Morto por você mesmo %1$s no nível %2$d</string>
+  <string name="ResultDescriptions_Glyph">Morto Pelo %1$s no nível %2$d</string>
+  <string name="ResultDescriptions_Trap">Morto por descarga de %1$s no nível %2$d</string>
+  <string name="ResultDescriptions_Burning">Queimou até a morte no nível %d</string>
+  <string name="ResultDescriptions_Hunger">Passou fome até a morte no nível %d</string>
+  <string name="ResultDescriptions_Poison">Morreu por envenenamento no nível %d</string>
+  <string name="ResultDescriptions_Gas">Morreu por gás tóxico no nível %d</string>
+  <string name="ResultDescriptions_Bleeding">Sangrou até a morte no nível %d</string>
+  <string name="ResultDescriptions_Ooze">Morreu com lodo tóxico no nível %d</string>
+  <string name="ResultDescriptions_Fall">Morreu caindo no nível %d</string>
+  <string name="ResultDescriptions_Win">Você consquistou o Amuleto de Yendor</string>
+  <string name="ResultDescriptions_Immured">Emparedado em pedra no nível %d</string>
+</resources>

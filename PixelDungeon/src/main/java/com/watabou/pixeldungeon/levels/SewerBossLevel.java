@@ -96,7 +96,9 @@ public class SewerBossLevel extends RegularLevel {
 		
 		roomEntrance.type = Type.ENTRANCE;
 		roomExit.type = Type.BOSS_EXIT;
-		
+
+		placeSecondaryExits();
+
 		Graph.buildDistanceMap( rooms, roomExit );
 		List<Room> path = Graph.buildPath( rooms, roomEntrance, roomExit );
 		
@@ -134,7 +136,9 @@ public class SewerBossLevel extends RegularLevel {
 			kingsRoom.connect( roomExit );
 			kingsRoom.type = Room.Type.RAT_KING;
 		}
-		
+
+		Graph.setPrice( path, roomEntrance.distance );
+
 		paint();
 		
 		paintWater();

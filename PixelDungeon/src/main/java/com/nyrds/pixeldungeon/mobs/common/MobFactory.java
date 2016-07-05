@@ -132,6 +132,7 @@ public class MobFactory {
 		registerMobClass(SuspiciousRat.class);
 
 		registerMobClass(ArmoredStatue.class);
+		registerMobClass(GoldenStatue.class);
 
 		registerMobClass(Hedgehog.class);
 	}

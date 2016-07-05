@@ -16,6 +16,7 @@
 您可以随时改变您的决定（点击主界面的统计表图标）</string>
   <string name="AllowStatisticsCollectionScene_Allow">允许</string>
   <string name="AllowStatisticsCollectionScene_Deny">拒绝</string>
+  <string name="Darkness_Info">像是永恒黑暗的碎片漂浮在空中</string>
   <string name="WndSelectLanguage_ImproveTranslation">请帮助我们改善混合的像素地牢的翻译</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">点击这里来加入混合的像素地牢的翻译团队</string>

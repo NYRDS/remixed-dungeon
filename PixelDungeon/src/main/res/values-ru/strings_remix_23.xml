@@ -21,7 +21,7 @@
   <string name="Nightmare_Gender">masculine</string>
   <string name="Nightmare_Name_Objective">кошмара</string>
   <string name="Nightmare_Desc">Омерзительное создание, выглядящее как пучок  щупалец сделанных из плоти. Кошмары являются воплощением зловещих мыслей Старого Бога.</string>
-  <!-- STRINGS OF TENGU CLASS -->
+  <!--STRINGS OF TENGU CLASS-->
   <string name="Tengu_Info3">Попалась, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Name">гнолл-зомби</string>

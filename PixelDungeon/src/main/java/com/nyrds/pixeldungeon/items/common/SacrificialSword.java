@@ -14,6 +14,7 @@ public class SacrificialSword extends SpecialWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 4;
+		enchatable = false;
 	}
 	
 	public SacrificialSword() {

@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
+import android.support.annotation.Nullable;
+
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -37,7 +39,7 @@ public class LightningTrap {
 	
 	// 00x66CCEE
 	
-	public static void trigger( int pos, Char ch ) {
+	public static void trigger( int pos, @Nullable Char ch ) {
 		
 		if (ch != null) {
 			ch.damage( Math.max( 1, Random.Int( ch.hp() / 3, 2 * ch.hp() / 3 ) ), LIGHTNING );

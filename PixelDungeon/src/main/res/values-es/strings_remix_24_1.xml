@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">estatua animada</string>
+    <string name="ArmoredStatue_Gender">femenino</string>
+    <string name="ArmoredStatue_Name_Objective">estatua animada</string>
+    <string name="ArmoredStatue_Desc">Ni siquiera se podría pensar que sólo es otra fea estatua. No solo por los ojos color rojo brillante, si no por que nadie pondría un  _%s_  real en la estatua.</string>
+
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">guardian arácnido</string>
+    <string name="SpiderGuard_Gender">masculino</string>
+    <string name="SpiderGuard_Name_Objective">guardian arácnido</string>
+    <string name="SpiderGuard_Desc">Al igual que los soldados los guardianes arácnidos han jurado proteger su reino. Su veneno se utiliza para inmovilizar a los objetivos provocando parálisis.</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">arañas ambar</string>
+    <string name="SpiderMindAmber_Gender">masculino</string>
+    <string name="SpiderMindAmber_Name_Objective">arañas ambar</string>
+    <string name="SpiderMindAmber_Desc">Las arañas ambar son criaturas misteriosas y raras que poseen poderes psíquicos parecidos a los de una psi-araña, pero son más resistentes que sus hermanas normales. El nombre \"ámbar\" es por el color de sus gigantes sacos cerebrales, que revela a sus víctimas, cuando los golpea con sus poderes.</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Set Pirata</string>
+    <string name="PirateSet_Info">¡Arr! ¿¡Sientes que eres un pirata... o solo como cachorro de mar!? Espero que no sea así, despues de todo es solo para piratas de verdad, quiero decir... ¡Arr!</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">Si, estoy seguro!</string>
+    <string name="WndSaveSlotSelect_Delete_No">No</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Estas seguro de querer eliminar esta partida guardada?</string>
+</resources>

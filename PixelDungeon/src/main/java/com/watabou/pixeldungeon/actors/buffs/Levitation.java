@@ -44,7 +44,7 @@ public class Levitation extends FlavourBuff {
 		Dungeon.level.press( target.getPos(), target );
 		super.detach();
 	}
-	
+
 	@Override
 	public int icon() {
 		return BuffIndicator.LEVITATION;

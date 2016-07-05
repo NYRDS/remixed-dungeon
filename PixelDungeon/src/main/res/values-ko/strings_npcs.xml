@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Name">트롤 대장장이</string>
+  <string name="Blacksmith_Desc">트롤 대장장이는 전형적인 트롤같이 생겼다. 큰 키에 여윈 몸을 가지고 있고, 피부는 색이든 질감이든 돌을 연상시킨다. 덩치에 어울리지 않는 작은 도구들을 가지고 땜질을 하고 있다.</string>
+  <string name="Blacksmith_Gold1">이봐 인간! 쓸만해지고 싶나, 어? 이 곡괭이를 가져다가 이걸로 _어두운 금 원석_을 캐다 줘, _15개_ 면 충분하겠네. 보상은 뭐냐고? 이 탐욕스러운... \n알았어, 알았다고, 내가 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
+  <string name="Blacksmith_Blood1">이봐 인간! 쓸만해지고 싶나, 어? 이 곡괭이를 가져다가 이걸로 _박쥐를 잡아서_ 박쥐 피를 묻혀와. 보상은 뭐냐고? 이 탐욕스러운... \n 알았어, 알았다고, 내가 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
+  <string name="Blacksmith_Txt2">지금 장난해? 내 곡괭이 어디 갔어?!</string>
+  <string name="Blacksmith_Txt3">어두운 금 원석. 15개. 솔직히 그게 그렇게 어렵냐?</string>
+  <string name="Blacksmith_Txt4">박쥐 피 묻혀오라고 했잖아. 빨리 빨리!</string>
+  <string name="Blacksmith_Completed">오, 돌아오긴 했네... 늦는 게 안 오는 것보단 낫지.</string>
+  <string name="Blacksmith_GetLost">꺼져, 난 바쁘다고!</string>
+  <string name="Blacksmith_LooksBetter">당신의 %s는(은) 확실히 좋아진것같다.</string>
+  <string name="Blacksmith_Verify1">똑같은 아이템 두 번 고르지 말고, 다른 아이템 2개를 고르라고!</string>
+  <string name="Blacksmith_Verify2">2개의 똑같은 종류의 아이템을 고르라니까!</string>
+  <string name="Blacksmith_Verify3">내가 뭐 가지고 작업하는 지 알아야 하니까, 식별부터 해!</string>
+  <string name="Blacksmith_Verify4">저주받은 아이템 가지곤 작업 안 해!</string>
+  <string name="Blacksmith_Verify5">이건 그냥 쓰레기야, 질이 너무 구리다고!</string>
+  <string name="Blacksmith_Verify6">이런 아이템은 제련 못 해!</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Name">슬픈 유령</string>
+  <string name="Ghost_Desc">이 유령은 거의 보이지 않는다. 그것은 슬픈 얼굴을 한 희미한 빛으로 된 형상없는 얼룩 같이 보인다.</string>
+  <string name="Ghost_Rose1">반갑네 모험가여... 한때는 나도 당신과 같았다네 - 강하고 자신감이 넘쳤지... 하지만 지금은 죽었어... 하지만 난 이곳을 떠날수 없네... 내 _마른 장미_를 찾기 전까지는 말야... 나한텐 매우 중요한 것이네... 어떤 몬스터가 내게서 훔쳐갔어...</string>
+  <string name="Ghost_Rose2">제발... 도와주게... 장미를 찾아 주시게...</string>
+  <string name="Ghost_Rat1">반갑게 모험가여... 한때는 나도 당신과 같았다네 - 강하고 자신감이 넘쳤지... 하지만 지금은 죽었어... 하지만 난 이곳을 떠날수 없네... 복수하기 전까지는 말야... 내 목숨을 앗아간, _악취나는 쥐_를 없애 주게...</string>
+  <string name="Ghost_Rat2">제발... 도와주게...그 끔찍한 놈을 없애 주게...</string>
+  <string name="Ghost_Defense">회피</string>
+  <string name="FetidRat_Name">악취 쥐</string>
+  <string name="FetidRat_Name_Objective">악취 쥐</string>
+  <string name="FetidRat_Gender">여성</string>
+  <string name="FetidRat_Desc">이 주머니 쥐는 보통 녀석들 보다 훨씬 몸집이 크다.  악취나는 구름에 뒤덮혀 있다.</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Name">고슴도치</string>
+  <string name="Hedgehog_Desc">저 고슴도치는 불안해 보인다.</string>
+  <string name="Hedgehog_Info1">당신도 곰을 찾고 있나요?</string>
+  <string name="Hedgehog_Info2">안개 속의 말은 어떤가요?</string>
+  <string name="Hedgehog_Info3">딸기잼으로 만든 차를 좋아 하세요?</string>
+  <string name="Hedgehog_Info4">이 파이 드세요</string>
+  <string name="Hedgehog_ImLate">저 늦었어요, 엄청 늦었다구요...</string>
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Name">야망있는 임프</string>
+  <string name="Imp_Desc">임프들은 하급 데몬들이다. 그들이 유명한건 힘도 마법 재능도 아닌, 영리함과 사회성 때문이다. 많은 임프들은 데몬이 아닌 것들과 살아가는 것을 좋아한다.</string>
+  <string name="Imp_Defense">회피</string>
+  <string name="Imp_Golems1">모험가이신가요? 전 모험가들이 좋아요! 누군가를 죽이고 싶을땐 언제나 그들에게 믿고 맡길 수 있죠. 내 말이 맞죠? 당연히 댓가도 드리죠. :)\n제 경우엔 _골렘_을 죽이고 싶어요. 보세요. 여기서 조그만한 사업을 하나 시작하려고 하는데요, 이놈의 멍청한 골렘들이 골치예요. 돌아다니는 화강암 덩어리인 녀석들과는 도무지 협상이 안되요, 제길! 그러니 제발, 좀 죽여줘요... 한.._6 마리_정도면 보상하겠습니다.</string>
+  <string name="Imp_Golems2">골렘 사파리는 잘되가고 있나요?</string>
+  <string name="Imp_Monks1">모험가이신가요? 전 모험가들이 좋아요! 누군가를 죽이고 싶을땐 언제나 그들에게 믿고 맡길 수 있죠. 내 말이 맞죠? 당연히 댓가도 드리죠. :)\n제 경우엔 _수도승_을 죽이고 싶어요. 보세요. 여기서 조그만한 사업을 하나 시작하려고 하는데요, 이 미치광이들은 아무 것도 안 살 거고 손님들만 겁줘서 쫒아낼 거에요. 그러니 제발, 좀 죽여줘요... 한.._8 마리_정도면 보상하겠습니다.</string>
+  <string name="Imp_Monks2">오, 당신 아직 살아 있네요! 역시 당신의 쿵푸가 더 강할줄 알았아요 :) 드워프 토큰 챙기는거 잊지 마요.</string>
+  <string name="Imp_Cya">나중에 봐요, %s!</string>
+  <string name="Imp_Hey">저기요, %s!</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Name">야망있는 임프</string>
+  <string name="ImpShopkeeper_Desc">임프들은 하급 데몬들이다. 그들이 유명한건 힘도 마법 재능도 아닌, 영리함과 사회성 때문이다. 많은 임프들은 데몬이 아닌 것들과 살아가는 것을 좋아한다.</string>
+  <string name="ImpShopkeeper_Greetings">안녕, 친구!</string>
+  <!--STRINGS OF MirrorImage CLASS-->
+  <string name="MirrorImage_Name">거울상</string>
+  <string name="MirrorImage_Name_Objective">거울상</string>
+  <string name="MirrorImage_Gender">남성</string>
+  <string name="MirrorImage_Desc">이 환영은 당신과 빼닮은 형상을 하고 있지만, 좀 더 창백하고 조금씩 아른거린다.</string>
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Name">쥐 대왕</string>
+  <string name="RatKing_Desc">이 쥐는 평범한 다른 주머니 쥐보다 조금 더 크고, 조그만한 왕관을 머리에 쓰고 있다.</string>
+  <string name="RatKing_Info1">나 안 자고 있어!</string>
+  <string name="RatKing_Info2">뭐냐? 쓸데없는 일로 낭비할 시간이 없다! 내 왕국은 저절로 돌아가지 않는단 말이다!</string>
+  <string name="RatKing_Info3">감히, 이 보잘것 없는 생물이, 우리의 쥐결함을 더럽히다니?!</string>
+  <string name="RatKing_Died">왕이 죽었다. 왕이여 영원하라!</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <string name="Shopkeeper_Name">상점 주인</string>
+  <string name="Shopkeeper_Desc">이 통통한 남자는 던전보다는 어딘가 큰 도시의 상가나 있을 법하지만, 그가 제시하는 가격을 들어보면 왜 여기서 장사하는 걸 더 좋아하는지 이해가 된다.</string>
+  <string name="Shopkeeper_Sell">판매할 아이템을 선택 하세요</string>
+  <!--STRINGS OF WandMaker CLASS-->
+  <string name="WandMaker_Name">늙은 지팡이 제작자</string>
+  <string name="WandMaker_Desc">이 노인은 살짝 혼란스런 표정을 하고 있다. 그는 마법 보호막에 의해 보호받고 있다.</string>
+  <string name="WandMaker_Defense">흡수</string>
+  <string name="WandMaker_Berry1">오, 이런 장소에서 이렇게 괜찮은 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔어 - _썩은딸기의 씨_라네. 마법을 사용하는 사람으로서, 마법 사용자로서 여기 몬스터로부터 자기보호는 할 수 있지만 당황스럽군. 아마도 자네가 날 도와줄 수 있을것 같군. 도와 준다면 내 최고의 완드로 기꺼이 보상하겠네.</string>
+  <string name="WandMaker_Berry2">썩은딸기의 씨를 찾는건 잘되어가는가, %s? 잘 안되어가나? 괜찮다네, 급한건 아니니까.</string>
+  <string name="WandMaker_Dust1">오, 이런 장소에서 이렇게 괜찮은 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔어 - _시체 먼지_라네. 던전에 널려 있는 시체 더미에서 얻을 수 있다네. 마법 사용자로서 여기 몬스터로부터 자기보호는 할 수 있지만 당황스럽군. 아마도 자네가 날 도와줄 수 있을것 같군. 도와준다면 기꺼이 내 최고의 완드로 보상하지.</string>
+  <string name="WandMaker_Dust2">시체 먼지를 찾는 건 잘되어가는가, %s? 가장 먼저 찾아봐야 할 장소는 뼈 무더기라네.</string>
+  <string name="WandMaker_RotberryName">썩은딸기의 씨</string>
+  <string name="WandMaker_RotberryDesc">이 나무 열매의 맛은 달콤하다- 달콤한 죽음.</string>
+  <string name="WandMaker_RotberryInfo">그 씨앗은 으르렁하는 소리를 내었고, 그 소리는 던전 전체로 퍼져나갔다.</string>
+</resources>

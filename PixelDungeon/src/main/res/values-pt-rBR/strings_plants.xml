@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">PLANTAR</string>
+  <string name="Plant_Info">Jogue a semente de %1$s no lugar que você deseja planta-la.\n\n%2$s</string>
+  <string name="Plant_Seed">Semente de %s</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">planta da confusão</string>
+  <string name="Dreamweed_Desc">Ela secreta uma nuvem brilhante de gás da confusão.</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">planta da armadura</string>
+  <string name="Earthroot_Desc">Quando uma criatura toca uma planta da armadura, suas raízes criam uma espécie de armadura natural ao seu redor.</string>
+  <string name="Earthroot_Buff">Armadura da Natureza</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">planta de teleporte</string>
+  <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">planta de fogo</string>
+  <string name="Firebloom_Desc">Quando algo toca uma planta de fogo, ele explode em chamas.</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">planta de gelo</string>
+  <string name="Icecap_Desc">Ao tocar uma planta de gelo, ela excreta um pólen, que congela tudo em sua vizinhança.</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">planta do veneno</string>
+  <string name="Sorrowmoss_Desc">A planta do veneno é uma flor (não é um musgo) com afiadas pétalas, revestidas com um veneno mortal.</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">planta da vida</string>
+  <string name="Sungrass_Desc">A planta da vida é conhecida por propriedades curativas da sua seiva.</string>
+  <string name="Sungrass_Buff">Cura da Natureza</string>
+</resources>

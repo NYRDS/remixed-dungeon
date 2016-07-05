@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">Schriftrolle »%s«</string>
+  <string name="Scroll_Info">Dieses Pergament ist mit nicht entzifferbaren Schriftzeichen übersät die von einer Rune %s überschattet wird. Wer kann wissen was passiert, wenn diese laut vorgelesen wird? </string>
+  <string name="Scroll_ACRead">LESEN</string>
+  <string name="Scroll_Blinded">Du kannst keine Schriftrolle lesen, solange Du geblendet bist</string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Wähle einen Gegenstand</string>
+  <string name="InventoryScroll_Warning">Du willst die Schriftrolle nicht lesen? Sie verbraucht sich aber in jedem Fall.</string>
+  <string name="InventoryScroll_Yes">Ja.</string>
+  <string name="InventoryScroll_No">Nein, ich habe es mir anders überlegt.</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Leere Schriftrolle</string>
+  <string name="BlankScroll_Info">Lediglich eine leere Schriftrolle. Jemand könnte etwas darauf schreiben.</string>
+  <string name="BlankScroll_ReallyBlank">Diese Schriftrolle ist leer.</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Schriftrolle der Herausforderung</string>
+  <string name="ScrollOfChallenge_Info">Wenn laut gelesen wird diese Schriftrolle einen Schlachtruf von sich geben der alle Monster in der Umgebung alarmiert und auf Deine Position aufmerksam macht.</string>
+  <string name="ScrollOfChallenge_Info1">Die Schriftrolle gibt einen herausfordernden Schlachtruf von sich dessen Echo die Umgebung füllt.</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Schriftrolle der Identifikation</string>
+  <string name="ScrollOfIdentify_Info">Zeigt jedes Geheimnis eines einzelnen Gegenstandes.</string>
+  <string name="ScrollOfIdentify_InvTitle">Wähle einen Gegenstand zu identifizieren</string>
+  <string name="ScrollOfIdentify_Info1">Es ist ein(e) %s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Schriftrolle des Schlaflieds</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Schriftrolle des magischen Vermessens</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Schriftrolle der Doppelbilder</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Schriftrolle der psychischen Zersprengung</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Schriftrolle der Aufladung</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Schriftrolle der Fluchaufhebung</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">Schriftrolle des Teleportierens</string>
+  <string name="ScrollOfTeleportation_NoTeleport">Die starke magische Aura dieses Ortes hält dich davon dich zu telepotieren.</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Schriftrolle der Angst</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Schriftrolle des Verbesserns</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+</resources>

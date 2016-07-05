@@ -74,29 +74,8 @@ public class Tengu extends Boss {
 	
 	@Override
 	public void die( Object cause ) {
-		
-		Badges.Badge badgeToCheck = null;
-		switch (Dungeon.hero.heroClass) {
-		case WARRIOR:
-			badgeToCheck = Badge.MASTERY_WARRIOR;
-			break;
-		case MAGE:
-			badgeToCheck = Badge.MASTERY_MAGE;
-			break;
-		case ROGUE:
-			badgeToCheck = Badge.MASTERY_ROGUE;
-			break;
-		case HUNTRESS:
-			badgeToCheck = Badge.MASTERY_HUNTRESS;
-			break;
-		case ELF:
-			badgeToCheck = Badge.MASTERY_ELF;
-			break;
-		}
-		if (!Badges.isUnlocked( badgeToCheck ) || Dungeon.hero.getDifficulty() >= 3) {
-			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
-		}
-		
+		Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
+
 		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		super.die(cause);

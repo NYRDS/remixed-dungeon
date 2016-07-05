@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
   <string name="Weapon_Identify">%1$s został już przez ciebie dokładniej poznany. Okazuje się, że to %2$s.</string>
-  <string name="Weapon_Incompatible">Interakcja różnych typów magii usunęła zaklęcie z tej broni!</string>
+  <string name="Weapon_Incompatible">Interakcja roznych typow magii usunela zaklecie z tej broni!</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
@@ -182,4 +182,9 @@
   <string name="Tamahawk_Name">tomahawk</string>
   <string name="Tamahawk_Info">Ten toporek do rzucania nie jest aż tak ciężki, ale nadal potrzebuje sporej siły do użycia jego efektywnie.</string>
   <string name="Tamahawk_Gender">meski</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <!--STRINGS OF ChaosSword CLASS-->
+  <!--STRINGS OF ChaosBow CLASS-->
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <!--STRINGS OF SacrificialSword CLASS-->
 </resources>

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.mobs.common.ArmoredStatue;
+import com.nyrds.pixeldungeon.mobs.common.GoldenStatue;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
@@ -69,7 +70,12 @@ public class StatuePainter extends Painter {
 		Mob statue;
 		//Statue type proc
 		if (Random.Int(10) > 5){
-			statue = new Statue();
+			if (Random.Int(10) == 1){
+				statue = new GoldenStatue();
+			}
+			else{
+				statue = new Statue();
+			}
 		}
 		else{
 			statue = new ArmoredStatue();

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Name">troll ferreiro</string>
+  <string name="Blacksmith_Desc">Este Troll Ferreiro se parece muito com todos os trolls: ele é alto e magro, e sua pele se assemelha a pedra na cor e textura. O ferreiro trolls mexe com suas pequenas ferramentas de tamanho desproporcinal.</string>
+  <string name="Blacksmith_Gold1">Ei humano! Quer ser útil, não é? Tome este picareta e me consiga algumas pedras de _Ouro Escuro_, _15 peças_ devem ser suficiente. O que quer dizer, como é que eu vou te pagar? Você gananciosos...\nOk, ok, eu não tenho dinheiro para pagar, mas posso forjar para você. Considere-se com sorte, eu sou o único ferreiro por perto.</string>
+  <string name="Blacksmith_Blood1">Ei humano! Quer ser útil, não é? Tome este picareta e _mate um Morcego_, e me mostre seu sague na ponta da picareta. O que quer dizer, como é que eu vou te pagar? Você gananciosos...\nOk, ok, eu não tenho dinheiro para pagar, mas posso forjar para você. Considere-se com sorte, eu sou o único ferreiro por perto.</string>
+  <string name="Blacksmith_Txt2">Você está brincando comigo? Onde está a minha picareta?!</string>
+  <string name="Blacksmith_Txt3">Minério de Ouro Escuro. 15 peças. Sério, não é assim tão difícil?</string>
+  <string name="Blacksmith_Txt4">Eu disse que preciso sangue de morcego na picareta. Chop chop!</string>
+  <string name="Blacksmith_Completed">Oh, você voltou ... Antes tarde do que nunca.</string>
+  <string name="Blacksmith_GetLost">Estou ocupado. Cai fora!</string>
+  <string name="Blacksmith_LooksBetter">%s parece estar muito melhor agora</string>
+  <string name="Blacksmith_Verify1">Selecione 2 itens diferentes, não é o mesmo item duas vezes!</string>
+  <string name="Blacksmith_Verify2">Selecione 2 itens do mesmo tipo!</string>
+  <string name="Blacksmith_Verify3">Eu preciso saber em que estou trabalhando, identifique em primeiro lugar!</string>
+  <string name="Blacksmith_Verify4">Eu não trabalho com itens amaldiçoados!</string>
+  <string name="Blacksmith_Verify5">É um lixo, a qualidade é muito pobre!</string>
+  <string name="Blacksmith_Verify6">Eu não posso reforjar estes artigos!</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Name">fantasma triste</string>
+  <string name="Ghost_Desc">O fantasma é pouco visível. Parece uma mancha disforme de luz fraca com uma cara triste.</string>
+  <string name="Ghost_Rose1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha _Rosa Seca_... É muito importante para mim... Algum monstro roubou de meu corpo...</string>
+  <string name="Ghost_Rose2">Por favor... Ajude-me... Encontre o rosa...</string>
+  <string name="Ghost_Rat1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha vingança... Mate o _Rato Fétido_, que tomou a minha vida...</string>
+  <string name="Ghost_Rat2">Por favor... Ajude-me... Mate essa abominação...</string>
+  <string name="Ghost_Defense">evitou</string>
+  <string name="FetidRat_Name">rato fedorento</string>
+  <string name="FetidRat_Name_Objective">rato fedorento</string>
+  <string name="FetidRat_Gender">feminino</string>
+  <string name="FetidRat_Desc">O rato marsupial é muito maior que um normal. É cercado por uma nuvem poluída.</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Name">ouriço</string>
+  <string name="Hedgehog_Desc">Aquele ouriço parece nervoso.</string>
+  <string name="Hedgehog_Info1">Você está procurando por Urso também?</string>
+  <string name="Hedgehog_Info2">Como está o Cavalo na mistura?</string>
+  <string name="Hedgehog_Info3">Você gosta de chá com geleia de framboesa?</string>
+  <string name="Hedgehog_Info4">Pegue esta torta</string>
+  <string name="Hedgehog_ImLate">Estou atrasado, estou terrivelmente atrasado...</string>
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Name">diabinho ambicioso</string>
+  <string name="Imp_Desc">São demônios menores. Eles não são notáveis por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver entre os não-demônios.</string>
+  <string name="Imp_Defense">evitou</string>
+  <string name="Imp_Golems1">Você é um aventureiro? Eu amo aventureiros! Você sempre pode contar com eles, se algo precisa ser morto. Estou certo? Em troca uma recompensa, é claro;)\nNo meu caso, são _Golems_ que precisam ser mortos. Você vê, eu estou começand um pequeno negócio aqui, mas esses golems estúpidos são ruins para os negócios! É muito difícil de negociar com pedaços de granito errante, malditos sejam! Então, por favor, mate ... digamos _6 deles_ e a recompensa será sua.</string>
+  <string name="Imp_Golems2">Como vai o seu safari golem?</string>
+  <string name="Imp_Monks1">Você é um aventureiro? Eu amo aventureiros! Você sempre pode contar com eles, se algo precisa ser morto. Estou certo? Em troca uma recompensa, é claro;)\nNo meu caso, são _Monges_ que precisam ser mortos. Você vê, eu estou começand um pequeno negócio aqui, mas esses lunáticos não comprar nada e ainda assustam os outros clientes! Então, por favor, mate ... digamos _8 deles_ e a recompensa será sua.</string>
+  <string name="Imp_Monks2">Oh, você ainda está vivo! Eu sabia que o kung-fu é mais forte;) Só não se esqueça de pegar estes símbolos dos monges.</string>
+  <string name="Imp_Cya">Até logo, %s!</string>
+  <string name="Imp_Hey">Psiuu, %s!</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Name">diabinho ambicioso</string>
+  <string name="ImpShopkeeper_Desc">São demônios menores. Eles não são notáveis por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver e fazer negócios entre os não-demônios.</string>
+  <string name="ImpShopkeeper_Greetings">Olá Amigo!</string>
+  <!--STRINGS OF MirrorImage CLASS-->
+  <string name="MirrorImage_Name">imagem espelhada</string>
+  <string name="MirrorImage_Name_Objective">imagem espelhada</string>
+  <string name="MirrorImage_Gender">masculino</string>
+  <string name="MirrorImage_Desc">Esta ilusão é muito semelhante a você, mas é mais pálida e se contorce um pouco.</string>
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Name">rei rato</string>
+  <string name="RatKing_Desc">Este rato é um pouco maior do que um rato marsupial normal e ele está usando uma pequena coroa em sua cabeça.</string>
+  <string name="RatKing_Info1">Eu não estou dormindo!</string>
+  <string name="RatKing_Info2">O que é isso? Eu não tenho tempo para essa bobagem. O meu reino não vai se governar sozinho!</string>
+  <string name="RatKing_Info3">Como ousa, criatura franzina, perturbar Nossa Ratoeza?</string>
+  <string name="RatKing_Died">O Rei morreu. Vida Longa ao Rei!</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <string name="Shopkeeper_Name">comerciante</string>
+  <string name="Shopkeeper_Desc">Esse cara gordo parece mais apropriado para um distrito comercial em alguma grande cidade do que para um calabouço. Seus preços explicam por que ele prefere fazer negócios aqui.</string>
+  <string name="Shopkeeper_Sell">Selecione um item para vender</string>
+  <!--STRINGS OF WandMaker CLASS-->
+  <string name="WandMaker_Name">velho fabricante de varinhas</string>
+  <string name="WandMaker_Desc">Este antigo, mas forte cavalheiro usa uma expressão um pouco confusa. Ele é protegido por um escudo mágico.</string>
+  <string name="WandMaker_Defense">absorveu</string>
+  <string name="WandMaker_Berry1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - uma _Semente de Rotberry_. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
+  <string name="WandMaker_Berry2">Alguma sorte com a semente de Rotberry, %s? Não? Não se preocupe, eu não estou com pressa.</string>
+  <string name="WandMaker_Dust1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - _Pó de Cadáver_. Ela pode ser obtida de restos de esqueletos e há um amplo número deles no calabouço. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
+  <string name="WandMaker_Dust2">Alguma sorte com o Pó de Cadáver, %s? Pilhas de Ossos são os lugares mais óbvios para procurar.</string>
+  <string name="WandMaker_RotberryName">Rotberry</string>
+  <string name="WandMaker_RotberryDesc">Berries deste arbusto tem gosto de doce, doce morte.</string>
+  <string name="WandMaker_RotberryInfo">A semente emite um rugido que ecoa em todo o calabouço!</string>
+</resources>

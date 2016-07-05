@@ -23,7 +23,7 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
@@ -152,9 +152,9 @@ public class HallsBossLevel extends Level {
 	}
 	
 	@Override
-	public void press( int cell, Char hero ) {
+	public void pressHero(int cell, Hero hero ) {
 		
-		super.press( cell, hero );
+		super.pressHero( cell, hero );
 		
 		if (!enteredArena && hero == Dungeon.hero && cell != entrance) {
 			

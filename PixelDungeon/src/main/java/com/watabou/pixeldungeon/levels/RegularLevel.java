@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -26,6 +27,7 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Room.Type;
+import com.watabou.pixeldungeon.levels.painters.ExitPainter;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
@@ -61,7 +63,7 @@ public abstract class RegularLevel extends CommonLevel {
 			do {
 				roomEntrance = Random.element( rooms );
 			} while (roomEntrance.width() < 4 || roomEntrance.height() < 4);
-			
+
 			do {
 				roomExit = Random.element( rooms );
 			} while (roomExit == roomEntrance || roomExit.width() < 4 || roomExit.height() < 4);
@@ -76,8 +78,10 @@ public abstract class RegularLevel extends CommonLevel {
 		} while (distance < minDistance);
 		
 		roomEntrance.type = Type.ENTRANCE;
-		roomExit.type = Type.EXIT;
-		
+		roomExit.type     = Type.EXIT;
+
+		placeSecondaryExits();
+
 		HashSet<Room> connected = new HashSet<>();
 		connected.add( roomEntrance );
 		
@@ -143,7 +147,31 @@ public abstract class RegularLevel extends CommonLevel {
 		
 		return true;
 	}
-	
+
+	protected void placeSecondaryExits() {
+		int exitCount = DungeonGenerator.exitCount(levelId);
+
+		for(int i = 1;i<exitCount;++i) {
+			Room secondaryExit;
+			do {
+				secondaryExit = Random.element(rooms);
+			} while (secondaryExit.type != Type.NULL ||
+					roomExit.width() < 4 ||
+					roomExit.height() < 4
+					);
+			secondaryExit.type = Type.EXIT;
+
+			Graph.buildDistanceMap(rooms, secondaryExit);
+			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
+
+			Room room = roomEntrance;
+			for (Room next : path) {
+				room.connect(next);
+				room = next;
+			}
+		}
+	}
+
 	protected int nTraps() {
 		return Dungeon.depth <= 1 ? 0 : Random.Int( 1, rooms.size() + Dungeon.depth );
 	}
@@ -192,17 +220,17 @@ public abstract class RegularLevel extends CommonLevel {
 						specials.remove( Type.TREASURY );
 						specials.remove( Type.VAULT );
 						specials.remove( Type.WEAK_FLOOR );
-						
+
 					} else if (Dungeon.depth % 5 == 2 && specials.contains( Type.LABORATORY )) {
-						
+
 						r.type = Type.LABORATORY;
-						
+
 					} else if (Dungeon.depth >= Dungeon.transmutation && specials.contains( Type.MAGIC_WELL )) {
-						
+
 						r.type = Type.MAGIC_WELL;
-						
+
 					} else {
-						
+
 						int n = specials.size();
 						r.type = specials.get( Math.min( Random.Int( n ), Random.Int( n ) ) );
 						if (r.type == Type.WEAK_FLOOR) {
@@ -210,7 +238,7 @@ public abstract class RegularLevel extends CommonLevel {
 						}
 
 					}
-					
+
 					Room.useType( r.type );
 					specials.remove( r.type );
 					specialRooms++;
@@ -256,7 +284,7 @@ public abstract class RegularLevel extends CommonLevel {
 			}
 		}
 	}
-	
+
 	protected void paintWater() {
 		boolean[] lake = water();
 		for (int i=0; i < getLength(); i++) {
@@ -338,13 +366,24 @@ public abstract class RegularLevel extends CommonLevel {
 			
 		}
 	}
-	
+
+	private void paintRoom(Room r) {
+		placeDoors( r );
+		r.type.paint( this, r );
+	}
+
 	protected void paint() {
-		
+		ExitPainter.resetCounter();
+
 		for (Room r : rooms) {
-			if (r.type != Type.NULL) {
-				placeDoors( r );
-				r.type.paint( this, r );
+			if(r.type==Type.BOSS_EXIT) {
+				paintRoom(r);
+			}
+		}
+
+		for (Room r : rooms) {
+			if (r.type != Type.NULL && r.type != Type.BOSS_EXIT) {
+				paintRoom(r);
 			} else {
 				if (feeling == Feeling.CHASM && Random.Int( 2 ) == 0) {
 					Painter.fill( this, r, Terrain.WALL );

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
@@ -183,4 +183,9 @@ Vous maintenez la %s prête à l\'emploi.</string>
   <string name="Tamahawk_Name">tomahawk</string>
   <string name="Tamahawk_Info">Cette hache de jet n\'est pas si lourde, mais la manier efficacement requiert une force importante.</string>
   <string name="Tamahawk_Gender">masculin</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <!--STRINGS OF ChaosSword CLASS-->
+  <!--STRINGS OF ChaosBow CLASS-->
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <!--STRINGS OF SacrificialSword CLASS-->
 </resources>

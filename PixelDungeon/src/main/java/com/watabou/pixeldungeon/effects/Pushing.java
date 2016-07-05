@@ -43,7 +43,7 @@ public class Pushing extends Actor {
 		if (sprite != null) {
 			
 			if (effect == null) {
-				new Effect();
+				effect = new Effect();
 			}
 			return false;
 			

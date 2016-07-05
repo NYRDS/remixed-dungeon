@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
+import android.support.annotation.Nullable;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -36,7 +38,7 @@ public class SummoningTrap {
 	
 	// 0x770088
 	
-	public static void trigger( int pos, Char c ) {
+	public static void trigger( int pos, @Nullable Char c ) {
 		
 		if (Dungeon.bossLevel()) {
 			return;

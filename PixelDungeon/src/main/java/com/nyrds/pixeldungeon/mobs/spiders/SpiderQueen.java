@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -9,6 +10,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.utils.Random;
 
 public class SpiderQueen extends Boss {
@@ -21,8 +23,13 @@ public class SpiderQueen extends Boss {
 		
 		EXP = 11;
 		maxLvl = 21;
-		
-		loot = new ChaosCrystal();
+
+		float dice = Random.Float();
+		if( dice < 0.33 ) {
+			loot = new ChaosCrystal();
+		} else if (dice < 0.66) {
+			loot = new SpiderCharm();
+		}
 		lootChance = 1f;
 		
 		Buff.affect(this, Regeneration.class);

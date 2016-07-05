@@ -85,6 +85,11 @@
   <string name="ChaosCrystal_BowFused">El cristal absorbe tu arco, y toma la forma de un arco. </string>
   <string name="ChaosCrystal_StaffFused">El cristal absorbe tu varita, y toma la forma de una vara. </string>
   <string name="CorpseDust_Buff">Sed de sangre</string>
+  <string name="DriedRose_Buff">Encantador</string>
+  <string name="DriedRose_CursedBuff">Amoroso</string>
+  <string name="RatSkull_Buff">Caza Ratas</string>
+  <string name="RatKingCrown_Buff">Ratalteza</string>
   <!--STRINGS OF RatKingCrown CLASS-->
   <string name="RatKingCrown_Name">Corona del rey rata</string>
+  <string name="RatKingCrown_Info">Corona de oro de su Ratalteza, simbolo de su Raterno poder.</string>
 </resources>

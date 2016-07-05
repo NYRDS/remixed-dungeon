@@ -62,8 +62,8 @@
   <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
   <string name="City_TileWater">Подозрительно окрашенная вода</string>
   <string name="City_TileHighGrass">Большой цветущий куст</string>
-  <string name="City_TileDescEntrance">Пролёт, ведущий вниз.</string>
-  <string name="City_TileDescExit">Пролёт, ведущий наверх.</string>
+  <string name="City_TileDescEntrance">Пролёт, ведущий наверх.</string>
+  <string name="City_TileDescExit">Пролёт, ведущий вниз.</string>
   <string name="City_TileDescDeco">Здесь недостаёт нескольких плиток.</string>
   <string name="City_TileDescEmptySP">Пол укрыт плотным ковром.</string>
   <string name="City_TileDescStatue">Статуя изображает Дворфа в героической позе.</string>

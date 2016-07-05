@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -41,7 +43,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Shadows;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.hero.HeroAction;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -770,7 +771,7 @@ public abstract class Level implements Bundlable {
 		heap.drop(item);
 
 		if (Dungeon.level != null) {
-			press(cell, null);
+			itemPress(cell);
 		}
 
 		return heap;
@@ -800,76 +801,31 @@ public abstract class Level implements Bundlable {
 		return randomRespawnCell();
 	}
 
-	public void press(int cell, Char ch) {
+	public void press(int cell, Char obj) {
+		if(obj instanceof Hero) {
+			pressHero(cell, (Hero) obj);
+		}
 
-		if (pit[cell] && ch instanceof Hero) {
-			Hero hero = (Hero)ch;
+		if(obj instanceof Mob) {
+			mobPress((Mob) obj);
+		}
+	}
+
+	public void pressHero(int cell, Hero hero) {
+
+		if (pit[cell]) {
 			Chasm.heroFall(cell, hero);
 			return;
 		}
 
-		boolean trap = false;
+		if(TerrainFlags.is(map[cell],TerrainFlags.TRAP)) {
+			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
+		}
 
 		switch (map[cell]) {
 
-		case Terrain.SECRET_TOXIC_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.TOXIC_TRAP:
-			trap = true;
-			ToxicTrap.trigger(cell, ch);
-			break;
-
-		case Terrain.SECRET_FIRE_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.FIRE_TRAP:
-			trap = true;
-			FireTrap.trigger(cell, ch);
-			break;
-
-		case Terrain.SECRET_PARALYTIC_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.PARALYTIC_TRAP:
-			trap = true;
-			ParalyticTrap.trigger(cell, ch);
-			break;
-
-		case Terrain.SECRET_POISON_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.POISON_TRAP:
-			trap = true;
-			PoisonTrap.trigger(cell, ch);
-			break;
-
-		case Terrain.SECRET_ALARM_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.ALARM_TRAP:
-			trap = true;
-			AlarmTrap.trigger(cell, ch);
-			break;
-
-		case Terrain.SECRET_LIGHTNING_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.LIGHTNING_TRAP:
-			trap = true;
-			LightningTrap.trigger(cell, ch);
-			break;
-
-		case Terrain.SECRET_GRIPPING_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.GRIPPING_TRAP:
-			trap = true;
-			GrippingTrap.trigger(cell, ch);
-			break;
-
-		case Terrain.SECRET_SUMMONING_TRAP:
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		case Terrain.SUMMONING_TRAP:
-			trap = true;
-			SummoningTrap.trigger(cell, ch);
-			break;
-
 		case Terrain.HIGH_GRASS:
-			HighGrass.trample(this, cell, ch);
+			HighGrass.trample(this, cell, hero);
 			break;
 
 		case Terrain.WELL:
@@ -877,29 +833,80 @@ public abstract class Level implements Bundlable {
 			break;
 
 		case Terrain.ALCHEMY:
-			if (ch == null) {
+			if (hero == null) {
 				Alchemy.transmute(cell);
 			}
 			break;
+		}
 
-		case Terrain.DOOR:
-			Door.enter(cell);
-			break;
+		charPress(cell, hero);
+	}
+
+	public void itemPress(int cell) {
+		charPress(cell, null);
+	}
+
+	public void charPress(int cell, @Nullable Char actor) {
+
+		boolean trap = true;
+		switch (map[cell]) {
+			case Terrain.TOXIC_TRAP:
+				ToxicTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.FIRE_TRAP:
+				FireTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.PARALYTIC_TRAP:
+				ParalyticTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.POISON_TRAP:
+				PoisonTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.ALARM_TRAP:
+				AlarmTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.LIGHTNING_TRAP:
+				LightningTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.GRIPPING_TRAP:
+				GrippingTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.SUMMONING_TRAP:
+				SummoningTrap.trigger(cell, actor);
+				break;
+
+			case Terrain.DOOR:
+				Door.enter(cell);
+
+			default:
+				trap = false;
 		}
 
 		if (trap) {
-			Sample.INSTANCE.play(Assets.SND_TRAP);
-			if (ch == Dungeon.hero) {
-				Dungeon.hero.interrupt();
+			if (Dungeon.visible[cell]) {
+				Sample.INSTANCE.play(Assets.SND_TRAP);
 			}
+
+			if (actor instanceof Hero) {
+				((Hero) actor).interrupt();
+			}
+
 			set(cell, Terrain.INACTIVE_TRAP);
 			GameScene.updateMap(cell);
 		}
 
 		Plant plant = plants.get(cell);
 		if (plant != null) {
-			plant.activate(ch);
+			plant.activate(actor);
 		}
+
 	}
 
 	public void mobPress(Mob mob) {
@@ -911,60 +918,7 @@ public abstract class Level implements Bundlable {
 			return;
 		}
 
-		boolean trap = true;
-		switch (map[cell]) {
-
-		case Terrain.TOXIC_TRAP:
-			ToxicTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.FIRE_TRAP:
-			FireTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.PARALYTIC_TRAP:
-			ParalyticTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.POISON_TRAP:
-			PoisonTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.ALARM_TRAP:
-			AlarmTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.LIGHTNING_TRAP:
-			LightningTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.GRIPPING_TRAP:
-			GrippingTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.SUMMONING_TRAP:
-			SummoningTrap.trigger(cell, mob);
-			break;
-
-		case Terrain.DOOR:
-			Door.enter(cell);
-
-		default:
-			trap = false;
-		}
-
-		if (trap) {
-			if (Dungeon.visible[cell]) {
-				Sample.INSTANCE.play(Assets.SND_TRAP);
-			}
-			set(cell, Terrain.INACTIVE_TRAP);
-			GameScene.updateMap(cell);
-		}
-
-		Plant plant = plants.get(cell);
-		if (plant != null) {
-			plant.activate(mob);
-		}
+		charPress(cell,mob);
 	}
 
 	private void markFovCellSafe(int p) {

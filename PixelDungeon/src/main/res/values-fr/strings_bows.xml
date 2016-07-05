@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">L\'arc est une arme à distance, presque inutile (pour tout le monde sauf les elfes) à courte distance.\n \n</string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">arc en bois</string>
   <string name="WoodenBow_Info">Ce simple arc en bois pourrait s\'avérer utile dès que vous aurez trouvé quelques flèches .</string>

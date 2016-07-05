@@ -59,6 +59,8 @@ public class Weapon extends KindOfWeapon {
 	public float	ACU	= 1;
 	public float	DLY	= 1f;
 
+	public boolean enchatable = true;
+
 	protected int  gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
 
 	
@@ -169,7 +171,7 @@ public class Weapon extends KindOfWeapon {
 				enchant( null );
 			}
 		} else {
-			if (enchant) {
+			if (enchant && enchatable) {
 				enchant( Enchantment.random() );
 			}
 		}

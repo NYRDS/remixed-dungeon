@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
@@ -62,6 +62,8 @@
   <string name="RatKing_Desc">Ten szczur jest nieco większy od typowego ściekoszczura i nosi małą koroną na głowie.</string>
   <string name="RatKing_Info1">Ja wcale nie śpię!</string>
   <string name="RatKing_Info2">Co jest?! Nie mam czasu na takie dyrdymały. Moje królestwo nie będzie się rządzić samemu!</string>
+  <string name="RatKing_Info3">Jak śmiesz, żałosna kreaturo, niepokoić Naszą Szczurowatość?!</string>
+  <string name="RatKing_Died">Król umarł. Niech żyje król!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <string name="Shopkeeper_Name">kupiec</string>
   <string name="Shopkeeper_Desc">Ten starszy jegomość wygląda na kogoś, kto pasowałby idealnie do dystryktu handlowego w Mieście niż w Lochu. Jego ceny wyjaśniają czemu woli prowadzić swój interes w takim miejscu.</string>

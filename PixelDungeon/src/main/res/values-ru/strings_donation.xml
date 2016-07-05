@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">серебро</string>
@@ -14,8 +14,8 @@
   <string name="WndDonate_goldDonateText">Спасибо за Вашу помощь.</string>
   <string name="WndDonate_rubyDonateText">Ваша щедрость поможет нам и дальше улучшать Remixed Pixel Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Никакой рекламы во всех игровых режимах. Охотница доступна с самого начала.</string>
-  <string name="WndDonate_goldDonateText2">"А также открывает Эльфа с самого начала.</string>
- <string name="WndDonate_rubyDonateText2"></string>
+  <string name="WndDonate_goldDonateText2">А также открывает Эльфа с самого начала.</string>
+  <string name="WndDonate_rubyDonateText2"></string>
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">обычный</string>
   <string name="WndPremiumSettings_silver">серебрянный</string>
@@ -29,6 +29,6 @@
   <!--STRINGS OF DonateButton CLASS-->
   <string name="DonateButton_pleaseDonate">Поддержите проект</string>
   <string name="DonateButton_thanks">Спасибо за Вашу помощь!</string>
-  <!-- STRINGS OF WndSaveSlotSelect -->
+  <!--STRINGS OF WndSaveSlotSelect-->
   <string name="WndSaveSlotSelect_dontLike">Не нравится реклама? Сделайте любое пожертвование и она исчезнет. Навсегда.</string>
 </resources>

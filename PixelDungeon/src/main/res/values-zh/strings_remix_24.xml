@@ -15,19 +15,32 @@
 	
 	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">土耳其毡帽</string>
-    <!-- STRINGS OF NekoEars CLASS -->
+    <string name="Fez_Info">这是一种红色圆台状的毛毡头饰，上边点缀着流苏。当然，它不会让这个世界变成3次元的。</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">猫耳</string>
-    <!-- STRINGS OF RabbitEars CLASS -->
+    <string name="NekoEars_Info">有时也许你想要洗掉你身上那些怪物血液和尘土并让自己像是那些毛茸茸的小可爱……或者至少你能戴对可爱的猫耳。</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">兔耳</string>
-    <!-- STRINGS OF Pumpkin CLASS -->
+    <string name="RabbitEars_Info">兔子通常以幸运著称，而它的运气也许会转移到获得它身体一个部位的人。可转念一想，兔子被杀掉并用来做你耳朵的装饰也谈不上特别的幸运。</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">南瓜</string>
     <!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">睡帽</string>
-    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="Nightcap_Info">在夜晚征服地牢想必是十分疲累的事。那为何不带上一顶温暖舒适的帽子好好休息一下，抛开自己的烦恼呢？</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">巫师帽</string>
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">饰品列表</string>
+    <string name="WndHats_SlotTitle">已装备</string>
     <string name="WndHats_NoConnectionMsg">无法连接到Google Play服务</string>
     <string name="WndHats_BackButton">返回</string>
     <string name="WndHats_BuyButton">购买</string>
     <string name="WndHats_EquipButton">装备</string>
     <string name="WndHats_InfoButton">检查</string>
-    </resources>
+    <string name="WndHats_UnequipButton">取下</string>
+</resources>

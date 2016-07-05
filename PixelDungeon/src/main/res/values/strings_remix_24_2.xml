@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">golden sword</string>
+    <string name="GoldenSword_Info">Usually weapon made of such soft metal as gold won\'t be considered anything but decoration. Despite that this blade seems to be able to cut through things pretty well.</string>
+    <string name="GoldenSword_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">golden statue</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name_Objective">golden statue</string>
+    <string name="GoldenStatue_Desc">It\'s truly hard to believe that, this magnificent statue isn\'t just a decoration, but a malicious creature waiting for unsuspecting adventurer. At first glance you could\'ve sworn that it\'s _%s_ was just part of it\'s arm.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">necromancer</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
+    <string name="NecromancerNPC_Name_Objective">necromancer</string>
+    <string name="NecromancerNPC_Desc">This middle age man seems to be mildly annoyed and excited at the same time. He wears a composite armor made of bone fragments.</string>
+    <string name="NecromancerNPC_Intro">Ah! It is such a rare sight! A fellow adventurer which is not dead. Outstanding! Oh... I beg my pardon, sometimes I get too excited. You see, I am myself a necromancer. And even though studying the dead and death itself is what I do for a living, seeing same thing over and over again, eventually gets extremely boring. On the other hand that\'s exactly why I am here. According to my calculations in just a couple of weeks, somewhere in this very dungeon, something spectacular going to happen. A _Necropolis_, an ancient city of the dead going to open it\'s doors. And... I can\'t really say to much, I wasted enough time as it is. I need to get ready, _come back later_.</string>
+    <string name="NecromancerNPC_Message1">So little time, so little time...</string>
+    <string name="NecromancerNPC_Message2">I must be ready.</string>
+    <string name="NecromancerNPC_Message3">I can hear the call of the dead.</string>
+    <string name="NecromancerNPC_Message4">There is something very special inside Necropolis.</string>
+
+    <string name="RatKing_Name_Objective">rat king</string>
+    <string name="RatKing_Gender">masculine</string>
+</resources>

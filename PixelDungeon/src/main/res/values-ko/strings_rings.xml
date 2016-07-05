@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">%s 반지</string>
+  <string name="Ring_Info">이 금속 고리는 어둠 속에서 빛나는 커다란 %s 보석으로 장식되어 있습니다. 착용했을 때 어떤 효과가 나타날까요?</string>
+  <string name="Ring_Identify">당신은 %1$s 에 충분히 친숙해져서 그것의 정체를 알게 되었다. 그것은 %2$s이다.</string>
+  <string-array name="Ring_Gems">
+    <item>다이아몬드</item>
+    <item>오팔</item>
+    <item>가넷</item>
+    <item>루비</item>
+    <item>자수정</item>
+    <item>토파즈</item>
+    <item>줄마노</item>
+    <item>전기석</item>
+    <item>에메랄드</item>
+    <item>사파이어</item>
+    <item>석영</item>
+    <item>마노</item>
+  </string-array>
+  <string name="Ring_Info1">반지는 동시에 2개까지 착용할 수 있습니다.</string>
+  <string name="Ring_Info2">%s 이/가 당신의 손가락을 고통스럽게 조여옵니다.</string>
+  <string name="Ring_Info3a">%1$s\n\n %2$s 은/는 당신의 손가락 %3$s에 있습니다.</string>
+  <string name="Ring_Info3b">그리고 저주로 인해, 당신은 그것을 벗을 수가 없습니다</string>
+  <string name="Ring_Info4">%1$s\n\n당신의 %2$s안에 숨어있는 마법의 기운을 느낄 수 있습니다.</string>
+  <string name="Ring_BuffKnown">이것은 %s 입니다.</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">명중의 반지</string>
+  <string name="RingOfAccuracy_Info">이 반지는 당신의 공격이 적중할 확률을 상승시켜 줍니다.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">감지의 반지</string>
+  <string name="RingOfDetection_Info">이 반지를 착용시 검색에 턴을 소모하지 않고 함정과 비밀의 문을 발견할 수 있습니다. 역강화된 반지는 당신의 감각을 둔화시켜 함정과 비밀의 문을 찾기 위해 검색해도 발견하기 어렵게 만듭니다.</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">원소의 반지</string>
+  <string name="RingOfElements_Info">이 반지는 부정적인 효과의 지속시간을 감소시키고 화재, 전기, 가스등에 대한 저항력을 높여준다.</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">회피의 반지</string>
+  <string name="RingOfEvasion_Info">이 반지는 적의 공격을 회피할 확률을 상승시켜 줍니다.</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">흥정꾼의 반지</string>
+  <string name="RingOfHaggler_Info">사실, 이 반지는 어떤 마법적 효과도 지니고 있지 않습니다. 그러나 이 반지의 소유주가 도둑길드 소속인지 상점주인에게 보여줍니다. 그들은 이 반지에 대한 보증으로 할인을 제공합니다. 이 반지를 업그레이드 해도 추가보너스를 제공하지 않습니다.</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">가속의 반지</string>
+  <string name="RingOfHaste_Info">이 반지는 착용자 시간의 흐름을 가속해 더 많은 행동을 할 수 있도록 합니다.</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">약초의 반지</string>
+  <string name="RingOfHerbalism_Info">이 반지는 수풀에서 이슬과 씨앗을 발견할 확률을 높여줍니다.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">회복의 반지</string>
+  <string name="RingOfMending_Info">이 반지는 신체의 재생속도를 증가시켜 빠르게 체력을 회복합니다. 역강화된 반지는 자연재생을 감소시키거나 중지시킵니다.</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">힘의 반지</string>
+  <string name="RingOfPower_Info">당신의 완드는 이 반지에서 나오는 에너지에 의해 더 강해집니다. 역강화된 반지는 당신의 완드의 힘을 약화시킵니다.</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">포만의 반지</string>
+  <string name="RingOfSatiety_Info">이 반지는 당신이 음식없이 오랫동안 행동할 수 있게 해줍니다. 역강화된 반지는 반대의 효과를 유발합니다.</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">은신의 반지</string>
+  <string name="RingOfShadows_Info">이 반지를 착용하면 적들이 당신을 발견할 확률을 줄여 줍니다. 역강화된 반지는 당신의 존재를 적들에게 알려줍니다.</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">가시의 반지</string>
+  <string name="RingOfThorns_Info">이 반지는 실제로 가시를 제공하지는 않습니다. 그러나 적이 공격하는 피해의 일부분을 다시 적에게 되돌려줍니다. 이 반지를 업그레이드 해도  추가보너스를 제공하지 않습니다.</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">혈석의 반지</string>
+  <string name="RingOfStoneWalking_Info">이 이상한 반지는 튼튼한 돌로 구성되어 있습니다... - ps - 착용시 가까운 벽안으로 스며들고 데미지를 입습니다. 다시 반지를 해제하면 벽 바깥으로 나올수 있습니다. 벽을 통과할 수 있게되는거죠.</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">당신은 돌에 감금되었다. 영원히...</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">거미 장신구</string>
+  <string name="SpiderCharm_Info">이 이국적인 장신구는 신비로운 기운에 감싸여 있습니다. 이것을 착용하면 무슨일이 일어날지 아는 사람이 있을까요?</string>
+  <string name="SpiderCharm_Use">사용</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">이상한 수정</string>
+  <string name="ChaosCrystal_Info">쥐고 있는 동안 손으로 흘러 들어오는 에너지의 흐름이 느껴진다.</string>
+  <string name="ChaosCrystal_Use">사용</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+</resources>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">seu %s se contrai em torno de você dolorosamente</string>
+  <string name="Armor_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">Interação de diferentes tipos de magia apagaram o hieróglifo desta armadura!</string>
+  <string name="Armor_Info1">\n\nEsta %1$s concede até \"%2$d\" pontos de absorção de danos por ataque.</string>
+  <string name="Armor_Info2">\n\nPor causa de sua força inadequada, sua velocidade de movimento e habilidade de defesa será diminuída.</string>
+  <string name="Armor_Info3">\n\nPor causa de sua força inadequada, vestindo esta armadura irá diminuir a sua velocidade de movimento e habilidade de defesa.</string>
+  <string name="Armor_Info4">\n\nUm típico %1$s fornece absorção de danos de até %2$d pontos por ataque e precisa de %3$d pontos de força.\u0020</string>
+  <string name="Armor_Info5">Provavelmente, esta armadura é pesada demais para você.</string>
+  <string name="Armor_Info6">Possui encantamento.</string>
+  <string name="Armor_Info7a">\n\nVocê está vestindo a %1$s%2$s.</string>
+  <string name="Armor_Info7b">, e porque ele é amaldiçoado, você não tem como removê-lo</string>
+  <string name="Armor_Info8">\n\nVocê pode sentir a magia maléfica escondida dentro do %s.</string>
+  <string name="Armor_Glyph">glifo</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">A coisa parece incrível!</string>
+  <string name="ClassArmor_LowHealt">Sua vida está muito baixa!</string>
+  <string name="ClassArmor_NotEquipped">Você precisa estar vestindo esta armadura para usar seu poder especial!</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">armadura de pano</string>
+  <string name="ClothArmor_Desc">Esta armadura leve oferece proteção básica.</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Manto élfico</string>
+  <string name="ElfArmor_Desc">Com a ajuda deste manto o elfo pode invocar forças da própria natureza. Grama alta irá crescer em um pisco até mesmo sobre pedra sólida imobilizando todos os inimigos à vista.</string>
+  <string name="ElfArmor_ACSpecial">CHAMADO DA NATUREZA</string>
+  <string name="ElfArmor_NotElf">Somente elfos podem usar essa armadura!</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">capa de caçadora</string>
+  <string name="HuntressArmor_Desc">Uma caçadora nesse manto pode criar um redemoinho de lâminas espectrais. Cada uma dessas lâminas terá como alvo um único inimigo no campo de vista da caçadora, causando dano dependendo sua arma atualmente equipada.</string>
+  <string name="HuntressArmor_ACSpecial">SPECTRO DE BLADES</string>
+  <string name="HuntressArmor_NoEnemies">Sem inimigos à vista</string>
+  <string name="HuntressArmor_NotHuntress">Só caçadoras podem usar esta armadura!</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">armadura de couro</string>
+  <string name="LeatherArmor_Desc">Armadura feita de couro de monstro. Não é tão leve como armadura de pano, mas ofereçe uma proteção melhor.</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">robe de mago</string>
+  <string name="MageArmor_Desc">Ao usar este lindo robe, um mago pode lançar um feitiço de terra derretida: todos os inimigos em seu campo de visão serão incendiados e incapazes de se mover ao mesmo tempo.</string>
+  <string name="MageArmor_ACSpecial">TERRA DERRETIDA</string>
+  <string name="MageArmor_NotMage">Apenas magos podem usar essa armadura!</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">armadura de malha</string>
+  <string name="MailArmor_Desc">Elos entrelaçados de metal podem criar uma armadura resistente e flexível.</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">armadura de placa</string>
+  <string name="PlateArmor_Desc">Placas enormes de metal são unidas em uma armadura que oferece proteção inigualável para qualquer aventureiro forte o suficiente para suportar seu peso impressionante.</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">traje de ladrão</string>
+  <string name="RogueArmor_Desc">Vestindo esta farda escura, um ladrão pode realizar um truque que é chamado de \"bomba de fumaça\"(mesmo sem usar explosivos reais): ele cega inimigos que podem vê-lo e pula para o lado.</string>
+  <string name="RogueArmor_ACSpecial">BOMBA DE FUMAÇA</string>
+  <string name="RogueArmor_NotRogue">Só ladrões pode usar esta armadura!</string>
+  <string name="RogueArmor_Fov">Você só pode pular para um lugar vazio no seu campo de visão</string>
+  <string name="RogueArmor_Prompt">Escolha um lugar para pular</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">armadura de escamas</string>
+  <string name="ScaleArmor_Desc">Escamas de metal costuradas em um colete de couro fazem uma armadura flexível, mas ainda mais protetora.</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">armadura do guerreiro</string>
+  <string name="WarriorArmor_Desc">Essa armadura parece pesada, mas permite que a um guerreiro realizar salto heroico para um local batendo para baixo para atordoar todos os inimigos próximos.</string>
+  <string name="WarriorArmor_ACSpecial">SALTO HERÓICO</string>
+  <string name="WarriorArmor_NotWarrior">Apenas os guerreiros podem usar essa armadura!</string>
+  <string name="WarriorArmor_Prompt">Escolha a direção para saltar</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">%s de afeição</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">%s de anti-entropia</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">%s de salto</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">%s de deslocamento</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">%s de emaranhamento</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">%s de metabolismo</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">%s de multiplicidade</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">%s de potencial</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">%s de mau cheiro</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">%s de viscosidade</string>
+  <string name="Viscosity_Status">deferido %d</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Dano deferido (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s te matou...</string>
+</resources>

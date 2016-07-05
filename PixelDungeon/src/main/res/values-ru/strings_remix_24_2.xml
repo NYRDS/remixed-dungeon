@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">золотой меч</string>
+    <string name="GoldenSword_Info">Как правило, оружие сделанное из столь мягкого металла, как золота, сойдёт разве что за украшение. Но не смотря на это, данный меч выглядит вполне способным разрубить что-нибудь.</string>
+    <string name="GoldenSword_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">золотая статуя</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name_Objective">статую</string>
+    <string name="GoldenStatue_Desc">Верится с трудом, но эта восхитительная статуя не является обычной декорацией, напротив, это коварный монстр, поджидающий беспечного искателя приключений. На первый взгляд ты мог бы поклястся, что _%s_ был продолжением руки этой статуи.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">некромант</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
+    <string name="NecromancerNPC_Name_Objective">некроманта</string>
+    <string name="NecromancerNPC_Desc">Этот мужчина средних лет выглядит слегка раздражёным и взволнованным одновременно. Он одет в составной доспех состоящий из скреплёных костей.</string>
+    <string name="NecromancerNPC_Intro">А! Какое редкое зрелище! Собрат приключенец не являющийся бездыханым трупом! Верится с трудом! Кхм... извиняюсь, иногда я становлюсь слишком заносчивым. Я, видите ли, некромант. И не смотря на то, что изучение мертвецов и самой смерти у нас в почёте, всё это серое однообразие рано или поздно кому угодно наскучит. Но с другой стороны я здесь, как раз из-за этого. Согласно моим подсчётам, всего через пару недель, в этом самом подземелье, случится нечто грандиозное. Откроется проход в _Некрополь_, древний город мёртвых. И... в общем я и так много болтал, больше нельзя терять время. Мне надо подготовится, может мы вернёмся к этому разговору _позже_.</string>
+    <string name="NecromancerNPC_Message1">Так мало времени, так мало времени...</string>
+    <string name="NecromancerNPC_Message2">Я должен подготовиться.</string>
+    <string name="NecromancerNPC_Message3">Я слышу зов мёртвых.</string>
+    <string name="NecromancerNPC_Message4">В Некрополе таится нечто особенное.</string>
+
+    <string name="RatKing_Name_Objective">крысиного короля</string>
+    <string name="RatKing_Gender">masculine</string>
+</resources>

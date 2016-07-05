@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">活化石像</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
+    <string name="ArmoredStatue_Name_Objective">活化石像</string>
+    <string name="ArmoredStatue_Desc">你无法相信这只是地牢另一座丑陋的雕像。不仅因为它眼中发着红光，事实上，如果它只是一座雕像的话，不会有人把真正的_%s_放在它身上。</string>
+
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">蜘蛛守卫</string>
+    <string name="SpiderGuard_Gender">masculine</string>
+    <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
+    <string name="SpiderGuard_Desc">这个蜘蛛守卫像是士兵一样发誓要保护它们的王国。守卫的猛毒是用来麻痹它们的目标的。</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
+    <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
+    <string name="PirateSet_Info">啊哈！你现在看起来像是个海盗…或者说只是个该死的旱鸭子！？我希望你不是，毕竟那东西是海盗的，我的意思是……啊哈！</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">是的，删除它！</string>
+    <string name="WndSaveSlotSelect_Delete_No">不，我改主意了。</string>
+    <string name="WndSaveSlotSelect_Delete_Title">你真的确定你要删除这个存档吗？</string>
+</resources>

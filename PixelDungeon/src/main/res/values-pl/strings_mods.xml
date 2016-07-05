@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Mods_CreatedBy">Stworzone przez:</string>
+  <string name="Mods_AuthorSite">Strona autora:</string>
+  <string name="Mods_AuthorEmail">Email autora:</string>
+  <string name="Mods_RestartRequired">Wymagany jest restart.</string>
+</resources>

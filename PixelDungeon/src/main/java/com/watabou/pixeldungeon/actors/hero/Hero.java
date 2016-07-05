@@ -17,9 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
+import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -37,6 +40,8 @@ import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.Web;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -178,7 +183,7 @@ public class Hero extends Char {
 	private ArrayList<Mob> visibleEnemies;
 	private Collection<Mob> pets = new ArrayList<>();
 
-	public void addPet(Mob pet) {
+	public void addPet(@NonNull Mob pet) {
 		pets.add(pet);
 	}
 
@@ -814,7 +819,7 @@ public class Hero extends Char {
 		int stairs = action.dst;
 		if (getPos() == stairs && Dungeon.level.isExit(getPos())) {
 
-			curAction = null;
+			clearActions();
 
 			Hunger hunger = buff(Hunger.class);
 			if (hunger != null && !hunger.isStarving()) {
@@ -857,7 +862,7 @@ public class Hero extends Char {
 
 			} else {
 
-				curAction = null;
+				clearActions();
 
 				Hunger hunger = buff(Hunger.class);
 				if (hunger != null && !hunger.isStarving()) {
@@ -1078,6 +1083,14 @@ public class Hero extends Char {
 
 		checkIfFurious();
 		interrupt();
+
+		if (belongings.armor instanceof SpiderArmor)
+		{
+			//Armor proc
+			if (Random.Int(100) < 50){
+				GameScene.add( Blob.seed( getPos(), Random.Int( 5, 7 ), Web.class ) );
+			}
+		}
 
 		for (Item item : belongings) {
 			if (item instanceof IChaosItem && item.isEquipped(this)) {
@@ -1386,7 +1399,7 @@ public class Hero extends Char {
 
 	@Override
 	public void die(Object cause) {
-		curAction = null;
+		clearActions();
 
 		DewVial.autoDrink(this);
 		if (isAlive()) {
@@ -1405,6 +1418,11 @@ public class Hero extends Char {
 			while(belongings.removeItem(ankh));
 			GameScene.show(new WndResurrect(ankh, cause));
 		}
+	}
+
+	public void clearActions() {
+		curAction  = null;
+		lastAction = null;
 	}
 
 	public static void reallyDie(Object cause) {
@@ -1451,7 +1469,7 @@ public class Hero extends Char {
 			} else {
 				Sample.INSTANCE.play(Assets.SND_STEP);
 			}
-			Dungeon.level.press(getPos(), this);
+			Dungeon.level.pressHero(getPos(), this);
 		}
 	}
 
@@ -1616,7 +1634,7 @@ public class Hero extends Char {
 	public void resurrect(int resetLevel) {
 
 		hp(ht());
-		Dungeon.gold = 0;
+		Dungeon.gold(0);
 		exp = 0;
 
 		belongings.resurrect(resetLevel);

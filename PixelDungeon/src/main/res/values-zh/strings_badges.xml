@@ -3,9 +3,9 @@
   <!--STRINGS OF BadgesScene CLASS-->
   <string name="BadgesScene_Title">你的徽章</string>
   <!--STRINGS OF Badges CLASS-->
-  <string name="Badges_Info1">取得勋章： %s</string>
+  <string name="Badges_Info1">取得勋章：%s</string>
   <string name="Badges_Info2">新的超级徽章：%s</string>
-  <string name="Badges_Info3">新的徽章： %s</string>
+  <string name="Badges_Info3">新的徽章：%s</string>
   <string name="Badges_MonsterSlain1">杀死10个敌人</string>
   <string name="Badges_MonsterSlain2">杀死50个敌人</string>
   <string name="Badges_MonsterSlain3">杀死150个敌人</string>

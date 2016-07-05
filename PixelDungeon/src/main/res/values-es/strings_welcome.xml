@@ -71,4 +71,32 @@ remix.21.4:\n
         - Ballestas añadidas\n
         - Armadura de Caos añadida\n
         </string>
+  <string name="Welcome_Text_24">
+        remix.24:\n
+        - Llegaron los sombreros!(Objetos de vanidad)\n
+        - Arreglos varios de errores\n
+        - Actualización de idiomas\n
+        </string>
+  <string name="Welcome_Text_24_1">
+        remix.24.1:\n
+        --Juego--\n
+        - Nuevo enemigo: Estatua Armada\n
+        - Nuevas rarezas: Araña Guarda (tipo raro de Soldado Araña) y Araña Ambar (tipo raro de Psi-araña)\n
+        - Ahora puedes eliminar partidas guardadas\n
+        - Actulización visual de la Guarida Aracnida\n
+        --Objetos de vanidad--\n
+        - Al comprar un nuevo objeto se equipa automáticamente\n
+        - Nuevo objeto \"Conjunto Pirata\"\n
+        - Actualización visual para las Orejas de gato y Orejas de conejo\n
+        </string>
+  <string name="Welcome_Text_24_2">
+        remix.24.2:\n
+        - Nuevo enemigo: Estatua Dorada (tipo raro de estatua)\n
+        - Nuevo objeto: Espada Dorada (puedes encontrarlo como un botin raro, tambien puedes obtenerlo de una estaatua dorada con un exito del 100%)\n
+        - Nuevo NPC: Nigromante (Tiene una emocionate noticia para ti. Encuentralo en el nivel 7)\n
+        - La dificultad de la Viscocidad se ha reducido\n
+        - Tengu ahora deja caer un Tomo. Las subclases no pueden usar el tomo para cambiar de especialidad.\n
+        - Maestro de las Sombras tiene ahora una cuarto más elaborado (ahora no podras pasar al siguiente piso sin pelear)\n
+        - Encanto de Araña tiene un nuevo grafico y es obtenido de la Reina Araña (Antes podia ser obtenido de la Viscocidad)\n
+        </string>
 </resources>

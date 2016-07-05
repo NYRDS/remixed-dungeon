@@ -17,12 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
@@ -54,12 +53,7 @@ public class Bounce extends Glyph {
 						
 						attacker.setPos(newPos);
 
-						if (attacker instanceof Mob) {
-							Dungeon.level.mobPress( (Mob)attacker );
-						} else {
-							Dungeon.level.press( newPos, attacker );
-						}
-						
+						Dungeon.level.press(newPos, attacker);
 					}
 					break;
 				}

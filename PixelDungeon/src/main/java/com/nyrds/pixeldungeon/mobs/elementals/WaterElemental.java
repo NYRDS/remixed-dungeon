@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class WaterElemental extends Mob {
@@ -94,8 +95,10 @@ public class WaterElemental extends Mob {
 				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 		} else {
-			if (buff instanceof Burning) {
-				damage( Random.NormalIntRange( 1, ht() / 3 ), buff );
+			if(!Dungeon.isLoading()) {
+				if (buff instanceof Burning) {
+					damage(Random.NormalIntRange(1, ht() / 3), buff);
+				}
 			}
 			super.add( buff );
 		}

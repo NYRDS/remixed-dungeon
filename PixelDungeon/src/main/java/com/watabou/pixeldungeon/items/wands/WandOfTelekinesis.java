@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Heap;
@@ -74,17 +73,10 @@ public class WandOfTelekinesis extends Wand {
 						ch.setPos(next);
 						Actor.freeCell( next );
 
-						// FIXME
-						if (ch instanceof Mob) {
-							Dungeon.level.mobPress( (Mob)ch );
-						} else {
-							Dungeon.level.press( ch.getPos(), ch );
-						}
-						
-					} else {
+						Dungeon.level.press( ch.getPos(), ch );
 
+					} else {
 						ch.damage( maxDistance-1 - i, this );
-						
 					}
 				}
 			}
@@ -102,7 +94,8 @@ public class WandOfTelekinesis extends Wand {
 				}
 			}
 			
-			Dungeon.level.press( c, null );
+			Dungeon.level.itemPress(c);
+
 			if (before == Terrain.OPEN_DOOR && Actor.findChar( c ) == null) {
 				
 				Dungeon.level.set( c, Terrain.DOOR );

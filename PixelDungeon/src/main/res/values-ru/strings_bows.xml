@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">Это оружие дальнего боя, в ближнем бою почти бесполезное (для всех кроме эльфов).\n\n</string>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ShadowLord CLASS-->
+  <string name="ShadowLord_Name">władca cienia</string>
+  <string name="ShadowLord_Gender">męski</string>
+  <string name="ShadowLord_Name_Objective">Władca Cienia</string>
+  <string name="ShadowLord_Desc">Kreatura stworzona z czystego zła i ciemności, wielu wierzy że jest to sam Stary Bóg, biorąc pod uwagę to jaki jest potężny. Inni zaś twierdzą, iż jest on tylko strażnikiem jego komnat.</string>
+  <string name="ShadowLord_Intro">Przygotuj się!</string>
+  <string name="ShadowLord_Death">Nieeeee...</string>
+  <string name="AllowStatisticsCollectionScene_Title">Zbieranie statystyk na temat zużycia</string>
+  <string name="AllowStatisticsCollectionScene_Request">Jeśli zezwolisz, Remixed Pixel Dungeon będzie zbierał statystyki na temat zużycia. Te dane będą użyte do: \n
+- wychwytywania i naprawy mniejszych błędów (w razie błędów fatalnych zostaniesz poproszony wprost o wysłanie zgłoszenia) \n
+- poprawy równowagi gry \n
+- naprawy specyficznych problemów z wydajnością \n
+- publikacji zabawnych faktów statystycznych od czasu do czasu \n
+Zawsze możesz zmienić swoją decyzję (naciśnij ikonę tabeli w ekranie tytułowym)</string>
+  <string name="AllowStatisticsCollectionScene_Allow">Pozwól</string>
+  <string name="AllowStatisticsCollectionScene_Deny">Odrzuć</string>
+  <string name="Darkness_Info">Wygląda na to, że cząstki wiecznej ciemności unoszą się w powietrzu</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Proszę, pomóż udoskonalić tłumaczenia Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Naciśnij tutaj, by dołączyć do drużyny tłumaczy Remixed Pixel Dungeon</string>
+</resources>

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
+import android.support.annotation.Nullable;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -28,7 +30,7 @@ public class PoisonTrap {
 
 	// 0xBB66EE
 	
-	public static void trigger( int pos, Char ch ) {
+	public static void trigger( int pos, @Nullable Char ch ) {
 		
 		if (ch != null) {
 			Buff.affect( ch, Poison.class ).set( Poison.durationFactor( ch ) * (4 + Dungeon.depth / 2) );

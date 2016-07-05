@@ -1,0 +1,10 @@
+{
+  "texture" = "mobs/necromancernpc.png",
+  "width"   = 14,
+  "height"  = 17,
+  
+"idle"    = { "fps" = 1,  "looped" = true,     "frames" = [0, 1] },
+"run"     = { "fps" = 20, "looped" = true,     "frames" = [2, 3, 4, 5, 6, 7] },
+"attack"  = { "fps" = 8,  "looped" = true,     "frames" = [0, 1, 2, 3] },
+"die"     = { "fps" = 0, "looped" = false,     "frames" = [0] }
+}

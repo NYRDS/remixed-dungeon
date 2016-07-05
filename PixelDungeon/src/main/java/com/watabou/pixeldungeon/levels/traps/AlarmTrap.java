@@ -17,11 +17,13 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
+import android.support.annotation.Nullable;
+
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -32,7 +34,7 @@ public class AlarmTrap {
 
 	// 0xDD3333
 	
-	public static void trigger( int pos, Char ch ) {
+	public static void trigger( int pos, @Nullable Char ch ) {
 		
 		for (Mob mob : Dungeon.level.mobs) {
 			if (mob != ch) {
