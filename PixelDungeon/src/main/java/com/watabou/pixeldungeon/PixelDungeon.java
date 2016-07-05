@@ -40,6 +40,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.Locale;
 
@@ -87,7 +88,7 @@ public class PixelDungeon extends Game {
 
 		Iap.initIap(this);
 		
-		if(PixelDungeon.uiLanguage().equals("ko")) {
+		if(!Utils.canUseClassicFont(uiLanguage())) {
 			PixelDungeon.classicFont(false);
 		}
 		
