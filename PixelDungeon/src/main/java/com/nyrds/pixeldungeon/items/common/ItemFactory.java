@@ -365,7 +365,7 @@ public class ItemFactory {
 		if(itemClass != null) {
 			return itemClass;
 		} else {
-			Game.toast("Unknown iten: [%s], spawning Gold instead",selectedItemClass);
+			Game.toast("Unknown item: [%s], spawning Gold instead",selectedItemClass);
 			return Gold.class;
 		}
 	}
