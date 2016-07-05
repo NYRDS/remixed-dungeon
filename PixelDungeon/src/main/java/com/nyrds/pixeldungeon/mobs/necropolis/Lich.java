@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
@@ -16,7 +17,7 @@ import com.watabou.utils.Random;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class Lich extends Mob {
+public class Lich extends Boss {
     {
         hp(ht(120));
         EXP = 20;
