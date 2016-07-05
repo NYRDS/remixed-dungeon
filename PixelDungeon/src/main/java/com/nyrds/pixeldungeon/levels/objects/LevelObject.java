@@ -2,8 +2,12 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public abstract class LevelObject implements Bundlable {
 
@@ -19,7 +23,9 @@ public abstract class LevelObject implements Bundlable {
 
 	abstract public int image();
 
-	public boolean interact( Hero hero ) {return true;}
+	abstract void setupFromJson(Level level, JSONObject obj) throws JSONException;
+
+	public boolean interact(Hero hero ) {return true;}
 
 	public void burn() {}
 	public void freeze() {}

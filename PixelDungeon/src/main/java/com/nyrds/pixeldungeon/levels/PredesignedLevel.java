@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.levels;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -71,6 +72,8 @@ public class PredesignedLevel extends CommonLevel {
 				set(i, map.getInt(i));
 			}
 
+			placeObjects();
+			
 			setupLinks();
 
 		} catch (JSONException e) {
@@ -80,6 +83,15 @@ public class PredesignedLevel extends CommonLevel {
 		cleanWalls();
 		createMobs();
 		createItems();
+	}
+
+	private void placeObjects() throws JSONException {
+		JSONArray objects = mLevelDesc.getJSONArray("objects");
+
+		for(int i = 0;i< objects.length(); i++) {
+			JSONObject object = objects.getJSONObject(i);
+			addLevelObject(LevelObjectsFactory.createObject(this, object));
+		}
 	}
 
 	private void setupLinks() throws JSONException {
