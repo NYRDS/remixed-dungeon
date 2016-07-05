@@ -24,4 +24,6 @@
     <string name="NecromancerNPC_Message3">Я слышу зов мёртвых.</string>
     <string name="NecromancerNPC_Message4">В Некрополе таится нечто особенное.</string>
 
+    <string name="RatKing_Name_Objective">крысиного короля</string>
+    <string name="RatKing_Gender">masculine</string>
 </resources>

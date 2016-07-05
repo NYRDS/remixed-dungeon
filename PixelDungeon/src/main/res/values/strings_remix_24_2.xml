@@ -23,4 +23,7 @@
     <string name="NecromancerNPC_Message2">I must be ready.</string>
     <string name="NecromancerNPC_Message3">I can hear the call of the dead.</string>
     <string name="NecromancerNPC_Message4">There is something very special inside Necropolis.</string>
+
+    <string name="RatKing_Name_Objective">rat king</string>
+    <string name="RatKing_Gender">masculine</string>
 </resources>
