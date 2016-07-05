@@ -30,7 +30,7 @@
 	  {"kind"="GoldenStatue","x"=10,"y"=6},
 	  {"kind"="GoldenStatue","x"=5,"y"=10},
 	  {"kind"="GoldenStatue","x"=4,"y"=10}
-   ]
+   ],
   "objects" : [
     {"kind" = "Sign", "x" = 12, "y" = 10, "text" = "Yay! it is a custom sign!"}
   ]
