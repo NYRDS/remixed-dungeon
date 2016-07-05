@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor -->
+    <string name="SpiderArmor_Name">spider armor</string>
+    <string name="SpiderArmor_Info"></string>
+    <string name="SpiderArmor_Gender">feminine</string>
+
+    <!-- STRINGS OF BladeOfSouls -->
+    <string name="BladeOfSouls_Name">blade of souls</string>
+    <string name="BladeOfSouls_Info"></string>
+    <string name="BladeOfSouls_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">death knight</string>
+    <string name="DeathKnight_Gender">masculine</string>
+    <string name="DeathKnight_Name_Objective">death knight</string>
+    <string name="DeathKnight_Desc"></string>
+
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">dread knight</string>
+    <string name="DreadKnight_Gender">masculine</string>
+    <string name="DreadKnight_Name_Objective">dread knight</string>
+    <string name="DreadKnight_Desc"></string>
+
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">enslaved soul</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="EnslavedSoul_Name_Objective">enslaved soul</string>
+    <string name="EnslavedSoul_Desc"></string>
+
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">exploding skull</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Name_Objective">exploding skull</string>
+    <string name="ExplodingSkull_Desc"></string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">jar of souls</string>
+    <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Name_Objective">jar of souls</string>
+    <string name="JarOfSouls_Desc"></string>
+
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">lich</string>
+    <string name="Lich_Gender">masculine</string>
+    <string name="Lich_Name_Objective">lich</string>
+    <string name="Lich_Desc"></string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">runic skull</string>
+    <string name="RunicSkull_Gender">masculine</string>
+    <string name="RunicSkull_Name_Objective">runic skull</string>
+    <string name="RunicSkull_Desc"></string>
+
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">zombie</string>
+    <string name="Zombie_Gender">masculine</string>
+    <string name="Zombie_Name_Objective">zombie</string>
+    <string name="Zombie_Desc"></string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+
+</resources>
