@@ -35,7 +35,7 @@ public class Worm extends Mob {
         }
         //Poison proc
         if (Random.Int(5) == 1){
-            Buff.affect(enemy, Poison.class);
+            Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
         }
         return damage;
     }
