@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.mobs.necropolis;
+package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
