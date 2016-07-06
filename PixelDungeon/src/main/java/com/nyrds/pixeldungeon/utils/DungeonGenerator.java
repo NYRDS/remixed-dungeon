@@ -4,6 +4,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
+import com.nyrds.pixeldungeon.levels.NecroBossLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
@@ -96,6 +97,7 @@ public class DungeonGenerator {
 		registerLevelClass(FakeLastLevel.class);
 
 		registerLevelClass(NecroLevel.class);
+		registerLevelClass(NecroBossLevel.class);
 	}
 
 	public static String getEntryLevelKind() {
