@@ -29,7 +29,7 @@ import com.watabou.utils.Random;
 public class Zombie extends Mob {
     {
         hp(ht(45));
-        defenseSkill = 27;
+        defenseSkill = 20;
 
         EXP = 10;
         maxLvl = 15;
