@@ -25,12 +25,14 @@
       "10":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5}
    },
    "NecroLevel":{
-      "1":{"Zombie":1},
-      "6":{"Zombie":1},
-      "7":{"Zombie":1},
-      "8":{"Zombie":1},
-      "9":{"Zombie":1},
-      "10":{"Zombie":1}
+      "1":{"Zombie":1, "Skeleton":1, "JarOfSouls":0.2, "EnslavedSoul":0.9,  "ExplodingSkull":0.6, "DeathKinght":0.5},
+      "6":{"Zombie":1, "Skeleton":1, "JarOfSouls":0.2, "EnslavedSoul":0.9},
+      "7":{"Zombie":1, "JarOfSouls":0.5, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKinght":0.5},
+      "8":{"Zombie":2, "JarOfSouls":1.1, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKinght":0.5},
+      "9":{"Zombie":1, "JarOfSouls":0.9, "ExplodingSkull":1.3, "EnslavedSoul":0.4, "DeathKinght":1.5}
+   },
+   "NecroBossLevel":{
+      "any":{"Lich":1}
    },
    "CavesLevel":{
       "11":{"Bat":1,"Brute":0.2},
