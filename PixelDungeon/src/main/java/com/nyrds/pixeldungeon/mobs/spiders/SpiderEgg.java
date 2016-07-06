@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 
 import android.util.SparseBooleanArray;
 
+import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderEggSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -40,7 +41,7 @@ public class SpiderEgg extends Mob {
 	protected boolean act() {
 		super.act();
 
-		Mob newSpider = SpiderSpawner.spawnRandomSpider(Dungeon.level, getPos());
+		Mob newSpider = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
 		if(isPet()) {
 			Mob.makePet(newSpider, Dungeon.hero);
 		}

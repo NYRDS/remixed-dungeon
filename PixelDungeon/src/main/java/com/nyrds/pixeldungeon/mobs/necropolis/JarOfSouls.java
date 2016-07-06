@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderNestSprite;
 import com.watabou.pixeldungeon.Dungeon;
@@ -58,7 +59,11 @@ public class JarOfSouls extends Mob {
 	protected boolean act(){
 		super.act();
 		
-		Mob newSpider = SpiderSpawner.spawnRandomSpider(Dungeon.level, getPos());
+		Mob newMob = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
+
+		if(isPet()) {
+			Mob.makePet(newMob, Dungeon.hero);
+		}
 
 		PlayZap();
 		state = SLEEPING;
