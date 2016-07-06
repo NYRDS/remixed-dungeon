@@ -47,7 +47,7 @@ public class JarOfSouls extends UndeadMob {
 	@Override
 	protected boolean act(){
 		super.act();
-		
+		PlayZap();
 		Mob newMob = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
 
 		if(isPet()) {
