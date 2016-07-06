@@ -18,12 +18,9 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.utils.Callback;
 
 //Supposed to periodically summon undead creatures
-public class JarOfSouls extends Mob {
+public class JarOfSouls extends UndeadMob {
 
 	public JarOfSouls() {
-		
-		spriteClass = SpiderNestSprite.class;
-		
 		hp(ht(60));
 		defenseSkill = 1;
 		baseSpeed = 0f;
@@ -35,14 +32,6 @@ public class JarOfSouls extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.2f;
-
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Terror.class );
-		IMMUNITIES.add( Death.class );
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Blindness.class );
-		IMMUNITIES.add( Sleep.class );
 	}
 	
 	@Override

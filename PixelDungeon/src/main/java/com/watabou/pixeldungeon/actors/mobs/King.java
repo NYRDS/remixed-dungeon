@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -199,7 +200,7 @@ public class King extends Boss {
 		yell(Game.getVar(R.string.King_Info3));
 	}
 	
-	public static class Undead extends Mob {
+	public static class Undead extends UndeadMob {
 		
 		public static int count = 0;
 		
@@ -212,9 +213,6 @@ public class King extends Boss {
 			EXP = 0;
 			
 			state = WANDERING;
-			
-			IMMUNITIES.add( Death.class );
-			IMMUNITIES.add( Paralysis.class );
 		}
 		
 		@Override

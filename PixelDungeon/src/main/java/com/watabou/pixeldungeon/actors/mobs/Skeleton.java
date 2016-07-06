@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -33,7 +34,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-public class Skeleton extends Mob {
+public class Skeleton extends UndeadMob {
 
 	private static final String TXT_HERO_KILLED = Game.getVar(R.string.Skeleton_Killed);
 	
@@ -45,8 +46,6 @@ public class Skeleton extends Mob {
 		
 		EXP = 5;
 		maxLvl = 10;
-		
-		IMMUNITIES.add( Death.class );
 	}
 	
 	@Override

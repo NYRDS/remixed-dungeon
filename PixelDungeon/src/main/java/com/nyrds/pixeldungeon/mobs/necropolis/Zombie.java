@@ -37,14 +37,13 @@ public class Zombie extends UndeadMob {
 
         loot = Gold.class;
         lootChance = 0.02f;
-
     }
 
     @Override
     public int attackProc( Char enemy, int damage ) {
-        //Roots proc
+        //Poison proc
         if (Random.Int(3) == 1){
-            Buff.affect(enemy, Poison.class);
+            Buff.affect( enemy, Poison.class ).set( Random.Int( 2, 4 ) * Poison.durationFactor( enemy ) );
         }
 
         return damage;

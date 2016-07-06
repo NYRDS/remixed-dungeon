@@ -19,7 +19,7 @@ import com.watabou.utils.Random;
  * Created by DeadDie on 12.02.2016
  */
 // Rare of the Death Knight
-public class DreadKnight extends Mob {
+public class DreadKnight extends UndeadMob {
     {
         hp(ht(60));
         defenseSkill = 20;
@@ -29,14 +29,6 @@ public class DreadKnight extends Mob {
 
         loot = Gold.class;
         lootChance = 0.02f;
-
-        IMMUNITIES.add( Paralysis.class );
-        IMMUNITIES.add( ToxicGas.class );
-        IMMUNITIES.add( Terror.class );
-        IMMUNITIES.add( Death.class );
-        IMMUNITIES.add( Amok.class );
-        IMMUNITIES.add( Blindness.class );
-        IMMUNITIES.add( Sleep.class );
     }
 
     @Override
