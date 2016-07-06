@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderNestSprite;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -13,6 +14,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.utils.Callback;
@@ -48,7 +50,15 @@ public class JarOfSouls extends UndeadMob {
 	protected boolean act(){
 		super.act();
 		PlayZap();
+		
 		Mob newMob = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
+
+		int mobPos = Dungeon.level.getEmptyCellNextTo(getPos());
+
+		if (Dungeon.level.cellValid(mobPos)) {
+			newMob.setPos(mobPos);
+			Actor.addDelayed(new Pushing(newMob, getPos(), newMob.getPos()), -1);
+		}
 
 		if(isPet()) {
 			Mob.makePet(newMob, Dungeon.hero);
