@@ -6,7 +6,7 @@
       "test_town":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/Town.json"},
       "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25,        "size":[20,20]},
       "1":{"kind":"NecroLevel", "depth":1,        "size":[32,32]},
-      "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
+      "2":{"kind":"NecroBossLevel", "depth":2,        "size":[32,32]},
       "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
       "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
       "5":{"kind":"SewerBossLevel", "depth":5,    "size":[32,32]},
