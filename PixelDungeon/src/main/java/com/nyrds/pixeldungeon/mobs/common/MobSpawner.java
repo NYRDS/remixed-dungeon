@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
@@ -16,6 +17,13 @@ public class MobSpawner {
 		mob.state = mob.WANDERING;
 		level.spawnMob(mob);
 		return mob;
+	}
+
+	static public void spawnJarOfSouls(Level level, int position) {
+		Mob mob = new JarOfSouls();
+		mob.setPos(position);
+		mob.state = mob.SLEEPING;
+		level.spawnMob(mob);
 	}
 
 }

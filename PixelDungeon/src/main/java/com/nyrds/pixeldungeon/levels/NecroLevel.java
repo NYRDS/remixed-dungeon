@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;
@@ -9,6 +11,7 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.effects.Halo;
@@ -61,6 +64,20 @@ public class NecroLevel extends RegularLevel {
 				r.type = Room.Type.PASSAGE;
 			}
 		}
+	}
+
+	@Override
+	protected void createMobs() {
+
+		int pos = randomRespawnCell();
+
+		for (int i = 0; i< Dungeon.depth * 2; i++) {
+			while(Actor.findChar(pos) != null) {
+				pos = randomRespawnCell();
+			}
+			MobSpawner.spawnJarOfSouls(this, pos);
+		}
+
 	}
 
 	@Override

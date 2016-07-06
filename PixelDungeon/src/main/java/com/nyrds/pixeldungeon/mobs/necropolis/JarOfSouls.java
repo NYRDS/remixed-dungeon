@@ -50,7 +50,7 @@ public class JarOfSouls extends UndeadMob {
 	protected boolean act(){
 		super.act();
 		PlayZap();
-		
+
 		Mob newMob = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
 
 		int mobPos = Dungeon.level.getEmptyCellNextTo(getPos());
