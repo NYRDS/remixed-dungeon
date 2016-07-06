@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends Window {
 
@@ -187,7 +188,7 @@ public class WndSettings extends Window {
 								@Override
 								protected void onSelect(int index) {
 									String lang[] = { "en", "ru", "fr", "pl", "es","ko","pt_BR","it","de","zh"};
-									if(lang[index].equals("ko") || lang[index].equals("zh")) {
+									if(!Utils.canUseClassicFont(lang[index])) {
 										PixelDungeon.classicFont(false);
 									}
 									PixelDungeon.uiLanguage(lang[index]);
@@ -317,7 +318,7 @@ public class WndSettings extends Window {
 			}
 		};
 		
-		if(PixelDungeon.uiLanguage().equals("ko") || PixelDungeon.uiLanguage().equals("zh")) {
+		if(!Utils.canUseClassicFont(PixelDungeon.uiLanguage())) {
 			btnFontMode.enable(false);
 		}
 		

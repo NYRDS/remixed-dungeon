@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Claymore</string>
+    <string name="Claymore_Gender">femminile</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Alabarda</string>
+    <string name="Halberd_Gender">femminile</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">balestra in legno</string>
+    <string name="WoodenCrossbow_Gender">maschile</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Balestra Composita</string>
+    <string name="CompositeCrossbow_Gender">maschile</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Balestra in rubino</string>
     </resources>

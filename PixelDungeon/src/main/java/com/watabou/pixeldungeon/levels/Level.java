@@ -90,7 +90,7 @@ import java.util.List;
 public abstract class Level implements Bundlable {
 
 	public int getExit(Integer index) {
-		if(hasExit(index)) {
+		if (hasExit(index)) {
 			return exitMap.get(index);
 		} else {
 			throw new TrackedRuntimeException("no exit with index: " + index.toString());
@@ -102,7 +102,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void setExit(int exit, Integer index) {
-		exitMap.put(index,exit);
+		exitMap.put(index, exit);
 	}
 
 	public boolean isExit(int pos) {
@@ -110,8 +110,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int exitIndex(int pos) {
-		for(Integer index: exitMap.keySet()) {
-			if(exitMap.get(index)==pos) {
+		for (Integer index : exitMap.keySet()) {
+			if (exitMap.get(index) == pos) {
 				return index;
 			}
 		}
@@ -135,7 +135,7 @@ public abstract class Level implements Bundlable {
 	private static final String TXT_HIDDEN_PLATE_CLICKS = Game
 			.getVar(R.string.Level_HiddenPlate);
 
-	public int[] map;
+	public int[]     map;
 	public boolean[] visited;
 	public boolean[] mapped;
 
@@ -159,46 +159,46 @@ public abstract class Level implements Bundlable {
 
 	public Feeling feeling = Feeling.NONE;
 
-	public  int entrance;
+	public int entrance;
 
 	private HashMap<Integer, Integer> exitMap = new HashMap<>();
-	
+
 	public String levelId;
-	
-	public HashSet<Mob> mobs = new HashSet<>();
-	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<>();
-	public SparseArray<Plant> plants = new SparseArray<>();
-	private SparseArray<Heap> heaps = new SparseArray<>();
-	
+
+	public  HashSet<Mob>                         mobs   = new HashSet<>();
+	public  HashMap<Class<? extends Blob>, Blob> blobs  = new HashMap<>();
+	public  SparseArray<Plant>                   plants = new SparseArray<>();
+	private SparseArray<Heap>                    heaps  = new SparseArray<>();
+
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
 	public int color1 = 0x004400;
 	public int color2 = 0x88CC44;
 
-	protected static boolean pitRoomNeeded = false;
+	protected static boolean pitRoomNeeded    = false;
 	protected static boolean weakFloorCreated = false;
 
-	private static final String MAP = "map";
-	private static final String VISITED = "visited";
-	private static final String MAPPED = "mapped";
-	private static final String ENTRANCE = "entrance";
-	private static final String EXIT = "exit";
-	private static final String HEAPS = "heaps";
-	private static final String PLANTS = "plants";
-	private static final String MOBS = "mobs";
-	private static final String BLOBS = "blobs";
-	private static final String WIDTH = "width";
-	private static final String HEIGHT = "height";
+	private static final String MAP            = "map";
+	private static final String VISITED        = "visited";
+	private static final String MAPPED         = "mapped";
+	private static final String ENTRANCE       = "entrance";
+	private static final String EXIT           = "exit";
+	private static final String HEAPS          = "heaps";
+	private static final String PLANTS         = "plants";
+	private static final String MOBS           = "mobs";
+	private static final String BLOBS          = "blobs";
+	private static final String WIDTH          = "width";
+	private static final String HEIGHT         = "height";
 	private static final String SECONDARY_EXIT = "secondaryExit";
 
 	public static Level fromBundle(Bundle bundle, String key) {
-		return (Level)bundle.get(key);
+		return (Level) bundle.get(key);
 	}
 
 	public String levelKind() {
 		return this.getClass().getSimpleName();
 	}
-	
+
 	public Heap getHeap(int pos) {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
@@ -221,7 +221,7 @@ public abstract class Level implements Bundlable {
 
 	public int cell(int i, int j) {
 		int cell = j * getWidth() + i;
-		if(cellValid(cell)) {
+		if (cellValid(cell)) {
 			return cell;
 		}
 		return -1;
@@ -232,13 +232,13 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected void initSizeDependentStuff() {
-		NEIGHBOURS4 = new int[] { -getWidth(), +1, +getWidth(), -1 };
-		NEIGHBOURS8 = new int[] { +1, -1, +getWidth(), -getWidth(),
+		NEIGHBOURS4 = new int[]{-getWidth(), +1, +getWidth(), -1};
+		NEIGHBOURS8 = new int[]{+1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
-				-1 - getWidth() };
-		NEIGHBOURS9 = new int[] { 0, +1, -1, +getWidth(), -getWidth(),
+				-1 - getWidth()};
+		NEIGHBOURS9 = new int[]{0, +1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
-				-1 - getWidth() };
+				-1 - getWidth()};
 
 		map = new int[getLength()];
 		visited = new boolean[getLength()];
@@ -256,14 +256,14 @@ public abstract class Level implements Bundlable {
 		pit = new boolean[getLength()];
 
 		nearWalls = new boolean[getLength()];
-		allCells  = new boolean[getLength()];
+		allCells = new boolean[getLength()];
 
 		discoverable = new boolean[getLength()];
 
 		Blob.setWidth(getWidth());
 		Blob.setHeight(getHeight());
 	}
-	
+
 	public void create(int w, int h) {
 
 		width = w;
@@ -300,15 +300,15 @@ public abstract class Level implements Bundlable {
 
 			if (Dungeon.depth > 1) {
 				switch (Random.Int(10)) {
-				case 0:
-					feeling = Feeling.CHASM;
-					break;
-				case 1:
-					feeling = Feeling.WATER;
-					break;
-				case 2:
-					feeling = Feeling.GRASS;
-					break;
+					case 0:
+						feeling = Feeling.CHASM;
+						break;
+					case 1:
+						feeling = Feeling.WATER;
+						break;
+					case 2:
+						feeling = Feeling.GRASS;
+						break;
 				}
 			}
 		}
@@ -362,21 +362,21 @@ public abstract class Level implements Bundlable {
 		entrance = bundle.getInt(ENTRANCE);
 
 		int exits[] = bundle.getIntArray(EXIT);
-		if(exits!=null) {
-			for(int i=0;i<exits.length;++i) {
-				setExit(exits[i],i);
+		if (exits != null) {
+			for (int i = 0; i < exits.length; ++i) {
+				setExit(exits[i], i);
 			}
 		} else {
 			setExit(bundle.getInt(EXIT), 0);
 			int secondaryExit = bundle.optInt(SECONDARY_EXIT, -1);
-			if(cellValid(secondaryExit)) {
+			if (cellValid(secondaryExit)) {
 				setExit(secondaryExit, 1);
 			}
 		}
 
 		weakFloorCreated = false;
 
-		for (Heap heap : bundle.getCollection(HEAPS,Heap.class)) {
+		for (Heap heap : bundle.getCollection(HEAPS, Heap.class)) {
 			heaps.put(heap.pos, heap);
 		}
 
@@ -399,17 +399,17 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void removePets() {
-		HashSet <Mob> nonPets = new HashSet<>();
-		
-		for(Mob mob:mobs) {
-			if(!mob.isPet()) {
+		HashSet<Mob> nonPets = new HashSet<>();
+
+		for (Mob mob : mobs) {
+			if (!mob.isPet()) {
 				nonPets.add(mob);
 			}
 		}
-		
+
 		mobs = nonPets;
 	}
-	
+
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(MAP, map);
@@ -417,24 +417,24 @@ public abstract class Level implements Bundlable {
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
 
-		int []exits = new int[exitMap.size()];
+		int[] exits = new int[exitMap.size()];
 
-		for(int i =0;i<exitMap.size();++i){
+		for (int i = 0; i < exitMap.size(); ++i) {
 			exits[i] = exitMap.get(i);
 		}
 
-		bundle.put(EXIT,exits);
+		bundle.put(EXIT, exits);
 
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());
-		
+
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
 
 		bundle.put(WIDTH, width);
 		bundle.put(HEIGHT, height);
 	}
-	
+
 	public boolean dontPack() {
 		return false;
 	}
@@ -487,7 +487,7 @@ public abstract class Level implements Bundlable {
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 
-		if(GameScene.isSceneReady()) { // due to spider spawner ( need rewrite it )
+		if (GameScene.isSceneReady()) { // due to spider spawner ( need rewrite it )
 			GameScene.addMobSprite(mob);
 		}
 	}
@@ -497,19 +497,19 @@ public abstract class Level implements Bundlable {
 
 		if (Random.Int(5) == 0) {
 			switch (feeling) {
-			case WATER:
-				mob = new WaterElemental();
-				break;
-			case CHASM:
-				mob = new AirElemental();
-				break;
-			case GRASS:
-				mob = new EarthElemental();
-				break;
-			case NONE:
-				break;
-			default:
-				break;
+				case WATER:
+					mob = new WaterElemental();
+					break;
+				case CHASM:
+					mob = new AirElemental();
+					break;
+				case GRASS:
+					mob = new EarthElemental();
+					break;
+				case NONE:
+					break;
+				default:
+					break;
 			}
 		}
 
@@ -527,21 +527,21 @@ public abstract class Level implements Bundlable {
 	}
 
 	public Actor respawner() {
-		if(isBossLevel()) {
+		if (isBossLevel()) {
 			return null;
 		}
-		
+
 		return new Actor() {
 			@Override
 			protected boolean act() {
-				
+
 				int hostileMobsCount = 0;
-				for(Mob mob: mobs) {
-					if(!mob.isPet()) {
+				for (Mob mob : mobs) {
+					if (!mob.isPet()) {
 						hostileMobsCount++;
 					}
 				}
-				
+
 				if (hostileMobsCount < nMobs()) {
 
 					Mob mob = createMob();
@@ -570,11 +570,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int randomRespawnCell() {
-		
-		if(isBossLevel()) {
+
+		if (isBossLevel()) {
 			return -1;
 		}
-		
+
 		int cell;
 		do {
 			cell = Random.Int(getLength());
@@ -705,8 +705,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void set(int x, int y, int terrain) {
-		int cell = cell(x,y);
-		set(cell,terrain);
+		int cell = cell(x, y);
+		set(cell, terrain);
 	}
 
 	public void set(int cell, int terrain) {
@@ -738,7 +738,7 @@ public abstract class Level implements Bundlable {
 
 		if ((map[cell] == Terrain.ALCHEMY) && !(item instanceof Plant.Seed)) {
 			int newCell = getEmptyCellNextTo(cell);
-			if(cellValid(newCell)) {
+			if (cellValid(newCell)) {
 				cell = newCell;
 			}
 		}
@@ -748,12 +748,12 @@ public abstract class Level implements Bundlable {
 			heap = new Heap();
 			heap.pos = cell;
 			if (map[cell] == Terrain.CHASM || pit[cell]) {
-				if(GameScene.isSceneReady()) {
+				if (GameScene.isSceneReady()) {
 					GameScene.discard(heap);
 				}
 			} else {
 				heaps.put(cell, heap);
-				if(GameScene.isSceneReady()) {
+				if (GameScene.isSceneReady()) {
 					GameScene.add(heap);
 				}
 			}
@@ -786,7 +786,7 @@ public abstract class Level implements Bundlable {
 
 		plant = seed.couch(pos);
 		plants.put(pos, plant);
-		if(GameScene.isSceneReady()) {
+		if (GameScene.isSceneReady()) {
 			GameScene.add(plant);
 		}
 
@@ -802,11 +802,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void press(int cell, Char obj) {
-		if(obj instanceof Hero) {
+		if (obj instanceof Hero) {
 			pressHero(cell, (Hero) obj);
 		}
 
-		if(obj instanceof Mob) {
+		if (obj instanceof Mob) {
 			mobPress((Mob) obj);
 		}
 	}
@@ -818,25 +818,9 @@ public abstract class Level implements Bundlable {
 			return;
 		}
 
-		if(TerrainFlags.is(map[cell],TerrainFlags.TRAP)) {
+		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
 			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-		}
-
-		switch (map[cell]) {
-
-		case Terrain.HIGH_GRASS:
-			HighGrass.trample(this, cell, hero);
-			break;
-
-		case Terrain.WELL:
-			WellWater.affectCell(cell);
-			break;
-
-		case Terrain.ALCHEMY:
-			if (hero == null) {
-				Alchemy.transmute(cell);
-			}
-			break;
+			set( cell, Terrain.discover( map[cell] ) );
 		}
 
 		charPress(cell, hero);
@@ -848,7 +832,6 @@ public abstract class Level implements Bundlable {
 
 	public void charPress(int cell, @Nullable Char actor) {
 
-		boolean trap = true;
 		switch (map[cell]) {
 			case Terrain.TOXIC_TRAP:
 				ToxicTrap.trigger(cell, actor);
@@ -884,12 +867,26 @@ public abstract class Level implements Bundlable {
 
 			case Terrain.DOOR:
 				Door.enter(cell);
-
-			default:
-				trap = false;
+				break;
 		}
 
-		if (trap) {
+		if (!(actor instanceof Mob)) {
+			switch (map[cell]) {
+				case Terrain.HIGH_GRASS:
+					HighGrass.trample(this, cell, actor);
+					break;
+
+				case Terrain.WELL:
+					WellWater.affectCell(cell);
+					break;
+
+				case Terrain.ALCHEMY:
+					Alchemy.transmute(cell);
+					break;
+			}
+		}
+
+		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
 			if (Dungeon.visible[cell]) {
 				Sample.INSTANCE.play(Assets.SND_TRAP);
 			}
@@ -918,7 +915,7 @@ public abstract class Level implements Bundlable {
 			return;
 		}
 
-		charPress(cell,mob);
+		charPress(cell, mob);
 	}
 
 	private void markFovCellSafe(int p) {
@@ -1020,134 +1017,134 @@ public abstract class Level implements Bundlable {
 		}
 
 		switch (tile) {
-		case Terrain.CHASM:
-			return Game.getVar(R.string.Level_TileChasm);
-		case Terrain.EMPTY:
-		case Terrain.EMPTY_SP:
-		case Terrain.EMPTY_DECO:
-		case Terrain.SECRET_TOXIC_TRAP:
-		case Terrain.SECRET_FIRE_TRAP:
-		case Terrain.SECRET_PARALYTIC_TRAP:
-		case Terrain.SECRET_POISON_TRAP:
-		case Terrain.SECRET_ALARM_TRAP:
-		case Terrain.SECRET_LIGHTNING_TRAP:
-			return Game.getVar(R.string.Level_TileFloor);
-		case Terrain.GRASS:
-			return Game.getVar(R.string.Level_TileGrass);
-		case Terrain.WATER:
-			return Game.getVar(R.string.Level_TileWater);
-		case Terrain.WALL:
-		case Terrain.WALL_DECO:
-		case Terrain.SECRET_DOOR:
-			return Game.getVar(R.string.Level_TileWall);
-		case Terrain.DOOR:
-			return Game.getVar(R.string.Level_TileClosedDoor);
-		case Terrain.OPEN_DOOR:
-			return Game.getVar(R.string.Level_TileOpenDoor);
-		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.Level_TileEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.Level_TileExit);
-		case Terrain.EMBERS:
-			return Game.getVar(R.string.Level_TileEmbers);
-		case Terrain.LOCKED_DOOR:
-			return Game.getVar(R.string.Level_TileLockedDoor);
-		case Terrain.PEDESTAL:
-			return Game.getVar(R.string.Level_TilePedestal);
-		case Terrain.BARRICADE:
-			return Game.getVar(R.string.Level_TileBarricade);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Level_TileHighGrass);
-		case Terrain.LOCKED_EXIT:
-			return Game.getVar(R.string.Level_TileLockedExit);
-		case Terrain.UNLOCKED_EXIT:
-			return Game.getVar(R.string.Level_TileUnlockedExit);
-		case Terrain.SIGN:
-			return Game.getVar(R.string.Level_TileSign);
-		case Terrain.WELL:
-			return Game.getVar(R.string.Level_TileWell);
-		case Terrain.EMPTY_WELL:
-			return Game.getVar(R.string.Level_TileEmptyWell);
-		case Terrain.STATUE:
-		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.Level_TileStatue);
-		case Terrain.TOXIC_TRAP:
-			return Game.getVar(R.string.Level_TileToxicTrap);
-		case Terrain.FIRE_TRAP:
-			return Game.getVar(R.string.Level_TileFireTrap);
-		case Terrain.PARALYTIC_TRAP:
-			return Game.getVar(R.string.Level_TileParalyticTrap);
-		case Terrain.POISON_TRAP:
-			return Game.getVar(R.string.Level_TilePoisonTrap);
-		case Terrain.ALARM_TRAP:
-			return Game.getVar(R.string.Level_TileAlarmTrap);
-		case Terrain.LIGHTNING_TRAP:
-			return Game.getVar(R.string.Level_TileLightningTrap);
-		case Terrain.GRIPPING_TRAP:
-			return Game.getVar(R.string.Level_TileGrippingTrap);
-		case Terrain.SUMMONING_TRAP:
-			return Game.getVar(R.string.Level_TileSummoningTrap);
-		case Terrain.INACTIVE_TRAP:
-			return Game.getVar(R.string.Level_TileInactiveTrap);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Level_TileBookshelf);
-		case Terrain.ALCHEMY:
-			return Game.getVar(R.string.Level_TileAlchemy);
-		default:
-			return Game.getVar(R.string.Level_TileDefault);
+			case Terrain.CHASM:
+				return Game.getVar(R.string.Level_TileChasm);
+			case Terrain.EMPTY:
+			case Terrain.EMPTY_SP:
+			case Terrain.EMPTY_DECO:
+			case Terrain.SECRET_TOXIC_TRAP:
+			case Terrain.SECRET_FIRE_TRAP:
+			case Terrain.SECRET_PARALYTIC_TRAP:
+			case Terrain.SECRET_POISON_TRAP:
+			case Terrain.SECRET_ALARM_TRAP:
+			case Terrain.SECRET_LIGHTNING_TRAP:
+				return Game.getVar(R.string.Level_TileFloor);
+			case Terrain.GRASS:
+				return Game.getVar(R.string.Level_TileGrass);
+			case Terrain.WATER:
+				return Game.getVar(R.string.Level_TileWater);
+			case Terrain.WALL:
+			case Terrain.WALL_DECO:
+			case Terrain.SECRET_DOOR:
+				return Game.getVar(R.string.Level_TileWall);
+			case Terrain.DOOR:
+				return Game.getVar(R.string.Level_TileClosedDoor);
+			case Terrain.OPEN_DOOR:
+				return Game.getVar(R.string.Level_TileOpenDoor);
+			case Terrain.ENTRANCE:
+				return Game.getVar(R.string.Level_TileEntrance);
+			case Terrain.EXIT:
+				return Game.getVar(R.string.Level_TileExit);
+			case Terrain.EMBERS:
+				return Game.getVar(R.string.Level_TileEmbers);
+			case Terrain.LOCKED_DOOR:
+				return Game.getVar(R.string.Level_TileLockedDoor);
+			case Terrain.PEDESTAL:
+				return Game.getVar(R.string.Level_TilePedestal);
+			case Terrain.BARRICADE:
+				return Game.getVar(R.string.Level_TileBarricade);
+			case Terrain.HIGH_GRASS:
+				return Game.getVar(R.string.Level_TileHighGrass);
+			case Terrain.LOCKED_EXIT:
+				return Game.getVar(R.string.Level_TileLockedExit);
+			case Terrain.UNLOCKED_EXIT:
+				return Game.getVar(R.string.Level_TileUnlockedExit);
+			case Terrain.SIGN:
+				return Game.getVar(R.string.Level_TileSign);
+			case Terrain.WELL:
+				return Game.getVar(R.string.Level_TileWell);
+			case Terrain.EMPTY_WELL:
+				return Game.getVar(R.string.Level_TileEmptyWell);
+			case Terrain.STATUE:
+			case Terrain.STATUE_SP:
+				return Game.getVar(R.string.Level_TileStatue);
+			case Terrain.TOXIC_TRAP:
+				return Game.getVar(R.string.Level_TileToxicTrap);
+			case Terrain.FIRE_TRAP:
+				return Game.getVar(R.string.Level_TileFireTrap);
+			case Terrain.PARALYTIC_TRAP:
+				return Game.getVar(R.string.Level_TileParalyticTrap);
+			case Terrain.POISON_TRAP:
+				return Game.getVar(R.string.Level_TilePoisonTrap);
+			case Terrain.ALARM_TRAP:
+				return Game.getVar(R.string.Level_TileAlarmTrap);
+			case Terrain.LIGHTNING_TRAP:
+				return Game.getVar(R.string.Level_TileLightningTrap);
+			case Terrain.GRIPPING_TRAP:
+				return Game.getVar(R.string.Level_TileGrippingTrap);
+			case Terrain.SUMMONING_TRAP:
+				return Game.getVar(R.string.Level_TileSummoningTrap);
+			case Terrain.INACTIVE_TRAP:
+				return Game.getVar(R.string.Level_TileInactiveTrap);
+			case Terrain.BOOKSHELF:
+				return Game.getVar(R.string.Level_TileBookshelf);
+			case Terrain.ALCHEMY:
+				return Game.getVar(R.string.Level_TileAlchemy);
+			default:
+				return Game.getVar(R.string.Level_TileDefault);
 		}
 	}
 
 	public String tileDesc(int tile) {
 
 		switch (tile) {
-		case Terrain.CHASM:
-			return Game.getVar(R.string.Level_TileDescChasm);
-		case Terrain.WATER:
-			return Game.getVar(R.string.Level_TileDescWater);
-		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.Level_TileDescEntrance);
-		case Terrain.EXIT:
-		case Terrain.UNLOCKED_EXIT:
-			return Game.getVar(R.string.Level_TileDescExit);
-		case Terrain.EMBERS:
-			return Game.getVar(R.string.Level_TileDescEmbers);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Level_TileDescHighGrass);
-		case Terrain.LOCKED_DOOR:
-			return Game.getVar(R.string.Level_TileDescLockedDoor);
-		case Terrain.LOCKED_EXIT:
-			return Game.getVar(R.string.Level_TileDescLockedExit);
-		case Terrain.BARRICADE:
-			return Game.getVar(R.string.Level_TileDescBarricade);
-		case Terrain.SIGN:
-			return Game.getVar(R.string.Level_TileDescSign);
-		case Terrain.TOXIC_TRAP:
-		case Terrain.FIRE_TRAP:
-		case Terrain.PARALYTIC_TRAP:
-		case Terrain.POISON_TRAP:
-		case Terrain.ALARM_TRAP:
-		case Terrain.LIGHTNING_TRAP:
-		case Terrain.GRIPPING_TRAP:
-		case Terrain.SUMMONING_TRAP:
-			return Game.getVar(R.string.Level_TileDescTrap);
-		case Terrain.INACTIVE_TRAP:
-			return Game.getVar(R.string.Level_TileDescInactiveTrap);
-		case Terrain.STATUE:
-		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.Level_TileDescStatue);
-		case Terrain.ALCHEMY:
-			return Game.getVar(R.string.Level_TileDescAlchemy);
-		case Terrain.EMPTY_WELL:
-			return Game.getVar(R.string.Level_TileDescEmptyWell);
-		default:
-			if (tile >= Terrain.WATER_TILES) {
-				return tileDesc(Terrain.WATER);
-			}
-			if ((TerrainFlags.flags[tile] & TerrainFlags.PIT) != 0) {
-				return tileDesc(Terrain.CHASM);
-			}
-			return "";
+			case Terrain.CHASM:
+				return Game.getVar(R.string.Level_TileDescChasm);
+			case Terrain.WATER:
+				return Game.getVar(R.string.Level_TileDescWater);
+			case Terrain.ENTRANCE:
+				return Game.getVar(R.string.Level_TileDescEntrance);
+			case Terrain.EXIT:
+			case Terrain.UNLOCKED_EXIT:
+				return Game.getVar(R.string.Level_TileDescExit);
+			case Terrain.EMBERS:
+				return Game.getVar(R.string.Level_TileDescEmbers);
+			case Terrain.HIGH_GRASS:
+				return Game.getVar(R.string.Level_TileDescHighGrass);
+			case Terrain.LOCKED_DOOR:
+				return Game.getVar(R.string.Level_TileDescLockedDoor);
+			case Terrain.LOCKED_EXIT:
+				return Game.getVar(R.string.Level_TileDescLockedExit);
+			case Terrain.BARRICADE:
+				return Game.getVar(R.string.Level_TileDescBarricade);
+			case Terrain.SIGN:
+				return Game.getVar(R.string.Level_TileDescSign);
+			case Terrain.TOXIC_TRAP:
+			case Terrain.FIRE_TRAP:
+			case Terrain.PARALYTIC_TRAP:
+			case Terrain.POISON_TRAP:
+			case Terrain.ALARM_TRAP:
+			case Terrain.LIGHTNING_TRAP:
+			case Terrain.GRIPPING_TRAP:
+			case Terrain.SUMMONING_TRAP:
+				return Game.getVar(R.string.Level_TileDescTrap);
+			case Terrain.INACTIVE_TRAP:
+				return Game.getVar(R.string.Level_TileDescInactiveTrap);
+			case Terrain.STATUE:
+			case Terrain.STATUE_SP:
+				return Game.getVar(R.string.Level_TileDescStatue);
+			case Terrain.ALCHEMY:
+				return Game.getVar(R.string.Level_TileDescAlchemy);
+			case Terrain.EMPTY_WELL:
+				return Game.getVar(R.string.Level_TileDescEmptyWell);
+			default:
+				if (tile >= Terrain.WATER_TILES) {
+					return tileDesc(Terrain.WATER);
+				}
+				if ((TerrainFlags.flags[tile] & TerrainFlags.PIT) != 0) {
+					return tileDesc(Terrain.CHASM);
+				}
+				return "";
 		}
 	}
 
@@ -1158,13 +1155,13 @@ public abstract class Level implements Bundlable {
 	public int getHeight() {
 		return height;
 	}
-	
+
 	public int getLength() {
 		return width * height;
 	}
 
 	public boolean cellValid(int x, int y) {
-			return x > 0 && y > 0 && x < getWidth()-1  && y < getHeight()-1;
+		return x > 0 && y > 0 && x < getWidth() - 1 && y < getHeight() - 1;
 	}
 
 	public boolean cellValid(int cell) {
@@ -1176,8 +1173,8 @@ public abstract class Level implements Bundlable {
 
 		for (int n : Level.NEIGHBOURS8) {
 			int p = n + cell;
-			if (cellValid(p) && (solid[p]) && Actor.findChar( p ) == null) {
-				candidates.add( p );
+			if (cellValid(p) && (solid[p]) && Actor.findChar(p) == null) {
+				candidates.add(p);
 			}
 		}
 
@@ -1186,33 +1183,33 @@ public abstract class Level implements Bundlable {
 
 	public int getEmptyCellNextTo(int cell) {
 		ArrayList<Integer> candidates = new ArrayList<>();
-		
+
 		for (int n : Level.NEIGHBOURS8) {
 			int p = n + cell;
-			if (cellValid(p) && (avoid[p] || passable[p]) && Actor.findChar( p ) == null) {
-				candidates.add( p );
+			if (cellValid(p) && (avoid[p] || passable[p]) && Actor.findChar(p) == null) {
+				candidates.add(p);
 			}
 		}
 
 		return oneCellFrom(candidates);
 	}
-	
-	public boolean isBossLevel () {
+
+	public boolean isBossLevel() {
 		return false;
 	}
 
 	public void seal() {
 	}
-	
+
 	public void unseal() {
 	}
 
 	public int getDistToNearestTerrain(int cell, int terr) {
 		int minima = getLength();
-		for(int i = 0;i<getLength();i++){
-			if(map[i]==terr) {
+		for (int i = 0; i < getLength(); i++) {
+			if (map[i] == terr) {
 				int delta = distance(cell, i);
-				if(delta<minima) {
+				if (delta < minima) {
 					minima = delta;
 				}
 			}
@@ -1220,20 +1217,20 @@ public abstract class Level implements Bundlable {
 		return minima;
 	}
 
-	public int getDistToNearestTerrain(int x,int y, int terr) {
-		return getDistToNearestTerrain(cell(x,y),terr);
+	public int getDistToNearestTerrain(int x, int y, int terr) {
+		return getDistToNearestTerrain(cell(x, y), terr);
 	}
 
-	public int getNearestTerrain(int x,int y, int terr) {
-		int minima = getDistToNearestTerrain(x,y,terr);
+	public int getNearestTerrain(int x, int y, int terr) {
+		int minima = getDistToNearestTerrain(x, y, terr);
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		int cell = cell(x, y);
-		for(int i = 0;i<getLength();i++){
-			if(map[i]==terr) {
+		for (int i = 0; i < getLength(); i++) {
+			if (map[i] == terr) {
 				int delta = distance(cell, i);
-				if(delta==minima) {
+				if (delta == minima) {
 					candidates.add(i);
 				}
 			}
@@ -1243,7 +1240,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	private int oneCellFrom(ArrayList<Integer> candidates) {
-		if(candidates.size()>0) {
+		if (candidates.size() > 0) {
 			return Random.element(candidates);
 		}
 
@@ -1253,8 +1250,8 @@ public abstract class Level implements Bundlable {
 	public int getRandomTerrainCell(int terrainType) {
 		ArrayList<Integer> candidates = new ArrayList<>();
 
-		for(int i = 0;i<getLength();i++){
-			if(map[i]==terrainType) {
+		for (int i = 0; i < getLength(); i++) {
+			if (map[i] == terrainType) {
 				candidates.add(i);
 			}
 		}
@@ -1263,8 +1260,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int get(int i, int j) {
-		int cell = cell(i,j);
-		if(cellValid(cell)) {
+		int cell = cell(i, j);
+		if (cellValid(cell)) {
 			return map[cell];
 		}
 		return -1;
@@ -1279,11 +1276,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void fillAreaWith(Class<? extends Blob> blobClass, int cell, int xs, int ys, int amount) {
-		fillAreaWith(blobClass,cellX(cell),cellY(cell),xs,ys,amount);
+		fillAreaWith(blobClass, cellX(cell), cellY(cell), xs, ys, amount);
 	}
 
 	public void fillAreaWith(Class<? extends Blob> blobClass, int x, int y, int xs, int ys, int amount) {
-		Blob blob = Dungeon.level.blobs.get( blobClass );
+		Blob blob = Dungeon.level.blobs.get(blobClass);
 		if (blob == null) {
 			try {
 				blob = blobClass.newInstance();
@@ -1293,9 +1290,9 @@ public abstract class Level implements Bundlable {
 			GameScene.add(blob);
 		}
 
-		for (int i = x;i<=x+xs;i++) {
-			for(int j=y;j<=y+ys;j++) {
-				if(cellValid(i,j)) {
+		for (int i = x; i <= x + xs; i++) {
+			for (int j = y; j <= y + ys; j++) {
+				if (cellValid(i, j)) {
 					blob.seed(i, j, amount);
 				}
 			}
@@ -1308,22 +1305,22 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void clearAreaFrom(Class<? extends Blob> blobClass, int x, int y, int xs, int ys) {
-		Blob blob = Dungeon.level.blobs.get( blobClass );
+		Blob blob = Dungeon.level.blobs.get(blobClass);
 		if (blob == null) {
 			return;
 		}
 
-		for (int i = x;i<=x+xs;i++) {
-			for(int j=y;j<=y+ys;j++) {
-				if(cellValid(i,j)) {
+		for (int i = x; i <= x + xs; i++) {
+			for (int j = y; j <= y + ys; j++) {
+				if (cellValid(i, j)) {
 					blob.clearBlob(cell(i, j));
 				}
 			}
 		}
 	}
 
-	public int blobAmoutAt(Class<? extends Blob> blobClass, int cell){
-		Blob blob = Dungeon.level.blobs.get( blobClass );
+	public int blobAmoutAt(Class<? extends Blob> blobClass, int cell) {
+		Blob blob = Dungeon.level.blobs.get(blobClass);
 		if (blob == null) {
 			return 0;
 		}
