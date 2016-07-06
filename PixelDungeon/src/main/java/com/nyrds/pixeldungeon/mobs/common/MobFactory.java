@@ -12,6 +12,14 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
+import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
+import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
+import com.nyrds.pixeldungeon.mobs.necropolis.EnslavedSoul;
+import com.nyrds.pixeldungeon.mobs.necropolis.ExplodingSkull;
+import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
+import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
+import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
+import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
@@ -133,6 +141,15 @@ public class MobFactory {
 
 		registerMobClass(ArmoredStatue.class);
 		registerMobClass(GoldenStatue.class);
+
+		registerMobClass(DeathKnight.class);
+		registerMobClass(DreadKnight.class);
+		registerMobClass(EnslavedSoul.class);
+		registerMobClass(ExplodingSkull.class);
+		registerMobClass(JarOfSouls.class);
+		registerMobClass(Lich.class);
+		registerMobClass(RunicSkull.class);
+		registerMobClass(Zombie.class);
 
 		registerMobClass(Hedgehog.class);
 	}
