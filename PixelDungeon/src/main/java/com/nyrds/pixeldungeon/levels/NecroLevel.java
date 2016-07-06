@@ -163,7 +163,7 @@ public class NecroLevel extends RegularLevel {
 			this.pos = pos;
 
 			PointF p = DungeonTilemap.tileCenterToWorld( pos );
-			pos( p.x - 1, p.y + 6, 2, 0 );
+			pos( p.x - 1, p.y - 3, 2, 0 );
 
 			pour( FlameParticle.FACTORY, 0.15f );
 
