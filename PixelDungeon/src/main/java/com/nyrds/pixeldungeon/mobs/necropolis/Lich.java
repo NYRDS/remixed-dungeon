@@ -1,7 +1,10 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -14,12 +17,15 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 /**
@@ -42,6 +48,42 @@ public class Lich extends Boss {
         IMMUNITIES.add( Sleep.class );
     }
 
+    protected void fx( int cell, Callback callback ) {
+        MagicMissile.whiteLight( getSprite().getParent(), getPos(), cell, callback );
+        Sample.INSTANCE.play( Assets.SND_ZAP );
+        getSprite().setVisible(false);
+    }
+
+    private void blink(int epos) {
+
+        int cell = getPos();
+
+        Ballistica.cast(epos, cell, true, false);
+
+        for (int i = 1; i < 4; i++) {
+            int next = Ballistica.trace[i + 1];
+            if (Dungeon.level.cellValid(next) && (Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
+                cell = next;
+                Dungeon.observe();
+            }
+        }
+
+        if (cell != getPos()){
+            final int tgt = cell;
+            final Char ch = this;
+            fx(cell, new Callback() {
+                @Override
+                public void call() {
+                    WandOfBlink.appear(ch, tgt);
+                }
+            });
+        }
+    }
+
+    @Override
+    protected boolean act() {
+        return super.act();
+    }
 
     @Override
     protected boolean canAttack( Char enemy ) {
@@ -69,6 +111,12 @@ public class Lich extends Boss {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange( 8, 15 );
+    }
+
+    @Override
+    public int defenseProc(Char enemy, int damage) {
+        blink(enemy.getPos());
+        return damage;
     }
 
     @Override
