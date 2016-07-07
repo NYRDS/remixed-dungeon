@@ -31,7 +31,7 @@ public class Lich extends Boss {
         EXP = 20;
         defenseSkill = 20;
 
-        baseSpeed = 0f;
+       // baseSpeed = 0f;
 
         IMMUNITIES.add( Paralysis.class );
         IMMUNITIES.add( ToxicGas.class );
@@ -44,45 +44,25 @@ public class Lich extends Boss {
 
 
     @Override
-    protected boolean canAttack(Char enemy) {
-        return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
+    protected boolean canAttack( Char enemy ) {
+        return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
     }
 
+    @Override
     protected boolean doAttack(Char enemy) {
 
-        if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
+        if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
             return super.doAttack(enemy);
-
         } else {
-            boolean visible = Dungeon.level.fieldOfView[getPos()]
-                    || Dungeon.level.fieldOfView[enemy.getPos()];
-            if (visible) {
-                getSprite().zap(enemy.getPos());
+
+            getSprite().zap(enemy.getPos());
+
+            spend(1);
+
+            if (hit(this, enemy, true)) {
+                enemy.damage(damageRoll(), this);
             }
-            zap();
-
-            return !visible;
-        }
-    }
-
-    private void zap() {
-        spend(1);
-
-        if (hit(this, getEnemy(), true)) {
-            if (getEnemy() == Dungeon.hero && Random.Int(2) == 0) {
-                Buff.prolong(getEnemy(), Weakness.class, Weakness.duration(getEnemy()));
-            }
-
-            int dmg = Random.Int(12, 18);
-            getEnemy().damage(dmg, this);
-
-            if (!getEnemy().isAlive() && getEnemy() == Dungeon.hero) {
-                Dungeon.fail(Utils.format(ResultDescriptions.MOB,
-                        Utils.indefinite(getName()), Dungeon.depth));
-            }
-        } else {
-            getEnemy().getSprite().showStatus(CharSprite.NEUTRAL,
-                    getEnemy().defenseVerb());
+            return true;
         }
     }
 
