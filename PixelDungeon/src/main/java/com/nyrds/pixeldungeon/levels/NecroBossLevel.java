@@ -45,7 +45,7 @@ public class NecroBossLevel extends Level {
 	}
 	
 	private static final int TOP			= 2;
-	private static final int HALL_WIDTH		= 8;
+	private static final int HALL_WIDTH		= 9;
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 4;
 	
@@ -87,19 +87,18 @@ public class NecroBossLevel extends Level {
 	protected boolean build() {
 		
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY );
-		Painter.fill( this, _Center(), TOP, 1, HALL_HEIGHT, Terrain.EMPTY_SP );
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + _Center() - 2] = Terrain.STATUE_SP;
-			map[y * getWidth() + _Center() + 2] = Terrain.STATUE_SP;
+			map[y * getWidth() + _Center() - 3] = Terrain.STATUE_SP;
+			map[y * getWidth() + _Center() + 3] = Terrain.STATUE_SP;
 			y += 2;
 		}
 
-		int pedestal_1 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() - 3;
-		int pedestal_2 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() - 3;
-		int pedestal_3 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() + 3;
-		int pedestal_4 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() + 3;
+		int pedestal_1 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() - 2;
+		int pedestal_2 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() - 2;
+		int pedestal_3 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
+		int pedestal_4 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
 
 		map[pedestal_1] = map[pedestal_2] = map[pedestal_3] = map[pedestal_4] = Terrain.PEDESTAL;
 		
