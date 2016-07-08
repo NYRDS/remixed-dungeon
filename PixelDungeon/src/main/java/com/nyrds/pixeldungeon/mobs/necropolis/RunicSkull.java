@@ -33,8 +33,9 @@ public class RunicSkull extends MultiKindMob {
 		EXP = 5;
 		defenseSkill = 10;
 
-		baseSpeed = 0f;
 		pacified = true;
+		kind = Random.Int(3);
+		state = WANDERING;
 
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );
@@ -56,6 +57,16 @@ public class RunicSkull extends MultiKindMob {
 	@Override
 	public int getKind() {
 		return kind;
+	}
+
+	@Override
+	protected boolean getCloser( int target ) {
+		return false;
+	}
+
+	@Override
+	protected boolean getFurther( int target ) {
+		return false;
 	}
 
 }

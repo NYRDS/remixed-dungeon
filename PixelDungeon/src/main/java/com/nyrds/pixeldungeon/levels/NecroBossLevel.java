@@ -53,6 +53,7 @@ public class NecroBossLevel extends Level {
 	private static final int HALL_WIDTH		= 9;
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 4;
+	private static final int SKULLS_BY_DEFAULT	= 3;
 	
 	private int arenaDoor;
 	private boolean enteredArena = false;
@@ -91,7 +92,7 @@ public class NecroBossLevel extends Level {
 	@Override
 	protected boolean build() {
 		
-		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY );
+		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.WATER );
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
@@ -113,7 +114,7 @@ public class NecroBossLevel extends Level {
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
 		map[arenaDoor] = Terrain.DOOR;
 		
-		Painter.fill( this, _Left(), TOP + HALL_HEIGHT + 1, HALL_WIDTH, CHAMBER_HEIGHT, Terrain.EMPTY );
+		Painter.fill( this, _Left(), TOP + HALL_HEIGHT + 1, HALL_WIDTH, CHAMBER_HEIGHT, Terrain.WATER );
 		Painter.fill( this, _Left(), TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
 		Painter.fill( this, _Left() + HALL_WIDTH - 1, TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
 		
@@ -127,7 +128,7 @@ public class NecroBossLevel extends Level {
 	protected void decorate() {	
 		
 		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
+			if (map[i] == Terrain.WATER && Random.Int( 10 ) == 0) {
 				map[i] = Terrain.EMPTY_DECO;
 			} else if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) { 
 				map[i] = Terrain.WALL_DECO;
@@ -179,21 +180,33 @@ public class NecroBossLevel extends Level {
 				Dungeon.visible[boss.getPos()]);
 			Dungeon.level.spawnMob(boss);
 
-			int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
-			if (Dungeon.level.cellValid(skullCell)) {
-				if (Actor.findChar(skullCell) == null) {
-					Mob mob = new RunicSkull();
-					Dungeon.level.spawnMob(mob);
-					WandOfBlink.appear(mob, cell);
-				}
-			}
+			SpawnSkulls();
 
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );
 			Dungeon.observe();
 		}
 	}
-	
+
+	public void SpawnSkulls(){
+
+		int nSkulls = SKULLS_BY_DEFAULT;
+
+		int i = 0;
+		while (i < nSkulls){
+			int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
+			if (Dungeon.level.cellValid(skullCell)) {
+				if (Actor.findChar(skullCell) == null) {
+					Mob mob = new RunicSkull();
+					Dungeon.level.spawnMob(mob);
+					WandOfBlink.appear(mob, skullCell);
+					i++;
+				}
+			}
+		}
+
+	}
+
 	@Override
 	public Heap drop( Item item, int cell ) {
 		
