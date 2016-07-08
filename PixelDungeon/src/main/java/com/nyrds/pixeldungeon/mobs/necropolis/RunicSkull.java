@@ -33,6 +33,7 @@ public class RunicSkull extends MultiKindMob {
 		EXP = 5;
 		defenseSkill = 10;
 
+		baseSpeed = 0f;
 		pacified = true;
 
 		IMMUNITIES.add( Paralysis.class );
