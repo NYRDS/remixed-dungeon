@@ -18,17 +18,22 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.Crystal;
+import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -114,7 +119,7 @@ public class NecroBossLevel extends Level {
 		
 		entrance = (TOP + HALL_HEIGHT + 2 + Random.Int( CHAMBER_HEIGHT - 1 )) * getWidth() + _Left() + (/*1 +*/ Random.Int( HALL_WIDTH-2 )); 
 		map[entrance] = Terrain.ENTRANCE;
-		
+
 		return true;
 	}
 	
@@ -134,8 +139,7 @@ public class NecroBossLevel extends Level {
 	}
 	
 	@Override
-	protected void createMobs() {	
-	}
+	protected void createMobs() {}
 	
 	@Override
 	protected void createItems() {
@@ -174,7 +178,16 @@ public class NecroBossLevel extends Level {
 				!outsideEntraceRoom( boss.getPos() ) ||
 				Dungeon.visible[boss.getPos()]);
 			Dungeon.level.spawnMob(boss);
-			
+
+			int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
+			if (Dungeon.level.cellValid(skullCell)) {
+				if (Actor.findChar(skullCell) == null) {
+					Mob mob = new RunicSkull();
+					Dungeon.level.spawnMob(mob);
+					WandOfBlink.appear(mob, cell);
+				}
+			}
+
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );
 			Dungeon.observe();
