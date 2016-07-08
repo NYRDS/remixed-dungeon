@@ -18,7 +18,6 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -26,7 +25,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -191,6 +189,13 @@ public class NecroBossLevel extends Level {
 	public void SpawnSkulls(){
 
 		int nSkulls = SKULLS_BY_DEFAULT;
+
+		if(Game.getDifficulty() < 2){
+			nSkulls = 2;
+		}
+		else if(Game.getDifficulty() > 2){
+			nSkulls = 4;
+		}
 
 		int i = 0;
 		while (i < nSkulls){
