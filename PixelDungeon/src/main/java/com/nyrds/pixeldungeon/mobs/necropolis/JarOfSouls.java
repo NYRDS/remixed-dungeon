@@ -26,6 +26,7 @@ public class JarOfSouls extends UndeadMob {
 		hp(ht(60));
 		defenseSkill = 1;
 		baseSpeed = 0f;
+		pacified = true;
 		
 		EXP    = 0;
 		maxLvl = 9;
@@ -65,7 +66,6 @@ public class JarOfSouls extends UndeadMob {
 		}
 
 		PlayZap();
-		state = SLEEPING;
 		
 		postpone(20);
 		
