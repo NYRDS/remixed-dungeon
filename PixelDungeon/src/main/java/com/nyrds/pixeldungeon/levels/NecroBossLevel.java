@@ -45,9 +45,9 @@ public class NecroBossLevel extends Level {
 	}
 	
 	private static final int TOP			= 2;
-	private static final int HALL_WIDTH		= 7;
-	private static final int HALL_HEIGHT	= 15;
-	private static final int CHAMBER_HEIGHT	= 3;
+	private static final int HALL_WIDTH		= 8;
+	private static final int HALL_HEIGHT	= 9;
+	private static final int CHAMBER_HEIGHT	= 4;
 	
 	private int arenaDoor;
 	private boolean enteredArena = false;
@@ -95,13 +95,13 @@ public class NecroBossLevel extends Level {
 			map[y * getWidth() + _Center() + 2] = Terrain.STATUE_SP;
 			y += 2;
 		}
-		
-		int left = pedestal( true );
-		int right = pedestal( false );
-		map[left] = map[right] = Terrain.PEDESTAL;
-		for (int i=left+1; i < right; i++) {
-			map[i] = Terrain.EMPTY_SP;
-		}
+
+		int pedestal_1 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() - 3;
+		int pedestal_2 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() - 3;
+		int pedestal_3 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() + 3;
+		int pedestal_4 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() + 3;
+
+		map[pedestal_1] = map[pedestal_2] = map[pedestal_3] = map[pedestal_4] = Terrain.PEDESTAL;
 		
 		setExit((TOP - 1) * getWidth() + _Center(),0);
 		map[getExit(0)] = Terrain.LOCKED_EXIT;
@@ -132,14 +132,6 @@ public class NecroBossLevel extends Level {
 		
 		int sign = arenaDoor + getWidth() + 1;
 		map[sign] = Terrain.SIGN;
-	}
-	
-	public int pedestal( boolean left ) {
-		if (left) {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
-		} else {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
-		}
 	}
 	
 	@Override
