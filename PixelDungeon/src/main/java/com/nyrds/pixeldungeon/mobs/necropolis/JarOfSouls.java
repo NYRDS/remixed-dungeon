@@ -25,7 +25,6 @@ public class JarOfSouls extends UndeadMob {
 	public JarOfSouls() {
 		hp(ht(60));
 		defenseSkill = 1;
-		baseSpeed = 0f;
 		pacified = true;
 		
 		EXP    = 0;
@@ -36,7 +35,7 @@ public class JarOfSouls extends UndeadMob {
 		loot = new PotionOfHealing();
 		lootChance = 0.2f;
 	}
-	
+
 	@Override
 	public int damageRoll() {
 		return 0;
@@ -75,6 +74,16 @@ public class JarOfSouls extends UndeadMob {
 	@Override
 	public int dr() {
 		return 0;
+	}
+
+	@Override
+	protected boolean getCloser( int target ) {
+		return false;
+	}
+
+	@Override
+	protected boolean getFurther( int target ) {
+		return false;
 	}
 
 	public void PlayZap() {
