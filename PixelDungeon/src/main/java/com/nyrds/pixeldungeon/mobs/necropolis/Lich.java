@@ -1,7 +1,10 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -18,10 +21,13 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -129,5 +135,12 @@ public class Lich extends Boss {
         return 5;
     }
 
+    @Override
+    public void die( Object cause ) {
+        GameScene.bossSlain();
+        Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+        super.die( cause );
+        //Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
+    }
 
 }
