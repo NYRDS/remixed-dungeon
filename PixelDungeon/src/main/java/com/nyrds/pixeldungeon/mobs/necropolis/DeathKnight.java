@@ -1,19 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Amok;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Sleep;
-import com.watabou.pixeldungeon.actors.buffs.Terror;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.utils.Random;
 
 /**

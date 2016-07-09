@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
