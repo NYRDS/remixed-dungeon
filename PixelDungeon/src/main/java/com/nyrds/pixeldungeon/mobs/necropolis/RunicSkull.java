@@ -30,6 +30,13 @@ public class RunicSkull extends MultiKindMob {
 		IMMUNITIES.add( Sleep.class );
 	}
 
+	static public RunicSkull makeNewSkull(int k) {
+		RunicSkull skull = new RunicSkull();
+		skull.kind = k;
+
+		return skull;
+	}
+
 	@Override
 	public int getKind() {
 		return kind;

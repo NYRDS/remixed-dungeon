@@ -37,6 +37,7 @@ public class NecroBossLevel extends Level {
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 4;
 	private static final int SKULLS_BY_DEFAULT	= 3;
+	private static final int SKULLS_MAX	= 3;
 	
 	private int arenaDoor;
 	private boolean enteredArena = false;
@@ -155,14 +156,9 @@ public class NecroBossLevel extends Level {
 			
 			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );
 			boss.state = boss.HUNTING;
-			do {
-				boss.setPos(Random.Int( getLength() ));
-			} while (
-				!passable[boss.getPos()] ||
-				!outsideEntraceRoom( boss.getPos() ) ||
-				Dungeon.visible[boss.getPos()]);
-			Dungeon.level.spawnMob(boss);
+			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
+			Dungeon.level.spawnMob(boss);
 			SpawnSkulls();
 
 			set( arenaDoor, Terrain.LOCKED_DOOR );
@@ -178,7 +174,7 @@ public class NecroBossLevel extends Level {
 			nSkulls = 2;
 		}
 		else if(Game.getDifficulty() > 2){
-			nSkulls = 4;
+			nSkulls = SKULLS_MAX;
 		}
 
 		List<Integer> occupiedPedestals = new ArrayList<Integer>();
@@ -187,7 +183,7 @@ public class NecroBossLevel extends Level {
 			int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
 			if (Dungeon.level.cellValid(skullCell)) {
 				if (!occupiedPedestals.contains(skullCell)) {
-					Mob mob = new RunicSkull();
+					Mob mob = RunicSkull.makeNewSkull(i);
 					Dungeon.level.spawnMob(mob);
 					WandOfBlink.appear(mob, skullCell);
 					occupiedPedestals.add(skullCell);
