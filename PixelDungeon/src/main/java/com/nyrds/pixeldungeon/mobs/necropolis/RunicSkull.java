@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -24,9 +25,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class RunicSkull extends MultiKindMob {
-
-	private boolean activated = false;
-
 	public RunicSkull() {
 
 		hp(ht(50));
@@ -46,14 +44,6 @@ public class RunicSkull extends MultiKindMob {
 		IMMUNITIES.add( Sleep.class );
 	}
 
-	public void setActivated(boolean state){
-		activated = state;
-	}
-
-	public boolean getActivated(){
-		return activated;
-	}
-
 	@Override
 	public int getKind() {
 		return kind;
@@ -68,5 +58,4 @@ public class RunicSkull extends MultiKindMob {
 	protected boolean getFurther( int target ) {
 		return false;
 	}
-
 }
