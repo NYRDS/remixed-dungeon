@@ -170,7 +170,7 @@ public class NecroBossLevel extends Level {
 	public void SpawnSkulls(){
 
 		int nSkulls = SKULLS_BY_DEFAULT;
-		if(Game.getDifficulty() < 2){
+		if(Game.getDifficulty() == 0){
 			nSkulls = 2;
 		}
 		else if(Game.getDifficulty() > 2){
