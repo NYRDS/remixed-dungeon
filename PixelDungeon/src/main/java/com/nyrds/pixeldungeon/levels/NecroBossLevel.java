@@ -40,6 +40,9 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NecroBossLevel extends Level {
 	
 	{
@@ -189,7 +192,6 @@ public class NecroBossLevel extends Level {
 	public void SpawnSkulls(){
 
 		int nSkulls = SKULLS_BY_DEFAULT;
-
 		if(Game.getDifficulty() < 2){
 			nSkulls = 2;
 		}
@@ -197,14 +199,16 @@ public class NecroBossLevel extends Level {
 			nSkulls = 4;
 		}
 
+		List<Integer> occupiedPedestals = new ArrayList<Integer>();
 		int i = 0;
 		while (i < nSkulls){
 			int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
 			if (Dungeon.level.cellValid(skullCell)) {
-				if (Actor.findChar(skullCell) == null) {
+				if (!occupiedPedestals.contains(skullCell)) {
 					Mob mob = new RunicSkull();
 					Dungeon.level.spawnMob(mob);
 					WandOfBlink.appear(mob, skullCell);
+					occupiedPedestals.add(skullCell);
 					i++;
 				}
 			}
