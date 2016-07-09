@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -127,6 +128,13 @@ public class Lich extends Boss {
         GameScene.bossSlain();
         Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
         super.die( cause );
+
+        //Kill everthing
+        Mob mob = Dungeon.level.getRandomMob();
+        while(mob != null){
+            mob.remove();
+            mob = Dungeon.level.getRandomMob();
+        }
         //Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
     }
 
