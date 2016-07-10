@@ -135,7 +135,7 @@ public class Lich extends Boss {
             mob.remove();
             mob = Dungeon.level.getRandomMob();
         }
-        //Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
+        //Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_LICH);
     }
 
 }
