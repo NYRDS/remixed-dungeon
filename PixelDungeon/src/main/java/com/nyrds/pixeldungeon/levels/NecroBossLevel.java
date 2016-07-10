@@ -36,8 +36,6 @@ public class NecroBossLevel extends Level {
 	private static final int HALL_WIDTH		= 9;
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 4;
-	private static final int SKULLS_BY_DEFAULT	= 3;
-	private static final int SKULLS_MAX	= 3;
 	
 	private int arenaDoor;
 	private boolean enteredArena = false;
@@ -157,7 +155,6 @@ public class NecroBossLevel extends Level {
 			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
 			Dungeon.level.spawnMob(boss);
-			SpawnSkulls();
 
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );
@@ -165,32 +162,7 @@ public class NecroBossLevel extends Level {
 		}
 	}
 
-	public void SpawnSkulls(){
 
-		int nSkulls = SKULLS_BY_DEFAULT;
-		if(Game.getDifficulty() == 0){
-			nSkulls = 2;
-		}
-		else if(Game.getDifficulty() > 2){
-			nSkulls = SKULLS_MAX;
-		}
-
-		List<Integer> occupiedPedestals = new ArrayList<Integer>();
-		int i = 0;
-		while (i < nSkulls){
-			int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
-			if (Dungeon.level.cellValid(skullCell)) {
-				if (!occupiedPedestals.contains(skullCell)) {
-					Mob mob = RunicSkull.makeNewSkull(i);
-					Dungeon.level.spawnMob(mob);
-					WandOfBlink.appear(mob, skullCell);
-					occupiedPedestals.add(skullCell);
-					i++;
-				}
-			}
-		}
-
-	}
 
 	@Override
 	public Heap drop( Item item, int cell ) {

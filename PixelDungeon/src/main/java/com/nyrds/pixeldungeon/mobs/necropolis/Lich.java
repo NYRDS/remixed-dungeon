@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -17,15 +18,23 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by DeadDie on 12.02.2016
  */
 public class Lich extends Boss {
+
+    private static final int SKULLS_BY_DEFAULT	= 3;
+    private static final int SKULLS_MAX	= 3;
+
     {
         hp(ht(120));
         EXP = 20;
@@ -40,6 +49,8 @@ public class Lich extends Boss {
         IMMUNITIES.add( Amok.class );
         IMMUNITIES.add( Blindness.class );
         IMMUNITIES.add( Sleep.class );
+
+        SpawnSkulls();
     }
 
     protected void fx( int cell, Callback callback ) {
@@ -136,6 +147,34 @@ public class Lich extends Boss {
             mob = Dungeon.level.getRandomMob();
         }
         //Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_LICH);
+    }
+
+    public void SpawnSkulls(){
+
+        int nSkulls = SKULLS_BY_DEFAULT;
+        if(Game.getDifficulty() == 0){
+            nSkulls = 2;
+        }
+        else if(Game.getDifficulty() > 2){
+            nSkulls = SKULLS_MAX;
+        }
+
+        List<Integer> occupiedPedestals = new ArrayList<Integer>();
+        int i = 0;
+        while (i < nSkulls){
+            int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
+            if (Dungeon.level.cellValid(skullCell)) {
+                if (!occupiedPedestals.contains(skullCell)) {
+                    Mob mob = RunicSkull.makeNewSkull(i);
+                    Dungeon.level.spawnMob(mob);
+
+                    WandOfBlink.appear(mob, skullCell);
+                    occupiedPedestals.add(skullCell);
+                    i++;
+                }
+            }
+        }
+
     }
 
 }
