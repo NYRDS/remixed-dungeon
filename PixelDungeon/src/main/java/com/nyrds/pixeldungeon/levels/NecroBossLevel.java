@@ -75,13 +75,13 @@ public class NecroBossLevel extends Level {
 	
 	@Override
 	protected boolean build() {
-		
+
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.WATER );
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + _Center() - 3] = Terrain.STATUE_SP;
-			map[y * getWidth() + _Center() + 3] = Terrain.STATUE_SP;
+			map[y * getWidth() + _Center() - 3] = Terrain.STATUE;
+			map[y * getWidth() + _Center() + 3] = Terrain.STATUE;
 			y += 2;
 		}
 
@@ -109,16 +109,14 @@ public class NecroBossLevel extends Level {
 	}
 	
 	@Override
-	protected void decorate() {	
-		
+	protected void decorate() {
+
 		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WATER && Random.Int( 10 ) == 0) {
-				map[i] = Terrain.EMPTY_DECO;
-			} else if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) { 
+			if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-		
+
 		int sign = arenaDoor + getWidth() + 1;
 		map[sign] = Terrain.SIGN;
 	}
@@ -147,9 +145,9 @@ public class NecroBossLevel extends Level {
 	
 	@Override
 	public void pressHero(int cell, Hero hero ) {
-		
+
 		super.pressHero( cell, hero );
-		
+
 		if (!enteredArena && outsideEntraceRoom( cell ) && hero == Dungeon.hero) {
 			
 			enteredArena = true;
