@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
@@ -40,9 +40,9 @@ public class Levitation extends FlavourBuff {
 	
 	@Override
 	public void detach() {
+		super.detach();
 		target.flying = false;
 		Dungeon.level.press( target.getPos(), target );
-		super.detach();
 	}
 
 	@Override
