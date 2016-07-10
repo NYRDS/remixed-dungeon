@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Items descriptions -->
-    <!-- STRINGS OF SpiderArmor -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">spider armor</string>
     <string name="SpiderArmor_Info"></string>
     <string name="SpiderArmor_Gender">feminine</string>
 
-    <!-- STRINGS OF BladeOfSouls -->
+    <!-- STRINGS OF BladeOfSouls CLASS -->
     <string name="BladeOfSouls_Name">blade of souls</string>
     <string name="BladeOfSouls_Info"></string>
     <string name="BladeOfSouls_Gender">masculine</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">black skull</string>
+    <string name="BlackSkull_Info"></string>
+    <string name="BlackSkull_Gender">masculine</string>
+
+    <string name="BlackSkull_Name_Awakened">awakened black skull</string>
+    <string name="BlackSkull_Info_Awakened"></string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF DeathKnight CLASS -->
