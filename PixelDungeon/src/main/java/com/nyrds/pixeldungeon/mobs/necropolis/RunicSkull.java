@@ -8,11 +8,17 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
+import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class RunicSkull extends MultiKindMob {
 
 	protected boolean activated = false;
+	private boolean zapping     = false;
+
+	protected static final int RED_SKULL	 = 0;
+	protected static final int BLUE_SKULL	 = 1;
+	protected static final int GREEN_SKULL = 2;
 
 	public RunicSkull() {
 
@@ -48,6 +54,21 @@ public class RunicSkull extends MultiKindMob {
 	}
 
 	@Override
+	public boolean act()
+	{
+		if (activated){
+			if (!zapping) {
+				PlayZap();
+				zapping = true;
+			}
+		} else{
+			getSprite().idle();
+			zapping = false;
+		}
+		return super.act();
+	}
+
+	@Override
 	public int getKind() {
 		return kind;
 	}
@@ -60,5 +81,20 @@ public class RunicSkull extends MultiKindMob {
 	@Override
 	protected boolean getFurther( int target ) {
 		return false;
+	}
+
+	@Override
+	public void onZapComplete() {
+		PlayZap();
+	}
+
+	public void PlayZap() {
+		getSprite().zap(
+				getEnemy().getPos(),
+				new Callback() {
+					@Override
+					public void call() {
+					}
+				});
 	}
 }

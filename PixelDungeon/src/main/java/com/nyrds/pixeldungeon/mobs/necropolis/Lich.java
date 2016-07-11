@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -14,8 +15,11 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -35,17 +39,18 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 3;
+    private static final int HEALTH	= 120;
 
-    private RunicSkull activatedSkull = null;
+    private int skullTimer = 0;
+
+    private RunicSkull activatedSkull;
 
     public HashSet<RunicSkull> skulls   = new HashSet<>();
 
     {
-        hp(ht(120));
+        hp(ht(HEALTH));
         EXP = 20;
         defenseSkill = 20;
-
-       // baseSpeed = 0f;
 
         IMMUNITIES.add( Paralysis.class );
         IMMUNITIES.add( ToxicGas.class );
@@ -91,22 +96,51 @@ public class Lich extends Boss {
     }
 
     protected void activateRandomSkull(){
-        if(activatedSkull !=null){
-            activatedSkull.Deactivate();
-        }
-        RunicSkull skull = getRandomSkull();
-        skull.Activate();
-        activatedSkull = skull;
+        if (!skulls.isEmpty()){
+            if (activatedSkull != null){
+                activatedSkull.Deactivate();
+            }
 
+            RunicSkull skull = getRandomSkull();
+            skull.Activate();
+            activatedSkull = skull;
+        }
     }
 
     public RunicSkull getRandomSkull() {
         return Random.element(skulls);
     }
 
-
     @Override
     protected boolean act() {
+
+        if (this.hp() < HEALTH) {
+           activateRandomSkull();
+        }
+
+        if (activatedSkull != null) {
+            switch (activatedSkull.getKind()) {
+                case RunicSkull.RED_SKULL:
+                    PotionOfHealing.heal(this,0.2f);
+                    break;
+
+                case RunicSkull.BLUE_SKULL:
+                    int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
+
+                    if (Dungeon.level.cellValid(larvaPos)) {
+                        Yog.Larva larva = new Yog.Larva();
+                        larva.setPos(larvaPos);
+                        Dungeon.level.spawnMob(larva, 0);
+                        Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
+                    }
+                    break;
+
+                case RunicSkull.GREEN_SKULL:
+                    GameScene.add( Blob.seed( getPos(), 30, ToxicGas.class ) );
+                    break;
+            }
+        }
+        postpone(20);
         return super.act();
     }
 
@@ -185,11 +219,11 @@ public class Lich extends Boss {
             int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
             if (Dungeon.level.cellValid(skullCell)) {
                 if (!occupiedPedestals.contains(skullCell)) {
-                    RunicSkull skulls = RunicSkull.makeNewSkull(i);
-                    Dungeon.level.spawnMob(skulls);
-                    WandOfBlink.appear(skulls, skullCell);
+                    RunicSkull skull = RunicSkull.makeNewSkull(i);
+                    Dungeon.level.spawnMob(skull);
+                    WandOfBlink.appear(skull, skullCell);
                     occupiedPedestals.add(skullCell);
-                    skulls.add(skulls);
+                    skulls.add(skull);
                     i++;
                 }
             }
