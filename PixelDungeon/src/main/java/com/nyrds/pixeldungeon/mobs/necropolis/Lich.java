@@ -195,6 +195,7 @@ public class Lich extends Boss {
         super.die( cause );
 
         //Kill everthing
+        skulls.clear();
         Mob mob = Dungeon.level.getRandomMob();
         while(mob != null){
             mob.remove();
