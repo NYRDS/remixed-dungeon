@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">あなたの %s は痛いくらい締め付けた</string>
+  <string name="Armor_Identify">あなたは今 %1$s を識別するために十分精通しています。これは %2$s です。</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">異なるタイプの魔法はこの鎧のグリフを消し去った！</string>
+  <string name="Armor_Info1">この %1$s は攻撃ごとに \"%2$d\" のダメージ吸収を得る。</string>
+  <string name="Armor_Info2">
+\n\nあなたの力が不足しているため、速度と防御スキルが低下します。</string>
+  <string name="Armor_Info3">
+\n\nあなたの力が不足しているため、この鎧をつけていると速度と防御スキルが低下します。</string>
+  <string name="Armor_Info4">
+\n\n一般的な %1$s は %2$d のダメージ吸収を備えている、 %3$d の力が必要です。</string>
+  <string name="Armor_Info5">あなたにとって、この鎧は重い。</string>
+  <string name="Armor_Info6">それは刻まれている。</string>
+  <string name="Armor_Info7a">
+\n\nあなたは %1$s%2$s を着ています。</string>
+  <string name="Armor_Info7b">、それは呪われているため、あなたは取り除くことが出来ない</string>
+  <string name="Armor_Info8">
+\n\nあなたは %s に潜んでいる邪悪な魔法を感じることが出来ます。</string>
+  <string name="Armor_Glyph">グリフ</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">アイテムがよく見える！</string>
+  <string name="ClassArmor_LowHealt">あなたは不健康だ！</string>
+  <string name="ClassArmor_NotEquipped">この鎧をつけるとあなたはパワーアップするだろう。</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">布製の鎧</string>
+  <string name="ClothArmor_Desc">この軽い鎧は普通の性能だ。</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">エルヴンマント</string>
+  <string name="ElfArmor_Desc">このエルヴンマントの助けを借りて自然の力を召喚できます。高い草の成長意思のまたたきで、視界内のすべての敵を硬い石のように動けなくする。</string>
+  <string name="ElfArmor_ACSpecial">自然を呼び出す</string>
+  <string name="ElfArmor_NotElf">エルフだけがこの鎧を使うことができます。</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">ハンターのマント</string>
+  <string name="HuntressArmor_Desc">ハンターのこのようなマントはスペクトルブレードのファンを作ることができる。ハンターの視界内の単体ターゲットにこれらのブレードは、彼女の現在装備の近接武器に応じたダメージを与えます。</string>
+  <string name="HuntressArmor_ACSpecial">スペクトルブレード</string>
+  <string name="HuntressArmor_NoEnemies">敵が見えません</string>
+  <string name="HuntressArmor_NotHuntress">ハンターだけがこの鎧を使うことができます。</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">革製の鎧</string>
+  <string name="LeatherArmor_Desc">モンスターの革をなめして作られた鎧。布製の鎧のように軽くはないが、より良い防御性能を備えている。</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">魔術師のローブ</string>
+  <string name="MageArmor_Desc">メイジがこの素晴らしいローブを着ることで、モルテンアースの呪文を唱えることが出来ます:彼の視界内のすべての敵に、火と移動阻害を同時に与える。</string>
+  <string name="MageArmor_ACSpecial">モルテンアース</string>
+  <string name="MageArmor_NotMage">メイジだけがこの鎧を使うことができます！</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">チェインメイル</string>
+  <string name="MailArmor_Desc">金属の輪を繋げて作った丈夫で柔軟な鎧。</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">プレートアーマー</string>
+  <string name="PlateArmor_Desc">巨大な金属のプレートは屈強な冒険者に十分な保護を与えてくれるが物凄く重い。</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">ローグの服</string>
+  <string name="RogueArmor_Desc">この暗い服装を身に着けているローグは\"スモークボム\"(本物の爆発物ではない)のトリックを使うことが出来ます:敵を煙に巻いて横に飛ぶことが出来ます。</string>
+  <string name="RogueArmor_ACSpecial">スモークボム</string>
+  <string name="RogueArmor_NotRogue">ローグだけがこの鎧を使うことができます！</string>
+  <string name="RogueArmor_Fov">あなたは跳んでフィールドを眺めることができます。</string>
+  <string name="RogueArmor_Prompt">跳ぶ場所を選んでください。</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">スケイルアーマー</string>
+  <string name="ScaleArmor_Desc">金属片を革のベストに縫い付けた、柔軟で丈夫な鎧。</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">戦士の鎧</string>
+  <string name="WarriorArmor_Desc">戦士はこの重そうな鎧で跳躍し、近くの敵にスタンを与えます。</string>
+  <string name="WarriorArmor_ACSpecial">英雄の跳躍</string>
+  <string name="WarriorArmor_NotWarrior">ウォリアーだけがこの鎧を使うことができます！</string>
+  <string name="WarriorArmor_Prompt">跳躍する方向を選んでください。</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">慕情の %s</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">逆熱交換の %s</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">弾む %s</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">追放の %s</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">根付く %s</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">代謝の %s</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">多重の %s</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">潜在的な %s</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">悪臭の %s</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">鈍感の %s</string>
+  <string name="Viscosity_Status">据え置き %d</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">据え置きダメージ (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s はあなたを倒しました...</string>
+</resources>

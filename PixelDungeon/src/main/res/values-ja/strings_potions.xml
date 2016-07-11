@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">%s のポーション</string>
+  <string name="Potion_Info">このフラスコには %s の液体が渦巻いて入っている。飲んだり投げたりしたらどうなるか誰か知っているか？</string>
+  <string name="Potion_ACDrink">飲む</string>
+  <string name="Potion_Harmfull">有害なポーション！</string>
+  <string name="Potion_Beneficial">有益なポーション</string>
+  <string name="Potion_Yes">はい、私は私が何をやっているか知っている</string>
+  <string name="Potion_No">いいえ、私は考えを変えました</string>
+  <string name="Potion_SureDrink">本当に飲んでもいいですか？ほとんどの場合、こんなポーションは敵に投げるべきです。</string>
+  <string name="Potion_SureThrow">本当に投げてもいいですか？ほとんどの場合、これは飲むべきです。</string>
+  <string name="Potion_Shatter">フラスコと一緒に %s の液体は飛散した</string>
+  <string-array name="Potion_Colors">
+    <item>空色</item>
+    <item>紅色</item>
+    <item>紺碧色</item>
+    <item>翡翠色</item>
+    <item>金色</item>
+    <item>赤紫色</item>
+    <item>炭色</item>
+    <item>象牙色</item>
+    <item>琥珀色</item>
+    <item>褐色</item>
+    <item>藍色</item>
+    <item>銀色</item>
+  </string-array>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">経験のポーション</string>
+  <string name="PotionOfExperience_Info">戦いの歴史が濃縮されたこの液体は、あなたの経験値を即座に上昇させます。</string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">冷気のポーション</string>
+  <string name="PotionOfFrost_Info">空気にさらすことで化学反応を起こし凍結雲を発生させる。それに触れた生き物は凍結して動くことができなくなる。</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">治癒のポーション</string>
+  <string name="PotionOfHealing_Info">瞬時にフルヘルスになり毒も治すエリクサー。</string>
+  <string name="PotionOfHealing_Apply">あなたは完全治癒しました。</string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">不可視のポーション</string>
+  <string name="PotionOfInvisibility_Info">このポーションを飲むと一時的に不可視になります。不可視化して敵から見えなくなります。敵を攻撃したり、杖やスクロールを使用すると効果は失われます。</string>
+  <string name="PotionOfInvisibility_Apply">あなたはあなたの手が透明になるのを見た！</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">浮揚のポーション</string>
+  <string name="PotionOfLevitation_Info">この珍しい液体を飲むと、あなたはホバリングするように浮き上がり、トラップなどを難なく越えられます。しかし、炎やガスは空気中にあるため避けられません。</string>
+  <string name="PotionOfLevitation_Apply">あなたは浮き上がった！</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">液化炎のポーション</string>
+  <string name="PotionOfLiquidFlame_Info">このフラスコには、外気に触れると激しく燃え上がる化合物が入っています。</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <string name="PotionOfMight_Name">実力のポーション</string>
+  <string name="PotionOfMight_Info">この強力な液体は、あなたの筋肉に作用して、力を1ポイント、ヘルスを5ポイント上昇させます。</string>
+  <string name="PotionOfMight_Apply">あなたの体に新しい力がみなぎる。</string>
+  <string name="PotionOfMight_StaApply">力 +1、ヘルス +5</string>
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">透視のポーション</string>
+  <string name="PotionOfMindVision_Info">これを飲んだ後、あなたは壁やドアの向こうにいる生き物の気配をも感知することができるようになる。</string>
+  <string name="PotionOfMindVision_Apply1">あなたはぼんやりと他の生き物の気配を感じるようになった！</string>
+  <string name="PotionOfMindVision_Apply2">あなたは今、この周辺に他の気配を感じない。</string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <string name="PotionOfParalyticGas_Name">麻痺ガスのポーション</string>
+  <string name="PotionOfParalyticGas_Info">空気にさらすことでフラスコの中の液体は痺れる黄色い霧を発生させる。この霧を吸うと誰であろうと瞬時に麻痺して動けなくなる。このアイテムは遠くの敵を捕らえるために投げることが出来ます。</string>
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <string name="PotionOfPurity_Name">浄化のポーション</string>
+  <string name="PotionOfPurity_Info">この試薬は即座にエリアの有害なガスを中和します。飲むことであなたはそれらのガスから一時的に耐性を得ます。</string>
+  <string name="PotionOfPurity_Freshness">あなたはとても新鮮な空気を感じます。</string>
+  <string name="PotionOfPurity_NoSmell">あなたはあらゆる臭いを感じなくなった！</string>
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">力のポーション</string>
+  <string name="PotionOfStrength_Info">この強力な液体は、あなたの筋肉に作用して、力を1ポイント上昇させます。</string>
+  <string name="PotionOfStrength_Apply">あなたの体に新しい力がみなぎる。</string>
+  <string name="PotionOfStrength_StaApply">力 +1</string>
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+  <string name="PotionOfToxicGas_Name">毒ガスのポーション</string>
+  <string name="PotionOfToxicGas_Info">加圧されたガラスを開栓するか砕くことで、内部の毒ガスが爆発的に広がります。あなたはこのポーションを手で開栓するのではなく、敵に投げつける選択をするでしょう。</string>
+</resources>

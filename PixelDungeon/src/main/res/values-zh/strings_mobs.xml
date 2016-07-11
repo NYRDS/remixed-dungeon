@@ -177,6 +177,7 @@
   <string name="Swarm_Name">蝇群</string>
   <string name="Swarm_Gender">masculine</string>
   <string name="Swarm_Name_Objective">蝇群</string>
+  <string name="Swarm_Desc">这种食腐生物群的飞行声音真的很烦。每次对它们的非魔法攻击都会使它们分裂成两群。</string>
   <string name="Swarm_Defense">回避</string>
   <!--STRINGS OF Tengu CLASS-->
   <string name="Tengu_Name">天狗</string>
@@ -245,10 +246,10 @@
   <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
   <string name="SpiderExploding_Desc">这些蜘蛛工人在和平时期一直努力工作，可是一旦遇到敌人，就会毫不犹豫的抓起自己路过的第一株植物，并把自己当成活体炸弹冲向他们。</string>
   <!--STRINGS OF SpiderMind CLASS-->
-  <string name="SpiderMind_Name">心控蜘蛛</string>
+  <string name="SpiderMind_Name">灵能蜘蛛</string>
   <string name="SpiderMind_Gender">masculine</string>
-  <string name="SpiderMind_Name_Objective">心控蜘蛛</string>
-  <string name="SpiderMind_Desc">这些看似脆弱的蜘蛛掌握着独一无二的精神力量，甚至能操控一个群体。心控蜘蛛能够控制所有活着的生物，但是它们都是懦夫。</string>
+  <string name="SpiderMind_Name_Objective">灵能蜘蛛</string>
+  <string name="SpiderMind_Desc">这些看似弱小的蜘蛛掌握着独一无二的精神力量，使它们能够掌控一个群体。灵能蜘蛛能够掌控所有活着的生物，但是它们身体相当脆弱。</string>
   <!--STRINGS OF SpiderQueen CLASS-->
   <string name="SpiderQueen_Name">蜘蛛女王</string>
   <string name="SpiderQueen_Gender">feminine</string>

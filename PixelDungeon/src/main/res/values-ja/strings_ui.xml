@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Play</string>
+  <string name="TitleScene_Highscores">ハイスコア</string>
+  <string name="TitleScene_Badges">バッヂ</string>
+  <string name="TitleScene_About">About</string>
+  <string name="TitleScene_InternalStorageLow">内部ストレージに\nスペースが足りません\n進行状況が失われる可能性があります！</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon は、Watabou氏の Pixel Dungeon を元にして NYRDS が制作しました。\n\nCode &amp; graphics: Watabou &amp; NYRDS &amp; ThEnigma314\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD  i18n code\n\nE-Mail us:\n\n</string>
+  <string name="AboutScene_OurSite">ウェブサイト:</string>
+  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">E-Mail を送る</string>
+  <string name="AboutScene_TranslatedBy">English - primary localization for Remixed Pixel Dungeon maintained by NYRDS\nSpecical thanks to:\nOmen267901\nJapanese translation by SamuraiF</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">トップランキング</string>
+  <string name="RankingsScene_Total">プレイしたゲームの合計:</string>
+  <string name="RankingsScene_NoGames">まだゲームをプレイしていません。</string>
+  <string name="RankingsScene_NoInfo">追加情報はありません</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Load Game</string>
+  <string name="StartScene_New">New Game</string>
+  <string name="StartScene_Erase">進行中のゲームを消去</string>
+  <string name="StartScene_Depth">階層: %1$d\nレベル: %2$d</string>
+  <string name="StartScene_Really">本当に新しいゲームを始めていいですか？</string>
+  <string name="StartScene_Warning">現在進行中のゲームが消去されます。</string>
+  <string name="StartScene_Yes">はい、新しいゲームを始めます</string>
+  <string name="StartScene_No">いいえ、メインメニューに戻ります</string>
+  <string name="StartScene_Unlock">このキャラクタークラスをアンロックするには、他のクラスで3番目のボスを倒す必要があります</string>
+  <string name="StartScene_UnlockElf">このキャラクタークラスをアンロックするには、他のクラスで4番目のボスを倒す必要があります</string>
+  <string name="StartScene_WinGame">\"挑戦\"をアンロックするには、いずれかのキャラクタークラスでゲームをクリアする必要があります。</string>
+  <string name="StartScene_DifficultySelect">あなたの運命を選択</string>
+  <string name="StartScene_DifficultyEasy">やさしい (広告付き)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">セーブありのふつう (広告付き)</string>
+  <string name="StartScene_DifficultyNormal">ふつう</string>
+  <string name="StartScene_DifficultyExpert">むずかしい</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">下層へ...</string>
+  <string name="InterLevelScene_Ascending">上層へ...</string>
+  <string name="InterLevelScene_Loading">ロード中...</string>
+  <string name="InterLevelScene_Resurrecting">復活中...</string>
+  <string name="InterLevelScene_Returning">帰還中...</string>
+  <string name="InterLevelScene_Falling">落下中...</string>
+  <string name="InterLevelScene_FileNotFound">何らかの理由でファイルが見つかりません...</string>
+  <string name="InterLevelScene_ErrorGeneric">何かが違っています...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Game Over</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">既定の拡大率</string>
+  <string name="WndSettings_TextScaleDefault">既定のフォント</string>
+  <string name="WndSettings_ScaleUp">UIを拡大</string>
+  <string name="WndSettings_Immersive">没入モード</string>
+  <string name="WndSettings_Music">Music</string>
+  <string name="WndSettings_Sound">Sound FX</string>
+  <string name="WndSettings_Brightness">明るさ調整</string>
+  <string name="WndSettings_SwitchPort">縦向きへ変更</string>
+  <string name="WndSettings_SwitchLand">横向きへ変更</string>
+  <string name="WndSettings_SelectLanguage">言語選択</string>
+  <string name="WndSettings_SecondQuickslot">二番目のクイックスロット</string>
+  <string name="WndSettings_ThirdQuickslot">三番目のクイックスロット</string>
+  <string name="WndSettings_ExperementalFont">新しいフォント</string>
+  <string name="WndSettings_ClassicFont">元のフォント</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">スロットを選択</string>
+  <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">MODを選択</string>
+</resources>

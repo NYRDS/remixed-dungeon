@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">Remixed Pixel Dungeon</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">あなたが来る以前に様々な冒険者が中に入って行きました。そのうちの何人かは宝物と魔法の古物を持ち帰りましたが、その他のほとんどの者はどうなったかわかりません。しかし、ダンジョンの奥深くにあると言われるイェンダーの魔除けを取得したものはいません。\n\nあなたは挑戦のために十分な準備をしましたが、一番重要なのは幸運の微笑みであると感じています。さぁ、あなたの冒険が始まる時です！</string>
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Exit">今日は終わりにしましょう</string>
+  <string name="AmuletScene_Stay">私はまだ終わらない</string>
+  <string name="AmuletScene_Txt">あなたの目的はイェンダーの魔除けを手に入れることです。その力で世界を手に入れることもできるし、人々の平和や繁栄も得られるし、それ以外でも。とにかく、あなたの人生の変更とともにこのゲームは終りを迎えます。ですが、もう少しの間残るという選択肢もあります。</string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Pixel Dungeon のレベル %d へ辿り着きました！</string>
+  <string name="GameScene_WelcomeBack">Pixel Dungeon のレベル %d へ戻ってきました！</string>
+  <string name="GameScene_NightMode">夜のダンジョンは更に危険なため用心してください！</string>
+  <string name="GameScene_Chasm">あなたの足音がダンジョン内に響きます。</string>
+  <string name="GameScene_Water">あなたは水の撥ねる音を聞いた。</string>
+  <string name="GameScene_Grass">空気中に濃厚な植物の匂い。</string>
+  <string name="GameScene_Secrets">このフロアにはたくさんの秘密が隠されている雰囲気があります。</string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">モブ</string>
+  <string name="Char_Name_Objective">モブ</string>
+  <string-array name="Char_Hit">
+    <item>%1$s は %2$s を攻撃</item>
+    <item>%1$s は %2$s を攻撃</item>
+    <item>%1$s は %2$s を攻撃</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s はあなたを殺した...</item>
+    <item>%s はあなたを殺した...</item>
+    <item>%s はあなたを殺した...</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s は %2$s を倒しました</item>
+    <item>%1$s は %2$s を倒しました</item>
+    <item>%1$s は %2$s を倒しました</item>
+  </string-array>
+  <string name="Char_YouMissed">%1$s はあなたの攻撃を %2$s</string>
+  <string name="Char_SmbMissed">%1$s は %3$s の攻撃を %2$s</string>
+  <string name="Char_OutParalysis">痛みは %s から麻痺を解いた</string>
+  <string-array name="Char_StaDodged">
+    <item>回避した</item>
+    <item>回避した</item>
+    <item>回避した</item>
+  </string-array>
+  <string name="Char_StaPoisoned">毒化</string>
+  <string name="Char_StaAmok">逆上</string>
+  <string name="Char_StaSlowed">遅滞</string>
+  <string name="Char_StaMind">精神</string>
+  <string name="Char_StaVision">視覚</string>
+  <string name="Char_StaParalysed">麻痺化</string>
+  <string name="Char_StaFrightened">恐怖</string>
+  <string name="Char_StaRooted">根付き</string>
+  <string name="Char_StaCrippled">鈍化</string>
+  <string name="Char_StaBleeding">出血</string>
+  <string name="Char_StaDizzy">目眩</string>
+  <string name="Char_StaInvisible">透明</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">テキストは判読できません...</string>
+  <string name="Dungeon_DeadEnd">あなたはここで何をしている？！</string>
+  <string-array name="Dungeon_Tips">
+    <item>自分の力を過大評価しないこと、武器や鎧を扱うのに重要です。</item>
+    <item>ダンジョン内のすべてのドアが最初から見えているとは限りません。探索して隠されたドアを見つけられます。</item>
+    <item>良い武器を扱う方法は自分の力を上げる方法だけではありません。強化のスクロールで必要な力を下げることも出来ます。</item>
+    <item>ダンジョンの深層にお金を使えるお店があります。最初の一箇所はレベル6です。</item>
+    <item>グーに注意！</item>
+    <item>ピクセル-マート - 冒険の成功に必要なものです！</item>
+    <item>できるだけ早くポーションとスクロールの鑑定をしましょう。先送りすると必要なときに困るでしょう。</item>
+    <item>空腹状態はまだいいですが、飢え状態は被害があります。</item>
+    <item>奇襲攻撃は命中率が良いです。例えば、敵が来るのを知っている時に閉じたドアの後ろで待ち伏せしたり。</item>
+    <item>天狗を出してはいけません！</item>
+    <item>ピクセル-マート - お金をかけて長生きしよう。</item>
+    <item>同時に複数のモンスターに襲われたらドアの後ろに後退してみてください。</item>
+    <item>もしあなたが燃焼して浮上しているなら、水で火を消すことは出来ません。</item>
+    <item>あなたは復活の際にすべてを失うので、複数のアンクを持っていても意味がありません。</item>
+    <item>危険！重機は手足の損傷や喪失、死亡を引き起こす可能性があります！</item>
+    <item>ピクセル-マート - ダンジョン内で安全な生活。</item>
+    <item>あなたが魔術武器を強化すると、魔術が失われる可能性があります。</item>
+    <item>変異の井戸は他の方法では得られないアイテムを得ることが出来ます。</item>
+    <item>武器に魔術付与する唯一の方法は、武器強化のスクロールで強化することです。</item>
+    <item>武器なしは陛下の面前にて許可されました！</item>
+    <item>ピクセル-マート - 悪魔ハンターのための特別価格！</item>
+    <item>テキストは悪魔の言語で書かれています。</item>
+    <item>テキストは悪魔の言語で書かれています。</item>
+    <item>テキストは悪魔の言語で書かれています。</item>
+  </string-array>
+  <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>ダイエット中</item>
+    <item>信仰は私の鎧</item>
+    <item>薬物恐怖症</item>
+    <item>不毛の土地</item>
+    <item>群知能</item>
+    <item>暗闇の中へ</item>
+  </string-array>
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_WellHealt">健康の井戸</string>
+  <string name="Journal_WellAwareness">意識の井戸</string>
+  <string name="Journal_WellTransmut">変異の井戸</string>
+  <string name="Journal_Alchemy">錬金釜</string>
+  <string name="Journal_Garden">庭園</string>
+  <string name="Journal_Statue">動く石像</string>
+  <string name="Journal_Ghost">悲しいゴースト</string>
+  <string name="Journal_Wandmaker">年老いたワンドメーカー</string>
+  <string name="Journal_Troll">トロールの鍛冶屋</string>
+  <string name="Journal_Imp">野心的なインプ</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Prompt">オーケー、契約は契約だ、あなたのために何ができるか: 俺は2つのアイテムを鍛え直して、より良い品質の物に変えることができる。</string>
+  <string name="WndBlacksmith_Select">鍛え直すアイテムを選択</string>
+  <string name="WndBlacksmith_Reforge">それらを鍛え直す</string>
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">ポーション</string>
+  <string name="WndCatalogus_Scrolls">スクロール</string>
+  <string name="WndCatalogus_Title">カタログ</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <string name="WndChallenges_Title">挑戦</string>
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">あなたはどちらの道をたどる？</string>
+  <string name="WndChooseWay_Cancel">私は後で決める</string>
+  <!--STRINGS OF WndClass CLASS-->
+  <string name="WndClass_Mastery">習熟</string>
+  <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">エラー</string>
+  <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">設定</string>
+  <string name="WndGame_Challenges">挑戦</string>
+  <string name="WndGame_Ranking">ランキング</string>
+  <string name="WndGame_Start">新しいゲームを始める</string>
+  <string name="WndGame_menu">メインメニュー</string>
+  <string name="WndGame_Exit">Pixel Dungeon をやめる</string>
+  <string name="WndGame_Return">ゲームに戻る</string>
+  <string name="WndGame_Save">セーブ</string>
+  <string name="WndGame_Load">ロード</string>
+  <!--STRINGS OF WndHero CLASS-->
+  <string name="WndHero_Stats">統計</string>
+  <string name="WndHero_Buffs">バフ</string>
+  <string name="WndHero_Exp">経験</string>
+  <string name="WndHero_Str">力</string>
+  <string name="WndHero_Health">ヘルス</string>
+  <string name="WndHero_Gold">集めたゴールド</string>
+  <string name="WndHero_Depth">到達最下層</string>
+  <string name="WndHero_StaTitle">レベル %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">カタログ</string>
+  <string name="WndHero_StaJournal">日記</string>
+  <!--STRINGS OF WndImp CLASS-->
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <!--STRINGS OF WndJournal CLASS-->
+  <!--STRINGS OF WndRanking CLASS-->
+  <!--STRINGS OF WndResurrect CLASS-->
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <!--STRINGS OF WndStory CLASS-->
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <!--STRINGS OF QuickSlot CLASS-->
+  <!--STRINGS OF Item CLASS-->
+  <!--STRINGS OF EquipableItem CLASS-->
+  <!--STRINGS OF Heap CLASS-->
+  <!--STRINGS OF Amulet CLASS-->
+  <!--STRINGS OF Ankh CLASS-->
+  <!--STRINGS OF ArmorKit CLASS-->
+  <!--STRINGS OF Dewdrop CLASS-->
+  <!--STRINGS OF DewVial CLASS-->
+  <!--STRINGS OF Gold CLASS-->
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <!--STRINGS OF Stylus CLASS-->
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <!--STRINGS OF Torch CLASS-->
+  <!--STRINGS OF Weightstone CLASS-->
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <!--STRINGS OF Keyring CLASS-->
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <!--STRINGS OF SeedPouch CLASS-->
+  <!--STRINGS OF WandHolster CLASS-->
+  <!--STRINGS OF PotionBelt CLASS-->
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <!--STRINGS OF IronKey CLASS-->
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <!--STRINGS OF DarkGold CLASS-->
+  <!--STRINGS OF DriedRose CLASS-->
+  <!--STRINGS OF DwarfToken CLASS-->
+  <!--STRINGS OF Pickaxe CLASS-->
+  <!--STRINGS OF RatSkull CLASS-->
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Foliage CLASS-->
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <!--STRINGS OF ToxicGas CLASS-->
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <!--STRINGS OF Web CLASS-->
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <!--STRINGS OF Barkskin CLASS-->
+  <!--STRINGS OF Bleeding CLASS-->
+  <!--STRINGS OF Blindness CLASS-->
+  <!--STRINGS OF Burning CLASS-->
+  <!--STRINGS OF Charm CLASS-->
+  <!--STRINGS OF Combo CLASS-->
+  <!--STRINGS OF Cripple CLASS-->
+  <!--STRINGS OF Frost CLASS-->
+  <!--STRINGS OF Fury CLASS-->
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <!--STRINGS OF Hunger CLASS-->
+  <!--STRINGS OF Invisibility CLASS-->
+  <!--STRINGS OF Levitation CLASS-->
+  <!--STRINGS OF Light CLASS-->
+  <!--STRINGS OF MindVision CLASS-->
+  <!--STRINGS OF Ooze CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Roots CLASS-->
+  <!--STRINGS OF Shadows CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF SnipersMark CLASS-->
+  <!--STRINGS OF Vertigo CLASS-->
+  <!--STRINGS OF Weakness CLASS-->
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+</resources>

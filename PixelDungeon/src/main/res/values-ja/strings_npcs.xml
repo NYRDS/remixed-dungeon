@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Name">トロールの鍛冶屋</string>
+  <string name="Blacksmith_Desc">このトロールの鍛冶屋はすべてのトロールと同じような見た目 : 彼は背が高く猫背で、彼の肌の色と質感は石に似ている。トロールの鍛冶屋はその風貌に似合わない小さな道具をいじっています。</string>
+  <string name="Blacksmith_Gold1">おい人間！必要な物があるんだが？このつるはしを取り、_黒金鉱石_を15ピースで十分だからくれないか。なんだって？いくら払うかだって？お前は貪欲だな...\nわかったわかった、俺は払える金は持ってないが、お前のために鍛冶をしてやる。お前はラッキーだ、このあたりの鍛冶屋は俺だけだからな。</string>
+  <string name="Blacksmith_Blood1">おい人間！必要な物があるんだが？このつるはしを取り、_コウモリを殺せ_、俺はその頭の血がほしい。なんだって？いくら払うかだって？お前は貪欲だな...\nわかったわかった、俺は払える金は持ってないが、お前のために鍛冶をしてやる。お前はラッキーだ、このあたりの鍛冶屋は俺だけだからな。</string>
+  <string name="Blacksmith_Txt2">俺をからかってんのか？どこに俺のつるはしがあるんだ？！</string>
+  <string name="Blacksmith_Txt3">黒金鉱石。15ピース。そんなに難しいか？</string>
+  <string name="Blacksmith_Txt4">俺はつるはしでコウモリの血が欲しいと言った。切れ切れ！</string>
+  <string name="Blacksmith_Completed">おぉ、戻ってきたか...遅かったな。</string>
+  <string name="Blacksmith_GetLost">俺は忙しいんだ。失せろ！</string>
+  <string name="Blacksmith_LooksBetter">あなたの %s は良くなったように見えます</string>
+  <string name="Blacksmith_Verify1">違うアイテムを2つ選んで、同じアイテムではない！</string>
+  <string name="Blacksmith_Verify2">同じタイプのアイテムを2つ選べ！</string>
+  <string name="Blacksmith_Verify3">なんだかわからん物では作業できん、まず識別しろ！</string>
+  <string name="Blacksmith_Verify4">呪われたアイテムは無理だ！</string>
+  <string name="Blacksmith_Verify5">これはゴミだ、品質が悪すぎる！</string>
+  <string name="Blacksmith_Verify6">これらのアイテムを再び鍛えることは出来ない！</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Name">悲しいゴースト</string>
+  <string name="Ghost_Desc">ゴーストはかろうじて見える。それは悲しい顔をしてぼんやりと光っている。</string>
+  <string name="Ghost_Rose1">ハロー冒険者... 私もかつてはあなたのようだった - 強いと信じた... そして今は死んでいる... しかし私はここから離れられない... _乾燥したバラ_を持っていた... 私にとって大切な物だ... あるモンスターが私から盗んでいった...</string>
+  <string name="Ghost_Rose2">お願いだ... 助けてくれ... バラを見つけてくれ...</string>
+  <string name="Ghost_Rat1">ハロー冒険者... 私もかつてはあなたのようだった - 強いと信じた... そして今は死んでいる... しかし私はここから離れられない... 復讐したい... _太ったネズミ_を殺してくれ、ヤツが俺の命を奪った...</string>
+  <string name="Ghost_Rat2">お願いだ... 助けてくれ... 醜いアイツを殺してくれ...</string>
+  <string name="Ghost_Defense">回避した</string>
+  <string name="FetidRat_Name">太ったネズミ</string>
+  <string name="FetidRat_Name_Objective">太ったネズミ</string>
+  <string name="FetidRat_Gender">弱々しい</string>
+  <string name="FetidRat_Desc">この有袋ネズミは通常のものよりとても大きい。それは不潔な空気で囲まれています。</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Name">ハリネズミ</string>
+  <string name="Hedgehog_Desc">そのハリネズミはビクビクしているように見えます。</string>
+  <string name="Hedgehog_Info1">あなたもクマを探していますか？</string>
+  <string name="Hedgehog_Info2">霧の中の馬はどうだ？</string>
+  <string name="Hedgehog_Info3">あなたはお茶とラズベリージャムは好きですか？</string>
+  <string name="Hedgehog_Info4">このパイを取る</string>
+  <string name="Hedgehog_ImLate">私は遅れた、とても遅れた...</string>
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Name">野心的なインプ</string>
+  <string name="Imp_Desc">インプは低級悪魔です。彼らは力も魔法の才能も無いことが知られている。しかし、彼らはとても賢く社交的です。多くのインプは悪魔ではないものに囲まれて生きるのを好みます。</string>
+  <string name="Imp_Defense">回避した</string>
+  <string name="Imp_Golems1">お前は冒険者か？冒険者達は大好きだ！お前は何かを得るために何かを殺すことができるはずだ。合ってるか？あくまで褒美のためにな ;) \n\n私の場合その対象がこの _ゴーレム_ だ。私はここで小さなビジネスを始めたいが、この鈍いゴーレムがビジネスには邪魔だ！彷徨う花崗岩の塊と交渉するのは非常に困難だコンチクショウ！殺してくれないだろうか... 報酬の6つはあなたのものだ。</string>
+  <string name="Imp_Golems2">ゴーレム狩りはどうなった？</string>
+  <string name="Imp_Monks1">お前は冒険者か？冒険者達は大好きだ！お前は何かを得るために何かを殺すことができるはずだ。合ってるか？あくまで褒美のためにな ;) \n\n私の場合その対象がこの _モンク_ だ。私はここで小さなビジネスを始めたいが、これらの狂人は自分のために何も買わないどころか、他の客を怯えさせる。殺してくれないだろうか... 報酬の8つはあなたのものだ。</string>
+  <string name="Imp_Monks2">おぉ、生きてたか！私はお前のカンフーが強いことを知っていたぞ ;) モンクの証拠品を忘れるなよ。</string>
+  <string name="Imp_Cya">またな、%s ！</string>
+  <string name="Imp_Hey">なぁ、%s ！</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Name">野心的なインプ</string>
+  <string name="ImpShopkeeper_Desc">インプは低級悪魔です。彼らは力も魔法の才能も無いことが知られている。しかし、彼らはとても賢く社交的です。多くのインプは悪魔ではないものに囲まれて生きるのとビジネスを好みます。</string>
+  <string name="ImpShopkeeper_Greetings">ハロー、友人よ！</string>
+  <!--STRINGS OF MirrorImage CLASS-->
+  <string name="MirrorImage_Name">ミラーイメージ</string>
+  <string name="MirrorImage_Name_Objective">ミラーイメージ</string>
+  <string name="MirrorImage_Gender">力強い</string>
+  <string name="MirrorImage_Desc">この幻影はあなたにとても良く似ているが、青白く少し震えている。</string>
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Name">ネズミの王</string>
+  <string name="RatKing_Desc">このネズミは普通の有袋ネズミより少し大きく、頭の上に小さな王冠をつけています。</string>
+  <string name="RatKing_Info1">私は眠っていない！</string>
+  <string name="RatKing_Info2">それはなんだ？私に戯れ言の時間など無い。我が王国にルールは無用だ！</string>
+  <string name="RatKing_Info3">おまえはどうやる、小さな生き物、私達ネズミらをかき乱す？！</string>
+  <string name="RatKing_Died">王は死んだ。王様バンザイ！</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <string name="Shopkeeper_Name">店主</string>
+  <string name="Shopkeeper_Desc">この恰幅のいい男はダンジョンよりも大都市の貿易地区が似合うだろう。彼がなぜここでビジネスをするのか、価格で説明をしている。</string>
+  <string name="Shopkeeper_Sell">販売するアイテムを選択</string>
+  <!--STRINGS OF WandMaker CLASS-->
+  <string name="WandMaker_Name">年老いたワンドメーカー</string>
+  <string name="WandMaker_Desc">この年老いているが壮健な紳士は、困惑した表情をしている。彼はマジックシールドで守られている。</string>
+  <string name="WandMaker_Defense">吸収された</string>
+  <string name="WandMaker_Berry1">おぉ、こんな場所でちゃんとした人に会うなんて嬉しい驚きだ！私は珍しい材料のためにここに来ました - _ロトベリーの種子_。魔法の使い手なので、ここらのモンスターから自分自身は守れるが、恥ずかしながら時間をかけ過ぎた。私を助けてくれるだろうか？お礼として私の最高の杖の1つを譲ろう。</string>
+  <string name="WandMaker_Berry2">ロトベリーの種子はあったかい、%s ？ない？心配しないでいい、私は急いでないから。</string>
+  <string name="WandMaker_Dust1">おぉ、こんな場所でちゃんとした人に会うなんて嬉しい驚きだ！私は珍しい材料のためにここに来ました - _コープスダスト_。これは骸骨の亡骸から手に入る、ダンジョンには十分な数があるだろう。魔法の使い手なので、ここらのモンスターから自分自身は守れるが、恥ずかしながら時間をかけ過ぎた。私を助けてくれるだろうか？お礼として私の最高の杖の1つを譲ろう。</string>
+  <string name="WandMaker_Dust2">コープスダストはあったかい、%s ？骨の山は見ればすぐわかるでしょう。</string>
+  <string name="WandMaker_RotberryName">ロトベリー</string>
+  <string name="WandMaker_RotberryDesc">この低木の果実は甘い、死のような甘さ。</string>
+  <string name="WandMaker_RotberryInfo">種子はダンジョン全体に咆哮を響かせます！</string>
+</resources>

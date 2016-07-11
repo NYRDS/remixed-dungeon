@@ -61,15 +61,15 @@
   </string-array>
   <!--STRINGS OF Slow CLASS-->
   <string-array name="Slow_Name">
-    <item>冰寒%s</item>
-    <item>冰寒%s</item>
-    <item>冰寒%s</item>
+    <item>寒冰%s</item>
+    <item>寒冰%s</item>
+    <item>寒冰%s</item>
   </string-array>
   <!--STRINGS OF Swing CLASS-->
   <string-array name="Swing_Name">
-    <item>狂乱%s</item>
-    <item>狂乱%s</item>
-    <item>狂乱%s</item>
+    <item>野蛮%s</item>
+    <item>野蛮%s</item>
+    <item>野蛮%s</item>
   </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
@@ -114,10 +114,15 @@
   <string name="Knuckles_Gender">masculine</string>
   <!--STRINGS OF Longsword CLASS-->
   <string name="Longsword_Name">长剑</string>
+  <string name="Longsword_Info">巨大刀刃，削铁如泥。</string>
   <string name="Longsword_Gender">masculine</string>
   <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">硬头锤</string>
+  <string name="Mace_Info">铁头在上，伤害超群。</string>
   <string name="Mace_Gender">feminine</string>
   <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">铁头棍</string>
+  <string name="Quarterstaff_Info">木制短棍，两头套铁。</string>
   <string name="Quarterstaff_Gender">masculine</string>
   <!--STRINGS OF ShortSword CLASS-->
   <string name="ShortSword_Name">短剑</string>
@@ -133,29 +138,57 @@
   <string name="Spear_Gender">neuter</string>
   <!--STRINGS OF Sword CLASS-->
   <string name="Sword_Name">单手剑</string>
+  <string name="Sword_Info">这种锋利的刀刃可不会让你失望的。</string>
   <string name="Sword_Gender">masculine</string>
   <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">战锤</string>
+  <string name="WarHammer_Info">没有多少生物可以承受这种武器的碾压，但只有少数强者可以将其轻松使用。</string>
   <string name="WarHammer_Gender">masculine</string>
   <!--PACKAGE /weapon/missiles-->
   <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">投掷武器</string>
+  <string name="MissileWeapon_Yes">是的，我知道我在做什么</string>
+  <string name="MissileWeapon_No">不，我改主意了</string>
+  <string name="MissileWeapon_Sure">你确定要将其当做近战武器？</string>
+  <string name="MissileWeapon_Info1">
+\n\n这件武器平均造成%d点伤害。</string>
+  <string name="MissileWeapon_Info2">因为你的力量不足，你在使用这把%s攻击时精准和速度会降低。</string>
+  <string name="MissileWeapon_Info3">因为你额外的力量，你在使用这把%s攻击时伤害增加了。</string>
+  <string name="MissileWeapon_Info4">
+\n\n你已经握着这件%s。</string>
   <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name"> 回旋镖</string>
+  <string name="Boomerang_Info">扔出，击中，回手，就是这样。</string>
   <string name="Boomerang_Gender">masculine</string>
   <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">麻痹飞镖</string>
+  <string name="CurareDart_Info">造成不了太大伤害，但能麻痹目标一会。</string>
   <string name="CurareDart_Gender">masculine</string>
   <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">飞镖</string>
+  <string name="Dart_Info">投掷它来伤害敌人。</string>
   <string name="Dart_Gender">masculine</string>
   <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">燃烧飞镖</string>
+  <string name="IncendiaryDart_Info">点燃目标。</string>
   <string name="IncendiaryDart_Gender">masculine</string>
   <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">标枪</string>
+  <string name="Javelin_Info">尖头破空。</string>
   <string name="Javelin_Gender">neuter</string>
   <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">手里剑</string>
+  <string name="Shuriken_Info">刀面锋利，投之迅速。</string>
   <string name="Shuriken_Gender">masculine</string>
   <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">飞斧</string>
+  <string name="Tamahawk_Info">看上去这飞斧并不重，但它依然需要足够的力量来有效使用。</string>
   <string name="Tamahawk_Gender">masculine</string>
   <!--STRINGS OF Kusarigama CLASS-->
   <string name="Kusarigama_Gender">feminine</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">混沌剑</string>
+  <string name="ChaosSword_Info">混乱为刃，力量蕴内。刀身发颤，力能开山。唯有强者，方能使用。</string>
   <string name="ChaosSword_Gender">masculine</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">混沌弓</string>
