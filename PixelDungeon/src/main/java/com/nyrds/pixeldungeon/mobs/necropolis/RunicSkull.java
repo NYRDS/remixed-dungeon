@@ -11,6 +11,9 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.utils.Random;
 
 public class RunicSkull extends MultiKindMob {
+
+	protected boolean activated = false;
+
 	public RunicSkull() {
 
 		hp(ht(50));
@@ -33,8 +36,15 @@ public class RunicSkull extends MultiKindMob {
 	static public RunicSkull makeNewSkull(int k) {
 		RunicSkull skull = new RunicSkull();
 		skull.kind = k;
-
 		return skull;
+	}
+
+	public void Activate() {
+		this.activated = true;
+	}
+
+	public void Deactivate() {
+		this.activated = false;
 	}
 
 	@Override

@@ -25,6 +25,7 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -34,6 +35,10 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 3;
+
+    private RunicSkull activatedSkull = null;
+
+    public HashSet<RunicSkull> skulls   = new HashSet<>();
 
     {
         hp(ht(120));
@@ -84,6 +89,22 @@ public class Lich extends Boss {
             });
         }
     }
+
+    protected void activateRandomSkull(RunicSkull skull){
+        if(activatedSkull !=null){
+            activatedSkull.Deactivate();
+        }
+
+        Mob mob = Dungeon.level.getRandomMob();
+        while(mob != null){
+            mob.remove();
+            mob = Dungeon.level.getRandomMob();
+        }
+            skull.Activate();
+
+    }
+
+
 
     @Override
     protected boolean act() {
