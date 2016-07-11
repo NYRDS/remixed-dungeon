@@ -90,20 +90,19 @@ public class Lich extends Boss {
         }
     }
 
-    protected void activateRandomSkull(RunicSkull skull){
+    protected void activateRandomSkull(){
         if(activatedSkull !=null){
             activatedSkull.Deactivate();
         }
-
-        Mob mob = Dungeon.level.getRandomMob();
-        while(mob != null){
-            mob.remove();
-            mob = Dungeon.level.getRandomMob();
-        }
-            skull.Activate();
+        RunicSkull skull = getRandomSkull();
+        skull.Activate();
+        activatedSkull = skull;
 
     }
 
+    public RunicSkull getRandomSkull() {
+        return Random.element(skulls);
+    }
 
 
     @Override
@@ -186,11 +185,11 @@ public class Lich extends Boss {
             int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
             if (Dungeon.level.cellValid(skullCell)) {
                 if (!occupiedPedestals.contains(skullCell)) {
-                    Mob mob = RunicSkull.makeNewSkull(i);
-                    Dungeon.level.spawnMob(mob);
-
-                    WandOfBlink.appear(mob, skullCell);
+                    RunicSkull skulls = RunicSkull.makeNewSkull(i);
+                    Dungeon.level.spawnMob(skulls);
+                    WandOfBlink.appear(skulls, skullCell);
                     occupiedPedestals.add(skullCell);
+                    skulls.add(skulls);
                     i++;
                 }
             }
