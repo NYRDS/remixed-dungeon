@@ -18,8 +18,11 @@
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Name_Objective">死灵法师</string>
     <string name="NecromancerNPC_Desc">这个中年男人看起来有点恼怒和激动。他穿着用骨片制成的混合甲。</string>
+    <string name="NecromancerNPC_Intro">啊！令人惊奇！一位活着的冒险着。太美妙了！哦..抱歉，有时候我太兴奋了。你看，我是一位死灵法师。研究死亡和死亡本身是我生活的一部分，但我已经对看到同样的事情一遍又一遍的发生而无聊了，这是我在这里的原因之一。而更重要的是，根据我的计算，这里会发生一件大事。一个古老的城市——_亡者之城_——的路口将在这里打开。我说的这些实在是太浪费我的时间了。我必须为此准备，_ 晚点再来_。</string>
+    <string name="NecromancerNPC_Message1">时间太少，时间太少...</string>
+    <string name="NecromancerNPC_Message2">我必须准备好。</string>
     <string name="NecromancerNPC_Message3">我能听到死者的呼唤。</string>
-    <string name="NecromancerNPC_Message4">在大墓地里有个十分特别的东西。</string>
+    <string name="NecromancerNPC_Message4">在亡者之城里有个十分特别的东西。</string>
 
     <string name="RatKing_Name_Objective">鼠王</string>
     <string name="RatKing_Gender">masculine</string>
