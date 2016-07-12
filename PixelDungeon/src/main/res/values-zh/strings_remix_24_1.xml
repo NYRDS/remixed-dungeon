@@ -17,6 +17,11 @@
     <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
+    <string name="SpiderMindAmber_Desc">琥珀蜘蛛是一种神秘而罕见的物种，拥有和灵能蜘蛛一样的精神力量，但比它要强壮的多。“琥珀”来源与它巨大脑袋的颜色，伴随着琥珀蜘蛛的精神和物理攻击，一个又一个受害者成为了它们的食物。</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">海盗帽</string>
     <string name="PirateSet_Info">啊哈！你现在看起来像是个海盗…或者说只是个该死的旱鸭子！？我希望你不是，毕竟那东西是海盗的，我的意思是……啊哈！</string>
 
     <!-- System Text-->

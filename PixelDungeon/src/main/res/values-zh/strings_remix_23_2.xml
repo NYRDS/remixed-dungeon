@@ -8,6 +8,7 @@
 
     <!-- STRINGS OF Halberd CLASS -->
     <string name="Halberd_Name">斧枪</string>
+    <string name="Halberd_Info">带尖头的单面斧。</string>
     <string name="Halberd_Gender">feminine</string>
 
     <!-- STRINGS OF WoodenCrossbow CLASS -->

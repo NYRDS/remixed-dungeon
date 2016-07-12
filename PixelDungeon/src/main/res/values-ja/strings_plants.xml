@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">植える</string>
+  <string name="Plant_Info">あなたが育てたい場所に %1$s の種子を投げてください。\n\n%2$s</string>
+  <string name="Plant_Seed">%s の種子</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">ドリームウィード</string>
+  <string name="Dreamweed_Desc">ドリームウィードに触れると、輝く混乱ガス雲が発生します。</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">アースルート</string>
+  <string name="Earthroot_Desc">生き物がアースルートに触れると、根が自然の鎧のようになって生き物に巻き付きます。</string>
+  <string name="Earthroot_Buff">ハーバルアーマー</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">フェードリーフ</string>
+  <string name="Fadeleaf_Desc">フェードリーフに触れた生き物は、現在の階層のランダムな場所へテレポートします。</string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">ファイアーブルーム</string>
+  <string name="Firebloom_Desc">何かがファイアーブルームに触れると、炎に包まれます。</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">アイスキャップ</string>
+  <string name="Icecap_Desc">アイスキャップに触れると、周辺のすべてのものを凍らせる花粉を放出します。</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">ソロウモス</string>
+  <string name="Sorrowmoss_Desc">ソロウモスは、猛毒でコーティングされたカミソリのような花びらを持つ花(苔ではない)です。</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">サングラス</string>
+  <string name="Sungrass_Desc">サングラスは、治癒性の樹液を持つことで有名です。</string>
+  <string name="Sungrass_Buff">ハーバルヒーリング</string>
+</resources>

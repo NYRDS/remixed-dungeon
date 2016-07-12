@@ -571,7 +571,7 @@ public abstract class Mob extends Char {
 
 	@SuppressWarnings("unchecked")
 	protected void dropLoot() {
-		if (loot != null && Random.Float() < lootChance) {
+		if (loot != null && Random.Float() <= lootChance) {
 			Item item;
 			if (loot instanceof Generator.Category) {
 

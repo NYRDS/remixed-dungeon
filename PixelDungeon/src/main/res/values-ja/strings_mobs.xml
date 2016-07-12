@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">本当の説明は近日公開！</string>
+  <string name="Mob_Died">あなたは何かが死ぬ音を聞いた</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus">この %s は眠っている</string>
+  <string name="Mob_StaWanderingStatus">この %s は彷徨っている</string>
+  <string name="Mob_StaHuntingStatus">この %s は狩りをしている</string>
+  <string name="Mob_StaFleeingStatus">この %s は逃げている</string>
+  <string name="Mob_StaPassiveStatus">この %s は消極的です</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">酸サソリ</string>
+  <string name="Acidic_Gender">力強い</string>
+  <string name="Acidic_Name_Objective">酸サソリ</string>
+  <string name="Acidic_Desc">これらの巨大なクモの悪魔のような生き物との近接戦闘は避けてください、長距離からトゲトゲスパイクを発射します。</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">アルビノネズミ</string>
+  <string name="Albino_Gender">力強い</string>
+  <string name="Albino_Name_Objective">アルビノネズミ</string>
+  <string name="Albino_Desc">有袋ネズミは下水の弱い住人です。ですが、積極的なのでたくさんいると危険です。まれにアルビノネズミが存在します。これは歯が異常に鋭いです。</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">バンディット</string>
+  <string name="Bandit_Gender">力強い</string>
+  <string name="Bandit_Name_Objective">バンディット</string>
+  <string name="Bandit_Desc">ダンジョンの深層は犯罪者の隠れ場所になっています。すべてではないが、彼らは長い間日光を浴びずに正気でいられる。彼ら狂賊共は誰から何を盗んだかなど覚えていない。この賊は何かでコーティングした短剣を持っている！</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">吸血コウモリ</string>
+  <string name="Bat_Gender">力強い</string>
+  <string name="Bat_Name_Objective">吸血コウモリ</string>
+  <string name="Bat_Desc">これらの素早くしぶとい洞窟の住人は、吸血することで自分より大きな敵をも倒します。</string>
+  <string name="Bat_Defense">回避した</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">ノールブルート</string>
+  <string name="Brute_Name_Objective">ノールブルート</string>
+  <string name="Brute_Desc">ノールブルートはとても大きく、強く、タフです。重傷を負った時には凶暴になり、更に多くのダメージを敵に与えます。</string>
+  <string name="Brute_Gender">力強い</string>
+  <string name="Brute_Enraged">%s は激怒した！</string>
+  <string name="Brute_StaEnraged">激怒</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">下水カニ</string>
+  <string name="Crab_Gender">力強い</string>
+  <string name="Crab_Name_Objective">下水カニ</string>
+  <string name="Crab_Desc">これらの巨大なカニは下水の食物連鎖の頂点にいます。彼らは非常に厚い殻を持ち、重い一撃に耐えることが出来ます。</string>
+  <string name="Crab_Defense">受け流し</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">力強い</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">このマシンは数世紀前のドワーフによって作られました。その後、ドワーフたちはこのマシンの交換を始めた。ゴーレムやエレメンタル、そして悪魔とも。この行為は文明の衰退を招きました。DM-300や同様のマシンは、建設や掘削、都市防衛などに使われました。</string>
+  <string name="DM300_Info1">DM-300は自己修復した！</string>
+  <string name="DM300_Info2">ミッション失敗。シャットダウン。</string>
+  <string name="DM300_Info3">侵入者発見。</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">ファイアーエレメンタル</string>
+  <string name="Elemental_Gender">力強い</string>
+  <string name="Elemental_Name_Objective">ファイアーエレメンタル</string>
+  <string name="Elemental_Desc">彷徨うファイアーエレメンタルは、偉大な存在の召喚時の副産物です。彼らの自然制御はとてもカオスで、それは最も強力な悪魔信奉者のようだ。</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">イビルアイ</string>
+  <string name="Eye_Gender">中性の</string>
+  <string name="Eye_Name_Objective">イビルアイ</string>
+  <string name="Eye_Desc">この悪魔の別名は\"憎悪のオーブ\"。なぜならそれは、敵を見たら即座にデスゲイズを発動し、時々、味方だろうが負傷者だろうが攻撃するからだ。</string>
+  <string name="Eye_Kill">%s のデスゲイズはあなたを倒しました...</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">ノールスカウト</string>
+  <string name="Gnoll_Gender">力強い</string>
+  <string name="Gnoll_Name_Objective">ノールスカウト</string>
+  <string name="Gnoll_Desc">ノールはハイエナのような人型種です。彼らは下水やダンジョンに住み、常にそこを危険な場所にしている。ノールスカウトは彼らの集団の大多数を占める。彼らは獣のように強くも、シャーマンのように知的でもない。</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">ゴーレム</string>
+  <string name="Golem_Gender">力強い</string>
+  <string name="Golem_Name_Objective">ゴーレム</string>
+  <string name="Golem_Desc">ドワーフは、彼らの機械技術の知識と元素結合の新たな力の融合を試みた。彼らはゴーレムの機械的ボディの\"魂\"に地霊を使用した。これが最も制御可能であると考えていた。しかし、儀式中の小さなミスが起こる可能性もある。</string>
+  <string name="Golem_Defense">ブロックした</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">グー</string>
+  <string name="Goo_Gender">弱々しい</string>
+  <string name="Goo_Name_Objective">グー</string>
+  <string name="Goo_Desc">グーはそこそこ知られている。それは生き物ではない可能性がある。下水の物質の集合体が自由意志を持った可能性がある。いずれにしても、闇の魔法が関わっているのは明らかだ。</string>
+  <string name="Goo_Info1">グーは自分自身を汲み上げています！</string>
+  <string name="Goo_Info2">グプン...グプン...</string>
+  <string name="Goo_Info3">グプン-グプン！</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">ドワーフの王</string>
+  <string name="King_Gender">力強い</string>
+  <string name="King_Name_Objective">ドワーフの王</string>
+  <string name="King_Desc">ドワーフの最後の王は、生と死のプロセスの知識を深く知っていた。彼は不老不死の儀式の裁判に参加するべきだと説得を受けていた。最後には彼はそれを得た - アンデッドの軍団と共に。</string>
+  <string name="King_Defense">受け流し</string>
+  <string name="King_Info1">お前は私を殺せない、%s...私は...不滅...</string>
+  <string name="King_Info2">いでよ、奴隷たち！</string>
+  <string name="King_Info3">さあ、どうする！</string>
+  <string name="Undead_Name">アンデッドドワーフ</string>
+  <string name="Undead_Gender">力強い</string>
+  <string name="Undead_Name_Objective">アンデッドドワーフ</string>
+  <string name="Undead_Desc">ドワーフの王の意思によって立ち上がる。これらのアンデッドドワーフはかつての彼の裁判所のメンバーでした。彼らはスケルトンだが素晴らしいヒゲを持っている。</string>
+  <string name="Undead_Defense">ブロックした</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">ミミック</string>
+  <string name="Mimic_Gender">力強い</string>
+  <string name="Mimic_Name_Objective">ミミック</string>
+  <string name="Mimic_Desc">ミミックは彼らが望む姿に擬態できる魔法生物です。ダンジョン内で彼らは宝箱に姿を変えます。なぜなら、冒険者が来ることを知っているからです。\";</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">ミミック</string>
+  <string name="MimicPie_Gender">力強い</string>
+  <string name="MimicPie_Name_Objective">ミミック</string>
+  <string name="MimicPie_Desc">ミミックは彼らが望む姿に擬態できる魔法生物です。これは大きな美味しそうなペースト状に見えます\";</string>
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">ドワーフモンク</string>
+  <string name="Monk_Gender">力強い</string>
+  <string name="Monk_Name_Objective">ドワーフモンク</string>
+  <string name="Monk_Desc">これらのモンクは狂信的で、部外者から自分たちの街の秘密を守るためには自分自身をも犠牲にします。彼らはあらゆる武器や防具を使わず、芸術的とも言える格闘術を使います。</string>
+  <string name="Monk_Defense">受け流し</string>
+  <string name="Monk_Disarm">%1$s はあなたの手から %2$s を叩き落とした！</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">巨大ピラニア</string>
+  <string name="Piranha_Gender">弱々しい</string>
+  <string name="Piranha_Name_Objective">巨大ピラニア</string>
+  <string name="Piranha_Desc">これらの肉食魚は地下の水たまりの自然な住人ではありません。浸水宝物庫を保護するために特別に飼育されました。</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">有袋ネズミ</string>
+  <string name="Rat_Gender">弱々しい</string>
+  <string name="Rat_Name_Objective">有袋ネズミ</string>
+  <string name="Rat_Desc">有袋ネズミは下水の弱い住人です。ですが、積極的なのでたくさんいると危険です。</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">サソリ</string>
+  <string name="Scorpio_Gender">力強い</string>
+  <string name="Scorpio_Name_Objective">サソリ</string>
+  <string name="Scorpio_Desc">これらの巨大なクモの悪魔のような生き物との近接戦闘は避けてください、長距離からトゲトゲスパイクを発射します。</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">上級モンク</string>
+  <string name="Senior_Gender">力強い</string>
+  <string name="Senior_Name_Objective">上級モンク</string>
+  <string name="Senior_Desc">これらのモンクは狂信的で、部外者から自分たちの街の秘密を守るためには自分自身をも犠牲にします。彼らはあらゆる武器や防具を使わず、芸術的とも言える格闘術を使います。この特別なモンクは相手を無力化する技術を会得しています。</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">シャドウ</string>
+  <string name="Shadow_Gender">弱々しい</string>
+  <string name="Shadow_Name_Objective">シャドウ</string>
+  <string name="Shadow_Desc">シャドウは古い刑務所の遺跡を静かに彷徨う。時折、自分自身を冒険者に見せる。通常それは最新の冒険者だ。</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">ノールシャーマン</string>
+  <string name="Shaman_Gender">力強い</string>
+  <string name="Shaman_Name_Objective">ノールシャーマン</string>
+  <string name="Shaman_Desc">とても賢いノールは呪術的な魔法を習得できます。ノールシャーマンは戦力の不足を呪文で補います。部族内の誰が疑問に思おうとも、それを使うことを躊躇しない。</string>
+  <string name="Shaman_Killed">%s のライトニングボルトはあなたを倒しました...</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">シールデッドブルート</string>
+  <string name="Shielded_Gender">力強い</string>
+  <string name="Shielded_Name_Objective">シールデッドブルート</string>
+  <string name="Shielded_Defense">ブロックした</string>
+  <string name="Shielded_Desc">ノールブルートはとても大きく、強く、タフです。重傷を負った時には凶暴になり、更に多くのダメージを敵に与えます。このブルートは巨大な盾を身に着けている！</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">スケルトン</string>
+  <string name="Skeleton_Gender">力強い</string>
+  <string name="Skeleton_Name_Objective">スケルトン</string>
+  <string name="Skeleton_Desc">スケルトンは不運な冒険者とダンジョンの住人の骨で成り立っています。深層からの邪悪な魔法の影響で動き出す。彼らは十分な損傷を受けると骨が爆散して朽ちる。</string>
+  <string name="Skeleton_Defense">ブロックした</string>
+  <string name="Skeleton_Killed">あなたは骨の爆散によって倒された...</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">ケイヴスピナー</string>
+  <string name="Spinner_Gender">力強い</string>
+  <string name="Spinner_Name_Objective">ケイヴスピナー</string>
+  <string name="Spinner_Desc">これらの緑がかったフワフワのケイヴスパイダーは直接戦闘を避けようとします。クモの巣に絡まった犠牲者が毒でゆっくり死んでいくのを待つ方法を好みます。</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">動く石像</string>
+  <string name="Statue_Gender">弱々しい</string>
+  <string name="Statue_Name_Objective">動く石像</string>
+  <string name="Statue_Desc">あなたはあれをこのダンジョン内の彫像とは別の醜い彫像と思うだろう。しかし、赤く光る眼には恐怖を感じる。像自体は石で作られているが、%s 振り回す、本物のように。</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">サキュバス</string>
+  <string name="Succubus_Gender">力強い</string>
+  <string name="Succubus_Name_Objective">サキュバス</string>
+  <string name="Succubus_Desc">サキュバスは蠱惑的な女性(ゴシック風)のように見える悪魔です。サキュバスは魅了の魔法を使い、ヒーローは効果が解けるまで何もできなくなります。</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Name">ハエの群れ</string>
+  <string name="Swarm_Gender">力強い</string>
+  <string name="Swarm_Name_Objective">ハエの群れ</string>
+  <string name="Swarm_Desc">物凄い羽音の殺人的なハエの群れ。魔法以外のすべての攻撃は、二つの小さな群れに分割されますが、危険なことに変わりありません。</string>
+  <string name="Swarm_Defense">回避した</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">天狗</string>
+  <string name="Tengu_Gender">力強い</string>
+  <string name="Tengu_Name_Objective">天狗</string>
+  <string name="Tengu_Desc">天狗は古代の暗殺者一族の者です。これらの暗殺者は手裏剣や罠を駆使すると記載されている。</string>
+  <string name="Tengu_Info1">ついに自由に...</string>
+  <string name="Tengu_Info2">捕まえたぞ、%s！</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">シーフ</string>
+  <string name="Thief_Gender">力強い</string>
+  <string name="Thief_Name_Objective">シーフ</string>
+  <string name="Thief_Desc">ダンジョンの深層は犯罪者の隠れ場所になっています。すべてではないが、彼らは長い間日光を浴びずに正気でいられる。彼ら狂賊共は誰から何を盗んだかなど覚えていない。</string>
+  <string name="Thief_Stole">%1$s はあなたから %2$s を盗んだ！</string>
+  <string name="Thief_Carries">
+\n\n%1$s は _%2$s_ を運んでいる。明らかに盗まれたものだ。</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Name">ドワーフウォーロック</string>
+  <string name="Warlock_Gender">力強い</string>
+  <string name="Warlock_Name_Objective">ドワーフウォーロック</string>
+  <string name="Warlock_Desc">難解な工学技術から切り替えたドワーフは、ウォーロックとして街での権力を握った。彼らは元素魔法を始めたが、すぐに悪魔術と死霊術に切り替えた。</string>
+  <string name="Warlock_Killed">%s のシャドウボルトはあなたを倒しました...</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Name">レイス</string>
+  <string name="Wraith_Gender">力強い</string>
+  <string name="Wraith_Name_Objective">レイス</string>
+  <string name="Wraith_Desc">レイスは罪人の怨霊です。幽体なため通常武器では命中させるのが非常に困難です。</string>
+  <string name="Wraith_Defense">回避した</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">ヨグ-ゼヴァ</string>
+  <string name="Yog_Gender">力強い</string>
+  <string name="Yog_Name_Objective">ヨグ-ゼヴァ</string>
+  <string name="Yog_Desc">ヨグ-ゼヴァは古き神で、混沌の地の強力な存在だ。前世紀、古代のドワーフは悪魔の軍隊に辛うじて勝つことが出来たが、神を倒すことは出来なかった。その代わり、彼らは彼らの都市の下にそれを閉じ込めた。再び上がってくる時、弱くなっていることを信じている。</string>
+  <string name="Yog_Info1">...</string>
+  <string name="Yog_Info2">希望は幻想...</string>
+  <string name="RottingFist_Name">腐った拳</string>
+  <string name="RottingFist_Gender">力強い</string>
+  <string name="RottingFist_Name_Objective">腐った拳</string>
+  <string name="RottingFist_Desc">古き神の腐った拳</string>
+  <string name="BurningFist_Name">燃える拳</string>
+  <string name="BurningFist_Gender">力強い</string>
+  <string name="BurningFist_Name_Objective">燃える拳</string>
+  <string name="BurningFist_Desc">古き神の燃える拳</string>
+  <string name="Larva_Name">神の幼生</string>
+  <string name="Larva_Gender">弱々しい</string>
+  <string name="Larva_Name_Objective">神の幼生</string>
+  <string name="Larva_Desc">古き神の幼生</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">クモの卵</string>
+  <string name="SpiderEgg_Gender">中性の</string>
+  <string name="SpiderEgg_Name_Objective">クモの卵</string>
+  <string name="SpiderEgg_Desc">この脆い卵は短く脈動している。あなたはこの中に沢山の何かの足を見ることができる。</string>
+  <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">クモの繭</string>
+  <string name="SpiderNest_Gender">中性の</string>
+  <string name="SpiderNest_Name_Objective">クモの繭</string>
+  <string name="SpiderNest_Desc">この繭は薄い絹で出来ていて、中にあるものを隠している。</string>
+  <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Name">クモの兵士</string>
+  <string name="SpiderServant_Gender">力強い</string>
+  <string name="SpiderServant_Name_Objective">クモの兵士</string>
+  <string name="SpiderServant_Desc">兵士たちはクモの巣穴で大多数を占めます。巣穴を守るために生まれました。兵士の鋏角は敵を倒す毒腺として発達している。</string>
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">クモの労働者</string>
+  <string name="SpiderExploding_Gender">力強い</string>
+  <string name="SpiderExploding_Name_Objective">クモの労働者</string>
+  <string name="SpiderExploding_Desc">平時はとても働き者だが、これらの生き物は敵に突進することを躊躇しないし、彼らは走って横切った最初の植物を掴み旋回し自分自身を生きた爆弾とする。</string>
+  <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">超能力クモ</string>
+  <string name="SpiderMind_Gender">力強い</string>
+  <string name="SpiderMind_Name_Objective">超能力クモ</string>
+  <string name="SpiderMind_Desc">これらの弱そうに見えるクモは、ユニークな精神力で巣穴全体を制御することが出来ます。超能力クモは生き物の制御は上手いが、とても臆病です。</string>
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">女王クモ</string>
+  <string name="SpiderQueen_Gender">弱々しい</string>
+  <string name="SpiderQueen_Name_Objective">女王クモ</string>
+  <string name="SpiderQueen_Desc">体は美しい女性と醜いクモの融合。巣穴のすべての者は彼女の下僕です。この特別な女性に会うことは命に関わるでしょう。なぜならあなたは侵入者なのだから！</string>
+  <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">ウォーターエレメンタル</string>
+  <string name="WaterElemental_Gender">力強い</string>
+  <string name="WaterElemental_Name_Objective">ウォーターエレメンタル</string>
+  <string name="WaterElemental_Desc">ウォーターエレメンタルは大きな水塊の近くで見つけることができる。これらは波が魔法のように結合しうろついている。</string>
+  <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">エアーエレメンタル</string>
+  <string name="AirElemental_Gender">力強い</string>
+  <string name="AirElemental_Name_Objective">エアーエレメンタル</string>
+  <string name="AirElemental_Desc">エアーエレメンタルは空気中に存在する魔法の存在で浮いています。</string>
+  <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">アースエレメンタル</string>
+  <string name="EarthElemental_Gender">力強い</string>
+  <string name="EarthElemental_Name_Objective">アースエレメンタル</string>
+  <string name="EarthElemental_Desc">アースエレメンタルは自然の力が集中したモノ。</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">浮遊クリスタル</string>
+  <string name="Crystal_Gender">力強い</string>
+  <string name="Crystal_Name_Objective">浮遊クリスタル</string>
+  <string name="Crystal_Desc">空気中を浮遊する輝く大きなクリスタル。おそらくそれは強力な魔法で満たされている。</string>
+</resources>

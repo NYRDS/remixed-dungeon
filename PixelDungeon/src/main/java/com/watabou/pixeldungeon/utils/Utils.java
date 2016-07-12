@@ -116,8 +116,11 @@ public class Utils {
 	public static final int MASCULINE = 1;
 	public static final int FEMININE  = 2;
 
+
 	public static boolean canUseClassicFont(String localeCode) {
-		if (localeCode.startsWith("ko") || localeCode.startsWith("zh")) {
+		if (localeCode.startsWith("ko")
+				|| localeCode.startsWith("zh")
+				|| localeCode.startsWith("ja")) {
 			return false;
 		}
 

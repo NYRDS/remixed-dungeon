@@ -6,7 +6,10 @@
   <string name="Guts_TileWater">奇怪的粘稠液体</string>
   <string name="Guts_TileDescEntrance">天花板上的大洞是通往上层的</string>
   <string name="Guts_TileDescExit">地上的大洞会通往更深层</string>
+  <string name="Guts_TileDescDeco">看上去这块地方...被摧毁得很严重啊</string>
+  <string name="Guts_TileDescBookshelf">这个书架完全被肥厚的网给覆盖，没法从中那出书了</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">碎成渣但还没被完全摧毁的古神被封印在地牢的最深处。但是这封印已经被破坏了，恶魔巢穴的大门正式向你敞开。这些如噩梦的怪物是古神在睡梦中创造的，它们无法逃脱，只能在这个怪诞的大厅里相互融合。当你走如这个活着的大厅时，你可以感觉到古神的心脏的跳动。</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
   <string name="MimicAmulet_Name">拟形怪</string>
@@ -17,29 +20,37 @@
   <string name="Nightmare_Name">梦魇</string>
   <string name="Nightmare_Gender">masculine</string>
   <string name="Nightmare_Name_Objective">梦魇</string>
+  <string name="Nightmare_Desc">以肉质触手构成的怪诞造物。梦魇是古神危险思想的具象。</string>
   <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">你是我的了，%s！</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Name">豺狼僵尸</string>
   <string name="ZombieGnoll_Gender">masculine</string>
   <string name="ZombieGnoll_Name_Objective">豺狼僵尸</string>
+  <string name="ZombieGnoll_Desc">扭曲、破损、不再具有人形的豺狼人僵尸。由一堆腐烂的肉、骨头以及毁灭、杀戮的意识组成。</string>
   <!--STRINGS OF Worm CLASS-->
   <string name="Worm_Name">古神幼虫</string>
   <string name="Worm_Gender">masculine</string>
   <string name="Worm_Name_Objective">古神幼虫</string>
+  <string name="Worm_Desc">没人知道这巨大的虫子是什么。从地下钻出，身上覆盖着腐肉和烂泥。它巨大的下颚告诉了你它钻出地面的方法。</string>
   <!--STRINGS OF YogsBrain CLASS-->
   <string name="YogsBrain_Name">Yog之脑</string>
   <string name="YogsBrain_Gender">masculine</string>
   <string name="YogsBrain_Name_Objective">Yog之脑</string>
+  <string name="YogsBrain_Desc">Yog-Dzewa的大脑，所有邪恶的根源。</string>
   <!--STRINGS OF YogsEye CLASS-->
   <string name="YogsEye_Name">Yog之眼</string>
   <string name="YogsEye_Gender">masculine</string>
   <string name="YogsEye_Name_Objective">Yog之眼</string>
+  <string name="YogsEye_Desc">Yog-Dzewa的眼睛，你感觉它充满仇恨的目光刺穿了你的灵魂。</string>
   <!--STRINGS OF YogsHeart CLASS-->
   <string name="YogsHeart_Name">Yog之心</string>
   <string name="YogsHeart_Gender">masculine</string>
   <string name="YogsHeart_Name_Objective">Yog之心</string>
+  <string name="YogsHeart_Desc">从古至今人们都认同的有邪恶透顶的绝情的生物就在这儿，Yog-Dzewa的巨大心脏。</string>
   <!--STRINGS OF YogsTeeth CLASS-->
   <string name="YogsTeeth_Name">Yog之牙</string>
   <string name="YogsTeeth_Gender">masculine</string>
   <string name="YogsTeeth_Name_Objective">Yog之牙</string>
+  <string name="YogsTeeth_Desc">Yog-Dzewa的大嘴和锋利牙齿，表现了出强烈的破坏欲望。</string>
 </resources>

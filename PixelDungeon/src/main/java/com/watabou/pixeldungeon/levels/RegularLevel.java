@@ -374,13 +374,8 @@ public abstract class RegularLevel extends CommonLevel {
 	}
 
 	protected void paint() {
-		ExitPainter.resetCounter();
 
-		for (Room r : rooms) {
-			if(r.type==Type.BOSS_EXIT) {
-				paintRoom(r);
-			}
-		}
+		ExitPainter.resetCounter();
 
 		for (Room r : rooms) {
 			if (r.type != Type.NULL && r.type != Type.BOSS_EXIT) {
@@ -391,7 +386,13 @@ public abstract class RegularLevel extends CommonLevel {
 				}
 			}
 		}
-		
+
+		for (Room r : rooms) {
+			if(r.type==Type.BOSS_EXIT) {
+				paintRoom(r);
+			}
+		}
+
 		for (Room r : rooms) {
 			paintDoors( r );
 		}

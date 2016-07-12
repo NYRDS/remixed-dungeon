@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">スクロール \"%s\"</string>
+  <string name="Scroll_Info">この羊皮紙は判読できない筆跡で書かれている。そして、%s のルーンタイトルを帯びている。声に出して読んだ時、何が起こるか知っていますか？</string>
+  <string name="Scroll_ACRead">READ</string>
+  <string name="Scroll_Blinded">あなたは盲目なためスクロールを読むことが出来ない</string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">アイテムを選択</string>
+  <string name="InventoryScroll_Warning">あなたは本当にスクロールの使用を中止しますか？中止してもこれは失われます。</string>
+  <string name="InventoryScroll_Yes">はい、私は肯定します</string>
+  <string name="InventoryScroll_No">いいえ、私は考えを変えました</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">白紙のスクロール</string>
+  <string name="BlankScroll_Info">ただの白紙のスクロール。おそらく何かを書くことができるでしょう？</string>
+  <string name="BlankScroll_ReallyBlank">このスクロールは白紙です</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">挑戦のスクロール</string>
+  <string name="ScrollOfChallenge_Info">声に出して読んだ時、このスクロールはすべてのモンスターを目覚めさせる挑戦的な咆哮を発し、読み手の場所を警告します。</string>
+  <string name="ScrollOfChallenge_Info1">スクロールはダンジョン全体に挑戦的な咆哮を響かせます！</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">識別のスクロール</string>
+  <string name="ScrollOfIdentify_Info">恒久的に1つのアイテムの秘密を明らかにします。</string>
+  <string name="ScrollOfIdentify_InvTitle">識別するアイテムを選択</string>
+  <string name="ScrollOfIdentify_Info1">これは %s です</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">子守唄のスクロール</string>
+  <string name="ScrollOfLullaby_Info">なだめるようなメロディはあなたの視界内のすべての生き物を深い眠りへ誘います。あなたは逃げるか、それらへ奇襲攻撃を加えるチャンスを得ます。</string>
+  <string name="ScrollOfLullaby_Info1">スクロールはなだめるようなメロディを発した。</string>
+  <string name="ScrollOfLullaby_Info2">スクロールはなだめるようなメロディを発し、 %s は眠りに落ちた！</string>
+  <string name="ScrollOfLullaby_Info3">スクロールはなだめるようなメロディを発し、モンスターは眠りに落ちた！</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">魔法の地図作成のスクロール</string>
+  <string name="ScrollOfMagicMapping_Info">このスクロールを読むと、あなたの脳の中にこの階層のすべての構造、隠された秘密までもがくっきりと刻み込まれます。アイテムの場所や生き物の場所は不明のままです。</string>
+  <string name="ScrollOfMagicMapping_Layout">あなたはこれでこの階層の構造がすべてわかります。</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">鏡像のスクロール</string>
+  <string name="ScrollOfMirrorImage_Info">このスクロール上の呪文は、あなたそっくりの鏡像を作り出し、敵を追いかけます。</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">心霊破のスクロール</string>
+  <string name="ScrollOfPsionicBlast_Info">このスクロールは、視界内のすべての生き物に心霊的チャネリングで大規模な被害を与えるための破壊的なエネルギーを内包しています。読み手を含めたすべての範囲内の生き物に、閃光による一時的盲目を与えます。</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">再充填のスクロール</string>
+  <string name="ScrollOfRecharging_Info">この羊皮紙に縛られた魔法の力が放たれて、読み手の杖が充填されます。</string>
+  <string name="ScrollOfRecharging_Info1a">あなたの荷物はエネルギーの影響を受けて、あなたの杖が再充填されます</string>
+  <string name="ScrollOfRecharging_Info1b">あなたの荷物はエネルギーの影響を受けて、あなたの杖が再充填されます</string>
+  <string name="ScrollOfRecharging_Info2">あなたの荷物はエネルギーの影響を受けましたが、何も起こらなかった</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">解呪のスクロール</string>
+  <string name="ScrollOfRemoveCurse_Info">このスクロール上の呪文は、読み手の武器、鎧、リングと所持アイテムから、邪悪な呪いを取り除きます。</string>
+  <string name="ScrollOfRemoveCurse_Proced">あなたの荷物に浄化の光が輝き、邪悪なエネルギーが消失します。</string>
+  <string name="ScrollOfRemoveCurse_NoProced">あなたの荷物に浄化の光が輝きましたが、何も起こらなかった。</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">瞬間移動のスクロール</string>
+  <string name="ScrollOfTeleportation_Info">この羊皮紙上の呪文はこの階層のランダムな場所へ読み手を瞬間移動させます。危険な状況を回避できますが、不運な読み手はもっと危険な場所で自分自身を見つけるかもしれません。</string>
+  <string name="ScrollOfTeleportation_Teleport">まばたきの一瞬で、あなたはこの階層の別な場所へ瞬間移動した。</string>
+  <string name="ScrollOfTeleportation_NoTeleport">この場所の強力な魔法のオーラが、あなたの瞬間移動を防いだ！</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">恐怖のスクロール</string>
+  <string name="ScrollOfTerror_Info">赤い閃光はあなたの視界内の全ての生き物に恐怖を与えて、彼らは逃げまわります。逃げまわる敵を攻撃すると効果は失われます。</string>
+  <string name="ScrollOfTerror_Info1">スクロールは鮮やかな赤い閃光を発した</string>
+  <string name="ScrollOfTerror_Info2">スクロールは鮮やかな赤い閃光を発して、 %s は逃げ出した！</string>
+  <string name="ScrollOfTerror_Info3">スクロールは鮮やかな赤い閃光を発して、モンスターは逃げ出した！</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">強化のスクロール</string>
+  <string name="ScrollOfUpgrade_Info">このスクロールは1つのアイテムの品質を改善し強化します。杖は力と充填数を増加します。武器はより多くダメージを与えたり、より頻繁にその印を見つけます。鎧はさらにダメージを逸します。リングの効果はより激しくなります。武器や鎧はより少ない力で使用できます。そして、アイテムの任意の呪いが解除されます。</string>
+  <string name="ScrollOfUpgrade_InvTitle">強化するアイテムを選択</string>
+  <string name="ScrollOfUpgrade_LooksBetter">あなたの %s は良くなったように見えます</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">武器強化のスクロール</string>
+  <string name="ScrollOfWeaponUpgrade_Info">このスクロールは近接武器の品質を改善し強化します。通常の強化のスクロールとは違い、この特殊版は武器の魔術を破壊しません。逆に、魔術のない武器にランダムな魔術を注ぎこむことが出来ます。</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">強化する武器を選択</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">あなたの %s は良くなったように見えます</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">支配のスクロール</string>
+  <string name="ScrollOfDomination_Info">このスクロールはあなたの目の前の生き物の意思を捻じ曲げます。その生き物はあなたのために死ぬまで戦います。</string>
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">呪いのスクロール</string>
+  <string name="ScrollOfCurse_Info">このスクロールは愚かな盗賊を罰するために作られました。普通の冒険者はこのスクロールの魔法は使えないと思うが、商人たちには評価されています。</string>
+</resources>

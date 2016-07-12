@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Welcome_Ok">オーケー！</string>
+  <string name="Welcome_Title">ようこそ！</string>
+  <string name="Welcome_Text">
+        Remixed Pixel Dungeon is a modification of Watabou\'s open source Pixel Dungeon.\n
+        Project was created to provide players with new experience and content.\n
+        Another important part of our project is developing multilingual support for the game.\n
+        With every update we try to stay as close to our community as possible.\n
+        And if one day you\'ll see your idea implemented in the game... Thanks for your creativity =)\n
+        Current version based on Pixel Dungeon 1.7.2 and partially 1.7.5.\n 
+        Difference from original: \n
+        - Option to change language.\n
+        - New monster and NPC\n
+        - Toxic gas and fire able to interact with more items\n
+        - New types of «food»\n
+        - New items and new properties for some old items\n
+        - Seeds can be eaten now =)\n 
+        - Elves
+        </string>
+  <string name="Welcome_Text_19">
+        remix.17:\n
+        - New mimic kind\n
+        remix.18:\n
+        - Elementals\n
+        remix.19:\n
+        - Spiders\n
+        - Spider levels\n
+        - Spider Queen\n
+        </string>
+  <string name="Welcome_Text_20">
+        remix.20:\n
+        - New rare weapon - kusarigama\n
+        - New rare mob\n
+        - Game mode where you can save and load game\n
+        - And much more less noticeable stuff\n
+        </string>
+  <string name="Welcome_Text_20_1">
+        remix.20.1:\n
+        - Scroll of Domination\n
+        - Scroll of Curse\n
+        </string>
+  <string name="Welcome_Text_20_2">
+        remix.21:\n
+        - Rare Chaos items\n
+        - Liquid flame now really liquid\n
+        </string>
+  <string name="Welcome_Text_21_1">
+        remix.21.1:\n
+        - Easy mode (with ads)\n
+        - Expert mode\n
+        </string>
+  <string name="Welcome_Text_21_2">
+        remix.21.2:\n
+        - Ability to choose game mods (just reskins for now) ( Usable only by experienced modders)\n
+        </string>
+  <string name="Welcome_Text_21_3">
+        remix.21.3:\n
+        - PD mini mod available to download (not yet completed but fun)\n
+        - Improved Sewers graphics
+        </string>
+  <string name="Welcome_Text_21_4">
+        remix.21.4:\n
+        - New rare weapon - sacrificial sword
+        </string>
+  <string name="Welcome_Text_21_5">
+        remix.21.5:\n
+        - New properties for old items
+        </string>
+  <string name="Welcome_Text_22">
+        remix.22:\n
+        - New hidden boss
+        </string>
+  <string name="Welcome_Text_23">
+        remix.23:\n
+        - Dungeon is now 32 levels deep (instead of 26)\n
+        - Hidden boss moved to level 25\n
+        - Greater variety of mini-bosses for a final fight (instead of 2 fists, Yog now can chose from a total of 5 mini bosses to spawn)\n
+        - New setting and monsters for levels 27-31
+        </string>
+  <string name="Welcome_Text_23_1">
+        remix.23.1:\n
+        - There is new shop, NPC and quest on level 27\n
+        - New monster for Demon Nest (27-31)\n
+        - All monsters and bosses on levels 27-32 and they\'re abilities became stronger\n
+		- Updated boss badges\n
+		- Several minor visual upgrades\n
+		- Various bug fixes\n
+        </string>
+  <string name="Welcome_Text_23_2">
+        remix.23.2:\n
+        - Added Tier 6 weapons and armor\n
+        - Added crossbows\n
+        - Added Chaos Armor\n
+        </string>
+  <string name="Welcome_Text_24">
+        remix.24:\n
+        - We got Hats!(Vanity items)\n
+        - Various bug fixes\n
+        - Updated translations\n
+        </string>
+  <string name="Welcome_Text_24_1">
+        remix.24.1:\n
+        --Game--\n
+        - New mob: Armored Statue\n
+        - New rares: Spider Guard (rare of Spider Soldier) and Amber Spider(rare of Psi-spider)\n
+        - Players can now delete saved files\n
+        - Updated visuals for Spider Lair\n
+        --Vanity Items--\n
+        - Buying new item automatically equips item\n
+        - New item \"Pirate Set\"\n
+        - Updated visuals for Neko Ears and Rabbit Ears\n
+        </string>
+  <string name="Welcome_Text_24_2">
+        remix.24.2:\n
+        - New mob: Golden Statue (rare statue)\n
+        - New item: Golden Sword (can be found as rare loot drop, or also can be found as loot from golden statue with drop rate 100%)\n
+        - New NPC: Necromancer (He\'s got exciting news to tell you. Find him at level 7)\n
+        - Goo has been nerfed\n
+        - Tengu now drops Tome every time. Subclasses can\'t use tome to change their specialty\n
+        - Shadow Lord gets a more sensible starting room (now players can\'t run past him to reach next level, you have to fight)\n
+        - Spider Charm gets updated sprite and now drops by a Spider Queen (Previously you could\'ve get it from Goo)\n
+        </string>
+</resources>

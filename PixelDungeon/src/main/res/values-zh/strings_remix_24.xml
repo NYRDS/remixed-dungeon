@@ -27,17 +27,23 @@
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">南瓜</string>
-    <!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Pumpkin_Info">过去南瓜人是一个繁荣和自豪的名族。但是当人类入侵后一切都毁了。被斩断的南瓜头成了幸存的南瓜人的心理阴影。</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">睡帽</string>
     <string name="Nightcap_Info">在夜晚征服地牢想必是十分疲累的事。那为何不带上一顶温暖舒适的帽子好好休息一下，抛开自己的烦恼呢？</string>
 	
 	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">巫师帽</string>
+    <string name="WizardHat_Info">一顶装饰有星星装饰的漂亮的丝绸帽子。在过去，一些人认为这是具有强大力量的巫师的象征。但这帽子只是让你感觉像是一个强大的巫师。</string>
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndHats_ListTitle">饰品列表</string>
     <string name="WndHats_SlotTitle">已装备</string>
     <string name="WndHats_NoConnectionMsg">无法连接到Google Play服务</string>
+    <string name="WndHats_Purchased">购买成功！</string>
+
     <string name="WndHats_BackButton">返回</string>
     <string name="WndHats_BuyButton">购买</string>
     <string name="WndHats_EquipButton">装备</string>
