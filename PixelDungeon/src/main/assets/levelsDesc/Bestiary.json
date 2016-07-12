@@ -26,10 +26,10 @@
    },
    "NecroLevel":{
       "1":{"Zombie":1, "ExplodingSkull":1, "EnslavedSoul":1, "DeathKnight":1},
-      "6":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},
-      "7":{"Zombie":1, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKnight":0.5},
-      "8":{"Zombie":2, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKnight":0.5},
-      "9":{"ExplodingSkull":1.3, "EnslavedSoul":0.4, "DeathKnight":1.5}
+      "11":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},
+      "12":{"Zombie":1, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKnight":0.5},
+      "13":{"Zombie":2, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKnight":0.5},
+      "14":{"ExplodingSkull":1.3, "EnslavedSoul":0.4, "DeathKnight":1.5}
    },
    "NecroBossLevel":{
       "any":{"Lich":1}
