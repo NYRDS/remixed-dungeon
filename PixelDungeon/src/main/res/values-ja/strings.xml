@@ -142,20 +142,88 @@
   <string name="WndHero_StaCatalogus">カタログ</string>
   <string name="WndHero_StaJournal">日記</string>
   <!--STRINGS OF WndImp CLASS-->
+  <string name="WndImp_Message">おーよしよし！お前は俺のヒーローだ！\n報酬についてだが、あいにく俺は現金は持ってない。だが、良い物があるぞ。これは家宝のリングだ: 俺の祖父が死んだパラディンの指から取ったものだ。</string>
+  <string name="WndImp_Reward">リングを取る</string>
   <!--STRINGS OF WndInfoCell CLASS-->
+  <string name="WndInfoCell_Nothing">ここには何もありません。</string>
   <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">箱</string>
+  <string name="WndInfoItem_LockedChest">鍵付き箱</string>
+  <string name="WndInfoItem_CrystalChest">クリスタルの箱</string>
+  <string name="WndInfoItem_Tomb">墓</string>
+  <string name="WndInfoItem_Skeleton">白骨遺体</string>
+  <string name="WndInfoItem_WontKnow">開けてみなければ中身はわかりません！</string>
+  <string name="WndInfoItem_NeedKey">これを開けるためには金の鍵が必要です。</string>
+  <string name="WndInfoItem_Inside">あなたは %s の中を見ることが出来ますが、開けるためには金の鍵が必要です。</string>
+  <string name="WndInfoItem_Owner">この古い墓には使えるものがあるかもしれませんが、その所有者は調べることを許さないでしょう。</string>
+  <string name="WndInfoItem_Remains">これらはすべてあなたより先人の者が残したもの。すべての貴重品は調べる価値があるでしょう。</string>
   <!--STRINGS OF WndJournal CLASS-->
+  <string name="WndJournal_Title">日記</string>
   <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Error">追加の情報を読み込むことが出来ません</string>
+  <string name="WndRanking_Stats">統計</string>
+  <string name="WndRanking_Items">アイテム</string>
+  <string name="WndRanking_Badges">バッヂ</string>
+  <string name="WndRanking_StaTitle">レベル %1$d %2$s</string>
+  <string name="WndRanking_StaChallenges">挑戦</string>
+  <string name="WndRanking_StaHealth">ヘルス</string>
+  <string name="WndRanking_StaStr">力</string>
+  <string name="WndRanking_StaDuration">ゲームプレイ時間</string>
+  <string name="WndRanking_StaDepth">到達最下層</string>
+  <string name="WndRanking_StaEnemies">殺したモブ</string>
+  <string name="WndRanking_StaGold">集めたゴールド</string>
+  <string name="WndRanking_StaFood">食べた食料</string>
+  <string name="WndRanking_StaAlchemy">作ったポーション</string>
+  <string name="WndRanking_StaAnkhs">使ったアンク</string>
   <!--STRINGS OF WndResurrect CLASS-->
+  <string name="WndResurrect_Message">あなたは死んだが、ダンジョン攻略の別の機会を与えられた。受け入れるか？</string>
+  <string name="WndResurrect_Yes">はい、戦います！</string>
+  <string name="WndResurrect_No">いいえ、諦めます</string>
   <!--STRINGS OF WndSadGhost CLASS-->
+  <string name="WndSadGhost_Rose">イエス！イエス！！！これです！これを私にください！代わりにこれらの中から1つアイテムを譲りましょう。多分あなたの旅に有用なものだと思うのですが...</string>
+  <string name="WndSadGhost_Rat">イエス！醜い生き物が死んでやっと休めます... これらの中から1つアイテムを受け取ってください。多分あなたの旅に有用なものだと思うのですが...</string>
+  <string name="WndSadGhost_Wepon">幽霊の武器</string>
+  <string name="WndSadGhost_Armor">幽霊の鎧</string>
+  <string name="WndSadGhost_Farewell">さらば、冒険者よ！</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Sewers">ダンジョンは都市の真下に位置していて、その上層は都市の下水システムになっている。建前上は都市の一部となっていて、この階層はそこまで危険ではない。誰にとっても安全というわけではないが、少なくともここでは多くの邪悪な魔法に対処する必要はないでしょう。</string>
+  <string name="WndStory_Prision">何年も前に凶悪な犯罪者のために地下監獄は建てられました。この場所は、脱出が非常に困難だったため、当時は良いアイデアだと思われていました。しかし、すぐに地下から濃い瘴気が立ち込めて、囚人と看守はおかしくなりました。最終的に監獄は、何人かの囚人を残したまま放棄されました。</string>
+  <string name="WndStory_Caves">放棄された監獄の下には洞窟が広がっていて、まばらだが住人がいる。都市開発からは見放された深い場所には、わずかな鉱石を求めるドワーフ達がいる。過去にはこれら二つをつなぐ前哨基地がありましたが、ドワーフのメトロポリス衰退以来なくなりました。今は、ノールと地下の動物が住んでいます。</string>
+  <string name="WndStory_Metropolis">ドワーフのメトロポリスは、かつてのドワーフの都市国家の中でもっとも大きいものでした。最盛期には、ドワーフの機械化軍隊と、古き神とその悪魔軍は互角でした。しかし、帰還した戦士たちは、腐敗の種を持っていました。勝利は、地下王国の終わりの始まりだと言われています。</string>
+  <string name="WndStory_Halls">過去、これらの階層はメトロポリスの郊外でした。ドワーフたちと古き神との戦いの価値ある勝利の後、あまりにも多くの残った悪魔の掃討で、弱体化していきました。徐々に悪魔たちをこの場所へ追い詰めていきました、そして今はここを悪魔の広間と呼んでいます。\n\n極小数の冒険者だけがここまで降りてきました...</string>
+  <string name="WndStory_Spiders">大昔は、たくさんの魔法石の埋まる豊かな鉱山がありました。しかし、鉱脈が枯れると、鉱山労働者は広く入り組んだトンネルを残して去って行きました。早晩、この場所にはクモが住み着きました。しかし、この暗闇に潜む危険な生き物も、鉱山で発見されるかもしれない宝物への魅力は、勇敢で強い憧れを持つ者の前には関係ありませんでした。危険の規模は、常に魔法の遺物の噂の量と比例します。昔々、邪悪な魔女が、審問官から逃げ出そうとした時、トンネル内に疑問を感じました。しかし、迷信的な者達は暗闇へ踏み入る勇気はありませんでした。そこで、彼らは待つことにしました。もしかしたら、魔女は他の脱出口を見つけられたかもしれません。もしかしたら、監視の目をかいくぐれたかもしれません... 彼女は暗闇で蠢くものに囲まれて死にました。</string>
   <!--STRINGS OF WndTradeItem CLASS-->
+  <string name="WndTradeItem_Sale">売り物: %1$s - %2$dg</string>
+  <string name="WndTradeItem_Buy">%dg で買う</string>
+  <string name="WndTradeItem_Sell">%dg で売る</string>
+  <string name="WndTradeItem_Sell1">%dg で1つ売る</string>
+  <string name="WndTradeItem_SellAll">%dg ですべて売る</string>
+  <string name="WndTradeItem_Cancel">気にするな</string>
+  <string name="WndTradeItem_Sold">あなたは %2$dg で %1$s を売った</string>
+  <string name="WndTradeItem_Bought">あなたは %2$dg で %1$s を買った</string>
   <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Message">おぉ、私はあなたが成功するのを見ました！私はあなたなら成し遂げると信じていました。約束通り、私の自慢の杖の1つを譲りましょう。</string>
+  <string name="WndWandmaker_Battle">戦闘の杖</string>
+  <string name="WndWandmaker_NonBattle">便利な杖</string>
+  <string name="WndWandmaker_Farawell">あなたの探索に幸運を、%s！</string>
   <!--STRINGS OF QuickSlot CLASS-->
+  <string name="QuickSlot_SelectedItem">クイックスロットへ登録するアイテムを選択</string>
   <!--STRINGS OF Item CLASS-->
+  <string name="Item_Name">何か</string>
+  <string name="Item_Info">何か</string>
+  <string name="Item_ACDrop">落とす</string>
+  <string name="Item_ACThrow">投げる</string>
+  <string name="Item_PackFull">あなたの荷物は %s のためいっぱいです</string>
+  <string name="Item_DirThrow">投げる方向を選んでください</string>
   <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">装備する</string>
+  <string name="EquipableItem_ACUnequip">外す</string>
+  <string name="EquipableItem_Unequip">呪われた %s は外すことが出来ない！</string>
   <!--STRINGS OF Heap CLASS-->
+  <string name="Heap_Mimic">これはミミックです！</string>
   <!--STRINGS OF Amulet CLASS-->
+  <string name="Amulet_Name">イェンダーの魔除け</string>
+  <string name="Amulet_ACEnd">ゲーム終了</string>
   <!--STRINGS OF Ankh CLASS-->
   <!--STRINGS OF ArmorKit CLASS-->
   <!--STRINGS OF Dewdrop CLASS-->
