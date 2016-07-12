@@ -33,7 +33,5 @@ public class BossExitPainter extends ExitPainter {
 		
 		level.setExit(room.top * level.getWidth() + (room.left + room.right) / 2,0);
 		set( level, level.getExit(0), Terrain.LOCKED_EXIT );
-
-		counter++;
 	}
 }

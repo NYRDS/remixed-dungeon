@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">食べる</string>
+  <string name="Food_Message">その食べ物はとても美味しい！</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">レーション</string>
+  <string name="Ration_Info">ここでの空想はない:乾燥肉、ビスケット - そのようなもの。</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">炭焼きの肉</string>
+  <string name="ChargrilledMeat_Info">これはまともなステーキに見えます。</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">冷凍カルパッチョ</string>
+  <string name="FrozenCarpaccio_Info">これは冷凍生肉品です。薄くスライスして食べます。これは驚くほど良いです。</string>
+  <string name="FrozenCarpaccio_Info1">あなたはあなたの手が透明になるのを見た！</string>
+  <string name="FrozenCarpaccio_Info2">あなたは肌が硬く感じる！</string>
+  <string name="FrozenCarpaccio_Info3">スッキリ！</string>
+  <string name="FrozenCarpaccio_Info4">あなたはいい感じ！</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">謎の肉</string>
+  <string name="MysteryMeat_Info">自己責任で食べます！</string>
+  <string name="MysteryMeat_Info1">オォ、これは熱い！</string>
+  <string name="MysteryMeat_Info2">あなたは自分の足を感じない！</string>
+  <string name="MysteryMeat_Info3">あなたは良く感じていません。</string>
+  <string name="MysteryMeat_Info4">あなたは満腹です。</string>
+  <string name="MysteryMeat_Message">その食べ物は...変な味。</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">ウエェェェ！</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">腐った肉</string>
+  <string name="RottenMeat_Info">腐った肉片</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">ペースト状の腐った物</string>
+  <string name="RottenPasty_Info">元ペースト状のとても嫌な物</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">腐ったレーション</string>
+  <string name="RottenRation_Info">昔は食べることが出来ました</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">高級レーション</string>
+  <string name="OverpricedRation_Info">普通のレーションが小さく見えます。</string>
+  <string name="OverpricedRation_Message">それは良い味です。</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">ペースト状</string>
+  <string name="Pasty_Info">これは牛肉とポテトを入れたコーンペーストです。</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">ペースト状</string>
+  <string name="PseudoPasty_Info">これは牛肉とポテトを入れたコーンペーストです。</string>
+</resources>

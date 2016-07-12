@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">シルバー</string>
+  <string name="WndDonate_gold">ゴールド</string>
+  <string name="WndDonate_ruby">ルビー</string>
+  <string name="WndDonate_donate">寄付:</string>
+  <string name="WndDonate_notConnected">接続されていない :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - 誰でも常に無料です。\n\nしかし、あなたはより良いゲームを作るのを助けることが出来ます。\n\n私達の心からの感謝に加えて、あなたはいくつかの改良を得るでしょう。</string>
+  <string name="WndDonate_silverDonate">シルバーの寄付</string>
+  <string name="WndDonate_goldDonate">ゴールドの寄付</string>
+  <string name="WndDonate_rubyDonate">ルビーの寄付</string>
+  <string name="WndDonate_silverDonateText">寄付金はプロジェクトの開発を支援します</string>
+  <string name="WndDonate_goldDonateText">ご協力ありがとうございました！</string>
+  <string name="WndDonate_rubyDonateText">あなたの寛大さは Remixed Pixel Dungeon の改善の助けになるでしょう！</string>
+  <string name="WndDonate_silverDonateText2">さらに、すべてのゲームモードで広告を無効にして、最初からハンターのロックを解除します。</string>
+  <string name="WndDonate_goldDonateText2">さらに、最初からエルフのロックを解除します。</string>
+  <string name="WndDonate_rubyDonateText2"></string>
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">標準</string>
+  <string name="WndPremiumSettings_silver">シルバー</string>
+  <string name="WndPremiumSettings_gold">ゴールド</string>
+  <string name="WndPremiumSettings_ruby">ルビー</string>
+  <string name="WndPremiumSettings_chrome">GUIの素材を選択</string>
+  <string name="WndPremiumSettings_status">ステータスバーの素材を選択</string>
+  <string name="WndPremiumSettings_toolbar">ツールバーの素材を選択</string>
+  <string name="WndPremiumSettings_banners">バナーの素材を選択</string>
+  <string name="WndPremiumSettings_notAvailbale">このオプションはまだ利用できません</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">寄付をご検討ください</string>
+  <string name="DonateButton_thanks">ご協力ありがとうございました！</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">広告は好きじゃないですか？寄付を行うと彼らは消えます。永遠に。</string>
+</resources>

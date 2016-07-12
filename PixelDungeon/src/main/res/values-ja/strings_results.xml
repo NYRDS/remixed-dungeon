@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">レベル %2$d で %1$s に殺された</string>
+  <string name="ResultDescriptions_Boss">レベル %2$d で %1$s に殺された</string>
+  <string name="ResultDescriptions_Wand">レベル %2$d で、あなたの %1$s に殺された</string>
+  <string name="ResultDescriptions_Glyph">レベル %2$d で %1$s に殺された</string>
+  <string name="ResultDescriptions_Trap">レベル %2$d で、%1$s によって殺された</string>
+  <string name="ResultDescriptions_Burning">レベル %d で焼死した</string>
+  <string name="ResultDescriptions_Hunger">レベル %d で餓死した</string>
+  <string name="ResultDescriptions_Poison">レベル %d で毒で死亡した</string>
+  <string name="ResultDescriptions_Gas">レベル %d で毒ガスで死亡した</string>
+  <string name="ResultDescriptions_Bleeding">レベル %d で出血死した</string>
+  <string name="ResultDescriptions_Ooze">レベル %d でカウスティックウーズで死亡した</string>
+  <string name="ResultDescriptions_Fall">レベル %d で落下死した</string>
+  <string name="ResultDescriptions_Win">イェンダーの魔除けを手に入れた</string>
+  <string name="ResultDescriptions_Immured">レベル %d で石に閉じ込められた</string>
+</resources>

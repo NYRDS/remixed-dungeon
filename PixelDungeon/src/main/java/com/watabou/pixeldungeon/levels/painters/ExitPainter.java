@@ -38,8 +38,10 @@ public class ExitPainter extends Painter {
 			door.set(Room.Door.Type.REGULAR);
 		}
 
-		level.setExit(room.random(level, 1), counter);
-		set(level, level.getExit(counter), Terrain.EXIT);
+		int exitIndex = level.isBossLevel()?counter+1:counter;
+
+		level.setExit(room.random(level, 1), exitIndex);
+		set(level, level.getExit(exitIndex), Terrain.EXIT);
 
 		counter++;
 	}

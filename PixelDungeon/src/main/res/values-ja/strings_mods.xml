@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Mods_CreatedBy">作成者:</string>
+  <string name="Mods_AuthorSite">作者サイト:</string>
+  <string name="Mods_AuthorEmail">作者Eメール:</string>
+  <string name="Mods_RestartRequired">再起動が必要</string>
+</resources>

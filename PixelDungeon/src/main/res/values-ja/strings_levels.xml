@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">隠された圧力板をクリック！</string>
+  <string name="Level_TileChasm">割れ目</string>
+  <string name="Level_TileFloor">フロア</string>
+  <string name="Level_TileGrass">草</string>
+  <string name="Level_TileWater">水</string>
+  <string name="Level_TileWall">壁</string>
+  <string name="Level_TileClosedDoor">閉じてるドア</string>
+  <string name="Level_TileOpenDoor">開いてるドア</string>
+  <string name="Level_TileEntrance">深層の入り口</string>
+  <string name="Level_TileExit">深層の出口</string>
+  <string name="Level_TileEmbers">残り火</string>
+  <string name="Level_TileLockedDoor">鍵付きドア</string>
+  <string name="Level_TilePedestal">台座</string>
+  <string name="Level_TileBarricade">バリケード</string>
+  <string name="Level_TileHighGrass">高い草</string>
+  <string name="Level_TileLockedExit">鍵付き深層出口</string>
+  <string name="Level_TileUnlockedExit">鍵無し深層出口</string>
+  <string name="Level_TileSign">看板</string>
+  <string name="Level_TileWell">井戸</string>
+  <string name="Level_TileEmptyWell">空っぽの井戸</string>
+  <string name="Level_TileStatue">像</string>
+  <string name="Level_TileToxicTrap">毒ガスの罠</string>
+  <string name="Level_TileFireTrap">火炎の罠</string>
+  <string name="Level_TileParalyticTrap">麻痺ガスの罠</string>
+  <string name="Level_TilePoisonTrap">毒矢の罠</string>
+  <string name="Level_TileAlarmTrap">警報の罠</string>
+  <string name="Level_TileLightningTrap">電撃の罠</string>
+  <string name="Level_TileGrippingTrap">グリッピングトラップ</string>
+  <string name="Level_TileSummoningTrap">召喚の罠</string>
+  <string name="Level_TileInactiveTrap">トリガートラップ</string>
+  <string name="Level_TileBookshelf">本棚</string>
+  <string name="Level_TileAlchemy">錬金釜</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">あなたは底を見ることが出来ない。</string>
+  <string name="Level_TileDescWater">火を消すためには水の中に入ります。</string>
+  <string name="Level_TileDescEntrance">上り階段は上の階層に通じています。</string>
+  <string name="Level_TileDescExit">下り階段は下の階層に通じています。</string>
+  <string name="Level_TileDescEmbers">残り火が床に残っています。</string>
+  <string name="Level_TileDescHighGrass">濃い植物は視界を遮ります。</string>
+  <string name="Level_TileDescLockedDoor">このドアはロックされていて、開けるためには合う鍵が必要です。</string>
+  <string name="Level_TileDescLockedExit">重いバーが下り階段を塞いでいる。</string>
+  <string name="Level_TileDescBarricade">木製のバリケードが堅くセットされている。長い年月で乾いている。燃えるか？</string>
+  <string name="Level_TileDescSign">ここからでは読むことが出来ない。</string>
+  <string name="Level_TileDescTrap">隠された圧力版の上に乗ると罠が作動します。</string>
+  <string name="Level_TileDescInactiveTrap">作動済みのトラップはもう危険ではありません。</string>
+  <string name="Level_TileDescStatue">誰かがここを飾ろうとしましたが、失敗です、明らかに。</string>
+  <string name="Level_TileDescAlchemy">ここに種子を落としてポーションを作ります。</string>
+  <string name="Level_TileDescEmptyWell">井戸が枯れています。</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileGrass">光る苔</string>
+  <string name="Caves_TileHighGrass">光るキノコ</string>
+  <string name="Caves_TileWater">凍った冷たい水。</string>
+  <string name="Caves_TileDescEntrance">上りハシゴは上の階層に通じています。</string>
+  <string name="Caves_TileDescExit">下りハシゴは下の階層に通じています。</string>
+  <string name="Caves_TileDescHighGrass">大きいキノコは視界を遮ります。</string>
+  <string name="Caves_TileDescDeco">壁に鉱脈が見える。金？</string>
+  <string name="Caves_TileDescBookshelf">誰が洞窟の中に本棚を必要とする？</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">怪しい色の水</string>
+  <string name="City_TileHighGrass">高い花が咲く</string>
+  <string name="City_TileDescEntrance">ランプは上の階層に通じています。</string>
+  <string name="City_TileDescExit">ランプは下の階層に通じています。</string>
+  <string name="City_TileDescDeco">いくつかのタイルはここにありません。</string>
+  <string name="City_TileDescEmptySP">厚いカーペットが床を覆っています。</string>
+  <string name="City_TileDescStatue">像は英雄的なドワーフの姿を象っている。</string>
+  <string name="City_TileDescBookshelf">本棚には様々な分野の本が並んでいる。</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">冷えた溶岩</string>
+  <string name="Halls_TileGrass">炭焼き苔</string>
+  <string name="Halls_TileHighGrass">炭焼き菌類</string>
+  <string name="Halls_TileStatue">柱</string>
+  <string name="Halls_TileDescWater">これは溶岩のように見えますが、冷たく、触っても平気でしょう。</string>
+  <string name="Halls_TileDescStatue">柱は人の頭蓋骨で出来ている。驚きだ。</string>
+  <string name="Halls_TileDescBookshelf">本棚には古代の言語で書かれた本がある。</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">冷えた溶岩</string>
+  <string name="LastLevel_TileGrass">炭焼き苔</string>
+  <string name="LastLevel_TileHighGrass">炭焼き菌類</string>
+  <string name="LastLevel_TileStatue">柱</string>
+  <string name="LastLevel_TileDescWater">これは溶岩のように見えますが、冷たく、触っても平気でしょう。</string>
+  <string name="LastLevel_TileDescStatue">柱は人の頭蓋骨で出来ている。驚きだ。</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">怪しい色の水</string>
+  <string name="LastShopLevel_TileHighGrass">高い花が咲く</string>
+  <string name="LastShopLevel_TileDescEntrance">ランプは上の階層に通じています。</string>
+  <string name="LastShopLevel_TileDescExit">ランプは下の灼熱地獄に通じています。</string>
+  <string name="LastShopLevel_TileDescDeco">いくつかのタイルはここにありません。</string>
+  <string name="LastShopLevel_TileDescEmptySP">厚いカーペットが床を覆っています。</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">暗く冷たい水。</string>
+  <string name="Prison_TileDescDeco">床の上に古い血痕があります。</string>
+  <string name="Prison_TileDescBookshelf">これはおそらく刑務所の図書館の跡です。燃えるか？</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">濁った水</string>
+  <string name="Sewer_TileDescDeco">湿った黄色がかった苔が床を覆っています。</string>
+  <string name="Sewer_TileDescBookshelf">本棚には役に立たない本ばかり。燃えるか？</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">投げる種子を選択</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">割れ目</string>
+  <string name="Chasm_Yes">はい、私は私が何をやっているか知っている</string>
+  <string name="Chasm_No">いいえ、私は考えを変えました</string>
+  <string name="Chasm_Jump">あなたは本当に割れ目に飛び込みますか？おそらく死ぬでしょう。</string>
+  <string name="Chasm_Info">あなたは落下死した...</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">罠はダンジョン全体にけたたましい音を響かせます！</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">電撃の罠</string>
+  <string name="LightningTrap_Desc">あなたは電撃の罠の放電で殺されました...</string>
+</resources>

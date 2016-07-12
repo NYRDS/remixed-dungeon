@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">あなたは今 %1$s を識別するために十分精通しています。これは %2$s です。</string>
+  <string name="Weapon_Incompatible">異なるタイプの魔法はこの武器の魔術を打ち消した！</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>グリム %s</item>
+    <item>グリム %s</item>
+    <item>グリム %s</item>
+  </string-array>
+  <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>烈火の %s</item>
+    <item>烈火の %s</item>
+    <item>烈火の %s</item>
+  </string-array>
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>不気味な %s</item>
+    <item>不気味な %s</item>
+    <item>不気味な %s</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>不安定な %s</item>
+    <item>不安定な %s</item>
+    <item>不安定な %s</item>
+  </string-array>
+  <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>吸血 %s</item>
+    <item>吸血 %s</item>
+    <item>吸血 %s</item>
+  </string-array>
+  <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>幸運の %s</item>
+    <item>幸運の %s</item>
+    <item>幸運の %s</item>
+  </string-array>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>衝撃の %s</item>
+    <item>衝撃の %s</item>
+    <item>衝撃の %s</item>
+  </string-array>
+  <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>貫通の %s</item>
+    <item>貫通の %s</item>
+    <item>貫通の %s</item>
+  </string-array>
+  <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>猛毒の %s</item>
+    <item>猛毒の %s</item>
+    <item>猛毒の %s</item>
+  </string-array>
+  <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>極寒の %s</item>
+    <item>極寒の %s</item>
+    <item>極寒の %s</item>
+  </string-array>
+  <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>野蛮な %s</item>
+    <item>野蛮な %s</item>
+    <item>野蛮な %s</item>
+  </string-array>
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">この %1$s は %2$s の ランク-%3$d の近接武器です。</string>
+  <string name="MeleeWeapon_Info1b">a</string>
+  <string name="MeleeWeapon_Info1c">強化された</string>
+  <string name="MeleeWeapon_Info1d">劣化した</string>
+  <string name="MeleeWeapon_Info2a">平均ダメージは %d ポイントです。</string>
+  <string name="MeleeWeapon_Info2b">平均ダメージは %1$d ポイントで、%2$d の力が必要です。</string>
+  <string name="MeleeWeapon_Info2c">あなたにとって、この武器は重い。</string>
+  <string name="MeleeWeapon_Info3a">これはかなり %s な武器です。</string>
+  <string name="MeleeWeapon_Info3b">速い</string>
+  <string name="MeleeWeapon_Info3c">遅い</string>
+  <string name="MeleeWeapon_Info3d">と</string>
+  <string name="MeleeWeapon_Info3e">だが</string>
+  <string name="MeleeWeapon_Info3f">正確</string>
+  <string name="MeleeWeapon_Info3g">不正確</string>
+  <string name="MeleeWeapon_Info4a">これは速さを重視して作られています。</string>
+  <string name="MeleeWeapon_Info4b">これは正確さを重視して作られています。</string>
+  <string name="MeleeWeapon_Info5">これは魔術がかかっている。</string>
+  <string name="MeleeWeapon_Info6a">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下します。</string>
+  <string name="MeleeWeapon_Info6b">あなたの力が十分なので、この %s のダメージが増加します。</string>
+  <string name="MeleeWeapon_Info7a">あなたはすぐ使える状態 %2$s で %1$s を持っている。</string>
+  <string name="MeleeWeapon_Info7b">、それは呪われているため、あなたは手放すことが出来ない</string>
+  <string name="MeleeWeapon_Info7c">あなたは %s に潜んでいる邪悪な魔法を感じることが出来ます。</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">バトルアックス</string>
+  <string name="BattleAxe_Info">この巨大な鋼鉄のバトルアックスは、攻撃後のスキが大きいです。</string>
+  <string name="BattleAxe_Gender">力強い</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">ダガー</string>
+  <string name="Dagger_Info">木製に握りのシンプルな鉄の短剣。</string>
+  <string name="Dagger_Gender">力強い</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">グレイブ</string>
+  <string name="Glaive_Info">ポールの先に剣の刃が付けられた柄の長い武器。</string>
+  <string name="Glaive_Gender">弱々しい</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">ナックルダスター</string>
+  <string name="Knuckles_Info">拳を覆うように作られた鉄の武器。</string>
+  <string name="Knuckles_Gender">力強い</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">ロングソード</string>
+  <string name="Longsword_Info">この長い刃はすべての斬撃で高いダメージを与える。</string>
+  <string name="Longsword_Gender">力強い</string>
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">メイス</string>
+  <string name="Mace_Info">この武器の鉄の頭はかなりのダメージを与える。</string>
+  <string name="Mace_Gender">弱々しい</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">クォータースタッフ</string>
+  <string name="Quarterstaff_Info">この硬い木の棒は、先端が鉄で覆われている。</string>
+  <string name="Quarterstaff_Gender">力強い</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">ショートソード</string>
+  <string name="ShortSword_Info">これはなかなか短いですが、ダガーより少し長いです。</string>
+  <string name="ShortSword_ACReforge">鍛え直す</string>
+  <string name="ShortSword_Select">強化する武器を選択</string>
+  <string name="ShortSword_Reforged">あなたの %s を強化するため、ショートソードで鍛え直します</string>
+  <string name="ShortSword_NotBoomerang">あなたはこの方法でブーメランを強化できません</string>
+  <string name="ShortSword_Gender">力強い</string>
+  <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">スピアー</string>
+  <string name="Spear_Info">細い木の棒の先端に鋭い鉄が付いています。</string>
+  <string name="Spear_Gender">中性の</string>
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">ソード</string>
+  <string name="Sword_Info">鋭い長さの鋼の刃は頼もしく輝きます。</string>
+  <string name="Sword_Gender">力強い</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">ウォーハンマー</string>
+  <string name="WarHammer_Info">少数の生き物だけが、このそびえ立つ鉛と鋼の塊の強烈な一撃に耐えます。しかし、効果的に扱えるのは最強の冒険者だけでしょう。</string>
+  <string name="WarHammer_Gender">力強い</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">飛び道具</string>
+  <string name="MissileWeapon_Yes">はい、私は私が何をやっているか知っている</string>
+  <string name="MissileWeapon_No">いいえ、私は考えを変えました</string>
+  <string name="MissileWeapon_Sure">本当に近接武器としてそれを装備しますか？</string>
+  <string name="MissileWeapon_Info1">
+\n\nこの武器の平均ダメージは %d ポイントと同じです。</string>
+  <string name="MissileWeapon_Info2">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下します。</string>
+  <string name="MissileWeapon_Info3">あなたの力が十分なので、この %s のダメージが増加します。</string>
+  <string name="MissileWeapon_Info4">
+\n\nあなたはすぐ使える状態で %s を持っている。</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name">ブーメラン</string>
+  <string name="Boomerang_Info">敵に投げられたこの平らで湾曲した木の武器は投げ手の元に戻ってきます。</string>
+  <string name="Boomerang_Gender">力強い</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">クラーレダーツ</string>
+  <string name="CurareDart_Info">この邪悪な小さなダーツのダメージは大きくはありませんが、目標を麻痺させて少しの間無力化させることが出来ます。</string>
+  <string name="CurareDart_Gender">力強い</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">ダーツ</string>
+  <string name="Dart_Info">この単純な金属のクギは、手首の軽い動きで敵に向かってまっすぐ飛ぶようにできています。</string>
+  <string name="Dart_Gender">力強い</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">焼夷性ダーツ</string>
+  <string name="IncendiaryDart_Info">このダーツが目標に刺さると、取り付けられた不安定な化合物が鮮やかに炎上するよう設計されています。</string>
+  <string name="IncendiaryDart_Gender">力強い</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">ジャベリン</string>
+  <string name="Javelin_Info">先端の金属のトゲの長さは、空気中を綺麗に飛ぶ重さです。</string>
+  <string name="Javelin_Gender">中性の</string>
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">手裏剣</string>
+  <string name="Shuriken_Info">鋭い刃の付いた星形の金属片は目標にかなりのダメージを与えます。彼らはとても速い速度で投げることが出来ます。</string>
+  <string name="Shuriken_Gender">力強い</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">トマホーク</string>
+  <string name="Tamahawk_Info">この投げ斧は重くはありませんが、効果的に使用するにはかなりの力が必要です。</string>
+  <string name="Tamahawk_Gender">力強い</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">鎖鎌</string>
+  <string name="Kusarigama_Info">この武器は鎌と金属の鎖と重い鉄のおもりで成り立っています。</string>
+  <string name="Kusarigama_Gender">弱々しい</string>
+  <string name="Kusarigama_Pull">引く</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">カオスソード</string>
+  <string name="ChaosSword_Info">この剣の刃は、純粋なカオスで作られていて、時折かすかに震えます。内部に大きな力を溜めていて、大抵のものは両断することができるでしょう。この武器の強大な力を扱うには、熟練の技が必要とされている。</string>
+  <string name="ChaosSword_Gender">力強い</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">カオスボウ</string>
+  <string name="ChaosBow_Info">カオスの力で満たされた恐ろしい弓。放たれた矢がカオスエネルギーの欠片を目標に運びます。しかし、もしあなたが外したら...</string>
+  <string name="ChaosBow_Gender">力強い</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">カオススタッフ</string>
+  <string name="ChaosStaff_Info">スタッフはカオスの力を注ぎ込んだ！夢や恐れ以外にメイジが思うことがあるか？</string>
+  <string name="ChaosStaff_Gender">力強い</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">生け贄の剣</string>
+  <string name="SacrificialSword_Info">一見すると、この古い青銅の剣は古サビの汚れで覆われていて使いものにならないように見える。しかし、古代の力が内部には眠っている。この力は、ほぼすべての生き物をまれに奴隷に変えることができる。それらを覚ますには正しい方法を見つける必要がある...</string>
+  <string name="SacrificialSword_Gender">力強い</string>
+</resources>

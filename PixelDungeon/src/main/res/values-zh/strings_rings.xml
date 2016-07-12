@@ -88,6 +88,10 @@
   <string name="ChaosCrystal_StaffFused">水晶吸收了你的法杖，并化成了一根法杖的形态。</string>
   <string name="CorpseDust_Buff">嗜血</string>
   <string name="DriedRose_Buff">迷人</string>
+  <string name="DriedRose_CursedBuff">帅气</string>
+  <string name="RatSkull_Buff">鼠中精英</string>
+  <string name="RatKingCrown_Buff">鼠王殿下</string>
   <!--STRINGS OF RatKingCrown CLASS-->
   <string name="RatKingCrown_Name">鼠王之冠</string>
+  <string name="RatKingCrown_Info">鼠王的金王冠，给与佩戴者无上的鼠国权力</string>
 </resources>

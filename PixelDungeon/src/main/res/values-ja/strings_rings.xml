@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">%s リング</string>
+  <string name="Ring_Info">この金属の環は暗闇で輝く大きな %s の宝石で飾られている。身につけるどどうなるかわかりますか？</string>
+  <string name="Ring_Identify">あなたは今 %1$s を識別するために十分精通しています。これは %2$s です。</string>
+  <string-array name="Ring_Gems">
+    <item>ダイアモンド</item>
+    <item>オパール</item>
+    <item>ガーネット</item>
+    <item>ルビー</item>
+    <item>アメジスト</item>
+    <item>トパーズ</item>
+    <item>オニキス</item>
+    <item>トルマリン</item>
+    <item>エメラルド</item>
+    <item>サファイア</item>
+    <item>クォーツ</item>
+    <item>アガット</item>
+  </string-array>
+  <string name="Ring_Info1">あなたは一度に2つのリングを身につけられます</string>
+  <string name="Ring_Info2">あなたの %s は痛いくらい指を締め付けた</string>
+  <string name="Ring_Info3a">%1$s\n\nあなたの指の %3$s に %2$s がある。</string>
+  <string name="Ring_Info3b">、それは呪われているため、あなたは取り除くことが出来ない</string>
+  <string name="Ring_Info4">%1$s\n\nあなたは %2$s に潜んでいる邪悪な魔法を感じることが出来ます。</string>
+  <string name="Ring_BuffKnown">これは %s です</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">命中のリング</string>
+  <string name="RingOfAccuracy_Info">このリングは、あなたの敵への命中率を増加させます。</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">探知のリング</string>
+  <string name="RingOfDetection_Info">このリングを身に着けていると隠された秘密に気付きます - 罠や隠されたドア - 探索の時間がかかりません。劣化した探知のリングはあなたの感覚を鈍らせ、隠された秘密の探索が困難になります。</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">元素のリング</string>
+  <string name="RingOfElements_Info">このリングは炎や雷、ガスなどの負の要素に対する耐性を備えています。</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">回避のリング</string>
+  <string name="RingOfEvasion_Info">このリングは、あなたの敵からの回避率を増加させます。</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">値切りのリング</string>
+  <string name="RingOfHaggler_Info">このリングは何か魔法の要素は備えていませんが、店主と行商人は、盗賊ギルドのメンバーの所有しているリングだと把握しています。彼らは店を守るために喜んで値切りに応じます。このリングは強化しても追加ボーナスは得られません。</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">加速のリング</string>
+  <string name="RingOfHaste_Info">このリングは装着者の時間の流れを加速させて、すべての行動を少し速くします。</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">草学のリング</string>
+  <string name="RingOfHerbalism_Info">このリングは、草を踏みつけた時の、雫や種子を得られる確率を増加します。</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">修復のリング</string>
+  <string name="RingOfMending_Info">このリングは自然治癒力を高めて、失われたヘルスの回復を早めます。劣化したリングは自然治癒力を停止、あるいは減少させます。</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">威力のリング</string>
+  <string name="RingOfPower_Info">あなたの杖は、このリングの輝くエネルギーフィールドによってより強力になります。劣化した威力のリングはあなたの杖を弱体化させます。</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">満腹のリング</string>
+  <string name="RingOfSatiety_Info">このリングを着用していると長期間食べ物なしでも平気です。劣化した満腹のリングは逆の効果を発揮します。</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">影のリング</string>
+  <string name="RingOfShadows_Info">あなたがこのリングを着用すると、敵があなたに気づきにくくなります。劣化した影のリングは、あなたの存在に気づいていない敵に警告を発します。</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">いばらのリング</string>
+  <string name="RingOfThorns_Info">このリングに本物のいばらがあるわけではないですが、あなたに対する敵の攻撃の何割か損傷を相手に負わせます。このリングは強化しても追加ボーナスは得られません。</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">石血のリング</string>
+  <string name="RingOfStoneWalking_Info">この珍しいリングは頑丈な石で作られています。あなたが最初に思ったことは、ルビーは実際には血液がその場所にあった！壁の内部へ向かって現れる矢印は、絶望へと進んでいる... どういうことだろうか？</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">あなたは石に閉じ込められた。永遠に。</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">クモのお守り</string>
+  <string name="SpiderCharm_Info">このエキゾチックな小物は、不思議なオーラを秘めている。身に付ける者がどうなるかわかりますか？</string>
+  <string name="SpiderCharm_Use">使う</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">不思議なクリスタル</string>
+  <string name="ChaosCrystal_Name_1">混沌のクリスタル</string>
+  <string name="ChaosCrystal_Name_2">混沌のクリスタル</string>
+  <string name="ChaosCrystal_Info">あなたは、あなたの手を通じてエネルギーの流れを感じます。</string>
+  <string name="ChaosCrystal_Info_1">混沌の力がクリスタルを通じて流れています。多分、それは便利かもしれない。</string>
+  <string name="ChaosCrystal_Info_2">イエス！あなたはアイテムの1つを融合できることを知る、では次は？</string>
+  <string name="ChaosCrystal_Use">使う</string>
+  <string name="ChaosCrystal_Fuse">融合</string>
+  <string name="ChaosCrystal_Prompt">混沌の印をセットする場所を選ぶ</string>
+  <string name="ChaosCrystal_SelectForFuse">融合する混沌のクリスタルを選ぶ</string>
+  <string name="ChaosCrystal_ScrollFused">クリスタルはスクロールのルーンに吸収されて、いまは %s です</string>
+  <string name="ChaosCrystal_SwordFused">クリスタルはあなたの武器を吸収し、剣の姿になった</string>
+  <string name="ChaosCrystal_BowFused">クリスタルはあなたの弓を吸収し、弓の姿になった</string>
+  <string name="ChaosCrystal_StaffFused">クリスタルはあなたの杖を吸収し、杖の姿になった</string>
+  <string name="CorpseDust_Buff">血に飢える</string>
+  <string name="DriedRose_Buff">魅力的な</string>
+  <string name="DriedRose_CursedBuff">色っぽい</string>
+  <string name="RatSkull_Buff">裏切り者</string>
+  <string name="RatKingCrown_Buff">ネズミっぽい</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">ネズミの王の王冠</string>
+  <string name="RatKingCrown_Info">永遠のネズミ力の象徴たる、高貴なネズミの金の王冠</string>
+</resources>
