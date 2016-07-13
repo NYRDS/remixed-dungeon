@@ -191,7 +191,7 @@ public class Lich extends Boss {
     @Override
     public void die( Object cause ) {
         GameScene.bossSlain();
-        Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+        //Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
         super.die( cause );
 
         //Kill everthing
