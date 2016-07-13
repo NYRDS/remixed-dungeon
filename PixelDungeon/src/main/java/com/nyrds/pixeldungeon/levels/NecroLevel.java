@@ -62,7 +62,7 @@ public class NecroLevel extends RegularLevel {
 
 		int pos = randomRespawnCell();
 
-		for (int i = 0; i< Dungeon.depth * 2; i++) {
+		for (int i = 0; i< Dungeon.depth; i++) {
 			while(Actor.findChar(pos) != null) {
 				pos = randomRespawnCell();
 			}
