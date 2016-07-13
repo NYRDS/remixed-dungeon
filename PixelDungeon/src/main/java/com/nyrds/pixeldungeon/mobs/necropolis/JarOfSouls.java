@@ -38,6 +38,13 @@ public class JarOfSouls extends UndeadMob {
 	@Override
 	protected boolean act(){
 		super.act();
+		if (enemySeen){
+			spawnUndead();
+		}
+		return true;
+	}
+
+	private void spawnUndead(){
 		PlayZap();
 
 		Mob newMob = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
@@ -54,12 +61,10 @@ public class JarOfSouls extends UndeadMob {
 		}
 
 		PlayZap();
-		
+
 		postpone(20);
-		
-		return true;
 	}
-	
+
 	@Override
 	public int dr() {
 		return 0;
