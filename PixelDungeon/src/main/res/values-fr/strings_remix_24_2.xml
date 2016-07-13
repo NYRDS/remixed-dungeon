@@ -1,3 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">épée en or</string>
+    <string name="GoldenSword_Info">Normalement les armes faites d\'un tel métal sont considérées comme de la décoration. Cependant cette lame semble être très coupante.</string>
+    <string name="GoldenSword_Gender">masculin</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">statue en or</string>
+    <string name="GoldenStatue_Gender">féminin</string>
+    <string name="GoldenStatue_Name_Objective">épée en or</string>
+    <string name="GoldenStatue_Desc">C\'est impensable, cette magnifique statue n\'est pas une décoration, mais une créature malicieuse attendant l\'aventurier sans méfiance. Au premier abord vous auriez juré que cette _%s_ était juste une partie de son bras.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">nécromancien</string>
+    <string name="NecromancerNPC_Gender">mâle</string>
+    <string name="NecromancerNPC_Name_Objective">nécromancien</string>
+    <string name="NecromancerNPC_Desc">Cet homme ayant la cinquantaine semble être à la fois légèrement énervé et excité. Il porte une armure composite faite de fragments d\'os.</string>
+    <string name="NecromancerNPC_Intro"> Ah! C\'est si rare! Un aventurier qui n\'est pas mort. Remarquable! Oh... excusez-moi, parfois je suis tellement excité. Comme vous pouvez le voir, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est mon métier, voir encore et toujours la même chose devient finalement très ennuyeux. D\'un autre côté c\'est exactement la raison pour laquelle je suis ici. D\'après quelques semaines de calculs, quelque part dans ce donjon se prépare une chose spectaculaire. Une _Nécropole_, une ancienne cité de la mort va ouvrir ses portes. Et... je ne le dirais jamais assez, j\'ai perdu suffisamment de temps. J\'ai besoin d\'être prêt, _revenez plus tard_.</string>
+    <string name="NecromancerNPC_Message1">Si peu de temps, si peu de temps...</string>
+    <string name="NecromancerNPC_Message2">Je dois être prêt.</string>
+    <string name="NecromancerNPC_Message3">Je peux entendre l\'appel de la mort.</string>
+    <string name="NecromancerNPC_Message4">Il y a quelque chose de vraiment spécial dans la Nécropole.</string>
+
+    <string name="RatKing_Name_Objective">roi des rats</string>
+    <string name="RatKing_Gender">mâle</string>
+</resources>

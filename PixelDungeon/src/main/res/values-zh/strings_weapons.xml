@@ -185,7 +185,10 @@
   <string name="Tamahawk_Info">看上去这飞斧并不重，但它依然需要足够的力量来有效使用。</string>
   <string name="Tamahawk_Gender">masculine</string>
   <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">锤锁镰</string>
+  <string name="Kusarigama_Info">这件武器由镰刀，铁球，锁链三部分所构成，铁球和镰刀分别在锁链的两端。</string>
   <string name="Kusarigama_Gender">feminine</string>
+  <string name="Kusarigama_Pull">拉住</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">混沌剑</string>
   <string name="ChaosSword_Info">混乱为刃，力量蕴内。刀身发颤，力能开山。唯有强者，方能使用。</string>

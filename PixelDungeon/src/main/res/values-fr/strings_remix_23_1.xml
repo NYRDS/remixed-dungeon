@@ -7,20 +7,41 @@
   <string name="AzuterronNPC_Name_Objective">Etranger</string>
   <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
   <string name="AzuterronNPC_Quest_Start">Hein, quoi ... oh, tu peux me voir, n\'est-ce pas ? Cela veut dire que tu n\'es pas l\'un d\'\"eux\". Je vois que tu n\'es pas friand de tous ces monstres. Tu sais quoi, si tu résous mon petit problème, je t\'offrirais mon aide. Quelque part dans cet étage, tu trouveras une créature des Ténèbres, un _Esprit Perfide_. Tues-le, prends son _cœur_ et reviens vers moi. Une dernière chose, si tu est intéressé par mon équipement, n\'hésite pas à demander</string>
-  <string name="AzuterronNPC_Quest_Reminder">Aides-moi et je t\'aiderais.</string>
+  <string name="AzuterronNPC_Quest_Reminder">Aide-moi et je t\'aiderai.</string>
   <string name="AzuterronNPC_Quest_End">Excellent. Prends cette potion, tu la trouveras bénéfique</string>
   <string name="Journal_Azuterron">Etranger</string>
   <!--STRINGS OF TreacherousSpirit CLASS-->
-  <string name="TreacherousSpirit_Name">Esprit Perfide</string>
+  <string name="TreacherousSpirit_Name">Esprit perfide</string>
   <string name="TreacherousSpirit_Gender">mâle</string>
-  <string name="TreacherousSpirit_Name_Objective">Esprit Perfide</string>
+  <string name="TreacherousSpirit_Name_Objective">Esprit perfide</string>
+  <string name="TreacherousSpirit_Desc">Cette monstrueuse créature ressemble à un nuage de ténèbres vivantes. Son oeil sans paupière vous regarde, palpitant à chacun de vos mouvements.</string>
   <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">esprit de la douleur</string>
+  <string name="SpiritOfPain_Gender">mâle</string>
+  <string name="SpiritOfPain_Name_Objective">esprit de la douleur</string>
+  <string name="SpiritOfPain_Desc">Un éclat de ténèbres vivantes.</string>
   <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">rat suspect</string>
+  <string name="SuspiciousRat_Gender">femelle</string>
+  <string name="SuspiciousRat_Name_Objective">rat suspect</string>
+  <string name="SuspiciousRat_Desc">Les rats ne sont pas rares dans les donjons, mais à demeurer aussi profondément... Vous pouvez voir que le corps du rat est rempli de spasmes quand il bouge.</string>
+  <string name="SuspiciousRat_Info1">Le rat suspect se contracte violemment.</string>
   <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Pseudo-rat</string>
+  <string name="PseudoRat_Gender">femelle</string>
+  <string name="PseudoRat_Name_Objective">Pseudo-rat</string>
+  <string name="PseudoRat_Desc">Une horrible bête émergeant du corps du rat qui ne ressemble ni à un rongeur ni à aucun autre animal que vous ayez déjà vu. Une énorme bouche, pleine de dents tranchantes, occupe la plus grande partie de son corps.</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Le Gnoll-Zombie a ressuscité!</string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Coeur des ténébres</string>
+  <string name="HeartOfDarkness_Info">Le coeur noir et palpitant de l\'Esprit perfide.</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Voile sombre</string>
   <!--Badges-->
+  <string name="Badges_Yog_Slain">Yog-Dzewa tué</string>
+  <string name="Badges_ShadowLord_Slain">Seigneur de l\'Ombre tué</string>
+  <string name="Badges_SpiderQueen_Slain">Reine des Araignées tuée</string>
 </resources>
