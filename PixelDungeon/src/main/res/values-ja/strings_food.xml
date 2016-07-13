@@ -31,19 +31,19 @@
   <string name="RottenMeat_Name">腐った肉</string>
   <string name="RottenMeat_Info">腐った肉片</string>
   <!--STRINGS OF RottenPasty CLASS-->
-  <string name="RottenPasty_Name">ペースト状の腐った物</string>
-  <string name="RottenPasty_Info">元ペースト状のとても嫌な物</string>
+  <string name="RottenPasty_Name">腐ったペースト</string>
+  <string name="RottenPasty_Info">とても嫌な元ペースト</string>
   <!--STRINGS OF RottenRation CLASS-->
   <string name="RottenRation_Name">腐ったレーション</string>
   <string name="RottenRation_Info">昔は食べることが出来ました</string>
   <!--STRINGS OF OverpricedRation CLASS-->
   <string name="OverpricedRation_Name">高級レーション</string>
-  <string name="OverpricedRation_Info">普通のレーションが小さく見えます。</string>
+  <string name="OverpricedRation_Info">普通のレーションが安物に見えます。</string>
   <string name="OverpricedRation_Message">それは良い味です。</string>
   <!--STRINGS OF Pasty CLASS-->
-  <string name="Pasty_Name">ペースト状</string>
+  <string name="Pasty_Name">ペースト</string>
   <string name="Pasty_Info">これは牛肉とポテトを入れたコーンペーストです。</string>
   <!--STRINGS OF PseudoPasty CLASS-->
-  <string name="PseudoPasty_Name">ペースト状</string>
+  <string name="PseudoPasty_Name">ペースト</string>
   <string name="PseudoPasty_Info">これは牛肉とポテトを入れたコーンペーストです。</string>
 </resources>

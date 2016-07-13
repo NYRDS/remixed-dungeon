@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">statue animée</string>
+    <string name="ArmoredStatue_Gender">femelle</string>
+    <string name="ArmoredStatue_Name_Objective">statue animée</string>
+    <string name="ArmoredStatue_Desc">Vous ne pourriez penser, ne serait-ce qu\'une seconde, que ce soit encore une horrible statue. Non seulement à cause de ses yeux rouges lumineux, mais aussi parce que personne ne poserait d\'_%s_ sur une telle chose.</string>
+
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">araignée garde</string>
+    <string name="SpiderGuard_Gender">mâle</string>
+    <string name="SpiderGuard_Name_Objective">araignée garde</string>
+    <string name="SpiderGuard_Desc">Comme les soldats, les araignées gardes ont juré de protéger leur royaume. Le poison des gardes est utilisé pour immobiliser leurs cibles et les paralyser.</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">araignée ambre</string>
+    <string name="SpiderMindAmber_Gender">mâle</string>
+    <string name="SpiderMindAmber_Name_Objective">araignée ambre</string>
+    <string name="SpiderMindAmber_Desc">Les araignées ambres sont de rares et mystérieuses créatures possédant des pouvoirs psychiques similaires à ceux des psi-araignées, mais sont bien plus fortes que leurs frères. Le mot \"ambre\" fait référence à la couleur de leurs cerveaux géants, qui sont révélés à leurs victimes, car les Araingnées Ambres frappent avec leurs pouvoirs.</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Set du Pirate</string>
+    <string name="PirateSet_Info">Arr! s\'rais tu un mousaillon... ou un satané marin d\'eau douce ? J\'espère pas, enfin je veux dire que cet équipement est pour les pirates... Arr!</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">Oui, supprimez moi ça!</string>
+    <string name="WndSaveSlotSelect_Delete_No">Non</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Etes vous sur de vouloir supprimer cette sauvegarde ?</string>
+</resources>
