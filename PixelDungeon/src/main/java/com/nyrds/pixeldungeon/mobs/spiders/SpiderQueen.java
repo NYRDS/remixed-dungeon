@@ -29,6 +29,8 @@ public class SpiderQueen extends Boss {
 			loot = new ChaosCrystal();
 		} else if (dice < 0.66) {
 			loot = new SpiderCharm();
+		} else if (dice <= 1) {
+			loot = new SpiderArmor();
 		}
 		lootChance = 1f;
 		
