@@ -31,7 +31,7 @@ public class UndeadMob extends Mob {
     public void add( Buff buff ) {
         if(!Dungeon.isLoading()) {
             if (buff instanceof Burning) {
-                damage(Random.NormalIntRange(1, ht() / 10), buff);
+                damage(Random.NormalIntRange(4, ht() / 6), buff);
             }
         }
         super.add( buff );
