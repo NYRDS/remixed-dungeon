@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -209,6 +210,9 @@ public class Dungeon {
 	}
 
 	public static boolean shopOnLevel() {
+		if (level instanceof NecroLevel){
+			return false;
+		}
 		return depth == 6 || depth == 11 || depth == 16 || depth == 27;
 	}
 
