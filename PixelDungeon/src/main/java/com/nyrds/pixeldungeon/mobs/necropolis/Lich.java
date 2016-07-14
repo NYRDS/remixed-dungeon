@@ -40,7 +40,7 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 3;
-    private static final int HEALTH	= 120;
+    private static final int HEALTH	= 150;
 
     private int skullTimer = 5;
 
@@ -120,31 +120,37 @@ public class Lich extends Boss {
         }
 
         if (activatedSkull != null) {
-            switch (activatedSkull.getKind()) {
-                case RunicSkull.RED_SKULL:
-                    PotionOfHealing.heal(this,0.2f);
-                    break;
-
-                case RunicSkull.BLUE_SKULL:
-                    int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
-                    for(int i = 0; i < skulls.size(); i++){
-                        if (Dungeon.level.cellValid(larvaPos)) {
-                            Skeleton skeleton = new Skeleton();
-                            skeleton.setPos(larvaPos);
-                            Dungeon.level.spawnMob(skeleton, 0);
-                            Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
-                        }
-                    }
-                    break;
-
-                case RunicSkull.GREEN_SKULL:
-                    GameScene.add( Blob.seed( getPos(), 30, ToxicGas.class ) );
-                    break;
-            }
+            useSkull();
         }
         postpone(6);
         return super.act();
     }
+
+    public void useSkull(){
+
+        switch (activatedSkull.getKind()) {
+            case RunicSkull.RED_SKULL:
+                PotionOfHealing.heal(this,0.2f);
+                break;
+
+            case RunicSkull.BLUE_SKULL:
+                int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
+                for(int i = 0; i < skulls.size(); i++){
+                    if (Dungeon.level.cellValid(larvaPos)) {
+                        Skeleton skeleton = new Skeleton();
+                        skeleton.setPos(larvaPos);
+                        Dungeon.level.spawnMob(skeleton, 0);
+                        Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
+                    }
+                }
+                break;
+
+            case RunicSkull.GREEN_SKULL:
+                GameScene.add( Blob.seed( getPos(), 30, ToxicGas.class ) );
+                break;
+        }
+    }
+
 
     @Override
     protected boolean canAttack( Char enemy ) {
