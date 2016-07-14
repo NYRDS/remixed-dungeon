@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
-    android:versionCode="296"
+    android:versionCode="298"
     android:versionName="remix.24.2.fix.7" >
 
     <uses-sdk tools:overrideLibrary="com.google.android.gms.ads,
