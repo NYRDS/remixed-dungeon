@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Pushing;
@@ -41,7 +42,7 @@ public class Lich extends Boss {
     private static final int SKULLS_MAX	= 3;
     private static final int HEALTH	= 120;
 
-    private int skullTimer = 0;
+    private int skullTimer = 5;
 
     private RunicSkull activatedSkull;
 
@@ -126,12 +127,13 @@ public class Lich extends Boss {
 
                 case RunicSkull.BLUE_SKULL:
                     int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
-
-                    if (Dungeon.level.cellValid(larvaPos)) {
-                        Yog.Larva larva = new Yog.Larva();
-                        larva.setPos(larvaPos);
-                        Dungeon.level.spawnMob(larva, 0);
-                        Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
+                    for(int i = 0; i < skulls.size(); i++){
+                        if (Dungeon.level.cellValid(larvaPos)) {
+                            Skeleton skeleton = new Skeleton();
+                            skeleton.setPos(larvaPos);
+                            Dungeon.level.spawnMob(skeleton, 0);
+                            Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
+                        }
                     }
                     break;
 
@@ -140,7 +142,7 @@ public class Lich extends Boss {
                     break;
             }
         }
-        postpone(20);
+        postpone(6);
         return super.act();
     }
 
