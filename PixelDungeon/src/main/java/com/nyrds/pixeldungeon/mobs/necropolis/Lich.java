@@ -96,6 +96,9 @@ public class Lich extends Boss {
         }
     }
 
+    //Runic skulls handling
+    //***
+
     protected void activateRandomSkull(){
         if (!skulls.isEmpty()){
             if (activatedSkull != null){
@@ -103,27 +106,26 @@ public class Lich extends Boss {
             }
 
             RunicSkull skull = getRandomSkull();
-            skull.Activate();
-            activatedSkull = skull;
+            if(skull == null){
+                activatedSkull = null;
+            } else{
+                skull.Activate();
+                activatedSkull = skull;
+            }
         }
     }
 
     public RunicSkull getRandomSkull() {
-        return Random.element(skulls);
-    }
-
-    @Override
-    protected boolean act() {
-
-        if (this.hp() < HEALTH) {
-           activateRandomSkull();
+        while(!skulls.isEmpty()){
+            RunicSkull skull = Random.element(skulls);
+            if(skull.isAlive()){
+                return skull;
+            }
+            else{
+                skulls.remove(skull);
+            }
         }
-
-        if (activatedSkull != null) {
-            useSkull();
-        }
-        postpone(6);
-        return super.act();
+        return null;
     }
 
     public void useSkull(){
@@ -134,21 +136,41 @@ public class Lich extends Boss {
                 break;
 
             case RunicSkull.BLUE_SKULL:
-                int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
-                for(int i = 0; i < skulls.size(); i++){
-                    if (Dungeon.level.cellValid(larvaPos)) {
-                        Skeleton skeleton = new Skeleton();
-                        skeleton.setPos(larvaPos);
-                        Dungeon.level.spawnMob(skeleton, 0);
-                        Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
+                List<Integer> occupiedCells = new ArrayList<Integer>();
+                int i = 0;
+                while (i < skulls.size()){
+                    int pos = Dungeon.level.getEmptyCellNextTo(getPos());
+                    if (Dungeon.level.cellValid(pos)) {
+                        if (!occupiedCells.contains(pos)) {
+                            Skeleton skeleton = new Skeleton();
+                            skeleton.setPos(pos);
+                            Dungeon.level.spawnMob(skeleton, 0);
+                            Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
+                            i++;
+                        }
                     }
                 }
+                occupiedCells.clear();
                 break;
 
             case RunicSkull.GREEN_SKULL:
                 GameScene.add( Blob.seed( getPos(), 30, ToxicGas.class ) );
                 break;
         }
+    }
+
+    //***
+
+    @Override
+    protected boolean act() {
+        if (this.hp() < HEALTH) {
+           activateRandomSkull();
+        }
+        if (activatedSkull != null) {
+            useSkull();
+        }
+        postpone(skullTimer);
+        return super.act();
     }
 
 
@@ -237,7 +259,7 @@ public class Lich extends Boss {
                 }
             }
         }
-
+        occupiedPedestals.clear();
     }
 
 }
