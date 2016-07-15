@@ -4,7 +4,22 @@
       "test_guts":{"kind":"PredesignedLevel", "depth":2,  "size":[16,16], "file":"levelsDesc/TestLevelGuts.json"},
       "test_sewers":{"kind":"PredesignedLevel", "depth":2,  "size":[16,16], "file":"levelsDesc/TestLevelSewers.json"},
       "test_town":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/Town.json"},
-      "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25,        "size":[20,20]},
+
+      "necropolis_vault":{"kind":"PredesignedLevel", "depth":13, "size":[16,16], "file":"levelsDesc/NecropolisVault.json"},
+      "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
+
+      "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16]},
+      "7s":{"kind":"SpiderLevel", "depth":7,      "size":[32,32]},
+      "8s":{"kind":"SpiderLevel", "depth":8,      "size":[40,40]},
+      "9s":{"kind":"SpiderLevel", "depth":9,      "size":[48,48]},
+      "10s":{"kind":"SpiderLevel", "depth":10,    "size":[64,64]},
+
+      "necro1":{"kind":"NecroLevel", "depth":8,      "size":[32,32]},
+      "necro2":{"kind":"NecroLevel", "depth":9,      "size":[32,32]},
+      "necro3":{"kind":"NecroLevel", "depth":10,     "size":[32,32]},
+      "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
+      "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
+
       "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
       "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
@@ -15,16 +30,6 @@
       "8":{"kind":"PrisonLevel", "depth":8,       "size":[32,32]},
       "9":{"kind":"PrisonLevel", "depth":9,       "size":[32,32]},
       "10":{"kind":"PrisonBossLevel", "depth":10, "size":[32,32]},
-      "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16]},
-      "7s":{"kind":"SpiderLevel", "depth":7,      "size":[32,32]},
-      "8s":{"kind":"SpiderLevel", "depth":8,      "size":[40,40]},
-      "9s":{"kind":"SpiderLevel", "depth":9,      "size":[48,48]},
-      "10s":{"kind":"SpiderLevel", "depth":10,    "size":[64,64]},
-      "necro1":{"kind":"NecroLevel", "depth":8,      "size":[32,32]},
-      "necro2":{"kind":"NecroLevel", "depth":9,      "size":[32,32]},
-      "necro3":{"kind":"NecroLevel", "depth":10,     "size":[32,32]},
-      "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
-      "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
       "11":{"kind":"CavesLevel", "depth":11,      "size":[32,32]},
       "12":{"kind":"CavesLevel", "depth":12,      "size":[32,32]},
       "13":{"kind":"CavesLevel", "depth":13,      "size":[32,32]},
@@ -95,7 +100,8 @@
       "necro2":[["necro3"],["necro1"]],
       "necro3":[["necro4"],["necro2"]],
       "necro4":[["necro5"],["necro3"]],
-      "necro5":[["necro4"],["necro4"]]
+      "necro5":[["necropolis_vault"],["necro4"]],
+      "necropolis_vault":[[],["necro5"]]
    },
    "Entrance":"0"
 }
