@@ -132,11 +132,11 @@ public class Lich extends Boss {
 
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:
-                PotionOfHealing.heal(this,0.2f);
+                PotionOfHealing.heal(this,0.13f * skulls.size());
                 break;
 
             case RunicSkull.BLUE_SKULL:
-                List<Integer> occupiedCells = new ArrayList<Integer>();
+                List<Integer> occupiedCells = new ArrayList<>();
                 int i = 0;
                 while (i < skulls.size()){
                     int pos = Dungeon.level.getEmptyCellNextTo(getPos());
@@ -154,7 +154,7 @@ public class Lich extends Boss {
                 break;
 
             case RunicSkull.GREEN_SKULL:
-                GameScene.add( Blob.seed( getPos(), 30, ToxicGas.class ) );
+                GameScene.add( Blob.seed( getPos(), 16 * skulls.size(), ToxicGas.class ) );
                 break;
         }
     }
@@ -244,7 +244,7 @@ public class Lich extends Boss {
             nSkulls = SKULLS_MAX;
         }
 
-        List<Integer> occupiedPedestals = new ArrayList<Integer>();
+        List<Integer> occupiedPedestals = new ArrayList<>();
         int i = 0;
         while (i < nSkulls){
             int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
