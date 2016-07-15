@@ -5,7 +5,6 @@
       "test_sewers":{"kind":"PredesignedLevel", "depth":2,  "size":[16,16], "file":"levelsDesc/TestLevelSewers.json"},
       "test_town":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/Town.json"},
 
-      "necropolis_vault":{"kind":"PredesignedLevel", "depth":13, "size":[16,16], "file":"levelsDesc/NecropolisVault.json"},
       "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
 
       "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16]},
@@ -19,6 +18,7 @@
       "necro3":{"kind":"NecroLevel", "depth":10,     "size":[32,32]},
       "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
       "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
+      "necropolis_vault":{"kind":"PredesignedLevel", "depth":13, "size":[16,16], "file":"levelsDesc/NecropolisVault.json"},
 
       "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
