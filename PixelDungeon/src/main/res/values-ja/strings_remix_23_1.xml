@@ -5,6 +5,11 @@
   <string name="AzuterronNPC_Name">見知らぬ者</string>
   <string name="AzuterronNPC_Gender">男</string>
   <string name="AzuterronNPC_Name_Objective">見知らぬ者</string>
+  <string name="AzuterronNPC_Desc">神秘的な像は黒い霧に包まれた。</string>
+  <string name="AzuterronNPC_Quest_Start">はぁ…なぜ…おっと、お前は俺が見えるのか？つまりお前は\'\'奴ら\'\'の仲間ではないんだな。お前は奴らのことを好んでいない。いい話がある、もしお前が俺の問題を解決してくれたら、お前を援助してやろう。お前はこの階のどこかにいる_闇の獣_と_裏切りの魂_を見つけるだろう。そいつを討て、そいつの心臓を取り、そして俺のところに戻って来い。そしてもう一つ、もしお前が俺の供給品を購入することに興味があるなら、遠慮なく尋ねてくれ</string>
+  <string name="AzuterronNPC_Quest_Reminder">助けてくれ！そしたらお前を援助してやろう</string>
+  <string name="AzuterronNPC_Quest_End">素晴らしい、このポーションを持っていけ、確実にこれが有益なだとわかるだろう。</string>
+  <string name="Journal_Azuterron">見知らぬ者</string>
   <!--STRINGS OF TreacherousSpirit CLASS-->
   <!--STRINGS OF SpiritOfPain CLASS-->
   <!--STRINGS OF SuspiciousRat CLASS-->

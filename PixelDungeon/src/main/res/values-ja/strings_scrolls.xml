@@ -4,7 +4,7 @@
   <!--STRINGS OF Scroll CLASS-->
   <string name="Scroll_Name">スクロール \"%s\"</string>
   <string name="Scroll_Info">この羊皮紙は判読できない筆跡で書かれている。そして、%s のルーンタイトルを帯びている。声に出して読んだ時、何が起こるか知っていますか？</string>
-  <string name="Scroll_ACRead">READ</string>
+  <string name="Scroll_ACRead">読む</string>
   <string name="Scroll_Blinded">あなたは盲目なためスクロールを読むことが出来ない</string>
   <string-array name="Scroll_Runes">
     <item>KAUNAN</item>
