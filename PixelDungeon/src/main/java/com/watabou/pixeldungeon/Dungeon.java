@@ -210,10 +210,12 @@ public class Dungeon {
 	}
 
 	public static boolean shopOnLevel() {
-		if (level instanceof NecroLevel){
+		if (hero.levelKind.equals("NecroLevel")){
 			return false;
+		} else{
+			return depth == 6 || depth == 11 || depth == 16 || depth == 27;
 		}
-		return depth == 6 || depth == 11 || depth == 16 || depth == 27;
+
 	}
 
 	public static boolean bossLevel() {
