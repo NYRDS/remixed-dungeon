@@ -132,7 +132,7 @@ public class Lich extends Boss {
 
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:
-                PotionOfHealing.heal(this,0.13f * skulls.size());
+                PotionOfHealing.heal(this,0.07f * skulls.size());
                 break;
 
             case RunicSkull.BLUE_SKULL:
@@ -154,7 +154,7 @@ public class Lich extends Boss {
                 break;
 
             case RunicSkull.GREEN_SKULL:
-                GameScene.add( Blob.seed( getPos(), 16 * skulls.size(), ToxicGas.class ) );
+                GameScene.add( Blob.seed( getPos(), 30 * skulls.size(), ToxicGas.class ) );
                 break;
         }
     }
