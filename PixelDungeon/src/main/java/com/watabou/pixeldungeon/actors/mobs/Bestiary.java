@@ -20,6 +20,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
+import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
@@ -103,6 +105,8 @@ public class Bestiary {
 				cl = SpiderGuard.class;
 			} else if (cl == SpiderMind.class) {
 				cl = SpiderMindAmber.class;
+			} else if (cl == DeathKnight.class) {
+				cl = DreadKnight.class;
 			}
 		}
 		
