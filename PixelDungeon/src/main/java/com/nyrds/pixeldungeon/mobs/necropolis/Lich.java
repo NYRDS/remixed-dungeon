@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -231,7 +232,7 @@ public class Lich extends Boss {
             mob.remove();
             mob = Dungeon.level.getRandomMob();
         }
-        //Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_LICH);
+        Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
     }
 
     public void SpawnSkulls(){
