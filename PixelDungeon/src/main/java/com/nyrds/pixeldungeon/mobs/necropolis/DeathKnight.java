@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.nyrds.pixeldungeon.effects.DeathStroke;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Gold;
@@ -25,7 +26,7 @@ public class DeathKnight extends UndeadMob {
         //Double damage proc
         if (Random.Int(7) == 1){
             if (enemy !=null){
-                Wound.hit(enemy);
+                DeathStroke.hit(enemy);
             }
             return damage * 2;
         }

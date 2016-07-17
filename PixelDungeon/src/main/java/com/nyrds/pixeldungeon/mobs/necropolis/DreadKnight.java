@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.nyrds.pixeldungeon.effects.DeathStroke;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -28,7 +29,7 @@ public class DreadKnight extends UndeadMob {
         //Double damage proc
         if (Random.Int(4) == 1){
             if (enemy !=null){
-                Wound.hit(enemy);
+                DeathStroke.hit(enemy);
             }
             return damage * 2;
         }
