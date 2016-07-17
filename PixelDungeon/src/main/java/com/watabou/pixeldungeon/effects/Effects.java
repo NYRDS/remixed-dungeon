@@ -27,7 +27,9 @@ public class Effects {
 		LIGHTNING,
 		WOUND,
 		RAY,
-		CHAIN
+		CHAIN,
+		DEATHSTROKE,
+		DEVOUR
 	}
 	
 	public static Image get( Type type ) {
@@ -47,6 +49,12 @@ public class Effects {
 			break;
 		case CHAIN:
 			icon.frame( icon.texture.uvRect( 16, 24, 32, 32 ) );
+			break;
+		case DEATHSTROKE:
+			icon.frame( icon.texture.uvRect( 0, 16, 16, 24 ) );
+			break;
+		case DEVOUR:
+			icon.frame( icon.texture.uvRect( 0, 24, 16, 32 ) );
 			break;
 		}
 		return icon;
