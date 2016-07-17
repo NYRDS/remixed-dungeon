@@ -6,7 +6,7 @@
   <string name="Hero_Leave">Pixel Dungeonを出るのは容易ではありません。</string>
   <string name="Hero_LevelUp">レベルアップ！</string>
   <string name="Hero_NewLevel">レベル %d へようこそ！今のあなたはより健康的で集中しています。攻撃を当てることも攻撃をかわすことも容易です。</string>
-  <string name="Hero_YouNowHave">あなたは今 %s を持っています</string>
+  <string name="Hero_YouNowHave">あなたは %s を手に入れた</string>
   <string name="Hero_SomethingElse">何かがここにあります</string>
   <string name="Hero_LockedChest">このチェストはロックされていて、あなたは合う鍵を持っていません</string>
   <string name="Hero_LockedDoor">あなたは合う鍵を持っていません</string>
@@ -34,7 +34,7 @@
   <string name="HeroClass_Elf">エルフ</string>
   <string-array name="HeroClass_WarPerks">
     <item>ウォリアーはスタート時に11ポイントの力がある。</item>
-    <item>ウォリアーはスタート時に特殊なショートソードを持っている。この剣は後で他の近接武器にアップグレードする\"リフォージ\"が使えます。</item>
+    <item>ウォリアーはスタート時に特殊なショートソードを持っている。この剣は後で他の近接武器を鍛え直して強化させることが出来ます。</item>
     <item>ウォリアーは遠隔武器の扱いが苦手。</item>
     <item>食品を食べた時にいくらかのヘルスを回復します。</item>
     <item>力のポーションは最初から特定されます。</item>

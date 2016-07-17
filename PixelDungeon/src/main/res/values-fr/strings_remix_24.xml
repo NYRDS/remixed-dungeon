@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	</resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Noeud papillon</string>
+    <string name="Bowknot_Info">Un joli ruban rose brillant noué et attaché à une épingle à cheveux.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Lunettes de soleil</string>
+    <string name="Shades_Info">Certains disent que les donjons sont trop sombres pour les porter. Et vous dites que ces personnes sont coincées.</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Capotaine</string>
+    </resources>

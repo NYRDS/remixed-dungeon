@@ -29,6 +29,7 @@ import com.watabou.utils.Random;
  */
 public class ShadowLord extends Boss {
 
+	private boolean levelCreated = false;
 	private int cooldown = -1;
 
 	private static final String TXT_INTRO = Game.getVar(R.string.ShadowLord_Intro);
@@ -81,8 +82,13 @@ public class ShadowLord extends Boss {
 		if(!isAlive()) {
 			return;
 		}
-		Tools.makeEmptyLevel(Dungeon.level);
-		Tools.buildShadowLordMaze(Dungeon.level, 6);
+
+		if(!levelCreated)
+		{
+			Tools.makeEmptyLevel(Dungeon.level);
+			Tools.buildShadowLordMaze(Dungeon.level, 6);
+			levelCreated = true;
+		}
 
 		int cell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
 		if (Dungeon.level.cellValid(cell)) {

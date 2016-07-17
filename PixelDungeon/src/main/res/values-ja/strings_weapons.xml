@@ -73,8 +73,8 @@
   </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
-  <string name="MeleeWeapon_Info1a">この %1$s は %2$s の ランク-%3$d の近接武器です。</string>
-  <string name="MeleeWeapon_Info1b">a</string>
+  <string name="MeleeWeapon_Info1a">この %1$s は %2$s ランク-%3$d の近接武器です。</string>
+  <string name="MeleeWeapon_Info1b">普通の</string>
   <string name="MeleeWeapon_Info1c">強化された</string>
   <string name="MeleeWeapon_Info1d">劣化した</string>
   <string name="MeleeWeapon_Info2a">平均ダメージは %d ポイントです。</string>

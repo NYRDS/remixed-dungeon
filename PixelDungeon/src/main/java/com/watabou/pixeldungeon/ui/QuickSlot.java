@@ -147,14 +147,18 @@ public class QuickSlot extends Button implements WndBag.Listener {
 
 	@SuppressWarnings("unchecked")
 	private Item select() {
-		if (quickslotItem() instanceof Item) {
-			return (Item) quickslotItem();
-		} else if (quickslotItem() != null) {
-			Item item = Dungeon.hero.belongings.getItem((Class<? extends Item>) quickslotItem());
-			return item != null ? item : Item.virtual((Class<? extends Item>) quickslotItem());
-		} else {
-			return null;
+		Object quickslotItem = quickslotItem();
+		
+		if (quickslotItem instanceof Item) {
+			return (Item) quickslotItem;
 		}
+
+		if (quickslotItem != null) {
+			Item item = Dungeon.hero.belongings.getItem((Class<? extends Item>) quickslotItem);
+			return item != null ? item : Item.virtual(item.getClass());
+		}
+
+		return null;
 	}
 
 	@Override

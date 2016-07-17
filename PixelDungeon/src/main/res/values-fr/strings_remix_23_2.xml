@@ -1,3 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Claymore</string>
+    <string name="Claymore_Info">Cette épée massive devrait être capable de cisailler n\'importe quoi.</string>
+    <string name="Claymore_Gender">féminin</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Hallebarde</string>
+    <string name="Halberd_Info">Une arme constituée d\'une hache au bout d\'un bâton.</string>
+    <string name="Halberd_Gender">féminin</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">Arbalète en bois</string>
+    <string name="WoodenCrossbow_Info">Une simple arbalète en bois, destinée à tirer des flèches.</string>
+    <string name="WoodenCrossbow_Gender">masculin</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Arbalète composée</string>
+    <string name="CompositeCrossbow_Info">Cette arbalète renforcée s\'avère être un outil plus efficace que son homologue en bois.</string>
+    <string name="CompositeCrossbow_Gender">masculin</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Arbalète en rubis</string>
+    <string name="RubyCrossbow_Info">Cette arme mortelle est en fait un chef d\'oeuvre d\'ingénierie naine.</string>
+    <string name="RubyCrossbow_Gender">masculin</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Armure gothique</string>
+    <string name="GothicArmor_Info">Une armure gothique est le sommet de l\'art de la forge d\'armures.</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Armure du chaos</string>
+    <string name="ChaosArmor_Info">Les plaques rouge sang de cette armure sont fusionnées avec des chaînes rouge foncé. Elle rayonne d\'une énergie chaotique quand vous la touchez.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">Le cristal a abosrbé votre armure, et a pris la forme d\'une armure composite.</string>
+
+</resources>

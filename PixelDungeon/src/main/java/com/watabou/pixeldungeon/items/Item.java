@@ -368,13 +368,11 @@ public class Item implements Bundlable {
 
 	public static Item virtual(Class<? extends Item> cl) {
 		try {
-
 			Item item = cl.newInstance();
 			item.quantity(0);
 			return item;
-
 		} catch (Exception e) {
-			return null;
+			throw new TrackedRuntimeException("Item.virtual");
 		}
 	}
 

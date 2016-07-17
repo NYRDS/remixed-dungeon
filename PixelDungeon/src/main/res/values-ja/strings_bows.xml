@@ -39,7 +39,7 @@
   <string name="FireArrow_Info">この矢は普通と違う点があります、それは矢じりの部分がほんのり赤く光っている点です。</string>
   <string name="FireArrow_Gender">弱々しい</string>
   <!--STRINGS OF PoisonArrow CLASS-->
-  <string name="PoisonArrow_Name">毒の矢筒</string>
+  <string name="PoisonArrow_Name">毒の矢</string>
   <string name="PoisonArrow_Info">この矢じりから猛毒の液が滴っています。</string>
   <string name="PoisonArrow_Gender">弱々しい</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
