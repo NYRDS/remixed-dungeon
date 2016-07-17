@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.pixeldungeon.effects.Devour;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
@@ -47,7 +48,7 @@ public class YogsTeeth extends Boss {
         }
         //Double damage proc
         if (Random.Int(3) == 1){
-            enemy.getSprite().bloodBurstA(getSprite().center(), 1000);
+            Devour.hit(enemy);
             Sample.INSTANCE.play(Assets.SND_BITE);
             return damage*2;
         }
