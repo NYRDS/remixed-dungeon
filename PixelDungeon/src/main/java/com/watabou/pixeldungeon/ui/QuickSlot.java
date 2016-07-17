@@ -155,7 +155,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 
 		if (quickslotItem != null) {
 			Item item = Dungeon.hero.belongings.getItem((Class<? extends Item>) quickslotItem);
-			return item != null ? item : Item.virtual(item.getClass());
+			return item != null ? item : Item.virtual((Class<? extends Item>) quickslotItem);
 		}
 
 		return null;
