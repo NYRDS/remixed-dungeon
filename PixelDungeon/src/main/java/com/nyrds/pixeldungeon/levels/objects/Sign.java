@@ -56,6 +56,14 @@ public class Sign extends LevelObject {
 	}
 
 	@Override
+	public void burn() {
+		remove();
+		int oldTile = Dungeon.level.map[getPos()];
+		Dungeon.level.set(getPos(),Terrain.EMBERS);
+		GameScene.discoverTile(getPos(),oldTile);
+	}
+
+	@Override
 	public String desc() {
 		return Dungeon.level.tileDesc(Terrain.SIGN);
 	}

@@ -119,6 +119,10 @@ public abstract class Level implements Bundlable {
 		throw new TrackedRuntimeException(new Exception("no exit at this cell"));
 	}
 
+	public LevelObject getLevelObject(int pos) {
+		return objects.get(pos);
+	}
+
 
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS
@@ -803,6 +807,13 @@ public abstract class Level implements Bundlable {
 		plants.put(pos, plant);
 		if (GameScene.isSceneReady()) {
 			GameScene.add(plant);
+		}
+	}
+
+	public void remove(LevelObject levelObject) {
+		int index = objects.indexOfValue(levelObject);
+		if(index >= 0) {
+			objects.removeAt(index);
 		}
 	}
 

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
@@ -83,7 +84,7 @@ public class Fire extends Blob {
 		}
 	}
 	
-	private void burn( int pos ) {
+	public static void burn( int pos ) {
 		Char ch = Actor.findChar( pos );
 		if (ch != null) {
 			Buff.affect( ch, Burning.class ).reignite( ch );
@@ -92,6 +93,11 @@ public class Fire extends Blob {
 		Heap heap = Dungeon.level.getHeap( pos );
 		if (heap != null) {
 			heap.burn();
+		}
+
+		LevelObject levelObject = Dungeon.level.getLevelObject(pos);
+		if (levelObject != null) {
+			levelObject.burn();
 		}
 	}
 	

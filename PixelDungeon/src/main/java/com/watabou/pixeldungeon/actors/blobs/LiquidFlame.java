@@ -1,15 +1,10 @@
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
@@ -27,25 +22,29 @@ public class LiquidFlame extends Blob {
 		
 		for (int pos=from; pos < to; pos++) {
 			
-			int fire;
+			int fire = 0;
 			
 			if (cur[pos] > 0) {
 				
 				burn( pos );
-				
-				fire = cur[pos] - 1;
-				if (fire <= 0 && flamable[pos]) {
-					
-					int oldTile = Dungeon.level.map[pos];
-					Dungeon.level.set( pos, Terrain.EMBERS );
-					
-					observe = true;
-					GameScene.updateMap( pos );
-					if (Dungeon.visible[pos]) {
-						GameScene.discoverTile( pos, oldTile );
+
+				if(Dungeon.level.water[pos]) {
+					cur[pos] = 0;
+ 				} else {
+
+					fire = cur[pos] - 1;
+					if (fire <= 0 && flamable[pos]) {
+
+						int oldTile = Dungeon.level.map[pos];
+						Dungeon.level.set(pos, Terrain.EMBERS);
+
+						observe = true;
+						GameScene.updateMap(pos);
+						if (Dungeon.visible[pos]) {
+							GameScene.discoverTile(pos, oldTile);
+						}
 					}
 				}
-				
 			} else {
 				
 				int fireInAdjCells = cur[pos-1] + cur[pos+1] + cur[pos-getWidth()] + cur[pos+getWidth()];
@@ -75,15 +74,7 @@ public class LiquidFlame extends Blob {
 	}
 	
 	private void burn( int pos ) {
-		Char ch = Actor.findChar( pos );
-		if (ch != null) {
-			Buff.affect( ch, Burning.class ).reignite( ch );
-		}
-		
-		Heap heap = Dungeon.level.getHeap( pos );
-		if (heap != null) {
-			heap.burn();
-		}
+		Fire.burn(pos);
 	}
 	
 	@Override
