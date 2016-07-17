@@ -70,4 +70,8 @@
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
 
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Lich slain</string>
+
 </resources>
