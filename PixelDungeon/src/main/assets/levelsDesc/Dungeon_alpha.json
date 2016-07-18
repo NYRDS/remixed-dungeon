@@ -101,7 +101,7 @@
       "necro3":[["necro4"],["necro2"]],
       "necro4":[["necro5"],["necro3"]],
       "necro5":[["necropolis_vault"],["necro4"]],
-      "necropolis_vault":[[],["necro5"]]
+      "necropolis_vault":[["necro5"],["necro5"]]
    },
    "Entrance":"0"
 }
