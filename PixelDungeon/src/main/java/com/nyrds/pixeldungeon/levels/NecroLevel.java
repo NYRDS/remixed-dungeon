@@ -60,14 +60,10 @@ public class NecroLevel extends RegularLevel {
 	@Override
 	protected void createMobs() {
 		int pos = randomRespawnCell();
-
-		for (int i = 0; i< Dungeon.depth; i++) {
 			while(Actor.findChar(pos) != null) {
 				pos = randomRespawnCell();
 			}
 			MobSpawner.spawnJarOfSouls(this, pos);
-		}
-		
 		super.createMobs();
 	}
 
