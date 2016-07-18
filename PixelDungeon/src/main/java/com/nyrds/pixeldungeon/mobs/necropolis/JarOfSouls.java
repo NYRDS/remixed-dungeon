@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.nyrds.pixeldungeon.items.necropolis.SoulShard;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -12,17 +13,17 @@ import com.watabou.utils.Callback;
 public class JarOfSouls extends UndeadMob {
 
 	public JarOfSouls() {
-		hp(ht(60));
+		hp(ht(75));
 		defenseSkill = 1;
 		pacified = true;
 		
 		EXP    = 0;
-		maxLvl = 9;
+		maxLvl = 13;
 
 		postpone(20);
 		
-		loot = new PotionOfHealing();
-		lootChance = 0.2f;
+		loot = new SoulShard();
+		lootChance = 1f;
 	}
 
 	@Override
@@ -59,9 +60,6 @@ public class JarOfSouls extends UndeadMob {
 		if(isPet()) {
 			Mob.makePet(newMob, Dungeon.hero);
 		}
-
-		PlayZap();
-
 		postpone(20);
 	}
 
