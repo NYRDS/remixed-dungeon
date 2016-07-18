@@ -9,8 +9,8 @@
   <string name="AmuletScene_Stay">私はまだ終わらない</string>
   <string name="AmuletScene_Txt">あなたの目的はイェンダーの魔除けを手に入れることです。その力で世界を手に入れることもできるし、人々の平和や繁栄も得られるし、それ以外でも。とにかく、あなたの人生の変更とともにこのゲームは終りを迎えます。ですが、もう少しの間残るという選択肢もあります。</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Pixel Dungeon のレベル %d へ辿り着きました！</string>
-  <string name="GameScene_WelcomeBack">Pixel Dungeon のレベル %d へ戻ってきました！</string>
+  <string name="GameScene_Welcome">Pixel Dungeon の %d 階層へ辿り着きました！</string>
+  <string name="GameScene_WelcomeBack">Pixel Dungeon の %d 階層へ戻ってきました！</string>
   <string name="GameScene_NightMode">夜のダンジョンは更に危険なため用心してください！</string>
   <string name="GameScene_Chasm">あなたの足音がダンジョン内に響きます。</string>
   <string name="GameScene_Water">あなたは水の撥ねる音を聞いた。</string>
@@ -61,7 +61,7 @@
     <item>自分の力を過大評価しないこと、武器や鎧を扱うのに重要です。</item>
     <item>ダンジョン内のすべてのドアが最初から見えているとは限りません。探索して隠されたドアを見つけられます。</item>
     <item>良い武器を扱う方法は自分の力を上げる方法だけではありません。強化のスクロールで必要な力を下げることも出来ます。</item>
-    <item>ダンジョンの深層にお金を使えるお店があります。最初の一箇所はレベル6です。</item>
+    <item>ダンジョンの深層にお金を使えるお店があります。最初の一箇所は6階層です。</item>
     <item>グーに注意！</item>
     <item>ピクセル-マート - 冒険の成功に必要なものです！</item>
     <item>できるだけ早くポーションとスクロールの鑑定をしましょう。先送りすると必要なときに困るでしょう。</item>
