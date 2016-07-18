@@ -1,12 +1,9 @@
 package com.nyrds.pixeldungeon.items.necropolis;
 
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
-import com.watabou.utils.Random;
 
+//This weapon supposed to cast projectiles towards target enemy, so that they would hit first thing in they're path
 public class BladeOfSouls extends SpecialWeapon {
 	{
 		imageFile = "items/swords.png";
@@ -21,18 +18,6 @@ public class BladeOfSouls extends SpecialWeapon {
 	@Override
 	public Glowing glowing() {
 		float period = 1;
-		return new Glowing(0x72BCD4, period);
+		return new Glowing(0xffaaaa, period);
 	}
-
-	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
-		//Gold proc
-		if (Random.Int(10) == 1){
-			int price = this.price() / 10;
-			if ( price > 500) { price = 500;}
-			Dungeon.level.drop(new Gold(price), defender.getPos());
-		}
-		usedForHit();
-	}
-
 }
