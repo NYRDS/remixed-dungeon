@@ -18,6 +18,6 @@ public class BladeOfSouls extends SpecialWeapon {
 	@Override
 	public Glowing glowing() {
 		float period = 1;
-		return new Glowing(0xffaaaa, period);
+		return new Glowing(0xaaaaff, period);
 	}
 }

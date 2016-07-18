@@ -17,7 +17,7 @@ public class SoulShard extends Item {
 
 	@Override
 	public Glowing glowing() {
-		return new Glowing((int) (Math.random() * 0xffaaaa));
+		return new Glowing((int) (Math.random() * 0xaaaaff));
 	}
 
 

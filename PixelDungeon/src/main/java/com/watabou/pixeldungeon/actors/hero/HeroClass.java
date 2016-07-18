@@ -22,6 +22,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
+import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -138,7 +139,7 @@ public enum HeroClass {
 		hero.collect(new WarlockArmor().identify());
 		hero.collect(new GladiatorArmor().identify());
 		hero.collect(new ArmorKit());
-		hero.collect(new GoldenSword().identify().upgrade(5));
+		hero.collect(new BladeOfSouls().identify());
 
 		hero.ht(1000);
 		hero.hp(1000);
