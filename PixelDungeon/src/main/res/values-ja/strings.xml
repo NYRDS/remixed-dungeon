@@ -258,68 +258,191 @@
   <string name="LloidsBeacon_ACReturn">リターン</string>
   <string name="LloidsBeacon_Info">ロイズビーコンは複雑な魔法の機器です。あなたが予めセットしておいた場所に戻ることが出来ます。</string>
   <string name="LloidsBeacon_Preventing">何らかの強力な魔法のオーラが、ロイズビーコンを使うことを妨げた！</string>
+  <string name="LloidsBeacon_Creatures">近くにいる生き物の精神的なオーラのせいで、あなたは今ロイズビーコンを使うことが出来ません。</string>
+  <string name="LloidsBeacon_Return">ロイズビーコンは現在位置のセットに成功した。あなたはいつでもこの場所に戻ってこられます。</string>
+  <string name="LloidsBeacon_Set">
+\n\nこのビーコンは、Pixel Dungeon のレベル %d のどこかにセットされています。</string>
   <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_Name">不可解な鉄筆</string>
+  <string name="Stylus_ACInscribe">刻み込む</string>
+  <string name="Stylus_Info">この不可解な鉄筆は、黒っぽい非常に硬い石で作られています。あなたはグリフかルーンを刻み込むことが出来ます。しかし、どんな力を刻むかの選択権はあなたにはありません。鉄筆の意思があなたのために決めます。</string>
+  <string name="Stylus_SelectArmor">刻み込むアイテムを選択</string>
+  <string name="Stylus_Inscribed">あなたは %2$s に %1$s を刻み込んだ</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_Name">習熟の学術本</string>
+  <string name="TomeOfMastery_ACRead">読む</string>
+  <string name="TomeOfMastery_Info">この擦り切れた革の本は、厚くはないですが多くの情報を得ることができると感じています。この本を読み取るにはいくらかの時間を必要とするでしょう。</string>
+  <string name="TomeOfMastery_Blinded">あなたは盲目なため読むことが出来ない</string>
+  <string name="TomeOfMastery_Choose">あなたは %s の道を選択しました！</string>
   <!--STRINGS OF Torch CLASS-->
+  <string name="Torch_Name">たいまつ</string>
+  <string name="Torch_ACLight">点火する</string>
+  <string name="Torch_Info">このアイテムは悪名高い悪魔の広間を照らす照明として必需品です。</string>
   <!--STRINGS OF Weightstone CLASS-->
+  <string name="Weightstone_Name">重石</string>
+  <string name="Weightstone_ACApply">適応する</string>
+  <string name="Weightstone_Info">重石を使用して、近接武器のバランスを整えて速度や正確さを高めることが出来ます。</string>
+  <string name="Weightstone_Select">バランスをとる武器を選択</string>
+  <string name="Weightstone_Fast">あなたの %s を速くするためにバランスをとった</string>
+  <string name="Weightstone_Accurate">あなたの %s をより正確にするためにバランスをとった</string>
+  <string name="Weightstone_WndChoice">あなたの %s は何を重視しますか？</string>
+  <string name="Weightstone_WndSpeed">速さを</string>
+  <string name="Weightstone_WndAccuracy">正確さを</string>
+  <string name="Weightstone_WndCancel">気にするな</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
+  <string name="Bag_ACOpen">開ける</string>
   <!--STRINGS OF Keyring CLASS-->
+  <string name="Keyring_Name">キーホルダー</string>
+  <string name="Keyring_Info">これは、あなたの荷物の残り部分とは別に、鍵を保持することができる銅のキーホルダーです。</string>
   <!--STRINGS OF ScrollHolder CLASS-->
+  <string name="ScrollHolder_Name">スクロールホルダー</string>
+  <string name="ScrollHolder_Info">あなたはこの筒状の容器内にスクロールを複数保持することが出来ます。この容器内のスクロールは炎から守られます。</string>
   <!--STRINGS OF SeedPouch CLASS-->
+  <string name="SeedPouch_Name">シードポーチ</string>
+  <string name="SeedPouch_Info">この小さなベルベットのポーチは、種子を複数保存して置けます。とても便利。</string>
   <!--STRINGS OF WandHolster CLASS-->
+  <string name="WandHolster_Name">ワンドホルスター</string>
+  <string name="WandHolster_Info">このスリムなホルダーはエキゾチックな動物の革で作られています。これは %d 個の杖をコンパクトに持ち運べます。</string>
   <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Info">この強力な革のベルトは、すべてのポーションを持ち運べて、霜の被害からも保護することが出来ます。</string>
+  <string name="PotionBelt_Name">ポーションベルト</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
+  <string name="GoldenKey_Name">金の鍵</string>
+  <string name="GoldenKey_Info">この金の鍵の切れ込みは細かくて複雑です。一部のロックされた箱を開けられるかも？</string>
   <!--STRINGS OF IronKey CLASS-->
+  <string name="IronKey_Name">鉄の鍵</string>
+  <string name="IronKey_Info">この古い鉄の鍵の切れ込みは使い込まれています; 革のストラップも経年劣化しています。どの扉が開くでしょうか？</string>
+  <string name="IronKey_FromDepth">%d 階層の鉄の鍵</string>
   <!--STRINGS OF SkeletonKey CLASS-->
+  <string name="SkeletonKey_Name">骸骨の鍵</string>
+  <string name="SkeletonKey_Info">これは厳粛な鍵: その頭は頭蓋骨のような形をしています。おそらく厳粛な扉を開くことが出来ます。</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
+  <string name="CorpseDust_Name">コープスダスト</string>
+  <string name="CorpseDust_Info">コープスダストの玉は普通のダストの玉と外見に違いはありません。しかし、あなたはそれを手にしてみれば何となく分かるでしょう。</string>
+  <string name="CorpseDust_Info2">多分、あなたが不安と怒りを感じるのはそれを保持したからでしょう。</string>
   <!--STRINGS OF DarkGold CLASS-->
+  <string name="DarkGold_Name">黒金鉱石</string>
+  <string name="DarkGold_Info">この金属が黒と呼ばれているのはその色からではなく(普通の金とは違っていない)、日光のもとで溶けて作られた役に立たない表面からです。</string>
   <!--STRINGS OF DriedRose CLASS-->
+  <string name="DriedRose_Name">乾燥したバラ</string>
+  <string name="DriedRose_Info">このバラはずっと昔に乾燥しましたが、どういうわけか花びらはすべて整っています。</string>
+  <string name="DriedRose_Info2">そして、それはその魅力を失っていません。あなたは永遠に維持しているそれを美しく感じます。</string>
   <!--STRINGS OF DwarfToken CLASS-->
+  <string name="DwarfToken_Name">ドワーフトークン</string>
+  <string name="DwarfToken_Info">多くのドワーフたちと彼らの大きな創造物の一部は、未知の目的の金属の欠片を運びます。おそらく彼らは宝飾や身分証明などに使うのでしょう。ドワーフたちは奇妙な民族です。</string>
   <!--STRINGS OF Pickaxe CLASS-->
+  <string name="Pickaxe_Name">つるはし</string>
+  <string name="Pickaxe_Info">これは岩を壊すための大きく頑丈な道具です。武器として使うことが出来ます。</string>
+  <string name="Pickaxe_ACMine">掘る</string>
+  <string name="Pickaxe_Gender">弱々しい</string>
+  <string name="Pickaxe_NoVein">あなたが採掘する近くに黒金鉱脈はありません</string>
   <!--STRINGS OF RatSkull CLASS-->
+  <string name="RatSkull_Name">巨大なネズミの頭蓋骨</string>
+  <string name="RatSkull_Info">それは素敵な狩猟のトロフィーかもしれないが、壁にかけて飾るには臭すぎます。</string>
+  <string name="RatSkull_Info2">一方で、この所有者は有能なネズミハンターだと証明します。でも大きくて臭いもの。</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="ConfusionGas_Info">混乱ガスの雲がここに渦巻いています。</string>
   <!--STRINGS OF Fire CLASS-->
+  <string name="Fire_Info">炎がここに燃え盛っています。</string>
   <!--STRINGS OF Foliage CLASS-->
+  <string name="Foliage_Info">一筋の光が地下の庭の暗がりを突き刺しています。</string>
   <!--STRINGS OF ParalyticGas CLASS-->
+  <string name="ParalyticGas_Info">麻痺ガスの雲がここに渦巻いています。</string>
   <!--STRINGS OF ToxicGas CLASS-->
+  <string name="ToxicGas_Info">緑の毒ガスの雲がここに渦巻いています。</string>
+  <string name="ToxicGas_Info1">あなたは毒ガスを吸って死亡しました...</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
+  <string name="WaterOfAwareness_Info">知識の力がこの井戸の水から放射されている。一口飲めばあなたの装備品のすべての秘密が明らかになります。</string>
+  <string name="WaterOfAwareness_Procced">あなたは一口飲んで、知識があなたの心に注がれるのを感じた。あなたは今の装備品についてすべてを知っています。また、あなたはこの階層のすべてのアイテムを感知していて、その秘密のすべてを知っています。</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
+  <string name="WaterOfHealth_Info">健康の力がこの井戸の水から放射されている。一口飲めばあなたの傷を癒やし、空腹を満たしてくれます。</string>
+  <string name="WaterOfHealth_Procced">あなたは一口飲んで、完全治癒するのを感じました。</string>
   <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <string name="WaterOfTransmutation_Info">変化の力がこの井戸の水から放射されている。井戸の中にアイテムを投げ入れると他のものに変わります。</string>
   <!--STRINGS OF Web CLASS-->
+  <string name="Web_Info">ここはすべてが濃い蜘蛛の巣で覆われている。</string>
   <!--PACKAGE /actors/buffs-->
   <!--STRINGS OF Amok CLASS-->
+  <string name="Amok_Info">逆上</string>
   <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">樹皮の肌</string>
   <!--STRINGS OF Bleeding CLASS-->
+  <string name="Bleeding_Info">出血</string>
+  <string name="Bleeding_Death">あなたは出血死した...</string>
   <!--STRINGS OF Blindness CLASS-->
+  <string name="Blindness_Info">盲目</string>
   <!--STRINGS OF Burning CLASS-->
+  <string name="Burning_Info">炎上</string>
+  <string name="Burning_Burns">%s は燃え上がった！</string>
+  <string name="Burning_Death">あなたは炎上死した...</string>
   <!--STRINGS OF Charm CLASS-->
+  <string name="Charm_Info">魅了</string>
   <!--STRINGS OF Combo CLASS-->
+  <string name="Combo_Info">コンボ</string>
+  <string name="Combo_Combo">%d ヒットコンボ！</string>
   <!--STRINGS OF Cripple CLASS-->
+  <string name="Cripple_Info">鈍化</string>
   <!--STRINGS OF Frost CLASS-->
+  <string name="Frost_Info">凍結</string>
+  <string name="Frost_Shatter">冷気が原因で %s は砕け散った！</string>
   <!--STRINGS OF Fury CLASS-->
+  <string name="Fury_Info">激怒</string>
   <!--STRINGS OF GasesImmunity CLASS-->
+  <string name="GasesImmunity_Info">ガス耐性</string>
   <!--STRINGS OF Hunger CLASS-->
+  <string-array name="Hunger_Hungry">
+    <item>あなたは空腹だ。</item>
+    <item>あなたは空腹だ。</item>
+    <item>あなたは空腹だ。</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>あなたは飢餓だ！</item>
+    <item>あなたは飢餓だ！</item>
+    <item>あなたは飢餓だ！</item>
+  </string-array>
+  <string name="Hunger_Death">あなたは餓死した...</string>
+  <string name="Hunger_Info1">空腹</string>
+  <string name="Hunger_Info2">飢餓</string>
   <!--STRINGS OF Invisibility CLASS-->
+  <string name="Invisibility_Info">透明</string>
   <!--STRINGS OF Levitation CLASS-->
+  <string name="Levitation_Info">浮上</string>
   <!--STRINGS OF Light CLASS-->
+  <string name="Light_Info">点灯</string>
   <!--STRINGS OF MindVision CLASS-->
+  <string name="MindVision_Info">透視</string>
   <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Info">カウスティックウーズ</string>
+  <string name="Ooze_Death">%s はあなたを倒しました...</string>
   <!--STRINGS OF Paralysis CLASS-->
+  <string name="Paralysis_Info">麻痺化</string>
   <!--STRINGS OF Poison CLASS-->
+  <string name="Poison_Info">毒化</string>
+  <string name="Poison_Death">あなたは毒で死にました...</string>
   <!--STRINGS OF Roots CLASS-->
+  <string name="Roots_Info">根付き</string>
   <!--STRINGS OF Shadows CLASS-->
+  <string name="Shadows_Info">影歩き</string>
   <!--STRINGS OF Slow CLASS-->
+  <string name="Slow_Info">遅滞</string>
   <!--STRINGS OF SnipersMark CLASS-->
+  <string name="SnipersMark_Info">狙撃目標</string>
   <!--STRINGS OF Vertigo CLASS-->
+  <string name="Vertigo_Info">目眩</string>
   <!--STRINGS OF Weakness CLASS-->
+  <string name="Weakness_Info">弱体化</string>
   <!--PACKAGE /actors/hero-->
   <!--STRINGS OF Belongings CLASS-->
+  <string name="Belongings_Name">バックパック</string>
   <!--PACKAGE /sprites-->
   <!--STRINGS OF ItemSprite CLASS-->
+  <string name="ItemSprite_Info1">わきへ落とす: %1$.1f %2$.1f</string>
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
+  <string name="Toolbar_Info1">そこに何があるかわからない。</string>
+  <string name="Toolbar_Info2">調べる場所を選択</string>
 </resources>
