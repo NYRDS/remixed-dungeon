@@ -19,6 +19,11 @@
     <string name="BlackSkull_Name_Awakened">awakened black skull</string>
     <string name="BlackSkull_Info_Awakened"></string>
 
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">soul shard</string>
+    <string name="SoulShard_Info"></string>
+    <string name="SoulShard_Gender">masculine</string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF DeathKnight CLASS -->
     <string name="DeathKnight_Name">death knight</string>
