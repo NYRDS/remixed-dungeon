@@ -3,46 +3,48 @@ package com.watabou.noosa;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class SystemText extends Text {
 
-	protected String text;
+	private String text;
 
-	protected TextPaint textPaint = new TextPaint();
+	static private Map<Float,TextPaint> textPaints = new HashMap<>();
+	private TextPaint textPaint;
+
+//	protected TextPaint contourPaint = new TextPaint();
 
 	private ArrayList<SystemTextLine> lineImage = new ArrayList<>();
 
 	private static Set<SystemText> texts = new HashSet<>();
 
-	private final static float oversample = 2f;
+	private static final Typeface tf = Typeface.create((String) null, Typeface.BOLD);
+
+	private final static float oversample = 4f;
 	private boolean needWidth = false;
-	private float fontScale;
 
 	public SystemText(float baseLine) {
-		this("", baseLine, false);
-	}
-
-	public SystemText(String text, float baseLine, boolean multiline) {
-		this(text, baseLine, multiline, 1 / oversample);
+		this("", baseLine, false, PixelScene.computeFontScale());
 	}
 
 	public SystemText(String text, float baseLine, boolean multiline,
 	                  float scale) {
 		super(0, 0, 0, 0);
 
-		fontScale = scale;
-
-		super.setScale(scale, scale);
+		baseLine *= scale;
 
 		needWidth = multiline;
 
@@ -50,16 +52,27 @@ public class SystemText extends Text {
 			throw new TrackedRuntimeException("zero sized font!!!");
 		}
 
-		Typeface tf = Typeface.create((String) null, Typeface.BOLD);
+		float textSize = baseLine * oversample;
+		if(!textPaints.containsKey(textSize)) {
+			TextPaint tx = new TextPaint();
+			
+			tx.setTextSize(textSize);
+			tx.setStyle(Paint.Style.FILL);
+			tx.setAntiAlias(true);
+			tx.setColor(Color.WHITE);
 
-		textPaint.setTextSize(baseLine * oversample);
-		textPaint.setAntiAlias(true);
-		textPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+			tx.setTypeface(tf);
 
-		textPaint.setTypeface(tf);
+			textPaints.put(textSize, tx);
+		}
 
-		textPaint.setColor(0xffffffff);
-
+		textPaint = textPaints.get(textSize);
+/*
+		contourPaint.set(textPaint);
+		contourPaint.setStyle(Paint.Style.STROKE);
+		contourPaint.setStrokeWidth(0.5f);
+		contourPaint.setColor(Color.BLACK);
+*/
 		this.text(text);
 		texts.add(this);
 	}
@@ -186,6 +199,13 @@ public class SystemText extends Text {
 										xCharPos.get(lineCounter) * oversample,
 										(fontHeight) * oversample - textPaint.descent(),
 										textPaint);
+/*
+								canvas.drawText(
+										text.substring(offset, offset + codepointCharCount),
+										xCharPos.get(lineCounter) * oversample,
+										(fontHeight) * oversample - textPaint.descent(),
+										contourPaint);
+*/
 							}
 							charIndex++;
 						}
@@ -296,11 +316,6 @@ public class SystemText extends Text {
 					/ oversample;
 			createText();
 		}
-	}
-
-	@Override
-	public void setScale(float x, float y) {
-		super.setScale(fontScale * x, fontScale * y);
 	}
 
 	public String text() {
