@@ -55,7 +55,7 @@ public class SystemText extends Text {
 		float textSize = baseLine * oversample;
 		if(!textPaints.containsKey(textSize)) {
 			TextPaint tx = new TextPaint();
-			
+
 			tx.setTextSize(textSize);
 			tx.setStyle(Paint.Style.FILL);
 			tx.setAntiAlias(true);

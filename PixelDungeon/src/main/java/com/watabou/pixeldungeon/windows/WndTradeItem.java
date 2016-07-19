@@ -185,7 +185,7 @@ public class WndTradeItem extends Window {
 		}
 		
 		// Description
-		Text info = PixelScene.createMultiline( item.info(), 6 );
+		Text info = PixelScene.createMultiline( item.info(), 8 );
 		info.maxWidth(WIDTH);
 		info.measure();
 		info.x = titlebar.left();

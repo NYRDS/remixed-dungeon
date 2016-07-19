@@ -220,10 +220,6 @@ public class PixelScene extends Scene {
 		return createMultiline(null, size);
 	}
 
-	public static Text createSystemText(String text, float size) {
-		return new SystemText(text, size*1.2f, false, computeFontScale());
-	}
-	
 	public static Text createMultiline(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
