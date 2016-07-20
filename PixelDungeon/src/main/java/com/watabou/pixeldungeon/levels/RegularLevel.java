@@ -165,7 +165,7 @@ public abstract class RegularLevel extends CommonLevel {
 			Graph.buildDistanceMap(rooms, secondaryExit);
 			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
 
-			if(i == 1){
+			if(secondaryExit != roomExit){
 				roomSecondaryExit = secondaryExit;
 			}
 
