@@ -67,7 +67,7 @@ public class NecromancerNPC extends NPC {
 			do {
 				int cell = room.random(level);
 				necro.setPos(cell);
-			} while (level.map[necro.getPos()] == Terrain.ENTRANCE);
+			} while (level.map[necro.getPos()] == Terrain.LOCKED_EXIT);
 			level.mobs.add( necro );
 			Actor.occupyCell( necro );
 			
