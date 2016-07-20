@@ -205,6 +205,12 @@ public class Lich extends Boss {
 
     @Override
     public int defenseProc(Char enemy, int damage) {
+        if (activatedSkull != null)
+        {
+            if(activatedSkull.getKind() == 3){
+                return 0;
+            }
+        }
         blink(enemy.getPos());
         return damage;
     }

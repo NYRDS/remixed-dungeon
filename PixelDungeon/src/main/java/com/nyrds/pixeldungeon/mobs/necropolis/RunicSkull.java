@@ -18,7 +18,8 @@ public class RunicSkull extends MultiKindMob {
 
 	protected static final int RED_SKULL	 = 0;
 	protected static final int BLUE_SKULL	 = 1;
-	protected static final int GREEN_SKULL = 2;
+	protected static final int GREEN_SKULL   = 2;
+	protected static final int PURPLE_SKULL  = 3;
 
 	public RunicSkull() {
 
@@ -27,7 +28,7 @@ public class RunicSkull extends MultiKindMob {
 		defenseSkill = 10;
 
 		pacified = true;
-		kind = Random.Int(3);
+		kind = Random.Int(4);
 		state = WANDERING;
 
 		IMMUNITIES.add( Paralysis.class );
