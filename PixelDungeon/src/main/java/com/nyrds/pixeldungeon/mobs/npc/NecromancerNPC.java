@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
+import com.nyrds.pixeldungeon.levels.NecroBossLevel;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -39,38 +40,62 @@ public class NecromancerNPC extends NPC {
 	@Override
 	public void damage( int dmg, Object src ) {
 	}
-	
+
+	@Override
+	public int defenseSkill( Char enemy ) {
+		return 1000;
+	}
+
 	@Override
 	public void add( Buff buff ) {
 	}
 
-	private static String introduced_tag = "introduced";
+	private static final String NODE	   = "necromancer";
+	private static final String INTRODUCED = "introduced";
+	private static final String SPAWNED    = "spawned";
 
-	private static boolean spawned;
-	private boolean introduced = false;
+	private static boolean spawned    = false;
+	private boolean        introduced = false;
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle(bundle);
-		bundle.put(introduced_tag, introduced);
+
+		Bundle node = new Bundle();
+		node.put( SPAWNED, spawned );
+
+		node.put(SPAWNED, spawned);
+		if (spawned) {
+			node.put(INTRODUCED, introduced);
+		}
+
+		bundle.put( NODE, node );
 	}
 
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
-		introduced = bundle.getBoolean(introduced_tag);
+
+		Bundle node = bundle.getBundle( NODE );
+
+		if (!node.isNull() && (spawned = node.getBoolean( SPAWNED ))) {
+			introduced = node.getBoolean( INTRODUCED );
+		} else {
+			spawned    = false;
+		}
+
 	}
 
 	public static void spawn( RegularLevel level, Room room ) {
-		if (!spawned && Dungeon.depth == 7) {
-			NecromancerNPC necro = new NecromancerNPC();
+		if (!spawned && Dungeon.depth == 7 && room != null) {
+			NecromancerNPC npc = new NecromancerNPC();
 			do {
 				int cell = room.random(level);
-				necro.setPos(cell);
-			} while (level.map[necro.getPos()] == Terrain.LOCKED_EXIT);
-			level.mobs.add( necro );
-			Actor.occupyCell( necro );
-			
+				npc.setPos(cell);
+			} while (level.map[npc.getPos()] == Terrain.LOCKED_EXIT);
+			level.mobs.add( npc );
+			Actor.occupyCell( npc );
+
 			spawned = true;
 		}
 	}
