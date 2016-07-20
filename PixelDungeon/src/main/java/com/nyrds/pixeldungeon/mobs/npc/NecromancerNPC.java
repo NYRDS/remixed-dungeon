@@ -8,7 +8,11 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.Room;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
@@ -25,8 +29,6 @@ public class NecromancerNPC extends NPC {
 	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3, TXT_MESSAGE4};
 
 	{
-		flying = false;
-		state = WANDERING;
 	}
 	
 	@Override
@@ -59,12 +61,13 @@ public class NecromancerNPC extends NPC {
 		introduced = bundle.getBoolean(introduced_tag);
 	}
 
-	public static void spawn( RegularLevel level ) {
+	public static void spawn( RegularLevel level, Room room ) {
 		if (!spawned && Dungeon.depth == 7) {
 			NecromancerNPC necro = new NecromancerNPC();
 			do {
-				necro.setPos(level.randomRespawnCell());
-			} while (necro.getPos() == -1);
+				int cell = room.random(level);
+				necro.setPos(cell);
+			} while (level.map[necro.getPos()] == Terrain.ENTRANCE);
 			level.mobs.add( necro );
 			Actor.occupyCell( necro );
 			
@@ -80,6 +83,7 @@ public class NecromancerNPC extends NPC {
 		{
 			GameScene.show( new WndQuest( this, TXT_INTRO ) );
 			introduced = true;
+			hero.collect(new SkeletonKey());
 		}
 		else{
 			int index = Random.Int(0, TXT_PHRASES.length);

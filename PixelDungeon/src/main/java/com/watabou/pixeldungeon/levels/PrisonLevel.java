@@ -73,7 +73,7 @@ public class PrisonLevel extends RegularLevel {
 		super.createMobs();
 		
 		WandMaker.Quest.spawn( this, roomEntrance );
-		NecromancerNPC.spawn(this);
+		NecromancerNPC.spawn(this, roomSecondaryExit);
 	}
 	
 	@Override
