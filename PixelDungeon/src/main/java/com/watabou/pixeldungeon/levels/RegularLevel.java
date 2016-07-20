@@ -44,6 +44,7 @@ public abstract class RegularLevel extends CommonLevel {
 	
 	protected Room roomEntrance;
 	protected Room roomExit;
+	protected Room roomSecondaryExit;
 
 	protected List<Room.Type> specials;
 	
@@ -164,12 +165,18 @@ public abstract class RegularLevel extends CommonLevel {
 			Graph.buildDistanceMap(rooms, secondaryExit);
 			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
 
+			if(i == 1){
+				roomSecondaryExit = secondaryExit;
+			}
+
 			Room room = roomEntrance;
 			for (Room next : path) {
 				room.connect(next);
 				room = next;
 			}
+
 		}
+
 	}
 
 	protected int nTraps() {
