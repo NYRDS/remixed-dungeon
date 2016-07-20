@@ -96,7 +96,7 @@
       "8s":[["9s"],["7s"]],
       "9s":[["10s"],["8s"]],
       "10s":[[],["9s"]],
-      "necro1":[["necro2"],["7"]],
+      "necro1":[["necro2"],["7"],[2]],
       "necro2":[["necro3"],["necro1"]],
       "necro3":[["necro4"],["necro2"]],
       "necro4":[["necro5"],["necro3"]],
