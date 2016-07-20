@@ -103,7 +103,7 @@ public class WndHats extends Window {
 			//Text
 			String hatName = Accessory.getByName(item).name();
 
-			Text name = PixelScene.createMultiline(hatName, 7);
+			Text name = PixelScene.createMultiline(hatName, 8);
 
 			name.hardlight(0xFFFFFF);
 

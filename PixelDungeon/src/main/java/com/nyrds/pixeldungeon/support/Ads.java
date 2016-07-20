@@ -33,8 +33,7 @@ public class Ads {
 	}
 
 	private static boolean googleAdsUsable() {
-		return android.os.Build.VERSION.SDK_INT >= 9
-				&& Flavours.haveAds();
+		return Flavours.haveAds();
 	}
 
 	public static void displayEasyModeBanner() {

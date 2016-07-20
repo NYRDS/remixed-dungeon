@@ -8,7 +8,6 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
-import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
@@ -119,7 +118,7 @@ public class WndDonate extends WndTabbed {
 			}
 
 			Text commonText = PixelScene.createMultiline(
-					Game.getVar(R.string.WndDonate_commonDonateText), 6);
+					Game.getVar(R.string.WndDonate_commonDonateText), 8);
 			commonText.maxWidth(WIDTH);
 			commonText.measure();
 			commonText.setPos(0, pos);
@@ -127,7 +126,7 @@ public class WndDonate extends WndTabbed {
 			pos += commonText.height() + GAP;
 			
 			Text tabText = PixelScene.createMultiline(
-					text[level - 1], 7);
+					text[level - 1], 8);
 			tabText.maxWidth(WIDTH - 10);
 			tabText.hardlight( Window.TITLE_COLOR );
 			tabText.measure();
@@ -137,7 +136,7 @@ public class WndDonate extends WndTabbed {
 			pos += tabText.height() + GAP;
 			
 			Text tabText2 = PixelScene.createMultiline(
-					text2[level - 1], 7);
+					text2[level - 1], 8);
 			tabText2.maxWidth(WIDTH - 10);
 			tabText2.measure();
 			tabText2.setPos(0, pos);

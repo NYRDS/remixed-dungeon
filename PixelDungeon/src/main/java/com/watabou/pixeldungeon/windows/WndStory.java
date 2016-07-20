@@ -62,7 +62,7 @@ public class WndStory extends Window {
 	public WndStory( String text ) {
 		super( 0, 0, Chrome.get( Chrome.Type.SCROLL ) );
 
-		Text tf = PixelScene.createMultiline(text, 7);
+		Text tf = PixelScene.createMultiline(text, 8);
 		tf.maxWidth(WIDTH - MARGIN * 2);
 		tf.measure();
 		tf.ra = bgR;

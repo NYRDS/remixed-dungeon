@@ -42,7 +42,7 @@ public class WndTitledMessage extends Window {
 		
 		Highlighter hl = new Highlighter( message );
 
-		Text normal = PixelScene.createMultiline(hl.text, 6);
+		Text normal = PixelScene.createMultiline(hl.text, 8);
 		if (hl.isHighlighted()) {
 			normal.mask = hl.inverted();
 		}
@@ -55,7 +55,7 @@ public class WndTitledMessage extends Window {
 
 		if (hl.isHighlighted()) {
 
-			Text highlighted = PixelScene.createMultiline(hl.text, 6);
+			Text highlighted = PixelScene.createMultiline(hl.text, 8);
 			highlighted.mask = hl.mask;
 			highlighted.maxWidth(normal.getMaxWidth());
 			highlighted.measure();

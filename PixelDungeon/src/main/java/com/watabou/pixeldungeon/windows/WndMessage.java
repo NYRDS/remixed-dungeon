@@ -30,7 +30,7 @@ public class WndMessage extends Window {
 		
 		super();
 		
-		Text info = PixelScene.createMultiline( text, 6 );
+		Text info = PixelScene.createMultiline( text, 8 );
 		info.maxWidth(WIDTH - MARGIN * 2);
 		info.measure();
 		info.x = info.y = MARGIN;

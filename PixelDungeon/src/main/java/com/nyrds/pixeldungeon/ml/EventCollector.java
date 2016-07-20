@@ -15,10 +15,7 @@ public class EventCollector {
 	static private boolean mDisabled = true;
 
 	private static boolean googleAnalyticsUsable() {
-		if(Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) > 0) {
-			return android.os.Build.VERSION.SDK_INT >= 9;
-		}
-		return false;
+		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) > 0;
 	}
 
 	static public void init(Context context) {

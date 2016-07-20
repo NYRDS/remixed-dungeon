@@ -192,7 +192,7 @@ public class PixelScene extends Scene {
 		return createText(null, size);
 	}
 
-	private static float computeFontScale() {
+	public static float computeFontScale() {
 		float scale = 0.5f + 0.01f*PixelDungeon.fontScale();
 		
 		if(scale < 0.1f) return 0.1f;
@@ -220,10 +220,6 @@ public class PixelScene extends Scene {
 		return createMultiline(null, size);
 	}
 
-	public static Text createSystemText(String text, float size) {
-		return new SystemText(text, size*1.2f, false, computeFontScale());
-	}
-	
 	public static Text createMultiline(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {

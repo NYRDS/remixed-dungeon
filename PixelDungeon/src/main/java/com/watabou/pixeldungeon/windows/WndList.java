@@ -52,7 +52,7 @@ public class WndList extends Window {
 			}
 			add( dot );
 			
-			Text item = PixelScene.createMultiline( items[i], 6 );
+			Text item = PixelScene.createMultiline( items[i], 8 );
 			item.x = dot.x + dotWidth;
 			item.y = pos;
 			item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));

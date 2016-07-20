@@ -39,7 +39,7 @@ public class WndInfoPlant extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text info = PixelScene.createMultiline( 6 );
+		Text info = PixelScene.createMultiline( 8 );
 		add( info );
 		
 		info.text( plant.desc() );

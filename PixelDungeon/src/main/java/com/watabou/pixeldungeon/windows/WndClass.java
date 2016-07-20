@@ -103,7 +103,7 @@ public class WndClass extends WndTabbed {
 				}
 				add( dot );
 				
-				Text item = PixelScene.createMultiline( items[i], 6 );
+				Text item = PixelScene.createMultiline( items[i], 8 );
 				item.x = dot.x + dotWidth;
 				item.y = pos;
 				item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));
@@ -156,7 +156,7 @@ public class WndClass extends WndTabbed {
 			
 			Highlighter hl = new Highlighter( text );
 			
-			normal = PixelScene.createMultiline( hl.text, 6 );
+			normal = PixelScene.createMultiline( hl.text, 8 );
 			if (hl.isHighlighted()) {
 				normal.mask = hl.inverted();
 			}
@@ -167,7 +167,7 @@ public class WndClass extends WndTabbed {
 			add( normal );
 			
 			if (hl.isHighlighted()) {				
-				highlighted = PixelScene.createMultiline( hl.text, 6 );
+				highlighted = PixelScene.createMultiline( hl.text, 8 );
 				highlighted.mask = hl.mask;
 
 				highlighted.maxWidth(normal.getMaxWidth());

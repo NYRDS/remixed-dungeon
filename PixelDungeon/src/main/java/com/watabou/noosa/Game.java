@@ -218,20 +218,19 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		view = new GLSurfaceView(this);
 		view.setEGLContextClientVersion(2);
+
+
 		// Hope this allow game work on broader devices list
 		// view.setEGLConfigChooser( false );
 		view.setRenderer(this);
 		view.setOnTouchListener(this);
 
-		if (android.os.Build.VERSION.SDK_INT >= 9) {
-			layout = new LinearLayout(this);
-			getLayout().setOrientation(LinearLayout.VERTICAL);
-			getLayout().addView(view);
 
-			setContentView(getLayout());
-		} else {
-			setContentView(view);
-		}
+		layout = new LinearLayout(this);
+		getLayout().setOrientation(LinearLayout.VERTICAL);
+		getLayout().addView(view);
+
+		setContentView(getLayout());
 	}
 
 	@Override

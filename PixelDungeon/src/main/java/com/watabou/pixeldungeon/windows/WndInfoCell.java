@@ -59,7 +59,7 @@ public class WndInfoCell extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text info = PixelScene.createMultiline( 6 );
+		Text info = PixelScene.createMultiline( 8 );
 		add( info );
 		
 		StringBuilder desc = new StringBuilder( Dungeon.level.tileDesc( tile ) );

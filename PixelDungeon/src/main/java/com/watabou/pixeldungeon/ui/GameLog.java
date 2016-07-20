@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import java.util.regex.Pattern;
-
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
@@ -28,6 +26,8 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Signal;
+
+import java.util.regex.Pattern;
 
 public class GameLog extends Component implements Signal.Listener<String> {
 
@@ -82,7 +82,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			lastEntry.measure();
 			
 		} else {
-			lastEntry = PixelScene.createMultiline( text, 7 );
+			lastEntry = PixelScene.createMultiline( text, 8 );
 			lastEntry.maxWidth((int)width);
 			lastEntry.measure();
 			lastEntry.hardlight( color );

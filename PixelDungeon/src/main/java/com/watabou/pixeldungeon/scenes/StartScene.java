@@ -380,7 +380,7 @@ public class StartScene extends PixelScene {
 		protected void createChildren() {
 			super.createChildren();
 
-			secondary = createText(6);
+			secondary = createText(8);
 
 			add(secondary);
 		}
@@ -391,13 +391,13 @@ public class StartScene extends PixelScene {
 
 			if (secondary.text() != null && secondary.text().length() > 0) {
 				text.y = align(y
-						+ (height - text.height() - secondary.baseLine() * 2)
+						+ (height - text.height() - secondary.height())
 						/ 2);
 
 				secondary.x = align(x + (width - secondary.width()) / 2);
 				secondary.y = align(text.y + text.height());
 			} else {
-				text.y = align(y + (height - text.baseLine()) / 2);
+				text.y = align(y + (height - text.height()) / 2);
 			}
 		}
 
