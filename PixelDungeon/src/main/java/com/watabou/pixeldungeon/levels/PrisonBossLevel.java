@@ -56,7 +56,7 @@ public class PrisonBossLevel extends RegularLevel {
 	
 	@Override
 	public String tilesTex() {
-		return Assets.TILES_PRISON;
+		return Assets.TILES_PRISON_BOSS;
 	}
 	
 	@Override
