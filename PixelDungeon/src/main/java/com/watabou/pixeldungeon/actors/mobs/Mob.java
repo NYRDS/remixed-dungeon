@@ -579,6 +579,27 @@ public abstract class Mob extends Char {
 		return clone;
 	}
 
+	public void ressurrect(Char parent, Mob old_mob){
+
+		int spawnPos = Dungeon.level.getEmptyCellNextTo(parent.getPos());
+		Mob new_mob;
+		try {
+			new_mob = old_mob.getClass().newInstance();
+		} catch (Exception e) {
+			throw new TrackedRuntimeException("blackskull issue");
+		}
+
+		if (Dungeon.level.cellValid(spawnPos)) {
+			new_mob.setPos(spawnPos);
+			Dungeon.level.spawnMob(new_mob );
+			if(parent instanceof Hero) {
+				Mob.makePet(new_mob,(Hero) parent);
+				Actor.addDelayed( new Pushing( new_mob, parent.getPos(), new_mob.getPos() ), -1 );
+
+			}
+		}
+	}
+
 	@SuppressWarnings("unchecked")
 	protected void dropLoot() {
 		if (loot != null && Random.Float() <= lootChance) {

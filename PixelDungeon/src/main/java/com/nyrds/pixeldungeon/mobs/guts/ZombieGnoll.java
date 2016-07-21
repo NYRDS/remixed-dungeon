@@ -56,18 +56,15 @@ public class ZombieGnoll extends Mob {
 
         if (Random.Int(100) > 45 && cause != Burning.class){
             int gnollPosition = this.getPos();
+            ressurrect(this, this);
 
-            if (Dungeon.level.cellValid(gnollPosition)) {
-                ZombieGnoll newGnoll = new ZombieGnoll();
-                newGnoll.setPos(gnollPosition);
-                Dungeon.level.spawnMob(newGnoll, 0);
-                CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);
-                Sample.INSTANCE.play(Assets.SND_DEATH);
-                if (Dungeon.visible[getPos()]) {
-                    getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
-                    GLog.n(Game.getVar(R.string.ZombieGnoll_Info));
-                }
+            CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);
+            Sample.INSTANCE.play(Assets.SND_DEATH);
+            if (Dungeon.visible[getPos()]) {
+                getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
+                GLog.n(Game.getVar(R.string.ZombieGnoll_Info));
             }
+
         }
 
         if (Dungeon.hero.lvl() <= maxLvl + 2) {

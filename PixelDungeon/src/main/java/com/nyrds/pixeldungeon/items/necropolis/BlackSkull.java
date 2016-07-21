@@ -5,6 +5,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
@@ -35,7 +36,7 @@ public class BlackSkull extends Artifact {
 
 	@Override
 	public Glowing glowing() {
-		return new Glowing((int) (Math.random() * 0x000000));
+		return new Glowing((int) (Math.random() * 0x220033));
 	}
 
 	private void resurrectMobAsPet(Mob mob, Hero hero){
@@ -59,7 +60,9 @@ public class BlackSkull extends Artifact {
 	public void mobDied(Mob mob, Hero hero){
 		if (activated){
 
-			resurrectMobAsPet(mob, hero);
+			//resurrectMobAsPet(mob, hero);
+			Mob staticMob = new Skeleton();
+			staticMob.ressurrect(hero, mob);
 
 			charge = charge - 5;
 			if(charge <= 0){
