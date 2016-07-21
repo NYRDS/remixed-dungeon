@@ -3,7 +3,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">spider armor</string>
-    <string name="SpiderArmor_Info"></string>
+    <string name="SpiderArmor_Info">This armor is made of old spider carcases mysterious cloth. Surprisingly enough, it seems that it still contains functional spinneret. If you apply enough pressure on one of the plates it shoots cobweb. Spiky surface of boot soles allows you to walk on that web freely.</string>
     <string name="SpiderArmor_Gender">feminine</string>
 
     <!-- STRINGS OF BladeOfSouls CLASS -->
@@ -21,7 +21,7 @@
 
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">soul shard</string>
-    <string name="SoulShard_Info"></string>
+    <string name="SoulShard_Info">It's a shard you've taken from remnants of Jar of Souls. It's glowing with mystical energy, maybe there is someone, who could be interested in such thing.</string>
     <string name="SoulShard_Gender">masculine</string>
 
     <!-- Mobs descriptions -->
