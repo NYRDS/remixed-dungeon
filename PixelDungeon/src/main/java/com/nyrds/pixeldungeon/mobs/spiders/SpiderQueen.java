@@ -25,10 +25,12 @@ public class SpiderQueen extends Boss {
 		maxLvl = 21;
 
 		float dice = Random.Float();
-		if( dice < 0.5 ) {
+		if( dice < 0.33 ) {
 			loot = new ChaosCrystal();
-		} else{
+		} else if( dice < 0.66 ){
 			loot = new SpiderCharm();
+		} else{
+			loot = new SpiderArmor();
 		}
 		lootChance = 1f;
 		
