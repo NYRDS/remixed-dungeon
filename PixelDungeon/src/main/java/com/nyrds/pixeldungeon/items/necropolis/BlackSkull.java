@@ -38,7 +38,7 @@ public class BlackSkull extends Artifact {
 		return new Glowing((int) (Math.random() * 0x000000));
 	}
 
-	private void ressurectMobAsPet(Mob mob, Hero hero){
+	private void resurrectMobAsPet(Mob mob, Hero hero){
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
 
 		if (Dungeon.level.cellValid(spawnPos)) {
@@ -59,7 +59,7 @@ public class BlackSkull extends Artifact {
 	public void mobDied(Mob mob, Hero hero){
 		if (activated){
 
-			ressurectMobAsPet(mob, hero);
+			resurrectMobAsPet(mob, hero);
 
 			charge = charge - 5;
 			if(charge <= 0){
