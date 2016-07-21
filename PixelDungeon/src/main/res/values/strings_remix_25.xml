@@ -13,15 +13,15 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">black skull</string>
-    <string name="BlackSkull_Info">A small obsidian skull.It was a source of Necropolis powers, but after Lich's defeat it seems to have lost all it's powers. But as you hold it in your hands a strange thought crosses your mind: "It hungers".</string>
+    <string name="BlackSkull_Info">A small obsidian skull. It was a source of Necropolis powers, but after Lich\'s defeat it seems to have lost all it\'s powers. But as you hold it in your hands a strange thought crosses your mind: "It hungers".</string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">awakened black skull</string>
-    <string name="BlackSkull_Info_Awakened">The skull is pulsating with power, you can see it pouring from skull's empty eyes. And as you hold it in your hand you can hear dreadful voice: "The death marches"</string>
+    <string name="BlackSkull_Info_Awakened">The skull is pulsating with power, you can see it pouring from skull\'s empty eyes. And as you hold it in your hand you can hear dreadful voice: "The death marches"</string>
 
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">soul shard</string>
-    <string name="SoulShard_Info">It's a shard you've taken from remnants of Jar of Souls. It's glowing with mystical energy, maybe there is someone, who could be interested in such thing.</string>
+    <string name="SoulShard_Info">It\'s a shard you\'ve taken from remnants of Jar of Souls. It\'s glowing with mystical energy, maybe there is someone, who could be interested in such thing.</string>
     <string name="SoulShard_Gender">masculine</string>
 
     <!-- Mobs descriptions -->
@@ -41,13 +41,13 @@
     <string name="EnslavedSoul_Name">enslaved soul</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">enslaved soul</string>
-    <string name="EnslavedSoul_Desc">You can almost see through this ghostly apparation. Even though it looks like a skull, sometimes, for a split second, a face appears instead, face full of suffering and torment.</string>
+    <string name="EnslavedSoul_Desc">You can almost see through this ghostly apparition. Even though it looks like a skull, sometimes, for a split second, a face appears instead, face full of suffering and torment.</string>
 
     <!-- STRINGS OF ExplodingSkull CLASS -->
     <string name="ExplodingSkull_Name">exploding skull</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name_Objective">exploding skull</string>
-    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it's going to burst in any second.</string>
+    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it\'s going to burst in any second.</string>
 
     <!-- STRINGS OF JarOfSouls CLASS -->
     <string name="JarOfSouls_Name">jar of souls</string>
@@ -74,7 +74,7 @@
     <string name="Zombie_Desc">Dungeon is a dangerous place and many adventurers has met their doom in this place. But most unlucky of them all has met their end in Necropolis, and now they are doomed to wander these halls in form of rotting corpses.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
-    <string name="NecromancerNPC_Intro2">Ah! An adventurer which is not dead. Outstanding! Oh... I beg my pardon. You see, I am myself a necromancer. And even though studying the dead and death itself is what I do for a living, seeing same thing over and over again, eventually gets extremely boring. On the other hand that\'s exactly why I am here. Something spectacular has happened recently. A _Necropolis_, an ancient city of the dead has finally revealed it\'s doors. In fact, we standing right next to the entrance. And... tell you what, take this key and go first, I mean you like adventures and stuff? And I'll come in right behind you, I just need to get ready.</string>
+    <string name="NecromancerNPC_Intro2">Ah! An adventurer which is not dead. Outstanding! Oh... I beg my pardon. You see, I am myself a necromancer. And even though studying the dead and death itself is what I do for a living, seeing same thing over and over again, eventually gets extremely boring. On the other hand that\'s exactly why I am here. Something spectacular has happened recently. A _Necropolis_, an ancient city of the dead has finally revealed it\'s doors. In fact, we standing right next to the entrance. And... tell you what, take this key and go first, I mean you like adventures and stuff? And I\'ll come in right behind you, I just need to get ready.</string>
 
     <!-- Badges -->
     <string name="Badges_Lich_Slain">Lich slain</string>
