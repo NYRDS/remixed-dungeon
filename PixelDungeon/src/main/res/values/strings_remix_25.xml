@@ -71,7 +71,7 @@
     <string name="Zombie_Name">zombie</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name_Objective">zombie</string>
-    <string name="Zombie_Desc"></string>
+    <string name="Zombie_Desc">Dungeon is a dangerous place and many adventurers has met their doom in this place. But most unlucky of them all has met their end in Necropolis, and now they are doomed to wander these halls in form of rotting corpses.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
 
