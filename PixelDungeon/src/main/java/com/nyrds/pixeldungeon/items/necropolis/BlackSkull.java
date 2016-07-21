@@ -20,7 +20,7 @@ public class BlackSkull extends Artifact {
 
 	private static final int BASIC_IMAGE = 19;
 	private static final int ACTIVATED_IMAGE = 20;
-	private static final int MAXIMUM_CHARGE = 5;
+	private static final int MAXIMUM_CHARGE = 10;
 	private static final String CHARGE_KEY = "charge";
 	private static final String ACTIVATED_KEY = "activated";
 
