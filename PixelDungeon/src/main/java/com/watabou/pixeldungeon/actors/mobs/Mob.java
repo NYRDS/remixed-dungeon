@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -521,6 +522,15 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void die(Object cause) {
+
+		Hero hero = Dungeon.hero;
+		if (hero != null && hero.isAlive()) {
+			for (Item item : Dungeon.hero.belongings) {
+				if (item instanceof BlackSkull && item.isEquipped(Dungeon.hero)) {
+					((BlackSkull) item).mobDied(this, hero);
+				}
+			}
+		}
 
 		super.die(cause);
 
