@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.levels.Room.Type;
+import com.watabou.pixeldungeon.levels.painters.NecroExitPainter;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
@@ -56,7 +57,7 @@ public class PrisonLevel extends RegularLevel {
 	protected boolean[] grass() {
 		return Patch.generate(this, feeling == Feeling.GRASS ? 0.60f : 0.40f, 3 );
 	}
-	
+
 	@Override
 	protected void assignRoomType() {
 		super.assignRoomType();
@@ -73,7 +74,10 @@ public class PrisonLevel extends RegularLevel {
 		super.createMobs();
 		
 		WandMaker.Quest.spawn( this, roomEntrance );
-		NecromancerNPC.spawn(this, roomSecondaryExit);
+
+		if(Dungeon.depth==7) {
+			NecromancerNPC.spawn(this, exitRoom(1));
+		}
 	}
 	
 	@Override
@@ -127,6 +131,11 @@ public class PrisonLevel extends RegularLevel {
 				map[pos] = Terrain.SIGN;
 				break;
 			}
+		}
+
+		if(Dungeon.depth == 7) {
+			Room NecroExit = exitRoom(1);
+			NecroExitPainter.paint(this, NecroExit);
 		}
 	}
 	
