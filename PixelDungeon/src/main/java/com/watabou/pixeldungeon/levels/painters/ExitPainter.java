@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -44,9 +43,6 @@ public class ExitPainter extends Painter {
 		level.setExit(room.random(level, 1), exitIndex);
 
 		int exitType = Terrain.EXIT;
-		if(Dungeon.depth == 7 && counter > 0){
-			exitType = Terrain.LOCKED_EXIT;
-		}
 
 		set(level, level.getExit(exitIndex), exitType);
 

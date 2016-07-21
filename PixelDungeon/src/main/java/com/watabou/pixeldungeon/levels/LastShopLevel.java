@@ -17,13 +17,11 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import java.util.List;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.Heap;
@@ -31,6 +29,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
+
+import java.util.List;
 
 public class LastShopLevel extends RegularLevel {
 	
@@ -71,11 +71,11 @@ public class LastShopLevel extends RegularLevel {
 				if (innerRetry++ > 10) {
 					return false;
 				}
-				roomExit = Random.element( rooms );
-			} while (roomExit == roomEntrance || roomExit.width() < 6 || roomExit.height() < 6 || roomExit.top == 0);
+				setRoomExit(Random.element( rooms ));
+			} while (getRoomExit() == roomEntrance || getRoomExit().width() < 6 || getRoomExit().height() < 6 || getRoomExit().top == 0);
 	
-			Graph.buildDistanceMap( rooms, roomExit );
-			distance = Graph.buildPath( rooms, roomEntrance, roomExit ).size();
+			Graph.buildDistanceMap( rooms, getRoomExit());
+			distance = Graph.buildPath( rooms, roomEntrance, getRoomExit()).size();
 			
 			if (retry++ > 10) {
 				return false;
@@ -84,15 +84,15 @@ public class LastShopLevel extends RegularLevel {
 		} while (distance < minDistance);
 		
 		roomEntrance.type = Type.ENTRANCE;
-		roomExit.type = Type.EXIT;
+		getRoomExit().type = Type.EXIT;
 		
-		Graph.buildDistanceMap( rooms, roomExit );
-		List<Room> path = Graph.buildPath( rooms, roomEntrance, roomExit );
+		Graph.buildDistanceMap( rooms, getRoomExit());
+		List<Room> path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
 		
 		Graph.setPrice( path, roomEntrance.distance );
 		
-		Graph.buildDistanceMap( rooms, roomExit );
-		path = Graph.buildPath( rooms, roomEntrance, roomExit );
+		Graph.buildDistanceMap( rooms, getRoomExit());
+		path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
 		
 		Room room = roomEntrance;
 		for (Room next : path) {

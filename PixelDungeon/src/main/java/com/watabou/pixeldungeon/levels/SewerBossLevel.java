@@ -82,10 +82,10 @@ public class SewerBossLevel extends RegularLevel {
 				if (innerRetry++ > 10) {
 					return false;
 				}
-				roomExit = Random.element( rooms );
-			} while (roomExit == roomEntrance || roomExit.width() < 6 || roomExit.height() < 6 || roomExit.top == 0);
+				setRoomExit(Random.element( rooms ));
+			} while (getRoomExit() == roomEntrance || getRoomExit().width() < 6 || getRoomExit().height() < 6 || getRoomExit().top == 0);
 	
-			Graph.buildDistanceMap( rooms, roomExit );
+			Graph.buildDistanceMap( rooms, getRoomExit());
 			distance = roomEntrance.distance();
 			
 			if (retry++ > 10) {
@@ -95,17 +95,17 @@ public class SewerBossLevel extends RegularLevel {
 		} while (distance < minDistance);
 		
 		roomEntrance.type = Type.ENTRANCE;
-		roomExit.type = Type.BOSS_EXIT;
+		getRoomExit().type = Type.BOSS_EXIT;
 
 		placeSecondaryExits();
 
-		Graph.buildDistanceMap( rooms, roomExit );
-		List<Room> path = Graph.buildPath( rooms, roomEntrance, roomExit );
+		Graph.buildDistanceMap( rooms, getRoomExit());
+		List<Room> path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
 		
 		Graph.setPrice( path, roomEntrance.distance );
 		
-		Graph.buildDistanceMap( rooms, roomExit );
-		path = Graph.buildPath( rooms, roomEntrance, roomExit );
+		Graph.buildDistanceMap( rooms, getRoomExit());
+		path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
 		
 		Room room = roomEntrance;
 		for (Room next : path) {
@@ -113,8 +113,8 @@ public class SewerBossLevel extends RegularLevel {
 			room = next;
 		}
 		
-		room = (Room)roomExit.connected.keySet().toArray()[0];
-		if (roomExit.top == room.bottom) {
+		room = (Room) getRoomExit().connected.keySet().toArray()[0];
+		if (getRoomExit().top == room.bottom) {
 			return false;
 		}
 		
@@ -125,15 +125,15 @@ public class SewerBossLevel extends RegularLevel {
 		}
 		
 		ArrayList<Room> candidates = new ArrayList<>();
-		for (Room r : roomExit.neigbours) {
-			if (!roomExit.connected.containsKey( r ) &&
-				(roomExit.left == r.right || roomExit.right == r.left || roomExit.bottom == r.top)) {
+		for (Room r : getRoomExit().neigbours) {
+			if (!getRoomExit().connected.containsKey( r ) &&
+				(getRoomExit().left == r.right || getRoomExit().right == r.left || getRoomExit().bottom == r.top)) {
 				candidates.add( r );
 			}
 		}
 		if (candidates.size() > 0) {
 			Room kingsRoom = Random.element( candidates );
-			kingsRoom.connect( roomExit );
+			kingsRoom.connect(getRoomExit());
 			kingsRoom.type = Room.Type.RAT_KING;
 		}
 
@@ -160,8 +160,8 @@ public class SewerBossLevel extends RegularLevel {
 	
 	@Override
 	protected void decorate() {	
-		int start = roomExit.top * getWidth() + roomExit.left + 1;
-		int end = start + roomExit.width() - 1;
+		int start = getRoomExit().top * getWidth() + getRoomExit().left + 1;
+		int end = start + getRoomExit().width() - 1;
 		for (int i=start; i < end; i++) {
 			if (!isExit(i)) {
 				map[i] = Terrain.WALL_DECO;
@@ -189,7 +189,7 @@ public class SewerBossLevel extends RegularLevel {
 	@Override
 	protected void createMobs() {
 		Mob mob = Bestiary.mob( Dungeon.depth, levelKind() );
-		mob.setPos(roomExit.random(this));
+		mob.setPos(getRoomExit().random(this));
 		mobs.add( mob );
 	}
 	

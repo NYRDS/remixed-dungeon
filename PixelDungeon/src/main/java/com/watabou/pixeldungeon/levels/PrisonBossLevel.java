@@ -72,7 +72,7 @@ public class PrisonBossLevel extends RegularLevel {
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( ARENA, roomExit );
+		bundle.put( ARENA, exitRoom(0) );
 		bundle.put( DOOR, arenaDoor );
 		bundle.put( ENTERED, enteredArena );
 		bundle.put( DROPPED, keyDropped );
@@ -81,7 +81,7 @@ public class PrisonBossLevel extends RegularLevel {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		roomExit = (Room)bundle.get( ARENA );
+		setRoomExit((Room)bundle.get( ARENA ));
 		arenaDoor = bundle.getInt( DOOR );
 		enteredArena = bundle.getBoolean( ENTERED );
 		keyDropped = bundle.getBoolean( DROPPED );
@@ -114,26 +114,26 @@ public class PrisonBossLevel extends RegularLevel {
 				if (innerRetry++ > 10) {
 					return false;
 				}
-				roomExit = Random.element( rooms );
+				setRoomExit(Random.element( rooms ));
 			} while (
-				roomExit == roomEntrance || 
-				roomExit.width() < 7 || 
-				roomExit.height() < 7 || 
-				roomExit.top == 0);
+				getRoomExit() == roomEntrance ||
+				getRoomExit().width() < 7 ||
+				getRoomExit().height() < 7 ||
+				getRoomExit().top == 0);
 	
-			Graph.buildDistanceMap( rooms, roomExit );
-			distance = Graph.buildPath( rooms, roomEntrance, roomExit ).size();
+			Graph.buildDistanceMap( rooms, getRoomExit());
+			distance = Graph.buildPath( rooms, roomEntrance, getRoomExit()).size();
 			
 		} while (distance < 3);
 		
 		roomEntrance.type = Type.ENTRANCE;
-		roomExit.type = Type.BOSS_EXIT;
+		getRoomExit().type = Type.BOSS_EXIT;
 		
-		List<Room> path = Graph.buildPath( rooms, roomEntrance, roomExit );	
+		List<Room> path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
 		Graph.setPrice( path, roomEntrance.distance );
 		
-		Graph.buildDistanceMap( rooms, roomExit );
-		path = Graph.buildPath( rooms, roomEntrance, roomExit );
+		Graph.buildDistanceMap( rooms, getRoomExit());
+		path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
 		
 		anteroom = path.get( path.size() - 2 );
 		anteroom.type = Type.STANDARD;
@@ -152,8 +152,8 @@ public class PrisonBossLevel extends RegularLevel {
 		
 		paint();
 		
-		Room r = (Room)roomExit.connected.keySet().toArray()[0];
-		if (roomExit.connected.get( r ).y == roomExit.top) {
+		Room r = (Room) getRoomExit().connected.keySet().toArray()[0];
+		if (getRoomExit().connected.get( r ).y == getRoomExit().top) {
 			return false;
 		}
 		
@@ -264,15 +264,15 @@ public class PrisonBossLevel extends RegularLevel {
 			}
 		}
 		
-		Point door = roomExit.entrance();
+		Point door = getRoomExit().entrance();
 		arenaDoor = door.x + door.y * getWidth();
 		Painter.set( this, arenaDoor, Terrain.LOCKED_DOOR );
 		
 		Painter.fill( this, 
-			roomExit.left + 2,
-			roomExit.top + 2,
-			roomExit.width() - 3,
-			roomExit.height() - 3,
+			getRoomExit().left + 2,
+			getRoomExit().top + 2,
+			getRoomExit().width() - 3,
+			getRoomExit().height() - 3,
 			Terrain.INACTIVE_TRAP );
 	}
 	
@@ -304,13 +304,13 @@ public class PrisonBossLevel extends RegularLevel {
 		
 		super.pressHero( cell, ch );
 		
-		if (ch == Dungeon.hero && !enteredArena && roomExit.inside( cell )) {
+		if (ch == Dungeon.hero && !enteredArena && getRoomExit().inside( cell )) {
 			
 			enteredArena = true;
 		
 			int pos;
 			do {
-				pos = roomExit.random(this);
+				pos = getRoomExit().random(this);
 			} while (pos == cell || Actor.findChar( pos ) != null);
 			
 			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );

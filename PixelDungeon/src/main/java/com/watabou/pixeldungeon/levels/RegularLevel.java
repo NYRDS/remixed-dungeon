@@ -41,25 +41,22 @@ import java.util.List;
 public abstract class RegularLevel extends CommonLevel {
 
 	protected HashSet<Room> rooms;
-	
+
+	private ArrayList<Room> exits = new ArrayList<>();
+
 	protected Room roomEntrance;
-	protected Room roomExit;
-	protected Room roomSecondaryExit;
 
 	protected List<Room.Type> specials;
 	
 	public int secretDoors;
-	
-	@Override
-	protected boolean build() {
-		
-		if (!initRooms()) {
-			return false;
-		}
-	
+
+	protected boolean placeEntranceAndExit() {
 		int distance;
 		int retry = 0;
 		int minDistance = (int)Math.sqrt( rooms.size() );
+
+		Room roomExit;
+
 		do {
 			do {
 				roomEntrance = Random.element( rooms );
@@ -67,27 +64,43 @@ public abstract class RegularLevel extends CommonLevel {
 
 			do {
 				roomExit = Random.element( rooms );
-			} while (roomExit == roomEntrance || roomExit.width() < 4 || roomExit.height() < 4);
-	
-			Graph.buildDistanceMap( rooms, roomExit );
+			} while (getRoomExit() == roomEntrance || roomExit.width() < 4 || roomExit.height() < 4);
+
+			Graph.buildDistanceMap( rooms, roomExit);
 			distance = roomEntrance.distance();
-			
+
 			if (retry++ > 10) {
 				return false;
 			}
-			
+
 		} while (distance < minDistance);
-		
+
 		roomEntrance.type = Type.ENTRANCE;
 		roomExit.type     = Type.EXIT;
+
+		setRoomExit(roomExit);
+
+		return true;
+	}
+
+	@Override
+	protected boolean build() {
+		
+		if (!initRooms()) {
+			return false;
+		}
+
+		if(!placeEntranceAndExit()){
+			return false;
+		}
 
 		placeSecondaryExits();
 
 		HashSet<Room> connected = new HashSet<>();
 		connected.add( roomEntrance );
 		
-		Graph.buildDistanceMap( rooms, roomExit );
-		List<Room> path = Graph.buildPath( rooms, roomEntrance, roomExit );
+		Graph.buildDistanceMap( rooms, exitRoom(0) );
+		List<Room> path = Graph.buildPath( rooms, roomEntrance, exitRoom(0) );
 		
 		Room room = roomEntrance;
 		for (Room next : path) {
@@ -98,8 +111,8 @@ public abstract class RegularLevel extends CommonLevel {
 		
 		Graph.setPrice( path, roomEntrance.distance );
 		
-		Graph.buildDistanceMap( rooms, roomExit );
-		path = Graph.buildPath( rooms, roomEntrance, roomExit );
+		Graph.buildDistanceMap( rooms, exitRoom(0) );
+		path = Graph.buildPath( rooms, roomEntrance, exitRoom(0) );
 		
 		room = roomEntrance;
 		for (Room next : path) {
@@ -149,6 +162,10 @@ public abstract class RegularLevel extends CommonLevel {
 		return true;
 	}
 
+	Room exitRoom(int index) {
+		return exits.get(index);
+	}
+
 	protected void placeSecondaryExits() {
 		int exitCount = DungeonGenerator.exitCount(levelId);
 
@@ -157,26 +174,22 @@ public abstract class RegularLevel extends CommonLevel {
 			do {
 				secondaryExit = Random.element(rooms);
 			} while (secondaryExit.type != Type.NULL ||
-					roomExit.width() < 4 ||
-					roomExit.height() < 4
+					 secondaryExit.width() < 4 ||
+					 secondaryExit.height() < 4
 					);
 			secondaryExit.type = Type.EXIT;
 
+			exits.add(secondaryExit);
+
 			Graph.buildDistanceMap(rooms, secondaryExit);
 			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
-
-			if(secondaryExit != roomExit){
-				roomSecondaryExit = secondaryExit;
-			}
 
 			Room room = roomEntrance;
 			for (Room next : path) {
 				room.connect(next);
 				room = next;
 			}
-
 		}
-
 	}
 
 	protected int nTraps() {
@@ -690,5 +703,12 @@ public abstract class RegularLevel extends CommonLevel {
 			}
 		}
 	}
-	
+
+	protected Room getRoomExit() {
+		return exitRoom(0);
+	}
+
+	protected void setRoomExit(Room roomExit) {
+		exits.add(0,roomExit);
+	}
 }
