@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.pixeldungeon.effects.DeathStroke;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
