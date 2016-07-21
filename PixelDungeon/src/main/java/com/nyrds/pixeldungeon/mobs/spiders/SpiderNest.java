@@ -16,7 +16,9 @@ public class SpiderNest extends Mob {
 		hp(ht(10));
 		defenseSkill = 1;
 		baseSpeed = 0f;
-		
+
+		canBePet = false;
+
 		EXP    = 0;
 		maxLvl = 9;
 		

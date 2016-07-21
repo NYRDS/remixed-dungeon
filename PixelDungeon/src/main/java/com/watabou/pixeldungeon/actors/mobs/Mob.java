@@ -82,7 +82,10 @@ public abstract class Mob extends Char {
 	protected int maxLvl = 30;
 
 	private Char enemy;
+
 	protected boolean enemySeen;
+
+	protected static boolean canBePet = true;
 	protected boolean alerted = false;
 
 	protected static final float TIME_TO_WAKE_UP = 1f;
@@ -112,9 +115,10 @@ public abstract class Mob extends Char {
 	}
 
 	public static Mob makePet(@NonNull Mob pet, @NonNull Hero hero) {
-		pet.setFraction(Fraction.HEROES);
-		hero.addPet(pet);
-
+		if(canBePet){
+			pet.setFraction(Fraction.HEROES);
+			hero.addPet(pet);
+		}
 		return pet;
 	}
 

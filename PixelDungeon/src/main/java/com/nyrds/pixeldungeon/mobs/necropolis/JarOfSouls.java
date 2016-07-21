@@ -15,6 +15,9 @@ public class JarOfSouls extends UndeadMob {
 	public JarOfSouls() {
 		hp(ht(100));
 		defenseSkill = 1;
+
+		canBePet = false;
+
 		pacified = true;
 		
 		EXP    = 0;
