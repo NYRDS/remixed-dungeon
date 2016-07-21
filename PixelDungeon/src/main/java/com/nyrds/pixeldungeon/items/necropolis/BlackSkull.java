@@ -64,22 +64,20 @@ public class BlackSkull extends Artifact {
 			charge = charge - 5;
 			if(charge <= 0){
 				activated = false;
-				setImage();
 			}
 		} else{
 			charge++;
 			if (charge >= MAXIMUM_CHARGE){
 				activated = true;
-				setImage();
 			}
 		}
 	}
 
-	private void setImage() {
+	@Override public int image() {
 		if(activated){
-			image = ACTIVATED_IMAGE;
+			return ACTIVATED_IMAGE;
 		}else{
-			image = BASIC_IMAGE;
+			return BASIC_IMAGE;
 		}
 	}
 
