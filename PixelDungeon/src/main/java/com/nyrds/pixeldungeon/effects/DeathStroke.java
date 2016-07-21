@@ -53,16 +53,4 @@ public class DeathStroke extends Image {
 			w.angle = angle;
 		}
 	}
-	
-	public static void hit( int pos ) {
-		hit( pos, 0 );
-	}
-	
-	public static void hit( int pos, float angle ) {
-		Group parent = Dungeon.hero.getSprite().getParent();
-		DeathStroke w = (DeathStroke)parent.recycle( DeathStroke.class );
-		parent.bringToFront( w );
-		w.reset( pos );
-		w.angle = angle;
-	}
 }
