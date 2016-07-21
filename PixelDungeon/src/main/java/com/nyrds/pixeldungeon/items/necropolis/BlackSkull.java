@@ -20,7 +20,7 @@ public class BlackSkull extends Artifact {
 
 	private static final int BASIC_IMAGE = 19;
 	private static final int ACTIVATED_IMAGE = 20;
-	private static final int MAXIMUM_CHARGE = 100;
+	private static final int MAXIMUM_CHARGE = 5;
 	private static final String CHARGE_KEY = "charge";
 	private static final String ACTIVATED_KEY = "activated";
 
@@ -38,40 +38,49 @@ public class BlackSkull extends Artifact {
 		return new Glowing((int) (Math.random() * 0x000000));
 	}
 
+	private void ressurectMobAsPet(Mob mob, Hero hero){
+		int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
+
+		if (Dungeon.level.cellValid(spawnPos)) {
+			Mob clone;
+			try {
+				clone = mob.getClass().newInstance();
+			} catch (Exception e) {
+				throw new TrackedRuntimeException("blackskull issue");
+			}
+			clone.setPos(spawnPos);
+			Mob.makePet(clone, getCurUser());
+
+			Dungeon.level.spawnMob(clone );
+			Actor.addDelayed( new Pushing( clone, hero.getPos(), clone.getPos() ), -1 );
+		}
+	}
+
 	public void mobDied(Mob mob, Hero hero){
 		if (activated){
 
-			int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
-
-			if (Dungeon.level.cellValid(spawnPos)) {
-				Mob clone;
-				try {
-					clone = mob.getClass().newInstance();
-				} catch (Exception e) {
-					throw new TrackedRuntimeException("split issue");
-				}
-				clone.setPos(spawnPos);
-
-				Dungeon.level.spawnMob(clone );
-				Actor.addDelayed( new Pushing( clone, hero.getPos(), clone.getPos() ), -1 );
-			}
+			ressurectMobAsPet(mob, hero);
 
 			charge = charge - 5;
 			if(charge <= 0){
 				activated = false;
+				setImage();
 			}
 		} else{
 			charge++;
 			if (charge >= MAXIMUM_CHARGE){
 				activated = true;
-				showActivation();
+				setImage();
 			}
 		}
 	}
 
-	private void showActivation() {
-
-		image = ACTIVATED_IMAGE;
+	private void setImage() {
+		if(activated){
+			image = ACTIVATED_IMAGE;
+		}else{
+			image = BASIC_IMAGE;
+		}
 	}
 
 	@Override

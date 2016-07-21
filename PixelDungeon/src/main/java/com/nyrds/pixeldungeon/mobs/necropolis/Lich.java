@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -42,7 +43,6 @@ public class Lich extends Boss {
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 3;
     private static final int HEALTH	= 150;
-
     private int skullTimer = 5;
 
     private RunicSkull activatedSkull;
@@ -53,6 +53,9 @@ public class Lich extends Boss {
         hp(ht(HEALTH));
         EXP = 20;
         defenseSkill = 20;
+
+        loot = new BlackSkull();
+        lootChance = 1f;
 
         IMMUNITIES.add( Paralysis.class );
         IMMUNITIES.add( ToxicGas.class );
