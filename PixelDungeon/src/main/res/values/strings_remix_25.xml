@@ -65,7 +65,7 @@
     <string name="RunicSkull_Name">runic skull</string>
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name_Objective">runic skull</string>
-    <string name="RunicSkull_Desc"></string>
+    <string name="RunicSkull_Desc">For something made artificially, this skull resembles real one a bit to much. You can see faint glow surrounding it.</string>
 
     <!-- STRINGS OF Zombie CLASS -->
     <string name="Zombie_Name">zombie</string>
