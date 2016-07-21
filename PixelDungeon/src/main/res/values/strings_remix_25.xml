@@ -13,11 +13,11 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">black skull</string>
-    <string name="BlackSkull_Info">A small obsidian skull. It was a source of Necropolis powers, but after Lich\'s defeat it seems to have lost all it\'s powers. But as you hold it in your hands a strange thought crosses your mind: "It hungers".</string>
+    <string name="BlackSkull_Info">A small obsidian skull. It was a source of Necropolis powers, but after Lich\'s defeat it seems to have lost all it\'s powers. But as you hold it in your hands a strange thought crosses your mind: \"It hungers\".</string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">awakened black skull</string>
-    <string name="BlackSkull_Info_Awakened">The skull is pulsating with power, you can see it pouring from skull\'s empty eyes. And as you hold it in your hand you can hear dreadful voice: "The death marches"</string>
+    <string name="BlackSkull_Info_Awakened">The skull is pulsating with power, you can see it pouring from skull\'s empty eyes. And as you hold it in your hand you can hear dreadful voice saying: \"The death marches\"</string>
 
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">soul shard</string>
