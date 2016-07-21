@@ -12,7 +12,7 @@ public class BladeOfSouls extends SpecialWeapon {
 	}
 
 	public BladeOfSouls() {
-		super( 3, 1f, 1f );
+		super( 3, 1.3f, 1f );
 	}
 	
 	@Override

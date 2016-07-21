@@ -47,7 +47,7 @@
     <string name="ExplodingSkull_Name">exploding skull</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name_Objective">exploding skull</string>
-    <string name="ExplodingSkull_Desc"></string>
+    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it's going to burst in any second.</string>
 
     <!-- STRINGS OF JarOfSouls CLASS -->
     <string name="JarOfSouls_Name">jar of souls</string>
