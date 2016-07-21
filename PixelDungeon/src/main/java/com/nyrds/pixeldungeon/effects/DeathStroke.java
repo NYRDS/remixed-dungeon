@@ -46,10 +46,12 @@ public class DeathStroke extends Image {
 	}
 	
 	public static void hit( Char ch, float angle ) {
-		DeathStroke w = (DeathStroke)ch.getSprite().getParent().recycle( DeathStroke.class );
-		ch.getSprite().getParent().bringToFront( w );
-		w.reset( ch.getPos() );
-		w.angle = angle;
+		if (ch.getSprite() != null) {
+			DeathStroke w = (DeathStroke)ch.getSprite().getParent().recycle( DeathStroke.class );
+			ch.getSprite().getParent().bringToFront( w );
+			w.reset( ch.getPos() );
+			w.angle = angle;
+		}
 	}
 	
 	public static void hit( int pos ) {
