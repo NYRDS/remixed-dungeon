@@ -40,7 +40,7 @@ import java.util.List;
  */
 public class Lich extends Boss {
 
-    private static final int SKULLS_BY_DEFAULT	= 3;
+    private static final int SKULLS_BY_DEFAULT	= 4;
     private static final int SKULLS_MAX	= 3;
     private static final int HEALTH	= 150;
     private int skullTimer = 5;
