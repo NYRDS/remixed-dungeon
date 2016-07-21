@@ -59,7 +59,7 @@
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">lich</string>
-    <string name="Lich_Desc"></string>
+    <string name="Lich_Desc">The necromancer has met his death in the depths of Necropolis, and as evil energy of this place poured into his body, he, eventually, turned into the Lich. The undead wizard, a will-less marionette, controlled by malicious powers..</string>
 
     <!-- STRINGS OF RunicSkull CLASS -->
     <string name="RunicSkull_Name">runic skull</string>
