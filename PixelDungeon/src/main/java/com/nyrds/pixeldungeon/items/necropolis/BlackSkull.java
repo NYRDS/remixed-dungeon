@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -32,11 +34,6 @@ public class BlackSkull extends Artifact {
 	public BlackSkull() {
 		imageFile = "items/artifacts.png";
 		image = BASIC_IMAGE;
-	}
-
-	@Override
-	public Glowing glowing() {
-		return new Glowing((int) (Math.random() * 0x220033));
 	}
 
 	private void resurrectMobAsPet(Mob mob, Hero hero){
@@ -84,6 +81,24 @@ public class BlackSkull extends Artifact {
 		}else{
 			image = BASIC_IMAGE;
 		}
+	}
+
+	@Override public String info(){
+		if (activated){
+			return Game.getVar(R.string.BlackSkull_Info_Awakened);
+		} else{
+			return Game.getVar(R.string.BlackSkull_Info);
+		}
+
+	}
+
+	@Override public String name(){
+		if (activated){
+			return Game.getVar(R.string.BlackSkull_Name_Awakened);
+		} else{
+			return Game.getVar(R.string.BlackSkull_Name);
+		}
+
 	}
 
 	@Override
