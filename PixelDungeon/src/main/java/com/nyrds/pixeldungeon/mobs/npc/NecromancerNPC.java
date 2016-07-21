@@ -21,7 +21,7 @@ import com.watabou.utils.Random;
 
 public class NecromancerNPC extends NPC {
 
-	private static final String TXT_INTRO = Game.getVar(R.string.NecromancerNPC_Intro);
+	private static final String TXT_INTRO = Game.getVar(R.string.NecromancerNPC_Intro2);
 	private static final String TXT_MESSAGE1 = Game.getVar(R.string.NecromancerNPC_Message1);
 	private static final String TXT_MESSAGE2 = Game.getVar(R.string.NecromancerNPC_Message2);
 	private static final String TXT_MESSAGE3 = Game.getVar(R.string.NecromancerNPC_Message3);
