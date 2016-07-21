@@ -29,7 +29,7 @@ public class GoldenStatue extends Mob {
 
 		weapon = new GoldenSword();
 		weapon.identify();
-		weapon.upgrade(2);
+		weapon.upgrade(4);
 		
 		hp(ht(15 + Dungeon.depth * 5));
 		defenseSkill = 4 + Dungeon.depth;

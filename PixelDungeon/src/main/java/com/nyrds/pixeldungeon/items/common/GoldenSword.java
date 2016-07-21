@@ -20,7 +20,7 @@ public class GoldenSword extends SpecialWeapon {
 	}
 
 	public GoldenSword() {
-		super( 2, 1f, 1f );
+		super( 3, 1.1f, 0.8f );
 	}
 	
 	@Override
