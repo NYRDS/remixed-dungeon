@@ -13,7 +13,7 @@ import com.watabou.utils.Callback;
 public class JarOfSouls extends UndeadMob {
 
 	public JarOfSouls() {
-		hp(ht(75));
+		hp(ht(100));
 		defenseSkill = 1;
 		pacified = true;
 		
@@ -22,8 +22,8 @@ public class JarOfSouls extends UndeadMob {
 
 		postpone(20);
 		
-		loot = new SoulShard();
-		lootChance = 1f;
+		//loot = new SoulShard();
+		//lootChance = 1f;
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class JarOfSouls extends UndeadMob {
 		if(isPet()) {
 			Mob.makePet(newMob, Dungeon.hero);
 		}
-		postpone(20);
+		postpone(15);
 	}
 
 	@Override
