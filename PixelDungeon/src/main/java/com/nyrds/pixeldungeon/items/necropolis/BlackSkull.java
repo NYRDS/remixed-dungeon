@@ -37,28 +37,9 @@ public class BlackSkull extends Artifact {
 		image = BASIC_IMAGE;
 	}
 
-	private void resurrectMobAsPet(Mob mob, Hero hero){
-		int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
-
-		if (Dungeon.level.cellValid(spawnPos)) {
-			Mob clone;
-			try {
-				clone = mob.getClass().newInstance();
-			} catch (Exception e) {
-				throw new TrackedRuntimeException("blackskull issue");
-			}
-			clone.setPos(spawnPos);
-			Mob.makePet(clone, getCurUser());
-
-			Dungeon.level.spawnMob(clone );
-			Actor.addDelayed( new Pushing( clone, hero.getPos(), clone.getPos() ), -1 );
-		}
-	}
-
 	public void mobDied(Mob mob, Hero hero){
-	if (!(mob instanceof Boss)){
+	if ( mob.isCanBePet() ){
 			if (activated){
-				//resurrectMobAsPet(mob, hero);
 				Mob staticMob = new Skeleton();
 				staticMob.ressurrect(hero, mob);
 

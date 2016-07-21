@@ -85,8 +85,9 @@ public abstract class Mob extends Char {
 
 	protected boolean enemySeen;
 
-	protected static boolean canBePet = true;
 	protected boolean alerted = false;
+
+	protected static boolean canBePet;
 
 	protected static final float TIME_TO_WAKE_UP = 1f;
 
@@ -107,6 +108,7 @@ public abstract class Mob extends Char {
 	protected Fraction fraction = Fraction.DUNGEON;
 
 	public Mob() {
+		canBePet = true;
 		readCharData();
 	}
 
@@ -848,6 +850,10 @@ public abstract class Mob extends Char {
 
 	public boolean isPet() {
 		return fraction == Fraction.HEROES;
+	}
+
+	public boolean isCanBePet(){
+		return canBePet;
 	}
 
 	protected void swapPosition(final Hero hero) {
