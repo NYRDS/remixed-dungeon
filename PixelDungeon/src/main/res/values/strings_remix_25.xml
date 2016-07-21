@@ -8,12 +8,12 @@
 
     <!-- STRINGS OF BladeOfSouls CLASS -->
     <string name="BladeOfSouls_Name">blade of souls</string>
-    <string name="BladeOfSouls_Info"></string>
+    <string name="BladeOfSouls_Info">Blade of this sword was constructed from soul shards. The magical glow is so intense, that it seems like all the energies contained in this sword are going to burst out at any moment.</string>
     <string name="BladeOfSouls_Gender">masculine</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">black skull</string>
-    <string name="BlackSkull_Info"></string>
+    <string name="BlackSkull_Info">A small obsidian skull.It was a source of Necropolis powers, but after Lich's defeat it seems to have lost all it's powers. But as you hold it in your hands a strange thought crosses your mind: "It hungers".</string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">awakened black skull</string>
