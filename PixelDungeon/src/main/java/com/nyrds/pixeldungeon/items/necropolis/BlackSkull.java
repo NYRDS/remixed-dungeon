@@ -6,6 +6,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.effects.Pushing;
@@ -55,20 +56,21 @@ public class BlackSkull extends Artifact {
 	}
 
 	public void mobDied(Mob mob, Hero hero){
-		if (activated){
+	if (!(mob instanceof Boss)){
+			if (activated){
+				//resurrectMobAsPet(mob, hero);
+				Mob staticMob = new Skeleton();
+				staticMob.ressurrect(hero, mob);
 
-			//resurrectMobAsPet(mob, hero);
-			Mob staticMob = new Skeleton();
-			staticMob.ressurrect(hero, mob);
-
-			charge = charge - 5;
-			if(charge <= 0){
-				activated = false;
-			}
-		} else{
-			charge++;
-			if (charge >= MAXIMUM_CHARGE){
-				activated = true;
+				charge = charge - 5;
+				if(charge <= 0){
+					activated = false;
+				}
+			} else{
+				charge++;
+				if (charge >= MAXIMUM_CHARGE){
+					activated = true;
+				}
 			}
 		}
 	}
