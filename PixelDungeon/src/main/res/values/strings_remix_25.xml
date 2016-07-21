@@ -41,7 +41,7 @@
     <string name="EnslavedSoul_Name">enslaved soul</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">enslaved soul</string>
-    <string name="EnslavedSoul_Desc"></string>
+    <string name="EnslavedSoul_Desc">You can almost see through this ghostly apparation. Even though it looks like a skull, sometimes, for a split second, a face appears instead, face full of suffering and torment.</string>
 
     <!-- STRINGS OF ExplodingSkull CLASS -->
     <string name="ExplodingSkull_Name">exploding skull</string>
