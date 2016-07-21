@@ -29,13 +29,13 @@
     <string name="DeathKnight_Name">death knight</string>
     <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name_Objective">death knight</string>
-    <string name="DeathKnight_Desc"></string>
+    <string name="DeathKnight_Desc">At first glance a mighty warrior in massive armor, but skeletal grin gives him away, a Death Knight is a manifestation of a spirit of a knight that failed to pursue his vows. And in his curse he will forever wonder the land, seeking to cleanse his name in battle, killing the innocent, unable to remember what he swore to protect.</string>
 
     <!-- STRINGS OF DreadKnight CLASS -->
     <string name="DreadKnight_Name">dread knight</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name_Objective">dread knight</string>
-    <string name="DreadKnight_Desc"></string>
+    <string name="DreadKnight_Desc">A dread knight is an ancient warrior, who was never righteous nor good in his entire live. And for his sins he was curses to dwell in broken undead body for eternity. And for every moment of his damned existence he shall be tormented by the pain and suffering that he inflicted on his victims.</string>
 
     <!-- STRINGS OF EnslavedSoul CLASS -->
     <string name="EnslavedSoul_Name">enslaved soul</string>
