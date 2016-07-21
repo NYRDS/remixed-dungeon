@@ -17,7 +17,7 @@
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">awakened black skull</string>
-    <string name="BlackSkull_Info_Awakened"></string>
+    <string name="BlackSkull_Info_Awakened">The skull is pulsating with power, you can see it pouring from skull's empty eyes. And as you hold it in your hand you can hear dreadful voice: "The death marches"</string>
 
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">soul shard</string>
