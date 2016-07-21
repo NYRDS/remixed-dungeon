@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -46,9 +45,7 @@ public class NecromancerNPC extends NPC {
 
 	private static final String NODE       = "necromancer";
 	private static final String INTRODUCED = "introduced";
-	private static final String SPAWNED    = "spawned";
 
-	private static boolean spawned    = false;
 	private        boolean introduced = false;
 
 	@Override
@@ -56,7 +53,6 @@ public class NecromancerNPC extends NPC {
 		super.storeInBundle(bundle);
 
 		Bundle node = new Bundle();
-		node.put(SPAWNED, spawned);
 		node.put(INTRODUCED, introduced);
 
 		bundle.put(NODE, node);
@@ -72,24 +68,17 @@ public class NecromancerNPC extends NPC {
 			return;
 		}
 
-		spawned = node.getBoolean(SPAWNED);
 		introduced = node.getBoolean(INTRODUCED);
 	}
 
 	public static void spawn(RegularLevel level, Room room) {
-		if (!spawned) {
-
 			NecromancerNPC npc = new NecromancerNPC();
+		    int cell;
 			do {
-				int cell = room.random(level);
-				npc.setPos(cell);
-			} while (level.map[npc.getPos()] == Terrain.LOCKED_EXIT);
-
-			level.mobs.add(npc);
-			Actor.occupyCell(npc);
-
-			spawned = true;
-		}
+				cell = room.random(level);
+			} while (level.map[cell] == Terrain.LOCKED_EXIT);
+		    npc.setPos(cell);
+			level.spawnMob(npc);
 	}
 
 	@Override

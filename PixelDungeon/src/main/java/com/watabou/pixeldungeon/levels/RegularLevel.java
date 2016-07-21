@@ -33,6 +33,7 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
+import com.watabou.utils.SparseArray;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -42,7 +43,7 @@ public abstract class RegularLevel extends CommonLevel {
 
 	protected HashSet<Room> rooms;
 
-	private ArrayList<Room> exits = new ArrayList<>();
+	private SparseArray<Room> exits = new SparseArray<>();
 
 	protected Room roomEntrance;
 
@@ -64,7 +65,7 @@ public abstract class RegularLevel extends CommonLevel {
 
 			do {
 				roomExit = Random.element( rooms );
-			} while (getRoomExit() == roomEntrance || roomExit.width() < 4 || roomExit.height() < 4);
+			} while (roomExit == roomEntrance || roomExit.width() < 4 || roomExit.height() < 4);
 
 			Graph.buildDistanceMap( rooms, roomExit);
 			distance = roomEntrance.distance();
@@ -179,7 +180,7 @@ public abstract class RegularLevel extends CommonLevel {
 					);
 			secondaryExit.type = Type.EXIT;
 
-			exits.add(secondaryExit);
+			exits.put(i,secondaryExit);
 
 			Graph.buildDistanceMap(rooms, secondaryExit);
 			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
@@ -709,6 +710,6 @@ public abstract class RegularLevel extends CommonLevel {
 	}
 
 	protected void setRoomExit(Room roomExit) {
-		exits.add(0,roomExit);
+		exits.put(0,roomExit);
 	}
 }
