@@ -180,10 +180,12 @@ public abstract class RegularLevel extends CommonLevel {
 					);
 			secondaryExit.type = Type.EXIT;
 
-			exits.put(i,secondaryExit);
+
 
 			Graph.buildDistanceMap(rooms, secondaryExit);
 			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
+
+			exits.put(i,secondaryExit);
 
 			Room room = roomEntrance;
 			for (Room next : path) {
