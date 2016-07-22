@@ -7,6 +7,9 @@ abstract public class Boss extends Mob {
 	
 	public Boss() {
 		canBePet = false;
+
+		state = HUNTING;
+
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
 	}
