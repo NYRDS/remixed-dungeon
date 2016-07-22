@@ -19,7 +19,6 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
@@ -35,7 +34,6 @@ import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
-import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
