@@ -585,6 +585,10 @@ public abstract class Mob extends Char {
 		return clone;
 	}
 
+	public void ressurrect(Mob mob){
+		ressurrect(mob, mob);
+	}
+
 	public void ressurrect(Char parent, Mob old_mob){
 
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(parent.getPos());
