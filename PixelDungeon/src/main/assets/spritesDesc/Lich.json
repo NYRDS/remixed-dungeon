@@ -6,11 +6,11 @@
 
    "idle" = { "fps" = 4, "looped" = true, "frames" = [0, 0, 0, 1, 0, 1, 2, 3, 4]  },
 
-   "run" = { "fps" = 12, "looped" = true, "frames" = [8, 9, 10, 11] },
+   "run" = { "fps" = 12, "looped" = false, "frames" = [8, 9, 10, 11] },
 
    "attack" = { "fps" = 6, "looped" = false, "frames" = [2, 3, 4] },
 
-   "zap"    = { "fps" = 11, "looped" = true,     "frames" = [5, 6, 78, 9, 10, 11] },
+   "zap"    = { "fps" = 11, "looped" = false,     "frames" = [5, 6, 7] },
 
    "die" = { "fps" = 10, "looped" = false, "frames" = [12, 13, 14, 15] }
 }

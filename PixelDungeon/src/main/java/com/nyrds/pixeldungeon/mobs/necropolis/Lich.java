@@ -19,10 +19,13 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
+import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Pushing;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -44,6 +47,7 @@ public class Lich extends Boss {
     private static final int SKULLS_MAX	= 4;
     private static final int HEALTH	= 150;
     private int skullTimer = 5;
+    private static final int JUMP_DELAY = 5;
 
     private RunicSkull activatedSkull;
 
@@ -68,39 +72,68 @@ public class Lich extends Boss {
         SpawnSkulls();
     }
 
-    protected void fx( int cell, Callback callback ) {
-        MagicMissile.whiteLight( getSprite().getParent(), getPos(), cell, callback );
-        Sample.INSTANCE.play( Assets.SND_ZAP );
-        getSprite().setVisible(false);
+    private int timeToJump = JUMP_DELAY;
+
+    @Override
+    protected boolean getCloser( int target ) {
+        if (Dungeon.level.fieldOfView[target]) {
+            jump();
+            return true;
+        } else {
+            return super.getCloser( target );
+        }
     }
 
-    private void blink(int epos) {
+    @Override
+    protected boolean canAttack( Char enemy ) {
+        return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
+    }
 
-        int cell = getPos();
+    @Override
+    protected boolean doAttack( Char enemy ) {
+        timeToJump--;
+        if (timeToJump <= 0 && Dungeon.level.adjacent( getPos(), enemy.getPos() )) {
+            jump();
+            return true;
+        } else {
+            return super.doAttack( enemy );
+        }
+    }
 
-        Ballistica.cast(epos, cell, true, false);
+    private void jump() {
+        timeToJump = JUMP_DELAY;
 
-        for (int i = 1; i < 4; i++) {
-            int next = Ballistica.trace[i + 1];
-            if (Dungeon.level.cellValid(next) && (Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
-                cell = next;
-                Dungeon.observe();
+        for (int i=0; i < 4; i++) {
+            int trapPos;
+            do {
+                trapPos = Random.Int( Dungeon.level.getLength() );
+            } while (!Dungeon.level.fieldOfView[trapPos] || !Dungeon.level.passable[trapPos]);
+
+            if (Dungeon.level.map[trapPos] == Terrain.INACTIVE_TRAP) {
+                Dungeon.level.set( trapPos, Terrain.POISON_TRAP );
+                GameScene.updateMap( trapPos );
+                ScrollOfMagicMapping.discover( trapPos );
             }
         }
 
-        getSprite().move( getPos(), cell );
-        move( cell );
+        int newPos;
+        do {
+            newPos = Random.Int( Dungeon.level.getLength() );
+        } while (
+                !Dungeon.level.fieldOfView[newPos] ||
+                        !Dungeon.level.passable[newPos] ||
+                        Dungeon.level.adjacent( newPos, getEnemy().getPos() ) ||
+                        Actor.findChar( newPos ) != null);
 
-        if (cell != getPos()){
-            final int tgt = cell;
-            final Char ch = this;
-            fx(cell, new Callback() {
-                @Override
-                public void call() {
-                    WandOfBlink.appear(ch, tgt);
-                }
-            });
+        getSprite().move( getPos(), newPos );
+        move( newPos );
+
+        if (Dungeon.visible[newPos]) {
+            CellEmitter.get( newPos ).burst( Speck.factory( Speck.WOOL ), 6 );
+            Sample.INSTANCE.play( Assets.SND_PUFF );
         }
+
+        spend( 1 / speed() );
     }
 
     //Runic skulls handling
@@ -182,25 +215,6 @@ public class Lich extends Boss {
 
 
     @Override
-    protected boolean canAttack( Char enemy ) {
-        return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
-    }
-
-    @Override
-    protected boolean doAttack(Char enemy) {
-
-        if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
-            return super.doAttack(enemy);
-        } else {
-
-            if (hit(this, enemy, true)) {
-                enemy.damage(damageRoll(), this);
-            }
-            return true;
-        }
-    }
-
-    @Override
     public int damageRoll() {
         return Random.NormalIntRange( 8, 15 );
     }
@@ -213,7 +227,7 @@ public class Lich extends Boss {
                 return 0;
             }
         }
-        blink(enemy.getPos());
+        jump();
         return damage;
     }
 
