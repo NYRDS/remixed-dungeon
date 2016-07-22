@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -75,6 +76,13 @@ public class Lich extends Boss {
     private int timeToJump = JUMP_DELAY;
 
     @Override
+    public void onMotionComplete() {
+        super.onMotionComplete();
+        postpone(1);
+        getSprite().idle();
+    }
+
+    @Override
     protected boolean getCloser( int target ) {
         if (Dungeon.level.fieldOfView[target]) {
             jump();
@@ -96,6 +104,7 @@ public class Lich extends Boss {
             jump();
             return true;
         } else {
+            getSprite().zap(enemy.getPos());
             return super.doAttack( enemy );
         }
     }
