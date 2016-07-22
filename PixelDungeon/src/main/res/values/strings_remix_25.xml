@@ -42,19 +42,19 @@
     <string name="ExplodingSkull_Name">exploding skull</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name_Objective">exploding skull</string>
-    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it\'s going to burst in any second.</string>
+    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it\'s going to burst at any second.</string>
 
     <!-- STRINGS OF JarOfSouls CLASS -->
     <string name="JarOfSouls_Name">jar of souls</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name_Objective">jar of souls</string>
-    <string name="JarOfSouls_Desc">Glowing eyes of a skull depicted on this old jar, as well as the strange energy it emits makes you fell uneasy.</string>
+    <string name="JarOfSouls_Desc">Glowing eyes of a skull depicted on this old jar, as well as the strange energy it emits, makes you fell uneasy.</string>
 
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">lich</string>
-    <string name="Lich_Desc">The necromancer has met his death in the depths of Necropolis, and as evil energy of this place poured into his body, he, eventually, turned into the Lich. The undead wizard, a will-less marionette, controlled by malicious powers..</string>
+    <string name="Lich_Desc">The necromancer has met his death in the depths of Necropolis, and as evil energy of this place poured into his body, he, eventually, turned into the Lich. The undead wizard, a will-less marionette, controlled by malicious powers.</string>
 
     <!-- STRINGS OF RunicSkull CLASS -->
     <string name="RunicSkull_Name">runic skull</string>
