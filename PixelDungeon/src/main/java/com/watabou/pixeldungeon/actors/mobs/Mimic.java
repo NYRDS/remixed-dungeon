@@ -42,7 +42,6 @@ public class Mimic extends Mob {
 	
 	public Mimic() {
 		spriteClass = MimicSprite.class;
-		canBePet = false;
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
 
@@ -150,5 +149,10 @@ public class Mimic extends Mob {
 		}
 		
 		return m;
+	}
+
+	@Override
+	public boolean canBePet() {
+		return false;
 	}
 }

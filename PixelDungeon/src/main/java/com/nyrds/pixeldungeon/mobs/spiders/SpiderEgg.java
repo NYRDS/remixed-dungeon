@@ -19,8 +19,6 @@ public class SpiderEgg extends Mob {
 		defenseSkill = 0;
 		baseSpeed = 0f;
 
-		canBePet = false;
-
 		EXP = 0;
 		maxLvl = 9;
 
@@ -52,5 +50,10 @@ public class SpiderEgg extends Mob {
 		eggsLaid.delete(getPos());
 
 		return true;
+	}
+
+	@Override
+	public boolean canBePet() {
+		return false;
 	}
 }

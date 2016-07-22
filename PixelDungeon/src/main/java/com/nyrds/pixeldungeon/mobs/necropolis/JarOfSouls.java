@@ -1,13 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
-import com.nyrds.pixeldungeon.items.necropolis.SoulShard;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.utils.Callback;
 
 public class JarOfSouls extends UndeadMob {
@@ -15,8 +13,6 @@ public class JarOfSouls extends UndeadMob {
 	public JarOfSouls() {
 		hp(ht(100));
 		defenseSkill = 1;
-
-		canBePet = false;
 
 		pacified = true;
 		
@@ -74,6 +70,11 @@ public class JarOfSouls extends UndeadMob {
 
 	@Override
 	protected boolean getFurther( int target ) {
+		return false;
+	}
+
+	@Override
+	public boolean canBePet() {
 		return false;
 	}
 

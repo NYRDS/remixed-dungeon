@@ -17,8 +17,6 @@ public class SpiderNest extends Mob {
 		defenseSkill = 1;
 		baseSpeed = 0f;
 
-		canBePet = false;
-
 		EXP    = 0;
 		maxLvl = 9;
 		
@@ -57,5 +55,10 @@ public class SpiderNest extends Mob {
 	@Override
 	public int dr() {
 		return 0;
+	}
+
+	@Override
+	public boolean canBePet() {
+		return false;
 	}
 }

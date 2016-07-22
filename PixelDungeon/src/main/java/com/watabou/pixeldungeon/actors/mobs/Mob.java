@@ -60,15 +60,15 @@ public abstract class Mob extends Char {
 
 	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
 
-	protected static final String TXT_RAGE = "#$%^";
-	protected static final String TXT_EXP = "%+dEXP";
-	private static final float SPLIT_DELAY = 1f;
+	protected static final String TXT_RAGE    = "#$%^";
+	protected static final String TXT_EXP     = "%+dEXP";
+	private static final   float  SPLIT_DELAY = 1f;
 
-	public AiState SLEEPING = new Sleeping();
-	public AiState HUNTING = new Hunting();
+	public AiState SLEEPING  = new Sleeping();
+	public AiState HUNTING   = new Hunting();
 	public AiState WANDERING = new Wandering();
-	public AiState FLEEING = new Fleeing();
-	public AiState PASSIVE = new Passive();
+	public AiState FLEEING   = new Fleeing();
+	public AiState PASSIVE   = new Passive();
 
 	public AiState state = SLEEPING;
 
@@ -78,7 +78,7 @@ public abstract class Mob extends Char {
 
 	protected int defenseSkill = 0;
 
-	protected int EXP = 1;
+	protected int EXP    = 1;
 	protected int maxLvl = 30;
 
 	private Char enemy;
@@ -86,8 +86,6 @@ public abstract class Mob extends Char {
 	protected boolean enemySeen;
 
 	protected boolean alerted = false;
-
-	protected static boolean canBePet;
 
 	protected static final float TIME_TO_WAKE_UP = 1f;
 
@@ -100,15 +98,14 @@ public abstract class Mob extends Char {
 		}
 	};
 
-	private static final String STATE = "state";
-	private static final String TARGET = "target";
+	private static final String STATE      = "state";
+	private static final String TARGET     = "target";
 	private static final String ENEMY_SEEN = "enemy_seen";
-	private static final String FRACTION = "fraction";
+	private static final String FRACTION   = "fraction";
 
 	protected Fraction fraction = Fraction.DUNGEON;
 
 	public Mob() {
-		canBePet = true;
 		readCharData();
 	}
 
@@ -117,7 +114,7 @@ public abstract class Mob extends Char {
 	}
 
 	public static Mob makePet(@NonNull Mob pet, @NonNull Hero hero) {
-		if(canBePet){
+		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
 			hero.addPet(pet);
 		}
@@ -549,8 +546,8 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	protected Object loot = null;
-	protected float lootChance = 0;
+	protected Object loot       = null;
+	protected float  lootChance = 0;
 
 	public Mob split(int cell, int damage) {
 		Mob clone;
@@ -585,27 +582,26 @@ public abstract class Mob extends Char {
 		return clone;
 	}
 
-	public void ressurrect(Mob mob){
-		ressurrect(mob, mob);
+	public void ressurrect() {
+		ressurrect(this);
 	}
 
-	public void ressurrect(Char parent, Mob old_mob){
+	public void ressurrect(Char parent) {
 
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(parent.getPos());
 		Mob new_mob;
 		try {
-			new_mob = old_mob.getClass().newInstance();
+			new_mob = this.getClass().newInstance();
 		} catch (Exception e) {
 			throw new TrackedRuntimeException("blackskull issue");
 		}
 
 		if (Dungeon.level.cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
-			Dungeon.level.spawnMob(new_mob );
-			if(parent instanceof Hero) {
-				Mob.makePet(new_mob,(Hero) parent);
-				Actor.addDelayed( new Pushing( new_mob, parent.getPos(), new_mob.getPos() ), -1 );
-
+			Dungeon.level.spawnMob(new_mob);
+			if (parent instanceof Hero) {
+				Mob.makePet(new_mob, (Hero) parent);
+				Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			}
 		}
 	}
@@ -856,8 +852,8 @@ public abstract class Mob extends Char {
 		return fraction == Fraction.HEROES;
 	}
 
-	public boolean isCanBePet(){
-		return canBePet;
+	public boolean canBePet() {
+		return true;
 	}
 
 	protected void swapPosition(final Hero hero) {

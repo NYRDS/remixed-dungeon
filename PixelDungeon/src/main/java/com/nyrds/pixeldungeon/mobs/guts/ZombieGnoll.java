@@ -55,7 +55,7 @@ public class ZombieGnoll extends Mob {
         super.die(cause);
 
         if (Random.Int(100) > 45 && cause != Burning.class){
-            ressurrect(this);
+            ressurrect();
 
             CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);
             Sample.INSTANCE.play(Assets.SND_DEATH);

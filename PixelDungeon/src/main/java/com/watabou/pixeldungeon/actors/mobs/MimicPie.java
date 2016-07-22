@@ -22,8 +22,6 @@ public class MimicPie extends Mob {
 		
 		flying = true;
 
-		canBePet = false;
-
 		level = Dungeon.depth;
 		
 		IMMUNITIES.add( ToxicGas.class );
@@ -76,5 +74,10 @@ public class MimicPie extends Mob {
 		defenseSkill = 2 * attackSkill( null ) / 3;
 		
 		enemySeen = true;
+	}
+
+	@Override
+	public boolean canBePet() {
+		return false;
 	}
 }
