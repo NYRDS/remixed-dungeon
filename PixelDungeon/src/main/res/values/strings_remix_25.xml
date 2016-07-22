@@ -3,7 +3,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">spider armor</string>
-    <string name="SpiderArmor_Info">This armor is made of old spider carcases mysterious cloth. Surprisingly enough, it seems that it still contains functional spinneret. If you apply enough pressure on one of the plates it shoots cobweb. Spiky surface of boot soles allows you to walk on that web freely.</string>
+    <string name="SpiderArmor_Info">This armor is made of old spider carcases and some strange cloth. Surprisingly enough, it seems that it still contains functional spinnerets. If you apply enough pressure on one of the plates it shoots cobweb. Spiky surface of boot soles allows you to walk on that web freely.</string>
     <string name="SpiderArmor_Gender">feminine</string>
 
     <!-- STRINGS OF BladeOfSouls CLASS -->

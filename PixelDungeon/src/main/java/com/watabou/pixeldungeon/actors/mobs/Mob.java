@@ -593,7 +593,7 @@ public abstract class Mob extends Char {
 		try {
 			new_mob = this.getClass().newInstance();
 		} catch (Exception e) {
-			throw new TrackedRuntimeException("blackskull issue");
+			throw new TrackedRuntimeException("ressurrect issue");
 		}
 
 		if (Dungeon.level.cellValid(spawnPos)) {
