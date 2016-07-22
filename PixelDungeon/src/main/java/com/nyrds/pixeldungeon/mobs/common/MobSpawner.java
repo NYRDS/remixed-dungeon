@@ -19,7 +19,7 @@ public class MobSpawner {
 	static public void spawnJarOfSouls(Level level, int position) {
 		Mob mob = new JarOfSouls();
 		mob.setPos(position);
-		mob.state = mob.SLEEPING;
+		mob.state = mob.WANDERING;
 		level.spawnMob(mob);
 	}
 
