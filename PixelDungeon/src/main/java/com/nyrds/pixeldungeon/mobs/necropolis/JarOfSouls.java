@@ -59,10 +59,6 @@ public class JarOfSouls extends UndeadMob {
 			newMob.setPos(mobPos);
 			Actor.addDelayed(new Pushing(newMob, getPos(), newMob.getPos()), -1);
 		}
-
-		if(isPet()) {
-			Mob.makePet(newMob, Dungeon.hero);
-		}
 		postpone(15);
 	}
 
