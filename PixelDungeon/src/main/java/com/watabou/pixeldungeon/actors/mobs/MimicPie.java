@@ -21,7 +21,9 @@ public class MimicPie extends Mob {
 		baseSpeed = 1.25f;
 		
 		flying = true;
-		
+
+		canBePet = false;
+
 		level = Dungeon.depth;
 		
 		IMMUNITIES.add( ToxicGas.class );
