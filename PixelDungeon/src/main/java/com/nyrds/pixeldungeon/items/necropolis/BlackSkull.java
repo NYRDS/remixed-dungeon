@@ -28,6 +28,7 @@ public class BlackSkull extends Artifact {
 
 	public BlackSkull() {
 		imageFile = "items/artifacts.png";
+		identify();
 		image = BASIC_IMAGE;
 	}
 
