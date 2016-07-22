@@ -88,6 +88,9 @@ public class Lich extends Boss {
             }
         }
 
+        getSprite().move( getPos(), cell );
+        move( cell );
+
         if (cell != getPos()){
             final int tgt = cell;
             final Char ch = this;
@@ -133,7 +136,7 @@ public class Lich extends Boss {
     }
 
     public void useSkull(){
-
+        getSprite().zap(getPos());
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:
                 PotionOfHealing.heal(this,0.07f * skulls.size());
@@ -189,10 +192,6 @@ public class Lich extends Boss {
         if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
             return super.doAttack(enemy);
         } else {
-
-            getSprite().zap(enemy.getPos());
-
-            spend(1);
 
             if (hit(this, enemy, true)) {
                 enemy.damage(damageRoll(), this);
