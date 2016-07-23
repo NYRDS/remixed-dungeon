@@ -46,7 +46,7 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 4;
-    private static final int HEALTH	= 150;
+    private static final int HEALTH	= 180;
     private int skullTimer = 5;
     private static final int JUMP_DELAY = 5;
 
@@ -56,7 +56,7 @@ public class Lich extends Boss {
 
     {
         hp(ht(HEALTH));
-        EXP = 20;
+        EXP = 25;
         defenseSkill = 20;
 
         loot = new BlackSkull();
@@ -225,7 +225,7 @@ public class Lich extends Boss {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 8, 15 );
+        return Random.NormalIntRange( 12, 19 );
     }
 
     @Override
