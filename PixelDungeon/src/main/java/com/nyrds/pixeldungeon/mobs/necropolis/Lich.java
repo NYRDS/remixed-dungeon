@@ -1,10 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
-import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -19,14 +16,9 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
-import com.watabou.pixeldungeon.actors.mobs.Yog;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -151,7 +143,8 @@ public class Lich extends Boss {
     }
 
     public void useSkull(){
-        getSprite().zap(getPos());
+        PlayZap();
+
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:
                 PotionOfHealing.heal(this,0.07f * skulls.size());
@@ -265,6 +258,16 @@ public class Lich extends Boss {
             }
         }
         occupiedPedestals.clear();
+    }
+
+    public void PlayZap() {
+        getSprite().zap(
+                getEnemy().getPos(),
+                new Callback() {
+                    @Override
+                    public void call() {
+                    }
+                });
     }
 
 }
