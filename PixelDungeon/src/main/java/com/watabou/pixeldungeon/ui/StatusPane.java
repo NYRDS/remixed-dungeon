@@ -198,7 +198,7 @@ public class StatusPane extends Component {
 		}
 
 		hp.Scale().x = health;
-		exp.Scale().x = (width / exp.width) * hero.exp / hero.maxExp();
+		exp.Scale().x = (width / exp.width) * hero.getExp() / hero.maxExp();
 		
 		if (hero.lvl() != lastLvl) {
 			

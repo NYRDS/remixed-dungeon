@@ -176,7 +176,8 @@ public class Hero extends Char {
 	private float awareness;
 
 	private int lvl = Scrambler.scramble(1);
-	public  int exp = 0;
+	private int exp = Scrambler.scramble(0);
+
 	public String levelKind;
 	public String levelId;
 
@@ -269,7 +270,7 @@ public class Hero extends Char {
 		bundle.put(STRENGTH, STR());
 
 		bundle.put(LEVEL, lvl());
-		bundle.put(EXPERIENCE, exp);
+		bundle.put(EXPERIENCE, getExp());
 		bundle.put(LEVEL_KIND, levelKind);
 		bundle.put(LEVEL_ID, levelId);
 		bundle.put(DIFFICULTY, getDifficulty());
@@ -295,7 +296,7 @@ public class Hero extends Char {
 		updateAwareness();
 
 		lvl(bundle.getInt(LEVEL));
-		exp = bundle.getInt(EXPERIENCE);
+		setExp(bundle.getInt(EXPERIENCE));
 		levelKind = bundle.getString(LEVEL_KIND);
 		levelId = bundle.optString(LEVEL_ID, "unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
@@ -1278,11 +1279,11 @@ public class Hero extends Char {
 
 	public void earnExp(int exp) {
 
-		this.exp += exp;
+		this.setExp(this.getExp() + exp);
 
 		boolean levelUp = false;
-		while (this.exp >= maxExp()) {
-			this.exp -= maxExp();
+		while (this.getExp() >= maxExp()) {
+			this.setExp(this.getExp() - maxExp());
 			lvl(lvl() + 1);
 
 			ht(ht() + 5);
@@ -1635,7 +1636,7 @@ public class Hero extends Char {
 
 		hp(ht());
 		Dungeon.gold(0);
-		exp = 0;
+		setExp(0);
 
 		belongings.resurrect(resetLevel);
 
@@ -1664,6 +1665,14 @@ public class Hero extends Char {
 
 	private void lvl(int lvl) {
 		this.lvl = Scrambler.scramble(lvl);
+	}
+
+	public int getExp() {
+		return Scrambler.descramble(exp);
+	}
+
+	public void setExp(int exp) {
+		this.exp = Scrambler.scramble(exp);
 	}
 
 	public interface Doom {
