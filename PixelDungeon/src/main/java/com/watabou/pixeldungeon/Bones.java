@@ -23,6 +23,7 @@ import java.io.OutputStream;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -40,7 +41,8 @@ public class Bones {
 	public static void leave() {
 		
 		item = null;
-		switch (Random.Int( 4 )) {
+
+		switch (2) {
 		case 0:
 			item = Dungeon.hero.belongings.weapon;
 			break;
@@ -54,7 +56,7 @@ public class Bones {
 			item = Dungeon.hero.belongings.ring2;
 			break;
 		}
-		if (item == null) {
+		if (item == null || (item instanceof Artifact && !(item instanceof Ring))) {
 			if (Dungeon.gold() > 0) {
 				item = new Gold( Random.IntRange( 1, Dungeon.gold()) );
 			} else {
