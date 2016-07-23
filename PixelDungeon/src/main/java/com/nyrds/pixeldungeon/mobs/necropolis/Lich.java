@@ -48,7 +48,7 @@ public class Lich extends Boss {
     private static final int SKULLS_MAX	= 4;
     private static final int HEALTH	= 180;
     private int skullTimer = 5;
-    private static final int JUMP_DELAY = 5;
+    private static final int JUMP_DELAY = 6;
 
     private RunicSkull activatedSkull;
 
@@ -74,13 +74,6 @@ public class Lich extends Boss {
     }
 
     private int timeToJump = JUMP_DELAY;
-
-    @Override
-    public void onMotionComplete() {
-        super.onMotionComplete();
-        postpone(1);
-        getSprite().idle();
-    }
 
     @Override
     protected boolean getCloser( int target ) {
@@ -136,12 +129,6 @@ public class Lich extends Boss {
 
         getSprite().move( getPos(), newPos );
         move( newPos );
-
-        if (Dungeon.visible[newPos]) {
-            CellEmitter.get( newPos ).burst( Speck.factory( Speck.WOOL ), 6 );
-            Sample.INSTANCE.play( Assets.SND_PUFF );
-        }
-
         spend( 1 / speed() );
     }
 
