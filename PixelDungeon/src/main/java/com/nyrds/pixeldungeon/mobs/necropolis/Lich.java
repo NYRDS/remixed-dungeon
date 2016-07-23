@@ -198,7 +198,7 @@ public class Lich extends Boss {
     public int defenseProc(Char enemy, int damage) {
         if (activatedSkull != null)
         {
-            if(activatedSkull.getKind() == 3){
+            if(activatedSkull.getKind() == RunicSkull.PURPLE_SKULL){
                 return 0;
             }
         }
