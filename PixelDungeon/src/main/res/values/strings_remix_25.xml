@@ -3,13 +3,8 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">spider armor</string>
-    <string name="SpiderArmor_Info">This armor is made of old spider carcases mysterious cloth. Surprisingly enough, it seems that it still contains functional spinneret. If you apply enough pressure on one of the plates it shoots cobweb. Spiky surface of boot soles allows you to walk on that web freely.</string>
+    <string name="SpiderArmor_Info">This armor is made of old spider carcases and some strange cloth. Surprisingly enough, it seems that it still contains functional spinnerets. If you apply enough pressure on one of the plates it shoots cobweb. Spiky surface of boot soles allows you to walk on that web freely.</string>
     <string name="SpiderArmor_Gender">feminine</string>
-
-    <!-- STRINGS OF BladeOfSouls CLASS -->
-    <string name="BladeOfSouls_Name">blade of souls</string>
-    <string name="BladeOfSouls_Info">Blade of this sword was constructed from soul shards. The magical glow is so intense, that it seems like all the energies contained in this sword are going to burst out at any moment.</string>
-    <string name="BladeOfSouls_Gender">masculine</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">black skull</string>
@@ -47,19 +42,19 @@
     <string name="ExplodingSkull_Name">exploding skull</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name_Objective">exploding skull</string>
-    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it\'s going to burst in any second.</string>
+    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it\'s going to burst at any second.</string>
 
     <!-- STRINGS OF JarOfSouls CLASS -->
     <string name="JarOfSouls_Name">jar of souls</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name_Objective">jar of souls</string>
-    <string name="JarOfSouls_Desc">Glowing eyes of a skull depicted on this old jar, as well as the strange energy it emits makes you fell uneasy.</string>
+    <string name="JarOfSouls_Desc">Glowing eyes of a skull depicted on this old jar, as well as the strange energy it emits, makes you fell uneasy.</string>
 
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">lich</string>
-    <string name="Lich_Desc">The necromancer has met his death in the depths of Necropolis, and as evil energy of this place poured into his body, he, eventually, turned into the Lich. The undead wizard, a will-less marionette, controlled by malicious powers..</string>
+    <string name="Lich_Desc">The necromancer has met his death in the depths of Necropolis, and as evil energy of this place poured into his body, he, eventually, turned into the Lich. The undead wizard, a will-less marionette, controlled by malicious powers.</string>
 
     <!-- STRINGS OF RunicSkull CLASS -->
     <string name="RunicSkull_Name">runic skull</string>

@@ -10,8 +10,10 @@ import com.watabou.utils.Random;
  */
 public class ExplodingSkull extends UndeadMob {
     {
-        hp(ht(1));
+        hp(ht(10));
         defenseSkill = 1;
+
+        baseSpeed = 1.5f;
 
         EXP = 1;
         maxLvl = 1;
@@ -35,7 +37,7 @@ public class ExplodingSkull extends UndeadMob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(30, 50);
+        return Random.NormalIntRange(35, 55);
     }
 
     @Override

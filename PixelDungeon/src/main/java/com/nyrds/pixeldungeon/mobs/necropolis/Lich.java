@@ -1,10 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
-import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -19,14 +16,9 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
-import com.watabou.pixeldungeon.actors.mobs.Yog;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -46,9 +38,9 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 4;
-    private static final int HEALTH	= 150;
+    private static final int HEALTH	= 180;
     private int skullTimer = 5;
-    private static final int JUMP_DELAY = 5;
+    private static final int JUMP_DELAY = 6;
 
     private RunicSkull activatedSkull;
 
@@ -56,7 +48,7 @@ public class Lich extends Boss {
 
     {
         hp(ht(HEALTH));
-        EXP = 20;
+        EXP = 25;
         defenseSkill = 20;
 
         loot = new BlackSkull();
@@ -74,13 +66,6 @@ public class Lich extends Boss {
     }
 
     private int timeToJump = JUMP_DELAY;
-
-    @Override
-    public void onMotionComplete() {
-        super.onMotionComplete();
-        postpone(1);
-        getSprite().idle();
-    }
 
     @Override
     protected boolean getCloser( int target ) {
@@ -111,20 +96,6 @@ public class Lich extends Boss {
 
     private void jump() {
         timeToJump = JUMP_DELAY;
-
-        for (int i=0; i < 4; i++) {
-            int trapPos;
-            do {
-                trapPos = Random.Int( Dungeon.level.getLength() );
-            } while (!Dungeon.level.fieldOfView[trapPos] || !Dungeon.level.passable[trapPos]);
-
-            if (Dungeon.level.map[trapPos] == Terrain.INACTIVE_TRAP) {
-                Dungeon.level.set( trapPos, Terrain.POISON_TRAP );
-                GameScene.updateMap( trapPos );
-                ScrollOfMagicMapping.discover( trapPos );
-            }
-        }
-
         int newPos;
         do {
             newPos = Random.Int( Dungeon.level.getLength() );
@@ -136,12 +107,6 @@ public class Lich extends Boss {
 
         getSprite().move( getPos(), newPos );
         move( newPos );
-
-        if (Dungeon.visible[newPos]) {
-            CellEmitter.get( newPos ).burst( Speck.factory( Speck.WOOL ), 6 );
-            Sample.INSTANCE.play( Assets.SND_PUFF );
-        }
-
         spend( 1 / speed() );
     }
 
@@ -178,7 +143,8 @@ public class Lich extends Boss {
     }
 
     public void useSkull(){
-        getSprite().zap(getPos());
+        PlayZap();
+
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:
                 PotionOfHealing.heal(this,0.07f * skulls.size());
@@ -225,7 +191,7 @@ public class Lich extends Boss {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 8, 15 );
+        return Random.NormalIntRange( 12, 19 );
     }
 
     @Override
@@ -292,6 +258,16 @@ public class Lich extends Boss {
             }
         }
         occupiedPedestals.clear();
+    }
+
+    public void PlayZap() {
+        getSprite().zap(
+                getEnemy().getPos(),
+                new Callback() {
+                    @Override
+                    public void call() {
+                    }
+                });
     }
 
 }
