@@ -2,8 +2,8 @@
 <resources>
   <!--PACKAGE /items/potions-->
   <!--STRINGS OF Potion CLASS-->
-  <string name="Potion_Name">%s 药水</string>
-  <string name="Potion_Info">这个瓶子里装着不断旋转的 %s液体。谁知道饮用或投掷它时会怎么样呢？</string>
+  <string name="Potion_Name">%s药水</string>
+  <string name="Potion_Info">这个瓶子里装着不断旋转的%s液体。谁知道饮用或投掷它时会怎么样呢？</string>
   <string name="Potion_ACDrink">饮用</string>
   <string name="Potion_Harmfull">这个药水是有害的！</string>
   <string name="Potion_Beneficial">有益药水</string>
@@ -11,7 +11,7 @@
   <string name="Potion_No">不，我改主意了</string>
   <string name="Potion_SureDrink">你真的确认你想要喝这瓶药水吗？在大多数情况下你应该将这种药水扔向你的敌人。</string>
   <string name="Potion_SureThrow">你真的想要投掷这瓶药水吗？在大多数情况下把它喝下去会更有用。</string>
-  <string name="Potion_Shatter">瓶子碎裂开来，%s 色液体无害地溅出了。</string>
+  <string name="Potion_Shatter">瓶子碎裂开来，%s色液体无害地溅出了。</string>
   <string-array name="Potion_Colors">
     <item>青绿</item>
     <item>猩红</item>

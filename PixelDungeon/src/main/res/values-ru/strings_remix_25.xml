@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">паучья броня</string>
+    <string name="SpiderArmor_Info">Эта броня изготовлена из старого паучьего хитина и некоей ткани. Что удивительно, похоже что она содержит функционирующие паутинные железы. Если нажать на пластины достаточно сильно, то она выстреливает паутину. А зубчатые подошвы позволяют тебе беспепятственно передвигаться по такой паутине.</string>
+    <string name="SpiderArmor_Gender">feminine</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">черный череп</string>
+    <string name="BlackSkull_Info">Маленький обсидиановый череп. Он был источником сил Некрополиса, но, после поражения Лича, утратил их. Однако когда ты держишь его в руках тебя посещает чуждая мысль: \"Он жаждет\". </string>
+    <string name="BlackSkull_Gender">masculine</string>
+
+    <string name="BlackSkull_Name_Awakened">пробуивщийся черный череп</string>
+    <string name="BlackSkull_Info_Awakened">Череп дышит мощью, видно как она льётся из его пустых глазниц. И держа его в руках ты слышишь ужасающий голос: \"Узри поступь смерти\".</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">осколок души</string>
+    <string name="SoulShard_Info">Это черепок подобранный из останков Кувшина Душ. Он поблескивает загадочной силой, возможно есть кто-то, кто мог бы заинтересоваться чем-то подобным.</string>
+    <string name="SoulShard_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">рыцырь смерти</string>
+    <string name="DeathKnight_Gender">masculine</string>
+    <string name="DeathKnight_Name_Objective">рыцаря смерти</string>
+    <string name="DeathKnight_Desc">На первый взгляд это могучий воин в тяжёлой броне, и лишь мертвецкий оскал выдаёт его. Рыцарь смерти - это воплощение души рыцаря нарушевшего свои обеты. И в своём проклятьи будет он вечно скитаться ища очищенья в бою, убивая невинных, не в силах вспомнить кого он поклялся защищать.</string>
+
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">рыцарь ужаса</string>
+    <string name="DreadKnight_Gender">masculine</string>
+    <string name="DreadKnight_Name_Objective">рыцаря ужаса</string>
+    <string name="DreadKnight_Desc">Рыцарь Ужаса - это древний воин которому, при жизни, не были ведомы ни добро, ни праведность. За его грехи он обречен на вечные скитания в изломаном теле умертвия. И каждый миг его проклятого существования будет для него полон боли и страданий, подобных тем, что он причинял своим жертвам.</string>
+
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">порабощенная душа</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="EnslavedSoul_Name_Objective">порабощеную душу</string>
+    <string name="EnslavedSoul_Desc">Это призрачное создание почти прозрачно. И хотя оно выглядит как череп, иногда на долю секунды проявляется лицо, лицо полное боли и страданий.</string>
+
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">взрывающийся череп</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Name_Objective">взрывающийся череп</string>
+    <string name="ExplodingSkull_Desc">Это парящий, пылающий череп выглядит весьма хрупким, создаётся впечателние, что он готов разлетится на куски в любой момент.</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">кувшин душ</string>
+    <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Name_Objective">кувшин душ</string>
+    <string name="JarOfSouls_Desc">Сияющие глаза черепа, изображённого на этом кувшине, не говоря уже о странной магической энергии, что он излучает, вселяют в тебя беспокойство.</string>
+
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">лич</string>
+    <string name="Lich_Gender">masculine</string>
+    <string name="Lich_Name_Objective">лича</string>
+    <string name="Lich_Desc">Некромант нашел свою смерть в глубинах некрополиса, и постепенно, злые силы, что вливались в его тело, превратили его в Лича. В мага-умертвие, безвольную марионетку, управляемую темными силами...</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">рунный череп</string>
+    <string name="RunicSkull_Gender">masculine</string>
+    <string name="RunicSkull_Name_Objective">рунный череп</string>
+    <string name="RunicSkull_Desc">Для чего-то что было создано искусственным путём, это череп слишком уж походит на настоящий. Ты также видишь как его окутавыет слабое свечение.</string>
+
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">зомби</string>
+    <string name="Zombie_Gender">masculine</string>
+    <string name="Zombie_Name_Objective">зомби</string>
+    <string name="Zombie_Desc">Подземелья всегда были опасным местом и многие путшественники встретили здесь свою судьбу. Но путь тех, кому посчастливилось меньше всего, обрывался в Некрополе. И теперь они обречены слонятся по этим коридорам в виде гниющего трупа.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Intro2">А! Собрат приключенец не являющийся бездыханым трупом! Верится с трудом! Кхм... извиняюсь, иногда я становлюсь слишком заносчивым. Я, видите ли, некромант. И не смотря на то, что изучение мертвецов и самой смерти у нас в почёте, всё это серое однообразие рано или поздно кому угодно наскучит. Но с другой стороны я здесь, как раз из-за этого. Намедни случилось нечто грандиозное! _Некрополь_, древний город мёртвых открыл нашему взору свои двери. Честно говоря, мы стоим прямо подле этих дверей. И... знаешь что, возьми как ключ и иди первый, ты же любишь всякие приключения, да? А я пойду следом... только сначала подготовлюсь.</string>
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Лич побеждён</string>
+
+</resources>
