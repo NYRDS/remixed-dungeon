@@ -21,6 +21,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
@@ -133,10 +134,7 @@ public enum HeroClass {
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().identify().upgrade(100));
 
-		hero.collect(new GothicArmor().identify());
-		hero.collect(new WarlockArmor().identify());
-		hero.collect(new GladiatorArmor().identify());
-		hero.collect(new ArmorKit());
+		hero.collect(new BlackSkull());
 		hero.collect(new BladeOfSouls().identify());
 
 		hero.ht(1000);
