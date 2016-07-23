@@ -104,20 +104,6 @@ public class Lich extends Boss {
 
     private void jump() {
         timeToJump = JUMP_DELAY;
-
-        for (int i=0; i < 4; i++) {
-            int trapPos;
-            do {
-                trapPos = Random.Int( Dungeon.level.getLength() );
-            } while (!Dungeon.level.fieldOfView[trapPos] || !Dungeon.level.passable[trapPos]);
-
-            if (Dungeon.level.map[trapPos] == Terrain.INACTIVE_TRAP) {
-                Dungeon.level.set( trapPos, Terrain.POISON_TRAP );
-                GameScene.updateMap( trapPos );
-                ScrollOfMagicMapping.discover( trapPos );
-            }
-        }
-
         int newPos;
         do {
             newPos = Random.Int( Dungeon.level.getLength() );
