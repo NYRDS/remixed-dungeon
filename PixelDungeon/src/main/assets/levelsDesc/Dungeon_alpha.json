@@ -18,7 +18,6 @@
       "necro3":{"kind":"NecroLevel", "depth":10,     "size":[32,32]},
       "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
       "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
-      "necropolis_vault":{"kind":"PredesignedLevel", "depth":13, "size":[16,16], "file":"levelsDesc/NecropolisVault.json"},
 
       "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
@@ -100,8 +99,7 @@
       "necro2":[["necro3"],["necro1"]],
       "necro3":[["necro4"],["necro2"]],
       "necro4":[["necro5"],["necro3"]],
-      "necro5":[["necropolis_vault"],["necro4"]],
-      "necropolis_vault":[["necro5"],["necro5"]]
+      "necro5":[[],["necro4"]]
    },
    "Entrance":"0"
 }

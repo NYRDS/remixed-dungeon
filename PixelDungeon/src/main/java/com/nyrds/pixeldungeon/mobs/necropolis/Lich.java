@@ -51,9 +51,6 @@ public class Lich extends Boss {
         EXP = 25;
         defenseSkill = 20;
 
-        loot = new BlackSkull();
-        lootChance = 1f;
-
         IMMUNITIES.add( Paralysis.class );
         IMMUNITIES.add( ToxicGas.class );
         IMMUNITIES.add( Terror.class );
@@ -202,7 +199,11 @@ public class Lich extends Boss {
                 return 0;
             }
         }
-        jump();
+
+        if (Random.Int(3) == 1){
+            jump();
+        }
+
         return damage;
     }
 
@@ -219,7 +220,7 @@ public class Lich extends Boss {
     @Override
     public void die( Object cause ) {
         GameScene.bossSlain();
-        Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+        Dungeon.level.drop( new BlackSkull(), getPos() ).sprite.drop();
         super.die( cause );
 
         //Kill everthing
