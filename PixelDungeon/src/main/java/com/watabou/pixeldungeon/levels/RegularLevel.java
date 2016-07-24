@@ -43,7 +43,7 @@ public abstract class RegularLevel extends CommonLevel {
 
 	protected HashSet<Room> rooms;
 
-	private SparseArray<Room> exits = new SparseArray<>();
+	private SparseArray<Room> exits;
 
 	protected Room roomEntrance;
 
@@ -90,6 +90,8 @@ public abstract class RegularLevel extends CommonLevel {
 		if (!initRooms()) {
 			return false;
 		}
+
+		exits = new SparseArray<>();
 
 		if(!placeEntranceAndExit()){
 			return false;
@@ -179,8 +181,6 @@ public abstract class RegularLevel extends CommonLevel {
 					 secondaryExit.height() < 4
 					);
 			secondaryExit.type = Type.EXIT;
-
-
 
 			Graph.buildDistanceMap(rooms, secondaryExit);
 			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
@@ -400,12 +400,19 @@ public abstract class RegularLevel extends CommonLevel {
 		ExitPainter.resetCounter();
 
 		for (Room r : rooms) {
-			if (r.type != Type.NULL && r.type != Type.BOSS_EXIT) {
+			if (r.type != Type.NULL && r.type != Type.BOSS_EXIT && r.type != Type.EXIT) {
 				paintRoom(r);
 			} else {
 				if (feeling == Feeling.CHASM && Random.Int( 2 ) == 0) {
 					Painter.fill( this, r, Terrain.WALL );
 				}
+			}
+		}
+
+		for(int i = 0;i<exits.size();++i) {
+			Room room = exits.get(i);
+			if(room.type != Type.BOSS_EXIT) {
+				paintRoom(room);
 			}
 		}
 
