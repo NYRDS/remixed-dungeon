@@ -43,7 +43,7 @@ public abstract class RegularLevel extends CommonLevel {
 
 	protected HashSet<Room> rooms;
 
-	private SparseArray<Room> exits;
+	private SparseArray<Room> exits = new SparseArray<>();
 
 	protected Room roomEntrance;
 
@@ -90,8 +90,6 @@ public abstract class RegularLevel extends CommonLevel {
 		if (!initRooms()) {
 			return false;
 		}
-
-		exits = new SparseArray<>();
 
 		if(!placeEntranceAndExit()){
 			return false;
