@@ -22,19 +22,20 @@ public class SystemText extends Text {
 
 	private String text;
 
-	static private Map<Float,TextPaint> textPaints = new HashMap<>();
+	static private Map<Float, TextPaint> textPaints = new HashMap<>();
 	private TextPaint textPaint;
 
-//	protected TextPaint contourPaint = new TextPaint();
+	static private Map<Float, TextPaint> contourPaints = new HashMap<>();
+	protected TextPaint contourPaint = new TextPaint();
 
 	private ArrayList<SystemTextLine> lineImage = new ArrayList<>();
 
 	private static Set<SystemText> texts = new HashSet<>();
 
-	private static final Typeface tf = Typeface.create((String) null, Typeface.BOLD);
+	private static final Typeface tf = Typeface.create((String) null, Typeface.NORMAL);
 
-	private final static float oversample = 4f;
-	private boolean needWidth = false;
+	private final static float   oversample = 4f;
+	private              boolean needWidth  = false;
 
 	public SystemText(float baseLine) {
 		this("", baseLine, false, PixelScene.computeFontScale());
@@ -53,7 +54,7 @@ public class SystemText extends Text {
 		}
 
 		float textSize = baseLine * oversample;
-		if(!textPaints.containsKey(textSize)) {
+		if (!textPaints.containsKey(textSize)) {
 			TextPaint tx = new TextPaint();
 
 			tx.setTextSize(textSize);
@@ -63,16 +64,19 @@ public class SystemText extends Text {
 
 			tx.setTypeface(tf);
 
+			TextPaint cp = new TextPaint();
+			cp.set(tx);
+			cp.setStyle(Paint.Style.STROKE);
+			cp.setStrokeWidth(textSize / 10);
+			cp.setColor(Color.BLACK);
+
 			textPaints.put(textSize, tx);
+			contourPaints.put(textSize, cp);
 		}
 
 		textPaint = textPaints.get(textSize);
-/*
-		contourPaint.set(textPaint);
-		contourPaint.setStyle(Paint.Style.STROKE);
-		contourPaint.setStrokeWidth(0.5f);
-		contourPaint.setColor(Color.BLACK);
-*/
+		contourPaint = contourPaints.get(textSize);
+
 		this.text(text);
 		texts.add(this);
 	}
@@ -176,7 +180,7 @@ public class SystemText extends Text {
 				if (lineWidth > 0) {
 
 					Bitmap bitmap = Bitmap.createBitmap(
-							(int) (lineWidth * oversample),
+							(int) ((lineWidth + 1) * oversample),
 							(int) (fontHeight * oversample),
 							Bitmap.Config.ARGB_4444);
 
@@ -194,18 +198,12 @@ public class SystemText extends Text {
 							if (mask == null
 									|| (charIndex < mask.length && mask[charIndex])) {
 
-								canvas.drawText(
-										text.substring(offset, offset + codepointCharCount),
-										xCharPos.get(lineCounter) * oversample,
-										(fontHeight) * oversample - textPaint.descent(),
-										textPaint);
-/*
-								canvas.drawText(
-										text.substring(offset, offset + codepointCharCount),
-										xCharPos.get(lineCounter) * oversample,
-										(fontHeight) * oversample - textPaint.descent(),
-										contourPaint);
-*/
+								String txt = text.substring(offset, offset + codepointCharCount);
+								float x = (xCharPos.get(lineCounter) + 0.5f) * oversample;
+								float y = (fontHeight) * oversample - textPaint.descent();
+
+								canvas.drawText(txt, x, y, contourPaint);
+								canvas.drawText(txt, x, y, textPaint);
 							}
 							charIndex++;
 						}
