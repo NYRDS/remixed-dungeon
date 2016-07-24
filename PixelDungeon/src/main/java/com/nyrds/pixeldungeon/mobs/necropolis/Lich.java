@@ -199,7 +199,11 @@ public class Lich extends Boss {
                 return 0;
             }
         }
-        jump();
+
+        if (Random.Int(3) == 1){
+            jump();
+        }
+
         return damage;
     }
 
