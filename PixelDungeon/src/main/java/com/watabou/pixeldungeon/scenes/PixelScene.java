@@ -82,14 +82,6 @@ public class PixelScene extends Scene {
 			defaultZoom--;
 		}
 
-		if (PixelDungeon.scaleUp()) {
-			while (Game.width() / (defaultZoom + 1) >= minWidth
-					&& Game.height() / (defaultZoom + 1) >= minHeight) {
-
-				defaultZoom++;
-			}
-		}
-
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;
 

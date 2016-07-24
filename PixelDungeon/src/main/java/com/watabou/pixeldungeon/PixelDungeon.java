@@ -158,20 +158,6 @@ public class PixelDungeon extends Game {
 		return width() > height();
 	}
 
-	// *** IMMERSIVE MODE ****
-	@SuppressLint("NewApi")
-	public static void immerse(boolean value) {
-		Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
-
-		instance().runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				updateImmersiveMode();
-				setNeedSceneRestart(true);
-			}
-		});
-	}
-
 	@Override
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
 		super.onSurfaceChanged(gl, width, height);
@@ -188,32 +174,14 @@ public class PixelDungeon extends Game {
 			if (instance() != null) {
 				instance().getWindow()
 						.getDecorView()
-						.setSystemUiVisibility(
-								immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+						.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
 										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 										| View.SYSTEM_UI_FLAG_FULLSCREEN
-										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-										: 0);
+										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 			}
 		}
-	}
-
-	public static boolean immersed() {
-		return Preferences.INSTANCE
-				.getBoolean(Preferences.KEY_IMMERSIVE, false);
-	}
-
-	// *****************************
-
-	public static void scaleUp(boolean value) {
-		Preferences.INSTANCE.put(Preferences.KEY_SCALE_UP, value);
-		switchScene(TitleScene.class);
-	}
-
-	public static boolean scaleUp() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SCALE_UP, true);
 	}
 
 	public static void zoom(int value) {

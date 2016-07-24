@@ -28,8 +28,6 @@ public enum Preferences {
 	INSTANCE;
 	
 	public static final String KEY_LANDSCAPE	    = "landscape";
-	public static final String KEY_IMMERSIVE	    = "immersive";
-	public static final String KEY_SCALE_UP		    = "scaleup";
 	public static final String KEY_MUSIC		    = "music";
 	public static final String KEY_SOUND_FX		    = "soundfx";
 	public static final String KEY_ZOOM			    = "zoom";

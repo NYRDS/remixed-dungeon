@@ -93,37 +93,12 @@ public class WndSettings extends Window {
 		super();
 		mInGame = inGame;
 
-		float curY;
+		float curY = 0;
 		
 		if (mInGame) {
 			curY = createZoomButtons();
 		} else {
 
-			CheckBox btnScaleUp = new CheckBox(TXT_SCALE_UP) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					PixelDungeon.scaleUp(checked());
-				}
-			};
-			btnScaleUp.setRect(0, 0, WIDTH, BTN_HEIGHT);
-			btnScaleUp.checked(PixelDungeon.scaleUp());
-			add(btnScaleUp);
-
-			CheckBox btnImmersive = new CheckBox(TXT_IMMERSIVE) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					PixelDungeon.immerse(checked());
-				}
-			};
-			btnImmersive.setRect(0, btnScaleUp.bottom() + GAP, WIDTH,
-					BTN_HEIGHT);
-			btnImmersive.checked(PixelDungeon.immersed());
-			btnImmersive.enable(android.os.Build.VERSION.SDK_INT >= 19);
-			add(btnImmersive);
-			curY = btnImmersive.bottom();
-			
 			curY = createTextScaleButtons(curY + GAP);
 		}
 		curY += GAP;
