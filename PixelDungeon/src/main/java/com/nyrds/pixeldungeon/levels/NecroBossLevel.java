@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -13,8 +12,6 @@ import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -22,9 +19,6 @@ import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class NecroBossLevel extends Level {
 	
@@ -183,7 +177,7 @@ public class NecroBossLevel extends Level {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.City_TileWater);
+			return Game.getVar(R.string.Prison_TileWater);
 		case Terrain.HIGH_GRASS:
 			return Game.getVar(R.string.City_TileHighGrass);
 		default:
@@ -194,20 +188,13 @@ public class NecroBossLevel extends Level {
 	@Override
 	public String tileDesc(int tile) {
 		switch (tile) {
-		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.City_TileDescEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.City_TileDescExit);
 		case Terrain.WALL_DECO:
 		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.City_TileDescDeco);
+			return Game.getVar(R.string.Prison_TileDescDeco);
 		case Terrain.EMPTY_SP:
 			return Game.getVar(R.string.City_TileDescEmptySP);
-		case Terrain.STATUE:
-		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.City_TileDescStatue);
 		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.City_TileDescBookshelf);
+			return Game.getVar(R.string.Halls_TileDescBookshelf);
 		default:
 			return super.tileDesc( tile );
 		}
