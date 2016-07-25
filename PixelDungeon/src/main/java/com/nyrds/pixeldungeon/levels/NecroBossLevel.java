@@ -115,9 +115,6 @@ public class NecroBossLevel extends Level {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-
-		int sign = arenaDoor + getWidth() + 1;
-		map[sign] = Terrain.SIGN;
 	}
 	
 	@Override
@@ -132,7 +129,7 @@ public class NecroBossLevel extends Level {
 				pos = 
 					Random.IntRange( _Left() + 1, _Left() + HALL_WIDTH - 2 ) + 
 					Random.IntRange( TOP + HALL_HEIGHT + 1, TOP + HALL_HEIGHT  + CHAMBER_HEIGHT ) * getWidth();
-			} while (pos == entrance || map[pos] == Terrain.SIGN);
+			} while (pos == entrance);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
@@ -162,8 +159,6 @@ public class NecroBossLevel extends Level {
 			Dungeon.observe();
 		}
 	}
-
-
 
 	@Override
 	public Heap drop( Item item, int cell ) {

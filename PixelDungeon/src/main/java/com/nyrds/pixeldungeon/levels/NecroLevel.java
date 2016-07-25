@@ -111,14 +111,6 @@ public class NecroLevel extends RegularLevel {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
 	}
 
 	@Override
