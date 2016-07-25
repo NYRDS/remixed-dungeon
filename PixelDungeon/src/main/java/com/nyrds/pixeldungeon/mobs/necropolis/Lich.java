@@ -175,9 +175,8 @@ public class Lich extends Boss {
 
     @Override
     protected boolean act() {
-        if (this.hp() < HEALTH) {
-           activateRandomSkull();
-        }
+
+        activateRandomSkull();
         if (activatedSkull != null) {
             useSkull();
         }
@@ -200,7 +199,7 @@ public class Lich extends Boss {
             }
         }
 
-        if (Random.Int(3) == 1){
+        if (Random.Int(3) == 1 && this.isAlive()){
             jump();
         }
 
@@ -263,12 +262,11 @@ public class Lich extends Boss {
 
     public void PlayZap() {
         getSprite().zap(
-                getEnemy().getPos(),
+                getPos(),
                 new Callback() {
                     @Override
                     public void call() {
                     }
                 });
     }
-
 }

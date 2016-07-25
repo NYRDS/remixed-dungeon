@@ -82,7 +82,7 @@ public class Skeleton extends UndeadMob {
 	
 	@Override
 	protected void dropLoot() {
-		if (Dungeon.hero.levelKind.equals("NecroLevel")){
+		if (Dungeon.hero.levelKind.equals("NecroBossLevel")){
 			return;
 		}
 		if (Random.Int( 5 ) == 0) {

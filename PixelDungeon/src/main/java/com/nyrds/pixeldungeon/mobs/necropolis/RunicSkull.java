@@ -91,7 +91,7 @@ public class RunicSkull extends MultiKindMob {
 
 	public void PlayZap() {
 		getSprite().zap(
-				getEnemy().getPos(),
+				getPos(),
 				new Callback() {
 					@Override
 					public void call() {
