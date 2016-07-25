@@ -45,7 +45,7 @@ public class Lich extends Boss {
 
     public HashSet<RunicSkull> skulls   = new HashSet<>();
 
-    {
+    public Lich() {
         hp(ht(HEALTH));
         EXP = 25;
         defenseSkill = 20;
