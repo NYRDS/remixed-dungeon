@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
