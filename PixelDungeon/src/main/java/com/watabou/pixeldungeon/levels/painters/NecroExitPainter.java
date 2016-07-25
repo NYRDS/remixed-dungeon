@@ -14,7 +14,7 @@ public class NecroExitPainter extends ExitPainter {
 			door.set( Room.Door.Type.REGULAR );
 		}
 		
-		level.setExit(room.top * level.getWidth() + (room.left + room.right) / 2,1);
+		level.setExit((room.top+room.bottom) * level.getWidth()/2 + (room.left + room.right) / 2,1);
 		set( level, level.getExit(1), Terrain.LOCKED_EXIT );
 	}
 }
