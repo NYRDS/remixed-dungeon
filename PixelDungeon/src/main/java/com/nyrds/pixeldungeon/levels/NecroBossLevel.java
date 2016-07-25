@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -142,11 +143,12 @@ public class NecroBossLevel extends Level {
 			
 			enteredArena = true;
 			
-			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );
+			Lich boss = new Lich();
 			boss.state = boss.HUNTING;
 			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
 			Dungeon.level.spawnMob(boss);
+			boss.spawnSkulls();
 
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );

@@ -57,8 +57,6 @@ public class Lich extends Boss {
         IMMUNITIES.add( Amok.class );
         IMMUNITIES.add( Blindness.class );
         IMMUNITIES.add( Sleep.class );
-
-        SpawnSkulls();
     }
 
     private int timeToJump = JUMP_DELAY;
@@ -231,7 +229,7 @@ public class Lich extends Boss {
         Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
     }
 
-    public void SpawnSkulls(){
+    public void spawnSkulls(){
 
         int nSkulls = SKULLS_BY_DEFAULT;
         if(Game.getDifficulty() == 0){
