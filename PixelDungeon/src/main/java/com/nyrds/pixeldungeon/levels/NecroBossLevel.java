@@ -188,11 +188,6 @@ public class NecroBossLevel extends Level {
 	@Override
 	public String tileDesc(int tile) {
 		switch (tile) {
-		case Terrain.WALL_DECO:
-		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.Prison_TileDescDeco);
-		case Terrain.EMPTY_SP:
-			return Game.getVar(R.string.City_TileDescEmptySP);
 		case Terrain.BOOKSHELF:
 			return Game.getVar(R.string.Halls_TileDescBookshelf);
 		default:
