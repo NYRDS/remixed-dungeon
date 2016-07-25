@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.levels.painters;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.utils.Point;
 
 public class NecroExitPainter extends ExitPainter {
 
@@ -13,8 +14,11 @@ public class NecroExitPainter extends ExitPainter {
 		for (Room.Door door : room.connected.values()) {
 			door.set( Room.Door.Type.REGULAR );
 		}
-		
-		level.setExit((room.top+room.bottom) * level.getWidth()/2 + (room.left + room.right) / 2,1);
+
+		Point center = room.center();
+		int centerIndex = level.getWidth() * (center.y - 1) + center.x ;
+
+		level.setExit(centerIndex,1);
 		set( level, level.getExit(1), Terrain.LOCKED_EXIT );
 	}
 }
