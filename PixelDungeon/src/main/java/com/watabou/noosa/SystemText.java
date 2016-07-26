@@ -34,18 +34,17 @@ public class SystemText extends Text {
 
 	private static final Typeface tf = Typeface.create((String) null, Typeface.NORMAL);
 
-	private final static float   oversample = 4f;
+	private final static float   oversample = 1f;
 	private              boolean needWidth  = false;
 
 	public SystemText(float baseLine) {
-		this("", baseLine, false, PixelScene.computeFontScale());
+		this("", baseLine, false);
 	}
 
-	public SystemText(String text, float baseLine, boolean multiline,
-	                  float scale) {
+	public SystemText(String text, float baseLine, boolean multiline) {
 		super(0, 0, 0, 0);
 
-		baseLine *= scale;
+		baseLine *= PixelScene.computeFontScale();
 
 		needWidth = multiline;
 
@@ -60,6 +59,7 @@ public class SystemText extends Text {
 			tx.setTextSize(textSize);
 			tx.setStyle(Paint.Style.FILL);
 			tx.setAntiAlias(true);
+
 			tx.setColor(Color.WHITE);
 
 			tx.setTypeface(tf);

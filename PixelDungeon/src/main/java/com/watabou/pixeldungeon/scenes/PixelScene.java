@@ -177,6 +177,10 @@ public class PixelScene extends Scene {
 
 		scale /= defaultZoom;
 
+		if(Game.smallResScreen()) {
+			scale /= 2;
+		}
+		//scale = pt / 14;
 		font = font25x;
 	}
 
@@ -197,7 +201,7 @@ public class PixelScene extends Scene {
 	public static Text createText(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size * 1.2f, false,  computeFontScale());
+			return new SystemText(text, size * 1.2f, false);
 		}
 		
 		chooseFont(size);
@@ -215,7 +219,7 @@ public class PixelScene extends Scene {
 	public static Text createMultiline(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size*1.2f, true, computeFontScale());
+			return new SystemText(text, size*1.2f, true);
 		}
 		
 		chooseFont(size);

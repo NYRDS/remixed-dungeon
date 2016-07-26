@@ -455,6 +455,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return instance;
 	}
 
+	public static boolean smallResScreen() {
+		return width() <= 320 && height() <= 320;
+	}
+
 	public static int width() {
 		return width;
 	}
