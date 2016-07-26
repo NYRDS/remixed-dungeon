@@ -27,7 +27,7 @@
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">南瓜</string>
-    <string name="Pumpkin_Info">过去南瓜人是一个繁荣和自豪的名族。但是当人类入侵后一切都毁了。被斩断的南瓜头成了幸存的南瓜人的心理阴影。</string>
+    <string name="Pumpkin_Info">过去南瓜族是一个繁荣和自豪的名族。但是当人类入侵后一切都毁了。被斩断的南瓜头成了幸存的南瓜族人的心理阴影。</string>
 	
 	<!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">睡帽</string>
