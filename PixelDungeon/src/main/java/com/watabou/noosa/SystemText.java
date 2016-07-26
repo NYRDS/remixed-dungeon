@@ -32,20 +32,29 @@ public class SystemText extends Text {
 
 	private static Set<SystemText> texts = new HashSet<>();
 
-	private static final Typeface tf = Typeface.create((String) null, Typeface.NORMAL);
+	private static Typeface tf;
+	private static float  oversample;
 
-	private final static float   oversample = 4f;
 	private              boolean needWidth  = false;
 
 	public SystemText(float baseLine) {
-		this("", baseLine, false, PixelScene.computeFontScale());
+		this("", baseLine, false);
 	}
 
-	public SystemText(String text, float baseLine, boolean multiline,
-	                  float scale) {
+	public SystemText(String text, float baseLine, boolean multiline) {
 		super(0, 0, 0, 0);
 
-		baseLine *= scale;
+		if(tf == null) {
+			if(Game.smallResScreen()) {
+				tf = Typeface.create((String) null, Typeface.BOLD);
+				oversample = 1;
+			} else {
+				tf = Typeface.create((String) null, Typeface.NORMAL);
+				oversample = 4;
+			}
+		}
+
+		baseLine *= PixelScene.computeFontScale();
 
 		needWidth = multiline;
 
@@ -60,6 +69,7 @@ public class SystemText extends Text {
 			tx.setTextSize(textSize);
 			tx.setStyle(Paint.Style.FILL);
 			tx.setAntiAlias(true);
+
 			tx.setColor(Color.WHITE);
 
 			tx.setTypeface(tf);

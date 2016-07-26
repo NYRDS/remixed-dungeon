@@ -87,7 +87,6 @@ public class PixelScene extends Scene {
 
 		//GLog.i("%d %d %f", Game.width(), Game.height(), defaultZoom);
 
-		//Camera.reset(new PixelCamera(defaultZoom + PixelDungeon.zoom()));
 		Camera.reset(new PixelCamera(defaultZoom));
 
 		float uiZoom = defaultZoom;
@@ -177,6 +176,10 @@ public class PixelScene extends Scene {
 
 		scale /= defaultZoom;
 
+		if(Game.smallResScreen()) {
+			scale /= 2;
+		}
+		//scale = pt / 14;
 		font = font25x;
 	}
 
@@ -186,10 +189,15 @@ public class PixelScene extends Scene {
 
 	public static float computeFontScale() {
 		float scale = 0.5f + 0.01f*PixelDungeon.fontScale();
-		
+
 		if(scale < 0.1f) return 0.1f;
 		if(scale > 4)   return 4;
-		
+
+		if(Game.smallResScreen()) {
+			scale *= 1.5;
+		}
+
+
 		return scale;
 		
 	}
@@ -197,7 +205,7 @@ public class PixelScene extends Scene {
 	public static Text createText(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size * 1.2f, false,  computeFontScale());
+			return new SystemText(text, size * 1.2f, false);
 		}
 		
 		chooseFont(size);
@@ -215,7 +223,7 @@ public class PixelScene extends Scene {
 	public static Text createMultiline(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size*1.2f, true, computeFontScale());
+			return new SystemText(text, size*1.2f, true);
 		}
 		
 		chooseFont(size);

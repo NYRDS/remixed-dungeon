@@ -166,6 +166,7 @@ public class WndSettings extends Window {
 									if(!Utils.canUseClassicFont(lang[index])) {
 										PixelDungeon.classicFont(false);
 									}
+
 									PixelDungeon.uiLanguage(lang[index]);
 									
 								}

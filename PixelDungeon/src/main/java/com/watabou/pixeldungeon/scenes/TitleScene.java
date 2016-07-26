@@ -204,8 +204,8 @@ public class TitleScene extends PixelScene {
 			if (PixelDungeon.canDonate()) {
 				add(pleaseSupport);
 				add(btnDonate);
-				donationAdded = true;
 			}
+			donationAdded = true;
 		} else {
 			float cl = (float) Math.sin(time) * 0.5f + 0.5f;
 			pleaseSupport.hardlight(cl, cl, cl);

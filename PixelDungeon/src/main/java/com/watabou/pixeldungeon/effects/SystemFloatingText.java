@@ -21,7 +21,7 @@ public class SystemFloatingText extends SystemText {
 	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<>();
 
 	public SystemFloatingText() {
-		super(null, 12, false,PixelScene.computeFontScale());
+		super(null, 12, false);
 
 		speed.y = -DISTANCE / LIFESPAN;
 	}
