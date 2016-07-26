@@ -87,7 +87,6 @@ public class PixelScene extends Scene {
 
 		//GLog.i("%d %d %f", Game.width(), Game.height(), defaultZoom);
 
-		//Camera.reset(new PixelCamera(defaultZoom + PixelDungeon.zoom()));
 		Camera.reset(new PixelCamera(defaultZoom));
 
 		float uiZoom = defaultZoom;
@@ -190,10 +189,15 @@ public class PixelScene extends Scene {
 
 	public static float computeFontScale() {
 		float scale = 0.5f + 0.01f*PixelDungeon.fontScale();
-		
+
 		if(scale < 0.1f) return 0.1f;
 		if(scale > 4)   return 4;
-		
+
+		if(Game.smallResScreen()) {
+			scale *= 1.5;
+		}
+
+
 		return scale;
 		
 	}
