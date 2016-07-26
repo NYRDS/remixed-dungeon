@@ -45,40 +45,7 @@ public class Font extends TextureFilm {
 		
 		texture = tx;
 	}
-	
-	public Font( SmartTexture tx, int width, String chars ) {
-		this( tx, width, tx.height, chars );
-	}
-	
-	public Font( SmartTexture tx, int width, int height, String chars ) {
-		super( tx );
-		
-		texture = tx;
-		
-		autoUppercase = chars.equals( LATIN_UPPER );
-		
-		int length = chars.length();
-		
-		float uw = (float)width / tx.width;
-		float vh = (float)height / tx.height;
-		
-		float left = 0;
-		float top = 0;
-		float bottom = vh;
-		
-		for (int i=0; i < length; i++) {
-			RectF rect = new RectF( left, top, left += uw, bottom );
-			add( chars.charAt( i ), rect );
-			if (left >= 1) {
-				left = 0;
-				top = bottom;
-				bottom += vh;
-			}
-		}
-		
-		lineHeight = baseLine = height;
-	}
-	
+
 	private int findNextEmptyLine(Bitmap bitmap, int startFrom, int color){
 		int width  = bitmap.getWidth();
 		int height = bitmap.getHeight();
@@ -88,7 +55,7 @@ public class Font extends TextureFilm {
 		for(; nextEmptyLine < height; ++nextEmptyLine){
 			boolean lineEmpty = true;
 			for(int i = 0;i<width; ++i){
-				lineEmpty = (bitmap.getPixel (i, nextEmptyLine ) == color) && lineEmpty;
+				lineEmpty = (bitmap.getPixel (i, nextEmptyLine ) == color);
 				if(!lineEmpty){
 					break;
 				}
@@ -193,11 +160,7 @@ public class Font extends TextureFilm {
 		
 		lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
 	}
-	
-	public static Font createEmptyFont( Bitmap bmp) {
-		return new Font( TextureCache.get(bmp) );
-	}
-	
+
 	public static Font colorMarked( Bitmap bmp, int color, String chars ) {
 		Font font = new Font( TextureCache.get( bmp ) );
 		font.splitBy( bmp, bmp.getHeight(), color, chars );
@@ -209,11 +172,7 @@ public class Font extends TextureFilm {
 		font.splitBy( bmp, height, color, chars );
 		return font;
 	}
-	
-	public void addGlyphShift(char c, PointF shift) {
-		glyphShift.put(c,shift);
-	}
-	
+
 	public RectF get( char ch ){
 		RectF rec = super.get( autoUppercase ? Character.toUpperCase(ch) : ch );
 
