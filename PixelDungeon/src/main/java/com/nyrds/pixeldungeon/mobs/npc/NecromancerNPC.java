@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -11,6 +12,7 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -88,7 +90,15 @@ public class NecromancerNPC extends NPC {
 		if (!introduced) {
 			GameScene.show(new WndQuest(this, TXT_INTRO));
 			introduced = true;
-			hero.collect(new SkeletonKey());
+
+			SkeletonKey key = new SkeletonKey();
+
+			if (key.doPickUp( Dungeon.hero )) {
+				GLog.i( Hero.TXT_YOU_NOW_HAVE, key.name() );
+			} else {
+				Dungeon.level.drop( key, Dungeon.hero.getPos() ).sprite.drop();
+			}
+
 		} else {
 			int index = Random.Int(0, TXT_PHRASES.length);
 			say(TXT_PHRASES[index]);
