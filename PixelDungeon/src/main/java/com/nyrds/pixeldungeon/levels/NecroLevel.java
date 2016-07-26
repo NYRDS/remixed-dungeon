@@ -111,14 +111,6 @@ public class NecroLevel extends RegularLevel {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
 	}
 
 	@Override
@@ -135,9 +127,9 @@ public class NecroLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 			case Terrain.EMPTY_DECO:
-				return Game.getVar(R.string.Halls_TileDescBookshelf);
+				return Game.getVar(R.string.Prison_TileDescDeco);
 			case Terrain.BOOKSHELF:
-				return Game.getVar(R.string.Sewer_TileDescBookshelf);
+				return Game.getVar(R.string.Halls_TileDescBookshelf);
 			default:
 				return super.tileDesc( tile );
 		}

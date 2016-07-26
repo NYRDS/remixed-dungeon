@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
@@ -46,7 +45,7 @@ public class Lich extends Boss {
 
     public HashSet<RunicSkull> skulls   = new HashSet<>();
 
-    {
+    public Lich() {
         hp(ht(HEALTH));
         EXP = 25;
         defenseSkill = 20;
@@ -58,8 +57,6 @@ public class Lich extends Boss {
         IMMUNITIES.add( Amok.class );
         IMMUNITIES.add( Blindness.class );
         IMMUNITIES.add( Sleep.class );
-
-        SpawnSkulls();
     }
 
     private int timeToJump = JUMP_DELAY;
@@ -232,7 +229,7 @@ public class Lich extends Boss {
         Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
     }
 
-    public void SpawnSkulls(){
+    public void spawnSkulls(){
 
         int nSkulls = SKULLS_BY_DEFAULT;
         if(Game.getDifficulty() == 0){

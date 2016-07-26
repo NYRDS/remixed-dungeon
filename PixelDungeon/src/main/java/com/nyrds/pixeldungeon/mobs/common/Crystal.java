@@ -124,4 +124,9 @@ public class Crystal extends MultiKindMob {
 		}
 		super.die(cause);
 	}
+
+	@Override
+	public boolean canBePet(){
+		return false;
+	}
 }
