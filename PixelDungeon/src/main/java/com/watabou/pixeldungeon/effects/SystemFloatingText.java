@@ -33,7 +33,7 @@ public class SystemFloatingText extends SystemText {
 
 		if (timeLeft > 0) {
 			if ((timeLeft -= Game.elapsed) <= 0) {
-				kill();
+				killAndErase();
 			} else {
 				float p = timeLeft / LIFESPAN;
 				alpha(p > 0.5f ? 1 : p * 2);
