@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">armadura arácnida</string>
+    <string name="SpiderArmor_Gender">femenino</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">craneo negro</string>
+    <string name="BlackSkull_Gender">masculino</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">fragmento de alma</string>
+    <string name="SoulShard_Gender">masculino</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">caballero muerto</string>
+    <string name="DeathKnight_Gender">masculino</string>
+    <string name="DeathKnight_Name_Objective">caballero muerto</string>
+    <string name="DreadKnight_Gender">masculino</string>
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">alma esclavizada</string>
+    <string name="EnslavedSoul_Gender">femenino</string>
+    <string name="EnslavedSoul_Name_Objective">alma esclavizada</string>
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">craneo explosivo</string>
+    <string name="ExplodingSkull_Gender">masculino</string>
+    <string name="ExplodingSkull_Name_Objective">craneo explosivo</string>
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">tarro de almas</string>
+    <string name="JarOfSouls_Gender">masculino</string>
+    <string name="JarOfSouls_Name_Objective">tarro de almas</string>
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">Lich</string>
+    <string name="Lich_Gender">masculino</string>
+    <string name="Lich_Name_Objective">Lich</string>
+    <string name="RunicSkull_Gender">masculino</string>
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">zombi</string>
+    <string name="Zombie_Gender">masculino</string>
+    <string name="Zombie_Name_Objective">zombi</string>
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Lich Cazado</string>
+
+</resources>

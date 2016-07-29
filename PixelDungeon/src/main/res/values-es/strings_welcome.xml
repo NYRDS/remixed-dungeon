@@ -99,4 +99,18 @@ remix.21.4:\n
         - Maestro de las Sombras tiene ahora una cuarto más elaborado (ahora no podras pasar al siguiente piso sin pelear)\n
         - Encanto de Araña tiene un nuevo grafico y es obtenido de la Reina Araña (Antes podia ser obtenido de la Viscocidad)\n
         </string>
+  <string name="Welcome_Text_25">
+        remix.25:\n
+        - Nuevo tipo de mazmorra: Necrópolis, para entrar en la necrópolis, debe encontrar el Nigromante en el nivel 7, para obtener la llave esqueleto\n
+        - Nuevos objetos: Armadura aracnida y Craneo negro\n
+        - La Espada dorada es más fuerte ahora y requiere más fuerza\n
+        - El agua en la capa de las arañas se mira correctamente\n
+        - Ahora las pilas de huesos no contienen artefactos y objetos de misiones\n
+        - La mecanica de las mascotas ha cambiado. Varios enemigos son inmunes  al los efectos de control mental\n
+        - El tiempo de quemado de las Llamas liquidas ha sido reducido, tambien sera menor sobre el agua\n
+        - El icono de Control mental, que aparece sobre los enemigos \“controlados\”, ha sido cambiado por un corazón\n
+        - Actulización visual, \“nuevo tipo de letra\”\n
+        - Traducciones actualizadas\n
+        - Se removio las opciones: \“modo inmersivo\” y \“escalar GUI\”\n
+        </string>
 </resources>
