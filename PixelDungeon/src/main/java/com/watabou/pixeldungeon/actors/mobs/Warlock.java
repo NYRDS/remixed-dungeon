@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -77,6 +78,10 @@ public class Warlock extends Mob implements Callback {
 	}
 
 	protected void fx( int cell, Callback callback ) {
+		if(getSprite().getParent()==null) {
+			EventCollector.logException(new Exception("null parent"));
+			return;
+		}
 		MagicMissile.whiteLight( getSprite().getParent(), getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 		getSprite().setVisible(false);

@@ -269,8 +269,13 @@ public class Iap {
 					PixelDungeon.setDonationLevel(3);
 				}
 			} else {
-				mIapCallback.onPurchaseOk();
-				mIapCallback = null;
+				Game.executeInGlThread(new Runnable() {
+					@Override
+					public void run() {
+						mIapCallback.onPurchaseOk();
+						mIapCallback = null;
+					}
+				});
 			}
 		}
 	};

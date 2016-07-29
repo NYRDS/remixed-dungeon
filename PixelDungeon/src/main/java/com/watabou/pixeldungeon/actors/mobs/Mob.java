@@ -81,7 +81,8 @@ public abstract class Mob extends Char {
 	protected int EXP    = 1;
 	protected int maxLvl = 30;
 
-	private Char enemy;
+	@NonNull
+	private Char enemy = DUMMY;
 
 	protected boolean enemySeen;
 
