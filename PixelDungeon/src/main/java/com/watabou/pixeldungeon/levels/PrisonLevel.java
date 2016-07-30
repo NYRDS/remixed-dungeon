@@ -25,6 +25,7 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
@@ -143,7 +144,24 @@ public class PrisonLevel extends RegularLevel {
 			}
 		}
 	}
-	
+
+	@Override
+	public void onHeroDescend(int cell) {
+		super.onHeroDescend(cell);
+
+		if(isExit(cell)) {
+			int index = exitIndex(cell);
+			if(index == 1) {
+				for(Mob mob:mobs) {
+					if(mob instanceof NecromancerNPC) {
+						mobs.remove(mob);
+						break;
+					}
+				}
+			}
+		}
+	}
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {

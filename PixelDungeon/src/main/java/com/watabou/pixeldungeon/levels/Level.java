@@ -118,6 +118,8 @@ public abstract class Level implements Bundlable {
 		throw new TrackedRuntimeException(new Exception("no exit at this cell"));
 	}
 
+	public void onHeroDescend(int pos) {
+	}
 
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS
