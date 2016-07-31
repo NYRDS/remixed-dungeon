@@ -37,7 +37,7 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 4;
-    private static final int HEALTH	= 180;
+    private static final int HEALTH	= 200;
     private int skullTimer = 5;
     private static final int JUMP_DELAY = 6;
 
@@ -48,7 +48,7 @@ public class Lich extends Boss {
     public Lich() {
         hp(ht(HEALTH));
         EXP = 25;
-        defenseSkill = 20;
+        defenseSkill = 23;
 
         IMMUNITIES.add( Paralysis.class );
         IMMUNITIES.add( ToxicGas.class );
@@ -184,7 +184,7 @@ public class Lich extends Boss {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 12, 19 );
+        return Random.NormalIntRange( 14, 21 );
     }
 
     @Override
@@ -196,7 +196,7 @@ public class Lich extends Boss {
             }
         }
 
-        if (Random.Int(3) == 1 && this.isAlive()){
+        if (Random.Int(2) == 1 && this.isAlive()){
             jump();
         }
 
