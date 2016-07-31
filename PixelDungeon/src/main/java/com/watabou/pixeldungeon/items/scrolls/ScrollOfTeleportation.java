@@ -46,6 +46,11 @@ public class ScrollOfTeleportation extends Scroll {
 	
 	public static void teleportHero( Hero  hero ) {
 
+		if(Dungeon.level.isBossLevel()) {
+			GLog.w( TXT_NO_TELEPORT );
+			return;
+		}
+
 		int pos = Dungeon.level.randomRespawnCell();
 
 		if (!Dungeon.level.cellValid(pos)) {
