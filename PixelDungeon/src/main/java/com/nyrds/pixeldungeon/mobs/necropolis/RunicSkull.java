@@ -23,9 +23,9 @@ public class RunicSkull extends MultiKindMob {
 
 	public RunicSkull() {
 
-		hp(ht(50));
+		hp(ht(70));
 		EXP = 5;
-		defenseSkill = 10;
+		defenseSkill = 15;
 
 		pacified = true;
 		kind = Random.Int(4);
@@ -97,5 +97,10 @@ public class RunicSkull extends MultiKindMob {
 					public void call() {
 					}
 				});
+	}
+
+	@Override
+	public boolean canBePet(){
+		return false;
 	}
 }
