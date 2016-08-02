@@ -90,17 +90,26 @@ public class WndHatInfo extends Window {
 					return;
 				}
 
-				Iap.doPurchase(accessory, new Iap.IapCallback() {
-					@Override
-					public void onPurchaseOk() {
-						item.ownIt(true);
-						item.equip();
-						Dungeon.hero.updateLook();
-						onBackPressed();
-						parent.hide();
-						GameScene.show(new WndHats());
-					}
-				});
+				Game.instance().runOnUiThread(
+						new Runnable() {
+							@Override
+							public void run() {
+								Iap.doPurchase(accessory, new Iap.IapCallback() {
+									@Override
+									public void onPurchaseOk() {
+										item.ownIt(true);
+										item.equip();
+										Dungeon.hero.updateLook();
+										onBackPressed();
+										parent.hide();
+										if(!Game.isPaused()) {
+											GameScene.show(new WndHats());
+										}
+									}
+								});
+							}
+						}
+				);
 			}
 		};
 
