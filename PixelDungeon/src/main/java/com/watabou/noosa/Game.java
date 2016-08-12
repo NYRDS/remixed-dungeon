@@ -484,7 +484,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	private InterstitialPoint permissionsPoint;
 
-	public void doPermissionsRequest(InterstitialPoint returnTo, String[] permissions) {
+	public void doPermissionsRequest(@NonNull InterstitialPoint returnTo, String[] permissions) {
 		boolean havePermissions = true;
 		for (String permission : permissions) {
 			int checkResult = ActivityCompat.checkSelfPermission(this, permission);
