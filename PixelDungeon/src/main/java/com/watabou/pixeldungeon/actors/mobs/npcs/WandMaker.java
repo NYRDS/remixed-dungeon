@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -225,7 +227,7 @@ public class WandMaker extends NPC {
 			}
 		}
 		
-		public static void spawn( PrisonLevel level, Room room ) {
+		public static void spawn( PrisonLevel level, @NonNull Room room ) {
 			if (!spawned && Dungeon.depth > 6 && Random.Int( 10 - Dungeon.depth ) == 0) {
 				
 				WandMaker npc = new WandMaker();

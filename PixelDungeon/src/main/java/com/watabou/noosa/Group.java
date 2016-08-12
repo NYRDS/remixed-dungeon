@@ -124,7 +124,7 @@ public class Group extends Gizmo {
 	// Real removal
 	public Gizmo remove(Gizmo g) {
 		if (members.remove(g)) {
-			g.setParent(null);
+			g.destroy();
 			return g;
 		} else {
 			return null;
@@ -161,7 +161,7 @@ public class Group extends Gizmo {
 		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null) {
-				g.setParent(null);
+				g.destroy();
 			}
 		}
 		members.clear();
