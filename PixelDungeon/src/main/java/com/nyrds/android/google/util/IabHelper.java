@@ -77,13 +77,13 @@ public class IabHelper {
     String mDebugTag = "IabHelper";
 
     // Is setup done?
-    boolean mSetupDone = false;
+    volatile boolean mSetupDone = false;
 
     // Has this object been disposed of? (If so, we should ignore callbacks, etc)
-    boolean mDisposed = false;
+    volatile boolean mDisposed = false;
 
     // Do we need to dispose this object after an in-progress asynchronous operation?
-    boolean mDisposeAfterAsync = false;
+    volatile boolean mDisposeAfterAsync = false;
 
     // Are subscriptions supported?
     boolean mSubscriptionsSupported = false;
