@@ -17,6 +17,8 @@
 
 package com.watabou.noosa;
 
+import android.support.annotation.NonNull;
+
 public class Gizmo {
 
 	public boolean exists;
@@ -34,7 +36,11 @@ public class Gizmo {
 		active	= true;
 		setVisible(true);
 	}
-	
+
+	public boolean hasParent() {
+		return parent != null;
+	}
+
 	public void destroy() {
 		parent = null;
 	}
@@ -97,7 +103,7 @@ public class Gizmo {
 		return parent;
 	}
 
-	public void setParent(Group parent) {
+	public void setParent(@NonNull Group parent) {
 		this.parent = parent;
 	}
 

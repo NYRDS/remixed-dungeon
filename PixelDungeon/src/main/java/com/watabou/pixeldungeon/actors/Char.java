@@ -300,7 +300,7 @@ public abstract class Char extends Actor {
 
 	public void damage(int dmg, Object src) {
 
-		if (hp() <= 0) {
+		if (isAlive()) {
 			return;
 		}
 
@@ -329,7 +329,7 @@ public abstract class Char extends Actor {
 							CharSprite.NEGATIVE,
 					Integer.toString(dmg));
 		}
-		if (hp() <= 0) {
+		if (isAlive()) {
 			die(src);
 		}
 	}

@@ -14,7 +14,6 @@ import com.nyrds.android.google.util.Purchase;
 import com.nyrds.android.google.util.SkuDetails;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -69,7 +68,11 @@ public class Iap {
 
                 if (!result.isSuccess()) {
                     complain("Problem setting up in-app billing: " + result);
-                    mHelper.disposeWhenFinished();
+	                try {
+		                mHelper.disposeWhenFinished();
+	                } catch (IllegalArgumentException e) {
+		                EventCollector.logException(e,"damn iab lib");
+	                }
 
                     mHelper = null;
                     m_iapReady = false;
@@ -87,6 +90,8 @@ public class Iap {
             mHelper.queryInventoryAsync(true, items, null, mGotInventoryListener);
         } catch (IabHelper.IabAsyncInProgressException e) {
             EventCollector.logException(e);
+        } catch (IllegalStateException e) {
+	        EventCollector.logException(e, "damn iab lib");
         }
     }
 

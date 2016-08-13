@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -46,7 +45,7 @@ public class DeathStroke extends Image {
 	}
 	
 	public static void hit( Char ch, float angle ) {
-		if (ch.getSprite() != null) {
+		if (ch.getSprite().hasParent()) {
 			DeathStroke w = (DeathStroke)ch.getSprite().getParent().recycle( DeathStroke.class );
 			ch.getSprite().getParent().bringToFront( w );
 			w.reset( ch.getPos() );

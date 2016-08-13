@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.text.TextPaint;
 
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -262,7 +263,7 @@ public class SystemText extends Text {
 	}
 
 	@Override
-	public void setParent(Group parent) {
+	public void setParent(@NonNull Group parent) {
 		super.setParent(parent);
 
 		updateParent();

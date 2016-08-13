@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
+import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
@@ -13,6 +14,9 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
+import com.nyrds.pixeldungeon.items.necropolis.SoulShard;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -338,6 +342,10 @@ public class ItemFactory {
 		registerItemClass(PotionOfMight.class);
 		registerItemClass(HeartOfDarkness.class);
 		registerItemClass(GoldenSword.class);
+		registerItemClass(BlackSkull.class);
+		registerItemClass(SpiderArmor.class);
+		registerItemClass(BladeOfSouls.class);
+		registerItemClass(SoulShard.class);
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {

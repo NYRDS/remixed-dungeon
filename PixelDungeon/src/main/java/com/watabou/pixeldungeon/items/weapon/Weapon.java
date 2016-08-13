@@ -171,7 +171,7 @@ public class Weapon extends KindOfWeapon {
 				enchant( null );
 			}
 		} else {
-			if (enchant && enchatable) {
+			if (enchant) {
 				enchant( Enchantment.random() );
 			}
 		}
@@ -210,7 +210,11 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	public Weapon enchant( Enchantment ench ) {
-		enchantment = ench;
+		if(enchatable) {
+			enchantment = ench;
+		} else {
+			enchantment = null;
+		}
 		return this;
 	}
 	
