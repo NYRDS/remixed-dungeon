@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
@@ -82,7 +83,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			lastEntry.measure();
 			
 		} else {
-			lastEntry = PixelScene.createMultiline( text, 8 );
+			lastEntry = PixelScene.createMultiline( text, GuiProperties.regularFontSize());
 			lastEntry.maxWidth((int)width);
 			lastEntry.measure();
 			lastEntry.hardlight( color );
@@ -100,7 +101,9 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		if (texts > MAX_MESSAGES) {
 			for(int i = 0; i< getLength(); i++) {
 				if(members.get( i ) instanceof Text) {
-					remove ( members.get( i ) );
+					Text txt = (Text) members.get( i );
+					remove ( txt );
+					txt.destroy();
 					break;
 				}
 			}
