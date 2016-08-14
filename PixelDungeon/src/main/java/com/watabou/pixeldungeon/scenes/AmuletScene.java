@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -52,7 +53,7 @@ public class AmuletScene extends PixelScene {
 		
 		Text text = null;
 		if (!noText) {
-			text = createMultiline( TXT, 8 );
+			text = createMultiline( TXT, GuiProperties.regularFontSize() );
 			text.maxWidth(WIDTH);
 			text.measure();
 			add( text );

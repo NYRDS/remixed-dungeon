@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
@@ -33,7 +34,7 @@ public class RedButton extends TextButton {
 		bg = Chrome.get( Chrome.Type.BUTTON );
 		add( bg );
 		
-		text = PixelScene.createText( 9 );
+		text = PixelScene.createText(GuiProperties.titleFontSize());
 		add( text );
 	}
 }

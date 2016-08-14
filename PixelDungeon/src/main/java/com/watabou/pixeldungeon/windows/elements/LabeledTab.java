@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows.elements;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndTabbed;
@@ -18,7 +19,7 @@ public class LabeledTab extends Tab {
 	protected void createChildren() {
 		super.createChildren();
 
-		btLabel = PixelScene.createText(9);
+		btLabel = PixelScene.createText(GuiProperties.titleFontSize());
 		add(btLabel);
 	}
 

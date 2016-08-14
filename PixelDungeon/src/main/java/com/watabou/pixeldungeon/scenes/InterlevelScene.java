@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -166,7 +167,7 @@ public class InterlevelScene extends PixelScene {
 			break;
 		}
 
-		message = PixelScene.createText(text, 9);
+		message = PixelScene.createText(text, GuiProperties.titleFontSize());
 		message.measure();
 		message.x = (Camera.main.width - message.width()) / 2;
 		message.y = (Camera.main.height - message.height()) / 2;

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -59,7 +60,7 @@ public class WndInfoMob extends WndTitledMessage {
 
 			hp = (float)mob.hp() / mob.ht();
 			
-			name = PixelScene.createText( Utils.capitalize( mob.getName() ), 9 );
+			name = PixelScene.createText( Utils.capitalize( mob.getName() ), GuiProperties.titleFontSize());
 			name.hardlight( TITLE_COLOR );
 			name.measure();	
 			add( name );

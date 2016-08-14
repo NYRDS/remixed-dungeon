@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -115,7 +116,7 @@ public class TitleScene extends PixelScene {
 
 		btnDonate = new DonateButton();
 
-		pleaseSupport = PixelScene.createText(8);
+		pleaseSupport = PixelScene.createText(GuiProperties.titleFontSize());
 		pleaseSupport.text(btnDonate.getText());
 		pleaseSupport.measure();
 		pleaseSupport.setPos((w - pleaseSupport.width()) / 2,
@@ -153,7 +154,7 @@ public class TitleScene extends PixelScene {
 
 		if (freeInternalStorage < 2) {
 			Text lowInteralStorageWarning = PixelScene
-					.createMultiline(8);
+					.createMultiline(GuiProperties.regularFontSize());
 			lowInteralStorageWarning.text(Game
 					.getVar(R.string.TitleScene_InternalStorageLow));
 			lowInteralStorageWarning.measure();
@@ -246,7 +247,7 @@ public class TitleScene extends PixelScene {
 			image = new Image(Assets.DASHBOARD);
 			add(image);
 
-			label = createText(9);
+			label = createText(GuiProperties.titleFontSize());
 			add(label);
 		}
 

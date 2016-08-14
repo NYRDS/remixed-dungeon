@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -62,7 +63,7 @@ public class WndStory extends Window {
 	public WndStory( String text ) {
 		super( 0, 0, Chrome.get( Chrome.Type.SCROLL ) );
 
-		Text tf = PixelScene.createMultiline(text, 8);
+		Text tf = PixelScene.createMultiline(text, GuiProperties.regularFontSize());
 		tf.maxWidth(WIDTH - MARGIN * 2);
 		tf.measure();
 		tf.ra = bgR;

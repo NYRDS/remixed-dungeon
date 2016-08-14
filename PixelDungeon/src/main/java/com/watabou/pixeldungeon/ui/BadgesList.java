@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -96,7 +97,7 @@ public class BadgesList extends ScrollPane {
 			icon = new Image();
 			add( icon );
 			
-			label = PixelScene.createText( 8 );
+			label = PixelScene.createText(GuiProperties.regularFontSize());
 			add( label );
 		}
 		

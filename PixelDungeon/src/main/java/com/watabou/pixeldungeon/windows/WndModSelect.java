@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.android.util.Util;
@@ -49,7 +50,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 	private static Map<String, ModDesc> mModsMap = new HashMap<>();
 
 	public WndModSelect() {
-		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), 9);
+		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = MARGIN;
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
@@ -195,7 +196,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			@Override
 			public void run() {
 				if (downloadProgress == null) {
-					downloadProgress = GameScene.createMultiline(8);
+					downloadProgress = GameScene.createMultiline(GuiProperties.regularFontSize());
 					downloadProgress.maxWidth(WIDTH);
 					downloadProgress.setPos(0, 0);
 					Game.scene().add(downloadProgress);

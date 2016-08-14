@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -51,10 +52,10 @@ public class WelcomeScene extends PixelScene {
 		Text[] updTexts = new Text[upds.length];
 
 		for (int i = 0; i < upds.length; i++) {
-			updTexts[i] = createMultiline(upds[upds.length - i - 1], 8);
+			updTexts[i] = createMultiline(upds[upds.length - i - 1],  GuiProperties.regularFontSize());
 		}
 
-		Text title = createMultiline(TTL_Welcome, 16);
+		Text title = createMultiline(TTL_Welcome, GuiProperties.bigTitleFontSize());
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;

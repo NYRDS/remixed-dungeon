@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
@@ -36,14 +37,14 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 	WndSaveSlotSelect(final boolean _saving) {
 		String options[] = slotInfos();
 
-		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), 9);
+		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = MARGIN;
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
 		tfTitle.measure();
 		add(tfTitle);
 
-		Text tfMesage = PixelScene.createMultiline(windowText(), 8);
+		Text tfMesage = PixelScene.createMultiline(windowText(), GuiProperties.regularFontSize());
 		tfMesage.maxWidth(WIDTH - MARGIN * 2);
 		tfMesage.measure();
 		tfMesage.x = MARGIN;

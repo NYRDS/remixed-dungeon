@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import android.Manifest;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -34,7 +35,7 @@ public class ModsButton extends Button implements InterstitialPoint {
 		image = Icons.MODDING_MODE.get();
 		add( image );
 		
-		text = new SystemText(8);
+		text = new SystemText(GuiProperties.regularFontSize());
 		text.text(PixelDungeon.activeMod());
 		add(text);
 	}

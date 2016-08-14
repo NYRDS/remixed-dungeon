@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -28,8 +29,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class IconTitle extends Component {
 
-	private static final float FONT_SIZE = 9;
-	
 	private static final float GAP = 2;
 
 	protected Image imIcon;
@@ -57,7 +56,7 @@ public class IconTitle extends Component {
 		imIcon = new Image();
 		add( imIcon );
 		
-		tfLabel = PixelScene.createMultiline( FONT_SIZE );
+		tfLabel = PixelScene.createMultiline( GuiProperties.titleFontSize() );
 		tfLabel.hardlight( Window.TITLE_COLOR );
 		add( tfLabel );
 	}

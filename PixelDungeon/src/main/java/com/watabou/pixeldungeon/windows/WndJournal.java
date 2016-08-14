@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -60,7 +61,7 @@ public class WndJournal extends Window {
 		
 		resize( WIDTH, HEIGHT );
 
-		Text txtTitle = PixelScene.createText(TXT_TITLE, 9);
+		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		txtTitle.measure();
 		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (WIDTH - txtTitle.width()) / 2 );
@@ -111,7 +112,7 @@ public class WndJournal extends Window {
 		
 		@Override
 		protected void createChildren() {
-			feature = PixelScene.createText( 9 );
+			feature = PixelScene.createText(GuiProperties.titleFontSize());
 			add( feature );
 			
 			depth = Text.createBasicText( PixelScene.font1x );

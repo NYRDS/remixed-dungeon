@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -31,14 +32,14 @@ public class WndOptions extends Window {
 	public WndOptions( String title, String message, String... options ) {
 		super();
 		
-		Text tfTitle = PixelScene.createMultiline( title, 9 );
+		Text tfTitle = PixelScene.createMultiline( title, GuiProperties.titleFontSize() );
 		tfTitle.hardlight( TITLE_COLOR );
 		tfTitle.x = tfTitle.y = MARGIN;
 		tfTitle.maxWidth(WIDTH - MARGIN * 2);
 		tfTitle.measure();
 		add( tfTitle );
 		
-		Text tfMesage = PixelScene.createMultiline( message, 8 );
+		Text tfMesage = PixelScene.createMultiline( message, GuiProperties.regularFontSize() );
 		tfMesage.maxWidth(WIDTH - MARGIN * 2);
 		tfMesage.measure();
 		tfMesage.x = MARGIN;

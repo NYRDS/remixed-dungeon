@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
@@ -62,7 +63,7 @@ public class BadgesScene extends PixelScene {
 		panel.y = (h - ph) / 2;
 		add( panel );
 		
-		Text title = PixelScene.createText( TXT_TITLE, 9 );
+		Text title = PixelScene.createText( TXT_TITLE, GuiProperties.titleFontSize());
 		title.hardlight( Window.TITLE_COLOR );
 		title.measure();
 		title.x = align( (w - title.width()) / 2 );

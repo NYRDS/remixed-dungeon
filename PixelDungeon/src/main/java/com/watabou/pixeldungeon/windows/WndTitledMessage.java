@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -42,7 +43,7 @@ public class WndTitledMessage extends Window {
 		
 		Highlighter hl = new Highlighter( message );
 
-		Text normal = PixelScene.createMultiline(hl.text, 8);
+		Text normal = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 		if (hl.isHighlighted()) {
 			normal.mask = hl.inverted();
 		}
@@ -55,7 +56,7 @@ public class WndTitledMessage extends Window {
 
 		if (hl.isHighlighted()) {
 
-			Text highlighted = PixelScene.createMultiline(hl.text, 8);
+			Text highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 			highlighted.mask = hl.mask;
 			highlighted.maxWidth(normal.getMaxWidth());
 			highlighted.measure();

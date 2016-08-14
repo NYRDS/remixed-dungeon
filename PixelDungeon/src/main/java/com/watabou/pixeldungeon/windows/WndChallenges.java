@@ -17,16 +17,17 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import java.util.ArrayList;
-
+import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.Window;
+
+import java.util.ArrayList;
 
 public class WndChallenges extends Window {
 
@@ -45,7 +46,7 @@ public class WndChallenges extends Window {
 		
 		this.editable = editable;
 		
-		Text title = PixelScene.createText( TITLE, 9 );
+		Text title = PixelScene.createText( TITLE, GuiProperties.titleFontSize() );
 		title.hardlight( TITLE_COLOR );
 		title.measure();
 		title.x = PixelScene.align( camera, (WIDTH - title.width()) / 2 );

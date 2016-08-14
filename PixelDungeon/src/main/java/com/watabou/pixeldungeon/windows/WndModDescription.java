@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.input.Touchscreen.Touch;
@@ -32,14 +33,14 @@ public class WndModDescription extends Window {
 		yPos = 0;
 		
 		if (!option.equals(ModdingMode.REMIXED)) {
-			Text title = PixelScene.createMultiline(9);
+			Text title = PixelScene.createMultiline(GuiProperties.titleFontSize());
 			title.maxWidth(WIDTH);
 			title.text(Game.getVar(R.string.Mod_Name) + "\n ");
 			title.hardlight(Window.TITLE_COLOR);
 
 			place(title);
 
-			Text author = PixelScene.createMultiline(8);
+			Text author = PixelScene.createMultiline(GuiProperties.regularFontSize());
 			author.maxWidth(WIDTH);
 			author.text(Game.getVar(R.string.Mods_CreatedBy) + "\n" + Game.getVar(R.string.Mod_Author) + "\n ");
 
@@ -47,7 +48,7 @@ public class WndModDescription extends Window {
 
 			final String siteUrl = Game.getVar(R.string.Mod_Link);
 			if (siteUrl.length() > 0) {
-				Text site = PixelScene.createMultiline(8);
+				Text site = PixelScene.createMultiline(GuiProperties.regularFontSize());
 				site.maxWidth(WIDTH);
 				site.text(Game.getVar(R.string.Mods_AuthorSite) + "\n" + siteUrl + "\n ");
 				place(site);
@@ -66,7 +67,7 @@ public class WndModDescription extends Window {
 			final String emailUri = Game.getVar(R.string.Mod_Email);
 
 			if (emailUri.length() > 0) {
-				Text email = PixelScene.createMultiline(8);
+				Text email = PixelScene.createMultiline(GuiProperties.regularFontSize());
 				email.maxWidth(WIDTH);
 				email.text(Game.getVar(R.string.Mods_AuthorEmail) + emailUri + "\n ");
 				place(email);
@@ -85,7 +86,7 @@ public class WndModDescription extends Window {
 				add(emailTouch);
 			}
 
-			Text description = PixelScene.createMultiline(8);
+			Text description = PixelScene.createMultiline(GuiProperties.regularFontSize());
 			description.maxWidth(WIDTH);
 			description.text(Game.getVar(R.string.Mod_Description) + "\n ");
 			place(description);

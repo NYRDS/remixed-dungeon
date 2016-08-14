@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
@@ -118,7 +119,7 @@ public class WndDonate extends WndTabbed {
 			}
 
 			Text commonText = PixelScene.createMultiline(
-					Game.getVar(R.string.WndDonate_commonDonateText), 8);
+					Game.getVar(R.string.WndDonate_commonDonateText), GuiProperties.regularFontSize());
 			commonText.maxWidth(WIDTH);
 			commonText.measure();
 			commonText.setPos(0, pos);
@@ -126,7 +127,7 @@ public class WndDonate extends WndTabbed {
 			pos += commonText.height() + GAP;
 			
 			Text tabText = PixelScene.createMultiline(
-					text[level - 1], 8);
+					text[level - 1], GuiProperties.regularFontSize());
 			tabText.maxWidth(WIDTH - 10);
 			tabText.hardlight( Window.TITLE_COLOR );
 			tabText.measure();
@@ -136,7 +137,7 @@ public class WndDonate extends WndTabbed {
 			pos += tabText.height() + GAP;
 			
 			Text tabText2 = PixelScene.createMultiline(
-					text2[level - 1], 8);
+					text2[level - 1], GuiProperties.regularFontSize());
 			tabText2.maxWidth(WIDTH - 10);
 			tabText2.measure();
 			tabText2.setPos(0, pos);

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
@@ -37,7 +38,7 @@ public class WndBadge extends Window {
 		icon.Scale().set( 2 );
 		add( icon );
 		
-		Text info = PixelScene.createMultiline( badge.description, 8 );
+		Text info = PixelScene.createMultiline( badge.description, GuiProperties.regularFontSize());
 		info.maxWidth(WIDTH - MARGIN * 2);
 		info.measure();
 		

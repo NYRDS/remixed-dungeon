@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
@@ -219,7 +220,7 @@ public class StartScene extends PixelScene {
 
 		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1) )) {
 			Text text = PixelScene
-					.createMultiline(TXT_UNLOCK, 9);
+					.createMultiline(TXT_UNLOCK, GuiProperties.titleFontSize());
 			text.maxWidth((int) width);
 			text.measure();
 
@@ -235,7 +236,7 @@ public class StartScene extends PixelScene {
 
 		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) )) {
 			Text text = PixelScene
-					.createMultiline(TXT_UNLOCK_ELF, 9);
+					.createMultiline(TXT_UNLOCK_ELF, GuiProperties.titleFontSize());
 			text.maxWidth((int) width);
 			text.measure();
 
@@ -380,7 +381,7 @@ public class StartScene extends PixelScene {
 		protected void createChildren() {
 			super.createChildren();
 
-			secondary = createText(8);
+			secondary = createText(GuiProperties.smallFontSize());
 
 			add(secondary);
 		}
@@ -464,7 +465,7 @@ public class StartScene extends PixelScene {
 			avatar = new Image(Assets.AVATARS);
 			add(avatar);
 
-			name = PixelScene.createText(9);
+			name = PixelScene.createText(GuiProperties.titleFontSize());
 			add(name);
 
 			emitter = new Emitter();

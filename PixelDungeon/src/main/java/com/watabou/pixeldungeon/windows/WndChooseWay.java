@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.nyrds.pixeldungeon.ml.R;
@@ -49,7 +50,7 @@ public class WndChooseWay extends Window {
 		
 		Highlighter hl = new Highlighter( way1.desc() + "\n\n" + way2.desc() + "\n\n" + TXT_MESSAGE );
 		
-		Text normal = PixelScene.createMultiline( hl.text, 8 );
+		Text normal = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
 		if (hl.isHighlighted()) {
 			normal.mask = hl.inverted();
 		}
@@ -61,7 +62,7 @@ public class WndChooseWay extends Window {
 		
 		if (hl.isHighlighted()) {
 			
-			Text highlighted = PixelScene.createMultiline( hl.text, 8 );
+			Text highlighted = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
 			highlighted.mask = hl.mask;
 			
 			highlighted.maxWidth(normal.getMaxWidth());

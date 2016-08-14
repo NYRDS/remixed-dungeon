@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Game;
@@ -41,21 +42,21 @@ public class WndSelectLanguage extends Window {
 
 		int maxW = WIDTH - MARGIN * 2;
 
-		Text tfTitle = PixelScene.createMultiline(title, 9);
+		Text tfTitle = PixelScene.createMultiline(title, GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = MARGIN;
 		tfTitle.maxWidth(maxW);
 		tfTitle.measure();
 		add(tfTitle);
 
-		Text pleaseHelpTranslate = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_ImproveTranslation), 9);
+		Text pleaseHelpTranslate = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_ImproveTranslation), GuiProperties.titleFontSize());
 		pleaseHelpTranslate.maxWidth(maxW);
 		pleaseHelpTranslate.measure();
 		pleaseHelpTranslate.x = MARGIN;
 		pleaseHelpTranslate.y = tfTitle.y + tfTitle.height() + MARGIN;
 		add(pleaseHelpTranslate);
 
-		Text translateLink=PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), 9);
+		Text translateLink=PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
 		translateLink.hardlight(TITLE_COLOR);
 		translateLink.maxWidth(maxW);
 		translateLink.measure();

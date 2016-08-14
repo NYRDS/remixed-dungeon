@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
@@ -221,11 +222,11 @@ public class WndRanking extends WndTabbed {
 		
 		private float statSlot( Group parent, String label, String value, float pos ) {
 			
-			Text txt = PixelScene.createText( label, 7 );
+			Text txt = PixelScene.createText( label, GuiProperties.regularFontSize() );
 			txt.y = pos;
 			parent.add( txt );
 			
-			txt = PixelScene.createText( value, 7 );
+			txt = PixelScene.createText( value, GuiProperties.regularFontSize() );
 			txt.measure();
 			txt.x = PixelScene.align( WIDTH * 0.65f );
 			txt.y = pos;
@@ -328,7 +329,7 @@ public class WndRanking extends WndTabbed {
 			slot = new ItemSlot();
 			add( slot );
 			
-			name = PixelScene.createText( "?", 7 );
+			name = PixelScene.createText( "?", GuiProperties.smallFontSize());
 			add( name );
 			
 			super.createChildren();

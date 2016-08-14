@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -22,7 +23,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 	public void create() {
 		super.create();
 
-		Text title = createMultiline(TTL_Welcome, 16);
+		Text title = createMultiline(TTL_Welcome, GuiProperties.bigTitleFontSize());
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;
@@ -56,7 +57,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 		content.clear();
 
 		float yPos = 0;
-		Text text = createMultiline(Game.getVar(R.string.AllowStatisticsCollectionScene_Request), 8);
+		Text text = createMultiline(Game.getVar(R.string.AllowStatisticsCollectionScene_Request), GuiProperties.regularFontSize());
 		text.maxWidth((int) panel.innerWidth());
 		text.measure();
 

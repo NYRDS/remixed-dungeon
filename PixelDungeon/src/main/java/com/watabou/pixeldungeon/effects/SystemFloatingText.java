@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -21,7 +22,7 @@ public class SystemFloatingText extends SystemText {
 	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<>();
 
 	public SystemFloatingText() {
-		super(null, 12, false);
+		super(null, GuiProperties.mediumTitleFontSize(), false);
 
 		speed.y = -DISTANCE / LIFESPAN;
 	}

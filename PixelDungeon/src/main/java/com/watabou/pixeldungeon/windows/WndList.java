@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
@@ -43,7 +44,7 @@ public class WndList extends Window {
 				pos += GAP;
 			}
 			
-			Text dot = PixelScene.createText( DOT, 6 );
+			Text dot = PixelScene.createText( DOT, GuiProperties.smallFontSize());
 			dot.x = MARGIN;
 			dot.y = pos;
 			if (dotWidth == 0) {
@@ -52,7 +53,7 @@ public class WndList extends Window {
 			}
 			add( dot );
 			
-			Text item = PixelScene.createMultiline( items[i], 8 );
+			Text item = PixelScene.createMultiline( items[i], GuiProperties.regularFontSize() );
 			item.x = dot.x + dotWidth;
 			item.y = pos;
 			item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));

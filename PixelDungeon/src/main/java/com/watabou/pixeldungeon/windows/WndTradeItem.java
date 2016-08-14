@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -185,7 +186,7 @@ public class WndTradeItem extends Window {
 		}
 		
 		// Description
-		Text info = PixelScene.createMultiline( item.info(), 8 );
+		Text info = PixelScene.createMultiline( item.info(), GuiProperties.regularFontSize() );
 		info.maxWidth(WIDTH);
 		info.measure();
 		info.x = titlebar.left();

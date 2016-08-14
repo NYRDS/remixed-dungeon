@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.SystemText;
 import com.watabou.pixeldungeon.Chrome;
 
@@ -33,7 +34,7 @@ public class SystemRedButton extends TextButton{
 		bg = Chrome.get( Chrome.Type.BUTTON );
 		add( bg );
 		
-		text = new SystemText(9);
+		text = new SystemText(GuiProperties.titleFontSize());
 		
 		add( text );
 	}

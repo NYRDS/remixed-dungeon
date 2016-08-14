@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
@@ -42,7 +43,7 @@ public class WndHats extends Window {
 
 		//"Equipped Accessory" slot
 		//Title
-		Text slotTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_SlotTitle) + equippedName, 9);
+		Text slotTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_SlotTitle) + equippedName, GuiProperties.titleFontSize());
 		slotTitle.hardlight(0xFFFFFF);
 		slotTitle.maxWidth(WIDTH - MARGIN * 2);
 		slotTitle.measure();
@@ -71,7 +72,7 @@ public class WndHats extends Window {
 
 		//List of Accessories
 		//Title
-		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_ListTitle), 9);
+		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_ListTitle), GuiProperties.titleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - MARGIN * 2);
 		listTitle.measure();
@@ -103,7 +104,7 @@ public class WndHats extends Window {
 			//Text
 			String hatName = Accessory.getByName(item).name();
 
-			Text name = PixelScene.createMultiline(hatName, 8);
+			Text name = PixelScene.createMultiline(hatName, GuiProperties.regularFontSize());
 
 			name.hardlight(0xFFFFFF);
 
@@ -117,7 +118,7 @@ public class WndHats extends Window {
 
 			if (price != null) {
 				//Pricetag
-				SystemText priceTag = new SystemText(12);
+				SystemText priceTag = new SystemText(GuiProperties.mediumTitleFontSize());
 				priceTag.text(price);
 
 				priceTag.hardlight(0xFFFF00);

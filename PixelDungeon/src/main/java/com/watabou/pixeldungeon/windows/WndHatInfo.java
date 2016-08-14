@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
@@ -35,7 +36,7 @@ public class WndHatInfo extends Window {
 		hero.setSprite(new HeroSpriteDef(hero, item));
 
 		// Title
-		Text tfTitle = PixelScene.createMultiline(item.name(), 11);
+		Text tfTitle = PixelScene.createMultiline(item.name(), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - MARGIN);
 		tfTitle.measure();
@@ -44,7 +45,7 @@ public class WndHatInfo extends Window {
 		add(tfTitle);
 
 		//Pricetag
-		SystemText priceTag = new SystemText(12);
+		SystemText priceTag = new SystemText(GuiProperties.mediumTitleFontSize());
 		priceTag.text(price);
 
 		priceTag.hardlight(0xFFFF00);
@@ -63,7 +64,7 @@ public class WndHatInfo extends Window {
 		//Text
 		String hatText = Accessory.getByName(accessory).desc();
 
-		Text info = PixelScene.createMultiline(hatText, 8);
+		Text info = PixelScene.createMultiline(hatText, GuiProperties.regularFontSize());
 
 		info.hardlight(0xFFFFFF);
 

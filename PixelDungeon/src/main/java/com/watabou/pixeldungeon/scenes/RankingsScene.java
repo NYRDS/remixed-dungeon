@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -88,7 +89,7 @@ public class RankingsScene extends PixelScene {
 
 			float top = align(rowHeight / 2);
 
-			Text title = PixelScene.createText(TXT_TITLE, 9);
+			Text title = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 			title.hardlight(Window.TITLE_COLOR);
 			title.measure();
 			title.x = align((w - title.width()) / 2);
@@ -154,22 +155,22 @@ public class RankingsScene extends PixelScene {
 
 			createRecords();
 
-			Text label = PixelScene.createText(TXT_TOTAL, 8);
+			Text label = PixelScene.createText(TXT_TOTAL, GuiProperties.titleFontSize());
 			label.hardlight(DEFAULT_COLOR);
 			label.measure();
 			add(label);
 
-			Text happy = PixelScene.createText(Integer.toString(Rankings.INSTANCE.happyWonNumber), 8);
+			Text happy = PixelScene.createText(Integer.toString(Rankings.INSTANCE.happyWonNumber), GuiProperties.titleFontSize());
 			happy.hardlight(HAPPY_COLOR);
 			happy.measure();
 			add(happy);
 
-			Text won = PixelScene.createText("/" + Integer.toString(Rankings.INSTANCE.wonNumber), 8);
+			Text won = PixelScene.createText("/" + Integer.toString(Rankings.INSTANCE.wonNumber), GuiProperties.titleFontSize());
 			won.hardlight(Window.TITLE_COLOR);
 			won.measure();
 			add(won);
 
-			Text total = PixelScene.createText("/" + Rankings.INSTANCE.totalNumber, 8);
+			Text total = PixelScene.createText("/" + Rankings.INSTANCE.totalNumber, GuiProperties.titleFontSize());
 			total.hardlight(DEFAULT_COLOR);
 			total.measure();
 			total.x = align((w - total.width()) / 2);
@@ -185,7 +186,7 @@ public class RankingsScene extends PixelScene {
 
 		} else {
 
-			Text title = PixelScene.createText(TXT_NO_GAMES, 8);
+			Text title = PixelScene.createText(TXT_NO_GAMES, GuiProperties.titleFontSize());
 			title.hardlight(DEFAULT_COLOR);
 			title.measure();
 			title.x = align((w - title.width()) / 2);
@@ -295,7 +296,7 @@ public class RankingsScene extends PixelScene {
 			position = Text.createBasicText(PixelScene.font1x);
 			add(position);
 
-			desc = createMultiline(9);
+			desc = createMultiline(GuiProperties.regularFontSize());
 			add(desc);
 
 			classIcon = new Image();

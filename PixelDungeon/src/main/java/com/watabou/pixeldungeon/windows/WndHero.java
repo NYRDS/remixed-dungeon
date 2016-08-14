@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -110,7 +111,7 @@ public class WndHero extends WndTabbed {
 			Hero hero = Dungeon.hero; 
 
 			Text title = PixelScene.createText( 
-				Utils.format( TXT_TITLE, hero.lvl(), hero.className() ).toUpperCase( Locale.ENGLISH ), 9 );
+				Utils.format( TXT_TITLE, hero.lvl(), hero.className() ).toUpperCase( Locale.ENGLISH ), GuiProperties.titleFontSize());
 			title.hardlight( TITLE_COLOR );
 			title.measure();
 			add( title );
@@ -153,11 +154,11 @@ public class WndHero extends WndTabbed {
 		
 		private void statSlot( String label, String value ) {
 			
-			Text txt = PixelScene.createText( label, 8 );
+			Text txt = PixelScene.createText( label, GuiProperties.regularFontSize() );
 			txt.y = pos;
 			add( txt );
 			
-			txt = PixelScene.createText( value, 8 );
+			txt = PixelScene.createText( value, GuiProperties.regularFontSize() );
 			txt.measure();
 			txt.x = PixelScene.align( WIDTH * 0.65f );
 			txt.y = pos;
@@ -198,7 +199,7 @@ public class WndHero extends WndTabbed {
 				icon.y = pos;
 				add( icon );
 				
-				Text txt = PixelScene.createText( buff.toString(), 8 );
+				Text txt = PixelScene.createText( buff.toString(), GuiProperties.regularFontSize() );
 				txt.x = icon.width + GAP;
 				txt.y = pos + (int)(icon.height - txt.baseLine()) / 2;
 				add( txt );

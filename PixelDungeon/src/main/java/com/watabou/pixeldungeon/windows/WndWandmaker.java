@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -54,7 +55,7 @@ public class WndWandmaker extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( TXT_MESSAGE, 8 );
+		Text message = PixelScene.createMultiline( TXT_MESSAGE, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;

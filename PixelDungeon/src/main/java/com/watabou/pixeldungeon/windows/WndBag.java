@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import android.graphics.RectF;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.ColorBlock;
@@ -118,7 +119,7 @@ public class WndBag extends WndTabbed {
 		
 		int panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
 		
-		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), 9 );
+		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
 		txtTitle.maxWidth(panelWidth);
 		txtTitle.hardlight( TITLE_COLOR );
 		txtTitle.measure();

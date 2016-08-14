@@ -203,9 +203,7 @@ public class SystemText extends Text {
 						final int codepoint = text.codePointAt(offset);
 						int codepointCharCount = Character.charCount(codepoint);
 
-						if (Character.isWhitespace(codepoint)) {
-
-						} else {
+						if (!Character.isWhitespace(codepoint)) {
 							if (mask == null
 									|| (charIndex < mask.length && mask[charIndex])) {
 

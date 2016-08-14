@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
@@ -87,7 +88,7 @@ public class AboutScene extends PixelScene {
 
 	private Text createText(String text, Text upper)
 	{
-		Text multiline = createMultiline( text, 8 );
+		Text multiline = createMultiline( text, GuiProperties.regularFontSize() );
 		multiline.maxWidth(Camera.main.width * 5 / 6);
 		multiline.measure();
 		add( multiline );

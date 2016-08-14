@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -70,7 +71,7 @@ public class WndCatalogus extends WndTabbed {
 			resize( WIDTH_P, HEIGHT_P );
 		}
 		
-		txtTitle = PixelScene.createText( TXT_TITLE, 9 );
+		txtTitle = PixelScene.createText( TXT_TITLE, GuiProperties.titleFontSize() );
 		txtTitle.hardlight( Window.TITLE_COLOR );
 		txtTitle.measure();
 		add( txtTitle );
@@ -179,7 +180,7 @@ public class WndCatalogus extends WndTabbed {
 			sprite = new ItemSprite();
 			add( sprite );
 			
-			label = PixelScene.createText( 8 );
+			label = PixelScene.createText(GuiProperties.regularFontSize());
 			add( label );
 		}
 		

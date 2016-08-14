@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -54,7 +55,7 @@ public class Toast extends Component {
 		};
 		add( close );
 		
-		text = PixelScene.createText( 8 );
+		text = PixelScene.createText(GuiProperties.regularFontSize());
 		add( text );
 	}
 	

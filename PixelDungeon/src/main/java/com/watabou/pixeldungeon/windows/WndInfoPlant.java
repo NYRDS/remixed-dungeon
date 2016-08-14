@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -39,7 +40,7 @@ public class WndInfoPlant extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text info = PixelScene.createMultiline( 8 );
+		Text info = PixelScene.createMultiline(GuiProperties.regularFontSize());
 		add( info );
 		
 		info.text( plant.desc() );

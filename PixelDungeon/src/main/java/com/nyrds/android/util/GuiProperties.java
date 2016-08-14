@@ -25,4 +25,12 @@ public class GuiProperties {
 			return 6;
 		}
 	}
+
+	public static float bigTitleFontSize() {
+		return 16;
+	}
+
+	public static float mediumTitleFontSize() {
+		return 12;
+	}
 }

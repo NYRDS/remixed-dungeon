@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
@@ -100,7 +101,7 @@ public class WndClass extends WndTabbed {
 					pos += GAP;
 				}
 				
-				Text dot = PixelScene.createText( DOT, 6 );
+				Text dot = PixelScene.createText( DOT, GuiProperties.smallFontSize());
 				dot.x = MARGIN;
 				dot.y = pos;
 				if (dotWidth == 0) {
@@ -109,7 +110,7 @@ public class WndClass extends WndTabbed {
 				}
 				add( dot );
 				
-				Text item = PixelScene.createMultiline( items[i], 8 );
+				Text item = PixelScene.createMultiline( items[i], GuiProperties.regularFontSize() );
 				item.x = dot.x + dotWidth;
 				item.y = pos;
 				item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));
@@ -162,7 +163,7 @@ public class WndClass extends WndTabbed {
 			
 			Highlighter hl = new Highlighter( text );
 			
-			normal = PixelScene.createMultiline( hl.text, 8 );
+			normal = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
 			if (hl.isHighlighted()) {
 				normal.mask = hl.inverted();
 			}
@@ -173,7 +174,7 @@ public class WndClass extends WndTabbed {
 			add( normal );
 			
 			if (hl.isHighlighted()) {				
-				highlighted = PixelScene.createMultiline( hl.text, 8 );
+				highlighted = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
 				highlighted.mask = hl.mask;
 
 				highlighted.maxWidth(normal.getMaxWidth());
