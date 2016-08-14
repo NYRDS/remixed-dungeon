@@ -93,7 +93,9 @@ public class PixelDungeon extends Game {
 		}
 		
 		ModdingMode.setClassicTextRenderingMode(PixelDungeon.classicFont());
-		
+
+		EventCollector.logEvent("font", String.valueOf(PixelDungeon.classicFont()));
+
 		useLocale(uiLanguage());
 		ItemSpritesDescription.readItemsDesc();
 
