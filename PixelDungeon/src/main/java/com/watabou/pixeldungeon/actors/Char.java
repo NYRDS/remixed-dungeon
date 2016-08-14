@@ -300,7 +300,7 @@ public abstract class Char extends Actor {
 
 	public void damage(int dmg, Object src) {
 
-		if (isAlive()) {
+		if (!isAlive()) {
 			return;
 		}
 
