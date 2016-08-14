@@ -22,6 +22,7 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -32,8 +33,11 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 public class WndClass extends WndTabbed {
 	
 	private static final String TXT_MASTERY	= Game.getVar(R.string.WndClass_Mastery);
-	
-	private static final int WIDTH			= 110;
+
+	private static final int WIDTH_P	= 112;
+	private static final int WIDTH_L	= 160;
+
+	private static int WIDTH	    	= 110;
 	
 	private static final int TAB_WIDTH	= 50;
 	
@@ -42,7 +46,9 @@ public class WndClass extends WndTabbed {
 	public WndClass( HeroClass cl ) {
 		
 		super();
-		
+
+		WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
+
 		this.cl = cl;
 
 		PerksTab tabPerks = new PerksTab();

@@ -18,6 +18,8 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
@@ -42,7 +44,6 @@ import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -229,6 +230,7 @@ public enum HeroClass {
 		return title;
 	}
 
+	@NonNull
 	public String[] perks() {
 
 		switch (this) {
@@ -237,14 +239,13 @@ public enum HeroClass {
 		case MAGE:
 			return MAG_PERKS;
 		case ROGUE:
+		default:
 			return ROG_PERKS;
 		case HUNTRESS:
 			return HUN_PERKS;
 		case ELF:
 			return ELF_PERKS;
 		}
-
-		return null;
 	}
 
 	public int getGender() {
