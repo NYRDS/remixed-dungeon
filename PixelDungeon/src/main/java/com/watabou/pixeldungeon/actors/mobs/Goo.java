@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
-import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -49,7 +48,7 @@ public class Goo extends Boss {
 		spriteClass = GooSprite.class;
 		
 		float dice = Random.Float();
-		if( dice < 0.33 ) {
+		if( dice < 0.5 ) {
 			loot = new LloydsBeacon();
 		} else {
 			loot = new RingOfStoneWalking();
