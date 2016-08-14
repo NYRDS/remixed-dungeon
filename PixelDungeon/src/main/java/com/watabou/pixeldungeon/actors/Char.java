@@ -329,7 +329,7 @@ public abstract class Char extends Actor {
 							CharSprite.NEGATIVE,
 					Integer.toString(dmg));
 		}
-		if (isAlive()) {
+		if (hp()<=0) {
 			die(src);
 		}
 	}

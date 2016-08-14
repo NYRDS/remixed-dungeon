@@ -42,7 +42,7 @@ public class Gizmo {
 	}
 
 	public void destroy() {
-		parent = null;
+		setNullParent();
 	}
 	
 	public void update() {
@@ -103,6 +103,9 @@ public class Gizmo {
 		return parent;
 	}
 
+	public void setNullParent() {
+		this.parent = null;
+	}
 	public void setParent(@NonNull Group parent) {
 		this.parent = parent;
 	}

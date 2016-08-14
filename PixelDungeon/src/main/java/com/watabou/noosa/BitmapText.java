@@ -17,13 +17,13 @@
 
 package com.watabou.noosa;
 
-import java.nio.FloatBuffer;
+import android.graphics.RectF;
 
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
 
-import android.graphics.RectF;
+import java.nio.FloatBuffer;
 
 public class BitmapText extends Text {
 

@@ -82,10 +82,6 @@ public class Group extends Gizmo {
 			return g;
 		}
 
-		if (g.getParent() != null) {
-			g.getParent().remove(g);
-		}
-
 		members.add(g);
 		g.setParent(this);
 		return g;
@@ -96,10 +92,6 @@ public class Group extends Gizmo {
 		if (g.getParent() == this) {
 			sendToBack(g);
 			return g;
-		}
-
-		if (g.getParent() != null) {
-			g.getParent().remove(g);
 		}
 
 		members.add(0, g);
@@ -122,12 +114,9 @@ public class Group extends Gizmo {
 	}
 
 	// Real removal
-	public Gizmo remove(Gizmo g) {
+	public void remove(Gizmo g) {
 		if (members.remove(g)) {
-			g.destroy();
-			return g;
-		} else {
-			return null;
+			g.setNullParent();
 		}
 	}
 
