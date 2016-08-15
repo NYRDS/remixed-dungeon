@@ -27,6 +27,9 @@ public class SaveUtils {
 	private static final String EL_GAME_FILE = "elf.dat";
 	private static final String EL_DEPTH_FILE = "elf%d.dat";
 
+	private static final String NC_GAME_FILE = "necromancer.dat";
+	private static final String NC_DEPTH_FILE = "necromancer%d.dat";
+
 	static private boolean hasClassTag(HeroClass cl, String fname) {
 		switch (cl) {
 		case ROGUE:
@@ -39,6 +42,8 @@ public class SaveUtils {
 			return fname.contains("mage");
 		case ELF:
 			return fname.contains("elf");
+		case NECROMANCER:
+			return fname.contains("necromancer");
 		default:
 			throw new TrackedRuntimeException("unknown hero class!");
 		}
@@ -202,6 +207,8 @@ public class SaveUtils {
 			return RN_GAME_FILE;
 		case ELF:
 			return EL_GAME_FILE;
+		case NECROMANCER:
+			return NC_GAME_FILE;
 		default:
 			throw new TrackedRuntimeException("unknown hero class!");
 		}
@@ -233,6 +240,8 @@ public class SaveUtils {
 			return RN_DEPTH_FILE;
 		case ELF:
 			return EL_DEPTH_FILE;
+		case NECROMANCER:
+			return NC_DEPTH_FILE;
 		default:
 			throw new TrackedRuntimeException("unknown hero class!");
 		}

@@ -99,7 +99,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		String accessoryDescriptor = HERO_EMPTY_PNG;
 		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
-		String collarDescriptor = HERO_EMPTY_PNG;
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		String facialHairDescriptor = HERO_EMPTY_PNG;
 		String hairDescriptor = HERO_EMPTY_PNG;

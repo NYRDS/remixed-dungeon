@@ -160,7 +160,8 @@ public class Badges {
 		SPIDER_QUEEN_SLAIN(Game.getVar(R.string.Badges_SpiderQueen_Slain), 66),
 		SHADOW_LORD_SLAIN(Game.getVar(R.string.Badges_ShadowLord_Slain), 67),
 		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 65),
-		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT;
+		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
+		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER;
 
 		public boolean meta;
 
@@ -620,6 +621,9 @@ public class Badges {
 				case ELF:
 					badge = Badge.BOSS_SLAIN_1_ELF;
 					break;
+				case NECROMANCER:
+					badge = Badge.BOSS_SLAIN_1_NECROMANCER;
+					break;
 			}
 			local.add(badge);
 			if (!global.contains(badge)) {
@@ -631,7 +635,8 @@ public class Badges {
 					global.contains(Badge.BOSS_SLAIN_1_MAGE) &&
 					global.contains(Badge.BOSS_SLAIN_1_ROGUE) &&
 					global.contains(Badge.BOSS_SLAIN_1_HUNTRESS) &&
-					global.contains(Badge.BOSS_SLAIN_1_ELF)) {
+					global.contains(Badge.BOSS_SLAIN_1_ELF) &&
+					global.contains(Badge.BOSS_SLAIN_1_NECROMANCER)) {
 
 				badge = Badge.BOSS_SLAIN_1_ALL_CLASSES;
 				if (!global.contains(badge)) {
@@ -720,6 +725,9 @@ public class Badges {
 				break;
 			case ELF:
 				badge = Badge.MASTERY_ELF;
+				break;
+			case NECROMANCER:
+				badge = Badge.MASTERY_NECROMANCER;
 				break;
 		}
 
@@ -824,7 +832,8 @@ public class Badges {
 				global.contains(Badge.VICTORY_MAGE) &&
 				global.contains(Badge.VICTORY_ROGUE) &&
 				global.contains(Badge.VICTORY_HUNTRESS) &&
-				global.contains(Badge.VICTORY_ELF)) {
+				global.contains(Badge.VICTORY_ELF) &&
+				global.contains(Badge.VICTORY_NECROMANCER)) {
 
 			badge = Badge.VICTORY_ALL_CLASSES;
 			displayBadge(badge);

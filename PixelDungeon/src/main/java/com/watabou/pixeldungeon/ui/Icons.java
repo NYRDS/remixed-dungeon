@@ -59,7 +59,8 @@ public enum Icons {
 	MODDING_MODE,
 	QUIVER,
 	MIND_CONTROL,
-	GRAPHS;
+	GRAPHS,
+	NECROMANCER;
 
 	
 	public Image get() {
@@ -196,6 +197,8 @@ public enum Icons {
 			return get( HUNTRESS );
 		case ELF:
 			return get( ELF );
+		case NECROMANCER:
+			return get( NECROMANCER );
 		default:
 			return null;
 		}

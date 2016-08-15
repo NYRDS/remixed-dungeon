@@ -35,8 +35,10 @@ import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
+import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
@@ -44,6 +46,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.watabou.pixeldungeon.items.wands.WandOfAmok;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -62,7 +65,8 @@ public enum HeroClass {
 	MAGE(Game.getVar(R.string.HeroClass_Mag),MageArmor.class),
 	ROGUE(Game.getVar(R.string.HeroClass_Rog),RogueArmor.class),
 	HUNTRESS(Game.getVar(R.string.HeroClass_Hun),HuntressArmor.class),
-	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class);
+	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class),
+	NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer),ElfArmor.class);
 
 	private final Class<? extends ClassArmor> armorClass;
 
@@ -78,6 +82,8 @@ public enum HeroClass {
 			.getVars(R.array.HeroClass_HunPerks);
 	private static final String[] ELF_PERKS = Game
 			.getVars(R.array.HeroClass_ElfPerks);
+	private static final String[] NECROMANCER_PERKS = Game
+			.getVars(R.array.HeroClass_NecromancerPerks);
 
 	HeroClass(String title, Class<? extends ClassArmor> armorClass) {
 		this.title = title;
@@ -108,6 +114,10 @@ public enum HeroClass {
 		case ELF:
 			initElf(hero);
 			break;
+
+		case NECROMANCER:
+			initNecromancer(hero);
+			break;
 		}
 
 		hero.setGender(getGender());
@@ -131,6 +141,7 @@ public enum HeroClass {
 
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().identify().upgrade(100));
+		hero.collect(new WarlockArmor());
 
 		hero.collect(new BlackSkull());
 		hero.collect(new BladeOfSouls().identify());
@@ -161,6 +172,8 @@ public enum HeroClass {
 			return Badges.Badge.MASTERY_HUNTRESS;
 		case ELF:
 			return Badges.Badge.MASTERY_ELF;
+		case NECROMANCER:
+			return Badges.Badge.MASTERY_NECROMANCER;
 		}
 		return null;
 	}
@@ -226,6 +239,17 @@ public enum HeroClass {
 		QuickSlot.selectItem(CommonArrow.class, 0);
 	}
 
+	private static void initNecromancer(Hero hero) {
+		(hero.belongings.weapon = new Dagger()).identify();
+
+		WandOfAmok wand = new WandOfAmok();
+		hero.collect(wand.identify());
+
+		QuickSlot.selectItem(wand, 0);
+
+		new PotionOfHealing().setKnown();
+	}
+
 	public String title() {
 		return title;
 	}
@@ -245,6 +269,8 @@ public enum HeroClass {
 			return HUN_PERKS;
 		case ELF:
 			return ELF_PERKS;
+		case NECROMANCER:
+			return NECROMANCER_PERKS;
 		}
 	}
 
@@ -254,6 +280,7 @@ public enum HeroClass {
 		case MAGE:
 		case ROGUE:
 		case ELF:
+		case NECROMANCER:
 			return Utils.MASCULINE;
 		case HUNTRESS:
 			return Utils.FEMININE;
