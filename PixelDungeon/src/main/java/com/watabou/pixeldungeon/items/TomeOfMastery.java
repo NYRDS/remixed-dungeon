@@ -96,6 +96,9 @@ public class TomeOfMastery extends Item {
 				way1 = HeroSubClass.SCOUT;
 				way2 = HeroSubClass.SHAMAN;
 				break;
+			case NECROMANCER:
+				GLog.w( TXT_WAY_ALREADY_CHOSEN );
+				return;
 			}
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );
 			
