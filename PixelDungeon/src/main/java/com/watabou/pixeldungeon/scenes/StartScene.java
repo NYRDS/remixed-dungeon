@@ -207,7 +207,7 @@ public class StartScene extends PixelScene {
 			}
 
 			ChallengeButton challenge = new ChallengeButton();
-			challenge.setPos(w / 2 - challenge.width() / 2, top + shieldH*0.5f
+			challenge.setPos(w / 2 - challenge.width() / 2, top + shieldH * 2.5f
 					- challenge.height() / 2);
 			add(challenge);
 		}
