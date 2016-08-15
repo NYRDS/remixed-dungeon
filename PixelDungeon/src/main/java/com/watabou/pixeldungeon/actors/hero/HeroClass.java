@@ -38,6 +38,7 @@ import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
@@ -243,6 +244,8 @@ public enum HeroClass {
 		(hero.belongings.weapon = new Dagger()).identify();
 
 		WandOfAmok wand = new WandOfAmok();
+		SkeletonKey key = SkeletonKey.makeNewKey(7);
+		hero.collect(key);
 		hero.collect(wand.identify());
 
 		QuickSlot.selectItem(wand, 0);
