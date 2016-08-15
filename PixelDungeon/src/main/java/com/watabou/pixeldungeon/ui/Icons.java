@@ -184,7 +184,6 @@ public enum Icons {
 		case NECROMANCER:
 			icon.frame( icon.texture.uvRect( 110, 62, 126, 78 ) );
 			break;
-
 		}
 		return icon;
 	}
