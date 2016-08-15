@@ -25,6 +25,7 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.effects.Halo;
@@ -78,7 +79,7 @@ public class PrisonLevel extends RegularLevel {
 
 		if(Dungeon.depth==7) {
 			Room NecroExit = exitRoom(1);
-			if(NecroExit!=null) {
+			if(NecroExit!=null && Dungeon.heroClass != HeroClass.NECROMANCER) {
 				NecromancerNPC.spawn(this, exitRoom(1));
 			}
 		}
