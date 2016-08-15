@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">necromancer</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Necromancer STR.</item>
+        <item>Necromancer.</item>
+        <item>Necromancer.</item>
+        <item>Necromancer.</item>
+        <item>Necromancer.</item>>
+    </string-array>
+    <!-- Badges -->
+
+
+</resources>
