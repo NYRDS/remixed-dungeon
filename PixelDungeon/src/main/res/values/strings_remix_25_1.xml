@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Bone armor</string>
+    <string name="NecromancerArmor_Desc"></string>
+    <string name="NecromancerArmor_ACSpecial">CAUSE DEATH</string>
+    <string name="NecromancerArmor_NotNecromancer">Only necromancers can use this armor!</string>
+
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
     <string name="HeroClass_Necromancer">necromancer</string>
 
     <string-array name="HeroClass_NecromancerPerks">
-        <item>Necromancer STR.</item>
-        <item>Necromancer.</item>
-        <item>Necromancer.</item>
-        <item>Necromancer.</item>
-        <item>Necromancer.</item>>
+        <item>Mages start with a unique Wand of Magic Missile. This wand can be later \"disenchanted\" to upgrade another wand.</item>
+        <item>Mages recharge their wands faster.</item>
+        <item>When eaten, any piece of food restores 1 charge for all wands in the inventory.</item>
+        <item>Mages can use wands as a melee weapon.</item>
+        <item>Scrolls of Identify are identified from the beginning.</item>
     </string-array>
     <!-- Badges -->
 
