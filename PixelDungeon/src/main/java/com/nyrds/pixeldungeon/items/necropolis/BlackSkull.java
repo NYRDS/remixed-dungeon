@@ -62,7 +62,6 @@ public class BlackSkull extends Artifact {
 		} else {
 			return Game.getVar(R.string.BlackSkull_Info);
 		}
-
 	}
 
 	@Override
@@ -72,7 +71,6 @@ public class BlackSkull extends Artifact {
 		} else {
 			return Game.getVar(R.string.BlackSkull_Name);
 		}
-
 	}
 
 	@Override
