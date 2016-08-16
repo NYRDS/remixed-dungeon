@@ -172,14 +172,8 @@ public class SewerBossLevel extends RegularLevel {
 				map[i + getWidth()] = Terrain.EMPTY;
 			}
 		}
-		
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
+
+		placeEntranceSign();
 	}
 	
 	@Override

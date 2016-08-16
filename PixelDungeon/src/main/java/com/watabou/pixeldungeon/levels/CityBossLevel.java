@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -128,7 +129,7 @@ public class CityBossLevel extends Level {
 		}
 		
 		int sign = arenaDoor + getWidth() + 1;
-		map[sign] = Terrain.SIGN;
+		addLevelObject(new Sign(sign,Dungeon.tip(this)));
 	}
 	
 	public int pedestal( boolean left ) {

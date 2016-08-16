@@ -129,14 +129,8 @@ public class PrisonLevel extends RegularLevel {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-		
-		while (true) {
-			int pos = roomEntrance.random(this);
-			if (pos != entrance) {
-				map[pos] = Terrain.SIGN;
-				break;
-			}
-		}
+
+		placeEntranceSign();
 
 		if(Dungeon.depth == 7) {
 			Room NecroExit = exitRoom(1);

@@ -22,7 +22,7 @@
    "water":"water0.png",
    "entrance":[1,1],
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
-    "mobs" = [
+   "mobs" : [
       {"kind"="GoldenStatue","x"=10,"y"=10},
 	  {"kind"="GoldenStatue","x"=10,"y"=9},
 	  {"kind"="GoldenStatue","x"=10,"y"=8},
@@ -30,5 +30,8 @@
 	  {"kind"="GoldenStatue","x"=10,"y"=6},
 	  {"kind"="GoldenStatue","x"=5,"y"=10},
 	  {"kind"="GoldenStatue","x"=4,"y"=10}
-   ]
+   ],
+  "objects" : [
+    {"kind" = "Sign", "x" = 12, "y" = 10, "text" = "Yay! it is a custom sign!"}
+  ]
 }

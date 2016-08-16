@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.utils.Random;
 
 import java.util.Arrays;
@@ -64,8 +66,8 @@ public class DeadEndLevel extends Level {
 		map[entrance] = Terrain.ENTRANCE;
 		
 		setExit(-1,0);
-		
-		map[(SIZE / 2 + 1) * (getWidth() + 1)] = Terrain.SIGN;
+
+		addLevelObject(new Sign((SIZE / 2 + 1) * (getWidth() + 1), Dungeon.tip(this)));
 		
 		return true;
 	}

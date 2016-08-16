@@ -146,13 +146,7 @@ public class LastShopLevel extends RegularLevel {
 		}
 		
 		if (Imp.Quest.isCompleted()) {
-			while (true) {
-				int pos = roomEntrance.random(this);
-				if (pos != entrance) {
-					map[pos] = Terrain.SIGN;
-					break;
-				}
-			}
+			placeEntranceSign();
 		}
 	}
 	

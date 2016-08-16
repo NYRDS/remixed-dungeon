@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
@@ -548,7 +549,18 @@ public abstract class RegularLevel extends CommonLevel {
 	public int nMobs() {
 		return 3 + Dungeon.depth % 5 + Random.Int( 4 );
 	}
-	
+
+	protected void placeEntranceSign() {
+		while (true) {
+			int pos = roomEntrance.random(this);
+			if (pos != entrance) {
+				Sign sign = new Sign(pos, Dungeon.tip(this));
+				addLevelObject(sign);
+				break;
+			}
+		}
+	}
+
 	@Override
 	protected void createMobs() {
 		int nMobs = nMobs();
