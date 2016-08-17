@@ -21,6 +21,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
@@ -67,7 +68,7 @@ public enum HeroClass {
 	ROGUE(Game.getVar(R.string.HeroClass_Rog),RogueArmor.class),
 	HUNTRESS(Game.getVar(R.string.HeroClass_Hun),HuntressArmor.class),
 	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class),
-	NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer),ElfArmor.class);
+	NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer),NecromancerArmor.class);
 
 	private final Class<? extends ClassArmor> armorClass;
 

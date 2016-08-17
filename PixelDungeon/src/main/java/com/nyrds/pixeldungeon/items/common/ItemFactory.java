@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
+import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
@@ -346,6 +347,7 @@ public class ItemFactory {
 		registerItemClass(SpiderArmor.class);
 		registerItemClass(BladeOfSouls.class);
 		registerItemClass(SoulShard.class);
+		registerItemClass(NecromancerArmor.class);
 	}
 	
 	public static Class<? extends Item> itemClassRandom() {

@@ -13,8 +13,8 @@ public class NecromancerArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
 	public NecromancerArmor() {
-		image = 17;
-		hasHelmet = true;
+		image = 21;
+		hasHelmet = false;
 	}	
 	
 	@Override
