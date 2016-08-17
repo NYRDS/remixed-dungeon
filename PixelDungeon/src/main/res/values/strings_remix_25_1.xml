@@ -17,7 +17,7 @@
     <string name="HeroClass_Necromancer">necromancer</string>
 
     <string-array name="HeroClass_NecromancerPerks">
-        <item>Necromancers start with a unique Necromancer's robe.</item>
+        <item>Necromancers start with a unique Necromancer\'s robe.</item>
         <item>Potion of Healing are identified from the beginning.</item>
     </string-array>
 
@@ -25,7 +25,7 @@
     <string name="Deathling_Name">deathling</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name_Objective">deathling</string>
-    <string name="Deathling_Desc">It's like death's little cousin.</string>
+    <string name="Deathling_Desc">It\'s like death\'s little cousin.</string>
 
     <!-- Badges -->
 
