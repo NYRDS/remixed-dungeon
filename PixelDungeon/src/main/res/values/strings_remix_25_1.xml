@@ -2,6 +2,12 @@
 <resources>
 
     <!-- Item descriptions -->
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">The Black Skull has been awakened!</string>
+    <string name="BlackSkull_Ressurrect">The Black Skull has raised a killed monster!</string>
+    <string name="BlackSkull_Deactivated">The Black Skull is dormant, once more...</string>
+
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Bone armor</string>
     <string name="NecromancerArmor_Info">Bones, brotha</string>
