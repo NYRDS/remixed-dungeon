@@ -141,23 +141,6 @@ public class PrisonLevel extends RegularLevel {
 	}
 
 	@Override
-	public void onHeroDescend(int cell) {
-		super.onHeroDescend(cell);
-
-		if(isExit(cell)) {
-			int index = exitIndex(cell);
-			if(index == 1) {
-				for(Mob mob:mobs) {
-					if(mob instanceof NecromancerNPC) {
-						mobs.remove(mob);
-						break;
-					}
-				}
-			}
-		}
-	}
-
-	@Override
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
