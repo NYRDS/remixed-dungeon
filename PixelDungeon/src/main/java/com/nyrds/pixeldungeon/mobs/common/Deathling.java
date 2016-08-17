@@ -48,7 +48,7 @@ public class Deathling extends UndeadMob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(5, 4 + getModifier());
+        return Random.NormalIntRange(1, 4 + getModifier());
     }
 
     @Override
@@ -58,7 +58,7 @@ public class Deathling extends UndeadMob {
 
     @Override
     public int dr() {
-        return 4 + getModifier();
+        return 1 + getModifier();
     }
 
 

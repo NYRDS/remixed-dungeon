@@ -1,5 +1,5 @@
 {
-   "texture" = "mobs/enslavedsoul.png",
+   "texture" = "mobs/deathling.png",
    "width" = 16,
    "height" = 16,
    "zapEffect" = "Shadow",

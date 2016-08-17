@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.items.common.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.Deathling;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -36,7 +35,7 @@ public class NecromancerRobe extends ClassArmor {
 		Char ch = getCurUser();
 
 		Wound.hit(ch);
-			ch.damage(5 + Dungeon.hero.lvl(), this);
+			ch.damage(4 + Dungeon.hero.lvl(), this);
 			Buff.detach(ch, Sungrass.Health.class);
 
 			int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
