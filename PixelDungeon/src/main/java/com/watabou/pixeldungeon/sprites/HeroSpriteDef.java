@@ -107,7 +107,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		if(classDescriptor.equals("MAGE_WARLOCK")
 				|| classDescriptor.equals("MAGE_BATTLEMAGE")
-				|| classDescriptor.equals("WARRIOR_BERSERKER")){
+				|| classDescriptor.equals("WARRIOR_BERSERKER")
+				|| classDescriptor.equals("NECROMANCER_NONE")){
 			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
