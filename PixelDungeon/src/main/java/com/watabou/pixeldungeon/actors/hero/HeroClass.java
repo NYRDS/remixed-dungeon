@@ -243,8 +243,11 @@ public enum HeroClass {
 	}
 
 	private static void initNecromancer(Hero hero) {
+		hero.ht(hero.ht() - 5);
+		hero.hp(hero.ht());
+
 		(hero.belongings.weapon = new Dagger()).identify();
-		(hero.belongings.armor = new NecromancerRobe()).identify();
+		(hero.belongings.armor = new NecromancerRobe()).upgrade(2).identify();
 
 		WandOfAmok wand = new WandOfAmok();
 		SkeletonKey key = SkeletonKey.makeNewKey(7);
