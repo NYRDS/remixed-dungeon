@@ -2,6 +2,8 @@
 <resources>
 
     <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">You cannot change your way!</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">The Black Skull has been awakened!</string>
