@@ -22,6 +22,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
@@ -243,6 +244,7 @@ public enum HeroClass {
 
 	private static void initNecromancer(Hero hero) {
 		(hero.belongings.weapon = new Dagger()).identify();
+		(hero.belongings.armor = new NecromancerRobe()).identify();
 
 		WandOfAmok wand = new WandOfAmok();
 		SkeletonKey key = SkeletonKey.makeNewKey(7);

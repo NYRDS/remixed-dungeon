@@ -8,6 +8,10 @@
     <string name="NecromancerArmor_ACSpecial">NECROMANCY</string>
     <string name="NecromancerArmor_NotNecromancer">Only necromancers can use this armor!</string>
 
+    <!-- STRINGS OF ClothArmor CLASS -->
+    <string name="NecromancerRobe_Name">cloth armor</string>
+    <string name="NecromancerRobe_Desc">This lightweight armor offers basic protection.</string>
+
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
     <string name="HeroClass_Necromancer">necromancer</string>
