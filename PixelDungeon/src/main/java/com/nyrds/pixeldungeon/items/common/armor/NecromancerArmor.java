@@ -13,7 +13,7 @@ public class NecromancerArmor extends ClassArmor {
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
 	public NecromancerArmor() {
-		image = 21;
+		image = 22;
 		hasHelmet = false;
 	}	
 	
@@ -36,10 +36,5 @@ public class NecromancerArmor extends ClassArmor {
 			GLog.w( TXT_NOT_NECROMANCER );
 			return false;
 		}
-	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.NecromancerArmor_Desc);
 	}
 }

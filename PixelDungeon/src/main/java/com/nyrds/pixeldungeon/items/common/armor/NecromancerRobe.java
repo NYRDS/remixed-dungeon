@@ -5,10 +5,10 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 
 
 public class NecromancerRobe extends Armor {
-	
+
 	public NecromancerRobe() {
 		super( 1 );
-		image = 22;
+		image = 23;
 	}
 	
 	@Override

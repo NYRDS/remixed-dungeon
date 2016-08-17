@@ -119,9 +119,4 @@ abstract public class ClassArmor extends Armor {
 	public int price() {
 		return 0;
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.ClassArmor_Desc);
-	}
 }

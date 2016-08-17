@@ -144,7 +144,7 @@ public enum HeroClass {
 
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().identify().upgrade(100));
-		hero.collect(new WarlockArmor());
+		hero.collect(new NecromancerArmor());
 
 		hero.collect(new BlackSkull());
 		hero.collect(new BladeOfSouls().identify());
