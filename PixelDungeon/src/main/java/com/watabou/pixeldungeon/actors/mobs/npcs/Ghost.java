@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -110,10 +111,16 @@ public class Ghost extends NPC {
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
-		
+
+		boolean persuade = false;
+
+		if (hero.heroClass.equals(HeroClass.NECROMANCER)){
+			return true;
+		}
+
 		Sample.INSTANCE.play( Assets.SND_GHOST );
 		
-		if (Quest.given) {
+		if (Quest.given || !persuade) {
 			
 			Item item = Quest.alternative ?
 				hero.belongings.getItem( RatSkull.class ) :
