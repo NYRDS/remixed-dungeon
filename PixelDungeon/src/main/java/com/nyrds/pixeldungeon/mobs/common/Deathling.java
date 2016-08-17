@@ -32,10 +32,7 @@ public class Deathling extends UndeadMob {
         baseSpeed = 1.1f;
 
         EXP = 0;
-        maxLvl = 15;
-
-        loot = Gold.class;
-        lootChance = 0.02f;
+        maxLvl = 32;
     }
 
 
