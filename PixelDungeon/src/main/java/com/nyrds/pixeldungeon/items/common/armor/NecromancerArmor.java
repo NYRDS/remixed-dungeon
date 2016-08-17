@@ -1,11 +1,20 @@
 package com.nyrds.pixeldungeon.items.common.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.Deathling;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
+import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
+
+//TODO: Limit number of deathling to 4, make it so that if necromancer exceeds limit of deathlings he will lose health each turn. Number of health lost is equal to (deathlingExcess * heroLevel)
 
 public class NecromancerArmor extends ClassArmor {
 
@@ -23,8 +32,21 @@ public class NecromancerArmor extends ClassArmor {
 	
 	@Override
 	public void doSpecial() {
-		
-		// Do stuff
+		Char ch = getCurUser();
+
+		Wound.hit(ch);
+		ch.damage(4 + Dungeon.hero.lvl() * 2, this);
+		Buff.detach(ch, Sungrass.Health.class);
+
+		for (int i =0 ; i < 3; i++){
+			int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
+			if (Dungeon.level.cellValid(spawnPos)) {
+				Mob pet = Mob.makePet(new Deathling(), getCurUser());
+				pet.setPos(spawnPos);
+
+				Dungeon.level.spawnMob(pet);
+			}
+		}
 	}
 	
 	@Override
