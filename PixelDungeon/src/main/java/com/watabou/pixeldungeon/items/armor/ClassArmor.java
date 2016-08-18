@@ -38,7 +38,7 @@ abstract public class ClassArmor extends Armor {
 	}
 	
 	public ClassArmor() {
-		super( 1 );
+		super( 6 );
 	}
 	
 	public static Armor upgrade ( Hero owner, Armor armor ) {
