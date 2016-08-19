@@ -123,6 +123,8 @@ public abstract class Level implements Bundlable {
 		return objects.get(pos);
 	}
 
+	public void onHeroDescend(int cell) {
+	}
 
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS

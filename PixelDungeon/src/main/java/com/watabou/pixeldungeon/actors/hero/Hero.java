@@ -822,6 +822,8 @@ public class Hero extends Char {
 		int stairs = action.dst;
 		if (getPos() == stairs && Dungeon.level.isExit(getPos())) {
 
+			Dungeon.level.onHeroDescend(getPos());
+
 			clearActions();
 
 			Hunger hunger = buff(Hunger.class);
