@@ -179,12 +179,13 @@ public class StartScene extends PixelScene {
 			add(shield);
 		}
 		if (PixelDungeon.landscape()) {
-			float shieldW = width / 5;
+
+			float shieldW = width / 6;
 			float shieldH = Math.min(centralHeight, shieldW);
 			top = title.y + title.height + (centralHeight - shieldH) / 2;
 			for (int i = 0; i < classes.length; i++) {
 				ClassShield shield = shields.get(classes[i]);
-				shield.setRect(left + i * shieldW - shieldW/2, top, shieldW, shieldH);
+				shield.setRect(left + i * shieldW, top, shieldW, shieldH);
 			}
 
 			ChallengeButton challenge = new ChallengeButton();
