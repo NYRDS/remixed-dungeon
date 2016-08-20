@@ -180,7 +180,7 @@ public class StartScene extends PixelScene {
 		}
 		if (PixelDungeon.landscape()) {
 
-			float shieldW = width / 6;
+			float shieldW = width / classes.length;
 			float shieldH = Math.min(centralHeight, shieldW);
 			top = title.y + title.height + (centralHeight - shieldH) / 2;
 			for (int i = 0; i < classes.length; i++) {
