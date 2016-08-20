@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
@@ -71,12 +70,6 @@ public class StartScene extends PixelScene {
 	private static final String TXT_YES = Game.getVar(R.string.StartScene_Yes);
 	private static final String TXT_NO = Game.getVar(R.string.StartScene_No);
 
-	private static final String TXT_UNLOCK = Game
-			.getVar(R.string.StartScene_Unlock);
-
-	private static final String TXT_UNLOCK_ELF = Game
-			.getVar(R.string.StartScene_UnlockElf);
-	
 	private static final String TXT_WIN_THE_GAME = Game
 			.getVar(R.string.StartScene_WinGame);
 
@@ -96,9 +89,11 @@ public class StartScene extends PixelScene {
 
 	private boolean huntressUnlocked;
 	private boolean elfUnlocked;
-	
-	private Group unlock;
-	private Group unlockElf;
+
+	float width, height;
+	float bottom;
+
+	private Text unlock;
 
 	private static HeroClass curClass;
 
@@ -113,7 +108,6 @@ public class StartScene extends PixelScene {
 		int w = Camera.main.width;
 		int h = Camera.main.height;
 
-		float width, height;
 		if (PixelDungeon.landscape()) {
 			width = WIDTH_L;
 			height = HEIGHT_L;
@@ -124,7 +118,8 @@ public class StartScene extends PixelScene {
 
 		float left = (w - width) / 2;
 		float top = (h - height) / 2;
-		float bottom = h - top;
+
+		bottom = h - top;
 
 		Archs archs = new Archs();
 		archs.setSize(w, h);
@@ -213,43 +208,11 @@ public class StartScene extends PixelScene {
 			add(challenge);
 		}
 
-		unlock = new Group();
+		unlock = PixelScene.createMultiline(GuiProperties.titleFontSize());
 		add(unlock);
-		
-		unlockElf = new Group();
-		add(unlockElf);
 
-		if (!(huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1) )) {
-			Text text = PixelScene
-					.createMultiline(TXT_UNLOCK, GuiProperties.titleFontSize());
-			text.maxWidth((int) width);
-			text.measure();
-
-			float pos = (bottom - BUTTON_HEIGHT)
-					+ (BUTTON_HEIGHT - text.height()) / 2;
-			
-			text.hardlight(0xFFFF00);
-			text.x = PixelScene.align(w / 2 - text.width() / 2);
-			text.y = PixelScene.align(pos);
-			unlock.add(text);
-
-		}
-
-		if (!(elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2) )) {
-			Text text = PixelScene
-					.createMultiline(TXT_UNLOCK_ELF, GuiProperties.titleFontSize());
-			text.maxWidth((int) width);
-			text.measure();
-
-			float pos = (bottom - BUTTON_HEIGHT)
-					+ (BUTTON_HEIGHT - text.height()) / 2;
-			
-			text.hardlight(0xFFFF00);
-			text.x = PixelScene.align(w / 2 - text.width() / 2);
-			text.y = PixelScene.align(pos);
-			unlockElf.add(text);
-
-		}
+		huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
+		elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
 		
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(Camera.main.width - btnExit.width(), 0);
@@ -259,6 +222,19 @@ public class StartScene extends PixelScene {
 		updateClass(HeroClass.values()[PixelDungeon.lastClass()]);
 
 		fadeIn();
+	}
+
+	private void updateUnlockText(String text){
+		unlock.maxWidth((int) width);
+		unlock.text(text);
+		unlock.measure();
+
+		float pos = (bottom - BUTTON_HEIGHT)
+				+ (BUTTON_HEIGHT - unlock.height()) / 2;
+
+		unlock.hardlight(0xFFFF00);
+		unlock.x = PixelScene.align(Camera.main.width / 2 - unlock.width() / 2);
+		unlock.y = PixelScene.align(pos);
 	}
 
 	@Override
@@ -282,23 +258,22 @@ public class StartScene extends PixelScene {
 		shields.get(curClass = cl).highlight(true);
 
 		if (cl == HeroClass.HUNTRESS && !huntressUnlocked) {
+			updateUnlockText(Game.getVar(R.string.StartScene_Unlock));
 			unlock.setVisible(true);
-			unlockElf.setVisible(false);
 			btnLoad.setVisible(false);
 			btnNewGame.setVisible(false);
 			return;
 		}
 		
 		if (cl == HeroClass.ELF && !elfUnlocked) {
-			unlock.setVisible(false);
-			unlockElf.setVisible(true);
+			updateUnlockText(Game.getVar(R.string.StartScene_UnlockElf));
+			unlock.setVisible(true);
 			btnLoad.setVisible(false);
 			btnNewGame.setVisible(false);
 			return;
 		}
-		
+
 		unlock.setVisible(false);
-		unlockElf.setVisible(false);
 
 		GamesInProgress.Info info = GamesInProgress.check(curClass);
 		if (info != null) {
