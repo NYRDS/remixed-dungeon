@@ -92,8 +92,7 @@ public class StartScene extends PixelScene {
 	private boolean elfUnlocked;
 	private boolean necromancerUnlocked;
 
-	float width, height;
-	float bottom;
+	private float width, height, bottom;
 
 	private Text unlock;
 
