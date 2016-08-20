@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
@@ -89,6 +90,7 @@ public class StartScene extends PixelScene {
 
 	private boolean huntressUnlocked;
 	private boolean elfUnlocked;
+	private boolean necromancerUnlocked;
 
 	float width, height;
 	float bottom;
@@ -213,7 +215,8 @@ public class StartScene extends PixelScene {
 
 		huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
 		elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
-		
+		necromancerUnlocked = BuildConfig.DEBUG;
+
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(Camera.main.width - btnExit.width(), 0);
 		add(btnExit);
@@ -224,7 +227,7 @@ public class StartScene extends PixelScene {
 		fadeIn();
 	}
 
-	private void updateUnlockText(String text){
+	private void updateUnlockLabel(String text){
 		unlock.maxWidth((int) width);
 		unlock.text(text);
 		unlock.measure();
@@ -235,6 +238,10 @@ public class StartScene extends PixelScene {
 		unlock.hardlight(0xFFFF00);
 		unlock.x = PixelScene.align(Camera.main.width / 2 - unlock.width() / 2);
 		unlock.y = PixelScene.align(pos);
+
+		unlock.setVisible(true);
+		btnLoad.setVisible(false);
+		btnNewGame.setVisible(false);
 	}
 
 	@Override
@@ -258,18 +265,17 @@ public class StartScene extends PixelScene {
 		shields.get(curClass = cl).highlight(true);
 
 		if (cl == HeroClass.HUNTRESS && !huntressUnlocked) {
-			updateUnlockText(Game.getVar(R.string.StartScene_Unlock));
-			unlock.setVisible(true);
-			btnLoad.setVisible(false);
-			btnNewGame.setVisible(false);
+			updateUnlockLabel(Game.getVar(R.string.StartScene_Unlock));
 			return;
 		}
 		
 		if (cl == HeroClass.ELF && !elfUnlocked) {
-			updateUnlockText(Game.getVar(R.string.StartScene_UnlockElf));
-			unlock.setVisible(true);
-			btnLoad.setVisible(false);
-			btnNewGame.setVisible(false);
+			updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockElf));
+			return;
+		}
+
+		if (cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
+			updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockNecromancer));
 			return;
 		}
 

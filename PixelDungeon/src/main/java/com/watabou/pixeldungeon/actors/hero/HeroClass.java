@@ -140,8 +140,6 @@ public enum HeroClass {
 			hero.collect(new ScrollOfTeleportation());
 		}
 
-		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
-
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().identify().upgrade(100));
 		hero.collect(new NecromancerArmor());

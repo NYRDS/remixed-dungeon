@@ -35,6 +35,9 @@
     <string name="Deathling_Name_Objective">deathling</string>
     <string name="Deathling_Desc">It\'s like death\'s little cousin.</string>
 
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">You cannot unlock necromancer yet.</string>>
+
     <!-- Badges -->
 
 
