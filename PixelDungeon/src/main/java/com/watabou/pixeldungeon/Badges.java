@@ -46,6 +46,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -211,6 +212,7 @@ public class Badges {
 
 	private static void store(Bundle bundle, HashSet<Badge> badges) {
 		int count = 0;
+
 		String names[] = new String[badges.size()];
 
 		for (Badge badge : badges) {
@@ -242,8 +244,13 @@ public class Badges {
 
 				global = restore(bundle);
 
-			} catch (IOException e) {
+			} catch (FileNotFoundException e) {
 				global = new HashSet<>();
+			}
+
+			catch (IOException e) {
+				global = new HashSet<>();
+				EventCollector.logException(e, "Badges.loadGloabal");
 			}
 		}
 	}
@@ -254,7 +261,6 @@ public class Badges {
 		}
 
 		if (saveNeeded) {
-
 			Bundle bundle = new Bundle();
 			store(bundle, global);
 
@@ -264,7 +270,7 @@ public class Badges {
 				output.close();
 				saveNeeded = false;
 			} catch (IOException e) {
-				EventCollector.logException(e);
+				EventCollector.logException(e,"Badges.saveGlobal");
 			}
 		}
 	}
