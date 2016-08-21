@@ -230,7 +230,6 @@ public class Badges {
 	}
 
 	public static void loadGlobal() {
-		if (global == null) {
 			try {
 				InputStream input = Game.instance().openFileInput(BADGES_FILE);
 
@@ -252,7 +251,6 @@ public class Badges {
 				global = new HashSet<>();
 				EventCollector.logException(e, "Badges.loadGloabal");
 			}
-		}
 	}
 
 	public static void saveGlobal() {
@@ -932,12 +930,6 @@ public class Badges {
 
 	public static boolean isUnlocked(Badge badge) {
 		return global.contains(badge);
-	}
-
-	public static void disown(Badge badge) {
-		loadGlobal();
-		global.remove(badge);
-		saveNeeded = true;
 	}
 
 	public static List<Badge> filtered(boolean global) {
