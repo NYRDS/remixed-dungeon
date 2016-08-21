@@ -192,7 +192,7 @@ public class Bundle {
 	public <T extends Bundlable> Collection<T> getCollection( String key, Class<T> type ) {
 
 		if(!data.has(key)) {
-			return new Vector<T>();
+			return new Vector<>();
 		}
 
 		List<T> list = new ArrayList<>();
@@ -207,7 +207,7 @@ public class Bundle {
 			}
 		} catch (JSONException e) {
 			Util.storeEventInAcra("Bundable.getCollection", e);
-			return new Vector<T>();
+			return new Vector<>();
 		}
 		
 		return list;
