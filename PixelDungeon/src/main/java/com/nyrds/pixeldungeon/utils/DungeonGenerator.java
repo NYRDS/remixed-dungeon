@@ -50,8 +50,10 @@ public class DungeonGenerator {
 	static JSONObject mLevels;
 	static JSONObject mGraph;
 
+	static private HashMap<String, String> mLevelTiles;
+
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
-	private static HashMap<String, Integer>                mStoryMap;
+	static private HashMap<String, Integer>                mStoryMap;
 
 	static {
 		initLevelsMap();
@@ -182,6 +184,10 @@ public class DungeonGenerator {
 			throw new TrackedRuntimeException(e);
 		}
 
+	}
+
+	public static String tiles(String id) {
+		return mLevelTiles.get(id);
 	}
 
 	public static Position descend(Position current) {
