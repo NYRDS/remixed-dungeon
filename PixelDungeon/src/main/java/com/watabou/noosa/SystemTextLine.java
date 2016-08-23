@@ -21,6 +21,7 @@ import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.opengl.GLES20;
 
+import com.nyrds.android.util.GlUtils;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
 
@@ -47,9 +48,13 @@ public class SystemTextLine extends Visual {
 		this();
 
 		texture = new SmartTexture(bitmap);
-		texture.filter(GLES20.GL_LINEAR_MIPMAP_LINEAR, GLES20.GL_LINEAR);
-		GLES20.glGenerateMipmap(GLES20.GL_TEXTURE_2D);
 
+		if(GlUtils.isNpotMipmapsSupported()) {
+			texture.filter(GLES20.GL_LINEAR_MIPMAP_LINEAR, GLES20.GL_NEAREST);
+			GLES20.glGenerateMipmap(GLES20.GL_TEXTURE_2D);
+		} else {
+			texture.filter(GLES20.GL_LINEAR, GLES20.GL_LINEAR);
+		}
 		frame( new RectF( 0, 0, 1, 1 ) );
 	}
 
