@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.RectF;
 
-import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -41,30 +40,23 @@ public class DungeonTilemap extends Tilemap {
 	private int[] mGroundMap;
 	private int[] mDecoMap;
 
-	public DungeonTilemap(String tiles, String tilesEx) {
+	public DungeonTilemap(String tiles) {
 		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
 		instance = this;
-
 		int levelWidth = Dungeon.level.getWidth();
 		map(Dungeon.level.map, levelWidth);
 
 		int mSize = Dungeon.level.getWidth() * Dungeon.level.getHeight();
 
-		if (tilesEx != null) {
-			if (ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesEx)
-					&& ModdingMode.isResourceExistInMod(tiles)) {
-				return;
-			}
-
-			mGroundLayer = new Tilemap(tilesEx, new TextureFilm(tilesEx, SIZE, SIZE));
+		if (getTileset().size() == 16 * 16) {
+			mGroundLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
 			mGroundMap = new int[mSize];
 			mGroundLayer.map(buildGroundMap(), levelWidth);
 
-			mDecoLayer = new Tilemap(tilesEx, new TextureFilm(tilesEx, SIZE, SIZE));
+			mDecoLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
 			mDecoMap = new int[mSize];
 			mDecoLayer.map(buildDecoMap(), levelWidth);
 		}
-
 	}
 
 	private static boolean useExTiles() {
@@ -84,75 +76,75 @@ public class DungeonTilemap extends Tilemap {
 
 	private static int decoCell(int tileType, int cell) {
 		switch (tileType) {
-		case Terrain.GRASS:
-			return 3 * 16 + cellStableRandom(cell, 0, 2);
-		case Terrain.HIGH_GRASS:
-			return 3 * 16 + cellStableRandom(cell, 6, 8);
+			case Terrain.GRASS:
+				return 3 * 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.HIGH_GRASS:
+				return 3 * 16 + cellStableRandom(cell, 6, 8);
 
-		case Terrain.PEDESTAL:
-			return 8 * 16 + 0;
-		case Terrain.STATUE:
-		case Terrain.STATUE_SP:
-			return 8 * 16 + 1;
+			case Terrain.PEDESTAL:
+				return 8 * 16 + 0;
+			case Terrain.STATUE:
+			case Terrain.STATUE_SP:
+				return 8 * 16 + 1;
 
-		case Terrain.DOOR:
-			return 5 * 16 + 0;
-		case Terrain.OPEN_DOOR:
-			return 5 * 16 + 1;
+			case Terrain.DOOR:
+				return 5 * 16 + 0;
+			case Terrain.OPEN_DOOR:
+				return 5 * 16 + 1;
 
-		case Terrain.LOCKED_DOOR:
-			return 5 * 16 + 2;
+			case Terrain.LOCKED_DOOR:
+				return 5 * 16 + 2;
 
-		case Terrain.LOCKED_EXIT:
-			return 5 * 16 + 3;
-		case Terrain.UNLOCKED_EXIT:
-			return 5 * 16 + 4;
+			case Terrain.LOCKED_EXIT:
+				return 5 * 16 + 3;
+			case Terrain.UNLOCKED_EXIT:
+				return 5 * 16 + 4;
 
-		case Terrain.ENTRANCE:
-			return 5 * 16 + 5;
+			case Terrain.ENTRANCE:
+				return 5 * 16 + 5;
 
-		case Terrain.EXIT:
-			return 5 * 16 + 6;
+			case Terrain.EXIT:
+				return 5 * 16 + 6;
 
-		case Terrain.BARRICADE:
-			return 7 * 16 + cellStableRandom(cell, 3, 5);
+			case Terrain.BARRICADE:
+				return 7 * 16 + cellStableRandom(cell, 3, 5);
 
-		case Terrain.BOOKSHELF:
-			return 7 * 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.BOOKSHELF:
+				return 7 * 16 + cellStableRandom(cell, 0, 2);
 
-		case Terrain.EMBERS:
-			return 6 * 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.EMBERS:
+				return 6 * 16 + cellStableRandom(cell, 0, 2);
 
-		case Terrain.EMPTY_DECO:
-			return 9 * 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.EMPTY_DECO:
+				return 9 * 16 + cellStableRandom(cell, 0, 2);
 
-		case Terrain.WALL_DECO:
-			return 10 * 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.WALL_DECO:
+				return 10 * 16 + cellStableRandom(cell, 0, 2);
 
-		case Terrain.TOXIC_TRAP:
-			return 12 * 16 + 0;
-		case Terrain.FIRE_TRAP:
-			return 12 * 16 + 1;
-		case Terrain.PARALYTIC_TRAP:
-			return 12 * 16 + 2;
-		case Terrain.INACTIVE_TRAP:
-			return 12 * 16 + 7;
-		case Terrain.POISON_TRAP:
-			return 12 * 16 + 3;
-		case Terrain.ALARM_TRAP:
-			return 12 * 16 + 4;
-		case Terrain.LIGHTNING_TRAP:
-			return 12 * 16 + 5;
-		case Terrain.GRIPPING_TRAP:
-			return 12 * 16 + 8;
-		case Terrain.SUMMONING_TRAP:
-			return 12 * 16 + 6;
+			case Terrain.TOXIC_TRAP:
+				return 12 * 16 + 0;
+			case Terrain.FIRE_TRAP:
+				return 12 * 16 + 1;
+			case Terrain.PARALYTIC_TRAP:
+				return 12 * 16 + 2;
+			case Terrain.INACTIVE_TRAP:
+				return 12 * 16 + 7;
+			case Terrain.POISON_TRAP:
+				return 12 * 16 + 3;
+			case Terrain.ALARM_TRAP:
+				return 12 * 16 + 4;
+			case Terrain.LIGHTNING_TRAP:
+				return 12 * 16 + 5;
+			case Terrain.GRIPPING_TRAP:
+				return 12 * 16 + 8;
+			case Terrain.SUMMONING_TRAP:
+				return 12 * 16 + 6;
 
-		case Terrain.SIGN:
-			return 7 * 16 + 6;
+			case Terrain.SIGN:
+				return 7 * 16 + 6;
 
-		default:
-			return 15;
+			default:
+				return 15;
 		}
 	}
 
@@ -174,73 +166,73 @@ public class DungeonTilemap extends Tilemap {
 		}
 
 		switch (tileType) {
-		case Terrain.EMPTY:
-		case Terrain.GRASS:
-		case Terrain.EMPTY_DECO:
-		case Terrain.SECRET_ALARM_TRAP:
-		case Terrain.SECRET_FIRE_TRAP:
-		case Terrain.SECRET_GRIPPING_TRAP:
-		case Terrain.SECRET_LIGHTNING_TRAP:
-		case Terrain.SECRET_PARALYTIC_TRAP:
-		case Terrain.SECRET_POISON_TRAP:
-		case Terrain.SECRET_SUMMONING_TRAP:
-		case Terrain.SECRET_TOXIC_TRAP:
-		case Terrain.INACTIVE_TRAP:
-		case Terrain.ALARM_TRAP:
-		case Terrain.FIRE_TRAP:
-		case Terrain.GRIPPING_TRAP:
-		case Terrain.LIGHTNING_TRAP:
-		case Terrain.PARALYTIC_TRAP:
-		case Terrain.POISON_TRAP:
-		case Terrain.SUMMONING_TRAP:
-		case Terrain.TOXIC_TRAP:
-		case Terrain.ENTRANCE:
-		case Terrain.EXIT:
-		case Terrain.EMBERS:
-		case Terrain.PEDESTAL:
-		case Terrain.BARRICADE:
-		case Terrain.HIGH_GRASS:
-		case Terrain.SIGN:
-		case Terrain.STATUE:
-		case Terrain.BOOKSHELF:
-			return cellStableRandom(cell, 0, 2);
+			case Terrain.EMPTY:
+			case Terrain.GRASS:
+			case Terrain.EMPTY_DECO:
+			case Terrain.SECRET_ALARM_TRAP:
+			case Terrain.SECRET_FIRE_TRAP:
+			case Terrain.SECRET_GRIPPING_TRAP:
+			case Terrain.SECRET_LIGHTNING_TRAP:
+			case Terrain.SECRET_PARALYTIC_TRAP:
+			case Terrain.SECRET_POISON_TRAP:
+			case Terrain.SECRET_SUMMONING_TRAP:
+			case Terrain.SECRET_TOXIC_TRAP:
+			case Terrain.INACTIVE_TRAP:
+			case Terrain.ALARM_TRAP:
+			case Terrain.FIRE_TRAP:
+			case Terrain.GRIPPING_TRAP:
+			case Terrain.LIGHTNING_TRAP:
+			case Terrain.PARALYTIC_TRAP:
+			case Terrain.POISON_TRAP:
+			case Terrain.SUMMONING_TRAP:
+			case Terrain.TOXIC_TRAP:
+			case Terrain.ENTRANCE:
+			case Terrain.EXIT:
+			case Terrain.EMBERS:
+			case Terrain.PEDESTAL:
+			case Terrain.BARRICADE:
+			case Terrain.HIGH_GRASS:
+			case Terrain.SIGN:
+			case Terrain.STATUE:
+			case Terrain.BOOKSHELF:
+				return cellStableRandom(cell, 0, 2);
 
-		case Terrain.WALL:
-		case Terrain.WALL_DECO:
-		case Terrain.DOOR:
-		case Terrain.OPEN_DOOR:
-		case Terrain.LOCKED_DOOR:
-		case Terrain.LOCKED_EXIT:
-		case Terrain.UNLOCKED_EXIT:
-		case Terrain.SECRET_DOOR:
-			return 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.WALL:
+			case Terrain.WALL_DECO:
+			case Terrain.DOOR:
+			case Terrain.OPEN_DOOR:
+			case Terrain.LOCKED_DOOR:
+			case Terrain.LOCKED_EXIT:
+			case Terrain.UNLOCKED_EXIT:
+			case Terrain.SECRET_DOOR:
+				return 16 + cellStableRandom(cell, 0, 2);
 
-		case Terrain.ALCHEMY:
-			return 4 * 16 + cellStableRandom(cell, 6, 8);
+			case Terrain.ALCHEMY:
+				return 4 * 16 + cellStableRandom(cell, 6, 8);
 
-		case Terrain.EMPTY_WELL:
-			return 4 * 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.EMPTY_WELL:
+				return 4 * 16 + cellStableRandom(cell, 0, 2);
 
-		case Terrain.WELL:
-			return 4 * 16 + cellStableRandom(cell, 3, 5);
+			case Terrain.WELL:
+				return 4 * 16 + cellStableRandom(cell, 3, 5);
 
-		case Terrain.EMPTY_SP:
-		case Terrain.STATUE_SP:
-			return 2 * 16 + cellStableRandom(cell, 0, 2);
+			case Terrain.EMPTY_SP:
+			case Terrain.STATUE_SP:
+				return 2 * 16 + cellStableRandom(cell, 0, 2);
 
-		case Terrain.CHASM_FLOOR:
-			return 11 * 16 + 0;
-		case Terrain.CHASM_FLOOR_SP:
-			return 11 * 16 + 1;
-		case Terrain.CHASM_WALL:
-			return 11 * 16 + 2;
-		case Terrain.CHASM_WATER:
-			return 11 * 16 + 3;
-		case Terrain.CHASM:
-			return 11 * 16 + 4;
+			case Terrain.CHASM_FLOOR:
+				return 11 * 16 + 0;
+			case Terrain.CHASM_FLOOR_SP:
+				return 11 * 16 + 1;
+			case Terrain.CHASM_WALL:
+				return 11 * 16 + 2;
+			case Terrain.CHASM_WATER:
+				return 11 * 16 + 3;
+			case Terrain.CHASM:
+				return 11 * 16 + 4;
 
-		default:
-			return 15;
+			default:
+				return 15;
 		}
 	}
 

@@ -17,10 +17,12 @@
 
 package com.watabou.noosa;
 
-import java.util.HashMap;
+import android.graphics.RectF;
+
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-import android.graphics.RectF;
+
+import java.util.HashMap;
 
 public class TextureFilm {
 	
@@ -44,7 +46,7 @@ public class TextureFilm {
 	public TextureFilm( SmartTexture texture, int width ) {
 		this( texture, width, texture.height );
 	}
-	
+
 	public TextureFilm( Object tx, int width, int height ) {
 		
 		SmartTexture texture = TextureCache.get( tx );
@@ -85,7 +87,11 @@ public class TextureFilm {
 			}
 		}
 	}
-	
+
+	public int size() {
+		return frames.size();
+	}
+
 	public void add( Object id, RectF rect ) {
 		frames.put( id, rect );
 	}

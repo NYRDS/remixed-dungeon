@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels;
 
 import android.support.annotation.Nullable;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -454,6 +455,20 @@ public abstract class Level implements Bundlable {
 
 	public int tunnelTile() {
 		return feeling == Feeling.CHASM ? Terrain.EMPTY_SP : Terrain.EMPTY;
+	}
+
+	public String getTilesTex() {
+
+		if(tilesTexEx()==null) {
+			return tilesTex();
+		}
+
+		if (ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesTexEx())
+				&& ModdingMode.isResourceExistInMod(tilesTex())) {
+			return tilesTex();
+		}
+
+		return tilesTexEx();
 	}
 
 	public String tilesTex() {
