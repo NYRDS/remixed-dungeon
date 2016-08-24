@@ -21,8 +21,7 @@ public class NecromancerRobe extends UsableArmor {
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
-	public HashSet<Mob> pets   = new HashSet<>();
-
+	private Mob pet;
 
 	public NecromancerRobe() {
 		super( 1 );
@@ -38,6 +37,8 @@ public class NecromancerRobe extends UsableArmor {
 	public void doSpecial() {
 		Char ch = getCurUser();
 
+		handlePet();
+
 		Wound.hit(ch);
 		ch.damage(4 + Dungeon.hero.lvl(), this);
 		Buff.detach(ch, Sungrass.Health.class);
@@ -45,9 +46,8 @@ public class NecromancerRobe extends UsableArmor {
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
 
 		if (Dungeon.level.cellValid(spawnPos)) {
-			Mob pet = Mob.makePet(new Deathling(), getCurUser());
+			pet = Mob.makePet(new Deathling(), getCurUser());
 			pet.setPos(spawnPos);
-			pets.add(pet);
 			Dungeon.level.spawnMob(pet);
 		}
 	}
@@ -59,6 +59,15 @@ public class NecromancerRobe extends UsableArmor {
 		} else {
 			GLog.w( TXT_NOT_NECROMANCER );
 			return false;
+		}
+	}
+
+	private void handlePet(){
+		if (pet != null) {
+			if (pet.isAlive()) {
+				pet.remove();
+			}
+				pet.clear();
 		}
 	}
 }
