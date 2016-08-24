@@ -6,7 +6,7 @@ import android.opengl.GLES20;
  * Created by mike on 24.08.2016.
  */
 public class GlUtils {
-	static Boolean npotMipmaps;
+	static private Boolean npotMipmaps;
 
 	static public boolean isNpotMipmapsSupported() {
 		if(npotMipmaps!=null) {
