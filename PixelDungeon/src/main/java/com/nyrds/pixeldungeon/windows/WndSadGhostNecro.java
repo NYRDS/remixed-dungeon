@@ -37,7 +37,7 @@ public class WndSadGhostNecro extends Window {
 		
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( new BlackSkull()) );
-		titlebar.label( Utils.capitalize( "Necromancy" ) );
+		titlebar.label( Utils.capitalize( Game.getVar(R.string.Necromancy_Title) ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		

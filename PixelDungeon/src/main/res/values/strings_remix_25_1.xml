@@ -40,6 +40,8 @@
     <string name="StartScene_UnlockNecromancer">To unlock this character class, slay the Lich boss with any other class.</string>>
 
     <!-- Window descriptions -->
+    <string name="Necromancy_Title">Necromancy</string>>
+
     <!-- STRINGS OF WndSadGhostNecro CLASS -->
     <string name="WndSadGhostNecro_Text">\"This spirit seems to be struggling in his curse. It appears that he wants something of me. If I use my necromantic powers, I\'ll be able to persuade him that I already done as he asked. That way I won\'t need to waste my time here. Should I do such a thing?\"</string>>
     <string name="WndSadGhostNecro_Yes">Yes, bend it to your will.</string>>
