@@ -14,12 +14,15 @@ import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 
-//TODO: Limit number of deathling to 2, make it so that if necromancer exceeds limit of deathlings he will lose health each turn. Number of health lost is equal to (deathlingExcess * heroLevel)
+import java.util.HashSet;
 
 public class NecromancerRobe extends UsableArmor {
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
+
+	public HashSet<Mob> pets   = new HashSet<>();
+
 
 	public NecromancerRobe() {
 		super( 1 );
@@ -44,7 +47,7 @@ public class NecromancerRobe extends UsableArmor {
 		if (Dungeon.level.cellValid(spawnPos)) {
 			Mob pet = Mob.makePet(new Deathling(), getCurUser());
 			pet.setPos(spawnPos);
-
+			pets.add(pet);
 			Dungeon.level.spawnMob(pet);
 		}
 	}
