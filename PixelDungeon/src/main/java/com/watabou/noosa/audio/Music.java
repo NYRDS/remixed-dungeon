@@ -17,15 +17,17 @@
 
 package com.watabou.noosa.audio;
 
-import java.io.File;
-import java.io.IOException;
-
-import com.nyrds.android.util.ModdingMode;
-import com.watabou.noosa.Game;
-
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+
+import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.Utils;
+
+import java.io.File;
+import java.io.IOException;
 
 public enum Music implements MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener {
@@ -65,7 +67,10 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			if (file!=null && file.exists()) {
 				player.setDataSource(file.getAbsolutePath());
 			} else {
-				fromAsset(assetName);
+				AssetFileDescriptor afd = Game.instance().getAssets().openFd(assetName);
+				player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),
+						afd.getLength());
+				afd.close();
 			}
 			
 			player.setOnPreparedListener(this);
@@ -81,13 +86,6 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 		}
 	}
 
-	private void fromAsset(String assetName) throws IOException {
-		AssetFileDescriptor afd = Game.instance().getAssets().openFd(assetName);
-		player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),
-				afd.getLength());
-		afd.close();
-	}
-
 	public void mute() {
 		lastPlayed = null;
 		stop();
@@ -100,6 +98,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 
 	@Override
 	public boolean onError(MediaPlayer mp, int what, int extra) {
+		EventCollector.logEvent("Music", Utils.format("%d %d",what, extra));
 		if (player != null) {
 			player.release();
 			player = null;
@@ -144,9 +143,5 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 		} else if (!isPlaying() && value) {
 			play(lastPlayed, lastLooping);
 		}
-	}
-
-	public boolean isEnabled() {
-		return enabled;
 	}
 }
