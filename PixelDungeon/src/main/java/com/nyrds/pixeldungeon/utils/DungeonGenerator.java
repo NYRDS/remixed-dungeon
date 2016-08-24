@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
@@ -50,7 +52,7 @@ public class DungeonGenerator {
 	static JSONObject mLevels;
 	static JSONObject mGraph;
 
-	static private HashMap<String, String> mLevelTiles;
+	static private HashMap<String, String> mLevelTiles = new HashMap<>();
 
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
 	static private HashMap<String, Integer>                mStoryMap;
@@ -179,6 +181,10 @@ public class DungeonGenerator {
 			next.xs = levelSize.getInt(0);
 			next.ys = levelSize.getInt(1);
 
+			if(nextLevelDesc.has("tiles")) {
+				mLevelTiles.put(nextLevelId, nextLevelDesc.getString("tiles"));
+			}
+
 			return next;
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
@@ -186,6 +192,7 @@ public class DungeonGenerator {
 
 	}
 
+	@Nullable
 	public static String tiles(String id) {
 		return mLevelTiles.get(id);
 	}
