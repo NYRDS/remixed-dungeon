@@ -49,7 +49,6 @@ import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.FetidRatSprite;
 import com.watabou.pixeldungeon.sprites.GhostSprite;
-import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndSadGhost;
 import com.watabou.utils.Bundle;
