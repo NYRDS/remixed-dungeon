@@ -53,6 +53,7 @@ public class DungeonGenerator {
 	static JSONObject mGraph;
 
 	static private HashMap<String, String> mLevelTiles = new HashMap<>();
+	static private HashMap<String, String> mLevelWater = new HashMap<>();
 
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
 	static private HashMap<String, Integer>                mStoryMap;
@@ -185,6 +186,10 @@ public class DungeonGenerator {
 				mLevelTiles.put(nextLevelId, nextLevelDesc.getString("tiles"));
 			}
 
+			if(nextLevelDesc.has("water")) {
+				mLevelWater.put(nextLevelId, nextLevelDesc.getString("water"));
+			}
+
 			return next;
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
@@ -195,6 +200,11 @@ public class DungeonGenerator {
 	@Nullable
 	public static String tiles(String id) {
 		return mLevelTiles.get(id);
+	}
+
+	@Nullable
+	public static String water(String id) {
+		return mLevelWater.get(id);
 	}
 
 	public static Position descend(Position current) {

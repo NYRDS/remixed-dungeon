@@ -140,7 +140,7 @@ public class GameScene extends PixelScene {
 		add(terrain);
 
 		water = new SkinnedBlock(Dungeon.level.getWidth() * DungeonTilemap.SIZE,
-				Dungeon.level.getHeight() * DungeonTilemap.SIZE, Dungeon.level.waterTex());
+				Dungeon.level.getHeight() * DungeonTilemap.SIZE, Dungeon.level.getWaterTex());
 		terrain.add(water);
 
 		ripples = new Group();

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.ModdingMode;
@@ -27,6 +28,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
@@ -458,6 +460,10 @@ public abstract class Level implements Bundlable {
 	}
 
 	public String getTilesTex() {
+		String tiles = DungeonGenerator.tiles(levelId);
+		if(tiles!=null) {
+			return tiles;
+		}
 
 		if(tilesTexEx()==null) {
 			return tilesTex();
@@ -477,6 +483,16 @@ public abstract class Level implements Bundlable {
 
 	public String tilesTexEx() {
 		return null;
+	}
+
+	@NonNull
+	public String getWaterTex() {
+		String water = DungeonGenerator.water(levelId);
+		if(water!=null) {
+			return water;
+		}
+
+		return waterTex();
 	}
 
 	public String waterTex() {
@@ -829,8 +845,9 @@ public abstract class Level implements Bundlable {
 
 	public void remove(LevelObject levelObject) {
 		int index = objects.indexOfValue(levelObject);
+
 		if(index >= 0) {
-			objects.removeAt(index);
+			objects.remove(objects.keyAt(index));
 		}
 	}
 

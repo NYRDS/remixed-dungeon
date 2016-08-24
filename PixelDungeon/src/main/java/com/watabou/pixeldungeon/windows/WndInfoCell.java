@@ -52,7 +52,7 @@ public class WndInfoCell extends Window {
 		
 		IconTitle titlebar = new IconTitle();
 		if (tile == Terrain.WATER) {
-			Image water = new Image( Dungeon.level.waterTex() );
+			Image water = new Image( Dungeon.level.getWaterTex() );
 			water.frame( 0, 0, DungeonTilemap.SIZE, DungeonTilemap.SIZE );
 			titlebar.icon( water );
 		} else {
