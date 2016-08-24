@@ -477,11 +477,11 @@ public abstract class Level implements Bundlable {
 		return tilesTexEx();
 	}
 
-	public String tilesTex() {
+	protected String tilesTex() {
 		return Assets.TILES_SEWERS;
 	}
 
-	public String tilesTexEx() {
+	protected String tilesTexEx() {
 		return null;
 	}
 
@@ -495,7 +495,7 @@ public abstract class Level implements Bundlable {
 		return waterTex();
 	}
 
-	public String waterTex() {
+	protected String waterTex() {
 		return null;
 	}
 
@@ -680,8 +680,8 @@ public abstract class Level implements Bundlable {
 			nearWalls[i] = false;
 			if (passable[i]) {
 				int count = 0;
-				for (int j = 0; j < NEIGHBOURS4.length; j++) {
-					int tile = map[i + NEIGHBOURS4[j]];
+				for (int a : NEIGHBOURS4) {
+					int tile = map[i + a];
 					if (tile == Terrain.WALL || tile == Terrain.WALL_DECO) {
 						count++;
 					}
@@ -723,8 +723,8 @@ public abstract class Level implements Bundlable {
 
 			boolean d = false;
 
-			for (int j = 0; j < NEIGHBOURS9.length; j++) {
-				int n = i + NEIGHBOURS9[j];
+			for (int a : NEIGHBOURS9) {
+				int n = i + a;
 				if (n >= 0 && n < getLength() && map[n] != Terrain.WALL
 						&& map[n] != Terrain.WALL_DECO) {
 					d = true;
@@ -735,8 +735,8 @@ public abstract class Level implements Bundlable {
 			if (d) {
 				d = false;
 
-				for (int j = 0; j < NEIGHBOURS9.length; j++) {
-					int n = i + NEIGHBOURS9[j];
+				for (int a : NEIGHBOURS9) {
+					int n = i + a;
 					if (n >= 0 && n < getLength() && !pit[n]) {
 						d = true;
 						break;
@@ -983,8 +983,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	private void updateFovForObjectAt(int p) {
-		for (int i = 0; i < NEIGHBOURS9.length; ++i) {
-			markFovCellSafe(p + NEIGHBOURS9[i]);
+		for (int a : NEIGHBOURS9) {
+			markFovCellSafe(p + a);
 		}
 	}
 
@@ -1298,7 +1298,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	private int oneCellFrom(ArrayList<Integer> candidates) {
-		if (candidates.size() > 0) {
+		if (!candidates.isEmpty()) {
 			return Random.element(candidates);
 		}
 

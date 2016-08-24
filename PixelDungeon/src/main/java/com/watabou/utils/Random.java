@@ -17,6 +17,8 @@
 
 package com.watabou.utils;
 
+import android.support.annotation.Nullable;
+
 import java.util.Collection;
 import java.util.Map;
 
@@ -134,6 +136,7 @@ public class Random {
 		return array[(int)(Math.random() * max)];
 	}
 	
+	@Nullable
 	@SuppressWarnings("unchecked")
 	public static<T> T element( Collection<? extends T> collection ) {
 		int size = collection.size();
