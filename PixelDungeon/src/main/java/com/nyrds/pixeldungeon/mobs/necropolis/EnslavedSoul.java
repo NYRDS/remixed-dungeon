@@ -29,9 +29,10 @@ public class EnslavedSoul extends UndeadMob {
 
     public EnslavedSoul(){
         hp(ht(45));
-        defenseSkill = 27;
 
         baseSpeed = 1.1f;
+        defenseSkill = 27;
+        flying = true;
 
         EXP = 10;
         maxLvl = 15;
@@ -68,6 +69,4 @@ public class EnslavedSoul extends UndeadMob {
     public int dr() {
         return 20;
     }
-
-
 }

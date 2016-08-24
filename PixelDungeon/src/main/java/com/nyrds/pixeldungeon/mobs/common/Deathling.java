@@ -19,7 +19,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.utils.Random;
 
 /**
- * Created by DeadDie on 12.02.2016
+ * Created by DeadDie on 20.08.2016
  */
 public class Deathling extends UndeadMob {
 
@@ -27,14 +27,14 @@ public class Deathling extends UndeadMob {
 
     public Deathling(){
         hp(ht(HEALTH + getModifier()));
-        defenseSkill = 1 + getModifier();
 
         baseSpeed = 1.1f;
+        defenseSkill = 1 + getModifier();
+        flying = true;
 
         EXP = 0;
         maxLvl = 32;
     }
-
 
     private int getModifier(){
         if (Dungeon.hero != null){
@@ -57,6 +57,4 @@ public class Deathling extends UndeadMob {
     public int dr() {
         return 1 + getModifier();
     }
-
-
 }

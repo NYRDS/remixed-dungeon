@@ -81,7 +81,7 @@ public class WndSadGhost extends Window {
 		
 		resize( WIDTH, (int)btnArmor.bottom() );
 	}
-	
+
 	private void selectReward( Ghost ghost, Item item, Item reward ) {
 		hide();
 

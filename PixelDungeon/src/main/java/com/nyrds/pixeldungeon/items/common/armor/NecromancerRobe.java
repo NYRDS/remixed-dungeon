@@ -14,14 +14,17 @@ import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 
-//TODO: Limit number of deathling to 2, make it so that if necromancer exceeds limit of deathlings he will lose health each turn. Number of health lost is equal to (deathlingExcess * heroLevel)
+import java.util.HashSet;
 
-public class NecromancerRobe extends ClassArmor {
+public class NecromancerRobe extends UsableArmor {
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
+	private Mob pet;
+
 	public NecromancerRobe() {
+		super( 1 );
 		image = 23;
 	}
 
@@ -34,6 +37,8 @@ public class NecromancerRobe extends ClassArmor {
 	public void doSpecial() {
 		Char ch = getCurUser();
 
+		handlePet();
+
 		Wound.hit(ch);
 		ch.damage(4 + Dungeon.hero.lvl(), this);
 		Buff.detach(ch, Sungrass.Health.class);
@@ -41,9 +46,8 @@ public class NecromancerRobe extends ClassArmor {
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
 
 		if (Dungeon.level.cellValid(spawnPos)) {
-			Mob pet = Mob.makePet(new Deathling(), getCurUser());
+			pet = Mob.makePet(new Deathling(), getCurUser());
 			pet.setPos(spawnPos);
-
 			Dungeon.level.spawnMob(pet);
 		}
 	}
@@ -55,6 +59,15 @@ public class NecromancerRobe extends ClassArmor {
 		} else {
 			GLog.w( TXT_NOT_NECROMANCER );
 			return false;
+		}
+	}
+
+	private void handlePet(){
+		if (pet != null) {
+			if (pet.isAlive()) {
+				pet.remove();
+			}
+				pet.clear();
 		}
 	}
 }

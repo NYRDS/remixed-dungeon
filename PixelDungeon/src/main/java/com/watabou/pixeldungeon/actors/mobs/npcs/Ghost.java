@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -71,7 +72,10 @@ public class Ghost extends NPC {
 	private static final String TXT_RAT1  = Game.getVar(R.string.Ghost_Rat1);
 	private static final String TXT_RAT2  = Game.getVar(R.string.Ghost_Rat2);
 
-	
+	private boolean persuade = false;
+	private boolean introduced = false;
+	WndSadGhostNecro window;
+
 	public Ghost() {
 	}
 	
@@ -112,20 +116,26 @@ public class Ghost extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		boolean persuade = false;
-
-		if (hero.heroClass.equals(HeroClass.NECROMANCER)){
+		if (hero.heroClass.equals(HeroClass.NECROMANCER) && !introduced){
+			window = new WndSadGhostNecro();
+			GameScene.show( window );
+			introduced = true;
 			return true;
 		}
 
+		persuade = window.getPersuade();
 		Sample.INSTANCE.play( Assets.SND_GHOST );
 		
-		if (Quest.given || !persuade) {
-			
+		if (persuade || Quest.given ) {
 			Item item = Quest.alternative ?
 				hero.belongings.getItem( RatSkull.class ) :
-				hero.belongings.getItem( DriedRose.class );	
-			if (item != null) {
+				hero.belongings.getItem( DriedRose.class );
+			if(persuade){
+				item = Quest.alternative ?
+					new RatSkull() :
+					new DriedRose();
+			}
+			if (persuade || item != null) {
 				GameScene.show( new WndSadGhost( this, item ) );
 			} else {
 				GameScene.show( new WndQuest( this, Quest.alternative ? TXT_RAT2 : TXT_ROSE2 ) );
