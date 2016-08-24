@@ -16,12 +16,13 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 //TODO: Limit number of deathling to 2, make it so that if necromancer exceeds limit of deathlings he will lose health each turn. Number of health lost is equal to (deathlingExcess * heroLevel)
 
-public class NecromancerRobe extends ClassArmor {
+public class NecromancerRobe extends UsableArmor {
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
 	public NecromancerRobe() {
+		super( 1 );
 		image = 23;
 	}
 
