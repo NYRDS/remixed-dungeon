@@ -273,10 +273,10 @@ public class StartScene extends PixelScene {
 			return;
 		}
 
-		//if (cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
-		//	updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockNecromancer));
-		//	return;
-		//}
+		if (cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
+			updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockNecromancer));
+			return;
+		}
 
 		unlock.setVisible(false);
 

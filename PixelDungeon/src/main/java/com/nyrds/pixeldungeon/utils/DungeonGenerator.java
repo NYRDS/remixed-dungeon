@@ -182,29 +182,40 @@ public class DungeonGenerator {
 			next.xs = levelSize.getInt(0);
 			next.ys = levelSize.getInt(1);
 
-			if(nextLevelDesc.has("tiles")) {
-				mLevelTiles.put(nextLevelId, nextLevelDesc.getString("tiles"));
-			}
-
-			if(nextLevelDesc.has("water")) {
-				mLevelWater.put(nextLevelId, nextLevelDesc.getString("water"));
-			}
-
 			return next;
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
 		}
+	}
 
+	@Nullable
+	private static String getLevelProperty(String id, String property) {
+
+		try {
+			JSONObject levelDesc = mLevels.getJSONObject(id);
+
+			if(levelDesc.has(property)) {
+				return levelDesc.getString(property);
+			}
+		} catch (JSONException e) {
+			EventCollector.logException(e);
+		}
+		return null;
 	}
 
 	@Nullable
 	public static String tiles(String id) {
-		return mLevelTiles.get(id);
+		return getLevelProperty(id, "tiles");
 	}
 
 	@Nullable
 	public static String water(String id) {
-		return mLevelWater.get(id);
+		return getLevelProperty(id, "water");
+	}
+
+	@Nullable
+	public static String music(String id) {
+		return getLevelProperty(id, "music");
 	}
 
 	public static Position descend(Position current) {

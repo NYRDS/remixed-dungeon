@@ -129,6 +129,15 @@ public abstract class Level implements Bundlable {
 	public void onHeroDescend(int cell) {
 	}
 
+	@NonNull
+	public String music() {
+		String ret = DungeonGenerator.music(levelId);
+		if(ret == null) {
+			ret = Assets.TUNE;
+		}
+		return ret;
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS
 	}

@@ -19,7 +19,7 @@
       "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
       "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
 
-      "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32], "tiles":"tiles4.png", "water":"water_guts.png" },
+      "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32], "tiles":"tiles4.png", "water":"water_guts.png", "music":"surface.mp3" },
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
       "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
       "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
