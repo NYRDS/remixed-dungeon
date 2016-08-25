@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- Item descriptions -->
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_WayAlreadyChosen">You cannot change your way!</string>
@@ -47,7 +46,7 @@
     <string name="WndSadGhostNecro_Yes">Yes, bend it to your will.</string>>
     <string name="WndSadGhostNecro_No">No, let it talk.</string>>
     <string name="WndSadGhostNecro_Persuaded">The sad ghost has been dominated!</string>>
-    <!-- Badges -->
 
+    <!-- Badges -->
 
 </resources>

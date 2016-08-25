@@ -74,7 +74,7 @@ public class Ghost extends NPC {
 
 	private boolean persuade = false;
 	private boolean introduced = false;
-	WndSadGhostNecro window;
+	private WndSadGhostNecro window;
 
 	public Ghost() {
 	}
@@ -116,14 +116,18 @@ public class Ghost extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		if (hero.heroClass.equals(HeroClass.NECROMANCER) && !introduced){
-			window = new WndSadGhostNecro();
-			GameScene.show( window );
-			introduced = true;
-			return true;
+		if (hero.heroClass.equals(HeroClass.NECROMANCER) ){
+			if (!introduced){
+				window = new WndSadGhostNecro();
+				GameScene.show( window );
+				introduced = true;
+				return true;
+			}
+			else {
+				persuade = window.getPersuade();
+			}
 		}
 
-		persuade = window.getPersuade();
 		Sample.INSTANCE.play( Assets.SND_GHOST );
 		
 		if (persuade || Quest.given ) {
@@ -192,8 +196,7 @@ public class Ghost extends NPC {
 		public static Armor armor;
 		
 		public static void reset() {
-			spawned = false; 
-			
+			spawned = false;
 			weapon = null;
 			armor = null;
 		}
