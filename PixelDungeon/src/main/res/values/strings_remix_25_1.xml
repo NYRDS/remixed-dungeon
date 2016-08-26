@@ -36,7 +36,7 @@
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
-    <string name="StartScene_UnlockNecromancer">To unlock this character class, slay the Lich boss with any other class.</string>>
+    <string name="StartScene_UnlockNecromancer">To unlock this character class, slay the Lich with any other class.</string>>
 
     <!-- Window descriptions -->
     <string name="Necromancy_Title">Necromancy</string>>
