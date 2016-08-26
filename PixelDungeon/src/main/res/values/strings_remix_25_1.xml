@@ -24,7 +24,9 @@
     <string name="HeroClass_Necromancer">necromancer</string>
 
     <string-array name="HeroClass_NecromancerPerks">
+        <item>Necromancers start with 15 hp.</item>
         <item>Necromancers start with a unique Necromancer\'s robe.</item>
+        <item>Necromancers start with a level 7 skeleton key.</item>
         <item>Potion of Healing are identified from the beginning.</item>
     </string-array>
 
