@@ -32,20 +32,20 @@ import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndClass extends WndTabbed {
-	
-	private static final String TXT_MASTERY	= Game.getVar(R.string.WndClass_Mastery);
 
-	private static final int WIDTH_P	= 112;
-	private static final int WIDTH_L	= 160;
+	private static final String TXT_MASTERY = Game.getVar(R.string.WndClass_Mastery);
 
-	private static int WIDTH	    	= 110;
-	
-	private static final int TAB_WIDTH	= 50;
-	
+	private static final int WIDTH_P = 112;
+	private static final int WIDTH_L = 160;
+
+	private static int WIDTH = 110;
+
+	private static final int TAB_WIDTH = 50;
+
 	private HeroClass cl;
 
-	public WndClass( HeroClass cl ) {
-		
+	public WndClass(HeroClass cl) {
+
 		super();
 
 		WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
@@ -54,116 +54,116 @@ public class WndClass extends WndTabbed {
 
 		PerksTab tabPerks = new PerksTab();
 		add(tabPerks);
-		
-		Tab tab = new RankingTab(this, Utils.capitalize( cl.title() ), tabPerks);
-		tab.setSize( TAB_WIDTH, tabHeight() );
-		add( tab );
-		
-		if (Badges.isUnlocked( cl.masteryBadge() )) {
+
+		Tab tab = new RankingTab(this, Utils.capitalize(cl.title()), tabPerks);
+		tab.setSize(TAB_WIDTH, tabHeight());
+		add(tab);
+
+		if (Badges.isUnlocked(cl.masteryBadge())) {
 			MasteryTab tabMastery = new MasteryTab();
 			add(tabMastery);
-			
+
 			tab = new RankingTab(this, TXT_MASTERY, tabMastery);
-			tab.setSize( TAB_WIDTH, tabHeight() );
-			add( tab );
-			
-			resize( 
-				(int)Math.max( tabPerks.width, tabMastery.width ), 
-				(int)Math.max( tabPerks.height, tabMastery.height ) );
+			tab.setSize(TAB_WIDTH, tabHeight());
+			add(tab);
+
+			resize(
+					(int) Math.max(tabPerks.width, tabMastery.width),
+					(int) Math.max(tabPerks.height, tabMastery.height));
 		} else {
-			resize( (int) tabPerks.width, (int) tabPerks.height );
+			resize((int) tabPerks.width, (int) tabPerks.height);
 		}
-		
-		select( 0 );
+
+		select(0);
 	}
 
 	private class PerksTab extends Group {
-		
-		private static final int MARGIN	= 4;
-		private static final int GAP	= 4;
-		
-		private static final String DOT	= "#";
-		
+
+		private static final int MARGIN = 4;
+		private static final int GAP    = 4;
+
+		private static final String DOT = "#";
+
 		public float height;
 		public float width;
-		
+
 		public PerksTab() {
 			super();
-			
+
 			float dotWidth = 0;
-			
+
 			String[] items = cl.perks();
 			float pos = MARGIN;
-			
-			for (int i=0; i < items.length; i++) {
-				
+
+			for (int i = 0; i < items.length; i++) {
+
 				if (i > 0) {
 					pos += GAP;
 				}
-				
-				Text dot = PixelScene.createText( DOT, GuiProperties.smallFontSize());
+
+				Text dot = PixelScene.createText(DOT, GuiProperties.smallFontSize());
 				dot.x = MARGIN;
 				dot.y = pos;
 				if (dotWidth == 0) {
 					dot.measure();
 					dotWidth = dot.width();
 				}
-				add( dot );
-				
-				Text item = PixelScene.createMultiline( items[i], GuiProperties.regularFontSize() );
+				add(dot);
+
+				Text item = PixelScene.createMultiline(items[i], GuiProperties.regularFontSize());
 				item.x = dot.x + dotWidth;
 				item.y = pos;
-				item.maxWidth((int)(WIDTH - MARGIN * 2 - dotWidth));
+				item.maxWidth((int) (WIDTH - MARGIN * 2 - dotWidth));
 				item.measure();
-				add( item );
-				
+				add(item);
+
 				pos += item.height();
 				float w = item.width();
 				if (w > width) {
 					width = w;
 				}
 			}
-			
+
 			width += MARGIN + dotWidth;
 			height = pos + MARGIN;
 		}
 	}
-	
+
 	private class MasteryTab extends Group {
-		
-		private static final int MARGIN	= 4;
-		
+
+		private static final int MARGIN = 4;
+
 		private Text normal;
 		private Text highlighted;
-		
+
 		public float height;
 		public float width;
-		
+
 		public MasteryTab() {
 			super();
-			
-			String text = null;
+
+			String text = "";
 			switch (cl) {
-			case WARRIOR:
-				text = HeroSubClass.GLADIATOR.desc() + "\n\n" + HeroSubClass.BERSERKER.desc();
-				break;
-			case MAGE:
-				text = HeroSubClass.BATTLEMAGE.desc() + "\n\n" + HeroSubClass.WARLOCK.desc();
-				break;
-			case ROGUE:
-				text = HeroSubClass.FREERUNNER.desc() + "\n\n" + HeroSubClass.ASSASSIN.desc();
-				break;
-			case HUNTRESS:
-				text = HeroSubClass.SNIPER.desc() + "\n\n" + HeroSubClass.WARDEN.desc();
-				break;
-			case ELF:
-				text = HeroSubClass.SCOUT.desc() + "\n\n" + HeroSubClass.SHAMAN.desc();
-				break;
+				case WARRIOR:
+					text = HeroSubClass.GLADIATOR.desc() + "\n\n" + HeroSubClass.BERSERKER.desc();
+					break;
+				case MAGE:
+					text = HeroSubClass.BATTLEMAGE.desc() + "\n\n" + HeroSubClass.WARLOCK.desc();
+					break;
+				case ROGUE:
+					text = HeroSubClass.FREERUNNER.desc() + "\n\n" + HeroSubClass.ASSASSIN.desc();
+					break;
+				case HUNTRESS:
+					text = HeroSubClass.SNIPER.desc() + "\n\n" + HeroSubClass.WARDEN.desc();
+					break;
+				case ELF:
+					text = HeroSubClass.SCOUT.desc() + "\n\n" + HeroSubClass.SHAMAN.desc();
+					break;
 			}
-			
-			Highlighter hl = new Highlighter( text );
-			
-			normal = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
+
+			Highlighter hl = new Highlighter(text);
+
+			normal = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 			if (hl.isHighlighted()) {
 				normal.mask = hl.inverted();
 			}
@@ -171,21 +171,21 @@ public class WndClass extends WndTabbed {
 			normal.measure();
 			normal.x = MARGIN;
 			normal.y = MARGIN;
-			add( normal );
-			
-			if (hl.isHighlighted()) {				
-				highlighted = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
+			add(normal);
+
+			if (hl.isHighlighted()) {
+				highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 				highlighted.mask = hl.mask;
 
 				highlighted.maxWidth(normal.getMaxWidth());
 				highlighted.measure();
 				highlighted.x = normal.x;
 				highlighted.y = normal.y;
-				add( highlighted );
-		
-				highlighted.hardlight( TITLE_COLOR );
+				add(highlighted);
+
+				highlighted.hardlight(TITLE_COLOR);
 			}
-			
+
 			height = normal.y + normal.height() + MARGIN;
 			width = normal.x + normal.width() + MARGIN;
 		}
