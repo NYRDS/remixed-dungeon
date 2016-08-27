@@ -6,6 +6,7 @@
   <string-array name="known_mods">
     <item>[\"The Dungeon of Heroes\", \"https://github.com/NYRDS/The-dungeon-of-heroes-RPD-MOD/archive/tdoh.2.1.zip\"]</item>
     <item>[\"PD Mini\", \"https://github.com/NYRDS/PD_mini-RPD-MOD/archive/mini.0.10.zip\"]</item>
+    <item>[\"D.U.N.G.E.O.N\", \"https://bitbucket.org/AlexeyRadionov/d.u.n.g.e.o.n/get/master.zip\"]</item>
   </string-array>
  
 </resources>
