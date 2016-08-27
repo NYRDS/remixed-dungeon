@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Claymore</string>
+    <string name="Claymore_Info">Dieses massive Schwert dürfte in der Lage sein, durch alles zu schneiden.</string>
     <string name="Claymore_Gender">weiblich</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Hellebarde</string>
+    <string name="Halberd_Info">Ein Stab, der eine Axt an einem Ende besitzt</string>
+    <string name="Halberd_Gender">weiblich</string>
 
     <!-- STRINGS OF WoodenCrossbow CLASS -->
     <string name="WoodenCrossbow_Name">Hölzene Armbrust </string>
-    </resources>
+    <string name="WoodenCrossbow_Info">Eine klassische, hölzerne Armbrust. Es sieht so aus, als ob sie dafür entworfen wurde, Pfeile zu verschiessen</string>
+    <string name="WoodenCrossbow_Gender">männlich</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Verstärkte Armbrust</string>
+    <string name="CompositeCrossbow_Info">Diese verstärkte Armbrust verspricht eine effizientere Waffe zu sein, als sein hölzernes Pendant</string>
+    <string name="CompositeCrossbow_Gender">männlich</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Rubinarmbrust</string>
+    <string name="RubyCrossbow_Info">Diese tödliche Waffe ist wahrlich ein Meisterwerk des zwergischen Ingenieurwesens.</string>
+    <string name="RubyCrossbow_Gender">männlich</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">gotische Rüstung</string>
+    <string name="GothicArmor_Info">Die gotische Rüstung ist die Meisterleistung der Kunst des Rüstungsbaus</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Chaosrüstung</string>
+    <string name="ChaosArmor_Info">Die blutroten Platten dieser Rüstung sind mit dunkelroten Ketten verbunden. Sie strahlt chaotische Energie aus, wenn du sie berührst.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">Der Kristall absorbiert deine Rüstung und nimmt die Form einer Verstärkten Rüstung an.</string>
+
+</resources>

@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">Schwarzer Schädel</string>
     </resources>

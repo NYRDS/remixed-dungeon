@@ -1,3 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">armatura di ragno</string>
+    <string name="SpiderArmor_Info">Quest\'armatura é composta di vecchie carcasse di ragno e uno strano tessuto. Incredibilmente, trovi ghiandole filatrici ancora funzionanti. Applicando la giusta pressione su una delle piastre, lancia ragnatele. Gli spuntoni sotto gli stivali ti permettono di camminare su di esse.</string>
+    <string name="SpiderArmor_Gender">femminile</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">teschio nero</string>
+    <string name="BlackSkull_Info">un piccolo teschio d\'ossidiana. Era una fonte di potere della Necropoli, ma dopo la sconfitta del Lich sembra aver perso tutti i suoi poteri. Ma se lo stringi nelle tue mani uno strano pensiero ti scorre in testa: \"Ha fame\".</string>
+    <string name="BlackSkull_Gender">mascolino</string>
+
+    <string name="BlackSkull_Name_Awakened">teschio nero risvegliato</string>
+    <string name="BlackSkull_Info_Awakened">Il teschio pulsa con potere, puoi vederlo scrosciare dagl\'occhi vuoti. E nel momento in cui lo tieni nella tua mano puoi sentire una voce spaventosa: \"La morte avanza\"</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">frammento d\' anima</string>
+    <string name="SoulShard_Info">E\' un frammento che hai preso dai resti di Jar delle Anime. Arde di un\' energia mistica, probabilmente c\'è qualcuno che potrebbe essere interessato a questa cosa.</string>
+    <string name="SoulShard_Gender">mascolino</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">cavaliere della morte</string>
+    <string name="DeathKnight_Gender">mascolino</string>
+    <string name="DeathKnight_Name_Objective">cavaliere decaduto</string>
+    <string name="DeathKnight_Desc">A prima vista un guerriero forzuto in armatura massiccia, ma il suo sorriso scheletrico lo palesa, un Cavaliere Della  Morte è la manifestazione dello spirito di un cavaliere che ha fallito nei suoi giuramenti e nei suoi voti. Nella sua maledizione egli si chiederà sempre della terra, cercando di ripulire il suo nome in battaglia, uccidendo gli innocenti, incapace di ricordare cosa giurò di proteggere.</string>
+
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">cavaliere timoroso</string>
+    <string name="DreadKnight_Gender">mascolino</string>
+    <string name="DreadKnight_Name_Objective">cavaliere timoroso</string>
+    <string name="DreadKnight_Desc">Il cavaliere timoroso è un guerriero ancestrale, il quale non fu mai solare né buono in tutta la sua vita. Per i suoi peccati fu maledetto a soffermarsi sui resti dei corpi morti per l\'eternità. E per ogni momento della sua dannata esistenza deve essere tormentato dalla paura che ha inflitto alle sue vittime.</string>
+
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">anima incatenata</string>
+    <string name="EnslavedSoul_Gender">femminile</string>
+    <string name="EnslavedSoul_Name_Objective">anima incatenata</string>
+    <string name="EnslavedSoul_Desc">Puoi quasi vedere attraverso questa apparizione spiritica. Nonostante sembri uno scheletro, a volte, per mezzo secondo, compare un volto invece... un volto colmo di sofferenza e tormento.</string>
+
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">teschio esplosivo</string>
+    <string name="ExplodingSkull_Gender">mascolino</string>
+    <string name="ExplodingSkull_Name_Objective">teschio esplosivo</string>
+    <string name="ExplodingSkull_Desc">Questo ardente e fiammeggiante scheletro appare estremamente fragile, sembra che sta per scoppiare tra qualche secondo...</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">vaso delle anime</string>
+    <string name="JarOfSouls_Gender">mascolino</string>
+    <string name="JarOfSouls_Name_Objective">vaso delle anime</string>
+    <string name="JarOfSouls_Desc">Occhi fiammeggianti di un teschio decapitato in questo antico vaso, così come l\'energia che emette, ti fa sentire inquieto.</string>
+
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">lich</string>
+    <string name="Lich_Gender">mascolino</string>
+    <string name="Lich_Name_Objective">lich</string>
+    <string name="Lich_Desc">Il negromante incontrò la morte nelle profondità della Necropoli, e come l\'energia maligna di questo posto fluì nel suo corpo, eventualmente, si trasformò in un lich. Il mago non morto, una marionetta senza coscienza, controllata da potrei malevoli.</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">teschio runico</string>
+    <string name="RunicSkull_Gender">mascolino</string>
+    <string name="RunicSkull_Name_Objective">teschio runico</string>
+    <string name="RunicSkull_Desc">Per qualcosa fatta artificialmente, questo scheletro sembra esserne uno vero un po\' troppo. Puoi vedere un debole bagliore che lo avvolge.</string>
+
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">zombie</string>
+    <string name="Zombie_Gender">mascolino</string>
+    <string name="Zombie_Name_Objective">zombie</string>
+    <string name="Zombie_Desc">Il Dungeon è un posto pericoloso e molti avventurieri hanno incontrato la loro morte qui. Ma i più sfortunati di loro hanno incontrato la fine nella Necropoli, e ora sono destinati a vagare tra queste mura in forma di corpi marci.</string>
+
     </resources>

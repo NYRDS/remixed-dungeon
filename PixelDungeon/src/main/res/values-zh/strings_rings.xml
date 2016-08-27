@@ -20,7 +20,7 @@
     <item>玛瑙</item>
   </string-array>
   <string name="Ring_Info1">你最多只能同时佩戴2枚戒指</string>
-  <string name="Ring_Info2">你的 %s 令你痛苦的紧紧箍住了你的手指</string>
+  <string name="Ring_Info2">你的 %s 令人生疼地紧箍在你的手指</string>
   <string name="Ring_Info3a">%1$s
 这个 %2$s 正 %3$s 的在你的手指头上。</string>
   <string name="Ring_Info3b">，并且因为它被诅咒了，你无力去脱卸它。</string>

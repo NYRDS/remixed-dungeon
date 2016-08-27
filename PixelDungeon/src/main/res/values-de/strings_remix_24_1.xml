@@ -1,3 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">Lebendige Statue</string>
+    <string name="ArmoredStatue_Gender">weiblich</string>
+    <string name="ArmoredStatue_Name_Objective">animierte Statue</string>
+    <string name="ArmoredStatue_Desc">Denke bloß nicht, dass es nur noch so eine häßliche Statue ist.
+Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niemand eine neue _%s_ diesem Ding geben würde.</string>
+
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">Spinnenwächter</string>
+    <string name="SpiderGuard_Gender">männlich</string>
+    <string name="SpiderGuard_Name_Objective">Spinnenwächter</string>
+    <string name="SpiderGuard_Desc">Ähnlich den Spinnensoldaten,, haben die Spinnenwächter geschworen, ihr Königreich zu beschützen. Der Stachel der Wächter ist dazu da, seine Ziele bewegungsunfähig zu machen</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">Bernsteinspinne</string>
+    <string name="SpiderMindAmber_Gender">männlich</string>
+    <string name="SpiderMindAmber_Name_Objective">Bernsteinspinne</string>
+    <string name="SpiderMindAmber_Desc">Bernsteinspinnen sind geheimnisvoll und seltene Kreaturen, die psychische Kraft aufweisen, ähnlich den Psychospinnen aber mehr aushalten als ihre normalen Artgenossen. Der Begriff \"Bernstein\" bezieht sich auf die Farbe ihrer riesigen Gehirn-Säcke die auftauchen, bevor ihre Opfer von der Kraft der Bernsteinspinnen getroffen werden</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Piratenset</string>
+    <string name="PirateSet_Info">Arr! Hälst du dich für einen Matrosen oder für ein verdammtes Landei!? Ich hoffe du bist keins, das Zeug ist nur für Piraten, sag ich dir...Arr!</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">Ja, lösche es!</string>
+    <string name="WndSaveSlotSelect_Delete_No">Nein</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Bist du sicher, dass du diesen gespeicherten Wert löschen möchtest?</string>
+</resources>

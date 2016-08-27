@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	</resources>
+	<string name="Bowknot_Info">Un bel fiocco dal colore rosa vivace, attaccato su una forcina per capelli.</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Zucca</string>
+    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Cappello da mago</string>
+    <string name="WndHats_NoConnectionMsg">Impossibile collegarsi a Google Play.</string>
+    <string name="WndHats_Purchased">Chiaro!</string>
+
+    <string name="WndHats_BackButton">Indietro</string>
+    <string name="WndHats_BuyButton">Acquista</string>
+    <string name="WndHats_EquipButton">Indossa</string>
+    <string name="WndHats_InfoButton">Esamina</string>
+    <string name="WndHats_UnequipButton">Rimuovi</string>
+</resources>

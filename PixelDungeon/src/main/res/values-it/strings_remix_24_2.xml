@@ -1,3 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">spada d\'oro</string>
+    <string name="GoldenSword_Info">Le armi forgiate con un metallo cosí morbido come l\'oro vengono considerate solitamente nient\'altro che decorazioni. Nonostante ció, questa lama sembra essere in grado di tagliare bene.</string>
+    <string name="GoldenSword_Gender">maschile</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">statua d\'oro</string>
+    <string name="GoldenStatue_Gender">femminile </string>
+    <string name="GoldenStatue_Name_Objective">statua d\'oro </string>
+    <string name="GoldenStatue_Desc">È davvero difficile crederci, questa magnifica statua non è solo un ornamento, ma una maligna creatura che attende avventurieri sprovveduti. A prima vista avresti potuto giurare che  il suo _%s_ fosse solo una parte del suo braccio. </string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">negromante</string>
+    <string name="NecromancerNPC_Gender">mascolino </string>
+    <string name="NecromancerNPC_Name_Objective">negromante </string>
+    <string name="NecromancerNPC_Desc">Quest\'uomo di mezza età sembra essere leggermente annoiato ed eccitato allo stesso tempo. Veste un\'armatura composita fatta  da frammenti di scheletri. </string>
+    <string name="NecromancerNPC_Message1">Così poco tempo, così poco tempo... </string>
+    <string name="NecromancerNPC_Message2">Devo essere pronto. </string>
+    <string name="NecromancerNPC_Message3">Posso ascoltare il richiamo dei morti.</string>
+    <string name="NecromancerNPC_Message4">C\'è qualcosa di veramente speciale nella Necropoli. </string>
+
+    <string name="RatKing_Name_Objective">re ratto </string>
+    <string name="RatKing_Gender">mascolino </string>
+</resources>
