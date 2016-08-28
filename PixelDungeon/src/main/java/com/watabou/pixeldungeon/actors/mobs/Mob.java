@@ -54,8 +54,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import java.util.HashSet;
-
 public abstract class Mob extends Char {
 
 	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
@@ -239,13 +237,13 @@ public abstract class Mob extends Char {
 		return state.act(enemyInFOV, justAlerted);
 	}
 
-	private Char chooseNearestEnemy() {
+	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
 
 		Char bestEnemy = Dungeon.hero;
 		int dist = Dungeon.level.distance(getPos(), enemy.getPos());
 
 		for (Mob mob : Dungeon.level.mobs) {
-			if (mob != this) {
+			if ( mob.fraction.equals(enemyFraction) && mob != this) {
 				int candidateDist = Dungeon.level.distance(getPos(), mob.getPos());
 				if (candidateDist <= dist) {
 					bestEnemy = mob;
@@ -257,55 +255,30 @@ public abstract class Mob extends Char {
 		return bestEnemy;
 	}
 
-	private Char chooseEnemyFromFraction(Fraction enemyFraction) {
-		HashSet<Mob> enemies = new HashSet<>();
-		for (Mob mob : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[mob.getPos()] && mob.fraction.equals(enemyFraction) && mob != this) {
-				enemies.add(mob);
-			}
-		}
-
-		if (enemies.size() > 0) {
-			return Random.element(enemies);
-		}
-
-		return DUMMY;
-	}
-
 	private Char chooseEnemyDungeon() {
-		if (getEnemy() == Dungeon.hero || getEnemy() == DUMMY) {
-			Char newEnemy = chooseEnemyFromFraction(Fraction.HEROES);
+		Char newEnemy = chooseNearestEnemyFromFraction(Fraction.HEROES);
 
-			if (newEnemy != DUMMY) {
-				return newEnemy;
-			}
+		if (newEnemy != DUMMY) {
+			return newEnemy;
 		}
 
 		return Dungeon.hero;
 	}
 
 	private Char chooseEnemyHeroes() {
-		if (getEnemy() == DUMMY) {
-			Char newEnemy = chooseEnemyFromFraction(Fraction.DUNGEON);
+		Char newEnemy = chooseNearestEnemyFromFraction(Fraction.DUNGEON);
 
-			if (newEnemy != DUMMY) {
-				return newEnemy;
-			}
-
-			state = WANDERING;
-			target = Dungeon.hero.getPos();
-
-			return DUMMY;
+		if (newEnemy != DUMMY) {
+			return newEnemy;
 		}
 
-		return getEnemy();
+		state  = WANDERING;
+		target = Dungeon.hero.getPos();
+
+		return DUMMY;
 	}
 
 	protected Char chooseEnemy() {
-		if (getEnemy() == null) {
-			setEnemy(DUMMY);
-		}
-
 		if (!getEnemy().isAlive()) {
 			setEnemy(DUMMY);
 		}
@@ -317,13 +290,13 @@ public abstract class Mob extends Char {
 
 		if (buff(Amok.class) != null) {
 			if (getEnemy() == Dungeon.hero) {
-				return chooseNearestEnemy();
+				return chooseNearestEnemyFromFraction(Fraction.ANY);
 			}
 		}
 
 		if (getEnemy() instanceof Mob) {
 			Mob enemyMob = (Mob) getEnemy();
-			if (enemyMob.fraction == fraction) {
+			if (enemyMob.fraction.belongsTo(fraction)) {
 				setEnemy(DUMMY);
 			}
 		}
@@ -887,6 +860,7 @@ public abstract class Mob extends Char {
 		return false;
 	}
 
+	@NonNull
 	protected Char getEnemy() {
 		return enemy;
 	}
