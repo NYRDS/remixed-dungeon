@@ -88,8 +88,6 @@ public abstract class Mob extends Char {
 
 	protected static final float TIME_TO_WAKE_UP = 1f;
 
-	private boolean hostile = true;
-
 	// Unreachable target
 	public static final Mob DUMMY = new Mob() {
 		{
@@ -643,11 +641,7 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean isHostile() {
-		return hostile && !isPet();
-	}
-
-	public void setHostile(boolean hostile) {
-		this.hostile = hostile;
+		return fraction.belongsTo(Fraction.DUNGEON) && !isPet();
 	}
 
 	public interface AiState {

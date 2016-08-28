@@ -31,8 +31,7 @@ public abstract class NPC extends Mob {
 	protected NPC() {
 		hp(ht(1));
 		EXP = 0;
-	
-		setHostile(false);
+
 		state = PASSIVE;
 		
 		fraction = Fraction.NEUTRAL;
