@@ -239,13 +239,18 @@ public abstract class Mob extends Char {
 
 	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
 
-		Char bestEnemy = Dungeon.hero;
-		int dist = Dungeon.level.distance(getPos(), enemy.getPos());
+		Char bestEnemy = DUMMY;
+		int  dist      = Dungeon.level.getWidth() + Dungeon.level.getHeight();
+
+		if(enemyFraction.belongsTo(Fraction.HEROES)) {
+			bestEnemy = Dungeon.hero;
+			dist = Dungeon.level.distance(getPos(), bestEnemy.getPos());
+		}
 
 		for (Mob mob : Dungeon.level.mobs) {
 			if ( mob.fraction.equals(enemyFraction) && mob != this) {
 				int candidateDist = Dungeon.level.distance(getPos(), mob.getPos());
-				if (candidateDist <= dist) {
+				if (candidateDist < dist) {
 					bestEnemy = mob;
 					dist = candidateDist;
 				}
@@ -268,7 +273,7 @@ public abstract class Mob extends Char {
 	private Char chooseEnemyHeroes() {
 		Char newEnemy = chooseNearestEnemyFromFraction(Fraction.DUNGEON);
 
-		if (newEnemy != DUMMY) {
+		if (newEnemy != DUMMY && Dungeon.visible[newEnemy.getPos()]) {
 			return newEnemy;
 		}
 
@@ -302,12 +307,11 @@ public abstract class Mob extends Char {
 		}
 
 		switch (fraction) {
+			default:
 			case DUNGEON:
 				return chooseEnemyDungeon();
 			case HEROES:
 				return chooseEnemyHeroes();
-			default:
-				return chooseEnemyDungeon();
 		}
 	}
 
