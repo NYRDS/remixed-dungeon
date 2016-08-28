@@ -496,28 +496,6 @@ public abstract class Mob extends Char {
 		super.destroy();
 
 		Dungeon.level.mobs.remove(this);
-
-		if (Dungeon.hero.isAlive()) {
-
-			if (hostile) {
-				Statistics.enemiesSlain++;
-				Badges.validateMonstersSlain();
-				Statistics.qualifiedForNoKilling = false;
-
-				if (Dungeon.nightMode) {
-					Statistics.nightHunt++;
-				} else {
-					Statistics.nightHunt = 0;
-				}
-				Badges.validateNightHunter();
-			}
-
-			if (Dungeon.hero.lvl() <= maxLvl && EXP > 0) {
-				Dungeon.hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
-						EXP);
-				Dungeon.hero.earnExp(EXP);
-			}
-		}
 	}
 
 	public void remove() {
@@ -527,11 +505,40 @@ public abstract class Mob extends Char {
 	@Override
 	public void die(Object cause) {
 
-		Hero hero = Dungeon.hero;
-		if (hero != null && hero.isAlive()) {
-			for (Item item : Dungeon.hero.belongings) {
-				if (item instanceof BlackSkull && item.isEquipped(Dungeon.hero)) {
-					((BlackSkull) item).mobDied(this, hero);
+		{
+			//TODO we should move this block out of Mob class
+			Hero hero = Dungeon.hero;
+			if (hero != null && hero.isAlive()) {
+					for (Item item : Dungeon.hero.belongings) {
+						if (item instanceof BlackSkull && item.isEquipped(Dungeon.hero)) {
+							((BlackSkull) item).mobDied(this, hero);
+						}
+					}
+			}
+		}
+
+		{
+			Hero hero = Dungeon.hero;
+			if (hero.isAlive()) {
+				if (hostile && !isPet()) {
+					Statistics.enemiesSlain++;
+					Badges.validateMonstersSlain();
+					Statistics.qualifiedForNoKilling = false;
+
+					if (Dungeon.nightMode) {
+						Statistics.nightHunt++;
+					} else {
+						Statistics.nightHunt = 0;
+					}
+					Badges.validateNightHunter();
+				}
+
+				if (!(cause instanceof Mob)) {
+					if (hero.lvl() <= maxLvl && EXP > 0) {
+						hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
+								EXP);
+						hero.earnExp(EXP);
+					}
 				}
 			}
 		}
