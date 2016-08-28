@@ -75,6 +75,7 @@ public class DangerIndicator extends Tag {
 		
 		if (Dungeon.hero.isAlive()) {
 			int v =  Dungeon.hero.visibleEnemies();
+
 			if (v != lastNumber) {
 				lastNumber = v;
 				if (setVisible(lastNumber > 0)) {

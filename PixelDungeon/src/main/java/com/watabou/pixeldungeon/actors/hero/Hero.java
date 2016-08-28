@@ -182,7 +182,10 @@ public class Hero extends Char {
 	public String levelKind;
 	public String levelId;
 
-	private ArrayList<Mob> visibleEnemies;
+	@NonNull
+	private ArrayList<Mob> visibleEnemies = new ArrayList<>();
+
+	@NonNull
 	private Collection<Mob> pets = new ArrayList<>();
 
 	public void addPet(@NonNull Mob pet) {
@@ -199,8 +202,6 @@ public class Hero extends Char {
 		awareness = 0.1f;
 
 		belongings = new Belongings(this);
-
-		visibleEnemies = new ArrayList<>();
 	}
 
 	public Hero(int difficulty) {
