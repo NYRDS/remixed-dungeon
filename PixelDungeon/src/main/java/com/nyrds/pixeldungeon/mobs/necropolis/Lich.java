@@ -37,8 +37,8 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 4;
-    private static final int HEALTH	= 200;
-    private int skullTimer = 5;
+    private static final int HEALTH	= 240;
+    private static final int SKULL_DELAY = 5;
     private static final int JUMP_DELAY = 6;
 
     private RunicSkull activatedSkull;
@@ -59,6 +59,7 @@ public class Lich extends Boss {
         IMMUNITIES.add( Sleep.class );
     }
 
+    private int timeToSkull = SKULL_DELAY;
     private int timeToJump = JUMP_DELAY;
 
     @Override
@@ -82,10 +83,9 @@ public class Lich extends Boss {
         if (timeToJump <= 0 && Dungeon.level.adjacent( getPos(), enemy.getPos() )) {
             jump();
             return true;
-        } else {
-            getSprite().zap(enemy.getPos());
-            return super.doAttack( enemy );
         }
+        getSprite().zap(enemy.getPos());
+         return super.doAttack( enemy );
     }
 
     private void jump() {
@@ -172,19 +172,21 @@ public class Lich extends Boss {
 
     @Override
     protected boolean act() {
-
-        activateRandomSkull();
-        if (activatedSkull != null) {
-            useSkull();
+        timeToSkull--;
+        if (timeToSkull < 0){
+            timeToSkull = SKULL_DELAY;
+            activateRandomSkull();
+            if (activatedSkull != null) {
+                useSkull();
+            }
         }
-        postpone(skullTimer);
         return super.act();
     }
 
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 14, 21 );
+        return Random.NormalIntRange( 18, 31 );
     }
 
     @Override
@@ -205,12 +207,12 @@ public class Lich extends Boss {
 
     @Override
     public int attackSkill( Char target ) {
-        return 20;
+        return 30;
     }
 
     @Override
     public int dr() {
-        return 5;
+        return 15;
     }
 
     @Override
