@@ -117,7 +117,7 @@ public class RatKing extends NPC {
 			if(friendly()) {
 				say(Game.getVar(R.string.RatKing_Info2));
 			} else {
-				hostile = true;
+				setHostile(true);
 				state = HUNTING;
 				yell(Game.getVar(R.string.RatKing_Info3));
 			}

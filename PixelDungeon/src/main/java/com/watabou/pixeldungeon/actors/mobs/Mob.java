@@ -88,7 +88,7 @@ public abstract class Mob extends Char {
 
 	protected static final float TIME_TO_WAKE_UP = 1f;
 
-	public boolean hostile = true;
+	private boolean hostile = true;
 
 	// Unreachable target
 	public static final Mob DUMMY = new Mob() {
@@ -497,7 +497,7 @@ public abstract class Mob extends Char {
 		{
 			Hero hero = Dungeon.hero;
 			if (hero.isAlive()) {
-				if (hostile && !isPet()) {
+				if (isHostile()) {
 					Statistics.enemiesSlain++;
 					Badges.validateMonstersSlain();
 					Statistics.qualifiedForNoKilling = false;
@@ -640,6 +640,14 @@ public abstract class Mob extends Char {
 
 	public void say(String str) {
 		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), str);
+	}
+
+	public boolean isHostile() {
+		return hostile && !isPet();
+	}
+
+	public void setHostile(boolean hostile) {
+		this.hostile = hostile;
 	}
 
 	public interface AiState {
