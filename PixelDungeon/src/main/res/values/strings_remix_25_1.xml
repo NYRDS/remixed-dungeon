@@ -18,7 +18,6 @@
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">necromancer robe</string>
     <string name="NecromancerRobe_Info">This lightweight armor offers basic protection.</string>
-    <string name="NecromancerRobe_PetAlreadyExists">You cannot summon more than 1 minion with this item!</string>
 
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
@@ -36,6 +35,10 @@
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name_Objective">deathling</string>
     <string name="Deathling_Desc">It\'s like death\'s little cousin.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetAlreadyExists">You cannot summon more than %1$d minion with this item!</string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
