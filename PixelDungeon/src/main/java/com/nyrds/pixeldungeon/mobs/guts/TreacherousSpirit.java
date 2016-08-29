@@ -55,4 +55,9 @@ public class TreacherousSpirit extends Mob {
         return 25;
     }
 
+    @Override
+    public boolean canBePet(){
+        return false;
+    }
+
 }

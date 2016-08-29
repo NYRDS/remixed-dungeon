@@ -255,6 +255,10 @@ public class Hero extends Char {
 		pets = alivePets;
 	}
 
+	public Collection<Mob> getPets(){
+		return pets;
+	}
+
 	public void releasePets() {
 		pets = new ArrayList<>();
 	}
