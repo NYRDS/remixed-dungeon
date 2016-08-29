@@ -18,6 +18,7 @@
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">necromancer robe</string>
     <string name="NecromancerRobe_Info">This lightweight armor offers basic protection.</string>
+    <string name="NecromancerRobe_PetAlreadyExists">This item allows you to summon only one deathling at a time.</string>
 
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
