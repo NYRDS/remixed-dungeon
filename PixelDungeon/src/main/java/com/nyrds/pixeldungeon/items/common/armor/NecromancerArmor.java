@@ -20,7 +20,6 @@ import java.util.HashSet;
 
 public class NecromancerArmor extends ClassArmor {
 
-	private static final String TXT_MAXIMUM_PETS   = Game.getVar(R.string.NecromancerRobe_PetAlreadyExists);
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
@@ -45,8 +44,8 @@ public class NecromancerArmor extends ClassArmor {
 				n++;
 			}
 		}
-		if (n == 4){
-			GLog.w( TXT_MAXIMUM_PETS );
+		if (n == Necromancy.getLimit(this)){
+			GLog.w( Necromancy.getLimitWarning(this) );
 			return;
 		}
 		Necromancy.summonDeathling(this);

@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -21,7 +22,6 @@ import java.util.HashSet;
 
 public class NecromancerRobe extends UsableArmor {
 
-	private static final String TXT_MAXIMUM_PETS   = Game.getVar(R.string.NecromancerRobe_PetAlreadyExists);
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
@@ -39,11 +39,15 @@ public class NecromancerRobe extends UsableArmor {
 	public void doSpecial() {
 		Collection<Mob> pets = Dungeon.hero.getPets();
 
+		int n = 0;
 		for (Mob mob : pets){
 			if (mob.isAlive() && mob instanceof Deathling) {
-				GLog.w( TXT_MAXIMUM_PETS );
-				return;
+				n++;
 			}
+		}
+		if (n == Necromancy.getLimit(this)){
+			GLog.w( Necromancy.getLimitWarning(this) );
+			return;
 		}
 		Necromancy.summonDeathling(this);
 	}
