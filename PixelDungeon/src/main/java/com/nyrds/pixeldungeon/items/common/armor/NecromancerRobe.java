@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.common.armor;
 
+import com.nyrds.pixeldungeon.mechanics.Necromancy;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.Deathling;
 import com.watabou.noosa.Game;
@@ -20,11 +21,9 @@ import java.util.HashSet;
 
 public class NecromancerRobe extends UsableArmor {
 
-	private static final String TXT_PET_ALREADY_EXIST   = Game.getVar(R.string.NecromancerRobe_PetAlreadyExists);
+	private static final String TXT_MAXIMUM_PETS   = Game.getVar(R.string.NecromancerRobe_PetAlreadyExists);
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
-
-	private Mob pet;
 
 	public NecromancerRobe() {
 		super( 1 );
@@ -42,24 +41,11 @@ public class NecromancerRobe extends UsableArmor {
 
 		for (Mob mob : pets){
 			if (mob.isAlive() && mob instanceof Deathling) {
-				GLog.w( TXT_PET_ALREADY_EXIST );
+				GLog.w( TXT_MAXIMUM_PETS );
 				return;
 			}
 		}
-
-		Char ch = getCurUser();
-
-		Wound.hit(ch);
-		ch.damage(4 + Dungeon.hero.lvl(), this);
-		Buff.detach(ch, Sungrass.Health.class);
-
-		int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
-
-		if (Dungeon.level.cellValid(spawnPos)) {
-			pet = Mob.makePet(new Deathling(), getCurUser());
-			pet.setPos(spawnPos);
-			Dungeon.level.spawnMob(pet);
-		}
+		Necromancy.summonDeathling(this);
 	}
 
 	@Override
