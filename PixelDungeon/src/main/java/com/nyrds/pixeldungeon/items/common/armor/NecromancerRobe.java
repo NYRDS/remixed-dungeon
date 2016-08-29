@@ -13,11 +13,14 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.utils.Bundle;
 
+import java.util.Collection;
 import java.util.HashSet;
 
 public class NecromancerRobe extends UsableArmor {
 
+	private static final String TXT_PET_ALREADY_EXIST   = Game.getVar(R.string.NecromancerRobe_PetAlreadyExists);
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
 
@@ -35,9 +38,16 @@ public class NecromancerRobe extends UsableArmor {
 
 	@Override
 	public void doSpecial() {
-		Char ch = getCurUser();
+		Collection<Mob> pets = Dungeon.hero.getPets();
 
-		handlePet();
+		for (Mob mob : pets){
+			if (mob.isAlive() && mob instanceof Deathling) {
+				GLog.w( TXT_PET_ALREADY_EXIST );
+				return;
+			}
+		}
+
+		Char ch = getCurUser();
 
 		Wound.hit(ch);
 		ch.damage(4 + Dungeon.hero.lvl(), this);
@@ -62,12 +72,4 @@ public class NecromancerRobe extends UsableArmor {
 		}
 	}
 
-	private void handlePet(){
-		if (pet != null) {
-			if (pet.isAlive()) {
-				pet.remove();
-			}
-				pet.clear();
-		}
-	}
 }
