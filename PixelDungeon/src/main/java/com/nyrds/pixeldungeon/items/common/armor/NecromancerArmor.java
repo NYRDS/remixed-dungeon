@@ -36,18 +36,6 @@ public class NecromancerArmor extends ClassArmor {
 	
 	@Override
 	public void doSpecial() {
-		Collection<Mob> pets = Dungeon.hero.getPets();
-
-		int n = 0;
-		for (Mob mob : pets){
-			if (mob.isAlive() && mob instanceof Deathling) {
-				n++;
-			}
-		}
-		if (n == Necromancy.getLimit(this)){
-			GLog.w( Necromancy.getLimitWarning(this) );
-			return;
-		}
 		Necromancy.summonDeathling(this);
 	}
 	

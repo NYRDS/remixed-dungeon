@@ -12,7 +12,10 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import java.util.Collection;
 
 public class Necromancy {
 
@@ -38,6 +41,19 @@ public class Necromancy {
 	}
 
 	public static void summonDeathling(Item source){
+		Collection<Mob> pets = Dungeon.hero.getPets();
+
+		int n = 0;
+		for (Mob mob : pets){
+			if (mob.isAlive() && mob instanceof Deathling) {
+				n++;
+			}
+		}
+		if (n >= Necromancy.getLimit(source)){
+			GLog.w( Necromancy.getLimitWarning(source) );
+			return;
+		}
+
 		Hero hero = Dungeon.hero;
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
 
