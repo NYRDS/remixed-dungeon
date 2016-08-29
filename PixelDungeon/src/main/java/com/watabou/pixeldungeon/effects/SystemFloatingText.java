@@ -32,13 +32,11 @@ public class SystemFloatingText extends SystemText {
 	public void update() {
 		super.update();
 
-		if (timeLeft > 0) {
-			if ((timeLeft -= Game.elapsed) <= 0) {
-				killAndErase();
-			} else {
-				float p = timeLeft / LIFESPAN;
-				alpha(p > 0.5f ? 1 : p * 2);
-			}
+		if ((timeLeft -= Game.elapsed) <= 0) {
+			killAndErase();
+		} else {
+			float p = timeLeft / LIFESPAN;
+			alpha(p > 0.5f ? 1 : p * 2);
 		}
 	}
 

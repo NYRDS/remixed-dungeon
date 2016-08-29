@@ -542,9 +542,9 @@ public class GameScene extends PixelScene {
 
 	public static Text status() {
 		if (ModdingMode.getClassicTextRenderingMode()) {
-			return scene != null ? (FloatingText) scene.statuses.recycle(FloatingText.class) : null;
+			return (FloatingText) scene.statuses.recycle(FloatingText.class);
 		} else {
-			return scene != null ? (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class) : null;
+			return (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class);
 		}
 	}
 
