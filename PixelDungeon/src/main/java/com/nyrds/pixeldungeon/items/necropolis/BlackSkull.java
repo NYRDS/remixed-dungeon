@@ -37,7 +37,7 @@ public class BlackSkull extends Artifact {
 
 	public void mobDied(Mob mob, Hero hero) {
 		Collection<Mob> pets = Dungeon.hero.getPets();
-		if (pets.contains(this)){
+		if (pets.contains(mob)){
 			return;
 		}
 		if (mob.canBePet()) {
