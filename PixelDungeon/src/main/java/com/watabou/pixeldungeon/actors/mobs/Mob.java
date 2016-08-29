@@ -38,6 +38,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
@@ -508,7 +509,7 @@ public abstract class Mob extends Char {
 					Badges.validateNightHunter();
 				}
 
-				if (!(cause instanceof Mob)) {
+				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER ) {
 					if (hero.lvl() <= maxLvl && EXP > 0) {
 						hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
 								EXP);
