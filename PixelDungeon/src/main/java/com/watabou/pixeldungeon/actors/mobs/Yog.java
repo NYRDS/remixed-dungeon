@@ -148,7 +148,7 @@ public class Yog extends Boss {
 	public void die(Object cause) {
 
 		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
-			if (mob instanceof BurningFist || mob instanceof RottingFist) {
+			if (mob instanceof Boss) {
 				mob.die(cause);
 			}
 		}
