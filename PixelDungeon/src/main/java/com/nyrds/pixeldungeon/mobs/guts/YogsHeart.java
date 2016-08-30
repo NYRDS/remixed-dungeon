@@ -20,8 +20,8 @@ import com.watabou.utils.Random;
  */
 public class YogsHeart extends Boss {
     {
-        hp(ht(300));
-        defenseSkill = 40;
+        hp(ht(250));
+        defenseSkill = 30;
 
         EXP = 12;
 
@@ -68,7 +68,7 @@ public class YogsHeart extends Boss {
 		Mob mob = Dungeon.level.getRandomMob();
 
 		if(mob!=null && mob.isAlive() && !mob.isPet()) {
-			PotionOfHealing.heal(mob,0.2f);
+			PotionOfHealing.heal(mob,0.1f);
 		}
 
 		return super.act();
