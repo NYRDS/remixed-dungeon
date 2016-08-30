@@ -11,14 +11,14 @@ import com.watabou.utils.Random;
  */
 public class PseudoRat extends Mob {
     {
-        hp(ht(360));
-        defenseSkill = 35;
+        hp(ht(320));
+        defenseSkill = 30;
 
-        EXP = 25;
+        EXP = 20;
         maxLvl = 35;
 
         loot = Gold.class;
-        lootChance = 0.7f;
+        lootChance = 0.8f;
 
         state = HUNTING;
 
@@ -27,17 +27,17 @@ public class PseudoRat extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(50, 80);
+        return Random.NormalIntRange(40, 70);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 35;
+        return 30;
     }
 
     @Override
     public int dr() {
-        return 30;
+        return 25;
     }
 
     @Override
