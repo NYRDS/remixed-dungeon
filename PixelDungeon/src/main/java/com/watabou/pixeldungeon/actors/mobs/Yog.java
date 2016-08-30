@@ -113,7 +113,7 @@ public class Yog extends Boss {
 
 		int damageShift = 0;
 		for (Mob mob : Dungeon.level.mobs) {
-			if (mob instanceof BurningFist || mob instanceof RottingFist) {
+			if (mob instanceof Boss && !(mob instanceof Yog)) {
 				mob.beckon(getPos());
 				damageShift++;
 			}
@@ -148,7 +148,7 @@ public class Yog extends Boss {
 	public void die(Object cause) {
 
 		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
-			if (mob instanceof Boss) {
+			if (mob instanceof Boss && !(mob instanceof Yog)) {
 				mob.die(cause);
 			}
 		}
