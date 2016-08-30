@@ -41,17 +41,17 @@ public class DreadKnight extends UndeadMob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(7, 14);
+        return Random.NormalIntRange(8, 16);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 25;
+        return 17;
     }
 
     @Override
     public int dr() {
-        return 9;
+        return 12;
     }
 
 

@@ -37,7 +37,7 @@ public class ExplodingSkull extends UndeadMob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(35, 55);
+        return Random.NormalIntRange(25, 45);
     }
 
     @Override

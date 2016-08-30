@@ -57,7 +57,7 @@ public class EnslavedSoul extends UndeadMob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(5, 15);
+        return Random.NormalIntRange(5, 8);
     }
 
     @Override
@@ -67,6 +67,6 @@ public class EnslavedSoul extends UndeadMob {
 
     @Override
     public int dr() {
-        return 20;
+        return 10;
     }
 }

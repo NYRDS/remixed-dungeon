@@ -39,7 +39,7 @@ public class DeathKnight extends UndeadMob {
 
     @Override
     public int attackSkill( Char target ) {
-        return 25;
+        return 15;
     }
 
     @Override

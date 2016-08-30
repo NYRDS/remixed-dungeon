@@ -11,7 +11,7 @@ import com.watabou.utils.Random;
  */
 public class Zombie extends UndeadMob {
     {
-        hp(ht(30));
+        hp(ht(33));
         defenseSkill = 10;
 
         EXP = 6;
@@ -33,7 +33,7 @@ public class Zombie extends UndeadMob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(5, 15);
+        return Random.NormalIntRange(3, 10);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class Zombie extends UndeadMob {
 
     @Override
     public int dr() {
-        return 20;
+        return 10;
     }
 
 
