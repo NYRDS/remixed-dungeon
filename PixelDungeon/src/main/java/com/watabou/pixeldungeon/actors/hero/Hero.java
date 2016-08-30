@@ -1209,13 +1209,23 @@ public class Hero extends Char {
 
 			int oldPos = getPos();
 
-			LevelObject obj = Dungeon.level.objects.get(step);
-			if(obj!=null) {
-				interrupt();
-				if(obj.interact(this)==false) {
-					return false;
+
+				LevelObject obj = Dungeon.level.objects.get(step);
+				if (obj != null) {
+
+					if(step==target) {
+						interrupt();
+						if (obj.interact(this) == false) {
+							return false;
+						}
+					} else {
+						if(obj.stepOn(this) == false) {
+							interrupt();
+							return false;
+						}
+					}
 				}
-			}
+
 
 			move(step);
 			getSprite().move(oldPos, getPos());

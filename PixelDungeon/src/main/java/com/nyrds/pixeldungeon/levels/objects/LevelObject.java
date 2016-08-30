@@ -27,6 +27,7 @@ public abstract class LevelObject implements Bundlable {
 	abstract void setupFromJson(Level level, JSONObject obj) throws JSONException;
 
 	public boolean interact(Hero hero ) {return true;}
+	public boolean stepOn(Hero hero) {return true;}
 
 	protected void remove() {
 		Dungeon.level.remove(this);
