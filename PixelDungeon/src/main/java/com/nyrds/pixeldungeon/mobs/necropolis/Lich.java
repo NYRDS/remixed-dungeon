@@ -37,7 +37,7 @@ public class Lich extends Boss {
 
     private static final int SKULLS_BY_DEFAULT	= 3;
     private static final int SKULLS_MAX	= 4;
-    private static final int HEALTH	= 240;
+    private static final int HEALTH	= 200;
     private static final int SKULL_DELAY = 5;
     private static final int JUMP_DELAY = 6;
 
@@ -74,7 +74,7 @@ public class Lich extends Boss {
 
     @Override
     protected boolean canAttack( Char enemy ) {
-        return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
+        return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
     }
 
     @Override
@@ -84,8 +84,20 @@ public class Lich extends Boss {
             jump();
             return true;
         }
-        getSprite().zap(enemy.getPos());
-         return super.doAttack( enemy );
+
+        if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
+            return super.doAttack(enemy);
+        } else {
+
+            getSprite().zap(enemy.getPos());
+
+            spend(1);
+
+            if (hit(this, enemy, true)) {
+                enemy.damage(damageRoll(), this);
+            }
+            return true;
+        }
     }
 
     private void jump() {
@@ -186,7 +198,7 @@ public class Lich extends Boss {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 18, 31 );
+        return Random.NormalIntRange( 12, 20 );
     }
 
     @Override
@@ -230,6 +242,7 @@ public class Lich extends Boss {
         }
         Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
     }
+
 
     public void spawnSkulls(){
 
