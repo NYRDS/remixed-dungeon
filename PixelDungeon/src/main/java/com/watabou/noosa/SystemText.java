@@ -110,6 +110,15 @@ public class SystemText extends Text {
 		texts.remove(this);
 	}
 
+	@Override
+	public void kill() {
+		destroyLines();
+
+		text = null;
+		super.kill();
+		texts.remove(this);
+	}
+
 	private ArrayList<Float> xCharPos = new ArrayList<>();
 
 	private float fontHeight;
