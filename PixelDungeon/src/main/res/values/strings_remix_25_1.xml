@@ -6,7 +6,7 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">The Black Skull has been awakened!</string>
-    <string name="BlackSkull_Ressurrect">The Black Skull has raised a killed monster!</string>
+    <string name="BlackSkull_Ressurrect">The Black Skull has raised the dead monster to serve you!</string>
     <string name="BlackSkull_Deactivated">The Black Skull is dormant, once more...</string>
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
@@ -38,7 +38,7 @@
 
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
-    <string name="NecromancerRobe_PetAlreadyExists">You cannot summon more than %1$d minion with this item!</string>
+    <string name="NecromancerRobe_PetLimitReached">You cannot summon more than %1$d minion with this item!</string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->

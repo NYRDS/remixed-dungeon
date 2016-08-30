@@ -19,7 +19,7 @@ import java.util.Collection;
 
 public class Necromancy {
 
-	private static final String TXT_MAXIMUM_PETS   = Game.getVar(R.string.NecromancerRobe_PetAlreadyExists);
+	private static final String TXT_MAXIMUM_PETS   = Game.getVar(R.string.NecromancerRobe_PetLimitReached);
 	private static final int ARMOR_LIMIT = 2;
 	private static final int ROBES_LIMIT = 1;
 
