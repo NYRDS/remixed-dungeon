@@ -28,13 +28,13 @@ public class EnslavedSoul extends UndeadMob {
     };
 
     public EnslavedSoul(){
-        hp(ht(45));
+        hp(ht(25));
 
         baseSpeed = 1.1f;
-        defenseSkill = 27;
+        defenseSkill = 11;
         flying = true;
 
-        EXP = 10;
+        EXP = 5;
         maxLvl = 15;
 
         loot = Gold.class;

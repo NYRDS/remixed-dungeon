@@ -11,8 +11,8 @@ import com.watabou.utils.Callback;
 public class JarOfSouls extends UndeadMob {
 
 	public JarOfSouls() {
-		hp(ht(100));
-		defenseSkill = 1;
+		hp(ht(70));
+		defenseSkill = 5;
 
 		pacified = true;
 		

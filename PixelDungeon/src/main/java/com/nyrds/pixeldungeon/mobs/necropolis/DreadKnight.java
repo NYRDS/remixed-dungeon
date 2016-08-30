@@ -13,10 +13,10 @@ import com.watabou.utils.Random;
 // Rare of the Death Knight
 public class DreadKnight extends UndeadMob {
     {
-        hp(ht(60));
-        defenseSkill = 20;
+        hp(ht(40));
+        defenseSkill = 15;
 
-        EXP = 12;
+        EXP = 8;
         maxLvl = 15;
 
         loot = Gold.class;

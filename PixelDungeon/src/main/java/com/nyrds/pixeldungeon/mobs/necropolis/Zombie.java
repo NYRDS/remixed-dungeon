@@ -11,10 +11,10 @@ import com.watabou.utils.Random;
  */
 public class Zombie extends UndeadMob {
     {
-        hp(ht(45));
-        defenseSkill = 20;
+        hp(ht(30));
+        defenseSkill = 10;
 
-        EXP = 10;
+        EXP = 6;
         maxLvl = 15;
 
         loot = Gold.class;

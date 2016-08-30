@@ -10,10 +10,10 @@ import com.watabou.utils.Random;
  */
 public class DeathKnight extends UndeadMob {
     {
-        hp(ht(45));
-        defenseSkill = 17;
+        hp(ht(35));
+        defenseSkill = 12;
 
-        EXP = 10;
+        EXP = 7;
         maxLvl = 15;
 
         loot = Gold.class;
