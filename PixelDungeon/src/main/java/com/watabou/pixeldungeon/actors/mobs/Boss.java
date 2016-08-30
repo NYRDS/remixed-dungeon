@@ -6,8 +6,6 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 abstract public class Boss extends Mob {
 
 	public Boss() {
-		state = HUNTING;
-
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
 	}
