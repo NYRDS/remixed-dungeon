@@ -21,7 +21,7 @@ import java.util.HashSet;
 public class NecromancerArmor extends ClassArmor {
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
-	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
+	private static final String AC_SPECIAL = Game.getVar(R.string.Necromancer_ACSpecial);
 
 	public HashSet<Mob> pets   = new HashSet<>();
 

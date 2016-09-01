@@ -23,7 +23,7 @@ import java.util.HashSet;
 public class NecromancerRobe extends UsableArmor {
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
-	private static final String AC_SPECIAL = Game.getVar(R.string.NecromancerArmor_ACSpecial);
+	private static final String AC_SPECIAL = Game.getVar(R.string.Necromancer_ACSpecial);
 
 	public NecromancerRobe() {
 		super( 1 );
