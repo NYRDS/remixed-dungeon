@@ -210,6 +210,10 @@ public class HeroSpriteDef extends MobSpriteDef {
 			descriptor = "warlock";
 		}
 
+		if(hero.subClass.equals(HeroSubClass.LICH)) {
+			descriptor = "lich";
+		}
+
 		return "hero/body/"+descriptor+".png";
 	}
 
