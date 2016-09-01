@@ -55,9 +55,9 @@
     <string name="Necromancy_SoulsCountLabel">Souls</string>
 
     <string name="Necromancer_ACSpecial">NECROMANCY</string>
-    <string name="Necromancy_ReincarnationName">_Reincarnation_</string>
+    <string name="Necromancy_ReincarnationName">Reincarnation</string>
     <string name="Necromancy_ReincarnationTriggered">Your powers defies death! But you lost all collected souls and possessions.</string>
-    <string name="Necromancy_SummonDeathlingName">_Summon Deathling_</string>
+    <string name="Necromancy_SummonDeathlingName">Summon Deathling</string>
 
     <string name="Necromancy_BecameALich">You became a Lich! Your power grows and your soul capacity has doubled!</string>
 
