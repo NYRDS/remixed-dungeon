@@ -4,6 +4,16 @@
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_WayAlreadyChosen">You cannot change your way!</string>
 
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">The Soulbringer</string>
+    <string name="BlackSkullOfMastery_Desc">It\'s an ancient artifact, crafted by first necromancers to collect souls of the fallen. Sensing your necromantic abilities it warded itself with a powerful spell. But since the spell is that of an old times, it\'s primitive structure is fairly easy to break.</string>
+    <string name="BlackSkullOfMastery_Title">You may break the spell. Or you may manipulate the magical formula in a way, which will allow you to consume powers of both spell and artifact itself, turning yourself into a Lich.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Become Lich</string>
+    <string name="BlackSkullOfMastery_Necromancer">Remain human</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">The _Lich_ is a necromancer who reached pinnacle of his abilities. Existing between life and death _Lich_ excels in necromancy, but his combat skills are greatly reduced.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Or you may remain a mortal human and use powers of this artifact </string>
+
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">The Black Skull has been awakened!</string>
     <string name="BlackSkull_Ressurrect">The Black Skull has raised the dead monster to serve you!</string>
@@ -11,17 +21,19 @@
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Bone armor</string>
-    <string name="NecromancerArmor_Info">Bones, brotha</string>
+    <string name="NecromancerArmor_Info">This armor will allow Necromancer to summon up to 2 Deathlings at a cost of his health. These undead servants will follow their master and attack his foes. The Deathlings becomes stronger with each hero level, but also costs more health to summon.</string>
     <string name="NecromancerArmor_ACSpecial">NECROMANCY</string>
     <string name="NecromancerArmor_NotNecromancer">Only necromancers can use this armor!</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">necromancer robe</string>
-    <string name="NecromancerRobe_Info">This lightweight armor offers basic protection.</string>
+    <string name="NecromancerRobe_Info">This robe will allow Necromancer to summon a Deathling at a cost of his health. The Deathlings is an undead minions that grows stronger alongside their master.</string>
 
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
     <string name="HeroClass_Necromancer">necromancer</string>
+
+    <string name="HeroSubClass_NameLich">lich</string>
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Necromancers start with 15 hp.</item>
@@ -34,11 +46,20 @@
     <string name="Deathling_Name">deathling</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name_Objective">deathling</string>
-    <string name="Deathling_Desc">It\'s like death\'s little cousin.</string>
+    <string name="Deathling_Desc">Deathling is a soul of a fallen hero, that was unfortunate enough to be summoned by Necromantic powers of fellow adventurer.</string>
 
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
-    <string name="NecromancerRobe_PetLimitReached">You cannot summon more than %1$d minion with this item!</string>
+    <string name="NecromancerRobe_PetLimitReached">You cannot control more than %1$d minions with this item!</string>
+    <string name="Necromancy_NotEnoughSouls">You do not have enough souls to cast a \"%1$s\" spell.</string>
+
+    <string name="Necromancy_SoulsCountLabel">Souls</string>
+
+    <string name="Necromancy_ReincarnationName">_Reincarnation_</string>
+    <string name="Necromancy_ReincarnationTriggered">Your powers defies death! But you lost all collected souls and possessions.</string>
+    <string name="Necromancy_SummonDeathlingName">_Summon Deathling_</string>
+
+    <string name="Necromancy_BecameALich">You became a Lich! Your power grows and your soul capacity has doubled!</string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
