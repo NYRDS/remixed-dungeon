@@ -95,6 +95,7 @@ public enum HeroClass {
 
 	public void initHero(Hero hero) {
 		hero.heroClass = this;
+		hero.setSoulPointsMax();
 		initCommon(hero);
 
 		switch (this) {

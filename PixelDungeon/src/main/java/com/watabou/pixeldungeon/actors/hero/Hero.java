@@ -202,7 +202,6 @@ public class Hero extends Char {
 
 		STR(STARTING_STR);
 		awareness = 0.1f;
-		setSoulPointsMax();
 		belongings = new Belongings(this);
 	}
 

@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -49,6 +50,7 @@ public class WndHero extends WndTabbed {
 	private static final String TXT_EXP		= Game.getVar(R.string.WndHero_Exp);
 	private static final String TXT_STR		= Game.getVar(R.string.WndHero_Str);
 	private static final String TXT_HEALTH	= Game.getVar(R.string.WndHero_Health);
+	private static final String TXT_SOULS	= Game.getVar(R.string.Necromancy_SoulsCountLabel);
 	private static final String TXT_GOLD	= Game.getVar(R.string.WndHero_Gold);
 	private static final String TXT_DEPTH	= Game.getVar(R.string.WndHero_Depth);
 	
@@ -142,6 +144,9 @@ public class WndHero extends WndTabbed {
 			
 			statSlot( TXT_STR, hero.effectiveSTR() );
 			statSlot( TXT_HEALTH, hero.hp() + "/" + hero.ht() );
+			if(hero.heroClass == HeroClass.NECROMANCER){
+				statSlot( TXT_SOULS, hero.getSoulPoints() + "/" + hero.getSoulPointsMax() );
+			}
 			statSlot( TXT_EXP, hero.getExp() + "/" + hero.maxExp() );
 
 			pos += GAP;
