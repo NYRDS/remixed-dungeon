@@ -178,6 +178,8 @@ public class Hero extends Char {
 
 	private int lvl = Scrambler.scramble(1);
 	private int exp = Scrambler.scramble(0);
+	private int SP  = Scrambler.scramble(0);
+	private int SP_MAX  = Scrambler.scramble(0);
 
 	public String levelKind;
 	public String levelId;
@@ -200,7 +202,7 @@ public class Hero extends Char {
 
 		STR(STARTING_STR);
 		awareness = 0.1f;
-
+		setSoulPointsMax();
 		belongings = new Belongings(this);
 	}
 
@@ -1752,4 +1754,37 @@ public class Hero extends Char {
 		Dungeon.setDifficulty(difficulty);
 	}
 
+	public void accumulateSoulPoints(){
+		int sp = Scrambler.descramble(SP);
+		sp = sp + 1;
+		if (sp > getSoulPointsMax()){
+			sp = getSoulPointsMax();
+		}
+		SP = Scrambler.scramble(sp);
+	}
+
+	public int getSoulPoints(){
+		return Scrambler.descramble(SP);
+	}
+
+	public int getSoulPointsMax(){
+		return Scrambler.descramble(SP_MAX);
+	}
+
+	public void setSoulPointsMax(){
+		if (this.className().equals("NECROMANCER")){
+			SP_MAX = Scrambler.scramble(50);
+		}
+		if (this.className().equals("LICH")){
+			SP_MAX = Scrambler.scramble(100);
+		}
+	}
+
+	public boolean spendSoulPoints(int cost){
+		if (cost > getSoulPoints()){
+			return false;
+		}
+		SP = Scrambler.scramble(Scrambler.descramble(SP) - cost);
+		return true;
+	}
 }
