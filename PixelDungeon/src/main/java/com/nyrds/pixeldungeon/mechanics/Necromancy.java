@@ -21,6 +21,7 @@ public class Necromancy {
 
 	private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.NecromancerRobe_PetLimitReached);
 	private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Necromancy_NotEnoughSouls);
+	private static final String TXT_SUMMON_DEATHLING   = Game.getVar(R.string.Necromancy_SummonDeathlingName);
 
 	private static final int DEATHLING_COST = 5;
 
@@ -62,7 +63,7 @@ public class Necromancy {
 		Hero hero = Dungeon.hero;
 
 		if(!hero.spendSoulPoints(DEATHLING_COST)){
-			GLog.w( TXT_NOT_ENOUGH_SOULS );
+			GLog.w( Utils.format(TXT_NOT_ENOUGH_SOULS, TXT_SUMMON_DEATHLING) );
 			return;
 		}
 
