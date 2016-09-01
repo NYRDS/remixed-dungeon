@@ -162,7 +162,7 @@ public class Badges {
 		SHADOW_LORD_SLAIN(Game.getVar(R.string.Badges_ShadowLord_Slain), 67),
 		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 65),
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
-		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER;
+		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH;
 
 		public boolean meta;
 
@@ -681,6 +681,9 @@ public class Badges {
 				case SCOUT:
 					badge = Badge.BOSS_SLAIN_3_SCOUT;
 					break;
+				case LICH:
+					badge = Badge.BOSS_SLAIN_3_LICH;
+					break;
 				default:
 					return;
 			}
@@ -699,7 +702,8 @@ public class Badges {
 					global.contains(Badge.BOSS_SLAIN_3_SNIPER) &&
 					global.contains(Badge.BOSS_SLAIN_3_WARDEN) &&
 					global.contains(Badge.BOSS_SLAIN_3_SHAMAN) &&
-					global.contains(Badge.BOSS_SLAIN_3_SCOUT)) {
+					global.contains(Badge.BOSS_SLAIN_3_SCOUT) &&
+					global.contains(Badge.BOSS_SLAIN_3_LICH)) {
 
 				badge = Badge.BOSS_SLAIN_3_ALL_SUBCLASSES;
 				if (!global.contains(badge)) {
@@ -824,6 +828,9 @@ public class Badges {
 				break;
 			case ELF:
 				badge = Badge.VICTORY_ELF;
+				break;
+			case NECROMANCER:
+				badge = Badge.VICTORY_NECROMANCER;
 				break;
 		}
 		local.add(badge);
