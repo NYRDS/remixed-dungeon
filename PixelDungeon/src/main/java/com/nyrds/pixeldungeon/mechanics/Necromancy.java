@@ -19,7 +19,11 @@ import java.util.Collection;
 
 public class Necromancy {
 
-	private static final String TXT_MAXIMUM_PETS   = Game.getVar(R.string.NecromancerRobe_PetLimitReached);
+	private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.NecromancerRobe_PetLimitReached);
+	private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Necromancy_NotEnoughSouls);
+
+	private static final int DEATHLING_COST = 5;
+
 	private static final int ARMOR_LIMIT = 2;
 	private static final int ROBES_LIMIT = 1;
 
@@ -54,11 +58,21 @@ public class Necromancy {
 			return;
 		}
 
+
+
 		Hero hero = Dungeon.hero;
+
+		if(!hero.spendSoulPoints(DEATHLING_COST)){
+			GLog.w( TXT_NOT_ENOUGH_SOULS );
+			return;
+		}
+
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
 
+
+
 		Wound.hit(hero);
-		hero.damage(4 + Dungeon.hero.lvl(), source);
+		hero.damage(4 + hero.lvl(), source);
 		Buff.detach(hero, Sungrass.Health.class);
 
 		if (Dungeon.level.cellValid(spawnPos)) {
