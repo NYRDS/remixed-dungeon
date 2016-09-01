@@ -1772,10 +1772,10 @@ public class Hero extends Char {
 
 	public void setSoulPointsMax(){
 		if (this.heroClass == HeroClass.NECROMANCER){
-			SP_MAX = Scrambler.scramble(50);
+			SP_MAX = Scrambler.scramble(25);
 		}
 		if (this.subClass == HeroSubClass.LICH){
-			SP_MAX = Scrambler.scramble(100);
+			SP_MAX = Scrambler.scramble(50);
 		}
 	}
 
