@@ -22,7 +22,6 @@
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Bone armor</string>
     <string name="NecromancerArmor_Info">This armor will allow Necromancer to summon up to 2 Deathlings at a cost of his health. These undead servants will follow their master and attack his foes. The Deathlings becomes stronger with each hero level, but also costs more health to summon.</string>
-    <string name="NecromancerArmor_ACSpecial">NECROMANCY</string>
     <string name="NecromancerArmor_NotNecromancer">Only necromancers can use this armor!</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
@@ -55,6 +54,7 @@
 
     <string name="Necromancy_SoulsCountLabel">Souls</string>
 
+    <string name="Necromancer_ACSpecial">NECROMANCY</string>
     <string name="Necromancy_ReincarnationName">_Reincarnation_</string>
     <string name="Necromancy_ReincarnationTriggered">Your powers defies death! But you lost all collected souls and possessions.</string>
     <string name="Necromancy_SummonDeathlingName">_Summon Deathling_</string>
