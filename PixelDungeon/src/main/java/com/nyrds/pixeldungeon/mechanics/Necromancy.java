@@ -53,12 +53,11 @@ public class Necromancy {
 				n++;
 			}
 		}
+
 		if (n >= Necromancy.getLimit(source)){
 			GLog.w( Necromancy.getLimitWarning(source) );
 			return;
 		}
-
-
 
 		Hero hero = Dungeon.hero;
 
@@ -68,8 +67,6 @@ public class Necromancy {
 		}
 
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
-
-
 
 		Wound.hit(hero);
 		hero.damage(4 + hero.lvl(), source);
