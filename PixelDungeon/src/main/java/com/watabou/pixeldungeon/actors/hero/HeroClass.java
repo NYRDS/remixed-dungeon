@@ -249,12 +249,12 @@ public enum HeroClass {
 		(hero.belongings.weapon = new Dagger()).identify();
 		(hero.belongings.armor = new NecromancerRobe()).upgrade(2).identify();
 
-		WandOfAmok wand = new WandOfAmok();
 		SkeletonKey key = SkeletonKey.makeNewKey(7);
 		hero.collect(key);
-		hero.collect(wand.identify());
 
-		QuickSlot.selectItem(wand, 0);
+		hero.collect(new Dart(8).identify());
+
+		QuickSlot.selectItem(Dart.class, 0);
 
 		new PotionOfHealing().setKnown();
 	}
