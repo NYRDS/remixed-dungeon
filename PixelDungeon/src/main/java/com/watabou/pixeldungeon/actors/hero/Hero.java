@@ -1441,6 +1441,16 @@ public class Hero extends Char {
 		super.die(cause);
 
 		Ankh ankh = belongings.getItem(Ankh.class);
+
+		if (this.subClass == HeroSubClass.LICH) {
+			if (this.getSoulPoints() < this.getSoulPointsMax()) {
+				reallyDie(cause);
+			} else {
+				Dungeon.deleteGame(false);
+				GameScene.show(new WndResurrect(ankh, cause));
+			}
+		}
+
 		if (ankh == null) {
 			reallyDie(cause);
 		} else {
@@ -1775,7 +1785,7 @@ public class Hero extends Char {
 			SP_MAX = Scrambler.scramble(25);
 		}
 		if (this.subClass == HeroSubClass.LICH){
-			SP_MAX = Scrambler.scramble(50);
+			SP_MAX = Scrambler.scramble(1);
 		}
 	}
 
