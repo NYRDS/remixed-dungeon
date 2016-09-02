@@ -145,6 +145,6 @@ public class TomeOfMastery extends Item {
 		getCurUser().spendAndNext( TomeOfMastery.TIME_TO_READ );
 		getCurUser().busy();
 
-		
+		getCurUser().setSoulPointsMax();
 	}
 }
