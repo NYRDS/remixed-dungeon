@@ -84,7 +84,6 @@ public class Necromancy {
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
 
 		Wound.hit(hero);
-		hero.damage(4 + hero.lvl(), source);
 		Buff.detach(hero, Sungrass.Health.class);
 
 		if (Dungeon.level.cellValid(spawnPos)) {
