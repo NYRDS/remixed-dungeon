@@ -1785,7 +1785,7 @@ public class Hero extends Char {
 			SP_MAX = Scrambler.scramble(25);
 		}
 		if (this.subClass == HeroSubClass.LICH){
-			SP_MAX = Scrambler.scramble(1);
+			SP_MAX = Scrambler.scramble(50);
 		}
 	}
 
