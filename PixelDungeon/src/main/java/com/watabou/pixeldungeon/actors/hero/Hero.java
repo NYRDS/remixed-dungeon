@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.mechanics.Necromancy;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
@@ -118,6 +119,7 @@ import com.watabou.pixeldungeon.ui.AttackIndicator;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
@@ -1444,6 +1446,7 @@ public class Hero extends Char {
 
 		if (this.subClass == HeroSubClass.LICH) {
 			if (this.getSoulPoints() < this.getSoulPointsMax()) {
+				GLog.w( Necromancy.notEnoughSouls(Necromancy.REINCARNATION));
 				reallyDie(cause);
 			} else {
 				Dungeon.deleteGame(false);

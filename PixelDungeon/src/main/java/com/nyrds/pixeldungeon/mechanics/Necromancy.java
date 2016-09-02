@@ -22,11 +22,15 @@ public class Necromancy {
 	private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.NecromancerRobe_PetLimitReached);
 	private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Necromancy_NotEnoughSouls);
 	private static final String TXT_SUMMON_DEATHLING   = Game.getVar(R.string.Necromancy_SummonDeathlingName);
+	private static final String TXT_REINCARNATION   = Game.getVar(R.string.Necromancy_ReincarnationName);
 
 	private static final int DEATHLING_COST = 5;
 
 	private static final int ARMOR_LIMIT = 2;
 	private static final int ROBES_LIMIT = 1;
+
+	public static String SUMMON_DEATHLING = "SUMMON_DEATHLING";
+	public static String REINCARNATION = "REINCARNATION";
 
 	public static int getLimit(Item source){
 		if (source instanceof NecromancerArmor){
@@ -43,6 +47,16 @@ public class Necromancy {
 			return Utils.format(TXT_MAXIMUM_PETS, ROBES_LIMIT);
 		}
 		return "<Warning> Summoning item class does not specified!";
+	}
+
+	public static String notEnoughSouls (String spell) {
+		if (spell.equals(SUMMON_DEATHLING)){
+			return Utils.format(TXT_NOT_ENOUGH_SOULS, TXT_SUMMON_DEATHLING);
+		}
+		if (spell.equals(REINCARNATION)){
+			return Utils.format(TXT_NOT_ENOUGH_SOULS, TXT_REINCARNATION);
+		}
+		return "Unknown spell!";
 	}
 
 	public static void summonDeathling(Item source){
@@ -63,7 +77,7 @@ public class Necromancy {
 		Hero hero = Dungeon.hero;
 
 		if(!hero.spendSoulPoints(DEATHLING_COST)){
-			GLog.w( Utils.format(TXT_NOT_ENOUGH_SOULS, TXT_SUMMON_DEATHLING) );
+			GLog.w( notEnoughSouls(SUMMON_DEATHLING) );
 			return;
 		}
 
