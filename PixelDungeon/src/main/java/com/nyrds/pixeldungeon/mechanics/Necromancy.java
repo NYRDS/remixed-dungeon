@@ -56,7 +56,7 @@ public class Necromancy {
 		if (spell.equals(REINCARNATION)){
 			return Utils.format(TXT_NOT_ENOUGH_SOULS, TXT_REINCARNATION);
 		}
-		return "Unknown spell!";
+		return Utils.format(TXT_NOT_ENOUGH_SOULS, "Unknown spell!!!");
 	}
 
 	public static void summonDeathling(Item source){
