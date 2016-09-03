@@ -95,12 +95,13 @@ public class DangerIndicator extends Tag {
 	
 	@Override
 	protected void onClick() {
-		
-		Mob target = Dungeon.hero.visibleEnemy( enemyIndex++ );
-		
-		HealthIndicator.instance.target( target == HealthIndicator.instance.target() ? null : target );
-		
-		Camera.main.target = null;
-		Camera.main.focusOn( target.getSprite() );
+		if(Dungeon.hero.visibleEnemies() >0) {
+			Mob target = Dungeon.hero.visibleEnemy(enemyIndex++);
+
+			HealthIndicator.instance.target(target == HealthIndicator.instance.target() ? null : target);
+
+			Camera.main.target = null;
+			Camera.main.focusOn(target.getSprite());
+		}
 	}
 }

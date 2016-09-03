@@ -1217,11 +1217,11 @@ public class Hero extends Char {
 
 					if(step==target) {
 						interrupt();
-						if (obj.interact(this) == false) {
+						if (!obj.interact(this)) {
 							return false;
 						}
 					} else {
-						if(obj.stepOn(this) == false) {
+						if(!obj.stepOn(this)) {
 							interrupt();
 							return false;
 						}
