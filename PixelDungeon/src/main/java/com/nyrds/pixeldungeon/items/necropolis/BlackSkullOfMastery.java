@@ -22,21 +22,17 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndChooseWay;
 
 import java.util.ArrayList;
 
-public class BlacSkullOfMastery extends Item {
+public class BlackSkullOfMastery extends Item {
 
 	public static final float TIME_TO_READ = 10;
 
@@ -131,7 +127,7 @@ public class BlacSkullOfMastery extends Item {
 		getCurUser().checkIfFurious();
 		getCurUser().updateLook();
 		
-		getCurUser().spendAndNext( BlacSkullOfMastery.TIME_TO_READ );
+		getCurUser().spendAndNext( BlackSkullOfMastery.TIME_TO_READ );
 		getCurUser().busy();
 	}
 }
