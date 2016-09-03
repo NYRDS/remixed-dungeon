@@ -17,6 +17,8 @@
 
 package com.watabou.utils;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -188,7 +190,8 @@ public class Bundle {
 			return null;
 		}
 	}
-	
+
+	@NonNull
 	public <T extends Bundlable> Collection<T> getCollection( String key, Class<T> type ) {
 
 		if(!data.has(key)) {

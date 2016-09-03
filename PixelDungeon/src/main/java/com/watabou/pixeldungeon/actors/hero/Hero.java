@@ -119,7 +119,6 @@ import com.watabou.pixeldungeon.ui.AttackIndicator;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
@@ -178,10 +177,10 @@ public class Hero extends Char {
 
 	private float awareness;
 
-	private int lvl = Scrambler.scramble(1);
-	private int exp = Scrambler.scramble(0);
-	private int SP  = Scrambler.scramble(0);
-	private int SP_MAX  = Scrambler.scramble(0);
+	private int lvl   = Scrambler.scramble(1);
+	private int exp   = Scrambler.scramble(0);
+	private int sp    = Scrambler.scramble(0);
+	private int spMax = Scrambler.scramble(0);
 
 	public String levelKind;
 	public String levelId;
@@ -245,14 +244,13 @@ public class Hero extends Char {
 	private static final String LEVEL_ID = "levelId";
 	private static final String DIFFICULTY = "difficulty";
 	private static final String PETS = "pets";
+	private static final String SP = "sp";
 
 	private void refreshPets() {
 		ArrayList<Mob> alivePets = new ArrayList<>();
-		if (pets != null) {
-			for (Mob pet : pets) {
-				if (pet.isAlive() && pet.fraction() == Fraction.HEROES) {
-					alivePets.add(pet);
-				}
+		for (Mob pet : pets) {
+			if (pet.isAlive() && pet.fraction() == Fraction.HEROES) {
+				alivePets.add(pet);
 			}
 		}
 		pets = alivePets;
@@ -287,6 +285,7 @@ public class Hero extends Char {
 		refreshPets();
 
 		bundle.put(PETS, pets);
+		bundle.put(SP, getSoulPoints());
 
 		belongings.storeInBundle(bundle);
 	}
@@ -312,11 +311,11 @@ public class Hero extends Char {
 
 		Collection<Mob> _pets = bundle.getCollection(PETS, Mob.class);
 
-		if (_pets != null) {
-			for (Mob pet : _pets) {
-				pets.add(pet);
-			}
+		for (Mob pet : _pets) {
+			pets.add(pet);
 		}
+
+		sp = Scrambler.scramble(bundle.optInt(SP,0));
 
 		belongings.restoreFromBundle(bundle);
 
@@ -1767,28 +1766,28 @@ public class Hero extends Char {
 	}
 
 	public void accumulateSoulPoints(){
-		int sp = Scrambler.descramble(SP);
+		int sp = Scrambler.descramble(this.sp);
 		sp = sp + 1;
 		if (sp > getSoulPointsMax()){
 			sp = getSoulPointsMax();
 		}
-		SP = Scrambler.scramble(sp);
+		this.sp = Scrambler.scramble(sp);
 	}
 
 	public int getSoulPoints(){
-		return Scrambler.descramble(SP);
+		return Scrambler.descramble(sp);
 	}
 
 	public int getSoulPointsMax(){
-		return Scrambler.descramble(SP_MAX);
+		return Scrambler.descramble(spMax);
 	}
 
 	public void setSoulPointsMax(){
 		if (this.heroClass == HeroClass.NECROMANCER){
-			SP_MAX = Scrambler.scramble(25);
+			spMax = Scrambler.scramble(25);
 		}
 		if (this.subClass == HeroSubClass.LICH){
-			SP_MAX = Scrambler.scramble(50);
+			spMax = Scrambler.scramble(50);
 		}
 	}
 
@@ -1796,7 +1795,7 @@ public class Hero extends Char {
 		if (cost > getSoulPoints()){
 			return false;
 		}
-		SP = Scrambler.scramble(Scrambler.descramble(SP) - cost);
+		sp = Scrambler.scramble(Scrambler.descramble(sp) - cost);
 		return true;
 	}
 }
