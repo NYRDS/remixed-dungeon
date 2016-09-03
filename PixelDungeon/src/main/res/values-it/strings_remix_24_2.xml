@@ -18,6 +18,7 @@
     <string name="NecromancerNPC_Gender">mascolino </string>
     <string name="NecromancerNPC_Name_Objective">negromante </string>
     <string name="NecromancerNPC_Desc">Quest\'uomo di mezza età sembra essere leggermente annoiato ed eccitato allo stesso tempo. Veste un\'armatura composita fatta  da frammenti di scheletri. </string>
+    <string name="NecromancerNPC_Intro">Ah! Non è una cosa rara da vedere! Un compagno avventuriero che non è morto. Incredibile! Oh... Chiedo venia, a volte sono troppo esaltato. Vedi, io stesso sono un negromante. E nonostante studiare il morto e la morte in sé sia ciò che faccio per vivere, vedendo le stesse cose ancora e ancora, spesso diventa estremamente noioso. D\'altro canto è proprio il motivo per cui sono qui. Secondo i miei calcolo in sole poche settimane, da qualche parte in questo dungeon, accadrà qualcosa di spettacolare. Una _Necropoli_, un\'antica città dei morti sta per aprire le sue porte. E... Non posso dire tanto, ho sprecato abbastanza tempo così com\'è. Devo preparami, _torna dopo_. </string>
     <string name="NecromancerNPC_Message1">Così poco tempo, così poco tempo... </string>
     <string name="NecromancerNPC_Message2">Devo essere pronto. </string>
     <string name="NecromancerNPC_Message3">Posso ascoltare il richiamo dei morti.</string>

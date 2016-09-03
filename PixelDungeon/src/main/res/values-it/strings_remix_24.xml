@@ -2,6 +2,10 @@
 <resources>
 	<string name="Bowknot_Info">Un bel fiocco dal colore rosa vivace, attaccato su una forcina per capelli.</string>
 	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Ombre </string>
+    <string name="Shades_Info">Alcune persone dicono che questi dungeon sono troppo bui per vestire questi. E tu dici che queste persone non sono abbastanza cool. </string>
+	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Zucca</string>
     <!-- STRINGS OF WizardHat CLASS -->
