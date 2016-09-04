@@ -166,9 +166,8 @@ public class PredesignedLevel extends CommonLevel {
 					if (cellValid(x, y)) {
 						String kind = itemDesc.getString("kind");
 						Item item = ItemFactory.itemsClassByName(kind).newInstance();
-						if (itemDesc.has("quantity")) {
-							item.quantity(itemDesc.getInt("quantity"));
-						}
+						item.fromJson(itemDesc);
+
 						drop(item, cell(x, y));
 					}
 				}

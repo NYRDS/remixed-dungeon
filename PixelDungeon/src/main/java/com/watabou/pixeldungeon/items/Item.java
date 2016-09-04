@@ -44,6 +44,9 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -574,5 +577,9 @@ public class Item implements Bundlable {
 
 	protected static void setCurUser(Hero curUser) {
 		Item.curUser = curUser;
+	}
+
+	public void fromJson(JSONObject itemDesc) throws JSONException {
+		quantity(itemDesc.optInt("quantity",1));
 	}
 }

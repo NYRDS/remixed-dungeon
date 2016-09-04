@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
@@ -48,8 +49,6 @@ import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
-import com.watabou.pixeldungeon.items.wands.WandOfAmok;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -134,11 +133,11 @@ public enum HeroClass {
 	}
 
 	private static void initDebug(Hero hero) {
-		for(int i = 0;i<100;i++) {
+		for(int i = 0;i<10;i++) {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new PotionOfToxicGas());
 			hero.collect(new PotionOfLiquidFlame());
-			hero.collect(new ScrollOfTeleportation());
+			hero.collect(new Codex());
 		}
 
 		hero.collect(new TomeOfMastery());

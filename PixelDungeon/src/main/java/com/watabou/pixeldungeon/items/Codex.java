@@ -27,6 +27,9 @@ import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class Codex extends Item {
@@ -35,10 +38,12 @@ public class Codex extends Item {
 
 	public static final String AC_READ	= Game.getVar(R.string.Codex_ACRead);
 
-	private static String idTag = "id";
+	private static String idTag   = "id";
+	private static String textTag = "text";
 	private int    maxId = 0;
 	
 	private int    id;
+	private String text;
 
 	public Codex(){
 		stackable = false;
@@ -58,20 +63,22 @@ public class Codex extends Item {
 	@Override
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_READ )) {
-			
+
 			if (hero.buff( Blindness.class ) != null) {
 				GLog.w( TXT_BLINDED );
 				return;
 			}
-			
+
 			setCurUser(hero);
-			
-			WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[id]);
-		} else {
-			
-			super.execute( hero, action );
-			
+			if(text != null) {
+				WndStory.showCustomStory(text);
+			} else {
+				WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[id]);
+			}
+			return;
 		}
+
+		super.execute( hero, action );
 	}
 	
 	@Override
@@ -83,7 +90,13 @@ public class Codex extends Item {
 	public boolean isUpgradable() {
 		return false;
 	}
-	
+
+	public void fromJson(JSONObject itemDesc) throws JSONException {
+		super.fromJson(itemDesc);
+
+		text = itemDesc.optString(textTag);
+	}
+
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
@@ -91,12 +104,15 @@ public class Codex extends Item {
 		if(!(id < maxId)){
 			id = Random.Int(maxId);
 		}
+		text = bundle.optString(textTag,null);
 	}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle(bundle);
-		bundle.put(idTag, id);	}
+		bundle.put(idTag, id);
+		bundle.put(textTag, text);
+	}
 	
 	@Override
 	public int price(){
