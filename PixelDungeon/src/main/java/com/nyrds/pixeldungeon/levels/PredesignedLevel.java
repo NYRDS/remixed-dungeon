@@ -86,11 +86,13 @@ public class PredesignedLevel extends CommonLevel {
 	}
 
 	private void placeObjects() throws JSONException {
-		JSONArray objects = mLevelDesc.getJSONArray("objects");
+		if(mLevelDesc.has("objects")) {
+			JSONArray objects = mLevelDesc.getJSONArray("objects");
 
-		for(int i = 0;i< objects.length(); i++) {
-			JSONObject object = objects.getJSONObject(i);
-			addLevelObject(LevelObjectsFactory.createObject(this, object));
+			for (int i = 0; i < objects.length(); i++) {
+				JSONObject object = objects.getJSONObject(i);
+				addLevelObject(LevelObjectsFactory.createObject(this, object));
+			}
 		}
 	}
 
