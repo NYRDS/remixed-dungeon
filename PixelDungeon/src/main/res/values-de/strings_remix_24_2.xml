@@ -1,3 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">goldenes Schwert</string>
+    <string name="GoldenSword_Info">Normalerweise werden Waffen aus solch einem weichen Metall wie Gold als nicht mehr als Dekoration bedacht. Jedoch scheint es dieser Klinge möglich zu sein, ziemlich gut durch Dinge zu schneiden.</string>
+    <string name="GoldenSword_Gender">maskulin</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">goldene Statue</string>
+    <string name="GoldenStatue_Gender">feminin</string>
+    <string name="GoldenStatue_Name_Objective">goldene Statue</string>
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">Nekromant</string>
+    <string name="NecromancerNPC_Gender">maskulin</string>
+    <string name="NecromancerNPC_Name_Objective">Nekromant</string>
+    <string name="NecromancerNPC_Message1">So wenig Zeit, so wenig Zeit...</string>
+    <string name="NecromancerNPC_Message2">Ich muss bereit sein.</string>
+    <string name="NecromancerNPC_Message3">Ich kann die Ruf der Toten hören.</string>
+    <string name="NecromancerNPC_Message4">Da ist etwas sehr Besonderes innerhalb von Nekropolis.</string>
+
+    <string name="RatKing_Name_Objective">Rattenkönig</string>
+    <string name="RatKing_Gender">maskulin</string>
+</resources>

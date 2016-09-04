@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">Spinnenrüstung</string>
+    <string name="SpiderArmor_Gender">feminin</string>
+
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">Schwarzer Schädel</string>
-    </resources>
+    <string name="BlackSkull_Gender">maskulin</string>
+
+    <string name="BlackSkull_Name_Awakened">erwachter schwarzer Schädel</string>
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">Seelenbruchstück</string>
+    <string name="SoulShard_Gender">maskulin</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">Todesritter</string>
+    <string name="DeathKnight_Gender">maskulin</string>
+    <string name="DeathKnight_Name_Objective">Todesritter</string>
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">Schreckensritter</string>
+    <string name="DreadKnight_Gender">maskulin</string>
+    <string name="DreadKnight_Name_Objective">Schreckensritter</string>
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">unterjochte Seele</string>
+    <string name="EnslavedSoul_Gender">feminin</string>
+    <string name="EnslavedSoul_Name_Objective">unterjochte Seele</string>
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">explodierender Schädel</string>
+    <string name="ExplodingSkull_Gender">maskulin</string>
+    <string name="ExplodingSkull_Name_Objective">explodierender Schädel</string>
+    <string name="ExplodingSkull_Desc">Dieser schwebende, lodernde Schädel scheint extrem zerbrechlich, sieht so aus, als ob er jede Sekunde birst.</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">Glas der Seelen</string>
+    <string name="JarOfSouls_Gender">maskulin</string>
+    <string name="JarOfSouls_Name_Objective">Glas der Seelen</string>
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">Leiche</string>
+    <string name="Lich_Gender">maskulin</string>
+    <string name="Lich_Name_Objective">Leiche</string>
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">runischer Schädel</string>
+    <string name="RunicSkull_Gender">maskulin</string>
+    <string name="RunicSkull_Name_Objective">runischer Schädel</string>
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">Zombie</string>
+    <string name="Zombie_Gender">maskulin</string>
+    <string name="Zombie_Name_Objective">Zombie</string>
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Erlschagene Leiche</string>
+
+</resources>
