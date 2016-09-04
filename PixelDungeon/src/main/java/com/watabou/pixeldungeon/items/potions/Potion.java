@@ -81,9 +81,7 @@ public class Potion extends Item {
 		PotionOfMight.class,
 		PotionOfFrost.class
 	};
-	
-	private static String[] colors = null;
-	
+
 	private static final Integer[] images = {
 		ItemSpriteSheet.POTION_TURQUOISE, 
 		ItemSpriteSheet.POTION_CRIMSON, 
@@ -109,17 +107,10 @@ public class Potion extends Item {
 	
 	
 	private boolean shatterd = false;
-	
-	private static String[] getColors(){
-		if(colors == null){
-			colors = Game.getVars(R.array.Potion_Colors);
-		}
-		return colors;
-	}
-	
+
 	@SuppressWarnings("unchecked")
 	public static void initColors() {
-		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, getColors(), images);
+		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, images);
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -128,12 +119,12 @@ public class Potion extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, getColors(), images, bundle);
+		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, images, bundle);
 	}
 	
 	public Potion() {
-		image = handler.image( this );
-		color = handler.label( this );
+		image = handler.index( this );
+		color = Game.getVars(R.array.Potion_Colors)[image];
 	}
 	
 	@Override

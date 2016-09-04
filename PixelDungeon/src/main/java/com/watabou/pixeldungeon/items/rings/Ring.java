@@ -50,7 +50,7 @@ public class Ring extends Artifact {
 		RingOfElements.class,
 		RingOfThorns.class
 	};
-	private static final String[] gems = Game.getVars(R.array.Ring_Gems);
+
 	private static final Integer[] images = {
 		ItemSpriteSheet.RING_DIAMOND, 
 		ItemSpriteSheet.RING_OPAL, 
@@ -73,7 +73,7 @@ public class Ring extends Artifact {
 	
 	@SuppressWarnings("unchecked")
 	public static void initGems() {
-		handler = new ItemStatusHandler<>((Class<? extends Ring>[]) rings, gems, images);
+		handler = new ItemStatusHandler<>((Class<? extends Ring>[]) rings, images);
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -82,7 +82,7 @@ public class Ring extends Artifact {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<>((Class<? extends Ring>[]) rings, gems, images, bundle);
+		handler = new ItemStatusHandler<>((Class<? extends Ring>[]) rings, images, bundle);
 	}
 	
 	public Ring() {
@@ -91,8 +91,8 @@ public class Ring extends Artifact {
 	}
 	
 	public void syncGem() {
-		image	= handler.image( this );
-		gem		= handler.label( this );
+		image = handler.index( this );
+		gem   = Game.getVars(R.array.Ring_Gems)[image];
 	}
 	
 	@Override

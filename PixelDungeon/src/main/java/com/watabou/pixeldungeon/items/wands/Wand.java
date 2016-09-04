@@ -81,7 +81,7 @@ public abstract class Wand extends KindOfWeapon {
 			WandOfRegrowth.class, WandOfBlink.class, WandOfLightning.class,
 			WandOfAmok.class, WandOfTelekinesis.class, WandOfFlock.class,
 			WandOfDisintegration.class, WandOfAvalanche.class };
-	private static final String[] woods = Game.getVars(R.array.Wand_Wood_Types);
+
 	private static final Integer[] images = { ItemSpriteSheet.WAND_HOLLY,
 			ItemSpriteSheet.WAND_YEW, ItemSpriteSheet.WAND_EBONY,
 			ItemSpriteSheet.WAND_CHERRY, ItemSpriteSheet.WAND_TEAK,
@@ -96,8 +96,7 @@ public abstract class Wand extends KindOfWeapon {
 
 	@SuppressWarnings("unchecked")
 	public static void initWoods() {
-		handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands,
-				woods, images);
+		handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands,images);
 	}
 
 	public static void save(Bundle bundle) {
@@ -106,8 +105,7 @@ public abstract class Wand extends KindOfWeapon {
 
 	@SuppressWarnings("unchecked")
 	public static void restore(Bundle bundle) {
-		handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands,
-				woods, images, bundle);
+		handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands, images, bundle);
 	}
 
 	public Wand() {
@@ -116,12 +114,12 @@ public abstract class Wand extends KindOfWeapon {
 		defaultAction = AC_ZAP;
 		
 		try {
-			image = handler.image(this);
-			wood = handler.label(this);
+			image = handler.index(this);
+			wood = Game.getVars(R.array.Wand_Wood_Types)[image];
+
 		} catch (Exception e) {
 			// Wand of Magic Missile
 		}
-		
 	}
 
 	@Override

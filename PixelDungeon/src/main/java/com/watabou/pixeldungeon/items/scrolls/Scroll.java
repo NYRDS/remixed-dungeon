@@ -74,9 +74,7 @@ public abstract class Scroll extends Item {
 		ScrollOfDomination.class,
 		ScrollOfCurse.class
 	};
-	
-	private static String[] runes = null;
-	
+
 	private static final Integer[] images = {
 		ItemSpriteSheet.SCROLL_KAUNAN, 
 		ItemSpriteSheet.SCROLL_SOWILO, 
@@ -96,19 +94,12 @@ public abstract class Scroll extends Item {
 		ItemSpriteSheet.SCROLL_DAGAZ};
 	
 	private static ItemStatusHandler<Scroll> handler;
-	
-	private static String[] getRunes(){
-		if(runes == null){
-			runes = Game.getVars(R.array.Scroll_Runes);
-		}
-		return runes;
-	}
-	
+
 	private String rune;
 	
 	@SuppressWarnings("unchecked")
 	public static void initLabels() {
-		handler = new ItemStatusHandler<>((Class<? extends Scroll>[]) scrolls, getRunes(), images);
+		handler = new ItemStatusHandler<>((Class<? extends Scroll>[]) scrolls, images);
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -117,7 +108,7 @@ public abstract class Scroll extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<>((Class<? extends Scroll>[]) scrolls, getRunes(), images, bundle);
+		handler = new ItemStatusHandler<>((Class<? extends Scroll>[]) scrolls, images, bundle);
 	}
 	
 	public Scroll() {
@@ -128,8 +119,8 @@ public abstract class Scroll extends Item {
 			return;
 		}
 		
-		image = handler.image( this );
-		rune  = handler.label( this );
+		image = handler.index( this );
+		rune  = Game.getVars(R.array.Scroll_Runes)[image];
 	}
 	
 	static public Scroll createRandomScroll(){
