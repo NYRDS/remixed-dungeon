@@ -24,26 +24,32 @@ import com.watabou.utils.Bundle;
 public class Key extends Item {
 
 	public static final float TIME_TO_UNLOCK = 1f;
-	
+	public static final String UNKNOWN = "unknown";
+
 	public int depth;
+	public String levelId;
 	
 	public Key() {
 		depth = Dungeon.depth;
+		levelId = Dungeon.level.levelId;
 		stackable = false;
 	}
 	
 	private static final String DEPTH = "depth";
+	private static final String LEVELID = "levelId";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( DEPTH, depth );
+		bundle.put( DEPTH,   depth );
+		bundle.put( LEVELID, levelId);
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		depth = bundle.getInt( DEPTH );
+		levelId = bundle.optString(LEVELID, UNKNOWN);
 	}
 	
 	@Override

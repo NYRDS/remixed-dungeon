@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -108,19 +110,22 @@ public class Belongings implements Iterable<Item> {
 		
 		return null;
 	}
-	
+
+
 	@SuppressWarnings("unchecked")
-	public <T extends Key> T getKey( Class<T> kind, int depth ) {
-		
+	@Nullable
+	public <T extends Key> T getKey(Class<T> kind, int depth, String levelId) {
 		for (Item item : backpack) {
-			if (item.getClass() == kind && ((Key)item).depth == depth) {
-				return (T)item;
+			if (item.getClass() == kind) {
+				Key key = (Key) item;
+				if (key.levelId.equals(levelId) || (key.levelId.equals(Key.UNKNOWN) && key.depth == depth)) {
+					return (T) item;
+				}
 			}
 		}
-		
 		return null;
 	}
-	
+
 	public void countIronKeys() {
 		
 		IronKey.curDepthQuantity = 0;

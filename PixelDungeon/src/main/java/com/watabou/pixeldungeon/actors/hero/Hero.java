@@ -751,7 +751,7 @@ public class Hero extends Char {
 
 				if (heap.type == Type.LOCKED_CHEST || heap.type == Type.CRYSTAL_CHEST) {
 
-					theKey = belongings.getKey(GoldenKey.class, Dungeon.depth);
+					theKey = belongings.getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
 
 					if (theKey == null) {
 						GLog.w(TXT_LOCKED_CHEST);
@@ -798,9 +798,9 @@ public class Hero extends Char {
 			int door = Dungeon.level.map[doorCell];
 
 			if (door == Terrain.LOCKED_DOOR) {
-				theKey = belongings.getKey(IronKey.class, Dungeon.depth);
+				theKey = belongings.getKey(IronKey.class, Dungeon.depth, Dungeon.level.levelId);
 			} else if (door == Terrain.LOCKED_EXIT) {
-				theKey = belongings.getKey(SkeletonKey.class, Dungeon.depth);
+				theKey = belongings.getKey(SkeletonKey.class, Dungeon.depth, Dungeon.level.levelId);
 			}
 
 			if (theKey != null) {
