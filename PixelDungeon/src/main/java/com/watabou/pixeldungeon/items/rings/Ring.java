@@ -92,7 +92,7 @@ public class Ring extends Artifact {
 	
 	public void syncGem() {
 		image = handler.index( this );
-		gem   = Game.getVars(R.array.Ring_Gems)[image];
+		gem   = Game.getVars(R.array.Ring_Gems)[ItemStatusHandler.indexByImage(image,images)];
 	}
 	
 	@Override

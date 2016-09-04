@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
-import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 
@@ -30,8 +30,8 @@ public class Key extends Item {
 	public String levelId;
 	
 	public Key() {
-		depth = Dungeon.depth;
-		levelId = Dungeon.level.levelId;
+		depth     = DungeonGenerator.getCurrentLevelDepth();
+		levelId   = DungeonGenerator.getCurrentLevelId();
 		stackable = false;
 	}
 	

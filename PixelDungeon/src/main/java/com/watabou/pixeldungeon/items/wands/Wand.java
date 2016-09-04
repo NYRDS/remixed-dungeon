@@ -115,7 +115,7 @@ public abstract class Wand extends KindOfWeapon {
 		
 		try {
 			image = handler.index(this);
-			wood = Game.getVars(R.array.Wand_Wood_Types)[image];
+			wood = Game.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image,images)];
 
 		} catch (Exception e) {
 			// Wand of Magic Missile

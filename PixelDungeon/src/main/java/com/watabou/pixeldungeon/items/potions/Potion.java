@@ -124,7 +124,7 @@ public class Potion extends Item {
 	
 	public Potion() {
 		image = handler.index( this );
-		color = Game.getVars(R.array.Potion_Colors)[image];
+		color = Game.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image,images)];
 	}
 	
 	@Override

@@ -118,9 +118,9 @@ public abstract class Scroll extends Item {
 		if (this instanceof BlankScroll){
 			return;
 		}
-		
+
 		image = handler.index( this );
-		rune  = Game.getVars(R.array.Scroll_Runes)[image];
+		rune  = Game.getVars(R.array.Scroll_Runes)[ItemStatusHandler.indexByImage(image,images)];
 	}
 	
 	static public Scroll createRandomScroll(){

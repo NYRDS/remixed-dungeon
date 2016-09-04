@@ -132,4 +132,13 @@ public class ItemStatusHandler<T extends Item> {
 		}
 		return result;
 	}
+
+	public static int indexByImage(int image,Integer [] allImages) {
+		for (int i = 0;i<allImages.length;++i) {
+			if(allImages[i]==image) {
+				return i;
+			}
+		}
+		return 0;
+	}
 }

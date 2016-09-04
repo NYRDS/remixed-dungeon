@@ -48,12 +48,12 @@ public class DungeonGenerator {
 	public static final String SPIDER_LEVEL   = "SpiderLevel";
 	public static final String GUTS_LEVEL     = "GutsLevel";
 
-	static JSONObject mDungeonMap;
-	static JSONObject mLevels;
-	static JSONObject mGraph;
+	static private JSONObject mDungeonMap;
+	static private JSONObject mLevels;
+	static private JSONObject mGraph;
 
-	static private HashMap<String, String> mLevelTiles = new HashMap<>();
-	static private HashMap<String, String> mLevelWater = new HashMap<>();
+	static private String mCurrentLevelId;
+	private static int    mCurrentLevelDepth;
 
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
 	static private HashMap<String, Integer>                mStoryMap;
@@ -71,7 +71,6 @@ public class DungeonGenerator {
 		} else {
 			mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon.json");
 		}
-
 
 		try {
 			mLevels = mDungeonMap.getJSONObject("Levels");
@@ -170,13 +169,14 @@ public class DungeonGenerator {
 				EventCollector.logEvent("DungeonGenerator","wrong next level index");
 			}
 
-			String nextLevelId = nextLevelSet.getString(index);
 
-			JSONObject nextLevelDesc = mLevels.getJSONObject(nextLevelId);
+			mCurrentLevelId = nextLevelSet.getString(index);
 
-			next.levelId    = nextLevelId;
-			next.levelDepth = nextLevelDesc.getInt("depth");
-			next.levelKind  = nextLevelDesc.getString("kind");
+			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);
+
+			next.levelId      = mCurrentLevelId;
+			mCurrentLevelDepth = next.levelDepth = nextLevelDesc.getInt("depth");
+			next.levelKind    = nextLevelDesc.getString("kind");
 
 			JSONArray levelSize = nextLevelDesc.getJSONArray("size");
 			next.xs = levelSize.getInt(0);
@@ -282,5 +282,13 @@ public class DungeonGenerator {
 			throw new TrackedRuntimeException(e);
 		}
 		return "1";
+	}
+
+	public static String getCurrentLevelId() {
+		return mCurrentLevelId;
+	}
+
+	public static int getCurrentLevelDepth() {
+		return mCurrentLevelDepth;
 	}
 }
