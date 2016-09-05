@@ -52,13 +52,11 @@ public class WndChooseWay extends Window {
 	}
 
 	public String getWayDesc( final HeroSubClass way1, final HeroSubClass way2 ){
-
 		String desc =  way1.desc();
 		if (way2 != null){
 			desc = desc + "\n\n" + way2.desc();
 		}
 		desc = desc + "\n\n" + TXT_MESSAGE;
-
 		return desc;
 	}
 

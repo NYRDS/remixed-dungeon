@@ -12,7 +12,7 @@
     <string name="BlackSkullOfMastery_Lich">Become Lich</string>
     <string name="BlackSkullOfMastery_Necromancer">Break the spell</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">The _Lich_ is a necromancer who reached pinnacle of his abilities. Existing between life and death _Lich_ excels in necromancy, but his combat skills are greatly reduced.</string>
-    <string name="BlackSkullOfMastery_RemainHumanDesc">Or if break the spell you\'ll be able to use this artifact as normal.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Or if _break the spell_ you\'ll be able to use this artifact as normal.</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">The Black Skull has been awakened!</string>

@@ -57,9 +57,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 			}
 			GameScene.show( new WndChooseWay( this, way ) );
 		} else {
-			
 			super.execute( hero, action );
-			
 		}
 	}
 }
