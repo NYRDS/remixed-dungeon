@@ -125,7 +125,7 @@ public enum HeroClass {
 
 		hero.setGender(getGender());
 
-		if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
+		if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3 && hero.heroClass != HeroClass.NECROMANCER ) {
 			new TomeOfMastery().collect(hero);
 		}
 
