@@ -6,7 +6,7 @@
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">The Soulbringer</string>
-    <string name="BlackSkullOfMastery_Desc">It\'s an ancient artifact, crafted by first necromancers to collect souls of the fallen. Sensing your necromantic abilities it warded itself with a powerful spell. But since the spell is that of an old times, it\'s primitive structure is fairly easy to break.</string>
+    <string name="BlackSkullOfMastery_Info">It\'s an ancient artifact, crafted by first necromancers to collect souls of the fallen. Sensing your necromantic abilities it warded itself with a powerful spell. But since the spell is that of an old times, it\'s primitive structure is fairly easy to break.</string>
     <string name="BlackSkullOfMastery_Title">You may break the spell. Or you may manipulate the magical formula in a way, which will allow you to consume powers of both spell and artifact itself, turning yourself into a Lich.</string>
 
     <string name="BlackSkullOfMastery_Lich">Become Lich</string>
