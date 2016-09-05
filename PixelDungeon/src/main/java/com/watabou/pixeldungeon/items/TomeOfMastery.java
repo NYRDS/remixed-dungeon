@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -35,12 +36,9 @@ import com.watabou.pixeldungeon.windows.WndChooseWay;
 
 import java.util.ArrayList;
 
-public class TomeOfMastery extends Item {
+public class TomeOfMastery extends MasteryItem {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.TomeOfMastery_Blinded);
-
-	public static final float TIME_TO_READ = 10;
-
 	public static final String AC_READ                 = Game.getVar(R.string.TomeOfMastery_ACRead);
 	private static final String TXT_WAY_ALREADY_CHOSEN = Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen);
 
@@ -108,43 +106,5 @@ public class TomeOfMastery extends Item {
 			super.execute( hero, action );
 			
 		}
-	}
-	
-	@Override
-	public boolean doPickUp( Hero hero ) {
-		Badges.validateMastery();
-		return super.doPickUp( hero );
-	}
-	
-	@Override
-	public boolean isUpgradable() {
-		return false;
-	}
-	
-	@Override
-	public boolean isIdentified() {
-		return true;
-	}
-	
-	public void choose( HeroSubClass way ) {
-		
-		detach( getCurUser().belongings.backpack );
-				
-		getCurUser().subClass = way;
-		
-		getCurUser().getSprite().operate( getCurUser().getPos() );
-		Sample.INSTANCE.play( Assets.SND_MASTERY );
-		
-		SpellSprite.show( getCurUser(), SpellSprite.MASTERY );
-		getCurUser().getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
-		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
-		
-		getCurUser().checkIfFurious();
-		getCurUser().updateLook();
-		
-		getCurUser().spendAndNext( TomeOfMastery.TIME_TO_READ );
-		getCurUser().busy();
-
-		getCurUser().setSoulPointsMax();
 	}
 }

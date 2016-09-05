@@ -18,10 +18,13 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.common.MasteryItem;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -37,18 +40,38 @@ public class WndChooseWay extends Window {
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 	private static final float GAP		= 2;
-	
-	public WndChooseWay( final TomeOfMastery tome, final HeroSubClass way1, final HeroSubClass way2 ) {
-		
+
+	public WndChooseWay(final MasteryItem item, final HeroSubClass way){
 		super();
-		
+		chooseWay( item, way, null );
+	}
+
+	public WndChooseWay( final MasteryItem item, final HeroSubClass way1, final HeroSubClass way2 ) {
+		super();
+		chooseWay( item, way1, way2 );
+	}
+
+	public String getWayDesc( final HeroSubClass way1, final HeroSubClass way2 ){
+
+		String desc =  way1.desc();
+		if (way2 != null){
+			desc = desc + "\n\n" + way2.desc();
+		}
+		desc = desc + "\n\n" + TXT_MESSAGE;
+
+		return desc;
+	}
+
+	public void chooseWay( final MasteryItem item, final HeroSubClass way1, final HeroSubClass way2 ) {
+		float bottom = .0f;
+
 		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( tome ) );
-		titlebar.label( tome.name() );
+		titlebar.icon( new ItemSprite( item ) );
+		titlebar.label( item.name() );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		Highlighter hl = new Highlighter( way1.desc() + "\n\n" + way2.desc() + "\n\n" + TXT_MESSAGE );
+
+		Highlighter hl = new Highlighter( getWayDesc(way1, way2) );
 		
 		Text normal = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
 		if (hl.isHighlighted()) {
@@ -73,34 +96,37 @@ public class WndChooseWay extends Window {
 	
 			highlighted.hardlight( TITLE_COLOR );
 		}
-		
+
 		RedButton btnWay1 = new RedButton( Utils.capitalize( way1.title() ) ) {
 			@Override
 			protected void onClick() {
 				hide();
-				tome.choose( way1 );
+				item.choose( way1 );
 			}
 		};
 		btnWay1.setRect( 0, normal.y + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
 		add( btnWay1 );
-		
-		RedButton btnWay2 = new RedButton( Utils.capitalize( way2.title() ) ) {
-			@Override
-			protected void onClick() {
-				hide();
-				tome.choose( way2 );
-			}
-		};
-		btnWay2.setRect( btnWay1.right() + GAP, btnWay1.top(), btnWay1.width(), BTN_HEIGHT );
-		add( btnWay2 );
-		
+		bottom = btnWay1.bottom();
+		if (way2 != null){
+			RedButton btnWay2 = new RedButton( Utils.capitalize( way2.title() ) ) {
+				@Override
+				protected void onClick() {
+					hide();
+					item.choose( way2 );
+				}
+			};
+
+			btnWay2.setRect( btnWay1.right() + GAP, btnWay1.top(), btnWay1.width(), BTN_HEIGHT );
+			add( btnWay2 );
+			bottom = btnWay2.bottom();
+		}
 		RedButton btnCancel = new RedButton( TXT_CANCEL ) {
 			@Override
 			protected void onClick() {
 				hide();
 			}
 		};
-		btnCancel.setRect( 0, btnWay2.bottom() + GAP, WIDTH, BTN_HEIGHT );
+		btnCancel.setRect( 0, bottom + GAP, WIDTH, BTN_HEIGHT );
 		add( btnCancel );
 		
 		resize( WIDTH, (int)btnCancel.bottom() );
