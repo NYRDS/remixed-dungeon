@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -13,10 +14,12 @@ import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.effects.Pushing;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
@@ -230,7 +233,12 @@ public class Lich extends Boss {
     @Override
     public void die( Object cause ) {
         GameScene.bossSlain();
-        Dungeon.level.drop( new BlackSkull(), getPos() ).sprite.drop();
+        if ( Dungeon.hero.heroClass == HeroClass.NECROMANCER){
+            Dungeon.level.drop( new BlackSkullOfMastery(), getPos() ).sprite.drop();
+        }
+        else {
+            Dungeon.level.drop( new BlackSkull(), getPos() ).sprite.drop();
+        }
         super.die( cause );
 
         //Kill everthing
