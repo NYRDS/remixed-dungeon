@@ -19,13 +19,17 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -36,7 +40,10 @@ public class WndChooseWay extends Window {
 	
 	private static final String TXT_MESSAGE	= Game.getVar(R.string.WndChooseWay_Message);
 	private static final String TXT_CANCEL	= Game.getVar(R.string.WndChooseWay_Cancel);
-	
+	private static final String TXT_BREAK_SPELL	= Game.getVar(R.string.BlackSkullOfMastery_RemainHumanDesc);
+	private static final String TXT_BREAK_SPELL_BTN	= Game.getVar(R.string.BlackSkullOfMastery_Necromancer);
+	private static final String TXT_BLACKSKULL_TITLE	= Game.getVar(R.string.BlackSkullOfMastery_Title);
+
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 	private static final float GAP		= 2;
@@ -56,13 +63,14 @@ public class WndChooseWay extends Window {
 		if (way2 != null){
 			desc = desc + "\n\n" + way2.desc();
 		}
+		if (way1 == HeroSubClass.LICH){
+			desc = TXT_BLACKSKULL_TITLE + "\n\n" + desc + "\n\n" + TXT_BREAK_SPELL;
+		}
 		desc = desc + "\n\n" + TXT_MESSAGE;
 		return desc;
 	}
 
 	public void chooseWay( final MasteryItem item, final HeroSubClass way1, final HeroSubClass way2 ) {
-		float bottom = .0f;
-
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( item.name() );
@@ -104,8 +112,8 @@ public class WndChooseWay extends Window {
 		};
 		btnWay1.setRect( 0, normal.y + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
 		add( btnWay1 );
-		bottom = btnWay1.bottom();
-		if (way2 != null){
+
+		if (way1 != HeroSubClass.LICH){
 			RedButton btnWay2 = new RedButton( Utils.capitalize( way2.title() ) ) {
 				@Override
 				protected void onClick() {
@@ -113,20 +121,37 @@ public class WndChooseWay extends Window {
 					item.choose( way2 );
 				}
 			};
-
 			btnWay2.setRect( btnWay1.right() + GAP, btnWay1.top(), btnWay1.width(), BTN_HEIGHT );
 			add( btnWay2 );
-			bottom = btnWay2.bottom();
+		} else {
+			btnBreakSpell(btnWay1);
 		}
+
 		RedButton btnCancel = new RedButton( TXT_CANCEL ) {
 			@Override
 			protected void onClick() {
 				hide();
 			}
 		};
-		btnCancel.setRect( 0, bottom + GAP, WIDTH, BTN_HEIGHT );
+		btnCancel.setRect( 0, btnWay1.bottom() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnCancel );
 		
 		resize( WIDTH, (int)btnCancel.bottom() );
+	}
+
+	private void btnBreakSpell(RedButton btnWay1){
+		RedButton btnWay2 = new RedButton( Utils.capitalize( TXT_BREAK_SPELL_BTN ) ) {
+			@Override
+			protected void onClick() {
+				hide();
+				Hero hero = Dungeon.hero;
+				Item a = hero.belongings.getItem( BlackSkullOfMastery.class );
+				a.removeItemFrom(hero);
+				Item b = new BlackSkull();
+				Dungeon.level.drop( b, hero.getPos() ).sprite.drop();
+			}
+		};
+		btnWay2.setRect( btnWay1.right() + GAP, btnWay1.top(), btnWay1.width(), BTN_HEIGHT );
+		add( btnWay2 );
 	}
 }
