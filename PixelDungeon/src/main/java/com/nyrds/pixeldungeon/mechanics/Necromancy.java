@@ -47,10 +47,7 @@ public class Necromancy {
 	}
 
 	public static String getLimitWarning(Item source, Hero hero){
-		if (source instanceof NecromancerArmor){
-			return Utils.format(TXT_MAXIMUM_PETS, getLimit(source, hero));
-		}
-		return "<Warning> Summoning item class does not specified!";
+		return Utils.format(TXT_MAXIMUM_PETS, getLimit(source, hero));
 	}
 
 	public static String notEnoughSouls (String spell) {
