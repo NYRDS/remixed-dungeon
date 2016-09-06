@@ -147,6 +147,8 @@ public class Hero extends Char {
 	private static final String TXT_SEARCH = Game.getVar(R.string.Hero_Search);
 
 	public static final int STARTING_STR = 10;
+	public static final int SP_MAX_NECRO = 25;
+	public static final int SP_MAX_LICH = 50;
 
 	private static final float TIME_TO_REST = 1f;
 	private static final float TIME_TO_SEARCH = 2f;
@@ -180,7 +182,6 @@ public class Hero extends Char {
 	private int lvl   = Scrambler.scramble(1);
 	private int exp   = Scrambler.scramble(0);
 	private int sp    = Scrambler.scramble(0);
-	private int spMax = Scrambler.scramble(0);
 
 	public String levelKind;
 	public String levelId;
@@ -1779,16 +1780,13 @@ public class Hero extends Char {
 	}
 
 	public int getSoulPointsMax(){
-		return Scrambler.descramble(spMax);
-	}
-
-	public void setSoulPointsMax(){
 		if (this.heroClass == HeroClass.NECROMANCER){
-			spMax = Scrambler.scramble(25);
+			return SP_MAX_NECRO;
 		}
 		if (this.subClass == HeroSubClass.LICH){
-			spMax = Scrambler.scramble(50);
+			return SP_MAX_LICH;
 		}
+		return 0;
 	}
 
 	public boolean spendSoulPoints(int cost){

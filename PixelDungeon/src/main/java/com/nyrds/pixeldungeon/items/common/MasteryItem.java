@@ -59,7 +59,5 @@ public class MasteryItem extends Item {
 
 		getCurUser().spendAndNext( this.TIME_TO_READ );
 		getCurUser().busy();
-
-		getCurUser().setSoulPointsMax();
 	}
 }
