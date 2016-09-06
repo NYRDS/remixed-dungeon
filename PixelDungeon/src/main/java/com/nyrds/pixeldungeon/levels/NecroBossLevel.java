@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.watabou.noosa.Game;
@@ -157,7 +158,7 @@ public class NecroBossLevel extends Level {
 	@Override
 	public Heap drop( Item item, int cell ) {
 		
-		if (!keyDropped && item instanceof BlackSkull) {
+		if (!keyDropped && (item instanceof BlackSkull || item instanceof BlackSkullOfMastery)) {
 			
 			keyDropped = true;
 			
