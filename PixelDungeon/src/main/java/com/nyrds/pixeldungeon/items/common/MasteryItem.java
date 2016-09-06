@@ -33,8 +33,8 @@ public class MasteryItem extends Item {
 		return true;
 	}
 
-	private void specialChooseMessage(){
-		GLog.w(Game.getVar(R.string.Necromancy_BecameALich) );
+	private void specialChooseMessage(int penalty){
+		GLog.w(Utils.format(Game.getVar(R.string.Necromancy_BecameALich), penalty) );
 	}
 
 	public void choose( HeroSubClass way ) {
@@ -48,8 +48,9 @@ public class MasteryItem extends Item {
 		SpellSprite.show( getCurUser(), SpellSprite.MASTERY );
 		getCurUser().getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
 		if (way == HeroSubClass.LICH){
-			specialChooseMessage();
-			getCurUser().STR(getCurUser().STR() - 2);
+			int penalty = 2;
+			specialChooseMessage(penalty);
+			getCurUser().STR(getCurUser().STR() - penalty);
 		} else {
 			GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		}

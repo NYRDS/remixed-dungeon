@@ -60,7 +60,7 @@
     <string name="Necromancy_ReincarnationTriggered">Your powers defies death! But you lost all collected souls and possessions.</string>
     <string name="Necromancy_SummonDeathlingName">Summon Deathling</string>
 
-    <string name="Necromancy_BecameALich">You became a Lich! Your power grows and your soul capacity has doubled!</string>
+    <string name="Necromancy_BecameALich">You became a Lich! Your power grows and your soul capacity has doubled! But you lost %1$d points of strengh. </string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
