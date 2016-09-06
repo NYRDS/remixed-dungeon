@@ -18,9 +18,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -29,6 +31,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndResurrect extends Window {
 	
@@ -42,7 +45,7 @@ public class WndResurrect extends Window {
 	
 	public static WndResurrect instance;
 	public static Object causeOfDeath;
-	
+
 	public WndResurrect( final Ankh ankh, Object causeOfDeath ) {
 		super();
 		
@@ -50,8 +53,14 @@ public class WndResurrect extends Window {
 		WndResurrect.causeOfDeath = causeOfDeath;
 		
 		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( ankh ) );
-		titlebar.label( ankh.name() );
+		if (ankh != null){
+			titlebar.icon( new ItemSprite( ankh ) );
+			titlebar.label( ankh.name() );
+		} else {
+			titlebar.icon( new ItemSprite( new BlackSkull()) );
+			titlebar.label( Utils.capitalize( Game.getVar(R.string.Necromancy_Title) ) );
+		}
+
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		

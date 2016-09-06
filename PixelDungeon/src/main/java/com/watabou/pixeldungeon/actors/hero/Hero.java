@@ -1449,8 +1449,9 @@ public class Hero extends Char {
 				GLog.w( Necromancy.notEnoughSouls(Necromancy.REINCARNATION));
 				reallyDie(cause);
 			} else {
+				Dungeon.hero.spendSoulPoints(Dungeon.hero.getSoulPointsMax());
 				Dungeon.deleteGame(false);
-				GameScene.show(new WndResurrect(new Ankh(), cause));
+				GameScene.show(new WndResurrect(null, cause));
 			}
 		}
 
@@ -1780,11 +1781,11 @@ public class Hero extends Char {
 	}
 
 	public int getSoulPointsMax(){
-		if (this.heroClass == HeroClass.NECROMANCER){
-			return SP_MAX_NECRO;
-		}
 		if (this.subClass == HeroSubClass.LICH){
 			return SP_MAX_LICH;
+		}
+		if (this.heroClass == HeroClass.NECROMANCER){
+			return SP_MAX_NECRO;
 		}
 		return 0;
 	}
