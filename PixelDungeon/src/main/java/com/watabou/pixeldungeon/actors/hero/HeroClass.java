@@ -133,20 +133,17 @@ public enum HeroClass {
 	}
 
 	private static void initDebug(Hero hero) {
-		for(int i = 0;i<10;i++) {
+		for(int i = 0;i<100;i++) {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new PotionOfToxicGas());
 			hero.collect(new PotionOfLiquidFlame());
-			hero.collect(new Codex());
 		}
 
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().identify().upgrade(100));
-		hero.collect(new NecromancerArmor());
-		hero.collect(new WarlockArmor());
 
 		hero.collect(new BlackSkull());
-		hero.collect(new BladeOfSouls().identify());
+		hero.collect(new NecromancerArmor());
 
 		hero.ht(1000);
 		hero.hp(1000);
@@ -248,7 +245,7 @@ public enum HeroClass {
 		(hero.belongings.weapon = new Dagger()).identify();
 		(hero.belongings.armor = new NecromancerRobe()).upgrade(2).identify();
 
-		SkeletonKey key = SkeletonKey.makeNewKey(7);
+		SkeletonKey key = SkeletonKey.makeNewKey("7", 7);
 		hero.collect(key);
 
 		hero.collect(new Dart(8).identify());
