@@ -8,6 +8,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
@@ -32,19 +33,22 @@ public class Necromancy {
 	public static String SUMMON_DEATHLING = "SUMMON_DEATHLING";
 	public static String REINCARNATION = "REINCARNATION";
 
-	public static int getLimit(Item source){
+	public static int getLimit(Item source, Hero hero){
+		int limit;
 		if (source instanceof NecromancerArmor){
-			return ARMOR_LIMIT;
+			limit = ARMOR_LIMIT;
+		} else {
+			limit = ROBES_LIMIT;
 		}
-		return ROBES_LIMIT;
+		if (hero.subClass == HeroSubClass.LICH){
+			return limit * 2;
+		}
+		return limit;
 	}
 
-	public static String getLimitWarning(Item source){
+	public static String getLimitWarning(Item source, Hero hero){
 		if (source instanceof NecromancerArmor){
-			return Utils.format(TXT_MAXIMUM_PETS, ARMOR_LIMIT);
-		}
-		if (source instanceof NecromancerRobe){
-			return Utils.format(TXT_MAXIMUM_PETS, ROBES_LIMIT);
+			return Utils.format(TXT_MAXIMUM_PETS, getLimit(source, hero));
 		}
 		return "<Warning> Summoning item class does not specified!";
 	}
@@ -61,6 +65,7 @@ public class Necromancy {
 
 	public static void summonDeathling(Item source){
 		Collection<Mob> pets = Dungeon.hero.getPets();
+		Hero hero = Dungeon.hero;
 
 		int n = 0;
 		for (Mob mob : pets){
@@ -69,12 +74,10 @@ public class Necromancy {
 			}
 		}
 
-		if (n >= Necromancy.getLimit(source)){
-			GLog.w( Necromancy.getLimitWarning(source) );
+		if (n >= Necromancy.getLimit(source, hero)){
+			GLog.w( Necromancy.getLimitWarning(source, hero) );
 			return;
 		}
-
-		Hero hero = Dungeon.hero;
 
 		if(!hero.spendSoulPoints(DEATHLING_COST)){
 			GLog.w( notEnoughSouls(SUMMON_DEATHLING) );
