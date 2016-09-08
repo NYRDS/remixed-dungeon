@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">С выбранного пути уже не сойти!</string>
+
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">Жнец Душ</string>
+    <string name="BlackSkullOfMastery_Info">Это древний артефакт, сотворённый первыми некромантами, для того чтобы собирать души павших. Мощное защитное заклятие среагировало на твои магические способности и заблокировало силы артефакта. Но не смотря на силу, ввиду возраста, сама структура заклятия крайне примитивна, и её не сложно разрушить.</string>
+    <string name="BlackSkullOfMastery_Title">Ты можешь разрушить заклятие. Или можешь изменить магическую формулу таким образом, что ты сможешь поглотить силу, как самого заклятия, так и черепа, превратив себя в Лича.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Стать Личем</string>
+    <string name="BlackSkullOfMastery_Necromancer">Разрушить заклятье</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">_Лич_ это некромант, который смог достичь вершины своего мастерства. Существующий между жизнью и смертью, он обладает невероятными способностями к некромантии, но его боевые навыки гораздо ниже, чем у простого человека.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Но, если ты _разрушишь заклятие_, то сможешь использовать этот артефакт по назначению.</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Чёрный Череп пробудился!</string>
+    <string name="BlackSkull_Ressurrect">Чёрный Череп воскресил умершего монстра, тебе в услужение!</string>
+    <string name="BlackSkull_Deactivated">Чёрный Череп вновь дремлет...</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Костяная броня</string>
+    <string name="NecromancerArmor_Info">Это броня позволит Некроманту призывать до двух Смертёнышей, по 5 душ за каждого. Эти прислужники-нежить будут следовать за своим хозяином и атаковать его врагов. Смертёныши становятся сильнее с каждым уровнем героя. </string>
+    <string name="NecromancerArmor_NotNecromancer">Только некроманты могут использовать эту броню!</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">роба некроманта</string>
+    <string name="NecromancerRobe_Info">Эта роба позволит Некроманту призвать Смертёныша, потратив 5 душ. Смертёныш, это прислужник-нежить, который становится сильнее вместе со своим хозяином.</string>
+
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">некромант</string>
+
+    <string name="HeroSubClass_NameLich">лич</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Некроманты начинают с 15 очками Здоровья.</item>
+        <item>Некроманты обладают уникальным ресурсом \"души\", которые они расходуют на использование заклинаний. Смерть каждого монстра дарует 1 душу.</item>
+        <item>Некроманты начинают с уникальной робой некроманта.</item>
+        <item>Некроманты начинают с ключом-скелетом от 7 уровня.</item>
+        <item>Зелья Исцеления распознаны с самого начала.</item>
+    </string-array>
+
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">смертёныш</string>
+    <string name="Deathling_Gender">masculine</string>
+    <string name="Deathling_Name_Objective">смертёныша</string>
+    <string name="Deathling_Desc">Смертёныш, это душа падшего героя, которому не повезло оказаться призванным своим собратом приключенцем, практикующим некромантию.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Этот предмет может призывать не более %1$d монстра за раз!</string>
+    <string name="Necromancy_NotEnoughSouls">У тебя не достаточно душ для заклинания \"%1$s\".</string>
+
+    <string name="Necromancy_SoulsCountLabel">Души</string>
+
+    <string name="Necromancer_ACSpecial">НЕКРОМАНТИЯ</string>
+    <string name="Necromancy_ReincarnationName">Реинкарнация</string>
+    <string name="Necromancy_ReincarnationTriggered">Твоё могущество отвергает смерть! Но ты потерял все души и свои пожитки.</string>
+    <string name="Necromancy_SummonDeathlingName">Призвать Смертёныша</string>
+
+    <string name="Necromancy_BecameALich">Ты стал Личём! Твоя сила возросла и ты теперь можешь содержать в два раза больше душ! Но ты потерял %1$d Силы.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">Чтобы открыть этот класс, убейте Лича любым другим классом.</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Некромантия</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">\"Над этим призраком тяготит проклятие. Кажется, что он хочет о чём-то меня попросить. С помощью некромантии, я  мог бы убедить его, что просьба исполнена. Это сэкономит мне время. Но стоит ли так поступать?\"</string>
+    <string name="WndSadGhostNecro_Yes">Да, подчинить его волю.</string>
+    <string name="WndSadGhostNecro_No">Нет, пусть говорит.</string>
+    <string name="WndSadGhostNecro_Persuaded">Печальный призрак был подчинён!</string>
+
     <!-- Badges -->
 
 </resources>
