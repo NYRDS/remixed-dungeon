@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items.common;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -45,6 +46,10 @@ public class SacrificialSword extends SpecialWeapon {
 		
 		if(hero.subClass == HeroSubClass.SHAMAN) {
 			classBonus = 2.0;
+		}
+
+		if(hero.heroClass == HeroClass.NECROMANCER) {
+			classBonus = 3.0;
 		}
 
 		return (0.25 + (hero.lvl() * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
