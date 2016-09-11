@@ -21,7 +21,6 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
-import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -472,6 +471,8 @@ public class Dungeon {
 
 	public static Level loadLevel(Position next) throws IOException {
 		loading = true;
+
+		DungeonGenerator.loadingLevel(next);
 
 		String loadFrom = SaveUtils.depthFileForLoad(heroClass, next.levelDepth, next.levelKind, next.levelId);
 

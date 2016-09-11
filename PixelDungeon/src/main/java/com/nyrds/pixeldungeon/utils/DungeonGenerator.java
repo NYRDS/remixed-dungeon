@@ -291,4 +291,9 @@ public class DungeonGenerator {
 	public static int getCurrentLevelDepth() {
 		return mCurrentLevelDepth;
 	}
+
+	public static void loadingLevel(Position next) {
+		mCurrentLevelId    = next.levelId;
+		mCurrentLevelDepth = next.levelDepth;
+	}
 }
