@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -114,11 +116,11 @@ public class Belongings implements Iterable<Item> {
 
 	@SuppressWarnings("unchecked")
 	@Nullable
-	public <T extends Key> T getKey(Class<T> kind, int depth, String levelId) {
+	public <T extends Key> T getKey(Class<T> kind, int depth, @NonNull String levelId) {
 		for (Item item : backpack) {
 			if (item.getClass() == kind) {
 				Key key = (Key) item;
-				if (key.levelId.equals(levelId) || (key.levelId.equals(Key.UNKNOWN) && key.depth == depth)) {
+				if (levelId.equals(key.levelId) || (DungeonGenerator.UNKNOWN.equals(key.levelId) && key.depth == depth)) {
 					return (T) item;
 				}
 			}

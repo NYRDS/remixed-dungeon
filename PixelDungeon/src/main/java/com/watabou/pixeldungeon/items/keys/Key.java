@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
@@ -24,9 +26,10 @@ import com.watabou.utils.Bundle;
 public class Key extends Item {
 
 	public static final float TIME_TO_UNLOCK = 1f;
-	public static final String UNKNOWN = "unknown";
 
 	public int depth;
+
+	@NonNull
 	public String levelId;
 	
 	public Key() {
@@ -49,7 +52,7 @@ public class Key extends Item {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		depth = bundle.getInt( DEPTH );
-		levelId = bundle.optString(LEVELID, UNKNOWN);
+		levelId = bundle.optString(LEVELID, DungeonGenerator.UNKNOWN);
 	}
 	
 	@Override

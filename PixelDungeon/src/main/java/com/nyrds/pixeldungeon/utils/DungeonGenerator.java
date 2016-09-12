@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.JsonHelper;
@@ -48,11 +49,14 @@ public class DungeonGenerator {
 	public static final String SPIDER_LEVEL   = "SpiderLevel";
 	public static final String GUTS_LEVEL     = "GutsLevel";
 
+	public static final String UNKNOWN        = "unknown";
+
 	static private JSONObject mDungeonMap;
 	static private JSONObject mLevels;
 	static private JSONObject mGraph;
 
-	static private String mCurrentLevelId;
+	@NonNull
+	private static String mCurrentLevelId;
 	private static int    mCurrentLevelDepth;
 
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
@@ -284,6 +288,7 @@ public class DungeonGenerator {
 		return "1";
 	}
 
+	@NonNull
 	public static String getCurrentLevelId() {
 		return mCurrentLevelId;
 	}
