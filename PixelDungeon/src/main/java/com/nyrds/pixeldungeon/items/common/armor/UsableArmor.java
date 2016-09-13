@@ -54,11 +54,6 @@ abstract public class UsableArmor extends Armor {
 	abstract public void doSpecial();
 	
 	@Override
-	public boolean isUpgradable() {
-		return false;
-	}
-	
-	@Override
 	public boolean isIdentified() {
 		return true;
 	}
