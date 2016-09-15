@@ -20,6 +20,8 @@ import com.watabou.utils.Random;
 /**
  * Created by DeadDie on 12.02.2016
  */
+
+//TODO: Monster must not rise if he had been burned at least once. Maybe change sprite to "kind 2", which will suggest that he burned
 public class ZombieGnoll extends Mob {
     {
         hp(ht(210));
