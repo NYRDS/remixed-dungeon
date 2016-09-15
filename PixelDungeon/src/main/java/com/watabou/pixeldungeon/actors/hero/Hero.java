@@ -1442,18 +1442,17 @@ public class Hero extends Char {
 		Actor.fixTime();
 		super.die(cause);
 
-		Ankh ankh = belongings.getItem(Ankh.class);
-
 		if (this.subClass == HeroSubClass.LICH) {
 			if (this.getSoulPoints() < this.getSoulPointsMax()) {
 				GLog.w( Necromancy.notEnoughSouls(Necromancy.REINCARNATION));
-				reallyDie(cause);
 			} else {
 				Dungeon.hero.spendSoulPoints(Dungeon.hero.getSoulPointsMax());
 				Dungeon.deleteGame(false);
 				GameScene.show(new WndResurrect(null, cause));
 			}
 		}
+
+		Ankh ankh = belongings.getItem(Ankh.class);
 
 		if (ankh == null) {
 			reallyDie(cause);
