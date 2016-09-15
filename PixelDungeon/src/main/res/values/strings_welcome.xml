@@ -135,4 +135,30 @@
         - Updated translations\n
         - Removed options : \“immersive mode\” and \“gui scale\”\n
         </string>
+        <string name="Welcome_Text_25_1">
+        remix.25.1:\n
+        --New Features--\n
+        - New Hero Class: Necromancer\n
+        - Now only necromancers will recieve xp for kills made by minions\n
+        - Necromancer has higher chance to proc Sacrificial Blade\n
+        --Balance--\n
+        - All monsters in Necropolis has been nerfed\n
+        - Now Yog-Dzewa gets defense buff not only from fists but from other sub-bosses as well\n
+        - On Yog\'s death all other bosses dies (Previously this affected only fists)\n
+        - Yog\'s Heart has been nerfed. The amount of heal, it provides to othe mobs was reduced\n
+        - Bosses are no longer \"Hunting\" by default\n
+        - Gnoll-Zombie\'s chance to \"rise from the dead\" has been reduced\n
+        - Pseudo-Rat has been nerfed\n
+        - Black Skull now requiers 10 charges to activate, instead of 15. But death of player\'s minions no longer gives it charges\n
+        - Treacherous Spirit cannot become player\'s minion anymore\n
+        --Visuals--\n
+        - Updated tile set of Sewers\n
+        --Fixes--\n
+        - Fixed \"non-disapearing text\" bug\n
+        - Fixed bug that wasn\'t allowing Necropolis Boss to damage player properly\n
+        - Fixed issue with generation of dungeon level 5\n
+        --Mods--\n
+        - User created mods can now contain codex items with custom text\n
+        - User created mods now allows to set custom tiles, water and music to a specific level\n
+        </string>
 </resources>
