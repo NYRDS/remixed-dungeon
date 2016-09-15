@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -50,6 +51,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -135,12 +137,14 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		for(int i = 0;i<100;i++) {
 			hero.collect(new ScrollOfMagicMapping());
+			hero.collect(new ScrollOfUpgrade());
 			hero.collect(new PotionOfToxicGas());
 			hero.collect(new PotionOfLiquidFlame());
 		}
 
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Claymore().identify().upgrade(100));
+		hero.collect(new Ankh());
 
 		hero.collect(new BlackSkullOfMastery());
 		hero.collect(new NecromancerArmor());
@@ -149,7 +153,6 @@ public enum HeroClass {
 		hero.hp(1000);
 		hero.attackSkill = 1000;
 		//hero.defenseSkill = 1000;
-
 	}
 
 	private static void initCommon(Hero hero) {
@@ -243,7 +246,7 @@ public enum HeroClass {
 		hero.hp(hero.ht());
 
 		(hero.belongings.weapon = new Dagger()).identify();
-		(hero.belongings.armor = new NecromancerRobe()).upgrade(2).identify();
+		(hero.belongings.armor = new NecromancerRobe()).identify();
 
 		SkeletonKey key = SkeletonKey.makeNewKey("7", 7);
 		hero.collect(key);
