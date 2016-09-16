@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">No puedes cambiar tu elección!</string>
+
     <!-- Badges -->
 
 </resources>
