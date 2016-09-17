@@ -36,29 +36,45 @@ public class Ads {
 		return Flavours.haveAds();
 	}
 
-	public static void displayEasyModeBanner() {
-		if (googleAdsUsable() && Util.isConnectedToInternet()) {
-			if (isSmallScreen()) {
-				initEasyModeIntersitial();
-			} else {
-				Game.instance().runOnUiThread(new Runnable() {
-					@Override
-					public void run() {
-						if (Game.instance().getLayout().getChildCount() == 1) {
-							AdView adView = new AdView(Game.instance());
-							adView.setAdSize(AdSize.SMART_BANNER);
-							adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
-							adView.setBackgroundColor(Color.TRANSPARENT);
-							AdRequest adRequest = new AdRequest.Builder().addTestDevice(Game.getVar(R.string.testDevice))
-									.build();
-							Game.instance().getLayout().addView(adView, 0);
-							adView.loadAd(adRequest);
-							Game.setNeedSceneRestart(true);
-						}
-					}
-				});
-			}
+	private static void displayOwnEasyModeBanner() {
+		if (isSmallScreen()) {
+			//initEasyModeIntersitial();
+			OwnAds.displayBanner();
+		} else {
+			OwnAds.displayBanner();
 		}
+	}
+
+
+	private static void displayGoogleEasyModeBanner() {
+		if (isSmallScreen()) {
+			initEasyModeIntersitial();
+		} else {
+			Game.instance().runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					if (Game.instance().getLayout().getChildCount() == 1) {
+						AdView adView = new AdView(Game.instance());
+						adView.setAdSize(AdSize.SMART_BANNER);
+						adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
+						adView.setBackgroundColor(Color.TRANSPARENT);
+						AdRequest adRequest = new AdRequest.Builder().addTestDevice(Game.getVar(R.string.testDevice))
+								.build();
+						Game.instance().getLayout().addView(adView, 0);
+						adView.loadAd(adRequest);
+						Game.setNeedSceneRestart(true);
+					}
+				}
+			});
+		}
+	}
+
+	public static void displayEasyModeBanner() {
+		//if (googleAdsUsable() && Util.isConnectedToInternet()) {
+		//	displayGoogleEasyModeBanner();
+		//} else {
+			displayOwnEasyModeBanner();
+		//}
 	}
 
 	public static void removeEasyModeBanner() {
