@@ -118,7 +118,7 @@ public class Belongings implements Iterable<Item> {
 	@Nullable
 	public <T extends Key> T getKey(Class<T> kind, int depth, @NonNull String levelId) {
 		for (Item item : backpack) {
-			if (item.getClass() == kind) {
+			if (item instanceof Key && item.getClass() == kind) {
 				Key key = (Key) item;
 				if (levelId.equals(key.levelId) || (DungeonGenerator.UNKNOWN.equals(key.levelId) && key.depth == depth)) {
 					return (T) item;
