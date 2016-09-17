@@ -159,6 +159,9 @@ public class WndClass extends WndTabbed {
 				case ELF:
 					text = HeroSubClass.SCOUT.desc() + "\n\n" + HeroSubClass.SHAMAN.desc();
 					break;
+				case NECROMANCER:
+					text = HeroSubClass.LICH.desc();
+					break;
 			}
 
 			Highlighter hl = new Highlighter(text);

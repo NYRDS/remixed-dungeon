@@ -214,7 +214,7 @@ public class StartScene extends PixelScene {
 
 		huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
 		elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
-		necromancerUnlocked = Badges.isUnlocked( Badges.Badge.LICH_SLAIN) || (PixelDungeon.donated() >= 3);
+		necromancerUnlocked = true;// Badges.isUnlocked( Badges.Badge.LICH_SLAIN) || (PixelDungeon.donated() >= 3);
 
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(Camera.main.width - btnExit.width(), 0);
