@@ -24,7 +24,7 @@ public class Util {
 	}
 
 	static public void storeEventInAcra(String eventKey,Exception e) {
-		EventCollector.logException(e);
+		EventCollector.logException(e,eventKey);
 		if(!ACRA.isInitialised()){
 			return;
 		}
