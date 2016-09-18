@@ -165,7 +165,9 @@ import com.watabou.pixeldungeon.plants.Firebloom;
 import com.watabou.pixeldungeon.plants.Icecap;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
-import com.watabou.utils.Random;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 
@@ -351,10 +353,6 @@ public class ItemFactory {
 		registerItemClass(NecromancerArmor.class);
 		registerItemClass(NecromancerRobe.class);
 	}
-	
-	public static Class<? extends Item> itemClassRandom() {
-		return Random.element(mItemsList.values());
-	}
 
 	public static boolean isValidItemClass(String itemClass) {
 		return mItemsList.containsKey(itemClass);
@@ -370,7 +368,6 @@ public class ItemFactory {
 		}
 	}
 
-
 		public static Class<? extends Item> itemsClassByName(String selectedItemClass) {
 
 		Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
@@ -382,4 +379,11 @@ public class ItemFactory {
 		}
 	}
 
+	public static Item createItemFromDesc(JSONObject itemDesc) throws IllegalAccessException, InstantiationException, JSONException {
+		String kind = itemDesc.getString("kind");
+		Item item = ItemFactory.itemsClassByName(kind).newInstance();
+		item.fromJson(itemDesc);
+
+		return item;
+	}
 }

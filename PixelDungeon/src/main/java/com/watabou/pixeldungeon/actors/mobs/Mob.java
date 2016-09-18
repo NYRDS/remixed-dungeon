@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -54,6 +55,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public abstract class Mob extends Char {
 
@@ -578,7 +582,7 @@ public abstract class Mob extends Char {
 		try {
 			new_mob = this.getClass().newInstance();
 		} catch (Exception e) {
-			throw new TrackedRuntimeException("ressurrect issue");
+			throw new TrackedRuntimeException("resurrect issue");
 		}
 
 		if (Dungeon.level.cellValid(spawnPos)) {
@@ -644,6 +648,13 @@ public abstract class Mob extends Char {
 
 	public boolean isHostile() {
 		return fraction.belongsTo(Fraction.DUNGEON) && !isPet();
+	}
+
+	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+		if(mobDesc.has("loot")) {
+			loot = ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot"));
+			lootChance = 1;
+		}
 	}
 
 	public interface AiState {

@@ -140,6 +140,7 @@ public class PredesignedLevel extends CommonLevel {
 					if (cellValid(x, y)) {
 						String kind = mobDesc.getString("kind");
 						Mob mob = MobFactory.mobClassByName(kind).newInstance();
+						mob.fromJson(mobDesc);
 						mob.setPos(cell(x, y));
 						spawnMob(mob);
 					}
@@ -164,9 +165,7 @@ public class PredesignedLevel extends CommonLevel {
 					int y = itemDesc.getInt("y");
 
 					if (cellValid(x, y)) {
-						String kind = itemDesc.getString("kind");
-						Item item = ItemFactory.itemsClassByName(kind).newInstance();
-						item.fromJson(itemDesc);
+						Item item = ItemFactory.createItemFromDesc(itemDesc);
 
 						drop(item, cell(x, y));
 					}
