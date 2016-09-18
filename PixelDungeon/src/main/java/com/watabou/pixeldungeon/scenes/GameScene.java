@@ -269,7 +269,7 @@ public class GameScene extends PixelScene {
 			GLog.i(TXT_WELCOME, Dungeon.depth);
 			Sample.INSTANCE.play(Assets.SND_DESCEND);
 		}
-		switch (Dungeon.level.feeling) {
+		switch (Dungeon.level.getFeeling()) {
 			case CHASM:
 				GLog.w(TXT_CHASM);
 				break;

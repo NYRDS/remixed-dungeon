@@ -138,7 +138,7 @@ public class SpiderLevel extends CommonLevel {
 			map[getExit(0)] = Terrain.EXIT;
 		}
 
-		feeling = Feeling.NONE;
+		setFeeling(Feeling.NONE);
 		placeTraps();
 		return true;
 	}

@@ -40,7 +40,7 @@ public class StandardPainter extends Painter {
 		if (!level.isBossLevel() && Random.Int( 5 ) == 0) {
 			switch (Random.Int( 6 )) {
 			case 0:
-				if (level.feeling != Level.Feeling.GRASS) {
+				if (level.getFeeling() != Level.Feeling.GRASS) {
 					if (Math.min( room.width(), room.height() ) >= 4 && Math.max( room.width(), room.height() ) >= 6) {
 						paintGraveyard( level, room );
 						return;
@@ -68,7 +68,7 @@ public class StandardPainter extends Painter {
 				}
 				break;
 			case 4:
-				if (level.feeling != Level.Feeling.WATER) {
+				if (level.getFeeling() != Level.Feeling.WATER) {
 					if (room.connected.size() == 2 && room.width() >= 4 && room.height() >= 4) {
 						paintBridge( level, room );
 						return;

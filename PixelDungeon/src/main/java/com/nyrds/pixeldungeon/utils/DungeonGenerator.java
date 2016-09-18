@@ -222,6 +222,19 @@ public class DungeonGenerator {
 		return getLevelProperty(id, "music");
 	}
 
+	public static Level.Feeling getCurrentLevelFeeling(String id) {
+		try {
+			String feeling = getLevelProperty(id, "feeling");
+			if(feeling==null) {
+				return Level.Feeling.UNDEFINED;
+			}
+			return Level.Feeling.valueOf(getLevelProperty(id, "feeling"));
+		} catch (IllegalArgumentException e){
+			return Level.Feeling.UNDEFINED;
+		}
+	}
+
+
 	public static Position descend(Position current) {
 		return descendOrAscend(current, true);
 	}
@@ -301,4 +314,6 @@ public class DungeonGenerator {
 		mCurrentLevelId    = next.levelId;
 		mCurrentLevelDepth = next.levelDepth;
 	}
+
+
 }

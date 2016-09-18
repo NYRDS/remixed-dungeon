@@ -66,7 +66,7 @@ public class LastLevel extends Level {
 		map[pedestal] = Terrain.PEDESTAL;
 		map[pedestal-1] = map[pedestal+1] = Terrain.STATUE_SP;
 		
-		feeling = Feeling.NONE;
+		setFeeling(Feeling.NONE);
 		
 		return true;
 	}

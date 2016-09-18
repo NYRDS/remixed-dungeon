@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.widget.Button;
+import android.webkit.WebView;
 
 import com.watabou.noosa.Game;
 
@@ -14,8 +14,8 @@ public class OwnAds {
 			@Override
 			public void run() {
 				if (Game.instance().getLayout().getChildCount() == 1) {
-					Button adView = new Button(Game.instance());
-					adView.setText("Рекламко");
+					WebView adView = new WebView(Game.instance());
+					adView.loadDataWithBaseURL(null,"Рекламко", "text/html", "utf-8", null);
 					Game.instance().getLayout().addView(adView, 0);
 					Game.setNeedSceneRestart(true);
 				}

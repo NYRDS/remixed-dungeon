@@ -39,11 +39,11 @@ public class NecroLevel extends RegularLevel {
 	}
 
 	protected boolean[] water() {
-		return Patch.generate(this, feeling == Feeling.WATER ? 0.65f : 0.45f, 4 );
+		return Patch.generate(this, getFeeling() == Feeling.WATER ? 0.65f : 0.45f, 4 );
 	}
 
 	protected boolean[] grass() {
-		return Patch.generate(this, feeling == Feeling.GRASS ? 0.60f : 0.40f, 3 );
+		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.60f : 0.40f, 3 );
 	}
 
 	@Override

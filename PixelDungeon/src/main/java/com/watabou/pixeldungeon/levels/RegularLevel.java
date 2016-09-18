@@ -319,7 +319,7 @@ public abstract class RegularLevel extends CommonLevel {
 	protected void paintGrass() {
 		boolean[] grass = grass();
 		
-		if (feeling == Feeling.GRASS) {
+		if (getFeeling() == Feeling.GRASS) {
 			
 			for (Room room : rooms) {
 				if (room.type != Type.NULL && room.type != Type.PASSAGE && room.type != Type.TUNNEL) {
@@ -402,7 +402,7 @@ public abstract class RegularLevel extends CommonLevel {
 			if (r.type != Type.NULL && r.type != Type.BOSS_EXIT && r.type != Type.EXIT) {
 				paintRoom(r);
 			} else {
-				if (feeling == Feeling.CHASM && Random.Int( 2 ) == 0) {
+				if (getFeeling() == Feeling.CHASM && Random.Int( 2 ) == 0) {
 					Painter.fill( this, r, Terrain.WALL );
 				}
 			}

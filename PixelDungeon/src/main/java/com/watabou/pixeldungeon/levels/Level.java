@@ -132,14 +132,22 @@ public abstract class Level implements Bundlable {
 	@NonNull
 	public String music() {
 		String ret = DungeonGenerator.music(levelId);
-		if(ret == null) {
+		if (ret == null) {
 			ret = Assets.TUNE;
 		}
 		return ret;
 	}
 
+	public Feeling getFeeling() {
+		return feeling;
+	}
+
+	public void setFeeling(Feeling feeling) {
+		this.feeling = feeling;
+	}
+
 	public enum Feeling {
-		NONE, CHASM, WATER, GRASS
+		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
 
 	protected int width  = 32;
@@ -176,7 +184,7 @@ public abstract class Level implements Bundlable {
 
 	public boolean[] discoverable;
 
-	public Feeling feeling = Feeling.NONE;
+	private Feeling feeling = Feeling.UNDEFINED;
 
 	public int entrance;
 
@@ -184,11 +192,11 @@ public abstract class Level implements Bundlable {
 
 	public String levelId;
 
-	public HashSet<Mob> mobs = new HashSet<>();
-	public HashMap<Class<? extends Blob>, Blob> blobs = new HashMap<>();
-	public SparseArray<Plant> plants = new SparseArray<>();
-	private SparseArray<Heap> heaps = new SparseArray<>();
-	public SparseArray<LevelObject> objects = new SparseArray<>();
+	public  HashSet<Mob>                         mobs    = new HashSet<>();
+	public  HashMap<Class<? extends Blob>, Blob> blobs   = new HashMap<>();
+	public  SparseArray<Plant>                   plants  = new SparseArray<>();
+	private SparseArray<Heap>                    heaps   = new SparseArray<>();
+	public  SparseArray<LevelObject>             objects = new SparseArray<>();
 
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -210,7 +218,7 @@ public abstract class Level implements Bundlable {
 	private static final String WIDTH          = "width";
 	private static final String HEIGHT         = "height";
 	private static final String SECONDARY_EXIT = "secondaryExit";
-	private static final String OBJECTS = "objects";
+	private static final String OBJECTS        = "objects";
 
 	public static Level fromBundle(Bundle bundle, String key) {
 		return (Level) bundle.get(key);
@@ -319,17 +327,23 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
 			}
 
-			if (Dungeon.depth > 1) {
-				switch (Random.Int(10)) {
-					case 0:
-						feeling = Feeling.CHASM;
-						break;
-					case 1:
-						feeling = Feeling.WATER;
-						break;
-					case 2:
-						feeling = Feeling.GRASS;
-						break;
+			feeling = DungeonGenerator.getCurrentLevelFeeling(levelId);
+			if (feeling == Feeling.UNDEFINED) {
+				if (Dungeon.depth > 1) {
+
+					switch (Random.Int(10)) {
+						case 0:
+							feeling = Feeling.CHASM;
+							break;
+						case 1:
+							feeling = Feeling.WATER;
+							break;
+						case 2:
+							feeling = Feeling.GRASS;
+							break;
+						default:
+							feeling = Feeling.NONE;
+					}
 				}
 			}
 		}
@@ -405,7 +419,7 @@ public abstract class Level implements Bundlable {
 			plants.put(plant.pos, plant);
 		}
 
-		for (LevelObject object: bundle.getCollection(OBJECTS, LevelObject.class)) {
+		for (LevelObject object : bundle.getCollection(OBJECTS, LevelObject.class)) {
 			objects.put(object.getPos(), object);
 		}
 
@@ -470,11 +484,11 @@ public abstract class Level implements Bundlable {
 
 	public String getTilesTex() {
 		String tiles = DungeonGenerator.tiles(levelId);
-		if(tiles!=null) {
+		if (tiles != null) {
 			return tiles;
 		}
 
-		if(tilesTexEx()==null) {
+		if (tilesTexEx() == null) {
 			return tilesTex();
 		}
 
@@ -497,7 +511,7 @@ public abstract class Level implements Bundlable {
 	@NonNull
 	public String getWaterTex() {
 		String water = DungeonGenerator.water(levelId);
-		if(water!=null) {
+		if (water != null) {
 			return water;
 		}
 
@@ -833,7 +847,7 @@ public abstract class Level implements Bundlable {
 	public void addLevelObject(LevelObject obj) {
 		objects.put(obj.getPos(), obj);
 
-		if(GameScene.isSceneReady()) {
+		if (GameScene.isSceneReady()) {
 			GameScene.add(obj);
 		}
 	}
@@ -855,7 +869,7 @@ public abstract class Level implements Bundlable {
 	public void remove(LevelObject levelObject) {
 		int index = objects.indexOfValue(levelObject);
 
-		if(index >= 0) {
+		if (index >= 0) {
 			objects.remove(objects.keyAt(index));
 		}
 	}
@@ -887,7 +901,7 @@ public abstract class Level implements Bundlable {
 
 		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
 			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
-			set( cell, Terrain.discover( map[cell] ) );
+			set(cell, Terrain.discover(map[cell]));
 		}
 
 		charPress(cell, hero);
