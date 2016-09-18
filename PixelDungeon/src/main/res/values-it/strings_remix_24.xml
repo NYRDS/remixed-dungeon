@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="Bowknot_Info">Un bel fiocco dal colore rosa vivace, attaccato su una forcina per capelli.</string>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Nodo a fiocco</string>
+    <string name="Bowknot_Info">Un bel fiocco dal colore rosa vivace, attaccato su una forcina per capelli.</string>
 	
 	<!-- STRINGS OF Shades CLASS -->
-    <string name="Shades_Name">Ombre </string>
-    <string name="Shades_Info">Alcune persone dicono che questi dungeon sono troppo bui per vestire questi. E tu dici che queste persone non sono abbastanza cool. </string>
+    <string name="Shades_Name">occhiali da sole</string>
+    <string name="Shades_Info">Alcune persone dicono che questi dungeon sono troppo bui per vestire questi. E tu dici che quelle persone non sono abbastanza cool. </string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Cappello a capote</string>
+    <string name="Capotain_Info">un cappello alto, a tesa stretta. Di solito è associato ai Puritani , ma non c\'è bisogno di essere religiosi per indossarlo. Per qualche ragione ha una targhetta, che dice \" Solomon \" .</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Fez</string>
+    <string name="Fez_Info">È un sentito copricapo a forma di tronco di cono in feltro rosso, con una nappa fissata alla parte superiore. E no, non rende mondo a 3 dimensioni .</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Orecchie Neko</string>
+    <string name="NekoEars_Info">A volte vuoi lavar via tutto quel sangue di mostro e quello sporco e sentirti carino e morbidoso... O per lo meno puoi indossare queste dolci orecchie da gatto.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Orecchie da coniglio</string>
+    <string name="RabbitEars_Info">E\' una credenza risaputa che i conigli siano bestie fortunate, e la loro fortuna si trasferirebbe su coloro che ottengano una parte del corpo del coniglio. A pensarci bene venire uccisi per delle decorazioni ottenute con le tue orecchie non ti rende molto fortunato. </string>
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Zucca</string>
-    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="Pumpkin_Info">Ai vecchi tempi, il popolo Zucca era una nazione orgogliosa e prosperosa. Ma dopo l\'arrivo degli umani finì tutto in rovina. E teste mozzate ed incise del Popolo Zucca da tempo scomparso servono da promemoria di quei terribili eventi.</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Cappello da mago</string>
     <string name="WndHats_NoConnectionMsg">Impossibile collegarsi a Google Play.</string>
     <string name="WndHats_Purchased">Chiaro!</string>

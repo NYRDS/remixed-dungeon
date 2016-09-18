@@ -133,7 +133,7 @@ public class SewerBossLevel extends RegularLevel {
 				candidates.add( r );
 			}
 		}
-		if (candidates.size() > 0) {
+		if (!candidates.isEmpty()) {
 			Room kingsRoom = Random.element( candidates );
 			kingsRoom.connect(getRoomExit());
 			kingsRoom.type = Room.Type.RAT_KING;
@@ -165,7 +165,7 @@ public class SewerBossLevel extends RegularLevel {
 		int start = getRoomExit().top * getWidth() + getRoomExit().left + 1;
 		int end = start + getRoomExit().width() - 1;
 		for (int i=start; i < end; i++) {
-			if (!isExit(i)) {
+			if (map[i]==Terrain.WALL) {
 				map[i] = Terrain.WALL_DECO;
 				map[i + getWidth()] = Terrain.WATER;
 			} else {
@@ -185,7 +185,8 @@ public class SewerBossLevel extends RegularLevel {
 	@Override
 	protected void createMobs() {
 		Mob mob = Bestiary.mob( Dungeon.depth, levelKind() );
-		mob.setPos(getRoomExit().random(this));
+
+		mob.setPos(getEmptyCellNextTo(getRoomExit().random(this)));
 		mobs.add( mob );
 	}
 	
