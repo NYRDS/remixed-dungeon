@@ -68,4 +68,10 @@
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="Zombie_Desc">Il Dungeon è un posto pericoloso e molti avventurieri hanno incontrato la loro morte qui. Ma i più sfortunati di loro hanno incontrato la fine nella Necropoli, e ora sono destinati a vagare tra queste mura in forma di corpi marci.</string>
 
-    </resources>
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Intro2">Ah! Un avventuriero che non sia morto. Eccezionale! Oh... Ti chiedo scusa. Vedi, io stesso sono un negromante. Ed anche se studiare i morti e la Morte stessa sia ciò che faccio per vivere, vedere sempre le stesse cose volta dopo volta, alla fine diventa estremamente noioso. D\'altra parte è esattamente per questo che sono qui. Qualcosa di spettacolare è accaduto di recente. Una _Necropoli_, un\'antica città dei morti ha finalmente mostrato le sue porte. Ed infatti siamo proprio di fianco all\'entrata. Ed...ecco cosa ti dico, prendi questa chiave e vai per primo, cioè ti piace l\'avventura e roba così no? Ed io sarò proprio dietro di te, devo solo prepararmi.</string>
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Lich sconfitto</string>
+
+</resources>
