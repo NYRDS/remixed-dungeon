@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">Non puoi cambiare strada!</string>
+
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">La PortaAnime</string>
+    <string name="BlackSkullOfMastery_Info">E\' un artefatto antico, creato dai primi negromanti ad aver catturato le anime dei caduti. Percependo le tue abilità negromantiche si è protetto con un potente incantesimo. Ma poiché il sortilegio è dei tempi antichi, la sua struttura primitiva e piuttosto facile da spezzare.</string>
+    <string name="BlackSkullOfMastery_Title">Puoi spezzare l\'incantesimo. Oppure puoi manipolare la formula magica in modo che ti permetta di consumare sia i poteri dell\'incantesimo che dell\'artefatto, trasformandoti in un Lich.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Diventa un Lich</string>
+    <string name="BlackSkullOfMastery_Necromancer">Spezza l\'incantesimo</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">Il_Lich_ è un negromante che ha raggiunto il pinnacolo delle proprie abilità. Esistendo a cavallo tra vita e morte il _Lich_ eccelle nella negromanzia, ma le sue abilità combattive si sono fortemente ridotte.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Oppure se_spezzi l\'incantesimo_sarai in grado di usare questo artefatto normalmente.</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Il Teschio Nero è stato risvegliato!</string>
+    <string name="BlackSkull_Ressurrect">Il Teschio Nero ha rianimato i mostri morti per servirti!</string>
+    <string name="BlackSkull_Deactivated">Il Teschio Nero giace dormiente, ancora una volta...</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Armatura d\'ossa</string>
+    <string name="NecromancerArmor_Info">Questa armatura permetterà ad un Negromante di evocare fino a 2 Gregari della Morte al costo di 5 anime l\'uno. Questi servitori non-morti seguiranno il loro padrone ed attaccheranno i suoi nemici. I gregari della Morte diverranno più forti ad ogni livello dell\'eroe.</string>
+    <string name="NecromancerArmor_NotNecromancer">Solo i negromanti possono usare questa armatura!</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">Tunica del negromante</string>
+    <string name="NecromancerRobe_Info">Questa tunica permetterà al Negromante di evocare un Gregario della Morte al costo di 5 anime. I Gregari della Morte sono tirapiedi non-morti che divengono più forti assieme al loro padrone.</string>
+
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">Negromante</string>
+
+    <string name="HeroSubClass_NameLich">lich</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>I Negromanti iniziano con 15 hp.</item>
+        <item>I Negromanti hanno la risorsa unica \"anime\", usata per lanciare gli incantesimi. Ogni morte nemica fornisce 1 anima. </item>
+        <item>I Negromanti partono con una tunica unica da Negromante.</item>
+        <item>I Negromanti partono con una chiave scheletrica da livello 7.</item>
+        <item>Le Pozioni di Cura vengono identificate subito.</item>
+    </string-array>
+
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">Gregario della Morte</string>
+    <string name="Deathling_Gender">Maschile</string>
+    <string name="Deathling_Name_Objective">Gregario della Morte</string>
+    <string name="Deathling_Desc">Il Gregario della Morte è l\'anima di un eroe caduto, abbastanza sfortunata da venir evocata tramite poteri Negromantici degli avventurieri.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Non puoi controllare più di %1$d tirapiedi con questo oggetto!</string>
+    <string name="Necromancy_NotEnoughSouls">Non possiedi abbastanza anime per lanciare un incantesimo \"%1$s\".</string>
+
+    <string name="Necromancy_SoulsCountLabel">Anime</string>
+
+    <string name="Necromancer_ACSpecial">NEGROMANZIA</string>
+    <string name="Necromancy_ReincarnationName">Reincarnazione</string>
+    <string name="Necromancy_ReincarnationTriggered">I tuoi poteri trascendono la morte! Ma hai perso tutte le anime raccolte ed i tuoi possedimenti.</string>
+    <string name="Necromancy_SummonDeathlingName">Evocare Gregario della Morte</string>
+
+    <string name="Necromancy_BecameALich">Sei divenuto un Lich! Il tuo potere cresce e la tua capienza di anime è raddoppiata! Ma hai perso %1$d punti di forza.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">Per sbloccare questo personaggio, sconfiggi il Lich con una qualunque altra classe.</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Negromanzia</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">\"Questo spirito sembra starsi dimenando nella sua maledizione. Sembra voglia qualcosa da me. Se uso i miei poteri negromantici, sarò in grado di convincerlo di aver già fatto come mi ha chiesto. In tal modo non avrò bisogno di sprecare il mio tempo qui. Dovrei fare una cosa del genere?\"</string>
+    <string name="WndSadGhostNecro_Yes">Sì, piegalo alla tua volontà.</string>
+    <string name="WndSadGhostNecro_No">No, lascialo parlare.</string>
+    <string name="WndSadGhostNecro_Persuaded">Il fantasma triste è stato dominato!</string>
+
     <!-- Badges -->
 
 </resources>

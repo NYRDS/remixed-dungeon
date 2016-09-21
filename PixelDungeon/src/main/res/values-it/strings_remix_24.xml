@@ -29,8 +29,18 @@
     <string name="Pumpkin_Name">Zucca</string>
     <string name="Pumpkin_Info">Ai vecchi tempi, il popolo Zucca era una nazione orgogliosa e prosperosa. Ma dopo l\'arrivo degli umani finì tutto in rovina. E teste mozzate ed incise del Popolo Zucca da tempo scomparso servono da promemoria di quei terribili eventi.</string>
 	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Berretto da notte</string>
+    <string name="Nightcap_Info">Conquistare i dungeon di notte dev\'essere un lavoro molto stancante. Che ne dite di mettere un berretto caldo, accogliente e rilassarvi, in modo che tutte le vostre preoccupazioni vadano via .</string>
+	
 	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Cappello da mago</string>
+    <string name="WizardHat_Info">Un bel cappello di seta decorato con ornamenti a forma di stella. Ai vecchi tempi, alcuni credevano che i più grandi maghi vestissero abiti confezionati in maniera speciale che aumentassero il loro potere. Di fatto non è che potenzi le vostre capacità magiche, ma di sicuro fa sembrare così.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Lista degli Accessori</string>
+    <string name="WndHats_SlotTitle">Equipaggiato/a</string>
     <string name="WndHats_NoConnectionMsg">Impossibile collegarsi a Google Play.</string>
     <string name="WndHats_Purchased">Chiaro!</string>
 
