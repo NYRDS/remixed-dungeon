@@ -149,6 +149,13 @@ public class GameScene extends PixelScene {
 		tiles = new DungeonTilemap(Dungeon.level.getTilesTex());
 		terrain.add(tiles);
 
+		objects = new Group();
+		add(objects);
+
+		for (int i = 0; i < Dungeon.level.objects.size(); i++) {
+			addLevelObjectSprite(Dungeon.level.objects.valueAt(i));
+		}
+		
 		Dungeon.level.addVisuals(this);
 
 		plants = new Group();
@@ -220,13 +227,6 @@ public class GameScene extends PixelScene {
 		add(statuses);
 
 		add(emoicons);
-
-		objects = new Group();
-		add(objects);
-
-		for (int i = 0; i < Dungeon.level.objects.size(); i++) {
-			addLevelObjectSprite(Dungeon.level.objects.valueAt(i));
-		}
 
 		add(new HealthIndicator());
 
