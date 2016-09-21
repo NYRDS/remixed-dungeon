@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
@@ -422,7 +421,7 @@ public class StartScene extends PixelScene {
 			avatar.frame(cl.ordinal() * WIDTH, 0, WIDTH, HEIGHT);
 			avatar.Scale().set(SCALE);
 
-			if (Badges.isUnlocked(cl.masteryBadge())) {
+			if (Badges.isUnlocked(cl.masteryBadge()) && cl != HeroClass.NECROMANCER) {
 				normal = MASTERY_NORMAL;
 				highlighted = MASTERY_HIGHLIGHTED;
 			} else {
