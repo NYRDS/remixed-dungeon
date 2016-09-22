@@ -421,7 +421,7 @@ public class StartScene extends PixelScene {
 			avatar.frame(cl.ordinal() * WIDTH, 0, WIDTH, HEIGHT);
 			avatar.Scale().set(SCALE);
 
-			if (Badges.isUnlocked(cl.masteryBadge()) && cl != HeroClass.NECROMANCER) {
+			if (Badges.isUnlocked(cl.masteryBadge())) {
 				normal = MASTERY_NORMAL;
 				highlighted = MASTERY_HIGHLIGHTED;
 			} else {
