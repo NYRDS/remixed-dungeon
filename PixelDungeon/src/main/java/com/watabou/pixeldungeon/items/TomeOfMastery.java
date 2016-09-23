@@ -23,8 +23,10 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -54,7 +56,16 @@ public class TomeOfMastery extends MasteryItem {
 		
 		return actions;
 	}
-	
+
+	@Override
+	public boolean doPickUp( Hero hero ) {
+		if (Dungeon.hero.heroClass != HeroClass.NECROMANCER)
+		{
+			Badges.validateMastery();
+		}
+		return super.doPickUp( hero );
+	}
+
 	@Override
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_READ )) {
