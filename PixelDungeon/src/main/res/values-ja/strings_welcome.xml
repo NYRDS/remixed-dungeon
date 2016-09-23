@@ -121,18 +121,4 @@
         - Shadow Lord gets a more sensible starting room (now players can\'t run past him to reach next level, you have to fight)\n
         - Spider Charm gets updated sprite and now drops by a Spider Queen (Previously you could\'ve get it from Goo)\n
         </string>
-  <string name="Welcome_Text_25">
-        remix.25:\n
-        - New dungeon type: Necropolis, in order to enter necropolis you have to find Necromancer on level 7, so he can give you skeleton key\n
-        - New items: Spider Armor and Black Skull\n
-        - Golden sword has become stronger and requires more strength\n
-        - Water in Spider Layer is being displayed properly\n
-        - Now bone piles can\'t contain artifacts and quest items\n
-        - Pet mechanics have been changed. Various mobs recieved immunity to mind control effects\n
-        - Burning period of Liquid Flame has been shortened, it also will burn less in water\n
-        - Mind control icon, which appears above the \“pet\” mobs, has been changed to a heart shape\n
-        - Updated visual of \“new font\”\n
-        - Updated translations\n
-        - Removed options : \“immersive mode\” and \“gui scale\”\n
-        </string>
 </resources>

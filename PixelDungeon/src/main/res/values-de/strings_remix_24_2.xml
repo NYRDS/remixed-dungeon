@@ -11,13 +11,17 @@
     <string name="GoldenStatue_Name">goldene Statue</string>
     <string name="GoldenStatue_Gender">feminin</string>
     <string name="GoldenStatue_Name_Objective">goldene Statue</string>
+    <string name="GoldenStatue_Desc">Es ist wirklich schwer zu glauben, dass diese prächtige Statue nicht einfach nur Dekoration, sondern eine tückische Kreatur ist, die auf unwissende Abenteurer wartet. Auf den ersten Blick hättest du schwören können, dass dessen _%s_ ein Teil seines Armes ist.</string>
+
     <!-- STRINGS OF NecromancerNPC CLASS -->
     <string name="NecromancerNPC_Name">Nekromant</string>
     <string name="NecromancerNPC_Gender">maskulin</string>
     <string name="NecromancerNPC_Name_Objective">Nekromant</string>
+    <string name="NecromancerNPC_Desc">Dieser Mann mittleren Alters scheint leicht verärgert und aufgeregt zugleich zu sein. Er trägt eine zusammengesetzte Rüstung, gefertigt aus Knochenfragmenten.</string>
+    <string name="NecromancerNPC_Intro">Oh! Welch seltener Anblick! Ein Abenteurer, der nicht tot ist! Bemerkenswert! Oh... Ich bitte um Verzeihung, manchmal werde ich zu aufgeregt. Wie du siehst, bin ich ein Nekromant. Und auch wenn Tod und den Tod selbst zu studieren mein Leben ist, ist es manchmal wirklich langweilig. Anders gesehen ist das eigentlich exakt der Grund, warum ich hier bin. Gemäß meinen Berechnungen wird schon sehr bald irgendwo in diesem Dungeon etwas spektakuläres passieren! _Nekropolis_, eine antike Stadt der Toten, wird seine Tore öffnen! Und... Ich kann wirklich nicht weiterplaudern, ich habe genug Zeit verschwendet. Ich muss mich bereit machen, _komm\' später wieder_.</string>
     <string name="NecromancerNPC_Message1">So wenig Zeit, so wenig Zeit...</string>
     <string name="NecromancerNPC_Message2">Ich muss bereit sein.</string>
-    <string name="NecromancerNPC_Message3">Ich kann die Ruf der Toten hören.</string>
+    <string name="NecromancerNPC_Message3">Ich kann den Ruf der Toten hören.</string>
     <string name="NecromancerNPC_Message4">Da ist etwas sehr Besonderes innerhalb von Nekropolis.</string>
 
     <string name="RatKing_Name_Objective">Rattenkönig</string>
