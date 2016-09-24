@@ -291,7 +291,7 @@ public class PixelScene extends Scene {
 		PixelScene.font = font;
 	}
 
-	protected static class Fader extends ColorBlock {
+	private static class Fader extends ColorBlock {
 
 		private static float FADE_TIME = 1f;
 
@@ -299,7 +299,7 @@ public class PixelScene extends Scene {
 
 		private float time;
 
-		public Fader(int color, boolean light) {
+		Fader(int color, boolean light) {
 			super(uiCamera.width, uiCamera.height, color);
 
 			this.light = light;
@@ -336,9 +336,9 @@ public class PixelScene extends Scene {
 		}
 	}
 
-	static class PixelCamera extends Camera {
+	private static class PixelCamera extends Camera {
 
-		public PixelCamera(float zoom) {
+		PixelCamera(float zoom) {
 			super(
 					(int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
 					(int) (Game.height() - Math.ceil(Game.height() / zoom)* zoom) / 2,
