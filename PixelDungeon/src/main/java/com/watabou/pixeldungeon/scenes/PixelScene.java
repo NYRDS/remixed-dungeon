@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.BitmapCache;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -58,11 +59,7 @@ public class PixelScene extends Scene {
 
 	public static Font font;
 
-	@Override
-	public void create() {
-
-		super.create();
-
+	public static void viewportSizeChanged() {
 		float minWidth, minHeight;
 
 		if (PixelDungeon.landscape()) {
@@ -79,13 +76,11 @@ public class PixelScene extends Scene {
 				/ defaultZoom < minHeight)
 				&& defaultZoom > 1) {
 
-			defaultZoom--;
+			defaultZoom-=0.01;
 		}
 
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;
-
-		//GLog.i("%d %d %f", Game.width(), Game.height(), defaultZoom);
 
 		Camera.reset(new PixelCamera(defaultZoom));
 
@@ -93,10 +88,19 @@ public class PixelScene extends Scene {
 		uiCamera = Camera.createFullscreen(uiZoom);
 		Camera.add(uiCamera);
 
+		GLog.i("zoom: %3.2f %3.2f", defaultZoom, uiZoom );
+	}
+
+	@Override
+	public void create() {
+
+		super.create();
+
+		viewportSizeChanged();
 		createFonts();
 	}
 
-	private void createFonts() {
+	static private void createFonts() {
 		if (font1x == null) {
 			// 3x5 (6)
 			font1x = Font.colorMarked(BitmapCache.get(Assets.FONTS1X),

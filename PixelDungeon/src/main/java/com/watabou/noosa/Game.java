@@ -52,6 +52,8 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
@@ -345,8 +347,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
 		GLES20.glViewport(0, 0, width, height);
 
+		GLog.i("viewport: %d %d",width, height );
+
 		Game.width(width);
 		Game.height(height);
+		PixelScene.viewportSizeChanged();
 	}
 
 	@Override
