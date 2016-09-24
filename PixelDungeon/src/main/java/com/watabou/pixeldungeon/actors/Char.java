@@ -83,7 +83,7 @@ public abstract class Char extends Actor {
 	private int pos = 0;
 
 	@NonNull
-	private CharSprite sprite;
+	protected CharSprite sprite;
 
 	protected String name           = Game.getVar(R.string.Char_Name);
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
@@ -579,14 +579,20 @@ public abstract class Char extends Actor {
 
 	public CharSprite getSprite() {
 		if (sprite == null) {
-			throw new TrackedRuntimeException("null sprite for "+ this.getClass().getSimpleName());
+
+			if(!GameScene.isSceneReady()) {
+				throw new TrackedRuntimeException("scene not ready for "+ this.getClass().getSimpleName());
+			}
+
+			sprite = sprite();
+			sprite.setVisible(Dungeon.visible[getPos()]);
+			GameScene.addMobSpriteDirect(sprite);
+			sprite.link(this);
 		}
 		return sprite;
 	}
 
-	public void setSprite(@NonNull CharSprite sprite) {
-		this.sprite = sprite;
-	}
+	protected abstract CharSprite sprite();
 
 	public int ht() {
 		return Scrambler.descramble(HT);

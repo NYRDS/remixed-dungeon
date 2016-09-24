@@ -117,7 +117,7 @@ public class MirrorImage extends NPC {
 				lookDesc = Dungeon.hero.getHeroSprite().getLayersDesc();
 			} else { // dirty hack here
 				Hero hero = new Hero();
-				lookDesc = new HeroSpriteDef(hero, false).getLayersDesc();
+				lookDesc = new HeroSpriteDef(hero).getLayersDesc();
 			}
 
 			return sprite();
