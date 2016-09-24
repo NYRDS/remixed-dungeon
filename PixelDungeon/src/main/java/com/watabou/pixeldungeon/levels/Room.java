@@ -21,7 +21,6 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
 import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;
-import com.watabou.pixeldungeon.levels.painters.BossExitPainter;
 import com.watabou.pixeldungeon.levels.painters.CryptPainter;
 import com.watabou.pixeldungeon.levels.painters.EntrancePainter;
 import com.watabou.pixeldungeon.levels.painters.ExitPainter;
@@ -33,7 +32,9 @@ import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.levels.painters.PassagePainter;
 import com.watabou.pixeldungeon.levels.painters.PitPainter;
 import com.watabou.pixeldungeon.levels.painters.PoolPainter;
+import com.watabou.pixeldungeon.levels.painters.PrisonBossExitPainter;
 import com.watabou.pixeldungeon.levels.painters.RatKingPainter;
+import com.watabou.pixeldungeon.levels.painters.SewerBossExitPainter;
 import com.watabou.pixeldungeon.levels.painters.ShopPainter;
 import com.watabou.pixeldungeon.levels.painters.StandardPainter;
 import com.watabou.pixeldungeon.levels.painters.StatuePainter;
@@ -70,7 +71,8 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		STANDARD	( StandardPainter.class ),
 		ENTRANCE	( EntrancePainter.class ),
 		EXIT		( ExitPainter.class ),
-		BOSS_EXIT	( BossExitPainter.class ),
+		SEWER_BOSS_EXIT	( SewerBossExitPainter.class ),
+		PRISON_BOSS_EXIT( PrisonBossExitPainter.class ),
 		TUNNEL		( TunnelPainter.class ),
 		PASSAGE		( PassagePainter.class ),
 		SHOP		( ShopPainter.class ),
