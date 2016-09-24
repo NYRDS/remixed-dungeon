@@ -176,6 +176,14 @@ public class GameScene extends PixelScene {
 		effects = new Group();
 		emoicons = new Group();
 
+
+		scene.heroSprite = new HeroSpriteDef(Dungeon.hero, true);
+		scene.heroSprite.place(Dungeon.hero.getPos());
+		Dungeon.hero.updateLook();
+
+		scene.mobs.add(scene.heroSprite);
+
+
 		mobs = new Group();
 		add(mobs);
 
@@ -231,12 +239,6 @@ public class GameScene extends PixelScene {
 		add(new HealthIndicator());
 
 		add(cellSelector = new CellSelector(tiles));
-
-		scene.heroSprite = new HeroSpriteDef(Dungeon.hero, true);
-		scene.heroSprite.place(Dungeon.hero.getPos());
-		Dungeon.hero.updateLook();
-
-		scene.mobs.add(scene.heroSprite);
 
 		StatusPane sb = new StatusPane(Dungeon.hero);
 		sb.camera = uiCamera;

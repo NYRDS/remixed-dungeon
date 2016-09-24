@@ -71,9 +71,9 @@ import java.util.Set;
 
 public abstract class Char extends Actor {
 
-	protected static final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
-	protected static final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
-	protected static final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
+	private static final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
+	private static final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
+	private static final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
 
 	private static final String TXT_YOU_MISSED = Game.getVar(R.string.Char_YouMissed);
 	private static final String TXT_SMB_MISSED = Game.getVar(R.string.Char_SmbMissed);
