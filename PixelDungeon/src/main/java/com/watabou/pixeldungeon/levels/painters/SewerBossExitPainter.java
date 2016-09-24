@@ -21,7 +21,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 
-public class BossExitPainter extends ExitPainter {
+public class SewerBossExitPainter extends ExitPainter {
 
 	public static void paint(Level level, Room room) {
 
@@ -40,7 +40,6 @@ public class BossExitPainter extends ExitPainter {
 		set(level,centerX-1, centerY-1,Terrain.WALL);
 		set(level,centerX,   centerY-1,Terrain.WALL);
 		set(level,centerX+1, centerY-1,Terrain.WALL);
-
 
 		set(level,centerX-1, centerY+1,Terrain.WATER);
 		set(level,centerX,   centerY+1,Terrain.WATER);

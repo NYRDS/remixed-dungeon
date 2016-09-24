@@ -399,7 +399,7 @@ public abstract class RegularLevel extends CommonLevel {
 		ExitPainter.resetCounter();
 
 		for (Room r : rooms) {
-			if (r.type != Type.NULL && r.type != Type.BOSS_EXIT && r.type != Type.EXIT) {
+			if (r.type != Type.NULL && r.type != Type.SEWER_BOSS_EXIT && r.type != Type.PRISON_BOSS_EXIT  && r.type != Type.EXIT) {
 				paintRoom(r);
 			} else {
 				if (feeling == Feeling.CHASM && Random.Int( 2 ) == 0) {
@@ -410,13 +410,13 @@ public abstract class RegularLevel extends CommonLevel {
 
 		for(int i = 0;i<exits.size();++i) {
 			Room room = exits.get(i);
-			if(room.type != Type.BOSS_EXIT) {
+			if(room.type!=Type.SEWER_BOSS_EXIT&&room.type!=Type.PRISON_BOSS_EXIT) {
 				paintRoom(room);
 			}
 		}
 
 		for (Room r : rooms) {
-			if(r.type==Type.BOSS_EXIT) {
+			if(r.type==Type.SEWER_BOSS_EXIT||r.type==Type.PRISON_BOSS_EXIT ) {
 				paintRoom(r);
 			}
 		}
