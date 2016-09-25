@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">你不能改变你的方式！</string>
+
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">勾魂使者</string>
+    <string name="BlackSkullOfMastery_Info"> 这是一个古老的神器，制作的第一个巫师收集堕落的灵魂。感觉你的巫术的能力为自己强大的法术。但由于咒语是一个古老的时代，它的原始结构是相当容易打破。 </string>
+    <string name="BlackSkullOfMastery_Title"> 你可能会打破咒语。或者你会在方式操纵神奇的公式，这会让你消耗的法术和神器本身的力量，把自己变成一个巫妖。 </string>
+
+    <string name="BlackSkullOfMastery_Lich">成为巫妖</string>
+    <string name="BlackSkullOfMastery_Necromancer">打破魔咒</string>
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">黑色骷髅被唤醒了！</string>
+    <string name="BlackSkull_Ressurrect">黑色骷髅已经举起了死去的怪物来为你服务！</string>
+    <string name="BlackSkull_Deactivated">黑色骷髅又一次沉睡了…</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">骨甲</string>
+    <string name="NecromancerArmor_NotNecromancer">只有死灵法师能使用这件护甲！</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">死灵法师长袍</string>
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">死灵法师</string>
+
+    <string name="HeroSubClass_NameLich">巫妖</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>死灵法师开局只有15点HP。</item>
+        <item>死灵法师有一种独特的资源，用“灵魂”的咒语。每一个暴徒的死亡补助金1灵魂。 </item>
+        <item>死灵法师开局有一件独特的死灵法师长袍。</item>
+        <item>死灵巫师开局有一把7层的骷髅钥匙。</item>
+        <item>治愈药水从一开始就被鉴定。</item>
+    </string-array>
+
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">死亡之蛉</string>
+    <string name="Deathling_Gender">男性的</string>
+    <string name="Deathling_Name_Objective">死亡之蛉</string>
+    <string name="Deathling_Desc">死亡之蛉是灵魂的英雄，这是由巫术力量召唤其他冒险家不幸。</string>
+
+    <string name="Necromancy_SoulsCountLabel">灵魂</string>
+
+    <string name="Necromancer_ACSpecial">巫术</string>
+    <string name="Necromancy_ReincarnationName">投胎</string>
+    <string name="Necromancy_ReincarnationTriggered"> 你的力量是死亡！但你失去了所有收集的灵魂和财产。</string>
+    <string name="Necromancy_SummonDeathlingName">召唤死亡之蛉</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">使用其他角色击败巫妖来解锁这个角色</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">巫术</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">“这种精神似乎在他的诅咒中挣扎。看来他想要我的东西。如果我用我的巫术力量，我能说服他，我已经做了他问。这样我就不需要浪费我的时间在这里。我应该做这样的事吗？”</string>
+    <string name="WndSadGhostNecro_Yes">是的，把它弯曲到你的意志。</string>
+    <string name="WndSadGhostNecro_No">不，让它说。</string>
     <!-- Badges -->
 
 </resources>
