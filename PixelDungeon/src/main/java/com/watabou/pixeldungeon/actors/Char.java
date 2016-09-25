@@ -85,6 +85,7 @@ public abstract class Char extends Actor {
 	@NonNull
 	protected CharSprite sprite;
 
+
 	protected String name           = Game.getVar(R.string.Char_Name);
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
 
@@ -577,17 +578,20 @@ public abstract class Char extends Actor {
 		return IMMUNITIES;
 	}
 
+	public void updateSprite(){
+		getSprite().setVisible(Dungeon.visible[getPos()]);
+		GameScene.addMobSpriteDirect(sprite);
+		sprite.link(this);
+	}
+
 	public CharSprite getSprite() {
 		if (sprite == null) {
 
 			if(!GameScene.isSceneReady()) {
 				throw new TrackedRuntimeException("scene not ready for "+ this.getClass().getSimpleName());
 			}
-
 			sprite = sprite();
-			sprite.setVisible(Dungeon.visible[getPos()]);
-			GameScene.addMobSpriteDirect(sprite);
-			sprite.link(this);
+			updateSprite();
 		}
 		return sprite;
 	}
