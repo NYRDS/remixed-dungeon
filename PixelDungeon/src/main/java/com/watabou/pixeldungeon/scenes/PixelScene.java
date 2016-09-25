@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.BitmapCache;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -88,7 +87,7 @@ public class PixelScene extends Scene {
 		uiCamera = Camera.createFullscreen(uiZoom);
 		Camera.add(uiCamera);
 
-		GLog.i("zoom: %3.2f %3.2f", defaultZoom, uiZoom );
+		//GLog.i("zoom: %3.2f %3.2f", defaultZoom, uiZoom );
 	}
 
 	@Override
