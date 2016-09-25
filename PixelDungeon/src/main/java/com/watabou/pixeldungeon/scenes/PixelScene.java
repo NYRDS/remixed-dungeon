@@ -58,7 +58,7 @@ public class PixelScene extends Scene {
 
 	public static Font font;
 
-	public static void viewportSizeChanged() {
+	private static void viewportSizeChanged() {
 		float minWidth, minHeight;
 
 		if (PixelDungeon.landscape()) {
