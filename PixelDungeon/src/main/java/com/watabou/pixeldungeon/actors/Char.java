@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -82,7 +80,6 @@ public abstract class Char extends Actor {
 
 	private int pos = 0;
 
-	@NonNull
 	protected CharSprite sprite;
 
 
@@ -163,7 +160,7 @@ public abstract class Char extends Actor {
 		readCharData();
 	}
 
-	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
+	private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
 
