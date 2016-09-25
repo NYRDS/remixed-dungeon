@@ -200,6 +200,8 @@ public class GameScene extends PixelScene {
 			}
 		}
 
+		Dungeon.hero.updateSprite();
+
 		add(emitters);
 		add(effects);
 
