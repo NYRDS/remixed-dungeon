@@ -13,7 +13,7 @@ public class LiquidFlame extends Blob {
 	@Override
 	protected void evolve() {
 
-		boolean[] flamable = Dungeon.level.flammable;
+		boolean[] flammable = Dungeon.level.flammable;
 		
 		int from = getWidth() + 1;
 		int to   = getLength() - getWidth() - 1;
@@ -29,11 +29,11 @@ public class LiquidFlame extends Blob {
 				burn( pos );
 
 				if(Dungeon.level.water[pos]) {
-					cur[pos] = 0;
+					cur[pos] = cur[pos]>1 ? cur[pos]/4 : 0;
  				} else {
 
 					fire = cur[pos] - 1;
-					if (fire <= 0 && flamable[pos]) {
+					if (fire <= 0 && flammable[pos]) {
 
 						int oldTile = Dungeon.level.map[pos];
 						Dungeon.level.set(pos, Terrain.EMBERS);
@@ -50,7 +50,7 @@ public class LiquidFlame extends Blob {
 				int fireInAdjCells = cur[pos-1] + cur[pos+1] + cur[pos-getWidth()] + cur[pos+getWidth()];
 				
 				if(fireInAdjCells > 0) {
-					if(flamable[pos]) {
+					if(flammable[pos]) {
 						fire = 4;
 						burn( pos );
 					} else if(!Dungeon.level.solid[pos] && !Dungeon.level.water[pos] && !Dungeon.level.pit[pos]) {

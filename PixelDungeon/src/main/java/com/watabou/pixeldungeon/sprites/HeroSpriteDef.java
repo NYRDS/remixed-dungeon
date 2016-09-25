@@ -73,13 +73,10 @@ public class HeroSpriteDef extends MobSpriteDef {
 		applyLayersDesc(getLayersDesc());
 	}
 
-	public HeroSpriteDef(Hero hero, boolean link) {
+	public HeroSpriteDef(Hero hero) {
 		super("spritesDesc/Hero.json",0);
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
-		if(link) {
-			link(hero);
-		}
 	}
 
 	public HeroSpriteDef(Hero hero, Accessory accessory) {

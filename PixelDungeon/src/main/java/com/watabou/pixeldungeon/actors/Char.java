@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -71,9 +69,9 @@ import java.util.Set;
 
 public abstract class Char extends Actor {
 
-	protected static final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
-	protected static final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
-	protected static final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
+	private static final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
+	private static final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
+	private static final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
 
 	private static final String TXT_YOU_MISSED = Game.getVar(R.string.Char_YouMissed);
 	private static final String TXT_SMB_MISSED = Game.getVar(R.string.Char_SmbMissed);
@@ -82,8 +80,8 @@ public abstract class Char extends Actor {
 
 	private int pos = 0;
 
-	@NonNull
-	private CharSprite sprite;
+	protected CharSprite sprite;
+
 
 	protected String name           = Game.getVar(R.string.Char_Name);
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
@@ -162,7 +160,7 @@ public abstract class Char extends Actor {
 		readCharData();
 	}
 
-	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
+	private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
 
@@ -577,16 +575,25 @@ public abstract class Char extends Actor {
 		return IMMUNITIES;
 	}
 
+	public void updateSprite(){
+		getSprite().setVisible(Dungeon.visible[getPos()]);
+		GameScene.addMobSpriteDirect(sprite);
+		sprite.link(this);
+	}
+
 	public CharSprite getSprite() {
 		if (sprite == null) {
-			throw new TrackedRuntimeException("null sprite for "+ this.getClass().getSimpleName());
+
+			if(!GameScene.isSceneReady()) {
+				throw new TrackedRuntimeException("scene not ready for "+ this.getClass().getSimpleName());
+			}
+			sprite = sprite();
+			updateSprite();
 		}
 		return sprite;
 	}
 
-	public void setSprite(@NonNull CharSprite sprite) {
-		this.sprite = sprite;
-	}
+	protected abstract CharSprite sprite();
 
 	public int ht() {
 		return Scrambler.descramble(HT);

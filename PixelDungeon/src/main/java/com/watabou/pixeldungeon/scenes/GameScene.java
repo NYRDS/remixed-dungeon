@@ -59,7 +59,6 @@ import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DiscardedItemSprite;
-import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
@@ -98,7 +97,6 @@ public class GameScene extends PixelScene {
 	private SkinnedBlock   water;
 	private DungeonTilemap tiles;
 	private FogOfWar       fog;
-	private HeroSpriteDef  heroSprite;
 
 	private GameLog log;
 
@@ -197,11 +195,12 @@ public class GameScene extends PixelScene {
 		Dungeon.level.mobs = filteredMobs;
 
 		for (Mob mob : Dungeon.level.mobs) {
-			addMobSprite(mob);
 			if (Statistics.amuletObtained) {
 				mob.beckon(Dungeon.hero.getPos());
 			}
 		}
+
+		Dungeon.hero.updateSprite();
 
 		add(emitters);
 		add(effects);
@@ -232,11 +231,7 @@ public class GameScene extends PixelScene {
 
 		add(cellSelector = new CellSelector(tiles));
 
-		scene.heroSprite = new HeroSpriteDef(Dungeon.hero, true);
-		scene.heroSprite.place(Dungeon.hero.getPos());
 		Dungeon.hero.updateLook();
-
-		scene.mobs.add(scene.heroSprite);
 
 		StatusPane sb = new StatusPane(Dungeon.hero);
 		sb.camera = uiCamera;
@@ -300,7 +295,7 @@ public class GameScene extends PixelScene {
 		switch (InterlevelScene.mode) {
 			case RESURRECT:
 				WandOfBlink.appear(Dungeon.hero, Dungeon.level.entrance);
-				new Flare(8, 32).color(0xFFFF66, true).show(heroSprite, 2f);
+				new Flare(8, 32).color(0xFFFF66, true).show(Dungeon.hero.getHeroSprite(), 2f);
 				break;
 			case RETURN:
 				WandOfBlink.appear(Dungeon.hero, Dungeon.hero.getPos());
@@ -319,7 +314,7 @@ public class GameScene extends PixelScene {
 			default:
 		}
 
-		Camera.main.target = heroSprite;
+		Camera.main.target = Dungeon.hero.getHeroSprite();
 		fadeIn();
 		Dungeon.observe();
 	}
@@ -429,13 +424,6 @@ public class GameScene extends PixelScene {
 		if (gas.emitter == null) {
 			scene.gases.add(new BlobEmitter(gas));
 		}
-	}
-
-	public static void addMobSprite(Mob mob) {
-		CharSprite sprite = mob.sprite();
-		sprite.setVisible(Dungeon.visible[mob.getPos()]);
-		scene.mobs.add(sprite);
-		sprite.link(mob);
 	}
 
 	private void prompt(String text) {
@@ -689,5 +677,9 @@ public class GameScene extends PixelScene {
 	public void resume() {
 		super.resume();
 		afterObserve();
+	}
+
+	public static void addMobSpriteDirect(CharSprite sprite) {
+		scene.mobs.add(sprite);
 	}
 }

@@ -1697,8 +1697,20 @@ public class Hero extends Char {
 		return buff == null ? super.immunities() : GasesImmunity.IMMUNITIES;
 	}
 
+	@Override
+	protected CharSprite sprite() {
+		return new HeroSpriteDef(this);
+	}
+
 	public HeroSpriteDef getHeroSprite() {
 		return (HeroSpriteDef) getSprite();
+	}
+
+	@Override
+	public CharSprite getSprite() {
+		CharSprite sprite = super.getSprite();
+		sprite.setVisible(true);
+		return sprite;
 	}
 
 	public int lvl() {
@@ -1715,6 +1727,10 @@ public class Hero extends Char {
 
 	public void setExp(int exp) {
 		this.exp = Scrambler.scramble(exp);
+	}
+
+	public void setSprite(@NonNull HeroSpriteDef sprite) {
+		this.sprite = sprite;
 	}
 
 	public interface Doom {

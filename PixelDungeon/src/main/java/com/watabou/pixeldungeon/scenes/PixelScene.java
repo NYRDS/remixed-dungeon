@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.BitmapCache;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -88,7 +87,7 @@ public class PixelScene extends Scene {
 		uiCamera = Camera.createFullscreen(uiZoom);
 		Camera.add(uiCamera);
 
-		GLog.i("zoom: %3.2f %3.2f", defaultZoom, uiZoom );
+		//GLog.i("zoom: %3.2f %3.2f", defaultZoom, uiZoom );
 	}
 
 	@Override
@@ -291,7 +290,7 @@ public class PixelScene extends Scene {
 		PixelScene.font = font;
 	}
 
-	protected static class Fader extends ColorBlock {
+	private static class Fader extends ColorBlock {
 
 		private static float FADE_TIME = 1f;
 
@@ -299,7 +298,7 @@ public class PixelScene extends Scene {
 
 		private float time;
 
-		public Fader(int color, boolean light) {
+		Fader(int color, boolean light) {
 			super(uiCamera.width, uiCamera.height, color);
 
 			this.light = light;
@@ -336,9 +335,9 @@ public class PixelScene extends Scene {
 		}
 	}
 
-	static class PixelCamera extends Camera {
+	private static class PixelCamera extends Camera {
 
-		public PixelCamera(float zoom) {
+		PixelCamera(float zoom) {
 			super(
 					(int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
 					(int) (Game.height() - Math.ceil(Game.height() / zoom)* zoom) / 2,

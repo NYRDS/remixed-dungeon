@@ -30,12 +30,12 @@ import java.util.Map;
 
 public class MobSpriteDef extends MobSprite {
 
-	private int     bloodColor;
-	private boolean levitating;
-	private int     framesInRow;
-	private int     kind;
-	private String  zapEffect;
-	Callback        zapCallback;
+	private int      bloodColor;
+	private boolean  levitating;
+	private int      framesInRow;
+	private int      kind;
+	private String   zapEffect;
+	private Callback zapCallback;
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 

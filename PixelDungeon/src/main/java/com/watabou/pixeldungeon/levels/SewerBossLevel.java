@@ -95,7 +95,7 @@ public class SewerBossLevel extends RegularLevel {
 		} while (distance < minDistance);
 		
 		roomEntrance.type = Type.ENTRANCE;
-		getRoomExit().type = Type.BOSS_EXIT;
+		getRoomExit().type = Type.SEWER_BOSS_EXIT;
 
 		placeSecondaryExits();
 
