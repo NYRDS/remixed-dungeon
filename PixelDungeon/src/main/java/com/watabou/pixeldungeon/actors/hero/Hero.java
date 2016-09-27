@@ -1774,6 +1774,9 @@ public class Hero extends Char {
 
 			pet.state = pet.WANDERING;
 			Dungeon.level.spawnMob(pet);
+			pet.regenSprite();
+			//pet.getSprite().update();
+			//pet.getSprite().isMoving = false;
 		}
 	}
 

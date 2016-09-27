@@ -576,9 +576,17 @@ public abstract class Char extends Actor {
 	}
 
 	public void updateSprite(){
-		getSprite().setVisible(Dungeon.visible[getPos()]);
+		updateSprite(getSprite());
+	}
+
+	private void updateSprite(CharSprite sprite){
+		sprite.setVisible(Dungeon.visible[getPos()]);
 		GameScene.addMobSpriteDirect(sprite);
 		sprite.link(this);
+	}
+
+	public void regenSprite() {
+		sprite = null;
 	}
 
 	public CharSprite getSprite() {
@@ -588,8 +596,12 @@ public abstract class Char extends Actor {
 				throw new TrackedRuntimeException("scene not ready for "+ this.getClass().getSimpleName());
 			}
 			sprite = sprite();
-			updateSprite();
 		}
+
+		if(sprite.getParent()==null) {
+			updateSprite(sprite);
+		}
+
 		return sprite;
 	}
 

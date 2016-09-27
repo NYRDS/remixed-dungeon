@@ -680,6 +680,8 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void addMobSpriteDirect(CharSprite sprite) {
-		scene.mobs.add(sprite);
+		if(isSceneReady()) {
+			scene.mobs.add(sprite);
+		}
 	}
 }

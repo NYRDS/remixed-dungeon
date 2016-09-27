@@ -537,6 +537,7 @@ public abstract class Level implements Bundlable {
 
 	public void spawnMob(Mob mob, float delay) {
 		mobs.add(mob);
+		mob.updateSprite();
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 	}
