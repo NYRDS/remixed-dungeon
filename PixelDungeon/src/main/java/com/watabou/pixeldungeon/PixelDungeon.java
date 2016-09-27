@@ -308,7 +308,7 @@ public class PixelDungeon extends Game {
 	}
 	
 	public static boolean classicFont() {
-		boolean val = Preferences.INSTANCE.getBoolean(Preferences.KEY_CLASSIC_FONT, true);
+		boolean val = Preferences.INSTANCE.getBoolean(Preferences.KEY_CLASSIC_FONT, false);
 		ModdingMode.setClassicTextRenderingMode(val);
 		return val;
 	}
