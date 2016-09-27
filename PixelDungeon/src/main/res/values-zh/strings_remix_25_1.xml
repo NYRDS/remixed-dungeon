@@ -11,6 +11,9 @@
 
     <string name="BlackSkullOfMastery_Lich">成为巫妖</string>
     <string name="BlackSkullOfMastery_Necromancer">打破魔咒</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">巫妖是一名擁有至上威力的死靈巫師。巫妖存在於生與死的邊界間，並習有出色的巫術，但其近戰能力亦因此而大幅削弱。</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">或者，若果你 ＿破除咒語＿，你便能正常地使用此神器。</string>
+
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">黑色骷髅被唤醒了！</string>
     <string name="BlackSkull_Ressurrect">黑色骷髅已经举起了死去的怪物来为你服务！</string>
@@ -18,6 +21,7 @@
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">骨甲</string>
+    <string name="NecromancerArmor_Info">此護甲使死靈巫師能夠召喚最多２隻死靈，</string>
     <string name="NecromancerArmor_NotNecromancer">只有死灵法师能使用这件护甲！</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
@@ -42,12 +46,19 @@
     <string name="Deathling_Name_Objective">死亡之蛉</string>
     <string name="Deathling_Desc">死亡之蛉是灵魂的英雄，这是由巫术力量召唤其他冒险家不幸。</string>
 
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">您不能以此道具控制多於 %1$d 個待從。</string>
+    <string name="Necromancy_NotEnoughSouls">您沒有足夠的靈魂來施放 \"%1$s\" 咒語。</string>
+
     <string name="Necromancy_SoulsCountLabel">灵魂</string>
 
     <string name="Necromancer_ACSpecial">巫术</string>
     <string name="Necromancy_ReincarnationName">投胎</string>
     <string name="Necromancy_ReincarnationTriggered"> 你的力量是死亡！但你失去了所有收集的灵魂和财产。</string>
     <string name="Necromancy_SummonDeathlingName">召唤死亡之蛉</string>
+
+    <string name="Necromancy_BecameALich">您成為了巫妖！你的力量正在增強，同時你的靈魂容納量提升了一倍！但是你喪失了 %1$d 力量值。</string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
@@ -60,6 +71,8 @@
     <string name="WndSadGhostNecro_Text">“这种精神似乎在他的诅咒中挣扎。看来他想要我的东西。如果我用我的巫术力量，我能说服他，我已经做了他问。这样我就不需要浪费我的时间在这里。我应该做这样的事吗？”</string>
     <string name="WndSadGhostNecro_Yes">是的，把它弯曲到你的意志。</string>
     <string name="WndSadGhostNecro_No">不，让它说。</string>
+    <string name="WndSadGhostNecro_Persuaded">悲傷幽靈已被您控制！</string>
+
     <!-- Badges -->
 
 </resources>
