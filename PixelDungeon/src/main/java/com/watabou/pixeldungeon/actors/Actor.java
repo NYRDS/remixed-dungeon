@@ -96,6 +96,8 @@ public abstract class Actor implements Bundlable {
 		now = 0;
 		chars.clear();
 		all.clear();
+
+		current = null;
 	}
 	
 	public static void fixTime() {
@@ -122,14 +124,13 @@ public abstract class Actor implements Bundlable {
 		addDelayed( Dungeon.hero, -Float.MIN_VALUE );
 		
 		for (Mob mob : level.mobs) {
+			mob.regenSprite();
 			add( mob );
 		}
 		
 		for (Blob blob : level.blobs.values()) {
 			add( blob );
 		}
-		
-		current = null;
 	}
 	
 	public static void occupyCell( Char ch ) {

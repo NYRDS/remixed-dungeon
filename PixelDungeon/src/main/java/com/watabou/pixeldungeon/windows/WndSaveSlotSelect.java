@@ -29,7 +29,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 	private static final int    BUTTON_HEIGHT = 20;
 	private static final int    BUTTON_WIDTH  = 58;
 
-	public static final  String EMPTY_STRING  = "";
+	private static final String EMPTY_STRING = "";
 
 	private boolean saving;
 	private String  slot;
