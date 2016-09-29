@@ -17,11 +17,12 @@
 
 package com.watabou.noosa;
 
-import java.util.ArrayList;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Camera extends Gizmo {
 
@@ -101,7 +102,23 @@ public class Camera extends Gizmo {
 			(int)(Game.height() - h * zoom) / 2, 
 			w, h, zoom );
 	}
-	
+
+	public void updateFullscreenCameraZoom(float zoom) {
+		width = (int)Math.ceil( Game.width() / zoom );
+		height = (int)Math.ceil( Game.height() / zoom );
+		x = (int)(Game.width() - width * zoom) / 2;
+		y = (int)(Game.height() - height * zoom) / 2;
+		this.zoom = zoom;
+
+		screenWidth = (int)(width * zoom);
+		screenHeight = (int)(height * zoom);
+
+		scroll = new PointF();
+
+		matrix = new float[16];
+		Matrix.setIdentity( matrix );
+	}
+
 	public Camera( int x, int y, int width, int height, float zoom ) {
 		
 		this.x = x;

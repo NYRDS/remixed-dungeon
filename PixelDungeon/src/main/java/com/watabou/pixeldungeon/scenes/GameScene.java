@@ -98,8 +98,6 @@ public class GameScene extends PixelScene {
 	private DungeonTilemap tiles;
 	private FogOfWar       fog;
 
-	private GameLog log;
-
 	private static CellSelector cellSelector;
 
 	private Group ripples;
@@ -115,10 +113,26 @@ public class GameScene extends PixelScene {
 
 	private Group objects;
 
-	private Toolbar toolbar;
-	private Toast   prompt;
+	//ui elements
+	private Toolbar         toolbar;
+	private StatusPane      sb;
+	private Toast           prompt;
+	private AttackIndicator attack;
+	private ResumeIndicator resume;
+	private GameLog         log;
+	private BusyIndicator   busy;
 
 	private volatile boolean sceneCreated = false;
+
+	public void udateUiCamera() {
+		sb.setSize(uiCamera.width, 0);
+		toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
+		attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
+		resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
+		log.setRect(0, toolbar.top(), attack.left(), 0);
+		busy.x = 1;
+		busy.y = sb.bottom() + 1;
+	}
 
 	@Override
 	public void create() {
@@ -153,7 +167,7 @@ public class GameScene extends PixelScene {
 		for (int i = 0; i < Dungeon.level.objects.size(); i++) {
 			addLevelObjectSprite(Dungeon.level.objects.valueAt(i));
 		}
-		
+
 		Dungeon.level.addVisuals(this);
 
 		plants = new Group();
@@ -183,13 +197,13 @@ public class GameScene extends PixelScene {
 		for (Mob mob : Dungeon.level.mobs) {
 			if (mob.getPos() != -1) {
 				filteredMobs.add(mob);
-			}  else {
+			} else {
 				buggedSave = true;
 			}
 		}
 
-		if(buggedSave) {
-			EventCollector.logEvent("bug","bugged save","mob.pos==-1");
+		if (buggedSave) {
+			EventCollector.logEvent("bug", "bugged save", "mob.pos==-1");
 		}
 
 		Dungeon.level.mobs = filteredMobs;
@@ -233,7 +247,7 @@ public class GameScene extends PixelScene {
 
 		Dungeon.hero.updateLook();
 
-		StatusPane sb = new StatusPane(Dungeon.hero);
+		sb = new StatusPane(Dungeon.hero);
 		sb.camera = uiCamera;
 		sb.setSize(uiCamera.width, 0);
 		add(sb);
@@ -243,12 +257,12 @@ public class GameScene extends PixelScene {
 		toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
 		add(toolbar);
 
-		AttackIndicator attack = new AttackIndicator();
+		attack = new AttackIndicator();
 		attack.camera = uiCamera;
 		attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
 		add(attack);
 
-		ResumeIndicator resume = new ResumeIndicator();
+		resume = new ResumeIndicator();
 		resume.camera = uiCamera;
 		resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
 		add(resume);
@@ -276,6 +290,7 @@ public class GameScene extends PixelScene {
 				break;
 			default:
 		}
+
 		if (Dungeon.level instanceof RegularLevel
 				&& ((RegularLevel) Dungeon.level).secretDoors > Random.IntRange(3, 4)) {
 			GLog.w(TXT_SECRETS);
@@ -284,7 +299,7 @@ public class GameScene extends PixelScene {
 			GLog.w(TXT_NIGHT_MODE);
 		}
 
-		BusyIndicator busy = new BusyIndicator();
+		busy = new BusyIndicator();
 		busy.camera = uiCamera;
 		busy.x = 1;
 		busy.y = sb.bottom() + 1;
@@ -347,7 +362,7 @@ public class GameScene extends PixelScene {
 			return;
 		}
 
-		if(Dungeon.level == null) {
+		if (Dungeon.level == null) {
 			return;
 		}
 
@@ -420,10 +435,10 @@ public class GameScene extends PixelScene {
 	}
 
 	private static void addBlobSprite(final Blob gas) {
-		if(isSceneReady())
-		if (gas.emitter == null) {
-			scene.gases.add(new BlobEmitter(gas));
-		}
+		if (isSceneReady())
+			if (gas.emitter == null) {
+				scene.gases.add(new BlobEmitter(gas));
+			}
 	}
 
 	private void prompt(String text) {
@@ -551,7 +566,7 @@ public class GameScene extends PixelScene {
 	public static void updateMap(int cell) {
 		if (isSceneReady()) {
 			scene.tiles.updateCell(cell);
-		}else {
+		} else {
 			EventCollector.logException(new Exception("updateMap(int)"));
 		}
 	}
@@ -559,7 +574,7 @@ public class GameScene extends PixelScene {
 	public static void discoverTile(int pos, int oldValue) {
 		if (isSceneReady()) {
 			scene.tiles.discover(pos, oldValue);
-		}else{
+		} else {
 			EventCollector.logException(new Exception("discoverTile"));
 		}
 	}
@@ -576,7 +591,7 @@ public class GameScene extends PixelScene {
 			for (Mob mob : Dungeon.level.mobs) {
 				mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
 			}
-		}else {
+		} else {
 			EventCollector.logException(new Exception("afterObserve()"));
 		}
 	}
@@ -680,7 +695,7 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void addMobSpriteDirect(CharSprite sprite) {
-		if(isSceneReady()) {
+		if (isSceneReady()) {
 			scene.mobs.add(sprite);
 		}
 	}

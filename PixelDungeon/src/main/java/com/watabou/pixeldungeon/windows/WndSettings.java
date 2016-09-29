@@ -17,12 +17,14 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -97,6 +99,7 @@ public class WndSettings extends Window {
 		
 		if (mInGame) {
 			curY = createZoomButtons();
+			curY = createUiZoomButtons(curY);
 		} else {
 
 			curY = createTextScaleButtons(curY + GAP);
@@ -265,7 +268,37 @@ public class WndSettings extends Window {
 		
 		return btnZoomIn.bottom();
 	}
-	
+
+	private float createUiZoomButtons(float y) {
+		int w = BTN_HEIGHT;
+
+		btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
+			@Override
+			protected void onClick() {
+				uiZoom(PixelScene.uiCamera.zoom - 0.1f);
+			}
+		};
+		add(btnZoomOut.setRect(0, y, w, BTN_HEIGHT));
+
+		btnZoomIn = new RedButton(TXT_ZOOM_IN) {
+			@Override
+			protected void onClick() {
+				uiZoom(PixelScene.uiCamera.zoom + 0.1f);
+			}
+		};
+		add(btnZoomIn.setRect(WIDTH - w, y, w, BTN_HEIGHT));
+
+		add(new RedButton(TXT_ZOOM_DEFAULT) {
+			@Override
+			protected void onClick() {
+				zoom(PixelScene.defaultZoom);
+			}
+		}.setRect(btnZoomOut.right(), y, WIDTH - btnZoomIn.width()
+				- btnZoomOut.width(), BTN_HEIGHT));
+
+		return btnZoomIn.bottom();
+	}
+
 	private float createFontSelector(float y) {
 		remove(btnFontMode);
 		
@@ -351,9 +384,14 @@ public class WndSettings extends Window {
 			PixelDungeon.resetScene();
 		}
 	}
-	
-	private void zoom(float value) {
 
+	private void uiZoom(float value) {
+		PixelScene.uiCamera.updateFullscreenCameraZoom(value);
+		((GameScene)Game.scene()).udateUiCamera();
+		Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
+	}
+
+	private void zoom(float value) {
 		Camera.main.zoom(value);
 		PixelDungeon.zoom((int) (value - PixelScene.defaultZoom));
 
