@@ -68,22 +68,22 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 	protected Animation zap;
 	protected Animation die;
 
-	protected Callback animCallback;
+	private Callback animCallback;
 
-	protected Tweener motion;
+	private Tweener motion;
 
 	protected Emitter burning;
 	protected Emitter levitation;
 
-	protected IceBlock  iceBlock;
-	protected TorchHalo halo;
+	private IceBlock  iceBlock;
+	private TorchHalo halo;
 
-	protected EmoIcon emo;
+	private EmoIcon emo;
 
 	private float flashTime = 0;
 
-	protected boolean sleeping   = false;
-	protected boolean controlled = false;
+	boolean sleeping   = false;
+	boolean controlled = false;
 
 	// Char owner
 	public Char ch;
@@ -305,13 +305,17 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		switch (state) {
 			case BURNING:
 				if (burning != null) {
+					burning.setVisible(false);
 					burning.on = false;
+					burning.kill();
 					burning = null;
 				}
 				break;
 			case LEVITATING:
 				if (levitation != null) {
+					levitation.setVisible(false);
 					levitation.on = false;
+					levitation.kill();
 					levitation = null;
 				}
 				break;
