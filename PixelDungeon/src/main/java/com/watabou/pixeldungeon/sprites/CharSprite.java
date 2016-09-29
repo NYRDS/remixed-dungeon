@@ -103,6 +103,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		turnTo(ch.getPos(), Random.Int(Dungeon.level.getLength()));
 
 		ch.updateSpriteState();
+
+		isMoving = false;
 	}
 
 	public PointF worldToCamera(int cell) {
