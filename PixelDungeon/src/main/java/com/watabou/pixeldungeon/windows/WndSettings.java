@@ -84,7 +84,7 @@ public class WndSettings extends Window {
 	private RedButton btnScaleMinus;
 	private RedButton btnScalePlus;
 
-	RedButton btnFontMode;
+	private RedButton btnFontMode;
 	
 	private boolean mInGame;
 
@@ -242,7 +242,7 @@ public class WndSettings extends Window {
 		btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
 			@Override
 			protected void onClick() {
-				zoom(Camera.main.zoom - 1);
+				zoom(Camera.main.zoom - 0.1f);
 			}
 		};
 		add(btnZoomOut.setRect(0, 0, w, BTN_HEIGHT));
@@ -250,7 +250,7 @@ public class WndSettings extends Window {
 		btnZoomIn = new RedButton(TXT_ZOOM_IN) {
 			@Override
 			protected void onClick() {
-				zoom(Camera.main.zoom + 1);
+				zoom(Camera.main.zoom + 0.1f);
 			}
 		};
 		add(btnZoomIn.setRect(WIDTH - w, 0, w, BTN_HEIGHT));
