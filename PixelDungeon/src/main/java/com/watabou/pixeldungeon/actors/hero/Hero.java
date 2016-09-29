@@ -147,8 +147,6 @@ public class Hero extends Char {
 	private static final String TXT_SEARCH = Game.getVar(R.string.Hero_Search);
 
 	public static final int STARTING_STR = 10;
-	public static final int SP_MAX_NECRO = 25;
-	public static final int SP_MAX_LICH = 50;
 
 	private static final float TIME_TO_REST = 1f;
 	private static final float TIME_TO_SEARCH = 2f;
@@ -1442,20 +1440,16 @@ public class Hero extends Char {
 		Actor.fixTime();
 		super.die(cause);
 
-		if (this.subClass == HeroSubClass.LICH) {
-			if (this.getSoulPoints() < this.getSoulPointsMax()) {
-				GLog.w( Necromancy.notEnoughSouls(Necromancy.REINCARNATION));
-			} else {
-				Dungeon.hero.spendSoulPoints(Dungeon.hero.getSoulPointsMax());
-				Dungeon.deleteGame(false);
-				GameScene.show(new WndResurrect(null, cause));
-			}
-		}
-
 		Ankh ankh = belongings.getItem(Ankh.class);
 
 		if (ankh == null) {
-			reallyDie(cause);
+			if (this.subClass == HeroSubClass.LICH && this.getSoulPoints() == this.getSoulPointsMax()) {
+				this.spendSoulPoints(this.getSoulPointsMax());
+				Dungeon.deleteGame(false);
+				GameScene.show(new WndResurrect(null, cause));
+			} else {
+				reallyDie(cause);
+			}
 		} else {
 			Dungeon.deleteGame(false);
 			while(belongings.removeItem(ankh));
@@ -1800,10 +1794,10 @@ public class Hero extends Char {
 
 	public int getSoulPointsMax(){
 		if (this.subClass == HeroSubClass.LICH){
-			return SP_MAX_LICH;
+			return 50;
 		}
 		if (this.heroClass == HeroClass.NECROMANCER){
-			return SP_MAX_NECRO;
+			return 25;
 		}
 		return 0;
 	}
