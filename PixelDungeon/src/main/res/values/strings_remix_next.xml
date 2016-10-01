@@ -2,4 +2,5 @@
 <resources>
 
 
+    <string name="WndSettings_UiScale">Ui scale</string>>
 </resources>

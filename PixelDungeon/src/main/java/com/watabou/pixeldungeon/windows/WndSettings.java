@@ -43,11 +43,6 @@ public class WndSettings extends Window {
 	private static final String TXT_TEXT_SCALE_DEFAULT = Game
 			.getVar(R.string.WndSettings_TextScaleDefault);
 
-	private static final String TXT_SCALE_UP = Game
-			.getVar(R.string.WndSettings_ScaleUp);
-	private static final String TXT_IMMERSIVE = Game
-			.getVar(R.string.WndSettings_Immersive);
-
 	private static final String TXT_MUSIC = Game
 			.getVar(R.string.WndSettings_Music);
 
@@ -288,7 +283,7 @@ public class WndSettings extends Window {
 		};
 		add(btnZoomIn.setRect(WIDTH - w, y, w, BTN_HEIGHT));
 
-		add(new RedButton(TXT_ZOOM_DEFAULT) {
+		add(new RedButton(Game.getVar(R.string.WndSettings_UiScale)) {
 			@Override
 			protected void onClick() {
 				zoom(PixelScene.defaultZoom);
