@@ -9,7 +9,6 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -104,11 +103,13 @@ public class WelcomeScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				PixelDungeon.version(Game.versionCode);
+				/*
 				if(Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) == 0) {
 					Game.switchScene(AllowStatisticsCollectionScene.class);
 				} else {
+				*/
 					Game.switchScene(TitleScene.class);
-				}
+				//}
 			}
 		};
 
