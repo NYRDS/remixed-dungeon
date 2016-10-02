@@ -77,4 +77,5 @@
 
     <!-- Badges -->
 
+    <string name="WndSettings_UiScale">Масштаб ГУИ</string>
 </resources>

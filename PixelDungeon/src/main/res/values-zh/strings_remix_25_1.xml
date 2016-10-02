@@ -2,11 +2,11 @@
 <resources>
     <!-- Item descriptions -->
     <!-- STRINGS OF TomeOfMastery CLASS -->
-    <string name="TomeOfMastery_WayAlreadyChosen">你不能改变你的方式！</string>
+    <string name="TomeOfMastery_WayAlreadyChosen">您不能改變您的方式！</string>
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">勾魂使者</string>
-    <string name="BlackSkullOfMastery_Info"> 这是一个古老的神器，制作的第一个巫师收集堕落的灵魂。感觉你的巫术的能力为自己强大的法术。但由于咒语是一个古老的时代，它的原始结构是相当容易打破。 </string>
+    <string name="BlackSkullOfMastery_Info"> 這是一个個古老的神器，制作的第一個巫師收集墮落的灵靈魂。感覺你的巫術的能力為自己強大的法術。但由於咒語是一个古老的時代，它的原始结構是相當容易打破。 </string>
     <string name="BlackSkullOfMastery_Title"> 你可能会打破咒语。或者你会在方式操纵神奇的公式，这会让你消耗的法术和神器本身的力量，把自己变成一个巫妖。 </string>
 
     <string name="BlackSkullOfMastery_Lich">成为巫妖</string>
@@ -36,8 +36,8 @@
         <item>死灵法师开局只有15点HP。</item>
         <item>死灵法师有一种独特的资源，用“灵魂”的咒语。每一个暴徒的死亡补助金1灵魂。 </item>
         <item>死灵法师开局有一件独特的死灵法师长袍。</item>
-        <item>死灵巫师开局有一把7层的骷髅钥匙。</item>
-        <item>治愈药水从一开始就被鉴定。</item>
+        <item>死靈巫師開局時有一把第7層的骷髏鑰匙。</item>
+        <item>治癒藥水從一開始就被鑒定。</item>
     </string-array>
 
     <!-- STRINGS OF Deathling CLASS -->
@@ -51,28 +51,26 @@
     <string name="NecromancerRobe_PetLimitReached">您不能以此道具控制多於 %1$d 個待從。</string>
     <string name="Necromancy_NotEnoughSouls">您沒有足夠的靈魂來施放 \"%1$s\" 咒語。</string>
 
-    <string name="Necromancy_SoulsCountLabel">灵魂</string>
+    <string name="Necromancy_SoulsCountLabel">靈魂</string>
 
     <string name="Necromancer_ACSpecial">巫术</string>
     <string name="Necromancy_ReincarnationName">投胎</string>
-    <string name="Necromancy_ReincarnationTriggered"> 你的力量是死亡！但你失去了所有收集的灵魂和财产。</string>
+    <string name="Necromancy_ReincarnationTriggered"> 你的力量忤逆死亡！但你失去了所有已收集的靈魂和所擁有物。</string>
     <string name="Necromancy_SummonDeathlingName">召唤死亡之蛉</string>
 
     <string name="Necromancy_BecameALich">您成為了巫妖！你的力量正在增強，同時你的靈魂容納量提升了一倍！但是你喪失了 %1$d 力量值。</string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
-    <string name="StartScene_UnlockNecromancer">使用其他角色击败巫妖来解锁这个角色</string>
+    <string name="StartScene_UnlockNecromancer">使用其他角色擊敗巫妖來解鎖這個角色</string>
 
     <!-- Window descriptions -->
-    <string name="Necromancy_Title">巫术</string>
+    <string name="Necromancy_Title">巫術</string>
 
     <!-- STRINGS OF WndSadGhostNecro CLASS -->
-    <string name="WndSadGhostNecro_Text">“这种精神似乎在他的诅咒中挣扎。看来他想要我的东西。如果我用我的巫术力量，我能说服他，我已经做了他问。这样我就不需要浪费我的时间在这里。我应该做这样的事吗？”</string>
-    <string name="WndSadGhostNecro_Yes">是的，把它弯曲到你的意志。</string>
-    <string name="WndSadGhostNecro_No">不，让它说。</string>
+    <string name="WndSadGhostNecro_Text">“这個靈魂似乎在他它的詛咒中掙扎。看来它想要我的某樣東西。如果我用我的巫術力量，我能說服他它，我已经經做了它所要求的事。這樣我就不需要在這裏浪費我的时時間。我應該做這樣的事嗎？”</string>
+    <string name="WndSadGhostNecro_Yes">是的，請隨您的心意把它扭曲。</string>
+    <string name="WndSadGhostNecro_No">不，讓它說。</string>
     <string name="WndSadGhostNecro_Persuaded">悲傷幽靈已被您控制！</string>
 
-    <!-- Badges -->
-
-</resources>
+    </resources>
