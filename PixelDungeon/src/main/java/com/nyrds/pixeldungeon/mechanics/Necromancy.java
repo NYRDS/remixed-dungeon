@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.Deathling;
 import com.watabou.noosa.Game;
@@ -33,7 +32,7 @@ public class Necromancy {
 	public static String SUMMON_DEATHLING = "SUMMON_DEATHLING";
 	public static String REINCARNATION = "REINCARNATION";
 
-	public static int getLimit(Item source, Hero hero){
+	private static int getLimit(Item source, Hero hero){
 		int limit;
 		if (source instanceof NecromancerArmor){
 			limit = ARMOR_LIMIT;
@@ -46,7 +45,7 @@ public class Necromancy {
 		return limit;
 	}
 
-	public static String getLimitWarning(Item source, Hero hero){
+	private static String getLimitWarning(Item source, Hero hero){
 		return Utils.format(TXT_MAXIMUM_PETS, getLimit(source, hero));
 	}
 
@@ -91,5 +90,7 @@ public class Necromancy {
 			pet.setPos(spawnPos);
 			Dungeon.level.spawnMob(pet);
 		}
+
+		hero.spend(1/hero.speed());
 	}
 }

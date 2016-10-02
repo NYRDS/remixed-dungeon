@@ -46,6 +46,7 @@ import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
@@ -56,6 +57,7 @@ import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
+import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
@@ -142,11 +144,11 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfUpgrade());
 			hero.collect(new PotionOfToxicGas());
-			hero.collect(new PotionOfLiquidFlame());
+			hero.collect(new PotionOfMindVision());
 		}
 
 		hero.collect(new TomeOfMastery());
-		hero.collect(new Claymore().identify().upgrade(100));
+		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Ankh());
 
 		hero.collect(new BlackSkullOfMastery());

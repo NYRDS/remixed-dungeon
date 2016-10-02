@@ -348,6 +348,7 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
+
 		boolean pitNeeded = Dungeon.depth > 1 && weakFloorCreated;
 
 		do {
@@ -551,8 +552,17 @@ public abstract class Level implements Bundlable {
 
 	public void spawnMob(Mob mob, float delay) {
 		mobs.add(mob);
+		if(GameScene.isSceneReady()) {
+			mob.updateSprite();
+		}
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
+
+		if(GameScene.isSceneReady()) {
+			if(mob.isPet() || fieldOfView[mob.getPos()] ) {
+				mobPress(mob);
+			}
+		}
 	}
 
 	protected Mob createMob() {

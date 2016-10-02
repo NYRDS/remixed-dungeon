@@ -120,7 +120,7 @@ public class Group extends Gizmo {
 		}
 	}
 
-	public Gizmo getFirstAvailable(@NonNull Class<? extends Gizmo> c) {
+	private Gizmo getFirstAvailable(@NonNull Class<? extends Gizmo> c) {
 
 		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);
@@ -132,7 +132,7 @@ public class Group extends Gizmo {
 		return null;
 	}
 
-	public int countLiving() {
+	protected int countLiving() {
 
 		int count = 0;
 
@@ -166,7 +166,7 @@ public class Group extends Gizmo {
 		}
 	}
 
-	public Gizmo sendToBack(Gizmo g) {
+	private Gizmo sendToBack(Gizmo g) {
 		if (members.contains(g)) {
 			members.remove(g);
 			members.add(0, g);

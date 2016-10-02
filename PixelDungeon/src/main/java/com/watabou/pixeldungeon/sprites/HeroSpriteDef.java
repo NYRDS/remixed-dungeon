@@ -57,7 +57,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		LAYER_ACCESSORY
 	};
 
-	Map<String,String> layersDesc = new HashMap<>();
+	private Map<String,String> layersDesc = new HashMap<>();
 
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
@@ -85,12 +85,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 		applyLayersDesc(getLayersDesc());
 	}
 
-	public void createLayersDesc(Hero hero) {
+	private void createLayersDesc(Hero hero) {
 		Accessory accessory = Accessory.equipped();
 		createLayersDesc(hero, accessory);
 	}
 
-	public void createLayersDesc(Hero hero, Accessory accessory) {
+	private void createLayersDesc(Hero hero, Accessory accessory) {
 		layersDesc.clear();
 		boolean drawHair = true;
 
@@ -137,7 +137,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 	}
 
-	public void createStatueSprite(Armor armor) {
+	private void createStatueSprite(Armor armor) {
 		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
 		layersDesc.put(LAYER_COLLAR,      HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
@@ -164,7 +164,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		return ret;
 	}
 
-	public void applyLayersDesc(String[] lookDesc) {
+	private void applyLayersDesc(String[] lookDesc) {
 		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
 			addLayer(layersOrder[i],TextureCache.get(lookDesc[i]));

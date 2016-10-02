@@ -32,6 +32,7 @@ import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.utils.BitmapCache;
 
@@ -58,7 +59,7 @@ public class PixelScene extends Scene {
 
 	public static Font font;
 
-	public static void viewportSizeChanged() {
+	private static void viewportSizeChanged() {
 		float minWidth, minHeight;
 
 		if (PixelDungeon.landscape()) {
@@ -83,11 +84,9 @@ public class PixelScene extends Scene {
 
 		Camera.reset(new PixelCamera(defaultZoom));
 
-		float uiZoom = defaultZoom;
+		float uiZoom = (float) Preferences.INSTANCE.getDouble(Preferences.KEY_UI_ZOOM, defaultZoom);
 		uiCamera = Camera.createFullscreen(uiZoom);
 		Camera.add(uiCamera);
-
-		//GLog.i("zoom: %3.2f %3.2f", defaultZoom, uiZoom );
 	}
 
 	@Override

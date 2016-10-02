@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">你的%s紧箍着你，令你感到疼痛！</string>
+  <string name="Armor_EquipCursed">您的%s緊箍着您，令您感到疼痛！</string>
   <string name="Armor_Identify">你现在对于你的%1$s足够熟悉以鉴定它。它是%2$s。</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">不同属性魔法的冲突消除了这件护甲上的刻印！</string>

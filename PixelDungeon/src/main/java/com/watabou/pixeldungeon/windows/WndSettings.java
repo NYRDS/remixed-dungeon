@@ -17,12 +17,14 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -40,11 +42,6 @@ public class WndSettings extends Window {
 	
 	private static final String TXT_TEXT_SCALE_DEFAULT = Game
 			.getVar(R.string.WndSettings_TextScaleDefault);
-
-	private static final String TXT_SCALE_UP = Game
-			.getVar(R.string.WndSettings_ScaleUp);
-	private static final String TXT_IMMERSIVE = Game
-			.getVar(R.string.WndSettings_Immersive);
 
 	private static final String TXT_MUSIC = Game
 			.getVar(R.string.WndSettings_Music);
@@ -84,7 +81,7 @@ public class WndSettings extends Window {
 	private RedButton btnScaleMinus;
 	private RedButton btnScalePlus;
 
-	RedButton btnFontMode;
+	private RedButton btnFontMode;
 	
 	private boolean mInGame;
 
@@ -97,6 +94,7 @@ public class WndSettings extends Window {
 		
 		if (mInGame) {
 			curY = createZoomButtons();
+			curY = createUiZoomButtons(curY);
 		} else {
 
 			curY = createTextScaleButtons(curY + GAP);
@@ -242,7 +240,7 @@ public class WndSettings extends Window {
 		btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
 			@Override
 			protected void onClick() {
-				zoom(Camera.main.zoom - 1);
+				zoom(Camera.main.zoom - 0.1f);
 			}
 		};
 		add(btnZoomOut.setRect(0, 0, w, BTN_HEIGHT));
@@ -250,7 +248,7 @@ public class WndSettings extends Window {
 		btnZoomIn = new RedButton(TXT_ZOOM_IN) {
 			@Override
 			protected void onClick() {
-				zoom(Camera.main.zoom + 1);
+				zoom(Camera.main.zoom + 0.1f);
 			}
 		};
 		add(btnZoomIn.setRect(WIDTH - w, 0, w, BTN_HEIGHT));
@@ -265,7 +263,37 @@ public class WndSettings extends Window {
 		
 		return btnZoomIn.bottom();
 	}
-	
+
+	private float createUiZoomButtons(float y) {
+		int w = BTN_HEIGHT;
+
+		btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
+			@Override
+			protected void onClick() {
+				uiZoom(PixelScene.uiCamera.zoom - 0.1f);
+			}
+		};
+		add(btnZoomOut.setRect(0, y, w, BTN_HEIGHT));
+
+		btnZoomIn = new RedButton(TXT_ZOOM_IN) {
+			@Override
+			protected void onClick() {
+				uiZoom(PixelScene.uiCamera.zoom + 0.1f);
+			}
+		};
+		add(btnZoomIn.setRect(WIDTH - w, y, w, BTN_HEIGHT));
+
+		add(new RedButton(Game.getVar(R.string.WndSettings_UiScale)) {
+			@Override
+			protected void onClick() {
+				zoom(PixelScene.defaultZoom);
+			}
+		}.setRect(btnZoomOut.right(), y, WIDTH - btnZoomIn.width()
+				- btnZoomOut.width(), BTN_HEIGHT));
+
+		return btnZoomIn.bottom();
+	}
+
 	private float createFontSelector(float y) {
 		remove(btnFontMode);
 		
@@ -351,9 +379,14 @@ public class WndSettings extends Window {
 			PixelDungeon.resetScene();
 		}
 	}
-	
-	private void zoom(float value) {
 
+	private void uiZoom(float value) {
+		PixelScene.uiCamera.updateFullscreenCameraZoom(value);
+		((GameScene)Game.scene()).udateUiCamera();
+		Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
+	}
+
+	private void zoom(float value) {
 		Camera.main.zoom(value);
 		PixelDungeon.zoom((int) (value - PixelScene.defaultZoom));
 

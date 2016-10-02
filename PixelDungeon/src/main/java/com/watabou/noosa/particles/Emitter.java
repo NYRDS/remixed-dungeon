@@ -17,13 +17,15 @@
 
 package com.watabou.noosa.particles;
 
-import javax.microedition.khronos.opengles.GL10;
 import android.opengl.GLES20;
+
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class Emitter extends Group {
 
@@ -137,7 +139,7 @@ public class Emitter extends Group {
 			super.draw();
 		}
 	}
-	
+
 	abstract public static class Factory {
 		
 		abstract public void emit( Emitter emitter, int index, float x, float y );

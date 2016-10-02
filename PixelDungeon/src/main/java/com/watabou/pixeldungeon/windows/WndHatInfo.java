@@ -9,7 +9,6 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
@@ -26,14 +25,6 @@ public class WndHatInfo extends Window {
 
 	public WndHatInfo(final String accessory, String price, final Window parent ) {
 		final Accessory item = Accessory.getByName(accessory);
-
-		// Dummy Hero
-		Hero hero = new Hero();
-		hero.heroClass = Dungeon.hero.heroClass;
-		hero.subClass = Dungeon.hero.subClass;
-		hero.belongings = Dungeon.hero.belongings;
-		hero.setPos(Dungeon.hero.getPos());
-		hero.setSprite(new HeroSpriteDef(hero, item));
 
 		// Title
 		Text tfTitle = PixelScene.createMultiline(item.name(), GuiProperties.mediumTitleFontSize());
@@ -56,7 +47,7 @@ public class WndHatInfo extends Window {
 		add(priceTag);
 
 		//Preview Image
-		Image preview = hero.getHeroSprite().avatar();
+		Image preview = (new HeroSpriteDef(Dungeon.hero, item)).avatar();
 		preview.setPos(WIDTH / 2 - preview.width(), priceTag.bottom() + MARGIN);
 		preview.setScale(2, 2);
 		add(preview);

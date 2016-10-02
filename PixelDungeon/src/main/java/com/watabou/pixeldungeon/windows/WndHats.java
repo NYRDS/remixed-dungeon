@@ -26,7 +26,7 @@ public class WndHats extends Window {
 	private static final int HEIGHT_PORTRAIT  = 180;
 	private static final int HEIGHT_LANDSCAPE = (int) PixelScene.MIN_HEIGHT_L;
 	private static final int MARGIN           = 2;
-	private static final int BUTTON_HEIGHT    = 14;
+
 	public Image slot;
 
 	private int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
@@ -98,8 +98,6 @@ public class WndHats extends Window {
 			Image hat = accessory.getImage();
 			hat.setPos(MARGIN, yPos);
 			content.add(hat);
-
-
 
 			//Text
 			String hatName = Accessory.getByName(item).name();

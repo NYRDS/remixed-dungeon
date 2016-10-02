@@ -281,12 +281,6 @@ public class Lich extends Boss {
     }
 
     public void PlayZap() {
-        getSprite().zap(
-                getPos(),
-                new Callback() {
-                    @Override
-                    public void call() {
-                    }
-                });
+        getSprite().zap(getPos(), null);
     }
 }

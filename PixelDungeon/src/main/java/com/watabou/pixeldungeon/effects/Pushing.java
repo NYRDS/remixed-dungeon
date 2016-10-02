@@ -21,37 +21,28 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.PointF;
 
 public class Pushing extends Actor {
 
-	private CharSprite sprite;
+	private Char ch;
 	private int from;
 	private int to;
 	
 	private Effect effect;
 	
 	public Pushing( Char ch, int from, int to ) {
-		sprite = ch.getSprite();
+		this.ch = ch;
 		this.from = from;
 		this.to = to;
 	}
 	
 	@Override
 	protected boolean act() {
-		if (sprite != null) {
-			
 			if (effect == null) {
 				effect = new Effect();
 			}
 			return false;
-			
-		} else {
-			
-			Actor.remove( Pushing.this );
-			return true;
-		}
 	}
 
 	public class Effect extends Visual {
@@ -65,15 +56,15 @@ public class Pushing extends Actor {
 		public Effect() {
 			super( 0, 0, 0, 0 );
 			
-			point( sprite.worldToCamera( from ) );
-			end = sprite.worldToCamera( to );
+			point( ch.getSprite().worldToCamera( from ) );
+			end = ch.getSprite().worldToCamera( to );
 			
 			speed.set( 2 * (end.x - x) / DELAY, 2 * (end.y - y) / DELAY );
 			acc.set( -speed.x / DELAY, -speed.y / DELAY );
 			
 			delay = 0;
-			
-			sprite.getParent().add( this );
+
+			ch.getSprite().getParent().add( this );
 		}
 		
 		@Override
@@ -81,13 +72,13 @@ public class Pushing extends Actor {
 			super.update();
 			
 			if ((delay += Game.elapsed) < DELAY) {
-				
-				sprite.x = x;
-				sprite.y = y;
+
+				ch.getSprite().x = x;
+				ch.getSprite().y = y;
 				
 			} else {
-				
-				sprite.point( end );
+
+				ch.getSprite().point( end );
 				
 				killAndErase();
 				Actor.remove( Pushing.this );

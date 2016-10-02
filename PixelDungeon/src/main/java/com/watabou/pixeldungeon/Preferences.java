@@ -47,6 +47,8 @@ public enum Preferences {
 	public static final String KEY_ACTIVE_MOD       = "active_mod";
 	public static final String KEY_COLLECT_STATS    = "collect_stats";
 
+	public static final String KEY_UI_ZOOM			= "ui_zoom";
+
 	private SharedPreferences prefs;
 	
 	private SharedPreferences get() {
@@ -66,7 +68,18 @@ public enum Preferences {
 			return defValue;
 		}
 	}
-	
+
+	public double getDouble( String key, double defValue  ) {
+		String defVal  = Double.toString(defValue);
+		String propVal = getString(key, defVal);
+		try{
+			return Double.parseDouble(propVal);
+		} catch (NumberFormatException e) {
+			put(key, defValue);
+			return defValue;
+		}
+	}
+
 	public boolean getBoolean( String key, boolean defValue  ) {
 		String defVal = Boolean.toString(defValue);
 		String propVal = getString(key, defVal);
@@ -140,7 +153,12 @@ public enum Preferences {
 		String val = Integer.toString(value);
 		put(key, val);
 	}
-	
+
+	public void put( String key, double value ) {
+		String val = Double.toString(value);
+		put(key, val);
+	}
+
 	public void put( String key, boolean value ) {
 		String val = Boolean.toString(value);
 		put(key,val);

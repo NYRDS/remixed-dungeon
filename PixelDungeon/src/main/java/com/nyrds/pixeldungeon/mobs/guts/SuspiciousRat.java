@@ -99,12 +99,6 @@ public class SuspiciousRat extends Mob {
 	}
 
 	public void PlayZap() {
-		getSprite().zap(
-				getEnemy().getPos(),
-				new Callback() {
-					@Override
-					public void call() {
-					}
-				});
+		getSprite().zap(getEnemy().getPos(), null);
 	}
 }

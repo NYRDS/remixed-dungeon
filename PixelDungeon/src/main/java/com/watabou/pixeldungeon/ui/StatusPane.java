@@ -164,12 +164,16 @@ public class StatusPane extends Component {
 
 		hp.x = 30;
 		hp.y = 3;
-		
+
+		level.x = PixelScene.align( 27.0f - level.width() / 2 );
+		level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
+
 		depth.x = width - 24 - depth.width()    - 18;
 		depth.y = 6;
-		
+
+		keys.x = width - 8 - keys.width()    - 18;
 		keys.y = 6;
-		
+
 		danger.setPos( width - danger.width(), 40 );
 		
 		loot.setPos( width - loot.width(),  danger.bottom() + 2 );
