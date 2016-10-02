@@ -57,7 +57,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		LAYER_ACCESSORY
 	};
 
-	Map<String,String> layersDesc = new HashMap<>();
+	private Map<String,String> layersDesc = new HashMap<>();
 
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;

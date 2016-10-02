@@ -25,7 +25,6 @@ import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.mechanics.Necromancy;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
@@ -1769,8 +1768,6 @@ public class Hero extends Char {
 			pet.state = pet.WANDERING;
 			Dungeon.level.spawnMob(pet);
 			pet.regenSprite();
-			//pet.getSprite().update();
-			//pet.getSprite().isMoving = false;
 		}
 	}
 
