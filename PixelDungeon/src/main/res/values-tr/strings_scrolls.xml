@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">parşömen\"%s\"</string>
+  <string name="Scroll_Info">bu parşömen çözülemez yazıtlarla dolu ve başlığı ayılar. %s acaba okuyunca ne olacak ?</string>
+  <string name="Scroll_ACRead">OKU</string>
+  <string name="Scroll_Blinded">Kör Olmuşken Bir Parşömeni okuyamazsın</string>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Bir Eşya Seç</string>
+  <string name="InventoryScroll_Warning">Gerçekten Bu Parşömeni Kullanmaktan Vaz mı Geçiceksin ?  Parşömen Kaybolacak.</string>
+  <string name="InventoryScroll_Yes">Evet Yapalım Şunu</string>
+  <string name="InventoryScroll_No">Hayır,Fikrimi Değiştirdim</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Boş Parşömen</string>
+  <string name="BlankScroll_Info">Sadece Boş Bir Parşömen.Belki Üzerine Birşeyler yazılabilir</string>
+  <string name="BlankScroll_ReallyBlank">Bu Parşömen Boş</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Rekabet Parşömeni</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Tanımlama Parşömeni</string>
+  <string name="ScrollOfIdentify_InvTitle">Tanımlamak İçin bir Eşya Seç</string>
+  <string name="ScrollOfIdentify_Info1">Bu%s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Info2">bu parşömen tatlı bir melodi yayıyor ve %s uykuya dalıyor</string>
+  <string name="ScrollOfLullaby_Info3">bu parşömen tatlı bir melodi yayıyor ve yaratıklar  uykuya dalıyor</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Sihirli Harita Parşömeni</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Ayna Yansıması Parşömeni</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Laneti Kaldırma Parşömeni</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">ışınlanma parşömeni</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">geliştirme parşömeni</string>
+  <string name="ScrollOfUpgrade_InvTitle">geliştirmek için bir eşya seç</string>
+  <string name="ScrollOfUpgrade_LooksBetter">senin  %s kesinlikle daha iyi görünüyor.</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">silah geliştirme parşömeni</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">geliştirmek için bir silah seç</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">senin  %s kesinlikle daha iyi gözüküyor.</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">lanet parşömeni</string>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">gerçek açıklama yakında gelicek !</string>
+  <string name="Mob_Died">Uzakta Birinin öldüğünü duydun</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus">Bu %s uyuyor</string>
+  <string name="Mob_StaHuntingStatus">Bu %s avlanıyor</string>
+  <string name="Mob_StaFleeingStatus">Bu %s kaçıyor.</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Gender">erkeksi</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">albino sıçan</string>
+  <string name="Albino_Gender">erkeksi</string>
+  <string name="Albino_Name_Objective">Albino Fare</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">Çılgın Haydut</string>
+  <string name="Bandit_Gender">erkeksi</string>
+  <string name="Bandit_Name_Objective">Çılgın Haydut</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">vampir yarasa</string>
+  <string name="Bat_Gender">erkeksi</string>
+  <string name="Bat_Name_Objective">vampir yarasa</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Gender">erkeksi</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">lağım yengeci</string>
+  <string name="Crab_Name_Objective">lağım yengeci</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Info1">DM-300 kendini onardı!</string>
+  <string name="DM300_Info2">Görev başarısız.kapatılıyor.</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">ateş elementi</string>
+  <string name="Elemental_Name_Objective">ateş elementi</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">şeytani göz</string>
+  <string name="Eye_Name_Objective">şeytani göz</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Gender">erkeksi</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">Golem</string>
+  <string name="Golem_Name_Objective">Golem</string>
+  <string name="Golem_Defense">Kapanmış</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Info2">gluk gluk</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">Cücelerin Kralı</string>
+  <string name="King_Name_Objective">Cüce Kral</string>
+  <string name="King_Info1">Beni Öldüremezsin %s ben .. ölümsüzüm</string>
+  <string name="King_Info3">Ne Cüretle !</string>
+  <string name="Undead_Name">Ölümsüz Cüce</string>
+  <string name="Undead_Name_Objective">ölümsüz cüce</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">canavar</string>
+  <string name="Mimic_Name_Objective">canavar</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">canavar</string>
+  <string name="MimicPie_Name_Objective">canavar</string>
+  <string name="MimicPie_Desc">canavarlar sihirli yaratıklardır. istedikleri şekle ve kılığa girebilirler. lezzetli ve büyük bir pasta gibi gözükebilirler</string>
+  <!--STRINGS OF Monk CLASS-->
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">dev pirana</string>
+  <string name="Piranha_Name_Objective">dev pirana</string>
+  <!--STRINGS OF Rat CLASS-->
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">akrep</string>
+  <string name="Scorpio_Name_Objective">akrep</string>
+  <!--STRINGS OF Senior CLASS-->
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name_Objective">gölge</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Killed">%s şimşek çarparak seni öldürdü</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">iskelet</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <!--STRINGS OF Statue CLASS-->
+  <!--STRINGS OF Succubus CLASS-->
+  <!--STRINGS OF Swarm CLASS-->
+  <!--STRINGS OF Tengu CLASS-->
+  <!--STRINGS OF Thief CLASS-->
+  <!--STRINGS OF Warlock CLASS-->
+  <!--STRINGS OF Wraith CLASS-->
+  <!--STRINGS OF Yog CLASS-->
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <!--STRINGS OF SpiderNest CLASS-->
+  <!--STRINGS OF SpiderServant CLASS-->
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <!--STRINGS OF SpiderMind CLASS-->
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <!--STRINGS OF WaterElemental CLASS-->
+  <!--STRINGS OF AirElemental CLASS-->
+  <!--STRINGS OF EarthElemental CLASS-->
+  <!--STRINGS OF Crystal CLASS-->
+</resources>

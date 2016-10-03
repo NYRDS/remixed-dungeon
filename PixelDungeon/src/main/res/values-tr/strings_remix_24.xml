@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">ilmik</string>
+    <!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">fes</string>
+    <!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">tavşan kulakları</string>
+    <!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">balkabağı</string>
+    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">büyücü şapkası</string>
+    <string name="WndHats_SlotTitle">kuşanılmış.</string>
+    <string name="WndHats_NoConnectionMsg">şuanda google play e bağlanamazsın.</string>
+    <string name="WndHats_Purchased">Anladım !</string>
+
+    <string name="WndHats_BackButton">geri </string>
+    <string name="WndHats_BuyButton">satın al</string>
+    <string name="WndHats_EquipButton">kuşanılmış.</string>
+    <string name="WndHats_UnequipButton">kuşanılmamış</string>
+</resources>

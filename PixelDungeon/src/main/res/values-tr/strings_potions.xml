@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">%s iksiri</string>
+  <string name="Potion_Info">bu şişe dönen bir %s sıvıyla dolu. içerek ya da fırlatarak işe yarıyacağını kim bilir ?</string>
+  <string name="Potion_ACDrink">İÇ</string>
+  <string name="Potion_Harmfull">Zararlı iksir!</string>
+  <string name="Potion_Yes">Evet,ben ne yaptığımı biliyorum.</string>
+  <string name="Potion_No">hayır,fikrimi değiştirdim</string>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">Deneyim İksiri</string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">buz potu</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">Kırmızı Pot </string>
+  <string name="PotionOfHealing_Apply">yaraların tamamen iyileşti</string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">görünmezlik iksiri</string>
+  <string name="PotionOfInvisibility_Apply">ellerinin görünmez olduğunu görüyorsun !</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">uçma iksiri</string>
+  <string name="PotionOfLevitation_Apply">havada süzülüyorsun !</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">sıvı ateş iksiri</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">görüş iksiri </string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+</resources>

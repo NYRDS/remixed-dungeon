@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">Gizli basınç plakasından \"tık\" sesi gelir!</string>
+  <string name="Level_TileChasm">Uçurum</string>
+  <string name="Level_TileFloor">Zemin</string>
+  <string name="Level_TileGrass">Çim</string>
+  <string name="Level_TileWater">Su</string>
+  <string name="Level_TileWall">Duvar</string>
+  <string name="Level_TileClosedDoor">Kapalı kapı</string>
+  <string name="Level_TileOpenDoor">Açık kapı</string>
+  <string name="Level_TileEntrance">Derinliğin girişi</string>
+  <string name="Level_TileExit">Derinliğin çıkışı</string>
+  <string name="Level_TileEmbers">Köz</string>
+  <string name="Level_TileLockedDoor">Kilitli kapı</string>
+  <string name="Level_TilePedestal">Kaide</string>
+  <string name="Level_TileBarricade">Barikat</string>
+  <string name="Level_TileHighGrass">Yüksek otlar</string>
+  <string name="Level_TileLockedExit">Kilitli derinlik çıkışı</string>
+  <string name="Level_TileUnlockedExit">Kilidi açılmış derinlik çıkışı</string>
+  <string name="Level_TileSign">Tabela</string>
+  <string name="Level_TileWell">Kuyu</string>
+  <string name="Level_TileEmptyWell">Boş kuyu</string>
+  <string name="Level_TileStatue">Heykel</string>
+  <string name="Level_TileToxicTrap">Zehirli gaz tuzağı</string>
+  <string name="Level_TileFireTrap">Ateş tuzağı</string>
+  <string name="Level_TileParalyticTrap">Felç eden gaz tuzağı</string>
+  <string name="Level_TilePoisonTrap">Zehirli dart tuzağı</string>
+  <string name="Level_TileAlarmTrap">Alarmlı tuzak</string>
+  <string name="Level_TileLightningTrap">Yıldırım tuzağı</string>
+  <string name="Level_TileGrippingTrap">Kapan</string>
+  <string name="Level_TileSummoningTrap">çağırıcı tuzak</string>
+  <string name="Level_TileInactiveTrap">Tetiklenmiş tuzak</string>
+  <string name="Level_TileBookshelf">Kitaplık</string>
+  <string name="Level_TileAlchemy">Simya şisesi</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">Aşağıyı göremezsin.</string>
+  <string name="Level_TileDescWater">Yanarken Suya Adım At Ve Yangını Söndür</string>
+  <string name="Level_TileDescEntrance">Üst Kata Çıkan Merdivenler</string>
+  <string name="Level_TileDescExit">Alt Kata Çıkan Merdivenler</string>
+  <string name="Level_TileDescLockedDoor">Bu kapı kilitli, açmak için eşleşen bi anahtara ihtiyacın var.</string>
+  <string name="Level_TileDescLockedExit">Ağır Bir Obje Aşağıya İnen Merdivenleri Kapatıyor.</string>
+  <string name="Level_TileDescBarricade">Tahta Barikat Yıkılmadan Yıllarca Durmuş.Acaba Yanabilir  Mi ?</string>
+  <string name="Level_TileDescSign">Yazıyı buradan okuyamazsın.</string>
+  <string name="Level_TileDescTrap">Gizli Bir Basınç Plakasına Basarak Bir Tuzağı Tetikledin </string>
+  <string name="Level_TileDescInactiveTrap">Tuzak daha önceden tetiklenmiş ve artık tehlikeli değil.</string>
+  <string name="Level_TileDescAlchemy">İksir yapmak için buraya birkaç tohum bırak.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileWater">Dondurucu soğuk su.</string>
+  <string name="Caves_TileDescEntrance">Üst Kata Çıkan Merdivenler</string>
+  <string name="Caves_TileDescHighGrass">Kocaman Mantarlar Manzarayı Kapatıyor.</string>
+  <string name="Caves_TileDescBookshelf">Bir Mağarada Kim Kitaplığa İhtiyaç Duyar ki ?</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">Şüpheli Renkli Su</string>
+  <string name="City_TileDescDeco">Burada Birkaç Fayans Eksik</string>
+  <string name="City_TileDescEmptySP">İpek Bir Halı Zemini Kaplıyor</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">Soğuk lav</string>
+  <string name="Halls_TileGrass">Koryosunu</string>
+  <string name="Halls_TileHighGrass">Mantar közü</string>
+  <string name="Halls_TileStatue">Sütun</string>
+  <string name="Halls_TileDescWater">Lav Gibi Gözüküyor,Ama Soğuk Ve Muhtemelen Dokunması Güvenli</string>
+  <string name="Halls_TileDescStatue">İnsan Kurukafalarından Yapılmış Bir Sütun. Harika.</string>
+  <string name="Halls_TileDescBookshelf">Eski Dillerde Yazılmış Kitaplıkta Duran Antik Kitaplar</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">Soğuk lav</string>
+  <string name="LastLevel_TileGrass">KorYosunu</string>
+  <string name="LastLevel_TileHighGrass">Adam mantarı</string>
+  <string name="LastLevel_TileStatue">Sütun</string>
+  <string name="LastLevel_TileDescWater">Lav Gibi Gözüküyor,Ama Soğuk Ve Muhtemelen Dokunması Güvenli</string>
+  <string name="LastLevel_TileDescStatue">İnsan Kurukafalarından Yapılmış Bir Sütun. Harika.</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">Şüpheli Renkli Su</string>
+  <string name="LastShopLevel_TileDescExit">Cehenneme İnen Bir Rampa</string>
+  <string name="LastShopLevel_TileDescDeco">Burada Birkaç Fayans Eksik</string>
+  <string name="LastShopLevel_TileDescEmptySP">İpek Bir Halı Zemini Kaplıyor</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">Karanlık soğuk su.</string>
+  <string name="Prison_TileDescDeco">yerde eski kan lekeleri var.</string>
+  <string name="Prison_TileDescBookshelf">Muhtelemen Bir hapishane kütüphanesinin kalıntıları acaba Yanabilir mi ?</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">Bulanık su</string>
+  <string name="Sewer_TileDescDeco">Islak sarımsı yosun zemini kaplıyor</string>
+  <string name="Sewer_TileDescBookshelf">Bu  kitaplık tamamen ucuz ve kullanışsız kitapla dolu acaba yanabilir mi ?</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">Fırlatmak için bir tohum seç</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">Uçurum</string>
+  <string name="Chasm_Yes">Evet, ne yaptığımı biliyorum</string>
+  <string name="Chasm_No">Hayır, fikrimi değiştirdim</string>
+  <string name="Chasm_Jump">Gerçekten Bu uçurumdan atlamak mı istiyorsun ? muhtemelen ölürsün .</string>
+  <string name="Chasm_Info">Ölüme Düştün</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">yıldırım tuzağı</string>
+</resources>

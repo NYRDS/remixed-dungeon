@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">%s yüzük</string>
+  <string name="Ring_Info">metal halka üzerinde  karanlıkta parlayan kocaman bir %s mücevheri duruyor. kim bilir acaba giydiğinde ne etkileri olacak ?</string>
+  <string name="Ring_Info1">tek seferde yalnızca 2 yüzük giyebilirsin</string>
+  <string name="Ring_Info2">senin %s parmağını acı dolu bir şekilde sıkıyor.</string>
+  <string name="Ring_Info3a">%1$s\n\n %2$s parmağında  %3$s.</string>
+  <string name="Ring_Info3b">,çünkü bu lanetli sen bu laneti kaldırmak için çok güçsüzsün</string>
+  <string name="Ring_BuffKnown">bu %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">nişan alma yüzüğü</string>
+  <string name="RingOfAccuracy_Info">bu yüzük rakibe vuruş şansını arttırır.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">farkındalık yüzüğü</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">elementlerin yüzüğü</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Info">bu yüzük rakibin saldırından kaçınma şansını arttırır.</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <!--STRINGS OF RingOfMending CLASS-->
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">güç yüzüğü</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">gölgelerin yüzüğü </string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">kan taşı yüzüğü</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">taşların arasında sıkıştın. sonsuza kadar.</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Use">kullan</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">tuhaf kristal</string>
+  <string name="ChaosCrystal_Name_2">kaos kristali</string>
+  <string name="ChaosCrystal_Use">kullan</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">fare kralın tacı</string>
+</resources>

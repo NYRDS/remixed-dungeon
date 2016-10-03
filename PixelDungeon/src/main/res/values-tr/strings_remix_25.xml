@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">örümcek zırhı</string>
+    <string name="SpiderArmor_Gender">kadınsı</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">siyah kurukafa</string>
+    <string name="BlackSkull_Gender">erkeksi</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">ruh parçacığı</string>
+    <string name="SoulShard_Gender">erkeksi</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">ölü şövalye</string>
+    <string name="DeathKnight_Gender">erkeksi</string>
+    <string name="DeathKnight_Name_Objective">ölü şövalye</string>
+    <string name="DreadKnight_Gender">erkeksi</string>
+    <string name="EnslavedSoul_Gender">kadınsı </string>
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">patlayan kurukafa</string>
+    <string name="ExplodingSkull_Gender">erkeksi</string>
+    <string name="ExplodingSkull_Name_Objective">patlayan kurukafa</string>
+    <string name="ExplodingSkull_Desc">Bu kurukafa her an patlayacakmış gibi gözüküyor</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">ruhlar kavanozu</string>
+    <string name="JarOfSouls_Gender">erkeksi</string>
+    <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
+    <string name="Lich_Gender">erkeksi</string>
+    <string name="RunicSkull_Gender">erkeksi</string>
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">Zombi</string>
+    <string name="Zombie_Name_Objective">Zombi</string>
+    </resources>

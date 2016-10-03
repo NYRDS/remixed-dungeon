@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">Remixed Pixel Dungeon</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">senden önce  çok fazla kahraman zindana daldı. bazıları hazine ve sihirli ganimetlerle daha önce hiç duymadıkları ziynetlerle döndüler ama hiçbirisi yendor un kolyesini getiremedi . zindanın en derinlerinde \n\n bu karşılaşmaya kendini hazır hissediyorsun. en önemlisi kaderinin sana gülümsediğini hissediyorsun. kendi maceranı başlatmanın tam zamanı !</string>
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Exit">Buna bir gün diyelim</string>
+  <string name="AmuletScene_Stay">Henüz Bitirmedim </string>
+  <string name="AmuletScene_Txt">Sonunda ellerinin arasında Yendor\'un Tılsımı. Gücünü kullanarak dünyayı ele geçirebilir ya da insanlara barış ve refahı yaşayabilirsin ya da her neyse. Sonuç olarak hayatın sonsuza dek değişecek ve bu oyun burada bitecek. Veya burada yalnız bir ölümlü olarak biraz daha kalabilirsin. </string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">pixel dungeonda %d seviyesine hoşgeldiniz !</string>
+  <string name="GameScene_WelcomeBack">pixel dungeonda %d seviyesine tekrar hoşgeldiniz !</string>
+  <string name="GameScene_NightMode">Tetikte ol, zindan geceleri daha tehlikelidir! </string>
+  <string name="GameScene_Chasm">Adımların zindanda eko yapıyor. </string>
+  <string name="GameScene_Water">Etrafındaki su şapırtılarını duyuyorsun. </string>
+  <string name="GameScene_Grass">Havadaki bitki kokusu hayli keskin. </string>
+  <string name="GameScene_Secrets">Atmosfer gösteriyor ki bu katta bir sürü gizem saklıyor. </string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">İzdiham</string>
+  <string name="Char_Name_Objective">İzdiham</string>
+  <string-array name="Char_Hit">
+    <item>%1$s vurdu %2$s</item>
+    <item>%1$s vurdu %2$s</item>
+    <item>%1$s vurdu %2$s</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s seni öldürdü...</item>
+    <item>%s seni öldürdü...</item>
+    <item>%s seni öldürdü...</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s yendi %2$s</item>
+    <item>%1$s yendi %2$s</item>
+    <item>%1$s yendi %2$s</item>
+  </string-array>
+  <string name="Char_YouMissed">%1$s %2$s saldırın</string>
+  <string name="Char_SmbMissed">%1$s %2$s %3$s\'nın saldırısı</string>
+  <string name="Char_OutParalysis">Ağrı %s\'yı felçten uyandırdı</string>
+  <string-array name="Char_StaDodged">
+    <item>kaçtı</item>
+    <item>kaçtı</item>
+    <item>kaçtı</item>
+  </string-array>
+  <string name="Char_StaPoisoned">zehirlendi</string>
+  <string name="Char_StaAmok">öldürme arzusu</string>
+  <string name="Char_StaSlowed">yavaşlamış</string>
+  <string name="Char_StaMind">zeka</string>
+  <string name="Char_StaVision">görüş</string>
+  <string name="Char_StaParalysed">felç</string>
+  <string name="Char_StaFrightened">korkmuş</string>
+  <string name="Char_StaRooted">bağlı</string>
+  <string name="Char_StaCrippled">sakat</string>
+  <string name="Char_StaBleeding">kanama </string>
+  <string name="Char_StaDizzy">şaşkın</string>
+  <string name="Char_StaInvisible">görünmez</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">Yazı okunmaz halde... </string>
+  <string name="Dungeon_DeadEnd">Burada ne yapıyorsun?! </string>
+  <!--STRINGS OF Challenges CLASS-->
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_Ghost">üzgün hayalet.</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">iksirler</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <!--STRINGS OF WndClass CLASS-->
+  <!--STRINGS OF WndError CLASS-->
+  <!--STRINGS OF WndGame CLASS-->
+  <!--STRINGS OF WndHero CLASS-->
+  <!--STRINGS OF WndImp CLASS-->
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <!--STRINGS OF WndJournal CLASS-->
+  <!--STRINGS OF WndRanking CLASS-->
+  <!--STRINGS OF WndResurrect CLASS-->
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <!--STRINGS OF WndStory CLASS-->
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <!--STRINGS OF QuickSlot CLASS-->
+  <!--STRINGS OF Item CLASS-->
+  <!--STRINGS OF EquipableItem CLASS-->
+  <!--STRINGS OF Heap CLASS-->
+  <!--STRINGS OF Amulet CLASS-->
+  <!--STRINGS OF Ankh CLASS-->
+  <!--STRINGS OF ArmorKit CLASS-->
+  <!--STRINGS OF Dewdrop CLASS-->
+  <!--STRINGS OF DewVial CLASS-->
+  <!--STRINGS OF Gold CLASS-->
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <!--STRINGS OF Stylus CLASS-->
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <!--STRINGS OF Torch CLASS-->
+  <!--STRINGS OF Weightstone CLASS-->
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <!--STRINGS OF Keyring CLASS-->
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <!--STRINGS OF SeedPouch CLASS-->
+  <!--STRINGS OF WandHolster CLASS-->
+  <!--STRINGS OF PotionBelt CLASS-->
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <!--STRINGS OF IronKey CLASS-->
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <!--STRINGS OF DarkGold CLASS-->
+  <!--STRINGS OF DriedRose CLASS-->
+  <!--STRINGS OF DwarfToken CLASS-->
+  <!--STRINGS OF Pickaxe CLASS-->
+  <!--STRINGS OF RatSkull CLASS-->
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Foliage CLASS-->
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <!--STRINGS OF ToxicGas CLASS-->
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <!--STRINGS OF Web CLASS-->
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <!--STRINGS OF Barkskin CLASS-->
+  <!--STRINGS OF Bleeding CLASS-->
+  <!--STRINGS OF Blindness CLASS-->
+  <!--STRINGS OF Burning CLASS-->
+  <!--STRINGS OF Charm CLASS-->
+  <!--STRINGS OF Combo CLASS-->
+  <!--STRINGS OF Cripple CLASS-->
+  <!--STRINGS OF Frost CLASS-->
+  <!--STRINGS OF Fury CLASS-->
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <!--STRINGS OF Hunger CLASS-->
+  <!--STRINGS OF Invisibility CLASS-->
+  <!--STRINGS OF Levitation CLASS-->
+  <!--STRINGS OF Light CLASS-->
+  <!--STRINGS OF MindVision CLASS-->
+  <!--STRINGS OF Ooze CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Roots CLASS-->
+  <!--STRINGS OF Shadows CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF SnipersMark CLASS-->
+  <!--STRINGS OF Vertigo CLASS-->
+  <!--STRINGS OF Weakness CLASS-->
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+</resources>

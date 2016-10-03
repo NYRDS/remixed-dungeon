@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">%s acı bir şekilde vücudunu sıkıştırıyor</string>
+  <string name="Armor_Identify">%1$s ile aşina olduğundan dolayı %2$s olduğunu anlıyorsun.</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">Farklı büyü tipleri ile etkileşimin zırhtaki kabartmayı sildi!</string>
+  <string name="Armor_Info1">Bu %1$s aldığın hasarın \"%2$d\" puanını emiyor.</string>
+  <string name="Armor_Info2">
+\n\nYetersiz gücünden dolayı hareket hızın ve savunma yeteneğin düştü.</string>
+  <string name="Armor_Info3">
+\n\nYetersiz gücünden dolayı bu zırhı giymek hareket hızın ve savunma yeteneğini düşürecektir.</string>
+  <string name="Armor_Info4">
+\n\nTipik %1$s alınan saldırı başı %2$d puanlık hasarı emer ve %3$d güç puanına ihtiyaç duyar.</string>
+  <string name="Armor_Info5">Muhtemelen bu zırh senin için çok ağır.</string>
+  <string name="Armor_Info6">Bu kazınmış.</string>
+  <string name="Armor_Info7a">
+\n\n%2$s%1$s giyiyorsun.</string>
+  <string name="Armor_Info7b">, ve lanetli olduğundan dolayı, onu çıkarmak için yeterince güçlü değilsin</string>
+  <string name="Armor_Info8">\n\nKötü niyetli bir büyünün %s içinde gizlendiğini hissediyorsun.</string>
+  <string name="Armor_Glyph">kabartma</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">Bu şey muhteşem görünüyor!</string>
+  <string name="ClassArmor_LowHealt">Canın çok az!</string>
+  <string name="ClassArmor_NotEquipped">Bu zırhın özel gücünü kullanabilmek için onu giymen gerekiyor!</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">kumaş zırh</string>
+  <string name="ClothArmor_Desc">Bu hafif zırh temel koruma sağlar.</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Elf örtüsü</string>
+  <string name="ElfArmor_Desc">Bu elf örtüsü ile doğanın güçlerini ortaya çıkarabilirsin. Otlar küçük bir parıltıda katı bir taşın içinden büyüyebilir ve görüş açısındaki tüm düşmanları sabitler.</string>
+  <string name="ElfArmor_ACSpecial">DOĞA ÇAĞRISI</string>
+  <string name="ElfArmor_NotElf">Sadece elfler bu zırhı kullanabilir!</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">avcı pelerini</string>
+  <string name="HuntressArmor_Desc">Böyle bir pelerinin içindeki bir avcı hayali kılıç fanı yaratabilir. Her bir kılıç avcının görüşündeki tekil düşmanı hedef alır, avcının elindeki silaha bağlı olarak hasar verir.</string>
+  <string name="HuntressArmor_ACSpecial">HAYALİ KILIÇLAR</string>
+  <string name="HuntressArmor_NoEnemies">Görünürde düşman yok</string>
+  <string name="HuntressArmor_NotHuntress">Sadece avcılar bu zırhı kullanabilir!</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">deri zırh</string>
+  <string name="LeatherArmor_Desc">Sertleştirilmiş canavar zırhından yapılmış zırh. Kumaş zırh kadar hafif değil fakat daha iyi koruma sağlar.</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">büyücü kaftanı</string>
+  <string name="MageArmor_Desc">Bu gösterişli kaftanı giyen bir büyücü, erimiş yeryüzü büyüsünü yapabilir: görüşündeki tüm düşmanları ateşe verir ve aynı zamanda hareket edemez hale getirir.</string>
+  <string name="MageArmor_ACSpecial">ERİMİŞ YERYÜZÜ</string>
+  <string name="MageArmor_NotMage">Sadece büyücüler bu zırhı kullanabilir!</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">metal örgü zırh</string>
+  <string name="MailArmor_Desc">İç içe geçen metal bağlantılar esnek ve güçlü bir zırh ortaya çıkarmış.</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">plaka zırh</string>
+  <string name="PlateArmor_Desc">Devasa metal parçaları biraraya gelerek ağırlığının hakkını veren eşşiz bir zırh ortaya çıkarmış.</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">casus kıyafeti</string>
+  <string name="RogueArmor_Desc">Bu kara kıyafeti giymek, bir casusun numarasını yapar, bu \"sis bombası\" adı verilen numara (gerçek patlayıcı kullanılmamakta): düşmanlarını kör eder ve ortamı terkeder.</string>
+  <string name="RogueArmor_ACSpecial">SİS BOMBASI</string>
+  <string name="RogueArmor_NotRogue">Sadece casuslar bu zırhı kullanabilir!</string>
+  <string name="RogueArmor_Fov">Sadece görüş alanındaki boş bir yere zıplayabilirsin</string>
+  <string name="RogueArmor_Prompt">Zıplamak için bir yer seç</string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">pul zırh</string>
+  <string name="ScaleArmor_Desc">Deri bir yelek üzerine dikilmiş metal pullar esnek ve koruyucu bir zırh oluşturmuş.</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">savaşçı zırhı</string>
+  <string name="WarriorArmor_Desc">Bu zırh ağır gözükürken, aynı zamanda savaşçıya belirtilen bölgeye doğru epik zıplama gerçekleştirmesini sağlar, zıplanılan yere bitişik tüm düşmanları sersemletir.</string>
+  <string name="WarriorArmor_ACSpecial">EPİK ZIPLAMA</string>
+  <string name="WarriorArmor_NotWarrior">Sadece savaşçılar bu zırhı kullanabilir!</string>
+  <string name="WarriorArmor_Prompt">Sıçramak için yön seçin</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">Çekiciliğin %sı</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">Anti-entropik %sı</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">Sıçratan %sı</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">Yersizliğin %sı</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">Sarmaşıklığın %sı</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">Metabolizmanın %sı</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">Çoğulculuğun %sı</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">Potansiyelliğin %sı</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">Kokuşmuş %sı</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">Ayırıcılığın %sı</string>
+  <string name="Viscosity_Status">%d gecikmeli</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Gecikmeli hasar (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s seni öldürdü...</string>
+</resources>

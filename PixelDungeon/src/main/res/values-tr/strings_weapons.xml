@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">Bu eşyayı tanımlamak için yeterince üzerinde taşıdın  %1$s .  Bu %2$s.</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Horror CLASS-->
+  <!--STRINGS OF Instability CLASS-->
+  <!--STRINGS OF Leech CLASS-->
+  <!--STRINGS OF Luck CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Piercing CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF Swing CLASS-->
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1b">a</string>
+  <string name="MeleeWeapon_Info2c">bu silah senin için muhtemelen çok ağır.</string>
+  <string name="MeleeWeapon_Info3b">hızlı</string>
+  <string name="MeleeWeapon_Info3c">yavaşla </string>
+  <string name="MeleeWeapon_Info3d">ve </string>
+  <string name="MeleeWeapon_Info3e">ama </string>
+  <string name="MeleeWeapon_Info4a">daha hızlı olması için dengelenmiş.</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">savaş baltası </string>
+  <string name="BattleAxe_Gender">erkeksi</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">hançer </string>
+  <!--STRINGS OF Glaive CLASS-->
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Gender">erkeksi</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Gender">erkeksi</string>
+  <!--STRINGS OF Mace CLASS-->
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Gender">erkeksi</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">kısa kılıç</string>
+  <string name="ShortSword_Select">geliştirmek için silah seç </string>
+  <!--STRINGS OF Spear CLASS-->
+  <!--STRINGS OF Sword CLASS-->
+  <!--STRINGS OF WarHammer CLASS-->
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Boomerang CLASS-->
+  <!--STRINGS OF CurareDart CLASS-->
+  <!--STRINGS OF Dart CLASS-->
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <!--STRINGS OF Javelin CLASS-->
+  <!--STRINGS OF Shuriken CLASS-->
+  <!--STRINGS OF Tamahawk CLASS-->
+  <!--STRINGS OF Kusarigama CLASS-->
+  <!--STRINGS OF ChaosSword CLASS-->
+  <!--STRINGS OF ChaosBow CLASS-->
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <!--STRINGS OF SacrificialSword CLASS-->
+</resources>

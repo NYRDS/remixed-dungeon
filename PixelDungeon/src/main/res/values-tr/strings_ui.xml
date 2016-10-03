@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Oyna</string>
+  <string name="TitleScene_Highscores">Yüksek skorlar</string>
+  <string name="TitleScene_Badges">Rozetler</string>
+  <string name="TitleScene_About">Hakkında</string>
+  <string name="TitleScene_InternalStorageLow">Dahili depolamada\n yeterli yer yok\n İlerlemen kaybolabilir!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt">NYRDS\'nin Remixed Pixel Dungeon. Watabou\'nun Pixel Dungeon Kaynağı kullanılmıştır.\n\n Kodlama &amp; grafikler: Watabou  &amp; NYRDS &amp; ThEnigma314\n\nMüzik: Cube_Code\n\nÖzel teşekkürler: rodriformiga koddaki PD için\n\nBize ulaşın:\n\n</string>
+  <string name="AboutScene_OurSite">Websitemiz:</string>
+  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
+  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+  <string name="AboutScene_Snd">E-Posta Gönder</string>
+  <string name="AboutScene_TranslatedBy">Türkçe\n
+-#NULL</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">Yüksek Skorlar</string>
+  <string name="RankingsScene_Total">Toplam oynanan oyun:</string>
+  <string name="RankingsScene_NoGames">Hiç oyun oynanmadı.</string>
+  <string name="RankingsScene_NoInfo">Ek bilgi bulunmamakta</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Oyunu Yükle</string>
+  <string name="StartScene_New">Yeni Oyun</string>
+  <string name="StartScene_Erase">Şu anki oyunu sil</string>
+  <string name="StartScene_Depth">Derinlik: %1$d\nSeviye: %2$d</string>
+  <string name="StartScene_Really">Yeni oyun başlatmak istediğinizden emin misiniz?</string>
+  <string name="StartScene_Warning">Şu anki ilerlemeniz silinecektir.</string>
+  <string name="StartScene_Yes">Evet, yeni oyun başlat</string>
+  <string name="StartScene_No">Hayır, ana menüye dön</string>
+  <string name="StartScene_Unlock">Bu karakter türünü açmak için, diğer türlerden biri ile 3. boss\'u öldür</string>
+  <string name="StartScene_UnlockElf">Bu karakter türünü açmak için, diğer türlerden biri ile 4. boss\'u öldür</string>
+  <string name="StartScene_WinGame">\"Düellolar\"ı açmak için herhangi bir karakter türü ile oyunu bitir.</string>
+  <string name="StartScene_DifficultySelect">Kaderini seç</string>
+  <string name="StartScene_DifficultyEasy">Kolay (reklamlı)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">Normal (kaydetme ve reklamlı)</string>
+  <string name="StartScene_DifficultyNormal">Normal</string>
+  <string name="StartScene_DifficultyExpert">Uzman</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">İniliyor...</string>
+  <string name="InterLevelScene_Ascending">Çıkılıyor...</string>
+  <string name="InterLevelScene_Loading">Yükleniyor...</string>
+  <string name="InterLevelScene_Resurrecting">Yeniden canlandırılıyor...</string>
+  <string name="InterLevelScene_Returning">Dönülüyor...</string>
+  <string name="InterLevelScene_Falling">Düşülüyor...</string>
+  <string name="InterLevelScene_FileNotFound">Dosya bulunamadı. Bir nedenden ötürü...</string>
+  <string name="InterLevelScene_ErrorGeneric">Birşeyler ters gitti...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Oyun Bitti</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">Varsayılan Yakınlaştırma</string>
+  <string name="WndSettings_TextScaleDefault">Varsayılan yazı tipi</string>
+  <string name="WndSettings_ScaleUp">Arayüz boyutu</string>
+  <string name="WndSettings_Immersive">Sürükleyici mod</string>
+  <string name="WndSettings_Music">Müzik</string>
+  <string name="WndSettings_Sound">Ses Efektleri</string>
+  <string name="WndSettings_Brightness">Parlaklık</string>
+  <string name="WndSettings_SwitchPort">Dikey moda geç</string>
+  <string name="WndSettings_SwitchLand">Yatay moda geç</string>
+  <string name="WndSettings_SelectLanguage">Dil Seç</string>
+  <string name="WndSettings_SecondQuickslot">İkincil Hızlıyuva</string>
+  <string name="WndSettings_ThirdQuickslot">Üçüncül Hızlıyuva</string>
+  <string name="WndSettings_ExperementalFont">Yeni Yazıtipi</string>
+  <string name="WndSettings_ClassicFont">Klasik</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">Yuva seç</string>
+  <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">Mod seç</string>
+</resources>

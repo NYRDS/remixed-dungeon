@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">kılıç </string>
+    <string name="Claymore_Info">bu iri kılıç herhangi birşeyi doğrayabilir</string>
+    <string name="Claymore_Gender">kadınsı</string>
+
+    <string name="Halberd_Gender">kadınsı</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">tahta yaylıtüfek</string>
+    <string name="WoodenCrossbow_Info">basit tahtadan yapılmış yaylıtüfek. görünüşe göre ok ateşlemek için dizayn edilmiş</string>
+    <string name="WoodenCrossbow_Gender">erkeksi</string>
+
+    <string name="CompositeCrossbow_Gender">erkeksi</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">yakut  yaylıtüfek</string>
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Gotik Zırh</string>
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Kaos Zırhı</string>
+    </resources>

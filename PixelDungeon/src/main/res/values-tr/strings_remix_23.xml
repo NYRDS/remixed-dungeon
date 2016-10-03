@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">kurutulmuş şurup</string>
+  <string name="Guts_TileHighGrass">kurutulmuş şurup</string>
+  <string name="Guts_TileDescExit">aşağı seviyelere açılan bir delik </string>
+  <!--STRINGS OF WndStory CLASS-->
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">canavar</string>
+  <string name="MimicAmulet_Gender">erkeksi</string>
+  <string name="MimicAmulet_Name_Objective">canavar</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">kabus</string>
+  <string name="Nightmare_Gender">erkeksi</string>
+  <string name="Nightmare_Name_Objective">kabus</string>
+  <!--STRINGS OF TENGU CLASS-->
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Gender">erkeksi</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Gender">erkeksi</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Gender">erkeksi</string>
+  <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Gender">erkeksi</string>
+  <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Gender">erkeksi</string>
+</resources>

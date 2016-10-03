@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Name">troll demirci </string>
+  <string name="Blacksmith_Desc">troll demirci normal troll gibi gözüküyor. uzun yağsız ve derisi renki taşlara benzeyen. troll demirci orantısız küçük aletleriyle tamir işleriyle uğraşıyor.</string>
+  <string name="Blacksmith_Gold1">Hey İnsan ! biraz işe yaramak ister misin eh ? bu kazmayı al ve bana biraz _koyu altın madeni_kaz , _15 parça_yeterli olur. nasıl mı ödiyeceğim ?... \n tamam.ödemek için yeterli param yok ama birşeyler üretebilirim. şanslısın ki etraftaki tek demirci benim.</string>
+  <string name="Blacksmith_Txt2">Benimle dalga mı geçiyorsun? Kazmam nerede?!</string>
+  <string name="Blacksmith_Txt3">kara altın madeni. 15 parça cidden, bu kadar zor mu ?</string>
+  <string name="Blacksmith_Txt4">Sana Bu kazma üstünde yarasa kanına ihtiyaç var dedim. Chop chop !</string>
+  <string name="Blacksmith_Completed">OH, geri döndün... hiç olmamasından iyidir.</string>
+  <string name="Blacksmith_GetLost">Meşgulüm. Kaybol!</string>
+  <string name="Blacksmith_Verify1">2 farklı eşya seç, aynısını iki defa değil.</string>
+  <string name="Blacksmith_Verify2">aynı tipte 2 eşya seç !</string>
+  <string name="Blacksmith_Verify3">nasıl çalıştığını bilmem gerek. önce tanımlamalıyım !</string>
+  <string name="Blacksmith_Verify4">lanetli eşyalarla çalışmam !</string>
+  <string name="Blacksmith_Verify5">Çöp, kalitesi çok düşük.</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Name">üzgün hayalet</string>
+  <string name="Ghost_Rose2">Lütfen... Bana yardım et... Gülü bul...</string>
+  <string name="FetidRat_Name">kokuşmuş fare</string>
+  <string name="FetidRat_Name_Objective">kokuşmuş fare</string>
+  <string name="FetidRat_Gender">kadınsı</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Info1">sende mi ayıya bakıyorsun ?</string>
+  <string name="Hedgehog_Info4">bu turtayı al.</string>
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Golems2">Golem safarin ne alemde?</string>
+  <string name="Imp_Cya">Görüşürüz, %s!</string>
+  <string name="Imp_Hey">Psst, %s!</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Greetings">selam,arkadaşım !</string>
+  <!--STRINGS OF MirrorImage CLASS-->
+  <string name="MirrorImage_Gender">erkeksi</string>
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Name">Fare Kral</string>
+  <string name="RatKing_Info1">Uyumuyorum!</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <string name="Shopkeeper_Sell">Satmak için bir eşya seç</string>
+  <!--STRINGS OF WandMaker CLASS-->
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">altın kılıç</string>
+    <string name="GoldenSword_Gender">erkeksi</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">altın heykel</string>
+    <string name="GoldenStatue_Gender">kadınsı</string>
+    <string name="GoldenStatue_Name_Objective">altın heykel</string>
+    <string name="NecromancerNPC_Gender">erkeksi</string>
+    <string name="NecromancerNPC_Message1">birazcık daha zaman, biraz daha zaman...</string>
+    <string name="NecromancerNPC_Message2">hazır olmalıyım.</string>
+    <string name="NecromancerNPC_Message3">ölümün çağrısını duyabiliyorum</string>
+    <string name="RatKing_Name_Objective">Fare Kral</string>
+    </resources>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--PACKAGE /items/Wands-->
+  <!--STRINGS OF Wand CLASS-->
+  <string name="Wand_Name">%s  asa </string>
+  <string name="Wand_ACZap">BUM</string>
+  <string name="Wand_Damage">bu asayı yakın mesafe silahı olarak kullandığın zaman her vuruşta %d hasar verir</string>
+  <string name="Wand_Weapon">bu asayı yakın mesafe silahı olarakta kullanabilirsin</string>
+  <string name="Wand_SelfTarget">kendini hedef alamazsın.</string>
+  <string name="Wand_Prompt">asayı kullanmak için yer seç</string>
+  <string-array name="Wand_Wood_Types">
+    <item>çobanpüsküllü</item>
+    <item>porsukağacı</item>
+    <item>abanoz</item>
+    <item>kiraz</item>
+    <item>tikağacı</item>
+    <item>üvez</item>
+    <item>söğüt</item>
+    <item>maun</item>
+    <item>bambu</item>
+    <item>purpleheart</item>
+    <item>meşe</item>
+    <item>huş</item>
+  </string-array>
+  <!--STRINGS OF WandOfAmok CLASS-->
+  <string name="WandOfAmok_Info1">hiçbişi olmadı</string>
+  <!--STRINGS OF WandOfAvalanche CLASS-->
+  <!--STRINGS OF WandOfBlink CLASS-->
+  <!--STRINGS OF WandOfDisintegration CLASS-->
+  <!--STRINGS OF WandOfFirebolt CLASS-->
+  <string name="WandOfFirebolt_Name">ateşoku asası </string>
+  <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="Sheep_Name">koyun</string>
+  <string name="Sheep_Name_Objective">koyunlar</string>
+  <string name="Sheep_Gender">kadınsı</string>
+  <string name="Sheep_Desc">Bu sihirli bir koyun. Ne mi bu kadar büyülü? Onu öldüremezsin. Büyülü bir şekilde yok olana kadar orda duracak, boş bir bakışla geviş getirerek.</string>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>Mee!</item>
+    <item>Mee?</item>
+    <item>Mee.</item>
+    <item>Mee...</item>
+    <item>Mee...</item>
+    <item>Mle...</item>
+  </string-array>
+  <!--STRINGS OF WandOfLightning CLASS-->
+  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_ACDisenchant">BÜYÜYÜBOZ</string>
+  <string name="WandOfMagicMissile_Info1">Kendi kendini Büyülü Füze Âsân ile öldürdün...</string>
+  <string name="WandOfMagicMissile_SelectWand">Yükseltmek istediğin bir asa seç</string>
+  <string name="WandOfMagicMissile_Desinchanted">Büyülü Füze asasının büyüsünü bozdun ve özünü kendi %s yükseltmek için kullandın</string>
+  <!--STRINGS OF WandOfPoison CLASS-->
+  <!--STRINGS OF WandOfRegrowth CLASS-->
+  <!--STRINGS OF WandOfSlowness CLASS-->
+  <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <!--STRINGS OF WandOfTeleportation CLASS-->
+</resources>
