@@ -38,6 +38,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
+import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -110,11 +111,10 @@ public class PixelDungeon extends Game {
 
 		Music.INSTANCE.enable(music());
 		Sample.INSTANCE.enable(soundFx());
-/*
+
 		if (PixelDungeon.version() != Game.versionCode) {
 			switchScene(WelcomeScene.class);
 		}
-*/
 	}
 
 	@Override
