@@ -9,6 +9,7 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -36,6 +37,7 @@ public class WelcomeScene extends PixelScene {
 	private static final String TXT_Welcome_24_2 = Game.getVar(R.string.Welcome_Text_24_2);
 	private static final String TXT_Welcome_25 = Game.getVar(R.string.Welcome_Text_25);
 	private static final String TXT_Welcome_25_1 = Game.getVar(R.string.Welcome_Text_25_1);
+	private static final String TXT_Welcome_25_2 = Game.getVar(R.string.Welcome_Text_25_2);
 
 	private static final int GAP = 4;
 
@@ -46,7 +48,7 @@ public class WelcomeScene extends PixelScene {
 		String[] upds = { TXT_Welcome, TXT_Welcome_19, TXT_Welcome_20, TXT_Welcome_20_1, TXT_Welcome_21,
 				TXT_Welcome_21_1,TXT_Welcome_21_2, TXT_Welcome_21_3, TXT_Welcome_21_4, TXT_Welcome_21_5,
 				TXT_Welcome_22, TXT_Welcome_23, TXT_Welcome_23_1, TXT_Welcome_23_2, TXT_Welcome_24,
-				TXT_Welcome_24_1, TXT_Welcome_24_2, TXT_Welcome_25, TXT_Welcome_25_1 };
+				TXT_Welcome_24_1, TXT_Welcome_24_2, TXT_Welcome_25, TXT_Welcome_25_1, TXT_Welcome_25_2 };
 
 		Text[] updTexts = new Text[upds.length];
 
@@ -103,13 +105,13 @@ public class WelcomeScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				PixelDungeon.version(Game.versionCode);
-				/*
+
 				if(Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) == 0) {
 					Game.switchScene(AllowStatisticsCollectionScene.class);
 				} else {
-				*/
+
 					Game.switchScene(TitleScene.class);
-				//}
+				}
 			}
 		};
 
