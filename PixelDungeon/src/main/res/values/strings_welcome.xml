@@ -161,4 +161,13 @@
         - User created mods can now contain codex items with custom text\n
         - User created mods now allows to set custom tiles, water and music to a specific level\n
         </string>
+        <string name="Welcome_Text_25_2">
+        remix.25.2:\n
+        --New Features--\n
+        - Now you can resize game Ui manually during game session. This feature is available in \"Settings\" menu\n
+        --Fixes--\n
+        - Fixed bug that was resulting in creating images of your hero, wearing a hat, after clicking "Examine" button in \"Hats\" menu\n
+        - Fixed bug, that was preventing mobs (summoned or resurrected on a \"hole\" cell) from falling down\n
+        - Updated translations and fixed some typos\n
+        </string>
 </resources>

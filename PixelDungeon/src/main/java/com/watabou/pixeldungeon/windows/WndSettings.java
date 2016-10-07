@@ -286,7 +286,7 @@ public class WndSettings extends Window {
 		add(new RedButton(Game.getVar(R.string.WndSettings_UiScale)) {
 			@Override
 			protected void onClick() {
-				zoom(PixelScene.defaultZoom);
+				uiZoom(PixelScene.defaultZoom);
 			}
 		}.setRect(btnZoomOut.right(), y, WIDTH - btnZoomIn.width()
 				- btnZoomOut.width(), BTN_HEIGHT));
