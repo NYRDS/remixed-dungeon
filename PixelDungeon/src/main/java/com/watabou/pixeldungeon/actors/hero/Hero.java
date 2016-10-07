@@ -984,7 +984,7 @@ public class Hero extends Char {
 
 			for (int i = 1; i <= Math.min(Ballistica.distance, weapon.getRange()); i++) {
 				Char chr = Actor.findChar(Ballistica.trace[i]);
-				if (chr != null) {
+				if (chr == enemy) {
 					return applySpecialTo(weapon, chr);
 				}
 			}
