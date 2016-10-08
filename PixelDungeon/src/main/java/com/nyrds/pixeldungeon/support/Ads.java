@@ -14,6 +14,8 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.PixelDungeon;
 
+import net.skoumal.emulatordetector.EmulatorDetector;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,13 +35,11 @@ public class Ads {
 	}
 
 	private static boolean googleAdsUsable() {
-		return Flavours.haveAds();
+		return Flavours.haveAds() && ! EmulatorDetector.isEmulator();
 	}
 
 	private static void displayOwnEasyModeBanner() {
 		if (isSmallScreen()) {
-			//initEasyModeIntersitial();
-			OwnAds.displayBanner();
 		} else {
 			OwnAds.displayBanner();
 		}
@@ -70,11 +70,11 @@ public class Ads {
 	}
 
 	public static void displayEasyModeBanner() {
-		//if (googleAdsUsable() && Util.isConnectedToInternet()) {
-		//	displayGoogleEasyModeBanner();
-		//} else {
+		if (googleAdsUsable() && Util.isConnectedToInternet()) {
+			displayGoogleEasyModeBanner();
+		} else {
 			displayOwnEasyModeBanner();
-		//}
+		}
 	}
 
 	public static void removeEasyModeBanner() {
@@ -140,30 +140,34 @@ public class Ads {
 	}
 
 	private static void displayIsAd(final InterstitialPoint work, final InterstitialAd isAd) {
-		Game.instance().runOnUiThread(new Runnable() {
+		if (googleAdsUsable() && Util.isConnectedToInternet()) {
+			Game.instance().runOnUiThread(new Runnable() {
 
-			@Override
-			public void run() {
-				if (isAd == null) {
-					work.returnToWork(false);
-					return;
-				}
-
-				if (!isAd.isLoaded()) {
-					work.returnToWork(false);
-					return;
-				}
-
-				isAd.setAdListener(new AdListener() {
-					@Override
-					public void onAdClosed() {
-						requestNewInterstitial(isAd);
-						work.returnToWork(true);
+				@Override
+				public void run() {
+					if (isAd == null) {
+						work.returnToWork(false);
+						return;
 					}
-				});
-				isAd.show();
-			}
-		});
+
+					if (!isAd.isLoaded()) {
+						work.returnToWork(false);
+						return;
+					}
+
+					isAd.setAdListener(new AdListener() {
+						@Override
+						public void onAdClosed() {
+							requestNewInterstitial(isAd);
+							work.returnToWork(true);
+						}
+					});
+					isAd.show();
+				}
+			});
+		} else {
+			OwnAds.displayIsAd(work);
+		}
 	}
 
 	public static void displaySaveAndLoadAd(final InterstitialPoint work) {

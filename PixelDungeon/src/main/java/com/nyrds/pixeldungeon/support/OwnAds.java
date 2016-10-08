@@ -45,7 +45,7 @@ public class OwnAds {
 		});
 	}
 
-	private static void displayIsAd(final InterstitialPoint work) {
+	public static void displayIsAd(final InterstitialPoint work) {
 		Game.instance().runOnUiThread(new Runnable() {
 
 			                              @Override
