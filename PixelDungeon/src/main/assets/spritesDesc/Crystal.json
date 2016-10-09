@@ -1,27 +1,27 @@
 {
-   "texture" = "mobs/crystal.png",
-   "width" = 16,
-   "height" = 16,
-   "zapEffect" = "Shadow",
-   "idle" = {
-      "fps" = 6,
-      "looped" = true,
-      "frames" = [0,1,2,0,1]
+   "texture" : "mobs/crystal.png",
+   "width" : 16,
+   "height" : 16,
+   "zapEffect" : "Shadow",
+   "idle" : {
+      "fps" : 6,
+      "looped" : true,
+      "frames" : [0,1,2,0,1]
    },
-   "run" = {
-      "fps" = 8,
-      "looped" = true,
-      "frames" = [0,1,2,0,1]
+   "run" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0,1,2,0,1]
    },
-   "attack" = {
-      "fps" = 16,
-      "looped" = false,
-      "frames" = [2,3,4]
+   "attack" : {
+      "fps" : 16,
+      "looped" : false,
+      "frames" : [2,3,4]
    },
-   "die" = {
-      "fps" = 10,
-      "looped" = false,
-      "frames" = [1,0,5,6,7,8]
+   "die" : {
+      "fps" : 10,
+      "looped" : false,
+      "frames" : [1,0,5,6,7,8]
    },
-   "bloodColor" = 0xFF777777
+   "bloodColor" : 0xFF777777
 }

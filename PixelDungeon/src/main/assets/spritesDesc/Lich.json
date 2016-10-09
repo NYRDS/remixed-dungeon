@@ -1,18 +1,18 @@
 {
-   "texture" = "mobs/lich.png",
-   "width" = 16,
-   "height" = 16,
-   "zapEffect" = "Shadow",
+   "texture" : "mobs/lich.png",
+   "width" : 16,
+   "height" : 16,
+   "zapEffect" : "Shadow",
 
-   "idle" = { "fps" = 6, "looped" = true, "frames" = [0, 1, 0, 1, 2, 3, 4]  },
+   "idle" : { "fps" : 6, "looped" : true, "frames" : [0, 1, 0, 1, 2, 3, 4]  },
 
-   "run" = { "fps" = 7, "looped" = false, "frames" = [8, 9, 10, 11, 0] },
+   "run" : { "fps" : 7, "looped" : false, "frames" : [8, 9, 10, 11, 0] },
 
-   "attack" = { "fps" = 6, "looped" = false, "frames" = [2, 3, 4] },
+   "attack" : { "fps" : 6, "looped" : false, "frames" : [2, 3, 4] },
 
-   "zap"    = { "fps" = 7, "looped" = false,     "frames" = [5, 6, 7] },
+   "zap"    : { "fps" : 7, "looped" : false,     "frames" : [5, 6, 7] },
 
-   "die" = { "fps" = 6, "looped" = false, "frames" = [12, 13, 14, 15] }
+   "die" : { "fps" : 6, "looped" : false, "frames" : [12, 13, 14, 15] }
 }
 
 
