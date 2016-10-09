@@ -18,7 +18,7 @@
       "frames" : [9,10]
    },
    "die" : {
-      "fps" : 4f,
+      "fps" : 4,
       "looped" : false,
       "frames" : [11,12,13]
    }

@@ -77,7 +77,16 @@ public class MobSpriteDef extends MobSprite {
 
 			TextureFilm film = new TextureFilm(texture, width, json.getInt("height"));
 
-			bloodColor = json.optInt("bloodColor", 0xFFBB0000);
+			bloodColor = 0xFFBB0000;
+			Object _bloodColor = json.opt("bloodColor");
+			if(_bloodColor instanceof Number) {
+				bloodColor = (int) _bloodColor;
+			}
+
+			if(_bloodColor instanceof String) {
+				bloodColor = Long.decode((String) _bloodColor).intValue();
+			}
+
 			levitating = json.optBoolean("levitating", false);
 			framesInRow = texture.width / width;
 

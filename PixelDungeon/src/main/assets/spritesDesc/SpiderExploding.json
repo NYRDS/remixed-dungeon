@@ -6,5 +6,5 @@
   "run"    : { "fps" : 10, "looped" : true,     "frames" : [2, 3, 4] },
   "attack" : { "fps" : 12, "looped" : false,    "frames" : [2, 3, 4] },
   "die"    : { "fps" : 15, "looped" : false,    "frames" : [5, 6, 7] },
-  "bloodColor" : 0xFFEAFF80
+  "bloodColor" : "0xFFEAFF80"
 }

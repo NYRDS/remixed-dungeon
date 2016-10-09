@@ -22,7 +22,7 @@
       "looped" : false,
       "frames" : [10,11,12,13]
    },
-   "bloodColor" : 0xFFFFEA80
+   "bloodColor" : "0xFFFFEA80"
 }
 
 

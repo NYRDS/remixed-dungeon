@@ -23,5 +23,5 @@
       "looped" : false,
       "frames" : [7,8,9,10,11]
    },
-   "bloodColor" : 0xFFAA0000
+   "bloodColor" : "0xFFAA0000"
 }

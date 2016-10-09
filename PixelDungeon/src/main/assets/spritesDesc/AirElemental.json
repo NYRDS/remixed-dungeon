@@ -23,5 +23,5 @@
       "frames" : [7, 8, 9, 10, 11, 12, 13]
    },
    "levitating" : true,
-   "bloodColor" : 0xFF439DFF
+   "bloodColor" : "0xFF439DFF"
 }
