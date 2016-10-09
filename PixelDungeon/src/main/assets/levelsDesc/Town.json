@@ -38,11 +38,11 @@
    "water":"water0.png",
    "entrance":[31,31],
    "exit":[4,9],
-   "items" = [
-      {"kind"="RottenRation", "x"=4,"y"=4},
-      {"kind"="RottenRation","x"=5,"y"=5,"quantity"=10}
+   "items" : [
+      {"kind":"RottenRation", "x":4,"y":4},
+      {"kind":"RottenRation","x":5,"y":5,"quantity":10}
    ],
-  "mobs" = [
-      {"kind"="Hedgehog", "x"=3,"y"=4}
+  "mobs" : [
+      {"kind":"Hedgehog", "x":3,"y":4}
    ]
 }
