@@ -140,7 +140,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 		return mods;
 	}
 
-	protected void onDelete(int index) {
+	private void onDelete(int index) {
 		String option = mMods.get(index);
 
 		File modDir = FileSystem.getExternalStorageFile(option);

@@ -62,6 +62,7 @@ public class OwnAds {
 
 
 				                              alert.setView(adView);
+
 				                              alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
 					                              @Override
 					                              public void onClick(DialogInterface dialog, int id) {

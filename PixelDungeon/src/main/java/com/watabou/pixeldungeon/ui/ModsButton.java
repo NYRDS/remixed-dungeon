@@ -2,6 +2,9 @@ package com.watabou.pixeldungeon.ui;
 
 import android.Manifest;
 
+import com.nyrds.android.util.DownloadStateListener;
+import com.nyrds.android.util.DownloadTask;
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -13,13 +16,18 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.TitleScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
-public class ModsButton extends Button implements InterstitialPoint {
+public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener {
 	
 	private Image image;
 	private Text  text;
+
+	private Text downloadProgress;
 	
 	public ModsButton() {
 		super();
@@ -75,12 +83,42 @@ public class ModsButton extends Button implements InterstitialPoint {
 			@Override
 			public void run() {
 				if (result) {
-					parent.add(new WndModSelect());
+					String downloadTo = FileSystem.getExternalStorageFile("mods_common.json").getAbsolutePath();
+
+					new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods_common.json", downloadTo);
+					//parent.add(new WndModSelect());
 				} else {
 					parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
 				}
 			}
 		});
 
+	}
+
+	@Override
+	public void DownloadProgress(String file, final Integer percent) {
+		Game.executeInGlThread(new Runnable() {
+
+			@Override
+			public void run() {
+				if (downloadProgress == null) {
+					downloadProgress = GameScene.createMultiline(GuiProperties.regularFontSize());
+					downloadProgress.maxWidth((int) TitleScene.MIN_WIDTH_P);
+					downloadProgress.setPos(0, 0);
+					Game.scene().add(downloadProgress);
+				}
+
+				downloadProgress.text(Utils.format("Downloading  %d%%", percent));
+			}
+		});
+	}
+
+	@Override
+	public void DownloadComplete(String file, Boolean result) {
+		if (downloadProgress != null) {
+			Game.scene().remove(downloadProgress);
+			downloadProgress = null;
+		}
+		Game.scene().add(new WndModSelect());
 	}
 }
