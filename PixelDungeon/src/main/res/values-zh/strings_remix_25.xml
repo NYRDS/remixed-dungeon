@@ -17,48 +17,48 @@
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">灵魂碎片</string>
     <string name="SoulShard_Info">这是你从灵魂之罐的残余中拿取的一块碎片。它散发着神秘的能量，也许有人会对这东西感兴趣。</string>
-    <string name="SoulShard_Gender">masculine</string>
+    <string name="SoulShard_Gender">陽剛的</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF DeathKnight CLASS -->
     <string name="DeathKnight_Name">死亡骑士</string>
-    <string name="DeathKnight_Gender">masculine</string>
+    <string name="DeathKnight_Gender">陽剛的</string>
     <string name="DeathKnight_Name_Objective">死亡骑士</string>
     <string name="DeathKnight_Desc">乍一看这是一个穿着厚重盔甲的魁梧战士，但他带着灿烂笑容的骷髅脸出卖了他。背弃自己誓言的骑士灵魂的出现形式即为死亡骑士。作为诅咒，他们会永远游荡于这片土地上，在战斗中寻找能洗刷自己污名的方法，杀死无辜的人，将他们曾发誓要保护的东西抛之脑后。</string>
 
     <!-- STRINGS OF DreadKnight CLASS -->
     <string name="DreadKnight_Name">恐惧骑士</string>
-    <string name="DreadKnight_Gender">masculine</string>
+    <string name="DreadKnight_Gender">陽剛的</string>
     <string name="DreadKnight_Name_Objective">恐惧骑士</string>
     <string name="DreadKnight_Desc">恐惧骑士是一名从不恪守公正，也从不为善的古代战士。由于他所犯下的罪恶，他被诅咒永远的囚禁在一副破损的亡灵尸体中。这个被诅咒的存在每时每刻都会受到痛苦折磨。</string>
 
     <!-- STRINGS OF EnslavedSoul CLASS -->
     <string name="EnslavedSoul_Name">被奴役的灵魂</string>
-    <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="EnslavedSoul_Gender">雌性的</string>
     <string name="EnslavedSoul_Name_Objective">被奴役的灵魂</string>
     <string name="EnslavedSoul_Desc">这个幽灵几乎是透明的。即使它看起来就是一个头骨，但有那么几个瞬间，你能看到上边浮现出一幅充满痛苦与折磨的面孔。</string>
 
     <!-- STRINGS OF ExplodingSkull CLASS -->
     <string name="ExplodingSkull_Name">爆炸头骨</string>
-    <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Gender">陽剛的</string>
     <string name="ExplodingSkull_Name_Objective">爆炸头骨</string>
     <string name="ExplodingSkull_Desc">这个漂浮的燃烧头骨看起来相当脆弱，仿佛每一秒都有爆炸的危险。</string>
 
     <!-- STRINGS OF JarOfSouls CLASS -->
     <string name="JarOfSouls_Name">魂之灵龛</string>
-    <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Gender">陽剛的</string>
     <string name="JarOfSouls_Name_Objective">魂之灵龛</string>
     <string name="JarOfSouls_Desc">这个老龛盒上的在闪光的骷髅眼睛，和它周围散发的诡异能量，让你感到不安。</string>
 
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">巫妖</string>
-    <string name="Lich_Gender">masculine</string>
+    <string name="Lich_Gender">陽剛的</string>
     <string name="Lich_Name_Objective">巫妖</string>
     <string name="Lich_Desc">死灵法师在亡灵之城的深处死了，然后这个地方的邪恶能量进入了他的身体，将他转化为巫妖。他是不死的巫师，一个由邪恶力量操控的提线木偶。</string>
 
     <!-- STRINGS OF RunicSkull CLASS -->
     <string name="RunicSkull_Name">符文头骨</string>
-    <string name="RunicSkull_Gender">masculine</string>
+    <string name="RunicSkull_Gender">陽剛的</string>
     <string name="RunicSkull_Name_Objective">符文头骨</string>
     <string name="RunicSkull_Desc">就一个人为造物来看，这个头骨看上去就和真的一样。你可以看到它周围发出微弱的光。</string>
 
@@ -72,6 +72,6 @@
     <string name="NecromancerNPC_Intro2">啊哈！一个还没死的冒险者，棒极了！呃，请原谅，你看，本人是位死灵法师。研究死亡和死亡本身是我生活的一部分，但看到同样的事情一遍又一遍的发生实在是十分乏味，这是我在这里出现的原因之一。之前出现了一件惊人的事情，一座_亡灵之城_，死者们的古代城市，终于敞开了它的大门。事实上，我们正站在它的入口旁,还有……我告诉你这些干嘛，拿上这把钥匙先走。我是说，你喜欢冒险和金钱对吧？我会在你之后进去的，我还需要一点准备。</string>
 
     <!-- Badges -->
-    <string name="Badges_Lich_Slain">击杀巫妖</string>
+    <string name="Badges_Lich_Slain">巫妖已被擊殺</string>
 
 </resources>
