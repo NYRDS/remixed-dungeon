@@ -1,3 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">Vous ne pouvez pas changer votre destin !</string>
+
+    <string name="NecromancerArmor_NotNecromancer">Seuls les Nécromanciens peuvent utiliser cette armure !</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">Robe du Nécromancien</string>
+    <string name="NecromancerRobe_Info">Cette Robe permet au Nécromancien d\'invoquer un Serviteur des Morts au prix de 5 âmes. Les Serviteurs des morts sont des esclaves morts-vivants dont les pouvoirs grandissent avec leur maître</string>
+
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">nécromancien</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Les Nécromanciens commencent avec 15 points de vie.</item>
+        <item>Les nécromanciens ont une ressource unique, les âmes, pour invoquer des sorts. Chaque créature tuée fait gagner 1 âme.</item>
+        <item>Les Nécromanciens commencent avec une Robe du Nécromancien</item>
+        <item>Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7</item>
+        <item>Les Potions de soins sont identifiées dès le début.</item>
+    </string-array>
+
     </resources>

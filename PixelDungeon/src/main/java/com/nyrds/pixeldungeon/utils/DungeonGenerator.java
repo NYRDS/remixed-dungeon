@@ -40,14 +40,14 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 public class DungeonGenerator {
-	public static final String DEAD_END_LEVEL = "DeadEndLevel";
-	public static final String HALLS_LEVEL    = "HallsLevel";
-	public static final String CITY_LEVEL     = "CityLevel";
-	public static final String CAVES_LEVEL    = "CavesLevel";
-	public static final String PRISON_LEVEL   = "PrisonLevel";
-	public static final String SEWER_LEVEL    = "SewerLevel";
-	public static final String SPIDER_LEVEL   = "SpiderLevel";
-	public static final String GUTS_LEVEL     = "GutsLevel";
+	private static final String DEAD_END_LEVEL = "DeadEndLevel";
+	private static final String HALLS_LEVEL    = "HallsLevel";
+	private static final String CITY_LEVEL     = "CityLevel";
+	private static final String CAVES_LEVEL    = "CavesLevel";
+	private static final String PRISON_LEVEL   = "PrisonLevel";
+	private static final String SEWER_LEVEL    = "SewerLevel";
+	private static final String SPIDER_LEVEL   = "SpiderLevel";
+	private static final String GUTS_LEVEL     = "GutsLevel";
 
 	public static final String UNKNOWN        = "unknown";
 
@@ -282,7 +282,7 @@ public class DungeonGenerator {
 		WndStory.showChapter(id);
 	}
 
-	public static String guessLevelId(String levelKind, int levelDepth) {
+	static String guessLevelId(String levelKind, int levelDepth) {
 		try {
 			JSONArray ids = mLevels.names();
 			for (int i = 0; i < ids.length(); i++) {
