@@ -23,56 +23,56 @@ import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
 public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener {
-	
+
 	private Image image;
 	private Text  text;
 
 	private Text downloadProgress;
-	
+
 	public ModsButton() {
 		super();
-		
+
 		width = image.width;
 		height = image.height;
 	}
-	
+
 	@Override
 	protected void createChildren() {
 		super.createChildren();
-		
+
 		image = Icons.MODDING_MODE.get();
-		add( image );
-		
+		add(image);
+
 		text = new SystemText(GuiProperties.regularFontSize());
 		text.text(PixelDungeon.activeMod());
 		add(text);
 	}
-	
+
 	@Override
 	protected void layout() {
 		super.layout();
-		
+
 		image.x = x;
 		image.y = y;
-		
+
 		text.x = x;
 		text.y = image.y + image.height + 2;
 	}
-	
+
 	@Override
 	protected void onTouchDown() {
-		image.brightness( 1.5f );
-		Sample.INSTANCE.play( Assets.SND_CLICK );
+		image.brightness(1.5f);
+		Sample.INSTANCE.play(Assets.SND_CLICK);
 	}
-	
+
 	@Override
 	protected void onTouchUp() {
 		image.resetColor();
 	}
-	
+
 	@Override
 	protected void onClick() {
-		String [] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.INTERNET};
+		String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET};
 		Game.instance().doPermissionsRequest(this, requiredPermissions);
 	}
 
@@ -84,9 +84,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 			public void run() {
 				if (result) {
 					String downloadTo = FileSystem.getExternalStorageFile("mods_common.json").getAbsolutePath();
-
 					new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods_common.json", downloadTo);
-					//parent.add(new WndModSelect());
 				} else {
 					parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
 				}
@@ -115,10 +113,15 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 
 	@Override
 	public void DownloadComplete(String file, Boolean result) {
-		if (downloadProgress != null) {
-			Game.scene().remove(downloadProgress);
-			downloadProgress = null;
-		}
-		Game.scene().add(new WndModSelect());
+		Game.executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				if (downloadProgress != null) {
+					Game.scene().remove(downloadProgress);
+					downloadProgress = null;
+				}
+				Game.scene().add(new WndModSelect());
+			}
+		});
 	}
 }
