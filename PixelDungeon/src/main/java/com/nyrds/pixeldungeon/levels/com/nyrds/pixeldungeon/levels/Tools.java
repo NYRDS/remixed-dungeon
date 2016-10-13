@@ -169,17 +169,4 @@ public class Tools {
 			GameScene.updateMap();
 		}
 	}
-
-	public static void tileSplosion(Level level, int terrain, int position, int size){
-		int width = level.getWidth();
-		int height = level.getHeight();
-		//j * getWidth() + i
-		for (int i = -size; i < size; i++){
-			//level.set(position - i, terrain);
-			//level.set(position + i, terrain);
-			level.set(position - width*i + i, terrain);
-			level.set(position + width*i + i, terrain);
-		}
-
-	}
 }
