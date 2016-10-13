@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
-  <string name="ShadowLord_Name">暗影领主</string>
-  <string name="ShadowLord_Gender">masculine</string>
-  <string name="ShadowLord_Name_Objective">暗影領主</string>
-  <string name="ShadowLord_Desc">由纯粹的邪恶与黑暗构成的生物。许多人因为他的强大就坚信他就是古神本尊。虽然其他人认为他不过是古神内庭的守护者之一罢了。</string>
+  <string name="ShadowLord_Name">影之霸主</string>
+  <string name="ShadowLord_Gender">男性的</string>
+  <string name="ShadowLord_Name_Objective">影之霸主</string>
+  <string name="ShadowLord_Desc">由純粹的邪惡與黑暗構成的生物。許多人因为為他的強大力量就堅信他是古神本尊,而其他人認為他只不過是古神內庭中的一個守護者而已。</string>
   <string name="ShadowLord_Intro">做好準備！</string>
   <string name="ShadowLord_Death">不！！！！！！</string>
   <string name="AllowStatisticsCollectionScene_Title">用户使用統計報告</string>
-  <string name="AllowStatisticsCollectionScene_Request">如果您允许，混合的像素地牢将收集您的使用情况统计信息。这份数据将会用于：
--发现和修复各种小错误（遇到致命性错误时您将会收到发送错误报告的请求）
--游戏平衡性的改善
--修复特定设备的机能问题
--偶尔发布一些有趣的统计数据
-您可以随时改变您的决定（点击主界面的统计表图标）</string>
+  <string name="AllowStatisticsCollectionScene_Request">如果您允許，重鑄版像素地牢將收集您的使用情况統計信息。這份數據將會用於：
+-發現和修復各種小錯誤（遇到致命性錯誤時您將會收到發送錯誤報告的請求）
+-改善遊戲各方面的平衡
+-修復特定型號手機的性能問題
+-偶爾發布佈一些有趣的統計數據
+您可以隨時改變您的决定（點擊主界面的擊統計表圖標）</string>
   <string name="AllowStatisticsCollectionScene_Allow">允許</string>
   <string name="AllowStatisticsCollectionScene_Deny">拒絕</string>
-  <string name="Darkness_Info">像是永恒黑暗的碎片漂浮在空中</string>
-  <string name="WndSelectLanguage_ImproveTranslation">请帮助我们改善混合的像素地牢的翻译</string>
+  <string name="Darkness_Info">好像是永恆黑暗的碎片在空中漂浮</string>
+  <string name="WndSelectLanguage_ImproveTranslation">請幫助我們改善重鑄版像素地牢中的翻譯</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
-  <string name="WndSelectLanguage_LinkToTranslationSite">点击这里来加入混合的像素地牢的翻译团队</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">點擊這裏來加入重鑄版像素地牢的翻譯團隊</string>
 </resources>

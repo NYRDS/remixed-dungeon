@@ -1,3 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">Du kannst deine Klasse nicht mehr ändern!</string>
+
+    <string name="BlackSkullOfMastery_Lich">Werde zum Lich</string>
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Der schwarze Schädel wurde erweckt!</string>
+    <string name="BlackSkull_Ressurrect">Der schwarze Schädel hat die toten Monster erweckt um dir zu dienen!</string>
+    <string name="BlackSkull_Deactivated">Der schwarze Schädel ruht wieder...</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Knochenrüstung</string>
+    <string name="NecromancerArmor_NotNecromancer">Nur Totenbeschwörer können diese Rüstung nutzen!</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">Robe des Totenbeschwörers</string>
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">Totenbeschwörer</string>
+
+    <string name="HeroSubClass_NameLich">Lich</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Totenbeschwörer starten mit 15 Lebenspunkten.</item>
+        <item>Totenbeschwörer starten mit einer einzigartigen Totenbeschwörerrobe.</item>
+        <item>Totenbeschwörer starten mit einem Level 7 Skelettschlüssel.</item>
+        <item>Heiltränke sind von Anfang an identifiziert.</item>
+    </string-array>
+
+    <string name="Deathling_Gender">Männlich</string>
+    <string name="Necromancy_SoulsCountLabel">Seelen</string>
+
+    <string name="Necromancy_ReincarnationName">Wiedergeburt</string>
     </resources>

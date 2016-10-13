@@ -11,4 +11,6 @@
 	
 	<!-- STRINGS OF Capotain CLASS -->
     <string name="Capotain_Name">Capotaine</string>
+    <!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Fez</string>
     </resources>
