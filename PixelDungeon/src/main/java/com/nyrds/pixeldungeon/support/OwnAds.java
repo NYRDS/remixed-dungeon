@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 /**
  * Created by mike on 18.09.2016.
  */
-public class OwnAds {
+class OwnAds {
 
 	private static final String adTemplate = "<head><meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" /></head>" +
 			"<div width=100%%>%s</div>" +
@@ -21,10 +21,10 @@ public class OwnAds {
 
 
 	private static final String isAdTemplate = "<head><meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" /></head>" +
-			"<div width=100%%>%s</div>" +
-			"<div align=\"right\">.</div>";
+			"<div width=100%% height=100%%>%s</div>" +
+			"<div align=\"right\"height=100%%>.</div>";
 
-	public static void displayBanner() {
+	static void displayBanner() {
 		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
@@ -45,32 +45,34 @@ public class OwnAds {
 		});
 	}
 
-	public static void displayIsAd(final InterstitialPoint work) {
+	static void displayIsAd(final InterstitialPoint work) {
 		Game.instance().runOnUiThread(new Runnable() {
 
 			                              @Override
 			                              public void run() {
-				                              AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
-				                              alert.setTitle("Title here");
+				                              final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
 
 				                              WebView adView = new WebView(Game.instance());
+
 
 				                              ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 				                              adView.setLayoutParams(params);
 
-				                              adView.loadDataWithBaseURL(null, Utils.format(adTemplate, "Рекламко"), "text/html", "utf-8", null);
-
-
+				                              adView.loadDataWithBaseURL(null, Utils.format(isAdTemplate, "Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко"), "text/html", "utf-8", null);
 				                              alert.setView(adView);
+				                              alert.setCustomTitle(null);
 
-				                              alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+				                              final AlertDialog dialog = alert.create();
+
+				                              dialog.setCanceledOnTouchOutside(true);
+				                              dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 					                              @Override
-					                              public void onClick(DialogInterface dialog, int id) {
+					                              public void onCancel(DialogInterface dialog) {
 						                              dialog.dismiss();
 						                              work.returnToWork(true);
 					                              }
 				                              });
-				                              alert.show();
+				                              dialog.show();
 			                              }
 		                              }
 		);
