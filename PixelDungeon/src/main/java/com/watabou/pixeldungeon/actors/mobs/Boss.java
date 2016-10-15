@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 abstract public class Boss extends Mob {
 
-	public static final String BATTLE_MUSIC = "battleMusic";
+	private static final String BATTLE_MUSIC = "battleMusic";
 	private String battleMusic;
 
 	public Boss() {
