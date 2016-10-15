@@ -11,6 +11,7 @@ import org.json.JSONObject;
 
 abstract public class Boss extends Mob {
 
+	public static final String BATTLE_MUSIC = "battleMusic";
 	private String battleMusic;
 
 	public Boss() {
@@ -46,8 +47,8 @@ abstract public class Boss extends Mob {
 		try {
 			JSONObject desc = defMap.get(getClass());
 
-			if (desc.has("battleMusic")) {
-				battleMusic = desc.getString("battleMusic");
+			if (desc.has(BATTLE_MUSIC)) {
+				battleMusic = desc.getString(BATTLE_MUSIC);
 			}
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
