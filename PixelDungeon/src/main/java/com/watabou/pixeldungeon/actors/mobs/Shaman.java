@@ -80,13 +80,13 @@ public class Shaman extends Mob {
 	public int defenseProc(Char enemy, int damage) {
 		
 		if( hp() > 2*ht() / 3 && fleeState < 1) {
-			state = FLEEING;
+			setState(FLEEING);
 			fleeState++;
 			return damage/2;
 		}
 		
 		if( hp() > ht() / 3 && fleeState < 2 ) {
-			state = FLEEING;
+			setState(FLEEING);
 			fleeState++;
 			return damage/2;
 		}
@@ -98,7 +98,7 @@ public class Shaman extends Mob {
 	protected boolean getFurther(int target) {
 		
 		if(Dungeon.level.distance(getPos(), target) >2) {
-			state = HUNTING;
+			setState(HUNTING);
 		}
 		
 		return super.getFurther(target);

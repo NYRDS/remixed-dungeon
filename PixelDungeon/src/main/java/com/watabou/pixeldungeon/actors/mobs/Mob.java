@@ -65,6 +65,7 @@ public abstract class Mob extends Char {
 
 	protected static final String TXT_RAGE    = "#$%^";
 	protected static final String TXT_EXP     = "%+dEXP";
+
 	private static final   float  SPLIT_DELAY = 1f;
 
 	public AiState SLEEPING  = new Sleeping();
@@ -73,7 +74,7 @@ public abstract class Mob extends Char {
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
 
-	public AiState state = SLEEPING;
+	private AiState state = SLEEPING;
 
 	protected Object spriteClass;
 
@@ -133,15 +134,15 @@ public abstract class Mob extends Char {
 
 		super.storeInBundle(bundle);
 
-		if (state == SLEEPING) {
+		if (getState() == SLEEPING) {
 			bundle.put(STATE, Sleeping.TAG);
-		} else if (state == WANDERING) {
+		} else if (getState() == WANDERING) {
 			bundle.put(STATE, Wandering.TAG);
-		} else if (state == HUNTING) {
+		} else if (getState() == HUNTING) {
 			bundle.put(STATE, Hunting.TAG);
-		} else if (state == FLEEING) {
+		} else if (getState() == FLEEING) {
 			bundle.put(STATE, Fleeing.TAG);
-		} else if (state == PASSIVE) {
+		} else if (getState() == PASSIVE) {
 			bundle.put(STATE, Passive.TAG);
 		}
 		bundle.put(TARGET, target);
@@ -158,19 +159,19 @@ public abstract class Mob extends Char {
 		String state = bundle.getString(STATE);
 		switch (state) {
 			case Sleeping.TAG:
-				this.state = SLEEPING;
+				this.setState(SLEEPING);
 				break;
 			case Wandering.TAG:
-				this.state = WANDERING;
+				this.setState(WANDERING);
 				break;
 			case Hunting.TAG:
-				this.state = HUNTING;
+				this.setState(HUNTING);
 				break;
 			case Fleeing.TAG:
-				this.state = FLEEING;
+				this.setState(FLEEING);
 				break;
 			case Passive.TAG:
-				this.state = PASSIVE;
+				this.setState(PASSIVE);
 				break;
 		}
 
@@ -237,7 +238,7 @@ public abstract class Mob extends Char {
 		boolean enemyInFOV = getEnemy().isAlive() && Dungeon.level.cellValid(getEnemy().getPos()) && Dungeon.level.fieldOfView[getEnemy().getPos()]
 				&& getEnemy().invisible <= 0;
 
-		return state.act(enemyInFOV, justAlerted);
+		return getState().act(enemyInFOV, justAlerted);
 	}
 
 	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
@@ -280,7 +281,7 @@ public abstract class Mob extends Char {
 			return newEnemy;
 		}
 
-		state  = WANDERING;
+		setState(WANDERING);
 		target = Dungeon.hero.getPos();
 
 		return DUMMY;
@@ -339,12 +340,12 @@ public abstract class Mob extends Char {
 
 		if (buff instanceof Amok) {
 			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			state = HUNTING;
+			setState(HUNTING);
 		} else if (buff instanceof Terror) {
-			state = FLEEING;
+			setState(FLEEING);
 		} else if (buff instanceof Sleep) {
 			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-			state = SLEEPING;
+			setState(SLEEPING);
 			postpone(Sleep.SWS);
 		}
 	}
@@ -354,7 +355,7 @@ public abstract class Mob extends Char {
 		super.remove(buff);
 		if (buff instanceof Terror) {
 			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			state = HUNTING;
+			setState(HUNTING);
 		}
 	}
 
@@ -462,8 +463,8 @@ public abstract class Mob extends Char {
 
 		Terror.recover(this);
 
-		if (state == SLEEPING) {
-			state = WANDERING;
+		if (getState() == SLEEPING) {
+			setState(WANDERING);
 		}
 		alerted = true;
 
@@ -548,7 +549,7 @@ public abstract class Mob extends Char {
 
 		clone.hp((hp() - damage) / 2);
 		clone.setPos(cell);
-		clone.state = clone.HUNTING;
+		clone.setState(clone.HUNTING);
 
 		if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
 			Door.enter(clone.getPos());
@@ -624,8 +625,8 @@ public abstract class Mob extends Char {
 
 		notice();
 
-		if (state != HUNTING) {
-			state = WANDERING;
+		if (getState() != HUNTING) {
+			setState(WANDERING);
 		}
 		target = cell;
 	}
@@ -657,6 +658,14 @@ public abstract class Mob extends Char {
 		}
 	}
 
+	public AiState getState() {
+		return state;
+	}
+
+	public void setState(AiState state) {
+		this.state = state;
+	}
+
 	public interface AiState {
 		boolean act(boolean enemyInFOV, boolean justAlerted);
 
@@ -676,7 +685,7 @@ public abstract class Mob extends Char {
 				enemySeen = true;
 
 				notice();
-				state = HUNTING;
+				setState(HUNTING);
 				target = getEnemy().getPos();
 
 				if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
@@ -719,7 +728,7 @@ public abstract class Mob extends Char {
 				enemySeen = true;
 
 				notice();
-				state = HUNTING;
+				setState(HUNTING);
 				target = getEnemy().getPos();
 
 			} else {
@@ -746,7 +755,7 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	private class Hunting implements AiState {
+	class Hunting implements AiState {
 
 		public static final String TAG = "HUNTING";
 
@@ -772,7 +781,7 @@ public abstract class Mob extends Char {
 				} else {
 
 					spend(TICK);
-					state = WANDERING;
+					setState(WANDERING);
 					target = Dungeon.level.randomDestination();
 					return true;
 				}

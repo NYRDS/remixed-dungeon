@@ -19,7 +19,7 @@ public class TreacherousSpirit extends Mob {
         EXP = 45;
         maxLvl = 30;
 
-        state = WANDERING;
+        setState(WANDERING);
         lootChance = 1f;
         loot = HeartOfDarkness.class;
     }

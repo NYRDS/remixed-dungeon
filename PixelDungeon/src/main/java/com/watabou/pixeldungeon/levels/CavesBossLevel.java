@@ -213,7 +213,7 @@ public class CavesBossLevel extends Level {
 			enteredArena = true;
 			
 			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );
-			boss.state = boss.HUNTING;
+			boss.setState(boss.HUNTING);
 			do {
 				boss.setPos(Random.Int( getLength() ));
 			} while (

@@ -35,7 +35,7 @@ public class PseudoAmulet extends Item {
 
 		MimicAmulet mimic = new MimicAmulet();
 		mimic.setPos(spawnPos);
-		mimic.state = mimic.WANDERING;
+		mimic.setState(mimic.WANDERING);
 		mimic.adjustStats(Dungeon.depth);
 		
 		Dungeon.level.spawnMob( mimic );

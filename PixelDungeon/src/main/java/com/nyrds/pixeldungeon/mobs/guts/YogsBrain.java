@@ -113,7 +113,7 @@ public class YogsBrain extends Boss {
 
 	@Override
 	protected boolean getCloser( int target ) {
-		if (state == HUNTING) {
+		if (getState() == HUNTING) {
 			return enemySeen && getFurther( target );
 		} else {
 			return super.getCloser( target );

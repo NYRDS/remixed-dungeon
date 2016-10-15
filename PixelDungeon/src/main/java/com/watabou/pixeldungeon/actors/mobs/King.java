@@ -35,7 +35,6 @@ import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.CityBossLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.KingSprite;
@@ -212,7 +211,7 @@ public class King extends Boss {
 			
 			EXP = 0;
 			
-			state = WANDERING;
+			setState(WANDERING);
 		}
 		
 		@Override

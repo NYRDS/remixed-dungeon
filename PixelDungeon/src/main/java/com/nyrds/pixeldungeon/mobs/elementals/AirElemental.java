@@ -47,7 +47,7 @@ public class AirElemental extends Mob {
 
 	@Override
 	protected boolean getCloser(int target) {
-		if (state == HUNTING && Dungeon.level.distance(getPos(), target) < maxDistance - 1) {
+		if (getState() == HUNTING && Dungeon.level.distance(getPos(), target) < maxDistance - 1) {
 			return getFurther(target);
 		}
 

@@ -36,7 +36,7 @@ public class RatKing extends NPC {
 	
 	public RatKing() {
 		spriteClass = RatKingSprite.class;
-		state  = SLEEPING;
+		setState(SLEEPING);
 		defenseSkill = 20;
 		
 		hp(ht(30));
@@ -109,10 +109,10 @@ public class RatKing extends NPC {
 			return false;
 		}
 		
-		if (state == SLEEPING) {
+		if (getState() == SLEEPING) {
 			notice();
 			say(Game.getVar(R.string.RatKing_Info1));
-			state = WANDERING;
+			setState(WANDERING);
 		} else {
 			anger++;
 			if(friendly()) {
@@ -120,7 +120,7 @@ public class RatKing extends NPC {
 			} else {
 				setFraction(Fraction.DUNGEON);
 
-				state = HUNTING;
+				setState(HUNTING);
 				yell(Game.getVar(R.string.RatKing_Info3));
 			}
 		}

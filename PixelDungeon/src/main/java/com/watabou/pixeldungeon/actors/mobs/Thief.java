@@ -102,7 +102,7 @@ public class Thief extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		if (item == null && enemy instanceof Hero && steal( (Hero)enemy )) {
-			state = FLEEING;
+			setState(FLEEING);
 		}
 		
 		return damage;
@@ -110,7 +110,7 @@ public class Thief extends Mob {
 	
 	@Override
 	public int defenseProc(Char enemy, int damage) {
-		if (state == FLEEING) {
+		if (getState() == FLEEING) {
 			Dungeon.level.drop( new Gold(), getPos() ).sprite.drop();
 		}
 		
@@ -149,7 +149,7 @@ public class Thief extends Mob {
 		protected void nowhereToRun() {
 			if (buff( Terror.class ) == null) {
 				getSprite().showStatus( CharSprite.NEGATIVE, TXT_RAGE );
-				state = HUNTING;
+				setState(HUNTING);
 			} else {
 				super.nowhereToRun();
 			}

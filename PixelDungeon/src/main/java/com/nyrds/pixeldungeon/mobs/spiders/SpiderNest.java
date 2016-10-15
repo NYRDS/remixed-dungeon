@@ -45,7 +45,7 @@ public class SpiderNest extends Mob {
 		if(isPet()) {
 			Mob.makePet(newSpider, Dungeon.hero);
 		}
-		state = SLEEPING;
+		setState(SLEEPING);
 		
 		postpone(20);
 		

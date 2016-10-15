@@ -111,7 +111,7 @@ public class Mimic extends Mob {
 	
 	@Override
 	public boolean reset() {
-		state = WANDERING;
+		setState(WANDERING);
 		return true;
 	}
 
@@ -138,7 +138,7 @@ public class Mimic extends Mob {
 		m.adjustStats( Dungeon.depth );
 		m.hp(m.ht());
 		m.setPos(pos);
-		m.state = m.HUNTING;
+		m.setState(m.HUNTING);
 		level.spawnMob(m,1);
 		
 		m.getSprite().turnTo( pos, Dungeon.hero.getPos() );

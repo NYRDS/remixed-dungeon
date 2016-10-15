@@ -47,7 +47,7 @@ public class Nightmare extends Mob {
     protected boolean act(){
         super.act();
 
-        state = HUNTING;
+        setState(HUNTING);
 
         return true;
     }

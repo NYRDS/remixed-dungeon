@@ -134,11 +134,15 @@ public class GameScene extends PixelScene {
 		busy.y = sb.bottom() + 1;
 	}
 
-	@Override
-	public void create() {
 
+	static public void playLevelMusic() {
 		Music.INSTANCE.play(Dungeon.level.music(), true);
 		Music.INSTANCE.volume(1f);
+	}
+
+	@Override
+	public void create() {
+		playLevelMusic();
 
 		PixelDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
 

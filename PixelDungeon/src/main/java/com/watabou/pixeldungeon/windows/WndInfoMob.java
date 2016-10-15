@@ -37,7 +37,7 @@ public class WndInfoMob extends WndTitledMessage {
 	
 	private static String desc( Mob mob ) {
 
-		return mob.description() + "\n\n" + mob.state.status() + ".";
+		return mob.description() + "\n\n" + mob.getState().status() + ".";
 	}
 	
 	private static class MobTitle extends Component {

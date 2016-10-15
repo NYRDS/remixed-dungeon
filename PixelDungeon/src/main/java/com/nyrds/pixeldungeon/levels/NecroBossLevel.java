@@ -143,7 +143,7 @@ public class NecroBossLevel extends Level {
 			enteredArena = true;
 			
 			Lich boss = new Lich();
-			boss.state = boss.HUNTING;
+			boss.setState(boss.HUNTING);
 			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
 			Dungeon.level.spawnMob(boss);

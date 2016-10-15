@@ -19,7 +19,7 @@ public class Hedgehog extends NPC {
 		
 		flying = false;
 		
-		state = WANDERING;
+		setState(WANDERING);
 	}
 	
 	@Override

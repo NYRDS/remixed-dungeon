@@ -11,7 +11,7 @@ public class MobSpawner {
 	static public Mob spawnRandomMob(Level level, int position) {
 		Mob mob = Bestiary.mob(Dungeon.depth, level.levelKind());
 		mob.setPos(position);
-		mob.state = mob.WANDERING;
+		mob.setState(mob.WANDERING);
 		level.spawnMob(mob);
 		return mob;
 	}
@@ -19,7 +19,7 @@ public class MobSpawner {
 	static public void spawnJarOfSouls(Level level, int position) {
 		Mob mob = new JarOfSouls();
 		mob.setPos(position);
-		mob.state = mob.WANDERING;
+		mob.setState(mob.WANDERING);
 		level.spawnMob(mob);
 	}
 

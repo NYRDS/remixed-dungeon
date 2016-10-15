@@ -593,7 +593,7 @@ public abstract class Level implements Bundlable {
 		if (!mob.isWallWalker()) {
 			mob.setPos(randomRespawnCell());
 		} else {
-			mob.state = mob.WANDERING;
+			mob.setState(mob.WANDERING);
 			mob.setPos(randomSolidCell());
 		}
 		return mob;
@@ -618,7 +618,7 @@ public abstract class Level implements Bundlable {
 				if (hostileMobsCount < nMobs()) {
 
 					Mob mob = createMob();
-					mob.state = mob.WANDERING;
+					mob.setState(mob.WANDERING);
 					if (Dungeon.hero.isAlive() && mob.getPos() != -1) {
 						spawnMob(mob);
 						if (Statistics.amuletObtained) {

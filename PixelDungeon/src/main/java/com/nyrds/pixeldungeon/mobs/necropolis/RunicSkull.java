@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class RunicSkull extends MultiKindMob {
@@ -29,7 +28,7 @@ public class RunicSkull extends MultiKindMob {
 
 		pacified = true;
 		kind = Random.Int(4);
-		state = WANDERING;
+		setState(WANDERING);
 
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );

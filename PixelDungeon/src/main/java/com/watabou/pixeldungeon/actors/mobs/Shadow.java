@@ -14,7 +14,7 @@ public class Shadow extends Mob {
 		EXP = 5;
 		maxLvl = 10;
 		
-		state = WANDERING;
+		setState(WANDERING);
 	}
 
 	@Override

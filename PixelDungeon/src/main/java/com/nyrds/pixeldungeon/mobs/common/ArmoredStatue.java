@@ -29,7 +29,7 @@ public class ArmoredStatue extends Mob {
 
 	public ArmoredStatue() {
 		EXP = 0;
-		state = PASSIVE;
+		setState(PASSIVE);
 
 		do {
 			armor = (Armor) Generator.random( Generator.Category.ARMOR );
@@ -94,8 +94,8 @@ public class ArmoredStatue extends Mob {
 	@Override
 	public void damage( int dmg, Object src ) {
 
-		if (state == PASSIVE) {
-			state = HUNTING;
+		if (getState() == PASSIVE) {
+			setState(HUNTING);
 		}
 		
 		super.damage( dmg, src );
@@ -120,7 +120,7 @@ public class ArmoredStatue extends Mob {
 	
 	@Override
 	public boolean reset() {
-		state = PASSIVE;
+		setState(PASSIVE);
 		return true;
 	}
 

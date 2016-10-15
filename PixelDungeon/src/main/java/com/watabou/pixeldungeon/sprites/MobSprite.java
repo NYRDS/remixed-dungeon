@@ -34,7 +34,7 @@ public class MobSprite extends CharSprite {
 	public void update() {
 		if(ch instanceof  Mob) {
 			Mob mob = (Mob) ch;
-			sleeping = mob.state == mob.SLEEPING;
+			sleeping = mob.getState() == mob.SLEEPING;
 			controlled = mob.isPet();
 		}
 		super.update();

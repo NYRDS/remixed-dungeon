@@ -75,7 +75,7 @@ public class AssasinArmor extends ClassArmor {
 				for (Mob mob : Dungeon.level.mobs) {
 					if (Dungeon.level.fieldOfView[mob.getPos()]) {
 						Buff.prolong( mob, Blindness.class, 2 );
-						mob.state = mob.WANDERING;
+						mob.setState(mob.WANDERING);
 						mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );
 					}
 				}

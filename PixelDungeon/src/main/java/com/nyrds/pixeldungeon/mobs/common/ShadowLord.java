@@ -56,7 +56,7 @@ public class ShadowLord extends Boss {
 		if (cell != -1) {
 			Mob mob = new Shadow();
 
-			mob.state = mob.WANDERING;
+			mob.setState(mob.WANDERING);
 			Dungeon.level.spawnMob(mob, 1);
 
 			WandOfBlink.appear(mob, cell);
@@ -70,7 +70,7 @@ public class ShadowLord extends Boss {
 			if (cell != -1) {
 				Mob mob = new Wraith();
 
-				mob.state = mob.WANDERING;
+				mob.setState(mob.WANDERING);
 				Dungeon.level.spawnMob(mob, 1);
 				WandOfBlink.appear(mob, cell);
 			}
@@ -170,7 +170,7 @@ public class ShadowLord extends Boss {
 		super.damage(dmg, src);
 		if (src != this) {
 			if (dmg > 0 && cooldown < 0) {
-				state = FLEEING;
+				setState(FLEEING);
 				if (src instanceof Char) {
 					blink(((Char) src).getPos());
 				}
@@ -182,10 +182,10 @@ public class ShadowLord extends Boss {
 
 	@Override
 	protected boolean act() {
-		if (state == FLEEING) {
+		if (getState() == FLEEING) {
 			cooldown--;
 			if (cooldown < 0) {
-				state = WANDERING;
+				setState(WANDERING);
 				if (Math.random() < 0.7) {
 					spawnWraith();
 				} else {

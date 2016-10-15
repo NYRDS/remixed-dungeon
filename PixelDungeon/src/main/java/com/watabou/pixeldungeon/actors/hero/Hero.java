@@ -1765,7 +1765,7 @@ public class Hero extends Char {
 			}
 			pet.setPos(cell);
 
-			pet.state = pet.WANDERING;
+			pet.setState(pet.WANDERING);
 			Dungeon.level.spawnMob(pet);
 			pet.regenSprite();
 		}

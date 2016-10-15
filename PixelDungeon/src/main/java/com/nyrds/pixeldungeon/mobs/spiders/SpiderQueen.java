@@ -63,7 +63,7 @@ public class SpiderQueen extends Boss {
 	@Override
 	protected boolean getCloser( int target ) {
 		if (hp() < ht() / 2) {
-			if (state == HUNTING && Dungeon.level.distance(getPos(), target) < 5) {
+			if (getState() == HUNTING && Dungeon.level.distance(getPos(), target) < 5) {
 				return getFurther(target);
 			}
 			return super.getCloser(target);

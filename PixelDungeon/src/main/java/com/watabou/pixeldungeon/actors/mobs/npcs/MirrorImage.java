@@ -35,7 +35,7 @@ public class MirrorImage extends NPC {
 
 	// for restoreFromBundle
 	public MirrorImage() {
-		state = HUNTING;
+		setState(HUNTING);
 		setEnemy(DUMMY);
 	}
 

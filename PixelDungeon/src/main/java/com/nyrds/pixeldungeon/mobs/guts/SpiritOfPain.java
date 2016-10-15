@@ -15,7 +15,7 @@ public class SpiritOfPain extends Mob {
 
         EXP = 0;
 
-        state = HUNTING;
+        setState(HUNTING);
         flying = true;
     }
 

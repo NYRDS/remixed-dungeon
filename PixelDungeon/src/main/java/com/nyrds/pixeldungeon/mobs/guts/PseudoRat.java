@@ -20,7 +20,7 @@ public class PseudoRat extends Mob {
         loot = Gold.class;
         lootChance = 0.8f;
 
-        state = HUNTING;
+        setState(HUNTING);
 
         IMMUNITIES.add(Paralysis.class);
     }

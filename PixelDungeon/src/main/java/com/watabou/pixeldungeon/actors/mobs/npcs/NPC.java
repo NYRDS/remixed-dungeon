@@ -32,7 +32,7 @@ public abstract class NPC extends Mob {
 		hp(ht(1));
 		EXP = 0;
 
-		state = PASSIVE;
+		setState(PASSIVE);
 		
 		fraction = Fraction.NEUTRAL;
 		

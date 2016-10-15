@@ -62,7 +62,7 @@ public class Yog extends Boss {
 
 		EXP = 50;
 
-		state = PASSIVE;
+		setState(PASSIVE);
 
 		IMMUNITIES.add(Death.class);
 		IMMUNITIES.add(Terror.class);
@@ -184,7 +184,7 @@ public class Yog extends Boss {
 
 			EXP = 0;
 
-			state = WANDERING;
+			setState(WANDERING);
 
 			RESISTANCES.add(ToxicGas.class);
 
@@ -254,7 +254,7 @@ public class Yog extends Boss {
 
 			EXP = 0;
 
-			state = WANDERING;
+			setState(WANDERING);
 
 			RESISTANCES.add(ToxicGas.class);
 
@@ -343,7 +343,7 @@ public class Yog extends Boss {
 
 			EXP = 0;
 
-			state = HUNTING;
+			setState(HUNTING);
 		}
 
 		@Override

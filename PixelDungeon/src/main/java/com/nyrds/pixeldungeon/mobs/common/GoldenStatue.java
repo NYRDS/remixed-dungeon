@@ -25,7 +25,7 @@ public class GoldenStatue extends Mob {
 
 	public GoldenStatue() {
 		EXP = 0;
-		state = PASSIVE;
+		setState(PASSIVE);
 
 		weapon = new GoldenSword();
 		weapon.identify();
@@ -86,8 +86,8 @@ public class GoldenStatue extends Mob {
 	@Override
 	public void damage( int dmg, Object src ) {
 
-		if (state == PASSIVE) {
-			state = HUNTING;
+		if (getState() == PASSIVE) {
+			setState(HUNTING);
 		}
 
 		super.damage( dmg, src );
@@ -121,7 +121,7 @@ public class GoldenStatue extends Mob {
 
 	@Override
 	public boolean reset() {
-		state = PASSIVE;
+		setState(PASSIVE);
 		return true;
 	}
 

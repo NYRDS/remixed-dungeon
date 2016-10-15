@@ -44,7 +44,7 @@ public class Statue extends Mob {
 		spriteClass = StatueSprite.class;
 
 		EXP = 0;
-		state = PASSIVE;
+		setState(PASSIVE);
 		
 		do {
 			weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
@@ -108,8 +108,8 @@ public class Statue extends Mob {
 	@Override
 	public void damage( int dmg, Object src ) {
 
-		if (state == PASSIVE) {
-			state = HUNTING;
+		if (getState() == PASSIVE) {
+			setState(HUNTING);
 		}
 		
 		super.damage( dmg, src );
@@ -139,7 +139,7 @@ public class Statue extends Mob {
 	
 	@Override
 	public boolean reset() {
-		state = PASSIVE;
+		setState(PASSIVE);
 		return true;
 	}
 

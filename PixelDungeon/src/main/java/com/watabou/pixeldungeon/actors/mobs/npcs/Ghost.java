@@ -64,7 +64,7 @@ public class Ghost extends NPC {
 		
 		flying = true;
 		
-		state = WANDERING;
+		setState(WANDERING);
 	}
 	
 	private static final String TXT_ROSE1 = Game.getVar(R.string.Ghost_Rose1);
@@ -349,7 +349,7 @@ public class Ghost extends NPC {
 			EXP = 0;
 			maxLvl = 5;	
 			
-			state = WANDERING;
+			setState(WANDERING);
 			lootChance = 1;
 			loot = new RatSkull();
 		}

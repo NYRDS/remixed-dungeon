@@ -68,10 +68,10 @@ public class Spinner extends Mob {
 	protected boolean act() {
 		boolean result = super.act();
 		
-		if (state == FLEEING  && buff( Terror.class ) == null && 
+		if (getState() == FLEEING  && buff( Terror.class ) == null &&
 			enemySeen && getEnemy().buff( Poison.class ) == null) {
 			
-			state = HUNTING;
+			setState(HUNTING);
 		}
 		return result;
 	}
@@ -80,7 +80,7 @@ public class Spinner extends Mob {
 	public int attackProc( Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
-			state = FLEEING;
+			setState(FLEEING);
 		}
 		
 		return damage;
@@ -88,7 +88,7 @@ public class Spinner extends Mob {
 	
 	@Override
 	public void move( int step ) {
-		if (state == FLEEING) {
+		if (getState() == FLEEING) {
 			GameScene.add( Blob.seed( getPos(), Random.Int( 5, 7 ), Web.class ) );
 		}
 		super.move( step );
@@ -98,7 +98,7 @@ public class Spinner extends Mob {
 		@Override
 		protected void nowhereToRun() {
 			if (buff( Terror.class ) == null) {
-				state = HUNTING;
+				setState(HUNTING);
 			} else {
 				super.nowhereToRun();
 			}

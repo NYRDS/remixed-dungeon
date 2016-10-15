@@ -80,7 +80,7 @@ public class Wraith extends Mob {
 	
 	@Override
 	public boolean reset() {
-		state = WANDERING;
+		setState(WANDERING);
 		return true;
 	}
 	
@@ -99,7 +99,7 @@ public class Wraith extends Mob {
 			Wraith w = new Wraith();
 			w.adjustStats( Dungeon.depth );
 			w.setPos(pos);
-			w.state = w.HUNTING;
+			w.setState(w.HUNTING);
 			Dungeon.level.spawnMob(w, SPAWN_DELAY );
 			
 			w.getSprite().alpha( 0 );
