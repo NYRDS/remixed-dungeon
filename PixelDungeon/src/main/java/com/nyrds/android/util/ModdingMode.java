@@ -1,7 +1,6 @@
 package com.nyrds.android.util;
 
 import android.content.Context;
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -78,11 +77,8 @@ public class ModdingMode {
 		}
 	}
 
-	public static boolean isModdingAllowed(String resName){
-		if(resName.contains("accessories") || resName.contains("banners")){
-			return false;
-		}
-		return true;
+	private static boolean isModdingAllowed(String resName){
+		return !(resName.contains("accessories") || resName.contains("banners"));
 	}
 
 	public static void setContext(Context context) {

@@ -1,5 +1,7 @@
 package com.nyrds.android.util;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.noosa.Game;
 
 import org.json.JSONException;
@@ -12,21 +14,31 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class JsonHelper {
+
+	@NonNull
+	static public JSONObject tryReadFile(String fileName) {
+		if(ModdingMode.isResourceExist(fileName)) {
+			return readFile(fileName);
+		}
+		return new JSONObject();
+	}
+
+	@NonNull
 	static public JSONObject readFile(String fileName) {
 		try {
 			InputStream stream = ModdingMode.getInputStream(fileName);
-			StringBuilder animationDef = new StringBuilder();
+			StringBuilder jsonDef = new StringBuilder();
 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 
 			String line = reader.readLine();
 
 			while (line != null) {
-				animationDef.append(line);
+				jsonDef.append(line);
 				line = reader.readLine();
 			}
 			reader.close();
-			return (JSONObject) new JSONTokener(animationDef.toString()).nextValue();
+			return (JSONObject) new JSONTokener(jsonDef.toString()).nextValue();
 		} catch (JSONException e) {
 			Game.toast(e.getLocalizedMessage());
 			throw new TrackedRuntimeException(e);

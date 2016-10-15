@@ -1,17 +1,21 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.scenes.GameScene;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 abstract public class Boss extends Mob {
 
 	private String battleMusic;
 
 	public Boss() {
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
+		RESISTANCES.add(Death.class);
+		RESISTANCES.add(ScrollOfPsionicBlast.class);
 	}
 
 	@Override
@@ -21,8 +25,8 @@ abstract public class Boss extends Mob {
 
 	@Override
 	public void setState(AiState state) {
-		if( state instanceof Hunting ){
-			if(battleMusic!=null) {
+		if (state instanceof Hunting) {
+			if (battleMusic != null) {
 				Music.INSTANCE.play(battleMusic, true);
 			}
 		}
@@ -33,5 +37,21 @@ abstract public class Boss extends Mob {
 	public void die(Object cause) {
 		GameScene.playLevelMusic();
 		super.die(cause);
+	}
+
+	@Override
+	protected void readCharData() {
+		super.readCharData();
+
+		try {
+			JSONObject desc = defMap.get(getClass());
+
+			if (desc.has("battleMusic")) {
+				battleMusic = desc.getString("battleMusic");
+			}
+		} catch (JSONException e) {
+			throw new TrackedRuntimeException(e);
+		}
+
 	}
 }

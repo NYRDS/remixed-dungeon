@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -59,6 +60,9 @@ import com.watabou.utils.Random;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class Mob extends Char {
 
 	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
@@ -93,6 +97,8 @@ public abstract class Mob extends Char {
 	protected boolean alerted = false;
 
 	protected static final float TIME_TO_WAKE_UP = 1f;
+
+	static protected Map<Class, JSONObject> defMap = new HashMap<>();
 
 	// Unreachable target
 	public static final Mob DUMMY = new Mob() {
@@ -895,5 +901,16 @@ public abstract class Mob extends Char {
 
 	protected void setEnemy(@NonNull Char enemy) {
 		this.enemy = enemy;
+	}
+
+	@Override
+	protected void readCharData() {
+		super.readCharData();
+
+		if (!defMap.containsKey(getClass())) {
+			defMap.put(getClass(), JsonHelper.tryReadFile("mobsDesc"+getClass().getSimpleName()));
+		}
+
+
 	}
 }
