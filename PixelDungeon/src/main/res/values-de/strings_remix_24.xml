@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	</resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Knoten</string>
+    <!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Schatten</string>
+    <!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Hasenohren</string>
+    <!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Kürbis</string>
+    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Zauberhut</string>
+    <string name="WndHats_SlotTitle">ausgerüstet</string>
+    <string name="WndHats_NoConnectionMsg">Keine Verbindung zu Google Play möglich.</string>
+    <string name="WndHats_Purchased">Ich hab es!</string>
+
+    <string name="WndHats_BackButton">Zurück</string>
+    <string name="WndHats_BuyButton">Kaufen</string>
+    <string name="WndHats_EquipButton">Rüste aus</string>
+    <string name="WndHats_InfoButton">Untersuche</string>
+    </resources>

@@ -4,6 +4,9 @@
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_WayAlreadyChosen">Vous ne pouvez pas changer votre destin !</string>
 
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Le Crâne Noir est éveillé !</string>
+    <string name="BlackSkull_Ressurrect">Le Crâne Noir à crée ce monstre pour vous servir !</string>
     <string name="NecromancerArmor_NotNecromancer">Seuls les Nécromanciens peuvent utiliser cette armure !</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->

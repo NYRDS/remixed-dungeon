@@ -12,6 +12,7 @@
     <string name="BlackSkull_Name_Awakened">erwachter schwarzer Schädel</string>
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">Seelenbruchstück</string>
+    <string name="SoulShard_Info">Es ist ein Bruchstück von den Resten vom Seelenglas. Es glüht magisch. Vielleicht gibt es jemanden der sich dafür interessiert.</string>
     <string name="SoulShard_Gender">maskulin</string>
 
     <!-- Mobs descriptions -->

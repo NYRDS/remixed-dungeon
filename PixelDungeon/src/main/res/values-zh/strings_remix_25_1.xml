@@ -2,7 +2,7 @@
 <resources>
     <!-- Item descriptions -->
     <!-- STRINGS OF TomeOfMastery CLASS -->
-    <string name="TomeOfMastery_WayAlreadyChosen">木已成舟，无法改变！</string>
+    <string name="TomeOfMastery_WayAlreadyChosen">木已成舟，無法改變！</string>
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">勾魂使者</string>
