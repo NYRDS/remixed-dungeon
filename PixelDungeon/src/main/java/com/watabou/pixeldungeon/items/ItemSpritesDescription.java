@@ -62,7 +62,7 @@ public class ItemSpritesDescription {
 
 	static public void readItemsDesc() {
 		if (ModdingMode.isResourceExist(SPRITES_DESC_ITEMS_JSON)) {
-			JSONObject itemsDesc = JsonHelper.readFile(SPRITES_DESC_ITEMS_JSON);
+			JSONObject itemsDesc = JsonHelper.readJsonFromAsset(SPRITES_DESC_ITEMS_JSON);
 
 			Iterator<?> keys = itemsDesc.keys();
 

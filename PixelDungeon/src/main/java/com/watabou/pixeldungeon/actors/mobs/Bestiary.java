@@ -41,7 +41,7 @@ public class Bestiary {
 
 	private static Class<? extends Mob> getMobFromExternalBestiary(int depth, String levelKind) {
 		if (mobsData == null) {
-			mobsData = JsonHelper.readFile("levelsDesc/Bestiary.json");
+			mobsData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
 			if (mobsData == null) {
 				throw new TrackedRuntimeException("malformed levelsDesc/Bestiary.json");
 			}

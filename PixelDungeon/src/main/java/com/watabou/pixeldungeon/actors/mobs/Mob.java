@@ -908,7 +908,7 @@ public abstract class Mob extends Char {
 		super.readCharData();
 
 		if (!defMap.containsKey(getClass())) {
-			defMap.put(getClass(), JsonHelper.tryReadFile("mobsDesc/"+getClass().getSimpleName()+".json"));
+			defMap.put(getClass(), JsonHelper.tryReadJsonFromAssets("mobsDesc/"+getClass().getSimpleName()+".json"));
 		}
 
 

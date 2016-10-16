@@ -47,7 +47,7 @@ public class MobSpriteDef extends MobSprite {
 		name = defName;
 
 		if (!defMap.containsKey(name)) {
-			defMap.put(name, JsonHelper.readFile(name));
+			defMap.put(name, JsonHelper.readJsonFromAsset(name));
 		}
 
 		selectKind(kind);

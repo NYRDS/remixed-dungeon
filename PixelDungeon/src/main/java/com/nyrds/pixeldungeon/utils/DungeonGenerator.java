@@ -71,9 +71,9 @@ public class DungeonGenerator {
 
 	private static void initLevelsMap() {
 		if(PixelDungeon.isAlpha() && BuildConfig.DEBUG) {
-			mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon_alpha.json");
+			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_alpha.json");
 		} else {
-			mDungeonMap = JsonHelper.readFile("levelsDesc/Dungeon.json");
+			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon.json");
 		}
 
 		try {

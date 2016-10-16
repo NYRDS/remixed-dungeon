@@ -122,8 +122,6 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					downloadProgress = null;
 				}
 
-
-
 				Game.scene().add(new WndModSelect());
 
 				if(!result) {

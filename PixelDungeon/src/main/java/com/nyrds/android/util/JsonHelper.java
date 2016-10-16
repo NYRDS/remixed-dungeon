@@ -9,6 +9,9 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -16,17 +19,30 @@ import java.io.InputStreamReader;
 public class JsonHelper {
 
 	@NonNull
-	static public JSONObject tryReadFile(String fileName) {
-		if(ModdingMode.isResourceExist(fileName)) {
-			return readFile(fileName);
+	static public JSONObject tryReadJsonFromAssets(String fileName) {
+		if (ModdingMode.isResourceExist(fileName)) {
+			return readJsonFromAsset(fileName);
 		}
 		return new JSONObject();
 	}
 
 	@NonNull
-	static public JSONObject readFile(String fileName) {
+	static public JSONObject readJsonFromAsset(String fileName) {
+		return readJsonFromStream(ModdingMode.getInputStream(fileName));
+	}
+
+	@NonNull
+	static public JSONObject readJsonFromFile(File file) {
 		try {
-			InputStream stream = ModdingMode.getInputStream(fileName);
+			return readJsonFromStream(new FileInputStream(file));
+		} catch (FileNotFoundException e) {
+			return new JSONObject();
+		}
+	}
+
+	@NonNull
+	static public JSONObject readJsonFromStream(InputStream stream) {
+		try {
 			StringBuilder jsonDef = new StringBuilder();
 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));

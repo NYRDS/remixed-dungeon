@@ -38,7 +38,7 @@ public class PredesignedLevel extends CommonLevel {
 	}
 
 	private void readDescFile(String descFile) {
-		mLevelDesc = JsonHelper.readFile(descFile);
+		mLevelDesc = JsonHelper.readJsonFromAsset(descFile);
 
 		if (mLevelDesc == null) {
 			throw new TrackedRuntimeException(Utils.format("Malformed level [%s] description", descFile));
