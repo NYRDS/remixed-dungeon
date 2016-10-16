@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels;
+package com.nyrds.pixeldungeon.levels;
 
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.levels.Level;

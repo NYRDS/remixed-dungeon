@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
 public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener {
 
+	public static final String MODS_COMMON_JSON = "mods_common.json";
 	private Image image;
 	private Text  text;
 
@@ -83,7 +84,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 			@Override
 			public void run() {
 				if (result) {
-					String downloadTo = FileSystem.getExternalStorageFile("mods_common.json").getAbsolutePath();
+					String downloadTo = FileSystem.getExternalStorageFile(MODS_COMMON_JSON).getAbsolutePath();
 					new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods_common.json", downloadTo);
 				} else {
 					parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
@@ -112,7 +113,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 	}
 
 	@Override
-	public void DownloadComplete(String file, Boolean result) {
+	public void DownloadComplete(String file, final Boolean result) {
 		Game.executeInGlThread(new Runnable() {
 			@Override
 			public void run() {
@@ -120,7 +121,14 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					Game.scene().remove(downloadProgress);
 					downloadProgress = null;
 				}
+
+
+
 				Game.scene().add(new WndModSelect());
+
+				if(!result) {
+					Game.toast("Mod list download failed :(");
+				}
 			}
 		});
 	}

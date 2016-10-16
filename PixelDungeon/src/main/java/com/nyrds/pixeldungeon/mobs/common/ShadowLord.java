@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
-import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;

@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.levels.Level;
