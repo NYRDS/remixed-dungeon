@@ -14,10 +14,6 @@
     <string name="Pet_Gender"></string>
     <string name="Pet_Desc"></string>
     
-    <string-array name="known_mods">
-        <item>[\"PD Mini\", \"https://github.com/NYRDS/PD_mini-RPD-MOD/archive/mini.0.10.zip\"]</item>
-    </string-array>
-    
     <string name = "Mod_Name"></string>
     <string name = "Mod_Description"></string>
     <string name = "Mod_Author"></string>
