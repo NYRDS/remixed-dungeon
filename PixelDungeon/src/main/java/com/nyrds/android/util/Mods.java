@@ -18,6 +18,7 @@ import java.util.Map;
 
 public class Mods {
 
+	public static final String MODS_COMMON_JSON = "mods_common.json";
 
 	static public Map<String, ModDesc> buildModsList() {
 		Map<String, ModDesc> modsList = new HashMap<>();
@@ -31,13 +32,12 @@ public class Mods {
 
 				ModDesc netDesc = availableMods.get(name);
 				if (netDesc != null) {
-
 					if (netDesc.version > localDesc.version) {
 						localDesc.needUpdate = true;
-						localDesc.url = availableMods.get(name).url;
+						localDesc.url = netDesc.url;
 					}
 				}
-				modsList.put(name, entry.getValue());
+				modsList.put(name, localDesc);
 			}
 
 			for (Map.Entry<String, ModDesc> entry : availableMods.entrySet()) {
@@ -50,12 +50,19 @@ public class Mods {
 
 				ModDesc netDesc = entry.getValue();
 				netDesc.needUpdate = true;
-				modsList.put(name, entry.getValue());
+				modsList.put(name, netDesc);
 			}
 
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
 		}
+
+		Mods.ModDesc Remixed = new Mods.ModDesc();
+		Remixed.name = ModdingMode.REMIXED;
+		Remixed.needUpdate = false;
+		Remixed.installed = false;
+		modsList.put(ModdingMode.REMIXED, Remixed);
+
 		return modsList;
 	}
 
@@ -70,10 +77,11 @@ public class Mods {
 				ModDesc desc = new ModDesc();
 				desc.name = file.getName();
 
-				JSONObject versionInfo = JsonHelper.tryReadJsonFromAssets(file.getAbsolutePath() + "/version.json");
+				JSONObject versionInfo = JsonHelper.readJsonFromFile(new File(file.getAbsolutePath() + "/version.json"));
 				if (versionInfo.has("version")) {
 					desc.version = versionInfo.getInt("version");
 				}
+				desc.installed = true;
 				installedMods.put(desc.name, desc);
 			}
 		}
@@ -83,9 +91,19 @@ public class Mods {
 
 
 	private static void updateAvailableModsList(String prefix, Map<String, ModDesc> availableMods) throws JSONException {
-		JSONObject mods_common = JsonHelper.readJsonFromFile(FileSystem.getExternalStorageFile("mods_" + prefix + ".json"));
+		JSONObject mods_common = JsonHelper.readJsonFromFile(FileSystem.getExternalStorageFile(MODS_COMMON_JSON));
 
-		JSONArray mods = mods_common.getJSONArray("known_mods");
+		if(!mods_common.has("known_mods")) {
+			return;
+		}
+
+		JSONObject prefixes = mods_common.getJSONObject("known_mods");
+
+		if(!prefixes.has(prefix)) {
+			return;
+		}
+
+		JSONArray mods = prefixes.getJSONArray(prefix);
 
 		for (int i = 0; i < mods.length(); ++i) {
 			ModDesc desc = new ModDesc();
@@ -110,6 +128,7 @@ public class Mods {
 		public String  url;
 		public String  name;
 		public int     version;
-		public boolean needUpdate;
+		public boolean needUpdate = false;
+		public boolean installed  = false;
 	}
 }

@@ -6,6 +6,7 @@ import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.android.util.Mods;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -22,9 +23,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
+import java.io.File;
+
 public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener {
 
-	public static final String MODS_COMMON_JSON = "mods_common.json";
 	private Image image;
 	private Text  text;
 
@@ -84,7 +86,10 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 			@Override
 			public void run() {
 				if (result) {
-					String downloadTo = FileSystem.getExternalStorageFile(MODS_COMMON_JSON).getAbsolutePath();
+					File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
+					modsCommon.delete();
+					String downloadTo = modsCommon.getAbsolutePath();
+
 					new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods_common.json", downloadTo);
 				} else {
 					parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
