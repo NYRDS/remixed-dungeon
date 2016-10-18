@@ -388,7 +388,7 @@ public class WndSettings extends Window {
 
 	private void zoom(float value) {
 		Camera.main.zoom(value);
-		PixelDungeon.zoom((int) (value - PixelScene.defaultZoom));
+		PixelDungeon.zoom(value - PixelScene.defaultZoom);
 
 		updateEnabled();
 	}

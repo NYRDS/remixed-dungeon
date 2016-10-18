@@ -144,7 +144,7 @@ public class GameScene extends PixelScene {
 
 		super.create();
 
-		Camera.main.zoom(defaultZoom + PixelDungeon.zoom());
+		Camera.main.zoom((float) (defaultZoom + PixelDungeon.zoom()));
 
 		scene = this;
 
