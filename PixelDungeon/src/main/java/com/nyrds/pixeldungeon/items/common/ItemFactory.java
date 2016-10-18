@@ -182,7 +182,9 @@ public class ItemFactory {
 	private static void registerItemClass(Class<? extends Item> itemClass) {
 		mItemsList.put(itemClass.getSimpleName(), itemClass);
 	}
-	
+
+
+
 	private static void initItemsMap() {
 
 		mItemsList = new HashMap<>();
@@ -352,6 +354,15 @@ public class ItemFactory {
 		registerItemClass(SoulShard.class);
 		registerItemClass(NecromancerArmor.class);
 		registerItemClass(NecromancerRobe.class);
+
+		mItemsList.put("Rotberry.Seed",   WandMaker.Rotberry.Seed.class);
+		mItemsList.put("Earthroot.Seed",  Earthroot.Seed.class);
+		mItemsList.put("Firebloom.Seed",  Firebloom.Seed.class);
+		mItemsList.put("Sungrass.Seed",   Sungrass.Seed.class);
+		mItemsList.put("Dreamweed.Seed",  Dreamweed.Seed.class);
+		mItemsList.put("Sorrowmoss.Seed", Sorrowmoss.Seed.class);
+		mItemsList.put("Icecap.Seed",     Icecap.Seed.class);
+		mItemsList.put("Fadeleaf.Seed",   Fadeleaf.Seed.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {
