@@ -23,6 +23,8 @@ import android.support.annotation.NonNull;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
+import com.nyrds.pixeldungeon.items.food.PumpkinPie;
+import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
@@ -145,8 +147,8 @@ public enum HeroClass {
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Ankh());
 
-		hero.collect(new BlackSkullOfMastery());
-		hero.collect(new NecromancerArmor());
+		hero.collect(new PumpkinPie());
+		hero.collect(new RottenPumpkinPie());
 
 		hero.ht(1000);
 		hero.hp(1000);
