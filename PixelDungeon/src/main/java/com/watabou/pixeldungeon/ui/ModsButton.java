@@ -7,6 +7,7 @@ import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Mods;
+import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -90,7 +91,12 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					modsCommon.delete();
 					String downloadTo = modsCommon.getAbsolutePath();
 
-					new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods_common.json", downloadTo);
+					if(Util.isConnectedToInternet()) {
+						new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods_common.json", downloadTo);
+					} else {
+						DownloadComplete("no internet", true);
+					}
+
 				} else {
 					parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
 				}
