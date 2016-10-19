@@ -186,12 +186,12 @@ public class PixelDungeon extends Game {
 		}
 	}
 
-	public static void zoom(int value) {
+	public static void zoom(double value) {
 		Preferences.INSTANCE.put(Preferences.KEY_ZOOM, value);
 	}
 
-	public static int zoom() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_ZOOM, 0);
+	public static double zoom() {
+		return Preferences.INSTANCE.getDouble(Preferences.KEY_ZOOM, 0);
 	}
 
 	public static void music(boolean value) {

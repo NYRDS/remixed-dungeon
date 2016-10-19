@@ -99,7 +99,7 @@ public class CellSelector extends TouchArea {
 			
 			int zoom = Math.round( camera.zoom );
 			camera.zoom( zoom );
-			PixelDungeon.zoom( (int)(zoom - PixelScene.defaultZoom) );
+			PixelDungeon.zoom(zoom - PixelScene.defaultZoom);
 
 			dragging = true;
 			if (t == touch) {
