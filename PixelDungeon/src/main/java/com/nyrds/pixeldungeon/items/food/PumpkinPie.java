@@ -18,6 +18,6 @@ public class PumpkinPie extends Food {
 	
 	@Override
 	public Item poison(int cell){
-		return morphTo(RottenPasty.class);
+		return morphTo(RottenPumpkinPie.class);
 	}
 }
