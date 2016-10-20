@@ -32,15 +32,19 @@ public class PotionOfMindVision extends Potion {
 	protected void apply( Hero hero ) {
 		setKnown();
 		Buff.affect( hero, MindVision.class, MindVision.DURATION );
+
+		reportMindVisionEffect();
+	}
+
+	static public void reportMindVisionEffect() {
 		Dungeon.observe();
-		
 		if (Dungeon.level.mobs.size() > 0) {
 			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply1));
 		} else {
 			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply2));
 		}
 	}
-	
+
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.PotionOfMindVision_Info);
