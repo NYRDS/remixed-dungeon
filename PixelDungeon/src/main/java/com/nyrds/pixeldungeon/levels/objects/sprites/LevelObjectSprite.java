@@ -34,6 +34,8 @@ public class LevelObjectSprite extends MovieClip {
 
 	public LevelObjectSprite() {
 
+		texture("levelObjects/objects.png");
+
 		if (frames == null) {
 			frames = new TextureFilm( texture, SIZE, SIZE );
 		}
