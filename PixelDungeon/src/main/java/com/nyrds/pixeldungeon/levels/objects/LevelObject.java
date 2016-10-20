@@ -17,7 +17,6 @@ public abstract class LevelObject implements Bundlable {
 	
 	public LevelObjectSprite sprite;
 
-
 	public LevelObject(int pos) {
 		this.pos = pos;
 	}
@@ -63,4 +62,8 @@ public abstract class LevelObject implements Bundlable {
 	public abstract String desc();
 
 	public abstract String name();
+
+	public String texture(){
+		return "levelObjects/objects.png";
+	}
 }

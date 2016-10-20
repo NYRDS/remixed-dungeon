@@ -18,13 +18,13 @@
 package com.nyrds.pixeldungeon.levels.objects.sprites;
 
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.watabou.noosa.Image;
+import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.PointF;
 
-public class LevelObjectSprite extends Image {
+public class LevelObjectSprite extends MovieClip {
 
 	private static final int SIZE = 16;
 
@@ -33,7 +33,6 @@ public class LevelObjectSprite extends Image {
 	private int pos = -1;
 
 	public LevelObjectSprite() {
-		super("levelObjects/objects.png");
 
 		if (frames == null) {
 			frames = new TextureFilm( texture, SIZE, SIZE );
@@ -44,7 +43,7 @@ public class LevelObjectSprite extends Image {
 
 	public void reset(LevelObject object ) {
 		revive();
-		
+		texture (object.texture());
 		reset( object.image() );
 		alpha( 1f );
 		

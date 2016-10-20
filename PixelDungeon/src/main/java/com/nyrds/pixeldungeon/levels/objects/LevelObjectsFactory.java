@@ -27,6 +27,7 @@ public class LevelObjectsFactory {
 
 		mObjectsList = new HashMap<>();
 		registerObjectClass(Sign.class);
+		registerObjectClass(Barrel.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {
