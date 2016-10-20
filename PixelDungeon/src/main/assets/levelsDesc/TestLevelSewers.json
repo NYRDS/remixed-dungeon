@@ -29,6 +29,7 @@
     {"kind":"Codex","text":"Это текст кодекса","x":13,"y":10}
   ],
   "objects" : [
-    {"kind" : "Sign", "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"}
+    {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},
+    {"kind" : "Barrel", "x" : 14, "y" : 10}
   ]
 }

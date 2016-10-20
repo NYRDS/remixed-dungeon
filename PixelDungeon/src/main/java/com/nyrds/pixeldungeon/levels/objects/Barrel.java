@@ -70,6 +70,6 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public String texture() {
-		return "levelObjetcs/barrels.png";
+		return "levelObjects/barrels.png";
 	}
 }
