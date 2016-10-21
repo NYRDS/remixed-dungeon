@@ -17,7 +17,7 @@
     <!-- STRINGS OF Candy CLASS -->
     <string name="Candy_Name">candy</string>
     <string name="Candy_Info">This candy looks so pretty and it smells good too. Do you really need to give it to someone else?</string>
-    <string name="Candy_Warning_1">You shouldn't have eaten that candy. You promised to give it to someone else. It doesn't seem to affected you in any way though, your hunger wont go away, it's just candy after all.</string>
+    <string name="Candy_Warning_1">You shouldn\'t have eaten that candy. You promised to give it to someone else. It doesn\'t seem to affected you in any way though, your hunger wont go away, it\'s just candy after all.</string>
     <string name="Candy_Warning_2">Now you really had to much. Your tummy hurts because you ate to much candy.</string>
 
     <!-- STRINGS OF PumpkinPie CLASS -->
@@ -26,13 +26,13 @@
 
     <!-- STRINGS OF RottenPumpkinPie CLASS -->
     <string name="RottenPumpkinPie_Name">rotten pumpkin pie</string>
-    <string name="RottenPumpkinPie_Info">Not matter how good it was when it was fresh, there is no way it's still edible.</string>
+    <string name="RottenPumpkinPie_Info">Not matter how good it was when it was fresh, there is no way it\'s still edible.</string>
 
     <!-- STRINGS OF CandleOfMindVision CLASS -->
     <string name="CandleOfMindVision_Name">Candle Of Visions</string>
     <string name="CandleOfMindVision_Info"></string>
     <string name="CandleOfMindVision_Info_Lighted">The candle lighted up the moment you took out of your backpack. The flame emits faint purple light, and as you look through it the nearby monsters becomes visible to you.</string>
-    <string name="CandleOfMindVision_Info_Exhausted">The candle has burned out, it no longer lights up when you hold it. Looks like you can't use it anymore.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">The candle has burned out, it no longer lights up when you hold it. Looks like you can\'t use it anymore.</string>
 
     <!-- Object descriptions -->
     <!-- STRINGS OF Barrel CLASS -->
@@ -41,6 +41,6 @@
 
     <!-- STRINGS OF Barrel_Pumpkin CLASS -->
     <string name="Barrel_Pumpkin_Name">pumpkin</string>
-    <string name="Barrel_Pumpkin_Desc">It's really weird and spooky to see a carved pumpkin laying around in the dungeon. You can feel a certain danger, approaching that thing. But you can always push it away, right?</string>
+    <string name="Barrel_Pumpkin_Desc">It\'s really weird and spooky to see a carved pumpkin laying around in the dungeon. You can feel a certain danger, approaching that thing. But you can always push it away, right?</string>
 
 </resources>
