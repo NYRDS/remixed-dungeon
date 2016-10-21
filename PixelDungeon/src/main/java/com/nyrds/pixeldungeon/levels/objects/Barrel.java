@@ -15,7 +15,7 @@ import org.json.JSONObject;
  */
 public class Barrel extends LevelObject {
 
-	public Barrel(){
+	public Barrel() {
 		super(-1);
 	}
 
@@ -28,20 +28,45 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
-	public boolean interact(Hero hero) {
-		super.interact(hero);
+	public boolean pushable() {
+		return true;
+	}
 
+	@Override
+	public boolean push(Hero hero) {
+		Level level = Dungeon.level;
+		int hx = level.cellX(hero.getPos());
+		int hy = level.cellY(hero.getPos());
+
+		int x = level.cellX(getPos());
+		int y = level.cellY(getPos());
+
+		int dx = x - hx;
+		int dy = y - hy;
+
+		if (dx * dy != 0) {
+			return false;
+		}
+
+		int nextCell = level.cell(x + dx, y + dy);
+		if (level.cellValid(nextCell) && !level.passable[nextCell]) {
+			return false;
+		} else {
+			setPos(nextCell);
+			level.levelObjectMoved(this);
+			level.itemPress(nextCell);
+		}
 
 		return true;
 	}
 
 	@Override
-	public void restoreFromBundle( Bundle bundle ) {
+	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 	}
 
 	@Override
-	public void storeInBundle( Bundle bundle ) {
+	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 	}
 
@@ -49,8 +74,8 @@ public class Barrel extends LevelObject {
 	public void burn() {
 		remove();
 		int oldTile = Dungeon.level.map[getPos()];
-		Dungeon.level.set(getPos(),Terrain.EMBERS);
-		GameScene.discoverTile(getPos(),oldTile);
+		Dungeon.level.set(getPos(), Terrain.EMBERS);
+		GameScene.discoverTile(getPos(), oldTile);
 	}
 
 	@Override

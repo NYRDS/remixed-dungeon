@@ -57,6 +57,9 @@ public abstract class LevelObject implements Bundlable {
 
 	public void setPos(int pos) {
 		this.pos = pos;
+		if(sprite!=null) {
+			sprite.setLevelPos(pos);
+		}
 	}
 
 	public abstract String desc();
@@ -65,5 +68,13 @@ public abstract class LevelObject implements Bundlable {
 
 	public String texture(){
 		return "levelObjects/objects.png";
+	}
+
+	public boolean pushable() {
+		return false;
+	}
+
+	public boolean push(Hero hero){
+		return false;
 	}
 }

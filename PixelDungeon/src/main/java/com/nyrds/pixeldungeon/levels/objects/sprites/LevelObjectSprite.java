@@ -43,16 +43,19 @@ public class LevelObjectSprite extends MovieClip {
 		origin.set(SIZE/2, SIZE/2);
 	}
 
+	public void setLevelPos(int cell) {
+		PointF p = DungeonTilemap.tileToWorld(cell);
+		x = p.x;
+		y = p.y;
+	}
+
 	public void reset(LevelObject object ) {
 		revive();
 		texture (object.texture());
 		reset( object.image() );
 		alpha( 1f );
-		
-		pos = object.getPos();
-		PointF p = DungeonTilemap.tileToWorld(object.getPos());
-		x = p.x;
-		y = p.y;
+
+		setLevelPos(object.getPos());
 	}
 	
 	public void reset( int image ) {

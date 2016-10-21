@@ -132,33 +132,33 @@ public class Hero extends Char {
 
 	private static final String TXT_LEAVE = Game.getVar(R.string.Hero_Leave);
 
-	private static final String TXT_LEVEL_UP = Game.getVar(R.string.Hero_LevelUp);
+	private static final String TXT_LEVEL_UP  = Game.getVar(R.string.Hero_LevelUp);
 	private static final String TXT_NEW_LEVEL = Game.getVar(R.string.Hero_NewLevel);
 
 	public static final String TXT_YOU_NOW_HAVE = Game.getVar(R.string.Hero_YouNowHave);
 
 	private static final String TXT_SOMETHING_ELSE = Game.getVar(R.string.Hero_SomethingElse);
-	private static final String TXT_LOCKED_CHEST = Game.getVar(R.string.Hero_LockedChest);
-	private static final String TXT_LOCKED_DOOR = Game.getVar(R.string.Hero_LockedDoor);
-	private static final String TXT_NOTICED_SMTH = Game.getVar(R.string.Hero_NoticedSmth);
+	private static final String TXT_LOCKED_CHEST   = Game.getVar(R.string.Hero_LockedChest);
+	private static final String TXT_LOCKED_DOOR    = Game.getVar(R.string.Hero_LockedDoor);
+	private static final String TXT_NOTICED_SMTH   = Game.getVar(R.string.Hero_NoticedSmth);
 
-	private static final String TXT_WAIT = Game.getVar(R.string.Hero_Wait);
+	private static final String TXT_WAIT   = Game.getVar(R.string.Hero_Wait);
 	private static final String TXT_SEARCH = Game.getVar(R.string.Hero_Search);
 
 	public static final int STARTING_STR = 10;
 
-	private static final float TIME_TO_REST = 1f;
+	private static final float TIME_TO_REST   = 1f;
 	private static final float TIME_TO_SEARCH = 2f;
 
-	public HeroClass heroClass = HeroClass.ROGUE;
-	public HeroSubClass subClass = HeroSubClass.NONE;
+	public HeroClass    heroClass = HeroClass.ROGUE;
+	public HeroSubClass subClass  = HeroSubClass.NONE;
 
-	int attackSkill = 10;
+	int attackSkill  = 10;
 	int defenseSkill = 5;
 
-	private boolean ready = false;
-	public HeroAction curAction = null;
-	public HeroAction lastAction = null;
+	private boolean    ready      = false;
+	public  HeroAction curAction  = null;
+	public  HeroAction lastAction = null;
 
 	private Char enemy;
 
@@ -176,9 +176,9 @@ public class Hero extends Char {
 
 	private float awareness;
 
-	private int lvl   = Scrambler.scramble(1);
-	private int exp   = Scrambler.scramble(0);
-	private int sp    = Scrambler.scramble(0);
+	private int lvl = Scrambler.scramble(1);
+	private int exp = Scrambler.scramble(0);
+	private int sp  = Scrambler.scramble(0);
 
 	public String levelKind;
 	public String levelId;
@@ -233,16 +233,16 @@ public class Hero extends Char {
 		return Scrambler.descramble(STR);
 	}
 
-	private static final String ATTACK = "attackSkill";
-	private static final String DEFENSE = "defenseSkill";
-	private static final String STRENGTH = "STR";
-	private static final String LEVEL = "lvl";
+	private static final String ATTACK     = "attackSkill";
+	private static final String DEFENSE    = "defenseSkill";
+	private static final String STRENGTH   = "STR";
+	private static final String LEVEL      = "lvl";
 	private static final String EXPERIENCE = "exp";
 	private static final String LEVEL_KIND = "levelKind";
-	private static final String LEVEL_ID = "levelId";
+	private static final String LEVEL_ID   = "levelId";
 	private static final String DIFFICULTY = "difficulty";
-	private static final String PETS = "pets";
-	private static final String SP = "sp";
+	private static final String PETS       = "pets";
+	private static final String SP         = "sp";
 
 	private void refreshPets() {
 		ArrayList<Mob> alivePets = new ArrayList<>();
@@ -254,7 +254,7 @@ public class Hero extends Char {
 		pets = alivePets;
 	}
 
-	public Collection<Mob> getPets(){
+	public Collection<Mob> getPets() {
 		return pets;
 	}
 
@@ -313,7 +313,7 @@ public class Hero extends Char {
 			pets.add(pet);
 		}
 
-		sp = Scrambler.scramble(bundle.optInt(SP,0));
+		sp = Scrambler.scramble(bundle.optInt(SP, 0));
 
 		belongings.restoreFromBundle(bundle);
 
@@ -329,10 +329,10 @@ public class Hero extends Char {
 	}
 
 	private void live() {
-		if(buff(Regeneration.class)==null) {
+		if (buff(Regeneration.class) == null) {
 			Buff.affect(this, Regeneration.class);
 		}
-		if(buff(Hunger.class)==null) {
+		if (buff(Hunger.class) == null) {
 			Buff.affect(this, Hunger.class);
 		}
 	}
@@ -1094,11 +1094,10 @@ public class Hero extends Char {
 		checkIfFurious();
 		interrupt();
 
-		if (belongings.armor instanceof SpiderArmor)
-		{
+		if (belongings.armor instanceof SpiderArmor) {
 			//Armor proc
-			if (Random.Int(100) < 50){
-				GameScene.add( Blob.seed( getPos(), Random.Int( 5, 7 ), Web.class ) );
+			if (Random.Int(100) < 50) {
+				GameScene.add(Blob.seed(getPos(), Random.Int(5, 7), Web.class));
 			}
 		}
 
@@ -1189,6 +1188,15 @@ public class Hero extends Char {
 				if (wallWalkerBuff != null && Dungeon.level.solid[target]) {
 					step = target;
 				}
+
+				LevelObject obj = Dungeon.level.objects.get(target);
+				if (obj != null && obj.pushable()) {
+					interrupt();
+					if (obj.push(this)) {
+					} else {
+						return false;
+					}
+				}
 			}
 
 		} else {
@@ -1209,23 +1217,21 @@ public class Hero extends Char {
 
 			int oldPos = getPos();
 
+			LevelObject obj = Dungeon.level.objects.get(step);
+			if (obj != null) {
 
-				LevelObject obj = Dungeon.level.objects.get(step);
-				if (obj != null) {
-
-					if(step==target) {
+				if (step == target) {
+					interrupt();
+					if (!obj.interact(this)) {
+						return false;
+					}
+				} else {
+					if (!obj.stepOn(this)) {
 						interrupt();
-						if (!obj.interact(this)) {
-							return false;
-						}
-					} else {
-						if(!obj.stepOn(this)) {
-							interrupt();
-							return false;
-						}
+						return false;
 					}
 				}
-
+			}
 
 			move(step);
 			getSprite().move(oldPos, getPos());
@@ -1364,7 +1370,7 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public void updateSpriteState(){
+	public void updateSpriteState() {
 		super.updateSpriteState();
 	}
 
@@ -1372,7 +1378,7 @@ public class Hero extends Char {
 	public void add(Buff buff) {
 		super.add(buff);
 
-		if(!GameScene.isSceneReady()) {
+		if (!GameScene.isSceneReady()) {
 			return;
 		}
 
@@ -1451,13 +1457,13 @@ public class Hero extends Char {
 			}
 		} else {
 			Dungeon.deleteGame(false);
-			while(belongings.removeItem(ankh));
+			while (belongings.removeItem(ankh)) ;
 			GameScene.show(new WndResurrect(ankh, cause));
 		}
 	}
 
 	public void clearActions() {
-		curAction  = null;
+		curAction = null;
 		lastAction = null;
 	}
 
@@ -1549,13 +1555,13 @@ public class Hero extends Char {
 
 			switch (door) {
 				case Terrain.LOCKED_DOOR:
-					Dungeon.level.set(doorCell,Terrain.DOOR);
+					Dungeon.level.set(doorCell, Terrain.DOOR);
 					break;
 				case Terrain.LOCKED_EXIT:
-					Dungeon.level.set(doorCell,Terrain.UNLOCKED_EXIT);
+					Dungeon.level.set(doorCell, Terrain.UNLOCKED_EXIT);
 					break;
 				default:
-					EventCollector.logException(new Exception("trying to unlock tile:"+door));
+					EventCollector.logException(new Exception("trying to unlock tile:" + door));
 			}
 			GameScene.updateMap(doorCell);
 
@@ -1760,7 +1766,7 @@ public class Hero extends Char {
 
 		for (Mob pet : pets) {
 			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
-			if(cell == -1){
+			if (cell == -1) {
 				cell = getPos();
 			}
 			pet.setPos(cell);
@@ -1776,31 +1782,31 @@ public class Hero extends Char {
 		Dungeon.setDifficulty(difficulty);
 	}
 
-	public void accumulateSoulPoints(){
+	public void accumulateSoulPoints() {
 		int sp = Scrambler.descramble(this.sp);
 		sp = sp + 1;
-		if (sp > getSoulPointsMax()){
+		if (sp > getSoulPointsMax()) {
 			sp = getSoulPointsMax();
 		}
 		this.sp = Scrambler.scramble(sp);
 	}
 
-	public int getSoulPoints(){
+	public int getSoulPoints() {
 		return Scrambler.descramble(sp);
 	}
 
-	public int getSoulPointsMax(){
-		if (this.subClass == HeroSubClass.LICH){
+	public int getSoulPointsMax() {
+		if (this.subClass == HeroSubClass.LICH) {
 			return 50;
 		}
-		if (this.heroClass == HeroClass.NECROMANCER){
+		if (this.heroClass == HeroClass.NECROMANCER) {
 			return 25;
 		}
 		return 0;
 	}
 
-	public boolean spendSoulPoints(int cost){
-		if (cost > getSoulPoints()){
+	public boolean spendSoulPoints(int cost) {
+		if (cost > getSoulPoints()) {
 			return false;
 		}
 		sp = Scrambler.scramble(Scrambler.descramble(sp) - cost);

@@ -836,6 +836,11 @@ public abstract class Level implements Bundlable {
 		return heap;
 	}
 
+	public void levelObjectMoved(LevelObject obj) {
+		remove(obj);
+		objects.put(obj.getPos(), obj);
+	}
+
 	public void addLevelObject(LevelObject obj) {
 		objects.put(obj.getPos(), obj);
 
@@ -1392,7 +1397,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public int blobAmoutAt(Class<? extends Blob> blobClass, int cell) {
+	public int blobAmountAt(Class<? extends Blob> blobClass, int cell) {
 		Blob blob = Dungeon.level.blobs.get(blobClass);
 		if (blob == null) {
 			return 0;

@@ -196,12 +196,12 @@ public class ShadowLord extends Boss {
 			}
 		}
 
-		if (Dungeon.level.blobAmoutAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
+		if (Dungeon.level.blobAmountAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
 			getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
 			hp(Math.min(hp() + (ht() - hp()) / 4, ht()));
 		}
 
-		if (Dungeon.level.blobAmoutAt(Foliage.class, getPos()) > 0) {
+		if (Dungeon.level.blobAmountAt(Foliage.class, getPos()) > 0) {
 			getSprite().emitter().burst(Speck.factory(Speck.BONE), 1);
 			damage(1, this);
 		}
