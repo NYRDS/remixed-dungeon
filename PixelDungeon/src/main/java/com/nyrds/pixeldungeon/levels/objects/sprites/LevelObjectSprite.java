@@ -26,14 +26,16 @@ import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 
-public class LevelObjectSprite extends MovieClip implements Tweener.Listener {
+public class LevelObjectSprite extends MovieClip implements Tweener.Listener, MovieClip.Listener {
 
 	private static final int SIZE = 16;
 
 	private static TextureFilm frames;
-	private Tweener motion;
+	private        Tweener     motion;
+	private        Callback    onAnimComplete;
 
 	private int pos = -1;
 
@@ -42,10 +44,10 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener {
 		texture("levelObjects/objects.png");
 
 		if (frames == null) {
-			frames = new TextureFilm( texture, SIZE, SIZE );
+			frames = new TextureFilm(texture, SIZE, SIZE);
 		}
 
-		origin.set(SIZE/2, SIZE/2);
+		origin.set(SIZE / 2, SIZE / 2);
 	}
 
 	public void move(int from, int to) {
@@ -67,19 +69,19 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener {
 		y = p.y;
 	}
 
-	public void reset(LevelObject object ) {
+	public void reset(LevelObject object) {
 		revive();
-		texture (object.texture());
-		reset( object.image() );
-		alpha( 1f );
+		texture(object.texture());
+		reset(object.image());
+		alpha(1f);
 
 		setLevelPos(object.getPos());
 	}
-	
-	public void reset( int image ) {
-		frame( frames.get( image ) );
+
+	public void reset(int image) {
+		frame(frames.get(image));
 	}
-	
+
 	@Override
 	public void update() {
 		super.update();
@@ -88,11 +90,22 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener {
 
 	@Override
 	public void onComplete(Tweener tweener) {
+
 	}
 
-	public void playAnim(int fps, boolean looped, int ... framesSeq) {
-		Animation anim = new Animation(fps,looped);
+	public void playAnim(int fps, boolean looped, Callback animComplete, int... framesSeq) {
+		Animation anim = new Animation(fps, looped);
 		anim.frames(frames, framesSeq);
+		onAnimComplete = animComplete;
+		listener = this;
 		play(anim);
+	}
+
+	@Override
+	public void onComplete(Animation anim) {
+		if (onAnimComplete != null) {
+			onAnimComplete.call();
+			onAnimComplete = null;
+		}
 	}
 }

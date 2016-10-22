@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Callback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -77,9 +78,14 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public void burn() {
-		new PotionOfLiquidFlame().shatter(getPos());
-		sprite.playAnim(10,false,0,1,2,3,4);
-		remove();
+		sprite.playAnim(10, false, new Callback() {
+			@Override
+			public void call() {
+				remove();
+				new PotionOfLiquidFlame().shatter(getPos());
+			}
+		}, 0, 1, 2, 3, 4);
+
 	}
 
 	@Override
