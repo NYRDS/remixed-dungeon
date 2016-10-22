@@ -87,6 +87,6 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener {
 
 	@Override
 	public void onComplete(Tweener tweener) {
-
 	}
+
 }

@@ -49,7 +49,12 @@ public class Barrel extends LevelObject {
 		}
 
 		int nextCell = level.cell(x + dx, y + dy);
-		if (level.cellValid(nextCell) && !level.passable[nextCell]) {
+
+		if(!level.cellValid(nextCell)) {
+			return false;
+		}
+
+		if (!level.passable[nextCell] || level.getLevelObject(nextCell)!=null) {
 			return false;
 		} else {
 			setPos(nextCell);

@@ -36,6 +36,7 @@ public abstract class LevelObject implements Bundlable {
 	public void burn() {}
 	public void freeze() {}
 	public void poison(){}
+	public void bump() {}
 
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
