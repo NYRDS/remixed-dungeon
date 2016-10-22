@@ -82,10 +82,10 @@ public class Barrel extends LevelObject {
 			@Override
 			public void call() {
 				remove();
-				new PotionOfLiquidFlame().shatter(getPos());
+
 			}
 		}, 0, 1, 2, 3, 4);
-
+		new PotionOfLiquidFlame().shatter(getPos());
 	}
 
 	@Override
