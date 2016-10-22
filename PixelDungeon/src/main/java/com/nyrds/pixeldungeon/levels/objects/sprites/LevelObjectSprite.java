@@ -18,6 +18,7 @@
 package com.nyrds.pixeldungeon.levels.objects.sprites;
 
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.PosTweener;
@@ -89,4 +90,9 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener {
 	public void onComplete(Tweener tweener) {
 	}
 
+	public void playAnim(int fps, boolean looped, int ... framesSeq) {
+		Animation anim = new Animation(fps,looped);
+		anim.frames(frames, framesSeq);
+		play(anim);
+	}
 }
