@@ -30,7 +30,7 @@
 
     <!-- STRINGS OF CandleOfMindVision CLASS -->
     <string name="CandleOfMindVision_Name">Candle Of Visions</string>
-    <string name="CandleOfMindVision_Info"></string>
+    <string name="CandleOfMindVision_Info">Looks like a regular candle, not something you expect to find in a dangerous dungeon. Weirdly enough it\'s rather warm, despite the fact it wasn\'t lit.</string>
     <string name="CandleOfMindVision_Info_Lighted">The candle lighted up the moment you took out of your backpack. The flame emits faint purple light, and as you look through it the nearby monsters becomes visible to you.</string>
     <string name="CandleOfMindVision_Info_Exhausted">The candle has burned out, it no longer lights up when you hold it. Looks like you can\'t use it anymore.</string>
 
@@ -52,7 +52,7 @@
     <string name="ScarecrowNPC_Quest_Start_Male">Why hello little boy, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Why hello little girl, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
     <string name="ScarecrowNPC_Quest_Reminder">Five candies is all I need.\n Oh, the reward will be so sweet!</string>
-    <string name="ScarecrowNPC_Quest_End">Oh jolly, oh good!.\n For this, you\'ll get actual food!</string>
+    <string name="ScarecrowNPC_Quest_End">Oh jolly, oh good!.\n For this, you\'ll get an actual food!</string>
     <string name="Journal_ScarecrowNPC">Scarecrow</string>
 
 </resources>
