@@ -17,8 +17,8 @@ public class CandleOfMindVision extends UsableArtifact {
 	int charges;
 
 	public CandleOfMindVision() {
-		imageFile = "items/artifacts.png";
-		image = 21;
+		imageFile = "items/candle.png";
+		image = 0;
 	}
 
 
