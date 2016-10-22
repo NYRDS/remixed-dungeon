@@ -3,15 +3,15 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF Ushanka CLASS -->
     <string name="Ushanka_Name">Ushanka</string>
-    <string name="Ushanka_Info">Warm and cosy ushanka hat decorated with classy red star. A perfect companion for a comrade in a cold dungeon.</string>
+    <string name="Ushanka_Info">Warm and cosy ushanka hat decorated with classy red star. A perfect companion for a comrade fighting against evil cold dungeon.</string>
 
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">Vampire skull</string>
-    <string name="VampireSkull_Info">This mask is made of an all natural vampire skull. In fact that is a vampire skull... of a big headed vampire. Spooky.</string>
+    <string name="VampireSkull_Info">This mask is made of an all natural vampire skull. In fact it is a vampire skull... skull of a big headed vampire. Spooky.</string>
 
     <!-- STRINGS OF ZombieMask CLASS -->
     <string name="ZombieMask_Name">Zombie mask</string>
-    <string name="ZombieMask_Info">.</string>
+    <string name="ZombieMask_Info">Have you ever wished to look like an undead hero, who failed his quest repeatedly? Well here\'s your chance.</string>
 
     <!-- Item descriptions -->
     <!-- STRINGS OF Candy CLASS -->
@@ -42,5 +42,15 @@
     <!-- STRINGS OF Barrel_Pumpkin CLASS -->
     <string name="Barrel_Pumpkin_Name">pumpkin</string>
     <string name="Barrel_Pumpkin_Desc">It\'s really weird and spooky to see a carved pumpkin laying around in the dungeon. You can feel a certain danger, approaching that thing. But you can always push it away, right?</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">scarecrow</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
+    <string name="ScarecrowNPC_Name_Objective">scarecrow</string>
+    <string name="ScarecrowNPC_Desc">There is no doubt... this scarecrow is watching your every move. It\'s red glowing eyes pierces right through you, but surprisingly, you don\'t feel threatened .</string>
+    <string name="ScarecrowNPC_Intro_Male">Why hello little boy, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
+    <string name="ScarecrowNPC_Intro_Female">Why hello little girl, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
+    <string name="ScarecrowNPC_Message1"> Five candies is all I need.\n Oh, the reward will be so sweet!</string>
 
 </resources>
