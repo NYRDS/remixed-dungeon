@@ -49,8 +49,10 @@
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">scarecrow</string>
     <string name="ScarecrowNPC_Desc">There is no doubt... this scarecrow is watching your every move. It\'s red glowing eyes pierces right through you, but surprisingly, you don\'t feel threatened .</string>
-    <string name="ScarecrowNPC_Intro_Male">Why hello little boy, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
-    <string name="ScarecrowNPC_Intro_Female">Why hello little girl, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
-    <string name="ScarecrowNPC_Message1"> Five candies is all I need.\n Oh, the reward will be so sweet!</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Why hello little boy, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Why hello little girl, how do you do?\n I\'ve got something exciting for you!\n\n Oh how grateful would I be,\n If you go and collect some candies for me!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Five candies is all I need.\n Oh, the reward will be so sweet!</string>
+    <string name="ScarecrowNPC_Quest_End">Oh jolly, oh good!.\n For this, you'll get actual food!</string>
+    <string name="Journal_ScarecrowNPC">Scarecrow</string>
 
 </resources>
