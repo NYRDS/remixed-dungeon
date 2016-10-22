@@ -20,15 +20,19 @@ package com.nyrds.pixeldungeon.levels.objects.sprites;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.tweeners.PosTweener;
+import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 
-public class LevelObjectSprite extends MovieClip {
+public class LevelObjectSprite extends MovieClip implements Tweener.Listener {
 
 	private static final int SIZE = 16;
 
 	private static TextureFilm frames;
+	private Tweener motion;
 
 	private int pos = -1;
 
@@ -41,6 +45,19 @@ public class LevelObjectSprite extends MovieClip {
 		}
 
 		origin.set(SIZE/2, SIZE/2);
+	}
+
+	public void move(int from, int to) {
+
+		if (getParent() != null) {
+			motion = new PosTweener(this, DungeonTilemap.tileToWorld(to), 0.1f);
+			motion.listener = this;
+			getParent().add(motion);
+
+			if (getVisible() && Dungeon.level.water[from]) {
+				GameScene.ripple(from);
+			}
+		}
 	}
 
 	public void setLevelPos(int cell) {
@@ -68,4 +85,8 @@ public class LevelObjectSprite extends MovieClip {
 		setVisible(pos == -1 || Dungeon.visible[pos]);
 	}
 
+	@Override
+	public void onComplete(Tweener tweener) {
+
+	}
 }
