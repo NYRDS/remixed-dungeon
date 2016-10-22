@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.items.food.Candy;
+import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
@@ -103,11 +104,12 @@ public class ScarecrowNPC extends NPC {
 		if (Quest.given) {
 			
 			Item item = hero.belongings.getItem( Candy.class );
-			if (item != null & item.quantity() ==5) {
+			if (item != null & item.quantity() == 5) {
 
 				item.removeItemFrom(Dungeon.hero);
 
-				Item reward = new PotionOfMight();
+				Item reward = new PumpkinPie();
+				reward.quantity(5);
 
 				if (reward.doPickUp( Dungeon.hero )) {
 					GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
@@ -128,7 +130,7 @@ public class ScarecrowNPC extends NPC {
 			GameScene.show( new WndQuest( this, txtQuestStart ) );
 			Quest.given = true;
 			Quest.process();
-			Journal.add( Journal.Feature.AZUTERRON );
+			Journal.add( Journal.Feature.SCARECROW );
 		}
 		return true;
 	}
@@ -159,7 +161,7 @@ public class ScarecrowNPC extends NPC {
 		}
 
 		private static final String COMPLETED   = "completed";
-		private static final String NODE		= "azuterron";
+		private static final String NODE		= "scarecrow";
 		private static final String GIVEN		= "given";
 		private static final String PROCESSED	= "processed";
 		private static final String DEPTH		= "depth";
@@ -200,7 +202,7 @@ public class ScarecrowNPC extends NPC {
 
 		public static void complete() {
 			completed = true;
-			Journal.remove( Journal.Feature.AZUTERRON );
+			Journal.remove( Journal.Feature.SCARECROW );
 		}
 	}
 }

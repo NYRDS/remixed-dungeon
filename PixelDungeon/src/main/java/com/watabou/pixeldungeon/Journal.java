@@ -40,7 +40,8 @@ public class Journal {
 		WANDMAKER				(Game.getVar(R.string.Journal_Wandmaker)),
 		TROLL					(Game.getVar(R.string.Journal_Troll)),
 		IMP						(Game.getVar(R.string.Journal_Imp)),
-		AZUTERRON				(Game.getVar(R.string.Journal_Azuterron));
+		AZUTERRON				(Game.getVar(R.string.Journal_Azuterron)),
+		SCARECROW				(Game.getVar(R.string.Journal_ScarecrowNPC));
 
 		
 		private String desc;
