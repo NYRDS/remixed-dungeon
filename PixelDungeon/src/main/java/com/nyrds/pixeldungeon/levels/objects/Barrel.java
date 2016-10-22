@@ -2,10 +2,11 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Callback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -49,12 +50,17 @@ public class Barrel extends LevelObject {
 		}
 
 		int nextCell = level.cell(x + dx, y + dy);
-		if (level.cellValid(nextCell) && !level.passable[nextCell]) {
+
+		if(!level.cellValid(nextCell)) {
+			return false;
+		}
+
+		if (!level.passable[nextCell] || level.getLevelObject(nextCell)!=null) {
 			return false;
 		} else {
+			level.objectPress(nextCell,this);
 			setPos(nextCell);
 			level.levelObjectMoved(this);
-			level.itemPress(nextCell);
 		}
 
 		return true;
@@ -72,10 +78,19 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public void burn() {
-		remove();
-		int oldTile = Dungeon.level.map[getPos()];
-		Dungeon.level.set(getPos(), Terrain.EMBERS);
-		GameScene.discoverTile(getPos(), oldTile);
+		sprite.playAnim(10, false, new Callback() {
+			@Override
+			public void call() {
+				remove();
+
+			}
+		}, 0, 1, 2, 3, 4);
+		new PotionOfLiquidFlame().shatter(getPos());
+	}
+
+	@Override
+	public void bump() {
+		burn();
 	}
 
 	@Override

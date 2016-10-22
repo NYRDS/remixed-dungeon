@@ -904,7 +904,18 @@ public abstract class Level implements Bundlable {
 		charPress(cell, hero);
 	}
 
+	public void objectPress(int cell, LevelObject barrel) {
+		itemPress(cell);
+	}
+
+
 	public void itemPress(int cell) {
+
+		LevelObject levelObject = objects.get(cell);
+		if(levelObject != null) {
+			levelObject.bump();
+		}
+
 		charPress(cell, null);
 	}
 
@@ -981,7 +992,6 @@ public abstract class Level implements Bundlable {
 		if (plant != null) {
 			plant.activate(actor);
 		}
-
 	}
 
 	public void mobPress(Mob mob) {

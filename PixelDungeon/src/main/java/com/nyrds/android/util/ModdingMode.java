@@ -1,7 +1,6 @@
 package com.nyrds.android.util;
 
 import android.content.Context;
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -95,5 +94,9 @@ public class ModdingMode {
 
 	public static boolean getClassicTextRenderingMode() {
 		return mTextRenderingMode;
+	}
+
+	public static boolean isHalloweenEvent(){
+		return true;
 	}
 }
