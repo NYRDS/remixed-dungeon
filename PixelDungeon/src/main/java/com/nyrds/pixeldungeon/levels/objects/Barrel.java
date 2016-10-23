@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
@@ -84,7 +85,7 @@ public class Barrel extends LevelObject {
 				remove();
 
 			}
-		}, 0, 1, 2, 3, 4);
+		}, image()+0,  image()+1,  image()+2,  image()+3,  image()+4);
 		new PotionOfLiquidFlame().shatter(getPos());
 	}
 
@@ -105,7 +106,12 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public int image() {
-		return 0;
+
+		if(ModdingMode.isHalloweenEvent()) {
+			return 0;
+		} else {
+			return 8;
+		}
 	}
 
 	@Override

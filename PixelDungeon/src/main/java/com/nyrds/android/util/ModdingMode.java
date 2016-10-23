@@ -101,9 +101,24 @@ public class ModdingMode {
 	public static boolean isHalloweenEvent(){
 
 		Calendar now = new GregorianCalendar();
-		Calendar halloween = new GregorianCalendar(now.get(Calendar.YEAR),10,31);
+		Calendar halloween = new GregorianCalendar();
+		halloween.set(Calendar.MONTH,Calendar.OCTOBER);
+		halloween.set(Calendar.DAY_OF_MONTH,31);
 
-		double daysDiff = Math.abs((now.getTimeInMillis() - halloween.getTimeInMillis()) /  (1000 * 60 * 60 * 24));
+		long milisPerDay = (1000 * 60 * 60 * 24);
+
+		long nowMilis =  now.getTimeInMillis() /milisPerDay;
+		long hallMilis = halloween.getTimeInMillis() /milisPerDay;
+
+		long daysDiff;
+
+
+
+		if(nowMilis > hallMilis) {
+			daysDiff = (nowMilis - hallMilis);
+		} else {
+			daysDiff = (hallMilis - nowMilis );
+		}
 
 		if(daysDiff < 14) {
 			return true;
