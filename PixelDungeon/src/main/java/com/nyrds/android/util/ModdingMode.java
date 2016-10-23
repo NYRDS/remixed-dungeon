@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
@@ -97,6 +99,16 @@ public class ModdingMode {
 	}
 
 	public static boolean isHalloweenEvent(){
-		return true;
+
+		Calendar now = new GregorianCalendar();
+		Calendar halloween = new GregorianCalendar(now.get(Calendar.YEAR),10,31);
+
+		double daysDiff = Math.abs((now.getTimeInMillis() - halloween.getTimeInMillis()) /  (1000 * 60 * 60 * 24));
+
+		if(daysDiff < 14) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
