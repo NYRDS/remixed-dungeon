@@ -42,7 +42,9 @@ public class WndInfoCell extends Window {
 	public WndInfoCell( int cell ) {
 		
 		super();
-		
+
+		LevelObject obj = Dungeon.level.objects.get(cell);
+
 		int tile = Dungeon.level.map[cell];
 		if (Dungeon.level.water[cell]) {
 			tile = Terrain.WATER;
@@ -58,7 +60,13 @@ public class WndInfoCell extends Window {
 		} else {
 			titlebar.icon( DungeonTilemap.tile( cell ) );
 		}
-		titlebar.label( Dungeon.level.tileName( tile ) );
+
+		String title = Dungeon.level.tileName( tile );
+		if(obj != null) {
+			title += " & " + obj.name();
+		}
+
+		titlebar.label( title );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 
@@ -70,8 +78,6 @@ public class WndInfoCell extends Window {
 		StringBuilder desc = new StringBuilder( Dungeon.level.tileDesc( tile ) );
 		
 		final char newLine = '\n';
-
-		LevelObject obj = Dungeon.level.objects.get(cell);
 
 		if(obj != null) {
 			LevelObjectSprite sprite = new LevelObjectSprite();
