@@ -40,9 +40,11 @@ public class CandleOfMindVision extends UsableArtifact {
 		setCurUser(ch);
 
 		if (action.equals( AC_LIT )) {
-			Buff.affect( ch, MindVision.class, charges );
-			charges = 0;
-			reportMindVisionEffect();
+			if(charges>0) {
+				Buff.affect(ch, MindVision.class, charges);
+				charges = 0;
+				reportMindVisionEffect();
+			}
 			return;
 		}
 

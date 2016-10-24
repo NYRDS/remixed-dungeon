@@ -1,10 +1,12 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
@@ -84,7 +86,7 @@ public class Barrel extends LevelObject {
 				remove();
 
 			}
-		}, 0, 1, 2, 3, 4);
+		}, image()+0,  image()+1,  image()+2,  image()+3,  image()+4);
 		new PotionOfLiquidFlame().shatter(getPos());
 	}
 
@@ -95,17 +97,32 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public String desc() {
-		return Dungeon.level.tileDesc(Terrain.SIGN);
+
+		if(ModdingMode.isHalloweenEvent()) {
+			return Game.getVar(R.string.Barrel_Pumpkin_Desc);
+		} else {
+			return Game.getVar(R.string.Barrel_Desc);
+		}
+
 	}
 
 	@Override
 	public String name() {
-		return Dungeon.level.tileName(Terrain.SIGN);
+		if(ModdingMode.isHalloweenEvent()) {
+			return Game.getVar(R.string.Barrel_Pumpkin_Name);
+		} else {
+			return Game.getVar(R.string.Barrel_Name);
+		}
 	}
 
 	@Override
 	public int image() {
-		return 0;
+
+		if(ModdingMode.isHalloweenEvent()) {
+			return 0;
+		} else {
+			return 8;
+		}
 	}
 
 	@Override
