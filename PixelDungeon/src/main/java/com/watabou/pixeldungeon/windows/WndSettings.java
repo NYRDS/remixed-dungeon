@@ -96,6 +96,21 @@ public class WndSettings extends Window {
 			curY = createZoomButtons();
 			curY = createUiZoomButtons(curY);
 		} else {
+			if(android.os.Build.VERSION.SDK_INT >= 19) {
+				CheckBox btnImmersive = new CheckBox(Game.getVar(R.string.WndSettings_Immersive)) {
+					@Override
+					protected void onClick() {
+						super.onClick();
+						PixelDungeon.immerse(checked());
+					}
+				};
+				btnImmersive.setRect(0, curY + GAP, WIDTH,
+						BTN_HEIGHT);
+				btnImmersive.checked(PixelDungeon.immersed());
+				btnImmersive.enable(android.os.Build.VERSION.SDK_INT >= 19);
+				add(btnImmersive);
+				curY = btnImmersive.bottom();
+			}
 
 			curY = createTextScaleButtons(curY + GAP);
 		}

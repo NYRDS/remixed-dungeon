@@ -176,12 +176,14 @@ public class PixelDungeon extends Game {
 			if (instance() != null) {
 				instance().getWindow()
 						.getDecorView()
-						.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+						.setSystemUiVisibility(
+								immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
 										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 										| View.SYSTEM_UI_FLAG_FULLSCREEN
-										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+										: 0);
 			}
 		}
 	}
@@ -340,7 +342,26 @@ public class PixelDungeon extends Game {
 		realtimeCached = value;
 		Preferences.INSTANCE.put(Preferences.KEY_REALTIME, value);
 	}
-	
+
+	// *** IMMERSIVE MODE ****
+	@SuppressLint("NewApi")
+	public static void immerse(boolean value) {
+		Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
+
+		instance().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				updateImmersiveMode();
+				setNeedSceneRestart(true);
+			}
+		});
+	}
+
+	public static boolean immersed() {
+		return Preferences.INSTANCE
+				.getBoolean(Preferences.KEY_IMMERSIVE, true);
+	}
+
 	/*
 	 * <--- Preferences
 	 */
