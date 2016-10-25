@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
+import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;
@@ -25,6 +27,7 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.bags.Keyring;
@@ -108,6 +111,13 @@ public class SewerLevel extends RegularLevel {
 		super.createMobs();
 		
 		Ghost.Quest.spawn( this );
+
+		if(Dungeon.depth==2) {
+
+			ScarecrowNPC.spawn(this);
+
+		}
+
 	}
 	
 	@Override

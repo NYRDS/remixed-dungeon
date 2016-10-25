@@ -30,7 +30,7 @@ public class Candy extends Food {
 
 			detach( hero.belongings.backpack );
 
-			GLog.i( fMessage );
+			GLog.w( fMessage );
 
 			hero.getSprite().operate( hero.getPos() );
 			hero.busy();

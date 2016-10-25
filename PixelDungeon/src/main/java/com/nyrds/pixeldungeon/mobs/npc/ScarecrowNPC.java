@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
+import android.util.Log;
+
 import com.nyrds.pixeldungeon.items.food.Candy;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
@@ -16,13 +18,19 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
+import com.watabou.pixeldungeon.items.quest.DriedRose;
+import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.Room;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -94,17 +102,23 @@ public class ScarecrowNPC extends NPC {
 		}
 	};
 
+	public static void spawn(RegularLevel level) {
+		ScarecrowNPC npc = new ScarecrowNPC();
+		npc.setPos(level.randomRespawnCell());
+		level.spawnMob(npc);
+	}
+
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		if(Quest.completed) {
-			sell();
+			this.die( null );
 			return true;
 		}
 		if (Quest.given) {
 			
 			Item item = hero.belongings.getItem( Candy.class );
-			if (item != null & item.quantity() == 5) {
+			if (item != null && item.quantity() == 5) {
 
 				item.removeItemFrom(Dungeon.hero);
 
@@ -129,7 +143,7 @@ public class ScarecrowNPC extends NPC {
 			}
 			GameScene.show( new WndQuest( this, txtQuestStart ) );
 			Quest.given = true;
-			Quest.process();
+			Quest.process(hero.getPos());
 			Journal.add( Journal.Feature.SCARECROW );
 		}
 		return true;
@@ -153,6 +167,7 @@ public class ScarecrowNPC extends NPC {
 		private static boolean processed;
 
 		private static int depth;
+		private static float killed;
 
 		public static void reset() {
 			completed = false;
@@ -165,6 +180,7 @@ public class ScarecrowNPC extends NPC {
 		private static final String GIVEN		= "given";
 		private static final String PROCESSED	= "processed";
 		private static final String DEPTH		= "depth";
+		private static final String KILLED	= "killed";
 
 		public static void storeInBundle( Bundle bundle ) {
 			Bundle node = new Bundle();
@@ -173,6 +189,7 @@ public class ScarecrowNPC extends NPC {
 			node.put(DEPTH, depth);
 			node.put(PROCESSED, processed);
 			node.put(COMPLETED, completed);
+			node.put(KILLED, killed);
 
 			bundle.put( NODE, node );
 		}
@@ -186,15 +203,18 @@ public class ScarecrowNPC extends NPC {
 				depth	= node.getInt( DEPTH );
 				processed	= node.getBoolean( PROCESSED );
 				completed = node.getBoolean( COMPLETED );
+				killed = node.getFloat( KILLED );
 			}
 		}
 
-		public static void process() {
+		public static void process( int pos ) {
 			if (given && !processed) {
-				TreacherousSpirit enemy = new TreacherousSpirit();
-				enemy.setPos(Dungeon.level.randomRespawnCell());
-				if (enemy.getPos() != -1) {
-					Dungeon.level.spawnMob(enemy);
+				killed++;
+				GLog.i(Float.toString(killed) + " " + Float.toString(killed / 5));
+				if (killed != 0 && (killed / 5) % 1  == 0) {
+					Dungeon.level.drop( new Candy(), pos ).sprite.drop();
+				}
+				if (killed >= 25) {
 					processed = true;
 				}
 			}
