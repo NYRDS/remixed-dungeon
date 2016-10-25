@@ -136,6 +136,8 @@ public class Dungeon {
 		WandMaker.Quest.reset();
 		Blacksmith.Quest.reset();
 		Imp.Quest.reset();
+		ScarecrowNPC.Quest.reset();
+		AzuterronNPC.Quest.reset();
 
 		Room.shuffleTypes();
 
