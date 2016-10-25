@@ -3,7 +3,9 @@
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
     <string name="Bowknot_Name">Knoten</string>
-    <!-- STRINGS OF Shades CLASS -->
+    <string name="Bowknot_Info">Eine glitzernde rosa Schleife, die an eine Haarnadel geheftet ist.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
     <string name="Shades_Name">Schatten</string>
     <!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Hasenohren</string>

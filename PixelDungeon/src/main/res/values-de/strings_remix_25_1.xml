@@ -4,6 +4,8 @@
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_WayAlreadyChosen">Du kannst deine Klasse nicht mehr ändern!</string>
 
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">Der Seelenbringer</string>
     <string name="BlackSkullOfMastery_Lich">Werde zum Lich</string>
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Der schwarze Schädel wurde erweckt!</string>
