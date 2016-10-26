@@ -8,7 +8,7 @@
   <string name="TitleScene_InternalStorageLow">Sem espaço suficiente\n no armazenamento interno\n Seu progresso pode ser perdido!</string>
   <!--STRINGS OF AboutScene CLASS-->
   <string name="AboutScene_Txt">Remixed Pixel Dungeon por NYRDS baseado em Pixel Dungeon de Watabou.\n\n
-Código &amp; Gráficos: Watabou &amp; NYRDS &amp; ThEnigma314\nMúsica: Cube_Code\n\nUm Agradecimento especial para o rodriformiga, para implementar a internacionalização do jogo.\n\nEnvie um e-mail:\n\n</string>
+Código &amp; Gráficos: Watabou &amp; NYRDS &amp; ThEnigma314\nMúsica: Cube_Code, Misaerit\n\nUm Agradecimento especial para o rodriformiga, para implementar a internacionalização do jogo.\n\nEnvie um e-mail:\n\n</string>
   <string name="AboutScene_OurSite">Nosso site:</string>
   <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
