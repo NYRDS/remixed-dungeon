@@ -45,13 +45,16 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
@@ -199,6 +202,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		Context context = getApplicationContext();
 		StringsManager.setContext(context);
+
+		if(!BuildConfig.DEBUG) {
+			if (!checkOwnSignature()) {
+				EventCollector.logEvent("tampered signature",Util.getSignature(this));
+			}
+		}
 
 		FileSystem.setContext(context);
 		ModdingMode.setContext(context);
@@ -530,5 +539,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	public LinearLayout getLayout() {
 		return layout;
+	}
+
+	public boolean checkOwnSignature() {
+		GLog.i("own signature %s", Util.getSignature(this));
+		return Util.getSignature(this).equals(getVar(R.string.ownSignature));
 	}
 }

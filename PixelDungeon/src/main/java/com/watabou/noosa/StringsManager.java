@@ -154,7 +154,8 @@ public class StringsManager {
 
 	public static String[] getVars(int id) {
 		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
-				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey && id != R.string.testDevice) {
+				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
+				&& id != R.string.testDevice && id != R.string.ownSignature) {
 			if (stringsMap.containsKey(id)) {
 				return stringsMap.get(id);
 			}
