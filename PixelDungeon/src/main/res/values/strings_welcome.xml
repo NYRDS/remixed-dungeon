@@ -169,5 +169,6 @@
         - Fixed bug that was resulting in creating images of your hero, wearing a hat, after clicking "Examine" button in \"Hats\" menu\n
         - Fixed bug, that was preventing mobs (summoned or resurrected on a \"hole\" cell) from falling down\n
         - Updated translations and fixed some typos\n
+        </string><string name="Welcome_Text_25_3">
         </string>
 </resources>
