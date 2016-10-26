@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Ушанка</string>
+    <string name="Ushanka_Info">Тёплая и уютная шапка-ушанка, крашенная красной звездой. Идеальный напарник, для товарища, в битве супротив злого и холодного подземелья.</string>
+
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">Череп Вампира</string>
+    <string name="VampireSkull_Info">Эта маска выполнена из полностью натурального черепа вампира. По-большому счёту это и есть череп... череп большеголового вампира. Жуть.</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Маска Зомби</string>
+    <string name="ZombieMask_Info">А вы когда-нибудь мечтали выглядеть как герой погибший в бою... много раз подряд, так и не добившись своей цели? Вот ваш шанс.</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">конфета</string>
+    <string name="Candy_Info">Это конфета такая красивая и так приятно пахнет. Неужели тебе придётся её кому-то отдать?</string>
+    <string name="Candy_Warning_1">Не следовало тебе есть эту конфету. Ты ведь обещал что вернёшь её владельцу. Не то чтобы она оказала на тебя заметное действие, голод она не утолила. Это ведь всего лишь конфета.</string>
+    <string name="Candy_Warning_2">Вот эта точно была лишней. Из-за переедания конфет у тебя заболел живот.</string>
+
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">тыквенный пирог</string>
+    <string name="PumpkinPie_Info">Вкуснейший тыквенный пирог, прямо как готовила твоя мама.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">тухлый тыквенный пирог</string>
+    <string name="RottenPumpkinPie_Info">Как бы хорош ни был этот пирог, будучи свежим, теперь его есть точно не стоит.</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">Свеча Видений</string>
+    <string name="CandleOfMindVision_Info">Выглядит как обычная свеча, странно найти нечто подобное в опасном подземелье. Самое странное что она очень тёплая, хотя её не зажигали.</string>
+    <string name="CandleOfMindVision_Info_Lighted">Свеча загорелась как только её вынули из рюкзака. Пламя излучает лёгкий лиловый свет, сквозь него ты можешь видеть ближайших монстров.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">Свеча выгорела, и больше не загорается у тебя в руках. Похоже ты больше не сможешь её использовать.</string>
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">бочка</string>
+    <string name="Barrel_Desc">С виду обычная бочка. Но подходя ближе ты начинаешь чувствовать странный маслянистый запах. Похоже бочка довольно лёгкая, скорее всего ты сможешь её сдвинуть.</string>
+
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">тыква</string>
+    <string name="Barrel_Pumpkin_Desc">Весьма странно и довольно жутко видеть резную тыкву, лежащей на полу подземелья. Ты отчётливо чувствуешь исходящую от неё опасность. Но ты всегда можешь её оттолкнуть, верно?</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">пугало</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
+    <string name="ScarecrowNPC_Name_Objective">пугало</string>
+    <string name="ScarecrowNPC_Desc">Вне всяких сомнений... это пугало следит за каждым твоим шагом. Взгляд его красных, светящихся глаз пронизывает тебя насквозь, но, к твоему удивлению, оно не кажется тебе опасным.</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Здравствуй малыш, как твои дела?\n Придумал задачку я для тебя!\n\n Ах какую радость бы я испытал, \n Если бы конфет для меня ты собрал!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Здравствуй малышка, как твои дела?\n Придумал задачку я для тебя!\n\n Ах какую радость бы испытал я, \n Если бы конфет для меня ты собрала!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Пять конфет, вот моя отрада.\n Ах, как сладка будет награда!</string>
+    <string name="ScarecrowNPC_Quest_End">Ох радость, ах восторг!\n Ты заслужил вкуснейший пирог!</string>
+    <string name="Journal_ScarecrowNPC">Пугало</string>
+
+</resources>
