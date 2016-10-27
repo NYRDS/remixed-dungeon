@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
@@ -62,11 +61,12 @@ public class Barrel extends LevelObject {
 			return false;
 		}
 
-		if (!level.passable[nextCell] || level.getLevelObject(nextCell)!=null) {
+		if (level.solid[nextCell] || level.getLevelObject(nextCell)!=null) {
 			return false;
 		} else {
-			level.objectPress(nextCell,this);
 			setPos(nextCell);
+
+			level.objectPress(nextCell,this);
 			level.levelObjectMoved(this);
 		}
 

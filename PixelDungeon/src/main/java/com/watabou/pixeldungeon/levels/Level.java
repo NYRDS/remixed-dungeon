@@ -149,7 +149,7 @@ public abstract class Level implements Bundlable {
 	public static int[] NEIGHBOURS8;
 	public static int[] NEIGHBOURS9;
 
-	protected static final float TIME_TO_RESPAWN = 50;
+	private static final float TIME_TO_RESPAWN = 50;
 
 	private static final String TXT_HIDDEN_PLATE_CLICKS = Game
 			.getVar(R.string.Level_HiddenPlate);
@@ -333,7 +333,6 @@ public abstract class Level implements Bundlable {
 				}
 			}
 		}
-
 
 		boolean pitNeeded = Dungeon.depth > 1 && weakFloorCreated;
 
@@ -904,7 +903,11 @@ public abstract class Level implements Bundlable {
 		charPress(cell, hero);
 	}
 
-	public void objectPress(int cell, LevelObject barrel) {
+	public void objectPress(int cell, LevelObject levelObject) {
+		if(map[cell] == Terrain.CHASM || pit[cell]) {
+			levelObject.fall();
+			return;
+		}
 		itemPress(cell);
 	}
 

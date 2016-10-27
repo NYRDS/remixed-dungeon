@@ -57,10 +57,11 @@ public abstract class LevelObject implements Bundlable {
 	}
 
 	public void setPos(int pos) {
-
 		if(sprite!=null) {
 			sprite.move(this.pos,pos);
+			Dungeon.level.levelObjectMoved(this);
 		}
+
 		this.pos = pos;
 	}
 
@@ -78,5 +79,12 @@ public abstract class LevelObject implements Bundlable {
 
 	public boolean push(Hero hero){
 		return false;
+	}
+
+	public void fall() {
+		if(sprite != null) {
+			sprite.fall();
+			Dungeon.level.remove(this);
+		}
 	}
 }

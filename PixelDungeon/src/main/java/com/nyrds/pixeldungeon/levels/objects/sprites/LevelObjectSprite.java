@@ -22,12 +22,14 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.PosTweener;
+import com.watabou.noosa.tweeners.ScaleTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
+import com.watabou.utils.Random;
 
 public class LevelObjectSprite extends MovieClip implements Tweener.Listener, MovieClip.Listener {
 
@@ -61,6 +63,25 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 				GameScene.ripple(from);
 			}
 		}
+	}
+
+	public void fall() {
+
+		origin.set( width / 2, height - DungeonTilemap.SIZE / 2 );
+		angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
+
+		getParent().add( new ScaleTweener( this, new PointF( 0, 0 ), 1f ) {
+			@Override
+			protected void onComplete() {
+				LevelObjectSprite.this.killAndErase();
+			}
+
+			@Override
+			protected void updateValues( float progress ) {
+				super.updateValues( progress );
+				am = 1 - progress;
+			}
+		} );
 	}
 
 	public void setLevelPos(int cell) {
@@ -108,4 +129,6 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 			onAnimComplete = null;
 		}
 	}
+
+
 }
