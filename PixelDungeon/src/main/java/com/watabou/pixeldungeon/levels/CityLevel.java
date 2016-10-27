@@ -78,6 +78,7 @@ public class CityLevel extends RegularLevel {
 		}
 
 		placeEntranceSign();
+		placeBarrels(8);
 	}
 	
 	@Override

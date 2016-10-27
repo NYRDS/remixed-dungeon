@@ -82,6 +82,7 @@ public class GutsLevel extends RegularLevel {
 		}
 
 		placeEntranceSign();
+		placeBarrels(15);
 	}
 
 	@Override

@@ -7,7 +7,7 @@
   <string name="TitleScene_About">정보</string>
   <string name="TitleScene_InternalStorageLow">내부 저장 장치에\n 공간이 부족하여\n 진행 사항을 잃을 수 있습니다!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt">Remixed Pixel Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou &amp; NYRDS &amp; ThEnigma314\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD i18n code\n\nE-Mail us:\n\n</string>
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou &amp; NYRDS &amp; ThEnigma314\n\nMusic: Cube_Code, Misaerit\n\nSpecial Thanks to: rodriformiga for PD i18n code\n\nE-Mail us:\n\n</string>
   <string name="AboutScene_OurSite">제작사 홈페이지:</string>
   <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>

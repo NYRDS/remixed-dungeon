@@ -6,9 +6,12 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
@@ -90,6 +93,9 @@ public class Barrel extends LevelObject {
 			}
 		}, image()+0,  image()+1,  image()+2,  image()+3,  image()+4);
 		Sample.INSTANCE.play( Assets.SND_EXPLOSION );
+
+		LiquidFlame fire = Blob.seed( getPos(), 10, LiquidFlame.class );
+		GameScene.add( fire );
 		//new PotionOfLiquidFlame().shatter(getPos());
 	}
 

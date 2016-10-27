@@ -7,7 +7,7 @@
   <string name="TitleScene_About">About</string>
   <string name="TitleScene_InternalStorageLow">内部ストレージに\nスペースが足りません\n進行状況が失われる可能性があります！</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt">Remixed Pixel Dungeon は、Watabou氏の Pixel Dungeon を元にして NYRDS が制作しました。\n\nCode &amp; graphics: Watabou &amp; NYRDS &amp; ThEnigma314\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD  i18n code\n\nE-Mail us:\n\n</string>
+  <string name="AboutScene_Txt">Remixed Pixel Dungeon は、Watabou氏の Pixel Dungeon を元にして NYRDS が制作しました。\n\nCode &amp; graphics: Watabou &amp; NYRDS &amp; ThEnigma314\n\nMusic: Cube_Code, Misaerit\n\nSpecial Thanks to: rodriformiga for PD  i18n code\n\nE-Mail us:\n\n</string>
   <string name="AboutScene_OurSite">ウェブサイト:</string>
   <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>

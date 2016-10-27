@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Bones;
@@ -558,6 +559,19 @@ public abstract class RegularLevel extends CommonLevel {
 				addLevelObject(sign);
 				break;
 			}
+		}
+	}
+
+	protected void placeBarrels(int num) {
+		for (int i =0; i < num; i++){
+			int pos;
+			do{
+				pos = getRandomTerrainCell(Terrain.EMPTY);
+			} while (!cellValid(pos));
+
+			pos = getRandomTerrainCell(Terrain.EMPTY);
+			Barrel barrel = new Barrel(pos);
+			addLevelObject(barrel);
 		}
 	}
 

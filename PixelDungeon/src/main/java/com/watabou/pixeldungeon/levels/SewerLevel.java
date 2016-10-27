@@ -103,6 +103,8 @@ public class SewerLevel extends RegularLevel {
 		}
 
 		placeEntranceSign();
+		placeBarrels(5);
+
 	}
 
 	@Override
@@ -205,7 +207,7 @@ public class SewerLevel extends RegularLevel {
 		}
 	}
 
-	private static final class WaterParticle extends PixelParticle {
+	public static final class WaterParticle extends PixelParticle {
 
 		public WaterParticle() {
 			super();
