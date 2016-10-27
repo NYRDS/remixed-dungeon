@@ -46,7 +46,7 @@
   <string name="PotionOfLevitation_Apply">Du schwebst in die Luft!</string>
   <!--STRINGS OF PotionOfLiquidFlame CLASS-->
   <string name="PotionOfLiquidFlame_Name">Flammentrank</string>
-  <string name="PotionOfLiquidFlame_Info">Dieses Fläschchen enthält eine sehr instabile Verbindung die sich sofort in Flammen verwandelt sobald sie mit Luft in Kontakt kommt.</string>
+  <string name="PotionOfLiquidFlame_Info">Dieses Fläschchen enthält eine sehr instabile Verbindung die sich sofort in Flammen verwandelt, sobald sie mit Luft in Kontakt kommt.</string>
   <!--STRINGS OF PotionOfMight CLASS-->
   <string name="PotionOfMight_Name">Machttrank</string>
   <string name="PotionOfMight_Info">Dieser kräftigende Trank wird durch deine Muskeln strömen und deine Stärke um einen und deine Gesundheit um fünf Punkte erhöhen.</string>

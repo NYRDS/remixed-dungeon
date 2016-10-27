@@ -3,7 +3,7 @@
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
   <string name="Blacksmith_Name">forgeron troll</string>
-  <string name="Blacksmith_Desc">Ce forgeron troll à l\'air d\'un troll comme un autre : il est grand et maigre, et sa peau ressemble à de la pierre, que ce soit la couleur ou la texture. Il est en train de bricoler avec des outils un peu trop petits pour lui.</string>
+  <string name="Blacksmith_Desc">Ce forgeron troll a l\'air d\'un troll comme un autre : il est grand et maigre, et sa peau ressemble à de la pierre, que ce soit la couleur ou la texture. Il est en train de bricoler avec des outils un peu trop petits pour lui.</string>
   <string name="Blacksmith_Gold1">Hé l\'humain ! Tu veux te rendre utile, pas vrai ? Prends c\'te pioche et va miner du minerai noir, 15 morceaux devraient suffire. Comment ça, comment je vais payer ? Radin... Ok, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
   <string name="Blacksmith_Blood1">Hé l\'humain ! Tu veux être utile, pas vrai ? Prends c\'te pioche et démonte une chauve-souris avec : j\'ai besoin de son sang sur l\'outil.  Comment ça, je donne quoi en échange ? Cupide... Ok, ok, j\'ai pas d\'argent, mais je peux forger pour toi. T\'as une sacrée veine, je suis le seul forgeron du coin !</string>
   <string name="Blacksmith_Txt2">Tu te fous de moi ? Elle est où ma pioche ?!</string>
@@ -21,9 +21,9 @@
   <!--STRINGS OF Ghost CLASS-->
   <string name="Ghost_Name">fantôme triste</string>
   <string name="Ghost_Desc">Le fantôme est à peine visible. On dirait un miasme de lumières défaillantes avec un visage des plus attristés.</string>
-  <string name="Ghost_Rose1">Bonjour aventurier... J\'étais comme vous, un jour, fort et confiant... Je suis mort désormais... Mais je ne peux pas partir... Pas tant que je n\'aurai pas retrouvé ma rose séchée... Elle est très importante à mes yeux... Un monstre l\'a prise sur mon cadavre...</string>
+  <string name="Ghost_Rose1">Bonjour aventurier... J\'étais comme vous, un jour, fort et confiant... Je suis mort désormais... Mais je ne peux pas partir... Pas tant que je n\'aurai pas retrouvé ma _rose séchée_... Elle est très importante à mes yeux... Un monstre l\'a prise sur mon cadavre...</string>
   <string name="Ghost_Rose2">S\'il vous plaît... Aidez moi... Trouvez la rose...</string>
-  <string name="Ghost_Rat1">Boujour aventurier... J\'étais comme vous, un jour, fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas quitter cet endroit... Pas tant que je n\'aurai pas pris ma revanche... Tuez le rat fétide, celui qui a pris ma vie...</string>
+  <string name="Ghost_Rat1">Boujour aventurier... J\'étais comme vous, un jour, fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas quitter cet endroit... Pas tant que je n\'aurai pas pris ma revanche... Tuez le _rat fétide_, celui qui a pris ma vie...</string>
   <string name="Ghost_Rat2">S\'il vous plaît... Aidez-moi... Détruisez cette abomination...</string>
   <string name="Ghost_Defense">esquivé</string>
   <string name="FetidRat_Name">rat fétide</string>
@@ -40,19 +40,19 @@
   <string name="Hedgehog_ImLate">Je suis en retard, terriblement en retard...</string>
   <!--STRINGS OF Imp CLASS-->
   <string name="Imp_Name">diablotin ambitieux</string>
-  <string name="Imp_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pas pour leur force ou leur aptitudes à la magie, mais plutôt par leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
+  <string name="Imp_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pour leur force ou leur aptitude à la magie, mais plutôt pour leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
   <string name="Imp_Defense">esquivé</string>
-  <string name="Imp_Golems1">Etes vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)
-Moi, j\'aurai besoin de tuer des golems. Vous voyez, j\'aimerais commencer ma petite affaire par ici, mais ces golems sont très mauvais pour le business ! C\'est dur de négocier avec des grumeaux de granite errants, maudits soient-ils ! Alors, s\'il vous plaît, tuez... disons 6 d\'entre eux, et la récompense est à vous. </string>
+  <string name="Imp_Golems1">Etes-vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)
+Moi, j\'aurai besoin de tuer des golems. Vous voyez, j\'aimerais commencer ma petite affaire par ici, mais ces _golems_ sont très mauvais pour le business ! C\'est dur de négocier avec des grumeaux de granite errants, maudits soient-ils ! Alors, s\'il vous plaît, tuez... disons 6 d\'entre eux, et la récompense est à vous. </string>
   <string name="Imp_Golems2">Comment se passe votre safari avec les golems ?</string>
   <string name="Imp_Monks1">Etes vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)
-Moi, j\'aurai besoin de tuer des moines. Vous voyez, j\'aimerais établir un petit commerce par ici, mais ces lunatiques n\'achètent rien et vont effrayer les autres clients... Alors, s\'il vous plaît, tuez... disons 8 d\'entre eux, et la récompense est à vous. </string>
+Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un petit commerce par ici, mais ces lunatiques n\'achètent rien et vont effrayer les autres clients... Alors, s\'il vous plaît, tuez... disons 8 d\'entre eux, et la récompense est à vous. </string>
   <string name="Imp_Monks2">Oh, vous êtes encore en vie ! Je savais que votre kung-fu était plus fort ;) Au fait, n\'oubliez pas de ramasser les jetons de ces moines.</string>
   <string name="Imp_Cya">A plus ,%s !</string>
   <string name="Imp_Hey">Psst, %s !</string>
   <!--STRINGS OF ImpShopkeeper CLASS-->
   <string name="ImpShopkeeper_Name">diablotin ambitieux</string>
-  <string name="ImpShopkeeper_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pas pour leur force ou leur aptitudes à la magie, mais plutôt par leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
+  <string name="ImpShopkeeper_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pour leur force ou leur aptitude à la magie, mais plutôt pour leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
   <string name="ImpShopkeeper_Greetings">Salut, l\'ami !</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">image miroir</string>
@@ -74,9 +74,9 @@ Moi, j\'aurai besoin de tuer des moines. Vous voyez, j\'aimerais établir un pet
   <string name="WandMaker_Name">vieux fabricant de sceptres</string>
   <string name="WandMaker_Desc">Ce gentleman, vieux mais robuste, a une expression un peu confuse. Il est protégé par un bouclier magique.</string>
   <string name="WandMaker_Defense">absorbé</string>
-  <string name="WandMaker_Berry1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit ! Je suis venu ici pour un ingrédient rare, la graine rougebaie. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider ? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
+  <string name="WandMaker_Berry1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit ! Je suis venu ici pour un ingrédient rare, la _graine rougebaie_. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider ? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
   <string name="WandMaker_Berry2">Vous avez trouvé la graine de rougebaie, %s ? Non ? Pas de soucis, j\'ai tout mon temps, voyez-vous.</string>
-  <string name="WandMaker_Dust1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit ! Je suis venu ici pour un ingrédient rare, la poussière de mort. Elle peut être récoltée sur les restes des squelettes, et il y\'en a beaucoup dans le coin. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider ? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
+  <string name="WandMaker_Dust1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit ! Je suis venu ici pour un ingrédient rare, la _poussière de mort_. Elle peut être récoltée sur les restes des squelettes, et il y en a beaucoup dans le coin. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider ? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
   <string name="WandMaker_Dust2">Vous avez la poussière des morts , %s ? Les piles d\'ossements sont les endroits à vérifier.</string>
   <string name="WandMaker_RotberryName">Rougebaie</string>
   <string name="WandMaker_RotberryDesc">Les baies de cet arbrisseau ont le goût délicieux de la mort.</string>

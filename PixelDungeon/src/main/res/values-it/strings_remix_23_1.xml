@@ -6,6 +6,7 @@
   <string name="AzuterronNPC_Gender">maschile</string>
   <string name="AzuterronNPC_Name_Objective">Sconosciuto</string>
   <string name="AzuterronNPC_Desc">Una misteriosa figura avvolta da una nebbia nera.</string>
+  <string name="AzuterronNPC_Quest_Start">Huh, perché... Oh, puoi vedermi, no? Ciò significa che non sei uno di \"loro\". Vedo che non sei nemmeno affezionato a tutti questi mostri. Detto questo, se mi aiuterai con un piccolo problema, ti ricompenserò con la mia assistenza. Da qualche parte su questo livello troverai una bestia d \'oscurità, uno _Spirito oscuro_. Sconfiggilo, prendi il suo _cuore_  e portamelo. E una cosa ancora, se sei interessato  a comprare le mie scorte non esitare a chiedere  </string>
   <string name="AzuterronNPC_Quest_Reminder">Aiutami e io ti aiuterò.</string>
   <string name="AzuterronNPC_Quest_End">Eccelente. Prendi questa pozione, sicuramente, la troverete utile.</string>
   <string name="Journal_Azuterron">Sconosciuto</string>
@@ -13,6 +14,7 @@
   <string name="TreacherousSpirit_Name">Spirito sleale</string>
   <string name="TreacherousSpirit_Gender">maschile</string>
   <string name="TreacherousSpirit_Name_Objective">Spirito sleale</string>
+  <string name="TreacherousSpirit_Desc">Questa mostruosa creatura sembra una nuvola vivente di oscurità. I suoi occhi senza vita ti fissano, pulsando con ognuno dei tuoi movimenti. </string>
   <!--STRINGS OF SpiritOfPain CLASS-->
   <string name="SpiritOfPain_Name">Spirito del dolore</string>
   <string name="SpiritOfPain_Gender">maschile</string>
@@ -22,11 +24,15 @@
   <string name="SuspiciousRat_Name">ratto sospettoso</string>
   <string name="SuspiciousRat_Gender">femminile</string>
   <string name="SuspiciousRat_Name_Objective">ratto sospettoso</string>
+  <string name="SuspiciousRat_Desc">Il ratto non è una vista insolita nei dungeon, ma per abitare così in profondità... Puoi vedere come tutto il corpo del ratto spasmo quando si muove. </string>
+  <string name="SuspiciousRat_Info1">Un ratto sospetto si sta contraendo violentemente. </string>
   <!--STRINGS OF PseudoRat CLASS-->
   <string name="PseudoRat_Name">Ratto falso</string>
   <string name="PseudoRat_Gender">femminile</string>
   <string name="PseudoRat_Name_Objective">Ratto falso</string>
+  <string name="PseudoRat_Desc">Un orribile bestia che è emersa dal corpo del ratto non sembra somigliare ad un roditore o qualsiasi altro animale tu abbia mai visto. La bocca enorme, pieno di denti taglienti come rasoi, occupa la maggior parte del suo corpo. </string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Uno gnoll zombie si è risvegliato dalla morte! </string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">Cuore tenebroso</string>

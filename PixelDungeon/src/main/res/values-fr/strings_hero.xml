@@ -43,7 +43,7 @@
     <item>Les mages commencent avec un unique sceptre de missiles magiques. Celui-ci pourra être \"désenchanté\" pour améliorer un autre sceptre.</item>
     <item>Les mages rechargent leurs sceptres plus vite.</item>
     <item>Lors de sa consommation, une ration redonnera 1 charge à tous les sceptres de l\'inventaire.</item>
-    <item>Les mages peuvent utiliser leurs sceptres comme armes de mélée.</item>
+    <item>Les mages peuvent utiliser leurs sceptres comme armes de mêlée.</item>
     <item>Les parchemins d\'identification sont identifiés dès le début.</item>
   </string-array>
   <string-array name="HeroClass_RogPerks">
@@ -71,14 +71,14 @@
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiateur</string>
   <string name="HeroSubClass_DescGlad">Une attaque réussie avec une arme de mélée permet au _Gladiateur_ de commencer un combo, durant lequel chaque nouvelle attaque réussie inflige plus de dégâts.</string>
-  <string name="HeroSubClass_NameBers">berzerk</string>
+  <string name="HeroSubClass_NameBers">berzerker</string>
   <string name="HeroSubClass_DescBers">Quand il est sévèrement blessé, le _Berzerker_ entre dans un état de furie sauvage et augmente significativement les dégâts qu\'il inflige.</string>
   <string name="HeroSubClass_NameWarL">sorcier</string>
   <string name="HeroSubClass_DescWarL">Après avoir tué un ennemi, le _Sorcier_ consomme son âme. Cela soigne ses blessures et satisfait sa faim.</string>
   <string name="HeroSubClass_NameBatM">mage de bataille</string>
-  <string name="HeroSubClass_DescBatM">Quand il se bat avec un sceptre à la main, le _Mage de bataille_ inflige des dommages supplémentaires en fonction du nombre de charges du sceptre. Chaque attaque réussie restaure 1 charge à ce sceptre.</string>
+  <string name="HeroSubClass_DescBatM">Quand il se bat avec un sceptre à la main, le _Mage de bataille_ inflige des dégâts supplémentaires en fonction du nombre de charges du sceptre. Chaque attaque réussie restaure 1 charge à ce sceptre.</string>
   <string name="HeroSubClass_NameAssa">assassin</string>
-  <string name="HeroSubClass_DescAssa">Quand il fait une attaque surprise, l\'_Assassin_ inflige des dommages supplémentaires à sa cible.</string>
+  <string name="HeroSubClass_DescAssa">Quand il fait une attaque surprise, l\'_Assassin_ inflige des dégâts supplémentaires à sa cible.</string>
   <string name="HeroSubClass_NameFreR">coureur</string>
   <string name="HeroSubClass_DescFreR">Le _Coureur_ se déplace presque deux fois plus vite que la plupart des monstres. Quand il court, le coureur est beaucoup plus dur à toucher. Mais pour cela, il ne doit pas être encombré et ne pas être affamé.</string>
   <string name="HeroSubClass_NameSnip">sniper</string>

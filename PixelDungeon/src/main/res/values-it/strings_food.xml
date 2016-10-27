@@ -12,7 +12,7 @@
   <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
   <!--STRINGS OF FrozenCarpaccio CLASS-->
   <string name="FrozenCarpaccio_Name">carpaccio congelato</string>
-  <string name="FrozenCarpaccio_Info">E \'un pezzo di carne cruda congelata.L\'unico modo di mangiarlo è tagliandolo a fette sottili. in questo modo è sorprendentemente buono.</string>
+  <string name="FrozenCarpaccio_Info">E \'un pezzo di carne cruda congelata. L\'unico modo di mangiarlo è tagliandolo a fette sottili. in questo modo è sorprendentemente buono.</string>
   <string name="FrozenCarpaccio_Info1">Vedi le mani che diventano invisibili!</string>
   <string name="FrozenCarpaccio_Info2">Ti senti la pelle che si indurisce!</string>
   <string name="FrozenCarpaccio_Info3">Rinfrescante!</string>
@@ -31,19 +31,19 @@
   <string name="RottenMeat_Name">carne marcia</string>
   <string name="RottenMeat_Info">pezzo di carne marcia</string>
   <!--STRINGS OF RottenPasty CLASS-->
-  <string name="RottenPasty_Name">pasto marcio</string>
+  <string name="RottenPasty_Name">pasticcio marcio</string>
   <string name="RottenPasty_Info">ex-pasto sembra così disgustoso</string>
   <!--STRINGS OF RottenRation CLASS-->
   <string name="RottenRation_Name">razione marcia</string>
-  <string name="RottenRation_Info">una volta poteva essere mangiato</string>
+  <string name="RottenRation_Info">Taaanto tempo fa poteva essere mangiato</string>
   <!--STRINGS OF OverpricedRation CLASS-->
-  <string name="OverpricedRation_Name">troppo costosa il cibo a razione</string>
-  <string name="OverpricedRation_Info">Sembra come una razione base del cibo, ma più piccola.</string>
+  <string name="OverpricedRation_Name">razione di cibo sovrapprezzata</string>
+  <string name="OverpricedRation_Info">Sembra esattamente come una razione standard di cibo ma più piccola.</string>
   <string name="OverpricedRation_Message">questo cibo è gustoso.</string>
   <!--STRINGS OF Pasty CLASS-->
   <string name="Pasty_Name">pasticcio</string>
-  <string name="Pasty_Info">Questo è un\'autentico pasto Cornish con ripieno di carne e patate.</string>
+  <string name="Pasty_Info">Questo è un\'autentico pasticcio della Cornovaglia col ripieno tradizionale di carne e patate.</string>
   <!--STRINGS OF PseudoPasty CLASS-->
   <string name="PseudoPasty_Name">pasticcio</string>
-  <string name="PseudoPasty_Info">Questo è un\'autentico pasto Cornish con ripieno di carne e patate.</string>
+  <string name="PseudoPasty_Info">Questo è un\'autentico pasticcio della Cornovaglia col ripieno tradizionale di carne e patate.</string>
 </resources>

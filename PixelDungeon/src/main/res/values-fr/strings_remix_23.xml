@@ -1,15 +1,56 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">Arbuste sec</string>
+  <string name="Guts_TileHighGrass">Arbuste sec</string>
+  <string name="Guts_TileWater">Etrange liquide visqueux</string>
+  <string name="Guts_TileDescEntrance">Trou béant dans le plafond menant à l\'étage supérieur</string>
+  <string name="Guts_TileDescExit">Trou béant dans le sol menant à l\'étage inférieur</string>
+  <string name="Guts_TileDescDeco">On dirait que cet endroit était... blessé</string>
+  <string name="Guts_TileDescBookshelf">Cette étagère est complètement recouverte de toiles épaisses, il n\'y a pas moyen d\'atteindre un des livres.</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Défait, déchiré en mille morceaux, mais pas complètement détruit, l\'Ancien Dieu était enfermé dans les plus profonds étages du donjon. Mais récemment le sceau fut cassé, laissant le passage menant à l\'antre du démon grand ouvert. Les monstres cauchemardesques, créés par l\'Ancien Dieu pendant son sommeil étaient si nombreux qu\'ils n\'offraient aucun moyen de s\'échapper d\'où ils devaient fusionner pour former ces halls grotesques. Et en marchant sur leur chair vivante vous pouvez sentir le battement d\'un coeur de l\'Ancien Dieu se répercutant à travers eux.</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">mime</string>
+  <string name="MimicAmulet_Gender">mâle</string>
+  <string name="MimicAmulet_Name_Objective">mime</string>
+  <string name="MimicAmulet_Desc">Le moment le plus glorieux de votre carrière d\'aventurier se révèle être un piège.</string>
   <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">cauchemar</string>
+  <string name="Nightmare_Gender">masculin</string>
+  <string name="Nightmare_Name_Objective">cauchemar</string>
+  <string name="Nightmare_Desc">Une créature grotesque faite de tentacules de chair tremblantes. Les Cauchemars sont une manifestation des pensées sinistres de l\'Ancien Dieu.</string>
   <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">Je t\'ai eu, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">gnoll zombie</string>
+  <string name="ZombieGnoll_Gender">mâle</string>
+  <string name="ZombieGnoll_Name_Objective">gnoll zombie</string>
+  <string name="ZombieGnoll_Desc">Un corps cassé, tordu de gnoll zombie ne ressemblant plus ni à un humanoïde ni à une hyène. Juste un tas une chair pourrie et d\'os rempli d\'une envie irrépressible de tuer et comsommer.</string>
   <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">ver</string>
+  <string name="Worm_Gender">mâle</string>
+  <string name="Worm_Name_Objective">ver</string>
+  <string name="Worm_Desc">La taille de ce ver est immesurable. Emergeant partiellement du sol, le corps de cette créature est couverte de morceaux de chair pourrie et de boue. Ses mandibules géantes donnent une idée de la façon dont il est remonté à la surface.</string>
   <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">cerveau de yog</string>
+  <string name="YogsBrain_Gender">mâle</string>
+  <string name="YogsBrain_Name_Objective">cerveau de Yog</string>
+  <string name="YogsBrain_Desc">Cerveau de Yog-Dzewa. Source du mal de tout le donjon.</string>
   <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">oeil de yog</string>
+  <string name="YogsEye_Gender">mâle</string>
+  <string name="YogsEye_Name_Objective">oeil de Yog</string>
+  <string name="YogsEye_Desc">L\'oeil de l\'Ancien Dieu, regard rempli de haine. Vous pouvez le sentir regarder à travers votre âme.</string>
   <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">coeur de yog</string>
+  <string name="YogsHeart_Gender">mâle</string>
+  <string name="YogsHeart_Name_Objective">coeur de Yog</string>
+  <string name="YogsHeart_Desc">Pendant des siècles, les gens pensaient que seules les créatures dépourvues de coeur étaient capables d\'actes maléfiques. Et voici l\'énorme coeur battant de l\'Ancien Dieu.</string>
   <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">dents de yog</string>
+  <string name="YogsTeeth_Gender">mâle</string>
+  <string name="YogsTeeth_Name_Objective">dents de Yog</string>
+  <string name="YogsTeeth_Desc">L\'énorme bouche de l\'Ancien Dieu remplie de dents tranchantes. Une manifestation évidente de son envie de tout détruire et dévorer.</string>
 </resources>

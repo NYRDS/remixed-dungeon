@@ -49,10 +49,10 @@
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">пугало</string>
     <string name="ScarecrowNPC_Desc">Вне всяких сомнений... это пугало следит за каждым твоим шагом. Взгляд его красных, светящихся глаз пронизывает тебя насквозь, но, к твоему удивлению, оно не кажется тебе опасным.</string>
-    <string name="ScarecrowNPC_Quest_Start_Male">Здравствуй малыш, как твои дела?\nПридумал задачку я для тебя!\n\nАх какую радость бы я испытал,\nЕсли бы конфет для меня ты собрал!\n\n</string>
-    <string name="ScarecrowNPC_Quest_Start_Female">Здравствуй малышка, как твои дела?\nПридумал задачку я для тебя!\n\nАх какую радость бы испытал я,\nЕсли бы конфет для меня ты собрала!\n\n</string>
-    <string name="ScarecrowNPC_Quest_Reminder">Пять конфет, вот моя отрада.\nАх, как сладка будет награда!</string>
-    <string name="ScarecrowNPC_Quest_End">Ох радость, ах восторг!\nТы заслужил вкуснейший пирог!</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Здравствуй малыш, как твои дела?\\n Придумал задачку я для тебя!\\n\\n Ах какую радость бы я испытал, \\n Если бы конфет для меня ты собрал!\\n\\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Здравствуй малышка, как твои дела?\\n Придумал задачку я для тебя!\\n\\n Ах какую радость бы испытал я, \\n Если бы конфет для меня ты собрала!\\n\\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Пять конфет, вот моя отрада.\\n Ах, как сладка будет награда!</string>
+    <string name="ScarecrowNPC_Quest_End">Ох радость, ах восторг!\\n Ты заслужил вкуснейший пирог!</string>
     <string name="Journal_ScarecrowNPC">Пугало</string>
 
 </resources>

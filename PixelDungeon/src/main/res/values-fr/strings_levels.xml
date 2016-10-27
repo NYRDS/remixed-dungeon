@@ -92,7 +92,7 @@
   <string name="LastShopLevel_TileDescEmptySP">Un tapis épais recouvre le sol.</string>
   <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
   <string name="Prison_TileWater">Eau froide et sombre.</string>
-  <string name="Prison_TileDescDeco">Il y\'a des traces de sang séché sur le sol.</string>
+  <string name="Prison_TileDescDeco">Il y a des traces de sang séché sur le sol.</string>
   <string name="Prison_TileDescBookshelf">C\'est probablement les restes d\'une librairie de prison. Pourraient-ils brûler ?</string>
   <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
   <string name="Sewer_TileWater">Eau boueuse</string>

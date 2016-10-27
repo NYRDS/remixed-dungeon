@@ -3,7 +3,7 @@
   <!--PACKAGE pixeldungeon/plants-->
   <!--STRINGS OF Plant CLASS-->
   <string name="Plant_ACPlant">PLANTER</string>
-  <string name="Plant_Info">Lancez cette graine à l\'endroit voulu pour faire pousser %1$s.
+  <string name="Plant_Info">Lancez cette graine à l\'endroit voulu pour faire pousser un %1$s.
 %2$s</string>
   <string name="Plant_Seed">graine de %s</string>
   <!--STRINGS OF Dreamweed CLASS-->
@@ -24,7 +24,7 @@
   <string name="Icecap_Desc">Le champiglace va , au toucher, relâcher des spores qui vont geler tout ce qui se trouve dans les environs.</string>
   <!--STRINGS OF Sorrowmoss CLASS-->
   <string name="Sorrowmoss_Name">Tristemousse</string>
-  <string name="Sorrowmoss_Desc">La tristemousse est une fleur ( pas de la mousse ) avec des pétales tranchantes et vénéneuses.</string>
+  <string name="Sorrowmoss_Desc">La tristemousse est une fleur (et non une mousse ) avec des pétales tranchantes et vénéneuses.</string>
   <!--STRINGS OF Sungrass CLASS-->
   <string name="Sungrass_Name">Herbesoleil</string>
   <string name="Sungrass_Desc">L\'Herbesoleil est renommée pour les propriétés curatives de sa sève.</string>

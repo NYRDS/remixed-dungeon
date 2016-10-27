@@ -7,10 +7,18 @@
 	
 	<!-- STRINGS OF Shades CLASS -->
     <string name="Shades_Name">Schatten</string>
+    <!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Capotain</string>
+    <!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Fez</string>
+    <!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Neko Ohren</string>
     <!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Hasenohren</string>
     <!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Kürbis</string>
+    <!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Schlafmütze</string>
     <!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Zauberhut</string>
     <string name="WndHats_SlotTitle">ausgerüstet</string>

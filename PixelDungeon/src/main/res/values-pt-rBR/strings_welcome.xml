@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
+  <string name="Welcome_Ok">Ok!</string>
   <string name="Welcome_Title">Bem vindo!</string>
   <string name="Welcome_Text">
-Remixed Pixel Dungeon é uma modificação de Pixel Dungeon open source por Watabou.\n
+Remixed Pixel Dungeon é uma modificação do Pixel Dungeon open source por Watabou.\n
 Este projeto foi feito para oferecer uma nova experiência e contudo aos jogadores.\n
 Uma outra importante parte do projeto é desenvolver o suporte multi línguas para o jogo.\n
 Com cada atualização tentamos nos manter o mais próximo possível da comunidade.\n
@@ -51,5 +52,22 @@ remix.21:\n
   <string name="Welcome_Text_21_2">
         remix.21.2:\n
         - Possibilidade de escolher game mods (somente remodelagem visual por enquanto) ( Usável apenas para jogadores experientes)\n
+        </string>
+  <string name="Welcome_Text_21_3">
+        remix.21.3:\n
+        - Mini mod PD disponível para download (ainda incompleto, mas divertido)\n
+        - Gráficos dos Esgotos melhorados
+        </string>
+  <string name="Welcome_Text_21_4">
+        remix.21.4:\n
+        - Nova arma rara - espada de sacrifício
+        </string>
+  <string name="Welcome_Text_21_5">
+        remix.21.5:\n
+        - Novas propriedades para itens antigos
+        </string>
+  <string name="Welcome_Text_22">
+        remix.22:\n
+        - Novo chefe oculto
         </string>
 </resources>

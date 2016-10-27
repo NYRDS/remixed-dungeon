@@ -184,7 +184,12 @@ Vous maintenez la %s prête à l\'emploi.</string>
   <string name="Tamahawk_Info">Cette hache de jet n\'est pas si lourde, mais la manier efficacement requiert une force importante.</string>
   <string name="Tamahawk_Gender">masculin</string>
   <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">Kusarigama</string>
+  <string name="Kusarigama_Info">Cette arme est faite d\'une faux sur une chaîne en métal avec un poids en fer à son extrémité</string>
+  <string name="Kusarigama_Gender">féminin</string>
+  <string name="Kusarigama_Pull">TIRER</string>
   <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">Epée du Chaos</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <!--STRINGS OF ChaosStaff CLASS-->
   <!--STRINGS OF SacrificialSword CLASS-->

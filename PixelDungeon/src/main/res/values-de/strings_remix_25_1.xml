@@ -7,6 +7,7 @@
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">Der Seelenbringer</string>
     <string name="BlackSkullOfMastery_Lich">Werde zum Lich</string>
+    <string name="BlackSkullOfMastery_Necromancer">Unterbrich den Zauber</string>
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Der schwarze Schädel wurde erweckt!</string>
     <string name="BlackSkull_Ressurrect">Der schwarze Schädel hat die toten Monster erweckt um dir zu dienen!</string>

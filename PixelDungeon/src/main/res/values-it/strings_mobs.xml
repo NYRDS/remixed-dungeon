@@ -162,14 +162,17 @@
   <string name="Spinner_Name">Filatore della caverna</string>
   <string name="Spinner_Gender">mascolino</string>
   <string name="Spinner_Name_Objective">Filatore della caverna</string>
+  <string name="Spinner_Desc">Questi ragni furiosi verdastri provano ad evitare il combattimento diretto, preferendo aspettare a distanza mentre le loro vittime, impigliate nella ragnatela, muoiono lentamente a cause del loro morso velenoso. </string>
   <!--STRINGS OF Statue CLASS-->
   <string name="Statue_Name">Statua Animata</string>
   <string name="Statue_Gender">Femmina</string>
   <string name="Statue_Name_Objective">Statua Animata</string>
+  <string name="Statue_Desc">Potresti pensare che sia solamente un\'altra delle brutte statue di questo dungeon, ma i suoi ardenti occhi rossi parlano da sé... Mentre la statua in sé è fatta di pietra, la_%s-, ciò che bandisce, sembra vero. </string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">succube</string>
   <string name="Succubus_Gender">mascolino</string>
   <string name="Succubus_Name_Objective">succube</string>
+  <string name="Succubus_Desc">Le succubi sono demoni che sembrano seducenti (in una lontana maniera gotic) ragazze. Usando la loro magia, le succubi possono affascinare l\'eroe, che sarà impossibilitato ad attaccare fin quando la fascinazione svanisce. </string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Name">sciame di mosche</string>
   <string name="Swarm_Gender">mascolino</string>
@@ -194,10 +197,13 @@
   <string name="Warlock_Name">Stregone Nano</string>
   <string name="Warlock_Gender">mascolino</string>
   <string name="Warlock_Name_Objective">Stregone Nano</string>
+  <string name="Warlock_Desc">Quando gli interessi dei nani deviarono dall\'ingegneria alle arti arcane, gli sciamani andarono al potere nella città. Iniziarono con la magia elementale, ma presto verterono in demonologia e necromanzia. </string>
+  <string name="Warlock_Killed">%s\'s raggio oscuro ti ha ucciso...</string>
   <!--STRINGS OF Wraith CLASS-->
   <string name="Wraith_Name">Spettro</string>
   <string name="Wraith_Gender">mascolino</string>
   <string name="Wraith_Name_Objective">Spettro</string>
+  <string name="Wraith_Desc">Un wraith è lo spirito vendicativo di un peccatore a cui fu  disturbata la lapide o la tomba. Essendo una creatura eterea, è veramente difficile da colpire con un\'arma normale. </string>
   <string name="Wraith_Defense">eluso</string>
   <!--STRINGS OF Yog CLASS-->
   <string name="Yog_Name">Yog-Dzewa</string>
@@ -233,14 +239,17 @@
   <string name="SpiderServant_Name">ragno soldato </string>
   <string name="SpiderServant_Gender">mascolino</string>
   <string name="SpiderServant_Name_Objective">ragno soldato </string>
+  <string name="SpiderServant_Desc">I ragni soldato sembrano essere le unità più numerose del meandro dei ragni. Nati per proteggere il territorio, i soldati chelicera hanno sviluppato ghiandole velenifere per avvelenare i loro nemici. </string>
   <!--STRINGS OF SpiderExploding CLASS-->
   <string name="SpiderExploding_Name">ragno lavoratore</string>
   <string name="SpiderExploding_Gender">mascolino</string>
   <string name="SpiderExploding_Name_Objective">ragno lavoratore</string>
+  <string name="SpiderExploding_Desc">Duri lavoratori durante i periodi di pace, queste creature non esitano a caricare i propri nemici e prendere la prima pianta che gli capita, rendendoli delle bombe viventi. </string>
   <!--STRINGS OF SpiderMind CLASS-->
   <string name="SpiderMind_Name">ragno psico</string>
   <string name="SpiderMind_Gender">mascolino</string>
   <string name="SpiderMind_Name_Objective">ragno psico</string>
+  <string name="SpiderMind_Desc">Questo ragno apparentemente fragile possiede unicamente poteri mentali, che permettono loro di controllare l\'intera colonia. Psico-ragno è capace di controllare ogni creatura, ma è un po\' codardo. </string>
   <!--STRINGS OF SpiderQueen CLASS-->
   <string name="SpiderQueen_Name">Ragno regina</string>
   <string name="SpiderQueen_Gender">Femmina</string>
@@ -250,16 +259,20 @@
   <string name="WaterElemental_Name">Elementale dell\'acqua</string>
   <string name="WaterElemental_Gender">mascolino</string>
   <string name="WaterElemental_Name_Objective">Elementale dell\'acqua</string>
+  <string name="WaterElemental_Desc">Gli elementali dell\'acqua possono essere trovati vicini grandi masse d\'acqua. Solitamente queste masse magicamente legate semplicemente gironzolano intorno. </string>
   <!--STRINGS OF AirElemental CLASS-->
   <string name="AirElemental_Name">elementare dell\'aria</string>
   <string name="AirElemental_Gender">mascolino</string>
   <string name="AirElemental_Name_Objective">elementare dell\'aria</string>
+  <string name="AirElemental_Desc">Gli elementali dell\'acqua sono esseri magici volanti fatti di aria viva. </string>
   <!--STRINGS OF EarthElemental CLASS-->
   <string name="EarthElemental_Name">Elementare della terra</string>
   <string name="EarthElemental_Gender">mascolino</string>
   <string name="EarthElemental_Name_Objective">Elementare della terra</string>
+  <string name="EarthElemental_Desc">Gli elementali della terra sono masse di terra guidate dalla forza della natura concentrata. </string>
   <!--STRINGS OF Crystal CLASS-->
   <string name="Crystal_Name">cristallo flutuante</string>
   <string name="Crystal_Gender">mascolino</string>
   <string name="Crystal_Name_Objective">cristallo flutuante</string>
+  <string name="Crystal_Desc">Un grosso e brillante cristallo fluttua nell\'aria. Probabilmente è pieno di potente magia. </string>
 </resources>

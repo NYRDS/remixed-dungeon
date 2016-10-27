@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">il/la tuo/a %s ti comprime dolorosamente</string>
+  <string name="Armor_EquipCursed">il/la tuo/a %s ti si stringe addosso dolorosamente</string>
   <string name="Armor_Identify">hai abbastanza confidenza con il/la tuo/a %1$s per identificarlo/a. È %2$s..</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">L\'interazione di diversi tipi di magia ha cancellato il glifo su questa armatura!</string>
@@ -35,7 +35,7 @@
   <string name="ElfArmor_NotElf">Solo gli elfi possono usare questa armatura!</string>
   <!--STRINGS OF HuntressArmor CLASS-->
   <string name="HuntressArmor_Name">mantello della cacciatrice</string>
-  <string name="HuntressArmor_Desc">Una cacciatrice in tale mantello può creare un ventaglio di lame spettrali. Ognuna di queste lame prenderà di mira un solo nemico nel campo visivo della cacciatrice, infliggendo danno a seconda dell\'arma da mischia equipaggiata al momento.</string>
+  <string name="HuntressArmor_Desc">Una cacciatrice in tale mantello può creare un ventaglio di lame spettrali. Ognuna di queste lame prenderà di mira un solo nemico nel campo visivo della cacciatrice, infliggendo danno a seconda dell\'arma da mischia da lei equipaggiata al momento.</string>
   <string name="HuntressArmor_ACSpecial">LAME SPETTRALI</string>
   <string name="HuntressArmor_NoEnemies">Nessun nemico in vista</string>
   <string name="HuntressArmor_NotHuntress">Solo la cacciatrice può usare quest\'armatura!</string>
@@ -48,8 +48,8 @@
   <string name="MageArmor_ACSpecial">TERRA BRUCIATA</string>
   <string name="MageArmor_NotMage">Solo i maghi possono usare quest\'armatura!</string>
   <!--STRINGS OF MailArmor CLASS-->
-  <string name="MailArmor_Name">armatura a maglia</string>
-  <string name="MailArmor_Desc">Maglie metalliche intrecciate per fare un\'armatura flessibile ma robusta.</string>
+  <string name="MailArmor_Name">armatura di maglia</string>
+  <string name="MailArmor_Desc">Maglie metalliche intrecciate per fare un\'armatura robusta ma flessibile.</string>
   <!--STRINGS OF PlateArmor CLASS-->
   <string name="PlateArmor_Name">armatura a piastre</string>
   <string name="PlateArmor_Desc">Enormi piastre di metallo sono unite insieme in un\'armatura che fornisce una protezione impareggiabile a qualsiasi avventuriero forte abbastanza da sostenere il suo peso schiacciante.</string>

@@ -184,8 +184,24 @@ Der durschnittliche Schaden dieser Waffe ist %d pro Treffer.</string>
   <string name="Tamahawk_Info">Diese Wurfaxt ist nicht besonders schwer, aber benötigt dennoch relativ viel Kraft um effizient eingesetzt werden zu können.</string>
   <string name="Tamahawk_Gender">maskulin</string>
   <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">Kusarigama</string>
+  <string name="Kusarigama_Info">Diese Waffe besteht aus einer Sichel an einer Metallkette mit einem schweren Eisengewicht am Ende.</string>
+  <string name="Kusarigama_Gender">Weiblich</string>
+  <string name="Kusarigama_Pull">ZIEHEN</string>
   <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">Schwert des Chaos</string>
+  <string name="ChaosSword_Info">Die Klinge des Schwertes wurde aus purem Chaos geschmiedet und vibriert sachte von Zeit zu Zeit. Große Macht ist in dieser Waffe eingeschlossen, die fast alles zerteilen kann. Jedoch sind außerordentliche Fähigkeiten von Nöten, um diese gewaltige Kraft zu meistern.</string>
+  <string name="ChaosSword_Gender">Männlich</string>
   <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">Bogen des Chaos</string>
+  <string name="ChaosBow_Info">Ein fürchterlicher Bogen, gefüllt mit der Kraft des Chaos. Ein Teil des Chaos wird mit jedem abgefeuerten Pfeil zu seinem Opfer getragen. Wenn man jedoch verfehlt...</string>
+  <string name="ChaosBow_Gender">Männlich</string>
   <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">Stab des Chaos</string>
+  <string name="ChaosStaff_Info">Ein mit der Kraft des Chaos getränkter Stab! Was sonst kann Magier erträumen oder fürchten?</string>
+  <string name="ChaosStaff_Gender">Männlich</string>
   <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">Schwert des Opfers</string>
+  <string name="SacrificialSword_Info">Auf den ersten Blick scheint dies ein altes Bronzeschwert zu sein, bedeckt mit nutzloser Patina. Doch eine gewisse archaische Kraft schläft darin. Diese Kraft kann beinahe jede Kreatur in eine willenlose Marionette verwandeln. Der richtige Weg sie aufzuwecken muss nur gefunden werden...</string>
+  <string name="SacrificialSword_Gender">Männlich</string>
 </resources>

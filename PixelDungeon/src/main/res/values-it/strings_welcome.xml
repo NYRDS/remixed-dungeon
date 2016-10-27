@@ -68,4 +68,33 @@ remix.21.5:\n
 remix.22:\n
 - Nuovo boss nascosto
 </string>
+  <string name="Welcome_Text_23">
+remix.23:\n
+- Il dungeon è ora profondo 32 piani (precedentemente 26)\n
+- Boss nascosti spostati al livello 25\n
+- Maggiore varietà di mini-boss per la battaglia finale (precedentemente 2 scelte, Yog ora può scegliere da un totale di 5 mini boss da evocare)
+- Nuove impostazioni e mostri per i livelli 27-31!</string>
+  <string name="Welcome_Text_23_1">remix.23.1:\n
+- C\'è un  nuovo negozio, NPC e missioni al livello 27\n
+- Un nuovo mostro per il Covo dei Demoni (27-31)\n
+- Tutti i mostri e i boss dei livelli 27-32 e le loro abilità sono più forti\n
+  - Bottino dei boss aggiornato\n
+  - Diversi piccoli miglioramenti grafici\n
+  - Numerosi bug risolti\n</string>
+  <string name="Welcome_Text_23_2">
+remix.23.2:\n
+
+- Aggiunte armi ed armature di grado 6\n
+
+- Aggiunte le Balestre\n
+
+- Aggiunta Armatura del Caos\n</string>
+  <string name="Welcome_Text_24">
+remix.24:\n
+
+- Abbiamo i Cappelli!(Oggetti estetici)\n
+
+- Correzione di vari Bug\n
+
+- Traduzioni aggiornate\n</string>
 </resources>
