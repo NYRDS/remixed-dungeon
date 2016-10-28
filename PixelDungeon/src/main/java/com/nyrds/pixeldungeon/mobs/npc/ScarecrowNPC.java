@@ -201,7 +201,6 @@ public class ScarecrowNPC extends NPC {
 		public static void process(int pos) {
 			if (given && !processed) {
 				killed++;
-				GLog.i(Float.toString(killed) + " " + Float.toString(killed % 5));
 				if (killed != 0 && ((killed % 5) == 0)) {
 					Dungeon.level.drop(new Candy(), pos).sprite.drop();
 				}
