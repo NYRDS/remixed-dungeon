@@ -61,13 +61,16 @@ public class Barrel extends LevelObject {
 			return false;
 		}
 
-		if (level.solid[nextCell] || level.getLevelObject(nextCell)!=null) {
+		if (level.solid[nextCell] || level.getLevelObject(nextCell)!=null || level.pit[this.getPos()]) {
 			return false;
 		} else {
 			setPos(nextCell);
 
 			level.objectPress(nextCell,this);
-			level.levelObjectMoved(this);
+			if(!level.pit[this.getPos()]){
+				level.levelObjectMoved(this);
+			}
+
 		}
 
 		return true;
