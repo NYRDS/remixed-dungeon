@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">Łuk jest bronia dystansowa, prawie bezuzyteczna (dla wszystkich oprócz elfow) w walce wrecz\n\n</string>
@@ -20,15 +20,15 @@
   <string name="Quiver_Gender">męski</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">Ognisty Kołczan</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">męski</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">Kołczan Trucizny</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">męski</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">Kołczan na strzały paraliżujące</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">męski</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">strzała</string>

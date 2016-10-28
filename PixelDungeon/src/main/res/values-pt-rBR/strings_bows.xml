@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">Este arco é uma arma a distância. É inútil para todos exceto elfos a uma distância curta. Ter um arco lhe permite atirar flecha.\n\n</string>
@@ -20,15 +20,15 @@
   <string name="Quiver_Gender">masculino</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">Aljava de fogo</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">masculino</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">Aljava envenenada</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">masculino</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">Aljava paralisante</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">masculino</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">flecha</string>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">シルバー</string>
@@ -15,7 +15,7 @@
   <string name="WndDonate_rubyDonateText">あなたの寛大さは Remixed Pixel Dungeon の改善の助けになるでしょう！</string>
   <string name="WndDonate_silverDonateText2">さらに、すべてのゲームモードで広告を無効にして、最初からハンターのロックを解除します。</string>
   <string name="WndDonate_goldDonateText2">さらに、最初からエルフのロックを解除します。</string>
-  <string name="WndDonate_rubyDonateText2"></string>
+  <string name="WndDonate_rubyDonateText2" />
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">標準</string>
   <string name="WndPremiumSettings_silver">シルバー</string>

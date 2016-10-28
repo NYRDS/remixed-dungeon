@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">серебро</string>
@@ -15,7 +15,7 @@
   <string name="WndDonate_rubyDonateText">Ваша щедрость поможет нам и дальше улучшать Remixed Pixel Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Никакой рекламы во всех игровых режимах. Охотница доступна с самого начала.</string>
   <string name="WndDonate_goldDonateText2">А также открывает Эльфа с самого начала.</string>
-  <string name="WndDonate_rubyDonateText2"></string>
+  <string name="WndDonate_rubyDonateText2" />
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">обычный</string>
   <string name="WndPremiumSettings_silver">серебрянный</string>

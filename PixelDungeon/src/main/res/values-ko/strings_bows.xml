@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">이 활은 원거리 무기로써, 오직 엘프만이 근거리에서 제대로 된 사용을 할 수 있다. 활을 들어야만 화살을 발사할 수 있다.\n\n</string>
@@ -20,15 +20,15 @@
   <string name="Quiver_Gender">남성적인</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">불 화살통</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">남성적인</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">독 화살통</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">남성적인</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">마비 화살통</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">남성적인</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">화살</string>

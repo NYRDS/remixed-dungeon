@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">C\'est une arme à distance. Elle est inutile pour tout le monde sauf les elfes à distance rapprochée. Etre équipé d\'un arc vous permet de tirer des flèches.
@@ -21,15 +21,15 @@
   <string name="Quiver_Gender">masculin</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">carquois de feu</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">masculin</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">carquois de poison</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">masculin</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">carquois paralysant</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">masculin</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">flèche</string>

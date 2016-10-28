@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">Es un arma a distancia. Inútil para todos a corto alcance, excepto para los elfos. Tener un arco equipado permite disparar flechas.\n\n</string>
@@ -20,15 +20,15 @@
   <string name="Quiver_Gender">masculino</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">carcaj de fuego</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">masculino</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">carcaj de veneno</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">masculino</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">carcaj paralizante</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">masculino</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">flecha</string>

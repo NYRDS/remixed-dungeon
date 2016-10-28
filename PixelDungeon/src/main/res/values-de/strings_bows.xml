@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">Das ist eine Distanzwaffe. Es ist nutzlos für alle, aber Elfen aus nächster Nähe. Mit einem Bogen ausgestattet können Sie Pfeile zu feuern.
@@ -21,15 +21,15 @@
   <string name="Quiver_Gender">männlich</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">Feuerköcher</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">männlich</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">Giftköcher</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">männlich</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">Lähmköcher</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">männlich</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">Pfeil</string>

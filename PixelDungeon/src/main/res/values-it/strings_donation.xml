@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">argento</string>
@@ -15,7 +15,7 @@
   <string name="WndDonate_rubyDonateText">La vostra generosità ci aiuterà a continuare a migliorare Remixed Pixel Dungeon!</string>
   <string name="WndDonate_silverDonateText2">disabilità le ads in tutte le modalità di gioco e sblocca il cacciatore ad inizio gioco</string>
   <string name="WndDonate_goldDonateText2">Sbloccherai l\'elfo ad inizio gioco</string>
-  <string name="WndDonate_rubyDonateText2"></string>
+  <string name="WndDonate_rubyDonateText2" />
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">Base</string>
   <string name="WndPremiumSettings_silver">argento</string>

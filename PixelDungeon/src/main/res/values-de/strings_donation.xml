@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">Silber</string>
@@ -15,7 +15,7 @@
   <string name="WndDonate_rubyDonateText">Ihre großzügigkeit wird uns helften, Remixed Pixel Dungeon weiter zu verbessern!</string>
   <string name="WndDonate_silverDonateText2">Entfernt auch die Werbung in allen Spielmodi und macht die Jägerin von Anfang an verfügbar.</string>
   <string name="WndDonate_goldDonateText2">Schaltet auch den Elf von Anfang an frei.</string>
-  <string name="WndDonate_rubyDonateText2"></string>
+  <string name="WndDonate_rubyDonateText2" />
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">Standard</string>
   <string name="WndPremiumSettings_silver">Silber</string>
