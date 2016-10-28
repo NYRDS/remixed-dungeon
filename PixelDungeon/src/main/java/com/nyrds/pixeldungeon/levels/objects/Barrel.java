@@ -22,6 +22,7 @@ import org.json.JSONObject;
  */
 public class Barrel extends LevelObject {
 
+	private boolean burned = false;
 	public Barrel() {
 		super(-1);
 	}
@@ -88,17 +89,26 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public void burn() {
+
+		if (burned){
+			return;
+		}
+
+		burned = true;
+
 		sprite.playAnim(10, false, new Callback() {
 			@Override
 			public void call() {
 				remove();
 
 			}
-		}, image()+0,  image()+1,  image()+2,  image()+3,  image()+4);
-		Sample.INSTANCE.play( Assets.SND_EXPLOSION );
+		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4);
 
-		LiquidFlame fire = Blob.seed( getPos(), 10, LiquidFlame.class );
-		GameScene.add( fire );
+
+		Sample.INSTANCE.play(Assets.SND_EXPLOSION);
+
+		LiquidFlame fire = Blob.seed(getPos(), 10, LiquidFlame.class);
+		GameScene.add(fire);
 	}
 
 	@Override
