@@ -67,10 +67,10 @@ public class Barrel extends LevelObject {
 			setPos(nextCell);
 
 			level.objectPress(nextCell,this);
+
 			if(!level.pit[this.getPos()]){
 				level.levelObjectMoved(this);
 			}
-
 		}
 
 		return true;
@@ -99,7 +99,6 @@ public class Barrel extends LevelObject {
 
 		LiquidFlame fire = Blob.seed( getPos(), 10, LiquidFlame.class );
 		GameScene.add( fire );
-		//new PotionOfLiquidFlame().shatter(getPos());
 	}
 
 	@Override
