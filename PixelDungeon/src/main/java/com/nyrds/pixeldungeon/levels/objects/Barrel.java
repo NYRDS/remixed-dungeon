@@ -23,6 +23,7 @@ import org.json.JSONObject;
 public class Barrel extends LevelObject {
 
 	private boolean burned = false;
+
 	public Barrel() {
 		super(-1);
 	}
@@ -58,18 +59,16 @@ public class Barrel extends LevelObject {
 
 		int nextCell = level.cell(x + dx, y + dy);
 
-		if(!level.cellValid(nextCell)) {
+		if (!level.cellValid(nextCell)) {
 			return false;
 		}
 
-		if (level.solid[nextCell] || level.getLevelObject(nextCell)!=null || level.pit[this.getPos()]) {
+		if (level.solid[nextCell] || level.getLevelObject(nextCell) != null) {
 			return false;
 		} else {
 			setPos(nextCell);
 
-			level.objectPress(nextCell,this);
-
-			if(!level.pit[this.getPos()]){
+			if (level.objectPress(nextCell, this)) {
 				level.levelObjectMoved(this);
 			}
 		}
@@ -90,7 +89,7 @@ public class Barrel extends LevelObject {
 	@Override
 	public void burn() {
 
-		if (burned){
+		if (burned) {
 			return;
 		}
 
@@ -119,7 +118,7 @@ public class Barrel extends LevelObject {
 	@Override
 	public String desc() {
 
-		if(ModdingMode.isHalloweenEvent()) {
+		if (ModdingMode.isHalloweenEvent()) {
 			return Game.getVar(R.string.Barrel_Pumpkin_Desc);
 		} else {
 			return Game.getVar(R.string.Barrel_Desc);
@@ -129,7 +128,7 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public String name() {
-		if(ModdingMode.isHalloweenEvent()) {
+		if (ModdingMode.isHalloweenEvent()) {
 			return Game.getVar(R.string.Barrel_Pumpkin_Name);
 		} else {
 			return Game.getVar(R.string.Barrel_Name);
@@ -139,7 +138,7 @@ public class Barrel extends LevelObject {
 	@Override
 	public int image() {
 
-		if(ModdingMode.isHalloweenEvent()) {
+		if (ModdingMode.isHalloweenEvent()) {
 			return 0;
 		} else {
 			return 8;

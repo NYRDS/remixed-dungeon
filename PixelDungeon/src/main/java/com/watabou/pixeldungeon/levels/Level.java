@@ -903,12 +903,13 @@ public abstract class Level implements Bundlable {
 		charPress(cell, hero);
 	}
 
-	public void objectPress(int cell, LevelObject levelObject) {
+	public boolean objectPress(int cell, LevelObject levelObject) {
 		if(map[cell] == Terrain.CHASM || pit[cell]) {
 			levelObject.fall();
-			return;
+			return false;
 		}
 		itemPress(cell);
+		return true;
 	}
 
 
