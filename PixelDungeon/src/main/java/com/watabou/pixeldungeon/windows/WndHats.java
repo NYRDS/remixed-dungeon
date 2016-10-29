@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
@@ -32,6 +33,8 @@ public class WndHats extends Window {
 	private int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
 
 	public WndHats() {
+
+		EventCollector.logScene(getClass().getCanonicalName());
 
 		int yPos = 0;
 

@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
@@ -25,6 +26,8 @@ public class WndHatInfo extends Window {
 
 	public WndHatInfo(final String accessory, String price, final Window parent ) {
 		final Accessory item = Accessory.getByName(accessory);
+
+		EventCollector.logScene(getClass().getCanonicalName()+":"+item.getClass().getSimpleName());
 
 		// Title
 		Text tfTitle = PixelScene.createMultiline(item.name(), GuiProperties.mediumTitleFontSize());
