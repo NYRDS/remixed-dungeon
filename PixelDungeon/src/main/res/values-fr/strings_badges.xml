@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF BadgesScene CLASS-->
   <string name="BadgesScene_Title">Vos médailles</string>
@@ -28,7 +28,7 @@
   <!--<string name="Badges_BagWand"></string>-->
   <string name="Badges_AllBags">Tous les sacs achetés</string>
   <string name="Badges_DeathFire">Brûlé à mort</string>
-  <string name="Badges_DeathPoison">Mort par empoisonnement</string>
+  <string name="Badges_DeathPoison">Empoisonné</string>
   <string name="Badges_DeathGas">Asphyxié par des gaz toxiques</string>
   <string name="Badges_DeathHunger">Mort de faim</string>
   <string name="Badges_DeathGlyph">Mort par un glyphe</string>

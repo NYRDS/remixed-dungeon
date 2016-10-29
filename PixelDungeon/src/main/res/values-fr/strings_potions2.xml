@@ -1,11 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/potions additional strings-->
-  <string name="Potion_ACMoisten">Humidifier</string>
-  <string name="Potion_SelectForMoisten">Sélectionnez l\'option à humides</string>
-  <string name="Potion_MoistenUseless">On dirait que vous venez de perdre ce poison</string>
-  <string name="Potion_RuneDissaperaed">Rune disparu de %s</string>
-  <string name="Potion_ArrowMoisten">Vous succesifully flèches humides.</string>
-  <string name="Potion_ItemFliesAway">%s juste fichiers loin de vos mains</string>
+  <string name="Potion_ACMoisten">HUMECTER</string>
+  <string name="Potion_SelectForMoisten">Sélectionnez l\'item à humecter</string>
+  <string name="Potion_MoistenUseless">On dirait que vous avez gaspillé cette potion.</string>
+  <string name="Potion_RuneDissaperaed">Rune disparue du %s</string>
+  <string name="Potion_ArrowMoisten">Vous avez réussi à humidifier les flèches.</string>
+  <string name="Potion_ItemFliesAway">%s s\'envole de vos mains.</string>
   <string name="Potion_FoodRefreshed">%s semble maintenant comestible</string>
 </resources>

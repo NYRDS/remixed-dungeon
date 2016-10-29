@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF ResultDescriptions CLASS-->
   <string name="ResultDescriptions_Mob">在第 %2$d 层被 %1$s 杀死了</string>

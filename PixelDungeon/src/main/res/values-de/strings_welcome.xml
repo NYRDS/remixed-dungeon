@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Herzlich willkommen!</string>
@@ -46,4 +46,20 @@ remix.21.5:\n
   <string name="Welcome_Text_22">
 remix.22:\n
 - Neuer versteckter Boss </string>
+  <string name="Welcome_Text_23">remix.23\n
+- Dungeon reicht nun 32 Ebenen tief (anstatt 26)\n
+- Versteckter Boss nun auf Ebene 25
+- Größere Viefalt der Mini-bosse für einen finalen Kampf (anstatt zweier Fäuste, kann Yog jetzt aus insgesamt 5 Mini-bossen wählen)\n
+- Neue Szenerie und Monster für die Ebenen 27-31
+</string>
+  <string name="Welcome_Text_23_2">
+remix.23.2:
+- Stufe 6 Waffen und Rüstungen hinzugefügt
+- Armbrust hinzugefügt
+- Chaosrüstung hinzugefügt</string>
+  <string name="Welcome_Text_24">
+remix.24:
+- Kopfbedeckungen hinzugefügt! (eigennützige Gegenstände)
+- Übersetzungen aktualisiert
+- einige Fehlerbehebungen</string>
 </resources>

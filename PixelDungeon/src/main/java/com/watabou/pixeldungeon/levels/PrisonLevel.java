@@ -138,6 +138,7 @@ public class PrisonLevel extends RegularLevel {
 				NecroExitPainter.paint(this, NecroExit);
 			}
 		}
+		placeBarrels(6);
 	}
 
 	@Override

@@ -1,27 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--Mobs-->
   <!--STRINGS OF AzuterronNPC CLASS-->
   <string name="AzuterronNPC_Name">Fremder</string>
   <string name="AzuterronNPC_Gender">männlich</string>
   <string name="AzuterronNPC_Name_Objective">Fremder</string>
+  <string name="AzuterronNPC_Desc">Eine mysteriöse Gestalt, umgeben von schwarzem Nebel.</string>
+  <string name="AzuterronNPC_Quest_Reminder">Hilf mir und ich werde dir helfen</string>
+  <string name="AzuterronNPC_Quest_End">Exzellent. Hier, nimm diesen Trank, du wirst ihn sicher großartig finden.</string>
   <string name="Journal_Azuterron">Fremder</string>
   <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Heimtückischer Geist</string>
   <string name="TreacherousSpirit_Gender">männlich</string>
+  <string name="TreacherousSpirit_Name_Objective">Heimtückischer Geist</string>
+  <string name="TreacherousSpirit_Desc">Diese monströse Kreatur sieht wie eine Wolke lebender Dunkelheit aus. Sein lidloses Auge auf dich gerichtet, pulsiert es bei jeder deiner Bewegungen.</string>
   <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">Geist der Schmerzen</string>
+  <string name="SpiritOfPain_Gender">männlich</string>
+  <string name="SpiritOfPain_Name_Objective">Geist der Schmerzen</string>
+  <string name="SpiritOfPain_Desc">Ein Stück lebende Dunkelheit</string>
   <!--STRINGS OF SuspiciousRat CLASS-->
-  <string name="SuspiciousRat_Name">Merkwürdige Ratte</string>
+  <string name="SuspiciousRat_Name">Verdächtige Ratte</string>
   <string name="SuspiciousRat_Gender">weiblich</string>
-  <string name="SuspiciousRat_Name_Objective">Merkwürdige Ratte</string>
+  <string name="SuspiciousRat_Name_Objective">Verdächtige Ratte</string>
+  <string name="SuspiciousRat_Desc">Eine Ratte ist nichts selten anzutreffendes in Dungeons, aber dass sie so tief wohnt... Du kannst sehen, wie ihr gesamter Körper krampft, wenn sie läuft.</string>
+  <string name="SuspiciousRat_Info1">Verdächtige Ratte zuckt kräftig.</string>
   <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Pseudo-Ratte</string>
   <string name="PseudoRat_Gender">weiblich</string>
+  <string name="PseudoRat_Name_Objective">Pseudo-Ratte</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Zombie-Gnoll ist vom Tod auferstanden!</string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">Herz der Dunkelheit</string>
+  <string name="HeartOfDarkness_Info">Das schwarz pulsierende Herz des heimtückischen Geistes.</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
   <string name="DarkVeil_Buff">Dunkeler Schleier</string>
   <!--Badges-->
   <string name="Badges_Yog_Slain">Yog-Dzewa getötet </string>
+  <string name="Badges_ShadowLord_Slain">Schattenkönig getötet</string>
+  <string name="Badges_SpiderQueen_Slain">Spinnenkönigin getötet</string>
 </resources>

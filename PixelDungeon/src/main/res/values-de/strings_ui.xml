@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF TitleScene CLASS-->
   <string name="TitleScene_Play">Spielen</string>
@@ -7,9 +7,12 @@
   <string name="TitleScene_About">Über</string>
   <string name="TitleScene_InternalStorageLow">Nicht genügend Platz\n im internen Speicher\n Dein Fortschritt kann verloren gehen!</string>
   <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt">»Remixed Pixel Dungeon« von NYRDS basierend auf dem »Pixel Dungeon«-Quellcode von Watabou.\n\n Code u. Grafik: Watabou, NYRDS u. ThEnigma314\n\nMusik: Cube_Code\n\nBesonderes Dankeschön an: rodriformiga für gemeinfreien l18N-Code\n\nSende uns eine E-Mail:\n\n</string>
+  <string name="AboutScene_OurSite">Unsere Internetseite:</string>
   <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">E-Mail senden</string>
+  <string name="AboutScene_TranslatedBy">Englisch - primäre Lokalisation für Remixed Pixel Dungeon erhalten durch NYRDS\n Besonderer Dank an:\nOmen267901 </string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Spitzenplatzierungen</string>
   <string name="RankingsScene_Total">Gespielte Spiele (insgesamt): </string>
@@ -27,7 +30,11 @@
   <string name="StartScene_Unlock">Um diese Klasse freizuschalten, besiege den 3. Endgegner mit einer beliebigen anderen Klasse</string>
   <string name="StartScene_UnlockElf">Um diese Klasse freizuschalten, besieg den 4. Endgegner mit einer beliebigen anderen Klasse</string>
   <string name="StartScene_WinGame">Um »Herausforderungen« freizuschalten, gewinne das Spiel mit einer beliebigen Klasse.</string>
+  <string name="StartScene_DifficultySelect">Wähle deine Bestimmung</string>
+  <string name="StartScene_DifficultyEasy">Einfach (mit Werbung)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">Normal mit Speichern (und Werbung)</string>
   <string name="StartScene_DifficultyNormal">Normal</string>
+  <string name="StartScene_DifficultyExpert">Experte</string>
   <!--STRINGS OF InterLevelScene CLASS-->
   <string name="InterLevelScene_Descending">Absteigen ...</string>
   <string name="InterLevelScene_Ascending">Aufsteigen ...</string>
@@ -57,5 +64,7 @@
   <string name="WndSettings_ExperementalFont">Neue Schrift</string>
   <string name="WndSettings_ClassicFont">Klassische Schrift</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">Speicherplatz wählen</string>
   <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">Mod wählen</string>
 </resources>

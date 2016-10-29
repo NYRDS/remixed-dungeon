@@ -1,5 +1,11 @@
 package com.nyrds.android.util;
 
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.util.Base64;
+
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.acra.ACRA;
@@ -8,12 +14,14 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by mike on 01.03.2016.
  */
 public class Util {
-	static public String stackTraceToString(Throwable e) {
+	private static String stackTraceToString(Throwable e) {
 		StringWriter sw = new StringWriter();
 		e.printStackTrace(new PrintWriter(sw));
 		return sw.toString();
@@ -23,22 +31,22 @@ public class Util {
 		return e.getMessage() + "\n" + Util.stackTraceToString(e) + "\n";
 	}
 
-	static public void storeEventInAcra(String eventKey,Exception e) {
+	static public void storeEventInAcra(String eventKey, Exception e) {
 		EventCollector.logException(e,eventKey);
-		if(!ACRA.isInitialised()){
+		if (!ACRA.isInitialised()) {
 			return;
 		}
 		ACRA.getErrorReporter().putCustomData(eventKey, toString(e));
 	}
 
-	static public void storeEventInAcra(String eventKey,String str) {
-		if(!ACRA.isInitialised()){
+	static public void storeEventInAcra(String eventKey, String str) {
+		if (!ACRA.isInitialised()) {
 			return;
 		}
 		ACRA.getErrorReporter().putCustomData(eventKey, str);
 	}
 
-	public static boolean isConnectedToInternet() {
+	static public boolean isConnectedToInternet() {
 		InetAddress ipAddr;
 		try {
 			ipAddr = InetAddress.getByName("google.com");
@@ -47,5 +55,20 @@ public class Util {
 		}
 
 		return !ipAddr.toString().equals("");
+	}
+
+	static public String getSignature(Context context) {
+		try {
+			PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
+			MessageDigest md = MessageDigest.getInstance("SHA-512");
+			for (Signature signature : packageInfo.signatures) {
+				md.update(signature.toByteArray());
+			}
+			return Base64.encodeToString(md.digest(), Base64.DEFAULT);
+		} catch (PackageManager.NameNotFoundException e) {
+			throw new TrackedRuntimeException(e);
+		} catch (NoSuchAlgorithmException e) {
+			return "No SHA-512?";
+		}
 	}
 }

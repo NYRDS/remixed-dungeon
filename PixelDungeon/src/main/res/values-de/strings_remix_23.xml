@@ -1,29 +1,55 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">Verdorrter Strauch</string>
+  <string name="Guts_TileHighGrass">Verdorrter Strauch</string>
+  <string name="Guts_TileWater">Seltsame schleimige Flüssigkeit</string>
+  <string name="Guts_TileDescEntrance">Ein großes Loch in der Decke führt zu den oberen Ebenen.</string>
+  <string name="Guts_TileDescExit">Ein großes Loch im Boden führt zu den unteren Ebenen.</string>
+  <string name="Guts_TileDescDeco">Dieser Ort sieht... verwunded aus</string>
+  <string name="Guts_TileDescBookshelf">Dieses Bücherregal ist vollständig mit einem dichten und fleischigen Netz bedeckt. Aussichtslos, eines der Bücher zu erreichen.</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Besiegt, in Stücke zerfallen, jedoch nicht vollständig zerstört, wurde der Alte Gott in die tiefsten Ebenen des Dungeons versiegelt. Doch vor kurzem wurde das Siegel gebrochen, die Passage zum Nest des Dämons verlassen, weit geöffnet. Die alptraumhaften Monster, geschaffen vom Alten Gott während seines Schlummers, waren so zahlreich, dass sie gezwungen waren, sich zu diesen grotesken Hallen zusammenzufügen. Wenn du über ihr lebendes Fleisch läufst, kannst du den Herzschlag vom Herz des Alten Gottes spüren, der durch sie hallt.</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
   <string name="MimicAmulet_Name">Imitator</string>
   <string name="MimicAmulet_Gender">männlich</string>
   <string name="MimicAmulet_Name_Objective">Imitator </string>
+  <string name="MimicAmulet_Desc">Der glorreichste Moment deiner Karriere als Abenteurer erwies sich gerade als eine Falle.</string>
   <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">Alptraum</string>
   <string name="Nightmare_Gender">männlich</string>
+  <string name="Nightmare_Name_Objective">Alptraum</string>
+  <string name="Nightmare_Desc">Groteske Kreatur, von zuckenden fleischigen Tentakeln. Der Nachtmahr ist eine arge Manifestiation der finsteren Gedanken des Alten Gottes.</string>
   <!--STRINGS OF TENGU CLASS-->
   <string name="Tengu_Info3">Hab dich, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">Gnoll-Zombie</string>
   <string name="ZombieGnoll_Gender">männlich</string>
+  <string name="ZombieGnoll_Name_Objective">Gnoll-Zombie</string>
+  <string name="ZombieGnoll_Desc">Der verdrehte, gebrochene Körper eines Zombie-Gnolles ähnelt nicht mehr dem eines Menschen noch dem einer Hyäne, er ist nur noch ein Haufen fauliges Fleisch mit dem böswilligen Drang in den Knochen, zu töten und zu fressen.</string>
   <!--STRINGS OF Worm CLASS-->
   <string name="Worm_Name">Wurm</string>
   <string name="Worm_Gender">männlich</string>
   <string name="Worm_Name_Objective">Wurm</string>
+  <string name="Worm_Desc">Es ist unmöglich zu sagen wie groß dieser Wurm ist. Nach und nach in den Raum grabend, ist der Körper der Kreatur mit verrottetem Fleisch und Schleim bedeckt. Seine gigantischen Mundwerkzeuge geben dir eine klare Vorstellung, wie sich dieses Monster durch die Oberfläche bewegt.</string>
   <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">Yogs Gehirn</string>
   <string name="YogsBrain_Gender">männlich</string>
+  <string name="YogsBrain_Name_Objective">Yogs Gehirn</string>
+  <string name="YogsBrain_Desc">Gehirn von Yog-Dzewa. Die Quelle allem Bösen, die jemals aus dem Dungeon kam.</string>
   <!--STRINGS OF YogsEye CLASS-->
-  <string name="YogsEye_Name">yog\'s Auge</string>
+  <string name="YogsEye_Name">Yogs Auge</string>
   <string name="YogsEye_Gender">männlich</string>
+  <string name="YogsEye_Name_Objective">Yogs Auge</string>
+  <string name="YogsEye_Desc">Das Auge des Alten Gottes, ein allsehender Blick gefüllt mit ewigem Hass. Du fühlst, wie es gezielt durch deine Seele blickt.</string>
   <!--STRINGS OF YogsHeart CLASS-->
-  <string name="YogsHeart_Name_Objective">Yog\'s Herz</string>
+  <string name="YogsHeart_Name">Yogs Herz</string>
+  <string name="YogsHeart_Gender">männlich</string>
+  <string name="YogsHeart_Name_Objective">Yogs Herz</string>
+  <string name="YogsHeart_Desc">Jahrhundertelang wurde behauptet, dass wirklich nur herzlose Kreaturen in der Lage sind, das Pure Böse zu sein. Und hier ist der Gegenbeweis, das pochende Herz des Alten Gottes höchstpersönlich.</string>
   <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Gender">männlich</string>
   <string name="YogsTeeth_Name_Objective">Yog\'s Zähne</string>
+  <string name="YogsTeeth_Desc">Ein enormer Mund eines Alten Gottes, gefüllt mit rasiermesserscharfen Zähnen. Eine sehr passende Manifestation seines Dranges, alles zu zerstören und zu verschlingen.</string>
 </resources>

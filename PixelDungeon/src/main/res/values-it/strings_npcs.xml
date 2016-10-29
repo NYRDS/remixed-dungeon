@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
@@ -10,7 +10,7 @@
   <string name="Blacksmith_Txt3">minerale di oro scuro. 15 pezzi. Scherzi a parte, è difficile?</string>
   <string name="Blacksmith_Txt4">Ho detto che ho bisogno del sangue di un pipistrello sulla zappa. Chop Chop!</string>
   <string name="Blacksmith_Completed">Oh, sei tornato...Meglio tardi che mai.</string>
-  <string name="Blacksmith_GetLost">Sono occupato. Vai al diavolo!</string>
+  <string name="Blacksmith_GetLost">Sono occupato. Sparisci!</string>
   <string name="Blacksmith_LooksBetter">%s sembra migliore ora</string>
   <string name="Blacksmith_Verify1">selezione 2 differenti items, non lo stesso item due volte!</string>
   <string name="Blacksmith_Verify2">selezione 2 items dello stesso tipo!</string>

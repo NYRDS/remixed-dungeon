@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ArmoredStatue -->
     <string name="ArmoredStatue_Name">estátua animada</string>
+    <string name="ArmoredStatue_Gender">feminino</string>
     <string name="ArmoredStatue_Name_Objective">estátua animada</string>
+    <string name="SpiderGuard_Gender">masculino</string>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Conjunto de Pirata</string>
+    <string name="WndSaveSlotSelect_Delete_No">Não</string>
     </resources>

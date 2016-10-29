@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
@@ -44,8 +44,12 @@
   <string name="ScrollOfIdentify_Info1">Es ist ein(e) %s</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
   <string name="ScrollOfLullaby_Name">Schriftrolle des Schlaflieds</string>
+  <string name="ScrollOfLullaby_Info1">Die Schriftrolle bringt eine beruhigende Melodie hervor.</string>
+  <string name="ScrollOfLullaby_Info2">Die Schriftrolle bringt eine beruhigende Melodie hervor und die %s schlafen ein!</string>
+  <string name="ScrollOfLullaby_Info3">Die Schriftrolle bringt eine beruhigende Melodie hervor und die Monster schlafen ein!</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
   <string name="ScrollOfMagicMapping_Name">Schriftrolle des magischen Vermessens</string>
+  <string name="ScrollOfMagicMapping_Layout">Du kennst jetzt den Levelaufbau.</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
   <string name="ScrollOfMirrorImage_Name">Schriftrolle der Doppelbilder</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
@@ -59,9 +63,19 @@
   <string name="ScrollOfTeleportation_NoTeleport">Die starke magische Aura dieses Ortes hält dich davon dich zu telepotieren.</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
   <string name="ScrollOfTerror_Name">Schriftrolle der Angst</string>
+  <string name="ScrollOfTerror_Info1">Die Schriftrolle erleuchtet in einem grellen Blitz aus rotem Licht</string>
+  <string name="ScrollOfTerror_Info2">Die Schriftrolle erleuchtet in einem grellen Blitz aus rotem Licht und die %s flüchten!</string>
+  <string name="ScrollOfTerror_Info3">Die Schriftrolle erleuchtet in einem grellen Blitz aus rotem Licht und die Monster flüchten!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">Schriftrolle des Verbesserns</string>
+  <string name="ScrollOfUpgrade_InvTitle">Wähle einen Gegenstand zum verbessern aus</string>
+  <string name="ScrollOfUpgrade_LooksBetter">Dein/e %s sieht nun besser aus</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Schriftrolle der Waffenverbesserung</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Wähle eine Waffe die du verbessern möchtest</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">Dein/e %s sieht nun besser aus</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Schriftrolle der Beherrschung</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Schriftrolle des Fluches</string>
 </resources>

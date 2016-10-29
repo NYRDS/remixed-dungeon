@@ -1,8 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">Viele Helden aus aller Art wagten sich vor dir in den Dungeon. Manche von ihnen kehrten glorreich mit Schätzen und magischen Artefakten wieder, viele wurden seitdem nie wieder gesehen. Aber keiner hat es je geschafft, das Amulett von Yendor zu beschaffen, von dem man sich erzählt, dass es tief in den Ebenen des Dungeons verborgen sein soll. Du erklärst dich bereit für die Herausforderung, aber am wichtigsten ist, dass dich das Glück anlächelt. Es ist Zeit, dein Abenteuer zu starten!</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">Lassen wir es gut sein</string>
   <string name="AmuletScene_Stay">Ich bin noch nicht fertig</string>
@@ -16,6 +17,8 @@
   <string name="GameScene_Grass">Der Geruch von Vegetation hängt in der Luft.</string>
   <string name="GameScene_Secrets">Die besondere Atmosphäre dieser Ebene weist auf viele Geheimnisse hin.</string>
   <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">Gruppe</string>
+  <string name="Char_Name_Objective">Gruppe</string>
   <string-array name="Char_Hit">
     <item>%1$s trifft %2$s</item>
     <item>%1$s trifft %2$s</item>
@@ -44,7 +47,7 @@
   <string name="Char_StaSlowed">verlangsamt</string>
   <string name="Char_StaMind">Geist</string>
   <string name="Char_StaVision">Vision</string>
-  <string name="Char_StaParalysed">paralysiert</string>
+  <string name="Char_StaParalysed">gelähmt</string>
   <string name="Char_StaFrightened">verängstigt</string>
   <string name="Char_StaRooted">festgewachsen</string>
   <string name="Char_StaCrippled">verkrüppelt</string>
@@ -56,22 +59,22 @@
   <string name="Dungeon_DeadEnd">Was machst du hier?!</string>
   <string-array name="Dungeon_Tips">
     <item>Überschätze deine Stärke nicht - verwende nur Waffen und Rüstungen mit denen du umgehen kannst.</item>
-    <item>Nicht alle Türen im Dungeon sind sofort erkennbar. Wenn du nicht weiterkommst suche nach versteckten Türen.</item>
-    <item>Bedenke, dass das Erhöhen deiner Stärke nicht der einzige Weg ist bessere Ausrüstung zu verwenden, du kannst es auch anders herum versuchen indem du die Stärkenanforderung der Ausrüstung mit Schriftrollen der Aufwertung senkst.</item>
+    <item>Nicht alle Türen im Dungeon sind sofort erkennbar. Wenn du nicht weiterkommst, suche nach versteckten Türen.</item>
+    <item>Bedenke, dass das Erhöhen deiner Stärke nicht der einzige Weg ist, bessere Ausrüstung zu verwenden. Du kannst es auch anders herum versuchen, indem du die Stärkenanforderung der Ausrüstung mit Schriftrollen der Aufwertung senkst.</item>
     <item>Du kannst dein Gold in Läden in tieferen Ebenen des Dungeons ausgeben. Der erste befindet sich auf Ebene 6.</item>
-    <item>Nimm dich vor Goo in Acht!</item>
+    <item>Nimm dich vor \'Goo\' in Acht!</item>
     <item>Pixel-Mart - alles das du für ein erfolgreiches Abenteuer benötigst!</item>
-    <item>Identifiziere deine Tränke und Schriftrollen so schnell wie möglich. Warte nicht auf den Moment in dem du sie wirklich brauchst.</item>
+    <item>Identifiziere deine Tränke und Schriftrollen so schnell wie möglich. Warte nicht auf den Moment, in dem du sie wirklich brauchst.</item>
     <item>Hungrig zu sein tut dir nicht weh, am Verhungern sein jedoch schon.</item>
     <item>Überraschungsangriffe haben eine bessere Chance auf einen Treffer. Du könntest z.B. deinem Gegner hinter einer geschlossenen Tür auflauern, wenn du weißt, dass er sich nähert.</item>
     <item>Lass den Tengu nicht raus!</item>
     <item>Pixel-Mart. Gib Geld aus. Lebe länger.</item>
-    <item>Wenn du von mehreren Monstern angegriffen wirst versuche dich hinter eine Tür zurückzuziehen.</item>
-    <item>Wenn du Feuer gefangen hast während du schwebst kannst du es nicht durch Wasser löschen.</item>
-    <item>Es macht keinen Sinn mehr als einen Ankh gleichzeitig zu besitzen da du sie ohnehin bei einer Auferstehung verlieren wirst.</item>
+    <item>Wenn du von mehreren Monstern angegriffen wirst, versuche, dich hinter eine Tür zurückzuziehen.</item>
+    <item>Wenn du Feuer gefangen hast während du schwebst, kannst du es nicht durch Wasser löschen.</item>
+    <item>Es macht keinen Sinn, mehr als einen Ankh gleichzeitig zu besitzen, da du sie ohnehin bei einer Auferstehung verlieren wirst.</item>
     <item>ACHTUNG! Schwere Maschinen verursachen Verletzungen bis hin zu Verlust von Gliedmaßen oder Tod!</item>
     <item>Pixel-Mart. Ein sichereres Leben im Dungeon.</item>
-    <item>Wenn du eine verzauberte Waffen aufrüstest besteht eine Chance, dass die Verzauberung dabei zerstört wird.</item>
+    <item>Wenn du eine verzauberte Waffe aufrüstest, besteht eine Chance, dass die Verzauberung dabei zerstört wird.</item>
     <item>Durch einen Brunnen der Verwandlung kannst du einen Gegenstand erhalten, den du auf keine andere Art erlangen kannst.</item>
     <item>Der einzige Weg eine Waffe zu verzaubern ist sie durch eine Schriftrolle der Aufwertung aufzurüsten.</item>
     <item>Im Beisein Ihrer Majestät sind keine Waffen erlaubt!</item>
@@ -144,110 +147,259 @@
   <string name="WndInfoItem_WontKnow">Du wirst erst wissen was darin ist wenn du es geöffnet hast!</string>
   <string name="WndInfoItem_NeedKey">Du brauchst einen goldenen Schlüssel um dies zu öffnen.</string>
   <string name="WndInfoItem_Inside">Du kannst %s im Inneren erkennen, aber um die Kiste zu öffnen benötigst du einen goldenen Schlüssel.</string>
+  <string name="WndInfoItem_Owner">Dieses antike Grab kann etwas nützliches enthalten, aber sein Besitzer wird es sicherlich nicht einfach hergeben.</string>
+  <string name="WndInfoItem_Remains">Das sind die Überreste von einem deiner Vorgänger. Vielleicht sind in ihnen Wertsachen enthalten?</string>
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">Logbuch</string>
   <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Error">Zusätzliche Informationen konnten nicht geladen werden</string>
   <string name="WndRanking_Stats">Statistiken</string>
+  <string name="WndRanking_Items">Objekte</string>
+  <string name="WndRanking_Badges">Abzeichen</string>
   <string name="WndRanking_StaTitle">Ebene %1$d %2$s</string>
   <string name="WndRanking_StaChallenges">Herausforderungen</string>
   <string name="WndRanking_StaHealth">Gesundheit</string>
   <string name="WndRanking_StaStr">Stärke</string>
+  <string name="WndRanking_StaDuration">Spieldauer</string>
   <string name="WndRanking_StaDepth">Tiefste Ebene</string>
-  <string name="WndRanking_StaGold">gesammeltes Gold</string>
+  <string name="WndRanking_StaEnemies">Getötete Gegner</string>
+  <string name="WndRanking_StaGold">Gesammeltes Gold</string>
+  <string name="WndRanking_StaFood">Gegessene Nahrung</string>
+  <string name="WndRanking_StaAlchemy">Gebraute Tränke</string>
+  <string name="WndRanking_StaAnkhs">Verwendete Ankhs</string>
   <!--STRINGS OF WndResurrect CLASS-->
+  <string name="WndResurrect_Message">Du bist gestorben, jedoch wurde dir eine weitere Chance gegeben, diesen Dungeon zu bewältigen. Nimmst du sie an?</string>
+  <string name="WndResurrect_Yes">Ja, ich werde kämpfen!</string>
+  <string name="WndResurrect_No">Nein, ich gebe auf</string>
   <!--STRINGS OF WndSadGhost CLASS-->
+  <string name="WndSadGhost_Rose">Ja! Ja!!! Das ist es! Bitte gebe es mir! Und du kannst einen dieser beiden Gegenstände nehmen, vielleicht werden sie dir noch von nutzen sein...</string>
+  <string name="WndSadGhost_Rat">Ja! Diese scheußliche Kreatur ist tot und nun kann ich endlich ruhen... Bitte nehme zum Dank einen dieser Gegenstände, vielleicht werden sie dir später von nutzen sein...</string>
+  <string name="WndSadGhost_Wepon">Waffe des Geists</string>
+  <string name="WndSadGhost_Armor">Rüstung des Geists</string>
+  <string name="WndSadGhost_Farewell">Lebe wohl, Abenteurer!</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Sewers">Der Dungeon liegt direkt unter der Stadt, die oberen Ebenen bilden sozusagen das Abwassersystem der Stadt. Daher sollten sie nicht allzu schwer sein. Keiner nennt sie einen sicheren Platz, aber du wirst hier nicht gegen mächtige Magie kämpfen müssen.</string>
+  <string name="WndStory_Prision">Vor vielen Jahren wurde hier für die gefährlichsten Verbrecher ein unterirdisches Gefängnis gebaut. Zu der Zeit schien es wie eine sehr kluge Idee, denn dieser Ort war wirklich sehr schwer zu entkommen. Doch bald fing es an, von unten her dunkles Miasma zu durchdringen, Gefangene und Wächter zu töten. Schließlich wurde das Gefängnis verlassen, obwohl einige Sträflinge hier eingesperrt waren.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
+  <string name="WndTradeItem_Sale">IM ANGEBOT: %1$s - %2$dg</string>
+  <string name="WndTradeItem_Buy">Kaufen für %dg</string>
+  <string name="WndTradeItem_Sell">Verkaufen für %dg</string>
+  <string name="WndTradeItem_Sell1">1 verkaufen für %dg</string>
+  <string name="WndTradeItem_SellAll">Alle verkaufen für %dg</string>
+  <string name="WndTradeItem_Cancel">Vergiss es</string>
+  <string name="WndTradeItem_Sold">Du hast %1$s für %2$dg verkauft</string>
+  <string name="WndTradeItem_Bought">Du hast %1$s für %2$dg gekauft</string>
   <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Message">Oh, wie ich sehe, warst du erfolgreich! Ich hoffe doch, dass dir das nicht viel Ärger gebracht hat. Aber ich halte mein versprechen: Du kannst einen meiner hoch qualitativen Zauberstäbe haben.</string>
+  <string name="WndWandmaker_Battle">Kampf-Zauberstab</string>
+  <string name="WndWandmaker_Farawell">Viel Glück bei deiner Quest, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
+  <string name="QuickSlot_SelectedItem">Wähle ein Item für den Schnellzugriff</string>
   <!--STRINGS OF Item CLASS-->
+  <string name="Item_Name">etwas</string>
+  <string name="Item_Info">etw.</string>
+  <string name="Item_ACDrop">ABLEGEN</string>
   <string name="Item_ACThrow">WERFEN</string>
+  <string name="Item_PackFull">Du hast keinen Platz mehr für %s</string>
+  <string name="Item_DirThrow">Zielposition auswählen</string>
   <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">AUSRÜSTEN</string>
+  <string name="EquipableItem_ACUnequip">ABLEGEN</string>
+  <string name="EquipableItem_Unequip">Du kannst die verfluchte %s nicht entfernen!</string>
   <!--STRINGS OF Heap CLASS-->
+  <string name="Heap_Mimic">Das ist ein Imitator!</string>
   <!--STRINGS OF Amulet CLASS-->
+  <string name="Amulet_Name">Amulett von Yendor</string>
+  <string name="Amulet_ACEnd">SPIEL BEENDEN</string>
   <!--STRINGS OF Ankh CLASS-->
+  <string name="Ankh_Name">Ankh</string>
+  <string name="Ankh_Info">Dieses antike Symbol der Unsterblichkeit gewährt dir die Fähigkeit, dich nach deinem Tod wiederzubeleben. Beim Wiederauferstehen gehen jedoch alle nicht-ausgestatteten Gegenstände verloren.</string>
   <!--STRINGS OF ArmorKit CLASS-->
+  <string name="ArmorKit_Name">Rüstungsset</string>
+  <string name="ArmorKit_ACAplly">ANWENDEN</string>
+  <string name="ArmorKit_SelectArmor">Wähle eine Rüstung zum verbessern</string>
+  <string name="ArmorKit_Upgraded">Du hast dein Rüstungsset benutzt. %s wurde verbessert.</string>
   <!--STRINGS OF Dewdrop CLASS-->
+  <string name="Dewdrop_Name">Tautropfen</string>
+  <string name="Dewdrop_Info">Ein kristallklarer Tautropfen.</string>
   <!--STRINGS OF DewVial CLASS-->
+  <string name="DewVial_Name">Tauflasche</string>
+  <string name="DewVial_ACDRINK">TRINKEN</string>
+  <string name="DewVial_Info">Du kannst überschüssigen Tau in diesem kleinen Gefäß aufbewahren, um sie später zu trinken. Wenn die Flasche voll ist, trinkst du in tödlichen Situationen automatisch etwas davon.</string>
+  <string name="DewVial_AutoDrink">Deine Tauflasche wurde benutzt, um deine Wunden zu heilen.</string>
+  <string name="DewVial_Collected">Du hast einen Tautropfen in deine Tauflasche gefüllt.</string>
+  <string name="DewVial_Full">Deine Tauflasche ist voll!</string>
+  <string name="DewVial_Empty">Deine Tauflasche ist leer!</string>
   <!--STRINGS OF Gold CLASS-->
+  <string name="Gold_Name">Gold</string>
+  <string name="Gold_Collect">Sammle Goldmünzen, um sie später bei einem Händler auszugeben.</string>
+  <string name="Gold_Info">Ein Haufen von %d Goldmünzen.</string>
+  <string name="Gold_Info1">Eine Goldmünze.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
   <!--STRINGS OF LloidsBeacon CLASS-->
+  <string name="LloidsBeacon_Name">Lloyds Leuchtfeuer</string>
+  <string name="LloidsBeacon_ACSet">SETZEN</string>
+  <string name="LloidsBeacon_ACReturn">ZURÜCK</string>
+  <string name="LloidsBeacon_Info">Lloyds Leuchtfeuer ist ein kompliziertes magisches Gerät, das dir ermöglicht, zu einem Ort zurückzukehren, an dem du schon einmal warst.</string>
+  <string name="LloidsBeacon_Preventing">Die starke magische Aura dieses Ortes hindert dich daran, Lloyds Leuchtfeuer zu benutzen.</string>
+  <string name="LloidsBeacon_Creatures">Die übersinnliche Aura naher Kreaturen hindert dich daran, Lloyds Leuchtfeuer jetzt zu benutzen.</string>
+  <string name="LloidsBeacon_Set">
+
+Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetzt.</string>
   <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_Name">Mysteriöser Stift</string>
+  <string name="Stylus_ACInscribe">BESCHRIFTEN</string>
+  <string name="Stylus_Info">Dieser mysteriöse Stift wurde aus schwarzem, sehr harten Stein gemacht. Du kannst mit ihm eine Glyphe oder eine Rune schreiben, aber nicht bestimmen, welche es sein soll, da sie sich der Stift aussucht.</string>
+  <string name="Stylus_SelectArmor">Wähle einen Gegenstand zum Beschriften</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_Name">Buch der Meisterschaft</string>
+  <string name="TomeOfMastery_ACRead">LESEN</string>
+  <string name="TomeOfMastery_Blinded">Du kannst nicht lesen, während du geblendet bist</string>
+  <string name="TomeOfMastery_Choose">Du hast dich entschieden den Weg des %s einzuschlagen!</string>
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">Fackel</string>
+  <string name="Torch_ACLight">ERLEUCHTEN</string>
   <!--STRINGS OF Weightstone CLASS-->
+  <string name="Weightstone_Name">Gewichtsstein</string>
+  <string name="Weightstone_ACApply">ANWENDEN</string>
+  <string name="Weightstone_Info">Du kannst den Gewichtsstein dazu verwenden, eine deiner Waffen zu verschnellern oder dessen Genauigkeit zu erhöhen.</string>
+  <string name="Weightstone_Select">Wähle eine Waffe zum Ausgleichen</string>
+  <string name="Weightstone_Fast">Die Attribute vom %s wurden abgestimmt, es ist jetzt schneller.</string>
+  <string name="Weightstone_Accurate">Die Attribute vom %s wurden abgestimmt, es ist jetzt genauer.</string>
+  <string name="Weightstone_WndChoice">Wie möchtest du dein %s ausgleichen?</string>
+  <string name="Weightstone_WndSpeed">Für Schnelligkeit</string>
+  <string name="Weightstone_WndAccuracy">Für Präzision</string>
+  <string name="Weightstone_WndCancel">Vergiss es</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
+  <string name="Bag_ACOpen">ÖFFNEN</string>
   <!--STRINGS OF Keyring CLASS-->
+  <string name="Keyring_Name">Schlüsselbund</string>
+  <string name="Keyring_Info">Das ist ein Schlüsselbund aus Kupfer, der all deine Schlüssel seperat zusammenhält.</string>
   <!--STRINGS OF ScrollHolder CLASS-->
+  <string name="ScrollHolder_Name">Schriftrollenhalter</string>
   <!--STRINGS OF SeedPouch CLASS-->
+  <string name="SeedPouch_Name">Samenbeutel</string>
+  <string name="SeedPouch_Info">Dieser kleine Samtbeutel bewahrt alle deine Samen auf. Sehr praktisch.</string>
   <!--STRINGS OF WandHolster CLASS-->
+  <string name="WandHolster_Name">Stabtasche</string>
   <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Name">Trankgürtel</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
   <string name="GoldenKey_Name">Goldener Schlüssel </string>
+  <string name="GoldenKey_Info">Die Einkerbungen dieses goldenen Schlüssels sind klein und verworren. Vielleicht kann er ein Truhenschloss öffnen?</string>
   <!--STRINGS OF IronKey CLASS-->
   <string name="IronKey_Name">Eisener Schlüssel</string>
+  <string name="IronKey_FromDepth">Schlüssel von Tiefe %d</string>
   <!--STRINGS OF SkeletonKey CLASS-->
+  <string name="SkeletonKey_Name">Knochiger Schlüssel</string>
+  <string name="SkeletonKey_Info">Dieser Schlüssel sieht seriös aus: Der Kopf ist wie ein Schädel geformt. Wahrscheinlich lässt sich damit eine seriöse Tür öffnen.</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
+  <string name="CorpseDust_Name">Leichenstaub</string>
   <!--STRINGS OF DarkGold CLASS-->
+  <string name="DarkGold_Name">Dunkles Golderz</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">getrocknete Rose</string>
+  <string name="DriedRose_Info">Diese Rose ist schon sehr lange vertrocknet, trotzdem hat sie seltsamerweise noch alle Blüten.</string>
   <!--STRINGS OF DwarfToken CLASS-->
+  <string name="DwarfToken_Name">Zwergenmünze</string>
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">Spitzhacke</string>
+  <string name="Pickaxe_ACMine">ABBAUEN</string>
   <string name="Pickaxe_Gender">weiblich</string>
+  <string name="Pickaxe_NoVein">Es gibt keine Goldader in der Nähe.</string>
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">großer Rattenschädel</string>
+  <string name="RatSkull_Info">Es könnte eine schöne Trophäe sein, jedoch stinkt sie zu sehr, um sie an eine Wand zu hängen.</string>
+  <string name="RatSkull_Info2">Anders gesehen, demonstriert er, dass sein Besitzer in der Lage ist, Ratten zu töten, sogar große und stinkende.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="ConfusionGas_Info">Eine Wolke benebelndes Gas wirbelt hier. </string>
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Ein Feuer wütet hier.</string>
   <!--STRINGS OF Foliage CLASS-->
   <!--STRINGS OF ParalyticGas CLASS-->
+  <string name="ParalyticGas_Info">Eine Wolke paralysierendes Gas wirbelt hier. </string>
   <!--STRINGS OF ToxicGas CLASS-->
+  <string name="ToxicGas_Info">Eine grüne Wolke Giftgas wirbelt hier. </string>
   <string name="ToxicGas_Info1">Du bist gestorben weil du giftige Luft eingeatmet hast.</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
+  <string name="WaterOfAwareness_Info">Die Kraft des Wissens strömt durch das Wasser dieses Brunnens. Nimm einen Schluck, um alle Geheimnisse über deine ausgerüsteten Gegenstände zu erfahren.</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
+  <string name="WaterOfHealth_Info">Die Kraft des Heilens strömt durch das Wasser dieses Brunnens. Nimm einen Schluck um dich komplett zu heilen und deinen Hunger zu stillen.</string>
+  <string name="WaterOfHealth_Procced">Deine Wunden heilen vollständig.</string>
   <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <string name="WaterOfTransmutation_Info">Die Kraft der Veränderung strömt durch das Wasser dieses Brunnens. Wirf einen Gegenstand in den Brunnen, um ihn in etwas anderes zu verwandeln.</string>
   <!--STRINGS OF Web CLASS-->
+  <string name="Web_Info">Hier ist alles mit dicken Spinnennetzen bedeckt.</string>
   <!--PACKAGE /actors/buffs-->
   <!--STRINGS OF Amok CLASS-->
+  <string name="Amok_Info">Amok</string>
   <!--STRINGS OF Barkskin CLASS-->
   <!--STRINGS OF Bleeding CLASS-->
+  <string name="Bleeding_Info">Blutend</string>
   <string name="Bleeding_Death">Du bist verblutet</string>
   <!--STRINGS OF Blindness CLASS-->
+  <string name="Blindness_Info">Geblendet</string>
   <!--STRINGS OF Burning CLASS-->
+  <string name="Burning_Info">Brennend</string>
+  <string name="Burning_Burns">%s ist verbrannt!</string>
+  <string name="Burning_Death">Du bist verbrannt</string>
   <!--STRINGS OF Charm CLASS-->
+  <string name="Charm_Info">Verzaubert</string>
   <!--STRINGS OF Combo CLASS-->
+  <string name="Combo_Info">Kombo</string>
+  <string name="Combo_Combo">%d Treffer Kombo!</string>
   <!--STRINGS OF Cripple CLASS-->
+  <string name="Cripple_Info">Verkrüppelt</string>
   <!--STRINGS OF Frost CLASS-->
+  <string name="Frost_Info">Eingefroren</string>
+  <string name="Frost_Shatter">Die Kälte lässt %s zerspringen!</string>
   <!--STRINGS OF Fury CLASS-->
+  <string name="Fury_Info">Wütend</string>
   <!--STRINGS OF GasesImmunity CLASS-->
+  <string name="GasesImmunity_Info">Immun gegen Gase</string>
   <!--STRINGS OF Hunger CLASS-->
-  <string name="Hunger_Death">Für bist verhungert </string>
+  <string name="Hunger_Death">Du bist verhungert...</string>
+  <string name="Hunger_Info1">Hungrig</string>
+  <string name="Hunger_Info2">Verhungernd</string>
   <!--STRINGS OF Invisibility CLASS-->
   <string name="Invisibility_Info">Unsichtbar </string>
   <!--STRINGS OF Levitation CLASS-->
+  <string name="Levitation_Info">Schwebend</string>
   <!--STRINGS OF Light CLASS-->
+  <string name="Light_Info">Erleuchtet</string>
   <!--STRINGS OF MindVision CLASS-->
+  <string name="MindVision_Info">Gedankenlesend</string>
   <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Info">Ätzender Schlamm</string>
+  <string name="Ooze_Death">%s hat dich getötet...</string>
   <!--STRINGS OF Paralysis CLASS-->
+  <string name="Paralysis_Info">Gelähmt</string>
   <!--STRINGS OF Poison CLASS-->
-  <string name="Poison_Info">vergiftet</string>
+  <string name="Poison_Info">Vergiftet </string>
+  <string name="Poison_Death">Du bist durch Vergiftung gestorben...</string>
   <!--STRINGS OF Roots CLASS-->
+  <string name="Roots_Info">Festgewachsen</string>
   <!--STRINGS OF Shadows CLASS-->
+  <string name="Shadows_Info">Eins mit dem Schatten</string>
   <!--STRINGS OF Slow CLASS-->
+  <string name="Slow_Info">Verlangsamt</string>
   <!--STRINGS OF SnipersMark CLASS-->
+  <string name="SnipersMark_Info">Ziel von Scharfschützen</string>
   <!--STRINGS OF Vertigo CLASS-->
+  <string name="Vertigo_Info">Schwindelig</string>
   <!--STRINGS OF Weakness CLASS-->
   <string name="Weakness_Info">geschwächt </string>
   <!--PACKAGE /actors/hero-->
   <!--STRINGS OF Belongings CLASS-->
+  <string name="Belongings_Name">Rucksack</string>
   <!--PACKAGE /sprites-->
   <!--STRINGS OF ItemSprite CLASS-->
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
+  <string name="Toolbar_Info1">Du weißt nicht, was dort ist.</string>
+  <string name="Toolbar_Info2">Wähle ein Element zum Untersuchen</string>
 </resources>

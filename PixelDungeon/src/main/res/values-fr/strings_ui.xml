@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF TitleScene CLASS-->
   <string name="TitleScene_Play">Jouer</string>
@@ -7,8 +7,11 @@
   <string name="TitleScene_About">A propos</string>
   <string name="TitleScene_InternalStorageLow">Pas assez de place\n dans l\'espace de stockage interne\n Votre progression peut être perdue !</string>
   <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_OurSite">Notre site :</string>
+  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
   <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">Envoyer un E-Mail</string>
+  <string name="AboutScene_TranslatedBy">Français l18n:\n Rémi Schneider\nEmmanuel Dempuré\nBastien PIXEL\nNikolay\Clément Tetu267901</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Meilleures parties</string>
   <string name="RankingsScene_Total">Nombre total de parties jouées:</string>
@@ -26,6 +29,11 @@
   <string name="StartScene_Unlock">Pour débloquer ce personnage, vainquez le 3e boss avec tous les autres personnages</string>
   <string name="StartScene_UnlockElf">Pour débloquer ce personnage, vainquez le 4e boss avec tous les autres personnages.</string>
   <string name="StartScene_WinGame">Pour débloquer les \"Challenges\", finissez le jeu avec n\'importe quel personnage.</string>
+  <string name="StartScene_DifficultySelect">Choisissez votre destin</string>
+  <string name="StartScene_DifficultyEasy">Facile (Avec Pubs)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">Normal avec Sauvegardes (et pubs)</string>
+  <string name="StartScene_DifficultyNormal">Normal</string>
+  <string name="StartScene_DifficultyExpert">Expert</string>
   <!--STRINGS OF InterLevelScene CLASS-->
   <string name="InterLevelScene_Descending">Descente...</string>
   <string name="InterLevelScene_Ascending">Montée...</string>
@@ -55,5 +63,7 @@
   <string name="WndSettings_ExperementalFont">Nouvelle police</string>
   <string name="WndSettings_ClassicFont">Police classique</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">Choisissez un emplacement</string>
   <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">Choisissez un mod</string>
 </resources>

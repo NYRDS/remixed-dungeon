@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/potions-->
   <!--STRINGS OF Potion CLASS-->
@@ -14,6 +14,7 @@
   <string name="Potion_Shatter">La boccetta si frantuma e un liquido %s si sparge senza provocare danno</string>
   <!--STRINGS OF PotionOfExperience CLASS-->
   <string name="PotionOfExperience_Name">Pozione d\'Esperienza </string>
+  <string name="PotionOfExperience_Info">L\'esperienza accumulata di moltitudini di battaglie ridotta in forma liquida. Questa pozione aumenterà istantaneamente la tua esperienza. </string>
   <!--STRINGS OF PotionOfFrost CLASS-->
   <string name="PotionOfFrost_Name">Pozione di Gelo</string>
   <string name="PotionOfFrost_Info">All\'esposizione con l\'aria aperta, questo intruglio evaporerà in una nuvola congelante, causando a ogni creatura che ne verrà a contatto di essere congelata sul posto, impossibilitata a muoversi o a compiere azioni.</string>
@@ -34,16 +35,28 @@
   <string name="PotionOfLiquidFlame_Info">Questa boccetta contiene un composto instabile che scoppia violentemente in fiamme in esposizione all\'aria aperta.</string>
   <!--STRINGS OF PotionOfMight CLASS-->
   <string name="PotionOfMight_Name">Pozione di Vigore</string>
+  <string name="PotionOfMight_Info">Questo potente liquido fluirà attraverso i tuoi muscoli, aumentando permanentemente la tua forza di un punto e la vita di cinque punti. </string>
+  <string name="PotionOfMight_Apply">Un nuovo vigore scorre attraverso il tuo corpo. </string>
   <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
   <!--STRINGS OF PotionOfMindVision CLASS-->
   <string name="PotionOfMindVision_Name">Pozione di visione mentale</string>
+  <string name="PotionOfMindVision_Info">Dopo averla bevuta, la tu menta percepirà il segnale psitico di creature distanti, permettendoti di sentire presenze biologiche attraverso i muri. Inoltre questa pozione ti permetterà di vedere attraverso i muri e le porte vicine.</string>
+  <string name="PotionOfMindVision_Apply1">In qualche modo puoi sentire la presenza di menti di altre creature! </string>
+  <string name="PotionOfMindVision_Apply2">In qualche modo puoi dire che sei solo sul livello al momento. </string>
   <!--STRINGS OF PotionOfParalyticGas CLASS-->
   <string name="PotionOfParalyticGas_Name">Pozione di Gas Paralitico</string>
+  <string name="PotionOfParalyticGas_Info">Una volta esposta all\'aria aperta, il liquido in questa boccetta si vaporizzerà in una nuova stordente giallastra. Chiunque inalienabile la nuvola sarà istantaneamente paralizzato, impossibilitato a muoversi per qualche tempo dopo che la nuvola si dissipa. Questo oggetto può esser lanciato ai nemici distanti per sorprenderli con l\'effetto del gas. </string>
   <!--STRINGS OF PotionOfPurity CLASS-->
   <string name="PotionOfPurity_Name">Pozione di Purificazione</string>
+  <string name="PotionOfPurity_Info">Questo reagente neutralizzerà tutti i gas pericolosi nell\'aria d\'effetto. Berla ti darà un\'immunità temporanea da questi gas. </string>
+  <string name="PotionOfPurity_Freshness">Percepisci un\'insolita freschezza nell\'aria. </string>
+  <string name="PotionOfPurity_NoSmell">Non senti più nessun odore! </string>
   <!--STRINGS OF PotionOfStrength CLASS-->
   <string name="PotionOfStrength_Name">Pozione di Forza</string>
+  <string name="PotionOfStrength_Info">Questo potente liquido fluirà attraverso i tuoi muscoli, aumentando permanentemente la tua forza di un punto. </string>
+  <string name="PotionOfStrength_Apply">Una nuova forza scorre attraverso il tuo corpo. </string>
   <string name="PotionOfStrength_StaApply">+1 forza</string>
   <!--STRINGS OF PotionOfToxicGas CLASS-->
   <string name="PotionOfToxicGas_Name">Pozione di Gas Tossico</string>
+  <string name="PotionOfToxicGas_Info">Stappare o rompere questa fiala pressurizzata provocherà al suo contenuto di esplodere in una nuvola mortale di gas tossico verde. Potresti scegliere di scagliare questa pozione ai nemici distanti piuttosto che stapparla con le mani. </string>
 </resources>

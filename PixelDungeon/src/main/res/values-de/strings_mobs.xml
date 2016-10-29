@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
@@ -48,7 +48,7 @@
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">männlich</string>
   <string name="DM300_Name_Objective">DM-300</string>
-  <string name="DM300_Desc">Diese Maschine wurde vor Jahrhunderten von den Zwergen erschaffen. Die Zwerge begannen damit, ihre Maschinen durch Golems, Elementare und sogar Dämonen zu ersetzen. Dies führte möglicherweise zum Niedergang ihrer Zivilisation. Der DM-300 und andere Maschinen wurden üblicherweise für Bau- und Minenarbeiten genutzt, manchmal auch zur Stadtverteidigung.</string>
+  <string name="DM300_Desc">Diese Maschine wurde vor vielen Jahrhunderten von den Zwergen erschaffen. Die Zwerge begannen damit, ihre Maschinen durch Golems, Elementare und sogar Dämonen zu ersetzen. Dies führte möglicherweise zum Niedergang ihrer Zivilisation. Die DM-300 und andere Maschinen wurden üblicherweise für Bau- und Minenarbeiten genutzt, manchmal auch zur Stadtverteidigung.</string>
   <string name="DM300_Info1">Der DM-300 repariert sich selbst!</string>
   <string name="DM300_Info2">Mission gescheitert. Herunterfahren eingeleitet.</string>
   <string name="DM300_Info3">Nicht autorisierter Zugang registriert.</string>
@@ -212,6 +212,7 @@ Da es sich um eine spirituelle Einheit handelt, ist es sehr schwer sie mit einer
   <string name="Yog_Name">Yog-Dzewa</string>
   <string name="Yog_Gender">männlich</string>
   <string name="Yog_Name_Objective">Yog-Dzewa</string>
+  <string name="Yog_Desc">Yog-Dzewa ist eine alte Gottheit, ein mächtiges Wesen aus dem Reich des Chaos. Ein Jahrhundert zuvor, konnten die alten Zwerge den Krieg gegen seine Armeen von Dämonen endlich gewinnen, waren aber nicht in der Lage, die Gottheit selbst zu töten. Stattdessen haben sie ihn in den Hallen unter ihrer Stadt eingesperrt, daran glaubend, dass er zu schwach sei, sich jemals wieder zu erheben</string>
   <string name="Yog_Info1">...</string>
   <string name="Yog_Info2">Hoffentlich ist es eine Illusion...</string>
   <string name="RottingFist_Name">faulige Faust</string>
@@ -230,26 +231,32 @@ Da es sich um eine spirituelle Einheit handelt, ist es sehr schwer sie mit einer
   <string name="SpiderEgg_Name">Spinnenei</string>
   <string name="SpiderEgg_Gender">geschlechtslos</string>
   <string name="SpiderEgg_Name_Objective">Spinnenei</string>
+  <string name="SpiderEgg_Desc">Dieses zerbrechliche Ei pulsiert sanft, im seinem Inneren kann man etwas mit vielen Beinen sehen</string>
   <!--STRINGS OF SpiderNest CLASS-->
   <string name="SpiderNest_Name">Spinnenkokon</string>
   <string name="SpiderNest_Gender">geschlechtslos</string>
   <string name="SpiderNest_Name_Objective">Spinnenkokon</string>
+  <string name="SpiderNest_Desc">Dieser Kokon besteht aus feinster Seide und enthält etwas lebendiges.</string>
   <!--STRINGS OF SpiderServant CLASS-->
   <string name="SpiderServant_Name">Spinnensoldat</string>
   <string name="SpiderServant_Gender">männlich</string>
   <string name="SpiderServant_Name_Objective">Spinnensoldat</string>
+  <string name="SpiderServant_Desc">Krieger sind die meist anzutreffenden Einheiten der Spinnenhöhle. Geboren, um ihr Territorium zu beschützen. Ihre gewaltigen Drüsen wurden entwickelt, um ihre Gegner zu vergiften.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
   <string name="SpiderExploding_Name">Arbeiterspinne</string>
   <string name="SpiderExploding_Gender">männlich</string>
   <string name="SpiderExploding_Name_Objective">Arbeiterspinne</string>
+  <string name="SpiderExploding_Desc">Harte Arbeiter während friedlichen Zeiten, diese Kreaturen zögern keine Sekunde, ihre Gegner aufzuspüren und sich im nächsten Gras zu verstecken, um sich in lebende Bomben zu verwandeln.</string>
   <!--STRINGS OF SpiderMind CLASS-->
   <string name="SpiderMind_Name">Psi-Spinne</string>
   <string name="SpiderMind_Gender">männlich</string>
   <string name="SpiderMind_Name_Objective">Psi-Spinne</string>
+  <string name="SpiderMind_Desc">Diese zerbrechlich wirkenden Spinnen weisen einzigartige mentale Kräfte auf, welche es ihnen erlauben die gesamte Kolonie zu kontrollieren. Psi-Spinnen sind in der Lage, jedes lebendige wesen zu kontrollieren, aber sie sind ziemliche Feiglinge.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
   <string name="SpiderQueen_Name">Spinnenkönigin</string>
   <string name="SpiderQueen_Gender">weiblich</string>
   <string name="SpiderQueen_Name_Objective">Spinnenkönigin</string>
+  <string name="SpiderQueen_Desc">Der Körper einer wunderschönen Frau gekreuzt mit einer scheußlichen Spinne. Jedes Lebewesen auf dieser Ebene ist ihr Sklave. Eine begegnung mit dieser besonderen Lady könnte sich als tödliche Erfahrung erweisen, denn du bist ein Eindringling!</string>
   <!--STRINGS OF WaterElemental CLASS-->
   <string name="WaterElemental_Name">Wassergeist</string>
   <string name="WaterElemental_Gender">männlich</string>

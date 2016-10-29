@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
@@ -78,6 +78,7 @@ Ich bin hier weil ich eine seltene Zutat suche a _Rotberry seed_. Da ich mich de
   <string name="WandMaker_Berry2">Hattest du Glück mit den Rottbeerensamen, %s? Nein? Kein Problem, ich habs nicht eilig.</string>
   <string name="WandMaker_Dust1">Oh was eine angehnme Überraschung eine so anständige Person an so einem Ort zu treffen.
 Ich bin hier weil ich eine seltene Zutat suche a_corpse dust_. Meistens bei Überresten von Skelletten auffindbar von denen es hier eine Menge gibt. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
+  <string name="WandMaker_Dust2">Wirst du fündig im Staub der Leichen, %s? Knochenhaufen sind der offensichtlichste Ort zum Nachschauen.</string>
   <string name="WandMaker_RotberryName">Rottbeere</string>
   <string name="WandMaker_RotberryDesc">Die Beeren dieses Strauchs schmecken wie süßer, süßer Tod.</string>
   <string name="WandMaker_RotberryInfo">Der Samen entfesselt ein Brüllen das durch den gesamten Dungeon hallt!</string>

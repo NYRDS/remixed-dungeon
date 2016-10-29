@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">Questa è un\'arma a distanza. È inutile per chiunque a parte gli elfi a portata molto vicina. Avere un arco equipaggiato ti permette di tirare freccie. \n\n</string>
@@ -20,15 +20,15 @@
   <string name="Quiver_Gender">maschile</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">faretra di fuoco</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">maschile</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">faretra di veleno</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">maschile</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">faretra paralizzante</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">maschile</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">freccia</string>

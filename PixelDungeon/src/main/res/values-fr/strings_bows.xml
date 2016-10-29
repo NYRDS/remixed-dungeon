@@ -1,13 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">C\'est une arme à distance. Elle est inutile pour tout le monde sauf les elfes à distance rapprochée. Etre équipé d\'un arc vous permet de tirer des flèches.
+</string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">arc en bois</string>
   <string name="WoodenBow_Info">Ce simple arc en bois pourrait s\'avérer utile dès que vous aurez trouvé quelques flèches .</string>
   <string name="WoodenBow_Gender">masculin</string>
   <!--STRINGS OF CompoundBow CLASS-->
   <string name="CompoundBow_Name">Arc à poulies</string>
-  <string name="CompoundBow_Info">Les flèches tirées avec un arc à poulies infligent une grande quantité de dommages et ont une précision améliorée en échange d\'un peu moins de vitesse.</string>
+  <string name="CompoundBow_Info">Les flèches tirées avec un arc à poulies infligent une grande quantité de dégâts et ont une précision améliorée en échange d\'un peu moins de vitesse.</string>
   <string name="CompoundBow_Gender">masculin</string>
   <!--STRINGS OF RubyBow CLASS-->
   <string name="RubyBow_Name">arc rubis</string>
@@ -19,15 +21,15 @@
   <string name="Quiver_Gender">masculin</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">carquois de feu</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">masculin</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">carquois de poison</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">masculin</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">carquois paralysant</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">masculin</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">flèche</string>
@@ -35,7 +37,7 @@
   <string name="CommonArrow_Gender">féminin</string>
   <!--STRINGS OF FireArrow CLASS-->
   <string name="FireArrow_Name">flèche de feu</string>
-  <string name="FireArrow_Info">Cette flèche parait juste courante, excepté la tiède lumière rouge qui émane de sa tête.</string>
+  <string name="FireArrow_Info">Cette flèche semble juste normale, excepté la tiède lumière rouge qui émane de sa tête.</string>
   <string name="FireArrow_Gender">féminin</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">flèche empoisonnée</string>

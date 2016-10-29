@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
@@ -91,5 +93,34 @@ public class ModdingMode {
 
 	public static boolean getClassicTextRenderingMode() {
 		return mTextRenderingMode;
+	}
+
+	public static boolean isHalloweenEvent(){
+
+		Calendar now = new GregorianCalendar();
+		Calendar halloween = new GregorianCalendar();
+		halloween.set(Calendar.MONTH,Calendar.OCTOBER);
+		halloween.set(Calendar.DAY_OF_MONTH,31);
+
+		long milisPerDay = (1000 * 60 * 60 * 24);
+
+		long nowMilis =  now.getTimeInMillis() /milisPerDay;
+		long hallMilis = halloween.getTimeInMillis() /milisPerDay;
+
+		long daysDiff;
+
+
+
+		if(nowMilis > hallMilis) {
+			daysDiff = (nowMilis - hallMilis);
+		} else {
+			daysDiff = (hallMilis - nowMilis );
+		}
+
+		if(daysDiff < 14) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

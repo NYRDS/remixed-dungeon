@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--Mobs-->
   <!--STRINGS OF AzuterronNPC CLASS-->
@@ -9,7 +9,9 @@
   <string name="AzuterronNPC_Quest_End">Excelente. Pegue esta poção, certamente você a achará útil.</string>
   <string name="Journal_Azuterron">Estranho</string>
   <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Espírito traçoeiro</string>
   <string name="TreacherousSpirit_Gender">masculino</string>
+  <string name="TreacherousSpirit_Name_Objective">Espírito traçoeiro</string>
   <string name="TreacherousSpirit_Desc">Esta criatura monstruosa parece uma nuvem de pura escuridão. Seus olhos arregalados lhe encaram, pulsando à cada movimento seu.</string>
   <!--STRINGS OF SpiritOfPain CLASS-->
   <string name="SpiritOfPain_Name">espírito da dor</string>
@@ -25,11 +27,14 @@
   <string name="PseudoRat_Gender">feminino</string>
   <string name="PseudoRat_Name_Objective">Pseudo rato</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Gnoll-zumbi ressuscitou dos mortos!</string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">Coração da escuridão</string>
+  <string name="HeartOfDarkness_Info">Coração negro pulsante do Espírito Traçoeiro</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Véu negro</string>
   <!--Badges-->
   <string name="Badges_Yog_Slain">Matador do Yog-Dzewa</string>
   <string name="Badges_ShadowLord_Slain">Matador do Lorde das Sombras</string>

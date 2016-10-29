@@ -17,7 +17,6 @@ public abstract class LevelObject implements Bundlable {
 	
 	public LevelObjectSprite sprite;
 
-
 	public LevelObject(int pos) {
 		this.pos = pos;
 	}
@@ -37,6 +36,7 @@ public abstract class LevelObject implements Bundlable {
 	public void burn() {}
 	public void freeze() {}
 	public void poison(){}
+	public void bump() {}
 
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
@@ -57,10 +57,34 @@ public abstract class LevelObject implements Bundlable {
 	}
 
 	public void setPos(int pos) {
+		if(sprite!=null) {
+			sprite.move(this.pos,pos);
+			Dungeon.level.levelObjectMoved(this);
+		}
+
 		this.pos = pos;
 	}
 
 	public abstract String desc();
 
 	public abstract String name();
+
+	public String texture(){
+		return "levelObjects/objects.png";
+	}
+
+	public boolean pushable() {
+		return false;
+	}
+
+	public boolean push(Hero hero){
+		return false;
+	}
+
+	public void fall() {
+		if(sprite != null) {
+			sprite.fall();
+			Dungeon.level.remove(this);
+		}
+	}
 }

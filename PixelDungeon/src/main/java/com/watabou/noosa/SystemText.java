@@ -27,16 +27,16 @@ public class SystemText extends Text {
 	private TextPaint textPaint;
 
 	static private Map<Float, TextPaint> contourPaints = new HashMap<>();
-	protected TextPaint contourPaint = new TextPaint();
+	private        TextPaint             contourPaint  = new TextPaint();
 
 	private ArrayList<SystemTextLine> lineImage = new ArrayList<>();
 
 	private static Set<SystemText> texts = new HashSet<>();
 
 	private static Typeface tf;
-	private static float  oversample;
+	private static float    oversample;
 
-	private              boolean needWidth  = false;
+	private boolean needWidth = false;
 
 	public SystemText(float baseLine) {
 		this("", baseLine, false);
@@ -45,8 +45,8 @@ public class SystemText extends Text {
 	public SystemText(String text, float baseLine, boolean multiline) {
 		super(0, 0, 0, 0);
 
-		if(tf == null) {
-			if(Game.smallResScreen()) {
+		if (tf == null) {
+			if (Game.smallResScreen()) {
 				tf = Typeface.create((String) null, Typeface.BOLD);
 				oversample = 1;
 			} else {
@@ -191,7 +191,7 @@ public class SystemText extends Text {
 				float lineWidth = 0;
 
 				if (nextLine > 0) {
-					lineWidth = xCharPos.get(xCharPos.size() - 1);
+					lineWidth = xCharPos.get(xCharPos.size() - 1) + 1;
 					width = Math.max(lineWidth, width);
 				}
 
@@ -200,7 +200,7 @@ public class SystemText extends Text {
 				if (lineWidth > 0) {
 
 					Bitmap bitmap = Bitmap.createBitmap(
-							(int) ((lineWidth + 1) * oversample),
+							(int) (lineWidth * oversample),
 							(int) (fontHeight * oversample),
 							Bitmap.Config.ARGB_4444);
 
@@ -313,7 +313,7 @@ public class SystemText extends Text {
 		}
 	}
 
-	protected float symbolWidth(String symbol) {
+	private float symbolWidth(String symbol) {
 		return textPaint.measureText(symbol) / oversample;
 	}
 
@@ -349,7 +349,7 @@ public class SystemText extends Text {
 		return height * scale.y;
 	}
 
-	public static void invalidate() {
+	static void invalidate() {
 		for (SystemText txt : texts) {
 			txt.dirty = true;
 			txt.destroyLines();

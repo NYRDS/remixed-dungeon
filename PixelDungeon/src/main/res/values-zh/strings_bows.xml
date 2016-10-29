@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
   <string name="Bow_Info1">这是一个远程武器。除了精灵没有任何人能在极近距离正常使用。装备一把弓让你能够发射箭矢
@@ -21,15 +21,15 @@
   <string name="Quiver_Gender">masculine</string>
   <!--STRINGS OF FireQuiver CLASS-->
   <string name="FireQuiver_Name">火箭</string>
-  <string name="FireQuiver_Info"></string>
+  <string name="FireQuiver_Info" />
   <string name="FireQuiver_Gender">masculine</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
   <string name="PoisonQuiver_Name">毒箭</string>
-  <string name="PoisonQuiver_Info"></string>
+  <string name="PoisonQuiver_Info" />
   <string name="Poisonuiver_Gender">masculine</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
   <string name="ParalysisQuiver_Name">麻痹箭</string>
-  <string name="ParalysisQuiver_Info"></string>
+  <string name="ParalysisQuiver_Info" />
   <string name="ParalysisQuiver_Gender">masculine</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">箭矢</string>

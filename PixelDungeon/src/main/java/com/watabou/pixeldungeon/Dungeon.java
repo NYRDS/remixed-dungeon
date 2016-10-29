@@ -24,6 +24,7 @@ import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
+import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
@@ -135,6 +136,8 @@ public class Dungeon {
 		WandMaker.Quest.reset();
 		Blacksmith.Quest.reset();
 		Imp.Quest.reset();
+		ScarecrowNPC.Quest.reset();
+		AzuterronNPC.Quest.reset();
 
 		Room.shuffleTypes();
 
@@ -325,6 +328,7 @@ public class Dungeon {
 		Blacksmith.Quest.storeInBundle(quests);
 		Imp.Quest.storeInBundle(quests);
 		AzuterronNPC.Quest.storeInBundle(quests);
+		ScarecrowNPC.Quest.storeInBundle(quests);
 		bundle.put(QUESTS, quests);
 
 		Room.storeRoomsInBundle(bundle);
@@ -431,12 +435,14 @@ public class Dungeon {
 				Blacksmith.Quest.restoreFromBundle(quests);
 				Imp.Quest.restoreFromBundle(quests);
 				AzuterronNPC.Quest.restoreFromBundle(quests);
+				ScarecrowNPC.Quest.restoreFromBundle(quests);
 			} else {
 				Ghost.Quest.reset();
 				WandMaker.Quest.reset();
 				Blacksmith.Quest.reset();
 				Imp.Quest.reset();
 				AzuterronNPC.Quest.reset();
+				ScarecrowNPC.Quest.reset();
 			}
 
 			Room.restoreRoomsFromBundle(bundle);

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
@@ -94,6 +94,7 @@
   <string name="MeleeWeapon_Info6b">A causa dell\'eccesso di forza il danno del tuo attacco con questa %s è aumentato.</string>
   <string name="MeleeWeapon_Info7a">tu tieni le %1$s a portata di mano%2$s.</string>
   <string name="MeleeWeapon_Info7b">,e dato che questo è maledetto,tu sei impedito dal andartene</string>
+  <string name="MeleeWeapon_Info7c">Puoi percepire un\'energia malevola aleggiare all interno del%s. </string>
   <!--STRINGS OF BattleAxe CLASS-->
   <string name="BattleAxe_Name">ascia da battaglia</string>
   <string name="BattleAxe_Info">un enorme elmo d\'acciaio di questa battaglia mette un notevole peso alle spalle ad ogni colpo</string>
@@ -104,32 +105,43 @@
   <string name="Dagger_Gender">mascolino</string>
   <!--STRINGS OF Glaive CLASS-->
   <string name="Glaive_Name">falcione</string>
+  <string name="Glaive_Info">Una lancia consiste in una lama all\'estremità di un bastone. </string>
   <string name="Glaive_Gender">Femmina</string>
   <!--STRINGS OF Knuckles CLASS-->
   <string name="Knuckles_Name">tirapugni </string>
+  <string name="Knuckles_Info">Un pezzo di ferro lavorato per calzare intorno alle nocche. </string>
   <string name="Knuckles_Gender">mascolino</string>
   <!--STRINGS OF Longsword CLASS-->
   <string name="Longsword_Name">spada lunga</string>
+  <string name="Longsword_Info">Questa </string>
   <string name="Longsword_Gender">mascolino</string>
   <!--STRINGS OF Mace CLASS-->
   <string name="Mace_Name">mazza</string>
+  <string name="Mace_Info">La testa di ferro di quest\'arma infligge danni sostanziali. </string>
   <string name="Mace_Gender">Femmina</string>
   <!--STRINGS OF Quarterstaff CLASS-->
   <string name="Quarterstaff_Name">Bastone</string>
+  <string name="Quarterstaff_Info">Una mazza di legno duro che termina con una sfera di ferro. </string>
   <string name="Quarterstaff_Gender">mascolino</string>
   <!--STRINGS OF ShortSword CLASS-->
   <string name="ShortSword_Name">spada corta</string>
+  <string name="ShortSword_Info">È sicuramente un po\' corta, solo qualche pollice in più  di pugnale. </string>
   <string name="ShortSword_ACReforge">riforgia</string>
   <string name="ShortSword_Select">seleziona l\'arma che vuoi aggiornare</string>
+  <string name="ShortSword_Reforged">hai riforgiato la spada corta per aggiornare la tua %s</string>
+  <string name="ShortSword_NotBoomerang">non puoi aggiornare un boomerang in questo modo </string>
   <string name="ShortSword_Gender">mascolino</string>
   <!--STRINGS OF Spear CLASS-->
   <string name="Spear_Name">lancia</string>
+  <string name="Spear_Info">Un\'asta di legno sottile che termina con una lama affilata. </string>
   <string name="Spear_Gender">neutro</string>
   <!--STRINGS OF Sword CLASS-->
   <string name="Sword_Name">spada</string>
+  <string name="Sword_Info">L\' affilatura di questa lama d\'acciaio brilla sicuramente. </string>
   <string name="Sword_Gender">mascolino</string>
   <!--STRINGS OF WarHammer CLASS-->
   <string name="WarHammer_Name">martello da guerra</string>
+  <string name="WarHammer_Info">Poche creature possono contrastare la furia di questo grosso ammasso di piombo e ferro, ma solo gli avventurieri più forti lo possono usare efficacemente. </string>
   <string name="WarHammer_Gender">mascolino</string>
   <!--PACKAGE /weapon/missiles-->
   <!--STRINGS OF MissileWeapon CLASS-->
@@ -137,44 +149,58 @@
   <string name="MissileWeapon_Yes">Sì, so quello che faccio</string>
   <string name="MissileWeapon_No">No, ho cambiato idea</string>
   <string name="MissileWeapon_Sure">Vuoi davvero equipaggiarla come arma da mischia?</string>
+  <string name="MissileWeapon_Info1">
+\n\nIl danno medio di quest\'arma equivale a %d punti per colpo. </string>
   <string name="MissileWeapon_Info2">A causa della tua forza inadeguata, la precisione e velocità del tuo attacco con questa %s i diminuita.</string>
   <string name="MissileWeapon_Info3">A causa dell\'eccesso di forza il danno del tuo attacco con questa %s è aumentato.</string>
   <string name="MissileWeapon_Info4">\n\nTieni il %s a portata di mano.</string>
   <!--STRINGS OF Boomerang CLASS-->
   <string name="Boomerang_Name">bumerang</string>
+  <string name="Boomerang_Info">Quando lanciato ai nemici questo sottile, curvo, missile di legno tornerà nelle mani del lanciatore. </string>
   <string name="Boomerang_Gender">mascolino</string>
   <!--STRINGS OF CurareDart CLASS-->
   <string name="CurareDart_Name">dardo curatore</string>
+  <string name="CurareDart_Info">Questi piccoli e malefici dardi non provocano tanto danno, ma possono paralizzare il bersaglio lasciandolo immobile e indifeso per qualche tempo. </string>
   <string name="CurareDart_Gender">mascolino</string>
   <!--STRINGS OF Dart CLASS-->
   <string name="Dart_Name">Dardo</string>
+  <string name="Dart_Info">Queste semplici punte di metallo sono calibrate per volare e colpire le loro vittime con un semplice movimento di polso. </string>
   <string name="Dart_Gender">mascolino</string>
   <!--STRINGS OF IncendiaryDart CLASS-->
   <string name="IncendiaryDart_Name">Dardo incendiario</string>
+  <string name="IncendiaryDart_Info">La punta di ognuno di questi dardi è progettata per bloccare il bersaglio mentre il composto instabile imbevuto nell\'estremità zampilla di fiamme brillanti.  </string>
   <string name="IncendiaryDart_Gender">mascolino</string>
   <!--STRINGS OF Javelin CLASS-->
   <string name="Javelin_Name">giavellotto</string>
+  <string name="Javelin_Info"> </string>
   <string name="Javelin_Gender">neutro</string>
   <!--STRINGS OF Shuriken CLASS-->
   <string name="Shuriken_Name">shuriken</string>
+  <string name="Shuriken_Info">Pezzi di metallo modellati a forma di stella con lame affilate come rasoi che infliggono danni significativi quando colpiscono il bersaglio. Possono venir lanciati ad un ritmo molto elevato.</string>
   <string name="Shuriken_Gender">mascolino</string>
   <!--STRINGS OF Tamahawk CLASS-->
   <string name="Tamahawk_Name">tomahawk</string>
+  <string name="Tamahawk_Info">Questa ascia da lancio non è così pesante, ma comunque richiede una forza significativa per essere usata in modo efficace.</string>
   <string name="Tamahawk_Gender">mascolino</string>
   <!--STRINGS OF Kusarigama CLASS-->
   <string name="Kusarigama_Name">kusarigama</string>
+  <string name="Kusarigama_Info">Quest\'arma consiste in una falce montata su una catena di metallo con un grosso peso di ferro nell\'estremità.</string>
   <string name="Kusarigama_Gender">Femmina</string>
   <string name="Kusarigama_Pull">Tira</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">Spada del caos</string>
+  <string name="ChaosSword_Info">La lama di questa spada è fatta di caos puro e vibra moderatamente a volte. Un grosso potere è celato dentro l\'arma, che può tagliare a metà praticamente ogni cosa. d\'altronde, ci vuole una grande abilità, per tener testa alla potente forza dell\'arma.</string>
   <string name="ChaosSword_Gender">mascolino</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">Arco del caos</string>
+  <string name="ChaosBow_Info">Un terribile arco colmo con il potere del Caos. Ogni freccia scoccata porterà un pezzo di energia del Caos al bersaglio. Ma se manchi il bersaglio...puoi vedere come  </string>
   <string name="ChaosBow_Gender">mascolino</string>
   <!--STRINGS OF ChaosStaff CLASS-->
   <string name="ChaosStaff_Name">Vega del caos</string>
+  <string name="ChaosStaff_Info">Una bacchetta imbevuta con il Potere del Caos! Cos\'altro un mago può desiderare... O avere paura? </string>
   <string name="ChaosStaff_Gender">mascolino</string>
   <!--STRINGS OF SacrificialSword CLASS-->
   <string name="SacrificialSword_Name">Spada del sacrificio</string>
+  <string name="SacrificialSword_Info">A prima vista questa vecchia spada di bronzo ricoperta di polvere sembra inutile. Ma una sorta di vecchio, arcaico potere, dorme al suo interno. Questi poteri possono rendere quasi tutte le creature in schiavi senza volontà. Serve solo trovare la maniera giusta per svegliarli... </string>
   <string name="SacrificialSword_Gender">mascolino</string>
 </resources>

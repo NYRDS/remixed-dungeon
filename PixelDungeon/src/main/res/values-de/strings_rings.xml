@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/rings-->
   <!--STRINGS OF Ring CLASS-->
@@ -84,5 +84,11 @@
   <string name="ChaosCrystal_SwordFused">Der Kristall absorbiert deine Waffe und hat die Gestalt eines Schwertes angenommen</string>
   <string name="ChaosCrystal_BowFused">Der Kristall absorbiert deine Waffe und hat die Gestalt eines Bogens angenommen</string>
   <string name="ChaosCrystal_StaffFused">Der Kristall absorbiert deinen Zauberstab und hat die Gestalt eines Zauberstabs angenommen</string>
+  <string name="CorpseDust_Buff">Blutrausch</string>
+  <string name="DriedRose_Buff">Verzaubert</string>
+  <string name="DriedRose_CursedBuff">Verzaubert</string>
+  <string name="RatSkull_Buff">Rattig</string>
+  <string name="RatKingCrown_Buff">Rattigkeit</string>
   <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">Krone des Rattenkönigs</string>
 </resources>

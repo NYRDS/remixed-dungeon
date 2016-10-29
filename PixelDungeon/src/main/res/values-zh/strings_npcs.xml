@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
@@ -63,6 +63,22 @@
   <string name="RatKing_Name">鼠王</string>
   <string name="RatKing_Desc">这只老鼠比普通的老鼠更大，并且头上戴着一个小小的皇冠。</string>
   <string name="RatKing_Info1">我可没在睡觉</string>
+  <string name="RatKing_Info2">什么？我可没时间管。我的王国可不会自己运作！</string>
+  <string name="RatKing_Info3">好大的胆子，弱小的凡人，胆敢触怒本王？！</string>
+  <string name="RatKing_Died">旧王已死，新皇当立！</string>
   <!--STRINGS OF Shopkeeper CLASS-->
+  <string name="Shopkeeper_Name">商店店主</string>
+  <string name="Shopkeeper_Desc">这种人更应该在城市里做买卖而不是在这。当然，他的价格解释了一切。</string>
+  <string name="Shopkeeper_Sell">选择出售一件物品</string>
   <!--STRINGS OF WandMaker CLASS-->
+  <string name="WandMaker_Name">老杖匠</string>
+  <string name="WandMaker_Desc">这位老当益壮的绅士一脸懵逼。他被一层魔法护盾保护着。</string>
+  <string name="WandMaker_Defense">全神贯注</string>
+  <string name="WandMaker_Berry1">哦，在这地方遇到一个正常人对我来说真是个惊喜！我来这的原因是为了寻找一枚腐梅种子。作为一个魔法使用者，我有能力击败这里的生物，但我所剩的时间不多了，这就很尴尬了啊。没准你可以帮我？我很乐意用我的一根最好的法杖来交换它。</string>
+  <string name="WandMaker_Berry2">还没找到腐梅种子，%s? 别担心，我可不急着吃。</string>
+  <string name="WandMaker_Dust1">哦，在这地方遇到一个正常人对我来说真是个惊喜！我来这的原因是为了寻找一种尸尘。它可能在遗骸下面但是这里有太多遗骸了。作为一个魔法使用者，我有能力击败这里的生物，但我所剩的时间不多了，这就很尴尬了啊。没准你可以帮我？我很乐意用我的一根最好的法杖来交换它。</string>
+  <string name="WandMaker_Dust2">你还没找到尸尘吗，%s？多翻翻遗骸。</string>
+  <string name="WandMaker_RotberryName">腐莓</string>
+  <string name="WandMaker_RotberryDesc">这种浆果携带者死亡的甜蜜。</string>
+  <string name="WandMaker_RotberryInfo">种子发出的悲鸣声回荡在地牢中！</string>
 </resources>

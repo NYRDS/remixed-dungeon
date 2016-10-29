@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
@@ -11,9 +11,9 @@
   <string name="Mob_StaFleeingStatus">Ce %s prend la fuite</string>
   <string name="Mob_StaPassiveStatus">Ce %s est passif</string>
   <!--STRINGS OF Acidic CLASS-->
-  <string name="Acidic_Name">scorpion d\'acide</string>
+  <string name="Acidic_Name">scorpion acide</string>
   <string name="Acidic_Gender">mâle</string>
-  <string name="Acidic_Name_Objective">scorpion d\'acide</string>
+  <string name="Acidic_Name_Objective">scorpion acide</string>
   <string name="Acidic_Desc">Ces énormes démons à la forme arachnide évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées depuis de longues distances.</string>
   <!--STRINGS OF Albino CLASS-->
   <string name="Albino_Name">rat albinos</string>
@@ -24,7 +24,7 @@
   <string name="Bandit_Name">bandit fou</string>
   <string name="Bandit_Gender">mâle</string>
   <string name="Bandit_Name_Objective">bandit fou</string>
-  <string name="Bandit_Desc">Les profondeurs du donjon ont toujours étés une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardés la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oubliés qui ils étaient et pourquoi ils volaient.</string>
+  <string name="Bandit_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
   <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">chauve-souris vampire</string>
   <string name="Bat_Gender">mâle</string>
@@ -34,9 +34,9 @@
   <!--STRINGS OF Brute CLASS-->
   <string name="Brute_Name">gnoll brutal</string>
   <string name="Brute_Name_Objective">gnoll brutal</string>
-  <string name="Brute_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils deviennent berzerk, infligeant encore plus de dommages à leurs ennemis.</string>
+  <string name="Brute_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils passent en mode berzerk, infligeant encore plus de dégâts à leurs ennemis.</string>
   <string name="Brute_Gender">mâle</string>
-  <string name="Brute_Enraged">%s a la rage !</string>
+  <string name="Brute_Enraged">%s devient enragé !</string>
   <string name="Brute_StaEnraged">enragé</string>
   <!--STRINGS OF Crab CLASS-->
   <string name="Crab_Name">crabe des égouts</string>
@@ -58,9 +58,9 @@
   <string name="Elemental_Name_Objective">élémentaire de feu</string>
   <string name="Elemental_Desc">Les élémentaires de feu sont les résidus des invocations de plus grandes entités. Leur nature est trop chaotique pour être contrôlée, même par les démonologues les plus puissants.</string>
   <!--STRINGS OF Eye CLASS-->
-  <string name="Eye_Name">oeil malsain</string>
+  <string name="Eye_Name">oeil démoniaque</string>
   <string name="Eye_Gender">neutre</string>
-  <string name="Eye_Name_Objective">oeil malsain</string>
+  <string name="Eye_Name_Objective">oeil démoniaque</string>
   <string name="Eye_Desc">L\'un des autres noms de ce démon est \"orbe de haine\", car lorsqu\'il aperçoit un ennemi, il utilise des gaz toxiques inconsciemment, en ignorant souvent ses alliés et leurs blessures.</string>
   <string name="Eye_Kill">les gaz toxique de l\'%s vous ont tué...</string>
   <!--STRINGS OF Gnoll CLASS-->
@@ -75,11 +75,11 @@
   <string name="Golem_Desc">Les nains ont essayé de combiner leurs connaissances en bricolage avec leur nouveaux pouvoirs engageant les pouvoirs des élémentaires. Ils utilisèrent les esprits de la terre comme \"âme\" pour les corps mécaniques des golems, qu\'ils pensaient être les plus dociles de tous. Malgré cela, la plus petite erreur dans le rituel pouvait déclencher un débordement.</string>
   <string name="Golem_Defense">bloqué</string>
   <!--STRINGS OF Goo CLASS-->
-  <string name="Goo_Name">Flan</string>
+  <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">femelle</string>
-  <string name="Goo_Name_Objective">Flan</string>
-  <string name="Goo_Desc">On ne sait pas grand chose du Flan. Il est même possible que ce ne soit pas une créature, mais plutôt un agglomérat de substances des égouts  qui auraient gagnés des rudiments de volonté propre.</string>
-  <string name="Goo_Info1">Le Flan se gonfle !</string>
+  <string name="Goo_Name_Objective">Goo</string>
+  <string name="Goo_Desc">On ne sait pas grand chose du Goo. Il est même possible que ce ne soit pas une créature, mais plutôt un agglomérat de substances des égouts qui auraient gagné des rudiments de volonté propre.</string>
+  <string name="Goo_Info1">Le Goo se gonfle !</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP !</string>
   <string name="Goo_StaInfo1">!!!</string>
@@ -106,7 +106,7 @@
   <string name="MimicPie_Name">mime</string>
   <string name="MimicPie_Gender">mâle</string>
   <string name="MimicPie_Name_Objective">mime</string>
-  <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs.;</string>
+  <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celui-ci ressemble à une grosse pâte;</string>
   <!--STRINGS OF Monk CLASS-->
   <string name="Monk_Name">moine nain</string>
   <string name="Monk_Gender">mâle</string>
@@ -143,7 +143,7 @@
   <string name="Shaman_Name">gnoll shaman</string>
   <string name="Shaman_Gender">mâle</string>
   <string name="Shaman_Name_Objective">gnoll shaman</string>
-  <string name="Shaman_Desc">les gnolls les plus intelligents peuvent maîtriser de la magie shamanique. Les gnoll shamans préfèrent les sorts de combat pour compenser leur manque de force, n\'hésitant pas à les utiliser sur ceux qui remettent leur statut en question dans la tribu.</string>
+  <string name="Shaman_Desc">Les gnolls les plus intelligents peuvent maîtriser de la magie shamanique. Les gnoll shamans préfèrent les sorts de combat pour compenser leur manque de force, n\'hésitant pas à les utiliser sur ceux qui remettent leur statut en question dans la tribu.</string>
   <string name="Shaman_Killed">L\'éclair du %s vous a tué...</string>
   <!--STRINGS OF Shielded CLASS-->
   <string name="Shielded_Name">brute au bouclier</string>
@@ -190,7 +190,7 @@
   <string name="Thief_Name">voleur fou</string>
   <string name="Thief_Gender">mâle</string>
   <string name="Thief_Name_Objective">voleur fou</string>
-  <string name="Thief_Desc">Les profondeurs du donjon ont toujours étés une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardés la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oubliés qui ils étaient et pourquoi ils volaient.</string>
+  <string name="Thief_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
   <string name="Thief_Stole">%1$s vous a volé votre %2$s !</string>
   <string name="Thief_Carries">
 Le %1$s transporte un %2$s. Volé visiblement.</string>
@@ -227,13 +227,52 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Larva_Desc">Larve du dieu ancien</string>
   <!--STRINGS OF SpiderEgg CLASS-->
   <string name="SpiderEgg_Name">Œuf d\'araignée</string>
+  <string name="SpiderEgg_Gender">neutre</string>
+  <string name="SpiderEgg_Name_Objective">oeuf d\'araignée</string>
+  <string name="SpiderEgg_Desc">Cet oeuf fragile palpite brièvement, à l\'intérieur vous pouvez voir de nombreuses pattes.</string>
   <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">cocon d\'araignée</string>
+  <string name="SpiderNest_Gender">neutre</string>
+  <string name="SpiderNest_Name_Objective">cocon d\'araignée</string>
+  <string name="SpiderNest_Desc">Ce cocon est fait de fine soie et dissimule quelque chose de vivant.</string>
   <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Name">araignée soldat</string>
+  <string name="SpiderServant_Gender">masculin</string>
+  <string name="SpiderServant_Name_Objective">araignée soldat</string>
+  <string name="SpiderServant_Desc">Il se trouve que les soldats sont les occupants les plus nombreux du repaire arachnéen. Nés pour protéger leur territoire. Les chélicères des soldats développent des glandes venimeuses pour empoisonner leurs ennemis.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">araignée ouvrière</string>
+  <string name="SpiderExploding_Gender">masculin</string>
+  <string name="SpiderExploding_Name_Objective">araignée ouvrière</string>
+  <string name="SpiderExploding_Desc">Travailleurs acharnés en temps prospères, ces créatures n\'hésitent pas à charger leurs ennemis et à saisir la première plante sur laquelle elles tombent, les transformant en bombes vivantes.</string>
   <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">Psi-Araignée</string>
+  <string name="SpiderMind_Gender">masculin</string>
+  <string name="SpiderMind_Name_Objective">Psi-Araignée</string>
+  <string name="SpiderMind_Desc">Ces araignées d\'apparence fragiles possèdent des pouvoirs mentaux uniques, qui leur permettent de contrôler toute la colonie. Les Psi-Araignées sont capables de contrôler n\'importe quelle créature vivante, mais sont plutôt froussards.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">reine des araignées</string>
+  <string name="SpiderQueen_Gender">féminin</string>
+  <string name="SpiderQueen_Name_Objective">reine des araignées</string>
+  <string name="SpiderQueen_Desc">Un corps de belle femme hybridée avec d\'hideuses araignées. Chaque araignée vivant dans ce repaire est sa servante. Rencontrer cette extraordinaire demoiselle s\'avère être une expérience mortelle. Parce que vous êtes un intrus!</string>
   <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">élémentaire d\'eau</string>
+  <string name="WaterElemental_Gender">masculin</string>
+  <string name="WaterElemental_Name_Objective">élémentaire d\'eau</string>
+  <string name="WaterElemental_Desc">Les élémentaires d\'eau peuvent être trouvées à proximité de grosses masses d\'eau. Générallement ces vagues magiques se promènent.</string>
   <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">élémentaire d\'air</string>
+  <string name="AirElemental_Gender">masculin</string>
+  <string name="AirElemental_Name_Objective">élémentaire d\'air</string>
+  <string name="AirElemental_Desc">Les élémentaires d\'air sont faits d\'air vivant.</string>
   <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">élémentaire de terre</string>
+  <string name="EarthElemental_Gender">masculin</string>
+  <string name="EarthElemental_Name_Objective">élémentaire de terre</string>
+  <string name="EarthElemental_Desc">Les élémentaires de terre sont des masses de terre dirigées par les forces de la nature.</string>
   <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">cristal flottant</string>
+  <string name="Crystal_Gender">masculin</string>
+  <string name="Crystal_Name_Objective">cristal flottant</string>
+  <string name="Crystal_Desc">Un gros cristal flottant dans l\'air. Probablement rempli d\'une magie puissante.</string>
 </resources>

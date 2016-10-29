@@ -104,6 +104,7 @@ public class HallsLevel extends RegularLevel {
 		}
 
 		placeEntranceSign();
+		placeBarrels(9);
 	}
 	
 	@Override

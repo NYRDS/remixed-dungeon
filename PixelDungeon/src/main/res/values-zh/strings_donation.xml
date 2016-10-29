@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">白银</string>
@@ -17,7 +17,7 @@
   <string name="WndDonate_rubyDonateText">您的慷慨将会帮助我们改善混合的像素地牢！</string>
   <string name="WndDonate_silverDonateText2">会使所有模式的广告失效并从一开始就解锁女猎手职业。</string>
   <string name="WndDonate_goldDonateText2">从一开始就解锁精灵职业。</string>
-  <string name="WndDonate_rubyDonateText2"></string>
+  <string name="WndDonate_rubyDonateText2" />
   <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">标准</string>
   <string name="WndPremiumSettings_silver">白银</string>

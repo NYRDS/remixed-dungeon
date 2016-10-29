@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/Wands-->
   <!--STRINGS OF Wand CLASS-->
@@ -10,6 +10,20 @@
   <string name="Wand_Fizzles">Dein Zauberstab funkelt nur, seine Ladungen sind wohl verbraucht.</string>
   <string name="Wand_SelfTarget">Du kannst dich nicht selber anvisieren</string>
   <string name="Wand_Prompt">Entscheide wohin du zappen möchtest</string>
+  <string-array name="Wand_Wood_Types">
+    <item>Stichpalme</item>
+    <item>Eibe</item>
+    <item>Ebenholz</item>
+    <item>Kirsche</item>
+    <item>Teak</item>
+    <item>Vogelbeere</item>
+    <item>Weide</item>
+    <item>Mahagoni</item>
+    <item>Bambus</item>
+    <item>Purpurherz</item>
+    <item>Eiche</item>
+    <item>Birke</item>
+  </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
   <string name="WandOfAmok_Name">Zauberstab des Amoklaufs</string>
   <string name="WandOfAmok_Info">Das blutrote Licht dieses Zauberstabs lässt das Ziel amoklaufen, sodass es alle Kreaturen in Reichweite angreift.</string>
@@ -26,16 +40,34 @@
   <string name="WandOfDisintegration_Info">Dieser Zauberstab erzeugt einen Strahl destruktiver Energie, welcher durch alle Kreaturen geht. Je mehr Ziele vom Strahl getroffen werden, umso größer der verursachte Schaden.</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
   <string name="WandOfFirebolt_Name">Zauberstab des Feuerballs</string>
+  <string name="WandOfFirebolt_Info">Der Zauberstab entfesselt Stöße magischen Feuers. Er setzt entflammbares Gelände in Brand, und verletzt und verbrennt getroffene Kreaturen.</string>
+  <string name="WandOfFirebolt_Info1">Du hast dich mit deinem eigenen Stab des Feuerblitzes getötet.</string>
   <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="WandOfFlock_Name">Zauberstab der Herde</string>
+  <string name="WandOfFlock_Info">Ein Schnipser dieses Zauberstabes beschwört eine Herde magischer Schafe, und erschafft somit ein temporäres undurchdringliches Hindernis.</string>
   <string name="Sheep_Name">Schaf</string>
+  <string name="Sheep_Name_Objective">Schaf</string>
+  <string name="Sheep_Gender">feminin</string>
+  <string name="Sheep_Desc">Das ist ein magisches Schaf. Was daran so magisch ist? Du kannst es töten. Es wird dort stehen, bis es auf magische Weise hinvort scheidet, stets wiederkäuend mit leerem Blick.</string>
   <!--STRINGS OF WandOfLightning CLASS-->
+  <string name="WandOfLightning_Name">Zauberstab des Blitzes</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_Name">Zauberstab des Magischen Geschosses</string>
+  <string name="WandOfMagicMissile_ACDisenchant">ENTZAUBERN</string>
   <string name="WandOfMagicMissile_SelectWand">Wähle einen Zauberstab den du verbessern möchtest</string>
   <!--STRINGS OF WandOfPoison CLASS-->
+  <string name="WandOfPoison_Name">Zauberstab des Giftes</string>
+  <string name="WandOfPoison_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
+  <string name="WandOfRegrowth_Name">Zauberstab der Begrünung</string>
   <string name="WandOfRegrowth_Info1">Es passierte nichts</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
+  <string name="WandOfSlowness_Name">Zauberstab der Verlangsamung</string>
+  <string name="WandOfSlowness_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <string name="WandOfTelekinesis_Name">Zauberstab der Telekinese</string>
+  <string name="WandOfTelekinesis_YouNowHave">Du hast auf magische Weise %s in deinen Rucksack befördert</string>
   <!--STRINGS OF WandOfTeleportation CLASS-->
+  <string name="WandOfTeleportation_Name">Zauberstab der Teleportation</string>
   <string name="WandOfTeleportation_Info2">Es passierte nichts</string>
 </resources>

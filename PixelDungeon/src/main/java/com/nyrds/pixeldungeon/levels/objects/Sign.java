@@ -35,11 +35,9 @@ public class Sign extends LevelObject {
 
 	@Override
 	public boolean interact(Hero hero) {
-		super.interact(hero);
-
 		GameScene.show(new WndMessage(signText));
 
-		return true;
+		return super.interact(hero);
 	}
 
 	@Override

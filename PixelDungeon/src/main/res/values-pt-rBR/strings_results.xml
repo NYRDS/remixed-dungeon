@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF ResultDescriptions CLASS-->
   <string name="ResultDescriptions_Mob">Morto por %1$s no nível %2$d</string>

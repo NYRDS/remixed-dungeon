@@ -157,7 +157,7 @@ public abstract class Level implements Bundlable {
 	public static int[] NEIGHBOURS8;
 	public static int[] NEIGHBOURS9;
 
-	protected static final float TIME_TO_RESPAWN = 50;
+	private static final float TIME_TO_RESPAWN = 50;
 
 	private static final String TXT_HIDDEN_PLATE_CLICKS = Game
 			.getVar(R.string.Level_HiddenPlate);
@@ -347,7 +347,6 @@ public abstract class Level implements Bundlable {
 				}
 			}
 		}
-
 
 		boolean pitNeeded = Dungeon.depth > 1 && weakFloorCreated;
 
@@ -850,6 +849,11 @@ public abstract class Level implements Bundlable {
 		return heap;
 	}
 
+	public void levelObjectMoved(LevelObject obj) {
+		remove(obj);
+		objects.put(obj.getPos(), obj);
+	}
+
 	public void addLevelObject(LevelObject obj) {
 		objects.put(obj.getPos(), obj);
 
@@ -913,7 +917,23 @@ public abstract class Level implements Bundlable {
 		charPress(cell, hero);
 	}
 
+	public boolean objectPress(int cell, LevelObject levelObject) {
+		if(map[cell] == Terrain.CHASM || pit[cell]) {
+			levelObject.fall();
+			return false;
+		}
+		itemPress(cell);
+		return true;
+	}
+
+
 	public void itemPress(int cell) {
+
+		LevelObject levelObject = objects.get(cell);
+		if(levelObject != null) {
+			levelObject.bump();
+		}
+
 		charPress(cell, null);
 	}
 
@@ -990,7 +1010,6 @@ public abstract class Level implements Bundlable {
 		if (plant != null) {
 			plant.activate(actor);
 		}
-
 	}
 
 	public void mobPress(Mob mob) {
@@ -1406,7 +1425,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public int blobAmoutAt(Class<? extends Blob> blobClass, int cell) {
+	public int blobAmountAt(Class<? extends Blob> blobClass, int cell) {
 		Blob blob = Dungeon.level.blobs.get(blobClass);
 		if (blob == null) {
 			return 0;

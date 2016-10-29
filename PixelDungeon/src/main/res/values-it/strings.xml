@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remixed Pixel Dungeon</string>
@@ -142,6 +142,8 @@
   <string name="WndHero_StaCatalogus">Cataloghi</string>
   <string name="WndHero_StaJournal">Diario</string>
   <!--STRINGS OF WndImp CLASS-->
+  <string name="WndImp_Message">Oh, si! Sei il mio eroe! 
+Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di meglio per te. Questo è il cimelio della mia famiglia: mio nonno raccolse questo anello dal dito di un paladino morto. </string>
   <string name="WndImp_Reward">Prendi l\'anello</string>
   <!--STRINGS OF WndInfoCell CLASS-->
   <string name="WndInfoCell_Nothing">Non c\'è niente qui.</string>
@@ -154,6 +156,8 @@
   <string name="WndInfoItem_WontKnow">Non si sa cosa c\'è dentro fino a quando lo si apre!</string>
   <string name="WndInfoItem_NeedKey">Ma per aprirlo è necessaria una chiave d\'oro.</string>
   <string name="WndInfoItem_Inside">Si può vedere %s dentro, ma per aprire la cassa è necessaria una chiave d\'oro.</string>
+  <string name="WndInfoItem_Owner">Questa antica tomba potrebbe contenere qualcosa di utile, ma il suo proprietario certamente avrà da ridire sulla cosa.</string>
+  <string name="WndInfoItem_Remains">Questo è tutto ciò che resta di un dei tuoi predecessori. Magari vale la pena cercare oggetti preziosi.</string>
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">Diario</string>
   <!--STRINGS OF WndRanking CLASS-->
@@ -183,6 +187,12 @@
   <string name="WndSadGhost_Armor">Armatura fantasma</string>
   <string name="WndSadGhost_Farewell">Addio, avventuriero!</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Sewers">Il Dungeon giace proprio sotto la Città, i suoi livelli più superficiali di fatto sono il sistema fognario della Città. Essendo nominalmente una parte della Città, questi livelli non sono  tanto pericolosi. Nessuno li chiamerebbe un posto sicuro, ma almeno non devi preoccuparti di affrontare molta magia maligna qui.</string>
+  <string name="WndStory_Prision">Tanti anni fa una prigione sotterranea fu costruita qui per i criminali più pericolosi. Al tempo sembrò un\'idea molto furba, poiché era un posto da cui era veramente difficile fuggire. Ma presto un miasma oscuro iniziò a traspirare da sotto, portando prigionieri e guardie alla pazzia. Alla fine la prigione fu abbandonata, anche se alcuni detenuti rimasero chiusi qui dentro.</string>
+  <string name="WndStory_Caves">Le cave, che si estendono al di sotto della prigione abbandonata, sono scarsamente popolate. Si trovano troppo in profondità per venire sfruttate dalla Città e sono troppo povere di minerali per interessare i nani. In passato c\'era un avamposto commerciale da queste parti sul percorso tra questi due stati, ma è decaduto dopo il declino della Metropoli Nanica. Solo gli onnipresenti gnoll e gli animali sotterranei dimorano qui ora.</string>
+  <string name="WndStory_Metropolis">La Metropoli Nanica una volta fu la più grande delle città-stato naniche. Al suo apice l\'esercito meccanizzato di nani aveva respinto con successo l\'invasione del vecchio dio e della sua armata di demoni. Ma si dice che i guerrieri ritornati avevano portato i semi della corruzione con loro, e che quella vittoria fu l\'inizio della fine del regno sotterraneo</string>
+  <string name="WndStory_Halls">In passato questi livelli furono le periferie della Metropoli. Dopo la costosa vittoria nella guerra col vecchi dio i nani rimasero troppo indeboliti per ripulirle dai demoni rimasti. Gradualmente i demoni hanno rafforzato la loro presa su questo posto ed ora sono chiamate Le Sale Demoniache.\n\nMolti pochi avventurieri sono mai riusciti a scendere così tanto...</string>
+  <string name="WndStory_Spiders">Tanto, tanto tempo fa c\'era una ricca miniera, piena di pietra magica. Ma dopo che le vene minerarie si esaurirono i minatori si spostarono, lasciando indietro una vasta rete di gallerie. Alla fine questo posto venne popolato da ragni. Ma anche queste pericolose creature, che si annidano nell\'oscurità, non furono sufficienti a scoraggiare coloro abbastanza coraggiosi o pazzi da desiderare i tesori che si potevano trovare nelle miniere. Poiché la scala di pericolo è sempre proporzionale al numero di chiacchiere su artefatti magici presenti. Tanto tempo fa una strega malvagia vagò nelle gallerie cercando di sfuggire ai suoi persecutori. Ma le persone superstiziose non osarono mettere piede nell\'oscurità. Quindi decisero di aspettare. Ma lei non uscì mai più.  Forse la strega ha trovato un\'altra uscita, o forse è riuscita a scappare infilandosi tra le guardie...oppure è morta, circondata dal fruscio delle creature dell\'oscurità.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">IN VENDITA: %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">Compra per %dg</string>
@@ -193,98 +203,245 @@
   <string name="WndTradeItem_Sold">Hai venduto la tua %1$s per %2$dg</string>
   <string name="WndTradeItem_Bought">Hai comprato %1$s per %2$dg</string>
   <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Message">Oh, vedo che hai avuto successo! Spero non ti abbia dato troppi problemi. Come promesso, puoi scegliere una delle mie bacchette di altissima qualità.</string>
   <string name="WndWandmaker_Battle">Bacchetta da battaglia</string>
   <string name="WndWandmaker_NonBattle">bacchetta d\'utilità </string>
   <string name="WndWandmaker_Farawell">Buona fortuna nella vostra missione, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
+  <string name="QuickSlot_SelectedItem">Scegli un oggetto per il lancio rapido</string>
   <!--STRINGS OF Item CLASS-->
   <string name="Item_Name">smth</string>
   <string name="Item_Info">smth</string>
   <string name="Item_ACDrop">GETTA</string>
   <string name="Item_ACThrow">LANCIA</string>
+  <string name="Item_PackFull">Il tuo zaino è troppo pieno per il/la/i %s</string>
   <string name="Item_DirThrow">Scegliere la direzione di tiro</string>
   <!--STRINGS OF EquipableItem CLASS-->
   <string name="EquipableItem_ACEquip">EQUIPAGGIA</string>
   <string name="EquipableItem_ACUnequip">DISEQUIPPAGIA</string>
+  <string name="EquipableItem_Unequip">Non puoi rimuovere %s maledetto/a!</string>
   <!--STRINGS OF Heap CLASS-->
   <string name="Heap_Mimic">Questo è un imitatore!</string>
   <!--STRINGS OF Amulet CLASS-->
   <string name="Amulet_Name">Amuleto di Yendor </string>
   <string name="Amulet_ACEnd">FINE DEL GIOCO</string>
+  <string name="Amulet_Info">L\' Amuleto di Yendor è il più potente artefatto conosciuto di origini ignote. Si dice che l\'amuleto sia in grado di esaudire qualunque desiderio se la forza di volontà del suo proprietario è forte abbastanza da \"persuaderlo\" a farlo.</string>
   <!--STRINGS OF Ankh CLASS-->
+  <string name="Ankh_Name">Ankh</string>
+  <string name="Ankh_Info">Questo antico simbolo di immortalità garantisce una capacità di tornare in vita dopo la morte. Al momento della resurrezione tutti gli oggetti non equipaggiati andranno persi.</string>
   <!--STRINGS OF ArmorKit CLASS-->
+  <string name="ArmorKit_Name">Kit per armature</string>
   <string name="ArmorKit_ACAplly">APPLICA</string>
+  <string name="ArmorKit_Info">Utilizzando questo kit di piccoli attrezzi e materiali chiunque può trasformare una qualunque armatura in un\' \"armatura epica\", che manterrà tutte le proprietà dell\'armatura originale, ma inoltre fornirà al suo indossatore un\'abilità speciale a seconda della classe. Non sono richieste abilità in sartoria, conciatura o metallurgia.</string>
   <string name="ArmorKit_SelectArmor">seleziona l\'armatura d\'aggiornare</string>
+  <string name="ArmorKit_Upgraded">Hai utilizzato il Kit per armature per migliorare la tua %s</string>
   <!--STRINGS OF Dewdrop CLASS-->
+  <string name="Dewdrop_Name">goccia di rugiada</string>
+  <string name="Dewdrop_Info">Una goccia di rugiada pura come il cristallo.</string>
   <!--STRINGS OF DewVial CLASS-->
+  <string name="DewVial_Name">fiala di rugiada</string>
   <string name="DewVial_ACDRINK">BEVI</string>
+  <string name="DewVial_Info">Puoi immagazzinare le gocce in eccesso in questo piccolo recipiente per berle più tardi. Se la fiala è piena, in un momento di pericolo mortale le gocce verranno bevute automaticamente.</string>
+  <string name="DewVial_AutoDrink">Hai consumato una fiala di rugiada per curare le tue ferite.</string>
+  <string name="DewVial_Collected">Hai raccolto una goccia di rugiada nella tua fiala.</string>
+  <string name="DewVial_Full">La tua fiala di rugiada é piena!</string>
+  <string name="DewVial_Empty">La tua fiala di rugiada é vuota!</string>
   <!--STRINGS OF Gold CLASS-->
   <string name="Gold_Name">oro</string>
+  <string name="Gold_Collect">Raccogli monete d\'oro da usare piú tardi in un negozio.</string>
+  <string name="Gold_Info">Un mucchio di %d monete d\'oro.</string>
+  <string name="Gold_Info1">Una moneta d\'oro.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
+  <string name="KindOfWeapon_EquipCursed">Sussulti mentre la tua presa si stringe involontariamente attorno al/alla tuo/tua %s</string>
   <!--STRINGS OF LloidsBeacon CLASS-->
+  <string name="LloidsBeacon_Name">Faro di lloyd</string>
+  <string name="LloidsBeacon_ACSet">IMPOSTA</string>
+  <string name="LloidsBeacon_ACReturn">RITORNA</string>
+  <string name="LloidsBeacon_Info">Il faro di Lloyd è un complicato congegno magico, che ti permette di tornare in un posto in cui sei già stato/stata</string>
+  <string name="LloidsBeacon_Preventing">Qualche tipo di potente aura magica presente qui ti impedisce di usare il faro di lloyd!</string>
+  <string name="LloidsBeacon_Creatures">L\'aura psichica delle creature vicine non ti permette di usare il faro di lloyd in questo momento</string>
+  <string name="LloidsBeacon_Return">Il faro di lloyd è stato impostato con successo nella tua posizione attuale, ora puoi tornare qui in qualunque momento.</string>
+  <string name="LloidsBeacon_Set">/n/nQuesto faro è stato impostato da un\'altra parte nel livello %d di Pixel Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_Name">Stilo arcano</string>
+  <string name="Stylus_ACInscribe">INCIDI</string>
+  <string name="Stylus_Info">Questo stilo arcano è fatto di una pietra scura e molto dura. Usandolo puoi inscrivere un glifo o una runa, ma non hai potere di scelta su quale sarà, sarà lo stilo a decidere per te.</string>
+  <string name="Stylus_SelectArmor">Seleziona un oggetto su cui incidere</string>
+  <string name="Stylus_Inscribed">Hai inscritto il %1$s sul tuo/sulla tua %2$s</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_Name">Tomo della Maestria</string>
   <string name="TomeOfMastery_ACRead">LEGGI</string>
+  <string name="TomeOfMastery_Info">Questo logoro libro di pelle non è tanto spesso, ma hai la sensazione di poter ottenere tantissimo da lui. Ricorda però che la lettura di questo tomo potrebbe richiedere diverso tempo</string>
+  <string name="TomeOfMastery_Blinded">Non puoi leggere, sei stato accecato</string>
+  <string name="TomeOfMastery_Choose">Hai scelto il sentiero del %s!</string>
   <!--STRINGS OF Torch CLASS-->
+  <string name="Torch_Name">torcia</string>
+  <string name="Torch_ACLight">LUCE</string>
+  <string name="Torch_Info">E\' un oggetto indispensabile nelle Sale Demoniache, che sono note per il loro ambiente a scarsa illuminazione.</string>
   <!--STRINGS OF Weightstone CLASS-->
+  <string name="Weightstone_Name">Pietra Bilanciante</string>
+  <string name="Weightstone_ACApply">APPLICA</string>
+  <string name="Weightstone_Info">Usando una pietra bilanciante, puoi bilanciare la tua arma da mischia per aumentarne la velocità o la precisione.</string>
+  <string name="Weightstone_Select">Scegli un\'arma da bilanciare</string>
+  <string name="Weightstone_Fast">Hai bilanciato il/la tuo/tua %s per renderlo/a più veloce.</string>
+  <string name="Weightstone_Accurate">Hai bilanciato il/la tuo/tua %s per renderlo/a più preciso/a</string>
+  <string name="Weightstone_WndChoice">Come vorresti bilanciare il/la tuo/tua %s?</string>
+  <string name="Weightstone_WndSpeed">Per la velocità</string>
+  <string name="Weightstone_WndAccuracy">Per la precisione</string>
+  <string name="Weightstone_WndCancel">Lascia stare</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
+  <string name="Bag_ACOpen">APRI</string>
   <!--STRINGS OF Keyring CLASS-->
+  <string name="Keyring_Name">portachiavi</string>
+  <string name="Keyring_Info">Questo è un portachiavi in rame, che ti permette di tenere tutte le tue chiavi separatamente dal resto dei tuoi averi.</string>
   <!--STRINGS OF ScrollHolder CLASS-->
+  <string name="ScrollHolder_Name">Porta pergamene</string>
+  <string name="ScrollHolder_Info">Puoi mettere un numero qualsiasi di pergamene in questo contenitore tubulare. Risparmia spazio nel tuo zaino e protegge le pergamene dal fuoco.</string>
   <!--STRINGS OF SeedPouch CLASS-->
+  <string name="SeedPouch_Name">sacca dei semi</string>
+  <string name="SeedPouch_Info">Questo piccolo contenitore in velluto ti permette di conservare un numero qualsiasi di semi al suo interno. Molto comodo.</string>
   <!--STRINGS OF WandHolster CLASS-->
+  <string name="WandHolster_Name">Custodia per bacchette</string>
+  <string name="WandHolster_Info">Questa sottile custodia è fatta di pelle di qualche animale esotico. Ti permette di trasportare compattamente fino a %d bacchette.</string>
   <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Info">Questa resistente cinturone di pelle è capace di conservare tutte le tue pozioni proteggendole dall\'infrangersi a causa del gelo.</string>
+  <string name="PotionBelt_Name">cintura delle pozioni</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
+  <string name="GoldenKey_Name">chiave d\'oro</string>
+  <string name="GoldenKey_Info">Le tacche su questa chiave dorata sono piccole ed intricate. Forse può aprire la serratura di qualche scrigno?</string>
   <!--STRINGS OF IronKey CLASS-->
+  <string name="IronKey_Name">chiave di ferro</string>
+  <string name="IronKey_Info">Le tacche in questa antica chiave di ferro sono logore; il suo cordoncino di pelle è martoriato dalla vecchiaia. Che porta potrebbe aprire?</string>
+  <string name="IronKey_FromDepth">Chiave di ferro dalla profondità %d</string>
   <!--STRINGS OF SkeletonKey CLASS-->
+  <string name="SkeletonKey_Name">Chiave scheletro</string>
+  <string name="SkeletonKey_Info">Questa chiave sembra molto notevole: la sua testa è plasmata a forma di teschio. Probabilmente può aprire qualche porta notevole.</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
+  <string name="CorpseDust_Name">polvere di cadavere</string>
+  <string name="CorpseDust_Info">La palla di polvere cadaverica non differisce esternamente da una normale palla di polvere. Comunque, in qualche modo sai che è meglio liberarsene il prima possibile.</string>
+  <string name="CorpseDust_Info2">Forse poiché il solo tenerla ti fa sentire ansioso e furente.</string>
   <!--STRINGS OF DarkGold CLASS-->
+  <string name="DarkGold_Name">minerale aurifero oscuro</string>
+  <string name="DarkGold_Info">Questo metallo è chiamato oscuro non per il suo colore (non differisce dal normale oro), ma poichè si scioglie alla luce del sole, rendendolo inutile in superficie.</string>
   <!--STRINGS OF DriedRose CLASS-->
+  <string name="DriedRose_Name">rosa essiccata</string>
+  <string name="DriedRose_Info">Questa rosa si è seccata tanto tempo fa, ma ha conservato in qualche modo tutti i suoi petali.</string>
+  <string name="DriedRose_Info2">E non ha perso il suo fascino. Sembra così bella, la vorresti tenere per sempre.</string>
   <!--STRINGS OF DwarfToken CLASS-->
+  <string name="DwarfToken_Name">Gettone nanico</string>
+  <string name="DwarfToken_Info">Molti nani ed alcune delle loro creazioni più grandi portano questi piccoli pezzi di metallo dallo scopo sconosciuto. Magari sono della gioielleria o forse qualche tipo di Identificativo. I nani sono gente strana.</string>
   <!--STRINGS OF Pickaxe CLASS-->
+  <string name="Pickaxe_Name">piccone</string>
+  <string name="Pickaxe_Info">Questo è un grosso e resistente attrezzo per spaccare pietre. Probabilmente può venir usato come arma.</string>
+  <string name="Pickaxe_ACMine">ESTRAI</string>
+  <string name="Pickaxe_Gender">femminile</string>
+  <string name="Pickaxe_NoVein">Non c\'è alcuna vena aurifera oscura vicino a te da estratte</string>
   <!--STRINGS OF RatSkull CLASS-->
+  <string name="RatSkull_Name">Teschio di ratto gigante</string>
+  <string name="RatSkull_Info">Potrebbe essere un bel trofeo di caccia, ma puzza troppo per appenderlo ad un muro.</string>
+  <string name="RatSkull_Info2">D\'altra parte dimostra che il possessore è in grado di uccidere i ratti, anche quelli grossi e puzzolenti.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="ConfusionGas_Info">Una nube di gas confondente sta vorticando qua.</string>
   <!--STRINGS OF Fire CLASS-->
+  <string name="Fire_Info">Un incendio sta infuriando qua.</string>
   <!--STRINGS OF Foliage CLASS-->
+  <string name="Foliage_Info">Spiragli di luce perforano l\'oscurità del giardino sotterraneo.</string>
   <!--STRINGS OF ParalyticGas CLASS-->
+  <string name="ParalyticGas_Info">Una nube di gas paralizzante sta vorticando qua.</string>
   <!--STRINGS OF ToxicGas CLASS-->
+  <string name="ToxicGas_Info">Una nube verdastra di gas tossico sta vorticando qua.</string>
+  <string name="ToxicGas_Info1">Sei morto a causa delle esalazioni di gas tossico... </string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
+  <string name="WaterOfAwareness_Info">La forza della conoscenza si irradia dall\'acqua di questo pozzo. Prendine un sorso per rilevare tutti i segreti degli oggetti equipaggiati. </string>
+  <string name="WaterOfAwareness_Procced">Appena ne bevi un sorso, senti la conoscenza riversarsi nella tua mente. Ora sai tutto sui tuoi oggetti equipaggiati. Inoltre, percepisci tutti gli oggetti di questo livello e ne sai tutti i segreti.</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
+  <string name="WaterOfHealth_Info">Il potere della salute viene irradiato dall\'acqua di questo pozzo. Prendine un sorso per curare le tue ferite e saziare la tua fame.</string>
+  <string name="WaterOfHealth_Procced">Appena ne prendi un sorso, senti che le tue ferite guariscono completamente. </string>
   <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <string name="WaterOfTransmutation_Info">Il potere del mutamento viene irradiato dall\'acqua di questo pozzo. Getta un oggetto nel pozzo per trasformarlo in qualcos\'altro.</string>
   <!--STRINGS OF Web CLASS-->
+  <string name="Web_Info">Ogni cosa è coperta da una fitta ragnatela qui.</string>
   <!--PACKAGE /actors/buffs-->
   <!--STRINGS OF Amok CLASS-->
+  <string name="Amok_Info">Furia omicida</string>
   <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">Pelle coriacea</string>
   <!--STRINGS OF Bleeding CLASS-->
+  <string name="Bleeding_Info">Sanguinamento</string>
+  <string name="Bleeding_Death">Hai sanguinato a morte...</string>
   <!--STRINGS OF Blindness CLASS-->
+  <string name="Blindness_Info">Accecato </string>
   <!--STRINGS OF Burning CLASS-->
+  <string name="Burning_Info">In fiamme</string>
+  <string name="Burning_Burns">%s prende fuoco! </string>
+  <string name="Burning_Death">Sei arso a morte...</string>
   <!--STRINGS OF Charm CLASS-->
+  <string name="Charm_Info">Affascinato</string>
   <!--STRINGS OF Combo CLASS-->
+  <string name="Combo_Info">Combinazione</string>
+  <string name="Combo_Combo">Combinazione di %d colpi!</string>
   <!--STRINGS OF Cripple CLASS-->
+  <string name="Cripple_Info">Azzoppato</string>
   <!--STRINGS OF Frost CLASS-->
+  <string name="Frost_Info">Ghiacciato</string>
+  <string name="Frost_Shatter">Il freddo manda in frantumi %s!</string>
   <!--STRINGS OF Fury CLASS-->
+  <string name="Fury_Info">Furia</string>
   <!--STRINGS OF GasesImmunity CLASS-->
+  <string name="GasesImmunity_Info">Immune ai gas</string>
   <!--STRINGS OF Hunger CLASS-->
+  <string-array name="Hunger_Hungry">
+    <item>Sei affamato.</item>
+    <item>Sei affamato.</item>
+    <item>Sei affamato.</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>Stai morendo di fame!</item>
+    <item>Stai morendo di fame!</item>
+    <item>Stai morendo di fame!</item>
+  </string-array>
+  <string name="Hunger_Death">Sei morto di fame...</string>
+  <string name="Hunger_Info1">Affamato</string>
+  <string name="Hunger_Info2">Morendo di fame</string>
   <!--STRINGS OF Invisibility CLASS-->
+  <string name="Invisibility_Info">Invisibile</string>
   <!--STRINGS OF Levitation CLASS-->
+  <string name="Levitation_Info">Levitante</string>
   <!--STRINGS OF Light CLASS-->
+  <string name="Light_Info">Illuminato</string>
   <!--STRINGS OF MindVision CLASS-->
+  <string name="MindVision_Info">Visione mentale</string>
   <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Info">Melma caustica</string>
+  <string name="Ooze_Death">%s ti ha ucciso...</string>
   <!--STRINGS OF Paralysis CLASS-->
+  <string name="Paralysis_Info">Paralizzato</string>
   <!--STRINGS OF Poison CLASS-->
+  <string name="Poison_Info">Avvelenato</string>
+  <string name="Poison_Death">Sei morto avvelenato...</string>
   <!--STRINGS OF Roots CLASS-->
+  <string name="Roots_Info">Bloccato</string>
   <!--STRINGS OF Shadows CLASS-->
+  <string name="Shadows_Info">Fuso con l\'ombra</string>
   <!--STRINGS OF Slow CLASS-->
+  <string name="Slow_Info">Rallentato</string>
   <!--STRINGS OF SnipersMark CLASS-->
+  <string name="SnipersMark_Info">Marchio del Cecchino</string>
   <!--STRINGS OF Vertigo CLASS-->
+  <string name="Vertigo_Info">Vertigini</string>
   <!--STRINGS OF Weakness CLASS-->
+  <string name="Weakness_Info">Indebolito</string>
   <!--PACKAGE /actors/hero-->
   <!--STRINGS OF Belongings CLASS-->
+  <string name="Belongings_Name">zaino</string>
   <!--PACKAGE /sprites-->
   <!--STRINGS OF ItemSprite CLASS-->
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
+  <string name="Toolbar_Info1">Non sai cosa ci sia.</string>
+  <string name="Toolbar_Info2">Scegli una casella da esaminare</string>
 </resources>

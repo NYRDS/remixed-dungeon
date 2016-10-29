@@ -1,11 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
-  <string name="Scroll_Name">\"%s\" 卷轴</string>
-  <string name="Scroll_Info">这张羊皮纸上写满了难以破译的文字，并带有 %s 的符文标题。谁能知道高声吟唱它会发生什么？</string>
+  <string name="Scroll_Name">\"%s\"卷轴</string>
+  <string name="Scroll_Info">这张羊皮纸上写满了难以破译的文字，并带有%s的符文标题。谁能知道高声吟唱它会发生什么？</string>
   <string name="Scroll_ACRead">阅读</string>
-  <string name="Scroll_Blinded">你在目盲时不能阅读</string>
+  <string name="Scroll_Blinded">你在失明时不能阅读</string>
   <string-array name="Scroll_Runes">
     <item>KAUNAN</item>
     <item>SOWILO</item>
@@ -50,24 +50,50 @@
   <string name="ScrollOfLullaby_Info3">这张卷轴发出了一种舒缓的旋律使怪物陷入了沉睡！</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
   <string name="ScrollOfMagicMapping_Name">魔法地图卷轴</string>
+  <string name="ScrollOfMagicMapping_Info">读了这张卷轴后，你清楚知道了这层的地形、陷阱、隐藏门。但你不知道这层有什么怪物和物品。</string>
+  <string name="ScrollOfMagicMapping_Layout">你现在知道这层的结构了。</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
   <string name="ScrollOfMirrorImage_Name">镜像卷轴</string>
+  <string name="ScrollOfMirrorImage_Info">创造几个自身的镜像，攻击它们遇见的敌人。</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
   <string name="ScrollOfPsionicBlast_Name">灵能爆破卷轴</string>
+  <string name="ScrollOfPsionicBlast_Info">致盲所以视野中的生物并对敌对生物造成伤害。</string>
   <!--STRINGS OF ScrollOfRecharging CLASS-->
   <string name="ScrollOfRecharging_Name">充能卷轴</string>
+  <string name="ScrollOfRecharging_Info"> 阅读后将你的法杖充满能量。</string>
+  <string name="ScrollOfRecharging_Info1a">一股能量喷涌而出，你的法杖能量满了</string>
+  <string name="ScrollOfRecharging_Info1b">一股能量喷涌而出，你的法杖们能量满了</string>
+  <string name="ScrollOfRecharging_Info2">一股能量喷涌而出，但什么也没发生</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
   <string name="ScrollOfRemoveCurse_Name">除咒卷轴</string>
+  <string name="ScrollOfRemoveCurse_Info">驱除你的背包中的所有诅咒。</string>
+  <string name="ScrollOfRemoveCurse_Proced">你的背包中发出洁净的能量，而邪恶的力量消失了。</string>
+  <string name="ScrollOfRemoveCurse_NoProced">你的背包中发出洁净的能量，但什么也没发生。</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
   <string name="ScrollOfTeleportation_Name">传送卷轴</string>
+  <string name="ScrollOfTeleportation_Info">将你传送到该层的随机一个位置，福祸未知的位置。</string>
+  <string name="ScrollOfTeleportation_Teleport">眼前一闪，传送完成。</string>
+  <string name="ScrollOfTeleportation_NoTeleport">强大的能量阻止了你的传送！</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
   <string name="ScrollOfTerror_Name">恐惧卷轴</string>
+  <string name="ScrollOfTerror_Info">发出红光，恐惧敌人。攻击它们会使恐惧失效。</string>
+  <string name="ScrollOfTerror_Info1">这卷轴造成了一道红色的光芒</string>
+  <string name="ScrollOfTerror_Info2">这卷轴造成了一道红色的光芒，%s逃跑了！</string>
+  <string name="ScrollOfTerror_Info3">这卷轴造成了一道红色的光芒，怪物们逃跑了！</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">升级卷轴</string>
+  <string name="ScrollOfUpgrade_Info">强化一件物品。将使法杖效果更强并增加最大充能数；武器伤害更高并提高命中；护甲会提供更高的防御效果；戒指效果会更好。同时也会降低武器和防具的重量以及驱除物品上的诅咒。</string>
+  <string name="ScrollOfUpgrade_InvTitle">选择升级一件装备</string>
+  <string name="ScrollOfUpgrade_LooksBetter">你的%s看起来更强大了</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
   <string name="ScrollOfWeaponUpgrade_Name">武器强化卷轴</string>
+  <string name="ScrollOfWeaponUpgrade_Info">只能强化武器的升级卷轴，但能为其附魔或保留其原来的附魔。</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">选择强化一件武器</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">你的%s看起来更强大了</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
   <string name="ScrollOfDomination_Name">支配卷轴</string>
+  <string name="ScrollOfDomination_Info">随机支配一个视野中的敌人。它会为你战斗至死。</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
   <string name="ScrollOfCurse_Name">诅咒卷轴</string>
+  <string name="ScrollOfCurse_Info">这张卷轴是专门为了惩罚那些尝试使用他们无法理解的魔法的愚蠢小偷而制作的。卷轴中的魔力对于通常冒险者完全无用甚至有害，但对于商人们却十分有价值。</string>
 </resources>

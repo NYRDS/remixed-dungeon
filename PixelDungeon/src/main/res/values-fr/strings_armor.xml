@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
@@ -6,13 +6,13 @@
   <string name="Armor_Identify">Vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">L\'interaction entre les différents types de magie a effacé le glyphe de cette armure !</string>
-  <string name="Armor_Info1">Cette %1$s permet une absorption de dommages jusqu\'à \"%2$d\" points par attaque.</string>
+  <string name="Armor_Info1">Cette %1$s procure jusqu\'à \"%2$d\" points d\'absorption de dégâts par attaque.</string>
   <string name="Armor_Info2">
 Votre force est inadéquate, vous êtes ralenti et votre défense est diminuée.</string>
   <string name="Armor_Info3">
 Votre force est inadéquate, porter cette armure vous ralentira et diminuera votre défense.</string>
   <string name="Armor_Info4">
-Une %1$s typique permet une absorption des dommages jusqu\'à %2$d points par attaque et requiert %3$d points de force.</string>
+Une %1$s typique procure jusqu\'à %2$d points d\'absorption de dégâts par attaque et requiert %3$d points de force.</string>
   <string name="Armor_Info5">Cette armure est probablement trop lourde pour vous.</string>
   <string name="Armor_Info6">Elle a un glyphe.</string>
   <string name="Armor_Info7a">
@@ -29,13 +29,13 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
   <string name="ClothArmor_Name">armure de vêtements</string>
   <string name="ClothArmor_Desc">Cette armure légère offre une protection basique.</string>
   <!--STRINGS OF ElfArmor CLASS-->
-  <string name="ElfArmor_Name">Elven manteau</string>
-  <string name="ElfArmor_Desc">Avec l\'aide de ce manteau elfe peut invoquer les forces de la nature elle-même. Haute herbe va pousser en un clin même à travers la pierre solide immobiliser tous les ennemis dans un spectacle.</string>
-  <string name="ElfArmor_ACSpecial">NATURE APPEL</string>
-  <string name="ElfArmor_NotElf">Seulement elfes peuvent utiliser cette armure!</string>
+  <string name="ElfArmor_Name">Manteau d\'elfe</string>
+  <string name="ElfArmor_Desc">Avec l\'aide de ce manteau, l\'elfe peut invoquer les forces de la nature lui-même. L\'herbe haute va pousser en un clin d\'oeil même à travers la pierre solide, immobilisant tous les ennemis en vue.</string>
+  <string name="ElfArmor_ACSpecial">APPEL DE LA NATURE</string>
+  <string name="ElfArmor_NotElf">Seuls les elfes peuvent utiliser cette armure!</string>
   <!--STRINGS OF HuntressArmor CLASS-->
   <string name="HuntressArmor_Name">cape de la chasseresse</string>
-  <string name="HuntressArmor_Desc">Une chasseresse équipée de cette cape peut créer de multiples lames spectrales. Chacune de ces lames ciblera un seul ennemi dans le champ de vision de la chasseresse, infligeant des dommages en fonction de son arme de mélée actuellement équipée.</string>
+  <string name="HuntressArmor_Desc">Une chasseresse équipée d\'une telle cape peut créer de multiples lames spectrales. Chacune de ces lames ciblera un seul ennemi dans le champ de vision de la chasseresse, infligeant des dommages dépendant de son arme de mêlée actuellement équipée.</string>
   <string name="HuntressArmor_ACSpecial">LAMES SPECTRALES</string>
   <string name="HuntressArmor_NoEnemies">Aucun ennemi en vue </string>
   <string name="HuntressArmor_NotHuntress">Seules les chasseresses peuvent porter cette armure !</string>
@@ -48,11 +48,11 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
   <string name="MageArmor_ACSpecial">LAVE EN FUSION</string>
   <string name="MageArmor_NotMage">Seuls les mages peuvent porter cette armure !</string>
   <!--STRINGS OF MailArmor CLASS-->
-  <string name="MailArmor_Name">armure de maille</string>
+  <string name="MailArmor_Name">armure de mailles</string>
   <string name="MailArmor_Desc">Des liens de métal joints ensemble forment une armure dure mais flexible.</string>
   <!--STRINGS OF PlateArmor CLASS-->
   <string name="PlateArmor_Name">armure de plates</string>
-  <string name="PlateArmor_Desc">D\'énormes plaques de métal forment une tenue qui offre une protection sans égale pour tout aventurier assez fort pour supporter son poids colossal.</string>
+  <string name="PlateArmor_Desc">D\'énormes plaques de métal forment une tenue qui offre une protection sans égal pour tout aventurier assez fort pour supporter son poids colossal.</string>
   <!--STRINGS OF RogueArmor CLASS-->
   <string name="RogueArmor_Name">costume de gredin</string>
   <string name="RogueArmor_Desc">En étant vêtu de ce sombre attirail, un gredin peut effectuer un mouvement appelé \"La bombe de fumée\" ( même si aucun explosif n\'est utilisé): il aveugle les ennemis qui peuvent le voir et saute sur le côté.</string>
@@ -62,7 +62,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
   <string name="RogueArmor_Prompt">Choisissez l\'endroit où vous voulez sauter</string>
   <!--STRINGS OF ScaleArmor CLASS-->
   <string name="ScaleArmor_Name">armure d\'écailles</string>
-  <string name="ScaleArmor_Desc">Les écailles métalliques métalliques cousues sur une veste en cuir créent une armure flexible, mais protectrice. </string>
+  <string name="ScaleArmor_Desc">Les écailles métalliques cousues sur une veste en cuir créent une armure flexible, mais protectrice. </string>
   <!--STRINGS OF WarriorArmor CLASS-->
   <string name="WarriorArmor_Name">armure du guerrier</string>
   <string name="WarriorArmor_Desc">Même si elle semble lourde, cette armure permet à un guerrier de faire un bond héroïque vers un endroit ciblé, écrasant et sonnant tous les ennemis alentour.</string>
@@ -92,6 +92,6 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
   <string name="Viscosity_Txt">%s visqueuse</string>
   <string name="Viscosity_Status">%d différée</string>
   <!--STRINGS OF DeferedDamage CLASS-->
-  <string name="DeferedDamage_Defered_Txt">Dommages différés (%d)</string>
+  <string name="DeferedDamage_Defered_Txt">Dégâts différés (%d)</string>
   <string name="DeferedDamage_Killed_Txt">%s vous a tué...</string>
 </resources>
