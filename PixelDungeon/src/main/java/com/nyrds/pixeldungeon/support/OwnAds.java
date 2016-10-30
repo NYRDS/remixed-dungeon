@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -30,6 +31,7 @@ class OwnAds {
 			public void run() {
 				LinearLayout layout = Game.instance().getLayout();
 				if (layout.getChildCount() == 1) {
+					EventCollector.logEvent("OwnAds", "banner");
 					WebView adView = new WebView(Game.instance());
 
 					int adViewHeight = Math.max(50, layout.getHeight() / 10);
@@ -50,6 +52,7 @@ class OwnAds {
 
 			                              @Override
 			                              public void run() {
+				                              EventCollector.logEvent("OwnAds", "is");
 				                              final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
 
 				                              WebView adView = new WebView(Game.instance());
