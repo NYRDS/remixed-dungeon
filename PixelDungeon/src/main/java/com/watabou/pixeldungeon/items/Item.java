@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -51,7 +52,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Item implements Bundlable {
+public class Item implements Bundlable, Presser {
 
 	private static final   String TXT_PACK_FULL = Game.getVar(R.string.Item_PackFull);
 	protected static final String TXT_DIR_THROW = Game.getVar(R.string.Item_DirThrow);
@@ -581,5 +582,10 @@ public class Item implements Bundlable {
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		quantity(itemDesc.optInt("quantity",1));
+	}
+
+	@Override
+	public boolean affectLevelObjects() {
+		return true;
 	}
 }

@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
@@ -10,7 +11,7 @@ import com.watabou.utils.Bundle;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public abstract class LevelObject implements Bundlable {
+public abstract class LevelObject implements Bundlable, Presser {
 
 	private static final String POS = "pos";
 	private              int    pos = -1;
@@ -77,7 +78,7 @@ public abstract class LevelObject implements Bundlable {
 		return false;
 	}
 
-	public boolean push(Hero hero){
+	public boolean push(Char hero){
 		return false;
 	}
 
@@ -86,5 +87,10 @@ public abstract class LevelObject implements Bundlable {
 			sprite.fall();
 			Dungeon.level.remove(this);
 		}
+	}
+
+	@Override
+	public boolean affectLevelObjects() {
+		return false;
 	}
 }

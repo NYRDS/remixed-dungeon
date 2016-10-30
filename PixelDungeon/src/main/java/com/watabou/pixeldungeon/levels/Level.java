@@ -23,6 +23,7 @@ import android.support.annotation.Nullable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
@@ -843,7 +844,7 @@ public abstract class Level implements Bundlable {
 		heap.drop(item);
 
 		if (Dungeon.level != null) {
-			itemPress(cell);
+			itemPress(cell, item);
 		}
 
 		return heap;
@@ -922,18 +923,20 @@ public abstract class Level implements Bundlable {
 			levelObject.fall();
 			return false;
 		}
-		itemPress(cell);
+		itemPress(cell, levelObject);
 		return true;
 	}
 
 
-	public void itemPress(int cell) {
+	public void itemPress(int cell, Presser presser) {
 
-		LevelObject levelObject = objects.get(cell);
-		if(levelObject != null) {
-			levelObject.bump();
+		if(presser.affectLevelObjects()) {
+			LevelObject levelObject = objects.get(cell);
+			if (levelObject != null) {
+
+				levelObject.bump();
+			}
 		}
-
 		charPress(cell, null);
 	}
 
