@@ -1,33 +1,29 @@
 package com.nyrds.pixeldungeon.items.artifacts;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.rings.UsableArtifact;
+import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.utils.Bundle;
 
-import java.util.ArrayList;
+public class CandleOfMindVision extends Artifact implements IActingItem {
 
-import static com.watabou.pixeldungeon.items.potions.PotionOfMindVision.reportMindVisionEffect;
+	private static final String CHARGES   = "charges";
+	private static final String ACTIVATED = "activated";
 
-public class CandleOfMindVision extends UsableArtifact {
+	private static final int MAX_CHARGES = 50;
 
-	private static final String AC_DIM = "Dim";
-	private static final String AC_LIT = "Lit";
+	private float   charges;
+	private boolean activated;
 
-	int charges;
 
 	public CandleOfMindVision() {
 		imageFile = "items/candle.png";
-		image = 0;
-	}
-
-
-	@Override
-	public ArrayList<String> actions(Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_LIT );
-		actions.add( AC_DIM );
-		return actions;
+		charges   = MAX_CHARGES;
+		activated = false;
 	}
 
 	@Override
@@ -36,23 +32,69 @@ public class CandleOfMindVision extends UsableArtifact {
 	}
 
 	@Override
-	public void execute(final Hero ch, String action ) {
-		setCurUser(ch);
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
 
-		if (action.equals( AC_LIT )) {
-			if(charges>0) {
-				Buff.affect(ch, MindVision.class, charges);
-				charges = 0;
-				reportMindVisionEffect();
+		bundle.put(CHARGES, charges);
+		bundle.put(ACTIVATED, activated);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+
+		charges   = bundle.getFloat(CHARGES);
+		activated = bundle.getBoolean(ACTIVATED);
+	}
+
+	@Override
+	public boolean doEquip(Hero hero) {
+		if (!activated) {
+			activated = true;
+			Buff.affect(hero, MindVision.class, charges);
+			MindVision.reportMindVisionEffect();
+		}
+		return super.doEquip(hero);
+	}
+
+	@Override
+	public int image() {
+		if (!activated) {
+			return 0;
+		} else {
+			if (charges > MAX_CHARGES / 4 * 3) {
+				return 1;
 			}
-			return;
+			if (charges > MAX_CHARGES / 4) {
+				return 2;
+			}
+			if (charges > 0) {
+				return 3;
+			}
+			return 4;
 		}
+	}
 
-		if (action.equals( AC_DIM )) {
-			Buff.detach(ch, MindVision.class);
-			return;
+	@Override
+	public String desc() {
+		if(!activated) {
+			return Game.getVar(R.string.CandleOfMindVision_Info);
+		} else {
+			if(charges>0) {
+				return Game.getVar(R.string.CandleOfMindVision_Info_Lighted);
+			} else {
+				return Game.getVar(R.string.CandleOfMindVision_Info_Exhausted);
+			}
 		}
-		super.execute( ch, action );
+	}
+
+	@Override
+	public void spend(Char hero, float time) {
+		if (activated) {
+			if (time > 0) {
+				charges -= time;
+			}
+		}
 	}
 
 }

@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
@@ -254,6 +255,7 @@ public class Hero extends Char {
 		pets = alivePets;
 	}
 
+	@NonNull
 	public Collection<Mob> getPets() {
 		return pets;
 	}
@@ -480,6 +482,13 @@ public class Hero extends Char {
 		for (Buff buff : buffs(RingOfHaste.Haste.class)) {
 			hasteLevel += ((RingOfHaste.Haste) buff).level;
 		}
+
+		for (Item item : belongings) {
+			if (item instanceof IActingItem && item.isEquipped(this)) {
+				((IActingItem) item).spend(this,time);
+			}
+		}
+
 		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1, -hasteLevel)));
 	}
 
@@ -1192,8 +1201,7 @@ public class Hero extends Char {
 				LevelObject obj = Dungeon.level.objects.get(target);
 				if (obj != null && obj.pushable()) {
 					interrupt();
-					if (obj.push(this)) {
-					} else {
+					if (!obj.push(this)) {
 						return false;
 					}
 				}
@@ -1457,7 +1465,7 @@ public class Hero extends Char {
 			}
 		} else {
 			Dungeon.deleteGame(false);
-			while (belongings.removeItem(ankh)) ;
+			while (belongings.removeItem(ankh)) {}
 			GameScene.show(new WndResurrect(ankh, cause));
 		}
 	}

@@ -18,12 +18,10 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfMindVision extends Potion {
 
@@ -33,16 +31,7 @@ public class PotionOfMindVision extends Potion {
 		setKnown();
 		Buff.affect( hero, MindVision.class, MindVision.DURATION );
 
-		reportMindVisionEffect();
-	}
-
-	static public void reportMindVisionEffect() {
-		Dungeon.observe();
-		if (Dungeon.level.mobs.size() > 0) {
-			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply1));
-		} else {
-			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply2));
-		}
+		MindVision.reportMindVisionEffect();
 	}
 
 	@Override

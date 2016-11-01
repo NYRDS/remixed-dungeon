@@ -21,13 +21,23 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class MindVision extends FlavourBuff {
 
 	public static final float DURATION = 20f;
 	
 	public int distance = 2;
-	
+
+	static public void reportMindVisionEffect() {
+		Dungeon.observe();
+		if (Dungeon.level.mobs.size() > 0) {
+			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply1));
+		} else {
+			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply2));
+		}
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.MIND_VISION;
