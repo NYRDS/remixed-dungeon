@@ -3,24 +3,38 @@
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
     <string name="Bowknot_Name">Knoten</string>
-    <string name="Bowknot_Info">Eine glitzernde rosa Schleife, die an eine Haarnadel geheftet ist.</string>
+    <string name="Bowknot_Info">Eine glitzernde, rosa Schleife, die an eine Haarnadel geheftet ist.</string>
 	
 	<!-- STRINGS OF Shades CLASS -->
     <string name="Shades_Name">Schatten</string>
-    <!-- STRINGS OF Capotain CLASS -->
+    <string name="Shades_Info">Manche Leute sagen, dass Dungeons zu dunkel sind, um so etwas zu tragen. Und weißt du was? Diese Leute sind einfach nicht cool genug.</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
     <string name="Capotain_Name">Capotain</string>
-    <!-- STRINGS OF Fez CLASS -->
+    <string name="Capotain_Info">Ein hochgekrönter, schmalkrempiger Hut. Er wird normalerweise mit Puritanern in Verbindung gebracht, aber du musst nicht religiös sein, um ihn tragen zu können. Aus irgendeinem Grund hat er eine Plakette mit dem Namen \"Solomon\".</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
     <!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">Neko Ohren</string>
-    <!-- STRINGS OF RabbitEars CLASS -->
+    <string name="NekoEars_Info">Manchmal möchtest du all das Monsterblut und den Schmutz abwaschen und dich einfach niedlich und fluffig fühlen... oder du kannst niedliche Katzenohren tragen. Das wäre das Mindeste.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Hasenohren</string>
-    <!-- STRINGS OF Pumpkin CLASS -->
+    <string name="RabbitEars_Info">Es ist ein allgemein gültiger Glaube, dass Hasen glückliche Wesen sind und ihr Glück auf diejenigen übergeht, die einen Teil ihres Körpers bei sich tragen. Bei genauerer Betrachtung ist das Töten für eine Dekoration aus deinen Ohren nicht sehr glückbringend.</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Kürbis</string>
-    <!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Pumpkin_Info">In früheren Jahren waren die Kürbisleute eine stolze und wohlhabende Nation. Aber nachdem die Menschen auftauchten, endete alles in Ruinen. Abgetrennte, geschnitzte Köpfe von lang verstorbenen Kürbisstämmen, gelten als Denkmal für diese schrecklichen Ereignisse.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">Schlafmütze</string>
-    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="Nightcap_Info">Dungeons in der Nacht zu erkunden muss eine sehr ermüdende Tätigkeit sein. Warum nicht einen warmen, kuscheligen Hut aufsetzen und entspannen, sodass all deine Sorgen verschwinden?</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Zauberhut</string>
+    <string name="WizardHat_Info">Ein schöner, seidener Hut, geschmückt mir Sternenornamenten. In früheren Zeiten glaubte man, dass die größten Zauberer speziell verzauberte Kleidung trugen, die ihre Macht vergrößerte. Aber der Hut steigert natürlich nicht deine magischen Fähigkeiten, es fühlt sich aber sicher so an.</string>
+
     <string name="WndHats_SlotTitle">ausgerüstet</string>
     <string name="WndHats_NoConnectionMsg">Keine Verbindung zu Google Play möglich.</string>
     <string name="WndHats_Purchased">Ich hab es!</string>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">Das ist eine Distanzwaffe. Es ist nutzlos für alle, aber Elfen aus nächster Nähe. Mit einem Bogen ausgestattet können Sie Pfeile zu feuern.
+  <string name="Bow_Info1">Dies ist eine Distanzwaffe. Sie ist nutzlos für alle außer Elfen mit Nahdistanz. Mit einem Bogen ausgestattet kannst du Pfeile abfeuern.
 </string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">Holzbogen</string>
@@ -9,7 +9,7 @@
   <string name="WoodenBow_Gender">männlich</string>
   <!--STRINGS OF CompoundBow CLASS-->
   <string name="CompoundBow_Name">Compoundbogen</string>
-  <string name="CompoundBow_Info">Pfeile die mit einem Verbundbogen abgeschossen werden verursachen mehr Schaden und sind treffsicherer, auf kosten von Geschwindigkeit.</string>
+  <string name="CompoundBow_Info">Pfeile, die mit einem Verbundbogen abgeschossen werden, verursachen mehr Schaden und sind auf Kosten der Geschwindigkeit treffsicherer.</string>
   <string name="CompoundBow_Gender">männlich</string>
   <!--STRINGS OF RubyBow CLASS-->
   <string name="RubyBow_Name">Rubinbogen</string>
@@ -37,7 +37,7 @@
   <string name="CommonArrow_Gender">weiblich</string>
   <!--STRINGS OF FireArrow CLASS-->
   <string name="FireArrow_Name">Feuerpfeil</string>
-  <string name="FireArrow_Info">Dieser Pfeil sieht bis auf das warme, rote Licht, das seine Spitze ausstrahlt normal aus.</string>
+  <string name="FireArrow_Info">Dieser Pfeil sieht, bis auf das warme, rote Licht, das seine Spitze ausstrahlt, normal aus.</string>
   <string name="FireArrow_Gender">weiblich</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">Giftpfeil</string>
@@ -45,10 +45,10 @@
   <string name="PoisonArrow_Gender">weiblich</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
   <string name="ParalysisArrow_Name">Lähmpfeil</string>
-  <string name="ParalysisArrow_Info">Dieser Pfeil verströmt einen schwachen aber vertraut heilsamen Geruch aus.</string>
+  <string name="ParalysisArrow_Info">Dieser Pfeil ist ist mit Curare beschichtet.</string>
   <string name="ParalysisArrow_Gender">weiblich</string>
   <!--STRINGS OF FrostArrow CLASS-->
   <string name="FrostArrow_Name">Frostpfeil</string>
-  <string name="FrostArrow_Info">Du fühlst eine eiskalte Aura welche von der Pfeilspitze ausgeht.</string>
+  <string name="FrostArrow_Info">Du fühlst eine eiskalte Aura, welche von der Pfeilspitze ausgeht.</string>
   <string name="FrostArrow_Gender">weiblich</string>
 </resources>

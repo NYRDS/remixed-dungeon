@@ -14,27 +14,27 @@
   <string name="Acidic_Name">Giftiger Skorpion</string>
   <string name="Acidic_Gender">männlich</string>
   <string name="Acidic_Name_Objective">Giftiger Skorpion</string>
-  <string name="Acidic_Desc">Dieses riesige spinnenartige dämonische Wesen vermeidet Nahkampf mit allen Mitteln. Sie schießt gezackte Dornen mit lähmender Wirkung aus großer Entfernung ab.</string>
+  <string name="Acidic_Desc">Dieses riesige, spinnenartige, dämonische Wesen vermeidet Nahkampf mit allen Mitteln. Es schießt gezackte Dornen mit lähmender Wirkung aus großer Entfernung ab.</string>
   <!--STRINGS OF Albino CLASS-->
   <string name="Albino_Name">Albino Rattenjäger</string>
   <string name="Albino_Gender">männlich</string>
   <string name="Albino_Name_Objective">Albino Rattenkrieger</string>
-  <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte, scheint ein Albino zu sein. Sie hat ausserdem aussergewöhnlich  scharfe Zähne.</string>
+  <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte scheint ein Albino zu sein. Sie hat ausserdem aussergewöhnlich scharfe Zähne.</string>
   <!--STRINGS OF Bandit CLASS-->
   <string name="Bandit_Name">Verrückter Bandit</string>
   <string name="Bandit_Gender">männlich</string>
   <string name="Bandit_Name_Objective">Verrückter Bandit</string>
-  <string name="Bandit_Desc">Tiefere Ebenen des Verließes waren schon immer ein Versteck für alle möglichen Kriminellen. Nicht alle von ihnen konnten einen klaren Verstand bewahren wärend ihrer langen Zeit so weit weg vom Tageslicht. Diese Diebe und Banditen haben schon vor langer Zeit vergessen, wer sie waren und warum sie stehlen. Es scheint, als ob dieser Bandit, seinen Dolch mit etwas überzogen hat!  </string>
+  <string name="Bandit_Desc">Tiefere Ebenen des Verlieses waren schon immer ein Versteck für alle möglichen Kriminellen. Nicht alle von ihnen konnten einen klaren Verstand bewahren während ihrer langen Zeit, so weit weg vom Tageslicht. Diese Diebe und Banditen haben schon vor langer Zeit vergessen, wer sie waren und warum sie stehlen. Es scheint, als ob dieser Bandit, seinen Dolch mit etwas überzogen hat!  </string>
   <!--STRINGS OF Bat CLASS-->
-  <string name="Bat_Name">Fledermaus Blutsauger</string>
+  <string name="Bat_Name">Vampirfledermaus</string>
   <string name="Bat_Gender">männlich</string>
-  <string name="Bat_Name_Objective">Fledermaus Blutsauger</string>
-  <string name="Bat_Desc">Diese flinken und zähen Fledermäuse können sogar deutlich größere Gegner besiegen, in dem sie mit jedem erfolgreichen Angriff ihre Gesundheit wieder herstellen.</string>
+  <string name="Bat_Name_Objective">Vampirfledermaus</string>
+  <string name="Bat_Desc">Diese flinken und zähen Fledermäuse können sogar deutlich größere Gegner besiegen, in dem sie mit jedem erfolgreichen Angriff ihre eigene Gesundheit wieder herstellen.</string>
   <string name="Bat_Defense">ausgewichen</string>
   <!--STRINGS OF Brute CLASS-->
   <string name="Brute_Name">Gnollschläger</string>
   <string name="Brute_Name_Objective">Gnollschläger</string>
-  <string name="Brute_Desc">Schläger sind die größten, stärksten und zähesten unter den Gnollen. Wenn sie ernsthaft verletzt sind fallen sie in einen Berserkerzustand und fügen ihren Feinden sogar noch mehr Schaden zu.</string>
+  <string name="Brute_Desc">Schläger sind die größten, stärksten und zähesten unter den Gnollen. Wenn sie ernsthaft verletzt sind, fallen sie in einen Berserkerzustand und fügen ihren Feinden sogar noch mehr Schaden zu.</string>
   <string name="Brute_Gender">männlich</string>
   <string name="Brute_Enraged">Der %s bekommt einen Wutanfall!</string>
   <string name="Brute_StaEnraged">tobend</string>
@@ -56,7 +56,7 @@
   <string name="Elemental_Name">Feuerwandler</string>
   <string name="Elemental_Gender">männlich</string>
   <string name="Elemental_Name_Objective">Feuerwandler</string>
-  <string name="Elemental_Desc">Umherziehende Feuerwandler sind ein Nebenprodukt von mächtigeren Beschwörungen. Ihre chaotische Natur macht es selbst für die mächtigsten Dämonologen zu schwierig, sie zu kontrollieren. </string>
+  <string name="Elemental_Desc">Umherziehende Feuerwandler sind ein Nebenprodukt von mächtigeren Beschwörungen. Ihre chaotische Natur macht es selbst den mächtigsten Dämonologen nahezu unmöglich, sie zu kontrollieren. </string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">Dunkler Starrer</string>
   <string name="Eye_Gender">geschlechtslos</string>
@@ -67,7 +67,7 @@
   <string name="Gnoll_Name">Gnollspäher</string>
   <string name="Gnoll_Gender">männlich</string>
   <string name="Gnoll_Name_Objective">Gnollspäher</string>
-  <string name="Gnoll_Desc">Gnolle sind menschliche Wesen, die Hyänen ähneln. Sie leben in Abwässerkanälen und Höhlen, von wo sie von Zeit zu Zeit zu Raubzügen an die Oberfläche ziehen. Gnoll Späher sind anerkannte Mitglieder ihres Rudels, aber nicht so stark wie Schläger und nicht so intelligent wie Schamanen.</string>
+  <string name="Gnoll_Desc">Gnolle sind menschliche Wesen, die Hyänen ähneln. Sie leben in Abwässerkanälen und Höhlen, von wo sie von Zeit zu Zeit zu Raubzügen an die Oberfläche ziehen. Gnollspäher sind anerkannte Mitglieder ihres Rudels, aber nicht so stark wie Schläger und nicht so intelligent wie Schamanen.</string>
   <!--STRINGS OF Golem CLASS-->
   <string name="Golem_Name">Golem</string>
   <string name="Golem_Gender">männlich</string>
@@ -78,7 +78,7 @@
   <string name="Goo_Name">Glibber</string>
   <string name="Goo_Gender">weiblich</string>
   <string name="Goo_Name_Objective">Glibber</string>
-  <string name="Goo_Desc">Wenig ist über den Glibber bekannt. Es könnte möglich sein, dass sie nicht einmal eine Kreatur, sondern ein Konglomerat aus Substanzen der Abwasserkanäle die einen freien Willen gewannen. Es ist offensichtlich, dass dunkle Magie hier am Werk ist.</string>
+  <string name="Goo_Desc">Wenig ist über den Glibber bekannt. Es könnte möglich sein, dass er nicht einmal eine Kreatur, sondern ein Konglomerat aus Substanzen der Abwasserkanäle ist, die einen freien Willen gewannen. Es ist offensichtlich, dass hier dunkle Magie am Werk ist.</string>
   <string name="Goo_Info1">Glibber lädt sich auf!</string>
   <string name="Goo_Info2">glurp...glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -88,7 +88,7 @@
   <string name="King_Gender">männlich</string>
   <string name="King_Name_Objective">Zwergenkönig</string>
   <string name="King_Desc">Der letzte Zwergenkönig war bekannt für sein weit reichendes Verständnis der Prozesse des Lebens und des Todes.Er überzeugte Mitglieder seines Gerichts an einem Ritual teilzunehmen, welches ihnen ewige Jugend bewilligen sollte. Am Ende war er der Einzige, der sie bekam - und eine Armee der Untoten als Bonus.</string>
-  <string name="King_Defense">parriert</string>
+  <string name="King_Defense">pariert</string>
   <string name="King_Info1">Ihr könnt mich nicht töten, %s... ich bin... unsterblich...</string>
   <string name="King_Info2">Erhebt euch, Sklaven!</string>
   <string name="King_Info3">Wie könnt Ihr es wagen!</string>
@@ -103,7 +103,7 @@
   <string name="Mimic_Name_Objective">Imitator </string>
   <string name="Mimic_Desc">Imitatoren sind magische Kreaturen, die jede beliebige Form annehmen können. In Verließen wählen sie fast immer die Form einer Schatztruhe,  weil sie wissen das man damit Abenteurer zu sich locken kann.</string>
   <!--STRINGS OF MimicPie CLASS-->
-  <string name="MimicPie_Name">Nachmacher</string>
+  <string name="MimicPie_Name">Imitator</string>
   <string name="MimicPie_Gender">männlich</string>
   <string name="MimicPie_Name_Objective">Imitator</string>
   <string name="MimicPie_Desc">Imitatoren sind magische Wesen, die jede beliebige Form annehmen können. Dieser hier sieht wie eine große leckere Pastete aus.</string>
@@ -112,7 +112,7 @@
   <string name="Monk_Gender">männlich</string>
   <string name="Monk_Name_Objective">Zwergenmönch</string>
   <string name="Monk_Desc">Diese Mönche sind Fanatiker, die sich dem Schutz der Geheimnisse ihrer Stadt vor allen Fremden verschrieben haben. Sie benutzen keine Rüstung oder Waffen und verlassen sich ausschließlich auf die Kunst des unbewaffneten Kampfes.</string>
-  <string name="Monk_Defense">parriert</string>
+  <string name="Monk_Defense">pariert</string>
   <string name="Monk_Disarm">Der %1$s hat deinen %2$s aus deinen Händen geschmettert!</string>
   <!--STRINGS OF Piranha CLASS-->
   <string name="Piranha_Name">Riesiger Piranha</string>
@@ -120,29 +120,29 @@
   <string name="Piranha_Name_Objective">Riesiger Piranha</string>
   <string name="Piranha_Desc">Diese fleischfressenden Fische sind keine natürlichen Bewohner der Untergrundbecken. Sie wurden extra dafür gezüchtet, überschwemmte Schatzkisten zu bewachen.</string>
   <!--STRINGS OF Rat CLASS-->
-  <string name="Rat_Name">Rattenspäher</string>
+  <string name="Rat_Name">Beutelratte</string>
   <string name="Rat_Gender">Weiblich</string>
-  <string name="Rat_Name_Objective">Rattenspäher</string>
+  <string name="Rat_Name_Objective">Beutelratte</string>
   <string name="Rat_Desc">Beutelratten sind aggressive, aber eher schwache Bewohner der Abwasserkanäle. Sie werden nur in großer Zahl gefährlich.</string>
   <!--STRINGS OF Scorpio CLASS-->
   <string name="Scorpio_Name">Skorpion</string>
   <string name="Scorpio_Gender">männlich</string>
   <string name="Scorpio_Name_Objective">Skorpion</string>
-  <string name="Scorpio_Desc">Diese riesigen spinnenartigen dämonischen Wesen vermeiden Nahkampf mit allen Mitteln. Sie verschießen aus großer Entfernung gezackte Dornen, die ihre Opfer lähmen.</string>
+  <string name="Scorpio_Desc">Diese riesigen, spinnenartigen dämonischen Wesen vermeiden Nahkampf mit allen Mitteln. Sie verschießen aus großer Entfernung gezackte Dornen, die ihre Opfer lähmen.</string>
   <!--STRINGS OF Senior CLASS-->
   <string name="Senior_Name">Älterer Mönch</string>
   <string name="Senior_Gender">männlich</string>
   <string name="Senior_Name_Objective">Älterer Mönch</string>
-  <string name="Senior_Desc">Diese Mönche sind Fanatiker, die sich dem Schutz der Geheimnisse ihrer Stadt vor allen Fremden verschrieben haben. Sie benutzen keine Rüstung oder Waffen und verlassen sich ausschließlich auf die Kunst des unbewaffneten Kampfes.Dieser Mönch hat die Kunst seinen Gegner auszuschalten gemeistert.</string>
+  <string name="Senior_Desc">Diese Mönche sind Fanatiker, die sich dem Schutz der Geheimnisse ihrer Stadt vor allen Fremden verschrieben haben. Sie benutzen keine Rüstung oder Waffen und verlassen sich ausschließlich auf die Kunst des unbewaffneten Kampfes.Dieser Mönch hat die Kunst, seinen Gegner auszuschalten, gemeistert.</string>
   <!--STRINGS OF Shadow CLASS-->
   <string name="Shadow_Name">Schatten</string>
   <string name="Shadow_Gender">weiblich</string>
   <string name="Shadow_Name_Objective">Schatten</string>
   <string name="Shadow_Desc">Schatten wandern leise durch die Ruinen des alten Gefängnisses, zeigen sich nur vereinzelt einem Abenteurer, meist in ihrem letztem Abenteuer.</string>
   <!--STRINGS OF Shaman CLASS-->
-  <string name="Shaman_Name">Gnoll Schamane</string>
+  <string name="Shaman_Name">Gnollschamane</string>
   <string name="Shaman_Gender">männlich</string>
-  <string name="Shaman_Name_Objective">Gnoll Schamane</string>
+  <string name="Shaman_Name_Objective">Gnollschamane</string>
   <string name="Shaman_Desc">Die intelligentesten Gnolle können schamanische Magie meistern. Gnoll Schamanen bevorzugen Kampfzauber um ihre fehlende Stärke auszugleichen. Sie zögern nicht, sie auf jeden anzuwenden der ihre Stellung im Stamm anzweifelt.</string>
   <string name="Shaman_Killed">Der Blitzschlag des %s hat dich getötet...</string>
   <!--STRINGS OF Shielded CLASS-->
@@ -150,30 +150,30 @@
   <string name="Shielded_Gender">männlich</string>
   <string name="Shielded_Name_Objective">Schildschläger</string>
   <string name="Shielded_Defense">abgeblockt</string>
-  <string name="Shielded_Desc">Schläger sind die größten, stärksten und zähesten unter den Gnollen. Wenn sie ernsthaft verletzt sind fallen sie in einen Berserkerzustand und fügen ihren Feinden sogar noch mehr Schaden zu. Dieser Scläger trägt einen riesigen Schild bei sich!</string>
+  <string name="Shielded_Desc">Schläger sind die größten, stärksten und zähesten unter den Gnollen. Wenn sie ernsthaft verletzt sind, fallen sie in einen Berserkerzustand und fügen ihren Feinden sogar noch mehr Schaden zu. Dieser Schläger trägt einen riesigen Schild bei sich!</string>
   <!--STRINGS OF Skeleton CLASS-->
   <string name="Skeleton_Name">Skelett</string>
   <string name="Skeleton_Gender">männlich</string>
   <string name="Skeleton_Name_Objective">Skelett</string>
-  <string name="Skeleton_Desc">Skelette bestehen aus Knochen unglücklicher Abenteurer und Bewohner des Verlieses, sie werden von Ausstrahlungen dunkler Magie von tieferen Ebenen angetrieben. Wenn sie stark genug geschädigt wurden, lösen sie sich in einer Knochenexplosion auf.</string>
+  <string name="Skeleton_Desc">Skelette bestehen aus Knochen unglücklicher Abenteurer und Bewohner des Verlieses, belebt durch Einflüsse dunkler Magie aus den tieferen Ebenen. Wenn sie stark genug geschädigt wurden, lösen sie sich in einer Knochenexplosion auf.</string>
   <string name="Skeleton_Defense">abgeblockt</string>
   <string name="Skeleton_Killed">Du wurdest durch die Explosion von Knochen getötet...</string>
   <!--STRINGS OF Spinner CLASS-->
   <string name="Spinner_Name">Höhlenspinne</string>
   <string name="Spinner_Gender">männlich</string>
   <string name="Spinner_Name_Objective">Höhlenspinne</string>
-  <string name="Spinner_Desc">Diese grünliche ängstliche Höhlenspinne versucht es, direkten Kampf zu vermeiden, bevorzugt es in einiger Entfernung zu warten während ihre Opfer, eingewickelt in ihre klebrige Spinnennetz, langsam an ihrem giftigen Biss sterben.</string>
+  <string name="Spinner_Desc">Diese grünliche, ängstliche Höhlenspinne versucht es, direkten Kampf zu vermeiden, bevorzugt es in einiger Entfernung zu warten, während ihre Opfer, eingewickelt in ihr klebriges Spinnennetz, langsam an ihrem giftigen Biss sterben.</string>
   <!--STRINGS OF Statue CLASS-->
   <string name="Statue_Name">beseelte Statue</string>
   <string name="Statue_Gender">weiblich</string>
   <string name="Statue_Name_Objective">beseelte Statue</string>
-  <string name="Statue_Desc">Während du denkst das es wieder nur eine hässliche Statue ist, stellst du fest das die Augen rot leuchten.
+  <string name="Statue_Desc">Während du denkst, dass es wieder nur eine hässliche Statue ist, stellst du fest, dass die Augen rot leuchten.
 Die Statue ist aus Stein während _%s_ echt aussieht.</string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">Sukkubus</string>
   <string name="Succubus_Gender">männlich</string>
   <string name="Succubus_Name_Objective">Sukkubus</string>
-  <string name="Succubus_Desc">Die verführerische Dämonin (auf eine gothische Art ) benutzt ihren Zauber um den Helden zu betören. Durch diesen Zauber kann der Held nicht angreifen bis der Zauber aufhört.</string>
+  <string name="Succubus_Desc">Die verführerische Dämonin (auf eine gothische Art ) benutzt ihren Zauber um den Helden zu betören. Durch diesen Zauber kann der Held nicht angreifen, bis der Zauber aufhört.</string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Name">Fliegenschwarm</string>
   <string name="Swarm_Gender">männlich</string>
@@ -184,14 +184,14 @@ Die Statue ist aus Stein während _%s_ echt aussieht.</string>
   <string name="Tengu_Name">Tengu</string>
   <string name="Tengu_Gender">männlich</string>
   <string name="Tengu_Name_Objective">Tengu</string>
-  <string name="Tengu_Desc">Tengu sind Mitglieder eines uralten Assassinen-Clans. Auch der Clan hört auf den Namen Tengu. Seine Assassinen sind berüchtigt für ihren exzessiven Einsatz von Shurikeny sowie das Legen von Fallen.</string>
+  <string name="Tengu_Desc">Tengu sind Mitglieder eines uralten Assassinen-Clans. Auch der Clan hört auf den Namen Tengu. Seine Assassinen sind berüchtigt für ihren exzessiven Einsatz von Shuriken sowie das Legen von Fallen.</string>
   <string name="Tengu_Info1">Endlich frei...</string>
   <string name="Tengu_Info2">Hab dich, %s!</string>
   <!--STRINGS OF Thief CLASS-->
   <string name="Thief_Name">Verrückter Dieb</string>
   <string name="Thief_Gender">männlich</string>
   <string name="Thief_Name_Objective">Verrückter Dieb</string>
-  <string name="Thief_Desc">Die tieferen Ebenen der Gewölbe waren immer ein Versteck für alle möglichen Verbrecher. Nicht alle konnten während ihrer ausgedehnten Aufenthalte im Dunkeln, weit weg vom Tageslicht, einen klaren Verstand bewahren. Vor langer Zeit vergaßen diese verrückten Diebe und Banditen wer sie sind und warum sie stehlen.</string>
+  <string name="Thief_Desc">Die tieferen Ebenen der Gewölbe waren immer ein Versteck für alle möglichen Verbrecher. Nicht alle konnten während ihrer ausgedehnten Aufenthalte im Dunkeln, weit weg vom Tageslicht, einen klaren Verstand bewahren. Vor langer Zeit vergaßen diese verrückten Diebe und Banditen, wer sie sind und warum sie stehlen.</string>
   <string name="Thief_Stole">%1$s hat %2$s von dir gestohlen!</string>
   <string name="Thief_Carries">
 \n\n%1$s trägt  _%2$s_. Wahrscheinlich gestolen.</string>
@@ -199,7 +199,7 @@ Die Statue ist aus Stein während _%s_ echt aussieht.</string>
   <string name="Warlock_Name">Zwergenhexenmeister</string>
   <string name="Warlock_Gender">männlich</string>
   <string name="Warlock_Name_Objective">Zwergenhexenmeister</string>
-  <string name="Warlock_Desc">Als sich das Interesse der Zwerge vom Maschinenbau zur obskuren Kunst wandelte, kamen die Hexenmeister an die Macht. Es fing alles mit Elementar Zauber an, wurde doch schnell zu Dämonologie und Nekromantie.</string>
+  <string name="Warlock_Desc">Als sich das Interesse der Zwerge vom Maschinenbau zur obskuren Kunst wandelte, kamen die Hexenmeister an die Macht. Es fing alles mit Elementarzauber an, wurde jedoch schnell zu Dämonologie und Nekromantie.</string>
   <string name="Warlock_Killed">%s\'s Schattenblitz hat dich getötet...</string>
   <!--STRINGS OF Wraith CLASS-->
   <string name="Wraith_Name">Geist</string>
@@ -212,7 +212,7 @@ Da es sich um eine spirituelle Einheit handelt, ist es sehr schwer sie mit einer
   <string name="Yog_Name">Yog-Dzewa</string>
   <string name="Yog_Gender">männlich</string>
   <string name="Yog_Name_Objective">Yog-Dzewa</string>
-  <string name="Yog_Desc">Yog-Dzewa ist eine alte Gottheit, ein mächtiges Wesen aus dem Reich des Chaos. Ein Jahrhundert zuvor, konnten die alten Zwerge den Krieg gegen seine Armeen von Dämonen endlich gewinnen, waren aber nicht in der Lage, die Gottheit selbst zu töten. Stattdessen haben sie ihn in den Hallen unter ihrer Stadt eingesperrt, daran glaubend, dass er zu schwach sei, sich jemals wieder zu erheben</string>
+  <string name="Yog_Desc">Yog-Dzewa ist eine alte Gottheit, ein mächtiges Wesen aus dem Reich des Chaos. Ein Jahrhundert zuvor konnten die alten Zwerge den Krieg gegen seine Armeen von Dämonen endlich gewinnen, waren aber nicht in der Lage, die Gottheit selbst zu töten. Stattdessen haben sie ihn in den Hallen unter ihrer Stadt eingesperrt, daran glaubend, dass er zu schwach sei, sich jemals wieder zu erheben</string>
   <string name="Yog_Info1">...</string>
   <string name="Yog_Info2">Hoffentlich ist es eine Illusion...</string>
   <string name="RottingFist_Name">faulige Faust</string>
@@ -251,12 +251,12 @@ Da es sich um eine spirituelle Einheit handelt, ist es sehr schwer sie mit einer
   <string name="SpiderMind_Name">Psi-Spinne</string>
   <string name="SpiderMind_Gender">männlich</string>
   <string name="SpiderMind_Name_Objective">Psi-Spinne</string>
-  <string name="SpiderMind_Desc">Diese zerbrechlich wirkenden Spinnen weisen einzigartige mentale Kräfte auf, welche es ihnen erlauben die gesamte Kolonie zu kontrollieren. Psi-Spinnen sind in der Lage, jedes lebendige wesen zu kontrollieren, aber sie sind ziemliche Feiglinge.</string>
+  <string name="SpiderMind_Desc">Diese zerbrechlich wirkenden Spinnen weisen einzigartige mentale Kräfte auf, welche es ihnen erlauben die gesamte Kolonie zu kontrollieren. Psi-Spinnen sind in der Lage, jedes lebendige Wesen zu kontrollieren, aber sie sind ziemliche Feiglinge.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
   <string name="SpiderQueen_Name">Spinnenkönigin</string>
   <string name="SpiderQueen_Gender">weiblich</string>
   <string name="SpiderQueen_Name_Objective">Spinnenkönigin</string>
-  <string name="SpiderQueen_Desc">Der Körper einer wunderschönen Frau gekreuzt mit einer scheußlichen Spinne. Jedes Lebewesen auf dieser Ebene ist ihr Sklave. Eine begegnung mit dieser besonderen Lady könnte sich als tödliche Erfahrung erweisen, denn du bist ein Eindringling!</string>
+  <string name="SpiderQueen_Desc">Der Körper einer wunderschönen Frau gekreuzt mit einer scheußlichen Spinne. Jedes Lebewesen auf dieser Ebene ist ihr Sklave. Eine Begegnung mit dieser besonderen Lady könnte sich als tödliche Erfahrung erweisen, denn du bist ein Eindringling!</string>
   <!--STRINGS OF WaterElemental CLASS-->
   <string name="WaterElemental_Name">Wassergeist</string>
   <string name="WaterElemental_Gender">männlich</string>
@@ -266,7 +266,7 @@ Da es sich um eine spirituelle Einheit handelt, ist es sehr schwer sie mit einer
   <string name="AirElemental_Name">Luftgeist</string>
   <string name="AirElemental_Gender">männlich</string>
   <string name="AirElemental_Name_Objective">Luftgeist</string>
-  <string name="AirElemental_Desc">Luftgeister sind fliegende magische Wesen, die aus lebendiger Luft bestehen.</string>
+  <string name="AirElemental_Desc">Luftgeister sind fliegende, magische Wesen, die aus lebendiger Luft bestehen.</string>
   <!--STRINGS OF EarthElemental CLASS-->
   <string name="EarthElemental_Name">Erdgeist</string>
   <string name="EarthElemental_Gender">männlich</string>

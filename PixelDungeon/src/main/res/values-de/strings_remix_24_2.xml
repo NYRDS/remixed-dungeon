@@ -3,7 +3,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF GoldenSword -->
     <string name="GoldenSword_Name">goldenes Schwert</string>
-    <string name="GoldenSword_Info">Normalerweise werden Waffen aus solch einem weichen Metall wie Gold als nicht mehr als Dekoration bedacht. Jedoch scheint es dieser Klinge möglich zu sein, ziemlich gut durch Dinge zu schneiden.</string>
+    <string name="GoldenSword_Info">Normalerweise werden Waffen aus solch einem weichen Metall wie Gold nicht für mehr, außer als Dekoration, bedacht. Jedoch scheint es dieser Klinge möglich zu sein, ziemlich gut durch Dinge zu schneiden.</string>
     <string name="GoldenSword_Gender">maskulin</string>
 
     <!-- Mobs descriptions -->

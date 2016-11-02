@@ -47,12 +47,12 @@
     <item>Identifizierungsrollen sind bereits zu Beginn bekannt.</item>
   </string-array>
   <string-array name="HeroClass_RogPerks">
-    <item>Rouges beginnen mit einem Schattenring+1.</item>
-    <item>Rouges identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </item>
-    <item>Rouges sind am besten mit leichter Rüstung, weichen besser aus, wenn sie sie tragen </item>
-    <item>Rouges sind am besten im versteckte Türen und Fallen finden</item>
-    <item>Rouges können es länger ohne Essen aushalten </item>
-    <item>Schriftrollen der Magischen Diagramme sind schon zu Beginn bekannt. </item>
+    <item>Schurken beginnen mit einem Schattenring+1.</item>
+    <item>Schurken identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </item>
+    <item>Schurken sind am besten mit leichter Rüstung, weichen besser aus, wenn sie sie tragen </item>
+    <item>Schurken sind am besten im versteckte Türen und Fallen finden</item>
+    <item>Schurken können es länger ohne Essen aushalten </item>
+    <item>Schriftrollen des Vermessens sind schon zu Beginn bekannt. </item>
   </string-array>
   <string-array name="HeroClass_HunPerks">
     <item>Jägerinnen beginnen mit 15 Lebenspunkten.</item>
@@ -62,11 +62,11 @@
     <item>Jägerinnen spüren benachbarte Monster sogar dann, wenn sie hinter Hindernissen versteckt sind.</item>
   </string-array>
   <string-array name="HeroClass_ElfPerks">
-    <item>Elfen beginnen mit 15HP und 9 STR.</item>
+    <item>Elfen beginnen mit 15 Lebenspunkten und 9 Stärkepunkten.</item>
     <item>Elfen sind immun gegen Anwurzelung.</item>
     <item>Elfen beginnen mit einem verbesserten Holzbogen und einem Haufen Pfeilen.</item>
-    <item>Elfen sind extrem Erfahren mit Bögen und beweglich.</item>
-    <item>Elfen sind weniger Erfahren mit Nahkampfwaffen.</item>
+    <item>Elfen sind extrem erfahren mit Bögen und beweglich.</item>
+    <item>Elfen sind weniger erfahren mit Nahkampfwaffen.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">Gladiator</string>
@@ -74,19 +74,19 @@
   <string name="HeroSubClass_NameBers">Berserker</string>
   <string name="HeroSubClass_DescBers">Wenn ein _Berserker_ schwer verletzt ist, erreicht er einen Zustand wilder Wut, in dem sein Schaden deutlich erhöht ist.</string>
   <string name="HeroSubClass_NameWarL">Hexenmeister</string>
-  <string name="HeroSubClass_DescWarL">Wenn ein _Hexenmeister_ einen Gegner tötet nimmt er seine Seele in sich auf. Sie heilt seine Wunde und sättigt ihn.</string>
+  <string name="HeroSubClass_DescWarL">Wenn ein _Hexenmeister_ einen Gegner tötet nimmt er seine Seele in sich auf. Sie heilt seine Wunden und sättigt ihn.</string>
   <string name="HeroSubClass_NameBatM">Kampfmagier</string>
-  <string name="HeroSubClass_DescBatM">Während er mit einem Zauberstab in der Hand kämpft, verursacht der _Kampfmagier_ zusätzlichen Schaden abhängig von der aktuellen Aufladung. Jeder erfolgreiche Treffer stellt eine Aufladung des Zauberstabes wieder her.</string>
+  <string name="HeroSubClass_DescBatM">Während er mit einem Zauberstab in der Hand kämpft, verursacht der _Kampfmagier_ zusätzlichen Schaden, abhängig von der aktuellen Aufladung. Jeder erfolgreiche Treffer stellt eine Aufladung des Zauberstabes wieder her.</string>
   <string name="HeroSubClass_NameAssa">Assassine</string>
   <string name="HeroSubClass_DescAssa">Der _Assassine_ verursacht zusätzlichen Schaden an seinem Ziel während er einen Überraschungsangriff ausführt.</string>
   <string name="HeroSubClass_NameFreR">Windläufer</string>
-  <string name="HeroSubClass_DescFreR">Der _Windläufer_ kann fast doppelt so schnell laufen wie die meisten Monster. Während er rennt ist der Freerunner deutlich schwerer zu treffen. Dafür darf er nicht überladen sein und nicht am verhungern.</string>
+  <string name="HeroSubClass_DescFreR">Der _Windläufer_ kann fast doppelt so schnell laufen wie die meisten Monster. Während er rennt ist der Windläufer deutlich schwerer zu treffen. Dafür darf er nicht überladen und am Verhungern sein.</string>
   <string name="HeroSubClass_NameSnip">Scharfschütze</string>
   <string name="HeroSubClass_DescSnip">_Scharfschützen_ sind dazu in der Lage, Schwachpunkte in der gegnerischen Rüstung zu erkennen und diese effektiv zu umgehen wenn sie eine Fernkampfwaffe nutzen.</string>
   <string name="HeroSubClass_NameWard">Bewahrer</string>
   <string name="HeroSubClass_DescWard">_Bewahrer_ haben eine starke Bindung zu den Kräften der Natur. Sie besitzen die Fähigkeit, Tautropfen und Samen von Pflanzen zu sammeln. Zusätzlich erhalten sie eine temporäre Rüstungsverbesserung, wenn sie hohes Gras niedertreten.</string>
   <string name="HeroSubClass_NameScout">Späher</string>
-  <string name="HeroSubClass_DescScout">Elfen_Späher_sind Meister der Heimlichkeit. Wenn sie hohes Gras zertrampeln, bietet dies ihnen einen vorrübergehenden Unsichtbarkeitseffekt. Ausserdem sind sie noch schneller als normale Elfen.</string>
+  <string name="HeroSubClass_DescScout">Elfen_Späher_sind Meister der Heimlichkeit. Wenn sie hohes Gras zertrampeln, gewährt ihnen dies einen vorrübergehenden Unsichtbarkeitseffekt. Ausserdem sind sie noch schneller als normale Elfen.</string>
   <string name="HeroSubClass_NameShaman">Schamane</string>
-  <string name="HeroSubClass_DescShaman">Elfen_Schamanen_ können Zauberstäbe als Nahkampfwaffe benutzen. Erfolgreiche treffer haben eine Chance, die Fahigkeit die Kraft des Zauberstabes auf ein Ziel zu aktivieren, ohne eine Ladung zu benutzen.</string>
+  <string name="HeroSubClass_DescShaman">Elfen_Schamanen_ können Zauberstäbe als Nahkampfwaffe benutzen. Erfolgreiche Treffer haben die Chance, die Fahigkeit des Zauberstabes auf ein Ziel zu wirken, ohne eine Ladung zu benutzen.</string>
 </resources>

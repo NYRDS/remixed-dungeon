@@ -26,7 +26,7 @@
   <string name="Level_TileToxicTrap">Falle mit giftigem Gas</string>
   <string name="Level_TileFireTrap">Feuerfalle</string>
   <string name="Level_TileParalyticTrap">Falle mit lähmendem Gas</string>
-  <string name="Level_TilePoisonTrap">Giftpfeil Falle</string>
+  <string name="Level_TilePoisonTrap">Giftpfeil-Falle</string>
   <string name="Level_TileAlarmTrap">Alarmfalle</string>
   <string name="Level_TileLightningTrap">Blitzfalle</string>
   <string name="Level_TileGrippingTrap">Lähmende Falle</string>
@@ -43,9 +43,9 @@
   <string name="Level_TileDescHighGrass">Dichter Pflanzenbewuchs versperrt die Sicht.</string>
   <string name="Level_TileDescLockedDoor">Die Tür ist versperrt, du brauchst einen passenden Schlüssel um sie zu öffnen.</string>
   <string name="Level_TileDescLockedExit">Schwere Balken blockieren die Treppen nach unten.</string>
-  <string name="Level_TileDescBarricade">Die hölzerne Barrikade ist massiv gebaut, aber ist über die Jahre hinweg ausgetrocknet. Würde sie brennen?</string>
+  <string name="Level_TileDescBarricade">Die hölzerne Barrikade ist massiv gebaut, aber über die Jahre hinweg ausgetrocknet. Würde sie brennen?</string>
   <string name="Level_TileDescSign">Du kannst die Schrift von hier aus nicht lesen.</string>
-  <string name="Level_TileDescTrap">Wenn du auf eine verborgene Druckplatte trittst löst dies die Falle aus.</string>
+  <string name="Level_TileDescTrap">Wenn du auf eine verborgene Druckplatte trittst, löst dies die Falle aus.</string>
   <string name="Level_TileDescInactiveTrap">Die Falle wurde bereits früher ausgelöst und ist nicht mehr gefährlich.</string>
   <string name="Level_TileDescStatue">Jemand wollte diesen Ort dekorieren, ist daran aber offensichtlich gescheitert.</string>
   <string name="Level_TileDescAlchemy">Wirf einige Samen hinein um einen Zaubertrank zu brauen.</string>
@@ -53,21 +53,21 @@
   <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
   <string name="Caves_TileGrass">Leuchtendes Moos</string>
   <string name="Caves_TileHighGrass">Leuchtende Pilze</string>
-  <string name="Caves_TileWater">Gefrierendes kaltes Wasser</string>
-  <string name="Caves_TileDescEntrance">Die Leiter führt nach oben in eine höhere Ebene.</string>
-  <string name="Caves_TileDescExit">Die Leiter führt nach unten in eine tiefere Ebene.</string>
+  <string name="Caves_TileWater">Gefrierendes, kaltes Wasser</string>
+  <string name="Caves_TileDescEntrance">Die Leiter führt nach oben auf eine höhere Ebene.</string>
+  <string name="Caves_TileDescExit">Die Leiter führt nach unten auf eine tiefere Ebene.</string>
   <string name="Caves_TileDescHighGrass">Riesige Pilze versperren die Sicht.</string>
   <string name="Caves_TileDescDeco">Eine Erzader ist in der Wand sichtbar. Gold?</string>
   <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
   <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
   <string name="City_TileWater">Merkwürdig gefärbtes Wasser</string>
-  <string name="City_TileHighGrass">Große blühende Blumen</string>
-  <string name="City_TileDescEntrance">Eine Rampe führt in eine höhere Ebene.</string>
-  <string name="City_TileDescExit">Eine Rampe führt in eine tiefere Ebene.</string>
+  <string name="City_TileHighGrass">Große, blühende Blumen</string>
+  <string name="City_TileDescEntrance">Eine Rampe führt auf eine höhere Ebene.</string>
+  <string name="City_TileDescExit">Eine Rampe führt auf eine tiefere Ebene.</string>
   <string name="City_TileDescDeco">Mehrere Bodenplatten fehlen hier.</string>
-  <string name="City_TileDescEmptySP">Ein dicker Teppich bedeckt den Bode.</string>
+  <string name="City_TileDescEmptySP">Ein dicker Teppich bedeckt den Boden.</string>
   <string name="City_TileDescStatue">Die Statue zeigt einen Zwerg in einer heroischen Pose.</string>
-  <string name="City_TileDescBookshelf">Mehrere Reihen Bücher aus den verschiedenen Fachrichtungen füllen das Bücherregal.</string>
+  <string name="City_TileDescBookshelf">Mehrere Reihen Bücher aus verschiedenen Fachrichtungen füllen das Bücherregal.</string>
   <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
   <string name="Halls_TileWater">Erkaltete Lava</string>
   <string name="Halls_TileGrass">Aschemoos</string>
@@ -85,18 +85,18 @@
   <string name="LastLevel_TileDescStatue">Diese Säule ist aus echter Menschenhaut gemacht. Beeindruckend.</string>
   <!--STRINGS OF LastShopLevel CLASS-->
   <string name="LastShopLevel_TileWater">Merkwürdig gefärbtes Wasser</string>
-  <string name="LastShopLevel_TileHighGrass">Große blühende Blumen</string>
-  <string name="LastShopLevel_TileDescEntrance">Eine Rampe führt eine Ebene nach oben.</string>
+  <string name="LastShopLevel_TileHighGrass">Große, blühende Blumen</string>
+  <string name="LastShopLevel_TileDescEntrance">Eine Rampe führt auf die obere Ebene.</string>
   <string name="LastShopLevel_TileDescExit">Eine Rampe führt hinunter in das Inferno.</string>
   <string name="LastShopLevel_TileDescDeco">Mehrere Bodenplatten fehlen.</string>
   <string name="LastShopLevel_TileDescEmptySP">Dicker Teppich bedeckt den Boden.</string>
   <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
-  <string name="Prison_TileWater">Dunkles kaltes Wasser.</string>
+  <string name="Prison_TileWater">Dunkles, kaltes Wasser.</string>
   <string name="Prison_TileDescDeco">Da sind alte Blutflecken auf dem Boden.</string>
   <string name="Prison_TileDescBookshelf">Dies ist möglicherweise das Überbleibsel einer Gefängnisbibliothek. Ob sie brennbar ist?</string>
   <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
   <string name="Sewer_TileWater">Schlammiges Wasser</string>
-  <string name="Sewer_TileDescDeco">Nasses gelbes Moos bedeckt den Boden.</string>
+  <string name="Sewer_TileDescDeco">Nasses, gelbes Moos bedeckt den Boden.</string>
   <string name="Sewer_TileDescBookshelf">Das Bücherregal ist vollgestellt mit billigen nutzlosen Büchern. Ob sie brennen?</string>
   <!--PACKAGE /levels/features-->
   <!--STRINGS OF AlchemyPot CLASS-->
@@ -109,7 +109,7 @@
   <string name="Chasm_Info">Du stürzt in den Tod.</string>
   <!--PACKAGE /levels/traps-->
   <!--STRINGS OF AlarmTrap CLASS-->
-  <string name="AlarmTrap_Desc">Die Falle gibt einen lauten durchdringenden Ton ab, der durch die Gemäuer hallt.</string>
+  <string name="AlarmTrap_Desc">Die Falle gibt einen lauten, durchdringenden Ton ab, der durch die Gemäuer hallt.</string>
   <!--STRINGS OF LightningTrap CLASS-->
   <string name="LightningTrap_Name">Blitzfalle</string>
   <string name="LightningTrap_Desc">Du wurdest durch die Entladung einer Blitzfalle getötet...</string>

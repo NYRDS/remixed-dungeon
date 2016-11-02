@@ -3,11 +3,11 @@
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">Viele Helden aus aller Art wagten sich vor dir in den Dungeon. Manche von ihnen kehrten glorreich mit Schätzen und magischen Artefakten wieder, viele wurden seitdem nie wieder gesehen. Aber keiner hat es je geschafft, das Amulett von Yendor zu beschaffen, von dem man sich erzählt, dass es tief in den Ebenen des Dungeons verborgen sein soll. Du erklärst dich bereit für die Herausforderung, aber am wichtigsten ist, dass dich das Glück anlächelt. Es ist Zeit, dein Abenteuer zu starten!</string>
+  <string name="IntroScene_Txt">Viele Helden aller Art wagten sich vor dir in den Dungeon. Manche von ihnen kehrten glorreich mit Schätzen und magischen Artefakten wieder, viele wurden seitdem nie wieder gesehen. Aber keiner hat es je geschafft, das Amulett von Yendor zu beschaffen, von dem man sich erzählt, dass es tief in den Ebenen des Dungeons verborgen sein soll. Du erklärst dich bereit für die Herausforderung, aber am wichtigsten ist, dass dich das Glück anlächelt. Es ist Zeit, dein Abenteuer zu starten!</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">Lassen wir es gut sein</string>
   <string name="AmuletScene_Stay">Ich bin noch nicht fertig</string>
-  <string name="AmuletScene_Txt">Endlich hältst du es in deinen Händen, das Amulett von Yendor. Mit seiner Macht kannst du die Welt erobern oder allen Frieden und Reichtum bringen oder was auch immer. Jedenfalls wir sich dein Leben für immer verändern und dieses Spiel endet hier. Oder du kannst noch ein bisschen länger ein gewöhnlicher Sterblicher bleiben.</string>
+  <string name="AmuletScene_Txt">Endlich hältst du es in deinen Händen, das Amulett von Yendor. Mit seiner Macht kannst du die Welt erobern oder allen Frieden und Reichtum bringen oder was auch immer. Jedenfalls wird sich dein Leben für immer verändern und dieses Spiel endet hier. Oder du kannst noch ein bisschen länger ein gewöhnlicher Sterblicher bleiben.</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">Willkommen auf Ebene %d von Pixel Dungeon!</string>
   <string name="GameScene_WelcomeBack">Willkommen zurück auf Ebene %d von Pixel Dungeon!</string>
@@ -63,20 +63,20 @@
     <item>Bedenke, dass das Erhöhen deiner Stärke nicht der einzige Weg ist, bessere Ausrüstung zu verwenden. Du kannst es auch anders herum versuchen, indem du die Stärkenanforderung der Ausrüstung mit Schriftrollen der Aufwertung senkst.</item>
     <item>Du kannst dein Gold in Läden in tieferen Ebenen des Dungeons ausgeben. Der erste befindet sich auf Ebene 6.</item>
     <item>Nimm dich vor \'Goo\' in Acht!</item>
-    <item>Pixel-Mart - alles das du für ein erfolgreiches Abenteuer benötigst!</item>
+    <item>Pixel-Mart - alles, was du für ein erfolgreiches Abenteuer benötigst!</item>
     <item>Identifiziere deine Tränke und Schriftrollen so schnell wie möglich. Warte nicht auf den Moment, in dem du sie wirklich brauchst.</item>
-    <item>Hungrig zu sein tut dir nicht weh, am Verhungern sein jedoch schon.</item>
+    <item>Hungrig zu sein tut dir nicht weh, zu verhungern jedoch schon.</item>
     <item>Überraschungsangriffe haben eine bessere Chance auf einen Treffer. Du könntest z.B. deinem Gegner hinter einer geschlossenen Tür auflauern, wenn du weißt, dass er sich nähert.</item>
     <item>Lass den Tengu nicht raus!</item>
     <item>Pixel-Mart. Gib Geld aus. Lebe länger.</item>
     <item>Wenn du von mehreren Monstern angegriffen wirst, versuche, dich hinter eine Tür zurückzuziehen.</item>
-    <item>Wenn du Feuer gefangen hast während du schwebst, kannst du es nicht durch Wasser löschen.</item>
+    <item>Wenn du Feuer gefangen hast, während du schwebst, kannst du es nicht durch Wasser löschen.</item>
     <item>Es macht keinen Sinn, mehr als einen Ankh gleichzeitig zu besitzen, da du sie ohnehin bei einer Auferstehung verlieren wirst.</item>
     <item>ACHTUNG! Schwere Maschinen verursachen Verletzungen bis hin zu Verlust von Gliedmaßen oder Tod!</item>
     <item>Pixel-Mart. Ein sichereres Leben im Dungeon.</item>
     <item>Wenn du eine verzauberte Waffe aufrüstest, besteht eine Chance, dass die Verzauberung dabei zerstört wird.</item>
     <item>Durch einen Brunnen der Verwandlung kannst du einen Gegenstand erhalten, den du auf keine andere Art erlangen kannst.</item>
-    <item>Der einzige Weg eine Waffe zu verzaubern ist sie durch eine Schriftrolle der Aufwertung aufzurüsten.</item>
+    <item>Der einzige Weg, eine Waffe zu verzaubern, ist, sie durch eine Schriftrolle der Aufwertung aufzurüsten.</item>
     <item>Im Beisein Ihrer Majestät sind keine Waffen erlaubt!</item>
     <item>Pixel-Mart. Spezialpreise für Dämonenjäger!</item>
     <item>Der Text ist in dämonischer Sprache verfasst.</item>
@@ -116,7 +116,7 @@
   <string name="WndGame_Settings">Einstellungen</string>
   <string name="WndGame_Challenges">Herausforderungen</string>
   <string name="WndGame_Ranking">Ranglisten</string>
-  <string name="WndGame_Start">Starte neues Spiel</string>
+  <string name="WndGame_Start">Starte ein neues Spiel</string>
   <string name="WndGame_menu">Hauptmenü</string>
   <string name="WndGame_Exit">Pixel Dungeon verlassen</string>
   <string name="WndGame_Return">Zurück zum Spiel</string>
@@ -144,7 +144,7 @@
   <string name="WndInfoItem_CrystalChest">Kristallkiste</string>
   <string name="WndInfoItem_Tomb">Grab</string>
   <string name="WndInfoItem_Skeleton">Skelettierte Überreste</string>
-  <string name="WndInfoItem_WontKnow">Du wirst erst wissen was darin ist wenn du es geöffnet hast!</string>
+  <string name="WndInfoItem_WontKnow">Du wirst erst wissen was darin ist, wenn du es geöffnet hast!</string>
   <string name="WndInfoItem_NeedKey">Du brauchst einen goldenen Schlüssel um dies zu öffnen.</string>
   <string name="WndInfoItem_Inside">Du kannst %s im Inneren erkennen, aber um die Kiste zu öffnen benötigst du einen goldenen Schlüssel.</string>
   <string name="WndInfoItem_Owner">Dieses antike Grab kann etwas nützliches enthalten, aber sein Besitzer wird es sicherlich nicht einfach hergeben.</string>

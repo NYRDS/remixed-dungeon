@@ -12,7 +12,7 @@
   <string name="WndDonate_rubyDonate">Rubinspende</string>
   <string name="WndDonate_silverDonateText">Jede Spende wird zur Entwicklung des Projekts beitragen</string>
   <string name="WndDonate_goldDonateText">Vielen Dank für ihre Unterstützung</string>
-  <string name="WndDonate_rubyDonateText">Ihre großzügigkeit wird uns helften, Remixed Pixel Dungeon weiter zu verbessern!</string>
+  <string name="WndDonate_rubyDonateText">Ihre Großzügigkeit wird uns helfen, Remixed Pixel Dungeon weiter zu verbessern!</string>
   <string name="WndDonate_silverDonateText2">Entfernt auch die Werbung in allen Spielmodi und macht die Jägerin von Anfang an verfügbar.</string>
   <string name="WndDonate_goldDonateText2">Schaltet auch den Elf von Anfang an frei.</string>
   <string name="WndDonate_rubyDonateText2" />
@@ -27,7 +27,7 @@
   <string name="WndPremiumSettings_banners">Wähle das Material der Banner</string>
   <string name="WndPremiumSettings_notAvailbale">Diese Option ist noch nicht verfügbar</string>
   <!--STRINGS OF DonateButton CLASS-->
-  <string name="DonateButton_pleaseDonate">Bitte erwägen Sie es zu spenden</string>
+  <string name="DonateButton_pleaseDonate">Bitte erwägen Sie es, zu spenden</string>
   <string name="DonateButton_thanks">Danke für Ihre Unterstützung!</string>
   <!--STRINGS OF WndSaveSlotSelect-->
   <string name="WndSaveSlotSelect_dontLike">Du magst keine Werbung? Spende einen beliebigen Betrag und sie wird verschwinden. Für immer.</string>

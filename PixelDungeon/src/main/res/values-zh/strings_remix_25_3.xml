@@ -1,3 +1,60 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">苏联毛帽</string>
+    <string name="Ushanka_Info">带有闪耀红星的温暖舒适的苏联毛帽。让共产主义的光辉照亮这个邪恶冷酷的地牢。</string>
+
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">吸血鬼头骨</string>
+    <string name="VampireSkull_Info">这个面具是由一个完全野生的吸血鬼头骨制成的。一个吸血鬼的头骨...一个大头吸血鬼的头骨...吓。</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">僵尸面具</string>
+    <string name="ZombieMask_Info">你有没有想过让自己看上去像一个在试练中失败了的不死英雄？好吧，这是你的机会。</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">糖果</string>
+    <string name="Candy_Info">这个糖果看着美味，闻着也美味。你真的想把它给别人吗？</string>
+    <string name="Candy_Warning_1">你不应该吃了那块糖的。你已经答应把它给别人了。而且作为一块糖，它没法给你让你感觉饱一点，也没你感觉你被强化了。</string>
+    <string name="Candy_Warning_2">现在你感觉到了一些你身体上的变化。因为吃了太多糖，你的肚子痛了。</string>
+
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">南瓜派</string>
+    <string name="PumpkinPie_Info">好吃的南瓜派，嗯，妈妈的味道。</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">腐烂的南瓜派</string>
+    <string name="RottenPumpkinPie_Info">就算有妈妈的味道，腐烂的还是没法食用的。</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">愿景之烛</string>
+    <string name="CandleOfMindVision_Info">看上去是一根普通的蜡烛，而不是你所期望的强大武器。奇怪的是这根蜡烛并没有被点燃，但十分温暖。</string>
+    <string name="CandleOfMindVision_Info_Lighted">当你拿出这根蜡烛的时候，它自动点燃，并照亮了你周围的事物，使你看到了附近的怪物。</string>
+    <string name="CandleOfMindVision_Info_Exhausted">这个蜡烛已经燃尽，没法继续发出亮光了。看上去你没法继续使用它了。</string>
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">圆筒</string>
+    <string name="Barrel_Desc">一个简单的木桶，你可以从中闻到油味。而且这玩意非常轻，你可以轻易推动它。</string>
+
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">南瓜</string>
+    <string name="Barrel_Pumpkin_Desc">为什么这里会有一个南瓜。你感觉到了这东西很危险。但你依然可以推开它，没错吧？</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">稻草人</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
+    <string name="ScarecrowNPC_Name_Objective">稻草人</string>
+    <string name="ScarecrowNPC_Desc">毫无疑问…这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
+</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\\n 我有一个令你惊喜的消息！\\n\\n 如果你为我收集一些糖果的话，\\n 我会十分感激你的！\\n\\n
+</string>
+    <string name="ScarecrowNPC_Quest_Reminder">我所需要的五个糖果。\n 你将的到很甜蜜的奖励！</string>
+    <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n 为此，你可以得到一份实在的食物！</string>
+    <string name="Journal_ScarecrowNPC">稻草人</string>
+
+</resources>

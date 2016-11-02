@@ -3,7 +3,7 @@
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
   <string name="Blacksmith_Name">Trollschmied</string>
-  <string name="Blacksmith_Desc">Dieser Trollschmied sieht so aus wie alle Trolle auch: Er ist groß und dürr, und seine Haut gleicht Stein, in Beidem: Farbe und Beschaffenheit. Der Trollschmied arbeitet mit unproportional kleinen Werkzeugen.</string>
+  <string name="Blacksmith_Desc">Dieser Trollschmied sieht so aus wie alle Trolle auch: Er ist groß und dürr, und seine Haut gleicht Stein, in beidem: Farbe und Beschaffenheit. Der Trollschmied arbeitet mit unproportional kleinen Werkzeugen.</string>
   <string name="Blacksmith_Gold1">Hey Mensch! Willst du dich nützlich machen? Nimm diese Spitzhacke und baue etwas _dunkles Golderz_ für mich ab, _15 Stück_ sollten genügen. Was willst du? Wie ich dich bezahle? Du gieriger...\nOkay, okay, ich habe kein Geld um dich zu bezahlen, aber ich kann etwas für dich schmieden. Du kannst dich glücklich schätzen, ich bin der einzige Schmied in der Gegend.</string>
   <string name="Blacksmith_Blood1">Hey Mensch! Willst du dich nützlich machen? Nimm diese Spitzhacke und _töte eine Fledermaus_ damit, ich brauche ihr Blut an der Spitze.  Was willst du? Wie ich dich bezahle? Du gieriger...\nOkay, okay, ich habe kein Geld um dich zu bezahlen, aber ich kann etwas für dich schmieden. Du kannst dich glücklich schätzen, ich bin der einzige Schmied in der Gegend.</string>
   <string name="Blacksmith_Txt2">Willst du mich verarschen? Wo ist meine Spitzhacke?!</string>
@@ -12,15 +12,15 @@
   <string name="Blacksmith_Completed">Oh, du bist zurückgekommen... Besser spät als nie.</string>
   <string name="Blacksmith_GetLost">Ich bin beschäftigt. Verschwinde!</string>
   <string name="Blacksmith_LooksBetter">Dein/e %s schaut nun besser aus</string>
-  <string name="Blacksmith_Verify1">Wähle 2 verschiedene Gegenstände aus, nicht zwei mal den Selben!</string>
-  <string name="Blacksmith_Verify2">Wähle 2 Gegenstände des selben Art aus!</string>
+  <string name="Blacksmith_Verify1">Wähle 2 verschiedene Gegenstände aus, nicht zweimal den Selben!</string>
+  <string name="Blacksmith_Verify2">Wähle 2 Gegenstände der selben Art aus!</string>
   <string name="Blacksmith_Verify3">Ich muss wissen, womit ich arbeite. Identifiziere sie erst!</string>
   <string name="Blacksmith_Verify4">Ich arbeite nicht mit verfluchten Gegenständen!</string>
   <string name="Blacksmith_Verify5">Das ist Müll, die Qualität ist zu schlecht!</string>
   <string name="Blacksmith_Verify6">Ich kann diese Gegenstände nicht wiederverwerten!</string>
   <!--STRINGS OF Ghost CLASS-->
   <string name="Ghost_Name">trauriger Geist</string>
-  <string name="Ghost_Desc">Der Geist ist kaum sichtbar. Er sieht wie ein formloses schwaches Licht mit einem traurigen Gesicht aus.</string>
+  <string name="Ghost_Desc">Der Geist ist kaum sichtbar. Er sieht wie ein formloses, schwaches Licht mit einem traurigen Gesicht aus.</string>
   <string name="Ghost_Rose1">Hallo Abenteurer... Einst war ich wie du - stark und selbstbewusst... Und nun bin ich tot... Aber ich kann diesen Platz nicht verlassen... nicht bevor ich meine _getrocknete Rose_ wieder habe... Es ist sehr wichtig für mich... Einige Monster haben sie von meinem Körper gestohlen...</string>
   <string name="Ghost_Rose2">Bitte... Hilf mir... Finde die Rose...</string>
   <string name="Ghost_Rat1">Hallo Abenteurer... Einst war ich wie du - stark und selbstbewusst... Und nun bin ich tot... Aber ich kann diesen Platz nicht verlassen... Nicht bevor ich mich gerächt habe... Erlege die _stinkende Ratte_, die mir das Leben genommen hat...</string>
@@ -42,15 +42,15 @@
   <string name="Imp_Name">Ehrgeiziger Kobold</string>
   <string name="Imp_Desc">Kobolde sind niedrige Dämonen. Sie sind weder bekannt wegen ihrer Stärke oder ihrem magischen Talent, aber sie sind recht intelligent und gesellig. Viele Kobolde bevorzugen es unter Nicht-Dämonen zu leben.</string>
   <string name="Imp_Defense">ausgewichen</string>
-  <string name="Imp_Golems1">Bist du ein Abenteurer ? Ich mag Abenteurer. Du kannst dich immer auf sie verlassen wenn etwas getötet werden muss. Hab ich recht ? Natürlich nur für eine Belohnung ;)\nIn. In meinem Fall sind es _golems_ die getötet werden müssen. Wie du siehst bau ich mir hier gerade ein kleines Geschäft auf, aber diese Golems sind einfach schlecht für das Geschäft. Es ist wirklich schwer mit einem Haufen Granit zu verhandeln. Also ... könntest du _6 von denen_ töten dann bekommst du eine Belohnung.</string>
-  <string name="Imp_Golems2">Wie läuft die Golem Jagd ?</string>
+  <string name="Imp_Golems1">Bist du ein Abenteurer ? Ich mag Abenteurer. Du kannst dich immer auf sie verlassen wenn etwas getötet werden muss. Hab ich recht ? Natürlich nur für eine Belohnung ;)\nIn. In meinem Fall sind es _Golems_ die getötet werden müssen. Wie du siehst bau ich mir hier gerade ein kleines Geschäft auf, aber diese Golems sind einfach schlecht für das Geschäft. Es ist wirklich schwer mit einem Haufen Granit zu verhandeln. Also ... könntest du _6 von denen_ töten dann bekommst du eine Belohnung.</string>
+  <string name="Imp_Golems2">Wie läuft die Golemjagd ?</string>
   <string name="Imp_Monks1">Bist du ein Abenteurer ? Ich mag Abenteurer. Du kannst dich immer auf sie verlassen wenn etwas getötet werden muss. Hab ich recht ? Natürlich nur für eine Belohnung ;)\nIn. In meinem Fall sind es _Mönche_ die getötet werden müssen. Wie du siehst bau ich mir hier gerade ein kleines Geschäft auf, aber diese Mönche kaufen nie etwas und verschrecken nur andere Kunden. Also ... könntest du _ 8 von denen_ töten, dann bekommst du eine Belohnung.</string>
-  <string name="Imp_Monks2">Oh, du lebst noch. Ich wusste doch das dein Kung-Fu besser ist als ihres :) Aber vergiess nicht dir eine Mönch Abzeichen zu holen.</string>
+  <string name="Imp_Monks2">Oh, du lebst noch. Ich wusste doch das dein Kung-Fu besser ist als ihres :) Aber vergiss nicht, dir die Mönch-Abzeichen zu holen.</string>
   <string name="Imp_Cya">Aufwiedersehen  %s!</string>
   <string name="Imp_Hey">Psst, %s!</string>
   <!--STRINGS OF ImpShopkeeper CLASS-->
   <string name="ImpShopkeeper_Name">Ehrgeiziger Kobold</string>
-  <string name="ImpShopkeeper_Desc">Kobolde sind niedere Dämonen. Sie sind weder bekannt wegen ihrer Stärke oder ihrem magischen Talent. Denoch  sind sie recht intelligent und gesellig. Viele Kobolde bevorzugen es unter Nicht-Dämonen zu leben und mit ihnen Geschäfte zu machen.</string>
+  <string name="ImpShopkeeper_Desc">Kobolde sind niedere Dämonen. Sie sind weder bekannt wegen ihrer Stärke, noch wegen ihres magischen Talents. Dennoch sind sie recht intelligent und gesellig. Viele Kobolde bevorzugen es unter Nicht-Dämonen zu leben und mit ihnen Geschäfte zu machen.</string>
   <string name="ImpShopkeeper_Greetings">Hallo, Freund!</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">Spiegelbild</string>
@@ -73,13 +73,13 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
   <string name="WandMaker_Name">alter Zauberstabmacher</string>
   <string name="WandMaker_Desc">Dieser alte aber kräftige Gentleman schaut leicht verstört aus. Er wird durch ein magisches Schild beschützt.</string>
   <string name="WandMaker_Defense">absorbiert</string>
-  <string name="WandMaker_Berry1">Oh was eine angehnme Überraschung eine so anständige Person an so einem Ort zu treffen.
-Ich bin hier weil ich eine seltene Zutat suche a _Rotberry seed_. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
+  <string name="WandMaker_Berry1">Oh was für eine angenehme Überraschung eine so anständige Person an so einem Ort zu treffen.
+Ich bin hier weil ich eine seltene Zutat suche a _Rotbeerensamen_. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
   <string name="WandMaker_Berry2">Hattest du Glück mit den Rottbeerensamen, %s? Nein? Kein Problem, ich habs nicht eilig.</string>
-  <string name="WandMaker_Dust1">Oh was eine angehnme Überraschung eine so anständige Person an so einem Ort zu treffen.
-Ich bin hier weil ich eine seltene Zutat suche a_corpse dust_. Meistens bei Überresten von Skelletten auffindbar von denen es hier eine Menge gibt. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
-  <string name="WandMaker_Dust2">Wirst du fündig im Staub der Leichen, %s? Knochenhaufen sind der offensichtlichste Ort zum Nachschauen.</string>
-  <string name="WandMaker_RotberryName">Rottbeere</string>
+  <string name="WandMaker_Dust1">Oh was für eine angenehme Überraschung eine so anständige Person an so einem Ort zu treffen.
+Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Überresten von Skelletten auffindbar von denen es hier eine Menge gibt. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
+  <string name="WandMaker_Dust2">Hattest du Glück mit dem Leichenstaub, %s? Knochenhaufen sind der offensichtlichste Ort zum Nachschauen.</string>
+  <string name="WandMaker_RotberryName">Rotbeere</string>
   <string name="WandMaker_RotberryDesc">Die Beeren dieses Strauchs schmecken wie süßer, süßer Tod.</string>
   <string name="WandMaker_RotberryInfo">Der Samen entfesselt ein Brüllen das durch den gesamten Dungeon hallt!</string>
 </resources>

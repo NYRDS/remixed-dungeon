@@ -18,7 +18,7 @@
 
     <!-- STRINGS OF CompositeCrossbow CLASS -->
     <string name="CompositeCrossbow_Name">Verstärkte Armbrust</string>
-    <string name="CompositeCrossbow_Info">Diese verstärkte Armbrust verspricht eine effizientere Waffe zu sein, als sein hölzernes Pendant</string>
+    <string name="CompositeCrossbow_Info">Diese verstärkte Armbrust verspricht eine effizientere Waffe zu sein, als sein hölzernes Pendant.</string>
     <string name="CompositeCrossbow_Gender">männlich</string>
 
     <!-- STRINGS OF RubyCrossbow CLASS -->

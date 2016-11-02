@@ -6,6 +6,7 @@
   <string name="AzuterronNPC_Gender">männlich</string>
   <string name="AzuterronNPC_Name_Objective">Fremder</string>
   <string name="AzuterronNPC_Desc">Eine mysteriöse Gestalt, umgeben von schwarzem Nebel.</string>
+  <string name="AzuterronNPC_Quest_Start">Huh, warum... oh, du kannst michr sehen, nicht wahr? Das bedeutet, das du nicht zu \"Ihnen\" gehörst. Dazu sehe ich, dass du all diese Monster nicht lieb hast. Weißt du was? Wenn du mir mit einem kleinen Problem hilfst, biete ich dir meinen Beistand an. Irgendwo auf dieser Ebene wirst du ein Monster der Dunkelheit finden, einen _Heimtückischen Geist_. Vernichte ihn, nimm sein _Herz_ und komm zurück zu mir. Und eines noch! Wenn du daran interessiert bist, meine Angebote zu kaufen, scheue dich nicht, zu fragen.</string>
   <string name="AzuterronNPC_Quest_Reminder">Hilf mir und ich werde dir helfen</string>
   <string name="AzuterronNPC_Quest_End">Exzellent. Hier, nimm diesen Trank, du wirst ihn sicher großartig finden.</string>
   <string name="Journal_Azuterron">Fremder</string>
@@ -29,6 +30,7 @@
   <string name="PseudoRat_Name">Pseudo-Ratte</string>
   <string name="PseudoRat_Gender">weiblich</string>
   <string name="PseudoRat_Name_Objective">Pseudo-Ratte</string>
+  <string name="PseudoRat_Desc">Ein entsetzliches Biest, dass sich aus der Leiche der Ratte herausgeschält hat und jede Ähnlichkeit, mit einem Nagetier oder irgend einem anderen Tier, das du je gesehen hast, entbehrt.</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Info">Zombie-Gnoll ist vom Tod auferstanden!</string>
   <!--Items-->
@@ -37,7 +39,7 @@
   <string name="HeartOfDarkness_Info">Das schwarz pulsierende Herz des heimtückischen Geistes.</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
-  <string name="DarkVeil_Buff">Dunkeler Schleier</string>
+  <string name="DarkVeil_Buff">Dunkler Schleier</string>
   <!--Badges-->
   <string name="Badges_Yog_Slain">Yog-Dzewa getötet </string>
   <string name="Badges_ShadowLord_Slain">Schattenkönig getötet</string>

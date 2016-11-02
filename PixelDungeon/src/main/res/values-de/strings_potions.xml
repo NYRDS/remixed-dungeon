@@ -9,7 +9,7 @@
   <string name="Potion_Beneficial">Nützlicher Trank!</string>
   <string name="Potion_Yes">Ja, ich weiß, was ich tue</string>
   <string name="Potion_No">Nein, ich habe es mir anders überlegt</string>
-  <string name="Potion_SureDrink">Bist du sicher, dass du es trinken möchtest. In den meisten Fällen solltest du solche Tränke auf deine Feinde werfen.</string>
+  <string name="Potion_SureDrink">Bist du sicher, dass du das trinken möchtest? In den meisten Fällen solltest du solche Tränke auf deine Feinde werfen.</string>
   <string name="Potion_SureThrow">Bist du sicher, dass du es werfen möchtest? In den meisten Fällen ist es sinnvoll, es zu trinken.</string>
   <string name="Potion_Shatter">Das Glas zerbricht und %se Flüssigkeit breitet sich harmlos aus</string>
   <string-array name="Potion_Colors">
@@ -34,15 +34,15 @@
   <string name="PotionOfFrost_Info">Sobald diese Chemikalie mit Luft in Berührung kommt verwandelt sie sich in eine Frostwolke die jegliche Kreatur die sie umgibt auf der Stelle einfriert - und ihr damit jegliche Möglichkeit der Bewegung oder Handelns versagt.</string>
   <!--STRINGS OF PotionOfHealing CLASS-->
   <string name="PotionOfHealing_Name">Heiltrank</string>
-  <string name="PotionOfHealing_Info">Ein Elixier das dich zur Gänze heilt und jeglicher Vergiftung neutralisiert.</string>
+  <string name="PotionOfHealing_Info">Ein Elixier das dich zur Gänze heilt und jegliche Vergiftung neutralisiert.</string>
   <string name="PotionOfHealing_Apply">Deine Wunden heilen vollständig.</string>
   <!--STRINGS OF PotionOfInvisibility CLASS-->
   <string name="PotionOfInvisibility_Name">Unsichtbarkeitstrank</string>
-  <string name="PotionOfInvisibility_Info">Dieser Trank macht dich vorübergehend unsichtbar. Solange du unsichtbar bist können dich deine Feinde nicht erkennen. Sobald du einen Feind attackierst, einen Zauberstab oder eine Schriftrolle benutzt wird die Wirkung dieses Effekts verpuffen.</string>
+  <string name="PotionOfInvisibility_Info">Dieser Trank macht dich vorübergehend unsichtbar. Solange du unsichtbar bist, können dich deine Feinde nicht erkennen. Sobald du einen Feind attackierst, einen Zauberstab oder eine Schriftrolle benutzt, wird die Wirkung dieses Effekts verpuffen.</string>
   <string name="PotionOfInvisibility_Apply">Du siehst, wie deine Hände unsichtbar werden!</string>
   <!--STRINGS OF PotionOfLevitation CLASS-->
   <string name="PotionOfLevitation_Name">Schwebetrank</string>
-  <string name="PotionOfLevitation_Info">Der Genuß dieser wunderlichen Flüssigkeit erlaubt es dir zu Schweben und unbeschadet über Fallen zu gelangen. Flammen und Gase können jedoch nicht ohne Schaden schwebend überwunden werden.</string>
+  <string name="PotionOfLevitation_Info">Der Genuss dieser wunderlichen Flüssigkeit erlaubt es dir zu schweben und unbeschadet über Fallen zu gelangen. Flammen und Gase können jedoch nicht ohne Schaden schwebend überwunden werden.</string>
   <string name="PotionOfLevitation_Apply">Du schwebst in die Luft!</string>
   <!--STRINGS OF PotionOfLiquidFlame CLASS-->
   <string name="PotionOfLiquidFlame_Name">Flammentrank</string>
@@ -54,7 +54,7 @@
   <string name="PotionOfMight_StaApply">+1 Stä, +5 TP</string>
   <!--STRINGS OF PotionOfMindVision CLASS-->
   <string name="PotionOfMindVision_Name">Trank des Gedankenlesens</string>
-  <string name="PotionOfMindVision_Info">Nachdem du dies getrunken hast, wird dein Geist eins mit den physischen Signaturen entfernter Kreaturen und ermöglicht dir diese durch Wände wahrzunehmen. Weiters erlaubt dir dieser Trank durch naheliegende Wände und Türen zu sehen.</string>
+  <string name="PotionOfMindVision_Info">Nachdem du dies getrunken hast, wird dein Geist eins mit den physischen Signaturen entfernter Kreaturen und ermöglicht dir diese durch Wände wahrzunehmen. Des Weiteren erlaubt dir dieser Trank durch naheliegende Wände und Türen zu sehen.</string>
   <string name="PotionOfMindVision_Apply1">Du kannst irgendwie die geistige Präsenz anderer Kreaturen fühlen!</string>
   <string name="PotionOfMindVision_Apply2">Du kannst irgendwie spüren, dass du auf dieser Ebene allein bist.</string>
   <!--STRINGS OF PotionOfParalyticGas CLASS-->

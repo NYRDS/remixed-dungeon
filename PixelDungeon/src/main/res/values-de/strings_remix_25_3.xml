@@ -1,3 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Uschanka</string>
     </resources>
