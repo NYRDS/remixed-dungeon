@@ -20,6 +20,7 @@ package com.watabou.noosa.audio;
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -41,9 +42,9 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 
 	private boolean enabled = true;
 
-	public void play(String assetName, boolean looping) {
+	public void play(@NonNull String assetName, boolean looping) {
 
-		if (isPlaying() && lastPlayed.equals(assetName)) {
+		if (isPlaying() && assetName.equals(lastPlayed)) {
 			return;
 		}
 
@@ -52,14 +53,13 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 		lastPlayed = assetName;
 		lastLooping = looping;
 
-		if (!enabled || assetName == null) {
+		if (!enabled) {
 			return;
 		}
 
 		assetName = "sound/"+assetName;
 		
 		try {
-
 			player = new MediaPlayer();
 			player.setAudioStreamType(AudioManager.STREAM_MUSIC);
 			
