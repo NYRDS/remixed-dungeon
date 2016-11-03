@@ -64,7 +64,7 @@ public class Random {
 		float value = Float( sum );
 		sum = floats[0];
 		for (int i=0; i < length; i++) {
-			if (value < sum) {
+			if (value <= sum) {
 				return i;
 			}
 			sum += floats[i + 1];
@@ -85,7 +85,7 @@ public class Random {
 		float value = Float( sum );
 		sum = floats[0];
 		for (int i=0; i < length; i++) {
-			if (value < sum) {
+			if (value <= sum) {
 				return i;
 			}
 			sum += floats[i + 1];
@@ -111,7 +111,7 @@ public class Random {
 		
 		sum = probs[0];
 		for (int i=0; i < size; i++) {
-			if (value < sum) {
+			if (value <= sum) {
 				return (K)values[i];
 			}
 			sum += probs[i + 1];
