@@ -120,7 +120,8 @@ public class Utils {
 	public static boolean canUseClassicFont(String localeCode) {
 		if (localeCode.startsWith("ko")
 				|| localeCode.startsWith("zh")
-				|| localeCode.startsWith("ja")) {
+				|| localeCode.startsWith("ja")
+				|| localeCode.startsWith("tr")) {
 			return false;
 		}
 
