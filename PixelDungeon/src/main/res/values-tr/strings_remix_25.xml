@@ -1,38 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <!-- Items descriptions -->
-    <!-- STRINGS OF SpiderArmor CLASS -->
+    
+    
     <string name="SpiderArmor_Name">örümcek zırhı</string>
     <string name="SpiderArmor_Gender">kadınsı</string>
 
-    <!-- STRINGS OF BlackSkull CLASS -->
+    
     <string name="BlackSkull_Name">siyah kurukafa</string>
     <string name="BlackSkull_Gender">erkeksi</string>
 
-    <!-- STRINGS OF SoulShard CLASS -->
+    
     <string name="SoulShard_Name">ruh parçacığı</string>
     <string name="SoulShard_Gender">erkeksi</string>
 
-    <!-- Mobs descriptions -->
-    <!-- STRINGS OF DeathKnight CLASS -->
+    
+    
     <string name="DeathKnight_Name">ölü şövalye</string>
     <string name="DeathKnight_Gender">erkeksi</string>
     <string name="DeathKnight_Name_Objective">ölü şövalye</string>
     <string name="DreadKnight_Gender">erkeksi</string>
     <string name="EnslavedSoul_Gender">kadınsı </string>
-    <!-- STRINGS OF ExplodingSkull CLASS -->
+    
     <string name="ExplodingSkull_Name">patlayan kurukafa</string>
     <string name="ExplodingSkull_Gender">erkeksi</string>
     <string name="ExplodingSkull_Name_Objective">patlayan kurukafa</string>
     <string name="ExplodingSkull_Desc">Bu kurukafa her an patlayacakmış gibi gözüküyor</string>
 
-    <!-- STRINGS OF JarOfSouls CLASS -->
+    
     <string name="JarOfSouls_Name">ruhlar kavanozu</string>
     <string name="JarOfSouls_Gender">erkeksi</string>
     <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
     <string name="Lich_Gender">erkeksi</string>
     <string name="RunicSkull_Gender">erkeksi</string>
-    <!-- STRINGS OF Zombie CLASS -->
+    
     <string name="Zombie_Name">Zombi</string>
     <string name="Zombie_Name_Objective">Zombi</string>
-    </resources>
+    <string name="SpiderArmor_Info">Bu zırh eski örümcek gövdelerinden yapılmış garip bir giysidir. İlginç bir şekilde hala fonksiyonel ağ fırlatıcıları var, uygun şekilde plakalara bastırıldığında ağ fırlatabilir</string>
+    <string name="SoulShard_Info">Bu Ruh Vazosuna ait bir vazo kırığı. Mistik bir enerji ile parlıyor. Belki buralarda bunun gibi ilginç şeylere ilgi dyan birileri olabilir</string>
+    <string name="DreadKnight_Name">dehşet şovalyesi</string>
+    <string name="DreadKnight_Name_Objective">dehşet şovalyesi</string>
+    <string name="DreadKnight_Desc">Dehşet şovalyesi , hayatına güzel ve doğru birşey girmemiş antik bir savaşçıdır.Günahlarından dolayı bu şekilsiz vücutta sonsuza kadar yaşamak ile lanetlenmiş.Yaşadığı her an kurbanlarına verdiği acı ve çileyi hissediyor.</string>
+
+    
+    <string name="EnslavedSoul_Name">esir ruh</string>
+    <string name="EnslavedSoul_Name_Objective">esir ruh</string>
+    <string name="EnslavedSoul_Desc">Bu hayali belirtinin neredeyse içini görebiliyorsun Önce kafatası görünüyor sonrasında acı çeken bir yüz.</string>
+
+    
+    <string name="JarOfSouls_Desc">Bu kavanozun üzerine bir kurukafanın parlayan gözleri resmedilmiş. Yaydığı garip enerji seni tedirgin ediyor.</string>
+
+    
+    <string name="Lich_Name">lich</string>
+    <string name="Lich_Name_Objective">lich</string>
+    <string name="Lich_Desc">Güçlü büyücüler Necropolis\'in bu derinliklerinde öldüğünde, buradaki şeytani enerji vücudunu ele geçirip onu \"Lich\" e çevirir.Bu ölümsüz büyücü artık kötü niyetli ellerde bir kukladır</string>
+
+    
+    <string name="RunicSkull_Name">rünik kafatası</string>
+    <string name="RunicSkull_Name_Objective">rünik kafatası</string>
+    <string name="RunicSkull_Desc">Yapay olarak yapılmış bu kafatası gerçeğe çok benziyor.Onu saran soluk ışığı görebilirsin</string>
+
+    
+    <string name="Zombie_Gender">masculine</string>
+    <string name="Zombie_Desc">Zindan bir çok maceracı için tehlikeli bir yerdir. Bir çok maceracı burada felaketleri ile buluşmuştur. Onların en şanssızları ise Necropolis\'te ölenlerdir.Burada çürüyen bir vücut içinde dolaşmakla lanetlenmişlerdir.</string>
+
+    
+    <string name="NecromancerNPC_Intro2">Ah! Yaşayan bir maceracı. Olağanüstü. Özürlerimi sunarım. Gördüğün gibi bendeniz bir necromancer\'im. Ölüm üzerinde çalışmak benim yaşamk için yaptığım şey, aynı şeyleri sürekli görmek olağanüstü sıkıcı. Diğer taraftan benim burada bulunma sebebim bu. Kısa zaman önce muhteşem bir şey oldu. Bir Necropolis (ölülerin antik şehri) ortaya çıktı. Gerçeği istersen oranın girişinin hemen yanında duruyoruz. Vee.. şunu söyleyeyim, bu anahtarı al ve önce sen gir, kastettiğim sen şu macera şeylerini seversin di mi? Ve ben hemen arkanda olacağım. Sadece hazır olmaya ihtiyacım var.</string>
+
+    
+    <string name="Badges_Lich_Slain">Lich öldürüldü</string>
+
+</resources>

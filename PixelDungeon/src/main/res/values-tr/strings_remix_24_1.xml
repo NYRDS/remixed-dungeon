@@ -1,21 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <!-- Mobs descriptions -->
-    <!-- STRINGS OF ArmoredStatue -->
+    
+    
     <string name="ArmoredStatue_Name">canlandırılmış heykel </string>
     <string name="ArmoredStatue_Gender">kadınsı</string>
     <string name="ArmoredStatue_Name_Objective">canlandırılmış heykel</string>
-    <!-- STRINGS OF SpiderSoldier -->
+    
     <string name="SpiderGuard_Name">örümcek gardiyan</string>
     <string name="SpiderGuard_Gender">erkeksi</string>
     <string name="SpiderGuard_Name_Objective">örümcek gardiyan</string>
     <string name="SpiderMindAmber_Gender">erkeksi</string>
-    <!-- Accessories descriptions -->
-    <!-- STRINGS OF PirateSet CLASS -->
+    
+    
     <string name="PirateSet_Name">korsan seti</string>
-    <!-- System Text-->
-    <!-- STRINGS OF WndHats CLASS -->
+    
+    
     <string name="WndSaveSlotSelect_Delete_Yes">evet sil !</string>
     <string name="WndSaveSlotSelect_Delete_No">hayır.</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bu Kayıt Dosyasını Silmek İstediğinden Emin Misin ?</string>
-</resources>
+<string name="SpiderGuard_Desc">Askerler gibi örümcek muhafızlarda krallıklarını korumak için yemin etmiştir.Muhafızın zehri düşmanlarını felç ederek hareket etmelerini engeller.</string>
+
+    
+    <string name="SpiderMindAmber_Name">kehribar örümcek</string>
+    <string name="SpiderMindAmber_Name_Objective">kehribar örümcek</string>
+    <string name="SpiderMindAmber_Desc">Kehribar örümcekler gizemli ve nadir varlıklardır. Psi-örümcek \'ler gibi psişik güçleri vardır ancak bu tarikat kardeşlerinden daha da güçlüdürler.</string>
+
+    
+    
+    <string name="PirateSet_Info">Arr! Bir korsan gibi misin yoksa lanet olası bir kara adamı mı ? Öyle olmadığını umuyorum. Bu şey korsanlar içindir. Arr.</string>
+
+    
+    
+    </resources>

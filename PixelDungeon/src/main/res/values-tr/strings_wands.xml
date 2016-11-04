@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--PACKAGE /items/Wands-->
-  <!--STRINGS OF Wand CLASS-->
+  
+  
   <string name="Wand_Name">%s  asa </string>
   <string name="Wand_ACZap">BUM</string>
   <string name="Wand_Damage">bu asayı yakın mesafe silahı olarak kullandığın zaman her vuruşta %d hasar verir</string>
@@ -22,14 +22,14 @@
     <item>meşe</item>
     <item>huş</item>
   </string-array>
-  <!--STRINGS OF WandOfAmok CLASS-->
+  
   <string name="WandOfAmok_Info1">hiçbişi olmadı</string>
-  <!--STRINGS OF WandOfAvalanche CLASS-->
-  <!--STRINGS OF WandOfBlink CLASS-->
-  <!--STRINGS OF WandOfDisintegration CLASS-->
-  <!--STRINGS OF WandOfFirebolt CLASS-->
+  
+  
+  
+  
   <string name="WandOfFirebolt_Name">ateşoku asası </string>
-  <!--STRINGS OF WandOfFlock CLASS-->
+  
   <string name="Sheep_Name">koyun</string>
   <string name="Sheep_Name_Objective">koyunlar</string>
   <string name="Sheep_Gender">kadınsı</string>
@@ -42,15 +42,71 @@
     <item>Mee...</item>
     <item>Mle...</item>
   </string-array>
-  <!--STRINGS OF WandOfLightning CLASS-->
-  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  
+  
   <string name="WandOfMagicMissile_ACDisenchant">BÜYÜYÜBOZ</string>
   <string name="WandOfMagicMissile_Info1">Kendi kendini Büyülü Füze Âsân ile öldürdün...</string>
   <string name="WandOfMagicMissile_SelectWand">Yükseltmek istediğin bir asa seç</string>
   <string name="WandOfMagicMissile_Desinchanted">Büyülü Füze asasının büyüsünü bozdun ve özünü kendi %s yükseltmek için kullandın</string>
-  <!--STRINGS OF WandOfPoison CLASS-->
-  <!--STRINGS OF WandOfRegrowth CLASS-->
-  <!--STRINGS OF WandOfSlowness CLASS-->
-  <!--STRINGS OF WandOfTelekinesis CLASS-->
-  <!--STRINGS OF WandOfTeleportation CLASS-->
+  
+  
+  
+  
+  
+<string name="Wand_Wood">Bu ince %s asası dokunduğunda sıcak.Kullandığında ne gibi bir etkisi olacağını kim bilebilir?</string>
+    <string name="Wand_Fizzles">asanın şarjı bitti;</string>
+    <string name="WandOfAmok_Name">Öldürme arzusu asası</string>
+    <string name="WandOfAmok_Info">Bu asadan çıkan pembe ışık hedefini öldürme arzusu ile doldurur.Civardaki yaratıklara saldırmasını sağlar.</string>
+    <string name="WandOfAvalanche_Name">Çığ Asası</string>
+    <string name="WandOfAvalanche_Info">Bu asanın gücün bir duvara yönelttiğinde taşlardan bir çığ oluşturur ve etrafdaki yaratıkları şaşırtır cve hasar verir.</string>
+    <string name="WandOfAvalanche_Info1">Çığ asası ile kendini öldürdün...</string>
+
+    
+    <string name="WandOfBlink_Name">Gözkırpma Asası</string>
+    <string name="WandOfBlink_Info">Bu asa seçtiği yöne ışınlanmanı sağlar. Yolundaki yaratık ve cansız nesneler ışınlanmanı engeller.</string>
+
+    
+    <string name="WandOfDisintegration_Name">Dağılma Asası</string>
+    <string name="WandOfDisintegration_Info">Bu asa yokedici bir enerji ışını yayar. Bu enerji yolu üzerindeki tüm yaratıklara işler, ne kadar çok yaratık varsa verdiği hasar da o kadar artar.</string>
+
+    
+    <string name="WandOfFirebolt_Info">Bu asa yakıcı sihirli bir ateş patlatır. Yanabilir arazide  yangın çıkartır ve dokunduğu yaratığı yakar ve hasar verir.</string>
+    <string name="WandOfFirebolt_Info1">Ateş asası ile kendini öldürdün...</string>
+
+    
+    <string name="WandOfFlock_Name">Sürü asası</string>
+    <string name="WandOfFlock_Info">Bu asanın şıklatılması sihirli bir koyun sürüsü yaratır ve bu sürü geçilmez bir engel oluşturur.</string>
+    <string name="WandOfLightning_Name">Şimşek Asası</string>
+    <string name="WandOfLightning_Info">Bu asa ölümcül bir elektrik akımı üretir.Birbirine yakın olan tüm yaratıklara etki eder.</string>
+    <string name="WandOfLightning_Info1">Şimşek Asası ile kendini öldürdün...</string>
+
+    
+    <string name="WandOfMagicMissile_Name">Sihirli Ok Asası</string>
+    <string name="WandOfMagicMissile_Info">Bu asa saf büyü enerjisinden oklar fırlatır. Bu oklar orta seviye hasar verir.</string>
+    <string name="WandOfPoison_Name">Zehir Asası</string>
+    <string name="WandOfPoison_Info">Bu asadan çıkan iğrenç zehirli uçlar hedefini ölümcül bir zehirle etkiler.Zehirlenen yaratık zehhrin etkisi boyunca acı çekerek zarar görür.Bu asanın seviyesinin arttırılması zehrin etki süresini uzatır.</string>
+    <string name="WandOfPoison_Info1">hiç birşey olmadı</string>
+
+    
+    <string name="WandOfRegrowth_Name">Büyütme Asası</string>
+    <string name="WandOfRegrowth_Info">Hayat sona erdiğince , yeni bir hayat her zaman büyür.Sonsuz döngü herzaman devam edecektir!</string>
+    <string name="WandOfRegrowth_Info1">hiç birşey olmadı</string>
+
+    
+    <string name="WandOfSlowness_Name">Yavaşlık Asası</string>
+    <string name="WandOfSlowness_Info">Bu asa etki süresi boyunca hedeflenen yaratığın hızını yarıya indirir</string>
+    <string name="WandOfSlowness_Info1">hiç birşey olmadı</string>
+
+    
+    <string name="WandOfTelekinesis_Name">Telekinetik Asa</string>
+    <string name="WandOfTelekinesis_Info">Bu asanın sihirli gücü yolu boyunca tüm tuzakları etkileyecek çalışmasını sağlar, yüksek çimleri ezer
+	, kapalı kapıları açar, açık kapıları kapatır ayrıca yaratıkları geri iter.</string>
+    <string name="WandOfTelekinesis_YouNowHave">%s nesnesini sihirli bir yolla çantan ışınladın</string>
+
+    
+    <string name="WandOfTeleportation_Name">Işınlanma Asası</string>
+    <string name="WandOfTeleportation_Info">Bu asadan çıkan ışın hedefini rastgele bir yere ışınlar.</string>
+    <string name="WandOfTeleportation_Info1">%2$s rastgele bir yere ışınlandı</string>
+    <string name="WandOfTeleportation_Info2">hiç birşey olmadı</string>
+
 </resources>

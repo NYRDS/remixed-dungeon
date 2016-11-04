@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--PACKAGE /items/rings-->
-  <!--STRINGS OF Ring CLASS-->
+  
+  
   <string name="Ring_Name">%s yüzük</string>
   <string name="Ring_Info">metal halka üzerinde  karanlıkta parlayan kocaman bir %s mücevheri duruyor. kim bilir acaba giydiğinde ne etkileri olacak ?</string>
   <string name="Ring_Info1">tek seferde yalnızca 2 yüzük giyebilirsin</string>
@@ -9,34 +9,113 @@
   <string name="Ring_Info3a">%1$s\n\n %2$s parmağında  %3$s.</string>
   <string name="Ring_Info3b">,çünkü bu lanetli sen bu laneti kaldırmak için çok güçsüzsün</string>
   <string name="Ring_BuffKnown">bu %s</string>
-  <!--STRINGS OF RingOfAccuracy CLASS-->
+  
   <string name="RingOfAccuracy_Name">nişan alma yüzüğü</string>
   <string name="RingOfAccuracy_Info">bu yüzük rakibe vuruş şansını arttırır.</string>
-  <!--STRINGS OF RingOfDetection CLASS-->
+  
   <string name="RingOfDetection_Name">farkındalık yüzüğü</string>
-  <!--STRINGS OF RingOfElements CLASS-->
+  
   <string name="RingOfElements_Name">elementlerin yüzüğü</string>
-  <!--STRINGS OF RingOfEvasion CLASS-->
+  
   <string name="RingOfEvasion_Info">bu yüzük rakibin saldırından kaçınma şansını arttırır.</string>
-  <!--STRINGS OF RingOfHaggler CLASS-->
-  <!--STRINGS OF RingOfHaste CLASS-->
-  <!--STRINGS OF RingOfHerbalism CLASS-->
-  <!--STRINGS OF RingOfMending CLASS-->
-  <!--STRINGS OF RingOfPower CLASS-->
+  
+  
+  
+  
+  
   <string name="RingOfPower_Name">güç yüzüğü</string>
-  <!--STRINGS OF RingOfSatiety CLASS-->
-  <!--STRINGS OF RingOfShadows CLASS-->
+  
+  
   <string name="RingOfShadows_Name">gölgelerin yüzüğü </string>
-  <!--STRINGS OF RingOfThorns CLASS-->
-  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  
+  
   <string name="RingOfStoneWalking_Name">kan taşı yüzüğü</string>
   <string name="RingOfStoneWalking_ImmuredInStone">taşların arasında sıkıştın. sonsuza kadar.</string>
-  <!--STRINGS OF SpiderCharm CLASS-->
+  
   <string name="SpiderCharm_Use">kullan</string>
-  <!--STRINGS OF ChaosCrystal CLASS-->
+  
   <string name="ChaosCrystal_Name">tuhaf kristal</string>
   <string name="ChaosCrystal_Name_2">kaos kristali</string>
   <string name="ChaosCrystal_Use">kullan</string>
-  <!--STRINGS OF RatKingCrown CLASS-->
+  
   <string name="RatKingCrown_Name">fare kralın tacı</string>
+<string name="Ring_Identify">%1$s nesnesini artık tanıyorsun.bu bir %2$s.</string>
+
+    <string-array name="Ring_Gems">
+        <item>elmas</item>
+        <item>opal</item>
+        <item>lal</item>
+        <item>yakut</item>
+        <item>ametist</item>
+        <item>topaz</item>
+        <item>oniks</item>
+        <item>turmalin</item>
+        <item>zümrüt</item>
+        <item>safir</item>
+        <item>kuvars</item>
+        <item>akik</item>
+    </string-array>
+
+    <string name="Ring_Info4">%1$s\n\n%2$s üzerinde gizlenmiş kötü büyüyü hissediyorsun.</string>
+    <string name="RingOfDetection_Info">Bu yüzük takan kişiye gizli şeyleri arama yapmadan bulma yeteneği verir (tuzaklar, gizli kapılar) . Bozulmuş bir yüzük ise tam tersi bu gizemleri farketmeni zorlaştırır.</string>
+
+    
+    <string name="RingOfElements_Info">Bu yüzük farklı elementlere karşı direnç sağlar (elektrik,gaz,hava gibi) aynı zaman negatif etkilerinin de süresini azaltır.</string>
+
+    
+    <string name="RingOfEvasion_Name">Korunma Yüzüğü</string>
+    <string name="RingOfHaggler_Name">Pazarlık Yüzüğü</string>
+    <string name="RingOfHaggler_Info">Gerçekte bu yüzük hiç bir sihirli güç sağlamaz.Ancak dükkan sahiplerine bu yüzüğü takan kişinin Hırsızlar Loncsının üyesi oldunu gösterir ve onların sana indirim yapmalarını sağlar.</string>
+
+    
+    <string name="RingOfHaste_Name">Acele Yüzüğü</string>
+    <string name="RingOfHaste_Info">Yüzüğü takan kişinin işleri daha hızlı yapmasını sağlar.</string>
+
+    
+    <string name="RingOfHerbalism_Name">Şifacı Yüzüğü</string>
+    <string name="RingOfHerbalism_Info">Çimlerden çiy ve tohum elde etme ihtimalini arttırır.</string>
+
+    
+    <string name="RingOfMending_Name">Tamir Yüzüğü</string>
+    <string name="RingOfMending_Info">Bu yüzük vücudunun kendini yenileme hızını arttırarak sağlığının daha hızlı artmasını sağlar. Bozulmuş yüzük ise tam tersi etki yapacktır.</string>
+
+    
+    <string name="RingOfPower_Info">Asan daha güçlü olacaktır ancak yüzüğün bozulursa bu ters etki yapacaktır.</string>
+
+    
+    <string name="RingOfSatiety_Name">Tokluk Yüzüğü</string>
+    <string name="RingOfSatiety_Info">Bu yüzüğü taktığında daha az yemek yeme ihtiyacı duyacaksın.</string>
+
+    
+    <string name="RingOfShadows_Info">Bu yüzüğü giydiğinda düşmanların seni daha zor farkedecek.</string>
+
+    
+    <string name="RingOfThorns_Name">Diken Yüzüğü</string>
+    <string name="RingOfThorns_Info">Bu yüzüğü taktığında sana saldıran düşman kendiside zarar görecektir. Bu yüzüğü yükseltmek ek bir getiri sağlamaz.</string>
+    
+    
+    <string name="RingOfStoneWalking_Info">Bu garip yüzük bir çeşit sağlam taştan yapılmış. İlk düşüncen bunun bir yakut olduğuydu . Bir duvarda kalp ile birlikte işaret oku belirir Bu nasıl mümkün olabilir?</string>  
+    <string name="SpiderCharm_Name">Örümcek tılsımı</string>
+    <string name="SpiderCharm_Info">Bu egzotik biblo bir gizem aurası ile örtülmüş. Kullanıldığından nasıl bir etki yapacağını kim bilir ? </string>
+    <string name="ChaosCrystal_Name_1">Kaotik Kristal</string>
+    <string name="ChaosCrystal_Info">Tuttuğunda ellerinden akan enerjiyi hissediyorsun</string>
+    <string name="ChaosCrystal_Info_1">Kaotik güçler bu kristalden akıyor. Kullanışlı olabilir.</string>
+    <string name="ChaosCrystal_Info_2">Evet, artık biliyorsun , bunu nesnelerinden birisi ile eritebilirsin, ama sonra ne olacak ? </string>
+    <string name="ChaosCrystal_Fuse">ERİT</string>
+    <string name="ChaosCrystal_Prompt">Kaos işaretini koyacağın yeri seç</string>
+    <string name="ChaosCrystal_SelectForFuse">Kaos kristali ile eriteceğin nesneyi seç</string>
+    <string name="ChaosCrystal_ScrollFused">Kristal , rün tarafından emilerek parşömen üzerinde bir yazı oluşturdu. Parşömen artık %s</string>
+    <string name="ChaosCrystal_SwordFused">Kristal silahını özümsedi ve birlikte bir kılıç oluşturdu</string>
+    <string name="ChaosCrystal_BowFused">Kristal yayını özümsedi ve yayınla bir bileşik haline geldi</string>
+    <string name="ChaosCrystal_StaffFused">Kristal sihir değneğini özümsedi ve birlikte bir asa oluşturdu</string>
+
+    <string name="CorpseDust_Buff">Öldürme arzusu</string>
+    <string name="DriedRose_Buff">Çekici</string>
+    <string name="DriedRose_CursedBuff">Tutkulu</string>
+    <string name="RatSkull_Buff">İspiyoncu</string>
+    <string name="RatKingCrown_Buff">Sıçan Kralı</string>
+
+    
+    <string name="RatKingCrown_Info">Sıçan Kralının gücünün simgesi altın tac</string>
+
 </resources>

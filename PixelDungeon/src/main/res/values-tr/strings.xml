@@ -1,14 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
+  
   <string name="app_name">Remixed Pixel Dungeon</string>
-  <!--STRINGS OF IntroScene CLASS-->
+  
   <string name="IntroScene_Txt">senden önce  çok fazla kahraman zindana daldı. bazıları hazine ve sihirli ganimetlerle daha önce hiç duymadıkları ziynetlerle döndüler ama hiçbirisi yendor un kolyesini getiremedi . zindanın en derinlerinde \n\n bu karşılaşmaya kendini hazır hissediyorsun. en önemlisi kaderinin sana gülümsediğini hissediyorsun. kendi maceranı başlatmanın tam zamanı !</string>
-  <!--STRINGS OF AmuletScene CLASS-->
+  
   <string name="AmuletScene_Exit">Buna bir gün diyelim</string>
   <string name="AmuletScene_Stay">Henüz Bitirmedim </string>
   <string name="AmuletScene_Txt">Sonunda ellerinin arasında Yendor\'un Tılsımı. Gücünü kullanarak dünyayı ele geçirebilir ya da insanlara barış ve refahı yaşayabilirsin ya da her neyse. Sonuç olarak hayatın sonsuza dek değişecek ve bu oyun burada bitecek. Veya burada yalnız bir ölümlü olarak biraz daha kalabilirsin. </string>
-  <!--STRINGS OF GameScene CLASS-->
+  
   <string name="GameScene_Welcome">pixel dungeonda %d seviyesine hoşgeldiniz !</string>
   <string name="GameScene_WelcomeBack">pixel dungeonda %d seviyesine tekrar hoşgeldiniz !</string>
   <string name="GameScene_NightMode">Tetikte ol, zindan geceleri daha tehlikelidir! </string>
@@ -16,7 +16,7 @@
   <string name="GameScene_Water">Etrafındaki su şapırtılarını duyuyorsun. </string>
   <string name="GameScene_Grass">Havadaki bitki kokusu hayli keskin. </string>
   <string name="GameScene_Secrets">Atmosfer gösteriyor ki bu katta bir sürü gizem saklıyor. </string>
-  <!--STRINGS OF Char CLASS-->
+  
   <string name="Char_Name">İzdiham</string>
   <string name="Char_Name_Objective">İzdiham</string>
   <string-array name="Char_Hit">
@@ -54,105 +54,579 @@
   <string name="Char_StaBleeding">kanama </string>
   <string name="Char_StaDizzy">şaşkın</string>
   <string name="Char_StaInvisible">görünmez</string>
-  <!--STRINGS OF Dungeon CLASS-->
+  
   <string name="Dungeon_NoTips">Yazı okunmaz halde... </string>
   <string name="Dungeon_DeadEnd">Burada ne yapıyorsun?! </string>
-  <!--STRINGS OF Challenges CLASS-->
-  <!--STRINGS OF Journal CLASS-->
+  
+  
   <string name="Journal_Ghost">üzgün hayalet.</string>
-  <!--STRINGS OF WndBlacksmith CLASS-->
-  <!--STRINGS OF WndCatalogus CLASS-->
+  
+  
   <string name="WndCatalogus_Potions">iksirler</string>
-  <!--STRINGS OF WndChallenges CLASS-->
-  <!--STRINGS OF WndChooseWay CLASS-->
-  <!--STRINGS OF WndClass CLASS-->
-  <!--STRINGS OF WndError CLASS-->
-  <!--STRINGS OF WndGame CLASS-->
-  <!--STRINGS OF WndHero CLASS-->
-  <!--STRINGS OF WndImp CLASS-->
-  <!--STRINGS OF WndInfoCell CLASS-->
-  <!--STRINGS OF WndInfoItem CLASS-->
-  <!--STRINGS OF WndJournal CLASS-->
-  <!--STRINGS OF WndRanking CLASS-->
-  <!--STRINGS OF WndResurrect CLASS-->
-  <!--STRINGS OF WndSadGhost CLASS-->
-  <!--STRINGS OF WndStory CLASS-->
-  <!--STRINGS OF WndTradeItem CLASS-->
-  <!--STRINGS OF WndWandmaker CLASS-->
-  <!--STRINGS OF QuickSlot CLASS-->
-  <!--STRINGS OF Item CLASS-->
-  <!--STRINGS OF EquipableItem CLASS-->
-  <!--STRINGS OF Heap CLASS-->
-  <!--STRINGS OF Amulet CLASS-->
-  <!--STRINGS OF Ankh CLASS-->
-  <!--STRINGS OF ArmorKit CLASS-->
-  <!--STRINGS OF Dewdrop CLASS-->
-  <!--STRINGS OF DewVial CLASS-->
-  <!--STRINGS OF Gold CLASS-->
-  <!--STRINGS OF KindOfWeapon CLASS-->
-  <!--STRINGS OF LloidsBeacon CLASS-->
-  <!--STRINGS OF Stylus CLASS-->
-  <!--STRINGS OF TomeOfMastery CLASS-->
-  <!--STRINGS OF Torch CLASS-->
-  <!--STRINGS OF Weightstone CLASS-->
-  <!--PACKAGE /items/bags-->
-  <!--STRINGS OF Bag CLASS-->
-  <!--STRINGS OF Keyring CLASS-->
-  <!--STRINGS OF ScrollHolder CLASS-->
-  <!--STRINGS OF SeedPouch CLASS-->
-  <!--STRINGS OF WandHolster CLASS-->
-  <!--STRINGS OF PotionBelt CLASS-->
-  <!--PACKAGE /items/keys-->
-  <!--STRINGS OF GoldenKey CLASS-->
-  <!--STRINGS OF IronKey CLASS-->
-  <!--STRINGS OF SkeletonKey CLASS-->
-  <!--PACKAGE /items/quest-->
-  <!--STRINGS OF CorpseDust CLASS-->
-  <!--STRINGS OF DarkGold CLASS-->
-  <!--STRINGS OF DriedRose CLASS-->
-  <!--STRINGS OF DwarfToken CLASS-->
-  <!--STRINGS OF Pickaxe CLASS-->
-  <!--STRINGS OF RatSkull CLASS-->
-  <!--PACKAGE /actors/blobs-->
-  <!--STRINGS OF MissileWeapon CLASS-->
-  <!--STRINGS OF Fire CLASS-->
-  <!--STRINGS OF Foliage CLASS-->
-  <!--STRINGS OF ParalyticGas CLASS-->
-  <!--STRINGS OF ToxicGas CLASS-->
-  <!--STRINGS OF WaterOfAwareness CLASS-->
-  <!--STRINGS OF WaterOfHealth CLASS-->
-  <!--STRINGS OF WaterOfTransmutation CLASS-->
-  <!--STRINGS OF Web CLASS-->
-  <!--PACKAGE /actors/buffs-->
-  <!--STRINGS OF Amok CLASS-->
-  <!--STRINGS OF Barkskin CLASS-->
-  <!--STRINGS OF Bleeding CLASS-->
-  <!--STRINGS OF Blindness CLASS-->
-  <!--STRINGS OF Burning CLASS-->
-  <!--STRINGS OF Charm CLASS-->
-  <!--STRINGS OF Combo CLASS-->
-  <!--STRINGS OF Cripple CLASS-->
-  <!--STRINGS OF Frost CLASS-->
-  <!--STRINGS OF Fury CLASS-->
-  <!--STRINGS OF GasesImmunity CLASS-->
-  <!--STRINGS OF Hunger CLASS-->
-  <!--STRINGS OF Invisibility CLASS-->
-  <!--STRINGS OF Levitation CLASS-->
-  <!--STRINGS OF Light CLASS-->
-  <!--STRINGS OF MindVision CLASS-->
-  <!--STRINGS OF Ooze CLASS-->
-  <!--STRINGS OF Paralysis CLASS-->
-  <!--STRINGS OF Poison CLASS-->
-  <!--STRINGS OF Roots CLASS-->
-  <!--STRINGS OF Shadows CLASS-->
-  <!--STRINGS OF Slow CLASS-->
-  <!--STRINGS OF SnipersMark CLASS-->
-  <!--STRINGS OF Vertigo CLASS-->
-  <!--STRINGS OF Weakness CLASS-->
-  <!--PACKAGE /actors/hero-->
-  <!--STRINGS OF Belongings CLASS-->
-  <!--PACKAGE /sprites-->
-  <!--STRINGS OF ItemSprite CLASS-->
-  <!--PACKAGE /ui-->
-  <!--STRINGS OF Toolbar CLASS-->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<string-array name="Dungeon_Tips">
+        <item>Gücünü abartma, seviyene uygun silahlar kullan.</item>
+        <item>Zindandaki tüm kapılar ilk bakıştan görünmeyebilir. Sıkışırsan gizli kapıları araştır.</item>
+        <item>Gücünü arttırmak iyi ekipmanlara erişim için tek yol değildir. Güncelleme parşomeni ile ekipmanların güç gereksinimini azaltabilirsin</item>
+        <item>İlki 6. seviyede olan dükkanlarda topladığın altınları harcayabilirsin.</item>
+        <item>Goo \' ya dikkat!</item>
+        <item>Pixel-Mart - başarılı bir macera için tüm ihtiyacın olanlar burada!</item>
+        <item> Gerçekten ihtiyacın olduğundan kullanabilmek için, İksir ve parşömenlerini biran önce tanımla..</item>
+        <item>Acıkmaya başladığında canın azalmaz ama acıkırsan canın düşecektir.</item>
+        <item>Süpriz saldırılar isabet şansını arttırır. Örneğin düşmanında kapalı bir kapıdan ani saldırıda bulun.</item>
+        <item>Tengu \'yu dışarı salma!</item>
+        <item>Pixel-Mart. Para harca, uzun yaşa.</item>
+        <item>Birden fazla yaratık saldırdığında , bir kapı arkasına geri çekilmeyi dene.</item>
+        <item>Eğer uçuyorsan , yanma durumunda kendini suda söndüremezsin.</item>
+        <item>Birden fazla \"Ankh\" ı aynı anda taşımanın bir anlamı yok.Dirildiğinde çantandaki tüm ekipman yokolacak.</item>
+        <item>DİKKAT! ağır iş makinası, uzuv kaybı veya ölüme sebebiyet verebilir</item>
+        <item>Pixel-Mart. Zindanda güvenli bir hayat.</item>
+        <item>Efsunlu bir silahı güncellediğinde , silahın efsunu yok olabilir.</item>
+        <item>Dönüşüm kuyusu başka yerde bulamayacağın nesneleri elde etmeni sağlayabilir.</item>
+        <item>Bir silahı efsunlamanın tek yolu onu güncelleme parşomeni ile güncellemektir.</item>
+        <item>Majesteleri huzurunda silah bulundurmak yasaktır!</item>
+        <item>Pixel-Mart. Şeytan avcıları için özel fiyatlar!</item>
+        <item>Metin şeytani bir dille yazılmış.</item>
+        <item>Metin şeytani bir dille yazılmış.</item>
+        <item>Metin şeytani bir dille yazılmış.</item>
+    </string-array>
+
+    
+    <string-array name="Challenges_Names">
+        <item>Diyette</item>
+        <item>İman benim zırhımdır</item>
+        <item>İlaç korkusu</item>
+        <item>Çorak topraklar</item>
+        <item>Akıllı sürü</item>
+        <item>Karanlığın içinde</item>
+    </string-array>
+
+    
+    <string name="Journal_WellHealt">Sağlık Kuyusu</string>
+    <string name="Journal_WellAwareness">Farkındalık Kuyusu</string>
+    <string name="Journal_WellTransmut">Dönüşüm Kuyusu</string>
+    <string name="Journal_Alchemy">Simya potası</string>
+    <string name="Journal_Garden">Bahçe</string>
+    <string name="Journal_Statue">Canlı Heykel</string>
+    <string name="Journal_Wandmaker">Yaşlı Asa Ustası</string>
+    <string name="Journal_Troll">Troll Demirci</string>
+    <string name="Journal_Imp">Hırslı afacan</string>
+
+    
+    <string name="WndBlacksmith_Prompt">Tamam , anlaşma anlaşmadı. Senin için 2 nesneni daha kaliteli bir nesneye dönüştüreceğim.</string>
+    <string name="WndBlacksmith_Select">Dönüştürülecek nesneleri seç</string>
+    <string name="WndBlacksmith_Reforge">Bunları dönüştür</string>
+
+    
+    <string name="WndCatalogus_Scrolls">Parşömenler</string>
+    <string name="WndCatalogus_Title">Kataloglar</string>
+
+    
+    <string name="WndChallenges_Title">Meydan Okumalar</string>
+
+    
+    <string name="WndChooseWay_Message">Hangi yolu seçeceksin?</string>
+    <string name="WndChooseWay_Cancel">Sonra karar vereceğim</string>
+
+    
+    <string name="WndClass_Mastery">Uzmanlık</string>
+
+    
+    <string name="WndError_Title">HATA</string>
+
+    
+    <string name="WndGame_Settings">Ayarlar</string>
+    <string name="WndGame_Challenges">Meydan Okumalar</string>
+    <string name="WndGame_Ranking">Sıralama</string>
+    <string name="WndGame_Start">Yeni Oyun</string>
+    <string name="WndGame_menu">Ana Menü</string>
+    <string name="WndGame_Exit">Oyundan Çık</string>
+    <string name="WndGame_Return">Oyuna Geri Dön</string>
+    <string name="WndGame_Save">Kaydet</string>
+    <string name="WndGame_Load">Yükle</string>
+
+    
+    <string name="WndHero_Stats">Durum</string>
+    <string name="WndHero_Buffs">Buff\'lar</string>
+    <string name="WndHero_Exp">Deneyim</string>
+    <string name="WndHero_Str">Güç</string>
+    <string name="WndHero_Health">Sağlık</string>
+    <string name="WndHero_Gold">Toplanan Altın</string>
+    <string name="WndHero_Depth">Maksimum Derinlik</string>
+    <string name="WndHero_StaTitle">%1$d seviye %2$s</string>
+    <string name="WndHero_StaCatalogus">Kataloglar</string>
+    <string name="WndHero_StaJournal">Dergi</string>
+
+    
+    <string name="WndImp_Message">Evet, sen benim kahramanımsın. Ödülüne gelince, şu anda üzerimde para yok ama daha iyi birşeyim var senin için.Bu ata yadigarı yüzüğü büyükbabam ölü bir paladinden almış.</string>
+    <string name="WndImp_Reward">Yüzüğü al</string>
+
+    
+    <string name="WndInfoCell_Nothing">Burada birşey yok.</string>
+
+    
+    <string name="WndInfoItem_Chest">Sandık</string>
+    <string name="WndInfoItem_LockedChest">Kilitli sandık</string>
+    <string name="WndInfoItem_CrystalChest">Kristal sandık</string>
+    <string name="WndInfoItem_Tomb">Mezar</string>
+    <string name="WndInfoItem_Skeleton">İskelet Kalıntısı</string>
+    <string name="WndInfoItem_WontKnow">Açmadan içinde ne olduğunu bilemezsin!</string>
+    <string name="WndInfoItem_NeedKey"> Açmak için altın anahtara ihtiyacın var.</string>
+    <string name="WndInfoItem_Inside">%s. içerisini görebilirsin ama açmak için altın anahtar lazım.</string>
+    <string name="WndInfoItem_Owner">Bu antik mezarda kullanışlı birşeyler olabilir ama sahibi kesinlikle buna itiraz edecektir.</string>
+    <string name="WndInfoItem_Remains">Senden öncekilerden kalan birşeyler. Değerli birşey var mı diye kontrol etmende fayda olabilir.</string>
+
+    
+    <string name="WndJournal_Title">Dergi</string>
+
+    
+    <string name="WndRanking_Error">Ek bilgi yüklenemedi</string>
+    <string name="WndRanking_Stats">Durum</string>
+    <string name="WndRanking_Items">Nesneler</string>
+    <string name="WndRanking_Badges">Rozetler</string>
+    <string name="WndRanking_StaTitle">%1$d seviye %2$s</string>
+    <string name="WndRanking_StaChallenges">Meydan okumalar</string>
+    <string name="WndRanking_StaHealth">Sağlık</string>
+    <string name="WndRanking_StaStr">Güç</string>
+    <string name="WndRanking_StaDuration">Oyun süresi</string>
+    <string name="WndRanking_StaDepth">Maksimum derinlik</string>
+    <string name="WndRanking_StaEnemies">Öldürülen yaratık</string>
+    <string name="WndRanking_StaGold">Toplanan altın</string>
+    <string name="WndRanking_StaFood">Yenilen yemek</string>
+    <string name="WndRanking_StaAlchemy">Pişirilen iksir</string>
+    <string name="WndRanking_StaAnkhs">Kullanılan Ankh</string>
+
+    
+    <string name="WndResurrect_Message">Öldün, ama bu zindanı yenmek için bir şans daha verildi. İstiyor musun?</string>
+    <string name="WndResurrect_Yes">Evet, dövüşeceğim!</string>
+    <string name="WndResurrect_No">Hayır, pes ediyorum</string>
+
+    
+    <string name="WndSadGhost_Rose">Evet! Evet!!! İşte bu! Lütfen hemen ver onu ! bu nesnelerden istediğin birini alabilirsin..</string>
+    <string name="WndSadGhost_Rat">Evet ! O çirkin yaratık öldü artık dinlenebilirim... Maceranda yardımcı olacak bu nesnelerden birini seçebilirsin...</string>
+    <string name="WndSadGhost_Wepon">Hayaletin silahı</string>
+    <string name="WndSadGhost_Armor">Hayaletin zırhı</string>
+    <string name="WndSadGhost_Farewell">İyi yolculuklar!</string>
+
+    
+    <string name="WndStory_Sewers">Zindan burada şehrin altı boyunca uzanıyor. Üst seviyeler şehrin kanalizasyon sisteminin bir parçası. Şehrin bir parçası olarak bu seviyeler çok da tehlikeli değil. Kimse güvenli bir yer demiyor ancak burada şeytani güçlerle uğraşmak zorunda değilsin.</string>
+    <string name="WndStory_Prision">Yıllar önce en tehlikeli suçlular için burada bir hapishane inşa edildir. Zamanında çok kaçması çok zor olduğu için akıllıca bir fikirdi. Ama sonra aşağılardan gelen kötücül bir hava sızıntısı mahkum ve gardiyanları çılgına çevirdi. Sonunda hapishane terkedildi, ama buralarda hala birkaç hükümlü kalmış olabilir</string>
+    <string name="WndStory_Caves">Terkedilmiş hapisanenin altında mağaralar uzanır. Şehir tarafından kullanılmak için çok derinde ve maden açısından fakirdir.Geçmişte buralarda ticaret noktaları vardı ancak Cüce Metropolis\'inin düşmesinden sonra çürümeye yüz tuttu. Artık buralarda gnoller ve yeraltı canlıları dışında kimse yaşamıyor.</string>
+    <string name="WndStory_Metropolis">Cüce Metropolis\'i cüce eyaletleri arasında en şanlısıydı.Cüceler doruk noktasında , mekanize orduları ile Eski Tanrı ve onun şeytan ordusunu yendiler. Ancak zaferle geri dönen savaşçılar bozulmanın tohumlarını yanlarında getirdiler. Bu zafer cüce yeraltı şehrinin sonunun başlanıgıcı oldu.</string>
+    <string name="WndStory_Halls">Geçmişte bu bölge Metropolis\'in dış yerleşimleriydi. Pahalıya malolan zafer sonrasında , cüceler bu bölgelerdeki Eski Tanrı ve şeytani kalıntılarını temizlemek için güçsüz düştüler. Burada tutunan şetyani güçlerden sonra burası Şeytan Salonları olarak anıldı.\n\nÇok az maceraperest bu seviyelere ulaşabilmiştir...</string>
+    <string name="WndStory_Spiders">Yıllar burada önce sihirli taşlarla dolu bir maden vardı.Maden tükendikten sonra burada geride sadece tüneller ağı kaldı ve bu tüneller örümcekler tarafından dolduruldu. Tehlikelerine rahmen buralarda sihirli nesnelerin söylentisi cesur olanları buraya çekmeye yetiyor. Bir zamanlar şeytani bir cadı peşindekilerden kaçarak bu tünellere girdi, peşindeki batıl inançlı insanlar girmeye cesaret edemedi ve beklemeye karar verdi, ama cadı asla geri dönmedi. Belki de cadı başka bir çıkış yolu bulmuştur veya buradaki yaratıklar tarafından yok edilmiştir.</string>
+    
+    
+    <string name="WndTradeItem_Sale">SATILIK: %1$s - %2$dg</string>
+    <string name="WndTradeItem_Buy">%dg altına al</string>
+    <string name="WndTradeItem_Sell">%dg altına sat</string>
+    <string name="WndTradeItem_Sell1">Tekini %dg altına sat</string>
+    <string name="WndTradeItem_SellAll">Tümünü %dg altına sat</string>
+    <string name="WndTradeItem_Cancel">Boş ver</string>
+    <string name="WndTradeItem_Sold">%2$dg altına %1$s sattın </string>
+    <string name="WndTradeItem_Bought">%2$dg altına %1$s aldın</string>
+
+    
+    <string name="WndWandmaker_Message">oo, görüyorumki başarılı olmuşsun. Umarım çok fazla sorunla karşılaşmadın. Söz verdiğim gibi asalarımdan birini seçebilirsin.</string>
+    <string name="WndWandmaker_Battle">Savaş Asası</string>
+    <string name="WndWandmaker_NonBattle">Yararlı Asa</string>
+    <string name="WndWandmaker_Farawell">Maceranda başarılar, %s!</string>
+
+    
+    <string name="QuickSlot_SelectedItem">Hızlı kullanım için bir nesne seçin</string>
+
+    
+    <string name="Item_Name">smth</string>
+    <string name="Item_Info">smth</string>
+    <string name="Item_ACDrop">BIRAK</string>
+    <string name="Item_ACThrow">FIRLAT</string>
+    <string name="Item_PackFull">%s için çantan dolu</string>
+    <string name="Item_DirThrow">Fırlatılacak yeri seçin</string>
+
+    
+    <string name="EquipableItem_ACEquip">KUŞAN</string>
+    <string name="EquipableItem_ACUnequip">ÇIKART</string>
+    <string name="EquipableItem_Unequip">%s lanetli çıkartamıyorsun !</string>
+
+    
+    <string name="Heap_Mimic">Bu bir Mimik!</string>
+
+    
+    <string name="Amulet_Name">Yendor Muskası</string>
+    <string name="Amulet_ACEnd">OYUNUN SONU</string>
+
+    
+    <string name="Ankh_Name">Ankh</string>
+
+    
+    <string name="ArmorKit_Name">zırh kiti</string>
+    <string name="ArmorKit_ACAplly">UYGULA</string>
+    <string name="ArmorKit_Info">Bu alet takımı ile herhangi biri normal bir zırhı orjinal özellikleri sabit kalmak koşuluyla \"efsanevi zırh\" a dönüştürebilir , ek olarak bu zırh giyene sınıfına uygun ek bir yetenek verecektir. Terzilik, Deri İşçiliği veya Demircilik yeteneği gerektirmez.</string>
+    <string name="ArmorKit_SelectArmor">Yükseltilecek zırhı seç</string>
+    <string name="ArmorKit_Upgraded">%s zırhını güncellemeyi onayladın</string>
+
+    
+    <string name="Dewdrop_Name">Çiy Damlası</string>
+    <string name="Dewdrop_Info">Kristal berraklığında çiy damlası.</string>
+
+    
+    <string name="DewVial_Name">Çiy Damlası Şişesi</string>
+    <string name="DewVial_ACDRINK">İÇ</string>
+    <string name="DewVial_Info">Fazla çiy damlalarını bu şisede saklayablir ve sonra içerbilirsin.Şişe dolu olduğunda ölümcl durumda otomatik olarak kullanılır.</string>
+    <string name="DewVial_AutoDrink">Yaralarını iyileştirmek için tüm çiy damlaları tüketildi.</string>
+    <string name="DewVial_Collected">Şişede 1 adet çiy damlası topladın.</string>
+    <string name="DewVial_Full">Çiy damlası şişesi dolu!</string>
+    <string name="DewVial_Empty">Çiy damlası şişesi boş!</string>
+
+    
+    <string name="Gold_Name">altın</string>
+    <string name="Gold_Collect">Daha sonra dükkanda harcamak için altınları topla.</string>
+    <string name="Gold_Info">%d adet altın.</string>
+    <string name="Gold_Info1">Bir adet altın sikke.</string>
+
+    
+    <string name="KindOfWeapon_EquipCursed">%s etrafını gönülsüzce sardı</string>
+
+    
+    <string name="LloidsBeacon_Name">lloyd\'un feneri</string>
+    <string name="LloidsBeacon_ACSet">AYARLA</string>
+    <string name="LloidsBeacon_ACReturn">GERİ DÖN</string>
+    <string name="LloidsBeacon_Info">Lloyd\'un fenesi daha önce bulunduğun bir mekana geri dönmeni sağlayan karışık bir alettir.</string>
+    <string name="LloidsBeacon_Preventing">Bir çeşit güçlü ve sihirli aura Llody\'un Fenerini kullanmanı engelliyor!</string>
+    <string name="LloidsBeacon_Creatures">Etraftaki yaratıkların psişik auorası Lloyd\'un fenerini kullanmanı engelliyor</string>
+    <string name="LloidsBeacon_Return">Lloyd\'un feneri başarıyla şu anki konuma ayarlandı.İstediğinde buraya geri dönebilirsin.</string>
+    <string name="LloidsBeacon_Set">\n\nBu neden %d . seviyede bir yerlere ayarlı.</string>
+
+    
+    <string name="Stylus_Name">Esrarlı Kalem</string>
+    <string name="Stylus_ACInscribe">KAZI</string>
+    <string name="Stylus_Info">Bu gizemli kalem karanlık bir taştan yapılmış.Bu kalem ile bir rün veya kabartma çizebilirsin ama ne olacağını seçmeye gücün yetmez.</string>
+    <string name="Stylus_SelectArmor">Üzerine kazıyacağın nesneyi seç</string>
+    <string name="Stylus_Inscribed">%2$s üzerine %1$s kazıdın</string>
+
+    
+    <string name="TomeOfMastery_Name">Ustalık Kitabı</string>
+    <string name="TomeOfMastery_ACRead">OKU</string>
+    <string name="TomeOfMastery_Info">Bu eski deri kitap o kadarda kalın değil. Yine de bunu okumanın zaman alacağını unutma.</string>
+    <string name="TomeOfMastery_Blinded">Körken okuyamazsın</string>
+    <string name="TomeOfMastery_Choose">%s yolunu seçtin!</string>
+
+    
+    <string name="Torch_Name">meşale</string>
+    <string name="Torch_ACLight">YAK</string>
+    <string name="Torch_Info">Zayıf aydınlatması ile meşhur Şeytan Salonları için gerekli bir nesne.</string>
+
+    
+    <string name="Weightstone_Name">ayar taşı</string>
+    <string name="Weightstone_ACApply">UYGULA</string>
+    <string name="Weightstone_Info">Ayar taşı ile silahını hız veya kesinlik üzerine ayarlayabilirsin</string>
+    <string name="Weightstone_Select">Ayarlanacak silahı seçin</string>
+    <string name="Weightstone_Fast">%s daha hızlı olması için ayarlandı</string>
+    <string name="Weightstone_Accurate">%s daha kesin olması için ayarlandı</string>
+    <string name="Weightstone_WndChoice">%s ayarı nasıl yapılsın?</string>
+    <string name="Weightstone_WndSpeed">Hız</string>
+    <string name="Weightstone_WndAccuracy">Kesinlik</string>
+    <string name="Weightstone_WndCancel">Boşver</string>
+
+    
+    
+    <string name="Bag_ACOpen">AÇ</string>
+    
+    <string name="Keyring_Name">Anahtarlık</string>
+    <string name="Keyring_Info">Bu bakır anahtarlık ile anahtarlarını diğer eşyalarında ayrı olarak saklayabilirsin.</string>
+    
+    <string name="ScrollHolder_Name">Parşömen çantası</string>
+    <string name="ScrollHolder_Info">Bu tüp şeklindeki çantaya parşömenlerini saklayarak çantanda boş yer açabilir ve yanmaya karşı korursun</string>
+    
+    <string name="SeedPouch_Name">tohum kesesi</string>
+    <string name="SeedPouch_Info">Bu küçük kadife kesede tohumlarını saklayabilirsin.</string>
+    
+    <string name="WandHolster_Name">Asa çantası</string>
+    <string name="WandHolster_Info">Bu egzotic hayvan derisinden yapılmış ince çanta ile %d asa taşıyabilirsin.</string>
+    
+    <string name="PotionBelt_Info">Bu dayanıklı deri kemer ile iksirlerini saklayabilir ve onları donmaktan koruyabilirsin.</string>
+    <string name="PotionBelt_Name">iksir kemeri</string>
+
+    
+    
+    <string name="GoldenKey_Name">altın anahtar</string>
+    <string name="GoldenKey_Info">Bu altın anahtar ile kilitli bir sandığı açabilirsin</string>
+
+    
+    <string name="IronKey_Name">demir anahtar</string>
+    <string name="IronKey_Info">Bu anahtar ile bir kapıyı açabilirsin</string>
+    <string name="IronKey_FromDepth">%d . seviyeden demir anahtar</string>
+
+    
+    <string name="SkeletonKey_Name">iskelet anahtar</string>
+    <string name="SkeletonKey_Info">Çok ağırbaşlı duruyor. Bununla önemli bir kapıyı açabilirsin.</string>
+
+    
+    
+    <string name="CorpseDust_Name">ceset tozu</string>
+    <string name="CorpseDust_Info">Ceset tozu , diğer toz topaklarından farklı görünmüyor. Belkide bir şekilde bundan kurtulman en iyisi</string>
+    <string name="CorpseDust_Info2">Sadece tutmak bile seni endişeli ve sinirli yapıyor</string>
+	
+    
+    <string name="DarkGold_Name">kara altın damarı</string>
+    <string name="DarkGold_Info">Bu metal sadece renginden dolayı kara olarak anılmıyor, gün ışığında erimesinden dolayı yüzeyden tamamen kullanışsız</string>
+
+    
+    <string name="DriedRose_Name">kuru gül</string>
+    <string name="DriedRose_Info">Bu gül uzun zaman önce kurumuş, fakat nasıl olduysa tüm yaprakları üzerinde.</string>
+	<string name="DriedRose_Info2"> Çekiciliğinden hiç birşey kaybetmemiş. Sonsuza kadar saklamak isteyeceğin kadar çekici görünüyor.</string>
+
+    
+    <string name="DwarfToken_Name">cüce simgesi</string>
+    <string name="DwarfToken_Info">Bir çok cüce bu metal parçasını bilinmeyen bir amaçlar üzerinde taşırdı.Bir mücevher veya kimlik olabilir, Cüceler çok garip bir halktır kimbilir ?.</string>
+
+    
+    <string name="Pickaxe_Name">kazma</string>
+    <string name="Pickaxe_Info">Bu büyük ve sağlam araç ile kayaları kırabilirsin.Bir silah olarakta kullanılabilir.</string>
+    <string name="Pickaxe_ACMine">KAZ</string>
+    <string name="Pickaxe_Gender">dişi</string>
+    <string name="Pickaxe_NoVein">Yakında kazılacak bir kara altın damarı yok</string>
+
+    
+    <string name="RatSkull_Name">dev sıçan kafatası</string>
+    <string name="RatSkull_Info">Eğer çok kötü kokmasaydı iyi bir av hatırası olabilirdi.</string>
+	<string name="RatSkull_Info2"> Diğer yandan bunu yapanın büyük ve kokuşuk sıçanları öldürebileceğini gösteriyor.</string>
+
+    
+    
+    <string name="ConfusionGas_Info">Kafa karıştırıcı gaz bulutu buralarda dönüyor</string>
+    
+    <string name="Fire_Info">Etrafta azgın bir yangın başladı.</string>
+    
+    <string name="Foliage_Info">Yer altı bahçelerinin kasvetli ışığı bir sütun gibi.</string>
+    
+    <string name="ParalyticGas_Info">Felç edici gaz bulutu etafta fırıl fırıl dönüyor.</string>
+    
+    <string name="ToxicGas_Info">Yeşil zehirli gaz bulutu etafta fırıl fırıl dönüyor.</string>
+    <string name="ToxicGas_Info1">Zehirli gazı soluyarak öldün.</string>
+    
+    <string name="WaterOfAwareness_Info"> Bilginin gücü bu kuyudan ışıldayark yayılıyor.Tek bir yudumla kuşandığın ekipmanın tüm özelliklerini öğrendin.</string>
+    <string name="WaterOfAwareness_Procced">bir yudum aldığın gibi bilgelik zihnine doldu. Kuşandığın  ekipmanların tüm özelliklerini biliyorsun ayrıca bu seviyedeki tüm nesnelerin yerlerinide görebiliyorsun.</string>
+    
+    <string name="WaterOfHealth_Info">Kuyudan sağlık verici ışıltılar yayılıyor , bir yudum aldığında yaraların ve tüm açlığın yok oluyor.</string>
+    <string name="WaterOfHealth_Procced">bir yudum aldığın gibi tüm yaraların iyileşti.</string>
+    
+    <string name="WaterOfTransmutation_Info">Kuyudan Sanş ışıltıları yayılıyor , Kuyuya bir nesne at ve başka bir şeye dönüşsün.</string>
+    
+    <string name="Web_Info">Buradaki herşey kalın bir ağ tabakası ile kaplı.</string>
+
+    
+    
+    <string name="Amok_Info">öldürme arzusu</string>
+    
+    <string name="Barkskin_Info">Sert Deri</string>
+    
+    <string name="Bleeding_Info">Kanaman var</string>
+    <string name="Bleeding_Death">Kanama dolayısıyla öldün</string>
+    
+    <string name="Blindness_Info">Kör oldun</string>
+    
+    <string name="Burning_Info">Yakıcı</string>
+    <string name="Burning_Burns">%s yanıyor</string>
+    <string name="Burning_Death">yanarak öldün...</string>
+    
+    <string name="Charm_Info">Çekici</string>
+    
+    <string name="Combo_Info">Kombo</string>
+    <string name="Combo_Combo">%d vuruş kombo!</string>
+    
+    <string name="Cripple_Info">kötürüm</string>
+    
+    <string name="Frost_Info">Frozen</string>
+    <string name="Frost_Shatter">The cold causes %s to shatter!</string>
+    
+    <string name="Fury_Info">öfkeli</string>
+    
+    <string name="GasesImmunity_Info">gazlara karşı bağışıklık</string>
+
+    
+    <string-array name="Hunger_Hungry">
+        <item>Acıkmaya başladın.</item>
+        <item>Acıkmaya başladın.</item>
+        <item>Acıkmaya başladın.</item>
+    </string-array>
+    <string-array name="Hunger_Starving">
+        <item>Açlıktan ölüyorsun!</item>
+        <item>Açlıktan ölüyorsun!</item>
+        <item>Açlıktan ölüyorsun!</item>
+    </string-array>
+
+    <string name="Hunger_Death">Açlıktan öldün...</string>
+    <string name="Hunger_Info1">Aç</string>
+    <string name="Hunger_Info2">Çok aç</string>
+    
+    <string name="Invisibility_Info">Görünmez</string>
+    
+    <string name="Levitation_Info">Uçuyor</string>
+    
+    <string name="Light_Info">Aydınlanmış</string>
+    
+    <string name="MindVision_Info">Durugörü</string>
+    
+    <string name="Ooze_Info">Kostik sızıntı</string>
+    <string name="Ooze_Death">%s seni öldürdü...</string>
+    
+    <string name="Paralysis_Info">Felç</string>
+    
+    <string name="Poison_Info">Zehirlenmiş</string>
+    <string name="Poison_Death">Zehirden öldün...</string>
+    
+    <string name="Roots_Info">Kök Salmış</string>
+    
+    <string name="Shadows_Info">Gölge Erimesi</string>
+    
+    <string name="Slow_Info">Yavaşlamış</string>
+    
+    <string name="SnipersMark_Info">Nişancının işareti</string>
+    
+    <string name="Vertigo_Info">Baş dönmesi</string>
+    
+    <string name="Weakness_Info">Zayıf</string>
+
+    
+    
+    <string name="Belongings_Name">sırt çantası</string>
+
+    
+    
+    <string name="ItemSprite_Info1">kenara bırak: %1$.1f %2$.1f</string>
+
+    
+    
+    <string name="Toolbar_Info1">Burada ne var bilmiyorsun.</string>
+    <string name="Toolbar_Info2">Kontrol edilecek bir hücre seç</string>
+    <string name="AboutScene_Txt">ReMake Pixel Dungeon , NYRDS tarafından yazılan Pixel Dungeon Remix  baz alınarak geliştirilmiştir. \n\n Orjinal Kod ve Grafik : Watabou ve NYDRS \n\n Müzik : Cube_Code\n\n</string>
+    <string name="Acidic_Desc">Bu dev örümcekvari şeytani yaratık uzaktan yaralayan saldırılar ile yakın dövüşten kaçınmak için elinden geleni yapar. </string>
+    <string name="Acidic_Gender">erkek</string>
+    <string name="Albino_Desc">Keseli sıçanlar lağımların saldırgan ama görece kuvvetsiz müdavimlerindendir. Sayıca çok fazla olduklarında tehlikeli olabilirler. Bu sıçan görünüşe göre albino ve anormal keskin dişleri var.</string>
+    <string name="Amulet_Info">Yendor Muskası kökeni bilinmeyen dünyadaki en güçlü nesnedir. Denilirki eğer sahip olan kişinin isteği yeterince güçlü ise her hangi bir dileğini gerçekleştirebiir</string>
+    <string name="Ankh_Info">Bu antik ölümsüzlük sembolü , taşıyana ölümden geri dönme gücü verir. Dirildiğinde kuşandığın ekipmanlar dışındaki tüm nesnelerin kaybolur.</string>
+    <string name="Armor_Incompatible">Çeşitli tiplerdeki büyüler bu zırhın kabartmalarını silmiş</string>
+    <string name="ArmoredStatue_Desc">Ne kadar çirkin bir heykel olduğunu düşünmeden edemiyorsun, sadece parlayan kırmızı gözleri değil , kim böyle bir şeyin üstüne _%s_ koyar</string>
+    <string name="AzuterronNPC_Desc">Siyah sis ile kefenlenmiş gizemli bir figür</string>
+    <string name="AzuterronNPC_Quest_Start">Ha, neden ... oo, beni görebiliyorsun , değil mi ? Bu senin \"onlardan\" biri olmadığın anlamına gelir.  Görüyorum ki sende benim kadar bu yaratıkları sevmiyorsun.Sana şunu söyleyeyim , benim küçük problemim ile ilgili yardım edersen , ben de sana bir hizmetimi sunacağım. Bu seviyede bir yerde , karanlığın yaratığını bulacaksın, _Hain Ruh_. Onu öldür, kalbini al ve bana getir. Eğer benim levazımımdan birşeye ihtiyacın olursa istemekten çekinme</string>
+    <string name="Badges_DeathFalling">Aşağı düşerek öldün</string>
+    <string name="Badges_DeathFire">Yanarak öldün</string>
+    <string name="Bandit_Desc">Bu zindanın alt seviyeleri herzaman suçluların saklanma yeri olmuştur ve bunların bir çoğu uzun süre burada kalmakdaan akıl sağlıklarını koruyamadı. Uzun zaman önce bu çılgın hırsız ve eşkiyalar, kim olduklarını ve neden çaldıklarını unuttular. Bu eşkiyalar hançerlerini de birşeyler ile kaplamış görünüyorlar</string>
+    <string name="BlackSkull_Info">Küçük bir kristal kafatası. Bir zamanlar Necropolis\'in güçlerinin kaynağıydı, Lich yenildikten sonra tüm güçlerini kaybetmiş görünüyor. Ama ellerinde tuttuğunda zihninden tuhaf bir düşünce geçiverdi</string>
+    <string name="BlackSkull_Info_Awakened">Kafatası güç ile bir nabız gibi atıyor. Ellerinde tuttuğunda korkunç bir sesin \: \"Ölüm yürüyecek\" dediğini duyabilirsin</string>
+    <string name="BlackSkull_Name_Awakened">uyanmış kafatası</string>
+    <string name="Blacksmith_Blood1">Hey, insan ! Faydalı olmaya ne dersin ? Bu kazmayı al da bir yarasa öldür. Ne dedin, karşılığını nasıl mı ödeyeceğim ? Seni açgözlü... \nTamam, tamam, ödeyecek param yok ama senin için birşeyler yapabilirim. Kendini şanslı sayabilirsin, etraftaki tek demirci benim</string>
+    <string name="Blacksmith_Desc">Bu troll demirci tüm diğer troller gibi görünüyor : zayıf ve uzun ve derisi doku ve görüntü olarak taşa benziyor. Orantısız küçük aletleri ile birşeyler tamir ediyor.</string>
+    <string name="Blacksmith_Gold1">Hey, insan ! Faydalı olmaya ne dersin ? Bu kazmayı al da 15 parça siyah altın çıkart yeter benim için. Ne dedin, karşılığını nasıl mı ödeyeceğim ? Seni açgözlü... \nTamam, tamam, ödeyecek param yok ama senin için birşeyler yapabilirim. Kendini şanslı sayabilirsin, etraftaki tek demirci benim</string>
+    <string name="Brute_Name">Yabani Gnoll</string>
+    <string name="Capotain_Info">Uzun taçlı kısa kenarlı şapka. Bağnazlar tarafından kullanılırdı, ancak takmak için dindan olmana gerek yok. Bir sebepten ötürü şapkada \"Solomon"\ yazan bir isim plaketi var.</string>
+    <string name="Capotain_Name">Capotain</string>
+    <string name="ChaosCrystal_Name">Tuhaf kristal</string>
+    <string name="ChaosSword_Info">Bu kılıçın keskin tarafı saf kaostan oluşmuş ve bazen bir titerşim hissedilir. Bu güçlü silahın üstesinden gelmek için muazzam güç gerekir</string>
+    <string name="Chasm_Jump">Uçurumdan atlamak istediğine emin misin ? </string>
+    <string name="CompoundBow_Info">Bu yay biraz yavaşta olsa attığı okların muhteşem hasar gücü ile ahşap yaydan çok daha kullanışlıdır</string>
+    <string name="Crab_Desc">Bu dev yengeçler lağımın besin zincirinin en üstündedir.Çok hızlı ve zert kabukları ile ağır saldırılara karşı dayanılıdırlar</string>
+    <string name="DM300_Desc">Bu makine cüceler tarafından yüzyıllar evvel yapıldı. Sonra, cüceler makineleri elemental ve şeytani golemler ile değiştirmeye başladı. Sonunda bu durum medeniyetlerinin düşüşüne önayak oldu DM-300 ve benzer makineler maden ve inşaat için bazende şehir savunması için kullanılıyordu</string>
+    <string name="DeathKnight_Desc">İlk bakışta  masif zırhı içinde muhteşem bir savaşçı gibi görünüyor. Ama o yeminini sürdürmekte başarısız olan bir ruhun tezzahürü.  O bu topraklarda adını savaşta temizlemek için korumaya yemin ettiği masumlaru öldürmekle lanetlenmiş</string>
+    <string name="This_Capotain_gives_defence_skill">Bu şapka +1 savunma yeteneği verir</string>
+    <string name="This_Fez_gives_10_additional_HP">Bu fes +10 sağlık verir</string>
+    <string name="This_Nightcap_gives_2_additional_defense_skill">Bu şapka +2 savunma yeteneği verir</string>
+    <string name="This_Pirate_Set_gives_additional_2_attack_skill_2_defense_skill_and_10_HP">Bu korsan seti +2 savunma , +3 saldırı yeteneği ve 10 sağlık puanı verir</string>
+    <string name="This_Pumpkin_gives_additional_2_defense_skill_1_attack_skill_and_10_HP">Bu balkabağı +2 savunma ve +1 saldırı yeteneği verir</string>
+    <string name="This_Rabbit_Ears_gives_additional_4_defense_skill">Bu tavşan kulakları +4 savunma puanı verir</string>
+    <string name="This_Shades_gives_additional_2_defense_skill_and_10_HP">Bu gözlükler +2 savunma ve +10 can puanı verir</string>
+    <string name="This_Wizard_Hat_gives_additional_10_attack_skill_and_10_HP">Bu büyücü şapkası +10 saldırı ve +10 can puanı verir</string>
+    <string name="this_bowknot_gives_additional_attack_skill">Bu saç tokası +1 saldırı yeteneği verir</string>
 </resources>

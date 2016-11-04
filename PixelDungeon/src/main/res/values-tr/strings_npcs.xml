@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--PACKAGE /mobs/npcs-->
-  <!--STRINGS OF Blacksmith CLASS-->
+  
+  
   <string name="Blacksmith_Name">troll demirci </string>
   <string name="Blacksmith_Desc">troll demirci normal troll gibi gözüküyor. uzun yağsız ve derisi renki taşlara benzeyen. troll demirci orantısız küçük aletleriyle tamir işleriyle uğraşıyor.</string>
   <string name="Blacksmith_Gold1">Hey İnsan ! biraz işe yaramak ister misin eh ? bu kazmayı al ve bana biraz _koyu altın madeni_kaz , _15 parça_yeterli olur. nasıl mı ödiyeceğim ?... \n tamam.ödemek için yeterli param yok ama birşeyler üretebilirim. şanslısın ki etraftaki tek demirci benim.</string>
@@ -15,27 +15,77 @@
   <string name="Blacksmith_Verify3">nasıl çalıştığını bilmem gerek. önce tanımlamalıyım !</string>
   <string name="Blacksmith_Verify4">lanetli eşyalarla çalışmam !</string>
   <string name="Blacksmith_Verify5">Çöp, kalitesi çok düşük.</string>
-  <!--STRINGS OF Ghost CLASS-->
+  
   <string name="Ghost_Name">üzgün hayalet</string>
   <string name="Ghost_Rose2">Lütfen... Bana yardım et... Gülü bul...</string>
   <string name="FetidRat_Name">kokuşmuş fare</string>
   <string name="FetidRat_Name_Objective">kokuşmuş fare</string>
   <string name="FetidRat_Gender">kadınsı</string>
-  <!--STRINGS OF Hedgehog CLASS-->
+  
   <string name="Hedgehog_Info1">sende mi ayıya bakıyorsun ?</string>
   <string name="Hedgehog_Info4">bu turtayı al.</string>
-  <!--STRINGS OF Imp CLASS-->
+  
   <string name="Imp_Golems2">Golem safarin ne alemde?</string>
   <string name="Imp_Cya">Görüşürüz, %s!</string>
   <string name="Imp_Hey">Psst, %s!</string>
-  <!--STRINGS OF ImpShopkeeper CLASS-->
+  
   <string name="ImpShopkeeper_Greetings">selam,arkadaşım !</string>
-  <!--STRINGS OF MirrorImage CLASS-->
+  
   <string name="MirrorImage_Gender">erkeksi</string>
-  <!--STRINGS OF RatKing CLASS-->
+  
   <string name="RatKing_Name">Fare Kral</string>
   <string name="RatKing_Info1">Uyumuyorum!</string>
-  <!--STRINGS OF Shopkeeper CLASS-->
+  
   <string name="Shopkeeper_Sell">Satmak için bir eşya seç</string>
-  <!--STRINGS OF WandMaker CLASS-->
+  
+<string name="Blacksmith_LooksBetter">%s şu anda çok daha iyi görünüyor</string>
+    <string name="Blacksmith_Verify6">Bu malzemeleri dövemem</string>
+    
+    <string name="Ghost_Desc">Hayalet zorlukla görülüyor.Üzgün yüzlü soluk ve şekilsiz bir ışık gibi görünüyor.</string>
+    <string name="Ghost_Rose1">Merhaba Maceracı... Bir zamanlar senin gibi güçlü ve kararlıydım... Ve şu anda ölüyüm... Ama burayı şu anda terkedemiyorum... Kurtulmuş gülümü bulana kadar... Benim için çok önemli... Bir canavar onu benim cesedimden çaldı...</string>
+    <string name="Ghost_Rat1">Merhaba Maceracı... Bir zamanlar senin gibi güçlü ve kararlıydım... Ve şu anda ölüyüm... Ama burayı şu anda terkedemiyorum...İntikamım alınana kadar... Beni öldüren Kokuşmuş sıçanı öldür...</string>
+    <string name="Ghost_Rat2">Lütfen... Yardım et... Nefret ettiğim sıçanı öldür...</string>
+    <string name="Ghost_Defense">savuşturdu</string>
+    <string name="FetidRat_Desc">Bu keseli sıçan diğerlerinden daha büyük. Kokuşmuş bir bulut ile çevrili.</string>
+
+    
+    <string name="Hedgehog_Name">kirpi</string>
+    <string name="Hedgehog_Desc">Bu kirpi gergin görünüyor.</string>
+    <string name="Hedgehog_Info2">Sisteki at nasıldır?</string>
+    <string name="Hedgehog_Info3">Ahududu reçeli ile çay sever misin?</string>
+    <string name="Hedgehog_ImLate">Geciktim..çok geç kaldım...</string>
+
+    
+    <string name="Imp_Name">hırslı küçük şeytan</string>
+    <string name="Imp_Desc">Güç ve sihirli yetenekleri ile değil , akıllı ve sosyal olmaları ile tanınırlar.Birçokları şeytanlar ile yaşamayı tercih etmez</string>
+    <string name="Imp_Defense">savuşturdu</string>
+    <string name="Imp_Golems1">Sen bir maceracı mısın ? Maceracıları severim ! Eğer birşeyler öldürülmesi gerekiyorsa onlara güvenebilirsin. Haksız mıyım? Bir ödül karşılığında ;)\n Benim durumumda bu öldürülecek olanlar Golemler. Gördün mü , ufak bir iş başlatıyorum burada , ama bu aptal golemler iş için çok kötüler! Bu granit topağı göçebelerle anlaşmak imkansız, lanet olsun onlara ! Lütfen öldür onları... şöyle diyelim 6 tanesini öldür.</string>
+    <string name="Imp_Monks1">Sen bir maceracı mısın ? Maceracıları severim ! Eğer birşeyler öldürülmesi gerekiyorsa onlara güvenebilirsin. Haksız mıyım? Bir ödül karşılığında ;)\n Benim durumumda bu öldürülecek olanlar keşişler. Gördün mü , ufak bir iş başlatıyorum burada , ama bu deliler kendilerine birşey almadıkları gibi müşterileri de korkutuyorlar. lanet olsun onlara ! Lütfen öldür onları... şöyle diyelim 8 tanesini öldür.</string>
+    <string name="Imp_Monks2">Ooo, hala hayattasın. Senin Kung-fu\'nun kuvvetli olduğunu biliyordum ;) Keşiş simgelerini toplamayı unutma.</string>
+    <string name="ImpShopkeeper_Name">Hırslı küçük şeytan</string>
+    <string name="ImpShopkeeper_Desc">Güç ve sihirli yetenekleri ile değil , akıllı ve sosyal olmaları ile tanınırlar.Birçokları şeytanlar ile yaşamayı tercih etmez.</string>
+    <string name="MirrorImage_Name">ayna görüntüsü</string>
+    <string name="MirrorImage_Name_Objective">ayna görüntüsü</string>
+    <string name="MirrorImage_Desc">Bu ilüzyon sana soluk olması ve hafif titreşmesi dışında oldukça benzer.</string>
+
+    
+    <string name="RatKing_Desc">Bu sıçan normal keseli sıçanlardan biraz daha büyük ve kafasında garip küçük bir taç var.</string>
+    <string name="RatKing_Info2">Bu nedir ? Bu anlamsız şeylerle uğraşamam, krallığım kendi kendini yönetemez!</string>
+    <string name="RatKing_Info3">Seni cılız yaratık, majestelerini rahatsız etmeye nasıl cüret edersin?!</string>
+    <string name="RatKing_Died">Kral öldü , yaşasın yeni kral!</string>
+    
+    
+    <string name="Shopkeeper_Name">mağaza sahib</string>
+    <string name="Shopkeeper_Desc">Bu sağlam adam bu zindan gibi yerler yerine büyük bir şehirde olmaya daha uygun görünüyor. Fiyatları neden burada olmak istediğini açıklıyor.</string>
+    <string name="WandMaker_Name">Yaşlı Asa ustası</string>
+    <string name="WandMaker_Desc">Bu yaşlı ama dinç beyefendi, oldukça şaşkın bir ifadeye sahip. Sihirli bir alan ile korunuyor.</string>
+    <string name="WandMaker_Defense">absorbe edildi</string>
+    <string name="WandMaker_Berry1">Oo, sizin gibi nazik biri ile bu gibi bir yerde karşılaşmak ne güzel bir sürpriz.Buraya zor bulunan bir malzeme için geldim : _Çürük Dut tohumu_. Bir büyücü olarak buradaki yaratıklara karşı kendimi savunabilirim, fakat zamanım çok kısıtlı. Muhtemelen bana yardım edebilirsin. Sana hizmetinin karşılığını en iyi asalarımdan biri ile ödeyebilirim.</string>
+    <string name="WandMaker_Berry2">Çürük dut tohumu bulabildin mi, %s? No? Üzülme acelem yok.</string>
+    <string name="WandMaker_Dust1">Oo, sizin gibi nazik biri ile bu gibi bir yerde karşılaşmak ne güzel bir sürpriz.Buraya zor bulunan bir malzeme için geldim : _Ceset Tozu_. Bir büyücü olarak buradaki yaratıklara karşı kendimi savunabilirim, fakat zamanım çok kısıtlı. Muhtemelen bana yardım edebilirsin. Sana hizmetinin karşılığını en iyi asalarımdan biri ile ödeyebilirim.</string>
+    <string name="WandMaker_Dust2">Ceset tozu araman nasıl gidiyor, %s? Kemik yığınları bakılması gereken en uygun yerler gibi duruyor.</string>
+    <string name="WandMaker_RotberryName">çürük dut</string>
+    <string name="WandMaker_RotberryDesc">Bu dutların tadı şeker gibi, tatlı ölüm.</string>
+    <string name="WandMaker_RotberryInfo">Tohum tüm zindan yanklanan bir kükreme yayıyor!</string>
+
 </resources>

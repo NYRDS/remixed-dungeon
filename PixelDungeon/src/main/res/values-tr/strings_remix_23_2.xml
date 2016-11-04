@@ -1,24 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <!-- Items -->
-    <!-- STRINGS OF BroadSword CLASS -->
+    
+    
     <string name="Claymore_Name">kılıç </string>
     <string name="Claymore_Info">bu iri kılıç herhangi birşeyi doğrayabilir</string>
     <string name="Claymore_Gender">kadınsı</string>
 
     <string name="Halberd_Gender">kadınsı</string>
 
-    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    
     <string name="WoodenCrossbow_Name">tahta yaylıtüfek</string>
     <string name="WoodenCrossbow_Info">basit tahtadan yapılmış yaylıtüfek. görünüşe göre ok ateşlemek için dizayn edilmiş</string>
     <string name="WoodenCrossbow_Gender">erkeksi</string>
 
     <string name="CompositeCrossbow_Gender">erkeksi</string>
 
-    <!-- STRINGS OF RubyCrossbow CLASS -->
+    
     <string name="RubyCrossbow_Name">yakut  yaylıtüfek</string>
-    <!-- STRINGS OF GothicArmor CLASS -->
+    
     <string name="GothicArmor_Name">Gotik Zırh</string>
-    <!-- STRINGS OF ChaosArmor CLASS -->
+    
     <string name="ChaosArmor_Name">Kaos Zırhı</string>
-    </resources>
+    <string name="Halberd_Name">Teber</string>
+    <string name="Halberd_Info">Ucunda balta olan uzun bir sopa.</string>
+    <string name="CompositeCrossbow_Name">Bileşik yay</string>
+    <string name="CompositeCrossbow_Info">Bu yeniden yapılanmış yay ahşap yaya göre daha etkili bir silah</string>
+    <string name="RubyCrossbow_Info">Bu ölümcül silah cüce silah sanatının bir şaheseri.</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
+
+    
+    <string name="GothicArmor_Info">Bir gotik zırh , zırh sanatının doruk noktası.</string>
+
+    
+    <string name="ChaosArmor_Info">Kan kırmızı metal parçalar , kırmızı zincirler ile birlikte dikilmiş. Dokunman ile birlikte kaotik bir enerji yayıyor</string>
+
+    
+    <string name="ChaosCrystal_ArmorFused">Kristal zırhını özümsedi ve zırhınla bir bileşik haline geldi</string>
+
+</resources>

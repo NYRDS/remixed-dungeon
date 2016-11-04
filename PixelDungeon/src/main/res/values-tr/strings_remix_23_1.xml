@@ -1,31 +1,62 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--Mobs-->
-  <!--STRINGS OF AzuterronNPC CLASS-->
+  
+  
   <string name="AzuterronNPC_Name">yabancı</string>
   <string name="AzuterronNPC_Gender">erkeksi</string>
   <string name="AzuterronNPC_Name_Objective">yabancı</string>
   <string name="AzuterronNPC_Quest_Reminder">bana yardım et bende sana yardım edeyim</string>
   <string name="Journal_Azuterron">yabancı</string>
-  <!--STRINGS OF TreacherousSpirit CLASS-->
+  
   <string name="TreacherousSpirit_Gender">erkeksi</string>
-  <!--STRINGS OF SpiritOfPain CLASS-->
+  
   <string name="SpiritOfPain_Name">acının ruhu</string>
   <string name="SpiritOfPain_Gender">erkeksi</string>
   <string name="SpiritOfPain_Name_Objective">acının ruhu</string>
-  <!--STRINGS OF SuspiciousRat CLASS-->
+  
   <string name="SuspiciousRat_Name">şüpheli fare</string>
   <string name="SuspiciousRat_Gender">kadınsı</string>
   <string name="SuspiciousRat_Name_Objective">şüpheli fare</string>
-  <!--STRINGS OF PseudoRat CLASS-->
+  
   <string name="PseudoRat_Gender">kadınsı</string>
-  <!--STRINGS OF ZombieGnoll CLASS-->
-  <!--Items-->
-  <!--STRINGS OF HeartOfDarkness CLASS-->
+  
+  
+  
   <string name="HeartOfDarkness_Name">karanlığın kalbi</string>
-  <!--Buffs-->
-  <!--STRINGS OF DarkVeil CLASS-->
-  <!--Badges-->
+  
+  
+  
   <string name="Badges_ShadowLord_Slain">gölgelerin efendisi öldü.</string>
   <string name="Badges_SpiderQueen_Slain">örümcek kraliçe öldü.</string>
-</resources>
+<string name="AzuterronNPC_Quest_End">Harika. Bu iksiri al, faydasını göreceksin.</string>
+    <string name="TreacherousSpirit_Name">Hain ruh</string>
+    <string name="TreacherousSpirit_Name_Objective">Hain ruh</string>
+    <string name="TreacherousSpirit_Desc">Yaşayan karanlığın bulutu gibi görünen bu yaratık, uykusuz gözlerini sana dikmiş bakıyor.</string>
+
+    
+    <string name="SpiritOfPain_Desc">Yaşayan karanlığın parçası.</string>
+
+    
+    <string name="SuspiciousRat_Desc">Sıçanlar zindanlarda görmeye alışık olduğun yaratıklardır. Bu her hareket ettiğinde tüm vücudu spazmlar ile kasııyor.</string>
+    <string name="SuspiciousRat_Info1">Kuşkucu sıçan şiddetle seyiriyor.</string>
+
+    
+    <string name="PseudoRat_Name">Sahte sıçan</string>
+    <string name="PseudoRat_Name_Objective">Sahte sıçan</string>
+    <string name="PseudoRat_Desc">Korkuç bir yaratık , bir sıçan cesedi ile daha önce görmediğin bir kemirgenin birleşiminden oluşuyor.Vücudunun büyük bölümünü oluşturan muazzam ağzı keskin dişlerle dolu.</string>
+
+	
+	<string name="ZombieGnoll_Info">Gnoll zombi diriliyor!</string>
+	
+    
+    
+    <string name="HeartOfDarkness_Info">Hain ruhun hala atan siyah kalbi.</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
+
+    
+    
+    <string name="DarkVeil_Buff">Kara maske</string>
+
+    
+    <string name="Badges_Yog_Slain">Yog-Dzewa öldürüldü</string>
+    </resources>

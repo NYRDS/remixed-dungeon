@@ -1,19 +1,42 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--PACKAGE pixeldungeon/plants-->
-  <!--STRINGS OF Plant CLASS-->
+  
+  
   <string name="Plant_ACPlant">bitki</string>
   <string name="Plant_Info">bu tohumun nerede büyümesini istiyosan oraya fırlat %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">%s tohumu</string>
-  <!--STRINGS OF Dreamweed CLASS-->
+  
   <string name="Dreamweed_Name">rüya tohumu</string>
-  <!--STRINGS OF Earthroot CLASS-->
+  
   <string name="Earthroot_Name">toprak kökü</string>
   <string name="Earthroot_Buff">bitkisel zırh</string>
-  <!--STRINGS OF Fadeleaf CLASS-->
+  
   <string name="Fadeleaf_Name">kader yaprağı</string>
-  <!--STRINGS OF Firebloom CLASS-->
-  <!--STRINGS OF Icecap CLASS-->
-  <!--STRINGS OF Sorrowmoss CLASS-->
-  <!--STRINGS OF Sungrass CLASS-->
+  
+  
+  
+  
+<string name="Dreamweed_Desc">Marijuana tohumuna dokunduğunda kafa karıştırıcı bir gaz yayılıyor.</string>
+
+    
+    <string name="Earthroot_Desc">Bir yaratık Toprak Köküne dokunduğunda bu kökler etrafında doğal bir zırh oluşturur.</string>
+    <string name="Fadeleaf_Desc">Kara yaprağa dokunan herhangi bir şey aynı seviyede rastgele bir yere ışınlanır.</string>
+
+    
+    <string name="Firebloom_Name">Ateş Çiçeği</string>
+    <string name="Firebloom_Desc">Ateş Çiçeğine dokunan şey alev patlamaları içinde kalır.</string>
+
+    
+    <string name="Icecap_Name">Buz Başlığı</string>
+    <string name="Icecap_Desc">Buz Başlığına dokunduğunda etraftaki herşeyi donduran polenler salgılar.</string>
+
+    
+    <string name="Sorrowmoss_Name">Matem Yosunu</string>
+    <string name="Sorrowmoss_Desc">Matem Yosunu bir aslında yosun değil keskin taç yaptakları ölümcül zehir içeren bir çişektir.</string>
+
+    
+    <string name="Sungrass_Name">Güneş Çimeni</string>
+    <string name="Sungrass_Desc">Güneş Çimeni özsuyunun iyileştirici özellikleri ile bilinen bir çiçektir.</string>
+    <string name="Sungrass_Buff">Bitkisel İyileştirme</string>
+    
 </resources>
