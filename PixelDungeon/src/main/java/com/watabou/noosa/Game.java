@@ -204,9 +204,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		StringsManager.setContext(context);
 
 		if(!BuildConfig.DEBUG) {
-			if (!checkOwnSignature()) {
-				EventCollector.logEvent("tampered signature",Util.getSignature(this));
-			}
+			EventCollector.logEvent("apk signature",Util.getSignature(this));
 		}
 
 		FileSystem.setContext(context);
@@ -214,14 +212,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		try {
 			version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-		} catch (NameNotFoundException e) {
-			version = "???";
-		}
-		try {
 			versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
 		} catch (NameNotFoundException e) {
+			version = "???";
 			versionCode = 0;
 		}
+
 
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 

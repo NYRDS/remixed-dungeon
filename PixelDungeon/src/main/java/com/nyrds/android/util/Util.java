@@ -60,11 +60,11 @@ public class Util {
 	static public String getSignature(Context context) {
 		try {
 			PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
-			MessageDigest md = MessageDigest.getInstance("SHA-512");
+			MessageDigest md = MessageDigest.getInstance("SHA-1");
 			for (Signature signature : packageInfo.signatures) {
 				md.update(signature.toByteArray());
 			}
-			return Base64.encodeToString(md.digest(), Base64.DEFAULT);
+			return Base64.encodeToString(md.digest(), Base64.URL_SAFE);
 		} catch (PackageManager.NameNotFoundException e) {
 			throw new TrackedRuntimeException(e);
 		} catch (NoSuchAlgorithmException e) {
