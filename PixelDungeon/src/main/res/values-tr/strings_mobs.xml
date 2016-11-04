@@ -1,322 +1,271 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
-  
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
   <string name="Mob_Desc">gerçek açıklama yakında gelicek !</string>
   <string name="Mob_Died">Uzakta Birinin öldüğünü duydun</string>
   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
   <string name="Mob_StaSleepingStatus">Bu %s uyuyor</string>
+  <string name="Mob_StaWanderingStatus">%s geziniyor</string>
   <string name="Mob_StaHuntingStatus">Bu %s avlanıyor</string>
   <string name="Mob_StaFleeingStatus">Bu %s kaçıyor.</string>
-  
+  <string name="Mob_StaPassiveStatus">%s pasif</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">asidik akrep</string>
   <string name="Acidic_Gender">erkeksi</string>
-  
+  <string name="Acidic_Name_Objective">asidik akrep</string>
+  <!--STRINGS OF Albino CLASS-->
   <string name="Albino_Name">albino sıçan</string>
   <string name="Albino_Gender">erkeksi</string>
   <string name="Albino_Name_Objective">Albino Fare</string>
-  
+  <!--STRINGS OF Bandit CLASS-->
   <string name="Bandit_Name">Çılgın Haydut</string>
   <string name="Bandit_Gender">erkeksi</string>
   <string name="Bandit_Name_Objective">Çılgın Haydut</string>
-  
+  <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">vampir yarasa</string>
   <string name="Bat_Gender">erkeksi</string>
   <string name="Bat_Name_Objective">vampir yarasa</string>
-  
+  <string name="Bat_Desc">Bu mağara kubbeleri altında yaşayan inatçı ve hareketli yaratıklar kendilerinde çok büyük düşmanları başarılı her saldırılarında canlarını yenileyerek atl edebilir</string>
+  <string name="Bat_Defense">savuşturdu</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name_Objective">Yaban gnoll</string>
+  <string name="Brute_Desc">Yabaniler en büyük ve güçlü gnoll türüdür.  Çok kötü yaralandıklarında çılgına döner ve düşmanlarına çok büyük zarar verebilir.</string>
   <string name="Brute_Gender">erkeksi</string>
-  
+  <string name="Brute_Enraged">%s çıldırdı!</string>
+  <string name="Brute_StaEnraged">kudurmuş</string>
+  <!--STRINGS OF Crab CLASS-->
   <string name="Crab_Name">lağım yengeci</string>
+  <string name="Crab_Gender">erkek</string>
   <string name="Crab_Name_Objective">lağım yengeci</string>
-  
+  <string name="Crab_Defense">savuşturdu</string>
+  <!--STRINGS OF DM300 CLASS-->
   <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">masculine</string>
   <string name="DM300_Name_Objective">DM-300</string>
   <string name="DM300_Info1">DM-300 kendini onardı!</string>
   <string name="DM300_Info2">Görev başarısız.kapatılıyor.</string>
-  
+  <string name="DM300_Info3">Yetkisiz personel tespit edildi.</string>
+  <!--STRINGS OF Elemental CLASS-->
   <string name="Elemental_Name">ateş elementi</string>
+  <string name="Elemental_Gender">masculine</string>
   <string name="Elemental_Name_Objective">ateş elementi</string>
-  
+  <string name="Elemental_Desc">Göçebe ateş elementleri en ulu varlıkların çağrısının ürünüdür. Doğaları gereği en güçlü şeytani ilimler ustaları tarafından bile kontrol edilmek için çok karışıktırlar.</string>
+  <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">şeytani göz</string>
+  <string name="Eye_Gender">neuter</string>
   <string name="Eye_Name_Objective">şeytani göz</string>
-  
+  <string name="Eye_Desc">Bu şeytanın diğer adı da Nefret Küresidir . Düşmanını farkettiğinde etrafındaki dost kuvvetlerin yaralanmasını dahi umursamadan ölümcük bakışlarını pervasızça etrafa saçar.</string>
+  <string name="Eye_Kill">%s ölümcül bakış ile seni öldürdü...</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">gnoll izci</string>
   <string name="Gnoll_Gender">erkeksi</string>
-  
+  <string name="Gnoll_Name_Objective">gnoll izci</string>
+  <string name="Gnoll_Desc">Gnoller sırtlan benzeri insansılardır.Lağımlar ve zindanlar yaşam alanlarıdır.Zaman zaman yüzeye saldırılar yapmayada cüret ederler. Gnoll izciler sürüleri içinde normal güçteki üyeleridir, vahşi gnoller kadar güçlü , şamanlar kadar zeki değillerdir.</string>
+  <!--STRINGS OF Golem CLASS-->
   <string name="Golem_Name">Golem</string>
+  <string name="Golem_Gender">masculine</string>
   <string name="Golem_Name_Objective">Golem</string>
+  <string name="Golem_Desc">Cüceler elementler üzerinde yeni keşfettikleri bilgieri mekanik bilgileri ile birleştirmeyi denediklerinde , yerin ruhlarını mekanik vücutlar ile birleştirerek Golem\'leri yarattılar.Bu ritueldeki en ufak bir hata bir isyan başlatabilirdi.</string>
   <string name="Golem_Defense">Kapanmış</string>
-  
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">Goo</string>
+  <string name="Goo_Gender">erkek</string>
+  <string name="Goo_Name_Objective">Goo</string>
+  <string name="Goo_Desc">Goo hakkında çok az şey bilinir.Lağımdaki maddelerin özgür iradesi ile bir araya gelmesinden oluşmuştur. </string>
+  <string name="Goo_Info1">Goo kendini şişiriyor!</string>
   <string name="Goo_Info2">gluk gluk</string>
+  <string name="Goo_Info3">GLURP-GLURP!</string>
   <string name="Goo_StaInfo1">!!!</string>
-  
+  <!--STRINGS OF King CLASS-->
   <string name="King_Name">Cücelerin Kralı</string>
+  <string name="King_Gender">masculine</string>
   <string name="King_Name_Objective">Cüce Kral</string>
+  <string name="King_Desc">Cücelerin son kralı , hayat ve ölüm üzerindeki büyük bilgisi ile tanınırdı.Sarayındaki tebasını sonsuz gençlik vaadi ile bu çalışmalarına katılmak için ikna etmişti. Bunun sonunda sadece kendisi bu ödülü kazandı, ek olarakta bir ölümsüzler ordusuna kavuştu.</string>
+  <string name="King_Defense">savuşturdu</string>
   <string name="King_Info1">Beni Öldüremezsin %s ben .. ölümsüzüm</string>
+  <string name="King_Info2">Köleler , kalkın!</string>
   <string name="King_Info3">Ne Cüretle !</string>
   <string name="Undead_Name">Ölümsüz Cüce</string>
+  <string name="Undead_Gender">masculine</string>
   <string name="Undead_Name_Objective">ölümsüz cüce</string>
-  
+  <string name="Undead_Desc">Bu ölümsüz cücler , Cüce Kralının çağrısı üzerne mezarlarından kalkmış. Hatırı sayılır bir sakal ve kemiklerden oluşan bir iskelet görünümündeler.</string>
+  <string name="Undead_Defense">engellendi</string>
+  <!--STRINGS OF Mimic CLASS-->
   <string name="Mimic_Name">canavar</string>
+  <string name="Mimic_Gender">masculine</string>
   <string name="Mimic_Name_Objective">canavar</string>
-  
+  <string name="Mimic_Desc">Mimik\'ler istedikleri şeyin şeklini alabilen sihirli yaratıklardır. Maceracıların dikkatini çekmek için genellikle hazine sandığı şeklini alırlar;</string>
+  <!--STRINGS OF MimicPie CLASS-->
   <string name="MimicPie_Name">canavar</string>
+  <string name="MimicPie_Gender">masculine</string>
   <string name="MimicPie_Name_Objective">canavar</string>
   <string name="MimicPie_Desc">canavarlar sihirli yaratıklardır. istedikleri şekle ve kılığa girebilirler. lezzetli ve büyük bir pasta gibi gözükebilirler</string>
-  
-  
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">cüce keşiş</string>
+  <string name="Monk_Gender">masculine</string>
+  <string name="Monk_Name_Objective">cüce keşiş</string>
+  <string name="Monk_Desc">Bu keşişler kendilerini şehirlerini korumaya adamış fanatiklerdir.Yakın dövüş yeteneklerine güvenir ve hiç bir zırh veya silah kullanmazlar.</string>
+  <string name="Monk_Defense">savuşturdu</string>
+  <string name="Monk_Disarm">%1$s , ellerinden %2$s nesnesini çaldı!</string>
+  <!--STRINGS OF Piranha CLASS-->
   <string name="Piranha_Name">dev pirana</string>
+  <string name="Piranha_Gender">erkek</string>
   <string name="Piranha_Name_Objective">dev pirana</string>
-  
-  
+  <string name="Piranha_Desc">Bu etobur balıklar yeraltı sularının doğal canlıları değildir, hazineleri korumak için özel olarak üretilmişlerdir.</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">keseli sıçan</string>
+  <string name="Rat_Gender">erkek</string>
+  <string name="Rat_Name_Objective">keseli sıçan</string>
+  <string name="Rat_Desc">Keseli sıçanlar lağımların sinirli ancak zayıf müdavimleridir.Çok fazla sayıda olduklarında tehlikeli olabilirler.</string>
+  <!--STRINGS OF Scorpio CLASS-->
   <string name="Scorpio_Name">akrep</string>
+  <string name="Scorpio_Gender">masculine</string>
   <string name="Scorpio_Name_Objective">akrep</string>
-  
-  
+  <string name="Scorpio_Desc">Bu devasa örümcek benzeri yaratık her koşulda yakın dövüşten kaçınmasa ile ünlüdür.Uzaktan felce uğratan oklar fırlatarak düşmanı ile savaşır.</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">kıdemli keşiş</string>
+  <string name="Senior_Gender">masculine</string>
+  <string name="Senior_Name_Objective">kıdemli keşiş</string>
+  <string name="Senior_Desc">Bu keşişler kendilerini şehirlerini korumaya adamış fanatiklerdir.Yakın dövüş yeteneklerine güvenir ve hiç bir zırh veya silah kullanmazlar. Bu keşiş düşmanının güçlerini kullanmasını engeleyen bir dövüş sanatında uzmanlaşmış.</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">gölge</string>
+  <string name="Shadow_Gender">erkek</string>
   <string name="Shadow_Name_Objective">gölge</string>
-  
+  <string name="Shadow_Desc">Gölgeler antik hapishanenin yıkıntıları arasında sessizce dolanırlar. Bazen maceracılara , onların son macerası olarak göründükleri olur.</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">gnoll şaman</string>
+  <string name="Shaman_Gender">masculine</string>
+  <string name="Shaman_Name_Objective">gnoll şaman</string>
+  <string name="Shaman_Desc">En zeki gnoller şaman büyülerinde uzmanlaşabilir. Gnoll şamanlar kabilelerinde onları sorgulayanlar üzerinde bu büyülerini kullanmaktan çekinmezler.</string>
   <string name="Shaman_Killed">%s şimşek çarparak seni öldürdü</string>
-  
-  
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">zırhlı vahşi</string>
+  <string name="Shielded_Gender">masculine</string>
+  <string name="Shielded_Name_Objective">zırhlı vahşi</string>
+  <string name="Shielded_Defense">engellendi</string>
+  <string name="Shielded_Desc">Vahşiler tüm gnollerin en büyük ve güçlüleridir. Çok fazla yaralanırlarsa çılgına dönüp düşmanlarına büyük zararlar verebilir.Bu vahşi dev bir zırh giyiyor!</string>
+  <!--STRINGS OF Skeleton CLASS-->
   <string name="Skeleton_Name">iskelet</string>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<string name="Mob_StaWanderingStatus">%s geziniyor</string>
-    <string name="Mob_StaPassiveStatus">%s pasif</string>
-    
-    <string name="Acidic_Name">asidik akrep</string>
-    <string name="Acidic_Name_Objective">asidik akrep</string>
-
-    
-    <string name="Bat_Desc">Bu mağara kubbeleri altında yaşayan inatçı ve hareketli yaratıklar kendilerinde çok büyük düşmanları başarılı her saldırılarında canlarını yenileyerek atl edebilir</string>
-    <string name="Bat_Defense">savuşturdu</string>
-    
-    <string name="Brute_Name_Objective">Yaban gnoll</string>
-    <string name="Brute_Desc">Yabaniler en büyük ve güçlü gnoll türüdür.  Çok kötü yaralandıklarında çılgına döner ve düşmanlarına çok büyük zarar verebilir.</string>
-    <string name="Brute_Enraged">%s çıldırdı!</string>
-    <string name="Brute_StaEnraged">kudurmuş</string>
-    
-    <string name="Crab_Gender">erkek</string>
-    <string name="Crab_Defense">savuşturdu</string>
-    
-    <string name="DM300_Gender">masculine</string>
-    <string name="DM300_Info3">Yetkisiz personel tespit edildi.</string>
-    
-    <string name="Elemental_Gender">masculine</string>
-    <string name="Elemental_Desc">Göçebe ateş elementleri en ulu varlıkların çağrısının ürünüdür. Doğaları gereği en güçlü şeytani ilimler ustaları tarafından bile kontrol edilmek için çok karışıktırlar.</string>
-    
-    <string name="Eye_Gender">neuter</string>
-    <string name="Eye_Desc">Bu şeytanın diğer adı da Nefret Küresidir . Düşmanını farkettiğinde etrafındaki dost kuvvetlerin yaralanmasını dahi umursamadan ölümcük bakışlarını pervasızça etrafa saçar.</string>
-    <string name="Eye_Kill">%s ölümcül bakış ile seni öldürdü...</string>
-    
-    <string name="Gnoll_Name">gnoll izci</string>
-    <string name="Gnoll_Name_Objective">gnoll izci</string>
-    <string name="Gnoll_Desc">Gnoller sırtlan benzeri insansılardır.Lağımlar ve zindanlar yaşam alanlarıdır.Zaman zaman yüzeye saldırılar yapmayada cüret ederler. Gnoll izciler sürüleri içinde normal güçteki üyeleridir, vahşi gnoller kadar güçlü , şamanlar kadar zeki değillerdir.</string>
-    
-    <string name="Golem_Gender">masculine</string>
-    <string name="Golem_Desc">Cüceler elementler üzerinde yeni keşfettikleri bilgieri mekanik bilgileri ile birleştirmeyi denediklerinde , yerin ruhlarını mekanik vücutlar ile birleştirerek Golem\'leri yarattılar.Bu ritueldeki en ufak bir hata bir isyan başlatabilirdi.</string>
-    <string name="Goo_Name">Goo</string>
-    <string name="Goo_Gender">erkek</string>
-    <string name="Goo_Name_Objective">Goo</string>
-    <string name="Goo_Desc">Goo hakkında çok az şey bilinir.Lağımdaki maddelerin özgür iradesi ile bir araya gelmesinden oluşmuştur. </string>
-    <string name="Goo_Info1">Goo kendini şişiriyor!</string>
-    <string name="Goo_Info3">GLURP-GLURP!</string>
-    <string name="King_Gender">masculine</string>
-    <string name="King_Desc">Cücelerin son kralı , hayat ve ölüm üzerindeki büyük bilgisi ile tanınırdı.Sarayındaki tebasını sonsuz gençlik vaadi ile bu çalışmalarına katılmak için ikna etmişti. Bunun sonunda sadece kendisi bu ödülü kazandı, ek olarakta bir ölümsüzler ordusuna kavuştu.</string>
-    <string name="King_Defense">savuşturdu</string>
-    <string name="King_Info2">Köleler , kalkın!</string>
-    <string name="Undead_Gender">masculine</string>
-    <string name="Undead_Desc">Bu ölümsüz cücler , Cüce Kralının çağrısı üzerne mezarlarından kalkmış. Hatırı sayılır bir sakal ve kemiklerden oluşan bir iskelet görünümündeler.</string>
-    <string name="Undead_Defense">engellendi</string>
-
-    
-    <string name="Mimic_Gender">masculine</string>
-    <string name="Mimic_Desc">Mimik\'ler istedikleri şeyin şeklini alabilen sihirli yaratıklardır. Maceracıların dikkatini çekmek için genellikle hazine sandığı şeklini alırlar;</string>
-
-    
-    <string name="MimicPie_Gender">masculine</string>
-    <string name="Monk_Name">cüce keşiş</string>
-    <string name="Monk_Gender">masculine</string>
-    <string name="Monk_Name_Objective">cüce keşiş</string>
-    <string name="Monk_Desc">Bu keşişler kendilerini şehirlerini korumaya adamış fanatiklerdir.Yakın dövüş yeteneklerine güvenir ve hiç bir zırh veya silah kullanmazlar.</string>
-    <string name="Monk_Defense">savuşturdu</string>
-    <string name="Monk_Disarm">%1$s , ellerinden %2$s nesnesini çaldı!</string>
-    
-    <string name="Piranha_Gender">erkek</string>
-    <string name="Piranha_Desc">Bu etobur balıklar yeraltı sularının doğal canlıları değildir, hazineleri korumak için özel olarak üretilmişlerdir.</string>
-    
-    <string name="Rat_Name">keseli sıçan</string>
-    <string name="Rat_Gender">erkek</string>
-    <string name="Rat_Name_Objective">keseli sıçan</string>
-    <string name="Rat_Desc">Keseli sıçanlar lağımların sinirli ancak zayıf müdavimleridir.Çok fazla sayıda olduklarında tehlikeli olabilirler.</string>
-    
-    <string name="Scorpio_Gender">masculine</string>
-    <string name="Scorpio_Desc">Bu devasa örümcek benzeri yaratık her koşulda yakın dövüşten kaçınmasa ile ünlüdür.Uzaktan felce uğratan oklar fırlatarak düşmanı ile savaşır.</string>
-    
-    <string name="Senior_Name">kıdemli keşiş</string>
-    <string name="Senior_Gender">masculine</string>
-    <string name="Senior_Name_Objective">kıdemli keşiş</string>
-    <string name="Senior_Desc">Bu keşişler kendilerini şehirlerini korumaya adamış fanatiklerdir.Yakın dövüş yeteneklerine güvenir ve hiç bir zırh veya silah kullanmazlar. Bu keşiş düşmanının güçlerini kullanmasını engeleyen bir dövüş sanatında uzmanlaşmış.</string>
-    
-    <string name="Shadow_Name">gölge</string>
-    <string name="Shadow_Gender">erkek</string>
-    <string name="Shadow_Desc">Gölgeler antik hapishanenin yıkıntıları arasında sessizce dolanırlar. Bazen maceracılara , onların son macerası olarak göründükleri olur.</string>
-    
-    <string name="Shaman_Name">gnoll şaman</string>
-    <string name="Shaman_Gender">masculine</string>
-    <string name="Shaman_Name_Objective">gnoll şaman</string>
-    <string name="Shaman_Desc">En zeki gnoller şaman büyülerinde uzmanlaşabilir. Gnoll şamanlar kabilelerinde onları sorgulayanlar üzerinde bu büyülerini kullanmaktan çekinmezler.</string>
-    <string name="Shielded_Name">zırhlı vahşi</string>
-    <string name="Shielded_Gender">masculine</string>
-    <string name="Shielded_Name_Objective">zırhlı vahşi</string>
-    <string name="Shielded_Defense">engellendi</string>
-    <string name="Shielded_Desc">Vahşiler tüm gnollerin en büyük ve güçlüleridir. Çok fazla yaralanırlarsa çılgına dönüp düşmanlarına büyük zararlar verebilir.Bu vahşi dev bir zırh giyiyor!</string>
-    
-    <string name="Skeleton_Gender">masculine</string>
-    <string name="Skeleton_Name_Objective">iskelet</string>
-    <string name="Skeleton_Desc">İskeletler şansız maceracılar ve mağarının eski sakinlerinin kemiklerinin bir araya gelmesinden oluşur. Derinlerden fışkıran şeytani büyü sayesinde hayat bulurlar. Yeterince hasar görürlerse kemikler patlayarak iskelet yok olur.</string>
-    <string name="Skeleton_Defense">engellendi</string>
-    <string name="Skeleton_Killed">Kemiklerin patlaması ile öldün...</string>
-    
-    <string name="Spinner_Name">nişancı mağara örümceği</string>
-    <string name="Spinner_Gender">masculine</string>
-    <string name="Spinner_Name_Objective">nişancı mağara örümceği</string>
-    <string name="Spinner_Desc">Bu öfkeli, yeşil örümcekler direkt dövüşten kaçınır, kurbanlarını ördükleri ağ ile tuzağa düşürerek zehirleyip öldürmeyi tercih ederler.</string>
-    
-    <string name="Statue_Name">canlı heykel</string>
-    <string name="Statue_Gender">erkek</string>
-    <string name="Statue_Name_Objective">canlı heykel</string>
-    <string name="Statue_Desc">Ne kadar çirkin bir heykel olduğunu düşünmeden edemiyorsun, sadece parlayan kırmızı gözleri değil , kim böyle bir şeyin üstüne _%s_ koyar.</string>
-    
-    <string name="Succubus_Name">dişi şeytan</string>
-    <string name="Succubus_Gender">masculine</string>
-    <string name="Succubus_Name_Objective">dişi şeytan</string>
-    <string name="Succubus_Desc">Dişi şeytanlar , baştan çıkarıcı bir kadın görüntüsündedir. Cazibeleri ile kahramanları herhangi bir şeye saldırmayacak şekilde etkilerler.</string>
-    
-    <string name="Swarm_Name">Sinek sürüsü</string>
-    <string name="Swarm_Gender">masculine</string>
-    <string name="Swarm_Name_Objective">Sinek sürüsü</string>
-    <string name="Swarm_Desc">Ölümcül sinek sürüzü aç bir şekilde vızıldıyor.Sihirli olmayan her atak onları daha küçük ama aynı boyutta tehlikeli iki parçaya bölecektir</string>
-    <string name="Swarm_Defense">savuşturdu</string>
-    
-    <string name="Tengu_Name">Tengu</string>
-    <string name="Tengu_Gender">masculine</string>
-    <string name="Tengu_Name_Objective">Tengu</string>
-    <string name="Tengu_Desc">Tengu, adı Tengu olan antik suikastçi klanının üyesidir, bu suikastçiler tuzakları ve ninja yıldızlarını kullanmaları ile ünlüdür.</string>
-    <string name="Tengu_Info1">Sonunda özgürüm...</string>
-    <string name="Tengu_Info2">yakaladım, %s!</string>
-    
-    <string name="Thief_Name">çılgın hırsız</string>
-    <string name="Thief_Gender">masculine</string>
-    <string name="Thief_Name_Objective">çılgın hırsız</string>
-    <string name="Thief_Desc">Zindanın daha alt seviyeleri her zaman suçluların gizlenme yeri olmuştur. Bunlardan çok azı gün ışığından uzakta akıl sağlıklarını koruyabilmiştir. Uzun zaman önce çılgın hırsız ve eşkiyalar , kim olduklarını vr niye çaldıklarını unutmuşlardır.</string>
-    <string name="Thief_Stole">%1$s senden %2$s çaldı!</string>
-    <string name="Thief_Carries">\n\n%1$s _%2$s_ üzerinde taşıyor. Çalıntı olduğu kesin.</string>
-    
-    <string name="Warlock_Name">cüce büyücü</string>
-    <string name="Warlock_Gender">masculine</string>
-    <string name="Warlock_Name_Objective">cüce büyücü</string>
-    <string name="Warlock_Desc"> Cücelerin ilgi alanları mühendislikten gizemli sanatlara kaydıktan sonra büyücüler şehirde güçlendi. Önce element büyüleri ile başlamışlardı ama sonra şeytani ve ruhani büyülerle ilgilendiler.</string>
-    <string name="Warlock_Killed">%s gölge ok ile seni öldürdü...</string>
-    
-    <string name="Wraith_Name">tayf</string>
-    <string name="Wraith_Gender">masculine</string>
-    <string name="Wraith_Name_Objective">tayf</string>
-    <string name="Wraith_Desc">Bir tayf, mezarında rahatsız edilmiş bir günahkarın intikamcı ruhudur. Ruhani bir varlık olduğu için normal silahlar ile vurabilmek çok zordur.</string>
-    <string name="Wraith_Defense">savuşturdu</string>
-    
-    <string name="Yog_Name">Yog-Dzewa</string>
-    <string name="Yog_Gender">masculine</string>
-    <string name="Yog_Name_Objective">Yog-Dzewa</string>
-    <string name="Yog_Desc">Yog-Dzewa eski bir tanrıdır.Kaos diyarının güçlü varlığı.Bir asır önce , antik cüceler zorla da olsa onun şeytani ordularını yenmişti, ancak tanrının kendisini öldürememişlerdi. Tekrar yükselmek için çok güçsüz olduğuna inanıp onu burad şehirlerinin altında hapsetmişlerdi.</string>
-    <string name="Yog_Info1">...</string>
-    <string name="Yog_Info2">Umarım bu bir hayaldir...</string>
-    <string name="RottingFist_Name">köklü yumruk</string>
-    <string name="RottingFist_Gender">masculine</string>
-    <string name="RottingFist_Name_Objective">köklü yumruk</string>
-    <string name="RottingFist_Desc">Eski tanrının yanan yumruğu</string>
-    <string name="BurningFist_Name">yanan yumruk</string>
-    <string name="BurningFist_Gender">erkek</string>
-    <string name="BurningFist_Name_Objective">yanan yumruk</string>
-    <string name="BurningFist_Desc">Eski tanrının yanan yumruğu</string>
-    <string name="Larva_Name">Tanrı\'nın Larvası</string>
-    <string name="Larva_Gender">erkek</string>
-    <string name="Larva_Name_Objective">Tanrı\'nın Larvası</string>
-    <string name="Larva_Desc">Larva Eski Tanrı</string>
-    
-    
-    <string name="SpiderEgg_Name">örümcek yumurtası</string>
-    <string name="SpiderEgg_Gender">neuter</string>
-    <string name="SpiderEgg_Name_Objective">örümcek yumurtası</string>
-    <string name="SpiderEgg_Desc">Bu kırılgan yumurta kabaca titreşiyor. İçinde çok fazla bacağı olan birşeyler olduğunu görebiliyorsun</string>
-    
-    
-    <string name="SpiderNest_Name">örümcek kozası</string>
-    <string name="SpiderNest_Gender">neuter</string>
-    <string name="SpiderNest_Name_Objective">örümcek kozası</string>
-    <string name="SpiderNest_Desc">Bu koza ince örümcek ağından yapılmış ve içinde canlı birşeyler var.</string>
-    
-    
-    <string name="SpiderServant_Name">asker örümcek</string>
-    <string name="SpiderServant_Gender">masculine</string>
-    <string name="SpiderServant_Name_Objective">asker örümcek</string>
-    <string name="SpiderServant_Desc">Örümcek yuvasının en kalabalık birimi askerlerdir.Bölgelerini korumak için doğmuşlardır.Askerlerin iğneleri düşmaını zehirleyen keseler ile doludur.</string>
-    
-    
-    <string name="SpiderExploding_Name">işçi örümcek</string>
-    <string name="SpiderExploding_Gender">masculine</string>
-    <string name="SpiderExploding_Name_Objective">işçi örümcek</string>
-    <string name="SpiderExploding_Desc">Normal zamanda çok çalışkan olan bu örümcekler , düşmanlarına saldırmakta ve kendilerini canlı bomba gibi kullanmakta hiç tereddüt etmezler.</string>
-    
-    
-    <string name="SpiderMind_Name">Psi-örümcek</string>
-    <string name="SpiderMind_Gender">masculine</string>
-    <string name="SpiderMind_Name_Objective">Psi-örümcek</string>
-    <string name="SpiderMind_Desc">Bu kırılgan örümcekler tüm koloniyi kontrol edebilen benzersiz zihinsel güçlere sahiptirler. Psi-örümcek\'ler yaşayan herşeyi kontrol edebilme yeteneğine de sahiptir, ama bu biraz korkak gibi.</string>
-    
-    
-    <string name="SpiderQueen_Name">örümcek kraliçe</string>
-    <string name="SpiderQueen_Gender">erkek</string>
-    <string name="SpiderQueen_Name_Objective">örümcek kraliçe</string>
-    <string name="SpiderQueen_Desc">Güzel bir kadın vücudu ile iğrenç bir örümceğin karışımı.Bu yuvada yaşayan herşey onun hizmetkarı, bu muhteşem kadınla tanışmak ölümcül bir deneyim olabilir. Çünkü sen burada izinsiz bulunuyorsun!</string>
-    
-    
-    <string name="WaterElemental_Name">su elementi</string>
-    <string name="WaterElemental_Gender">masculine</string>
-    <string name="WaterElemental_Name_Objective">su elementi</string>
-    <string name="WaterElemental_Desc">Su elementleri büyük su kütlelerinde bulunur. Ortalıkta gezinen birbirlerinebağlanmış dalgalardır.</string>
-
-    
-    <string name="AirElemental_Name">hava elementi</string>
-    <string name="AirElemental_Gender">erkek</string>
-    <string name="AirElemental_Name_Objective">hava elementi</string>
-    <string name="AirElemental_Desc">Hava elementi , canlı havadan yaratılmış sihirli oluşumlardır.</string>
-
-    
-    <string name="EarthElemental_Name">earth elemental</string>
-    <string name="EarthElemental_Gender">masculine</string>
-    <string name="EarthElemental_Name_Objective">earth elemental</string>
-    <string name="EarthElemental_Desc">Earth elementals are earth masses driven by concentrated nature forces.</string>
-    
-    
-    <string name="Crystal_Name">süzülen kristal</string>
-    <string name="Crystal_Gender">masculine</string>
-    <string name="Crystal_Name_Objective">Crippled</string>
-    <string name="Crystal_Desc">Büyük parlak bir kristal havada süzülüyor. Çok güçlü bir büyüyle dolu.</string>
-    
+  <string name="Skeleton_Gender">masculine</string>
+  <string name="Skeleton_Name_Objective">iskelet</string>
+  <string name="Skeleton_Desc">İskeletler şansız maceracılar ve mağarının eski sakinlerinin kemiklerinin bir araya gelmesinden oluşur. Derinlerden fışkıran şeytani büyü sayesinde hayat bulurlar. Yeterince hasar görürlerse kemikler patlayarak iskelet yok olur.</string>
+  <string name="Skeleton_Defense">engellendi</string>
+  <string name="Skeleton_Killed">Kemiklerin patlaması ile öldün...</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">nişancı mağara örümceği</string>
+  <string name="Spinner_Gender">masculine</string>
+  <string name="Spinner_Name_Objective">nişancı mağara örümceği</string>
+  <string name="Spinner_Desc">Bu öfkeli, yeşil örümcekler direkt dövüşten kaçınır, kurbanlarını ördükleri ağ ile tuzağa düşürerek zehirleyip öldürmeyi tercih ederler.</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">canlı heykel</string>
+  <string name="Statue_Gender">erkek</string>
+  <string name="Statue_Name_Objective">canlı heykel</string>
+  <string name="Statue_Desc">Ne kadar çirkin bir heykel olduğunu düşünmeden edemiyorsun, sadece parlayan kırmızı gözleri değil , kim böyle bir şeyin üstüne _%s_ koyar.</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">dişi şeytan</string>
+  <string name="Succubus_Gender">masculine</string>
+  <string name="Succubus_Name_Objective">dişi şeytan</string>
+  <string name="Succubus_Desc">Dişi şeytanlar , baştan çıkarıcı bir kadın görüntüsündedir. Cazibeleri ile kahramanları herhangi bir şeye saldırmayacak şekilde etkilerler.</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Name">Sinek sürüsü</string>
+  <string name="Swarm_Gender">masculine</string>
+  <string name="Swarm_Name_Objective">Sinek sürüsü</string>
+  <string name="Swarm_Desc">Ölümcül sinek sürüzü aç bir şekilde vızıldıyor.Sihirli olmayan her atak onları daha küçük ama aynı boyutta tehlikeli iki parçaya bölecektir</string>
+  <string name="Swarm_Defense">savuşturdu</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">Tengu</string>
+  <string name="Tengu_Gender">masculine</string>
+  <string name="Tengu_Name_Objective">Tengu</string>
+  <string name="Tengu_Desc">Tengu, adı Tengu olan antik suikastçi klanının üyesidir, bu suikastçiler tuzakları ve ninja yıldızlarını kullanmaları ile ünlüdür.</string>
+  <string name="Tengu_Info1">Sonunda özgürüm...</string>
+  <string name="Tengu_Info2">yakaladım, %s!</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">çılgın hırsız</string>
+  <string name="Thief_Gender">masculine</string>
+  <string name="Thief_Name_Objective">çılgın hırsız</string>
+  <string name="Thief_Desc">Zindanın daha alt seviyeleri her zaman suçluların gizlenme yeri olmuştur. Bunlardan çok azı gün ışığından uzakta akıl sağlıklarını koruyabilmiştir. Uzun zaman önce çılgın hırsız ve eşkiyalar , kim olduklarını vr niye çaldıklarını unutmuşlardır.</string>
+  <string name="Thief_Stole">%1$s senden %2$s çaldı!</string>
+  <string name="Thief_Carries">\n\n%1$s _%2$s_ üzerinde taşıyor. Çalıntı olduğu kesin.</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Name">cüce büyücü</string>
+  <string name="Warlock_Gender">masculine</string>
+  <string name="Warlock_Name_Objective">cüce büyücü</string>
+  <string name="Warlock_Desc"> Cücelerin ilgi alanları mühendislikten gizemli sanatlara kaydıktan sonra büyücüler şehirde güçlendi. Önce element büyüleri ile başlamışlardı ama sonra şeytani ve ruhani büyülerle ilgilendiler.</string>
+  <string name="Warlock_Killed">%s gölge ok ile seni öldürdü...</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Name">tayf</string>
+  <string name="Wraith_Gender">masculine</string>
+  <string name="Wraith_Name_Objective">tayf</string>
+  <string name="Wraith_Desc">Bir tayf, mezarında rahatsız edilmiş bir günahkarın intikamcı ruhudur. Ruhani bir varlık olduğu için normal silahlar ile vurabilmek çok zordur.</string>
+  <string name="Wraith_Defense">savuşturdu</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">Yog-Dzewa</string>
+  <string name="Yog_Gender">masculine</string>
+  <string name="Yog_Name_Objective">Yog-Dzewa</string>
+  <string name="Yog_Desc">Yog-Dzewa eski bir tanrıdır.Kaos diyarının güçlü varlığı.Bir asır önce , antik cüceler zorla da olsa onun şeytani ordularını yenmişti, ancak tanrının kendisini öldürememişlerdi. Tekrar yükselmek için çok güçsüz olduğuna inanıp onu burad şehirlerinin altında hapsetmişlerdi.</string>
+  <string name="Yog_Info1">...</string>
+  <string name="Yog_Info2">Umarım bu bir hayaldir...</string>
+  <string name="RottingFist_Name">köklü yumruk</string>
+  <string name="RottingFist_Gender">masculine</string>
+  <string name="RottingFist_Name_Objective">köklü yumruk</string>
+  <string name="RottingFist_Desc">Eski tanrının yanan yumruğu</string>
+  <string name="BurningFist_Name">yanan yumruk</string>
+  <string name="BurningFist_Gender">erkek</string>
+  <string name="BurningFist_Name_Objective">yanan yumruk</string>
+  <string name="BurningFist_Desc">Eski tanrının yanan yumruğu</string>
+  <string name="Larva_Name">Tanrı\'nın Larvası</string>
+  <string name="Larva_Gender">erkek</string>
+  <string name="Larva_Name_Objective">Tanrı\'nın Larvası</string>
+  <string name="Larva_Desc">Larva Eski Tanrı</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">örümcek yumurtası</string>
+  <string name="SpiderEgg_Gender">neuter</string>
+  <string name="SpiderEgg_Name_Objective">örümcek yumurtası</string>
+  <string name="SpiderEgg_Desc">Bu kırılgan yumurta kabaca titreşiyor. İçinde çok fazla bacağı olan birşeyler olduğunu görebiliyorsun</string>
+  <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">örümcek kozası</string>
+  <string name="SpiderNest_Gender">neuter</string>
+  <string name="SpiderNest_Name_Objective">örümcek kozası</string>
+  <string name="SpiderNest_Desc">Bu koza ince örümcek ağından yapılmış ve içinde canlı birşeyler var.</string>
+  <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Name">asker örümcek</string>
+  <string name="SpiderServant_Gender">masculine</string>
+  <string name="SpiderServant_Name_Objective">asker örümcek</string>
+  <string name="SpiderServant_Desc">Örümcek yuvasının en kalabalık birimi askerlerdir.Bölgelerini korumak için doğmuşlardır.Askerlerin iğneleri düşmaını zehirleyen keseler ile doludur.</string>
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">işçi örümcek</string>
+  <string name="SpiderExploding_Gender">masculine</string>
+  <string name="SpiderExploding_Name_Objective">işçi örümcek</string>
+  <string name="SpiderExploding_Desc">Normal zamanda çok çalışkan olan bu örümcekler , düşmanlarına saldırmakta ve kendilerini canlı bomba gibi kullanmakta hiç tereddüt etmezler.</string>
+  <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">Psi-örümcek</string>
+  <string name="SpiderMind_Gender">masculine</string>
+  <string name="SpiderMind_Name_Objective">Psi-örümcek</string>
+  <string name="SpiderMind_Desc">Bu kırılgan örümcekler tüm koloniyi kontrol edebilen benzersiz zihinsel güçlere sahiptirler. Psi-örümcek\'ler yaşayan herşeyi kontrol edebilme yeteneğine de sahiptir, ama bu biraz korkak gibi.</string>
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">örümcek kraliçe</string>
+  <string name="SpiderQueen_Gender">erkek</string>
+  <string name="SpiderQueen_Name_Objective">örümcek kraliçe</string>
+  <string name="SpiderQueen_Desc">Güzel bir kadın vücudu ile iğrenç bir örümceğin karışımı.Bu yuvada yaşayan herşey onun hizmetkarı, bu muhteşem kadınla tanışmak ölümcül bir deneyim olabilir. Çünkü sen burada izinsiz bulunuyorsun!</string>
+  <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">su elementi</string>
+  <string name="WaterElemental_Gender">masculine</string>
+  <string name="WaterElemental_Name_Objective">su elementi</string>
+  <string name="WaterElemental_Desc">Su elementleri büyük su kütlelerinde bulunur. Ortalıkta gezinen birbirlerinebağlanmış dalgalardır.</string>
+  <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">hava elementi</string>
+  <string name="AirElemental_Gender">erkek</string>
+  <string name="AirElemental_Name_Objective">hava elementi</string>
+  <string name="AirElemental_Desc">Hava elementi , canlı havadan yaratılmış sihirli oluşumlardır.</string>
+  <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">earth elemental</string>
+  <string name="EarthElemental_Gender">masculine</string>
+  <string name="EarthElemental_Name_Objective">earth elemental</string>
+  <string name="EarthElemental_Desc">Earth elementals are earth masses driven by concentrated nature forces.</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">süzülen kristal</string>
+  <string name="Crystal_Gender">masculine</string>
+  <string name="Crystal_Name_Objective">Crippled</string>
+  <string name="Crystal_Desc">Büyük parlak bir kristal havada süzülüyor. Çok güçlü bir büyüyle dolu.</string>
 </resources>

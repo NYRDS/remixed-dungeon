@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
+  <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">gümüş</string>
   <string name="WndDonate_gold">altın</string>
   <string name="WndDonate_ruby">yakut</string>
@@ -16,7 +16,7 @@
   <string name="WndDonate_silverDonateText2">Aynı zamanda tüm oyun modlarındaki reklamları kaldırır ve avcı karakterinin kilidini açar</string>
   <string name="WndDonate_goldDonateText2">Aynı zamanda elf karakterinin kilidini açar.</string>
   <string name="WndDonate_rubyDonateText2" />
-  
+  <!--STRINGS OF WndPremiumSettings CLASS-->
   <string name="WndPremiumSettings_std">standart</string>
   <string name="WndPremiumSettings_silver">gümüş</string>
   <string name="WndPremiumSettings_gold">altın</string>
@@ -26,9 +26,9 @@
   <string name="WndPremiumSettings_toolbar">Araç çubuğu dokusu seç</string>
   <string name="WndPremiumSettings_banners">Sembol dokusu seç</string>
   <string name="WndPremiumSettings_notAvailbale">Bu seçenek henüz geçerli değil</string>
-  
+  <!--STRINGS OF DonateButton CLASS-->
   <string name="DonateButton_pleaseDonate">lütfen bağış yapmayı düşünün</string>
   <string name="DonateButton_thanks">Desteğiniz için teşekkürler!</string>
-  
+  <!--STRINGS OF WndSaveSlotSelect-->
   <string name="WndSaveSlotSelect_dontLike">Reklamları sevmiyor musunuz? Bağış yapın ve sonsuza dek reklamsız oynayın.</string>
 </resources>

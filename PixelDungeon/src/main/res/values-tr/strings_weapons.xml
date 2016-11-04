@@ -1,262 +1,204 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
-  
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
   <string name="Weapon_Identify">Bu eşyayı tanımlamak için yeterince üzerinde taşıdın  %1$s .  Bu %2$s.</string>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <string name="Weapon_Incompatible">Farklı sihirler ile yaptığı etkileşimler bu silahın efsununu bozdu!</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>Gaddar %s</item>
+    <item>Gaddar %s</item>
+    <item>Gaddar %s</item>
+  </string-array>
+  <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>Işıltılı %s</item>
+    <item>Işıltılı %s</item>
+    <item>Işıltılı %s</item>
+  </string-array>
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>Çirkin %s</item>
+    <item>Çirkin %s</item>
+    <item>Çirkin %s</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>Kararsız %s</item>
+    <item>Kararsız %s</item>
+    <item>Kararsız %s</item>
+  </string-array>
+  <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>Vampir %s</item>
+    <item>Vampir %s</item>
+    <item>Vampir %s</item>
+  </string-array>
+  <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>Şanslı %s</item>
+    <item>Şanslı %s</item>
+    <item>Şanslı %s</item>
+  </string-array>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>Çarpıcı %s</item>
+    <item>Çarpıcı %s</item>
+    <item>Çarpıcı %s</item>
+  </string-array>
+  <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>Delici %s</item>
+    <item>Delici %s</item>
+    <item>Delici %s</item>
+  </string-array>
+  <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>Zehirli %s</item>
+    <item>Zehirli %s</item>
+    <item>Zehirli %s</item>
+  </string-array>
+  <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>Soğuk %s</item>
+    <item>Soğuk %s</item>
+    <item>Soğuk %s</item>
+  </string-array>
+  <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>Vahşi %s</item>
+    <item>Vahşi %s</item>
+    <item>Vahşi %s</item>
+  </string-array>
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">%1$s , %2$s tier-%3$d saldırı silahı.</string>
   <string name="MeleeWeapon_Info1b">a</string>
+  <string name="MeleeWeapon_Info1c">yükseltilmiş</string>
+  <string name="MeleeWeapon_Info1d">indirgenmiş</string>
+  <string name="MeleeWeapon_Info2a">Her vuruşta ortalama %1$d puan hasar verir.</string>
+  <string name="MeleeWeapon_Info2b">Her vuruşta ortalama %1$d puan hasar verir ve genellikle kullanmak için %2$d güç puanı gerekir.</string>
   <string name="MeleeWeapon_Info2c">bu silah senin için muhtemelen çok ağır.</string>
+  <string name="MeleeWeapon_Info3a">Silahın kalitesi :%s.</string>
   <string name="MeleeWeapon_Info3b">hızlı</string>
   <string name="MeleeWeapon_Info3c">yavaşla </string>
   <string name="MeleeWeapon_Info3d">ve </string>
   <string name="MeleeWeapon_Info3e">ama </string>
+  <string name="MeleeWeapon_Info3f">isabetli</string>
+  <string name="MeleeWeapon_Info3g">isabetsiz</string>
   <string name="MeleeWeapon_Info4a">daha hızlı olması için dengelenmiş.</string>
-  
+  <string name="MeleeWeapon_Info4b">İsabetli olması için ayarlanmış.</string>
+  <string name="MeleeWeapon_Info5">Efsunlanmış.</string>
+  <string name="MeleeWeapon_Info6a">Gücün %s için yetersiz olduğu için saldırı hızın ve isabetin düşük.</string>
+  <string name="MeleeWeapon_Info6b">Gücün çok fazla olduğu için ,%s ile yaptığın atakların hızı ve isabeti artıyor.</string>
+  <string name="MeleeWeapon_Info7a">%1$s saldırı sırasında kullanmak için hazır%2$s.</string>
+  <string name="MeleeWeapon_Info7b">, ve lanetli olduğu için başka silah kullanamıyorsun</string>
+  <string name="MeleeWeapon_Info7c">%s lanetli ve ondan yayılan kötü büyüyü hissedebiliyorsun.</string>
+  <!--STRINGS OF BattleAxe CLASS-->
   <string name="BattleAxe_Name">savaş baltası </string>
+  <string name="BattleAxe_Info">Bu muazzam başlı balta her darbede arkasında büyük bir hasar bırakır</string>
   <string name="BattleAxe_Gender">erkeksi</string>
-  
+  <!--STRINGS OF Dagger CLASS-->
   <string name="Dagger_Name">hançer </string>
-  
-  
+  <string name="Dagger_Info">Basit demir bir hançer</string>
+  <string name="Dagger_Gender">masculine</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">Uzun saplı kılıç</string>
+  <string name="Glaive_Info">Uzun bir sopa ve ucunda keskin bir kılıç olan bir silah.</string>
+  <string name="Glaive_Gender">erkek</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">muşta</string>
+  <string name="Knuckles_Info">Parmak eklemlerin uyacak şekilde şekillendirilmiş demirden bir parça.</string>
   <string name="Knuckles_Gender">erkeksi</string>
-  
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">uzun kılıç</string>
+  <string name="Longsword_Info">Bu muazzam uzun kılıç her darbede arkasında büyük bir hasar bırakır.</string>
   <string name="Longsword_Gender">erkeksi</string>
-  
-  
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">topuz</string>
+  <string name="Mace_Info">Bu silahın demir topuzu çok büyük hasarlar verir.</string>
+  <string name="Mace_Gender">erkek</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">Sopa</string>
+  <string name="Quarterstaff_Info">Sert ağaçtan bu sopa iki ucunda demir parçalarla güçlendirilmiş.</string>
   <string name="Quarterstaff_Gender">erkeksi</string>
-  
+  <!--STRINGS OF ShortSword CLASS-->
   <string name="ShortSword_Name">kısa kılıç</string>
+  <string name="ShortSword_Info">Gerçekten kısa, bir hançerden bir kaç santim daha uzundur herhalde.</string>
+  <string name="ShortSword_ACReforge">DÖV</string>
   <string name="ShortSword_Select">geliştirmek için silah seç </string>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<string name="Weapon_Incompatible">Farklı sihirler ile yaptığı etkileşimler bu silahın efsununu bozdu!</string>
-
-    
-    
-    <string-array name="Death_Name">
-      <item>Gaddar %s</item>
-      <item>Gaddar %s</item>
-      <item>Gaddar %s</item>
-    </string-array>
-    
-    <string-array name="Fire_Name">
-      <item>Işıltılı %s</item>
-      <item>Işıltılı %s</item>
-      <item>Işıltılı %s</item>      
-    </string-array>
-    
-    <string-array name="Horror_Name">
-      <item>Çirkin %s</item>
-      <item>Çirkin %s</item>
-      <item>Çirkin %s</item>     
-    </string-array>
-    
-    <string-array name="Instability_Name">
-      <item>Kararsız %s</item>
-      <item>Kararsız %s</item>
-      <item>Kararsız %s</item>
-   </string-array>
-    
-    <string-array name="Leech_Name">
-      <item>Vampir %s</item>
-      <item>Vampir %s</item>
-      <item>Vampir %s</item>
-   </string-array>
-   
-   <string-array name="Luck_Name">
-      <item>Şanslı %s</item>
-      <item>Şanslı %s</item>
-      <item>Şanslı %s</item>
-   </string-array>
-    
-    <string-array name="Paralysis_Name">
-      <item>Çarpıcı %s</item>
-      <item>Çarpıcı %s</item>
-      <item>Çarpıcı %s</item>
-    </string-array>
-    
-    <string-array name="Piercing_Name">
-      <item>Delici %s</item>
-      <item>Delici %s</item>
-      <item>Delici %s</item>
-    </string-array>
-    
-    <string-array name="Poison_Name">
-      <item>Zehirli %s</item>
-      <item>Zehirli %s</item>
-      <item>Zehirli %s</item>
-   </string-array>
-    
-    <string-array name="Slow_Name">
-      <item>Soğuk %s</item>
-      <item>Soğuk %s</item>
-      <item>Soğuk %s</item>
-    </string-array>
-    
-    <string-array name="Swing_Name">
-      <item>Vahşi %s</item>
-      <item>Vahşi %s</item>
-      <item>Vahşi %s</item>
-   </string-array>
-
-    
-    
-    <string name="MeleeWeapon_Info1a">%1$s , %2$s tier-%3$d saldırı silahı.</string>
-    <string name="MeleeWeapon_Info1c">yükseltilmiş</string>
-    <string name="MeleeWeapon_Info1d">indirgenmiş</string>
-    <string name="MeleeWeapon_Info2a">Her vuruşta ortalama %1$d puan hasar verir.</string>
-    <string name="MeleeWeapon_Info2b">Her vuruşta ortalama %1$d puan hasar verir ve genellikle kullanmak için %2$d güç puanı gerekir.</string>
-    <string name="MeleeWeapon_Info3a">Silahın kalitesi :%s.</string>
-    <string name="MeleeWeapon_Info3f">isabetli</string>
-    <string name="MeleeWeapon_Info3g">isabetsiz</string>
-    <string name="MeleeWeapon_Info4b">İsabetli olması için ayarlanmış.</string>
-    <string name="MeleeWeapon_Info5">Efsunlanmış.</string>
-    <string name="MeleeWeapon_Info6a">Gücün %s için yetersiz olduğu için saldırı hızın ve isabetin düşük.</string>
-    <string name="MeleeWeapon_Info6b">Gücün çok fazla olduğu için ,%s ile yaptığın atakların hızı ve isabeti artıyor.</string>
-    <string name="MeleeWeapon_Info7a">%1$s saldırı sırasında kullanmak için hazır%2$s.</string>
-    <string name="MeleeWeapon_Info7b">, ve lanetli olduğu için başka silah kullanamıyorsun</string>
-    <string name="MeleeWeapon_Info7c">%s lanetli ve ondan yayılan kötü büyüyü hissedebiliyorsun.</string>
-
-    
-    <string name="BattleAxe_Info">Bu muazzam başlı balta her darbede arkasında büyük bir hasar bırakır</string>
-    <string name="Dagger_Info">Basit demir bir hançer</string>
-    <string name="Dagger_Gender">masculine</string>
-    
-    
-    <string name="Glaive_Name">Uzun saplı kılıç</string>
-    <string name="Glaive_Info">Uzun bir sopa ve ucunda keskin bir kılıç olan bir silah.</string>
-    <string name="Glaive_Gender">erkek</string>
-    
-    
-    <string name="Knuckles_Name">muşta</string>
-    <string name="Knuckles_Info">Parmak eklemlerin uyacak şekilde şekillendirilmiş demirden bir parça.</string>
-    <string name="Longsword_Name">uzun kılıç</string>
-    <string name="Longsword_Info">Bu muazzam uzun kılıç her darbede arkasında büyük bir hasar bırakır.</string>
-    <string name="Mace_Name">topuz</string>
-    <string name="Mace_Info">Bu silahın demir topuzu çok büyük hasarlar verir.</string>
-    <string name="Mace_Gender">erkek</string>  
-    
-    
-    <string name="Quarterstaff_Name">Sopa</string>
-    <string name="Quarterstaff_Info">Sert ağaçtan bu sopa iki ucunda demir parçalarla güçlendirilmiş.</string>
-    <string name="ShortSword_Info">Gerçekten kısa, bir hançerden bir kaç santim daha uzundur herhalde.</string>
-    <string name="ShortSword_ACReforge">DÖV</string>
-    <string name="ShortSword_Reforged">kısa kılıcı döverek ,%s nesnesini yükseltin</string>
-    <string name="ShortSword_NotBoomerang">Bumerang\'ı bu şekilde yükseltemezsin</string>
-    <string name="ShortSword_Gender">masculine</string>
-    
-    
-    <string name="Spear_Name">kargı</string>
-    <string name="Spear_Info">Uzun bir sopanın ucunda keskin bıçak olan bir silah.</string>
-    <string name="Spear_Gender">neuter</string> 
-    
-    
-    <string name="Sword_Name">kılıç</string>
-    <string name="Sword_Info">Keskin ağzı ile bu uzun çelik silah güven verici şekilde parlıyor.</string>
-    <string name="Sword_Gender">masculine</string> 
-    
-    
-    <string name="WarHammer_Name">savaş çekici</string>
-    <string name="WarHammer_Info">Çok az yaratık bu çekicin ezici gücüne karşı durabilir ama bu silahı sadece yeterince güçlü maceracılar kullanabilir.</string>
-    <string name="WarHammer_Gender">masculine</string>
-    
-    
-    
-    <string name="MissileWeapon_Missiles">Uzun mesafeli fırlatma silahı</string>
-    <string name="MissileWeapon_Yes">Evet, ne yaptığımı biliyorum</string>
-    <string name="MissileWeapon_No">Hayır, fikrimi değiştirdim</string>
-    <string name="MissileWeapon_Sure">Saldırı silahı olarak kullanmak istediğine emin misin?</string>
-    <string name="MissileWeapon_Info1">\n\nBu silahın ortalama saldırı gücü %d puandır.</string>
-    <string name="MissileWeapon_Info2">Gücün %s için yetersiz olduğu için saldırı hızın ve isabetin düşük.</string>
-    <string name="MissileWeapon_Info3">Gücün çok fazla olduğu için ,%s ile yaptığın atakların hızı ve isabeti artıyor.</string>
-    <string name="MissileWeapon_Info4">\n\n%1$s saldırı sırasında kullanmak için hazır.</string>
-
-    
-    <string name="Boomerang_Name">bumerang</string>
-    <string name="Boomerang_Info">Bu ağaçtan yapılmış bumerang düşmana attıktan sonra ellerine geri dönecek</string>
-    <string name="Boomerang_Gender">erkek</string>
-    
-    
-    <string name="CurareDart_Name">zehirli ok</string>
-    <string name="CurareDart_Info">Bu küçük oklar fazla zarar vermese de rakibini hareketsiz ve savunmasız bırakabilir</string>
-    <string name="CurareDart_Gender">masculine</string>
-    
-    
-    <string name="Dart_Name">dart</string>
-    <string name="Dart_Info">Bu metal oklar bir bilek hareketiyle havada süzülmesi için dizayn edilmiş</string>
-    <string name="Dart_Gender">masculine</string>
-    
-    
-    <string name="IncendiaryDart_Name">yakıcı ok</string>
-    <string name="IncendiaryDart_Info">Hedefini parlak ve büyük bir ateşle yakan ok.</string>
-    <string name="IncendiaryDart_Gender">masculine</string>
-    
-    
-    <string name="Javelin_Name">mızrak</string>
-    <string name="Javelin_Info">Bu silah havada süzülmesi için tasarlanmış.</string>
-    <string name="Javelin_Gender">neuter</string>
-    
-    
-    <string name="Shuriken_Name">Ninja yıldızı</string>
-    <string name="Shuriken_Info">Yıldız şekilli bu silah hedef oldukça fazla zarar verebilir ve yüksek hızla kullanılabilir.</string>
-    <string name="Shuriken_Gender">masculine</string>
-    
-    
-    <string name="Tamahawk_Name">savaş baltası</string>
-    <string name="Tamahawk_Info">Bu fılatılabilir balta etkili kullanım için hatırı sayılır bir güç istiyor.</string>
-    <string name="Tamahawk_Gender">masculine</string>
-
-    
-    <string name="Kusarigama_Name">kusarigama</string>
-    <string name="Kusarigama_Info">Bir ucunda orak diğer ucunda ağır bir demir ağırlık olan zincirden yapılan bir silah.</string>
-    <string name="Kusarigama_Gender">erkek</string>
-    <string name="Kusarigama_Pull">ÇEK</string>
-    
-    
-    <string name="ChaosSword_Name">kaos kılıcı</string>
-    <string name="ChaosSword_Gender">erkek</string>
-    
-    
-    <string name="ChaosBow_Name">Kaos yayı</string>
-    <string name="ChaosBow_Info">Bu korkunç yay , kaos enerjisi ile dolu. Her fırlattığı ok , bir parça kaos enerjisi taşıyor</string>
-    <string name="ChaosBow_Gender">erkek</string>
-    
-    
-    <string name="ChaosStaff_Name">Kaos asası</string>
-    <string name="ChaosStaff_Info">Asa kaos güçü ile aşılandı, bir büyücü ne ister ki ya da neden korkar ? </string>
-    <string name="ChaosStaff_Gender">erkek</string>
-    
-    
-    <string name="SacrificialSword_Name">kurban kılıcı</string>
-    <string name="SacrificialSword_Info">Bronz ve lekeli bu kılıç ilk bakışta kullanışsız görünüyor . Ancak bir çeşit arkaik güç barındırdığı hissediliyor. Bu güç herhangi bir yaratığı iradesiz köleleri çevirebilir, sadece onları uyandıracak doğru yolu bulmak lazım...</string>
-    <string name="SacrificialSword_Gender">masculine</string>
-    
+  <string name="ShortSword_Reforged">kısa kılıcı döverek ,%s nesnesini yükseltin</string>
+  <string name="ShortSword_NotBoomerang">Bumerang\'ı bu şekilde yükseltemezsin</string>
+  <string name="ShortSword_Gender">masculine</string>
+  <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">kargı</string>
+  <string name="Spear_Info">Uzun bir sopanın ucunda keskin bıçak olan bir silah.</string>
+  <string name="Spear_Gender">neuter</string>
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">kılıç</string>
+  <string name="Sword_Info">Keskin ağzı ile bu uzun çelik silah güven verici şekilde parlıyor.</string>
+  <string name="Sword_Gender">masculine</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">savaş çekici</string>
+  <string name="WarHammer_Info">Çok az yaratık bu çekicin ezici gücüne karşı durabilir ama bu silahı sadece yeterince güçlü maceracılar kullanabilir.</string>
+  <string name="WarHammer_Gender">masculine</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">Uzun mesafeli fırlatma silahı</string>
+  <string name="MissileWeapon_Yes">Evet, ne yaptığımı biliyorum</string>
+  <string name="MissileWeapon_No">Hayır, fikrimi değiştirdim</string>
+  <string name="MissileWeapon_Sure">Saldırı silahı olarak kullanmak istediğine emin misin?</string>
+  <string name="MissileWeapon_Info1">\n\nBu silahın ortalama saldırı gücü %d puandır.</string>
+  <string name="MissileWeapon_Info2">Gücün %s için yetersiz olduğu için saldırı hızın ve isabetin düşük.</string>
+  <string name="MissileWeapon_Info3">Gücün çok fazla olduğu için ,%s ile yaptığın atakların hızı ve isabeti artıyor.</string>
+  <string name="MissileWeapon_Info4">\n\n%1$s saldırı sırasında kullanmak için hazır.</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name">bumerang</string>
+  <string name="Boomerang_Info">Bu ağaçtan yapılmış bumerang düşmana attıktan sonra ellerine geri dönecek</string>
+  <string name="Boomerang_Gender">erkek</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">zehirli ok</string>
+  <string name="CurareDart_Info">Bu küçük oklar fazla zarar vermese de rakibini hareketsiz ve savunmasız bırakabilir</string>
+  <string name="CurareDart_Gender">masculine</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">dart</string>
+  <string name="Dart_Info">Bu metal oklar bir bilek hareketiyle havada süzülmesi için dizayn edilmiş</string>
+  <string name="Dart_Gender">masculine</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">yakıcı ok</string>
+  <string name="IncendiaryDart_Info">Hedefini parlak ve büyük bir ateşle yakan ok.</string>
+  <string name="IncendiaryDart_Gender">masculine</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">mızrak</string>
+  <string name="Javelin_Info">Bu silah havada süzülmesi için tasarlanmış.</string>
+  <string name="Javelin_Gender">neuter</string>
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">Ninja yıldızı</string>
+  <string name="Shuriken_Info">Yıldız şekilli bu silah hedef oldukça fazla zarar verebilir ve yüksek hızla kullanılabilir.</string>
+  <string name="Shuriken_Gender">masculine</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">savaş baltası</string>
+  <string name="Tamahawk_Info">Bu fılatılabilir balta etkili kullanım için hatırı sayılır bir güç istiyor.</string>
+  <string name="Tamahawk_Gender">masculine</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">kusarigama</string>
+  <string name="Kusarigama_Info">Bir ucunda orak diğer ucunda ağır bir demir ağırlık olan zincirden yapılan bir silah.</string>
+  <string name="Kusarigama_Gender">erkek</string>
+  <string name="Kusarigama_Pull">ÇEK</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">kaos kılıcı</string>
+  <string name="ChaosSword_Gender">erkek</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">Kaos yayı</string>
+  <string name="ChaosBow_Info">Bu korkunç yay , kaos enerjisi ile dolu. Her fırlattığı ok , bir parça kaos enerjisi taşıyor</string>
+  <string name="ChaosBow_Gender">erkek</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">Kaos asası</string>
+  <string name="ChaosStaff_Info">Asa kaos güçü ile aşılandı, bir büyücü ne ister ki ya da neden korkar ? </string>
+  <string name="ChaosStaff_Gender">erkek</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">kurban kılıcı</string>
+  <string name="SacrificialSword_Info">Bronz ve lekeli bu kılıç ilk bakışta kullanışsız görünüyor . Ancak bir çeşit arkaik güç barındırdığı hissediliyor. Bu güç herhangi bir yaratığı iradesiz köleleri çevirebilir, sadece onları uyandıracak doğru yolu bulmak lazım...</string>
+  <string name="SacrificialSword_Gender">masculine</string>
 </resources>

@@ -1,16 +1,41 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-	
-	
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
     <string name="Bowknot_Name">ilmik</string>
-    
+    <string name="Bowknot_Info">Saç iğnesine tutturulmuş, hoş pembe kurdela</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Gölgeler</string>
+    <string name="Shades_Info">Bazıları zindanların bunun gibi koyu giysiler giymek için karanık olduğunu söyler, sende onlara onların senin kadar \"cool\" olmadıklarını söyle.</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">fes</string>
-    
+    <string name="Fez_Info">Bildiğimiz fes.Hayır, bu dünyayı 3 boyutlu filan da yapmıyor.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Neko Ears</string>
+    <string name="NekoEars_Info">Sometimes you want to wash off all that monster blood and dirt and just feel cute and fluffy... Or at very least you can wear cute cat ears.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">tavşan kulakları</string>
-    
+    <string name="RabbitEars_Info">It\'s a well known belief that rabbits is a lucky beast, and their luck would transfer to those who obtained part of a rabbit\'s body. On a second thought being killed for decoration made out of your ears doesn\'t particularly lucky.</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">balkabağı</string>
-    
+    <string name="Pumpkin_Info">Back in a day Pumpkin people were proud and prosperous nation. But after humans came everything ended up in ruins. And severed carved heads of long gone Pumpkin tribes serves as remainder of those terrible events.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Nightcap</string>
+    <string name="Nightcap_Info">Conquering dungeons in the night must be a very tiring business. How about put on a warm, cosy hat and relax, so that all your worries would go away.</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">büyücü şapkası</string>
+    <string name="WizardHat_Info">A beautiful silk hat decorated with star ornaments. Back in the old, some believed that the greatest wizards wore specially crafted clothing that increased their power. But it doesn\'t actually buffs your magical capabilities, but it\'s sure feels like it.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">List of Accessories</string>
     <string name="WndHats_SlotTitle">kuşanılmış.</string>
     <string name="WndHats_NoConnectionMsg">şuanda google play e bağlanamazsın.</string>
     <string name="WndHats_Purchased">Anladım !</string>
@@ -18,37 +43,6 @@
     <string name="WndHats_BackButton">geri </string>
     <string name="WndHats_BuyButton">satın al</string>
     <string name="WndHats_EquipButton">kuşanılmış.</string>
-    <string name="WndHats_UnequipButton">kuşanılmamış</string>
-<string name="Bowknot_Info">Saç iğnesine tutturulmuş, hoş pembe kurdela</string>
-	
-	
-    <string name="Shades_Name">Gölgeler</string>
-    <string name="Shades_Info">Bazıları zindanların bunun gibi koyu giysiler giymek için karanık olduğunu söyler, sende onlara onların senin kadar \"cool\" olmadıklarını söyle.</string>
-	
-	
-
-    
-    <string name="Fez_Info">Bildiğimiz fes.Hayır, bu dünyayı 3 boyutlu filan da yapmıyor.</string>
-	
-	
-    <string name="NekoEars_Name">Neko Ears</string>
-    <string name="NekoEars_Info">Sometimes you want to wash off all that monster blood and dirt and just feel cute and fluffy... Or at very least you can wear cute cat ears.</string>
-	
-	
-    <string name="RabbitEars_Info">It\'s a well known belief that rabbits is a lucky beast, and their luck would transfer to those who obtained part of a rabbit\'s body. On a second thought being killed for decoration made out of your ears doesn\'t particularly lucky.</string>
-	
-	
-    <string name="Pumpkin_Info">Back in a day Pumpkin people were proud and prosperous nation. But after humans came everything ended up in ruins. And severed carved heads of long gone Pumpkin tribes serves as remainder of those terrible events.</string>
-	
-	
-    <string name="Nightcap_Name">Nightcap</string>
-    <string name="Nightcap_Info">Conquering dungeons in the night must be a very tiring business. How about put on a warm, cosy hat and relax, so that all your worries would go away.</string>
-	
-	
-    <string name="WizardHat_Info">A beautiful silk hat decorated with star ornaments. Back in the old, some believed that the greatest wizards wore specially crafted clothing that increased their power. But it doesn\'t actually buffs your magical capabilities, but it\'s sure feels like it.</string>
-
-    
-    
-    <string name="WndHats_ListTitle">List of Accessories</string>
     <string name="WndHats_InfoButton">Examine</string>
-    </resources>
+    <string name="WndHats_UnequipButton">kuşanılmamış</string>
+</resources>

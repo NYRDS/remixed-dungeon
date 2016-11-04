@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
+  <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">sen</string>
   <string name="Hero_Name_Objective">sen</string>
   <string name="Hero_Leave">Pixel dungeondan çıkmak o kadar kolay değil.</string>
@@ -26,7 +26,7 @@
   <string name="Hero_StaCripple">sakatlandın !</string>
   <string name="Hero_StaBleeding">Kanaman Başladı !</string>
   <string name="Hero_StaVertigo">Etrafındaki Herşey Dönmeye Başladı !</string>
-  
+  <!--STRINGS OF HeroClass CLASS-->
   <string name="HeroClass_War">Savaşçı</string>
   <string name="HeroClass_Mag">Büyücü</string>
   <string name="HeroClass_Rog">Serseri</string>
@@ -46,7 +46,29 @@
     <item>Büyücüler asayı yakın mesafe silahı olarak kullanabilir.</item>
     <item>Tanımlama parşömenleri başta tanımlı olur.</item>
   </string-array>
-  
+  <string-array name="HeroClass_RogPerks">
+    <item>Başıbozuk oyuna Gölge Yüzüğü+1 ile başlar.</item>
+    <item>Bu yüzük tanılanmış ve parmağına takılı olarak gelir.</item>
+    <item>Daha hafif zırhlar giyerek düşman saldırısını savuşturma tekniğini kullanır.</item>
+    <item>Gizli kapı ve tuzakları önceden farketme yeteneği yüksektir.</item>
+    <item>Yemek yemeden daha uzun süre yol alabilir.</item>
+    <item>Sihirli Harita Parşömeni tanımlı olarak gelir.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Avcı 15 sağlık puanı ile oyuna başlar.</item>
+    <item>Başlangıçta yükseltilebilir bir bumerangı silah olarak kullanır.</item>
+    <item>Uzun mesafeli silah kullanımında uzmandır ve bu silahlarla büyük hasar verebilir.</item>
+    <item>Bir çiy tanesinden daha fazla sağlık kazanır.</item>
+    <item>Etraftaki yaratıkları sezme yeteneği fazladır.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Elfler oyuna 15 Sağlık and 9 Güç puanı ile başlar.</item>
+    <item>Kök salmaya karşı bağışıklıkları vardır.</item>
+    <item>Güncellennmiş tahta yay ve oklar ile oyuna başlar.</item>
+    <item>Elfler yay kullanımı konusund yetenekli ve çeviktir.</item>
+    <item>Diğer saldırı silahları ile daha az başarılıdırlar.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">Gladyatör</string>
   <string name="HeroSubClass_DescGlad">Yakın Menzilli Bir Silah İle Başarılı Bir Saldırı _Gladyatör_\'ün combo başlatmasına izin verir ve her başarılı vuruş bir sonraki hasarı arttırır</string>
   <string name="HeroSubClass_NameBers">Vahşi Savaşçı</string>
@@ -67,28 +89,4 @@
   <string name="HeroSubClass_DescScout">Elf_Gözcüleri_ gizliliğin uzmanıdırlar.Uzun Çalılarda Görünmezlik Kazanırlar. Ayrıca Normal Elflere Göre Daha Hızlıdırlar</string>
   <string name="HeroSubClass_NameShaman">Şaman</string>
   <string name="HeroSubClass_DescShaman">elf_Şamanlar_ asaları ve yakın mesafe silahları kullanabilirler. Başarılı bir vuruş asanın enerjisini harcamadan vurma şansı şansı vardır </string>
-<string-array name="HeroClass_RogPerks">
-        <item>Başıbozuk oyuna Gölge Yüzüğü+1 ile başlar.</item>
-        <item>Bu yüzük tanılanmış ve parmağına takılı olarak gelir.</item>
-        <item>Daha hafif zırhlar giyerek düşman saldırısını savuşturma tekniğini kullanır.</item>
-        <item>Gizli kapı ve tuzakları önceden farketme yeteneği yüksektir.</item>
-        <item>Yemek yemeden daha uzun süre yol alabilir.</item>
-        <item>Sihirli Harita Parşömeni tanımlı olarak gelir.</item>
-    </string-array>
-    <string-array name="HeroClass_HunPerks">
-        <item>Avcı 15 sağlık puanı ile oyuna başlar.</item>
-        <item>Başlangıçta yükseltilebilir bir bumerangı silah olarak kullanır.</item>
-        <item>Uzun mesafeli silah kullanımında uzmandır ve bu silahlarla büyük hasar verebilir.</item>
-        <item>Bir çiy tanesinden daha fazla sağlık kazanır.</item>
-        <item>Etraftaki yaratıkları sezme yeteneği fazladır.</item>
-    </string-array>
-    <string-array name="HeroClass_ElfPerks">
-        <item>Elfler oyuna 15 Sağlık and 9 Güç puanı ile başlar.</item>
-        <item>Kök salmaya karşı bağışıklıkları vardır.</item>
-        <item>Güncellennmiş tahta yay ve oklar ile oyuna başlar.</item>
-        <item>Elfler yay kullanımı konusund yetenekli ve çeviktir.</item>
-        <item>Diğer saldırı silahları ile daha az başarılıdırlar.</item>&gt;
-    </string-array>
-
-    
-    </resources>
+</resources>

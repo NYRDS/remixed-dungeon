@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
+  <!--STRINGS OF Codex CLASS-->
   <string name="Codex_Name">Kodeks</string>
   <string name="Codex_ACRead">OKU</string>
   <string name="Codex_Info">Herhangi bir kütüphanede bulunabilen birçok kitapdan biri</string>

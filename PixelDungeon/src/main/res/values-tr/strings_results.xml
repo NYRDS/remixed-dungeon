@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
+  <!--STRINGS OF ResultDescriptions CLASS-->
   <string name="ResultDescriptions_Mob">%2$d. Seviyede %1$s tarafından öldürüldün</string>
   <string name="ResultDescriptions_Boss">%2$d. Seviyede %1$s tarafından öldürüldün</string>
   <string name="ResultDescriptions_Wand">%2$d. Seviyede kendi %1$s ile öldün</string>

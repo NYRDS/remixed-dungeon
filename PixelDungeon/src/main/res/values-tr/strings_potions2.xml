@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
+  <!--PACKAGE /items/potions additional strings-->
   <string name="Potion_ACMoisten">ıslatmak</string>
   <string name="Potion_SelectForMoisten">ıslatmak için bir eşya seç </string>
   <string name="Potion_MoistenUseless">görünüşe göre sadece iksiri israf ettin</string>
   <string name="Potion_RuneDissaperaed">rün kayboldu %s. den</string>
   <string name="Potion_ArrowMoisten">başarıyla oklarını kapladın.</string>
   <string name="Potion_ItemFliesAway">%s sadece ellerinden uçuverdi.</string>
-<string name="Potion_FoodRefreshed">%s artık yenebilir gibi görünüyor</string>
-
+  <string name="Potion_FoodRefreshed">%s artık yenebilir gibi görünüyor</string>
 </resources>

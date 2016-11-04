@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  
+  <!--STRINGS OF BadgesScene CLASS-->
   <string name="BadgesScene_Title">Rozetlerin</string>
-  
+  <!--STRINGS OF Badges CLASS-->
   <string name="Badges_Info1">Rozet onaylandı: %s</string>
   <string name="Badges_Info2">Yeni süper rozet: %s</string>
   <string name="Badges_Info3">Yeni rozet:  %s</string>
@@ -23,9 +23,9 @@
   <string name="Badges_AllRings">Tüm yüzükler öğrenildi\"</string>
   <string name="Badges_AllWands">Tüm asalar öğrenildi\"</string>
   <string name="Badges_AllItems">Tüm iksirler, parşömenler, yüzükler ve asalar öğrenildi</string>
-  
-  
-  
+  <!--<string name="Badges_BagSeed"></string>-->
+  <!--<string name="Badges_BagSroll"></string>-->
+  <!--<string name="Badges_BagWand"></string>-->
   <string name="Badges_AllBags">Tüm çantalar satın alındı</string>
   <string name="Badges_DeathFire">Ateş yüzünden ölüm</string>
   <string name="Badges_DeathPoison">Zehir yüzünden ölüm</string>
@@ -34,23 +34,23 @@
   <string name="Badges_DeathGlyph">Kabartma yüzünden ölüm</string>
   <string name="Badges_DeathFalling">Aşağı düşerek ölüm</string>
   <string name="Badges_Yasd">Ateş, zehir, zehirli gaz ve açlık yüzünden ölüm</string>
-  
-  
-  
-  
+  <!--<string name="Badges_BossSlain1War"></string>-->
+  <!--<string name="Badges_BossSlain1Mag"></string>-->
+  <!--<string name="Badges_BossSlain1Rog"></string>-->
+  <!--<string name="Badges_BossSlain1Hun"></string>-->
   <string name="Badges_BossSlain1">1. boss öldürüldü</string>
   <string name="Badges_BossSlain2">2. boss öldürüldü </string>
   <string name="Badges_BossSlain3">3. boss öldürüldü</string>
   <string name="Badges_BossSlain4">4. boss öldürüldü</string>
   <string name="Badges_BossSlain1All">1. boss \"Savaşçı\", \"Sihirbaz\", \"Casus\" ve \"Avcı\" tarafından öldürüldü</string>
-  
-  
-  
-  
-  
-  
-  
-  
+  <!--<string name="Badges_BossSlain3Glad"></string>-->
+  <!--<string name="Badges_BossSlain3Bers"></string>-->
+  <!--<string name="Badges_BossSlain3WarL"></string>-->
+  <!--<string name="Badges_BossSlain3BatM"></string>-->
+  <!--<string name="Badges_BossSlain3FreR"></string>-->
+  <!--<string name="Badges_BossSlain3Assa"></string>-->
+  <!--<string name="Badges_BossSlain3Snip"></string>-->
+  <!--<string name="Badges_BossSlain3Ward"></string>-->
   <string name="Badges_BossSlain3All">3. boss Gladyatör, Barbar, Falcı, Savaş Büyücüsü, Koşucu, Suikastçi, Sniper ve Müdür tarafından öldürüldü</string>
   <string name="Badges_RingHaggler">Pazarlıkçı Yüzüğü kazanıldı</string>
   <string name="Badges_RingThorns">Diken Yüzüğü kazanıldı</string>
@@ -62,24 +62,24 @@
   <string name="Badges_FoodEaten2">20 parça yemek yenildi</string>
   <string name="Badges_FoodEaten3">30 parça yemek yenildi</string>
   <string name="Badges_FoodEaten4">40 parça yemek yenildi</string>
-  
-  
-  
-  
+  <!--<string name="Badges_MasteryWar"></string>-->
+  <!--<string name="Badges_MasteryMag"></string>-->
+  <!--<string name="Badges_MasteryRog"></string>-->
+  <!--<string name="Badges_MasteryHun"></string>-->
   <string name="Badges_ItemLvl1">3. Seviye eşya kazanıldı</string>
   <string name="Badges_ItemLvl2">6. Seviye eşya kazanıldı</string>
   <string name="Badges_ItemLvl3">9. Seviye eşya kazanıldı</string>
   <string name="Badges_ItemLvl4">12. Seviye eşya kazanıldı</string>
-  
-  
-  
-  
-  
+  <!--<string name="Badges_RareAlbino"></string>-->
+  <!--<string name="Badges_RareBandit"></string>-->
+  <!--<string name="Badges_RareShielded"></string>-->
+  <!--<string name="Badges_RareSenior"></string>-->
+  <!--<string name="Badges_RareAcidid"></string>-->
   <string name="Badges_RareAll">Tüm nadir canavarlar öldürüldü</string>
-  
-  
-  
-  
+  <!--<string name="Badges_VictoryWar"></string>-->
+  <!--<string name="Badges_VictoryMag"></string>-->
+  <!--<string name="Badges_VictoryRog"></string>-->
+  <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Yendor\'un Tılsımı kazanıldı</string>
   <string name="Badges_VictoryAll">Yendor\'un Tılsımı Savaşçı, Büyücü, Casus &amp; Avcı tarafından kazanıldı</string>
   <string name="Badges_MasteryCombo">7li kombo</string>
