@@ -1,14 +1,12 @@
 package com.nyrds.pixeldungeon.items.guts.weapon.melee;
 
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.Polearm;
 
-public class Halberd extends MeleeWeapon {
-	{
-		imageFile = "items/polearms.png";
-		image = 2;
-	}
+public class Halberd extends Polearm {
 
 	public Halberd() {
-		super( 6, 1.1f, 1.2f );
+		super( 6, 1.1f, 1.4f );
+		imageFile = "items/polearms.png";
+		image = 2;
 	}
 }

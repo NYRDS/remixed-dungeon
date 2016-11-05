@@ -17,25 +17,19 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class Spear extends SpecialWeapon {
+public class Spear extends Polearm {
 
 	public Spear() {
 		super( 2, 1f, 1.5f );
-		range = 2;
 		image = ItemSpriteSheet.SPEAR;
 	}
 	
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.Spear_Info);
-	}
-	
-	@Override
-	public boolean isFliesStraight() {
-		return true;
 	}
 }

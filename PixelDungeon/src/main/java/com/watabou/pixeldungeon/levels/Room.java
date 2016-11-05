@@ -127,7 +127,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 			Type.WEAK_FLOOR, Type.MAGIC_WELL, Type.CRYPT, Type.POOL, Type.GARDEN, Type.LIBRARY, Type.ARMORY,
 			Type.TREASURY, Type.TRAPS, Type.STORAGE, Type.STATUE, Type.LABORATORY, Type.VAULT, Type.WAREHOUSE
 	));
-	
+
 	public Type type = Type.NULL;
 	
 	public int random(Level level) {
