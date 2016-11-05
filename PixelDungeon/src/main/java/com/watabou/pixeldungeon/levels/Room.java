@@ -57,6 +57,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -236,15 +237,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	}
 	
 	public static void shuffleTypes() {
-		int size = SPECIALS.size();
-		for (int i=0; i < size - 1; i++) {
-			int j = Random.Int( i, size );
-			if (j != i) {
-				Type t = SPECIALS.get( i );
-				SPECIALS.set( i, SPECIALS.get( j ) );
-				SPECIALS.set( j, t );
-			}
-		}
+		Collections.shuffle(SPECIALS);
 	}
 	
 	public static void useType( Type type ) {
