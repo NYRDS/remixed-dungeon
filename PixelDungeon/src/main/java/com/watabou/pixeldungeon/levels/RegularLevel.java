@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Bones;
@@ -128,7 +127,7 @@ public abstract class RegularLevel extends CommonLevel {
 		while (connected.size() < nConnected) {
 
 			Room cr = Random.element( connected );
-			Room or = Random.element( cr.neigbours );
+			Room or = Random.element( cr.neighbours);
 			if (!connected.contains( or )) {
 
 				cr.connect( or );
@@ -211,7 +210,7 @@ public abstract class RegularLevel extends CommonLevel {
 		Room[] ra = rooms.toArray(new Room[rooms.size()]);
 		for (int i=0; i < ra.length-1; i++) {
 			for (int j=i+1; j < ra.length; j++) {
-				ra[i].addNeigbour( ra[j] );
+				ra[i].addNeighbor( ra[j] );
 			}
 		}
 		
@@ -269,7 +268,7 @@ public abstract class RegularLevel extends CommonLevel {
 				} else if (Random.Int( 2 ) == 0){
 
 					HashSet<Room> neigbours = new HashSet<>();
-					for (Room n : r.neigbours) {
+					for (Room n : r.neighbours) {
 						if (!r.connected.containsKey( n ) && 
 							!Room.SPECIALS.contains( n.type ) &&
 							n.type != Type.PIT) {
@@ -563,6 +562,8 @@ public abstract class RegularLevel extends CommonLevel {
 	}
 
 	protected void placeBarrels(int num) {
+		return;
+		/*
 		for (int i =0; i < num; i++){
 			int pos;
 			do{
@@ -573,6 +574,7 @@ public abstract class RegularLevel extends CommonLevel {
 			Barrel barrel = new Barrel(pos);
 			addLevelObject(barrel);
 		}
+		*/
 	}
 
 	@Override

@@ -59,11 +59,11 @@ public class SewerLevel extends RegularLevel {
 
 	protected boolean[] water() {
 
-		return Patch.generate(this, getFeeling() == Feeling.WATER ? 0.60f : 0.45f, 5 );
+		return Patch.generate(this, getFeeling() == Feeling.WATER ? 0.60f : 0.45f, 5);
 	}
 
 	protected boolean[] grass() {
-		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.60f : 0.40f, 4 );
+		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.60f : 0.40f, 4);
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class SewerLevel extends RegularLevel {
 
 		for (int i = 0; i < getWidth(); i++) {
 			if (map[i] == Terrain.WALL &&
-				map[i + getWidth()] == Terrain.WATER &&
+					map[i + getWidth()] == Terrain.WATER &&
 					Random.Int(4) == 0) {
 
 				map[i] = Terrain.WALL_DECO;
@@ -81,7 +81,7 @@ public class SewerLevel extends RegularLevel {
 		for (int i = getWidth(); i < getLength() - getWidth(); i++) {
 			if (map[i] == Terrain.WALL &&
 					map[i - getWidth()] == Terrain.WALL &&
-				map[i + getWidth()] == Terrain.WATER &&
+					map[i + getWidth()] == Terrain.WATER &&
 					Random.Int(2) == 0) {
 
 				map[i] = Terrain.WALL_DECO;
@@ -93,9 +93,9 @@ public class SewerLevel extends RegularLevel {
 
 				int count =
 						(map[i + 1] == Terrain.WALL ? 1 : 0) +
-								(map[i - 1] == Terrain.WALL ? 1 : 0) +
-					(map[i + getWidth()] == Terrain.WALL ? 1 : 0) +
-					(map[i - getWidth()] == Terrain.WALL ? 1 : 0);
+						(map[i - 1] == Terrain.WALL ? 1 : 0) +
+						(map[i + getWidth()] == Terrain.WALL ? 1 : 0) +
+						(map[i - getWidth()] == Terrain.WALL ? 1 : 0);
 
 				if (Random.Int(16) < count * count) {
 					map[i] = Terrain.EMPTY_DECO;
@@ -117,7 +117,7 @@ public class SewerLevel extends RegularLevel {
 		if (ModdingMode.isHalloweenEvent()) {
 			if (Dungeon.depth == 2) {
 				ScarecrowNPC.spawn(this);
-	}
+			}
 		}
 
 	}
@@ -150,9 +150,9 @@ public class SewerLevel extends RegularLevel {
 	@Override
 	public String tileName(int tile) {
 		switch (tile) {
-		case Terrain.WATER:
-			return Game.getVar(R.string.Sewer_TileWater);
-		default:
+			case Terrain.WATER:
+				return Game.getVar(R.string.Sewer_TileWater);
+			default:
 				return super.tileName(tile);
 		}
 	}
@@ -160,11 +160,11 @@ public class SewerLevel extends RegularLevel {
 	@Override
 	public String tileDesc(int tile) {
 		switch (tile) {
-		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.Sewer_TileDescDeco);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Sewer_TileDescBookshelf);
-		default:
+			case Terrain.EMPTY_DECO:
+				return Game.getVar(R.string.Sewer_TileDescDeco);
+			case Terrain.BOOKSHELF:
+				return Game.getVar(R.string.Sewer_TileDescBookshelf);
+			default:
 				return super.tileDesc(tile);
 		}
 	}

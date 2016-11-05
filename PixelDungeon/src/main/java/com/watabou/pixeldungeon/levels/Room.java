@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.levels.painters.TrapsPainter;
 import com.watabou.pixeldungeon.levels.painters.TreasuryPainter;
 import com.watabou.pixeldungeon.levels.painters.TunnelPainter;
 import com.watabou.pixeldungeon.levels.painters.VaultPainter;
+import com.watabou.pixeldungeon.levels.painters.WarehousePainter;
 import com.watabou.pixeldungeon.levels.painters.WeakFloorPainter;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
@@ -61,8 +62,8 @@ import java.util.HashSet;
 
 public class Room extends Rect implements Graph.Node, Bundlable {
 	
-	public HashSet<Room> neigbours = new HashSet<>();
-	public HashMap<Room, Door> connected = new HashMap<>();
+	public HashSet<Room>       neighbours = new HashSet<>();
+	public HashMap<Room, Door> connected  = new HashMap<>();
 	
 	public int distance;
 	public int price = 1;
@@ -93,7 +94,8 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		POOL		( PoolPainter.class ),
 		RAT_KING	( RatKingPainter.class ),
 		WEAK_FLOOR	( WeakFloorPainter.class ),
-		PIT			( PitPainter.class );
+		PIT			( PitPainter.class ),
+		WAREHOUSE	( WarehousePainter.class );
 		
 		private Method paint;
 		
@@ -123,7 +125,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 
 	public static final ArrayList<Type> SPECIALS = new ArrayList<>(Arrays.asList(
 			Type.WEAK_FLOOR, Type.MAGIC_WELL, Type.CRYPT, Type.POOL, Type.GARDEN, Type.LIBRARY, Type.ARMORY,
-			Type.TREASURY, Type.TRAPS, Type.STORAGE, Type.STATUE, Type.LABORATORY, Type.VAULT
+			Type.TREASURY, Type.TRAPS, Type.STORAGE, Type.STATUE, Type.LABORATORY, Type.VAULT, Type.WAREHOUSE
 	));
 	
 	public Type type = Type.NULL;
@@ -138,13 +140,13 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		return level.cell(x, y);
 	}
 	
-	public void addNeigbour( Room other ) {
+	public void addNeighbor(Room other ) {
 		
 		Rect i = intersect( other );
 		if ((i.width() == 0 && i.height() >= 3) || 
 			(i.height() == 0 && i.width() >= 3)) {
-			neigbours.add( other );
-			other.neigbours.add( this );
+			neighbours.add( other );
+			other.neighbours.add( this );
 		}
 		
 	}
@@ -196,7 +198,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 
 	@Override
 	public Collection<Room> edges() {
-		return neigbours;
+		return neighbours;
 	} 
 	
 	@Override
