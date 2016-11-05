@@ -149,8 +149,6 @@ public abstract class RegularLevel extends CommonLevel {
 			}
 		}
 
-
-
 		assignRoomType();
 
 		paint();
