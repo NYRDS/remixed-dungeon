@@ -252,15 +252,15 @@ public class Weapon extends KindOfWeapon {
 			}
 			return weaponName;
 		}
-		
+
 		@Override
-		public void restoreFromBundle( Bundle bundle ) {	
+		public void restoreFromBundle( Bundle bundle ) {
 		}
 
 		@Override
-		public void storeInBundle( Bundle bundle ) {	
+		public void storeInBundle( Bundle bundle ) {
 		}
-		
+
 		public boolean dontPack() {
 			return false;
 		}
