@@ -42,7 +42,15 @@ public class AboutScene extends PixelScene {
 	private static final String LNK      = Game.getVar(R.string.AboutScene_Lnk);
 	private static final String SND      = Game.getVar(R.string.AboutScene_Snd);
 	private static final String TRN      = Game.getVar(R.string.AboutScene_TranslatedBy);
-	
+
+	private static String getTXT() {
+		return TXT;
+	}
+
+	private static String getTRN() {
+		return TRN;
+	}
+
 	private Text createTouchEmail(final String address, Text text2)
 	{
 		Text text = createText(address, text2);
@@ -101,11 +109,8 @@ public class AboutScene extends PixelScene {
 	@Override
 	public void create() {
 		super.create();
-		
-		//uiCamera.visible = false;
-		//camera().zoom( defaultZoom + PixelDungeon.zoom() );
-		
-		Text text = createText( TXT, null );
+
+		Text text = createText(getTXT(), null );
 		
 		text.camera = uiCamera;
 		
@@ -118,7 +123,7 @@ public class AboutScene extends PixelScene {
 		Text visit = createText("\n\n"+Game.getVar(R.string.AboutScene_OurSite)+"\n\n", email);
 		Text site  = createTouchLink(LNK, visit);		
 		
-		createText("\n\n"+TRN, site);
+		createText("\n\n"+ getTRN(), site);
 		
 		Image nyrdie = Icons.NYRDIE.get();
 		nyrdie.x = align( text.x + (text.width() - nyrdie.width) / 2 );
