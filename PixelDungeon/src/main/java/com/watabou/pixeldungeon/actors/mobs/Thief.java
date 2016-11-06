@@ -35,8 +35,8 @@ import com.watabou.utils.Random;
 
 public class Thief extends Mob {
 
-	protected static final String TXT_STOLE	  = Game.getVar(R.string.Thief_Stole);
-	protected static final String TXT_CARRIES = Game.getVar(R.string.Thief_Carries);
+	private static final String TXT_STOLE   = Game.getVar(R.string.Thief_Stole);
+	private static final String TXT_CARRIES = Game.getVar(R.string.Thief_Carries);
 	
 	public Item item;
 	

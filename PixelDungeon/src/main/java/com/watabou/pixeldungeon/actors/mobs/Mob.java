@@ -155,6 +155,10 @@ public abstract class Mob extends Char {
 
 		bundle.put(ENEMY_SEEN, enemySeen);
 		bundle.put(FRACTION, fraction.ordinal());
+
+		if(loot instanceof Item) {
+			bundle.put(LOOT, (Item)loot);
+		}
 	}
 
 	@Override
@@ -188,6 +192,11 @@ public abstract class Mob extends Char {
 		}
 
 		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
+
+		if(bundle.contains(LOOT)) {
+			loot = bundle.get(LOOT);
+			lootChance = 1;
+		}
 	}
 
 	protected int getKind() {
@@ -541,6 +550,8 @@ public abstract class Mob extends Char {
 			GLog.i(TXT_DIED);
 		}
 	}
+
+	private final String LOOT   = "loot";
 
 	protected Object loot       = null;
 	protected float  lootChance = 0;

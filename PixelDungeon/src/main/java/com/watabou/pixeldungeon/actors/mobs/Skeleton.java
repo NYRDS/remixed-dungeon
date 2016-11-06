@@ -17,17 +17,16 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.SkeletonSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -46,6 +45,23 @@ public class Skeleton extends UndeadMob {
 		
 		EXP = 5;
 		maxLvl = 10;
+
+		if (!Dungeon.hero.levelKind.equals("NecroBossLevel")) {
+			if (Random.Int(5) == 0) {
+
+				Item loot = Generator.random(Generator.Category.WEAPON);
+				for (int i = 0; i < 2; i++) {
+					Item l = Generator.random(Generator.Category.WEAPON);
+					if (l.level() < loot.level()) {
+						loot = l;
+					}
+				}
+				this.loot  = loot;
+				lootChance = 1;
+			} else {
+				lootChance = 0;
+			}
+		}
 	}
 	
 	@Override
@@ -79,24 +95,7 @@ public class Skeleton extends UndeadMob {
 			GLog.n( TXT_HERO_KILLED );
 		}
 	}
-	
-	@Override
-	protected void dropLoot() {
-		if (Dungeon.hero.levelKind.equals("NecroBossLevel")){
-			return;
-		}
-		if (Random.Int( 5 ) == 0) {
-			Item loot = Generator.random( Generator.Category.WEAPON );
-			for (int i=0; i < 2; i++) {
-				Item l = Generator.random( Generator.Category.WEAPON );
-				if (l.level() < loot.level()) {
-					loot = l;
-				}
-			}
-			Dungeon.level.drop( loot, getPos() ).sprite.drop();
-		}
-	}
-	
+
 	@Override
 	public int attackSkill( Char target ) {
 		return 12;

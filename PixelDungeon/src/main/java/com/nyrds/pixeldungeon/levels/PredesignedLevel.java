@@ -8,7 +8,6 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.CommonLevel;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.json.JSONArray;
@@ -39,10 +38,6 @@ public class PredesignedLevel extends CommonLevel {
 
 	private void readDescFile(String descFile) {
 		mLevelDesc = JsonHelper.readJsonFromAsset(descFile);
-
-		if (mLevelDesc == null) {
-			throw new TrackedRuntimeException(Utils.format("Malformed level [%s] description", descFile));
-		}
 	}
 
 	@Override
