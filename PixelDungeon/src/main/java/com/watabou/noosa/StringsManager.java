@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -33,14 +34,17 @@ public class StringsManager {
 	private static Context context;
 
 	@SuppressLint("UseSparseArrays")
+	@NonNull
 	private static Map<Integer, String>   stringMap  = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
+	@NonNull
 	private static Map<Integer, String[]> stringsMap = new HashMap<>();
+
 	private static Map<String, Integer> keyToInt;
 
 	private static void addMappingForClass(Class<?> clazz) {
 		for (Field f : clazz.getDeclaredFields()) {
-			if(f.isSynthetic()){
+			if (f.isSynthetic()) {
 				continue;
 			}
 			int key;
@@ -80,6 +84,9 @@ public class StringsManager {
 		if (keyToInt == null) {
 			initTextMapping();
 		}
+
+		stringMap.clear();
+		stringsMap.clear();
 
 		String line = "";
 
@@ -140,7 +147,7 @@ public class StringsManager {
 	}
 
 	public static String getVar(int id) {
-		if (stringMap != null && stringMap.containsKey(id)) {
+		if (stringMap.containsKey(id)) {
 			return stringMap.get(id);
 		}
 
