@@ -37,20 +37,21 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class AboutScene extends PixelScene {
 
-	private static final String TXT                        = Game.getVar(R.string.AboutScene_Txt_Intro);
-	private static final String TXT_CODE_N_TXT_GRAPHICS    = Game.getVar(R.string.AboutScene_Code_and_Graphics);
-	private static final String TXT_MUSIC                  = Game.getVar(R.string.AboutScene_Music);
-	private static final String TXT_SOUND                  = Game.getVar(R.string.AboutScene_Sound);
-	private static final String TXT_THANKS                 = Game.getVar(R.string.AboutScene_Thanks);
-	private static final String TXT_EMAIL_US               = Game.getVar(R.string.AboutScene_Email_Us);
+	private static final String TXT          = Game.getVar(R.string.AboutScene_Txt_Intro);
+	private static final String TXT_CODE     = Game.getVar(R.string.AboutScene_Code);
+	private static final String TXT_GRAPHICS = Game.getVar(R.string.AboutScene_Graphics);
+	private static final String TXT_MUSIC    = Game.getVar(R.string.AboutScene_Music);
+	private static final String TXT_SOUND    = Game.getVar(R.string.AboutScene_Sound);
+	private static final String TXT_THANKS   = Game.getVar(R.string.AboutScene_Thanks);
+	private static final String TXT_EMAIL_US = Game.getVar(R.string.AboutScene_Email_Us);
 
-	private static final String OUR_SITE                   = Game.getVar(R.string.AboutScene_OurSite);
-	private static final String LNK                        = Game.getVar(R.string.AboutScene_Lnk);
-	private static final String SND                        = Game.getVar(R.string.AboutScene_Snd);
-	private static final String TRN                        = Game.getVar(R.string.AboutScene_TranslatedBy);
+	private static final String OUR_SITE = Game.getVar(R.string.AboutScene_OurSite);
+	private static final String LNK = Game.getVar(R.string.AboutScene_Lnk);
+	private static final String SND = Game.getVar(R.string.AboutScene_Snd);
+	private static final String TRN = Game.getVar(R.string.AboutScene_TranslatedBy);
 
 	private static String getTXT() {
-		return TXT + TXT_CODE_N_TXT_GRAPHICS + TXT_MUSIC + TXT_SOUND + TXT_THANKS + TXT_EMAIL_US;
+		return TXT + TXT_CODE + TXT_GRAPHICS + TXT_MUSIC + TXT_SOUND + TXT_THANKS + TXT_EMAIL_US;
 	}
 
 	private static String getTRN() {
