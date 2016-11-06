@@ -37,7 +37,7 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class AboutScene extends PixelScene {
 
-	private static final String TXT                        = Game.getVar(R.string.AboutScene_Txt);
+	private static final String TXT                        = Game.getVar(R.string.AboutScene_Txt_Intro);
 	private static final String TXT_CODE_N_TXT_GRAPHICS    = Game.getVar(R.string.AboutScene_Code_and_Graphics);
 	private static final String TXT_MUSIC                  = Game.getVar(R.string.AboutScene_Music);
 	private static final String TXT_SOUND                  = Game.getVar(R.string.AboutScene_Sound);
