@@ -104,7 +104,7 @@ public class SewerLevel extends RegularLevel {
 		}
 
 		placeEntranceSign();
-		placeBarrels(5);
+		placeBarrels(Random.Int(5));
 
 	}
 

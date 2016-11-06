@@ -78,7 +78,7 @@ public class CityLevel extends RegularLevel {
 		}
 
 		placeEntranceSign();
-		placeBarrels(8);
+		placeBarrels(Random.Int(10));
 	}
 	
 	@Override

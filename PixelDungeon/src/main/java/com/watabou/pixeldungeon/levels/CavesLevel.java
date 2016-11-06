@@ -171,8 +171,6 @@ public class CavesLevel extends RegularLevel {
 				}
 			}
 		}
-
-		placeBarrels(7);
 	}
 	
 	@Override
