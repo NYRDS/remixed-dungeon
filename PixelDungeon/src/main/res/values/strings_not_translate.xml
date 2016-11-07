@@ -20,11 +20,11 @@
     <string name = "Mod_Email"></string>
     <string name = "Mod_Link"></string>
 
-    <string name="AboutScene_Code_Names">\nWatabou  &amp; NYRDS</string>
-    <string name="AboutScene_Graphics_Names">\nWatabou  &amp; NYRDS &amp; ThEnigma314 &amp; Pavel Provotorov</string>
-    <string name="AboutScene_Music_Names">\nCube_Code &amp; Misaerit</string>
-    <string name="AboutScene_Sound_Names">\nWatabou &amp; Freesound.org (sonidotv, kantouth)</string>
-    <string name="AboutScene_Thanks_Names">\nrodriformiga for PD i18n code</string>
+    <string name="AboutScene_Code_Names">Watabou  &amp; NYRDS</string>
+    <string name="AboutScene_Graphics_Names">Watabou  &amp; NYRDS &amp; ThEnigma314 &amp; Pavel Provotorov</string>
+    <string name="AboutScene_Music_Names">Cube_Code &amp; Misaerit</string>
+    <string name="AboutScene_Sound_Names">Watabou &amp; Freesound.org (sonidotv, kantouth)</string>
+    <string name="AboutScene_Thanks_Names">rodriformiga for PD i18n code</string>
 
     <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
     <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
