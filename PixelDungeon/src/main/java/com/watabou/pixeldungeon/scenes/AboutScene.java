@@ -48,7 +48,7 @@ public class AboutScene extends PixelScene {
 	private static final String OUR_SITE = Game.getVar(R.string.AboutScene_OurSite);
 	private static final String LNK = Game.getVar(R.string.AboutScene_Lnk);
 	private static final String SND = Game.getVar(R.string.AboutScene_Snd);
-	private static final String TRN = Game.getVar(R.string.AboutScene_Translation) + Game.getVar(R.string.AboutScene_Translation_Names);
+	private static final String TRN = Game.getVar(R.string.AboutScene_Translation) + "\n" + Game.getVar(R.string.AboutScene_Translation_Names);
 
 	private static String getTXT() {
 		return TXT + "\n\n" + TXT_CODE + "\n\n" + TXT_GRAPHICS + "\n\n" + TXT_MUSIC + "\n\n" + TXT_SOUND + "\n\n" + TXT_THANKS + "\n\n" + TXT_EMAIL_US;
