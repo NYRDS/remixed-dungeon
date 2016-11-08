@@ -19,13 +19,13 @@ import com.watabou.utils.Random;
 public class Crystal extends MultiKindMob {
 
 	static private int ctr = 0;
-	
+
 	public Crystal() {
 		adjustLevel(Dungeon.depth);
-		
+
 		loot = SimpleWand.createRandomSimpleWand();
-		((Wand)loot).upgrade(Dungeon.depth);
-		
+		((Wand) loot).upgrade(Dungeon.depth);
+
 		lootChance = 0.25f;
 	}
 
@@ -38,51 +38,51 @@ public class Crystal extends MultiKindMob {
 	}
 
 	private void adjustLevel(int depth) {
-		kind = (ctr++)%2;
-		
+		kind = (ctr++) % 2;
+
 		hp(ht(Dungeon.depth * 4 + 1));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
 		maxLvl = depth + 2;
-		
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( ParalyticGas.class );
+
+		IMMUNITIES.add(ScrollOfPsionicBlast.class);
+		IMMUNITIES.add(ToxicGas.class);
+		IMMUNITIES.add(ParalyticGas.class);
 	}
-	
+
 	@Override
 	public int getKind() {
 		return kind;
 	}
-	
+
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( hp() / 2, ht() / 2 );
+		return Random.NormalIntRange(hp() / 2, ht() / 2);
 	}
-	
+
 	@Override
-	protected boolean canAttack( Char enemy ) {
-		return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
+	protected boolean canAttack(Char enemy) {
+		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
-	
+
 	@Override
-	public int attackSkill( Char target ) {
-		if(kind < 2 ) {
+	public int attackSkill(Char target) {
+		if (kind < 2) {
 			return 1000;
 		} else {
 			return 35;
 		}
 	}
-	
+
 	@Override
 	public int dr() {
 		return EXP / 3;
 	}
 
 	@Override
-	public int attackProc( final Char enemy, int damage ) {
+	public int attackProc(final Char enemy, int damage) {
 
-		if(kind < 2) {
+		if (kind < 2) {
 			final Wand wand = ((Wand) loot);
 
 			wand.mobWandUse(this, enemy.getPos());
@@ -96,14 +96,14 @@ public class Crystal extends MultiKindMob {
 			return damage;
 		}
 	}
-	
+
 	@Override
-	protected boolean getCloser( int target ) {
+	protected boolean getCloser(int target) {
 		return false;
 	}
 
 	@Override
-	protected boolean getFurther( int target ) {
+	protected boolean getFurther(int target) {
 		return false;
 	}
 
@@ -111,9 +111,9 @@ public class Crystal extends MultiKindMob {
 	public void die(Object cause) {
 		int pos = getPos();
 
-		if(Dungeon.level.map[pos]== Terrain.PEDESTAL) {
-			Dungeon.level.set(pos,Terrain.EMBERS);
-			int x,y;
+		if (Dungeon.level.map[pos] == Terrain.PEDESTAL) {
+			Dungeon.level.set(pos, Terrain.EMBERS);
+			int x, y;
 			x = Dungeon.level.cellX(pos);
 			y = Dungeon.level.cellY(pos);
 
@@ -126,7 +126,7 @@ public class Crystal extends MultiKindMob {
 	}
 
 	@Override
-	public boolean canBePet(){
+	public boolean canBePet() {
 		return false;
 	}
 }
