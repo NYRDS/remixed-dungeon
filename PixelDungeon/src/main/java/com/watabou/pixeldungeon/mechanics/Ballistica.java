@@ -19,21 +19,28 @@ package com.watabou.pixeldungeon.mechanics;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.levels.Level;
 
 public class Ballistica {
 
 	public static int[] trace = new int[32];
 	public static int distance;
-	
-	public static int cast( int from, int to, boolean magic, boolean hitChars ) {
-		
-		int lSize = Math.max( Dungeon.level.getWidth(), Dungeon.level.getHeight());
+
+	public static int cast( int from, int to, boolean magic, boolean hitChars) {
+		return cast(from, to, magic, hitChars, false);
+	}
+
+	public static int cast( int from, int to, boolean magic, boolean hitChars, boolean hitObjects ) {
+
+		Level level = Dungeon.level;
+		int w = level.getWidth();
+
+		int lSize = Math.max( w, level.getHeight());
+
 		if(trace.length < lSize) {
 			trace = new int[lSize]; 
 		}
-		
-		int w = Dungeon.level.getWidth();
-		
+
 		int x0 = from % w;
 		int x1 = to % w;
 		int y0 = from / w;
@@ -87,11 +94,13 @@ public class Ballistica {
 			
 			trace[distance++] = cell;
 			
-			if (!Dungeon.level.passable[cell] && !Dungeon.level.avoid[cell]) {
+			if (!level.passable[cell] && !level.avoid[cell]) {
 				return trace[--distance - 1];
 			}
 			
-			if (Dungeon.level.losBlocking[cell] || (hitChars && Actor.findChar( cell ) != null)) {
+			if (level.losBlocking[cell]
+					|| (hitChars && Actor.findChar( cell ) != null)
+					|| (hitObjects && level.getLevelObject(cell) != null)) {
 				return cell;
 			}
 		}

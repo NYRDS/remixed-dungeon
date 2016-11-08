@@ -41,7 +41,8 @@ public class WandOfTelekinesis extends Wand {
 	private static final String TXT_YOU_NOW_HAVE = Game.getVar(R.string.WandOfTelekinesis_YouNowHave);
 
 	{
-		hitChars = false;
+		hitChars   = false;
+		hitObjects = true;
 	}
 
 	@Override

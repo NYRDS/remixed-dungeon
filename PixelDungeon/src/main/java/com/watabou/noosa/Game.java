@@ -36,6 +36,7 @@ import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.PermissionChecker;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -54,7 +55,6 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
@@ -538,7 +538,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public boolean checkOwnSignature() {
-		GLog.i("own signature %s", Util.getSignature(this));
+		Log.i("Game",Utils.format("own signature %s", Util.getSignature(this)));
 		return Util.getSignature(this).equals(getVar(R.string.ownSignature));
 	}
 }

@@ -68,7 +68,7 @@ public class Util {
 		} catch (PackageManager.NameNotFoundException e) {
 			throw new TrackedRuntimeException(e);
 		} catch (NoSuchAlgorithmException e) {
-			return "No SHA-512?";
+			return "No SHA-1?";
 		}
 	}
 
