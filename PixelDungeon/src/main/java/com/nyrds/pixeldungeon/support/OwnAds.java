@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -26,59 +27,64 @@ class OwnAds {
 			"<div align=\"right\"height=100%%>.</div>";
 
 	static void displayBanner() {
-		Game.instance().runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				LinearLayout layout = Game.instance().getLayout();
-				if (layout.getChildCount() == 1) {
-					EventCollector.logEvent("OwnAds", "banner");
-					WebView adView = new WebView(Game.instance());
+		EventCollector.logEvent("OwnAds", "banner");
+		if (BuildConfig.DEBUG) {
+			Game.instance().runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					LinearLayout layout = Game.instance().getLayout();
+					if (layout.getChildCount() == 1) {
 
-					int adViewHeight = Math.max(50, layout.getHeight() / 10);
+						WebView adView = new WebView(Game.instance());
 
-					ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, adViewHeight);
-					adView.setLayoutParams(params);
+						int adViewHeight = Math.max(50, layout.getHeight() / 10);
 
-					adView.loadDataWithBaseURL(null, Utils.format(adTemplate, "Рекламко"), "text/html", "utf-8", null);
-					Game.instance().getLayout().addView(adView, 0);
-					Game.setNeedSceneRestart(true);
+						ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, adViewHeight);
+						adView.setLayoutParams(params);
+
+						adView.loadDataWithBaseURL(null, Utils.format(adTemplate, "Рекламко"), "text/html", "utf-8", null);
+						Game.instance().getLayout().addView(adView, 0);
+						Game.setNeedSceneRestart(true);
+					}
 				}
-			}
-		});
+			});
+		}
 	}
 
 	static void displayIsAd(final InterstitialPoint work) {
-		Game.instance().runOnUiThread(new Runnable() {
+		EventCollector.logEvent("OwnAds", "is");
+		if (BuildConfig.DEBUG) {
+			Game.instance().runOnUiThread(new Runnable() {
 
-			                              @Override
-			                              public void run() {
-				                              EventCollector.logEvent("OwnAds", "is");
-				                              final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
+				                              @Override
+				                              public void run() {
 
-				                              WebView adView = new WebView(Game.instance());
+					                              final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
+
+					                              WebView adView = new WebView(Game.instance());
 
 
-				                              ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-				                              adView.setLayoutParams(params);
+					                              ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+					                              adView.setLayoutParams(params);
 
-				                              adView.loadDataWithBaseURL(null, Utils.format(isAdTemplate, "Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко"), "text/html", "utf-8", null);
-				                              alert.setView(adView);
-				                              alert.setCustomTitle(null);
+					                              adView.loadDataWithBaseURL(null, Utils.format(isAdTemplate, "Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко"), "text/html", "utf-8", null);
+					                              alert.setView(adView);
+					                              alert.setCustomTitle(null);
 
-				                              final AlertDialog dialog = alert.create();
+					                              final AlertDialog dialog = alert.create();
 
-				                              dialog.setCanceledOnTouchOutside(true);
-				                              dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-					                              @Override
-					                              public void onCancel(DialogInterface dialog) {
-						                              dialog.dismiss();
-						                              work.returnToWork(true);
-					                              }
-				                              });
-				                              dialog.show();
+					                              dialog.setCanceledOnTouchOutside(true);
+					                              dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+						                              @Override
+						                              public void onCancel(DialogInterface dialog) {
+							                              dialog.dismiss();
+							                              work.returnToWork(true);
+						                              }
+					                              });
+					                              dialog.show();
+				                              }
 			                              }
-		                              }
-		);
-
+			);
+		}
 	}
 }
