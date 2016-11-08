@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.CandleOfMindVisionBuff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -51,10 +52,21 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 	public boolean doEquip(Hero hero) {
 		if (!activated) {
 			activated = true;
-			Buff.affect(hero, MindVision.class, charges);
+		}
+
+		if(charges > 0) {
+			Buff.affect(hero, CandleOfMindVisionBuff.class, charges);
 			MindVision.reportMindVisionEffect();
 		}
 		return super.doEquip(hero);
+	}
+
+	@Override
+	public boolean doUnequip(Hero hero, boolean collect) {
+		if(charges > 0) {
+			Buff.detach(hero, CandleOfMindVisionBuff.class);
+		}
+		return super.doUnequip(hero, collect);
 	}
 
 	@Override
