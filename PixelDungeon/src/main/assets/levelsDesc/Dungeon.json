@@ -23,7 +23,7 @@
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
       "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
       "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
-      "5":{"kind":"SewerBossLevel", "depth":5,    "size":[32,32], "music":"ost_boss_1_fight.mp3"},
+      "5":{"kind":"SewerBossLevel", "depth":5,    "size":[32,32], "music":"ost_boss_1_ambient.mp3"},
       "6":{"kind":"PrisonLevel", "depth":6,       "size":[32,32]},
       "7":{"kind":"PrisonLevel", "depth":7,       "size":[32,32]},
       "8":{"kind":"PrisonLevel", "depth":8,       "size":[32,32]},
