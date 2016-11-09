@@ -73,6 +73,10 @@ public class TitleScene extends PixelScene {
 		title.x = (w - title.width()) / 2;
 		title.y = (title.height() * 0.3f) / 2;
 
+		if (PixelDungeon.landscape()){
+			title.y = -(title.height() * 0.05f);
+		}
+
 		placeTorch(title.x + 18, title.y + 50);
 		placeTorch(title.x + title.width - 18, title.y + 50);
 
