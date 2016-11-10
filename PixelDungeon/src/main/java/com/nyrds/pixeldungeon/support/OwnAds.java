@@ -85,6 +85,8 @@ class OwnAds {
 				                              }
 			                              }
 			);
+		} else {
+			work.returnToWork(true);
 		}
 	}
 }
