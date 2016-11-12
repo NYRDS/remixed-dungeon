@@ -76,6 +76,7 @@ public class Key extends Item {
 	@Override
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
+
 		depth   = itemDesc.optInt("depth",depth);
 		levelId = itemDesc.optString("levelId",levelId);
 	}

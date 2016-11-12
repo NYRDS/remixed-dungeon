@@ -87,11 +87,11 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 			@Override
 			public void run() {
 				if (result) {
-					File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
-					modsCommon.delete();
-					String downloadTo = modsCommon.getAbsolutePath();
-
 					if(Util.isConnectedToInternet()) {
+						File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
+						modsCommon.delete();
+						String downloadTo = modsCommon.getAbsolutePath();
+
 						new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods_common.json", downloadTo);
 					} else {
 						DownloadComplete("no internet", true);
