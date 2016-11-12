@@ -1,3 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">Pajęczy pancerz </string>
+    <string name="SpiderArmor_Gender">kobiecy</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">Czarna czaszka</string>
+    <string name="BlackSkull_Info">Mała czaszka wykonana z obsydianu. Była źródłem mocy Necropolis, ale po pokonaniu Lich\'a, chyba straciła swoje właściwości. Kiedy ją trzymasz, z jakiegoś powodu przez twoją głowę przechodzi myśl: \"Chcę jeść\".</string>
+    <string name="BlackSkull_Gender">meski</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">Rycerz śmierci</string>
+    <string name="DeathKnight_Name_Objective">Rycerz śmierci</string>
     </resources>

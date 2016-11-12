@@ -7,13 +7,8 @@
   <string name="TitleScene_About">Hakkında</string>
   <string name="TitleScene_InternalStorageLow">Dahili depolamada\n yeterli yer yok\n İlerlemen kaybolabilir!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt">NYRDS\'nin Remixed Pixel Dungeon. Watabou\'nun Pixel Dungeon Kaynağı kullanılmıştır.\n\n Kodlama &amp; grafikler: Watabou  &amp; NYRDS &amp; ThEnigma314\n\nMüzik: Cube_Code\n\nÖzel teşekkürler: rodriformiga koddaki PD için\n\nBize ulaşın:\n\n</string>
   <string name="AboutScene_OurSite">Websitemiz:</string>
-  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
-  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">E-Posta Gönder</string>
-  <string name="AboutScene_TranslatedBy">Türkçe\n
--#NULL</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Yüksek Skorlar</string>
   <string name="RankingsScene_Total">Toplam oynanan oyun:</string>

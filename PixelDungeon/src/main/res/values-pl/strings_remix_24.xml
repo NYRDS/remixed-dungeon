@@ -1,3 +1,44 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-	</resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Kokarda</string>
+    <string name="Bowknot_Info">Piękna, różowa wstążka zawiązana w kokardę i zaczepiona o spinka do włosów.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Okulary przeciwsłoneczne</string>
+    <string name="Shades_Info">Niektórzy mówią, że w lochach jest za ciemno by je nosić. Nie słuchaj ich! Oni nie są aż tak fajni jak ty!</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Kapelusz Purytanina</string>
+    <string name="Capotain_Info">Wysoki z wąskim rondem kapelusz, głównie używany przez Purytanin. Ale nie bój się, nie musisz być religijny, by nosić ten szyk mody z lat dwudziestych siedemnastego wieku! Z jakiegoś powody ma małą tabliczkę, na której pisze \"Solomon\"</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Fez</string>
+    <string name="Fez_Info">Nakrycie głowy o kształcie przypominającym ścięty stożek, wykonane z bordowego filcu i ozdobione czarnym frędzlem. I nie, świat nie stanie się trójwymiarowy.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Kocie uszka</string>
+    <string name="NekoEars_Info">Czy ty też masz czasem dość całej tej krwi, potu i brudu, i poczuć się jak mały, słodki kotek? Niestety, w lochach tego nie doświadczysz, ale zawsze możesz ponosić te słodkie kocie uszka!</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Królicze uszy</string>
+    <string name="RabbitEars_Info">Według starożytnych przesądów, króliki są symbolem szczęścia a ich części ciała przynoszą szczęście. Ale czy bycie zabitym dla twoich uszy, by zrobić z nich dekorację brzmi dla ciebie szczęśliwie? </string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Dynia</string>
+    <!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Czapka śpiocha</string>
+    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Czapka czarodzieja</string>
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Lista akcesoriów</string>
+    <string name="WndHats_SlotTitle">Założone</string>
+    <string name="WndHats_NoConnectionMsg">Nie można się połączyć do Sklepu Play.</string>
+    <string name="WndHats_BackButton">Wróć</string>
+    <string name="WndHats_BuyButton">Kup</string>
+    <string name="WndHats_EquipButton">Załóż</string>
+    <string name="WndHats_InfoButton">Sprawdź</string>
+    <string name="WndHats_UnequipButton">Ściągnij </string>
+</resources>

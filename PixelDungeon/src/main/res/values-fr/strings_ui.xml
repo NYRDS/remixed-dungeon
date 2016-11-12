@@ -8,10 +8,7 @@
   <string name="TitleScene_InternalStorageLow">Pas assez de place\n dans l\'espace de stockage interne\n Votre progression peut être perdue !</string>
   <!--STRINGS OF AboutScene CLASS-->
   <string name="AboutScene_OurSite">Notre site :</string>
-  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
-  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">Envoyer un E-Mail</string>
-  <string name="AboutScene_TranslatedBy">Français l18n:\n Rémi Schneider\nEmmanuel Dempuré\nBastien PIXEL\nNikolay\Clément Tetu267901</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Meilleures parties</string>
   <string name="RankingsScene_Total">Nombre total de parties jouées:</string>

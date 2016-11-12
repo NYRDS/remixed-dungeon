@@ -34,6 +34,9 @@
   <string name="Worm_Name_Objective">robak</string>
   <!--STRINGS OF YogsBrain CLASS-->
   <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Gender">meski</string>
   <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Gender">meski</string>
   <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Gender">meski</string>
 </resources>

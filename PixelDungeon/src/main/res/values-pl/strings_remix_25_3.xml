@@ -1,3 +1,46 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Uszanka</string>
+    <string name="Ushanka_Info">Ciepłe zimowe nakrycie głowy, udekorowane wielką czerwoną gwiazdą. Perfekcyjna dla towarzysza wędrującego przez zimne, złe lochy.</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Maska zombie</string>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">cukierek</string>
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">Dyniowe ciasto</string>
+    <string name="PumpkinPie_Info">Pyszne ciasto dyniowe, prawie takie jak piekła mama...</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">
+</string>
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">beczka</string>
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">dynia</string>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">strach na wróble</string>
+    <string name="ScarecrowNPC_Name_Objective">strach na wróble</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Witaj chłopcze, jak się miewasz?\n
+Mam nadzieję, że się nie pogniewasz\n
+bo specjalną misję dla ciebie mam!\n
+Za pięć cukierków, coś ci dam!
+</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Witaj dziewczynko, jak się miewasz?\n
+Mam nadzieję, że się nie pogniewasz\n
+bo specjalną misję dla ciebie mam!\n
+Za pięć cukierków, coś ci dam!
+</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Pięć cukierków, tylko o tyle proszę.\n
+Przynieś mi je,\n
+dobrze ci to wynagrodzę!</string>
+    <string name="ScarecrowNPC_Quest_End">Och jak cudownie! Och jak słodko! \n
+W zamian za to, dostaniesz strawę porządną!</string>
+    <string name="Journal_ScarecrowNPC">Strach na Wróble</string>
+
+</resources>

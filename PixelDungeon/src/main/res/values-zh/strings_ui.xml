@@ -7,12 +7,8 @@
   <string name="TitleScene_About">关于</string>
   <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，你的进度可能会丢失！</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt">Remixed Pixel Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.\n\n Code &amp; graphics: Watabou &amp; NYRDS &amp; ThEnigma314\n\nMusic: Cube_Code\n\nSpecial Thanks to: rodriformiga for PD i18n code\n\nE-Mail us:\n\n</string>
   <string name="AboutScene_OurSite">我们的网址：</string>
-  <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
-  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">发送邮件</string>
-  <string name="AboutScene_TranslatedBy">English - primary localization for Remixed Pixel Dungeon maintained by NYRDS\nSpecical thanks to:\nOmen267901</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">最高纪录</string>
   <string name="RankingsScene_Total">总游戏次数</string>

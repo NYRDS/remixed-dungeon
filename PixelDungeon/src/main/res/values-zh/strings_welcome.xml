@@ -155,4 +155,12 @@ remix.25.2:
 bug修复1
 bug修复2()
 翻译改善</string>
+  <string name="Welcome_Text_25_3">
+        remix.25.3:\n
+        - 新物品:炸药桶(万圣节用南瓜桶替换)\n
+        -  新的Boss战音乐\n
+        - 新道具:南瓜派\n
+        - 新NPC:稻草人\n
+        - 新饰品:僵尸面具, 吸血头骨和苏联毛帽\n
+        </string>
 </resources>

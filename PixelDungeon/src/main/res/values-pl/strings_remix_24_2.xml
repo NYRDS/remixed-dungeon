@@ -1,3 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">złoty miecz</string>
+    <string name="GoldenSword_Info">Zazwyczaj miecz z takiego miękkiego metalu, jakim jest złoto, jest niczym innym niż dekoracją. Pomimo tego ostrze wydaje się na tyle ostre by przeciąć przez rzeczy w miarę dobrze.</string>
+    <string name="GoldenSword_Gender">męski</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">złoty posąg</string>
+    <string name="GoldenStatue_Gender">kobiecy</string>
+    <string name="GoldenStatue_Name_Objective">złoty posag</string>
+    <string name="GoldenStatue_Desc">Aż trudno uwierzyć, że ten piękny posąg nie służy tylko do dekoracji, ale jest złośliwą kreaturą, która tylko czeka na nieprzygotowanego wędrowca. Na pierwszy rzut oka mógłbyś przysiąc, że _%s_ jest częścią jego ręki.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">nekromanta</string>
+    <string name="NecromancerNPC_Gender">meski</string>
+    <string name="NecromancerNPC_Name_Objective">nekromanta</string>
+    <string name="NecromancerNPC_Desc">Ten mężczyzna w średnim wieku wydaję się być ciut zdenerwowany. ale zarazem podekscytowany. Nosi zbroję wykonana z kości.</string>
+    <string name="NecromancerNPC_Intro">Ah! Cóż za rzadki widok! Kolega wędrowca i to jeszcze żywy! Niewiarygodne! Oh... bardzo przepraszam, czasami jestem zbyt podekscytowany. Jestem nekromantą, i pomimo tego, że studiuję śmierć i jest to mój jedyny sposób na życie, ciągłe patrzenie na zwłoki zaczyna nudzić. Z drugiej strony, po to tu jestem. Z moich obliczeń wynika, że w ciągu paru tygodni zdarzy się tu, w tych lochach, stanie się coś niesamowitego! _Necropolis_, starożytne miasto śmierci otworzy swoje drzwi! I... to tyle co mogę na tą chwilę powiedzieć, zmarnowałem już i tak dostatecznie czasu. Muszę się przygotować. _Wróć do mnie później_</string>
+    <string name="NecromancerNPC_Message1">Tak niewiele czasu, tak niewiele czasu...</string>
+    <string name="NecromancerNPC_Message2">Muszę być gotowy.</string>
+    <string name="NecromancerNPC_Message3">Już słyszę zew umarłych.</string>
+    <string name="NecromancerNPC_Message4">W Necropolis jest coś bardzo specjalnego.</string>
+
+    <string name="RatKing_Name_Objective">król szczurów</string>
+    <string name="RatKing_Gender">meski</string>
+</resources>

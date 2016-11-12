@@ -7,7 +7,6 @@
   <string name="TitleScene_About">o Grze</string>
   <string name="TitleScene_InternalStorageLow">Masz za mało miejsca\n w Twojej pamięci\n Twoje postępy mogą zostać utracone!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
   <string name="AboutScene_Snd">Wyślij E-Mail</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
