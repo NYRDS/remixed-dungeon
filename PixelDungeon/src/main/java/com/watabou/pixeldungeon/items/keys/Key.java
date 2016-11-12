@@ -23,6 +23,9 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Key extends Item {
 
 	public static final float TIME_TO_UNLOCK = 1f;
@@ -68,5 +71,12 @@ public class Key extends Item {
 	@Override
 	public String status() {
 		return depth + "*";
+	}
+
+	@Override
+	public void fromJson(JSONObject itemDesc) throws JSONException {
+		super.fromJson(itemDesc);
+		depth   = itemDesc.optInt("depth",depth);
+		levelId = itemDesc.optString("levelId",levelId);
 	}
 }
