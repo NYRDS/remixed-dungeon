@@ -9,6 +9,7 @@
   <!--STRINGS OF AboutScene CLASS-->
   <string name="AboutScene_OurSite">ウェブサイト:</string>
   <string name="AboutScene_Snd">E-Mail を送る</string>
+  <string name="AboutScene_Translation_Names">SamuraiF</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">トップランキング</string>
   <string name="RankingsScene_Total">プレイしたゲームの合計:</string>

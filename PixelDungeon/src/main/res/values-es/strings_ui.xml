@@ -9,6 +9,7 @@
   <!--STRINGS OF AboutScene CLASS-->
   <string name="AboutScene_OurSite">Nuestra página web:</string>
   <string name="AboutScene_Snd">Enviar e-mail</string>
+  <string name="AboutScene_Translation_Names">Andrés Javaloy Asensio &amp;  MLGMan &amp;  Iván Cadilla</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Top de puntuaciones</string>
   <string name="RankingsScene_Total">Partidas totales:</string>

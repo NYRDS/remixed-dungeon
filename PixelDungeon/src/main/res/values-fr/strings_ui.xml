@@ -9,6 +9,7 @@
   <!--STRINGS OF AboutScene CLASS-->
   <string name="AboutScene_OurSite">Notre site :</string>
   <string name="AboutScene_Snd">Envoyer un E-Mail</string>
+  <string name="AboutScene_Translation_Names">Rémi Schneider &amp; Emmanuel Dempuré &amp; Bastien PIXEL&amp; Nikolay &amp; Clément Tetu</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Meilleures parties</string>
   <string name="RankingsScene_Total">Nombre total de parties jouées:</string>
