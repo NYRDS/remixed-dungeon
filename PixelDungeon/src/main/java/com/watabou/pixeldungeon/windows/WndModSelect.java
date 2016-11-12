@@ -109,9 +109,9 @@ public class WndModSelect extends Window implements DownloadStateListener {
 	protected void onSelect(String option) {
 
 		Mods.ModDesc desc = modsList.get(option);
-		if (!option.equals(ModdingMode.REMIXED)) {
+		if (!option.equals(ModdingMode.REMIXED) || desc.needUpdate) {
 			if (!Util.isConnectedToInternet()) {
-				PixelDungeon.scene().add(new WndError("Please enable Internet access to download mods"));
+				PixelDungeon.scene().add(new WndError("Please enable Internet access to download or update mods"));
 				return;
 			}
 
