@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
@@ -12,21 +13,20 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
-public class WaterElemental extends Mob {
+public class WaterElemental extends Mob implements IDepthAdjustable {
 
 	private int kind;
 	
 	public WaterElemental() {
-		adjustLevel(Dungeon.depth);
+		adjustStats(Dungeon.depth);
 		
 		loot = new PotionOfFrost();
 		lootChance = 0.1f;
 	}
 	
-	private void adjustLevel(int depth) {
+	public void adjustStats(int depth) {
 		kind = Math.min(depth/5, 4);
 		if ( kind > 5 ) { kind = 5; }
 

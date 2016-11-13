@@ -182,6 +182,8 @@ public class SystemText extends Text {
 			lineImage.clear();
 			width = height = 0;
 
+			height = fontHeight/4;
+
 			int charIndex = 0;
 			int startLine = 0;
 

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -15,18 +16,18 @@ import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
-public class EarthElemental extends Mob {
+public class EarthElemental extends Mob implements IDepthAdjustable {
 	
 	private int kind;
 	
 	public EarthElemental() {
-		adjustLevel(Dungeon.depth);
+		adjustStats(Dungeon.depth);
 
 		loot = new Earthroot.Seed();
 		lootChance = 0.1f;
 	}
 
-	private void adjustLevel(int depth) {
+	public void adjustStats(int depth) {
 		kind = Math.min(depth/5, 4);
 		
 		hp(ht(depth * 10 + 1));

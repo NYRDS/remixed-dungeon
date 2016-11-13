@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
+import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
@@ -151,7 +152,7 @@ public enum HeroClass {
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Ankh());
 
-		hero.collect(new Spear());
+		hero.collect(new PlateArmor().identify().upgrade(9));
 		hero.collect(new Glaive());
 		hero.collect(new Halberd());
 

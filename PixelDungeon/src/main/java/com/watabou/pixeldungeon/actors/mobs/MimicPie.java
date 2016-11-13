@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -11,7 +12,7 @@ import com.watabou.pixeldungeon.sprites.MimicPieSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class MimicPie extends Mob {
+public class MimicPie extends Mob implements IDepthAdjustable {
 	
 	private int level;
 	

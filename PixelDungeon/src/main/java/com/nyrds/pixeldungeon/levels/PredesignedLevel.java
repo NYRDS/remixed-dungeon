@@ -5,6 +5,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.CommonLevel;
@@ -132,7 +133,12 @@ public class PredesignedLevel extends CommonLevel {
 					int x = mobDesc.getInt("x");
 					int y = mobDesc.getInt("y");
 
+					if(Actor.findChar(cell(x,y))!=null) {
+						continue;
+					}
+
 					if (cellValid(x, y)) {
+
 						String kind = mobDesc.getString("kind");
 						Mob mob = MobFactory.mobClassByName(kind).newInstance();
 						mob.fromJson(mobDesc);

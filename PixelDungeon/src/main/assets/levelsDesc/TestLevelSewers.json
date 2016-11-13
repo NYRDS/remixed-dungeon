@@ -23,11 +23,12 @@
    "entrance":[1,1],
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
    "mobs" : [
-      {"kind":"GoldenStatue","x":10,"y":10, "loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} }
+      {"kind":"GoldenStatue","x":10,"y":10, "loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} },
+      {"kind":"Mimic","x":8,"y":8, "level":"100", "loot":{"kind":"Codex","text":"Это кодекс отобранный у толстого мимика"} }
    ],
   "items": [
     {"kind":"Codex","text":"Это текст кодекса","x":13,"y":10},
-    {"kind":"IronKey", "levelId":"1", "depth":1, "x":13,"y":11}
+    {"kind":"IronKey", "levelId":"2", "depth":2, "x":13,"y":11}
   ],
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},

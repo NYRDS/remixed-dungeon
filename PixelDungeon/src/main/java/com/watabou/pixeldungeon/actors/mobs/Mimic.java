@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -36,95 +39,94 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mimic extends Mob {
-	
+public class Mimic extends Mob implements IDepthAdjustable {
+
 	private int level;
-	
+
 	public Mimic() {
 		spriteClass = MimicSprite.class;
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
+		IMMUNITIES.add(ScrollOfPsionicBlast.class);
 	}
 
-	public ArrayList<Item> items;
-	
-	private static final String LEVEL	= "level";
-	private static final String ITEMS	= "items";
-	
+	@NonNull
+	public ArrayList<Item> items = new ArrayList<>();
+
+	private static final String LEVEL = "level";
+	private static final String ITEMS = "items";
+
 	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( ITEMS, items );
-		bundle.put( LEVEL, level );
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(ITEMS, items);
+		bundle.put(LEVEL, level);
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		items = new ArrayList<>(bundle.getCollection(ITEMS, Item.class));
-		adjustStats( bundle.getInt( LEVEL ) );
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		items.addAll(bundle.getCollection(ITEMS, Item.class));
+		adjustStats(bundle.getInt(LEVEL));
 	}
-	
+
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( ht() / 10, ht() / 4 );
+		return Random.NormalIntRange(ht() / 10, ht() / 4);
 	}
-	
+
 	@Override
-	public int attackSkill( Char target ) {
+	public int attackSkill(Char target) {
 		return 9 + level;
 	}
-	
+
 	@Override
-	public int attackProc( Char enemy, int damage ) {
-		if (enemy == Dungeon.hero && Random.Int( 3 ) == 0) {
-			Gold gold = new Gold( Random.Int( Dungeon.gold() / 10, Dungeon.gold() / 2 ) );
+	public int attackProc(Char enemy, int damage) {
+		if (enemy == Dungeon.hero && Random.Int(3) == 0) {
+			Gold gold = new Gold(Random.Int(Dungeon.gold() / 10, Dungeon.gold() / 2));
 			if (gold.quantity() > 0) {
 				Dungeon.gold(Dungeon.gold() - gold.quantity());
-				Dungeon.level.drop( gold, Dungeon.hero.getPos() ).sprite.drop();
+				Dungeon.level.drop(gold, Dungeon.hero.getPos()).sprite.drop();
 			}
 		}
-		return super.attackProc( enemy, damage );
+		return super.attackProc(enemy, damage);
 	}
-	
-	public void adjustStats( int level ) {
+
+	public void adjustStats(int level) {
 		this.level = level;
-		
+
 		ht((3 + level) * 4);
 		EXP = 2 + 2 * (level - 1) / 5;
-		defenseSkill = attackSkill( null ) / 2;
-		
+		defenseSkill = attackSkill(null) / 2;
+
 		enemySeen = true;
 	}
-	
-	@Override
-	public void die( Object cause ) {
 
-		super.die( cause );
-		
-		if (items != null) {
-			for (Item item : items) {
-				Dungeon.level.drop( item, getPos() ).sprite.drop();
-			}
+	@Override
+	public void die(Object cause) {
+
+		super.die(cause);
+
+		for (Item item : items) {
+			Dungeon.level.drop(item, getPos()).sprite.drop();
 		}
 	}
-	
+
 	@Override
 	public boolean reset() {
 		setState(WANDERING);
 		return true;
 	}
 
-	public static Mimic spawnAt( int pos, List<Item> items ) {
+	public static Mimic spawnAt(int pos, List<Item> items) {
 		Level level = Dungeon.level;
-		Char ch = Actor.findChar( pos ); 
+		Char ch = Actor.findChar(pos);
 		if (ch != null) {
 			int newPos = Dungeon.level.getEmptyCellNextTo(pos);
-			
+
 			if (!Dungeon.level.cellValid(newPos)) {
-			
-				Actor.addDelayed( new Pushing( ch, ch.getPos(), newPos ), -1 );
-				
+
+				Actor.addDelayed(new Pushing(ch, ch.getPos(), newPos), -1);
+
 				ch.setPos(newPos);
 				level.press(newPos, ch);
 
@@ -132,22 +134,22 @@ public class Mimic extends Mob {
 				return null;
 			}
 		}
-		
+
 		Mimic m = new Mimic();
-		m.items = new ArrayList<>(items);
-		m.adjustStats( Dungeon.depth );
+		m.items.addAll(items);
+		m.adjustStats(Dungeon.depth);
 		m.hp(m.ht());
 		m.setPos(pos);
 		m.setState(m.HUNTING);
-		level.spawnMob(m,1);
-		
-		m.getSprite().turnTo( pos, Dungeon.hero.getPos() );
-		
+		level.spawnMob(m, 1);
+
+		m.getSprite().turnTo(pos, Dungeon.hero.getPos());
+
 		if (Dungeon.visible[m.getPos()]) {
-			CellEmitter.get( pos ).burst( Speck.factory( Speck.STAR ), 10 );
-			Sample.INSTANCE.play( Assets.SND_MIMIC );
+			CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
+			Sample.INSTANCE.play(Assets.SND_MIMIC);
 		}
-		
+
 		return m;
 	}
 

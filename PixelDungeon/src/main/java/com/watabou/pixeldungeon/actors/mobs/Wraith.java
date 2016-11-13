@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -29,7 +30,7 @@ import com.watabou.pixeldungeon.sprites.WraithSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Wraith extends Mob {
+public class Wraith extends Mob implements IDepthAdjustable {
 
 	private static final float SPAWN_DELAY	= 2f;
 	

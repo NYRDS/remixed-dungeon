@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -9,13 +10,13 @@ import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
-public class AirElemental extends Mob {
+public class AirElemental extends Mob implements IDepthAdjustable {
 
 	private static final int maxDistance = 3;
 
 	public AirElemental() {
 
-		adjustLevel(Dungeon.depth);
+		adjustStats(Dungeon.depth);
 
 		flying = true;
 		
@@ -23,7 +24,7 @@ public class AirElemental extends Mob {
 		lootChance = 0.1f;
 	}
 
-	private void adjustLevel(int depth) {
+	public void adjustStats(int depth) {
 		hp(ht(depth * 3 + 1));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;

@@ -16,12 +16,12 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
-public class Crystal extends MultiKindMob {
+public class Crystal extends MultiKindMob implements IDepthAdjustable{
 
 	static private int ctr = 0;
 
 	public Crystal() {
-		adjustLevel(Dungeon.depth);
+		adjustStats(Dungeon.depth);
 
 		loot = SimpleWand.createRandomSimpleWand();
 		((Wand) loot).upgrade(Dungeon.depth);
@@ -37,7 +37,7 @@ public class Crystal extends MultiKindMob {
 		return crystal;
 	}
 
-	private void adjustLevel(int depth) {
+	public void adjustStats(int depth) {
 		kind = (ctr++) % 2;
 
 		hp(ht(Dungeon.depth * 4 + 1));

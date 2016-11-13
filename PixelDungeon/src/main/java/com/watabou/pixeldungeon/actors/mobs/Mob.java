@@ -25,6 +25,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
@@ -673,6 +674,10 @@ public abstract class Mob extends Char {
 			loot = ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot"));
 			lootChance = 1;
 		}
+
+		if (this instanceof IDepthAdjustable) {
+			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level",1));
+		}
 	}
 
 	public AiState getState() {
@@ -921,7 +926,5 @@ public abstract class Mob extends Char {
 		if (!defMap.containsKey(getClass())) {
 			defMap.put(getClass(), JsonHelper.tryReadJsonFromAssets("mobsDesc/"+getClass().getSimpleName()+".json"));
 		}
-
-
 	}
 }
