@@ -34,9 +34,9 @@ public class SpiderLevel extends CommonLevel {
 		return Assets.WATER_SPIDERS;
 	}
 
-	List<Chamber> chambers = new ArrayList<>();
+	private List<Chamber> chambers = new ArrayList<>();
 
-	protected void createChambers() {
+	private void createChambers() {
 
 		for (int i = 0; i < Math.max((Dungeon.depth - 4) * 2 ,2); ++i) {
 

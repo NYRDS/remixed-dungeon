@@ -3,25 +3,35 @@ package com.nyrds.pixeldungeon.levels;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
-import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class PredesignedLevel extends CustomLevel {
+public class RandomLevel extends CustomLevel {
 
 	//for restoreFromBundle
-	public PredesignedLevel() {
+	public RandomLevel() {
 		super();
 	}
 
-	public PredesignedLevel(String fileName) {
+	public RandomLevel(String fileName) {
 		mDescFile = fileName;
 		readDescFile(mDescFile);
+	}
+
+	@Override
+	public String tilesTex() {
+		return mLevelDesc.optString("tiles", "tiles0.png");
+	}
+
+	public String tilesTexEx() {
+		return mLevelDesc.optString("tiles_x", null);
+	}
+
+	public String waterTex() {
+		return mLevelDesc.optString("water", "water0.png");
 	}
 
 	@Override
@@ -32,19 +42,28 @@ public class PredesignedLevel extends CustomLevel {
 
 			initSizeDependentStuff();
 
-			JSONArray map = mLevelDesc.getJSONArray("map");
+			if (mLevelDesc.has("items")) {
+				JSONArray itemsDesc = mLevelDesc.getJSONArray("items");
 
-			for (int i = 0; i < map.length(); i++) {
-				set(i, map.getInt(i));
+				for (int i = 0; i < itemsDesc.length(); ++i) {
+					JSONObject itemDesc = itemsDesc.optJSONObject(i);
+					Item item = ItemFactory.createItemFromDesc(itemDesc);
+					addItemToSpawn(item);
+				}
 			}
 
 			placeObjects();
-			
+
 			setupLinks();
 
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
+		} catch (InstantiationException e) {
+			throw new TrackedRuntimeException(e);
+		} catch (IllegalAccessException e) {
+			throw new TrackedRuntimeException(e);
 		}
+
 		buildFlagMaps();
 		cleanWalls();
 		createMobs();
@@ -84,7 +103,6 @@ public class PredesignedLevel extends CustomLevel {
 
 	@Override
 	protected boolean build() {
-
 		return true;
 	}
 
@@ -93,64 +111,12 @@ public class PredesignedLevel extends CustomLevel {
 	}
 
 	@Override
-	protected void createMobs() {
-		try {
-			if (mLevelDesc.has("mobs")) {
-				JSONArray mobsDesc = mLevelDesc.getJSONArray("mobs");
-
-				for (int i = 0; i < mobsDesc.length(); ++i) {
-					JSONObject mobDesc = mobsDesc.optJSONObject(i);
-					int x = mobDesc.getInt("x");
-					int y = mobDesc.getInt("y");
-
-					if(Actor.findChar(cell(x,y))!=null) {
-						continue;
-					}
-
-					if (cellValid(x, y)) {
-
-						String kind = mobDesc.getString("kind");
-						Mob mob = MobFactory.mobClassByName(kind).newInstance();
-						mob.fromJson(mobDesc);
-						mob.setPos(cell(x, y));
-						spawnMob(mob);
-					}
-				}
-			}
-		} catch (JSONException e) {
-			throw new TrackedRuntimeException("bad mob description", e);
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
-	}
-
-	@Override
 	protected void createItems() {
-		try {
-			if (mLevelDesc.has("items")) {
-				JSONArray itemsDesc = mLevelDesc.getJSONArray("items");
 
-				for (int i = 0; i < itemsDesc.length(); ++i) {
-					JSONObject itemDesc = itemsDesc.optJSONObject(i);
-					int x = itemDesc.getInt("x");
-					int y = itemDesc.getInt("y");
-
-					if (cellValid(x, y)) {
-						Item item = ItemFactory.createItemFromDesc(itemDesc);
-
-						drop(item, cell(x, y));
-					}
-				}
-			}
-		} catch (JSONException e) {
-			throw new TrackedRuntimeException("bad items description", e);
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
 	}
 
 	@Override
 	protected int nTraps() {
-		return 0;
+		return mLevelDesc.optInt("nTraps",0);
 	}
 }

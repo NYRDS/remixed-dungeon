@@ -66,5 +66,8 @@
       "28":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2,"Elemental":0.02},
 	  "29":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":2},
       "30":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2}
-   }
+   },
+  "RandomLevel":{
+    "any":{"Gnoll":1}
+  }
 }
