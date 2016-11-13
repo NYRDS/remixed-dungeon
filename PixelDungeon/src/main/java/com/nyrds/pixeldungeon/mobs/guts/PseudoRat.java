@@ -39,15 +39,4 @@ public class PseudoRat extends Mob {
     public int dr() {
         return 25;
     }
-
-    @Override
-    public int getKind() {
-        return 1;
-    }
-
-    @Override
-    public void die(Object cause) {
-        super.die(cause);
-        
-    }
 }
