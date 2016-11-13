@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bat;
 import com.watabou.pixeldungeon.actors.mobs.Brute;
 import com.watabou.pixeldungeon.actors.mobs.Crab;
@@ -79,6 +80,7 @@ public class MobFactory {
 		
 		mMobsList = new HashMap<>();
 		registerMobClass(Rat.class);
+		registerMobClass(Albino.class);
 		registerMobClass(Gnoll.class);
 		registerMobClass(Crab.class);
 		registerMobClass(Swarm.class);
