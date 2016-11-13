@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.levels;
 
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
 
 abstract public class CommonLevel extends Level {
@@ -48,5 +50,15 @@ abstract public class CommonLevel extends Level {
 		
 	protected float[] trapChances() {
 		return new float[]{ 1, 1, 1, 1, 1, 1, 1, 1 };
+	}
+
+	@Override
+	protected void createMobs() {
+		int nMobs = nMobs();
+		for (int i = 0; i < nMobs; i++) {
+			Mob mob = createMob();
+			mobs.add(mob);
+			Actor.occupyCell(mob);
+		}
 	}
 }

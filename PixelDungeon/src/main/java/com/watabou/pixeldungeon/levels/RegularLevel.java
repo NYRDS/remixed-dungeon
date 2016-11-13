@@ -23,7 +23,6 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -569,16 +568,6 @@ public abstract class RegularLevel extends CommonLevel {
 	}
 
 	@Override
-	protected void createMobs() {
-		int nMobs = nMobs();
-		for (int i = 0; i < nMobs; i++) {
-			Mob mob = createMob();
-			mobs.add(mob);
-			Actor.occupyCell(mob);
-		}
-	}
-
-	@Override
 	public int randomRespawnCell() {
 		int count = 0;
 		int cell;
@@ -631,24 +620,7 @@ public abstract class RegularLevel extends CommonLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			Heap.Type type;
-			switch (Random.Int(20)) {
-				case 0:
-					type = Heap.Type.SKELETON;
-					break;
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-					type = Heap.Type.CHEST;
-					break;
-				case 5:
-					type = Dungeon.depth > 1 ? Heap.Type.MIMIC : Heap.Type.CHEST;
-					break;
-				default:
-					type = Heap.Type.HEAP;
-			}
-			drop(Generator.random(), randomDropCell()).type = type;
+			drop(Generator.random(), randomDropCell()).type = Random.chances(Heap.regularHeaps);
 		}
 
 		for (Item item : itemsToSpawn) {

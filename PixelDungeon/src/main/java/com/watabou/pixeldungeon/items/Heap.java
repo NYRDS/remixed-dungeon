@@ -46,7 +46,9 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class Heap implements Bundlable {
 
@@ -64,8 +66,18 @@ public class Heap implements Bundlable {
 		SKELETON,
 		MIMIC
 	}
+
+	@NonNull
 	public Type type = Type.HEAP;
-	
+
+	public static Map<Type, Float> regularHeaps = new HashMap<>();
+	static {
+		regularHeaps.put(Type.SKELETON,1f);
+		regularHeaps.put(Type.CHEST,4f);
+		regularHeaps.put(Type.MIMIC,1f);
+		regularHeaps.put(Type.HEAP,14f);
+	}
+
 	public int pos = 0;
 	
 	public ItemSprite sprite;
