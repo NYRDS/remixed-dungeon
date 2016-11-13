@@ -93,13 +93,14 @@ public class Random {
 		
 		return 0;
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public static <K> K chances( Map<K,Float> chances ) {
 		
 		int size = chances.size();
 
-		Object[] values = chances.keySet().toArray();
+		K[] values = (K[])chances.keySet().toArray();
+
 		float[] probs = new float[size];
 		float sum = 0;
 		for (int i=0; i < size; i++) {
@@ -112,12 +113,12 @@ public class Random {
 		sum = probs[0];
 		for (int i=0; i < size; i++) {
 			if (value <= sum) {
-				return (K)values[i];
+				return values[i];
 			}
 			sum += probs[i + 1];
 		}
 		
-		return null;
+		return values[size-1];
 	}
 	
 	public static int index( Collection<?> collection ) {
@@ -143,31 +144,5 @@ public class Random {
 		return size > 0 ? 
 			(T)collection.toArray()[Int( size )] : 
 			null;
-	}
-	
-	public static<T> void shuffle( T[] array ) {
-		for (int i=0; i < array.length - 1; i++) {
-			int j = Int( i, array.length );
-			if (j != i) {
-				T t = array[i];
-				array[i] = array[j];
-				array[j] = t;
-			}
-		}
-	}
-	
-	public static<U,V> void shuffle( U[] u, V[]v ) {
-		for (int i=0; i < u.length - 1; i++) {
-			int j = Int( i, u.length );
-			if (j != i) {
-				U ut = u[i];
-				u[i] = u[j];
-				u[j] = ut;
-				
-				V vt = v[i];
-				v[i] = v[j];
-				v[j] = vt;
-			}
-		}
 	}
 }

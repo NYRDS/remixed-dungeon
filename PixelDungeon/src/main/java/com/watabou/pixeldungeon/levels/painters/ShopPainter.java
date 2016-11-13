@@ -63,6 +63,7 @@ import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ShopPainter extends Painter {
 
@@ -180,11 +181,10 @@ public class ShopPainter extends Painter {
 		items.add( new OverpricedRation() );
 		
 		items.add( new Ankh() );
-		
-		Item[] range = items.toArray(new Item[items.size()]);
-		Random.shuffle( range );
-		
-		return range;
+
+		Collections.shuffle(items);
+
+		return items.toArray(new Item[items.size()]);
 	}
 	
 	private static void placeShopkeeper( Level level, Room room ) {
