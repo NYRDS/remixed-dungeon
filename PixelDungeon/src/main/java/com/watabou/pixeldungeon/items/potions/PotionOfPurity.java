@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -31,6 +31,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.food.RottenFood;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PathFinder;
@@ -122,11 +124,18 @@ public class PotionOfPurity extends Potion {
 	
 	@Override
 	protected void moistenRottenFood(RottenFood rfood) {
-		
 		detachMoistenItems(rfood,1);
 		moistenEffective();
 		GLog.i(TXT_ROTTEN_FOOD_MOISTEN, rfood.name());
 		
 		getCurUser().collect(rfood.purify());
+	}
+
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		int quantity = reallyMoistArrows(arrow);
+
+		CommonArrow moistenArrows = new CommonArrow(quantity);
+		getCurUser().collect(moistenArrows);
 	}
 }
