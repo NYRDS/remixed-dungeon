@@ -182,15 +182,14 @@
         remix.25.4:\n
         --Game--\n
         - Barrels can be pushed by Wand of Telekinesis\n
-        - Barrels are less likely to spawn in a corridor\n
+        - Barrels are less likely to spawn in corridors\n
         - Spear, Glaive and Halberd are now belong to \"Polearms\" archetype, granting player an increased attack distance (previously that was only possible with Spear)\n
         - Attack speed of \"Polearms\" was reduced to balance out increased attack distance\n
         - \"Title\" screen now says \"Remixed Pixel Dungeon\"\n
         - \"About\" screen was updated\n
         - Boss fight music now plays only during boss fights for all bosses, except Yog(level 31 has boss fight music on the moment you enter it)\n
         - Updated translation (+new language: Turkish)\n
-
-        \n--Mods--\n
+        --Mods--\n
         - Mods now support custom keys\n
         - Some mobs can now be manually set to a certain power level\n
         - \"Albino\" mob is available in mods now\n
