@@ -3,6 +3,7 @@
       "0":{"kind":"SewerLevel", "depth":0,        "size":[0,0]},
       "test_guts":{"kind":"PredesignedLevel", "depth":2,  "size":[16,16], "file":"levelsDesc/TestLevelGuts.json"},
       "test_sewers":{"kind":"PredesignedLevel", "depth":2,  "size":[16,16], "file":"levelsDesc/TestLevelSewers.json"},
+      "test_random":{"kind":"RandomLevel", "depth":2,  "size":[32,32], "file":"levelsDesc/TestLevelRandom.json"},
       "test_town":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/Town.json"},
 
       "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
@@ -53,9 +54,10 @@
 	  "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
    },
    "Graph":{
-      "0":[["1"],[]],
+      "0":[["test_random"],[]],
       "test_guts":[["1"],["test_sewers"]],
       "test_sewers":[["test_guts","1","2","3"],["1"],[2]],
+      "test_random":[["1"],["test_sewers"]],
       "shadow_lord_level":[["26"],["25"]],
       "test_town":[["1"],[]],
       "1":[["2","test_sewers"],[]],

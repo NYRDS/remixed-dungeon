@@ -45,7 +45,6 @@ public class RandomLevel extends RegularLevel {
 
 	@Override
 	protected void decorate() {
-
 	}
 
 	@Override
@@ -108,25 +107,13 @@ public class RandomLevel extends RegularLevel {
 			if (r.type == Room.Type.NULL && r.connected.size() == 1) {
 
 				if (neededRooms.size() > 0 && r.width() > 3 && r.height() > 3) {
-					{
-
-						int n = neededRooms.size();
-						r.type = neededRooms.get(Math.min(Random.Int(n), Random.Int(n)));
-						if (r.type == Room.Type.WEAK_FLOOR) {
-							weakFloorCreated = true;
-						}
-					}
-
-					Room.useType(r.type);
-					neededRooms.remove(r.type);
-
-
-				} else if (Random.Int(2) == 0) {
-					assignRoomConnectivity(r);
+					r.type = neededRooms.get(0);
+					neededRooms.remove(0);
 				}
+			} else if (Random.Int(2) == 0) {
+				assignRoomConnectivity(r);
 			}
 		}
-
 		assignRemainingRooms();
 	}
 

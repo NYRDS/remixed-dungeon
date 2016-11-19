@@ -257,7 +257,7 @@ public class DungeonGenerator {
 			if (levelClass == PredesignedLevel.class) {
 				String levelFile = mLevels.getJSONObject(levelId).getString("file");
 				ret = new PredesignedLevel(levelFile);
-			} else if (levelClass == PredesignedLevel.class) {
+			} else if (levelClass == RandomLevel.class) {
 				String levelFile = mLevels.getJSONObject(levelId).getString("file");
 				ret = new RandomLevel(levelFile);
 			} else {
