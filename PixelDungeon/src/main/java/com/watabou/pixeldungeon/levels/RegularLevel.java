@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.CustomLevel;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -40,7 +41,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public abstract class RegularLevel extends CommonLevel {
+public abstract class RegularLevel extends CustomLevel {
 
 	protected HashSet<Room> rooms;
 
@@ -160,7 +161,7 @@ public abstract class RegularLevel extends CommonLevel {
 		return true;
 	}
 
-	Room exitRoom(int index) {
+	protected Room exitRoom(int index) {
 		return exits.get(index);
 	}
 
@@ -187,6 +188,46 @@ public abstract class RegularLevel extends CommonLevel {
 				room.connect(next);
 				room = next;
 			}
+		}
+	}
+
+	protected void assignRemainingRooms() {
+		int count = 0;
+		for (Room r : rooms) {
+			if (r.type == Type.NULL) {
+				int connections = r.connected.size();
+				if (connections == 0) {
+
+				} else if (Random.Int(connections * connections) == 0) {
+					r.type = Type.STANDARD;
+					count++;
+				} else {
+					r.type = Type.TUNNEL;
+				}
+			}
+		}
+
+		while (count < 4) {
+			Room r = randomRoom(Type.TUNNEL, 1);
+			if (r != null) {
+				r.type = Type.STANDARD;
+				count++;
+			}
+		}
+	}
+
+	protected void assignRoomConnectivity(Room r) {
+		HashSet<Room> neighbours = new HashSet<>();
+		for (Room n : r.neighbours) {
+			if (!r.connected.containsKey(n) &&
+					!Room.SPECIALS.contains(n.type) &&
+					n.type != Type.PIT) {
+
+				neighbours.add(n);
+			}
+		}
+		if (neighbours.size() > 1) {
+			r.connect(Random.element(neighbours));
 		}
 	}
 
@@ -256,7 +297,6 @@ public abstract class RegularLevel extends CommonLevel {
 						if (r.type == Type.WEAK_FLOOR) {
 							weakFloorCreated = true;
 						}
-
 					}
 
 					Room.useType(r.type);
@@ -264,45 +304,11 @@ public abstract class RegularLevel extends CommonLevel {
 					specialRooms++;
 
 				} else if (Random.Int(2) == 0) {
-
-					HashSet<Room> neighbours = new HashSet<>();
-					for (Room n : r.neighbours) {
-						if (!r.connected.containsKey(n) &&
-								!Room.SPECIALS.contains(n.type) &&
-								n.type != Type.PIT) {
-
-							neighbours.add(n);
-						}
-					}
-					if (neighbours.size() > 1) {
-						r.connect(Random.element(neighbours));
-					}
+					assignRoomConnectivity(r);
 				}
 			}
 		}
-
-		int count = 0;
-		for (Room r : rooms) {
-			if (r.type == Type.NULL) {
-				int connections = r.connected.size();
-				if (connections == 0) {
-
-				} else if (Random.Int(connections * connections) == 0) {
-					r.type = Type.STANDARD;
-					count++;
-				} else {
-					r.type = Type.TUNNEL;
-				}
-			}
-		}
-
-		while (count < 4) {
-			Room r = randomRoom(Type.TUNNEL, 1);
-			if (r != null) {
-				r.type = Type.STANDARD;
-				count++;
-			}
-		}
+		assignRemainingRooms();
 	}
 
 	protected void paintWater() {

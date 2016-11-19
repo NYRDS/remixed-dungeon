@@ -84,7 +84,6 @@ public class PredesignedLevel extends CustomLevel {
 
 	@Override
 	protected boolean build() {
-
 		return true;
 	}
 

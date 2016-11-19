@@ -185,7 +185,7 @@ public abstract class Level implements Bundlable {
 
 	public boolean[] discoverable;
 
-	private Feeling feeling = Feeling.UNDEFINED;
+	protected Feeling feeling = Feeling.UNDEFINED;
 
 	public int entrance;
 
@@ -331,7 +331,6 @@ public abstract class Level implements Bundlable {
 			feeling = DungeonGenerator.getCurrentLevelFeeling(levelId);
 			if (feeling == Feeling.UNDEFINED) {
 				if (Dungeon.depth > 1) {
-
 					switch (Random.Int(10)) {
 						case 0:
 							feeling = Feeling.CHASM;

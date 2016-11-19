@@ -2,14 +2,23 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Patch;
+import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.Room;
+import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.utils.Random;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RandomLevel extends CustomLevel {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class RandomLevel extends RegularLevel {
 
 	//for restoreFromBundle
 	public RandomLevel() {
@@ -35,12 +44,19 @@ public class RandomLevel extends CustomLevel {
 	}
 
 	@Override
+	protected void decorate() {
+
+	}
+
+	@Override
 	public void create(int w, int h) {
 		try {
 			width = mLevelDesc.getInt("width");
 			height = mLevelDesc.getInt("height");
 
 			initSizeDependentStuff();
+
+			feeling = DungeonGenerator.getCurrentLevelFeeling(levelId);
 
 			if (mLevelDesc.has("items")) {
 				JSONArray itemsDesc = mLevelDesc.getJSONArray("items");
@@ -52,10 +68,6 @@ public class RandomLevel extends CustomLevel {
 				}
 			}
 
-			placeObjects();
-
-			setupLinks();
-
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
 		} catch (InstantiationException e) {
@@ -64,59 +76,70 @@ public class RandomLevel extends CustomLevel {
 			throw new TrackedRuntimeException(e);
 		}
 
+		do {
+			Arrays.fill(map, feeling == Feeling.CHASM ? Terrain.CHASM
+					: Terrain.WALL);
+		} while (!build());
+
 		buildFlagMaps();
 		cleanWalls();
 		createMobs();
 		createItems();
 	}
 
-	private void placeObjects() throws JSONException {
-		if(mLevelDesc.has("objects")) {
-			JSONArray objects = mLevelDesc.getJSONArray("objects");
+	@Override
+	protected void assignRoomType() {
 
-			for (int i = 0; i < objects.length(); i++) {
-				JSONObject object = objects.getJSONObject(i);
-				addLevelObject(LevelObjectsFactory.createObject(this, object));
+		JSONArray roomsDesc = mLevelDesc.optJSONArray("rooms");
+
+		List<Room.Type> neededRooms = new ArrayList<>();
+
+		if (roomsDesc != null) {
+			for (int i = 0; i < roomsDesc.length(); ++i) {
+				try {
+					neededRooms.add(Room.Type.valueOf(roomsDesc.getString(i)));
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
 			}
 		}
-	}
 
-	private void setupLinks() throws JSONException {
-		JSONArray entranceDesc = mLevelDesc.getJSONArray("entrance");
+		for (Room r : rooms) {
+			if (r.type == Room.Type.NULL && r.connected.size() == 1) {
 
-		entrance = cell(entranceDesc.getInt(0), entranceDesc.getInt(1));
+				if (neededRooms.size() > 0 && r.width() > 3 && r.height() > 3) {
+					{
 
-		if(mLevelDesc.has("exit")) {
-			JSONArray exitDesc = mLevelDesc.getJSONArray("exit");
-			setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)), 0);
-			return;
-		}
+						int n = neededRooms.size();
+						r.type = neededRooms.get(Math.min(Random.Int(n), Random.Int(n)));
+						if (r.type == Room.Type.WEAK_FLOOR) {
+							weakFloorCreated = true;
+						}
+					}
 
-		if(mLevelDesc.has("multiexit")){
-			JSONArray multiExitDesc = mLevelDesc.getJSONArray("multiexit");
-			for(int i=0;i<multiExitDesc.length();++i) {
-				JSONArray exitDesc = multiExitDesc.getJSONArray(i);
-				setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)), i);
+					Room.useType(r.type);
+					neededRooms.remove(r.type);
+
+
+				} else if (Random.Int(2) == 0) {
+					assignRoomConnectivity(r);
+				}
 			}
 		}
-	}
 
-	@Override
-	protected boolean build() {
-		return true;
-	}
-
-	@Override
-	protected void decorate() {
-	}
-
-	@Override
-	protected void createItems() {
-
+		assignRemainingRooms();
 	}
 
 	@Override
 	protected int nTraps() {
-		return mLevelDesc.optInt("nTraps",0);
+		return mLevelDesc.optInt("nTraps", 0);
+	}
+
+	protected boolean[] water() {
+		return Patch.generate(this, getFeeling() == Feeling.WATER ? 0.60f : 0.45f, 5);
+	}
+
+	protected boolean[] grass() {
+		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.60f : 0.40f, 4);
 	}
 }
