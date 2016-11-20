@@ -100,12 +100,12 @@ public class SewerBossLevel extends RegularLevel {
 		placeSecondaryExits();
 
 		Graph.buildDistanceMap( rooms, getRoomExit());
-		List<Room> path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
+		List<Room> path = Graph.buildPath(roomEntrance, getRoomExit());
 		
 		Graph.setPrice( path, roomEntrance.distance );
 		
 		Graph.buildDistanceMap( rooms, getRoomExit());
-		path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
+		path = Graph.buildPath(roomEntrance, getRoomExit());
 		
 		Room room = roomEntrance;
 		for (Room next : path) {

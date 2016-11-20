@@ -57,7 +57,7 @@ public class Graph {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public static <T extends Node> List<T> buildPath( Collection<T> nodes, T from, T to ) {
+	public static <T extends Node> List<T> buildPath(T from, T to) {
 		
 		List<T> path = new ArrayList<>();
 		

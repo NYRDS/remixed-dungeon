@@ -75,7 +75,7 @@ public class LastShopLevel extends RegularLevel {
 			} while (getRoomExit() == roomEntrance || getRoomExit().width() < 6 || getRoomExit().height() < 6 || getRoomExit().top == 0);
 	
 			Graph.buildDistanceMap( rooms, getRoomExit());
-			distance = Graph.buildPath( rooms, roomEntrance, getRoomExit()).size();
+			distance = Graph.buildPath(roomEntrance, getRoomExit()).size();
 			
 			if (retry++ > 10) {
 				return false;
@@ -87,12 +87,12 @@ public class LastShopLevel extends RegularLevel {
 		getRoomExit().type = Type.EXIT;
 		
 		Graph.buildDistanceMap( rooms, getRoomExit());
-		List<Room> path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
+		List<Room> path = Graph.buildPath(roomEntrance, getRoomExit());
 		
 		Graph.setPrice( path, roomEntrance.distance );
 		
 		Graph.buildDistanceMap( rooms, getRoomExit());
-		path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
+		path = Graph.buildPath(roomEntrance, getRoomExit());
 		
 		Room room = roomEntrance;
 		for (Room next : path) {

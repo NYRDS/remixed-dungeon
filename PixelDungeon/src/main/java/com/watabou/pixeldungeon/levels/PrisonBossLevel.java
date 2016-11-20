@@ -122,18 +122,18 @@ public class PrisonBossLevel extends RegularLevel {
 				getRoomExit().top == 0);
 	
 			Graph.buildDistanceMap( rooms, getRoomExit());
-			distance = Graph.buildPath( rooms, roomEntrance, getRoomExit()).size();
+			distance = Graph.buildPath(roomEntrance, getRoomExit()).size();
 			
 		} while (distance < 3);
 		
 		roomEntrance.type = Type.ENTRANCE;
 		getRoomExit().type = Type.PRISON_BOSS_EXIT;
 		
-		List<Room> path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
+		List<Room> path = Graph.buildPath(roomEntrance, getRoomExit());
 		Graph.setPrice( path, roomEntrance.distance );
 		
 		Graph.buildDistanceMap( rooms, getRoomExit());
-		path = Graph.buildPath( rooms, roomEntrance, getRoomExit());
+		path = Graph.buildPath(roomEntrance, getRoomExit());
 		
 		anteroom = path.get( path.size() - 2 );
 		anteroom.type = Type.STANDARD;

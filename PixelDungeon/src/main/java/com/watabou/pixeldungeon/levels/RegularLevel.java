@@ -101,7 +101,7 @@ public abstract class RegularLevel extends CustomLevel {
 		connected.add(roomEntrance);
 
 		Graph.buildDistanceMap(rooms, exitRoom(0));
-		List<Room> path = Graph.buildPath(rooms, roomEntrance, exitRoom(0));
+		List<Room> path = Graph.buildPath(roomEntrance, exitRoom(0));
 
 		Room room = roomEntrance;
 		for (Room next : path) {
@@ -113,7 +113,7 @@ public abstract class RegularLevel extends CustomLevel {
 		Graph.setPrice(path, roomEntrance.distance);
 
 		Graph.buildDistanceMap(rooms, exitRoom(0));
-		path = Graph.buildPath(rooms, roomEntrance, exitRoom(0));
+		path = Graph.buildPath(roomEntrance, exitRoom(0));
 
 		room = roomEntrance;
 		for (Room next : path) {
@@ -179,7 +179,7 @@ public abstract class RegularLevel extends CustomLevel {
 			secondaryExit.type = Type.EXIT;
 
 			Graph.buildDistanceMap(rooms, secondaryExit);
-			List<Room> path = Graph.buildPath(rooms, roomEntrance, secondaryExit);
+			List<Room> path = Graph.buildPath(roomEntrance, secondaryExit);
 
 			exits.put(i, secondaryExit);
 
