@@ -1,5 +1,8 @@
 package com.nyrds.pixeldungeon.levels;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.JsonHelper;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.utils.Bundle;
@@ -12,10 +15,13 @@ import org.json.JSONObject;
 
 public abstract class CustomLevel extends CommonLevel {
 
-	protected JSONObject mLevelDesc;
+	@NonNull
+	protected JSONObject mLevelDesc = new JSONObject();
+
+	@Nullable
 	protected String     mDescFile;
 
-	protected final String descFileKey = "descFile";
+	private final String descFileKey = "descFile";
 
 	protected void readDescFile(String descFile) {
 		mLevelDesc = JsonHelper.readJsonFromAsset(descFile);
@@ -39,13 +45,17 @@ public abstract class CustomLevel extends CommonLevel {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-		bundle.put(descFileKey, mDescFile);
+		if(mDescFile!=null) {
+			bundle.put(descFileKey, mDescFile);
+		}
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		mDescFile = bundle.getString(descFileKey);
-		readDescFile(mDescFile);
+		if(bundle.contains(descFileKey)) {
+			mDescFile = bundle.getString(descFileKey);
+			readDescFile(mDescFile);
+		}
 	}
 }

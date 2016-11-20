@@ -177,7 +177,6 @@ public class DungeonGenerator {
 				EventCollector.logEvent("DungeonGenerator", "wrong next level index");
 			}
 
-
 			mCurrentLevelId = nextLevelSet.getString(index);
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);
@@ -185,10 +184,6 @@ public class DungeonGenerator {
 			next.levelId = mCurrentLevelId;
 			mCurrentLevelDepth = next.levelDepth = nextLevelDesc.getInt("depth");
 			next.levelKind = nextLevelDesc.getString("kind");
-
-			JSONArray levelSize = nextLevelDesc.getJSONArray("size");
-			next.xs = levelSize.getInt(0);
-			next.ys = levelSize.getInt(1);
 
 			return next;
 		} catch (JSONException e) {
@@ -245,12 +240,14 @@ public class DungeonGenerator {
 
 	public static Level createLevel(Position pos) {
 		Class<? extends Level> levelClass = mLevelKindList.get(pos.levelKind);
+
 		if (levelClass == null) {
 			GLog.w("Unknown level type: %s", pos.levelKind);
 			pos.levelKind = DEAD_END_LEVEL;
 
 			return createLevel(pos);
 		}
+
 		try {
 			Level ret;
 			String levelId = pos.levelId;
@@ -264,6 +261,19 @@ public class DungeonGenerator {
 				ret = levelClass.newInstance();
 			}
 			ret.levelId = levelId;
+
+			JSONObject levelDesc = mLevels.getJSONObject(pos.levelId);
+
+			int xs = 32;
+			int ys = 32;
+			if(levelDesc.has("size")) {
+				JSONArray levelSize = levelDesc.getJSONArray("size");
+				xs = levelSize.optInt(0, 32);
+				ys = levelSize.optInt(1, 32);
+			}
+
+			ret.create(xs, ys);
+
 			return ret;
 		} catch (InstantiationException | IllegalAccessException | JSONException e) {
 			throw new TrackedRuntimeException(e);

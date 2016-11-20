@@ -262,6 +262,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected void initSizeDependentStuff() {
+
+		Dungeon.initSizeDependentStuff(getWidth(),getHeight());
 		NEIGHBOURS4 = new int[]{-getWidth(), +1, +getWidth(), -1};
 		NEIGHBOURS8 = new int[]{+1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),

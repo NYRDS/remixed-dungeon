@@ -99,7 +99,7 @@ public class Dungeon {
 
 	public static HeroClass heroClass;
 
-	private static void initSizeDependentStuff(int w, int h) {
+	public static void initSizeDependentStuff(int w, int h) {
 		int size = w * h;
 		Actor.clear();
 		visible = new boolean[size];
@@ -172,10 +172,6 @@ public class Dungeon {
 		updateStatistics();
 		GLog.toFile("creating level: %s %s %d", pos.levelId, pos.levelKind, pos.levelDepth);
 		Level level = DungeonGenerator.createLevel(pos);
-
-		initSizeDependentStuff(pos.xs, pos.ys);
-
-		level.create(pos.xs, pos.ys);
 
 		Statistics.qualifiedForNoKilling = !level.isBossLevel();
 

@@ -9,14 +9,11 @@ public class Position implements Bundlable {
 	public int    cellId     = -1;
 	public String levelKind  = "DeadEndLevel";
 	public String levelId;
-	public int    xs         = 32;
-	public int    ys         = 32;
 
-
-	static final String LEVEL_DEPTH = "levelDepth";
-	static final String LEVEL_KIND  = "levelKind";
-	static final String LEVEL_ID    = "levelId";
-	static final String CELL_ID     = "cellId";
+	private static final String LEVEL_DEPTH = "levelDepth";
+	private static final String LEVEL_KIND  = "levelKind";
+	private static final String LEVEL_ID    = "levelId";
+	private static final String CELL_ID     = "cellId";
 
 	public Position(String _levelKind, String _levelId, int _levelDepth, int _cellId){
 		levelKind  = _levelKind;
@@ -50,5 +47,4 @@ public class Position implements Bundlable {
 	public boolean dontPack() {
 		return false;
 	}
-	
 }
