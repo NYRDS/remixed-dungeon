@@ -589,13 +589,18 @@ public abstract class Level implements Bundlable {
 			mob = Bestiary.mutable(Dungeon.depth, levelKind());
 		}
 
+		setMobSpawnPos(mob);
+
+		return mob;
+	}
+
+	protected void setMobSpawnPos(Mob mob) {
 		if (!mob.isWallWalker()) {
 			mob.setPos(randomRespawnCell());
 		} else {
 			mob.setState(mob.WANDERING);
 			mob.setPos(randomSolidCell());
 		}
-		return mob;
 	}
 
 	public Actor respawner() {

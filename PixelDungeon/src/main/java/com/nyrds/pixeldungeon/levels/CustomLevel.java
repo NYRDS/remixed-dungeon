@@ -26,10 +26,12 @@ public abstract class CustomLevel extends CommonLevel {
 		return mLevelDesc.optString("tiles", "tiles0.png");
 	}
 
+	@Override
 	public String tilesTexEx() {
 		return mLevelDesc.optString("tiles_x", null);
 	}
 
+	@Override
 	public String waterTex() {
 		return mLevelDesc.optString("water", "water0.png");
 	}

@@ -2,12 +2,16 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.json.JSONArray;
@@ -19,6 +23,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RandomLevel extends RegularLevel {
+
+	private int mobsSpawned = 0;
+
+	private String MOBS_SPAWNED = "mobs_spawned";
 
 	//for restoreFromBundle
 	public RandomLevel() {
@@ -49,6 +57,7 @@ public class RandomLevel extends RegularLevel {
 
 	@Override
 	public void create(int w, int h) {
+
 		try {
 			width = mLevelDesc.getInt("width");
 			height = mLevelDesc.getInt("height");
@@ -87,6 +96,34 @@ public class RandomLevel extends RegularLevel {
 	}
 
 	@Override
+	protected Mob createMob() {
+		try {
+			if (mLevelDesc.has("mobs")) {
+
+				JSONArray mobsDesc = mLevelDesc.getJSONArray("mobs");
+				if (mobsSpawned < mobsDesc.length()) {
+					JSONObject mobDesc = mobsDesc.optJSONObject(mobsSpawned);
+
+					mobsSpawned++;
+
+					String kind = mobDesc.getString("kind");
+					Mob mob = MobFactory.mobClassByName(kind).newInstance();
+
+					mob.fromJson(mobDesc);
+					setMobSpawnPos(mob);
+
+					return mob;
+				}
+			}
+		} catch (JSONException e) {
+			throw new TrackedRuntimeException("invalid mob desc",e);
+		} catch (Exception e) {
+			EventCollector.logException(e);
+		}
+		return super.createMob();
+	}
+
+	@Override
 	protected void assignRoomType() {
 
 		JSONArray roomsDesc = mLevelDesc.optJSONArray("rooms");
@@ -105,7 +142,6 @@ public class RandomLevel extends RegularLevel {
 
 		for (Room r : rooms) {
 			if (r.type == Room.Type.NULL && r.connected.size() == 1) {
-
 				if (neededRooms.size() > 0 && r.width() > 3 && r.height() > 3) {
 					r.type = neededRooms.get(0);
 					neededRooms.remove(0);
@@ -129,4 +165,17 @@ public class RandomLevel extends RegularLevel {
 	protected boolean[] grass() {
 		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.60f : 0.40f, 4);
 	}
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(MOBS_SPAWNED, mobsSpawned);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		mobsSpawned = bundle.getInt(MOBS_SPAWNED);
+	}
+
 }

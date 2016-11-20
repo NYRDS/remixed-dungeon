@@ -1,11 +1,11 @@
 {
-   "width":32,
-   "height":32,
+   "width":20,
+   "height":20,
 
    "tiles":"tiles0.png",
    "water":"water0.png",
 
-   "rooms" : ["LABORATORY"],
+   "rooms" : ["LABORATORY","LABORATORY","WAREHOUSE","WAREHOUSE"],
 
    "mobs" : [
       {"kind":"GoldenStatue","loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} },
