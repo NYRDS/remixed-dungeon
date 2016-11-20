@@ -132,11 +132,8 @@ public class Iap {
 
     public static boolean checkPurchase(String item) {
         Purchase check = mInventory.getPurchase(item.toLowerCase(Locale.ROOT));
-        if (check != null && verifyDeveloperPayload(check)) {
-            return true;
-        }
+	    return check != null && verifyDeveloperPayload(check);
 
-        return false;
     }
 
     private static void checkPurchases() {

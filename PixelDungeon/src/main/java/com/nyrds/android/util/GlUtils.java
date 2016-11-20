@@ -14,11 +14,7 @@ public class GlUtils {
 		}
 
 		String exts = GLES20.glGetString(GLES20.GL_EXTENSIONS);
-		if(exts.indexOf("GL_ARB_texture_non_power_of_two") >0 || exts.indexOf("GL_OES_texture_npot")>0) {
-			npotMipmaps = true;
-		} else {
-			npotMipmaps = false;
-		}
+		npotMipmaps = exts.indexOf("GL_ARB_texture_non_power_of_two") > 0 || exts.indexOf("GL_OES_texture_npot") > 0;
 
 		return npotMipmaps;
 	}

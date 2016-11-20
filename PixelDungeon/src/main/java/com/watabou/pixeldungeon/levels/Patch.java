@@ -74,11 +74,7 @@ public class Patch {
 					
 					if (!off[pos] && count >= 5) {
 						cur[pos] = true;
-					} else if (off[pos] && count >= 4) {
-						cur[pos] = true;
-					} else {
-						cur[pos] = false;
-					}
+					} else cur[pos] = off[pos] && count >= 4;
 				}
 			}
 			

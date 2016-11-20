@@ -118,14 +118,11 @@ public class Utils {
 
 
 	public static boolean canUseClassicFont(String localeCode) {
-		if (localeCode.startsWith("ko")
+		return !(localeCode.startsWith("ko")
 				|| localeCode.startsWith("zh")
 				|| localeCode.startsWith("ja")
-				|| localeCode.startsWith("tr")) {
-			return false;
-		}
+				|| localeCode.startsWith("tr"));
 
-		return true;
 	}
 
 }

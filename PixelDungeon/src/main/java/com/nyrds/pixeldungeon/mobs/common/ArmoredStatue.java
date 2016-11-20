@@ -82,7 +82,7 @@ public class ArmoredStatue extends Mob {
 
 	@Override
 	public int attackSkill( Char target ) {
-		return (int)((9 + Dungeon.depth) * 2);
+		return (9 + Dungeon.depth) * 2;
 	}
 
 	@Override

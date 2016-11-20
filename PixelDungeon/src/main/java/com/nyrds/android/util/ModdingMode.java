@@ -117,10 +117,6 @@ public class ModdingMode {
 			daysDiff = (hallMilis - nowMilis );
 		}
 
-		if(daysDiff < 14) {
-			return true;
-		} else {
-			return false;
-		}
+		return daysDiff < 14;
 	}
 }

@@ -151,5 +151,5 @@ public class WandOfTelekinesis extends Wand {
 		public boolean affectLevelObjects() {
 			return false;
 		}
-	};
+	}
 }

@@ -58,7 +58,7 @@ public class MasteryItem extends Item {
 		getCurUser().checkIfFurious();
 		getCurUser().updateLook();
 
-		getCurUser().spendAndNext( this.TIME_TO_READ );
+		getCurUser().spendAndNext( TIME_TO_READ );
 		getCurUser().busy();
 	}
 }
