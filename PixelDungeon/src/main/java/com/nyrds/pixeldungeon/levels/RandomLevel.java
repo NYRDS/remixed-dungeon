@@ -155,7 +155,13 @@ public class RandomLevel extends RegularLevel {
 
 	@Override
 	protected int nTraps() {
-		return mLevelDesc.optInt("nTraps", 0);
+		return mLevelDesc.optInt("nTraps", super.nTraps());
+	}
+
+
+	@Override
+	public int nMobs() {
+		return mLevelDesc.optInt("nMobs", super.nMobs());
 	}
 
 	protected boolean[] water() {

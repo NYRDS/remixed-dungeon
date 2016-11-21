@@ -14,5 +14,7 @@
   "items": [
     {"kind":"Codex","text":"Это текст кодекса"},
     {"kind":"IronKey", "levelId":"2", "depth":2}
-  ]
+  ],
+  "nMobs":10,
+  "nTraps":100
 }
