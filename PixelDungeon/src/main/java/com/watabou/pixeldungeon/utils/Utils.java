@@ -47,8 +47,6 @@ public class Utils {
 		return String.format(Locale.ENGLISH, format, args);
 	}
 
-	private static String VOWELS = "aoeiu";
-
 	public static String indefinite(String noun) {
 		//In a pt_BR language(and another), there is no specific rule.
 		if (Game.getVar(R.string.Utils_IsIndefinte).equals("0")) {
@@ -58,6 +56,7 @@ public class Utils {
 		if (noun.length() == 0) {
 			return "a";
 		} else {
+			String VOWELS = "aoeiu";
 			return (VOWELS.indexOf(Character.toLowerCase(noun.charAt(0))) != -1 ? "an " : "a ") + noun;
 		}
 	}

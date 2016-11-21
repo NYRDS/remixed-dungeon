@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Created by mike on 29.03.2016.
+ * This file is part of Remixed Pixel Dungeon.
  */
 public class Animation {
 

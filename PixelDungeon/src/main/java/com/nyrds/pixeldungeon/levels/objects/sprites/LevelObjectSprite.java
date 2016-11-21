@@ -89,7 +89,8 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	@Override
 	public void update() {
 		super.update();
-		setVisible(pos == -1 || Dungeon.visible[pos]);
+		setVisible(true);
+		//setVisible(pos == -1 || Dungeon.visible[pos]);
 	}
 
 	@Override
