@@ -142,9 +142,8 @@ public class RandomLevel extends RegularLevel {
 
 		for (Room r : rooms) {
 			if (r.type == Room.Type.NULL && r.connected.size() == 1) {
-				if (neededRooms.size() > 0 && r.width() > 3 && r.height() > 3) {
-					r.type = neededRooms.get(0);
-					neededRooms.remove(0);
+				if (!neededRooms.isEmpty() && r.width() > 3 && r.height() > 3) {
+					r.type = neededRooms.remove(0);
 				}
 			} else if (Random.Int(2) == 0) {
 				assignRoomConnectivity(r);
