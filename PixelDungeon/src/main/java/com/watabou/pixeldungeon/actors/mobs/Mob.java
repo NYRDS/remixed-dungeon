@@ -68,10 +68,10 @@ public abstract class Mob extends Char {
 
 	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
 
-	protected static final String TXT_RAGE    = "#$%^";
-	protected static final String TXT_EXP     = "%+dEXP";
+	protected static final String TXT_RAGE = "#$%^";
+	protected static final String TXT_EXP  = "%+dEXP";
 
-	private static final   float  SPLIT_DELAY = 1f;
+	private static final float SPLIT_DELAY = 1f;
 
 	public AiState SLEEPING  = new Sleeping();
 	public AiState HUNTING   = new Hunting();
@@ -157,8 +157,8 @@ public abstract class Mob extends Char {
 		bundle.put(ENEMY_SEEN, enemySeen);
 		bundle.put(FRACTION, fraction.ordinal());
 
-		if(loot instanceof Item) {
-			bundle.put(LOOT, (Item)loot);
+		if (loot instanceof Item) {
+			bundle.put(LOOT, (Item) loot);
 		}
 	}
 
@@ -194,7 +194,7 @@ public abstract class Mob extends Char {
 
 		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
 
-		if(bundle.contains(LOOT)) {
+		if (bundle.contains(LOOT)) {
 			loot = bundle.get(LOOT);
 			lootChance = 1;
 		}
@@ -205,32 +205,30 @@ public abstract class Mob extends Char {
 	}
 
 	public CharSprite sprite() {
-		CharSprite sprite = null;
-		try {
 
-			String descName = "spritesDesc/" + getClass().getSimpleName() + ".json";
-			if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
-				return new MobSpriteDef(descName, getKind());
+		try {
+			{
+				String descName = "spritesDesc/" + getClass().getSimpleName() + ".json";
+				if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
+					return new MobSpriteDef(descName, getKind());
+				}
 			}
 
 			if (spriteClass instanceof Class) {
-				sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
+				CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
 				sprite.selectKind(getKind());
+				return sprite;
 			}
 
 			if (spriteClass instanceof String) {
-				sprite = new MobSpriteDef((String) spriteClass, getKind());
+				return new MobSpriteDef((String) spriteClass, getKind());
 			}
 
-
-			if (sprite == null) {
-				throw new TrackedRuntimeException("spite must not be null");
-			}
+			throw new TrackedRuntimeException(String.format("sprite creation failed - sprite class: %s, mob class %s", spriteClass.getClass().getCanonicalName(), getClass().getCanonicalName()));
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
-		return sprite;
 	}
 
 	@Override
@@ -260,15 +258,15 @@ public abstract class Mob extends Char {
 	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
 
 		Char bestEnemy = DUMMY;
-		int  dist      = Dungeon.level.getWidth() + Dungeon.level.getHeight();
+		int dist = Dungeon.level.getWidth() + Dungeon.level.getHeight();
 
-		if(enemyFraction.belongsTo(Fraction.HEROES)) {
+		if (enemyFraction.belongsTo(Fraction.HEROES)) {
 			bestEnemy = Dungeon.hero;
 			dist = Dungeon.level.distance(getPos(), bestEnemy.getPos());
 		}
 
 		for (Mob mob : Dungeon.level.mobs) {
-			if ( mob.fraction.equals(enemyFraction) && mob != this) {
+			if (mob.fraction.equals(enemyFraction) && mob != this) {
 				int candidateDist = Dungeon.level.distance(getPos(), mob.getPos());
 				if (candidateDist < dist) {
 					bestEnemy = mob;
@@ -506,12 +504,12 @@ public abstract class Mob extends Char {
 			//TODO we should move this block out of Mob class
 			Hero hero = Dungeon.hero;
 			if (hero != null && hero.isAlive()) {
-					hero.accumulateSoulPoints();
-					for (Item item : hero.belongings) {
-						if (item instanceof BlackSkull && item.isEquipped(hero)) {
-							((BlackSkull) item).mobDied(this, hero);
-						}
+				hero.accumulateSoulPoints();
+				for (Item item : hero.belongings) {
+					if (item instanceof BlackSkull && item.isEquipped(hero)) {
+						((BlackSkull) item).mobDied(this, hero);
 					}
+				}
 			}
 		}
 
@@ -531,7 +529,7 @@ public abstract class Mob extends Char {
 					Badges.validateNightHunter();
 				}
 
-				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER ) {
+				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
 					if (hero.lvl() <= maxLvl && EXP > 0) {
 						hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
 								EXP);
@@ -552,7 +550,7 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	private final String LOOT   = "loot";
+	private final String LOOT = "loot";
 
 	protected Object loot       = null;
 	protected float  lootChance = 0;
@@ -670,13 +668,13 @@ public abstract class Mob extends Char {
 	}
 
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
-		if(mobDesc.has("loot")) {
+		if (mobDesc.has("loot")) {
 			loot = ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot"));
 			lootChance = 1;
 		}
 
 		if (this instanceof IDepthAdjustable) {
-			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level",1));
+			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
 		}
 	}
 
@@ -924,7 +922,7 @@ public abstract class Mob extends Char {
 		super.readCharData();
 
 		if (!defMap.containsKey(getClass())) {
-			defMap.put(getClass(), JsonHelper.tryReadJsonFromAssets("mobsDesc/"+getClass().getSimpleName()+".json"));
+			defMap.put(getClass(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getClass().getSimpleName() + ".json"));
 		}
 	}
 }
