@@ -3,14 +3,20 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">armadura arácnida</string>
+    <string name="SpiderArmor_Info">Esta armadura esta hecha con viejas partes de araña y unas ropas extrañas. Parece increíble que si presiona con fuerza las placas de la armadura lance telaraña. La superficie de las suelas de la armadura le permiten caminar libremente sobre la telaraña.</string>
     <string name="SpiderArmor_Gender">femenino</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">craneo negro</string>
+    <string name="BlackSkull_Info">Un pequeño cráneo de obsidiana. Era una fuente de poder en la Necrópolis, pero después de la caída del Lich parece que perdió todo su poder. Al sostenerlo en la mano un pensamiento extraño viene a su mente: \"Estoy hambriento\".</string>
     <string name="BlackSkull_Gender">masculino</string>
+
+    <string name="BlackSkull_Name_Awakened">cráneo negro despertado.</string>
+    <string name="BlackSkull_Info_Awakened">El cráneo esta emitiendo poder, puede verse a través de los cuencas vacías del cráneo. Mientras lo sostienes en la mano puede oír a una voz espantosa decir: \"La muerte esta cerca\".</string>
 
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">fragmento de alma</string>
+    <string name="SoulShard_Info">Es un fragmento que has tomado de los restos del Tarro de Almas. Tiene un brillo de energía misteriosa, tal vez alguien este interesado en esto.</string>
     <string name="SoulShard_Gender">masculino</string>
 
     <!-- Mobs descriptions -->
@@ -18,28 +24,53 @@
     <string name="DeathKnight_Name">caballero muerto</string>
     <string name="DeathKnight_Gender">masculino</string>
     <string name="DeathKnight_Name_Objective">caballero muerto</string>
+    <string name="DeathKnight_Desc">A primera vista es un poderoso guerrero con armadura pesada, pero él te da una sonrisa esquelética, un Cabalero muerto es una manifestación del espíritu de un caballero que no fue capaz de cumplir su deber. Maldiciendo toda la tierra, tratando de limpiar su nombre en la batalla, matando al inocente, incapaz de recordar lo que juró proteger.</string>
+
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">caballero aterrador</string>
     <string name="DreadKnight_Gender">masculino</string>
+    <string name="DreadKnight_Name_Objective">caballero aterrador</string>
+    <string name="DreadKnight_Desc">Un caballero aterrador es un viejo guerrero, que nunca peleo de forma justa ni fue bueno en vida. Por sus pecados fue maldecido a ser un no-muerto por la eternidad. Siendo atormentado con el dolor y sufrimiento de quienes fueron sus victimas.</string>
+
     <!-- STRINGS OF EnslavedSoul CLASS -->
     <string name="EnslavedSoul_Name">alma esclavizada</string>
     <string name="EnslavedSoul_Gender">femenino</string>
     <string name="EnslavedSoul_Name_Objective">alma esclavizada</string>
+    <string name="EnslavedSoul_Desc">Casi puedes ver a través de esta aparición fantasmal. Aunque parece un cráneo, por momentos vez un rostros en su lugar, un rostro lleno de sufrimiento y dolor.</string>
+
     <!-- STRINGS OF ExplodingSkull CLASS -->
     <string name="ExplodingSkull_Name">craneo explosivo</string>
     <string name="ExplodingSkull_Gender">masculino</string>
     <string name="ExplodingSkull_Name_Objective">craneo explosivo</string>
+    <string name="ExplodingSkull_Desc">Este cráneo flotante y llameante parece extremadamente frágil, como si fuera a estallar en cualquier momento.</string>
+
     <!-- STRINGS OF JarOfSouls CLASS -->
     <string name="JarOfSouls_Name">tarro de almas</string>
     <string name="JarOfSouls_Gender">masculino</string>
     <string name="JarOfSouls_Name_Objective">tarro de almas</string>
+    <string name="JarOfSouls_Desc">Los ojos brillantes de un cráneo dibujado en este viejo frasco y la extraña energía que emite, le hace sentir incómodo.</string>
+
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">Lich</string>
     <string name="Lich_Gender">masculino</string>
     <string name="Lich_Name_Objective">Lich</string>
+    <string name="Lich_Desc">El nigromante ha encontrado la muerta en las profundidades de la Necrópolis, toda la energía malvada de este lugar se unió con su cuerpo, por lo que se termino convirtiendo en el Lich. Un mago no-muerto, sin voluntad y controlado por poderes malvados.</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">cráneo rúnico</string>
     <string name="RunicSkull_Gender">masculino</string>
+    <string name="RunicSkull_Name_Objective">cráneo rúnico</string>
+    <string name="RunicSkull_Desc">Algo hecho artificialmente, este cráneo se parece mucho a uno real. Puede ver un tenue resplandor que lo rodea.</string>
+
     <!-- STRINGS OF Zombie CLASS -->
     <string name="Zombie_Name">zombi</string>
     <string name="Zombie_Gender">masculino</string>
     <string name="Zombie_Name_Objective">zombi</string>
+    <string name="Zombie_Desc">La mazmorra es un lugar peligroso y muchos aventureros han perecido en este lugar. Pero los más desafortunados de todos encontraron su fin en la Necrópolis, ahora condenados a vagar como cadáveres podridos.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Intro2">¡Ah! un aventurero que no está muerto. ¡Increíble! Oh... le pido perdón. Como usted ve, soy un nigromante. Aunque estudio a los muertos y la muerte misma es lo que hago para ganarme la vida, ver siempre lo mismo se vuelve demasiado aburrido. Por otra parte, es exactamente por eso que estoy aquí. Una _Necrópolis_, una antigua ciudad de los muertos finalmente abrirá sus puertas. De hecho, estamos justo al lado de su entrada. Ten toma esta llave y ve primero, quiero decir, te gustan las aventuras, ¿no? Voy después de ti, solo necesito prepararme.</string>
+
     <!-- Badges -->
     <string name="Badges_Lich_Slain">Lich Cazado</string>
 
