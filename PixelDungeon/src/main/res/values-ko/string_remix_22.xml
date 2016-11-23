@@ -12,4 +12,5 @@
   <string name="AllowStatisticsCollectionScene_Deny">거부</string>
   <string name="Darkness_Info">영원한 어둠의 조각이 공중에 피어오른다.</string>
   <string name="WndSelectLanguage_ImproveTranslation">Remixed Pixel Dungeon의 번역을 도와주십시오.</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">여기를 눌러 Remixed Pixel Deugeon의 번역 팀에 참여하십시오.</string>
 </resources>

@@ -4,4 +4,9 @@
     <!-- STRINGS OF ArmoredStatue -->
     <string name="ArmoredStatue_Name">살아있는 석상</string>
     <string name="ArmoredStatue_Name_Objective">살아있는 석상</string>
-    </resources>
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">네. 지우겠습니다.</string>
+    <string name="WndSaveSlotSelect_Delete_No">아니요.</string>
+    <string name="WndSaveSlotSelect_Delete_Title">정말 이 세이브 파일을 지우시겠습니까?</string>
+</resources>

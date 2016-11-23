@@ -4,4 +4,78 @@
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_WayAlreadyChosen">No puedes cambiar tu elección!</string>
 
-    </resources>
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">Portador de Almas</string>
+    <string name="BlackSkullOfMastery_Info">Esto es un artefacto antiguo, hecho por los primeros nigromantes para recoger las almas de los caídos. Detecto tus habilidades nigrománticas, se protegió con un poderoso hechizo. Pero el hecho es muy antiguo, por su forma primitiva es bastante facil de romper.</string>
+    <string name="BlackSkullOfMastery_Title">Puedes romper el hechizo. O puedes manipular la magia que posee, lo que te permitirá consumir el poder del hechizo y el artefacto en sí, convirtiendote en un Lich.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Convertirse en Lich.</string>
+    <string name="BlackSkullOfMastery_Necromancer">Romper el hechizo</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">El _Lich_ es un nigromante que alcanzó el máximo poder de sus habilidades. Existen entre la vida y la muerte, el _Lich_ se destaca en la nigromancia, pero sus habilidades de combate se reducen gravemente.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Si rompes el hechizo, podrás usar este artefacto para su uso normal.</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">¡El cráneo negro a sido despertado!</string>
+    <string name="BlackSkull_Ressurrect">¡El cráneo negro a levantando al monstruo muerto para servirte!</string>
+    <string name="BlackSkull_Deactivated">El cráneo negro está dormido, una vez más...</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Armadura de huesos</string>
+    <string name="NecromancerArmor_Info">Esta armadura permite al nigromante invocar hasta 2 necrófagos por el costo de 5 almas cada uno. Estos secuaces no muertos le ayudan a su amo. Los necrófagos se vuelven fuertes junto a su amo.</string>
+    <string name="NecromancerArmor_NotNecromancer">¡Solo lo nigromantes pueden usar esta armadura!</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">túnica de nigromante</string>
+    <string name="NecromancerRobe_Info">Esta túnica le permite al nigromante invocar a un Necrófago por 5 almas. El Necrófago es un secuaz no-muerto que vuelven fuertes con su amo.</string>
+
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">nigromante</string>
+
+    <string name="HeroSubClass_NameLich">lich</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Los nigromantes comienzan con 15 puntos de vida.</item>
+        <item>Los nigromantes tiene un recurso único \"almas\", las usan para sus hechizos. Al matar un mob\'s consigue 1 alma.</item>
+        <item>Los nigromantes comienzan con una túnica especial de nigromantes.</item>
+        <item>Los nigromantes comienzan con una llave esqueleto para el nivel 7.</item>
+        <item>Las pociones de curación son identificadas desde el comienzo.</item>
+    </string-array>
+
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">necrófago</string>
+    <string name="Deathling_Gender">masculino</string>
+    <string name="Deathling_Name_Objective">necrófago</string>
+    <string name="Deathling_Desc">El necrófago es el alma de un héroe caído, que desafortunadamente fue invocado con el poder de un nigromante para ser su compañero de aventura.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">¡No puedes controlar más de %1$d secuaces con este objeto!</string>
+    <string name="Necromancy_NotEnoughSouls">No tienes suficientes almas para lanzar el hechizo \"%1$s\".</string>
+
+    <string name="Necromancy_SoulsCountLabel">Almas</string>
+
+    <string name="Necromancer_ACSpecial">NIGROMANCIA</string>
+    <string name="Necromancy_ReincarnationName">Reencarnación</string>
+    <string name="Necromancy_ReincarnationTriggered">¡Tus poderes burlaron a la muerte! Pero has perdido todas las almas recolectadas y tus objetos.</string>
+    <string name="Necromancy_SummonDeathlingName">Convocar necrófago</string>
+
+    <string name="Necromancy_BecameALich">¡Te has convertido en un Lich! ¡Tu poder crece y tu capacidad de almas se ha duplicado! Pero has perdido %1$d puntos de fuerza.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">Para desbloquear esta clase,  derrota al Lich con cualquier otra clase.</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Nigromancia</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">\"Este espíritu parece estar luchando contra su maldición y quiere algo de mí. SI uso mis poderes nigrománticos podre engañarlo de que hice lo que me pidió. Por lo que no necesitaré perder mi tiempo. ¿Debería de hacerlo?</string>
+    <string name="WndSadGhostNecro_Yes">Si, dominar al fantasma.</string>
+    <string name="WndSadGhostNecro_No">No, escucharlo.</string>
+    <string name="WndSadGhostNecro_Persuaded">¡El fantasma triste ha sido dominado!</string>
+
+    <!-- Badges -->
+
+    <string name="WndSettings_UiScale">Escala de la Ui</string>
+</resources>

@@ -113,4 +113,63 @@ remix.21.4:\n
         - Traducciones actualizadas\n
         - Se removio las opciones: \“modo inmersivo\” y \“escalar GUI\”\n
         </string>
+  <string name="Welcome_Text_25_1">
+        remix.25.1:\n
+        --Nuevas Características--\n
+        - Nueva clase de Héroe: Nigromante\n
+        - Ahora solo los nigromantes reciben PE por las muertes hechas por secuaces\n
+        - El nigromante tiene mayor posibilidad de conseguir una Espada de Sacrificios\n
+        --Ajustes--\n
+        - Todos los monstruos de la Necrópolis han sido debilitados\n
+        - Ahora Yog-Dzewa obtiene incremento de defensa no solo de los puños, si no tambien de otros sub-jefes\n
+        - Cuando Yog\'s muere todos los otros jefes mueren (antes solo afectaba a los puños)\n
+        - El Corazón de Yog\'s a sido debilitado. La cantidad de sanación que da a otros mobs se redujo\n
+        - Los jefes ya no están \"Cazando\" por defecto\n
+        - Las posibilidades de que un Gnoll-Zombi \"reviva\" a sido reducida\n
+        - Las pseudo-ratas han sido debilitadas\n
+        - El Cráneo Negro ahora necesita 10 cargas para activarse, en lugar de 15. Pero la muerte de los secuaces del jugador ya no dan cargas.\n
+        - El Espíritu Traidor no puede convertirse en secuaz del jugador\n
+        --Cambios visuales--\n
+        - Actualizados los gráficos de las Alcantarillas\n
+        --Correcciones--\n
+        - Corregido el error del \"texto que no desaparece\"\n
+        - Corregido el error que no permitía al jefe de la Necrópolis dañar correctamente al jugador\n
+        - Corregido el erro con la generación de la mazmorra del nivel 5\n
+        --Mods--\n
+        - Los mods creados por el usuario ahora pueden incluir códices con textos personalizados.\n
+        - Los mods creados por el usuario ahora permiten personalizar los gráficos, el agua y la música a un nivel en especifico.\n
+        </string>
+  <string name="Welcome_Text_25_2">
+        remix.25.2:\n
+        --Nuevas características--\n
+        - Ahora puede cambiar el tamaño del Ui durante el juego, desde el menú \"Configuración\"\n
+        --Correcciones--\n
+        - Corregido el error que aparecia al crearse una vista previa el héroe, al usar un sombre, después de hacer clic en \"Examinar\" en el menú \"Sombreros\"\n
+        - Corregido el error que evitaba que los mobs (convocados o resucitados sobre un agujero) cayeran\n
+        - Actualización de traducciones y corrección de errores\n
+        </string>
+  <string name="Welcome_Text_25_3">
+        remix.25.3:\n
+        - Nuevo objeto añadido: Barriles explosivos (remplazados por calabazas durante Halloween)\n
+        - Añadida música original para los niveles de los Jefes\n
+        - Nuevo objeto: Tarta de calabaza\n
+        - Nuevo NPC: Espantapájaros\n
+        - Nuevos objetos de vanidad: Mascara de Zombi, Graneo de Vampiro y sombrero Ushanka\n
+        </string>
+  <string name="Welcome_Text_25_4">
+        remix.25.4:\n
+        --Juego--\n
+        - Los barriles pueden ser empujados con la Vartia de Telekinesis\n
+        - Los barriles tiene menor posibilidad de aparecer en pasillos\n
+        - Lanzas y Alabardas ahora son del arquetipo \"armas de asta\", aumentan la distancia del ataque (antes solo era posible con la Lanza)\n
+        - La velocidad de ataque con las \"armas de asta\" se redujo para aumentar la distancia del ataque\n
+        - La ventana del titulo ahora dice \"Remixed Pixel Dungeon\"\n
+        - La ventana \"Acerca de\" fue actualizada\n
+        - La música de los Jefes ahora solo suena durante la pelea, excepto con Yog (En el nivel 31 la música del Jefe suena desde que llega al nivel)\n
+        - Traducción actualizada (más un nuevo lenguaje: Turco)\n
+        --Mods--\n
+        - Ahora los mods permiten llaves personalizadas\n
+        - Algunos mobs pueden ser establecidos manualmente con cierto nivel\n
+        - Los mobs albinos están permitidos en los mods\n
+        </string>
 </resources>
