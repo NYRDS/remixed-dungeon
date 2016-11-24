@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.levels.CustomLevel;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
@@ -100,16 +98,7 @@ public abstract class RegularLevel extends CustomLevel {
 
 		placeSecondaryExits();
 
-		HashSet<Room> connected = new HashSet<>();
-		connected.add(roomEntrance);
-
-
-		List<Room> path = buildPath(connected, roomEntrance, exitRoom(0));
-
-		Graph.setPrice(path, roomEntrance.distance);
-
-		path.addAll(buildPath(connected,roomEntrance,exitRoom(0)));
-
+		buildPath(roomEntrance, exitRoom(0));
 
 		ArrayList<Room> connectedRooms = new ArrayList<>();
 		connectedRooms.add(roomEntrance);
@@ -118,31 +107,20 @@ public abstract class RegularLevel extends CustomLevel {
 		int isolatedCounter = 0;
 		int roomCounter = 0;
 		for (Room r: rooms) {
-			if(r != roomEntrance) {
+			if(!connectedRooms.contains(r)) {
 				roomCounter++;
-				if (isRoomIsolatedFrom(r, exitRoom(0))) {
-					buildPath(connected,exitRoom(0),r);
+				Room connectedRoom = Random.element(connectedRooms);
+				if (isRoomIsolatedFrom(r, connectedRoom)) {
+					buildPath(connectedRoom,r);
 					isolatedCounter++;
 					GLog.i("%s isolated rooms: %d | %d ",r.type.toString(), isolatedCounter, roomCounter);
+				} else {
+					if(connectedRoom.width()>=5 || connectedRoom.height()>=5) {
+						connectedRooms.add(r);
+					}
 				}
 			}
 		}
-
-		//int nConnected = (int) (rooms.size() * Random.Float(0.05f, 0.95f));
-		/*
-		int nConnected = (int) (rooms.size());
-
-		while (connected.size() < nConnected) {
-
-			Room cr = Random.element(connected);
-			Room or = Random.element(cr.neighbours);
-			if (!connected.contains(or)) {
-
-				cr.connect(or);
-				connected.add(or);
-			}
-		}
-        */
 
 		if (Dungeon.shopOnLevel()) {
 			Room shop = null;
@@ -172,8 +150,7 @@ public abstract class RegularLevel extends CustomLevel {
 		return true;
 	}
 
-	@NonNull
-	private List<Room> buildPath(HashSet<Room> connected, Room from, Room to) {
+	private void buildPath(Room from, Room to) {
 		Graph.buildDistanceMap(rooms, to);
 		List<Room> path = Graph.buildPath(from, to);
 
@@ -181,9 +158,7 @@ public abstract class RegularLevel extends CustomLevel {
 		for (Room next : path) {
 			room.connect(next);
 			room = next;
-			connected.add(room);
 		}
-		return path;
 	}
 
 
@@ -238,17 +213,9 @@ public abstract class RegularLevel extends CustomLevel {
 					secondaryExit.height() < 4
 					);
 			secondaryExit.type = Type.EXIT;
-
-			Graph.buildDistanceMap(rooms, secondaryExit);
-			List<Room> path = Graph.buildPath(roomEntrance, secondaryExit);
-
 			exits.put(i, secondaryExit);
 
-			Room room = roomEntrance;
-			for (Room next : path) {
-				room.connect(next);
-				room = next;
-			}
+			buildPath(exitRoom(i-1),exitRoom(i));
 		}
 	}
 
