@@ -102,7 +102,10 @@ public abstract class RegularLevel extends CustomLevel {
 
 		ArrayList<Room> connectedRooms = new ArrayList<>();
 		connectedRooms.add(roomEntrance);
-		connectedRooms.add(exitRoom(0));
+
+		for (int i = 0; i<DungeonGenerator.exitCount(levelId);++i) {
+			connectedRooms.add(exitRoom(i));
+		}
 
 		int isolatedCounter = 0;
 		int roomCounter = 0;
