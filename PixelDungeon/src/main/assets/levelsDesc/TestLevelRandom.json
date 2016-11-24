@@ -5,7 +5,7 @@
    "tiles":"tiles0.png",
    "water":"water0.png",
 
-   "rooms" : ["LABORATORY","LABORATORY","WAREHOUSE","WAREHOUSE"],
+   "rooms" : ["RAT_KING","RAT_KING","RAT_KING"],
 
    "mobs" : [
       {"kind":"GoldenStatue","loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} },

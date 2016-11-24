@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.levels.CustomLevel;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
@@ -31,6 +33,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.ExitPainter;
 import com.watabou.pixeldungeon.levels.painters.Painter;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
@@ -100,29 +103,35 @@ public abstract class RegularLevel extends CustomLevel {
 		HashSet<Room> connected = new HashSet<>();
 		connected.add(roomEntrance);
 
-		Graph.buildDistanceMap(rooms, exitRoom(0));
-		List<Room> path = Graph.buildPath(roomEntrance, exitRoom(0));
 
-		Room room = roomEntrance;
-		for (Room next : path) {
-			room.connect(next);
-			room = next;
-			connected.add(room);
-		}
+		List<Room> path = buildPath(connected, roomEntrance, exitRoom(0));
 
 		Graph.setPrice(path, roomEntrance.distance);
 
-		Graph.buildDistanceMap(rooms, exitRoom(0));
-		path = Graph.buildPath(roomEntrance, exitRoom(0));
+		path.addAll(buildPath(connected,roomEntrance,exitRoom(0)));
 
-		room = roomEntrance;
-		for (Room next : path) {
-			room.connect(next);
-			room = next;
-			connected.add(room);
+
+		ArrayList<Room> connectedRooms = new ArrayList<>();
+		connectedRooms.add(roomEntrance);
+		connectedRooms.add(exitRoom(0));
+
+		int isolatedCounter = 0;
+		int roomCounter = 0;
+		for (Room r: rooms) {
+			if(r != roomEntrance) {
+				roomCounter++;
+				if (isRoomIsolatedFrom(r, exitRoom(0))) {
+					buildPath(connected,exitRoom(0),r);
+					isolatedCounter++;
+					GLog.i("%s isolated rooms: %d | %d ",r.type.toString(), isolatedCounter, roomCounter);
+				}
+			}
 		}
 
-		int nConnected = (int) (rooms.size() * Random.Float(0.5f, 0.7f));
+		//int nConnected = (int) (rooms.size() * Random.Float(0.05f, 0.95f));
+		/*
+		int nConnected = (int) (rooms.size());
+
 		while (connected.size() < nConnected) {
 
 			Room cr = Random.element(connected);
@@ -133,11 +142,12 @@ public abstract class RegularLevel extends CustomLevel {
 				connected.add(or);
 			}
 		}
+        */
 
 		if (Dungeon.shopOnLevel()) {
 			Room shop = null;
 			for (Room r : roomEntrance.connected.keySet()) {
-				if (r.connected.size() == 1 && r.width() >= 5 && r.height() >= 5) {
+				if (r.width() >= 5 && r.height() >= 5) {
 					shop = r;
 					break;
 				}
@@ -152,12 +162,63 @@ public abstract class RegularLevel extends CustomLevel {
 
 		assignRoomType();
 
+
 		paint();
 		paintWater();
 		paintGrass();
 
 		placeTraps();
 
+		return true;
+	}
+
+	@NonNull
+	private List<Room> buildPath(HashSet<Room> connected, Room from, Room to) {
+		Graph.buildDistanceMap(rooms, to);
+		List<Room> path = Graph.buildPath(from, to);
+
+		Room room = from;
+		for (Room next : path) {
+			room.connect(next);
+			room = next;
+			connected.add(room);
+		}
+		return path;
+	}
+
+
+	protected boolean isRoomIsolatedFrom(Room r, Room tgt) {
+
+		HashSet<Room> checkedRooms = new HashSet<>();
+		ArrayList<Room> uncheckedRooms = new ArrayList<>();
+
+		checkedRooms.add(r);
+
+		for (Room roomToCheck : r.edges()) {
+			if (r.connected.containsKey(roomToCheck)) {
+				uncheckedRooms.add(roomToCheck);
+			}
+		}
+
+		while (!uncheckedRooms.isEmpty()) {
+			Room currentRoom = uncheckedRooms.remove(uncheckedRooms.size()-1);
+
+			if (currentRoom == tgt) {
+				return false;
+			}
+
+			checkedRooms.add(currentRoom);
+
+			for (Room roomToCheck : currentRoom.edges()) {
+				if(checkedRooms.contains(roomToCheck)) {
+					continue;
+				}
+
+				if (currentRoom.connected.containsKey(roomToCheck)) {
+					uncheckedRooms.add(roomToCheck);
+				}
+			}
+		}
 		return true;
 	}
 
