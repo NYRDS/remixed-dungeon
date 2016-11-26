@@ -37,7 +37,6 @@ public class Window extends Group implements Signal.Listener<Key> {
 	protected int width;
 	protected int height;
 
-	private   TouchArea blocker;
 	protected NinePatch chrome;
 	
 	public static final int TITLE_COLOR = 0xCC33FF;
@@ -52,20 +51,20 @@ public class Window extends Group implements Signal.Listener<Key> {
 			
 	public Window( int width, int height, NinePatch chrome ) {
 		super();
-		
-		blocker = new TouchArea( 0, 0, PixelScene.uiCamera.width, PixelScene.uiCamera.height ) {
+
+		TouchArea blocker = new TouchArea(0, 0, PixelScene.uiCamera.width, PixelScene.uiCamera.height) {
 			@Override
-			protected void onTouchDown( Touch touch ) {
-				if (!Window.this.chrome.overlapsScreenPoint( 
-					(int)touch.current.x, 
-					(int)touch.current.y )) {
-					
+			protected void onTouchDown(Touch touch) {
+				if (!Window.this.chrome.overlapsScreenPoint(
+						(int) touch.current.x,
+						(int) touch.current.y)) {
+
 					onBackPressed();
 				}
 			}
 		};
 		blocker.camera = PixelScene.uiCamera;
-		add( blocker );
+		add(blocker);
 		
 		this.chrome = chrome;
 		

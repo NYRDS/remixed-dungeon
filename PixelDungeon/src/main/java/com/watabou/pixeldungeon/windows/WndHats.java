@@ -30,8 +30,6 @@ public class WndHats extends Window {
 
 	public Image slot;
 
-	private int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
-
 	public WndHats() {
 
 		EventCollector.logScene(getClass().getCanonicalName());
@@ -166,6 +164,7 @@ public class WndHats extends Window {
 			yPos = (int) (rb.bottom() + MARGIN * 2);
 		}
 
+		int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
 		int h = Math.min(HEIGHT - MARGIN, yPos);
 
 		float topGap = listTitle.y + listTitle.height() + MARGIN;
