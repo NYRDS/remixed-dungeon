@@ -113,12 +113,12 @@ public abstract class RegularLevel extends CustomLevel {
 			if(!connectedRooms.contains(r)) {
 				roomCounter++;
 				Room connectedRoom = Random.element(connectedRooms);
-				if (isRoomIsolatedFrom(r, connectedRoom)) {
+				if (r.isRoomIsolatedFrom(connectedRoom)) {
 					buildPath(connectedRoom,r);
 					isolatedCounter++;
 					GLog.i("%s isolated rooms: %d | %d ",r.type.toString(), isolatedCounter, roomCounter);
 				} else {
-					if(connectedRoom.width()>=5 || connectedRoom.height()>=5) {
+					if(connectedRoom.width()>=3 || connectedRoom.height()>=3) {
 						connectedRooms.add(r);
 					}
 				}
@@ -159,46 +159,14 @@ public abstract class RegularLevel extends CustomLevel {
 
 		Room room = from;
 		for (Room next : path) {
+			if(!room.isRoomIsolatedFrom(to)) {
+				break;
+			}
 			room.connect(next);
 			room = next;
 		}
 	}
 
-
-	protected boolean isRoomIsolatedFrom(Room r, Room tgt) {
-
-		HashSet<Room> checkedRooms = new HashSet<>();
-		ArrayList<Room> uncheckedRooms = new ArrayList<>();
-
-		checkedRooms.add(r);
-
-		for (Room roomToCheck : r.edges()) {
-			if (r.connected.containsKey(roomToCheck)) {
-				uncheckedRooms.add(roomToCheck);
-			}
-		}
-
-		while (!uncheckedRooms.isEmpty()) {
-			Room currentRoom = uncheckedRooms.remove(uncheckedRooms.size()-1);
-
-			if (currentRoom == tgt) {
-				return false;
-			}
-
-			checkedRooms.add(currentRoom);
-
-			for (Room roomToCheck : currentRoom.edges()) {
-				if(checkedRooms.contains(roomToCheck)) {
-					continue;
-				}
-
-				if (currentRoom.connected.containsKey(roomToCheck)) {
-					uncheckedRooms.add(roomToCheck);
-				}
-			}
-		}
-		return true;
-	}
 
 	protected Room exitRoom(int index) {
 		return exits.get(index);

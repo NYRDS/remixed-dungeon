@@ -68,7 +68,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	public int distance;
 	public int price = 1;
-	
+
 	public enum Type {
 		NULL( null ),
 		STANDARD	( StandardPainter.class ),
@@ -170,7 +170,42 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 			room.connected.put( this, null );			
 		}
 	}
-	
+
+	protected boolean isRoomIsolatedFrom(Room tgt) {
+
+		HashSet<Room> checkedRooms = new HashSet<>();
+		ArrayList<Room> uncheckedRooms = new ArrayList<>();
+
+		checkedRooms.add(this);
+
+		for (Room roomToCheck : edges()) {
+			if (connected.containsKey(roomToCheck)) {
+				uncheckedRooms.add(roomToCheck);
+			}
+		}
+
+		while (!uncheckedRooms.isEmpty()) {
+			Room currentRoom = uncheckedRooms.remove(uncheckedRooms.size()-1);
+
+			if (currentRoom == tgt) {
+				return false;
+			}
+
+			checkedRooms.add(currentRoom);
+
+			for (Room roomToCheck : currentRoom.edges()) {
+				if(checkedRooms.contains(roomToCheck)) {
+					continue;
+				}
+
+				if (currentRoom.connected.containsKey(roomToCheck)) {
+					uncheckedRooms.add(roomToCheck);
+				}
+			}
+		}
+		return true;
+	}
+
 	public Door entrance() {
 		return connected.values().iterator().next();
 	}
