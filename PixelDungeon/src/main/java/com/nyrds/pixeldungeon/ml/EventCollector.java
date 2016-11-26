@@ -77,4 +77,13 @@ public class EventCollector {
 			e.printStackTrace();
 		}
 	}
+
+
+	static public void startTiming(String id) {
+
+	}
+
+	static public void stopTiming(String id) {
+
+	}
 }
