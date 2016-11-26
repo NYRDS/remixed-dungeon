@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Random;
 
@@ -39,7 +40,7 @@ public class Bestiary {
 
 	static JSONObject mobsData;
 
-	private static Class<? extends Mob> getMobFromExternalBestiary(int depth, String levelKind) {
+	private static Class<? extends Mob> getMobFromExternalBestiary() {
 		if (mobsData == null) {
 			mobsData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
 			if (mobsData == null) {
@@ -48,15 +49,20 @@ public class Bestiary {
 		}
 
 		try {
-			JSONObject levelDesc = mobsData.getJSONObject(levelKind);
-			
-			String depthString = Integer.toString(depth);
-			
-			if(!levelDesc.has(depthString)) {
-				depthString = "any";
+			JSONObject levelDesc = mobsData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
+
+			String idString = DungeonGenerator.getCurrentLevelId();
+
+			if(!levelDesc.has(idString)) {
+				idString = Integer.toString(DungeonGenerator.getCurrentLevelDepth());
+
+				if (!levelDesc.has(idString)) {
+					idString = "any";
+				}
+
 			}
 			
-			JSONObject depthDesc = levelDesc.getJSONObject(depthString);
+			JSONObject depthDesc = levelDesc.getJSONObject(idString);
 
 			ArrayList<Float> chances = new ArrayList<>();
 			ArrayList<String> names = new ArrayList<>();
@@ -78,8 +84,8 @@ public class Bestiary {
 		return MobFactory.mobClassRandom();
 	}
 
-	public static Mob mob(int depth, String levelKind) {
-		Class<? extends Mob> cl = getMobFromExternalBestiary(depth, levelKind);
+	public static Mob mob() {
+		Class<? extends Mob> cl = getMobFromExternalBestiary();
 		try {
 			return cl.newInstance();
 		} catch (Exception e) {
@@ -87,8 +93,8 @@ public class Bestiary {
 		}
 	}
 
-	public static Mob mutable(int depth, String levelKind) {
-		Class<? extends Mob> cl = getMobFromExternalBestiary(depth, levelKind);
+	public static Mob mutable() {
+		Class<? extends Mob> cl = getMobFromExternalBestiary();
 
 		if (Random.Int(30) == 0) {
 			if (cl == Rat.class) {

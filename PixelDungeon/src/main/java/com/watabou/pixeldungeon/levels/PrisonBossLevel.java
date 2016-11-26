@@ -307,7 +307,7 @@ public class PrisonBossLevel extends RegularLevel {
 				pos = getRoomExit().random(this);
 			} while (pos == cell || Actor.findChar( pos ) != null);
 			
-			Mob boss = Bestiary.mob( Dungeon.depth, levelKind() );
+			Mob boss = Bestiary.mob();
 			boss.setState(boss.HUNTING);
 			boss.setPos(pos);
 			Dungeon.level.spawnMob(boss);

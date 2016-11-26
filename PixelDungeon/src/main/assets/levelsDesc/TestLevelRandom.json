@@ -9,7 +9,7 @@
 
    "mobs" : [
       {"kind":"GoldenStatue","loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} },
-      {"kind":"Mimic","level":"100", "loot":{"kind":"Codex","text":"Это кодекс отобранный у толстого мимика"} }
+      {"kind":"Mimic","level":100, "loot":{"kind":"Codex","text":"Это кодекс отобранный у толстого мимика"} }
    ],
   "items": [
     {"kind":"Codex","text":"Это текст кодекса"},

@@ -68,6 +68,7 @@
       "30":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2}
    },
   "RandomLevel":{
-    "any":{"Gnoll":1}
+    "any":{"Gnoll":1},
+    "test_random":{"Swarm":0.01}
   }
 }

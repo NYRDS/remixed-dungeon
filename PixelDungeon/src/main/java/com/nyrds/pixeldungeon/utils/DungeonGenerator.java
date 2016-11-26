@@ -57,7 +57,9 @@ public class DungeonGenerator {
 	static private JSONObject mGraph;
 
 	@NonNull
-	private static String mCurrentLevelId = UNKNOWN;
+	private static String mCurrentLevelId   = UNKNOWN;
+	private static String mCurrentLevelKind = UNKNOWN;
+
 	private static int    mCurrentLevelDepth;
 
 	static private HashMap<String, Class<? extends Level>> mLevelKindList;
@@ -183,6 +185,7 @@ public class DungeonGenerator {
 
 			next.levelId = mCurrentLevelId;
 			mCurrentLevelDepth = next.levelDepth = nextLevelDesc.getInt("depth");
+			mCurrentLevelKind  = next.levelKind;
 			next.levelKind = nextLevelDesc.getString("kind");
 
 			return next;
@@ -320,6 +323,11 @@ public class DungeonGenerator {
 	}
 
 	@NonNull
+	public static String getCurrentLevelKind() {
+		return mCurrentLevelKind;
+	}
+
+	@NonNull
 	public static String getCurrentLevelId() {
 		return mCurrentLevelId;
 	}
@@ -331,6 +339,7 @@ public class DungeonGenerator {
 	public static void loadingLevel(Position next) {
 		mCurrentLevelId = next.levelId;
 		mCurrentLevelDepth = next.levelDepth;
+		mCurrentLevelKind = next.levelKind;
 	}
 
 

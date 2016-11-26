@@ -588,7 +588,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (mob == null) {
-			mob = Bestiary.mutable(Dungeon.depth, levelKind());
+			mob = Bestiary.mutable();
 		}
 
 		setMobSpawnPos(mob);
