@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/potions-->
+  <!--STRINGS OF Potion CLASS-->
+  <string name="Potion_Name">%s зілля</string>
+  <string name="Potion_Info">Ця колба містить %s зілля, що обертається в середині. Хто знає що трапиться, якщо це випити або кинути?</string>
+  <string name="Potion_ACDrink">ПИТИ</string>
+  <string name="Potion_Harmfull">Шкідливе зілля!</string>
+  <string name="Potion_Beneficial">Корисне зілля</string>
+  <string name="Potion_Yes">Так, я знаю що роблю.</string>
+  <string name="Potion_No">Ні, я змінив своє думку</string>
+  <string name="Potion_SureDrink">Ви впевнені, що хочете випити це? Зазвичай такі зілля кидають в своїх ворогів.</string>
+  <string name="Potion_SureThrow">Ви впевнені, що хочете кинути це зілля? Зазвичай такі зілля випивають.</string>
+  <string name="Potion_Shatter">Колба розбилася і %s зілля розливається, не завдаючи шкоди.</string>
+  <string-array name="Potion_Colors">
+    <item>бірюзове</item>
+    <item>малинове</item>
+    <item>лазурне</item>
+    <item>нефритове</item>
+    <item>золоте</item>
+    <item>пурпурове</item>
+    <item>вугляне</item>
+    <item>блідо-жовте</item>
+    <item>бурштинове</item>
+    <item>коричневе</item>
+    <item>індигове</item>
+    <item>срібне</item>
+  </string-array>
+  <!--STRINGS OF PotionOfExperience CLASS-->
+  <string name="PotionOfExperience_Name">Зілля досвіду</string>
+  <string name="PotionOfExperience_Info">Історичний досвід битв безлічі людей зводиться до рідкої форми, це негайно підійме твій рівень досвіду.</string>
+  <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">Зілля морозу</string>
+  <string name="PotionOfFrost_Info">При контакті з повітрям цей хімікат випарується, утворюючи жахливу хмарку, приморожуючи до місця усіх істот, кого торкнеться, позбавляючи можливості поворухнутися.</string>
+  <!--STRINGS OF PotionOfHealing CLASS-->
+  <string name="PotionOfHealing_Name">Зілля лікування</string>
+  <string name="PotionOfHealing_Info">Еліксир, який миттєво вилікує тебе і звільнить від дії отрути.</string>
+  <string name="PotionOfHealing_Apply">Твої рани загоїлись.</string>
+  <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">Зілля невидимості</string>
+  <string name="PotionOfInvisibility_Info">Якщо випити цей напій ти станеш тимчасово невидимим. Доки ти невидимий, вороги не зможуть помітити тебе. Атака ворога, а також використання палички або сувою перед очима супротивника, розсіює ефект.</string>
+  <string name="PotionOfInvisibility_Apply">Ти бачив що твої руки зникли!</string>
+  <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">Зілля левітації</string>
+  <string name="PotionOfLevitation_Info">Ця рідина змусить тебе зависати в повітрі, ти зможеш дрейфувати без особливих зусиль над пастками. Полум\'я і гази наповнюють повітря, тому, і не вийде їх оминути, коли ти перебуваєш в повітрі.</string>
+  <string name="PotionOfLevitation_Apply">Ти літаєш у повітрі!</string>
+  <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">Зілля рідкого вогню</string>
+  <string name="PotionOfLiquidFlame_Info">Цей флакон містить нестійке з\'єднання, яке вибухне полум\'ям при контакті з  повітрям.</string>
+  <!--STRINGS OF PotionOfMight CLASS-->
+  <string name="PotionOfMight_Name">Зілля могутності</string>
+  <string name="PotionOfMight_Info">Ця могутня рідина буде курсувати через твої м\'язи, збільшуючи сили на одне очко і здоров\'я на п\'ять.</string>
+  <string name="PotionOfMight_Apply">Нова сила проходить крізь твоє тіло.</string>
+  <string name="PotionOfMight_StaApply">+1 сили, +5 здоров\'я</string>
+  <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">Зілля ясного бачення</string>
+  <string name="PotionOfMindVision_Info">Випивши його, ти отримаєш здатність вловлювати мозкові хвилі віддалених істот, що дозволить тобі відчувати живі організми крізь стіни. Також це зілля дозволить тобі бачити крізь найближчі стіни і двері.</string>
+  <string name="PotionOfMindVision_Apply1">Ти відчуваєш присутність інших істот на цьому рівні.</string>
+  <string name="PotionOfMindVision_Apply2">Тобі щось підказує що ти єдиний на цьому рівні.</string>
+  <!--STRINGS OF PotionOfParalyticGas CLASS-->
+  <string name="PotionOfParalyticGas_Name">Зілля паралізуючого газу</string>
+  <string name="PotionOfParalyticGas_Info">При контакті з повітрям ця рідина випарується, утворюючи жовтуватий серпанок. Будь хто вдихнув його буде миттєво паралізований і зможе рушити лише через деякий час після випаровування димки. Цей предмет можна жбурнути у ворогів, щоб паралізувати їх.</string>
+  <!--STRINGS OF PotionOfPurity CLASS-->
+  <string name="PotionOfPurity_Name">Зілля очищення</string>
+  <string name="PotionOfPurity_Info">Цей реагент миттєво нейтралізує всі шкідливі гази в приміщенні. Випивши його, ти тимчасово отримаєш імунітет до подібних газів.</string>
+  <string name="PotionOfPurity_Freshness">Ти відчуваєш прибуття свіжості в повітрі.</string>
+  <string name="PotionOfPurity_NoSmell">Ти перестав відчувати будь-який запах!</string>
+  <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">Зілля сили</string>
+  <string name="PotionOfStrength_Info">Ця могутня рідина збільшить твою силу на 1 пункт.</string>
+  <string name="PotionOfStrength_Apply">Отримана сила пульсує в вашій крові</string>
+  <string name="PotionOfStrength_StaApply">+1 сили</string>
+  <!--STRINGS OF PotionOfToxicGas CLASS-->
+  <string name="PotionOfToxicGas_Name">Зілля токсичного газу</string>
+  <string name="PotionOfToxicGas_Info">Найменше пошкодження або спроба відкрити цю посудину призведе до вибуху закачаного під тиском токсичного газу. Тобі краще жбурнути його у ворога, ніж намагатися відкрити.</string>
+</resources>

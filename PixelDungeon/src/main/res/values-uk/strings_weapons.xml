@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">Ти достатньо ознайомився з предметом: %1$s, аби ідентифікувати. Це %2$s.</string>
+  <string name="Weapon_Incompatible">Взаємодія несумісних типів магії зняло зачарування з зброї!</string>
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>Зловісне %s</item>
+    <item>Зловісний %s</item>
+    <item>Зловісна %s</item>
+  </string-array>
+  <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>Палюче %s</item>
+    <item>Палючий %s</item>
+    <item>Палюча %s</item>
+  </string-array>
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>Жахливе %s</item>
+    <item>Жахливий %s</item>
+    <item>Жахлива %s</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>Нестабільне %s</item>
+    <item>Нестабільний %s</item>
+    <item>Нестабільна %s</item>
+  </string-array>
+  <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>Вампірне %s</item>
+    <item>Вампірний %s</item>
+    <item>Вампірна %s</item>
+  </string-array>
+  <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>Вдале %s</item>
+    <item>Вдалий %s</item>
+    <item>Вдала %s</item>
+  </string-array>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>Приголомшливе %s</item>
+    <item>Приголомшливий %s</item>
+    <item>Приголомшлива %s</item>
+  </string-array>
+  <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>Пробивне %s</item>
+    <item>Пробивний %s</item>
+    <item>Пробивна %s</item>
+  </string-array>
+  <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>Отруйне %s</item>
+    <item>Отруйний %s</item>
+    <item>Отруйна %s</item>
+  </string-array>
+  <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>Морозне %s</item>
+    <item>Морозний %s</item>
+    <item>Морозна %s</item>
+  </string-array>
+  <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>Дике %s</item>
+    <item>Дикий %s</item>
+    <item>Дика %s</item>
+  </string-array>
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">%1$s - %2$s зброя ближнього бою %3$d рангу.</string>
+  <string name="MeleeWeapon_Info1b"> </string>
+  <string name="MeleeWeapon_Info1c">покращена</string>
+  <string name="MeleeWeapon_Info1d">послаблена</string>
+  <string name="MeleeWeapon_Info2a">Середня шкода становить %d одиниць за удар.</string>
+  <string name="MeleeWeapon_Info2b">Типова середня шкода становить %1$d одиниць за удар і, зазвичай, потребує %2$d одиниць сили.</string>
+  <string name="MeleeWeapon_Info2c">Судячи зі всього, ця зброя заважка для тебе.</string>
+  <string name="MeleeWeapon_Info3a">Це досить %s зброя.</string>
+  <string name="MeleeWeapon_Info3b">швидка</string>
+  <string name="MeleeWeapon_Info3c">повільна</string>
+  <string name="MeleeWeapon_Info3d">та</string>
+  <string name="MeleeWeapon_Info3e">але</string>
+  <string name="MeleeWeapon_Info3f">влучна</string>
+  <string name="MeleeWeapon_Info3g">невлучна</string>
+  <string name="MeleeWeapon_Info4a">Вона збалансована для підвищеної швидкості.</string>
+  <string name="MeleeWeapon_Info4b">Вона збалансована для більшої влучності.</string>
+  <string name="MeleeWeapon_Info5">Ця зброя зачарована</string>
+  <string name="MeleeWeapon_Info6a">Через брак твоєї сили, швидкість та точність атаки зброєю %s знижено.</string>
+  <string name="MeleeWeapon_Info6b">За рахунок більш ніж достатньої сили, кількість шкоди, від зброї %s, збільшено.</string>
+  <string name="MeleeWeapon_Info7a">Ти тримаєш %1$s готовим до бійки%2$s</string>
+  <string name="MeleeWeapon_Info7b">, оскільки зброя проклята, ти не можеш кинути її з рук</string>
+  <string name="MeleeWeapon_Info7c">Ти відчуваєш зловісну магію, що зачаїлася в зброї %s.</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">бойова сокира</string>
+  <string name="BattleAxe_Info">В кожному помаху цієї грізної зброї відчувається вага сталевого леза.</string>
+  <string name="BattleAxe_Gender">feminine</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">кинджал</string>
+  <string name="Dagger_Info">Простий залізний кинджал з зручною рукояткою</string>
+  <string name="Dagger_Gender">masculine</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">глефа</string>
+  <string name="Glaive_Info">Древкова зброя з лезом мечем на кінцівці.</string>
+  <string name="Glaive_Gender">feminine</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">кастет</string>
+  <string name="Knuckles_Info">Залізна скоба, щільно прилягає до пальців.</string>
+  <string name="Knuckles_Gender">masculine</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">довгий меч</string>
+  <string name="Longsword_Info">Цей масивний клинок завдає великої шкоди, завалюючи на ворога всю свою вагу.</string>
+  <string name="Longsword_Gender">masculine</string>
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">булава</string>
+  <string name="Mace_Info">Залізний набалдашник цієї зброї здатний нанести великої шкоди.</string>
+  <string name="Mace_Gender">feminine</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">патериця</string>
+  <string name="Quarterstaff_Info">Посох з твердої деревини, обидва кінці якого оббиті залізом.</string>
+  <string name="Quarterstaff_Gender">feminine</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">короткий меч</string>
+  <string name="ShortSword_Info">Дійсно короткий, буквально на кілька сантиметрів довший за кинджал.</string>
+  <string name="ShortSword_ACReforge">ПЕРЕКУВАТИ</string>
+  <string name="ShortSword_Select">Обери зброю для покращення</string>
+  <string name="ShortSword_Reforged">ти перекував короткий меч для покращення %s</string>
+  <string name="ShortSword_NotBoomerang">ти не можеш покращити бумеранг в цей спосіб</string>
+  <string name="ShortSword_Gender">masculine</string>
+  <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">спис</string>
+  <string name="Spear_Info">Тоненьке ратище із залізним вістрям.</string>
+  <string name="Spear_Gender">masculine</string>
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">меч</string>
+  <string name="Sword_Info">Блиск гострого як бритва леза вселяє впевненість.</string>
+  <string name="Sword_Gender">masculine</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">бойовий молот</string>
+  <string name="WarHammer_Info">Не багато істот можуть пережити удар такої зброї, але і не кожному мандрівнику під силу його підняти.</string>
+  <string name="WarHammer_Gender">masculine</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">Зброя дальнього бою</string>
+  <string name="MissileWeapon_Yes">Так, я знаю що роблю.</string>
+  <string name="MissileWeapon_No">Ні,я змінив своє рішення</string>
+  <string name="MissileWeapon_Sure">Ти впевнений, що хочеш використовувати це в якості зброї ближнього бою?</string>
+  <string name="MissileWeapon_Info1">
+
+Середня шкода від даної зброї складає %d одиниць за удар.</string>
+  <string name="MissileWeapon_Info2">Через брак твоєї сили, швидкість та точність атаки зброєю %s знижено.</string>
+  <string name="MissileWeapon_Info3">За рахунок більш ніж достатньої сили, кількість шкоди, від зброї %s, збільшено.</string>
+  <string name="MissileWeapon_Info4">
+
+Ти тримаєш %s готовим до битви.</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name">бумеранг</string>
+  <string name="Boomerang_Info">Ця дерев\'яна вигнута зброя, кинута у ворога, повертається до руки власника.</string>
+  <string name="Boomerang_Gender">masculine</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">дротик з кураре</string>
+  <string name="CurareDart_Info">Ці маленькі зловісні дротики не здатні завдати значної шкоди, проте можуть тимчасово паралізувати ворога.</string>
+  <string name="CurareDart_Gender">masculine</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">дротик</string>
+  <string name="Dart_Info">Це прості металеві шипи, ідеально підігнане для того, аби попадати в ціль.</string>
+  <string name="Dart_Gender">masculine</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">вогняний дротик</string>
+  <string name="IncendiaryDart_Info">Кінчик дротика розрахований на те, аби надійно впитися в ціль, в той час як суміш, якою він змащений, охопить жертву полум\'ям.</string>
+  <string name="IncendiaryDart_Gender">masculine</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">метальний спис</string>
+  <string name="Javelin_Info">Цей довгий метальний спис збалансовано так, аби його гостре вістря обов\'язково потрапляв в ціль на протязі всього польоту.</string>
+  <string name="Javelin_Gender">masculine</string>
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">сюрикен</string>
+  <string name="Shuriken_Info">Гострі як бритва металеві зірки завдають суттєвої шкоди своїм цілям. Їх можна кидати з великою швидкістю.</string>
+  <string name="Shuriken_Gender">masculine</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">томагавк</string>
+  <string name="Tamahawk_Info">Хоча ця сокира і не сильно і важка, проте все одно потребує значно сили для ефективного використання.</string>
+  <string name="Tamahawk_Gender">masculine</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">касурігама</string>
+  <string name="Kusarigama_Info">Ця зброя складається із серпа та грузила, пов\'язані між собою цепом.</string>
+  <string name="Kusarigama_Gender">feminine</string>
+  <string name="Kusarigama_Pull">ТЯГТИ</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">меч хаосу</string>
+  <string name="ChaosSword_Info">Клин цього меча створений з самого хаосу і інколи подриґує в передчутті. Велика сила, прихована у ньому, може розсікти практично все що завгодно навпіл. Проте він потребує не абиякої майстерності.</string>
+  <string name="ChaosSword_Gender">masculine</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">лук хаосу</string>
+  <string name="ChaosBow_Info">Лук, який викликає жах, напитаний силою Хаосу. Кожна випущена стріла донесе до цілі частинку енергії Хаосу. Але якщо ти промахнешся…</string>
+  <string name="ChaosBow_Gender">masculine</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">посох хаосу</string>
+  <string name="ChaosStaff_Info">Посох, просякнутий Силою Хаосу! Про що ще може мріяти маг, і що йому ще боятися?</string>
+  <string name="ChaosStaff_Gender">masculine</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">жертвенний меч</string>
+  <string name="SacrificialSword_Info">На перший погляд, цей старий бронзовий меч із патиновими плямами абсолютно безкорисний. Але в середині нього сплять якісь древні, архаїчні сили, здатні перетворити практично кожну істоту в раба без волі. Треба лише знайти спосіб, як їх пробудити…</string>
+  <string name="SacrificialSword_Gender">masculine</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF ResultDescriptions CLASS-->
+  <string name="ResultDescriptions_Mob">Вбитий монстром \"%1$s\" на %2$d рівні</string>
+  <string name="ResultDescriptions_Boss">Вбитий босом \"%1$s\" на %2$d рівні</string>
+  <string name="ResultDescriptions_Wand">Вбитий своєю ж паличкою \"%1$s\" на %2$d рівні</string>
+  <string name="ResultDescriptions_Glyph">Вбитий \"%1$s\" на %2$d рівні</string>
+  <string name="ResultDescriptions_Trap">Вбитий пасткою \"%1$s\" на рівні %2$d</string>
+  <string name="ResultDescriptions_Burning">Згорів заживо на рівні %d</string>
+  <string name="ResultDescriptions_Hunger">Заморився голодом на рівні %d</string>
+  <string name="ResultDescriptions_Poison">Отруївся на рівні %d</string>
+  <string name="ResultDescriptions_Gas">Загинув від токсичного газу на рівні %d</string>
+  <string name="ResultDescriptions_Bleeding">Стік кров\'ю на рівні %d</string>
+  <string name="ResultDescriptions_Ooze">Вбитий їдким слизом на рівні %d </string>
+  <string name="ResultDescriptions_Fall">Розбився насмерть на рівні %d</string>
+  <string name="ResultDescriptions_Win">Отримав амулет Ендора</string>
+  <string name="ResultDescriptions_Immured">Замуровано в камені на рівні %d</string>
+</resources>

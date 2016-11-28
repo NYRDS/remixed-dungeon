@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Клеймор</string>
+    <string name="Claymore_Info">Цей масивний меч може розрубати що завгодно.</string>
+    <string name="Claymore_Gender">masculine</string>
+
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Алебарда</string>
+    <string name="Halberd_Info">Дерев\'яний держак з сокирою на кінці.</string>
+    <string name="Halberd_Gender">feminine</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">Дерев\'яний арбалет</string>
+    <string name="WoodenCrossbow_Info">Типовий дерев\'яний арбалет, схоже він призначений для стрільби стрілами для лука.</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
+
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Складений арбалет</string>
+    <string name="CompositeCrossbow_Info">Цей посилений арбалет виявився більш ефективним інструментом, аніж його дерев\'яний колега.</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Рубіновий арбалет</string>
+    <string name="RubyCrossbow_Info">Ця смертоносна зброя є витвором майстерності інженерії гномів.</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">Готична броня</string>
+    <string name="GothicArmor_Info">Готична броня є вершиною мистецтва кованої броні.</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Обладунки Хаосу</string>
+    <string name="ChaosArmor_Info">Криваво червоні пластини цієї броні з\'єднані темно-червоними ланцюгами. Вини випромінюють енергію Хаосу, щоразу, як тільки ти її торкаєшся.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">Кристал всмоктало в твою броню, і вона набула форми складеної броні</string>
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">сувій \"%s\"</string>
+  <string name="Scroll_Info">Цей сувій покрито незрозумілими символами та позначений руною %s. Хто знає, що станеться якщо прочитати його вголос.</string>
+  <string name="Scroll_ACRead">ЧИТАТИ</string>
+  <string name="Scroll_Blinded">Ти не можеш читати, поки ти осліплений</string>
+  <string-array name="Scroll_Runes">
+    <item>КАУНАН</item>
+    <item>СОУІЛО</item>
+    <item>ЛАГУЗ</item>
+    <item>ЙІНГВІ</item>
+    <item>ГІУФУ</item>
+    <item>РАІДО</item>
+    <item>ІСАЗ</item>
+    <item>МАННАЗ</item>
+    <item>НАУДІЗ</item>
+    <item>БЕРКАНАН</item>
+    <item>ОДАЛ</item>
+    <item>ТІУАЗ</item>
+    <item>АНСУЗ</item>
+    <item>ІУАЗ</item>
+    <item>АЛГІЗ</item>
+    <item>ДАГАЗ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Обери предмет</string>
+  <string name="InventoryScroll_Warning">Сувій буде втрачено в будь-якому випадку. Ти справді бажаєш перервати його використання?</string>
+  <string name="InventoryScroll_Yes">Так, я підтверджую</string>
+  <string name="InventoryScroll_No">Ні, я передумав</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Чистий сувій</string>
+  <string name="BlankScroll_Info">Просто чистий сувій. Можливо щось можна написати на ньому?</string>
+  <string name="BlankScroll_ReallyBlank">Цей сувій чистий</string>
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Сувій виклику</string>
+  <string name="ScrollOfChallenge_Info">Під час читання цього свитку в голос, він видає рев, кидаючи виклик всім монстрам на рівні та вказуючи їм твоє розташування.</string>
+  <string name="ScrollOfChallenge_Info1">Свиток випускає рев виклику, який луною несеться по підземеллю.</string>
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Сувій розпізнавання</string>
+  <string name="ScrollOfIdentify_Info">Повністю відкриває всі секрети одного предмету.</string>
+  <string name="ScrollOfIdentify_InvTitle">Обери предмет для розпізнавання</string>
+  <string name="ScrollOfIdentify_Info1">Це %s</string>
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Сувій колискової</string>
+  <string name="ScrollOfLullaby_Info">Колискова мелодія, що генерую свиток. заколихує всіх монстрів в полі зору, даючи можливість утекти чи нанести несподіваний удар.</string>
+  <string name="ScrollOfLullaby_Info1">Сувій видає заспокійливу колискову.</string>
+  <string name="ScrollOfLullaby_Info2">Сувій видає заспокійливу колискову і %s засинає!</string>
+  <string name="ScrollOfLullaby_Info3">Сувій видає заспокійливу колискову і монстри засинають!</string>
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Сувій магічної карти</string>
+  <string name="ScrollOfMagicMapping_Info">Коли читаєш сувій, в твоїй голові чітко проявиться картина, яка вкаже карту рівня та всі його секрети. Проте положення предметів та монстрів залишиться невідомим.</string>
+  <string name="ScrollOfMagicMapping_Layout">Тепер ти маєш план рівня.</string>
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Сувій двійника</string>
+  <string name="ScrollOfMirrorImage_Info">Читання сувою призведе до створення твоїх двійників, який помчать за ворогами.</string>
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Сувій ментального удару</string>
+  <string name="ScrollOfPsionicBlast_Info">Цей сувій містить руйнівну енергію, яка за примхою власника, прямує до всіх ворогів в полі зору, та спричиняє їм значної шкоди. Ефект супроводжується сильним спалахом, який осліплює всіх навкруги разом із власником сувою.</string>
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Сувій перезарядження</string>
+  <string name="ScrollOfRecharging_Info">Сира магічна енергія, яка замкнена в сувої, миттєво відновить заряди магічних паличок власника сувою.</string>
+  <string name="ScrollOfRecharging_Info1a">потік сирої магічної енергій проминув по твоєму рюкзаку та перезарядив магічну паличку.</string>
+  <string name="ScrollOfRecharging_Info1b">потік сирої магічної енергій проминув по твоєму рюкзаку та перезарядив магічні палички.</string>
+  <string name="ScrollOfRecharging_Info2">потік сирої магічної енергій проминув по твоєму рюкзаку, але нічого не сталося.</string>
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Сувій зняття прокляття</string>
+  <string name="ScrollOfRemoveCurse_Info">Прочитавши цей сувій, ти прикличеш чарівну силу, яка вижене зі зброї, броні, кілець чи інших речей будь яке зло, дозволяючи користуватись цим предметами.</string>
+  <string name="ScrollOfRemoveCurse_Proced">Твій рюкзак освітлює світлом очищення, і зловісна енергія покидає його.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Твій рюкзак освітлює світлом очищення, але нічого не трапилося.</string>
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">Сувій перенесення</string>
+  <string name="ScrollOfTeleportation_Info">Сувій перенесе заклинача у випадкову точку на рівні. Це може допомогти уникнути небезпечної ситуації, проте вдача може перенести тебе в місце де буде ще гірше.</string>
+  <string name="ScrollOfTeleportation_Teleport">Не моргнувши й оком, тебе перенесло в іншу точку рівня.</string>
+  <string name="ScrollOfTeleportation_NoTeleport">Могутня магічна аура даного місце не дозволяє тобі перенестися.</string>
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Сувій жаху</string>
+  <string name="ScrollOfTerror_Info">Червоний спалах закляття викликає жах у ворогів, які починають тікати. Атакуючи ворога, що утікає, ти знімаєш закляття.</string>
+  <string name="ScrollOfTerror_Info1">Сувій випускає спалах червоного світла.</string>
+  <string name="ScrollOfTerror_Info2">Сувій випускає спалах червоного світла і %s тікає!</string>
+  <string name="ScrollOfTerror_Info3">Сувій випускає спалах червоного світла і монстри тікають!</string>
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Сувій покращення</string>
+  <string name="ScrollOfUpgrade_Info">Цей сувій покращує одну єдину річ, збільшуючи її якість. Сила та місткість палички зростає; зброя наносить більшої шкоди чи покращує влучність; броня отримує більший захист; можливості кілець зростуть. Зброя та броня потребуватимуть меншої сили для використання, а будь який предмет очищено.</string>
+  <string name="ScrollOfUpgrade_InvTitle">Обери предмет для покращення</string>
+  <string name="ScrollOfUpgrade_LooksBetter">%s тепер дійсно виглядає краще</string>
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Сувій покращення зброї</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Цей сувій покращує зброю ближнього бою, збільшуючи її якість. На відміну від сувою покращення, ця версія не зруйную чари, які було накладено. Навіть навпаки, зможе наділити випадковим ефектом не зачаровану річ.</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Обери зброю для покращення</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">%s тепер дійсно виглядає краще</string>
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Сувій влади</string>
+  <string name="ScrollOfDomination_Info">Цей сувій підкорить волю одного з істот в полі зору. Істота буде битися за тебе, до самої смерті.</string>
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Сувій прокляття</string>
+  <string name="ScrollOfCurse_Info">Цей сувій було створені виключно для покарання злодіїв, які виявляться досить дурними, аби використати невідому їм магію. Магія, яка тримається в сувої, абсолютно безкорисна, і може нашкодити шукачу пригод, однак дуже ціниться торговцями.</string>
+</resources>

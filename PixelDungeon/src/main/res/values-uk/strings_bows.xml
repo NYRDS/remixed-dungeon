@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF Bow CLASS-->
+  <string name="Bow_Info1">Це зброя дальнього бою, в близькому бою з нього буде мізерна користь, для всіх окрім ельфа. За допомогою лука ти можеш стріляти стрілами.\n\n</string>
+  <!--STRINGS OF WoodenBow CLASS-->
+  <string name="WoodenBow_Name">дерев\'яний лук</string>
+  <string name="WoodenBow_Info">Цей звичайний дерев\'яний лук зможе бути досить корисним, якщо в тебе будуть стріли.</string>
+  <string name="WoodenBow_Gender">masculine</string>
+  <!--STRINGS OF CompoundBow CLASS-->
+  <string name="CompoundBow_Name">блочний лук</string>
+  <string name="CompoundBow_Info">Стріли, запущені з блочного лука, дуже легко знаходять ціль і наносять значну шкоду, проте він не такий швидкий, як звичайний лук.</string>
+  <string name="CompoundBow_Gender">masculine</string>
+  <!--STRINGS OF RubyBow CLASS-->
+  <string name="RubyBow_Name">рубіновий лук</string>
+  <string name="RubyBow_Info">Тільки найвеличніші стрільці можуть використовувати цей рубіновий лук. Майже всі стріли. випущені з цього лука проходять  ворога наскрізь, залишаючи величезні дірки в його тілі. Але як важко натягнути тятиву.</string>
+  <string name="RubyBow_Gender">masculine</string>
+  <!--STRINGS OF Quiver CLASS-->
+  <string name="Quiver_Name">сагайдак</string>
+  <string name="Quiver_Info">Шкіряний сагайдак добре підходить для будь-яких стріл</string>
+  <string name="Quiver_Gender">masculine</string>
+  <!--STRINGS OF FireQuiver CLASS-->
+  <string name="FireQuiver_Name">вогняний сагайдак</string>
+  <string name="FireQuiver_Info" />
+  <string name="FireQuiver_Gender">masculine</string>
+  <!--STRINGS OF PoisonQuiver CLASS-->
+  <string name="PoisonQuiver_Name">отруєний сагайдак</string>
+  <string name="PoisonQuiver_Info" />
+  <string name="Poisonuiver_Gender">masculine</string>
+  <!--STRINGS OF ParalysisQuiver CLASS-->
+  <string name="ParalysisQuiver_Name">паралізуючий сагайдак</string>
+  <string name="ParalysisQuiver_Info" />
+  <string name="ParalysisQuiver_Gender">masculine</string>
+  <!--STRINGS OF CommonArrow CLASS-->
+  <string name="CommonArrow_Name">стріла</string>
+  <string name="CommonArrow_Info">Звичайна дерев\'яна стріла з залізним наконечником.</string>
+  <string name="CommonArrow_Gender">feminine</string>
+  <!--STRINGS OF FireArrow CLASS-->
+  <string name="FireArrow_Name">вогняна стріла</string>
+  <string name="FireArrow_Info">Ця стріла виглядає досить звичайно, проте наконечник світиться незвичайно теплим червоним світлом.</string>
+  <string name="FireArrow_Gender">feminine</string>
+  <!--STRINGS OF PoisonArrow CLASS-->
+  <string name="PoisonArrow_Name">отруйна стріла</string>
+  <string name="PoisonArrow_Info">Наконечник цієї стріли виблискує каплею смертельної отрути.</string>
+  <string name="PoisonArrow_Gender">feminine</string>
+  <!--STRINGS OF ParalysisArrow CLASS-->
+  <string name="ParalysisArrow_Name">паралізуюча стріла</string>
+  <string name="ParalysisArrow_Info">Ця стріла змочена в кураре.</string>
+  <string name="ParalysisArrow_Gender">feminine</string>
+  <!--STRINGS OF FrostArrow CLASS-->
+  <string name="FrostArrow_Name">морозна стріла</string>
+  <string name="FrostArrow_Info">Ти відчуваєш ауру холоду, яка йде з наконечника цієї стріли.</string>
+  <string name="FrostArrow_Gender">feminine</string>
+</resources>

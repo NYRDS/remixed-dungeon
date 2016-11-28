@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/food-->
+  <!--STRINGS OF Food CLASS-->
+  <string name="Food_ACEat">З\'ЇСТИ</string>
+  <string name="Food_Message">Їжа була смачною!</string>
+  <!--STRINGS OF Ration CLASS-->
+  <string name="Ration_Name">сухий пайок</string>
+  <string name="Ration_Info">Нічого цікавого: сушене м\'ясо, трохи печива - тощо.</string>
+  <!--STRINGS OF ChargrilledMeat CLASS-->
+  <string name="ChargrilledMeat_Name">смажене м\'ясо</string>
+  <string name="ChargrilledMeat_Info">Виглядає як пристойний біфштекс.</string>
+  <!--STRINGS OF FrozenCarpaccio CLASS-->
+  <string name="FrozenCarpaccio_Name">заморожене карпачо</string>
+  <string name="FrozenCarpaccio_Info">Це шматок замороженого сирого м\'яса. Єдиний спосіб з\'їсти карпачо - нарізати тонких скибочок з нього. І це, як не дивно, доволі смакує.</string>
+  <string name="FrozenCarpaccio_Info1">Ти побачив, як твої руки зникли!</string>
+  <string name="FrozenCarpaccio_Info2">Ти відчуваєш, як твоя шкіра затверділа!</string>
+  <string name="FrozenCarpaccio_Info3">Освіжає!</string>
+  <string name="FrozenCarpaccio_Info4">Ти почуваєш себе краще!</string>
+  <!--STRINGS OF MysteryMeat CLASS-->
+  <string name="MysteryMeat_Name">таємниче м\'ясо</string>
+  <string name="MysteryMeat_Info">Скуштуй на свій острах!</string>
+  <string name="MysteryMeat_Info1">Ох, воно гаряче!</string>
+  <string name="MysteryMeat_Info2">Ти не відчуваєш своїх ніг!</string>
+  <string name="MysteryMeat_Info3">Ти почуваєш себе не дуже добре.</string>
+  <string name="MysteryMeat_Info4">Ти об\'ївся.</string>
+  <string name="MysteryMeat_Message">Ця їжа на смак… дивна.</string>
+  <!--STRINGS OF RottenFood CLASS-->
+  <string name="RottenFood_Message">бридота!</string>
+  <!--STRINGS OF RottenMeat CLASS-->
+  <string name="RottenMeat_Name">гниле м\'ясо</string>
+  <string name="RottenMeat_Info">шматок гнилого м\'яса</string>
+  <!--STRINGS OF RottenPasty CLASS-->
+  <string name="RottenPasty_Name">зіпсований пиріг</string>
+  <string name="RottenPasty_Info">цей пиріг виглядає так огидно</string>
+  <!--STRINGS OF RottenRation CLASS-->
+  <string name="RottenRation_Name">зіпсований сухий пайок</string>
+  <string name="RottenRation_Info">колись давно його ще можна було з\'їсти</string>
+  <!--STRINGS OF OverpricedRation CLASS-->
+  <string name="OverpricedRation_Name">дорогий сухий пайок</string>
+  <string name="OverpricedRation_Info">Він виглядає так само, як і стандартний сухий пайок, але менший.</string>
+  <string name="OverpricedRation_Message">Ця їжа добра на смак.</string>
+  <!--STRINGS OF Pasty CLASS-->
+  <string name="Pasty_Name">пиріг з м\'ясом</string>
+  <string name="Pasty_Info">Це традиційний Корнуоллський пиріг з начинкою яловичини і картоплі</string>
+  <!--STRINGS OF PseudoPasty CLASS-->
+  <string name="PseudoPasty_Name">м\'ясний пиріг</string>
+  <string name="PseudoPasty_Info">Це традиційний Корнуолський пиріг з начинкою із яловичини та картоплі.</string>
+</resources>

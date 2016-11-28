@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">павуча броня</string>
+    <string name="SpiderArmor_Info">Ця броня виготовлена зі старого хітину павука та шмаття тканини. Дивно те, що вона містить функціонуючи павучі залози. Якщо натиснути на пластини досить сильно, то вона вистрілює павутиння. А зубчаті підошви дозволяють безперешкодно пересуватись по цьому павутинню.</string>
+    <string name="SpiderArmor_Gender">feminine</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">чорний череп</string>
+    <string name="BlackSkull_Info">Маленький обсидіановий череп. Він був джерелом сили Некрополісу, але, після поразки ліча, втратив їх. Однак коли ти тримаєш його в руках, тебе навідує чужа думка: \"він жадає\".</string>
+    <string name="BlackSkull_Gender">masculine</string>
+
+    <string name="BlackSkull_Name_Awakened">пробуджений чорний череп</string>
+    <string name="BlackSkull_Info_Awakened">Череп дихає силою, видно як вона ллється крізь його порожні зіниці. Тримаючи його в руках ти чуєш жахливий голос: \"Смерть крокує\".</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">уламок душі</string>
+    <string name="SoulShard_Info">Цей уламок підібрано із залишків глечика душ. він виблискує загадковою енергією, можливо є хтось, хто може зацікавитися таким.</string>
+    <string name="SoulShard_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">лицар смерті</string>
+    <string name="DeathKnight_Gender">masculine</string>
+    <string name="DeathKnight_Name_Objective">лицаря смерті</string>
+    <string name="DeathKnight_Desc">На перший погляд це сильний лицар в могутній броні, але смертельний оскал видає його. Лицар смерті - це втілення душі лицаря, який порушив всі свої обітниці. І проклятим він буде вічно блукати шукаючи очищення в бою, вбиваючи невинних, не в силах згадати кого він повинен був захищати.</string>
+
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">лицар жаху</string>
+    <string name="DreadKnight_Gender">masculine</string>
+    <string name="DreadKnight_Name_Objective">лицаря жаху</string>
+    <string name="DreadKnight_Desc">Лицар жаху - древній воїн, який за життя не знав, а ні добро, а ні праведність. За його гріхи його приречено вічно блукати в ламаному тілі мерця. І кожна мить його проклятого існування буде сповнена болі та мук, на кшталт тих, які він завдавав за життя своїм жертвам.</string>
+
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">поневолена душа</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="EnslavedSoul_Name_Objective">поневолену душу</string>
+    <string name="EnslavedSoul_Desc">Це примарне створіння практично прозоре. Хоча воно і виглядає як череп, лиш на мить з\'являється обличчя, обличчя сповнене болі та муки.</string>
+
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">череп-камікадзе</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Name_Objective">череп-камікадзе</string>
+    <string name="ExplodingSkull_Desc">Цей череп, що палає та висить в повітрі, виглядає досить крихким, здається що він розпадеться на шматки в будь який момент.</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">глечик душ</string>
+    <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Name_Objective">глечик душ</string>
+    <string name="JarOfSouls_Desc">Очі зображеного на глечику черепа, що сяють, та дивна магічна енергія, яку він випромінює викликає у тебе занепокоєння.</string>
+
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">ліч</string>
+    <string name="Lich_Gender">masculine</string>
+    <string name="Lich_Name_Objective">ліча</string>
+    <string name="Lich_Desc">Некромант знайшов свою смерть в глибинах Некрополісу, і злі сили, що влилися в його тіло, перетворили його ліча. В мага-мерця, зневолену маріонетку, якою керують темні сили…</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">рунний череп</string>
+    <string name="RunicSkull_Gender">masculine</string>
+    <string name="RunicSkull_Name_Objective">runic skull</string>
+    <string name="RunicSkull_Desc">Для створеного штучним шляхом цей череп виглядає занадто сходим на справжній. Також ти бачиш, як його окутує слабке сяйво.</string>
+
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">зомбі</string>
+    <string name="Zombie_Gender">neuter</string>
+    <string name="Zombie_Name_Objective">зомбі</string>
+    <string name="Zombie_Desc">Підземелля завжди були небезпечним місцем, і багато шукачів пригод зустріли свою долю тут. Але шлях тих, кому поталанило менше за інших, обірвався тут, в Некрополісі. І тепер вони приречені блукати по коридорам у вигляді трупа.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Intro2">Ти диви! Яке рідкісне видовище! Шукач пригод, який не є мертвяком. Неймовірно! Ох… Прошу вибачення, іноді мене заносить. Бачите, я некромант. І не дивлячись на те, що вивчення мерців та самої смерті у нас в пошані, вся ця одноманітність кому завгодно набридне. Але з іншого боку, я тут якраз через це. Сталося щось неймовірне! _Некрополь_, древнє місто мертвих, відкрив нашому погляду свої двері. чесно кажучи, м стоїмо прямо на порозі цих дверей. І… Знаєш що, візьми но ключ, і йди першим, тобі ж подобаються всілякі пригоди, так? А я піду за тобою… але спочатку підготуюсь.</string>
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Ліча подолано</string>
+
+</resources>
