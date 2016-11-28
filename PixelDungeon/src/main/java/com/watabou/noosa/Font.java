@@ -20,10 +20,10 @@ public class Font extends TextureFilm {
 	"[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 
 	public static final String CYRILLIC_UPPER =
-	"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+	"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯІЇЄҐЎ";
 
 	public static final String CYRILLIC_LOWER =
-	"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+	"абвгдеёжзийклмнопрстуфхцчшщъыьэюяіїєґў";
 	
 	public static final String ALL_CHARS = LATIN_FULL+SPECIAL_CHAR+CYRILLIC_UPPER+CYRILLIC_LOWER;
 
