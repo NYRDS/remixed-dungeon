@@ -64,6 +64,7 @@ import com.watabou.pixeldungeon.actors.mobs.Yog.Larva;
 import com.watabou.pixeldungeon.actors.mobs.Yog.RottingFist;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
+import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.utils.Random;
 
 import java.util.HashMap;
@@ -87,6 +88,7 @@ public class MobFactory {
 		registerMobClass(Swarm.class);
 		registerMobClass(Thief.class);
 		registerMobClass(Skeleton.class);
+		registerMobClass(RatKing.class);
 		registerMobClass(Goo.class);
 		
 		registerMobClass(Shaman.class);
