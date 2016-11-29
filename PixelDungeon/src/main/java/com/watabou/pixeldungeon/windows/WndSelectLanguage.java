@@ -26,19 +26,24 @@ import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndSelectLanguage extends Window {
 
-	private static final int WIDTH			= 120;
-	private static final int MARGIN 		= 2;
-	private static final int BUTTON_HEIGHT	= 20;
-	private static final int BUTTON_WIDTH	= 58;
+	private static final int WIDTH_P = 120;
+	private static final int WIDTH_L = 180;
+
+	private static final int MARGIN        = 2;
+	private static final int BUTTON_HEIGHT = 20;
+	private static final int BUTTON_WIDTH  = 58;
 
 	public WndSelectLanguage(String title, String... options) {
 		super();
+
+		int WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
 
 		int maxW = WIDTH - MARGIN * 2;
 
@@ -56,48 +61,51 @@ public class WndSelectLanguage extends Window {
 		pleaseHelpTranslate.y = tfTitle.y + tfTitle.height() + MARGIN;
 		add(pleaseHelpTranslate);
 
-		Text translateLink=PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
+		Text translateLink = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
 		translateLink.hardlight(TITLE_COLOR);
 		translateLink.maxWidth(maxW);
 		translateLink.measure();
 		translateLink.x = MARGIN;
 		translateLink.y = pleaseHelpTranslate.y + pleaseHelpTranslate.height() + MARGIN;
-		add( translateLink );
+		add(translateLink);
 
-		TouchArea area = new TouchArea( translateLink ) {
+		TouchArea area = new TouchArea(translateLink) {
 			@Override
-			protected void onClick( Touchscreen.Touch touch ) {
+			protected void onClick(Touchscreen.Touch touch) {
 				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Game.getVar(R.string.WndSelectLanguage_TranslationLink)));
 
-				Game.instance().startActivity( Intent.createChooser(intent, Game.getVar(R.string.WndSelectLanguage_TranslationLink)) );
+				Game.instance().startActivity(Intent.createChooser(intent, Game.getVar(R.string.WndSelectLanguage_TranslationLink)));
 			}
 		};
 		add(area);
 
 		float pos = translateLink.y + translateLink.height() + MARGIN;
 
-		for (int i = 0; i < options.length / 2 + 1; i++) {
-			for(int j =0;j<2;j++) {
-				final int index = i*2+j;
-				if(!(index<options.length)) {
+		final int columns = PixelDungeon.landscape() ? 3 : 2;
+
+		for (int i = 0; i < options.length / columns + 1; i++) {
+			for (int j = 0; j < columns; j++) {
+				final int index = i * columns + j;
+				if (!(index < options.length)) {
 					break;
 				}
-				SystemRedButton btn = new SystemRedButton( options[index] ) {
+				SystemRedButton btn = new SystemRedButton(options[index]) {
 					@Override
 					protected void onClick() {
 						hide();
-						onSelect( index );
+						onSelect(index);
 					}
 				};
 
-				btn.setRect( MARGIN + j*(BUTTON_WIDTH+MARGIN), pos, BUTTON_WIDTH, BUTTON_HEIGHT );
-				add( btn );
+				btn.setRect(MARGIN + j * (BUTTON_WIDTH + MARGIN), pos, BUTTON_WIDTH, BUTTON_HEIGHT);
+				add(btn);
 			}
 			pos += BUTTON_HEIGHT + MARGIN;
 		}
 
-		resize( WIDTH, (int)pos );
+		resize(WIDTH, (int) pos);
 	}
 
-	protected void onSelect( int index ) {}
+	protected void onSelect(int index) {
+	}
 }
