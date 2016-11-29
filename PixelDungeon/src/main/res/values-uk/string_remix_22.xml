@@ -2,7 +2,7 @@
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
   <string name="ShadowLord_Name">лорд тіней</string>
-  <string name="ShadowLord_Gender">чоловічий</string>
+  <string name="ShadowLord_Gender">masculine</string>
   <string name="ShadowLord_Name_Objective">Лорд Тіней</string>
   <string name="ShadowLord_Desc">Зроблений з чистого зла та темряви, хтось вважає що він є Старим Богом враховуючи на скільки він могутній. А інші вважають що він охороняє прохід до покоїв Старого Бога.</string>
   <string name="ShadowLord_Intro">Приготуйся!</string>

@@ -2,27 +2,27 @@
 <resources>
   <!--PACKAGE /items/Wands-->
   <!--STRINGS OF Wand CLASS-->
-  <string name="Wand_Name">%s паличка</string>
+  <string name="Wand_Name">паличку %s</string>
   <string name="Wand_ACZap">ВИСТРЕЛИТИ</string>
-  <string name="Wand_Wood">Ця тоненька %s паличка тепла на дотик. Хто знає, що трапиться, якщо махнути нею.</string>
+  <string name="Wand_Wood">Ця тоненька паличка %s тепла на дотик. Хто знає, що трапиться, якщо махнути нею.</string>
   <string name="Wand_Damage">Під час ближнього бою ця паличка нанесе %d одиниць шкоди.</string>
   <string name="Wand_Weapon">Ти не можеш використовувати цю паличку в якості зброї ближнього бою.</string>
   <string name="Wand_Fizzles">твоя паличка потріскує; схоже закінчився магічний заряд</string>
   <string name="Wand_SelfTarget">Ти не можеш поцілити в себе</string>
   <string name="Wand_Prompt">Обери напрям для пострілу</string>
   <string-array name="Wand_Wood_Types">
-    <item>гостролиста</item>
-    <item>тисова</item>
-    <item>ебонітова</item>
-    <item>вишнева</item>
-    <item>тикова</item>
-    <item>горобинова</item>
-    <item>вербова</item>
-    <item>червонодеревна</item>
-    <item>бамбукова</item>
-    <item>амарантова</item>
-    <item>дубова</item>
-    <item>березова</item>
+    <item>з гостролисту</item>
+    <item>з тису</item>
+    <item>з ебоніту</item>
+    <item>з вишні</item>
+    <item>з тика</item>
+    <item>з горобини</item>
+    <item>з верби</item>
+    <item>з червоного дерева</item>
+    <item>з бамбука</item>
+    <item>з амаранта</item>
+    <item>з дуба</item>
+    <item>з берези</item>
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
   <string name="WandOfAmok_Name">Паличка шаленості</string>
