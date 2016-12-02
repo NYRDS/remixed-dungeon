@@ -162,6 +162,7 @@ public abstract class RegularLevel extends CustomLevel {
 			if(!room.isRoomIsolatedFrom(to)) {
 				break;
 			}
+			room.price(room.price() + 1);
 			room.connect(next);
 			room = next;
 		}
