@@ -24,7 +24,10 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 		flying = true;
 
 		level = Dungeon.depth;
-		
+
+		loot = new RottenPasty();
+		lootChance = 1;
+
 		IMMUNITIES.add( ToxicGas.class );
 		IMMUNITIES.add( Paralysis.class );
 	}
@@ -51,12 +54,6 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 	@Override
 	public int attackSkill( Char target ) {
 		return 9 + level;
-	}
-	
-	@Override
-	public void die(Object cause) {
-		super.die(cause);
-		Dungeon.level.drop(new RottenPasty(), getPos());
 	}
 
 	@Override
