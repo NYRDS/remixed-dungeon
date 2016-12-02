@@ -43,6 +43,11 @@ public abstract class CustomLevel extends CommonLevel {
 	}
 
 	@Override
+	public boolean isBossLevel() {
+		return mLevelDesc.optBoolean("boss_level",super.isBossLevel());
+	}
+
+	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		if(mDescFile!=null) {
