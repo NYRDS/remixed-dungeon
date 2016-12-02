@@ -88,6 +88,9 @@ public class Chasm {
 		
 		Hero hero = Dungeon.hero;
 		
+		hero.getSprite().setVisible(true);
+		hero.getSprite().alpha(1f);
+
 		hero.getSprite().burst( hero.getSprite().blood(), 10 );
 		Camera.main.shake( 4, 0.2f );
 		

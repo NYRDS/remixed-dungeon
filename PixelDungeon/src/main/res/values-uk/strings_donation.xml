@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF WndDonate CLASS-->
+  <string name="WndDonate_silver">срібло</string>
+  <string name="WndDonate_gold">золото</string>
+  <string name="WndDonate_ruby">рубін</string>
+  <string name="WndDonate_donate">пожертвувати:</string>
+  <string name="WndDonate_notConnected">нема зв\'язку :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - безкоштовний для всіх та завжди таким буде.\n\nОднак, Ви можете допомогти нам зробити гру кращою.\n\nОкрім нашої щирої вдячності, ви отримаєте деякі косметичні вдосконалення.</string>
+  <string name="WndDonate_silverDonate">срібна підтримка</string>
+  <string name="WndDonate_goldDonate">золота підтримка</string>
+  <string name="WndDonate_rubyDonate">рубінова підтримка</string>
+  <string name="WndDonate_silverDonateText">Будь-яке пожертвування допоможе в розробці проекту</string>
+  <string name="WndDonate_goldDonateText">Дякуємо Вам за Вашу підтримку</string>
+  <string name="WndDonate_rubyDonateText">Ваша щедрість допоможе нам далі покращувати Remixed Pixel Dungeon!</string>
+  <string name="WndDonate_silverDonateText2">Також вимикає рекламу та відкриває мисливицю з самого початку.</string>
+  <string name="WndDonate_goldDonateText2">Також відкриває ельфа з самого початку.</string>
+  <string name="WndDonate_rubyDonateText2" />
+  <!--STRINGS OF WndPremiumSettings CLASS-->
+  <string name="WndPremiumSettings_std">стандартний</string>
+  <string name="WndPremiumSettings_silver">срібний</string>
+  <string name="WndPremiumSettings_gold">золотий</string>
+  <string name="WndPremiumSettings_ruby">рубіновий</string>
+  <string name="WndPremiumSettings_chrome">Виберіть матеріал інтерфейсу</string>
+  <string name="WndPremiumSettings_status">Виберіть матеріал панелі статусу</string>
+  <string name="WndPremiumSettings_toolbar">Виберіть матеріал панелі інструментів</string>
+  <string name="WndPremiumSettings_banners">Виберіть матеріал банеру</string>
+  <string name="WndPremiumSettings_notAvailbale">Ця функція поки що не працює</string>
+  <!--STRINGS OF DonateButton CLASS-->
+  <string name="DonateButton_pleaseDonate">будь ласка, підтримайте проект</string>
+  <string name="DonateButton_thanks">Дякуємо за вашу підтримку</string>
+  <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">Не подобається реклама? Зробіть будь-яке пожертвування і вона зникне. Назавжди.</string>
+</resources>

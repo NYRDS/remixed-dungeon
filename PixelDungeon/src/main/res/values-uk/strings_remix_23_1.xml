@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Незнайомець</string>
+  <string name="AzuterronNPC_Gender">masculine</string>
+  <string name="AzuterronNPC_Name_Objective">Незнайомця</string>
+  <string name="AzuterronNPC_Desc">Загадкова фігура огорнута чорним туманом.</string>
+  <string name="AzuterronNPC_Quest_Start">Хм, чому… ох, ти можеш мене бачити, чи не так? Стало бути ти не один з \"них\". Я так бачу ти теж не в захваті від цього засилля монстрів. Знаєш що, якби ти мені допоміг в одні справі, то я стався б тобі в нагоді. Десь тут причаївся _Підступний дух_. Вбий його, та принеси мені його серце. І звичайно ж, якщо забажаєш придбати щось з моїх припасів, звертайся.</string>
+  <string name="AzuterronNPC_Quest_Reminder">Допоможи мені, і я допоможу тобі.</string>
+  <string name="AzuterronNPC_Quest_End">Чудово. Візьми це зілля, впеанений, воно стане тобі в нагоді.</string>
+  <string name="Journal_Azuterron">Незнайомець</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Підступний дух</string>
+  <string name="TreacherousSpirit_Gender">masculine</string>
+  <string name="TreacherousSpirit_Name_Objective">Підступного духа</string>
+  <string name="TreacherousSpirit_Desc">Ця потворна істота виглядає наче жива хмара темряви. Його величезне око пронизає тебе поглядом, посмикуючись від кожного твого руху.</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">дух болю</string>
+  <string name="SpiritOfPain_Gender">masculine</string>
+  <string name="SpiritOfPain_Name_Objective">духу болі</string>
+  <string name="SpiritOfPain_Desc">Уламок живої темряви.</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">підозрілий щур</string>
+  <string name="SuspiciousRat_Gender">masculine</string>
+  <string name="SuspiciousRat_Name_Objective">підозрілого щура</string>
+  <string name="SuspiciousRat_Desc">Щур не така вже і дивина в підземеллі, але як він потрапив настільки глибоко… Ти помічаєш, що його тіло трясе від спазмів під час руху.</string>
+  <string name="SuspiciousRat_Info1">Підозрілого щура люто трясе.</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Фальшивий щур</string>
+  <string name="PseudoRat_Gender">masculine</string>
+  <string name="PseudoRat_Name_Objective">Фальшивого щура</string>
+  <string name="PseudoRat_Desc">Жахлива тварюка, що вирвалася з тіла щура не має нічого спільного, а ні з гризунами, а ні з будь якими іншими тваринами, що траплялися тобі. Величезна паща, всіяна гострими як бритва зубами, займає більшу частину тіла.</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Гнолл-зомбі повстав з мертвих!</string>
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Серце темряви</string>
+  <string name="HeartOfDarkness_Info">Чорне пульсуюче серце Підступного духа.</string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Темна вуаль</string>
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Йог-Джева вбитий</string>
+  <string name="Badges_ShadowLord_Slain">Лорд Тіней вбитий</string>
+  <string name="Badges_SpiderQueen_Slain">Королева Павуків вбита</string>
+</resources>

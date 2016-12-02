@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">Santa hat</string>
+    <string name="SantaHat_Info">Nothing says dungeonmas like red silky hat of Santa the Depth Lord.</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Red nose and antlers</string>
+    <string name="Rudolph_Info">What could be more festive than a glowing red nose?</string>
+
+</resources>
