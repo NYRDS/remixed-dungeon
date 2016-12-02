@@ -194,4 +194,6 @@
         - Some mobs can now be manually set to a certain power level\n
         - \"Albino\" mob is available in mods now\n
         </string>
+        <string name="Welcome_Text_25_5">
+        </string>
 </resources>
