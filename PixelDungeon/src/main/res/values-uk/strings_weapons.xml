@@ -196,7 +196,7 @@
   <string name="ChaosSword_Gender">masculine</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">лук хаосу</string>
-  <string name="ChaosBow_Info">Лук, який викликає жах, напитаний силою Хаосу. Кожна випущена стріла донесе до цілі частинку енергії Хаосу. Але якщо ти промахнешся…</string>
+  <string name="ChaosBow_Info">Лук, який викликає жах, напитаний силою Хаосу. Кожна випущена стріла донесе до цілі частинку енергії Хаосу. Але якщо ти промахнешся...</string>
   <string name="ChaosBow_Gender">masculine</string>
   <!--STRINGS OF ChaosStaff CLASS-->
   <string name="ChaosStaff_Name">посох хаосу</string>
@@ -204,6 +204,6 @@
   <string name="ChaosStaff_Gender">masculine</string>
   <!--STRINGS OF SacrificialSword CLASS-->
   <string name="SacrificialSword_Name">жертвенний меч</string>
-  <string name="SacrificialSword_Info">На перший погляд, цей старий бронзовий меч із патиновими плямами абсолютно безкорисний. Але в середині нього сплять якісь древні, архаїчні сили, здатні перетворити практично кожну істоту в раба без волі. Треба лише знайти спосіб, як їх пробудити…</string>
+  <string name="SacrificialSword_Info">На перший погляд, цей старий бронзовий меч із патиновими плямами абсолютно безкорисний. Але в середині нього сплять якісь древні, архаїчні сили, здатні перетворити практично кожну істоту в раба без волі. Треба лише знайти спосіб, як їх пробудити...</string>
   <string name="SacrificialSword_Gender">masculine</string>
 </resources>

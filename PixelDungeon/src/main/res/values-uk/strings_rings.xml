@@ -63,7 +63,7 @@
   <string name="RingOfThorns_Info">Самий перстень не вкрито шипами, але кожен хто торкнеться його власника відчує на власній шкурі частину нанесеної тобі шкоди. Покращення персні не додасть додаткової користі.</string>
   <!--STRINGS OF RingOfStoneWalking CLASS-->
   <string name="RingOfStoneWalking_Name">Перстень кам\'яної крові</string>
-  <string name="RingOfStoneWalking_Info">Цей перстень виготовлене з міцного каменю, і виглядало би звичайним, якби не крапля рідкої крові, що пульсує, замість каменю. В середині вказівник, що вказує на щось схоже на стіну та розбите серце… Що б це значило?</string>
+  <string name="RingOfStoneWalking_Info">Цей перстень виготовлене з міцного каменю, і виглядало би звичайним, якби не крапля рідкої крові, що пульсує, замість каменю. В середині вказівник, що вказує на щось схоже на стіну та розбите серце... Що б це значило?</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Замуровано в камені. На віки.</string>
   <!--STRINGS OF SpiderCharm CLASS-->
   <string name="SpiderCharm_Name">Павучий оберіг</string>

@@ -17,7 +17,7 @@
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Чорний череп пробудився!</string>
     <string name="BlackSkull_Ressurrect">Чорний череп відродив вмерлого монстра тобі в прислугу!</string>
-    <string name="BlackSkull_Deactivated">Чорний череп знову дрімає…</string>
+    <string name="BlackSkull_Deactivated">Чорний череп знову дрімає...</string>
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Броня з кісток</string>

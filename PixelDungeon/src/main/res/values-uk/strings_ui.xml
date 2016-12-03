@@ -73,5 +73,5 @@
   <string name="WndSaveSlotSelect_SelectSlot">Виберіть слот</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">Виберіть мод</string>
-  <string name="RemixedPixelDungeonApp_sendCrash">Наша гра перервалася…\n Вибачте.\nБудь ласка, надішліть звіт, аби допомогти виправити це.</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Наша гра перервалася...\n Вибачте.\nБудь ласка, надішліть звіт, аби допомогти виправити це.</string>
 </resources>

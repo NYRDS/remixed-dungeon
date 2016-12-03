@@ -19,7 +19,7 @@
 	
 	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">Котячі вушка</string>
-    <string name="NekoEars_Info">Іноді хочеться змити з себе залишки монстрів та бруд, та відчути себе білим та пухнастим… Або ж можна обмежитися гарними котячими вушками.</string>
+    <string name="NekoEars_Info">Іноді хочеться змити з себе залишки монстрів та бруд, та відчути себе білим та пухнастим... Або ж можна обмежитися гарними котячими вушками.</string>
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Кролячі вуха</string>

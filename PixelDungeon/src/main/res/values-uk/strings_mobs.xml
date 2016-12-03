@@ -80,7 +80,7 @@
   <string name="Goo_Name_Objective">Жижу</string>
   <string name="Goo_Desc">Мало що відомо про Жижу. Скоріш за все, це навіть не істота, а згусток каналізаційної субстанції , в якій тільки-но зародилась свідомість. В будь-якому випадку тут не обійшлося без темної магії.</string>
   <string name="Goo_Info1">Жижа нагнічує себе!</string>
-  <string name="Goo_Info2">хлюп… хлюп…</string>
+  <string name="Goo_Info2">хлюп... хлюп...</string>
   <string name="Goo_Info3">ХЛЮП-ХЛЮП!</string>
   <string name="Goo_StaInfo1">!!!</string>
   <!--STRINGS OF King CLASS-->
@@ -89,7 +89,7 @@
   <string name="King_Name_Objective">Царя Дворфів</string>
   <string name="King_Desc">Останній король дворфів мав глибокі пізнання в областях життя та смерті. Він переконав придворну свиту прийняти участь в ритуалі, який обіцяв вічну молодість. В результаті її отримав лише сам король, отримавши армію нежиті в якості бонусу.</string>
   <string name="King_Defense">відбився</string>
-  <string name="King_Info1">Ти не можеш вбити мене, %s… Я… безсмертний…</string>
+  <string name="King_Info1">Ти не можеш вбити мене, %s... Я... безсмертний...</string>
   <string name="King_Info2">Відродіться, слуги!</string>
   <string name="King_Info3">Як ти наважився!</string>
   <string name="Undead_Name">дворф-нежить</string>
@@ -144,7 +144,7 @@
   <string name="Shaman_Gender">masculine</string>
   <string name="Shaman_Name_Objective">гнолла шамана</string>
   <string name="Shaman_Desc">Найрозумніші з гноллів здатні пізнати магію шаманів. Гнолли шамани залюбки користується будь-якими закляттями, компенсуючи брак фізичної сили, а також аби убезпечити свій статус в суспільстві.</string>
-  <string name="Shaman_Killed">%s вбиває тебе розрядом блискавки…</string>
+  <string name="Shaman_Killed">%s вбиває тебе розрядом блискавки...</string>
   <!--STRINGS OF Shielded CLASS-->
   <string name="Shielded_Name">громила-щитовик</string>
   <string name="Shielded_Gender">masculine</string>
@@ -157,7 +157,7 @@
   <string name="Skeleton_Name_Objective">скелета</string>
   <string name="Skeleton_Desc">Скелети - це залишки загиблих мандрівників, які повстали під дією відгуків зловісної магії з глибин підземелля. Через те, що вони вже і так понівечені, вони можуть розлетітися на гострі уламки.</string>
   <string name="Skeleton_Defense">прикрився</string>
-  <string name="Skeleton_Killed">Тебе пробило кістяним уламком…</string>
+  <string name="Skeleton_Killed">Тебе пробило кістяним уламком...</string>
   <!--STRINGS OF Spinner CLASS-->
   <string name="Spinner_Name">печерний павук</string>
   <string name="Spinner_Gender">masculine</string>
@@ -184,7 +184,7 @@
   <string name="Tengu_Gender">masculine</string>
   <string name="Tengu_Name_Objective">Тенгу</string>
   <string name="Tengu_Desc">Тенгу - члени древнього клану вбивць. Вони відомі своїм уподобанням до пасток та сюрикенів.</string>
-  <string name="Tengu_Info1">Нарешті, свобода…</string>
+  <string name="Tengu_Info1">Нарешті, свобода...</string>
   <string name="Tengu_Info2">Попався, %s!</string>
   <!--STRINGS OF Thief CLASS-->
   <string name="Thief_Name">божевільний злодій</string>
@@ -198,7 +198,7 @@
   <string name="Warlock_Gender">masculine</string>
   <string name="Warlock_Name_Objective">дворфа-чорнокнижника</string>
   <string name="Warlock_Desc">Коли інтерес дворфів перескочив з технології на магію, чорнокнижника стали новою елітою. Почавши з магії стихій, вони перейшли на некромантію та демонологію.</string>
-  <string name="Warlock_Killed">%s знищує тебе стрілою тіней…</string>
+  <string name="Warlock_Killed">%s знищує тебе стрілою тіней...</string>
   <!--STRINGS OF Wraith CLASS-->
   <string name="Wraith_Name">фантом</string>
   <string name="Wraith_Gender">masculine</string>
@@ -211,7 +211,7 @@
   <string name="Yog_Name_Objective">Йог-Джеву</string>
   <string name="Yog_Desc">Йог-Джева - старий бог, могутня сутність зі світу Хаосу. В давні часи древні дворфи ледь подолали його армію демонів, але вбити самого бога їм не вдалося. Вони заточили його глибині свого міста, переконані, що він занадто слабий, аби вирватися на волю.</string>
   <string name="Yog_Info1">...</string>
-  <string name="Yog_Info2">Сподіваюсь, мені це приввидилось…</string>
+  <string name="Yog_Info2">Сподіваюсь, мені це привидилось...</string>
   <string name="RottingFist_Name">гнійний кулак</string>
   <string name="RottingFist_Gender">masculine</string>
   <string name="RottingFist_Name_Objective">гнійного кулака</string>

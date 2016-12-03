@@ -24,7 +24,7 @@
   <string name="MysteryMeat_Info2">Ти не відчуваєш своїх ніг!</string>
   <string name="MysteryMeat_Info3">Ти почуваєш себе не дуже добре.</string>
   <string name="MysteryMeat_Info4">Ти об\'ївся.</string>
-  <string name="MysteryMeat_Message">Ця їжа на смак… дивна.</string>
+  <string name="MysteryMeat_Message">Ця їжа на смак... дивна.</string>
   <!--STRINGS OF RottenFood CLASS-->
   <string name="RottenFood_Message">бридота!</string>
   <!--STRINGS OF RottenMeat CLASS-->
