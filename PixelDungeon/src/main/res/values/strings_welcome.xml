@@ -195,5 +195,10 @@
         - \"Albino\" mob is available in mods now\n
         </string>
         <string name="Welcome_Text_25_5">
+        remix.25.5:\n
+        - Fixed bug that was causing hero sprite to disappear if player were to blink into a chasm\n
+        - Menu button is now has highest priority in game interface, so that players are able to access GUI settings even if GUI scale was set to high\n
+        - Updated translations (+ added Ukrainian language)\n
+        - Updated language select menu\n
         </string>
 </resources>
