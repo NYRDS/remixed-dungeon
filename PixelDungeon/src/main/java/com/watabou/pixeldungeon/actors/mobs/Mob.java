@@ -224,7 +224,7 @@ public abstract class Mob extends Char {
 				return new MobSpriteDef((String) spriteClass, getKind());
 			}
 
-			throw new TrackedRuntimeException(String.format("sprite creation failed - sprite class: %s, mob class %s", spriteClass.getClass().getCanonicalName(), getClass().getCanonicalName()));
+			throw new TrackedRuntimeException(String.format("sprite creation failed - mob class %s", getClass().getCanonicalName()));
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);

@@ -156,15 +156,16 @@ public abstract class RegularLevel extends CustomLevel {
 	private void buildPath(Room from, Room to) {
 		Graph.buildDistanceMap(rooms, to);
 		List<Room> path = Graph.buildPath(from, to);
-
-		Room room = from;
-		for (Room next : path) {
-			if(!room.isRoomIsolatedFrom(to)) {
-				break;
+		if(path!=null) {
+			Room room = from;
+			for (Room next : path) {
+				if (!room.isRoomIsolatedFrom(to)) {
+					break;
+				}
+				room.price(room.price()*2);
+				room.connect(next);
+				room = next;
 			}
-			room.price(room.price() + 1);
-			room.connect(next);
-			room = next;
 		}
 	}
 
