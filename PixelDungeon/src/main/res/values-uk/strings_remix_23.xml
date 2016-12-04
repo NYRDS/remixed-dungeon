@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">Посохлий чагарник</string>
+  <string name="Guts_TileHighGrass">Високий посохлий чагарник</string>
+  <string name="Guts_TileWater">Дивна слизька рідина</string>
+  <string name="Guts_TileDescEntrance">Дірка в стелі веде до верхніх рівнів</string>
+  <string name="Guts_TileDescExit">Дірка в підлозі веде до нижніх рівнів</string>
+  <string name="Guts_TileDescDeco">Схоже, що ця стіна була... поранена</string>
+  <string name="Guts_TileDescBookshelf">Цю книжкову полицю вкрито павутинням порослі із плоті, не видно жодної книги, яку б можна було б взяти</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Знівеченого, розбитого на шматки, але все ж таки остаточно не знищеного Старого Бога було запечатано в глибинах підземелля. Але нещодавно печатку було зірвано, відкривши цим прохід до кубла демонів. Жахливі монстри, породження сновидінь Старого Бога, були настільки численні, що були змушені злитися воєдино, утворивши ці ґротескні зали. І з кожним кроком, ступаючи по їхній живій плоті, ти відчуваєш, як в них пульсує серце Старого Бога.</string>
+  <!--Mob descriptions-->
+  <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">мімік</string>
+  <string name="MimicAmulet_Gender">masculine</string>
+  <string name="MimicAmulet_Name_Objective">міміка</string>
+  <string name="MimicAmulet_Desc">Найславетніший момент твоєї пригоди щойно обернувся пасткою.</string>
+  <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">сонна мара</string>
+  <string name="Nightmare_Gender">femenine</string>
+  <string name="Nightmare_Name_Objective">сонна мара</string>
+  <string name="Nightmare_Desc">Гротескна істота, у вигляді вусиків з плоті, що безперестану смикаються. Сонна мара є втіленням зловісних думок Старого Бога.</string>
+  <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">Попався, %s!</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">гнолл-зомбі</string>
+  <string name="ZombieGnoll_Gender">masculine</string>
+  <string name="ZombieGnoll_Name_Objective">гнолла-зомбі</string>
+  <string name="ZombieGnoll_Desc">Спотворене, зламане тіло зомбі-гнолла більше не нагадує а ні гієну, а ні гуманоїда. Все, що залишилося, це купа гнилої плоті та кісток, сповнена жагою вбивати та пожирати.</string>
+  <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">черв</string>
+  <string name="Worm_Gender">masculine</string>
+  <string name="Worm_Name_Objective">черва</string>
+  <string name="Worm_Desc">Навіть частково схованим під підлогою, черв видається гігантським. Його тіло покрито залишками згнилої плоті, обмащеною слизом. Здоровенні щелепи чудовиська недвозначно натякають на те, яким чином він пересувається під поверхнею.</string>
+  <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">мозок Йога</string>
+  <string name="YogsBrain_Gender">masculine</string>
+  <string name="YogsBrain_Name_Objective">мозок Йога</string>
+  <string name="YogsBrain_Desc">Мозок Йога-Джеви. Джерело всього зла, що колись виникало у підземеллі.</string>
+  <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">око Йога</string>
+  <string name="YogsEye_Gender">masculine</string>
+  <string name="YogsEye_Name_Objective">око Йога</string>
+  <string name="YogsEye_Desc">Око всевидяче Старого Бога, сповнене вічною ненавистю. Ти можеш відчути, як воно дивиться прямо крізь твою душу.</string>
+  <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">серце Йога</string>
+  <string name="YogsHeart_Gender">neuter</string>
+  <string name="YogsHeart_Name_Objective">серце Йога</string>
+  <string name="YogsHeart_Desc">На протязі багатьох століть люди вірили, що лише безсердечні здатні на справжні злі  вчинки. І все ж ти бачиш перед собою величезне серце Старого Бога, що бється.</string>
+  <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">щелепа Йога</string>
+  <string name="YogsTeeth_Gender">femenine</string>
+  <string name="YogsTeeth_Name_Objective">щелепа Йога</string>
+  <string name="YogsTeeth_Desc">Велетенська щелепа Старого Бога, сповнена гострими як бритва зубами. Досить вдале втілення його прагнення до руйнування та поглинання всього живого.</string>
+</resources>

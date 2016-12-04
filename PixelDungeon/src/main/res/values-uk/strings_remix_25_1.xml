@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">Ти не можеш зійти з обраного шляху!</string>
+
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">Жнець душ</string>
+    <string name="BlackSkullOfMastery_Info">Це древній артефакт, створений першими некромантами для збирання душ пропащих. Потужне захисне закляття зреагувало на твої магічні здібності та заблокувало сили артефакту. Проте не дивлячись на силу, враховуючи вік, сама структура закляття досить примітивна, її не дуже складно зламати.</string>
+    <string name="BlackSkullOfMastery_Title">Ти можеш зруйнувати закляття. Або можеш змінити магічну формулу таким чином, що зможеш поглинути силу закляття так і самого черепа, перетворивши себе на ліча.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Стати лічем</string>
+    <string name="BlackSkullOfMastery_Necromancer">Зруйнувати закляття</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">_Ліч_ - це некромант, який дістався вершини своєї майстерності. Існуючи між життям та смертю він володіє неймовірними здібностями до некромантії, але бойові навички значно поступаються звичайній людині.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Але, якщо ти _зруйнуєш закляття_, то зможеш використати цей артефакт за призначенням.</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Чорний череп пробудився!</string>
+    <string name="BlackSkull_Ressurrect">Чорний череп відродив вмерлого монстра тобі в прислугу!</string>
+    <string name="BlackSkull_Deactivated">Чорний череп знову дрімає...</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Броня з кісток</string>
+    <string name="NecromancerArmor_Info">Ця броня дозволяє некроманту викликати до 2х смертликів, ціною в 5 душ за кожного. Ця нежить-прислужники будуть йти за своїм володарем і атакувати його ворогів. Смертлики стають сильнішими з кожним рівнем героя.</string>
+    <string name="NecromancerArmor_NotNecromancer">Лише некроманти можуть використовувати цю броню!</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">роба некроманта</string>
+    <string name="NecromancerRobe_Info">Ця роба дозволяє прикликати смертлика ціною в 5 душ. Смертлик - нежить-прислужник, який стає сильнішим разом зі своїм хазяїном.</string>
+
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">некромант</string>
+
+    <string name="HeroSubClass_NameLich">ліч</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Некромант починає з 15 одиницями здоров\'я.</item>
+        <item>Некроматни володіють унікальним ресурсом \"душі\", які вони використовують на закляття. Смерть кожного монстра надає 1 душу.</item>
+        <item>Некроманти починають з унікальною робою некроманта.</item>
+        <item>Некроманти мають на початку ключ-череп від рівня 7.</item>
+        <item>Зілля лікування ідентифіковані з самого початку.</item>
+    </string-array>
+
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">смертлик</string>
+    <string name="Deathling_Gender">masculine</string>
+    <string name="Deathling_Name_Objective">смертлика</string>
+    <string name="Deathling_Desc">Смертлик - душа мертвого героя, якому не поталанило бути прикликаним своїм колегою шукачем пригод, який практикує некромантію.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Кількість прислужників, яких ти можеш контролювати цим предметом, обмежена: %1$d!</string>
+    <string name="Necromancy_NotEnoughSouls">Не достатньо душ для виклику закляття \"%1$s\".</string>
+
+    <string name="Necromancy_SoulsCountLabel">Душі</string>
+
+    <string name="Necromancer_ACSpecial">НЕКРОМАНТІЯ</string>
+    <string name="Necromancy_ReincarnationName">Реінкарнація</string>
+    <string name="Necromancy_ReincarnationTriggered">Твоя могутність не признає смерть! Але ти втратив всі свої речі та душі.</string>
+    <string name="Necromancy_SummonDeathlingName">Прикликати смертлика</string>
+
+    <string name="Necromancy_BecameALich">Ти став лічем! Твоя могутність зросла і тепер ти можеш вміщувати в два рази більше душ! Але ти втратив %1$d одиниць сили.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">Щоб відкрити цей клас персонажа, убийте ліча будь-яким іншим класом.</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Некромантія</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">\"Над цим привидом висить прокляття. Здається він хоче про щось мене попрохати. З допомогою некромантії я можу переконати його, що прохання виконано. Це зекономить мені час. Але чи варто так робити?\"</string>
+    <string name="WndSadGhostNecro_Yes">Так, підкорити його волю.</string>
+    <string name="WndSadGhostNecro_No">Ні, нехай говорить.</string>
+    <string name="WndSadGhostNecro_Persuaded">Сумного привида підкорено!</string>
+
+    <!-- Badges -->
+
+    <string name="WndSettings_UiScale">Масштаб інтерфейсу</string>
+</resources>

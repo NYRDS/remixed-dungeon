@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/Wands-->
+  <!--STRINGS OF Wand CLASS-->
+  <string name="Wand_Name">паличку %s</string>
+  <string name="Wand_ACZap">ВИСТРЕЛИТИ</string>
+  <string name="Wand_Wood">Ця тоненька паличка %s тепла на дотик. Хто знає, що трапиться, якщо махнути нею.</string>
+  <string name="Wand_Damage">Під час ближнього бою ця паличка нанесе %d одиниць шкоди.</string>
+  <string name="Wand_Weapon">Ти не можеш використовувати цю паличку в якості зброї ближнього бою.</string>
+  <string name="Wand_Fizzles">твоя паличка потріскує; схоже закінчився магічний заряд</string>
+  <string name="Wand_SelfTarget">Ти не можеш поцілити в себе</string>
+  <string name="Wand_Prompt">Обери напрям для пострілу</string>
+  <string-array name="Wand_Wood_Types">
+    <item>з гостролисту</item>
+    <item>з тису</item>
+    <item>з ебоніту</item>
+    <item>з вишні</item>
+    <item>з тика</item>
+    <item>з горобини</item>
+    <item>з верби</item>
+    <item>з червоного дерева</item>
+    <item>з бамбука</item>
+    <item>з амаранта</item>
+    <item>з дуба</item>
+    <item>з берези</item>
+  </string-array>
+  <!--STRINGS OF WandOfAmok CLASS-->
+  <string name="WandOfAmok_Name">Паличка шаленості</string>
+  <string name="WandOfAmok_Info">Багрове світло з палички вимушує вказану істоту вести себе несамовито, без розбору нападаючи на всіх істот довкола.</string>
+  <string name="WandOfAmok_Info1">нічого не трапилося</string>
+  <!--STRINGS OF WandOfAvalanche CLASS-->
+  <string name="WandOfAvalanche_Name">Паличка обвалу</string>
+  <string name="WandOfAvalanche_Info">Коли розряд палички вдаряє в стіну (чи іншу тверду перепону), він викликає обвал, який наносить значну шкоду по навколишнім ворогам та приголомшуючи їх.</string>
+  <string name="WandOfAvalanche_Info1">Ти вбився власною паличкою обвалу...</string>
+  <!--STRINGS OF WandOfBlink CLASS-->
+  <string name="WandOfBlink_Name">Паличка стрибку</string>
+  <string name="WandOfBlink_Info">Паличка дозволить тобі пересуватися в просторі. Істоти та неживі предмети будуть заважати перенесенню.</string>
+  <!--STRINGS OF WandOfDisintegration CLASS-->
+  <string name="WandOfDisintegration_Name">Паличка дезінтиграції</string>
+  <string name="WandOfDisintegration_Info">Ця паличка генерує руйнівний промінь енергії, який проникає крізь всіх істот на своєму шляху. Чим більше цілей він пройде, тим більше шкоди завдасть кожній з них.</string>
+  <!--STRINGS OF WandOfFirebolt CLASS-->
+  <string name="WandOfFirebolt_Name">Паличка вогнеплюй</string>
+  <string name="WandOfFirebolt_Info">Паличка випускає згусток чарівного полум\'я, який здатний підпалити що-небудь, а також завдати шкоду ворогу, підпаливши його.</string>
+  <string name="WandOfFirebolt_Info1">Ти спалив сам себе своєю ж паличкою...</string>
+  <!--STRINGS OF WandOfFlock CLASS-->
+  <string name="WandOfFlock_Name">Паличка отари</string>
+  <string name="WandOfFlock_Info">Паличка прикликає отару овець, які утворюють тимчасову перешкоду, яку неможливо подолати.</string>
+  <string name="Sheep_Name">вівця</string>
+  <string name="Sheep_Name_Objective">вівцю</string>
+  <string name="Sheep_Gender">feminine</string>
+  <string name="Sheep_Desc">Це магічна вівця. Що такого магічного? Ти не можеш її вбити. Вона стоятиме на місці та сумлінно щось жувати, аж доки магічним образом не зникне.</string>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>Беее!</item>
+    <item>Беее?</item>
+    <item>Бе.</item>
+    <item>Бее...</item>
+    <item>Бе...</item>
+    <item>Бвее...</item>
+  </string-array>
+  <!--STRINGS OF WandOfLightning CLASS-->
+  <string name="WandOfLightning_Name">Паличка блискавки</string>
+  <string name="WandOfLightning_Info">Ця паличка випускає розряд блискавки який вдаряє кілька цілей, що стоять поруч.</string>
+  <string name="WandOfLightning_Info1">Тебе спалило твоєю ж паличкою блискавки...</string>
+  <!--STRINGS OF WandOfMagicMissile CLASS-->
+  <string name="WandOfMagicMissile_Name">Паличка магічних снарядів</string>
+  <string name="WandOfMagicMissile_Info">Паличка випускає розряд магічної енергії, що наносить середню шкоду.</string>
+  <string name="WandOfMagicMissile_ACDisenchant">РОЗЧАРУВАТИ</string>
+  <string name="WandOfMagicMissile_Info1">Ти вбив сам себе своєю паличкою магічних снарядів...</string>
+  <string name="WandOfMagicMissile_SelectWand">Обери паличку для покращення</string>
+  <string name="WandOfMagicMissile_Desinchanted">ти розчарував паличку магічних снарядів та використав для оновлення предмету %s</string>
+  <!--STRINGS OF WandOfPoison CLASS-->
+  <string name="WandOfPoison_Name">Паличка отрути</string>
+  <string name="WandOfPoison_Info">Цей міцний кусень деревини випускає згусток отрути, що отруює ціль. Отруєна істота отримує періодичну шкоду на протязі дії ефекту. Час дії залежить від сили палички.</string>
+  <string name="WandOfPoison_Info1">нічого не трапилося</string>
+  <!--STRINGS OF WandOfRegrowth CLASS-->
+  <string name="WandOfRegrowth_Name">Паличка росту</string>
+  <string name="WandOfRegrowth_Info">\"Коли обривається життя, нове починає зростати... Безкінечний цикл не перервати!\"</string>
+  <string name="WandOfRegrowth_Info1">нічого не трапилося</string>
+  <!--STRINGS OF WandOfSlowness CLASS-->
+  <string name="WandOfSlowness_Name">Паличка сповільнення</string>
+  <string name="WandOfSlowness_Info">Паличка накладає тимчасовий ефект, сповільнюючи ціль та швидкість атаки.</string>
+  <string name="WandOfSlowness_Info1">нічого не трапилося</string>
+  <!--STRINGS OF WandOfTelekinesis CLASS-->
+  <string name="WandOfTelekinesis_Name">Паличка телекінезу</string>
+  <string name="WandOfTelekinesis_Info">Хвиля магічної сили взаємодіє з усім, що трапиться на її шляху, розряджаючи пастки, зминаючи рослини, відкриваючи чи закриваючи двері. А також відштовхне перешкоду чи монстра.</string>
+  <string name="WandOfTelekinesis_YouNowHave">Ти магічним образом перемістив %s в свій рюкзак</string>
+  <!--STRINGS OF WandOfTeleportation CLASS-->
+  <string name="WandOfTeleportation_Name">Паличка перенесення</string>
+  <string name="WandOfTeleportation_Info">Постріл з цієї палички може перенести вказану істоту у випадкове місце цього рівня, хоче воно того чи ні.</string>
+  <string name="WandOfTeleportation_Info1">%1$s кудись переносить %2$s</string>
+  <string name="WandOfTeleportation_Info2">нічого не трапилося</string>
+</resources>

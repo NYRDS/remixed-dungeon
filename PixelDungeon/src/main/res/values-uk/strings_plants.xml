@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE pixeldungeon/plants-->
+  <!--STRINGS OF Plant CLASS-->
+  <string name="Plant_ACPlant">Рослина</string>
+  <string name="Plant_Info">Кинь насінину туди, де хочеш виростити %1$s.\n\n%2$s</string>
+  <string name="Plant_Seed">насінину рослини %s</string>
+  <!--STRINGS OF Dreamweed CLASS-->
+  <string name="Dreamweed_Name">Дурман</string>
+  <string name="Dreamweed_Desc">Доторк до Дурману випускає хмару спантеличуючого газу</string>
+  <!--STRINGS OF Earthroot CLASS-->
+  <string name="Earthroot_Name">Дубокорінь</string>
+  <string name="Earthroot_Desc">Кожного, хто торкнеться Дубокореня, оповиває природний захист.</string>
+  <string name="Earthroot_Buff">Природний захист</string>
+  <!--STRINGS OF Fadeleaf CLASS-->
+  <string name="Fadeleaf_Name">Порталець</string>
+  <string name="Fadeleaf_Desc">Доторк до Портальця перенесе тебе у випадкове місце цього рівня</string>
+  <!--STRINGS OF Firebloom CLASS-->
+  <string name="Firebloom_Name">Драконка</string>
+  <string name="Firebloom_Desc">Кожен, хто торкнеться Драконки, загориться.</string>
+  <!--STRINGS OF Icecap CLASS-->
+  <string name="Icecap_Name">Льодовик</string>
+  <string name="Icecap_Desc">Доторк до Льодовика змушує його випускати пилок, який заморожує все довкола.</string>
+  <!--STRINGS OF Sorrowmoss CLASS-->
+  <string name="Sorrowmoss_Name">Моховик</string>
+  <string name="Sorrowmoss_Desc">Моховик - це трава, (а не гриб) з гострим отруйним листям.</string>
+  <!--STRINGS OF Sungrass CLASS-->
+  <string name="Sungrass_Name">Сонях</string>
+  <string name="Sungrass_Desc">Сонях славиться своїми лікувальними властивостями.</string>
+  <string name="Sungrass_Buff">Природне зцілення</string>
+</resources>

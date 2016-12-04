@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">Remixed Pixel Dungeon</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">Багато шукачів пригод та мандрівників спускалися у підземелля до тебе. Деякі поверталися, наділені незліченими багатствами й чарівними артефактами, але більшість даремно загинула. Але нікому не вдалося здобути Амулет Ендора, за легендами, прихований у глибинах підземелля.\n\nТи відчуваєш, що готовый до цього іспиту та й, що досить важливо, ти віриш, що удача на твоєму боці. Настав час почати свою пригоду!</string>
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Exit">Мою справу тут зроблено.</string>
+  <string name="AmuletScene_Stay">Я, мабуть, ще оглянуся навокло.</string>
+  <string name="AmuletScene_Txt">Нарешті він у твоїх руках, Амулет Йендора. Ти отримаєш могутність, яка дозволить підкорити всіх і вся, чи подаруєш людству мир та процвітання, чи щось схоже на це. У будь-якому разі, твоє життя зміниться назавжди, а гра на цьому закінчиться. З іншого боку, ти маєш можливість ще трохи побути жалюгідним смертним.</string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Ласкаво просимо на %d рівень Pixel Dungeon!</string>
+  <string name="GameScene_WelcomeBack">З поверненням на %d рівень Pixel Dungeon!</string>
+  <string name="GameScene_NightMode">Будь напоготові, адже вночі підземелля набагато небезпечніше!</string>
+  <string name="GameScene_Chasm">Кожний твій крок лунає по всьому підземеллю.</string>
+  <string name="GameScene_Water">Ти чуєш плескіт води поблизу.</string>
+  <string name="GameScene_Grass">У повітрі відчуавється запах рослин.</string>
+  <string name="GameScene_Secrets">Атмосфера таємничності огортає цей поверх, він сповнений таємниць.</string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">монстр</string>
+  <string name="Char_Name_Objective">монстра</string>
+  <string-array name="Char_Hit">
+    <item>%1$s вдарило %2$s</item>
+    <item>%1$s вдарив %2$s</item>
+    <item>%1$s вдарила %2$s</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s вбило тебе</item>
+    <item>%s вбив тебе</item>
+    <item>%s вбила тебе </item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s здолало %2$s</item>
+    <item>%1$s здолав %2$s</item>
+    <item>%1$s здолала %2$s</item>
+  </string-array>
+  <string name="Char_YouMissed">%1$s %2$s від твоєї атаки</string>
+  <string name="Char_SmbMissed">%1$s %2$s від атаки монстра %3$s</string>
+  <string name="Char_OutParalysis">Біль звільняє %s від паралічу</string>
+  <string-array name="Char_StaDodged">
+    <item>ухилилося</item>
+    <item>ухилився</item>
+    <item>ухилилася</item>
+  </string-array>
+  <string name="Char_StaPoisoned">отруєний</string>
+  <string name="Char_StaAmok">буяє</string>
+  <string name="Char_StaSlowed">сповільнений</string>
+  <string name="Char_StaMind">ясно</string>
+  <string name="Char_StaVision">бачення</string>
+  <string name="Char_StaParalysed">паралізований</string>
+  <string name="Char_StaFrightened">зляканий</string>
+  <string name="Char_StaRooted">пустив коріння</string>
+  <string name="Char_StaCrippled">травмований</string>
+  <string name="Char_StaBleeding">кровотеча</string>
+  <string name="Char_StaDizzy">приголомшений</string>
+  <string name="Char_StaInvisible">невидимий</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">Текст нерозбірливий...</string>
+  <string name="Dungeon_DeadEnd">Що ти тут робиш?!</string>
+  <string-array name="Dungeon_Tips">
+    <item>Не будь самовпевненим, використовуй доступні для тебе зброю та обладунки.</item>
+    <item>Не всі двері в підземеллі помітні з першого разу. Якщо ти не знаєш куди йти, спробуй пошукати приховані двері.</item>
+    <item>Пам\'ятай, що підвищення сили - це не єдиний шлях використовувати краще спорядження, ти може піти іншим шляхом, за допомогою сувоїв покращення зменшувати вимоги предметів до сили.</item>
+    <item>Золото можна витрачати в магазинах, розташованих в глибині підземелля. Перший ти знайдеш на рівні 6.</item>
+    <item>Стережись Жижі!</item>
+    <item>Pixel-Mart - все що тобі потрібно для вдалої пригоди!</item>
+    <item>Ідентифікуй сувої та зілля якомога раніше. Не відкладай до того моменту, коли вони тобі знадобляться.</item>
+    <item>Голод не наносить шкоди, що не скажеш про виснаження.</item>
+    <item>Несподівана атака має більшу влучність. Наприклад, ти можеш зачекати ворога за зачиненими дверима, маючи впевненість, що він наближається.</item>
+    <item>Не випускай Тенгу!</item>
+    <item>Pixel-Mart. Більше витратиш. Довше проживеш.</item>
+    <item>Коли на тебе нападають декілька монстрів, спробуй відступити за двері.</item>
+    <item>Якщо тебе підпалять, доки ти в повітрі в стані левітації, ти не зможеш увійти у воду, аби погасити багаття.</item>
+    <item>Немає сенсу тримати при собі більше одного Анкху, вони всі зникнуть при воскресінні.</item>
+    <item>НЕБЕЗПЕКА! Тяжка техніка може бути причиною нанесення травм, втрати кінцівок та смерті!</item>
+    <item>Pixel-Mart. Зроби безпечніше своє життя в підземеллі.</item>
+    <item>При покращені зачарованої зброї є шанс, що воно лишитися чарів.</item>
+    <item>Колодязь трансмутації допоможе отримати предмет, який іншим чином ніяк не дістати.</item>
+    <item>Є лише один спосіб зачарувати зброю, і це сувій покращення зброї.</item>
+    <item>В присутності Його Величності неприпустимо носіння зброї!</item>
+    <item>Pixel-Mart. Спеціальні знижки для мисливців на демонів!</item>
+    <item>Цей текст написано не мові демонів.</item>
+    <item>Цей текст написано не мові демонів.</item>
+    <item>Цей текст написано не мові демонів.</item>
+  </string-array>
+  <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>На дієті</item>
+    <item>Віра замінить мені обладунки</item>
+    <item>Ніяких ліків!</item>
+    <item>Пустеля</item>
+    <item>Колективний розум</item>
+    <item>У темряві</item>
+  </string-array>
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_WellHealt">Колодязь зцілення</string>
+  <string name="Journal_WellAwareness">Колодязь обізнаності</string>
+  <string name="Journal_WellTransmut">Колодязь трансмутації</string>
+  <string name="Journal_Alchemy">Алхімічний казан</string>
+  <string name="Journal_Garden">Сад</string>
+  <string name="Journal_Statue">Ожила статуя</string>
+  <string name="Journal_Ghost">Сумний привид</string>
+  <string name="Journal_Wandmaker">Старий майстер</string>
+  <string name="Journal_Troll">Троль-коваль</string>
+  <string name="Journal_Imp">Амбітний біс</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Prompt">Гаразд, угода є угода, розклад такій: я перекую тобі 2 речі у одну, але кращу за якістю.</string>
+  <string name="WndBlacksmith_Select">Обери предмет для кування</string>
+  <string name="WndBlacksmith_Reforge">Перекувати</string>
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">Зілля</string>
+  <string name="WndCatalogus_Scrolls">Сувої</string>
+  <string name="WndCatalogus_Title">Каталог</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <string name="WndChallenges_Title">Випробування</string>
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">Яким шляхом підеш?</string>
+  <string name="WndChooseWay_Cancel">Вирішу пізніше</string>
+  <!--STRINGS OF WndClass CLASS-->
+  <string name="WndClass_Mastery">Майстерність</string>
+  <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">ПОМИЛКА</string>
+  <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">Налаштування</string>
+  <string name="WndGame_Challenges">Випробування</string>
+  <string name="WndGame_Ranking">Рекорди</string>
+  <string name="WndGame_Start">Почати нову гру</string>
+  <string name="WndGame_menu">Головне меню</string>
+  <string name="WndGame_Exit">Вийти з Pixel Dungeon</string>
+  <string name="WndGame_Return">Повернутися до гри</string>
+  <string name="WndGame_Save">Зберегти</string>
+  <string name="WndGame_Load">Завантажити</string>
+  <!--STRINGS OF WndHero CLASS-->
+  <string name="WndHero_Stats">Параметри</string>
+  <string name="WndHero_Buffs">Ефєкти</string>
+  <string name="WndHero_Exp">Досвід</string>
+  <string name="WndHero_Str">Сила</string>
+  <string name="WndHero_Health">Здоров\'я</string>
+  <string name="WndHero_Gold">Зібрано золота</string>
+  <string name="WndHero_Depth">Бував на глибині</string>
+  <string name="WndHero_StaTitle">Рівень %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">Каталог</string>
+  <string name="WndHero_StaJournal">Журнал</string>
+  <!--STRINGS OF WndImp CLASS-->
+  <string name="WndImp_Message">О, так! Ти мій герой!\nЩодо нагороди, готівки я при собі не маю, але я можу запропонувати дещо краще. Цей перстень - моя сімейна реліквія: мій дідусь зняв його з пальця мертвого паладина.</string>
+  <string name="WndImp_Reward">Узяти перстень</string>
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <string name="WndInfoCell_Nothing">Тут нічого нема.</string>
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">Скриня</string>
+  <string name="WndInfoItem_LockedChest">Замкнена скриня</string>
+  <string name="WndInfoItem_CrystalChest">Кришталева скриня</string>
+  <string name="WndInfoItem_Tomb">Гробниця</string>
+  <string name="WndInfoItem_Skeleton">Рештки скелета</string>
+  <string name="WndInfoItem_WontKnow">Ти не дізнаєшся, що всередині, доки не відкриєш!</string>
+  <string name="WndInfoItem_NeedKey">Але, щоб відкрити, тобі знадобится золотий ключ.</string>
+  <string name="WndInfoItem_Inside">У середині ти бачиш предмет %s, але, щоб відкрити скриню, знадобится золотий ключ.</string>
+  <string name="WndInfoItem_Owner">У  цій старовинній гробниці може бути щось корисне, але власник навряд чи оцінить твій ентузіазм.</string>
+  <string name="WndInfoItem_Remains">Це усе що залишилося від твого попередника. Мабуть, варто обшукати на предмет цінностей.</string>
+  <!--STRINGS OF WndJournal CLASS-->
+  <string name="WndJournal_Title">Журнал</string>
+  <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Error">Не вдалося завантажити додаткову інформацію.</string>
+  <string name="WndRanking_Stats">Герой</string>
+  <string name="WndRanking_Items">Речі</string>
+  <string name="WndRanking_Badges">Значки</string>
+  <string name="WndRanking_StaTitle">Рівень %1$d %2$s</string>
+  <string name="WndRanking_StaChallenges">Випробування</string>
+  <string name="WndRanking_StaHealth">Здоров\'я</string>
+  <string name="WndRanking_StaStr">Сила</string>
+  <string name="WndRanking_StaDuration">Рухів зроблено</string>
+  <string name="WndRanking_StaDepth">Максимальна глибина</string>
+  <string name="WndRanking_StaEnemies">Вбито монстрів</string>
+  <string name="WndRanking_StaGold">Золота зібрано</string>
+  <string name="WndRanking_StaFood">Їжі вжито</string>
+  <string name="WndRanking_StaAlchemy">Приготовлено зілля</string>
+  <string name="WndRanking_StaAnkhs">Анкхів використано</string>
+  <!--STRINGS OF WndResurrect CLASS-->
+  <string name="WndResurrect_Message">Ти загинув, але тобі дарований ще один шанс підкорити підземелля.
+Чи скористаєшся ти їм?</string>
+  <string name="WndResurrect_Yes">Так, я продовжу боротися!</string>
+  <string name="WndResurrect_No">Ні, я здаюся</string>
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <string name="WndSadGhost_Rose">Так! Так!!! Те, що треба! Будь ласка, віддай її мені! І можеш узяти одну з цих речей, вони можуть тобі знадобитися...</string>
+  <string name="WndSadGhost_Rat">Так! Бридке створення загинуло, і я можу спочити з миром... Будь ласка, візьми будь яку з цих речей, вони можуть тобі знадобитися...</string>
+  <string name="WndSadGhost_Wepon">Зброя привида</string>
+  <string name="WndSadGhost_Armor">Обладунки привида</string>
+  <string name="WndSadGhost_Farewell">Прощавай, шукач пригод!</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Sewers">Підземелля розташовано точно під містом, верхні поверхи фактично є його каналізацією. Будучи, умовно, частиною міста, ці поверхи не настільки небезпечні. Звичайно, безпечними їх теж не назвеш, але принаймні тут можна не боятися темної магії.</string>
+  <string name="WndStory_Prision">Багато років тому на цьому місці звели підземну в\'язницю для утримання особливо небезпечних злочинців. Тоді це вважалося розумною ідеєю, оскільки втеча звідти була дійсно проблематичною. Але згодом випари чорної магії стали просочуватись з глибин, лишаючи розуму вартових та в\'язнів. Врешті-решт в\'язницю покинули, лишивши кількох злочинців замкненими в середині.</string>
+  <string name="WndStory_Caves">Печери, які йшли під в\'язницею навряд можна було назвати жилими. Вони занадто глибоко, поза межі досяжності міста і занадто бідні мінералами, аби зацікавити Дворфів. В минулому тут розташовувалась торгова точка, на шляху поєднання двох сторін, але вона згинула разом із падінням Дворфської метрополії. Тепер тут лишилися повсюдні гнолли та підземельні тварюки.</string>
+  <string name="WndStory_Metropolis">Дворфська метрополія була колись величним містом-державою підземного народу. В часи його розквіту механізована армія могла відбитися від старого бога та його армії демонів. Казали, що воїни, що поверталися, несли на собі сім\'я розрухи, і що ця перемога лише відзначила кінець підземного царства.</string>
+  <string name="WndStory_Halls">В минулому ці рівні вважалися задвірками метрополії. Перемога над старим богом далася дворфам дорогою ціною, і вони не мали сил зачистити місцевість від демонів, що лишилися. З часом демони оволоділи цим місцем, тепер воно зветься Залою Демонів.
+
+Лише мала кількість шукачів пригод заходили так далеко...</string>
+  <string name="WndStory_Spiders">За давніх-давен тут були копальні, багаті на магічні активні камені. Коли ж дорогоцінні поклади скінчились і остання шахтарська компаній покинула це місце, тут залишилась нескінченний лабіринт сирих тунелів. Згодом, через роки, це місце уподобати глибинні павуки. Небезпечні та непередбачувані тварюки привернули до цих місцин дурну славу, але попри це знаходились сміливці та безумці охочі до наживи. Адже чим більша була небезпека, ти швидше розлітались чутки про магічні артефакти, які лишилися в копальнях. Одного часу підступна чаклунка, переховуючись від переслідування, зачаїлась в глибині печер. Забобонні люди не наважились йти в темні тунелі й почали чекати біля входу.
+Але вона так і не вийшла. Казали, що чаклунка знайшла інший вихід з печер, а може зуміла прошмигнути повз переслідувачів... а може загинула в темному лабіринті, оточеною шурхотом глибинних тварюк.</string>
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <string name="WndTradeItem_Sale">НА ПРОДАЖ: %1$s - %2$dз</string>
+  <string name="WndTradeItem_Buy">Придбати за %dз</string>
+  <string name="WndTradeItem_Sell">Продати за %dз</string>
+  <string name="WndTradeItem_Sell1">Продати 1 за %dз</string>
+  <string name="WndTradeItem_SellAll">Продати все за %dз</string>
+  <string name="WndTradeItem_Cancel">Забудь про це</string>
+  <string name="WndTradeItem_Sold">Ти продав %1$s за %2$dз</string>
+  <string name="WndTradeItem_Bought">Ти придбав %1$s за %2$dз</string>
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Message">О, я бачу, ти впорався! Сподіваюся це не завдало тобі особливих клопотів Як і обіцяв, ти можеш обрати одну з моїх найкращих паличок.</string>
+  <string name="WndWandmaker_Battle">Бойова паличка</string>
+  <string name="WndWandmaker_NonBattle">Не бойова паличка</string>
+  <string name="WndWandmaker_Farawell">Щасти тобі в твоїх пригодах, %s!</string>
+  <!--STRINGS OF QuickSlot CLASS-->
+  <string name="QuickSlot_SelectedItem">Обери предмет для комірки швидкого доступу</string>
+  <!--STRINGS OF Item CLASS-->
+  <string name="Item_Name">предмет</string>
+  <string name="Item_Info">опис предмета</string>
+  <string name="Item_ACDrop">ВИКЛАСТИ</string>
+  <string name="Item_ACThrow">КИНУТИ</string>
+  <string name="Item_PackFull">Тобі бракує місця для предмету %s</string>
+  <string name="Item_DirThrow">Обери напрям для кидку</string>
+  <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">ОДЯГТИ</string>
+  <string name="EquipableItem_ACUnequip">ЗНЯТИ</string>
+  <string name="EquipableItem_Unequip">Ти не можеш зняти проклятий предмет %s!</string>
+  <!--STRINGS OF Heap CLASS-->
+  <string name="Heap_Mimic">Це мімік!</string>
+  <!--STRINGS OF Amulet CLASS-->
+  <string name="Amulet_Name">Амулет Ендора</string>
+  <string name="Amulet_ACEnd">ЗАВЕРШИТИ ГРУ</string>
+  <string name="Amulet_Info">Амулет Ендора - могутній артефакт, невідомого походження. Вважається, що він може виконати будь-яке бажання, якщо воля власника буде достатньо сильною, аби \"вмовити\" амулет виконати його.</string>
+  <!--STRINGS OF Ankh CLASS-->
+  <string name="Ankh_Name">Анкх</string>
+  <string name="Ankh_Info">Древній символ безсмертя, який дарує можливість повернення після смерті. При воскресінні всі одягнуті речі губляться.</string>
+  <!--STRINGS OF ArmorKit CLASS-->
+  <string name="ArmorKit_Name">інструменти</string>
+  <string name="ArmorKit_ACAplly">ЗАСТОСУВАТИ</string>
+  <string name="ArmorKit_Info">Використовуючи цей набір матеріалів та інструментів, будь хто може переробити свою броню в \"епічну\", зберігаючи попередні властивості, ще й додаючи особливу здібність, яка залежить від класу героя. Жодних навичок шиття, коваля чи кожум\'яки не потребується.</string>
+  <string name="ArmorKit_SelectArmor">Оберіть броню для покращення</string>
+  <string name="ArmorKit_Upgraded">Ти застосував набір інструментів для покращення свого предмета %s</string>
+  <!--STRINGS OF Dewdrop CLASS-->
+  <string name="Dewdrop_Name">крапля роси</string>
+  <string name="Dewdrop_Info">Кристально чиста крапля роси</string>
+  <!--STRINGS OF DewVial CLASS-->
+  <string name="DewVial_Name">фіал для роси</string>
+  <string name="DewVial_ACDRINK">ВИПИТИ</string>
+  <string name="DewVial_Info">Ти можеш зберегти надлишок роси, помістивши в цю фіалу. Якщо він повний, то роса буде споживатися автоматична під час смертельної небезпеки.</string>
+  <string name="DewVial_AutoDrink">Ти спустошив фіал з росою, аби загоїти рани.</string>
+  <string name="DewVial_Collected">Ти зібрав краплину роси до фіалу.</string>
+  <string name="DewVial_Full">Твоя фіала повна!</string>
+  <string name="DewVial_Empty">Твоя фіала порожня!</string>
+  <!--STRINGS OF Gold CLASS-->
+  <string name="Gold_Name">золото</string>
+  <string name="Gold_Collect">Збирай золоті монети, аби пізніше витратити їх в торговця.</string>
+  <string name="Gold_Info">Жменя із %d золотих монет.</string>
+  <string name="Gold_Info1">Одна золота монета.</string>
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <string name="KindOfWeapon_EquipCursed">Ти ладен розтиснути пальці, які охопили %s</string>
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <string name="LloidsBeacon_Name">маяк Лойда</string>
+  <string name="LloidsBeacon_ACSet">ВСТАНОВИТИ</string>
+  <string name="LloidsBeacon_ACReturn">ЗАБРАТИ</string>
+  <string name="LloidsBeacon_Info">Маяк Лойда - це інтерактивний магічний пристрій, який дозволить повернутися в місце його встановлення.</string>
+  <string name="LloidsBeacon_Preventing">Могутня магічна аура не дозволяє тобі скористатися маяком!</string>
+  <string name="LloidsBeacon_Creatures">Психічна аура істот поряд не дозволяє тобі скористатися маяком в даний момент.</string>
+  <string name="LloidsBeacon_Return">Маяк Лойда успішно встановлено. Тепер ти можеш повернутися сюди в будь-яку мить.</string>
+  <string name="LloidsBeacon_Set">
+
+Цей маяк було встановлено десь на рівні %d Pixel Dungeon.</string>
+  <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_Name">містичне перо</string>
+  <string name="Stylus_ACInscribe">ВПИСАТИ</string>
+  <string name="Stylus_Info">Це магічне перо виготовлено з чорного, твердого каменю. За допомогою нього ти можеш вписати гліф чи руну, але ти не знаєш, що саме, перо це обере за тебе.</string>
+  <string name="Stylus_SelectArmor">Обери предмет, аби вписати</string>
+  <string name="Stylus_Inscribed">ти вписав %1$s на предмет %2$s</string>
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_Name">Том майстерності</string>
+  <string name="TomeOfMastery_ACRead">ЧИТАТИ</string>
+  <string name="TomeOfMastery_Info">Ця зношена шкіряна книга не така вже й товста, але ти чомусь усвідомлюєш, що вона здатна тебе багато чому навчити. Але пам\'ятай, на те, щоб прочитати її знадобиться час.</string>
+  <string name="TomeOfMastery_Blinded">Ти не можеш читати, поки ти осліплений</string>
+  <string name="TomeOfMastery_Choose">Ти обрав шлях і тепер ти %s!</string>
+  <!--STRINGS OF Torch CLASS-->
+  <string name="Torch_Name">смолоскип</string>
+  <string name="Torch_ACLight">ЗАПАЛИТИ</string>
+  <string name="Torch_Info">Це дуже корисна річ в залах демонів, які відомі своїм недостатнім освітленням.</string>
+  <!--STRINGS OF Weightstone CLASS-->
+  <string name="Weightstone_Name">грузило</string>
+  <string name="Weightstone_ACApply">ЗАСТОСУВАТИ</string>
+  <string name="Weightstone_Info">За допомогою грузила ти можеш збалансувати свою зброю, збільшуючи його швидкість чи влучність.</string>
+  <string name="Weightstone_Select">Обери зброю для балансування</string>
+  <string name="Weightstone_Fast">ти збалансував %s на швидкість</string>
+  <string name="Weightstone_Accurate">ти збалансував %s на влучність</string>
+  <string name="Weightstone_WndChoice">Як ти бажаєш збалансувати предмет %s?</string>
+  <string name="Weightstone_WndSpeed">На швидкість</string>
+  <string name="Weightstone_WndAccuracy">На влучність</string>
+  <string name="Weightstone_WndCancel">Я передумав</string>
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <string name="Bag_ACOpen">ВІДКРИТИ</string>
+  <!--STRINGS OF Keyring CLASS-->
+  <string name="Keyring_Name">зв\'язка для ключів</string>
+  <string name="Keyring_Info">Ця мідна зв\'язка для ключів дозволить зберігати всі твої ключі окремо від інших речей.</string>
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <string name="ScrollHolder_Name">футляр для сувоїв</string>
+  <string name="ScrollHolder_Info">Футляр вмістить будь-яку кількість сувоїв, розвантажуючи рюкзак та захищаючи їх від вогню.</string>
+  <!--STRINGS OF SeedPouch CLASS-->
+  <string name="SeedPouch_Name">мішечок для насіння</string>
+  <string name="SeedPouch_Info">Маленький бархатний мішечок вмістить велику кількість насіння. Дуже корисна річ.</string>
+  <!--STRINGS OF WandHolster CLASS-->
+  <string name="WandHolster_Name">пенал для паличок</string>
+  <string name="WandHolster_Info">Це - тонкий пенал зі шкіри екзотичної тварини. Він дозволяє компактно тримати до %d паличок.</string>
+  <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Info">На цей міцний шкіряний пояс можна почепити всі твої склянки з зіллям, захищаючи їх від морозу.</string>
+  <string name="PotionBelt_Name">пояс для зілля</string>
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <string name="GoldenKey_Name">золотий ключ</string>
+  <string name="GoldenKey_Info">Насічки на ключі мають дрібну та заплутану форму. Можливо цей ключ підійде до якоїсь скрині?</string>
+  <!--STRINGS OF IronKey CLASS-->
+  <string name="IronKey_Name">залізний ключ</string>
+  <string name="IronKey_Info">Насічки на древньому ключі майже стерлися; шкіряний мотузок розсипався від часу. Які двері він може відкрити?</string>
+  <string name="IronKey_FromDepth">залізний ключ від рівня %d</string>
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <string name="SkeletonKey_Name">ключ-скелет</string>
+  <string name="SkeletonKey_Info">Цей ключ виглядає досить вагомо: тримач вирізблено у формі черепа. Можливо він від відмикає якісь важливі двері.</string>
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <string name="CorpseDust_Name">трупна пилюка</string>
+  <string name="CorpseDust_Info">Жменя трупної пилюки не відрізняється від звичайної. Хоча не покидає відчуття, що від неї треба скоріше позбутися.</string>
+  <string name="CorpseDust_Info2">Можливо через те, що тримаючи її в руці виникають відчуття занепокоєності та гніву.</string>
+  <!--STRINGS OF DarkGold CLASS-->
+  <string name="DarkGold_Name">темна золота руда</string>
+  <string name="DarkGold_Info">Цей метал зветься темним не через його колір (він не відрізняється від звичайного золота), а через те, що він тане на сонячному світлі. Через що ним не можливо користуватися на поверхні.</string>
+  <!--STRINGS OF DriedRose CLASS-->
+  <string name="DriedRose_Name">посохла роза</string>
+  <string name="DriedRose_Info">Ця троянда посохла багато років тому, але незважаючи на це, зберігся кожна пелюстка.</string>
+  <string name="DriedRose_Info2">І вона не втратила свого шарму. Вона така прекрасна, що хочеться лишити її собі назавжди.</string>
+  <!--STRINGS OF DwarfToken CLASS-->
+  <string name="DwarfToken_Name">дворфський жетон</string>
+  <string name="DwarfToken_Info">Багато хто з дворфів та їхні масивні витвори носили при собі ці маленькі металеві штучки. Яку роль вони грали, так і лишилося загадкою. Чи може це була прикраса, чи щось схоже на перепустку. Дворфи дивний народ.</string>
+  <!--STRINGS OF Pickaxe CLASS-->
+  <string name="Pickaxe_Name">кірка</string>
+  <string name="Pickaxe_Info">Це великий та міцний інструмент для розколювання каміння. В якості зброї теж можна використовувати.</string>
+  <string name="Pickaxe_ACMine">ДОБУТИ</string>
+  <string name="Pickaxe_Gender">feminine</string>
+  <string name="Pickaxe_NoVein">Ти не бачиш жодного родовища чорного золота поблизу.</string>
+  <!--STRINGS OF RatSkull CLASS-->
+  <string name="RatSkull_Name">череп гігантського щура</string>
+  <string name="RatSkull_Info">Він міг бути непоганим трофеєм, але не має жодного бажання вішати на стіну предмет від якого так тхне.</string>
+  <string name="RatSkull_Info2">З іншого боку, одразу видно, що власник такого трофею може вбивати щурів, навіть таких величезних та огидних.</string>
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="ConfusionGas_Info">Тут крутиться хмара збентежуючого газу.</string>
+  <!--STRINGS OF Fire CLASS-->
+  <string name="Fire_Info">Тут вирує полум\'я.</string>
+  <!--STRINGS OF Foliage CLASS-->
+  <string name="Foliage_Info">Стовп світла пронизує морок підземного саду.</string>
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <string name="ParalyticGas_Info">Тут крутиться хмара з паралітичним газом.</string>
+  <!--STRINGS OF ToxicGas CLASS-->
+  <string name="ToxicGas_Info">Тут крутиться зелена хмара токсичного газу.</string>
+  <string name="ToxicGas_Info1">Ти отруївся токсичним газом...</string>
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <string name="WaterOfAwareness_Info">Вода цієї криниці випромінює силу знання. Зроби ковток, аби розкрити секрети свого спорядження.</string>
+  <string name="WaterOfAwareness_Procced">Зробивши ковток, ти відчуваєш, як знання сповнюють твій розум. Тепер ти знаєш все про речі, які одягнуті на тобі. Також ти відчуваєш всі предмети на рівні, та знаєш його секрети.</string>
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <string name="WaterOfHealth_Info">Вода цього колодязя випромінює силу здоров\'я. Зроби ковток, аби залікувати свої рани та вгамувати голод.</string>
+  <string name="WaterOfHealth_Procced">Зробивши ковток твої відчуваєш як твої рани повністю загоїлися.</string>
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <string name="WaterOfTransmutation_Info">Вода цього колодязя випромінює силу змін. Кинь в нього предмет, аби змінити його на дещо інше.</string>
+  <!--STRINGS OF Web CLASS-->
+  <string name="Web_Info">Все навкруги покрито павутинням.</string>
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <string name="Amok_Info">Шалений</string>
+  <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">Шкіра-кора</string>
+  <!--STRINGS OF Bleeding CLASS-->
+  <string name="Bleeding_Info">Кровотеча</string>
+  <string name="Bleeding_Death">Твоя кровотеча призвела до смерті…</string>
+  <!--STRINGS OF Blindness CLASS-->
+  <string name="Blindness_Info">Засліплений</string>
+  <!--STRINGS OF Burning CLASS-->
+  <string name="Burning_Info">У вогні</string>
+  <string name="Burning_Burns">%s горить!</string>
+  <string name="Burning_Death">Ти згорів заживо...</string>
+  <!--STRINGS OF Charm CLASS-->
+  <string name="Charm_Info">Зачарований</string>
+  <!--STRINGS OF Combo CLASS-->
+  <string name="Combo_Info">Комбо</string>
+  <string name="Combo_Combo">%d ударів комбо!</string>
+  <!--STRINGS OF Cripple CLASS-->
+  <string name="Cripple_Info">Травмований</string>
+  <!--STRINGS OF Frost CLASS-->
+  <string name="Frost_Info">Заморожений</string>
+  <string name="Frost_Shatter">%s тріскається від холоду!</string>
+  <!--STRINGS OF Fury CLASS-->
+  <string name="Fury_Info">Розлючений</string>
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <string name="GasesImmunity_Info">Імунітет до газів</string>
+  <!--STRINGS OF Hunger CLASS-->
+  <string-array name="Hunger_Hungry">
+    <item>Ти зголодніло.</item>
+    <item>Ти зголоднів.</item>
+    <item>Ти зголодніла.</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>Ти виснажено!</item>
+    <item>Ти виснажений!</item>
+    <item>Ти виснажена!</item>
+  </string-array>
+  <string name="Hunger_Death">Ти помер від виснаження...</string>
+  <string name="Hunger_Info1">Голодний</string>
+  <string name="Hunger_Info2">Виснажений</string>
+  <!--STRINGS OF Invisibility CLASS-->
+  <string name="Invisibility_Info">Невидимий</string>
+  <!--STRINGS OF Levitation CLASS-->
+  <string name="Levitation_Info">Левітуєш</string>
+  <!--STRINGS OF Light CLASS-->
+  <string name="Light_Info">Світишся</string>
+  <!--STRINGS OF MindVision CLASS-->
+  <string name="MindVision_Info">Ясно бачення</string>
+  <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Info">Їдкий слиз</string>
+  <string name="Ooze_Death">%s вбив тебе...</string>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string name="Paralysis_Info">Паралізований</string>
+  <!--STRINGS OF Poison CLASS-->
+  <string name="Poison_Info">Отруєний</string>
+  <string name="Poison_Death">Ти помер від отруєння...</string>
+  <!--STRINGS OF Roots CLASS-->
+  <string name="Roots_Info">Сплутаний</string>
+  <!--STRINGS OF Shadows CLASS-->
+  <string name="Shadows_Info">Злився з тінню</string>
+  <!--STRINGS OF Slow CLASS-->
+  <string name="Slow_Info">Сповільнений</string>
+  <!--STRINGS OF SnipersMark CLASS-->
+  <string name="SnipersMark_Info">Мітка снайпера</string>
+  <!--STRINGS OF Vertigo CLASS-->
+  <string name="Vertigo_Info">Запаморочений</string>
+  <!--STRINGS OF Weakness CLASS-->
+  <string name="Weakness_Info">Послаблений</string>
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <string name="Belongings_Name">рюкзак</string>
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <string name="ItemSprite_Info1">викинути в сторону: %1$.1f %2$.1f</string>
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+  <string name="Toolbar_Info1">Ти не знаєш, що там.</string>
+  <string name="Toolbar_Info2">Обери комірку для вивчення</string>
+</resources>

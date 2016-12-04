@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Вушанка</string>
+    <string name="Ushanka_Info">Тепла та зручна шапка-вушанка прикрашена червоною зіркою. Чудовий компаньйон для битві проти злого та холодного підземелля.</string>
+
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">Щелепа вампіра</string>
+    <string name="VampireSkull_Info">Цю маску виготовлено з повністю натурального черепа вампіра. Фактично це і є череп вампіра... череп вампіра з великою головою. Який жах.</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Маска зомбі</string>
+    <string name="ZombieMask_Info">Ви колись мріяли виглядати як безсмертний герой, який загинув у бою... неодноразово? Добре, це твоя чудова нагода.</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">цукерка</string>
+    <string name="Candy_Info">Ця цукерка така гарна і приємно пахне. Невже її дійсно треба комусь віддавати?</string>
+    <string name="Candy_Warning_1">Не слід було їсти цю цукерку. Ти пообіцяв віддати її власнику. Не те щоб вона справила на тебе якийсь помітний ефект, голод вона не втамувала. Це лише цукерка.</string>
+    <string name="Candy_Warning_2">От ця вже точно була зайва. Через переїдання цукерок у тебе прихопило живіт.</string>
+
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">гарбузовий пиріг</string>
+    <string name="PumpkinPie_Info">Смачний гарбузовий пиріг, майже такий, який готувала тобі мати.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">протухлий гарбузовий пиріг</string>
+    <string name="RottenPumpkinPie_Info">Який би не був добрий цей пиріг, доки він був свіжим, зараз його їсти не слід.</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">Свічна видінь</string>
+    <string name="CandleOfMindVision_Info">Виглядає як звичайна свічка, дивно знайти щось таке в підземеллі. Дивно те, що вона тепла, хоч її не запалювали.</string>
+    <string name="CandleOfMindVision_Info_Lighted">Як тільки ти викинув свічку з рюкзаку вона засяяла. Полум\'я випромінює м\'яке світло, крізь яке ти бачиш монстрів поблизу.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">Свічка вигоріла і більше не загоряється у тебе в руках. Схоже ти вже не можеш нею користуватися.</string>
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">діжка</string>
+    <string name="Barrel_Desc">На перший погляд звичайна діжка. Але наблизившись до неї, ти відчуваєш дивний маслянистий запах. Схоже діжка досить легка, би ти міг її посунути.</string>
+
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">гарбуз</string>
+    <string name="Barrel_Pumpkin_Desc">Досить дивно і моторошно бачити вирізаний гарбуз на підлозі підземелля. Ти чітко відчуваєш небезпеку, яка йде від нього. Але ти ж можеш завжди її відштовхнути, чи не так?</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">пугач</string>
+    <string name="ScarecrowNPC_Gender">masculine</string>
+    <string name="ScarecrowNPC_Name_Objective">пугача</string>
+    <string name="ScarecrowNPC_Desc">Без усяких сумнівів... цей пугач слідкує за кожним твоїм кроком. Погляд його яскравих, червоних очей бачить тебе наскрізь, але, на подив, ти відчуваєш, що він не становить загрози.</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Привіт малий, як твої справи?
+Тобі задачку маю для забави!
+
+Які ми раді б дуже стали,
+Якби цукерок п\'ять мені зібрали!
+
+</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Привіт мала, як твої справи?
+Тобі задачку маю для забави!
+
+Які ми раді б дуже стали,
+Якби цукерок п\'ять мені зібрали!
+
+</string>
+    <string name="ScarecrowNPC_Quest_Reminder">П\'ять цукерок, ось моя вимога.
+Ах, яка солодка буде нагорода!</string>
+    <string name="ScarecrowNPC_Quest_End">Від радості валюся з ніг!
+Ти заробив смачний пиріг!</string>
+    <string name="Journal_ScarecrowNPC">Пугач</string>
+
+</resources>

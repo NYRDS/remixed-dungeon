@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /levels-->
+  <!--STRINGS OF Level CLASS-->
+  <string name="Level_HiddenPlate">Клацнула прихована натисна плита!</string>
+  <string name="Level_TileChasm">Провалля</string>
+  <string name="Level_TileFloor">Підлога</string>
+  <string name="Level_TileGrass">Трава</string>
+  <string name="Level_TileWater">Вода</string>
+  <string name="Level_TileWall">Стіна</string>
+  <string name="Level_TileClosedDoor">Зачинені двері</string>
+  <string name="Level_TileOpenDoor">Відкриті двері</string>
+  <string name="Level_TileEntrance">Глибокий підйом</string>
+  <string name="Level_TileExit">Глибокий спуск</string>
+  <string name="Level_TileEmbers">Жарина</string>
+  <string name="Level_TileLockedDoor">Заблоковані двері</string>
+  <string name="Level_TilePedestal">П\'єдестал</string>
+  <string name="Level_TileBarricade">Барикада</string>
+  <string name="Level_TileHighGrass">Висока трава</string>
+  <string name="Level_TileLockedExit">Заблокована драбина вниз</string>
+  <string name="Level_TileUnlockedExit">Розблокована драбина вниз</string>
+  <string name="Level_TileSign">Знак</string>
+  <string name="Level_TileWell">Колодязь</string>
+  <string name="Level_TileEmptyWell">Порожній колодязь</string>
+  <string name="Level_TileStatue">Статуя</string>
+  <string name="Level_TileToxicTrap">Пастка з токсичним газом</string>
+  <string name="Level_TileFireTrap">Вогняна пастка</string>
+  <string name="Level_TileParalyticTrap">Пастка з паралітичним газом</string>
+  <string name="Level_TilePoisonTrap">Пастка з отруйними дротиками</string>
+  <string name="Level_TileAlarmTrap">Сигнальна пастка</string>
+  <string name="Level_TileLightningTrap">Електророзрядна пастка</string>
+  <string name="Level_TileGrippingTrap">Затискальна пастка</string>
+  <string name="Level_TileSummoningTrap">Заклична пастка</string>
+  <string name="Level_TileInactiveTrap">Розряджена пастка</string>
+  <string name="Level_TileBookshelf">Книжкова шафа</string>
+  <string name="Level_TileAlchemy">Алхімічний котел</string>
+  <string name="Level_TileDefault">\?\?\?</string>
+  <string name="Level_TileDescChasm">Дна не видно.</string>
+  <string name="Level_TileDescWater">Якщо загоришся, увійди до води, аби загасити полум\'я.</string>
+  <string name="Level_TileDescEntrance">Ці сходи ведуть догори.</string>
+  <string name="Level_TileDescExit">Ці сходи ведуть вглиб.</string>
+  <string name="Level_TileDescEmbers">Підлога покрита вугіллям. </string>
+  <string name="Level_TileDescHighGrass">Густа рослинність перекриває огляд.</string>
+  <string name="Level_TileDescLockedDoor">Ці двері заблоковані, тобі потрібен відповідний ключ, аби відкрити їх.</string>
+  <string name="Level_TileDescLockedExit">Прохід перекрито тяжкими ґратами.</string>
+  <string name="Level_TileDescBarricade">Дерев\'яна барикада ладно зібрана, але затрухлявіла за роки. Цікаво, загориться?</string>
+  <string name="Level_TileDescSign">Ти не можеш розгледіти текст звідси.</string>
+  <string name="Level_TileDescTrap">Ставши на приховану пружинну плиту, ти активуєш пастку.</string>
+  <string name="Level_TileDescInactiveTrap">Пастка вже спрацювала, тепер вона безпечна.</string>
+  <string name="Level_TileDescStatue">Хтось хотів прикрасити це місце, але, вочевидь, зазнав невдачі.</string>
+  <string name="Level_TileDescAlchemy">Закинь сюди насіння, аби зварити зілля.</string>
+  <string name="Level_TileDescEmptyWell">Колодязь пересох.</string>
+  <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
+  <string name="Caves_TileGrass">Мох, що світиться</string>
+  <string name="Caves_TileHighGrass">Люмінесцентні гриби</string>
+  <string name="Caves_TileWater">Крижана вода.</string>
+  <string name="Caves_TileDescEntrance">Драбина веде догори.</string>
+  <string name="Caves_TileDescExit">Драбина веде донизу.</string>
+  <string name="Caves_TileDescHighGrass">Здоровезний гриб перекриває огляд.</string>
+  <string name="Caves_TileDescDeco">На стіні видно відкриту жилу якоїсь руди. Чи то не золото?</string>
+  <string name="Caves_TileDescBookshelf">Кому в підземеллі знадобилася книжкова шафа?</string>
+  <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">Вода підозрілого кольору</string>
+  <string name="City_TileHighGrass">Високий квітучий кущ</string>
+  <string name="City_TileDescEntrance">Рампа, що веде догори.</string>
+  <string name="City_TileDescExit">Рампа, що веде донизу.</string>
+  <string name="City_TileDescDeco">Тут не вистачає кількох плиток.</string>
+  <string name="City_TileDescEmptySP">Підлогу вкрито щільним килимом.</string>
+  <string name="City_TileDescStatue">Статуя показує Дворфа в героїчній позі.</string>
+  <string name="City_TileDescBookshelf">Полки заповнені різноманітними книгами.</string>
+  <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
+  <string name="Halls_TileWater">Холодна лава</string>
+  <string name="Halls_TileGrass">Вугле-мох</string>
+  <string name="Halls_TileHighGrass">Вугле-гриб</string>
+  <string name="Halls_TileStatue">Стовп</string>
+  <string name="Halls_TileDescWater">Це дуже схоже на лаву, але вона холодна і на дотик безпечна.</string>
+  <string name="Halls_TileDescStatue">Стовп зроблено з черепів гуманоїдів. Щось неймовірне.</string>
+  <string name="Halls_TileDescBookshelf">Цю шафу заповнено книгами на мертвій мові.</string>
+  <!--STRINGS OF LastLevel CLASS-->
+  <string name="LastLevel_TileWater">Холодна лава</string>
+  <string name="LastLevel_TileGrass">Вугле-мох</string>
+  <string name="LastLevel_TileHighGrass">Вугле-гриб</string>
+  <string name="LastLevel_TileStatue">Стовп</string>
+  <string name="LastLevel_TileDescWater">Це дуже схоже на лаву, але вона холодна і на дотик безпечна.</string>
+  <string name="LastLevel_TileDescStatue">Стовп зроблено з черепів гуманоїдів. Щось неймовірне.</string>
+  <!--STRINGS OF LastShopLevel CLASS-->
+  <string name="LastShopLevel_TileWater">Вода підозрілого кольору</string>
+  <string name="LastShopLevel_TileHighGrass">Високий квітучий кущ</string>
+  <string name="LastShopLevel_TileDescEntrance">Рампа, що веде догори.</string>
+  <string name="LastShopLevel_TileDescExit">Рампа, що веде донизу в пекло.</string>
+  <string name="LastShopLevel_TileDescDeco">Тут не вистачає кількох плиток.</string>
+  <string name="LastShopLevel_TileDescEmptySP">Підлогу вкрито щільним килимом.</string>
+  <!--STRINGS OF PrisonLevel & PrisonBossLevel CLASS-->
+  <string name="Prison_TileWater">Темна холодна вода.</string>
+  <string name="Prison_TileDescDeco">Навколо підлога заляпана старою кров\'ю.</string>
+  <string name="Prison_TileDescBookshelf">Схоже на залишки тюремної бібліотеки. Цікаво, загориться?</string>
+  <!--STRINGS OF SewerLevel & SewerBossLevel CLASS-->
+  <string name="Sewer_TileWater">Каламутна вода</string>
+  <string name="Sewer_TileDescDeco">Вологий жовтуватий мох вкрив підлогу.</string>
+  <string name="Sewer_TileDescBookshelf">Полиці заповнені дешевими, безкорисними книжками. Цікаво, загориться?</string>
+  <!--PACKAGE /levels/features-->
+  <!--STRINGS OF AlchemyPot CLASS-->
+  <string name="AlchemyPot_SelectSeed">Обери насіння</string>
+  <!--STRINGS OF Chasm CLASS-->
+  <string name="Chasm_Chasm">Провалля</string>
+  <string name="Chasm_Yes">Так, я знаю що роблю.</string>
+  <string name="Chasm_No">Ні, я змінив свою думку</string>
+  <string name="Chasm_Jump">Ти впевнений що бажаєш стрибнути донизу? Можеш розбитися.</string>
+  <string name="Chasm_Info">Ти розбився...</string>
+  <!--PACKAGE /levels/traps-->
+  <!--STRINGS OF AlarmTrap CLASS-->
+  <string name="AlarmTrap_Desc">Пастка генерує пронизливий звук, який лунає підземеллям!</string>
+  <!--STRINGS OF LightningTrap CLASS-->
+  <string name="LightningTrap_Name">електрична пастка</string>
+  <string name="LightningTrap_Desc">Тебе прибило розрядом електричної пастки...</string>
+</resources>

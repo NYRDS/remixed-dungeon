@@ -46,7 +46,8 @@ public class Accessory {
 		registerAccessory(ZombieMask.class);
 		registerAccessory(VampireSkull.class);
 		registerAccessory(Ushanka.class);
-		registerAccessory(SantaHat.class);
+		//registerAccessory(SantaHat.class);
+		//registerAccessory(Rudolph.class);
 	}
 
 	public static List<String> getAccessoriesList() {

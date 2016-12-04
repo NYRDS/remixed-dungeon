@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">Справжній опис буде пізніше!</string>
+  <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
+  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+  <string name="Mob_StaSleepingStatus">%s спить</string>
+  <string name="Mob_StaWanderingStatus">%s блукає</string>
+  <string name="Mob_StaHuntingStatus">%s полює</string>
+  <string name="Mob_StaFleeingStatus">%s рятується</string>
+  <string name="Mob_StaPassiveStatus">%s байдикує</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">кислотний скорпіон</string>
+  <string name="Acidic_Gender">masculine</string>
+  <string name="Acidic_Name_Objective">кислотного скорпіона</string>
+  <string name="Acidic_Desc">Ці величезні членистоногі намагаються уникати ближнього бою, стріляючи отруйними голками з великої відстані.</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">щур-альбінос</string>
+  <string name="Albino_Gender">masculine</string>
+  <string name="Albino_Name_Objective">щура-альбіноса</string>
+  <string name="Albino_Desc">Сумчасті щури агресивні, але на надто сильні мешканці каналізації. Проте у великій кількості становлять значну загрозу. Конкретно цей щур - альбінос. Він також має незвичайно великі ікла.</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">божевільний злочинець</string>
+  <string name="Bandit_Gender">masculine</string>
+  <string name="Bandit_Name_Objective">божевільного злочинця</string>
+  <string name="Bandit_Desc">Глибинні рівні підземелля завжди слугували надійним схроном для будь-якого злочинця. Проте не кожний міг зберегти здоровий глузд надовго покинувши денне світло. Вже досить давно ці безумні бандити позабували хто вони є, і навіщо займаються своїми темними справами. Схоже, що цей бандит чимось змастив свій кинджал!</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">кажан-вампір</string>
+  <string name="Bat_Gender">masculine</string>
+  <string name="Bat_Name_Objective">кажана-вампіра</string>
+  <string name="Bat_Desc">Ці шустрі надокучливі мешканці печер здатні подолати більш крупного супротивника за рахунок того, що з кожним укусом вони поновлюють своє здоров\'я.</string>
+  <string name="Bat_Defense">ухилився</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">гнолл громила</string>
+  <string name="Brute_Name_Objective">гнолла громилу</string>
+  <string name="Brute_Desc">Громили - найбільші, найсильніші та найвитриваліші з усіх гноллів. Маючи значні пошкодження, вони здатні впадати в лють, завдаючи значної шкоди супротивнику.</string>
+  <string name="Brute_Gender">masculine</string>
+  <string name="Brute_Enraged">%s розлютився!</string>
+  <string name="Brute_StaEnraged">розлючений</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">стоковий краб</string>
+  <string name="Crab_Gender">masculine</string>
+  <string name="Crab_Name_Objective">стокового краба</string>
+  <string name="Crab_Desc">Ці великі краби розташувалися на верхівці харчової ланки в каналізації. Вони надзвичайно швидкі, а їхній хітин здатний витримати велику кількість ударів.</string>
+  <string name="Crab_Defense">відбився</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">masculine</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">Цю машину створено дворфами багато століть тому. Згодом вони почали замінювати машини големами, елементалями й навіть демонами. Що й призвело до загибелі їхньої цивілізації. Машини, на кшталт DM-300, призначені для будівельних та шахтарських функцій, проте, в разі необхідності, могли захищати місто.</string>
+  <string name="DM300_Info1">DM-300 ремонтує сам себе!</string>
+  <string name="DM300_Info2">Місію провалено. Вимикаюсь.</string>
+  <string name="DM300_Info3">Виявлено неавторизовану персону.</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">вогняний елементаль</string>
+  <string name="Elemental_Gender">masculine</string>
+  <string name="Elemental_Name_Objective">вогняного елементаля</string>
+  <string name="Elemental_Desc">Вогняні елементалі - це побічний продукт прикликання великих сутностей. Через свою хаотичну природу, воля цих створінь не піддається підкоренню навіть видатним демонологам.</string>
+  <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">зле око</string>
+  <string name="Eye_Gender">neuter</string>
+  <string name="Eye_Name_Objective">зле око</string>
+  <string name="Eye_Desc">Одне з імен цього демона: шар ненависті, оскільки при потраплянні ворога в полі зору, той звертає на нього свій погляд смерті, не беручі до уваги, що може завдати шкоди союзникам.</string>
+  <string name="Eye_Kill">%s вбиває тебе поглядом смерті...</string>
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Name">гнолл розвідник</string>
+  <string name="Gnoll_Gender">masculine</string>
+  <string name="Gnoll_Name_Objective">гнола розвідника</string>
+  <string name="Gnoll_Desc">Гнолли - гієноподібні гуманоїди. Вони проживають в підземеллях, каналізаціях, періодично роблячи набіги на поверхню. Гнолл-розвідник - типовий представник зграї, він не настільки сильний, як громила, і не настільки розумний, як шаман.</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Name">голем</string>
+  <string name="Golem_Gender">masculine</string>
+  <string name="Golem_Name_Objective">голема</string>
+  <string name="Golem_Desc">Дворфи намагалися поєднати механізми зі ново-отриманими знаннями про природу стихій. Духи землі замінювали \"душу\" механічного каркаса голема, вважалось, що їх легше контролювати. Незважаючи на це, найдрібніша неточність в ритуалі могла призвести до нищівних наслідків.</string>
+  <string name="Golem_Defense">прикрився</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">Жижа</string>
+  <string name="Goo_Gender">feminine</string>
+  <string name="Goo_Name_Objective">Жижу</string>
+  <string name="Goo_Desc">Мало що відомо про Жижу. Скоріш за все, це навіть не істота, а згусток каналізаційної субстанції , в якій тільки-но зародилась свідомість. В будь-якому випадку тут не обійшлося без темної магії.</string>
+  <string name="Goo_Info1">Жижа нагнічує себе!</string>
+  <string name="Goo_Info2">хлюп... хлюп...</string>
+  <string name="Goo_Info3">ХЛЮП-ХЛЮП!</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Name">Цар Дворфів</string>
+  <string name="King_Gender">masculine</string>
+  <string name="King_Name_Objective">Царя Дворфів</string>
+  <string name="King_Desc">Останній король дворфів мав глибокі пізнання в областях життя та смерті. Він переконав придворну свиту прийняти участь в ритуалі, який обіцяв вічну молодість. В результаті її отримав лише сам король, отримавши армію нежиті в якості бонусу.</string>
+  <string name="King_Defense">відбився</string>
+  <string name="King_Info1">Ти не можеш вбити мене, %s... Я... безсмертний...</string>
+  <string name="King_Info2">Відродіться, слуги!</string>
+  <string name="King_Info3">Як ти наважився!</string>
+  <string name="Undead_Name">дворф-нежить</string>
+  <string name="Undead_Gender">masculine</string>
+  <string name="Undead_Name_Objective">дворфа-нежить</string>
+  <string name="Undead_Desc">Ці мертві дворфи, які повстали по волі свого царя, буди колись частиною його придворної свити. Ззовні вони виглядають як скелети з значними бородами.</string>
+  <string name="Undead_Defense">прикрився</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">мімік</string>
+  <string name="Mimic_Gender">masculine</string>
+  <string name="Mimic_Name_Objective">міміка</string>
+  <string name="Mimic_Desc">Міміки - магічні істоти, які здатні набувати будь-якої форми за бажанням. В підземеллях вони, зазвичай, набувають форму скринь, адже саме вони приваблюють шукачів пригод.</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">мімік</string>
+  <string name="MimicPie_Gender">masculine</string>
+  <string name="MimicPie_Name_Objective">міміка</string>
+  <string name="MimicPie_Desc">Міміки - магічні істоти, які здатні набувати будь-якої форми за бажанням. Цей виглядає наче великий смачний пиріг.</string>
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">дворф-монах</string>
+  <string name="Monk_Gender">masculine</string>
+  <string name="Monk_Name_Objective">дворфа-монаха</string>
+  <string name="Monk_Desc">Монахи - це фанатики, які присвятили себе захисту секретів свого народу від чужинців. Вони не покладаються на броню чи зброю, надаючи перевагу битися вручну.</string>
+  <string name="Monk_Defense">відбився</string>
+  <string name="Monk_Disarm">%1$s вибив %2$s з твоїх рук!</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">велика піранья</string>
+  <string name="Piranha_Gender">feminine</string>
+  <string name="Piranha_Name_Objective">велику піранью</string>
+  <string name="Piranha_Desc">Ці м\'ясоїдні рибки не є звичайними мешканцями підземелля, вони були спеціально виведені для захисту затоплених скрабниць.</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">сумчастий щур</string>
+  <string name="Rat_Gender">masculine</string>
+  <string name="Rat_Name_Objective">сумчастого щура</string>
+  <string name="Rat_Desc">Сумчасті щури агресивні, але на надто сильні мешканці каналізації. Проте у великій кількості становлять значну загрозу.</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">скорпіон</string>
+  <string name="Scorpio_Gender">masculine</string>
+  <string name="Scorpio_Name_Objective">скорпіона</string>
+  <string name="Scorpio_Desc">Ці величезні членистоногі намагаються уникати ближнього бою, стріляючи отруйними голками з великої відстані.</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">старший монах</string>
+  <string name="Senior_Gender">masculine</string>
+  <string name="Senior_Name_Objective">старшого монаха</string>
+  <string name="Senior_Desc">Монахи - це фанатики, які присвятили себе захисту секретів свого народу від чужинців. Вони не покладаються на броню чи зброю, надаючи перевагу битися вручну. Цей монах опанував мистецтво блокування свого опонента.</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">тінь</string>
+  <string name="Shadow_Gender">feminine</string>
+  <string name="Shadow_Name_Objective">тінь</string>
+  <string name="Shadow_Desc">Тіні тихо блукають через руїни древньої в\'язниці, лише іноді трапляються на очі мандрівникам, зазвичай в останній їхній мандрівці.</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">гнолл шаман</string>
+  <string name="Shaman_Gender">masculine</string>
+  <string name="Shaman_Name_Objective">гнолла шамана</string>
+  <string name="Shaman_Desc">Найрозумніші з гноллів здатні пізнати магію шаманів. Гнолли шамани залюбки користується будь-якими закляттями, компенсуючи брак фізичної сили, а також аби убезпечити свій статус в суспільстві.</string>
+  <string name="Shaman_Killed">%s вбиває тебе розрядом блискавки...</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Name">громила-щитовик</string>
+  <string name="Shielded_Gender">masculine</string>
+  <string name="Shielded_Name_Objective">громилу-щитовика</string>
+  <string name="Shielded_Defense">прикрився</string>
+  <string name="Shielded_Desc">Громили - найбільші, найсильніші та найвитриваліші з усіх гноллів. Маючи значні пошкодження, вони здатні впадати в лють, завдаючи значної шкоди супротивнику. Цей громила прикрився гіганстьким щитом!</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Name">скелет</string>
+  <string name="Skeleton_Gender">masculine</string>
+  <string name="Skeleton_Name_Objective">скелета</string>
+  <string name="Skeleton_Desc">Скелети - це залишки загиблих мандрівників, які повстали під дією відгуків зловісної магії з глибин підземелля. Через те, що вони вже і так понівечені, вони можуть розлетітися на гострі уламки.</string>
+  <string name="Skeleton_Defense">прикрився</string>
+  <string name="Skeleton_Killed">Тебе пробило кістяним уламком...</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Name">печерний павук</string>
+  <string name="Spinner_Gender">masculine</string>
+  <string name="Spinner_Name_Objective">печерного павука</string>
+  <string name="Spinner_Desc">Ці пухнасті зелені павуки намагаються уникати прямих сутичок, даючи перевагу очікуванню, доки їхня жертва, заплутана в павутинні, повільно загине від отрути.</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">жива статуя</string>
+  <string name="Statue_Gender">feminine</string>
+  <string name="Statue_Name_Objective">живу статую</string>
+  <string name="Statue_Desc">Може здатися що це просто ще одна звичайна статуя, але червоні очі, що виблискують в темряві, не приховують злі наміри. Хоча вона і зроблена з каменю, її _%s_ виглядає справжнім.</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">суккуб</string>
+  <string name="Succubus_Gender">femenine</string>
+  <string name="Succubus_Name_Objective">succubus</string>
+  <string name="Succubus_Desc">Сукуби - демони, які набувають подоби гарних (зазвичай в готичному стилі) дівчат. Використовуючи магію, суккуби причаровують героя, позбавляючи його здатності атакувати, доки чари не розвіються.</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Name">рій мух</string>
+  <string name="Swarm_Gender">masculine</string>
+  <string name="Swarm_Name_Objective">рій мух</string>
+  <string name="Swarm_Desc">Смертоносний рій злобно дзижчить. Кожна не магічна атака розбиває рій на дві менші частини, кожна з яких не менш небезпечна ніж один цілий.</string>
+  <string name="Swarm_Defense">ухилився</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">Тенгу</string>
+  <string name="Tengu_Gender">masculine</string>
+  <string name="Tengu_Name_Objective">Тенгу</string>
+  <string name="Tengu_Desc">Тенгу - члени древнього клану вбивць. Вони відомі своїм уподобанням до пасток та сюрикенів.</string>
+  <string name="Tengu_Info1">Нарешті, свобода...</string>
+  <string name="Tengu_Info2">Попався, %s!</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">божевільний злодій</string>
+  <string name="Thief_Gender">masculine</string>
+  <string name="Thief_Name_Objective">божевільного злодія</string>
+  <string name="Thief_Desc">Глибинні рівні підземелля завжди слугували надійним схроном для будь-якого злочинця. Проте не кожний міг зберегти здоровий глузд надовго покинувши денне світло. Вже досить давно ці безумні бандити позабували хто вони є, і навіщо займаються своїми темними справами.</string>
+  <string name="Thief_Stole">%1$s вкрав %2$s у тебе!</string>
+  <string name="Thief_Carries">\n\n%1$s носить _%2$s_. Звичайно ж крадене.</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Name">дворф-чорнокнижник</string>
+  <string name="Warlock_Gender">masculine</string>
+  <string name="Warlock_Name_Objective">дворфа-чорнокнижника</string>
+  <string name="Warlock_Desc">Коли інтерес дворфів перескочив з технології на магію, чорнокнижника стали новою елітою. Почавши з магії стихій, вони перейшли на некромантію та демонологію.</string>
+  <string name="Warlock_Killed">%s знищує тебе стрілою тіней...</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Name">фантом</string>
+  <string name="Wraith_Gender">masculine</string>
+  <string name="Wraith_Name_Objective">фантома</string>
+  <string name="Wraith_Desc">Фантоми - мстивий дух грішника, чию могилу було понівечено. </string>
+  <string name="Wraith_Defense">ухилився</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">Йог-Джева</string>
+  <string name="Yog_Gender">masculine</string>
+  <string name="Yog_Name_Objective">Йог-Джеву</string>
+  <string name="Yog_Desc">Йог-Джева - старий бог, могутня сутність зі світу Хаосу. В давні часи древні дворфи ледь подолали його армію демонів, але вбити самого бога їм не вдалося. Вони заточили його глибині свого міста, переконані, що він занадто слабий, аби вирватися на волю.</string>
+  <string name="Yog_Info1">...</string>
+  <string name="Yog_Info2">Сподіваюсь, мені це привидилось...</string>
+  <string name="RottingFist_Name">гнійний кулак</string>
+  <string name="RottingFist_Gender">masculine</string>
+  <string name="RottingFist_Name_Objective">гнійного кулака</string>
+  <string name="RottingFist_Desc">Гнійний кулак старого бога</string>
+  <string name="BurningFist_Name">вогняний кулак</string>
+  <string name="BurningFist_Gender">masculine</string>
+  <string name="BurningFist_Name_Objective">вогняного кулака</string>
+  <string name="BurningFist_Desc">Вогняний кулак старого бога</string>
+  <string name="Larva_Name">личинка бога</string>
+  <string name="Larva_Gender">feminine</string>
+  <string name="Larva_Name_Objective">личинку бога</string>
+  <string name="Larva_Desc">Личинка старого бога</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">павуче яйце</string>
+  <string name="SpiderEgg_Gender">neuter</string>
+  <string name="SpiderEgg_Name_Objective">павуче яйце</string>
+  <string name="SpiderEgg_Desc">Яйце з тонкою оболонкою повільно пульсує, всередині проглядається щось багатоноге.</string>
+  <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">павучий кокон</string>
+  <string name="SpiderNest_Gender">masculine</string>
+  <string name="SpiderNest_Name_Objective">павучий кокон</string>
+  <string name="SpiderNest_Desc">Кокон з тонкого шовку і приховує щось живе.</string>
+  <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Name">павук-солдат</string>
+  <string name="SpiderServant_Gender">masculine</string>
+  <string name="SpiderServant_Name_Objective">павука-солдата</string>
+  <string name="SpiderServant_Desc">Найчисленніші представники павучого лігва. Захищають територію від раптових позіхань. Його хеліцери мають отруйні жала, тому укус має небезпечні наслідки для ворога.</string>
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">павук-робочий</string>
+  <string name="SpiderExploding_Gender">masculine</string>
+  <string name="SpiderExploding_Name_Objective">павука-робочого</string>
+  <string name="SpiderExploding_Desc">В спокійний для колонії час ці трудяги безпечні, але при появі загрози, хапають першу рослину, що росте поряд, і кидаються на ворога, наче камікадзе.</string>
+  <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">Псі-павук</string>
+  <string name="SpiderMind_Gender">masculine</string>
+  <string name="SpiderMind_Name_Objective">Псі-павука</string>
+  <string name="SpiderMind_Desc">Не зважаючи на свою крихкість, ці павуки мають незвичайні ментальні здібності, призначені для керування колонією. Може впливати на розум будь-якого створіння, проте дуже полохливий.</string>
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">королева павуків</string>
+  <string name="SpiderQueen_Gender">feminine</string>
+  <string name="SpiderQueen_Name_Objective">королеву павуків</string>
+  <string name="SpiderQueen_Desc">Тіло чарівної жінки поєднане з огидним павуком. Під її командуванням знаходяться всі мешканці цього кубла. Зустріч з даною особою має смертельні наслідки, тому не очікуйте милості. Ти в її володіннях.</string>
+  <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">водяний елементаль</string>
+  <string name="WaterElemental_Gender">masculine</string>
+  <string name="WaterElemental_Name_Objective">водяного елементаля</string>
+  <string name="WaterElemental_Desc">Водяні елементалі зустрічаються поблизу великих водойм. Зазвичай ці зв\'язані магією хвилі блукають по окрузі.</string>
+  <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">повітряний елементаль</string>
+  <string name="AirElemental_Gender">masculine</string>
+  <string name="AirElemental_Name_Objective">повітряного елементаля</string>
+  <string name="AirElemental_Desc">Повітряні елементалі - магічні істоти з ожилого повітря що літають.</string>
+  <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">земляний елементаль</string>
+  <string name="EarthElemental_Gender">masculine</string>
+  <string name="EarthElemental_Name_Objective">земляного елементаля</string>
+  <string name="EarthElemental_Desc">Земляні елементалі - це глиби землі, рухомі силами природи.</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">рухомий кристал</string>
+  <string name="Crystal_Gender">masculine</string>
+  <string name="Crystal_Name_Objective">рухомий кристал</string>
+  <string name="Crystal_Desc">Великий кристал пересувається в повітрі та сяє. Можливо він сповнений магічною енергією.</string>
+</resources>

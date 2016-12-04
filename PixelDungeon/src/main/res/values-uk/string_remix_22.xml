@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF ShadowLord CLASS-->
+  <string name="ShadowLord_Name">лорд тіней</string>
+  <string name="ShadowLord_Gender">masculine</string>
+  <string name="ShadowLord_Name_Objective">Лорд Тіней</string>
+  <string name="ShadowLord_Desc">Зроблений з чистого зла та темряви, хтось вважає що він є Старим Богом враховуючи на скільки він могутній. А інші вважають що він охороняє прохід до покоїв Старого Бога.</string>
+  <string name="ShadowLord_Intro">Приготуйся!</string>
+  <string name="ShadowLord_Death">Нііі.....</string>
+  <string name="AllowStatisticsCollectionScene_Title">Збір статистики по використанню</string>
+  <string name="AllowStatisticsCollectionScene_Request">Якщо ви дозволите, Remixed Pixel Dungeon буде збирати статистику використання. Ці дані будуть використані для:
+- Робити і виправити різні дрібні помилки (для фатальних помилок ви напевне дозволили надіслати звіт) 
+- Поліпшення ігрового балансу 
+- Специфічні проблеми продуктивності на скрутних пристроях
+- Публікувати забавні статистичні факти, час від часу
+Ви можете змінити своє рішення в будь-який час (натисніть на значок діаграми на головному екрані) </string>
+  <string name="AllowStatisticsCollectionScene_Allow">Дозволити</string>
+  <string name="AllowStatisticsCollectionScene_Deny">Заборонити</string>
+  <string name="Darkness_Info">Схоже на шматки вічної темряви, що плавають у повітрі</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Будь ласка, допоможіть покращити переклади Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Натисніть тут, щоб приєднатися до команди перекладачів Remixed Pixel Dungeon </string>
+</resources>

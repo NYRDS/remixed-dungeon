@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_ACMoisten">ЗМАЗАТИ</string>
+  <string name="Potion_SelectForMoisten">Обери предмет для змазування</string>
+  <string name="Potion_MoistenUseless">Схоже, що зілля витрачено дарма.</string>
+  <string name="Potion_RuneDissaperaed">Руна зникла з %s.</string>
+  <string name="Potion_ArrowMoisten">Стріли вдало змазані.</string>
+  <string name="Potion_ItemFliesAway">Предмет %s вилетів з твоїх рук.</string>
+  <string name="Potion_FoodRefreshed">%s тепер виглядає їстівним</string>
+</resources>

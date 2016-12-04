@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">золотий меч</string>
+    <string name="GoldenSword_Info">Зазвичай зброя, виготовлена з такого м\'якого металу, як золото, використовується в якості прикраси. Але не дивлячись на це, вона здатна щось розрубати.</string>
+    <string name="GoldenSword_Gender">masculine</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">золота статуя</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name_Objective">золоту статую</string>
+    <string name="GoldenStatue_Desc">Складно повірити в це, але ця надзвичайна статуя не є звичайним елементом декору, навпаки, це підступний монстр, який чекає обачного шукача пригод. На перший погляд ти міг би закластися, що _%s_ є продовженням руки цієї статуї.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">некромант</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
+    <string name="NecromancerNPC_Name_Objective">некроманта</string>
+    <string name="NecromancerNPC_Desc">Цей чолов\'яга середніх літ виглядає трохи роздратованим та схвильованим одночасно. Він вдягнутий в складені обладунки у вигляді скріплених кісток.</string>
+    <string name="NecromancerNPC_Intro">Ти гляди! Яке рідкісне видовище! Шукач пригод, який не є мертвяком. Неймовірно! Ох... Прошу вибачення, іноді мене заносить. Бачите, я некромант. І не дивлячись на те, що вивчення мерців та самої смерті у нас в пошані, вся ця одноманітність кому завгодно набридне. Але з іншого боку, я тут якраз через це. Згідно моїх підрахунків, всього через декілька тинів в цьому підземеллі станеться щось грандіозне. Відкриється прохід в _Некрополь_, древнє місто мертвих. І... я і так забагато базікою, більше не варто втрачати час. Мені треба підготуватися, можливо ми повернемося до цієї розмови _пізніше_.</string>
+    <string name="NecromancerNPC_Message1">Так мало часу, так бракує його...</string>
+    <string name="NecromancerNPC_Message2">Я мушу підготуватися.</string>
+    <string name="NecromancerNPC_Message3">Я чую поклик мертвих.</string>
+    <string name="NecromancerNPC_Message4">В Некрополі зачаїлося щось особливе.</string>
+
+    <string name="RatKing_Name_Objective">короля щурів</string>
+    <string name="RatKing_Gender">masculine</string>
+</resources>

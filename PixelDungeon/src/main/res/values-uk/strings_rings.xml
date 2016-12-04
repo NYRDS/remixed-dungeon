@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">перстень з %s</string>
+  <string name="Ring_Info">Це металічне кільце прикрашено %s, що переливається на світлі. Хто знає, який ефект воно може проявити, якщо одягти його?</string>
+  <string name="Ring_Identify">%1$s достатньо добре тобі відомий, аби ідентифікувати його. Це %2$s.</string>
+  <string-array name="Ring_Gems">
+    <item>діамантом</item>
+    <item>опалом</item>
+    <item>гранатом</item>
+    <item>рубіном</item>
+    <item>аметистом</item>
+    <item>топазом</item>
+    <item>оніксом</item>
+    <item>турмаліном</item>
+    <item>смарагдом</item>
+    <item>сапфіром</item>
+    <item>кварцом</item>
+    <item>агатом</item>
+  </string-array>
+  <string name="Ring_Info1">Ти можеш носити тільки 2 персня водночас</string>
+  <string name="Ring_Info2">Проклятий %s не зняти. Боляче.</string>
+  <string name="Ring_Info3a">%1$s\n\n%2$s на твоєму пальці %3$s.</string>
+  <string name="Ring_Info3b">проклято, ти не в змозі зняти його.</string>
+  <string name="Ring_Info4">%1$s\n\nТи відчуваєш зловісну магію, що прокралась в %2$s.</string>
+  <string name="Ring_BuffKnown">Це %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">Перстень влучності</string>
+  <string name="RingOfAccuracy_Info">Цей перстень покращить твій шанс попасти по ворогу.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">Перстень виявлення</string>
+  <string name="RingOfDetection_Info">Це кільце дозволить тобі краще помічати приховане, таке як пастки та потаємні двері, не витрачаючи час на пошуки. Послаблений перстень навпаки, затьмарить твою пильність, ускладнюючи пошук секретів.</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">Перстень стихій</string>
+  <string name="RingOfElements_Info">Цей перстень забезпечує додатковим захистом від стихійних проявів сили, такі як вогонь, електрика, газу і т.п. Також він знижує час дії негативних ефектів.</string>
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">Перстень ухиляння</string>
+  <string name="RingOfEvasion_Info">Цей перстень збільшить твій шанс ухилитися від ворожої атаки.</string>
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">Перстень гендляра</string>
+  <string name="RingOfHaggler_Info">Цей перстень не має чарівних ефектів, проте воно показує всім торговцям, що перед ними член гільдії злодіїв. Як правило, вони готові надати знижку, аби не мати проблем із гільдією. Покращення даного персня не принесе додаткової користі.</string>
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">Перстень поспіху</string>
+  <string name="RingOfHaste_Info">Перстень прискорить плин часу для свого володаря, завдяки чому той зможе швидше справлятися з поточними справами.</string>
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">Перстень травник</string>
+  <string name="RingOfHerbalism_Info">Цей перстень збільшить твій шанс отримати росу чи насіння з витоптаної трави.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">Перстень регенерації</string>
+  <string name="RingOfMending_Info">Цей перстень покращить регенеративні здібності володаря, дозволяючи швидше поновлювати здоров\'я. Послаблений перстень навпаки, погіршує і може повністю зупинити регенерацію.</string>
+  <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">Перстень сили</string>
+  <string name="RingOfPower_Info">Цей перстень посилює чарівні здатності палички володаря. Послаблене кільце має обернений ефект.</string>
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">Перстень ситості</string>
+  <string name="RingOfSatiety_Info">Носій персня може довше протриматись без їжі. Послаблений перстень посилює голод.</string>
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">Перстень тіней</string>
+  <string name="RingOfShadows_Info">Вороги мають менший шанс помітити власника персня. Послаблений перстень навпаки, приверне зайву увагу, якої можна було б уникнути.</string>
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">Перстень шипів</string>
+  <string name="RingOfThorns_Info">Самий перстень не вкрито шипами, але кожен хто торкнеться його власника відчує на власній шкурі частину нанесеної тобі шкоди. Покращення персні не додасть додаткової користі.</string>
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Перстень кам\'яної крові</string>
+  <string name="RingOfStoneWalking_Info">Цей перстень виготовлене з міцного каменю, і виглядало би звичайним, якби не крапля рідкої крові, що пульсує, замість каменю. В середині вказівник, що вказує на щось схоже на стіну та розбите серце... Що б це значило?</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Замуровано в камені. На віки.</string>
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Павучий оберіг</string>
+  <string name="SpiderCharm_Info">Це цікаве брязкальце випромінює деяку ауру. Цікаво, що станеться, якщо одягти її?</string>
+  <string name="SpiderCharm_Use">ВИКОРИСТАТИ</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">Дивний кристал</string>
+  <string name="ChaosCrystal_Name_1">Хаотичний кристал</string>
+  <string name="ChaosCrystal_Name_2">Кристал хаосу</string>
+  <string name="ChaosCrystal_Info">Торкаючись його, ти відчуваєш потоки енергії, які течуть по твоїх руках.</string>
+  <string name="ChaosCrystal_Info_1">Сили Хаосу течуть крізь цей в кристалі. Можливо він на щось й знадобиться.</string>
+  <string name="ChaosCrystal_Info_2">Так! Тепер ти знаєш, що його можна об\'єднати з одним із твоїх предметів. І що далі?</string>
+  <string name="ChaosCrystal_Use">ВИКОРИСТАТИ</string>
+  <string name="ChaosCrystal_Fuse">ОБ\'ЄДНАТИ</string>
+  <string name="ChaosCrystal_Prompt">Обери місце для мітки Хаосу</string>
+  <string name="ChaosCrystal_SelectForFuse">Обери предмет, аби об\'єднати його з кристалом</string>
+  <string name="ChaosCrystal_ScrollFused">Накарбована на сувої руна поглинула кристал, і тепер це %s</string>
+  <string name="ChaosCrystal_SwordFused">Кристал об\'єднався з твоєю зброєю і прийняв форму меча</string>
+  <string name="ChaosCrystal_BowFused">Кристал об\'єднався з твоїм луком і прийняв форму лука</string>
+  <string name="ChaosCrystal_StaffFused">Кристал об\'єднався з твоєю паличкою і прийняв форму посоха</string>
+  <string name="CorpseDust_Buff">Жадоби крові</string>
+  <string name="DriedRose_Buff">Зачарування</string>
+  <string name="DriedRose_CursedBuff">Влюбливий</string>
+  <string name="RatSkull_Buff">Щуролов</string>
+  <string name="RatKingCrown_Buff">Щурності</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">Корона щурячого короля</string>
+  <string name="RatKingCrown_Info">Золота корона Його Щурності, символ його влади</string>
+</resources>

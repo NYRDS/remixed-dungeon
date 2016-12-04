@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE items/armor-->
+  <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">%s боляче впивається в твою шкіру</string>
+  <string name="Armor_Identify">Ти доволі знайомий з %1$s, щоб ідентифікувати її. Це %2$s.</string>
+  <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">Взаємодія різних видів магії затерла зачарування на цій броні!</string>
+  <string name="Armor_Info1">Ця %1$s забезпечує поглинання шкоди до %2$d очок за атаку.</string>
+  <string name="Armor_Info2">
+Через вашу недостатньо велику силу, швидкість переміщення та навички захисту зменшуються.</string>
+  <string name="Armor_Info3">
+
+Через вашу недостатньо велику силу, при одягнені цієї броні зменшаться швидкість переміщення та навички захисту. </string>
+  <string name="Armor_Info4">
+
+Типова %1$s забезпечує поглинання шкоди до %2$d очок за атаку та вимагає %3$d очок сили.</string>
+  <string name="Armor_Info5">Скоріше за всього, ця броня занадто тяжка для тебе.</string>
+  <string name="Armor_Info6">Вона зачарована.</string>
+  <string name="Armor_Info7a">\n\nНа тобі зараз %1$s%2$s.</string>
+  <string name="Armor_Info7b"> , та тому що вона проклята, ти не можеш її зняти</string>
+  <string name="Armor_Info8">
+
+Ти можеш відчути злісну магію, приховану у %s.</string>
+  <string name="Armor_Glyph">гліф</string>
+  <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">Ця річ виглядає прекрасно!</string>
+  <string name="ClassArmor_LowHealt">Тобі не вистачає здоров\'я!</string>
+  <string name="ClassArmor_NotEquipped">Ти маєш одягнути цю броню, щоб використати особливе вміння!</string>
+  <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">ткана броня</string>
+  <string name="ClothArmor_Desc">Ця легка броня забезпечує невеликий захист.</string>
+  <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Ельфійська мантія</string>
+  <string name="ElfArmor_Desc">За допомогою цієї мантії ельф зможе викликати сили самої природи. Висока трава буде рости в мить, навіть через твердий камінь, зупиняючи всіх ворогів у полі зору.</string>
+  <string name="ElfArmor_ACSpecial">КЛИЧ ПРИРОДИ</string>
+  <string name="ElfArmor_NotElf">Тільки ельфи можуть використовувати цю броню!</string>
+  <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">мисливський плащ</string>
+  <string name="HuntressArmor_Desc">Мисливиця з таким плащем можете створити вихор спектральних клинків. Кожен з цих клинків буде спрямований на одного ворога в поле зору мисливиці, завдаючи шкоди залежно від вдягнутої нею зброї ближнього бою.</string>
+  <string name="HuntressArmor_ACSpecial">СПЕКТРАЛЬНІ КЛИНКИ</string>
+  <string name="HuntressArmor_NoEnemies">Ворогів у полі зору немає.</string>
+  <string name="HuntressArmor_NotHuntress">Тільки мисливиці можуть використовувати цю броню!</string>
+  <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">шкіряна броня</string>
+  <string name="LeatherArmor_Desc">Броня з висушеної шкіри монстра. Не така легка, як ткана броня, але захищає краще.</string>
+  <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">роба мага</string>
+  <string name="MageArmor_Desc">Одягнувши цю чудову робу, маг може викликати заклинання розплавленої землі: усі вороги в його полі зору почнуть палати та не зможуть зрушити з місця.</string>
+  <string name="MageArmor_ACSpecial">РОЗПЛАВЛЕНА ЗЕМЛЯ</string>
+  <string name="MageArmor_NotMage">Тільки маги можуть використовувати цю броню!</string>
+  <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">кольчуга</string>
+  <string name="MailArmor_Desc">Переплетені металеві ланки роблять міцний, але гнучкий обладунок.</string>
+  <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">лати</string>
+  <string name="PlateArmor_Desc">Величезні металеві плити з\'єднуються разом в костюмі, який забезпечує неперевершений захист будь-якого шукача пригод, що зможе підняти гігантську вагу цих лат.</string>
+  <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">одяг крадія</string>
+  <string name="RogueArmor_Desc">Одягнувши цей темний одяг, крадій може виконати трюк, який називається \"димова бомба\" (хоча ніякі реальні вибухові речовини не використовуються): він засліплює ворогів, які могли бачити його і відскакує.</string>
+  <string name="RogueArmor_ACSpecial">ДИМОВА БОМБА</string>
+  <string name="RogueArmor_NotRogue">Тільки крадії можуть використовувати цю броню!</string>
+  <string name="RogueArmor_Fov">Ти можеш стрибнути тільки на порожнє місце в полі зору.</string>
+  <string name="RogueArmor_Prompt">Вибери місце для стрибку </string>
+  <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">луската броня</string>
+  <string name="ScaleArmor_Desc">Металеві луски, зшиті на шкіряному жилеті створюють гнучкі обладунки, що прекрасно захищають.</string>
+  <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">воїнський обладунок</string>
+  <string name="WarriorArmor_Desc">У той час як цей обладунок виглядає важким, він дозволяє виконувати воїну героїчний стрибок до цільового місця, при цьому оглушуючи всіх сусідніх ворогів  на місці приземлення.</string>
+  <string name="WarriorArmor_ACSpecial">ГЕРОЇЧНИЙ СТРИБОК</string>
+  <string name="WarriorArmor_NotWarrior">Тільки воїни можуть використовувати цю броню!</string>
+  <string name="WarriorArmor_Prompt">Вибери напрям для стрибку</string>
+  <!--PACKAGE /armor/Gyphs-->
+  <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">%s пристрасті</string>
+  <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">%s анти-ентропії</string>
+  <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">%s пружності</string>
+  <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">%s переміщення</string>
+  <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">%s сплутування</string>
+  <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">%s метаболізму</string>
+  <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">%s помноження</string>
+  <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">%s потенціалу</string>
+  <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">%s смороду</string>
+  <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">%s в\'язкості</string>
+  <string name="Viscosity_Status">відкладено %d</string>
+  <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Відкладена шкода (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s вбив тебе...</string>
+</resources>

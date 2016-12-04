@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ArmoredStatue -->
+    <string name="ArmoredStatue_Name">жива статуя</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
+    <string name="ArmoredStatue_Name_Objective">живу статую</string>
+    <string name="ArmoredStatue_Desc">Навряд чи кому могло прийти в голову що це звичайна статуя. І справа не в червоних очах, що виблискують в темряві, а в тому, що ніхто в ясному розумі не вдів би на неї _%s_.</string>
+
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">павук-страж</string>
+    <string name="SpiderGuard_Gender">masculine</string>
+    <string name="SpiderGuard_Name_Objective">павука-стража</string>
+    <string name="SpiderGuard_Desc">Як і павуки-солдати, стражі прикликані захищати покої свого царства. Їхня отрута викликає тимчасовий параліч, що перетворює вкушеного в легку здобич.</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">янтарний павук</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
+    <string name="SpiderMindAmber_Name_Objective">янтарного павука</string>
+    <string name="SpiderMindAmber_Desc">Янтарний павук, дуже рідкісна і загадкова істота. Вони мають такі ж здібності, як і псі-павуки але значно сильніші фізично. Назва походить від кольору його мозкових мішечків під час атаки на жертву, які тяжко не помітити .</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">Піратський набір</string>
+    <string name="PirateSet_Info">Арр! відчуваєш в собі сили приєднатися до наших хлопців!? Чи ти просто ще один сухопутний щур? Сподіваюся що ні, адже ці штуковина лише для справжніх піратів, в сенсі... Арр!</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">Так, видалити його!</string>
+    <string name="WndSaveSlotSelect_Delete_No">Ні</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Ти дійсно бажаєш видалити цей слот?</string>
+</resources>

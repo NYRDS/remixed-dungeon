@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Грати</string>
+  <string name="TitleScene_Highscores">Рекорди</string>
+  <string name="TitleScene_Badges">Значки</string>
+  <string name="TitleScene_About">Про гру</string>
+  <string name="TitleScene_InternalStorageLow">Недостатньо місця\n у внутрішній пам\'яті пристрою\n Твоя гра може не зберегтись!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon від NYRDS основана на Pixel Dungeon Source від Watabou.</string>
+  <string name="AboutScene_Code">Код:</string>
+  <string name="AboutScene_Graphics">Графіка:</string>
+  <string name="AboutScene_Music">Музика:</string>
+  <string name="AboutScene_Sound">Звуки:</string>
+  <string name="AboutScene_Thanks">Спеціальна подяка:</string>
+  <string name="AboutScene_Email_Us">Наша пошта:</string>
+  <string name="AboutScene_OurSite">Наша веб-сторінка:</string>
+  <string name="AboutScene_Snd">Відправити E-Mail</string>
+  <string name="AboutScene_Translation">Переклад:</string>
+  <string name="AboutScene_Translation_Names">Ukrainian transifex team
+(місце для тих, хто зможе це все вичитати та перевірити :) )</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">Кращі результати</string>
+  <string name="RankingsScene_Total">Всього ігор зіграно:</string>
+  <string name="RankingsScene_NoGames">Жодної гри ще не зіграно.</string>
+  <string name="RankingsScene_NoInfo">Додаткова інформація відсутня</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Завантажити гру</string>
+  <string name="StartScene_New">Нова гра</string>
+  <string name="StartScene_Erase">Стерти поточну гру</string>
+  <string name="StartScene_Depth">Глибина: %1$d\nРівень: %2$d</string>
+  <string name="StartScene_Really">Ти справді бажаєш розпочати нову гру?</string>
+  <string name="StartScene_Warning">Твій поточний ігровий прогрес буде втрачено.</string>
+  <string name="StartScene_Yes">Так, розпочати нову гру</string>
+  <string name="StartScene_No">Ні, повернутися до головного меню</string>
+  <string name="StartScene_Unlock">Щоб відкрити цей клас персонажа, убийте 3-го боса будь-яким іншим класом</string>
+  <string name="StartScene_UnlockElf">Щоб відкрити цей клас персонажа, убийте 4-го боса будь-яким іншим класом</string>
+  <string name="StartScene_WinGame">Щоб відкрити \"Випробування\", пройдіть гру будь-яким персонажем.</string>
+  <string name="StartScene_DifficultySelect">Обери свою долю</string>
+  <string name="StartScene_DifficultyEasy">Простий (з рекламою)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">Звичайний з сейвами (та рекламою)</string>
+  <string name="StartScene_DifficultyNormal">Звичайний</string>
+  <string name="StartScene_DifficultyExpert">Експерт</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">Спускаємося...</string>
+  <string name="InterLevelScene_Ascending">Піднімаємося...</string>
+  <string name="InterLevelScene_Loading">Завантажуємося...</string>
+  <string name="InterLevelScene_Resurrecting">Воскрешаємося...</string>
+  <string name="InterLevelScene_Returning">Повертаємося...</string>
+  <string name="InterLevelScene_Falling">Падаємо...</string>
+  <string name="InterLevelScene_FileNotFound">Файл не знайдено. До чого б це...</string>
+  <string name="InterLevelScene_ErrorGeneric">Щось пішло не так...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Гру закінчено</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">Типовий масштаб</string>
+  <string name="WndSettings_TextScaleDefault">Типовий шрифт</string>
+  <string name="WndSettings_ScaleUp">Масштабувати GUI</string>
+  <string name="WndSettings_Immersive">Режим занурення</string>
+  <string name="WndSettings_Music">Музика</string>
+  <string name="WndSettings_Sound">Звуки</string>
+  <string name="WndSettings_Brightness">Яскравість</string>
+  <string name="WndSettings_SwitchPort">Портретний режим</string>
+  <string name="WndSettings_SwitchLand">Альбомний режим</string>
+  <string name="WndSettings_SelectLanguage">Обрати мову</string>
+  <string name="WndSettings_SecondQuickslot">Другий слот</string>
+  <string name="WndSettings_ThirdQuickslot">Третій слот</string>
+  <string name="WndSettings_ExperementalFont">Новий шрифт</string>
+  <string name="WndSettings_ClassicFont">Класичний шрифт</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">Виберіть слот</string>
+  <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">Виберіть мод</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Наша гра перервалася...\n Вибачте.\nБудь ласка, надішліть звіт, аби допомогти виправити це.</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Бант</string>
+    <string name="Bowknot_Info">Рожева прикраса, блискуча стрічка зав\'язана у вузол з кріпленням до волосся.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Темні окуляри</string>
+    <string name="Shades_Info">Дехто скаже, що підземелля занадто темні, аби носити темні окуляри, але вони, просто, недостатньо круті.</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Ковпак</string>
+    <string name="Capotain_Info">високий капелюх, що звужується по краях, Він зазвичай асоціюється з пуританами, але вам не обов\'язково бути досить релігійними, аби носити її. З якоїсь причини на ній є ярлик, з написом \"Соломон\".</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Феска</string>
+    <string name="Fez_Info">Капелюх у вигляді усіченого конусу із червоної повсті та пензликом на маківці. І ні, він не робить світ трьохвимірним.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Котячі вушка</string>
+    <string name="NekoEars_Info">Іноді хочеться змити з себе залишки монстрів та бруд, та відчути себе білим та пухнастим... Або ж можна обмежитися гарними котячими вушками.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Кролячі вуха</string>
+    <string name="RabbitEars_Info">Добре відомо, що кролики - досить удачлива тварючка, і їхня вдача передається тому, хто отримає частину тіла кролика. З іншого боку, бути вбитим заради того, аби з ваших вух зробили прикрасу не дуже то і велика вдача.</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Гарбуз</string>
+    <string name="Pumpkin_Info">В давнину Гарбузовий народ був гордливою та квітучою нацією. Але все змінилося, коли прийшли люди і залишили після себе руїни. Лише вискоблені голови людей-Гарбузів нагадують про ті жахливі часи.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Нічний ковпак</string>
+    <string name="Nightcap_Info">Підкорення підземелля в нічну пору може бути досить нудною справою. От якби одягти теплий та затишний ковпак та розслабитись, то вас покинуть всі ваші турботи.</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Капелюх чарівника</string>
+    <string name="WizardHat_Info">Чудовий шовковий капелюх, оздоблений зорями. Колись вважалось, що могутні чарівники носили особливий одяг, який підсилював їхню силу. Цей капелюх, звичайно же ж, не надає приросту сили, але коли ти його носиш, то відчуваєш, що давні розповіді не брешуть.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Перелік аксесуарів</string>
+    <string name="WndHats_SlotTitle">Одягнуто</string>
+    <string name="WndHats_NoConnectionMsg">Не вдалося підєднатися до Google Play.</string>
+    <string name="WndHats_Purchased">Зрозумів!</string>
+
+    <string name="WndHats_BackButton">Назад</string>
+    <string name="WndHats_BuyButton">Придбати</string>
+    <string name="WndHats_EquipButton">Одягти</string>
+    <string name="WndHats_InfoButton">Переглянути</string>
+    <string name="WndHats_UnequipButton">Зняти</string>
+</resources>
