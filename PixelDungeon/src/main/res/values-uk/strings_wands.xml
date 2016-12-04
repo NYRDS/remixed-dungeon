@@ -31,7 +31,7 @@
   <!--STRINGS OF WandOfAvalanche CLASS-->
   <string name="WandOfAvalanche_Name">Паличка обвалу</string>
   <string name="WandOfAvalanche_Info">Коли розряд палички вдаряє в стіну (чи іншу тверду перепону), він викликає обвал, який наносить значну шкоду по навколишнім ворогам та приголомшуючи їх.</string>
-  <string name="WandOfAvalanche_Info1">Ти вбився власною паличкою обвалу…</string>
+  <string name="WandOfAvalanche_Info1">Ти вбився власною паличкою обвалу...</string>
   <!--STRINGS OF WandOfBlink CLASS-->
   <string name="WandOfBlink_Name">Паличка стрибку</string>
   <string name="WandOfBlink_Info">Паличка дозволить тобі пересуватися в просторі. Істоти та неживі предмети будуть заважати перенесенню.</string>
@@ -41,7 +41,7 @@
   <!--STRINGS OF WandOfFirebolt CLASS-->
   <string name="WandOfFirebolt_Name">Паличка вогнеплюй</string>
   <string name="WandOfFirebolt_Info">Паличка випускає згусток чарівного полум\'я, який здатний підпалити що-небудь, а також завдати шкоду ворогу, підпаливши його.</string>
-  <string name="WandOfFirebolt_Info1">Ти спалив сам себе своєю ж паличкою…</string>
+  <string name="WandOfFirebolt_Info1">Ти спалив сам себе своєю ж паличкою...</string>
   <!--STRINGS OF WandOfFlock CLASS-->
   <string name="WandOfFlock_Name">Паличка отари</string>
   <string name="WandOfFlock_Info">Паличка прикликає отару овець, які утворюють тимчасову перешкоду, яку неможливо подолати.</string>
@@ -60,12 +60,12 @@
   <!--STRINGS OF WandOfLightning CLASS-->
   <string name="WandOfLightning_Name">Паличка блискавки</string>
   <string name="WandOfLightning_Info">Ця паличка випускає розряд блискавки який вдаряє кілька цілей, що стоять поруч.</string>
-  <string name="WandOfLightning_Info1">Тебе спалило твоєю ж паличкою блискавки…</string>
+  <string name="WandOfLightning_Info1">Тебе спалило твоєю ж паличкою блискавки...</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
   <string name="WandOfMagicMissile_Name">Паличка магічних снарядів</string>
   <string name="WandOfMagicMissile_Info">Паличка випускає розряд магічної енергії, що наносить середню шкоду.</string>
   <string name="WandOfMagicMissile_ACDisenchant">РОЗЧАРУВАТИ</string>
-  <string name="WandOfMagicMissile_Info1">Ти вбив сам себе своєю паличкою магічних снарядів…</string>
+  <string name="WandOfMagicMissile_Info1">Ти вбив сам себе своєю паличкою магічних снарядів...</string>
   <string name="WandOfMagicMissile_SelectWand">Обери паличку для покращення</string>
   <string name="WandOfMagicMissile_Desinchanted">ти розчарував паличку магічних снарядів та використав для оновлення предмету %s</string>
   <!--STRINGS OF WandOfPoison CLASS-->
@@ -74,7 +74,7 @@
   <string name="WandOfPoison_Info1">нічого не трапилося</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
   <string name="WandOfRegrowth_Name">Паличка росту</string>
-  <string name="WandOfRegrowth_Info">\"Коли обривається життя, нове починає зростати… Безкінечний цикл не перервати!\"</string>
+  <string name="WandOfRegrowth_Info">\"Коли обривається життя, нове починає зростати... Безкінечний цикл не перервати!\"</string>
   <string name="WandOfRegrowth_Info1">нічого не трапилося</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
   <string name="WandOfSlowness_Name">Паличка сповільнення</string>

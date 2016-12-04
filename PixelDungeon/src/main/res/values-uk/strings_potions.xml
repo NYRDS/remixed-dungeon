@@ -39,7 +39,7 @@
   <!--STRINGS OF PotionOfInvisibility CLASS-->
   <string name="PotionOfInvisibility_Name">Зілля невидимості</string>
   <string name="PotionOfInvisibility_Info">Якщо випити цей напій ти станеш тимчасово невидимим. Доки ти невидимий, вороги не зможуть помітити тебе. Атака ворога, а також використання палички або сувою перед очима супротивника, розсіює ефект.</string>
-  <string name="PotionOfInvisibility_Apply">Ти бачив що твої руки зникли!</string>
+  <string name="PotionOfInvisibility_Apply">Ти побачив, як твої руки зникли!</string>
   <!--STRINGS OF PotionOfLevitation CLASS-->
   <string name="PotionOfLevitation_Name">Зілля левітації</string>
   <string name="PotionOfLevitation_Info">Ця рідина змусить тебе зависати в повітрі, ти зможеш дрейфувати без особливих зусиль над пастками. Полум\'я і гази наповнюють повітря, тому, і не вийде їх оминути, коли ти перебуваєш в повітрі.</string>
@@ -68,7 +68,7 @@
   <!--STRINGS OF PotionOfStrength CLASS-->
   <string name="PotionOfStrength_Name">Зілля сили</string>
   <string name="PotionOfStrength_Info">Ця могутня рідина збільшить твою силу на 1 пункт.</string>
-  <string name="PotionOfStrength_Apply">Отримана сила пульсує в вашій крові</string>
+  <string name="PotionOfStrength_Apply">Новонабрана сила пульсує в твоєму тілі.</string>
   <string name="PotionOfStrength_StaApply">+1 сили</string>
   <!--STRINGS OF PotionOfToxicGas CLASS-->
   <string name="PotionOfToxicGas_Name">Зілля токсичного газу</string>

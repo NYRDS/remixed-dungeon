@@ -60,8 +60,8 @@
   <string name="RogueArmor_Desc">Одягнувши цей темний одяг, крадій може виконати трюк, який називається \"димова бомба\" (хоча ніякі реальні вибухові речовини не використовуються): він засліплює ворогів, які могли бачити його і відскакує.</string>
   <string name="RogueArmor_ACSpecial">ДИМОВА БОМБА</string>
   <string name="RogueArmor_NotRogue">Тільки крадії можуть використовувати цю броню!</string>
-  <string name="RogueArmor_Fov">Ви можете стрибнути тільки на порожнє місце у вашому полі зору.</string>
-  <string name="RogueArmor_Prompt">Виберіть місце для стрибку </string>
+  <string name="RogueArmor_Fov">Ти можеш стрибнути тільки на порожнє місце в полі зору.</string>
+  <string name="RogueArmor_Prompt">Вибери місце для стрибку </string>
   <!--STRINGS OF ScaleArmor CLASS-->
   <string name="ScaleArmor_Name">луската броня</string>
   <string name="ScaleArmor_Desc">Металеві луски, зшиті на шкіряному жилеті створюють гнучкі обладунки, що прекрасно захищають.</string>
@@ -70,7 +70,7 @@
   <string name="WarriorArmor_Desc">У той час як цей обладунок виглядає важким, він дозволяє виконувати воїну героїчний стрибок до цільового місця, при цьому оглушуючи всіх сусідніх ворогів  на місці приземлення.</string>
   <string name="WarriorArmor_ACSpecial">ГЕРОЇЧНИЙ СТРИБОК</string>
   <string name="WarriorArmor_NotWarrior">Тільки воїни можуть використовувати цю броню!</string>
-  <string name="WarriorArmor_Prompt">Виберіть місце стрибку</string>
+  <string name="WarriorArmor_Prompt">Вибери напрям для стрибку</string>
   <!--PACKAGE /armor/Gyphs-->
   <!--STRINGS OF Affection CLASS-->
   <string name="Affection_Txt">%s пристрасті</string>
