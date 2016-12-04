@@ -106,11 +106,11 @@
   <string name="Chasm_Yes">Так, я знаю що роблю.</string>
   <string name="Chasm_No">Ні, я змінив свою думку</string>
   <string name="Chasm_Jump">Ти впевнений що бажаєш стрибнути донизу? Можеш розбитися.</string>
-  <string name="Chasm_Info">Ти розбився…</string>
+  <string name="Chasm_Info">Ти розбився...</string>
   <!--PACKAGE /levels/traps-->
   <!--STRINGS OF AlarmTrap CLASS-->
   <string name="AlarmTrap_Desc">Пастка генерує пронизливий звук, який лунає підземеллям!</string>
   <!--STRINGS OF LightningTrap CLASS-->
   <string name="LightningTrap_Name">електрична пастка</string>
-  <string name="LightningTrap_Desc">Тебе прибило розрядом електричної пастки…</string>
+  <string name="LightningTrap_Desc">Тебе прибило розрядом електричної пастки...</string>
 </resources>

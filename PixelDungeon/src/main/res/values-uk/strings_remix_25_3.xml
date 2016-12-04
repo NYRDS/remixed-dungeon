@@ -7,11 +7,11 @@
 
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">Щелепа вампіра</string>
-    <string name="VampireSkull_Info">Цю маску виготовлено з повністю натурального черепа вампіра. Фактично це і є череп вампіра… череп вампіра з великою головою. Який жах.</string>
+    <string name="VampireSkull_Info">Цю маску виготовлено з повністю натурального черепа вампіра. Фактично це і є череп вампіра... череп вампіра з великою головою. Який жах.</string>
 
     <!-- STRINGS OF ZombieMask CLASS -->
     <string name="ZombieMask_Name">Маска зомбі</string>
-    <string name="ZombieMask_Info">Ви колись мріяли виглядати як безсмертний герой, який загинув у бою… неодноразово? Добре, це твоя чудова нагода.</string>
+    <string name="ZombieMask_Info">Ви колись мріяли виглядати як безсмертний герой, який загинув у бою... неодноразово? Добре, це твоя чудова нагода.</string>
 
     <!-- Item descriptions -->
     <!-- STRINGS OF Candy CLASS -->
@@ -48,7 +48,7 @@
     <string name="ScarecrowNPC_Name">пугач</string>
     <string name="ScarecrowNPC_Gender">masculine</string>
     <string name="ScarecrowNPC_Name_Objective">пугача</string>
-    <string name="ScarecrowNPC_Desc">Без усяких сумнівів… цей пугач слідкує за кожним твоїм кроком. Погляд його яскравих, червоних очей бачить тебе наскрізь, але, на подив, ти відчуваєш, що він не становить загрози.</string>
+    <string name="ScarecrowNPC_Desc">Без усяких сумнівів... цей пугач слідкує за кожним твоїм кроком. Погляд його яскравих, червоних очей бачить тебе наскрізь, але, на подив, ти відчуваєш, що він не становить загрози.</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Привіт малий, як твої справи?
 Тобі задачку маю для забави!
 

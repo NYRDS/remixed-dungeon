@@ -87,17 +87,6 @@ public class StatusPane extends Component {
 				GameScene.show( new WndHero() );
 			}
 		} );
-		
-		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
-		add( btnMenu );
-
-		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
-
-		if(!Flavours.haveHats()) {
-			btnHats.enable(false);
-		}
-
-		add(btnHats);
 
 		avatar = hero.getHeroSprite().avatar();
 		add(avatar);
@@ -147,6 +136,17 @@ public class StatusPane extends Component {
 		
 		buffs = new BuffIndicator( hero );
 		add( buffs );
+
+		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
+		add( btnMenu );
+
+		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
+
+		if(!Flavours.haveHats()) {
+			btnHats.enable(false);
+		}
+
+		add(btnHats);
 	}
 	
 	@Override

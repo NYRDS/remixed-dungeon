@@ -64,4 +64,5 @@
   <string name="WndSaveSlotSelect_SelectSlot">选择空格</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">选择mod</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">游戏崩了...\n 抱歉。\n请发送崩溃报告来帮助我们修复它。</string>
 </resources>
