@@ -1,0 +1,9 @@
+machine:
+  java:
+    version: openjdk8
+dependencies:
+  cache_directories:
+    - ~/.gradle
+    - ~/.android
+  pre:
+    - chmod +x gradlew
