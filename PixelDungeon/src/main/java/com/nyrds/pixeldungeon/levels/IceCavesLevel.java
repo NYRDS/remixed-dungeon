@@ -51,7 +51,7 @@ public class IceCavesLevel extends RegularLevel {
 	protected void assignRoomType() {
 		super.assignRoomType();
 
-		Blacksmith.Quest.spawn( rooms );
+	//	Blacksmith.Quest.spawn( rooms );
 	}
 
 	@Override
@@ -183,9 +183,9 @@ public class IceCavesLevel extends RegularLevel {
 		case Terrain.EXIT:
 			return Game.getVar(R.string.Caves_TileDescExit);
 		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileDescHighGrass);
+			return Game.getVar(R.string.IceCaves_TileDescHighGrass);
 		case Terrain.WALL_DECO:
-			return Game.getVar(R.string.Caves_TileDescDeco);
+			return Game.getVar(R.string.IceCaves_TileDescDeco);
 		case Terrain.BOOKSHELF:
 			return Game.getVar(R.string.Caves_TileDescBookshelf);
 		default:
