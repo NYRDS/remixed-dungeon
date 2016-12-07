@@ -13,6 +13,7 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
+import com.nyrds.pixeldungeon.mobs.icecaves.Kobold;
 import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.EnslavedSoul;
@@ -79,7 +80,7 @@ public class MobFactory {
 	}
 	
 	private static void initMobsMap() {
-		
+
 		mMobsList = new HashMap<>();
 		registerMobClass(Rat.class);
 		registerMobClass(Albino.class);
@@ -90,25 +91,25 @@ public class MobFactory {
 		registerMobClass(Skeleton.class);
 		registerMobClass(RatKing.class);
 		registerMobClass(Goo.class);
-		
+
 		registerMobClass(Shaman.class);
 		registerMobClass(Shadow.class);
 		registerMobClass(Bat.class);
 		registerMobClass(Brute.class);
 		registerMobClass(Tengu.class);
-		
+
 		registerMobClass(SpiderServant.class);
 		registerMobClass(SpiderExploding.class);
 		registerMobClass(SpiderMind.class);
 		registerMobClass(SpiderEgg.class);
 		registerMobClass(SpiderNest.class);
 		registerMobClass(SpiderQueen.class);
-		
+
 		registerMobClass(Spinner.class);
 		registerMobClass(Elemental.class);
 		registerMobClass(Monk.class);
 		registerMobClass(DM300.class);
-		
+
 		registerMobClass(AirElemental.class);
 		registerMobClass(WaterElemental.class);
 		registerMobClass(EarthElemental.class);
@@ -117,16 +118,16 @@ public class MobFactory {
 		registerMobClass(Succubus.class);
 		registerMobClass(King.class);
 		registerMobClass(Undead.class);
-		
+
 		registerMobClass(Eye.class);
 		registerMobClass(Scorpio.class);
 		registerMobClass(Yog.class);
 		registerMobClass(Larva.class);
 		registerMobClass(BurningFist.class);
 		registerMobClass(RottingFist.class);
-		
+
 		registerMobClass(FetidRat.class);
-		
+
 		registerMobClass(Wraith.class);
 		registerMobClass(Mimic.class);
 		registerMobClass(MimicPie.class);
@@ -156,6 +157,13 @@ public class MobFactory {
 		registerMobClass(Lich.class);
 		registerMobClass(RunicSkull.class);
 		registerMobClass(Zombie.class);
+
+		registerMobClass(Kobold.class);//"regular" enemy
+		//registerMobClass(KoboldIcemancer.class);//ranged caster
+		//registerMobClass(SnowSpirit.class);//little annoying thing
+		//registerMobClass(IceElemental.class);//elemental, obviously
+		//registerMobClass(Yeti.class);//big and tough
+		//registerMobClass(FrozenGuardian.class);//boss
 
 		registerMobClass(Hedgehog.class);
 	}
