@@ -1,0 +1,9 @@
+{
+  "texture" : "mobs/kobold.png",
+  "width"  : 12,
+  "height" : 15,
+  "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [0,0,0,1,0,0,1,1] },
+  "run"    : { "fps" : 12, "looped" : true,     "frames" : [4,5,6,7] },
+  "attack" : { "fps" : 12, "looped" : false,    "frames" : [2,3,0] },
+  "die"    : { "fps" : 12, "looped" : false,    "frames" : [8,9,10] }
+}
