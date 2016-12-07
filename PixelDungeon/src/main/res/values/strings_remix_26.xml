@@ -9,4 +9,12 @@
     <string name="Rudolph_Name">Red nose and antlers</string>
     <string name="Rudolph_Info">What could be more festive than a glowing red nose?</string>
 
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">kobold</string>
+    <string name="Kobold_Gender">masculine</string>
+    <string name="Kobold_Name_Objective">kobold</string>
+    <string name="Kobold_Desc">That's a kobold alright.</string>
+
+
 </resources>
