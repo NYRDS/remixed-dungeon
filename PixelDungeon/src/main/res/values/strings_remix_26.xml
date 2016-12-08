@@ -9,4 +9,16 @@
     <string name="Rudolph_Name">Red nose and antlers</string>
     <string name="Rudolph_Info">What could be more festive than a glowing red nose?</string>
 
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">kobold</string>
+    <string name="Kobold_Gender">masculine</string>
+    <string name="Kobold_Name_Objective">kobold</string>
+    <string name="Kobold_Desc">That\'s a kobold alright.</string>
+
+    <!-- Levels descriptions -->
+    <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
+    <string name="IceCaves_TileHighGrass">Frozen grass.</string>
+    <string name="IceCaves_TileDescHighGrass">Dense frozen vegetation block the view.</string>
+
 </resources>

@@ -19,6 +19,12 @@
       "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
       "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
 
+      "ice1":{"kind":"IceCavesLevel", "depth":20,      "size":[32,32]},
+      "ice2":{"kind":"IceCavesLevel", "depth":21,      "size":[32,32]},
+      "ice3":{"kind":"IceCavesLevel", "depth":22,     "size":[32,32]},
+      "ice4":{"kind":"IceCavesLevel", "depth":23,     "size":[32,32]},
+      "ice5":{"kind":"IceCavesBossLevel", "depth":24, "size":[32,32]},
+
       "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
       "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
@@ -58,7 +64,7 @@
       "test_sewers":[["test_guts","1","2","3"],["1"],[2]],
       "shadow_lord_level":[["26"],["25"]],
       "test_town":[["1"],[]],
-      "1":[["2"],[]],
+      "1":[["2","ice1"],[]],
       "2":[["3"],["1"]],
       "3":[["4"],["2"]],
       "4":[["5"],["3"]],
@@ -95,11 +101,18 @@
       "8s":[["9s"],["7s"]],
       "9s":[["10s"],["8s"]],
       "10s":[[],["9s"]],
+
       "necro1":[["necro2"],["7"],[2]],
       "necro2":[["necro3"],["necro1"]],
       "necro3":[["necro4"],["necro2"]],
       "necro4":[["necro5"],["necro3"]],
-      "necro5":[[],["necro4"]]
+      "necro5":[[],["necro4"]],
+
+      "ice1":[["ice2"],["1"],[2]],
+      "ice2":[["ice3"],["ice1"]],
+      "ice3":[["ice4"],["ice2"]],
+      "ice4":[["ice5"],["ice3"]],
+      "ice5":[[],["ice4"]]
    },
    "Entrance":"0"
 }

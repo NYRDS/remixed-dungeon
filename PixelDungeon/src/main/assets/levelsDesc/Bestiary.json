@@ -17,23 +17,6 @@
    "PrisonBossLevel":{
       "any":{"Tengu":1}
    },
-   "SpiderLevel":{
-      "6":{"SpiderServant":1},
-      "7":{"SpiderServant":1,"SpiderExploding":0.5},
-      "8":{"SpiderServant":1,"SpiderExploding":0.5,"SpiderMind":0.2},
-      "9":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.3},
-      "10":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5}
-   },
-   "NecroLevel":{
-      "1":{"Zombie":1, "ExplodingSkull":1, "EnslavedSoul":1, "DeathKnight":1},
-      "8":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},
-      "9":{"Zombie":1, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKnight":0.5},
-      "10":{"Zombie":2, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKnight":0.5},
-      "11":{"ExplodingSkull":1.3, "EnslavedSoul":0.4, "DeathKnight":1.5}
-   },
-   "NecroBossLevel":{
-      "any":{"Lich":1}
-   },
    "CavesLevel":{
       "11":{"Bat":1,"Brute":0.2},
       "12":{"Bat":1,"Brute":1,"Spinner":0.2},
@@ -66,6 +49,31 @@
       "28":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2,"Elemental":0.02},
 	  "29":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":2},
       "30":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2}
+   },
+   "SpiderLevel":{
+      "6":{"SpiderServant":1},
+      "7":{"SpiderServant":1,"SpiderExploding":0.5},
+      "8":{"SpiderServant":1,"SpiderExploding":0.5,"SpiderMind":0.2},
+      "9":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.3},
+      "10":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5}
+   },
+   "NecroLevel":{
+      "8":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},
+      "9":{"Zombie":1, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKnight":0.5},
+      "10":{"Zombie":2, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKnight":0.5},
+      "11":{"ExplodingSkull":1.3, "EnslavedSoul":0.4, "DeathKnight":1.5}
+   },
+   "NecroBossLevel":{
+      "any":{"Lich":1}
+   },
+   "IceCavesLevel":{
+      "20":{"Kobold":1},
+      "21":{"Kobold":1},
+      "22":{"Kobold":1},
+      "23":{"Kobold":1}
+   },
+   "IceCavesBossLevel":{
+      "any":{"Lich":1}
    },
   "RandomLevel":{
     "any":{"Gnoll":1},

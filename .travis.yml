@@ -28,5 +28,12 @@ android:
     - android-sdk-license-.+
     - google-gdk-license-.+
 
+addons:
+  apt:
+    packages:
+    - libstdc++6:i386
+    - lib32z1
+    - expect
+
 before_install:
  - chmod +x gradlew
