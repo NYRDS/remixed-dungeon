@@ -40,6 +40,9 @@ public class StringsManager {
 	@NonNull
 	private static Map<Integer, String[]> stringsMap = new HashMap<>();
 
+	private static Map<String, String> sStringMap = new HashMap<>();
+	private static Map<String, String[]> sStringsMap = new HashMap<>();
+
 	private static Map<String, Integer> keyToInt;
 
 	private static void addMappingForClass(Class<?> clazz) {
@@ -88,6 +91,9 @@ public class StringsManager {
 		stringMap.clear();
 		stringsMap.clear();
 
+		sStringMap.clear();
+		sStringsMap.clear();
+
 		String line = "";
 
 		try {
@@ -108,6 +114,7 @@ public class StringsManager {
 
 					String value = entry.getString(1);
 					stringMap.put(key, value);
+					sStringMap.put(keyString,value);
 				}
 
 				if (entry.length() > 2) {
@@ -116,6 +123,7 @@ public class StringsManager {
 						values[i - 1] = entry.getString(i);
 					}
 					stringsMap.put(key, values);
+					sStringsMap.put(keyString, values);
 				}
 			}
 			br.close();
