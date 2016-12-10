@@ -74,4 +74,5 @@
   <string name="ChaosCrystal_Info">쥐고 있는 동안 손으로 흘러 들어오는 에너지의 흐름이 느껴진다.</string>
   <string name="ChaosCrystal_Use">사용</string>
   <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">쥐 대왕의 왕관</string>
 </resources>

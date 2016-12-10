@@ -7,8 +7,17 @@
   <string name="TitleScene_About">关于</string>
   <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，你的进度可能会丢失！</string>
   <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon是由NYRDS以Watabou的Pixel Dungeon源码为基础制作的。</string>
+  <string name="AboutScene_Code">源码:</string>
+  <string name="AboutScene_Graphics">图画:</string>
+  <string name="AboutScene_Music">音乐:</string>
+  <string name="AboutScene_Sound">音效:</string>
+  <string name="AboutScene_Thanks">特别感谢:</string>
+  <string name="AboutScene_Email_Us">E-Mail us:</string>
   <string name="AboutScene_OurSite">我们的网址：</string>
   <string name="AboutScene_Snd">发送邮件</string>
+  <string name="AboutScene_Translation">Localization by:</string>
+  <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">最高纪录</string>
   <string name="RankingsScene_Total">总游戏次数</string>

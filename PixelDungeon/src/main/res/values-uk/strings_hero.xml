@@ -5,8 +5,8 @@
   <string name="Hero_Name_Objective">тебе</string>
   <string name="Hero_Leave">Не так просто залишити Pixel Dungeon.</string>
   <string name="Hero_LevelUp">новий рівень!</string>
-  <string name="Hero_NewLevel">Тепер твій рівень %d! Ти став витривалішим і більш вправнішим. Тобі стало легше ухилятися від ворогів, а також влучати по них.</string>
-  <string name="Hero_YouNowHave">Ти отримав %s</string>
+  <string name="Hero_NewLevel">Тепер твій рівень: %d! Твоя сила зросла, покращилась витривалість та вправність. Стало легше ухилятися від ворогів, а також влучати по них.</string>
+  <string name="Hero_YouNowHave">Отримано предмет: %s</string>
   <string name="Hero_SomethingElse">Тут є ще щось</string>
   <string name="Hero_LockedChest">Ця скриня замкнена, і в тебе немає ключа</string>
   <string name="Hero_LockedDoor">В тебе немає відповідного ключа.</string>
@@ -14,17 +14,17 @@
   <string name="Hero_Wait">...</string>
   <string name="Hero_Search">пошук</string>
   <string name="Hero_StaBurning">Тебе охопив вогонь!</string>
-  <string name="Hero_StaParalysis">Ти паралізований!</string>
-  <string name="Hero_StaPoison">Ти отруївся!</string>
+  <string name="Hero_StaParalysis">Тебе паралізовано!</string>
+  <string name="Hero_StaPoison">Тебе отруєно!</string>
   <string name="Hero_StaOoze">Їдкий мул роз\'їдає твою плоть. Змий його!</string>
   <string name="Hero_StaRoots">Ти не здатен поворухнутись!</string>
-  <string name="Hero_StaWeakness">Ти почуваєш себе слабшим, ніж зазвичай!</string>
-  <string name="Hero_StaBlindness">Тебе осліпили!</string>
-  <string name="Hero_StaFury">Ти стаєш розлюченим!</string>
+  <string name="Hero_StaWeakness">Тебе послаблено!</string>
+  <string name="Hero_StaBlindness">Тебе осліплено!</string>
+  <string name="Hero_StaFury">Тебе розлютили!</string>
   <string name="Hero_StaFurious">лють</string>
-  <string name="Hero_StaCharm">Ти зачарований!</string>
-  <string name="Hero_StaCripple">Ти покалічений!</string>
-  <string name="Hero_StaBleeding">Ти кровоточиш!</string>
+  <string name="Hero_StaCharm">Тебе зачаровано!</string>
+  <string name="Hero_StaCripple">Тебе скалічено!</string>
+  <string name="Hero_StaBleeding">Ти спливаєш кров\'ю!</string>
   <string name="Hero_StaVertigo">У тебе паморочиться в голові!</string>
   <!--STRINGS OF HeroClass CLASS-->
   <string name="HeroClass_War">воїн</string>
