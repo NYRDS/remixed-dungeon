@@ -106,14 +106,14 @@ public class StringsManager {
 
 				String keyString = entry.getString(0);
 				Integer key = keyToInt.get(keyString);
-				if (key == null) {
-					Game.toast("unknown key: [%s] in [%s] ignored ", keyString, resource);
-				}
 
 				if (entry.length() == 2) {
-
 					String value = entry.getString(1);
-					stringMap.put(key, value);
+
+					if (key != null) {
+						stringMap.put(key, value);
+					}
+
 					sStringMap.put(keyString, value);
 				}
 
@@ -122,7 +122,11 @@ public class StringsManager {
 					for (int i = 1; i < entry.length(); i++) {
 						values[i - 1] = entry.getString(i);
 					}
-					stringsMap.put(key, values);
+
+					if (key != null) {
+						stringsMap.put(key, values);
+					}
+
 					sStringsMap.put(keyString, values);
 				}
 			}
@@ -181,28 +185,31 @@ public class StringsManager {
 	}
 
 	public static String getVar(String id) {
-		if (id.equals("easyModeAdUnitId") && id.equals("saveLoadAdUnitId")
-				&& id.equals("easyModeSmallScreenAdUnitId") && id.equals("iapKey")
-				&& id.equals("testDevice") && id.equals("ownSignature")) {
-
-			if (sStringMap.containsKey(id)) {
-				return sStringMap.get(id);
-			}
+		if (id.equals("easyModeAdUnitId") || id.equals("saveLoadAdUnitId")
+				|| id.equals("easyModeSmallScreenAdUnitId") || id.equals("iapKey")
+				|| id.equals("testDevice") || id.equals("ownSignature")) {
+			return "";
 		}
+
+		if (sStringMap.containsKey(id)) {
+			return sStringMap.get(id);
+		}
+
 		return "";
 	}
 
 	public static String maybeId(String maybeId) {
+
 		String ret = getVar(maybeId);
-		if(ret.isEmpty()) {
+		if (ret.isEmpty()) {
 			return maybeId;
 		}
 		return ret;
 	}
 
 	public static String[] getVars(String id) {
-		if (stringsMap.containsKey(id)) {
-			return stringsMap.get(id);
+		if (sStringsMap.containsKey(id)) {
+			return sStringsMap.get(id);
 		}
 
 		return new String[1];
