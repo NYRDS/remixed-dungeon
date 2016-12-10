@@ -40,7 +40,7 @@ public class StringsManager {
 	@NonNull
 	private static Map<Integer, String[]> stringsMap = new HashMap<>();
 
-	private static Map<String, String> sStringMap = new HashMap<>();
+	private static Map<String, String>   sStringMap  = new HashMap<>();
 	private static Map<String, String[]> sStringsMap = new HashMap<>();
 
 	private static Map<String, Integer> keyToInt;
@@ -114,7 +114,7 @@ public class StringsManager {
 
 					String value = entry.getString(1);
 					stringMap.put(key, value);
-					sStringMap.put(keyString,value);
+					sStringMap.put(keyString, value);
 				}
 
 				if (entry.length() > 2) {
@@ -155,8 +155,12 @@ public class StringsManager {
 	}
 
 	public static String getVar(int id) {
-		if (stringMap.containsKey(id)) {
-			return stringMap.get(id);
+		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
+				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
+				&& id != R.string.testDevice && id != R.string.ownSignature) {
+			if (stringMap.containsKey(id)) {
+				return stringMap.get(id);
+			}
 		}
 
 		try {
@@ -168,13 +172,40 @@ public class StringsManager {
 	}
 
 	public static String[] getVars(int id) {
-		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
-				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
-				&& id != R.string.testDevice && id != R.string.ownSignature) {
-			if (stringsMap.containsKey(id)) {
-				return stringsMap.get(id);
-			}
+
+		if (stringsMap.containsKey(id)) {
+			return stringsMap.get(id);
 		}
+
 		return context.getResources().getStringArray(id);
 	}
+
+	public static String getVar(String id) {
+		if (id.equals("easyModeAdUnitId") && id.equals("saveLoadAdUnitId")
+				&& id.equals("easyModeSmallScreenAdUnitId") && id.equals("iapKey")
+				&& id.equals("testDevice") && id.equals("ownSignature")) {
+
+			if (sStringMap.containsKey(id)) {
+				return sStringMap.get(id);
+			}
+		}
+		return "";
+	}
+
+	public static String maybeId(String maybeId) {
+		String ret = getVar(maybeId);
+		if(ret.isEmpty()) {
+			return maybeId;
+		}
+		return ret;
+	}
+
+	public static String[] getVars(String id) {
+		if (stringsMap.containsKey(id)) {
+			return stringsMap.get(id);
+		}
+
+		return new String[1];
+	}
+
 }

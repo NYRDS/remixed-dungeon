@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
@@ -30,7 +31,7 @@ public class Sign extends LevelObject {
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
-		signText = obj.getString(TEXT);
+		signText = StringsManager.maybeId(obj.getString(TEXT));
 	}
 
 	@Override
