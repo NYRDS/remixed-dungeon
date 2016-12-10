@@ -1736,10 +1736,6 @@ public class Hero extends Char {
 		this.exp = Scrambler.scramble(exp);
 	}
 
-	public void setSprite(@NonNull HeroSpriteDef sprite) {
-		this.sprite = sprite;
-	}
-
 	public interface Doom {
 		void onDeath();
 	}

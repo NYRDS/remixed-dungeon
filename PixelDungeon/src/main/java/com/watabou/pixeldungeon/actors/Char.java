@@ -492,6 +492,7 @@ public abstract class Char extends Actor {
 	}
 
 	public void updateSpriteState() {
+		getSprite().removeAllStates();
 		for (Buff buff : buffs) {
 			if (buff instanceof Burning) {
 				getSprite().add(CharSprite.State.BURNING);
