@@ -11,6 +11,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -21,10 +22,12 @@ public class WndModDescription extends Window {
 	private static final int GAP = 2;
 
 	private float yPos;
+	private String prevMod;
 
-	public WndModDescription(String option) {
+	public WndModDescription(final String option, final String prevMod) {
 
 		super();
+		this.prevMod = prevMod;
 
 		PixelDungeon.activeMod(option);
 		
@@ -78,7 +81,7 @@ public class WndModDescription extends Window {
 						Intent intent = new Intent(Intent.ACTION_SEND);
 						intent.setType("message/rfc822");
 						intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailUri });
-						intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name));
+						intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name)+":"+Game.getVar(R.string.Mod_Name));
 
 						Game.instance().startActivity(Intent.createChooser(intent, emailUri));
 					}
@@ -95,6 +98,7 @@ public class WndModDescription extends Window {
 		RedButton btn = new RedButton(Game.getVar(R.string.Mods_RestartRequired)) {
 			@Override
 			protected void onClick() {
+				switchSaves(option, prevMod);
 				PixelDungeon.instance().doRestart();
 			}
 		};
@@ -108,7 +112,13 @@ public class WndModDescription extends Window {
 
 		resize(WIDTH, (int) (yPos + GAP));
 	}
-	
+
+	private static void switchSaves(String option, String prevMod) {
+		SaveUtils.copyAllClassesToSlot(prevMod);
+		SaveUtils.deleteGameAllClasses();
+		SaveUtils.copyAllClassesFromSlot(option);
+	}
+
 	private void place(Text text) {
 		text.measure();
 		text.setPos(0, yPos);
@@ -117,6 +127,8 @@ public class WndModDescription extends Window {
 	}
 	
 	public void onBackPressed() {
-		PixelDungeon.instance().doRestart();
+		PixelDungeon.activeMod(prevMod);
+		hide();
+		Game.scene().add(new WndModSelect());
 	}
 }

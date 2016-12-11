@@ -33,11 +33,26 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 
 	private Text downloadProgress;
 
+	static private boolean needUpdate;
+
 	public ModsButton() {
 		super();
 
 		width = image.width;
 		height = image.height;
+	}
+
+	static public void modUpdated() {
+		needUpdate = true;
+	}
+
+	@Override
+	public void update() {
+		if(needUpdate) {
+			needUpdate = false;
+			text.text(PixelDungeon.activeMod());
+		}
+		super.update();
 	}
 
 	@Override

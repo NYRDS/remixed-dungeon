@@ -99,11 +99,16 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			FileSystem.deleteRecursive(modDir);
 		}
 
-		PixelDungeon.activeMod(ModdingMode.REMIXED);
+		if(PixelDungeon.activeMod().equals(name)) {
+			SaveUtils.deleteGameAllClasses();
+			SaveUtils.copyAllClassesFromSlot(ModdingMode.REMIXED);
+			PixelDungeon.activeMod(ModdingMode.REMIXED);
+		}
+
 		if (getParent() != null) {
 			hide();
 		}
-		Game.scene().add(new WndModDescription(ModdingMode.REMIXED));
+		Game.scene().add(new WndModSelect());
 	}
 
 	protected void onSelect(String option) {
@@ -131,14 +136,10 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			return;
 		}
 
-		SaveUtils.copyAllClassesToSlot(prevMod);
-		SaveUtils.deleteGameAllClasses();
-		SaveUtils.copyAllClassesFromSlot(option);
-
 		if (getParent() != null) {
 			hide();
 		}
-		Game.scene().add(new WndModDescription(option));
+		Game.scene().add(new WndModDescription(option,prevMod));
 	}
 
 	@Override
