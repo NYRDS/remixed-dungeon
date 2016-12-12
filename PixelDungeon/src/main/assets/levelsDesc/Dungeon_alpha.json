@@ -60,7 +60,7 @@
 	  "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
    },
    "Graph":{
-      "0":[["test_random"],[]],
+      "0":[["test_sewers"],[]],
       "test_guts":[["1"],["test_sewers"]],
       "test_sewers":[["test_guts","1","2","3"],["1"],[2]],
       "test_random":[["1"],["test_sewers"]],

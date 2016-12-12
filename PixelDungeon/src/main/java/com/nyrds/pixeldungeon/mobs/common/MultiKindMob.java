@@ -31,6 +31,7 @@ public class MultiKindMob extends Mob {
 	@Override
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		super.fromJson(mobDesc);
-		kind = mobDesc.optInt("kind");
+		//Yes it is illogical but "kind" already used for mob class
+		kind = mobDesc.optInt("var",0);
 	}
 }

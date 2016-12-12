@@ -76,7 +76,7 @@ public class SpiderLevel extends CommonLevel {
 		while (x != b.x || y != b.y) {
 			int dx = (int) Math.signum(x - b.x);
 			int dy = (int) Math.signum(y - b.y);
-			
+
 			if (isCellIs(x,y, Terrain.WALL) ) {
 				map[cell(x, y)] = Terrain.EMPTY;
 			}
@@ -97,7 +97,9 @@ public class SpiderLevel extends CommonLevel {
 			case 2:
 			case 3:
 				if (dx != 0) {
-					x -= dx;
+					if(cellValid(x-dx,y)) {
+						x -= dx;
+					}
 				}
 				break;
 			case 4:
@@ -105,17 +107,23 @@ public class SpiderLevel extends CommonLevel {
 			case 6:
 			case 7:
 				if (dy != 0) {
-					y -= dy;
+					if(cellValid(x,y-dy)) {
+						y -= dy;
+					}
 				}
 				break;
 			case 8:
 				if (dx != 0) {
-					x += dx;
+					if(cellValid(x+dx,y)) {
+						x += dx;
+					}
 				}
 				break;
 			case 9:
 				if (dy != 0) {
-					y += dy;
+					if(cellValid(x,y+dy)) {
+						y += dy;
+					}
 				}
 				break;
 			}

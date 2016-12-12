@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -94,7 +95,7 @@ public class Codex extends Item {
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 
-		text = itemDesc.optString(textTag);
+		text = StringsManager.maybeId(itemDesc.optString(textTag));
 	}
 
 	@Override

@@ -40,6 +40,9 @@ public class StringsManager {
 	@NonNull
 	private static Map<Integer, String[]> stringsMap = new HashMap<>();
 
+	private static Map<String, String>   sStringMap  = new HashMap<>();
+	private static Map<String, String[]> sStringsMap = new HashMap<>();
+
 	private static Map<String, Integer> keyToInt;
 
 	private static void addMappingForClass(Class<?> clazz) {
@@ -88,6 +91,9 @@ public class StringsManager {
 		stringMap.clear();
 		stringsMap.clear();
 
+		sStringMap.clear();
+		sStringsMap.clear();
+
 		String line = "";
 
 		try {
@@ -100,14 +106,15 @@ public class StringsManager {
 
 				String keyString = entry.getString(0);
 				Integer key = keyToInt.get(keyString);
-				if (key == null) {
-					Game.toast("unknown key: [%s] in [%s] ignored ", keyString, resource);
-				}
 
 				if (entry.length() == 2) {
-
 					String value = entry.getString(1);
-					stringMap.put(key, value);
+
+					if (key != null) {
+						stringMap.put(key, value);
+					}
+
+					sStringMap.put(keyString, value);
 				}
 
 				if (entry.length() > 2) {
@@ -115,7 +122,12 @@ public class StringsManager {
 					for (int i = 1; i < entry.length(); i++) {
 						values[i - 1] = entry.getString(i);
 					}
-					stringsMap.put(key, values);
+
+					if (key != null) {
+						stringsMap.put(key, values);
+					}
+
+					sStringsMap.put(keyString, values);
 				}
 			}
 			br.close();
@@ -147,8 +159,12 @@ public class StringsManager {
 	}
 
 	public static String getVar(int id) {
-		if (stringMap.containsKey(id)) {
-			return stringMap.get(id);
+		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
+				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
+				&& id != R.string.testDevice && id != R.string.ownSignature) {
+			if (stringMap.containsKey(id)) {
+				return stringMap.get(id);
+			}
 		}
 
 		try {
@@ -160,13 +176,43 @@ public class StringsManager {
 	}
 
 	public static String[] getVars(int id) {
-		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
-				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
-				&& id != R.string.testDevice && id != R.string.ownSignature) {
-			if (stringsMap.containsKey(id)) {
-				return stringsMap.get(id);
-			}
+
+		if (stringsMap.containsKey(id)) {
+			return stringsMap.get(id);
 		}
+
 		return context.getResources().getStringArray(id);
 	}
+
+	public static String getVar(String id) {
+		if (id.equals("easyModeAdUnitId") || id.equals("saveLoadAdUnitId")
+				|| id.equals("easyModeSmallScreenAdUnitId") || id.equals("iapKey")
+				|| id.equals("testDevice") || id.equals("ownSignature")) {
+			return "";
+		}
+
+		if (sStringMap.containsKey(id)) {
+			return sStringMap.get(id);
+		}
+
+		return "";
+	}
+
+	public static String maybeId(String maybeId) {
+
+		String ret = getVar(maybeId);
+		if (ret.isEmpty()) {
+			return maybeId;
+		}
+		return ret;
+	}
+
+	public static String[] getVars(String id) {
+		if (sStringsMap.containsKey(id)) {
+			return sStringsMap.get(id);
+		}
+
+		return new String[1];
+	}
+
 }

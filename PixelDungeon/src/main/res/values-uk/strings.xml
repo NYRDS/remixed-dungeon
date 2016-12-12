@@ -377,7 +377,7 @@
   <string name="Barkskin_Info">Шкіра-кора</string>
   <!--STRINGS OF Bleeding CLASS-->
   <string name="Bleeding_Info">Кровотеча</string>
-  <string name="Bleeding_Death">Твоя кровотеча призвела до смерті…</string>
+  <string name="Bleeding_Death">Твоя кровотеча призвела до смерті...</string>
   <!--STRINGS OF Blindness CLASS-->
   <string name="Blindness_Info">Засліплений</string>
   <!--STRINGS OF Burning CLASS-->

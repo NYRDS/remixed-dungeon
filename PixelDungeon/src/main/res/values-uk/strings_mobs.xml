@@ -167,7 +167,7 @@
   <string name="Statue_Name">жива статуя</string>
   <string name="Statue_Gender">feminine</string>
   <string name="Statue_Name_Objective">живу статую</string>
-  <string name="Statue_Desc">Може здатися що це просто ще одна звичайна статуя, але червоні очі, що виблискують в темряві, не приховують злі наміри. Хоча вона і зроблена з каменю, її _%s_ виглядає справжнім.</string>
+  <string name="Statue_Desc">Може здатися, що це просто ще одна звичайна статуя, але червоні очі, що виблискують в темряві, не приховують свої злі наміри. Хоча вона і зроблена з каменю, її _%s_ виглядає справжнім.</string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">суккуб</string>
   <string name="Succubus_Gender">femenine</string>

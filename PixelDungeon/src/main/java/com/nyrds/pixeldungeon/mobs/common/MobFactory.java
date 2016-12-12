@@ -29,7 +29,9 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
+import com.watabou.pixeldungeon.actors.mobs.Bandit;
 import com.watabou.pixeldungeon.actors.mobs.Bat;
 import com.watabou.pixeldungeon.actors.mobs.Brute;
 import com.watabou.pixeldungeon.actors.mobs.Crab;
@@ -48,8 +50,10 @@ import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.Scorpio;
+import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Shaman;
+import com.watabou.pixeldungeon.actors.mobs.Shielded;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.actors.mobs.Spinner;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
@@ -97,6 +101,7 @@ public class MobFactory {
 		registerMobClass(Bat.class);
 		registerMobClass(Brute.class);
 		registerMobClass(Tengu.class);
+		registerMobClass(Bandit.class);
 
 		registerMobClass(SpiderServant.class);
 		registerMobClass(SpiderExploding.class);
@@ -109,6 +114,7 @@ public class MobFactory {
 		registerMobClass(Elemental.class);
 		registerMobClass(Monk.class);
 		registerMobClass(DM300.class);
+		registerMobClass(Shielded.class);
 
 		registerMobClass(AirElemental.class);
 		registerMobClass(WaterElemental.class);
@@ -118,9 +124,11 @@ public class MobFactory {
 		registerMobClass(Succubus.class);
 		registerMobClass(King.class);
 		registerMobClass(Undead.class);
+		registerMobClass(Senior.class);
 
 		registerMobClass(Eye.class);
 		registerMobClass(Scorpio.class);
+		registerMobClass(Acidic.class);
 		registerMobClass(Yog.class);
 		registerMobClass(Larva.class);
 		registerMobClass(BurningFist.class);
@@ -157,6 +165,8 @@ public class MobFactory {
 		registerMobClass(Lich.class);
 		registerMobClass(RunicSkull.class);
 		registerMobClass(Zombie.class);
+
+		registerMobClass(Crystal.class);
 
 		registerMobClass(Kobold.class);//"regular" enemy
 		//registerMobClass(KoboldIcemancer.class);//ranged caster

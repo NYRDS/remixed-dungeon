@@ -172,4 +172,11 @@ remix.21.4:\n
         - Algunos mobs pueden ser establecidos manualmente con cierto nivel\n
         - Los mobs albinos están permitidos en los mods\n
         </string>
+  <string name="Welcome_Text_25_5">
+        remix.25.5:\n
+        - Corregido el error que causaba que la imagen del jugador desapareciera si este brillaba dentro de un abismo\n
+        - El botón del menú ahora tiene la mayor prioridad en las preferencias de la interfaz del juego, para que el jugador pueda acceder al menú aún cuando el tamaño de la GUI este muy aumentado\n
+        - Traducciones actualizadas (agregado el idioma Ucraniano)\n
+        - Menú de idiomas actualizado\n
+        </string>
 </resources>

@@ -39,6 +39,7 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
+import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -324,6 +325,7 @@ public class PixelDungeon extends Game {
 		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		Util.storeEventInAcra("RPD_active_mod", mod);
+		ModsButton.modUpdated();
 	}
 	
 	public static String activeMod() {

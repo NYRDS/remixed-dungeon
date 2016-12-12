@@ -43,9 +43,9 @@ import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -142,7 +142,7 @@ public enum HeroClass {
 		for(int i = 0;i<100;i++) {
 			hero.collect(new ScrollOfMagicMapping());
 			hero.collect(new ScrollOfUpgrade());
-			hero.collect(new PotionOfToxicGas());
+			hero.collect(new PotionOfLevitation());
 			hero.collect(new PotionOfMindVision());
 		}
 
