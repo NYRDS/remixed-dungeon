@@ -8,7 +8,6 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -45,13 +44,6 @@ public class IceCavesLevel extends RegularLevel {
 
 	protected boolean[] grass() {
 		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.55f : 0.35f, 3 );
-	}
-
-	@Override
-	protected void assignRoomType() {
-		super.assignRoomType();
-
-	//	Blacksmith.Quest.spawn( rooms );
 	}
 
 	@Override
