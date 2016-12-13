@@ -157,9 +157,9 @@ public class IceCavesLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.GRASS:
-			return Game.getVar(R.string.Caves_TileGrass);
+			return Game.getVar(R.string.IceCaves_TileGrass);
 		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileHighGrass);
+			return Game.getVar(R.string.IceCaves_TileHighGrass);
 		case Terrain.WATER:
 			return Game.getVar(R.string.Caves_TileWater);
 		default:
