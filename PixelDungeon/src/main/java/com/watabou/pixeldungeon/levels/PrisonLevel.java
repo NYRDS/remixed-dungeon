@@ -46,7 +46,12 @@ public class PrisonLevel extends RegularLevel {
 	public String tilesTex() {
 		return Assets.TILES_PRISON;
 	}
-	
+
+	@Override
+	public String tilesTexEx() {
+		return Assets.TILES_PRISON_X;
+	}
+
 	@Override
 	public String waterTex() {
 		return Assets.WATER_PRISON;
