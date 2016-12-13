@@ -67,10 +67,10 @@
       "any":{"Lich":1}
    },
    "IceCavesLevel":{
-      "20":{"Kobold":1},
-      "21":{"Kobold":1},
-      "22":{"Kobold":1},
-      "23":{"Kobold":1}
+      "20":{"Kobold":1,"ColdSpirit":1},
+      "21":{"Kobold":1,"ColdSpirit":1},
+      "22":{"Kobold":1,"ColdSpirit":1},
+      "23":{"Kobold":1,"ColdSpirit":1}
    },
    "IceCavesBossLevel":{
       "any":{"Lich":1}

@@ -16,7 +16,14 @@
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="Kobold_Desc">That\'s a kobold alright.</string>
 
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">cold spirit</string>
+    <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ColdSpirit_Name_Objective">cold spirit</string>
+    <string name="ColdSpirit_Desc">Like a little bloodthirsty snowball.</string>
+
     <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
     <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
     <string name="IceCaves_TileHighGrass">Frozen grass.</string>
     <string name="IceCaves_TileDescHighGrass">Dense frozen vegetation block the view.</string>

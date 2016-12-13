@@ -13,6 +13,7 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
+import com.nyrds.pixeldungeon.mobs.icecaves.ColdSpirit;
 import com.nyrds.pixeldungeon.mobs.icecaves.Kobold;
 import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
@@ -170,7 +171,7 @@ public class MobFactory {
 
 		registerMobClass(Kobold.class);//"regular" enemy
 		//registerMobClass(KoboldIcemancer.class);//ranged caster
-		//registerMobClass(SnowSpirit.class);//little annoying thing
+		registerMobClass(ColdSpirit.class);//little annoying thing
 		//registerMobClass(IceElemental.class);//elemental, obviously
 		//registerMobClass(Yeti.class);//big and tough
 		//registerMobClass(FrozenGuardian.class);//boss
