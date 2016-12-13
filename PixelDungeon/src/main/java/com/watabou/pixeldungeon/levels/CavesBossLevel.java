@@ -56,7 +56,12 @@ public class CavesBossLevel extends Level {
 	public String tilesTex() {
 		return Assets.TILES_CAVES;
 	}
-	
+
+	@Override
+	protected String tilesTexEx() {
+		return Assets.TILES_CAVES_X;
+	}
+
 	@Override
 	public String waterTex() {
 		return Assets.WATER_CAVES;
