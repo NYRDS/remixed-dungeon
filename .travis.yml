@@ -1,5 +1,13 @@
 language: android
 jdk: oraclejdk8
+
+env:
+  global:
+    # Initiating clean Gradle output
+    - TERM=dumb
+    # Amount of memory granted to Gradle JVM
+    - GRADLE_OPTS="-Xmx512m -XX:MaxPermSize=512m"
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -38,4 +46,4 @@ addons:
 before_install:
  - chmod +x gradlew
 
-script: ./gradlew assembleGooglePlayRelease
+# script: ./gradlew connectedCheckGooglePlayRelease
