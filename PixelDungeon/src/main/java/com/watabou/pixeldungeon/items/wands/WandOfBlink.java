@@ -32,6 +32,9 @@ import com.watabou.utils.Callback;
 
 public class WandOfBlink extends Wand {
 
+	{
+		directional = false;
+	}
 	@Override
 	protected void onZap( int cell ) {
 
@@ -39,11 +42,11 @@ public class WandOfBlink extends Wand {
 
 		int userPos = wandUser.getPos();
 
-		int newCell = userPos;
+		int newCell = Ballistica.trace[Ballistica.distance-1];
 
 		if (Ballistica.distance > level + 4) {
 			newCell = Ballistica.trace[level + 3];
-		} else if (Actor.findChar( cell ) != null && Ballistica.distance > 1) {
+		} else if (Actor.findChar( newCell ) != null && Ballistica.distance > 1) {
 			newCell = Ballistica.trace[Ballistica.distance - 2];
 		}
 
