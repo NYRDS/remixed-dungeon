@@ -76,6 +76,7 @@ public abstract class Wand extends KindOfWeapon {
 
 	protected boolean hitChars   = true;
 	protected boolean hitObjects = false;
+	protected boolean directional = true;
 
 	private static final Class<?>[] wands = { WandOfTeleportation.class,
 			WandOfSlowness.class, WandOfFirebolt.class, WandOfPoison.class,
@@ -454,7 +455,7 @@ public abstract class Wand extends KindOfWeapon {
 
 				final Wand curWand = (Wand) Wand.curItem;
 				
-				final int cell = Ballistica.cast(getCurUser().getPos(), target, true, curWand.hitChars, curWand.hitObjects);
+				final int cell = Ballistica.cast(getCurUser().getPos(), target, curWand.directional, curWand.hitChars, curWand.hitObjects);
 				getCurUser().getSprite().zap(cell);
 				
 				curWand.wandEffect(cell);

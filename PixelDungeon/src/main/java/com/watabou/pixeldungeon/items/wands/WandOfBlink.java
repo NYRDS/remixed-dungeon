@@ -32,19 +32,30 @@ import com.watabou.utils.Callback;
 
 public class WandOfBlink extends Wand {
 
+	{
+		directional = false;
+	}
 	@Override
 	protected void onZap( int cell ) {
 
 		int level = effectiveLevel();
-		
+
+		int userPos = wandUser.getPos();
+
+		int newCell = Ballistica.trace[Ballistica.distance-1];
+
 		if (Ballistica.distance > level + 4) {
-			cell = Ballistica.trace[level + 3];
-		} else if (Actor.findChar( cell ) != null && Ballistica.distance > 1) {
-			cell = Ballistica.trace[Ballistica.distance - 2];
+			newCell = Ballistica.trace[level + 3];
+		} else if (Actor.findChar( newCell ) != null && Ballistica.distance > 1) {
+			newCell = Ballistica.trace[Ballistica.distance - 2];
 		}
-		
+
+		if(Dungeon.level.distance(userPos,cell)<Dungeon.level.distance(userPos,newCell)) {
+			newCell = cell;
+		}
+
 		wandUser.getSprite().setVisible(true);
-		appear( wandUser, cell );
+		appear( wandUser, newCell );
 		Dungeon.observe();
 	}
 	
