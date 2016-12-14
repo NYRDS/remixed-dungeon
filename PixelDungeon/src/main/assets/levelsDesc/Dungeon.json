@@ -19,11 +19,11 @@
       "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
       "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
 
-      "ice1":{"kind":"IceCavesLevel", "depth":20,      "size":[32,32]},
-      "ice2":{"kind":"IceCavesLevel", "depth":21,      "size":[32,32]},
-      "ice3":{"kind":"IceCavesLevel", "depth":22,     "size":[32,32]},
-      "ice4":{"kind":"IceCavesLevel", "depth":23,     "size":[32,32]},
-      "ice5":{"kind":"IceCavesBossLevel", "depth":24, "size":[32,32]},
+      "ice1":{"kind":"IceCavesLevel", "depth":15,      "size":[32,32]},
+      "ice2":{"kind":"IceCavesLevel", "depth":16,      "size":[32,32]},
+      "ice3":{"kind":"IceCavesLevel", "depth":17,     "size":[32,32]},
+      "ice4":{"kind":"IceCavesLevel", "depth":18,     "size":[32,32]},
+      "ice5":{"kind":"IceCavesBossLevel", "depth":19, "size":[32,32]},
 
       "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
