@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -40,6 +41,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.TenguSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Tengu extends Boss {
 
@@ -117,29 +120,37 @@ public class Tengu extends Boss {
 	
 	private void jump() {
 		timeToJump = JUMP_DELAY;
-		
+
 		for (int i=0; i < 4; i++) {
-			int trapPos;
-			do {
-				trapPos = Random.Int( Dungeon.level.getLength() );
-			} while (!Dungeon.level.fieldOfView[trapPos] || !Dungeon.level.passable[trapPos]);
-			
-			if (Dungeon.level.map[trapPos] == Terrain.INACTIVE_TRAP) {
+			int trapPos = Dungeon.level.getRandomTerrainCell(Terrain.INACTIVE_TRAP);
+
+			if (Dungeon.level.cellValid(trapPos)) {
 				Dungeon.level.set( trapPos, Terrain.POISON_TRAP );
 				GameScene.updateMap( trapPos );
 				ScrollOfMagicMapping.discover( trapPos );
+			} else {
+				break;
 			}
 		}
-		
-		int newPos;
-		do {
-			newPos = Random.Int( Dungeon.level.getLength() );
-		} while (
-			!Dungeon.level.fieldOfView[newPos] || 
-			!Dungeon.level.passable[newPos] || 
-			Dungeon.level.adjacent( newPos, getEnemy().getPos() ) ||
-			Actor.findChar( newPos ) != null);
-		
+
+		ArrayList<Integer> candidates = new ArrayList<>();
+		int enemyPos = getEnemy().getPos();
+		for(int i = 0;i<Dungeon.level.getLength();++i) {
+			if(Dungeon.level.fieldOfView[i]
+					&& Dungeon.level.passable[i]
+					&& !Dungeon.level.adjacent( i, enemyPos )
+					&& Actor.findChar(i) == null) {
+				candidates.add(i);
+			}
+		}
+
+		if(candidates.isEmpty()) {
+			PotionOfHealing.heal(this, 0.1f);
+			return;
+		}
+
+		int newPos = candidates.get(Random.index(candidates));
+
 		getSprite().move( getPos(), newPos );
 		move( newPos );
 		
