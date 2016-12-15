@@ -160,17 +160,14 @@ public abstract class Wand extends KindOfWeapon {
 	@Override
 	public void execute(Hero hero, String action) {
 		if (action.equals(AC_ZAP)) {
-
 			setCurUser(hero);
 			wandUser = hero;
 			curItem = this;
 			GameScene.selectCell(zapper);
-
-		} else {
-
-			super.execute(hero, action);
-
+			return;
 		}
+
+		super.execute(hero, action);
 	}
 
 	public void zap(int cell) {
