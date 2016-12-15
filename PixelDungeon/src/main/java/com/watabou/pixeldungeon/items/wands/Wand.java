@@ -455,9 +455,10 @@ public abstract class Wand extends KindOfWeapon {
 
 				final Wand curWand = (Wand) Wand.curItem;
 				
-				final int cell = Ballistica.cast(getCurUser().getPos(), target, curWand.directional, curWand.hitChars, curWand.hitObjects);
+				final int cell = curWand.getDestinationCell(target);
+
 				getCurUser().getSprite().zap(cell);
-				
+
 				curWand.wandEffect(cell);
 			}
 		}
@@ -467,6 +468,10 @@ public abstract class Wand extends KindOfWeapon {
 			return Game.getVar(R.string.Wand_Prompt);
 		}
 	};
+
+	protected int getDestinationCell(Integer target) {
+		return Ballistica.cast(getCurUser().getPos(), target, directional, hitChars, hitObjects);
+	}
 
 	public int curCharges() {
 		return Scrambler.descramble(curCharges);

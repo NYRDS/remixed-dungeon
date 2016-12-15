@@ -32,11 +32,9 @@ import com.watabou.utils.Callback;
 
 public class WandOfBlink extends Wand {
 
-	{
-		directional = false;
-	}
 	@Override
-	protected void onZap( int cell ) {
+	protected int getDestinationCell(Integer target) {
+		int cell = super.getDestinationCell(target);
 
 		int level = effectiveLevel();
 
@@ -53,9 +51,14 @@ public class WandOfBlink extends Wand {
 		if(Dungeon.level.distance(userPos,cell)<Dungeon.level.distance(userPos,newCell)) {
 			newCell = cell;
 		}
+		return newCell;
+	}
+
+	@Override
+	protected void onZap( int cell ) {
 
 		wandUser.getSprite().setVisible(true);
-		appear( wandUser, newCell );
+		appear( wandUser, cell);
 		Dungeon.observe();
 	}
 	
