@@ -15,8 +15,6 @@ import com.watabou.utils.Random;
 
 public class Kobold extends Mob {
 
-	private static final String TXT_ENRAGED = Game.getVar(R.string.Brute_Enraged);
-	
 	public Kobold() {
 		
 		hp(ht(40));
@@ -31,19 +29,9 @@ public class Kobold extends Mob {
 		IMMUNITIES.add( Terror.class );
 	}
 	
-	private boolean enraged = false;
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		enraged = hp() < ht() / 4;
-	}
-	
 	@Override
 	public int damageRoll() {
-		return enraged ?
-			Random.NormalIntRange( 10, 40 ) :	
-			Random.NormalIntRange( 8, 18 );
+		return Random.NormalIntRange( 8, 18 );
 	}
 	
 	@Override
@@ -55,18 +43,5 @@ public class Kobold extends Mob {
 	public int dr() {
 		return 8;
 	}
-	
-	@Override
-	public void damage( int dmg, Object src ) {
-		super.damage( dmg, src );
-		
-		if (isAlive() && !enraged && hp() < ht() / 4) {
-			enraged = true;
-			spend( TICK );
-			if (Dungeon.visible[getPos()]) {
-				GLog.w( TXT_ENRAGED, getName() );
-				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Brute_StaEnraged));
-			}
-		}
-	}
+
 }
