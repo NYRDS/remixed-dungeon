@@ -28,7 +28,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
-import java.io.IOException;
 
 public enum Music implements MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener {
@@ -78,11 +77,10 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			player.setLooping(looping);
 			player.prepareAsync();
 
-		} catch (IOException e) {
-
+		} catch (Exception e) {
 			player.release();
 			player = null;
-
+			EventCollector.logException(e);
 		}
 	}
 
