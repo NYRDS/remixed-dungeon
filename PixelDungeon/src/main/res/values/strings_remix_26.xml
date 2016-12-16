@@ -22,11 +22,19 @@
     <string name="ColdSpirit_Name_Objective">cold spirit</string>
     <string name="ColdSpirit_Desc">Like a little bloodthirsty snowball.</string>
 
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">ice elemental</string>
+    <string name="IceElemental_Gender">masculine</string>
+    <string name="IceElemental_Name_Objective">ice elemental</string>
+    <string name="IceElemental_Desc">Giant golem made os solid ice.</string>
+
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
     <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
     <string name="IceCaves_TileHighGrass">Frozen high grass</string>
     <string name="IceCaves_TileGrass">Frozen grass.</string>
     <string name="IceCaves_TileDescHighGrass">Dense frozen vegetation block the view.</string>
+    <string name="IceCaves_TileStatue">Frozen Gnoll</string>
+    <string name="IceCaves_TileDescStatue">Yet another awful statue... Oh wait that\'s frozen gnoll.</string>
 
 </resources>
