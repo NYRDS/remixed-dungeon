@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.bags;
 
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Quiver extends Bag {
@@ -31,7 +31,7 @@ public class Quiver extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Arrow;
+		return item instanceof MissileWeapon;
 	}
 	
 	@Override
