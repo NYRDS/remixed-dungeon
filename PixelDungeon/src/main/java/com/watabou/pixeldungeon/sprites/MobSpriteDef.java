@@ -155,10 +155,8 @@ public class MobSpriteDef extends MobSprite {
 
 	@Override
 	public void die() {
+		removeAllStates();
 		super.die();
-		if (levitating) {
-			remove(State.LEVITATING);
-		}
 	}
 
 	@Override

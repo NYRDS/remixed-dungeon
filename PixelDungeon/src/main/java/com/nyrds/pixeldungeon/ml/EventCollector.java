@@ -15,7 +15,7 @@ public class EventCollector {
 	static private boolean mDisabled = true;
 
 	private static boolean googleAnalyticsUsable() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,0) > 0;
+		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
 	}
 
 	static public void init(Context context) {
