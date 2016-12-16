@@ -163,6 +163,9 @@ public class IceCavesLevel extends RegularLevel {
 			return Game.getVar(R.string.IceCaves_TileHighGrass);
 		case Terrain.WATER:
 			return Game.getVar(R.string.Caves_TileWater);
+		case Terrain.STATUE:
+		case Terrain.STATUE_SP:
+			return Game.getVar(R.string.IceCaves_TileStatue);
 		default:
 			return super.tileName( tile );
 		}
@@ -181,6 +184,9 @@ public class IceCavesLevel extends RegularLevel {
 			return Game.getVar(R.string.IceCaves_TileDescDeco);
 		case Terrain.BOOKSHELF:
 			return Game.getVar(R.string.Caves_TileDescBookshelf);
+		case Terrain.STATUE:
+		case Terrain.STATUE_SP:
+			return Game.getVar(R.string.IceCaves_TileDescStatue);
 		default:
 			return super.tileDesc( tile );
 		}
