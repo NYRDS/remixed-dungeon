@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
+import com.nyrds.pixeldungeon.mobs.elementals.IceElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
@@ -172,7 +173,7 @@ public class MobFactory {
 		registerMobClass(Kobold.class);//"regular" enemy
 		//registerMobClass(KoboldIcemancer.class);//ranged caster
 		registerMobClass(ColdSpirit.class);//little annoying thing
-		//registerMobClass(IceElemental.class);//elemental, obviously
+		registerMobClass(IceElemental.class);//elemental, obviously
 		//registerMobClass(Yeti.class);//big and tough
 		//registerMobClass(FrozenGuardian.class);//boss
 

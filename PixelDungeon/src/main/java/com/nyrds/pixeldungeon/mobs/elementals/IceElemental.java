@@ -1,0 +1,64 @@
+package com.nyrds.pixeldungeon.mobs.elementals;
+
+import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.Fire;
+import com.watabou.pixeldungeon.actors.blobs.Freezing;
+import com.watabou.pixeldungeon.actors.blobs.Regrowth;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
+import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
+import com.watabou.pixeldungeon.plants.Earthroot;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.utils.Random;
+
+public class IceElemental extends Mob implements IDepthAdjustable {
+
+	public IceElemental() {
+		adjustStats(Dungeon.depth);
+
+		loot = new FrozenCarpaccio();
+		lootChance = 0.1f;
+	}
+
+	public void adjustStats(int depth) {
+		hp(ht(depth * 10 + 1));
+		defenseSkill = depth * 2 + 1;
+		EXP = depth + 1;
+		maxLvl = depth + 2;
+		
+		IMMUNITIES.add(Roots.class);
+		IMMUNITIES.add(Paralysis.class);
+		IMMUNITIES.add(ToxicGas.class);
+	}
+
+	@Override
+	public int damageRoll() {
+		return Random.NormalIntRange(hp() / 6, ht() / 6);
+	}
+
+	@Override
+	public int attackSkill(Char target) {
+		return defenseSkill / 3;
+	}
+
+	@Override
+	public int dr() {
+		return EXP;
+	}
+
+	@Override
+	public int attackProc(Char enemy, int damage) {
+		if (Random.Int( 2 ) == 0) {
+			Freezing.affect( enemy.getPos(), (Fire)Dungeon.level.blobs.get( Fire.class ) );
+		}
+
+		return damage;
+	}
+}

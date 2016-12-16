@@ -1,0 +1,26 @@
+{
+   "texture" : "mobs/ice_elemental.png",
+   "width" : 16,
+   "height" : 16,
+   "idle" : {
+      "fps" : 2,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "run" : {
+      "fps" : 4,
+      "looped" : true,
+      "frames" : [2,3,4,5]
+   },
+   "attack" : {
+      "fps" : 10,
+      "looped" : false,
+      "frames" : [2,6,7,8]
+   },
+   "die" : {
+      "fps" : 8,
+      "looped" : false,
+      "frames" : [2,9,10,11,12,13]
+   },
+   "bloodColor" : "0xFFBBDDFF"
+}
