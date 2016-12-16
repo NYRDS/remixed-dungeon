@@ -8,8 +8,11 @@ import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Slow;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -55,10 +58,12 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public int attackProc(Char enemy, int damage) {
-		if (Random.Int( 2 ) == 0) {
-			Freezing.affect( enemy.getPos(), (Fire)Dungeon.level.blobs.get( Fire.class ) );
+		//Buff proc
+		if (Random.Int(3) == 1){
+			if(enemy instanceof Hero) {
+				Buff.prolong( enemy, Slow.class, 3 );
+			}
 		}
-
 		return damage;
 	}
 }

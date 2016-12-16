@@ -1,6 +1,9 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Fire;
+import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
@@ -37,12 +40,9 @@ public class ColdSpirit extends Mob {
     @Override
     public int attackProc( Char enemy, int damage ) {
         //Buff proc
-        if (Random.Int(5) == 1){
-            if(enemy instanceof Hero) {
-                Buff.prolong( enemy, Slow.class, 3 );
-            }
+        if (Random.Int( 4 ) == 1) {
+            Freezing.affect( enemy.getPos(), (Fire) Dungeon.level.blobs.get( Fire.class ) );
         }
-
         return damage;
     }
 
