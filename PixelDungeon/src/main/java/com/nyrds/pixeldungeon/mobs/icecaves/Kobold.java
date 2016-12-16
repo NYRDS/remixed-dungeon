@@ -17,11 +17,11 @@ public class Kobold extends Mob {
 
 	public Kobold() {
 		
-		hp(ht(40));
-		defenseSkill = 15;
+		hp(ht(45));
+		defenseSkill = 16;
 		
-		EXP = 8;
-		maxLvl = 15;
+		EXP = 9;
+		maxLvl = 20;
 		
 		loot = Gold.class;
 		lootChance = 0.5f;
@@ -31,17 +31,17 @@ public class Kobold extends Mob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 8, 18 );
+		return Random.NormalIntRange( 10, 20 );
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 20;
+		return 21;
 	}
 	
 	@Override
 	public int dr() {
-		return 8;
+		return 9;
 	}
 
 }
