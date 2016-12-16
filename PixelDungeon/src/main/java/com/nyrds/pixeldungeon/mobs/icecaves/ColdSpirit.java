@@ -23,14 +23,14 @@ import com.watabou.utils.Random;
 public class ColdSpirit extends Mob {
 
     public ColdSpirit(){
-        hp(ht(25));
+        hp(ht(35));
 
         baseSpeed = 1.1f;
-        defenseSkill = 11;
+        defenseSkill = 12;
         flying = true;
 
-        EXP = 5;
-        maxLvl = 15;
+        EXP = 7;
+        maxLvl = 20;
 
         loot = Gold.class;
         lootChance = 0.02f;
@@ -48,16 +48,16 @@ public class ColdSpirit extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(5, 8);
+        return Random.NormalIntRange(10, 12);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 10;
+        return 12;
     }
 
     @Override
     public int dr() {
-        return 10;
+        return 12;
     }
 }

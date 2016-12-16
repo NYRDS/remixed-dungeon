@@ -67,10 +67,10 @@
       "any":{"Lich":1}
    },
    "IceCavesLevel":{
-      "15":{"Kobold":1,"ColdSpirit":1,"IceElemental":1},
-      "16":{"Kobold":1,"ColdSpirit":1,"IceElemental":1},
-      "17":{"Kobold":1,"ColdSpirit":1,"IceElemental":1},
-      "18":{"Kobold":1,"ColdSpirit":1,"IceElemental":1}
+      "15":{"Kobold":1,"ColdSpirit":2,"IceElemental":0.1},
+      "16":{"Kobold":1,"ColdSpirit":2,"IceElemental":0.2},
+      "17":{"Kobold":2,"ColdSpirit":1,"IceElemental":0.3},
+      "18":{"Kobold":2,"ColdSpirit":1,"IceElemental":0.6}
    },
    "IceCavesBossLevel":{
       "any":{"Lich":1}
