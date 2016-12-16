@@ -50,7 +50,10 @@ public class Mods {
 
 				ModDesc netDesc = entry.getValue();
 				netDesc.needUpdate = true;
-				modsList.put(name, netDesc);
+
+				if(netDesc.rpdVersion <= PixelDungeon.version()) {
+					modsList.put(name, netDesc);
+				}
 			}
 
 		} catch (JSONException e) {
@@ -111,6 +114,7 @@ public class Mods {
 			desc.name = jsonDesc.getString("name");
 			desc.version = jsonDesc.getInt("version");
 			desc.url = jsonDesc.getString("url");
+			desc.rpdVersion = jsonDesc.optInt("rpdVersion");
 
 			availableMods.put(desc.name, desc);
 		}
@@ -128,6 +132,7 @@ public class Mods {
 		public String  url;
 		public String  name;
 		public int     version;
+		public int     rpdVersion;
 		public boolean needUpdate = false;
 		public boolean installed  = false;
 	}
