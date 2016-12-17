@@ -66,7 +66,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 		items.addAll(bundle.getCollection(ITEMS, Item.class));
-		adjustStats(bundle.getInt(LEVEL));
+		adjustStats(bundle.optInt(LEVEL,Dungeon.depth));
 	}
 
 	@Override
@@ -94,7 +94,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	public void adjustStats(int level) {
 		this.level = level;
 
-		ht((3 + level) * 4);
+		hp(ht((3 + level) * 4));
 		EXP = 2 + 2 * (level - 1) / 5;
 		defenseSkill = attackSkill(null) / 2;
 

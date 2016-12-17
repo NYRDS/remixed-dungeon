@@ -5,9 +5,9 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
@@ -36,7 +36,7 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
-	public boolean pushable(Char hero) {
+	public boolean pushable(Hero hero) {
 		return true;
 	}
 

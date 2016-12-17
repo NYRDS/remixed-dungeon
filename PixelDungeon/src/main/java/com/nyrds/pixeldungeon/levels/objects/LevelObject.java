@@ -75,7 +75,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 		return "levelObjects/objects.png";
 	}
 
-	public boolean pushable(Char hero) {
+	public boolean pushable(Hero hero) {
 		return false;
 	}
 

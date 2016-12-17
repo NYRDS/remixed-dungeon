@@ -32,12 +32,12 @@ public class ConcreteBlock extends LevelObject {
 
 	@Override
 	public boolean stepOn(Hero hero) {
-		return hero.effectiveSTR() >= requiredStr;
+		return false;
 	}
 
 	@Override
-	public boolean pushable(Char hero) {
-		return true;
+	public boolean pushable(Hero hero) {
+		return hero.effectiveSTR() >= requiredStr;
 	}
 
 	@Override
