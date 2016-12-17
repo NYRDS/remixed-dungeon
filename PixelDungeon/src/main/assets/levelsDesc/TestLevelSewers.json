@@ -33,6 +33,6 @@
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},
     {"kind" : "Barrel", "x" : 13, "y" : 10},
-    {"kind" : "Barrel", "x" : 13, "y" : 9}
+    {"kind" : "ConcreteBlock", "x" : 13, "y" : 9}
   ]
 }

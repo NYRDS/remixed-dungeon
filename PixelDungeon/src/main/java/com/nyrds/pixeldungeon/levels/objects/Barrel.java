@@ -36,13 +36,8 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
-	public boolean pushable() {
+	public boolean pushable(Char hero) {
 		return true;
-	}
-
-	@Override
-	public boolean push(Char hero) {
-		return super.push(hero);
 	}
 
 	@Override

@@ -113,7 +113,7 @@ public class WandOfTelekinesis extends Wand {
 			}
 
 			if(levelObject == null && ( levelObject = level.getLevelObject(c) )!=null) {
-				if(levelObject.pushable()) {
+				if(levelObject.pushable(getCurUser())) {
 					levelObject.push(getCurUser());
 				}
 			}

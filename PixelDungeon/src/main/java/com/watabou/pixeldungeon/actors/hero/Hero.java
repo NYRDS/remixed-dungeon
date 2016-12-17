@@ -1199,7 +1199,7 @@ public class Hero extends Char {
 				}
 
 				LevelObject obj = Dungeon.level.objects.get(target);
-				if (obj != null && obj.pushable()) {
+				if (obj != null && obj.pushable(this)) {
 					interrupt();
 					if (!obj.push(this)) {
 						return false;
