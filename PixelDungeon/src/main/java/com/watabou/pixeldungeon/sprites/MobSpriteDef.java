@@ -185,6 +185,11 @@ public class MobSpriteDef extends MobSprite {
 				return;
 			}
 
+			if(zapEffect.equals("DeathRay")) {
+				getParent().add(new DeathRay(center(), DungeonTilemap.tileCenterToWorld(cell)));
+				return;
+			}
+
 			if(zapEffect.equals("Shadow")) {
 				MagicMissile.shadow(getParent(), ch.getPos(), cell, zapCallback);
 				Sample.INSTANCE.play(Assets.SND_ZAP);
@@ -193,11 +198,6 @@ public class MobSpriteDef extends MobSprite {
 
 			if(zapEffect.equals("Fire")) {
 				MagicMissile.fire(getParent(), ch.getPos(), cell, zapCallback);
-				return;
-			}
-
-			if(zapEffect.equals("DeathRay")) {
-				getParent().add(new DeathRay(center(), DungeonTilemap.tileCenterToWorld(cell)));
 				return;
 			}
 		}
