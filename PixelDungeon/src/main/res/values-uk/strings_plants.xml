@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE pixeldungeon/plants-->
   <!--STRINGS OF Plant CLASS-->
-  <string name="Plant_ACPlant">Рослина</string>
+  <string name="Plant_ACPlant">ПОСАДИТИ</string>
   <string name="Plant_Info">Кинь насінину туди, де хочеш виростити %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">насінину рослини %s</string>
   <!--STRINGS OF Dreamweed CLASS-->

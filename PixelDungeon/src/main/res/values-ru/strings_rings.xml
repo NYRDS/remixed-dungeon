@@ -21,8 +21,8 @@
   </string-array>
   <string name="Ring_Info1">Ты можешь носить максимум 2 кольца</string>
   <string name="Ring_Info2">Проклятое %s не снять. Боль.</string>
-  <string name="Ring_Info3a">%1$s\n\n%2$s на твоём пальце %3$s</string>
-  <string name="Ring_Info3b">проклято, ты не в силах его снять.</string>
+  <string name="Ring_Info3a">%1$s\n\n%2$s на твоём пальце%3$s</string>
+  <string name="Ring_Info3b">,и так как оно проклято, ты не в силах его снять.</string>
   <string name="Ring_Info4">%1$s\n\nТы чувствуешь зловещую магию, затаившуюся внутри предмета %2$s.</string>
   <string name="Ring_BuffKnown">Это %s</string>
   <!--STRINGS OF RingOfAccuracy CLASS-->

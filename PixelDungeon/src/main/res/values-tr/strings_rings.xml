@@ -21,8 +21,8 @@
   </string-array>
   <string name="Ring_Info1">tek seferde yalnızca 2 yüzük giyebilirsin</string>
   <string name="Ring_Info2">senin %s parmağını acı dolu bir şekilde sıkıyor.</string>
-  <string name="Ring_Info3a">%1$s\n\n %2$s parmağında  %3$s.</string>
-  <string name="Ring_Info3b">,çünkü bu lanetli sen bu laneti kaldırmak için çok güçsüzsün</string>
+  <string name="Ring_Info3a">%1$s\n\n %2$s parmağında%3$s</string>
+  <string name="Ring_Info3b">,çünkü bu lanetli sen bu laneti kaldırmak için çok güçsüzsün.</string>
   <string name="Ring_Info4">%1$s\n\n%2$s üzerinde gizlenmiş kötü büyüyü hissediyorsun.</string>
   <string name="Ring_BuffKnown">bu %s</string>
   <!--STRINGS OF RingOfAccuracy CLASS-->
