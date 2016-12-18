@@ -29,20 +29,26 @@ public class EmoIcon extends Image {
 	protected float maxSize = 2;
 	protected float timeScale = 1;
 
-	protected boolean growing	= true;
+	private boolean growing = true;
 
 	protected CharSprite owner;
-	
-	public EmoIcon( CharSprite owner ) {
+
+	private EmoIcon(CharSprite owner) {
 		this.owner = owner;
+		setVisible(false);
 		GameScene.add( this );
 	}
 	
 	@Override
 	public void update() {
 		super.update();
-		
+
+		setVisible(owner.getVisible());
+
 		if (getVisible()) {
+			x = owner.x + owner.width - width / 2;
+			y = owner.y - height;
+
 			if (growing) {
 				scale.set( scale.x + Game.elapsed * timeScale );
 				if (scale.x > maxSize) {
@@ -54,9 +60,6 @@ public class EmoIcon extends Image {
 					growing = true;
 				}
 			}
-			
-			x = owner.x + owner.width - width / 2;
-			y = owner.y - height;
 		}
 	}
 	
