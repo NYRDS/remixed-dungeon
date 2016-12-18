@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
+import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
@@ -283,7 +284,8 @@ public class Generator {
 				Ration.class,
 				Pasty.class,
 				MysteryMeat.class,
-				PumpkinPie.class};
+				PumpkinPie.class,
+				ChristmasTurkey.class};
 		Category.FOOD.probs = new float[]{4, 1, 0};
 
 		Category.RING.classes = new Class<?>[]{

@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
+import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
@@ -357,8 +358,8 @@ public class ItemFactory {
 		registerItemClass(NecromancerArmor.class);
 		registerItemClass(NecromancerRobe.class);
 		registerItemClass(PumpkinPie.class);
-		registerItemClass(PumpkinPie.class);
 		registerItemClass(RottenPumpkinPie.class);
+		registerItemClass(ChristmasTurkey.class);
 
 		mItemsList.put("Rotberry.Seed",   WandMaker.Rotberry.Seed.class);
 		mItemsList.put("Earthroot.Seed",  Earthroot.Seed.class);
