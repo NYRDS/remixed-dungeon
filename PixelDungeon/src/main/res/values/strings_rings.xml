@@ -24,8 +24,8 @@
 
     <string name="Ring_Info1">You can only wear 2 rings at a time</string>
     <string name="Ring_Info2">Your %s tightens around your finger painfully</string>
-    <string name="Ring_Info3a">%1$s\n\nThe %2$s is on your finger %3$s.</string>
-    <string name="Ring_Info3b">, and because it is cursed, you are powerless to remove it</string>
+    <string name="Ring_Info3a">%1$s\n\nThe %2$s is on your finger%3$s</string>
+    <string name="Ring_Info3b">, and because it is cursed, you are powerless to remove it.</string>
     <string name="Ring_Info4">%1$s\n\nYou can feel a malevolent magic lurking within the %2$s.</string>
     <string name="Ring_BuffKnown">This is a %s</string>
 
