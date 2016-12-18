@@ -106,7 +106,6 @@ import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -1477,21 +1476,7 @@ public class Hero extends Char {
 
 	public static void reallyDie(Object cause) {
 
-		int length = Dungeon.level.getLength();
-		int[] map = Dungeon.level.map;
-		boolean[] visited = Dungeon.level.visited;
-		boolean[] discoverable = Dungeon.level.discoverable;
-
-		for (int i = 0; i < length; i++) {
-			int terr = map[i];
-			if (discoverable[i]) {
-				visited[i] = true;
-				if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
-					Dungeon.level.set(i, Terrain.discover(terr));
-					GameScene.updateMap(i);
-				}
-			}
-		}
+		Dungeon.level.discoverOnHeroDie();
 
 		Bones.leave();
 

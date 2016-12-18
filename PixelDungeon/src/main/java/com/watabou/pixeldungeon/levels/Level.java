@@ -147,6 +147,21 @@ public abstract class Level implements Bundlable {
 		this.feeling = feeling;
 	}
 
+	public void discoverOnHeroDie() {
+		int length = getLength();
+
+		for (int i = 0; i < length; i++) {
+			int terr = map[i];
+			if (discoverable[i]) {
+				visited[i] = true;
+				if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
+					set(i, Terrain.discover(terr));
+				}
+			}
+		}
+		GameScene.updateMap();
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
