@@ -37,4 +37,9 @@
     <string name="IceCaves_TileStatue">Frozen Gnoll</string>
     <string name="IceCaves_TileDescStatue">Yet another awful statue... Oh wait that\'s frozen gnoll.</string>
 
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">festive turkey</string>
+    <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. To honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
+
 </resources>
