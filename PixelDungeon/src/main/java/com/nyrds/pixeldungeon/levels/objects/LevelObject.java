@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.levels.objects;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
@@ -79,7 +78,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 		return false;
 	}
 
-	public boolean push(Char hero){
+	public boolean push(Hero hero){
 		Level level = Dungeon.level;
 		int hx = level.cellX(hero.getPos());
 		int hy = level.cellY(hero.getPos());
