@@ -43,7 +43,7 @@ import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.Gnoll;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
-import com.watabou.pixeldungeon.actors.mobs.IceGuardian;
+import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;

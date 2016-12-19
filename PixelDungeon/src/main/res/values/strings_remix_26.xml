@@ -32,7 +32,7 @@
     <string name="IceGuardian_Name">ice guardian</string>
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">ice guardian</string>
-    <string name="IceGuardian_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it's core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
+    <string name="IceGuardian_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
 
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
