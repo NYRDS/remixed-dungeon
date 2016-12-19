@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -87,9 +88,6 @@ public class IceCavesBossLevel extends Level {
 			map[i] = Terrain.EMPTY_SP;
 		}
 		
-		setExit((TOP - 1) * getWidth() + _Center(),0);
-		map[getExit(0)] = Terrain.LOCKED_EXIT;
-		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
 		map[arenaDoor] = Terrain.DOOR;
 		
@@ -159,6 +157,22 @@ public class IceCavesBossLevel extends Level {
 			enteredArena = true;
 			
 			Mob boss = Bestiary.mob();
+			Mob guard = new IceGuardian();
+
+			Mob mob = boss;
+
+			for (int i = 0; i < 2; i++){
+				mob.setState(mob.HUNTING);
+				do {
+					mob.setPos(Random.Int( getLength() ));
+				} while (
+						!passable[mob.getPos()] ||
+								!outsideEntraceRoom( mob.getPos() ) ||
+								Dungeon.visible[mob.getPos()]);
+				Dungeon.level.spawnMob(mob);
+				mob = guard;
+			}
+			/*
 			boss.setState(boss.HUNTING);
 			do {
 				boss.setPos(Random.Int( getLength() ));
@@ -167,13 +181,20 @@ public class IceCavesBossLevel extends Level {
 				!outsideEntraceRoom( boss.getPos() ) ||
 				Dungeon.visible[boss.getPos()]);
 			Dungeon.level.spawnMob(boss);
-			
+			*/
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );
 			Dungeon.observe();
 		}
 	}
-	
+
+	@Override
+	public void unseal() {
+		set( arenaDoor, Terrain.DOOR );
+		GameScene.updateMap( arenaDoor );
+		Dungeon.observe();
+	}
+
 	@Override
 	public Heap drop( Item item, int cell ) {
 		
@@ -233,7 +254,7 @@ public class IceCavesBossLevel extends Level {
 	
 	@Override
 	public void addVisuals( Scene scene ) {
-		CityLevel.addVisuals( this, scene );
+		IceCavesLevel.addVisuals( this, scene );
 	}
 
 	private int _Left() {
