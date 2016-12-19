@@ -81,13 +81,6 @@ public class IceCavesBossLevel extends Level {
 			y += 2;
 		}
 		
-		int left = pedestal( true );
-		int right = pedestal( false );
-		map[left] = map[right] = Terrain.PEDESTAL;
-		for (int i=left+1; i < right; i++) {
-			map[i] = Terrain.EMPTY_SP;
-		}
-		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
 		map[arenaDoor] = Terrain.DOOR;
 		
@@ -172,16 +165,7 @@ public class IceCavesBossLevel extends Level {
 				Dungeon.level.spawnMob(mob);
 				mob = guard;
 			}
-			/*
-			boss.setState(boss.HUNTING);
-			do {
-				boss.setPos(Random.Int( getLength() ));
-			} while (
-				!passable[boss.getPos()] ||
-				!outsideEntraceRoom( boss.getPos() ) ||
-				Dungeon.visible[boss.getPos()]);
-			Dungeon.level.spawnMob(boss);
-			*/
+
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );
 			Dungeon.observe();
