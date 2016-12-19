@@ -16,8 +16,6 @@ import com.watabou.utils.Random;
 public class IceGuardianCore extends Mob {
 
 	public IceGuardianCore() {
-		spriteClass = DM300Sprite.class;
-		
 		hp(ht(70));
 		EXP = 5;
 		defenseSkill = 10;
