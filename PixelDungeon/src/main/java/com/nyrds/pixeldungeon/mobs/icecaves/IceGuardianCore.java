@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
-import com.nyrds.pixeldungeon.levels.IceCavesBossLevel;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -65,6 +64,6 @@ public class IceGuardianCore extends Boss {
 				level = null;
 			}
 		}
-	//Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
+	Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
 	}
 }
