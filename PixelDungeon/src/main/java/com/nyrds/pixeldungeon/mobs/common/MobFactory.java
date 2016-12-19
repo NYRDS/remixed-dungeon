@@ -43,6 +43,7 @@ import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.Gnoll;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
+import com.watabou.pixeldungeon.actors.mobs.IceGuardian;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
@@ -175,7 +176,7 @@ public class MobFactory {
 		registerMobClass(ColdSpirit.class);//little annoying thing
 		registerMobClass(IceElemental.class);//elemental, obviously
 		//registerMobClass(Yeti.class);//big and tough
-		//registerMobClass(FrozenGuardian.class);//boss
+		registerMobClass(IceGuardian.class);//boss - a "regular" enemy, that spawns 2 enemies on death, and again until 3rd iteration, so in total player has to defeat 7 ice guardians (1 parent, 2 children, 4 grandchildren)
 
 		registerMobClass(Hedgehog.class);
 	}
