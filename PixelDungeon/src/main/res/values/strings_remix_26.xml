@@ -7,7 +7,7 @@
 
     <!-- STRINGS OF Rudolph CLASS -->
     <string name="Rudolph_Name">Red nose and antlers</string>
-    <string name="Rudolph_Info">What could be more festive than a glowing red nose?</string>
+    <string name="Rudolph_Info">What could be more festive than a glowing red nose? And pair of antlers, naturally.</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF Kobold CLASS -->
@@ -28,6 +28,12 @@
     <string name="IceElemental_Name_Objective">ice elemental</string>
     <string name="IceElemental_Desc">Giant golem made os solid ice.</string>
 
+    <!-- STRINGS OF IceGuardian CLASS -->
+    <string name="IceGuardian_Name">ice guardian</string>
+    <string name="IceGuardian_Gender">masculine</string>
+    <string name="IceGuardian_Name_Objective">ice guardian</string>
+    <string name="IceGuardian_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it's core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
+
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
     <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
@@ -40,6 +46,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festive turkey</string>
-    <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. To honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
+    <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. So you can to, honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
 
 </resources>
