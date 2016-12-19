@@ -39,17 +39,17 @@ public class IceCavesBossLevel extends Level {
 	
 	@Override
 	public String tilesTex() {
-		return Assets.TILES_CITY;
+		return Assets.TILES_ICE_CAVES_X;
 	}
 	
 	@Override
 	public String waterTex() {
-		return Assets.WATER_CITY;
+		return Assets.WATER_ICE_CAVES;
 	}
 	
 	private static final String DOOR	= "door";
 	private static final String ENTERED	= "entered";
-	private static final String DROPPED	= "droppped";
+	private static final String DROPPED	= "dropped";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -192,38 +192,42 @@ public class IceCavesBossLevel extends Level {
 	private boolean outsideEntraceRoom( int cell ) {
 		return cell / getWidth() < arenaDoor / getWidth();
 	}
-	
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {
-		case Terrain.WATER:
-			return Game.getVar(R.string.City_TileWater);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.City_TileHighGrass);
-		default:
-			return super.tileName( tile );
+			case Terrain.GRASS:
+				return Game.getVar(R.string.IceCaves_TileGrass);
+			case Terrain.HIGH_GRASS:
+				return Game.getVar(R.string.IceCaves_TileHighGrass);
+			case Terrain.WATER:
+				return Game.getVar(R.string.Caves_TileWater);
+			case Terrain.STATUE:
+			case Terrain.STATUE_SP:
+				return Game.getVar(R.string.IceCaves_TileStatue);
+			default:
+				return super.tileName( tile );
 		}
 	}
-	
+
 	@Override
-	public String tileDesc(int tile) {
+	public String tileDesc( int tile ) {
 		switch (tile) {
-		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.City_TileDescEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.City_TileDescExit);
-		case Terrain.WALL_DECO:
-		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.City_TileDescDeco);
-		case Terrain.EMPTY_SP:
-			return Game.getVar(R.string.City_TileDescEmptySP);
-		case Terrain.STATUE:
-		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.City_TileDescStatue);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.City_TileDescBookshelf);
-		default:
-			return super.tileDesc( tile );
+			case Terrain.ENTRANCE:
+				return Game.getVar(R.string.Caves_TileDescEntrance);
+			case Terrain.EXIT:
+				return Game.getVar(R.string.Caves_TileDescExit);
+			case Terrain.HIGH_GRASS:
+				return Game.getVar(R.string.IceCaves_TileDescHighGrass);
+			case Terrain.WALL_DECO:
+				return Game.getVar(R.string.IceCaves_TileDescDeco);
+			case Terrain.BOOKSHELF:
+				return Game.getVar(R.string.Caves_TileDescBookshelf);
+			case Terrain.STATUE:
+			case Terrain.STATUE_SP:
+				return Game.getVar(R.string.IceCaves_TileDescStatue);
+			default:
+				return super.tileDesc( tile );
 		}
 	}
 	
