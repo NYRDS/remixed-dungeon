@@ -34,6 +34,12 @@
     <string name="IceGuardian_Name_Objective">ice guardian</string>
     <string name="IceGuardian_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
 
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">ice guardian</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
+    <string name="IceGuardianCore_Name_Objective">ice guardian</string>
+    <string name="IceGuardianCore_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
+
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
     <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
