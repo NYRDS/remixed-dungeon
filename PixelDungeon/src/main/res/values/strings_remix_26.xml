@@ -54,4 +54,7 @@
     <string name="ChristmasTurkey_Name">festive turkey</string>
     <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. So you can to, honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
 
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Ice guardian slain</string>
+
 </resources>
