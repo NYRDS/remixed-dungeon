@@ -28,7 +28,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 	abstract void setupFromJson(Level level, JSONObject obj) throws JSONException;
 
 	public boolean interact(Hero hero ) {return true;}
-	public boolean stepOn(Hero hero) {return true;}
+	public boolean stepOn(Char hero) {return true;}
 
 	protected void remove() {
 		Dungeon.level.remove(this);
@@ -75,7 +75,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 		return "levelObjects/objects.png";
 	}
 
-	public boolean pushable(Hero hero) {
+	public boolean pushable(Char hero) {
 		return false;
 	}
 
