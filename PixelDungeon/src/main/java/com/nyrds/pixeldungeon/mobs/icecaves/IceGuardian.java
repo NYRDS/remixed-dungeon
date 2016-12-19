@@ -23,6 +23,8 @@ public class IceGuardian extends MultiKindMob {
 		defenseSkill = 10;
 
 		kind = 1;
+
+		baseSpeed = 0.7f;
 		
 		loot = new FrozenCarpaccio();
 		lootChance = 0.2f;

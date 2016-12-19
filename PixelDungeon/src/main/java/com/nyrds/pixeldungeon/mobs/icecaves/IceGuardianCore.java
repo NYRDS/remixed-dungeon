@@ -23,7 +23,8 @@ public class IceGuardianCore extends Boss {
 		hp(ht(750));
 		EXP = 5;
 		defenseSkill = 10;
-		
+
+		baseSpeed = 0.5f;
 		loot = new FrozenCarpaccio();
 		lootChance = 0.2f;
 
@@ -61,7 +62,6 @@ public class IceGuardianCore extends Boss {
 				mob.die(cause);
 				Level level = Dungeon.level;
 				level.unseal();
-				level = null;
 			}
 		}
 	Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
