@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
@@ -30,18 +31,21 @@ public class ConcreteBlock extends LevelObject {
 	}
 
 	@Override
-	public boolean stepOn(Hero hero) {
+	public boolean stepOn(Char hero) {
 		return false;
 	}
 
 	@Override
-	public boolean pushable(Hero hero) {
+	public boolean pushable(Char hero) {
 		return true;
 	}
 
 	@Override
-	public boolean push(Hero hero) {
-		return hero.effectiveSTR() >= requiredStr && super.push(hero);
+	public boolean push(Char hero) {
+		if(hero instanceof Hero) {
+			return ((Hero)hero).effectiveSTR() >= requiredStr && super.push(hero);
+		}
+		return super.push(hero);
 	}
 
 	@Override

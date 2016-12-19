@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
@@ -27,7 +28,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 	abstract void setupFromJson(Level level, JSONObject obj) throws JSONException;
 
 	public boolean interact(Hero hero ) {return true;}
-	public boolean stepOn(Hero hero) {return true;}
+	public boolean stepOn(Char hero) {return true;}
 
 	protected void remove() {
 		Dungeon.level.remove(this);
@@ -74,11 +75,11 @@ public abstract class LevelObject implements Bundlable, Presser {
 		return "levelObjects/objects.png";
 	}
 
-	public boolean pushable(Hero hero) {
+	public boolean pushable(Char hero) {
 		return false;
 	}
 
-	public boolean push(Hero hero){
+	public boolean push(Char hero){
 		Level level = Dungeon.level;
 		int hx = level.cellX(hero.getPos());
 		int hy = level.cellY(hero.getPos());
