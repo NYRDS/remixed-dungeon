@@ -21,7 +21,7 @@
   </string-array>
   <string name="Ring_Info1">Du kannst nur 2 Ringe gleichzeitig tragen</string>
   <string name="Ring_Info2">Dein %s schneidet sich schmerzhaft ins Fleisch deines Fingers</string>
-  <string name="Ring_Info3a">%1$s\n\nDer %2$s ist auf deinem Finger %3$s.</string>
+  <string name="Ring_Info3a">%1$s\n\nDer %2$s ist auf deinem Finger%3$s</string>
   <string name="Ring_Info3b">, und da er verflucht ist, kannst du ihn nicht entfernen.</string>
   <string name="Ring_Info4">%1$s\n\nDu spürst, dass eine bösartige Magie in diesem %2$s lauert.</string>
   <string name="Ring_BuffKnown">Dies ist ein %s</string>

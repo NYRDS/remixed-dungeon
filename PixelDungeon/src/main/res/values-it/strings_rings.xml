@@ -7,8 +7,8 @@
   <string name="Ring_Identify">hai abbastanza familiarità con %1$s da identificarlo. È %2$s.</string>
   <string name="Ring_Info1">Puoi indossare solo 2 anelli alla volta.</string>
   <string name="Ring_Info2">Il tuo %s si restringe dolorosamente attorno al tuo dito.</string>
-  <string name="Ring_Info3a">%1$s\n\nIl %2$s è nel tuo dito %3$s.</string>
-  <string name="Ring_Info3b">, e siccome è maledetto, non hai la capacità di rimuoverlo</string>
+  <string name="Ring_Info3a">%1$s\n\nIl %2$s è nel tuo dito%3$s</string>
+  <string name="Ring_Info3b">, e siccome è maledetto, non hai la capacità di rimuoverlo.</string>
   <string name="Ring_Info4">%1$s\n\Si può sentire una magia maligna agguato all\'interno del %2$s.</string>
   <string name="Ring_BuffKnown">questo è un %s</string>
   <!--STRINGS OF RingOfAccuracy CLASS-->

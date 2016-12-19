@@ -22,8 +22,8 @@
   <string name="Ring_Info1">Vous ne pouvez porter que 2 anneaux à la fois</string>
   <string name="Ring_Info2">Votre %s se resserre douloureusement autour de votre doigt</string>
   <string name="Ring_Info3a">%1$s
-L\'%2$s est sur votre doigt %3$s.</string>
-  <string name="Ring_Info3b">, et parce qu\'il est maudit, vous n\'arrivez pas à l\'enlever</string>
+L\'%2$s est sur votre doigt%3$s</string>
+  <string name="Ring_Info3b">, et parce qu\'il est maudit, vous n\'arrivez pas à l\'enlever.</string>
   <string name="Ring_Info4">%1$s
 Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
   <string name="Ring_BuffKnown">C\'est un %s</string>

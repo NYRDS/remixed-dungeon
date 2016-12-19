@@ -151,4 +151,8 @@ public class PredesignedLevel extends CustomLevel {
 	protected int nTraps() {
 		return 0;
 	}
+
+	@Override
+	public void discoverOnHeroDie() {
+	}
 }
