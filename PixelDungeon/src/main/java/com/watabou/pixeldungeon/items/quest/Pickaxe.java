@@ -29,6 +29,8 @@ import com.watabou.pixeldungeon.actors.mobs.Bat;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
+import com.watabou.pixeldungeon.levels.CavesBossLevel;
+import com.watabou.pixeldungeon.levels.CavesLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -75,7 +77,7 @@ public class Pickaxe extends Weapon {
 		
 		if (action.equals(AC_MINE)) {
 			
-			if (Dungeon.depth < 11 || Dungeon.depth > 15) {
+			if (!(Dungeon.level instanceof CavesLevel || Dungeon.level instanceof CavesBossLevel) ) {
 				GLog.w( TXT_NO_VEIN );
 				return;
 			}
