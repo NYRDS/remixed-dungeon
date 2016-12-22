@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.levels.Level;
 public class MobSpawner {
 
 	static public Mob spawnRandomMob(Level level, int position) {
-		Mob mob = Bestiary.mob();
+		Mob mob = Bestiary.mutable();
 		mob.setPos(position);
 		mob.setState(mob.WANDERING);
 		level.spawnMob(mob);

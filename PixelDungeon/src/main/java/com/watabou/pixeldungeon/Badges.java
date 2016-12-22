@@ -158,6 +158,7 @@ public class Badges {
 		SUPPORTER(Game.getVar(R.string.Badges_Supporter), 31, true),
 		IMMURED(Game.getVar(R.string.Badges_Immured), 64),
 		LICH_SLAIN(Game.getVar(R.string.Badges_Lich_Slain), 69),
+		ICE_GUARDIAN_SLAIN(Game.getVar(R.string.Badges_Ice_Guardian_Slain), 70),
 		SPIDER_QUEEN_SLAIN(Game.getVar(R.string.Badges_SpiderQueen_Slain), 66),
 		SHADOW_LORD_SLAIN(Game.getVar(R.string.Badges_ShadowLord_Slain), 67),
 		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 65),

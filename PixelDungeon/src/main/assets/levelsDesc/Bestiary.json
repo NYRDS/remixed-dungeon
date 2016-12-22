@@ -73,7 +73,7 @@
       "18":{"Kobold":2,"ColdSpirit":1,"IceElemental":0.6}
    },
    "IceCavesBossLevel":{
-      "any":{"IceGuardian":1}
+      "any":{"IceGuardianCore":1}
    },
   "RandomLevel":{
     "any":{"Gnoll":1},

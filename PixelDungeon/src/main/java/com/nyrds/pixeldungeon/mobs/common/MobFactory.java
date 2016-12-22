@@ -15,6 +15,7 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
 import com.nyrds.pixeldungeon.mobs.icecaves.ColdSpirit;
+import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.icecaves.Kobold;
 import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
@@ -177,6 +178,7 @@ public class MobFactory {
 		registerMobClass(IceElemental.class);//elemental, obviously
 		//registerMobClass(Yeti.class);//big and tough
 		registerMobClass(IceGuardian.class);//boss - a "regular" enemy, that spawns 2 enemies on death, and again until 3rd iteration, so in total player has to defeat 7 ice guardians (1 parent, 2 children, 4 grandchildren)
+		registerMobClass(IceGuardianCore.class);
 
 		registerMobClass(Hedgehog.class);
 	}

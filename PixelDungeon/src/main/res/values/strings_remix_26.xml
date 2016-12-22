@@ -34,6 +34,12 @@
     <string name="IceGuardian_Name_Objective">ice guardian</string>
     <string name="IceGuardian_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
 
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">ice guardian</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
+    <string name="IceGuardianCore_Name_Objective">ice guardian</string>
+    <string name="IceGuardianCore_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
+
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
     <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
@@ -47,5 +53,8 @@
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festive turkey</string>
     <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. So you can to, honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Ice guardian slain</string>
 
 </resources>

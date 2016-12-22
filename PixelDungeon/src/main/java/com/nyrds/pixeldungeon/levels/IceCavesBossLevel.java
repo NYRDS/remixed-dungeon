@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -29,9 +30,9 @@ public class IceCavesBossLevel extends Level {
 	}
 	
 	private static final int TOP			= 2;
-	private static final int HALL_WIDTH		= 7;
-	private static final int HALL_HEIGHT	= 15;
-	private static final int CHAMBER_HEIGHT	= 3;
+	private static final int HALL_WIDTH		= 9;
+	private static final int HALL_HEIGHT	= 4;
+	private static final int CHAMBER_HEIGHT	= 1;
 	
 	private int arenaDoor;
 	private boolean enteredArena = false;
@@ -70,32 +71,15 @@ public class IceCavesBossLevel extends Level {
 	@Override
 	protected boolean build() {
 		
-		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY );
-		Painter.fill( this, _Center(), TOP, 1, HALL_HEIGHT, Terrain.EMPTY_SP );
-		
-		int y = TOP + 1;
-		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + _Center() - 2] = Terrain.STATUE_SP;
-			map[y * getWidth() + _Center() + 2] = Terrain.STATUE_SP;
-			y += 2;
+		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY_SP );
+		for (int i = 0; i < 2; i++) {
+			map[getRandomTerrainCell(Terrain.EMPTY_SP)] = Terrain.STATUE_SP;
 		}
-		
-		int left = pedestal( true );
-		int right = pedestal( false );
-		map[left] = map[right] = Terrain.PEDESTAL;
-		for (int i=left+1; i < right; i++) {
-			map[i] = Terrain.EMPTY_SP;
-		}
-		
-		setExit((TOP - 1) * getWidth() + _Center(),0);
-		map[getExit(0)] = Terrain.LOCKED_EXIT;
 		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
 		map[arenaDoor] = Terrain.DOOR;
 		
 		Painter.fill( this, _Left(), TOP + HALL_HEIGHT + 1, HALL_WIDTH, CHAMBER_HEIGHT, Terrain.EMPTY );
-		Painter.fill( this, _Left(), TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
-		Painter.fill( this, _Left() + HALL_WIDTH - 1, TOP + HALL_HEIGHT + 1, 1, CHAMBER_HEIGHT, Terrain.BOOKSHELF );
 		
 		entrance = (TOP + HALL_HEIGHT + 2 + Random.Int( CHAMBER_HEIGHT - 1 )) * getWidth() + _Left() + (/*1 +*/ Random.Int( HALL_WIDTH-2 )); 
 		map[entrance] = Terrain.ENTRANCE;
@@ -113,9 +97,6 @@ public class IceCavesBossLevel extends Level {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-		
-		int sign = arenaDoor + getWidth() + 1;
-		addLevelObject(new Sign(sign,Dungeon.tip(this)));
 	}
 	
 	public int pedestal( boolean left ) {
@@ -159,21 +140,35 @@ public class IceCavesBossLevel extends Level {
 			enteredArena = true;
 			
 			Mob boss = Bestiary.mob();
-			boss.setState(boss.HUNTING);
-			do {
-				boss.setPos(Random.Int( getLength() ));
-			} while (
-				!passable[boss.getPos()] ||
-				!outsideEntraceRoom( boss.getPos() ) ||
-				Dungeon.visible[boss.getPos()]);
-			Dungeon.level.spawnMob(boss);
-			
+			Mob guard = new IceGuardian();
+
+			Mob mob = boss;
+
+			for (int i = 0; i < 2; i++){
+				mob.setState(mob.HUNTING);
+				do {
+					mob.setPos(Random.Int( getLength() ));
+				} while (
+						!passable[mob.getPos()] ||
+								!outsideEntraceRoom( mob.getPos() ) ||
+								Dungeon.visible[mob.getPos()]);
+				Dungeon.level.spawnMob(mob);
+				mob = guard;
+			}
+
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );
 			Dungeon.observe();
 		}
 	}
-	
+
+	@Override
+	public void unseal() {
+		set( arenaDoor, Terrain.DOOR );
+		GameScene.updateMap( arenaDoor );
+		Dungeon.observe();
+	}
+
 	@Override
 	public Heap drop( Item item, int cell ) {
 		
@@ -233,7 +228,7 @@ public class IceCavesBossLevel extends Level {
 	
 	@Override
 	public void addVisuals( Scene scene ) {
-		CityLevel.addVisuals( this, scene );
+		IceCavesLevel.addVisuals( this, scene );
 	}
 
 	private int _Left() {
