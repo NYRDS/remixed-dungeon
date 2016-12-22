@@ -1,3 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Zombi Maskesi</string>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">Şeker</string>
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">Balkabağı Turtası</string>
+    <string name="PumpkinPie_Info">Lezzetli Bir Balkabağı Pastası, tıpkı annenin önceden pişirdiği gibi</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">çürümüş balkabağı turtası</string>
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">görüş mumu</string>
+    <string name="CandleOfMindVision_Info_Exhausted">meşale söndü, artık ışık yaymayı kesti.görünüşe göre kullanılamaz halde</string>
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">varil</string>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">korkuluk</string>
     </resources>
