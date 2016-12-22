@@ -20,7 +20,7 @@ import com.watabou.utils.Random;
 public class IceGuardianCore extends Boss {
 
 	public IceGuardianCore() {
-		hp(ht(750));
+		hp(ht(1000));
 		EXP = 5;
 		defenseSkill = 10;
 
@@ -39,12 +39,12 @@ public class IceGuardianCore extends Boss {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 13, 18 );
+		return Random.NormalIntRange( 13, 23 );
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 21;
+		return 26;
 	}
 	
 	@Override
