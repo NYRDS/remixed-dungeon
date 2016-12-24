@@ -79,9 +79,9 @@
     <item>Є лише один спосіб зачарувати зброю, і це сувій покращення зброї.</item>
     <item>В присутності Його Величності неприпустимо носіння зброї!</item>
     <item>Pixel-Mart. Спеціальні знижки для мисливців на демонів!</item>
-    <item>Цей текст написано не мові демонів.</item>
-    <item>Цей текст написано не мові демонів.</item>
-    <item>Цей текст написано не мові демонів.</item>
+    <item>Цей текст написано на мові демонів.</item>
+    <item>Цей текст написано на мові демонів.</item>
+    <item>Цей текст написано на мові демонів.</item>
   </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
@@ -153,8 +153,8 @@
   <string name="WndInfoItem_Tomb">Гробниця</string>
   <string name="WndInfoItem_Skeleton">Рештки скелета</string>
   <string name="WndInfoItem_WontKnow">Ти не дізнаєшся, що всередині, доки не відкриєш!</string>
-  <string name="WndInfoItem_NeedKey">Але, щоб відкрити, тобі знадобится золотий ключ.</string>
-  <string name="WndInfoItem_Inside">У середині ти бачиш предмет %s, але, щоб відкрити скриню, знадобится золотий ключ.</string>
+  <string name="WndInfoItem_NeedKey">Але, щоб відкрити, тобі потрібен золотий ключ.</string>
+  <string name="WndInfoItem_Inside">У середині ти бачиш предмет %s, але, щоб відкрити скриню, потрібен золотий ключ.</string>
   <string name="WndInfoItem_Owner">У  цій старовинній гробниці може бути щось корисне, але власник навряд чи оцінить твій ентузіазм.</string>
   <string name="WndInfoItem_Remains">Це усе що залишилося від твого попередника. Мабуть, варто обшукати на предмет цінностей.</string>
   <!--STRINGS OF WndJournal CLASS-->
@@ -177,7 +177,7 @@
   <string name="WndRanking_StaAnkhs">Анкхів використано</string>
   <!--STRINGS OF WndResurrect CLASS-->
   <string name="WndResurrect_Message">Ти загинув, але тобі дарований ще один шанс підкорити підземелля.
-Чи скористаєшся ти їм?</string>
+Чи скористаєшся ти ним?</string>
   <string name="WndResurrect_Yes">Так, я продовжу боротися!</string>
   <string name="WndResurrect_No">Ні, я здаюся</string>
   <!--STRINGS OF WndSadGhost CLASS-->
