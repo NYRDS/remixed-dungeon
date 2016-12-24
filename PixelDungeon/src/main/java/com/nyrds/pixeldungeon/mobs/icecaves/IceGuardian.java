@@ -58,12 +58,13 @@ public class IceGuardian extends MultiKindMob {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-
 		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
-			if (mob instanceof Boss && (mob instanceof IceGuardianCore)) {
-				ressurrect();
-				ressurrect();
+			if (mob instanceof IceGuardianCore) {
 				mob.damage(150,cause);
+				if (mob.isAlive()){
+					ressurrect();
+					ressurrect();
+				}
 			}
 		}
 	}
