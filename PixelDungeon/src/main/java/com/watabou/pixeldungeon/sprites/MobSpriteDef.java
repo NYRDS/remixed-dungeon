@@ -200,6 +200,11 @@ public class MobSpriteDef extends MobSprite {
 				MagicMissile.fire(getParent(), ch.getPos(), cell, zapCallback);
 				return;
 			}
+
+			if(zapEffect.equals("Ice")) {
+				MagicMissile.ice(getParent(), ch.getPos(), cell, zapCallback);
+				return;
+			}
 		}
 	}
 
