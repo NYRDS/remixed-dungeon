@@ -5,6 +5,8 @@
     <string name="ArmoredStatue_Name">canlandırılmış heykel </string>
     <string name="ArmoredStatue_Gender">kadınsı</string>
     <string name="ArmoredStatue_Name_Objective">canlandırılmış heykel</string>
+    <string name="ArmoredStatue_Desc">Ne kadar çirkin bir heykel olduğunu düşünmeden edemiyorsun, sadece parlayan kırmızı gözleri değil , kim böyle bir şeyin üstüne _%s_ koyar.</string>
+
     <!-- STRINGS OF SpiderSoldier -->
     <string name="SpiderGuard_Name">örümcek gardiyan</string>
     <string name="SpiderGuard_Gender">erkeksi</string>
