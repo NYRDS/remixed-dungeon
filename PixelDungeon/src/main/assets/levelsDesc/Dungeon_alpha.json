@@ -2,7 +2,7 @@
    "Levels":{
       "0":{"kind":"SewerLevel", "depth":0,        "size":[0,0]},
       "test_guts":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelGuts.json"},
-      "test_sewers":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelSewers.json"},
+      "test_sewers":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelSewers.json", "waterSx":10,"waterSy":3},
       "test_random":{"kind":"RandomLevel", "depth":2, "file":"levelsDesc/TestLevelRandom.json"},
       "test_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json"},
 

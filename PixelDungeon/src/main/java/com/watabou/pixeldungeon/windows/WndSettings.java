@@ -397,7 +397,7 @@ public class WndSettings extends Window {
 
 	private void uiZoom(float value) {
 		PixelScene.uiCamera.updateFullscreenCameraZoom(value);
-		((GameScene)Game.scene()).udateUiCamera();
+		((GameScene)Game.scene()).updateUiCamera();
 		Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
 	}
 

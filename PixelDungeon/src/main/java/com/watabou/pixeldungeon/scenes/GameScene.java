@@ -54,6 +54,7 @@ import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.plants.Plant;
@@ -123,8 +124,9 @@ public class GameScene extends PixelScene {
 	private BusyIndicator   busy;
 
 	private volatile boolean sceneCreated = false;
+	private float waterSx = 0, waterSy = -5;
 
-	public void udateUiCamera() {
+	public void updateUiCamera() {
 		sb.setSize(uiCamera.width, 0);
 		toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
 		attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
@@ -144,6 +146,8 @@ public class GameScene extends PixelScene {
 	public void create() {
 		playLevelMusic();
 
+		Level level = Dungeon.level;
+
 		PixelDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
 
 		super.create();
@@ -155,36 +159,40 @@ public class GameScene extends PixelScene {
 		Group terrain = new Group();
 		add(terrain);
 
-		water = new SkinnedBlock(Dungeon.level.getWidth() * DungeonTilemap.SIZE,
-				Dungeon.level.getHeight() * DungeonTilemap.SIZE, Dungeon.level.getWaterTex());
+		water = new SkinnedBlock(level.getWidth() * DungeonTilemap.SIZE,
+				level.getHeight() * DungeonTilemap.SIZE, level.getWaterTex());
+
+		waterSx = DungeonGenerator.waterSx(level.levelId, waterSx);
+		waterSy = DungeonGenerator.waterSy(level.levelId, waterSy);
+
 		terrain.add(water);
 
 		ripples = new Group();
 		terrain.add(ripples);
 
-		tiles = new DungeonTilemap(Dungeon.level.getTilesTex());
+		tiles = new DungeonTilemap(level.getTilesTex());
 		terrain.add(tiles);
 
 		objects = new Group();
 		add(objects);
 
-		for (int i = 0; i < Dungeon.level.objects.size(); i++) {
-			addLevelObjectSprite(Dungeon.level.objects.valueAt(i));
+		for (int i = 0; i < level.objects.size(); i++) {
+			addLevelObjectSprite(level.objects.valueAt(i));
 		}
 
-		Dungeon.level.addVisuals(this);
+		level.addVisuals(this);
 
 		plants = new Group();
 		add(plants);
 
-		for (int i = 0; i < Dungeon.level.plants.size(); i++) {
-			addPlantSprite(Dungeon.level.plants.valueAt(i));
+		for (int i = 0; i < level.plants.size(); i++) {
+			addPlantSprite(level.plants.valueAt(i));
 		}
 
 		heaps = new Group();
 		add(heaps);
 
-		for (Heap heap : Dungeon.level.allHeaps()) {
+		for (Heap heap : level.allHeaps()) {
 			addHeapSprite(heap);
 		}
 
@@ -198,7 +206,7 @@ public class GameScene extends PixelScene {
 		// hack to save bugged saves...
 		boolean buggedSave = false;
 		HashSet<Mob> filteredMobs = new HashSet<>();
-		for (Mob mob : Dungeon.level.mobs) {
+		for (Mob mob : level.mobs) {
 			if (mob.getPos() != -1) {
 				filteredMobs.add(mob);
 			} else {
@@ -212,7 +220,7 @@ public class GameScene extends PixelScene {
 
 		Dungeon.level.mobs = filteredMobs;
 
-		for (Mob mob : Dungeon.level.mobs) {
+		for (Mob mob : level.mobs) {
 			if (Statistics.amuletObtained) {
 				mob.beckon(Dungeon.hero.getPos());
 			}
@@ -226,13 +234,13 @@ public class GameScene extends PixelScene {
 		gases = new Group();
 		add(gases);
 
-		for (Blob blob : Dungeon.level.blobs.values()) {
+		for (Blob blob : level.blobs.values()) {
 			blob.emitter = null;
 			addBlobSprite(blob);
 		}
 
-		fog = new FogOfWar(Dungeon.level.getWidth(), Dungeon.level.getHeight());
-		fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+		fog = new FogOfWar(level.getWidth(), level.getHeight());
+		fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
 		add(fog);
 
 		brightness(PixelDungeon.brightness());
@@ -295,8 +303,8 @@ public class GameScene extends PixelScene {
 			default:
 		}
 
-		if (Dungeon.level instanceof RegularLevel
-				&& ((RegularLevel) Dungeon.level).secretDoors > Random.IntRange(3, 4)) {
+		if (level instanceof RegularLevel
+				&& ((RegularLevel) level).secretDoors > Random.IntRange(3, 4)) {
 			GLog.w(TXT_SECRETS);
 		}
 		if (Dungeon.nightMode && !Dungeon.bossLevel()) {
@@ -313,7 +321,7 @@ public class GameScene extends PixelScene {
 
 		switch (InterlevelScene.mode) {
 			case RESURRECT:
-				WandOfBlink.appear(Dungeon.hero, Dungeon.level.entrance);
+				WandOfBlink.appear(Dungeon.hero, level.entrance);
 				new Flare(8, 32).color(0xFFFF66, true).show(Dungeon.hero.getHeroSprite(), 2f);
 				break;
 			case RETURN:
@@ -324,7 +332,7 @@ public class GameScene extends PixelScene {
 				break;
 			case DESCEND:
 
-				DungeonGenerator.showStory(Dungeon.level);
+				DungeonGenerator.showStory(level);
 
 				if (Dungeon.hero.isAlive() && Dungeon.depth != 22) {
 					Badges.validateNoKilling();
@@ -372,7 +380,7 @@ public class GameScene extends PixelScene {
 
 		super.update();
 
-		water.offset(0, -5 * Game.elapsed);
+		water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed );
 
 		Actor.process(Game.elapsed);
 
