@@ -179,6 +179,7 @@ public abstract class Level implements Bundlable {
 			.getVar(R.string.Level_HiddenPlate);
 
 	public int[]     map;
+	public int[]     tileVariant; // deco only layer
 	public boolean[] visited;
 	public boolean[] mapped;
 
@@ -223,6 +224,8 @@ public abstract class Level implements Bundlable {
 	protected static boolean weakFloorCreated = false;
 
 	private static final String MAP            = "map";
+	private static final String TILE_VARIANT   = "tile_variant";
+
 	private static final String VISITED        = "visited";
 	private static final String MAPPED         = "mapped";
 	private static final String ENTRANCE       = "entrance";
@@ -288,6 +291,7 @@ public abstract class Level implements Bundlable {
 				-1 - getWidth()};
 
 		map = new int[getLength()];
+		tileVariant = new int[getLength()];
 		visited = new boolean[getLength()];
 		mapped = new boolean[getLength()];
 
@@ -408,6 +412,12 @@ public abstract class Level implements Bundlable {
 		initSizeDependentStuff();
 
 		map = bundle.getIntArray(MAP);
+		tileVariant = bundle.getIntArray(TILE_VARIANT);
+		if(tileVariant==null) {
+			tileVariant = new int[map.length];
+			Arrays.fill(tileVariant, 0);
+		}
+
 		visited = bundle.getBooleanArray(VISITED);
 		mapped = bundle.getBooleanArray(MAPPED);
 
@@ -469,6 +479,7 @@ public abstract class Level implements Bundlable {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(MAP, map);
+		bundle.put(TILE_VARIANT, tileVariant);
 		bundle.put(VISITED, visited);
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
