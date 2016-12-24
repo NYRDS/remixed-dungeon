@@ -212,7 +212,7 @@ public class Dungeon {
 	}
 
 	public static boolean shopOnLevel() {
-		if (hero.levelKind.equals("NecroLevel")){
+		if (hero.levelKind.equals("NecroLevel") || hero.levelKind.equals("IceCavesLevel")){
 			return false;
 		} else{
 			return depth == 6 || depth == 11 || depth == 16 || depth == 27;
