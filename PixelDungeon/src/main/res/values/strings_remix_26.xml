@@ -16,6 +16,13 @@
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="Kobold_Desc">That\'s a kobold alright.</string>
 
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">kobold icemancer</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
+    <string name="KoboldIcemancer_Name_Objective">kobold icemancer</string>
+    <string name="KoboldIcemancer_Desc">This kobold wears cute fluffy clothes.</string>
+    <string name="KoboldIcemancer_Killed">%s\'s ice bolt killed you...</string>
+
     <!-- STRINGS OF ColdSpirit CLASS -->
     <string name="ColdSpirit_Name">cold spirit</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -39,6 +46,19 @@
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name_Objective">ice guardian</string>
     <string name="IceGuardianCore_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
+
+    <!-- STRINGS OF CagedKoboldNPC CLASS -->
+    <string name="CagedKoboldNPC_Name">caged kobold</string>
+    <string name="CagedKoboldNPC_Gender">masculine</string>
+    <string name="CagedKoboldNPC_Name_Objective">caged kobold</string>
+    <string name="CagedKoboldNPC_Desc">A kobold, in a cage.</string>
+    <string name="CagedKoboldNPC_Intro">Cheezus crisps batman!</string>
+    <string name="CagedKoboldNPC_Quest_End">I ain't afraid of no ghost!</string>
+    <string name="CagedKoboldNPC_Message1">Please...</string>
+    <string name="CagedKoboldNPC_Message2">You gotta help me out, buddy.</string>
+    <string name="CagedKoboldNPC_Message3">I hate everything about this cage.</string>
+
+    <string name="Journal_Caged_Kobold">Caged Kobold</string>
 
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
