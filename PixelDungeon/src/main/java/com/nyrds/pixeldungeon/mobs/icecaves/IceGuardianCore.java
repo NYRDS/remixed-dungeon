@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
+import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -25,8 +26,8 @@ public class IceGuardianCore extends Boss {
 		defenseSkill = 10;
 
 		baseSpeed = 0.5f;
-		loot = new FrozenCarpaccio();
-		lootChance = 0.2f;
+		loot = new WandOfIcebolt();
+		lootChance = 1.0f;
 
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );
