@@ -1,8 +1,11 @@
 package com.nyrds.pixeldungeon.items.icecaves;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -12,6 +15,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -64,5 +68,16 @@ public class WandOfIcebolt extends Wand {
 	@Override
 	protected boolean isKnown() {
 		return true;
+	}
+
+	@Nullable
+	@Override
+	public Emitter.Factory emitter() {
+		return SnowParticle.FACTORY;
+	}
+
+	@Override
+	public float emitterInterval() {
+		return 0.1f;
 	}
 }
