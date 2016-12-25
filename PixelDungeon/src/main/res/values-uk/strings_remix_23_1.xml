@@ -8,7 +8,7 @@
   <string name="AzuterronNPC_Desc">Загадкова фігура огорнута чорним туманом.</string>
   <string name="AzuterronNPC_Quest_Start">Хм, чому... ох, ти можеш мене бачити, чи не так? Стало бути ти не один з \"них\". Я так бачу ти теж не в захваті від цього засилля монстрів. Знаєш що, якби ти мені допоміг в одні справі, то я стався б тобі в нагоді. Десь тут причаївся _Підступний дух_. Вбий його, та принеси мені його серце. І звичайно ж, якщо забажаєш придбати щось з моїх припасів, звертайся.</string>
   <string name="AzuterronNPC_Quest_Reminder">Допоможи мені, і я допоможу тобі.</string>
-  <string name="AzuterronNPC_Quest_End">Чудово. Візьми це зілля, впеанений, воно стане тобі в нагоді.</string>
+  <string name="AzuterronNPC_Quest_End">Чудово. Візьми це зілля, я впевнений, воно стане тобі в нагоді.</string>
   <string name="Journal_Azuterron">Незнайомець</string>
   <!--STRINGS OF TreacherousSpirit CLASS-->
   <string name="TreacherousSpirit_Name">Підступний дух</string>

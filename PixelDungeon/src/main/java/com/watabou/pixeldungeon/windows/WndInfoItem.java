@@ -36,7 +36,7 @@ public class WndInfoItem extends Window {
 	private static final String TXT_TOMB			= Game.getVar(R.string.WndInfoItem_Tomb);
 	private static final String TXT_SKELETON		= Game.getVar(R.string.WndInfoItem_Skeleton);
 	private static final String TXT_WONT_KNOW		= Game.getVar(R.string.WndInfoItem_WontKnow);
-	private static final String TXT_NEED_KEY		= TXT_WONT_KNOW + Game.getVar(R.string.WndInfoItem_NeedKey);
+	private static final String TXT_NEED_KEY		= TXT_WONT_KNOW +" "+ Game.getVar(R.string.WndInfoItem_NeedKey);
 	private static final String TXT_INSIDE			= Game.getVar(R.string.WndInfoItem_Inside);
 	private static final String TXT_OWNER           = Game.getVar(R.string.WndInfoItem_Owner);
 	private static final String TXT_REMAINS	        = Game.getVar(R.string.WndInfoItem_Remains);
