@@ -176,7 +176,7 @@ public class MobSpriteDef extends MobSprite {
 
 			if(ItemFactory.isValidItemClass(zapEffect)) {
 				((MissileSprite)getParent().recycle( MissileSprite.class )).
-						reset(ch.getPos(), cell, ItemFactory.itemByName(zapEffect), null, zapCallback );
+						reset(ch.getPos(), cell, ItemFactory.itemByName(zapEffect), zapCallback );
 				return;
 			}
 

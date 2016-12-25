@@ -78,7 +78,7 @@ public class ScorpioSprite extends MobSprite {
 			idle();
 			
 			((MissileSprite)getParent().recycle( MissileSprite.class )).
-			reset( ch.getPos(), cellToAttack, new Dart(), null, new Callback() {
+			reset( ch.getPos(), cellToAttack, new Dart(), new Callback() {
 				@Override
 				public void call() {
 					ch.onAttackComplete();

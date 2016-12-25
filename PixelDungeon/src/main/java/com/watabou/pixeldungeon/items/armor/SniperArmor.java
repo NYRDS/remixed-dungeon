@@ -55,7 +55,7 @@ public class SniperArmor extends ClassArmor {
 				};
 				
 				((MissileSprite)getCurUser().getSprite().getParent().recycle( MissileSprite.class )).
-					reset( getCurUser().getPos(), mob.getPos(), proto, null, callback );
+					reset( getCurUser().getPos(), mob.getPos(), proto, callback );
 				
 				targets.put( callback, mob );
 			}
