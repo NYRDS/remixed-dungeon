@@ -30,8 +30,8 @@ public class IceCavesBossLevel extends Level {
 	}
 	
 	private static final int TOP			= 2;
-	private static final int HALL_WIDTH		= 9;
-	private static final int HALL_HEIGHT	= 4;
+	private static final int HALL_WIDTH		= 11;
+	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 1;
 	
 	private int arenaDoor;
@@ -70,9 +70,10 @@ public class IceCavesBossLevel extends Level {
 	
 	@Override
 	protected boolean build() {
-		
+
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY_SP );
-		for (int i = 0; i < 2; i++) {
+		Painter.fill( this, _Left(), HALL_HEIGHT, HALL_WIDTH, TOP, Terrain.EMPTY );
+		for (int i = 0; i < 10; i++) {
 			map[getRandomTerrainCell(Terrain.EMPTY_SP)] = Terrain.STATUE_SP;
 		}
 		
