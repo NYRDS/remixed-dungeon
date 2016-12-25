@@ -26,7 +26,7 @@ public class IceGuardianCore extends Boss {
 		defenseSkill = 10;
 
 		baseSpeed = 0.5f;
-		loot = new WandOfIcebolt();
+		loot = new WandOfIcebolt().upgrade(1);
 		lootChance = 1.0f;
 
 		IMMUNITIES.add( Paralysis.class );
