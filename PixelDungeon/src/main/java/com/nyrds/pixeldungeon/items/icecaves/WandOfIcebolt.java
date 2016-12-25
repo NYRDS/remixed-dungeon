@@ -33,7 +33,7 @@ public class WandOfIcebolt extends Wand {
 
 			int level = effectiveLevel();
 
-			ch.damage( Random.Int( 3 + level, 5 + level * 2 ), this );
+			ch.damage( Random.Int( 3 + level, 4 + level * 2 ), this );
 			ch.getSprite().burst( 0xFF99FFFF, level / 2 + 3 );
 
 			if (Random.Int(2) == 0){
