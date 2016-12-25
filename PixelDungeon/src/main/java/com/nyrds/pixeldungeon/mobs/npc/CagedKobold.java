@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -14,6 +15,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
+import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -65,7 +67,7 @@ public class CagedKobold extends NPC {
 	@Override
 	public void add( Buff buff ) {
 	}
-	
+
 	@Override
 	public boolean reset() {
 		return true;
@@ -127,7 +129,7 @@ public class CagedKobold extends NPC {
 			GameScene.show( new WndQuest( this, TXT_QUEST_START ) );
 			Quest.given = true;
 			Quest.process();
-			Journal.add( Journal.Feature.AZUTERRON );
+			Journal.add( Journal.Feature.CAGEDKOBOLD );
 		}
 		return true;
 	}
