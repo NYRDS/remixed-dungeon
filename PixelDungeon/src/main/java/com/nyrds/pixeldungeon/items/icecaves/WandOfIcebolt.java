@@ -52,4 +52,9 @@ public class WandOfIcebolt extends Wand {
 	public String desc() {
 		return Game.getVar(R.string.WandOfIcebolt_Info);
 	}
+
+	@Override
+	protected boolean isKnown() {
+		return true;
+	}
 }
