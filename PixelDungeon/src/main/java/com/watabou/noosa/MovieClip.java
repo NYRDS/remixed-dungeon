@@ -20,9 +20,10 @@ package com.watabou.noosa;
 public class MovieClip extends Image {
 
 	protected Animation curAnim;
-	protected int curFrame;
-	protected float frameTimer;
-	protected boolean finished;
+	protected int       curFrame;
+
+	private   float     frameTimer;
+	private   boolean   finished;
 	
 	public boolean paused = false;
 
@@ -44,7 +45,7 @@ public class MovieClip extends Image {
 		}
 	}
 	
-	protected void updateAnimation() {
+	private void updateAnimation() {
 		if (curAnim != null && curAnim.delay > 0 && (curAnim.looped || !finished)) {
 			
 			int lastFrame = curFrame;

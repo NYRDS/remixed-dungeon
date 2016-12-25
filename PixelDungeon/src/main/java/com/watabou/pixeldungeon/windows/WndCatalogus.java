@@ -163,7 +163,7 @@ public class WndCatalogus extends WndTabbed {
 			try {
 				item = cl.newInstance();
 				if (identified = item.isIdentified()) {
-					sprite.view(item.imageFile(), item.image(), null );
+					sprite.view(item);
 					label.text( item.name() );
 				} else {
 					sprite.view(Assets.ITEMS, 127, null );

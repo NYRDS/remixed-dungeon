@@ -134,7 +134,7 @@ public class ItemSlot extends Button {
 		topRight.setVisible(true);
 		bottomRight.setVisible(true);
 		
-		icon.view(item.imageFile(), item.image(), item.glowing() );
+		icon.view(item );
 		
 		topLeft.text( item.status()  );
 		
