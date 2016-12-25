@@ -123,8 +123,6 @@ public class IceCavesLevel extends RegularLevel {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-
-		placeEntranceSign();
 		
 		for (Room r : rooms) {
 			if (r.type == Type.STANDARD) {

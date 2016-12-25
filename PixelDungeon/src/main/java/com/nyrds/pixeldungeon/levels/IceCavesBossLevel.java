@@ -119,7 +119,7 @@ public class IceCavesBossLevel extends Level {
 				pos = 
 					Random.IntRange( _Left() + 1, _Left() + HALL_WIDTH - 2 ) + 
 					Random.IntRange( TOP + HALL_HEIGHT + 1, TOP + HALL_HEIGHT  + CHAMBER_HEIGHT ) * getWidth();
-			} while (pos == entrance || map[pos] == Terrain.SIGN);
+			} while (pos == entrance);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
