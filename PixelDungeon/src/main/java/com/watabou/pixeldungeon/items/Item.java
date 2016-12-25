@@ -595,7 +595,11 @@ public class Item implements Bundlable, Presser {
 	}
 
 	@Nullable
-	public Emitter emitter() {
+	public Emitter.Factory emitter() {
 		return null;
+	}
+
+	public float emitterInterval() {
+		return 0;
 	}
 }

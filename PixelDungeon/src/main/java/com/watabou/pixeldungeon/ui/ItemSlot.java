@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import android.support.annotation.Nullable;
-
 import com.watabou.noosa.Text;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Button;
@@ -43,8 +41,6 @@ public class ItemSlot extends Button {
 	private static final float DISABLED = 0.3f;
 
 	protected ItemSprite icon;
-
-	@Nullable
 	protected Emitter emitter;
 
 	protected Text topLeft;
@@ -95,6 +91,9 @@ public class ItemSlot extends Button {
 		icon = new ItemSprite();
 		add(icon);
 
+		emitter = new Emitter();
+		add(emitter);
+
 		topLeft = Text.createBasicText(PixelScene.font1x);
 		topLeft.setScale(0.8f, 0.8f);
 		add(topLeft);
@@ -115,6 +114,8 @@ public class ItemSlot extends Button {
 		icon.x = x + (width - icon.width) / 2;
 		icon.y = y + (height - icon.height) / 2;
 
+		emitter.pos(icon);
+
 		if (topLeft != null) {
 			topLeft.x = x;
 			topLeft.y = y;
@@ -129,23 +130,14 @@ public class ItemSlot extends Button {
 			bottomRight.x = x + (width - bottomRight.width());
 			bottomRight.y = y + (height - bottomRight.height());
 		}
-
-		if(emitter!=null) {
-			emitter.pos(icon);
-		}
 	}
 
 	public void item(Item item) {
 		if (item == null) {
-
 			active = false;
 
-			if(emitter != null) {
-				remove(emitter);
-				emitter = null;
-			}
-
 			icon.setVisible(false);
+			emitter.setVisible(false);
 			topLeft.setVisible(false);
 			topRight.setVisible(false);
 			bottomRight.setVisible(false);
@@ -159,8 +151,11 @@ public class ItemSlot extends Button {
 		bottomRight.setVisible(true);
 
 		icon.view(item);
-		emitter = item.emitter();
-		add(emitter);
+
+		if(item.emitter()!=null) {
+			emitter.setVisible(true);
+			emitter.pour(item.emitter(), item.emitterInterval());
+		}
 
 		topLeft.text(item.status());
 
