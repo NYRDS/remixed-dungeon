@@ -48,6 +48,9 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public abstract class Wand extends KindOfWeapon {
@@ -120,7 +123,7 @@ public abstract class Wand extends KindOfWeapon {
 			wood = Game.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image,images)];
 
 		} catch (Exception e) {
-			// Wand of Magic Missile
+			// Wand of Magic Missile or Wand of Icebolt
 		}
 	}
 
@@ -525,5 +528,12 @@ public abstract class Wand extends KindOfWeapon {
 
 	public boolean affectTarget() {
 		return true;
+	}
+
+	@Override
+	public void fromJson(JSONObject itemDesc) throws JSONException {
+		super.fromJson(itemDesc);
+		updateLevel();
+		curCharges(maxCharges());
 	}
 }
