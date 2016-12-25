@@ -138,6 +138,7 @@ public class ItemSlot extends Button {
 
 			icon.setVisible(false);
 			emitter.setVisible(false);
+			emitter.on = false;
 			topLeft.setVisible(false);
 			topRight.setVisible(false);
 			bottomRight.setVisible(false);
@@ -155,6 +156,9 @@ public class ItemSlot extends Button {
 		if(item.emitter()!=null) {
 			emitter.setVisible(true);
 			emitter.pour(item.emitter(), item.emitterInterval());
+		} else {
+			emitter.setVisible(false);
+			emitter.on = false;
 		}
 
 		topLeft.text(item.status());
