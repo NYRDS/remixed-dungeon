@@ -291,7 +291,10 @@ public abstract class Level implements Bundlable {
 				-1 - getWidth()};
 
 		map = new int[getLength()];
+
 		tileVariant = new int[getLength()];
+		initTilesVariations();
+
 		visited = new boolean[getLength()];
 		mapped = new boolean[getLength()];
 
@@ -415,7 +418,7 @@ public abstract class Level implements Bundlable {
 		tileVariant = bundle.getIntArray(TILE_VARIANT);
 		if(tileVariant==null) {
 			tileVariant = new int[map.length];
-			Arrays.fill(tileVariant, 0);
+			initTilesVariations();
 		}
 
 		visited = bundle.getBooleanArray(VISITED);
@@ -1471,5 +1474,11 @@ public abstract class Level implements Bundlable {
 
 	public Mob getRandomMob() {
 		return Random.element(mobs);
+	}
+
+	protected void initTilesVariations() {
+		for (int i = 0;i<tileVariant.length;++i) {
+			tileVariant[i] = Random.Int(0,Integer.MAX_VALUE);
+		}
 	}
 }

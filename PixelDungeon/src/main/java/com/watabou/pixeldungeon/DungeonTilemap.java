@@ -63,23 +63,28 @@ public class DungeonTilemap extends Tilemap {
 		return instance.mGroundLayer != null && instance.mDecoLayer != null;
 	}
 
-	private static int cellStableRandom(int cell, int min, int max) {
-		int rnd = Math.abs((((cell ^ 0xAAAAAAAA) * 1103515245 + 12345) / 65536) % 32767);
+	private static int chooseVariant(int variant, int min, int max) {
+
+		if(variant>=min && variant<=max) {
+			return variant;
+		}
+
+		int rnd = Math.abs((((variant ^ 0xAAAAAAAA) * 1103515245 + 12345) / 65536) % 32767);
 		double r = (double) rnd / 32767;
 
 		return min + (int) (r * (max - min + 1));
 	}
 
 	private static int currentDecoCell(int cell) {
-		return decoCell(Dungeon.level.map[cell], cell);
+		return decoCell(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
 	}
 
-	private static int decoCell(int tileType, int cell) {
+	private static int decoCell(int tileType, int variation) {
 		switch (tileType) {
 			case Terrain.GRASS:
-				return 3 * 16 + cellStableRandom(cell, 0, 2);
+				return 3 * 16 + chooseVariant(variation, 0, 2);
 			case Terrain.HIGH_GRASS:
-				return 3 * 16 + cellStableRandom(cell, 6, 8);
+				return 3 * 16 + chooseVariant(variation, 6, 8);
 
 			case Terrain.PEDESTAL:
 				return 8 * 16 + 0;
@@ -107,19 +112,19 @@ public class DungeonTilemap extends Tilemap {
 				return 5 * 16 + 6;
 
 			case Terrain.BARRICADE:
-				return 7 * 16 + cellStableRandom(cell, 3, 5);
+				return 7 * 16 + chooseVariant(variation, 3, 5);
 
 			case Terrain.BOOKSHELF:
-				return 7 * 16 + cellStableRandom(cell, 0, 2);
+				return 7 * 16 + chooseVariant(variation, 0, 2);
 
 			case Terrain.EMBERS:
-				return 6 * 16 + cellStableRandom(cell, 0, 2);
+				return 6 * 16 + chooseVariant(variation, 0, 2);
 
 			case Terrain.EMPTY_DECO:
-				return 9 * 16 + cellStableRandom(cell, 0, 2);
+				return 9 * 16 + chooseVariant(variation, 0, 2);
 
 			case Terrain.WALL_DECO:
-				return 10 * 16 + cellStableRandom(cell, 0, 2);
+				return 10 * 16 + chooseVariant(variation, 0, 2);
 
 			case Terrain.TOXIC_TRAP:
 				return 12 * 16 + 0;
@@ -157,12 +162,12 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentGroundCell(int cell) {
-		return groundCell(Dungeon.level.map[cell], cell);
+		return groundCell(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
 	}
 
 	private static int groundCell(int tileType, int cell) {
 		if (tileType >= Terrain.WATER_TILES) {
-			return (13 + cellStableRandom(cell, 0, 2)) * 16 + tileType - Terrain.WATER_TILES;
+			return (13 + chooseVariant(cell, 0, 2)) * 16 + tileType - Terrain.WATER_TILES;
 		}
 
 		switch (tileType) {
@@ -195,7 +200,7 @@ public class DungeonTilemap extends Tilemap {
 			case Terrain.SIGN:
 			case Terrain.STATUE:
 			case Terrain.BOOKSHELF:
-				return cellStableRandom(cell, 0, 2);
+				return chooseVariant(cell, 0, 2);
 
 			case Terrain.WALL:
 			case Terrain.WALL_DECO:
@@ -205,20 +210,20 @@ public class DungeonTilemap extends Tilemap {
 			case Terrain.LOCKED_EXIT:
 			case Terrain.UNLOCKED_EXIT:
 			case Terrain.SECRET_DOOR:
-				return 16 + cellStableRandom(cell, 0, 2);
+				return 16 + chooseVariant(cell, 0, 2);
 
 			case Terrain.ALCHEMY:
-				return 4 * 16 + cellStableRandom(cell, 6, 8);
+				return 4 * 16 + chooseVariant(cell, 6, 8);
 
 			case Terrain.EMPTY_WELL:
-				return 4 * 16 + cellStableRandom(cell, 0, 2);
+				return 4 * 16 + chooseVariant(cell, 0, 2);
 
 			case Terrain.WELL:
-				return 4 * 16 + cellStableRandom(cell, 3, 5);
+				return 4 * 16 + chooseVariant(cell, 3, 5);
 
 			case Terrain.EMPTY_SP:
 			case Terrain.STATUE_SP:
-				return 2 * 16 + cellStableRandom(cell, 0, 2);
+				return 2 * 16 + chooseVariant(cell, 0, 2);
 
 			case Terrain.CHASM_FLOOR:
 				return 11 * 16 + 0;
