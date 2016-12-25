@@ -25,7 +25,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -50,8 +49,6 @@ public class ItemSprite extends MovieClip {
 
 	@Nullable
 	private Glowing glowing;
-	@Nullable
-	private Emitter emitter;
 
 	private float   phase;
 	private boolean glowUp;
@@ -63,17 +60,17 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public ItemSprite(Item item) {
-		this(item.imageFile(), item.image(), item.glowing(), item.emitter());
+		this(item.imageFile(), item.image(), item.glowing());
 	}
 
 	public ItemSprite(int image, Glowing glowing) {
-		this(Assets.ITEMS, image, glowing, null);
+		this(Assets.ITEMS, image, glowing);
 	}
 
-	private ItemSprite(String file, int imageIndex, Glowing glowing, Emitter emitter) {
+	private ItemSprite(String file, int imageIndex, Glowing glowing) {
 		super();
 
-		view(file, imageIndex, glowing, emitter);
+		view(file, imageIndex, glowing);
 	}
 
 	public ItemSprite(Heap heap) {
@@ -159,25 +156,17 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public ItemSprite view(Item item) {
-		return view(item.imageFile(), item.image(), item.glowing(), item.emitter());
+		return view(item.imageFile(), item.image(), item.glowing());
 	}
 
-	public ItemSprite view(String file, int image, Glowing glowing, Emitter emitter) {
-
+	public ItemSprite view(String file, int image, Glowing glowing) {
 		updateTexture(file);
 
 		frame(film.get(image));
 		if ((this.glowing = glowing) == null) {
 			resetColor();
 		}
-
-		this.emitter = emitter;
-
 		return this;
-	}
-
-	public ItemSprite view(String file, int image, Glowing glowing) {
-		return view(file, image, glowing, null);
 	}
 
 	@Override
@@ -220,11 +209,6 @@ public class ItemSprite extends MovieClip {
 				ga = glowing.green * value;
 				ba = glowing.blue * value;
 			}
-
-		if (emitter != null) {
-			emitter.update();
-		}
-
 	}
 
 	public static int pick(int index, int x, int y) {
