@@ -17,6 +17,7 @@ import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
 import com.nyrds.pixeldungeon.mobs.icecaves.ColdSpirit;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.icecaves.Kobold;
+import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
 import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.EnslavedSoul;
@@ -173,7 +174,7 @@ public class MobFactory {
 		registerMobClass(Crystal.class);
 
 		registerMobClass(Kobold.class);//"regular" enemy
-		//registerMobClass(KoboldIcemancer.class);//ranged caster
+		registerMobClass(KoboldIcemancer.class);//ranged caster
 		registerMobClass(ColdSpirit.class);//little annoying thing
 		registerMobClass(IceElemental.class);//elemental, obviously
 		//registerMobClass(Yeti.class);//big and tough

@@ -20,9 +20,10 @@ public class IceGuardian extends MultiKindMob {
 	public IceGuardian() {
 		hp(ht(70));
 		EXP = 5;
-		defenseSkill = 10;
+		defenseSkill = 30;
 
 		kind = 1;
+
 
 		baseSpeed = 0.7f;
 		
@@ -40,29 +41,30 @@ public class IceGuardian extends MultiKindMob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 5, 10 );
+		return Random.NormalIntRange( 10, 15 );
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 30;
+		return 31;
 	}
 	
 	@Override
 	public int dr() {
-		return 11;
+		return 14;
 	}
 
 
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-
 		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
-			if (mob instanceof Boss && (mob instanceof IceGuardianCore)) {
-				ressurrect();
-				ressurrect();
+			if (mob instanceof IceGuardianCore) {
 				mob.damage(150,cause);
+				if (mob.isAlive()){
+					ressurrect();
+					ressurrect();
+				}
 			}
 		}
 	}

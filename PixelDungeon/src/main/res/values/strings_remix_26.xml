@@ -16,6 +16,13 @@
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="Kobold_Desc">That\'s a kobold alright.</string>
 
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">kobold icemancer</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
+    <string name="KoboldIcemancer_Name_Objective">kobold icemancer</string>
+    <string name="KoboldIcemancer_Desc">This kobold wears cute fluffy clothes.</string>
+    <string name="KoboldIcemancer_Killed">%s\'s ice bolt killed you...</string>
+
     <!-- STRINGS OF ColdSpirit CLASS -->
     <string name="ColdSpirit_Name">cold spirit</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -40,6 +47,19 @@
     <string name="IceGuardianCore_Name_Objective">ice guardian</string>
     <string name="IceGuardianCore_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
 
+    <!-- STRINGS OF CagedKoboldNPC CLASS -->
+    <string name="CagedKoboldNPC_Name">caged kobold</string>
+    <string name="CagedKoboldNPC_Gender">masculine</string>
+    <string name="CagedKoboldNPC_Name_Objective">caged kobold</string>
+    <string name="CagedKoboldNPC_Desc">A kobold, in a cage.</string>
+    <string name="CagedKoboldNPC_Intro">Cheezus crisps batman!</string>
+    <string name="CagedKoboldNPC_Quest_End">I ain\'t afraid of no ghost!</string>
+    <string name="CagedKoboldNPC_Message1">Please...</string>
+    <string name="CagedKoboldNPC_Message2">You gotta help me out, buddy.</string>
+    <string name="CagedKoboldNPC_Message3">I hate everything about this cage.</string>
+
+    <string name="Journal_Caged_Kobold">Caged Kobold</string>
+
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
     <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
@@ -53,6 +73,11 @@
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festive turkey</string>
     <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. So you can to, honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Wand of Icebolt</string>
+    <string name="WandOfIcebolt_Info">This wand launches an ice missile, dealing light damage to a target creature and slowing it down.</string>
+    <string name="WandOfIcebolt_Info1">You killed yourself with your own Wand of of Icebolt...</string>
 
     <!-- Badges -->
     <string name="Badges_Ice_Guardian_Slain">Ice guardian slain</string>

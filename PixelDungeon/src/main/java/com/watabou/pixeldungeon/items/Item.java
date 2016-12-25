@@ -17,12 +17,15 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -477,7 +480,7 @@ public class Item implements Bundlable, Presser {
 		final float finalDelay = delay;
 
 		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
-				reset(user.getPos(), cell, this, null, new Callback() {
+				reset(user.getPos(), cell, this, new Callback() {
 					@Override
 					public void call() {
 						Item item = Item.this.detach(user.belongings.backpack);
@@ -589,5 +592,14 @@ public class Item implements Bundlable, Presser {
 	@Override
 	public boolean affectLevelObjects() {
 		return true;
+	}
+
+	@Nullable
+	public Emitter.Factory emitter() {
+		return null;
+	}
+
+	public float emitterInterval() {
+		return 0;
 	}
 }

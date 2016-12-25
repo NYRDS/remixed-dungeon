@@ -176,7 +176,7 @@ public class MobSpriteDef extends MobSprite {
 
 			if(ItemFactory.isValidItemClass(zapEffect)) {
 				((MissileSprite)getParent().recycle( MissileSprite.class )).
-						reset(ch.getPos(), cell, ItemFactory.itemByName(zapEffect), null, zapCallback );
+						reset(ch.getPos(), cell, ItemFactory.itemByName(zapEffect), zapCallback );
 				return;
 			}
 
@@ -198,6 +198,11 @@ public class MobSpriteDef extends MobSprite {
 
 			if(zapEffect.equals("Fire")) {
 				MagicMissile.fire(getParent(), ch.getPos(), cell, zapCallback);
+				return;
+			}
+
+			if(zapEffect.equals("Ice")) {
+				MagicMissile.ice(getParent(), ch.getPos(), cell, zapCallback);
 				return;
 			}
 		}

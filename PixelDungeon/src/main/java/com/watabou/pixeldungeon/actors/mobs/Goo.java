@@ -80,15 +80,15 @@ public class Goo extends Boss {
 	@Override
 	public int damageRoll() {
 		if (pumpedUp) {
-			return Random.NormalIntRange( 6, 20 );
+			return Random.NormalIntRange( 7, 21 );
 		} else {
-			return Random.NormalIntRange( 3, 10 );
+			return Random.NormalIntRange( 4, 11 );
 		}
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return pumpedUp ? 25 : 10;
+		return pumpedUp ? 26 : 11;
 	}
 	
 	@Override

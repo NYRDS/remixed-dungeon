@@ -35,10 +35,10 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		originToCenter();
 	}
 	
-	public void reset( int from, int to,Item item, Glowing glowing, Callback listener ) {
+	public void reset(int from, int to, Item item, Callback listener) {
 		revive();
 		
-		view(item.imageFile(), item.image(), glowing );
+		view(item);
 		
 		this.callback = listener;
 

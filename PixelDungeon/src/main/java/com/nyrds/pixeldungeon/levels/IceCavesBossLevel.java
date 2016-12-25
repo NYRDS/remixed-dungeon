@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.watabou.noosa.Game;
@@ -14,7 +13,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
-import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
@@ -30,8 +28,8 @@ public class IceCavesBossLevel extends Level {
 	}
 	
 	private static final int TOP			= 2;
-	private static final int HALL_WIDTH		= 9;
-	private static final int HALL_HEIGHT	= 4;
+	private static final int HALL_WIDTH		= 11;
+	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 1;
 	
 	private int arenaDoor;
@@ -70,9 +68,10 @@ public class IceCavesBossLevel extends Level {
 	
 	@Override
 	protected boolean build() {
-		
+
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY_SP );
-		for (int i = 0; i < 2; i++) {
+		Painter.fill( this, _Left(), HALL_HEIGHT, HALL_WIDTH, TOP, Terrain.EMPTY );
+		for (int i = 0; i < 10; i++) {
 			map[getRandomTerrainCell(Terrain.EMPTY_SP)] = Terrain.STATUE_SP;
 		}
 		
@@ -120,7 +119,7 @@ public class IceCavesBossLevel extends Level {
 				pos = 
 					Random.IntRange( _Left() + 1, _Left() + HALL_WIDTH - 2 ) + 
 					Random.IntRange( TOP + HALL_HEIGHT + 1, TOP + HALL_HEIGHT  + CHAMBER_HEIGHT ) * getWidth();
-			} while (pos == entrance || map[pos] == Terrain.SIGN);
+			} while (pos == entrance);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}

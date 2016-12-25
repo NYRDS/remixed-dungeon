@@ -7,6 +7,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.sprites.BruteSprite;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -17,21 +18,21 @@ public class Kobold extends Mob {
 
 	public Kobold() {
 		
-		hp(ht(45));
-		defenseSkill = 16;
+		hp(ht(60));
+		defenseSkill = 18;
 		
-		EXP = 9;
+		EXP = 10;
 		maxLvl = 20;
 		
-		loot = Gold.class;
-		lootChance = 0.5f;
+		loot = new PotionOfFrost();
+		lootChance = 0.1f;
 		
 		IMMUNITIES.add( Terror.class );
 	}
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 10, 20 );
+		return Random.NormalIntRange( 10, 17 );
 	}
 	
 	@Override

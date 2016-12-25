@@ -95,7 +95,7 @@ public class Boomerang extends MissileWeapon {
 
 		((MissileSprite) getCurUser().getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, getCurUser().getPos(),
-				curItem, null, null);
+				curItem, null);
 
 		if (throwEquiped) {
 			owner.belongings.weapon = this;

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
+import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -11,7 +12,6 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -20,13 +20,13 @@ import com.watabou.utils.Random;
 public class IceGuardianCore extends Boss {
 
 	public IceGuardianCore() {
-		hp(ht(750));
+		hp(ht(1000));
 		EXP = 5;
 		defenseSkill = 10;
 
 		baseSpeed = 0.5f;
-		loot = new FrozenCarpaccio();
-		lootChance = 0.2f;
+		loot = new WandOfIcebolt().upgrade(1);
+		lootChance = 1.0f;
 
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );
@@ -39,12 +39,12 @@ public class IceGuardianCore extends Boss {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 13, 18 );
+		return Random.NormalIntRange( 13, 23 );
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 21;
+		return 26;
 	}
 	
 	@Override

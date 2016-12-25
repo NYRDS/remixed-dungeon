@@ -8,6 +8,7 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -122,8 +123,6 @@ public class IceCavesLevel extends RegularLevel {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
-
-		placeEntranceSign();
 		
 		for (Room r : rooms) {
 			if (r.type == Type.STANDARD) {
@@ -153,7 +152,17 @@ public class IceCavesLevel extends RegularLevel {
 			}
 		}
 	}
-	
+
+
+	@Override
+	protected void createMobs() {
+		super.createMobs();
+
+		if(Dungeon.depth==16) {
+				//CagedKobold.spawn();
+		}
+	}
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {

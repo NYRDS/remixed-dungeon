@@ -309,7 +309,7 @@ public class Toolbar extends Component {
 		}
 
 		public void reset(Item item, float dstX, float dstY) {
-			view(item.imageFile(), item.image(), item.glowing());
+			view(item);
 
 			active = setVisible(true);
 

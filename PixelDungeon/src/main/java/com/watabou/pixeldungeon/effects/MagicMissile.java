@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.effects.particles.LeafParticle;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
+import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.effects.particles.WoolParticle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.ColorMath;
@@ -80,6 +81,13 @@ public class MagicMissile extends Emitter {
 		missile.reset( from, to, callback );
 		missile.size( 4 );
 		missile.pour( FlameParticle.FACTORY, 0.01f );
+	}
+
+	public static void ice( Group group, int from, int to, Callback callback ) {
+		MagicMissile missile = ((MagicMissile)group.recycle( MagicMissile.class ));
+		missile.reset( from, to, callback );
+		missile.size( 2 );
+		missile.pour( ColdParticle.FACTORY, 0.01f );
 	}
 	
 	public static void earth( Group group, int from, int to, Callback callback ) {

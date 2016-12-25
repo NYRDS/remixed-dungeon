@@ -195,7 +195,7 @@ public class Heap implements Bundlable {
 		}
 		
 		if (sprite != null) {
-			sprite.view(item.imageFile(), item.image(), item.glowing() );
+			sprite.view(item);
 		}
 	}
 	
