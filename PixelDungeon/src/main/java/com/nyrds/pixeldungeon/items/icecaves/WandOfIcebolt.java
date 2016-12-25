@@ -26,6 +26,11 @@ import com.watabou.utils.Random;
 
 public class WandOfIcebolt extends SimpleWand  {
 
+	public WandOfIcebolt() {
+		imageFile = "items/wands.png";
+		image = 12;
+	}
+
 	@Override
 	protected void onZap( int cell ) {
 
@@ -34,13 +39,13 @@ public class WandOfIcebolt extends SimpleWand  {
 
 			int level = effectiveLevel();
 
-			ch.damage( Random.Int( 3, 5 + level * 2 ), this );
+			ch.damage( Random.Int( 3 + level, 5 + level * 2 ), this );
 			ch.getSprite().burst( 0xFF99FFFF, level / 2 + 3 );
 			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 2 + effectiveLevel() );
 
 			if (ch == getCurUser() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
-				GLog.n(Game.getVar(R.string.WandOfMagicMissile_Info1));
+				GLog.n(Game.getVar(R.string.WandOfIcebolt_Info1));
 			}
 		}
 	}
@@ -52,6 +57,6 @@ public class WandOfIcebolt extends SimpleWand  {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfFirebolt_Info);
+		return Game.getVar(R.string.WandOfIcebolt_Info);
 	}
 }
