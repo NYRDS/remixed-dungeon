@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -34,7 +35,14 @@ public class WandOfIcebolt extends Wand {
 
 			ch.damage( Random.Int( 3 + level, 5 + level * 2 ), this );
 			ch.getSprite().burst( 0xFF99FFFF, level / 2 + 3 );
-			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 2 + effectiveLevel() );
+
+			if (Random.Int(2) == 0){
+				Buff.affect( ch, Frost.class, Frost.duration( ch ) / 2 + effectiveLevel() );
+			} else{
+				Buff.affect( ch, Slow.class, Slow.duration( ch ) / 2 + effectiveLevel() );
+			}
+
+
 
 			if (ch == getCurUser() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
