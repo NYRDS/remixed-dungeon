@@ -47,16 +47,16 @@
     <string name="IceGuardianCore_Name_Objective">ice guardian</string>
     <string name="IceGuardianCore_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
 
-    <!-- STRINGS OF CagedKoboldNPC CLASS -->
-    <string name="CagedKoboldNPC_Name">caged kobold</string>
-    <string name="CagedKoboldNPC_Gender">masculine</string>
-    <string name="CagedKoboldNPC_Name_Objective">caged kobold</string>
-    <string name="CagedKoboldNPC_Desc">A kobold, in a cage.</string>
-    <string name="CagedKoboldNPC_Intro">Cheezus crisps batman!</string>
-    <string name="CagedKoboldNPC_Quest_End">I ain\'t afraid of no ghost!</string>
-    <string name="CagedKoboldNPC_Message1">Please...</string>
-    <string name="CagedKoboldNPC_Message2">You gotta help me out, buddy.</string>
-    <string name="CagedKoboldNPC_Message3">I hate everything about this cage.</string>
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">caged kobold</string>
+    <string name="CagedKobold_Gender">masculine</string>
+    <string name="CagedKobold_Name_Objective">caged kobold</string>
+    <string name="CagedKobold_Desc">A kobold, in a cage.</string>
+    <string name="CagedKobold_Intro">Cheezus crisps batman!</string>
+    <string name="CagedKobold_Quest_End">I ain\'t afraid of no ghost!</string>
+    <string name="CagedKobold_Message1">Please...</string>
+    <string name="CagedKobold_Message2">You gotta help me out, buddy</string>
+    <string name="CagedKobold_Message3">I hate everything about this cage</string>
 
     <string name="Journal_Caged_Kobold">Caged Kobold</string>
 
@@ -73,6 +73,11 @@
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festive turkey</string>
     <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. So you can to, honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
+
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">ice key</string>
+    <string name="IceKey_Info">This key seems to be made of ice, but it is as hard as steel.</string>
+
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
     <string name="WandOfIcebolt_Name">Wand of Icebolt</string>
