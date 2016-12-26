@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;
@@ -158,8 +159,8 @@ public class IceCavesLevel extends RegularLevel {
 	protected void createMobs() {
 		super.createMobs();
 
-		if(Dungeon.depth==16) {
-				//CagedKobold.spawn();
+		if(Dungeon.depth==18) {
+			CagedKobold.spawn(this, exitRoom(0));
 		}
 	}
 
