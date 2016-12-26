@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
+import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -55,15 +56,18 @@ public class IceGuardianCore extends Boss {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-		GameScene.bossSlain();
 
 		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
 			if (mob instanceof IceGuardian) {
 				mob.die(cause);
-				Level level = Dungeon.level;
-				level.unseal();
 			}
 		}
-	Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
+		Level level = Dungeon.level;
+		level.unseal();
+
+		GameScene.bossSlain();
+		Dungeon.level.drop( new IceKey(), getPos() ).sprite.drop();
+
+		Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
 	}
 }
