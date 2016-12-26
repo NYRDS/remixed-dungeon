@@ -19,6 +19,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
+import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
@@ -362,6 +363,7 @@ public class ItemFactory {
 		registerItemClass(RottenPumpkinPie.class);
 		registerItemClass(ChristmasTurkey.class);
 		registerItemClass(WandOfIcebolt.class);
+		registerItemClass(IceKey.class);
 
 		mItemsList.put("Rotberry.Seed",   WandMaker.Rotberry.Seed.class);
 		mItemsList.put("Earthroot.Seed",  Earthroot.Seed.class);
