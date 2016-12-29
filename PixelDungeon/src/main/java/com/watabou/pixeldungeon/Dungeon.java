@@ -24,6 +24,7 @@ import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
+import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -138,6 +139,7 @@ public class Dungeon {
 		Imp.Quest.reset();
 		ScarecrowNPC.Quest.reset();
 		AzuterronNPC.Quest.reset();
+		CagedKobold.Quest.reset();
 
 		Room.shuffleTypes();
 
@@ -325,6 +327,7 @@ public class Dungeon {
 		Imp.Quest.storeInBundle(quests);
 		AzuterronNPC.Quest.storeInBundle(quests);
 		ScarecrowNPC.Quest.storeInBundle(quests);
+		CagedKobold.Quest.storeInBundle(quests);
 		bundle.put(QUESTS, quests);
 
 		Room.storeRoomsInBundle(bundle);
@@ -432,6 +435,7 @@ public class Dungeon {
 				Imp.Quest.restoreFromBundle(quests);
 				AzuterronNPC.Quest.restoreFromBundle(quests);
 				ScarecrowNPC.Quest.restoreFromBundle(quests);
+				CagedKobold.Quest.restoreFromBundle(quests);
 			} else {
 				Ghost.Quest.reset();
 				WandMaker.Quest.reset();
@@ -439,6 +443,7 @@ public class Dungeon {
 				Imp.Quest.reset();
 				AzuterronNPC.Quest.reset();
 				ScarecrowNPC.Quest.reset();
+				CagedKobold.Quest.reset();
 			}
 
 			Room.restoreRoomsFromBundle(bundle);
