@@ -1,24 +1,24 @@
 {
-   "texture" : "mobs/cagedKobold.png",
+   "texture" : "mobs/caged_kobold.png",
    "width" : 16,
    "height" : 16,
    "idle" : {
-      "fps" : 4,
+      "fps" : 2,
       "looped" : true,
       "frames" : [0, 1, 2, 3]
    },
    "run" : {
-      "fps" : 8,
+      "fps" : 2,
       "looped" : true,
       "frames" : [0, 1, 2, 3]
    },
    "attack" : {
-      "fps" : 8,
+      "fps" : 2,
       "looped" : true,
       "frames" : [0, 1, 2, 3]
    },
    "die" : {
-      "fps" : 8,
+      "fps" : 2,
       "looped" : true,
       "frames" : [0, 1, 2, 3]
    }

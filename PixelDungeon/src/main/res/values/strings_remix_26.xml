@@ -14,26 +14,26 @@
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name_Objective">kobold</string>
-    <string name="Kobold_Desc">That\'s a kobold alright.</string>
+    <string name="Kobold_Desc">Kobolds were considered but a legend. An ancestors of common gnolls, kobolds dwell in a deep and cold caves. It is believed that their people mastered engineering and machinery long before dwarfs. Yet it is unknown why they disappeared so many years ago...</string>
 
     <!-- STRINGS OF KoboldIcemancer CLASS -->
     <string name="KoboldIcemancer_Name">kobold icemancer</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Name_Objective">kobold icemancer</string>
-    <string name="KoboldIcemancer_Desc">This kobold wears cute fluffy clothes.</string>
+    <string name="KoboldIcemancer_Desc">Kobold icemancers were an elite of their society. A warriors, magicians and most importantly scientist. Ancient icemancers mastered craft of iceshaping creating sofisticated mechanism out of ice and reinforcing them with magic..</string>
     <string name="KoboldIcemancer_Killed">%s\'s ice bolt killed you...</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
     <string name="ColdSpirit_Name">cold spirit</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">cold spirit</string>
-    <string name="ColdSpirit_Desc">Like a little bloodthirsty snowball.</string>
+    <string name="ColdSpirit_Desc">A cold spirit is a manifestation of cold, in it's purest form. They are a mindless husks, created with magic, acting upon will of their creators or via basic instincts1 and reflexes.</string>
 
     <!-- STRINGS OF IceElemental CLASS -->
     <string name="IceElemental_Name">ice elemental</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name_Objective">ice elemental</string>
-    <string name="IceElemental_Desc">Giant golem made os solid ice.</string>
+    <string name="IceElemental_Desc">Amongst all elementals that exist in the dungeons the ice elemental might not be the toughest one, but he can easily be considered one of the most dangerous. It's body irradiates cold, slowing down it's enemies.</string>
 
     <!-- STRINGS OF IceGuardian CLASS -->
     <string name="IceGuardian_Name">ice guardian</string>
@@ -47,16 +47,16 @@
     <string name="IceGuardianCore_Name_Objective">ice guardian</string>
     <string name="IceGuardianCore_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
 
-    <!-- STRINGS OF CagedKoboldNPC CLASS -->
-    <string name="CagedKoboldNPC_Name">caged kobold</string>
-    <string name="CagedKoboldNPC_Gender">masculine</string>
-    <string name="CagedKoboldNPC_Name_Objective">caged kobold</string>
-    <string name="CagedKoboldNPC_Desc">A kobold, in a cage.</string>
-    <string name="CagedKoboldNPC_Intro">Cheezus crisps batman!</string>
-    <string name="CagedKoboldNPC_Quest_End">I ain\'t afraid of no ghost!</string>
-    <string name="CagedKoboldNPC_Message1">Please...</string>
-    <string name="CagedKoboldNPC_Message2">You gotta help me out, buddy.</string>
-    <string name="CagedKoboldNPC_Message3">I hate everything about this cage.</string>
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">caged kobold</string>
+    <string name="CagedKobold_Gender">masculine</string>
+    <string name="CagedKobold_Name_Objective">caged kobold</string>
+    <string name="CagedKobold_Desc">A kobold, in a cage.</string>
+    <string name="CagedKobold_Intro">Hey... HEY! You are that adventurer thing? Help me out pall, those bloody militarists locked me up. They intended to reactivate an ancient weapon to conquer human things above! I stood against it because it was to dangerous, and they just threw out of a council and chained me to this cage. Please find the key to this cage, in return I\'ll help you out the best I can.</string>
+    <string name="CagedKobold_Quest_End">Oh, thank you, thank you so much! How you managed to find the key? You... you destroyed the weapon?! That\'s incredible! You know what, I said I\'ll help you, and I think I know the best way to do it. I\'ll stick with you for a while. * Caged Kobold has turned into a candle</string>
+    <string name="CagedKobold_Message1">Please...</string>
+    <string name="CagedKobold_Message2">You gotta help me out, buddy</string>
+    <string name="CagedKobold_Message3">I hate everything about this cage</string>
 
     <string name="Journal_Caged_Kobold">Caged Kobold</string>
 
@@ -74,9 +74,14 @@
     <string name="ChristmasTurkey_Name">festive turkey</string>
     <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. So you can to, honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
 
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">ice key</string>
+    <string name="IceKey_Info">This key seems to be made of ice, but it is as hard as steel.</string>
+
+
     <!-- STRINGS OF WandOfIcebolt CLASS -->
     <string name="WandOfIcebolt_Name">Wand of Icebolt</string>
-    <string name="WandOfIcebolt_Info">This wand launches an ice missile, dealing light damage to a target creature and slowing it down.</string>
+    <string name="WandOfIcebolt_Info">This wand launches an ice missile, dealing light damage to a target creature. It has chance to slow down or even freeze it's target.</string>
     <string name="WandOfIcebolt_Info1">You killed yourself with your own Wand of of Icebolt...</string>
 
     <!-- Badges -->

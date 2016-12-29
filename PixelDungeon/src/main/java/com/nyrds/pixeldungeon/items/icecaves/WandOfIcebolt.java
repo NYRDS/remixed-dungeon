@@ -46,8 +46,6 @@ public class WandOfIcebolt extends Wand {
 				Buff.affect( ch, Slow.class, Slow.duration( ch ) / 2 + effectiveLevel() );
 			}
 
-
-
 			if (ch == getCurUser() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfIcebolt_Info1));
