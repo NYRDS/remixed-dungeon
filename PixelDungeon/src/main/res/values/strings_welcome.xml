@@ -201,4 +201,23 @@
         - Updated translations (+ added Ukrainian language)\n
         - Updated language select menu\n
         </string>
+        <string name="Welcome_Text_26">
+        remix.26:\n
+        --Game\n
+        - New food : festive turkey\n
+        - Original musical theme for Caves (by Misaerit)\n
+        - New dungeon type: Ice Caves!\n
+        - At this point Ice Caves includes:\n
+            - 4 new mobs\n
+            - A new Boss\n
+            - A new NPC\n
+            - Unique Wand of Icebolt\n
+            - An artifact: Candle of Visions\n
+            - Original musical theme! (by Misaerit)\n
+        - Fixed bug that prevented rare spiders from spawning\n
+        - Goo became sligthly stronger\n
+        --Hats\n
+        - Added Santa Hat!\n
+        - Added Red nose and antlers!\n
+        </string>
 </resources>

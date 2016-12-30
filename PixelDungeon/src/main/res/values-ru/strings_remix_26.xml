@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">Новогодний колпак</string>
+    <string name="SantaHat_Info">Ничего так не настраивает на \"Подземьество\", как красная шёлковая шапка Санты, Владыки Глубин.</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Оленьи рога и красный нос</string>
+    <string name="Rudolph_Info">Что может быть более праздничным, чем светящийся красный нос? С оленьими рогами в придачу, конечно.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">кобольд</string>
+    <string name="Kobold_Gender">masculine</string>
+    <string name="Kobold_Name_Objective">кобольда</string>
+    <string name="Kobold_Desc">Считалось что кобольды это не более чем легенда. Предки теперешних гноллов, кобольды обитали глубоко в холодных пещерах. Говорят что их народ овладел искусством инженерии и машиностроения задолго до дворфоф.</string>
+
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">кобольд ледомант</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
+    <string name="KoboldIcemancer_Name_Objective">кобольда</string>
+    <string name="KoboldIcemancer_Desc">Кобольды Ледоманты были элитой общества. Знатые воины, волшебники и, самое главное, учёные. Древние ледоманты овладели искусством повелевания льдом, создавая из него сложные механизмы, укреплённые специальными заклятиями.</string>
+    <string name="KoboldIcemancer_Killed">%s убил тебя ледяной стрелой...</string>
+
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">дух мороза</string>
+    <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ColdSpirit_Name_Objective">духа мороза</string>
+    <string name="ColdSpirit_Desc">Дух мороза это воплощения холода, в чистейшей форме. Будучи безвольным сгустком магической энергии он подчиняется воли призвавшего его мага или действует согласно базовым инстинктам.</string>
+
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">ледяной элементаль</string>
+    <string name="IceElemental_Gender">masculine</string>
+    <string name="IceElemental_Name_Objective">ледяного элементаля</string>
+    <string name="IceElemental_Desc">Среди элементалей, существующих в подземелье, ледяные элементали вряд ли могут считаться самыми могучими, но их смело можно назвать одними из наиболее опасных. Холод исходящий от их тел способен замедлить любого врага.</string>
+
+    <!-- STRINGS OF IceGuardian CLASS -->
+    <string name="IceGuardian_Name">Ледяной Страж</string>
+    <string name="IceGuardian_Gender">masculine</string>
+    <string name="IceGuardian_Name_Objective">Ледяного Стража</string>
+    <string name="IceGuardian_Desc">Ледяные Стражи были созданы древними кобольдами для защиты их царства. Пока в ядре Стража содержится достаточно энергии, он способен восстанавливать повреждённые части тела прямо во время боя.</string>
+
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">Ледяной Страж</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
+    <string name="IceGuardianCore_Name_Objective">Ледяного Стража</string>
+    <string name="IceGuardianCore_Desc">Ледяные Стражи были созданы древними кобольдами для защиты их царства. Пока в ядре Стража содержится достаточно энергии, он способен восстанавливать повреждённые части тела прямо во время боя.</string>
+
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">заточённый кобольд</string>
+    <string name="CagedKobold_Gender">masculine</string>
+    <string name="CagedKobold_Name_Objective">заточённого кобольда</string>
+    <string name="CagedKobold_Desc">Кобольд в клетке.</string>
+    <string name="CagedKobold_Intro">Эй... ЭЙ! Ты же этот самый... путешественник? Выручи меня, дружище, эти чёртовы милитаристы заперли меня! Они собираются реактивировать древнее орудие, чтобы завоевать этих... человеков на поверхности! Но это слишком опасно, и я выступил против, но и они просто вышвырнули меня и заперли в клетке! Прошу тебя отыщи ключ от клетки, в замен я помогу тебе в меру своих сил.</string>
+    <string name="CagedKobold_Quest_End">О, спасибо тебе большое! Как ты смог отыскать ключ? Ты... ты уничтожил орудие?! Невероятно! Знаешь что, я обещал помочь, и я кое-что придумал. Пока всё не уляжется, я побуду у тебя. *Заточённый Кобольд превратился в свечу</string>
+    <string name="CagedKobold_Message1">Прошу...</string>
+    <string name="CagedKobold_Message2">Приятель, ты должен помочь мне</string>
+    <string name="CagedKobold_Message3">Терпеть не могу эту клетку</string>
+
+    <string name="Journal_Caged_Kobold">Заточённый Кобольд</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Этот гнолл замёрз заживо. Судя по всему он там очень давно.</string>
+    <string name="IceCaves_TileHighGrass">Замёрзшая высокая трава</string>
+    <string name="IceCaves_TileGrass">Замёрзшая трава.</string>
+    <string name="IceCaves_TileDescHighGrass">Густая, промёрзшая растительность закрывает обзор.</string>
+    <string name="IceCaves_TileStatue">Замёрзший гнолл</string>
+    <string name="IceCaves_TileDescStatue">Очередная безобразная статуя... Ой, погодите, это же замороженный гнолл.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">праздничная индейка</string>
+    <string name="ChristmasTurkey_Info">Лучший способ отпраздновать \"Подземьество\" это съесть кусочек печённой индейки. Для того чтобы отпраздновать день, когда монстры наводнили подземелье. Что привлекло невероятное количество туристов и путешественников со всего света, улучшая экономическую ситуацию в регионе.</string>
+
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">ледяной ключ</string>
+    <string name="IceKey_Info">Судя по всему этот ключ сделан из льда, но твёрд как сталь.</string>
+
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Палочка Ледяной Стрелы</string>
+    <string name="WandOfIcebolt_Info">Эта палочка запускает ледяной снаряд, который наносит небольшой урон цели. Так же есть шанс замедлить или даже заморозить противника</string>
+    <string name="WandOfIcebolt_Info1">Ты убил себя своей собственной ледяной стрелой...</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Ледяной Страж убит</string>
+
+</resources>
