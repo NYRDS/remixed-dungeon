@@ -20,7 +20,7 @@
     <string name="KoboldIcemancer_Name">kobold icemancer</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Name_Objective">kobold icemancer</string>
-    <string name="KoboldIcemancer_Desc">Kobold icemancers were an elite of their society. A warriors, magicians and most importantly scientist. Ancient icemancers mastered craft of iceshaping creating sofisticated mechanism out of ice and reinforcing them with magic..</string>
+    <string name="KoboldIcemancer_Desc">Kobold icemancers were an elite of their society. A warriors, magicians and most importantly scientist. Ancient icemancers mastered craft of iceshaping creating sophisticated mechanism out of ice and reinforcing them with magic..</string>
     <string name="KoboldIcemancer_Killed">%s\'s ice bolt killed you...</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
@@ -33,7 +33,7 @@
     <string name="IceElemental_Name">ice elemental</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name_Objective">ice elemental</string>
-    <string name="IceElemental_Desc">Amongst all elementals that exist in the dungeons the ice elemental might not be the toughest one, but he can easily be considered one of the most dangerous. It's body irradiates cold, slowing down it's enemies.</string>
+    <string name="IceElemental_Desc">Amongst all elementals that exist in the dungeons the ice elemental might not be the toughest one, but he can easily be considered one of the most dangerous. It\'s body irradiates cold, slowing down it\'s enemies.</string>
 
     <!-- STRINGS OF IceGuardian CLASS -->
     <string name="IceGuardian_Name">ice guardian</string>
@@ -81,7 +81,7 @@
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
     <string name="WandOfIcebolt_Name">Wand of Icebolt</string>
-    <string name="WandOfIcebolt_Info">This wand launches an ice missile, dealing light damage to a target creature. It has chance to slow down or even freeze it's target.</string>
+    <string name="WandOfIcebolt_Info">This wand launches an ice missile, dealing light damage to a target creature. It has chance to slow down or even freeze it\'s target.</string>
     <string name="WandOfIcebolt_Info1">You killed yourself with your own Wand of of Icebolt...</string>
 
     <!-- Badges -->
