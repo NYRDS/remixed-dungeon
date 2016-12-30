@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <string name="Welcome_Ok">Okay!</string>>
-    <string name="Welcome_Title">Welcome!</string>
-    <string name="Welcome_Text">
+  <string name="Welcome_Ok">Okay!</string>
+  <string name="Welcome_Title">Welcome!</string>
+  <string name="Welcome_Text">
         Remixed Pixel Dungeon is a modification of Watabou\'s open source Pixel Dungeon.\n
         Project was created to provide players with new experience and content.\n
         Another important part of our project is developing multilingual support for the game.\n
@@ -18,7 +18,7 @@
         - Seeds can be eaten now =)\n 
         - Elves
         </string>
-        <string name="Welcome_Text_19">
+  <string name="Welcome_Text_19">
         remix.17:\n
         - New mimic kind\n
         remix.18:\n
@@ -28,57 +28,57 @@
         - Spider levels\n
         - Spider Queen\n
         </string>
-        <string name="Welcome_Text_20">
+  <string name="Welcome_Text_20">
         remix.20:\n
         - New rare weapon - kusarigama\n
         - New rare mob\n
         - Game mode where you can save and load game\n
         - And much more less noticeable stuff\n
         </string>
-        <string name="Welcome_Text_20_1">
+  <string name="Welcome_Text_20_1">
         remix.20.1:\n
         - Scroll of Domination\n
         - Scroll of Curse\n
         </string>
-        <string name="Welcome_Text_20_2">
+  <string name="Welcome_Text_20_2">
         remix.21:\n
         - Rare Chaos items\n
         - Liquid flame now really liquid\n
         </string>
-        <string name="Welcome_Text_21_1">
+  <string name="Welcome_Text_21_1">
         remix.21.1:\n
         - Easy mode (with ads)\n
         - Expert mode\n
         </string>
-        <string name="Welcome_Text_21_2">
+  <string name="Welcome_Text_21_2">
         remix.21.2:\n
         - Ability to choose game mods (just reskins for now) ( Usable only by experienced modders)\n
         </string>
-        <string name="Welcome_Text_21_3">
+  <string name="Welcome_Text_21_3">
         remix.21.3:\n
         - PD mini mod available to download (not yet completed but fun)\n
         - Improved Sewers graphics
         </string>
-        <string name="Welcome_Text_21_4">
+  <string name="Welcome_Text_21_4">
         remix.21.4:\n
         - New rare weapon - sacrificial sword
         </string>
-        <string name="Welcome_Text_21_5">
+  <string name="Welcome_Text_21_5">
         remix.21.5:\n
         - New properties for old items
         </string>
-        <string name="Welcome_Text_22">
+  <string name="Welcome_Text_22">
         remix.22:\n
         - New hidden boss
         </string>
-        <string name="Welcome_Text_23">
+  <string name="Welcome_Text_23">
         remix.23:\n
         - Dungeon is now 32 levels deep (instead of 26)\n
         - Hidden boss moved to level 25\n
         - Greater variety of mini-bosses for a final fight (instead of 2 fists, Yog now can chose from a total of 5 mini bosses to spawn)\n
         - New setting and monsters for levels 27-31
         </string>
-		<string name="Welcome_Text_23_1">
+  <string name="Welcome_Text_23_1">
         remix.23.1:\n
         - There is new shop, NPC and quest on level 27\n
         - New monster for Demon Nest (27-31)\n
@@ -87,19 +87,19 @@
 		- Several minor visual upgrades\n
 		- Various bug fixes\n
         </string>
-        <string name="Welcome_Text_23_2">
+  <string name="Welcome_Text_23_2">
         remix.23.2:\n
         - Added Tier 6 weapons and armor\n
         - Added crossbows\n
         - Added Chaos Armor\n
         </string>
-        <string name="Welcome_Text_24">
+  <string name="Welcome_Text_24">
         remix.24:\n
         - We got Hats!(Vanity items)\n
         - Various bug fixes\n
         - Updated translations\n
         </string>
-        <string name="Welcome_Text_24_1">
+  <string name="Welcome_Text_24_1">
         remix.24.1:\n
         --Game--\n
         - New mob: Armored Statue\n
@@ -108,10 +108,10 @@
         - Updated visuals for Spider Lair\n
         --Vanity Items--\n
         - Buying new item automatically equips item\n
-        - New item "Pirate Set"\n
+        - New item \"Pirate Set\"\n
         - Updated visuals for Neko Ears and Rabbit Ears\n
         </string>
-        <string name="Welcome_Text_24_2">
+  <string name="Welcome_Text_24_2">
         remix.24.2:\n
         - New mob: Golden Statue (rare statue)\n
         - New item: Golden Sword (can be found as rare loot drop, or also can be found as loot from golden statue with drop rate 100%)\n
@@ -121,7 +121,7 @@
         - Shadow Lord gets a more sensible starting room (now players can\'t run past him to reach next level, you have to fight)\n
         - Spider Charm gets updated sprite and now drops by a Spider Queen (Previously you could\'ve get it from Goo)\n
         </string>
-        <string name="Welcome_Text_25">
+  <string name="Welcome_Text_25">
         remix.25:\n
         - New dungeon type: Necropolis, in order to enter necropolis you have to find Necromancer on level 7, so he can give you skeleton key\n
         - New items: Spider Armor and Black Skull\n
@@ -135,7 +135,7 @@
         - Updated translations\n
         - Removed options : \“immersive mode\” and \“gui scale\”\n
         </string>
-        <string name="Welcome_Text_25_1">
+  <string name="Welcome_Text_25_1">
         remix.25.1:\n
         --New Features--\n
         - New Hero Class: Necromancer\n
@@ -161,16 +161,16 @@
         - User created mods can now contain codex items with custom text\n
         - User created mods now allows to set custom tiles, water and music to a specific level\n
         </string>
-        <string name="Welcome_Text_25_2">
+  <string name="Welcome_Text_25_2">
         remix.25.2:\n
         --New Features--\n
         - Now you can resize game Ui manually during game session. This feature is available in \"Settings\" menu\n
         --Fixes--\n
-        - Fixed bug that was resulting in creating images of your hero, wearing a hat, after clicking "Examine" button in \"Hats\" menu\n
+        - Fixed bug that was resulting in creating images of your hero, wearing a hat, after clicking \"Examine\" button in \"Hats\" menu\n
         - Fixed bug, that was preventing mobs (summoned or resurrected on a \"hole\" cell) from falling down\n
         - Updated translations and fixed some typos\n
         </string>
-        <string name="Welcome_Text_25_3">
+  <string name="Welcome_Text_25_3">
         remix.25.3:\n
         - Added new object: Explosive barrels (replaced with pumpkins during halloween)\n
         - Added original music for boss levels \n
@@ -178,7 +178,7 @@
         - New NPC: Scarecrow\n
         - New vanity items: Zombie mask, Vampire skull and Ushanka hat\n
         </string>
-        <string name="Welcome_Text_25_4">
+  <string name="Welcome_Text_25_4">
         remix.25.4:\n
         --Game--\n
         - Barrels can be pushed by Wand of Telekinesis\n
@@ -194,11 +194,30 @@
         - Some mobs can now be manually set to a certain power level\n
         - \"Albino\" mob is available in mods now\n
         </string>
-        <string name="Welcome_Text_25_5">
+  <string name="Welcome_Text_25_5">
         remix.25.5:\n
         - Fixed bug that was causing hero sprite to disappear if player were to blink into a chasm\n
         - Menu button is now has highest priority in game interface, so that players are able to access GUI settings even if GUI scale was set to high\n
         - Updated translations (+ added Ukrainian language)\n
         - Updated language select menu\n
+        </string>
+  <string name="Welcome_Text_26">
+        remix.26:\n
+        --Game\n
+        - New food : festive turkey\n
+        - Original musical theme for Caves (by Misaerit)\n
+        - New dungeon type: Ice Caves!\n
+        - At this point Ice Caves includes:\n
+            - 4 new mobs\n
+            - A new Boss\n
+            - A new NPC\n
+            - Unique Wand of Icebolt\n
+            - An artifact: Candle of Visions\n
+            - Original musical theme! (by Misaerit)\n
+        - Fixed bug that prevented rare spiders from spawning\n
+        - Goo became slightly stronger\n
+        --Hats\n
+        - Added Santa Hat!\n
+        - Added Red nose and antlers!\n
         </string>
 </resources>

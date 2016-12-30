@@ -27,7 +27,7 @@
     <string name="ColdSpirit_Name">cold spirit</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">cold spirit</string>
-    <string name="ColdSpirit_Desc">A cold spirit is a manifestation of cold, in it's purest form. They are a mindless husks, created with magic, acting upon will of their creators or via basic instincts1 and reflexes.</string>
+    <string name="ColdSpirit_Desc">A cold spirit is a manifestation of cold, in it\'s purest form. They are a mindless husks, created with magic, acting upon will of their creators or via basic instincts and reflexes.</string>
 
     <!-- STRINGS OF IceElemental CLASS -->
     <string name="IceElemental_Name">ice elemental</string>
