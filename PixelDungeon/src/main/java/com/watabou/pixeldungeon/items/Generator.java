@@ -286,7 +286,7 @@ public class Generator {
 				MysteryMeat.class,
 				PumpkinPie.class,
 				ChristmasTurkey.class};
-		Category.FOOD.probs = new float[]{4, 1, 0};
+		Category.FOOD.probs = new float[]{4, 1, 0, 0, 2};
 
 		Category.RING.classes = new Class<?>[]{
 				RingOfMending.class,
