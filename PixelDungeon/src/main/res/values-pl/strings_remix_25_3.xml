@@ -13,10 +13,6 @@
     <!-- STRINGS OF PumpkinPie CLASS -->
     <string name="PumpkinPie_Name">Dyniowe ciasto</string>
     <string name="PumpkinPie_Info">Pyszne ciasto dyniowe, prawie takie jak piekła mama...</string>
-
-    <!-- STRINGS OF CandleOfMindVision CLASS -->
-    <string name="CandleOfMindVision_Name">
-</string>
     <!-- Object descriptions -->
     <!-- STRINGS OF Barrel CLASS -->
     <string name="Barrel_Name">beczka</string>
