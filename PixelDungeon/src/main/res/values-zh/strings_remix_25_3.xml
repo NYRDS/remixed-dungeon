@@ -29,14 +29,14 @@
     <string name="RottenPumpkinPie_Info">就算有妈妈的味道，腐烂的还是没法食用的。</string>
 
     <!-- STRINGS OF CandleOfMindVision CLASS -->
-    <string name="CandleOfMindVision_Name">愿景之烛</string>
-    <string name="CandleOfMindVision_Info">看上去是一根普通的蜡烛，而不是你所期望的强大武器。奇怪的是这根蜡烛并没有被点燃，但十分温暖。</string>
+    <string name="CandleOfMindVision_Name">视界之烛</string>
+    <string name="CandleOfMindVision_Info">看上去是一根普通的蜡烛，而不是你所期望的强大武器。奇怪的是虽然这根蜡烛没有被点燃，但十分温暖。</string>
     <string name="CandleOfMindVision_Info_Lighted">当你拿出这根蜡烛的时候，它自动点燃，并照亮了你周围的事物，使你看到了附近的怪物。</string>
     <string name="CandleOfMindVision_Info_Exhausted">这个蜡烛已经燃尽，没法继续发出亮光了。看上去你没法继续使用它了。</string>
 
     <!-- Object descriptions -->
     <!-- STRINGS OF Barrel CLASS -->
-    <string name="Barrel_Name">圆筒</string>
+    <string name="Barrel_Name">油筒</string>
     <string name="Barrel_Desc">一个简单的木桶，你可以从中闻到油味。而且这玩意非常轻，你可以轻易推动它。</string>
 
     <!-- STRINGS OF Barrel_Pumpkin CLASS -->

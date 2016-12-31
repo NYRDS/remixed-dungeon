@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
@@ -20,7 +20,7 @@
     <string name="KoboldIcemancer_Name">кобольд ледомант</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Name_Objective">кобольда</string>
-    <string name="KoboldIcemancer_Desc">Кобольды Ледоманты были элитой общества. Знатые воины, волшебники и, самое главное, учёные. Древние ледоманты овладели искусством повелевания льдом, создавая из него сложные механизмы, укреплённые специальными заклятиями.</string>
+    <string name="KoboldIcemancer_Desc">Кобольды Ледоманты были элитой общества. Знатные воины, волшебники и, самое главное, учёные. Древние ледоманты овладели искусством повелевать льдом, создавая из него сложные механизмы, укреплённые специальными заклятиями.</string>
     <string name="KoboldIcemancer_Killed">%s убил тебя ледяной стрелой...</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
