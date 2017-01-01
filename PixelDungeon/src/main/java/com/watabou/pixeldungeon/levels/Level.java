@@ -91,6 +91,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Level implements Bundlable {
 
@@ -208,11 +209,11 @@ public abstract class Level implements Bundlable {
 
 	public String levelId;
 
-	public  HashSet<Mob>                         mobs    = new HashSet<>();
-	public  HashMap<Class<? extends Blob>, Blob> blobs   = new HashMap<>();
-	public  SparseArray<Plant>                   plants  = new SparseArray<>();
-	private SparseArray<Heap>                    heaps   = new SparseArray<>();
-	public  SparseArray<LevelObject>             objects = new SparseArray<>();
+	public  HashSet<Mob>                     mobs    = new HashSet<>();
+	public  Map<Class<? extends Blob>, Blob> blobs   = new HashMap<>();
+	public  SparseArray<Plant>               plants  = new SparseArray<>();
+	private SparseArray<Heap>                heaps   = new SparseArray<>();
+	public  SparseArray<LevelObject>         objects = new SparseArray<>();
 
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -278,7 +279,7 @@ public abstract class Level implements Bundlable {
 
 	protected void initSizeDependentStuff() {
 
-		Dungeon.initSizeDependentStuff(getWidth(),getHeight());
+		Dungeon.initSizeDependentStuff(getWidth(), getHeight());
 		NEIGHBOURS4 = new int[]{-getWidth(), +1, +getWidth(), -1};
 		NEIGHBOURS8 = new int[]{+1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
@@ -568,14 +569,14 @@ public abstract class Level implements Bundlable {
 
 	public void spawnMob(Mob mob, float delay) {
 		mobs.add(mob);
-		if(GameScene.isSceneReady()) {
+		if (GameScene.isSceneReady()) {
 			mob.updateSprite();
 		}
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 
-		if(GameScene.isSceneReady()) {
-			if(mob.isPet() || fieldOfView[mob.getPos()] ) {
+		if (GameScene.isSceneReady()) {
+			if (mob.isPet() || fieldOfView[mob.getPos()]) {
 				mobPress(mob);
 			}
 		}
@@ -940,7 +941,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean objectPress(int cell, LevelObject levelObject) {
-		if(map[cell] == Terrain.CHASM || pit[cell]) {
+		if (map[cell] == Terrain.CHASM || pit[cell]) {
 			levelObject.fall();
 			return false;
 		}
@@ -951,7 +952,7 @@ public abstract class Level implements Bundlable {
 
 	public void itemPress(int cell, Presser presser) {
 
-		if(presser.affectLevelObjects()) {
+		if (presser.affectLevelObjects()) {
 			LevelObject levelObject = objects.get(cell);
 			if (levelObject != null) {
 
