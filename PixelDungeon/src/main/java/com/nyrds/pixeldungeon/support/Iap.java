@@ -69,7 +69,7 @@ public class Iap {
                 if (!result.isSuccess()) {
                     complain("Problem setting up in-app billing: " + result);
 
-	                if(result.getResponse() == mHelper.BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE ) {
+	                if(result.getResponse() == IabHelper.BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE) {
 		                EventCollector.logEvent("iap","No billing on device");
 		                return;
 	                }
