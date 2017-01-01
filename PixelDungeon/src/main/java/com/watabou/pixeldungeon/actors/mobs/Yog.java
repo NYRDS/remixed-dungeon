@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -218,7 +220,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public int attackProc(Char enemy, int damage) {
+		public int attackProc(@NonNull Char enemy, int damage) {
 			if (Random.Int(3) == 0) {
 				Buff.affect(enemy, Ooze.class);
 				enemy.getSprite().burst(0xFF000000, 5);

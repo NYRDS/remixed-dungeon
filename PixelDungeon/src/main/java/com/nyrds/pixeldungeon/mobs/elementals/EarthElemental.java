@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -71,7 +73,7 @@ public class EarthElemental extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public int attackProc(Char enemy, int damage) {
+	public int attackProc(@NonNull Char enemy, int damage) {
 
 		int cell = enemy.getPos();
 

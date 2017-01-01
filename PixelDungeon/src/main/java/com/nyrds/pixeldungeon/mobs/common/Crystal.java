@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Darkness;
@@ -80,7 +82,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable{
 	}
 
 	@Override
-	public int attackProc(final Char enemy, int damage) {
+	public int attackProc(@NonNull final Char enemy, int damage) {
 
 		if (kind < 2) {
 			final Wand wand = ((Wand) loot);

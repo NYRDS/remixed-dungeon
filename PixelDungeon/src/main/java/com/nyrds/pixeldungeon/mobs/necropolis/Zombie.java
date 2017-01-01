@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -22,7 +24,7 @@ public class Zombie extends UndeadMob {
     }
 
     @Override
-    public int attackProc( Char enemy, int damage ) {
+    public int attackProc(@NonNull Char enemy, int damage ) {
         //Poison proc
         if (Random.Int(3) == 1){
             Buff.affect( enemy, Poison.class ).set( Random.Int( 2, 4 ) * Poison.durationFactor( enemy ) );

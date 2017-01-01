@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -278,7 +280,7 @@ public abstract class Char extends Actor {
 		return 1;
 	}
 
-	public int attackProc(Char enemy, int damage) {
+	public int attackProc(@NonNull Char enemy, int damage) {
 		return damage;
 	}
 

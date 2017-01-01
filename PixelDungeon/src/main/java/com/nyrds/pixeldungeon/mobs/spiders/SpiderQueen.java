@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
@@ -47,7 +49,7 @@ public class SpiderQueen extends Boss {
 	}
 	
 	@Override
-	public int attackProc( Char enemy, int damage ) {
+	public int attackProc(@NonNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
 		}

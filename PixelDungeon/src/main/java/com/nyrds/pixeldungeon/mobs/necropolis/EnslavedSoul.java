@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -43,7 +45,7 @@ public class EnslavedSoul extends UndeadMob {
 
     @SuppressWarnings("unchecked")
     @Override
-    public int attackProc( Char enemy, int damage ) {
+    public int attackProc(@NonNull Char enemy, int damage ) {
         //Buff proc
         if (Random.Int(5) == 1){
             if(enemy instanceof Hero) {

@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -45,7 +47,7 @@ public class YogsBrain extends Boss {
     }
 
     @Override
-    public int attackProc( Char enemy, int damage ) {
+    public int attackProc(@NonNull Char enemy, int damage ) {
         //Paralysis proc
         if (Random.Int(3) == 1){
             Buff.affect(enemy, Paralysis.class);

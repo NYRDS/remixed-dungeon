@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.actors.Char;
@@ -41,7 +43,7 @@ public class SpiderExploding extends MultiKindMob {
 	}
 	
 	@Override
-	public int attackProc( Char enemy, int damage ) {
+	public int attackProc(@NonNull Char enemy, int damage ) {
 		
 		try {
 			Plant plant  = (Plant) PLantClasses[getKind()].newInstance();

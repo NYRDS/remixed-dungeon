@@ -80,7 +80,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public int attackProc(Char enemy, int damage) {
+	public int attackProc(@NonNull Char enemy, int damage) {
 		if (enemy == Dungeon.hero && Random.Int(3) == 0) {
 			Gold gold = new Gold(Random.Int(Dungeon.gold() / 10, Dungeon.gold() / 2));
 			if (gold.quantity() > 0) {

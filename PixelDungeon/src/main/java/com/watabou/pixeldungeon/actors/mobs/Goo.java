@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -113,7 +115,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	public int attackProc( Char enemy, int damage ) {
+	public int attackProc(@NonNull Char enemy, int damage ) {
 		if (Random.Int( 3 ) == 0) {
 			Buff.affect( enemy, Ooze.class );
 			enemy.getSprite().burst( 0x000000, 5 );
