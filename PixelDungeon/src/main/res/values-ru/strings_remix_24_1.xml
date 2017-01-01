@@ -5,7 +5,7 @@
     <string name="ArmoredStatue_Name">ожившая статуя</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name_Objective">статую</string>
-    <string name="ArmoredStatue_Desc">Вряд ли кому-то могло показаться что это очередная обычная статуя. И дело не столько в святящихся красных глазах, но в факте того что никто, в здравом уме, не стал бы одевать статую в _%s_.</string>
+    <string name="ArmoredStatue_Desc">Вряд ли кому-то могло показаться что это очередная обычная статуя. И дело не столько в светящихся красных глазах, но в факте того что никто, в здравом уме, не стал бы одевать статую в _%s_.</string>
 
     <!-- STRINGS OF SpiderSoldier -->
     <string name="SpiderGuard_Name">паук-страж</string>
