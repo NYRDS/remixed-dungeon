@@ -295,7 +295,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public boolean attack(Char enemy) {
+		public boolean attack(@NonNull Char enemy) {
 
 			if (!Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 				spend(attackDelay());

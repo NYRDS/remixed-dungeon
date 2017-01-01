@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
@@ -117,7 +119,7 @@ public class Eye extends Mob {
 	}
 	
 	@Override
-	public boolean attack( Char enemy ) {
+	public boolean attack(@NonNull Char enemy ) {
 		
 		for (int i=1; i < Ballistica.distance; i++) {
 			

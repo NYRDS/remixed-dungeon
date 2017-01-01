@@ -121,7 +121,7 @@ public class King extends Boss {
 	}
 	
 	@Override
-	public boolean attack( Char enemy ) {
+	public boolean attack(@NonNull Char enemy ) {
 		if (canTryToSummon() && getPos() == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal )) {
 			summon();
 			return true;

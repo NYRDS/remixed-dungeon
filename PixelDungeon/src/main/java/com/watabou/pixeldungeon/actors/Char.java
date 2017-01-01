@@ -178,7 +178,7 @@ public abstract class Char extends Actor {
 		defenceVerb = getClassParam("Defense", null, false);
 	}
 
-	public boolean attack(Char enemy) {
+	public boolean attack(@NonNull Char enemy) {
 
 		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
 
