@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">Капелюх Санти</string>
+    <string name="SantaHat_Info">Нічого не розкаже краще про Підземвство краще, а ніж червоний капелюх Лорда Глибин - Санти.</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Червоний ніс та роги</string>
+    <string name="Rudolph_Info">Що може бути більш святковим, а ніж яскравий червоний ніс? О, і пара рогів, звісно ж.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">кобольд</string>
+    <string name="Kobold_Gender">masculine</string>
+    <string name="Kobold_Name_Objective">кобольда</string>
+    <string name="Kobold_Desc">Вважалося, що кобольти це всього лише легенда. Предки теперішніх гнолів, кобольти жили глибоко в холодних печерах. Казали, що їхній народ оволодів мистецтвом машинерії та інженерії ще раніше за дворфів. Але незрозуміло, через що вони зникли багато років тому...</string>
+
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">кобольт кригомант</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
+    <string name="KoboldIcemancer_Name_Objective">кобольта кригоманта</string>
+    <string name="KoboldIcemancer_Desc">Кобольди кригоманти - це була еліта суспільства. Відомі воїни, маги та, що найголовніше, вчені. Древні кригоманти оволоділи мистецтвом керування кригою, створюючи з нього складні механізми, скріплені спеціальними закляттями...</string>
+    <string name="KoboldIcemancer_Killed">%s вбив тебе крижаною стрілою...</string>
+
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">дух холоду</string>
+    <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ColdSpirit_Name_Objective">духа холоду</string>
+    <string name="ColdSpirit_Desc">Дух холоду - це втілення холоду в чистій формі. Являючи собою згустком магічної енергії без власної волі, він підкорюється волі мага, що його прикликав або ж згідно із базовими інстинктами для свого виживання.</string>
+
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">крижаний елементаль</string>
+    <string name="IceElemental_Gender">masculine</string>
+    <string name="IceElemental_Name_Objective">крижаного елементаля</string>
+    <string name="IceElemental_Desc">Серед елементалів, що водяться в підземеллі, крижані навряд чи можуть вважатися наймогутнішими, але їх сміливо можна назвати одними з небезпечних. Холод, що йде від їхніх тіл, здатний сповільнити будь-якого ворога.</string>
+
+    <!-- STRINGS OF IceGuardian CLASS -->
+    <string name="IceGuardian_Name">крижаний хранитель</string>
+    <string name="IceGuardian_Gender">masculine</string>
+    <string name="IceGuardian_Name_Objective">крижаного хранителя</string>
+    <string name="IceGuardian_Desc">Крижані стражі були змайстровані стародавніми кобольдами, аби захистити свої печери. Їхня сила зберігається в ядрі, що дозволяє хранителям відновлюватись до тих пір, доки вона містить енергію.</string>
+
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">крижаний хранитель</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
+    <string name="IceGuardianCore_Name_Objective">крижаного хранителя</string>
+    <string name="IceGuardianCore_Desc">Крижані стражі були змайстровані стародавніми кобольдами, аби захистити свої печери. Їхня сила зберігається в ядрі, що дозволяє хранителям відновлюватись до тих пір, доки вона містить енергію.</string>
+
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">заточений кобольт</string>
+    <string name="CagedKobold_Gender">masculine</string>
+    <string name="CagedKobold_Name_Objective">заточеного кобольта</string>
+    <string name="CagedKobold_Desc">Кобольт, заточений в клітці.</string>
+    <string name="CagedKobold_Intro">Агов... Агов! Ти ж той, як його... шукач пригод? Допоможи мені, друже, ці кляті мілітаристи зачинили мене! Вони збираються реактивувати древню зброю, аби завоювати цих, як його... людин на поверхні! Проте це дуже небезпечно, і я виступив проти, але вони просто заточили мене в цю клітку! Прошу тебе, відшукай ключа від клітки, натомість я тобі допоможу, на що буду здатний.</string>
+    <string name="CagedKobold_Quest_End">О, дякую тобі, щиро дякую! Як ти відшукав ключа? Ти... ти знищів зброю?! Неймовірно! Знаєш що, я обіцяв допомогти, і я дещо надумав. Доки все не вщухне, я побуду поряд з тобою. *Заточений кобольт перетворився в свічку</string>
+    <string name="CagedKobold_Message1">Прошу...</string>
+    <string name="CagedKobold_Message2">Приятелю, ти мусиш допомогти мені</string>
+    <string name="CagedKobold_Message3">Терпіти не можу цю клітку, і все що з нею пов\'язано</string>
+
+    <string name="Journal_Caged_Kobold">Заточений кобольт</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Даного гнолла було заморожено живим. Схоже він тут був вже тривалий час.</string>
+    <string name="IceCaves_TileHighGrass">Висока морожена трава</string>
+    <string name="IceCaves_TileGrass">Морожена трава.</string>
+    <string name="IceCaves_TileDescHighGrass">Виглядають, наче рослині блоки глибокої заморозки.</string>
+    <string name="IceCaves_TileStatue">Заморожений Гнолл</string>
+    <string name="IceCaves_TileDescStatue">Ще одна жахлива статуя... Стоп, зачекайте, це ж морожений гнолл.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">святкова індичка</string>
+    <string name="ChristmasTurkey_Info">Найкращий варіант відсвяткувати Підземство, це добрий шматок запеченої індички. Таким чином, можете відсвяткувати той день, коли монстри заполонили підземелля, приманюючи героїв зі всього світу. Що, в свою чергу, призвело до розвитку туризму та підвищенню товарообігу у місцевих торговців.</string>
+
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">крижаний ключ</string>
+    <string name="IceKey_Info">Схоже, що цей ключ виготовлено з криги, але за міцністю він не поступається сталі.</string>
+
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Паличка крижаної стріли</string>
+    <string name="WandOfIcebolt_Info">Ця паличка запускає крижану стрілу, яка наносить невелику шкоду. Проте є шанс сповільнити, чи навіть заморозити супротивника.</string>
+    <string name="WandOfIcebolt_Info1">Ти вбив сам себе паличкою крижаної стріли...</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Крижаного Хранителя вбито</string>
+
+</resources>

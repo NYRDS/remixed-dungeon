@@ -8,7 +8,7 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">черный череп</string>
-    <string name="BlackSkull_Info">Маленький обсидиановый череп. Он был источником сил Некрополиса, но, после поражения Лича, утратил их. Однако когда ты держишь его в руках тебя посещает чуждая мысль: \"Он жаждет\". </string>
+    <string name="BlackSkull_Info">Маленький обсидиановый череп. Он был источником сил Некрополя, но, после поражения Лича, утратил их. Однако когда ты держишь его в руках тебя посещает чуждая мысль: \"Он жаждет\". </string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">пробудившийся черный череп</string>
@@ -54,7 +54,7 @@
     <string name="Lich_Name">лич</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">лича</string>
-    <string name="Lich_Desc">Некромант нашел свою смерть в глубинах некрополиса, и постепенно, злые силы, что вливались в его тело, превратили его в Лича. В мага-умертвие, безвольную марионетку, управляемую темными силами...</string>
+    <string name="Lich_Desc">Некромант нашел свою смерть в глубинах некрополя, и постепенно, злые силы, что вливались в его тело, превратили его в Лича. В мага-умертвие, безвольную марионетку, управляемую темными силами...</string>
 
     <!-- STRINGS OF RunicSkull CLASS -->
     <string name="RunicSkull_Name">рунный череп</string>
