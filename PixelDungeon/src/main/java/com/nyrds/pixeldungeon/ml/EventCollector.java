@@ -11,6 +11,8 @@ import com.watabou.pixeldungeon.Preferences;
  * Created by mike on 09.03.2016.
  */
 public class EventCollector {
+	public static final String BUG = "bug";
+
 	static private Tracker mTracker;
 	static private boolean mDisabled = true;
 

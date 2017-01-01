@@ -249,7 +249,7 @@ public abstract class Level implements Bundlable {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
 			if (heap.isEmpty()) {
-				EventCollector.logEvent("bug", "level", Utils.format("Empty heap at pos %d", pos));
+				EventCollector.logEvent(EventCollector.BUG, "level", Utils.format("Empty heap at pos %d", pos));
 				return null;
 			}
 			return heap;

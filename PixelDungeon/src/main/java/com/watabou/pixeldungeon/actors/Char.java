@@ -149,7 +149,7 @@ public abstract class Char extends Actor {
 						hungerAttached = true;
 					} else {
 						if (!hungerBugSend) {
-							EventCollector.logEvent("bug", "hunger count");
+							EventCollector.logEvent(EventCollector.BUG, "hunger count");
 							hungerBugSend = true;
 							continue;
 						}

@@ -24,6 +24,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.Game;
@@ -924,5 +925,18 @@ public abstract class Mob extends Char {
 		if (!defMap.containsKey(getClass())) {
 			defMap.put(getClass(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getClass().getSimpleName() + ".json"));
 		}
+	}
+
+	@Override
+	public boolean attack(@NonNull Char enemy) {
+		if (enemy == null) {
+			EventCollector.logEvent(EventCollector.BUG, "attacking null enemy");
+			return false;
+		}
+		if (enemy == DUMMY) {
+			EventCollector.logEvent(EventCollector.BUG, "attacking dummy enemy");
+			return false;
+		}
+		return super.attack(enemy);
 	}
 }
