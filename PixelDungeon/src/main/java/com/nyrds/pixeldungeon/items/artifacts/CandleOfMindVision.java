@@ -50,15 +50,19 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 
 	@Override
 	public boolean doEquip(Hero hero) {
-		if (!activated) {
-			activated = true;
-		}
+		boolean ret = super.doEquip(hero);
+		
+		if(ret) {
+			if (!activated) {
+				activated = true;
+			}
 
-		if(charges > 0) {
-			Buff.affect(hero, CandleOfMindVisionBuff.class, charges);
-			MindVision.reportMindVisionEffect();
+			if (charges > 0) {
+				Buff.affect(hero, CandleOfMindVisionBuff.class, charges);
+				MindVision.reportMindVisionEffect();
+			}
 		}
-		return super.doEquip(hero);
+		return ret;
 	}
 
 	@Override
