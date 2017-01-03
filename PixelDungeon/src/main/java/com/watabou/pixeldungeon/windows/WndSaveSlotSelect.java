@@ -25,7 +25,6 @@ import java.util.ArrayList;
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 	private static final int WIDTH         = 120;
-	private static final int BUTTON_HEIGHT = 20;
 	private static final int BUTTON_WIDTH  = 58;
 
 	private static final String EMPTY_STRING = "";

@@ -32,7 +32,6 @@ import java.util.ArrayList;
 public class WndChallenges extends Window {
 
 	private static final int WIDTH		= 108;
-	private static final int BTN_HEIGHT	= 20;
 	
 	private static final String TITLE   = Game.getVar(R.string.WndChallenges_Title);
 	
@@ -63,7 +62,7 @@ public class WndChallenges extends Window {
 			if (i > 0) {
 				pos += GAP;
 			}
-			cb.setRect( 0, pos, WIDTH, BTN_HEIGHT );
+			cb.setRect( 0, pos, WIDTH, BUTTON_HEIGHT );
 			pos = cb.bottom();
 			
 			add( cb );

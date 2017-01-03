@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndOptions extends Window {
 
 	private static final int WIDTH         = 120;
-	private static final int BUTTON_HEIGHT = 20;
 
 	public WndOptions( String title, String message, String... options ) {
 		super();

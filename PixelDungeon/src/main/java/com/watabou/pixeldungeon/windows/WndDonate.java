@@ -108,8 +108,7 @@ public class WndDonate extends WndTabbed {
 					donate.enable(false);
 				}
 
-				final int BTN_HEIGHT = 20;
-				add(donate.setRect(0 ,height - BTN_HEIGHT, width, BTN_HEIGHT));
+				add(donate.setRect(0 ,height - BUTTON_HEIGHT, width, BUTTON_HEIGHT));
 			}
 
 			Text commonText = PixelScene.createMultiline(

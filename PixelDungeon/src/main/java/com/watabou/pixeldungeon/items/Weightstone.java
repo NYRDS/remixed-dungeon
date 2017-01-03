@@ -128,7 +128,6 @@ public class Weightstone extends Item {
 		
 		private static final int WIDTH         = 120;
 		private static final int BUTTON_WIDTH  = WIDTH - GAP * 2;
-		private static final int BUTTON_HEIGHT = 20;
 		
 		public WndBalance( final Weapon weapon ) {
 			super();

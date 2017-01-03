@@ -36,7 +36,6 @@ public class WndSelectLanguage extends Window {
 	private static final int WIDTH_P = 120;
 	private static final int WIDTH_L = 180;
 
-	private static final int BUTTON_HEIGHT = 20;
 	private static final int BUTTON_WIDTH  = 58;
 
 	public WndSelectLanguage(String title, String... options) {

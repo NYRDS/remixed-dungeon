@@ -96,7 +96,7 @@ public class WndBlacksmith extends Window {
 			}
 		};
 		btnReforge.enable( false );
-		btnReforge.setRect( 0, btnItem1.bottom() + BTN_GAP, WIDTH, 20 );
+		btnReforge.setRect( 0, btnItem1.bottom() + BTN_GAP, WIDTH, BUTTON_HEIGHT);
 		add( btnReforge );
 		
 		
