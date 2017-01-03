@@ -22,6 +22,7 @@ import android.net.Uri;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -33,15 +34,10 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndSelectLanguage extends Window {
 
-	private static final int WIDTH_P = 120;
-	private static final int WIDTH_L = 180;
-
-	private static final int BUTTON_WIDTH  = 58;
-
 	public WndSelectLanguage(String title, String... options) {
 		super();
 
-		int WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
+		int WIDTH = WndHelper.getFullscreenWidth();
 
 		int maxW = WIDTH - GAP * 2;
 
@@ -80,6 +76,8 @@ public class WndSelectLanguage extends Window {
 		float pos = translateLink.y + translateLink.height() + GAP;
 
 		final int columns = PixelDungeon.landscape() ? 3 : 2;
+
+		int BUTTON_WIDTH = WIDTH / columns - GAP;
 
 		for (int i = 0; i < options.length / columns + 1; i++) {
 			for (int j = 0; j < columns; j++) {
