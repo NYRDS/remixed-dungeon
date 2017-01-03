@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
@@ -14,7 +14,7 @@
     <string name="Kobold_Name">кобольд</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name_Objective">кобольда</string>
-    <string name="Kobold_Desc">Считалось что кобольды это не более чем легенда. Предки теперешних гноллов, кобольды обитали глубоко в холодных пещерах. Говорят что их народ овладел искусством инженерии и машиностроения задолго до дворфоф.</string>
+    <string name="Kobold_Desc">Считалось что кобольды это не более чем легенда. Предки теперешних гноллов, кобольды обитали глубоко в холодных пещерах. Говорят что их народ овладел искусством инженерии и машиностроения задолго до дворфов.</string>
 
     <!-- STRINGS OF KoboldIcemancer CLASS -->
     <string name="KoboldIcemancer_Name">кобольд ледомант</string>
@@ -27,7 +27,7 @@
     <string name="ColdSpirit_Name">дух мороза</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">духа мороза</string>
-    <string name="ColdSpirit_Desc">Дух мороза это воплощения холода, в чистейшей форме. Будучи безвольным сгустком магической энергии он подчиняется воли призвавшего его мага или действует согласно базовым инстинктам.</string>
+    <string name="ColdSpirit_Desc">Дух мороза это воплощения холода, в чистейшей форме. Будучи безвольным сгустком магической энергии он подчиняется воле призвавшего его мага или действует согласно базовым инстинктам.</string>
 
     <!-- STRINGS OF IceElemental CLASS -->
     <string name="IceElemental_Name">ледяной элементаль</string>
