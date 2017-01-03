@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
@@ -44,15 +45,6 @@ public class WndDonate extends WndTabbed {
 	private static final String RUBY_DONATE_TEXT_2 = Game
 			.getVar(R.string.WndDonate_rubyDonateText2);
 
-	private static final int WIDTH = 130;
-	private static final int HEIGHT = 145;
-
-	private static final int BTN_HEIGHT = 20;
-	private static final int BTN_WIDTH  = WIDTH;
-	
-	private static final int GAP = 2;
-	private static final int TAB_WIDTH = 47;
-
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY };
 	private static final String[] title = { SILVER_DONATE, GOLD_DONATE,
@@ -66,6 +58,9 @@ public class WndDonate extends WndTabbed {
 
 	public WndDonate() {
 		super();
+
+		resize(WndHelper.getFullscreenWidth(), WndHelper.getFullscreenHeight() - tabHeight() - 2*GAP);
+
 		String[] labels = { SILVER, GOLD, RUBY };
 		Group[] pages = { new DonateTab(1), new DonateTab(2), new DonateTab(3) };
 
@@ -73,11 +68,9 @@ public class WndDonate extends WndTabbed {
 			add(pages[i]);
 
 			Tab tab = new RankingTab(this, labels[i], pages[i]);
-			tab.setSize(TAB_WIDTH, tabHeight());
+			tab.setSize(width/pages.length, tabHeight());
 			add(tab);
 		}
-
-		resize(WIDTH,HEIGHT);
 
 		select(1);
 	}
@@ -89,7 +82,7 @@ public class WndDonate extends WndTabbed {
 
 			IconTitle tabTitle = new IconTitle(Icons.get(icons[level - 1]),
 					title[level - 1]);
-			tabTitle.setRect(0, 0, WIDTH, 0);
+			tabTitle.setRect(0, 0, width, 0);
 			add(tabTitle);
 
 			float pos = tabTitle.bottom();
@@ -114,13 +107,14 @@ public class WndDonate extends WndTabbed {
 				if( price == null) {
 					donate.enable(false);
 				}
-				
-				add(donate.setRect(WIDTH - BTN_WIDTH ,HEIGHT - BTN_HEIGHT, BTN_WIDTH, BTN_HEIGHT));
+
+				final int BTN_HEIGHT = 20;
+				add(donate.setRect(0 ,height - BTN_HEIGHT, width, BTN_HEIGHT));
 			}
 
 			Text commonText = PixelScene.createMultiline(
 					Game.getVar(R.string.WndDonate_commonDonateText), GuiProperties.regularFontSize());
-			commonText.maxWidth(WIDTH);
+			commonText.maxWidth(width);
 			commonText.measure();
 			commonText.setPos(0, pos);
 			add(commonText);
@@ -128,7 +122,7 @@ public class WndDonate extends WndTabbed {
 			
 			Text tabText = PixelScene.createMultiline(
 					text[level - 1], GuiProperties.regularFontSize());
-			tabText.maxWidth(WIDTH - 10);
+			tabText.maxWidth(width - 10);
 			tabText.hardlight( Window.TITLE_COLOR );
 			tabText.measure();
 			tabText.setPos(0, pos);
@@ -138,7 +132,7 @@ public class WndDonate extends WndTabbed {
 			
 			Text tabText2 = PixelScene.createMultiline(
 					text2[level - 1], GuiProperties.regularFontSize());
-			tabText2.maxWidth(WIDTH - 10);
+			tabText2.maxWidth(width - 10);
 			tabText2.measure();
 			tabText2.setPos(0, pos);
 			add(tabText2);
