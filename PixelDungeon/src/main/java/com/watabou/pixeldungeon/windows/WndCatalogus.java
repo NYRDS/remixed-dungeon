@@ -19,11 +19,11 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -39,17 +39,9 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 import java.util.ArrayList;
 
 public class WndCatalogus extends WndTabbed {
-	
-	private static final int WIDTH_P	= 112;
-	private static final int HEIGHT_P	= 160;
-	
-	private static final int WIDTH_L	= 128;
-	private static final int HEIGHT_L	= 128;
-	
+
 	private static final int ITEM_HEIGHT	= 18;
-	
-	private static final int TAB_WIDTH		= 50;
-	
+
 	private static final String TXT_POTIONS	= Game.getVar(R.string.WndCatalogus_Potions);
 	private static final String TXT_SCROLLS	= Game.getVar(R.string.WndCatalogus_Scrolls);
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndCatalogus_Title);
@@ -64,12 +56,8 @@ public class WndCatalogus extends WndTabbed {
 	public WndCatalogus() {
 		
 		super();
-		
-		if (PixelDungeon.landscape()) {
-			resize( WIDTH_L, HEIGHT_L );
-		} else {
-			resize( WIDTH_P, HEIGHT_P );
-		}
+
+		resize(Math.min(WndHelper.getFullscreenWidth(),120), WndHelper.getFullscreenHeight()  - tabHeight() - MARGIN);
 		
 		txtTitle = PixelScene.createText( TXT_TITLE, GuiProperties.titleFontSize() );
 		txtTitle.hardlight( Window.TITLE_COLOR );
@@ -108,7 +96,7 @@ public class WndCatalogus extends WndTabbed {
 			}
 		};
 		for (Tab tab : tabs) {
-			tab.setSize( TAB_WIDTH, tabHeight() );
+			tab.setSize( width/tabs.length, tabHeight() );
 			add( tab );
 		}
 		
