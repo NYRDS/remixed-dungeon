@@ -25,9 +25,7 @@ import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndInfoPlant extends Window {
-	
-	private static final float GAP	= 2;
-	
+
 	private static final int WIDTH = 120;
 	
 	public WndInfoPlant( Plant plant ) {

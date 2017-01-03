@@ -27,9 +27,10 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import static com.watabou.pixeldungeon.ui.Window.GAP;
+
 public class IconTitle extends Component {
 
-	private static final float GAP = 2;
 
 	protected Image imIcon;
 	protected Text tfLabel;

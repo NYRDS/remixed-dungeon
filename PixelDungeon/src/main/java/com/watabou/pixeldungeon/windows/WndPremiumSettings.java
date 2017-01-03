@@ -23,7 +23,6 @@ public class WndPremiumSettings extends Window {
 		
 	private static final int WIDTH      = 112;
 	private static final int BTN_HEIGHT = 20;
-	private static final int GAP        = 2;
 
 	private int curBottom = 0;
 

@@ -27,7 +27,6 @@ import java.util.Map;
 public class WndModSelect extends Window implements DownloadStateListener {
 
 	private static final int WIDTH         = 120;
-	private static final int MARGIN        = 2;
 	private static final int BUTTON_HEIGHT = 20;
 
 	private Text downloadProgress;
@@ -40,12 +39,12 @@ public class WndModSelect extends Window implements DownloadStateListener {
 	public WndModSelect() {
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.x = tfTitle.y = MARGIN;
-		tfTitle.maxWidth(WIDTH - MARGIN * 2);
+		tfTitle.x = tfTitle.y = GAP;
+		tfTitle.maxWidth(WIDTH - GAP * 2);
 		tfTitle.measure();
 		add(tfTitle);
 
-		float pos = tfTitle.y + tfTitle.height() + MARGIN;
+		float pos = tfTitle.y + tfTitle.height() + GAP;
 
 		int index = 0;
 		for (Map.Entry<String, Mods.ModDesc> entry : modsList.entrySet()) {
@@ -59,8 +58,8 @@ public class WndModSelect extends Window implements DownloadStateListener {
 						onDelete(desc.name);
 					}
 				};
-				deleteBtn.setPos(WIDTH - deleteBtn.width() - MARGIN, pos);
-				additionalMargin = deleteBtn.width() + MARGIN;
+				deleteBtn.setPos(WIDTH - deleteBtn.width() - GAP, pos);
+				additionalMargin = deleteBtn.width() + GAP;
 				add(deleteBtn);
 			}
 
@@ -79,10 +78,10 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 			};
 
-			btn.setRect(MARGIN, pos, WIDTH - MARGIN * 2 - additionalMargin, BUTTON_HEIGHT);
+			btn.setRect(GAP, pos, WIDTH - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
 			add(btn);
 
-			pos += BUTTON_HEIGHT + MARGIN;
+			pos += BUTTON_HEIGHT + GAP;
 
 
 			index = index + 1;

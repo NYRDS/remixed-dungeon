@@ -24,10 +24,9 @@ import java.util.ArrayList;
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
-	private static final int    WIDTH         = 120;
-	private static final int    MARGIN        = 2;
-	private static final int    BUTTON_HEIGHT = 20;
-	private static final int    BUTTON_WIDTH  = 58;
+	private static final int WIDTH         = 120;
+	private static final int BUTTON_HEIGHT = 20;
+	private static final int BUTTON_WIDTH  = 58;
 
 	private static final String EMPTY_STRING = "";
 
@@ -39,19 +38,19 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.x = tfTitle.y = MARGIN;
-		tfTitle.maxWidth(WIDTH - MARGIN * 2);
+		tfTitle.x = tfTitle.y = GAP;
+		tfTitle.maxWidth(WIDTH - GAP * 2);
 		tfTitle.measure();
 		add(tfTitle);
 
 		Text tfMesage = PixelScene.createMultiline(windowText(), GuiProperties.regularFontSize());
-		tfMesage.maxWidth(WIDTH - MARGIN * 2);
+		tfMesage.maxWidth(WIDTH - GAP * 2);
 		tfMesage.measure();
-		tfMesage.x = MARGIN;
-		tfMesage.y = tfTitle.y + tfTitle.height() + MARGIN;
+		tfMesage.x = GAP;
+		tfMesage.y = tfTitle.y + tfTitle.height() + GAP;
 		add(tfMesage);
 
-		float pos = tfMesage.y + tfMesage.height() + MARGIN;
+		float pos = tfMesage.y + tfMesage.height() + GAP;
 
 		ArrayList<TextButton> buttons = new ArrayList<>();
 		for (int i = 0; i < options.length / 2 + 1; i++) {
@@ -62,7 +61,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				}
 
 				float additionalMargin = 0;
-				float x = MARGIN + j * (BUTTON_WIDTH + MARGIN);
+				float x = GAP + j * (BUTTON_WIDTH + GAP);
 
 				final RedButton btn = new RedButton(options[index]) {
 					@Override
@@ -92,15 +91,15 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 							GameScene.show(reallyDelete);
 						}
 					};
-					deleteBtn.setPos(x + BUTTON_WIDTH - deleteBtn.width() - MARGIN, pos);
-					additionalMargin = deleteBtn.width() + MARGIN;
+					deleteBtn.setPos(x + BUTTON_WIDTH - deleteBtn.width() - GAP, pos);
+					additionalMargin = deleteBtn.width() + GAP;
 					add(deleteBtn);
 				}
 
-				btn.setRect(x, pos, BUTTON_WIDTH - additionalMargin - MARGIN, BUTTON_HEIGHT);
+				btn.setRect(x, pos, BUTTON_WIDTH - additionalMargin - GAP, BUTTON_HEIGHT);
 				add(btn);
 			}
-			pos += BUTTON_HEIGHT + MARGIN;
+			pos += BUTTON_HEIGHT + GAP;
 		}
 
 		resize(WIDTH, (int) pos);

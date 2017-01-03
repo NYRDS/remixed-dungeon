@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndTitledMessage extends Window {
 
 	private static final int WIDTH	= 120;
-	private static final int GAP	= 2;
 
 	public WndTitledMessage( Image icon, String title, String message ) {
 		

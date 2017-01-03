@@ -34,7 +34,9 @@ import java.util.regex.Pattern;
 
 public class Window extends Group implements Signal.Listener<Key> {
 
-	public static final int GAP = 2;
+	public static final    int GAP       = 2;
+	protected static final int MARGIN    = 4;
+	protected static final int SMALL_GAP = 1;
 
 	protected int width;
 	protected int height;

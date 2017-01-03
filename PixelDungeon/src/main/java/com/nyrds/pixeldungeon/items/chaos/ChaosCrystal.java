@@ -62,7 +62,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 					cell = getCurUser().getPos();
 				}
 
-				ChaosCommon.doChaosMark(cell.intValue(), charge);
+				ChaosCommon.doChaosMark(cell, charge);
 				charge = 0;
 			}
 			getCurUser().spendAndNext(TIME_TO_USE);

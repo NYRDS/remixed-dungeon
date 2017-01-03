@@ -33,7 +33,6 @@ public class WndChallenges extends Window {
 
 	private static final int WIDTH		= 108;
 	private static final int BTN_HEIGHT	= 20;
-	private static final int GAP		= 2;
 	
 	private static final String TITLE   = Game.getVar(R.string.WndChallenges_Title);
 	

@@ -19,7 +19,6 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndModDescription extends Window {
 
 	private static final int WIDTH = 120;
-	private static final int GAP = 2;
 
 	private float yPos;
 	private String prevMod;
