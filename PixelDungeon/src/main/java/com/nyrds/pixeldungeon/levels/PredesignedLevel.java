@@ -38,6 +38,9 @@ public class PredesignedLevel extends CustomLevel {
 				set(i, map.getInt(i));
 			}
 
+			fillMapLayer("baseTileVar", baseTileVariant);
+			fillMapLayer("decoTileVar", decoTileVariant);
+
 			placeObjects();
 			
 			setupLinks();
@@ -49,6 +52,16 @@ public class PredesignedLevel extends CustomLevel {
 		cleanWalls();
 		createMobs();
 		createItems();
+	}
+
+	private void fillMapLayer(String layerName, int[] baseTileVariant) throws JSONException {
+		if(mLevelDesc.has(layerName)) {
+			JSONArray layer = mLevelDesc.getJSONArray(layerName);
+
+			for (int i = 0; i < layer.length(); i++) {
+				baseTileVariant[i]=layer.getInt(i);
+			}
+		}
 	}
 
 	private void placeObjects() throws JSONException {
