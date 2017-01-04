@@ -32,9 +32,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndInfoCell extends Window {
-	
-	private static final float GAP	= 2;
-	
+
 	private static final int WIDTH = 120;
 	
 	private static final String TXT_NOTHING	= Game.getVar(R.string.WndInfoCell_Nothing);

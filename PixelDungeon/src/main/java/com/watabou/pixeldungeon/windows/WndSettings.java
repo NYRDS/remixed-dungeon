@@ -65,10 +65,9 @@ public class WndSettings extends Window {
 	private static final String TXT_THIRD_QUICKSLOT = Game
 			.getVar(R.string.WndSettings_ThirdQuickslot);
 
-	private static final int WIDTH = 112;
+	private static final int WIDTH      = 112;
 	private static final int BTN_HEIGHT = 18;
-	private static final int GAP = 1;
-	
+
 	private static final String TXT_EXPEREMENTAL_FONT = Game
 			.getVar(R.string.WndSettings_ExperementalFont);
 	private static final String TXT_CLASSIC_FONT = Game
@@ -104,7 +103,7 @@ public class WndSettings extends Window {
 						PixelDungeon.immerse(checked());
 					}
 				};
-				btnImmersive.setRect(0, curY + GAP, WIDTH,
+				btnImmersive.setRect(0, curY + SMALL_GAP, WIDTH,
 						BTN_HEIGHT);
 				btnImmersive.checked(PixelDungeon.immersed());
 				btnImmersive.enable(android.os.Build.VERSION.SDK_INT >= 19);
@@ -112,9 +111,9 @@ public class WndSettings extends Window {
 				curY = btnImmersive.bottom();
 			}
 
-			curY = createTextScaleButtons(curY + GAP);
+			curY = createTextScaleButtons(curY + SMALL_GAP);
 		}
-		curY += GAP;
+		curY += SMALL_GAP;
 		
 		CheckBox btnMusic = new CheckBox(TXT_MUSIC) {
 			@Override
@@ -135,7 +134,7 @@ public class WndSettings extends Window {
 				Sample.INSTANCE.play(Assets.SND_CLICK);
 			}
 		};
-		btnSound.setRect(0, btnMusic.bottom() + GAP, WIDTH, BTN_HEIGHT);
+		btnSound.setRect(0, btnMusic.bottom() + SMALL_GAP, WIDTH, BTN_HEIGHT);
 		btnSound.checked(PixelDungeon.soundFx());
 		add(btnSound);
 
@@ -147,7 +146,7 @@ public class WndSettings extends Window {
 					PixelDungeon.landscape(!PixelDungeon.landscape());
 				}
 			};
-			btnOrientation.setRect(0, btnSound.bottom() + GAP, WIDTH,
+			btnOrientation.setRect(0, btnSound.bottom() + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
 			add(btnOrientation);
 			
@@ -158,7 +157,7 @@ public class WndSettings extends Window {
 					PixelDungeon.realtime(checked());
 				}
 			};
-			btnRealtime.setRect(0, btnOrientation.bottom() + GAP, WIDTH,
+			btnRealtime.setRect(0, btnOrientation.bottom() + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
 			btnRealtime.checked(PixelDungeon.realtime());
 			if(!PixelDungeon.isAlpha()) {
@@ -187,11 +186,11 @@ public class WndSettings extends Window {
 				}
 			};
 			
-			localeButton.setRect(0, btnRealtime.bottom() + GAP, WIDTH,
+			localeButton.setRect(0, btnRealtime.bottom() + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
 			add(localeButton);
 
-			float y = createFontSelector(localeButton.bottom() + GAP);
+			float y = createFontSelector(localeButton.bottom() + SMALL_GAP);
 			
 			resize(WIDTH, (int) y);
 		} else {
@@ -204,7 +203,7 @@ public class WndSettings extends Window {
 				}
 			};
 			btnBrightness
-					.setRect(0, btnSound.bottom() + GAP, WIDTH, BTN_HEIGHT);
+					.setRect(0, btnSound.bottom() + SMALL_GAP, WIDTH, BTN_HEIGHT);
 			btnBrightness.checked(PixelDungeon.brightness());
 			add(btnBrightness);
 
@@ -215,7 +214,7 @@ public class WndSettings extends Window {
 					PixelDungeon.secondQuickslot(checked());
 				}
 			};
-			secondQuickslot.setRect(0, btnBrightness.bottom() + GAP, WIDTH,
+			secondQuickslot.setRect(0, btnBrightness.bottom() + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
 			secondQuickslot.checked(PixelDungeon.secondQuickslot());
 
@@ -232,7 +231,7 @@ public class WndSettings extends Window {
 				};
 
 				secondQuickslot.enable(!PixelDungeon.thirdQuickslot());
-				thirdQuickslot.setRect(0, secondQuickslot.bottom() + GAP,
+				thirdQuickslot.setRect(0, secondQuickslot.bottom() + SMALL_GAP,
 						WIDTH, BTN_HEIGHT);
 				thirdQuickslot.checked(PixelDungeon.thirdQuickslot());
 				add(thirdQuickslot);

@@ -215,7 +215,7 @@ public class GameScene extends PixelScene {
 		}
 
 		if (buggedSave) {
-			EventCollector.logEvent("bug", "bugged save", "mob.pos==-1");
+			EventCollector.logEvent(EventCollector.BUG, "bugged save", "mob.pos==-1");
 		}
 
 		Dungeon.level.mobs = filteredMobs;

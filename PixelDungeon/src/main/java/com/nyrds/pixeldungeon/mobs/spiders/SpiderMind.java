@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -48,7 +50,7 @@ public class SpiderMind extends Mob {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public int attackProc( Char enemy, int damage ) {
+	public int attackProc(@NonNull Char enemy, int damage ) {
 		
 		if(enemy instanceof Hero) {
 			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);		

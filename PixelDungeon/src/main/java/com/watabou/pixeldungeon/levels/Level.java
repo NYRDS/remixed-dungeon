@@ -91,6 +91,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Level implements Bundlable {
 
@@ -210,11 +211,11 @@ public abstract class Level implements Bundlable {
 
 	public String levelId;
 
-	public  HashSet<Mob>                         mobs    = new HashSet<>();
-	public  HashMap<Class<? extends Blob>, Blob> blobs   = new HashMap<>();
-	public  SparseArray<Plant>                   plants  = new SparseArray<>();
-	private SparseArray<Heap>                    heaps   = new SparseArray<>();
-	public  SparseArray<LevelObject>             objects = new SparseArray<>();
+	public  HashSet<Mob>                     mobs    = new HashSet<>();
+	public  Map<Class<? extends Blob>, Blob> blobs   = new HashMap<>();
+	public  SparseArray<Plant>               plants  = new SparseArray<>();
+	private SparseArray<Heap>                heaps   = new SparseArray<>();
+	public  SparseArray<LevelObject>         objects = new SparseArray<>();
 
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -253,7 +254,7 @@ public abstract class Level implements Bundlable {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
 			if (heap.isEmpty()) {
-				EventCollector.logEvent("bug", "level", Utils.format("Empty heap at pos %d", pos));
+				EventCollector.logEvent(EventCollector.BUG, "level", Utils.format("Empty heap at pos %d", pos));
 				return null;
 			}
 			return heap;

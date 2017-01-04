@@ -21,15 +21,13 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.TomeOfMastery;
-import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -46,7 +44,6 @@ public class WndChooseWay extends Window {
 
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
-	private static final float GAP		= 2;
 
 	public WndChooseWay(final MasteryItem item, final HeroSubClass way){
 		super();

@@ -22,8 +22,6 @@ public class WndPremiumSettings extends Window {
 	private static final String STD    = Game.getVar(R.string.WndPremiumSettings_std);
 		
 	private static final int WIDTH      = 112;
-	private static final int BTN_HEIGHT = 20;
-	private static final int GAP        = 2;
 
 	private int curBottom = 0;
 
@@ -60,9 +58,9 @@ public class WndPremiumSettings extends Window {
 			}
 		};
 
-		btn.setRect(0, curBottom, WIDTH, BTN_HEIGHT);
+		btn.setRect(0, curBottom, WIDTH, BUTTON_HEIGHT);
 		add(btn);
-		curBottom += BTN_HEIGHT + GAP;
+		curBottom += BUTTON_HEIGHT + GAP;
 	}
 	
 	@Override

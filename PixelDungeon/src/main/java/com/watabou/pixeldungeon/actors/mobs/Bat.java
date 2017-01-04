@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -57,7 +59,7 @@ public class Bat extends Mob {
 	}
 	
 	@Override
-	public int attackProc( Char enemy, int damage ) {
+	public int attackProc(@NonNull Char enemy, int damage ) {
 		
 		int reg = Math.min( damage, ht() - hp() );
 		

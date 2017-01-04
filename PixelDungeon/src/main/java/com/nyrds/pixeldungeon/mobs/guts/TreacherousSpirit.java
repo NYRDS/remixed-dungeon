@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -25,7 +27,7 @@ public class TreacherousSpirit extends Mob {
     }
 
     @Override
-    public int attackProc( Char enemy, int damage ) {
+    public int attackProc(@NonNull Char enemy, int damage ) {
         //Summon proc
         if (Random.Int(4) == 1){
             int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());

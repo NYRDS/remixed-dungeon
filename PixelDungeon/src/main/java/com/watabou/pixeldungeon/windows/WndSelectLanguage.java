@@ -22,6 +22,7 @@ import android.net.Uri;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -33,23 +34,16 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndSelectLanguage extends Window {
 
-	private static final int WIDTH_P = 120;
-	private static final int WIDTH_L = 180;
-
-	private static final int MARGIN        = 2;
-	private static final int BUTTON_HEIGHT = 20;
-	private static final int BUTTON_WIDTH  = 58;
-
 	public WndSelectLanguage(String title, String... options) {
 		super();
 
-		int WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
+		int WIDTH = WndHelper.getFullscreenWidth();
 
-		int maxW = WIDTH - MARGIN * 2;
+		int maxW = WIDTH - GAP * 2;
 
 		Text tfTitle = PixelScene.createMultiline(title, GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.x = tfTitle.y = MARGIN;
+		tfTitle.x = tfTitle.y = GAP;
 		tfTitle.maxWidth(maxW);
 		tfTitle.measure();
 		add(tfTitle);
@@ -57,16 +51,16 @@ public class WndSelectLanguage extends Window {
 		Text pleaseHelpTranslate = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_ImproveTranslation), GuiProperties.titleFontSize());
 		pleaseHelpTranslate.maxWidth(maxW);
 		pleaseHelpTranslate.measure();
-		pleaseHelpTranslate.x = MARGIN;
-		pleaseHelpTranslate.y = tfTitle.y + tfTitle.height() + MARGIN;
+		pleaseHelpTranslate.x = GAP;
+		pleaseHelpTranslate.y = tfTitle.y + tfTitle.height() + GAP;
 		add(pleaseHelpTranslate);
 
 		Text translateLink = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
 		translateLink.hardlight(TITLE_COLOR);
 		translateLink.maxWidth(maxW);
 		translateLink.measure();
-		translateLink.x = MARGIN;
-		translateLink.y = pleaseHelpTranslate.y + pleaseHelpTranslate.height() + MARGIN;
+		translateLink.x = GAP;
+		translateLink.y = pleaseHelpTranslate.y + pleaseHelpTranslate.height() + GAP;
 		add(translateLink);
 
 		TouchArea area = new TouchArea(translateLink) {
@@ -79,9 +73,11 @@ public class WndSelectLanguage extends Window {
 		};
 		add(area);
 
-		float pos = translateLink.y + translateLink.height() + MARGIN;
+		float pos = translateLink.y + translateLink.height() + GAP;
 
 		final int columns = PixelDungeon.landscape() ? 3 : 2;
+
+		int BUTTON_WIDTH = WIDTH / columns - GAP;
 
 		for (int i = 0; i < options.length / columns + 1; i++) {
 			for (int j = 0; j < columns; j++) {
@@ -97,10 +93,10 @@ public class WndSelectLanguage extends Window {
 					}
 				};
 
-				btn.setRect(MARGIN + j * (BUTTON_WIDTH + MARGIN), pos, BUTTON_WIDTH, BUTTON_HEIGHT);
+				btn.setRect(GAP + j * (BUTTON_WIDTH + GAP), pos, BUTTON_WIDTH, BUTTON_HEIGHT);
 				add(btn);
 			}
-			pos += BUTTON_HEIGHT + MARGIN;
+			pos += BUTTON_HEIGHT + GAP;
 		}
 
 		resize(WIDTH, (int) pos);

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.input.Keys;
 import com.watabou.input.Keys.Key;
 import com.watabou.input.Touchscreen.Touch;
@@ -33,6 +34,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Window extends Group implements Signal.Listener<Key> {
+
+	public static final    int GAP           = 2;
+	protected static final int MARGIN        = 4;
+	protected static final int SMALL_GAP     = 1;
+	protected static final int BUTTON_HEIGHT = 20;
 
 	protected int width;
 	protected int height;
@@ -138,7 +144,11 @@ public class Window extends Group implements Signal.Listener<Key> {
 	
 	public void onMenuPressed() {
 	}
-	
+
+	protected void resizeLimited(int wLimit) {
+		resize(WndHelper.getLimitedWidth(wLimit),WndHelper.getFullscreenHeight());
+	}
+
 	protected static class Highlighter {
 		
 		private static final Pattern HIGHLIGHTER	= Pattern.compile( "_(.*?)_" );

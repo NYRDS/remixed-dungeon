@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.effects.Devour;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -36,7 +38,7 @@ public class YogsTeeth extends Boss {
 
 
     @Override
-    public int attackProc( Char enemy, int damage ) {
+    public int attackProc(@NonNull Char enemy, int damage ) {
         //Life drain proc
         if (Random.Int(3) == 1){
             CellEmitter.center(this.getPos()).start(Speck.factory(Speck.HEALING), 0.3f, 3);

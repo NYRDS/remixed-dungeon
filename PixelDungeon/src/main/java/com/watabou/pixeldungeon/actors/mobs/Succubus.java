@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -64,7 +66,7 @@ public class Succubus extends Mob {
 	}
 
 	@Override
-	public int attackProc(Char enemy, int damage) {
+	public int attackProc(@NonNull Char enemy, int damage) {
 
 		if (Random.Int(3) == 0) {
 			float duration = Charm.durationFactor(enemy) * Random.IntRange(2, 5);

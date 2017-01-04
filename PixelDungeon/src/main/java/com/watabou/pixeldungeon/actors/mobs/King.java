@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
@@ -119,7 +121,7 @@ public class King extends Boss {
 	}
 	
 	@Override
-	public boolean attack( Char enemy ) {
+	public boolean attack(@NonNull Char enemy ) {
 		if (canTryToSummon() && getPos() == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal )) {
 			summon();
 			return true;
@@ -237,7 +239,7 @@ public class King extends Boss {
 		}
 		
 		@Override
-		public int attackProc( Char enemy, int damage ) {
+		public int attackProc(@NonNull Char enemy, int damage ) {
 			if (Random.Int( MAX_ARMY_SIZE ) == 0) {
 				Buff.prolong( enemy, Paralysis.class, 1 );
 			}

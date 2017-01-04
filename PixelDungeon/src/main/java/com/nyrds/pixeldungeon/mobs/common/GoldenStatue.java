@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -94,7 +96,7 @@ public class GoldenStatue extends Mob {
 	}
 
 	@Override
-	public int attackProc( Char enemy, int damage ) {
+	public int attackProc(@NonNull Char enemy, int damage ) {
 
 		if (Random.Int( 10 ) == 1) {
 			Buff.affect( enemy, Burning.class ).reignite( enemy );

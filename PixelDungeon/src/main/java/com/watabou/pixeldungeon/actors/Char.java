@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -147,7 +149,7 @@ public abstract class Char extends Actor {
 						hungerAttached = true;
 					} else {
 						if (!hungerBugSend) {
-							EventCollector.logEvent("bug", "hunger count");
+							EventCollector.logEvent(EventCollector.BUG, "hunger count");
 							hungerBugSend = true;
 							continue;
 						}
@@ -176,7 +178,7 @@ public abstract class Char extends Actor {
 		defenceVerb = getClassParam("Defense", null, false);
 	}
 
-	public boolean attack(Char enemy) {
+	public boolean attack(@NonNull Char enemy) {
 
 		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
 
@@ -278,7 +280,7 @@ public abstract class Char extends Actor {
 		return 1;
 	}
 
-	public int attackProc(Char enemy, int damage) {
+	public int attackProc(@NonNull Char enemy, int damage) {
 		return damage;
 	}
 
