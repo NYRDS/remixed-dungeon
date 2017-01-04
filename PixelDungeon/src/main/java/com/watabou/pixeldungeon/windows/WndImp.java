@@ -40,7 +40,6 @@ public class WndImp extends Window {
 
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
-	private static final float GAP		= 2;
 
 	public WndImp( final Imp imp, final DwarfToken tokens ) {
 		

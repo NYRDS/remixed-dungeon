@@ -126,10 +126,8 @@ public class Weightstone extends Item {
 		private final String TXT_ACCURACY = Game.getVar(R.string.Weightstone_WndAccuracy);
 		private final String TXT_CANCEL   = Game.getVar(R.string.Weightstone_WndCancel);
 		
-		private static final int WIDTH			= 120;
-		private static final int MARGIN 		= 2;
-		private static final int BUTTON_WIDTH	= WIDTH - MARGIN * 2;
-		private static final int BUTTON_HEIGHT	= 20;
+		private static final int WIDTH         = 120;
+		private static final int BUTTON_WIDTH  = WIDTH - GAP * 2;
 		
 		public WndBalance( final Weapon weapon ) {
 			super();
@@ -139,10 +137,10 @@ public class Weightstone extends Item {
 			add( titlebar );
 			
 			Text tfMesage = PixelScene.createMultiline( Utils.format( TXT_CHOICE, weapon.name() ), GuiProperties.regularFontSize());
-			tfMesage.maxWidth(WIDTH - MARGIN * 2);
+			tfMesage.maxWidth(WIDTH - GAP * 2);
 			tfMesage.measure();
-			tfMesage.x = MARGIN;
-			tfMesage.y = titlebar.bottom() + MARGIN;
+			tfMesage.x = GAP;
+			tfMesage.y = titlebar.bottom() + GAP;
 			add( tfMesage );
 			
 			float pos = tfMesage.y + tfMesage.height();
@@ -155,7 +153,7 @@ public class Weightstone extends Item {
 						Weightstone.this.apply( weapon, true );
 					}
 				};
-				btnSpeed.setRect( MARGIN, pos + MARGIN, BUTTON_WIDTH, BUTTON_HEIGHT );
+				btnSpeed.setRect(GAP, pos + GAP, BUTTON_WIDTH, BUTTON_HEIGHT );
 				add( btnSpeed );
 				
 				pos = btnSpeed.bottom();
@@ -169,7 +167,7 @@ public class Weightstone extends Item {
 						Weightstone.this.apply( weapon, false );
 					}
 				};
-				btnAccuracy.setRect( MARGIN, pos + MARGIN, BUTTON_WIDTH, BUTTON_HEIGHT );
+				btnAccuracy.setRect(GAP, pos + GAP, BUTTON_WIDTH, BUTTON_HEIGHT );
 				add( btnAccuracy );
 				
 				pos = btnAccuracy.bottom();
@@ -181,10 +179,10 @@ public class Weightstone extends Item {
 					hide();
 				}
 			};
-			btnCancel.setRect( MARGIN, pos + MARGIN, BUTTON_WIDTH, BUTTON_HEIGHT );
+			btnCancel.setRect(GAP, pos + GAP, BUTTON_WIDTH, BUTTON_HEIGHT );
 			add( btnCancel );
 			
-			resize( WIDTH, (int)btnCancel.bottom() + MARGIN );
+			resize( WIDTH, (int)btnCancel.bottom() + GAP);
 		}
 		
 		protected void onSelect( int index ) {}

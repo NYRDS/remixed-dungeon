@@ -39,7 +39,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class WndBlacksmith extends Window {
 
 	private static final int BTN_SIZE	= 36;
-	private static final float GAP		= 2;
 	private static final float BTN_GAP	= 10;
 	private static final int WIDTH		= 116;
 	
@@ -97,7 +96,7 @@ public class WndBlacksmith extends Window {
 			}
 		};
 		btnReforge.enable( false );
-		btnReforge.setRect( 0, btnItem1.bottom() + BTN_GAP, WIDTH, 20 );
+		btnReforge.setRect( 0, btnItem1.bottom() + BTN_GAP, WIDTH, BUTTON_HEIGHT);
 		add( btnReforge );
 		
 		

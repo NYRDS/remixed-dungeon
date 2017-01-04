@@ -19,9 +19,8 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndHatInfo extends Window {
 
-	private static final int WIDTH = 110;
-	private static final int HEIGHT = 160;
-	private static final int MARGIN = 2;
+	private static final int WIDTH         = 110;
+	private static final int HEIGHT        = 160;
 	private static final int BUTTON_HEIGHT = 16;
 
 	public WndHatInfo(final String accessory, String price, final Window parent ) {
@@ -32,10 +31,10 @@ public class WndHatInfo extends Window {
 		// Title
 		Text tfTitle = PixelScene.createMultiline(item.name(), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.maxWidth(WIDTH - MARGIN);
+		tfTitle.maxWidth(WIDTH - GAP);
 		tfTitle.measure();
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
-		tfTitle.y = MARGIN;
+		tfTitle.y = GAP;
 		add(tfTitle);
 
 		//Pricetag
@@ -43,15 +42,15 @@ public class WndHatInfo extends Window {
 		priceTag.text(price);
 
 		priceTag.hardlight(0xFFFF00);
-		priceTag.maxWidth(WIDTH - MARGIN);
+		priceTag.maxWidth(WIDTH - GAP);
 		priceTag.measure();
 		priceTag.x = (WIDTH - priceTag.width()) / 2;
-		priceTag.y = tfTitle.bottom() + MARGIN;
+		priceTag.y = tfTitle.bottom() + GAP;
 		add(priceTag);
 
 		//Preview Image
 		Image preview = (new HeroSpriteDef(Dungeon.hero, item)).avatar();
-		preview.setPos(WIDTH / 2 - preview.width(), priceTag.bottom() + MARGIN);
+		preview.setPos(WIDTH / 2 - preview.width(), priceTag.bottom() + GAP);
 		preview.setScale(2, 2);
 		add(preview);
 
@@ -62,8 +61,8 @@ public class WndHatInfo extends Window {
 
 		info.hardlight(0xFFFFFF);
 
-		info.y = preview.bottom() + MARGIN;
-		info.maxWidth(WIDTH - MARGIN);
+		info.y = preview.bottom() + GAP;
+		info.maxWidth(WIDTH - GAP);
 		info.measure();
 		info.x = (WIDTH - info.width()) / 2 ;
 
@@ -112,11 +111,11 @@ public class WndHatInfo extends Window {
 			rb.enable(false);
 		}
 
-		rb.setRect(WIDTH / 4, info.bottom() + MARGIN, WIDTH / 2, BUTTON_HEIGHT);
+		rb.setRect(WIDTH / 4, info.bottom() + GAP, WIDTH / 2, BUTTON_HEIGHT);
 		add(rb);
 
 		//Resizing window
-		int h = Math.min(HEIGHT - MARGIN, (int) rb.bottom());
+		int h = Math.min(HEIGHT - GAP, (int) rb.bottom());
 		resize( WIDTH,  h);
 	}
 }

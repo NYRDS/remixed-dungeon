@@ -19,13 +19,13 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -34,13 +34,7 @@ import com.watabou.pixeldungeon.ui.Window;
 import java.util.Collections;
 
 public class WndJournal extends Window {
-	
-	private static final int WIDTH_P	= 112;
-	private static final int HEIGHT_P	= 160;
-	
-	private static final int WIDTH_L	= 128;
-	private static final int HEIGHT_L	= 128;
-	
+
 	private static final int ITEM_HEIGHT	= 18;
 	
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
@@ -48,23 +42,14 @@ public class WndJournal extends Window {
 	public WndJournal() {
 		
 		super();
-		
-		int WIDTH, HEIGHT;
-		
-		if(PixelDungeon.landscape()){
-			WIDTH = WIDTH_L;
-			HEIGHT = HEIGHT_L;
-		} else {
-			WIDTH = WIDTH_P;
-			HEIGHT = HEIGHT_P;
-		}
-		
-		resize( WIDTH, HEIGHT );
+
+		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - MARGIN);
+
 
 		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		txtTitle.measure();
-		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (WIDTH - txtTitle.width()) / 2 );
+		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (width - txtTitle.width()) / 2 );
 		add(txtTitle);
 		
 		Component content = new Component();
@@ -74,18 +59,18 @@ public class WndJournal extends Window {
 		float pos = 0;
 		for (Journal.Record rec : Journal.records) {
 			ListItem item = new ListItem( rec.feature, rec.depth );
-			item.setRect( 0, pos, WIDTH, ITEM_HEIGHT );
+			item.setRect( 0, pos, width, ITEM_HEIGHT );
 			content.add( item );
 			
 			pos += item.height();
 		}
 		
-		content.setSize( WIDTH, pos );
+		content.setSize( width, pos );
 
 		ScrollPane list = new ScrollPane(content);
 		add(list);
 		
-		list.setRect(0, txtTitle.height(), WIDTH, HEIGHT - txtTitle.height());
+		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 	}
 	
 	private static class ListItem extends Component {

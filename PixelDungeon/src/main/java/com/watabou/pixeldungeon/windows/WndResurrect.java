@@ -40,8 +40,7 @@ public class WndResurrect extends Window {
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
-	private static final float GAP		= 2;
-	
+
 	public static WndResurrect instance;
 	public static Object causeOfDeath;
 

@@ -28,8 +28,7 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndBadge extends Window {
 	
 	private static final int WIDTH = 120;
-	private static final int MARGIN = 4;
-	
+
 	public WndBadge( Badges.Badge badge ) {
 		
 		super();

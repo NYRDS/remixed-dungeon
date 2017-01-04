@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import android.opengl.GLES20;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
@@ -78,6 +79,8 @@ public class PixelScene extends Scene {
 
 			defaultZoom-=0.01;
 		}
+
+		WndHelper.update(Game.width() / defaultZoom, Game.height() / defaultZoom);
 
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;

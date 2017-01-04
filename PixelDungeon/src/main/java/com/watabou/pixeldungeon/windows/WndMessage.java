@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndMessage extends Window {
 	
 	private static final int WIDTH = 120;
-	private static final int MARGIN = 4;
 	
 	public WndMessage( String text ) {
 		

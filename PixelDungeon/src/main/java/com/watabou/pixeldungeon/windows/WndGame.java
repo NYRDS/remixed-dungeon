@@ -45,8 +45,6 @@ public class WndGame extends Window {
 			.getVar(R.string.WndGame_Return);
 
 	private static final int WIDTH = 120;
-	private static final int BTN_HEIGHT = 20;
-	private static final int GAP = 2;
 
 	private int pos;
 
@@ -146,7 +144,7 @@ public class WndGame extends Window {
 
 	private void addButton(RedButton btn) {
 		add(btn);
-		btn.setRect(0, pos > 0 ? pos += GAP : 0, WIDTH, BTN_HEIGHT);
-		pos += BTN_HEIGHT;
+		btn.setRect(0, pos > 0 ? pos += GAP : 0, WIDTH, BUTTON_HEIGHT);
+		pos += BUTTON_HEIGHT;
 	}
 }

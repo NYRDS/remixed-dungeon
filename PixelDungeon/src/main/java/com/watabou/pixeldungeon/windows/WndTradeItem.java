@@ -38,8 +38,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndTradeItem extends Window {
-	
-	private static final float GAP		= 2;
+
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 	

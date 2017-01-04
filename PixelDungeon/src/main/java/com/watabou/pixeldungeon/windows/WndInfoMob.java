@@ -46,7 +46,6 @@ public class WndInfoMob extends WndTitledMessage {
 		private static final int COLOR_LVL	= 0xFF00EE00;
 		
 		private static final int BAR_HEIGHT	= 2;
-		private static final int GAP	= 2;
 		
 		private CharSprite image;
 		private Text name;

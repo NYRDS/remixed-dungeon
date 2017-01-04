@@ -22,7 +22,6 @@ public class WndSadGhostNecro extends Window {
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
-	private static final float GAP		= 2;
 
 	private boolean persuade;
 	
