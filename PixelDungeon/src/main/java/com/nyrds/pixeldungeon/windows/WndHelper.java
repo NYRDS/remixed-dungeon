@@ -21,4 +21,8 @@ public class WndHelper {
 	public static int getFullscreenHeight() {
 		return (int) (maxHeight - 14);
 	}
+
+	public static int getLimitedWidth(int limit) {
+		return Math.min(getFullscreenWidth(),limit);
+	}
 }

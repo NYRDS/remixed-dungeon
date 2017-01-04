@@ -57,7 +57,7 @@ public class WndCatalogus extends WndTabbed {
 		
 		super();
 
-		resize(Math.min(WndHelper.getFullscreenWidth(),120), WndHelper.getFullscreenHeight()  - tabHeight() - MARGIN);
+		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight()  - tabHeight() - MARGIN);
 		
 		txtTitle = PixelScene.createText( TXT_TITLE, GuiProperties.titleFontSize() );
 		txtTitle.hardlight( Window.TITLE_COLOR );
