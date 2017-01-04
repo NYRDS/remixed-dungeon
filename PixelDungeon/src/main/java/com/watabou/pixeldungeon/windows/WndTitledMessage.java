@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -25,8 +26,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndTitledMessage extends Window {
-
-	private static final int WIDTH	= 120;
 
 	public WndTitledMessage( Image icon, String title, String message ) {
 		
@@ -36,8 +35,10 @@ public class WndTitledMessage extends Window {
 	public WndTitledMessage( Component titlebar, String message ) {
 		
 		super();
-		
-		titlebar.setRect( 0, 0, WIDTH, 0 );
+
+		resize(WndHelper.getLimitedWidth(120),WndHelper.getFullscreenHeight());
+
+		titlebar.setRect( 0, 0, width, 0 );
 		add( titlebar );
 		
 		Highlighter hl = new Highlighter( message );
@@ -47,7 +48,7 @@ public class WndTitledMessage extends Window {
 			normal.mask = hl.inverted();
 		}
 		
-		normal.maxWidth(WIDTH);
+		normal.maxWidth(width);
 		normal.measure();
 		normal.x = titlebar.left();
 		normal.y = titlebar.bottom() + GAP;
@@ -66,6 +67,6 @@ public class WndTitledMessage extends Window {
 			highlighted.hardlight(TITLE_COLOR);
 		}
 		
-		resize( WIDTH, (int)(normal.y + normal.height()) );
+		resize( width, (int)(normal.y + normal.height()) );
 	}
 }
