@@ -71,6 +71,15 @@ public class Terrain {
 	public static final int WATER_TILES = 48;
 	public static final int WATER = 63;
 
+	public static int[] SECRET_TRAPS = {SECRET_FIRE_TRAP,
+										SECRET_PARALYTIC_TRAP,
+										SECRET_TOXIC_TRAP,
+										SECRET_POISON_TRAP,
+										SECRET_ALARM_TRAP,
+										SECRET_LIGHTNING_TRAP,
+										SECRET_GRIPPING_TRAP,
+										SECRET_SUMMONING_TRAP};
+
 	public static int discover(int terr) {
 		switch (terr) {
 			case SECRET_DOOR:

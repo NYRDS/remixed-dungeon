@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.levels.Terrain;
 
 import org.json.JSONArray;
@@ -34,8 +33,8 @@ public class XTilemapConfiguration {
 				int value;
 				try {
 					value = f.getInt(null);
-				} catch (IllegalAccessException | IllegalArgumentException e) {
-					throw new TrackedRuntimeException(e);
+				} catch (IllegalAccessException | IllegalArgumentException ignored) {
+					continue;
 				}
 				String name = f.getName();
 
@@ -56,28 +55,45 @@ public class XTilemapConfiguration {
 			String key = (String)keys.next();
 			if(terrainMapping.containsKey(key)) {
 				int terrain = terrainMapping.get(key);
-				TileDesc tileDesc = new TileDesc();
-
-				JSONObject desc = terrainDesc.getJSONObject(key);
-				JSONArray baseDesc = desc.getJSONArray("base");
-
-				tileDesc.baseTiles = new ArrayList<>();
-				toIntArray(tileDesc.baseTiles, baseDesc);
-
-				JSONArray decoDesc = desc.getJSONArray("deco");
-
-				tileDesc.decoTiles = new ArrayList<>();
-				toIntArray(tileDesc.decoTiles, decoDesc);
-
-				ret.tilemapConfiguration.put(terrain,tileDesc);
+				ret.tilemapConfiguration.put(terrain,createTileDescFromKey(terrainDesc, key));
 			}
 		}
 
+		for(int secretTrap: Terrain.SECRET_TRAPS) {
+			ret.tilemapConfiguration.put(secretTrap,createTileDescFromKey(terrainDesc, "SECRET_TRAP"));
+		}
+
+		TileDesc waterTileDesc = createTileDescFromKey(terrainDesc, "WATER_TILES");
+		for(int waterBorder = Terrain.WATER_TILES;waterBorder<Terrain.WATER;++waterBorder) {
+			TileDesc borderPieceDesc = new TileDesc();
+			borderPieceDesc.baseTiles = (ArrayList<Integer>) waterTileDesc.baseTiles.clone();
+			borderPieceDesc.decoTiles = (ArrayList<Integer>) waterTileDesc.decoTiles.clone();
+			for(int i = 0;i< waterTileDesc.baseTiles.size();++i) {
+				borderPieceDesc.baseTiles.set(i, borderPieceDesc.baseTiles.get(i) + waterBorder - Terrain.WATER_TILES);
+			}
+			ret.tilemapConfiguration.put(waterBorder, borderPieceDesc);
+		}
 
 		return ret;
 	}
 
-	private static void toIntArray(ArrayList outArray, JSONArray intArray) throws JSONException {
+	private static TileDesc createTileDescFromKey(JSONObject terrainDesc, String key) throws JSONException {
+		TileDesc tileDesc = new TileDesc();
+
+		JSONObject desc = terrainDesc.getJSONObject(key);
+		JSONArray baseDesc = desc.getJSONArray("base");
+
+		tileDesc.baseTiles = new ArrayList<>();
+		toIntArray(tileDesc.baseTiles, baseDesc);
+
+		JSONArray decoDesc = desc.getJSONArray("deco");
+
+		tileDesc.decoTiles = new ArrayList<>();
+		toIntArray(tileDesc.decoTiles, decoDesc);
+		return  tileDesc;
+	}
+
+	private static void toIntArray(ArrayList<Integer> outArray, JSONArray intArray) throws JSONException {
 		for(int i = 0;i<intArray.length();++i) {
 			outArray.add(intArray.getInt(i));
 		}

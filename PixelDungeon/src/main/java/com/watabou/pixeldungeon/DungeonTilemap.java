@@ -26,7 +26,6 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.noosa.tweeners.AlphaTweener;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -75,94 +74,8 @@ public class DungeonTilemap extends Tilemap {
 		return instance.mGroundLayer != null && instance.mDecoLayer != null;
 	}
 
-	private static int chooseVariant(int variant, int min, int max) {
-
-		if(variant>=min && variant<=max) {
-			return variant;
-		}
-
-		int rnd = Math.abs((((variant ^ 0xAAAAAAAA) * 1103515245 + 12345) / 65536) % 32767);
-		double r = (double) rnd / 32767;
-
-		return min + (int) (r * (max - min + 1));
-	}
-
 	private static int currentDecoCell(int cell) {
 		return xTilemapConfiguration.decoTile(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
-	}
-
-	private static int decoCell(int tileType, int variation) {
-		switch (tileType) {
-			case Terrain.GRASS:
-				return 3 * 16 + chooseVariant(variation, 0, 2);
-			case Terrain.HIGH_GRASS:
-				return 3 * 16 + chooseVariant(variation, 6, 8);
-
-			case Terrain.PEDESTAL:
-				return 8 * 16 + 0;
-			case Terrain.STATUE:
-			case Terrain.STATUE_SP:
-				return 8 * 16 + 1;
-
-			case Terrain.DOOR:
-				return 5 * 16 + 0;
-			case Terrain.OPEN_DOOR:
-				return 5 * 16 + 1;
-
-			case Terrain.LOCKED_DOOR:
-				return 5 * 16 + 2;
-
-			case Terrain.LOCKED_EXIT:
-				return 5 * 16 + 3;
-			case Terrain.UNLOCKED_EXIT:
-				return 5 * 16 + 4;
-
-			case Terrain.ENTRANCE:
-				return 5 * 16 + 5;
-
-			case Terrain.EXIT:
-				return 5 * 16 + 6;
-
-			case Terrain.BARRICADE:
-				return 7 * 16 + chooseVariant(variation, 3, 5);
-
-			case Terrain.BOOKSHELF:
-				return 7 * 16 + chooseVariant(variation, 0, 2);
-
-			case Terrain.EMBERS:
-				return 6 * 16 + chooseVariant(variation, 0, 2);
-
-			case Terrain.EMPTY_DECO:
-				return 9 * 16 + chooseVariant(variation, 0, 2);
-
-			case Terrain.WALL_DECO:
-				return 10 * 16 + chooseVariant(variation, 0, 2);
-
-			case Terrain.TOXIC_TRAP:
-				return 12 * 16 + 0;
-			case Terrain.FIRE_TRAP:
-				return 12 * 16 + 1;
-			case Terrain.PARALYTIC_TRAP:
-				return 12 * 16 + 2;
-			case Terrain.INACTIVE_TRAP:
-				return 12 * 16 + 7;
-			case Terrain.POISON_TRAP:
-				return 12 * 16 + 3;
-			case Terrain.ALARM_TRAP:
-				return 12 * 16 + 4;
-			case Terrain.LIGHTNING_TRAP:
-				return 12 * 16 + 5;
-			case Terrain.GRIPPING_TRAP:
-				return 12 * 16 + 8;
-			case Terrain.SUMMONING_TRAP:
-				return 12 * 16 + 6;
-
-			case Terrain.SIGN:
-				return 7 * 16 + 6;
-
-			default:
-				return 15;
-		}
 	}
 
 	private int[] buildDecoMap() {
@@ -175,82 +88,6 @@ public class DungeonTilemap extends Tilemap {
 
 	private static int currentGroundCell(int cell) {
 		return xTilemapConfiguration.baseTile(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
-	}
-
-	private static int groundCell(int tileType, int cell) {
-		if (tileType >= Terrain.WATER_TILES) {
-			return (13 + chooseVariant(cell, 0, 2)) * 16 + tileType - Terrain.WATER_TILES;
-		}
-
-		switch (tileType) {
-			case Terrain.EMPTY:
-			case Terrain.GRASS:
-			case Terrain.EMPTY_DECO:
-			case Terrain.SECRET_ALARM_TRAP:
-			case Terrain.SECRET_FIRE_TRAP:
-			case Terrain.SECRET_GRIPPING_TRAP:
-			case Terrain.SECRET_LIGHTNING_TRAP:
-			case Terrain.SECRET_PARALYTIC_TRAP:
-			case Terrain.SECRET_POISON_TRAP:
-			case Terrain.SECRET_SUMMONING_TRAP:
-			case Terrain.SECRET_TOXIC_TRAP:
-			case Terrain.INACTIVE_TRAP:
-			case Terrain.ALARM_TRAP:
-			case Terrain.FIRE_TRAP:
-			case Terrain.GRIPPING_TRAP:
-			case Terrain.LIGHTNING_TRAP:
-			case Terrain.PARALYTIC_TRAP:
-			case Terrain.POISON_TRAP:
-			case Terrain.SUMMONING_TRAP:
-			case Terrain.TOXIC_TRAP:
-			case Terrain.ENTRANCE:
-			case Terrain.EXIT:
-			case Terrain.EMBERS:
-			case Terrain.PEDESTAL:
-			case Terrain.BARRICADE:
-			case Terrain.HIGH_GRASS:
-			case Terrain.SIGN:
-			case Terrain.STATUE:
-			case Terrain.BOOKSHELF:
-				return chooseVariant(cell, 0, 2);
-
-			case Terrain.WALL:
-			case Terrain.WALL_DECO:
-			case Terrain.DOOR:
-			case Terrain.OPEN_DOOR:
-			case Terrain.LOCKED_DOOR:
-			case Terrain.LOCKED_EXIT:
-			case Terrain.UNLOCKED_EXIT:
-			case Terrain.SECRET_DOOR:
-				return 16 + chooseVariant(cell, 0, 2);
-
-			case Terrain.ALCHEMY:
-				return 4 * 16 + chooseVariant(cell, 6, 8);
-
-			case Terrain.EMPTY_WELL:
-				return 4 * 16 + chooseVariant(cell, 0, 2);
-
-			case Terrain.WELL:
-				return 4 * 16 + chooseVariant(cell, 3, 5);
-
-			case Terrain.EMPTY_SP:
-			case Terrain.STATUE_SP:
-				return 2 * 16 + chooseVariant(cell, 0, 2);
-
-			case Terrain.CHASM_FLOOR:
-				return 11 * 16 + 0;
-			case Terrain.CHASM_FLOOR_SP:
-				return 11 * 16 + 1;
-			case Terrain.CHASM_WALL:
-				return 11 * 16 + 2;
-			case Terrain.CHASM_WATER:
-				return 11 * 16 + 3;
-			case Terrain.CHASM:
-				return 11 * 16 + 4;
-
-			default:
-				return 15;
-		}
 	}
 
 	private int[] buildGroundMap() {
@@ -329,8 +166,8 @@ public class DungeonTilemap extends Tilemap {
 		} else {
 			if (useExTiles()) {
 				return createTileImage(
-						xTilemapConfiguration.baseTile(tileType, cell),
-						xTilemapConfiguration.decoTile(tileType, cell));
+						xTilemapConfiguration.baseTile(tileType, Dungeon.level.tileVariant[cell]),
+						xTilemapConfiguration.decoTile(tileType, Dungeon.level.tileVariant[cell]));
 			}
 
 			CompositeImage img = new CompositeImage(instance.getTexture());
