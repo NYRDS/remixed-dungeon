@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.RectF;
 
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -28,6 +30,8 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
+import org.json.JSONException;
+
 public class DungeonTilemap extends Tilemap {
 
 	public static final int SIZE = 16;
@@ -36,6 +40,8 @@ public class DungeonTilemap extends Tilemap {
 
 	private Tilemap mGroundLayer;
 	private Tilemap mDecoLayer;
+
+	private static XTilemapConfiguration xTilemapConfiguration;
 
 	private int[] mGroundMap;
 	private int[] mDecoMap;
@@ -49,6 +55,12 @@ public class DungeonTilemap extends Tilemap {
 		int mSize = Dungeon.level.getWidth() * Dungeon.level.getHeight();
 
 		if (getTileset().size() == 16 * 16) {
+			try {
+				xTilemapConfiguration = XTilemapConfiguration.readConfig("tilemapDesc/tiles_x_default.json");
+			} catch (JSONException e) {
+				throw new TrackedRuntimeException(e);
+			}
+
 			mGroundLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
 			mGroundMap = new int[mSize];
 			mGroundLayer.map(buildGroundMap(), levelWidth);
@@ -76,7 +88,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentDecoCell(int cell) {
-		return decoCell(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
+		return xTilemapConfiguration.decoTile(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
 	}
 
 	private static int decoCell(int tileType, int variation) {
@@ -162,7 +174,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentGroundCell(int cell) {
-		return groundCell(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
+		return xTilemapConfiguration.baseTile(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
 	}
 
 	private static int groundCell(int tileType, int cell) {
@@ -316,7 +328,9 @@ public class DungeonTilemap extends Tilemap {
 			return img;
 		} else {
 			if (useExTiles()) {
-				return createTileImage(groundCell(tileType, cell), decoCell(tileType, cell));
+				return createTileImage(
+						xTilemapConfiguration.baseTile(tileType, cell),
+						xTilemapConfiguration.decoTile(tileType, cell));
 			}
 
 			CompositeImage img = new CompositeImage(instance.getTexture());
