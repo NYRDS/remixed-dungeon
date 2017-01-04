@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.android.util.JsonHelper;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -64,7 +65,7 @@ public class XTilemapConfiguration {
 		}
 
 		TileDesc waterTileDesc = createTileDescFromKey(terrainDesc, "WATER_TILES");
-		for(int waterBorder = Terrain.WATER_TILES;waterBorder<Terrain.WATER;++waterBorder) {
+		for(int waterBorder = Terrain.WATER_TILES;waterBorder<=Terrain.WATER;++waterBorder) {
 			TileDesc borderPieceDesc = new TileDesc();
 			borderPieceDesc.baseTiles = (ArrayList<Integer>) waterTileDesc.baseTiles.clone();
 			borderPieceDesc.decoTiles = (ArrayList<Integer>) waterTileDesc.decoTiles.clone();
@@ -72,6 +73,12 @@ public class XTilemapConfiguration {
 				borderPieceDesc.baseTiles.set(i, borderPieceDesc.baseTiles.get(i) + waterBorder - Terrain.WATER_TILES);
 			}
 			ret.tilemapConfiguration.put(waterBorder, borderPieceDesc);
+		}
+
+		for(int i = 0;i<=63;i++) {
+			if(!ret.tilemapConfiguration.containsKey(i)) {
+				GLog.w("Fuck! %d is missing",i);
+			}
 		}
 
 		return ret;
@@ -106,17 +113,11 @@ public class XTilemapConfiguration {
 
 	public int baseTile(int terrain, int variant) {
 		TileDesc desc = tilemapConfiguration.get(terrain);
-		if(desc!=null) {
-			return desc.baseTiles.get(variant % desc.baseTiles.size());
-		}
-		return 15;
+		return desc.baseTiles.get(variant % desc.baseTiles.size());
 	}
 
 	public int decoTile(int terrain, int variant) {
 		TileDesc desc = tilemapConfiguration.get(terrain);
-		if(desc != null) {
-			return desc.decoTiles.get(variant % desc.decoTiles.size());
-		}
-		return 15;
+		return desc.decoTiles.get(variant % desc.decoTiles.size());
 	}
 }

@@ -179,7 +179,8 @@ public abstract class Level implements Bundlable {
 			.getVar(R.string.Level_HiddenPlate);
 
 	public int[]     map;
-	public int[]     tileVariant; // deco only layer
+	public int[]     baseTileVariant;
+	public int[]     decoTileVariant;
 	public boolean[] visited;
 	public boolean[] mapped;
 
@@ -223,8 +224,9 @@ public abstract class Level implements Bundlable {
 	protected static boolean pitRoomNeeded    = false;
 	protected static boolean weakFloorCreated = false;
 
-	private static final String MAP            = "map";
-	private static final String TILE_VARIANT   = "tile_variant";
+	private static final String MAP               = "map";
+	private static final String TILE_VARIANT_BASE = "tile_variant_base";
+	private static final String TILE_VARIANT_DECO = "tile_variant_deco";
 
 	private static final String VISITED        = "visited";
 	private static final String MAPPED         = "mapped";
@@ -281,7 +283,7 @@ public abstract class Level implements Bundlable {
 
 	protected void initSizeDependentStuff() {
 
-		Dungeon.initSizeDependentStuff(getWidth(),getHeight());
+		Dungeon.initSizeDependentStuff(getWidth(), getHeight());
 		NEIGHBOURS4 = new int[]{-getWidth(), +1, +getWidth(), -1};
 		NEIGHBOURS8 = new int[]{+1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
@@ -292,7 +294,8 @@ public abstract class Level implements Bundlable {
 
 		map = new int[getLength()];
 
-		tileVariant = new int[getLength()];
+		baseTileVariant = new int[getLength()];
+		decoTileVariant = new int[getLength()];
 		initTilesVariations();
 
 		visited = new boolean[getLength()];
@@ -415,9 +418,11 @@ public abstract class Level implements Bundlable {
 		initSizeDependentStuff();
 
 		map = bundle.getIntArray(MAP);
-		tileVariant = bundle.getIntArray(TILE_VARIANT);
-		if(tileVariant==null) {
-			tileVariant = new int[map.length];
+		baseTileVariant = bundle.getIntArray(TILE_VARIANT_BASE);
+		decoTileVariant = bundle.getIntArray(TILE_VARIANT_DECO);
+		if (baseTileVariant == null) {
+			baseTileVariant = new int[map.length];
+			decoTileVariant = new int[map.length];
 			initTilesVariations();
 		}
 
@@ -482,7 +487,8 @@ public abstract class Level implements Bundlable {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(MAP, map);
-		bundle.put(TILE_VARIANT, tileVariant);
+		bundle.put(TILE_VARIANT_BASE, baseTileVariant);
+		bundle.put(TILE_VARIANT_DECO, decoTileVariant);
 		bundle.put(VISITED, visited);
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
@@ -582,14 +588,14 @@ public abstract class Level implements Bundlable {
 
 	public void spawnMob(Mob mob, float delay) {
 		mobs.add(mob);
-		if(GameScene.isSceneReady()) {
+		if (GameScene.isSceneReady()) {
 			mob.updateSprite();
 		}
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 
-		if(GameScene.isSceneReady()) {
-			if(mob.isPet() || fieldOfView[mob.getPos()] ) {
+		if (GameScene.isSceneReady()) {
+			if (mob.isPet() || fieldOfView[mob.getPos()]) {
 				mobPress(mob);
 			}
 		}
@@ -954,7 +960,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean objectPress(int cell, LevelObject levelObject) {
-		if(map[cell] == Terrain.CHASM || pit[cell]) {
+		if (map[cell] == Terrain.CHASM || pit[cell]) {
 			levelObject.fall();
 			return false;
 		}
@@ -965,7 +971,7 @@ public abstract class Level implements Bundlable {
 
 	public void itemPress(int cell, Presser presser) {
 
-		if(presser.affectLevelObjects()) {
+		if (presser.affectLevelObjects()) {
 			LevelObject levelObject = objects.get(cell);
 			if (levelObject != null) {
 
@@ -1477,8 +1483,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected void initTilesVariations() {
-		for (int i = 0;i<tileVariant.length;++i) {
-			tileVariant[i] = Random.Int(0,Integer.MAX_VALUE);
+		for (int i = 0; i < map.length; ++i) {
+			baseTileVariant[i] = Random.Int(0, Integer.MAX_VALUE);
+			decoTileVariant[i] = Random.Int(0, Integer.MAX_VALUE);
 		}
 	}
 }

@@ -288,7 +288,7 @@ public class PrisonBossLevel extends RegularLevel {
 			int pos;
 			do {
 				pos = roomEntrance.random(this);
-			} while (pos == entrance || map[pos] == Terrain.SIGN);
+			} while (pos == entrance);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}

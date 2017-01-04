@@ -75,7 +75,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentDecoCell(int cell) {
-		return xTilemapConfiguration.decoTile(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
+		return xTilemapConfiguration.decoTile(Dungeon.level.map[cell], Dungeon.level.decoTileVariant[cell]);
 	}
 
 	private int[] buildDecoMap() {
@@ -87,7 +87,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentGroundCell(int cell) {
-		return xTilemapConfiguration.baseTile(Dungeon.level.map[cell], Dungeon.level.tileVariant[cell]);
+		return xTilemapConfiguration.baseTile(Dungeon.level.map[cell], Dungeon.level.baseTileVariant[cell]);
 	}
 
 	private int[] buildGroundMap() {
@@ -166,8 +166,8 @@ public class DungeonTilemap extends Tilemap {
 		} else {
 			if (useExTiles()) {
 				return createTileImage(
-						xTilemapConfiguration.baseTile(tileType, Dungeon.level.tileVariant[cell]),
-						xTilemapConfiguration.decoTile(tileType, Dungeon.level.tileVariant[cell]));
+						xTilemapConfiguration.baseTile(tileType, Dungeon.level.baseTileVariant[cell]),
+						xTilemapConfiguration.decoTile(tileType, Dungeon.level.decoTileVariant[cell]));
 			}
 
 			CompositeImage img = new CompositeImage(instance.getTexture());

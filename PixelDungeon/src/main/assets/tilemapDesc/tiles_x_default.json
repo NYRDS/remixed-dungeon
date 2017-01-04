@@ -31,7 +31,7 @@
    "DOOR":{"base":[16,17,18],"deco":[80]},
    "OPEN_DOOR":{"base":[16,17,18],"deco":[81]},
    "LOCKED_DOOR":{"base":[16,17,18],"deco":[82]},
-   "WALL_DECO":{"base":[16,17,18],"deco":[161,162,163]},
+   "WALL_DECO":{"base":[16,17,18],"deco":[160,161,162]},
    "LOCKED_EXIT":{"base":[16,17,18],"deco":[83]},
    "UNLOCKED_EXIT":{"base":[16,17,18],"deco":[84]},      
    "SECRET_DOOR":{"base":[16,17,18],"deco":[15]},
@@ -45,5 +45,7 @@
    "CHASM_WALL":{"base":[178],"deco":[15]},
    "CHASM_WATER":{"base":[179],"deco":[15]},
 
-   "WATER_TILES":{"base":[208,224,240],"deco":[15]}
+   "WATER_TILES":{"base":[208,224,240],"deco":[15]},
+   
+   "SIGN":{"base":[0,1,2],"deco":[15],"deprecated":true}
 }

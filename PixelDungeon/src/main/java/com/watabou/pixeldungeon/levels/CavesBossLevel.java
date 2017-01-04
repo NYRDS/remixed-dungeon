@@ -198,7 +198,7 @@ public class CavesBossLevel extends Level {
 			int pos;
 			do {
 				pos = Random.IntRange( _RoomLeft(), _RoomRight() ) + Random.IntRange( _RoomTop() + 1, _RoomBottom() ) * getWidth();
-			} while (pos == entrance || map[pos] == Terrain.SIGN);
+			} while (pos == entrance);
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}

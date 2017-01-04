@@ -234,7 +234,7 @@ public class WandMaker extends NPC {
 				do {
 					int cell = room.random(level);
 					npc.setPos(cell);
-				} while (level.map[npc.getPos()] == Terrain.ENTRANCE || level.map[npc.getPos()] == Terrain.SIGN);
+				} while (level.map[npc.getPos()] == Terrain.ENTRANCE);
 				level.mobs.add( npc );
 				Actor.occupyCell( npc );
 				
