@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -36,7 +35,7 @@ public class WndTitledMessage extends Window {
 		
 		super();
 
-		resize(WndHelper.getLimitedWidth(120),WndHelper.getFullscreenHeight());
+		resizeLimited(120);
 
 		titlebar.setRect( 0, 0, width, 0 );
 		add( titlebar );

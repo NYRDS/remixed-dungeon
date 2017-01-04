@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.input.Keys;
 import com.watabou.input.Keys.Key;
 import com.watabou.input.Touchscreen.Touch;
@@ -143,7 +144,11 @@ public class Window extends Group implements Signal.Listener<Key> {
 	
 	public void onMenuPressed() {
 	}
-	
+
+	protected void resizeLimited(int wLimit) {
+		resize(WndHelper.getLimitedWidth(wLimit),WndHelper.getFullscreenHeight());
+	}
+
 	protected static class Highlighter {
 		
 		private static final Pattern HIGHLIGHTER	= Pattern.compile( "_(.*?)_" );

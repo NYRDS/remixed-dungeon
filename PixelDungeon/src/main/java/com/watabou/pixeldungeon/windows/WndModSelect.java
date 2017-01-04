@@ -26,8 +26,6 @@ import java.util.Map;
 
 public class WndModSelect extends Window implements DownloadStateListener {
 
-	private static final int WIDTH         = 120;
-
 	private Text downloadProgress;
 
 	private String selectedMod;
@@ -36,10 +34,14 @@ public class WndModSelect extends Window implements DownloadStateListener {
 	private Map<String, Mods.ModDesc> modsList = Mods.buildModsList();
 
 	public WndModSelect() {
+		super();
+
+		resizeLimited(120);
+
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = GAP;
-		tfTitle.maxWidth(WIDTH - GAP * 2);
+		tfTitle.maxWidth(width - GAP * 2);
 		tfTitle.measure();
 		add(tfTitle);
 
@@ -57,7 +59,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 						onDelete(desc.name);
 					}
 				};
-				deleteBtn.setPos(WIDTH - deleteBtn.width() - GAP, pos);
+				deleteBtn.setPos(width - deleteBtn.width() - GAP, pos);
 				additionalMargin = deleteBtn.width() + GAP;
 				add(deleteBtn);
 			}
@@ -77,7 +79,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 			};
 
-			btn.setRect(GAP, pos, WIDTH - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
+			btn.setRect(GAP, pos, width - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
 			add(btn);
 
 			pos += BUTTON_HEIGHT + SMALL_GAP;
@@ -86,7 +88,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			index = index + 1;
 		}
 
-		resize(WIDTH, (int) pos);
+		resize(width, (int) pos);
 	}
 
 	private void onDelete(String name) {
@@ -148,7 +150,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			public void run() {
 				if (downloadProgress == null) {
 					downloadProgress = GameScene.createMultiline(GuiProperties.regularFontSize());
-					downloadProgress.maxWidth(WIDTH);
+					downloadProgress.maxWidth(width);
 					downloadProgress.setPos(0, 0);
 					Game.scene().add(downloadProgress);
 				}

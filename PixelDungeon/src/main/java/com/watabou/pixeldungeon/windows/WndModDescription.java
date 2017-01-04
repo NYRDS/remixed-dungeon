@@ -18,14 +18,14 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndModDescription extends Window {
 
-	private static final int WIDTH = 120;
-
 	private float yPos;
 	private String prevMod;
 
 	public WndModDescription(final String option, final String prevMod) {
 
 		super();
+		resizeLimited(120);
+
 		this.prevMod = prevMod;
 
 		PixelDungeon.activeMod(option);
@@ -36,14 +36,14 @@ public class WndModDescription extends Window {
 		
 		if (!option.equals(ModdingMode.REMIXED)) {
 			Text title = PixelScene.createMultiline(GuiProperties.titleFontSize());
-			title.maxWidth(WIDTH);
+			title.maxWidth(width);
 			title.text(Game.getVar(R.string.Mod_Name) + "\n ");
 			title.hardlight(Window.TITLE_COLOR);
 
 			place(title);
 
 			Text author = PixelScene.createMultiline(GuiProperties.regularFontSize());
-			author.maxWidth(WIDTH);
+			author.maxWidth(width);
 			author.text(Game.getVar(R.string.Mods_CreatedBy) + "\n" + Game.getVar(R.string.Mod_Author) + "\n ");
 
 			place(author);
@@ -51,7 +51,7 @@ public class WndModDescription extends Window {
 			final String siteUrl = Game.getVar(R.string.Mod_Link);
 			if (siteUrl.length() > 0) {
 				Text site = PixelScene.createMultiline(GuiProperties.regularFontSize());
-				site.maxWidth(WIDTH);
+				site.maxWidth(width);
 				site.text(Game.getVar(R.string.Mods_AuthorSite) + "\n" + siteUrl + "\n ");
 				place(site);
 
@@ -70,7 +70,7 @@ public class WndModDescription extends Window {
 
 			if (emailUri.length() > 0) {
 				Text email = PixelScene.createMultiline(GuiProperties.regularFontSize());
-				email.maxWidth(WIDTH);
+				email.maxWidth(width);
 				email.text(Game.getVar(R.string.Mods_AuthorEmail) + emailUri + "\n ");
 				place(email);
 
@@ -89,7 +89,7 @@ public class WndModDescription extends Window {
 			}
 
 			Text description = PixelScene.createMultiline(GuiProperties.regularFontSize());
-			description.maxWidth(WIDTH);
+			description.maxWidth(width);
 			description.text(Game.getVar(R.string.Mod_Description) + "\n ");
 			place(description);
 		}
@@ -102,14 +102,14 @@ public class WndModDescription extends Window {
 			}
 		};
 		
-		btn.setSize( Math.min( WIDTH, btn.reqWidth() ), 16 );
-		btn.setPos(WIDTH / 2 - btn.width() / 2, yPos);
+		btn.setSize( Math.min( width, btn.reqWidth() ), 16 );
+		btn.setPos(width / 2 - btn.width() / 2, yPos);
 		
 		add(btn);
 
 		yPos += btn.height();
 
-		resize(WIDTH, (int) (yPos + GAP));
+		resize(width, (int) (yPos + GAP));
 	}
 
 	private static void switchSaves(String option, String prevMod) {
