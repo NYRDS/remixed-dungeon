@@ -63,7 +63,7 @@ public class Mods {
 		Mods.ModDesc Remixed = new Mods.ModDesc();
 		Remixed.name = ModdingMode.REMIXED;
 		Remixed.needUpdate = false;
-		Remixed.installed = false;
+		Remixed.installed = true;
 		modsList.put(ModdingMode.REMIXED, Remixed);
 
 		return modsList;
