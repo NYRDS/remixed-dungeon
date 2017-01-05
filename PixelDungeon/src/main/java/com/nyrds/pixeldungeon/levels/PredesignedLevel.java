@@ -14,6 +14,8 @@ import org.json.JSONObject;
 
 public class PredesignedLevel extends CustomLevel {
 
+	private boolean useCustomTiles;
+
 	//for restoreFromBundle
 	public PredesignedLevel() {
 		super();
@@ -40,6 +42,8 @@ public class PredesignedLevel extends CustomLevel {
 
 			fillMapLayer("baseTileVar", baseTileVariant);
 			fillMapLayer("decoTileVar", decoTileVariant);
+
+			useCustomTiles = mLevelDesc.optBoolean("customTiles",false);
 
 			placeObjects();
 			
@@ -167,5 +171,10 @@ public class PredesignedLevel extends CustomLevel {
 
 	@Override
 	public void discoverOnHeroDie() {
+	}
+
+	@Override
+	public boolean customTiles() {
+		return useCustomTiles;
 	}
 }

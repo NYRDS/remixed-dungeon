@@ -1489,4 +1489,8 @@ public abstract class Level implements Bundlable {
 			decoTileVariant[i] = Random.Int(0, Integer.MAX_VALUE);
 		}
 	}
+
+	public boolean customTiles() {
+		return false;
+	}
 }

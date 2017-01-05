@@ -75,7 +75,11 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentDecoCell(int cell) {
-		return xTilemapConfiguration.decoTile(Dungeon.level.map[cell], Dungeon.level.decoTileVariant[cell]);
+		if(!Dungeon.level.customTiles()) {
+			return xTilemapConfiguration.decoTile(Dungeon.level.map[cell], Dungeon.level.decoTileVariant[cell]);
+		} else {
+			return Dungeon.level.decoTileVariant[cell];
+		}
 	}
 
 	private int[] buildDecoMap() {
@@ -87,7 +91,11 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentGroundCell(int cell) {
-		return xTilemapConfiguration.baseTile(Dungeon.level.map[cell], Dungeon.level.baseTileVariant[cell]);
+		if(!Dungeon.level.customTiles()){
+			return xTilemapConfiguration.baseTile(Dungeon.level.map[cell], Dungeon.level.baseTileVariant[cell]);
+		} else {
+			return Dungeon.level.baseTileVariant[cell];
+		}
 	}
 
 	private int[] buildGroundMap() {
@@ -165,9 +173,13 @@ public class DungeonTilemap extends Tilemap {
 			return img;
 		} else {
 			if (useExTiles()) {
-				return createTileImage(
-						xTilemapConfiguration.baseTile(tileType, Dungeon.level.baseTileVariant[cell]),
-						xTilemapConfiguration.decoTile(tileType, Dungeon.level.decoTileVariant[cell]));
+				if(!Dungeon.level.customTiles()) {
+					return createTileImage(
+							xTilemapConfiguration.baseTile(tileType, Dungeon.level.baseTileVariant[cell]),
+							xTilemapConfiguration.decoTile(tileType, Dungeon.level.decoTileVariant[cell]));
+				} else {
+					return createTileImage(Dungeon.level.baseTileVariant[cell], Dungeon.level.decoTileVariant[cell]);
+				}
 			}
 
 			CompositeImage img = new CompositeImage(instance.getTexture());
