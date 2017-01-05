@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.RectF;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
 import com.watabou.noosa.CompositeImage;
@@ -55,7 +56,11 @@ public class DungeonTilemap extends Tilemap {
 
 		if (getTileset().size() == 16 * 16) {
 			try {
-				xTilemapConfiguration = XTilemapConfiguration.readConfig("tilemapDesc/tiles_x_default.json");
+				String tilemapConfig = "tilemapDesc/"+tiles.replace(".png",".json");
+				if(!ModdingMode.isResourceExist(tilemapConfig)) {
+					tilemapConfig = "tilemapDesc/tiles_x_default.json";
+				}
+				xTilemapConfiguration = XTilemapConfiguration.readConfig(tilemapConfig);
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException(e);
 			}
