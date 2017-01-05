@@ -33,10 +33,14 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 	private Map<String, Mods.ModDesc> modsList = Mods.buildModsList();
 
+	private boolean haveInternet;
+
 	public WndModSelect() {
 		super();
 
 		resizeLimited(120);
+
+		haveInternet = Util.isConnectedToInternet();
 
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
@@ -47,13 +51,11 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 		float pos = tfTitle.y + tfTitle.height() + GAP;
 
-		int index = 0;
 		for (Map.Entry<String, Mods.ModDesc> entry : modsList.entrySet()) {
 			final Mods.ModDesc desc = entry.getValue();
 			float additionalMargin = 0;
 
 			if (desc.installed) {
-
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
 						onDelete(desc.name);
@@ -65,27 +67,26 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			}
 
 			String option = desc.name;
-			if(desc.needUpdate) {
+			if (desc.needUpdate && haveInternet) {
 				option = "Update " + option;
 			}
 
-			RedButton btn = new RedButton(option) {
+			if (desc.installed || haveInternet) {
+				RedButton btn = new RedButton(option) {
 
-				@Override
-				protected void onClick() {
-					hide();
-					onSelect(desc.name);
-				}
+					@Override
+					protected void onClick() {
+						hide();
+						onSelect(desc.name);
+					}
 
-			};
+				};
 
-			btn.setRect(GAP, pos, width - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
-			add(btn);
+				btn.setRect(GAP, pos, width - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
+				add(btn);
 
-			pos += BUTTON_HEIGHT + SMALL_GAP;
-
-
-			index = index + 1;
+				pos += BUTTON_HEIGHT + SMALL_GAP;
+			}
 		}
 
 		resize(width, (int) pos);
@@ -99,7 +100,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			FileSystem.deleteRecursive(modDir);
 		}
 
-		if(PixelDungeon.activeMod().equals(name)) {
+		if (PixelDungeon.activeMod().equals(name)) {
 			SaveUtils.deleteGameAllClasses();
 			SaveUtils.copyAllClassesFromSlot(ModdingMode.REMIXED);
 			PixelDungeon.activeMod(ModdingMode.REMIXED);
@@ -115,12 +116,8 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 		Mods.ModDesc desc = modsList.get(option);
 		if (!option.equals(ModdingMode.REMIXED) || desc.needUpdate) {
-			if (!Util.isConnectedToInternet()) {
-				PixelDungeon.scene().add(new WndError("Please enable Internet access to download or update mods"));
-				return;
-			}
 
-			if(desc.needUpdate) {
+			if (desc.needUpdate) {
 				FileSystem.deleteRecursive(FileSystem.getExternalStorageFile(desc.name));
 				selectedMod = desc.name;
 				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
@@ -139,7 +136,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 		if (getParent() != null) {
 			hide();
 		}
-		Game.scene().add(new WndModDescription(option,prevMod));
+		Game.scene().add(new WndModDescription(option, prevMod));
 	}
 
 	@Override
@@ -206,7 +203,6 @@ public class WndModSelect extends Window implements DownloadStateListener {
 					}
 				} else {
 					Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
-
 				}
 			}
 		});
