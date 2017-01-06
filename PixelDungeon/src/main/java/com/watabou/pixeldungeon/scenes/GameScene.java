@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -97,6 +99,8 @@ public class GameScene extends PixelScene {
 
 	private SkinnedBlock   water;
 	private DungeonTilemap tiles;
+
+	@Nullable
 	private FogOfWar       fog;
 
 	private static CellSelector cellSelector;
@@ -239,9 +243,11 @@ public class GameScene extends PixelScene {
 			addBlobSprite(blob);
 		}
 
-		fog = new FogOfWar(level.getWidth(), level.getHeight());
-		fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
-		add(fog);
+		if(!Dungeon.level.noFogOfWar()) {
+			fog = new FogOfWar(level.getWidth(), level.getHeight());
+			fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+			add(fog);
+		}
 
 		brightness(PixelDungeon.brightness());
 
@@ -343,6 +349,7 @@ public class GameScene extends PixelScene {
 
 		Camera.main.target = Dungeon.hero.getHeroSprite();
 		fadeIn();
+
 		Dungeon.observe();
 	}
 
@@ -598,7 +605,9 @@ public class GameScene extends PixelScene {
 
 	public static void afterObserve() {
 		if (scene != null && scene.sceneCreated) {
-			scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+			if(scene.fog!=null) {
+				scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+			}
 
 			for (Mob mob : Dungeon.level.mobs) {
 				mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);

@@ -224,6 +224,17 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
+	private static boolean getLevelProperty(String id, String property, boolean defaultValue) {
+
+		try {
+			JSONObject levelDesc = mLevels.getJSONObject(id);
+			return levelDesc.optBoolean(property, defaultValue);
+		} catch (JSONException e) {
+			EventCollector.logException(e);
+		}
+		return defaultValue;
+	}
+
 	@Nullable
 	public static String tiles(String id) {
 		return getLevelProperty(id, "tiles");
@@ -240,6 +251,10 @@ public class DungeonGenerator {
 
 	public static float waterSy(String id, float defaultValue) {
 		return getLevelProperty(id, "waterSy", defaultValue);
+	}
+
+	public static boolean noFogOfWar(String id) {
+		return getLevelProperty(id, "noFogOfWar", false);
 	}
 
 	@Nullable

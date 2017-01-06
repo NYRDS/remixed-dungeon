@@ -148,7 +148,7 @@ public abstract class Level implements Bundlable {
 		this.feeling = feeling;
 	}
 
-	public void discoverOnHeroDie() {
+	public void discover() {
 		int length = getLength();
 
 		for (int i = 0; i < length; i++) {
@@ -161,6 +161,10 @@ public abstract class Level implements Bundlable {
 			}
 		}
 		GameScene.updateMap();
+	}
+
+	public boolean noFogOfWar() {
+		return DungeonGenerator.noFogOfWar(levelId);
 	}
 
 	public enum Feeling {

@@ -170,7 +170,7 @@ public class PredesignedLevel extends CustomLevel {
 	}
 
 	@Override
-	public void discoverOnHeroDie() {
+	public void discover() {
 	}
 
 	@Override
