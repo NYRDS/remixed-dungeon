@@ -114,15 +114,20 @@ public class XTilemapConfiguration {
 
 	public int baseTile(Level level, int cell) {
 		if(level.customTiles()) {
-			return level.baseTileVariant[cell];
+			if(level.baseTileVariant[cell]>=0) {
+				return level.baseTileVariant[cell];
+			}
 		}
+
 		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
 		return desc.baseTiles.get(cell % desc.baseTiles.size());
 	}
 
 	public int decoTile(Level level, int cell) {
 		if(level.customTiles()) {
-			return level.decoTileVariant[cell];
+			if(level.decoTileVariant[cell]>=0) {
+				return level.decoTileVariant[cell];
+			}
 		}
 
 		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
