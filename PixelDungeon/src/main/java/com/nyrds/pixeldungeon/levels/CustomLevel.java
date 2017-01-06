@@ -21,7 +21,7 @@ public abstract class CustomLevel extends CommonLevel {
 	@Nullable
 	protected String     mDescFile;
 
-	private final String descFileKey = "descFile";
+	private final String DESC_FILE = "descFile";
 
 	protected void readDescFile(String descFile) {
 		mLevelDesc = JsonHelper.readJsonFromAsset(descFile);
@@ -51,15 +51,15 @@ public abstract class CustomLevel extends CommonLevel {
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		if(mDescFile!=null) {
-			bundle.put(descFileKey, mDescFile);
+			bundle.put(DESC_FILE, mDescFile);
 		}
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		if(bundle.contains(descFileKey)) {
-			mDescFile = bundle.getString(descFileKey);
+		if(bundle.contains(DESC_FILE)) {
+			mDescFile = bundle.getString(DESC_FILE);
 			readDescFile(mDescFile);
 		}
 	}

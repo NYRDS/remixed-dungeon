@@ -425,6 +425,7 @@ public abstract class Level implements Bundlable {
 		map = bundle.getIntArray(MAP);
 		baseTileVariant = bundle.getIntArray(TILE_VARIANT_BASE);
 		decoTileVariant = bundle.getIntArray(TILE_VARIANT_DECO);
+
 		if (baseTileVariant == null) {
 			baseTileVariant = new int[map.length];
 			decoTileVariant = new int[map.length];
@@ -492,8 +493,10 @@ public abstract class Level implements Bundlable {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(MAP, map);
+
 		bundle.put(TILE_VARIANT_BASE, baseTileVariant);
 		bundle.put(TILE_VARIANT_DECO, decoTileVariant);
+
 		bundle.put(VISITED, visited);
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
