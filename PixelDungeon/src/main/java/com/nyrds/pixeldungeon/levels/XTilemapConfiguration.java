@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.android.util.JsonHelper;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -111,13 +112,25 @@ public class XTilemapConfiguration {
 		ArrayList<Integer> decoTiles;
 	}
 
-	public int baseTile(int terrain, int variant) {
-		TileDesc desc = tilemapConfiguration.get(terrain);
-		return desc.baseTiles.get(variant % desc.baseTiles.size());
+	public int baseTile(Level level, int cell) {
+		if(level.customTiles()) {
+			if(level.baseTileVariant[cell]>=0) {
+				return level.baseTileVariant[cell];
+			}
+		}
+
+		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
+		return desc.baseTiles.get(cell % desc.baseTiles.size());
 	}
 
-	public int decoTile(int terrain, int variant) {
-		TileDesc desc = tilemapConfiguration.get(terrain);
-		return desc.decoTiles.get(variant % desc.decoTiles.size());
+	public int decoTile(Level level, int cell) {
+		if(level.customTiles()) {
+			if(level.decoTileVariant[cell]>=0) {
+				return level.decoTileVariant[cell];
+			}
+		}
+
+		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
+		return desc.decoTiles.get(cell % desc.decoTiles.size());
 	}
 }

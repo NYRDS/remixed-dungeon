@@ -56,8 +56,8 @@ public class DungeonTilemap extends Tilemap {
 
 		if (getTileset().size() == 16 * 16) {
 			try {
-				String tilemapConfig = "tilemapDesc/"+tiles.replace(".png",".json");
-				if(!ModdingMode.isResourceExist(tilemapConfig)) {
+				String tilemapConfig = "tilemapDesc/" + tiles.replace(".png", ".json");
+				if (!ModdingMode.isResourceExist(tilemapConfig)) {
 					tilemapConfig = "tilemapDesc/tiles_x_default.json";
 				}
 				xTilemapConfiguration = XTilemapConfiguration.readConfig(tilemapConfig);
@@ -80,11 +80,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentDecoCell(int cell) {
-		if(!Dungeon.level.customTiles()) {
-			return xTilemapConfiguration.decoTile(Dungeon.level.map[cell], Dungeon.level.decoTileVariant[cell]);
-		} else {
-			return Dungeon.level.decoTileVariant[cell];
-		}
+		return xTilemapConfiguration.decoTile(Dungeon.level, cell);
 	}
 
 	private int[] buildDecoMap() {
@@ -96,11 +92,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	private static int currentGroundCell(int cell) {
-		if(!Dungeon.level.customTiles()){
-			return xTilemapConfiguration.baseTile(Dungeon.level.map[cell], Dungeon.level.baseTileVariant[cell]);
-		} else {
-			return Dungeon.level.baseTileVariant[cell];
-		}
+		return xTilemapConfiguration.baseTile(Dungeon.level, cell);
 	}
 
 	private int[] buildGroundMap() {
@@ -178,13 +170,9 @@ public class DungeonTilemap extends Tilemap {
 			return img;
 		} else {
 			if (useExTiles()) {
-				if(!Dungeon.level.customTiles()) {
-					return createTileImage(
-							xTilemapConfiguration.baseTile(tileType, Dungeon.level.baseTileVariant[cell]),
-							xTilemapConfiguration.decoTile(tileType, Dungeon.level.decoTileVariant[cell]));
-				} else {
-					return createTileImage(Dungeon.level.baseTileVariant[cell], Dungeon.level.decoTileVariant[cell]);
-				}
+				return createTileImage(
+						xTilemapConfiguration.baseTile(Dungeon.level, cell),
+						xTilemapConfiguration.decoTile(Dungeon.level, cell));
 			}
 
 			CompositeImage img = new CompositeImage(instance.getTexture());

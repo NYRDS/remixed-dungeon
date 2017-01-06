@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.utils.Bundle;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,10 +41,7 @@ public class PredesignedLevel extends CustomLevel {
 				set(i, map.getInt(i));
 			}
 
-			fillMapLayer("baseTileVar", baseTileVariant);
-			fillMapLayer("decoTileVar", decoTileVariant);
-
-			useCustomTiles = mLevelDesc.optBoolean("customTiles",false);
+			readLevelParams();
 
 			placeObjects();
 			
@@ -56,6 +54,13 @@ public class PredesignedLevel extends CustomLevel {
 		cleanWalls();
 		createMobs();
 		createItems();
+	}
+
+	private void readLevelParams() throws JSONException {
+		fillMapLayer("baseTileVar", baseTileVariant);
+		fillMapLayer("decoTileVar", decoTileVariant);
+
+		useCustomTiles = mLevelDesc.optBoolean("customTiles",false);
 	}
 
 	private void fillMapLayer(String layerName, int[] baseTileVariant) throws JSONException {
@@ -170,7 +175,18 @@ public class PredesignedLevel extends CustomLevel {
 	}
 
 	@Override
-	public void discoverOnHeroDie() {
+	public void discover() {
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		try {
+			readLevelParams();
+		} catch (JSONException e) {
+			throw new TrackedRuntimeException(e);
+		}
+
 	}
 
 	@Override

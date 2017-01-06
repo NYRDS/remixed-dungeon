@@ -1476,7 +1476,7 @@ public class Hero extends Char {
 
 	public static void reallyDie(Object cause) {
 
-		Dungeon.level.discoverOnHeroDie();
+		Dungeon.level.discover();
 
 		Bones.leave();
 

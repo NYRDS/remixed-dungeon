@@ -4,7 +4,7 @@
       "test_guts":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelGuts.json"},
       "test_sewers":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelSewers.json", "waterSx":10,"waterSy":3},
       "test_random":{"kind":"RandomLevel", "depth":2, "file":"levelsDesc/TestLevelRandom.json"},
-      "test_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/TownTiled.json"},
+      "test_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/TownTiled.json", "noFogOfWar":true},
       "tiled_test":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/TiledTest.json"},
 
      "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
@@ -61,7 +61,7 @@
 	  "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
    },
    "Graph":{
-      "0":[["tiled_test"],[]],
+      "0":[["test_town"],[]],
       "test_guts":[["1"],["test_sewers"]],
       "test_sewers":[["test_guts","1","2","3"],["1"],[2]],
       "tiled_test":[["1","2","3"],["1"],[2]],
