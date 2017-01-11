@@ -6,7 +6,7 @@
       "test_random":{"kind":"RandomLevel", "depth":2, "file":"levelsDesc/TestLevelRandom.json"},
       "test_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true},
       "tiled_test":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/TiledTest.json"},
-      "empty_interior":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/empty_interior.json"},
+      "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json"},
 
      "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
 
