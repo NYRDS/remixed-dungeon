@@ -865,13 +865,18 @@ public class Hero extends Char {
 		int stairs = action.dst;
 		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
 
-			if (Dungeon.depth == 1 && belongings.getItem(Amulet.class) != null) {
+			if (Dungeon.depth == 0) {
 
+				if (belongings.getItem(Amulet.class) == null) {
+					GameScene.show(new WndMessage(TXT_LEAVE));
+					ready();
+				} else {
 					Dungeon.win(ResultDescriptions.WIN, Rankings.gameOver.WIN_HAPPY);
 
 					Dungeon.gameOver();
 
 					Game.switchScene(SurfaceScene.class);
+				}
 
 			} else {
 
