@@ -26,6 +26,8 @@ import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
+import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
+import com.nyrds.pixeldungeon.mobs.npc.TownGuardNPC;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
@@ -173,15 +175,16 @@ public class MobFactory {
 
 		registerMobClass(Crystal.class);
 
-		registerMobClass(Kobold.class);//"regular" enemy
-		registerMobClass(KoboldIcemancer.class);//ranged caster
-		registerMobClass(ColdSpirit.class);//little annoying thing
-		registerMobClass(IceElemental.class);//elemental, obviously
-		//registerMobClass(Yeti.class);//big and tough
-		registerMobClass(IceGuardian.class);//boss - a "regular" enemy, that spawns 2 enemies on death, and again until 3rd iteration, so in total player has to defeat 7 ice guardians (1 parent, 2 children, 4 grandchildren)
+		registerMobClass(Kobold.class);
+		registerMobClass(KoboldIcemancer.class);
+		registerMobClass(ColdSpirit.class);
+		registerMobClass(IceElemental.class);
+		registerMobClass(IceGuardian.class);
 		registerMobClass(IceGuardianCore.class);
 
 		registerMobClass(Hedgehog.class);
+		registerMobClass(HealerNPC.class);
+		registerMobClass(TownGuardNPC.class);
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {
