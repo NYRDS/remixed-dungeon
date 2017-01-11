@@ -1,0 +1,30 @@
+{
+   "texture" : "mobs/town_healer.png",
+   "width" : 12,
+   "height" : 14,
+   "idle" : {
+      "fps" : 10,
+      "looped" : true,
+      "frames" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 3, 3, 2, 1]
+   },
+   "run" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0, 1, 2, 3]
+   },
+   "attack" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0, 1, 2, 3]
+   },
+   "die" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0, 1, 2, 3]
+   }
+
+}
+
+
+
+
