@@ -1,3 +1,90 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">Sombrero de Santa</string>
+    <string name="SantaHat_Info">Nada dice más \"Dungeonavidad\" que un sombrero rojo de Santa, el Maestro de las profundidades.</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Nariz roja y astas</string>
+    <string name="Rudolph_Info">¿Qué podría ser más festivo que una nariz roja brillante? Ah, y un par de astas.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">kobold</string>
+    <string name="Kobold_Gender">masculino</string>
+    <string name="Kobold_Name_Objective">kobold</string>
+    <string name="Kobold_Desc">Los kobolds se consideraban una leyenda. Un ancestro de los gnolls comunes, los kobolds habitan en cuevas profundas y frías. Se cree que su gente dominó la ingeniería y la maquinaria mucho antes de los enanos. Sin embargo, se desconoce por qué desaparecieron hace tantos años ...</string>
+
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">kobold - mago del hielo.</string>
+    <string name="KoboldIcemancer_Gender">masculino</string>
+    <string name="KoboldIcemancer_Name_Objective">kobold - mago del hielo.</string>
+    <string name="KoboldIcemancer_Desc">Los kobold - magos del hielo, eran la élite de su sociedad. Guerreros, magos e importantes científicos. Los magos del hielo antiguos, dominaron el arte del darle forma al hielo, creando mecanismos sofisticados con hielo y  reforzándolos con magia.</string>
+    <string name="KoboldIcemancer_Killed">%s\'s un proyectil helado te mató...</string>
+
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">espíritu helado</string>
+    <string name="ColdSpirit_Gender">masculino</string>
+    <string name="ColdSpirit_Name_Objective">espíritu helado</string>
+    <string name="ColdSpirit_Desc">Un espíritu helado es una manifestación del frío, en una forma pura. Son un cascarón sin voluntad, creados con magia. Actuando bajo la voluntad de su creador con instintos básicos y reflejos.</string>
+
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">elemental de hielo</string>
+    <string name="IceElemental_Gender">masculino</string>
+    <string name="IceElemental_Name_Objective">elemental de hielo</string>
+    <string name="IceElemental_Desc">Entre todos los elementales que existen en la mazmorra, el elemental de hielo podría no ser el más difícil, pero si debe considerarse como uno muy peligroso. Su cuerpo irradia frío, alentando a sus enemigos.</string>
+
+    <!-- STRINGS OF IceGuardian CLASS -->
+    <string name="IceGuardian_Name">guardián de hielo</string>
+    <string name="IceGuardian_Gender">masculino</string>
+    <string name="IceGuardian_Name_Objective">guardián de hielo</string>
+    <string name="IceGuardian_Desc">Los Guardianes de hielo fueron fabricados por kobolds antiguos, para proteger sus cuevas. La energía almacenada en su núcleo permite al guardián del hielo reconstruirse mientras tenga suficiente energía.</string>
+
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">guardián de hielo</string>
+    <string name="IceGuardianCore_Gender">masculino</string>
+    <string name="IceGuardianCore_Name_Objective">guardián de hielo</string>
+    <string name="IceGuardianCore_Desc">Los Guardianes de hielo fueron fabricados por kobolds antiguos, para proteger sus cuevas. La energía almacenada en su núcleo permite al guardián del hielo reconstruirse mientras tenga suficiente energía.</string>
+
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">kobold enjaulado</string>
+    <string name="CagedKobold_Gender">masculino</string>
+    <string name="CagedKobold_Name_Objective">kobold enjaulado</string>
+    <string name="CagedKobold_Desc">Un kobold, en una jaula.</string>
+    <string name="CagedKobold_Intro">Hey ... HEY! ¿Eres un aventurero? Ayúdame a salir, esos malvados militares me encerraron. Tienen la intención de reactivar una antigua arma para conquistar a los humanas de arriba! Me opuse porque era peligroso, y ellos simplemente encerraron en esta jaula. Por favor, encuentra la llave de la jaula, a cambio le ayudaré lo mejor que pueda.</string>
+    <string name="CagedKobold_Quest_End">¡Gracias, muchas gracias! ¿Cómo lograste encontrar la llave? Tú ... ¿destruiste el arma? ¡Eso es increíble! Te dije que te ayudaría, y creo que sé la mejor manera de hacerlo. Me quedaré contigo un rato. * Kobold enjaulado se ha convertido en una vela.</string>
+    <string name="CagedKobold_Message1">Por favor...</string>
+    <string name="CagedKobold_Message2">Tienes que ayudarme a salir amigo.</string>
+    <string name="CagedKobold_Message3">Odio estar en esta jaula.</string>
+
+    <string name="Journal_Caged_Kobold">Kobold enjaulado</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Este gnoll ha sido congelado vivo. Probablemente ha estado así por un tiempo.</string>
+    <string name="IceCaves_TileHighGrass">Hierba alta congelada</string>
+    <string name="IceCaves_TileGrass">Hierva congelada.</string>
+    <string name="IceCaves_TileDescHighGrass">La densa vegetación congelada bloquea la vista.</string>
+    <string name="IceCaves_TileStatue">Gnoll congelado</string>
+    <string name="IceCaves_TileDescStatue">Otra horrible estatua... oh espera es un gnoll congelado.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">Pavo festivo</string>
+    <string name="ChristmasTurkey_Info">La mejor manera de celebrar las \"Dungeonavidades\", es tener un buen pavo asado. Para honrar el día en que los monstruos invadieron la mazmorra, atrayendo aventureros y héroes de todo el mundo, impulsando así el turismo y beneficiando los oficios locales.</string>
+
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">llave de hielo</string>
+    <string name="IceKey_Info">Esta llave parece estar hecha de hielo, aún así es tan dura como el acero.</string>
+
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Varita de Hielo</string>
+    <string name="WandOfIcebolt_Info">Esta varita lanza un misil de hielo, causando un ligero daño daño a su objetivo. Tiene la posibilidad de ralentizar o congelar su objetivo.</string>
+    <string name="WandOfIcebolt_Info1">Te has suicidado con tu propia Varita de Hielo...</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Guardián de Hielo Cazado</string>
+
+</resources>

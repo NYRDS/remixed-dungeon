@@ -1,13 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileWater">Um estranho líquido viscoso</string>
+  <string name="Guts_TileDescDeco">Parece que esse lugar foi... ferido</string>
   <!--STRINGS OF WndStory CLASS-->
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
+  <string name="MimicAmulet_Name">mímico</string>
+  <string name="MimicAmulet_Name_Objective">mímico</string>
   <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">pesadelo</string>
+  <string name="Nightmare_Gender">masculino</string>
+  <string name="Nightmare_Name_Objective">pesadelo</string>
   <!--STRINGS OF TENGU CLASS-->
+  <string name="Tengu_Info3">Pegou, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">Gnoll-zumbi</string>
+  <string name="ZombieGnoll_Gender">masculino</string>
+  <string name="ZombieGnoll_Name_Objective">Gnoll-Zumbi</string>
   <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">minhoca</string>
+  <string name="Worm_Gender">masculino</string>
+  <string name="Worm_Name_Objective">minhoca</string>
   <!--STRINGS OF YogsBrain CLASS-->
   <!--STRINGS OF YogsEye CLASS-->
   <!--STRINGS OF YogsHeart CLASS-->

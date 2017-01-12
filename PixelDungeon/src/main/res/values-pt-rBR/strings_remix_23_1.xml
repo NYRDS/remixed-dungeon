@@ -25,7 +25,8 @@
   <!--STRINGS OF PseudoRat CLASS-->
   <string name="PseudoRat_Name">Pseudo rato</string>
   <string name="PseudoRat_Gender">feminino</string>
-  <string name="PseudoRat_Name_Objective">Pseudo rato</string>
+  <string name="PseudoRat_Name_Objective">rato falso</string>
+  <string name="PseudoRat_Desc">Uma besta horrível que emergiu do corpo </string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Info">Gnoll-zumbi ressuscitou dos mortos!</string>
   <!--Items-->

@@ -27,7 +27,7 @@
     <string name="ColdSpirit_Name">寒冰精灵</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">寒冰精灵</string>
-    <string name="ColdSpirit_Desc">寒冰精灵是由纯粹的寒冷和冷酷所构成的。它们被它们的创造者造成充满魔法的空壳，听从创造者的指令或者根据本能1来行动。</string>
+    <string name="ColdSpirit_Desc">寒冰精灵是由纯粹的寒冷和冷酷所构成的。它们被它们的创造者造成充满魔法的空壳，听从创造者的指令或者根据本能来行动。</string>
 
     <!-- STRINGS OF IceElemental CLASS -->
     <string name="IceElemental_Name">霜元素</string>
