@@ -179,4 +179,23 @@ remix.21.4:\n
         - Traducciones actualizadas (agregado el idioma Ucraniano)\n
         - Menú de idiomas actualizado\n
         </string>
+  <string name="Welcome_Text_26">
+        remix.26:\n
+        --Juego\n
+        - Nueva comida: Pavo festivo\n
+        - Tema musical original para las cuevas (por Misaerit)\n
+        - Nuevo tipo de mazmorra: Cuevas de hielo\n
+        - Las Cuevas de hielo incluyen:\n
+            - 4 nuevos enemigos\n
+            - Un nuevo jefe\n
+            - Un nuevo NPC\n
+            - Varita única de proyectil helado\n
+            - Un artefacto: Vela de visión\n
+            - Tema de música original (por Misaerit)\n
+        - Arreglado el error que evitaba la aparición de arañas raras\n
+        - Goo se volvió un poco más fuerte\n
+        --Sombreros\n
+        - Agregado Sombrero de Santa\n
+        - Agregado Nariz roja y astas\n
+        </string>
 </resources>

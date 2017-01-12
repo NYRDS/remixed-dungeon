@@ -1,3 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items -->
+    <!-- STRINGS OF BroadSword CLASS -->
+    <string name="Claymore_Name">Claymore</string>
+    <string name="Claymore_Info">Uma espada maciça que é capaz de cortar qualquer coisa</string>
+    <string name="Claymore_Gender">Feminino</string>
+
+    <string name="Halberd_Gender">feminina</string>
+
+    <!-- STRINGS OF WoodenCrossbow CLASS -->
+    <string name="WoodenCrossbow_Name">Besta de madeira</string>
+    <string name="WoodenCrossbow_Info">Uma besta de madeira básica, parece que foi desenhada para atirar flechas.</string>
+    <string name="WoodenCrossbow_Gender">masculino</string>
+
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">Besta de ruby</string>
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">Armadura do Caos</string>
     </resources>

@@ -188,7 +188,7 @@ public class DungeonGenerator {
 			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);
 
 			next.levelId = mCurrentLevelId;
-			mCurrentLevelDepth = next.levelDepth = nextLevelDesc.getInt("depth");
+			mCurrentLevelDepth = next.levelDepth = nextLevelDesc.optInt("depth",0);
 			mCurrentLevelKind  = next.levelKind;
 			next.levelKind = nextLevelDesc.getString("kind");
 

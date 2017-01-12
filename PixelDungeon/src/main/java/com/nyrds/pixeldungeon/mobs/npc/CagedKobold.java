@@ -81,7 +81,7 @@ public class CagedKobold extends NPC {
 			int cell;
 			do {
 				cell = room.random(level);
-			} while (level.map[cell] == Terrain.LOCKED_EXIT);
+			} while (level.map[cell] == Terrain.EXIT);
 			npc.setPos(cell);
 			level.spawnMob(npc);
 			spawned = true;

@@ -27,7 +27,7 @@
     <string name="ColdSpirit_Name">дух холоду</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">духа холоду</string>
-    <string name="ColdSpirit_Desc">Дух холоду - це втілення холоду в чистій формі. Являючи собою згустком магічної енергії без власної волі, він підкорюється волі мага, що його прикликав або ж згідно із базовими інстинктами для свого виживання.</string>
+    <string name="ColdSpirit_Desc">Дух холоду - це втілення холоду в чистій формі. Являючи собою згусток магічної енергії без власної волі, він підкорюється волі мага, що його прикликав, або ж згідно зі своїми базовими інстинктами для виживання.</string>
 
     <!-- STRINGS OF IceElemental CLASS -->
     <string name="IceElemental_Name">крижаний елементаль</string>
