@@ -4,10 +4,12 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.utils.Random;
 
 import java.util.HashSet;
@@ -63,6 +65,11 @@ public class HealerNPC extends NPC {
 
 		int index = Random.Int(0, TXT_PHRASES.length);
 		say(TXT_PHRASES[index]);
+
+		if(hero!=null && hero.isAlive()) {
+			PotionOfHealing.heal(hero,1.0f);
+			hero.buff( Hunger.class ).satisfy(Hunger.STARVING);
+		}
 
 		return true;
 	}
