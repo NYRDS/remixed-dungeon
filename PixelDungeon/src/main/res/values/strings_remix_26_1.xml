@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+   
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">town guard</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
+    <string name="TownGuardNPC_Name_Objective">town guard</string>
+    <string name="TownGuardNPC_Desc">A regular town guard.</string>
+    <string name="TownGuardNPC_Message1">Move along.</string>
+    <string name="TownGuardNPC_Message2">I used to be a knee like you, but then I took a sweetroll to an adventure...</string>
+    <string name="TownGuardNPC_Message3">You think there is to much guards in this town? Well that\'s only town with a dungeon that was infested by monsters, isn\'t it?</string>
+	
+	<!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">town priest</string>
+    <string name="HealerNPC_Gender">masculine</string>
+    <string name="HealerNPC_Name_Objective">town priest</string>
+    <string name="HealerNPC_Desc">An old man, somehow he looks like someone who would be making wands.</string>
+    <string name="HealerNPC_Message1">Health for everyone!</string>
+    <string name="HealerNPC_Message2">Special offer! Only this season: free heal!</string>
+    <string name="HealerNPC_Message3">I wonder why church doesn\'t allow us to wear hats... it\'s really cold here.</string>
+
+</resources>
