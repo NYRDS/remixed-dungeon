@@ -127,64 +127,15 @@ public class PixelScene extends Scene {
 
 	public static void chooseFont(float size) {
 		float pt = size * defaultZoom;
-
-		if (pt >= 19) {
-
-			scale = pt / 19;
-			if (1.5 <= scale && scale < 2) {
-				font = font25x;
-				scale = (int) (pt / 14);
-			} else {
-				// font = font3x;
-				scale = (int) scale;
-			}
-
-		} else if (pt >= 14) {
-
-			scale = pt / 14;
-			if (1.8 <= scale && scale < 2) {
-				// font = font2x;
-				scale = (int) (pt / 12);
-			} else {
-				font = font25x;
-				scale = (int) scale;
-			}
-
-		} else if (pt >= 12) {
-
-			scale = pt / 12;
-			if (1.7 <= scale && scale < 2) {
-				// font = font15x;
-				scale = (int) (pt / 10);
-			} else {
-				// font = font2x;
-				scale = (int) scale;
-			}
-
-		} else if (pt >= 10) {
-
-			scale = pt / 10;
-			if (1.4 <= scale && scale < 2) {
-				font = font1x;
-				scale = (int) (pt / 7);
-			} else {
-				// font = font15x;
-				scale = (int) scale;
-			}
-
-		} else {
-
-			font = font1x;
-			scale = Math.max(1, (int) (pt / 7));
-
-		}
-
+		scale = (pt / 14);
 		scale /= defaultZoom;
+
+		scale /= 1.8;
 
 		if(Game.smallResScreen()) {
 			scale /= 2;
 		}
-		//scale = pt / 14;
+
 		font = font25x;
 	}
 

@@ -2,6 +2,7 @@ package com.watabou.noosa;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;
+import android.opengl.GLES20;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -44,6 +45,7 @@ public class Font extends TextureFilm {
 		super( tx );
 		
 		texture = tx;
+		texture.filter(GLES20.GL_LINEAR,GLES20.GL_LINEAR);
 	}
 
 	private int findNextEmptyLine(Bitmap bitmap, int startFrom, int color){
@@ -163,6 +165,7 @@ public class Font extends TextureFilm {
 
 	public static Font colorMarked( Bitmap bmp, int color, String chars ) {
 		Font font = new Font( TextureCache.get( bmp ) );
+
 		font.splitBy( bmp, bmp.getHeight(), color, chars );
 		return font;
 	}
