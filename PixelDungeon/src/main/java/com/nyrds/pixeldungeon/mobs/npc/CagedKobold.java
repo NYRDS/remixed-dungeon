@@ -167,6 +167,7 @@ public class CagedKobold extends NPC {
 		private static final String GIVEN		= "given";
 		private static final String PROCESSED	= "processed";
 		private static final String DEPTH		= "depth";
+		private static final String SPAWNED		= "spawned";
 
 		public static void storeInBundle( Bundle bundle ) {
 			Bundle node = new Bundle();
@@ -175,6 +176,7 @@ public class CagedKobold extends NPC {
 			node.put(DEPTH, depth);
 			node.put(PROCESSED, processed);
 			node.put(COMPLETED, completed);
+			node.put(SPAWNED, spawned);
 
 			bundle.put( NODE, node );
 		}
@@ -188,6 +190,7 @@ public class CagedKobold extends NPC {
 				depth	= node.getInt( DEPTH );
 				processed	= node.getBoolean( PROCESSED );
 				completed = node.getBoolean( COMPLETED );
+				spawned = node.getBoolean( SPAWNED );
 			}
 		}
 
