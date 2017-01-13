@@ -1088,10 +1088,15 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public boolean[] updateFieldOfView(Char c) {
+	public void updateFieldOfView(Char c) {
 
-		int cx = c.getPos() % getWidth();
-		int cy = c.getPos() / getWidth();
+		if(noFogOfWar()) {
+			Arrays.fill(fieldOfView, true);
+			return;
+		}
+
+		int cx = cellX(c.getPos());
+		int cy = cellY(c.getPos());
 
 		boolean sighted = c.buff(Blindness.class) == null
 				&& c.buff(Shadows.class) == null && c.isAlive();
@@ -1146,8 +1151,6 @@ public abstract class Level implements Bundlable {
 				}
 			}
 		}
-
-		return fieldOfView;
 	}
 
 	public int distance(int a, int b) {
