@@ -78,8 +78,10 @@ public class SystemText extends Text {
 			TextPaint cp = new TextPaint();
 			cp.set(tx);
 			cp.setStyle(Paint.Style.STROKE);
-			cp.setStrokeWidth(textSize / 10);
+			cp.setStrokeWidth(textSize * 0.3f);
+			//cp.setStrokeWidth(textSize/3 );
 			cp.setColor(Color.BLACK);
+			cp.setAntiAlias(true);
 
 			textPaints.put(textSize, tx);
 			contourPaints.put(textSize, cp);
@@ -163,7 +165,6 @@ public class SystemText extends Text {
 			}
 		}
 		xCharPos.add(xPos);
-		// Log.d("SystemText", Utils.format("eot"));
 		return offset;
 	}
 
@@ -180,7 +181,7 @@ public class SystemText extends Text {
 		if (fontHeight > 0) {
 			destroyLines();
 			lineImage.clear();
-			width = height = 0;
+			width = 0;
 
 			height = fontHeight/4;
 
@@ -208,29 +209,9 @@ public class SystemText extends Text {
 
 					Canvas canvas = new Canvas(bitmap);
 
-					int offset = startLine;
-					int lineCounter = 0;
-					for (; offset < nextLine; ) {
-						final int codepoint = text.codePointAt(offset);
-						int codepointCharCount = Character.charCount(codepoint);
+					drawTextLine(charIndex, nextLine, startLine, canvas, contourPaint);
+					charIndex = drawTextLine(charIndex, nextLine, startLine, canvas, textPaint);
 
-						if (!Character.isWhitespace(codepoint)) {
-							if (mask == null
-									|| (charIndex < mask.length && mask[charIndex])) {
-
-								String txt = text.substring(offset, offset + codepointCharCount);
-								float x = (xCharPos.get(lineCounter) + 0.5f) * oversample;
-								float y = (fontHeight) * oversample - textPaint.descent();
-
-								canvas.drawText(txt, x, y, contourPaint);
-								canvas.drawText(txt, x, y, textPaint);
-							}
-							charIndex++;
-						}
-
-						lineCounter++;
-						offset += codepointCharCount;
-					}
 					SystemTextLine line = new SystemTextLine(bitmap);
 					line.setVisible(getVisible());
 					lineImage.add(line);
@@ -239,12 +220,36 @@ public class SystemText extends Text {
 				}
 				startLine = nextLine;
 			}
-			
-/*			Log.d("SystemText", Utils.format(Locale.ROOT,
-					"%3.1f x %3.1f (max: %3.1f, lines: %d) -> %s", width,
-					height, maxWidth / scale.x, lineImage.size(), text));
-*/
 		}
+	}
+
+	private int drawTextLine(int charIndex, int nextLine, int startLine, Canvas canvas, TextPaint paint) {
+		int offset = startLine;
+		int lineCounter = 0;
+
+		float y = (fontHeight) * oversample - textPaint.descent();
+
+		for (; offset < nextLine; ) {
+			final int codepoint = text.codePointAt(offset);
+			int codepointCharCount = Character.charCount(codepoint);
+
+			if (!Character.isWhitespace(codepoint)) {
+				if (mask == null
+						|| (charIndex < mask.length && mask[charIndex])) {
+
+					String txt = text.substring(offset, offset + codepointCharCount);
+					float x = (xCharPos.get(lineCounter) + 0.5f) * oversample;
+
+
+					canvas.drawText(txt, x, y, paint);
+				}
+				charIndex++;
+			}
+
+			lineCounter++;
+			offset += codepointCharCount;
+		}
+		return charIndex;
 	}
 
 	@Override
