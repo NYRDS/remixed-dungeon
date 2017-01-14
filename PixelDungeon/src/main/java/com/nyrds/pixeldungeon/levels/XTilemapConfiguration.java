@@ -76,9 +76,9 @@ public class XTilemapConfiguration {
 			ret.tilemapConfiguration.put(waterBorder, borderPieceDesc);
 		}
 
-		for(int i = 0;i<=63;i++) {
-			if(!ret.tilemapConfiguration.containsKey(i)) {
-				GLog.w("Fuck! %d is missing",i);
+		for (Integer tileType:terrainMapping.values()) {
+			if(!ret.tilemapConfiguration.containsKey(tileType)) {
+				GLog.w("description for tile id %d is missing",tileType);
 			}
 		}
 
