@@ -11,7 +11,7 @@
    "EMPTY_WELL":{"base":[0,1,2],"deco":[64,65,66]},
    "HIGH_GRASS":{"base":[0,1,2],"deco":[54,55,56]},
    "EMPTY_DECO":{"base":[0,1,2],"deco":[144,145,146]}, 
-   "WELL":{"base":[0,1,2],"deco":[67,68,69]},
+   "WELL":{"base":[15],"deco":[67,68,69]},
    "STATUE":{"base":[0,1,2],"deco":[129]},
    "BOOKSHELF":{"base":[0,1,2],"deco":[112,113,114]},
 
@@ -39,7 +39,8 @@
    
    "EMPTY_SP":{"base":[32,33,34],"deco":[15]},
    "STATUE_SP":{"base":[32,33,34],"deco":[129]},
-   "ALCHEMY":{"base":[32,33,34],"deco":[70,71,72]},
+
+   "ALCHEMY":{"base":[15],"deco":[70,71,72]},
    
    "CHASM_FLOOR":{"base":[176],"deco":[15]},
    "CHASM_FLOOR_SP":{"base":[177],"deco":[15]},
