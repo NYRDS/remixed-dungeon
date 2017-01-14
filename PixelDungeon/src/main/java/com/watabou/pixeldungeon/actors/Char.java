@@ -391,6 +391,10 @@ public abstract class Char extends Actor {
 
 	public void add(Buff buff) {
 
+		if(!isAlive()) {
+			return;
+		}
+
 		buffs.add(buff);
 		Actor.add(buff);
 
