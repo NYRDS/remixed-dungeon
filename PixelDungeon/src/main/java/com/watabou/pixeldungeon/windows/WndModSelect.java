@@ -151,8 +151,9 @@ public class WndModSelect extends Window implements DownloadStateListener {
 					downloadProgress.setPos(0, 0);
 					Game.scene().add(downloadProgress);
 				}
-
-				downloadProgress.text(Utils.format("Downloading %s %d%%", selectedMod, percent));
+				if(!Game.isPaused()) {
+					downloadProgress.text(Utils.format("Downloading %s %d%%", selectedMod, percent));
+				}
 			}
 		});
 	}

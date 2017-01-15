@@ -132,8 +132,9 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					downloadProgress.setPos(0, 0);
 					Game.scene().add(downloadProgress);
 				}
-
-				downloadProgress.text(Utils.format("Downloading  %d%%", percent));
+				if(!Game.isPaused()) {
+					downloadProgress.text(Utils.format("Downloading  %d%%", percent));
+				}
 			}
 		});
 	}
