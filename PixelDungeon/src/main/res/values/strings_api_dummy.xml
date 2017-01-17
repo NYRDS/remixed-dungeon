@@ -4,6 +4,7 @@
     <string name="saveLoadAdUnitId"></string>
     <string name="easyModeAdUnitId"></string>
     <string name="easyModeSmallScreenAdUnitId"></string>
+    <string name="cinemaRewardAdUnitId"></string>
     <string name="iapKey"></string>
     <string name="ownSignature"></string>
 </resources>
