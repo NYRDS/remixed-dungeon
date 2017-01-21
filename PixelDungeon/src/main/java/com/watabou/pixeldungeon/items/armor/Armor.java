@@ -170,7 +170,7 @@ public class Armor extends EquipableItem {
 		}
 		
 		DR += tier;
-		STR--;
+		STR = Math.max(STR-1,2);
 		
 		return super.upgrade();
 	}
