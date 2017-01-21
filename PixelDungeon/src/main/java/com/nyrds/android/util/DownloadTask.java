@@ -36,7 +36,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
 			long startTime = System.currentTimeMillis();
 			
-			Log.d(TAG, "download begining");
+			Log.d(TAG, "download beginning");
 			Log.d(TAG, "download url: " + url);
 			Log.d(TAG, "downloaded file name: " + file);
 			
