@@ -109,8 +109,6 @@ public class ModdingMode {
 
 		long daysDiff;
 
-
-
 		if(nowMilis > hallMilis) {
 			daysDiff = (nowMilis - hallMilis);
 		} else {
