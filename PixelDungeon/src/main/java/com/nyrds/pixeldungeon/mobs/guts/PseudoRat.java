@@ -39,4 +39,9 @@ public class PseudoRat extends Mob {
     public int dr() {
         return 25;
     }
+
+    @Override
+    public int getKind() {
+        return 1;
+    }
 }
