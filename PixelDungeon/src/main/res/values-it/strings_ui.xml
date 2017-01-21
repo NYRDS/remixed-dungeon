@@ -7,6 +7,7 @@
   <string name="TitleScene_About">Circa</string>
   <string name="TitleScene_InternalStorageLow">Non abbastanza spazio\n nella memoria interna\n Il tuo progresso potrebbe andare perso!</string>
   <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt_Intro">Gioca Punteg Migilioro</string>
   <string name="AboutScene_OurSite">Nostro sito web:</string>
   <string name="AboutScene_Snd">Spedici E-Mail</string>
   <!--STRINGS OF RankingsScene CLASS-->
