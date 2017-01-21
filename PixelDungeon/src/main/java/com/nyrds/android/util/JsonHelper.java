@@ -29,11 +29,15 @@ public class JsonHelper {
 
 	@NonNull
 	static public JSONObject readJsonFromAsset(String fileName) {
-		return readJsonFromStream(ModdingMode.getInputStream(fileName));
+		try {
+			return readJsonFromStream(ModdingMode.getInputStream(fileName));
+		} catch (JSONException e) {
+			throw new TrackedRuntimeException(e);
+		}
 	}
 
 	@NonNull
-	static public JSONObject readJsonFromFile(File file) {
+	static public JSONObject readJsonFromFile(File file) throws JSONException {
 		try {
 			GLog.i("Trying to read from %s", file.getAbsoluteFile());
 			return readJsonFromStream(new FileInputStream(file));
@@ -43,7 +47,7 @@ public class JsonHelper {
 	}
 
 	@NonNull
-	static public JSONObject readJsonFromStream(InputStream stream) {
+	static public JSONObject readJsonFromStream(InputStream stream) throws JSONException {
 		try {
 			StringBuilder jsonDef = new StringBuilder();
 
@@ -57,9 +61,6 @@ public class JsonHelper {
 			}
 			reader.close();
 			return (JSONObject) new JSONTokener(jsonDef.toString()).nextValue();
-		} catch (JSONException e) {
-			Game.toast(e.getLocalizedMessage());
-			throw new TrackedRuntimeException(e);
 		} catch (IOException e) {
 			Game.toast(e.getLocalizedMessage());
 			throw new TrackedRuntimeException(e);

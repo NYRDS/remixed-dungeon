@@ -1,3 +1,32 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">Weihnachtsmann Hut</string>
+    <string name="SantaHat_Info">Nichts sagt Dungeonachten mehr, als ein roter seidiger Hut von Santa den Lord der Tiefe.</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Rote Nase und Geweih</string>
+    <string name="Rudolph_Info">Was könnte festlicher sein, als eine rote leuchtende Nase? Ein paar Geweihe natürlich.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">Kobold</string>
+    <string name="Kobold_Gender">männlich</string>
+    <string name="Kobold_Name_Objective">Kobold</string>
+    <string name="Kobold_Desc">Kobolde sind bekannt aber eine Legende zugleich. Als Vorfahren von Gnolls leben Kobolde in tiefen und kalten Hölen. Es wird geglaubt, dass ihre Leute schon lange vor den Zwergen die Technik und den Maschinenbau beherrschten. Trotzdem weiss niemand, warum sie vor vielen Jahren verschwanden...</string>
+
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">Kobold-Eismant</string>
+    <string name="KoboldIcemancer_Gender">männlich</string>
+    <string name="KoboldIcemancer_Name_Objective">Kobold-Eismant</string>
+    <string name="KoboldIcemancer_Desc">Kobold-Eismanten zählten zur Elite in ihrer Gesellschaft. Krieger, Magier und am wichtigstem Wissenschaftler. Antike Eismanten haben das Handwerk des Formens und Verzauberns von raffinierten Mechanismen aus Eis gemeistert.</string>
+    <string name="KoboldIcemancer_Killed">%s\'s Eis-Bolzen hat dich getötet..</string>
+
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">kalte Seele</string>
+    <string name="ColdSpirit_Gender">männlich</string>
+    <string name="ColdSpirit_Name_Objective">kalte Seele</string>
+    <string name="ColdSpirit_Desc">Eine kalte Seele ist die Erscheinung von Kälte in ihrer reinsten Form. Sie sind gedankenlose Schalen, erschaffen durch Magie, verhält sich nach dem Willen des Erschaffers, oder nach Grundlegenden Instinkten und Reflexen.</string>
+
     </resources>

@@ -69,8 +69,8 @@ public class Item implements Bundlable, Presser {
 	protected static final float TIME_TO_PICK_UP = 1.0f;
 	protected static final float TIME_TO_DROP    = 0.5f;
 
-	public static final String AC_DROP  = Game.getVar(R.string.Item_ACDrop);
-	public static final String AC_THROW = Game.getVar(R.string.Item_ACThrow);
+	private static final   String AC_DROP  = Game.getVar(R.string.Item_ACDrop);
+	protected static final String AC_THROW = Game.getVar(R.string.Item_ACThrow);
 
 	public String defaultAction;
 
@@ -131,13 +131,9 @@ public class Item implements Bundlable, Presser {
 		curItem = this;
 
 		if (action.equals(AC_DROP)) {
-
 			doDrop(hero);
-
 		} else if (action.equals(AC_THROW)) {
-
 			doThrow(hero);
-
 		}
 	}
 
@@ -585,7 +581,18 @@ public class Item implements Bundlable, Presser {
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		quantity(itemDesc.optInt("quantity",1));
-		level(itemDesc.optInt("level",0));
+
+		int level = itemDesc.optInt("level",0);
+
+
+		if(level>0) {
+			upgrade(level);
+		}
+
+		if(level<0) {
+			degrade(-level);
+		}
+
 		cursed = itemDesc.optBoolean("cursed", false);
 	}
 

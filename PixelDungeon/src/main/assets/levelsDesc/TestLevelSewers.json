@@ -62,9 +62,10 @@
       {"kind":"Mimic","x":8,"y":8, "level":3, "loot":{"kind":"Codex","text":"Это кодекс отобранный у толстого мимика"} }
    ],
   "items": [
-    {"kind":"Codex","text":"Mod_Name","x":13,"y":10},
+    {"kind":"ScrollOfIdentify","quantity":"99","x":13,"y":10},
     {"kind":"IronKey", "levelId":"2", "depth":2, "x":13,"y":11},
-    {"kind":"WandOfIcebolt", "level":"5", "x":13,"y":11}
+    {"kind":"WarHammer", "level":"99", "x":13,"y":11},
+    {"kind":"WarHammer", "level":"-99", "x":13,"y":12}
   ],
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},

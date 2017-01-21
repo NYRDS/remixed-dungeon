@@ -55,7 +55,8 @@ public class MeleeWeapon extends Weapon {
 	}
 	
 	public Item upgrade( boolean enchant ) {
-		STR--;		
+		STR = Math.max(2, STR-1);
+
 		MIN++;
 		MAX += tier;
 		
@@ -69,8 +70,10 @@ public class MeleeWeapon extends Weapon {
 	@Override
 	public Item degrade() {		
 		STR++;
-		MIN--;
-		MAX -= tier;
+
+		MIN = Math.max(MIN-1, 0);
+		MAX = Math.max(MAX-tier, 1);
+
 		return super.degrade();
 	}
 	
