@@ -164,8 +164,8 @@ public enum HeroClass {
 
 		hero.collect(new RottenPumpkinPie());
 
-		hero.ht(100);
-		hero.hp(100);
+		hero.ht(1000);
+		hero.hp(1000);
 		hero.attackSkill = 1000;
 
 		Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
