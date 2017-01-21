@@ -54,7 +54,7 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 			final Mods.ModDesc desc = entry.getValue();
 			float additionalMargin = 0;
 
-			if (desc.installed) {
+			if (desc.installed && desc.name != ModdingMode.REMIXED) {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
 						onDelete(desc.name);
