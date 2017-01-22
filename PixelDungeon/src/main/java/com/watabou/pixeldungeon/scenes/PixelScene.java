@@ -126,9 +126,7 @@ public class PixelScene extends Scene {
 	public static float scale;
 
 	public static void chooseFont(float size) {
-		float pt = size * defaultZoom;
-		scale = (pt / 14);
-		scale /= defaultZoom;
+		scale = size / 14.f;
 
 		scale /= 1.8;
 
