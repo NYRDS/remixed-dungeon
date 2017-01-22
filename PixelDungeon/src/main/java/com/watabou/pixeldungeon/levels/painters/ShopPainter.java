@@ -41,17 +41,22 @@ import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
+import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
+import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
+import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
 import com.watabou.pixeldungeon.items.weapon.melee.Mace;
 import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
+import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
@@ -107,7 +112,19 @@ public class ShopPainter extends Painter {
 		ArrayList<Item> items = new ArrayList<>();
 		
 		switch (Dungeon.depth) {
-		
+		case 0:
+		case 1:
+			items.add( new LeatherArmor().identify() );
+			items.add( new Dagger().identify() );
+			items.add( new Knuckles().identify() );
+			items.add( new Longsword().identify() );
+			items.add( new Quarterstaff().identify() );
+			items.add( new Ration() );
+			items.add( new Ration() );
+			items.add( (Random.Int( 2 ) == 0 ? new PotionOfHealing() : new PotionOfMight()).identify() );
+			items.add( (Random.Int( 2 ) == 0 ? new ScrollOfUpgrade() : new ScrollOfIdentify()).identify() );
+			break;
+
 		case 6:
 			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
