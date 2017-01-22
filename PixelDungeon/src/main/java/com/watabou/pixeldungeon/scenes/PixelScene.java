@@ -141,25 +141,10 @@ public class PixelScene extends Scene {
 		return createText(null, size);
 	}
 
-	public static float computeFontScale() {
-		float scale = 0.5f + 0.01f*PixelDungeon.fontScale();
-
-		if(scale < 0.1f) return 0.1f;
-		if(scale > 4)   return 4;
-
-		if(Game.smallResScreen()) {
-			scale *= 1.5;
-		}
-
-
-		return scale;
-		
-	}
-	
 	public static Text createText(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size * 1.2f, false);
+			return new SystemText(text, size, false);
 		}
 		
 		chooseFont(size);
@@ -177,7 +162,7 @@ public class PixelScene extends Scene {
 	public static Text createMultiline(String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size*1.2f, true);
+			return new SystemText(text, size, true);
 		}
 		
 		chooseFont(size);

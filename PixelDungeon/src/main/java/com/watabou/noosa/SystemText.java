@@ -11,7 +11,7 @@ import android.text.TextPaint;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
-import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.PixelDungeon;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,12 +38,18 @@ public class SystemText extends Text {
 
 	private boolean needWidth = false;
 
+	private static float fontScale  = Float.NaN;
+
 	public SystemText(float baseLine) {
 		this("", baseLine, false);
 	}
 
-	public SystemText(String text, float baseLine, boolean multiline) {
+	public SystemText(String text, float size, boolean multiline) {
 		super(0, 0, 0, 0);
+
+		if(fontScale!=fontScale) {
+			updateFontScale();
+		}
 
 		if (tf == null) {
 			if (Game.smallResScreen()) {
@@ -55,15 +61,15 @@ public class SystemText extends Text {
 			}
 		}
 
-		baseLine *= PixelScene.computeFontScale();
+		size *= fontScale;
 
 		needWidth = multiline;
 
-		if (baseLine == 0) {
+		if (size == 0) {
 			throw new TrackedRuntimeException("zero sized font!!!");
 		}
 
-		float textSize = baseLine * oversample;
+		float textSize = (int)(size * oversample );
 		if (!textPaints.containsKey(textSize)) {
 			TextPaint tx = new TextPaint();
 
@@ -91,6 +97,21 @@ public class SystemText extends Text {
 
 		this.text(text);
 		texts.add(this);
+	}
+
+	public static void updateFontScale() {
+		float scale = 0.5f + 0.01f * PixelDungeon.fontScale();
+
+		scale *= 1.2f;
+
+		if(scale < 0.1f){ fontScale = 0.1f; return;}
+		if(scale > 4)   { fontScale = 4f; return; }
+
+		if(Game.smallResScreen()) {
+			scale *= 1.5;
+		}
+
+		fontScale = scale;
 	}
 
 	private void destroyLines() {
@@ -169,7 +190,7 @@ public class SystemText extends Text {
 
 	@SuppressLint("NewApi")
 	private void createText() {
-		if (text == null) {
+		if (text == null || text.isEmpty()) {
 			return;
 		}
 
@@ -188,6 +209,7 @@ public class SystemText extends Text {
 			int startLine = 0;
 
 			while (startLine < text.length()) {
+
 				int nextLine = fillLine(startLine);
 
 				float lineWidth = 0;
@@ -200,7 +222,6 @@ public class SystemText extends Text {
 				height += fontHeight;
 
 				if (lineWidth > 0) {
-
 					Bitmap bitmap = Bitmap.createBitmap(
 							(int) (lineWidth * oversample),
 							(int) (fontHeight * oversample),
@@ -227,7 +248,25 @@ public class SystemText extends Text {
 		int lineCounter = 0;
 
 		float y = (fontHeight) * oversample - textPaint.descent();
+/*
+		if(mask == null) {
+			for (; offset < nextLine; ) {
+				final int codepoint = text.codePointAt(offset);
+				int codepointCharCount = Character.charCount(codepoint);
 
+				if (!Character.isWhitespace(codepoint)) {
+					charIndex++;
+				}
+
+				lineCounter++;
+				offset += codepointCharCount;
+			}
+
+				float x = (xCharPos.get(0) + 0.5f) * oversample;
+				canvas.drawText(text.substring(startLine, offset), x, y, paint);
+			return charIndex;
+		}
+*/
 		for (; offset < nextLine; ) {
 			final int codepoint = text.codePointAt(offset);
 			int codepointCharCount = Character.charCount(codepoint);
@@ -238,7 +277,6 @@ public class SystemText extends Text {
 
 					String txt = text.substring(offset, offset + codepointCharCount);
 					float x = (xCharPos.get(lineCounter) + 0.5f) * oversample;
-
 
 					canvas.drawText(txt, x, y, paint);
 				}
