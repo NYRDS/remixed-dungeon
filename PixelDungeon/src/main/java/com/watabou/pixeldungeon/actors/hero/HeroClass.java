@@ -201,16 +201,11 @@ public enum HeroClass {
 		hero.STR(hero.STR() + 1);
 
 		(hero.belongings.weapon = new ShortSword()).identify();
-		hero.collect(new Dart(8).identify());
-
-		QuickSlot.selectItem(Dart.class, 0);
 
 		new PotionOfStrength().setKnown();
 	}
 
 	private static void initMage(Hero hero) {
-		(hero.belongings.weapon = new Knuckles()).identify();
-
 		WandOfMagicMissile wand = new WandOfMagicMissile();
 		hero.collect(wand.identify());
 
@@ -220,14 +215,9 @@ public enum HeroClass {
 	}
 
 	private static void initRogue(Hero hero) {
-		(hero.belongings.weapon = new Dagger()).identify();
 		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
 
-		hero.collect(new Dart(8).identify());
-
 		hero.belongings.ring1.activate(hero);
-
-		QuickSlot.selectItem(Dart.class, 0);
 
 		new ScrollOfMagicMapping().setKnown();
 	}
@@ -236,7 +226,6 @@ public enum HeroClass {
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());
 
-		(hero.belongings.weapon = new Dagger()).identify();
 		Boomerang boomerang = new Boomerang();
 		hero.collect(boomerang.identify());
 
@@ -249,10 +238,8 @@ public enum HeroClass {
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());
 
-		(hero.belongings.armor = new ClothArmor()).upgrade().identify();
 		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
 
-		hero.collect(new Dagger().upgrade().identify());
 		hero.collect(new CommonArrow(20));
 
 		QuickSlot.selectItem(CommonArrow.class, 0);
@@ -262,15 +249,10 @@ public enum HeroClass {
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());
 
-		(hero.belongings.weapon = new Dagger()).identify();
 		(hero.belongings.armor = new NecromancerRobe()).identify();
 
 		SkeletonKey key = SkeletonKey.makeNewKey("7", 7);
 		hero.collect(key);
-
-		hero.collect(new Dart(8).identify());
-
-		QuickSlot.selectItem(Dart.class, 0);
 
 		new PotionOfHealing().setKnown();
 	}
