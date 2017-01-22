@@ -2,6 +2,7 @@ package com.nyrds.android.util;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.PixelDungeon;
 
 import org.json.JSONArray;
@@ -57,7 +58,7 @@ public class Mods {
 			}
 
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			EventCollector.logException(e);
 		}
 
 		Mods.ModDesc Remixed = new Mods.ModDesc();

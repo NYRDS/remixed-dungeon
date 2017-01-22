@@ -41,11 +41,11 @@ public class ItemSlot extends Button {
 	private static final float DISABLED = 0.3f;
 
 	protected ItemSprite icon;
-	protected Emitter emitter;
+	protected Emitter    emitter;
 
-	protected Text topLeft;
-	protected Text topRight;
-	protected Text bottomRight;
+	private Text topLeft;
+	private Text topRight;
+	private Text bottomRight;
 
 	private static final String TXT_STRENGTH    = ":%d";
 	private static final String TXT_TYPICAL_STR = "%d?";
@@ -153,7 +153,7 @@ public class ItemSlot extends Button {
 
 		icon.view(item);
 
-		if(item.emitter()!=null) {
+		if (item.emitter() != null) {
 			emitter.setVisible(true);
 			emitter.pour(item.emitter(), item.emitterInterval());
 		} else {
@@ -195,7 +195,7 @@ public class ItemSlot extends Button {
 
 		int level = item.visiblyUpgraded();
 
-		if (level != 0 || (item.cursed && item.cursedKnown)) {
+		if (level != 0) {
 			bottomRight.text(item.levelKnown ? Utils.format(TXT_LEVEL, level) : "");
 			bottomRight.measure();
 			bottomRight.hardlight(level > 0 ? UPGRADED : DEGRADED);

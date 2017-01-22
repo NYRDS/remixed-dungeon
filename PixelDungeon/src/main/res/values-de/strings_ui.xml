@@ -7,8 +7,17 @@
   <string name="TitleScene_About">Über</string>
   <string name="TitleScene_InternalStorageLow">Nicht genügend Platz\n im internen Speicher\n Dein Fortschritt kann verloren gehen!</string>
   <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon by NYRDS basierend auf dem ursprünglichem Pixel Dungeon von Watabou.</string>
+  <string name="AboutScene_Code">Programmierung:</string>
+  <string name="AboutScene_Graphics">Grafik:</string>
+  <string name="AboutScene_Music">Musik:</string>
+  <string name="AboutScene_Sound">Sound:</string>
+  <string name="AboutScene_Thanks">besonderen Dank an:</string>
+  <string name="AboutScene_Email_Us">kontaktiert uns:</string>
   <string name="AboutScene_OurSite">Unsere Internetseite:</string>
   <string name="AboutScene_Snd">E-Mail senden</string>
+  <string name="AboutScene_Translation">Lokalisierung von:</string>
+  <string name="AboutScene_Translation_Names">NYRDS &amp;amp: Omen267901</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Spitzenplatzierungen</string>
   <string name="RankingsScene_Total">Gespielte Spiele (insgesamt): </string>
@@ -55,12 +64,13 @@
   <string name="WndSettings_SwitchPort">Zum Portrait wechseln</string>
   <string name="WndSettings_SwitchLand">Zur Landschaft wechseln</string>
   <string name="WndSettings_SelectLanguage">Sprache wählen</string>
-  <string name="WndSettings_SecondQuickslot">Zweiter Quickslot</string>
-  <string name="WndSettings_ThirdQuickslot">Dritter Quickslot</string>
+  <string name="WndSettings_SecondQuickslot">Zweite Schnellauswahl</string>
+  <string name="WndSettings_ThirdQuickslot">Dritte Schnellauswahl</string>
   <string name="WndSettings_ExperementalFont">Neue Schrift</string>
   <string name="WndSettings_ClassicFont">Klassische Schrift</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
   <string name="WndSaveSlotSelect_SelectSlot">Speicherplatz wählen</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">Mod wählen</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Unser Spiel ist abgestürtzt... \n Entschuldigung. \nBitte sende uns den Absturz-Bericht, um uns zu helfen den Fehler zu beheben.</string>
 </resources>

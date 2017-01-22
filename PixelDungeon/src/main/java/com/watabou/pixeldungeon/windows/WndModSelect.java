@@ -6,7 +6,8 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Mods;
-import com.nyrds.android.util.Unzip;
+import com.nyrds.android.util.UnzipStateListener;
+import com.nyrds.android.util.UnzipTask;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -24,7 +25,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import java.io.File;
 import java.util.Map;
 
-public class WndModSelect extends Window implements DownloadStateListener {
+public class WndModSelect extends Window implements DownloadStateListener, UnzipStateListener {
 
 	private Text downloadProgress;
 
@@ -33,14 +34,12 @@ public class WndModSelect extends Window implements DownloadStateListener {
 
 	private Map<String, Mods.ModDesc> modsList = Mods.buildModsList();
 
-	private boolean haveInternet;
-
 	public WndModSelect() {
 		super();
 
 		resizeLimited(120);
 
-		haveInternet = Util.isConnectedToInternet();
+		boolean haveInternet = Util.isConnectedToInternet();
 
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
@@ -55,7 +54,7 @@ public class WndModSelect extends Window implements DownloadStateListener {
 			final Mods.ModDesc desc = entry.getValue();
 			float additionalMargin = 0;
 
-			if (desc.installed) {
+			if (desc.installed && desc.name != ModdingMode.REMIXED) {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
 						onDelete(desc.name);
@@ -151,8 +150,9 @@ public class WndModSelect extends Window implements DownloadStateListener {
 					downloadProgress.setPos(0, 0);
 					Game.scene().add(downloadProgress);
 				}
-
-				downloadProgress.text(Utils.format("Downloading %s %d%%", selectedMod, percent));
+				if (!Game.isPaused()) {
+					downloadProgress.text(Utils.format("Downloading %s %d%%", selectedMod, percent));
+				}
 			}
 		});
 	}
@@ -166,45 +166,28 @@ public class WndModSelect extends Window implements DownloadStateListener {
 					Game.scene().remove(downloadProgress);
 					downloadProgress = null;
 				}
-
 				if (result) {
-
-					String tmpDirName = "tmp";
-
-					File tmpDirFile = FileSystem.getExternalStorageFile(tmpDirName);
-					if (tmpDirFile.exists()) {
-						tmpDirFile.delete();
-					}
-
-					if (Unzip.unzip(downloadTo, FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath())) {
-
-						File[] unpackedList = tmpDirFile.listFiles();
-
-						for (File file : unpackedList) {
-							if (file.isDirectory()) {
-
-								String modDir = downloadTo.substring(0, downloadTo.length() - 4);
-
-								if (file.renameTo(new File(modDir))) {
-									FileSystem.deleteRecursive(tmpDirFile);
-									FileSystem.deleteRecursive(new File(downloadTo));
-									break;
-								} else {
-									Game.scene()
-											.add(new WndError(Utils.format(
-													"Something gone wrong when placing mod in %s, please do so manually",
-													modDir)));
-								}
-							}
-						}
-						Game.scene().add(new WndModSelect());
-					} else {
-						Game.scene().add(new WndError(Utils.format("unzipping %s failed", downloadTo)));
-					}
+					new UnzipTask(WndModSelect.this).execute(downloadTo);
 				} else {
 					Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 				}
 			}
 		});
+	}
+
+	@Override
+	public void UnzipComplete(final Boolean result) {
+		Game.executeInGlThread(new Runnable() {
+
+			@Override
+			public void run() {
+				if (result) {
+					Game.scene().add(new WndModSelect());
+				} else {
+					Game.scene().add(new WndError(Utils.format("unzipping %s failed", downloadTo)));
+				}
+			}
+		});
+
 	}
 }
