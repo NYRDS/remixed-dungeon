@@ -78,8 +78,7 @@ public class SystemText extends Text {
 			TextPaint cp = new TextPaint();
 			cp.set(tx);
 			cp.setStyle(Paint.Style.STROKE);
-			cp.setStrokeWidth(textSize * 0.3f);
-			//cp.setStrokeWidth(textSize/3 );
+			cp.setStrokeWidth(textSize * 0.2f);
 			cp.setColor(Color.BLACK);
 			cp.setAntiAlias(true);
 
