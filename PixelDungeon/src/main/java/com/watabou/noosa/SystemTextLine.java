@@ -46,14 +46,12 @@ public class SystemTextLine extends Visual {
 	public SystemTextLine(Bitmap bitmap) {
 		this();
 
+		//texture = new SmartTexture(bitmap,Texture.NEAREST, Texture.CLAMP);
 		texture = new SmartTexture(bitmap);
 
-		//if(GlUtils.isNpotMipmapsSupported()) {
-		//	texture.filter(GLES20.GL_LINEAR_MIPMAP_LINEAR, GLES20.GL_NEAREST);
-		//	GLES20.glGenerateMipmap(GLES20.GL_TEXTURE_2D);
-		//} else {
-			texture.filter(GLES20.GL_LINEAR, GLES20.GL_LINEAR);
-		//}
+		texture.filter(GLES20.GL_LINEAR, GLES20.GL_LINEAR);
+
+
 		frame( new RectF( 0, 0, 1, 1 ) );
 	}
 
