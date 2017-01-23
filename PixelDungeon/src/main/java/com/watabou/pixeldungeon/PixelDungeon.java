@@ -32,6 +32,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.items.ItemSpritesDescription;
@@ -302,9 +303,10 @@ public class PixelDungeon extends Game {
     public static int version() {
         return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
     }
-	
+
 	public static void fontScale(int value) {
 		Preferences.INSTANCE.put(Preferences.KEY_FONT_SCALE, value);
+		SystemText.updateFontScale();
 	}
 
 	public static int fontScale() {
