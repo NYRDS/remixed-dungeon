@@ -2,6 +2,7 @@
    "Levels":{
       "0":{"kind":"SewerLevel", "depth":0,        "size":[0,0]},
       "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json"},
+      "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "file":"levelsDesc/Theater.json"},
       "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true},
 
       "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
@@ -59,7 +60,8 @@
    },
    "Graph":{
       "0":[["town"],[]],
-      "town":[["empty_interior", "empty_interior", "empty_interior", "1"],[]],
+      "movie_theater":[[],["town"]],
+      "town":[["empty_interior", "empty_interior", "movie_theater", "1"],[]],
       "empty_interior":[[],["town"]],
       "1":[["2"],["town"],[4]],
       "2":[["3"],["1"]],
