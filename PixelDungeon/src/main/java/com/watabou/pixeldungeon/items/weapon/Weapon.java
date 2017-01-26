@@ -59,9 +59,9 @@ public class Weapon extends KindOfWeapon {
 	public float	ACU	= 1;
 	public float	DLY	= 1f;
 
-	public boolean enchatable = true;
+	protected boolean enchatable = true;
 
-	protected int  gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
+	private int gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
 
 	
 	public enum Imbue {
