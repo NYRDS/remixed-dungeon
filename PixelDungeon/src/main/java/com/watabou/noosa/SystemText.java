@@ -70,7 +70,7 @@ public class SystemText extends Text {
 			throw new TrackedRuntimeException("zero sized font!!!");
 		}
 
-		float textSize = (int) (size * oversample);
+		float textSize = size * oversample;
 		if (!textPaints.containsKey(textSize)) {
 			TextPaint tx = new TextPaint();
 
