@@ -6,8 +6,8 @@
       "test_random":{"kind":"RandomLevel", "depth":2, "file":"levelsDesc/TestLevelRandom.json"},
       "test_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true},
       "tiled_test":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/TiledTest.json"},
-     "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "file":"levelsDesc/Theater.json"},
-      "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json"},
+     "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "file":"levelsDesc/Theater.json", "noFogOfWar":true},
+      "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json", "noFogOfWar":true},
 
      "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
 
@@ -70,7 +70,7 @@
       "test_random":[["1"],["test_sewers"]],
       "shadow_lord_level":[["26"],["25"]],
       "empty_interior":[[],["test_town"]],
-     "movie_theater":[[],["town"]],
+     "movie_theater":[[],["town"], [3]],
      "test_town":[["empty_interior", "empty_interior", "movie_theater", "1"],[]],
       "1":[["2"],["test_town"],[4]],
       "2":[["3"],["1"]],
