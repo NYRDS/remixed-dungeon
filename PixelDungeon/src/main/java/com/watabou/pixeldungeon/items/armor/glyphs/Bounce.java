@@ -36,24 +36,26 @@ public class Bounce extends Glyph {
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {
 
-		int level = Math.max( 0, armor.level() );
-		
-		if (Dungeon.level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( level + 5) >= 4) {
+		int armorLevel = Math.max( 0, armor.level() );
+
+		Level level = Dungeon.level;
+
+		if (attacker.isMovable() && level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( armorLevel + 5) >= 4) {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				int ofs = Level.NEIGHBOURS8[i];
 				if (attacker.getPos() - defender.getPos() == ofs) {
 					int newPos = attacker.getPos() + ofs;
-					if ( newPos < 0 || newPos > Dungeon.level.passable.length){
+					if ( newPos < 0 || newPos > level.passable.length){
 						newPos = defender.getPos();
 					}
-					if ((Dungeon.level.passable[newPos] || Dungeon.level.avoid[newPos]) && Actor.findChar( newPos ) == null) {
+					if ((level.passable[newPos] || level.avoid[newPos]) && Actor.findChar( newPos ) == null) {
 						
 						Actor.addDelayed( new Pushing( attacker, attacker.getPos(), newPos ), -1 );
 						
 						attacker.setPos(newPos);
 
-						Dungeon.level.press(newPos, attacker);
+						level.press(newPos, attacker);
 					}
 					break;
 				}
@@ -65,8 +67,8 @@ public class Bounce extends Glyph {
 	}
 	
 	@Override
-	public String name( String weaponName) {
-		return Utils.format( TXT_BOUNCE, weaponName );
+	public String name( String armorName) {
+		return Utils.format( TXT_BOUNCE, armorName );
 	}
 
 }

@@ -50,7 +50,7 @@ public class Fadeleaf extends Plant {
 			hero.spendAndNext(1);
 			hero.curAction = null;
 			
-		} else if (ch instanceof Mob) {
+		} else if (ch instanceof Mob && ch.isMovable()) {
 			
 			int newPos = Dungeon.level.randomRespawnCell();
 			if (Dungeon.level.cellValid(newPos)) {

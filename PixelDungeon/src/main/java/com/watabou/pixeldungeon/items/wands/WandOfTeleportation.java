@@ -58,7 +58,7 @@ public class WandOfTeleportation extends Wand {
 			setKnown();
 			ScrollOfTeleportation.teleportHero(getCurUser());
 
-		} else if (ch != null && ! (ch instanceof Boss) ) {
+		} else if (ch != null && ! (ch instanceof Boss) && ch.isMovable() ) {
 
 			teleport(ch);
 
