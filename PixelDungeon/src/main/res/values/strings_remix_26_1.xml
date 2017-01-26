@@ -20,4 +20,10 @@
     <string name="HealerNPC_Message2">Special offer! Only this season: free heal!</string>
     <string name="HealerNPC_Message3">I wonder why church doesn\'t allow us to wear hats... it\'s really cold here.</string>
 
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">employee</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
+    <string name="ServiceManNPC_Name_Objective">employee</string>
+    <string name="ServiceManNPC_Desc">A regular worker of local establishments.</string>
+    <string name="ServiceManNPC_Message1">Our tickets not just free, we actually willing to pay you for watching our movie, sick!</string>
 </resources>
