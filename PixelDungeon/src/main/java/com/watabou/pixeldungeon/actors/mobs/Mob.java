@@ -80,7 +80,7 @@ public abstract class Mob extends Char {
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
 
-	private AiState state = SLEEPING;
+	private   AiState state   = SLEEPING;
 
 	protected Object spriteClass;
 

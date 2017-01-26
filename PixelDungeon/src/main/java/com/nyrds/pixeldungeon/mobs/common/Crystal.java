@@ -22,6 +22,10 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable{
 
 	static private int ctr = 0;
 
+	{
+		movable = false;
+	}
+
 	public Crystal() {
 		adjustStats(Dungeon.depth);
 

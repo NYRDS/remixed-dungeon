@@ -97,6 +97,7 @@ public abstract class Char extends Actor {
 	private int HP;
 
 	protected float baseSpeed = 1;
+	protected boolean movable = true;
 
 	public boolean paralysed = false;
 	public boolean pacified  = false;
@@ -522,6 +523,10 @@ public abstract class Char extends Actor {
 
 	public void move(int step) {
 
+		if(!isMovable()) {
+			return;
+		}
+
 		if (buff(Vertigo.class) != null && Dungeon.level.adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 			List<Integer> candidates = new ArrayList<>();
 			for (int dir : Level.NEIGHBOURS8) {
@@ -653,5 +658,9 @@ public abstract class Char extends Actor {
 
 	public void onZapComplete() {
 		next();
+	}
+
+	public boolean isMovable() {
+		return movable;
 	}
 }
