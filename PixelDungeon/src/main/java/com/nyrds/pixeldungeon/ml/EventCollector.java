@@ -7,6 +7,8 @@ import com.google.android.gms.analytics.Tracker;
 import com.nyrds.android.util.Util;
 import com.watabou.pixeldungeon.Preferences;
 
+import java.util.HashMap;
+
 /**
  * Created by mike on 09.03.2016.
  */
@@ -15,6 +17,8 @@ public class EventCollector {
 
 	static private Tracker mTracker;
 	static private boolean mDisabled = true;
+
+	static private HashMap<String, Long> timings;
 
 	private static boolean googleAnalyticsUsable() {
 		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
@@ -79,7 +83,6 @@ public class EventCollector {
 			e.printStackTrace();
 		}
 	}
-
 
 	static public void startTiming(String id) {
 
