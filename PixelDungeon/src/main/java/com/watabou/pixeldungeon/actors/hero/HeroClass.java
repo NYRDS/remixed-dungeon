@@ -174,7 +174,6 @@ public enum HeroClass {
 
 	private static void initCommon(Hero hero) {
 		(hero.belongings.armor = new ClothArmor()).identify();
-		hero.collect(new Ration());
 		if(BuildConfig.DEBUG) initDebug(hero);
 		QuickSlot.cleanStorage();
 	}
