@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.text.TextPaint;
 
@@ -38,7 +39,7 @@ public class SystemText extends Text {
 
 	private boolean needWidth = false;
 
-	private static float fontScale  = Float.NaN;
+	private static float fontScale = Float.NaN;
 
 	public SystemText(float baseLine) {
 		this("", baseLine, false);
@@ -47,7 +48,7 @@ public class SystemText extends Text {
 	public SystemText(String text, float size, boolean multiline) {
 		super(0, 0, 0, 0);
 
-		if(fontScale!=fontScale) {
+		if (fontScale != fontScale) {
 			updateFontScale();
 		}
 
@@ -69,12 +70,15 @@ public class SystemText extends Text {
 			throw new TrackedRuntimeException("zero sized font!!!");
 		}
 
-		float textSize = (int)(size * oversample );
+		float textSize = (int) (size * oversample);
 		if (!textPaints.containsKey(textSize)) {
 			TextPaint tx = new TextPaint();
 
 			tx.setTextSize(textSize);
 			tx.setStyle(Paint.Style.FILL);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+				//tx.setHinting(Paint.HINTING_ON);
+			}
 			tx.setAntiAlias(true);
 
 			tx.setColor(Color.WHITE);
@@ -104,10 +108,16 @@ public class SystemText extends Text {
 
 		scale *= 1.2f;
 
-		if(scale < 0.1f){ fontScale = 0.1f; return;}
-		if(scale > 4)   { fontScale = 4f; return; }
+		if (scale < 0.1f) {
+			fontScale = 0.1f;
+			return;
+		}
+		if (scale > 4) {
+			fontScale = 4f;
+			return;
+		}
 
-		if(Game.smallResScreen()) {
+		if (Game.smallResScreen()) {
 			scale *= 1.5;
 		}
 
@@ -141,50 +151,62 @@ public class SystemText extends Text {
 		texts.remove(this);
 	}
 
-	private ArrayList<Float> xCharPos = new ArrayList<>();
+	private ArrayList<Float>   xCharPos   = new ArrayList<>();
+	private ArrayList<Integer> codePoints = new ArrayList<>();
 
 	private float fontHeight;
+
+	private float lineWidth;
 
 	private int fillLine(int startFrom) {
 		int offset = startFrom;
 
 		float xPos = 0;
+		lineWidth = 0;
 		xCharPos.clear();
+		codePoints.clear();
 
 		final int length = text.length();
 		int lastWordOffset = offset;
 
+		int codepoint = 0;
+		int lastWordStart = 0;
+
 		for (; offset < length; ) {
-			final int codepoint = text.codePointAt(offset);
+
+			codepoint = text.codePointAt(offset);
 			int codepointCharCount = Character.charCount(codepoint);
-
-			xCharPos.add(xPos);
-
-			float xDelta = symbolWidth(text.substring(offset, offset
-					+ codepointCharCount));
-
 			offset += codepointCharCount;
 
 			if (Character.isWhitespace(codepoint)) {
 				lastWordOffset = offset;
+				lastWordStart = xCharPos.size();
+			} else {
+				xCharPos.add(xPos);
+				codePoints.add(codepoint);
 			}
 
 			if (codepoint == 0x000A) {
 				return offset;
 			}
 
-			xPos += xDelta;
+			xPos += symbolWidth(Character.toString((char) (codepoint)));
+			lineWidth = xPos;
 
 			if (maxWidth != Integer.MAX_VALUE
 					&& xPos > maxWidth / scale.x) {
 				if (lastWordOffset != startFrom) {
+					xCharPos.subList(lastWordStart, xCharPos.size()).clear();
+					codePoints.subList(lastWordStart,codePoints.size()).clear();
 					return lastWordOffset;
 				} else {
+					xCharPos.remove(xCharPos.size() - 1);
+					codePoints.remove(codePoints.size()-1);
 					return offset - 1;
 				}
 			}
 		}
-		xCharPos.add(xPos);
+
 		return offset;
 	}
 
@@ -203,7 +225,7 @@ public class SystemText extends Text {
 			lineImage.clear();
 			width = 0;
 
-			height = fontHeight/4;
+			height = fontHeight / 4;
 
 			int charIndex = 0;
 			int startLine = 0;
@@ -212,12 +234,8 @@ public class SystemText extends Text {
 
 				int nextLine = fillLine(startLine);
 
-				float lineWidth = 0;
-
-				if (nextLine > 0) {
-					lineWidth = xCharPos.get(xCharPos.size() - 1) + 1;
-					width = Math.max(lineWidth, width);
-				}
+				lineWidth += oversample;
+				width = Math.max(lineWidth, width);
 
 				height += fontHeight;
 
@@ -229,8 +247,8 @@ public class SystemText extends Text {
 
 					Canvas canvas = new Canvas(bitmap);
 
-					drawTextLine(charIndex, nextLine, startLine, canvas, contourPaint);
-					charIndex = drawTextLine(charIndex, nextLine, startLine, canvas, textPaint);
+					drawTextLine(charIndex, canvas, contourPaint);
+					charIndex = drawTextLine(charIndex, canvas, textPaint);
 
 					SystemTextLine line = new SystemTextLine(bitmap);
 					line.setVisible(getVisible());
@@ -243,49 +261,27 @@ public class SystemText extends Text {
 		}
 	}
 
-	private int drawTextLine(int charIndex, int nextLine, int startLine, Canvas canvas, TextPaint paint) {
-		int offset = startLine;
-		int lineCounter = 0;
+	private int drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
 
 		float y = (fontHeight) * oversample - textPaint.descent();
-/*
-		if(mask == null) {
-			for (; offset < nextLine; ) {
-				final int codepoint = text.codePointAt(offset);
-				int codepointCharCount = Character.charCount(codepoint);
 
-				if (!Character.isWhitespace(codepoint)) {
-					charIndex++;
-				}
+		//final int charsToDraw = Math.min(codePoints.size(),xCharPos.size());
 
-				lineCounter++;
-				offset += codepointCharCount;
+		final int charsToDraw = codePoints.size();
+
+		for (int i = 0; i < charsToDraw; ++i) {
+			int codepoint = codePoints.get(i);
+
+			if (mask == null
+					|| (charIndex < mask.length && mask[charIndex])) {
+
+				float x = (xCharPos.get(i) + 0.5f ) * oversample;
+
+				canvas.drawText(Character.toString((char) codepoint), x, y, paint);
 			}
-
-				float x = (xCharPos.get(0) + 0.5f) * oversample;
-				canvas.drawText(text.substring(startLine, offset), x, y, paint);
-			return charIndex;
+			charIndex++;
 		}
-*/
-		for (; offset < nextLine; ) {
-			final int codepoint = text.codePointAt(offset);
-			int codepointCharCount = Character.charCount(codepoint);
 
-			if (!Character.isWhitespace(codepoint)) {
-				if (mask == null
-						|| (charIndex < mask.length && mask[charIndex])) {
-
-					String txt = text.substring(offset, offset + codepointCharCount);
-					float x = (xCharPos.get(lineCounter) + 0.5f) * oversample;
-
-					canvas.drawText(txt, x, y, paint);
-				}
-				charIndex++;
-			}
-
-			lineCounter++;
-			offset += codepointCharCount;
-		}
 		return charIndex;
 	}
 
