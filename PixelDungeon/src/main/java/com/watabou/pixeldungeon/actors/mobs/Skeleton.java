@@ -75,8 +75,8 @@ public class Skeleton extends UndeadMob {
 		super.die( cause );
 		
 		boolean heroKilled = false;
-		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-			Char ch = findChar( getPos() + Level.NEIGHBOURS8[i] );
+		for (int i=0; i < Level.NEIGHBOURS4.length; i++) {
+			Char ch = findChar( getPos() + Level.NEIGHBOURS4[i] );
 			if (ch != null && ch.isAlive()) {
 				int damage = Math.max( 0,  damageRoll() - Random.IntRange( 0, ch.dr() / 2 ) );
 				ch.damage( damage, this );
