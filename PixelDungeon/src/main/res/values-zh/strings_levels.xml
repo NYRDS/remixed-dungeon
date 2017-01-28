@@ -43,7 +43,7 @@
   <string name="Level_TileDescHighGrass">茂密的植被阻挡了视线。</string>
   <string name="Level_TileDescLockedDoor">这扇门锁上了，你需要一把配对的钥匙来打开它。</string>
   <string name="Level_TileDescLockedExit">沉重的铁栏杆封锁住了向下的楼梯。</string>
-  <string name="Level_TileDescBarricade">木栅栏依然坚固，但早已风干多年。烧了怎么样？</string>
+  <string name="Level_TileDescBarricade">木栅栏依然坚固，但早已风干多年。也许它可以被烧掉？</string>
   <string name="Level_TileDescSign">你从这里看不到上面写着什么。</string>
   <string name="Level_TileDescTrap">踩到隐藏的压力板会启动这个陷阱。</string>
   <string name="Level_TileDescInactiveTrap">这个陷阱已经被触发过了，现在不再危险。</string>
@@ -57,7 +57,7 @@
   <string name="Caves_TileDescEntrance">通向上一层的梯子。</string>
   <string name="Caves_TileDescExit">通向下一层的梯子。</string>
   <string name="Caves_TileDescHighGrass">巨大的蘑菇阻挡了视线。</string>
-  <string name="Caves_TileDescDeco">一些矿脉在墙上清晰可见。金子？</string>
+  <string name="Caves_TileDescDeco">一些矿脉在墙上清晰可见。是金子吗？</string>
   <string name="Caves_TileDescBookshelf">谁会需要在矿洞里放个书架？</string>
   <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
   <string name="City_TileWater">有着可疑颜色的水</string>
