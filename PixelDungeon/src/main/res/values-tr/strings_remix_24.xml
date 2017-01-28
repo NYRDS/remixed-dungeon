@@ -15,11 +15,11 @@
 	
 	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">Neko Ears</string>
-    <string name="NekoEars_Info">Sometimes you want to wash off all that monster blood and dirt and just feel cute and fluffy... Or at very least you can wear cute cat ears.</string>
+    <string name="NekoEars_Info">Bazen sen tüm o canavar kanı ve topraktan kurtulmak isteyip şirin ve yumuşak hissetmek istersin... Veya en azından şirin kedi kulakları takabilirsin.</string>
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">tavşan kulakları</string>
-    <string name="RabbitEars_Info">It\'s a well known belief that rabbits is a lucky beast, and their luck would transfer to those who obtained part of a rabbit\'s body. On a second thought being killed for decoration made out of your ears doesn\'t particularly lucky.</string>
+    <string name="RabbitEars_Info">Birçok insan bilir ki tavşan şanslı bir hayvandır, ve onların şansı tavşanın bir vücut parçasına sahip olana geçer. İki kere düşününce kulaklarından yapılma bir dekorasyon için öldürülmek şanslı olmak değil.</string>
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">balkabağı</string>

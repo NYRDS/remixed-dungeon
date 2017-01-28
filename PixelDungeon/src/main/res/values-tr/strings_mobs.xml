@@ -14,14 +14,17 @@
   <string name="Acidic_Name">asidik akrep</string>
   <string name="Acidic_Gender">erkeksi</string>
   <string name="Acidic_Name_Objective">asidik akrep</string>
+  <string name="Acidic_Desc">Bu devasa eklembacaklı-gibi şeytani yaratıklar ne olusa olsun yakın dövüşten sakınıp uzun menzilden sakatlayan tırtıklı dikenler fırlatırlar.</string>
   <!--STRINGS OF Albino CLASS-->
-  <string name="Albino_Name">albino sıçan</string>
+  <string name="Albino_Name">Albino fare</string>
   <string name="Albino_Gender">erkeksi</string>
   <string name="Albino_Name_Objective">Albino Fare</string>
+  <string name="Albino_Desc">Keseli sıçanlar argesif, ama zayıf lağım sakinleridir. Sadece büyük sayılarda tehlikeli olabilirler. Bu sıçan albinoya benziyor. Bu arada anormal derecede keskin dişleri var. </string>
   <!--STRINGS OF Bandit CLASS-->
   <string name="Bandit_Name">Çılgın Haydut</string>
   <string name="Bandit_Gender">erkeksi</string>
   <string name="Bandit_Name_Objective">Çılgın Haydut</string>
+  <string name="Bandit_Desc">Zindanın derin seviyeleri her zaman her türden suçlular için bir saklanma noktası olmuştur. Bazıları gün ışığından uzaktaki uzun sürelerde berrak bir zihinle düşünmeyi başaramamıştır. Uzun süre önce, bu çılgın hırsız ve haydutlar kim olduğunu ve niye çaldıklarını unuttular. Bu haydut belli ki hançerini birşey ile kaplamış!</string>
   <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">vampir yarasa</string>
   <string name="Bat_Gender">erkeksi</string>
@@ -29,7 +32,8 @@
   <string name="Bat_Desc">Bu mağara kubbeleri altında yaşayan inatçı ve hareketli yaratıklar kendilerinde çok büyük düşmanları başarılı her saldırılarında canlarını yenileyerek atl edebilir</string>
   <string name="Bat_Defense">savuşturdu</string>
   <!--STRINGS OF Brute CLASS-->
-  <string name="Brute_Name_Objective">Yaban gnoll</string>
+  <string name="Brute_Name">gnoll kabadayı</string>
+  <string name="Brute_Name_Objective">gnoll kabadayı</string>
   <string name="Brute_Desc">Yabaniler en büyük ve güçlü gnoll türüdür.  Çok kötü yaralandıklarında çılgına döner ve düşmanlarına çok büyük zarar verebilir.</string>
   <string name="Brute_Gender">erkeksi</string>
   <string name="Brute_Enraged">%s çıldırdı!</string>
@@ -38,11 +42,14 @@
   <string name="Crab_Name">lağım yengeci</string>
   <string name="Crab_Gender">erkek</string>
   <string name="Crab_Name_Objective">lağım yengeci</string>
+  <string name="Crab_Desc">Bu devasa yengeçler lağımlarda besin zincirinin başındadır.
+Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabilir.</string>
   <string name="Crab_Defense">savuşturdu</string>
   <!--STRINGS OF DM300 CLASS-->
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">masculine</string>
   <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Desc">Bu makine birkaç yüzyıl önce Cüceler tarafından yapıldı. Sonra Cüceler golemleri, elementalleri ve hatta şeytanları makineler yerine kullanmaya başladı. Bu eninde sonunda onların uygarlıklarını düşüşe zorladı. DM-300 ve benzeri makineler genellikle inşaat ve madencilikte ve bazı durumlarda şehir savunmasında kullanıldı.</string>
   <string name="DM300_Info1">DM-300 kendini onardı!</string>
   <string name="DM300_Info2">Görev başarısız.kapatılıyor.</string>
   <string name="DM300_Info3">Yetkisiz personel tespit edildi.</string>

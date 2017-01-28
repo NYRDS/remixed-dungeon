@@ -5,6 +5,8 @@
   <string name="AzuterronNPC_Name">yabancı</string>
   <string name="AzuterronNPC_Gender">erkeksi</string>
   <string name="AzuterronNPC_Name_Objective">yabancı</string>
+  <string name="AzuterronNPC_Desc">Siyah bir sis ile kaplı gizemli bir figür.</string>
+  <string name="AzuterronNPC_Quest_Start">Ah, niye... oh, sen beni görebiliyorsun değil mi? Sanırım bunun anlamı sen \"onlardan\" değilsin. Görüyorum ki sen bu canavarlardan benim gibi hoşlanmıyorsun. Ne diyeceğim, eğer sen bana bu küçük sorunla yardım edersen, o zaman ben sana yardım edebilirim. Bu seviyede bir yerde karanlığın canavarını, bir _Hain Ruh_  bulacaksın. Onu öldür, _kalbini_  getir ve bana geri dön.  Son birşey daha, eğer kaynaklarımı satın almak ile ilgileniyorsan, sormaktan çekinme.</string>
   <string name="AzuterronNPC_Quest_Reminder">bana yardım et bende sana yardım edeyim</string>
   <string name="AzuterronNPC_Quest_End">Harika. Bu iksiri al, faydasını göreceksin.</string>
   <string name="Journal_Azuterron">yabancı</string>
@@ -40,6 +42,6 @@
   <string name="DarkVeil_Buff">Kara maske</string>
   <!--Badges-->
   <string name="Badges_Yog_Slain">Yog-Dzewa öldürüldü</string>
-  <string name="Badges_ShadowLord_Slain">gölgelerin efendisi öldü.</string>
-  <string name="Badges_SpiderQueen_Slain">örümcek kraliçe öldü.</string>
+  <string name="Badges_ShadowLord_Slain">Gölgelerin Efendisi öldü.</string>
+  <string name="Badges_SpiderQueen_Slain">Örümcek Kraliçe öldü.</string>
 </resources>
