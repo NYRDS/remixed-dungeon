@@ -52,9 +52,11 @@ public class WelcomeScene extends PixelScene {
 				Game.getVar(R.string.Welcome_Text_26)
 		};
 
-		Text[] updTexts = new Text[upds.length];
+		int displayUpdates = Math.min(upds.length, 5);
 
-		for (int i = 0; i < upds.length; i++) {
+		Text[] updTexts = new Text[displayUpdates];
+
+		for (int i = 0; i < displayUpdates; i++) {
 			updTexts[i] = createMultiline(GuiProperties.regularFontSize());
 		}
 
@@ -92,7 +94,7 @@ public class WelcomeScene extends PixelScene {
 		content.clear();
 
 		float yPos = 0;
-		for (int i = 0; i < upds.length; i++) {
+		for (int i = 0; i < displayUpdates; i++) {
 			updTexts[i].maxWidth((int) panel.innerWidth());
 			updTexts[i].text(upds[upds.length - i - 1]);
 			updTexts[i].measure();
