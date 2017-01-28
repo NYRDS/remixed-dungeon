@@ -212,7 +212,7 @@ public class SystemText extends Text {
 
 	@SuppressLint("NewApi")
 	private void createText() {
-		if (text == null || text.isEmpty()) {
+		if (text == null) {
 			return;
 		}
 
