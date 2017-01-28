@@ -1,11 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
-import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -19,13 +15,9 @@ import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
 import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
-import com.watabou.pixeldungeon.levels.LastShopLevel;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
-import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -53,10 +45,10 @@ public class TownShopLevel extends RegularLevel {
 	@Override
 	protected boolean build() {
 		Arrays.fill( map, Terrain.WALL );
-		Painter.fill( this, 2, 2, SIZE-2, SIZE-2, Terrain.EMPTY );
+		Painter.fill( this, 2, 2, SIZE-2, SIZE-2, Terrain.EMPTY_SP );
+		Painter.fill( this, SIZE/2, SIZE/2, 2, 2, Terrain.EMPTY );
 
 		entrance = SIZE * getWidth() + SIZE / 2 + 1;
-		map[SIZE-2] = Terrain.EMPTY_SP;
 		map[entrance] = Terrain.ENTRANCE;
 
 
@@ -82,7 +74,12 @@ public class TownShopLevel extends RegularLevel {
 		Item[] range = items.toArray(new Item[items.size()]);
 
 		for (int i=0; i < range.length; i++) {
-			this.drop( range[i], this.getRandomTerrainCell(Terrain.EMPTY)).type = Heap.Type.FOR_SALE;
+			int cell;
+			do {
+				cell = this.getRandomTerrainCell(Terrain.EMPTY_SP);
+			} while (this.getHeap( cell ) != null);
+
+			this.drop( range[i], cell).type = Heap.Type.FOR_SALE;
 		}
 	}
 
@@ -105,7 +102,7 @@ public class TownShopLevel extends RegularLevel {
 	protected void createMobs() {
 
 		Mob shopkeeper =  new Shopkeeper();
-		shopkeeper.setPos(this.getRandomTerrainCell(Terrain.EMPTY_SP));
+		shopkeeper.setPos(this.getRandomTerrainCell(Terrain.EMPTY));
 		this.mobs.add( shopkeeper );
 
 		return;
