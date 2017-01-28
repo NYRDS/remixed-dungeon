@@ -14,6 +14,7 @@ import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.RandomLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
+import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
@@ -117,6 +118,8 @@ public class DungeonGenerator {
 		registerLevelClass(IceCavesLevel.class);
 		registerLevelClass(IceCavesBossLevel.class);
 		registerLevelClass(RandomLevel.class);
+		registerLevelClass(TownShopLevel.class);
+
 	}
 
 	public static String getEntryLevelKind() {
