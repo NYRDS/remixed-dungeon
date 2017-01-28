@@ -153,6 +153,7 @@ public class SystemText extends Text {
 
 	private ArrayList<Float>   xCharPos   = new ArrayList<>();
 	private ArrayList<Integer> codePoints = new ArrayList<>();
+	private String currentLine;
 
 	private float fontHeight;
 
@@ -197,11 +198,11 @@ public class SystemText extends Text {
 					&& xPos > maxWidth / scale.x) {
 				if (lastWordOffset != startFrom) {
 					xCharPos.subList(lastWordStart, xCharPos.size()).clear();
-					codePoints.subList(lastWordStart,codePoints.size()).clear();
+					codePoints.subList(lastWordStart, codePoints.size()).clear();
 					return lastWordOffset;
 				} else {
 					xCharPos.remove(xCharPos.size() - 1);
-					codePoints.remove(codePoints.size()-1);
+					codePoints.remove(codePoints.size() - 1);
 					return offset - 1;
 				}
 			}
@@ -234,18 +235,21 @@ public class SystemText extends Text {
 
 				int nextLine = fillLine(startLine);
 
-				lineWidth += oversample;
-				width = Math.max(lineWidth, width);
-
 				height += fontHeight;
 
 				if (lineWidth > 0) {
+
+					lineWidth += 1;
+					width = Math.max(lineWidth, width);
+
 					Bitmap bitmap = Bitmap.createBitmap(
 							(int) (lineWidth * oversample),
 							(int) (fontHeight * oversample),
 							Bitmap.Config.ARGB_4444);
 
 					Canvas canvas = new Canvas(bitmap);
+
+					currentLine = text.substring(startLine,nextLine);
 
 					drawTextLine(charIndex, canvas, contourPaint);
 					charIndex = drawTextLine(charIndex, canvas, textPaint);
@@ -265,17 +269,20 @@ public class SystemText extends Text {
 
 		float y = (fontHeight) * oversample - textPaint.descent();
 
-		//final int charsToDraw = Math.min(codePoints.size(),xCharPos.size());
-
 		final int charsToDraw = codePoints.size();
+
+		if (mask == null) {
+			float x = (xCharPos.get(0) + 0.5f) * oversample;
+			canvas.drawText(currentLine, x, y, paint);
+			return charIndex + codePoints.size();
+		}
 
 		for (int i = 0; i < charsToDraw; ++i) {
 			int codepoint = codePoints.get(i);
 
-			if (mask == null
-					|| (charIndex < mask.length && mask[charIndex])) {
+			if (charIndex < mask.length && mask[charIndex]) {
 
-				float x = (xCharPos.get(i) + 0.5f ) * oversample;
+				float x = (xCharPos.get(i) + 0.5f) * oversample;
 
 				canvas.drawText(Character.toString((char) codepoint), x, y, paint);
 			}
