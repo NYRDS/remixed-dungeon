@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
 import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
@@ -23,7 +24,7 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class TownShopLevel extends RegularLevel {
+public class TownShopLevel extends Level {
 
 	private static final int SIZE = 6;
 
@@ -81,16 +82,6 @@ public class TownShopLevel extends RegularLevel {
 
 			this.drop( range[i], cell).type = Heap.Type.FOR_SALE;
 		}
-	}
-
-	@Override
-	protected boolean[] water() {
-		return new boolean[0];
-	}
-
-	@Override
-	protected boolean[] grass() {
-		return new boolean[0];
 	}
 
 	@Override
