@@ -17,15 +17,16 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -84,6 +85,12 @@ public class Shopkeeper extends NPC {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
+
+				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
+					GameScene.selectItemFromBag( itemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
+					return;
+				}
+
 				WndBag parentWnd = sell();
 				GameScene.show( new WndTradeItem( item, parentWnd ) );
 			}
