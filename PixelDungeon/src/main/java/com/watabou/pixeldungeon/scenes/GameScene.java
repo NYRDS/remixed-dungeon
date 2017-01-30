@@ -55,6 +55,7 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -101,7 +102,7 @@ public class GameScene extends PixelScene {
 	private DungeonTilemap tiles;
 
 	@Nullable
-	private FogOfWar       fog;
+	private FogOfWar fog;
 
 	private static CellSelector cellSelector;
 
@@ -128,7 +129,7 @@ public class GameScene extends PixelScene {
 	private BusyIndicator   busy;
 
 	private volatile boolean sceneCreated = false;
-	private float waterSx = 0, waterSy = -5;
+	private          float   waterSx      = 0, waterSy = -5;
 
 	public void updateUiCamera() {
 		sb.setSize(uiCamera.width, 0);
@@ -243,7 +244,7 @@ public class GameScene extends PixelScene {
 			addBlobSprite(blob);
 		}
 
-		if(!Dungeon.level.noFogOfWar()) {
+		if (!Dungeon.level.noFogOfWar()) {
 			fog = new FogOfWar(level.getWidth(), level.getHeight());
 			fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
 			add(fog);
@@ -387,7 +388,7 @@ public class GameScene extends PixelScene {
 
 		super.update();
 
-		water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed );
+		water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed);
 
 		Actor.process(Game.elapsed);
 
@@ -605,7 +606,7 @@ public class GameScene extends PixelScene {
 
 	public static void afterObserve() {
 		if (scene != null && scene.sceneCreated) {
-			if(scene.fog!=null) {
+			if (scene.fog != null) {
 				scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
 			}
 
@@ -655,6 +656,15 @@ public class GameScene extends PixelScene {
 		} else {
 			return false;
 		}
+	}
+
+	public static WndBag selectItemFromBag(WndBag.Listener listener, Bag bag, WndBag.Mode mode, String title) {
+		cancelCellSelector();
+
+		WndBag wnd = new WndBag(bag, listener, mode, title);
+		scene.add(wnd);
+
+		return wnd;
 	}
 
 	public static WndBag selectItem(WndBag.Listener listener, WndBag.Mode mode, String title) {

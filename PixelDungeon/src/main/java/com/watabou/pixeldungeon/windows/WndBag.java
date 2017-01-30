@@ -170,9 +170,7 @@ public class WndBag extends WndTabbed {
 			return new WndBag( lastBag, listener, mode, title );
 			
 		} else {
-			
 			return new WndBag( Dungeon.hero.belongings.backpack, listener, mode, title );
-			
 		}
 	}
 	
