@@ -4,20 +4,14 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
+import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
@@ -74,6 +68,9 @@ public class WndMovieTheatre extends Window {
 
 	private void showAd(final ServiceManNPC npc) {
 		hide();
+
+		RewardVideoAds.showCinemaRewardVideo();
+
 		npc.say( TXT_THANK_YOU );
 		//TODO: Show add here
 

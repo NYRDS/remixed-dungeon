@@ -14,8 +14,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.PixelDungeon;
 
-import net.skoumal.emulatordetector.EmulatorDetector;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,8 +21,8 @@ import java.util.Map;
  * Created by mike on 24.05.2016.
  */
 public class Ads {
-	private static InterstitialAd mSaveAndLoadAd;
-	private static InterstitialAd mEasyModeSmallScreenAd;
+	private static InterstitialAd  mSaveAndLoadAd;
+	private static InterstitialAd  mEasyModeSmallScreenAd;
 
 	private static boolean isSmallScreen() {
 		return (Game.width() < 400 || Game.height() < 400);
@@ -34,8 +32,8 @@ public class Ads {
 		return Game.getDifficulty() == 0 && isSmallScreen() && PixelDungeon.donated() == 0;
 	}
 
-	private static boolean googleAdsUsable() {
-		return Flavours.haveAds() && ! EmulatorDetector.isEmulator();
+	public static boolean googleAdsUsable() {
+		return Flavours.haveAds();// && !EmulatorDetector.isEmulator();
 	}
 
 	private static void displayOwnEasyModeBanner() {
@@ -175,7 +173,7 @@ public class Ads {
 	}
 
 	public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
-		if(needDisplaySmallScreenEasyModeIs()) {
+		if (needDisplaySmallScreenEasyModeIs()) {
 			displayIsAd(work, mEasyModeSmallScreenAd);
 		} else {
 			work.returnToWork(true);
