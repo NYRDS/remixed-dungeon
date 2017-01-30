@@ -3,7 +3,7 @@
    "width" : 12,
    "height" : 14,
    "idle" : {
-      "fps" : 6,
+      "fps" : 2,
       "looped" : true,
       "frames" : [ 0, 1, 2, 3, 0, 0, 3, 3, 3, 2, 1,0]
    },
