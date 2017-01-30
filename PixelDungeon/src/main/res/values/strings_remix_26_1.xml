@@ -26,4 +26,15 @@
     <string name="ServiceManNPC_Name_Objective">employee</string>
     <string name="ServiceManNPC_Desc">A regular worker of local establishments.</string>
     <string name="ServiceManNPC_Message1">Our tickets not just free, we actually willing to pay you for watching our movie, sick!</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">watch a movie</string>
+    <string name="WndMovieTheatre_No">leave</string>
+    <string name="WndMovieTheatre_Bye">Come back any time, we always happy to see you!</string>
+    <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theatre! We provide a special service, you can watch a movie for free, and if you\'ll see it all the through you will be rewarded with %d gold coins!</string>
+    <string name="WndMovieTheatre_Title">Movie Theatre</string>
+    <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
+
+
 </resources>
