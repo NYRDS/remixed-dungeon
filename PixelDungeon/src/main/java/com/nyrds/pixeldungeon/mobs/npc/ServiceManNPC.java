@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -8,16 +9,13 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class ServiceManNPC extends NPC {
-
-	private static final String TXT_MESSAGE1 = Game.getVar(R.string.ServiceManNPC_Message1);
-
-	private static String[] TXT_PHRASES = {TXT_MESSAGE1};
 
 	public ServiceManNPC() {
 	}
@@ -31,12 +29,8 @@ public class ServiceManNPC extends NPC {
 	public String defenseVerb() {
 		return Game.getVar(R.string.Ghost_Defense);
 	}
-	
-	@Override
-	public float speed() {
-		return 0.5f;
-	}
-	
+
+
 	@Override
 	protected Char chooseEnemy() {
 		return DUMMY;
@@ -60,8 +54,7 @@ public class ServiceManNPC extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		int index = Random.Int(0, TXT_PHRASES.length);
-		say(TXT_PHRASES[index]);
+		GameScene.show( new WndMovieTheatre( this ) );
 
 		return true;
 	}
