@@ -1,0 +1,30 @@
+{
+   "texture" : "mobs/town_townsfolk_man.png",
+   "width" : 12,
+   "height" : 16,
+   "idle" : {
+      "fps" : 2,
+      "looped" : true,
+      "frames" : [0, 1, 2, 3]
+   },
+   "run" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0, 1, 2, 3]
+   },
+   "attack" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0, 1, 2, 3]
+   },
+   "die" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0, 1, 2, 3]
+   }
+
+}
+
+
+
+
