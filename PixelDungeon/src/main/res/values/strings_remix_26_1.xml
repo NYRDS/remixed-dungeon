@@ -35,7 +35,6 @@
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Name_Objective">employee</string>
     <string name="ServiceManNPC_Desc">A regular worker of local establishments.</string>
-    <string name="ServiceManNPC_Message1">Our tickets not just free, we actually willing to pay you for watching our movie, sick!</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
