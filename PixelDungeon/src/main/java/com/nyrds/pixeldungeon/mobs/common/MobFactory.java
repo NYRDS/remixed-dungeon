@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownGuardNPC;
+import com.nyrds.pixeldungeon.mobs.npc.TownsfolkNPC;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
@@ -188,6 +189,7 @@ public class MobFactory {
 		registerMobClass(HealerNPC.class);
 		registerMobClass(TownGuardNPC.class);
 		registerMobClass(ServiceManNPC.class);
+		registerMobClass(TownsfolkNPC.class);
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {
