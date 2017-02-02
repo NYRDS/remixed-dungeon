@@ -8,17 +8,27 @@
     <string name="TownGuardNPC_Name_Objective">town guard</string>
     <string name="TownGuardNPC_Desc">A regular town guard.</string>
     <string name="TownGuardNPC_Message1">Move along.</string>
-    <string name="TownGuardNPC_Message2">I used to be a knee like you, but then I took a sweetroll to an adventure...</string>
-    <string name="TownGuardNPC_Message3">You think there is to much guards in this town? Well that\'s only town with a dungeon that was infested by monsters, isn\'t it?</string>
-	
+    <string name="TownGuardNPC_Message2">Thanks to adventurers like you, it became really peaceful up here.</string>
+    <string name="TownGuardNPC_Message3">You think there is to much guards in this town? Well that\'s only town with a gigantic dungeon that was taken over by monsters, isn\'t it?</string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">townsfolk</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
+    <string name="TownsfolkNPC_Name_Objective">townsfolk</string>
+    <string name="TownsfolkNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes does look expensive</string>
+    <string name="TownsfolkNPC_Message1">Ah! Another adventurer, lovely! Make sure to loot as many valuables as you can!</string>
+    <string name="TownsfolkNPC_Message2">Town became so wealthy thanks to that dungeon, that everyone in town can afford to go on a vacation whenever we please! In fact that\'s why there is so few people in here right now.</string>
+    <string name="TownsfolkNPC_Message3">What a lovely day.</string>
+    <string name="TownsfolkNPC_Message4">I hope the sewers won\'t get flooded when spring arrives. We don\'t need another rat infestation.</string>
+
 	<!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">town priest</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Name_Objective">town priest</string>
     <string name="HealerNPC_Desc">An old man, somehow he looks like someone who would be making wands.</string>
-    <string name="HealerNPC_Message1">Health for everyone!</string>
-    <string name="HealerNPC_Message2">Special offer! Only this season: free heal!</string>
-    <string name="HealerNPC_Message3">I wonder why church doesn\'t allow us to wear hats... it\'s really cold here.</string>
+    <string name="HealerNPC_Message1">Free treatment for every adventurer!</string>
+    <string name="HealerNPC_Message2">Come back anytime you feel sick or hungry!</string>
+    <string name="HealerNPC_Message3">I wonder why church doesn\'t allow us to wear hats... it\'s really cold out here.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Name">employee</string>
