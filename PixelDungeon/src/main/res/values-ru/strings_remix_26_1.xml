@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+   
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">стражник</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
+    <string name="TownGuardNPC_Name_Objective">стражника</string>
+    <string name="TownGuardNPC_Desc">Типичный городской стражник.</string>
+    <string name="TownGuardNPC_Message1">Проходим не задерживаемся.</string>
+    <string name="TownGuardNPC_Message2">Благодаря таким людям, как ты, город стал гораздо безопаснее.</string>
+    <string name="TownGuardNPC_Message3">Думаешь здесь слишком много стражников? Это ведь единственный город в котором находится спуск в гигантское подземелье, захваченное монстрами, не так ли?</string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">горожанин</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
+    <string name="TownsfolkNPC_Name_Objective">горожанина</string>
+    <string name="TownsfolkNPC_Desc">Один из местных жителей. И не смотря на то, что это явно простолюдин, его одежда выглядит совсем не дешёвой.</string>
+    <string name="TownsfolkNPC_Message1">О! Ещё один приключенец, какая прелесть! Постарайся вынести из подземелья как можно больше ценностей!</string>
+    <string name="TownsfolkNPC_Message2">Город на столько обогатился за счёт этого подземелья, что почти всё население находится в отпусках! Поэтому здесь сейчас на столько малолюдно.</string>
+    <string name="TownsfolkNPC_Message3">Какой чудный день.</string>
+    <string name="TownsfolkNPC_Message4">Надеюсь этой весной канализацию не затопит. Очередное нашествие крыс нам ни к чему.</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">городской священик</string>
+    <string name="HealerNPC_Gender">masculine</string>
+    <string name="HealerNPC_Name_Objective">священика</string>
+    <string name="HealerNPC_Desc">Этот старик весьма походит на того, кто мог бы заниматься производством волшебных палочек.</string>
+    <string name="HealerNPC_Message1">Бесплатное лечение для каждого путешественника!</string>
+    <string name="HealerNPC_Message2">Если проголодаетесь или вас, не дай бог, ранят непременно возвращайтесь!</string>
+    <string name="HealerNPC_Message3">Ох, почему же церковь не позволяет носить шапки... здесь так холодно.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">сотрудник</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
+    <string name="ServiceManNPC_Name_Objective">сотрудника</string>
+    <string name="ServiceManNPC_Desc">Рядовой работник местных заведений.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">посмотреть фильм</string>
+    <string name="WndMovieTheatre_No">уйти</string>
+    <string name="WndMovieTheatre_Bye">Возвращайтесь в любое время, мы вам всегда рады!</string>
+    <string name="WndMovieTheatre_Instruction">Здравствуйте и добро пожаловать в наш кинотеатр! Вы можете принять участие в особой акции, посмотрите фильм, причём совершенно бесплатно. И если вы просмотрите его до конца то вы получите вознаграждение в размере %d золотых монет!</string>
+    <string name="WndMovieTheatre_Title">Кинотеатр</string>
+    <string name="WndMovieTheatre_Thank_You">Спасибо вам за участие!</string>
+
+
+</resources>
