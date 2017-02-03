@@ -37,7 +37,7 @@ public class Swarm extends Mob {
 		flying = true;
 	}
 
-	int generation	= 0;
+	private int generation = 0;
 	
 	private static final String GENERATION	= "generation";
 	

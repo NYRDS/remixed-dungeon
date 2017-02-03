@@ -1066,9 +1066,13 @@ public abstract class Level implements Bundlable {
 
 	public void mobPress(Mob mob) {
 
+		if(mob.flying) {
+			return;
+		}
+
 		int cell = mob.getPos();
 
-		if (pit[cell] && !mob.flying) {
+		if (pit[cell]) {
 			Chasm.mobFall(mob);
 			return;
 		}
