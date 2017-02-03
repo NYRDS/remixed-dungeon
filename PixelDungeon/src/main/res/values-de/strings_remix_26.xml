@@ -29,4 +29,8 @@
     <string name="ColdSpirit_Name_Objective">kalte Seele</string>
     <string name="ColdSpirit_Desc">Eine kalte Seele ist die Erscheinung von Kälte in ihrer reinsten Form. Sie sind gedankenlose Schalen, erschaffen durch Magie, verhält sich nach dem Willen des Erschaffers, oder nach Grundlegenden Instinkten und Reflexen.</string>
 
+    <string name="IceElemental_Name_Objective">EIsgeist</string>
+    <string name="CagedKobold_Desc">Ein Kobold, in einem Käfig.</string>
+    <string name="CagedKobold_Message1">Bitte...</string>
+    <string name="IceCaves_TileGrass">gefrorenes Gras.</string>
     </resources>

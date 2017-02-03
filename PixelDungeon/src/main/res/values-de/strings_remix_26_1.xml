@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Mobs descriptions -->
+   
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">Stadtwache</string>
+    <string name="TownGuardNPC_Name_Objective">Stadtwache</string>
+    <string name="TownGuardNPC_Desc">Eine gewöhnliche Stadtwache.</string>
+    <string name="TownGuardNPC_Message1">Geh weiter.</string>
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">Stadtbewohner</string>
+    <string name="TownsfolkNPC_Message3">Welch traumhafter Tag.</string>
+    <!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">Stadtpriester</string>
+    <string name="HealerNPC_Name_Objective">Stadtpriester</string>
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">Angestellter</string>
+    </resources>

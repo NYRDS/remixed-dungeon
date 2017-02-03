@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Mobs descriptions -->
+   
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">guardia de la ciudad</string>
+    <string name="TownGuardNPC_Gender">masculino</string>
+    <string name="TownGuardNPC_Name_Objective">guardia de la ciudad</string>
+    <string name="TownGuardNPC_Desc">Un guardia.</string>
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">cuidadano</string>
+    <string name="TownsfolkNPC_Gender">masculino</string>
+    <string name="TownsfolkNPC_Name_Objective">cuidadano</string>
+    <string name="TownsfolkNPC_Desc">Uno persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
+    <!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">sacerdote</string>
+    <string name="HealerNPC_Gender">masculino</string>
+    <string name="HealerNPC_Name_Objective">sacerdote</string>
+    <string name="HealerNPC_Desc">Un hombre viejo, se ve como alguien que hace varitas.</string>
+    <string name="HealerNPC_Message1">¡Tratamiento gratis para los aventureros!</string>
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">trabajador</string>
+    <string name="ServiceManNPC_Gender">masculino</string>
+    <string name="ServiceManNPC_Name_Objective">trabajador</string>
+    <string name="ServiceManNPC_Desc">Un trabajador de los establecimientos locales.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">mirar una pelicula</string>
+    <string name="WndMovieTheatre_No">salir</string>
+    <string name="WndMovieTheatre_Title">Cine</string>
+    <string name="WndMovieTheatre_Thank_You">¡Gracias por tu participación!</string>
+
+
+</resources>

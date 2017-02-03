@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">городянин</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
+    <string name="TownsfolkNPC_Name_Objective">городянина</string>
+    <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді тебе бачити!</string>
+    <string name="WndMovieTheatre_Title">Кінотеатр</string>
+    </resources>

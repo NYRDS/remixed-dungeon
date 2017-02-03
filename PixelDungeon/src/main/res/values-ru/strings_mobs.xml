@@ -191,7 +191,7 @@
   <string name="Thief_Gender">masculine</string>
   <string name="Thief_Name_Objective">вора</string>
   <string name="Thief_Desc">Глубинные уровни подземелья всегда служили хорошим укрытием для всякого рода преступников. Но не всякий преступник мог сохранить рассудок, будучи отлучённым от дневного света на долгое время. Давным-давно эти безумные бандиты и воры позабыли, кто они и зачем совершают преступления.</string>
-  <string name="Thief_Stole">%1$s украл у тебя %2$s!</string>
+  <string name="Thief_Stole">%1$s украл у тебя предмет %2$s!</string>
   <string name="Thief_Carries">\n\n%1$s носит _%2$s_. Добро, конечно, краденое.</string>
   <!--STRINGS OF Warlock CLASS-->
   <string name="Warlock_Name">дворф-чернокнижник</string>

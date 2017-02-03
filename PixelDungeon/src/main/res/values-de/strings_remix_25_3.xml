@@ -3,4 +3,9 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF Ushanka CLASS -->
     <string name="Ushanka_Name">Uschanka</string>
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">Vampirschädel</string>
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">Fass</string>
     </resources>
