@@ -1,12 +1,18 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import android.content.Context;
+import android.widget.Toast;
+
+import com.appodeal.ads.Appodeal;
+import com.appodeal.ads.RewardedVideoCallbacks;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -69,10 +75,49 @@ public class WndMovieTheatre extends Window {
 	private void showAd(final ServiceManNPC npc) {
 		hide();
 
-		RewardVideoAds.showCinemaRewardVideo();
+		//RewardVideoAds.showCinemaRewardVideo();
+
+		String appKey = "843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3";
+		Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
+
+		Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
+			private Toast mToast;
+			@Override
+			public void onRewardedVideoLoaded() {
+				showToast("onRewardedVideoLoaded");
+			}
+			@Override
+			public void onRewardedVideoFailedToLoad() {
+				showToast("onRewardedVideoFailedToLoad");
+			}
+			@Override
+			public void onRewardedVideoShown() {
+				showToast("onRewardedVideoShown");
+			}
+			@Override
+			public void onRewardedVideoFinished(int amount, String name) {
+				showToast(String.format("onRewardedVideoFinished. Reward: %d %s", amount, name));
+			}
+			@Override
+			public void onRewardedVideoClosed(boolean finished) {
+				showToast(String.format("onRewardedVideoClosed,  finished: %s", finished));
+			}
+			void showToast(final String text) {
+				if (mToast == null) {
+					mToast = Toast.makeText(PixelDungeon.instance(), text, Toast.LENGTH_SHORT);
+				}
+				mToast.setText(text);
+				mToast.setDuration(Toast.LENGTH_SHORT);
+				mToast.show();
+			}
+		});
+
+		Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+		Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
 
 		npc.say( TXT_THANK_YOU );
 		//TODO: Show add here
 
 	}
+
 }
