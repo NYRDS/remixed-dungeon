@@ -238,6 +238,8 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
+	public static boolean isSafe(String id) {return getLevelProperty(id,"isSafe",false);}
+
 	@Nullable
 	public static String tiles(String id) {
 		return getLevelProperty(id, "tiles");

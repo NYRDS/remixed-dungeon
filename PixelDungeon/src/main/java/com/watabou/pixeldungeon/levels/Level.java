@@ -1497,7 +1497,7 @@ public abstract class Level implements Bundlable {
 		return Random.element(mobs);
 	}
 
-	protected void initTilesVariations() {
+	private void initTilesVariations() {
 		for (int i = 0; i < map.length; ++i) {
 			baseTileVariant[i] = Random.Int(0, Integer.MAX_VALUE);
 			decoTileVariant[i] = Random.Int(0, Integer.MAX_VALUE);
@@ -1507,4 +1507,6 @@ public abstract class Level implements Bundlable {
 	public boolean customTiles() {
 		return false;
 	}
+
+	public boolean isSafe() {return DungeonGenerator.isSafe(levelId);}
 }

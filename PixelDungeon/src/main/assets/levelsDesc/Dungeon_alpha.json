@@ -4,7 +4,7 @@
       "test_guts":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelGuts.json"},
       "test_sewers":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelSewers.json", "waterSx":10,"waterSy":3},
       "test_random":{"kind":"RandomLevel", "depth":2, "file":"levelsDesc/TestLevelRandom.json"},
-      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true},
+      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true,"isSafe":true},
       "tiled_test":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/TiledTest.json"},
       "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "file":"levelsDesc/Theater.json", "noFogOfWar":true},
       "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json", "noFogOfWar":true},
