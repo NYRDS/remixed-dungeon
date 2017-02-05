@@ -167,6 +167,26 @@ public abstract class Level implements Bundlable {
 		return DungeonGenerator.noFogOfWar(levelId);
 	}
 
+	public String tileNameByCell(int cell) {
+		int tile = getTileType(cell);
+		return tileName(tile);
+	}
+
+	public int getTileType(int cell) {
+		int tile = map[cell];
+		if (water[cell]) {
+			tile = Terrain.WATER;
+		} else if (Dungeon.level.pit[cell]) {
+			tile = Terrain.CHASM;
+		}
+		return tile;
+	}
+
+	public String tileDescByCell(int cell) {
+		int tile = getTileType(cell);
+		return tileDesc(tile);
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}

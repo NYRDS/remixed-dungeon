@@ -67,7 +67,8 @@ public class Toolbar extends Component {
 	@Override
 	protected void createChildren() {
 
-		if(!Dungeon.level.isSafe()) {
+		//if(!Dungeon.level.isSafe())
+		{
 			add(btnWait = new Tool(0, 7, 20, 24) {
 				@Override
 				protected void onClick() {
@@ -134,7 +135,8 @@ public class Toolbar extends Component {
 
 	@Override
 	protected void layout() {
-		if(!Dungeon.level.isSafe()) {
+		//if(!Dungeon.level.isSafe())
+		{
 			btnWait.setPos(x, y);
 			btnSearch.setPos(btnWait.right(), y);
 			btnInfo.setPos(btnSearch.right(), y);
