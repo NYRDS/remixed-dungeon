@@ -29,6 +29,7 @@ public class RewardVideoAds {
 
 					String appKey = "843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3";
 					Appodeal.disableLocationPermissionCheck();
+					Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, false);
 					Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
 					Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
