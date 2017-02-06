@@ -1,18 +1,14 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.util.Log;
 import android.widget.Toast;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
+import com.appodeal.ads.utils.Log;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 
 /**
@@ -33,7 +29,7 @@ public class RewardVideoAds {
 
 					String appKey = "843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3";
 					Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
-
+					Appodeal.setLogLevel(Log.LogLevel.verbose);
 					Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 						private Toast mToast;
 						@Override
@@ -51,6 +47,7 @@ public class RewardVideoAds {
 						@Override
 						public void onRewardedVideoFinished(int amount, String name) {
 							showToast(String.format("onRewardedVideoFinished. Reward: %d %s", amount, name));
+							Dungeon.gold(Dungeon.gold() + 150);
 						}
 						@Override
 						public void onRewardedVideoClosed(boolean finished) {
@@ -65,7 +62,6 @@ public class RewardVideoAds {
 							mToast.show();
 						}
 					});
-
 					/*mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
 					mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
 					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), new AdRequest.Builder().build());

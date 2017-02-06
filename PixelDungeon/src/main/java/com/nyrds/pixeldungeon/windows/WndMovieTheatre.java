@@ -73,8 +73,6 @@ public class WndMovieTheatre extends Window {
 	}
 
 	private void showAd(final ServiceManNPC npc) {
-		hide();
-
 		RewardVideoAds.showCinemaRewardVideo();
 
 		npc.say( TXT_THANK_YOU );
