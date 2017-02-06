@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -176,6 +177,7 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		if(BuildConfig.DEBUG) initDebug(hero);
 		QuickSlot.cleanStorage();
+		Dungeon.gold(Dungeon.gold() + 900);
 	}
 
 	public Badges.Badge masteryBadge() {
