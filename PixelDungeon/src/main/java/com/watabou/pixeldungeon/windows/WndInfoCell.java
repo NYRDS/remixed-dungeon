@@ -27,6 +27,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
@@ -40,26 +41,22 @@ public class WndInfoCell extends Window {
 	public WndInfoCell( int cell ) {
 		
 		super();
+		Level level = Dungeon.level;
 
-		LevelObject obj = Dungeon.level.objects.get(cell);
+		LevelObject obj = level.objects.get(cell);
 
-		int tile = Dungeon.level.map[cell];
-		if (Dungeon.level.water[cell]) {
-			tile = Terrain.WATER;
-		} else if (Dungeon.level.pit[cell]) {
-			tile = Terrain.CHASM;
-		}
+		int tile = level.getTileType(cell);
 		
 		IconTitle titlebar = new IconTitle();
 		if (tile == Terrain.WATER) {
-			Image water = new Image( Dungeon.level.getWaterTex() );
+			Image water = new Image( level.getWaterTex() );
 			water.frame( 0, 0, DungeonTilemap.SIZE, DungeonTilemap.SIZE );
 			titlebar.icon( water );
 		} else {
 			titlebar.icon( DungeonTilemap.tile( cell ) );
 		}
 
-		String title = Dungeon.level.tileName( tile );
+		String title = level.tileNameByCell( cell );
 		if(obj != null) {
 			title += " & " + obj.name();
 		}
@@ -73,7 +70,7 @@ public class WndInfoCell extends Window {
 		Text info = PixelScene.createMultiline(GuiProperties.regularFontSize());
 		add( info );
 		
-		StringBuilder desc = new StringBuilder( Dungeon.level.tileDesc( tile ) );
+		StringBuilder desc = new StringBuilder( level.tileDescByCell( cell ) );
 		
 		final char newLine = '\n';
 
@@ -87,7 +84,7 @@ public class WndInfoCell extends Window {
 			desc.append(obj.desc());
 		}
 
-		for (Blob blob:Dungeon.level.blobs.values()) {
+		for (Blob blob:level.blobs.values()) {
 			if (blob.cur[cell] > 0 && blob.tileDesc() != null) {
 				if (desc.length() > 0) {
 					desc.append( newLine );
