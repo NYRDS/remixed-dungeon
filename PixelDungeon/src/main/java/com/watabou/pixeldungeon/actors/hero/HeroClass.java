@@ -178,7 +178,7 @@ public enum HeroClass {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		if(BuildConfig.DEBUG) initDebug(hero);
 		QuickSlot.cleanStorage();
-		Dungeon.gold(Dungeon.gold() + 900);
+		Dungeon.gold(Dungeon.gold() + 200);
 	}
 
 	public Badges.Badge masteryBadge() {
