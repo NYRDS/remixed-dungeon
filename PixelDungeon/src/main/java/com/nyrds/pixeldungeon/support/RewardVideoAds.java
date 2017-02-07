@@ -8,6 +8,7 @@ import com.appodeal.ads.utils.Log;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 
@@ -20,9 +21,10 @@ public class RewardVideoAds {
 
 	private static RewardedVideoAd mCinemaRewardAd;
 	//private static RewardVideoAdListener rewardVideoAdListener;
+	private static InterstitialPoint workPoint;
 
 	public static void initCinemaRewardVideo() {
-		if (Ads.googleAdsUsable() && Util.isConnectedToInternet())
+		if (Util.isConnectedToInternet())
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
@@ -32,15 +34,18 @@ public class RewardVideoAds {
 					Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, false);
 					Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
+
 					Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 						private Toast mToast;
 						@Override
 						public void onRewardedVideoLoaded() {
 							showToast("onRewardedVideoLoaded");
+							workPoint.returnToWork(false);
 						}
 						@Override
 						public void onRewardedVideoFailedToLoad() {
 							showToast("onRewardedVideoFailedToLoad");
+							workPoint.returnToWork(true);
 						}
 						@Override
 						public void onRewardedVideoShown() {
@@ -54,6 +59,7 @@ public class RewardVideoAds {
 						@Override
 						public void onRewardedVideoClosed(boolean finished) {
 							showToast(String.format("onRewardedVideoClosed,  finished: %s", finished));
+							workPoint.returnToWork(true);
 						}
 						void showToast(final String text) {
 							if (mToast == null) {
@@ -72,20 +78,20 @@ public class RewardVideoAds {
 			});
 	}
 
-	public static void showCinemaRewardVideo() {
+	public static void showCinemaRewardVideo(InterstitialPoint work) {
+		workPoint = work;
 		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+				if (Appodeal.isLoaded(Appodeal.REWARDED_VIDEO)){
+					Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+				}
 				/*if (mCinemaRewardAd.isLoaded()) {
 					mCinemaRewardAd.show();
 				}*/
 			}
 		});
 	}
-
-
-
 
 
 	/*private class RewardVideoAdListener implements RewardedVideoAdListener {
