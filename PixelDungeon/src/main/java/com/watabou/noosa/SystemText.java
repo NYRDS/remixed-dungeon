@@ -272,8 +272,10 @@ public class SystemText extends Text {
 		final int charsToDraw = codePoints.size();
 
 		if (mask == null) {
-			float x = (xCharPos.get(0) + 0.5f) * oversample;
-			canvas.drawText(currentLine, x, y, paint);
+			if(!xCharPos.isEmpty()) {
+				float x = (xCharPos.get(0) + 0.5f) * oversample;
+				canvas.drawText(currentLine, x, y, paint);
+			}
 			return charIndex + codePoints.size();
 		}
 
