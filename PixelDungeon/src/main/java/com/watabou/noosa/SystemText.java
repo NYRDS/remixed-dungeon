@@ -170,12 +170,11 @@ public class SystemText extends Text {
 		final int length = text.length();
 		int lastWordOffset = offset;
 
-		int codepoint = 0;
 		int lastWordStart = 0;
 
 		for (; offset < length; ) {
 
-			codepoint = text.codePointAt(offset);
+			int codepoint = text.codePointAt(offset);
 			int codepointCharCount = Character.charCount(codepoint);
 			offset += codepointCharCount;
 
