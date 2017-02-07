@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Mobs descriptions -->
-   
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">town guard</string>
     <string name="TownGuardNPC_Gender">masculine</string>
@@ -45,5 +44,54 @@
     <string name="WndMovieTheatre_Title">Movie Theatre</string>
     <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
 
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">roof</string>
+    <string name="town_deco_roof_desc">A roof</string>
+
+    <string name="town_deco_wall_name">wall</string>
+    <string name="town_deco_wall_desc">A wall</string>
+
+    <string name="town_deco_snow_name">snow</string>
+    <string name="town_deco_snow_desc">A snow</string>
+
+    <string name="town_deco_cross_name">cross</string>
+    <string name="town_deco_cross_desc">A cross</string>
+
+    <string name="town_deco_bell_name">bell</string>
+    <string name="town_deco_bell_desc">A bell</string>
+
+    <string name="town_deco_bell_tower_name">bell tower</string>
+    <string name="town_deco_bell_tower_desc">A bell tower</string>
+
+    <string name="town_deco_chimney_name">chimney</string>
+    <string name="town_deco_chimney_desc">A chimney</string>
+
+    <string name="town_deco_window_name">window</string>
+    <string name="town_deco_window_desc">A window</string>
+
+    <string name="town_deco_door_name">door</string>
+    <string name="town_deco_door_desc">A door</string>
+
+    <string name="town_deco_locked_door_name">locked door</string>
+    <string name="town_deco_locked_door_desc">A locked door</string>
+
+    <string name="town_deco_snowman_name">snowman</string>
+    <string name="town_deco_snowman_desc">A snowman</string>
+
+    <string name="town_deco_tree_name">tree</string>
+    <string name="town_deco_tree_desc">A tree</string>
+
+    <string name="town_deco_pathway_name">pathway</string>
+    <string name="town_deco_pathway_desc">A pathway</string>
+
+    <string name="town_deco_stone_wall_name">stone wall</string>
+    <string name="town_deco_stone_wall_desc">A stone wall</string>
+
+    <string name="town_deco_shop_sign_name">shop sign</string>
+    <string name="town_deco_shop_sign_desc">A shop sign</string>
+
+    <string name="town_deco_floor_name">shop sign</string>
+    <string name="town_deco_floor_desc">A shop sign</string>
 
 </resources>
