@@ -713,7 +713,7 @@ public abstract class Level implements Bundlable {
 
 	public int randomRespawnCell() {
 
-		if (isBossLevel()) {
+		if (isBossLevel() || noFogOfWar() ) {
 			return -1;
 		}
 
