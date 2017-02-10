@@ -172,6 +172,8 @@ public class SystemText extends Text {
 
 		int lastWordStart = 0;
 
+		float symbolWidth = 0;
+
 		for (; offset < length; ) {
 
 			int codepoint = text.codePointAt(offset);
@@ -187,14 +189,15 @@ public class SystemText extends Text {
 			}
 
 			if (codepoint == 0x000A) {
+				lineWidth += symbolWidth;
 				return offset;
 			}
-
-			xPos += symbolWidth(Character.toString((char) (codepoint)));
+			symbolWidth = symbolWidth(Character.toString((char) (codepoint)));
+			xPos += symbolWidth;
 			lineWidth = xPos;
 
 			if (maxWidth != Integer.MAX_VALUE
-					&& xPos > maxWidth / scale.x) {
+					&& xPos + symbolWidth > maxWidth / scale.x) {
 				if (lastWordOffset != startFrom) {
 					xCharPos.subList(lastWordStart, xCharPos.size()).clear();
 					codePoints.subList(lastWordStart, codePoints.size()).clear();
