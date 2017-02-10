@@ -1,27 +1,25 @@
 
 package com.nyrds.pixeldungeon.windows;
 
-import android.content.Context;
-import android.widget.Toast;
-
-import com.appodeal.ads.Appodeal;
-import com.appodeal.ads.RewardedVideoCallbacks;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
-public class WndMovieTheatre extends Window {
+public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 	private static final String BTN_WATCH       = Game.getVar(R.string.WndMovieTheatre_Watch);
 	private static final String BTN_NO          = Game.getVar(R.string.WndMovieTheatre_No);
@@ -75,11 +73,27 @@ public class WndMovieTheatre extends Window {
 	private void showAd(final ServiceManNPC npc) {
 		hide();
 		npc.say( TXT_THANK_YOU );
-		RewardVideoAds.showCinemaRewardVideo();
+		Game.paused = true;
+		RewardVideoAds.showCinemaRewardVideo(this);
 
 
 		//TODO: Show add here
 
 	}
 
+	@Override
+	public void returnToWork(final boolean result) {
+		PixelDungeon.executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				Game.paused = false;
+				if(result) {
+					Dungeon.gold(Dungeon.gold() + 150);
+				} else {
+					GLog.i("Индейский национальный фигвам");
+				}
+			}
+		});
+
+	}
 }
