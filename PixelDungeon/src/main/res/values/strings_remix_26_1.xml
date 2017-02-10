@@ -53,10 +53,10 @@
     <string name="town_deco_wall_desc">A simple wall made of wood logs.</string>
 
     <string name="town_deco_snow_name">Snow</string>
-    <string name="town_deco_snow_desc">Despite rumors of how popular this village was for adventurers, there is quite a lot of snow around here, like if nobody ever set their foot outside.</string>
+    <string name="town_deco_snow_desc">Despite rumors of how popular this place is, for adventurers, there is quite a lot of snow around here, like if nobody ever set their foot outside.</string>
 
     <string name="town_deco_cross_name">Cross</string>
-    <string name="town_deco_cross_desc">A solid silver cross, a symbol of local religion - "The Witnesses of Santa the Depth Lord".</string>
+    <string name="town_deco_cross_desc">A solid silver cross, a symbol of local religion - \"The Witnesses of Santa the Depth Lord\".</string>
 
     <string name="town_deco_bell_name">Bell</string>
     <string name="town_deco_bell_desc">Typical church bell it appears that nobody ringed it for a while, the rope is nowhere to be seen.</string>
@@ -77,7 +77,7 @@
     <string name="town_deco_locked_door_desc">What in world could be behind that door?</string>
 
     <string name="town_deco_snowman_name">Snowman</string>
-    <string name="town_deco_snowman_desc">Snowman is a traditional town decoration for a holiday season, when people celebrate "Dungeonmas" a day, when monsters invaded the dungeon.</string>
+    <string name="town_deco_snowman_desc">Snowman is a traditional town decoration for a holiday season, when people celebrate \"Dungeonmas\" a day, when monsters invaded the dungeon.</string>
 
     <string name="town_deco_tree_name">Tree</string>
     <string name="town_deco_tree_desc">It feels kind of weird to look upon a living tree, right next to an entrance to the dungeon, filled with horrors and death.</string>

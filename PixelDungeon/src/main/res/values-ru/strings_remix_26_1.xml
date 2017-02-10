@@ -1,7 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Mobs descriptions -->
-   
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">стражник</string>
     <string name="TownGuardNPC_Gender">masculine</string>
@@ -21,7 +20,7 @@
     <string name="TownsfolkNPC_Message3">Какой чудный день.</string>
     <string name="TownsfolkNPC_Message4">Надеюсь этой весной канализацию не затопит. Очередное нашествие крыс нам ни к чему.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">городской священик</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Name_Objective">священика</string>
@@ -45,5 +44,60 @@
     <string name="WndMovieTheatre_Title">Кинотеатр</string>
     <string name="WndMovieTheatre_Thank_You">Спасибо вам за участие!</string>
 
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">Крыша</string>
+    <string name="town_deco_roof_desc">Обычная черепичная крыша.</string>
+
+    <string name="town_deco_wall_name">Стена</string>
+    <string name="town_deco_wall_desc">Простая бревенчатая стена.</string>
+
+    <string name="town_deco_snow_name">Снег</string>
+    <string name="town_deco_snow_desc">Не смотря на известность этого места среди искателей приключений, здесь на удивление много снега. Создаётся впечатление что по этим улицам мало кто гуляет.</string>
+
+    <string name="town_deco_cross_name">Крест</string>
+    <string name="town_deco_cross_desc">Литой серебряный крест, символ местной религии - \"Свидетели Санты - Владыки Глубин\".</string>
+
+    <string name="town_deco_bell_name">Колокол</string>
+    <string name="town_deco_bell_desc">Типичный церковный колокол, судя по всему в него давно никто не звонил, даже верёвки на месте нет.</string>
+
+    <string name="town_deco_bell_tower_name">Колокольня</string>
+    <string name="town_deco_bell_tower_desc">Традиционно, церковные колокола устанавливаются в высокие башни, дабы звон был слышен на большие расстояния.</string>
+
+    <string name="town_deco_chimney_name">Дымоход</string>
+    <string name="town_deco_chimney_desc">Каменный дымоход - верный спутник любого жилища, возведённого там, где холодная погода является частым гостем.</string>
+
+    <string name="town_deco_window_name">Окно</string>
+    <string name="town_deco_window_desc">Обыкновенное стеклянное окно, ничего особенного.</string>
+
+    <string name="town_deco_door_name">Дверь</string>
+    <string name="town_deco_door_desc">Обыкновенная деревянная дверь.</string>
+
+    <string name="town_deco_locked_door_name">Запертая дверь</string>
+    <string name="town_deco_locked_door_desc">Что же может скрывать эта дверь?</string>
+
+    <string name="town_deco_snowman_name">Снеговик</string>
+    <string name="town_deco_snowman_desc">Снеговики это традиционное уличное украшение для праздничной поры. Их устанавливают в \"Подземьество\" - праздник посвященный тому дню, когда монстры наводнили подземелье.</string>
+
+    <string name="town_deco_tree_name">Дерево</string>
+    <string name="town_deco_tree_desc">Глядя на это дерево, живое и мирное, возникает странное чувство. Ведь совсем неподалёку находится спуск в подземелье, наполненное ужасами и смертью.</string>
+
+    <string name="town_deco_pathway_name">Дорожка</string>
+    <string name="town_deco_pathway_desc">Тропинка вытоптанная в снегу.</string>
+
+    <string name="town_deco_stone_wall_name">Каменная стена</string>
+    <string name="town_deco_stone_wall_desc">Эта стена выглядит немного влажной, кажется что от неё исходит тепло. </string>
+
+    <string name="town_deco_shop_sign_name">Вывеска магазина</string>
+    <string name="town_deco_shop_sign_desc">Вероятно в этом здании находится магазин.</string>
+
+    <string name="town_deco_floor_name">Пол</string>
+    <string name="town_deco_floor_desc">Этот пол выполнен из деревянных досок. Что ты надеешься тут увидеть?</string>
+
+    <string name="town_deco_carpet_name">Ковёр</string>
+    <string name="town_deco_carpet_desc">Роскошный красный ковёр, приготовленный для почётный гостей</string>
+
+    <string name="town_deco_movies_door_name">Дверь</string>
+    <string name="town_deco_movies_door_desc">Эта дверь выглядит крайне изысканно. Скорее всего она ведёт в удивительнейшее место.</string>
 
 </resources>
