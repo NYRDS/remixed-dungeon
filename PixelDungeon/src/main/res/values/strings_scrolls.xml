@@ -112,6 +112,6 @@
     
     <!-- STRINGS OF ScrollOfCurse CLASS -->
     <string name="ScrollOfCurse_Name">Scroll of Curse</string>
-    <string name="ScrollOfCurse_Info">This scroll created especially to punish thieves stupid enough to try use magic they cant understand. Scroll magic totally useless and even harmful for regular adventurer, but valued pretty well by merchants.</string>
+    <string name="ScrollOfCurse_Info">This scroll created especially to punish thieves stupid enough to try use magic they can\'t understand. Scroll magic totally useless and even harmful for regular adventurer, but valued pretty well by merchants.</string>
     
 </resources>
