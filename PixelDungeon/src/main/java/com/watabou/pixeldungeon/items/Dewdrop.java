@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -47,7 +48,12 @@ public class Dewdrop extends Item {
 		if (hero.hp() < hero.ht() || vial == null || vial.isFull()) {
 			
 			int value = 1 + (Dungeon.depth - 1) / 5;
-			if (hero.heroClass == HeroClass.HUNTRESS) {
+
+			if (hero.heroClass == HeroClass.HUNTRESS || hero.heroClass == HeroClass.ELF) {
+				value++;
+			}
+
+			if(hero.subClass == HeroSubClass.WARDEN || hero.subClass == HeroSubClass.SHAMAN) {
 				value++;
 			}
 			
