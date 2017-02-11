@@ -24,15 +24,15 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
-import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
+import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -43,10 +43,8 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
@@ -58,31 +56,30 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
-import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
-import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public enum HeroClass {
 
-	WARRIOR(Game.getVar(R.string.HeroClass_War),WarriorArmor.class),
-	MAGE(Game.getVar(R.string.HeroClass_Mag),MageArmor.class),
-	ROGUE(Game.getVar(R.string.HeroClass_Rog),RogueArmor.class),
-	HUNTRESS(Game.getVar(R.string.HeroClass_Hun),HuntressArmor.class),
-	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class),
-	NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer),NecromancerArmor.class);
+	WARRIOR(Game.getVar(R.string.HeroClass_War),WarriorArmor.class, Ordinary.instance),
+	MAGE(Game.getVar(R.string.HeroClass_Mag),MageArmor.class, Ordinary.instance),
+	ROGUE(Game.getVar(R.string.HeroClass_Rog),RogueArmor.class, Ordinary.instance),
+	HUNTRESS(Game.getVar(R.string.HeroClass_Hun),HuntressArmor.class, Ordinary.instance),
+	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class, Ordinary.instance),
+	NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer),NecromancerArmor.class, Ordinary.instance);
 
 	private final Class<? extends ClassArmor> armorClass;
 
 	private String title;
+	private Abilities abilities;
+
 
 	private static final String[] WAR_PERKS = Game
 			.getVars(R.array.HeroClass_WarPerks);
@@ -97,9 +94,10 @@ public enum HeroClass {
 	private static final String[] NECROMANCER_PERKS = Game
 			.getVars(R.array.HeroClass_NecromancerPerks);
 
-	HeroClass(String title, Class<? extends ClassArmor> armorClass) {
+	HeroClass(String title, Class<? extends ClassArmor> armorClass, Abilities abilities) {
 		this.title = title;
 		this.armorClass = armorClass;
+		this.abilities = abilities;
 	}
 
 	public void initHero(Hero hero) {
@@ -316,5 +314,9 @@ public enum HeroClass {
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
+	}
+
+	Abilities getAbilities() {
+		return abilities;
 	}
 }
