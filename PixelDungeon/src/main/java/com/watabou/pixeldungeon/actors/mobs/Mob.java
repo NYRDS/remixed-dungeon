@@ -80,7 +80,7 @@ public abstract class Mob extends Char {
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
 
-	private   AiState state   = SLEEPING;
+	private AiState state = SLEEPING;
 
 	protected Object spriteClass;
 
@@ -564,7 +564,7 @@ public abstract class Mob extends Char {
 			throw new TrackedRuntimeException("split issue");
 		}
 
-		clone.hp((hp() - damage) / 2);
+		clone.hp(Math.max((hp() - damage) / 2, 1));
 		clone.setPos(cell);
 		clone.setState(clone.HUNTING);
 

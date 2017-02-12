@@ -67,31 +67,34 @@ public class Toolbar extends Component {
 	@Override
 	protected void createChildren() {
 
-		add(btnWait = new Tool(0, 7, 20, 24) {
-			@Override
-			protected void onClick() {
-				Dungeon.hero.rest(false);
-			}
+		//if(!Dungeon.level.isSafe())
+		{
+			add(btnWait = new Tool(0, 7, 20, 24) {
+				@Override
+				protected void onClick() {
+					Dungeon.hero.rest(false);
+				}
 
-			protected boolean onLongClick() {
-				Dungeon.hero.rest(true);
-				return true;
-			}
-		});
+				protected boolean onLongClick() {
+					Dungeon.hero.rest(true);
+					return true;
+				}
+			});
 
-		add(btnSearch = new Tool(20, 7, 20, 24) {
-			@Override
-			protected void onClick() {
-				Dungeon.hero.search(true);
-			}
-		});
+			add(btnSearch = new Tool(20, 7, 20, 24) {
+				@Override
+				protected void onClick() {
+					Dungeon.hero.search(true);
+				}
+			});
 
-		add(btnInfo = new Tool(40, 7, 21, 24) {
-			@Override
-			protected void onClick() {
-				GameScene.selectCell(informer);
-			}
-		});
+			add(btnInfo = new Tool(40, 7, 21, 24) {
+				@Override
+				protected void onClick() {
+					GameScene.selectCell(informer);
+				}
+			});
+		}
 
 		add(btnInventory = new Tool(82, 7, 23, 24) {
 			private GoldIndicator gold;
@@ -132,11 +135,14 @@ public class Toolbar extends Component {
 
 	@Override
 	protected void layout() {
-		btnWait.setPos(x, y);
-		btnSearch.setPos(btnWait.right(), y);
-		btnInfo.setPos(btnSearch.right(), y);
-		//btnResume.setPos(x, y - 24);
-		
+		//if(!Dungeon.level.isSafe())
+		{
+			btnWait.setPos(x, y);
+			btnSearch.setPos(btnWait.right(), y);
+			btnInfo.setPos(btnSearch.right(), y);
+			//btnResume.setPos(x, y - 24);
+		}
+
 		remove(btnQuick1);
 		remove(btnQuick2);
 		remove(btnQuick3);

@@ -170,12 +170,13 @@ public class SystemText extends Text {
 		final int length = text.length();
 		int lastWordOffset = offset;
 
-		int codepoint = 0;
 		int lastWordStart = 0;
+
+		float symbolWidth = 0;
 
 		for (; offset < length; ) {
 
-			codepoint = text.codePointAt(offset);
+			int codepoint = text.codePointAt(offset);
 			int codepointCharCount = Character.charCount(codepoint);
 			offset += codepointCharCount;
 
@@ -188,14 +189,15 @@ public class SystemText extends Text {
 			}
 
 			if (codepoint == 0x000A) {
+				lineWidth += symbolWidth;
 				return offset;
 			}
-
-			xPos += symbolWidth(Character.toString((char) (codepoint)));
+			symbolWidth = symbolWidth(Character.toString((char) (codepoint)));
+			xPos += symbolWidth;
 			lineWidth = xPos;
 
 			if (maxWidth != Integer.MAX_VALUE
-					&& xPos > maxWidth / scale.x) {
+					&& xPos + symbolWidth > maxWidth / scale.x) {
 				if (lastWordOffset != startFrom) {
 					xCharPos.subList(lastWordStart, xCharPos.size()).clear();
 					codePoints.subList(lastWordStart, codePoints.size()).clear();
@@ -272,8 +274,10 @@ public class SystemText extends Text {
 		final int charsToDraw = codePoints.size();
 
 		if (mask == null) {
-			float x = (xCharPos.get(0) + 0.5f) * oversample;
-			canvas.drawText(currentLine, x, y, paint);
+			if(!xCharPos.isEmpty()) {
+				float x = (xCharPos.get(0) + 0.5f) * oversample;
+				canvas.drawText(currentLine, x, y, paint);
+			}
 			return charIndex + codePoints.size();
 		}
 

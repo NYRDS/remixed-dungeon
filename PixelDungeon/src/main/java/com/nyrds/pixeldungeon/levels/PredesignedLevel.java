@@ -4,6 +4,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -187,6 +188,38 @@ public class PredesignedLevel extends CustomLevel {
 			throw new TrackedRuntimeException(e);
 		}
 
+	}
+
+	@Override
+	public String tileDescByCell(int cell) {
+		if(mLevelDesc.has("decoDesc")) {
+			try {
+				int tile = decoTileVariant[cell];
+				String descId = mLevelDesc.getJSONArray("decoDesc").getString(tile);
+				if(!descId.isEmpty()) {
+					return StringsManager.maybeId(descId);
+				}
+			} catch (JSONException e) {
+				return super.tileDescByCell(cell);
+			}
+		}
+		return super.tileDescByCell(cell);
+	}
+
+	@Override
+	public String tileNameByCell(int cell) {
+		if(mLevelDesc.has("decoName")) {
+			try {
+				int tile = decoTileVariant[cell];
+				String nameId = mLevelDesc.getJSONArray("decoName").getString(tile);
+				if(!nameId.isEmpty()) {
+					return StringsManager.maybeId(nameId);
+				}
+			} catch (JSONException e) {
+				return super.tileNameByCell(cell);
+			}
+		}
+		return super.tileNameByCell(cell);
 	}
 
 	@Override

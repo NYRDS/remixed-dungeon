@@ -45,6 +45,10 @@ public class StringsManager {
 
 	private static Map<String, Integer> keyToInt;
 
+	static {
+		initTextMapping();
+	}
+
 	private static void addMappingForClass(Class<?> clazz) {
 		for (Field f : clazz.getDeclaredFields()) {
 			if (f.isSynthetic()) {
@@ -63,15 +67,12 @@ public class StringsManager {
 	}
 
 	private static void initTextMapping() {
-		long mapStart = System.nanoTime();
 
 		keyToInt = new HashMap<>();
 
 		addMappingForClass(R.string.class);
 		addMappingForClass(R.array.class);
 
-		long mapEnd = System.nanoTime();
-		GLog.toFile("map creating time %f", (mapEnd - mapStart) / 1000000f);
 	}
 
 	private static void parseStrings(String resource) {
@@ -82,10 +83,6 @@ public class StringsManager {
 
 		if (!jsonFile.exists()) {
 			return;
-		}
-
-		if (keyToInt == null) {
-			initTextMapping();
 		}
 
 		stringMap.clear();
@@ -193,6 +190,10 @@ public class StringsManager {
 
 		if (sStringMap.containsKey(id)) {
 			return sStringMap.get(id);
+		}
+
+		if(keyToInt.containsKey(id)) {
+			return getVar(keyToInt.get(id));
 		}
 
 		return "";
