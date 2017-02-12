@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -13,7 +12,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 public class ServiceManNPC extends NPC {
 
 	public ServiceManNPC() {
-		RewardVideoAds.initCinemaRewardVideo();
 	}
 	
 	@Override

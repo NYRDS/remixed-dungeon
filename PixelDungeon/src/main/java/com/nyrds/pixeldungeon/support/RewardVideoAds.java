@@ -6,7 +6,6 @@ import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
 import com.appodeal.ads.utils.Log;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -24,7 +23,7 @@ public class RewardVideoAds {
 	private static InterstitialPoint returnTo;
 
 	public static void initCinemaRewardVideo() {
-		if (Util.isConnectedToInternet())
+		//if (Util.isConnectedToInternet())
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {

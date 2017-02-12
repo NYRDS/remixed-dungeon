@@ -26,6 +26,7 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+
 import android.media.AudioManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -354,6 +355,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		Game.width(width);
 		Game.height(height);
+
+		needSceneRestart = true;
 	}
 
 	@Override
