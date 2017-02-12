@@ -9,7 +9,6 @@ import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 
 /**
@@ -21,31 +20,31 @@ public class RewardVideoAds {
 
 	private static RewardedVideoAd mCinemaRewardAd;
 	//private static RewardVideoAdListener rewardVideoAdListener;
-	private static InterstitialPoint workPoint;
+
+	private static InterstitialPoint returnTo;
 
 	public static void initCinemaRewardVideo() {
-		if (Util.isConnectedToInternet())
+		if (Ads.googleAdsUsable() && Util.isConnectedToInternet())
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
 
 					String appKey = "843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3";
 					Appodeal.disableLocationPermissionCheck();
-					Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, false);
 					Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
+
+					//Appodeal.setTesting(true);
 
 					Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 						private Toast mToast;
 						@Override
 						public void onRewardedVideoLoaded() {
 							showToast("onRewardedVideoLoaded");
-							workPoint.returnToWork(false);
 						}
 						@Override
 						public void onRewardedVideoFailedToLoad() {
 							showToast("onRewardedVideoFailedToLoad");
-							workPoint.returnToWork(true);
 						}
 						@Override
 						public void onRewardedVideoShown() {
@@ -54,20 +53,25 @@ public class RewardVideoAds {
 						@Override
 						public void onRewardedVideoFinished(int amount, String name) {
 							showToast(String.format("onRewardedVideoFinished. Reward: %d %s", amount, name));
-							Dungeon.gold(Dungeon.gold() + 150);
+
 						}
 						@Override
-						public void onRewardedVideoClosed(boolean finished) {
+						public void onRewardedVideoClosed(final boolean finished) {
 							showToast(String.format("onRewardedVideoClosed,  finished: %s", finished));
-							workPoint.returnToWork(true);
+							Appodeal.hide(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+							returnTo.returnToWork(finished);
+
 						}
 						void showToast(final String text) {
+							android.util.Log.i("ads",text);
+							/*
 							if (mToast == null) {
 								mToast = Toast.makeText(PixelDungeon.instance(), text, Toast.LENGTH_SHORT);
 							}
 							mToast.setText(text);
 							mToast.setDuration(Toast.LENGTH_SHORT);
 							mToast.show();
+							*/
 						}
 					});
 					/*mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
@@ -78,13 +82,15 @@ public class RewardVideoAds {
 			});
 	}
 
-	public static void showCinemaRewardVideo(InterstitialPoint work) {
-		workPoint = work;
+	public static void showCinemaRewardVideo(InterstitialPoint ret) {
+		returnTo = ret;
 		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				if (Appodeal.isLoaded(Appodeal.REWARDED_VIDEO)){
+				if(Appodeal.isLoaded(Appodeal.REWARDED_VIDEO)) {
 					Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+				} else {
+					returnTo.returnToWork(false);
 				}
 				/*if (mCinemaRewardAd.isLoaded()) {
 					mCinemaRewardAd.show();
@@ -92,6 +98,9 @@ public class RewardVideoAds {
 			}
 		});
 	}
+
+
+
 
 
 	/*private class RewardVideoAdListener implements RewardedVideoAdListener {
