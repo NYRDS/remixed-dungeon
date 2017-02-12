@@ -156,6 +156,7 @@ public class PixelDungeon extends Game {
 		Game.instance()
 				.setRequestedOrientation(value ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 						: ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		setNeedSceneRestart(true);
 		Preferences.INSTANCE.put(Preferences.KEY_LANDSCAPE, value);
 	}
 

@@ -541,4 +541,5 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		Log.i("Game",Utils.format("own signature %s", Util.getSignature(this)));
 		return Util.getSignature(this).equals(getVar(R.string.ownSignature));
 	}
+
 }
