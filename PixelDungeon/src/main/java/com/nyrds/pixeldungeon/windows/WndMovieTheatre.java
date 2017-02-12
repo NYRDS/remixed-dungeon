@@ -4,7 +4,6 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -75,7 +74,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		hide();
 		npc.say( TXT_THANK_YOU );
 		Game.paused = true;
-		Ads.removeEasyModeBanner();
+		//Ads.removeEasyModeBanner();
 		RewardVideoAds.showCinemaRewardVideo(this);
 	}
 
@@ -84,13 +83,15 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		PixelDungeon.executeInGlThread(new Runnable() {
 			@Override
 			public void run() {
+				/*
 				if (PixelDungeon.donated() == 0) {
 					if (PixelDungeon.getDifficulty() == 0) {
 						Ads.displayEasyModeBanner();
 					}
 				}
-
-				PixelDungeon.landscape(PixelDungeon.landscape());
+				*/
+				//PixelDungeon.landscape(PixelDungeon.landscape());
+				PixelDungeon.landscape(false);
 				Game.paused = false;
 
 				if(result) {
