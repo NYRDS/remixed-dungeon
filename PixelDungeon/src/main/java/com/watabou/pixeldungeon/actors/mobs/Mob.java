@@ -49,6 +49,7 @@ import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -257,18 +258,19 @@ public abstract class Mob extends Char {
 	}
 
 	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
+		Level level = Dungeon.level;
 
 		Char bestEnemy = DUMMY;
-		int dist = Dungeon.level.getWidth() + Dungeon.level.getHeight();
+		float dist = level.getWidth() + level.getHeight();
 
 		if (enemyFraction.belongsTo(Fraction.HEROES)) {
 			bestEnemy = Dungeon.hero;
-			dist = Dungeon.level.distance(getPos(), bestEnemy.getPos());
+			dist = level.distanceL2(getPos(), bestEnemy.getPos());
 		}
 
-		for (Mob mob : Dungeon.level.mobs) {
-			if (mob.fraction.equals(enemyFraction) && mob != this) {
-				int candidateDist = Dungeon.level.distance(getPos(), mob.getPos());
+		for (Mob mob : level.mobs) {
+			if (mob.fraction.belongsTo(enemyFraction) && mob != this) {
+				float candidateDist = level.distanceL2(getPos(), mob.getPos());
 				if (candidateDist < dist) {
 					bestEnemy = mob;
 					dist = candidateDist;
@@ -313,9 +315,9 @@ public abstract class Mob extends Char {
 		}
 
 		if (buff(Amok.class) != null) {
-			if (getEnemy() == Dungeon.hero) {
+			//if (getEnemy() == Dungeon.hero) {
 				return chooseNearestEnemyFromFraction(Fraction.ANY);
-			}
+			//}
 		}
 
 		if (getEnemy() instanceof Mob) {
