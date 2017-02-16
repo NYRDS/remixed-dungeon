@@ -4,7 +4,7 @@
     package="com.nyrds.pixeldungeon.ml"
     android:installLocation="auto"
     android:versionCode="377"
-    android:versionName="remix.26.1.beta.1" >
+    android:versionName="remix.26.1.beta.2" >
 
     <uses-sdk tools:overrideLibrary="com.google.android.gms.ads,
                                      com.google.android.gms,
