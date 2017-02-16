@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
@@ -66,6 +67,8 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
+import org.json.JSONObject;
+
 public enum HeroClass {
 
 	WARRIOR(Game.getVar(R.string.HeroClass_War),WarriorArmor.class, Ordinary.instance),
@@ -77,8 +80,9 @@ public enum HeroClass {
 
 	private final Class<? extends ClassArmor> armorClass;
 
-	private String title;
-	private Abilities abilities;
+	private String     title;
+	private Abilities  abilities;
+	static private JSONObject initialEquipment = JsonHelper.readJsonFromAsset("hero/initialEquipment.json");
 
 
 	private static final String[] WAR_PERKS = Game
