@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <!-- Mobs descriptions -->
-   
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">guardia de la ciudad</string>
     <string name="TownGuardNPC_Gender">masculino</string>
@@ -31,5 +30,4 @@
     <string name="WndMovieTheatre_Title">Cine</string>
     <string name="WndMovieTheatre_Thank_You">¡Gracias por tu participación!</string>
 
-
-</resources>
+    </resources>

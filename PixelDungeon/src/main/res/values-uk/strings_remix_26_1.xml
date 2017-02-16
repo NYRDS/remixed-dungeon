@@ -1,9 +1,54 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">вартовий</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
+    <string name="TownGuardNPC_Name_Objective">вартового</string>
+    <string name="TownGuardNPC_Desc">Типовий вартовий міста.</string>
+    <string name="TownGuardNPC_Message1">Проходимо, не затримуємося.</string>
+    <string name="TownGuardNPC_Message2">Завдяки таким шукачам пригод, як ви, тут стало безпечніше.</string>
+    <string name="TownGuardNPC_Message3">Гадаєш тут забагато вартових? Це ж єдине місто, в якому знаходиться спуск в гігантське підземелля, яке захоплене монстрами, чи не так?</string>
+
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">городянин</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Name_Objective">городянина</string>
-    <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді тебе бачити!</string>
+    <string name="TownsfolkNPC_Desc">Один з місцевих городян. Не дивлячись не те, що це звичайний простолюдин, одежа на ньому не з дешевих.</string>
+    <string name="TownsfolkNPC_Message1">О! Ще один шукач пригод, чудово! Намагайся винести з підземелля якомога більше цінностей!</string>
+    <string name="TownsfolkNPC_Message2">Місто настільки збагатилося за рахунок підземелля, що майже все населення знаходиться у відпустці! Саме тому тут настільки не людно.</string>
+    <string name="TownsfolkNPC_Message3">Який чудовий день.</string>
+    <string name="TownsfolkNPC_Message4">Сподіваюся цієї весни не затопить каналізацію. Чергового нашестя щурів нам ще не вистачало.</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">міський священик</string>
+    <string name="HealerNPC_Gender">masculine</string>
+    <string name="HealerNPC_Name_Objective">міського священика</string>
+    <string name="HealerNPC_Desc">Цей старий схожий на того, хто міг би займатись виробництвом чарівних паличок.</string>
+    <string name="HealerNPC_Message1">Безкоштовне лікування для кожного шукача пригод!</string>
+    <string name="HealerNPC_Message2">Якщо зголодніли чи вас , борони вас боже, поранили - повертайтеся!</string>
+    <string name="HealerNPC_Message3">І чому церква не дозволяє носити нам капелюхи... тут так холодно.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">співробітник</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
+    <string name="ServiceManNPC_Name_Objective">співробітника</string>
+    <string name="ServiceManNPC_Desc">Рядовий робочий місцевих закладів.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">переглянути фільм</string>
+    <string name="WndMovieTheatre_No">піти</string>
+    <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді вас бачити!</string>
+    <string name="WndMovieTheatre_Instruction">Вітаємо і ласкаво просимо до нашого кінотеатру! Ви маєте змогу прийняти участь в особливій акції, перегляньте фільм, до того ж абсолютно безкоштовно. І якщо ви додивитесь його до кінця, то отримаєте у винагороду %d золотих монет!</string>
     <string name="WndMovieTheatre_Title">Кінотеатр</string>
+    <string name="WndMovieTheatre_Thank_You">Дякуємо за участь!</string>
+
+    <string name="town_deco_door_name">Двері</string>
+    <string name="town_deco_door_desc">Прості, дерев\'яні двері.</string>
+
+    <string name="town_deco_locked_door_name">Замкнуті двері</string>
+    <string name="town_deco_snowman_name">Сніговик</string>
+    <string name="town_deco_tree_name">Дерево</string>
+    <string name="town_deco_movies_door_name">Двері</string>
     </resources>
