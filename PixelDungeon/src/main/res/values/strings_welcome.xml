@@ -222,21 +222,21 @@
         </string>
         <string name="Welcome_Text_26_1">
         remix.26.1:\n
-        - Game begins in a town
-        - Town gets unique musical theme (by Misaerit)
-        - In order to achieve 100% victory after obtaining amulet of Yendor, you have to reach town exit
-        - Hero's starting belongings now contains only class-specific gear, each hero also receives 200 gold coins
-        - Town has a shop, where you can obtain starting gear and items
-        - Town priest will heal and feed your hero for free
-        - Flying mobs can no longer activate traps
-        - You can no longer sell a container that contains something
-        - Undead mobs are immune to poison
-        - When skeleton dies he deals damage to 4 adjacent cells (in vertical and horizontal lines), instead of 8
-        - Updated font visuals
-        - Crystals can no longer be moved with telekinesis
-        - Potion of purity can cure effect of a confusing gas
-        - Mobs created with multiplication can no longer get less than 1 hp on spawn
-        - Fixing typos
-        - Fixing sprites of Ice Caves
+        - Game begins in a town\n
+        - Town gets unique musical theme (by Misaerit)\n
+        - In order to achieve 100% victory after obtaining amulet of Yendor, you have to reach town exit\n
+        - Hero\'s starting belongings now contains only class-specific gear, each hero also receives 200 gold coins\n
+        - Town has a shop, where you can obtain starting gear and items\n
+        - Town priest will heal and feed your hero for free\n
+        - Flying mobs can no longer activate traps\n
+        - You can no longer sell a container that contains something\n
+        - Undead mobs are immune to poison\n
+        - When skeleton dies he deals damage to 4 adjacent cells (in vertical and horizontal lines), instead of 8\n
+        - Updated font visuals\n
+        - Crystals can no longer be moved with telekinesis\n
+        - Potion of purity can cure effect of a confusing gas\n
+        - Mobs created with multiplication can no longer get less than 1 hp on spawn\n
+        - Fixing typos\n
+        - Fixing sprites of Ice Caves\n
         </string>
 </resources>
