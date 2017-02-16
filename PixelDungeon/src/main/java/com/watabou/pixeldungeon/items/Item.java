@@ -594,6 +594,10 @@ public class Item implements Bundlable, Presser {
 		}
 
 		cursed = itemDesc.optBoolean("cursed", false);
+
+		if(itemDesc.optBoolean("identified",false)) {
+			identify();
+		}
 	}
 
 	@Override
