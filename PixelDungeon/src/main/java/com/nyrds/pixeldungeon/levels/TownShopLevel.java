@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -89,7 +90,7 @@ public class TownShopLevel extends Level {
 	@Override
 	protected void createMobs() {
 
-		Mob shopkeeper =  new Shopkeeper();
+		Mob shopkeeper =  new TownShopkeeper();
 		shopkeeper.setPos(this.getRandomTerrainCell(Terrain.EMPTY));
 		this.mobs.add( shopkeeper );
 

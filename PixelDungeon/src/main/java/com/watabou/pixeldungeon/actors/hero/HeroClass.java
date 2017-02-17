@@ -32,6 +32,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -158,7 +159,7 @@ public enum HeroClass {
 		hero.collect(new RingOfAccuracy().identify());
 		hero.collect(new CandleOfMindVision());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
-		hero.collect(new TomeOfMastery());
+		hero.collect(new Amulet());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new BattleAxe());
 
