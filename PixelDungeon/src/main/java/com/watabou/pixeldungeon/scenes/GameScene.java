@@ -341,7 +341,7 @@ public class GameScene extends PixelScene {
 
 				DungeonGenerator.showStory(level);
 
-				if (Dungeon.hero.isAlive() && level.isSafe() && Dungeon.depth != 22) {
+				if (Dungeon.hero.isAlive() && !level.isSafe() && Dungeon.depth != 22 && Dungeon.depth != 1) {
 					Badges.validateNoKilling();
 				}
 				break;

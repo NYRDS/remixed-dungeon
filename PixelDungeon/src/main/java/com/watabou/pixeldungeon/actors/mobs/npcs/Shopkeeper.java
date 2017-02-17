@@ -103,13 +103,4 @@ public class Shopkeeper extends NPC {
 		return true;
 	}
 
-	@Override
-	public String description() {
-		if (Dungeon.depth == 1){
-			return Game.getVar(R.string.Shopkeeper_Desc2);
-		}
-		return description;
-	}
-
-
 }
