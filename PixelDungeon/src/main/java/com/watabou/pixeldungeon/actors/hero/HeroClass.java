@@ -75,7 +75,7 @@ public enum HeroClass {
 
 	private String     title;
 	private Abilities  abilities;
-	static private JSONObject initialStats = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
+	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
 
 
 	private static final String[] WAR_PERKS = Game
@@ -147,9 +147,9 @@ public enum HeroClass {
 	}
 
 	private static void initForClass(Hero hero,String className) {
-		if(initialStats.has(className)) {
+		if(initHeroes.has(className)) {
 			try {
-				JSONObject classDesc = initialStats.getJSONObject(className);
+				JSONObject classDesc = initHeroes.getJSONObject(className);
 				if(classDesc.has("armor")) {
 					hero.belongings.armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
 				}

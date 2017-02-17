@@ -32,6 +32,7 @@ public class Iap {
     private static final String SKU_LEVEL_1 = "supporter_level_1";
     private static final String SKU_LEVEL_2 = "supporter_level_2";
     private static final String SKU_LEVEL_3 = "supporter_level_3";
+    private static final String SKU_LEVEL_4 = "supporter_level_4";
 
     private static IabHelper mHelper = null;
     private static Inventory mInventory = null;
@@ -109,6 +110,7 @@ public class Iap {
         items.add(SKU_LEVEL_1);
         items.add(SKU_LEVEL_2);
         items.add(SKU_LEVEL_3);
+        items.add(SKU_LEVEL_4);
 
         List<String> accessories = Accessory.getAccessoriesList();
 
@@ -157,6 +159,10 @@ public class Iap {
 
         if (checkPurchase(SKU_LEVEL_3)) {
             PixelDungeon.setDonationLevel(3);
+        }
+
+        if (checkPurchase(SKU_LEVEL_4)) {
+            PixelDungeon.setDonationLevel(4);
         }
     }
 
@@ -208,6 +214,8 @@ public class Iap {
                 return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_2));
             case 3:
                 return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_3));
+            case 4:
+                return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_4));
         }
         return null;
     }
@@ -259,6 +267,10 @@ public class Iap {
                                 if (purchase.getSku().equals(SKU_LEVEL_3)) {
                                     PixelDungeon.setDonationLevel(3);
                                 }
+
+                                if (purchase.getSku().equals(SKU_LEVEL_4)) {
+                                    PixelDungeon.setDonationLevel(4);
+                                }
                             } else {
                                 Game.executeInGlThread(new Runnable() {
                                     @Override
@@ -292,6 +304,9 @@ public class Iap {
                 break;
             case 3:
                 doPurchase(SKU_LEVEL_3, null);
+                break;
+            case 4:
+                doPurchase(SKU_LEVEL_4, null);
                 break;
         }
     }
