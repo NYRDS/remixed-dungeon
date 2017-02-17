@@ -60,7 +60,8 @@ public enum Icons {
 	QUIVER,
 	MIND_CONTROL,
 	GRAPHS,
-	NECROMANCER;
+	NECROMANCER,
+	CHEST_ROYAL;
 
 	
 	public Image get() {
@@ -183,6 +184,9 @@ public enum Icons {
 			break;
 		case NECROMANCER:
 			icon.frame( icon.texture.uvRect( 110, 62, 126, 78 ) );
+			break;
+		case CHEST_ROYAL:
+			icon.frame( icon.texture.uvRect( 95, 61, 109, 74 ) );
 			break;
 		}
 		return icon;
