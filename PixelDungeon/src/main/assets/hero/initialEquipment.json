@@ -1,7 +1,8 @@
 {
 	"common": {
 		"armor": {
-			"kind": "ClothArmor"
+			"kind": "ClothArmor",
+			"identified": true
 		},
 		"items": [{
 			"kind": "Gold",
@@ -10,36 +11,45 @@
 	},
 	"WARRIOR": {
 		"weapon": {
-			"kind": "ShortSword"
+			"kind": "ShortSword",
+			"identified": true
 		}
 	},
 	"MAGE": {
 		"items": [{
-			"kind": "WandOfMagicMissile"
+			"kind": "WandOfMagicMissile",
+			"identified": true
 		}]
 	},
 	"ROGUE": {
 		"ring1": {
-			"kind": "RingOfShadows"
+			"kind": "RingOfShadows",
+			"identified": true,
+			"level": 1
 		}
 	},
 	"HUNTRESS": {
 		"items": [{
-			"kind": "Boomerang"
+			"kind": "Boomerang",
+			"identified": true
 		}]
 	},
 	"ELF": {
 		"weapon": {
-			"kind": "WoodenBow"
+			"kind": "WoodenBow",
+			"identified": true,
+			"level": 1
 		},
 		"items": [{
 			"kind": "CommonArrow",
-			"quantity": 20
+			"quantity": 20,
+			"identified": true
 		}]
 	},
 	"NECROMANCER": {
 		"armor": {
-			"kind": "NecromancerRobe"
+			"kind": "NecromancerRobe",
+			"identified": true
 		},
 		"items": [{
 			"kind": "SkeletonKey",
