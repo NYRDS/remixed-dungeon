@@ -19,6 +19,9 @@
 		"items": [{
 			"kind": "WandOfMagicMissile",
 			"identified": true
+		}],
+		"quickslot":[{
+			"kind": "WandOfMagicMissile"
 		}]
 	},
 	"ROGUE": {
@@ -32,6 +35,9 @@
 		"items": [{
 			"kind": "Boomerang",
 			"identified": true
+		}],
+		"quickslot":[{
+			"kind": "Boomerang"
 		}]
 	},
 	"ELF": {
@@ -44,6 +50,9 @@
 			"kind": "CommonArrow",
 			"quantity": 20,
 			"identified": true
+		}],
+		"quickslot":[{
+			"kind": "CommonArrow"
 		}]
 	},
 	"NECROMANCER": {
@@ -54,6 +63,9 @@
 		"items": [{
 			"kind": "SkeletonKey",
 			"levelId": "7"
+		}],
+		"quickslot":[{
+			"kind": "NecromancerRobe"
 		}]
 	}
 }

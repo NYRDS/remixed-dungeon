@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
@@ -198,6 +199,20 @@ public enum HeroClass {
 					JSONArray items = classDesc.getJSONArray("items");
 					for(int i=0;i<items.length();++i) {
 						hero.collect(ItemFactory.createItemFromDesc(items.getJSONObject(i)));
+					}
+				}
+
+				if(classDesc.has("quickslot")) {
+					int slot = 0;
+					JSONArray quickslots = classDesc.getJSONArray("quickslot");
+					for(int i=0;i<quickslots.length();++i) {
+						Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
+						if (item.defaultAction != null){
+							if (hero.belongings.getItem(item.getClass()) != null){
+								QuickSlot.selectItem(hero.belongings.getItem(item.getClass()), slot);
+								slot++;
+							}
+						}
 					}
 				}
 
