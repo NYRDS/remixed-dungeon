@@ -78,7 +78,7 @@ public enum HeroClass {
 
 	private String     title;
 	private Abilities  abilities;
-	static private JSONObject initialEquipment = JsonHelper.readJsonFromAsset("hero/initialEquipment.json");
+	static private JSONObject initialEquipment = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
 
 
 	private static final String[] WAR_PERKS = Game
