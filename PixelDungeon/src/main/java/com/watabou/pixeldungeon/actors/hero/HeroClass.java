@@ -24,6 +24,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -42,14 +43,10 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -78,7 +75,7 @@ public enum HeroClass {
 
 	private String     title;
 	private Abilities  abilities;
-	static private JSONObject initialEquipment = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
+	static private JSONObject initialStats = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
 
 
 	private static final String[] WAR_PERKS = Game
@@ -104,32 +101,6 @@ public enum HeroClass {
 		hero.heroClass = this;
 		initCommon(hero);
 		initForClass(hero,hero.heroClass.name());
-
-		switch (this) {
-		case WARRIOR:
-			initWarrior(hero);
-			break;
-
-		case MAGE:
-			initMage(hero);
-			break;
-
-		case ROGUE:
-			initRogue(hero);
-			break;
-
-		case HUNTRESS:
-			initHuntress(hero);
-			break;
-
-		case ELF:
-			initElf(hero);
-			break;
-
-		case NECROMANCER:
-			initNecromancer(hero);
-			break;
-		}
 
 		hero.setGender(getGender());
 
@@ -176,9 +147,9 @@ public enum HeroClass {
 	}
 
 	private static void initForClass(Hero hero,String className) {
-		if(initialEquipment.has(className)) {
+		if(initialStats.has(className)) {
 			try {
-				JSONObject classDesc = initialEquipment.getJSONObject(className);
+				JSONObject classDesc = initialStats.getJSONObject(className);
 				if(classDesc.has("armor")) {
 					hero.belongings.armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
 				}
@@ -216,6 +187,19 @@ public enum HeroClass {
 					}
 				}
 
+				if(classDesc.has("knownItems")) {
+					JSONArray knownItems = classDesc.getJSONArray("knownItems");
+					for(int i=0;i<knownItems.length();++i) {
+						Item item = ItemFactory.createItemFromDesc(knownItems.getJSONObject(i));
+						if(item instanceof UnknownItem) {
+							((UnknownItem) item).setKnown();
+						}
+					}
+				}
+
+				hero.STR(classDesc.optInt("str",hero.STR()));
+				hero.hp(hero.ht(classDesc.optInt("hp",hero.ht())));
+
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException(e);
 			} catch (InstantiationException e) {
@@ -250,37 +234,6 @@ public enum HeroClass {
 		return null;
 	}
 
-	private static void initWarrior(Hero hero) {
-		hero.STR(hero.STR() + 1);
-		new PotionOfStrength().setKnown();
-	}
-
-	private static void initMage(Hero hero) {
-		new ScrollOfIdentify().setKnown();
-	}
-
-	private static void initRogue(Hero hero) {
-		new ScrollOfMagicMapping().setKnown();
-	}
-
-	private static void initHuntress(Hero hero) {
-		hero.ht(hero.ht() - 5);
-		hero.hp(hero.ht());
-	}
-
-	private void initElf(Hero hero) {
-		hero.STR(hero.STR() - 1);
-
-		hero.ht(hero.ht() - 5);
-		hero.hp(hero.ht());
-	}
-
-	private static void initNecromancer(Hero hero) {
-		hero.ht(hero.ht() - 5);
-		hero.hp(hero.ht());
-
-		new PotionOfHealing().setKnown();
-	}
 
 	public String title() {
 		return title;

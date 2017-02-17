@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -32,7 +33,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Ring extends Artifact {
+public class Ring extends Artifact implements UnknownItem{
 
 	private static final String TXT_IDENTIFY = Game.getVar(R.string.Ring_Identify);
 	
@@ -116,7 +117,7 @@ public class Ring extends Artifact {
 		return handler.isKnown( this );
 	}
 	
-	protected void setKnown() {
+	public void setKnown() {
 		if (!isKnown()) {
 			handler.know( this );
 		}

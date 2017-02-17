@@ -60,6 +60,9 @@ public class Gold extends Item {
 	public boolean doPickUp( Hero hero ) {
 		collect(hero);
 
+		Statistics.goldCollected += quantity();
+		Badges.validateGoldCollected();
+
 		GameScene.pickUp( this );
 		hero.getSprite().showStatus( CharSprite.NEUTRAL, TXT_VALUE, quantity() );
 		hero.spendAndNext( TIME_TO_PICK_UP );
@@ -72,8 +75,7 @@ public class Gold extends Item {
 	@Override
 	public boolean collect(Hero hero) {
 		Dungeon.gold(Dungeon.gold() + quantity());
-		Statistics.goldCollected += quantity();
-		Badges.validateGoldCollected();
+
 		return true;
 	}
 
