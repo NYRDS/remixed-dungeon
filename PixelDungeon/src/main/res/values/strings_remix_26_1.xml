@@ -104,4 +104,17 @@
     <string name="town_deco_movies_door_name">Door</string>
     <string name="town_deco_movies_door_desc">This door seems exceptionally well made. It probably leads to something incredible.</string>
 
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">royal</string>
+
+    <string name="WndDonate_royalDonate">royal donation</string>
+
+    <string name="WndDonate_royalDonateText">I don\'t want to be weird, but by doing so, you literally feeding developers.</string>
+
+    <string name="WndDonate_royalDonateText2">Additionally you will receive every single hat from real money store! As well as every single hat that is going to be ever released.</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">royal</string>
+
 </resources>
