@@ -35,8 +35,9 @@
     <string name="ServiceManNPC_Name_Objective">employee</string>
     <string name="ServiceManNPC_Desc">A regular worker of local establishments.</string>
 
-    <!-- STRINGS OF Shopkeeper CLASS -->
-    <string name="Shopkeeper_Desc2">This guy is a typical shopkeeper. By looking in his eyes you can tell that he already knows price of your belongings.</string>
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">shopkeeper</string>
+    <string name="TownShopkeeper_Desc">This guy is a typical shopkeeper. You can tell he already knows your price.</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
