@@ -17,14 +17,12 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import java.util.ArrayList;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -32,6 +30,8 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Gold extends Item {
 
@@ -58,11 +58,8 @@ public class Gold extends Item {
 	
 	@Override
 	public boolean doPickUp( Hero hero ) {
-		
-		Dungeon.gold(Dungeon.gold() + quantity());
-		Statistics.goldCollected += quantity();
-		Badges.validateGoldCollected();
-		
+		collect(hero);
+
 		GameScene.pickUp( this );
 		hero.getSprite().showStatus( CharSprite.NEUTRAL, TXT_VALUE, quantity() );
 		hero.spendAndNext( TIME_TO_PICK_UP );
@@ -71,7 +68,15 @@ public class Gold extends Item {
 		
 		return true;
 	}
-	
+
+	@Override
+	public boolean collect(Hero hero) {
+		Dungeon.gold(Dungeon.gold() + quantity());
+		Statistics.goldCollected += quantity();
+		Badges.validateGoldCollected();
+		return true;
+	}
+
 	@Override
 	public boolean isUpgradable() {
 		return false;

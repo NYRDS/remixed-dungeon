@@ -23,50 +23,45 @@ import android.support.annotation.NonNull;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
-import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
-import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
-import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
-import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public enum HeroClass {
@@ -107,6 +102,7 @@ public enum HeroClass {
 	public void initHero(Hero hero) {
 		hero.heroClass = this;
 		initCommon(hero);
+		initForClass(hero,hero.heroClass.name());
 
 		switch (this) {
 		case WARRIOR:
@@ -178,11 +174,47 @@ public enum HeroClass {
 		//hero.defenseSkill = 1000;
 	}
 
+	private static void initForClass(Hero hero,String className) {
+		if(initialEquipment.has(className)) {
+			try {
+				JSONObject classDesc = initialEquipment.getJSONObject(className);
+				if(classDesc.has("armor")) {
+					hero.belongings.armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
+				}
+
+				if(classDesc.has("weapon")) {
+					hero.belongings.weapon = (Weapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
+				}
+
+				if(classDesc.has("ring1")) {
+					hero.belongings.ring1 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring1"));
+				}
+
+				if(classDesc.has("ring2")) {
+					hero.belongings.ring2 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring2"));
+				}
+
+				if(classDesc.has("items")) {
+					JSONArray items = classDesc.getJSONArray("items");
+					for(int i=0;i<items.length();++i) {
+						hero.collect(ItemFactory.createItemFromDesc(items.getJSONObject(i)));
+					}
+				}
+
+			} catch (JSONException e) {
+				throw new TrackedRuntimeException(e);
+			} catch (InstantiationException e) {
+				throw new TrackedRuntimeException(e);
+			} catch (IllegalAccessException e) {
+				throw new TrackedRuntimeException(e);
+			}
+		}
+	}
+
 	private static void initCommon(Hero hero) {
-		(hero.belongings.armor = new ClothArmor()).identify();
-		if(BuildConfig.DEBUG) initDebug(hero);
+		//if(BuildConfig.DEBUG) initDebug(hero);
 		QuickSlot.cleanStorage();
-		Dungeon.gold(Dungeon.gold() + 200);
+		initForClass(hero,"common");
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -205,37 +237,20 @@ public enum HeroClass {
 
 	private static void initWarrior(Hero hero) {
 		hero.STR(hero.STR() + 1);
-
-		(hero.belongings.weapon = new ShortSword()).identify();
-
 		new PotionOfStrength().setKnown();
 	}
 
 	private static void initMage(Hero hero) {
-		WandOfMagicMissile wand = new WandOfMagicMissile();
-		hero.collect(wand.identify());
-
-		QuickSlot.selectItem(wand, 0);
-
 		new ScrollOfIdentify().setKnown();
 	}
 
 	private static void initRogue(Hero hero) {
-		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
-
-		hero.belongings.ring1.activate(hero);
-
 		new ScrollOfMagicMapping().setKnown();
 	}
 
 	private static void initHuntress(Hero hero) {
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());
-
-		Boomerang boomerang = new Boomerang();
-		hero.collect(boomerang.identify());
-
-		QuickSlot.selectItem(boomerang, 0);
 	}
 
 	private void initElf(Hero hero) {
@@ -243,22 +258,11 @@ public enum HeroClass {
 
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());
-
-		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
-
-		hero.collect(new CommonArrow(20));
-
-		QuickSlot.selectItem(CommonArrow.class, 0);
 	}
 
 	private static void initNecromancer(Hero hero) {
 		hero.ht(hero.ht() - 5);
 		hero.hp(hero.ht());
-
-		(hero.belongings.armor = new NecromancerRobe()).identify();
-
-		SkeletonKey key = SkeletonKey.makeNewKey("7", 7);
-		hero.collect(key);
 
 		new PotionOfHealing().setKnown();
 	}
