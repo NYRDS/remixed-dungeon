@@ -50,7 +50,7 @@ public class WndDonate extends WndTabbed {
 	private static final String RUBY_DONATE_TEXT_2 = Game
 			.getVar(R.string.WndDonate_rubyDonateText2);
 	private static final String ROYAL_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_royalDonateText);
+			.getVar(R.string.WndDonate_royalDonateText2);
 
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY, Icons.CHEST_ROYAL };
