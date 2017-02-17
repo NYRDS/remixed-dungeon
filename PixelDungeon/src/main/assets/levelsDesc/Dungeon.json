@@ -1,8 +1,8 @@
 {
    "Levels":{
       "0":{"kind":"SewerLevel", "depth":0,        "size":[0,0]},
-      "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json", "music":"ost_town_1.mp3"},
-      "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "file":"levelsDesc/Theater.json", "music":"ost_town_1.mp3"},
+      "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "isSafe":true, "file":"levelsDesc/empty_interior.json", "music":"ost_town_1.mp3"},
+      "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "isSafe":true, "file":"levelsDesc/Theater.json", "music":"ost_town_1.mp3"},
       "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "music":"ost_town_1.mp3"},
       "town_shop":{"kind":"TownShopLevel", "depth":1, "size":[32,32], "isSafe":true, "music":"ost_town_1.mp3"},
 
