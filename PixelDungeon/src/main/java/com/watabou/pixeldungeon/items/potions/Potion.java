@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -43,7 +44,7 @@ import com.watabou.utils.Bundle;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Potion extends Item {
+public class Potion extends Item implements UnknownItem {
 
 	public static final String AC_DRINK	  = Game.getVar(R.string.Potion_ACDrink);
 	public static final String AC_MOISTEN = Game.getVar(R.string.Potion_ACMoisten);

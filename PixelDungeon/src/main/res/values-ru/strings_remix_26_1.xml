@@ -35,6 +35,10 @@
     <string name="ServiceManNPC_Name_Objective">сотрудника</string>
     <string name="ServiceManNPC_Desc">Рядовой работник местных заведений.</string>
 
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">торговец</string>
+    <string name="TownShopkeeper_Desc">Этот человек  - типичный торговец. Даже не сомневайся, он уже знает тебе цену.</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="WndMovieTheatre_Watch">посмотреть фильм</string>

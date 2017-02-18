@@ -49,7 +49,8 @@ public class WelcomeScene extends PixelScene {
 				Game.getVar(R.string.Welcome_Text_25_3),
 				Game.getVar(R.string.Welcome_Text_25_4),
 				Game.getVar(R.string.Welcome_Text_25_5),
-				Game.getVar(R.string.Welcome_Text_26)
+				Game.getVar(R.string.Welcome_Text_26),
+				Game.getVar(R.string.Welcome_Text_26_1)
 		};
 
 		int displayUpdates = Math.min(upds.length, 5);

@@ -51,9 +51,9 @@ public class MasteryItem extends Item {
 			int penalty = 2;
 			specialChooseMessage(penalty);
 			getCurUser().STR(getCurUser().STR() - penalty);
-		} else {
-			GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		}
+
+		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 
 		getCurUser().checkIfFurious();
 		getCurUser().updateLook();

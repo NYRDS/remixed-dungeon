@@ -55,7 +55,7 @@ public class WndChooseWay extends Window {
 		chooseWay( item, way1, way2 );
 	}
 
-	public String getWayDesc( final HeroSubClass way1, final HeroSubClass way2 ){
+	private String getWayDesc(final HeroSubClass way1, final HeroSubClass way2){
 		String desc =  way1.desc();
 		if (way2 != null){
 			desc = desc + "\n\n" + way2.desc();
@@ -67,7 +67,7 @@ public class WndChooseWay extends Window {
 		return desc;
 	}
 
-	public void chooseWay( final MasteryItem item, final HeroSubClass way1, final HeroSubClass way2 ) {
+	private void chooseWay(final MasteryItem item, final HeroSubClass way1, final HeroSubClass way2) {
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( item.name() );

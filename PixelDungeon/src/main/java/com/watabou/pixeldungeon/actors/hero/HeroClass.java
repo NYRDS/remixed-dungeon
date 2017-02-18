@@ -20,69 +20,63 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
-import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
+import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
+import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
-import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
-import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
-import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
-import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
-import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
-import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public enum HeroClass {
 
-	WARRIOR(Game.getVar(R.string.HeroClass_War),WarriorArmor.class),
-	MAGE(Game.getVar(R.string.HeroClass_Mag),MageArmor.class),
-	ROGUE(Game.getVar(R.string.HeroClass_Rog),RogueArmor.class),
-	HUNTRESS(Game.getVar(R.string.HeroClass_Hun),HuntressArmor.class),
-	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class),
-	NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer),NecromancerArmor.class);
+	WARRIOR(Game.getVar(R.string.HeroClass_War),WarriorArmor.class, Ordinary.instance),
+	MAGE(Game.getVar(R.string.HeroClass_Mag),MageArmor.class, Ordinary.instance),
+	ROGUE(Game.getVar(R.string.HeroClass_Rog),RogueArmor.class, Ordinary.instance),
+	HUNTRESS(Game.getVar(R.string.HeroClass_Hun),HuntressArmor.class, Ordinary.instance),
+	ELF(Game.getVar(R.string.HeroClass_Elf),ElfArmor.class, Ordinary.instance),
+	NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer),NecromancerArmor.class, Ordinary.instance);
 
 	private final Class<? extends ClassArmor> armorClass;
 
-	private String title;
+	private String     title;
+	private Abilities  abilities;
+	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
+
 
 	private static final String[] WAR_PERKS = Game
 			.getVars(R.array.HeroClass_WarPerks);
@@ -97,40 +91,16 @@ public enum HeroClass {
 	private static final String[] NECROMANCER_PERKS = Game
 			.getVars(R.array.HeroClass_NecromancerPerks);
 
-	HeroClass(String title, Class<? extends ClassArmor> armorClass) {
+	HeroClass(String title, Class<? extends ClassArmor> armorClass, Abilities abilities) {
 		this.title = title;
 		this.armorClass = armorClass;
+		this.abilities = abilities;
 	}
 
 	public void initHero(Hero hero) {
 		hero.heroClass = this;
 		initCommon(hero);
-
-		switch (this) {
-		case WARRIOR:
-			initWarrior(hero);
-			break;
-
-		case MAGE:
-			initMage(hero);
-			break;
-
-		case ROGUE:
-			initRogue(hero);
-			break;
-
-		case HUNTRESS:
-			initHuntress(hero);
-			break;
-
-		case ELF:
-			initElf(hero);
-			break;
-
-		case NECROMANCER:
-			initNecromancer(hero);
-			break;
-		}
+		initForClass(hero,hero.heroClass.name());
 
 		hero.setGender(getGender());
 
@@ -176,11 +146,74 @@ public enum HeroClass {
 		//hero.defenseSkill = 1000;
 	}
 
+	private static void initForClass(Hero hero,String className) {
+		if(initHeroes.has(className)) {
+			try {
+				JSONObject classDesc = initHeroes.getJSONObject(className);
+				if(classDesc.has("armor")) {
+					hero.belongings.armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
+				}
+
+				if(classDesc.has("weapon")) {
+					hero.belongings.weapon = (Weapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
+				}
+
+				if(classDesc.has("ring1")) {
+					hero.belongings.ring1 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring1"));
+				}
+
+				if(classDesc.has("ring2")) {
+					hero.belongings.ring2 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring2"));
+				}
+
+				if(classDesc.has("items")) {
+					JSONArray items = classDesc.getJSONArray("items");
+					for(int i=0;i<items.length();++i) {
+						hero.collect(ItemFactory.createItemFromDesc(items.getJSONObject(i)));
+					}
+				}
+
+				if(classDesc.has("quickslot")) {
+					int slot = 0;
+					JSONArray quickslots = classDesc.getJSONArray("quickslot");
+					for(int i=0;i<quickslots.length();++i) {
+						Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
+						if (item.defaultAction != null){
+							if (hero.belongings.getItem(item.getClass()) != null){
+								QuickSlot.selectItem(hero.belongings.getItem(item.getClass()), slot);
+								slot++;
+							}
+						}
+					}
+				}
+
+				if(classDesc.has("knownItems")) {
+					JSONArray knownItems = classDesc.getJSONArray("knownItems");
+					for(int i=0;i<knownItems.length();++i) {
+						Item item = ItemFactory.createItemFromDesc(knownItems.getJSONObject(i));
+						if(item instanceof UnknownItem) {
+							((UnknownItem) item).setKnown();
+						}
+					}
+				}
+
+				hero.STR(classDesc.optInt("str",hero.STR()));
+				hero.hp(hero.ht(classDesc.optInt("hp",hero.ht())));
+
+			} catch (JSONException e) {
+				throw new TrackedRuntimeException(e);
+			} catch (InstantiationException e) {
+				throw new TrackedRuntimeException(e);
+			} catch (IllegalAccessException e) {
+				throw new TrackedRuntimeException(e);
+			}
+		}
+	}
+
 	private static void initCommon(Hero hero) {
-		(hero.belongings.armor = new ClothArmor()).identify();
-		if(BuildConfig.DEBUG) initDebug(hero);
+		//if(BuildConfig.DEBUG) initDebug(hero);
 		QuickSlot.cleanStorage();
-		Dungeon.gold(Dungeon.gold() + 200);
+		initForClass(hero,"common");
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -201,65 +234,6 @@ public enum HeroClass {
 		return null;
 	}
 
-	private static void initWarrior(Hero hero) {
-		hero.STR(hero.STR() + 1);
-
-		(hero.belongings.weapon = new ShortSword()).identify();
-
-		new PotionOfStrength().setKnown();
-	}
-
-	private static void initMage(Hero hero) {
-		WandOfMagicMissile wand = new WandOfMagicMissile();
-		hero.collect(wand.identify());
-
-		QuickSlot.selectItem(wand, 0);
-
-		new ScrollOfIdentify().setKnown();
-	}
-
-	private static void initRogue(Hero hero) {
-		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
-
-		hero.belongings.ring1.activate(hero);
-
-		new ScrollOfMagicMapping().setKnown();
-	}
-
-	private static void initHuntress(Hero hero) {
-		hero.ht(hero.ht() - 5);
-		hero.hp(hero.ht());
-
-		Boomerang boomerang = new Boomerang();
-		hero.collect(boomerang.identify());
-
-		QuickSlot.selectItem(boomerang, 0);
-	}
-
-	private void initElf(Hero hero) {
-		hero.STR(hero.STR() - 1);
-
-		hero.ht(hero.ht() - 5);
-		hero.hp(hero.ht());
-
-		(hero.belongings.weapon = new WoodenBow()).upgrade().identify();
-
-		hero.collect(new CommonArrow(20));
-
-		QuickSlot.selectItem(CommonArrow.class, 0);
-	}
-
-	private static void initNecromancer(Hero hero) {
-		hero.ht(hero.ht() - 5);
-		hero.hp(hero.ht());
-
-		(hero.belongings.armor = new NecromancerRobe()).identify();
-
-		SkeletonKey key = SkeletonKey.makeNewKey("7", 7);
-		hero.collect(key);
-
-		new PotionOfHealing().setKnown();
-	}
 
 	public String title() {
 		return title;
@@ -316,5 +290,9 @@ public enum HeroClass {
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
+	}
+
+	Abilities getAbilities() {
+		return abilities;
 	}
 }

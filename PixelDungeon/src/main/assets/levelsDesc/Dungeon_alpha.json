@@ -4,11 +4,11 @@
       "test_guts":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelGuts.json"},
       "test_sewers":{"kind":"PredesignedLevel", "depth":2, "file":"levelsDesc/TestLevelSewers.json", "waterSx":10,"waterSy":3},
       "test_random":{"kind":"RandomLevel", "depth":2, "file":"levelsDesc/TestLevelRandom.json"},
-      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true,"isSafe":true},
+      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true,"isSafe":true, "music":"ost_town_1.mp3"},
       "tiled_test":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "file":"levelsDesc/TiledTest.json"},
-      "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "file":"levelsDesc/Theater.json", "noFogOfWar":true},
-      "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json", "noFogOfWar":true},
-      "town_shop":{"kind":"TownShopLevel", "depth":1, "size":[32,32]},
+      "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "file":"levelsDesc/Theater.json", "isSafe":true, "music":"ost_town_1.mp3"},
+      "empty_interior":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "file":"levelsDesc/empty_interior.json", "isSafe":true, "music":"ost_town_1.mp3"},
+      "town_shop":{"kind":"TownShopLevel", "depth":1, "size":[32,32], "isSafe":true, "music":"ost_town_1.mp3"},
 
      "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
 

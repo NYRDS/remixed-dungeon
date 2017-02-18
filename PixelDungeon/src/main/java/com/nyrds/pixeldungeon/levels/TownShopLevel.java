@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -7,18 +8,15 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.potions.PotionOfMight;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
-import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
 import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
+import com.watabou.pixeldungeon.items.weapon.melee.Sword;
+import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,12 +62,13 @@ public class TownShopLevel extends Level {
 		items.add( new LeatherArmor().identify() );
 		items.add( new Dagger().identify() );
 		items.add( new Knuckles().identify() );
-		items.add( new Longsword().identify() );
+		items.add( new Sword().identify() );
 		items.add( new Quarterstaff().identify() );
 		items.add( new OverpricedRation() );
 		items.add( new OverpricedRation() );
-		items.add( (Random.Int( 2 ) == 0 ? new PotionOfHealing() : new PotionOfMight()).identify() );
-		items.add( (Random.Int( 2 ) == 0 ? new ScrollOfUpgrade() : new ScrollOfIdentify()).identify() );
+		items.add( new Dart(5).identify() );
+		items.add( new Dart(5).identify() );
+		items.add( new CommonArrow(10) );
 
 		Item[] range = items.toArray(new Item[items.size()]);
 
@@ -91,7 +90,7 @@ public class TownShopLevel extends Level {
 	@Override
 	protected void createMobs() {
 
-		Mob shopkeeper =  new Shopkeeper();
+		Mob shopkeeper =  new TownShopkeeper();
 		shopkeeper.setPos(this.getRandomTerrainCell(Terrain.EMPTY));
 		this.mobs.add( shopkeeper );
 

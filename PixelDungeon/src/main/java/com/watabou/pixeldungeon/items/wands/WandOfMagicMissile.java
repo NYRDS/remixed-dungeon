@@ -106,7 +106,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 	}
 	
 	@Override
-	protected boolean isKnown() {
+	public boolean isKnown() {
 		return true;
 	}
 	

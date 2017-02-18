@@ -1,0 +1,83 @@
+{
+	"common": {
+		"armor": {
+			"kind": "ClothArmor",
+			"identified": true
+		},
+		"items": [{
+			"kind": "Gold",
+			"quantity": 200
+		}],
+        "str":10,
+        "hp":20
+	},
+	"WARRIOR": {
+		"weapon": {
+			"kind": "ShortSword",
+			"identified": true
+		},
+        "str":11,
+        "knownItems":[{"kind":"PotionOfStrength"}]
+
+	},
+	"MAGE": {
+		"items": [{
+			"kind": "WandOfMagicMissile",
+			"identified": true
+		}],
+		"quickslot":[{
+			"kind": "WandOfMagicMissile"
+		}],
+      "knownItems":[{"kind":"ScrollOfIdentify"}]
+	},
+	"ROGUE": {
+		"ring1": {
+			"kind": "RingOfShadows",
+			"identified": true,
+			"level": 1
+		},
+      "knownItems":[{"kind":"ScrollOfMagicMapping"}]
+	},
+	"HUNTRESS": {
+		"items": [{
+			"kind": "Boomerang",
+			"identified": true
+		}],
+		"quickslot":[{
+			"kind": "Boomerang"
+		}],
+        "hp":15
+	},
+	"ELF": {
+		"weapon": {
+			"kind": "WoodenBow",
+			"identified": true,
+			"level": 1
+		},
+		"items": [{
+			"kind": "CommonArrow",
+			"quantity": 20,
+			"identified": true
+		}],
+		"quickslot":[{
+			"kind": "CommonArrow"
+		}],
+        "str":9,
+        "hp":15
+	},
+	"NECROMANCER": {
+		"armor": {
+			"kind": "NecromancerRobe",
+			"identified": true
+		},
+		"items": [{
+			"kind": "SkeletonKey",
+			"levelId": "7"
+		}],
+		"quickslot":[{
+			"kind": "NecromancerRobe"
+		}],
+        "hp":15,
+        "knownItems":[{"kind":"PotionOfHealing"}]
+	}
+}
