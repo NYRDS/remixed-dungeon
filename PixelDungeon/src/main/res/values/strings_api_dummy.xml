@@ -5,6 +5,7 @@
     <string name="easyModeAdUnitId"></string>
     <string name="easyModeSmallScreenAdUnitId"></string>
     <string name="cinemaRewardAdUnitId"></string>
+    <string name="appodealRewardAdUnitId"></string>
     <string name="iapKey"></string>
     <string name="ownSignature"></string>
 </resources>

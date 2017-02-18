@@ -158,7 +158,7 @@ public class StringsManager {
 	public static String getVar(int id) {
 		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
 				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
-				&& id != R.string.testDevice && id != R.string.ownSignature) {
+				&& id != R.string.testDevice && id != R.string.ownSignature && id != R.string.appodealRewardAdUnitId) {
 			if (stringMap.containsKey(id)) {
 				return stringMap.get(id);
 			}
@@ -184,7 +184,7 @@ public class StringsManager {
 	public static String getVar(String id) {
 		if (id.equals("easyModeAdUnitId") || id.equals("saveLoadAdUnitId")
 				|| id.equals("easyModeSmallScreenAdUnitId") || id.equals("iapKey")
-				|| id.equals("testDevice") || id.equals("ownSignature")) {
+				|| id.equals("testDevice") || id.equals("ownSignature") || id.equals("appodealRewardAdUnitId")) {
 			return "";
 		}
 
