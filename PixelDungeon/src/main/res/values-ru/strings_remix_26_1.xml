@@ -104,4 +104,17 @@
     <string name="town_deco_movies_door_name">Дверь</string>
     <string name="town_deco_movies_door_desc">Эта дверь выглядит крайне изысканно. Скорее всего она ведёт в удивительнейшее место.</string>
 
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">царский</string>
+
+    <string name="WndDonate_royalDonate">царское пожертвование</string>
+
+    <string name="WndDonate_royalDonateText">Это может прозвучать странно, но таким образом ты фактически обеспечиваешь разработчикам пропитание.</string>
+
+    <string name="WndDonate_royalDonateText2">А также, ты получишь все шапки из магазина шапок! Включая все шапки которые когда-либо появятся в будущем.</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">царский</string>
+
 </resources>
