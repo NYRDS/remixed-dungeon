@@ -97,6 +97,7 @@ public class GameScene extends PixelScene {
 	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 
 	private static volatile GameScene scene;
+	public static Runnable doOnSceneSwitch;
 
 	private SkinnedBlock   water;
 	private DungeonTilemap tiles;
@@ -352,6 +353,10 @@ public class GameScene extends PixelScene {
 		fadeIn();
 
 		Dungeon.observe();
+
+		if(doOnSceneSwitch!=null) {
+			doOnSceneSwitch.run();
+		}
 	}
 
 	public void destroy() {

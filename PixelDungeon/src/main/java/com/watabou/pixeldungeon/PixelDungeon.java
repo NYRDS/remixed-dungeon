@@ -156,7 +156,7 @@ public class PixelDungeon extends Game {
 		Game.instance()
 				.setRequestedOrientation(value ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 						: ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		setNeedSceneRestart(true);
+		//setNeedSceneRestart(true);
 		Preferences.INSTANCE.put(Preferences.KEY_LANDSCAPE, value);
 	}
 
@@ -170,7 +170,7 @@ public class PixelDungeon extends Game {
 
 		if (needSceneRestart && !(scene instanceof InterlevelScene)) {
 			requestedReset = true;
-			needSceneRestart = false;
+			setNeedSceneRestart(false);
 		}
 	}
 

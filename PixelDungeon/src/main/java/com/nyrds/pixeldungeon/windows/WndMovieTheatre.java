@@ -9,16 +9,16 @@ import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
+import com.watabou.pixeldungeon.windows.WndMessage;
 
 public class WndMovieTheatre extends Window implements InterstitialPoint{
 
@@ -28,14 +28,19 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 	private static final String TXT_INSTRUCTION = Game.getVar(R.string.WndMovieTheatre_Instruction);
 	private static final String TXT_TITLE       = Game.getVar(R.string.WndMovieTheatre_Title);
 	private static final String TXT_THANK_YOU   = Game.getVar(R.string.WndMovieTheatre_Thank_You);
+	private static final String TXT_SORRY       = Game.getVar(R.string.WndMovieTheatre_Sorry);
 
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
 	private static final int GOLD_REWARD = 150;
 
+	private ServiceManNPC serviceMan;
+
 	public WndMovieTheatre(final ServiceManNPC npc) {
 		
 		super();
+
+		serviceMan = npc;
 		
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite(new Gold()) );
@@ -52,7 +57,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		RedButton btnYes = new RedButton( BTN_WATCH ) {
 			@Override
 			protected void onClick() {
-				showAd( npc );
+				showAd( );
 			}
 		};
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
@@ -61,7 +66,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		RedButton btnNo = new RedButton( BTN_NO ) {
 			@Override
 			protected void onClick() {
-				npc.say( TXT_BYE );
+				serviceMan.say( TXT_BYE );
 				hide();
 			}
 		};
@@ -71,9 +76,9 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		resize( WIDTH, (int)btnNo.bottom() );
 	}
 
-	private void showAd(final ServiceManNPC npc) {
+	private void showAd() {
 		hide();
-		npc.say( TXT_THANK_YOU );
+
 		Game.paused = true;
 		Ads.removeEasyModeBanner();
 		AppodealRewardVideo.showCinemaRewardVideo(this);
@@ -91,16 +96,28 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 					}
 				}
 
+				GameScene.doOnSceneSwitch = new Runnable() {
+					@Override
+					public void run() {
+						GameScene.show(new WndMessage("Yep") {
+							@Override
+							public void hide() {
+								super.hide();
+								if(result) {
+									serviceMan.say(TXT_THANK_YOU);
+									serviceMan.reward();
+								} else {
+									serviceMan.say(TXT_SORRY);
+								}
+								GameScene.doOnSceneSwitch = null;
+							}
+						});
+					}
+				};
+
 				PixelDungeon.landscape(PixelDungeon.landscape());
 
 				Game.paused = false;
-
-				if(result) {
-					Dungeon.hero.collect(new Gold(150));
-				} else {
-					GLog.i("Индейский национальный фигвам");
-				}
-
 			}
 		});
 

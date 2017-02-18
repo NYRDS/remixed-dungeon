@@ -47,6 +47,8 @@
     <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theatre! We provide a special service, you can watch a movie for free, and if you\'ll see it all the through you will be rewarded with %d gold coins!</string>
     <string name="WndMovieTheatre_Title">Movie Theatre</string>
     <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
+    <string name="WndMovieTheatre_Sorry">Something gets wrong, sorry...</string>>
+
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
@@ -116,5 +118,6 @@
 
     <!-- STRINGS OF WndPremiumSettings CLASS -->
     <string name="WndPremiumSettings_royal">royal</string>
+    <string name="ServiceManNPC_NotReady">Sorry, our cinema not ready yet...</string>
 
 </resources>
