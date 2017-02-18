@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
+import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -12,6 +14,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 public class ServiceManNPC extends NPC {
 
 	public ServiceManNPC() {
+		AppodealRewardVideo.initCinemaRewardVideo();
 	}
 	
 	@Override
@@ -48,7 +51,11 @@ public class ServiceManNPC extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		GameScene.show( new WndMovieTheatre( this ) );
+		if(RewardVideoAds.isReady()) {
+			GameScene.show(new WndMovieTheatre(this));
+		} else {
+			say("Приходите позже, когда нас дома не будет");
+		}
 
 		return true;
 	}

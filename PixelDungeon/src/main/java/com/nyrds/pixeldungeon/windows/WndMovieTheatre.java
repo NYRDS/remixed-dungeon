@@ -5,7 +5,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.RewardVideoAds;
+import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
@@ -76,7 +76,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		npc.say( TXT_THANK_YOU );
 		Game.paused = true;
 		Ads.removeEasyModeBanner();
-		RewardVideoAds.showCinemaRewardVideo(this);
+		AppodealRewardVideo.showCinemaRewardVideo(this);
 	}
 
 	@Override
@@ -96,8 +96,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 				Game.paused = false;
 
 				if(result) {
-					Dungeon.gold(Dungeon.gold() + 150);
-
+					Dungeon.hero.collect(new Gold(150));
 				} else {
 					GLog.i("Индейский национальный фигвам");
 				}

@@ -91,6 +91,9 @@ public class RewardVideoAds {
 
 
 
+	public static boolean isReady() {
+		return Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
+	}
 
 
 	/*private class RewardVideoAdListener implements RewardedVideoAdListener {
