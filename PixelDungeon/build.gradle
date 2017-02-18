@@ -56,20 +56,12 @@ android {
 }
 
 dependencies {
-    compile 'com.google.android.gms:play-services-location:9.0.2'
     compile 'com.google.android.gms:play-services-ads:9.0.2'
     compile 'com.google.android.gms:play-services-base:9.0.2'
     compile 'com.google.android.gms:play-services-analytics:9.0.2'
     compile project(':cheetah-mobile-3.4.7')
     compile 'ch.acra:acra:4.8.1@aar'
     compile 'com.android.support:support-v4'
-    compile files('lib/android-support-v7-recyclerview-23.1.1.jar')
-    compile files('lib/appodeal-1.15.8.jar')
-    compile files('lib/applovin-6.3.0.jar')
-    compile files('lib/chartboost-6.5.1.jar')
-    compile files('lib/flurry-analytics-6.5.0.jar')
-    compile files('lib/my-target-4.5.10.jar')
-    compile files('lib/unity-ads-2.0.4.jar')
-    compile files('lib/yandex-metrica-2.51.jar')
-    compile 'com.android.support:multidex:1.0.0'
+    compile fileTree(dir: 'lib', include: '*.jar')
+    compile 'com.android.support:multidex:1.0.1'
 }
