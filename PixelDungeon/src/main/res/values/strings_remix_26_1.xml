@@ -48,6 +48,11 @@
     <string name="WndMovieTheatre_Title">Movie Theatre</string>
     <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
 
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">heal - 100 gold</string>
+    <string name="WndPriest_Instruction">Welcome my son, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through, right now building is under reconstruction, but if you seek help, I can provide healing service and food only for 100 gold coins!</string>
+    <string name="WndPriest_Title">Town priest</string>
+
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_roof_name">Roof</string>
