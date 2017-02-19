@@ -2,125 +2,125 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
-    <string name="TownGuardNPC_Name">town guard</string>
+    <string name="TownGuardNPC_Name">стражник</string>
     <string name="TownGuardNPC_Gender">masculine</string>
-    <string name="TownGuardNPC_Name_Objective">town guard</string>
-    <string name="TownGuardNPC_Desc">A regular town guard.</string>
-    <string name="TownGuardNPC_Message1">Move along.</string>
-    <string name="TownGuardNPC_Message2">Thanks to adventurers like you, it became really peaceful up here.</string>
-    <string name="TownGuardNPC_Message3">You think there is to much guards in this town? Well that\'s only town with a gigantic dungeon that was taken over by monsters, isn\'t it?</string>
+    <string name="TownGuardNPC_Name_Objective">стражника</string>
+    <string name="TownGuardNPC_Desc">Типичный городской стражник.</string>
+    <string name="TownGuardNPC_Message1">Проходим не задерживаемся.</string>
+    <string name="TownGuardNPC_Message2">Благодаря таким людям, как ты, город стал гораздо безопаснее.</string>
+    <string name="TownGuardNPC_Message3">Думаешь здесь слишком много стражников? Это ведь единственный город в котором находится спуск в гигантское подземелье, захваченное монстрами, не так ли?</string>
 
     <!-- STRINGS OF TownsfolkNPC CLASS -->
-    <string name="TownsfolkNPC_Name">townsfolk</string>
+    <string name="TownsfolkNPC_Name">горожанин</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
-    <string name="TownsfolkNPC_Name_Objective">townsfolk</string>
-    <string name="TownsfolkNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes does look expensive</string>
-    <string name="TownsfolkNPC_Message1">Ah! Another adventurer, lovely! Make sure to loot as many valuables as you can!</string>
-    <string name="TownsfolkNPC_Message2">Town became so wealthy thanks to that dungeon, that everyone in town can afford to go on a vacation whenever we please! In fact that\'s why there is so few people in here right now.</string>
-    <string name="TownsfolkNPC_Message3">What a lovely day.</string>
-    <string name="TownsfolkNPC_Message4">I hope the sewers won\'t get flooded when spring arrives. We don\'t need another rat infestation.</string>
+    <string name="TownsfolkNPC_Name_Objective">горожанина</string>
+    <string name="TownsfolkNPC_Desc">Один из местных жителей. И не смотря на то, что это явно простолюдин, его одежда выглядит совсем не дешёвой.</string>
+    <string name="TownsfolkNPC_Message1">О! Ещё один приключенец, какая прелесть! Постарайся вынести из подземелья как можно больше ценностей!</string>
+    <string name="TownsfolkNPC_Message2">Город на столько обогатился за счёт этого подземелья, что почти всё население находится в отпусках! Поэтому здесь сейчас на столько малолюдно.</string>
+    <string name="TownsfolkNPC_Message3">Какой чудный день.</string>
+    <string name="TownsfolkNPC_Message4">Надеюсь этой весной канализацию не затопит. Очередное нашествие крыс нам ни к чему.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
-    <string name="HealerNPC_Name">town priest</string>
+    <!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">городской священик</string>
     <string name="HealerNPC_Gender">masculine</string>
-    <string name="HealerNPC_Name_Objective">town priest</string>
-    <string name="HealerNPC_Desc">An old man, somehow he looks like someone who would be making wands.</string>
-    <string name="HealerNPC_Message1">Free treatment for every adventurer!</string>
-    <string name="HealerNPC_Message2">Come back anytime you feel sick or hungry!</string>
-    <string name="HealerNPC_Message3">I wonder why church doesn\'t allow us to wear hats... it\'s really cold out here.</string>
+    <string name="HealerNPC_Name_Objective">священика</string>
+    <string name="HealerNPC_Desc">Этот старик весьма походит на того, кто мог бы заниматься производством волшебных палочек.</string>
+    <string name="HealerNPC_Message1">Бесплатное лечение для каждого путешественника!</string>
+    <string name="HealerNPC_Message2">Если проголодаетесь или вас, не дай бог, ранят непременно возвращайтесь!</string>
+    <string name="HealerNPC_Message3">Ох, почему же церковь не позволяет носить шапки... здесь так холодно.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
-    <string name="ServiceManNPC_Name">employee</string>
+    <string name="ServiceManNPC_Name">сотрудник</string>
     <string name="ServiceManNPC_Gender">masculine</string>
-    <string name="ServiceManNPC_Name_Objective">employee</string>
-    <string name="ServiceManNPC_Desc">A regular worker of local establishments.</string>
+    <string name="ServiceManNPC_Name_Objective">сотрудника</string>
+    <string name="ServiceManNPC_Desc">Рядовой работник местных заведений.</string>
 
     <!-- STRINGS OF TownShopkeeper CLASS -->
-    <string name="TownShopkeeper_Name">shopkeeper</string>
-    <string name="TownShopkeeper_Desc">This guy is a typical shopkeeper. You can tell he already knows your price.</string>
+    <string name="TownShopkeeper_Name">торговец</string>
+    <string name="TownShopkeeper_Desc">Этот человек  - типичный торговец. Даже не сомневайся, он уже знает тебе цену.</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
-    <string name="WndMovieTheatre_Watch">watch a movie</string>
-    <string name="WndMovieTheatre_No">leave</string>
-    <string name="WndMovieTheatre_Bye">Come back any time, we always happy to see you!</string>
-    <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theatre! We provide a special service, you can watch a movie for free, and if you\'ll see it all the through you will be rewarded with %d gold coins!</string>
-    <string name="WndMovieTheatre_Title">Movie Theatre</string>
-    <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
+    <string name="WndMovieTheatre_Watch">посмотреть фильм</string>
+    <string name="WndMovieTheatre_No">уйти</string>
+    <string name="WndMovieTheatre_Bye">Возвращайтесь в любое время, мы вам всегда рады!</string>
+    <string name="WndMovieTheatre_Instruction">Здравствуйте и добро пожаловать в наш кинотеатр! Вы можете принять участие в особой акции, посмотрите фильм, причём совершенно бесплатно. И если вы просмотрите его до конца то вы получите вознаграждение в размере %d золотых монет!</string>
+    <string name="WndMovieTheatre_Title">Кинотеатр</string>
+    <string name="WndMovieTheatre_Thank_You">Спасибо вам за участие!</string>
 
     <!-- STRINGS OF WndPriest CLASS -->
-    <string name="WndPriest_Heal">heal - 100 gold</string>
-    <string name="WndPriest_Instruction_m">Welcome my son, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through, right now building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
-    <string name="WndPriest_Instruction_f">Welcome my daughter, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through, right now building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
-    <string name="WndPriest_Title">Town priest</string>
+    <string name="WndPriest_Heal">лечение - %d золотых монет</string>
+    <string name="WndPriest_Instruction_m">Приветствую сын мой, добро пожаловать в святую церковь великого Санты, Владыки Глубин. К сожалению я не могу впустить тебя внутрь, так как здание находится на реконструкции. Но если тебе нужна помощь я могу тебя вылечить и предложить угощение, всего лишь за %d золотых монет!</string>
+    <string name="WndPriest_Instruction_f">Приветствую дочь моя, добро пожаловать в святую церковь великого Санты, Владыки Глубин. К сожалению я не могу впустить тебя внутрь, так как здание находится на реконструкции. Но если тебе нужна помощь я могу тебя вылечить и предложить угощение, всего лишь за %d золотых монет!</string>
+    <string name="WndPriest_Title">Городской священник</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
-    <string name="town_deco_roof_name">Roof</string>
-    <string name="town_deco_roof_desc">A simple tile roof.</string>
+    <string name="town_deco_roof_name">Крыша</string>
+    <string name="town_deco_roof_desc">Обычная черепичная крыша.</string>
 
-    <string name="town_deco_wall_name">Wall</string>
-    <string name="town_deco_wall_desc">A simple wall made of wood logs.</string>
+    <string name="town_deco_wall_name">Стена</string>
+    <string name="town_deco_wall_desc">Простая бревенчатая стена.</string>
 
-    <string name="town_deco_snow_name">Snow</string>
-    <string name="town_deco_snow_desc">Despite rumors of how popular this place is, for adventurers, there is quite a lot of snow around here, like if nobody ever set their foot outside.</string>
+    <string name="town_deco_snow_name">Снег</string>
+    <string name="town_deco_snow_desc">Не смотря на известность этого места среди искателей приключений, здесь на удивление много снега. Создаётся впечатление что по этим улицам мало кто гуляет.</string>
 
-    <string name="town_deco_cross_name">Cross</string>
-    <string name="town_deco_cross_desc">A solid silver cross, a symbol of local religion - \"The Witnesses of Santa the Depth Lord\".</string>
+    <string name="town_deco_cross_name">Крест</string>
+    <string name="town_deco_cross_desc">Литой серебряный крест, символ местной религии - \"Свидетели Санты - Владыки Глубин\".</string>
 
-    <string name="town_deco_bell_name">Bell</string>
-    <string name="town_deco_bell_desc">Typical church bell it appears that nobody ringed it for a while, the rope is nowhere to be seen.</string>
+    <string name="town_deco_bell_name">Колокол</string>
+    <string name="town_deco_bell_desc">Типичный церковный колокол, судя по всему в него давно никто не звонил, даже верёвки на месте нет.</string>
 
-    <string name="town_deco_bell_tower_name">Bell tower</string>
-    <string name="town_deco_bell_tower_desc">Traditionally church bells are installed in tall towers so that the ring could be heard from a great distances.</string>
+    <string name="town_deco_bell_tower_name">Колокольня</string>
+    <string name="town_deco_bell_tower_desc">Традиционно, церковные колокола устанавливаются в высокие башни, дабы звон был слышен на большие расстояния.</string>
 
-    <string name="town_deco_chimney_name">Chimney</string>
-    <string name="town_deco_chimney_desc">Stone chimney is a regular companion of houses build in regions often affected by cold weather.</string>
+    <string name="town_deco_chimney_name">Дымоход</string>
+    <string name="town_deco_chimney_desc">Каменный дымоход - верный спутник любого жилища, возведённого там, где холодная погода является частым гостем.</string>
 
-    <string name="town_deco_window_name">Window</string>
-    <string name="town_deco_window_desc">Generic glass window, nothing special.</string>
+    <string name="town_deco_window_name">Окно</string>
+    <string name="town_deco_window_desc">Обыкновенное стеклянное окно, ничего особенного.</string>
 
-    <string name="town_deco_door_name">Door</string>
-    <string name="town_deco_door_desc">A simple wooden door.</string>
+    <string name="town_deco_door_name">Дверь</string>
+    <string name="town_deco_door_desc">Обыкновенная деревянная дверь.</string>
 
-    <string name="town_deco_locked_door_name">Locked door</string>
-    <string name="town_deco_locked_door_desc">What in world could be behind that door?</string>
+    <string name="town_deco_locked_door_name">Запертая дверь</string>
+    <string name="town_deco_locked_door_desc">Что же может скрывать эта дверь?</string>
 
-    <string name="town_deco_snowman_name">Snowman</string>
-    <string name="town_deco_snowman_desc">Snowman is a traditional town decoration for a holiday season, when people celebrate \"Dungeonmas\" a day, when monsters invaded the dungeon.</string>
+    <string name="town_deco_snowman_name">Снеговик</string>
+    <string name="town_deco_snowman_desc">Снеговики это традиционное уличное украшение для праздничной поры. Их устанавливают в \"Подземьество\" - праздник посвященный тому дню, когда монстры наводнили подземелье.</string>
 
-    <string name="town_deco_tree_name">Tree</string>
-    <string name="town_deco_tree_desc">It feels kind of weird to look upon a living tree, right next to an entrance to the dungeon, filled with horrors and death.</string>
+    <string name="town_deco_tree_name">Дерево</string>
+    <string name="town_deco_tree_desc">Глядя на это дерево, живое и мирное, возникает странное чувство. Ведь совсем неподалёку находится спуск в подземелье, наполненное ужасами и смертью.</string>
 
-    <string name="town_deco_pathway_name">Pathway</string>
-    <string name="town_deco_pathway_desc">A pathway trampled in snow.</string>
+    <string name="town_deco_pathway_name">Дорожка</string>
+    <string name="town_deco_pathway_desc">Тропинка вытоптанная в снегу.</string>
 
-    <string name="town_deco_stone_wall_name">Stone wall</string>
-    <string name="town_deco_stone_wall_desc">Somehow this wall emits heat and seems a bit wet.</string>
+    <string name="town_deco_stone_wall_name">Каменная стена</string>
+    <string name="town_deco_stone_wall_desc">Эта стена выглядит немного влажной, кажется что от неё исходит тепло. </string>
 
-    <string name="town_deco_shop_sign_name">Shop sign</string>
-    <string name="town_deco_shop_sign_desc">Seems like there is a shop inside that building.</string>
+    <string name="town_deco_shop_sign_name">Вывеска магазина</string>
+    <string name="town_deco_shop_sign_desc">Вероятно в этом здании находится магазин.</string>
 
-    <string name="town_deco_floor_name">Floor</string>
-    <string name="town_deco_floor_desc">This floor made of simple wooden planks. What exactly are you looking for?</string>
+    <string name="town_deco_floor_name">Пол</string>
+    <string name="town_deco_floor_desc">Этот пол выполнен из деревянных досок. Что ты надеешься тут увидеть?</string>
 
-    <string name="town_deco_carpet_name">Carpet</string>
-    <string name="town_deco_carpet_desc">Luxurious red carpet reserved for a special guests.</string>
+    <string name="town_deco_carpet_name">Ковёр</string>
+    <string name="town_deco_carpet_desc">Роскошный красный ковёр, приготовленный для почётный гостей</string>
 
-    <string name="town_deco_movies_door_name">Door</string>
-    <string name="town_deco_movies_door_desc">This door seems exceptionally well made. It probably leads to something incredible.</string>
+    <string name="town_deco_movies_door_name">Дверь</string>
+    <string name="town_deco_movies_door_desc">Эта дверь выглядит крайне изысканно. Скорее всего она ведёт в удивительнейшее место.</string>
 
     <!-- STRINGS OF WndDonate CLASS -->
 
-    <string name="WndDonate_royal">royal</string>
+    <string name="WndDonate_royal">царский</string>
 
-    <string name="WndDonate_royalDonate">royal donation</string>
+    <string name="WndDonate_royalDonate">царское пожертвование</string>
 
-    <string name="WndDonate_royalDonateText">I don\'t want to be weird, but by doing so, you literally feeding developers.</string>
+    <string name="WndDonate_royalDonateText">Это может прозвучать странно, но таким образом ты фактически обеспечиваешь разработчикам пропитание.</string>
 
-    <string name="WndDonate_royalDonateText2">Additionally you will receive every single hat from real money store! As well as every single hat that is going to be ever released.</string>
+    <string name="WndDonate_royalDonateText2">А также, ты получишь все шапки из магазина шапок! Включая все шапки которые когда-либо появятся в будущем.</string>
 
     <!-- STRINGS OF WndPremiumSettings CLASS -->
-    <string name="WndPremiumSettings_royal">royal</string>
+    <string name="WndPremiumSettings_royal">царский</string>
 
 </resources>

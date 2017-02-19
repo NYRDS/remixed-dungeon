@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.windows.IconTitle;
 
 public class WndPriest extends Window {
 
-	private static final String BTN_WATCH       = Game.getVar(R.string.WndPriest_Heal);
+	private static final String BTN_HEAL       = Game.getVar(R.string.WndPriest_Heal);
 	private static final String BTN_NO          = Game.getVar(R.string.WndMovieTheatre_No);
 	private static final String TXT_BYE         = Game.getVar(R.string.HealerNPC_Message2);
 	private static final String TXT_INSTRUCTION_M = Game.getVar(R.string.WndPriest_Instruction_m);
@@ -54,7 +54,7 @@ public class WndPriest extends Window {
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
-		RedButton btnYes = new RedButton( BTN_WATCH ) {
+		RedButton btnYes = new RedButton(  Utils.format(BTN_HEAL, GOLD_COST) ) {
 			@Override
 			protected void onClick() {
 				npc.say( TXT_BYE );
