@@ -1,7 +1,8 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.pixeldungeon.support.GooglePlayServices;
+import com.watabou.pixeldungeon.PixelDungeon;
 
 /**
  * Created by mike on 04.06.2016.
@@ -15,13 +16,13 @@ public class Flavours {
 
 	public static boolean haveHats() {
 		return BuildConfig.FLAVOR.equals(GOOGLE_PLAY)
-				&& Iap.googleIapUsable();
+				&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
 	}
 
 
 	public static boolean haveDonations() {
 		return (BuildConfig.FLAVOR.equals(GOOGLE_PLAY) || BuildConfig.FLAVOR.equals(CHROME_WEB_STORE))
-				&& Iap.googleIapUsable();
+				&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
 
 
 	}

@@ -33,7 +33,7 @@ public class Ads {
 	}
 
 	public static boolean googleAdsUsable() {
-		return Flavours.haveAds();// && !EmulatorDetector.isEmulator();
+		return Flavours.haveAds();//&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());// && !EmulatorDetector.isEmulator();
 	}
 
 	private static void displayOwnEasyModeBanner() {

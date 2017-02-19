@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
@@ -43,11 +41,7 @@ public class Iap {
 
     private static IapCallback mIapCallback = null;
 
-    public static boolean googleIapUsable() {
-        return GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(mContext) == ConnectionResult.SUCCESS;
-    }
-
-    public static boolean isReady() {
+	public static boolean isReady() {
         return m_iapReady;
     }
 
@@ -79,7 +73,6 @@ public class Iap {
 		                mHelper.disposeWhenFinished();
 	                } catch (IllegalArgumentException e) {
 		                EventCollector.logException(e,"damn iab lib");
-
 	                }
 
 
@@ -125,7 +118,7 @@ public class Iap {
     public static void initIap(Activity context) {
         mContext = context;
 
-        if (!googleIapUsable()) {
+        if (!GooglePlayServices.googlePlayServicesUsable(mContext)) {
             return; // no services - no iap :(
         }
 

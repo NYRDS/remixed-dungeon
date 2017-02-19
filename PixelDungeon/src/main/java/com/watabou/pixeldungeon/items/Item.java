@@ -580,7 +580,7 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
-		quantity(itemDesc.optInt("quantity",1));
+		quantity(Math.max(itemDesc.optInt("quantity",1),1));
 
 		int level = itemDesc.optInt("level",0);
 
