@@ -25,7 +25,8 @@ public class WndPriest extends Window {
 	private static final String BTN_WATCH       = Game.getVar(R.string.WndPriest_Heal);
 	private static final String BTN_NO          = Game.getVar(R.string.WndMovieTheatre_No);
 	private static final String TXT_BYE         = Game.getVar(R.string.HealerNPC_Message2);
-	private static final String TXT_INSTRUCTION = Game.getVar(R.string.WndPriest_Instruction);
+	private static final String TXT_INSTRUCTION_M = Game.getVar(R.string.WndPriest_Instruction_m);
+	private static final String TXT_INSTRUCTION_F = Game.getVar(R.string.WndPriest_Instruction_f);
 	private static final String TXT_TITLE       = Game.getVar(R.string.WndPriest_Title);
 
 	private static final int BTN_HEIGHT	= 18;
@@ -41,8 +42,13 @@ public class WndPriest extends Window {
 		titlebar.label( Utils.capitalize( TXT_TITLE ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		Text message = PixelScene.createMultiline( Utils.format(TXT_INSTRUCTION, GOLD_COST), GuiProperties.regularFontSize() );
+
+		String instruction = TXT_INSTRUCTION_M;
+		if(Dungeon.hero.getGender() == Utils.FEMININE){
+			instruction = TXT_INSTRUCTION_F;
+		}
+
+		Text message = PixelScene.createMultiline( Utils.format(instruction, GOLD_COST), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;
