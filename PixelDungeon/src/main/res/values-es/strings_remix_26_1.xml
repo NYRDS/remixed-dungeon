@@ -2,32 +2,106 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
-    <string name="TownGuardNPC_Name">guardia de la ciudad</string>
+    <string name="TownGuardNPC_Name">guardia del pueblo</string>
     <string name="TownGuardNPC_Gender">masculino</string>
-    <string name="TownGuardNPC_Name_Objective">guardia de la ciudad</string>
-    <string name="TownGuardNPC_Desc">Un guardia.</string>
+    <string name="TownGuardNPC_Name_Objective">guardia del pueblo</string>
+    <string name="TownGuardNPC_Desc">Un guardia normal.</string>
+    <string name="TownGuardNPC_Message1">Camina.</string>
+    <string name="TownGuardNPC_Message2">Gracias a los aventureros como usted, hay paz aquí arriba.</string>
+    <string name="TownGuardNPC_Message3">¿Crees que hay muchos guardias para este pueblo? Bueno, es la una ciudad con una gigantesca mazmorra tomada por monstruos.</string>
+
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">cuidadano</string>
     <string name="TownsfolkNPC_Gender">masculino</string>
     <string name="TownsfolkNPC_Name_Objective">cuidadano</string>
-    <string name="TownsfolkNPC_Desc">Uno persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
-    <!-- STRINGS OF HealerNPC CLASS -->
+    <string name="TownsfolkNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
+    <string name="TownsfolkNPC_Message1">¡Ah, otro aventurero, que encantador! ¡Asegúrese de saquear todos los objetos de valor que pueda!</string>
+    <string name="TownsfolkNPC_Message2">El pueblo se hizo tan rico gracias a la mazmorra, ¡Todas las personas del pueblo pueden irse de vacaciones cada vez que quieren! De hecho, es por eso que hay tan pocas personas en este momento.</string>
+    <string name="TownsfolkNPC_Message3">Que hermoso día.</string>
+    <string name="TownsfolkNPC_Message4">Espero que las alcantarillas no se inunden cuando llegue la primavera. No necesitamos otra infestación de ratas.</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">sacerdote</string>
     <string name="HealerNPC_Gender">masculino</string>
     <string name="HealerNPC_Name_Objective">sacerdote</string>
     <string name="HealerNPC_Desc">Un hombre viejo, se ve como alguien que hace varitas.</string>
     <string name="HealerNPC_Message1">¡Tratamiento gratis para los aventureros!</string>
+    <string name="HealerNPC_Message2">¡Vuelve cuando te sientas enfermo o hambriento!</string>
+    <string name="HealerNPC_Message3">Me pregunto por qué la iglesia nos prohíbe usar sombreros... hace mucho frío aquí afuera.</string>
+
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Name">trabajador</string>
     <string name="ServiceManNPC_Gender">masculino</string>
     <string name="ServiceManNPC_Name_Objective">trabajador</string>
     <string name="ServiceManNPC_Desc">Un trabajador de los establecimientos locales.</string>
 
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">comerciante</string>
+    <string name="TownShopkeeper_Desc">Este tipo es un comerciante típico. Usted puede decir que ya conoce los precios.</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="WndMovieTheatre_Watch">mirar una pelicula</string>
     <string name="WndMovieTheatre_No">salir</string>
+    <string name="WndMovieTheatre_Bye">¡Vuelve cuando quieras, siempre estaremos felices de verte!</string>
+    <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenido a nuestro cine! Ofrecemos un servicio especial, puedes ver una película de manera gratuita, y si lo ves todo !usted será recompensado con %d monedas de oro!</string>
     <string name="WndMovieTheatre_Title">Cine</string>
     <string name="WndMovieTheatre_Thank_You">¡Gracias por tu participación!</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">Techo</string>
+    <string name="town_deco_roof_desc">Un simple techo de teja.</string>
+
+    <string name="town_deco_wall_name">Muro</string>
+    <string name="town_deco_wall_desc">Una simple pared hecha de leños.</string>
+
+    <string name="town_deco_snow_name">Nieve</string>
+    <string name="town_deco_snow_desc">A pesar de lo popular que es este lugar para los aventureros, hay mucha nieve, como si nadie caminara por aquí.</string>
+
+    <string name="town_deco_cross_name">Cruz</string>
+    <string name="town_deco_cross_desc">Una cruz de plata solida, un símbolo de la religión local - \"Los Testigos de Santa el Señor de las Profundidades\".</string>
+
+    <string name="town_deco_bell_name">Campana</string>
+    <string name="town_deco_bell_desc">Una campana típica de iglesia, parece que no ha sido tocada por un buen tiempo. La cuerda no se ve por ninguna parte.</string>
+
+    <string name="town_deco_bell_tower_name">Campanario</string>
+    <string name="town_deco_bell_tower_desc">Tradicionalmente, las campanas de las iglesias se colocan en torres altas, para que el sonido pueda ser escucha a grandes distancias.</string>
+
+    <string name="town_deco_chimney_name">Chimenea</string>
+    <string name="town_deco_chimney_desc">Una chimenea de piedra es normal en las casa que se encuentran en regiones frías.</string>
+
+    <string name="town_deco_window_name">Ventana</string>
+    <string name="town_deco_window_desc">Una ventana de vidrio normal, nada especial.</string>
+
+    <string name="town_deco_door_name">Puerta</string>
+    <string name="town_deco_door_desc">Una simple puerta de madera.</string>
+
+    <string name="town_deco_locked_door_name">Puerta cerrada</string>
+    <string name="town_deco_locked_door_desc">¿Qué podría haber tras esta puerta?</string>
+
+    <string name="town_deco_snowman_name">Hombre de nieve</string>
+    <string name="town_deco_snowman_desc">Los muñecos de nieve son una decoración tradicional del pueblo durante las vacaciones, mientras celebraban las \"Dungeonavidad\" un día, los monstruos invadieron la mazmorra.</string>
+
+    <string name="town_deco_tree_name">Árbol</string>
+    <string name="town_deco_tree_desc">Se siente extraño ver un árbol vivo, estando cerca de la entrada de la mazmorra, un lugar lleno de horror y muerte.</string>
+
+    <string name="town_deco_pathway_name">Camino</string>
+    <string name="town_deco_pathway_desc">Un camino con nieve pisoteada.</string>
+
+    <string name="town_deco_stone_wall_name">Pared de piedra</string>
+    <string name="town_deco_stone_wall_desc">De alguna forma esta pared emite calor y parece un poco húmedo.</string>
+
+    <string name="town_deco_shop_sign_name">Señal de Tienda</string>
+    <string name="town_deco_shop_sign_desc">Parece que hay una tienda dentro de la casa.</string>
+
+    <string name="town_deco_floor_name">Piso</string>
+    <string name="town_deco_floor_desc">Este piso está hecho de simples tablones de madera. ¿Qué es lo que esperabas?</string>
+
+    <string name="town_deco_carpet_name">Alfombra</string>
+    <string name="town_deco_carpet_desc">Una lujosa alfombra roja para invitados especiales.</string>
+
+    <string name="town_deco_movies_door_name">Puerta</string>
+    <string name="town_deco_movies_door_desc">Esta puerta está muy bien hecha, probablemente lleva hacia algo increíble.</string>
 
     </resources>
