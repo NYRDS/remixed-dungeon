@@ -522,9 +522,8 @@ public abstract class Char extends Actor {
 	}
 
 	public void move(int step) {
-
+		
 		if(!isMovable()) {
-			setPos(step);
 			return;
 		}
 

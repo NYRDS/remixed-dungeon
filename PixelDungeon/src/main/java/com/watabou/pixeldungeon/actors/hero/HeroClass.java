@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -101,6 +102,9 @@ public enum HeroClass {
 		hero.heroClass = this;
 		initCommon(hero);
 		initForClass(hero,hero.heroClass.name());
+
+		if(BuildConfig.DEBUG) initDebug(hero);
+
 
 		hero.setGender(getGender());
 
@@ -211,7 +215,6 @@ public enum HeroClass {
 	}
 
 	private static void initCommon(Hero hero) {
-		//if(BuildConfig.DEBUG) initDebug(hero);
 		QuickSlot.cleanStorage();
 		initForClass(hero,"common");
 	}
