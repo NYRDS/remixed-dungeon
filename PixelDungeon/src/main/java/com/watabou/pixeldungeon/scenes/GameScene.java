@@ -244,7 +244,7 @@ public class GameScene extends PixelScene {
 
 		fog = new FogOfWar(level.getWidth(), level.getHeight());
 
-		if (!level.noFogOfWar()) {
+		if (!Dungeon.level.noFogOfWar()) {
 			level.reveal();
 		}
 
