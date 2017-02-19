@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -19,6 +20,7 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
@@ -83,25 +85,33 @@ public class ShadowLord extends Boss {
 			return;
 		}
 
+		Level level = Dungeon.level;
+
 		if(!levelCreated)
 		{
-			Tools.makeEmptyLevel(Dungeon.level);
-			Tools.buildShadowLordMaze(Dungeon.level, 6);
+			Tools.makeEmptyLevel(level);
+			Tools.buildShadowLordMaze(level, 6);
 			levelCreated = true;
 		}
 
-		int cell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
-		if (Dungeon.level.cellValid(cell)) {
+		int cell = level.getRandomTerrainCell(Terrain.PEDESTAL);
+		if (level.cellValid(cell)) {
 			if (Actor.findChar(cell) == null) {
 				Mob mob = Crystal.makeShadowLordCrystal();
-				Dungeon.level.spawnMob(mob);
-				WandOfBlink.appear(mob, cell);
+				mob.setPos(cell);
+				level.spawnMob(mob);
+
+				mob.getSprite().alpha( 0 );
+				mob.getSprite().getParent().add( new AlphaTweener( mob.getSprite(), 1, 0.4f ) );
+
+				mob.getSprite().emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
+				Sample.INSTANCE.play( Assets.SND_TELEPORT );
 
 				int x, y;
-				x = Dungeon.level.cellX(cell);
-				y = Dungeon.level.cellY(cell);
+				x = level.cellX(cell);
+				y = level.cellY(cell);
 
-				Dungeon.level.fillAreaWith(Darkness.class, x - 2, y - 2, 5, 5, 1);
+				level.fillAreaWith(Darkness.class, x - 2, y - 2, 5, 5, 1);
 			} else {
 				damage(ht() / 9, this);
 			}
