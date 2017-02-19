@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -74,7 +75,7 @@ public class FreeRunnerArmor extends ClassArmor {
 				getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
 				
 				for (Mob mob : Dungeon.level.mobs) {
-					if (Dungeon.level.fieldOfView[mob.getPos()]) {
+					if (Dungeon.level.fieldOfView[mob.getPos()] && !(mob instanceof NPC)) {
 						Buff.prolong( mob, Blindness.class, 2 );
 						mob.setState(mob.WANDERING);
 						mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );
