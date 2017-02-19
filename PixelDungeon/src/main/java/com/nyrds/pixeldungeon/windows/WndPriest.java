@@ -30,7 +30,7 @@ public class WndPriest extends Window {
 
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
-	private static final int GOLD_REWARD = 150;
+	private static final int GOLD_COST= 100;
 
 	public WndPriest(final HealerNPC npc, final Hero hero) {
 		
@@ -42,7 +42,7 @@ public class WndPriest extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( Utils.format(TXT_INSTRUCTION, GOLD_REWARD), GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline( Utils.format(TXT_INSTRUCTION, GOLD_COST), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;
@@ -53,15 +53,14 @@ public class WndPriest extends Window {
 			protected void onClick() {
 				npc.say( TXT_BYE );
 				doHeal( hero );
+				Dungeon.gold(Dungeon.gold() - GOLD_COST);
 			}
 		};
 
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnYes );
+		btnYes.enable(!(Dungeon.gold()< GOLD_COST));
 
-		if(Dungeon.gold() < 100){
-			btnYes.active = false;
-		}
 
 		RedButton btnNo = new RedButton( BTN_NO ) {
 			@Override
