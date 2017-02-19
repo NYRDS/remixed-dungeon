@@ -187,6 +187,15 @@ public abstract class Level implements Bundlable {
 		return tileDesc(tile);
 	}
 
+	public void reveal() {
+		for(int j = 1;j<height;++j) {
+			for(int i = 1;i<width;++i) {
+				int cell = cell(i,j);
+				visited[cell] = mapped[cell] = true;
+			}
+		}
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
