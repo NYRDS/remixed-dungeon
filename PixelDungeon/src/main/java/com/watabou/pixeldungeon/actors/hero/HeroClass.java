@@ -143,7 +143,7 @@ public enum HeroClass {
 		hero.attackSkill = 1000;
 
 		Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
-		//hero.defenseSkill = 1000;
+		hero.defenseSkill = 1000;
 	}
 
 	private static void initForClass(Hero hero,String className) {
