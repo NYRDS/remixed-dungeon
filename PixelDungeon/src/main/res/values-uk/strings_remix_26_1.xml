@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
@@ -20,7 +20,7 @@
     <string name="TownsfolkNPC_Message3">Який чудовий день.</string>
     <string name="TownsfolkNPC_Message4">Сподіваюся цієї весни не затопить каналізацію. Чергового нашестя щурів нам ще не вистачало.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">міський священик</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Name_Objective">міського священика</string>

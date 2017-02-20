@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
@@ -8,7 +8,7 @@
     <string name="TownGuardNPC_Desc">Un guardia normal.</string>
     <string name="TownGuardNPC_Message1">Camina.</string>
     <string name="TownGuardNPC_Message2">Gracias a los aventureros como usted, hay paz aquí arriba.</string>
-    <string name="TownGuardNPC_Message3">¿Crees que hay muchos guardias para este pueblo? Bueno, es la una ciudad con una gigantesca mazmorra tomada por monstruos.</string>
+    <string name="TownGuardNPC_Message3">¿Crees que hay muchos guardias para este pueblo? Bueno, es la única ciudad con una gigantesca mazmorra tomada por monstruos.</string>
 
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">cuidadano</string>
@@ -20,7 +20,7 @@
     <string name="TownsfolkNPC_Message3">Que hermoso día.</string>
     <string name="TownsfolkNPC_Message4">Espero que las alcantarillas no se inunden cuando llegue la primavera. No necesitamos otra infestación de ratas.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">sacerdote</string>
     <string name="HealerNPC_Gender">masculino</string>
     <string name="HealerNPC_Name_Objective">sacerdote</string>
@@ -47,6 +47,12 @@
     <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenido a nuestro cine! Ofrecemos un servicio especial, puedes ver una película de manera gratuita, y si lo ves todo !usted será recompensado con %d monedas de oro!</string>
     <string name="WndMovieTheatre_Title">Cine</string>
     <string name="WndMovieTheatre_Thank_You">¡Gracias por tu participación!</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">sanar - %d monedas de oro.</string>
+    <string name="WndPriest_Instruction_m">¡Bienvenido mi hijo, bienvenido a la santa iglesia del gran Santa el Señor de las Profundidades! Desafortunadamente no puedo dejarte pasar, la iglesia esta en reconstrucción, pero puedo ayudarte, puedo darte un servicio de curación y alimento por %d monedas de oro.</string>
+    <string name="WndPriest_Instruction_f">¡Bienvenida mi hija, bienvenida a la santa iglesia del gran Santa el Señor de las Profundidades! Desafortunadamente no puedo dejarte pasar, la iglesia esta en reconstrucción, pero puedo ayudarte, puedo darte un servicio de curación y alimento por %d monedas de oro.</string>
+    <string name="WndPriest_Title">Sacerdote</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
@@ -104,4 +110,17 @@
     <string name="town_deco_movies_door_name">Puerta</string>
     <string name="town_deco_movies_door_desc">Esta puerta está muy bien hecha, probablemente lleva hacia algo increíble.</string>
 
-    </resources>
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">real</string>
+
+    <string name="WndDonate_royalDonate">donación real</string>
+
+    <string name="WndDonate_royalDonateText">No quiero que suene extraño, pero con esto, literalmente les darás de comer a los desarrolladores.</string>
+
+    <string name="WndDonate_royalDonateText2">¡Además, recibirá todos los sombreros de la tienda de dinero real! ¡Y también todos los sombreros que saldrán en un futuro!</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">real</string>
+
+</resources>
