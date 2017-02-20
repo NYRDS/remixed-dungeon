@@ -92,7 +92,11 @@ public class GLog {
 		if (args.length > 0) {
 			text = Utils.format( text, args );
 		}
-		
+
+		if(text.isEmpty()) {
+			return;
+		}
+
 		Log.i( TAG, text );
 		if(!Game.isPaused()) {
 			final String finalText = text;

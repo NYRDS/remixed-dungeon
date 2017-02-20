@@ -51,10 +51,15 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	}
 
 	@Override
-	public void onSignal( String text ) {
+	public void onSignal(String text ) {
 		if(Game.isPaused()) {
 			return;
 		}
+
+		if(text.isEmpty()) {
+			return;
+		}
+
 		int color = CharSprite.DEFAULT;
 		if (text.startsWith( GLog.POSITIVE )) {
 			text = text.substring( GLog.POSITIVE.length() );
