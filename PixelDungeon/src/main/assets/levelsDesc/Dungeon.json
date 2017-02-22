@@ -60,7 +60,7 @@
 	  "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
    },
    "Graph":{
-      "0":[["town"],[]],
+      "0":[["movie_theater"],[]],
       "empty_interior":[[],["town"],[2]],
       "town_shop":[[],["town"]],
       "movie_theater":[[],["town"],[3]],

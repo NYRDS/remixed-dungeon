@@ -356,7 +356,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		Game.width(width);
 		Game.height(height);
 
-		needSceneRestart = true;
+		setNeedSceneRestart(true);
 	}
 
 	@Override
@@ -544,5 +544,4 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		Log.i("Game",Utils.format("own signature %s", Util.getSignature(this)));
 		return Util.getSignature(this).equals(getVar(R.string.ownSignature));
 	}
-
 }
