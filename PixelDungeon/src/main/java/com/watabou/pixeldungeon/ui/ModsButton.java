@@ -149,10 +149,12 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					downloadProgress = null;
 				}
 
-				Game.scene().add(new WndModSelect());
+				if(!Game.isPaused()) {
+					Game.scene().add(new WndModSelect());
 
-				if(!result) {
-					Game.toast("Mod list download failed :(");
+					if (!result) {
+						Game.toast("Mod list download failed :(");
+					}
 				}
 			}
 		});

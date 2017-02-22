@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -53,7 +54,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public abstract class Wand extends KindOfWeapon {
+public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	public static final String AC_ZAP = Game.getVar(R.string.Wand_ACZap);
 
@@ -216,7 +217,7 @@ public abstract class Wand extends KindOfWeapon {
 		}
 	}
 
-	protected boolean isKnown() {
+	public boolean isKnown() {
 		return handler.isKnown(this);
 	}
 

@@ -187,6 +187,15 @@ public abstract class Level implements Bundlable {
 		return tileDesc(tile);
 	}
 
+	public void reveal() {
+		for(int j = 1;j<height;++j) {
+			for(int i = 1;i<width;++i) {
+				int cell = cell(i,j);
+				visited[cell] = mapped[cell] = true;
+			}
+		}
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
@@ -1178,11 +1187,19 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int distance(int a, int b) {
-		int ax = a % getWidth();
-		int ay = a / getWidth();
-		int bx = b % getWidth();
-		int by = b / getWidth();
+		int ax = cellX(a);
+		int ay = cellY(a);
+		int bx = cellX(b);
+		int by = cellY(b);
 		return Math.max(Math.abs(ax - bx), Math.abs(ay - by));
+	}
+
+	public float distanceL2(int a, int b) {
+		int ax = cellX(a);
+		int ay = cellY(a);
+		int bx = cellX(b);
+		int by = cellY(b);
+		return (float) Math.sqrt((ax-bx)*(ax-bx)+(ay-by)*(ay-by));
 	}
 
 	public boolean adjacent(int a, int b) {

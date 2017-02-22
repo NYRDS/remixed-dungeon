@@ -20,7 +20,7 @@
     <string name="TownsfolkNPC_Message3">What a lovely day.</string>
     <string name="TownsfolkNPC_Message4">I hope the sewers won\'t get flooded when spring arrives. We don\'t need another rat infestation.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">town priest</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Name_Objective">town priest</string>
@@ -35,6 +35,10 @@
     <string name="ServiceManNPC_Name_Objective">employee</string>
     <string name="ServiceManNPC_Desc">A regular worker of local establishments.</string>
 
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">shopkeeper</string>
+    <string name="TownShopkeeper_Desc">This guy is a typical shopkeeper. You can tell he already knows your price.</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="WndMovieTheatre_Watch">watch a movie</string>
@@ -43,6 +47,12 @@
     <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theatre! We provide a special service, you can watch a movie for free, and if you\'ll see it all the through you will be rewarded with %d gold coins!</string>
     <string name="WndMovieTheatre_Title">Movie Theatre</string>
     <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">heal - %d gold</string>
+    <string name="WndPriest_Instruction_m">Welcome my son, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through, right now building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
+    <string name="WndPriest_Instruction_f">Welcome my daughter, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through, right now building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
+    <string name="WndPriest_Title">Town priest</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
@@ -99,5 +109,18 @@
 
     <string name="town_deco_movies_door_name">Door</string>
     <string name="town_deco_movies_door_desc">This door seems exceptionally well made. It probably leads to something incredible.</string>
+
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">royal</string>
+
+    <string name="WndDonate_royalDonate">royal donation</string>
+
+    <string name="WndDonate_royalDonateText">I don\'t want to be weird, but by doing so, you literally feeding developers.</string>
+
+    <string name="WndDonate_royalDonateText2">Additionally you will receive every single hat from real money store! As well as every single hat that is going to be ever released.</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">royal</string>
 
 </resources>

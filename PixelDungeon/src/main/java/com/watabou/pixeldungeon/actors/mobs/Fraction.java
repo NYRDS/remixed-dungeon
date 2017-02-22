@@ -7,7 +7,7 @@ public enum Fraction {
 	ANY;
 
 	public boolean belongsTo(Fraction fr) {
-		if(fr.equals(ANY)) {
+		if(this.equals(ANY) || fr.equals(ANY)) {
 			return true;
 		}
 

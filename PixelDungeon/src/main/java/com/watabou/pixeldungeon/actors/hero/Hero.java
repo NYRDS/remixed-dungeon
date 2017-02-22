@@ -1686,7 +1686,16 @@ public class Hero extends Char {
 	@Override
 	public Set<Class<?>> immunities() {
 		GasesImmunity buff = buff(GasesImmunity.class);
-		return buff == null ? super.immunities() : GasesImmunity.IMMUNITIES;
+		if(buff != null) {
+			IMMUNITIES.addAll(GasesImmunity.IMMUNITIES);
+		} else {
+			IMMUNITIES.removeAll(GasesImmunity.IMMUNITIES);
+		}
+
+		IMMUNITIES.addAll(heroClass.getAbilities().immunities());
+		IMMUNITIES.addAll(subClass.getAbilities().immunities());
+
+		return IMMUNITIES;
 	}
 
 	@Override

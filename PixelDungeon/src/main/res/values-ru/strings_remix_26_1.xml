@@ -20,7 +20,7 @@
     <string name="TownsfolkNPC_Message3">Какой чудный день.</string>
     <string name="TownsfolkNPC_Message4">Надеюсь этой весной канализацию не затопит. Очередное нашествие крыс нам ни к чему.</string>
 
-    <!-- STRINGS OF HealerNPC CLASS -->
+	<!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">городской священик</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Name_Objective">священика</string>
@@ -35,6 +35,10 @@
     <string name="ServiceManNPC_Name_Objective">сотрудника</string>
     <string name="ServiceManNPC_Desc">Рядовой работник местных заведений.</string>
 
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">торговец</string>
+    <string name="TownShopkeeper_Desc">Этот человек  - типичный торговец. Даже не сомневайся, он уже знает тебе цену.</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="WndMovieTheatre_Watch">посмотреть фильм</string>
@@ -43,6 +47,12 @@
     <string name="WndMovieTheatre_Instruction">Здравствуйте и добро пожаловать в наш кинотеатр! Вы можете принять участие в особой акции, посмотрите фильм, причём совершенно бесплатно. И если вы просмотрите его до конца то вы получите вознаграждение в размере %d золотых монет!</string>
     <string name="WndMovieTheatre_Title">Кинотеатр</string>
     <string name="WndMovieTheatre_Thank_You">Спасибо вам за участие!</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">лечение - %d золотых монет</string>
+    <string name="WndPriest_Instruction_m">Приветствую, сын мой, добро пожаловать в святую церковь великого Санты, Владыки Глубин. К сожалению, я не могу впустить тебя внутрь, так как здание находится на реконструкции. Но если тебе нужна помощь я могу тебя вылечить и предложить угощение, всего лишь за %d золотых монет!</string>
+    <string name="WndPriest_Instruction_f">Приветствую, дочь моя, добро пожаловать в святую церковь великого Санты, Владыки Глубин. К сожалению, я не могу впустить тебя внутрь, так как здание находится на реконструкции. Но если тебе нужна помощь я могу тебя вылечить и предложить угощение, всего лишь за %d золотых монет!</string>
+    <string name="WndPriest_Title">Городской священник</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
@@ -99,5 +109,18 @@
 
     <string name="town_deco_movies_door_name">Дверь</string>
     <string name="town_deco_movies_door_desc">Эта дверь выглядит крайне изысканно. Скорее всего она ведёт в удивительнейшее место.</string>
+
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">царский</string>
+
+    <string name="WndDonate_royalDonate">царское пожертвование</string>
+
+    <string name="WndDonate_royalDonateText">Это может прозвучать странно, но таким образом ты фактически обеспечиваешь разработчикам пропитание.</string>
+
+    <string name="WndDonate_royalDonateText2">А также, ты получишь все шапки из магазина шапок! Включая все шапки которые когда-либо появятся в будущем.</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">царский</string>
 
 </resources>

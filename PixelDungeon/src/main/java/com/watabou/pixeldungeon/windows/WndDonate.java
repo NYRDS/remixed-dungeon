@@ -18,6 +18,7 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 public class WndDonate extends WndTabbed {
 
 	private static final String RUBY   = Game.getVar(R.string.WndDonate_ruby);
+	private static final String ROYAL   = Game.getVar(R.string.WndDonate_royal);
 	private static final String GOLD   = Game.getVar(R.string.WndDonate_gold);
 	private static final String SILVER = Game.getVar(R.string.WndDonate_silver);
 
@@ -26,6 +27,8 @@ public class WndDonate extends WndTabbed {
 
 	private static final String RUBY_DONATE = Game
 			.getVar(R.string.WndDonate_rubyDonate);
+	private static final String ROYAL_DONATE = Game
+			.getVar(R.string.WndDonate_royalDonate);
 	private static final String GOLD_DONATE = Game
 			.getVar(R.string.WndDonate_goldDonate);
 	private static final String SILVER_DONATE = Game
@@ -37,6 +40,8 @@ public class WndDonate extends WndTabbed {
 			.getVar(R.string.WndDonate_goldDonateText);
 	private static final String RUBY_DONATE_TEXT = Game
 			.getVar(R.string.WndDonate_rubyDonateText);
+	private static final String ROYAL_DONATE_TEXT = Game
+			.getVar(R.string.WndDonate_royalDonateText);
 	
 	private static final String SILVER_DONATE_TEXT_2 = Game
 			.getVar(R.string.WndDonate_silverDonateText2);
@@ -44,25 +49,27 @@ public class WndDonate extends WndTabbed {
 			.getVar(R.string.WndDonate_goldDonateText2);
 	private static final String RUBY_DONATE_TEXT_2 = Game
 			.getVar(R.string.WndDonate_rubyDonateText2);
+	private static final String ROYAL_DONATE_TEXT_2 = Game
+			.getVar(R.string.WndDonate_royalDonateText2);
 
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
-			Icons.CHEST_GOLD, Icons.CHEST_RUBY };
+			Icons.CHEST_GOLD, Icons.CHEST_RUBY, Icons.CHEST_ROYAL };
 	private static final String[] title = { SILVER_DONATE, GOLD_DONATE,
-			RUBY_DONATE };
+			RUBY_DONATE, ROYAL_DONATE };
 	
 	private static final String[] text = { SILVER_DONATE_TEXT,
-			GOLD_DONATE_TEXT, RUBY_DONATE_TEXT };
+			GOLD_DONATE_TEXT, RUBY_DONATE_TEXT, ROYAL_DONATE_TEXT };
 	
 	private static final String[] text2 = { SILVER_DONATE_TEXT_2,
-			GOLD_DONATE_TEXT_2, RUBY_DONATE_TEXT_2 };
+			GOLD_DONATE_TEXT_2, RUBY_DONATE_TEXT_2, ROYAL_DONATE_TEXT_2 };
 
 	public WndDonate() {
 		super();
 
 		resize(WndHelper.getFullscreenWidth(), WndHelper.getFullscreenHeight() - tabHeight() - 2*GAP);
 
-		String[] labels = { SILVER, GOLD, RUBY };
-		Group[] pages = { new DonateTab(1), new DonateTab(2), new DonateTab(3) };
+		String[] labels = { SILVER, GOLD, RUBY, ROYAL };
+		Group[] pages = { new DonateTab(1), new DonateTab(2), new DonateTab(3), new DonateTab(4) };
 
 		for (int i = 0; i < pages.length; i++) {
 			add(pages[i]);

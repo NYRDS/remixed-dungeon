@@ -64,7 +64,7 @@ public class WandOfIcebolt extends Wand {
 	}
 
 	@Override
-	protected boolean isKnown() {
+	public boolean isKnown() {
 		return true;
 	}
 

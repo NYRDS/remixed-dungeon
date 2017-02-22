@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
+import com.nyrds.pixeldungeon.windows.WndPriest;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -10,6 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 import java.util.HashSet;
@@ -63,13 +66,8 @@ public class HealerNPC extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		int index = Random.Int(0, TXT_PHRASES.length);
-		say(TXT_PHRASES[index]);
+		GameScene.show( new WndPriest( this, hero ) );
 
-		if(hero!=null && hero.isAlive()) {
-			PotionOfHealing.heal(hero,1.0f);
-			hero.buff( Hunger.class ).satisfy(Hunger.STARVING);
-		}
 
 		return true;
 	}

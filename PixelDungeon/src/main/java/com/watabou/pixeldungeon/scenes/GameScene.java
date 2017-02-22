@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -101,7 +99,6 @@ public class GameScene extends PixelScene {
 	private SkinnedBlock   water;
 	private DungeonTilemap tiles;
 
-	@Nullable
 	private FogOfWar fog;
 
 	private static CellSelector cellSelector;
@@ -244,11 +241,15 @@ public class GameScene extends PixelScene {
 			addBlobSprite(blob);
 		}
 
-		if (!Dungeon.level.noFogOfWar()) {
-			fog = new FogOfWar(level.getWidth(), level.getHeight());
-			fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
-			add(fog);
+
+		fog = new FogOfWar(level.getWidth(), level.getHeight());
+
+		if (level.noFogOfWar()) {
+			level.reveal();
 		}
+
+		fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+		add(fog);
 
 		brightness(PixelDungeon.brightness());
 
@@ -341,7 +342,7 @@ public class GameScene extends PixelScene {
 
 				DungeonGenerator.showStory(level);
 
-				if (Dungeon.hero.isAlive() && level.isSafe() && Dungeon.depth != 22) {
+				if (Dungeon.hero.isAlive() && !level.isSafe() && Dungeon.depth != 22 && Dungeon.depth != 1) {
 					Badges.validateNoKilling();
 				}
 				break;
@@ -419,16 +420,15 @@ public class GameScene extends PixelScene {
 	}
 
 	public void brightness(boolean value) {
-		if (fog != null) {
-			water.rm = water.gm = water.bm = tiles.rm = tiles.gm = tiles.bm = value ? 1.5f : 1.0f;
 
-			if (value) {
-				fog.am = +2f;
-				fog.aa = -1f;
-			} else {
-				fog.am = +1f;
-				fog.aa = 0f;
-			}
+		water.rm = water.gm = water.bm = tiles.rm = tiles.gm = tiles.bm = value ? 1.5f : 1.0f;
+
+		if (value) {
+			fog.am = +2f;
+			fog.aa = -1f;
+		} else {
+			fog.am = +1f;
+			fog.aa = 0f;
 		}
 	}
 
@@ -606,9 +606,8 @@ public class GameScene extends PixelScene {
 
 	public static void afterObserve() {
 		if (scene != null && scene.sceneCreated) {
-			if (scene.fog != null) {
-				scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
-			}
+
+			scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
 
 			for (Mob mob : Dungeon.level.mobs) {
 				mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);

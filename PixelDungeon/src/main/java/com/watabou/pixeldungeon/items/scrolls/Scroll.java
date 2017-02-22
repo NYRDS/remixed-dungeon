@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -34,7 +35,7 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public abstract class Scroll extends Item {
+public abstract class Scroll extends Item implements UnknownItem {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
 

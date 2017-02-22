@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -109,6 +110,9 @@ public class Accessory {
 	}
 
 	public boolean haveIt() {
+		if (PixelDungeon.donated() == 4){
+			return true;
+		}
 		return Preferences.INSTANCE.getString(prefProperty(),"").equals(getClass().getSimpleName());
 	}
 

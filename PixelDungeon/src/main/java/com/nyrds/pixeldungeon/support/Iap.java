@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
 import com.nyrds.android.google.util.Inventory;
@@ -32,6 +30,7 @@ public class Iap {
     private static final String SKU_LEVEL_1 = "supporter_level_1";
     private static final String SKU_LEVEL_2 = "supporter_level_2";
     private static final String SKU_LEVEL_3 = "supporter_level_3";
+    private static final String SKU_LEVEL_4 = "supporter_level_4";
 
     private static IabHelper mHelper = null;
     private static Inventory mInventory = null;
@@ -42,11 +41,7 @@ public class Iap {
 
     private static IapCallback mIapCallback = null;
 
-    public static boolean googleIapUsable() {
-        return GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(mContext) == ConnectionResult.SUCCESS;
-    }
-
-    public static boolean isReady() {
+	public static boolean isReady() {
         return m_iapReady;
     }
 
@@ -78,7 +73,6 @@ public class Iap {
 		                mHelper.disposeWhenFinished();
 	                } catch (IllegalArgumentException e) {
 		                EventCollector.logException(e,"damn iab lib");
-
 	                }
 
 
@@ -109,6 +103,7 @@ public class Iap {
         items.add(SKU_LEVEL_1);
         items.add(SKU_LEVEL_2);
         items.add(SKU_LEVEL_3);
+        items.add(SKU_LEVEL_4);
 
         List<String> accessories = Accessory.getAccessoriesList();
 
@@ -123,7 +118,7 @@ public class Iap {
     public static void initIap(Activity context) {
         mContext = context;
 
-        if (!googleIapUsable()) {
+        if (!GooglePlayServices.googlePlayServicesUsable(mContext)) {
             return; // no services - no iap :(
         }
 
@@ -157,6 +152,10 @@ public class Iap {
 
         if (checkPurchase(SKU_LEVEL_3)) {
             PixelDungeon.setDonationLevel(3);
+        }
+
+        if (checkPurchase(SKU_LEVEL_4)) {
+            PixelDungeon.setDonationLevel(4);
         }
     }
 
@@ -208,6 +207,8 @@ public class Iap {
                 return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_2));
             case 3:
                 return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_3));
+            case 4:
+                return formatSkuPrice(mInventory.getSkuDetails(SKU_LEVEL_4));
         }
         return null;
     }
@@ -259,6 +260,10 @@ public class Iap {
                                 if (purchase.getSku().equals(SKU_LEVEL_3)) {
                                     PixelDungeon.setDonationLevel(3);
                                 }
+
+                                if (purchase.getSku().equals(SKU_LEVEL_4)) {
+                                    PixelDungeon.setDonationLevel(4);
+                                }
                             } else {
                                 Game.executeInGlThread(new Runnable() {
                                     @Override
@@ -292,6 +297,9 @@ public class Iap {
                 break;
             case 3:
                 doPurchase(SKU_LEVEL_3, null);
+                break;
+            case 4:
+                doPurchase(SKU_LEVEL_4, null);
                 break;
         }
     }

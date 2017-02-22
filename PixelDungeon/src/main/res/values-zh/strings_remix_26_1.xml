@@ -1,3 +1,103 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">城鎮守衛</string>
+    <string name="TownGuardNPC_Gender">男性的</string>
+    <string name="TownGuardNPC_Name_Objective">城鎮守衛</string>
+    <string name="TownGuardNPC_Desc">一個正常的城鎮守衛</string>
+    <string name="TownGuardNPC_Message1">向前走。</string>
+    <string name="TownGuardNPC_Message2">感谢像你一樣的冒險家，這裏十分和平。</string>
+    <string name="TownGuardNPC_Message3">你覺得這個鎮上有太多守衛了嗎？這只是一個曾擁有龐然大牢，卻被怪物佔據的城鎮，不是嗎？</string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">城鎮居民</string>
+    <string name="TownsfolkNPC_Gender">男性的</string>
+    <string name="TownsfolkNPC_Name_Objective">城鎮居民</string>
+    <string name="TownsfolkNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲</string>
+    <string name="TownsfolkNPC_Message1">啊！又有一位冒險者，好極了！有價值的東西隨便拿去吧！</string>
+    <string name="TownsfolkNPC_Message2">托地牢的福，小镇變得如此富有，城裏每個人都可以隨心去度假！事實上這就是為甚麼這裏現在人不多。</string>
+    <string name="TownsfolkNPC_Message3">多棒的一天啊。</string>
+    <string name="TownsfolkNPC_Message4">我希望春天蒞臨之時水不再淹沒整個下水道。我們不想老鼠再次為患。</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">城鎮牧師</string>
+    <string name="HealerNPC_Gender">男性的</string>
+    <string name="HealerNPC_Name_Objective">城鎮牧師</string>
+    <string name="HealerNPC_Desc">虛無縹緲的直覺告訴我，眼前的老人懂得如何弄法杖。</string>
+    <string name="HealerNPC_Message1">免費為冒險者治療！</string>
+    <string name="HealerNPC_Message2">當您受傷或飢餓時歡迎回來！</string>
+    <string name="HealerNPC_Message3">奇怪，為甚麼教會不允许我們戴帽子…外面真的很冷。</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">職員</string>
+    <string name="ServiceManNPC_Gender">男性的</string>
+    <string name="ServiceManNPC_Name_Objective">職員</string>
+    <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">觀看影片</string>
+    <string name="WndMovieTheatre_No">離開</string>
+    <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
+    <string name="WndMovieTheatre_Instruction">歡迎來到我們的戲院！我們正提供一項特別服務：您可免費看一齣電影。若果您看畢整套影片，您將獲賞 %d 個金幣！</string>
+    <string name="WndMovieTheatre_Title">戲院</string>
+    <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">屋頂</string>
+    <string name="town_deco_roof_desc">平凡不過的瓦片屋頂。</string>
+
+    <string name="town_deco_wall_name">牆</string>
+    <string name="town_deco_wall_desc">一幅簡單的木條牆。</string>
+
+    <string name="town_deco_snow_name">雪地</string>
+    <string name="town_deco_snow_desc">儘管有傳聞說這個地方有多受冒險者歡迎，但這裏雪很多，彷彿不曾有人步出雪地留下足跡。</string>
+
+    <string name="town_deco_cross_name">十字架</string>
+    <string name="town_deco_cross_desc">一枚結實的銀十字架。它是這片地方的宗教象徵—「深淵領主聖誕老人的見證者」。</string>
+
+    <string name="town_deco_bell_name">鐘</string>
+    <string name="town_deco_bell_desc">典型的教堂鐘，似乎已有一段時間沒人打理，鐘繩也不見踪影。</string>
+
+    <string name="town_deco_bell_tower_name">鐘塔</string>
+    <string name="town_deco_bell_tower_desc">傳統教堂高高的鐘塔，可以使身處遠方的人們聽到鐘聲。</string>
+
+    <string name="town_deco_chimney_name">煙囪</string>
+    <string name="town_deco_chimney_desc">石煙囪是寒冷地區的房子標準設置之一。</string>
+
+    <string name="town_deco_window_name">窗户</string>
+    <string name="town_deco_window_desc">普通的窗户，沒什么特别。</string>
+
+    <string name="town_deco_door_name">門</string>
+    <string name="town_deco_door_desc">平凡不過的木板門。</string>
+
+    <string name="town_deco_locked_door_name">已上鎖的門</string>
+    <string name="town_deco_locked_door_desc">那扇門後面會有甚麼呢？</string>
+
+    <string name="town_deco_snowman_name">雪人</string>
+    <string name="town_deco_snowman_desc">雪人是傳統城鎮的節日景象之一，人們藉以慶祝「牢诞」一整天——也就是怪物入侵的那天。</string>
+
+    <string name="town_deco_tree_name">樹</string>
+    <string name="town_deco_tree_desc">一棵生在充滿了恐怖和死亡的地牢入口旁邊的樹，感覺十分怪異。</string>
+
+    <string name="town_deco_pathway_name">小路</string>
+    <string name="town_deco_pathway_desc">被雪密密蓋著的小路。</string>
+
+    <string name="town_deco_stone_wall_name">石牆</string>
+    <string name="town_deco_stone_wall_desc">不知為何石牆正在發熱，看上去有點濕。</string>
+
+    <string name="town_deco_shop_sign_name">商店標示牌</string>
+    <string name="town_deco_shop_sign_desc">看上去這是一家商店。</string>
+
+    <string name="town_deco_floor_name">樓梯</string>
+    <string name="town_deco_floor_desc">這樓梯由普通的木板所造。您是偏要找碴對不？</string>
+
+    <string name="town_deco_carpet_name">地毯</string>
+    <string name="town_deco_carpet_desc">為貴客準備的豪華红地毯。</string>
+
+    <string name="town_deco_movies_door_name">門</string>
+    <string name="town_deco_movies_door_desc">這扇門看起来巧奪天工。可能有一些不可思議的東西隱匿在背後。</string>
+
     </resources>
