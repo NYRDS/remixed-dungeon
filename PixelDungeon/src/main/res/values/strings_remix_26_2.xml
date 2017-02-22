@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+
+    <string name="WndMovieTheatre_No_Video">video hasn\'t been loaded yet, come back later</string>
+
+
+</resources>
