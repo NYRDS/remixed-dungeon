@@ -47,6 +47,7 @@ import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -140,7 +141,7 @@ public enum HeroClass {
 		hero.collect(new Glaive());
 		hero.collect(new Halberd());
 
-		hero.collect(new RottenPumpkinPie());
+		hero.collect(new RingOfStoneWalking());
 
 		hero.ht(1000);
 		hero.hp(1000);
