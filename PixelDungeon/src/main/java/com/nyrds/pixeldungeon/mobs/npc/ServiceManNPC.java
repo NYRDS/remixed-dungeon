@@ -72,7 +72,12 @@ public class ServiceManNPC extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		if(RewardVideoAds.isReady() && filmsSeen < 5) {
+		if(filmsSeen >= 5){
+			say(Game.getVar(R.string.ServiceManNPC_Limit));
+			return true;
+		}
+
+		if(RewardVideoAds.isReady()) {
 			GameScene.show(new WndMovieTheatre(this));
 		} else {
 			say(Game.getVar(R.string.ServiceManNPC_NotReady));

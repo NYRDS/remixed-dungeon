@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
+import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
@@ -25,7 +26,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 	private static final String BTN_WATCH       = Game.getVar(R.string.WndMovieTheatre_Watch);
 	private static final String BTN_NO          = Game.getVar(R.string.WndMovieTheatre_No);
-	private static final String BTN_NO_VIDEO    = Game.getVar(R.string.WndMovieTheatre_No);
 	private static final String TXT_BYE         = Game.getVar(R.string.WndMovieTheatre_Bye);
 	private static final String TXT_INSTRUCTION = Game.getVar(R.string.WndMovieTheatre_Instruction);
 	private static final String TXT_TITLE       = Game.getVar(R.string.WndMovieTheatre_Title);
@@ -65,10 +65,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnYes );
 
-		if(!Appodeal.isLoaded(Appodeal.REWARDED_VIDEO)){
-			btnYes.enable(false);
-		}
-
 		RedButton btnNo = new RedButton( BTN_NO ) {
 			@Override
 			protected void onClick() {
@@ -105,7 +101,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 				GameScene.doOnSceneSwitch = new Runnable() {
 					@Override
 					public void run() {
-						GameScene.show(new WndMessage("Yep") {
+						GameScene.show(new WndMessage("Ok!") {
 							@Override
 							public void hide() {
 								super.hide();

@@ -35,24 +35,24 @@ public class AppodealRewardVideo {
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 					@Override
 					public void onRewardedVideoLoaded() {
-						GLog.i("onRewardedVideoLoaded");
+						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoLoaded");}
 					}
 					@Override
 					public void onRewardedVideoFailedToLoad() {
-						GLog.i("onRewardedVideoFailedToLoad");
+						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoFailedToLoad");}
 					}
 					@Override
 					public void onRewardedVideoShown() {
-						GLog.i("onRewardedVideoShown");
+						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoShown");}
 					}
 					@Override
 					public void onRewardedVideoFinished(int amount, String name) {
-						GLog.i("onRewardedVideoFinished. Reward: %d %s", amount, name);
+						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoFinished. Reward: %d %s", amount, name);}
 
 					}
 					@Override
 					public void onRewardedVideoClosed(final boolean finished) {
-						GLog.i("onRewardedVideoClosed,  finished: %s", finished);
+						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoClosed,  finished: %s", finished);}
 						returnTo.returnToWork(finished);
 					}
 				});
