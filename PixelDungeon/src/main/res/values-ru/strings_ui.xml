@@ -72,5 +72,5 @@
   <string name="WndSaveSlotSelect_SelectSlot">Выбери ячейку</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">Выберите мод</string>
-  <string name="RemixedPixelDungeonApp_sendCrash">Наша игра упала...\n Пардоньте. \n Пожалуйста пришлите отчёт, чтобы мы моли поскорее это исправить.</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Наша игра упала...\n Пардоньте. \n Пожалуйста пришлите отчёт, чтобы мы могли поскорее это исправить.</string>
 </resources>
