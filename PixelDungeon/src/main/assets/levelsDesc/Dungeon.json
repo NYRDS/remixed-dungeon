@@ -107,7 +107,7 @@
       "necro2":[["necro3"],["necro1"]],
       "necro3":[["necro4"],["necro2"]],
       "necro4":[["necro5"],["necro3"]],
-      "necro5":[[],["necro4"]],
+      "necro5":[["necro5"],["necro4"]],
 
       "ice1":[["ice2"],["14"],[2]],
       "ice2":[["ice3"],["ice1"]],
