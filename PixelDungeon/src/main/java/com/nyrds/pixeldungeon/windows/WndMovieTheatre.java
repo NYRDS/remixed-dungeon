@@ -31,6 +31,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 	private static final String TXT_TITLE       = Game.getVar(R.string.WndMovieTheatre_Title);
 	private static final String TXT_THANK_YOU   = Game.getVar(R.string.WndMovieTheatre_Thank_You);
 	private static final String TXT_SORRY       = Game.getVar(R.string.WndMovieTheatre_Sorry);
+	private static final String TXT_OK       = Game.getVar(R.string.WndMovieTheatre_Ok);
 
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
@@ -101,7 +102,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 				GameScene.doOnSceneSwitch = new Runnable() {
 					@Override
 					public void run() {
-						GameScene.show(new WndMessage("Ok!") {
+						GameScene.show(new WndMessage(TXT_OK) {
 							@Override
 							public void hide() {
 								super.hide();
