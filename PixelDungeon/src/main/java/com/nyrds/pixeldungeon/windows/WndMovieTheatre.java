@@ -102,12 +102,12 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 				GameScene.doOnSceneSwitch = new Runnable() {
 					@Override
 					public void run() {
-						GameScene.show(new WndMessage(TXT_OK) {
+						GameScene.show(new WndMessage(TXT_THANK_YOU) {
 							@Override
 							public void hide() {
 								super.hide();
 								if(result) {
-									serviceMan.say(TXT_THANK_YOU);
+									serviceMan.say(TXT_OK);
 									serviceMan.reward();
 								} else {
 									serviceMan.say(TXT_SORRY);
