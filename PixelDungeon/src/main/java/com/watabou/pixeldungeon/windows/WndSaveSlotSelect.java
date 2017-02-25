@@ -5,6 +5,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
@@ -23,10 +24,6 @@ import com.watabou.pixeldungeon.ui.Window;
 import java.util.ArrayList;
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
-
-	private static final int WIDTH         = 120;
-	private static final int BUTTON_WIDTH  = 58;
-
 	private static final String EMPTY_STRING = "";
 
 	private boolean saving;
@@ -35,15 +32,18 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 	WndSaveSlotSelect(final boolean _saving) {
 		String options[] = slotInfos();
 
+		final int WIDTH =  WndHelper.getFullscreenWidth();
+		final int maxW = WIDTH - GAP * 2;
+
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = GAP;
-		tfTitle.maxWidth(WIDTH - GAP * 2);
+		tfTitle.maxWidth(maxW);
 		tfTitle.measure();
 		add(tfTitle);
 
 		Text tfMesage = PixelScene.createMultiline(windowText(), GuiProperties.regularFontSize());
-		tfMesage.maxWidth(WIDTH - GAP * 2);
+		tfMesage.maxWidth(maxW);
 		tfMesage.measure();
 		tfMesage.x = GAP;
 		tfMesage.y = tfTitle.y + tfTitle.height() + GAP;
@@ -52,9 +52,14 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		float pos = tfMesage.y + tfMesage.height() + GAP;
 
 		ArrayList<TextButton> buttons = new ArrayList<>();
-		for (int i = 0; i < options.length / 2 + 1; i++) {
-			for (int j = 0; j < 2; j++) {
-				final int index = i * 2 + j;
+
+
+		final int columns = PixelDungeon.landscape() ? 3 : 2;
+		final int BUTTON_WIDTH = WIDTH / columns - GAP;
+
+		for (int i = 0; i < options.length / columns + 1; i++) {
+			for (int j = 0; j < columns; j++) {
+				final int index = i * columns + j;
 				if (!(index < options.length)) {
 					break;
 				}
@@ -102,7 +107,6 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		}
 
 		resize(WIDTH, (int) pos);
-
 
 		saving = _saving;
 

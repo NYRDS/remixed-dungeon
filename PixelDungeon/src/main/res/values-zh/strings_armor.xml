@@ -48,7 +48,7 @@
   <string name="MageArmor_ACSpecial">熔融之土</string>
   <string name="MageArmor_NotMage">只有法師能使用這件護甲！</string>
   <!--STRINGS OF MailArmor CLASS-->
-  <string name="MailArmor_Name">鏈甲</string>
+  <string name="MailArmor_Name">链甲</string>
   <string name="MailArmor_Desc">由相扣的金屬環製成，既牢固又靈活的一套護甲。</string>
   <!--STRINGS OF PlateArmor CLASS-->
   <string name="PlateArmor_Name">板甲</string>
@@ -75,23 +75,23 @@
   <!--STRINGS OF AntiEntropy CLASS-->
   <string name="AntiEntropy_Txt">反熵 %s</string>
   <!--STRINGS OF Bounce CLASS-->
-  <string name="Bounce_Txt">反弹 %s</string>
+  <string name="Bounce_Txt">反彈 %s</string>
   <!--STRINGS OF Displacement CLASS-->
   <string name="Displacement_Txt">位移 %s</string>
   <!--STRINGS OF Entanglement CLASS-->
-  <string name="Entanglement_Txt">缠绕 %s</string>
+  <string name="Entanglement_Txt">纏繞 %s</string>
   <!--STRINGS OF Metabolism CLASS-->
-  <string name="Metabolism_Txt">代谢 %s</string>
+  <string name="Metabolism_Txt">代謝 %s</string>
   <!--STRINGS OF Multiplicity CLASS-->
-  <string name="Multiplicity_Txt">分身%s</string>
+  <string name="Multiplicity_Txt">分身 %s</string>
   <!--STRINGS OF Potential CLASS-->
-  <string name="Potential_Txt">电势%s</string>
+  <string name="Potential_Txt">电勢 %s</string>
   <!--STRINGS OF Stench CLASS-->
-  <string name="Stench_Txt">恶臭%s</string>
+  <string name="Stench_Txt">惡臭 %s</string>
   <!--STRINGS OF Viscosity CLASS-->
-  <string name="Viscosity_Txt">粘稠%s</string>
-  <string name="Viscosity_Status">延缓 %d 点伤害</string>
+  <string name="Viscosity_Txt">粘稠 %s</string>
+  <string name="Viscosity_Status">延緩 %d 點傷害</string>
   <!--STRINGS OF DeferedDamage CLASS-->
-  <string name="DeferedDamage_Defered_Txt">延缓的伤害( %d )</string>
-  <string name="DeferedDamage_Killed_Txt">%s 杀了你……</string>
+  <string name="DeferedDamage_Defered_Txt">延緩的傷害( %d )</string>
+  <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
 </resources>

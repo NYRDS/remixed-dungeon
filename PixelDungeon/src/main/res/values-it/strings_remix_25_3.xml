@@ -1,3 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Cappello Ushanka </string>
+    <string name="Ushanka_Info">Un caldo e comodo cappello ushanka decorato con una stella rossa. Il compagno perfetto per lottare in questo malvagio e freddo Dungeon.</string>
+
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">teschio di vampiro</string>
+    <string name="VampireSkull_Info">Questa maschera è fatta col teschio di un vampiro. Infatti è il teschio di un vampiro... il teschio di un grande vampiro. Spaventoso.</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">maschera zombie</string>
+    <string name="ZombieMask_Info">Hai mai desiderato di essere come un eroe non-morto, che ha fallito la sua ricerca più volte? Bene, questa è la tua shance.</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">caramella</string>
+    <string name="Candy_Info">Questa caramella sembra davvero bella e il suo odore è altrettanto buono. Vuoi davvero lasciarla a qualcun\'altro?</string>
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">torta di zucca</string>
+    <string name="PumpkinPie_Info">Una deliziosa torta di zucche, proprio come la infornava tua madre.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">torta di zucca marcia</string>
     </resources>

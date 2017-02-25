@@ -1,48 +1,48 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">这是一个远程武器。除了精灵没有任何人能在极近距离正常使用。装备一把弓让你能够发射箭矢
+  <string name="Bow_Info1">這是一件遠程武器。除了精靈，其他人不能在極近距離正常使用。裝備好弓後，您便能夠發射箭矢。
 </string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">木弓</string>
-  <string name="WoodenBow_Info">如果你找到一些箭矢的话，这把简单的木制弓也许会派上用场。</string>
-  <string name="WoodenBow_Gender">masculine</string>
+  <string name="WoodenBow_Info">如果您找到一些箭矢的话，這把簡單的木製弓也許會派上用場。</string>
+  <string name="WoodenBow_Gender">男性的</string>
   <!--STRINGS OF CompoundBow CLASS-->
-  <string name="CompoundBow_Name">复合弓</string>
-  <string name="CompoundBow_Info">复合弓以牺牲一些速度为代价，使其发射的箭矢能造成大量伤害并比木弓更为精准。</string>
-  <string name="CompoundBow_Gender">masculine</string>
+  <string name="CompoundBow_Name">複合弓</string>
+  <string name="CompoundBow_Info">從複合弓發射的箭矢能造成大量傷害，且比木弓的更為精準，但速度上卻稍為遜色。</string>
+  <string name="CompoundBow_Gender">男性的</string>
   <!--STRINGS OF RubyBow CLASS-->
-  <string name="RubyBow_Name">红宝石弓</string>
-  <string name="RubyBow_Info">只有最优秀的射手才能使用好这把弓。几乎每一发箭矢都能穿过敌人并在他们身上留下大洞，但是拉开它的弓弦需要极大的力量。</string>
-  <string name="RubyBow_Gender">masculine</string>
+  <string name="RubyBow_Name">紅寶石弓</string>
+  <string name="RubyBow_Info">只有最優秀的射手才能靈活運用此弓。幾乎每一發箭矢都能貫穿敵人，並在他們身上留下大洞。然而，拉弓需要極大的力量。</string>
+  <string name="RubyBow_Gender">男性的</string>
   <!--STRINGS OF Quiver CLASS-->
   <string name="Quiver_Name">箭袋</string>
-  <string name="Quiver_Info">皮制箭袋能容纳任何数量的箭矢</string>
-  <string name="Quiver_Gender">masculine</string>
+  <string name="Quiver_Info">皮製箭袋能容納任意數量的箭矢</string>
+  <string name="Quiver_Gender">男性的</string>
   <!--STRINGS OF FireQuiver CLASS-->
-  <string name="FireQuiver_Name">火箭</string>
+  <string name="FireQuiver_Name">火矢</string>
   <string name="FireQuiver_Info" />
-  <string name="FireQuiver_Gender">masculine</string>
+  <string name="FireQuiver_Gender">男性的</string>
   <!--STRINGS OF PoisonQuiver CLASS-->
-  <string name="PoisonQuiver_Name">毒箭</string>
+  <string name="PoisonQuiver_Name">毒矢</string>
   <string name="PoisonQuiver_Info" />
-  <string name="Poisonuiver_Gender">masculine</string>
+  <string name="Poisonuiver_Gender">男性的</string>
   <!--STRINGS OF ParalysisQuiver CLASS-->
-  <string name="ParalysisQuiver_Name">麻痹箭</string>
+  <string name="ParalysisQuiver_Name">麻痹矢</string>
   <string name="ParalysisQuiver_Info" />
-  <string name="ParalysisQuiver_Gender">masculine</string>
+  <string name="ParalysisQuiver_Gender">男性的</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">箭矢</string>
-  <string name="CommonArrow_Info">常见的带着铁箭头的木制箭矢。</string>
-  <string name="CommonArrow_Gender">feminine</string>
+  <string name="CommonArrow_Info">常見，帶有鐵箭頭的木製箭矢。</string>
+  <string name="CommonArrow_Gender">女性的</string>
   <!--STRINGS OF FireArrow CLASS-->
   <string name="FireArrow_Name">火箭</string>
   <string name="FireArrow_Info">这只箭看起来和普通的没什么区别，除了散发着温暖红光的箭头。</string>
-  <string name="FireArrow_Gender">feminine</string>
+  <string name="FireArrow_Gender">女性的</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">毒箭</string>
   <string name="PoisonArrow_Info">一些致命毒药被涂抹在了它的箭头上。</string>
-  <string name="PoisonArrow_Gender">feminine</string>
+  <string name="PoisonArrow_Gender">女性的</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
   <string name="ParalysisArrow_Name">麻痹箭</string>
   <string name="ParalysisArrow_Info">这只箭涂抹了麻痹毒药。</string>

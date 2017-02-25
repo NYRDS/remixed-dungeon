@@ -199,22 +199,23 @@ remix.21.4:\n
         - Agregado Nariz roja y astas\n
         </string>
   <string name="Welcome_Text_26_1">
-        remix.26.1:\n
-        - El juego comienza en un Pueblo\n
-        - El Pueblo tiene un tema musical (por Misaerit)\n
-        - Para obtener la victoria al 100%, después de obtener el de Yendor, debe ir a la salida del pueblo\n
-        - Los objetos de inicio son los únicos de cada clase, además de 200 monedas\n
-        - El Pueblo tiene una tienda, donde comprar los objetos básicos\n
-        - El sacerdote del pueblo sanará y alimentará al héroe de forma gratuita\n
-        - Los enemigos voladores ya no activan trampas\n
-        - No se puede vender contenedores con algo dentro\n
-        - Los enemigos no-muertos son inmunes al veneno\n
-        - Cuando el esqueleto muere causa daño a 4 cuadros adyacentes (líneas rectas), en lugar de 8\n
-        - Actualizadas las fuentes\n
-        - Los cristales no se pueden mover con telequinesis\n
-        - La poción de purificación puede curar el efecto de confusión\n
-        - Las criaturas creadas con multiplicación no pueden tener menos 1 punto de vida\n
-        - Arreglados errores de tipografía\n
-        - Arreglados los tiles de las Cuevas de Hielo\n
-        </string>
+remix.26.1:\n
+ - El juego comienza en un Pueblo\n
+ - El Pueblo tiene un tema musical (por Misaerit)\n
+ - Para obtener la victoria al 100%, después de obtener el de Yendor, debe ir a la salida del pueblo\n
+ - Al iniciar solo se tienen los objetos únicos de cada clase, además de 200 monedas\n
+ - El Pueblo tiene una tienda donde comprar los objetos básicos\n
+ - El sacerdote del pueblo sanará y alimentará al héroe de forma gratuita\n
+ - Los enemigos voladores ya no activan trampas\n
+ - No se puede vender contenedores con algo dentro\n
+ - Los enemigos no-muertos son inmunes al veneno\n
+ - Cuando el esqueleto muere causa daño a 4 cuadros adyacentes (líneas rectas), en lugar de 8\n
+ - Actualizadas las fuentes\n
+ - Los cristales no se pueden mover con telequinesis\n
+ - La poción de purificación puede curar el efecto de confusión\n
+ - Las criaturas creadas con multiplicación no pueden tener menos 1 punto de vida\n
+ - Arreglados errores de tipografía\n
+ - Arreglados los tiles de las Cuevas de Hielo\n
+ - Mods \"The Fallen\" y \"Maze\" tienen soporte completo del idioma inglés.
+ - Disponible un nuevo nivel de donación. Al comprar el \"Píxel Real\", no solo ayuda a los desarrolladores, también recibe todos los sombreros y los que saldrán en un futuro.</string>
 </resources>

@@ -35,6 +35,10 @@
     <string name="ServiceManNPC_Name_Objective">職員</string>
     <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
 
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">商人</string>
+    <string name="TownShopkeeper_Desc">经典的商人。他知道你的斤两。</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="WndMovieTheatre_Watch">觀看影片</string>
@@ -43,6 +47,12 @@
     <string name="WndMovieTheatre_Instruction">歡迎來到我們的戲院！我們正提供一項特別服務：您可免費看一齣電影。若果您看畢整套影片，您將獲賞 %d 個金幣！</string>
     <string name="WndMovieTheatre_Title">戲院</string>
     <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">治疗-花费%d金币</string>
+    <string name="WndPriest_Instruction_m">欢迎我的孩子,欢迎来到这个大教堂!不幸的是里面还在维修,所以我没法带你参观。如果你需要的话,我可以为你提供治疗而且只要%d金币!</string>
+    <string name="WndPriest_Instruction_f">欢迎我的孩子,欢迎来到这个大教堂!不幸的是里面还在维修,所以我没法带你参观。如果你需要的话,我可以为你提供治疗而且只要%d金币!</string>
+    <string name="WndPriest_Title">小镇牧师</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
@@ -100,4 +110,17 @@
     <string name="town_deco_movies_door_name">門</string>
     <string name="town_deco_movies_door_desc">這扇門看起来巧奪天工。可能有一些不可思議的東西隱匿在背後。</string>
 
-    </resources>
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">王室成员</string>
+
+    <string name="WndDonate_royalDonate">王室特权</string>
+
+    <string name="WndDonate_royalDonateText">我不想让你反感,但是这么做对开发者有实打实的好处。</string>
+
+    <string name="WndDonate_royalDonateText2">此外,如果你这么做你可以使用所有的帽子!所有的!另外混合翻译需要新鲜的血液,输入www.transifex.com/nyrds/remixed-pixel-dungeon来加入我们。</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">王室成员</string>
+
+</resources>

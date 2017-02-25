@@ -2,6 +2,7 @@ package com.nyrds.android.util;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -47,7 +48,7 @@ public class JsonHelper {
 	}
 
 	@NonNull
-	static public JSONObject readJsonFromStream(InputStream stream) throws JSONException {
+	private static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
 		try {
 			StringBuilder jsonDef = new StringBuilder();
 
@@ -60,7 +61,15 @@ public class JsonHelper {
 				line = reader.readLine();
 			}
 			reader.close();
-			return (JSONObject) new JSONTokener(jsonDef.toString()).nextValue();
+
+			Object value = new JSONTokener(jsonDef.toString()).nextValue();
+
+			try {
+				return (JSONObject) (value);
+			} catch (ClassCastException e) {
+				EventCollector.logException(e, value.toString());
+				return new JSONObject();
+			}
 		} catch (IOException e) {
 			Game.toast(e.getLocalizedMessage());
 			throw new TrackedRuntimeException(e);
