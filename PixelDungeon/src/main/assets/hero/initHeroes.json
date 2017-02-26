@@ -72,7 +72,8 @@
 		},
 		"items": [{
 			"kind": "SkeletonKey",
-			"levelId": "7"
+			"levelId": "7",
+			"depth": "7"
 		}],
 		"quickslot":[{
 			"kind": "NecromancerRobe"
