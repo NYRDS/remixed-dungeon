@@ -3,68 +3,69 @@
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">在你之前已经有许多的英雄们向这个地牢进发。有些人带着财宝和魔法物品满足而归，可是他们大部分人却彻底的失去了音讯。
+  <string name="IntroScene_Txt">在您之前，已經有許多英雄向地牢進發。有些人攜着財寶和魔法物品滿足載而歸，可是他們大部分人卻杳無音訊。
 
-然而，从未有人成功取回Yendor护符——那个据说被藏在地牢深处的东西。
+然而，從未有人成功取回Yendor護符——那個據說被藏在地牢深處的東西。
 
-你认为你已经准备好面对这个挑战了，更重要的是，你感受到了命运在对你微笑。现在，是时候开始你自己的冒险了！</string>
+您認為您已經準備好面對這個挑戰對這個挑戰了，更重要的是，你感覺到命運正向您投以一絲微笑。現在，是時候展開屬於您的冒險了！</string>
   <!--STRINGS OF AmuletScene CLASS-->
-  <string name="AmuletScene_Exit">让这一切结束吧</string>
-  <string name="AmuletScene_Stay">我暂时不那么做</string>
-  <string name="AmuletScene_Txt">你终于把它握在了手中——Yendor护符。通过它的力量，你可以征服世界，也可以为人们带去和平与繁荣，或是其他任何事。无论如何，你的命运被永远的改变了，游戏也将要结束。或者，你也可以作为一个凡人再在这里逗留一会。</string>
+  <string name="AmuletScene_Exit">讓這一切結束吧</string>
+  <string name="AmuletScene_Stay">我還有心願未了</string>
+  <string name="AmuletScene_Txt">您終於把它握在了手中——Yendor護符。通過它的力量，您可以征服世界，也可以為人們帶來和平與繁榮，或是其他任何事。無論如何，您的命運將永遠改變，遊戲也將要終結。或者，您也可以作為一個凡人再在這裏
+逗留一會。</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">欢迎来到像素地牢的%d层！</string>
-  <string name="GameScene_WelcomeBack">欢迎回到像素地牢的%d层</string>
-  <string name="GameScene_NightMode">专心致志，地牢在晚上会变得更加危险！</string>
-  <string name="GameScene_Chasm">你的脚步声回响在地牢中。</string>
-  <string name="GameScene_Water">你听到身边流水潺潺。</string>
-  <string name="GameScene_Grass">空气中弥漫着青草的清香。</string>
-  <string name="GameScene_Secrets">诡异的气氛暗示着这一层隐藏了许多秘密。</string>
+  <string name="GameScene_Welcome">歡迎來到像素地牢的%d層！</string>
+  <string name="GameScene_WelcomeBack">歡迎回到像素地牢的%d層！</string>
+  <string name="GameScene_NightMode">請提高警覺，地牢在晚上會變得更加危險！</string>
+  <string name="GameScene_Chasm">您的腳步聲在地牢中迴響。</string>
+  <string name="GameScene_Water">您聽到身邊流水潺潺。</string>
+  <string name="GameScene_Grass">空氣中彌漫着濃濃的青草香味。</string>
+  <string name="GameScene_Secrets">詭異的氛圍暗示着這一層隱藏了許多秘密。</string>
   <!--STRINGS OF Char CLASS-->
   <string name="Char_Name">怪物</string>
   <string name="Char_Name_Objective">怪物</string>
   <string-array name="Char_Hit">
-    <item>%1$s攻击了%2$s</item>
-    <item>%1$s攻击了%2$s</item>
-    <item>%1$s攻击了%2$s</item>
+    <item>%1$s攻擊了%2$s</item>
+    <item>%1$s攻擊了%2$s</item>
+    <item>%1$s攻擊了%2$s</item>
   </string-array>
   <string-array name="Char_Kill">
-    <item>%s杀了你...</item>
-    <item>%s杀了你....</item>
-    <item>%s杀了你....</item>
+    <item>%s殺了你...</item>
+    <item>%s殺了你....</item>
+    <item>%s殺了你....</item>
   </string-array>
   <string-array name="Char_Defeat">
-    <item>%1$s击败了%2$s</item>
-    <item>%1$s击败了%2$s</item>
-    <item>%1$s击败了%2$s</item>
+    <item>%1$s擊败了%2$s</item>
+    <item>%1$s擊败了%2$s</item>
+    <item>%1$s擊败了%2$s</item>
   </string-array>
-  <string name="Char_YouMissed">%1$s %2$s了你的攻击</string>
-  <string name="Char_SmbMissed">%1$s%2$s了%3$s 的攻击</string>
-  <string name="Char_OutParalysis">疼痛使%s的麻痹解除了</string>
+  <string name="Char_YouMissed">%1$s %2$s了你的攻擊</string>
+  <string name="Char_SmbMissed">%1$s%2$s了%3$s 的攻擊</string>
+  <string name="Char_OutParalysis">疼痛使%s的麻痺解除了</string>
   <string-array name="Char_StaDodged">
-    <item>闪避</item>
-    <item>闪避</item>
-    <item>闪避</item>
+    <item>閃避</item>
+    <item>閃避</item>
+    <item>閃避</item>
   </string-array>
-  <string name="Char_StaPoisoned">剧毒</string>
-  <string name="Char_StaAmok">狂乱</string>
-  <string name="Char_StaSlowed">缓速</string>
-  <string name="Char_StaMind">全视</string>
-  <string name="Char_StaVision">幻象</string>
-  <string name="Char_StaParalysed">麻痹</string>
-  <string name="Char_StaFrightened">恐惧</string>
-  <string name="Char_StaRooted">缠绕</string>
-  <string name="Char_StaCrippled">残疾</string>
+  <string name="Char_StaPoisoned">劇毒</string>
+  <string name="Char_StaAmok">狂亂</string>
+  <string name="Char_StaSlowed">緩速</string>
+  <string name="Char_StaMind">全視</string>
+  <string name="Char_StaVision">意象</string>
+  <string name="Char_StaParalysed">麻痺</string>
+  <string name="Char_StaFrightened">恐懼</string>
+  <string name="Char_StaRooted">纏繞</string>
+  <string name="Char_StaCrippled">殘疾</string>
   <string name="Char_StaBleeding">流血</string>
-  <string name="Char_StaDizzy">眩晕</string>
-  <string name="Char_StaInvisible">隐形</string>
+  <string name="Char_StaDizzy">眩暈</string>
+  <string name="Char_StaInvisible">隱形</string>
   <!--STRINGS OF Dungeon CLASS-->
-  <string name="Dungeon_NoTips">这些文字难以辨认...</string>
-  <string name="Dungeon_DeadEnd">你来这做什么？！</string>
+  <string name="Dungeon_NoTips">這些文字無法辦認...</string>
+  <string name="Dungeon_DeadEnd">你在這幹三小？！</string>
   <string-array name="Dungeon_Tips">
-    <item>对于使用武器、防具要量力而为。</item>
-    <item>地牢里的门不会明摆在你面前。如果你被困住了，尝试去寻找隐藏门。</item>
-    <item>记住，提升你的力量不是唯一让你能正常用一件装备的方法。你也可以尝试升级它们来让它们更轻更好用。 </item>
+    <item>使用武器和防具時要量力而為。</item>
+    <item>地牢裏的門不會明擺在您面前。如果您被困住了，嘗試去尋找隱藏門。</item>
+    <item>記住，想正常使用一件裝備，不單提升你的力量值不是唯。你也可以尝试升级它们来让它们更轻更好用。 </item>
     <item>钱可以在商店花。第一个商店在6层。</item>
     <item>小心黏咕!</item>
     <item>像素市场。对你的冒险帮助很大!</item>
