@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -31,7 +34,7 @@ public class Pushing extends Actor {
 	
 	private Effect effect;
 	
-	public Pushing( Char ch, int from, int to ) {
+	public Pushing(@NonNull Char ch, int from, int to ) {
 		this.ch = ch;
 		this.from = from;
 		this.to = to;
@@ -45,7 +48,7 @@ public class Pushing extends Actor {
 			return false;
 	}
 
-	public class Effect extends Visual {
+	private class Effect extends Visual {
 
 		private static final float DELAY = 0.15f;
 		
@@ -53,9 +56,15 @@ public class Pushing extends Actor {
 		
 		private float delay;
 		
-		public Effect() {
+		Effect() {
 			super( 0, 0, 0, 0 );
-			
+
+			if(ch==null) {
+				EventCollector.logEvent("bug", "pushing null char");
+				Actor.remove( Pushing.this );
+				return;
+			}
+
 			point( ch.getSprite().worldToCamera( from ) );
 			end = ch.getSprite().worldToCamera( to );
 			

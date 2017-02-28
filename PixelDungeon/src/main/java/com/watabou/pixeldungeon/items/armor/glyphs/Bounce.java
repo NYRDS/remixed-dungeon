@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -34,7 +36,7 @@ public class Bounce extends Glyph {
 	private static final String TXT_BOUNCE = Game.getVar(R.string.Bounce_Txt);
 	
 	@Override
-	public int proc( Armor armor, Char attacker, Char defender, int damage) {
+	public int proc(Armor armor, @NonNull Char attacker, Char defender, int damage) {
 
 		int armorLevel = Math.max( 0, armor.level() );
 
