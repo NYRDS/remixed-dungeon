@@ -238,6 +238,17 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
+	private static int getLevelProperty(String id, String property, int defaultValue) {
+
+		try {
+			JSONObject levelDesc = mLevels.getJSONObject(id);
+			return levelDesc.optInt(property, defaultValue);
+		} catch (JSONException e) {
+			EventCollector.logException(e);
+		}
+		return defaultValue;
+	}
+
 	public static boolean isSafe(String id) {return getLevelProperty(id,"isSafe",false);}
 
 	@Nullable
@@ -386,4 +397,7 @@ public class DungeonGenerator {
 	}
 
 
+	public static int getLevelDepthById(String levelId) {
+		return getLevelProperty(levelId,"depth",0);
+	}
 }
