@@ -135,7 +135,26 @@ public class StringsManager {
 		}
 	}
 
+	private static Locale userSelectedLocale;
+
+	public static void ensureCorrectLocale() {
+		if(userSelectedLocale==null) {
+			return;
+		}
+
+		Configuration config = context.getResources().getConfiguration();
+
+		if(!context.getResources().getConfiguration().locale.equals(userSelectedLocale)) {
+			GLog.i("Locale is fucked up! restoring");
+			config.locale = userSelectedLocale;
+			context.getResources().updateConfiguration(config,
+					context.getResources().getDisplayMetrics());
+		}
+	}
+
 	public static void useLocale(Locale locale, String lang) {
+		userSelectedLocale = locale;
+
 		Configuration config = context.getResources().getConfiguration();
 
 		GLog.i("context locale: %s -> %s", config.locale, locale);
@@ -168,6 +187,7 @@ public class StringsManager {
 		}
 
 		try {
+			ensureCorrectLocale();
 			return context.getResources().getString(id);
 		} catch (Resources.NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
@@ -180,7 +200,7 @@ public class StringsManager {
 		if (stringsMap.containsKey(id)) {
 			return stringsMap.get(id);
 		}
-
+		ensureCorrectLocale();
 		return context.getResources().getStringArray(id);
 	}
 

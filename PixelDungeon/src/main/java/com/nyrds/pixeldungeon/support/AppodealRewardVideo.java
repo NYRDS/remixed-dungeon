@@ -47,13 +47,12 @@ public class AppodealRewardVideo {
 					}
 					@Override
 					public void onRewardedVideoFinished(int amount, String name) {
-						PixelDungeon.instance().setSelectedLanguage();
 						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoFinished. Reward: %d %s", amount, name);}
 					}
 					@Override
 					public void onRewardedVideoClosed(final boolean finished) {
 						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoClosed,  finished: %s", finished);}
-						PixelDungeon.instance().setSelectedLanguage();
+						//PixelDungeon.immerse(PixelDungeon.immersed());
 						returnTo.returnToWork(finished);
 					}
 				});
