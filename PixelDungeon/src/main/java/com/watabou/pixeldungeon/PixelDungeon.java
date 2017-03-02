@@ -99,7 +99,7 @@ public class PixelDungeon extends Game {
 
 		EventCollector.logEvent("font", String.valueOf(PixelDungeon.classicFont()));
 
-		useLocale(uiLanguage());
+		setSelectedLanguage();
 		ItemSpritesDescription.readItemsDesc();
 
 		updateImmersiveMode();
@@ -118,6 +118,10 @@ public class PixelDungeon extends Game {
 		if (PixelDungeon.version() != Game.versionCode) {
 			switchScene(WelcomeScene.class);
 		}
+	}
+
+	public void setSelectedLanguage() {
+		useLocale(uiLanguage());
 	}
 
 	@Override
@@ -264,7 +268,6 @@ public class PixelDungeon extends Game {
 
 	public static String uiLanguage() {
 		String deviceLocale = Locale.getDefault().getLanguage();
-		GLog.i("Device locale: %s", deviceLocale);
 		return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE,
 				deviceLocale);
 	}

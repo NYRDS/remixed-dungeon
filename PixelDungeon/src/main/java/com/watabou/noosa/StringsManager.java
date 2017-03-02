@@ -137,6 +137,9 @@ public class StringsManager {
 
 	public static void useLocale(Locale locale, String lang) {
 		Configuration config = context.getResources().getConfiguration();
+
+		GLog.i("context locale: %s -> %s", config.locale, locale);
+
 		config.locale = locale;
 		context.getResources().updateConfiguration(config,
 				context.getResources().getDisplayMetrics());

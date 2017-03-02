@@ -28,7 +28,7 @@ public class AppodealRewardVideo {
 
 				if(BuildConfig.DEBUG) {
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
-					Appodeal.setTesting(true);
+					//Appodeal.setTesting(true);
 				}
 
 				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
@@ -47,12 +47,13 @@ public class AppodealRewardVideo {
 					}
 					@Override
 					public void onRewardedVideoFinished(int amount, String name) {
+						PixelDungeon.instance().setSelectedLanguage();
 						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoFinished. Reward: %d %s", amount, name);}
-
 					}
 					@Override
 					public void onRewardedVideoClosed(final boolean finished) {
 						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoClosed,  finished: %s", finished);}
+						PixelDungeon.instance().setSelectedLanguage();
 						returnTo.returnToWork(finished);
 					}
 				});
