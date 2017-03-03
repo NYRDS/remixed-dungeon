@@ -6,7 +6,7 @@
     <string name="TownGuardNPC_Gender">男性的</string>
     <string name="TownGuardNPC_Name_Objective">城鎮守衛</string>
     <string name="TownGuardNPC_Desc">一個正常的城鎮守衛</string>
-    <string name="TownGuardNPC_Message1">向前走。</string>
+    <string name="TownGuardNPC_Message1">离这远点。</string>
     <string name="TownGuardNPC_Message2">感谢像你一樣的冒險家，這裏十分和平。</string>
     <string name="TownGuardNPC_Message3">你覺得這個鎮上有太多守衛了嗎？這只是一個曾擁有龐然大牢，卻被怪物佔據的城鎮，不是嗎？</string>
 
@@ -112,15 +112,15 @@
 
     <!-- STRINGS OF WndDonate CLASS -->
 
-    <string name="WndDonate_royal">王室成员</string>
+    <string name="WndDonate_royal">王室级</string>
 
-    <string name="WndDonate_royalDonate">王室特权</string>
+    <string name="WndDonate_royalDonate">王室级捐献</string>
 
     <string name="WndDonate_royalDonateText">我不想让你反感,但是这么做对开发者有实打实的好处。</string>
 
-    <string name="WndDonate_royalDonateText2">此外,如果你这么做你可以使用所有的帽子!所有的!另外混合翻译需要新鲜的血液,输入www.transifex.com/nyrds/remixed-pixel-dungeon来加入我们。</string>
+    <string name="WndDonate_royalDonateText2">此外,如果你这么做你可以使用所有的帽子!所有的!</string>
 
     <!-- STRINGS OF WndPremiumSettings CLASS -->
-    <string name="WndPremiumSettings_royal">王室成员</string>
+    <string name="WndPremiumSettings_royal">王室级</string>
 
 </resources>

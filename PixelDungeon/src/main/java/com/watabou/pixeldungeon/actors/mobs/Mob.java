@@ -125,6 +125,7 @@ public abstract class Mob extends Char {
 		return fraction;
 	}
 
+	@NonNull
 	public static Mob makePet(@NonNull Mob pet, @NonNull Hero hero) {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);

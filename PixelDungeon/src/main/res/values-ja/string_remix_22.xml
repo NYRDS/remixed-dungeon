@@ -8,14 +8,14 @@
   <string name="ShadowLord_Intro">覚悟を決めろ！</string>
   <string name="ShadowLord_Death">Nooooo...</string>
   <string name="AllowStatisticsCollectionScene_Title">利用統計の収集</string>
-  <string name="AllowStatisticsCollectionScene_Request">あなたが許可する場合は、Remixed Pixel Dungeonは使用状況の統計を収集します。そのデータは以下で使用します。:\n
+  <string name="AllowStatisticsCollectionScene_Request">もしあなたが許可するなら、Remixed Pixel Dungeonは使用状況の統計を収集します。そのデータは以下で使用します。:\n
 - 欠点と様々なマイナーな不具合を修正(致命的なエラーが発生したときには、明示的にレポートを送信するように求められます)\n
 - ゲームバランスの改善\n
 - デバイス固有のパフォーマンスの問題を修正\n
 - 時々面白い統計事実を公開\n
-この決定はいつでも変更することが出来ます(タイトル画面でのチャートのアイコンをクリックします)</string>
+この決定はいつでも変更することが出来ます(タイトル画面でのチャートのアイコンをクリック)</string>
   <string name="AllowStatisticsCollectionScene_Allow">許可する</string>
-  <string name="AllowStatisticsCollectionScene_Deny">否定する</string>
+  <string name="AllowStatisticsCollectionScene_Deny">拒否する</string>
   <string name="Darkness_Info">大気中に浮遊する永遠の闇の一片のように見えます</string>
   <string name="WndSelectLanguage_ImproveTranslation">Remixed Pixel Dungeonの翻訳を助けて下さい</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>

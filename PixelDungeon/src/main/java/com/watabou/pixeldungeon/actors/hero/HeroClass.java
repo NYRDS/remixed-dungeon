@@ -35,6 +35,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -44,15 +45,12 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
+import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
-import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
@@ -122,9 +120,8 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		for(int i = 0;i<100;i++) {
 			hero.collect(new ScrollOfMagicMapping());
-			hero.collect(new ScrollOfUpgrade());
-			hero.collect(new ScrollOfCurse());
-			hero.collect(new PotionOfMindVision());
+			hero.collect(new PotionOfFrost());
+			hero.collect(new PotionOfLiquidFlame());
 		}
 
 		Item ring  = new RingOfAccuracy().identify();
@@ -141,7 +138,7 @@ public enum HeroClass {
 		hero.collect(new Glaive());
 		hero.collect(new Halberd());
 
-		hero.collect(new RingOfStoneWalking());
+		hero.collect(new RottenPumpkinPie());
 
 		hero.ht(1000);
 		hero.hp(1000);
@@ -156,19 +153,24 @@ public enum HeroClass {
 			try {
 				JSONObject classDesc = initHeroes.getJSONObject(className);
 				if(classDesc.has("armor")) {
-					hero.belongings.armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
+					Armor armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
+					hero.belongings.armor = armor;
 				}
 
 				if(classDesc.has("weapon")) {
-					hero.belongings.weapon = (Weapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
+					KindOfWeapon weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
+					hero.belongings.weapon = weapon;
+					weapon.actions(hero);
 				}
 
 				if(classDesc.has("ring1")) {
 					hero.belongings.ring1 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring1"));
+					hero.belongings.ring1.activate(hero);
 				}
 
 				if(classDesc.has("ring2")) {
 					hero.belongings.ring2 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring2"));
+					hero.belongings.ring2.activate(hero);
 				}
 
 				if(classDesc.has("items")) {
