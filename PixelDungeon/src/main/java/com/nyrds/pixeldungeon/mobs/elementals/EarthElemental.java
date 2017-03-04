@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.elementals;
 import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -11,17 +12,14 @@ import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
-public class EarthElemental extends Mob implements IDepthAdjustable {
-	
-	private int kind;
-	
+public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
+
 	public EarthElemental() {
 		adjustStats(Dungeon.depth);
 
@@ -41,11 +39,6 @@ public class EarthElemental extends Mob implements IDepthAdjustable {
 		IMMUNITIES.add(Paralysis.class);
 		IMMUNITIES.add(ToxicGas.class);
 		IMMUNITIES.add(Fire.class);
-	}
-
-	@Override
-	public int getKind() {
-		return kind;
 	}
 
 	@Override
