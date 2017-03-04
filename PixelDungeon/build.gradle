@@ -10,7 +10,7 @@ android {
         }
     }
     compileSdkVersion 23
-    buildToolsVersion '23.0.3'
+    buildToolsVersion '25.0.2'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
         minSdkVersion 9

@@ -81,7 +81,7 @@
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
     <string name="WandOfIcebolt_Name">Палочка Ледяной Стрелы</string>
-    <string name="WandOfIcebolt_Info">Эта палочка запускает ледяной снаряд, который наносит небольшой урон цели. Так же есть шанс замедлить или даже заморозить противника</string>
+    <string name="WandOfIcebolt_Info">Эта палочка запускает ледяной снаряд, который наносит небольшой урон цели. Так же есть шанс замедлить или даже заморозить противника.</string>
     <string name="WandOfIcebolt_Info1">Ты убил себя своей собственной ледяной стрелой...</string>
 
     <!-- Badges -->

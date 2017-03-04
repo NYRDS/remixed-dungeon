@@ -41,14 +41,14 @@
   <string name="FireArrow_Gender">女性的</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">毒箭</string>
-  <string name="PoisonArrow_Info">一些致命毒药被涂抹在了它的箭头上。</string>
+  <string name="PoisonArrow_Info">箭頭上的致命毒药反射出光芒。</string>
   <string name="PoisonArrow_Gender">女性的</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
-  <string name="ParalysisArrow_Name">麻痹箭</string>
-  <string name="ParalysisArrow_Info">这只箭涂抹了麻痹毒药。</string>
-  <string name="ParalysisArrow_Gender">feminine</string>
+  <string name="ParalysisArrow_Name">麻痺箭</string>
+  <string name="ParalysisArrow_Info">這支箭已被塗上麻痺毒藥。</string>
+  <string name="ParalysisArrow_Gender">女性的</string>
   <!--STRINGS OF FrostArrow CLASS-->
-  <string name="FrostArrow_Name">霜冻箭</string>
-  <string name="FrostArrow_Info">你能感受到从箭头发出的霜冻气息。</string>
-  <string name="FrostArrow_Gender">feminine</string>
+  <string name="FrostArrow_Name">霜凍箭</string>
+  <string name="FrostArrow_Info">你能感受到從箭頭湧出的霜凍氣息。</string>
+  <string name="FrostArrow_Gender">女性的</string>
 </resources>

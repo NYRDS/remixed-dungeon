@@ -88,7 +88,7 @@ public class Elemental extends Mob {
 			if (buff instanceof Frost) {
 				damage( Random.NormalIntRange( 1, ht() * 2 / 3 ), buff );
 			}
-			super.add( buff );
 		}
+		super.add( buff );
 	}	
 }
