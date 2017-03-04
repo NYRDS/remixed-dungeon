@@ -5,20 +5,20 @@
     <string name="TownGuardNPC_Name">城鎮守衛</string>
     <string name="TownGuardNPC_Gender">男性的</string>
     <string name="TownGuardNPC_Name_Objective">城鎮守衛</string>
-    <string name="TownGuardNPC_Desc">一個正常的城鎮守衛</string>
-    <string name="TownGuardNPC_Message1">离这远点。</string>
-    <string name="TownGuardNPC_Message2">感谢像你一樣的冒險家，這裏十分和平。</string>
-    <string name="TownGuardNPC_Message3">你覺得這個鎮上有太多守衛了嗎？這只是一個曾擁有龐然大牢，卻被怪物佔據的城鎮，不是嗎？</string>
+    <string name="TownGuardNPC_Desc">一個正常的城鎮守衛。</string>
+    <string name="TownGuardNPC_Message1">滾。</string>
+    <string name="TownGuardNPC_Message2">感谢像您一樣的冒險家，這裏十分和平。</string>
+    <string name="TownGuardNPC_Message3">您覺得這城鎮有太多守衛？這城鎮只有一個被怪物佔據的大地牢，不是嗎？</string>
 
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">城鎮居民</string>
     <string name="TownsfolkNPC_Gender">男性的</string>
     <string name="TownsfolkNPC_Name_Objective">城鎮居民</string>
-    <string name="TownsfolkNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲</string>
+    <string name="TownsfolkNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
     <string name="TownsfolkNPC_Message1">啊！又有一位冒險者，好極了！有價值的東西隨便拿去吧！</string>
-    <string name="TownsfolkNPC_Message2">托地牢的福，小镇變得如此富有，城裏每個人都可以隨心去度假！事實上這就是為甚麼這裏現在人不多。</string>
+    <string name="TownsfolkNPC_Message2">托地牢的福，小鎮才變得如此富有，每個居民都可以隨心去度假！這也解釋了為何現在鎮上如此少人。</string>
     <string name="TownsfolkNPC_Message3">多棒的一天啊。</string>
-    <string name="TownsfolkNPC_Message4">我希望春天蒞臨之時水不再淹沒整個下水道。我們不想老鼠再次為患。</string>
+    <string name="TownsfolkNPC_Message4">希望春天蒞臨之時水不再淹沒整個下水道。我們不想老鼠再次為患。</string>
 
 	<!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">城鎮牧師</string>
@@ -27,7 +27,7 @@
     <string name="HealerNPC_Desc">虛無縹緲的直覺告訴我，眼前的老人懂得如何弄法杖。</string>
     <string name="HealerNPC_Message1">免費為冒險者治療！</string>
     <string name="HealerNPC_Message2">當您受傷或飢餓時歡迎回來！</string>
-    <string name="HealerNPC_Message3">奇怪，為甚麼教會不允许我們戴帽子…外面真的很冷。</string>
+    <string name="HealerNPC_Message3">奇怪，為甚麼教會不允許我們戴帽子…外面真的很冷。</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Name">職員</string>
@@ -37,7 +37,7 @@
 
     <!-- STRINGS OF TownShopkeeper CLASS -->
     <string name="TownShopkeeper_Name">商人</string>
-    <string name="TownShopkeeper_Desc">经典的商人。他知道你的斤两。</string>
+    <string name="TownShopkeeper_Desc">平凡的商人，卻知道您的斤兩。</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
@@ -49,10 +49,10 @@
     <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
 
     <!-- STRINGS OF WndPriest CLASS -->
-    <string name="WndPriest_Heal">治疗-花费%d金币</string>
-    <string name="WndPriest_Instruction_m">欢迎我的孩子,欢迎来到这个大教堂!不幸的是里面还在维修,所以我没法带你参观。如果你需要的话,我可以为你提供治疗而且只要%d金币!</string>
-    <string name="WndPriest_Instruction_f">欢迎我的孩子,欢迎来到这个大教堂!不幸的是里面还在维修,所以我没法带你参观。如果你需要的话,我可以为你提供治疗而且只要%d金币!</string>
-    <string name="WndPriest_Title">小镇牧师</string>
+    <string name="WndPriest_Heal">治療 - 花費 %d 金幣</string>
+    <string name="WndPriest_Instruction_m">我的孩子，歡迎來到深淵領主聖誕老人大教堂！不幸的是教堂內部現正維修，所以我沒法帶您參觀。若有需要，只需 %d 金幣，我可以為您治療，給您温飽!</string>
+    <string name="WndPriest_Instruction_f">我的小姑娘，歡迎來到深淵領主聖誕老人大教堂！不幸的是教堂內部現正維修，所以我沒法帶您參觀。若有需要，只需 %d 金幣，我可以為您治療，給您温飽!</string>
+    <string name="WndPriest_Title">小鎮牧師</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
@@ -60,10 +60,10 @@
     <string name="town_deco_roof_desc">平凡不過的瓦片屋頂。</string>
 
     <string name="town_deco_wall_name">牆</string>
-    <string name="town_deco_wall_desc">一幅簡單的木條牆。</string>
+    <string name="town_deco_wall_desc">一幅簡約的木條牆。</string>
 
     <string name="town_deco_snow_name">雪地</string>
-    <string name="town_deco_snow_desc">儘管有傳聞說這個地方有多受冒險者歡迎，但這裏雪很多，彷彿不曾有人步出雪地留下足跡。</string>
+    <string name="town_deco_snow_desc">儘管有傳聞說這個地方有多受冒險者歡迎，但這裏雪很多，彷彿不曾有人踏雪留痕。</string>
 
     <string name="town_deco_cross_name">十字架</string>
     <string name="town_deco_cross_desc">一枚結實的銀十字架。它是這片地方的宗教象徵—「深淵領主聖誕老人的見證者」。</string>
@@ -78,13 +78,13 @@
     <string name="town_deco_chimney_desc">石煙囪是寒冷地區的房子標準設置之一。</string>
 
     <string name="town_deco_window_name">窗户</string>
-    <string name="town_deco_window_desc">普通的窗户，沒什么特别。</string>
+    <string name="town_deco_window_desc">普通的窗户，沒甚麼特别。</string>
 
     <string name="town_deco_door_name">門</string>
     <string name="town_deco_door_desc">平凡不過的木板門。</string>
 
     <string name="town_deco_locked_door_name">已上鎖的門</string>
-    <string name="town_deco_locked_door_desc">那扇門後面會有甚麼呢？</string>
+    <string name="town_deco_locked_door_desc">不知後面會有甚麼呢？</string>
 
     <string name="town_deco_snowman_name">雪人</string>
     <string name="town_deco_snowman_desc">雪人是傳統城鎮的節日景象之一，人們藉以慶祝「牢诞」一整天——也就是怪物入侵的那天。</string>
@@ -102,7 +102,7 @@
     <string name="town_deco_shop_sign_desc">看上去這是一家商店。</string>
 
     <string name="town_deco_floor_name">樓梯</string>
-    <string name="town_deco_floor_desc">這樓梯由普通的木板所造。您是偏要找碴對不？</string>
+    <string name="town_deco_floor_desc">這樓梯由普通的木板所造。您偏要找碴對不？</string>
 
     <string name="town_deco_carpet_name">地毯</string>
     <string name="town_deco_carpet_desc">為貴客準備的豪華红地毯。</string>
@@ -112,15 +112,15 @@
 
     <!-- STRINGS OF WndDonate CLASS -->
 
-    <string name="WndDonate_royal">王室级</string>
+    <string name="WndDonate_royal">王族級</string>
 
-    <string name="WndDonate_royalDonate">王室级捐献</string>
+    <string name="WndDonate_royalDonate">王族級捐獻</string>
 
-    <string name="WndDonate_royalDonateText">我不想让你反感,但是这么做对开发者有实打实的好处。</string>
+    <string name="WndDonate_royalDonateText">我不想令您反感，但這樣做的話，開發者只會好逸惡勞。</string>
 
-    <string name="WndDonate_royalDonateText2">此外,如果你这么做你可以使用所有的帽子!所有的!</string>
+    <string name="WndDonate_royalDonateText2">此外，如果您這麼做，便可以戴上所有！所有的帽子！！！１</string>
 
     <!-- STRINGS OF WndPremiumSettings CLASS -->
-    <string name="WndPremiumSettings_royal">王室级</string>
+    <string name="WndPremiumSettings_royal">王族級</string>
 
 </resources>
