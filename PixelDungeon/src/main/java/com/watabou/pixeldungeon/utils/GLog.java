@@ -101,7 +101,7 @@ public class GLog {
 		if(BuildConfig.DEBUG) {
 			Log.i(TAG, text);
 		}
-		
+
 		if(!Game.isPaused()) {
 			final String finalText = text;
 			Game.executeInGlThread(new Runnable() {

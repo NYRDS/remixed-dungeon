@@ -1,13 +1,11 @@
 
 package com.nyrds.pixeldungeon.windows;
 
-import com.appodeal.ads.Appodeal;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
-import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
@@ -98,6 +96,8 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 						Ads.displayEasyModeBanner();
 					}
 				}
+
+				PixelDungeon.setNeedSceneRestart(true);
 
 				GameScene.doOnSceneSwitch = new Runnable() {
 					@Override
