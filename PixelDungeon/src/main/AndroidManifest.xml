@@ -4,7 +4,7 @@
           xmlns:tools="http://schemas.android.com/tools"
           android:installLocation="auto"
           android:versionCode="392"
-          android:versionName="remix.26.2.alpha.4">
+          android:versionName="remix.26.2.alpha.5">
 
     <uses-sdk tools:overrideLibrary="com.google.android.gms.ads,
                                      com.google.android.gms,
