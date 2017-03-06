@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF BowTie CLASS -->
+    <string name="GnollCostume_Name">Gnoll Costume</string>
+    <string name="GnollCostume_Info">Incredibly warm and fluffy costume. Whoever wears this costume will look like... someone who trying to disguise as a gnoll. But gnolls won\'t fall for it, they will still attack you.</string>
+</resources>
