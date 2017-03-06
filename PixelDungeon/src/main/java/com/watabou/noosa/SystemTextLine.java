@@ -47,10 +47,6 @@ public class SystemTextLine extends Visual {
 		this();
 
 		texture = new SmartTexture(bitmap, Texture.LINEAR, Texture.CLAMP);
-		//texture = new SmartTexture(bitmap);
-
-		//texture.filter(GLES20.GL_LINEAR, GLES20.GL_LINEAR);
-
 
 		frame( new RectF( 0, 0, 1, 1 ) );
 	}
