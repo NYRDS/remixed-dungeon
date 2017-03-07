@@ -23,62 +23,75 @@ import com.watabou.pixeldungeon.Assets;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import java.util.Iterator;
+
 public class ScrollOfRemoveCurse extends Scroll {
 
-	private static final String TXT_PROCCED	= Game.getVar(R.string.ScrollOfRemoveCurse_Proced);
-	private static final String TXT_NOT_PROCCED	= Game.getVar(R.string.ScrollOfRemoveCurse_NoProced);
-	
+	private static final String TXT_PROCCED     = Game.getVar(R.string.ScrollOfRemoveCurse_Proced);
+	private static final String TXT_NOT_PROCCED = Game.getVar(R.string.ScrollOfRemoveCurse_NoProced);
+
 	@Override
 	protected void doRead() {
-		
-		new Flare( 6, 32 ).show( getCurUser().getSprite(), 2f ) ;
-		Sample.INSTANCE.play( Assets.SND_READ );
+
+		new Flare(6, 32).show(getCurUser().getSprite(), 2f);
+		Sample.INSTANCE.play(Assets.SND_READ);
 		Invisibility.dispel(getCurUser());
-		
-		boolean procced = uncurse( getCurUser(), getCurUser().belongings.backpack.items.toArray(new Item[getCurUser().belongings.backpack.items.size()]));
-		procced = uncurse( getCurUser(), 
-			getCurUser().belongings.weapon, 
-			getCurUser().belongings.armor, 
-			getCurUser().belongings.ring1, 
-			getCurUser().belongings.ring2 ) || procced;
-		
-		Weakness.detach( getCurUser(), Weakness.class );
-		
+
+		boolean procced = uncurse(getCurUser().belongings);
+
+		Weakness.detach(getCurUser(), Weakness.class);
+
 		if (procced) {
-			GLog.p( TXT_PROCCED );			
-		} else {		
-			GLog.i( TXT_NOT_PROCCED );		
+			GLog.p(TXT_PROCCED);
+			getCurUser().getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
+		} else {
+			GLog.i(TXT_NOT_PROCCED);
 		}
-		
+
 		setKnown();
-		
-		getCurUser().spendAndNext( TIME_TO_READ );
+
+		getCurUser().spendAndNext(TIME_TO_READ);
 	}
 
-	public static boolean uncurse( Hero hero, Item... items ) {
-		
+	public static void uncurse(Hero hero, Item ... items) {
+
 		boolean procced = false;
-		for (int i=0; i < items.length; i++) {
-			Item item = items[i];
-			if (item != null && item.cursed) {
-				item.cursed = false;
-				procced = true;
-			}
+		for(Item item:items) {
+			procced = uncurseItem(procced, item);
 		}
-		
+
 		if (procced) {
-			hero.getSprite().emitter().start( ShadowParticle.UP, 0.05f, 10 );
+			hero.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
 		}
-		
+	}
+
+	private static boolean uncurseItem(boolean procced, Item item) {
+		if (item != null && item.cursed) {
+			item.cursed = false;
+			procced = true;
+		}
 		return procced;
 	}
-	
+
+	private static boolean uncurse(Belongings belongings) {
+
+		Iterator<Item> itemIterator = belongings.iterator();
+
+		boolean procced = false;
+		while (itemIterator.hasNext()) {
+			procced = uncurseItem(procced, itemIterator.next());
+		}
+
+		return procced;
+	}
+
 	@Override
 	public int price() {
 		return isKnown() ? 30 * quantity() : super.price();
