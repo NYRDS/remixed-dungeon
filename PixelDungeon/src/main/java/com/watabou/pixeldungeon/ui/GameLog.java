@@ -56,10 +56,6 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			return;
 		}
 
-		if(text.isEmpty()) {
-			return;
-		}
-
 		int color = CharSprite.DEFAULT;
 		if (text.startsWith( GLog.POSITIVE )) {
 			text = text.substring( GLog.POSITIVE.length() );
@@ -77,7 +73,11 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			text = text.substring( GLog.HIGHLIGHT.length() );
 			color = CharSprite.NEUTRAL;
 		}
-		
+
+		if(text.isEmpty()) {
+			return;
+		}
+
 		text = Utils.capitalize( text ) + 
 			(PUNCTUATION.matcher( text ).matches() ? "" : ".");
 		
