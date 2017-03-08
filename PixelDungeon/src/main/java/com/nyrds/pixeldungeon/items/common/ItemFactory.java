@@ -93,6 +93,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.quest.DarkGold;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
+import com.watabou.pixeldungeon.items.quest.DwarfToken;
 import com.watabou.pixeldungeon.items.quest.Pickaxe;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
@@ -373,6 +374,8 @@ public class ItemFactory {
 		mItemsList.put("Sorrowmoss.Seed", Sorrowmoss.Seed.class);
 		mItemsList.put("Icecap.Seed",     Icecap.Seed.class);
 		mItemsList.put("Fadeleaf.Seed",   Fadeleaf.Seed.class);
+
+		registerItemClass(DwarfToken.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

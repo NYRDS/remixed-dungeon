@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -208,8 +209,17 @@ public class WndTradeItem extends Window {
 		
 		new Gold( price ).doPickUp( hero );
 		GLog.i( TXT_SOLD, item.name(), price );
+
+		placeItemInShop(item);
 	}
-	
+
+	private void placeItemInShop(Item item) {
+		if (Dungeon.level instanceof TownShopLevel) {
+			TownShopLevel shopLevel = (TownShopLevel) Dungeon.level;
+			shopLevel.itemForSell(item);
+		}
+	}
+
 	private void sellOne( Item item ) {
 		
 		if (item.quantity() <= 1) {
@@ -223,6 +233,8 @@ public class WndTradeItem extends Window {
 			
 			new Gold( price ).doPickUp( hero );
 			GLog.i( TXT_SOLD, item.name(), price );
+
+			placeItemInShop(item);
 		}
 	}
 	

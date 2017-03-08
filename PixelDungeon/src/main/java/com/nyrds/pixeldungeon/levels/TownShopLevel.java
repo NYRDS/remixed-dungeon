@@ -3,10 +3,15 @@ package com.nyrds.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
+import com.watabou.pixeldungeon.items.bags.Keyring;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
+import com.watabou.pixeldungeon.items.bags.Quiver;
+import com.watabou.pixeldungeon.items.bags.ScrollHolder;
+import com.watabou.pixeldungeon.items.bags.SeedPouch;
+import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -23,7 +28,7 @@ import java.util.Arrays;
 
 public class TownShopLevel extends Level {
 
-	private static final int SIZE = 6;
+	private static final int SIZE = 10;
 
 	{
 		color1 = 0x801500;
@@ -69,37 +74,50 @@ public class TownShopLevel extends Level {
 		items.add( new Dart(5).identify() );
 		items.add( new Dart(5).identify() );
 		items.add( new CommonArrow(10) );
+		items.add( new Keyring());
+		items.add( new Quiver());
+		items.add( new ScrollHolder());
+		items.add( new WandHolster());
+		items.add( new PotionBelt());
+		items.add( new SeedPouch());
+
 
 		Item[] range = items.toArray(new Item[items.size()]);
 
-		for (int i=0; i < range.length; i++) {
-			int cell;
-			do {
-				cell = this.getRandomTerrainCell(Terrain.EMPTY_SP);
-			} while (this.getHeap( cell ) != null);
-
-			this.drop( range[i], cell).type = Heap.Type.FOR_SALE;
+		for (Item item : range) {
+			itemForSell(item);
 		}
+	}
+
+	public void itemForSell(Item item) {
+		int cell;
+		int ctr = 0;
+		do {
+			ctr++;
+			if(ctr>25) {
+				return;
+			}
+
+			cell = getRandomTerrainCell(Terrain.EMPTY_SP);
+
+		} while (getHeap(cell) != null);
+
+		drop(item, cell).type = Heap.Type.FOR_SALE;
 	}
 
 	@Override
 	protected void decorate() {
-		return;
 	}
 
 	@Override
 	protected void createMobs() {
-
 		Mob shopkeeper =  new TownShopkeeper();
 		shopkeeper.setPos(this.getRandomTerrainCell(Terrain.EMPTY));
 		this.mobs.add( shopkeeper );
-
-		return;
 	}
 
 	@Override
 	protected void createItems() {
-		return;
 	}
 
 	@Override

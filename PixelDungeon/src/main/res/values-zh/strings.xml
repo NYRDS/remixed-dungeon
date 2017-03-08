@@ -65,100 +65,100 @@
   <string-array name="Dungeon_Tips">
     <item>使用武器和防具時要量力而為。</item>
     <item>地牢裏的門不會明擺在您面前。如果您被困住了，嘗試去尋找隱藏門。</item>
-    <item>記住，想正常使用一件裝備，不單提升你的力量值不是唯。你也可以尝试升级它们来让它们更轻更好用。 </item>
-    <item>钱可以在商店花。第一个商店在6层。</item>
+    <item>記住，想好好使用一件裝備，不應只靠提升力量值，您亦可以嘗試耗用升級卷軸來降低其所需最低力量值。 </item>
+    <item>若您有幸活著，您可在地牢更低層花費金錢購買道具及裝備。小聲告訴您，第一所商店在地牢第６層，親。</item>
     <item>小心黏咕!</item>
-    <item>像素市场。对你的冒险帮助很大!</item>
-    <item>尽早鉴定药水和卷轴。有备无患。</item>
-    <item>饥饿不会造成伤害，但饥肠辘辘则会令你受伤。</item>
-    <item>袭击必中。比如说，你可以躲在门后来给下一个开门的敌人一个惊喜。</item>
-    <item>别让天狗跑了!</item>
-    <item>像素市场。花更多的钱，走更长的路。</item>
-    <item>当你被怪物攻击时，尝试躲到门后。</item>
-    <item>你在飞行的时候没法走进水里来灭火。</item>
-    <item>同时拥有多个复活十字架是没有意义的，因为你会在复活时丢失所有的道具。.</item>
-    <item>危险! 重型机械会使你受伤，残废，甚至死亡!</item>
-    <item>像素市场。 地牢里的安全房。</item>
-    <item>升级附魔过的装备会有损坏附魔的可能。</item>
-    <item>你可以从转化之井里获得平时无法获得的物品。</item>
-    <item>唯一附魔武器的方法就是使用武器升级卷轴。</item>
-    <item>上朝觐见严禁刀具!</item>
-    <item>像素市场。给与恶魔猎手最好的优惠!</item>
-    <item>这是用恶魔语写的。</item>
-    <item>这是用恶魔语写的。</item>
-    <item>这是用恶魔语写的。</item>
+    <item>包羅萬有的像素墟市裏，定有東西助您順利冒險!</item>
+    <item>盡早鑒定藥水和卷軸。有備無患。</item>
+    <item>饑餓不損皮毛，但饑腸轆轆時定必有切膚之痛。</item>
+    <item>突襲有更大命中機會。比如說，您可以躲在門後，給下一個開門的敵人一個「小」驚喜。</item>
+    <item>别讓天狗落跑!</item>
+    <item>像素墟市。錢花得愈多，路走得愈長。</item>
+    <item>當您被怪物連續攻擊時，試試躲到門後。</item>
+    <item>若您同時被焚身和飄浮著，踏著水面對滅火沒大幫助。</item>
+    <item>同時擁有多個復活十字架並沒有任何意義，因為您會在復活時會丢失所有道具。.</item>
+    <item>危險! 重型機械可使你受傷，殘廢，甚至死亡!</item>
+    <item>像素墟市。 地牢內的一片安全之地。</item>
+    <item>升級附魔過的裝備會有毁壞附魔的可能。</item>
+    <item>你可以從嬗變之井裏獲得平時無法獲得的物品。</item>
+    <item>唯一替武器加上附魔的方法是使用武器升级卷軸。</item>
+    <item>上朝覲見，嚴禁刀具!</item>
+    <item>像素墟市。给予惡魔獵人最好的優惠!</item>
+    <item>這是用惡魔語寫的。</item>
+    <item>這是用惡魔語寫的。</item>
+    <item>這是用惡魔語寫的。</item>
   </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
-    <item>缩餐节食</item>
-    <item>信念护体r</item>
-    <item>恐药异症</item>
-    <item>荒芜之地</item>
-    <item>群体智能</item>
-    <item>没入黑暗</item>
+    <item>縮餐節食</item>
+    <item>信念護體r</item>
+    <item>恐藥病癖</item>
+    <item>荒蕪之地</item>
+    <item>群體智能</item>
+    <item>沒入黑暗</item>
   </string-array>
   <!--STRINGS OF Journal CLASS-->
   <string name="Journal_WellHealt">生命之泉</string>
   <string name="Journal_WellAwareness">全知之水</string>
-  <string name="Journal_WellTransmut">转化之井</string>
-  <string name="Journal_Alchemy">炼药台</string>
-  <string name="Journal_Garden">花园</string>
-  <string name="Journal_Statue">活化石像</string>
-  <string name="Journal_Ghost">悲伤幽灵</string>
+  <string name="Journal_WellTransmut">嬗化之井</string>
+  <string name="Journal_Alchemy">煉藥鍋</string>
+  <string name="Journal_Garden">花園</string>
+  <string name="Journal_Statue">活石像</string>
+  <string name="Journal_Ghost">悲靈</string>
   <string name="Journal_Wandmaker">老杖匠</string>
-  <string name="Journal_Troll">巨魔铁匠</string>
+  <string name="Journal_Troll">巨魔鐵匠</string>
   <string name="Journal_Imp">野心勃勃的小鬼</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
-  <string name="WndBlacksmith_Prompt">好吧，交易就是交易，我可以把2样相同的物品合成为一件更好的。</string>
-  <string name="WndBlacksmith_Select">选择一个物品重铸</string>
-  <string name="WndBlacksmith_Reforge">重铸它们</string>
+  <string name="WndBlacksmith_Prompt">好吧，說好交易要一諾千金，我可以把2件相同的物品合成為一件更好的。</string>
+  <string name="WndBlacksmith_Select">選擇一件物品重鑄</string>
+  <string name="WndBlacksmith_Reforge">重鑄它們</string>
   <!--STRINGS OF WndCatalogus CLASS-->
-  <string name="WndCatalogus_Potions">药水</string>
-  <string name="WndCatalogus_Scrolls">卷轴</string>
-  <string name="WndCatalogus_Title">目录</string>
+  <string name="WndCatalogus_Potions">藥水</string>
+  <string name="WndCatalogus_Scrolls">卷軸</string>
+  <string name="WndCatalogus_Title">目錄</string>
   <!--STRINGS OF WndChallenges CLASS-->
-  <string name="WndChallenges_Title">挑战</string>
+  <string name="WndChallenges_Title">挑戰</string>
   <!--STRINGS OF WndChooseWay CLASS-->
-  <string name="WndChooseWay_Message">你选择哪条道路？</string>
-  <string name="WndChooseWay_Cancel">我待会再决定</string>
+  <string name="WndChooseWay_Message">你選擇步上哪條路？</string>
+  <string name="WndChooseWay_Cancel">我待會再決定</string>
   <!--STRINGS OF WndClass CLASS-->
-  <string name="WndClass_Mastery">掌握</string>
+  <string name="WndClass_Mastery">專精</string>
   <!--STRINGS OF WndError CLASS-->
-  <string name="WndError_Title">未知错误</string>
+  <string name="WndError_Title">未知錯誤</string>
   <!--STRINGS OF WndGame CLASS-->
-  <string name="WndGame_Settings">设置</string>
-  <string name="WndGame_Challenges">挑战</string>
+  <string name="WndGame_Settings">設置</string>
+  <string name="WndGame_Challenges">挑戰</string>
   <string name="WndGame_Ranking">排名</string>
-  <string name="WndGame_Start">开始新游戏</string>
-  <string name="WndGame_menu">主菜单</string>
-  <string name="WndGame_Exit">关闭游戏</string>
-  <string name="WndGame_Return">返回游戏</string>
+  <string name="WndGame_Start">開始新遊戲</string>
+  <string name="WndGame_menu">主菜單</string>
+  <string name="WndGame_Exit">關閉遊戲</string>
+  <string name="WndGame_Return">返回游戲</string>
   <string name="WndGame_Save">保存</string>
-  <string name="WndGame_Load">读取</string>
+  <string name="WndGame_Load">讀取</string>
   <!--STRINGS OF WndHero CLASS-->
-  <string name="WndHero_Stats">属性</string>
-  <string name="WndHero_Buffs">状态</string>
-  <string name="WndHero_Exp">经验</string>
-  <string name="WndHero_Str">力量</string>
-  <string name="WndHero_Health">生命</string>
-  <string name="WndHero_Gold">收集的金币</string>
-  <string name="WndHero_Depth">最高层数</string>
-  <string name="WndHero_StaTitle">Level%1$d%2$s</string>
-  <string name="WndHero_StaCatalogus">图鉴</string>
-  <string name="WndHero_StaJournal">经历</string>
+  <string name="WndHero_Stats">屬性</string>
+  <string name="WndHero_Buffs">狀態</string>
+  <string name="WndHero_Exp">經驗</string>
+  <string name="WndHero_Str">力量值</string>
+  <string name="WndHero_Health">生命值</string>
+  <string name="WndHero_Gold">已收集金幣量</string>
+  <string name="WndHero_Depth">最高層數</string>
+  <string name="WndHero_StaTitle">Level %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">圖鑒</string>
+  <string name="WndHero_StaJournal">遊記</string>
   <!--STRINGS OF WndImp CLASS-->
-  <string name="WndImp_Message">太好了，我的英雄！\n作为回报，这个祖传的圣骑士戒指就给你了。</string>
+  <string name="WndImp_Message">太好了，我的英雄！\n回報方面，我沒有金幣在手，但我有比金幣更好的東西。這個祖傳的戒指據說是我爺爺從一個陣亡的聖骑士指上摘下來，現在就给你了。</string>
   <string name="WndImp_Reward">收下戒指</string>
   <!--STRINGS OF WndInfoCell CLASS-->
-  <string name="WndInfoCell_Nothing">那啥也没有。</string>
+  <string name="WndInfoCell_Nothing">那裏甚麼也沒有。</string>
   <!--STRINGS OF WndInfoItem CLASS-->
-  <string name="WndInfoItem_Chest">宝箱</string>
-  <string name="WndInfoItem_LockedChest">上锁的宝箱</string>
-  <string name="WndInfoItem_CrystalChest">水晶宝箱</string>
-  <string name="WndInfoItem_Tomb">坟墓</string>
+  <string name="WndInfoItem_Chest">寶箱</string>
+  <string name="WndInfoItem_LockedChest">上鎖的寶箱</string>
+  <string name="WndInfoItem_CrystalChest">水晶寶箱</string>
+  <string name="WndInfoItem_Tomb">墳墓</string>
   <string name="WndInfoItem_Skeleton">骸骨</string>
-  <string name="WndInfoItem_WontKnow">直到你打开前你不会知道里面有什么！</string>
-  <string name="WndInfoItem_NeedKey">你需要一把金钥匙来打开它。</string>
+  <string name="WndInfoItem_WontKnow">直到你打開前，您不會知道裏面有甚麼！</string>
+  <string name="WndInfoItem_NeedKey">您需要一把金鑰匙來打開它。</string>
   <string name="WndInfoItem_Inside">你能看到里面有 %s，但是打开这个宝箱需要一把金钥匙。</string>
   <string name="WndInfoItem_Owner">这座坟墓里可能有一些有用的东西，但它的主人肯定不会让你带走它们。</string>
   <string name="WndInfoItem_Remains">这是你的一个前辈所留下的。也许有什么贵重物品在里面。</string>

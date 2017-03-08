@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="ServiceManNPC_NotReady">Sorry, the movie is not ready yet, you may try again in a few minutes.</string>
@@ -8,4 +7,8 @@
     <string name="WndMovieTheatre_Sorry">Something went wrong, we couldn\'t get your reward from a video...</string>>
     <string name="WndMovieTheatre_Ok">You has successfully watched a \"reward\" video!</string>>
 
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Gnoll Costume</string>
+    <string name="GnollCostume_Info">Incredibly warm and fluffy costume. Whoever wears this costume will look like... someone who trying to disguise as a gnoll. But gnolls won\'t fall for it, they will still attack you.</string>
 </resources>

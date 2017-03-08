@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.elementals;
 import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
@@ -10,17 +11,14 @@ import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
 
-public class WaterElemental extends Mob implements IDepthAdjustable {
+public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 
-	private int kind;
-	
 	public WaterElemental() {
 		adjustStats(Dungeon.depth);
 		
@@ -40,12 +38,7 @@ public class WaterElemental extends Mob implements IDepthAdjustable {
 		IMMUNITIES.add( Frost.class );
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
-	
-	@Override
-	public int getKind() {
-		return kind;
-	}
-	
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( hp() / 2, ht() / 2 );

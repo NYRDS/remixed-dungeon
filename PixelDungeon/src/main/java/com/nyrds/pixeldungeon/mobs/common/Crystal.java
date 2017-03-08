@@ -46,7 +46,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable{
 	public void adjustStats(int depth) {
 		kind = (ctr++) % 2;
 
-		hp(ht(Dungeon.depth * 4 + 1));
+		hp(ht(depth * 4 + 1));
 		defenseSkill = depth * 2 + 1;
 		EXP = depth + 1;
 		maxLvl = depth + 2;
