@@ -17,7 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -47,7 +51,8 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import java.util.IllegalFormatException;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Weapon extends KindOfWeapon {
 
@@ -231,13 +236,24 @@ public class Weapon extends KindOfWeapon {
 		return enchantment;
 	}
 
+
+	@Override
+	public void fromJson(JSONObject itemDesc) throws JSONException {
+		super.fromJson(itemDesc);
+
+		if(itemDesc.has("enchantment")) {
+			enchantment = Enchantment.byName(itemDesc.getString("enchantment"));
+		}
+	}
+
 	public static abstract class Enchantment implements Bundlable {
 		
-		protected final String[] TXT_NAME = Utils.getClassParams(getClass().getSimpleName(), "Name", new String[]{"","",""}, true);
+		final String[] TXT_NAME = Utils.getClassParams(getClass().getSimpleName(), "Name", new String[]{"","",""}, true);
 		
-		private static final Class<?>[] enchants = new Class<?>[]{ 
-			Fire.class, Poison.class, Death.class, Paralysis.class, Leech.class, 
+		private static final Class<?>[] enchants = new Class<?>[]{
+			Fire.class, Poison.class, Death.class, Paralysis.class, Leech.class,
 			Slow.class, Swing.class, Piercing.class, Instability.class, Horror.class, Luck.class };
+
 		private static final float[] chances= new float[]{ 10, 10, 1, 2, 1, 2, 3, 3, 3, 2, 2 };
 			
 		public abstract boolean proc( Weapon weapon, Char attacker, Char defender, int damage );
@@ -245,10 +261,8 @@ public class Weapon extends KindOfWeapon {
 		public String name( String weaponName, int gender) {
 			try{
 				return Utils.format( TXT_NAME[gender], weaponName );
-			} catch (IllegalFormatException e){
-				GLog.w("ife in %s", getClass().getSimpleName());
-			} catch (NullPointerException e){
-				GLog.w("npe in %s", getClass().getSimpleName());
+			} catch (Exception e) {
+				EventCollector.logException(e);
 			}
 			return weaponName;
 		}
@@ -277,6 +291,20 @@ public class Weapon extends KindOfWeapon {
 				throw new TrackedRuntimeException(e);
 			}
 		}
-		
+
+		@Nullable
+		public static Enchantment byName(@NonNull String name) {
+			for(Class<?> clazz:enchants) {
+				if (clazz.getSimpleName().equals(name)) {
+					try {
+						return ((Class<Enchantment>)clazz).newInstance();
+					} catch (Exception e) {
+						throw new TrackedRuntimeException(e);
+					}
+				}
+			}
+			return null;
+		}
+
 	}
 }
