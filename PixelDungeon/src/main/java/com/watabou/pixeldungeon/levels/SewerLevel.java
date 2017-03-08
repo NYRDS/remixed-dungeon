@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.DewVial;
-import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
@@ -126,7 +125,6 @@ public class SewerLevel extends RegularLevel {
 	protected void createItems() {
 		if (Dungeon.dewVial && Random.Int(4 - Dungeon.depth) == 0) {
 			addItemToSpawn(new DewVial());
-			addItemToSpawn(new Keyring());
 			Dungeon.dewVial = false;
 		}
 
