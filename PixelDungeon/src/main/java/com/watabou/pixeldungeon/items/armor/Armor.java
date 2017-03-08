@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -42,6 +43,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -335,6 +339,15 @@ public class Armor extends EquipableItem {
 
 	public boolean isCoveringHair() {
 		return coverHair;
+	}
+
+	@Override
+	public void fromJson(JSONObject itemDesc) throws JSONException {
+		super.fromJson(itemDesc);
+
+		if(itemDesc.has(GLYPH)) {
+			glyph = Util.byNameFromList(Glyph.glyphs, itemDesc.getString(GLYPH));
+		}
 	}
 
 	public static abstract class Glyph implements Bundlable {
