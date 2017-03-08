@@ -97,8 +97,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 					}
 				}
 
-				PixelDungeon.setNeedSceneRestart(true);
-
 				GameScene.doOnSceneSwitch = new Runnable() {
 					@Override
 					public void run() {
@@ -120,6 +118,8 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 				};
 
 				PixelDungeon.landscape(PixelDungeon.landscape());
+				PixelDungeon.setNeedSceneRestart(true);
+				GameScene.doOnSceneSwitch.run();
 			}
 		});
 
