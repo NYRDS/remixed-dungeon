@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Base64;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -80,5 +82,19 @@ public class Util {
 			return -1;
 		}
 		return 0;
+	}
+
+	@Nullable
+	public static<T> T byNameFromList(Class<?>[] classList, @NonNull String name) {
+		for(Class<?> clazz:classList) {
+			if (clazz.getSimpleName().equals(name)) {
+				try {
+					return (T) clazz.newInstance();
+				} catch (Exception e) {
+					throw new TrackedRuntimeException(e);
+				}
+			}
+		}
+		return null;
 	}
 }

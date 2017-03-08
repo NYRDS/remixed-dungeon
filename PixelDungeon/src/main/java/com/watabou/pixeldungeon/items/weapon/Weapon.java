@@ -17,10 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -236,13 +234,12 @@ public class Weapon extends KindOfWeapon {
 		return enchantment;
 	}
 
-
 	@Override
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 
-		if(itemDesc.has("enchantment")) {
-			enchantment = Enchantment.byName(itemDesc.getString("enchantment"));
+		if(itemDesc.has(ENCHANTMENT)) {
+			enchantment = Util.byNameFromList(Enchantment.enchants, itemDesc.getString(ENCHANTMENT));
 		}
 	}
 
@@ -291,20 +288,5 @@ public class Weapon extends KindOfWeapon {
 				throw new TrackedRuntimeException(e);
 			}
 		}
-
-		@Nullable
-		public static Enchantment byName(@NonNull String name) {
-			for(Class<?> clazz:enchants) {
-				if (clazz.getSimpleName().equals(name)) {
-					try {
-						return ((Class<Enchantment>)clazz).newInstance();
-					} catch (Exception e) {
-						throw new TrackedRuntimeException(e);
-					}
-				}
-			}
-			return null;
-		}
-
 	}
 }
