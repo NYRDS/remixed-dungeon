@@ -8,10 +8,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
-import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -69,18 +66,18 @@ public class TownShopLevel extends Level {
 		items.add( new Knuckles().identify() );
 		items.add( new Sword().identify() );
 		items.add( new Quarterstaff().identify() );
-		items.add( new OverpricedRation() );
-		items.add( new OverpricedRation() );
-		items.add( new Dart(5).identify() );
-		items.add( new Dart(5).identify() );
-		items.add( new CommonArrow(10) );
-		items.add( new Keyring());
-		items.add( new Quiver());
-		items.add( new ScrollHolder());
-		items.add( new WandHolster());
-		items.add( new PotionBelt());
-		items.add( new SeedPouch());
 
+		items.add( new OverpricedRation() );
+		items.add( new OverpricedRation() );
+		items.add( new Dart(5).identify() );
+		items.add( new Dart(5).identify() );
+
+		items.add( new CommonArrow(25) );
+		items.add( new CommonArrow(25) );
+
+		items.add( new Keyring());
+		items.add( new ScrollHolder());
+		items.add( new PotionBelt());
 
 		Item[] range = items.toArray(new Item[items.size()]);
 

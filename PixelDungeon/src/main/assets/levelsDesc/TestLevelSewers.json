@@ -64,8 +64,8 @@
   "items": [
     {"kind":"ScrollOfIdentify","quantity":"99","x":13,"y":10},
     {"kind":"IronKey", "levelId":"2", "depth":2, "x":13,"y":11},
-    {"kind":"WarHammer", "level":"99", "x":13,"y":11},
-    {"kind":"WarHammer", "level":"-99", "x":13,"y":12}
+    {"kind":"WarHammer", "level":"4", "x":13,"y":11, "enchantment":"Horror"},
+    {"kind":"LeatherArmor", "level":"5", "x":13,"y":12, "glyph":"Potential"}
   ],
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},
