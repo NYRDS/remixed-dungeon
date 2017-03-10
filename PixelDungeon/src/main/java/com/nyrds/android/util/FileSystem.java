@@ -1,6 +1,7 @@
 package com.nyrds.android.util;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,13 +27,19 @@ public class FileSystem {
 		return storageDir.list();
 	}
 
+	@NonNull
 	static public File[] listExternalStorage() {
+
 		File storageDir = m_context.getExternalFilesDir(null);
 		if (storageDir != null) {
-			return storageDir.listFiles();
-		} else {
-			return new File[0];
+			File[] ret = storageDir.listFiles();
+			if(ret != null) {
+				return ret;
+			}
 		}
+
+		return new File[0];
+
 	}
 
 	static public String getInteralStorageFileName(String fileName) {
