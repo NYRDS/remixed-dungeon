@@ -119,7 +119,11 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 				PixelDungeon.landscape(PixelDungeon.landscape());
 				PixelDungeon.setNeedSceneRestart(true);
-				GameScene.doOnSceneSwitch.run();
+				
+				if(GameScene.doOnSceneSwitch!=null){
+					GameScene.doOnSceneSwitch.run();
+					GameScene.doOnSceneSwitch = null;
+				}
 			}
 		});
 
