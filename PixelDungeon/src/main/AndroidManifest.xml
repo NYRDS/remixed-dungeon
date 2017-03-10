@@ -3,8 +3,8 @@
           xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           android:installLocation="auto"
-          android:versionCode="395"
-          android:versionName="remix.26.2.alpha.7">
+          android:versionCode="396"
+          android:versionName="remix.26.2.beta.1">
 
     <uses-sdk tools:overrideLibrary="com.google.android.gms.ads,
                                      com.google.android.gms,
