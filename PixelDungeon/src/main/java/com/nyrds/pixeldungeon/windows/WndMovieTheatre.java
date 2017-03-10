@@ -100,7 +100,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 				GameScene.doOnSceneSwitch = new Runnable() {
 					@Override
 					public void run() {
-						Game.paused = false;
 						GameScene.show(new WndMessage(TXT_THANK_YOU) {
 							@Override
 							public void hide() {
@@ -119,7 +118,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 				PixelDungeon.landscape(PixelDungeon.landscape());
 				PixelDungeon.setNeedSceneRestart(true);
-				
+
 				if(GameScene.doOnSceneSwitch!=null){
 					GameScene.doOnSceneSwitch.run();
 					GameScene.doOnSceneSwitch = null;
