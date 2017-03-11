@@ -46,40 +46,40 @@ import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class StartScene extends PixelScene {
 
 	private static final float BUTTON_HEIGHT = 24;
-	private static final float GAP = 2;
+	private static final float GAP           = 2;
 
 	private static final String TXT_LOAD = Game
 			.getVar(R.string.StartScene_Load);
-	private static final String TXT_NEW = Game.getVar(R.string.StartScene_New);
+	private static final String TXT_NEW  = Game.getVar(R.string.StartScene_New);
 
-	private static final String TXT_ERASE = Game
+	private static final String TXT_ERASE    = Game
 			.getVar(R.string.StartScene_Erase);
-	public static final String TXT_DPTH_LVL = Game
+	public static final  String TXT_DPTH_LVL = Game
 			.getVar(R.string.StartScene_Depth);
 
-	private static final String TXT_REALLY = Game
+	private static final String TXT_REALLY  = Game
 			.getVar(R.string.StartScene_Really);
 	private static final String TXT_WARNING = Game
 			.getVar(R.string.StartScene_Warning);
-	private static final String TXT_YES = Game.getVar(R.string.StartScene_Yes);
-	private static final String TXT_NO = Game.getVar(R.string.StartScene_No);
+	private static final String TXT_YES     = Game.getVar(R.string.StartScene_Yes);
+	private static final String TXT_NO      = Game.getVar(R.string.StartScene_No);
 
 	private static final String TXT_WIN_THE_GAME = Game
 			.getVar(R.string.StartScene_WinGame);
 
-	private static final float WIDTH_P = 116;
+	private static final float WIDTH_P  = 116;
 	private static final float HEIGHT_P = 220;
 
-	private static final float WIDTH_L = 224;
+	private static final float WIDTH_L  = 224;
 	private static final float HEIGHT_L = 124;
 
-	private static HashMap<HeroClass, ClassShield> shields = new HashMap<>();
+	private ArrayList<ClassShield> shields = new ArrayList<>();
 
 	private float buttonX;
 	private float buttonY;
@@ -95,7 +95,7 @@ public class StartScene extends PixelScene {
 
 	private Text unlock;
 
-	private static HeroClass curClass;
+	private static ClassShield curShield;
 
 	@Override
 	public void create() {
@@ -136,7 +136,7 @@ public class StartScene extends PixelScene {
 		btnNewGame = new GameButton(TXT_NEW) {
 			@Override
 			protected void onClick() {
-				if (GamesInProgress.check(curClass) != null) {
+				if (GamesInProgress.check(curShield.cl) != null) {
 					StartScene.this.add(new WndOptions(TXT_REALLY, TXT_WARNING,
 							TXT_YES, TXT_NO) {
 						@Override
@@ -159,32 +159,34 @@ public class StartScene extends PixelScene {
 			protected void onClick() {
 				InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 				Game.switchScene(InterlevelScene.class);
-				Dungeon.heroClass = curClass;
+				Dungeon.heroClass = curShield.cl;
 			}
 		};
 		add(btnLoad);
 
 		float centralHeight = buttonY - title.y - title.height();
 
-		HeroClass[] classes = { HeroClass.WARRIOR, HeroClass.MAGE,
-				HeroClass.ROGUE, HeroClass.HUNTRESS, HeroClass.ELF, HeroClass.NECROMANCER };
-		for (HeroClass cl : classes) {
-			if(cl.allowed()) {
+		int usableClasses = 0;
+
+		shields.clear();
+		for (HeroClass cl : HeroClass.values()) {
+			if (cl.allowed()) {
+				usableClasses++;
 				ClassShield shield = new ClassShield(cl);
-				shields.put(cl, shield);
+				shields.add(shield);
 				add(shield);
 			}
 		}
+
 		if (PixelDungeon.landscape()) {
 
-			float shieldW = width / classes.length;
+			float shieldW = width / usableClasses;
 			float shieldH = Math.min(centralHeight, shieldW);
 			top = title.y + title.height + (centralHeight - shieldH) / 2;
-			for (int i = 0; i < classes.length; i++) {
-				if(classes[i].allowed()) {
-					ClassShield shield = shields.get(classes[i]);
-					shield.setRect(left + i * shieldW, top, shieldW, shieldH);
-				}
+			int i = 0;
+			for (ClassShield shield : shields) {
+				shield.setRect(left + i * shieldW, top, shieldW, shieldH);
+				i++;
 			}
 
 			ChallengeButton challenge = new ChallengeButton();
@@ -195,17 +197,15 @@ public class StartScene extends PixelScene {
 			float shieldW = width / 3;
 			float shieldH = Math.min(centralHeight / 3, shieldW * 1.2f);
 			top = title.y + title.height() + centralHeight / 2 - shieldH;
-			for (int i = 0; i < classes.length; i++) {
-				if(classes[i].allowed()) {
-					ClassShield shield = shields.get(classes[i]);
-
+			int i = 0;
+			for (ClassShield shield : shields) {
 					if (i < 3) {
 						shield.setRect(left + i * shieldW, top - shieldH * 0.5f,
 								shieldW, shieldH);
 					} else {
 						shield.setRect(left + (i - 3) * shieldW, top + shieldH, shieldW, shieldH);
 					}
-				}
+				i++;
 			}
 
 			ChallengeButton challenge = new ChallengeButton();
@@ -217,21 +217,29 @@ public class StartScene extends PixelScene {
 		unlock = PixelScene.createMultiline(GuiProperties.titleFontSize());
 		add(unlock);
 
-		huntressUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
-		elfUnlocked = Badges.isUnlocked( Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
-		necromancerUnlocked = Badges.isUnlocked( Badges.Badge.LICH_SLAIN) || (PixelDungeon.donated() >= 3);
+		huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
+		elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
+		necromancerUnlocked = Badges.isUnlocked(Badges.Badge.LICH_SLAIN) || (PixelDungeon.donated() >= 3);
 
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(Camera.main.width - btnExit.width(), 0);
 		add(btnExit);
 
-		curClass = null;
-		updateClass(HeroClass.values()[PixelDungeon.lastClass()]);
+		for (ClassShield shield:shields) {
+			if(shield.cl == HeroClass.values()[PixelDungeon.lastClass()]) {
+				updateShield(shield);
+				return;
+			}
+		}
+
+		if(curShield==null) {
+			updateShield(shields.get(0));
+		}
 
 		fadeIn();
 	}
 
-	private void updateUnlockLabel(String text){
+	private void updateUnlockLabel(String text) {
 		unlock.maxWidth((int) width);
 		unlock.text(text);
 		unlock.measure();
@@ -256,40 +264,40 @@ public class StartScene extends PixelScene {
 		super.destroy();
 	}
 
-	private void updateClass(HeroClass cl) {
+	private void updateShield(ClassShield shield) {
 
-		if(!cl.allowed()) {
+
+		if (curShield==shield) {
+			add(new WndClass(shield.cl));
 			return;
 		}
 
-		if (curClass == cl) {
-			add(new WndClass(cl));
-			return;
+		if (curShield != null) {
+			curShield.highlight(false);
 		}
 
-		if (curClass != null) {
-			shields.get(curClass).highlight(false);
-		}
-		shields.get(curClass = cl).highlight(true);
+		curShield = shield;
+		curShield.highlight(true);
 
-		if (cl == HeroClass.HUNTRESS && !huntressUnlocked) {
+
+		if (curShield.cl == HeroClass.HUNTRESS && !huntressUnlocked) {
 			updateUnlockLabel(Game.getVar(R.string.StartScene_Unlock));
 			return;
 		}
-		
-		if (cl == HeroClass.ELF && !elfUnlocked) {
+
+		if (curShield.cl == HeroClass.ELF && !elfUnlocked) {
 			updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockElf));
 			return;
 		}
 
-		if (cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
+		if (curShield.cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
 			updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockNecromancer));
 			return;
 		}
 
 		unlock.setVisible(false);
 
-		GamesInProgress.Info info = GamesInProgress.check(curClass);
+		GamesInProgress.Info info = GamesInProgress.check(curShield.cl);
 		if (info != null) {
 
 			btnLoad.setVisible(true);
@@ -317,33 +325,33 @@ public class StartScene extends PixelScene {
 	}
 
 	private void selectDifficulty() {
-		
+
 		WndOptions difficultyOptions = new WndOptions(Game.getVar(R.string.StartScene_DifficultySelect), "",
-				Game.getVar(R.string.StartScene_DifficultyEasy), 
-				Game.getVar(R.string.StartScene_DifficultyNormalWithSaves), 
+				Game.getVar(R.string.StartScene_DifficultyEasy),
+				Game.getVar(R.string.StartScene_DifficultyNormalWithSaves),
 				Game.getVar(R.string.StartScene_DifficultyNormal),
 				Game.getVar(R.string.StartScene_DifficultyExpert)) {
 			@Override
 			protected void onSelect(int index) {
-					startNewGame(index);
+				startNewGame(index);
 			}
 		};
 
 		add(difficultyOptions);
 	}
-	
+
 	private void startNewGame(int difficulty) {
 
 		Dungeon.setDifficulty(difficulty);
 		Dungeon.hero = null;
-		Dungeon.heroClass = curClass;
+		Dungeon.heroClass = curShield.cl;
 
-		EventCollector.logEvent("game","new", curClass.name());
-		EventCollector.logEvent("game","mod",PixelDungeon.activeMod());
-		EventCollector.logEvent("game","difficulty",String.valueOf(difficulty));
+		EventCollector.logEvent("game", "new", curShield.cl.name());
+		EventCollector.logEvent("game", "mod", PixelDungeon.activeMod());
+		EventCollector.logEvent("game", "difficulty", String.valueOf(difficulty));
 
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
-		
+
 		if (PixelDungeon.intro()) {
 			PixelDungeon.intro(false);
 			Game.switchScene(IntroScene.class);
@@ -402,20 +410,20 @@ public class StartScene extends PixelScene {
 
 		private static final float MIN_BRIGHTNESS = 0.6f;
 
-		private static final int BASIC_NORMAL = 0x444444;
+		private static final int BASIC_NORMAL      = 0x444444;
 		private static final int BASIC_HIGHLIGHTED = 0xCACFC2;
 
-		private static final int MASTERY_NORMAL = 0x7711AA;
+		private static final int MASTERY_NORMAL      = 0x7711AA;
 		private static final int MASTERY_HIGHLIGHTED = 0xCC33FF;
 
-		private static final int WIDTH = 24;
+		private static final int WIDTH  = 24;
 		private static final int HEIGHT = 28;
-		private static final int SCALE = 2;
+		private static final int SCALE  = 2;
 
 		private HeroClass cl;
 
-		private Image avatar;
-		private Text name;
+		private Image   avatar;
+		private Text    name;
 		private Emitter emitter;
 
 		private float brightness;
@@ -483,7 +491,7 @@ public class StartScene extends PixelScene {
 			emitter.start(Speck.factory(Speck.LIGHT), 0.05f, 7);
 
 			Sample.INSTANCE.play(Assets.SND_CLICK, 1, 1, 1.2f);
-			updateClass(cl);
+			updateShield(this);
 		}
 
 		@Override
