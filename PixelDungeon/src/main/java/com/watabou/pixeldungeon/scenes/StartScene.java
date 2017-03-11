@@ -169,9 +169,11 @@ public class StartScene extends PixelScene {
 		HeroClass[] classes = { HeroClass.WARRIOR, HeroClass.MAGE,
 				HeroClass.ROGUE, HeroClass.HUNTRESS, HeroClass.ELF, HeroClass.NECROMANCER };
 		for (HeroClass cl : classes) {
-			ClassShield shield = new ClassShield(cl);
-			shields.put(cl, shield);
-			add(shield);
+			if(cl.allowed()) {
+				ClassShield shield = new ClassShield(cl);
+				shields.put(cl, shield);
+				add(shield);
+			}
 		}
 		if (PixelDungeon.landscape()) {
 
@@ -179,8 +181,10 @@ public class StartScene extends PixelScene {
 			float shieldH = Math.min(centralHeight, shieldW);
 			top = title.y + title.height + (centralHeight - shieldH) / 2;
 			for (int i = 0; i < classes.length; i++) {
-				ClassShield shield = shields.get(classes[i]);
-				shield.setRect(left + i * shieldW, top, shieldW, shieldH);
+				if(classes[i].allowed()) {
+					ClassShield shield = shields.get(classes[i]);
+					shield.setRect(left + i * shieldW, top, shieldW, shieldH);
+				}
 			}
 
 			ChallengeButton challenge = new ChallengeButton();
@@ -192,13 +196,15 @@ public class StartScene extends PixelScene {
 			float shieldH = Math.min(centralHeight / 3, shieldW * 1.2f);
 			top = title.y + title.height() + centralHeight / 2 - shieldH;
 			for (int i = 0; i < classes.length; i++) {
-				ClassShield shield = shields.get(classes[i]);
+				if(classes[i].allowed()) {
+					ClassShield shield = shields.get(classes[i]);
 
-				if (i < 3) {
-					shield.setRect(left + i * shieldW, top - shieldH * 0.5f,
-							shieldW, shieldH);
-				} else {
-					shield.setRect(left + (i - 3) * shieldW, top + shieldH, shieldW, shieldH);
+					if (i < 3) {
+						shield.setRect(left + i * shieldW, top - shieldH * 0.5f,
+								shieldW, shieldH);
+					} else {
+						shield.setRect(left + (i - 3) * shieldW, top + shieldH, shieldW, shieldH);
+					}
 				}
 			}
 
@@ -251,6 +257,10 @@ public class StartScene extends PixelScene {
 	}
 
 	private void updateClass(HeroClass cl) {
+
+		if(!cl.allowed()) {
+			return;
+		}
 
 		if (curClass == cl) {
 			add(new WndClass(cl));

@@ -97,6 +97,19 @@ public enum HeroClass {
 		this.abilities = abilities;
 	}
 
+	public boolean allowed() {
+		if(initHeroes.has(name())) {
+			try {
+				JSONObject classDesc = initHeroes.getJSONObject(name());
+				return classDesc.optBoolean("allowed",true);
+			} catch (JSONException e) {
+				return true;
+			}
+
+		}
+		return true;
+	}
+
 	public void initHero(Hero hero) {
 		hero.heroClass = this;
 		initCommon(hero);
