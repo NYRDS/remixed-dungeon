@@ -22,6 +22,7 @@ import android.support.annotation.NonNull;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -80,6 +81,10 @@ public abstract class Mob extends Char {
 	public AiState WANDERING = new Wandering();
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
+
+	private static final Class<?>[] aiStatesList = new Class<?>[]{
+			Sleeping.class, Wandering.class, Hunting.class, Fleeing.class,
+			Passive.class};
 
 	private AiState state = SLEEPING;
 
@@ -680,6 +685,8 @@ public abstract class Mob extends Char {
 		if (this instanceof IDepthAdjustable) {
 			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
 		}
+
+		state = Util.byNameFromList(aiStatesList,mobDesc.optString("aiState","Sleeping"));
 	}
 
 	public AiState getState() {
@@ -932,10 +939,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public boolean attack(@NonNull Char enemy) {
-		if (enemy == null) {
-			EventCollector.logEvent(EventCollector.BUG, "attacking null enemy");
-			return false;
-		}
+
 		if (enemy == DUMMY) {
 			EventCollector.logEvent(EventCollector.BUG, "attacking dummy enemy");
 			return false;
