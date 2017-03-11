@@ -26,6 +26,11 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Locale;
+
 public abstract class NPC extends Mob {
 	
 	protected NPC() {
@@ -62,5 +67,11 @@ public abstract class NPC extends Mob {
 
 	public boolean friendly() {
 		return true;
+	}
+
+	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+		super.fromJson(mobDesc);
+
+		setState(mobDesc.optString("aiState","Passive").toUpperCase(Locale.ROOT));
 	}
 }

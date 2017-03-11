@@ -22,7 +22,6 @@ import android.support.annotation.NonNull;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -65,6 +64,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public abstract class Mob extends Char {
@@ -81,10 +81,6 @@ public abstract class Mob extends Char {
 	public AiState WANDERING = new Wandering();
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
-
-	private static final Class<?>[] aiStatesList = new Class<?>[]{
-			Sleeping.class, Wandering.class, Hunting.class, Fleeing.class,
-			Passive.class};
 
 	private AiState state = SLEEPING;
 
@@ -176,6 +172,23 @@ public abstract class Mob extends Char {
 		super.restoreFromBundle(bundle);
 
 		String state = bundle.getString(STATE);
+		setState(state);
+
+		target = bundle.getInt(TARGET);
+
+		if (bundle.contains(ENEMY_SEEN)) {
+			enemySeen = bundle.getBoolean(ENEMY_SEEN);
+		}
+
+		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
+
+		if (bundle.contains(LOOT)) {
+			loot = bundle.get(LOOT);
+			lootChance = 1;
+		}
+	}
+
+	protected void setState(String state) {
 		switch (state) {
 			case Sleeping.TAG:
 				this.setState(SLEEPING);
@@ -192,19 +205,6 @@ public abstract class Mob extends Char {
 			case Passive.TAG:
 				this.setState(PASSIVE);
 				break;
-		}
-
-		target = bundle.getInt(TARGET);
-
-		if (bundle.contains(ENEMY_SEEN)) {
-			enemySeen = bundle.getBoolean(ENEMY_SEEN);
-		}
-
-		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
-
-		if (bundle.contains(LOOT)) {
-			loot = bundle.get(LOOT);
-			lootChance = 1;
 		}
 	}
 
@@ -686,7 +686,7 @@ public abstract class Mob extends Char {
 			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
 		}
 
-		state = Util.byNameFromList(aiStatesList,mobDesc.optString("aiState","Sleeping"));
+		setState(mobDesc.optString("aiState","Sleeping").toUpperCase(Locale.ROOT));
 	}
 
 	public AiState getState() {
@@ -703,9 +703,11 @@ public abstract class Mob extends Char {
 		String status();
 	}
 
-	private class Sleeping implements AiState {
+	public class Sleeping implements AiState {
 
 		public static final String TAG = "SLEEPING";
+
+		public Sleeping(){}
 
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
@@ -750,6 +752,8 @@ public abstract class Mob extends Char {
 
 		public static final String TAG = "WANDERING";
 
+		public Wandering(){}
+
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			if (enemyInFOV
@@ -789,6 +793,8 @@ public abstract class Mob extends Char {
 	class Hunting implements AiState {
 
 		public static final String TAG = "HUNTING";
+
+		public Hunting() {}
 
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
@@ -830,6 +836,8 @@ public abstract class Mob extends Char {
 
 		public static final String TAG = "FLEEING";
 
+		public Fleeing(){}
+
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = enemyInFOV;
@@ -865,6 +873,8 @@ public abstract class Mob extends Char {
 	private class Passive implements AiState {
 
 		public static final String TAG = "PASSIVE";
+
+		public Passive(){}
 
 		@Override
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
