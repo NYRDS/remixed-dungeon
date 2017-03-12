@@ -29,6 +29,8 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -865,7 +867,9 @@ public class Hero extends Char {
 		int stairs = action.dst;
 		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
 
-			if (Dungeon.depth == 0) {
+			Position nextLevel = DungeonGenerator.ascend(Dungeon.currentPosition());
+
+			if (nextLevel.levelId.equals("0")) {
 
 				if (belongings.getItem(Amulet.class) == null) {
 					GameScene.show(new WndMessage(TXT_LEAVE));
