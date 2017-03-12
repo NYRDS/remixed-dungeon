@@ -4,8 +4,8 @@
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="ServiceManNPC_NotReady">Sorry, the movie is not ready yet, you may try again in a few minutes.</string>
     <string name="ServiceManNPC_Limit">I do apologise, but every new adventurer can watch only %d movies total.</string>
-    <string name="WndMovieTheatre_Sorry">Something went wrong, we couldn\'t get your reward from a video...</string>>
-    <string name="WndMovieTheatre_Ok">You has successfully watched a \"reward\" video!</string>>
+    <string name="WndMovieTheatre_Sorry">Something went wrong, we couldn\'t get your reward from a video...</string>
+    <string name="WndMovieTheatre_Ok">You has successfully watched a \"reward\" video!</string>
 
     <!-- Accessories descriptions -->
     <!-- STRINGS OF GnollCostume CLASS -->
