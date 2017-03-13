@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">plague doctor</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
+    <string name="PlagueDoctorNPC_Name_Objective">plague doctor</string>
+    <string name="PlagueDoctorNPC_Desc">This hunch man is completely covered in leather. He strongly smells of medications and... garlic?</string>
+</resources>

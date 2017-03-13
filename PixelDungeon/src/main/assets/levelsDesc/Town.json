@@ -17,7 +17,7 @@
     {"kind":"TownGuardNPC","x":23,"y":24},
     {"kind":"TownGuardNPC","x":18,"y":8},
     {"kind":"TownGuardNPC","x":24,"y":28},
-    {"kind":"TownsfolkNPC","x":7,"y":22},
+    {"kind":"PlagueDoctorNPC","x":7,"y":22},
     {"kind":"TownsfolkNPC","x":17,"y":13}
   ]
 }

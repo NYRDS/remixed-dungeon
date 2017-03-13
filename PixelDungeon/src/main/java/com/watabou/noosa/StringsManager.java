@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -145,7 +146,9 @@ public class StringsManager {
 		Configuration config = context.getResources().getConfiguration();
 
 		if(!context.getResources().getConfiguration().locale.equals(userSelectedLocale)) {
-			GLog.i("Locale is fucked up! restoring");
+			if(BuildConfig.DEBUG){
+				GLog.i("Locale is fucked up! restoring");
+			}
 			config.locale = userSelectedLocale;
 			context.getResources().updateConfiguration(config,
 					context.getResources().getDisplayMetrics());
