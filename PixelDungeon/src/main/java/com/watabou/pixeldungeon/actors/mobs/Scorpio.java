@@ -43,8 +43,17 @@ public class Scorpio extends Mob {
 		
 		EXP = 14;
 		maxLvl = 25;
-		
-		loot = new PotionOfHealing();
+
+		lootChance = 0.0f;
+
+		if (Random.Int( 8 ) == 0) {
+			loot = new PotionOfHealing();
+			lootChance = 1;
+		} else if (Random.Int( 6 ) == 0) {
+			loot = new MysteryMeat();
+			lootChance = 1;
+		}
+
 		lootChance = 0.125f;
 		
 		RESISTANCES.add( Leech.class );
@@ -88,13 +97,4 @@ public class Scorpio extends Mob {
 			return super.getCloser( target );
 		}
 	}
-	
-	@Override
-	protected void dropLoot() {
-		if (Random.Int( 8 ) == 0) {
-			Dungeon.level.drop( new PotionOfHealing(), getPos() ).sprite.drop();
-		} else if (Random.Int( 6 ) == 0) {
-			Dungeon.level.drop( new MysteryMeat(), getPos() ).sprite.drop();
-		}
-	}	
 }

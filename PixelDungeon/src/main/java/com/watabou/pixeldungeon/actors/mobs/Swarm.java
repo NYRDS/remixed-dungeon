@@ -35,6 +35,9 @@ public class Swarm extends Mob {
 		maxLvl = 10;
 		
 		flying = true;
+
+		lootChance = 0.2f;
+		loot = new PotionOfHealing();
 	}
 
 	private int generation = 0;
@@ -83,14 +86,7 @@ public class Swarm extends Mob {
 	public Mob split(int cell, int damage) {
 		Swarm clone = (Swarm) super.split(cell, damage);
 		clone.generation = generation + 1;
+		clone.lootChance = 1 / (generation + 1);
 		return clone;
 	}
-
-	@Override
-	protected void dropLoot() {
-		if (Random.Int( 5 * (generation + 1) ) == 0) {
-			Dungeon.level.drop( new PotionOfHealing(), getPos() ).sprite.drop();
-		}
-	}
-
 }

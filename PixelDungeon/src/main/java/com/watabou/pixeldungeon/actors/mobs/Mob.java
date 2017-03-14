@@ -679,7 +679,7 @@ public abstract class Mob extends Char {
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		if (mobDesc.has("loot")) {
 			loot = ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot"));
-			lootChance = 1;
+			lootChance = (float) mobDesc.optDouble("lootChance", 1f);
 		}
 
 		if (this instanceof IDepthAdjustable) {
