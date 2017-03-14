@@ -91,7 +91,7 @@
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>縮餐節食</item>
-    <item>信念護體r</item>
+    <item>信念護體</item>
     <item>恐藥病癖</item>
     <item>荒蕪之地</item>
     <item>群體智能</item>
@@ -159,9 +159,9 @@
   <string name="WndInfoItem_Skeleton">骸骨</string>
   <string name="WndInfoItem_WontKnow">直到你打開前，您不會知道裏面有甚麼！</string>
   <string name="WndInfoItem_NeedKey">您需要一把金鑰匙來打開它。</string>
-  <string name="WndInfoItem_Inside">你能看到里面有 %s，但是打开这个宝箱需要一把金钥匙。</string>
-  <string name="WndInfoItem_Owner">这座坟墓里可能有一些有用的东西，但它的主人肯定不会让你带走它们。</string>
-  <string name="WndInfoItem_Remains">这是你的一个前辈所留下的。也许有什么贵重物品在里面。</string>
+  <string name="WndInfoItem_Inside">你能看到裏面有 %s，但是您需要一把金鑰匙才能打開這個寶箱。</string>
+  <string name="WndInfoItem_Owner">這座墳墓裏可能有一些有用的東西，但它的主人肯定不會讓你帶走它們。</string>
+  <string name="WndInfoItem_Remains">這是您的一個前輩所留下的。也許有甚麼貴重物品在裏面。</string>
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">探险日志</string>
   <!--STRINGS OF WndRanking CLASS-->

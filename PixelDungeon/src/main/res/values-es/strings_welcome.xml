@@ -218,4 +218,18 @@ remix.26.1:\n
  - Arreglados los tiles de las Cuevas de Hielo\n
  - Mods \"The Fallen\" y \"Maze\" tienen soporte completo del idioma inglés.
  - Disponible un nuevo nivel de donación. Al comprar el \"Píxel Real\", no solo ayuda a los desarrolladores, también recibe todos los sombreros y los que saldrán en un futuro.</string>
+  <string name="Welcome_Text_26_2">
+        remix.26.2:\n
+        --Juego\n
+        - Nueva construcción abierta en el Pueblo: Cine\n
+        - Los anillos ahora pueden ser guardados en el llavero\n
+        - Los llaveros solo pueden ser comprados en el Pueblo\n
+        - Tienda del Pueblo ha sido mejorada\n
+        - Cuando venda un objeto en la tienda del pueblo, será puesto en venta, si aún hay espacio en la tienda\n
+        - Nuevo objeto de vanidad: Disfraz Gnoll\n
+        --Mods\n
+        - Armas tiene el atributo «encantamiento»\n
+        - Armaduras tiene el atributo «glifo»\n
+        - Para que el juego detecte tu mod, ahora es necesario que contenga un archivo version.json\n
+        </string>
 </resources>

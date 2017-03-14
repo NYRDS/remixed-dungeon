@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">抱歉，電影尚未能播映，請於數分鐘後再試。</string>
+    <string name="ServiceManNPC_Limit">本人真誠向閣下道歉，無奈每位新的冒險者只能看最多 %d 齣電影。</string>
+    <string name="WndMovieTheatre_Sorry">我們不能從影片中取得您的酬勞，恐怕某些地方出錯了。</string>
+    <string name="WndMovieTheatre_Ok">您已成功看畢一套「獎勵」影片！</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">豺狼服裝</string>
+    <string name="GnollCostume_Info">一件非常温暖且毛茸茸的服裝。儘管誰穿上它，他／她或許看上去跟其他真 ‧ 豺狼沒有兩樣，但真 ‧ 豺狼不會上當，它們會照樣襲擊您。</string>
+</resources>
