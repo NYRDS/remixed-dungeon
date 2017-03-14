@@ -24,6 +24,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.items.common.RatArmor;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
@@ -138,7 +139,7 @@ public enum HeroClass {
 		hero.collect(new Glaive());
 		hero.collect(new Halberd());
 
-		hero.collect(new RottenPumpkinPie());
+		hero.collect(new RatArmor());
 
 		hero.ht(1000);
 		hero.hp(1000);

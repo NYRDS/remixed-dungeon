@@ -376,6 +376,8 @@ public class ItemFactory {
 		mItemsList.put("Fadeleaf.Seed",   Fadeleaf.Seed.class);
 
 		registerItemClass(DwarfToken.class);
+		registerItemClass(RatArmor.class);
+
 	}
 
 	public static boolean isValidItemClass(String itemClass) {
