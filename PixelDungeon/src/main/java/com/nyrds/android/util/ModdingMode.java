@@ -2,6 +2,8 @@ package com.nyrds.android.util;
 
 import android.content.Context;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,9 +20,14 @@ public class ModdingMode {
 	static private boolean mTextRenderingMode = false;
 
 	public static void selectMod(String mod) {
-		File modPath = FileSystem.getExternalStorageFile(mod);
-		if((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
-			mActiveMod = mod;
+		try {
+			File modPath = FileSystem.getExternalStorageFile(mod);
+			if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
+				mActiveMod = mod;
+			}
+		} catch (Exception e) {
+			EventCollector.logException(e);
+			mActiveMod = ModdingMode.REMIXED;
 		}
 	}
 
