@@ -1,13 +1,14 @@
 package com.nyrds.pixeldungeon.items.common;
 
-import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.pixeldungeon.items.Item;
 
-public class RatHide extends Artifact {
+public class RatHide extends Item {
 
 
 	public RatHide() {
 		imageFile = "items/artifacts.png";
 		image = 23;
+		stackable = true;
 	}
 
 	@Override
