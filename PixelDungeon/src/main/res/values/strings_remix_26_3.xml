@@ -28,6 +28,18 @@
     <string name="TownsfolkMovieNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes does look expensive</string>
     <string name="TownsfolkMovieNPC_Message">Do you know about that special service the \"movie theatre\" provides? Too bad they ask for some exotic thing called \"Internet\", I never even heard about it."</string>
 
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">Bella</string>
+    <string name="BellaNPC_Gender">feminine</string>
+    <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_Desc">A very posh looking girl. Her whole appearance tells you \"I am to good for everyone.\"</string>
+    <string name="BellaNPC_Message">I bear no interest in such plebs as yourself!</string>
+    <string name="BellaNPC_Amulet_M">Why hello there handsome, what do you have over there. Ah, such an exquisite amulet! And you... you stand above those plebs. What if we take a walk and discuss our mutual future?</string>
+    <string name="BellaNPC_Amulet_F">Why hello there cutie pie, why do you have over there. Ah, such an exquisite amulet! And you... you shine so much brighter compared to anyone. What if we take a walk and discuss our mutual future?</string>
+    <string name="BellaNPC_Angry">How dare you... you pleb!</string>
+    <string name="BellaNPC_Yes_End_Game">Sure (End game)</string>
+    <string name="BellaNPC_No">No, not with you</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="ServiceManNPC_NoConnection">I am sorry, you cannot use our service right now. (Internet connection required)</string>
