@@ -21,6 +21,13 @@
     <string name="PlagueDoctorNPC_Quest_End">Okay</string>
     <string name="Journal_PlagueDoctorNPC">Plague doctor</string>
 
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">townsfolk</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">townsfolk</string>
+    <string name="TownsfolkMovieNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes does look expensive</string>
+    <string name="TownsfolkMovieNPC_Message">Do you know about that special service the \"movie theatre\" provides? Too bad they ask for some exotic thing called \"Internet\", I never even heard about it."</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="ServiceManNPC_NoConnection">I am sorry, you cannot use our service right now. (Internet connection required)</string>
