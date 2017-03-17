@@ -42,7 +42,8 @@ public class Journal {
 		IMP						(Game.getVar(R.string.Journal_Imp)),
 		AZUTERRON				(Game.getVar(R.string.Journal_Azuterron)),
 		CAGEDKOBOLD				(Game.getVar(R.string.Journal_Caged_Kobold)),
-		SCARECROW				(Game.getVar(R.string.Journal_ScarecrowNPC));
+		SCARECROW				(Game.getVar(R.string.Journal_ScarecrowNPC)),
+		PLAGUEDOCTOR			(Game.getVar(R.string.Journal_PlagueDoctorNPC));
 
 		
 		private String desc;
