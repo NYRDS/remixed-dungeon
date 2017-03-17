@@ -365,6 +365,8 @@ public class ItemFactory {
 		registerItemClass(ChristmasTurkey.class);
 		registerItemClass(WandOfIcebolt.class);
 		registerItemClass(IceKey.class);
+		registerItemClass(ElvenBow.class);
+		registerItemClass(RatHide.class);
 
 		mItemsList.put("Rotberry.Seed",   WandMaker.Rotberry.Seed.class);
 		mItemsList.put("Earthroot.Seed",  Earthroot.Seed.class);

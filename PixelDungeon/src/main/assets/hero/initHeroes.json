@@ -50,7 +50,7 @@
 	},
 	"ELF": {
 		"weapon": {
-			"kind": "WoodenBow",
+			"kind": "ElvenBow",
 			"identified": true,
 			"level": 1
 		},
