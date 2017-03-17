@@ -28,6 +28,16 @@
     <string name="TownsfolkMovieNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes does look expensive</string>
     <string name="TownsfolkMovieNPC_Message">Do you know about that special service the \"movie theatre\" provides? Too bad they ask for some exotic thing called \"Internet\", I never even heard about it."</string>
 
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">townsfolk</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">townsfolk</string>
+    <string name="TownsfolkSilentNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes does look expensive</string>
+    <string name="TownsfolkSilentNPC_Message1">Hmph!"</string>
+    <string name="TownsfolkSilentNPC_Message2">..."</string>
+    <string name="TownsfolkSilentNPC_Message3">Hmmm..."</string>
+
+
     <!-- STRINGS OF BellaNPC CLASS -->
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Gender">feminine</string>

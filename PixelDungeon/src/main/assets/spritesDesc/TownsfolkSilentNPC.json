@@ -1,5 +1,5 @@
 {
-   "texture" : "mobs/town_townsfolk_man_brown.png",
+   "texture" : "mobs/town_townsfolk_man_bald.png",
    "width" : 12,
    "height" : 16,
    "idle" : {
