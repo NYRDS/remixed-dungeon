@@ -23,6 +23,6 @@
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
-    <string name="ServiceManNPC_NoConnection">(Internet connection failed.)</string>
+    <string name="ServiceManNPC_NoConnection">I am sorry, you cannot use our service right now. (Internet connection required)</string>
 
 </resources>
