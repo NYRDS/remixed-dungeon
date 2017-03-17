@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">elven bow</string>
+    <string name="ElvenBow_Info">An exceptional example of elven craftsmanship. It\'s clearly more effective and accurate than regular wooden bow.</string>
+
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">rat hide</string>
+    <string name="RatHide_Info">A small filthy piece of flesh and fur. Are those can actually be of use to someone?</string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF PlagueDoctorNPC CLASS -->
     <string name="PlagueDoctorNPC_Name">plague doctor</string>
@@ -12,13 +21,8 @@
     <string name="PlagueDoctorNPC_Quest_End">Okay</string>
     <string name="Journal_PlagueDoctorNPC">Plague doctor</string>
 
-    <!-- Item descriptions -->
-    <!-- STRINGS OF ElvenBow CLASS -->
-    <string name="ElvenBow_Name">elven bow</string>
-    <string name="ElvenBow_Info">An exceptional example of elven craftsmanship. It\'s clearly more effective and accurate than regular wooden bow.</string>
-
-    <!-- STRINGS OF RatHide CLASS -->
-    <string name="RatHide_Name">rat hide</string>
-    <string name="RatHide_Info">A small filthy piece of flesh and fur. Are those can actually be of use to someone?</string>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">(Internet connection failed.)</string>
 
 </resources>
