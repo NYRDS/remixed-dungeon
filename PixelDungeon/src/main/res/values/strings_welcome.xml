@@ -241,4 +241,18 @@
         - Mods "The Fallen" and "Maze" fully supports english language\n
         - New donation level is now available. By purchasing the "Royal Pixel" you will not only help our project, but you will also unlock every single hat in the game, including every hat that is ever going to be released\n
         </string>
+        <string name="Welcome_Text_26_2">
+        remix.26.2:\n
+        --Game\n
+        - New building opened in the Town: Movie theatre\n
+        - Rings can now be kept on keyring\n
+        - Keyring can only be bought in the Town\n
+        - Town shop was updated\n
+        - Whenever you sell items to a shopkeeper in the Town, he will place it for sale, if there is shop space available\n
+        - New Vanity item: Gnoll Costume\n
+        --Mods\n
+        - Weapons gets «enchantment» attribute\n
+        - Armor gets «glyph» attribute\n
+        - Now in order for game to detect your mod, it must contain version.json file\n
+        </string>
 </resources>

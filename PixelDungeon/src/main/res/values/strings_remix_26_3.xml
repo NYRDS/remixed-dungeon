@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">plague doctor</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
+    <string name="PlagueDoctorNPC_Name_Objective">plague doctor</string>
+    <string name="PlagueDoctorNPC_Desc">This hunch man is completely covered in leather. He strongly smells of medications and... garlic?</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">elven bow</string>
+    <string name="ElvenBow_Info">An exceptional example of elven craftsmanship. It\'s clearly more effective and accurate than regular wooden bow.</string>
+
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">rat hide</string>
+    <string name="RatHide_Info">A small filthy piece of flesh and fur. Are those can actually be of use to someone?</string>
+
+</resources>

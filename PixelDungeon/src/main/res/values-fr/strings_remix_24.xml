@@ -13,4 +13,11 @@
     <string name="Capotain_Name">Capotaine</string>
     <!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
+    <!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Oreilles de Neko</string>
+    <string name="NekoEars_Info">Parfois vous voulez nettoyer tout le sang de monstre et la terre et vous sentir mignon et duveteux .... Ou dans le pire des cas vous pouvez porter de mignonnes oreilles de chat
+.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Oreilles de Lapin</string>
     </resources>

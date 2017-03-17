@@ -30,7 +30,7 @@ public class WndModDescription extends Window {
 
 		PixelDungeon.activeMod(option);
 		
-		PixelDungeon.instance().useLocale(PixelDungeon.uiLanguage());
+		PixelDungeon.instance().setSelectedLanguage();
 
 		yPos = 0;
 		

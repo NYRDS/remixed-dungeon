@@ -50,7 +50,7 @@
 	},
 	"ELF": {
 		"weapon": {
-			"kind": "WoodenBow",
+			"kind": "ElvenBow",
 			"identified": true,
 			"level": 1
 		},
@@ -72,7 +72,8 @@
 		},
 		"items": [{
 			"kind": "SkeletonKey",
-			"levelId": "7"
+			"levelId": "7",
+			"depth": "7"
 		}],
 		"quickslot":[{
 			"kind": "NecromancerRobe"

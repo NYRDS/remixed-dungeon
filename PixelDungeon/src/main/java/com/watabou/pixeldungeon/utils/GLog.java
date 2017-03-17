@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.utils;
 import android.util.Log;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Signal;
 
@@ -97,7 +98,10 @@ public class GLog {
 			return;
 		}
 
-		Log.i( TAG, text );
+		if(BuildConfig.DEBUG) {
+			Log.i(TAG, text);
+		}
+
 		if(!Game.isPaused()) {
 			final String finalText = text;
 			Game.executeInGlThread(new Runnable() {

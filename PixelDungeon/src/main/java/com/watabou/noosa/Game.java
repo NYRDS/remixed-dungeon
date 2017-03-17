@@ -26,6 +26,7 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+
 import android.media.AudioManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -354,6 +355,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		Game.width(width);
 		Game.height(height);
+
+		setNeedSceneRestart(true);
 	}
 
 	@Override
@@ -540,5 +543,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public boolean checkOwnSignature() {
 		Log.i("Game",Utils.format("own signature %s", Util.getSignature(this)));
 		return Util.getSignature(this).equals(getVar(R.string.ownSignature));
+	}
+
+	public void setSelectedLanguage() {
 	}
 }

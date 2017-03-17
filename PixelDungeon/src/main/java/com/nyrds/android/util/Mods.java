@@ -84,9 +84,10 @@ public class Mods {
 				JSONObject versionInfo = JsonHelper.readJsonFromFile(new File(file.getAbsolutePath() + "/version.json"));
 				if (versionInfo.has("version")) {
 					desc.version = versionInfo.getInt("version");
+
+					desc.installed = true;
+					installedMods.put(desc.name, desc);
 				}
-				desc.installed = true;
-				installedMods.put(desc.name, desc);
 			}
 		}
 

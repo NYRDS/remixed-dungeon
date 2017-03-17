@@ -365,6 +365,8 @@ public class ItemFactory {
 		registerItemClass(ChristmasTurkey.class);
 		registerItemClass(WandOfIcebolt.class);
 		registerItemClass(IceKey.class);
+		registerItemClass(ElvenBow.class);
+		registerItemClass(RatHide.class);
 
 		mItemsList.put("Rotberry.Seed",   WandMaker.Rotberry.Seed.class);
 		mItemsList.put("Earthroot.Seed",  Earthroot.Seed.class);
@@ -376,6 +378,8 @@ public class ItemFactory {
 		mItemsList.put("Fadeleaf.Seed",   Fadeleaf.Seed.class);
 
 		registerItemClass(DwarfToken.class);
+		registerItemClass(RatArmor.class);
+
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

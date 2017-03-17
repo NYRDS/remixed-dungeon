@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">Perdón, la película no esta lista aún, intenta de nuevo en cinco minutos.</string>
+    <string name="ServiceManNPC_Limit">Me disculpo, pero cada nuevo aventurero solo puede ver %d de películas en total.</string>
+    <string name="WndMovieTheatre_Sorry">Algo ha salido mal, no pudimos obtener tu recompensa por el vídeo...</string>
+    <string name="WndMovieTheatre_Ok">¡Has visto completamente un vídeo por \"recompensa\"!</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Disfraz Gnoll</string>
+    <string name="GnollCostume_Info">Un increíble traje cálido y esponjoso. Quien lleve este traje se verá como... alguien disfrazado de gnoll. Pero los gnoll no caerán en eso, aun te atacaran.</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">Перепрошую, але фільм ще не готовий, можете спробувати зайти через декілька хвилин.</string>
+    <string name="ServiceManNPC_Limit">Мені шкода, але кожен новий шукач пригод може переглянути лише %d фільмів.</string>
+    <string name="WndMovieTheatre_Sorry">Щось пішло не так, ми не змогли отримати вашу винагороду за відео...</string>
+    <string name="WndMovieTheatre_Ok">Ви успішно переглянули фільм за \"винагороду\"!</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Костюм гнолла</string>
+    <string name="GnollCostume_Info">Неймовірно теплий та пухнастий костюм. Той, хто носитиме цей костюм, нагадуватиме... когось, хто намагається замаскуватися під гнолла. Але вони не поведуться на це, і все одно будуть атакувати.</string>
+</resources>

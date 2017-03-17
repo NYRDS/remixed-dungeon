@@ -16,6 +16,8 @@ android {
         minSdkVersion 9
         targetSdkVersion 23
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+        // Enabling multidex support.
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -32,6 +34,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+    dexOptions {
+        javaMaxHeapSize "2g"
     }
     lintOptions {
         abortOnError false
@@ -54,6 +59,9 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:9.0.2'
     compile 'com.google.android.gms:play-services-base:9.0.2'
     compile 'com.google.android.gms:play-services-analytics:9.0.2'
+    compile project(':cheetah-mobile-3.4.7')
     compile 'ch.acra:acra:4.8.1@aar'
     compile 'com.android.support:support-v4'
+    compile fileTree(dir: 'lib', include: '*.jar')
+    compile 'com.android.support:multidex:1.0.1'
 }

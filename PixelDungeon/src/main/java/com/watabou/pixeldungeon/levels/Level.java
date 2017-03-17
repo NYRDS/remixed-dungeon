@@ -98,9 +98,15 @@ public abstract class Level implements Bundlable {
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
 			return exitMap.get(index);
-		} else {
-			throw new TrackedRuntimeException("no exit with index: " + index.toString());
 		}
+
+		if (hasExit(0)) {
+			EventCollector.logEvent("bug", "wrong exit index");
+			return exitMap.get(0);
+		}
+
+		throw new TrackedRuntimeException("no exit with index: " + index.toString());
+
 	}
 
 	public boolean hasExit(Integer index) {
@@ -188,9 +194,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void reveal() {
-		for(int j = 1;j<height;++j) {
-			for(int i = 1;i<width;++i) {
-				int cell = cell(i,j);
+		for (int j = 1; j < height; ++j) {
+			for (int i = 1; i < width; ++i) {
+				int cell = cell(i, j);
 				visited[cell] = mapped[cell] = true;
 			}
 		}
@@ -722,7 +728,7 @@ public abstract class Level implements Bundlable {
 
 	public int randomRespawnCell() {
 
-		if (isBossLevel() || noFogOfWar() ) {
+		if (isBossLevel() || noFogOfWar()) {
 			return -1;
 		}
 
@@ -1095,7 +1101,7 @@ public abstract class Level implements Bundlable {
 
 	public void mobPress(Mob mob) {
 
-		if(mob.flying) {
+		if (mob.flying) {
 			return;
 		}
 
@@ -1123,7 +1129,7 @@ public abstract class Level implements Bundlable {
 
 	public void updateFieldOfView(Char c) {
 
-		if(noFogOfWar()) {
+		if (noFogOfWar()) {
 			Arrays.fill(fieldOfView, true);
 			return;
 		}
@@ -1199,7 +1205,7 @@ public abstract class Level implements Bundlable {
 		int ay = cellY(a);
 		int bx = cellX(b);
 		int by = cellY(b);
-		return (float) Math.sqrt((ax-bx)*(ax-bx)+(ay-by)*(ay-by));
+		return (float) Math.sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by));
 	}
 
 	public boolean adjacent(int a, int b) {
@@ -1545,5 +1551,7 @@ public abstract class Level implements Bundlable {
 		return false;
 	}
 
-	public boolean isSafe() {return DungeonGenerator.isSafe(levelId);}
+	public boolean isSafe() {
+		return DungeonGenerator.isSafe(levelId);
+	}
 }

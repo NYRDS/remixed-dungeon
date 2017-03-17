@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -135,8 +136,32 @@ public class StringsManager {
 		}
 	}
 
-	public static void useLocale(Locale locale, String lang) {
+	private static Locale userSelectedLocale;
+
+	public static void ensureCorrectLocale() {
+		if(userSelectedLocale==null) {
+			return;
+		}
+
 		Configuration config = context.getResources().getConfiguration();
+
+		if(!context.getResources().getConfiguration().locale.equals(userSelectedLocale)) {
+			if(BuildConfig.DEBUG){
+				GLog.i("Locale is fucked up! restoring");
+			}
+			config.locale = userSelectedLocale;
+			context.getResources().updateConfiguration(config,
+					context.getResources().getDisplayMetrics());
+		}
+	}
+
+	public static void useLocale(Locale locale, String lang) {
+		userSelectedLocale = locale;
+
+		Configuration config = context.getResources().getConfiguration();
+
+		GLog.i("context locale: %s -> %s", config.locale, locale);
+
 		config.locale = locale;
 		context.getResources().updateConfiguration(config,
 				context.getResources().getDisplayMetrics());
@@ -158,13 +183,14 @@ public class StringsManager {
 	public static String getVar(int id) {
 		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
 				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
-				&& id != R.string.testDevice && id != R.string.ownSignature) {
+				&& id != R.string.testDevice && id != R.string.ownSignature && id != R.string.appodealRewardAdUnitId) {
 			if (stringMap.containsKey(id)) {
 				return stringMap.get(id);
 			}
 		}
 
 		try {
+			ensureCorrectLocale();
 			return context.getResources().getString(id);
 		} catch (Resources.NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
@@ -177,14 +203,14 @@ public class StringsManager {
 		if (stringsMap.containsKey(id)) {
 			return stringsMap.get(id);
 		}
-
+		ensureCorrectLocale();
 		return context.getResources().getStringArray(id);
 	}
 
 	public static String getVar(String id) {
 		if (id.equals("easyModeAdUnitId") || id.equals("saveLoadAdUnitId")
 				|| id.equals("easyModeSmallScreenAdUnitId") || id.equals("iapKey")
-				|| id.equals("testDevice") || id.equals("ownSignature")) {
+				|| id.equals("testDevice") || id.equals("ownSignature") || id.equals("appodealRewardAdUnitId")) {
 			return "";
 		}
 
