@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -68,6 +69,7 @@ public class Rat extends Mob {
 	public void die( Object cause ) {
 		ScarecrowNPC.Quest.process( getPos() );
 		Ghost.Quest.process( getPos() );
+		PlagueDoctorNPC.Quest.process( getPos() );
 		
 		super.die( cause );
 	}
