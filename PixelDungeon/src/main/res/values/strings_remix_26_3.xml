@@ -6,6 +6,11 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">plague doctor</string>
     <string name="PlagueDoctorNPC_Desc">This hunch man is completely covered in leather. He strongly smells of medications and... garlic?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Boya!\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Girly!\n</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Bring me %d rat hides.</string>
+    <string name="PlagueDoctorNPC_Quest_End">Okay</string>
+    <string name="Journal_PlagueDoctorNPC">Plague doctor</string>
 
     <!-- Item descriptions -->
     <!-- STRINGS OF ElvenBow CLASS -->
