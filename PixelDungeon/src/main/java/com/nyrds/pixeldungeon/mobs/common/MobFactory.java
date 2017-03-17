@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownGuardNPC;
+import com.nyrds.pixeldungeon.mobs.npc.TownsfolkMovieNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkNPC;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
@@ -192,7 +193,7 @@ public class MobFactory {
 		registerMobClass(ServiceManNPC.class);
 		registerMobClass(TownsfolkNPC.class);
 		registerMobClass(PlagueDoctorNPC.class);
-
+		registerMobClass(TownsfolkMovieNPC.class);
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {

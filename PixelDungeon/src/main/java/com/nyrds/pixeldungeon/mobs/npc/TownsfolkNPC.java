@@ -10,6 +10,8 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Random;
 
 import java.util.HashSet;
@@ -65,7 +67,7 @@ public class TownsfolkNPC extends NPC {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
 		int index = Random.Int(0, TXT_PHRASES.length);
-		say(TXT_PHRASES[index]);
+		GameScene.show(new WndQuest(this, TXT_PHRASES[index]));
 		return true;
 	}
 		
