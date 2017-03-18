@@ -69,6 +69,11 @@ public abstract class NPC extends Mob {
 		return true;
 	}
 
+	@Override
+	public boolean canBePet() {
+		return false;
+	}
+
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		super.fromJson(mobDesc);
 
