@@ -37,6 +37,9 @@ android {
     }
     dexOptions {
         javaMaxHeapSize "2g"
+        additionalParameters = ["--set-max-idx-number=45000"]
+
+
     }
     lintOptions {
         abortOnError false
@@ -65,3 +68,4 @@ dependencies {
     compile fileTree(dir: 'lib', include: '*.jar')
     compile 'com.android.support:multidex:1.0.1'
 }
+
