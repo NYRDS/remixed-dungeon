@@ -204,6 +204,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		Context context = getApplicationContext();
 		StringsManager.setContext(context);
 
+		EventCollector.init(this);
+
 		if(!BuildConfig.DEBUG) {
 			EventCollector.logEvent("apk signature",Util.getSignature(this));
 		}

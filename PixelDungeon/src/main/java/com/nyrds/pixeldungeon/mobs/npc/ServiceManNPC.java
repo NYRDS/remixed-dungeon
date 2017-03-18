@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
-import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
@@ -24,7 +23,8 @@ public class ServiceManNPC extends NPC {
 	final private String FILMS_SEEN = "films_seen";
 
 	public ServiceManNPC() {
-		AppodealRewardVideo.initCinemaRewardVideo();
+		//AppodealRewardVideo.initCinemaRewardVideo();
+		//RewardVideoAds.initCinemaRewardVideo();
 	}
 	
 	@Override
@@ -86,7 +86,7 @@ public class ServiceManNPC extends NPC {
 			return true;
 		}
 
-		if(RewardVideoAds.isReady()) {
+		if(RewardVideoAds.isReady() || AppodealRewardVideo.isReady()) {
 			GameScene.show(new WndMovieTheatre(this));
 		} else {
 			say(Game.getVar(R.string.ServiceManNPC_NotReady));

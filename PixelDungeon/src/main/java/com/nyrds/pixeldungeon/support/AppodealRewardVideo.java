@@ -31,7 +31,7 @@ public class AppodealRewardVideo {
 					//Appodeal.setTesting(true);
 				}
 
-				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
+				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO|Appodeal.BANNER|Appodeal.INTERSTITIAL);
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 					@Override
 					public void onRewardedVideoLoaded() {
@@ -62,7 +62,7 @@ public class AppodealRewardVideo {
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
-		Game.instance().executeInGlThread (new Runnable() {
+		Game.executeInGlThread(new Runnable() {
 			@Override
 			public void run() {
 				if(Appodeal.isLoaded(Appodeal.REWARDED_VIDEO)) {

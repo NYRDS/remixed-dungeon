@@ -9,7 +9,14 @@
     <uses-sdk tools:overrideLibrary="com.google.android.gms.ads,
                                      com.google.android.gms,
                                      com.google.android.gms.base,
-                                     com.google.android.gms.analytics"/>
+                                     com.google.android.gms.analytics,
+                                     com.google.android.gms:play-services-ads,
+                                     com.google.android.gms.ads.impl,
+                                     com.google.android.gms.clearcut,
+                                     com.google.android.gms:play-services-gass,
+                                     com.google.android.gms.gass,
+                                     com.google.android.gms.tagmanager,
+                                     com.google.android.gms.tasks"/>
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
