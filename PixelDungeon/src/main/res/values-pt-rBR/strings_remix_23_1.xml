@@ -5,6 +5,9 @@
   <string name="AzuterronNPC_Name">Estranho</string>
   <string name="AzuterronNPC_Gender">masculino</string>
   <string name="AzuterronNPC_Name_Objective">Estranho</string>
+  <string name="AzuterronNPC_Desc">Uma figura misteriosa envolvida por uma névoa negra.</string>
+  <string name="AzuterronNPC_Quest_Start">Hun, porquê... oh, você consegue me ver, não consegue? Isso significa que você não é um \"deles\". Eu vejo que você também não se afeiçoou por todos esses monstros. Te digo uma coisa, se você me ajudar com esse pequeno problema, então eu irei te oferecer a minha assistência. Em algum lugar neste nível, você irá encontrar a besta da escuridão, um espírito traiçoeiro. Mate-o, pegue o seu coração e volte para mim.
+E mais ma coisa, se você está interessado em comprar meus suprimentos, não hesite em perguntar.</string>
   <string name="AzuterronNPC_Quest_Reminder">Ajude-me e eu lhe ajudarei.</string>
   <string name="AzuterronNPC_Quest_End">Excelente. Pegue esta poção, certamente você a achará útil.</string>
   <string name="Journal_Azuterron">Estranho</string>
@@ -22,6 +25,8 @@
   <string name="SuspiciousRat_Name">Rato suspeito</string>
   <string name="SuspiciousRat_Gender">feminino</string>
   <string name="SuspiciousRat_Name_Objective">Rato suspeito</string>
+  <string name="SuspiciousRat_Desc">Um Rato não é uma visão incomum nas masmorras, mas para que ele possa morar tão profundamente... Você pode ver como todo o seu corpo se espasma quando se move.</string>
+  <string name="SuspiciousRat_Info1">Um rato suspeito está se contorcendo violentamente.</string>
   <!--STRINGS OF PseudoRat CLASS-->
   <string name="PseudoRat_Name">Pseudo rato</string>
   <string name="PseudoRat_Gender">feminino</string>

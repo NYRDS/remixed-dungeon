@@ -1,3 +1,111 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">Guarda da cidade</string>
+    <string name="TownGuardNPC_Gender">masculino</string>
+    <string name="TownGuardNPC_Name_Objective">Guarda da cidade</string>
+    <string name="TownGuardNPC_Desc">Um Guarda da cidade regular.</string>
+    <string name="TownGuardNPC_Message1">Avançar.</string>
+    <string name="TownGuardNPC_Message2">Graças a aventureiros como você, aqui se tornou um lugar bastante pacífico.</string>
+    <string name="TownGuardNPC_Message3">Você acha que existem muitos guardas nesta cidade? bem, esta é a única cidade com uma masmorra gigantesca que está tomada por monstros, não é mesmo?</string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">Pessoal da cidade</string>
+    <string name="TownsfolkNPC_Gender">masculino</string>
+    <string name="TownsfolkNPC_Name_Objective">Pessoal da cidade</string>
+    <string name="TownsfolkNPC_Desc">Um dos locais. Apesar de claramente ser um cliente, essas roupas parecem ser caras</string>
+    <string name="TownsfolkNPC_Message1">Ah! Outro aventureiro, adorável! Certifique se de saquear o máximo de objectos de valor que você consegue.</string>
+    <string name="TownsfolkNPC_Message3">Que dia adorável.</string>
+    <string name="TownsfolkNPC_Message4">Eu espero que os esgotos não se inundem quando a primavera chegar. Nós não queremos outra infestação de ratos.</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">Padre da cidade</string>
+    <string name="HealerNPC_Gender">masculino</string>
+    <string name="HealerNPC_Name_Objective">Padre da cidade</string>
+    <string name="HealerNPC_Desc">Um homem velho, de alguma forma ele parece com alguém que estaria fazendo varinhas.</string>
+    <string name="HealerNPC_Message1">Tratamento grátis para todos os aventureiros!</string>
+    <string name="HealerNPC_Message2">Volte a qualquer hora que você estiver doente ou com fome!</string>
+    <string name="HealerNPC_Message3">Eu me pergunto por quê a igreja não nos permite usar chapéus... está mesmo frio aqui dentro.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">empregado</string>
+    <string name="ServiceManNPC_Gender">masculino</string>
+    <string name="ServiceManNPC_Name_Objective">empregado</string>
+    <string name="ServiceManNPC_Desc">Um trabalhador regular do estabelecimento local.</string>
+
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">comerciante</string>
+    <string name="TownShopkeeper_Desc">Este homem é um comerciante típico. Pode se dizer que ele já sabe o seu preço.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">Assistir um filme</string>
+    <string name="WndMovieTheatre_No">sair</string>
+    <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
+    <string name="WndMovieTheatre_Instruction">Saudações e Bem-vindo ao nosso cinema! Nós providenciamos um serviço especial, você pode assistir filmes de graça, e se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
+    <string name="WndMovieTheatre_Title">Cinema</string>
+    <string name="WndMovieTheatre_Thank_You">Obrigado pela sua participação!</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">Vida - %d ouro</string>
+    <string name="WndPriest_Title">Padre da cidade</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">Telhado</string>
+    <string name="town_deco_roof_desc">Uma telha simples.</string>
+
+    <string name="town_deco_wall_name">Parede</string>
+    <string name="town_deco_wall_desc">Uma parede simples feita de troncos de madeira.</string>
+
+    <string name="town_deco_snow_name">Neve</string>
+    <string name="town_deco_cross_name">Cruz</string>
+    <string name="town_deco_cross_desc">Uma cruz de prata sólida, o símbolo da religião local - \"A Testemunha de Santa o Senhor da Profundidade\".</string>
+
+    <string name="town_deco_bell_name">Sino</string>
+    <string name="town_deco_bell_desc">Sino de igreja Típico, parece que ninguém o tocou por um tempo, a corda não se vê em lado algum.</string>
+
+    <string name="town_deco_bell_tower_name">Torre do Sino</string>
+    <string name="town_deco_chimney_name">Chaminé</string>
+    <string name="town_deco_window_name">Janela</string>
+    <string name="town_deco_window_desc">Janela de vidro genérica, nada de especial.</string>
+
+    <string name="town_deco_door_name">Porta</string>
+    <string name="town_deco_door_desc">Uma porta de madeira simples.</string>
+
+    <string name="town_deco_locked_door_name">Porta trancada</string>
+    <string name="town_deco_locked_door_desc">O que nesse mundo poderá estar por trás daquela porta?</string>
+
+    <string name="town_deco_snowman_name">Boneco de neve</string>
+    <string name="town_deco_snowman_desc">O Boneco de neve é uma decoração tradicional da cidade para a época de feriado, quando as pessoas celebram o dia \"Dungeonmas\", quando os monstros invadiram a masmorra.</string>
+
+    <string name="town_deco_tree_name">Árvore</string>
+    <string name="town_deco_pathway_name">Caminho</string>
+    <string name="town_deco_pathway_desc">Um caminho pisoteado na neve.</string>
+
+    <string name="town_deco_stone_wall_name">Muro de pedra</string>
+    <string name="town_deco_shop_sign_name">Placa da Loja</string>
+    <string name="town_deco_shop_sign_desc">Parece que existe uma loja dentro daquele edifício.</string>
+
+    <string name="town_deco_floor_name">Piso</string>
+    <string name="town_deco_floor_desc">Este piso é feito de tábuas de madeira simples. O que estou exatamente à procura?</string>
+
+    <string name="town_deco_carpet_name">Tapete</string>
+    <string name="town_deco_carpet_desc">Luxurioso tapete vermelho, reservada para convidados especiais.</string>
+
+    <string name="town_deco_movies_door_name">Porta</string>
+    <string name="town_deco_movies_door_desc">Esta porta Parece excepcionalmente bem feito. Provavelmente ela leva a algo incrível.</string>
+
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">Real</string>
+
+    <string name="WndDonate_royalDonate">doação real</string>
+
+    <string name="WndDonate_royalDonateText">Eu não quero ser esquisito, mas em fazer isso, você alimenta os desenvolvedores.</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">Real</string>
+
+</resources>

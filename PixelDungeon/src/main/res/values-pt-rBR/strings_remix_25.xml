@@ -1,3 +1,55 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">Armadura de Aranha</string>
+    <string name="SpiderArmor_Gender">feminino</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">crânio negro</string>
+    <string name="BlackSkull_Gender">masculino</string>
+
+    <string name="BlackSkull_Name_Awakened">crânio negro acordado</string>
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">Fragmento de alma</string>
+    <string name="SoulShard_Gender">masculino</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">Cavaleiro da morte</string>
+    <string name="DeathKnight_Gender">masculino</string>
+    <string name="DeathKnight_Name_Objective">Cavaleiro da morte</string>
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">Cavaleiro temido</string>
+    <string name="DreadKnight_Gender">masculino</string>
+    <string name="DreadKnight_Name_Objective">Cavaleiro temido</string>
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">Alma escravizada</string>
+    <string name="EnslavedSoul_Gender">feminino</string>
+    <string name="EnslavedSoul_Name_Objective">Alma escravizada</string>
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">crânio explosivo</string>
+    <string name="ExplodingSkull_Gender">masculino</string>
+    <string name="ExplodingSkull_Name_Objective">crânio explosivo</string>
+    <string name="ExplodingSkull_Desc">Este crânio flutuante em chamas, aparenta ser extremamente frágil, parece que vai explodir a qualquer momento.</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">Jarro de almas</string>
+    <string name="JarOfSouls_Gender">masculino</string>
+    <string name="JarOfSouls_Name_Objective">Jarro de almas</string>
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">lich</string>
+    <string name="Lich_Gender">masculino</string>
+    <string name="Lich_Name_Objective">lich</string>
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">Crânio runico</string>
+    <string name="RunicSkull_Gender">masculino</string>
+    <string name="RunicSkull_Name_Objective">Crânio runico</string>
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">zumbi</string>
+    <string name="Zombie_Gender">masculino</string>
+    <string name="Zombie_Name_Objective">zumbi</string>
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Lich derrotado</string>
+
+</resources>

@@ -1,3 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">Esqueleto Vampiro</string>
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Máscara de zumbi</string>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">Doce</string>
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">torta de abóbora</string>
+    <string name="PumpkinPie_Info">Uma torta de abóbora deliciosa, tal como a mãe costuma assar.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">torta de abóbora podre</string>
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">Vela das visões</string>
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">Barril</string>
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">Abóbora</string>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">Espantalho</string>
+    <string name="ScarecrowNPC_Name_Objective">Espantalho</string>
+    <string name="Journal_ScarecrowNPC">Espantalho</string>
+
+</resources>

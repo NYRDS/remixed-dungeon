@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF BadgesScene CLASS-->
-  <string name="BadgesScene_Title">Medalhas</string>
+  <string name="BadgesScene_Title">Seus Distintivos</string>
   <!--STRINGS OF Badges CLASS-->
   <string name="Badges_Info1">Medalha: %s</string>
   <string name="Badges_Info2">Nova super medalha: %s</string>

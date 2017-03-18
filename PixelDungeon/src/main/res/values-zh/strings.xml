@@ -163,36 +163,37 @@
   <string name="WndInfoItem_Owner">這座墳墓裏可能有一些有用的東西，但它的主人肯定不會讓你帶走它們。</string>
   <string name="WndInfoItem_Remains">這是您的一個前輩所留下的。也許有甚麼貴重物品在裏面。</string>
   <!--STRINGS OF WndJournal CLASS-->
-  <string name="WndJournal_Title">探险日志</string>
+  <string name="WndJournal_Title">探險日誌</string>
   <!--STRINGS OF WndRanking CLASS-->
-  <string name="WndRanking_Error">加载失败</string>
-  <string name="WndRanking_Stats">属性</string>
+  <string name="WndRanking_Error">加載失敗</string>
+  <string name="WndRanking_Stats">屬性</string>
   <string name="WndRanking_Items">物品</string>
   <string name="WndRanking_Badges">徽章</string>
-  <string name="WndRanking_StaTitle">Level%1$d%2$s</string>
-  <string name="WndRanking_StaChallenges">挑战</string>
+  <string name="WndRanking_StaTitle">等級 %1$d %2$s</string>
+  <string name="WndRanking_StaChallenges">挑戰</string>
   <string name="WndRanking_StaHealth">生命</string>
   <string name="WndRanking_StaStr">力量</string>
-  <string name="WndRanking_StaDuration">游戏时长</string>
-  <string name="WndRanking_StaDepth">最高层数</string>
-  <string name="WndRanking_StaEnemies">杀死的怪物数</string>
-  <string name="WndRanking_StaGold">收集的金币数</string>
-  <string name="WndRanking_StaFood">食物消耗量</string>
-  <string name="WndRanking_StaAlchemy">酿造的药水数</string>
-  <string name="WndRanking_StaAnkhs">十字架使用量</string>
+  <string name="WndRanking_StaDuration">遊戲時長</string>
+  <string name="WndRanking_StaDepth">最高層數</string>
+  <string name="WndRanking_StaEnemies">討伐數</string>
+  <string name="WndRanking_StaGold">金幣量</string>
+  <string name="WndRanking_StaFood">食物消耗件數</string>
+  <string name="WndRanking_StaAlchemy">製藥量</string>
+  <string name="WndRanking_StaAnkhs">安卡耗用數</string>
   <!--STRINGS OF WndResurrect CLASS-->
-  <string name="WndResurrect_Message">你死了，但你有一次复活的机会，你要用吗？</string>
-  <string name="WndResurrect_Yes">是的，我要继续战斗！</string>
-  <string name="WndResurrect_No"> 不，我放弃了</string>
+  <string name="WndResurrect_Message">您死了，但您有一次復活的機會，您願意接受嗎？</string>
+  <string name="WndResurrect_Yes">是的，我要繼續戰鬥！</string>
+  <string name="WndResurrect_No"> 不，我放棄。</string>
   <!--STRINGS OF WndSadGhost CLASS-->
-  <string name="WndSadGhost_Rose">对！对！！！就是这个！请把它给我！然后选一个东西拿走吧，没准它会在你的冒险中起作用...</string>
-  <string name="WndSadGhost_Rat">是的，那个丑陋的生物一死，我也就可以得到安息了...拿走一个东西吧,没准它会在你的冒险中起作用...</string>
-  <string name="WndSadGhost_Wepon">幽灵的武器</string>
-  <string name="WndSadGhost_Armor">幽灵的护甲</string>
-  <string name="WndSadGhost_Farewell">一路顺风，冒险者！</string>
+  <string name="WndSadGhost_Rose">對！對！！！就是它！請交給我！然後挑一件物品拿走吧，說不定它會在旅途中助您一臂之力...</string>
+  <string name="WndSadGhost_Rat">爽！那醜八怪一死，我終能安息了... 挑一件物品拿走吧，說不定它會在旅途中助您一臂之力...</string>
+  <string name="WndSadGhost_Wepon">幽靈的武器</string>
+  <string name="WndSadGhost_Armor">幽靈的護甲</string>
+  <string name="WndSadGhost_Farewell">冒險者，一路好走！</string>
   <!--STRINGS OF WndStory CLASS-->
-  <string name="WndStory_Sewers">这片地牢位于城市的正下方，它的最上层其实是由城市的下水道系统组成的。这片区域已经算是足够危险了，不过至少你在这里还不用面对大部分邪恶魔法。</string>
-  <string name="WndStory_Prision">多年以前一座地下监狱为了收容危险的犯罪者而建立于此。由于其严格的监管和高安全性，地表各处的囚犯都被带到这里经受时间的折磨。 但不久之后下方充斥着黑暗的瘴气在这里弥漫开来，扭曲了罪犯和狱卒的心智。监狱里充斥开来的混乱使其彻底失去了秩序，于是城市封锁了整个监狱。但还有些人没离开。</string>
+  <string name="WndStory_Sewers">這個地牢位於城市的正下方，較靠近地面的樓層是城市的下水道系統，因此不太危險。儘管如此，沒人會認為這裏
+是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
+  <string name="WndStory_Prision">為了收納最具威脅的罪犯，此地下監獄於多年前建立。起初 但不久之后下方充斥着黑暗的瘴气在这里弥漫开来，扭曲了罪犯和狱卒的心智。监狱里充斥开来的混乱使其彻底失去了秩序，于是城市封锁了整个监狱。但还有些人没离开。</string>
   <string name="WndStory_Caves">这座从废弃监狱延伸而下的洞穴，早已空无一人。这里对于城市而言过于深入且很难开发，其中极度匮乏的矿物也无法激起矮人的兴趣。曾经在这里有一个为两个势力建立的贸易站，但在矮人国度衰落之后，只有无所不在的豺狼人和地下生物还居住在这里。</string>
   <string name="WndStory_Metropolis">矮人都市曾经是最宏伟的矮人城邦。在其鼎盛时期矮人的机械化部队曾成功击退过古神及其恶魔军队的入侵。但是也有传闻说，凯旋而归的战士同时带来了腐坏的种子，矮人王国的胜利正是其毁灭的开端。</string>
   <string name="WndStory_Halls">很久以前这片区域曾是矮人都市的郊区。在与古神的战争中取得惨胜的矮人已经无力掌控并清理这片地区。于是存活的恶魔逐渐巩固了对这里的控制，现在，这里被称作恶魔大厅。

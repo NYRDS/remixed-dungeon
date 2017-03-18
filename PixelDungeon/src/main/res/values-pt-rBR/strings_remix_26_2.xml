@@ -1,3 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">Desculpe, o filme ainda não está pronto, poderás tentar de novo dentro de alguns minutos.</string>
+    <string name="ServiceManNPC_Limit">Eu peço desculpa, mas todos os novos aventureiros poder apenas ver %d filmes no total.</string>
+    <string name="WndMovieTheatre_Ok">Você assistiu o vídeo de \"recompensa\" com sucesso!</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Fantasia de Gnoll</string>
+    <string name="GnollCostume_Info">Fantasia incrivelmente quente e fofa. No entanto, vestir essa fantasia ira parecer com... alguém que está a tentar se disfarçar de gnoll. Mas os gnolls não irão cair nessa, eles irão continuar a atacar você.</string>
+</resources>

@@ -5,9 +5,26 @@
     <string name="ArmoredStatue_Name">estátua animada</string>
     <string name="ArmoredStatue_Gender">feminino</string>
     <string name="ArmoredStatue_Name_Objective">estátua animada</string>
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">aranha Guardião </string>
     <string name="SpiderGuard_Gender">masculino</string>
+    <string name="SpiderGuard_Name_Objective">aranha Guardião </string>
+    <string name="SpiderGuard_Desc">Igual a soldados, as aranhas Guardião estão jurados em proteger o se reino. O veneno de Guardião é usado para imobilizar os seus alvos, causando paralisia.</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">Aranha de âmbar</string>
+    <string name="SpiderMindAmber_Gender">masculino</string>
+    <string name="SpiderMindAmber_Name_Objective">Aranha de âmbar</string>
+    <string name="SpiderMindAmber_Desc">As Aranhas de âmbar são criaturas misteriosas e raras que possuem poderes psíquicos similares às psi-aranhas, mas são mais fortes do que as suas irmãs regulares. O nome \"âmbar\" refere-se com a cor dos seus sacos cerebrais gigantes, que são revelado às suas vítimas,  enquanto as Aranhas de âmbar atacam com seus poderes.</string>
+
     <!-- Accessories descriptions -->
     <!-- STRINGS OF PirateSet CLASS -->
     <string name="PirateSet_Name">Conjunto de Pirata</string>
+    <string name="PirateSet_Info">Arr! Você se sente como um amigo ... ou você é apenas um maldito latifundiário !? Espero que não, essas coisas são para piratas depois de tudo, quero dizer ... Arr!</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndSaveSlotSelect_Delete_Yes">Yes, apague!</string>
     <string name="WndSaveSlotSelect_Delete_No">Não</string>
-    </resources>
+    <string name="WndSaveSlotSelect_Delete_Title">Você tem a certeza que quer apagar este estado de salvamento?</string>
+</resources>

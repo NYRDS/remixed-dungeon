@@ -6,6 +6,9 @@
     <string name="Claymore_Info">Uma espada maciça que é capaz de cortar qualquer coisa</string>
     <string name="Claymore_Gender">Feminino</string>
 
+    <!-- STRINGS OF Halberd CLASS -->
+    <string name="Halberd_Name">Halberd</string>
+    <string name="Halberd_Info">Um arma de haste que consiste num machado na extremidade de uma vara.</string>
     <string name="Halberd_Gender">feminina</string>
 
     <!-- STRINGS OF WoodenCrossbow CLASS -->
@@ -13,8 +16,25 @@
     <string name="WoodenCrossbow_Info">Uma besta de madeira básica, parece que foi desenhada para atirar flechas.</string>
     <string name="WoodenCrossbow_Gender">masculino</string>
 
+    <!-- STRINGS OF CompositeCrossbow CLASS -->
+    <string name="CompositeCrossbow_Name">Besta de compósito</string>
+    <string name="CompositeCrossbow_Info">Esta besta reforçada revela-se uma ferramenta mais eficiente em comparação com a sua contrapartida de madeira.</string>
+    <string name="CompositeCrossbow_Gender">masculino</string>
+
     <!-- STRINGS OF RubyCrossbow CLASS -->
     <string name="RubyCrossbow_Name">Besta de ruby</string>
+    <string name="RubyCrossbow_Info">Esta arma mortífera é verdadeiramente uma uma obra-prima da engenharia dwarven.</string>
+    <string name="RubyCrossbow_Gender">masculino</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">armadura gótica</string>
+    <string name="GothicArmor_Info">A armadura gótica é o pináculo da arte da forja de armaduras.</string>
+
     <!-- STRINGS OF ChaosArmor CLASS -->
     <string name="ChaosArmor_Name">Armadura do Caos</string>
-    </resources>
+    <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">O Cristal absorve sua armadura, e tomou a forma de armadura composta</string>
+
+</resources>

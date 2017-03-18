@@ -1,3 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">Espada dourada</string>
+    <string name="GoldenSword_Gender">masculino</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">Estátua Dourada</string>
+    <string name="GoldenStatue_Gender">feminino</string>
+    <string name="GoldenStatue_Name_Objective">Estátua Dourada</string>
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">necromante</string>
+    <string name="NecromancerNPC_Gender">masculino</string>
+    <string name="NecromancerNPC_Name_Objective">necromante</string>
+    <string name="NecromancerNPC_Desc">Este homem de meia idade parece estar meio irritado e animado ao mesmo tempo. Ele verte uma armadura composta feita de fragmentos de ossos.</string>
+    <string name="NecromancerNPC_Message1">tão pouco tempo, tão pouco tempo...</string>
+    <string name="NecromancerNPC_Message2">Eu tenho que estar preparado.</string>
+    <string name="NecromancerNPC_Message3">Eu consigo ouvir o chamado dos mortos.</string>
+    <string name="NecromancerNPC_Message4">Há algo muito especial dentro da Necrópole.</string>
+
+    <string name="RatKing_Name_Objective">rei rato</string>
+    <string name="RatKing_Gender">masculino</string>
+</resources>

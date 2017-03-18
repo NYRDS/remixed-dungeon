@@ -1,17 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">Arbusto seco</string>
+  <string name="Guts_TileHighGrass">Arbusto seco</string>
   <string name="Guts_TileWater">Um estranho líquido viscoso</string>
+  <string name="Guts_TileDescEntrance">O Buraco no teto leva até os níveis superiores</string>
+  <string name="Guts_TileDescExit">O Buraco no chão leva até os níveis inferiores</string>
   <string name="Guts_TileDescDeco">Parece que esse lugar foi... ferido</string>
+  <string name="Guts_TileDescBookshelf">Esta estante de livros está completamente coberta em Teia espessa e carnuda, Não tem maneira de alcançar qualquer um dos livros</string>
   <!--STRINGS OF WndStory CLASS-->
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
   <string name="MimicAmulet_Name">mímico</string>
+  <string name="MimicAmulet_Gender">masculino</string>
   <string name="MimicAmulet_Name_Objective">mímico</string>
+  <string name="MimicAmulet_Desc">O momento mais glorioso da sua carreira de aventureiro acabou por se se tornar uma armadilha.</string>
   <!--STRINGS OF Nightmare CLASS-->
   <string name="Nightmare_Name">pesadelo</string>
   <string name="Nightmare_Gender">masculino</string>
   <string name="Nightmare_Name_Objective">pesadelo</string>
+  <string name="Nightmare_Desc">Criatura grotesca feita de tentáculos de carne contorcidos. Os Pesadelos são a manifestação dos pensamentos sinistros do Deus Antigo.</string>
   <!--STRINGS OF TENGU CLASS-->
   <string name="Tengu_Info3">Pegou, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
@@ -22,8 +30,23 @@
   <string name="Worm_Name">minhoca</string>
   <string name="Worm_Gender">masculino</string>
   <string name="Worm_Name_Objective">minhoca</string>
+  <string name="Worm_Desc">Não há maneira de saber o quão grande é esta minhoca. Parcialmente emergindo deste andar, o corpo daquela criatura está coberto em pedaços de pele podre e lodo. Mandíbulas gigantes te dá uma clara ideia de como este monstro faz o seu caminho através da superfície.</string>
   <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">Cérebro de Yog</string>
+  <string name="YogsBrain_Gender">masculino</string>
+  <string name="YogsBrain_Name_Objective">Cérebro de Yog</string>
+  <string name="YogsBrain_Desc">Cérebro de Yog-Dzewa. Fonte de todo mal que jamais saiu da masmorra.</string>
   <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">Olho de Yog</string>
+  <string name="YogsEye_Gender">masculino</string>
+  <string name="YogsEye_Name_Objective">Olho de Yog</string>
   <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">Coração de Yog</string>
+  <string name="YogsHeart_Gender">masculino</string>
+  <string name="YogsHeart_Name_Objective">Coração de Yog</string>
+  <string name="YogsHeart_Desc">Durante décadas as pessoas acreditavam que apenas as verdadeiras criaturas sem coração são capazes dos actos de pura maldade. E ainda aqui está, batendo o grande coração de um Deus Antigo em pessoa.</string>
   <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">dente de yog</string>
+  <string name="YogsTeeth_Gender">masculino</string>
+  <string name="YogsTeeth_Name_Objective">Dente de Yog</string>
 </resources>

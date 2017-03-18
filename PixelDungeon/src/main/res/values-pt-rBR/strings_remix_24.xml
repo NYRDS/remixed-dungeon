@@ -1,3 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-	</resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Pica-pau</string>
+    <string name="Bowknot_Info">Uma fita cor de rosa bonita brilhante, amarrada em um nó e ligada a um cabelo.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Orelhas de Neko</string>
+    <!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Orelhas de Coelho</string>
+    <!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Abóbora</string>
+    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Chapéu de Bruxo</string>
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Lista de Acessórios</string>
+    <string name="WndHats_SlotTitle">Equipado</string>
+    <string name="WndHats_NoConnectionMsg">Incapaz de conectar ao Google Play.</string>
+    <string name="WndHats_Purchased">Consegui!</string>
+
+    <string name="WndHats_BackButton">Voltar</string>
+    <string name="WndHats_BuyButton">Comprar</string>
+    <string name="WndHats_EquipButton">Equipar</string>
+    <string name="WndHats_InfoButton">Examinar</string>
+    <string name="WndHats_UnequipButton">Desequipar</string>
+</resources>

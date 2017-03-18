@@ -86,6 +86,8 @@
   <string name="ChaosCrystal_StaffFused">O Cristal absorve sua varinha, e tomou a forma de um bastão.</string>
   <string name="CorpseDust_Buff">Sangrento</string>
   <string name="DriedRose_Buff">Encantador</string>
+  <string name="DriedRose_CursedBuff">Amoroso</string>
+  <string name="RatSkull_Buff">Caçador de ratos</string>
   <string name="RatKingCrown_Buff">Ralteza</string>
   <!--STRINGS OF RatKingCrown CLASS-->
   <string name="RatKingCrown_Name">Coroa do Rei Rato</string>
