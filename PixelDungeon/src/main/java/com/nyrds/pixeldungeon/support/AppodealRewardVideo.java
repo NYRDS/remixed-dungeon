@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
+import android.os.Build;
+
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
 import com.appodeal.ads.utils.Log;
@@ -18,8 +20,18 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class AppodealRewardVideo {
 	private static InterstitialPoint returnTo;
 
+
+	private static boolean isAllowed() {
+		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
+	}
+
 	public static void initCinemaRewardVideo() {
-		Game.instance().executeInGlThread(new Runnable() {
+
+		if (!isAllowed()) {
+			return;
+		}
+
+		Game.executeInGlThread(new Runnable() {
 			@Override
 			public void run() {
 
@@ -65,7 +77,7 @@ public class AppodealRewardVideo {
 		Game.executeInGlThread(new Runnable() {
 			@Override
 			public void run() {
-				if(Appodeal.isLoaded(Appodeal.REWARDED_VIDEO)) {
+				if(isReady()) {
 					Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
 				} else {
 					returnTo.returnToWork(false);
@@ -75,6 +87,6 @@ public class AppodealRewardVideo {
 	}
 
 	public static boolean isReady() {
-		return Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
+		return isAllowed() && Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
 	}
 }
