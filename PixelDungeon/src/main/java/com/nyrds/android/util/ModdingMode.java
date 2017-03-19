@@ -1,8 +1,12 @@
 package com.nyrds.android.util;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.PixelDungeon;
+
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,7 +17,8 @@ import java.util.GregorianCalendar;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
-	
+
+	@NonNull
 	static private String mActiveMod = REMIXED;
 	static private Context mContext;
 
@@ -31,6 +36,16 @@ public class ModdingMode {
 		}
 	}
 
+	public static int activeModVersion() {
+		if(mActiveMod.equals(ModdingMode.REMIXED)) {
+			return PixelDungeon.version();
+		}
+
+		JSONObject version = JsonHelper.readJsonFromAsset("version.json");
+		return version.optInt("version");
+
+	}
+
 	public static String activeMod() {
 		return mActiveMod;
 	}
@@ -45,33 +60,33 @@ public class ModdingMode {
 			return false;
 		}
 	}
-	
+
 	public static boolean inMod() {
 		return !mActiveMod.equals(REMIXED);
 	}
-	
+
 	public static boolean isResourceExistInMod(String resName) {
-		if(!mActiveMod.equals(REMIXED)){
+		if (!mActiveMod.equals(REMIXED)) {
 			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName).exists();
 		}
 		return false;
 	}
-	
+
 	public static boolean isResourceExist(String resName) {
-		if(isResourceExistInMod(resName)) {
+		if (isResourceExistInMod(resName)) {
 			return true;
 		} else {
 			return isAssetExist(resName);
 		}
 	}
-	
+
 	public static File getFile(String resName) {
-		if(!mActiveMod.equals(REMIXED)){
+		if (!mActiveMod.equals(REMIXED)) {
 			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);
 		}
 		return null;
 	}
-	
+
 	public static InputStream getInputStream(String resName) {
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
@@ -86,7 +101,7 @@ public class ModdingMode {
 		}
 	}
 
-	private static boolean isModdingAllowed(String resName){
+	private static boolean isModdingAllowed(String resName) {
 		return !(resName.contains("accessories") || resName.contains("banners"));
 	}
 
@@ -102,24 +117,24 @@ public class ModdingMode {
 		return mTextRenderingMode;
 	}
 
-	public static boolean isHalloweenEvent(){
+	public static boolean isHalloweenEvent() {
 
 		Calendar now = new GregorianCalendar();
 		Calendar halloween = new GregorianCalendar();
-		halloween.set(Calendar.MONTH,Calendar.OCTOBER);
-		halloween.set(Calendar.DAY_OF_MONTH,31);
+		halloween.set(Calendar.MONTH, Calendar.OCTOBER);
+		halloween.set(Calendar.DAY_OF_MONTH, 31);
 
 		long milisPerDay = (1000 * 60 * 60 * 24);
 
-		long nowMilis =  now.getTimeInMillis() /milisPerDay;
-		long hallMilis = halloween.getTimeInMillis() /milisPerDay;
+		long nowMilis = now.getTimeInMillis() / milisPerDay;
+		long hallMilis = halloween.getTimeInMillis() / milisPerDay;
 
 		long daysDiff;
 
-		if(nowMilis > hallMilis) {
+		if (nowMilis > hallMilis) {
 			daysDiff = (nowMilis - hallMilis);
 		} else {
-			daysDiff = (hallMilis - nowMilis );
+			daysDiff = (hallMilis - nowMilis);
 		}
 
 		return daysDiff < 14;
