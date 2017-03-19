@@ -79,12 +79,12 @@ public class WndDonate extends WndTabbed {
 			add(tab);
 		}
 
-		select(1);
+		select(2);
 	}
 
 	private class DonateTab extends Group {
 
-		public DonateTab(final int level) {
+		DonateTab(final int level) {
 			super();
 
 			IconTitle tabTitle = new IconTitle(Icons.get(icons[level - 1]),
