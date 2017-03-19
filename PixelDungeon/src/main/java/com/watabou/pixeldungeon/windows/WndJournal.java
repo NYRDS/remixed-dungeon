@@ -43,7 +43,7 @@ public class WndJournal extends Window {
 		
 		super();
 
-		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - MARGIN);
+		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - 4*MARGIN);
 
 
 		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
