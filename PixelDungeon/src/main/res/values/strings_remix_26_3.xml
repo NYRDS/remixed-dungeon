@@ -15,10 +15,10 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">plague doctor</string>
     <string name="PlagueDoctorNPC_Desc">This hunch man is completely covered in leather. He strongly smells of medications and... garlic?</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Male">Boya!\n</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Female">Girly!\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Boya! Go kill some rats and bring me their hides!\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Girly! Go kill some rats and bring me their hides!\n</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Bring me %d rat hides.</string>
-    <string name="PlagueDoctorNPC_Quest_End">Okay</string>
+    <string name="PlagueDoctorNPC_Quest_End">Okay, take this.</string>
     <string name="Journal_PlagueDoctorNPC">Plague doctor</string>
 
     <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
@@ -53,5 +53,13 @@
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="ServiceManNPC_NoConnection">I am sorry, you cannot use our service right now. (Internet connection required)</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">Door</string>
+    <string name="town_deco_common_door_desc">A well-mannered adventurer should not invade private property, without invitation.</string>
+
+    <string name="town_deco_dungeon_door_name">Entrance</string>
+    <string name="town_deco_dungeon_door_desc">Entrance into the dungeon.</string>
 
 </resources>
