@@ -64,4 +64,7 @@
     <string name="town_deco_dungeon_door_name">Entrance</string>
     <string name="town_deco_dungeon_door_desc">Entrance into the dungeon.</string>
 
+    <string name="town_deco_bookshelf_name">Bookshelf</string>
+    <string name="town_deco_bookshelf_desc">Entrance into the dungeon.</string>
+
 </resources>
