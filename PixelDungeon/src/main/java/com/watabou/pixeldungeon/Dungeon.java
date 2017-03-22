@@ -141,6 +141,7 @@ public class Dungeon {
 		ScarecrowNPC.Quest.reset();
 		AzuterronNPC.Quest.reset();
 		CagedKobold.Quest.reset();
+		PlagueDoctorNPC.Quest.reset();
 
 		Room.shuffleTypes();
 

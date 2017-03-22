@@ -20,6 +20,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -126,7 +127,6 @@ public class PlagueDoctorNPC extends NPC {
 		private static boolean processed;
 
 		private static int   depth;
-		private static float killed;
 
 		public static void reset() {
 			completed = false;
@@ -139,7 +139,6 @@ public class PlagueDoctorNPC extends NPC {
 		private static final String GIVEN     = "given";
 		private static final String PROCESSED = "processed";
 		private static final String DEPTH     = "depth";
-		private static final String KILLED    = "killed";
 
 		public static void storeInBundle(Bundle bundle) {
 			Bundle node = new Bundle();
@@ -148,7 +147,6 @@ public class PlagueDoctorNPC extends NPC {
 			node.put(DEPTH, depth);
 			node.put(PROCESSED, processed);
 			node.put(COMPLETED, completed);
-			node.put(KILLED, killed);
 
 			bundle.put(NODE, node);
 		}
@@ -162,18 +160,20 @@ public class PlagueDoctorNPC extends NPC {
 				depth = node.getInt(DEPTH);
 				processed = node.getBoolean(PROCESSED);
 				completed = node.getBoolean(COMPLETED);
-				killed = node.getFloat(KILLED);
 			}
 		}
 
 		public static void process(int pos) {
 			if (given && !processed) {
-				killed++;
-				if (killed != 0 && ((killed % 5) == 0)) {
-					Dungeon.level.drop(new RatHide(), pos).sprite.drop();
-				}
-				if (killed >= 25) {
+				Item item = Dungeon.hero.belongings.getItem(RatHide.class);
+				if (item == null) { return; }
+				if (item.quantity() == 5) {
 					processed = true;
+				}
+				else{
+					if (Random.Int(2) == 1) {
+						Dungeon.level.drop(new RatHide(), pos).sprite.drop();
+					}
 				}
 			}
 		}
@@ -183,6 +183,8 @@ public class PlagueDoctorNPC extends NPC {
 			Journal.remove(Journal.Feature.PLAGUEDOCTOR);
 		}
 	}
+
+
 
 }
 
