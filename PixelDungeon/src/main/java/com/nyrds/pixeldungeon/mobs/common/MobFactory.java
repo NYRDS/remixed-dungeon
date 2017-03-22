@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
 import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
+import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownGuardNPC;
@@ -198,6 +199,8 @@ public class MobFactory {
 		registerMobClass(TownsfolkMovieNPC.class);
 		registerMobClass(TownsfolkSilentNPC.class);
 		registerMobClass(BellaNPC.class);
+		registerMobClass(LibrarianNPC.class);
+
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {

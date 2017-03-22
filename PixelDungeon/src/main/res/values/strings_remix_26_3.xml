@@ -37,6 +37,8 @@
     <string name="TownsfolkSilentNPC_Message2">..."</string>
     <string name="TownsfolkSilentNPC_Message3">Hmmm..."</string>
 
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">I am sorry this building is not ready yet!"</string>
 
     <!-- STRINGS OF BellaNPC CLASS -->
     <string name="BellaNPC_Name">Bella</string>
