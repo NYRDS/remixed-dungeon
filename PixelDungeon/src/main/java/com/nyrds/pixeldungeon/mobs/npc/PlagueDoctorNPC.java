@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
-import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.common.RatArmor;
 import com.nyrds.pixeldungeon.items.common.RatHide;
 import com.nyrds.pixeldungeon.ml.R;
@@ -15,7 +14,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
@@ -31,6 +29,7 @@ public class PlagueDoctorNPC extends NPC {
 	private static final String TXT_QUEST_END = Game.getVar(R.string.PlagueDoctorNPC_Quest_End);
 	private static final String TXT_QUEST_START_M = Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Male);
 	private static final String TXT_QUEST_START_F = Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Female);
+	private static final String TXT_QUEST_COMPLETED = Game.getVar(R.string.PlagueDoctorNPC_After_Quest);
 
 	public PlagueDoctorNPC() {
 	}
@@ -83,7 +82,7 @@ public class PlagueDoctorNPC extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo(getPos(), hero.getPos());
 		if (Quest.completed) {
-			this.die(null);
+			GameScene.show(new WndQuest(this, TXT_QUEST_COMPLETED));
 			return true;
 		}
 
@@ -167,7 +166,7 @@ public class PlagueDoctorNPC extends NPC {
 			if (given && !processed) {
 				Item item = Dungeon.hero.belongings.getItem(RatHide.class);
 				if (!killCheck) { return; }
-				if (item.quantity() == 5) {
+				if (item != null && item.quantity() == 5) {
 					processed = true;
 				}
 				else{
@@ -183,9 +182,4 @@ public class PlagueDoctorNPC extends NPC {
 			Journal.remove(Journal.Feature.PLAGUEDOCTOR);
 		}
 	}
-
-
-
 }
-
-
