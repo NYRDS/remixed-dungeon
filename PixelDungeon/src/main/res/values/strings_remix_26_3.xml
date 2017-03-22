@@ -19,10 +19,10 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">plague doctor</string>
     <string name="PlagueDoctorNPC_Desc">This hunchbacked man is completely covered in leather. He strongly smells of medications and... garlic?</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Can you believe it!? Those idiots still haven\'t realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional tests.\n</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Can you believe it!? Those idiots still haven\'t realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional test\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Can you believe it?! Those idiots still haven\'t realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional tests.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Can you believe it?! Those idiots still haven\'t realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional test\n</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Bring me %d rat hides.</string>
-    <string name="PlagueDoctorNPC_Quest_End">Ah, thank you, I hope those gonna have some trace of a disease. Previous examples were absolutely harmful. So I made this for you while I was waiting for new samples.</string>
+    <string name="PlagueDoctorNPC_Quest_End">Ah, thank you, I hope those gonna have some trace of a disease. Previous examples were absolutely harmless. So I made this for you while I was waiting for new samples.</string>
     <string name="PlagueDoctorNPC_After_Quest">I\'ll show them, I\'ll show them all!</string>
     <string name="Journal_PlagueDoctorNPC">Plague doctor</string>
 
@@ -76,8 +76,5 @@
 
     <string name="town_deco_dungeon_door_name">Entrance</string>
     <string name="town_deco_dungeon_door_desc">Entrance into the dungeon.</string>
-
-    <string name="town_deco_bookshelf_name">Bookshelf</string>
-    <string name="town_deco_bookshelf_desc">Entrance into the dungeon.</string>
 
 </resources>
