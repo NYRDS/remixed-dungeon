@@ -108,13 +108,13 @@ public class PlagueDoctorNPC extends NPC {
 			}
 
 		} else {
-			String txtQuestStart = TXT_QUEST_START_M;
+			String txtQuestStart = Utils.format(TXT_QUEST_START_M, 5);
 			if (Dungeon.hero.getGender() == Utils.FEMININE) {
-				txtQuestStart = TXT_QUEST_START_F;
+				txtQuestStart = Utils.format(TXT_QUEST_START_F, 5);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.given = true;
-			Quest.process(hero.getPos());
+			Quest.process(hero.getPos(), false);
 			Journal.add(Journal.Feature.PLAGUEDOCTOR);
 		}
 		return true;
@@ -163,10 +163,10 @@ public class PlagueDoctorNPC extends NPC {
 			}
 		}
 
-		public static void process(int pos) {
+		public static void process(int pos, boolean killCheck) {
 			if (given && !processed) {
 				Item item = Dungeon.hero.belongings.getItem(RatHide.class);
-				if (item == null) { return; }
+				if (!killCheck) { return; }
 				if (item.quantity() == 5) {
 					processed = true;
 				}
