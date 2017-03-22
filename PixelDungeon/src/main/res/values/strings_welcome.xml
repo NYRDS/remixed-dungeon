@@ -255,4 +255,10 @@
         - Armor gets «glyph» attribute\n
         - Now in order for game to detect your mod, it must contain version.json file\n
         </string>
+        <string name="Welcome_Text_26_3">
+        remix.26.3\n
+        - Town grew bigger\n
+        - Town shop now sells more items\n
+        - New quest in Town\n
+        </string>
 </resources>
