@@ -12,7 +12,6 @@
   "width":32,
   "mobs" : [
     {"kind":"HealerNPC","x":21,"y":20},
-    //{"kind":"BellaNPC","x":12,"y":26},
     {"kind":"PlagueDoctorNPC","x":21,"y":27},
     {"kind":"TownGuardNPC","x":28,"y":18},
     {"kind":"TownGuardNPC","x":25,"y":28},
