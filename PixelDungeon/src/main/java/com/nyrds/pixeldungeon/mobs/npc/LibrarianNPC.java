@@ -16,7 +16,7 @@ import java.util.Set;
 
 public class LibrarianNPC extends NPC {
 
-	private static final String TXT_MESSAGE = Game.getVar(R.string.ServiceManNotReadyNPC_Message);
+	private static final String TXT_MESSAGE = Game.getVar(R.string.LibrarianNPC_Message_Not_Ready);
 
 	public LibrarianNPC() {
 	}
