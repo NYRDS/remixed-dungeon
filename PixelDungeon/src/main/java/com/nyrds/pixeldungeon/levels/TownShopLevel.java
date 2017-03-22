@@ -67,13 +67,11 @@ public class TownShopLevel extends Level {
 		items.add( new Sword().identify() );
 		items.add( new Quarterstaff().identify() );
 
-		items.add( new OverpricedRation() );
-		items.add( new OverpricedRation() );
-		items.add( new Dart(5).identify() );
-		items.add( new Dart(5).identify() );
-
-		items.add( new CommonArrow(25) );
-		items.add( new CommonArrow(25) );
+		for (int i = 0; i <3; i++){
+			items.add( new OverpricedRation() );
+			items.add( new Dart(5).identify() );
+			items.add( new CommonArrow(25) );
+		}
 
 		items.add( new Keyring());
 		items.add( new ScrollHolder());
