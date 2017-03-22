@@ -11,7 +11,7 @@
 
     <!-- STRINGS OF RatArmor CLASS -->
     <string name="RatArmor_Name">rat armor</string>
-    <string name="RatArmor_Info">A leather armor made of rat hide. It's probably not contagious...</string>
+    <string name="RatArmor_Info">A leather armor made of rat hide. It\'s probably not contagious...</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF PlagueDoctorNPC CLASS -->
@@ -19,8 +19,8 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">plague doctor</string>
     <string name="PlagueDoctorNPC_Desc">This hunch man is completely covered in leather. He strongly smells of medications and... garlic?</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Can you believe it!? Those idiots still haven't realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional tests.\n</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Can you believe it!? Those idiots still haven't realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional test\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Can you believe it!? Those idiots still haven\'t realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional tests.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Can you believe it!? Those idiots still haven\'t realised how dangerous this damn sewers is! Like guards and adventurers can protect town from anything. Hah! No weapon can stop disease from spreading. But I need evidence, can you help me? Bring me %d rat hides, so that I can do some additional test\n</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Bring me %d rat hides.</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, thank you, I hope those gonna have some trace of a disease. Previous examples very absolutely harmful. So I made this for you while I was waiting for new samples.</string>
     <string name="Journal_PlagueDoctorNPC">Plague doctor</string>
@@ -37,7 +37,7 @@
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Name_Objective">librarian</string>
     <string name="LibrarianNPC_Desc">A very shy person, wearing an awkward looking sweater and a very thick glasses.</string>
-    <string name="LibrarianNPC_Message_Not_Ready">I... I am sorry, l-library isn't open... yet."</string>
+    <string name="LibrarianNPC_Message_Not_Ready">I... I am sorry, l-library isn\'t open... yet."</string>
 
 
     <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
