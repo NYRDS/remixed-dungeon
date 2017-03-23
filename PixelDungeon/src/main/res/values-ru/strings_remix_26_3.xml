@@ -18,11 +18,11 @@
     <string name="PlagueDoctorNPC_Name">чумной доктор</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">чумного доктора</string>
-    <string name="PlagueDoctorNPC_Desc">Всё тело этого горбатого человека скрывает кожаный комбинезон. От исходит резкий запах лекарств и... чеснока?</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Male">Ба! Можешь в это поверить?! Эти идиоты до сих пор не осознают масштаб угрозы! Создаётся впечатление, что они расчитывают на то, что стражники и приключенцы смогут защитить их от всего. Ха! Ни какое оружие не предовтвратит распространение болезни. Но мне нужно доказательство, может ты сможешь помочь? Принеси мне %d крысиных шкур, чтобы я мог провести дополнительные тесты.</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Female">Ба! Можешь в это поверить?! Эти идиоты до сих пор не осознают масштаб угрозы! Создаётся впечатление, что они расчитывают на то, что стражники и приключенцы смогут защитить их от всего. Ха! Ни какое оружие не предовтвратит распространение болезни. Но мне нужно доказательство, может ты сможешь помочь? Принеси мне %d крысиных шкур, чтобы я мог провести дополнительные тесты.</string>
+    <string name="PlagueDoctorNPC_Desc">Всё тело этого горбатого человека скрывает кожаный комбинезон. От него исходит резкий запах лекарств и... чеснока?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Ба! Можешь в это поверить?! Эти идиоты до сих пор не осознают масштаб угрозы! Создаётся впечатление, что они рассчитывают на то, что стражники и приключенцы смогут защитить их от всего. Ха! Никакое оружие не предотвратит распространение болезни. Но мне нужно доказательство, может ты сможешь помочь? Принеси мне %d крысиных шкур, чтобы я мог провести дополнительные тесты.</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Ба! Можешь в это поверить?! Эти идиоты до сих пор не осознают масштаб угрозы! Создаётся впечатление, что они рассчитывают на то, что стражники и приключенцы смогут защитить их от всего. Ха! Никакое оружие не предотвратит распространение болезни. Но мне нужно доказательство, может ты сможешь помочь? Принеси мне %d крысиных шкур, чтобы я мог провести дополнительные тесты.</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Принеси мне %d крысиных шкур.</string>
-    <string name="PlagueDoctorNPC_Quest_End">Ах, спасибо тебе. Я надеюсь хоть на этих имеются следы болезни. Предыдущие образцы оказались абсолютно везвредными. Так что у меня было время сделать для тебя вот эту вещицу.</string>
+    <string name="PlagueDoctorNPC_Quest_End">Ах, спасибо тебе. Я надеюсь хоть на этих имеются следы болезни. Предыдущие образцы оказались абсолютно безвредными. Так что у меня было время сделать для тебя вот эту вещицу.</string>
     <string name="PlagueDoctorNPC_After_Quest">Я им покажу, я им всем покажу!</string>
     <string name="Journal_PlagueDoctorNPC">Чумной доктор</string>
 
@@ -31,7 +31,7 @@
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name_Objective">горожанина</string>
     <string name="TownsfolkMovieNPC_Desc">Один из местных жителей. И несмотря на то, что это явно простолюдин, его одежда выглядит совсем не дешёвой.</string>
-    <string name="TownsfolkMovieNPC_Message">А вы знаете об этой особой акции в \"кинотеатре\"? Жалко что, чтобы в ней учавствовать нужна некая диковина под названием \"интернет\"... никогда о такой не слышал.</string>
+    <string name="TownsfolkMovieNPC_Message">А вы знаете об этой особой акции в \"кинотеатре\"? Жалко что, чтобы в ней участвовать нужна некая диковина под названием \"интернет\"... никогда о такой не слышал.</string>
 
     <!-- STRINGS OF LibrarianNPC CLASS -->
     <string name="LibrarianNPC_Name">библиотекарь</string>
@@ -51,12 +51,16 @@
     <string name="TownsfolkSilentNPC_Message3">Хммм...</string>
 
     <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
-    <string name="ServiceManNotReadyNPC_Message">Тысяча извенений! Но это здание пока закрыто!</string>
+    <string name="ServiceManNotReadyNPC_Message">Тысяча извинений! Но это здание пока закрыто!</string>
 
     <!-- STRINGS OF BellaNPC CLASS -->
     <string name="BellaNPC_Name">Белла</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Name_Objective">Беллу</string>
+    <string name="BellaNPC_Desc">Эта девушка выглядит поистине шикарно. Весь её внешний вид будто кричит: \"Я слишком хороша для вас.\"</string>
+    <string name="BellaNPC_Message">Меня не интересуют плебеи вроде тебя!</string>
+    <string name="BellaNPC_Amulet_M">Ну здравствуй красавчик, и что же это там у тебя? Ах, какой роскошный амулет! И ты... эти плебеи и в подмётки тебе не годятся. Как на счёт того чтобы прогуляться и обсудить... наше совместное будущее?</string>
+    <string name="BellaNPC_Amulet_F">Ну здравствуй красавица, и что же это там у тебя? Ах, какой роскошный амулет! И ты... эти плебеи и в подмётки тебе не годятся. Как на счёт того чтобы прогулятьсяи обсудить... наше совместное будущее?</string>
     <string name="BellaNPC_Angry">Как смеешь ты... ты плебей!</string>
     <string name="BellaNPC_Yes_End_Game">Ага (Закончить игру)</string>
     <string name="BellaNPC_No">Нет, не с тобой</string>
@@ -68,7 +72,7 @@
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_common_door_name">Дверь</string>
-    <string name="town_deco_common_door_desc">Воспитанный искатель приключений никогда не станет, вторгаться на територию частной собственности, без приглашения.</string>
+    <string name="town_deco_common_door_desc">Воспитанный искатель приключений никогда не станет, вторгаться на территорию частной собственности, без приглашения.</string>
 
     <string name="town_deco_dungeon_door_name">Вход</string>
     <string name="town_deco_dungeon_door_desc">Вход в подземелье.</string>
