@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">ельфійський лук</string>
+    <string name="ElvenBow_Info">Винятковий приклад майстерності ельфійських ремісників. Без сумніву цей лук більш ефективний та влучний ніж звичайний дерев\'яний.</string>
+
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">шкіра пцюка</string>
+    <string name="RatHide_Info">Маленький брудний шматок плоті і хутра. Чи насправді є хтось кому це знадобиться?</string>
+
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">пацюкова броня</string>
+    <string name="RatArmor_Info">Шкіряна броня вироблена з пацюкової шкіри. Ймовірно це не заразно...</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">чумний лікар</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
+    <string name="PlagueDoctorNPC_Name_Objective">чумного лікаря</string>
+    <string name="PlagueDoctorNPC_Desc">Цей горбатий чоловік повністю вкритий шкірою. Від нього тхне гострий запах ліків і... часнику?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Ба! Чи можна у це повірити?! Цей ідіот до сих пір не зрозумів наскільки ці кляті каналізації є небезпечними! Неначе охоронці і авантюристи можуть захистити місто від чого-небудь. Хах! Ніяка зброя не зможе зупинити поширення хвороби.
+Але мені потрібні докази, ви можете мені допомогти? Принеси мені %d пацючих шкір, тоді я можу зробити деякі додаткові тести.
+</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Ба! Чи можна у це повірити?! Ця ідіотка до сих пір не зрозуміла наскільки ці кляті каналізації є небезпечними! Неначе охоронці і авантюристи можуть захистити місто від чого-небудь. Хах! Ніяка зброя не зможе зупинити поширення хвороби.
+Але мені потрібні докази, ви можете мені допомогти? Принеси мені %d пацючих шкір, тоді я можу зробити деякі додаткові тести.
+</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Принеси мені %d пацюкових шкір.</string>
+    <string name="PlagueDoctorNPC_Quest_End">А-а, вельми дякую. Сподіваюся, що вони залишать якийсь слід від захворювання. Попередні зразки були абсолютно безпечні. Отже, я зробив це для вас, поки очікував нових зразків.</string>
+    <string name="PlagueDoctorNPC_After_Quest">Я їм покажу, я покажу усім їм!</string>
+    <string name="Journal_PlagueDoctorNPC">чумний лікар</string>
+
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">городянин</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">городянина</string>
+    <string name="TownsfolkMovieNPC_Desc">Один із місцевих. Незважаючи на те, що це явно простолюдин, його одяг виглядає досить коштовно</string>
+    <string name="TownsfolkMovieNPC_Message">Ви щось знаєте про особливий сервіс, що називають \"кінотеатр\"? Шкода, що там просять якусь екзотичну річ, під назвою \"інтернет\", я навіть ніколи не чув про таке.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Name">бібліотекар</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
+    <string name="LibrarianNPC_Name_Objective">бібліотекаря</string>
+    <string name="LibrarianNPC_Desc">Дуже несмілива людина, в поношеному незграбному светрі та дуже товстими окулярами.</string>
+    <string name="LibrarianNPC_Message_Not_Ready">Я... я перепрошую, б-бібліотека не відкрита... поки що.</string>
+
+
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">городянин</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">городянина</string>
+    <string name="TownsfolkSilentNPC_Desc">Один з місцевих. Не дивлячись не те, що це звичайний простолюдин, одежа на ньому не з дешевих.</string>
+    <string name="TownsfolkSilentNPC_Message1">Хмф!</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">Хммм...</string>
+
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">Перепрошую, але ця будівля ще не готова!</string>
+
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">Белла</string>
+    <string name="BellaNPC_Gender">feminine</string>
+    <string name="BellaNPC_Name_Objective">Беллу</string>
+    <string name="BellaNPC_Desc">Дівчина виглядає дуже шикарно. Весь її зовнішній вигляд говорить вам: \"Я занадто гарна для всіх.\"</string>
+    <string name="BellaNPC_Message">Я не маю ніякого інтересу до таких плебеїв як ти сам!</string>
+    <string name="BellaNPC_Amulet_M">Чому б привітання не було таке гарне, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти стоїш над цими плебеями. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
+    <string name="BellaNPC_Amulet_F">Чому б апетитний пиріг не був таким гарним, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти так яскраво сяєш в порівнянні з будь-ким. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
+    <string name="BellaNPC_Angry">Як смієш ти... ти плебей!</string>
+    <string name="BellaNPC_Yes_End_Game">Так (Кінець гри)</string>
+    <string name="BellaNPC_No">Ні, не з тобою</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">Перепрошуємо, наразі ви не можете використовувати наш сервіс. (Потрібне з\'єднання з інтернетом)</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">Двері</string>
+    <string name="town_deco_common_door_desc">Добре вихований авантюрист не повинен вторгатися у приватну власність, без запрошення.</string>
+
+    <string name="town_deco_dungeon_door_name">Вхід</string>
+    <string name="town_deco_dungeon_door_desc">Увійти у в\'язницю.</string>
+
+</resources>
