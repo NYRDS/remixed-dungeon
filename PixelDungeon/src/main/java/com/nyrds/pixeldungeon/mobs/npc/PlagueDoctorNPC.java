@@ -166,7 +166,7 @@ public class PlagueDoctorNPC extends NPC {
 			if (given && !processed) {
 				Item item = Dungeon.hero.belongings.getItem(RatHide.class);
 				if (!killCheck) { return; }
-				if (item != null && item.quantity() == 5) {
+				if (item != null && item.quantity() >= 5) {
 					processed = true;
 				}
 				else{
