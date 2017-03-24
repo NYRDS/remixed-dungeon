@@ -69,7 +69,7 @@ public class Rat extends Mob {
 	public void die( Object cause ) {
 		ScarecrowNPC.Quest.process( getPos() );
 		Ghost.Quest.process( getPos() );
-		PlagueDoctorNPC.Quest.process( getPos(), true );
+		PlagueDoctorNPC.Quest.process( getPos() );
 		
 		super.die( cause );
 	}
