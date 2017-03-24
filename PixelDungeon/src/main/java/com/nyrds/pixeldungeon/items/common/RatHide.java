@@ -16,4 +16,9 @@ public class RatHide extends Item {
 		return true;
 	}
 
+	@Override
+	public boolean isUpgradable() {
+		return false;
+	}
+
 }
