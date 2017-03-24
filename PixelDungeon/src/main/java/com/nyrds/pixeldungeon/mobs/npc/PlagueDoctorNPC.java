@@ -89,7 +89,7 @@ public class PlagueDoctorNPC extends NPC {
 		if (Quest.given) {
 
 			Item item = hero.belongings.getItem(RatHide.class);
-			if (item != null && item.quantity() == 5) {
+			if (item != null && item.quantity() >= 5) {
 
 				item.removeItemFrom(Dungeon.hero);
 
@@ -112,8 +112,8 @@ public class PlagueDoctorNPC extends NPC {
 				txtQuestStart = Utils.format(TXT_QUEST_START_F, 5);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));
+			Quest.process(hero.getPos());
 			Quest.given = true;
-			Quest.process(hero.getPos(), false);
 			Journal.add(Journal.Feature.PLAGUEDOCTOR);
 		}
 		return true;
@@ -162,17 +162,19 @@ public class PlagueDoctorNPC extends NPC {
 			}
 		}
 
-		public static void process(int pos, boolean killCheck) {
+		public static void process(int pos) {
+			Item item = Dungeon.hero.belongings.getItem(RatHide.class);
+			if (completed){
+				return;
+			}
+
+			if (item != null && item.quantity() == 5) {
+				processed = true;
+			}
+
 			if (given && !processed) {
-				Item item = Dungeon.hero.belongings.getItem(RatHide.class);
-				if (!killCheck) { return; }
-				if (item != null && item.quantity() >= 5) {
-					processed = true;
-				}
-				else{
-					if (Random.Int(2) == 1) {
-						Dungeon.level.drop(new RatHide(), pos).sprite.drop();
-					}
+				if (Random.Int(2) == 1) {
+					Dungeon.level.drop(new RatHide(), pos).sprite.drop();
 				}
 			}
 		}
