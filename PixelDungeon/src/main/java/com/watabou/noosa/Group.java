@@ -44,7 +44,7 @@ public class Group extends Gizmo {
 
 	@Override
 	public void update() {
-		for (int i = 0; i < getLength(); i++) {
+		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.active) {
 				g.update();
@@ -54,7 +54,7 @@ public class Group extends Gizmo {
 
 	@Override
 	public void draw() {
-		for (int i = 0; i < getLength(); i++) {
+		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
 			if (g != null && g.exists && g.getVisible()) {
 				g.draw();
@@ -156,23 +156,17 @@ public class Group extends Gizmo {
 		members.clear();
 	}
 
-	public Gizmo bringToFront(Gizmo g) {
+	public void bringToFront(Gizmo g) {
 		if (members.contains(g)) {
 			members.remove(g);
 			members.add(g);
-			return g;
-		} else {
-			return null;
 		}
 	}
 
-	private Gizmo sendToBack(Gizmo g) {
+	private void sendToBack(Gizmo g) {
 		if (members.contains(g)) {
 			members.remove(g);
 			members.add(0, g);
-			return g;
-		} else {
-			return null;
 		}
 	}
 
