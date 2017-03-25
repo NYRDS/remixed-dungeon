@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
 import com.nyrds.pixeldungeon.items.necropolis.SoulShard;
 import com.watabou.noosa.Game;
@@ -367,6 +368,7 @@ public class ItemFactory {
 		registerItemClass(IceKey.class);
 		registerItemClass(ElvenBow.class);
 		registerItemClass(RatHide.class);
+		registerItemClass(BlackSkullOfMastery.class);
 
 		mItemsList.put("Rotberry.Seed",   WandMaker.Rotberry.Seed.class);
 		mItemsList.put("Earthroot.Seed",  Earthroot.Seed.class);

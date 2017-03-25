@@ -68,7 +68,9 @@ public final class ShadowCaster {
 	private static void scanSector( int cx, int cy, int m1, int m2, int m3, int m4 ) {
 		
 		obs.reset();
-		
+		int w = Dungeon.level.getWidth();
+		int h = Dungeon.level.getHeight();
+
 		for (int p=1; p <= distance; p++) {
 
 			float dq2 = 0.5f / p;
@@ -79,20 +81,20 @@ public final class ShadowCaster {
 				int x = cx + q * m1 + p * m3;
 				int y = cy + p * m2 + q * m4;
 				
-				if (y >= 0 && y < Dungeon.level.getHeight() && x >= 0 && x < Dungeon.level.getWidth()) {
+				if (y >= 0 && y < h && x >= 0 && x < w) {
 					
 					float a0 = (float)q / p;
 					float a1 = a0 - dq2;
 					float a2 = a0 + dq2;
 					
-					int pos = y * Dungeon.level.getWidth() + x;
-	
+					int pos = y * w + x;
+
 					if (obs.isBlocked( a0 ) && obs.isBlocked( a1 ) && obs.isBlocked( a2 )) {
-				
+
 					} else {
 						fieldOfView[pos] = true;
 					}
-					
+
 					if (losBlocking[pos]) {
 						obs.add( a1, a2 );
 					}

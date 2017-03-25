@@ -1165,8 +1165,9 @@ public abstract class Level implements Bundlable {
 				Arrays.fill(fieldOfView, pos, pos + len, true);
 			}
 
-			for (int i = 0; i < getLength(); i++) {
-				fieldOfView[i] &= discoverable[i];
+			int from = cell(ax,ay), to = cell(bx,by);
+			for (; from < to; to++) {
+				fieldOfView[from] &= discoverable[from];
 			}
 		}
 

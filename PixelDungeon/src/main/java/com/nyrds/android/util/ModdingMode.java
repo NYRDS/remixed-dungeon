@@ -14,9 +14,19 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
+
+	private static final Set<String> trustedMods = new HashSet<>();
+	static {
+		trustedMods.add("PD Mini");
+		trustedMods.add("Maze");
+		trustedMods.add("The Fallen");
+		trustedMods.add("D.U.N.G.E.O.N");
+	}
 
 	@NonNull
 	static private String mActiveMod = REMIXED;
@@ -102,7 +112,11 @@ public class ModdingMode {
 	}
 
 	private static boolean isModdingAllowed(String resName) {
-		return !(resName.contains("accessories") || resName.contains("banners"));
+		return trustedMod() || !(resName.contains("accessories") || resName.contains("banners"));
+	}
+
+	private static boolean trustedMod() {
+		return trustedMods.contains(mActiveMod);
 	}
 
 	public static void setContext(Context context) {
