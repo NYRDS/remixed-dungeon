@@ -295,8 +295,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		super.upgrade();
 
-		updateLevel();
-		curCharges(Math.min(curCharges() + 1, maxCharges()));
+		maxCharges(Math.max(Math.min(maxCharges()+1, 9),maxCharges()));
+		curCharges(Math.max(curCharges(), maxCharges()));
+
 		updateQuickslot();
 
 		return this;
@@ -306,17 +307,15 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	public Item degrade() {
 		super.degrade();
 
-		updateLevel();
+		maxCharges(Math.max(maxCharges()-1, 0));
+		curCharges(Math.min(curCharges(), maxCharges()));
+
 		updateQuickslot();
 
 		return this;
 	}
 
 	protected void updateLevel() {
-
-		maxCharges(Math.max(Math.min(maxCharges()+1, 9),maxCharges()));
-		curCharges(Math.max(curCharges(), maxCharges()));
-
 		calculateDamage();
 	}
 
@@ -536,7 +535,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 		updateLevel();
-		curCharges(maxCharges());
 
 		curCharges(itemDesc.optInt("charges",curCharges()));
 		maxCharges(itemDesc.optInt("maxCharges",maxCharges()));
