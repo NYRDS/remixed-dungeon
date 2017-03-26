@@ -29,8 +29,6 @@ public class WndModDescription extends Window {
 		this.prevMod = prevMod;
 
 		PixelDungeon.activeMod(option);
-		
-		PixelDungeon.instance().setSelectedLanguage();
 
 		yPos = 0;
 		
@@ -124,9 +122,14 @@ public class WndModDescription extends Window {
 		yPos += text.height();
 		add(text);
 	}
-	
-	public void onBackPressed() {
+
+	@Override
+	public void hide() {
+		super.hide();
 		PixelDungeon.activeMod(prevMod);
+	}
+
+	public void onBackPressed() {
 		hide();
 		Game.scene().add(new WndModSelect());
 	}
