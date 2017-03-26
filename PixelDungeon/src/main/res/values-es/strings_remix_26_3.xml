@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="PlagueDoctorNPC_Gender">masculino</string>
+    <string name="TownsfolkMovieNPC_Gender">masculino</string>
+    <string name="LibrarianNPC_Gender">masculino</string>
+    <string name="TownsfolkSilentNPC_Gender">masculino</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
+
+    <string name="BellaNPC_Gender">femenino</string>
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">Puerta</string>
+    </resources>

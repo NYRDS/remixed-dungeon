@@ -38,9 +38,9 @@
   <string name="Char_SmbMissed">%1$s %2$s %3$s의 공격</string>
   <string name="Char_OutParalysis">고통이 %s를 마비로부터 벗어나게 했다</string>
   <string-array name="Char_StaDodged">
-    <item>이/가 </item>
-    <item>이/가 </item>
-    <item>이/가 </item>
+    <item>피함! </item>
+    <item>피함! </item>
+    <item>피함! </item>
   </string-array>
   <string name="Char_StaPoisoned">중독</string>
   <string name="Char_StaAmok">착란</string>
