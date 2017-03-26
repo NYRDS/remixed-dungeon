@@ -7,17 +7,14 @@ import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 
-public class ServiceManNPC extends NPC {
+public class ServiceManNPC extends ImmortalNPC {
 
 	private int filmsSeen = 0;
 	final private String FILMS_SEEN = "films_seen";
@@ -25,16 +22,6 @@ public class ServiceManNPC extends NPC {
 	public ServiceManNPC() {
 		//AppodealRewardVideo.initCinemaRewardVideo();
 		//RewardVideoAds.initCinemaRewardVideo();
-	}
-	
-	@Override
-	public int defenseSkill( Char enemy ) {
-		return 1000;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Ghost_Defense);
 	}
 
 	@Override
@@ -47,24 +34,6 @@ public class ServiceManNPC extends NPC {
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 		filmsSeen = bundle.optInt(FILMS_SEEN,0);
-	}
-
-	@Override
-	protected Char chooseEnemy() {
-		return DUMMY;
-	}
-	
-	@Override
-	public void damage( int dmg, Object src ) {
-	}
-	
-	@Override
-	public void add( Buff buff ) {
-	}
-
-	@Override
-	public boolean reset() {
-		return true;
 	}
 
 	public void reward() {

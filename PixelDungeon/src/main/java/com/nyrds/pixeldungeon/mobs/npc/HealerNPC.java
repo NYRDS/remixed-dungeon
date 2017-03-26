@@ -1,24 +1,12 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.nyrds.pixeldungeon.windows.WndPriest;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Random;
 
-import java.util.HashSet;
-import java.util.Set;
-
-public class HealerNPC extends NPC {
+public class HealerNPC extends ImmortalNPC {
 
 	private static final String TXT_MESSAGE1 = Game.getVar(R.string.HealerNPC_Message1);
 	private static final String TXT_MESSAGE2 = Game.getVar(R.string.HealerNPC_Message2);
@@ -30,59 +18,12 @@ public class HealerNPC extends NPC {
 	}
 	
 	@Override
-	public int defenseSkill( Char enemy ) {
-		return 1000;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Ghost_Defense);
-	}
-	
-	@Override
-	public float speed() {
-		return 0.5f;
-	}
-	
-	@Override
-	protected Char chooseEnemy() {
-		return DUMMY;
-	}
-	
-	@Override
-	public void damage( int dmg, Object src ) {
-	}
-	
-	@Override
-	public void add( Buff buff ) {
-	}
-
-	@Override
-	public boolean reset() {
-		return true;
-	}
-
-	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
 		GameScene.show( new WndPriest( this, hero ) );
-
-
 		return true;
 	}
-		
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
-	static {
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( Roots.class );
-	}
-	
-	@Override
-	public Set<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
-
 }
 
 

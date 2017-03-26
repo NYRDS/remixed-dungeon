@@ -6,12 +6,9 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
@@ -27,7 +24,7 @@ import com.watabou.utils.Random;
 import java.util.HashSet;
 import java.util.Set;
 
-public class CagedKobold extends NPC {
+public class CagedKobold extends ImmortalNPC {
 
 	private static final String TXT_QUEST_START = Game.getVar(R.string.CagedKobold_Intro);
 	private static final String TXT_QUEST_END = Game.getVar(R.string.CagedKobold_Quest_End);
@@ -42,38 +39,6 @@ public class CagedKobold extends NPC {
 	public CagedKobold() {
 	}
 	
-	@Override
-	public int defenseSkill( Char enemy ) {
-		return 1000;
-	}
-	
-	@Override
-	public String defenseVerb() {
-		return Game.getVar(R.string.Ghost_Defense);
-	}
-	
-	@Override
-	public float speed() {
-		return 0.5f;
-	}
-	
-	@Override
-	protected Char chooseEnemy() {
-		return DUMMY;
-	}
-	
-	@Override
-	public void damage( int dmg, Object src ) {
-	}
-	
-	@Override
-	public void add( Buff buff ) {
-	}
-
-	@Override
-	public boolean reset() {
-		return true;
-	}
 
 	public static void spawn( RegularLevel level, Room room ) {
 		if (!spawned) {
