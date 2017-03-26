@@ -536,6 +536,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		super.fromJson(itemDesc);
 		updateLevel();
 
+		maxCharges(Math.max(initialCharges()+level(), 9));
+		curCharges(maxCharges());
+
 		curCharges(itemDesc.optInt("charges",curCharges()));
 		maxCharges(itemDesc.optInt("maxCharges",maxCharges()));
 	}
