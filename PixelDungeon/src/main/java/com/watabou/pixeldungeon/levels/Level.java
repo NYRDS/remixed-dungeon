@@ -1166,7 +1166,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			int from = cell(ax,ay), to = cell(bx,by);
-			for (; from < to; to++) {
+			for (; from < to; from++) {
 				fieldOfView[from] &= discoverable[from];
 			}
 		}

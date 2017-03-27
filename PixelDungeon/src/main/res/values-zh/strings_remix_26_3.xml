@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">精灵长弓</string>
+    <string name="PlagueDoctorNPC_Gender">雄性</string>
+    </resources>

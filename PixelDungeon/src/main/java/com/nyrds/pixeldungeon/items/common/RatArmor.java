@@ -9,4 +9,13 @@ public class RatArmor extends Armor {
 		image = 24;
 	}
 
+	@Override
+	public int typicalSTR() {
+		return super.typicalSTR()-1;
+	}
+
+	@Override
+	public int typicalDR() {
+		return super.typicalDR()+1;
+	}
 }

@@ -76,21 +76,19 @@ public class StringsManager {
 
 	}
 
-	private static void parseStrings(String resource) {
-		File jsonFile = ModdingMode.getFile(resource);
-		if (jsonFile == null) {
-			return;
-		}
-
-		if (!jsonFile.exists()) {
-			return;
-		}
-
+	private static void clearModStrings() {
 		stringMap.clear();
 		stringsMap.clear();
 
 		sStringMap.clear();
 		sStringsMap.clear();
+	}
+
+	private static void parseStrings(String resource) {
+		File jsonFile = ModdingMode.getFile(resource);
+		if (jsonFile == null || !jsonFile.exists()) {
+			return;
+		}
 
 		String line = "";
 
@@ -165,6 +163,8 @@ public class StringsManager {
 		config.locale = locale;
 		context.getResources().updateConfiguration(config,
 				context.getResources().getDisplayMetrics());
+
+		clearModStrings();
 
 		String modStrings = Utils.format("strings_%s.json", lang);
 

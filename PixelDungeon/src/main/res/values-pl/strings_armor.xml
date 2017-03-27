@@ -58,7 +58,7 @@
   <string name="RogueArmor_Desc">Kiedy Złodziej nosi ten ciemny strój, może przygotować specjalny ruch, zwany \"bombą dymną\" (żadne prawdziwe ładunki wybuchowe nie są używane), która oślepia wrogów, a Złodziej uskakuje w wybrane miejsce.</string>
   <string name="RogueArmor_ACSpecial">BOMBA DYMNA</string>
   <string name="RogueArmor_NotRogue">Tylko Złodzieje mogą nosić tę zbroję!</string>
-  <string name="RogueArmor_Fov">Możesz przeskoczyć tylko w pustym miejscu aby w zasiegu wzroku.</string>
+  <string name="RogueArmor_Fov">Możesz przeskoczyć tylko w puste miejsce w zasiegu wzroku.</string>
   <string name="RogueArmor_Prompt">Wybierz kierunek skoku</string>
   <!--STRINGS OF ScaleArmor CLASS-->
   <string name="ScaleArmor_Name">Zbroja Łuskowa</string>

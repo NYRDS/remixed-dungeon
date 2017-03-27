@@ -32,11 +32,25 @@
   <string name="Worm_Name">robak</string>
   <string name="Worm_Gender">męski</string>
   <string name="Worm_Name_Objective">robak</string>
+  <string name="Worm_Desc">Nie ma sposobu, aby powiedzieć, jak duży jest ten robak. Częściowo wyłaniając się z podłogi, ciało tego rodzaju jest pokryte grudkami zgniłego miąższu i szlamu. Jak on Idzie w Twoja stronę usłyszysz go z końca labiryntu !</string>
   <!--STRINGS OF YogsBrain CLASS-->
+  <string name="YogsBrain_Name">Mózg Jogy</string>
+  <string name="YogsBrain_Gender">On</string>
+  <string name="YogsBrain_Name_Objective">Mózg Jogy</string>
+  <string name="YogsBrain_Desc">Mózg Yog-Dzewa. Źródło wszelkiego zła, które kiedykolwiek wyjdzie z lochu.</string>
   <!--STRINGS OF YogsEye CLASS-->
+  <string name="YogsEye_Name">Oko Jogy</string>
   <string name="YogsEye_Gender">meski</string>
+  <string name="YogsEye_Name_Objective">Oko Yogy</string>
+  <string name="YogsEye_Desc">Oko Starego Boga, patrzący wzrokiem napełnionego wieczną nienawiścią. Możesz czuć to patrząc przez jego duszę</string>
   <!--STRINGS OF YogsHeart CLASS-->
+  <string name="YogsHeart_Name">Serce Jogy</string>
   <string name="YogsHeart_Gender">meski</string>
+  <string name="YogsHeart_Name_Objective">Serce Jogy</string>
+  <string name="YogsHeart_Desc">Przez wieki ludzie wierzyli, że tylko prawdziwie bezduszne stworzenia są zdolne do popełnienia czynów czystego zła. A przecież tutaj słuchać wielkie bicie serca Starego Boga.</string>
   <!--STRINGS OF YogsTeeth CLASS-->
+  <string name="YogsTeeth_Name">Zęby Jogy</string>
   <string name="YogsTeeth_Gender">meski</string>
+  <string name="YogsTeeth_Name_Objective">Zęby Jogy</string>
+  <string name="YogsTeeth_Desc">Ogromne usta Starego Boga wypełnione ostrymi zębami. Bardzo dopasowane te zęby a jego chęci zniszczenia i pożerania wszystkich istot jest ogromna</string>
 </resources>

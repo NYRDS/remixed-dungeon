@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
-  <string name="ShadowLord_Name">władca cienia</string>
+  <string name="ShadowLord_Name">Mroczny Władca </string>
   <string name="ShadowLord_Gender">męski</string>
-  <string name="ShadowLord_Name_Objective">Władca Cienia</string>
+  <string name="ShadowLord_Name_Objective">Mroczny Władca </string>
   <string name="ShadowLord_Desc">Kreatura stworzona z czystego zła i ciemności, wielu wierzy że jest to sam Stary Bóg, biorąc pod uwagę to jaki jest potężny. Inni zaś twierdzą, iż jest on tylko strażnikiem jego komnat.</string>
   <string name="ShadowLord_Intro">Przygotuj się!</string>
   <string name="ShadowLord_Death">Nieeeee...</string>

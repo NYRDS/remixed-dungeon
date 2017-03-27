@@ -2,8 +2,8 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분이 익숙해져 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
-  <string name="Weapon_Incompatible">서로 다른 종류의 마법들의 작용으로 갑옷의 각인이 지워져 버렸다</string>
+  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분히 익숙해져 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
+  <string name="Weapon_Incompatible">서로 다른 종류의 마법들의 작용으로 무기의 각인이 지워져 버렸다</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
@@ -79,8 +79,8 @@
   <string name="MeleeWeapon_Info1d">하향된</string>
   <string name="MeleeWeapon_Info2a">평균 데미지는 타격당 %d 포인트.</string>
   <string name="MeleeWeapon_Info2b">일반적으로 평균피해는 타격당 %1$d 데미지를 줍니다. 이것을 위해서는 힘이 %2$d가 필요합니다.</string>
-  <string name="MeleeWeapon_Info2c">아무래도 이 무기는 당신한테 너무 무겁다.</string>
-  <string name="MeleeWeapon_Info3a">이 무기는 보다 %s 무기이다.</string>
+  <string name="MeleeWeapon_Info2c">아무래도 이 무기는 당신한테 너무 무겁습니다.</string>
+  <string name="MeleeWeapon_Info3a">이 무기는 보다 %s 무기입니다.</string>
   <string name="MeleeWeapon_Info3b">빠른</string>
   <string name="MeleeWeapon_Info3c">느린</string>
   <string name="MeleeWeapon_Info3d">그리고</string>
@@ -189,6 +189,8 @@
   <string name="Kusarigama_Gender">여성</string>
   <string name="Kusarigama_Pull">당기다</string>
   <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">혼돈검</string>
+  <string name="ChaosSword_Info">이 검의 칼날은 순수한 혼돈으로 만들어졌으며 때때로 가끔 진동합니다. 큰 힘은 무기 안에 저장되어 거의 모든 것을 반으로 줄입니다. 무기의 강력한 힘에 대처하기 위해서는 훌륭한 기술이 필요합니다.</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <!--STRINGS OF ChaosStaff CLASS-->
   <!--STRINGS OF SacrificialSword CLASS-->

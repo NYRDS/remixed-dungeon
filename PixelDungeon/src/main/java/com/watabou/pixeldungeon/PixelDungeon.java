@@ -333,6 +333,9 @@ public class PixelDungeon extends Game {
 	public static void activeMod(String mod) {
 		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
 		ModdingMode.selectMod(PixelDungeon.activeMod());
+
+		PixelDungeon.instance().setSelectedLanguage();
+
 		Util.storeEventInAcra("RPD_active_mod", ModdingMode.activeMod());
 		Util.storeEventInAcra("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
 		ModsButton.modUpdated();
