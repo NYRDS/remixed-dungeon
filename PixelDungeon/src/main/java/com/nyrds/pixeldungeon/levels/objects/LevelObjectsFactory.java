@@ -29,6 +29,7 @@ public class LevelObjectsFactory {
 		registerObjectClass(Sign.class);
 		registerObjectClass(Barrel.class);
 		registerObjectClass(ConcreteBlock.class);
+		registerObjectClass(LibraryBook.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {
