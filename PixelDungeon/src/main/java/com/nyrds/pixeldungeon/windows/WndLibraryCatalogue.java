@@ -1,7 +1,11 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -13,39 +17,38 @@ public class WndLibraryCatalogue extends Window {
 	private static final int WIDTH		= 112;
 	private static final int GAP		= 4;
 
-	public WndLibraryCatalogue() {
+	public WndLibraryCatalogue(int catalogueNumber, String catalogueName) {
 		super();
-	final Window context = this;
+		final Window context = this;
 
-	//Browse Button
-	TextButton browse = new RedButton(Game.getVar(R.string.WndLibrary_Catalogue_Btn)) {
-		@Override
-		protected void onClick() {
-			super.onClick();
-			context.hide();
-		}
-	};
+		//Title text
+		Text tfTitle = PixelScene.createMultiline(catalogueName, GuiProperties.mediumTitleFontSize());
+		tfTitle.hardlight(TITLE_COLOR);
+		tfTitle.maxWidth(WIDTH - GAP);
+		tfTitle.measure();
+		tfTitle.x = (WIDTH - tfTitle.width())/2;
+		tfTitle.y = GAP;
+		add(tfTitle);
 
-	browse.setRect(GAP, GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
+		//Instruction text
+		Text message = PixelScene.createMultiline( "This is page of catalogue number: " + catalogueNumber + ". Named: " + catalogueName, GuiProperties.mediumTitleFontSize() );
+		message.maxWidth(WIDTH);
+		message.measure();
+		message.y = tfTitle.bottom()+ GAP;
+		add( message );
 
-	int w = (int) browse.right()+ GAP;
-	int h = (int) browse.bottom()+ GAP;
-
-	add(browse);
-
-	//Back Button
+		//Back Button
 		TextButton back = new RedButton(Game.getVar(R.string.Wnd_Button_Back)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
 				context.hide();
+				GameScene.show(new WndLibrary());
 			}
 		};
 
-		back.setRect(WIDTH - GAP - BTN_WIDTH, GAP, WIDTH - GAP, BTN_HEIGHT + GAP);
-
-		w = w + (int) back.right()+ GAP;
-		h = h + (int) back.bottom()+ GAP;
+		back.setRect(GAP, (int) message.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
+		int h = (int) back.bottom()+ GAP;
 
 		add(back);
 

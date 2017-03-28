@@ -4,6 +4,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
@@ -27,7 +28,6 @@ public class WndLibrary extends Window {
 		super();
 		final Window context = this;
 
-
 		//Title text
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
@@ -49,12 +49,13 @@ public class WndLibrary extends Window {
 		//Button maker
 		for (int i = 0; i < buttonLabels.length; i++){
 
-			//Browse Button
-			TextButton browse = new RedButton(Game.getVar(R.string.WndLibrary_Mobs_Btn)) {
+			final int catalogueNumber = i;
+			TextButton browse = new RedButton(buttonLabels[i]) {
 				@Override
 				protected void onClick() {
 					super.onClick();
 					context.hide();
+					GameScene.show(new WndLibraryCatalogue(catalogueNumber, buttonLabels[catalogueNumber]));
 				}
 			};
 
