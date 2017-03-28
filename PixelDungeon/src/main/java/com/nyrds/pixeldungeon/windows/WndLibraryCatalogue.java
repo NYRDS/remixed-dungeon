@@ -19,7 +19,7 @@ import java.util.List;
 
 public class WndLibraryCatalogue extends Window {
 
-	private static final int BTN_HEIGHT		  = 18;
+	private static final int BTN_HEIGHT		  = 16;
 	private static final int BTN_WIDTH		  = 38;
 	private static final int GAP			  = 4;
 
@@ -42,7 +42,7 @@ public class WndLibraryCatalogue extends Window {
 
 		//List of Accessories
 		//Title
-		Text listTitle = PixelScene.createMultiline(catalogueName, GuiProperties.titleFontSize());
+		Text listTitle = PixelScene.createMultiline(catalogueName, GuiProperties.mediumTitleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - GAP * 2);
 		listTitle.measure();
@@ -51,7 +51,6 @@ public class WndLibraryCatalogue extends Window {
 
 		add(listTitle);
 
-		yPos = (int) listTitle.bottom() + GAP;
 		//List<String> entriesList = getEntryList(catalogueNumber);
 
 		Component content = new Component();
@@ -62,17 +61,17 @@ public class WndLibraryCatalogue extends Window {
 			//Text
 			String entryName = entry;
 
-			Text name = PixelScene.createMultiline(entryName, GuiProperties.regularFontSize());
+			Text name = PixelScene.createMultiline(entryName, GuiProperties.mediumTitleFontSize());
 
 			name.hardlight(0xFFFFFF);
 
 			name.y = yPos + GAP;
-			name.maxWidth(WIDTH - GAP);
+			name.maxWidth(BTN_WIDTH * 3);
 			name.measure();
-			name.x = WIDTH / 2;
+			name.x = GAP;
 
 			content.add(name);
-			float rbY = name.bottom() + GAP * 2;
+			float rbY = name.bottom() + GAP;
 
 			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
 			final Window currentWindow = this;
@@ -87,16 +86,14 @@ public class WndLibraryCatalogue extends Window {
 				}
 			};
 
-			rb.setRect((WIDTH / 2) - (BTN_WIDTH / 2), GAP * 2 + name.bottom(), BTN_WIDTH, BTN_HEIGHT);
+			rb.setRect(WIDTH - BTN_WIDTH, yPos, BTN_WIDTH, BTN_HEIGHT);
 
 			content.add(rb);
 			yPos = (int) (rb.bottom() + GAP * 2);
 		}
 
 		int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
-		int h = Math.min(HEIGHT - GAP, yPos);
 
-		resize( WIDTH,  h);
 
 		content.setSize(WIDTH, yPos);
 		ScrollPane list = new ScrollPane(content);
@@ -104,8 +101,8 @@ public class WndLibraryCatalogue extends Window {
 
 		add(list);
 
-		float topGap = listTitle.y + listTitle.height() + GAP;
-		float BottomGap =  listTitle.height() + GAP * 5;
+		float topGap = listTitle.height() + GAP;
+		float BottomGap =  listTitle.bottom() + GAP * 5;
 
 		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
 
@@ -119,10 +116,13 @@ public class WndLibraryCatalogue extends Window {
 			}
 		};
 
-		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
+		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) yPos + GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
 
 		add(back);
 
-	}
+		int h = Math.min(HEIGHT - GAP, yPos);
 
+		resize( WIDTH,  h);
+
+	}
 }
