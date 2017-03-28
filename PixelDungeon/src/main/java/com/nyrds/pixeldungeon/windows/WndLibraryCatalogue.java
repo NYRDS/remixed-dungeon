@@ -3,39 +3,111 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class WndLibraryCatalogue extends Window {
 
-	private static final int BTN_HEIGHT	= 18;
-	private static final int BTN_WIDTH	= 38;
-	private static final int WIDTH		= 112;
-	private static final int GAP		= 4;
+	private static final int BTN_HEIGHT		  = 18;
+	private static final int BTN_WIDTH		  = 38;
+	private static final int GAP			  = 4;
+
+	private static final int HEIGHT_PORTRAIT  = 180;
+	private static final int HEIGHT_LANDSCAPE = (int) PixelScene.MIN_HEIGHT_L;
+	private static final int WIDTH			  = 112;
+
+	String[] dummyEntriesList = {
+			"Entry 1",
+			"Entry two",
+			"Three entries so far",
+			"Quadruple entry"
+	};
 
 	public WndLibraryCatalogue(int catalogueNumber, String catalogueName) {
 		super();
 		final Window context = this;
 
-		//Title text
-		Text tfTitle = PixelScene.createMultiline(catalogueName, GuiProperties.mediumTitleFontSize());
-		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.measure();
-		tfTitle.x = (WIDTH - tfTitle.width())/2;
-		tfTitle.y = GAP;
-		add(tfTitle);
+		int yPos = 0;
 
-		//Instruction text
-		Text message = PixelScene.createMultiline( "This is page of catalogue number: " + catalogueNumber + ". Named: " + catalogueName, GuiProperties.mediumTitleFontSize() );
-		message.maxWidth(WIDTH);
-		message.measure();
-		message.y = tfTitle.bottom()+ GAP;
-		add( message );
+		//List of Accessories
+		//Title
+		Text listTitle = PixelScene.createMultiline(catalogueName, GuiProperties.titleFontSize());
+		listTitle.hardlight(TITLE_COLOR);
+		listTitle.maxWidth(WIDTH - GAP * 2);
+		listTitle.measure();
+		listTitle.x = (WIDTH - listTitle.width()) / 2;
+		listTitle.y = GAP * 2;
+
+		add(listTitle);
+
+		yPos = (int) listTitle.bottom() + GAP;
+		//List<String> entriesList = getEntryList(catalogueNumber);
+
+		Component content = new Component();
+
+		//List
+		for (final String entry : dummyEntriesList) {
+
+			//Text
+			String entryName = entry;
+
+			Text name = PixelScene.createMultiline(entryName, GuiProperties.regularFontSize());
+
+			name.hardlight(0xFFFFFF);
+
+			name.y = yPos + GAP;
+			name.maxWidth(WIDTH - GAP);
+			name.measure();
+			name.x = WIDTH / 2;
+
+			content.add(name);
+			float rbY = name.bottom() + GAP * 2;
+
+			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
+			final Window currentWindow = this;
+
+			//Button
+			TextButton rb = new RedButton(buttonText) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+
+					GameScene.show(new WndLibraryEntry(entry));
+				}
+			};
+
+			rb.setRect((WIDTH / 2) - (BTN_WIDTH / 2), GAP * 2 + name.bottom(), BTN_WIDTH, BTN_HEIGHT);
+
+			content.add(rb);
+			yPos = (int) (rb.bottom() + GAP * 2);
+		}
+
+		int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
+		int h = Math.min(HEIGHT - GAP, yPos);
+
+		resize( WIDTH,  h);
+
+		content.setSize(WIDTH, yPos);
+		ScrollPane list = new ScrollPane(content);
+		list.dontCatchTouch();
+
+		add(list);
+
+		float topGap = listTitle.y + listTitle.height() + GAP;
+		float BottomGap =  listTitle.height() + GAP * 5;
+
+		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
 
 		//Back Button
 		TextButton back = new RedButton(Game.getVar(R.string.Wnd_Button_Back)) {
@@ -47,11 +119,10 @@ public class WndLibraryCatalogue extends Window {
 			}
 		};
 
-		back.setRect(GAP, (int) message.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
-		int h = (int) back.bottom()+ GAP;
+		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
 
 		add(back);
 
-		resize( WIDTH,  h);
 	}
+
 }
