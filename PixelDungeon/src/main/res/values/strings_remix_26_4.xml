@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+       <!-- Window descriptions -->
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Yes</string>
+    <string name="Wnd_Button_No">No</string>
+    <string name="Wnd_Button_Back">Back</string>
+    <string name="Wnd_Button_Cancel">Cancel</string>
+    <string name="Wnd_Button_Close">Close</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Btn">Catalogue</string>
+    <string name="WndLibrary_Catalogue_Title">Library</string>
+    <string name="WndLibrary_Catalogue_Instruction">You may choose the category from catalogue in order to find information that you are looking for.</string>
+    <string name="WndLibrary_Mobs_Btn">Monsters</string>
+    <string name="WndLibrary_Items_Btn">Items</string>
+    <string name="WndLibrary_Codex_Btn">Stories</string>
+    <string name="WndLibrary_Levels_Btn">Dungeon</string>
+</resources>

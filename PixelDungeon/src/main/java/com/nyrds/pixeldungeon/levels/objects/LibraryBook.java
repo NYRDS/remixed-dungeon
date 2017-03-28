@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.pixeldungeon.windows.WndLibrary;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -36,7 +37,7 @@ public class LibraryBook extends LevelObject {
 
 	@Override
 	public boolean interact(Hero hero) {
-		GameScene.show(new WndMessage(TEXT));
+		GameScene.show(new WndLibrary());
 
 		return super.interact(hero);
 	}
