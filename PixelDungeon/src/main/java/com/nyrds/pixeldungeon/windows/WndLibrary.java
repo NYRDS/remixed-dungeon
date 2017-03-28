@@ -13,7 +13,7 @@ public class WndLibrary extends Window {
 
 	private static final int BTN_HEIGHT	= 18;
 	private static final int BTN_WIDTH	= 38;
-	private static final int WIDTH		= 112;
+	private static final int WIDTH		= 100;
 	private static final int GAP		= 2;
 
 	String[] buttonLabels = {
@@ -27,7 +27,6 @@ public class WndLibrary extends Window {
 		super();
 		final Window context = this;
 
-		int h = 0;
 
 		//Title text
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
@@ -38,8 +37,6 @@ public class WndLibrary extends Window {
 		tfTitle.y = GAP;
 		add(tfTitle);
 
-		h = h + (int) tfTitle.bottom()+ GAP;
-
 		//Instruction text
 		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndLibrary_Catalogue_Instruction), GuiProperties.mediumTitleFontSize() );
 		message.maxWidth(WIDTH);
@@ -47,15 +44,13 @@ public class WndLibrary extends Window {
 		message.y = tfTitle.bottom()+ GAP;
 		add( message );
 
-		h = h + (int) message.bottom()+ GAP;
-
-		int buttonY = h;
+		int buttonY = (int) message.bottom()+ GAP;
 
 		//Button maker
 		for (int i = 0; i < buttonLabels.length; i++){
 
 			//Browse Button
-			TextButton browse = new RedButton(Game.getVar(R.string.WndLibrary_Catalogue_Btn)) {
+			TextButton browse = new RedButton(Game.getVar(R.string.WndLibrary_Mobs_Btn)) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -63,10 +58,17 @@ public class WndLibrary extends Window {
 				}
 			};
 
-			browse.setRect((WIDTH / 2) - (BTN_WIDTH / 2), buttonY + GAP, BTN_WIDTH,  BTN_HEIGHT);
+			int w = (int) ((WIDTH / 2) - (BTN_WIDTH * 1.1) - GAP);
+			if (i >= 2){
+				w = (WIDTH / 2) + (BTN_WIDTH/10) + GAP;
+			}
+			if (i == 2) {
+				buttonY = buttonY - (BTN_HEIGHT + GAP * 2) * 2;
+			}
+
+			browse.setRect(w, buttonY + GAP * 2, BTN_WIDTH,  BTN_HEIGHT);
 			add(browse);
 			buttonY = (int) browse.bottom();
-			h = h + (int) browse.bottom()+ GAP;
 		}
 
 		//Back Button
@@ -78,10 +80,9 @@ public class WndLibrary extends Window {
 			}
 		};
 
-		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2) , BTN_HEIGHT + GAP + buttonY, BTN_WIDTH, BTN_HEIGHT);
+		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2) , BTN_HEIGHT / 2 + GAP * 2 + buttonY, BTN_WIDTH, BTN_HEIGHT);
 		add(back);
 
-		h = h + (int) back.bottom()+ GAP;
-		resize( WIDTH,  170);
+		resize( WIDTH, (int) back.bottom() + BTN_HEIGHT / 2);
 	}
 }

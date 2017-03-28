@@ -9,9 +9,8 @@
     <string name="Wnd_Button_Close">Close</string>
 
     <!-- STRINGS OF WndLibrary CLASS -->
-    <string name="WndLibrary_Catalogue_Btn">Catalogue</string>
     <string name="WndLibrary_Catalogue_Title">Library</string>
-    <string name="WndLibrary_Catalogue_Instruction">You may choose the category from catalogue in order to find information that you are looking for.</string>
+    <string name="WndLibrary_Catalogue_Instruction">Please choose one of the categories below.</string>
     <string name="WndLibrary_Mobs_Btn">Monsters</string>
     <string name="WndLibrary_Items_Btn">Items</string>
     <string name="WndLibrary_Codex_Btn">Stories</string>
