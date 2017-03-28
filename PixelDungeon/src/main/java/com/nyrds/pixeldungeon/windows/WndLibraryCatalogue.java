@@ -93,7 +93,9 @@ public class WndLibraryCatalogue extends Window {
 		}
 
 		int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
+		int h = Math.min(HEIGHT - GAP, yPos);
 
+		resize( WIDTH,  h);
 
 		content.setSize(WIDTH, yPos);
 		ScrollPane list = new ScrollPane(content);
@@ -116,13 +118,9 @@ public class WndLibraryCatalogue extends Window {
 			}
 		};
 
-		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) yPos + GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
+		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
 
 		add(back);
-
-		int h = Math.min(HEIGHT - GAP, yPos);
-
-		resize( WIDTH,  h);
 
 	}
 }
