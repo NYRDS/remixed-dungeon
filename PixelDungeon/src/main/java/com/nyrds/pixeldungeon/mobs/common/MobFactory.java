@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
 import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
+import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
@@ -200,7 +201,7 @@ public class MobFactory {
 		registerMobClass(TownsfolkSilentNPC.class);
 		registerMobClass(BellaNPC.class);
 		registerMobClass(LibrarianNPC.class);
-
+		registerMobClass(FortuneTellerNPC.class);
 	}
 	
 	public static Class<? extends Mob> mobClassRandom() {
