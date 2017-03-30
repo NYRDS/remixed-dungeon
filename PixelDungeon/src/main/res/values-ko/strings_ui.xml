@@ -59,5 +59,6 @@
   <string name="WndSettings_ExperementalFont">새 폰트</string>
   <string name="WndSettings_ClassicFont">클래식 폰트</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">슬롯을 정하세요.</string>
   <!--STRINGS OF ModsButton CLASS-->
 </resources>

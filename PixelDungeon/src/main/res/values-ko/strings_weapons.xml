@@ -148,7 +148,7 @@
   <string name="MissileWeapon_Missiles">원거리 무기</string>
   <string name="MissileWeapon_Yes">그래, 내가 뭘하는진 내가 잘알아</string>
   <string name="MissileWeapon_No">아니, 생각을 바꿨어</string>
-  <string name="MissileWeapon_Sure">정말로 이 것을 근접 무기로 장비 하시겠습니까?</string>
+  <string name="MissileWeapon_Sure">정말로 이걸 근접 무기로 장비 하시겠습니까?</string>
   <string name="MissileWeapon_Info1">
 평균 데미지는 타격당 %d 포인트와 같다.</string>
   <string name="MissileWeapon_Info2">당신의 부족한 힘수치 때문에 %s 의 정확도와 속도가 감소됩니다.</string>

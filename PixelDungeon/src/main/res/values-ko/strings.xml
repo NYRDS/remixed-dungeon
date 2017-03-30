@@ -287,7 +287,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="Weightstone_WndChoice">%s 의 밸런스를 어떻게 조절하시겠습니까?</string>
   <string name="Weightstone_WndSpeed">속도</string>
   <string name="Weightstone_WndAccuracy">정확도</string>
-  <string name="Weightstone_WndCancel">신경쓰지마</string>
+  <string name="Weightstone_WndCancel">생각 없어</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
   <string name="Bag_ACOpen">OPEN</string>
@@ -352,7 +352,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="ToxicGas_Info">녹색 독성 가스구름이 소용돌이 칩니다.</string>
   <string name="ToxicGas_Info1">당신은 유독가스 흡입으로 사망하였습니다...</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
-  <string name="WaterOfAwareness_Info">지식의 힘이 우물에서 흘러나옵니다. 한모금 마시면 당신의 장착 아이템의 모든 정보를 알게 됩니다.</string>
+  <string name="WaterOfAwareness_Info">지식의 힘이 우물에서 흘러나옵니다. 한모금 마시면 당신이 장착한 아이템의 모든 정보를 알게 됩니다.</string>
   <string name="WaterOfAwareness_Procced">한모금 마시자, 머리속이 맑아지며 지식이 쏟아져 들어옵니다. 이제 장착아이템에 대한 모든정보를 알게됩니다. 또 현재 층에 있는 모든 아이템과 비밀을 알수있게 되었습니다.</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
   <string name="WaterOfHealth_Info">좋은 물에서 힘의 원천이 나옵니다. 상처를 치유하고 굶주림을 채우기 위해 거기서 한모금 가져가세요.</string>
@@ -373,7 +373,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="Blindness_Info">실명</string>
   <!--STRINGS OF Burning CLASS-->
   <string name="Burning_Info">불타는</string>
-  <string name="Burning_Burns">%s 이/가 화상을 입었다!</string>
+  <string name="Burning_Burns">%s 이/가 화상을 입었습니다!</string>
   <string name="Burning_Death">불에 타죽었습니다...</string>
   <!--STRINGS OF Charm CLASS-->
   <string name="Charm_Info">매혹</string>
@@ -418,7 +418,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="Paralysis_Info">마비</string>
   <!--STRINGS OF Poison CLASS-->
   <string name="Poison_Info">중독</string>
-  <string name="Poison_Death">독에 의해 사망하였습니다...</string>
+  <string name="Poison_Death">독으로 죽었습니다...</string>
   <!--STRINGS OF Roots CLASS-->
   <string name="Roots_Info">묶임</string>
   <!--STRINGS OF Shadows CLASS-->
@@ -426,11 +426,11 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <!--STRINGS OF Slow CLASS-->
   <string name="Slow_Info">느려짐</string>
   <!--STRINGS OF SnipersMark CLASS-->
-  <string name="SnipersMark_Info">Sniper\'s mark</string>
+  <string name="SnipersMark_Info">저격수의 표시</string>
   <!--STRINGS OF Vertigo CLASS-->
   <string name="Vertigo_Info">어지러움</string>
   <!--STRINGS OF Weakness CLASS-->
-  <string name="Weakness_Info">쇠약함</string>
+  <string name="Weakness_Info">쇠약해짐</string>
   <!--PACKAGE /actors/hero-->
   <!--STRINGS OF Belongings CLASS-->
   <string name="Belongings_Name">가방</string>

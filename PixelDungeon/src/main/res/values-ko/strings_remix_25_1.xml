@@ -1,3 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">방향을 바꿀수가 없습니다!</string>
+
     </resources>
