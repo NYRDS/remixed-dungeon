@@ -1,3 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <string name="town_deco_snowman_name">눈사람</string>
+    <string name="town_deco_tree_name">나무</string>
+    <string name="town_deco_carpet_desc">호화로운 레드카펫이 특별한 손님을 위해 깔려있다.
+특별 손님을 위해 마련된 고급스러운 레드 카펫.</string>
+
+    <string name="town_deco_movies_door_name">문</string>
+    <string name="WndDonate_royalDonate">왕의 기부</string>
+
     </resources>

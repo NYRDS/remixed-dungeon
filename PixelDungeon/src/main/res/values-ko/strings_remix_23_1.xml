@@ -17,6 +17,7 @@
   <string name="TreacherousSpirit_Desc">이 흉측한 생물은 살아있는 어둠의 형상을 취하고 있다. 생기 없는 눈은 당신을 바라보고 있으며, 당신이 움직일 때 마다 박동하고 있다.</string>
   <!--STRINGS OF SpiritOfPain CLASS-->
   <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">수상한 쥐</string>
   <!--STRINGS OF PseudoRat CLASS-->
   <!--STRINGS OF ZombieGnoll CLASS-->
   <!--Items-->

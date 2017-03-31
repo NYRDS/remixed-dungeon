@@ -1,3 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">쥐 가죽</string>
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">쥐 가죽 갑옷</string>
+    <string name="RatArmor_Info">쥐의 가죽으로 만들어진 갑옷이다. 아마 병에 걸릴 염려는 안해도 될 것이다.</string>
+
+    <string name="PlagueDoctorNPC_Quest_Reminder">나한테 쥐가죽 %d개만 가져다 줘.</string>
     </resources>
