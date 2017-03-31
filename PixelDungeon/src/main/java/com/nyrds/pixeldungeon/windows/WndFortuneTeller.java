@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -10,6 +11,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -23,6 +25,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
 import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class WndFortuneTeller extends Window {
 
@@ -37,7 +40,7 @@ public class WndFortuneTeller extends Window {
 	private static final int WIDTH		= 120;
 	private static final int GOLD_COST  = 75;
 
-	public WndFortuneTeller() {
+	public WndFortuneTeller(FortuneTellerNPC fortune) {
 		
 		super();
 		
@@ -52,12 +55,28 @@ public class WndFortuneTeller extends Window {
 		message.measure();
 		message.y = titlebar.bottom() + GAP;
 		add( message );
-		
+
+		final FortuneTellerNPC npc = fortune;
+
 		RedButton btnYes = new RedButton( BTN_IDENTIFY + " ( "+ GOLD_COST + " )" ) {
 			@Override
 			protected void onClick() {
-				identify();
-				Dungeon.gold(Dungeon.gold() - GOLD_COST);
+				boolean hasTarget = false;
+
+				for (Item item : Dungeon.hero.belongings){
+					if (!item.isIdentified()){
+						hasTarget = true;
+						break;
+					}
+				}
+
+				if (hasTarget) {
+					identify();
+					Dungeon.gold(Dungeon.gold() - GOLD_COST);
+				} else{
+					hide();
+					GameScene.show(new WndQuest(npc, TXT_NO_ITEM));
+				}
 			}
 		};
 

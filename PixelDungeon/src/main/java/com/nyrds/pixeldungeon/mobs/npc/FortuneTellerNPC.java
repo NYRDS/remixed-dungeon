@@ -32,7 +32,7 @@ public class FortuneTellerNPC extends ImmortalNPC {
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
-		GameScene.show(new WndFortuneTeller());
+		GameScene.show(new WndFortuneTeller(this));
 		return true;
 	}
 
