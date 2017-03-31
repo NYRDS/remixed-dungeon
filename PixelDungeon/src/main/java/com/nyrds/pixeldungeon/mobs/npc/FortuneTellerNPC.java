@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndFortuneTeller;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -26,30 +27,12 @@ public class FortuneTellerNPC extends ImmortalNPC {
 	}
 
 
-	public static WndBag identify() {
-		return GameScene.selectItem( itemSelector, WndBag.Mode.UNIDENTIFED, Game.getVar(R.string.ScrollOfIdentify_InvTitle));
-	}
 
-	private static WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-
-				Dungeon.hero.getSprite().getParent().add( new Identification( Dungeon.hero.getSprite().center().offset( 0, -16 ) ) );
-
-				item.identify();
-				GLog.i(Utils.format(Game.getVar(R.string.ScrollOfIdentify_Info1), item));
-
-				Badges.validateItemLevelAquired( item );
-			}
-		}
-	};
 
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
-
-		identify();
+		GameScene.show(new WndFortuneTeller());
 		return true;
 	}
 

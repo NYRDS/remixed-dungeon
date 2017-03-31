@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">fortune-teller</string>
+    <string name="FortuneTellerNPC_Gender">masculine</string>
+    <string name="FortuneTellerNPC_Name_Objective">fortune-teller</string>
+    <string name="FortuneTellerNPC_Desc">That\'s a fortune-teller, alright.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">I can reveal secrets behind items, that you posses. \n One identification will cost you %d coins.</string>
+    <string name="WndFortuneTeller_No_Item">Careful, you don\'t want to spend your money for nothing? There is no unidentified items in your inventory.</string>
+    <string name="WndFortuneTeller_Title">Fortune-teller.</string>
+
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Yes</string>
+    <string name="Wnd_Button_No">No</string>
+    <string name="Wnd_Button_Back">Back</string>
+    <string name="Wnd_Button_Cancel">Cancel</string>
+    <string name="Wnd_Button_Close">Close</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">Library</string>
+    <string name="WndLibrary_Catalogue_Instruction">Please choose one of the categories below.</string>
+    <string name="WndLibrary_Mobs_Btn">Monsters</string>
+    <string name="WndLibrary_Items_Btn">Items</string>
+    <string name="WndLibrary_Codex_Btn">Stories</string>
+    <string name="WndLibrary_Levels_Btn">Dungeon</string>
+</resources>
