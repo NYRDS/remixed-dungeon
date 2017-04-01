@@ -3,18 +3,8 @@ package com.nyrds.pixeldungeon.mobs.npc;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndFortuneTeller;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Identification;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndBag;
-import com.watabou.pixeldungeon.windows.WndQuest;
-import com.watabou.pixeldungeon.windows.WndTradeItem;
 
 public class FortuneTellerNPC extends ImmortalNPC {
 
@@ -26,9 +16,6 @@ public class FortuneTellerNPC extends ImmortalNPC {
 	public FortuneTellerNPC() {
 	}
 
-
-
-
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
@@ -37,5 +24,3 @@ public class FortuneTellerNPC extends ImmortalNPC {
 	}
 
 }
-
-
