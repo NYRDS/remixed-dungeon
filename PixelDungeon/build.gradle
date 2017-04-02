@@ -13,7 +13,10 @@ android {
     buildToolsVersion '25.0.2'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        minSdkVersion 9
+        versionCode 402
+        versionName "remix.26.4.alpha.2"
+
+        minSdkVersion 14
         targetSdkVersion 23
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
         // Enabling multidex support.
@@ -38,34 +41,39 @@ android {
     dexOptions {
         javaMaxHeapSize "2g"
         additionalParameters = ["--set-max-idx-number=45000"]
-
-
     }
     lintOptions {
         abortOnError false
     }
+
     productFlavors {
-        GooglePlay {
+        googlePlayRetro {
+            minSdkVersion 9
+            targetSdkVersion 14
         }
-        ChromeWebStore {
+        googlePlay {
+
         }
-        Amazon {
-        }
-        Fdroid {
-        }
-        Yandex {
-        }
+
     }
 }
 
 dependencies {
-    compile 'com.google.android.gms:play-services-ads:9.0.2'
-    compile 'com.google.android.gms:play-services-base:9.0.2'
-    compile 'com.google.android.gms:play-services-analytics:9.0.2'
-    compile project(':cheetah-mobile-3.4.7')
-    compile 'ch.acra:acra:4.8.1@aar'
+    //compile 'ch.acra:acra:4.8.1@aar'
+
+    googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
+    googlePlayRetroCompile 'com.google.android.gms:play-services-base:9.0.2'
+    googlePlayRetroCompile 'com.google.android.gms:play-services-analytics:9.0.2'
+
+
+    googlePlayCompile 'com.google.android.gms:play-services-ads:10.2.1'
+    googlePlayCompile 'com.google.android.gms:play-services-base:10.2.1'
+    googlePlayCompile 'com.google.android.gms:play-services-analytics:10.2.1'
+    googlePlayCompile project(':cheetah-mobile-3.4.7')
+    //googlePlayCompile 'com.google.firebase:firebase-crash:10.2.1'
+    googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
+    googlePlayCompile 'com.android.support:multidex:1.0.1'
+
     compile 'com.android.support:support-v4'
-    compile fileTree(dir: 'lib', include: '*.jar')
-    compile 'com.android.support:multidex:1.0.1'
 }
 
