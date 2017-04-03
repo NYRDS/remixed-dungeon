@@ -4,8 +4,6 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
-import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.support.RewardVideoAds;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;

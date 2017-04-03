@@ -2,8 +2,7 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
-import com.nyrds.pixeldungeon.support.RewardVideoAds;
+import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -21,7 +20,7 @@ public class ServiceManNPC extends ImmortalNPC {
 
 	public ServiceManNPC() {
 		//AppodealRewardVideo.initCinemaRewardVideo();
-		//RewardVideoAds.initCinemaRewardVideo();
+		//GoogleRewardVideoAds.initCinemaRewardVideo();
 	}
 
 	@Override
@@ -55,7 +54,7 @@ public class ServiceManNPC extends ImmortalNPC {
 			return true;
 		}
 
-		if(RewardVideoAds.isReady() || AppodealRewardVideo.isReady()) {
+		if(RewardVideo.isReady()) {
 			GameScene.show(new WndMovieTheatre(this));
 		} else {
 			say(Game.getVar(R.string.ServiceManNPC_NotReady));

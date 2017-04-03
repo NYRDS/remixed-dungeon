@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.nyrds.pixeldungeon.ml"
           xmlns:android="http://schemas.android.com/apk/res/android"
->
+          xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-sdk tools:overrideLibrary="com.google.android.gms.ads,
+                                     com.google.android.gms,
+                                     com.google.android.gms.base,
+                                     com.google.android.gms.analytics,
+                                     com.google.android.gms:play-services-ads,
+                                     com.google.android.gms.ads.impl,
+                                     com.google.android.gms.clearcut,
+                                     com.google.android.gms:play-services-gass,
+                                     com.google.android.gms.gass,
+                                     com.google.android.gms.tagmanager,
+                                     com.google.android.gms.tasks"/>
 
     <application>
-
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data
             android:name="com.google.android.gms.version"

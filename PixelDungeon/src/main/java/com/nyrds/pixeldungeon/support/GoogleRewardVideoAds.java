@@ -16,7 +16,7 @@ import com.watabou.noosa.InterstitialPoint;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class RewardVideoAds {
+public class GoogleRewardVideoAds {
 
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static RewardVideoAdListener rewardVideoAdListener = new RewardVideoAdListener();

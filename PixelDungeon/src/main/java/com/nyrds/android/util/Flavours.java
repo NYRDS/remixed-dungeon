@@ -9,19 +9,16 @@ import com.watabou.pixeldungeon.PixelDungeon;
  */
 public class Flavours {
 
-	public static final String CHROME_WEB_STORE = "ChromeWebStore";
-	public static final String AMAZON           = "Amazon";
-	public static final String YANDEX           = "Yandex";
-	public static final String GOOGLE_PLAY      = "GooglePlay";
+	private static final String GOOGLE_PLAY       = "GooglePlay";
+	private static final String GOOGLE_PLAY_RETRO = "GooglePlayRetro";
 
 	public static boolean haveHats() {
-		return BuildConfig.FLAVOR.equals(GOOGLE_PLAY)
+		return ( BuildConfig.FLAVOR.equals(GOOGLE_PLAY) || BuildConfig.FLAVOR.equals(GOOGLE_PLAY_RETRO) )
 				&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
 	}
 
-
 	public static boolean haveDonations() {
-		return (BuildConfig.FLAVOR.equals(GOOGLE_PLAY) || BuildConfig.FLAVOR.equals(CHROME_WEB_STORE))
+		return (BuildConfig.FLAVOR.equals(GOOGLE_PLAY) || BuildConfig.FLAVOR.equals(GOOGLE_PLAY_RETRO))
 				&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
 
 
@@ -29,7 +26,6 @@ public class Flavours {
 
 	public static boolean haveAds() {
 		return BuildConfig.FLAVOR.equals(GOOGLE_PLAY)
-				|| BuildConfig.FLAVOR.equals(AMAZON)
-				|| BuildConfig.FLAVOR.equals(YANDEX);
+				|| BuildConfig.FLAVOR.equals(GOOGLE_PLAY_RETRO);
 	}
 }
