@@ -52,17 +52,20 @@ android {
             targetSdkVersion 14
         }
         googlePlay {
-
+            versionCode defaultConfig.versionCode + 1000
         }
 
     }
 }
 
 dependencies {
-    //compile 'ch.acra:acra:4.8.1@aar'
+    googlePlayRetroCompile 'ch.acra:acra:4.8.1@aar'
 
+    //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
+    //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-base:9.0.2'
+    //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-analytics:9.0.2'
 
 
@@ -70,7 +73,7 @@ dependencies {
     googlePlayCompile 'com.google.android.gms:play-services-base:10.2.1'
     googlePlayCompile 'com.google.android.gms:play-services-analytics:10.2.1'
     googlePlayCompile project(':cheetah-mobile-3.4.7')
-    //googlePlayCompile 'com.google.firebase:firebase-crash:10.2.1'
+    googlePlayCompile 'com.google.firebase:firebase-crash:10.2.1'
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.1'
 
