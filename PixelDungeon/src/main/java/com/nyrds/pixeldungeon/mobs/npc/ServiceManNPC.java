@@ -16,8 +16,10 @@ import com.watabou.utils.Bundle;
 
 public class ServiceManNPC extends ImmortalNPC {
 
+
 	private int filmsSeen = 0;
 	final private String FILMS_SEEN = "films_seen";
+	final private String LIMIT_REACHED = Utils.format(Game.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit());
 
 	public ServiceManNPC() {
 		//AppodealRewardVideo.initCinemaRewardVideo();
@@ -50,18 +52,22 @@ public class ServiceManNPC extends ImmortalNPC {
 			return true;
 		}
 
-		if(filmsSeen >= 5){
-			say( Utils.format(Game.getVar(R.string.ServiceManNPC_Limit), 5) );
+		if(filmsSeen >= getLimit()){
+			GameScene.show(new WndQuest(this, LIMIT_REACHED));
 			return true;
 		}
 
 		if(RewardVideoAds.isReady() || AppodealRewardVideo.isReady()) {
-			GameScene.show(new WndMovieTheatre(this));
+			GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit()));
 		} else {
 			say(Game.getVar(R.string.ServiceManNPC_NotReady));
 		}
 
 		return true;
+	}
+
+	private int getLimit(){
+		return 4 + Dungeon.hero.lvl();
 	}
 
 }
