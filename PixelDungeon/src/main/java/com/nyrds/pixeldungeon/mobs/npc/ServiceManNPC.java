@@ -21,8 +21,6 @@ public class ServiceManNPC extends ImmortalNPC {
 	final private String LIMIT_REACHED = Utils.format(Game.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit());
 
 	public ServiceManNPC() {
-		//AppodealRewardVideo.initCinemaRewardVideo();
-		//GoogleRewardVideoAds.initCinemaRewardVideo();
 	}
 
 	@Override
