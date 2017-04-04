@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">You can only wear 2 artifacts at a time</string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF FortuneTellerNPC CLASS -->
     <string name="FortuneTellerNPC_Name">fortune-teller</string>
     <string name="FortuneTellerNPC_Gender">masculine</string>
     <string name="FortuneTellerNPC_Name_Objective">fortune-teller</string>
     <string name="FortuneTellerNPC_Desc">That\'s a fortune-teller, alright.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Limit_Reached">I do apologise, but you\'ve reached your current limit. But you\'ll be able to use our service again for every hero level you receive!</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndFortuneTeller CLASS -->
@@ -27,4 +34,7 @@
     <string name="WndLibrary_Items_Btn">Items</string>
     <string name="WndLibrary_Codex_Btn">Stories</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">You watched %1$d out of %2$d times. You will get additional opportunity to watch a movie for every new hero level.</string>
 </resources>

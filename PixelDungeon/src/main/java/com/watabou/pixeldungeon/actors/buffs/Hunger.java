@@ -108,6 +108,10 @@ public class Hunger extends Buff implements Hero.Doom {
 				if(hero.getDifficulty() == 0) {
 					delta *= 0.8;
 				}
+
+				if(Dungeon.level.isSafe()){
+					delta = 0;
+				}
 				
 				float newLevel = level + delta;
 				boolean statusUpdated = false;

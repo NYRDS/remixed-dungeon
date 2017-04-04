@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
@@ -146,14 +147,14 @@ public enum HeroClass {
 		hero.collect(new PlateArmor().identify().upgrade(9));
 		hero.collect(new RatHide());
 
-		hero.collect(new RatArmor());
+		hero.collect(new ScrollOfIdentify());
 
-		hero.ht(1000);
-		hero.hp(1000);
+		hero.ht(10);
+		hero.hp(10);
 		hero.attackSkill = 1000;
 
 		Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
-		hero.defenseSkill = 1000;
+		hero.defenseSkill = 10;
 	}
 
 	private static void initForClass(Hero hero, String className) {

@@ -23,7 +23,7 @@ public class Artifact extends EquipableItem {
 
 		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null) {
 
-			GLog.w(Game.getVar(R.string.Ring_Info1));
+			GLog.w(Game.getVar(R.string.Artifact_Limit));
 			return false;
 
 		} else {

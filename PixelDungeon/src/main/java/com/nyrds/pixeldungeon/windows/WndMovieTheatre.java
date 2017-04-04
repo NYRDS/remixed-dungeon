@@ -37,7 +37,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 	private ServiceManNPC serviceMan;
 
-	public WndMovieTheatre(final ServiceManNPC npc) {
+	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit) {
 		
 		super();
 
@@ -49,7 +49,10 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( Utils.format(TXT_INSTRUCTION, GOLD_REWARD), GuiProperties.regularFontSize() );
+		String instruction = Utils.format(TXT_INSTRUCTION, GOLD_REWARD) + "\n\n" + Utils.format(Game.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit);
+
+		Text message = PixelScene.createMultiline( instruction, GuiProperties.regularFontSize() );
+
 		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;

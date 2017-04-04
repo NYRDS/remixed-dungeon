@@ -50,7 +50,7 @@
 
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
-    <string name="NecromancerRobe_PetLimitReached">You cannot control more than %1$d minions with this item!</string>
+    <string name="NecromancerRobe_PetLimitReached">Necromancy: summon limit reached (Current max %d)!</string>
     <string name="Necromancy_NotEnoughSouls">You do not have enough souls to cast a \"%1$s\" spell.</string>
 
     <string name="Necromancy_SoulsCountLabel">Souls</string>

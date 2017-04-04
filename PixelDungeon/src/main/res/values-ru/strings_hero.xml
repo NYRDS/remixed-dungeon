@@ -17,7 +17,7 @@
   <string name="Hero_StaParalysis">Тебя парализовало!</string>
   <string name="Hero_StaPoison">Ты отравлен!</string>
   <string name="Hero_StaOoze">Едкий ил поедает твою плоть. Смой его!</string>
-  <string name="Hero_StaRoots">Ты не можешь сдвинутся!</string>
+  <string name="Hero_StaRoots">Ты не можешь сдвинуться!</string>
   <string name="Hero_StaWeakness">Тебя охватила слабость!</string>
   <string name="Hero_StaBlindness">Тебя ослепили!</string>
   <string name="Hero_StaFury">Ты впал в ярость!</string>

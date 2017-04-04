@@ -50,7 +50,7 @@
 
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
-    <string name="NecromancerRobe_PetLimitReached">Этот предмет может призывать не более %1$d монстра за раз!</string>
+    <string name="NecromancerRobe_PetLimitReached">Некромантия: лимит призыва достигнут (Текущий максимум: %d)!</string>
     <string name="Necromancy_NotEnoughSouls">У тебя не достаточно душ для заклинания \"%1$s\".</string>
 
     <string name="Necromancy_SoulsCountLabel">Души</string>
