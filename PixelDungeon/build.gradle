@@ -74,6 +74,7 @@ dependencies {
     googlePlayCompile 'com.google.android.gms:play-services-analytics:10.2.1'
     googlePlayCompile project(':cheetah-mobile-3.4.7')
     googlePlayCompile 'com.google.firebase:firebase-crash:10.2.1'
+    googlePlayCompile 'com.google.firebase:firebase-core:10.2.1'
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.1'
 

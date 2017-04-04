@@ -9,16 +9,16 @@ public class TrackedRuntimeException extends RuntimeException {
 
 	public TrackedRuntimeException( Exception e) {
 		super(e);
-		EventCollector.logFatalException(e,"");
+		EventCollector.logException(e,"");
 	}
 
 	public TrackedRuntimeException( String s) {
 		super(s);
-		EventCollector.logFatalException(this,s);
+		EventCollector.logException(this,s);
 	}
 
     public TrackedRuntimeException( String s,Exception e) {
         super(s,e);
-        EventCollector.logFatalException(this,s);
+        EventCollector.logException(this,s);
     }
 }

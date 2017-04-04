@@ -127,7 +127,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			} else {
 				ret = stat.getAvailableBytes();
 			}
-		    Util.storeEventInAcra("FreeInternalMemorySize", Long.toString(ret));
+			EventCollector.logEvent("FreeInternalMemorySize", Long.toString(ret));
 			return ret;
 		}
 
@@ -140,7 +140,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void useLocale(String lang) {
-		Util.storeEventInAcra("Locale", lang);
+		EventCollector.logEvent("Locale", lang);
 
 		Locale locale;
 		if (lang.equals("pt_BR")) {

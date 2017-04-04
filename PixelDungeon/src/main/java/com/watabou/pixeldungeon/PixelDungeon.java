@@ -26,7 +26,6 @@ import android.view.View;
 
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -334,8 +333,8 @@ public class PixelDungeon extends Game {
 
 		PixelDungeon.instance().setSelectedLanguage();
 
-		Util.storeEventInAcra("RPD_active_mod", ModdingMode.activeMod());
-		Util.storeEventInAcra("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
+		EventCollector.logEvent("RPD_active_mod", ModdingMode.activeMod());
+		EventCollector.logEvent("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
 		ModsButton.modUpdated();
 	}
 	
