@@ -127,7 +127,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			} else {
 				ret = stat.getAvailableBytes();
 			}
-			EventCollector.logEvent("FreeInternalMemorySize", Long.toString(ret));
+			EventCollector.collectSessionData("FreeInternalMemorySize", Long.toString(ret));
 			return ret;
 		}
 
@@ -140,7 +140,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void useLocale(String lang) {
-		EventCollector.logEvent("Locale", lang);
+		EventCollector.collectSessionData("Locale", lang);
 
 		Locale locale;
 		if (lang.equals("pt_BR")) {
@@ -207,7 +207,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		EventCollector.init(this);
 
 		if(!BuildConfig.DEBUG) {
-			EventCollector.logEvent("apk signature",Util.getSignature(this));
+			EventCollector.collectSessionData("apk signature",Util.getSignature(this));
 		}
 
 		FileSystem.setContext(context);

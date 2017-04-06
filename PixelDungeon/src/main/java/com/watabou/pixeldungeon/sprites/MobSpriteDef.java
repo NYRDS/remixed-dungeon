@@ -56,7 +56,7 @@ public class MobSpriteDef extends MobSprite {
 	@Override
 	public void selectKind(int kind) {
 
-		EventCollector.logEvent("selectKind", name);
+		EventCollector.collectSessionData("selectKind", name);
 
 		this.kind = kind;
 		JSONObject json = defMap.get(name);

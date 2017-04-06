@@ -101,7 +101,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (hasExit(0)) {
-			EventCollector.logEvent("bug", "wrong exit index");
+			EventCollector.logEvent(EventCollector.BUG, "wrong exit index");
 			return exitMap.get(0);
 		}
 

@@ -9,6 +9,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by mike on 09.03.2016.
@@ -20,6 +21,8 @@ public class EventCollector {
 	static private FirebaseAnalytics mFirebaseAnalytics;
 
 	static private boolean mDisabled = true;
+
+	static private Map<String,String> mDataForCrash = new HashMap<>();
 
 	static private HashMap<String, Long> timings;
 
@@ -39,10 +42,21 @@ public class EventCollector {
 		mDisabled = true;
 	}
 
+	static public void collectSessionData(String key, String value) {
+		mDataForCrash.put(key,value);
+	}
+
+	static private void putSessionDataToBundle(Bundle bundle) {
+		for(Map.Entry<String,String> entry:mDataForCrash.entrySet()) {
+			bundle.putString(entry.getKey(),entry.getValue());
+		}
+	}
+
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
 			Bundle bundle = new Bundle();
 			bundle.putString("event", event);
+			putSessionDataToBundle(bundle);
 			mFirebaseAnalytics.logEvent(category,bundle);
 		}
 	}
@@ -52,6 +66,7 @@ public class EventCollector {
 			Bundle bundle = new Bundle();
 			bundle.putString("event", event);
 			bundle.putString("label", label);
+			putSessionDataToBundle(bundle);
 			mFirebaseAnalytics.logEvent(category,bundle);
 		}
 	}

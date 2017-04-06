@@ -334,7 +334,7 @@ public class Bundle {
 		try {
 			BufferedReader reader = new BufferedReader( new InputStreamReader( stream ) );
 			String line = reader.readLine();
-			EventCollector.logEvent("Bundle read line",line);
+			EventCollector.collectSessionData("Bundle read line",line);
 			JSONObject json = (JSONObject)new JSONTokener(line).nextValue();
 			reader.close();
 			return new Bundle( json );

@@ -97,7 +97,7 @@ public class PixelDungeon extends Game {
 		
 		ModdingMode.setClassicTextRenderingMode(PixelDungeon.classicFont());
 
-		EventCollector.logEvent("font", String.valueOf(PixelDungeon.classicFont()));
+		EventCollector.collectSessionData("font", String.valueOf(PixelDungeon.classicFont()));
 
 		setSelectedLanguage();
 		ItemSpritesDescription.readItemsDesc();
@@ -333,8 +333,8 @@ public class PixelDungeon extends Game {
 
 		PixelDungeon.instance().setSelectedLanguage();
 
-		EventCollector.logEvent("RPD_active_mod", ModdingMode.activeMod());
-		EventCollector.logEvent("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
+		EventCollector.collectSessionData("RPD_active_mod", ModdingMode.activeMod());
+		EventCollector.collectSessionData("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
 		ModsButton.modUpdated();
 	}
 	
