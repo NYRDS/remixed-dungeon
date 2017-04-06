@@ -2,7 +2,7 @@
 <resources>
     <!-- Items descriptions -->
     <!-- STRINGS OF Artifact CLASS -->
-    <string name="Artifact_Limit">You can only wear 2 artifacts at a time</string>
+    <string name="Artifact_Limit">You can only wear 2 artifacts at a time.</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF FortuneTellerNPC CLASS -->
@@ -16,8 +16,8 @@
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndFortuneTeller CLASS -->
-    <string name="WndFortuneTeller_Instruction">I can reveal secrets behind items, that you posses. \n One identification will cost you %d coins.</string>
-    <string name="WndFortuneTeller_No_Item">Careful, you don\'t want to spend your money for nothing? There is no unidentified items in your inventory.</string>
+    <string name="WndFortuneTeller_Instruction">I can reveal secrets behind items, that you posses.\nOne identification will cost you %d coins.</string>
+    <string name="WndFortuneTeller_No_Item">Careful, you don\'t want to spend your money for nothing, right? There is no unidentified items in your inventory.</string>
     <string name="WndFortuneTeller_Title">Fortune-teller.</string>
 
     <!-- STRINGS OF Generic Button labels -->
@@ -37,4 +37,13 @@
 
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="WndMovieTheatre_Instruction_2">You watched %1$d out of %2$d times. You will get additional opportunity to watch a movie for every new hero level.</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">Carpet</string>
+    <string name="town_deco_blue_carpet_desc">An exquisite blue carpet, decorated with purple silk.</string>
+
+    <string name="town_table_fortune_name">Table</string>
+    <string name="town_table_fortune_desc">This table is covered with silk blanket. You can see various tarot cards laid out in a peculiar order.</string>
+
 </resources>

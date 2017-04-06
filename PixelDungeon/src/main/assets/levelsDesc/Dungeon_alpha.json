@@ -9,6 +9,7 @@
     "movie_theater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "isSafe":true, "file":"levelsDesc/Theater.json", "music":"ost_town_1.mp3"},
     "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "music":"ost_town_1.mp3"},
     "town_shop":{"kind":"TownShopLevel", "depth":1, "size":[32,32], "isSafe":true, "music":"ost_town_1.mp3"},
+    "fortune_shop":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/FortuneShop.json", "noFogOfWar":true, "isSafe":true, "music":"ost_town_1.mp3"},
 
     "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
 
@@ -68,9 +69,10 @@
 
     "town_shop":[[],["town"],[1]],
     "movie_theater":[[],["town"],[2]],
-    "library":[[],["town"],[5]],
     "church":[[],["town"],[4]],
-    "town":[["town_shop", "movie_theater", "1", "church", "library"],[]],
+    "library":[[],["town"],[5]],
+    "fortune_shop":[[],["town"],[6]],
+    "town":[["town_shop", "movie_theater", "1", "church", "library", "fortune_shop"],[]],
 
     "1":[["2"],["town"],[3]],
       "2":[["3"],["1"]],
