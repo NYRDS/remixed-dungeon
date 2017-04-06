@@ -3,5 +3,80 @@
     <!-- Item descriptions -->
     <!-- STRINGS OF ElvenBow CLASS -->
     <string name="ElvenBow_Name">精灵长弓</string>
+    <string name="ElvenBow_Info">精灵手工的一个代表,比普通木弓更强,更准。</string>
+
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">老鼠腿</string>
+    <string name="RatHide_Info">又脏又臭的带毛肉皮,这真的有用吗?</string>
+
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">鼠甲</string>
+    <string name="RatArmor_Info">由鼠皮制成的皮甲,它应该不带病…</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">瘟疫巫医</string>
     <string name="PlagueDoctorNPC_Gender">雄性</string>
-    </resources>
+    <string name="PlagueDoctorNPC_Name_Objective">瘟疫巫医</string>
+    <string name="PlagueDoctorNPC_Desc">散发奇怪味道的...皮革?下面应该是个人吧...</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿%d只老鼠皮，这样我就可以做一些额外的测试了。
+</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿%d只老鼠皮，这样我就可以做一些额外的测试了。
+</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">给我%d个老鼠腿。</string>
+    <string name="PlagueDoctorNPC_Quest_End">啊，谢谢，我希望我能找到病原体。过去我什么都没找到。所以我在等你的时候为你做了这个。</string>
+    <string name="PlagueDoctorNPC_After_Quest">我会证明的,我会证明给他们看!</string>
+    <string name="Journal_PlagueDoctorNPC">瘟疫巫医</string>
+
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">城鎮居民</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">城鎮居民</string>
+    <string name="TownsfolkMovieNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
+    <string name="TownsfolkMovieNPC_Message">你知道“电影院”提供的那种特殊服务吗？太糟糕了，他们需要叫“互联网”的东西才能使用，我从来没有听说过叫“互联网”的东西。</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Name">图书管理员</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
+    <string name="LibrarianNPC_Name_Objective">图书管理员</string>
+    <string name="LibrarianNPC_Desc">很害羞的人,厚重的眼镜和难看的毛衣证明了这点。</string>
+    <string name="LibrarianNPC_Message_Not_Ready">抱...抱歉,图-图书馆现在还没开放。</string>
+
+
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">城鎮居民</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">城鎮居民</string>
+    <string name="TownsfolkSilentNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
+    <string name="TownsfolkSilentNPC_Message1">哼!</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">嗯...</string>
+
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">抱歉，这儿在这个版本还没建好!</string>
+
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">贝拉</string>
+    <string name="BellaNPC_Gender">feminine</string>
+    <string name="BellaNPC_Name_Objective">贝拉</string>
+    <string name="BellaNPC_Desc">漂亮的大姐姐,对所有人都好的那种。</string>
+    <string name="BellaNPC_Message">抱歉,你是个好人!</string>
+    <string name="BellaNPC_Amulet_M">但是你的那个护符...我们约会吧!</string>
+    <string name="BellaNPC_Amulet_F">但是你的那个护符...我们百合吧!</string>
+    <string name="BellaNPC_Angry">流氓,滚!</string>
+    <string name="BellaNPC_Yes_End_Game">好啊(结束游戏)</string>
+    <string name="BellaNPC_No">过去对我爱搭不理,今天让你高攀不起</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">对不起，您现在不能使用我们的服务(需要互联网连接)</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">門</string>
+    <string name="town_deco_common_door_desc">有礼的冒险家不应不请自来。</string>
+
+    <string name="town_deco_dungeon_door_name">入口</string>
+    <string name="town_deco_dungeon_door_desc">地牢的入口。</string>
+
+</resources>
