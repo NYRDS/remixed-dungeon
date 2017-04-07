@@ -251,6 +251,8 @@ public class DungeonGenerator {
 
 	public static boolean isSafe(String id) {return getLevelProperty(id,"isSafe",false);}
 
+	public static boolean isStatic(String id) {return getLevelProperty(id,"isStatic",false);}
+
 	@Nullable
 	public static String tiles(String id) {
 		return getLevelProperty(id, "tiles");
