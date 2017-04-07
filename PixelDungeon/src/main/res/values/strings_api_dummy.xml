@@ -17,9 +17,5 @@
     <string name="google_app_id" translatable="false"></string>
     <string name="google_crash_reporting_api_key" translatable="false"></string>
     <string name="google_storage_bucket" translatable="false"></string>
-    
-    <!-- analytics stuff-->
-    <integer name="ga_sessionTimeout"></integer>
-    <bool name="ga_autoActivityTracking"></bool>
-    <string name="ga_trackingId"></string>
+
 </resources>
