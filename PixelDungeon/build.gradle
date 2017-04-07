@@ -14,14 +14,12 @@ android {
     buildToolsVersion '25.0.2'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 402
-        versionName "remix.26.4.alpha.2"
+        versionCode 411
+        versionName "remix.26.4.alpha.5"
 
         minSdkVersion 14
         targetSdkVersion 23
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
-        // Enabling multidex support.
-        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -53,7 +51,9 @@ android {
             targetSdkVersion 14
         }
         googlePlay {
-            versionCode defaultConfig.versionCode + 1000
+            versionCode defaultConfig.versionCode + 10000
+            // Enabling multidex support.
+            multiDexEnabled true
         }
 
     }
