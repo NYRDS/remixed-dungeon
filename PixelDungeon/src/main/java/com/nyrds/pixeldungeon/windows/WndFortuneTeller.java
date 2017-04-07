@@ -9,6 +9,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -31,12 +32,17 @@ public class WndFortuneTeller extends Window {
 
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
-	private static final int GOLD_COST  = 50;
+	private int GOLD_COST  = 50;
 
 	public WndFortuneTeller(FortuneTellerNPC fortune) {
 		
 		super();
-		
+
+		if (Dungeon.hero.belongings.ring1 instanceof RingOfHaggler || Dungeon.hero.belongings.ring2 instanceof RingOfHaggler )
+		{
+			GOLD_COST = (int) (GOLD_COST * 0.9);
+		}
+
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite(new Gold()) );
 		titlebar.label( Utils.capitalize( TXT_TITLE ) );

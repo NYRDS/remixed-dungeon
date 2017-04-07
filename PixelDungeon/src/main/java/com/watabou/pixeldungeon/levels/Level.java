@@ -1555,4 +1555,7 @@ public abstract class Level implements Bundlable {
 	public boolean isSafe() {
 		return DungeonGenerator.isSafe(levelId);
 	}
+	public boolean isStatic() {
+		return DungeonGenerator.isStatic(levelId);
+	}
 }

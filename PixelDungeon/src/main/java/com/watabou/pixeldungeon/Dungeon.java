@@ -492,7 +492,7 @@ public class Dungeon {
 
 		InputStream input;
 
-		if (FileSystem.getFile(loadFrom).exists()) {
+		if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists() ) {
 			input = new FileInputStream(FileSystem.getFile(loadFrom));
 			Dungeon.level = null;
 		} else {
