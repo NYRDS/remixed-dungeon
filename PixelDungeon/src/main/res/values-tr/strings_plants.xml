@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE pixeldungeon/plants-->
   <!--STRINGS OF Plant CLASS-->
-  <string name="Plant_ACPlant">bitki</string>
+  <string name="Plant_ACPlant">dik.</string>
   <string name="Plant_Info">bu tohumun nerede büyümesini istiyosan oraya fırlat %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">%s tohumu</string>
   <!--STRINGS OF Dreamweed CLASS-->

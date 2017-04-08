@@ -1,3 +1,96 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">köy gardiyanı</string>
+    <string name="TownGuardNPC_Gender">erkek</string>
+    <string name="TownGuardNPC_Name_Objective">köy gardiyanı</string>
+    <string name="TownGuardNPC_Desc">sıradan bir köy gardiyanı</string>
+    <string name="TownGuardNPC_Message1">ilerle</string>
+    <string name="TownGuardNPC_Message2">senin gibi maceracılara teşekkürler.  buralar gerçekten çok huzurlu oluyor</string>
+    <string name="TownGuardNPC_Message3">burda çok fazla gardiyan olduğunu mu düşünüyorsun ? ee canavarlar tarafından ele geçirilmiş devasa tek zindan burası değil mi ?</string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">köylü</string>
+    <string name="TownsfolkNPC_Gender">erkek</string>
+    <string name="TownsfolkNPC_Name_Objective">köylü</string>
+    <string name="TownsfolkNPC_Desc">yerlilerden birtanesi ve kıyafetleri pahalı gözüküyor</string>
+    <string name="TownsfolkNPC_Message1">ah ! başka bir maceracı ! ne sevimli toplayabildiğin kadar eşya toplayacağından emin ol </string>
+    <string name="TownsfolkNPC_Message3">ne güzel bir gün </string>
+    <!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">köy papazı</string>
+    <string name="HealerNPC_Gender">erkek</string>
+    <string name="HealerNPC_Name_Objective">köy papazı</string>
+    <string name="HealerNPC_Desc">yaşlı bir adam,asa yapabilecek biri gibi duruyor </string>
+    <string name="HealerNPC_Message2">ne zaman hasta yada aç hissedersen geri gel </string>
+    <string name="HealerNPC_Message3">kiliseye girerken neden şapka takmamıza izin vermiyorlar anlamıyorum.... burası gerçekten çok soğuk </string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">eleman </string>
+    <string name="ServiceManNPC_Gender">erkek</string>
+    <string name="ServiceManNPC_Name_Objective">eleman </string>
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">mağaza sahib</string>
+    <string name="TownShopkeeper_Desc">bu adam tipik bir esnaf. bir ürün söylediğin zaman fiyatını herzaman bilir </string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">film izle </string>
+    <string name="WndMovieTheatre_No">ayrıl</string>
+    <string name="WndMovieTheatre_Bye">istediğin zaman geri gel, seni görmekten her zaman memnun oluruz </string>
+    <string name="WndMovieTheatre_Instruction">tiyatroya hoşgeldiniz ! özel bir servis sunuyoruz ! film izleyebilirsiniz ve tamamını izlerseniz %d altınla ödüllendirileceksiniz </string>
+    <string name="WndMovieTheatre_Title">sinema salonu </string>
+    <string name="WndMovieTheatre_Thank_You">izlediğiniz için teşekkürler </string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">iyileş %d altın</string>
+    <string name="WndPriest_Title">köy papazı</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">çatı</string>
+    <string name="town_deco_roof_desc">basit fayans çatı </string>
+
+    <string name="town_deco_wall_name">Duvar</string>
+    <string name="town_deco_wall_desc">ağaçlardan yapılmış basit bir duvar </string>
+
+    <string name="town_deco_snow_name">kar</string>
+    <string name="town_deco_bell_name">çan </string>
+    <string name="town_deco_bell_tower_name">çan kulesi</string>
+    <string name="town_deco_chimney_name">baca</string>
+    <string name="town_deco_chimney_desc">sıradan taştan bir baca. soğuk havalar için dizayn edilmiştir</string>
+
+    <string name="town_deco_window_name">pencere </string>
+    <string name="town_deco_window_desc">klasik camdan pencere. özel birşey yok</string>
+
+    <string name="town_deco_door_name">kapı</string>
+    <string name="town_deco_door_desc">basit ahşap kapı</string>
+
+    <string name="town_deco_locked_door_name">kilitli kapı</string>
+    <string name="town_deco_locked_door_desc">acaba bu kapının arkasında neler olabilir ?</string>
+
+    <string name="town_deco_snowman_name">kardanadam</string>
+    <string name="town_deco_snowman_desc">kardanadam yılbaşı sezonu için klasik bir dekorasyon.insanlar \'\'dungeonmas\'\' günü için kutlarlar</string>
+
+    <string name="town_deco_tree_name">ağaç</string>
+    <string name="town_deco_pathway_name">patika</string>
+    <string name="town_deco_pathway_desc">karla kaplanmış patika </string>
+
+    <string name="town_deco_stone_wall_name">taş duvar </string>
+    <string name="town_deco_stone_wall_desc">bu duvar ısıyı emiyor ve biraz ıslak gözüküyor.</string>
+
+    <string name="town_deco_shop_sign_name">dükkan tabelası</string>
+    <string name="town_deco_shop_sign_desc">görünüşe göre burada bir dükkan var </string>
+
+    <string name="town_deco_floor_name">zemin</string>
+    <string name="town_deco_floor_desc">bu zemin basit ahşaptan yapılmış.tam olarak neye bakıyorsun ?</string>
+
+    <string name="town_deco_carpet_name">halı</string>
+    <string name="town_deco_carpet_desc"> özel ziyaretçiler için lüx kırmızı halı </string>
+
+    <string name="town_deco_movies_door_name">kapı</string>
+    <string name="WndDonate_royalDonateText">garip olmak istemiyorum ama teknik olarak yapımcıları besliyorsunuz</string>
+
+    <string name="WndDonate_royalDonateText2">ayrıca </string>
+
     </resources>

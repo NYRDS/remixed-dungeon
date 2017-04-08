@@ -6,6 +6,41 @@
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">Ruh Getiren</string>
+    <string name="BlackSkullOfMastery_Necromancer">Büyüyü Kırdın</string>
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Siyah Kurukafa Uyandı !</string>
+    <string name="BlackSkull_Ressurrect">Siyah Kurukafa sana hizmet etmek için yükseldi </string>
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Kemik Zırh</string>
+    <string name="NecromancerArmor_NotNecromancer">Sadece Nekromensırlar bu zırhı kullanabilir !</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">Nekromancer kaftanı</string>
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">necromancer</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Nekromensırlar 15 hp ile başlar</item>
+        <item>Nekromensırlar büyü yapmak için ruh kullanırlar. her yaratık kestiğinde 1 ruh kazanırsın </item>
+        <item>nekromensırlar antik nekromensır zırhıyla başlarlar</item>
+        <item>nekromensırlar seviye 7 iskelet anahtarı ile başlarlar </item>
+        <item>iyileştirme potu başlangıçta tanımlıdır</item>
+    </string-array>
+
+    <string name="Necromancy_SoulsCountLabel">ruhlar</string>
+
+    <string name="Necromancer_ACSpecial">kara büyü</string>
+    <string name="Necromancy_ReincarnationName">reenkarnasyon</string>
+    <string name="Necromancy_ReincarnationTriggered">güçlerin ölümü yendi ! ama bütün ruhlarını ve eşyalarını kaybettin</string>
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">bu karakteri açmak için diğer türlerden biri ile lich i öldür</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">kara büyü</string>
+
+    <string name="WndSadGhostNecro_No">hayır, bırak konuşsun</string>
+    <string name="WndSadGhostNecro_Persuaded">üzgün hayalet domine edildi</string>
+
     </resources>
