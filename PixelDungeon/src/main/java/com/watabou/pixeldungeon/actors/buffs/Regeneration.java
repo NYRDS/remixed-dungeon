@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.rings.RingOfMending;
@@ -30,7 +31,7 @@ public class Regeneration extends Buff {
         if (target.isAlive()) {
 
             if (target.hp() < target.ht()) {
-                if (target instanceof Hero && ((Hero) target).isStarving()) {
+                if ((target instanceof Hero && ((Hero) target).isStarving()) || Dungeon.level.isSafe()) {
                 } else {
                     target.hp(target.hp() + 1);
                 }
