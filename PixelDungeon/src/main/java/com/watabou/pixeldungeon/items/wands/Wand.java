@@ -298,6 +298,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		maxCharges(Math.max(Math.min(maxCharges()+1, 9),maxCharges()));
 		curCharges(Math.max(curCharges(), maxCharges()));
 
+		updateLevel();
 		updateQuickslot();
 
 		return this;
@@ -310,6 +311,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		maxCharges(Math.max(maxCharges()-1, 0));
 		curCharges(Math.min(curCharges(), maxCharges()));
 
+		updateLevel();
 		updateQuickslot();
 
 		return this;
