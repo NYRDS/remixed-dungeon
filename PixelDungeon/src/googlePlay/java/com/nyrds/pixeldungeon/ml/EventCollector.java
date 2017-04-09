@@ -36,6 +36,7 @@ public class EventCollector {
 				return;
 			}
 			mFirebaseAnalytics = FirebaseAnalytics.getInstance(context);
+			mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
 	}
 
 	private static void disable() {
