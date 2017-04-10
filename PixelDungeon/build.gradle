@@ -48,7 +48,7 @@ android {
     productFlavors {
         googlePlayRetro {
             minSdkVersion 9
-            targetSdkVersion 14
+            targetSdkVersion 23
         }
         googlePlay {
             targetSdkVersion 25
