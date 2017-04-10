@@ -51,7 +51,7 @@ public class ModdingMode {
 			return PixelDungeon.version();
 		}
 
-		JSONObject version = JsonHelper.readJsonFromAsset("version.json");
+		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
 		return version.optInt("version");
 
 	}

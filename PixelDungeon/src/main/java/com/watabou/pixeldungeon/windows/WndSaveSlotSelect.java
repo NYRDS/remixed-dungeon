@@ -29,13 +29,17 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 	private boolean saving;
 	private String  slot;
 
-	WndSaveSlotSelect(final boolean _saving) {
+	public WndSaveSlotSelect(final boolean _saving) {
+		this(_saving,Game.getVar(R.string.WndSaveSlotSelect_SelectSlot));
+	}
+
+	public WndSaveSlotSelect(final boolean _saving,String title) {
 		String options[] = slotInfos();
 
 		final int WIDTH =  WndHelper.getFullscreenWidth();
 		final int maxW = WIDTH - GAP * 2;
 
-		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndSaveSlotSelect_SelectSlot), GuiProperties.titleFontSize());
+		Text tfTitle = PixelScene.createMultiline(title, GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = GAP;
 		tfTitle.maxWidth(maxW);
@@ -153,6 +157,17 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 	private static String slotNameFromIndexAndMod(int i) {
 		return ModdingMode.activeMod() + "_" + slotNameFromIndex(i);
+	}
+
+	public static boolean haveSomethingToLoad() {
+		String slots[] = slotInfos();
+		for (String slot : slots) {
+			if (!slot.equals("")) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	private static String[] slotInfos() {

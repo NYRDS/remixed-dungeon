@@ -51,6 +51,8 @@ android {
             targetSdkVersion 23
         }
         googlePlay {
+            targetSdkVersion 25
+            compileSdkVersion 25
             versionCode defaultConfig.versionCode + 10000
             // Enabling multidex support.
             multiDexEnabled true

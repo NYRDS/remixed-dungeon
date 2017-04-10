@@ -122,6 +122,7 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
+import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -1478,8 +1479,7 @@ public class Hero extends Char {
 		lastAction = null;
 	}
 
-	public static void reallyDie(Object cause) {
-
+	private static void reallyReallyDie(Object cause) {
 		Dungeon.level.discover();
 
 		Bones.leave();
@@ -1495,6 +1495,22 @@ public class Hero extends Char {
 		}
 
 		Dungeon.gameOver();
+	}
+
+	public static void reallyDie(final Object cause) {
+
+		if(Dungeon.hero.getDifficulty() < 2 && WndSaveSlotSelect.haveSomethingToLoad()) {
+			GameScene.show(new WndSaveSlotSelect(false,Game.getVar(R.string.Hero_AnotherTry)) {
+				@Override
+				public void hide() {
+					super.hide();
+					reallyReallyDie(cause);
+				}
+			});
+			return;
+		}
+
+		reallyReallyDie(cause);
 	}
 
 	@Override
