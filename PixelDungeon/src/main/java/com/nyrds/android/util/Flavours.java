@@ -9,8 +9,8 @@ import com.watabou.pixeldungeon.PixelDungeon;
  */
 public class Flavours {
 
-	private static final String GOOGLE_PLAY       = "GooglePlay";
-	private static final String GOOGLE_PLAY_RETRO = "GooglePlayRetro";
+	private static final String GOOGLE_PLAY       = "googlePlay";
+	private static final String GOOGLE_PLAY_RETRO = "googlePlayRetro";
 
 	public static boolean haveHats() {
 		return ( BuildConfig.FLAVOR.equals(GOOGLE_PLAY) || BuildConfig.FLAVOR.equals(GOOGLE_PLAY_RETRO) )
