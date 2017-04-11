@@ -39,7 +39,7 @@ public class Elemental extends Mob {
 		hp(ht(65));
 		defenseSkill = 20;
 		
-		EXP = 10;
+		exp = 10;
 		maxLvl = 20;
 		
 		flying = true;

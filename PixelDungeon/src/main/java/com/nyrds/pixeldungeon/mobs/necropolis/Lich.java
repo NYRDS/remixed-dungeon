@@ -48,7 +48,7 @@ public class Lich extends Boss {
 
     public Lich() {
         hp(ht(HEALTH));
-        EXP = 25;
+        exp = 25;
         defenseSkill = 23;
 
         IMMUNITIES.add( Paralysis.class );

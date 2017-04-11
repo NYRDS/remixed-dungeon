@@ -45,7 +45,7 @@ public class Goo extends Boss {
 	
 	public Goo() {
 		hp(ht(68));
-		EXP = 9;
+		exp = 9;
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
 		

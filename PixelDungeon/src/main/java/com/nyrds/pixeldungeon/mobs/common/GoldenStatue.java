@@ -26,7 +26,7 @@ public class GoldenStatue extends Mob {
 	private Weapon weapon;
 
 	public GoldenStatue() {
-		EXP = 0;
+		exp = 0;
 		setState(PASSIVE);
 
 		weapon = new GoldenSword();

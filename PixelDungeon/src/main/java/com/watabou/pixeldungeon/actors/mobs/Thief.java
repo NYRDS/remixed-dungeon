@@ -48,7 +48,7 @@ public class Thief extends Mob {
 		hp(ht(20));
 		defenseSkill = 12;
 		
-		EXP = 5;
+		exp = 5;
 		maxLvl = 10;
 		
 		loot = RingOfHaggler.class;

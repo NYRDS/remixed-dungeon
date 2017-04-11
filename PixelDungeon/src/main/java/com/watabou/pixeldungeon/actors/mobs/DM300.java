@@ -49,7 +49,7 @@ public class DM300 extends Boss {
 		spriteClass = DM300Sprite.class;
 		
 		hp(ht(200));
-		EXP = 30;
+		exp = 30;
 		defenseSkill = 18;
 		
 		float dice = Random.Float();

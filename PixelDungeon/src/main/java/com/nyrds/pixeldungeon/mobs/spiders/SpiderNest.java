@@ -17,7 +17,7 @@ public class SpiderNest extends Mob {
 		defenseSkill = 1;
 		baseSpeed = 0f;
 
-		EXP    = 0;
+		exp = 0;
 		maxLvl = 9;
 		
 		postpone(20);

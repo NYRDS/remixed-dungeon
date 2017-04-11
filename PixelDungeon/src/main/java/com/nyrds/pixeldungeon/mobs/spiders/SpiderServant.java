@@ -16,7 +16,7 @@ public class SpiderServant extends MultiKindMob {
 		defenseSkill = 5;
 		baseSpeed = 1.1f;
 		
-		EXP = 2;
+		exp = 2;
 		maxLvl = 9;
 
 		loot = new MysteryMeat();

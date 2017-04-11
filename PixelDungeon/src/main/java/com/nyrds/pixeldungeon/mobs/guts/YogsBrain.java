@@ -35,7 +35,7 @@ public class YogsBrain extends Boss {
         hp(ht(150));
         defenseSkill = 30;
 
-        EXP = 25;
+        exp = 25;
 
         RESISTANCES.add( LightningTrap.Electricity.class );
         RESISTANCES.add(ToxicGas.class);

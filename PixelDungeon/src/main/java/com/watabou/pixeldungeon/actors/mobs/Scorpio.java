@@ -41,7 +41,7 @@ public class Scorpio extends Mob {
 		defenseSkill = 24;
 		viewDistance = Light.DISTANCE;
 		
-		EXP = 14;
+		exp = 14;
 		maxLvl = 25;
 
 		lootChance = 0.0f;

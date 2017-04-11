@@ -62,7 +62,7 @@ public class Yog extends Boss {
 
 		hp(ht(500));
 
-		EXP = 50;
+		exp = 50;
 
 		setState(PASSIVE);
 
@@ -184,7 +184,7 @@ public class Yog extends Boss {
 			hp(ht(400));
 			defenseSkill = 25;
 
-			EXP = 0;
+			exp = 0;
 
 			setState(WANDERING);
 
@@ -254,7 +254,7 @@ public class Yog extends Boss {
 			hp(ht(300));
 			defenseSkill = 25;
 
-			EXP = 0;
+			exp = 0;
 
 			setState(WANDERING);
 
@@ -343,7 +343,7 @@ public class Yog extends Boss {
 			hp(ht(120));
 			defenseSkill = 20;
 
-			EXP = 0;
+			exp = 0;
 
 			setState(HUNTING);
 		}

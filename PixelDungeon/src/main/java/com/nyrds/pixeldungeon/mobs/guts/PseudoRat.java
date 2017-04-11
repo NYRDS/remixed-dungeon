@@ -14,7 +14,7 @@ public class PseudoRat extends Mob {
         hp(ht(320));
         defenseSkill = 30;
 
-        EXP = 20;
+        exp = 20;
         maxLvl = 35;
 
         loot = Gold.class;

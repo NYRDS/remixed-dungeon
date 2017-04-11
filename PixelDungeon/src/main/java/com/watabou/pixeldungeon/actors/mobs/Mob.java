@@ -90,7 +90,7 @@ public abstract class Mob extends Char {
 
 	protected int defenseSkill = 0;
 
-	protected int EXP    = 1;
+	protected int exp    = 1;
 	protected int maxLvl = 30;
 
 	@NonNull
@@ -98,14 +98,14 @@ public abstract class Mob extends Char {
 
 	protected boolean enemySeen;
 
-	protected boolean alerted = false;
+	private boolean alerted = false;
 
-	protected static final float TIME_TO_WAKE_UP = 1f;
+	private static final float TIME_TO_WAKE_UP = 1f;
 
 	static protected Map<Class, JSONObject> defMap = new HashMap<>();
 
 	// Unreachable target
-	public static final Mob DUMMY = new Mob() {
+	protected static final Mob DUMMY = new Mob() {
 		{
 			setPos(-1);
 		}
@@ -539,10 +539,10 @@ public abstract class Mob extends Char {
 				}
 
 				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
-					if (hero.lvl() <= maxLvl && EXP > 0) {
+					if (hero.lvl() <= maxLvl && exp > 0) {
 						hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
-								EXP);
-						hero.earnExp(EXP);
+								exp);
+						hero.earnExp(exp);
 					}
 				}
 			}

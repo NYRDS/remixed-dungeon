@@ -41,7 +41,7 @@ public class ShadowLord extends Boss {
 		hp(ht(260));
 		defenseSkill = 40;
 
-		EXP = 60;
+		exp = 60;
 
 		lootChance = 0.5f;
 		loot = new ScrollOfWeaponUpgrade();

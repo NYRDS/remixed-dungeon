@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
 
@@ -18,7 +17,7 @@ public class SpiderGuard extends MultiKindMob {
 		defenseSkill = 15;
 		baseSpeed = 1.2f;
 		
-		EXP = 4;
+		exp = 4;
 		maxLvl = 10;
 		
 		kind = 1;

@@ -24,7 +24,7 @@ public class SuspiciousRat extends Mob {
 		hp(ht(140));
 		defenseSkill = 25;
 
-		EXP = 1;
+		exp = 1;
 		maxLvl = 30;
 
 		pacified = true;

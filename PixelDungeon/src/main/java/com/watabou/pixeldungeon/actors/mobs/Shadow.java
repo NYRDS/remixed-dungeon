@@ -11,7 +11,7 @@ public class Shadow extends Mob {
 		hp(ht(20));
 		defenseSkill = 15;
 		
-		EXP = 5;
+		exp = 5;
 		maxLvl = 10;
 		
 		setState(WANDERING);

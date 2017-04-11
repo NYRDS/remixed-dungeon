@@ -44,7 +44,7 @@ public class Monk extends Mob {
 		hp(ht(70));
 		defenseSkill = 30;
 		
-		EXP = 11;
+		exp = 11;
 		maxLvl = 21;
 		
 		loot = new Ration();

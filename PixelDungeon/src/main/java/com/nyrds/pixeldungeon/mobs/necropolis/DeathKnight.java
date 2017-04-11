@@ -15,7 +15,7 @@ public class DeathKnight extends UndeadMob {
         hp(ht(35));
         defenseSkill = 12;
 
-        EXP = 7;
+        exp = 7;
         maxLvl = 15;
 
         loot = Gold.class;

@@ -52,7 +52,7 @@ public class Tengu extends Boss {
 		spriteClass = TenguSprite.class;
 		
 		hp(ht(120));
-		EXP = 20;
+		exp = 20;
 		defenseSkill = 20;
 		
 		RESISTANCES.add( ToxicGas.class );

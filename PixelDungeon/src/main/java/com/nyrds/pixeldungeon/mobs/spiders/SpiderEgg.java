@@ -19,7 +19,7 @@ public class SpiderEgg extends Mob {
 		defenseSkill = 0;
 		baseSpeed = 0f;
 
-		EXP = 0;
+		exp = 0;
 		maxLvl = 9;
 
 		postpone(20);

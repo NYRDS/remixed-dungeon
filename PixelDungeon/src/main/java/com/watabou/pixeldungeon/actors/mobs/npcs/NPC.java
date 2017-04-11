@@ -35,7 +35,7 @@ public abstract class NPC extends Mob {
 	
 	protected NPC() {
 		hp(ht(1));
-		EXP = 0;
+		exp = 0;
 
 		setState(PASSIVE);
 		
