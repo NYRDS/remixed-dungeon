@@ -6,10 +6,15 @@
 		},
 		"items": [{
 			"kind": "Gold",
-			"quantity": 200
+			"quantity": 100
 		}],
         "str":10,
         "hp":20
+	},
+	"non_expert": {
+		"items": [{
+			"kind": "Ration"
+		}]
 	},
 	"WARRIOR": {
 		"weapon": {
