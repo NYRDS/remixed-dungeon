@@ -28,7 +28,7 @@ public class ArmoredStatue extends Mob {
 	private Armor armor;
 
 	public ArmoredStatue() {
-		EXP = 0;
+		exp = 0;
 		setState(PASSIVE);
 
 		do {

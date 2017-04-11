@@ -47,7 +47,7 @@ public class Shaman extends Mob {
 		hp(ht(18));
 		defenseSkill = 8;
 		
-		EXP = 6;
+		exp = 6;
 		maxLvl = 14;
 		
 		loot = Generator.Category.SCROLL;

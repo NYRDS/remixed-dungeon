@@ -19,7 +19,7 @@ public class Deathling extends UndeadMob {
         defenseSkill = 1 + getModifier();
         flying = true;
 
-        EXP = 0;
+        exp = 0;
         maxLvl = 32;
     }
 

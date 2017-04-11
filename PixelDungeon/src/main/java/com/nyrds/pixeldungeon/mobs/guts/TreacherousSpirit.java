@@ -18,7 +18,7 @@ public class TreacherousSpirit extends Mob {
         hp(ht(200));
         defenseSkill = 35;
 
-        EXP = 45;
+        exp = 45;
         maxLvl = 30;
 
         setState(WANDERING);

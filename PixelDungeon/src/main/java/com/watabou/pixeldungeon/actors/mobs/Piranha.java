@@ -40,7 +40,7 @@ public class Piranha extends Mob {
 
 		baseSpeed = 2f;
 		
-		EXP = 0;
+		exp = 0;
 		
 		IMMUNITIES.add( Burning.class );
 		IMMUNITIES.add( Paralysis.class );

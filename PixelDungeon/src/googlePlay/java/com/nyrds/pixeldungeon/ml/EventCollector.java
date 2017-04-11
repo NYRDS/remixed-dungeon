@@ -1,15 +1,15 @@
 package com.nyrds.pixeldungeon.ml;
 
 import android.content.Context;
-import android.os.Bundle;
 
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.crash.FirebaseCrash;
-import com.watabou.noosa.Game;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+import com.nyrds.android.util.Util;
 import com.watabou.pixeldungeon.Preferences;
 
+import org.acra.ACRA;
+
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by mike on 09.03.2016.
@@ -17,77 +17,65 @@ import java.util.Map;
 public class EventCollector {
 	public static final String BUG = "bug";
 
-
-	static private FirebaseAnalytics mFirebaseAnalytics;
-
+	static private Tracker mTracker;
 	static private boolean mDisabled = true;
-
-	static private Map<String,String> mDataForCrash = new HashMap<>();
 
 	static private HashMap<String, Long> timings;
 
-	private static boolean analyticsUsable() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,100) > 0;
+	private static boolean googleAnalyticsUsable() {
+		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
 	}
 
 	static public void init(Context context) {
-			if(!analyticsUsable()) {
+		if (mTracker == null) {
+
+			if(!googleAnalyticsUsable()) {
 				EventCollector.disable();
 				return;
 			}
-			mFirebaseAnalytics = FirebaseAnalytics.getInstance(context);
-			mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
-	}
 
-	private static void disable() {
-		mDisabled = true;
-	}
+			AnalyticsTrackers.initialize(context);
 
-	static public void collectSessionData(String key, String value) {
-		mDataForCrash.put(key,value);
-	}
-
-	static private void putSessionDataToBundle(Bundle bundle) {
-		for(Map.Entry<String,String> entry:mDataForCrash.entrySet()) {
-			bundle.putString(entry.getKey(),entry.getValue());
+			mTracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
+			mTracker.enableAdvertisingIdCollection(true);
+			mDisabled = false;
 		}
+	}
+
+	static public void disable() {
+		mDisabled = true;
 	}
 
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
-			Bundle bundle = new Bundle();
-			bundle.putString("event", event);
-			putSessionDataToBundle(bundle);
-			mFirebaseAnalytics.logEvent(category,bundle);
+			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).build());
 		}
 	}
 
 	static public void logEvent(String category, String event, String label) {
 		if (!mDisabled) {
-			Bundle bundle = new Bundle();
-			bundle.putString("event", event);
-			bundle.putString("label", label);
-			putSessionDataToBundle(bundle);
-			mFirebaseAnalytics.logEvent(category,bundle);
+			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).setLabel(label).build());
 		}
 	}
 
 	static public void logScene(String scene) {
 		if (!mDisabled) {
-			mFirebaseAnalytics.setCurrentScreen(Game.instance(),scene,null);
+			mTracker.setScreenName(scene);
+			mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 		}
 	}
 
 	static public void logException(Exception e) {
 		if(!mDisabled) {
-			FirebaseCrash.report(e);
+			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(Util.toString(e)).build());
+			e.printStackTrace();
 		}
 	}
 
 	static public void logException(Exception e,String desc) {
 		if(!mDisabled) {
-			FirebaseCrash.log(desc);
-			FirebaseCrash.report(e);
+			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(desc + " "+Util.toString(e)).build());
+			e.printStackTrace();
 		}
 	}
 
@@ -97,5 +85,11 @@ public class EventCollector {
 
 	static public void stopTiming(String id) {
 
+	}
+
+	public static void collectSessionData(String key, String value) {
+		if(ACRA.isInitialised()) {
+			ACRA.getErrorReporter().putCustomData(key, value);
+		}
 	}
 }

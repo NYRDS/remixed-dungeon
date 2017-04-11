@@ -18,7 +18,7 @@ public class Nightmare extends Mob {
         hp(ht(80));
         defenseSkill = 24;
 
-        EXP = 0;
+        exp = 0;
     }
 
     @Override

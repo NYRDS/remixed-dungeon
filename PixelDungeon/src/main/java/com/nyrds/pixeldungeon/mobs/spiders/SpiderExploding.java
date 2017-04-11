@@ -33,7 +33,7 @@ public class SpiderExploding extends MultiKindMob {
 		defenseSkill = 1;
 		baseSpeed = 2f;
 		
-		EXP = 3;
+		exp = 3;
 		maxLvl = 9;
 		
 		kind = Random.IntRange(0, 6);

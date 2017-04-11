@@ -36,7 +36,7 @@ public class SpiderMind extends Mob {
 		defenseSkill = 1;
 		baseSpeed = 0.8f;
 		
-		EXP = 6;
+		exp = 6;
 		maxLvl = 9;
 		
 		loot = new MysteryMeat();

@@ -32,7 +32,7 @@ public class KoboldIcemancer extends Mob implements Callback {
 		hp(ht(70));
 		defenseSkill = 18;
 
-		EXP = 11;
+		exp = 11;
 		maxLvl = 21;
 
 		loot = Generator.Category.POTION;

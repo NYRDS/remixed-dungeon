@@ -40,7 +40,7 @@ public class Wraith extends Mob implements IDepthAdjustable {
 		spriteClass = WraithSprite.class;
 		
 		hp(ht(1));
-		EXP = 0;
+		exp = 0;
 		
 		flying = true;
 		

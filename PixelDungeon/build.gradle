@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.firebase.firebase-crash'
 
 android {
     signingConfigs {
@@ -62,7 +61,8 @@ android {
 }
 
 dependencies {
-    googlePlayRetroCompile 'ch.acra:acra:4.8.1@aar'
+    compile 'ch.acra:acra:4.8.1@aar'
+    compile 'com.android.support:support-v4'
 
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
@@ -76,12 +76,8 @@ dependencies {
     googlePlayCompile 'com.google.android.gms:play-services-base:10.2.1'
     googlePlayCompile 'com.google.android.gms:play-services-analytics:10.2.1'
     googlePlayCompile project(':cheetah-mobile-3.4.7')
-    googlePlayCompile 'com.google.firebase:firebase-crash:10.2.1'
-    googlePlayCompile 'com.google.firebase:firebase-core:10.2.1'
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.1'
-
-    compile 'com.android.support:support-v4'
 }
 
 

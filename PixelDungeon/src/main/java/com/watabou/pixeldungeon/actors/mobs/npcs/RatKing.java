@@ -40,7 +40,7 @@ public class RatKing extends NPC {
 		defenseSkill = 20;
 		
 		hp(ht(30));
-		EXP = 1;
+		exp = 1;
 
 		lootChance = 1;
 		loot = new RatKingCrown();

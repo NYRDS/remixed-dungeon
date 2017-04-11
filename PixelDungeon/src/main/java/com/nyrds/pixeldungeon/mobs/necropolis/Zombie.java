@@ -16,7 +16,7 @@ public class Zombie extends UndeadMob {
         hp(ht(33));
         defenseSkill = 10;
 
-        EXP = 6;
+        exp = 6;
         maxLvl = 15;
 
         loot = Gold.class;

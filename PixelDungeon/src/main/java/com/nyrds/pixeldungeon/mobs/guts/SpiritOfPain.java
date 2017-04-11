@@ -13,7 +13,7 @@ public class SpiritOfPain extends Mob {
         hp(ht(80));
         defenseSkill = 30;
 
-        EXP = 0;
+        exp = 0;
 
         setState(HUNTING);
         flying = true;

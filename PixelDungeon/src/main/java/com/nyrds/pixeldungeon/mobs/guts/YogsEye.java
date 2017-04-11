@@ -13,7 +13,7 @@ public class YogsEye extends Boss {
         hp(ht(165));
         defenseSkill = 25;
 
-        EXP = 25;
+        exp = 25;
 
         loot = Gold.class;
         lootChance = 0.5f;

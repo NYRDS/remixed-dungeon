@@ -23,7 +23,7 @@ public class YogsHeart extends Boss {
         hp(ht(250));
         defenseSkill = 30;
 
-        EXP = 12;
+        exp = 12;
 
         IMMUNITIES.add(ToxicGas.class);
         IMMUNITIES.add(Paralysis.class);

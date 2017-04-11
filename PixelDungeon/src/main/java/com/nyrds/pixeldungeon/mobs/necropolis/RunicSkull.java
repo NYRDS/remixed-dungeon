@@ -23,7 +23,7 @@ public class RunicSkull extends MultiKindMob {
 	public RunicSkull() {
 
 		hp(ht(70));
-		EXP = 5;
+		exp = 5;
 		defenseSkill = 15;
 
 		pacified = true;
