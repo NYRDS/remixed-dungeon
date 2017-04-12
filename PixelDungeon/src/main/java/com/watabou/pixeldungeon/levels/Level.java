@@ -666,7 +666,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (mob == null) {
-			mob = Bestiary.mutable();
+			mob = Bestiary.mob();
 		}
 
 		setMobSpawnPos(mob);

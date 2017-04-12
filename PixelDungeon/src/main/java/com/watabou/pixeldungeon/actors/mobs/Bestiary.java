@@ -18,14 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
-import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Random;
@@ -38,16 +31,13 @@ import java.util.Iterator;
 
 public class Bestiary {
 
-	static JSONObject mobsData;
+	private static JSONObject mobsData;
 
-	private static Class<? extends Mob> getMobFromExternalBestiary() {
-		if (mobsData == null) {
-			mobsData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
-			if (mobsData == null) {
-				throw new TrackedRuntimeException("malformed levelsDesc/Bestiary.json");
-			}
-		}
+	static {
+		mobsData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
+	}
 
+	public static Mob mob() {
 		try {
 			JSONObject levelDesc = mobsData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
 
@@ -59,7 +49,6 @@ public class Bestiary {
 				if (!levelDesc.has(idString)) {
 					idString = "any";
 				}
-
 			}
 			
 			JSONObject depthDesc = levelDesc.getJSONObject(idString);
@@ -76,50 +65,11 @@ public class Bestiary {
 				chances.add(chance);
 			}
 			String selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[chances.size()]))];
-			return MobFactory.mobClassByName(selectedMobClass);
+			return MobFactory.mobByName(selectedMobClass);
 			
 		} catch (JSONException e) {
 			Game.toast(e.getMessage());
 		}
-		return MobFactory.mobClassRandom();
-	}
-
-	public static Mob mob() {
-		Class<? extends Mob> cl = getMobFromExternalBestiary();
-		try {
-			return cl.newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
-	}
-
-	public static Mob mutable() {
-		Class<? extends Mob> cl = getMobFromExternalBestiary();
-
-		if (Random.Int(30) == 0) {
-			if (cl == Rat.class) {
-				cl = Albino.class;
-			} else if (cl == Thief.class) {
-				cl = Bandit.class;
-			} else if (cl == Brute.class) {
-				cl = Shielded.class;
-			} else if (cl == Monk.class) {
-				cl = Senior.class;
-			} else if (cl == Scorpio.class) {
-				cl = Acidic.class;
-			} else if (cl == SpiderServant.class) {
-				cl = SpiderGuard.class;
-			} else if (cl == SpiderMind.class) {
-				cl = SpiderMindAmber.class;
-			} else if (cl == DeathKnight.class) {
-				cl = DreadKnight.class;
-			}
-		}
-		
-		try {
-			return cl.newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		return MobFactory.mobRandom();
 	}
 }

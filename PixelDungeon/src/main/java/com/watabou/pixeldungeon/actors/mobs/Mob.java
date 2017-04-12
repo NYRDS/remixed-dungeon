@@ -102,7 +102,7 @@ public abstract class Mob extends Char {
 
 	private static final float TIME_TO_WAKE_UP = 1f;
 
-	static protected Map<Class, JSONObject> defMap = new HashMap<>();
+	static protected Map<String, JSONObject> defMap = new HashMap<>();
 
 	// Unreachable target
 	protected static final Mob DUMMY = new Mob() {
@@ -216,7 +216,7 @@ public abstract class Mob extends Char {
 
 		try {
 			{
-				String descName = "spritesDesc/" + getClass().getSimpleName() + ".json";
+				String descName = "spritesDesc/" + getMobClassName() + ".json";
 				if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
 					return new MobSpriteDef(descName, getKind());
 				}
@@ -232,7 +232,7 @@ public abstract class Mob extends Char {
 				return new MobSpriteDef((String) spriteClass, getKind());
 			}
 
-			throw new TrackedRuntimeException(String.format("sprite creation failed - mob class %s", getClass().getCanonicalName()));
+			throw new TrackedRuntimeException(String.format("sprite creation failed - mob class %s", getMobClassName()));
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
@@ -938,13 +938,21 @@ public abstract class Mob extends Char {
 		this.enemy = enemy;
 	}
 
+	protected void ensureActualClassDef() {
+		if (!defMap.containsKey(getMobClassName())) {
+			defMap.put(getMobClassName(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getMobClassName() + ".json"));
+		}
+	}
+
 	@Override
 	protected void readCharData() {
 		super.readCharData();
+		ensureActualClassDef();
+	}
 
-		if (!defMap.containsKey(getClass())) {
-			defMap.put(getClass(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getClass().getSimpleName() + ".json"));
-		}
+
+	protected String getMobClassName() {
+		return getClass().getSimpleName();
 	}
 
 	@Override

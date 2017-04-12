@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -14,18 +16,34 @@ import org.json.JSONObject;
 
 public class CustomMob extends MultiKindMob {
 
-	private final String DEFENSE_SKILL = "defenseSkill";
-	private final String EXP           = "exp";
-	private final String MAX_LVL       = "maxLvl";
-	private final String DMG_MIN       = "dmgMin";
-	private final String DMG_MAX       = "dmgMax";
-	private final String ATTACK_SKILL  = "attackSkill";
-	private final String DR            = "dr";
-	
+	private final String MOB_CLASS         = "mobClass";
 
 	private int dmgMin, dmgMax;
 	private int attackSkill;
 	private int dr;
+
+	private float speed = 1, attackDelay = 1;
+
+	private String mobClass;
+
+	//For restoreFromBundle
+	CustomMob() {
+		mobClass = "BlackRat";
+	}
+
+	CustomMob(String mobClass) {
+		this.mobClass = mobClass;
+	}
+
+	@Override
+	public float speed() {
+		return speed;
+	}
+
+	@Override
+	protected float attackDelay() {
+		return attackDelay;
+	}
 
 	@Override
 	public int damageRoll() {
@@ -46,38 +64,61 @@ public class CustomMob extends MultiKindMob {
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 
-		bundle.put(DEFENSE_SKILL, defenseSkill);
-		bundle.put(EXP, exp);
-		bundle.put(MAX_LVL, maxLvl);
-		bundle.put(DMG_MIN, dmgMin);
-		bundle.put(DMG_MAX, dmgMax);
-		bundle.put(ATTACK_SKILL, attackSkill);
-		bundle.put(DR, dr);
+		bundle.put(MOB_CLASS,mobClass);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
+		mobClass = bundle.getString(MOB_CLASS);
 
-		defenseSkill = bundle.optInt(DEFENSE_SKILL, defenseSkill);
-		exp = bundle.optInt(EXP, exp);
-		maxLvl = bundle.optInt(MAX_LVL, maxLvl);
-		dmgMin = bundle.optInt(DMG_MIN, dmgMin);
-		dmgMax = bundle.optInt(DMG_MAX, dmgMax);
-		attackSkill = bundle.optInt(ATTACK_SKILL, attackSkill);
-		dr = bundle.optInt(DR, dr);
+		fillMobStats(mobClass);
 	}
+
+	@Override
+	protected void readCharData() {
+		super.readCharData();
+
+		if(mobClass!=null) {
+			fillMobStats(mobClass);
+		}
+	}
+
+	private void fillMobStats(String mobClass) {
+		JSONObject classDesc = defMap.get(mobClass);
+
+		defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
+		attackSkill  = classDesc.optInt("attackSkill", attackSkill);
+
+		exp    = classDesc.optInt("exp", exp);
+		maxLvl = classDesc.optInt("maxLvl", maxLvl);
+		dmgMin = classDesc.optInt("dmgMin", dmgMin);
+		dmgMax = classDesc.optInt("dmgMax", dmgMax);
+
+		dr = classDesc.optInt("dr", dr);
+
+		speed       = (float) classDesc.optDouble("speed", speed);
+		attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
+
+		name        = StringsManager.maybeId(classDesc.optString("name",name));
+		description = StringsManager.maybeId(classDesc.optString("description",description));
+		gender      = Utils.genderFromString(classDesc.optString("gender",""));
+
+		spriteClass = classDesc.optString("spriteDesc","spritesDesc/Rat.json");
+
+		hp(ht(classDesc.optInt("ht",1)));
+	}
+
 
 	@Override
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		super.fromJson(mobDesc);
+		mobClass = mobDesc.getString(MOB_CLASS);
+		ensureActualClassDef();
+		fillMobStats(mobClass);
+	}
 
-		defenseSkill = mobDesc.optInt(DEFENSE_SKILL, defenseSkill);
-		exp = mobDesc.optInt(EXP, exp);
-		maxLvl = mobDesc.optInt(MAX_LVL, maxLvl);
-		dmgMin = mobDesc.optInt(DMG_MIN, dmgMin);
-		dmgMax = mobDesc.optInt(DMG_MAX, dmgMax);
-		attackSkill = mobDesc.optInt(ATTACK_SKILL, attackSkill);
-		dr = mobDesc.optInt(DR, dr);
+	public String getMobClassName() {
+		return mobClass;
 	}
 }

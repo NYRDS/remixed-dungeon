@@ -131,7 +131,7 @@ public class PredesignedLevel extends CustomLevel {
 
 					if (cellValid(x, y)) {
 						String kind = mobDesc.getString("kind");
-						Mob mob = MobFactory.mobClassByName(kind).newInstance();
+						Mob mob = MobFactory.mobByName(kind);
 						mob.fromJson(mobDesc);
 						mob.setPos(cell(x, y));
 						spawnMob(mob);

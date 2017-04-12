@@ -107,7 +107,7 @@ public class RandomLevel extends RegularLevel {
 					mobsSpawned++;
 
 					String kind = mobDesc.getString("kind");
-					Mob mob = MobFactory.mobClassByName(kind).newInstance();
+					Mob mob = MobFactory.mobByName(kind);
 
 					mob.fromJson(mobDesc);
 					setMobSpawnPos(mob);

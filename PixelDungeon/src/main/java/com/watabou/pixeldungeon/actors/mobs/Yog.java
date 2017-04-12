@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
@@ -87,17 +86,9 @@ public class Yog extends Boss {
 			name3 = Random.element(secondaryBossArray);
 		} while (name1 == name2 || name2 == name3 || name1 == name3);
 
-		Class<? extends Mob> boss1 = MobFactory.mobClassByName(name1);
-		Class<? extends Mob> boss2 = MobFactory.mobClassByName(name2);
-		Class<? extends Mob> boss3 = MobFactory.mobClassByName(name3);
-
-		try{
-			fist1 = boss1.newInstance();
-			fist2 = boss2.newInstance();
-			fist3 = boss3.newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		fist1 = MobFactory.mobByName(name1);
+		fist2 = MobFactory.mobByName(name2);
+		fist3 = MobFactory.mobByName(name3);
 
 		do {
 			fist1.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
