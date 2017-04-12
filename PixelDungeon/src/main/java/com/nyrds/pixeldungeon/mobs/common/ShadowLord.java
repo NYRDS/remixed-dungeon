@@ -70,11 +70,7 @@ public class ShadowLord extends Boss {
 			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
 
 			if (cell != -1) {
-				Mob mob = new Wraith();
-
-				mob.setState(mob.WANDERING);
-				Dungeon.level.spawnMob(mob, 1);
-				WandOfBlink.appear(mob, cell);
+				Wraith.spawnAt(cell);
 			}
 		}
 	}
