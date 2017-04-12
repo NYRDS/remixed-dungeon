@@ -30,7 +30,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable{
 		adjustStats(Dungeon.depth);
 
 		loot = SimpleWand.createRandomSimpleWand();
-		((Wand) loot).upgrade(Dungeon.depth);
+		((Wand) loot).upgrade(Dungeon.depth / 2);
 
 		lootChance = 0.25f;
 	}
