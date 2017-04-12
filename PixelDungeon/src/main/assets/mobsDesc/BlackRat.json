@@ -11,5 +11,6 @@
    "ht"           :5,
    "name"         :"Black Rat",
    "description"  :"Just a common house rat, not marsupial",
-   "gender"       :"feminine"
+   "gender"       :"feminine",
+   "spriteDesc"   :"spritesDesc/Rat.json"
 }
