@@ -107,7 +107,10 @@ public class Yog extends Boss {
 
 		Dungeon.level.spawnMob(fist1);
 		Dungeon.level.spawnMob(fist2);
-		Dungeon.level.spawnMob(fist3);
+		if(Game.getDifficulty() > 2){
+			Dungeon.level.spawnMob(fist3);
+		}
+
 	}
 
 	@Override
@@ -149,10 +152,10 @@ public class Yog extends Boss {
 	@Override
 	public void die(Object cause) {
 
-		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
-			if (mob instanceof Boss && !(mob instanceof Yog)) {
-				mob.die(cause);
-			}
+		Mob mob = Dungeon.level.getRandomMob();
+		while(mob != null){
+			mob.remove();
+			mob = Dungeon.level.getRandomMob();
 		}
 
 		GameScene.bossSlain();
