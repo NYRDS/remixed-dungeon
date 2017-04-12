@@ -30,6 +30,8 @@ import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.pixeldungeon.items.icecaves.IceKey;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -140,20 +142,21 @@ public enum HeroClass {
 		Item ring = new RingOfAccuracy().identify();
 		ring.cursed = true;
 		hero.collect(ring);
-		hero.collect(new RingOfAccuracy().identify());
+		hero.collect(new BlackSkull().identify());
 		hero.collect(new CandleOfMindVision());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new BattleAxe());
+		hero.collect(new IceKey());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 		hero.collect(new RingOfHaggler());
 
 		hero.collect(new ScrollOfIdentify());
 
-		hero.ht(10);
-		hero.hp(10);
+		hero.ht(1000);
+		hero.hp(1000);
 		hero.attackSkill = 1000;
 
 		Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
