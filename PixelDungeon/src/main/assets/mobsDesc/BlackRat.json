@@ -1,0 +1,15 @@
+{
+   "defenseSkill" :1,
+   "attackSkill"  :1,
+   "exp"          :1,
+   "maxLvl"       :1,
+   "dmgMin"       :1,
+   "dmgMax"       :1,
+   "dr"           :1,
+   "speed"        :1,
+   "attackDelay"  :1,
+   "ht"           :5,
+   "name"         :"Black Rat",
+   "description"  :"Just a common house rat, not marsupial",
+   "gender"       :"feminine"
+}
