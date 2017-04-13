@@ -263,27 +263,38 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		paused = true;
 
 		if (scene != null) {
-			scene.pause();
+			executeInGlThread(new Runnable() {
+				@Override
+				public void run() {
+					scene.pause();
+				}
+			});
+
+			Music.INSTANCE.pause();
+			Sample.INSTANCE.pause();
 		}
 
 		view.onPause();
 		Script.reset();
-
-		Music.INSTANCE.pause();
-		Sample.INSTANCE.pause();
 	}
 
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
 
-		Music.INSTANCE.mute();
-		Sample.INSTANCE.reset();
+		executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				Music.INSTANCE.mute();
+				Sample.INSTANCE.reset();
 
-		if (scene != null) {
-			scene.destroy();
-			scene = null;
-		}
+				if (scene != null) {
+					scene.destroy();
+					scene = null;
+				}
+			}
+		});
+
 	}
 
 	@SuppressLint({"Recycle", "ClickableViewAccessibility"})
