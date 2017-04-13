@@ -414,6 +414,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			requestedReset = false;
 			try {
 				switchScene(sceneClass.newInstance());
+				return;
 			} catch (Exception e) {
 				throw new TrackedRuntimeException(e);
 			}
