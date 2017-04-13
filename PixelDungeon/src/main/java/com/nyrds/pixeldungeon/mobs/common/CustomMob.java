@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -16,7 +15,7 @@ import org.json.JSONObject;
 
 public class CustomMob extends MultiKindMob {
 
-	private final String MOB_CLASS         = "mobClass";
+	private final String MOB_CLASS = "mobClass";
 
 	private int dmgMin, dmgMax;
 	private int attackSkill;
@@ -24,15 +23,14 @@ public class CustomMob extends MultiKindMob {
 
 	private float speed = 1, attackDelay = 1;
 
-	private String mobClass;
+	private String mobClass = "Unknown";
 
 	//For restoreFromBundle
-	CustomMob() {
-		mobClass = "BlackRat";
-	}
+	public CustomMob() {}
 
-	CustomMob(String mobClass) {
+	public CustomMob(String mobClass) {
 		this.mobClass = mobClass;
+		fillMobStats();
 	}
 
 	@Override
@@ -69,23 +67,21 @@ public class CustomMob extends MultiKindMob {
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
 		mobClass = bundle.getString(MOB_CLASS);
+		fillMobStats();
 
-		fillMobStats(mobClass);
+		super.restoreFromBundle(bundle);
 	}
 
 	@Override
 	protected void readCharData() {
 		super.readCharData();
-
-		if(mobClass!=null) {
-			fillMobStats(mobClass);
-		}
 	}
 
-	private void fillMobStats(String mobClass) {
-		JSONObject classDesc = defMap.get(mobClass);
+	private void fillMobStats() {
+		ensureActualClassDef();
+
+		JSONObject classDesc = defMap.get(getMobClassName());
 
 		defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
 		attackSkill  = classDesc.optInt("attackSkill", attackSkill);
@@ -100,25 +96,19 @@ public class CustomMob extends MultiKindMob {
 		speed       = (float) classDesc.optDouble("speed", speed);
 		attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 
-		name        = StringsManager.maybeId(classDesc.optString("name",name));
-		description = StringsManager.maybeId(classDesc.optString("description",description));
-		gender      = Utils.genderFromString(classDesc.optString("gender",""));
+		name            = StringsManager.maybeId(classDesc.optString("name",name));
+		name_objective  = StringsManager.maybeId(classDesc.optString("name_objective",name));
+		description     = StringsManager.maybeId(classDesc.optString("description",description));
+		gender          = Utils.genderFromString(classDesc.optString("gender",""));
 
 		spriteClass = classDesc.optString("spriteDesc","spritesDesc/Rat.json");
 
 		hp(ht(classDesc.optInt("ht",1)));
 	}
 
-
 	@Override
-	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
-		super.fromJson(mobDesc);
-		mobClass = mobDesc.getString(MOB_CLASS);
-		ensureActualClassDef();
-		fillMobStats(mobClass);
-	}
-
 	public String getMobClassName() {
 		return mobClass;
 	}
+
 }
