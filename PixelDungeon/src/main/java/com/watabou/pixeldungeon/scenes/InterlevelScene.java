@@ -87,7 +87,7 @@ public class InterlevelScene extends PixelScene {
 
 	volatile private String error = null;
 
-	class LevelChanger extends Thread implements InterstitialPoint {
+	class LevelChanger implements InterstitialPoint,Runnable {
 
 		@Override
 		public void returnToWork(boolean result) {
@@ -99,8 +99,6 @@ public class InterlevelScene extends PixelScene {
 		
 		@Override
 		public void run() {
-			Thread.currentThread().setName("LevelChanger");
-
 			try {
 				Generator.reset();
 					switch (mode) {
@@ -177,7 +175,7 @@ public class InterlevelScene extends PixelScene {
 		timeLeft = TIME_TO_FADE;
 
 		levelChanger= new LevelChanger();
-		levelChanger.start();
+		Game.instance().executor.execute(levelChanger);
 	}
 
 	@Override
@@ -191,7 +189,7 @@ public class InterlevelScene extends PixelScene {
 		case FADE_IN:
 			message.alpha(1 - p);
 			if ((timeLeft -= Game.elapsed) <= 0) {
-				if (!levelChanger.isAlive() && error == null) {
+				if (error == null) {
 					phase = Phase.FADE_OUT;
 					timeLeft = TIME_TO_FADE;
 				} else {

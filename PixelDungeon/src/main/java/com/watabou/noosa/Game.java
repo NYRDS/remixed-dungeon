@@ -62,6 +62,8 @@ import com.watabou.utils.SystemTime;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -105,6 +107,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	// Accumulated key events
 	private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
+
+	public Executor executor = Executors.newSingleThreadExecutor();
 
 	private Runnable doOnResume;
 
