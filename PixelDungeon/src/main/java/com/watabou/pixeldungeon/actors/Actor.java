@@ -157,12 +157,14 @@ public abstract class Actor implements Bundlable {
 			current = null;
 
 			chars.clear();
-			
+
+			//select actor to act
 			for (Actor actor : all) {
 				if (actor.time < now) {
 					current = actor;
 				}
 
+				//also fill chars positions
 				if (actor instanceof Char) {
 					Char ch = (Char) actor;
 					chars.put(ch.getPos(), ch);
@@ -187,7 +189,8 @@ public abstract class Actor implements Bundlable {
 			processReaTime(elapsed);
 			return;
 		}
-		
+
+		// action still in progress
 		if (current != null) {
 			return;
 		}
@@ -203,14 +206,19 @@ public abstract class Actor implements Bundlable {
 			chars.clear();
 			
 			
-			for (Actor actor : all) { 
+			for (Actor actor : all) {
+
+				//select actor to act
 				if (actor.time < now) {
 					now = actor.time;
 					current = actor;
 				}
-				
+
+				//fill chars
 				if (actor instanceof Char) {
 					Char ch = (Char)actor;
+
+					//some old dirty hack
 					if(!Dungeon.level.cellValid(ch.getPos())) {
 						current = null;
 						toRemove = actor;
@@ -224,21 +232,24 @@ public abstract class Actor implements Bundlable {
 				remove(toRemove);
 				toRemove = null;
 			}
-			
+
+			// have candidate to act
 			if (current != null) {
+
 				if (current instanceof Char && ((Char)current).getSprite().isMoving) {
 					// If it's character's turn to act, but its sprite 
 					// is moving, wait till the movement is over
 					current = null;
 					break;
 				}
-				
+
 				doNext = current.act();
 
 				if (doNext && !Dungeon.hero.isAlive()) {
 					doNext = false;
 					current = null;
 				}
+
 			} else {
 				doNext = false;
 			}
