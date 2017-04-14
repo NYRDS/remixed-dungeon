@@ -7,9 +7,9 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF FortuneTellerNPC CLASS -->
     <string name="FortuneTellerNPC_Name">fortune-teller</string>
-    <string name="FortuneTellerNPC_Gender">masculine</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name_Objective">fortune-teller</string>
-    <string name="FortuneTellerNPC_Desc">That\'s a fortune-teller, alright.</string>
+    <string name="FortuneTellerNPC_Desc">This woman is dressed in a long, brightly colored robe. She looks surprisingly young for someone, who mastered arcane arts of fortune-telling. Coming closer, you can hear her mumbling, as she stares in crystal ball.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Limit_Reached">I do apologise, but you\'ve reached your current limit. But you\'ll be able to use our service again for every hero level you receive!</string>
