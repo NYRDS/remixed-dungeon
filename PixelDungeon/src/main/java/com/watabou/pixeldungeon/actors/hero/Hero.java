@@ -126,6 +126,7 @@ import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import com.watabou.utils.SystemTime;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -162,6 +163,8 @@ public class Hero extends Char {
 	private boolean    ready      = false;
 	public  HeroAction curAction  = null;
 	public  HeroAction lastAction = null;
+
+	private long lastActionTime;
 
 	private Char enemy;
 
@@ -539,6 +542,8 @@ public class Hero extends Char {
 			return false;
 
 		} else {
+
+			lastActionTime = SystemTime.now();
 
 			restoreHealth = false;
 
@@ -1829,5 +1834,16 @@ public class Hero extends Char {
 		}
 		sp = Scrambler.scramble(Scrambler.descramble(sp) - cost);
 		return true;
+	}
+
+	@Override
+	protected boolean timeout() {
+		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
+		if(SystemTime.now() - lastActionTime > 1000) {
+			lastActionTime = SystemTime.now();
+			spend(TIME_TO_REST);
+			return true;
+		}
+		return false;
 	}
 }

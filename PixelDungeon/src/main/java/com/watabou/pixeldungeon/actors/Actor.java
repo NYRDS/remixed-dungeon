@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import android.util.Log;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -191,7 +193,7 @@ public abstract class Actor implements Bundlable {
 		}
 
 		// action still in progress
-		if (current != null) {
+		if (current != null && !current.timeout()) {
 			return;
 		}
 	
@@ -224,6 +226,7 @@ public abstract class Actor implements Bundlable {
 						toRemove = actor;
 						continue;
 					}
+
 					chars.put(ch.getPos(), ch);
 				}
 			}
@@ -235,6 +238,8 @@ public abstract class Actor implements Bundlable {
 
 			// have candidate to act
 			if (current != null) {
+
+				Log.i("Main loop", String.format("%s %4.2f",current.getClass().getSimpleName(),current.time));
 
 				if (current instanceof Char && ((Char)current).getSprite().isMoving) {
 					// If it's character's turn to act, but its sprite 
@@ -256,7 +261,11 @@ public abstract class Actor implements Bundlable {
 			
 		} while (doNext);
 	}
-	
+
+	protected boolean timeout() {
+		return false;
+	}
+
 	public static void add( Actor actor ) {
 		add( actor, now );
 	}
