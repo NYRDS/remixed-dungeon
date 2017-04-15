@@ -78,8 +78,8 @@ public class InterlevelScene extends PixelScene {
 		FADE_IN, STATIC, FADE_OUT
 	}
 
-	volatile private Phase phase;
-	volatile private float timeLeft;
+	private Phase phase;
+	private float timeLeft;
 
 	private Text message;
 
@@ -89,12 +89,11 @@ public class InterlevelScene extends PixelScene {
 
 	class LevelChanger implements InterstitialPoint,Runnable {
 
+		private volatile boolean ready;
+
 		@Override
 		public void returnToWork(boolean result) {
-			if (phase == Phase.STATIC && error == null) {
-				phase = Phase.FADE_OUT;
-				timeLeft = TIME_TO_FADE;
-			}
+			ready = true;
 		}
 		
 		@Override
@@ -174,7 +173,7 @@ public class InterlevelScene extends PixelScene {
 		phase = Phase.FADE_IN;
 		timeLeft = TIME_TO_FADE;
 
-		levelChanger= new LevelChanger();
+		levelChanger = new LevelChanger();
 		Game.instance().executor.execute(levelChanger);
 	}
 
@@ -184,12 +183,22 @@ public class InterlevelScene extends PixelScene {
 
 		float p = timeLeft / TIME_TO_FADE;
 
+		if (error != null) {
+			add(new WndError(error) {
+				public void onBackPressed() {
+					super.onBackPressed();
+					Game.switchScene(StartScene.class);
+				}
+			});
+			error = null;
+		}
+
 		switch (phase) {
 
 		case FADE_IN:
 			message.alpha(1 - p);
 			if ((timeLeft -= Game.elapsed) <= 0) {
-				if (error == null) {
+				if (error == null && levelChanger.ready) {
 					phase = Phase.FADE_OUT;
 					timeLeft = TIME_TO_FADE;
 				} else {
@@ -211,14 +220,8 @@ public class InterlevelScene extends PixelScene {
 			break;
 
 		case STATIC:
-			if (error != null) {
-				add(new WndError(error) {
-					public void onBackPressed() {
-						super.onBackPressed();
-						Game.switchScene(StartScene.class);
-					}
-				});
-				error = null;
+			if(levelChanger.ready) {
+				phase = Phase.FADE_OUT;
 			}
 			break;
 		}
