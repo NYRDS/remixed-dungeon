@@ -1,3 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">garde de la ville</string>
+    <string name="TownGuardNPC_Gender">masculin</string>
+    <string name="TownGuardNPC_Name_Objective">garde de la ville</string>
+    <string name="TownGuardNPC_Message1">Bougez d\'ici</string>
     </resources>

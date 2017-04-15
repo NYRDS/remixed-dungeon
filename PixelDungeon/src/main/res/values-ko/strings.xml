@@ -410,7 +410,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <!--STRINGS OF Light CLASS-->
   <string name="Light_Info">섬광</string>
   <!--STRINGS OF MindVision CLASS-->
-  <string name="MindVision_Info">마인드 비젼</string>
+  <string name="MindVision_Info">심안</string>
   <!--STRINGS OF Ooze CLASS-->
   <string name="Ooze_Info">부식성 점액</string>
   <string name="Ooze_Death">%s 이/가 당신을 죽였습니다...</string>

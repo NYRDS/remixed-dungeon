@@ -1,3 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">peau de rat</string>
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">Armure en rats</string>
+    <string name="RatArmor_Info">Une armure cuir de rats. Ce n\'est probablement non contagieux</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">médecin de la peste</string>
+    <string name="PlagueDoctorNPC_Gender">masculin</string>
+    <string name="PlagueDoctorNPC_Name_Objective">médecin de la peste</string>
+    <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>
+
+    <string name="BellaNPC_No">Non, pas avec toi</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">Je suis désolé, vous ne pouvez utiliser ce service maintenant. (La connection internet est requisse)</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">Porte</string>
+    <string name="town_deco_dungeon_door_desc">Entrée du donjon</string>
+
+</resources>

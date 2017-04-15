@@ -130,10 +130,10 @@
         - Now bone piles can\'t contain artifacts and quest items\n
         - Pet mechanics have been changed. Various mobs received immunity to mind control effects\n
         - Burning period of Liquid Flame has been shortened, it also will burn less in water\n
-        - Mind control icon, which appears above the \“pet\” mobs, has been changed to a heart shape\n
-        - Updated visual of \“new font\”\n
+        - Mind control icon, which appears above the «pet» mobs, has been changed to a heart shape\n
+        - Updated visual of «new font»\n
         - Updated translations\n
-        - Removed options : \“immersive mode\” and \“gui scale\”\n
+        - Removed options : «immersive mode» and «gui scale»\n
         </string>
         <string name="Welcome_Text_25_1">
         remix.25.1:\n
@@ -260,5 +260,35 @@
         - Town grew bigger\n
         - Town shop now sells more items\n
         - New quest in Town\n
+        </string>
+        <string name="Welcome_Text_26_4">
+        remix.26.4\n
+         - Game:\n
+         - On Yog\'s death every mob on level also dies, including those controlled by the hero\n
+         - Yog spawns 2 mini-bosses on easy and medium difficulties («Expert» difficulty still makes him summon 3 of those)\n
+         - Upgrade level of wands used by the Crystals (including those spawned by Shadow Lord) are no longer equals the dungeon depth on which Crystal was spawned, but a half that amount\n
+         - Mechanics behind Shadow Lord\'s ability «summon Wraith» was slightly optimized\n
+         - Hero will start with 100 gold coins instead of 200\n
+         - Starting gear once again include Ration\n
+         - Now, if hero dies on difficulty level that allows save states and if there is saved game available, instead of a menu the «Load saved game» screen will appear\n
+         - New NPC in Town: a Fortune-teller, she is willing to identify your items, for a symbolic payment\n
+         - While hero stays in town he\she will no longer accumulate hunger\n
+         - Health regeneration and «rest until healthy» feature disabled in town\n
+         - Watch limit in Movie Theater now based on hero level, for every new level you will be able to watch 1 more video\n
+         - Necromancer\'s robe is no longer checks for hero health in order to perform summoning\n
+         - The «You can wear only 2 rings at a time!» message is now mentions «artifacts»\n
+         - Necromancer gets clearer log entry once summoning limit is reached\n
+         - Rat Armor was slightly buffed\n
+         - Upgrading a wand will restore it\'s charges\n
+         - Fixed bug which would break the Town layout in older save files\n
+         - Fixed bug which mixed texts from different mods\n\n
+         - Mods:\n
+         - CagedKobold added to MobFactory and now available in custom levels\n
+         - On dungeon levels tagged as «isSafe» hero will no longer accumulate hunger, and no longer regenerate health or be able to «rest until healthy»\n
+         - Approved mods can change «banners» image file\n
+         - Wands got «charges» and «maxCharges» attributes\n
+         - New attribute for dungeon levels: «isStatic». Level tagged with it will re-generate every time hero enters it (Level remains «static», despite things that hero could have done previously)\n
+         - Adding additional step of hero\'s starting gear initialization: «non_expert». Items, included on this step, will be added to the inventory in every difficulty level, except for «Expert» difficulty\n
+         - Hero are no longer suffers from hunger debuffs, that he would get on «Expert» difficulty, as long as he remains on «isSafe» level\n
         </string>
 </resources>

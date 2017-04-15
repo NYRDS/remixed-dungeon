@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">你最多只能同時佩戴2件神器。</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">算命家</string>
+    <string name="FortuneTellerNPC_Gender">女性的</string>
+    <string name="FortuneTellerNPC_Name_Objective">算命家</string>
+    <string name="FortuneTellerNPC_Desc">此女身穿一襲色彩鮮艷的長袍。對於一位已精通算命奧術的算命家來說，她算是年少有為。您一步一步地靠近，隱約能聽到她微聲低語。然而，她只是目不轉晴地盯著水晶球。</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Limit_Reached">抱歉，目前您已達界限，但每升一級，您便可以再次享用我們的服務！</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">我可以為您揭開任何道具的神秘面紗！
+每次只收 %d 個金幣。</string>
+    <string name="WndFortuneTeller_No_Item">看來您身上並沒有尚未鑒定的道具，您確定您真要送錢給我花嗎？</string>
+    <string name="WndFortuneTeller_Title">算命家</string>
+
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">同意</string>
+    <string name="Wnd_Button_No">拒絕</string>
+    <string name="Wnd_Button_Back">返回</string>
+    <string name="Wnd_Button_Cancel">取消</string>
+    <string name="Wnd_Button_Close">關閉</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">圖書館</string>
+    <string name="WndLibrary_Catalogue_Instruction">選擇下列一項查看。</string>
+    <string name="WndLibrary_Mobs_Btn">怪物</string>
+    <string name="WndLibrary_Items_Btn">道具</string>
+    <string name="WndLibrary_Codex_Btn">故事</string>
+    <string name="WndLibrary_Levels_Btn">地牢</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">您累計最多可看 %2$d 次，而您已經觀看了 %1$d 次。每當您升一級，您便可獲得額外一次欣賞電影的機會。</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">地毯</string>
+    <string name="town_deco_blue_carpet_desc">一塊用紫絲繡出花紋的精緻地毯。</string>
+
+    <string name="town_table_fortune_name">桌子</string>
+    <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
+
+    <string name="ConcreteBlock_Name">重型混凝土塊</string>
+    <string name="ConcreteBlock_Description">看來您需要 %d 點力量才能推得動這塊混凝土</string>
+    <string name="Hero_AnotherTry">你與殘酷無情的人間告別了。
+想再回去吃苦頭嗎？</string>
+
+</resources>

@@ -190,7 +190,14 @@ Vous maintenez la %s prête à l\'emploi.</string>
   <string name="Kusarigama_Pull">TIRER</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">Epée du Chaos</string>
+  <string name="ChaosSword_Gender">masculin</string>
   <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">arc du chaos</string>
+  <string name="ChaosBow_Gender">masculin</string>
   <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">Baton du Chaos</string>
+  <string name="ChaosStaff_Info">un baton regorgeant du pouvoir du chaos! Les mages en rèvent-ils ou en ont peur ?</string>
+  <string name="ChaosStaff_Gender">masculin</string>
   <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">épée de sacrifice</string>
 </resources>
