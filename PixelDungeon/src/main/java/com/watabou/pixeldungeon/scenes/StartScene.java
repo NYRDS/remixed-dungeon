@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
@@ -280,21 +281,22 @@ public class StartScene extends PixelScene {
 		curShield.highlight(true);
 
 
-		if (curShield.cl == HeroClass.HUNTRESS && !huntressUnlocked) {
-			updateUnlockLabel(Game.getVar(R.string.StartScene_Unlock));
-			return;
-		}
+		if(!BuildConfig.DEBUG) {
+			if (curShield.cl == HeroClass.HUNTRESS && !huntressUnlocked) {
+				updateUnlockLabel(Game.getVar(R.string.StartScene_Unlock));
+				return;
+			}
 
-		if (curShield.cl == HeroClass.ELF && !elfUnlocked) {
-			updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockElf));
-			return;
-		}
+			if (curShield.cl == HeroClass.ELF && !elfUnlocked) {
+				updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockElf));
+				return;
+			}
 
-		if (curShield.cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
-			updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockNecromancer));
-			return;
+			if (curShield.cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
+				updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockNecromancer));
+				return;
+			}
 		}
-
 		unlock.setVisible(false);
 
 		GamesInProgress.Info info = GamesInProgress.check(curShield.cl);

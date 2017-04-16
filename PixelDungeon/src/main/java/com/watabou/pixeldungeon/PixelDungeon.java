@@ -342,16 +342,11 @@ public class PixelDungeon extends Game {
 		return Preferences.INSTANCE.getString(Preferences.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
 	}
 
-	private static Boolean realtimeCached = null;
 	public static boolean realtime() {
-		if(realtimeCached == null) {
-			realtimeCached = Preferences.INSTANCE.getBoolean(Preferences.KEY_REALTIME, false);
-		}
-		return realtimeCached;
+			return Preferences.INSTANCE.getBoolean(Preferences.KEY_REALTIME, false);
 	}
 
 	public static void realtime(boolean value) {
-		realtimeCached = value;
 		Preferences.INSTANCE.put(Preferences.KEY_REALTIME, value);
 	}
 

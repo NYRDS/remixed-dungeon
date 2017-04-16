@@ -68,7 +68,7 @@ public class WndSettings extends Window {
 	private static final int WIDTH      = 112;
 	private static final int BTN_HEIGHT = 18;
 
-	private static final String TXT_EXPEREMENTAL_FONT = Game
+	private static final String TXT_SYSTEM_FONT  = Game
 			.getVar(R.string.WndSettings_ExperementalFont);
 	private static final String TXT_CLASSIC_FONT = Game
 			.getVar(R.string.WndSettings_ClassicFont);
@@ -178,9 +178,7 @@ public class WndSettings extends Window {
 									if(!Utils.canUseClassicFont(lang[index])) {
 										PixelDungeon.classicFont(false);
 									}
-
 									PixelDungeon.uiLanguage(lang[index]);
-									
 								}
 							});
 				}
@@ -281,7 +279,7 @@ public class WndSettings extends Window {
 	private float createUiZoomButtons(float y) {
 		int w = BTN_HEIGHT;
 
-		btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
+		RedButton btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
 			@Override
 			protected void onClick() {
 				uiZoom(PixelScene.uiCamera.zoom - 0.1f);
@@ -289,7 +287,7 @@ public class WndSettings extends Window {
 		};
 		add(btnZoomOut.setRect(0, y, w, BTN_HEIGHT));
 
-		btnZoomIn = new RedButton(TXT_ZOOM_IN) {
+		RedButton btnZoomIn = new RedButton(TXT_ZOOM_IN) {
 			@Override
 			protected void onClick() {
 				uiZoom(PixelScene.uiCamera.zoom + 0.1f);
@@ -314,7 +312,7 @@ public class WndSettings extends Window {
 		String text;
 		
 		if(PixelDungeon.classicFont()) {
-			text = TXT_EXPEREMENTAL_FONT;
+			text = TXT_SYSTEM_FONT;
 			
 			btnStdFontScale.enable(false);
 			btnScaleMinus.enable(false);
