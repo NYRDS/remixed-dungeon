@@ -10,12 +10,17 @@
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Siyah Kurukafa Uyandı !</string>
     <string name="BlackSkull_Ressurrect">Siyah Kurukafa sana hizmet etmek için yükseldi </string>
+    <string name="BlackSkull_Deactivated">Kara Kurukafa Bir Kez Daha Uykuya Daldı.</string>
+
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Kemik Zırh</string>
+    <string name="NecromancerArmor_Info">Bu Zırh Nekromensırların toplam 5 ruh karşılığında max 2 adet yaratık çıkarmasına izin verir.Ölü Hizmetkarlar Efendilerini Takip Ederler Ve Düşmanlarına Saldırırlar.Hizmetkarlar Kahraman Seviyesi İle Güçlenirler</string>
     <string name="NecromancerArmor_NotNecromancer">Sadece Nekromensırlar bu zırhı kullanabilir !</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">Nekromancer kaftanı</string>
+    <string name="NecromancerRobe_Info">Bu Kaftan Nekromensırların 5 ruh karşılığında Ölü Hizmetkar Çıkarmasını Sağlar.Ölü Hizmetkarlar Sahipleriyle Birlikte Güçlenirler.</string>
+
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
     <string name="HeroClass_Necromancer">necromancer</string>
@@ -28,11 +33,19 @@
         <item>iyileştirme potu başlangıçta tanımlıdır</item>
     </string-array>
 
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">Ölü Hizmetkar</string>
+    <string name="Deathling_Name_Objective">Ölü Hizmetkar</string>
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Nekromansi : Çağırma Limiti Doldu (Şuanki Sınır : %d)!</string>
     <string name="Necromancy_SoulsCountLabel">ruhlar</string>
 
     <string name="Necromancer_ACSpecial">kara büyü</string>
     <string name="Necromancy_ReincarnationName">reenkarnasyon</string>
     <string name="Necromancy_ReincarnationTriggered">güçlerin ölümü yendi ! ama bütün ruhlarını ve eşyalarını kaybettin</string>
+    <string name="Necromancy_SummonDeathlingName">Ölü Hizmetkar Çağır.</string>
+
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
     <string name="StartScene_UnlockNecromancer">bu karakteri açmak için diğer türlerden biri ile lich i öldür</string>
@@ -40,6 +53,7 @@
     <!-- Window descriptions -->
     <string name="Necromancy_Title">kara büyü</string>
 
+    <string name="WndSadGhostNecro_Yes">Evet İradesini Kır.</string>
     <string name="WndSadGhostNecro_No">hayır, bırak konuşsun</string>
     <string name="WndSadGhostNecro_Persuaded">üzgün hayalet domine edildi</string>
 

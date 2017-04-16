@@ -18,7 +18,12 @@
     <string name="PlagueDoctorNPC_Name">Hasan Fatih</string>
     <string name="PlagueDoctorNPC_Gender">erkek</string>
     <string name="PlagueDoctorNPC_Name_Objective">Hasan Fatih</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Hah İnanabiliyor Musun ? Bu Aptallar Hala Bu Lağımların Ne Kadar Zararlı Olabileceğini Anlamıyor ! Sanki Gardiyanlar Köyü Herşeyden Koruyabilir Hah ! Bu Hastalığı Hiçbir Silah Durduramaz. Bana Yardım Eder Misin ? Bana %d Fare Derisi Getir Ve Bende Testlerime Başlayabileyim
+</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Hah İnanabiliyor Musun ?! Bu Aptallar Hala Bu Lağımların Ne Kadar Zararlı Olabileceğini Anlamıyor ! Sanki Gardiyanlar Köyü Herşeyden Koruyabilir Hah ! Bu Hastalığı Hiçbir Silah Durduramaz. Bana Yardım Eder Misin ? Bana %d Fare Derisi Getir Ve Bende Testlerime Başlayabileyim
+</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">bana %d fare derisi getir </string>
+    <string name="PlagueDoctorNPC_Quest_End">Ah,Teşekkür Ederim. Umarım Hastalığa Çare Bulabilirim. Bu Arada Sen Yokken Bunu Senin İçin Yaptım.</string>
     <string name="PlagueDoctorNPC_After_Quest">onlara göstereceğim !! onların hepsine göstereceğim !!</string>
     <string name="Journal_PlagueDoctorNPC">veba doktoru</string>
 
@@ -56,6 +61,10 @@
     <string name="BellaNPC_Angry">sen nasıl cüret edersin... seni aciz !</string>
     <string name="BellaNPC_Yes_End_Game">Eminim (Oyun Sonu)</string>
     <string name="BellaNPC_No">hayır, senle olmaz </string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">Üzgünüm,Şuanda Bu servisi kullanamazsınız.(İnternet Bağlantısı Gerekir)</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->

@@ -5,8 +5,15 @@
     <string name="SantaHat_Name">noelbaba şapkası</string>
     <!-- STRINGS OF Rudolph CLASS -->
     <string name="Rudolph_Name">kırmızı burun ve antenler</string>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">Kobold</string>
     <string name="Kobold_Gender">erkek</string>
+    <string name="Kobold_Name_Objective">Kobold</string>
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">Kobold Buzbüyücüsü</string>
     <string name="KoboldIcemancer_Gender">erkek</string>
+    <string name="KoboldIcemancer_Name_Objective">Kobold Buzbüyücüsü</string>
     <string name="KoboldIcemancer_Killed">%s\'nin buz oku seni öldürdü.</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
@@ -26,12 +33,17 @@
     <string name="IceGuardianCore_Gender">erkek</string>
     <string name="IceGuardianCore_Name_Objective">buz gardiyanı </string>
     <string name="CagedKobold_Gender">erkek</string>
+    <string name="CagedKobold_Name_Objective">Kafeslenmiş Kobold.</string>
+    <string name="CagedKobold_Desc">Kafesin İçinde Bir Kobold.</string>
     <string name="CagedKobold_Message1">Lütfen....</string>
     <string name="CagedKobold_Message2">bana yardım et ahbap </string>
     <string name="CagedKobold_Message3">bu kafes hakkında herşeyden nefret ediyorum </string>
 
+    <string name="Journal_Caged_Kobold">Kafeslenmiş Kobold.</string>
+
     <string name="IceCaves_TileHighGrass">donmuş büyük ot </string>
     <string name="IceCaves_TileGrass">donmuş ot</string>
+    <string name="IceCaves_TileStatue">Donmuş Gnoll.</string>
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festival hindisi</string>
