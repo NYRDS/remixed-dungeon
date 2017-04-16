@@ -33,13 +33,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends Window {
 
-	private static final String TXT_ZOOM_IN = Game
-			.getVar(R.string.WndSettings_ZoomIn);
-	private static final String TXT_ZOOM_OUT = Game
-			.getVar(R.string.WndSettings_ZoomOut);
 	private static final String TXT_ZOOM_DEFAULT = Game
 			.getVar(R.string.WndSettings_ZoomDef);
-	
+
 	private static final String TXT_TEXT_SCALE_DEFAULT = Game
 			.getVar(R.string.WndSettings_TextScaleDefault);
 
@@ -62,7 +58,7 @@ public class WndSettings extends Window {
 
 	private static final String TXT_SECOND_QUICKSLOT = Game
 			.getVar(R.string.WndSettings_SecondQuickslot);
-	private static final String TXT_THIRD_QUICKSLOT = Game
+	private static final String TXT_THIRD_QUICKSLOT  = Game
 			.getVar(R.string.WndSettings_ThirdQuickslot);
 
 	private static final int WIDTH      = 112;
@@ -73,29 +69,23 @@ public class WndSettings extends Window {
 	private static final String TXT_CLASSIC_FONT = Game
 			.getVar(R.string.WndSettings_ClassicFont);
 
-	private RedButton btnZoomOut;
-	private RedButton btnZoomIn;
-	
-	private RedButton btnStdFontScale;
-	private RedButton btnScaleMinus;
-	private RedButton btnScalePlus;
+	private Selector fontScaleSelector = new Selector(this,WIDTH,BTN_HEIGHT);
 
 	private RedButton btnFontMode;
-	
+
 	private boolean mInGame;
 
-	
 	public WndSettings(boolean inGame) {
 		super();
 		mInGame = inGame;
 
 		float curY = 0;
-		
+
 		if (mInGame) {
 			curY = createZoomButtons();
 			curY = createUiZoomButtons(curY);
 		} else {
-			if(android.os.Build.VERSION.SDK_INT >= 19) {
+			if (android.os.Build.VERSION.SDK_INT >= 19) {
 				CheckBox btnImmersive = new CheckBox(Game.getVar(R.string.WndSettings_Immersive)) {
 					@Override
 					protected void onClick() {
@@ -114,7 +104,7 @@ public class WndSettings extends Window {
 			curY = createTextScaleButtons(curY + SMALL_GAP);
 		}
 		curY += SMALL_GAP;
-		
+
 		CheckBox btnMusic = new CheckBox(TXT_MUSIC) {
 			@Override
 			protected void onClick() {
@@ -149,7 +139,7 @@ public class WndSettings extends Window {
 			btnOrientation.setRect(0, btnSound.bottom() + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
 			add(btnOrientation);
-			
+
 			CheckBox btnRealtime = new CheckBox("Realtime!") {
 				@Override
 				protected void onClick() {
@@ -160,22 +150,22 @@ public class WndSettings extends Window {
 			btnRealtime.setRect(0, btnOrientation.bottom() + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
 			btnRealtime.checked(PixelDungeon.realtime());
-			if(!PixelDungeon.isAlpha()) {
+			if (!PixelDungeon.isAlpha()) {
 				btnRealtime.enable(false);
 			}
 			add(btnRealtime);
-			
+
 			RedButton localeButton = new RedButton(TXT_SElECT_LANGUAGE) {
 				@Override
 				protected void onClick() {
 					PixelDungeon.scene().add(
-							new WndSelectLanguage(TXT_SElECT_LANGUAGE,  "English",
-									"Русский", "Français", "Polski", "Español","한국말","Português brasileiro","Italiano","Deutsch","简体中文","日本語","Türkçe","Украї́нська") {
-								
+							new WndSelectLanguage(TXT_SElECT_LANGUAGE, "English",
+									"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文", "日本語", "Türkçe", "Украї́нська") {
+
 								@Override
 								protected void onSelect(int index) {
-									String lang[] = { "en", "ru", "fr", "pl", "es","ko","pt_BR","it","de","zh","ja","tr","uk"};
-									if(!Utils.canUseClassicFont(lang[index])) {
+									String lang[] = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh", "ja", "tr", "uk"};
+									if (!Utils.canUseClassicFont(lang[index])) {
 										PixelDungeon.classicFont(false);
 									}
 									PixelDungeon.uiLanguage(lang[index]);
@@ -183,13 +173,13 @@ public class WndSettings extends Window {
 							});
 				}
 			};
-			
+
 			localeButton.setRect(0, btnRealtime.bottom() + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
 			add(localeButton);
 
 			float y = createFontSelector(localeButton.bottom() + SMALL_GAP);
-			
+
 			resize(WIDTH, (int) y);
 		} else {
 
@@ -236,7 +226,7 @@ public class WndSettings extends Window {
 
 				resize(WIDTH, (int) thirdQuickslot.bottom());
 			} else {
-				if(PixelDungeon.thirdQuickslot()){
+				if (PixelDungeon.thirdQuickslot()) {
 					PixelDungeon.secondQuickslot(true);
 					secondQuickslot.checked(PixelDungeon.secondQuickslot());
 				}
@@ -245,87 +235,79 @@ public class WndSettings extends Window {
 		}
 
 	}
-	
-	private float createZoomButtons() {
-		int w = BTN_HEIGHT;
 
-		btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
+	private float createZoomButtons() {
+		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
+		return selector.add(0,TXT_ZOOM_DEFAULT,new Selector.PlusMinusDefault() {
+
 			@Override
-			protected void onClick() {
+			public void onPlus() {
 				zoom(Camera.main.zoom - 0.1f);
 			}
-		};
-		add(btnZoomOut.setRect(0, 0, w, BTN_HEIGHT));
 
-		btnZoomIn = new RedButton(TXT_ZOOM_IN) {
 			@Override
-			protected void onClick() {
+			public void onMinus() {
 				zoom(Camera.main.zoom + 0.1f);
 			}
-		};
-		add(btnZoomIn.setRect(WIDTH - w, 0, w, BTN_HEIGHT));
 
-		add(new RedButton(TXT_ZOOM_DEFAULT) {
 			@Override
-			protected void onClick() {
+			public void onDefault() {
 				zoom(PixelScene.defaultZoom);
 			}
-		}.setRect(btnZoomOut.right(), 0, WIDTH - btnZoomIn.width()
-				- btnZoomOut.width(), BTN_HEIGHT));
-		
-		return btnZoomIn.bottom();
+
+			private void zoom(float value) {
+				Camera.main.zoom(value);
+				PixelDungeon.zoom(value - PixelScene.defaultZoom);
+
+				float zoom = Camera.main.zoom;
+				selector.enable(zoom > PixelScene.minZoom,zoom < PixelScene.maxZoom,true);
+			}
+		});
 	}
 
 	private float createUiZoomButtons(float y) {
-		int w = BTN_HEIGHT;
+		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
+		return selector.add(y, Game.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
 
-		RedButton btnZoomOut = new RedButton(TXT_ZOOM_OUT) {
 			@Override
-			protected void onClick() {
-				uiZoom(PixelScene.uiCamera.zoom - 0.1f);
-			}
-		};
-		add(btnZoomOut.setRect(0, y, w, BTN_HEIGHT));
-
-		RedButton btnZoomIn = new RedButton(TXT_ZOOM_IN) {
-			@Override
-			protected void onClick() {
+			public void onPlus() {
 				uiZoom(PixelScene.uiCamera.zoom + 0.1f);
 			}
-		};
-		add(btnZoomIn.setRect(WIDTH - w, y, w, BTN_HEIGHT));
 
-		add(new RedButton(Game.getVar(R.string.WndSettings_UiScale)) {
 			@Override
-			protected void onClick() {
+			public void onMinus() {
+				uiZoom(PixelScene.uiCamera.zoom - 0.1f);
+			}
+
+			@Override
+			public void onDefault() {
 				uiZoom(PixelScene.defaultZoom);
 			}
-		}.setRect(btnZoomOut.right(), y, WIDTH - btnZoomIn.width()
-				- btnZoomOut.width(), BTN_HEIGHT));
 
-		return btnZoomIn.bottom();
+			private void uiZoom(float value) {
+				PixelScene.uiCamera.updateFullscreenCameraZoom(value);
+				((GameScene) Game.scene()).updateUiCamera();
+				Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
+
+				float zoom = PixelScene.uiCamera.zoom;
+				selector.enable(zoom < PixelScene.maxZoom,zoom > PixelScene.minZoom,true);
+			}
+		});
 	}
 
 	private float createFontSelector(float y) {
 		remove(btnFontMode);
-		
+
 		String text;
-		
-		if(PixelDungeon.classicFont()) {
+
+		if (PixelDungeon.classicFont()) {
 			text = TXT_SYSTEM_FONT;
-			
-			btnStdFontScale.enable(false);
-			btnScaleMinus.enable(false);
-			btnScalePlus.enable(false);
-			
+			fontScaleSelector.enable(false);
 		} else {
 			text = TXT_CLASSIC_FONT;
-			
-			btnStdFontScale.enable(true);
-			btnScaleMinus.enable(true);
-			btnScalePlus.enable(true);
+			fontScaleSelector.enable(true);
 		}
-		
+
 		btnFontMode = new RedButton(text) {
 			@Override
 			protected void onClick() {
@@ -333,82 +315,50 @@ public class WndSettings extends Window {
 				createFontSelector(y);
 			}
 		};
-		
-		if(!Utils.canUseClassicFont(PixelDungeon.uiLanguage())) {
+
+		if (!Utils.canUseClassicFont(PixelDungeon.uiLanguage())) {
 			btnFontMode.enable(false);
 		}
-		
+
 		btnFontMode.setRect(0, y, WIDTH,
 				BTN_HEIGHT);
 		add(btnFontMode);
-		
+
 		return btnFontMode.bottom();
 	}
-	
-	private float createTextScaleButtons(float y) {
-		int w = BTN_HEIGHT;
-		
-		remove(btnScaleMinus);
-		remove(btnScalePlus);
-		remove(btnStdFontScale);
-		
-		btnScaleMinus = new RedButton(TXT_ZOOM_OUT) {
-			@Override
-			protected void onClick() {
-				PixelDungeon.fontScale(PixelDungeon.fontScale()-1);
-				createTextScaleButtons(y);
-			}
-		};
-		add(btnScaleMinus.setRect(0, y, w, BTN_HEIGHT));
 
-		btnScalePlus = new RedButton(TXT_ZOOM_IN) {
+	private float createTextScaleButtons(final float y) {
+		return fontScaleSelector.add(y, TXT_TEXT_SCALE_DEFAULT, new Selector.PlusMinusDefault() {
 			@Override
-			protected void onClick() {
-				PixelDungeon.fontScale(PixelDungeon.fontScale()+1);
+			public void onPlus() {
+				fontScaleSelector.remove();
+				PixelDungeon.fontScale(PixelDungeon.fontScale() + 1);
+				createTextScaleButtons(y);
+
+			}
+
+			@Override
+			public void onMinus() {
+				fontScaleSelector.remove();
+				PixelDungeon.fontScale(PixelDungeon.fontScale() - 1);
 				createTextScaleButtons(y);
 			}
-		};
-		add(btnScalePlus.setRect(WIDTH - w, y, w, BTN_HEIGHT));
-		
-		btnStdFontScale = new RedButton(TXT_TEXT_SCALE_DEFAULT) {
+
 			@Override
-			protected void onClick() {
+			public void onDefault() {
+				fontScaleSelector.remove();
 				PixelDungeon.fontScale(0);
 				createTextScaleButtons(y);
 			}
-		};
-		btnStdFontScale.setRect(btnScaleMinus.right(), y, WIDTH - btnScalePlus.width()
-				- btnScaleMinus.width(), BTN_HEIGHT);
-		add(btnStdFontScale);
-		
-		return btnScaleMinus.bottom();
+		});
 	}
-	
+
 	@Override
 	public void onBackPressed() {
 		hide();
-		if(!mInGame) {
+		if (!mInGame) {
 			PixelDungeon.resetScene();
 		}
-	}
-
-	private void uiZoom(float value) {
-		PixelScene.uiCamera.updateFullscreenCameraZoom(value);
-		((GameScene)Game.scene()).updateUiCamera();
-		Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
-	}
-
-	private void zoom(float value) {
-		Camera.main.zoom(value);
-		PixelDungeon.zoom(value - PixelScene.defaultZoom);
-
-		updateEnabled();
-	}
-
-	private void updateEnabled() {
-		float zoom = Camera.main.zoom;
-		btnZoomIn.enable(zoom < PixelScene.maxZoom);
-		btnZoomOut.enable(zoom > PixelScene.minZoom);
 	}
 
 	private String orientationText() {
