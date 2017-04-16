@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.items.common.RatHide;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
+import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
@@ -142,7 +143,7 @@ public enum HeroClass {
 		Item ring = new RingOfAccuracy().identify();
 		ring.cursed = true;
 		hero.collect(ring);
-		hero.collect(new BlackSkull().identify());
+		hero.collect(new HeartOfDarkness().identify());
 		hero.collect(new CandleOfMindVision());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());

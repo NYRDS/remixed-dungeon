@@ -34,4 +34,11 @@ public class SpiritOfPain extends Mob {
         return 20;
     }
 
+    @Override
+    protected boolean act(){
+        super.act();
+        this.damage(6, this);
+        return true;
+    }
+
 }
