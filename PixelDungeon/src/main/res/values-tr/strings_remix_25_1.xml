@@ -7,6 +7,8 @@
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">Ruh Getiren</string>
     <string name="BlackSkullOfMastery_Necromancer">Büyüyü Kırdın</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Ya da eğer_büyüyü bozarsan_bu eseri normal olarak kullanabilirsin</string>
+
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Siyah Kurukafa Uyandı !</string>
     <string name="BlackSkull_Ressurrect">Siyah Kurukafa sana hizmet etmek için yükseldi </string>
