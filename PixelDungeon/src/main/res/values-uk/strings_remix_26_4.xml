@@ -9,6 +9,15 @@
     <string name="FortuneTellerNPC_Name">ворожка</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name_Objective">ворожку</string>
+    <string name="FortuneTellerNPC_Desc">Ця жінка носить довгу, яскраву спідницю. Вона виглядає досить молодою, як для тої, що освоїла мистецтво передбачення. Підійшовши ближче, ти чуєш, що вона щось бурмоче, зазираючи у свою кришталеву кулю.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Limit_Reached">Прошу пробачення, але ви вичерпали свій поточний ліміт. Але після отримання нового рівня, ви ще зможете скористатися нашим сервісом!</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">Я в змозі відкрити таємниці, які приховують твої предмети.\nВартість розпізнавання одного предмету становить %d монет.</string>
+    <string name="WndFortuneTeller_No_Item">Треба бути більш обачливим, ти ж не бажаєш кидати гроші на вітер? Твій інвентар не містить неопізнаних предметів.</string>
     <string name="WndFortuneTeller_Title">Ворожка.</string>
 
     <!-- STRINGS OF Generic Button labels -->
@@ -25,6 +34,9 @@
     <string name="WndLibrary_Items_Btn">Предмети</string>
     <string name="WndLibrary_Codex_Btn">Історії</string>
     <string name="WndLibrary_Levels_Btn">Підземелля</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">Ви переглянули %1$d разів з %2$d. Ви отримаєте ще один квиток на сеанс за кожен рівень героя.</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->

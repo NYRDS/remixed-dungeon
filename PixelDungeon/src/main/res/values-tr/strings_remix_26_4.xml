@@ -1,3 +1,46 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">Tek Seferde Yalnızca 2 Kalıntı Giyebilirsin</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">Falcı</string>
+    <string name="FortuneTellerNPC_Gender">dişi</string>
+    <string name="FortuneTellerNPC_Name_Objective">Falcı</string>
+    <string name="FortuneTellerNPC_Desc">Bu Kadın uzun parlak ve renkli bir kaftan giyiyor.Falcılık Konusunda Uzmanlığına Göre Çok Genç Gözüküyor.Yaklaştığında Mırıldandığını Duyuyorsun.Ve Önündeki Kristal Küreye Bakıyor.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">bu eşyanın içindeki gizemleri açığa çıkarabilirim bu sana %d altına mal olur</string>
+    <string name="WndFortuneTeller_No_Item">Hey, Paranı Bir Hiç İçin Harcamak İstemezsin Değil mi ? Envanterinde Tanımsız Hiçbirşey Yok.</string>
+    <string name="WndFortuneTeller_Title">Falcı</string>
+
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Evet</string>
+    <string name="Wnd_Button_No">Hayır</string>
+    <string name="Wnd_Button_Back">Geri</string>
+    <string name="Wnd_Button_Cancel">İptal Et</string>
+    <string name="Wnd_Button_Close">Kapat</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">Kütüphane</string>
+    <string name="WndLibrary_Mobs_Btn">Canavarlar</string>
+    <string name="WndLibrary_Items_Btn">Eşyalar</string>
+    <string name="WndLibrary_Codex_Btn">Hikayeler.</string>
+    <string name="WndLibrary_Levels_Btn">Zindan</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">Halı</string>
+    <string name="town_deco_blue_carpet_desc">Klasik Mavi Halı,Mor ipek ile Süslenmiş.</string>
+
+    <string name="town_table_fortune_name">Masa</string>
+    <string name="town_table_fortune_desc">Bu masa ipek bir battaniye ile kaplanmış. üzerinde birbiri üzerine yığılmış tarot kartlarını görebiliyorsun.</string>
+
+    <string name="ConcreteBlock_Name">Ağır Beton Blok</string>
+    <string name="ConcreteBlock_Description">Görünüşe Göre bu bloğu ittirmek için %d güç puanı gerekiyor.</string>
+    <string name="Hero_AnotherTry">Öldün.\n Tekrar Denemek İster Misin ?</string>
+
+</resources>

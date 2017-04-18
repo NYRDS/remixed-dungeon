@@ -1,9 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Ushanka</string>
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">vampir kurukafa</string>
+    <string name="VampireSkull_Info">Bu Maske Bir Vampirin Kafatasından Yapılmış.Bu Bir Vampir Kurukafa... Koca Kafalı Bir Vampirin Kafatası. Korkutucu.</string>
+
     <!-- STRINGS OF ZombieMask CLASS -->
     <string name="ZombieMask_Name">Zombi Maskesi</string>
+    <string name="ZombieMask_Info">Hiç Ölü Bir Kahraman Gibi Gözükmek İstedin Mi ? Görevlerinde Ölüp Ölüp Baştan Başlayan ?  O Zaman Bu Tam Sana Göre.</string>
+
     <!-- Item descriptions -->
     <!-- STRINGS OF Candy CLASS -->
     <string name="Candy_Name">Şeker</string>

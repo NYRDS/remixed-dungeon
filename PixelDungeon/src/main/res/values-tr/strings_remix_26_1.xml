@@ -22,6 +22,7 @@
     <string name="HealerNPC_Gender">erkek</string>
     <string name="HealerNPC_Name_Objective">köy papazı</string>
     <string name="HealerNPC_Desc">yaşlı bir adam,asa yapabilecek biri gibi duruyor </string>
+    <string name="HealerNPC_Message1">Her Maceracı İçin Bedava Tedavi !</string>
     <string name="HealerNPC_Message2">ne zaman hasta yada aç hissedersen geri gel </string>
     <string name="HealerNPC_Message3">kiliseye girerken neden şapka takmamıza izin vermiyorlar anlamıyorum.... burası gerçekten çok soğuk </string>
 

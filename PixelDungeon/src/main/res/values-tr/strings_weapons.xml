@@ -188,6 +188,7 @@
   <string name="Kusarigama_Pull">ÇEK</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">kaos kılıcı</string>
+  <string name="ChaosSword_Info">Bu Kılıç Saf Kaostan Yapılmış Ve Bazen Hafifçe Titriyor.İçinde Muazzam Bir Gücü Saklıyor.Her şeyi İkiye Bölebilir,Kullanmak ve silahın gücüyle Baş etmek İçin Harika Bir Yetenek Gerekir.</string>
   <string name="ChaosSword_Gender">erkek</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">Kaos yayı</string>
