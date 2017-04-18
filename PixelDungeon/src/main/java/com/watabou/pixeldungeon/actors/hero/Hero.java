@@ -1840,7 +1840,7 @@ public class Hero extends Char {
 	@Override
 	protected boolean timeout() {
 		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
-		if(SystemTime.now() - lastActionTime > Preferences.INSTANCE.getInt(Preferences.KEY_MOVE_TIMEOUT,Integer.MAX_VALUE)) {
+		if(SystemTime.now() - lastActionTime > Preferences.MOVE_TIMEOUTS[Preferences.limitTimeoutIndex(PixelDungeon.moveTimeout())]) {
 			lastActionTime = SystemTime.now();
 			spend(TIME_TO_REST);
 			return true;

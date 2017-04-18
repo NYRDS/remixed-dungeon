@@ -18,281 +18,93 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class WndSettings extends Window {
+public class WndSettings extends WndSettingsCommon {
 
-	private static final String TXT_ZOOM_DEFAULT = Game
-			.getVar(R.string.WndSettings_ZoomDef);
-
-	private static final String TXT_TEXT_SCALE_DEFAULT = Game
-			.getVar(R.string.WndSettings_TextScaleDefault);
-
-	private static final String TXT_MUSIC = Game
-			.getVar(R.string.WndSettings_Music);
-
-	private static final String TXT_SOUND = Game
-			.getVar(R.string.WndSettings_Sound);
-
-	private static final String TXT_BRIGHTNESS = Game
-			.getVar(R.string.WndSettings_Brightness);
-
-	private static final String TXT_SWITCH_PORT = Game
-			.getVar(R.string.WndSettings_SwitchPort);
-	private static final String TXT_SWITCH_LAND = Game
-			.getVar(R.string.WndSettings_SwitchLand);
-
-	private static final String TXT_SElECT_LANGUAGE = Game
-			.getVar(R.string.WndSettings_SelectLanguage);
-
-	private static final String TXT_SECOND_QUICKSLOT = Game
-			.getVar(R.string.WndSettings_SecondQuickslot);
-	private static final String TXT_THIRD_QUICKSLOT  = Game
-			.getVar(R.string.WndSettings_ThirdQuickslot);
-
-	private static final int WIDTH      = 112;
-	private static final int BTN_HEIGHT = 18;
-
-	private static final String TXT_SYSTEM_FONT  = Game
-			.getVar(R.string.WndSettings_ExperementalFont);
-	private static final String TXT_CLASSIC_FONT = Game
-			.getVar(R.string.WndSettings_ClassicFont);
-
-	private Selector fontScaleSelector = new Selector(this,WIDTH,BTN_HEIGHT);
+	private Selector fontScaleSelector = new Selector(this, WIDTH, BTN_HEIGHT);
 
 	private RedButton btnFontMode;
 
-	private boolean mInGame;
-
-	public WndSettings(boolean inGame) {
+	public WndSettings() {
 		super();
-		mInGame = inGame;
 
-		float curY = 0;
-
-		if (mInGame) {
-			curY = createZoomButtons();
-			curY = createUiZoomButtons(curY);
-		} else {
-			if (android.os.Build.VERSION.SDK_INT >= 19) {
-				CheckBox btnImmersive = new CheckBox(Game.getVar(R.string.WndSettings_Immersive)) {
-					@Override
-					protected void onClick() {
-						super.onClick();
-						PixelDungeon.immerse(checked());
-					}
-				};
-				btnImmersive.setRect(0, curY + SMALL_GAP, WIDTH,
-						BTN_HEIGHT);
-				btnImmersive.checked(PixelDungeon.immersed());
-				btnImmersive.enable(android.os.Build.VERSION.SDK_INT >= 19);
-				add(btnImmersive);
-				curY = btnImmersive.bottom();
-			}
-
-			curY = createTextScaleButtons(curY + SMALL_GAP);
-		}
-		curY += SMALL_GAP;
-
-		CheckBox btnMusic = new CheckBox(TXT_MUSIC) {
-			@Override
-			protected void onClick() {
-				super.onClick();
-				PixelDungeon.music(checked());
-			}
-		};
-		btnMusic.setRect(0, curY, WIDTH, BTN_HEIGHT);
-		btnMusic.checked(PixelDungeon.music());
-		add(btnMusic);
-
-		CheckBox btnSound = new CheckBox(TXT_SOUND) {
-			@Override
-			protected void onClick() {
-				super.onClick();
-				PixelDungeon.soundFx(checked());
-				Sample.INSTANCE.play(Assets.SND_CLICK);
-			}
-		};
-		btnSound.setRect(0, btnMusic.bottom() + SMALL_GAP, WIDTH, BTN_HEIGHT);
-		btnSound.checked(PixelDungeon.soundFx());
-		add(btnSound);
-
-		if (!mInGame) {
-
-			RedButton btnOrientation = new RedButton(orientationText()) {
-				@Override
-				protected void onClick() {
-					PixelDungeon.landscape(!PixelDungeon.landscape());
-				}
-			};
-			btnOrientation.setRect(0, btnSound.bottom() + SMALL_GAP, WIDTH,
-					BTN_HEIGHT);
-			add(btnOrientation);
-
-			CheckBox btnRealtime = new CheckBox("Realtime!") {
+		if (android.os.Build.VERSION.SDK_INT >= 19) {
+			CheckBox btnImmersive = new CheckBox(Game.getVar(R.string.WndSettings_Immersive)) {
 				@Override
 				protected void onClick() {
 					super.onClick();
-					PixelDungeon.realtime(checked());
+					PixelDungeon.immerse(checked());
 				}
 			};
-			btnRealtime.setRect(0, btnOrientation.bottom() + SMALL_GAP, WIDTH,
+			btnImmersive.setRect(0, curY + SMALL_GAP, WIDTH,
 					BTN_HEIGHT);
-			btnRealtime.checked(PixelDungeon.realtime());
-			if (!PixelDungeon.isAlpha()) {
-				btnRealtime.enable(false);
+			btnImmersive.checked(PixelDungeon.immersed());
+			add(btnImmersive);
+			curY = btnImmersive.bottom();
+		}
+
+		curY = createTextScaleButtons(curY + SMALL_GAP);
+
+		RedButton btnOrientation = new RedButton(orientationText()) {
+			@Override
+			protected void onClick() {
+				PixelDungeon.landscape(!PixelDungeon.landscape());
 			}
-			add(btnRealtime);
+		};
+		btnOrientation.setRect(0, curY + SMALL_GAP, WIDTH,
+				BTN_HEIGHT);
+		add(btnOrientation);
 
-			RedButton localeButton = new RedButton(TXT_SElECT_LANGUAGE) {
-				@Override
-				protected void onClick() {
-					PixelDungeon.scene().add(
-							new WndSelectLanguage(TXT_SElECT_LANGUAGE, "English",
-									"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文", "日本語", "Türkçe", "Украї́нська") {
+		CheckBox btnRealtime = new CheckBox("Realtime!") {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				PixelDungeon.realtime(checked());
+			}
+		};
+		btnRealtime.setRect(0, btnOrientation.bottom() + SMALL_GAP, WIDTH,
+				BTN_HEIGHT);
+		btnRealtime.checked(PixelDungeon.realtime());
+		if (!PixelDungeon.isAlpha()) {
+			btnRealtime.enable(false);
+		}
+		add(btnRealtime);
 
-								@Override
-								protected void onSelect(int index) {
-									String lang[] = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh", "ja", "tr", "uk"};
-									if (!Utils.canUseClassicFont(lang[index])) {
-										PixelDungeon.classicFont(false);
-									}
-									PixelDungeon.uiLanguage(lang[index]);
+		final String selectLanguage = Game.getVar(R.string.WndSettings_SelectLanguage);
+
+		RedButton localeButton = new RedButton(selectLanguage) {
+			@Override
+			protected void onClick() {
+				PixelDungeon.scene().add(
+						new WndSelectLanguage(selectLanguage, "English",
+								"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文", "日本語", "Türkçe", "Украї́нська") {
+
+							@Override
+							protected void onSelect(int index) {
+								String lang[] = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh", "ja", "tr", "uk"};
+								if (!Utils.canUseClassicFont(lang[index])) {
+									PixelDungeon.classicFont(false);
 								}
-							});
-				}
-			};
-
-			localeButton.setRect(0, btnRealtime.bottom() + SMALL_GAP, WIDTH,
-					BTN_HEIGHT);
-			add(localeButton);
-
-			float y = createFontSelector(localeButton.bottom() + SMALL_GAP);
-
-			resize(WIDTH, (int) y);
-		} else {
-
-			CheckBox btnBrightness = new CheckBox(TXT_BRIGHTNESS) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					PixelDungeon.brightness(checked());
-				}
-			};
-			btnBrightness
-					.setRect(0, btnSound.bottom() + SMALL_GAP, WIDTH, BTN_HEIGHT);
-			btnBrightness.checked(PixelDungeon.brightness());
-			add(btnBrightness);
-
-			final CheckBox secondQuickslot = new CheckBox(TXT_SECOND_QUICKSLOT) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					PixelDungeon.secondQuickslot(checked());
-				}
-			};
-			secondQuickslot.setRect(0, btnBrightness.bottom() + SMALL_GAP, WIDTH,
-					BTN_HEIGHT);
-			secondQuickslot.checked(PixelDungeon.secondQuickslot());
-
-			add(secondQuickslot);
-
-			if (PixelDungeon.landscape()) {
-				CheckBox thirdQuickslot = new CheckBox(TXT_THIRD_QUICKSLOT) {
-					@Override
-					protected void onClick() {
-						super.onClick();
-						secondQuickslot.enable(!checked());
-						PixelDungeon.thirdQuickslot(checked());
-					}
-				};
-
-				secondQuickslot.enable(!PixelDungeon.thirdQuickslot());
-				thirdQuickslot.setRect(0, secondQuickslot.bottom() + SMALL_GAP,
-						WIDTH, BTN_HEIGHT);
-				thirdQuickslot.checked(PixelDungeon.thirdQuickslot());
-				add(thirdQuickslot);
-
-				resize(WIDTH, (int) thirdQuickslot.bottom());
-			} else {
-				if (PixelDungeon.thirdQuickslot()) {
-					PixelDungeon.secondQuickslot(true);
-					secondQuickslot.checked(PixelDungeon.secondQuickslot());
-				}
-				resize(WIDTH, (int) secondQuickslot.bottom());
+								PixelDungeon.uiLanguage(lang[index]);
+							}
+						});
 			}
-		}
+		};
 
-	}
+		localeButton.setRect(0, btnRealtime.bottom() + SMALL_GAP, WIDTH,
+				BTN_HEIGHT);
+		add(localeButton);
 
-	private float createZoomButtons() {
-		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
-		return selector.add(0,TXT_ZOOM_DEFAULT,new Selector.PlusMinusDefault() {
+		float y = createFontSelector(localeButton.bottom() + SMALL_GAP);
+		y = createMoveTimeoutSelector(y + SMALL_GAP);
 
-			@Override
-			public void onPlus() {
-				zoom(Camera.main.zoom - 0.1f);
-			}
-
-			@Override
-			public void onMinus() {
-				zoom(Camera.main.zoom + 0.1f);
-			}
-
-			@Override
-			public void onDefault() {
-				zoom(PixelScene.defaultZoom);
-			}
-
-			private void zoom(float value) {
-				Camera.main.zoom(value);
-				PixelDungeon.zoom(value - PixelScene.defaultZoom);
-
-				float zoom = Camera.main.zoom;
-				selector.enable(zoom > PixelScene.minZoom,zoom < PixelScene.maxZoom,true);
-			}
-		});
-	}
-
-	private float createUiZoomButtons(float y) {
-		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
-		return selector.add(y, Game.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
-
-			@Override
-			public void onPlus() {
-				uiZoom(PixelScene.uiCamera.zoom + 0.1f);
-			}
-
-			@Override
-			public void onMinus() {
-				uiZoom(PixelScene.uiCamera.zoom - 0.1f);
-			}
-
-			@Override
-			public void onDefault() {
-				uiZoom(PixelScene.defaultZoom);
-			}
-
-			private void uiZoom(float value) {
-				PixelScene.uiCamera.updateFullscreenCameraZoom(value);
-				((GameScene) Game.scene()).updateUiCamera();
-				Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
-
-				float zoom = PixelScene.uiCamera.zoom;
-				selector.enable(zoom < PixelScene.maxZoom,zoom > PixelScene.minZoom,true);
-			}
-		});
+		resize(WIDTH, (int) y);
 	}
 
 	private float createFontSelector(float y) {
@@ -301,10 +113,12 @@ public class WndSettings extends Window {
 		String text;
 
 		if (PixelDungeon.classicFont()) {
-			text = TXT_SYSTEM_FONT;
+			text = Game
+					.getVar(R.string.WndSettings_ExperementalFont);
 			fontScaleSelector.enable(false);
 		} else {
-			text = TXT_CLASSIC_FONT;
+			text = Game
+					.getVar(R.string.WndSettings_ClassicFont);
 			fontScaleSelector.enable(true);
 		}
 
@@ -328,7 +142,8 @@ public class WndSettings extends Window {
 	}
 
 	private float createTextScaleButtons(final float y) {
-		return fontScaleSelector.add(y, TXT_TEXT_SCALE_DEFAULT, new Selector.PlusMinusDefault() {
+		return fontScaleSelector.add(y, Game
+				.getVar(R.string.WndSettings_TextScaleDefault), new Selector.PlusMinusDefault() {
 			@Override
 			public void onPlus() {
 				fontScaleSelector.remove();
@@ -353,15 +168,39 @@ public class WndSettings extends Window {
 		});
 	}
 
-	@Override
-	public void onBackPressed() {
-		hide();
-		if (!mInGame) {
-			PixelDungeon.resetScene();
-		}
+	private String orientationText() {
+		return PixelDungeon.landscape() ? Game
+				.getVar(R.string.WndSettings_SwitchPort) : Game
+				.getVar(R.string.WndSettings_SwitchLand);
 	}
 
-	private String orientationText() {
-		return PixelDungeon.landscape() ? TXT_SWITCH_PORT : TXT_SWITCH_LAND;
+	private float createMoveTimeoutSelector(final float y) {
+
+		final Selector timeoutSelector = new Selector(this, WIDTH, BTN_HEIGHT);
+
+		return timeoutSelector.add(y, "Select move timeout", new Selector.PlusMinusDefault() {
+
+			private int selectedTimeout = Preferences.limitTimeoutIndex(PixelDungeon.moveTimeout());
+
+			@Override
+			public void onPlus() {
+				selectedTimeout = Preferences.limitTimeoutIndex(selectedTimeout+1);
+
+				PixelDungeon.moveTimeout(selectedTimeout);
+				timeoutSelector.setText(Integer.toString(Preferences.MOVE_TIMEOUTS[selectedTimeout]));
+			}
+
+			@Override
+			public void onMinus() {
+				selectedTimeout = Preferences.limitTimeoutIndex(selectedTimeout-1);
+
+				PixelDungeon.moveTimeout(selectedTimeout);
+				timeoutSelector.setText(Integer.toString(Preferences.MOVE_TIMEOUTS[selectedTimeout]));
+			}
+
+			@Override
+			public void onDefault() {
+			}
+		});
 	}
 }

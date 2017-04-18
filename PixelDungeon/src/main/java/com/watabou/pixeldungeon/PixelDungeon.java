@@ -421,4 +421,12 @@ public class PixelDungeon extends Game {
 			}
 		}
 	}
+
+	public static int moveTimeout() {
+		return Preferences.INSTANCE.getInt(Preferences.KEY_MOVE_TIMEOUT, Integer.MAX_VALUE);
+	}
+
+	public static void moveTimeout(int value) {
+		Preferences.INSTANCE.put(Preferences.KEY_MOVE_TIMEOUT,value);
+	}
 }

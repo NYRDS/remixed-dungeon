@@ -47,6 +47,10 @@ public class Selector {
 		parent.remove(btnDefault);
 	}
 
+	public void setText(String text) {
+		btnDefault.text(text);
+	}
+
 	public float add(float y,String text, final PlusMinusDefault actions) {
 		int w = height;
 
