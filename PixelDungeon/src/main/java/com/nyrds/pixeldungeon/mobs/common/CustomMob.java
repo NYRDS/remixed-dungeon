@@ -110,6 +110,8 @@ public class CustomMob extends MultiKindMob {
 				loot = ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot"));
 			}
 
+			viewDistance = classDesc.optInt("viewDistance",viewDistance);
+
 			hp(ht(classDesc.optInt("ht", 1)));
 
 		} catch (Exception e) {
