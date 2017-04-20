@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -21,21 +23,17 @@ public class CustomMob extends MultiKindMob {
 	private int attackSkill;
 	private int dr;
 
-	private float speed = 1, attackDelay = 1;
+	private float attackDelay = 1;
 
 	private String mobClass = "Unknown";
 
 	//For restoreFromBundle
-	public CustomMob() {}
+	public CustomMob() {
+	}
 
 	public CustomMob(String mobClass) {
 		this.mobClass = mobClass;
 		fillMobStats();
-	}
-
-	@Override
-	public float speed() {
-		return speed;
 	}
 
 	@Override
@@ -62,7 +60,7 @@ public class CustomMob extends MultiKindMob {
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 
-		bundle.put(MOB_CLASS,mobClass);
+		bundle.put(MOB_CLASS, mobClass);
 	}
 
 	@Override
@@ -81,29 +79,42 @@ public class CustomMob extends MultiKindMob {
 	private void fillMobStats() {
 		ensureActualClassDef();
 
-		JSONObject classDesc = defMap.get(getMobClassName());
+		try {
+			JSONObject classDesc = defMap.get(getMobClassName());
 
-		defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
-		attackSkill  = classDesc.optInt("attackSkill", attackSkill);
+			defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
+			attackSkill = classDesc.optInt("attackSkill", attackSkill);
 
-		exp    = classDesc.optInt("exp", exp);
-		maxLvl = classDesc.optInt("maxLvl", maxLvl);
-		dmgMin = classDesc.optInt("dmgMin", dmgMin);
-		dmgMax = classDesc.optInt("dmgMax", dmgMax);
+			exp = classDesc.optInt("exp", exp);
+			maxLvl = classDesc.optInt("maxLvl", maxLvl);
+			dmgMin = classDesc.optInt("dmgMin", dmgMin);
+			dmgMax = classDesc.optInt("dmgMax", dmgMax);
 
-		dr = classDesc.optInt("dr", dr);
+			dr = classDesc.optInt("dr", dr);
 
-		speed       = (float) classDesc.optDouble("speed", speed);
-		attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
+			baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
+			attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 
-		name            = StringsManager.maybeId(classDesc.optString("name",name));
-		name_objective  = StringsManager.maybeId(classDesc.optString("name_objective",name));
-		description     = StringsManager.maybeId(classDesc.optString("description",description));
-		gender          = Utils.genderFromString(classDesc.optString("gender",""));
+			name = StringsManager.maybeId(classDesc.optString("name", name));
+			name_objective = StringsManager.maybeId(classDesc.optString("name_objective", name));
+			description = StringsManager.maybeId(classDesc.optString("description", description));
+			gender = Utils.genderFromString(classDesc.optString("gender", ""));
 
-		spriteClass = classDesc.optString("spriteDesc","spritesDesc/Rat.json");
+			spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
 
-		hp(ht(classDesc.optInt("ht",1)));
+			flying = classDesc.optBoolean("flying", flying);
+
+			lootChance = (float) classDesc.optDouble("lootChance", lootChance);
+
+			if (classDesc.has("loot")) {
+				loot = ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot"));
+			}
+
+			hp(ht(classDesc.optInt("ht", 1)));
+
+		} catch (Exception e) {
+			throw new TrackedRuntimeException(e);
+		}
 	}
 
 	@Override
