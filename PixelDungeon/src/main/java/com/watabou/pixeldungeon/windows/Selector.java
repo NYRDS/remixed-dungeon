@@ -60,7 +60,7 @@ public class Selector {
 				actions.onPlus();
 			}
 		};
-		parent.add(btnPlus.setRect(0, y, w, height));
+		parent.add(btnPlus.setRect(width - w, y, w, height));
 
 		btnMinus = new RedButton(TXT_MINUS) {
 			@Override
@@ -68,7 +68,7 @@ public class Selector {
 				actions.onMinus();
 			}
 		};
-		parent.add(btnMinus.setRect(width - w, y, w, height));
+		parent.add(btnMinus.setRect(0, y, w, height));
 
 		btnDefault = new RedButton(text) {
 			@Override
@@ -76,8 +76,8 @@ public class Selector {
 				actions.onDefault();
 			}
 		};
-		btnDefault.setRect(btnPlus.right(), y, width - btnMinus.width()
-				- btnPlus.width(), height);
+		btnDefault.setRect(btnMinus.right(), y, width - btnPlus.width()
+				- btnMinus.width(), height);
 		parent.add(btnDefault);
 
 		return btnMinus.bottom();
