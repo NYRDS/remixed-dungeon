@@ -16,9 +16,6 @@ public class Hedgehog extends NPC {
 
 	{
 		spriteClass = HedgehogSprite.class;
-		
-		flying = false;
-		
 		setState(WANDERING);
 	}
 	
