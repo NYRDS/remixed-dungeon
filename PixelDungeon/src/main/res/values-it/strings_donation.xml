@@ -27,7 +27,7 @@
   <string name="WndPremiumSettings_banners">Seleziona il materiale della bandiera</string>
   <string name="WndPremiumSettings_notAvailbale">Questa opzione non è ancora disponibile</string>
   <!--STRINGS OF DonateButton CLASS-->
-  <string name="DonateButton_pleaseDonate">Perfavore considera una donazione </string>
+  <string name="DonateButton_pleaseDonate">Per favore considera una donazione </string>
   <string name="DonateButton_thanks">Grazie per il tuo supporto!</string>
   <!--STRINGS OF WndSaveSlotSelect-->
   <string name="WndSaveSlotSelect_dontLike">non ti piacciono le ads? fai una donazione,e scompariranno. PER SEMPRE.</string>

@@ -1,14 +1,78 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">arco élfico</string>
+    <string name="ElvenBow_Info">Un gran ejemplo de artesanía élfica. Es claramente mas efectivo y preciso que un arco de madera normal.</string>
+
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">piel de rata.</string>
+    <string name="RatHide_Info">Un trozo de carne y piel que está sucio. ¿Podrían ser útiles para alguien?</string>
+
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">armadura de rata</string>
+    <string name="RatArmor_Info">Una armadura hecha con cuero rata. Probablemente no sea contagioso ...</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">doctor de la plaga</string>
     <string name="PlagueDoctorNPC_Gender">masculino</string>
+    <string name="PlagueDoctorNPC_Name_Objective">doctor de la plaga</string>
+    <string name="PlagueDoctorNPC_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">¡Bah! ¡¿Puedes creerlo?! ¡Esos tontos no se han dado cuenta del peligro de las alcantarillas! Guardias y aventureros pueden proteger la ciudad de cualquier cosa. Pero ningún arma puede detener que las enfermedades se contagien. Pero necesito pruebas, ¿puedes ayudarme? Tráeme %d pieles de rata, así podre hacer algunas pruebas adicionales.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">¡Bah! ¡¿Puedes creerlo?! ¡Esos tontos no se han dado cuenta del peligro de las alcantarillas! Guardias y aventureros pueden proteger la ciudad de cualquier cosa. Pero ningún arma puede detener que las enfermedades se contagien. Pero necesito pruebas, ¿puedes ayudarme? Tráeme %d pieles de rata, así podre hacer algunas pruebas adicionales.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Tráeme %d pieles de ratas.</string>
+    <string name="PlagueDoctorNPC_Quest_End">Ah, gracias, espero que tengan rastro de una enfermedad. Las partes anteriores eran absolutamente inofensivos. Así que hice esto para usted, mientras esperaba nuevas muestras.</string>
+    <string name="PlagueDoctorNPC_After_Quest">¡Les demostrare a todos, a todos!</string>
+    <string name="Journal_PlagueDoctorNPC">Doctor de la plaga</string>
+
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">ciudadano</string>
     <string name="TownsfolkMovieNPC_Gender">masculino</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">ciudadano</string>
+    <string name="TownsfolkMovieNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
+    <string name="TownsfolkMovieNPC_Message">¿Conoces ese servicio especial que ofrece el \"cine\"? Lástima que pidan algo tan  exótico llamado \"Internet\", ni siquiera he oído hablar de él.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Name">bibliotecario</string>
     <string name="LibrarianNPC_Gender">masculino</string>
+    <string name="LibrarianNPC_Name_Objective">bibliotecario</string>
+    <string name="LibrarianNPC_Desc">Se ve como una persona muy tímida. Tiene un suéter de aspecto incómodo y gafas muy gruesas.</string>
+    <string name="LibrarianNPC_Message_Not_Ready">Lo... Lo siento, la biblioteca no esta abierta... aún.</string>
+
+
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">ciudadano</string>
     <string name="TownsfolkSilentNPC_Gender">masculino</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">ciudadano</string>
+    <string name="TownsfolkSilentNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
+    <string name="TownsfolkSilentNPC_Message1">¡Hmph!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
 
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">Lamentamos que esta construcción no este lista aún.</string>
+
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Gender">femenino</string>
+    <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_Desc">Una chica muy elegante. Su apariencia te dice \"Yo soy bueno para todos\".</string>
+    <string name="BellaNPC_Message">¡No me interesan plebeyos como tú!</string>
+    <string name="BellaNPC_Angry">¡Cómo te atreves... plebeyo!</string>
+    <string name="BellaNPC_Yes_End_Game">Acepto (Fin del juego)</string>
+    <string name="BellaNPC_No">No, no contigo</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">Lo siento, no puedes usar nuestro servicio en este momento. (Es necesario conexión a Internet)</string>
+
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_common_door_name">Puerta</string>
-    </resources>
+    <string name="town_deco_common_door_desc">Un aventurero educado no debe entrar en propiedad privada, sin invitación.</string>
+
+    <string name="town_deco_dungeon_door_name">Entrada</string>
+    <string name="town_deco_dungeon_door_desc">Entrada a la mazmorra</string>
+
+</resources>

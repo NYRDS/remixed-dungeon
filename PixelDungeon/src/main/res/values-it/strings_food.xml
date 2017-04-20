@@ -23,7 +23,7 @@
   <string name="MysteryMeat_Info1">Oh è caldo!</string>
   <string name="MysteryMeat_Info2">Non ti senti le gambe!</string>
   <string name="MysteryMeat_Info3">Non ti senti bene.</string>
-  <string name="MysteryMeat_Info4">ti sei farcito.</string>
+  <string name="MysteryMeat_Info4">ti sei rimpinzato.</string>
   <string name="MysteryMeat_Message">Quel cibo assaggiato...è strano</string>
   <!--STRINGS OF RottenFood CLASS-->
   <string name="RottenFood_Message">Disgustoso!</string>
