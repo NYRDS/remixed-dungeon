@@ -1,3 +1,38 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">Solo puedes usar 2 artefactos al mismo tiempo.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">adivino</string>
+    <string name="FortuneTellerNPC_Gender">femenino</string>
+    <string name="FortuneTellerNPC_Name_Objective">adivino</string>
+    <string name="WndFortuneTeller_Title">Adivino</string>
+
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Si</string>
+    <string name="Wnd_Button_No">No</string>
+    <string name="Wnd_Button_Back">Regresar</string>
+    <string name="Wnd_Button_Cancel">Cancelar</string>
+    <string name="Wnd_Button_Close">Cerrar</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">Biblioteca</string>
+    <string name="WndLibrary_Catalogue_Instruction">Por favor escoge una de las categorías siguientes.</string>
+    <string name="WndLibrary_Mobs_Btn">Monstruos</string>
+    <string name="WndLibrary_Items_Btn">Objetos</string>
+    <string name="WndLibrary_Codex_Btn">Historias</string>
+    <string name="WndLibrary_Levels_Btn">Mazmorra</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">Ha visto %1$d de %2$d veces. Tendrá oportunidades adicionales de ver películas, por cada nivel que suba el héroe. </string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">Alfombra</string>
+    <string name="town_deco_blue_carpet_desc">Una impresionante alfombra azul, decorada con seda purpura.</string>
+
+    <string name="town_table_fortune_name">Mesa</string>
     </resources>

@@ -3,7 +3,7 @@
   <!--PACKAGE /levels-->
   <!--STRINGS OF Level CLASS-->
   <string name="Level_HiddenPlate">Una lastra a pressione nascosta!</string>
-  <string name="Level_TileChasm">abisso</string>
+  <string name="Level_TileChasm">Baratro</string>
   <string name="Level_TileFloor">Pavimento</string>
   <string name="Level_TileGrass">Erba</string>
   <string name="Level_TileWater">Acqua</string>
@@ -23,15 +23,15 @@
   <string name="Level_TileWell">Pozzo</string>
   <string name="Level_TileEmptyWell">Pozzo vuoto</string>
   <string name="Level_TileStatue">Statua</string>
-  <string name="Level_TileToxicTrap">Trappola di gas tossico.</string>
+  <string name="Level_TileToxicTrap">Trappola del gas tossico.</string>
   <string name="Level_TileFireTrap">Trappola di fuoco</string>
-  <string name="Level_TileParalyticTrap">trappola a gas Paralitico</string>
-  <string name="Level_TilePoisonTrap">trappola con darti avvelenati</string>
-  <string name="Level_TileAlarmTrap">trappola d\'allarme</string>
-  <string name="Level_TileLightningTrap">trappola con fulmine</string>
-  <string name="Level_TileGrippingTrap">trappola con presa</string>
-  <string name="Level_TileSummoningTrap">trappola d\'invocazione</string>
-  <string name="Level_TileInactiveTrap">trappola innescata</string>
+  <string name="Level_TileParalyticTrap">Trappola del gas paralitico</string>
+  <string name="Level_TilePoisonTrap">trappola dei darti avvelenati</string>
+  <string name="Level_TileAlarmTrap">Trappola d\'allarme</string>
+  <string name="Level_TileLightningTrap">Trappola fulminante</string>
+  <string name="Level_TileGrippingTrap">Trappola afferrante</string>
+  <string name="Level_TileSummoningTrap">Trappola d\'invocazione</string>
+  <string name="Level_TileInactiveTrap">Trappola innescata</string>
   <string name="Level_TileBookshelf">Libreria</string>
   <string name="Level_TileAlchemy">Pentola alchemica</string>
   <string name="Level_TileDefault">\?\?\?</string>
@@ -52,7 +52,7 @@ Potrebbe bruciare?</string>
   <string name="Level_TileDescAlchemy">Metti dei semi qui per cucinare una pozione</string>
   <string name="Level_TileDescEmptyWell">Il pozzo può funzionare a secco.</string>
   <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
-  <string name="Caves_TileGrass">muschio fluorescente</string>
+  <string name="Caves_TileGrass">Muschio fluorescente</string>
   <string name="Caves_TileHighGrass">Funghi fosforescenti</string>
   <string name="Caves_TileWater">Acqua Ghiacciata</string>
   <string name="Caves_TileDescEntrance">Questa scala porta al piano superiore.</string>
@@ -86,7 +86,7 @@ Potrebbe bruciare?</string>
   <string name="LastLevel_TileDescStatue">La colonna è formata da reali teschi umanoidi. Stupendo.</string>
   <!--STRINGS OF LastShopLevel CLASS-->
   <string name="LastShopLevel_TileWater">acqua colorata sospettosa</string>
-  <string name="LastShopLevel_TileHighGrass">fiori Alti che sbocciano</string>
+  <string name="LastShopLevel_TileHighGrass">fiori alti che sbocciano</string>
   <string name="LastShopLevel_TileDescEntrance">Una rampa conduce fino alla profondità superiore.</string>
   <string name="LastShopLevel_TileDescExit">Una rampa conduce all\'inferno.</string>
   <string name="LastShopLevel_TileDescDeco">Diverse piastrelle mancanti qui.</string>
@@ -103,7 +103,7 @@ Potrebbe bruciare?</string>
   <!--STRINGS OF AlchemyPot CLASS-->
   <string name="AlchemyPot_SelectSeed">Seleziona un seme da lanciare</string>
   <!--STRINGS OF Chasm CLASS-->
-  <string name="Chasm_Chasm">abisso</string>
+  <string name="Chasm_Chasm">Baratro</string>
   <string name="Chasm_Yes">Sì, so quello che faccio</string>
   <string name="Chasm_No">No, ho cambiato idea</string>
   <string name="Chasm_Jump">Vuoi davvero fare un salto nel baratro? Probabilmente si può morire.</string>
@@ -112,6 +112,6 @@ Potrebbe bruciare?</string>
   <!--STRINGS OF AlarmTrap CLASS-->
   <string name="AlarmTrap_Desc">La trappola emette un suono acuto che riecheggia per tutto il dungeon!</string>
   <!--STRINGS OF LightningTrap CLASS-->
-  <string name="LightningTrap_Name">trappola con fulmine</string>
-  <string name="LightningTrap_Desc">Sei stato ucciso dalla scarica di una trappola con fulmine</string>
+  <string name="LightningTrap_Name">Trappola fulminante</string>
+  <string name="LightningTrap_Desc">Sei stato ucciso dalla scarica di una trappola fulminante</string>
 </resources>

@@ -11,7 +11,7 @@
     <string name="TownGuardNPC_Message3">¿Crees que hay muchos guardias para este pueblo? Bueno, es la única ciudad con una gigantesca mazmorra tomada por monstruos.</string>
 
     <!-- STRINGS OF TownsfolkNPC CLASS -->
-    <string name="TownsfolkNPC_Name">cuidadano</string>
+    <string name="TownsfolkNPC_Name">ciudadano</string>
     <string name="TownsfolkNPC_Gender">masculino</string>
     <string name="TownsfolkNPC_Name_Objective">cuidadano</string>
     <string name="TownsfolkNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>

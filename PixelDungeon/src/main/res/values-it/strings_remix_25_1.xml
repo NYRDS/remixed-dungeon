@@ -50,7 +50,7 @@
 
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
-    <string name="NecromancerRobe_PetLimitReached">Non puoi controllare più di %1$d tirapiedi con questo oggetto!</string>
+    <string name="NecromancerRobe_PetLimitReached">Necromante: hai raggiunto il limite di invocazione (Massimo corrente: %d)!</string>
     <string name="Necromancy_NotEnoughSouls">Non possiedi abbastanza anime per lanciare un incantesimo \"%1$s\".</string>
 
     <string name="Necromancy_SoulsCountLabel">Anime</string>
