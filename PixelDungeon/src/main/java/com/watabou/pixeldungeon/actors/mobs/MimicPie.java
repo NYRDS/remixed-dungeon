@@ -4,8 +4,6 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.food.RottenPasty;
 import com.watabou.pixeldungeon.sprites.MimicPieSprite;
@@ -54,14 +52,6 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 	@Override
 	public int attackSkill( Char target ) {
 		return 9 + level;
-	}
-
-	@Override
-	protected boolean act() {
-		if(buff(Levitation.class)==null) {
-			Buff.affect(this, Levitation.class, 1000000);
-		}
-		return super.act();
 	}
 
 	public void adjustStats( int level ) {

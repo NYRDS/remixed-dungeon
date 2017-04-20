@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.sprites;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 
 public class MimicPieSprite extends MobSprite {
 	
@@ -41,12 +42,18 @@ public class MimicPieSprite extends MobSprite {
 		
 		die = new Animation( 15, false );
 		die.frames( frames, 0, 6, 7, 8, 9 );
-		
+
 		play( idle );
 	}
 	
 	@Override
 	public int blood() {
 		return 0xFFcb9700;
+	}
+
+	@Override
+	public void link(Char ch) {
+		super.link(ch);
+		add(State.LEVITATING);
 	}
 }
