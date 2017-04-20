@@ -62,7 +62,7 @@ public class WndSettingsCommon extends Window {
 		btnSound.checked(PixelDungeon.soundFx());
 		add(btnSound);
 
-		curY = btnSound.bottom();
+		curY = btnSound.bottom() + SMALL_GAP;
 	}
 
 	@Override

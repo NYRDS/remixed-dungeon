@@ -31,9 +31,8 @@ public class WndSettingsInGame extends WndSettingsCommon {
 	public WndSettingsInGame() {
 		super();
 
-		curY = createZoomButtons(curY);
+		curY = createZoomButtons(curY) + SMALL_GAP;
 		curY = createUiZoomButtons(curY);
-		curY += SMALL_GAP;
 
 		CheckBox btnBrightness = new CheckBox(Game
 				.getVar(R.string.WndSettings_Brightness)) {
@@ -98,12 +97,12 @@ public class WndSettingsInGame extends WndSettingsCommon {
 
 			@Override
 			public void onPlus() {
-				zoom(Camera.main.zoom - 0.1f);
+				zoom(Camera.main.zoom + 0.1f);
 			}
 
 			@Override
 			public void onMinus() {
-				zoom(Camera.main.zoom + 0.1f);
+				zoom(Camera.main.zoom - 0.1f);
 			}
 
 			@Override
