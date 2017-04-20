@@ -6,12 +6,14 @@
    "dmgMin"        :1,
    "dmgMax"        :1,
    "dr"            :1,
-   "speed"         :1,
+   "baseSpeed"     :1,
    "attackDelay"   :1,
    "ht"            :5,
    "name"          :"Black Rat",
    "name_objective":"Black Rat",
    "description"   :"Just a common house rat, not marsupial",
    "gender"        :"feminine",
-   "spriteDesc"    :"spritesDesc/Rat.json"
+   "spriteDesc"    :"spritesDesc/Rat.json",
+   "lootChance"    :"1",
+   "loot"          : {"kind":"RatHide"}
 }
