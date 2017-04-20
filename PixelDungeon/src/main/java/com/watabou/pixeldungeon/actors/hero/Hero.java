@@ -843,7 +843,7 @@ public class Hero extends Char {
 			clearActions();
 
 			Hunger hunger = buff(Hunger.class);
-			if (hunger != null && !hunger.isStarving()) {
+			if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
 				hunger.satisfy(-Hunger.STARVING / 10);
 			}
 
@@ -888,7 +888,7 @@ public class Hero extends Char {
 				clearActions();
 
 				Hunger hunger = buff(Hunger.class);
-				if (hunger != null && !hunger.isStarving()) {
+				if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
 					hunger.satisfy(-Hunger.STARVING / 10);
 				}
 
