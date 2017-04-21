@@ -53,7 +53,8 @@ public class PseudoPasty extends Food {
 	@Override
 	public void execute(Hero hero, String action) {
 		if (action.equals(AC_EAT)) {
-			pick(hero, hero.getPos());
+			pick(hero, Dungeon.level.getEmptyCellNextTo(hero.getPos()));
+			this.removeItemFrom(hero);
 			return;
 		}
 
