@@ -43,9 +43,8 @@ abstract public class Boss extends Mob {
 	@Override
 	protected void readCharData() {
 		super.readCharData();
-
 		try {
-			JSONObject desc = defMap.get(getClass());
+			JSONObject desc = getDefMap();
 
 			if (desc.has(BATTLE_MUSIC)) {
 				battleMusic = desc.getString(BATTLE_MUSIC);
@@ -54,5 +53,14 @@ abstract public class Boss extends Mob {
 			throw new TrackedRuntimeException(e);
 		}
 
+	}
+
+	private JSONObject getDefMap(){
+
+		if(defMap.get(getClass()) == null){
+			ensureActualClassDef();
+		}
+
+		return defMap.get(getMobClassName());
 	}
 }
