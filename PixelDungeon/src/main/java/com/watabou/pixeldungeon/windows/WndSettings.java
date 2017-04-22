@@ -175,7 +175,7 @@ public class WndSettings extends WndSettingsCommon {
 	}
 
 	private String moveTimeoutText() {
-		return String.format("Move timeout: %s",Double.toString(PixelDungeon.getMoveTimeout()/1000));
+		return String.format(Game.getVar(R.string.WndSettings_moveTimeout),Double.toString(PixelDungeon.getMoveTimeout()/1000));
 	}
 
 	private float createMoveTimeoutSelector(final float y) {
