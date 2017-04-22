@@ -102,7 +102,7 @@ public abstract class Mob extends Char {
 
 	private static final float TIME_TO_WAKE_UP = 1f;
 
-	static protected Map<String, JSONObject> defMap = new HashMap<>();
+	static private Map<String, JSONObject> defMap = new HashMap<>();
 
 	// Unreachable target
 	protected static final Mob DUMMY = new Mob() {
@@ -697,6 +697,14 @@ public abstract class Mob extends Char {
 		this.state = state;
 	}
 
+	protected JSONObject getClassDef(){
+		if (!defMap.containsKey(getMobClassName())) {
+			defMap.put(getMobClassName(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getMobClassName() + ".json"));
+		}
+
+		return defMap.get(getMobClassName());
+	}
+
 	public interface AiState {
 		boolean act(boolean enemyInFOV, boolean justAlerted);
 
@@ -937,19 +945,6 @@ public abstract class Mob extends Char {
 	protected void setEnemy(@NonNull Char enemy) {
 		this.enemy = enemy;
 	}
-
-	protected void ensureActualClassDef() {
-		if (!defMap.containsKey(getMobClassName())) {
-			defMap.put(getMobClassName(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getMobClassName() + ".json"));
-		}
-	}
-
-	@Override
-	protected void readCharData() {
-		super.readCharData();
-		ensureActualClassDef();
-	}
-
 
 	protected String getMobClassName() {
 		return getClass().getSimpleName();

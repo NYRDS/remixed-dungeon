@@ -77,10 +77,8 @@ public class CustomMob extends MultiKindMob {
 	}
 
 	private void fillMobStats() {
-		ensureActualClassDef();
-
 		try {
-			JSONObject classDesc = defMap.get(getMobClassName());
+			JSONObject classDesc = getClassDef();
 
 			defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
 			attackSkill = classDesc.optInt("attackSkill", attackSkill);
