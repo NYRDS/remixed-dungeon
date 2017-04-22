@@ -86,8 +86,6 @@ public class WndSettingsInGame extends WndSettingsCommon {
 			}
 			resize(WIDTH, (int) secondQuickslot.bottom());
 		}
-
-
 	}
 
 	private float createZoomButtons(float y) {

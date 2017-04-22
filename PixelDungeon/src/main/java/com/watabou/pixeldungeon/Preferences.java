@@ -61,12 +61,6 @@ public enum Preferences {
 	private Map<String, Boolean> boolCache   = new HashMap<>();
 	private Map<String, Double>  doubleCache = new HashMap<>();
 
-	public static final int[] MOVE_TIMEOUTS = new int[]{1000, 2000, 5000, 10000, 30000, 60000, 1000000};
-
-	public static int limitTimeoutIndex(int value) {
-		return 	Math.max(Math.min(value, Preferences.MOVE_TIMEOUTS.length-1),0);
-	}
-
 	private SharedPreferences get() {
 		if (prefs == null) {
 			prefs = Game.instance().getPreferences(Game.MODE_PRIVATE);

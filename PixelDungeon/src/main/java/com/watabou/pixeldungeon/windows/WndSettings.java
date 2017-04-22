@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -42,14 +41,15 @@ public class WndSettings extends WndSettingsCommon {
 					PixelDungeon.immerse(checked());
 				}
 			};
-			btnImmersive.setRect(0, curY + SMALL_GAP, WIDTH,
+
+			btnImmersive.setRect(0, curY, WIDTH,
 					BTN_HEIGHT);
 			btnImmersive.checked(PixelDungeon.immersed());
 			add(btnImmersive);
-			curY = btnImmersive.bottom();
+			curY = btnImmersive.bottom() + SMALL_GAP;
 		}
 
-		curY = createTextScaleButtons(curY + SMALL_GAP);
+		curY = createTextScaleButtons(curY);
 
 		RedButton btnOrientation = new RedButton(orientationText()) {
 			@Override
@@ -174,28 +174,35 @@ public class WndSettings extends WndSettingsCommon {
 				.getVar(R.string.WndSettings_SwitchLand);
 	}
 
+	private String moveTimeoutText() {
+		return String.format("Move timeout: %s",Double.toString(PixelDungeon.getMoveTimeout()/1000));
+	}
+
 	private float createMoveTimeoutSelector(final float y) {
 
 		final Selector timeoutSelector = new Selector(this, WIDTH, BTN_HEIGHT);
 
-		return timeoutSelector.add(y, "Select move timeout", new Selector.PlusMinusDefault() {
+		return timeoutSelector.add(y, moveTimeoutText(), new Selector.PlusMinusDefault() {
 
-			private int selectedTimeout = Preferences.limitTimeoutIndex(PixelDungeon.moveTimeout());
+			private int selectedTimeout = PixelDungeon.limitTimeoutIndex(PixelDungeon.moveTimeout());
+
+			private void update() {
+				PixelDungeon.moveTimeout(selectedTimeout);
+				timeoutSelector.setText(moveTimeoutText());
+			}
 
 			@Override
 			public void onPlus() {
-				selectedTimeout = Preferences.limitTimeoutIndex(selectedTimeout+1);
+				selectedTimeout = PixelDungeon.limitTimeoutIndex(selectedTimeout+1);
 
-				PixelDungeon.moveTimeout(selectedTimeout);
-				timeoutSelector.setText(Integer.toString(Preferences.MOVE_TIMEOUTS[selectedTimeout]));
+				update();
 			}
 
 			@Override
 			public void onMinus() {
-				selectedTimeout = Preferences.limitTimeoutIndex(selectedTimeout-1);
+				selectedTimeout = PixelDungeon.limitTimeoutIndex(selectedTimeout-1);
 
-				PixelDungeon.moveTimeout(selectedTimeout);
-				timeoutSelector.setText(Integer.toString(Preferences.MOVE_TIMEOUTS[selectedTimeout]));
+				update();
 			}
 
 			@Override

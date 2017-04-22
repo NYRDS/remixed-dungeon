@@ -51,6 +51,8 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class PixelDungeon extends Game {
 
+	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
+
 	public PixelDungeon() {
 		super(TitleScene.class);
 		
@@ -422,6 +424,7 @@ public class PixelDungeon extends Game {
 		}
 	}
 
+	//--- Move timeouts
 	public static int moveTimeout() {
 		return Preferences.INSTANCE.getInt(Preferences.KEY_MOVE_TIMEOUT, Integer.MAX_VALUE);
 	}
@@ -429,4 +432,13 @@ public class PixelDungeon extends Game {
 	public static void moveTimeout(int value) {
 		Preferences.INSTANCE.put(Preferences.KEY_MOVE_TIMEOUT,value);
 	}
+
+	public static int limitTimeoutIndex(int value) {
+		return 	Math.max(Math.min(value, MOVE_TIMEOUTS.length-1),0);
+	}
+
+	public static double getMoveTimeout() {
+		return MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
+	}
+
 }

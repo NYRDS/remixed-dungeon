@@ -40,7 +40,6 @@ import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -1840,7 +1839,7 @@ public class Hero extends Char {
 	@Override
 	protected boolean timeout() {
 		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
-		if(SystemTime.now() - lastActionTime > Preferences.MOVE_TIMEOUTS[Preferences.limitTimeoutIndex(PixelDungeon.moveTimeout())]) {
+		if(SystemTime.now() - lastActionTime > PixelDungeon.getMoveTimeout()) {
 			lastActionTime = SystemTime.now();
 			spend(TIME_TO_REST);
 			return true;
