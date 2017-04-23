@@ -32,6 +32,8 @@
     <string name="IceGuardianCore_Name">buz gardiyanı </string>
     <string name="IceGuardianCore_Gender">erkek</string>
     <string name="IceGuardianCore_Name_Objective">buz gardiyanı </string>
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">Kafeslenmiş Kobold.</string>
     <string name="CagedKobold_Gender">erkek</string>
     <string name="CagedKobold_Name_Objective">Kafeslenmiş Kobold.</string>
     <string name="CagedKobold_Desc">Kafesin İçinde Bir Kobold.</string>
@@ -44,6 +46,8 @@
     <string name="IceCaves_TileHighGrass">donmuş büyük ot </string>
     <string name="IceCaves_TileGrass">donmuş ot</string>
     <string name="IceCaves_TileStatue">Donmuş Gnoll.</string>
+    <string name="IceCaves_TileDescStatue">Bir Başka Korkunç Heykel... Bir Dakika Bu Donmuş Gnoll !</string>
+
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festival hindisi</string>

@@ -9,6 +9,9 @@
     <string name="FortuneTellerNPC_Name">adivino</string>
     <string name="FortuneTellerNPC_Gender">femenino</string>
     <string name="FortuneTellerNPC_Name_Objective">adivino</string>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">Puedo revelar secretos detrás de artículos, que posees.\n Una identificación le costará %d monedas.</string>
     <string name="WndFortuneTeller_Title">Adivino</string>
 
     <!-- STRINGS OF Generic Button labels -->
@@ -35,4 +38,10 @@
     <string name="town_deco_blue_carpet_desc">Una impresionante alfombra azul, decorada con seda purpura.</string>
 
     <string name="town_table_fortune_name">Mesa</string>
-    </resources>
+    <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
+
+    <string name="ConcreteBlock_Name">Bloque de concreto pesado</string>
+    <string name="ConcreteBlock_Description">Parece que para mover este bloque de concreto se necesita %d de fuerza</string>
+    <string name="Hero_AnotherTry">Has muerto.\n ¿Quieres intentarlo de nuevo?</string>
+
+</resources>
