@@ -27,6 +27,9 @@ public class CustomMob extends MultiKindMob {
 
 	private String mobClass = "Unknown";
 
+	private boolean wallWalker = false;
+	private boolean absoluteWalker = false;
+
 	//For restoreFromBundle
 	public CustomMob() {
 	}
@@ -110,6 +113,9 @@ public class CustomMob extends MultiKindMob {
 
 			viewDistance = classDesc.optInt("viewDistance",viewDistance);
 
+			wallWalker = classDesc.optBoolean("wallWalker",wallWalker);
+			absoluteWalker = classDesc.optBoolean("absoluteWalker",absoluteWalker);
+
 			hp(ht(classDesc.optInt("ht", 1)));
 
 		} catch (Exception e) {
@@ -122,4 +128,13 @@ public class CustomMob extends MultiKindMob {
 		return mobClass;
 	}
 
+	@Override
+	public boolean isWallWalker() {
+		return wallWalker;
+	}
+
+	@Override
+	public boolean isAbsoluteWalker() {
+		return absoluteWalker;
+	}
 }
