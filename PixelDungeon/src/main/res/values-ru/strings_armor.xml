@@ -60,7 +60,7 @@
   <string name="ScaleArmor_Desc">Металлические пластинки, нашитые на кожаную основу, обеспечивают достаточную подвижность и недурную защиту.</string>
   <!--STRINGS OF WarriorArmor CLASS-->
   <string name="WarriorArmor_Name">боевой доспех</string>
-  <string name="WarriorArmor_Desc">Несмотря на кажущуюся тяжесть, эта броня позволяет воину осуществлять рывок в указанное место, оглушая ближайший врагов ударной волной.</string>
+  <string name="WarriorArmor_Desc">Несмотря на кажущуюся тяжесть, эта броня позволяет воину осуществлять рывок в указанное место, оглушая ближайших врагов ударной волной.</string>
   <string name="WarriorArmor_ACSpecial">БОГАТЫРСКИЙ РЫВОК</string>
   <string name="WarriorArmor_NotWarrior">Этот доспех доступен лишь воину!</string>
   <string name="WarriorArmor_Prompt">Выбери направление рывка</string>
