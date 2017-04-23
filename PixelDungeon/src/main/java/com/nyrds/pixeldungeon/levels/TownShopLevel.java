@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 public class TownShopLevel extends Level {
 
-	private static final int SIZE = 10;
+	private static final int SIZE = 12;
 
 	{
 		color1 = 0x801500;
