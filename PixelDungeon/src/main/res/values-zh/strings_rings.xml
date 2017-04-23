@@ -2,34 +2,34 @@
 <resources>
   <!--PACKAGE /items/rings-->
   <!--STRINGS OF Ring CLASS-->
-  <string name="Ring_Name">%s戒指</string>
-  <string name="Ring_Info">这个金属环上装饰着一大颗%s，在黑暗中熠熠生光。谁知道戴上后会有什么效果呢？</string>
-  <string name="Ring_Identify">你现在对于你的%1$s足够熟悉以鉴定它。它是%2$s。</string>
+  <string name="Ring_Name">%s指環</string>
+  <string name="Ring_Info">這金屬環上鑲有一大顆在黑暗中熠熠生光的%s。問誰會知道戴上它後，會有甚麼效果呢？</string>
+  <string name="Ring_Identify">現在，您對您的%1$s已有足夠的認知去鑒定它。它是%2$s。</string>
   <string-array name="Ring_Gems">
-    <item>钻石</item>
+    <item>鑽石</item>
     <item>蛋白石</item>
     <item>石榴石</item>
-    <item>红宝石</item>
+    <item>红寶石</item>
     <item>紫水晶</item>
     <item>黄晶玉</item>
-    <item>缟玛瑙</item>
-    <item>电气石</item>
-    <item>祖母绿</item>
-    <item>蓝宝石</item>
+    <item>縞瑪瑙</item>
+    <item>電氣石</item>
+    <item>祖母綠</item>
+    <item>藍寶石</item>
     <item>石英</item>
-    <item>玛瑙</item>
+    <item>瑪瑙</item>
   </string-array>
-  <string name="Ring_Info1">你最多只能同时佩戴2枚戒指</string>
-  <string name="Ring_Info2">你的 %s 令人生疼地紧箍在你的手指</string>
+  <string name="Ring_Info1">您最多同時配戴2枚指環。</string>
+  <string name="Ring_Info2">您你的 %s 緊緊箍著您的手指，疼痛無比！</string>
   <string name="Ring_Info3a">%1$s
-这个 %2$s 正 %3$s 的在你的手指头上。</string>
-  <string name="Ring_Info3b">，并且因为它被诅咒了，你无力去脱卸它。</string>
+您个 %2$s 正 %3$s 地在您的手指上。</string>
+  <string name="Ring_Info3b">，且因為它已被詛咒，您無力去把它脫下。</string>
   <string name="Ring_Info4">%1$s
-你能感受到%2$s中潜伏着一股恶意的魔力。</string>
-  <string name="Ring_BuffKnown">这是一枚%s</string>
+您能感受到%2$s中潛伏着一股惡毒的魔力。</string>
+  <string name="Ring_BuffKnown">這是一枚%s</string>
   <!--STRINGS OF RingOfAccuracy CLASS-->
-  <string name="RingOfAccuracy_Name">精准之戒</string>
-  <string name="RingOfAccuracy_Info">这枚戒指能增加你击中敌人的几率。</string>
+  <string name="RingOfAccuracy_Name">精準之戒</string>
+  <string name="RingOfAccuracy_Info">這枚指環能增加你命中率。</string>
   <!--STRINGS OF RingOfDetection CLASS-->
   <string name="RingOfDetection_Name">探查之戒</string>
   <string name="RingOfDetection_Info">戴上这枚戒指能让佩戴者减少侦测隐藏门和陷阱所需时间。负向等级的探查之戒会使你的感知变得迟钝，当你主动探查时会更难注意到隐藏门和陷阱。</string>

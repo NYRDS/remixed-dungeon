@@ -27,6 +27,8 @@
     <!-- STRINGS OF Necromancer CLASS -->
     <string name="HeroClass_Necromancer">necromancer</string>
 
+    <string name="HeroSubClass_NameLich">lich</string>
+
     <string-array name="HeroClass_NecromancerPerks">
         <item>Nekromensırlar 15 hp ile başlar</item>
         <item>Nekromensırlar büyü yapmak için ruh kullanırlar. her yaratık kestiğinde 1 ruh kazanırsın </item>
@@ -37,6 +39,7 @@
 
     <!-- STRINGS OF Deathling CLASS -->
     <string name="Deathling_Name">Ölü Hizmetkar</string>
+    <string name="Deathling_Gender">erkek</string>
     <string name="Deathling_Name_Objective">Ölü Hizmetkar</string>
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
@@ -47,6 +50,8 @@
     <string name="Necromancy_ReincarnationName">reenkarnasyon</string>
     <string name="Necromancy_ReincarnationTriggered">güçlerin ölümü yendi ! ama bütün ruhlarını ve eşyalarını kaybettin</string>
     <string name="Necromancy_SummonDeathlingName">Ölü Hizmetkar Çağır.</string>
+
+    <string name="Necromancy_BecameALich">Lich\'e Dönüştün ! Gücün ve Ruh Kapasiten Arttı! Ama %1$d Puan Güç Kaybettin.</string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->

@@ -3,6 +3,8 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF Ushanka CLASS -->
     <string name="Ushanka_Name">Ushanka</string>
+    <string name="Ushanka_Info">Sıcak ve Kırmızı Bir yıldızla Süslenmiş bir ushanka.Zindanda Düşmana Karşı Birleşmek İçin Güzel Bir Yoldaş.</string>
+
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">vampir kurukafa</string>
     <string name="VampireSkull_Info">Bu Maske Bir Vampirin Kafatasından Yapılmış.Bu Bir Vampir Kurukafa... Koca Kafalı Bir Vampirin Kafatası. Korkutucu.</string>

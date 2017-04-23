@@ -13,5 +13,15 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF DeathKnight CLASS -->
     <string name="DeathKnight_Name">Rycerz śmierci</string>
+    <string name="DeathKnight_Gender">męska</string>
     <string name="DeathKnight_Name_Objective">Rycerz śmierci</string>
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">Wybuchająca czaszka</string>
+    <string name="ExplodingSkull_Name_Objective">Wybuchająca czaszka</string>
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">licz</string>
+    <string name="Lich_Name_Objective">licz</string>
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">zombie</string>
+    <string name="Zombie_Name_Objective">zombie</string>
     </resources>
