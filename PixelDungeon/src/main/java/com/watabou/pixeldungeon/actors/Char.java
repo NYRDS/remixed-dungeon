@@ -89,7 +89,7 @@ public abstract class Char extends Actor {
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
 
 	protected String description = Game.getVar(R.string.Mob_Desc);
-	private   String defenceVerb = null;
+	protected String defenceVerb = null;
 
 	protected int gender = Utils.NEUTER;
 

@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -115,6 +117,8 @@ public class CustomMob extends MultiKindMob {
 
 			wallWalker = classDesc.optBoolean("wallWalker",wallWalker);
 			absoluteWalker = classDesc.optBoolean("absoluteWalker",absoluteWalker);
+
+			defenceVerb = classDesc.optString("defenceVerb", Game.getVars(R.array.Char_StaDodged)[gender]);
 
 			hp(ht(classDesc.optInt("ht", 1)));
 
