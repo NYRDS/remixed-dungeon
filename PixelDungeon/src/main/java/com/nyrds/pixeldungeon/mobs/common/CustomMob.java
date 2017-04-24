@@ -32,6 +32,8 @@ public class CustomMob extends MultiKindMob {
 	private boolean wallWalker = false;
 	private boolean absoluteWalker = false;
 
+	private boolean canBePet = false;
+
 	//For restoreFromBundle
 	public CustomMob() {
 	}
@@ -118,7 +120,9 @@ public class CustomMob extends MultiKindMob {
 			wallWalker = classDesc.optBoolean("wallWalker",wallWalker);
 			absoluteWalker = classDesc.optBoolean("absoluteWalker",absoluteWalker);
 
-			defenceVerb = classDesc.optString("defenceVerb", Game.getVars(R.array.Char_StaDodged)[gender]);
+			defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", Game.getVars(R.array.Char_StaDodged)[gender]));
+
+			canBePet = classDesc.optBoolean("canBePet",canBePet);
 
 			hp(ht(classDesc.optInt("ht", 1)));
 
@@ -140,5 +144,10 @@ public class CustomMob extends MultiKindMob {
 	@Override
 	public boolean isAbsoluteWalker() {
 		return absoluteWalker;
+	}
+
+	@Override
+	public boolean canBePet() {
+		return canBePet;
 	}
 }
