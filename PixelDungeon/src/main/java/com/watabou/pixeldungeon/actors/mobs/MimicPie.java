@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.food.RottenPasty;
-import com.watabou.pixeldungeon.sprites.MimicPieSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -15,8 +14,6 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 	private int level;
 	
 	public MimicPie() {
-		spriteClass = MimicPieSprite.class;
-		
 		baseSpeed = 1.25f;
 		
 		flying = true;

@@ -1,0 +1,27 @@
+{
+  "texture" : "mimic_pie.png",
+  "width" : 16,
+  "height" : 16,
+  "idle" : {
+    "fps" : 5,
+    "looped" : true,
+    "frames" : [0, 0, 0, 1, 1]
+  },
+  "run" : {
+    "fps" : 10,
+    "looped" : true,
+    "frames" : [0, 1, 2, 3, 3, 2, 1]
+  },
+  "attack" : {
+    "fps" : 10,
+    "looped" : false,
+    "frames" : [0, 3, 4, 5]
+  },
+  "die" : {
+    "fps" : 12,
+    "looped" : false,
+    "frames" : [0,6,7,8,9]
+  },
+  "levitating" : true,
+  "bloodColor" : "0xFFcb9700"
+}
