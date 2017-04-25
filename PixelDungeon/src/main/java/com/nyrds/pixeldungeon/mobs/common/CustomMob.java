@@ -35,9 +35,7 @@ public class CustomMob extends MultiKindMob {
 
 	private boolean canBePet = false;
 
-	private boolean canMeleeAttack = true;
-	private boolean canRangegAttack = false;
-	private int attackRange = 1;
+	private int     attackRange     = 1;
 
 	//For restoreFromBundle
 	public CustomMob() {
@@ -112,11 +110,7 @@ public class CustomMob extends MultiKindMob {
 	protected boolean canAttack( Char enemy ) {
 		int distance = Dungeon.level.distance(getPos(), enemy.getPos());
 
-		if(distance == 1 && canMeleeAttack) {
-			return true;
-		}
-
-		if(distance <= attackRange && canRangegAttack) {
+		if(distance <= attackRange) {
 			return true;
 		}
 
@@ -126,20 +120,26 @@ public class CustomMob extends MultiKindMob {
 	@Override
 	protected boolean doAttack( Char enemy ) {
 		if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
-			return super.doAttack(enemy);
+			doMeleeAttack(enemy);
 		} else {
+			doRangedAttack(enemy);
+		}
+		return true;
+	}
 
-			getSprite().zap(enemy.getPos());
+	private void doRangedAttack(Char enemy) {
+		getSprite().zap(enemy.getPos());
 
-			spend(attackDelay);
+		spend(attackDelay);
 
-			if (hit(this, enemy, true)) {
-				enemy.damage(damageRoll(), this);
-			}
-			return true;
+		if (hit(this, enemy, true)) {
+			enemy.damage(damageRoll(), this);
 		}
 	}
 
+	private void doMeleeAttack(Char enemy) {
+		super.doAttack(enemy);
+	}
 
 	private void fillMobStats() {
 		try {
@@ -182,11 +182,7 @@ public class CustomMob extends MultiKindMob {
 
 			canBePet = classDesc.optBoolean("canBePet",canBePet);
 
-			canMeleeAttack = classDesc.optBoolean("canMeleeAttack",canMeleeAttack);
-			canRangegAttack = classDesc.optBoolean("canMeleeAttack",canRangegAttack);
-
 			attackRange = classDesc.optInt("attackRange",attackRange);
-
 
 			hp(ht(classDesc.optInt("ht", 1)));
 
