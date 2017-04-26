@@ -78,5 +78,12 @@
   "RandomLevel":{
     "any":{"Gnoll":1},
     "test_random":{"Swarm":0.01}
+  },
+
+  "Feelings":{
+    "Chance":0.2,
+    "CHASM":{"AirElemental":1},
+    "WATER":{"WaterElemental":1},
+    "GRASS":{"EarthElemental":1}
   }
 }

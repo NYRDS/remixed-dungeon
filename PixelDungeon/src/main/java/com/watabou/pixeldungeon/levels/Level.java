@@ -26,9 +26,6 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
-import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
-import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -395,7 +392,7 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
 			}
 
-			feeling = DungeonGenerator.getCurrentLevelFeeling(levelId);
+			feeling = DungeonGenerator.getLevelFeeling(levelId);
 			if (feeling == Feeling.UNDEFINED) {
 				if (Dungeon.depth > 1) {
 					switch (Random.Int(10)) {
@@ -645,32 +642,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected Mob createMob() {
-		Mob mob = null;
-
-		if (Random.Int(5) == 0) {
-			switch (feeling) {
-				case WATER:
-					mob = new WaterElemental();
-					break;
-				case CHASM:
-					mob = new AirElemental();
-					break;
-				case GRASS:
-					mob = new EarthElemental();
-					break;
-				case NONE:
-					break;
-				default:
-					break;
-			}
-		}
-
-		if (mob == null) {
-			mob = Bestiary.mob();
-		}
-
+		Mob mob = Bestiary.mob();
 		setMobSpawnPos(mob);
-
 		return mob;
 	}
 

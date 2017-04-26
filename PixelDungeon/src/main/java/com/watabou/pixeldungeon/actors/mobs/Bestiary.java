@@ -31,45 +31,63 @@ import java.util.Iterator;
 
 public class Bestiary {
 
-	private static JSONObject mobsData;
+	private static final String FEELINGS = "Feelings";
+	private static JSONObject bestiaryData;
 
 	static {
-		mobsData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
+		bestiaryData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
 	}
 
 	public static Mob mob() {
 		try {
-			JSONObject levelDesc = mobsData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
 
 			String idString = DungeonGenerator.getCurrentLevelId();
 
-			if(!levelDesc.has(idString)) {
+			if (bestiaryData.has(FEELINGS)) {
+
+				JSONObject Feelings = bestiaryData.getJSONObject(FEELINGS);
+
+				if (Random.Float(1) < Feelings.optDouble("Chance", 0.2)) {
+
+					String feeling = DungeonGenerator.getLevelFeeling(idString).name();
+
+					if (Feelings.has(feeling)) {
+						return getMob(Feelings.getJSONObject(feeling));
+					}
+				}
+			}
+
+			JSONObject levelDesc = bestiaryData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
+
+			if (!levelDesc.has(idString)) {
 				idString = Integer.toString(DungeonGenerator.getCurrentLevelDepth());
 
 				if (!levelDesc.has(idString)) {
 					idString = "any";
 				}
 			}
-			
-			JSONObject depthDesc = levelDesc.getJSONObject(idString);
 
-			ArrayList<Float> chances = new ArrayList<>();
-			ArrayList<String> names = new ArrayList<>();
+			return getMob(levelDesc.getJSONObject(idString));
 
-			Iterator<?> keys = depthDesc.keys();
-
-			while (keys.hasNext()) {
-				String mobClassName = (String) keys.next();
-				names.add(mobClassName);
-				float chance = (float) depthDesc.getDouble(mobClassName);
-				chances.add(chance);
-			}
-			String selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[chances.size()]))];
-			return MobFactory.mobByName(selectedMobClass);
-			
 		} catch (JSONException e) {
 			Game.toast(e.getMessage());
 		}
 		return MobFactory.mobRandom();
+	}
+
+	private static Mob getMob(JSONObject depthDesc) throws JSONException {
+		ArrayList<Float> chances = new ArrayList<>();
+		ArrayList<String> names = new ArrayList<>();
+
+		Iterator<?> keys = depthDesc.keys();
+
+		while (keys.hasNext()) {
+			String mobClassName = (String) keys.next();
+			names.add(mobClassName);
+			float chance = (float) depthDesc.getDouble(mobClassName);
+			chances.add(chance);
+		}
+		String selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[chances.size()]))];
+		return MobFactory.mobByName(selectedMobClass);
 	}
 }

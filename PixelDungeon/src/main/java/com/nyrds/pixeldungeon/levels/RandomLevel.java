@@ -64,7 +64,7 @@ public class RandomLevel extends RegularLevel {
 
 			initSizeDependentStuff();
 
-			feeling = DungeonGenerator.getCurrentLevelFeeling(levelId);
+			feeling = DungeonGenerator.getLevelFeeling(levelId);
 
 			if (mLevelDesc.has("items")) {
 				JSONArray itemsDesc = mLevelDesc.getJSONArray("items");

@@ -280,7 +280,7 @@ public class DungeonGenerator {
 		return getLevelProperty(id, "music");
 	}
 
-	public static Level.Feeling getCurrentLevelFeeling(String id) {
+	public static Level.Feeling getLevelFeeling(String id) {
 		try {
 			String feeling = getLevelProperty(id, "feeling");
 			if (feeling == null) {
