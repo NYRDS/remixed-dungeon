@@ -22,11 +22,11 @@
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Armadura de huesos</string>
     <string name="NecromancerArmor_Info">Esta armadura permite al nigromante invocar hasta 2 necrófagos por el costo de 5 almas cada uno. Estos secuaces no muertos le ayudan a su amo. Los necrófagos se vuelven fuertes junto a su amo.</string>
-    <string name="NecromancerArmor_NotNecromancer">¡Solo lo nigromantes pueden usar esta armadura!</string>
+    <string name="NecromancerArmor_NotNecromancer">¡Solo los nigromantes pueden usar esta armadura!</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">túnica de nigromante</string>
-    <string name="NecromancerRobe_Info">Esta túnica le permite al nigromante invocar a un Necrófago por 5 almas. El Necrófago es un secuaz no-muerto que vuelven fuertes con su amo.</string>
+    <string name="NecromancerRobe_Info">Esta túnica le permite al nigromante invocar a un Necrófago por 5 almas. El Necrófago es un secuaz no-muerto que se vuelve fuerte con su amo.</string>
 
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->

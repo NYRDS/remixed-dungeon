@@ -59,6 +59,8 @@
     <string name="BellaNPC_Name_Objective">Bella</string>
     <string name="BellaNPC_Desc">Una chica muy elegante. Su apariencia te dice \"Yo soy bueno para todos\".</string>
     <string name="BellaNPC_Message">¡No me interesan plebeyos como tú!</string>
+    <string name="BellaNPC_Amulet_M">¡Oh! Hola guapo, ¿Qué tienes allí? ¡Ah, un amuleto tan elegante! Y tú ... estás por encima de todos esos plebeyos. ¿Te gustaría dar un paseo y discutir nuestro futuro juntos?</string>
+    <string name="BellaNPC_Amulet_F">Oh! Hola cariño, ¿Pero que tienes allí?. ¡Ah, un amuleto tan elegante! Y tú ... brillas mucho más que todos. ¿Te gustaría dar un paseo y discutir nuestro futuro juntos?</string>
     <string name="BellaNPC_Angry">¡Cómo te atreves... plebeyo!</string>
     <string name="BellaNPC_Yes_End_Game">Acepto (Fin del juego)</string>
     <string name="BellaNPC_No">No, no contigo</string>
