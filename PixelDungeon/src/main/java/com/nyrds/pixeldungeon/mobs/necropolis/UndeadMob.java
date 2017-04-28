@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -27,6 +28,7 @@ public class UndeadMob extends Mob {
 		IMMUNITIES.add(Blindness.class);
 		IMMUNITIES.add(Sleep.class);
 		IMMUNITIES.add(Poison.class);
+		IMMUNITIES.add(ConfusionGas.class);
 	}
 
 	@Override
