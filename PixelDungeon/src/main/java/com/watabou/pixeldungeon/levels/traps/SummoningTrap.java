@@ -57,12 +57,14 @@ public class SummoningTrap {
 		}
 		
 		// It's complicated here, because these traps can be activated in chain
-		
+
+		Level level = Dungeon.level;
+
 		ArrayList<Integer> candidates = new ArrayList<>();
 		
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			int p = pos + Level.NEIGHBOURS8[i];
-			if (Actor.findChar( p ) == null && (Dungeon.level.passable[p] || Dungeon.level.avoid[p])) {
+			if (Actor.findChar( p ) == null && (level.passable[p] || level.avoid[p])) {
 				candidates.add( p );
 			}
 		}
@@ -83,7 +85,7 @@ public class SummoningTrap {
 			Mob mob;
 			do {
 				mob = Bestiary.mob();
-			} while (mob.isWallWalker());
+			} while (!mob.canSpawnAt(level,point));
 			
 			mob.setState(mob.WANDERING);
 			Dungeon.level.spawnMob(mob, DELAY);

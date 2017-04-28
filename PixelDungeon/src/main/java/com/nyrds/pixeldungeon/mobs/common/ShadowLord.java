@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
+import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -45,11 +46,8 @@ public class ShadowLord extends Boss {
 
 		lootChance = 0.5f;
 		loot = new ScrollOfWeaponUpgrade();
-	}
 
-	@Override
-	public boolean isAbsoluteWalker() {
-		return true;
+		walkingType = WalkingType.ABSOLUTE;
 	}
 
 	public void spawnShadow() {

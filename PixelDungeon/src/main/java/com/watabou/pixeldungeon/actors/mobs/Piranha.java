@@ -34,7 +34,9 @@ public class Piranha extends Mob {
 	
 	public Piranha() {
 		spriteClass = PiranhaSprite.class;
-		
+
+		walkingType = WalkingType.WATER;
+
 		hp(ht(10 + Dungeon.depth * 5));
 		defenseSkill = 10 + Dungeon.depth * 2;
 
@@ -86,32 +88,5 @@ public class Piranha extends Mob {
 	@Override
 	public boolean reset() {
 		return true;
-	}
-	
-	@Override
-	protected boolean getCloser( int target ) {
-		
-		if (rooted) {
-			return false;
-		}
-		
-		int step = Dungeon.findPath( this, getPos(), target, Dungeon.level.water, null);
-		if (step != -1) {
-			move( step );
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	@Override
-	protected boolean getFurther( int target ) {
-		int step = Dungeon.flee( this, getPos(), target, Dungeon.level.water, null);
-		if (step != -1) {
-			move( step );
-			return true;
-		} else {
-			return false;
-		}
 	}
 }

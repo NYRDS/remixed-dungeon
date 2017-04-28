@@ -391,17 +391,7 @@ public abstract class Mob extends Char {
 		if (rooted) {
 			return false;
 		}
-		int step;
-
-		if (isAbsoluteWalker()) {
-			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.allCells, null);
-		} else {
-			if (!isWallWalker()) {
-				step = Dungeon.findPath(this, getPos(), target, Dungeon.level.passable, null);
-			} else {
-				step = Dungeon.findPath(this, getPos(), target, Dungeon.level.solid, null);
-			}
-		}
+		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(Dungeon.level), null);
 
 		if (step != -1) {
 			move(step);
@@ -412,17 +402,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected boolean getFurther(int target) {
-		int step;
-
-		if (isAbsoluteWalker()) {
-			step = Dungeon.flee(this, getPos(), target, Dungeon.level.allCells, null);
-		} else {
-			if (!isWallWalker()) {
-				step = Dungeon.flee(this, getPos(), target, Dungeon.level.passable, null);
-			} else {
-				step = Dungeon.flee(this, getPos(), target, Dungeon.level.solid, null);
-			}
-		}
+		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(Dungeon.level), null);
 
 		if (step != -1) {
 			move(step);
@@ -896,14 +876,6 @@ public abstract class Mob extends Char {
 			return Utils.format(Game.getVar(R.string.Mob_StaPassiveStatus),
 					getName());
 		}
-	}
-
-	public boolean isWallWalker() {
-		return false;
-	}
-
-	public boolean isAbsoluteWalker() {
-		return false;
 	}
 
 	public boolean isPet() {

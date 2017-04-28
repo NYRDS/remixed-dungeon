@@ -7,6 +7,8 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.WalkingType;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -92,25 +94,16 @@ public class CustomMob extends MultiKindMob {
 	}
 
 	@Override
-	public boolean isWallWalker() {
-		return wallWalker;
-	}
-
-	@Override
-	public boolean isAbsoluteWalker() {
-		return absoluteWalker;
-	}
-
-	@Override
 	public boolean canBePet() {
 		return canBePet;
 	}
 
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		int distance = Dungeon.level.distance(getPos(), enemy.getPos());
+		int enemyPos = enemy.getPos();
+		int distance = Dungeon.level.distance(getPos(), enemyPos);
 
-		if(distance <= attackRange) {
+		if(distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos) {
 			return true;
 		}
 
@@ -175,8 +168,7 @@ public class CustomMob extends MultiKindMob {
 
 			viewDistance = classDesc.optInt("viewDistance",viewDistance);
 
-			wallWalker = classDesc.optBoolean("wallWalker",wallWalker);
-			absoluteWalker = classDesc.optBoolean("absoluteWalker",absoluteWalker);
+			walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
 
 			defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", Game.getVars(R.array.Char_StaDodged)[gender]));
 

@@ -16,5 +16,6 @@
    "spriteDesc"    :"spritesDesc/BlackRat.json",
    "lootChance"    :1,
    "loot"          : {"kind":"RatHide"},
-   "attackRange"   :5
+   "attackRange"   :5,
+   "walkingType"   :"WALL"
 }

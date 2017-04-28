@@ -648,11 +648,10 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected void setMobSpawnPos(Mob mob) {
-		if (!mob.isWallWalker()) {
-			mob.setPos(randomRespawnCell());
-		} else {
+		mob.setPos(mob.respawnCell(this));
+
+		if(!passable[mob.getPos()]) {
 			mob.setState(mob.WANDERING);
-			mob.setPos(randomSolidCell());
 		}
 	}
 
@@ -690,16 +689,11 @@ public abstract class Level implements Bundlable {
 		};
 	}
 
-	public int randomSolidCell() {
-		int cell;
-		do {
-			cell = Random.Int(getLength());
-		} while (!solid[cell] || Dungeon.visible[cell]
-				|| Actor.findChar(cell) != null);
-		return cell;
+	public int randomRespawnCell() {
+		return randomRespawnCell(passable);
 	}
 
-	public int randomRespawnCell() {
+	public int randomRespawnCell(boolean [] selectFrom) {
 
 		if (isBossLevel() || noFogOfWar()) {
 			return -1;
@@ -708,8 +702,7 @@ public abstract class Level implements Bundlable {
 		int cell;
 		do {
 			cell = Random.Int(getLength());
-		} while (!passable[cell] || Dungeon.visible[cell]
-				|| Actor.findChar(cell) != null);
+		} while (!passable[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null);
 		return cell;
 	}
 
