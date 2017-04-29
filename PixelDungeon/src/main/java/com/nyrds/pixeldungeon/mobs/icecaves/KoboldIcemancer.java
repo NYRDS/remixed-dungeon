@@ -110,10 +110,6 @@ public class KoboldIcemancer extends Mob implements Callback {
 		}
 	}
 
-	public void onZapComplete() {
-		next();
-	}
-
 	@Override
 	public void call() {
 		next();
