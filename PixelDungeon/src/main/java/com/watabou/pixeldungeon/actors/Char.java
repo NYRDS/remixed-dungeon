@@ -583,6 +583,10 @@ public abstract class Char extends Actor {
 		next();
 	}
 
+	public void onZapComplete() {
+		next();
+	}
+
 	public void onOperateComplete() {
 		next();
 	}
@@ -665,10 +669,6 @@ public abstract class Char extends Actor {
 
 	public void setPos(int pos) {
 		this.pos = pos;
-	}
-
-	public void onZapComplete() {
-		next();
 	}
 
 	public boolean isMovable() {

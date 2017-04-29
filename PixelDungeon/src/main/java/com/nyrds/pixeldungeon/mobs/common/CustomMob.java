@@ -113,25 +113,30 @@ public class CustomMob extends MultiKindMob {
 	@Override
 	protected boolean doAttack( Char enemy ) {
 		if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
-			doMeleeAttack(enemy);
+			return doMeleeAttack(enemy);
 		} else {
-			doRangedAttack(enemy);
+			return doRangedAttack(enemy);
 		}
-		return true;
 	}
 
-	private void doRangedAttack(Char enemy) {
-		getSprite().zap(enemy.getPos());
-
+	@Override
+	public void onZapComplete() {
 		spend(attackDelay);
 
-		if (hit(this, enemy, true)) {
-			enemy.damage(damageRoll(), this);
+		if (hit(this, getEnemy(), true)) {
+			getEnemy().damage(damageRoll(), this);
 		}
+
+		super.onZapComplete();
 	}
 
-	private void doMeleeAttack(Char enemy) {
-		super.doAttack(enemy);
+	private boolean doRangedAttack(Char enemy) {
+		getSprite().zap(enemy.getPos());
+		return false;
+	}
+
+	private boolean doMeleeAttack(Char enemy) {
+		return super.doAttack(enemy);
 	}
 
 	private void fillMobStats() {
