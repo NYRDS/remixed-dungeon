@@ -17,7 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -27,124 +30,106 @@ import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ShamanSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-public class Shaman extends Mob {
+public class Shaman extends Mob implements IZapper {
 
-	private static final float TIME_TO_ZAP	= 2f;
-	
+	private static final float TIME_TO_ZAP = 2f;
+
 	private static final String TXT_LIGHTNING_KILLED = Game.getVar(R.string.Shaman_Killed);
-	
+
 	private int fleeState = 0;
-	
+
 	public Shaman() {
 		spriteClass = ShamanSprite.class;
-		
+
 		hp(ht(18));
 		defenseSkill = 8;
-		
+
 		exp = 6;
 		maxLvl = 14;
-		
+
 		loot = Generator.Category.SCROLL;
 		lootChance = 0.33f;
-		
-		RESISTANCES.add( LightningTrap.Electricity.class );
+
+		RESISTANCES.add(LightningTrap.Electricity.class);
 	}
-	
+
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 2, 6 );
+		return Random.NormalIntRange(2, 6);
 	}
-	
+
 	@Override
-	public int attackSkill( Char target ) {
+	public int attackSkill(Char target) {
 		return 11;
 	}
-	
+
 	@Override
 	public int dr() {
 		return 4;
 	}
-	
+
 	@Override
-	protected boolean canAttack( Char enemy ) {
-		return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
+	protected boolean canAttack(Char enemy) {
+		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
-	
+
 	@Override
 	public int defenseProc(Char enemy, int damage) {
-		
-		if( hp() > 2*ht() / 3 && fleeState < 1) {
+
+		if (hp() > 2 * ht() / 3 && fleeState < 1) {
 			setState(FLEEING);
 			fleeState++;
-			return damage/2;
+			return damage / 2;
 		}
-		
-		if( hp() > ht() / 3 && fleeState < 2 ) {
+
+		if (hp() > ht() / 3 && fleeState < 2) {
 			setState(FLEEING);
 			fleeState++;
-			return damage/2;
+			return damage / 2;
 		}
-		
+
 		return damage;
 	}
-	
+
 	@Override
 	protected boolean getFurther(int target) {
-		
-		if(Dungeon.level.distance(getPos(), target) >2) {
+
+		if (Dungeon.level.distance(getPos(), target) > 2) {
 			setState(HUNTING);
 		}
-		
+
 		return super.getFurther(target);
 	}
-	
-	@Override
-	protected boolean doAttack( Char enemy ) {
 
-		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
-			
-			return super.doAttack( enemy );
-			
-		} else {
-			
-			boolean visible = Dungeon.level.fieldOfView[getPos()] || Dungeon.level.fieldOfView[enemy.getPos()]; 
-			if (visible) {
-				getSprite().zap( enemy.getPos() );
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+
+		if (super.zap(enemy)) {
+			int dmg = damageRoll();
+			if (Dungeon.level.water[enemy.getPos()] && !enemy.flying) {
+				dmg *= 1.5f;
 			}
-			
-			spend( TIME_TO_ZAP );
-			
-			if (hit( this, enemy, true )) {
-				int dmg = Random.Int( 2, 12 );
-				if (Dungeon.level.water[enemy.getPos()] && !enemy.flying) {
-					dmg *= 1.5f;
+			enemy.damage(dmg, LightningTrap.LIGHTNING);
+
+			enemy.getSprite().centerEmitter().burst(SparkParticle.FACTORY, 3);
+			enemy.getSprite().flash();
+
+			if (enemy == Dungeon.hero) {
+				Camera.main.shake(2, 0.3f);
+
+				if (!enemy.isAlive()) {
+					Dungeon.fail(Utils.format(ResultDescriptions.MOB,
+							Utils.indefinite(getName()), Dungeon.depth));
+					GLog.n(TXT_LIGHTNING_KILLED, getName());
 				}
-				enemy.damage( dmg, LightningTrap.LIGHTNING );
-				
-				enemy.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
-				enemy.getSprite().flash();
-				
-				if (enemy == Dungeon.hero) {
-					
-					Camera.main.shake( 2, 0.3f );
-					
-					if (!enemy.isAlive()) {
-						Dungeon.fail( Utils.format( ResultDescriptions.MOB, 
-							Utils.indefinite( getName() ), Dungeon.depth ) );
-						GLog.n( TXT_LIGHTNING_KILLED, getName() );
-					}
-				}
-			} else {
-				enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 			}
-			
-			return !visible;
+			return true;
 		}
+		return false;
 	}
 }

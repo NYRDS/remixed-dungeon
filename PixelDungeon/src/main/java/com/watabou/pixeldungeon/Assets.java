@@ -75,7 +75,6 @@ public class Assets {
 	public static final String PIRANHA = "piranha.png";
 	public static final String EYE = "eye.png";
 	public static final String SUCCUBUS = "succubus.png";
-	public static final String SCORPIO = "scorpio.png";
 	public static final String ROTTING = "rotting_fist.png";
 	public static final String BURNING = "burning_fist.png";
 	public static final String YOG = "yog.png";

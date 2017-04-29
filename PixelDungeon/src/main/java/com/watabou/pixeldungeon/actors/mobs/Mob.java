@@ -427,17 +427,15 @@ public abstract class Mob extends Char {
 
 	protected boolean doAttack(Char enemy) {
 
-		boolean visible = Dungeon.visible[getPos()];
-
-		if (visible) {
+		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
 			getSprite().attack(enemy.getPos());
 		} else {
-			attack(enemy);
+			getSprite().zap( enemy.getPos() );
 		}
 
 		spend(PixelDungeon.realtime() ? attackDelay() * 10 : attackDelay());
 
-		return !visible;
+		return false;
 	}
 
 	@Override
@@ -445,6 +443,13 @@ public abstract class Mob extends Char {
 		attack(getEnemy());
 		super.onAttackComplete();
 	}
+
+	@Override
+	public void onZapComplete() {
+		zap(getEnemy());
+		super.onAttackComplete();
+	}
+
 
 	@Override
 	public int defenseSkill(Char enemy) {
@@ -788,15 +793,11 @@ public abstract class Mob extends Char {
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = enemyInFOV;
 			if (enemyInFOV && canAttack(getEnemy())) {
-
 				return doAttack(getEnemy());
-
 			} else {
-
 				if (enemyInFOV) {
 					target = getEnemy().getPos();
 				}
-
 				int oldPos = getPos();
 				if (target != -1 && getCloser(target)) {
 
@@ -931,4 +932,21 @@ public abstract class Mob extends Char {
 		}
 		return super.attack(enemy);
 	}
+
+	public boolean zap(@NonNull Char enemy) {
+		if (enemy == DUMMY) {
+			EventCollector.logEvent(EventCollector.BUG, "zapping dummy enemy");
+			return false;
+		}
+
+		if (hit(this, enemy, true)) {
+			enemy.damage(damageRoll(), this);
+			return true;
+		} else {
+			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
+			return false;
+		}
+
+	}
+
 }

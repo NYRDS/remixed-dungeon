@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -29,14 +30,12 @@ import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.ScorpioSprite;
 import com.watabou.utils.Random;
 
-public class Scorpio extends Mob {
+public class Scorpio extends Mob implements IZapper {
 	
 	public Scorpio() {
-		spriteClass = ScorpioSprite.class;
-		
+
 		hp(ht(95));
 		defenseSkill = 24;
 		viewDistance = Light.DISTANCE;
@@ -53,8 +52,6 @@ public class Scorpio extends Mob {
 			loot = new MysteryMeat();
 			lootChance = 1;
 		}
-
-		lootChance = 0.125f;
 		
 		RESISTANCES.add( Leech.class );
 		RESISTANCES.add( Poison.class );

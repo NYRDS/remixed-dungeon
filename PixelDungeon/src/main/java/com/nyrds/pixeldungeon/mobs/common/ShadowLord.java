@@ -30,10 +30,11 @@ import com.watabou.utils.Random;
 /**
  * Created by DeadDie on 13.02.2016
  */
-public class ShadowLord extends Boss {
+public class ShadowLord extends Boss implements IZapper {
 
-	private boolean levelCreated = false;
-	private int cooldown = -1;
+	private static final float TIME_TO_ZAP = 1;
+	private boolean levelCreated         = false;
+	private int cooldown                 = -1;
 
 	private static final String TXT_INTRO = Game.getVar(R.string.ShadowLord_Intro);
 	private static final String TXT_DENY = Game.getVar(R.string.ShadowLord_Death);
@@ -50,7 +51,7 @@ public class ShadowLord extends Boss {
 		walkingType = WalkingType.ABSOLUTE;
 	}
 
-	public void spawnShadow() {
+	private void spawnShadow() {
 		int cell = Dungeon.level.getSolidCellNextTo(getPos());
 
 		if (cell != -1) {
@@ -63,7 +64,7 @@ public class ShadowLord extends Boss {
 		}
 	}
 
-	public void spawnWraith() {
+	private void spawnWraith() {
 		for (int i = 0; i < 4; i++) {
 			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
 
@@ -73,7 +74,7 @@ public class ShadowLord extends Boss {
 		}
 	}
 
-	public void twistLevel() {
+	private void twistLevel() {
 
 		if(!isAlive()) {
 			return;
@@ -115,24 +116,6 @@ public class ShadowLord extends Boss {
 	@Override
 	protected boolean canAttack(Char enemy) {
 		return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
-	}
-
-	@Override
-	protected boolean doAttack(Char enemy) {
-
-		if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
-			return super.doAttack(enemy);
-		} else {
-
-			getSprite().zap(enemy.getPos());
-
-			spend(1);
-
-			if (hit(this, enemy, true)) {
-				enemy.damage(damageRoll(), this);
-			}
-			return true;
-		}
 	}
 
 	private void blink(int epos) {

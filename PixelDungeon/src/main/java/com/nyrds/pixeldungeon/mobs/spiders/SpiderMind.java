@@ -21,7 +21,7 @@ import com.watabou.utils.Random;
 
 public class SpiderMind extends Mob {
 
-	static Class<?> BuffsForEnemy[] = {
+	private static Class<?> BuffsForEnemy[] = {
 		Blindness.class,
 		Charm.class,
 		Levitation.class,
