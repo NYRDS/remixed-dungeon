@@ -447,7 +447,7 @@ public abstract class Mob extends Char {
 	@Override
 	public void onZapComplete() {
 		zap(getEnemy());
-		super.onAttackComplete();
+		super.onZapComplete();
 	}
 
 

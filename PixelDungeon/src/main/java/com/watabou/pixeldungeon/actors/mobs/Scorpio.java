@@ -76,16 +76,18 @@ public class Scorpio extends Mob implements IZapper {
 	protected boolean canAttack( Char enemy ) {
 		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
-	
+
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
-		if (Random.Int( 2 ) == 0) {
-			Buff.prolong( enemy, Cripple.class, Cripple.DURATION );
+	public boolean zap(@NonNull Char enemy) {
+		if(super.zap(enemy)) {
+			if (Random.Int( 2 ) == 0) {
+				Buff.prolong( enemy, Cripple.class, Cripple.DURATION );
+			}
+			return true;
 		}
-		
-		return damage;
+		return false;
 	}
-	
+
 	@Override
 	protected boolean getCloser( int target ) {
 		if (getState() == HUNTING) {

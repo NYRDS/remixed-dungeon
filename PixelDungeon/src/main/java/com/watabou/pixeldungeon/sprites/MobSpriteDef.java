@@ -103,13 +103,14 @@ public class MobSpriteDef extends MobSprite {
 
 			if (json.has("zapEffect")) {
 				zapEffect = json.getString("zapEffect");
-
+/*
 				zapCallback = new Callback() {
 					@Override
 					public void call() {
 						ch.onZapComplete();
 					}
 				};
+*/
 			}
 
 			loadAdditionalData(json,film, kind);
