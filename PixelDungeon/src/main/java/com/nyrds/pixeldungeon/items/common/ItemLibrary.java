@@ -8,7 +8,6 @@ import com.nyrds.android.util.TrackedRuntimeException;
 
 import org.json.JSONException;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -47,7 +46,7 @@ public class ItemLibrary {
 	private static void loadLibrary(){
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromFile(new File(libraryFile)).toString(),
+					JsonHelper.readJsonFromFile(FileSystem.getInteralStorageFile(libraryFile)).toString(),
 					new TypeToken<HashMap<String, Integer>>() {
 					}.getType()
 			);
