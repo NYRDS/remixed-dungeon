@@ -45,7 +45,7 @@ public class SystemText extends Text {
 		this("", baseLine, false);
 	}
 
-	public SystemText(String text, float size, boolean multiline) {
+	public SystemText(final String text, float size, boolean multiline) {
 		super(0, 0, 0, 0);
 
 		if (fontScale != fontScale) {

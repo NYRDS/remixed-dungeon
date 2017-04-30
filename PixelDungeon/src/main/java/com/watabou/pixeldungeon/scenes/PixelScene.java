@@ -159,7 +159,7 @@ public class PixelScene extends Scene {
 		return createMultiline(null, size);
 	}
 
-	public static Text createMultiline(String text, float size) {
+	public static Text createMultiline(final String text, float size) {
 
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(text, size, true);

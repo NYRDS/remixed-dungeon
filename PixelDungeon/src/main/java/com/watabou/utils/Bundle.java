@@ -351,10 +351,10 @@ public class Bundle {
 			writer.close();
 			return true;
 		} catch (IOException e) {
-			throw new TrackedRuntimeException("bungle write failed: %s\n",e);
+			throw new TrackedRuntimeException("bundle write failed: %s\n",e);
 		}
 	}
-	
+
 	public static void addAlias( Class<?> cl, String alias ) {
 		aliases.put( alias, cl.getName() );
 	}

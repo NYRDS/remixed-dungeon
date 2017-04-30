@@ -115,7 +115,7 @@ public class SaveUtils {
 		}
 	}
 	
-	public static void copyFromSaveSlot(String slot, HeroClass heroClass) {
+	private static void copyFromSaveSlot(String slot, HeroClass heroClass) {
 		String[] files = FileSystem.getInteralStorageFile(slot).list();
 		if(files == null) {
 			return;

@@ -1,9 +1,10 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.items.common.ItemLibrary;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -13,9 +14,9 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.windows.WndInfoItem;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 
 public class WndLibraryCatalogue extends Window {
 
@@ -55,13 +56,13 @@ public class WndLibraryCatalogue extends Window {
 
 		Component content = new Component();
 
+		Map<String,Integer> knownMap = ItemLibrary.getKnowledgeMap();
+
 		//List
-		for (final String entry : dummyEntriesList) {
+		for (final String entry : knownMap.keySet()) {
 
-			//Text
-			String entryName = entry;
 
-			Text name = PixelScene.createMultiline(entryName, GuiProperties.mediumTitleFontSize());
+			Text name = PixelScene.createMultiline(entry, GuiProperties.mediumTitleFontSize());
 
 			name.hardlight(0xFFFFFF);
 
@@ -82,7 +83,8 @@ public class WndLibraryCatalogue extends Window {
 				protected void onClick() {
 					super.onClick();
 
-					GameScene.show(new WndLibraryEntry(entry));
+					GameScene.show(new WndInfoItem(ItemFactory.itemByName(entry)));
+					//GameScene.show(new WndLibraryEntry(entry));
 				}
 			};
 

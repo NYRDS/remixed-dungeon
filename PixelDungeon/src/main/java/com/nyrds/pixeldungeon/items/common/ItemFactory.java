@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
 import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
@@ -176,25 +178,19 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-
 
 public class ItemFactory {
 
-	static private HashMap <String, Class<? extends Item>> mItemsList;
-
-	static  {
+	static private BiMap<String, Class<? extends Item>> mItemsList = HashBiMap.create();
+	static {
 		initItemsMap();
 	}
+
 	private static void registerItemClass(Class<? extends Item> itemClass) {
 		mItemsList.put(itemClass.getSimpleName(), itemClass);
 	}
 
-
-
 	private static void initItemsMap() {
-
-		mItemsList = new HashMap<>();
 
 		registerItemClass(Amulet.class);
 		registerItemClass(Ankh.class);
@@ -244,14 +240,6 @@ public class ItemFactory {
 		registerItemClass(PotionOfFrost.class);
 		registerItemClass(PotionOfInvisibility.class);
 		registerItemClass(PotionOfExperience.class);
-		registerItemClass(Dreamweed.Seed.class);
-		registerItemClass(Sungrass.Seed.class);
-		registerItemClass(Icecap.Seed.class);
-		registerItemClass(WandMaker.Rotberry.Seed.class);
-		registerItemClass(Firebloom.Seed.class);
-		registerItemClass(Sorrowmoss.Seed.class);
-		registerItemClass(Earthroot.Seed.class);
-		registerItemClass(Fadeleaf.Seed.class);
 		registerItemClass(RatSkull.class);
 		registerItemClass(ChaosCrystal.class);
 		registerItemClass(SpiderCharm.class);
@@ -370,18 +358,17 @@ public class ItemFactory {
 		registerItemClass(RatHide.class);
 		registerItemClass(BlackSkullOfMastery.class);
 
-		mItemsList.put("Rotberry.Seed",   WandMaker.Rotberry.Seed.class);
-		mItemsList.put("Earthroot.Seed",  Earthroot.Seed.class);
-		mItemsList.put("Firebloom.Seed",  Firebloom.Seed.class);
-		mItemsList.put("Sungrass.Seed",   Sungrass.Seed.class);
-		mItemsList.put("Dreamweed.Seed",  Dreamweed.Seed.class);
+		mItemsList.put("Rotberry.Seed", WandMaker.Rotberry.Seed.class);
+		mItemsList.put("Earthroot.Seed", Earthroot.Seed.class);
+		mItemsList.put("Firebloom.Seed", Firebloom.Seed.class);
+		mItemsList.put("Sungrass.Seed", Sungrass.Seed.class);
+		mItemsList.put("Dreamweed.Seed", Dreamweed.Seed.class);
 		mItemsList.put("Sorrowmoss.Seed", Sorrowmoss.Seed.class);
-		mItemsList.put("Icecap.Seed",     Icecap.Seed.class);
-		mItemsList.put("Fadeleaf.Seed",   Fadeleaf.Seed.class);
+		mItemsList.put("Icecap.Seed", Icecap.Seed.class);
+		mItemsList.put("Fadeleaf.Seed", Fadeleaf.Seed.class);
 
 		registerItemClass(DwarfToken.class);
 		registerItemClass(RatArmor.class);
-
 	}
 
 	public static boolean isValidItemClass(String itemClass) {
@@ -398,15 +385,19 @@ public class ItemFactory {
 		}
 	}
 
-		public static Class<? extends Item> itemsClassByName(String selectedItemClass) {
+	private static Class<? extends Item> itemsClassByName(String selectedItemClass) {
 
 		Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
-		if(itemClass != null) {
+		if (itemClass != null) {
 			return itemClass;
 		} else {
-			Game.toast("Unknown item: [%s], spawning Gold instead",selectedItemClass);
+			Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
 			return Gold.class;
 		}
+	}
+
+	public static String itemNameByClass(Class<? extends Item> clazz) {
+		return mItemsList.inverse().get(clazz);
 	}
 
 	public static Item createItemFromDesc(JSONObject itemDesc) throws IllegalAccessException, InstantiationException, JSONException {
