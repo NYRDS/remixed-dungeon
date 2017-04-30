@@ -1,5 +1,9 @@
 package com.nyrds.android.util;
 
+import android.util.Base64;
+
+import com.nyrds.pixeldungeon.ml.EventCollector;
+
 import java.security.spec.KeySpec;
 
 import javax.crypto.Cipher;
@@ -7,10 +11,6 @@ import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-
-import android.util.Base64;
-
-import com.nyrds.pixeldungeon.ml.EventCollector;
 
 public class Crypter {
 	private String encryptionKey;

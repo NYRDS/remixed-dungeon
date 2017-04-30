@@ -7,23 +7,23 @@
   <string name="Codex_Blinded">Non puoi leggere mentre sei acciecato</string>
   <string-array name="Codex_Story">
     <item>E creato Watabou Pixel Dungeon. E guardò la sua opera. E vide che era cosa buona!</item>
-    <item>Glifo rimbalzo  - Causa ai nemici di essere respinti indietro dopo aver colpito l\'Eroe.</item>
-    <item>Glifo affetto  - Il nemico sarà affascinato per pochi turni, mentre l\'eroe sarà affascinato per pochi turni pure, ma mai più che il nemico.</item>
-    <item>Glifo anti-entropia - L\'eroe sarà illuminato e prenderà fuoco, e il nemico sarà congelato.</item>
-    <item>Glifo molteplicità - Questo effetto fa sì che l\'Eroe generi un\'immagine speculare ma danneggiata. Questo può uccidere l\'Eroe.</item>
-    <item>Glifo potenziale - Questo scatena una sorta di colpo di fulmine che potrebbe danneggiare il nemico che ha attaccato il giocatore e potrebbe danneggiare l\'eroe con in media la metà del danno fatto al nemico.</item>
-    <item>Glifo metabolismo  - L\'eroe sarà parzialmente guarito, prima di applicare il danno nemico. Si applica solo se l\'eroe non sta morendo di fame. La fame dell\'eroe crescerà anche più velocemente.</item>
-    <item>Glifo cattivo odore - L\'Eroe rilascerà una nube di gas tossico quando viene colpito.</item>
-    <item>Glifo viscosità - L\'eroe otterrà il danno differito debuff, che farà sì che l\'eroe riceva 1 danno per turno, invece di ricevere l\'intera quantità in un solo colpo.</item>
-    <item>Glifo dislocamento - Ogni volta che l\'eroe è colpito, c\'è la possibilità che l\'eroe sarà teletrasportato a una tessera visibile casuale. Questo glifo non funziona su livelli boss.</item>
+    <item>Glifo rimbalzante  - Causa ai nemici di essere respinti indietro dopo aver colpito l\'Eroe.</item>
+    <item>Glifo del fascino  - Il nemico sarà affascinato per pochi turni, mentre l\'eroe sarà affascinato per pochi turni pure, ma mai più che il nemico.</item>
+    <item>Glifo anti-entropico - L\'eroe sarà illuminato e prenderà fuoco, e il nemico sarà congelato.</item>
+    <item>Glifo della molteplicità - Questo effetto fa sì che l\'Eroe generi un\'immagine speculare ma danneggiata. Questo può uccidere l\'Eroe.</item>
+    <item>Glifo del potenziale - Questo scatena una sorta di colpo di fulmine che potrebbe danneggiare il nemico che ha attaccato il giocatore e potrebbe danneggiare l\'eroe con in media la metà del danno fatto al nemico.</item>
+    <item>Glifo del metabolismo  - L\'eroe sarà parzialmente guarito, prima di applicare il danno nemico. Si applica solo se l\'eroe non sta morendo di fame. La fame dell\'eroe crescerà anche più velocemente.</item>
+    <item>Glifo del cattivo odore - L\'Eroe rilascerà una nube di gas tossico quando viene colpito.</item>
+    <item>Glifo della viscosità - L\'eroe otterrà il danno differito debuff, che farà sì che l\'eroe riceva 1 danno per turno, invece di ricevere l\'intera quantità in un solo colpo.</item>
+    <item>Glifo del dislocamento - Ogni volta che l\'eroe è colpito, c\'è la possibilità che l\'eroe sarà teletrasportato a una tessera visibile casuale. Questo glifo non funziona su livelli boss.</item>
     <item>Glifo aggrovigliamento - L\'eroe può ricevere armatura erbacea, ma potrebbe essere radicato anche allo stesso tempo.</item>
-    <item>Arma Grim - Il colpo andato a segno, può immediatamente uccidere il bersaglio (o fornire fino a 2x danni a un boss).</item>
+    <item>Arma truce - Il colpo andato a segno, può immediatamente uccidere il bersaglio (o fornire fino a 2x danni a un boss).</item>
     <item>Arma ardente - Il colpo andato a segno, infligge danno in più all\'obbiettivo e può bruciarlo.</item>
-    <item>Arma Eldritch - Se il colpo è andato a segno, il nemico può fuggire in preda al terrore.</item>
+    <item>Arma dell\'orrore - Se il colpo è andato a segno, il nemico può fuggire in preda al terrore.</item>
     <item>Arma instabile - Se il colpo è andato a segno, può applicare l\'effetto di qualsiasi incantesimo casuale.</item>
     <item>Arma del Vampiro - Se il colpo è andato a segno, può guarire l\'Eroe per una parte del danno inflitto al nemico.</item>
     <item>Arma fortunata - ignora quasi completamente l\'arma nemica, e fa molti più danni.</item>
-    <item>Arma stordimento - Se il colpo è andato a segno, può paralizzare bersaglio.</item>
+    <item>Arma dello stordimento - Se il colpo è andato a segno, può paralizzare bersaglio.</item>
     <item>Arma penetrante - Se il colpo è andato a segno, può danneggiare tutti i nemici in linea retta dietro il bersaglio.</item>
     <item>Arma velenosa - Se il colpo è andato a segno, è possibile che il bersaglio rimanga avvelenato.</item>
     <item>Arma agghiacciante - Se il colpo è andato a segno, può rallentare il bersaglio e gli impedirà di bruciare.</item>
@@ -31,5 +31,16 @@
     <item>Questo libro, è scritto in un linguaggio demoniaco</item>
     <item>Questo libro, è scritto in un linguaggio nano</item>
     <item>Questo libro, è scritto in un linguaggio elfico</item>
+    <item>Lei si fermò, come congelata, davanti alla pesante porta di quercia, e i suoi occhi emersero dal margine della porta. Da qualche angolo dimenticato della sua mente, il riconoscimento.\n
+\"Luce del sole..\" lei mormorò tra se e se. Quanto tempo era stata? Nelle eterne tenebre del Dungeon, aveva da tempo abbandonato il conteggio dei suoi giorni. La luce illuminava ricordi rimossi. Lei ricordava il suo allenamento, lunghi giorni di intensa pratica con lame e archi, tenere il ceppo, e disegnare mappe. lei ricordò i mantra e le discipline col fine di mantenere in lei una qualche parvenza di sanità mentre esplorava le profondità oscure. Quello che lei non ricordava, non poteva ricordare, erano le persone.\n
+Lei ricordava le loro voci, i loro comandi e i loro avvertimenti, ma non le loro facce e nemmeno il loro tocco.\n
+Il dolore l\'aveva allenata. Ricorda i pericoli, sempre i pericoli: gli animali rabbiosi, i non-morti, I pazzi briganti, e gli abili ninja caddero prima di lei. E\' stata ferita, bruciata, accoltellata, e avvelenata nella sua strada attraverso abomini, demoni, orrori meccanici e necromanti folli. Addirittura gli Dei caddero prima di lei.\n
+Lei aveva seguito Yog attraverso il Paradiso e l\'Inferno, prima di zittire i suoi sussurri corrotti per sempre. Anche allora, c\'era lavoro da fare. Yog era servo di qualcuno più potente e misterioso di lui.\n
+Cosi approfondì ulteriormente, più in profondità. Il diaro dell\'anziano mago, ancora irradiante potere, le aveva mostrato la via. Con la magia nelle sue pagine, lei viaggiò verso una nuova landa selvaggia, fino a un minuscolo villaggio nascosto in una possente foresta. Lì, lei finalmente tracciò il malignofino alla sua labirintica sorgente, e sopraffò tutti quelli che gli si trovarono davanti a lei.\n
+Ora, nella tenue luce del giorno, lei si autoesaminò in una pozza di acqua della caverna. Il suo corpo era deformato dalla magia quasi senza possibilità di riconoscerlo. La sua pelle, pallida fino alla traslucenza, era incrostata di sporco, fango e cenere. La sua collana ad anelli avrebbe potuto pagare un riscatto da re, e la sua fondina di bacchette conteneva abbastanza energia magica da distruggere un\'armata. Lei impugnava la sua arma, abbastanza pregevole da ferire anche gli Dei. Sinceramente, lei era diventata la padrona di questo regno oscuro, questo deserto della disperazione.\n
+Lei aveva inseguito il male fin negli angoli più lontani dell\'universo, Ma adesso lei era paralizzata dalla paura. E se la respingeva? E se no? Come poteva più interagire con queste persone? Inferno, lei ha perso il conto di tutte le volte che la morte l\'ha reclamata, solo per essere tirata dalla sua gelida stretta.\n
+No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera luce e scese nell\'oscurità, forse per l\'ultima volta.\n
+\n\n\tby drazool da reddit
+</item>
   </string-array>
 </resources>

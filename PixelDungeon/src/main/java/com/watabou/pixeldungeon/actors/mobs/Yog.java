@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
@@ -62,7 +61,7 @@ public class Yog extends Boss {
 
 		hp(ht(500));
 
-		EXP = 50;
+		exp = 50;
 
 		setState(PASSIVE);
 
@@ -87,17 +86,9 @@ public class Yog extends Boss {
 			name3 = Random.element(secondaryBossArray);
 		} while (name1 == name2 || name2 == name3 || name1 == name3);
 
-		Class<? extends Mob> boss1 = MobFactory.mobClassByName(name1);
-		Class<? extends Mob> boss2 = MobFactory.mobClassByName(name2);
-		Class<? extends Mob> boss3 = MobFactory.mobClassByName(name3);
-
-		try{
-			fist1 = boss1.newInstance();
-			fist2 = boss2.newInstance();
-			fist3 = boss3.newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		fist1 = MobFactory.mobByName(name1);
+		fist2 = MobFactory.mobByName(name2);
+		fist3 = MobFactory.mobByName(name3);
 
 		do {
 			fist1.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
@@ -107,7 +98,10 @@ public class Yog extends Boss {
 
 		Dungeon.level.spawnMob(fist1);
 		Dungeon.level.spawnMob(fist2);
-		Dungeon.level.spawnMob(fist3);
+		if(Game.getDifficulty() > 2){
+			Dungeon.level.spawnMob(fist3);
+		}
+
 	}
 
 	@Override
@@ -149,10 +143,10 @@ public class Yog extends Boss {
 	@Override
 	public void die(Object cause) {
 
-		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
-			if (mob instanceof Boss && !(mob instanceof Yog)) {
-				mob.die(cause);
-			}
+		Mob mob = Dungeon.level.getRandomMob();
+		while(mob != null){
+			mob.remove();
+			mob = Dungeon.level.getRandomMob();
 		}
 
 		GameScene.bossSlain();
@@ -184,7 +178,7 @@ public class Yog extends Boss {
 			hp(ht(400));
 			defenseSkill = 25;
 
-			EXP = 0;
+			exp = 0;
 
 			setState(WANDERING);
 
@@ -254,7 +248,7 @@ public class Yog extends Boss {
 			hp(ht(300));
 			defenseSkill = 25;
 
-			EXP = 0;
+			exp = 0;
 
 			setState(WANDERING);
 
@@ -343,7 +337,7 @@ public class Yog extends Boss {
 			hp(ht(120));
 			defenseSkill = 20;
 
-			EXP = 0;
+			exp = 0;
 
 			setState(HUNTING);
 		}

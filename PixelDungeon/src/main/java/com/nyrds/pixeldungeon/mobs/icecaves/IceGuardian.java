@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
-import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
@@ -19,7 +18,7 @@ public class IceGuardian extends MultiKindMob {
 
 	public IceGuardian() {
 		hp(ht(70));
-		EXP = 5;
+		exp = 5;
 		defenseSkill = 30;
 
 		kind = 1;

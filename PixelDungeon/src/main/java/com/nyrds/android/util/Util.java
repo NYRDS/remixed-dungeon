@@ -8,10 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Base64;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
-
-import org.acra.ACRA;
-
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.InetAddress;
@@ -31,21 +27,6 @@ public class Util {
 
 	static public String toString(Exception e) {
 		return e.getMessage() + "\n" + Util.stackTraceToString(e) + "\n";
-	}
-
-	static public void storeEventInAcra(String eventKey, Exception e) {
-		EventCollector.logException(e,eventKey);
-		if (!ACRA.isInitialised()) {
-			return;
-		}
-		ACRA.getErrorReporter().putCustomData(eventKey, toString(e));
-	}
-
-	static public void storeEventInAcra(String eventKey, String str) {
-		if (!ACRA.isInitialised()) {
-			return;
-		}
-		ACRA.getErrorReporter().putCustomData(eventKey, str);
 	}
 
 	static public boolean isConnectedToInternet() {

@@ -19,15 +19,10 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.sprites.AcidicSprite;
 import com.watabou.utils.Random;
 
 public class Acidic extends Scorpio {
 
-	{		
-		spriteClass = AcidicSprite.class;
-	}
-	
 	@Override
 	public int defenseProc( Char enemy, int damage ) {
 		

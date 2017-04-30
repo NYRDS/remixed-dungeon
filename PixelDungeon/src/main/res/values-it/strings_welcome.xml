@@ -19,12 +19,12 @@ Differenze con l\'originale: \n
 - Elfi</string>
   <string name="Welcome_Text_19">
 remix.17:\n
-- Nuovo tipo di replica\n
+- Nuovo tipo di imitatore\n
 remix.18:\n
 - Elementali\n
 remix.19:\n
 - Ragni\n
-- Livelli di ragni\n
+- Livelli dei ragni\n
 - Regina ragno\n</string>
   <string name="Welcome_Text_20">
 remix.20:\n
@@ -97,4 +97,15 @@ remix.24:\n
 - Correzione di vari Bug\n
 
 - Traduzioni aggiornate\n</string>
+  <string name="Welcome_Text_24_1">
+remix.24.1:\n
+--Gioco--\n
+- Nuovo nemico: Statua armata\n
+- Nuovi rari: Ragno guardia (raro del Ragno Soldato) and Ragno d\'ambra (raro dello Psi-ragno)\n
+- I giocatori adesso possono cancellare i salvataggi \n
+- Aggiornata grafica per tana dei ragni \n
+--Oggetti della vanità--\n
+- Comprando nuovi oggetti, si equipaggiano automaticamente \n
+- Nuovo oggetto \"Set Pirata\"\n 
+- Aggiornata grafica per Orecchie di Neko e Orecchie di Coniglio \n</string>
 </resources>

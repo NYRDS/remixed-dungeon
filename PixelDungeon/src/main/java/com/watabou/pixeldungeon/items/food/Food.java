@@ -52,7 +52,7 @@ abstract public class Food extends Item {
 		actions.add( AC_EAT );
 		return actions;
 	}
-	
+
 	@Override
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_EAT )) {
@@ -90,9 +90,7 @@ abstract public class Food extends Item {
 			Badges.validateFoodEaten();
 			
 		} else {
-		
 			super.execute( hero, action );
-			
 		}
 	}
 	

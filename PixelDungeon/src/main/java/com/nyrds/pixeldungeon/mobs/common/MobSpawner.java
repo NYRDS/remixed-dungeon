@@ -11,7 +11,7 @@ public class MobSpawner {
 
 	@NonNull
 	static public Mob spawnRandomMob(Level level, int position) {
-		Mob mob = Bestiary.mutable();
+		Mob mob = Bestiary.mob();
 		mob.setPos(position);
 		mob.setState(mob.WANDERING);
 		level.spawnMob(mob);

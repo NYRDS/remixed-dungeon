@@ -371,14 +371,14 @@ public class Dungeon {
 	}
 
 	public static void saveAll() throws IOException {
-		float MBytesAvaliable = Game.getAvailableInternalMemorySize() / 1024f / 1024f;
+		float MBytesAvailable = Game.getAvailableInternalMemorySize() / 1024f / 1024f;
 
-		if (MBytesAvaliable < 2) {
+		if (MBytesAvailable < 2) {
 			Game.toast("Low memory condition");
 			GLog.toFile("Low memory!!!");
 		}
 
-		GLog.toFile("Saving: %5.2f MBytes available", MBytesAvaliable);
+		GLog.toFile("Saving: %5.2f MBytes available", MBytesAvailable);
 
 		if (hero.isAlive()) {
 
@@ -492,7 +492,7 @@ public class Dungeon {
 
 		InputStream input;
 
-		if (FileSystem.getFile(loadFrom).exists()) {
+		if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists() ) {
 			input = new FileInputStream(FileSystem.getFile(loadFrom));
 			Dungeon.level = null;
 		} else {

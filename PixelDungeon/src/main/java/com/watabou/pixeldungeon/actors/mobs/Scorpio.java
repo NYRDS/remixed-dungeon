@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -29,19 +30,17 @@ import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.ScorpioSprite;
 import com.watabou.utils.Random;
 
-public class Scorpio extends Mob {
+public class Scorpio extends Mob implements IZapper {
 	
 	public Scorpio() {
-		spriteClass = ScorpioSprite.class;
-		
+
 		hp(ht(95));
 		defenseSkill = 24;
 		viewDistance = Light.DISTANCE;
 		
-		EXP = 14;
+		exp = 14;
 		maxLvl = 25;
 
 		lootChance = 0.0f;
@@ -53,8 +52,6 @@ public class Scorpio extends Mob {
 			loot = new MysteryMeat();
 			lootChance = 1;
 		}
-
-		lootChance = 0.125f;
 		
 		RESISTANCES.add( Leech.class );
 		RESISTANCES.add( Poison.class );
@@ -79,16 +76,18 @@ public class Scorpio extends Mob {
 	protected boolean canAttack( Char enemy ) {
 		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
-	
+
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
-		if (Random.Int( 2 ) == 0) {
-			Buff.prolong( enemy, Cripple.class, Cripple.DURATION );
+	public boolean zap(@NonNull Char enemy) {
+		if(super.zap(enemy)) {
+			if (Random.Int( 2 ) == 0) {
+				Buff.prolong( enemy, Cripple.class, Cripple.DURATION );
+			}
+			return true;
 		}
-		
-		return damage;
+		return false;
 	}
-	
+
 	@Override
 	protected boolean getCloser( int target ) {
 		if (getState() == HUNTING) {

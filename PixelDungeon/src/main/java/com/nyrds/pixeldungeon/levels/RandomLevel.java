@@ -64,7 +64,7 @@ public class RandomLevel extends RegularLevel {
 
 			initSizeDependentStuff();
 
-			feeling = DungeonGenerator.getCurrentLevelFeeling(levelId);
+			feeling = DungeonGenerator.getLevelFeeling(levelId);
 
 			if (mLevelDesc.has("items")) {
 				JSONArray itemsDesc = mLevelDesc.getJSONArray("items");
@@ -107,7 +107,7 @@ public class RandomLevel extends RegularLevel {
 					mobsSpawned++;
 
 					String kind = mobDesc.getString("kind");
-					Mob mob = MobFactory.mobClassByName(kind).newInstance();
+					Mob mob = MobFactory.mobByName(kind);
 
 					mob.fromJson(mobDesc);
 					setMobSpawnPos(mob);

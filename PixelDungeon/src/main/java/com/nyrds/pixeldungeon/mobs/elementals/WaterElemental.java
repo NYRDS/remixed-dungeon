@@ -32,7 +32,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 
 		hp(ht(depth * 5 + 1));
 		defenseSkill = depth * 2 + 1;
-		EXP = depth + 1;
+		exp = depth + 1;
 		maxLvl = depth + 2;
 		
 		IMMUNITIES.add( Frost.class );
@@ -51,7 +51,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	
 	@Override
 	public int dr() {
-		return EXP / 3;
+		return exp / 3;
 	}
 	
 	@Override
@@ -76,7 +76,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	public boolean act() {
 		if (Dungeon.level.water[getPos()] && hp() < ht()) {
 			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-			hp(Math.min(hp() + EXP,ht()));
+			hp(Math.min(hp() + exp,ht()));
 		}
 		
 		return super.act();
@@ -86,7 +86,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	public void add( Buff buff ) {
 		if (buff instanceof Frost) {
 			if (hp() < ht()) {
-				hp(hp() + EXP);
+				hp(hp() + exp);
 				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 			}
 		} else {

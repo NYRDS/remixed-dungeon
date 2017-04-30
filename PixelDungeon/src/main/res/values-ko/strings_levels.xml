@@ -82,7 +82,7 @@
   <string name="LastLevel_TileHighGrass">화롯불버섯</string>
   <string name="LastLevel_TileStatue">기둥</string>
   <string name="LastLevel_TileDescWater">용암처럼 보인다. 하지만 차갑고, 아마 만져도 괜찮을 것이다.</string>
-  <string name="LastLevel_TileDescStatue">이 기둥은 진짜 휴머노이드 해골로 만들어져 있다. 대박.</string>
+  <string name="LastLevel_TileDescStatue">이 기둥은 진짜 사람 해골로 만들어져 있다. 대박.</string>
   <!--STRINGS OF LastShopLevel CLASS-->
   <string name="LastShopLevel_TileWater">수상한 색의 물</string>
   <string name="LastShopLevel_TileHighGrass">높이 피어있는 꽃들</string>

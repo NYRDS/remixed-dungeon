@@ -7,6 +7,8 @@ import com.google.android.gms.analytics.Tracker;
 import com.nyrds.android.util.Util;
 import com.watabou.pixeldungeon.Preferences;
 
+import org.acra.ACRA;
+
 import java.util.HashMap;
 
 /**
@@ -77,18 +79,17 @@ public class EventCollector {
 		}
 	}
 
-	static public void logFatalException(Exception e,String desc) {
-		if(!mDisabled) {
-			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(desc + " " +Util.toString(e)).setFatal(true).build());
-			e.printStackTrace();
-		}
-	}
-
 	static public void startTiming(String id) {
 
 	}
 
 	static public void stopTiming(String id) {
 
+	}
+
+	public static void collectSessionData(String key, String value) {
+		if(ACRA.isInitialised()) {
+			ACRA.getErrorReporter().putCustomData(key, value);
+		}
 	}
 }

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">Puoi indossare solo 2 anelli alla volta.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">Chiromante</string>
+    <string name="FortuneTellerNPC_Gender">Femminile</string>
+    <string name="FortuneTellerNPC_Name_Objective">Chiromante</string>
+    <string name="FortuneTellerNPC_Desc">Questa donna indossa un lungo e brillante abito colorato. Lei sembra sorprendentemente giovane per padroneggiare le arti arcane della chiromanzia. Avvicinandoti, puoi sentire il suo borbottare, mentre fissa la sfera di cristallo</string>
+
+    </resources>

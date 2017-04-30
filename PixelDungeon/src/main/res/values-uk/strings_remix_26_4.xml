@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">Ти можеш носити тільки 2 артефакти водночас.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">ворожка</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
+    <string name="FortuneTellerNPC_Name_Objective">ворожку</string>
+    <string name="FortuneTellerNPC_Desc">Ця жінка носить довгу, яскраву спідницю. Вона виглядає досить молодою, як для тої, що освоїла мистецтво передбачення. Підійшовши ближче, ти чуєш, що вона щось бурмоче, зазираючи у свою кришталеву кулю.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Limit_Reached">Прошу пробачення, але ви вичерпали свій поточний ліміт. Але після отримання нового рівня, ви ще зможете скористатися нашим сервісом!</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">Я в змозі відкрити таємниці, які приховують твої предмети.\nВартість розпізнавання одного предмету становить %d монет.</string>
+    <string name="WndFortuneTeller_No_Item">Треба бути більш обачливим, ти ж не бажаєш кидати гроші на вітер? Твій інвентар не містить неопізнаних предметів.</string>
+    <string name="WndFortuneTeller_Title">Ворожка.</string>
+
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Так</string>
+    <string name="Wnd_Button_No">Ні</string>
+    <string name="Wnd_Button_Back">Назад</string>
+    <string name="Wnd_Button_Cancel">Скасувати</string>
+    <string name="Wnd_Button_Close">Закрити</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">Бібліотека</string>
+    <string name="WndLibrary_Catalogue_Instruction">Будь ласка, оберіть щось одне із вказаної нижче категорії.</string>
+    <string name="WndLibrary_Mobs_Btn">Монстри</string>
+    <string name="WndLibrary_Items_Btn">Предмети</string>
+    <string name="WndLibrary_Codex_Btn">Історії</string>
+    <string name="WndLibrary_Levels_Btn">Підземелля</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">Ви переглянули %1$d разів з %2$d. Ви отримаєте ще один квиток на сеанс за кожен рівень героя.</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">Килим</string>
+    <string name="town_deco_blue_carpet_desc">Вишуканий синій килим, прикрашений пурпурним шовком.</string>
+
+    <string name="town_table_fortune_name">Стіл</string>
+    <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
+
+    <string name="ConcreteBlock_Name">Тяжкий бетонний блок</string>
+    <string name="ConcreteBlock_Description">На вигляд, аби посунути цей блок, необхідно %d балів сили</string>
+    <string name="Hero_AnotherTry">Ви загинули.\n Бажаєте спробувати ще раз?</string>
+
+</resources>

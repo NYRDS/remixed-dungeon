@@ -45,7 +45,7 @@ public class Statue extends Mob {
 	public Statue() {
 		spriteClass = StatueSprite.class;
 
-		EXP = 0;
+		exp = 0;
 		setState(PASSIVE);
 		
 		do {

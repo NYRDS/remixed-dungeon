@@ -17,7 +17,7 @@ public class ExplodingSkull extends UndeadMob {
 
         baseSpeed = 1.5f;
 
-        EXP = 1;
+        exp = 1;
         maxLvl = 1;
 
         loot = Gold.class;

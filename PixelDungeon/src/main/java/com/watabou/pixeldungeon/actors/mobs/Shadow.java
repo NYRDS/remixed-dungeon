@@ -11,9 +11,11 @@ public class Shadow extends Mob {
 		hp(ht(20));
 		defenseSkill = 15;
 		
-		EXP = 5;
+		exp = 5;
 		maxLvl = 10;
-		
+
+		walkingType = WalkingType.WALL;
+
 		setState(WANDERING);
 	}
 
@@ -25,11 +27,6 @@ public class Shadow extends Mob {
 	@Override
 	protected float attackDelay() {
 		return 0.5f;
-	}
-	
-	@Override
-	public boolean isWallWalker() {
-		return true;
 	}
 
 	@Override

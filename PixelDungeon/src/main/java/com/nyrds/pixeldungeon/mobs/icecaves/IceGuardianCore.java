@@ -22,7 +22,7 @@ public class IceGuardianCore extends Boss {
 
 	public IceGuardianCore() {
 		hp(ht(1000));
-		EXP = 5;
+		exp = 5;
 		defenseSkill = 10;
 
 		baseSpeed = 0.5f;

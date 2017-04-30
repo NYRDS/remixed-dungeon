@@ -7,6 +7,8 @@
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Le Crâne Noir est éveillé !</string>
     <string name="BlackSkull_Ressurrect">Le Crâne Noir à crée ce monstre pour vous servir !</string>
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Armure d\'os</string>
     <string name="NecromancerArmor_NotNecromancer">Seuls les Nécromanciens peuvent utiliser cette armure !</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
@@ -17,6 +19,8 @@
     <!-- STRINGS OF Necromancer CLASS -->
     <string name="HeroClass_Necromancer">nécromancien</string>
 
+    <string name="HeroSubClass_NameLich">Liche</string>
+
     <string-array name="HeroClass_NecromancerPerks">
         <item>Les Nécromanciens commencent avec 15 points de vie.</item>
         <item>Les nécromanciens ont une ressource unique, les âmes, pour invoquer des sorts. Chaque créature tuée fait gagner 1 âme.</item>
@@ -25,4 +29,7 @@
         <item>Les Potions de soins sont identifiées dès le début.</item>
     </string-array>
 
+    <string name="Necromancy_SoulsCountLabel">Âmes</string>
+
+    <string name="WndSadGhostNecro_No">Non, laisse le s\'expliquer</string>
     </resources>

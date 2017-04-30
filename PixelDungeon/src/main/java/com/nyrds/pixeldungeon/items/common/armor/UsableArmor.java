@@ -36,9 +36,7 @@ abstract public class UsableArmor extends Armor {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(special())) {
 			
-			if (hero.hp() < 3) {
-				GLog.w( TXT_LOW_HEALTH );
-			} else if (!isEquipped( hero )) {
+			if (!isEquipped( hero )) {
 				GLog.w( TXT_NOT_EQUIPPED );
 			} else {
 				setCurUser(hero);

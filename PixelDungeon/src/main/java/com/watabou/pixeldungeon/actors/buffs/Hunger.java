@@ -82,7 +82,7 @@ public class Hunger extends Buff implements Hero.Doom {
 					hero.interrupt();
 				}
 				
-				if(hero.getDifficulty() >= 3) {
+				if(hero.getDifficulty() >= 3 && !Dungeon.level.isSafe()) {
 					if(Random.Float() < 0.01) {
 						Buff.prolong(hero, Weakness.class, Weakness.duration(hero));
 					}
@@ -107,6 +107,10 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 				if(hero.getDifficulty() == 0) {
 					delta *= 0.8;
+				}
+
+				if(Dungeon.level.isSafe()){
+					delta = 0;
 				}
 				
 				float newLevel = level + delta;

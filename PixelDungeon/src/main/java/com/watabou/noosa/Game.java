@@ -62,6 +62,8 @@ import com.watabou.utils.SystemTime;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -106,6 +108,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	// Accumulated key events
 	private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
+	public Executor executor = Executors.newSingleThreadExecutor();
+
 	private Runnable doOnResume;
 
 	public Game(Class<? extends Scene> c) {
@@ -127,7 +131,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			} else {
 				ret = stat.getAvailableBytes();
 			}
-		    Util.storeEventInAcra("FreeInternalMemorySize", Long.toString(ret));
+			EventCollector.collectSessionData("FreeInternalMemorySize", Long.toString(ret));
 			return ret;
 		}
 
@@ -140,7 +144,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void useLocale(String lang) {
-		Util.storeEventInAcra("Locale", lang);
+		EventCollector.collectSessionData("Locale", lang);
 
 		Locale locale;
 		if (lang.equals("pt_BR")) {
@@ -207,7 +211,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		EventCollector.init(this);
 
 		if(!BuildConfig.DEBUG) {
-			EventCollector.logEvent("apk signature",Util.getSignature(this));
+			EventCollector.collectSessionData("apk signature",Util.getSignature(this));
 		}
 
 		FileSystem.setContext(context);
@@ -263,27 +267,38 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		paused = true;
 
 		if (scene != null) {
-			scene.pause();
+			executeInGlThread(new Runnable() {
+				@Override
+				public void run() {
+					scene.pause();
+				}
+			});
+
+			Music.INSTANCE.pause();
+			Sample.INSTANCE.pause();
 		}
 
 		view.onPause();
 		Script.reset();
-
-		Music.INSTANCE.pause();
-		Sample.INSTANCE.pause();
 	}
 
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
 
-		Music.INSTANCE.mute();
-		Sample.INSTANCE.reset();
+		executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				Music.INSTANCE.mute();
+				Sample.INSTANCE.reset();
 
-		if (scene != null) {
-			scene.destroy();
-			scene = null;
-		}
+				if (scene != null) {
+					scene.destroy();
+					scene = null;
+				}
+			}
+		});
+
 	}
 
 	@SuppressLint({"Recycle", "ClickableViewAccessibility"})
@@ -299,8 +314,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
 		if (keyCode == Keys.VOLUME_DOWN || keyCode == Keys.VOLUME_UP) {
-
-			return false;
+			return super.onKeyUp(keyCode, event);
 		}
 
 		synchronized (keysEvents) {
@@ -313,8 +327,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
 
 		if (keyCode == Keys.VOLUME_DOWN || keyCode == Keys.VOLUME_UP) {
-
-			return false;
+			return super.onKeyUp(keyCode, event);
 		}
 
 		synchronized (keysEvents) {
@@ -401,6 +414,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			requestedReset = false;
 			try {
 				switchScene(sceneClass.newInstance());
+				return;
 			} catch (Exception e) {
 				throw new TrackedRuntimeException(e);
 			}

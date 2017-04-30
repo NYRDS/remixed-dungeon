@@ -43,9 +43,8 @@ abstract public class Boss extends Mob {
 	@Override
 	protected void readCharData() {
 		super.readCharData();
-
 		try {
-			JSONObject desc = defMap.get(getClass());
+			JSONObject desc = getClassDef();
 
 			if (desc.has(BATTLE_MUSIC)) {
 				battleMusic = desc.getString(BATTLE_MUSIC);

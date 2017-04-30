@@ -50,7 +50,7 @@
 
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
-    <string name="NecromancerRobe_PetLimitReached">Кількість прислужників, яких ти можеш контролювати цим предметом, обмежена: %1$d!</string>
+    <string name="NecromancerRobe_PetLimitReached">Некромантія: досягнуто ліміт прислужників (Поточний максимум: %d)!</string>
     <string name="Necromancy_NotEnoughSouls">Не достатньо душ для виклику закляття \"%1$s\".</string>
 
     <string name="Necromancy_SoulsCountLabel">Душі</string>

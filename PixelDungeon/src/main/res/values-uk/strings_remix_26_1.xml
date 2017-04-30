@@ -3,7 +3,7 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">вартовий</string>
-    <string name="TownGuardNPC_Gender">masculine</string>
+    <string name="TownGuardNPC_Gender">чоловічий</string>
     <string name="TownGuardNPC_Name_Objective">вартового</string>
     <string name="TownGuardNPC_Desc">Типовий вартовий міста.</string>
     <string name="TownGuardNPC_Message1">Проходимо, не затримуємося.</string>
@@ -12,7 +12,7 @@
 
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">городянин</string>
-    <string name="TownsfolkNPC_Gender">masculine</string>
+    <string name="TownsfolkNPC_Gender">чоловічий</string>
     <string name="TownsfolkNPC_Name_Objective">городянина</string>
     <string name="TownsfolkNPC_Desc">Один з місцевих городян. Не дивлячись не те, що це звичайний простолюдин, одежа на ньому не з дешевих.</string>
     <string name="TownsfolkNPC_Message1">О! Ще один шукач пригод, чудово! Намагайся винести з підземелля якомога більше цінностей!</string>
@@ -22,7 +22,7 @@
 
 	<!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">міський священик</string>
-    <string name="HealerNPC_Gender">masculine</string>
+    <string name="HealerNPC_Gender">чоловічий</string>
     <string name="HealerNPC_Name_Objective">міського священика</string>
     <string name="HealerNPC_Desc">Цей старий схожий на того, хто міг би займатись виробництвом чарівних паличок.</string>
     <string name="HealerNPC_Message1">Безкоштовне лікування для кожного шукача пригод!</string>
@@ -31,7 +31,7 @@
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Name">співробітник</string>
-    <string name="ServiceManNPC_Gender">masculine</string>
+    <string name="ServiceManNPC_Gender">чоловічий</string>
     <string name="ServiceManNPC_Name_Objective">співробітника</string>
     <string name="ServiceManNPC_Desc">Рядовий робочий місцевих закладів.</string>
 

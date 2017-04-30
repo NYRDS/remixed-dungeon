@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ public class ScrollOfDomination extends Scroll {
 
 	@Override
 	protected void doRead() {
-		
+
+		SpellSprite.show( getCurUser(), SpellSprite.DOMINATION );
 		Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 		Invisibility.dispel(getCurUser());
 		

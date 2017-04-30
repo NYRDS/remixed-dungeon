@@ -60,7 +60,7 @@ public class Pushing extends Actor {
 			super( 0, 0, 0, 0 );
 
 			if(ch==null) {
-				EventCollector.logEvent("bug", "pushing null char");
+				EventCollector.logEvent(EventCollector.BUG, "pushing null char");
 				Actor.remove( Pushing.this );
 				return;
 			}

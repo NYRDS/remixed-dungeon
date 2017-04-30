@@ -54,7 +54,7 @@ public class King extends Boss {
 		spriteClass = KingSprite.class;
 		
 		hp(ht(300));
-		EXP = 40;
+		exp = 40;
 		defenseSkill = 25;
 		
 		Undead.count = 0;
@@ -211,7 +211,7 @@ public class King extends Boss {
 			hp(ht(28));
 			defenseSkill = 15;
 			
-			EXP = 0;
+			exp = 0;
 			
 			setState(WANDERING);
 		}

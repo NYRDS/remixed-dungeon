@@ -34,7 +34,7 @@ public class Golem extends Mob {
 		hp(ht(85));
 		defenseSkill = 18;
 		
-		EXP = 12;
+		exp = 12;
 		maxLvl = 22;
 		
 		RESISTANCES.add( ScrollOfPsionicBlast.class );

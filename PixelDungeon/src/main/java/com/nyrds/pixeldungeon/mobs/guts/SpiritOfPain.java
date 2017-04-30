@@ -13,7 +13,7 @@ public class SpiritOfPain extends Mob {
         hp(ht(80));
         defenseSkill = 30;
 
-        EXP = 0;
+        exp = 0;
 
         setState(HUNTING);
         flying = true;
@@ -32,6 +32,13 @@ public class SpiritOfPain extends Mob {
     @Override
     public int dr() {
         return 20;
+    }
+
+    @Override
+    protected boolean act(){
+        super.act();
+        this.damage(6, this);
+        return true;
     }
 
 }

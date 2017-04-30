@@ -43,7 +43,7 @@ public class Skeleton extends UndeadMob {
 		hp(ht(25));
 		defenseSkill = 9;
 		
-		EXP = 5;
+		exp = 5;
 		maxLvl = 10;
 
 		if (!Dungeon.hero.levelKind.equals("NecroBossLevel")) {

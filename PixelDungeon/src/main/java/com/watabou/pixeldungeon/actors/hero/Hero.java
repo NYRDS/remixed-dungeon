@@ -122,9 +122,11 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
+import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import com.watabou.utils.SystemTime;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -161,6 +163,8 @@ public class Hero extends Char {
 	private boolean    ready      = false;
 	public  HeroAction curAction  = null;
 	public  HeroAction lastAction = null;
+
+	private long lastActionTime;
 
 	private Char enemy;
 
@@ -517,7 +521,7 @@ public class Hero extends Char {
 
 		if (curAction == null) {
 			if (restoreHealth) {
-				if (isStarving() || hp() >= ht()) {
+				if (isStarving() || hp() >= ht() || Dungeon.level.isSafe()) {
 					restoreHealth = false;
 				} else {
 					spend(TIME_TO_REST);
@@ -538,6 +542,8 @@ public class Hero extends Char {
 			return false;
 
 		} else {
+
+			lastActionTime = SystemTime.now();
 
 			restoreHealth = false;
 
@@ -842,7 +848,7 @@ public class Hero extends Char {
 			clearActions();
 
 			Hunger hunger = buff(Hunger.class);
-			if (hunger != null && !hunger.isStarving()) {
+			if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
 				hunger.satisfy(-Hunger.STARVING / 10);
 			}
 
@@ -887,7 +893,7 @@ public class Hero extends Char {
 				clearActions();
 
 				Hunger hunger = buff(Hunger.class);
-				if (hunger != null && !hunger.isStarving()) {
+				if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
 					hunger.satisfy(-Hunger.STARVING / 10);
 				}
 
@@ -1478,8 +1484,7 @@ public class Hero extends Char {
 		lastAction = null;
 	}
 
-	public static void reallyDie(Object cause) {
-
+	private static void reallyReallyDie(Object cause) {
 		Dungeon.level.discover();
 
 		Bones.leave();
@@ -1495,6 +1500,22 @@ public class Hero extends Char {
 		}
 
 		Dungeon.gameOver();
+	}
+
+	public static void reallyDie(final Object cause) {
+
+		if(Dungeon.hero.getDifficulty() < 2 && WndSaveSlotSelect.haveSomethingToLoad()) {
+			GameScene.show(new WndSaveSlotSelect(false,Game.getVar(R.string.Hero_AnotherTry)) {
+				@Override
+				public void hide() {
+					super.hide();
+					reallyReallyDie(cause);
+				}
+			});
+			return;
+		}
+
+		reallyReallyDie(cause);
 	}
 
 	@Override
@@ -1813,5 +1834,16 @@ public class Hero extends Char {
 		}
 		sp = Scrambler.scramble(Scrambler.descramble(sp) - cost);
 		return true;
+	}
+
+	@Override
+	protected boolean timeout() {
+		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
+		if(SystemTime.now() - lastActionTime > PixelDungeon.getMoveTimeout()) {
+			lastActionTime = SystemTime.now();
+			spend(TIME_TO_REST);
+			return true;
+		}
+		return false;
 	}
 }

@@ -93,28 +93,28 @@
     <item>nel buio</item>
   </string-array>
   <!--STRINGS OF Journal CLASS-->
-  <string name="Journal_WellHealt">Bene della Salute</string>
-  <string name="Journal_WellAwareness">Bene della Consapevolezza</string>
-  <string name="Journal_WellTransmut">bene di Trasmutazione</string>
-  <string name="Journal_Alchemy">Pentola alchemica</string>
+  <string name="Journal_WellHealt">Pozzo della Salute</string>
+  <string name="Journal_WellAwareness">Pozzo della Consapevolezza</string>
+  <string name="Journal_WellTransmut">Pozzo di Trasmutazione</string>
+  <string name="Journal_Alchemy">Calderone alchemico</string>
   <string name="Journal_Garden">Giardino</string>
   <string name="Journal_Statue">Statua Animata</string>
   <string name="Journal_Ghost">fantasma triste</string>
-  <string name="Journal_Wandmaker">vecchio wandmaker</string>
+  <string name="Journal_Wandmaker">Vecchio fabbricante di bacchette</string>
   <string name="Journal_Troll">fabbro troll</string>
   <string name="Journal_Imp">diavoletto ambizioso</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
-  <string name="WndBlacksmith_Prompt">OK, un\'accordo è un\'accordo, dato quello che posso fare per te: posso riforgiare 2 item e trasformando in uno di qualità migliore.</string>
-  <string name="WndBlacksmith_Select">Seleziona un item da riforgiare</string>
+  <string name="WndBlacksmith_Prompt">OK, un\'accordo è un\'accordo, dato quello che posso fare per te: posso riforgiare 2 oggetti e trasformando in uno di qualità migliore.</string>
+  <string name="WndBlacksmith_Select">Seleziona un oggetto da riforgiare</string>
   <string name="WndBlacksmith_Reforge">Riforgia</string>
   <!--STRINGS OF WndCatalogus CLASS-->
   <string name="WndCatalogus_Potions">pozioni</string>
-  <string name="WndCatalogus_Scrolls">Pagina</string>
+  <string name="WndCatalogus_Scrolls">Pergamene</string>
   <string name="WndCatalogus_Title">Cataloghi</string>
   <!--STRINGS OF WndChallenges CLASS-->
   <string name="WndChallenges_Title">Sfide</string>
   <!--STRINGS OF WndChooseWay CLASS-->
-  <string name="WndChooseWay_Message">Quale modo seguirete?</string>
+  <string name="WndChooseWay_Message">Quale strada seguirete?</string>
   <string name="WndChooseWay_Cancel">Deciderò dopo</string>
   <!--STRINGS OF WndClass CLASS-->
   <string name="WndClass_Mastery">Padronanza</string>
@@ -164,14 +164,14 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="WndRanking_Error">Impossibile caricare ulteriori informazioni</string>
   <string name="WndRanking_Stats">stati</string>
   <string name="WndRanking_Items">Items</string>
-  <string name="WndRanking_Badges">Encomio</string>
+  <string name="WndRanking_Badges">emblemi</string>
   <string name="WndRanking_StaTitle">Livello %1$d %2$s</string>
   <string name="WndRanking_StaChallenges">Sfide</string>
   <string name="WndRanking_StaHealth">Salute</string>
   <string name="WndRanking_StaStr">Forza</string>
   <string name="WndRanking_StaDuration">Durata di gioco</string>
   <string name="WndRanking_StaDepth">Profondità massima</string>
-  <string name="WndRanking_StaEnemies">Mobs uccisi</string>
+  <string name="WndRanking_StaEnemies">Nemici uccisi</string>
   <string name="WndRanking_StaGold">Oro raccolto</string>
   <string name="WndRanking_StaFood">cibo mangiato</string>
   <string name="WndRanking_StaAlchemy">Pozioni cotte</string>

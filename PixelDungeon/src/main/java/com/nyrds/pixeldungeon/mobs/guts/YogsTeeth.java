@@ -26,7 +26,7 @@ public class YogsTeeth extends Boss {
         hp(ht(150));
         defenseSkill = 44;
 
-        EXP = 26;
+        exp = 26;
 
         RESISTANCES.add(ToxicGas.class);
 

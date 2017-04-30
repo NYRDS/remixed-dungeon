@@ -52,7 +52,11 @@ public class Mods {
 				ModDesc netDesc = entry.getValue();
 				netDesc.needUpdate = true;
 
-				if(netDesc.rpdVersion <= PixelDungeon.version()) {
+				int rpdVersion = PixelDungeon.version();
+				if(rpdVersion>10000) {
+					rpdVersion -= 10000;
+				}
+				if(netDesc.rpdVersion <= rpdVersion) {
 					modsList.put(name, netDesc);
 				}
 			}

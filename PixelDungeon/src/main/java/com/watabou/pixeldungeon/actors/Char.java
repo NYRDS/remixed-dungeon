@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.levels.Level;
@@ -89,9 +90,11 @@ public abstract class Char extends Actor {
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
 
 	protected String description = Game.getVar(R.string.Mob_Desc);
-	private   String defenceVerb = null;
+	protected String defenceVerb = null;
 
 	protected int gender = Utils.NEUTER;
+
+	protected WalkingType walkingType = WalkingType.NORMAL;
 
 	private int HT;
 	private int HP;
@@ -108,6 +111,14 @@ public abstract class Char extends Actor {
 	public int viewDistance = 8;
 
 	protected HashSet<Buff> buffs = new HashSet<>();
+
+	public boolean canSpawnAt(Level level,int cell) {
+		return walkingType.canSpawnAt(level, cell);
+	}
+
+	public int respawnCell(Level level) {
+		return walkingType.respawnCell(level);
+	}
 
 	@Override
 	protected boolean act() {
@@ -572,6 +583,10 @@ public abstract class Char extends Actor {
 		next();
 	}
 
+	public void onZapComplete() {
+		next();
+	}
+
 	public void onOperateComplete() {
 		next();
 	}
@@ -654,10 +669,6 @@ public abstract class Char extends Actor {
 
 	public void setPos(int pos) {
 		this.pos = pos;
-	}
-
-	public void onZapComplete() {
-		next();
 	}
 
 	public boolean isMovable() {

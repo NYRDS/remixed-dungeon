@@ -27,7 +27,7 @@ public class ZombieGnoll extends Mob {
         hp(ht(210));
         defenseSkill = 27;
 
-        EXP = 7;
+        exp = 7;
         maxLvl = 35;
 
         loot = Gold.class;

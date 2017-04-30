@@ -56,7 +56,7 @@ public class WndGame extends Window {
 			@Override
 			protected void onClick() {
 				hide();
-				GameScene.show( new WndSettings( true ) );
+				GameScene.show( new WndSettingsInGame() );
 			}
 		} );
 		
@@ -65,7 +65,7 @@ public class WndGame extends Window {
 			addButton( new RedButton( Game.getVar(R.string.WndGame_Save) ) {
 				@Override
 				protected void onClick() {
-					GameScene.show(new WndSaveSlotSelect(true));
+					GameScene.show(new WndSaveSlotSelect(true,Game.getVar(R.string.WndSaveSlotSelect_SelectSlot)));
 				}
 			} );
 		}
@@ -74,7 +74,7 @@ public class WndGame extends Window {
 			addButton( new RedButton( Game.getVar(R.string.WndGame_Load) ) {
 				@Override
 				protected void onClick() {
-					GameScene.show(new WndSaveSlotSelect(false));
+					GameScene.show(new WndSaveSlotSelect(false,Game.getVar(R.string.WndSaveSlotSelect_SelectSlot)));
 				}
 			} );
 		}

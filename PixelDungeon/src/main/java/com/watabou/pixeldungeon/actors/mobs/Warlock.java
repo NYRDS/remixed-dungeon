@@ -17,12 +17,15 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -33,14 +36,13 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.WarlockSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-public class Warlock extends Mob implements Callback {
+public class Warlock extends Mob implements Callback, IZapper {
 
 	private static final float TIME_TO_ZAP = 1f;
 
@@ -53,7 +55,7 @@ public class Warlock extends Mob implements Callback {
 		hp(ht(70));
 		defenseSkill = 18;
 
-		EXP = 11;
+		exp = 11;
 		maxLvl = 21;
 
 		loot = Generator.Category.POTION;
@@ -134,47 +136,21 @@ public class Warlock extends Mob implements Callback {
 		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 
-	protected boolean doAttack(Char enemy) {
-
-		if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
-			return super.doAttack(enemy);
-
-		} else {
-			boolean visible = Dungeon.level.fieldOfView[getPos()]
-					|| Dungeon.level.fieldOfView[enemy.getPos()];
-			if (visible) {
-				getSprite().zap(enemy.getPos());
-			}
-			zap();
-
-			return !visible;
-		}
-	}
-
-	private void zap() {
-		spend(TIME_TO_ZAP);
-
-		if (hit(this, getEnemy(), true)) {
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		if (super.zap(enemy)) {
 			if (getEnemy() == Dungeon.hero && Random.Int(2) == 0) {
 				Buff.prolong(getEnemy(), Weakness.class, Weakness.duration(getEnemy()));
 			}
-
-			int dmg = Random.Int(12, 18);
-			getEnemy().damage(dmg, this);
 
 			if (!getEnemy().isAlive() && getEnemy() == Dungeon.hero) {
 				Dungeon.fail(Utils.format(ResultDescriptions.MOB,
 						Utils.indefinite(getName()), Dungeon.depth));
 				GLog.n(TXT_SHADOWBOLT_KILLED, getName());
 			}
-		} else {
-			getEnemy().getSprite().showStatus(CharSprite.NEUTRAL,
-					getEnemy().defenseVerb());
+			return true;
 		}
-	}
-
-	public void onZapComplete() {
-		next();
+		return false;
 	}
 
 	@Override

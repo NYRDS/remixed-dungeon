@@ -7,20 +7,15 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.WarlockSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -37,7 +32,7 @@ public class KoboldIcemancer extends Mob implements Callback {
 		hp(ht(70));
 		defenseSkill = 18;
 
-		EXP = 11;
+		exp = 11;
 		maxLvl = 21;
 
 		loot = Generator.Category.POTION;
@@ -113,10 +108,6 @@ public class KoboldIcemancer extends Mob implements Callback {
 			getEnemy().getSprite().showStatus(CharSprite.NEUTRAL,
 					getEnemy().defenseVerb());
 		}
-	}
-
-	public void onZapComplete() {
-		next();
 	}
 
 	@Override

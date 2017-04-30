@@ -5,10 +5,6 @@ import android.support.annotation.NonNull;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.Fire;
-import com.watabou.pixeldungeon.actors.blobs.Freezing;
-import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -17,10 +13,6 @@ import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
-import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.levels.TerrainFlags;
-import com.watabou.pixeldungeon.plants.Earthroot;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class IceElemental extends Mob implements IDepthAdjustable {
@@ -35,7 +27,7 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 	public void adjustStats(int depth) {
 		hp(ht(depth * 10 + 1));
 		defenseSkill = depth * 2 + 1;
-		EXP = depth + 1;
+		exp = depth + 1;
 		maxLvl = depth + 2;
 		
 		IMMUNITIES.add(Roots.class);
@@ -55,7 +47,7 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public int dr() {
-		return EXP;
+		return exp;
 	}
 
 	@Override

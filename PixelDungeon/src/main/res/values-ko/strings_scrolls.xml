@@ -26,12 +26,12 @@
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
   <string name="InventoryScroll_Title">아이템을 선택하세요.</string>
-  <string name="InventoryScroll_Warning">정말 이 스크롤 사용을 취소 하시겠습니까? 어쨌든 스크롤은 소모됩니다.</string>
-  <string name="InventoryScroll_Yes">네, 괜찮습니다.</string>
+  <string name="InventoryScroll_Warning">정말 이 스크롤 사용을 취소 하시겠습니까? 그래도 스크롤은 소모됩니다.</string>
+  <string name="InventoryScroll_Yes">응, 괜찮아.</string>
   <string name="InventoryScroll_No">아니, 생각을 바꿨어</string>
   <!--STRINGS OF BlankScroll CLASS-->
   <string name="BlankScroll_Name">비어있는 스크롤</string>
-  <string name="BlankScroll_Info">그냥 비어있는 스크롤입니다. 아마 뭔가를 여기 다 쓸 수 있지 않을까요?</string>
+  <string name="BlankScroll_Info">그냥 비어있는 스크롤입니다. 아마 뭔가를 여기에 쓸 수 있지 않을까요?</string>
   <string name="BlankScroll_ReallyBlank">이 스크롤은 비어있습니다.</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
   <string name="ScrollOfChallenge_Name">도전의 스크롤</string>
@@ -39,7 +39,7 @@
   <string name="ScrollOfChallenge_Info1">스크롤에서 던전 전체에 적들을 부르는 포효 발생!!</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
   <string name="ScrollOfIdentify_Name">식별의 스크롤</string>
-  <string name="ScrollOfIdentify_Info">영구적으로 아이템의 비밀을 보여준다.</string>
+  <string name="ScrollOfIdentify_Info">영구적으로 아이템의 비밀을 보여줍니다.</string>
   <string name="ScrollOfIdentify_InvTitle">식별할 아이템을 선택하세요.</string>
   <string name="ScrollOfIdentify_Info1">이것은 %s 입니다.</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
@@ -50,7 +50,7 @@
   <string name="ScrollOfLullaby_Info3">스크롤에서 부드러운 멜로디가 흘러나와 몬스터들이 깊은 잠에 빠졌습니다!!</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
   <string name="ScrollOfMagicMapping_Name">마법 지도 스크롤</string>
-  <string name="ScrollOfMagicMapping_Info">이 스크롤을 읽는 순간 현재층의 모든 구역이 기억됩니다. 하지만 여전히 아이템과 생물의 위치는 알수 없습니다.</string>
+  <string name="ScrollOfMagicMapping_Info">이 스크롤을 읽는 순간 현재층의 모든 구역이 기억됩니다. 그래도 아이템과 몬스터의 위치는 알수 없습니다.</string>
   <string name="ScrollOfMagicMapping_Layout">이제 현재층의 모든 지형을 파악했습니다.</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
   <string name="ScrollOfMirrorImage_Name">환영의 스크롤</string>
@@ -82,14 +82,19 @@
   <string name="ScrollOfTerror_Info3">스크롤에서 붉은 빛의 화려한 플래시가 터져나오고, 몬스터가 달아납니다!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">업그레이드 스크롤</string>
-  <string name="ScrollOfUpgrade_Info">이 스크롤은 한가지 아이템을 업그레이드 합니다. 완드는 사용횟수의 증가; 무기는 데미지의 증가;갑옷은 막을수 있는 데미지의 량이 증가; 링의 효과를 강화;무기와 갑옷을 사용하는데 필요한 최소의 힘을 요구하게 되고 아이템의 저주는 해제 됩니다.</string>
+  <string name="ScrollOfUpgrade_Info">이 스크롤은 한가지 아이템을 업그레이드 합니다. 완드는 사용횟수가 증가하며, 무기는 데미지가 증가하고, 갑옷은 막을수 있는 데미지의 량이 증가 합니다. 그리고 링은 효과가 강화되고, 무기와 갑옷을 사용하는데 드는 힘의 요구량이 적어지며 아이템의 저주는 해제 됩니다.</string>
   <string name="ScrollOfUpgrade_InvTitle">업그레이드 할 아이템을 선택하세요.</string>
-  <string name="ScrollOfUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진것같다.</string>
+  <string name="ScrollOfUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진 것 같습니다.</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
   <string name="ScrollOfWeaponUpgrade_Name">무기업그레이드 스크롤</string>
   <string name="ScrollOfWeaponUpgrade_Info">이 스크롤은 근접무기를 업그레이드합니다. 이 스크롤은 강화 업그레이드 버전으로 인첸트를 파괴하지 않습니다.  랜덤으로 인첸트되지 않은 무기를 인첸트 시켜줍니다.</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">업그레이드할 무기를 고르세요</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진것같다.</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">지배의 스크롤</string>
+  <string name="ScrollOfDomination_Info">이 스크롤은 당신의 시야에 있는 한 생물의 의지를 굴복시킬 것입니다. 그 생물은 당신을 위해 싸울 것입니다.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">저주의 스크롤</string>
+  <string name="ScrollOfCurse_Info">이 스크롤은 특히 어리석은 도둑들을 혼내주기 위해 만들어졌습니다. 
+그래서 일반 모험가에겐 정말이지 쓸모없고 해로운 스크롤 이지만, 상인한테 팔면은 꽤 값을 잘 쳐줍니다. </string>
 </resources>

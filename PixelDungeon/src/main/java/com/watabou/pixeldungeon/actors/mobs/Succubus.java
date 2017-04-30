@@ -50,7 +50,7 @@ public class Succubus extends Mob {
 		defenseSkill = 25;
 		viewDistance = Light.DISTANCE;
 
-		EXP = 12;
+		exp = 12;
 		maxLvl = 25;
 
 		loot = new ScrollOfLullaby();

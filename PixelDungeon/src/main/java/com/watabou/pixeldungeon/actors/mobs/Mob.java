@@ -90,7 +90,7 @@ public abstract class Mob extends Char {
 
 	protected int defenseSkill = 0;
 
-	protected int EXP    = 1;
+	protected int exp    = 1;
 	protected int maxLvl = 30;
 
 	@NonNull
@@ -98,14 +98,14 @@ public abstract class Mob extends Char {
 
 	protected boolean enemySeen;
 
-	protected boolean alerted = false;
+	private boolean alerted = false;
 
-	protected static final float TIME_TO_WAKE_UP = 1f;
+	private static final float TIME_TO_WAKE_UP = 1f;
 
-	static protected Map<Class, JSONObject> defMap = new HashMap<>();
+	static private Map<String, JSONObject> defMap = new HashMap<>();
 
 	// Unreachable target
-	public static final Mob DUMMY = new Mob() {
+	protected static final Mob DUMMY = new Mob() {
 		{
 			setPos(-1);
 		}
@@ -216,7 +216,7 @@ public abstract class Mob extends Char {
 
 		try {
 			{
-				String descName = "spritesDesc/" + getClass().getSimpleName() + ".json";
+				String descName = "spritesDesc/" + getMobClassName() + ".json";
 				if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
 					return new MobSpriteDef(descName, getKind());
 				}
@@ -232,7 +232,7 @@ public abstract class Mob extends Char {
 				return new MobSpriteDef((String) spriteClass, getKind());
 			}
 
-			throw new TrackedRuntimeException(String.format("sprite creation failed - mob class %s", getClass().getCanonicalName()));
+			throw new TrackedRuntimeException(String.format("sprite creation failed - mob class %s", getMobClassName()));
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
@@ -391,17 +391,7 @@ public abstract class Mob extends Char {
 		if (rooted) {
 			return false;
 		}
-		int step;
-
-		if (isAbsoluteWalker()) {
-			step = Dungeon.findPath(this, getPos(), target, Dungeon.level.allCells, null);
-		} else {
-			if (!isWallWalker()) {
-				step = Dungeon.findPath(this, getPos(), target, Dungeon.level.passable, null);
-			} else {
-				step = Dungeon.findPath(this, getPos(), target, Dungeon.level.solid, null);
-			}
-		}
+		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(Dungeon.level), null);
 
 		if (step != -1) {
 			move(step);
@@ -412,17 +402,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected boolean getFurther(int target) {
-		int step;
-
-		if (isAbsoluteWalker()) {
-			step = Dungeon.flee(this, getPos(), target, Dungeon.level.allCells, null);
-		} else {
-			if (!isWallWalker()) {
-				step = Dungeon.flee(this, getPos(), target, Dungeon.level.passable, null);
-			} else {
-				step = Dungeon.flee(this, getPos(), target, Dungeon.level.solid, null);
-			}
-		}
+		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(Dungeon.level), null);
 
 		if (step != -1) {
 			move(step);
@@ -447,17 +427,15 @@ public abstract class Mob extends Char {
 
 	protected boolean doAttack(Char enemy) {
 
-		boolean visible = Dungeon.visible[getPos()];
-
-		if (visible) {
+		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
 			getSprite().attack(enemy.getPos());
 		} else {
-			attack(enemy);
+			getSprite().zap( enemy.getPos() );
 		}
 
 		spend(PixelDungeon.realtime() ? attackDelay() * 10 : attackDelay());
 
-		return !visible;
+		return false;
 	}
 
 	@Override
@@ -465,6 +443,13 @@ public abstract class Mob extends Char {
 		attack(getEnemy());
 		super.onAttackComplete();
 	}
+
+	@Override
+	public void onZapComplete() {
+		zap(getEnemy());
+		super.onZapComplete();
+	}
+
 
 	@Override
 	public int defenseSkill(Char enemy) {
@@ -539,10 +524,10 @@ public abstract class Mob extends Char {
 				}
 
 				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
-					if (hero.lvl() <= maxLvl && EXP > 0) {
+					if (hero.lvl() <= maxLvl && exp > 0) {
 						hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
-								EXP);
-						hero.earnExp(EXP);
+								exp);
+						hero.earnExp(exp);
 					}
 				}
 			}
@@ -697,6 +682,14 @@ public abstract class Mob extends Char {
 		this.state = state;
 	}
 
+	protected JSONObject getClassDef(){
+		if (!defMap.containsKey(getMobClassName())) {
+			defMap.put(getMobClassName(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getMobClassName() + ".json"));
+		}
+
+		return defMap.get(getMobClassName());
+	}
+
 	public interface AiState {
 		boolean act(boolean enemyInFOV, boolean justAlerted);
 
@@ -800,15 +793,11 @@ public abstract class Mob extends Char {
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			enemySeen = enemyInFOV;
 			if (enemyInFOV && canAttack(getEnemy())) {
-
 				return doAttack(getEnemy());
-
 			} else {
-
 				if (enemyInFOV) {
 					target = getEnemy().getPos();
 				}
-
 				int oldPos = getPos();
 				if (target != -1 && getCloser(target)) {
 
@@ -890,14 +879,6 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	public boolean isWallWalker() {
-		return false;
-	}
-
-	public boolean isAbsoluteWalker() {
-		return false;
-	}
-
 	public boolean isPet() {
 		return fraction == Fraction.HEROES;
 	}
@@ -938,13 +919,8 @@ public abstract class Mob extends Char {
 		this.enemy = enemy;
 	}
 
-	@Override
-	protected void readCharData() {
-		super.readCharData();
-
-		if (!defMap.containsKey(getClass())) {
-			defMap.put(getClass(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getClass().getSimpleName() + ".json"));
-		}
+	protected String getMobClassName() {
+		return getClass().getSimpleName();
 	}
 
 	@Override
@@ -956,4 +932,21 @@ public abstract class Mob extends Char {
 		}
 		return super.attack(enemy);
 	}
+
+	public boolean zap(@NonNull Char enemy) {
+		if (enemy == DUMMY) {
+			EventCollector.logEvent(EventCollector.BUG, "zapping dummy enemy");
+			return false;
+		}
+
+		if (hit(this, enemy, true)) {
+			enemy.damage(damageRoll(), this);
+			return true;
+		} else {
+			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
+			return false;
+		}
+
+	}
+
 }

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.IceElemental;
@@ -15,6 +16,7 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
 import com.nyrds.pixeldungeon.mobs.icecaves.ColdSpirit;
+import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.icecaves.Kobold;
 import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
@@ -27,6 +29,8 @@ import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
 import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
+import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
+import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
@@ -41,7 +45,6 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
@@ -54,7 +57,6 @@ import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.Gnoll;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
-import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
@@ -87,12 +89,16 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.utils.Random;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class MobFactory {
+	static private Map<String, Class<? extends Mob>> mMobsList;
 
-	static private HashMap <String, Class<? extends Mob>> mMobsList;
-	
+	static {
+		initMobsMap();
+	}
+
 	private static void registerMobClass(Class<? extends Mob> mobClass) {
 		mMobsList.put(mobClass.getSimpleName(), mobClass);
 	}
@@ -200,30 +206,32 @@ public class MobFactory {
 		registerMobClass(TownsfolkSilentNPC.class);
 		registerMobClass(BellaNPC.class);
 		registerMobClass(LibrarianNPC.class);
-
+		registerMobClass(FortuneTellerNPC.class);
+		registerMobClass(CagedKobold.class);
 	}
 	
-	public static Class<? extends Mob> mobClassRandom() {
-		if(mMobsList==null) {
-			initMobsMap();
+	public static Mob mobRandom() {
+		try {
+			return Random.element(mMobsList.values()).newInstance();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
 		}
-		
-		return Random.element(mMobsList.values());
-	}
-	
-	public static Class<? extends Mob> mobClassByName(String selectedMobClass) {
-		
-		if(mMobsList==null) {
-			initMobsMap();
-		}
-		
-		Class<? extends Mob> mobClass = mMobsList.get(selectedMobClass);
-		if(mobClass != null) {
-			return mobClass;
-		} else {
-			Game.toast("Unknown mob: [%s], spawning Rat instead",selectedMobClass);
-			return Rat.class;
-		}
+		return null;
 	}
 
+	public static Mob mobByName(String selectedMobClass) {
+
+		try {
+			Class<? extends Mob> mobClass = mMobsList.get(selectedMobClass);
+			if (mobClass != null) {
+				return mobClass.newInstance();
+			} else {
+				return new CustomMob(selectedMobClass);
+			}
+		} catch (Exception e) {
+			throw new TrackedRuntimeException(e);
+		}
+	}
 }

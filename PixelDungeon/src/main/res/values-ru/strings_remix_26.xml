@@ -64,7 +64,7 @@
     <!-- STRINGS OF IceCavesLevel CLASS -->
     <string name="IceCaves_TileDescDeco">Этот гнолл замёрз заживо. Судя по всему он там очень давно.</string>
     <string name="IceCaves_TileHighGrass">Замёрзшая высокая трава</string>
-    <string name="IceCaves_TileGrass">Замёрзшая трава.</string>
+    <string name="IceCaves_TileGrass">Замёрзшая трава</string>
     <string name="IceCaves_TileDescHighGrass">Густая, промёрзшая растительность закрывает обзор.</string>
     <string name="IceCaves_TileStatue">Замёрзший гнолл</string>
     <string name="IceCaves_TileDescStatue">Очередная безобразная статуя... Ой, погодите, это же замороженный гнолл.</string>

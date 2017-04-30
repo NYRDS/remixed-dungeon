@@ -51,7 +51,7 @@ public class Eye extends Mob {
 		defenseSkill = 20;
 		viewDistance = Light.DISTANCE;
 		
-		EXP = 13;
+		exp = 13;
 		maxLvl = 25;
 		
 		flying = true;

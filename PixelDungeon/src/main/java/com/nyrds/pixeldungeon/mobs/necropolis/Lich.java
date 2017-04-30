@@ -48,7 +48,7 @@ public class Lich extends Boss {
 
     public Lich() {
         hp(ht(HEALTH));
-        EXP = 25;
+        exp = 25;
         defenseSkill = 23;
 
         IMMUNITIES.add( Paralysis.class );
@@ -61,7 +61,6 @@ public class Lich extends Boss {
     }
 
     private int timeToSkull = SKULL_DELAY;
-    private int timeToJump = JUMP_DELAY;
 
     @Override
     protected boolean getCloser( int target ) {
@@ -80,12 +79,6 @@ public class Lich extends Boss {
 
     @Override
     protected boolean doAttack( Char enemy ) {
-        timeToJump--;
-        if (timeToJump <= 0 && Dungeon.level.adjacent( getPos(), enemy.getPos() )) {
-            jump();
-            return true;
-        }
-
         if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
             return super.doAttack(enemy);
         } else {
@@ -102,19 +95,23 @@ public class Lich extends Boss {
     }
 
     private void jump() {
-        timeToJump = JUMP_DELAY;
         int newPos;
-        do {
-            newPos = Random.Int( Dungeon.level.getLength() );
-        } while (
-                !Dungeon.level.fieldOfView[newPos] ||
-                        !Dungeon.level.passable[newPos] ||
-                        Dungeon.level.adjacent( newPos, getEnemy().getPos() ) ||
-                        Actor.findChar( newPos ) != null);
 
-        getSprite().move( getPos(), newPos );
-        move( newPos );
-        spend( 1 / speed() );
+        for (int i = 0; i < 15; i++){
+
+            newPos = Random.Int( Dungeon.level.getLength() );
+
+            if(Dungeon.level.fieldOfView[newPos] &&
+                    Dungeon.level.passable[newPos] &&
+                    !Dungeon.level.adjacent( newPos, getEnemy().getPos()) &&
+                    Actor.findChar( newPos ) == null)
+            {
+                getSprite().move( getPos(), newPos );
+                move( newPos );
+                spend( 1 / speed() );
+                break;
+            }
+        }
     }
 
     //Runic skulls handling

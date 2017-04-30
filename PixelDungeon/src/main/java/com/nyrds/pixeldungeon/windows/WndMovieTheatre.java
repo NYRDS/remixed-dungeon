@@ -5,8 +5,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
-import com.nyrds.pixeldungeon.support.RewardVideoAds;
+import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
@@ -38,7 +37,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 	private ServiceManNPC serviceMan;
 
-	public WndMovieTheatre(final ServiceManNPC npc) {
+	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit) {
 		
 		super();
 
@@ -50,7 +49,10 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( Utils.format(TXT_INSTRUCTION, GOLD_REWARD), GuiProperties.regularFontSize() );
+		String instruction = Utils.format(TXT_INSTRUCTION, GOLD_REWARD) + "\n\n" + Utils.format(Game.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit);
+
+		Text message = PixelScene.createMultiline( instruction, GuiProperties.regularFontSize() );
+
 		message.maxWidth(WIDTH);
 		message.measure();
 		message.y = titlebar.bottom() + GAP;
@@ -83,13 +85,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 		Game.paused = true;
 		Ads.removeEasyModeBanner();
-		if(AppodealRewardVideo.isReady()) {
-			AppodealRewardVideo.showCinemaRewardVideo(this);
-			return;
-		}
-		if(RewardVideoAds.isReady()) {
-			RewardVideoAds.showCinemaRewardVideo(this);
-		}
+		RewardVideo.showCinemaRewardVideo(this);
 	}
 
 	@Override

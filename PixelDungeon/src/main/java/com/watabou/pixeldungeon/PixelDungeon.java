@@ -26,13 +26,11 @@ import android.view.View;
 
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
 import com.nyrds.pixeldungeon.support.Iap;
-import com.nyrds.pixeldungeon.support.RewardVideoAds;
+import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -52,6 +50,8 @@ import java.util.Locale;
 import javax.microedition.khronos.opengles.GL10;
 
 public class PixelDungeon extends Game {
+
+	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
 
 	public PixelDungeon() {
 		super(TitleScene.class);
@@ -82,8 +82,7 @@ public class PixelDungeon extends Game {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		AppodealRewardVideo.initCinemaRewardVideo();
-		RewardVideoAds.initCinemaRewardVideo();
+		RewardVideo.init();
 
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
@@ -100,7 +99,7 @@ public class PixelDungeon extends Game {
 		
 		ModdingMode.setClassicTextRenderingMode(PixelDungeon.classicFont());
 
-		EventCollector.logEvent("font", String.valueOf(PixelDungeon.classicFont()));
+		EventCollector.collectSessionData("font", String.valueOf(PixelDungeon.classicFont()));
 
 		setSelectedLanguage();
 		ItemSpritesDescription.readItemsDesc();
@@ -336,8 +335,8 @@ public class PixelDungeon extends Game {
 
 		PixelDungeon.instance().setSelectedLanguage();
 
-		Util.storeEventInAcra("RPD_active_mod", ModdingMode.activeMod());
-		Util.storeEventInAcra("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
+		EventCollector.collectSessionData("RPD_active_mod", ModdingMode.activeMod());
+		EventCollector.collectSessionData("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
 		ModsButton.modUpdated();
 	}
 	
@@ -345,16 +344,11 @@ public class PixelDungeon extends Game {
 		return Preferences.INSTANCE.getString(Preferences.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
 	}
 
-	private static Boolean realtimeCached = null;
 	public static boolean realtime() {
-		if(realtimeCached == null) {
-			realtimeCached = Preferences.INSTANCE.getBoolean(Preferences.KEY_REALTIME, false);
-		}
-		return realtimeCached;
+			return Preferences.INSTANCE.getBoolean(Preferences.KEY_REALTIME, false);
 	}
 
 	public static void realtime(boolean value) {
-		realtimeCached = value;
 		Preferences.INSTANCE.put(Preferences.KEY_REALTIME, value);
 	}
 
@@ -429,4 +423,22 @@ public class PixelDungeon extends Game {
 			}
 		}
 	}
+
+	//--- Move timeouts
+	public static int moveTimeout() {
+		return Preferences.INSTANCE.getInt(Preferences.KEY_MOVE_TIMEOUT, Integer.MAX_VALUE);
+	}
+
+	public static void moveTimeout(int value) {
+		Preferences.INSTANCE.put(Preferences.KEY_MOVE_TIMEOUT,value);
+	}
+
+	public static int limitTimeoutIndex(int value) {
+		return 	Math.max(Math.min(value, MOVE_TIMEOUTS.length-1),0);
+	}
+
+	public static double getMoveTimeout() {
+		return MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
+	}
+
 }

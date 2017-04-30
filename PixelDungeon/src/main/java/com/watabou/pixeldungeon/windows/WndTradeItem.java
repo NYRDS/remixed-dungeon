@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.EquipableItem;
+import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -260,5 +261,12 @@ public class WndTradeItem extends Window {
 		if (!item.doPickUp( hero )) {
 			Dungeon.level.drop( item, heap.pos ).sprite.drop();
 		}
+
+		Item newItem;
+		do {
+			newItem = Generator.random();
+		} while (newItem instanceof Gold);
+
+		placeItemInShop(newItem);
 	}
 }

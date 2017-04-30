@@ -24,12 +24,10 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.items.common.RatArmor;
-import com.nyrds.pixeldungeon.items.common.RatHide;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -47,14 +45,16 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
+import com.watabou.pixeldungeon.items.food.PseudoPasty;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
+import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
-import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -128,15 +128,16 @@ public enum HeroClass {
 
 	private static void initDebug(Hero hero) {
 		for (int i = 0; i < 100; i++) {
-			hero.collect(new ScrollOfMagicMapping());
-			hero.collect(new PotionOfFrost());
-			hero.collect(new PotionOfLiquidFlame());
+			hero.collect(new ScrollOfMagicMapping().identify());
+			hero.collect(new PotionOfFrost().identify());
+			hero.collect(new PotionOfLiquidFlame().identify());
+			hero.collect(new ScrollOfDomination().identify());
 		}
 
 		Item ring = new RingOfAccuracy().identify();
 		ring.cursed = true;
 		hero.collect(ring);
-		hero.collect(new RingOfAccuracy().identify());
+		hero.collect(new HeartOfDarkness().identify());
 		hero.collect(new CandleOfMindVision());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
@@ -144,16 +145,16 @@ public enum HeroClass {
 		hero.collect(new BattleAxe());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
-		hero.collect(new RatHide());
+		hero.collect(new RingOfHaggler());
 
-		hero.collect(new RatArmor());
+		hero.collect(new PseudoPasty());
 
 		hero.ht(1000);
 		hero.hp(1000);
 		hero.attackSkill = 1000;
 
 		Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
-		hero.defenseSkill = 1000;
+		hero.defenseSkill = 10;
 	}
 
 	private static void initForClass(Hero hero, String className) {
@@ -228,6 +229,9 @@ public enum HeroClass {
 	private static void initCommon(Hero hero) {
 		QuickSlot.cleanStorage();
 		initForClass(hero, "common");
+		if(hero.getDifficulty() < 3 ) {
+			initForClass(hero, "non_expert");
+		}
 	}
 
 	public Badges.Badge masteryBadge() {

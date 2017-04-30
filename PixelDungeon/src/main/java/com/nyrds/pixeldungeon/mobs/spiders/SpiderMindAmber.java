@@ -37,7 +37,7 @@ public class SpiderMindAmber extends MultiKindMob {
 		defenseSkill = 5;
 		baseSpeed = 0.9f;
 		
-		EXP = 9;
+		exp = 9;
 		maxLvl = 10;
 
 		kind = 1;

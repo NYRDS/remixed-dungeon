@@ -22,10 +22,10 @@ public class ModdingMode {
 
 	private static final Set<String> trustedMods = new HashSet<>();
 	static {
-		trustedMods.add("PD Mini");
-		trustedMods.add("Maze");
-		trustedMods.add("The Fallen");
-		trustedMods.add("D.U.N.G.E.O.N");
+		//trustedMods.add("PD Mini");
+		//trustedMods.add("Maze");
+		//trustedMods.add("The Fallen");
+		//trustedMods.add("D.U.N.G.E.O.N");
 	}
 
 	@NonNull
@@ -51,7 +51,7 @@ public class ModdingMode {
 			return PixelDungeon.version();
 		}
 
-		JSONObject version = JsonHelper.readJsonFromAsset("version.json");
+		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
 		return version.optInt("version");
 
 	}

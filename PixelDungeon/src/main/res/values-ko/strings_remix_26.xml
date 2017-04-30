@@ -1,3 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">산타모자</string>
+    <string name="IceCaves_TileDescStatue">또 끔찍한 석상이군... 오 잠깐만 저거 얼어버린 놀이었군.</string>
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">아이스볼트 지팡이</string>
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">얼음 수호자를 죽였다.</string>
+
+</resources>

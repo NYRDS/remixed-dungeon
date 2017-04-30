@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.utils.Callback;
 
 public class JarOfSouls extends UndeadMob {
 
@@ -16,7 +15,7 @@ public class JarOfSouls extends UndeadMob {
 
 		pacified = true;
 		
-		EXP    = 0;
+		exp = 0;
 		maxLvl = 13;
 
 		postpone(20);

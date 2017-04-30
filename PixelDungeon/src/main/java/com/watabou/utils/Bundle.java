@@ -20,7 +20,6 @@ package com.watabou.utils;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.json.JSONArray;
@@ -117,12 +116,11 @@ public class Bundle {
 				object.restoreFromBundle( this );
 				return object;
 			} else {
-				Util.storeEventInAcra("Bundable.get unknown class ",clName);
+				EventCollector.logEvent("Bundable.get unknown class ",clName);
 				return null;
 			}
 		} catch (Exception e) {
 			EventCollector.logException(e,clName);
-			Util.storeEventInAcra("Bundable.get",e);
 			return null;
 		}	
 	}
@@ -167,7 +165,7 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			Util.storeEventInAcra("Bundable.getBooleanArray",e);
+			EventCollector.logException(e,"Bundable.getBooleanArray");
 			return null;
 		}
 	}
@@ -186,7 +184,7 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			Util.storeEventInAcra("Bundable.getStringArray", e);
+			EventCollector.logException(e,"Bundable.getStringArray");
 			return null;
 		}
 	}
@@ -209,7 +207,7 @@ public class Bundle {
 				}
 			}
 		} catch (JSONException e) {
-			Util.storeEventInAcra("Bundable.getCollection", e);
+			EventCollector.logException(e,"Bundable.getCollection");
 			return new Vector<>();
 		}
 		
@@ -336,12 +334,12 @@ public class Bundle {
 		try {
 			BufferedReader reader = new BufferedReader( new InputStreamReader( stream ) );
 			String line = reader.readLine();
-			Util.storeEventInAcra("Bundle read line",line);
+			EventCollector.collectSessionData("Bundle read line",line);
 			JSONObject json = (JSONObject)new JSONTokener(line).nextValue();
 			reader.close();
 			return new Bundle( json );
 		} catch (Exception e) {
-			Util.storeEventInAcra("Bundle Exception",e);
+			EventCollector.logException(e,"Bundle Exception");
 			return null;
 		}
 	}

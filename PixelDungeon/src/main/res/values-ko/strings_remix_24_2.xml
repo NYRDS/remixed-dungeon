@@ -1,3 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF GoldenSword -->
+    <string name="GoldenSword_Name">금 칼</string>
+    <string name="RatKing_Name_Objective">쥐 대왕</string>
     </resources>

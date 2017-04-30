@@ -1,3 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">üzgünüm,film hazır değil. birkaç dakika sonra tekrar deneyiniz</string>
+    <string name="ServiceManNPC_Limit">Özür Dilerim Ama Her Maceracı Toplamda %d film izleyebilir.</string>
+    <string name="WndMovieTheatre_Sorry">Birşeyler yanlış gitti, video izleme ödülünü sana teslim edemiyoruz.</string>
+    <string name="WndMovieTheatre_Ok">başarıyla bir \'\'ödül\'\' videosu izledin</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Gnoll Kostümü</string>
     </resources>

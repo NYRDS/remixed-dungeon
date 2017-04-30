@@ -20,7 +20,7 @@ public class Worm extends Mob {
         hp(ht(195));
         defenseSkill = 15;
 
-        EXP = 18;
+        exp = 18;
 
         loot = Gold.class;
         lootChance = 0.4f;

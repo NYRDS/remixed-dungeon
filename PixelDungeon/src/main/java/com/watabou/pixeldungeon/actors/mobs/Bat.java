@@ -32,7 +32,7 @@ public class Bat extends Mob {
 		defenseSkill = 15;
 		baseSpeed = 2f;
 		
-		EXP = 7;
+		exp = 7;
 		maxLvl = 15;
 		
 		flying = true;

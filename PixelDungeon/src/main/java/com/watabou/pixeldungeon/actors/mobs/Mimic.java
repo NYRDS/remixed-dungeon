@@ -95,7 +95,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		this.level = level;
 
 		hp(ht((3 + level) * 4));
-		EXP = 2 + 2 * (level - 1) / 5;
+		exp = 2 + 2 * (level - 1) / 5;
 		defenseSkill = attackSkill(null) / 2;
 
 		enemySeen = true;

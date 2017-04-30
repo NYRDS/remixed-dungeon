@@ -5,7 +5,17 @@
     <string name="easyModeAdUnitId"></string>
     <string name="easyModeSmallScreenAdUnitId"></string>
     <string name="cinemaRewardAdUnitId"></string>
+    <string name="appodealRewardAdUnitId"></string>
     <string name="iapKey"></string>
-	<string name="appodealRewardAdUnitId"></string>
     <string name="ownSignature"></string>
+    
+    <!-- firebase stuff-->
+    <string name="default_web_client_id" translatable="false"></string>
+    <string name="firebase_database_url" translatable="false"></string>
+    <string name="gcm_defaultSenderId" translatable="false"></string>
+    <string name="google_api_key" translatable="false"></string>
+    <string name="google_app_id" translatable="false"></string>
+    <string name="google_crash_reporting_api_key" translatable="false"></string>
+    <string name="google_storage_bucket" translatable="false"></string>
+
 </resources>

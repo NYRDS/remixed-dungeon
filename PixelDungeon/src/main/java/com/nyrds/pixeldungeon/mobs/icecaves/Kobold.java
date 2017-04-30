@@ -1,17 +1,9 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
-import com.watabou.pixeldungeon.sprites.BruteSprite;
-import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Kobold extends Mob {
@@ -21,7 +13,7 @@ public class Kobold extends Mob {
 		hp(ht(60));
 		defenseSkill = 18;
 		
-		EXP = 10;
+		exp = 10;
 		maxLvl = 20;
 		
 		loot = new PotionOfFrost();

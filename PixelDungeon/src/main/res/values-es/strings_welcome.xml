@@ -101,17 +101,17 @@ remix.21.4:\n
         </string>
   <string name="Welcome_Text_25">
         remix.25:\n
-        - Nuevo tipo de mazmorra: Necrópolis, para entrar en la necrópolis, debe encontrar el Nigromante en el nivel 7, para obtener la llave esqueleto\n
-        - Nuevos objetos: Armadura aracnida y Craneo negro\n
-        - La Espada dorada es más fuerte ahora y requiere más fuerza\n
-        - El agua en la capa de las arañas se mira correctamente\n
-        - Ahora las pilas de huesos no contienen artefactos y objetos de misiones\n
-        - La mecanica de las mascotas ha cambiado. Varios enemigos son inmunes  al los efectos de control mental\n
-        - El tiempo de quemado de las Llamas liquidas ha sido reducido, tambien sera menor sobre el agua\n
-        - El icono de Control mental, que aparece sobre los enemigos \“controlados\”, ha sido cambiado por un corazón\n
-        - Actulización visual, \“nuevo tipo de letra\”\n
+        - Nuevo tipo de mazmorra: Necrópolis, para entrar en la necrópolis, debe encontrar al Nigromante en el nivel 7, para obtener la llave esqueleto\n
+        - Nuevos objetos: Armadura arácnida y Cráneo negro\n
+        - La espada dorada es más fuerta ahora y requiere más fuerza\n
+        - El agua en la capa de las arañas ahora se mira correctamente\n
+        - Ahora las pilas de huesos no contienen artefacto y objetos de misiones\n
+        - La mecánica de las mascotas ha cambiado. Varios enemigos son inmunes a los efectos de control mental\n
+        - El tiempo de quemado de las Llamas liquidas ha sido reducido, también será menor sobre el agua\n
+        - El icono de Control mental, que aparece sobre los enemigos «controlados» ha sido cambiado por un corazón\n
+        - Actualización visual «nuevo tipo de letra»\n
         - Traducciones actualizadas\n
-        - Se removio las opciones: \“modo inmersivo\” y \“escalar GUI\”\n
+        - Se removió las opciones: «modo inmersivo» y «escalar GUI»\n
         </string>
   <string name="Welcome_Text_25_1">
         remix.25.1:\n
@@ -231,5 +231,11 @@ remix.26.1:\n
         - Armas tiene el atributo «encantamiento»\n
         - Armaduras tiene el atributo «glifo»\n
         - Para que el juego detecte tu mod, ahora es necesario que contenga un archivo version.json\n
+        </string>
+  <string name="Welcome_Text_26_3">
+        remix.26.3\n
+        - El pueblo se hizo más grande\n
+        - La tienda del pueblo vende más objetos\n
+        - Nueva misión en el pueblo\n
         </string>
 </resources>

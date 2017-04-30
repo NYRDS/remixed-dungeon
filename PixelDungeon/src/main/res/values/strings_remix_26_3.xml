@@ -40,7 +40,6 @@
     <string name="LibrarianNPC_Desc">A very shy person, wearing an awkward looking sweater and a very thick glasses.</string>
     <string name="LibrarianNPC_Message_Not_Ready">I... I am sorry, l-library isn\'t open... yet.</string>
 
-
     <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
     <string name="TownsfolkSilentNPC_Name">townsfolk</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
