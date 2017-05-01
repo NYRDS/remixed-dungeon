@@ -22,7 +22,7 @@ import java.util.Map;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class ItemLibrary {
+public class Library {
 	public static final String ITEM = "item";
 	public static final String MOB = "mob";
 

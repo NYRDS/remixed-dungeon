@@ -23,7 +23,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.items.common.ItemLibrary;
+import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -536,7 +536,7 @@ public abstract class Mob extends Char {
 
 		super.die(cause);
 
-		ItemLibrary.identify(ItemLibrary.MOB,getMobClassName());
+		Library.identify(Library.MOB,getMobClassName());
 
 		if (Dungeon.hero.lvl() <= maxLvl + 2) {
 			dropLoot();

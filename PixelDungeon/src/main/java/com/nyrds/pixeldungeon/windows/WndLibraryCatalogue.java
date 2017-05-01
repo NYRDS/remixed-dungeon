@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.common.ItemLibrary;
+import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -54,17 +54,17 @@ public class WndLibraryCatalogue extends Window {
 
 		Component content = new Component();
 
-		String category = ItemLibrary.ITEM;
+		String category = Library.ITEM;
 		switch (catalogueNumber)
 		{
 			case 0:
-				category = ItemLibrary.ITEM;
+				category = Library.ITEM;
 			break;
 			case 1:
-				category = ItemLibrary.MOB;
+				category = Library.MOB;
 			break;
 		}
-		Map<String,Integer> knownMap = ItemLibrary.getKnowledgeMap(category);
+		Map<String,Integer> knownMap = Library.getKnowledgeMap(category);
 
 		//List
 		for (final String entry : knownMap.keySet()) {
@@ -92,7 +92,7 @@ public class WndLibraryCatalogue extends Window {
 				protected void onClick() {
 					super.onClick();
 
-					GameScene.show(ItemLibrary.infoWnd(finalCategory,entry));
+					GameScene.show(Library.infoWnd(finalCategory,entry));
 					//GameScene.show(new WndLibraryEntry(entry));
 				}
 			};

@@ -22,7 +22,7 @@ import android.support.annotation.Nullable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.items.common.ItemLibrary;
+import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -314,7 +314,7 @@ public class Item implements Bundlable, Presser {
 		levelKnown = true;
 		cursedKnown = true;
 
-		ItemLibrary.identify(ItemLibrary.ITEM,ItemFactory.itemNameByClass(getClass()));
+		Library.identify(Library.ITEM,ItemFactory.itemNameByClass(getClass()));
 
 		return this;
 	}
