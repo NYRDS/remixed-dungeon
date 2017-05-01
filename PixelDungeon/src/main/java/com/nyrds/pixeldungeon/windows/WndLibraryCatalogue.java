@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.ItemLibrary;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -14,7 +13,6 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.windows.WndInfoItem;
 
 import java.util.Map;
 
@@ -56,7 +54,17 @@ public class WndLibraryCatalogue extends Window {
 
 		Component content = new Component();
 
-		Map<String,Integer> knownMap = ItemLibrary.getKnowledgeMap();
+		String category = ItemLibrary.ITEM;
+		switch (catalogueNumber)
+		{
+			case 0:
+				category = ItemLibrary.ITEM;
+			break;
+			case 1:
+				category = ItemLibrary.MOB;
+			break;
+		}
+		Map<String,Integer> knownMap = ItemLibrary.getKnowledgeMap(category);
 
 		//List
 		for (final String entry : knownMap.keySet()) {
@@ -78,12 +86,13 @@ public class WndLibraryCatalogue extends Window {
 			final Window currentWindow = this;
 
 			//Button
+			final String finalCategory = category;
 			TextButton rb = new RedButton(buttonText) {
 				@Override
 				protected void onClick() {
 					super.onClick();
 
-					GameScene.show(new WndInfoItem(ItemFactory.itemByName(entry)));
+					GameScene.show(ItemLibrary.infoWnd(finalCategory,entry));
 					//GameScene.show(new WndLibraryEntry(entry));
 				}
 			};

@@ -314,7 +314,7 @@ public class Item implements Bundlable, Presser {
 		levelKnown = true;
 		cursedKnown = true;
 
-		ItemLibrary.identify(ItemFactory.itemNameByClass(getClass()));
+		ItemLibrary.identify(ItemLibrary.ITEM,ItemFactory.itemNameByClass(getClass()));
 
 		return this;
 	}
