@@ -62,6 +62,7 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
+import com.watabou.utils.SystemTime;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -88,7 +89,7 @@ public class Dungeon {
 	public static int depth;
 	private static int scrambledGold;
 	private static boolean loading = false;
-
+	private static long lastSaveTimestamp;
 
 	public static HashSet<Integer> chapters;
 
@@ -370,7 +371,17 @@ public class Dungeon {
 		output.close();
 	}
 
-	public static void saveAll() throws IOException {
+	public synchronized static void saveAll() throws IOException {
+
+		if(SystemTime.now() - lastSaveTimestamp < 250) {
+			GLog.i("Saving too fast...");
+
+		}
+
+		GLog.i("save time: %d", SystemTime.now());
+		lastSaveTimestamp = SystemTime.now();
+
+
 		float MBytesAvailable = Game.getAvailableInternalMemorySize() / 1024f / 1024f;
 
 		if (MBytesAvailable < 2) {
