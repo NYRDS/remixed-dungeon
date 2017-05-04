@@ -87,7 +87,7 @@ public class InterlevelScene extends PixelScene {
 
 	volatile private String error = null;
 
-	class LevelChanger implements InterstitialPoint,Runnable {
+	class LevelChanger implements InterstitialPoint, Runnable {
 
 		private volatile boolean ready;
 

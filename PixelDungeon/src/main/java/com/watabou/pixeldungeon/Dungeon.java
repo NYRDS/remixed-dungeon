@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -72,6 +73,7 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.concurrent.FutureTask;
 
 public class Dungeon {
 
@@ -86,7 +88,7 @@ public class Dungeon {
 	public static Hero  hero;
 	public static Level level;
 
-	public static int depth;
+	public static  int depth;
 	private static int scrambledGold;
 	private static boolean loading = false;
 	private static long lastSaveTimestamp;
@@ -217,9 +219,9 @@ public class Dungeon {
 	}
 
 	public static boolean shopOnLevel() {
-		if (hero.levelKind.equals("NecroLevel") || hero.levelKind.equals("IceCavesLevel")){
+		if (hero.levelKind.equals("NecroLevel") || hero.levelKind.equals("IceCavesLevel")) {
 			return false;
-		} else{
+		} else {
 			return depth == 6 || depth == 11 || depth == 16 || depth == 27;
 		}
 
@@ -371,17 +373,7 @@ public class Dungeon {
 		output.close();
 	}
 
-	public synchronized static void saveAll() throws IOException {
-
-		if(SystemTime.now() - lastSaveTimestamp < 250) {
-			GLog.i("Saving too fast...");
-
-		}
-
-		GLog.i("save time: %d", SystemTime.now());
-		lastSaveTimestamp = SystemTime.now();
-
-
+	private static void saveAllImpl() {
 		float MBytesAvailable = Game.getAvailableInternalMemorySize() / 1024f / 1024f;
 
 		if (MBytesAvailable < 2) {
@@ -394,8 +386,12 @@ public class Dungeon {
 		if (hero.isAlive()) {
 
 			Actor.fixTime();
-			saveGame(SaveUtils.gameFile(hero.heroClass));
-			saveLevel();
+			try {
+				saveGame(SaveUtils.gameFile(hero.heroClass));
+				saveLevel();
+			} catch (IOException e) {
+				throw new TrackedRuntimeException("cannot write save", e);
+			}
 
 			GamesInProgress.set(hero.heroClass, depth, hero.lvl());
 
@@ -405,6 +401,33 @@ public class Dungeon {
 			Hero.reallyDie(WndResurrect.causeOfDeath);
 		}
 	}
+
+	public synchronized static void saveAll() {
+
+		if (SystemTime.now() - lastSaveTimestamp < 250) {
+			GLog.i("Saving too fast...");
+			return;
+		}
+
+		GLog.i("save time: %d", SystemTime.now());
+		lastSaveTimestamp = SystemTime.now();
+
+		FutureTask<Void> saveTask = new FutureTask<>(new Runnable() {
+			@Override
+			public void run() {
+				saveAllImpl();
+			}
+		}, null);
+
+		Game.instance().executor.execute(saveTask);
+
+		try {
+			saveTask.get();
+		} catch (Exception e) {
+			throw new TrackedRuntimeException(e);
+		}
+	}
+
 
 	public static void loadGame() throws IOException {
 		GLog.toFile("load Game");
@@ -503,7 +526,7 @@ public class Dungeon {
 
 		InputStream input;
 
-		if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists() ) {
+		if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists()) {
 			input = new FileInputStream(FileSystem.getFile(loadFrom));
 			Dungeon.level = null;
 		} else {
@@ -516,13 +539,13 @@ public class Dungeon {
 		input.close();
 
 		if (bundle == null) {
-			EventCollector.logEvent("Dungeon.loadLevel","read fail");
+			EventCollector.logEvent("Dungeon.loadLevel", "read fail");
 			return newLevel(next);
 		}
 
 		Level level = Level.fromBundle(bundle, "level");
 
-		if(level == null) {
+		if (level == null) {
 			level = newLevel(next);
 		}
 

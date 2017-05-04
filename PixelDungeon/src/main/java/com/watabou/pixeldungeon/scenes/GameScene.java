@@ -80,7 +80,6 @@ import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.utils.Random;
 
-import java.io.IOException;
 import java.util.HashSet;
 
 public class GameScene extends PixelScene {
@@ -370,12 +369,8 @@ public class GameScene extends PixelScene {
 
 	@Override
 	public synchronized void pause() {
-		try {
-			Dungeon.saveAll();
-			Badges.saveGlobal();
-		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
-		}
+		Dungeon.saveAll();
+		Badges.saveGlobal();
 	}
 
 	@Override

@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -27,7 +26,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.AmuletScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Amulet extends Item {
@@ -77,13 +75,9 @@ public class Amulet extends Item {
 	}
 	
 	private void showAmuletScene( boolean showText ) {
-		try {
-			Dungeon.saveAll();
-			AmuletScene.noText = !showText;
-			Game.switchScene( AmuletScene.class );
-		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
-		}
+		Dungeon.saveAll();
+		AmuletScene.noText = !showText;
+		Game.switchScene( AmuletScene.class );
 	}
 	
 	@Override
