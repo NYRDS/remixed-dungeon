@@ -52,18 +52,17 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			return;
 		}
 
-		assetName = "sound/"+assetName;
+		String assetFilename = "sound/"+assetName;
 
 		String filename = null;
 		AssetFileDescriptor afd = null;
 
-
-		File file = ModdingMode.getFile(assetName);
+		File file = ModdingMode.getFile(assetFilename);
 		if (file!=null && file.exists()) {
 			filename = file.getAbsolutePath();
 		} else {
 			try {
-				afd = Game.instance().getAssets().openFd(assetName);
+				afd = Game.instance().getAssets().openFd(assetFilename);
 			} catch (IOException e) {
 				EventCollector.logEvent("sound not found",assetName);
 			}
