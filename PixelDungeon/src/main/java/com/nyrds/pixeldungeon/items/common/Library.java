@@ -57,8 +57,6 @@ public class Library {
 			);
 		} catch (Exception e) {
 			mKnowledgeLevel = new HashMap<>();
-			mKnowledgeLevel.put(ITEM, new HashMap<String, Integer>());
-			mKnowledgeLevel.put(MOB, new HashMap<String, Integer>());
 		}
 	}
 
@@ -66,24 +64,28 @@ public class Library {
 		int knowledgeLevel = getKnowledgeLevel(category, clazz);
 
 		if (knowledgeLevel < 10 ) {
-			if(!mKnowledgeLevel.containsKey(category)) {
-				mKnowledgeLevel.put(category, new HashMap<String, Integer>());
-			}
-			mKnowledgeLevel.get(category).put(clazz, knowledgeLevel + 1);
+			getCategory(category).put(clazz, knowledgeLevel + 1);
 			saveLibrary();
 		}
 	}
 
 	private static int getKnowledgeLevel(String category, String clazz) {
 		int knowledgeLevel = 0;
-		if (mKnowledgeLevel.containsKey(category) && mKnowledgeLevel.get(category).containsKey(clazz)) {
-			knowledgeLevel = mKnowledgeLevel.get(category).get(clazz);
+		if (getCategory(category).containsKey(clazz)) {
+			knowledgeLevel = getCategory(category).get(clazz);
 		}
 		return knowledgeLevel;
 	}
 
+	private static Map<String, Integer> getCategory(String category) {
+		if(!mKnowledgeLevel.containsKey(category)) {
+			mKnowledgeLevel.put(category, new HashMap<String, Integer>());
+		}
+		return mKnowledgeLevel.get(category);
+	}
+
 	public static Map<String, Integer> getKnowledgeMap(String category) {
-		return Collections.unmodifiableMap(mKnowledgeLevel.get(category));
+		return Collections.unmodifiableMap(getCategory(category));
 	}
 
 	public static Window infoWnd(String category, String clazz) {
