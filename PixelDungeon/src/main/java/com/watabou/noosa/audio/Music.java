@@ -28,6 +28,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
+import java.io.IOException;
 
 public enum Music implements MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener {
@@ -47,26 +48,43 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			return;
 		}
 
-		stop();
-
-		lastPlayed = assetName;
-		lastLooping = looping;
-
 		if (!enabled) {
 			return;
 		}
 
 		assetName = "sound/"+assetName;
-		
+
+		String filename = null;
+		AssetFileDescriptor afd = null;
+
+
+		File file = ModdingMode.getFile(assetName);
+		if (file!=null && file.exists()) {
+			filename = file.getAbsolutePath();
+		} else {
+			try {
+				afd = Game.instance().getAssets().openFd(assetName);
+			} catch (IOException e) {
+				EventCollector.logEvent("sound not found",assetName);
+			}
+		}
+
+		if(filename == null && afd == null) {
+			return;
+		}
+
+		stop();
+
+		lastPlayed = assetName;
+		lastLooping = looping;
+
 		try {
 			player = new MediaPlayer();
 			player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-			
-			File file = ModdingMode.getFile(assetName);
-			if (file!=null && file.exists()) {
-				player.setDataSource(file.getAbsolutePath());
+
+			if (filename != null) {
+				player.setDataSource(filename);
 			} else {
-				AssetFileDescriptor afd = Game.instance().getAssets().openFd(assetName);
 				player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),
 						afd.getLength());
 				afd.close();
@@ -76,8 +94,9 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			player.setOnErrorListener(this);
 			player.setLooping(looping);
 			player.prepareAsync();
+		}
 
-		} catch (Exception e) {
+		catch (Exception e) {
 			if(player!=null) {
 				player.release();
 				player = null;
