@@ -65,7 +65,7 @@ public class Library {
 	static public void identify(String category, String clazz) {
 		int knowledgeLevel = getKnowledgeLevel(category, clazz);
 
-		if (knowledgeLevel < 10) {
+		if (knowledgeLevel < 10 && mKnowledgeLevel.containsKey(category)) {
 			mKnowledgeLevel.get(category).put(clazz, knowledgeLevel + 1);
 			saveLibrary();
 		}
