@@ -73,7 +73,7 @@ public class Library {
 
 	private static int getKnowledgeLevel(String category, String clazz) {
 		int knowledgeLevel = 0;
-		if (mKnowledgeLevel.get(category).containsKey(clazz)) {
+		if (mKnowledgeLevel.containsKey(category) && mKnowledgeLevel.get(category).containsKey(clazz)) {
 			knowledgeLevel = mKnowledgeLevel.get(category).get(clazz);
 		}
 		return knowledgeLevel;
