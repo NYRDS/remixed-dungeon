@@ -110,6 +110,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
+import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -129,6 +130,7 @@ import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
 
@@ -1196,6 +1198,12 @@ public class Hero extends Char {
 			if (Actor.findChar(target) == null) {
 				if (Dungeon.level.pit[target] && !flying && !Chasm.jumpConfirmed) {
 					Chasm.heroJump(this);
+					interrupt();
+					return false;
+				}
+
+				if(TrapHelper.CellIsTrap(target) && !flying && !TrapHelper.stepConfirmed){
+					TrapHelper.heroTriggerTrap(this);
 					interrupt();
 					return false;
 				}

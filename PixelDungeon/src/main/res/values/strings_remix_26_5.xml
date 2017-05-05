@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="WndSettings_moveTimeout">Move timeout: %s</string>
+
+    <string name="TrapWnd_Title">Trap</string>
+    <string name="TrapWnd_Step">Do you really want to step on this trap? You can probably die.</string>
+
 </resources>
