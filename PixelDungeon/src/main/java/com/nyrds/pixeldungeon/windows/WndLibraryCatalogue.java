@@ -46,7 +46,7 @@ public class WndLibraryCatalogue extends Window {
 		listTitle.maxWidth(WIDTH - GAP * 2);
 		listTitle.measure();
 		listTitle.x = (WIDTH - listTitle.width()) / 2;
-		listTitle.y = GAP * 2;
+		listTitle.y = 0;
 
 		add(listTitle);
 
@@ -106,7 +106,7 @@ public class WndLibraryCatalogue extends Window {
 		int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
 		int h = Math.min(HEIGHT - GAP, yPos);
 
-		resize( WIDTH,  h);
+		resize( WIDTH,  h + BTN_WIDTH);
 
 		content.setSize(WIDTH, yPos);
 		ScrollPane list = new ScrollPane(content);
@@ -115,7 +115,7 @@ public class WndLibraryCatalogue extends Window {
 		add(list);
 
 		float topGap = listTitle.height() + GAP;
-		float BottomGap =  listTitle.bottom() + GAP * 5;
+		float BottomGap =  listTitle.bottom() - BTN_HEIGHT/2;
 
 		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
 
@@ -129,7 +129,7 @@ public class WndLibraryCatalogue extends Window {
 			}
 		};
 
-		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT + GAP);
+		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT);
 
 		add(back);
 
