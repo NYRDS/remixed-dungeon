@@ -37,18 +37,18 @@
   <string name="CommonArrow_Gender">女性的</string>
   <!--STRINGS OF FireArrow CLASS-->
   <string name="FireArrow_Name">火箭</string>
-  <string name="FireArrow_Info">这只箭看起来和普通的没什么区别，除了散发着温暖红光的箭头。</string>
+  <string name="FireArrow_Info">這支箭除了有個洋溢著和暖紅光的箭頭外，看起來和普通的沒大差別。</string>
   <string name="FireArrow_Gender">女性的</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">毒箭</string>
-  <string name="PoisonArrow_Info">箭頭上的致命毒药反射出光芒。</string>
+  <string name="PoisonArrow_Info">箭頭上的致命毒藥反射出光芒。</string>
   <string name="PoisonArrow_Gender">女性的</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
   <string name="ParalysisArrow_Name">麻痺箭</string>
   <string name="ParalysisArrow_Info">這支箭已被塗上麻痺毒藥。</string>
   <string name="ParalysisArrow_Gender">女性的</string>
   <!--STRINGS OF FrostArrow CLASS-->
-  <string name="FrostArrow_Name">霜凍箭</string>
-  <string name="FrostArrow_Info">你能感受到從箭頭湧出的霜凍氣息。</string>
+  <string name="FrostArrow_Name">寒霜箭</string>
+  <string name="FrostArrow_Info">您能感受到從箭頭湧出的霜寒氣息。</string>
   <string name="FrostArrow_Gender">女性的</string>
 </resources>

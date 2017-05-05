@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="Welcome_Ok">棒极了！</string>
-  <string name="Welcome_Title">欢迎！</string>
+  <string name="Welcome_Ok">棒極了！</string>
+  <string name="Welcome_Title">歡迎！</string>
   <string name="Welcome_Text">
-混合的像素地牢是基于Watabou所制作的开源像素地牢的一个MOD。
+重鑄版像素地牢改編自Watabou製作，具公開像素地牢的一个MOD。
 
 这个MOD是为了给玩家们提供新的内容和体验而制作的。
 

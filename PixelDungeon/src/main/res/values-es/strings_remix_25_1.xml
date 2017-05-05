@@ -70,7 +70,7 @@
     <string name="Necromancy_Title">Nigromancia</string>
 
     <!-- STRINGS OF WndSadGhostNecro CLASS -->
-    <string name="WndSadGhostNecro_Text">\"Este espíritu parece estar luchando contra su maldición y quiere algo de mí. SI uso mis poderes nigrománticos podre engañarlo de que hice lo que me pidió. Por lo que no necesitaré perder mi tiempo. ¿Debería de hacerlo?</string>
+    <string name="WndSadGhostNecro_Text">\"Este espíritu parece estar luchando contra su maldición y quiere algo de mí. Si uso mis poderes nigrománticos podre engañarlo de que hice lo que me pidió. Por lo que no necesitaré perder mi tiempo. ¿Debería de hacerlo?</string>
     <string name="WndSadGhostNecro_Yes">Si, dominar al fantasma.</string>
     <string name="WndSadGhostNecro_No">No, escucharlo.</string>
     <string name="WndSadGhostNecro_Persuaded">¡El fantasma triste ha sido dominado!</string>
