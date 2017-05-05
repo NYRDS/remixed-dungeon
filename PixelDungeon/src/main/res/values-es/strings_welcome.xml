@@ -238,4 +238,34 @@ remix.26.1:\n
         - La tienda del pueblo vende más objetos\n
         - Nueva misión en el pueblo\n
         </string>
+  <string name="Welcome_Text_26_4">
+        remix.26.4\n
+         - Juego:\n
+         - Cuando Yog muere, cada secuaz en el nivel también muere, incluyendo los controlados por el héroe\n
+         - Yog crea 2 mini jefes en dificultad fácil y media (en dificultad «experto» siempre invocará 3 mini jefes)\n
+         - El nivel de las varitas usadas por los Cristales (incluidos los generados por el Maestro de las Sombras) no es igual al nivel de la mazmorra donde se generó, sino la mitad\n
+         - La mecánica detrás de la habilidad del Maestro de las Sombras «invocar espectro» ha sido ligeramente optimizada\n
+         - El héroe comienza con 100 monedas de oro, en lugar de 200\n
+         - El equipo de inicio ahora incluye una ración de comida\n
+         - Ahora, si el héroe muere mientras juega en un nivel de dificultad que permite guardar el juego y si existe un juego guardado, en lugar del menú habitual, aparecerá una ventada para «Cargar un juego guardado»\n
+         - Nuevo PNJ en el Pueblo: una adivina, ella identificara tus objetos, por monedas de oro\n
+         - Mientras la/el héroe este en el pueblo no acumulará hambre\n
+         - La regeneración de la salud y la función «descansar hasta sanar» están desactivadas dentro del pueblo\n
+         - La cantidad de funciones del cine, está ahora basada en el nivel del héroe, cada nuevo nivel incrementara el límite en 1\n
+         - La túnica del nigromante ya no comprueba la vida del héroe al realizar convocaciones\n
+         - El mensaje «¡Solo puedes usar 2 anillos a la vez!» ahora usa la palabra «artefactos»\n
+         - El nigromante ahora tiene una aviso más claro cuando alcanza el limite de invocaciones\n
+         - La armadura de rata ha sido ligeramente mejorada\n
+         - Mejorar una varita restaura sus cargas\n
+         - Corregido el error que arruinaba el diseño de la ciudad al cargar archivos de guardado antiguos\n
+         - Corregido el error que mezclaba textos de diferentes mods\n\n
+         - Mods:\n
+         - Kobold enjaulado añadido a MobFactory, ahora disponible en niveles personalizados\n
+         - Los niveles de mazmorra etiquetados como «isSafe» el héroe ya no acumulará hambre, no regenerará la salud ni podrá «descansar hasta sanar»\n
+         - Los mods aprobados pueden cambiar el archivo de imagen «banners»\n
+         - Las Varitas tienen los atributos «charges» (cargas) y «maxCharges» (cargas máximas)\n
+         - Nuevo atributo para niveles de la mazmorra: «isStatic». Los niveles etiquetados con esto, se volverán a generar cada vez que el héroe entre en ellos. (el nivel permanece «estático», sin importar que hizo el héroe anteriormente)\n
+         - Añadido un paso adicional en el inicio del héroe: «non_expert». Los objetos incluidos en este paso, se añadirán al inventario en todos los niveles de dificultad, excepto para la dificultad «experto»\n
+         - El héroe ya no sufre las alteraciones del hambre, que obtendría en la dificultad «experto», mientras este en un nivel con «isSafe»\n
+        </string>
 </resources>

@@ -2,24 +2,19 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">您的 %s 紧箍着您，令您感到疼痛！</string>
-  <string name="Armor_Identify">现在，您熟悉得能够鉴定 %1$s 。它是 %2$s 。</string>
+  <string name="Armor_EquipCursed">您的 %s 緊箍着您，令您感到疼痛！</string>
+  <string name="Armor_Identify">現在，您熟悉得能夠鑒定 %1$s 。它是 %2$s 。</string>
   <string name="Armor_ToString">%1$s : %2$d</string>
-  <string name="Armor_Incompatible">属性相异的魔法产生冲突，消除了这件护甲上的符文刻印！</string>
-  <string name="Armor_Info1">这件 %1$s 对每次受到的攻击提供最高\" %2$d \"点的伤害减免。 </string>
-  <string name="Armor_Info2">
-因为您的力量不足，所以你的移动速度和防御能力相应下降。</string>
-  <string name="Armor_Info3">
-因为您的力量不足，穿上这件护甲会降低你的移动速度和防御能力。</string>
-  <string name="Armor_Info4">
-一般情况下 %1$s 对每次受到的攻击提供最高 %2$d 点的伤害减免，并需要 %3$d 点力量才能穿上。</string>
-  <string name="Armor_Info5">也许这件护甲对您来说太重了。</string>
+  <string name="Armor_Incompatible">屬性相異的魔法產生衝突，消除了這件護甲上的符文刻印！</string>
+  <string name="Armor_Info1">這件 %1$s 對每次受到的攻擊提供最高\" %2$d \"點的傷害減免。</string>
+  <string name="Armor_Info2">因為您的力量不足，所以你的移動速度和防禦能力相應下降。</string>
+  <string name="Armor_Info3">因為您的力量不足，穿上這件護甲會降低你的移動速度和防禦能力。</string>
+  <string name="Armor_Info4">一般情况下 %1$s 對每次受到的攻擊提供最高 %2$d 點的傷害減免，並需要 %3$d 點力量才能穿上。</string>
+  <string name="Armor_Info5">也許這件護甲對您來說太重了。</string>
   <string name="Armor_Info6">它已被刻上符文。</string>
-  <string name="Armor_Info7a">
-您正在装备着 %1$s %2$s 。</string>
-  <string name="Armor_Info7b">，并且因为它被诅咒了，你无力把它脫下。</string>
-  <string name="Armor_Info8">
-您能感受到 %s 中潜伏着一股恶意的魔力。</string>
+  <string name="Armor_Info7a">您正在裝備着 %1$s %2$s 。</string>
+  <string name="Armor_Info7b">，並且因為它被詛咒了，你無力把它脫下。</string>
+  <string name="Armor_Info8">您能感受到 %s 中潛伏着一股惡意的魔力。</string>
   <string name="Armor_Glyph">符文刻印</string>
   <!--STRINGS OF ClassArmor CLASS-->
   <string name="ClassArmor_Desc">这东西看起來真棒！</string>
