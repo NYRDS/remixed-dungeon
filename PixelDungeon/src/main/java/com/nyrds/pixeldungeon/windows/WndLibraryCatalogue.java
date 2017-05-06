@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -22,18 +21,9 @@ public class WndLibraryCatalogue extends Window {
 	private static final int BTN_WIDTH		  = 38;
 	private static final int GAP			  = 4;
 
-	private static final int HEIGHT_PORTRAIT  = 180;
-	private static final int HEIGHT_LANDSCAPE = (int) PixelScene.MIN_HEIGHT_L;
-	private static final int WIDTH			  = 112;
+	private static final int WIDTH			  = WndHelper.getLimitedWidth(112);
 
-	String[] dummyEntriesList = {
-			"Entry 1",
-			"Entry two",
-			"Three entries so far",
-			"Quadruple entry"
-	};
-
-	public WndLibraryCatalogue(int catalogueNumber, String catalogueName) {
+	public WndLibraryCatalogue(String category, String catalogueName) {
 		super();
 		final Window context = this;
 
@@ -50,60 +40,59 @@ public class WndLibraryCatalogue extends Window {
 
 		add(listTitle);
 
-		//List<String> entriesList = getEntryList(catalogueNumber);
-
 		Component content = new Component();
 
-		String category = Library.ITEM;
-		switch (catalogueNumber)
-		{
-			case 0:
-				category = Library.ITEM;
-			break;
-			case 1:
-				category = Library.MOB;
-			break;
-		}
 		Map<String,Integer> knownMap = Library.getKnowledgeMap(category);
 
 		//List
 		for (final String entry : knownMap.keySet()) {
-
-
-			Text name = PixelScene.createMultiline(entry, GuiProperties.mediumTitleFontSize());
+			/*
+			Text name = PixelScene.createMultiline(Library.infoHeader(category,entry),
+					GuiProperties.mediumTitleFontSize());
 
 			name.hardlight(0xFFFFFF);
 
 			name.y = yPos + GAP;
-			name.maxWidth(BTN_WIDTH * 3);
+			name.maxWidth(WIDTH - GAP * 2 - BTN_WIDTH);
 			name.measure();
 			name.x = GAP;
 
 			content.add(name);
-			float rbY = name.bottom() + GAP;
-
-			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
-			final Window currentWindow = this;
+*/
+		//	String buttonText = Game.getVar(R.string.WndHats_InfoButton);
 
 			//Button
 			final String finalCategory = category;
-			TextButton rb = new RedButton(buttonText) {
+			Library.EntryHeader entryHeader = Library.infoHeader(category,entry);
+			TextButton rb = new RedButton(entryHeader.header) {
 				@Override
 				protected void onClick() {
 					super.onClick();
+					GameScene.show(Library.infoWindow(finalCategory,entry));
+				}
 
-					GameScene.show(Library.infoWnd(finalCategory,entry));
-					//GameScene.show(new WndLibraryEntry(entry));
+				@Override
+				protected void layout() {
+					super.layout();
+
+					float margin = (height - text.baseLine()) / 2;
+
+					text.x = PixelScene.align( PixelScene.uiCamera, x + margin );
+					text.y = PixelScene.align( PixelScene.uiCamera, y + margin );
+
+					icon.x = PixelScene.align( PixelScene.uiCamera, x + width - margin - icon.width );
+					icon.y = PixelScene.align( PixelScene.uiCamera, y + (height - icon.height()) / 2 );
 				}
 			};
+			rb.icon(entryHeader.icon);
 
-			rb.setRect(WIDTH - BTN_WIDTH, yPos, BTN_WIDTH, BTN_HEIGHT);
+			rb.setRect(0, yPos, WIDTH, BTN_HEIGHT);
 
 			content.add(rb);
-			yPos = (int) (rb.bottom() + GAP * 2);
+			yPos = (int) rb.bottom() + 1;
 		}
 
-		int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
+		int HEIGHT = WndHelper.getFullscreenHeight() - BTN_HEIGHT *2;
 		int h = Math.min(HEIGHT - GAP, yPos);
 
 		resize( WIDTH,  h + BTN_WIDTH);
@@ -132,6 +121,5 @@ public class WndLibraryCatalogue extends Window {
 		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT);
 
 		add(back);
-
 	}
 }

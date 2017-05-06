@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -10,6 +11,9 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class WndLibrary extends Window {
 
 	private static final int BTN_HEIGHT	= 18;
@@ -17,12 +21,17 @@ public class WndLibrary extends Window {
 	private static final int WIDTH		= 100;
 	private static final int GAP		= 2;
 
-	String[] buttonLabels = {
-			Game.getVar(R.string.WndLibrary_Mobs_Btn),
-			Game.getVar(R.string.WndLibrary_Items_Btn),
-			Game.getVar(R.string.WndLibrary_Codex_Btn),
-			Game.getVar(R.string.WndLibrary_Levels_Btn)
-	};
+	static Map<String,String> categoriesMap = new HashMap<>();
+
+	static {
+		categoriesMap.put(Library.ITEM,Game.getVar(R.string.WndLibrary_Items_Btn));
+		categoriesMap.put(Library.MOB,Game.getVar(R.string.WndLibrary_Mobs_Btn));
+		/*
+		categoriesMap.put(Library.CODEX,Game.getVar(R.string.WndLibrary_Codex_Btn));
+		categoriesMap.put(Library.CHAPTERS,Game.getVar(R.string.WndLibrary_Levels_Btn));
+		*/
+
+	}
 
 	public WndLibrary() {
 		super();
@@ -46,20 +55,19 @@ public class WndLibrary extends Window {
 
 		int buttonY = (int) message.bottom()+ GAP;
 
-		//Button maker
-		for (int i = 0; i < buttonLabels.length; i++){
-
-			final int catalogueNumber = i;
-			TextButton browse = new RedButton(buttonLabels[i]) {
+		int i = 0;
+		for(final Map.Entry<String,String> entry:categoriesMap.entrySet()) {
+			TextButton browse = new RedButton(entry.getValue()) {
 				@Override
 				protected void onClick() {
 					super.onClick();
 					context.hide();
-					GameScene.show(new WndLibraryCatalogue(catalogueNumber, buttonLabels[catalogueNumber]));
+					GameScene.show(new WndLibraryCatalogue(entry.getKey(),entry.getValue()));
 				}
 			};
 
 			int w = (int) ((WIDTH / 2) - (BTN_WIDTH * 1.1) - GAP);
+
 			if (i >= 2){
 				w = (WIDTH / 2) + (BTN_WIDTH/10) + GAP;
 			}
@@ -70,6 +78,7 @@ public class WndLibrary extends Window {
 			browse.setRect(w, buttonY + GAP * 2, BTN_WIDTH,  BTN_HEIGHT);
 			add(browse);
 			buttonY = (int) browse.bottom();
+			i++;
 		}
 
 		//Back Button
