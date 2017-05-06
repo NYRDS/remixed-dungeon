@@ -107,6 +107,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -130,7 +131,6 @@ import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
 
@@ -1193,29 +1193,32 @@ public class Hero extends Char {
 
 		Buff wallWalkerBuff = buff(RingOfStoneWalking.StoneWalking.class);
 
-		if (Dungeon.level.adjacent(getPos(), target)) {
+		Level level = Dungeon.level;
+
+		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
-				if (Dungeon.level.pit[target] && !flying && !Chasm.jumpConfirmed) {
+				if (level.pit[target] && !flying && !Chasm.jumpConfirmed) {
 					Chasm.heroJump(this);
 					interrupt();
 					return false;
 				}
 
-				if(TrapHelper.CellIsTrap(target) && !flying && !TrapHelper.stepConfirmed){
+
+				if(TrapHelper.isVisibleTrap(level.map[target]) && !flying && !TrapHelper.stepConfirmed){
 					TrapHelper.heroTriggerTrap(this);
 					interrupt();
 					return false;
 				}
 
-				if (wallWalkerBuff == null && (Dungeon.level.passable[target] || Dungeon.level.avoid[target])) {
+				if (wallWalkerBuff == null && (level.passable[target] || level.avoid[target])) {
 					step = target;
 				}
-				if (wallWalkerBuff != null && Dungeon.level.solid[target]) {
+				if (wallWalkerBuff != null && level.solid[target]) {
 					step = target;
 				}
 
-				LevelObject obj = Dungeon.level.objects.get(target);
+				LevelObject obj = level.objects.get(target);
 				if (obj != null && obj.pushable(this)) {
 					interrupt();
 					if (!obj.push(this)) {
@@ -1226,23 +1229,23 @@ public class Hero extends Char {
 
 		} else {
 
-			int len = Dungeon.level.getLength();
-			boolean[] p = wallWalkerBuff != null ? Dungeon.level.solid : Dungeon.level.passable;
-			boolean[] v = Dungeon.level.visited;
-			boolean[] m = Dungeon.level.mapped;
+			int len = level.getLength();
+			boolean[] p = wallWalkerBuff != null ? level.solid : level.passable;
+			boolean[] v = level.visited;
+			boolean[] m = level.mapped;
 			boolean[] passable = new boolean[len];
 			for (int i = 0; i < len; i++) {
 				passable[i] = p[i] && (v[i] || m[i]);
 			}
 
-			step = Dungeon.findPath(this, getPos(), target, passable, Dungeon.level.fieldOfView);
+			step = Dungeon.findPath(this, getPos(), target, passable, level.fieldOfView);
 		}
 
 		if (step != -1) {
 
 			int oldPos = getPos();
 
-			LevelObject obj = Dungeon.level.objects.get(step);
+			LevelObject obj = level.objects.get(step);
 			if (obj != null) {
 
 				if (step == target) {
