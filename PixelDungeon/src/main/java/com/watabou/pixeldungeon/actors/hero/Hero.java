@@ -1198,17 +1198,17 @@ public class Hero extends Char {
 		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
-				if (level.pit[target] && !flying && !Chasm.jumpConfirmed) {
-					Chasm.heroJump(this);
-					interrupt();
-					return false;
-				}
-
-
-				if(TrapHelper.isVisibleTrap(level.map[target]) && !flying && !TrapHelper.stepConfirmed){
-					TrapHelper.heroTriggerTrap(this);
-					interrupt();
-					return false;
+				if (buff(Blindness.class) == null){
+					if (level.pit[target] && !flying && !Chasm.jumpConfirmed) {
+						Chasm.heroJump(this);
+						interrupt();
+						return false;
+					}
+					if( TrapHelper.isVisibleTrap(level.map[target]) && !flying && !TrapHelper.stepConfirmed){
+						TrapHelper.heroTriggerTrap(this);
+						interrupt();
+						return false;
+					}
 				}
 
 				if (wallWalkerBuff == null && (level.passable[target] || level.avoid[target])) {
