@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
 
@@ -96,14 +97,14 @@ public class Library {
 		EntryHeader ret = new EntryHeader();
 		if(category.equals(ITEM)) {
 			Item item = ItemFactory.itemByName(clazz);
-			ret.header = item.name();
+			ret.header = Utils.capitalize(item.name());
 			ret.icon = new ItemSprite(item);
 			return ret;
 		}
 
 		if(category.equals(MOB)) {
 			Mob mob = MobFactory.mobByName(clazz);
-			ret.header = mob.getName();
+			ret.header = Utils.capitalize(mob.getName());
 			ret.icon = mob.sprite();
 			return ret;
 		}
