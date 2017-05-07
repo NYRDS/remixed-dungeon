@@ -5,4 +5,7 @@
     <string name="TrapWnd_Title">Trap</string>
     <string name="TrapWnd_Step">Do you really want to step on this trap? You can probably die.</string>
 
+    <string name="LibraryBook_Name">Library book</string>
+    <string name="LibraryBook_Description">This tome is really huge. It holds all the knowledge, that adventurers has discovered in the dungeon.</string>
+
 </resources>

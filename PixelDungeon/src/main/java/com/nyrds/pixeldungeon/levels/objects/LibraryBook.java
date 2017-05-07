@@ -1,8 +1,11 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndLibrary;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -27,12 +30,10 @@ public class LibraryBook extends LevelObject {
 
 	public LibraryBook(int pos, String text) {
 		super(pos);
-		//signText = text;
 	}
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
-		//signText = StringsManager.maybeId(obj.getString(TEXT));
 	}
 
 	@Override
@@ -61,13 +62,18 @@ public class LibraryBook extends LevelObject {
 	}
 
 	@Override
+	public boolean stepOn(Char hero) {
+		return false;
+	}
+
+	@Override
 	public String desc() {
-		return Dungeon.level.tileDesc(Terrain.SIGN);
+		return Game.getVar(R.string.LibraryBook_Description);
 	}
 
 	@Override
 	public String name() {
-		return Dungeon.level.tileName(Terrain.SIGN);
+		return Game.getVar(R.string.LibraryBook_Name);
 	}
 
 	@Override
