@@ -369,6 +369,7 @@ public class ItemFactory {
 
 		registerItemClass(DwarfToken.class);
 		registerItemClass(RatArmor.class);
+		registerItemClass(ElvenDagger.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

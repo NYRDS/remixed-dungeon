@@ -63,6 +63,10 @@
 			"kind": "CommonArrow",
 			"quantity": 20,
 			"identified": true
+		},
+		{
+			"kind": "ElvenDagger",
+			"identified": true
 		}],
 		"quickslot":[{
 			"kind": "CommonArrow"
