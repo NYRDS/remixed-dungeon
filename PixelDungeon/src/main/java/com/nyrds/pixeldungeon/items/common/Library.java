@@ -6,6 +6,10 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
@@ -88,7 +92,26 @@ public class Library {
 		return Collections.unmodifiableMap(getCategory(category));
 	}
 
-	public static Window infoWnd(String category, String clazz) {
+	public static EntryHeader infoHeader(String category, String clazz) {
+		EntryHeader ret = new EntryHeader();
+		if(category.equals(ITEM)) {
+			Item item = ItemFactory.itemByName(clazz);
+			ret.header = item.name();
+			ret.icon = new ItemSprite(item);
+			return ret;
+		}
+
+		if(category.equals(MOB)) {
+			Mob mob = MobFactory.mobByName(clazz);
+			ret.header = mob.getName();
+			ret.icon = mob.sprite();
+			return ret;
+		}
+
+		throw new TrackedRuntimeException("unknown category: "+category);
+	}
+
+	public static Window infoWindow(String category, String clazz) {
 		if(category.equals(ITEM)) {
 			return new WndInfoItem(ItemFactory.itemByName(clazz));
 		}
@@ -97,5 +120,10 @@ public class Library {
 			return new WndInfoMob(MobFactory.mobByName(clazz));
 		}
 		throw new TrackedRuntimeException("unknown category: "+category);
+	}
+
+	public static class EntryHeader {
+		public String header;
+		public Image icon;
 	}
 }

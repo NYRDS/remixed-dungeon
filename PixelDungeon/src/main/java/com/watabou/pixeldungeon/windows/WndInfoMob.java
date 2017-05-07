@@ -30,13 +30,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class WndInfoMob extends WndTitledMessage {
 
 	public WndInfoMob( Mob mob ) {
-		
 		super( new MobTitle( mob ), desc( mob ) );
-		
 	}
 	
 	private static String desc( Mob mob ) {
-
 		return mob.description() + "\n\n" + mob.getState().status() + ".";
 	}
 	
