@@ -237,7 +237,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		view.setRenderer(this);
 		view.setOnTouchListener(this);
 
-
 		layout = new LinearLayout(this);
 		getLayout().setOrientation(LinearLayout.VERTICAL);
 		getLayout().addView(view);

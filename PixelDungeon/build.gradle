@@ -72,11 +72,14 @@ dependencies {
     googlePlayRetroCompile 'com.google.android.gms:play-services-base:9.0.2'
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-analytics:9.0.2'
-
+    googlePlayRetroCompile "com.google.android.gms:play-services-games:9.0.2"
 
     googlePlayCompile 'com.google.android.gms:play-services-ads:9.8.0'
     googlePlayCompile 'com.google.android.gms:play-services-base:9.8.0'
     googlePlayCompile 'com.google.android.gms:play-services-analytics:9.8.0'
+    googlePlayCompile "com.google.android.gms:play-services-games:9.8.0"
+
+
     googlePlayCompile project(':cheetah-mobile-3.4.7')
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.1'

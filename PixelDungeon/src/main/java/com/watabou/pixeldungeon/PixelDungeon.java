@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
@@ -83,6 +84,8 @@ public class PixelDungeon extends Game {
 		super.onCreate(savedInstanceState);
 
 		RewardVideo.init();
+
+		PlayGames.init(this);
 
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
