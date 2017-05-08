@@ -386,15 +386,10 @@ public class Armor extends EquipableItem {
 			return ItemSprite.Glowing.WHITE;
 		}
 		
-		public boolean checkOwner( Char owner ) {
+		public void checkOwner( Char owner ) {
 			if (!owner.isAlive() && owner instanceof Hero) {
-				
 				((Hero)owner).killerGlyph = this;
 				Badges.validateDeathFromGlyph();
-				return true;
-				
-			} else {
-				return false;
 			}
 		}
 		

@@ -344,12 +344,11 @@ public class Bundle {
 		}
 	}
 
-	public static boolean write( Bundle bundle, OutputStream stream ) {
+	public static void write( Bundle bundle, OutputStream stream ) {
 		try {
 			BufferedWriter writer = new BufferedWriter( new OutputStreamWriter( stream ) );
 			writer.write( bundle.data.toString() );
 			writer.close();
-			return true;
 		} catch (IOException e) {
 			throw new TrackedRuntimeException("bundle write failed: %s\n",e);
 		}
