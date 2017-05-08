@@ -48,6 +48,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Generator;
@@ -859,7 +860,8 @@ public abstract class Level implements Bundlable {
 			item = new Gold(item.price());
 		}
 
-		if ((map[cell] == Terrain.ALCHEMY) && !(item instanceof Plant.Seed)) {
+		if (((map[cell] == Terrain.ALCHEMY) && !(item instanceof Plant.Seed))
+			||	(Actor.findChar(cell) instanceof NPC)) {
 			int newCell = getEmptyCellNextTo(cell);
 			if (cellValid(newCell)) {
 				cell = newCell;
@@ -882,12 +884,13 @@ public abstract class Level implements Bundlable {
 			}
 
 		} else if (heap.type == Heap.Type.LOCKED_CHEST
-				|| heap.type == Heap.Type.CRYSTAL_CHEST) {
+				|| heap.type == Heap.Type.CRYSTAL_CHEST
+				|| heap.type == Heap.Type.FOR_SALE) {
 
 			int n;
 			do {
 				n = cell + Level.NEIGHBOURS8[Random.Int(8)];
-			} while (!Dungeon.level.passable[n] && !Dungeon.level.avoid[n]);
+			} while (!passable[n] && !avoid[n]);
 			return drop(item, n);
 
 		}
