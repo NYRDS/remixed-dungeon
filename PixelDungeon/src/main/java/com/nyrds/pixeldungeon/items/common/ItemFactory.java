@@ -366,7 +366,6 @@ public class ItemFactory {
 		mItemsList.put("Sorrowmoss.Seed", Sorrowmoss.Seed.class);
 		mItemsList.put("Icecap.Seed", Icecap.Seed.class);
 		mItemsList.put("Fadeleaf.Seed", Fadeleaf.Seed.class);
-
 		registerItemClass(DwarfToken.class);
 		registerItemClass(RatArmor.class);
 		registerItemClass(ElvenDagger.class);
