@@ -87,16 +87,14 @@ public class Group extends Gizmo {
 		return g;
 	}
 
-	public Gizmo addToBack(Gizmo g) {
+	public void addToBack(Gizmo g) {
 
 		if (g.getParent() == this) {
 			sendToBack(g);
-			return g;
 		}
 
 		members.add(0, g);
 		g.setParent(this);
-		return g;
 	}
 
 	public Gizmo recycle(@NonNull Class<? extends Gizmo> c) {

@@ -100,6 +100,6 @@ public class GoogleRewardVideoAds {
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			Log.i("reward video","onRewardedVideoAdFailedToLoad(int i)");
 		}
-	};
+	}
 
 }

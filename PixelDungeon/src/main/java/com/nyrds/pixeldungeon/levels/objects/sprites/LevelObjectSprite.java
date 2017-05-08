@@ -21,8 +21,6 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	private static TextureFilm frames;
 	private        Callback    onAnimComplete;
 
-	private int pos = -1;
-
 	public LevelObjectSprite() {
 
 		texture("levelObjects/objects.png");
@@ -66,9 +64,8 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		} );
 	}
 
-	public void setLevelPos(int cell) {
-		pos = cell;
-		PointF p = DungeonTilemap.tileToWorld(pos);
+	private void setLevelPos(int cell) {
+		PointF p = DungeonTilemap.tileToWorld(cell);
 		x = p.x;
 		y = p.y;
 	}
