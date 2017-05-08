@@ -700,10 +700,14 @@ public abstract class Level implements Bundlable {
 			return -1;
 		}
 
+		int counter = 0;
 		int cell;
 		do {
+			if(++counter>1000){
+				return -1;
+			}
 			cell = Random.Int(getLength());
-		} while (!passable[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null);
+		} while (!selectFrom[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null);
 		return cell;
 	}
 
