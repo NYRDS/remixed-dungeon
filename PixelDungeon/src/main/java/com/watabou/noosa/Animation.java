@@ -32,23 +32,21 @@ public class Animation {
 		return this;
 	}
 
-	public Animation frames(TextureFilm film, int... frames) {
+	public void frames(TextureFilm film, int... frames) {
 		this.frames = new RectF[frames.length];
 		for (int i = 0; i < frames.length; i++) {
 			this.frames[i] = film.get(frames[i]);
 		}
-		return this;
 	}
 
 	public Animation clone() {
 		return new Animation(Math.round(1 / delay), looped).frames(frames);
 	}
 
-	public Animation frames(TextureFilm film, List<Integer> frames, int shift) {
+	public void frames(TextureFilm film, List<Integer> frames, int shift) {
 		this.frames = new RectF[frames.size()];
 		for (int i = 0; i < frames.size(); i++) {
 			this.frames[i] = film.get(frames.get(i) + shift);
 		}
-		return this;
 	}
 }

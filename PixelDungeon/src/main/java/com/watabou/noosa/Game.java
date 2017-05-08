@@ -476,9 +476,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		return instance;
 	}
 
-	private synchronized static Game instance(Game instance) {
+	private synchronized static void instance(Game instance) {
 		Game.instance = instance;
-		return instance;
 	}
 
 	public static boolean smallResScreen() {
