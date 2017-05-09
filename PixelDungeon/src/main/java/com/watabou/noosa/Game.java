@@ -50,6 +50,7 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -111,6 +112,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public Executor executor = Executors.newSingleThreadExecutor();
 
 	private Runnable doOnResume;
+	private Storage  storage;
 
 	public Game(Class<? extends Scene> c) {
 		super();
@@ -497,6 +499,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	private static void height(int height) {
 		Game.height = height;
+	}
+
+	public synchronized Storage getStorage() {
+		if (storage == null) {
+			storage = new Storage();
+		}
+		return storage;
 	}
 
 	public static synchronized void executeInGlThread(Runnable task) {

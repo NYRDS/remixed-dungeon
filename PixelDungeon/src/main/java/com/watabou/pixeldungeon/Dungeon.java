@@ -66,7 +66,6 @@ import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -352,7 +351,7 @@ public class Dungeon {
 
 		GLog.toFile("saving game: %s", fileName);
 
-		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(fileName));
+		OutputStream output = Game.instance().getStorage().getOutputStream(fileName);
 		Bundle.write(bundle, output);
 		output.close();
 	}
@@ -368,7 +367,7 @@ public class Dungeon {
 
 		GLog.toFile("saving level: %s", saveTo);
 
-		OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(saveTo));
+		OutputStream output = Game.instance().getStorage().getOutputStream(saveTo);
 		Bundle.write(bundle, output);
 		output.close();
 	}

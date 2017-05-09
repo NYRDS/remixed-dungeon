@@ -6,6 +6,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -15,7 +16,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Collections;
@@ -44,7 +44,7 @@ public class Library {
 	private static void saveLibrary() {
 		gson.toJson(mKnowledgeLevel);
 		try {
-			OutputStream output = new FileOutputStream(FileSystem.getInteralStorageFile(libraryFile));
+			OutputStream output = Game.instance().getStorage().getOutputStream(libraryFile);
 			output.write(gson.toJson(mKnowledgeLevel).getBytes());
 			output.close();
 		} catch (IOException e) {

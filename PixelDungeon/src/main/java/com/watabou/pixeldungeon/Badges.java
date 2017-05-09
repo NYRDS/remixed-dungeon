@@ -264,9 +264,10 @@ public class Badges {
 			store(bundle, global);
 
 			try {
-				OutputStream output = Game.instance().openFileOutput(BADGES_FILE, Game.MODE_PRIVATE);
+				OutputStream output = Game.instance().getStorage().getOutputStream(BADGES_FILE);
 				Bundle.write(bundle, output);
 				output.close();
+
 				saveNeeded = false;
 			} catch (IOException e) {
 				EventCollector.logException(e,"Badges.saveGlobal");
@@ -536,7 +537,7 @@ public class Badges {
 		}
 	}
 
-	public static void validateAllItemsIdentified() {
+	private static void validateAllItemsIdentified() {
 		if (!global.contains(Badge.ALL_ITEMS_IDENTIFIED) &&
 				global.contains(Badge.ALL_POTIONS_IDENTIFIED) &&
 				global.contains(Badge.ALL_SCROLLS_IDENTIFIED) &&

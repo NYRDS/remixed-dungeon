@@ -129,7 +129,7 @@ public enum Rankings {
 		bundle.put( HAPPY,   happyWonNumber);
 		
 		try {
-			OutputStream output = Game.instance().openFileOutput( RANKINGS_FILE, Game.MODE_PRIVATE );
+			OutputStream output = Game.instance().getStorage().getOutputStream( RANKINGS_FILE );
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (Exception e) {

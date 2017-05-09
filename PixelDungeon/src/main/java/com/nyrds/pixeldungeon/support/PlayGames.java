@@ -19,6 +19,12 @@ import com.google.android.gms.games.snapshot.Snapshot;
 import com.google.android.gms.games.snapshot.Snapshots;
 import com.watabou.pixeldungeon.Preferences;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 import static android.app.Activity.RESULT_OK;
 
 /**
@@ -61,13 +67,34 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		playGames.googleApiClient.disconnect();
 	}
 
-	public static void saveGame(String slotId) {
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient,slotId,true);
-		Snapshot snapshot = result.await().getSnapshot();
+	public static OutputStream streamToSnapshot(final String snapshotId) {
+		return new ByteArrayOutputStream() {
+			@Override
+			public void close() throws IOException {
+				super.close();
+				writeToSnapshot(snapshotId,toByteArray());
+			}
+		};
 	}
 
-	public static void loadGame(String slotId) {
-		PendingResult<Snapshots.LoadSnapshotsResult> result = Games.Snapshots.load(playGames.googleApiClient,false);
+	public static void writeToSnapshot(String snapshotId, byte[] content) {
+		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient,snapshotId,true);
+		Snapshot snapshot = result.await().getSnapshot();
+		snapshot.getSnapshotContents().writeBytes(content);
+	}
+
+	public static InputStream streamFromSnapshot(String snapshotId) {
+		return new ByteArrayInputStream(readFromSnapshot(snapshotId));
+	}
+
+	public static byte[] readFromSnapshot(String snapshotId) {
+		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient,snapshotId,true);
+		Snapshot snapshot = result.await().getSnapshot();
+		try {
+			return snapshot.getSnapshotContents().readFully();
+		} catch (IOException e) {
+			return new byte[0];
+		}
 	}
 
 	@Override
