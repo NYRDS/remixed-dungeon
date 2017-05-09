@@ -31,7 +31,6 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -84,8 +83,8 @@ public class PixelDungeon extends Game {
 		super.onCreate(savedInstanceState);
 
 		RewardVideo.init();
-
 		PlayGames.init(this);
+
 
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
@@ -123,6 +122,13 @@ public class PixelDungeon extends Game {
 		if (PixelDungeon.version() != Game.versionCode) {
 			switchScene(WelcomeScene.class);
 		}
+
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		PlayGames.onStart();
 	}
 
 	public void setSelectedLanguage() {
@@ -143,9 +149,15 @@ public class PixelDungeon extends Game {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		GLog.i("onActivityResult(" + requestCode + "," + resultCode + "," + data);
 
-		if(!Iap.onActivityResult(requestCode, resultCode, data)) {
-			super.onActivityResult(requestCode, resultCode, data);
+		if(Iap.onActivityResult(requestCode, resultCode, data)) {
+			return;
 		}
+
+		if(PlayGames.onActivityResult(requestCode, resultCode, data)) {
+			return;
+		}
+
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 
 	public static void switchNoFade(Class<? extends PixelScene> c) {
