@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.items.material;
 
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 
 public class SoulShard extends Item {
@@ -13,6 +12,7 @@ public class SoulShard extends Item {
 		stackable = true;
 		imageFile = "items/materials.png";
 		image = 0;
+		identify();
 	}
 
 	@Override

@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
-import com.nyrds.pixeldungeon.items.material.IceGuardianCore;
+import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
@@ -372,7 +372,7 @@ public class ItemFactory {
 		registerItemClass(DwarfToken.class);
 		registerItemClass(RatArmor.class);
 		registerItemClass(ElvenDagger.class);
-		registerItemClass(IceGuardianCore.class);
+		registerItemClass(IceGuardianCoreModule.class);
 		registerItemClass(SpiderQueenCarapace.class);
 	}
 
