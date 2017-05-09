@@ -14,7 +14,7 @@ public class IceGuardianCoreModule extends Item {
 
 	@Override
 	public Glowing glowing() {
-		return new Glowing((int) (Math.random() * 0x99ccff));
+		return new Glowing((int) (Math.random() * 0x0000ff));
 	}
 
 

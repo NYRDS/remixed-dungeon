@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.Ring;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
@@ -30,6 +31,11 @@ public class RingOfFrost extends Artifact {
 		imageFile = "items/rings.png";
 		image = 13;
 		identify();
+	}
+
+	@Override
+	public ItemSprite.Glowing glowing() {
+		return new ItemSprite.Glowing((int) (Math.random() * 0x0000ff));
 	}
 
 	@Override
