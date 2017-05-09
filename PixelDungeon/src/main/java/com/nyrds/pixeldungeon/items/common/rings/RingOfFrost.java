@@ -35,7 +35,7 @@ public class RingOfFrost extends Artifact {
 
 	@Override
 	public ItemSprite.Glowing glowing() {
-		return new ItemSprite.Glowing((int) (Math.random() * 0x0000ff));
+		return new ItemSprite.Glowing( 0x00FFFF );
 	}
 
 	@Override
