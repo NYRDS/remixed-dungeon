@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
+import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
@@ -374,6 +375,8 @@ public class ItemFactory {
 		registerItemClass(ElvenDagger.class);
 		registerItemClass(IceGuardianCoreModule.class);
 		registerItemClass(SpiderQueenCarapace.class);
+		registerItemClass(RingOfFrost.class);
+
 	}
 
 	public static boolean isValidItemClass(String itemClass) {
