@@ -51,6 +51,7 @@ public enum Preferences {
 	public static final String KEY_ACTIVE_MOD       = "active_mod";
 	public static final String KEY_COLLECT_STATS    = "collect_stats";
 	public static final String KEY_MOVE_TIMEOUT     = "move_timeout";
+	public static final String KEY_USE_PLAY_GAMES   = "use_play_games";
 
 	public static final String KEY_UI_ZOOM = "ui_zoom";
 

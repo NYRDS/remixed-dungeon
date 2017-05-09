@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.ui.ChangelogButton;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.ModsButton;
+import com.watabou.pixeldungeon.ui.PlayGamesButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.watabou.pixeldungeon.ui.StaticsticsButton;
@@ -171,6 +172,10 @@ public class TitleScene extends PixelScene {
 		PrefsButton btnPrefs = new PrefsButton();
 		btnPrefs.setPos(0, 0);
 		add(btnPrefs);
+
+		PlayGamesButton btnPlayGames = new PlayGamesButton();
+		btnPlayGames.setPos(btnPrefs.right() + 2, 0);
+		add(btnPlayGames);
 
 		ModsButton btnMods = new ModsButton();
 		btnMods.setPos(0, btnPrefs.bottom() + 2);

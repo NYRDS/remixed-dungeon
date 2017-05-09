@@ -17,6 +17,7 @@ import com.google.android.gms.drive.Drive;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.games.snapshot.Snapshot;
 import com.google.android.gms.games.snapshot.Snapshots;
+import com.watabou.pixeldungeon.Preferences;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -44,16 +45,20 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 		//ConnectionResult connectionResult = googleApiClient.blockingConnect();
 		//Log.i("Play Games", connectionResult.toString());
-
 	}
-
 
 	public static void init(Activity context) {
 		playGames = new PlayGames(context);
 	}
 
-	public static void onStart() {
+	public static void connect() {
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES,true);
 		playGames.googleApiClient.connect();
+	}
+
+	public static void disconnect() {
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES,false);
+		playGames.googleApiClient.disconnect();
 	}
 
 	public static void saveGame(String slotId) {
