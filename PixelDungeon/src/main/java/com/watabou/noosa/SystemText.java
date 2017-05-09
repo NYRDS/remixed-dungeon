@@ -13,6 +13,7 @@ import android.text.TextPaint;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -356,7 +357,7 @@ public class SystemText extends Text {
 				img.am = am;
 				img.aa = aa;
 
-				img.setPos(x, y + (line * fontHeight) * scale.y);
+				img.setPos(PixelScene.align(PixelScene.uiCamera,x), PixelScene.align(PixelScene.uiCamera,y + (line * fontHeight) * scale.y));
 				img.setScale(scale.x / oversample, scale.x / oversample);
 
 				line++;
