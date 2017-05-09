@@ -23,10 +23,12 @@ import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
+import com.nyrds.pixeldungeon.items.material.IceGuardianCore;
+import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
-import com.nyrds.pixeldungeon.items.necropolis.SoulShard;
+import com.nyrds.pixeldungeon.items.material.SoulShard;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -366,9 +368,12 @@ public class ItemFactory {
 		mItemsList.put("Sorrowmoss.Seed", Sorrowmoss.Seed.class);
 		mItemsList.put("Icecap.Seed", Icecap.Seed.class);
 		mItemsList.put("Fadeleaf.Seed", Fadeleaf.Seed.class);
+
 		registerItemClass(DwarfToken.class);
 		registerItemClass(RatArmor.class);
 		registerItemClass(ElvenDagger.class);
+		registerItemClass(IceGuardianCore.class);
+		registerItemClass(SpiderQueenCarapace.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

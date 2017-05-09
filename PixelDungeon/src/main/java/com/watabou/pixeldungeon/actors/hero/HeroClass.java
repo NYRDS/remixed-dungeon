@@ -28,6 +28,8 @@ import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
+import com.nyrds.pixeldungeon.items.material.IceGuardianCore;
+import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -143,12 +145,12 @@ public enum HeroClass {
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));
-		hero.collect(new BattleAxe());
+		hero.collect(new IceGuardianCore());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 		hero.collect(new RingOfHaggler());
 
-		hero.collect(new PseudoPasty());
+		hero.collect(new SpiderQueenCarapace());
 
 		hero.ht(1000);
 		hero.hp(1000);
