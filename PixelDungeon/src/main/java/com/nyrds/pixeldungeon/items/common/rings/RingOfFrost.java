@@ -19,20 +19,23 @@ package com.nyrds.pixeldungeon.items.common.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.Ring;
+import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class RingOfFrost extends Ring {
-	
+public class RingOfFrost extends Artifact {
+
+	public RingOfFrost() {
+		imageFile = "items/rings.png";
+		image = 13;
+		identify();
+	}
+
 	@Override
-	protected RingBuff buff( ) {
+	protected ArtifactBuff buff( ) {
 		return new FrostAura();
 	}
-	
-	@Override
-	public String desc() {
-		return isKnown() ? Game.getVar(R.string.RingOfFrost_Info) : super.desc();
-	}
-	
-	public class FrostAura extends RingBuff {
+
+	public class FrostAura extends ArtifactBuff {
 	}
 }

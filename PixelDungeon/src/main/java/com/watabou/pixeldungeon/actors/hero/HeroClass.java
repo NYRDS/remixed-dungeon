@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
@@ -136,7 +137,7 @@ public enum HeroClass {
 		Item ring = new RingOfAccuracy().identify();
 		ring.cursed = true;
 		hero.collect(ring);
-		hero.collect(new HeartOfDarkness().identify());
+		hero.collect(new RingOfFrost().identify());
 		hero.collect(new CandleOfMindVision());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
