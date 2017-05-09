@@ -36,4 +36,14 @@ public class Storage {
 
 		return new FileInputStream(FileSystem.getInternalStorageFile(id));
 	}
+
+	public boolean have(String id) {
+		if(PlayGames.isConnected()) {
+			if(PlayGames.haveSnapshot(id)) {
+				return true;
+			}
+		}
+
+		return FileSystem.getInternalStorageFile(id).exists();
+	}
 }

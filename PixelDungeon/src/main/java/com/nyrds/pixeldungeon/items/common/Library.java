@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -56,7 +55,7 @@ public class Library {
 	private static void loadLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(libraryFile)).toString(),
+					JsonHelper.readJsonFromStream(Game.instance().getStorage().getInputStream(libraryFile)).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {
 					}.getType()
 			);

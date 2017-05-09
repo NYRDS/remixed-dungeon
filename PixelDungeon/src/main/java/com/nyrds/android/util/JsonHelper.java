@@ -48,7 +48,7 @@ public class JsonHelper {
 	}
 
 	@NonNull
-	private static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
+	public static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
 		try {
 			StringBuilder jsonDef = new StringBuilder();
 
