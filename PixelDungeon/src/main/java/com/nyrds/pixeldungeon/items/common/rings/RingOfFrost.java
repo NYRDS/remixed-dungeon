@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class RingOfFrost extends Artifact {
 
@@ -37,5 +38,14 @@ public class RingOfFrost extends Artifact {
 	}
 
 	public class FrostAura extends ArtifactBuff {
+		@Override
+		public int icon() {
+			return BuffIndicator.FROSTAURA;
+		}
+
+		@Override
+		public String toString() {
+			return Game.getVar(R.string.FrostAura_Buff);
+		}
 	}
 }

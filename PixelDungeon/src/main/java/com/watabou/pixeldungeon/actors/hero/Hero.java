@@ -400,10 +400,12 @@ public class Hero extends Char {
 
 		if (buffs(RingOfFrost.FrostAura.class) != null ){
 			int powerLevel = this.belongings.getItem(RingOfFrost.class).level();
-			enemy.damage(powerLevel, this);
-			Buff.affect( enemy, Slow.class, Slow.duration( enemy ) / 5 + powerLevel );
-			if (Random.Int(10) == 1){
-				Buff.affect( enemy, Frost.class, Frost.duration( enemy ) / 5 + powerLevel );
+			if(enemy.isAlive() && enemy != null){
+				Buff.affect( enemy, Slow.class, Slow.duration( enemy ) / 5 + powerLevel );
+				if (Random.Int(10) == 1){
+					Buff.affect( enemy, Frost.class, Frost.duration( enemy ) / 5 + powerLevel );
+				}
+				enemy.damage(powerLevel, this);
 			}
 		}
 
