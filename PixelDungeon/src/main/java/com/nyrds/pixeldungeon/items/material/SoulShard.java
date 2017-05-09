@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.items.necropolis;
+package com.nyrds.pixeldungeon.items.material;
 
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
