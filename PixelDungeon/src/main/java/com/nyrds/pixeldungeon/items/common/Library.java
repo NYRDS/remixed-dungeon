@@ -5,7 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -43,7 +43,7 @@ public class Library {
 	private static void saveLibrary() {
 		gson.toJson(mKnowledgeLevel);
 		try {
-			OutputStream output = Game.instance().getStorage().getOutputStream(libraryFile);
+			OutputStream output = Storage.getStorage().getOutputStream(libraryFile);
 			output.write(gson.toJson(mKnowledgeLevel).getBytes());
 			output.close();
 		} catch (IOException e) {
@@ -55,7 +55,7 @@ public class Library {
 	private static void loadLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(Game.instance().getStorage().getInputStream(libraryFile)).toString(),
+					JsonHelper.readJsonFromStream(Storage.getStorage().getInputStream(libraryFile)).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {
 					}.getType()
 			);

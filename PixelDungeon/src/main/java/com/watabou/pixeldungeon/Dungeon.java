@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
+import com.nyrds.pixeldungeon.support.Storage;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
@@ -351,7 +352,7 @@ public class Dungeon {
 
 		GLog.toFile("saving game: %s", fileName);
 
-		OutputStream output = Game.instance().getStorage().getOutputStream(fileName);
+		OutputStream output = Storage.getStorage().getOutputStream(fileName);
 		Bundle.write(bundle, output);
 		output.close();
 	}
@@ -367,7 +368,7 @@ public class Dungeon {
 
 		GLog.toFile("saving level: %s", saveTo);
 
-		OutputStream output = Game.instance().getStorage().getOutputStream(saveTo);
+		OutputStream output = Storage.getStorage().getOutputStream(saveTo);
 		Bundle.write(bundle, output);
 		output.close();
 	}

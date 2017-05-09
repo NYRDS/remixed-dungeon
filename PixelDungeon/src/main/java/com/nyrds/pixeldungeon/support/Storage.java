@@ -16,6 +16,8 @@ import java.io.OutputStream;
  */
 
 public class Storage {
+	static private Storage storage;
+
 	public OutputStream getOutputStream(String id) throws FileNotFoundException {
 		if(PlayGames.isConnected()) {
 			return new TeeOutputStream(
@@ -45,5 +47,12 @@ public class Storage {
 		}
 
 		return FileSystem.getInternalStorageFile(id).exists();
+	}
+
+	public static synchronized Storage getStorage() {
+		if (storage == null) {
+			storage = new Storage();
+		}
+		return storage;
 	}
 }

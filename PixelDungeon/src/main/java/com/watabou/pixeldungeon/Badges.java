@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
+import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
@@ -264,7 +265,7 @@ public class Badges {
 			store(bundle, global);
 
 			try {
-				OutputStream output = Game.instance().getStorage().getOutputStream(BADGES_FILE);
+				OutputStream output = Storage.getStorage().getOutputStream(BADGES_FILE);
 				Bundle.write(bundle, output);
 				output.close();
 

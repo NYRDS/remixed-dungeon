@@ -112,7 +112,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public Executor executor = Executors.newSingleThreadExecutor();
 
 	private Runnable doOnResume;
-	private Storage  storage;
+	public  Storage  storage;
 
 	public Game(Class<? extends Scene> c) {
 		super();
@@ -499,13 +499,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	private static void height(int height) {
 		Game.height = height;
-	}
-
-	public synchronized Storage getStorage() {
-		if (storage == null) {
-			storage = new Storage();
-		}
-		return storage;
 	}
 
 	public static synchronized void executeInGlThread(Runnable task) {
