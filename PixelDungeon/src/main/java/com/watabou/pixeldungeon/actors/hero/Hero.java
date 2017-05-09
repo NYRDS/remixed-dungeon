@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
+import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -54,6 +55,7 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.GasesImmunity;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -63,6 +65,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
@@ -394,6 +397,18 @@ public class Hero extends Char {
 		for (Buff buff : buffs(RingOfEvasion.Evasion.class)) {
 			bonus += ((RingOfEvasion.Evasion) buff).level;
 		}
+
+		if (buffs(RingOfFrost.FrostAura.class) != null && enemy.distance(this) < 2){
+			int powerLevel = this.belongings.getItem(RingOfFrost.class).level();
+			if(enemy.isAlive() && enemy != null){
+				Buff.affect( enemy, Slow.class, Slow.duration( enemy ) / 5 + powerLevel );
+				if (Random.Int(10) == 1){
+					Buff.affect( enemy, Frost.class, Frost.duration( enemy ) / 5 + powerLevel );
+				}
+				enemy.damage(powerLevel, this);
+			}
+		}
+
 		float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
 		if (paralysed) {
 			evasion /= 2;

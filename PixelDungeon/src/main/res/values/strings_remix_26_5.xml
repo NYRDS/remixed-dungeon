@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">Frost Aura</string>
+
+
     <!-- Item descriptions -->
     <!-- STRINGS OF ElvenDagger CLASS -->
     <string name="ElvenDagger_Name">elven dagger</string>
     <string name="ElvenDagger_Info">This weapon is made of special metal alloy, making it a lot lighter compared to regular dagger.</string>
 
+    <!-- STRINGS OF IceGuardianCoreModule CLASS -->
+    <string name="IceGuardianCoreModule_Name">Ice Guardian Core</string>
+    <string name="IceGuardianCoreModule_Info">Cory.</string>
+
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">Ring of Frost</string>
+    <string name="RingOfFrost_Info">Frosty.</string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">Spider Queen Carapace</string>
+    <string name="SpiderQueenCarapace_Info">Spidy.</string>
+
+
     <!-- Object descriptions -->
     <!-- STRINGS OF LibraryBook CLASS -->
     <string name="LibraryBook_Name">Library book</string>
     <string name="LibraryBook_Description">This tome is really huge. It holds all the knowledge, that adventurers has discovered in the dungeon.</string>
+
 
     <!-- Wnd descriptions -->
     <!-- STRINGS OF WndSettings CLASS -->
