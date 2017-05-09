@@ -77,7 +77,7 @@ public class SaveUtils {
 	}
 	
 	public static boolean slotUsed(String slot, HeroClass cl) {
-		String[] slotFiles = FileSystem.getInteralStorageFile(slot)
+		String[] slotFiles = FileSystem.getInternalStorageFile(slot)
 				.getAbsoluteFile().list();
 		if (slotFiles == null) {
 			return false;
@@ -116,7 +116,7 @@ public class SaveUtils {
 	}
 	
 	private static void copyFromSaveSlot(String slot, HeroClass heroClass) {
-		String[] files = FileSystem.getInteralStorageFile(slot).list();
+		String[] files = FileSystem.getInternalStorageFile(slot).list();
 		if(files == null) {
 			return;
 		}
@@ -124,8 +124,8 @@ public class SaveUtils {
 		for (String file : files) {
 			if (isRelatedTo(file, heroClass)) {
 
-				String from = FileSystem.getInteralStorageFile(slot + "/" + file).getAbsolutePath();
-				String to = FileSystem.getInteralStorageFile(file).getAbsolutePath();
+				String from = FileSystem.getInternalStorageFile(slot + "/" + file).getAbsolutePath();
+				String to = FileSystem.getInternalStorageFile(file).getAbsolutePath();
 
 				GLog.toFile("restoring file: %s, (%s -> %s)", file, from, to);
 
@@ -135,7 +135,7 @@ public class SaveUtils {
 	}
 
 	public static void deleteSaveFromSlot(String slot, HeroClass cl) {
-		File slotDir = FileSystem.getInteralStorageFile(slot)
+		File slotDir = FileSystem.getInternalStorageFile(slot)
 				.getAbsoluteFile();
 
 		File[] slotFiles = slotDir.listFiles();
@@ -163,8 +163,8 @@ public class SaveUtils {
 		for (String file : files) {
 			if (isRelatedTo(file, cl)) {
 				
-				String from = FileSystem.getInteralStorageFile(file).getAbsolutePath();
-				String to = FileSystem.getInteralStorageFile(slot + "/" + file).getAbsolutePath();
+				String from = FileSystem.getInternalStorageFile(file).getAbsolutePath();
+				String to = FileSystem.getInternalStorageFile(slot + "/" + file).getAbsolutePath();
 				
 				GLog.toFile("storing file: %s, (%s -> %s)", file, from, to);
 				
@@ -216,7 +216,7 @@ public class SaveUtils {
 
 	public static String depthFileForLoad(HeroClass cl, int depth, String levelKind, String levelId) {
 		String newFormat = depthFileForSave(cl, depth, levelKind, levelId);
-		if(FileSystem.getInteralStorageFile(newFormat).exists()) {
+		if(FileSystem.getInternalStorageFile(newFormat).exists()) {
 			return newFormat;
 		}
 		

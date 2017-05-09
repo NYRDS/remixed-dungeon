@@ -17,7 +17,7 @@ public class FileSystem {
 		m_context = context;
 	}
 
-	static public File getInteralStorageFile(String fileName) {
+	static public File getInternalStorageFile(String fileName) {
 		File storageDir = m_context.getFilesDir();
 		return new File(storageDir, fileName);
 	}
@@ -43,7 +43,7 @@ public class FileSystem {
 	}
 
 	static public String getInteralStorageFileName(String fileName) {
-		return getInteralStorageFile(fileName).getAbsolutePath();
+		return getInternalStorageFile(fileName).getAbsolutePath();
 	}
 
 	static public File getExternalStorageFile(String fileName) {
@@ -56,7 +56,7 @@ public class FileSystem {
 	}
 
 	static public File getFile(String fname) {
-		return getInteralStorageFile(fname);
+		return getInternalStorageFile(fname);
 	}
 
 	static public void deleteRecursive(File fileOrDirectory) {

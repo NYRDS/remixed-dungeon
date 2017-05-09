@@ -56,7 +56,7 @@ public class Library {
 	private static void loadLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromFile(FileSystem.getInteralStorageFile(libraryFile)).toString(),
+					JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(libraryFile)).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {
 					}.getType()
 			);

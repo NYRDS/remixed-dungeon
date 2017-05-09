@@ -13,9 +13,11 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.games.snapshot.Snapshot;
+import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.games.snapshot.Snapshots;
 import com.watabou.pixeldungeon.Preferences;
 
@@ -32,7 +34,7 @@ import static android.app.Activity.RESULT_OK;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<Snapshots.LoadSnapshotsResult> {
 	private static final int RC_SIGN_IN = 123;
 
 	private GoogleApiClient googleApiClient;
@@ -58,12 +60,12 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static void connect() {
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES,true);
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
 		playGames.googleApiClient.connect();
 	}
 
 	public static void disconnect() {
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES,false);
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
 		playGames.googleApiClient.disconnect();
 	}
 
@@ -72,15 +74,16 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			@Override
 			public void close() throws IOException {
 				super.close();
-				writeToSnapshot(snapshotId,toByteArray());
+				writeToSnapshot(snapshotId, toByteArray());
 			}
 		};
 	}
 
 	public static void writeToSnapshot(String snapshotId, byte[] content) {
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient,snapshotId,true);
+		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, true);
 		Snapshot snapshot = result.await().getSnapshot();
 		snapshot.getSnapshotContents().writeBytes(content);
+		Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
 	}
 
 	public static InputStream streamFromSnapshot(String snapshotId) {
@@ -88,7 +91,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static byte[] readFromSnapshot(String snapshotId) {
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient,snapshotId,true);
+		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
 		Snapshot snapshot = result.await().getSnapshot();
 		try {
 			return snapshot.getSnapshotContents().readFully();
@@ -97,9 +100,21 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		}
 	}
 
+
+	public static boolean haveSnapshot(String snapshotId) {
+		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
+		return result.await().getStatus().isSuccess();
+	}
+
+	public static boolean isConnected() {
+		return playGames.googleApiClient.isConnected();
+	}
+
 	@Override
 	public void onConnected(@Nullable Bundle bundle) {
 		Log.i("Play Games", "onConnected");
+		Games.Snapshots.load(googleApiClient, false).setResultCallback(this);
+
 	}
 
 	@Override
@@ -110,7 +125,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	@Override
 	public void onConnectionFailed(@NonNull ConnectionResult result) {
-		Log.i("Play Games", "onConnectionFailed: "+ result.getErrorMessage());
+		Log.i("Play Games", "onConnectionFailed: " + result.getErrorMessage());
 
 		int requestCode = RC_SIGN_IN;
 
@@ -139,10 +154,19 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			if (resultCode == RESULT_OK) {
 				playGames.googleApiClient.connect();
 			} else {
-				Log.e("Play Games",String.format("%d",requestCode));
+				Log.e("Play Games", String.format("%d", requestCode));
 			}
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
+		if (result.getStatus().isSuccess()) {
+			Log.i("Play Games", "load ok!");
+		} else {
+			Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
+		}
 	}
 }

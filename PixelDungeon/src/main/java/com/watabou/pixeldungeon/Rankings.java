@@ -145,7 +145,7 @@ public enum Rankings {
 
 		records = new ArrayList<>();
 
-		if(!FileSystem.getInteralStorageFile(RANKINGS_FILE).exists()) {
+		if(!FileSystem.getInternalStorageFile(RANKINGS_FILE).exists()) {
 			return;
 		}
 
