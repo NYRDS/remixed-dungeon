@@ -147,9 +147,31 @@ public class PixelDungeon extends Game {
 		}
 	}
 
+
+
+	public static String bundle2string(Bundle bundle) {
+		if (bundle == null) {
+			return null;
+		}
+		String string = "Bundle{";
+		for (String key : bundle.keySet()) {
+			string += " " + key + " => " + bundle.get(key) + ";";
+		}
+		string += " }Bundle";
+		return string;
+	}
+
+
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		GLog.i("onActivityResult(" + requestCode + "," + resultCode + "," + data);
+
+		String extras = "";
+		if(data!=null) {
+			extras = bundle2string(data.getExtras());
+		}
+
+		GLog.i("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
 
 		if(Iap.onActivityResult(requestCode, resultCode, data)) {
 			return;

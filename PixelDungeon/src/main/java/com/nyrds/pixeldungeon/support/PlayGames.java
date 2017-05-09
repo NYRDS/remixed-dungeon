@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,7 +36,7 @@ import static android.app.Activity.RESULT_OK;
  */
 
 public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<Snapshots.LoadSnapshotsResult> {
-	private static final int RC_SIGN_IN = 123;
+	private static final int RC_SIGN_IN = 42353;
 
 	private GoogleApiClient googleApiClient;
 	private Activity        activity;
@@ -44,6 +45,8 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	private PlayGames(Activity ctx) {
 		activity = ctx;
+
+
 		googleApiClient = new GoogleApiClient.Builder(activity)
 				.addConnectionCallbacks(this)
 				.addOnConnectionFailedListener(this)
@@ -66,7 +69,10 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static void disconnect() {
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
-		playGames.googleApiClient.disconnect();
+		if(isConnected()) {
+			Games.signOut(playGames.googleApiClient);
+			playGames.googleApiClient.disconnect();
+		}
 	}
 
 	public static OutputStream streamToSnapshot(final String snapshotId) {
@@ -80,10 +86,19 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static void writeToSnapshot(String snapshotId, byte[] content) {
+		Log.i("Play Games","Streaming to " + snapshotId);
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, true);
 		Snapshot snapshot = result.await().getSnapshot();
 		snapshot.getSnapshotContents().writeBytes(content);
-		Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
+
+		PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
+		Snapshots.CommitSnapshotResult commitResult = pendingResult.await();
+
+		if(commitResult.getStatus().isSuccess()) {
+			Log.i("Play Games", "commit ok");
+		} else {
+			Log.e("Play Games", "commit" + commitResult.getStatus().getStatusMessage());
+		}
 	}
 
 	public static InputStream streamFromSnapshot(String snapshotId) {
@@ -120,7 +135,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	@Override
 	public void onConnectionSuspended(int i) {
 		Log.i("Play Games", "onConnectionSuspended");
-
+		googleApiClient.connect();
 	}
 
 	@Override
@@ -149,12 +164,15 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static boolean onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == RC_SIGN_IN) {
-			//mSignInClicked = false;
-			//mResolvingConnectionFailure = false;
 			if (resultCode == RESULT_OK) {
 				playGames.googleApiClient.connect();
 			} else {
-				Log.e("Play Games", String.format("%d", requestCode));
+				Log.e("Play Games", String.format("%d", resultCode));
+				Dialog dialog = GooglePlayServicesUtil.getErrorDialog(resultCode,
+						playGames.activity, requestCode);
+				if (dialog != null) {
+					dialog.show();
+				}
 			}
 			return true;
 		}
