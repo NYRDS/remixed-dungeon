@@ -8,6 +8,7 @@
     <string name="appodealRewardAdUnitId"></string>
     <string name="iapKey"></string>
     <string name="ownSignature"></string>
+    <string name="app_id"></string>
     
     <!-- firebase stuff-->
     <string name="default_web_client_id" translatable="false"></string>
