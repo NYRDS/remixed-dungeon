@@ -169,8 +169,6 @@ public class Hero extends Char {
 	public  HeroAction curAction  = null;
 	public  HeroAction lastAction = null;
 
-	private long lastActionTime;
-
 	private Char enemy;
 
 	public Armor.Glyph killerGlyph = null;
@@ -560,7 +558,7 @@ public class Hero extends Char {
 
 		} else {
 
-			lastActionTime = SystemTime.now();
+			SystemTime.updateLastActionTime();
 
 			restoreHealth = false;
 
@@ -1865,8 +1863,8 @@ public class Hero extends Char {
 	@Override
 	protected boolean timeout() {
 		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
-		if(SystemTime.now() - lastActionTime > PixelDungeon.getMoveTimeout()) {
-			lastActionTime = SystemTime.now();
+		if(SystemTime.now() - SystemTime.getLastActionTime() > PixelDungeon.getMoveTimeout()) {
+			SystemTime.updateLastActionTime();
 			spend(TIME_TO_REST);
 			return true;
 		}

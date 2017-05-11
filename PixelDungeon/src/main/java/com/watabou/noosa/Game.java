@@ -250,6 +250,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		super.onResume();
 
 		now = 0;
+
+		SystemTime.tick();
+		SystemTime.updateLastActionTime();
+
 		view.onResume();
 
 		Music.INSTANCE.resume();
