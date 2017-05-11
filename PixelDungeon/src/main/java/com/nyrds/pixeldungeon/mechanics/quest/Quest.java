@@ -13,33 +13,37 @@ public class Quest {
     private static int questProgress = 0;
     protected static int questQuantity = 1;
 
+    public Quest(){
+    }
+
+    void startQuest(){ started = true; }
 
     void completeQuest(){
         completed = true;
-    }
-
-    void startQuest(){
-        if (!started){
-            started = true;
-        }
     }
 
     void turnInQuest(){
         turnedIn = true;
     }
 
-    public boolean progressQuest(boolean questStage){
-        if (!questStage){
-            return true;
-        } else {
-            return false;
-        }
+    public boolean isStarted(){
+        return started;
+    }
+
+    public boolean isCompleted(){
+        return completed;
+    }
+
+    public boolean isTurnedIn(){
+        return turnedIn;
     }
 
     public static void reset() {
         started = false;
         completed = false;
         turnedIn = false;
+        questProgress = 0;
+        questQuantity = 1;
     }
 
     protected void checkForCompletion(){

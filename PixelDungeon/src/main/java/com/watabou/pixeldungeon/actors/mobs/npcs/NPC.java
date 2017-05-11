@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.mechanics.quest.Quest;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
@@ -32,7 +33,9 @@ import org.json.JSONObject;
 import java.util.Locale;
 
 public abstract class NPC extends Mob {
-	
+
+	public Quest quest = null;
+
 	protected NPC() {
 		hp(ht(1));
 		exp = 0;
