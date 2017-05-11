@@ -11,19 +11,23 @@ public class FetchQuest extends Quest {
 
     private static Item questItem = null;
 
-    private void setQuestItem(Item item) {
+    private void setQuestItem(Item item, int quantity) {
         questItem = item;
+        questQuantity = quantity;
     }
 
-    @Override
-    protected boolean checkForCompletion(){
+    private void setQuestItem(Item item) {
+        setQuestItem(item, 1);
+    }
+
+    private boolean checkForItem(){
         Item item = Dungeon.hero.belongings.getItem(questItem.getClass());
-        if ( item != null){
+        if ( item != null && item.quantity() >= questQuantity){
             item.removeItemFrom(Dungeon.hero);
             return true;
         } else{
             return false;
         }
-
     }
+
 }
