@@ -52,8 +52,10 @@ import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -131,7 +133,7 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping().identify());
 			hero.collect(new PotionOfFrost().identify());
 			hero.collect(new PotionOfLiquidFlame().identify());
-			hero.collect(new ScrollOfPsionicBlast().identify());
+			hero.collect(new ScrollOfUpgrade().identify());
 		}
 
 		Item ring = new RingOfAccuracy().identify();

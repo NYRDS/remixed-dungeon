@@ -11,7 +11,7 @@ public class IceGuardianCoreModule extends Item {
 		image = 2;
 		identify();
 	}
-	
+
 	@Override
 	public ItemSprite.Glowing glowing() {
 		return new ItemSprite.Glowing( 0x00FFFF );
