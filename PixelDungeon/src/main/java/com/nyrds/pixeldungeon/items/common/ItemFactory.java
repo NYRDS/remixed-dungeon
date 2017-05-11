@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items.common;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
 import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
@@ -360,6 +361,7 @@ public class ItemFactory {
 		registerItemClass(ElvenBow.class);
 		registerItemClass(RatHide.class);
 		registerItemClass(BlackSkullOfMastery.class);
+		registerItemClass(CandleOfMindVision.class);
 
 		mItemsList.put("Rotberry.Seed", WandMaker.Rotberry.Seed.class);
 		mItemsList.put("Earthroot.Seed", Earthroot.Seed.class);
@@ -405,7 +407,11 @@ public class ItemFactory {
 	}
 
 	public static String itemNameByClass(Class<? extends Item> clazz) {
-		return mItemsList.inverse().get(clazz);
+		String ret = mItemsList.inverse().get(clazz);
+		if(ret==null) {
+			throw new TrackedRuntimeException("Unregistered item class "+ clazz.getCanonicalName());
+		}
+		return ret;
 	}
 
 	public static Item createItemFromDesc(JSONObject itemDesc) throws IllegalAccessException, InstantiationException, JSONException {
