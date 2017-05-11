@@ -26,11 +26,12 @@ import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
+import com.nyrds.pixeldungeon.items.material.SoulShard;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
-import com.nyrds.pixeldungeon.items.material.SoulShard;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -193,6 +194,8 @@ public class ItemFactory {
 	private static void registerItemClass(Class<? extends Item> itemClass) {
 		mItemsList.put(itemClass.getSimpleName(), itemClass);
 	}
+
+
 
 	private static void initItemsMap() {
 
@@ -409,7 +412,8 @@ public class ItemFactory {
 	public static String itemNameByClass(Class<? extends Item> clazz) {
 		String ret = mItemsList.inverse().get(clazz);
 		if(ret==null) {
-			throw new TrackedRuntimeException("Unregistered item class "+ clazz.getCanonicalName());
+			EventCollector.logEvent("Unregistered entry",clazz.getCanonicalName());
+			ret = "ClothArmor";
 		}
 		return ret;
 	}
