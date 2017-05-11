@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <!-- Mobs descriptions -->
-   
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">Stadtwache</string>
     <string name="TownGuardNPC_Name_Objective">Stadtwache</string>

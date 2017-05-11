@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Codex CLASS-->
-  <string name="Codex_Name">书</string>
-  <string name="Codex_ACRead">阅读</string>
-  <string name="Codex_Info">你在任何图书馆都能找到的书之一</string>
-  <string name="Codex_Blinded">你在目盲时不能阅读</string>
+  <string name="Codex_Name">書</string>
+  <string name="Codex_ACRead">閱讀</string>
+  <string name="Codex_Info">在任何一所圖書館裏，云云書海中都能找到的一本書</string>
+  <string name="Codex_Blinded">受強光刺激後，您視線一片模糊，無法閱讀</string>
   <string-array name="Codex_Story">
     <item>创造像素地牢的watabou看着他的像素地牢，说：这真是个好游戏!</item>
     <item>反弹刻印-弹退敌人。</item>
