@@ -396,7 +396,7 @@ public class Hero extends Char {
 			bonus += ((RingOfEvasion.Evasion) buff).level;
 		}
 
-		if (buffs(RingOfFrost.FrostAura.class) != null && enemy.distance(this) < 2){
+	/*	if (buffs(RingOfFrost.FrostAura.class) != null && enemy.distance(this) < 2){
 			int powerLevel = this.belongings.getItem(RingOfFrost.class).level();
 			if(enemy.isAlive() && enemy != null){
 				Buff.affect( enemy, Slow.class, Slow.duration( enemy ) / 5 + powerLevel );
@@ -406,7 +406,7 @@ public class Hero extends Char {
 				enemy.damage(powerLevel, this);
 			}
 		}
-
+*/
 		float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
 		if (paralysed) {
 			evasion /= 2;
