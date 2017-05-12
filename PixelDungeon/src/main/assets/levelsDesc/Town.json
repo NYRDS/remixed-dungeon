@@ -23,7 +23,6 @@
     {"kind":"TownGuardNPC","x":8,"y":8},
     {"kind":"TownGuardNPC","x":10,"y":8},
     {"kind":"TownsfolkSilentNPC","x":5,"y":21},
-    {"kind":"ArtificerNPC","x":4,"y":10},
     {"kind":"TownsfolkMovieNPC","x":24,"y":19},
     {"kind":"TownsfolkNPC","x":19,"y":23}
   ]
