@@ -43,6 +43,11 @@ public class RingOfFrost extends Artifact {
 		return new FrostAura();
 	}
 
+	@Override
+	public boolean isUpgradable() {
+		return true;
+	}
+
 	public class FrostAura extends ArtifactBuff {
 		@Override
 		public int icon() {
