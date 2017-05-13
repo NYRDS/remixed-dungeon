@@ -33,6 +33,7 @@ public class Library {
 	private static Map<String, Map<String, Integer>> mKnowledgeLevel;
 
 	private static String libraryFile = "library.json";
+	private static boolean saveNeeded = false;
 
 	private static Gson gson = new Gson();
 
@@ -40,7 +41,11 @@ public class Library {
 		loadLibrary();
 	}
 
-	private static void saveLibrary() {
+	public static void saveLibrary() {
+		if(!saveNeeded) {
+			return;
+		}
+		saveNeeded = false;
 		gson.toJson(mKnowledgeLevel);
 		try {
 			OutputStream output = Storage.getStorage().getOutputStream(libraryFile);
@@ -49,7 +54,6 @@ public class Library {
 		} catch (IOException e) {
 			throw new TrackedRuntimeException(e);
 		}
-
 	}
 
 	private static void loadLibrary() {
@@ -69,7 +73,7 @@ public class Library {
 
 		if (knowledgeLevel < 10 ) {
 			getCategory(category).put(clazz, knowledgeLevel + 1);
-			saveLibrary();
+			saveNeeded = true;
 		}
 	}
 

@@ -26,7 +26,6 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
-
 import android.media.AudioManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -50,7 +49,6 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -112,7 +110,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public Executor executor = Executors.newSingleThreadExecutor();
 
 	private Runnable doOnResume;
-	public  Storage  storage;
 
 	public Game(Class<? extends Scene> c) {
 		super();

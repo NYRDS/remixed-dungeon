@@ -22,6 +22,7 @@ import android.support.annotation.NonNull;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -400,6 +401,9 @@ public class Dungeon {
 			WndResurrect.instance.hide();
 			Hero.reallyDie(WndResurrect.causeOfDeath);
 		}
+
+		Badges.saveGlobal();
+		Library.saveLibrary();
 	}
 
 	public synchronized static void saveAll() {

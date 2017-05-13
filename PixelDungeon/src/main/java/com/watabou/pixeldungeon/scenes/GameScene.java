@@ -370,7 +370,6 @@ public class GameScene extends PixelScene {
 	@Override
 	public synchronized void pause() {
 		Dungeon.saveAll();
-		Badges.saveGlobal();
 	}
 
 	@Override
