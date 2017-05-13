@@ -10,7 +10,7 @@
 "test_hunt_quest_name":{
 	"type":"huntQuest",
 	"target":"Gnoll",
-	"qauntity":"5",
+	"quantity":"5",
 	"startMessage":"Kill'em gnolls, like 4 of them.",
 	"reminderMessage":"I am waiting till you kill 4 gnolls.",
 	"turnInMessage":"Thank you for killing 4 gnolls.",
