@@ -1,0 +1,19 @@
+{
+"test_fetch_quest_name":{
+	"type":"fetchQuest",
+	"target":"SpiderQueenCarapace",
+	"startMessage":"Bring me spider queen carapace.",
+	"reminderMessage":"I am still waiting for that spider queen carapace.",
+	"turnInMessage":"Thank you for that spider queen carapace.",
+	"aftermathMessage":"To this day, I am still enjoying that spider queen carapace."
+   },
+"test_hunt_quest_name":{
+	"type":"huntQuest",
+	"target":"Gnoll",
+	"quantity":"5",
+	"startMessage":"Kill'em gnolls, like 4 of them.",
+	"reminderMessage":"I am waiting till you kill 4 gnolls.",
+	"turnInMessage":"Thank you for killing 4 gnolls.",
+	"aftermathMessage":"Damn gnolls, good that you killed them."
+   }
+}

@@ -9,10 +9,12 @@ public class BladeOfSouls extends SpecialWeapon {
 		imageFile = "items/swords.png";
 		image = 7;
 		enchatable = false;
+		MIN = (int)(max() * 1.2);
+		MAX = (int)(max() * 1.4);
 	}
 
 	public BladeOfSouls() {
-		super( 3, 1.3f, 1f );
+		super( 3, 1.3f, 0.8f );
 	}
 	
 	@Override

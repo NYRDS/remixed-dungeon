@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
+import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
@@ -24,10 +25,13 @@ import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
+import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
+import com.nyrds.pixeldungeon.items.material.SoulShard;
+import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
-import com.nyrds.pixeldungeon.items.necropolis.SoulShard;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -190,6 +194,8 @@ public class ItemFactory {
 	private static void registerItemClass(Class<? extends Item> itemClass) {
 		mItemsList.put(itemClass.getSimpleName(), itemClass);
 	}
+
+
 
 	private static void initItemsMap() {
 
@@ -372,6 +378,10 @@ public class ItemFactory {
 		registerItemClass(DwarfToken.class);
 		registerItemClass(RatArmor.class);
 		registerItemClass(ElvenDagger.class);
+		registerItemClass(IceGuardianCoreModule.class);
+		registerItemClass(SpiderQueenCarapace.class);
+		registerItemClass(RingOfFrost.class);
+
 	}
 
 	public static boolean isValidItemClass(String itemClass) {
@@ -402,7 +412,8 @@ public class ItemFactory {
 	public static String itemNameByClass(Class<? extends Item> clazz) {
 		String ret = mItemsList.inverse().get(clazz);
 		if(ret==null) {
-			throw new TrackedRuntimeException("Unregistered item class "+ clazz.getCanonicalName());
+			EventCollector.logEvent("Unregistered entry",clazz.getCanonicalName());
+			ret = "ClothArmor";
 		}
 		return ret;
 	}

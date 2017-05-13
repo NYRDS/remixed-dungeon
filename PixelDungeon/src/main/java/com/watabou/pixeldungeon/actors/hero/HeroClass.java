@@ -26,8 +26,10 @@ import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
-import com.nyrds.pixeldungeon.items.icecaves.IceKey;
+import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
+import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -45,17 +47,16 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.food.PseudoPasty;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -132,23 +133,23 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping().identify());
 			hero.collect(new PotionOfFrost().identify());
 			hero.collect(new PotionOfLiquidFlame().identify());
-			hero.collect(new ScrollOfPsionicBlast().identify());
+			hero.collect(new ScrollOfUpgrade().identify());
 		}
 
 		Item ring = new RingOfAccuracy().identify();
 		ring.cursed = true;
 		hero.collect(ring);
-		hero.collect(new HeartOfDarkness().identify());
+		hero.collect(new RingOfFrost().identify());
 		hero.collect(new CandleOfMindVision());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));
-		hero.collect(new BattleAxe());
+		hero.collect(new IceGuardianCoreModule());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 		hero.collect(new RingOfHaggler());
 
-		hero.collect(new PseudoPasty());
+		hero.collect(new SpiderQueenCarapace());
 
 		hero.ht(1000);
 		hero.hp(1000);

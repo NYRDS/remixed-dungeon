@@ -104,6 +104,7 @@ public class Chasm {
 				GLog.n(Game.getVar(R.string.Chasm_Info));
 			}
 		} );
+		InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 	}
 
 	public static void mobFall( Mob mob ) {

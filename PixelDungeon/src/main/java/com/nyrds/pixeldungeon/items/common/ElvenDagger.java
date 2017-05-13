@@ -17,11 +17,15 @@ public class ElvenDagger extends MeleeWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 8;
-		STR = typicalSTR() - 1;
 	}
 
 	public ElvenDagger() {
 		super( 1, 1.5f, 0.7f );
+	}
+
+	@Override
+	public int typicalSTR() {
+		return 9;
 	}
 
 }
