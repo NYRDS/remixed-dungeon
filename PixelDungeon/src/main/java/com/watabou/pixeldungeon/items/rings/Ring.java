@@ -210,7 +210,7 @@ public class Ring extends Artifact implements UnknownItem{
 			if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ROGUE && !isKnown()) {
 				setKnown();
 				GLog.i( TXT_KNOWN, name() );
-				Badges.validateItemLevelAquired( Ring.this );
+				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			
 			return super.attachTo(target);
@@ -223,7 +223,7 @@ public class Ring extends Artifact implements UnknownItem{
 				String gemName = name();
 				identify();
 				GLog.w( TXT_IDENTIFY, gemName, Ring.this.toString() );
-				Badges.validateItemLevelAquired( Ring.this );
+				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			
 			spend( TICK );

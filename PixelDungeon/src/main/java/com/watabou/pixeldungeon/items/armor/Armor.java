@@ -197,7 +197,7 @@ public class Armor extends EquipableItem {
 			if (--hitsToKnow <= 0) {
 				levelKnown = true;
 				GLog.w( TXT_IDENTIFY, name(), toString() );
-				Badges.validateItemLevelAquired( this );
+				Badges.validateItemLevelAcquired( this );
 			}
 		}
 		

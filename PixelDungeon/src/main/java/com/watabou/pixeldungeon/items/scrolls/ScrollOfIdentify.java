@@ -40,7 +40,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		item.identify();
 		GLog.i(Utils.format(Game.getVar(R.string.ScrollOfIdentify_Info1), item));
 
-		Badges.validateItemLevelAquired( item );
+		Badges.validateItemLevelAcquired( item );
 	}
 
 	@Override

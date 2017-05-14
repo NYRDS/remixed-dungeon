@@ -179,7 +179,7 @@ public class Item implements Bundlable, Presser {
 		if (items.size() < container.size) {
 
 			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
-				Badges.validateItemLevelAquired(this);
+				Badges.validateItemLevelAcquired(this);
 			}
 
 			items.add(this);

@@ -199,7 +199,7 @@ public class Blacksmith extends NPC {
 		first.upgrade();
 		GLog.p( TXT_LOOKS_BETTER, first.name() );
 		Dungeon.hero.spendAndNext( 2f );
-		Badges.validateItemLevelAquired( first );
+		Badges.validateItemLevelAcquired( first );
 		
 		if (second.isEquipped( Dungeon.hero )) {
 			((EquipableItem)second).doUnequip( Dungeon.hero, false );

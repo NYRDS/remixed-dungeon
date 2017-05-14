@@ -37,6 +37,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<Snapshots.LoadSnapshotsResult> {
 	private static final int RC_SIGN_IN = 42353;
+	private static final int RC_SHOW_BADGES = 67584;
 
 	private GoogleApiClient googleApiClient;
 	private Activity        activity;
@@ -60,9 +61,15 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static void init(Activity context) {
 		playGames = new PlayGames(context);
+		Log.i("Play Games", "init");
+	}
+
+	public static void unlockAchievement(String achievementCode) {
+		Games.Achievements.unlock(playGames.googleApiClient, achievementCode);
 	}
 
 	public static void connect() {
+		Log.i("Play Games", "connect");
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
 		playGames.googleApiClient.connect();
 	}
@@ -185,6 +192,15 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			Log.i("Play Games", "load ok!");
 		} else {
 			Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
+		}
+	}
+
+	public static void showBadges() {
+		if(isConnected()) {
+			playGames.activity.startActivityForResult(
+					Games.Achievements.getAchievementsIntent(playGames.googleApiClient),
+					RC_SHOW_BADGES
+			);
 		}
 	}
 }

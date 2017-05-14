@@ -40,7 +40,7 @@ public class RingOfThorns extends Ring {
 	public boolean doPickUp( Hero hero ) {
 		identify();
 		Badges.validateRingOfThorns();
-		Badges.validateItemLevelAquired( this );
+		Badges.validateItemLevelAcquired( this );
 		return super.doPickUp(hero);
 	}
 	

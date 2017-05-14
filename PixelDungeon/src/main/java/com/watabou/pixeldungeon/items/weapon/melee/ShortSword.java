@@ -106,7 +106,7 @@ public class ShortSword extends MeleeWeapon {
 				((MeleeWeapon)item).safeUpgrade();
 				getCurUser().spendAndNext( TIME_TO_REFORGE );
 				
-				Badges.validateItemLevelAquired( item );
+				Badges.validateItemLevelAcquired( item );
 				
 			} else {
 				

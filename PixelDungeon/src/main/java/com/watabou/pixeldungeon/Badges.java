@@ -17,14 +17,18 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.util.Log;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
@@ -56,6 +60,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 
 public class Badges {
 
@@ -251,7 +256,7 @@ public class Badges {
 
 			catch (IOException e) {
 				global = new HashSet<>();
-				EventCollector.logException(e, "Badges.loadGloabal");
+				EventCollector.logException(e, "Badges.loadGlobal");
 			}
 	}
 
@@ -425,7 +430,7 @@ public class Badges {
 		displayBadge(badge);
 	}
 
-	public static void validateItemLevelAquired(Item item) {
+	public static void validateItemLevelAcquired(Item item) {
 
 		// This method should be called:
 		// 1) When an item is obtained (Item.collect)
@@ -912,18 +917,21 @@ public class Badges {
 		displayBadge(Badge.CHAMPION);
 	}
 
-	private static void displayBadge(Badge badge) {
+	private static void displayBadge(Badge  badge) {
 
 		if (badge == null) {
 			return;
 		}
 
-		if (global.contains(badge)) {
+		Log.i("Badge",badge.name());
+		String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
+		Log.i("Badge", achievementCode);
+		PlayGames.unlockAchievement(achievementCode);
 
+		if (global.contains(badge)) {
 			if (!badge.meta) {
 				GLog.h(Game.getVar(R.string.Badges_Info1), badge.description);
 			}
-
 		} else {
 
 			global.add(badge);

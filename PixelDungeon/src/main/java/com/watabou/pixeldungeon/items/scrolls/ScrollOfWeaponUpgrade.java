@@ -46,7 +46,7 @@ public class ScrollOfWeaponUpgrade extends InventoryScroll {
 		
 		GLog.p( TXT_LOOKS_BETTER, weapon.name() );
 		
-		Badges.validateItemLevelAquired( weapon );
+		Badges.validateItemLevelAcquired( weapon );
 		
 		getCurUser().getSprite().emitter().start( Speck.factory( Speck.UP ), 0.2f, 3 );
 	}

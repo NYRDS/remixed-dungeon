@@ -137,7 +137,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 				item.upgrade();
 				getCurUser().spendAndNext( TIME_TO_DISENCHANT );
 				
-				Badges.validateItemLevelAquired( item );
+				Badges.validateItemLevelAcquired( item );
 				
 			} else {
 				if (disenchantEquipped) {

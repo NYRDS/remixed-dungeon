@@ -148,19 +148,19 @@ public class Belongings implements Iterable<Item> {
 	public void observe() {
 		if (weapon != null) {
 			weapon.identify();
-			Badges.validateItemLevelAquired( weapon );
+			Badges.validateItemLevelAcquired( weapon );
 		}
 		if (armor != null) {
 			armor.identify();
-			Badges.validateItemLevelAquired( armor );
+			Badges.validateItemLevelAcquired( armor );
 		}
 		if (ring1 != null) {
 			ring1.identify();
-			Badges.validateItemLevelAquired( ring1 );
+			Badges.validateItemLevelAcquired( ring1 );
 		}
 		if (ring2 != null) {
 			ring2.identify();
-			Badges.validateItemLevelAquired( ring2 );
+			Badges.validateItemLevelAcquired( ring2 );
 		}
 		for (Item item : backpack) {
 			item.cursedKnown = true;

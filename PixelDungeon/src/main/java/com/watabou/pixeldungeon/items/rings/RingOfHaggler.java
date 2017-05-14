@@ -40,7 +40,7 @@ public class RingOfHaggler extends Ring {
 	public boolean doPickUp( Hero hero ) {
 		identify();
 		Badges.validateRingOfHaggler();
-		Badges.validateItemLevelAquired( this );
+		Badges.validateItemLevelAcquired( this );
 		return super.doPickUp(hero);
 	}
 	
