@@ -17,15 +17,14 @@ import java.util.Map;
 
 public class WndLibraryCatalogue extends Window {
 
-	private static final int BTN_HEIGHT		  = 16;
-	private static final int BTN_WIDTH		  = 38;
-	private static final int GAP			  = 4;
+	private static final int BTN_HEIGHT = 16;
+	private static final int BTN_WIDTH  = 38;
+	private static final int GAP        = 4;
 
-	private static final int WIDTH			  = WndHelper.getLimitedWidth(112);
+	private static final int WIDTH = WndHelper.getLimitedWidth(112);
 
 	public WndLibraryCatalogue(String category, String catalogueName) {
 		super();
-		final Window context = this;
 
 		int yPos = 0;
 
@@ -42,33 +41,19 @@ public class WndLibraryCatalogue extends Window {
 
 		Component content = new Component();
 
-		Map<String,Integer> knownMap = Library.getKnowledgeMap(category);
+		Map<String, Integer> knownMap = Library.getKnowledgeMap(category);
 
 		//List
 		for (final String entry : knownMap.keySet()) {
-			/*
-			Text name = PixelScene.createMultiline(Library.infoHeader(category,entry),
-					GuiProperties.mediumTitleFontSize());
-
-			name.hardlight(0xFFFFFF);
-
-			name.y = yPos + GAP;
-			name.maxWidth(WIDTH - GAP * 2 - BTN_WIDTH);
-			name.measure();
-			name.x = GAP;
-
-			content.add(name);
-*/
-		//	String buttonText = Game.getVar(R.string.WndHats_InfoButton);
 
 			//Button
 			final String finalCategory = category;
-			Library.EntryHeader entryHeader = Library.infoHeader(category,entry);
+			Library.EntryHeader entryHeader = Library.infoHeader(category, entry);
 			TextButton rb = new RedButton(entryHeader.header) {
 				@Override
 				protected void onClick() {
 					super.onClick();
-					GameScene.show(Library.infoWindow(finalCategory,entry));
+					GameScene.show(Library.infoWindow(finalCategory, entry));
 				}
 
 				@Override
@@ -77,11 +62,11 @@ public class WndLibraryCatalogue extends Window {
 
 					float margin = (height - text.baseLine()) / 2;
 
-					text.x = PixelScene.align( PixelScene.uiCamera, x + margin );
-					text.y = PixelScene.align( PixelScene.uiCamera, y + margin );
+					text.x = PixelScene.align(PixelScene.uiCamera, x + margin);
+					text.y = PixelScene.align(PixelScene.uiCamera, y + margin);
 
-					icon.x = PixelScene.align( PixelScene.uiCamera, x + width - margin - icon.width );
-					icon.y = PixelScene.align( PixelScene.uiCamera, y + (height - icon.height()) / 2 );
+					icon.x = PixelScene.align(PixelScene.uiCamera, x + width - margin - icon.width);
+					icon.y = PixelScene.align(PixelScene.uiCamera, y + (height - icon.height()) / 2);
 				}
 			};
 			rb.icon(entryHeader.icon);
@@ -92,10 +77,10 @@ public class WndLibraryCatalogue extends Window {
 			yPos = (int) rb.bottom() + 1;
 		}
 
-		int HEIGHT = WndHelper.getFullscreenHeight() - BTN_HEIGHT *2;
+		int HEIGHT = WndHelper.getFullscreenHeight() - BTN_HEIGHT * 2;
 		int h = Math.min(HEIGHT - GAP, yPos);
 
-		resize( WIDTH,  h + BTN_WIDTH);
+		resize(WIDTH, h + BTN_WIDTH);
 
 		content.setSize(WIDTH, yPos);
 		ScrollPane list = new ScrollPane(content);
@@ -104,7 +89,7 @@ public class WndLibraryCatalogue extends Window {
 		add(list);
 
 		float topGap = listTitle.height() + GAP;
-		float BottomGap =  listTitle.bottom() - BTN_HEIGHT/2;
+		float BottomGap = listTitle.bottom() - BTN_HEIGHT / 2;
 
 		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
 
@@ -113,12 +98,12 @@ public class WndLibraryCatalogue extends Window {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				context.hide();
+				hide();
 				GameScene.show(new WndLibrary());
 			}
 		};
 
-		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom()+ GAP, BTN_WIDTH + GAP, BTN_HEIGHT);
+		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom() + GAP, BTN_WIDTH + GAP, BTN_HEIGHT);
 
 		add(back);
 	}
