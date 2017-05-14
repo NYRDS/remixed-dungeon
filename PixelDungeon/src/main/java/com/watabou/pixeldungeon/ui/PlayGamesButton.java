@@ -1,9 +1,9 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Button;
-import com.watabou.pixeldungeon.Preferences;
 
 public class PlayGamesButton extends Button {
 
@@ -22,7 +22,7 @@ public class PlayGamesButton extends Button {
 		
 		image = Icons.get(Icons.TARGET);
 
-		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES,false)) {
+		if(PlayGames.isConnected()) {
 			image.brightness(1.5f);
 		} else {
 			image.brightness(0.5f);

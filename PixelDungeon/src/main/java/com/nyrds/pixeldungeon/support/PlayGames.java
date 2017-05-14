@@ -69,14 +69,17 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static void connect() {
-		Log.i("Play Games", "connect");
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
-		playGames.googleApiClient.connect();
+		if(!isConnected()) {
+			Log.i("Play Games", "connect");
+			playGames.googleApiClient.connect();
+		}
 	}
 
 	public static void disconnect() {
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
 		if(isConnected()) {
+			Log.i("Play Games", "disconnect");
 			Games.signOut(playGames.googleApiClient);
 			playGames.googleApiClient.disconnect();
 		}

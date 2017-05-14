@@ -24,9 +24,13 @@ public class CheckBox extends RedButton {
 	private boolean checked = false;
 	
 	public CheckBox( String label ) {
-		super( label );
-		
-		icon( Icons.get( Icons.UNCHECKED ) );
+		this(label,false);
+	}
+
+	public CheckBox (String label, boolean checked) {
+		super(label);
+
+		icon( Icons.get( checked ? Icons.CHECKED : Icons.UNCHECKED ) );
 	}
 
 	@Override

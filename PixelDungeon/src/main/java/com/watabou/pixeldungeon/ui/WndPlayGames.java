@@ -4,8 +4,8 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.windows.WndMessage;
 
 /**
  * Created by mike on 14.05.2017.
@@ -19,7 +19,7 @@ class WndPlayGames extends Window {
 
 	public WndPlayGames() {
 
-		playGamesConnected = Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false) && PlayGames.isConnected();
+		playGamesConnected = PlayGames.isConnected();
 		resizeLimited(120);
 
 		Text listTitle = PixelScene.createMultiline("Google Play Games", GuiProperties.mediumTitleFontSize());
@@ -33,25 +33,25 @@ class WndPlayGames extends Window {
 
 		y += listTitle.height() + GAP;
 
-		CheckBox usePlayGames = new CheckBox("use Google Play Games") {
+		CheckBox usePlayGames = new CheckBox("use Google Play Games",playGamesConnected) {
 			@Override
 			public void checked(boolean value) {
 				super.checked(value);
 
 				if (value) {
 					PlayGames.connect();
+					Game.scene().add(new WndMessage("Connecting to Google Play Games, please wait a bit"));
 				} else {
 					PlayGames.disconnect();
 				}
 				hide();
-				Game.scene().add(new WndPlayGames());
 			}
 		};
 
-		usePlayGames.checked(playGamesConnected);
 		addButton(usePlayGames);
 
 		if(!playGamesConnected) {
+			resize(width,y);
 			return;
 		}
 
