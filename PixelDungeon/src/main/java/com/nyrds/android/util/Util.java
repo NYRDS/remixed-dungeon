@@ -12,8 +12,11 @@ import android.util.Base64;
 
 import com.watabou.noosa.Game;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -32,20 +35,24 @@ public class Util {
 	}
 
 	static public boolean isConnectedToInternet() {
+		boolean connectionStatus;
+
 		ConnectivityManager connectivityManager
 				= (ConnectivityManager) Game.instance().getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-		return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-	/*
-		InetAddress ipAddr;
-		try {
-			ipAddr = InetAddress.getByName("google.com");
-		} catch (UnknownHostException e) {
+		connectionStatus = activeNetworkInfo != null && activeNetworkInfo.isConnected();
+		if(!connectionStatus) {
 			return false;
 		}
 
-		return !ipAddr.toString().equals("");
-	*/
+		try {
+			byte [] addr = {8,8,8,8};
+			return InetAddress.getByAddress(addr).isReachable(1000);
+		} catch (UnknownHostException e) {
+			return false;
+		} catch (IOException e) {
+			return false;
+		}
 	}
 
 	static public String getSignature(Context context) {
