@@ -1,3 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Oui</string>
+    <string name="Wnd_Button_No">Non</string>
+    <string name="Wnd_Button_Back">Retour</string>
+    <string name="Wnd_Button_Cancel">Annuler</string>
+    <string name="Wnd_Button_Close">Fermer</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">Bibliothèque</string>
+    <string name="WndLibrary_Mobs_Btn">Monstres</string>
+    <string name="WndLibrary_Items_Btn">Objets</string>
+    <string name="WndLibrary_Codex_Btn">Histoires</string>
+    <string name="WndLibrary_Levels_Btn">Donjon</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">Tapis</string>
+    <string name="town_deco_blue_carpet_desc">Un tapis bleu exquis, décoré avec de la soie violette.</string>
+
+    <string name="town_table_fortune_name">Table</string>
+    <string name="town_table_fortune_desc">Cette table est couverte avec de la soie blanche. Vous pouvez voir de nombreuses cartes de tarot posées dans un ordre particulier.</string>
+
     </resources>

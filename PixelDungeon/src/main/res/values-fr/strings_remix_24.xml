@@ -20,4 +20,20 @@
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Oreilles de Lapin</string>
-    </resources>
+    <!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Citrouille</string>
+    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Chapeau de magicien</string>
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Liste d\'accessoires</string>
+    <string name="WndHats_SlotTitle">Equipé</string>
+    <string name="WndHats_NoConnectionMsg">Impossible de se connecter à Google Play.</string>
+    <string name="WndHats_Purchased">Je l\'ai!</string>
+
+    <string name="WndHats_BackButton">Retour</string>
+    <string name="WndHats_BuyButton">Acheter</string>
+    <string name="WndHats_EquipButton">Equiper</string>
+    <string name="WndHats_InfoButton">Examiner</string>
+    <string name="WndHats_UnequipButton">Déséquiper</string>
+</resources>

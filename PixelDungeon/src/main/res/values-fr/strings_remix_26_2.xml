@@ -1,3 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">Désolé, le film n\'est pas encore prêt, tu peux réessayer dans quelques minutes.</string>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Costume de gnoll</string>
     </resources>
