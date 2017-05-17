@@ -18,6 +18,7 @@ import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
@@ -201,19 +202,15 @@ public class DungeonGenerator {
 		}
 	}
 
-	@Nullable
-	private static String getLevelProperty(String id, String property) {
-
+	private static String getLevelProperty(String id, String property, String defaultValue) {
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
+			return levelDesc.optString(property,defaultValue);
 
-			if (levelDesc.has(property)) {
-				return levelDesc.getString(property);
-			}
 		} catch (JSONException e) {
-			EventCollector.logException(e);
+			//EventCollector.logException(e);
 		}
-		return null;
+		return defaultValue;
 	}
 
 	private static float getLevelProperty(String id, String property, float defaultValue) {
@@ -222,7 +219,7 @@ public class DungeonGenerator {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return (float) levelDesc.optDouble(property, defaultValue);
 		} catch (JSONException e) {
-			EventCollector.logException(e);
+			//EventCollector.logException(e);
 		}
 		return defaultValue;
 	}
@@ -233,7 +230,7 @@ public class DungeonGenerator {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return levelDesc.optBoolean(property, defaultValue);
 		} catch (JSONException e) {
-			EventCollector.logException(e);
+			//EventCollector.logException(e);
 		}
 		return defaultValue;
 	}
@@ -244,7 +241,7 @@ public class DungeonGenerator {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return levelDesc.optInt(property, defaultValue);
 		} catch (JSONException e) {
-			EventCollector.logException(e);
+			//EventCollector.logException(e);
 		}
 		return defaultValue;
 	}
@@ -255,12 +252,12 @@ public class DungeonGenerator {
 
 	@Nullable
 	public static String tiles(String id) {
-		return getLevelProperty(id, "tiles");
+		return getLevelProperty(id, "tiles",null);
 	}
 
 	@Nullable
 	public static String water(String id) {
-		return getLevelProperty(id, "water");
+		return getLevelProperty(id, "water",null);
 	}
 
 	public static float waterSx(String id, float defaultValue) {
@@ -275,23 +272,19 @@ public class DungeonGenerator {
 		return getLevelProperty(id, "noFogOfWar", false);
 	}
 
-	@Nullable
+	@NonNull
 	public static String music(String id) {
-		return getLevelProperty(id, "music");
+		return getLevelProperty(id, "music", Assets.TUNE);
 	}
 
 	public static Level.Feeling getLevelFeeling(String id) {
 		try {
-			String feeling = getLevelProperty(id, "feeling");
-			if (feeling == null) {
-				return Level.Feeling.UNDEFINED;
-			}
-			return Level.Feeling.valueOf(getLevelProperty(id, "feeling"));
+			String feeling = getLevelProperty(id, "feeling",Level.Feeling.NONE.name());
+			return Level.Feeling.valueOf(feeling);
 		} catch (IllegalArgumentException e) {
 			return Level.Feeling.UNDEFINED;
 		}
 	}
-
 
 	public static Position descend(Position current) {
 		return descendOrAscend(current, true);
