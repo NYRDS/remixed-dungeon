@@ -94,12 +94,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 			@Override
 			public void run() {
 
-				if (PixelDungeon.donated() == 0) {
-					if (PixelDungeon.getDifficulty() == 0) {
-						Ads.displayEasyModeBanner();
-					}
-				}
-
 				GameScene.doOnSceneSwitch = new Runnable() {
 					@Override
 					public void run() {
@@ -113,6 +107,13 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 								} else {
 									serviceMan.say(TXT_SORRY);
 								}
+
+								if (PixelDungeon.donated() == 0) {
+									if (PixelDungeon.getDifficulty() == 0) {
+										Ads.displayEasyModeBanner();
+									}
+								}
+
 								GameScene.doOnSceneSwitch = null;
 							}
 						});
