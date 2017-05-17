@@ -25,7 +25,7 @@ import java.util.Locale;
  * Created by mike on 24.05.2016.
  */
 public class Iap {
-    static final int RC_REQUEST = (int) (Math.random() * 0xffff);
+	private static final int RC_REQUEST = (int) (Math.random() * 0xffff);
 
     private static final String SKU_LEVEL_1 = "supporter_level_1";
     private static final String SKU_LEVEL_2 = "supporter_level_2";
@@ -178,7 +178,7 @@ public class Iap {
     };
 
     @Nullable
-    static String formatSkuPrice(SkuDetails sku) {
+    private static String formatSkuPrice(SkuDetails sku) {
         if (sku == null) {
             return null;
         }
@@ -304,7 +304,7 @@ public class Iap {
         }
     }
 
-    static void complain(String message) {
+    private static void complain(String message) {
         EventCollector.logEvent("iap error", message);
         Log.e("GAME", "**** IAP Error: " + message);
     }
