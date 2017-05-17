@@ -23,13 +23,11 @@ import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.ui.CatalogusListItem;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -49,7 +47,7 @@ public class WndCatalogus extends WndTabbed {
 	private Text txtTitle;
 	private ScrollPane list;
 	
-	private ArrayList<ListItem> items = new ArrayList<>();
+	private ArrayList<CatalogusListItem> items = new ArrayList<>();
 	
 	private static boolean showPotions = true;
 	
@@ -117,7 +115,7 @@ public class WndCatalogus extends WndTabbed {
 		
 		float pos = 0;
 		for (Class<? extends Item> itemClass : showPotions ? Potion.getKnown() : Scroll.getKnown()) {
-			ListItem item = new ListItem( itemClass );
+			CatalogusListItem item = new CatalogusListItem( itemClass );
 			item.setRect( 0, pos, width, ITEM_HEIGHT );
 			content.add( item );
 			items.add( item );
@@ -126,7 +124,7 @@ public class WndCatalogus extends WndTabbed {
 		}
 		
 		for (Class<? extends Item> itemClass : showPotions ? Potion.getUnknown() : Scroll.getUnknown()) {
-			ListItem item = new ListItem( itemClass );
+			CatalogusListItem item = new CatalogusListItem( itemClass );
 			item.setRect( 0, pos, width, ITEM_HEIGHT );
 			content.add( item );
 			items.add( item );
@@ -136,57 +134,5 @@ public class WndCatalogus extends WndTabbed {
 		
 		content.setSize( width, pos );
 	}
-	
-	private static class ListItem extends Component {
-		
-		private Item item;
-		private boolean identified;
-		
-		private ItemSprite sprite;
-		private Text label;
-		
-		public ListItem( Class<? extends Item> cl ) {
-			super();
-			
-			try {
-				item = cl.newInstance();
-				if (identified = item.isIdentified()) {
-					sprite.view(item);
-					label.text( item.name() );
-				} else {
-					sprite.view(Assets.ITEMS, 127, null );
-					label.text( item.trueName() );
-					label.hardlight( 0xCCCCCC );
-				}
-			} catch (Exception e) {
-				// Do nothing
-			}
-		}
-		
-		@Override
-		protected void createChildren() {
-			sprite = new ItemSprite();
-			add( sprite );
-			
-			label = PixelScene.createText(GuiProperties.regularFontSize());
-			add( label );
-		}
-		
-		@Override
-		protected void layout() {
-			sprite.y = PixelScene.align( y + (height - sprite.height) / 2 );
-			
-			label.x = sprite.x + sprite.width;
-			label.y = PixelScene.align( y + (height - label.baseLine()) / 2 );
-		}
-		
-		public boolean onClick( float x, float y ) {
-			if (identified && inside( x, y )) {
-				GameScene.show( new WndInfoItem( item ) );
-				return true;
-			} else {
-				return false;
-			}
-		}
-	}
+
 }
