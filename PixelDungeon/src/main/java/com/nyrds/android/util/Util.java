@@ -12,11 +12,8 @@ import android.util.Base64;
 
 import com.watabou.noosa.Game;
 
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -41,18 +38,7 @@ public class Util {
 				= (ConnectivityManager) Game.instance().getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
 		connectionStatus = activeNetworkInfo != null && activeNetworkInfo.isConnected();
-		if(!connectionStatus) {
-			return false;
-		}
-
-		try {
-			byte [] addr = {8,8,8,8};
-			return InetAddress.getByAddress(addr).isReachable(1000);
-		} catch (UnknownHostException e) {
-			return false;
-		} catch (IOException e) {
-			return false;
-		}
+		return connectionStatus;
 	}
 
 	static public String getSignature(Context context) {
