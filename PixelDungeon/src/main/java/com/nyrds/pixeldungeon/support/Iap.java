@@ -87,7 +87,7 @@ public class Iap {
         });
     }
 
-    public static void queryItemsPrice(List<String> items) {
+    private static void queryItemsPrice(List<String> items) {
         try {
             mHelper.queryInventoryAsync(true, items, null, mGotInventoryListener);
         } catch (IabHelper.IabAsyncInProgressException e) {
@@ -159,7 +159,7 @@ public class Iap {
         }
     }
 
-    static IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
+	private static IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
         @Override
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
             if (mHelper == null)
@@ -281,7 +281,7 @@ public class Iap {
         }
     }
 
-    static boolean verifyDeveloperPayload(Purchase p) {
+    private static boolean verifyDeveloperPayload(Purchase p) {
         String payload = p.getDeveloperPayload();
 
         return true;
