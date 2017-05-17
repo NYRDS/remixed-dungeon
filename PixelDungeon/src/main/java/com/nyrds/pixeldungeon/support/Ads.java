@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.graphics.Color;
+import android.view.View;
+import android.webkit.WebView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -43,6 +45,17 @@ public class Ads {
 		}
 	}
 
+	private static int bannerIndex() {
+		int childs = Game.instance().getLayout().getChildCount();
+		for (int i = 0; i< childs;++i)
+		{
+			View view = Game.instance().getLayout().getChildAt(i);
+			if(view instanceof AdView || view instanceof WebView) {
+				return i;
+			}
+		}
+		return -1;
+	}
 
 	private static void displayGoogleEasyModeBanner() {
 		if (isSmallScreen()) {
@@ -51,7 +64,7 @@ public class Ads {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
-					if (Game.instance().getLayout().getChildCount() == 1) {
+					if (bannerIndex()<0) {
 						AdView adView = new AdView(Game.instance());
 						adView.setAdSize(AdSize.SMART_BANNER);
 						adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
@@ -78,12 +91,11 @@ public class Ads {
 	public static void removeEasyModeBanner() {
 		if (googleAdsUsable()) {
 			Game.instance().runOnUiThread(new Runnable() {
-
 				@Override
 				public void run() {
-					if (Game.instance().getLayout().getChildCount() == 2) {
-						Game.instance().getLayout().removeViewAt(0);
-						Game.setNeedSceneRestart(true);
+					int index = bannerIndex();
+					if(index>=0) {
+						Game.instance().getLayout().removeViewAt(index);
 					}
 				}
 
