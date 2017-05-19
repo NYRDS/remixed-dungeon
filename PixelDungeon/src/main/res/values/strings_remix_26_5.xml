@@ -12,7 +12,7 @@
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
     <string name="IceGuardianCoreModule_Name">Ice Guardian Core</string>
-    <string name="IceGuardianCoreModule_Info">Cory.</string>
+    <string name="IceGuardianCoreModule_Info">This peculiar device is consist of complex structure made of magical ice. In center of an Ice Guardian.</string>
 
     <!-- STRINGS OF RingOfFrost CLASS -->
     <string name="RingOfFrost_Name">Ring of Frost</string>
@@ -21,6 +21,9 @@
     <!-- STRINGS OF SpiderQueenCarapace CLASS -->
     <string name="SpiderQueenCarapace_Name">Spider Queen Carapace</string>
     <string name="SpiderQueenCarapace_Info">Spidy.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">H-hello. Welcome to the Library. Here you can find the information about all sort of things, that can be found in the dungeon... actually we can only provide knowledge that was discovered by adventurers. It... it\'s kind of embarrassing. So each time you visit us, probably, there will be new things to read.</string>
 
 
     <!-- Object descriptions -->
