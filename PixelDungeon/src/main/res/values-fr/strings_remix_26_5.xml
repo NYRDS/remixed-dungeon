@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">Aura de glace</string>
+
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenDagger CLASS -->
+    <string name="ElvenDagger_Name">Dague Elfique</string>
+    <string name="ElvenDagger_Info">Cette arme est faite d\'un alliage spécial, la rendant plus légère qu\'une dague classique.</string>
+
+    <!-- STRINGS OF IceGuardianCoreModule CLASS -->
+    <string name="IceGuardianCoreModule_Name">Cœur du Gardien de Glace</string>
+    <string name="IceGuardianCoreModule_Info">C\'est une structure complexe faite de glace magique. Une gemme brillante se trouve au centre de l\'appareil.</string>
+
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">Anneau de Gel</string>
+    <string name="RingOfFrost_Info">Cet anneau a été taillé dans de la glace magique. Son porteur est protégé par une aura glaciale, qui ralentit et blesse les ennemis qui attaquent.</string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">Carapace de la Reine Araignée</string>
+    <string name="SpiderQueenCarapace_Info">Un éclat de la carapace de la Reine Araignée. Vous pouvez voir un morceau de la glande à toile à l\'intérieur, elle semble presque vivante.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">B-Bonjour. Bienvenue dans la bibliothèque. Vous pouvez trouver ici de nombreuses informations sur de nombreuses choses découvertes dans le donjon ... cependant nous ne pouvons vous aider que sur ce qui a déjà été découvert par les aventuriers. C\'est ... un peu embarrassant. Donc, à chaque fois que vous nous rendrez visite, il y aura peut-être de nouvelles choses à lire.</string>
+
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF LibraryBook CLASS -->
+    <string name="LibraryBook_Name">Livre de la Bibliothèque</string>
+    <string name="LibraryBook_Description">Ce livre est vraiment épais. Il relate toutes les conaissances découvertes par les aventuriers dans le donjon</string>
+
+
+    <!-- Wnd descriptions -->
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_moveTimeout">Délai d\'attente dépassé:%s</string>
+
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">Piège</string>
+    <string name="TrapWnd_Step">Voulez-vous vraiment marcher sur ce piège ? Vous pouvez probablement mourir.</string>
+</resources>

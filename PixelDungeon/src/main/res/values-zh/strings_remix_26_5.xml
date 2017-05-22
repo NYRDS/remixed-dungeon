@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">寒冰護罩</string>
+
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenDagger CLASS -->
+    <string name="ElvenDagger_Name">矮人匕首</string>
+    <string name="ElvenDagger_Info">此武器以特製合金製造，故它比一般匕首更輕。</string>
+
+    <!-- STRINGS OF IceGuardianCoreModule CLASS -->
+    <string name="IceGuardianCoreModule_Name">冰霜守衛的核心裝置</string>
+    <string name="IceGuardianCoreModule_Info">這是一個由魔冰形成的複雜結構。一顆閃閃發光的寶石在這個奇特的裝置的正中。</string>
+
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">寒冰指環</string>
+    <string name="RingOfFrost_Info">此指環由雕刻魔冰而成。穿戴者將受到寒冰護罩之保護，並且對施加攻擊的敵人造成傷害和緩速。</string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">蜘蛛皇后的甲殼</string>
+    <string name="SpiderQueenCarapace_Info">蜘蛛皇后的甲殼上一塊碎片。內窺可見一條網腺，看上去尚有生命跡象。</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">您、您好。歡迎來到圖書館。閣下能在此找到形形色色，有關地牢中各種事物的資訊。說老實，我們只能提供由冒險者，即是閣下所採探的資訊。這、這確實有點尷尬。因此，每次閣下蒞臨本館，也許，這裏有新的資訊供閣下查閱。</string>
+
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF LibraryBook CLASS -->
+    <string name="LibraryBook_Name">圖書</string>
+    <string name="LibraryBook_Description">這本巨著真厚。裏頭盛滿所有有關冒險者在地牢中下發掘的事物的知識。</string>
+
+
+    <!-- Wnd descriptions -->
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_moveTimeout">離下次啟步尚餘：%s回</string>
+
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">陷阱</string>
+    <string name="TrapWnd_Step">您當真要踏上此陷阱？您可能會因此失命。</string>
+</resources>
