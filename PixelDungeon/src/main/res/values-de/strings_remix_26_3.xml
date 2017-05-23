@@ -1,3 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">Elfenbogen</string>
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">Rattenhaut</string>
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">Rattenrüstung</string>
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">Dorfbewohner</string>
+    <string name="TownsfolkMovieNPC_Gender">männlich</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">Dorfbewohner</string>
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Name">Bilbliothekar</string>
+    <string name="LibrarianNPC_Gender">männlich</string>
+    <string name="LibrarianNPC_Name_Objective">Bilbliothekar</string>
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">Dorfbewohner</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">Dorfbewohner</string>
+    <string name="TownsfolkSilentNPC_Message1">Hmpf!</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
+
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">Bella</string>
+    <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_Angry">Wie kannst du es wagen...du Tölpel!</string>
+    <string name="BellaNPC_No">Nein, nicht mit dir</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">Tür</string>
+    <string name="town_deco_dungeon_door_name">Eingang</string>
     </resources>

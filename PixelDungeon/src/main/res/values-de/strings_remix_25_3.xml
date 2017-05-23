@@ -5,7 +5,18 @@
     <string name="Ushanka_Name">Uschanka</string>
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">Vampirschädel</string>
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Zombiemaske</string>
     <!-- Object descriptions -->
     <!-- STRINGS OF Barrel CLASS -->
     <string name="Barrel_Name">Fass</string>
-    </resources>
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">Kürbis</string>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">Vogelscheuche</string>
+    <string name="ScarecrowNPC_Gender">geschlechtslos</string>
+    <string name="ScarecrowNPC_Name_Objective">Vogelscheuche</string>
+    <string name="Journal_ScarecrowNPC">Vogelscheuche</string>
+
+</resources>

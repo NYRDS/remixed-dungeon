@@ -1,3 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">Frostaura</string>
+
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenDagger CLASS -->
+    <string name="ElvenDagger_Name">Elfendolch</string>
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">Ring des Frostes</string>
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">Falle</string>
     </resources>

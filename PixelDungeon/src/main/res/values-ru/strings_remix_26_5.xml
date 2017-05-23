@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <!-- Buffs -->
     <!-- STRINGS OF FrostAura CLASS -->
@@ -12,6 +12,8 @@
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
     <string name="IceGuardianCoreModule_Name">Ядро Ледяного Стража</string>
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">Кольцо Мороза</string>
     <!-- STRINGS OF LibrarianNPC CLASS -->
     <string name="LibrarianNPC_Message_Instruction">З-здравствуйте. Добро пожаловать в библиотеку. Здесь вы можете найти информацию о самых разных диковинах, которые могут быть найдены в подземелье... н-на самом деле мы можем предоставить лишь те знания, которые нам принесли сами герои. Да... даже немного стыдно в этом признаваться. Но зато, с каждым вашим визитом, у нас будут появляться новые записи, я надеюсь...</string>
 
