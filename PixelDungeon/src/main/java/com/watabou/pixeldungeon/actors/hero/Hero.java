@@ -398,14 +398,14 @@ public class Hero extends Char {
 
 		Buff frostAura = buff(RingOfFrost.FrostAura.class);
 
-		if (frostAura != null && enemy.distance(this) < 2){
+		if (frostAura != null && enemy.distance(this) < 2) {
 			int powerLevel = belongings.getItem(RingOfFrost.class).level();
-			if(enemy.isAlive() && enemy != null){
-				Buff.affect( enemy, Slow.class, Slow.duration( enemy ) / 5 + powerLevel );
-				if (Random.Int(100) > 10 + powerLevel){
-					Buff.affect( enemy, Frost.class, Frost.duration( enemy ) / 5 + powerLevel );
+			if (enemy.isAlive() && enemy != null) {
+				Buff.affect(enemy, Slow.class, Slow.duration(enemy) / 5 + powerLevel);
+				if (Random.Int(100) > 10 + powerLevel) {
+					Buff.affect(enemy, Frost.class, Frost.duration(enemy) / 5 + powerLevel);
 				}
-				enemy.damage(powerLevel/2, this);
+				enemy.damage(powerLevel / 2, this);
 			}
 		}
 
@@ -507,7 +507,7 @@ public class Hero extends Char {
 
 		for (Item item : belongings) {
 			if (item instanceof IActingItem && item.isEquipped(this)) {
-				((IActingItem) item).spend(this,time);
+				((IActingItem) item).spend(this, time);
 			}
 		}
 
@@ -1008,24 +1008,11 @@ public class Hero extends Char {
 	private boolean actSpecialAttack(Attack action) {
 		SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
 
-		if (weapon.getRange() == 1) {
-			if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
-				return applySpecialTo(weapon, enemy);
-			}
-			return getCloserToEnemy();
-		} else {
-
-			Ballistica.cast(getPos(), action.target.getPos(), false, true);
-
-			for (int i = 1; i <= Math.min(Ballistica.distance, weapon.getRange()); i++) {
-				Char chr = Actor.findChar(Ballistica.trace[i]);
-				if (chr == enemy) {
-					return applySpecialTo(weapon, chr);
-				}
-			}
-
-			return getCloserToEnemy();
+		if(canAttack(enemy)) {
+			return applySpecialTo(weapon, enemy);
 		}
+
+		return getCloserToEnemy();
 	}
 
 	public void rest(boolean tillHealthy) {
@@ -1154,7 +1141,7 @@ public class Hero extends Char {
 		}
 	}
 
-	private void checkVisibleMobs() {
+	public void checkVisibleMobs() {
 		ArrayList<Mob> visible = new ArrayList<>();
 
 		boolean newMob = false;
@@ -1213,13 +1200,13 @@ public class Hero extends Char {
 		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
-				if (buff(Blindness.class) == null){
+				if (buff(Blindness.class) == null) {
 					if (level.pit[target] && !flying && !Chasm.jumpConfirmed) {
 						Chasm.heroJump(this);
 						interrupt();
 						return false;
 					}
-					if( TrapHelper.isVisibleTrap(level.map[target]) && !flying && !TrapHelper.stepConfirmed){
+					if (TrapHelper.isVisibleTrap(level.map[target]) && !flying && !TrapHelper.stepConfirmed) {
 						TrapHelper.heroTriggerTrap(this);
 						interrupt();
 						return false;
@@ -1500,7 +1487,8 @@ public class Hero extends Char {
 			}
 		} else {
 			Dungeon.deleteGame(false);
-			while (belongings.removeItem(ankh)) {}
+			while (belongings.removeItem(ankh)) {
+			}
 			GameScene.show(new WndResurrect(ankh, cause));
 		}
 	}
@@ -1530,8 +1518,8 @@ public class Hero extends Char {
 
 	public static void reallyDie(final Object cause) {
 
-		if(Dungeon.hero.getDifficulty() < 2 && WndSaveSlotSelect.haveSomethingToLoad()) {
-			GameScene.show(new WndSaveSlotSelect(false,Game.getVar(R.string.Hero_AnotherTry)) {
+		if (Dungeon.hero.getDifficulty() < 2 && WndSaveSlotSelect.haveSomethingToLoad()) {
+			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)) {
 				@Override
 				public void hide() {
 					super.hide();
@@ -1682,15 +1670,10 @@ public class Hero extends Char {
 					if (Dungeon.level.secret[p] && (intentional || Random.Float() < level)) {
 
 						int oldValue = Dungeon.level.map[p];
-
 						GameScene.discoverTile(p, oldValue);
-
 						Dungeon.level.set(p, Terrain.discover(oldValue));
-
 						GameScene.updateMap(p);
-
 						ScrollOfMagicMapping.discover(p);
-
 						smthFound = true;
 					}
 				}
@@ -1737,7 +1720,7 @@ public class Hero extends Char {
 	@Override
 	public Set<Class<?>> immunities() {
 		GasesImmunity buff = buff(GasesImmunity.class);
-		if(buff != null) {
+		if (buff != null) {
 			IMMUNITIES.addAll(GasesImmunity.IMMUNITIES);
 		} else {
 			IMMUNITIES.removeAll(GasesImmunity.IMMUNITIES);
@@ -1780,6 +1763,32 @@ public class Hero extends Char {
 	public void setExp(int exp) {
 		this.exp = Scrambler.scramble(exp);
 	}
+
+	public boolean canAttack(Char enemy) {
+		if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
+			return true;
+		}
+
+		if(bowEquiped()) {
+			return true;
+		}
+
+		if (belongings.weapon instanceof SpecialWeapon) {
+			SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
+
+			Ballistica.cast(getPos(), enemy.getPos(), false, true);
+
+			for (int i = 1; i <= Math.min(Ballistica.distance, weapon.getRange()); i++) {
+				Char chr = Actor.findChar(Ballistica.trace[i]);
+				if (chr == enemy) {
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
 
 	public interface Doom {
 		void onDeath();
@@ -1865,7 +1874,7 @@ public class Hero extends Char {
 	@Override
 	protected boolean timeout() {
 		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
-		if(SystemTime.now() - SystemTime.getLastActionTime() > PixelDungeon.getMoveTimeout()) {
+		if (SystemTime.now() - SystemTime.getLastActionTime() > PixelDungeon.getMoveTimeout()) {
 			SystemTime.updateLastActionTime();
 			spend(TIME_TO_REST);
 			return true;
