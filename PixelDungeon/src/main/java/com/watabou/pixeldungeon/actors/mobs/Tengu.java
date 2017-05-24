@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -43,7 +44,7 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class Tengu extends Boss {
+public class Tengu extends Boss implements IZapper {
 
 	private static final int JUMP_DELAY = 5;
 	
