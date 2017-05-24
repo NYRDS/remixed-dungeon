@@ -20,7 +20,7 @@ import org.json.JSONObject;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class CustomMob extends MultiKindMob {
+public class CustomMob extends MultiKindMob implements IZapper {
 
 	private final String MOB_CLASS = "mobClass";
 

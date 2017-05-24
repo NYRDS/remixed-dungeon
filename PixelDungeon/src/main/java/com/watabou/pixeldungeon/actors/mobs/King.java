@@ -122,15 +122,7 @@ public class King extends Boss {
 	
 	@Override
 	public boolean attack(@NonNull Char enemy ) {
-		if (canTryToSummon() && getPos() == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal )) {
-			summon();
-			return true;
-		} else {
-			if (Actor.findChar( ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal ) ) == enemy) {
-				nextPedestal = !nextPedestal;
-			}
-			return super.attack(enemy);
-		}
+		return super.attack(enemy);
 	}
 	
 	@Override
@@ -149,11 +141,17 @@ public class King extends Boss {
 	private int maxArmySize() {
 		return 1 + MAX_ARMY_SIZE * (ht() - hp()) / ht();
 	}
-	
+
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		summon();
+		return true;
+	}
+
 	private void summon() {
 
 		nextPedestal = !nextPedestal;
-		
+
 		getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );		
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 		

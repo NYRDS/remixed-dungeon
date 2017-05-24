@@ -38,7 +38,9 @@ public class KingSprite extends MobSprite {
 		
 		attack = new Animation( 15, false );
 		attack.frames( frames, 9, 10, 11 );
-		
+
+		zap = attack.clone();
+
 		die = new Animation( 8, false );
 		die.frames( frames, 12, 13, 14, 15 );
 		
