@@ -10,17 +10,18 @@
     <string name="ElvenDagger_Name">elven dagger</string>
     <string name="ElvenDagger_Info">This weapon is made of special metal alloy, making it a lot lighter compared to regular dagger.</string>
 
+
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
     <string name="IceGuardianCoreModule_Name">Ice Guardian Core</string>
-    <string name="IceGuardianCoreModule_Info">This peculiar device is consist of complex structure made of magical ice. In center of an Ice Guardian.</string>
+    <string name="IceGuardianCoreModule_Info">It\'s a complex structure made of magical ice. A glowing gem is placed in the center of this peculiar device.</string>
 
     <!-- STRINGS OF RingOfFrost CLASS -->
     <string name="RingOfFrost_Name">Ring of Frost</string>
-    <string name="RingOfFrost_Info">Frosty.</string>
+    <string name="RingOfFrost_Info">This ring is carved from magical ice. It\'s wearer is protected by the frost aura, slowing and damaging attacking enemies.</string>
 
     <!-- STRINGS OF SpiderQueenCarapace CLASS -->
     <string name="SpiderQueenCarapace_Name">Spider Queen Carapace</string>
-    <string name="SpiderQueenCarapace_Info">Spidy.</string>
+    <string name="SpiderQueenCarapace_Info">A shard of Spider Queen\'s carapace. You can see a piece of web gland inside it, it almost looks alive.</string>
 
     <!-- STRINGS OF LibrarianNPC CLASS -->
     <string name="LibrarianNPC_Message_Instruction">H-hello. Welcome to the Library. Here you can find the information about all sort of things, that can be found in the dungeon... actually we can only provide knowledge that was discovered by adventurers. It... it\'s kind of embarrassing. So each time you visit us, probably, there will be new things to read.</string>
