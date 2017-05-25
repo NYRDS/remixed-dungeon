@@ -18,8 +18,10 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
@@ -44,6 +46,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import java.util.Locale;
 
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 
@@ -454,6 +458,28 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		}
 	}
 
+	@Override
+	public void play(Animation anim) {
+		if(anim == null) {
+			if(ch == null) {
+				EventCollector.logEvent("bug", "null anim on null char, WTF?");
+				return;
+			} else {
+				EventCollector.logEvent("bug", String.format(Locale.ROOT,"null anim for %s",ch.getClass()));
+				ch.next();
+				return;
+			}
+		}
+		super.play(anim);
+	}
+
 	public void selectKind(int i) {
+	}
+
+	public CompositeTextureImage avatar() {
+		CompositeTextureImage avatar = new CompositeTextureImage(texture);
+		avatar.frame(idle.frames[0]);
+		avatar.addLayer(texture);
+		return avatar;
 	}
 }
