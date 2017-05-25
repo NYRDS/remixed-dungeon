@@ -8,6 +8,7 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.ListItem;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
@@ -47,33 +48,13 @@ public class WndLibraryCatalogue extends Window {
 		for (final String entry : knownMap.keySet()) {
 
 			//Button
-			final String finalCategory = category;
 			Library.EntryHeader entryHeader = Library.infoHeader(category, entry);
-			TextButton rb = new RedButton(entryHeader.header) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					GameScene.show(Library.infoWindow(finalCategory, entry));
-				}
 
-				@Override
-				protected void layout() {
-					super.layout();
-
-					float margin = (height - text.baseLine()) / 2;
-
-					text.x = PixelScene.align(PixelScene.uiCamera, x + margin);
-					text.y = PixelScene.align(PixelScene.uiCamera, y + margin);
-
-					icon.x = PixelScene.align(PixelScene.uiCamera, x + width - margin - icon.width);
-					icon.y = PixelScene.align(PixelScene.uiCamera, y + (height - icon.height()) / 2);
-				}
-			};
-			rb.icon(entryHeader.icon);
+			LibraryListItem rb = new LibraryListItem(category, entry, entryHeader);
 
 			rb.setRect(0, yPos, WIDTH, BTN_HEIGHT);
-
 			content.add(rb);
+
 			yPos = (int) rb.bottom() + 1;
 		}
 
@@ -83,8 +64,8 @@ public class WndLibraryCatalogue extends Window {
 		resize(WIDTH, h + BTN_WIDTH);
 
 		content.setSize(WIDTH, yPos);
-		ScrollPane list = new ScrollPane(content);
-		list.dontCatchTouch();
+
+		ScrollPane list = new ScrollableList(content);
 
 		add(list);
 
@@ -107,4 +88,24 @@ public class WndLibraryCatalogue extends Window {
 
 		add(back);
 	}
+
+	private static class LibraryListItem extends ListItem {
+		private final String finalCategory;
+		private final String entryId;
+
+		public LibraryListItem(String category, String entry, Library.EntryHeader desc) {
+			finalCategory = category;
+			entryId = entry;
+			clickable = true;
+
+			sprite.copy(desc.icon);
+			label.text(desc.header);
+		}
+
+		@Override
+		protected void onClick() {
+			GameScene.show(Library.infoWindow(finalCategory, entryId));
+		}
+	}
+
 }

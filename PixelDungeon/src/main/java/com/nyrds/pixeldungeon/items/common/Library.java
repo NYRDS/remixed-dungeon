@@ -105,7 +105,7 @@ public class Library {
 		if(category.equals(MOB)) {
 			Mob mob = MobFactory.mobByName(clazz);
 			ret.header = Utils.capitalize(mob.getName());
-			ret.icon = mob.sprite();
+			ret.icon = mob.sprite().avatar();
 			return ret;
 		}
 
@@ -118,7 +118,7 @@ public class Library {
 		}
 
 		if(category.equals(MOB)) {
-			return new WndInfoMob(MobFactory.mobByName(clazz));
+			return new WndInfoMob(MobFactory.mobByName(clazz), getKnowledgeLevel(category, clazz));
 		}
 		throw new TrackedRuntimeException("unknown category: "+category);
 	}
