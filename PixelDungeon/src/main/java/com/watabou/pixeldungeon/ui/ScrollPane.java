@@ -29,11 +29,6 @@ public class ScrollPane extends Component {
 
 	protected TouchController controller;
 	protected Component content;
-	
-	protected float minX;
-	protected float minY;
-	protected float maxX;
-	protected float maxY;
 
 	public ScrollPane( Component content ) {
 		super();
