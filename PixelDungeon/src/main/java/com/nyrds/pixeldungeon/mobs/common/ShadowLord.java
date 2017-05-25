@@ -32,7 +32,6 @@ import com.watabou.utils.Random;
  */
 public class ShadowLord extends Boss implements IZapper {
 
-	private static final float TIME_TO_ZAP = 1;
 	private boolean levelCreated         = false;
 	private int cooldown                 = -1;
 
