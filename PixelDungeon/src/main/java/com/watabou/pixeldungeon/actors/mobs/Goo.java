@@ -189,4 +189,9 @@ public class Goo extends Boss {
 		super.notice();
 		yell(Game.getVar(R.string.Goo_Info3));
 	}
+
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		return true;
+	}
 }
