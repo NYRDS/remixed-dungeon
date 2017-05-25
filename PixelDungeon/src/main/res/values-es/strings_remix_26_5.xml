@@ -32,6 +32,10 @@
     <string name="LibraryBook_Description">Este tomo es enorme. Tiene todo el conocimiento que los aventureros han descubierto de la mazmorra.</string>
 
 
+    <!-- Wnd descriptions -->
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_moveTimeout">Movimientos restantes %s</string>
+
     <!-- STRINGS OF TrapHelper CLASS -->
     <string name="TrapWnd_Title">Trampa</string>
     <string name="TrapWnd_Step">¿Realmente quieres pisar esta trampa? Probablemente mueras.</string>
