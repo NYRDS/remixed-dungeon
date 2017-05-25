@@ -20,4 +20,19 @@
 
     <!-- STRINGS OF SpiderQueenCarapace CLASS -->
     <string name="SpiderQueenCarapace_Name">Caparazón de la Reina Araña</string>
-    </resources>
+    <string name="SpiderQueenCarapace_Info">Un pedazo del caparazón de la Reina Araña. Puedes ver una glándula de telaraña dentro de él. Casi parece estar vivo.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">Ho-hola. Bienvenido a la Biblioteca. Aquí puedes encontrar información sobre muchas cosas, cosas que puedes encontrar en la mazmorra... pero solo es conocimiento que nos han proporcionado los aventureros. Es... un poco vergonzoso. Cada vez que nos visites, probablemente encuentres nueva información.</string>
+
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF LibraryBook CLASS -->
+    <string name="LibraryBook_Name">Libro de la biblioteca</string>
+    <string name="LibraryBook_Description">Este tomo es enorme. Tiene todo el conocimiento que los aventureros han descubierto de la mazmorra.</string>
+
+
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">Trampa</string>
+    <string name="TrapWnd_Step">¿Realmente quieres pisar esta trampa? Probablemente mueras.</string>
+</resources>

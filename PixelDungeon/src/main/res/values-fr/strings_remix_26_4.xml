@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">Vous ne pouvez équiper que 2 artefacts en même temps</string>
+
     <!-- STRINGS OF Generic Button labels -->
     <string name="Wnd_Button_Yes">Oui</string>
     <string name="Wnd_Button_No">Non</string>

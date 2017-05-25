@@ -4,11 +4,24 @@
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_WayAlreadyChosen">Vous ne pouvez pas changer votre destin !</string>
 
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">Le porteur d\'âme</string>
+    <string name="BlackSkullOfMastery_Info">C\'est un artefact ancien, conçu par les premiers nécromanciens pour collecter les âmes des morts. En détectant vos capacités nécromanciennes, il se présente avec un puissant sortilège. Mais puisque le sort est celui d\'autrefois, sa structure primitive est assez facile à casser.</string>
+    <string name="BlackSkullOfMastery_Title">Vous pouvez casser le sort. Ou vous pouvez manipuler la formule magique d\'une manière qui vous permettra de consommer des pouvoirs à la fois du sort et de l\'artefact lui-même, en vous transformant en Lich.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Devenir la Lich</string>
+    <string name="BlackSkullOfMastery_Necromancer">Briser le sortilège</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">Le _Lich_ est un nécromancien qui a atteint l\'apogée de ses capacités. Existant entre la vie et la mort le _Lich_ excelle dans la nécromancie, mais ses compétences de combat sont considérablement réduites.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Si vous _break the spell_ vous pourrez utiliser cet artefact normalement.</string>
+
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Le Crâne Noir est éveillé !</string>
     <string name="BlackSkull_Ressurrect">Le Crâne Noir à crée ce monstre pour vous servir !</string>
+    <string name="BlackSkull_Deactivated">Le Crâne Noir est inactif, encore une fois</string>
+
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Armure d\'os</string>
+    <string name="NecromancerArmor_Info">Cette armure permettra au Nécromancien de convoquer jusqu\'à 2 Deathlings au coût de 5 âmes chacune. Ces serviteurs morts-vivants suivront leur maître et attaqueront leurs ennemis. Les Deathlings deviennent plus forts à chaque niveau de héros.</string>
     <string name="NecromancerArmor_NotNecromancer">Seuls les Nécromanciens peuvent utiliser cette armure !</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
