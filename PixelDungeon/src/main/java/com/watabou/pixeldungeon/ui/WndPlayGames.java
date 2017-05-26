@@ -14,8 +14,8 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 
 class WndPlayGames extends Window {
 
-	private int y = GAP;
-	boolean playGamesConnected = false;
+	private int     y                  = GAP;
+	private boolean playGamesConnected = false;
 
 	public WndPlayGames() {
 
@@ -44,6 +44,7 @@ class WndPlayGames extends Window {
 				} else {
 					PlayGames.disconnect();
 				}
+
 				hide();
 			}
 		};
@@ -80,6 +81,7 @@ class WndPlayGames extends Window {
 
 		resize(width,y);
 	}
+
 
 	private void addButton(TextButton btn) {
 		btn.setRect(0, y, width, BUTTON_HEIGHT);

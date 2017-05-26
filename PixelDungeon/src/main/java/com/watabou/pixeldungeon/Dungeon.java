@@ -353,7 +353,7 @@ public class Dungeon {
 
 		GLog.toFile("saving game: %s", fileName);
 
-		OutputStream output = Storage.getStorage().getOutputStream(fileName);
+		OutputStream output = Storage.getStorage().getOutputStream(fileName, false);
 		Bundle.write(bundle, output);
 		output.close();
 	}
@@ -369,7 +369,7 @@ public class Dungeon {
 
 		GLog.toFile("saving level: %s", saveTo);
 
-		OutputStream output = Storage.getStorage().getOutputStream(saveTo);
+		OutputStream output = Storage.getStorage().getOutputStream(saveTo, false);
 		Bundle.write(bundle, output);
 		output.close();
 	}

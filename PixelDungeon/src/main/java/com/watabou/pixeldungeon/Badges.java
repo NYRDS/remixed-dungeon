@@ -270,7 +270,7 @@ public class Badges {
 			store(bundle, global);
 
 			try {
-				OutputStream output = Storage.getStorage().getOutputStream(BADGES_FILE);
+				OutputStream output = Storage.getStorage().getOutputStream(BADGES_FILE, false);
 				Bundle.write(bundle, output);
 				output.close();
 

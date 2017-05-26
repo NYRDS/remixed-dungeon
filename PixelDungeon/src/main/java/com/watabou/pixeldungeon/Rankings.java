@@ -129,7 +129,7 @@ public enum Rankings {
 		bundle.put( HAPPY,   happyWonNumber);
 		
 		try {
-			OutputStream output = Storage.getStorage().getOutputStream( RANKINGS_FILE );
+			OutputStream output = Storage.getStorage().getOutputStream( RANKINGS_FILE, false);
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (Exception e) {
@@ -150,7 +150,7 @@ public enum Rankings {
 		}
 
 		try {
-			InputStream input = Storage.getStorage().getInputStream(RANKINGS_FILE );
+			InputStream input = Storage.getStorage().getInputStream(RANKINGS_FILE, false);
 			Bundle bundle = Bundle.read( input );
 			input.close();
 			

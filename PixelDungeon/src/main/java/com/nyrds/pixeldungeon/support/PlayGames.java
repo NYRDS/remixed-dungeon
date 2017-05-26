@@ -9,7 +9,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,8 +34,8 @@ import static android.app.Activity.RESULT_OK;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<Snapshots.LoadSnapshotsResult> {
-	private static final int RC_SIGN_IN = 42353;
+public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+	private static final int RC_SIGN_IN     = 42353;
 	private static final int RC_SHOW_BADGES = 67584;
 
 	private GoogleApiClient googleApiClient;
@@ -47,16 +46,12 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	private PlayGames(Activity ctx) {
 		activity = ctx;
 
-
 		googleApiClient = new GoogleApiClient.Builder(activity)
 				.addConnectionCallbacks(this)
 				.addOnConnectionFailedListener(this)
 				.addApi(Games.API).addScope(Games.SCOPE_GAMES)
 				.addApi(Drive.API).addScope(Drive.SCOPE_APPFOLDER)
 				.build();
-
-		//ConnectionResult connectionResult = googleApiClient.blockingConnect();
-		//Log.i("Play Games", connectionResult.toString());
 	}
 
 	public static void init(Activity context) {
@@ -65,12 +60,15 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static void unlockAchievement(String achievementCode) {
-		Games.Achievements.unlock(playGames.googleApiClient, achievementCode);
+		//TODO store it locally if not connected
+		if(!isConnected()) {
+			Games.Achievements.unlock(playGames.googleApiClient, achievementCode);
+		}
 	}
 
 	public static void connect() {
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
-		if(!isConnected()) {
+		if (!isConnected()) {
 			Log.i("Play Games", "connect");
 			playGames.googleApiClient.connect();
 		}
@@ -78,7 +76,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static void disconnect() {
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
-		if(isConnected()) {
+		if (isConnected()) {
 			Log.i("Play Games", "disconnect");
 			Games.signOut(playGames.googleApiClient);
 			playGames.googleApiClient.disconnect();
@@ -96,19 +94,23 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static void writeToSnapshot(String snapshotId, byte[] content) {
-		Log.i("Play Games","Streaming to " + snapshotId);
+		Log.i("Play Games", "Streaming to " + snapshotId);
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, true);
 		Snapshot snapshot = result.await().getSnapshot();
 		snapshot.getSnapshotContents().writeBytes(content);
 
 		PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
-		Snapshots.CommitSnapshotResult commitResult = pendingResult.await();
+		pendingResult.setResultCallback(new ResultCallback<Snapshots.CommitSnapshotResult>() {
+			@Override
+			public void onResult(@NonNull Snapshots.CommitSnapshotResult commitSnapshotResult) {
+				if (commitSnapshotResult.getStatus().isSuccess()) {
+					Log.i("Play Games", "commit ok");
+				} else {
+					Log.e("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
+				}
 
-		if(commitResult.getStatus().isSuccess()) {
-			Log.i("Play Games", "commit ok");
-		} else {
-			Log.e("Play Games", "commit" + commitResult.getStatus().getStatusMessage());
-		}
+			}
+		});
 	}
 
 	public static InputStream streamFromSnapshot(String snapshotId) {
@@ -132,14 +134,22 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static boolean isConnected() {
-		return playGames.googleApiClient.isConnected();
+		return playGames!=null && playGames.googleApiClient.isConnected();
 	}
 
 	@Override
 	public void onConnected(@Nullable Bundle bundle) {
 		Log.i("Play Games", "onConnected");
-		Games.Snapshots.load(googleApiClient, false).setResultCallback(this);
-
+		Games.Snapshots.load(googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
+			@Override
+			public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
+				if (result.getStatus().isSuccess()) {
+					Log.i("Play Games", "load ok!");
+				} else {
+					Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
+				}
+			}
+		});
 	}
 
 	@Override
@@ -189,17 +199,8 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		return false;
 	}
 
-	@Override
-	public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
-		if (result.getStatus().isSuccess()) {
-			Log.i("Play Games", "load ok!");
-		} else {
-			Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
-		}
-	}
-
 	public static void showBadges() {
-		if(isConnected()) {
+		if (isConnected()) {
 			playGames.activity.startActivityForResult(
 					Games.Achievements.getAchievementsIntent(playGames.googleApiClient),
 					RC_SHOW_BADGES

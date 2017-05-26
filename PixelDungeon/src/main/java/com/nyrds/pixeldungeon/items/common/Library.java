@@ -48,7 +48,7 @@ public class Library {
 		saveNeeded = false;
 		gson.toJson(mKnowledgeLevel);
 		try {
-			OutputStream output = Storage.getStorage().getOutputStream(libraryFile);
+			OutputStream output = Storage.getStorage().getOutputStream(libraryFile, false);
 			output.write(gson.toJson(mKnowledgeLevel).getBytes());
 			output.close();
 		} catch (IOException e) {
@@ -59,7 +59,7 @@ public class Library {
 	private static void loadLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(Storage.getStorage().getInputStream(libraryFile)).toString(),
+					JsonHelper.readJsonFromStream(Storage.getStorage().getInputStream(libraryFile, false)).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {
 					}.getType()
 			);

@@ -73,7 +73,7 @@ public class Bones {
 		bundle.put( ITEM, item );
 		
 		try {
-			OutputStream output = Storage.getStorage().getOutputStream(BONES_FILE);
+			OutputStream output = Storage.getStorage().getOutputStream(BONES_FILE, false);
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (IOException e) {

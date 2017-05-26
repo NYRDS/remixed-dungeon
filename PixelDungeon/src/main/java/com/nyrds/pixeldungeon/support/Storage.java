@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.support;
 
 import com.nyrds.android.util.FileSystem;
 
+import org.apache.commons.io.output.TeeOutputStream;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,27 +18,27 @@ import java.io.OutputStream;
 public class Storage {
 	static private Storage storage;
 
-	public OutputStream getOutputStream(String id) throws FileNotFoundException {
-		/*
-		if(PlayGames.isConnected()) {
+	public OutputStream getOutputStream(String id, boolean persistent) throws FileNotFoundException {
+
+		if(persistent && PlayGames.isConnected()) {
 			return new TeeOutputStream(
 						new FileOutputStream(FileSystem.getInternalStorageFile(id)),
 						PlayGames.streamToSnapshot(id)
 					);
 		}
-		*/
+
 		return new FileOutputStream(FileSystem.getInternalStorageFile(id));
 
 	}
 
-	public InputStream getInputStream(String id) throws FileNotFoundException {
-		/*
-		if(PlayGames.isConnected()) {
+	public InputStream getInputStream(String id, boolean persistent) throws FileNotFoundException {
+
+		if(persistent && PlayGames.isConnected()) {
 			if(PlayGames.haveSnapshot(id)) {
 				return PlayGames.streamFromSnapshot(id);
 			}
 		}
-		*/
+
 		return new FileInputStream(FileSystem.getInternalStorageFile(id));
 	}
 
