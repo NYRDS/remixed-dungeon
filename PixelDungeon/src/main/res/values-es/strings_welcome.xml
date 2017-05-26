@@ -268,4 +268,22 @@ remix.26.1:\n
          - Añadido un paso adicional en el inicio del héroe: «non_expert». Los objetos incluidos en este paso, se añadirán al inventario en todos los niveles de dificultad, excepto para la dificultad «experto»\n
          - El héroe ya no sufre las alteraciones del hambre, que obtendría en la dificultad «experto», mientras este en un nivel con «isSafe»\n
         </string>
+  <string name="Welcome_Text_26_5">
+        remix.26.5\n
+        - Actualizada la apariencia de la “nueva” fuente\n
+        - Los objetos ya no pueden caer sobre una posición ocupada por un NPC o por un objeto en venta\n
+        - La biblioteca está abierta y contendrá información de enemigos y objetos que encuentres durante tus aventuras\n
+        - La Elfa ahora comienza con una Daga élfica, requiere 9 puntos de fuerza\n
+        - Cuando el héroe esta a un paso de pisar una trampa, aparecerá una advertencia para confirma la acción\n
+        - Un héroe cegado no recibirá la advertencia cuando este a paso de una trampa o un agujero. “Caminar a ciegas”\n
+        - Los enemigos no-muertos no son afectados por el gas de confusión\n
+        - Opción de prueba que permite limitar el tiempo en que el héroe puede hacer sus movimientos en un turno\n
+        - Traducciones actualizadas\n
+        - El pergamino de dominación tiene un efecto visual, para indicar claramente cuando es usado\n
+        - Arreglado un error que provocaba que el héroe sufriera daño constante por caída, cuando se minimizaba el juego justo después de caer\n
+        - Ahora puedes crear tus enemigos personalizados para tus mods\n
+        - Los enemigos personalizados también pueden ser del tipo ataque lejano\n
+        - Agregados atributos: canBePet, wallWalker y absoluteWalker para enemigos personalizados\n
+        - Los mods ahora soportan mensajes de “defensa” personalizados para los enemigos. Ej, “Bloqueado”, “Parado”\n
+    </string>
 </resources>
