@@ -30,13 +30,21 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class WndInfoMob extends WndTitledMessage {
 
 	public WndInfoMob( Mob mob ) {
-		super( new MobTitle( mob ), desc( mob ) );
+		super( new MobTitle( mob ), desc( mob, true ) );
 	}
-	
-	private static String desc( Mob mob ) {
-		return mob.description() + "\n\n" + mob.getState().status() + ".";
+
+	public WndInfoMob( Mob mob, int knowledge) {
+		super( new MobTitle( mob ), desc( mob, false) );
 	}
-	
+
+	private static String desc( Mob mob, boolean withStatus ) {
+		if(withStatus) {
+			return mob.description() + "\n\n" + mob.getState().status() + ".";
+		} else {
+			return mob.description();
+		}
+	}
+
 	private static class MobTitle extends Component {
 		
 		private static final int COLOR_BG	= 0xFFCC0000;

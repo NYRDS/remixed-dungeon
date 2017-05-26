@@ -8,10 +8,39 @@
     <string name="TownGuardNPC_Message1">Geh weiter.</string>
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">Stadtbewohner</string>
+    <string name="TownsfolkNPC_Name_Objective">Dorfbewohner</string>
     <string name="TownsfolkNPC_Message3">Welch traumhafter Tag.</string>
     <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">Stadtpriester</string>
+    <string name="HealerNPC_Gender">männlich</string>
     <string name="HealerNPC_Name_Objective">Stadtpriester</string>
+    <string name="HealerNPC_Message1">Kostenlose Behandlung für jeden Abenteurer.</string>
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Name">Angestellter</string>
-    </resources>
+    <string name="ServiceManNPC_Gender">männlich</string>
+    <string name="ServiceManNPC_Name_Objective">Angestellter</string>
+    <string name="WndMovieTheatre_Bye">Komm jederzeit zurück, wir freuen uns auf dich!</string>
+    <string name="WndMovieTheatre_Title">Kino</string>
+    <string name="WndPriest_Title">Stadtpriester</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">Dach</string>
+    <string name="town_deco_wall_name">Mauer</string>
+    <string name="town_deco_snow_name">Schnee</string>
+    <string name="town_deco_cross_name">Kreuz</string>
+    <string name="town_deco_bell_tower_name">Glockenturm</string>
+    <string name="town_deco_chimney_name">Kamin</string>
+    <string name="town_deco_window_name">Fenster</string>
+    <string name="town_deco_door_name">Tür</string>
+    <string name="town_deco_door_desc">Eine einfache Holztür.</string>
+
+    <string name="town_deco_locked_door_name">Verschlossene Tür</string>
+    <string name="town_deco_snowman_name">Schneemann</string>
+    <string name="town_deco_floor_name">Boden</string>
+    <string name="town_deco_carpet_name">Teppich</string>
+    <string name="town_deco_movies_door_name">Tür</string>
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">königlich</string>
+
+</resources>

@@ -4,14 +4,16 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Base64;
 
+import com.watabou.noosa.Game;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -30,14 +32,13 @@ public class Util {
 	}
 
 	static public boolean isConnectedToInternet() {
-		InetAddress ipAddr;
-		try {
-			ipAddr = InetAddress.getByName("google.com");
-		} catch (UnknownHostException e) {
-			return false;
-		}
+		boolean connectionStatus;
 
-		return !ipAddr.toString().equals("");
+		ConnectivityManager connectivityManager
+				= (ConnectivityManager) Game.instance().getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+		connectionStatus = activeNetworkInfo != null && activeNetworkInfo.isConnected();
+		return connectionStatus;
 	}
 
 	static public String getSignature(Context context) {
@@ -56,18 +57,18 @@ public class Util {
 	}
 
 	public static int signum(int x) {
-		if(x>0) {
+		if (x > 0) {
 			return 1;
 		}
-		if(x<0) {
+		if (x < 0) {
 			return -1;
 		}
 		return 0;
 	}
 
 	@Nullable
-	public static<T> T byNameFromList(Class<?>[] classList, @NonNull String name) {
-		for(Class<?> clazz:classList) {
+	public static <T> T byNameFromList(Class<?>[] classList, @NonNull String name) {
+		for (Class<?> clazz : classList) {
 			if (clazz.getSimpleName().equals(name)) {
 				try {
 					return (T) clazz.newInstance();

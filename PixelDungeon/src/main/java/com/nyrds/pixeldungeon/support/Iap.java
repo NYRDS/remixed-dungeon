@@ -25,7 +25,7 @@ import java.util.Locale;
  * Created by mike on 24.05.2016.
  */
 public class Iap {
-    static final int RC_REQUEST = (int) (Math.random() * 0xffff);
+	private static final int RC_REQUEST = (int) (Math.random() * 0xffff);
 
     private static final String SKU_LEVEL_1 = "supporter_level_1";
     private static final String SKU_LEVEL_2 = "supporter_level_2";
@@ -87,7 +87,7 @@ public class Iap {
         });
     }
 
-    public static void queryItemsPrice(List<String> items) {
+    private static void queryItemsPrice(List<String> items) {
         try {
             mHelper.queryInventoryAsync(true, items, null, mGotInventoryListener);
         } catch (IabHelper.IabAsyncInProgressException e) {
@@ -159,7 +159,7 @@ public class Iap {
         }
     }
 
-    static IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
+	private static IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
         @Override
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
             if (mHelper == null)
@@ -178,7 +178,7 @@ public class Iap {
     };
 
     @Nullable
-    static String formatSkuPrice(SkuDetails sku) {
+    private static String formatSkuPrice(SkuDetails sku) {
         if (sku == null) {
             return null;
         }
@@ -281,7 +281,7 @@ public class Iap {
         }
     }
 
-    static boolean verifyDeveloperPayload(Purchase p) {
+    private static boolean verifyDeveloperPayload(Purchase p) {
         String payload = p.getDeveloperPayload();
 
         return true;
@@ -304,7 +304,7 @@ public class Iap {
         }
     }
 
-    static void complain(String message) {
+    private static void complain(String message) {
         EventCollector.logEvent("iap error", message);
         Log.e("GAME", "**** IAP Error: " + message);
     }

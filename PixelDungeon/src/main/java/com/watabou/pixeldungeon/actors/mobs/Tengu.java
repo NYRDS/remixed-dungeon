@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -38,18 +39,16 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.TenguSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class Tengu extends Boss {
+public class Tengu extends Boss implements IZapper {
 
 	private static final int JUMP_DELAY = 5;
 	
 	public Tengu() {
-		spriteClass = TenguSprite.class;
 		
 		hp(ht(120));
 		exp = 20;
@@ -146,6 +145,7 @@ public class Tengu extends Boss {
 
 		if(candidates.isEmpty()) {
 			PotionOfHealing.heal(this, 0.1f);
+			spend( 1 / speed() );
 			return;
 		}
 

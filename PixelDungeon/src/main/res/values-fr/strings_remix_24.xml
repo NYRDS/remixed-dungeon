@@ -11,13 +11,43 @@
 	
 	<!-- STRINGS OF Capotain CLASS -->
     <string name="Capotain_Name">Capotaine</string>
-    <!-- STRINGS OF Fez CLASS -->
+    <string name="Capotain_Info">Un chapeau à haute coiffe et à bord étroit. Il est habituellement associé aux puritains, mais il ne faut pas être religieux pour le porter. Pour une raison quelconque, il a une plaque, sur laquelle est écrite \"Salomon\".</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
-    <!-- STRINGS OF NekoEars CLASS -->
+    <string name="Fez_Info">C\'est une coiffe feutrée en forme de cône tronqué en feutrine rouge, avec un pompon attaché au sommet. Et non, cela ne rend pas le monde tri-dimensionniel.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">Oreilles de Neko</string>
     <string name="NekoEars_Info">Parfois vous voulez nettoyer tout le sang de monstre et la terre et vous sentir mignon et duveteux .... Ou dans le pire des cas vous pouvez porter de mignonnes oreilles de chat
 .</string>
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Oreilles de Lapin</string>
-    </resources>
+    <string name="RabbitEars_Info">Cette légende est connue : les lapins sont des créatures chanceuses, et leur chance se transférerait à ceux qui obtiennent une partie du corps du lapin. En y repensant être tué pour une décoration faite avec vos oreilles ne vous rend pas particulièrement chanceux.</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Citrouille</string>
+    <string name="Pumpkin_Info">Autrefois, le peuple Citrouille était une nation prospére et fière. Après que les humains sont arrivés, tout à été réduit en cendres. Et plusieurs têtes vidées des tribus Citrouilles disparues servent de rappel de ces terribles évènements.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Bonnet de nuit</string>
+    <string name="Nightcap_Info">Conquérir les donjons la nuit doit être une activité vraiment épuisante. Que diriez-vous de mettre un chapeau confortable et chaleureux, et que toutes vos préoccupations s\'en aillent.</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Chapeau de magicien</string>
+    <string name="WizardHat_Info">Un magnifique chapeau de soie décoré d\'étoiles. Avant, certains pensaient que les plus grands sorciers se revêtaient de vêtements spécialement fabriqués qui augmentaient leur pouvoir. Mais cela n\'augmente pas vos aptitudzes magiques, mais cela s\'en ressent presque comme.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Liste d\'accessoires</string>
+    <string name="WndHats_SlotTitle">Equipé</string>
+    <string name="WndHats_NoConnectionMsg">Impossible de se connecter à Google Play.</string>
+    <string name="WndHats_Purchased">Je l\'ai!</string>
+
+    <string name="WndHats_BackButton">Retour</string>
+    <string name="WndHats_BuyButton">Acheter</string>
+    <string name="WndHats_EquipButton">Equiper</string>
+    <string name="WndHats_InfoButton">Examiner</string>
+    <string name="WndHats_UnequipButton">Déséquiper</string>
+</resources>

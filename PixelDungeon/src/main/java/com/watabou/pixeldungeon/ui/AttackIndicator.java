@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -77,12 +78,13 @@ public class AttackIndicator extends Tag {
 	
 	private void checkEnemies() {
 		
-		int heroPos = Dungeon.hero.getPos();
+		Hero hero = Dungeon.hero;
 		candidates.clear();
-		int v = Dungeon.hero.visibleEnemies();
+		int v = hero.visibleEnemies();
 		for (int i=0; i < v; i++) {
-			Mob mob = Dungeon.hero.visibleEnemy( i );
-			if (Dungeon.level.adjacent( heroPos, mob.getPos() ) && !mob.isPet()) {
+			Mob mob = hero.visibleEnemy( i );
+
+			if (hero.canAttack(mob) && !mob.isPet()) {
 				candidates.add( mob );
 			}
 		}

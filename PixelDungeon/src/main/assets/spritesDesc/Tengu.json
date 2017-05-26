@@ -1,0 +1,14 @@
+{
+   "texture" : "tengu.png",
+   "width" : 14,
+   "height" : 16,
+   "idle" : { "fps" : 2, "looped" : true, "frames" : [0, 0, 0, 1]  },
+   "run" : { "fps" : 15, "looped" : false, "frames" : [2, 3, 4, 5, 0] },
+   "attack" : { "fps" : 15, "looped" : false, "frames" : [6, 7, 7, 0] },
+   "die" : { "fps" : 8, "looped" : false, "frames" : [8, 9, 10, 10, 10, 10, 10, 10] },
+   "zapEffect":"Shuriken"
+}
+
+
+
+

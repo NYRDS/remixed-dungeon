@@ -1,5 +1,5 @@
 {
-"test_fetch_quest_name":{
+"ArtificerQuest1":{
 	"type":"fetchQuest",
 	"target":"SpiderQueenCarapace",
 	"startMessage":"Bring me spider queen carapace.",
@@ -7,7 +7,7 @@
 	"turnInMessage":"Thank you for that spider queen carapace.",
 	"aftermathMessage":"To this day, I am still enjoying that spider queen carapace."
    },
-"test_hunt_quest_name":{
+"ArtificerQuest2":{
 	"type":"huntQuest",
 	"target":"Gnoll",
 	"quantity":"5",
@@ -16,4 +16,13 @@
 	"turnInMessage":"Thank you for killing 4 gnolls.",
 	"aftermathMessage":"Damn gnolls, good that you killed them."
    }
+"ArtificerQuest3":{
+	"type":"huntQuest",
+	"target":"Gnoll",
+	"quantity":"5",
+	"startMessage":"Kill'em gnolls, like 4 of them.",
+	"reminderMessage":"I am waiting till you kill 4 gnolls.",
+	"turnInMessage":"Thank you for killing 4 gnolls.",
+	"aftermathMessage":"Damn gnolls, good that you killed them."
+}
 }

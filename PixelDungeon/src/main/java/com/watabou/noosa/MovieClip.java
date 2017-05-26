@@ -74,11 +74,11 @@ public class MovieClip extends Image {
 		}
 	}
 	
-	public void play( Animation anim ) {
+	public void play(Animation anim ) {
 		play( anim, false );
 	}
 
-	public void play( Animation anim, boolean force ) {
+	private void play( Animation anim, boolean force ) {
 		
 		if (!force && (curAnim != null) && (curAnim == anim) && (curAnim.looped || !finished)) {
 			return;

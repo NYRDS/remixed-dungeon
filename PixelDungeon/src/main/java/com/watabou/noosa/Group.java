@@ -171,4 +171,8 @@ public class Group extends Gizmo {
 	public int getLength() {
 		return members.size();
 	}
+
+	public Gizmo getMember(int i) {
+		return members.get(i);
+	}
 }

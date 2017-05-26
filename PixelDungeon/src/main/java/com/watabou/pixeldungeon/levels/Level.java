@@ -137,11 +137,7 @@ public abstract class Level implements Bundlable {
 
 	@NonNull
 	public String music() {
-		String ret = DungeonGenerator.music(levelId);
-		if (ret == null) {
-			ret = Assets.TUNE;
-		}
-		return ret;
+		return DungeonGenerator.music(levelId);
 	}
 
 	public Feeling getFeeling() {

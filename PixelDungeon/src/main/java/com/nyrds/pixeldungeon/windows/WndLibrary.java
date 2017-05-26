@@ -35,7 +35,6 @@ public class WndLibrary extends Window {
 
 	public WndLibrary() {
 		super();
-		final Window context = this;
 
 		//Title text
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
@@ -61,7 +60,7 @@ public class WndLibrary extends Window {
 				@Override
 				protected void onClick() {
 					super.onClick();
-					context.hide();
+					hide();
 					GameScene.show(new WndLibraryCatalogue(entry.getKey(),entry.getValue()));
 				}
 			};
@@ -86,7 +85,7 @@ public class WndLibrary extends Window {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				context.hide();
+				hide();
 			}
 		};
 

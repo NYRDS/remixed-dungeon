@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class LibrarianNPC extends ImmortalNPC {
 
-	private static final String TXT_MESSAGE = Game.getVar(R.string.LibrarianNPC_Message_Not_Ready);
+	private static final String TXT_MESSAGE = Game.getVar(R.string.LibrarianNPC_Message_Instruction);
 
 	public LibrarianNPC() {
 	}

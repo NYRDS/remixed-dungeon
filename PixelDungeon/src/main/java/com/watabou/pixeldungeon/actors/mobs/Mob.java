@@ -951,5 +951,4 @@ public abstract class Mob extends Char {
 		}
 
 	}
-
 }

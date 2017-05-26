@@ -1,7 +1,4 @@
 package com.nyrds.pixeldungeon.mechanics.quest;
-
-import com.watabou.pixeldungeon.items.Item;
-
 /**
  * Created by DeadDie on 09.05.2017
  */
@@ -54,6 +51,10 @@ public class Quest {
 
     private void progressQuest(){
         questQuantity++;
+    }
+
+    public void setQuestQuantity(int quantity){
+        questQuantity = quantity;
     }
 
 }

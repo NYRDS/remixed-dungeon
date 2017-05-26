@@ -272,6 +272,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		return on;
 	}
 
+	@Override
 	public CompositeTextureImage avatar() {
 		if(avatar==null) {
 			avatar = new CompositeTextureImage(texture);

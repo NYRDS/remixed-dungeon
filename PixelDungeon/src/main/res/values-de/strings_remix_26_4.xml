@@ -1,3 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">Du kannst nur 2 Artifakte zur gleichen Zeit tragen.</string>
+
+    <string name="FortuneTellerNPC_Name_Objective">Wahrsager</string>
+    <string name="WndFortuneTeller_Title">Wahrsager.</string>
+
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Ja</string>
+    <string name="Wnd_Button_No">Nein</string>
+    <string name="Wnd_Button_Back">Zurück</string>
+    <string name="Wnd_Button_Cancel">Abbrechen</string>
+    <string name="Wnd_Button_Close">Schließen</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">Bücherei</string>
+    <string name="WndLibrary_Mobs_Btn">Monster</string>
+    <string name="WndLibrary_Codex_Btn">Geschichten</string>
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">Teppich</string>
+    <string name="town_deco_blue_carpet_desc">Ein exquisierter Teppich, geschmückt mit lila Seide.</string>
+
+    <string name="town_table_fortune_name">Tisch</string>
     </resources>

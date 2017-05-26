@@ -291,4 +291,22 @@
          - Adding additional step of hero\'s starting gear initialization: «non_expert». Items, included on this step, will be added to the inventory in every difficulty level, except for «Expert» difficulty\n
          - Hero are no longer suffers from hunger debuffs, that he would get on «Expert» difficulty, as long as he remains on «isSafe» level\n
         </string>
+    <string name="Welcome_Text_26_5">
+        remix.26.5\n
+        - Updated “new” font appearance\n
+        - Items can no longer land on a position occupied by NPC or by item that is for sale\n
+        - Library has opened and now will contain info about items and mobs that you encounter during your adventures\n
+        - Elf now starts with unique Elven Dagger, that requires 9 strength\n
+        - When a hero is about to step on visible trap a warning dialog window will appear asking to confirm this action\n
+        - Blinded hero won\'t get the warning message, when is about to step on a visible trap or into the pit, “blindly stepping forward”\n
+        - Undead mobs are no longer affected by confusing gas\n
+        - Testing option that allows to limit time that hero gets to make his turn\n
+        - Updating translations\n
+        - Scroll of Domination got a visual effect to more clearly indicate that it has been used\n
+        - Fixed bug that was causing hero to take fall damage multiple times if game was minimized right after the fall\n
+        - Now you can create custom mobs for your mods\n
+        - Custom mob mechanics also allows to create mob with ranged attack\n
+        - Adding modding attributes: canBePet, wallWalker and absoluteWalker for custom mobs\n
+        - Modding now supports custom “defense” messages for mob, ex. “Blocked”, “Parried”\n
+    </string>
 </resources>

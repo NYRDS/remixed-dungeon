@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">Пастка</string>
+    <string name="TrapWnd_Step">Ти впевнений що бажаєш увійти до пастки? Можеш загинути.</string>
+</resources>
