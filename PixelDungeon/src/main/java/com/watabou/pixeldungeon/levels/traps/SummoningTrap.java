@@ -22,76 +22,48 @@ import android.support.annotation.Nullable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.DelayedMobSpawner;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
-import java.util.ArrayList;
-
 public class SummoningTrap {
 
-	private static final float DELAY = 2f;
-	
-	private static final Mob DUMMY = new Mob() {};
-	
-	// 0x770088
-	
-	public static void trigger( int pos, @Nullable Char c ) {
-		
+	public static void trigger(int pos, @Nullable Char c) {
+
 		if (Dungeon.bossLevel()) {
 			return;
 		}
-		
+
 		if (c != null) {
-			Actor.occupyCell( c );
+			Actor.occupyCell(c);
 		}
-		
-		int nMobs = 1;
-		if (Random.Int( 2 ) == 0) {
+
+		int nMobs = 3;
+		if (Random.Int(2) == 0) {
 			nMobs++;
-			if (Random.Int( 2 ) == 0) {
+			if (Random.Int(2) == 0) {
 				nMobs++;
 			}
 		}
-		
-		// It's complicated here, because these traps can be activated in chain
 
 		Level level = Dungeon.level;
 
-		ArrayList<Integer> candidates = new ArrayList<>();
-		
-		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-			int p = pos + Level.NEIGHBOURS8[i];
-			if (Actor.findChar( p ) == null && (level.passable[p] || level.avoid[p])) {
-				candidates.add( p );
+		for (int i = 0; i < nMobs; ++i) {
+			int cell = level.getEmptyCellNextTo(pos);
+			if (level.cellValid(cell)) {
+
+				Mob mob;
+				int nTry = 0;
+				do {
+					mob = Bestiary.mob();
+					nTry++;
+				} while (!mob.canSpawnAt(level, cell) && nTry < 10);
+
+				mob.setState(mob.WANDERING);
+				Actor.addDelayed(new DelayedMobSpawner(mob, cell), 0.1f);
 			}
-		}
-		
-		ArrayList<Integer> respawnPoints = new ArrayList<>();
-		
-		while (nMobs > 0 && candidates.size() > 0) {
-			int index = Random.index( candidates );
-			
-			DUMMY.setPos(candidates.get( index ));
-			Actor.occupyCell( DUMMY );
-			
-			respawnPoints.add( candidates.remove( index ) );
-			nMobs--;
-		}
-		
-		for (Integer point : respawnPoints) {
-			Mob mob;
-			int nTry = 0;
-			do {
-				mob = Bestiary.mob();
-				nTry++;
-			} while (!mob.canSpawnAt(level,point) && nTry < 10);
-			
-			mob.setState(mob.WANDERING);
-			Dungeon.level.spawnMob(mob, DELAY);
-			WandOfBlink.appear( mob, point );
 		}
 	}
 }
