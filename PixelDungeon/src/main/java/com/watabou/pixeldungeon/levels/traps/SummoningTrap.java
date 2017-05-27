@@ -83,9 +83,11 @@ public class SummoningTrap {
 		
 		for (Integer point : respawnPoints) {
 			Mob mob;
+			int nTry = 0;
 			do {
 				mob = Bestiary.mob();
-			} while (!mob.canSpawnAt(level,point));
+				nTry++;
+			} while (!mob.canSpawnAt(level,point) && nTry < 10);
 			
 			mob.setState(mob.WANDERING);
 			Dungeon.level.spawnMob(mob, DELAY);
