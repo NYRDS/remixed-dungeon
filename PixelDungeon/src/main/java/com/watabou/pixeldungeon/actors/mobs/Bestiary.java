@@ -55,7 +55,7 @@ public class Bestiary {
 		try {
 			String idString = DungeonGenerator.getCurrentLevelId();
 
-			if(currentLevelId.equals(idString) && currentLevelBestiary != null) {
+			if(idString.equals(currentLevelId) && currentLevelBestiary != null) {
 				return getMobFromCachedData();
 			}
 
@@ -74,7 +74,7 @@ public class Bestiary {
 
 		if(Feelings!=null) {
 			String feeling = DungeonGenerator.getLevelFeeling(idString).name();
-			currentLevelFeelingBestiary = Feelings.getJSONObject(feeling);
+			currentLevelFeelingBestiary = Feelings.optJSONObject(feeling);
 		}
 
 		JSONObject levelDesc = bestiaryData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
