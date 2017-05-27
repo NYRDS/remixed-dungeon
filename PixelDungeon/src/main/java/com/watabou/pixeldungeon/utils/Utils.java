@@ -82,7 +82,7 @@ public class Utils {
 
 
 	public static String getClassParam(String className, String paramName, String defaultValue, boolean warnIfAbsent) {
-		if (className.length() == 0) { // isEmpty() require api level 9
+		if (className.isEmpty()) {
 			return defaultValue;
 		}
 
