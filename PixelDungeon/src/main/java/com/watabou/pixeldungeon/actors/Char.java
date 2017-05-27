@@ -180,7 +180,7 @@ public abstract class Char extends Actor {
 
 	protected void readCharData() {
 
-		name = getClassParam("Name", "Unnamed", true);
+		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);
 
 		description = getClassParam("Desc", description, true);
