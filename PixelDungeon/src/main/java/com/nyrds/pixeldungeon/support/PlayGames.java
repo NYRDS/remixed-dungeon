@@ -66,7 +66,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static void unlockAchievement(String achievementCode) {
 		//TODO store it locally if not connected
-		if (!isConnected()) {
+		if (isConnected()) {
 			Games.Achievements.unlock(playGames.googleApiClient, achievementCode);
 		}
 	}
