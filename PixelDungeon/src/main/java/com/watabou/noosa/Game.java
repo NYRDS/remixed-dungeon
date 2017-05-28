@@ -226,7 +226,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			versionCode = 0;
 		}
 
-
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
 		view = new GLSurfaceView(this);

@@ -7,8 +7,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 public class FileSystem {
 
@@ -107,7 +110,6 @@ public class FileSystem {
 		}
 	}
 
-
 	static public void copyFile(String inputFile, String outputFile) {
 		try {
 			File dir = new File(outputFile).getParentFile();
@@ -118,6 +120,52 @@ public class FileSystem {
 			copyFile(inputFile, new FileOutputStream(outputFile));
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
+		}
+	}
+
+	public static void zipFolderTo(OutputStream out, File srcFolder, int depth) throws IOException {
+		ZipOutputStream zip = new ZipOutputStream(out);
+		addFolderToZip(srcFolder,srcFolder,depth, zip);
+
+		zip.flush();
+		zip.close();
+	}
+
+	private static void addFolderToZip(File rootFolder, File srcFolder, int depth,
+	                                   ZipOutputStream zip) throws IOException {
+
+		for (File file : srcFolder.listFiles()) {
+			if (file.isFile()) {
+				addFileToZip(rootFolder, file, zip);
+				continue;
+			}
+
+			if(depth > 0 && file.isDirectory()) {
+				zip.putNextEntry(new ZipEntry(getRelativePath(file,rootFolder)));
+				addFolderToZip(rootFolder, srcFolder, depth-1, zip);
+				zip.closeEntry();
+			}
+		}
+	}
+
+	private static void addFileToZip(File rootFolder, File file, ZipOutputStream zip) throws IOException {
+			byte[] buf = new byte[4096];
+			int len;
+			FileInputStream in = new FileInputStream(file);
+			zip.putNextEntry(new ZipEntry(getRelativePath(file,rootFolder)));
+			while ((len = in.read(buf)) > 0) {
+				zip.write(buf, 0, len);
+			}
+			zip.closeEntry();
+		}
+
+	public static String getRelativePath(File file, File folder) {
+		String filePath = file.getAbsolutePath();
+		String folderPath = folder.getAbsolutePath();
+		if (filePath.startsWith(folderPath)) {
+			return filePath.substring(folderPath.length() + 1);
+		} else {
+			return null;
 		}
 	}
 }
