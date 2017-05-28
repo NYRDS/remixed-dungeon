@@ -30,14 +30,14 @@ import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class PotionOfInvisibility extends Potion {
+public class PotionOfInvisibility extends UpgradablePotion {
 
 	private static final float ALPHA	= 0.4f;
 	
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();
-		Buff.affect( hero, Invisibility.class, Invisibility.DURATION );
+		Buff.affect( hero, Invisibility.class, (float) (Invisibility.DURATION * qualityFactor()));
 		GLog.i(Game.getVar(R.string.PotionOfInvisibility_Apply));
 		Sample.INSTANCE.play( Assets.SND_MELD );
 	}
@@ -46,13 +46,13 @@ public class PotionOfInvisibility extends Potion {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfInvisibility_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 40 * quantity() : super.price();
+	public int basePrice() {
+		return 40;
 	}
-	
-	public static void melt( Char ch ) {
+
+	public static void melt(Char ch ) {
 		if (ch.getSprite().hasParent()) {
 			ch.getSprite().getParent().add( new AlphaTweener( ch.getSprite(), ALPHA, 0.4f ) );
 		} else {
@@ -62,7 +62,7 @@ public class PotionOfInvisibility extends Potion {
 	
 	@Override
 	protected void moistenScroll(Scroll scroll) {
-		int quantity = detachMoistenItems(scroll,3);
+		int quantity = detachMoistenItems(scroll, (int) (3*qualityFactor()));
 		
 		GLog.i(TXT_RUNE_DISAPPEARED, scroll.name());
 		

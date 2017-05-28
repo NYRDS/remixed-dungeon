@@ -27,7 +27,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.ParalysisArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-public class PotionOfParalyticGas extends Potion {
+public class PotionOfParalyticGas extends UpgradablePotion {
 
 	@Override
 	public void shatter( int cell ) {
@@ -37,19 +37,19 @@ public class PotionOfParalyticGas extends Potion {
 		splash( cell );
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		
-		GameScene.add( Blob.seed( cell, 1000, ParalyticGas.class ) );
+		GameScene.add( Blob.seed( cell, (int) (1000 * qualityFactor()), ParalyticGas.class ) );
 	}
 	
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.PotionOfParalyticGas_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 40 * quantity() : super.price();
+	public int basePrice() {
+		return 40;
 	}
-	
+
 	@Override
 	protected void moistenArrow(Arrow arrow) {
 		int quantity = reallyMoistArrows(arrow);

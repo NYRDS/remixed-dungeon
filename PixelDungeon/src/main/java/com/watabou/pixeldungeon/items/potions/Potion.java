@@ -314,10 +314,14 @@ public class Potion extends Item implements UnknownItem {
 		final int color = ItemSprite.pick( image, 8, 10 );
 		Splash.at( cell, color, 5 );
 	}
-	
+
+	public int basePrice() {
+		return 20;
+	}
+
 	@Override
 	public int price() {
-		return 20 * quantity();
+		return (int) ((isKnown() ? basePrice() : 20) * quantity() * qualityFactor());
 	}
 	
 	@Override
@@ -363,9 +367,13 @@ public class Potion extends Item implements UnknownItem {
 		}
 		return quantity;
 	}
-	
+
+	double qualityFactor() {
+		return 1;
+	}
+
 	protected int reallyMoistArrows(Arrow arrow) {
-		int quantity = detachMoistenItems(arrow,10);
+		int quantity = detachMoistenItems(arrow, (int) (10*qualityFactor()));
 		moistenEffective();
 		GLog.i(TXT_ARROW_MOISTEN);
 		return quantity;

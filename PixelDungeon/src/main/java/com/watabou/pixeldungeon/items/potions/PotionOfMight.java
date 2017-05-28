@@ -43,7 +43,12 @@ public class PotionOfMight extends PotionOfStrength {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfMight_Info);
 	}
-	
+
+	@Override
+	public int basePrice() {
+		return 200;
+	}
+
 	@Override
 	public int price() {
 		return isKnown() ? 200 * quantity() : super.price();

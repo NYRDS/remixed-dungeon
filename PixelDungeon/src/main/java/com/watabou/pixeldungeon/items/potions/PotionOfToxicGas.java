@@ -28,7 +28,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.PoisonArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-public class PotionOfToxicGas extends Potion {
+public class PotionOfToxicGas extends UpgradablePotion {
 
 	
 	@Override
@@ -39,7 +39,7 @@ public class PotionOfToxicGas extends Potion {
 		splash( cell );
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		
-		ToxicGas gas = Blob.seed( cell, 1000, ToxicGas.class );
+		ToxicGas gas = Blob.seed( cell, (int) (1000*qualityFactor()), ToxicGas.class );
 		Actor.add( gas );
 		GameScene.add( gas );
 	}
@@ -48,12 +48,12 @@ public class PotionOfToxicGas extends Potion {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfToxicGas_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 40 * quantity() : super.price();
+	public int basePrice() {
+		return 40;
 	}
-	
+
 	@Override
 	protected void moistenArrow(Arrow arrow) {
 		int quantity = reallyMoistArrows(arrow);

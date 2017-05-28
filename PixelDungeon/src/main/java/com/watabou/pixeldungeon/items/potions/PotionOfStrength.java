@@ -41,9 +41,9 @@ public class PotionOfStrength extends Potion {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfStrength_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 100 * quantity() : super.price();
+	public int basePrice() {
+		return 100;
 	}
 }

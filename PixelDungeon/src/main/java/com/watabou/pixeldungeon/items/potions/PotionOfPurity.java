@@ -38,7 +38,7 @@ import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PathFinder;
 
-public class PotionOfPurity extends Potion {
+public class PotionOfPurity extends UpgradablePotion{
 
 	private static final String TXT_FRESHNESS = Game.getVar(R.string.PotionOfPurity_Freshness);
 	private static final String TXT_NO_SMELL  = Game.getVar(R.string.PotionOfPurity_NoSmell);
@@ -48,7 +48,7 @@ public class PotionOfPurity extends Potion {
 	@Override
 	public void shatter(int cell) {
 
-		PathFinder.buildDistanceMap(cell, BArray.not(Dungeon.level.losBlocking, null), DISTANCE);
+		PathFinder.buildDistanceMap(cell, BArray.not(Dungeon.level.losBlocking, null), (int) (DISTANCE * qualityFactor()));
 
 		boolean procd = false;
 
@@ -120,13 +120,13 @@ public class PotionOfPurity extends Potion {
 	}
 
 	@Override
-	public int price() {
-		return isKnown() ? 50 * quantity() : super.price();
+	public int basePrice() {
+		return 50;
 	}
 
 	@Override
 	protected void moistenRottenFood(RottenFood rfood) {
-		detachMoistenItems(rfood, 1);
+		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 		moistenEffective();
 		GLog.i(TXT_ROTTEN_FOOD_MOISTEN, rfood.name());
 

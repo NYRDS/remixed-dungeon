@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.FrostArrow;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
 
-public class PotionOfFrost extends Potion {
+public class PotionOfFrost extends UpgradablePotion {
 	
 	private static final int DISTANCE	= 2;
 	
@@ -40,7 +40,7 @@ public class PotionOfFrost extends Potion {
 			return;
 		}
 		
-		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.losBlocking, null ), DISTANCE );
+		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.losBlocking, null ), (int) (DISTANCE * qualityFactor()));
 		
 		Fire fire = (Fire)Dungeon.level.blobs.get( Fire.class );
 		
@@ -60,10 +60,10 @@ public class PotionOfFrost extends Potion {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfFrost_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 50 * quantity() : super.price();
+	public int basePrice() {
+		return 50;
 	}
 	
 	@Override

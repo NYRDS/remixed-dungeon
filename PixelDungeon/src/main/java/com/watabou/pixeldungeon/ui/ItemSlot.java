@@ -188,15 +188,13 @@ public class ItemSlot extends Button {
 			topRight.measure();
 
 		} else {
-
 			topRight.text(null);
-
 		}
 
 		int level = item.visiblyUpgraded();
 
 		if (level != 0) {
-			bottomRight.text(item.levelKnown ? Utils.format(TXT_LEVEL, level) : "");
+			bottomRight.text(Utils.format(TXT_LEVEL, level));
 			bottomRight.measure();
 			bottomRight.hardlight(level > 0 ? UPGRADED : DEGRADED);
 		} else {
@@ -216,7 +214,6 @@ public class ItemSlot extends Button {
 		}
 
 		layout();
-
 	}
 
 	public void enable(boolean value) {

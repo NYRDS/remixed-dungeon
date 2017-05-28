@@ -165,10 +165,9 @@ public class Item implements Bundlable, Presser {
 		}
 
 		if (stackable) {
-
 			Class<?> c = getClass();
 			for (Item item : items) {
-				if (item.getClass() == c) {
+				if (item.getClass() == c && item.level() == level()) {
 					item.quantity(item.quantity() + quantity());
 					item.updateQuickslot();
 					return true;
@@ -200,23 +199,17 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public final Item detach(Bag container) {
-
 		if (quantity() <= 0) {
-
 			return null;
-
 		} else {
 			if (quantity() == 1) {
-
 				return detachAll(container);
-
 			} else {
-
 				quantity(quantity() - 1);
 				updateQuickslot();
-
 				try {
 					Item detached = getClass().newInstance();
+					detached.level(level());
 					detached.onDetach();
 					return detached;
 				} catch (Exception e) {

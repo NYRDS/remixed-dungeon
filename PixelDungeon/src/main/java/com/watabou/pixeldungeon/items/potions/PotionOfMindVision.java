@@ -23,13 +23,11 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
-public class PotionOfMindVision extends Potion {
-
-	
+public class PotionOfMindVision extends UpgradablePotion {
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();
-		Buff.affect( hero, MindVision.class, MindVision.DURATION );
+		Buff.affect( hero, MindVision.class, (float) (MindVision.DURATION * qualityFactor()));
 
 		MindVision.reportMindVisionEffect();
 	}
@@ -38,9 +36,9 @@ public class PotionOfMindVision extends Potion {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfMindVision_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 35 * quantity() : super.price();
+	public int basePrice() {
+		return 35;
 	}
 }

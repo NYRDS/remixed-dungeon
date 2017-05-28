@@ -27,12 +27,12 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class PotionOfLevitation extends Potion {
+public class PotionOfLevitation extends UpgradablePotion {
 
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();
-		Buff.affect( hero, Levitation.class, Levitation.DURATION );
+		Buff.affect( hero, Levitation.class, (float) (Levitation.DURATION *qualityFactor()));
 		GLog.i(Game.getVar(R.string.PotionOfLevitation_Apply));
 	}
 	
@@ -40,29 +40,29 @@ public class PotionOfLevitation extends Potion {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfLevitation_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 35 * quantity() : super.price();
+	public int basePrice() {
+		return 35;
 	}
 	
 	@Override
 	protected void moistenArrow(Arrow arrow) {
-		detachMoistenItems(arrow, 10);
+		detachMoistenItems(arrow, (int) (10*qualityFactor()));
 		GLog.i(TXT_ITEM_FLIES_AWAY , arrow.name());
 		moistenEffective();
 	}
 	
 	@Override
 	protected void moistenScroll(Scroll scroll) {
-		detachMoistenItems(scroll,3);
+		detachMoistenItems(scroll, (int) (3*qualityFactor()));
 		GLog.i(TXT_ITEM_FLIES_AWAY , scroll.name());
 		moistenEffective();
 	}
 	
 	@Override
 	protected void moistenRottenFood(RottenFood rfood) {
-		detachMoistenItems(rfood,1);
+		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 		
 		GLog.i(TXT_ITEM_FLIES_AWAY , rfood.name());
 		moistenEffective();

@@ -27,7 +27,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-public class PotionOfLiquidFlame extends Potion {
+public class PotionOfLiquidFlame extends UpgradablePotion {
 
 	@Override
 	public void shatter( int cell ) {
@@ -37,7 +37,7 @@ public class PotionOfLiquidFlame extends Potion {
 		splash( cell );
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		
-		LiquidFlame fire = Blob.seed( cell, 10, LiquidFlame.class );
+		LiquidFlame fire = Blob.seed( cell, (int) (10 * qualityFactor()), LiquidFlame.class );
 		GameScene.add( fire );
 	}
 	
@@ -45,12 +45,12 @@ public class PotionOfLiquidFlame extends Potion {
 	public String desc() {
 		return Game.getVar(R.string.PotionOfLiquidFlame_Info);
 	}
-	
+
 	@Override
-	public int price() {
-		return isKnown() ? 40 * quantity() : super.price();
+	public int basePrice() {
+		return 40;
 	}
-	
+
 	@Override
 	protected void moistenArrow(Arrow arrow) {
 		int quantity = reallyMoistArrows(arrow);
