@@ -55,7 +55,9 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.SystemTime;
 
 import java.io.File;
@@ -563,5 +565,30 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void setSelectedLanguage() {
+	}
+
+	static Window currentWindow;
+
+	public static void showWindow(final String msg) {
+		hideWindow();
+		Game.executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				currentWindow = new WndMessage(msg);
+				Game.scene().add(currentWindow);
+			}
+		});
+	}
+
+	public static void hideWindow() {
+		Game.executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				if(currentWindow!=null) {
+					currentWindow.hide();
+					currentWindow = null;
+				}
+			}
+		});
 	}
 }

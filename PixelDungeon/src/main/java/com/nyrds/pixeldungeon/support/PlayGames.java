@@ -19,13 +19,18 @@ import com.google.android.gms.games.Games;
 import com.google.android.gms.games.snapshot.Snapshot;
 import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.games.snapshot.Snapshots;
+import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.concurrent.TimeUnit;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -61,7 +66,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static void unlockAchievement(String achievementCode) {
 		//TODO store it locally if not connected
-		if(!isConnected()) {
+		if (!isConnected()) {
 			Games.Achievements.unlock(playGames.googleApiClient, achievementCode);
 		}
 	}
@@ -96,45 +101,85 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	public static void writeToSnapshot(String snapshotId, byte[] content) {
 		Log.i("Play Games", "Streaming to " + snapshotId);
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, true);
-		Snapshot snapshot = result.await().getSnapshot();
-		snapshot.getSnapshotContents().writeBytes(content);
+		Snapshot snapshot = result.await(3,TimeUnit.SECONDS).getSnapshot();
+		if(snapshot != null) {
+			snapshot.getSnapshotContents().writeBytes(content);
 
-		PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
-		pendingResult.setResultCallback(new ResultCallback<Snapshots.CommitSnapshotResult>() {
-			@Override
-			public void onResult(@NonNull Snapshots.CommitSnapshotResult commitSnapshotResult) {
-				if (commitSnapshotResult.getStatus().isSuccess()) {
-					Log.i("Play Games", "commit ok");
-				} else {
-					Log.e("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
+			PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
+			pendingResult.setResultCallback(new ResultCallback<Snapshots.CommitSnapshotResult>() {
+				@Override
+				public void onResult(@NonNull Snapshots.CommitSnapshotResult commitSnapshotResult) {
+					if (commitSnapshotResult.getStatus().isSuccess()) {
+						Log.i("Play Games", "commit ok");
+					} else {
+						Log.e("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
+					}
 				}
-
-			}
-		});
-	}
-
-	public static InputStream streamFromSnapshot(String snapshotId) {
-		return new ByteArrayInputStream(readFromSnapshot(snapshotId));
-	}
-
-	public static byte[] readFromSnapshot(String snapshotId) {
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
-		Snapshot snapshot = result.await().getSnapshot();
-		try {
-			return snapshot.getSnapshotContents().readFully();
-		} catch (IOException e) {
-			return new byte[0];
+			});
 		}
 	}
 
+	public static InputStream streamFromSnapshot(String snapshotId) throws IOException {
+		return new ByteArrayInputStream(readFromSnapshot(snapshotId));
+	}
+
+	public static byte[] readFromSnapshot(String snapshotId) throws IOException {
+		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
+		Snapshot snapshot = result.await(3, TimeUnit.SECONDS).getSnapshot();
+		if(snapshot!= null) {
+			return snapshot.getSnapshotContents().readFully();
+		} else {
+			throw new IOException("snapshot timeout");
+		}
+	}
 
 	public static boolean haveSnapshot(String snapshotId) {
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
 		return result.await().getStatus().isSuccess();
 	}
 
+	public static boolean copyFileToCloud(String id) {
+		if (!isConnected()) {
+			return false;
+		}
+
+		try {
+			Game.showWindow(id);
+
+			FileSystem.copyStream(FileSystem.getInputStream(id),
+					PlayGames.streamToSnapshot(id));
+		} catch (FileNotFoundException e) {
+			// no file yet
+			return false;
+		} finally {
+			Game.hideWindow();
+		}
+		return true;
+	}
+
+	public static boolean copyFileFromCloud(String id) {
+		if (!isConnected()) {
+			return false;
+		}
+
+		if (!haveSnapshot(id)) {
+			return false;
+		}
+
+		try {
+			Game.showWindow(id);
+			FileSystem.copyStream(PlayGames.streamFromSnapshot(id),
+					FileSystem.getOutputStream(id));
+			return true;
+		} catch (Exception e) { // should not happen
+			throw new TrackedRuntimeException(e);
+		} finally {
+			Game.hideWindow();
+		}
+	}
+
 	public static boolean isConnected() {
-		return playGames!=null && playGames.googleApiClient.isConnected();
+		return playGames != null && playGames.googleApiClient.isConnected();
 	}
 
 	@Override
@@ -145,12 +190,14 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
 				if (result.getStatus().isSuccess()) {
 					Log.i("Play Games", "load ok!");
+
 				} else {
 					Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
 				}
 			}
 		});
 	}
+
 
 	@Override
 	public void onConnectionSuspended(int i) {

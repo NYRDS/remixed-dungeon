@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import android.util.Log;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -26,7 +27,6 @@ import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
@@ -201,8 +201,8 @@ public class Badges {
 		loadGlobal();
 	}
 
-	private static final String BADGES_FILE = "badges.dat";
-	private static final String BADGES = "badges";
+	public static final  String BADGES_FILE = "badges.dat";
+	private static final String BADGES      = "badges";
 
 	private static HashSet<Badge> restore(Bundle bundle) {
 		HashSet<Badge> badges = new HashSet<>();
@@ -238,7 +238,7 @@ public class Badges {
 
 	public static void loadGlobal() {
 			try {
-				InputStream input = Game.instance().openFileInput(BADGES_FILE);
+				InputStream input = FileSystem.getInputStream(BADGES_FILE);
 
 				Bundle bundle = Bundle.read(input);
 				input.close();
@@ -270,7 +270,7 @@ public class Badges {
 			store(bundle, global);
 
 			try {
-				OutputStream output = Storage.getStorage().getOutputStream(BADGES_FILE, false);
+				OutputStream output = FileSystem.getOutputStream(BADGES_FILE);
 				Bundle.write(bundle, output);
 				output.close();
 

@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -129,7 +129,7 @@ public enum Rankings {
 		bundle.put( HAPPY,   happyWonNumber);
 		
 		try {
-			OutputStream output = Storage.getStorage().getOutputStream( RANKINGS_FILE, false);
+			OutputStream output = FileSystem.getOutputStream(RANKINGS_FILE);
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (Exception e) {
@@ -145,12 +145,12 @@ public enum Rankings {
 
 		records = new ArrayList<>();
 
-		if(!Storage.getStorage().have(RANKINGS_FILE)) {
+		if(!FileSystem.getInternalStorageFile(RANKINGS_FILE).exists()) {
 			return;
 		}
 
 		try {
-			InputStream input = Storage.getStorage().getInputStream(RANKINGS_FILE, false);
+			InputStream input = FileSystem.getInputStream(RANKINGS_FILE);
 			Bundle bundle = Bundle.read( input );
 			input.close();
 			

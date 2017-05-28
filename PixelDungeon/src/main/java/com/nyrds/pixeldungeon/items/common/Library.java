@@ -2,10 +2,10 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.support.Storage;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -32,8 +32,8 @@ public class Library {
 
 	private static Map<String, Map<String, Integer>> mKnowledgeLevel;
 
-	private static String libraryFile = "library.json";
-	private static boolean saveNeeded = false;
+	public final static String LIBRARY_FILE = "library.json";
+	private static boolean     saveNeeded   = false;
 
 	private static Gson gson = new Gson();
 
@@ -48,7 +48,7 @@ public class Library {
 		saveNeeded = false;
 		gson.toJson(mKnowledgeLevel);
 		try {
-			OutputStream output = Storage.getStorage().getOutputStream(libraryFile, false);
+			OutputStream output = FileSystem.getOutputStream(LIBRARY_FILE);
 			output.write(gson.toJson(mKnowledgeLevel).getBytes());
 			output.close();
 		} catch (IOException e) {
@@ -59,7 +59,7 @@ public class Library {
 	private static void loadLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(Storage.getStorage().getInputStream(libraryFile, false)).toString(),
+					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE)).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {
 					}.getType()
 			);

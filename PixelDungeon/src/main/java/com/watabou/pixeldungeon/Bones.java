@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.pixeldungeon.support.Storage;
+import com.nyrds.android.util.FileSystem;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -73,7 +73,7 @@ public class Bones {
 		bundle.put( ITEM, item );
 		
 		try {
-			OutputStream output = Storage.getStorage().getOutputStream(BONES_FILE, false);
+			OutputStream output = FileSystem.getOutputStream(BONES_FILE);
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (IOException e) {

@@ -1,9 +1,11 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
@@ -14,12 +16,11 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 
 class WndPlayGames extends Window {
 
-	private int     y                  = GAP;
-	private boolean playGamesConnected = false;
+	private int y = GAP;
 
 	public WndPlayGames() {
 
-		playGamesConnected = PlayGames.isConnected();
+		boolean playGamesConnected = PlayGames.isConnected();
 		resizeLimited(120);
 
 		Text listTitle = PixelScene.createMultiline("Google Play Games", GuiProperties.mediumTitleFontSize());
@@ -33,7 +34,7 @@ class WndPlayGames extends Window {
 
 		y += listTitle.height() + GAP;
 
-		CheckBox usePlayGames = new CheckBox("use Google Play Games",playGamesConnected) {
+		CheckBox usePlayGames = new CheckBox("use Google Play Games", playGamesConnected) {
 			@Override
 			public void checked(boolean value) {
 				super.checked(value);
@@ -51,8 +52,8 @@ class WndPlayGames extends Window {
 
 		addButton(usePlayGames);
 
-		if(!playGamesConnected) {
-			resize(width,y);
+		if (!playGamesConnected) {
+			resize(width, y);
 			return;
 		}
 
@@ -68,25 +69,56 @@ class WndPlayGames extends Window {
 			@Override
 			protected void onClick() {
 				super.onClick();
+				Game.instance().executor.execute(new Runnable() {
+					@Override
+					public void run() {
 
+						boolean res = PlayGames.copyFileToCloud(Badges.BADGES_FILE)
+								&& PlayGames.copyFileToCloud(Library.LIBRARY_FILE);
+
+						showActionResult(res);
+					}
+				});
 			}
 		});
+
 
 		addButton(new RedButton("Cloud -> Local") {
 			@Override
 			protected void onClick() {
 				super.onClick();
+				Game.instance().executor.execute(new Runnable() {
+					@Override
+					public void run() {
+						boolean res = PlayGames.copyFileFromCloud(Badges.BADGES_FILE)
+								&& PlayGames.copyFileFromCloud(Library.LIBRARY_FILE);
+
+						showActionResult(res);
+					}
+				});
 			}
 		});
-
-		resize(width,y);
+		resize(width, y);
 	}
 
+	private void showActionResult(final boolean res) {
+		Game.executeInGlThread(new Runnable() {
+			@Override
+			public void run() {
+				if (res) {
+					Game.scene().add(new WndMessage("ok!"));
+				} else {
+					Game.scene().add(new WndMessage("something went wrong..."));
+				}
+				hide();
+				;
+			}
+		});
+	}
 
 	private void addButton(TextButton btn) {
 		btn.setRect(0, y, width, BUTTON_HEIGHT);
 		add(btn);
 		y += btn.height() + GAP;
-
 	}
 }
