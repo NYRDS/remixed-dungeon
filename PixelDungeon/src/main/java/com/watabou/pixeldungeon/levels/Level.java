@@ -89,6 +89,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public abstract class Level implements Bundlable {
@@ -624,6 +625,12 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void spawnMob(Mob mob, float delay) {
+
+		if(!cellValid(mob.getPos())) {
+			EventCollector.logException(new Exception(EventCollector.BUG),
+					String.format(Locale.ROOT,"trying to spawn: %s on invalid cell: %d", mob.getMobClassName(), mob.getPos()));
+			return;
+		}
 		mobs.add(mob);
 		if (GameScene.isSceneReady()) {
 			mob.updateSprite();
@@ -645,11 +652,18 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected void setMobSpawnPos(Mob mob) {
-		mob.setPos(mob.respawnCell(this));
+		int pos = mob.respawnCell(this);
 
-		if(!passable[mob.getPos()]) {
+		mob.setPos(pos);
+
+		if(!cellValid(pos)) {
+			return;
+		}
+
+		if (!passable[pos]) {
 			mob.setState(mob.WANDERING);
 		}
+
 	}
 
 	public Actor respawner() {
