@@ -64,11 +64,17 @@ public class WndLibrary extends Window {
 					GameScene.show(new WndLibraryCatalogue(entry.getKey(),entry.getValue()));
 				}
 			};
+			int w = 0;
 
-			int w = (int) ((WIDTH / 2) - (BTN_WIDTH * 1.1) - GAP);
+			if(categoriesMap.size() == 2){
+				w = (int) ( (WIDTH / 2) - (BTN_WIDTH * 0.5));
+			}else {
 
-			if (i >= 2){
-				w = (WIDTH / 2) + (BTN_WIDTH/10) + GAP;
+				w = (int) ((WIDTH / 2) - (BTN_WIDTH * 1.1) - GAP);
+
+				if (i >= 2) {
+					w = (WIDTH / 2) + (BTN_WIDTH / 10) + GAP;
+				}
 			}
 			if (i == 2) {
 				buttonY = buttonY - (BTN_HEIGHT + GAP * 2) * 2;

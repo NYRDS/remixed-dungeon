@@ -33,46 +33,70 @@ public class Bestiary {
 
 	private static final String FEELINGS = "Feelings";
 	private static JSONObject bestiaryData;
+	private static JSONObject Feelings;
+	private static double feelingChance;
 
 	static {
 		bestiaryData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
+
+		if(bestiaryData.has(FEELINGS)) {
+			Feelings = bestiaryData.optJSONObject(FEELINGS);
+			feelingChance = Feelings.optDouble("Chance", 0.2);
+		}
+
 	}
+
+	private static String currentLevelId;
+
+	private static JSONObject currentLevelBestiary;
+	private static JSONObject currentLevelFeelingBestiary;
 
 	public static Mob mob() {
 		try {
-
 			String idString = DungeonGenerator.getCurrentLevelId();
 
-			if (bestiaryData.has(FEELINGS)) {
-
-				JSONObject Feelings = bestiaryData.getJSONObject(FEELINGS);
-
-				if (Random.Float(1) < Feelings.optDouble("Chance", 0.2)) {
-
-					String feeling = DungeonGenerator.getLevelFeeling(idString).name();
-
-					if (Feelings.has(feeling)) {
-						return getMob(Feelings.getJSONObject(feeling));
-					}
-				}
+			if(idString.equals(currentLevelId) && currentLevelBestiary != null) {
+				return getMobFromCachedData();
 			}
 
-			JSONObject levelDesc = bestiaryData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
+			cacheLevelData(idString);
 
-			if (!levelDesc.has(idString)) {
-				idString = Integer.toString(DungeonGenerator.getCurrentLevelDepth());
-
-				if (!levelDesc.has(idString)) {
-					idString = "any";
-				}
-			}
-
-			return getMob(levelDesc.getJSONObject(idString));
+			return getMobFromCachedData();
 
 		} catch (JSONException e) {
 			Game.toast(e.getMessage());
 		}
 		return MobFactory.mobRandom();
+	}
+
+	private static void cacheLevelData(String idString) throws JSONException {
+		currentLevelId = idString;
+
+		if(Feelings!=null) {
+			String feeling = DungeonGenerator.getLevelFeeling(idString).name();
+			currentLevelFeelingBestiary = Feelings.optJSONObject(feeling);
+		}
+
+		JSONObject levelDesc = bestiaryData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
+
+		if (!levelDesc.has(idString)) {
+			idString = Integer.toString(DungeonGenerator.getCurrentLevelDepth());
+
+			if (!levelDesc.has(idString)) {
+				idString = "any";
+			}
+		}
+
+		currentLevelBestiary = levelDesc.getJSONObject(idString);
+	}
+
+	private static Mob getMobFromCachedData() throws JSONException {
+		if(currentLevelFeelingBestiary!= null) {
+			if(Random.Float(1) < feelingChance) {
+				return getMob(currentLevelFeelingBestiary);
+			}
+		}
+		return getMob(currentLevelBestiary);
 	}
 
 	private static Mob getMob(JSONObject depthDesc) throws JSONException {
