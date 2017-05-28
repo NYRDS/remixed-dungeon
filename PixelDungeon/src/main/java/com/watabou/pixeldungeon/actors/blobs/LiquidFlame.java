@@ -56,7 +56,7 @@ public class LiquidFlame extends Blob {
 			int to = from + getWidth() - 2;
 
 			for (int pos = from; pos < to; pos++) {
-				int value = 0;
+				int value;
 				if (notBlocking[pos]) {
 					int count = 1;
 					int sum = cur[pos];
