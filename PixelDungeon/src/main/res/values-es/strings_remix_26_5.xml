@@ -34,7 +34,7 @@
 
     <!-- Wnd descriptions -->
     <!-- STRINGS OF WndSettings CLASS -->
-    <string name="WndSettings_moveTimeout">Movimientos restantes %s</string>
+    <string name="WndSettings_moveTimeout">Tiempo para moverse%s</string>
 
     <!-- STRINGS OF TrapHelper CLASS -->
     <string name="TrapWnd_Title">Trampa</string>
