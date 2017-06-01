@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.elementals;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -10,6 +11,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
 public class AirElemental extends Mob implements IDepthAdjustable {
@@ -99,4 +101,12 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		}
 		return damage;
 	}
+
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		attackProc(enemy, damageRoll());
+		super.zap(enemy);
+		return true;
+	}
+
 }
