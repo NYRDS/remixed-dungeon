@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -40,8 +41,9 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	static public Crystal makeShadowLordCrystal() {
 		Crystal crystal = new Crystal();
 		crystal.kind = 2;
-		crystal.lootChance = 0;
-
+		crystal.lootChance = 0.25f;
+		crystal.loot = new WandOfShadowbolt();
+		((Wand) crystal.loot).upgrade(Dungeon.depth / 2);
 		return crystal;
 	}
 
@@ -87,13 +89,12 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		return exp / 3;
 	}
 
+
+
 	@Override
-	public int attackProc(@NonNull final Char enemy, int damage) {
-		if (useWand(enemy)) {
-			return 0;
-		} else {
-			return damage;
-		}
+	public boolean attack(@NonNull Char enemy) {
+		zap(enemy);
+		return true;
 	}
 
 	@Override
@@ -137,11 +138,8 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		}
 
 		if (hit(this, enemy, true)) {
-			if(!useWand(enemy)){
-				enemy.damage(damageRoll(), this);
-				return true;
-			}
-			return false;
+			useWand(enemy);
+			return true;
 		} else {
 			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 			return false;
@@ -149,20 +147,10 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	}
 
-	public boolean useWand(Char enemy){
-		if (kind < 2) {
-			if( true){
-				final Wand wand = ((Wand) loot);
-				wand.mobWandUse(this, enemy.getPos());
-			}
-			return true;
-		} else {
-			getSprite().zap(enemy.getPos());
-			if (enemy == Dungeon.hero && Random.Int(2) == 0) {
-				Buff.prolong(enemy, Weakness.class, Weakness.duration(enemy));
-			}
-			return false;
-		}
+	public void useWand(Char enemy){
+		final Wand wand = ((Wand) loot);
+		wand.mobWandUse(this, enemy.getPos());
+
 	}
 
 }
