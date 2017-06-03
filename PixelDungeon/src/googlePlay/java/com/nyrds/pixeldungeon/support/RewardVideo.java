@@ -27,5 +27,7 @@ public class RewardVideo {
 			GoogleRewardVideoAds.showCinemaRewardVideo(ret);
 			return;
 		}
+
+		ret.returnToWork(false);
 	}
 }

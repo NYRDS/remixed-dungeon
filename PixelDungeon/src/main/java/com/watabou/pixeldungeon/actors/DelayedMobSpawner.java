@@ -21,7 +21,7 @@ public class DelayedMobSpawner extends Actor {
 	@Override
 	protected boolean act() {
 		if(Actor.findChar(cell) == null) {
-			Dungeon.level.spawnMob(mob);
+			Dungeon.level.spawnMob(mob, 2);
 			WandOfBlink.appear(mob, cell);
 		}
 		remove(this);

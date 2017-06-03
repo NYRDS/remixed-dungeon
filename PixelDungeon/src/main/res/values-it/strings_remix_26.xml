@@ -1,3 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">coboldo</string>
+    <string name="Kobold_Name_Objective">coboldo</string>
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">elementale del ghiaccio</string>
+    <string name="CagedKobold_Desc">Un coboldo, in una gabbia.</string>
+    <string name="CagedKobold_Message1">Per favore...</string>
+    <string name="CagedKobold_Message2">Devi aiutarmi ad uscire, amico</string>
+    <string name="Journal_Caged_Kobold">Coboldo imprigionato</string>
+
     </resources>

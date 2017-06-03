@@ -53,7 +53,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 	{
 		image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
 	}
-	
+
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
@@ -62,7 +62,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 		}
 		return actions;
 	}
-	
+
 	@Override
 	protected void onZap( int cell ) {
 		

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF WandOfShadowbolt CLASS -->
+    <string name="WandOfShadowbolt_Name">Палочка теневой стрелы</string>
+    <string name="WandOfShadowbolt_Info">Этот жезл источает тёмную, зловещую энергию.</string>
+</resources>

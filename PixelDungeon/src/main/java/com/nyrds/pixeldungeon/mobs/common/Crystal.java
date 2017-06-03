@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Darkness;
@@ -16,9 +18,10 @@ import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
-public class Crystal extends MultiKindMob implements IDepthAdjustable{
+public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	static private int ctr = 0;
 
@@ -38,8 +41,9 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable{
 	static public Crystal makeShadowLordCrystal() {
 		Crystal crystal = new Crystal();
 		crystal.kind = 2;
-		crystal.lootChance = 0;
-
+		crystal.lootChance = 0.25f;
+		crystal.loot = new WandOfShadowbolt();
+		((Wand) crystal.loot).upgrade(Dungeon.depth / 2);
 		return crystal;
 	}
 
@@ -85,22 +89,12 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable{
 		return exp / 3;
 	}
 
+
+
 	@Override
-	public int attackProc(@NonNull final Char enemy, int damage) {
-
-		if (kind < 2) {
-			final Wand wand = ((Wand) loot);
-
-			wand.mobWandUse(this, enemy.getPos());
-
-			return 0;
-		} else {
-			getSprite().zap(enemy.getPos());
-			if (enemy == Dungeon.hero && Random.Int(2) == 0) {
-				Buff.prolong(enemy, Weakness.class, Weakness.duration(enemy));
-			}
-			return damage;
-		}
+	public boolean attack(@NonNull Char enemy) {
+		zap(enemy);
+		return true;
 	}
 
 	@Override
@@ -135,4 +129,28 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable{
 	public boolean canBePet() {
 		return false;
 	}
+
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		if (enemy == DUMMY) {
+			EventCollector.logEvent(EventCollector.BUG, "zapping dummy enemy");
+			return false;
+		}
+
+		if (hit(this, enemy, true)) {
+			useWand(enemy);
+			return true;
+		} else {
+			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
+			return false;
+		}
+
+	}
+
+	public void useWand(Char enemy){
+		final Wand wand = ((Wand) loot);
+		wand.mobWandUse(this, enemy.getPos());
+
+	}
+
 }

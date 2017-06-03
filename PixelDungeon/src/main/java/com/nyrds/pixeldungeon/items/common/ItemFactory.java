@@ -13,6 +13,7 @@ import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
+import com.nyrds.pixeldungeon.items.food.Candy;
 import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
@@ -66,6 +67,7 @@ import com.watabou.pixeldungeon.items.armor.ScoutArmor;
 import com.watabou.pixeldungeon.items.armor.ShamanArmor;
 import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
+import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
@@ -381,6 +383,8 @@ public class ItemFactory {
 		registerItemClass(IceGuardianCoreModule.class);
 		registerItemClass(SpiderQueenCarapace.class);
 		registerItemClass(RingOfFrost.class);
+		registerItemClass(WarlockArmor.class);
+		registerItemClass(Candy.class);
 
 	}
 

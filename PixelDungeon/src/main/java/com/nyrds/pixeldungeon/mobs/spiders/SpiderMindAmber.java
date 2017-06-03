@@ -93,4 +93,11 @@ public class SpiderMindAmber extends MultiKindMob {
 		Badges.validateRare( this );
 	}
 
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		attackProc(enemy, damageRoll());
+		super.zap(enemy);
+		return true;
+	}
+
 }

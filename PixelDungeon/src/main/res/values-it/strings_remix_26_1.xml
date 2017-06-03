@@ -1,3 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">guardia cittadina</string>
+    <string name="TownGuardNPC_Name_Objective">guardi cittadina</string>
+    <string name="TownGuardNPC_Message1">Circolare.</string>
+    <string name="TownsfolkNPC_Message3">Che bella giornata.</string>
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">Negoziante</string>
+    <string name="town_deco_wall_name">Muro</string>
+    <string name="town_deco_snow_name">Neve</string>
+    <string name="town_deco_cross_name">Croce</string>
+    <string name="town_deco_bell_name">Campana</string>
+    <string name="town_deco_window_name">Finestra</string>
+    <string name="town_deco_door_name">Porta</string>
     </resources>
