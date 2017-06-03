@@ -309,4 +309,11 @@
         - Adding modding attributes: canBePet, wallWalker and absoluteWalker for custom mobs\n
         - Modding now supports custom “defense” messages for mob, ex. “Blocked”, “Parried”\n
     </string>
+    <string name="Welcome_Text_26_6">
+        remix.26.6\n
+        - New unique item: Wand of Shadowbolt\n
+        - Crystal spawned by Shadow Lord now uses Wand of Shadowbolt instead of regular ranged attack. Loot chance for said wand is 25%\n
+        - Fixed ranged attack proc issues for: Air Elemental, Crystal, Burning Fist, Psi-Spider and Amber Spider\n
+        - Mage Armor (version for Warlock: WarlockArmor) and Candy is now available in mods\n
+    </string>
 </resources>

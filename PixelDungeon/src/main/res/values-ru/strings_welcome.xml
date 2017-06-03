@@ -270,4 +270,11 @@ remix.26.5\n
 - Теперь в модах можно создавать собственных мобов (пока что без абилок)\n
 - Добавлены атрибуты: canBePet, и walkingType для мобов созданных в моде \n
 - Исправили баг который приводил к повторному получению урона от падения, в случае если игрок свернул игру после падения\n</string>
+    <string name="Welcome_Text_26_6">
+        remix.26.6\n
+        - Новый уникальный предмет: Палочка теневой стрелы\n
+        - Crystal spawned by Shadow Lord now uses Wand of Shadowbolt instead of regular ranged attack. Loot chance for said wand is 25%\n
+        - Fixed ranged attack proc issues for: Air Elemental, Crystal, Burning Fist, Psi-Spider and Amber Spider\n
+        - Предметы: Волшебный Балахон (Вариант для Колдуна: WarlockArmor) и Конфета(Candy) теперь доступны в моддинге\n
+    </string>
 </resources>
