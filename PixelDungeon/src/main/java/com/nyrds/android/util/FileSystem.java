@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -123,18 +124,19 @@ public class FileSystem {
 		}
 	}
 
-	public static void zipFolderTo(OutputStream out, File srcFolder, int depth) throws IOException {
+	public static void zipFolderTo(OutputStream out, File srcFolder, int depth, FileFilter filter) throws IOException {
 		ZipOutputStream zip = new ZipOutputStream(out);
-		addFolderToZip(srcFolder,srcFolder,depth, zip);
+		addFolderToZip(srcFolder,srcFolder,depth, zip, filter);
 
 		zip.flush();
 		zip.close();
 	}
 
 	private static void addFolderToZip(File rootFolder, File srcFolder, int depth,
-	                                   ZipOutputStream zip) throws IOException {
+	                                   ZipOutputStream zip, FileFilter filter) throws IOException {
 
-		for (File file : srcFolder.listFiles()) {
+		for (File file : srcFolder.listFiles(filter)) {
+
 			if (file.isFile()) {
 				addFileToZip(rootFolder, file, zip);
 				continue;
@@ -142,7 +144,7 @@ public class FileSystem {
 
 			if(depth > 0 && file.isDirectory()) {
 				zip.putNextEntry(new ZipEntry(getRelativePath(file,rootFolder)));
-				addFolderToZip(rootFolder, srcFolder, depth-1, zip);
+				addFolderToZip(rootFolder, srcFolder, depth-1, zip, filter);
 				zip.closeEntry();
 			}
 		}

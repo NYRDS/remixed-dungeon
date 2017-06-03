@@ -6,16 +6,21 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.items.common.Library;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
+import java.io.OutputStream;
 
 /**
  * Created by mike on 14.05.2017.
@@ -81,11 +86,36 @@ class WndPlayGames extends Window {
 				Game.instance().executor.execute(new Runnable() {
 					@Override
 					public void run() {
+						OutputStream out = PlayGames.streamToSnapshot("Progress");
 
-						boolean res = PlayGames.copyFileToCloud(Badges.BADGES_FILE)
-								&& PlayGames.copyFileToCloud(Library.LIBRARY_FILE);
+						try {
+							FileSystem.zipFolderTo(out, FileSystem.getInternalStorageFile(""), 0, new FileFilter() {
+								@Override
+								public boolean accept(File pathname) {
+									String filename = pathname.getName();
+									if(filename.equals(Badges.BADGES_FILE)) {
+										return true;
+									}
 
-						showActionResult(res);
+									if(filename.equals(Library.LIBRARY_FILE)) {
+										return true;
+									}
+
+									if(filename.equals(Rankings.RANKINGS_FILE)) {
+										return true;
+									}
+
+									if(filename.startsWith("game_")&&filename.endsWith(".dat")) {
+										return true;
+									}
+									return false;
+								}
+							});
+						} catch (IOException e) {
+							EventCollector.logException(e);
+							showActionResult(false);
+						}
+						showActionResult(true);
 					}
 				});
 			}
@@ -99,10 +129,14 @@ class WndPlayGames extends Window {
 				Game.instance().executor.execute(new Runnable() {
 					@Override
 					public void run() {
-						boolean res = PlayGames.copyFileFromCloud(Badges.BADGES_FILE)
-								&& PlayGames.copyFileFromCloud(Library.LIBRARY_FILE);
-
-						showActionResult(res);
+						try {
+							Unzip.unzip(PlayGames.streamFromSnapshot("Progress"),
+									FileSystem.getInternalStorageFile("").getAbsolutePath());
+						} catch (IOException e) {
+							EventCollector.logException(e);
+							showActionResult(false);
+						}
+						showActionResult(true);
 					}
 				});
 			}
@@ -117,7 +151,7 @@ class WndPlayGames extends Window {
 
 				try {
 					long t1 = System.nanoTime();
-					FileSystem.zipFolderTo(out,FileSystem.getInternalStorageFile(""),0);
+					FileSystem.zipFolderTo(out,FileSystem.getInternalStorageFile(""),0,null);
 					float size = out.toByteArray().length;
 					long t2 = System.nanoTime();
 					float time = ( t2 - t1 )/1000000f;
