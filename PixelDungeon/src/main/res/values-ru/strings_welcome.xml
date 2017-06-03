@@ -273,8 +273,8 @@ remix.26.5\n
     <string name="Welcome_Text_26_6">
         remix.26.6\n
         - Новый уникальный предмет: Палочка теневой стрелы\n
-        - Crystal spawned by Shadow Lord now uses Wand of Shadowbolt instead of regular ranged attack. Loot chance for said wand is 25%\n
-        - Fixed ranged attack proc issues for: Air Elemental, Crystal, Burning Fist, Psi-Spider and Amber Spider\n
+        - Кристаллы Владыки теней теперь используют Палочку теневой стрелы, заместо обычной атаки. Сама палочка падает с кристалла с вероятностью 25%\n
+        - Исправлены неработающие абилки у следующих мобов: Воздушный Элементаль, Кристалл, Пылающий Кулак, Пси-Паук и Янтарный Паук\n
         - Предметы: Волшебный Балахон (Вариант для Колдуна: WarlockArmor) и Конфета(Candy) теперь доступны в моддинге\n
     </string>
 </resources>
