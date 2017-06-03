@@ -25,6 +25,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
+import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
@@ -140,7 +141,8 @@ public enum HeroClass {
 		ring.cursed = true;
 		hero.collect(ring);
 		hero.collect(new RingOfFrost().identify());
-		hero.collect(new CandleOfMindVision());
+		hero.collect(new WandOfShadowbolt()
+		);
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));

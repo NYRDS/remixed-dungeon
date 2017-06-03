@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF WandOfShadowbolt CLASS -->
+    <string name="WandOfShadowbolt_Name">wand of shadowbolt</string>
+    <string name="WandOfShadowbolt_Info">This wand emits  dark, malicious energy.</string>
+</resources>

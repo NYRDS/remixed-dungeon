@@ -89,4 +89,11 @@ public class SpiderMind extends Mob {
 		super.die( cause );
 	}
 
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		attackProc(enemy, damageRoll());
+		super.zap(enemy);
+		return true;
+	}
+
 }

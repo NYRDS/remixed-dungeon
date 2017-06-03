@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -45,7 +46,6 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.BurningFistSprite;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.LarvaSprite;
 import com.watabou.pixeldungeon.sprites.RottingFistSprite;
@@ -240,10 +240,9 @@ public class Yog extends Boss {
 		}
 	}
 
-	public static class BurningFist extends Boss {
+	public static class BurningFist extends Boss implements IZapper {
 
 		{
-			spriteClass = BurningFistSprite.class;
 
 			hp(ht(300));
 			defenseSkill = 25;

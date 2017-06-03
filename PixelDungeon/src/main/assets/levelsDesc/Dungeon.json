@@ -67,7 +67,6 @@
    "Graph":{
       "0":[["town"],[]],
 
-
       "town_shop":[[],["town"],[1]],
       "movie_theater":[[],["town"],[2]],
       "church":[[],["town"],[4]],
