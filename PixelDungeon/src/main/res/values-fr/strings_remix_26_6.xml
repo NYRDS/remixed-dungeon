@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF WandOfShadowbolt CLASS -->
+    <string name="WandOfShadowbolt_Name">Sceptre de Foudre Noire</string>
+    <string name="WandOfShadowbolt_Info">Ce Sceptre émet une énergie noire et malicieuse.</string>
+</resources>
