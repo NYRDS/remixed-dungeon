@@ -61,6 +61,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 public class Badges {
 
@@ -174,7 +175,7 @@ public class Badges {
 		public boolean meta;
 
 		public String description;
-		public int image;
+		public int    image;
 
 		Badge(String description, int image) {
 			this(description, image, false);
@@ -189,6 +190,20 @@ public class Badges {
 		Badge() {
 			this("", -1);
 		}
+	}
+
+	static private Set<Badge> playGamesList = new HashSet<>();
+
+	static {
+		playGamesList.add(Badge.BOSS_SLAIN_1);
+		playGamesList.add(Badge.BOSS_SLAIN_2);
+		playGamesList.add(Badge.BOSS_SLAIN_3);
+		playGamesList.add(Badge.BOSS_SLAIN_4);
+		playGamesList.add(Badge.YOG_SLAIN);
+		playGamesList.add(Badge.SPIDER_QUEEN_SLAIN);
+		playGamesList.add(Badge.SHADOW_LORD_SLAIN);
+		playGamesList.add(Badge.LICH_SLAIN);
+		playGamesList.add(Badge.ICE_GUARDIAN_SLAIN);
 	}
 
 	private static HashSet<Badge> global;
@@ -237,27 +252,25 @@ public class Badges {
 	}
 
 	public static void loadGlobal() {
-			try {
-				InputStream input = FileSystem.getInputStream(BADGES_FILE);
+		try {
+			InputStream input = FileSystem.getInputStream(BADGES_FILE);
 
-				Bundle bundle = Bundle.read(input);
-				input.close();
+			Bundle bundle = Bundle.read(input);
+			input.close();
 
-				if(bundle == null) {
-					global = new HashSet<>();
-					return;
-				}
-
-				global = restore(bundle);
-
-			} catch (FileNotFoundException e) {
+			if (bundle == null) {
 				global = new HashSet<>();
+				return;
 			}
 
-			catch (IOException e) {
-				global = new HashSet<>();
-				EventCollector.logException(e, "Badges.loadGlobal");
-			}
+			global = restore(bundle);
+
+		} catch (FileNotFoundException e) {
+			global = new HashSet<>();
+		} catch (IOException e) {
+			global = new HashSet<>();
+			EventCollector.logException(e, "Badges.loadGlobal");
+		}
 	}
 
 	public static void saveGlobal() {
@@ -276,7 +289,7 @@ public class Badges {
 
 				saveNeeded = false;
 			} catch (IOException e) {
-				EventCollector.logException(e,"Badges.saveGlobal");
+				EventCollector.logException(e, "Badges.saveGlobal");
 			}
 		}
 	}
@@ -917,16 +930,18 @@ public class Badges {
 		displayBadge(Badge.CHAMPION);
 	}
 
-	private static void displayBadge(Badge  badge) {
+	private static void displayBadge(Badge badge) {
 
 		if (badge == null) {
 			return;
 		}
 
-		Log.i("Badge",badge.name());
-		String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
-		Log.i("Badge", achievementCode);
-		PlayGames.unlockAchievement(achievementCode);
+		if (playGamesList.contains(badge)) {
+			Log.i("Badge", badge.name());
+			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
+			Log.i("Badge", achievementCode);
+			PlayGames.unlockAchievement(achievementCode);
+		}
 
 		if (global.contains(badge)) {
 			if (!badge.meta) {
