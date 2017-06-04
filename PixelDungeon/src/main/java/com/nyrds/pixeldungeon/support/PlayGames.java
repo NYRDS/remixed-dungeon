@@ -21,11 +21,15 @@ import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.games.snapshot.Snapshots;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Unzip;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileFilter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -198,6 +202,27 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		});
 	}
 
+	public static boolean packFilesToSnapshot(String id, File dir, FileFilter filter) {
+		OutputStream out = PlayGames.streamToSnapshot(id);
+		try {
+			FileSystem.zipFolderTo(out, dir, 0, filter);
+		} catch (IOException e) {
+			EventCollector.logException(e);
+			return false;
+		}
+		return true;
+	}
+
+	public static boolean unpackSnapshotTo(String id, File dir) {
+		try {
+			Unzip.unzip(PlayGames.streamFromSnapshot("Progress"),
+					FileSystem.getInternalStorageFile("").getAbsolutePath());
+		} catch (IOException e) {
+			EventCollector.logException(e);
+			return false;
+		}
+		return true;
+	}
 
 	@Override
 	public void onConnectionSuspended(int i) {

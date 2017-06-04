@@ -6,7 +6,6 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.items.common.Library;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -20,7 +19,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * Created by mike on 14.05.2017.
@@ -29,6 +27,7 @@ import java.io.OutputStream;
 
 class WndPlayGames extends Window {
 
+	private static final String PROGRESS = "Progress";
 	private int y = GAP;
 
 	public WndPlayGames() {
@@ -86,41 +85,33 @@ class WndPlayGames extends Window {
 				Game.instance().executor.execute(new Runnable() {
 					@Override
 					public void run() {
-						OutputStream out = PlayGames.streamToSnapshot("Progress");
-
-						try {
-							FileSystem.zipFolderTo(out, FileSystem.getInternalStorageFile(""), 0, new FileFilter() {
-								@Override
-								public boolean accept(File pathname) {
-									String filename = pathname.getName();
-									if(filename.equals(Badges.BADGES_FILE)) {
-										return true;
-									}
-
-									if(filename.equals(Library.LIBRARY_FILE)) {
-										return true;
-									}
-
-									if(filename.equals(Rankings.RANKINGS_FILE)) {
-										return true;
-									}
-
-									if(filename.startsWith("game_")&&filename.endsWith(".dat")) {
-										return true;
-									}
-									return false;
+						boolean res = PlayGames.packFilesToSnapshot(PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+							@Override
+							public boolean accept(File pathname) {
+								String filename = pathname.getName();
+								if (filename.equals(Badges.BADGES_FILE)) {
+									return true;
 								}
-							});
-						} catch (IOException e) {
-							EventCollector.logException(e);
-							showActionResult(false);
-						}
-						showActionResult(true);
+
+								if (filename.equals(Library.LIBRARY_FILE)) {
+									return true;
+								}
+
+								if (filename.equals(Rankings.RANKINGS_FILE)) {
+									return true;
+								}
+
+								if (filename.startsWith("game_") && filename.endsWith(".dat")) {
+									return true;
+								}
+								return false;
+							}
+						});
+						showActionResult(res);
 					}
 				});
 			}
 		});
-
 
 		addButton(new RedButton("Cloud -> Local") {
 			@Override
@@ -129,14 +120,7 @@ class WndPlayGames extends Window {
 				Game.instance().executor.execute(new Runnable() {
 					@Override
 					public void run() {
-						try {
-							Unzip.unzip(PlayGames.streamFromSnapshot("Progress"),
-									FileSystem.getInternalStorageFile("").getAbsolutePath());
-						} catch (IOException e) {
-							EventCollector.logException(e);
-							showActionResult(false);
-						}
-						showActionResult(true);
+						showActionResult(PlayGames.unpackSnapshotTo(PROGRESS,FileSystem.getInternalStorageFile("") ));
 					}
 				});
 			}
@@ -151,11 +135,11 @@ class WndPlayGames extends Window {
 
 				try {
 					long t1 = System.nanoTime();
-					FileSystem.zipFolderTo(out,FileSystem.getInternalStorageFile(""),0,null);
+					FileSystem.zipFolderTo(out, FileSystem.getInternalStorageFile(""), 0, null);
 					float size = out.toByteArray().length;
 					long t2 = System.nanoTime();
-					float time = ( t2 - t1 )/1000000f;
-					Log.i("zipped",String.format("size :%4.2f, time: %4.2f", size/1024f, time));
+					float time = (t2 - t1) / 1000000f;
+					Log.i("zipped", String.format("size :%4.2f, time: %4.2f", size / 1024f, time));
 
 					FileSystem.deleteRecursive(FileSystem.getInternalStorageFile(""));
 
@@ -163,8 +147,8 @@ class WndPlayGames extends Window {
 					Unzip.unzip(new ByteArrayInputStream(out.toByteArray()),
 							FileSystem.getInternalStorageFile("").getAbsolutePath());
 					t2 = System.nanoTime();
-					time = ( t2 - t1 )/1000000f;
-					Log.i("unzipped",String.format("size :%4.2f, time: %4.2f", size/1024f, time));
+					time = (t2 - t1) / 1000000f;
+					Log.i("unzipped", String.format("size :%4.2f, time: %4.2f", size / 1024f, time));
 
 				} catch (IOException e) {
 					e.printStackTrace();
