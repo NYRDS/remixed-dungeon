@@ -17,14 +17,11 @@ import org.json.JSONObject;
  */
 public class LibraryBook extends LevelObject {
 
-	private static final String TEXT = "text";
-	//private String signText;
-
 	public LibraryBook(){
 		super(-1);
 	}
 
-	public LibraryBook(int pos, String text) {
+	public LibraryBook(int pos) {
 		super(pos);
 	}
 
@@ -36,20 +33,17 @@ public class LibraryBook extends LevelObject {
 	public boolean interact(Hero hero) {
 		GameScene.show(new WndLibrary());
 
-		return super.interact(hero);
+		return false;
 	}
 
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
-		//signText = (bundle.getString( TEXT ));
-
 	}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle(bundle);
-		//bundle.put( TEXT, signText);
 	}
 
 	@Override
