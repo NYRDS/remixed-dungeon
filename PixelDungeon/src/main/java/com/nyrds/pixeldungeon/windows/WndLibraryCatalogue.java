@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -29,7 +30,6 @@ public class WndLibraryCatalogue extends Window {
 
 		int yPos = 0;
 
-		//List of Accessories
 		//Title
 		Text listTitle = PixelScene.createMultiline(catalogueName, GuiProperties.mediumTitleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
@@ -98,7 +98,11 @@ public class WndLibraryCatalogue extends Window {
 			entryId = entry;
 			clickable = true;
 
-			sprite.copy(desc.icon);
+			if(desc.icon instanceof CompositeTextureImage) {
+				sprite.copy((CompositeTextureImage) desc.icon);
+			} else {
+				sprite.copy(desc.icon);
+			}
 			label.text(desc.header);
 		}
 

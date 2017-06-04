@@ -6,6 +6,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -105,7 +106,8 @@ public class Library {
 		if(category.equals(MOB)) {
 			Mob mob = MobFactory.mobByName(clazz);
 			ret.header = Utils.capitalize(mob.getName());
-			ret.icon = mob.sprite().avatar();
+			ret.icon = new CompositeTextureImage();
+			((CompositeTextureImage)ret.icon).copy(mob.sprite().avatar());
 			return ret;
 		}
 
