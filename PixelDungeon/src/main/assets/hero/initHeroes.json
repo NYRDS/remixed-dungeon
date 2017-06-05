@@ -21,7 +21,7 @@
 			"kind": "ShortSword",
 			"identified": true
 		},
-        "str":11,
+        "str":13,
         "knownItems":[{"kind":"PotionOfStrength"}]
 
 	},
@@ -88,6 +88,7 @@
 			"kind": "NecromancerRobe"
 		}],
         "hp":15,
+        "str":14,
         "knownItems":[{"kind":"PotionOfHealing"}]
 	}
 }
