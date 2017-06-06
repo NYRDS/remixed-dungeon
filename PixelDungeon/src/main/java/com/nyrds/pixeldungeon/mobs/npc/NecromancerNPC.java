@@ -27,7 +27,7 @@ public class NecromancerNPC extends ImmortalNPC {
 	private static final String NODE       = "necromancer";
 	private static final String INTRODUCED = "introduced";
 
-	private        boolean introduced = false;
+	private boolean introduced = false;
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
