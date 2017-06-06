@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
@@ -218,4 +219,21 @@ public class ShadowLord extends Boss implements IZapper {
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 		//Tools.tileSplosion(Dungeon.level, Terrain.EMPTY_DECO, getPos(), 3);
 	}
+
+	private static final String LEVELCREATED   = "levelCreated";
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+
+		bundle.put(LEVELCREATED, levelCreated);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+
+		levelCreated   = bundle.getBoolean(LEVELCREATED);
+	}
+
 }
