@@ -13,7 +13,7 @@
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">ciudadano</string>
     <string name="TownsfolkNPC_Gender">masculino</string>
-    <string name="TownsfolkNPC_Name_Objective">cuidadano</string>
+    <string name="TownsfolkNPC_Name_Objective">ciudadano</string>
     <string name="TownsfolkNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
     <string name="TownsfolkNPC_Message1">¡Ah, otro aventurero, que encantador! ¡Asegúrese de saquear todos los objetos de valor que pueda!</string>
     <string name="TownsfolkNPC_Message2">El pueblo se hizo tan rico gracias a la mazmorra, ¡Todas las personas del pueblo pueden irse de vacaciones cada vez que quieren! De hecho, es por eso que hay tan pocas personas en este momento.</string>
