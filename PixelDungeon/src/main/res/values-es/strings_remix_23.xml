@@ -7,9 +7,9 @@
   <string name="Guts_TileDescEntrance">Los agujeros en el techo llevan a los niveles superiores</string>
   <string name="Guts_TileDescExit">Los agujeros en el piso llevan a los niveles inferiores</string>
   <string name="Guts_TileDescDeco">Este lugar parece... herido</string>
-  <string name="Guts_TileDescBookshelf">Esta libreria está cubierta de una tela gruesa y carnosa, no hay forma de llegar a ninguno de los libros.</string>
+  <string name="Guts_TileDescBookshelf">Esta librería está cubierta de una tela gruesa y carnosa, no hay forma de llegar a ninguno de los libros.</string>
   <!--STRINGS OF WndStory CLASS-->
-  <string name="WndStory_Guts">Derrotado y destrozado en pedazos, pero no completamente destruido, el Antiguo Dios fue sellado en los niveles más profundos de la mazmorra. Pero, recientemente el sello se rompió, dando paso, a un nido de demonios. Las pesadillas, creadas por el Antiguo Dios en su sueño eran tan numerosas, que sin via de escapar se vieron obligadas a fusionarse forman estas salas grotescas. Al caminar sobre su carne viva se puede sentir el latido del Antiguo Dios haciendo eco a través de ella.</string>
+  <string name="WndStory_Guts">Derrotado y destrozado en pedazos, pero no completamente destruido, el Antiguo Dios fue sellado en los niveles más profundos de la mazmorra. Pero, recientemente el sello se rompió, dando paso, a un nido de demonios. Las pesadillas, creadas por el Antiguo Dios en su sueño eran tan numerosas, que sin vía de escapar se vieron obligadas a fusionarse forman estas salas grotescas. Al caminar sobre su carne viva se puede sentir el latido del Antiguo Dios haciendo eco a través de ella.</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
   <string name="MimicAmulet_Name">mímico</string>
@@ -47,7 +47,7 @@
   <string name="YogsHeart_Name">corazón de Yog</string>
   <string name="YogsHeart_Gender">masculino</string>
   <string name="YogsHeart_Name_Objective">Corazón de Yog</string>
-  <string name="YogsHeart_Desc">Por siglos las personas han creido que solo las criaturas sin corazón son capaces de actos de pura maldad. Pero aquí lo tienes, un gran corazón latiendo de un Antiguo Dios.</string>
+  <string name="YogsHeart_Desc">Por siglos las personas han creído que solo las criaturas sin corazón son capaces de actos de pura maldad. Pero aquí lo tienes, un gran corazón latiendo de un Antiguo Dios.</string>
   <!--STRINGS OF YogsTeeth CLASS-->
   <string name="YogsTeeth_Name">dientes de Yog</string>
   <string name="YogsTeeth_Gender">masculino</string>
