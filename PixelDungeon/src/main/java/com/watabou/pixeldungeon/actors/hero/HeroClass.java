@@ -38,6 +38,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -143,8 +144,7 @@ public enum HeroClass {
 		ring.cursed = true;
 		hero.collect(ring);
 		hero.collect(new RingOfFrost().identify());
-		hero.collect(new WandOfShadowbolt()
-		);
+		hero.collect(new WandOfShadowbolt());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));
@@ -152,12 +152,12 @@ public enum HeroClass {
 		hero.collect(new IceGuardianCoreModule());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
-		hero.collect(new RingOfHaggler());
+		hero.collect(new Ankh());
 
 		hero.collect(new SpiderQueenCarapace());
 
-		hero.ht(10000);
-		hero.hp(10000);
+		hero.ht(100);
+		hero.hp(100);
 		hero.attackSkill = 1000;
 
 		Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
