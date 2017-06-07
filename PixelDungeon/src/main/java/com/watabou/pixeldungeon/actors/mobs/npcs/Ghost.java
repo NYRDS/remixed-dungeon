@@ -72,6 +72,9 @@ public class Ghost extends NPC {
 	private static final String TXT_RAT1  = Game.getVar(R.string.Ghost_Rat1);
 	private static final String TXT_RAT2  = Game.getVar(R.string.Ghost_Rat2);
 
+	private static final String INTRODUCED = "introduced";
+	private static final String NODE       = "ghost";
+
 	private boolean persuade = false;
 	private boolean introduced = false;
 	private WndSadGhostNecro window;
@@ -181,7 +184,31 @@ public class Ghost extends NPC {
 	public Set<Class<?>> immunities() {
 		return IMMUNITIES;
 	}
-	
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+
+		Bundle node = new Bundle();
+		node.put(INTRODUCED, introduced);
+
+		bundle.put(NODE, node);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+
+		Bundle node = bundle.getBundle(NODE);
+
+		if(node.isNull()){
+			return;
+		}
+
+		introduced = node.getBoolean(INTRODUCED);
+	}
+
+
 	public static class Quest {
 		
 		private static boolean spawned;

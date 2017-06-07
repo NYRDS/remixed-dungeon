@@ -36,6 +36,9 @@ public class ShadowLord extends Boss implements IZapper {
 	private boolean levelCreated         = false;
 	private int cooldown                 = -1;
 
+	private static final String LEVELCREATED   = "levelCreated";
+	private static final String NODE           = "shadowlord";
+
 	private static final String TXT_INTRO = Game.getVar(R.string.ShadowLord_Intro);
 	private static final String TXT_DENY = Game.getVar(R.string.ShadowLord_Death);
 
@@ -220,18 +223,26 @@ public class ShadowLord extends Boss implements IZapper {
 		//Tools.tileSplosion(Dungeon.level, Terrain.EMPTY_DECO, getPos(), 3);
 	}
 
-	private static final String LEVELCREATED   = "levelCreated";
-
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 
+		Bundle node = new Bundle();
 		bundle.put(LEVELCREATED, levelCreated);
+
+		bundle.put(NODE, node);
+
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
+
+		Bundle node = bundle.getBundle(NODE);
+
+		if(node.isNull()){
+			return;
+		}
 
 		levelCreated   = bundle.getBoolean(LEVELCREATED);
 	}
