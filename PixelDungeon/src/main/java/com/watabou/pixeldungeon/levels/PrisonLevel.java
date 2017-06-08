@@ -37,6 +37,9 @@ import com.watabou.utils.Random;
 
 public class PrisonLevel extends RegularLevel {
 
+	private static final String NECROMACNER_SPAWNED = "necromancerSpawned";
+	private boolean necromancerSpawned = false;
+
 	{
 		color1 = 0x6a723d;
 		color2 = 0x88924c;
@@ -82,10 +85,11 @@ public class PrisonLevel extends RegularLevel {
 		
 		WandMaker.Quest.spawn( this, roomEntrance );
 
-		if(Dungeon.depth==7) {
+		if(Dungeon.depth==7 && !necromancerSpawned) {
 			Room NecroExit = exitRoom(1);
 			if(NecroExit!=null && Dungeon.heroClass != HeroClass.NECROMANCER) {
 				NecromancerNPC.spawn(this, exitRoom(1));
+				necromancerSpawned = true;
 			}
 		}
 	}

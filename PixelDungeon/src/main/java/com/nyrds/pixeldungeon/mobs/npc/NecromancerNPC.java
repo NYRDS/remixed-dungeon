@@ -26,10 +26,8 @@ public class NecromancerNPC extends ImmortalNPC {
 
 	private static final String NODE       = "necromancernpc";
 	private static final String INTRODUCED = "introduced";
-	private static final String SPAWNED = "spawned";
 
 	private boolean introduced = false;
-	private static boolean spawned = false;
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -37,7 +35,6 @@ public class NecromancerNPC extends ImmortalNPC {
 
 		Bundle node = new Bundle();
 		node.put(INTRODUCED, introduced);
-		node.put(SPAWNED, spawned);
 
 		bundle.put(NODE, node);
 	}
@@ -52,27 +49,22 @@ public class NecromancerNPC extends ImmortalNPC {
 			return;
 		}
 
-		introduced = node.getBoolean(INTRODUCED);
-		spawned = node.getBoolean(SPAWNED);
+		introduced = node.optBoolean(INTRODUCED, false);
 	}
 
 	@Override
 	public boolean reset() {
-		spawned = false;
 		return true;
 	}
 
 	public static void spawn(RegularLevel level, Room room) {
-		if(!spawned){
-			NecromancerNPC npc = new NecromancerNPC();
-				int cell;
-				do {
-					cell = room.random(level);
-				} while (level.map[cell] == Terrain.LOCKED_EXIT);
-				npc.setPos(cell);
-				level.spawnMob(npc);
-			spawned = true;
-		}
+		NecromancerNPC npc = new NecromancerNPC();
+			int cell;
+			do {
+				cell = room.random(level);
+			} while (level.map[cell] == Terrain.LOCKED_EXIT);
+			npc.setPos(cell);
+			level.spawnMob(npc);
 	}
 
 	@Override
