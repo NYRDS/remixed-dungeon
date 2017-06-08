@@ -198,14 +198,7 @@ public class Ghost extends NPC {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-
-		Bundle node = bundle.getBundle(NODE);
-
-		if(node.isNull()){
-			return;
-		}
-
-		introduced = node.optBoolean(INTRODUCED, false);
+		introduced = bundle.optBoolean(INTRODUCED, false);
 	}
 
 	public static class Quest {
@@ -285,7 +278,7 @@ public class Ghost extends NPC {
 		}
 		
 		public static void spawn( SewerLevel level ) {
-			if (!spawned && Dungeon.depth > 1 && Random.Int( 5 - Dungeon.depth ) == 0) {
+			if (!spawned && Dungeon.depth == 3) {
 				
 				Ghost ghost = new Ghost();
 				do {
