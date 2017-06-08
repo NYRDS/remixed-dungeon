@@ -236,13 +236,6 @@ public class ShadowLord extends Boss implements IZapper {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-
-		Bundle node = bundle.getBundle(NODE);
-
-		if(node.isNull()){
-			return;
-		}
-
 		levelCreated   = bundle.optBoolean(LEVELCREATED, false);
 	}
 
