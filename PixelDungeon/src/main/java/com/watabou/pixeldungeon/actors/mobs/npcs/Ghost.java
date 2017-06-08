@@ -205,9 +205,8 @@ public class Ghost extends NPC {
 			return;
 		}
 
-		introduced = node.getBoolean(INTRODUCED);
+		introduced = node.optBoolean(INTRODUCED, false);
 	}
-
 
 	public static class Quest {
 		

@@ -220,7 +220,6 @@ public class ShadowLord extends Boss implements IZapper {
 		yell(TXT_DENY);
 		Tools.makeEmptyLevel(Dungeon.level);
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
-		//Tools.tileSplosion(Dungeon.level, Terrain.EMPTY_DECO, getPos(), 3);
 	}
 
 	@Override
@@ -244,7 +243,7 @@ public class ShadowLord extends Boss implements IZapper {
 			return;
 		}
 
-		levelCreated   = bundle.getBoolean(LEVELCREATED);
+		levelCreated   = bundle.optBoolean(LEVELCREATED, false);
 	}
 
 }
