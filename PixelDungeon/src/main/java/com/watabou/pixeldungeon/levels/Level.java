@@ -74,6 +74,7 @@ import com.watabou.pixeldungeon.levels.traps.ParalyticTrap;
 import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
 import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
 import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
+import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -980,6 +981,7 @@ public abstract class Level implements Bundlable {
 		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
 			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
 			set(cell, Terrain.discover(map[cell]));
+			TrapHelper.heroPressed();
 		}
 
 		charPress(cell, hero);
