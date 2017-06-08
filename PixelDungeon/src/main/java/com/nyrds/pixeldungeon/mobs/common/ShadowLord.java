@@ -225,12 +225,7 @@ public class ShadowLord extends Boss implements IZapper {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-
-		Bundle node = new Bundle();
 		bundle.put(LEVELCREATED, levelCreated);
-
-		bundle.put(NODE, node);
-
 	}
 
 	@Override
