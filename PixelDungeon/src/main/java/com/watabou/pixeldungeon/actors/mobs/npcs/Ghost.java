@@ -73,6 +73,8 @@ public class Ghost extends NPC {
 	private static final String TXT_RAT2  = Game.getVar(R.string.Ghost_Rat2);
 
 	private static final String INTRODUCED = "introduced";
+	private static final String PERSUADE = "persuade";
+
 
 	private boolean persuade = false;
 	private boolean introduced = false;
@@ -126,7 +128,9 @@ public class Ghost extends NPC {
 				return true;
 			}
 			else {
-				persuade = window.getPersuade();
+				if (window != null){
+					persuade = window.getPersuade();
+				}
 			}
 		}
 
@@ -187,14 +191,15 @@ public class Ghost extends NPC {
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-
 		bundle.put(INTRODUCED, introduced);
+		bundle.put(PERSUADE, persuade);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 		introduced = bundle.optBoolean(INTRODUCED, false);
+		persuade = bundle.optBoolean(PERSUADE, false);
 	}
 
 	public static class Quest {
@@ -274,7 +279,7 @@ public class Ghost extends NPC {
 		}
 		
 		public static void spawn( SewerLevel level ) {
-			if (!spawned && Dungeon.depth == 3) {
+			if (!spawned && Dungeon.depth > 1 && Random.Int( 5 - Dungeon.depth ) == 0) {
 				
 				Ghost ghost = new Ghost();
 				do {
