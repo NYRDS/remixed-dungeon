@@ -73,7 +73,6 @@ public class Ghost extends NPC {
 	private static final String TXT_RAT2  = Game.getVar(R.string.Ghost_Rat2);
 
 	private static final String INTRODUCED = "introduced";
-	private static final String NODE       = "ghost";
 
 	private boolean persuade = false;
 	private boolean introduced = false;
@@ -189,10 +188,7 @@ public class Ghost extends NPC {
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 
-		Bundle node = new Bundle();
-		node.put(INTRODUCED, introduced);
-
-		bundle.put(NODE, node);
+		bundle.put(INTRODUCED, introduced);
 	}
 
 	@Override
