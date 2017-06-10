@@ -186,6 +186,7 @@ public class TitleScene extends PixelScene {
 			PremiumPrefsButton btnPPrefs = new PremiumPrefsButton();
 			btnPPrefs.setPos(btnPrefs.right() + 2, 0);
 			add(btnPPrefs);
+			btnPlayGames.setPos(btnPPrefs.right() + 2, 0);
 		}
 
 		ExitButton btnExit = new ExitButton();
