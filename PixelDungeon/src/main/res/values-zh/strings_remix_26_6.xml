@@ -1,3 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF WandOfShadowbolt CLASS -->
+    <string name="WandOfShadowbolt_Name">影矢之杖</string>
+    <string name="WandOfShadowbolt_Info">此魔杖散發著黑暗，陰毒的能量。</string>
+</resources>

@@ -33,4 +33,8 @@ public class TrapHelper {
 				}
 		);
 	}
+
+	public static void heroPressed(){
+		stepConfirmed = false;
+	}
 }

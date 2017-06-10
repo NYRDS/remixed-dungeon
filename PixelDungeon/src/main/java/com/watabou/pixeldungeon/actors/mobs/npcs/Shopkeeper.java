@@ -36,6 +36,7 @@ public class Shopkeeper extends NPC {
 
 	{
 		spriteClass = ShopkeeperSprite.class;
+		movable = false;
 	}
 	
 	@Override

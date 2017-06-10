@@ -21,6 +21,13 @@ public class CompositeTextureImage extends Image {
 		mLayers.add(img);
 	}
 
+	public void copy(CompositeTextureImage other) {
+		super.copy(other);
+		for (Texture texture:other.mLayers) {
+			mLayers.add(texture);
+		}
+	}
+
 	@Override
 	public void draw() {
 

@@ -30,7 +30,7 @@
 
     <!-- STRINGS OF CandleOfMindVision CLASS -->
     <string name="CandleOfMindVision_Name">Vela de visión</string>
-    <string name="CandleOfMindVision_Info">Parece una vela normal, no es algo que esperarías encontrar en una mazmorra peligrosa. Curiosamente es bastante calida, a pesar de no estar encendida.</string>
+    <string name="CandleOfMindVision_Info">Parece una vela normal, no es algo que esperarías encontrar en una mazmorra peligrosa. Curiosamente es bastante cálida, a pesar de no estar encendida.</string>
     <string name="CandleOfMindVision_Info_Lighted">La vela se encendió en el momento en que la sacaste de la mochila. La llama emite una débil luz púrpura, cuando la miras los monstruos cercanos son visibles para ti.</string>
     <string name="CandleOfMindVision_Info_Exhausted">La vela se ha quemado, ya no se ilumina más cuando la sostienes. Parece que ya no puedes usarla.</string>
 

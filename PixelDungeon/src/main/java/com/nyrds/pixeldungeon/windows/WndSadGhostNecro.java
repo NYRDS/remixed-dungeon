@@ -24,7 +24,7 @@ public class WndSadGhostNecro extends Window {
 	private static final int BTN_HEIGHT	= 18;
 
 	private boolean persuade;
-	
+
 	public WndSadGhostNecro() {
 		
 		super();

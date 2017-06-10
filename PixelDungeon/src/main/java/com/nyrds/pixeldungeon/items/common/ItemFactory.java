@@ -385,6 +385,7 @@ public class ItemFactory {
 		registerItemClass(RingOfFrost.class);
 		registerItemClass(WarlockArmor.class);
 		registerItemClass(Candy.class);
+		registerItemClass(WandOfShadowbolt.class);
 
 	}
 

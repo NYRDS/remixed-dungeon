@@ -9,7 +9,7 @@
     <string name="FortuneTellerNPC_Name">adivino</string>
     <string name="FortuneTellerNPC_Gender">femenino</string>
     <string name="FortuneTellerNPC_Name_Objective">adivino</string>
-    <string name="FortuneTellerNPC_Desc">Esta mujer viste un traje largo y de colores brillantes. Parece demasiado jjoven para alguien que domina las artes arcanas de la adivinación. Al acercarte, puedes escucharla murmullar, mientras mira en la bola de cristal.</string>
+    <string name="FortuneTellerNPC_Desc">Esta mujer viste un traje largo y de colores brillantes. Parece demasiado joven para alguien que domina las artes arcanas de la adivinación. Al acercarte, puedes escucharla murmullar, mientras mira en la bola de cristal.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Limit_Reached">Me disculpo, pero has alcanzado el limite actual. ¡Pero podrás seguir usando nuestro servicio por cada nivel que suba el héroe!</string>

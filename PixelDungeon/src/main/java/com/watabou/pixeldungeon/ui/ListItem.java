@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.GuiProperties;
-import com.watabou.noosa.Image;
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -12,10 +12,10 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
  */
 public abstract class ListItem extends Component implements IClickable {
 
-	protected Image   sprite    = new Image();
-	protected Text    label     = PixelScene.createText(GuiProperties.regularFontSize());
-	protected boolean clickable = false;
-	protected int     align     = 24;
+	protected CompositeTextureImage sprite    = new CompositeTextureImage();
+	protected Text                  label     = PixelScene.createText(GuiProperties.regularFontSize());
+	protected boolean               clickable = false;
+	protected int                   align     = 24;
 
 	protected ListItem() {
 		super();

@@ -5,16 +5,16 @@
   <string name="AzuterronNPC_Name">Desconocido</string>
   <string name="AzuterronNPC_Gender">masculino</string>
   <string name="AzuterronNPC_Name_Objective">Desconocido</string>
-  <string name="AzuterronNPC_Desc">Una misteriosa figura cubiertaa por niebla negra.</string>
-  <string name="AzuterronNPC_Quest_Start">Eh, ¿espera... oh, puedes verme?, Eso significa que no eres uno de \"ellos\". Veo que no eres un aficcionado contra esos monstruos. Si me ayudas con un pequeño problema, entonces te ofreceré mi ayuda. En algún lugar de este nivel se encuentra una bestia de la oscuridad, un _Espíritu Traicionero_. Matalo, toma su corazón y regresa conmigo. Una cosa más, si está interesado en comprar mis suministros, no dude en preguntar...</string>
+  <string name="AzuterronNPC_Desc">Una misteriosa figura cubierta por niebla negra.</string>
+  <string name="AzuterronNPC_Quest_Start">Eh, ¿espera... oh, puedes verme?, Eso significa que no eres uno de \"ellos\". Veo que no eres un aficionado contra esos monstruos. Si me ayudas con un pequeño problema, entonces te ofreceré mi ayuda. En algún lugar de este nivel se encuentra una bestia de la oscuridad, un _Espíritu Traicionero_. Mátalo, toma su corazón y regresa conmigo. Una cosa más, si está interesado en comprar mis suministros, no dude en preguntar...</string>
   <string name="AzuterronNPC_Quest_Reminder">Ayudame y te ayudaré.</string>
-  <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te sera util.</string>
+  <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te sera útil.</string>
   <string name="Journal_Azuterron">Desconocido</string>
   <!--STRINGS OF TreacherousSpirit CLASS-->
   <string name="TreacherousSpirit_Name">Espíritu traicionero</string>
   <string name="TreacherousSpirit_Gender">masculino</string>
   <string name="TreacherousSpirit_Name_Objective">Espíritu traicionero</string>
-  <string name="TreacherousSpirit_Desc">Esta monstruosa criatura parecida a una nube oscura viviente. Su ojo sin párpado mirandote, palpitando con cada uno de sus movimientos.</string>
+  <string name="TreacherousSpirit_Desc">Esta monstruosa criatura parecida a una nube oscura viviente. Su ojo sin párpado mirándote, palpitando con cada uno de tus movimientos.</string>
   <!--STRINGS OF SpiritOfPain CLASS-->
   <string name="SpiritOfPain_Name">espíritu adolorido</string>
   <string name="SpiritOfPain_Gender">masculino</string>

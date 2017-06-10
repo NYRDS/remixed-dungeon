@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
@@ -37,6 +38,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -59,6 +61,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
+import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -141,15 +144,15 @@ public enum HeroClass {
 		ring.cursed = true;
 		hero.collect(ring);
 		hero.collect(new RingOfFrost().identify());
-		hero.collect(new WandOfShadowbolt()
-		);
+		hero.collect(new WandOfShadowbolt());
 		hero.collect(new WandOfBlink().identify().upgrade(5));
 		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));
+		hero.collect(new Sword().identify().upgrade(7));
 		hero.collect(new IceGuardianCoreModule());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
-		hero.collect(new RingOfHaggler());
+		hero.collect(new Ankh());
 
 		hero.collect(new SpiderQueenCarapace());
 

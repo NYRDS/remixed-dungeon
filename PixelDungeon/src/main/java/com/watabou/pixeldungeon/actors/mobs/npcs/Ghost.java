@@ -72,6 +72,10 @@ public class Ghost extends NPC {
 	private static final String TXT_RAT1  = Game.getVar(R.string.Ghost_Rat1);
 	private static final String TXT_RAT2  = Game.getVar(R.string.Ghost_Rat2);
 
+	private static final String INTRODUCED = "introduced";
+	private static final String PERSUADE = "persuade";
+
+
 	private boolean persuade = false;
 	private boolean introduced = false;
 	private WndSadGhostNecro window;
@@ -124,7 +128,9 @@ public class Ghost extends NPC {
 				return true;
 			}
 			else {
-				persuade = window.getPersuade();
+				if (window != null){
+					persuade = window.getPersuade();
+				}
 			}
 		}
 
@@ -181,7 +187,21 @@ public class Ghost extends NPC {
 	public Set<Class<?>> immunities() {
 		return IMMUNITIES;
 	}
-	
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(INTRODUCED, introduced);
+		bundle.put(PERSUADE, persuade);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		introduced = bundle.optBoolean(INTRODUCED, false);
+		persuade = bundle.optBoolean(PERSUADE, false);
+	}
+
 	public static class Quest {
 		
 		private static boolean spawned;

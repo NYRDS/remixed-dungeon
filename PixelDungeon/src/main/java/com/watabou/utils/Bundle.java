@@ -77,6 +77,10 @@ public class Bundle {
 	public boolean getBoolean( String key ) {
 		return data.optBoolean(key);
 	}
+
+	public boolean optBoolean( String key, boolean val ) {
+		return data.optBoolean(key, val);
+	}
 	
 	public int getInt( String key ) {
 		return data.optInt(key);

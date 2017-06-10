@@ -54,14 +54,14 @@ remix.21.4:\n
         - La Mazmorra tiene ahora 32 niveles de profundidad (en lugar de 26)\n
         - Jefe oculto movido al nivel 25\n
         - Gran variedad de mini jefes para la pelea final (en lugar de los 2 puños, Yog ahora puede escoger entre un total de 5 mini jefes a crear)\n
-        - Nueva configuración y mounstros de niveles 27-31
+        - Nueva configuración y monstruos de niveles 27-31
        </string>
   <string name="Welcome_Text_23_1">
         remix.23.1:\n
-        - Nueva tienda, NPC y busqueda en el nivel 27\n
-        - Nuevo mounstro para el Nido de Demonios (27-31)\n
-        - Todos los mounstros, jefes de los niveles 27-32 y sus habilidades se hicieron más fuertes\n
-		- Insigneas de los jefes actualizadas\n
+        - Nueva tienda, NPC y búsqueda en el nivel 27\n
+        - Nuevo monstruo para el Nido de Demonios (27-31)\n
+        - Todos los monstruos, jefes de los niveles 27-32 y sus habilidades se hicieron más fuertes\n
+		- Insignias de los jefes actualizadas\n
 		- Algunas actualizaciones visuales menores\n
 		- Varias correcciones de errores\n
         </string>
@@ -81,9 +81,9 @@ remix.21.4:\n
         remix.24.1:\n
         --Juego--\n
         - Nuevo enemigo: Estatua Armada\n
-        - Nuevas rarezas: Araña Guarda (tipo raro de Soldado Araña) y Araña Ambar (tipo raro de Psi-araña)\n
+        - Nuevas rarezas: Araña Guarda (tipo raro de Soldado Araña) y Araña Ámbar (tipo raro de Psi-araña)\n
         - Ahora puedes eliminar partidas guardadas\n
-        - Actulización visual de la Guarida Aracnida\n
+        - Actualización visual de la Guarida Arácnida\n
         --Objetos de vanidad--\n
         - Al comprar un nuevo objeto se equipa automáticamente\n
         - Nuevo objeto \"Conjunto Pirata\"\n
@@ -92,18 +92,18 @@ remix.21.4:\n
   <string name="Welcome_Text_24_2">
         remix.24.2:\n
         - Nuevo enemigo: Estatua Dorada (tipo raro de estatua)\n
-        - Nuevo objeto: Espada Dorada (puedes encontrarlo como un botin raro, tambien puedes obtenerlo de una estaatua dorada con un exito del 100%)\n
-        - Nuevo NPC: Nigromante (Tiene una emocionate noticia para ti. Encuentralo en el nivel 7)\n
-        - La dificultad de la Viscocidad se ha reducido\n
+        - Nuevo objeto: Espada Dorada (puedes encontrarlo como un botín raro, también puedes obtenerlo de una estatua dorada con un éxito del 100%)\n
+        - Nuevo NPC: Nigromante (Tiene una emocionante noticia para ti. Búscalo en el nivel 7)\n
+        - La dificultad de la Viscosidad se ha reducido\n
         - Tengu ahora deja caer un Tomo. Las subclases no pueden usar el tomo para cambiar de especialidad.\n
-        - Maestro de las Sombras tiene ahora una cuarto más elaborado (ahora no podras pasar al siguiente piso sin pelear)\n
-        - Encanto de Araña tiene un nuevo grafico y es obtenido de la Reina Araña (Antes podia ser obtenido de la Viscocidad)\n
+        - Maestro de las Sombras tiene ahora una cuarto más elaborado (ahora no podas pasar al siguiente piso sin pelear)\n
+        - Encanto de Araña tiene un nuevo gráfico y es obtenido de la Reina Araña (Antes podía ser obtenido de la Viscosidad)\n
         </string>
   <string name="Welcome_Text_25">
         remix.25:\n
         - Nuevo tipo de mazmorra: Necrópolis, para entrar en la necrópolis, debe encontrar al Nigromante en el nivel 7, para obtener la llave esqueleto\n
         - Nuevos objetos: Armadura arácnida y Cráneo negro\n
-        - La espada dorada es más fuerta ahora y requiere más fuerza\n
+        - La espada dorada es más fuerte ahora y requiere más fuerza\n
         - El agua en la capa de las arañas ahora se mira correctamente\n
         - Ahora las pilas de huesos no contienen artefacto y objetos de misiones\n
         - La mecánica de las mascotas ha cambiado. Varios enemigos son inmunes a los efectos de control mental\n
@@ -121,7 +121,7 @@ remix.21.4:\n
         - El nigromante tiene mayor posibilidad de conseguir una Espada de Sacrificios\n
         --Ajustes--\n
         - Todos los monstruos de la Necrópolis han sido debilitados\n
-        - Ahora Yog-Dzewa obtiene incremento de defensa no solo de los puños, si no tambien de otros sub-jefes\n
+        - Ahora Yog-Dzewa obtiene incremento de defensa no solo de los puños, si no también de otros sub-jefes\n
         - Cuando Yog\'s muere todos los otros jefes mueren (antes solo afectaba a los puños)\n
         - El Corazón de Yog\'s a sido debilitado. La cantidad de sanación que da a otros mobs se redujo\n
         - Los jefes ya no están \"Cazando\" por defecto\n
@@ -144,7 +144,7 @@ remix.21.4:\n
         --Nuevas características--\n
         - Ahora puede cambiar el tamaño del Ui durante el juego, desde el menú \"Configuración\"\n
         --Correcciones--\n
-        - Corregido el error que aparecia al crearse una vista previa el héroe, al usar un sombre, después de hacer clic en \"Examinar\" en el menú \"Sombreros\"\n
+        - Corregido el error que aparecía al crearse una vista previa el héroe, al usar un sombre, después de hacer clic en \"Examinar\" en el menú \"Sombreros\"\n
         - Corregido el error que evitaba que los mobs (convocados o resucitados sobre un agujero) cayeran\n
         - Actualización de traducciones y corrección de errores\n
         </string>
@@ -159,7 +159,7 @@ remix.21.4:\n
   <string name="Welcome_Text_25_4">
         remix.25.4:\n
         --Juego--\n
-        - Los barriles pueden ser empujados con la Vartia de Telekinesis\n
+        - Los barriles pueden ser empujados con la Varita de Telekinesis\n
         - Los barriles tiene menor posibilidad de aparecer en pasillos\n
         - Lanzas y Alabardas ahora son del arquetipo \"armas de asta\", aumentan la distancia del ataque (antes solo era posible con la Lanza)\n
         - La velocidad de ataque con las \"armas de asta\" se redujo para aumentar la distancia del ataque\n
@@ -193,7 +193,7 @@ remix.21.4:\n
             - Un artefacto: Vela de visión\n
             - Tema de música original (por Misaerit)\n
         - Arreglado el error que evitaba la aparición de arañas raras\n
-        - Goo se volvió un poco más fuerte\n
+        - Viscosidad se volvió un poco más fuerte\n
         --Sombreros\n
         - Agregado Sombrero de Santa\n
         - Agregado Nariz roja y astas\n
@@ -248,7 +248,7 @@ remix.26.1:\n
          - El héroe comienza con 100 monedas de oro, en lugar de 200\n
          - El equipo de inicio ahora incluye una ración de comida\n
          - Ahora, si el héroe muere mientras juega en un nivel de dificultad que permite guardar el juego y si existe un juego guardado, en lugar del menú habitual, aparecerá una ventada para «Cargar un juego guardado»\n
-         - Nuevo PNJ en el Pueblo: una adivina, ella identificara tus objetos, por monedas de oro\n
+         - Nuevo NPC en el Pueblo: una adivina, ella identificara tus objetos, por monedas de oro\n
          - Mientras la/el héroe este en el pueblo no acumulará hambre\n
          - La regeneración de la salud y la función «descansar hasta sanar» están desactivadas dentro del pueblo\n
          - La cantidad de funciones del cine, está ahora basada en el nivel del héroe, cada nuevo nivel incrementara el límite en 1\n
@@ -263,7 +263,7 @@ remix.26.1:\n
          - Kobold enjaulado añadido a MobFactory, ahora disponible en niveles personalizados\n
          - Los niveles de mazmorra etiquetados como «isSafe» el héroe ya no acumulará hambre, no regenerará la salud ni podrá «descansar hasta sanar»\n
          - Los mods aprobados pueden cambiar el archivo de imagen «banners»\n
-         - Las Varitas tienen los atributos «charges» (cargas) y «maxCharges» (cargas máximas)\n
+         - Las Varitas tienen los atributos «charges» cargas y «maxCharges» cargas máximas\n
          - Nuevo atributo para niveles de la mazmorra: «isStatic». Los niveles etiquetados con esto, se volverán a generar cada vez que el héroe entre en ellos. (el nivel permanece «estático», sin importar que hizo el héroe anteriormente)\n
          - Añadido un paso adicional en el inicio del héroe: «non_expert». Los objetos incluidos en este paso, se añadirán al inventario en todos los niveles de dificultad, excepto para la dificultad «experto»\n
          - El héroe ya no sufre las alteraciones del hambre, que obtendría en la dificultad «experto», mientras este en un nivel con «isSafe»\n
@@ -285,5 +285,12 @@ remix.26.1:\n
         - Los enemigos personalizados también pueden ser del tipo ataque lejano\n
         - Agregados atributos: canBePet, wallWalker y absoluteWalker para enemigos personalizados\n
         - Los mods ahora soportan mensajes de “defensa” personalizados para los enemigos. Ej, “Bloqueado”, “Parado”\n
+    </string>
+  <string name="Welcome_Text_26_6">
+        remix.26.6\n
+        - Nuevo objeto único: Varita de Sombra\n
+        - Los cristales creados por el Maestro de las Sombras ahora usan la Varita Sombra, en lugar de un ataque a distancia normal. La probabilidad de obtener la varita de los cristales es del 25%\n
+        - Corregidos los ataques a distancia procedentes de: Elemental de aire, Cristal, Puño ardiente, Psico-araña y Araña Ámbar\n
+        - Armadura de Mago (versión del Brujo: WarlockArmor) y Dulce están disponibles en mods\n
     </string>
 </resources>

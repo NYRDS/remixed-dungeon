@@ -33,7 +33,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		adjustStats(Dungeon.depth);
 
 		loot = SimpleWand.createRandomSimpleWand();
-		((Wand) loot).upgrade(Dungeon.depth / 2);
+		((Wand) loot).upgrade(Dungeon.depth / 3);
 
 		lootChance = 0.25f;
 	}
@@ -41,9 +41,9 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	static public Crystal makeShadowLordCrystal() {
 		Crystal crystal = new Crystal();
 		crystal.kind = 2;
-		crystal.lootChance = 0.25f;
+		crystal.lootChance = 0.12f;
 		crystal.loot = new WandOfShadowbolt();
-		((Wand) crystal.loot).upgrade(Dungeon.depth / 2);
+		((Wand) crystal.loot).upgrade(Dungeon.depth / 3);
 		return crystal;
 	}
 

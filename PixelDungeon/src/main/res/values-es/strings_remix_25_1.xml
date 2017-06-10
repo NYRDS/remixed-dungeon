@@ -6,8 +6,8 @@
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">Portador de Almas</string>
-    <string name="BlackSkullOfMastery_Info">Esto es un artefacto antiguo, hecho por los primeros nigromantes para recoger las almas de los caídos. Detecto tus habilidades nigrománticas, se protegió con un poderoso hechizo. Pero el hecho es muy antiguo, por su forma primitiva es bastante facil de romper.</string>
-    <string name="BlackSkullOfMastery_Title">Puedes romper el hechizo. O puedes manipular la magia que posee, lo que te permitirá consumir el poder del hechizo y el artefacto en sí, convirtiendote en un Lich.</string>
+    <string name="BlackSkullOfMastery_Info">Esto es un artefacto antiguo, hecho por los primeros nigromantes para recoger las almas de los caídos. Detecto tus habilidades nigrománticas, se protegió con un poderoso hechizo. Pero el hecho es muy antiguo, por su forma primitiva es bastante fácil de romper.</string>
+    <string name="BlackSkullOfMastery_Title">Puedes romper el hechizo. O puedes manipular la magia que posee, lo que te permitirá consumir el poder del hechizo y el artefacto en sí, convirtiéndote en un Lich.</string>
 
     <string name="BlackSkullOfMastery_Lich">Convertirse en Lich.</string>
     <string name="BlackSkullOfMastery_Necromancer">Romper el hechizo</string>

@@ -24,10 +24,10 @@ public class NecromancerNPC extends ImmortalNPC {
 
 	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3, TXT_MESSAGE4};
 
-	private static final String NODE       = "necromancer";
+	private static final String NODE       = "necromancernpc";
 	private static final String INTRODUCED = "introduced";
 
-	private        boolean introduced = false;
+	private boolean introduced = false;
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -49,16 +49,21 @@ public class NecromancerNPC extends ImmortalNPC {
 			return;
 		}
 
-		introduced = node.getBoolean(INTRODUCED);
+		introduced = node.optBoolean(INTRODUCED, false);
+	}
+
+	@Override
+	public boolean reset() {
+		return true;
 	}
 
 	public static void spawn(RegularLevel level, Room room) {
-			NecromancerNPC npc = new NecromancerNPC();
-		    int cell;
+		NecromancerNPC npc = new NecromancerNPC();
+			int cell;
 			do {
 				cell = room.random(level);
 			} while (level.map[cell] == Terrain.LOCKED_EXIT);
-		    npc.setPos(cell);
+			npc.setPos(cell);
 			level.spawnMob(npc);
 	}
 
