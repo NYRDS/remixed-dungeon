@@ -30,7 +30,7 @@ public class PlayGamesButton extends Button {
 	protected void createChildren() {
 		super.createChildren();
 		
-		image = Icons.get(Icons.TARGET);
+		image = Icons.get(Icons.PLAY_GAMES);
 
 		updateStatus();
 
