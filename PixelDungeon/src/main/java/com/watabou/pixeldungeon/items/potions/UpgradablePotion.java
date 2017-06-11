@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.utils.Random;
 
 /**
  * Created by mike on 28.05.2017.
@@ -45,5 +46,17 @@ public class UpgradablePotion extends Potion {
 	@Override
 	public int visiblyUpgraded() {
 		return level();
+	}
+
+	@Override
+	public Item random() {
+		if (Random.Float() < 0.15f) {
+			upgrade();
+			if (Random.Float() < 0.15f) {
+				upgrade();
+			}
+		}
+
+		return this;
 	}
 }
