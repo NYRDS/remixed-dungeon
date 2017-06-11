@@ -116,7 +116,7 @@ public class WndHats extends Window {
 
 			if (price != null) {
 				//Pricetag
-				SystemText priceTag = new SystemText(GuiProperties.mediumTitleFontSize());
+				SystemText priceTag = new SystemText(GuiProperties.titleFontSize());
 				priceTag.text(price);
 
 				priceTag.hardlight(0xFFFF00);

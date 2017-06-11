@@ -1006,6 +1006,7 @@ public abstract class Level implements Bundlable {
 				levelObject.bump();
 			}
 		}
+		set(cell, Terrain.discover(map[cell]));
 		charPress(cell, null);
 	}
 
