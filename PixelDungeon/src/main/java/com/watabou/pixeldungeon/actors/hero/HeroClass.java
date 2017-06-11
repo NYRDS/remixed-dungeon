@@ -50,6 +50,7 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
+import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -138,15 +139,13 @@ public enum HeroClass {
 			hero.collect(new PotionOfFrost().identify());
 			hero.collect(new PotionOfLiquidFlame().identify());
 			hero.collect(new ScrollOfUpgrade().identify());
+			hero.collect(new MysteryMeat());
 		}
 
-		Item ring = new RingOfAccuracy().identify();
+		Item ring = new WandOfShadowbolt().identify();
 		ring.cursed = true;
 		hero.collect(ring);
 		hero.collect(new RingOfFrost().identify());
-		hero.collect(new WandOfShadowbolt());
-		hero.collect(new WandOfBlink().identify().upgrade(5));
-		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
 		hero.collect(new IceGuardianCoreModule());
