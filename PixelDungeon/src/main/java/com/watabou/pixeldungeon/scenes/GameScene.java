@@ -164,8 +164,8 @@ public class GameScene extends PixelScene {
 		water = new SkinnedBlock(level.getWidth() * DungeonTilemap.SIZE,
 				level.getHeight() * DungeonTilemap.SIZE, level.getWaterTex());
 
-		waterSx = DungeonGenerator.waterSx(level.levelId, waterSx);
-		waterSy = DungeonGenerator.waterSy(level.levelId, waterSy);
+		waterSx = DungeonGenerator.getLevelProperty(level.levelId, "waterSx", waterSx);
+		waterSy = DungeonGenerator.getLevelProperty(level.levelId, "waterSy", waterSy);
 
 		terrain.add(water);
 

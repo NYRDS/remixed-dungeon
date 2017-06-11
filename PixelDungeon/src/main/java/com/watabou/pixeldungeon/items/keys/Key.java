@@ -77,7 +77,7 @@ public class Key extends Item {
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 		levelId = itemDesc.optString("levelId",levelId);
-		depth   = DungeonGenerator.getLevelDepthById(levelId);
+		depth   = DungeonGenerator.getLevelProperty(levelId,"depth",0);
 		depth   = itemDesc.optInt("depth",depth);
 	}
 }

@@ -139,7 +139,7 @@ public abstract class Level implements Bundlable {
 
 	@NonNull
 	public String music() {
-		return DungeonGenerator.music(levelId);
+		return DungeonGenerator.getLevelProperty(levelId, "music", Assets.TUNE);
 	}
 
 	public Feeling getFeeling() {
@@ -166,7 +166,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean noFogOfWar() {
-		return DungeonGenerator.noFogOfWar(levelId);
+		return DungeonGenerator.getLevelProperty(levelId, "noFogOfWar", false);
 	}
 
 	public String tileNameByCell(int cell) {
@@ -391,6 +391,8 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
 			}
 
+			viewDistance = DungeonGenerator.getLevelProperty(levelId,"viewDistance",viewDistance);
+
 			feeling = DungeonGenerator.getLevelFeeling(levelId);
 			if (feeling == Feeling.UNDEFINED) {
 				if (Dungeon.depth > 1) {
@@ -559,7 +561,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public String getTilesTex() {
-		String tiles = DungeonGenerator.tiles(levelId);
+		String tiles = DungeonGenerator.getLevelProperty(levelId, "tiles",null);
 		if (tiles != null) {
 			return tiles;
 		}
@@ -586,7 +588,7 @@ public abstract class Level implements Bundlable {
 
 	@NonNull
 	public String getWaterTex() {
-		String water = DungeonGenerator.water(levelId);
+		String water = DungeonGenerator.getLevelProperty(levelId, "water",null);
 		if (water != null) {
 			return water;
 		}
@@ -1539,7 +1541,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean isSafe() {
-		return DungeonGenerator.isSafe(levelId);
+		return DungeonGenerator.getLevelProperty(levelId,"isSafe",false);
 	}
 	public boolean isStatic() {
 		return DungeonGenerator.isStatic(levelId);

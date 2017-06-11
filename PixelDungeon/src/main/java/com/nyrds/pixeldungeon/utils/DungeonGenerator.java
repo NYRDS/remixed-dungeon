@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -18,7 +17,6 @@ import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
@@ -202,7 +200,7 @@ public class DungeonGenerator {
 		}
 	}
 
-	private static String getLevelProperty(String id, String property, String defaultValue) {
+	public static String getLevelProperty(String id, String property, String defaultValue) {
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return levelDesc.optString(property,defaultValue);
@@ -213,7 +211,7 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
-	private static float getLevelProperty(String id, String property, float defaultValue) {
+	public static float getLevelProperty(String id, String property, float defaultValue) {
 
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
@@ -224,7 +222,7 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
-	private static boolean getLevelProperty(String id, String property, boolean defaultValue) {
+	public static boolean getLevelProperty(String id, String property, boolean defaultValue) {
 
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
@@ -235,7 +233,7 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
-	private static int getLevelProperty(String id, String property, int defaultValue) {
+	public static int getLevelProperty(String id, String property, int defaultValue) {
 
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
@@ -246,36 +244,7 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
-	public static boolean isSafe(String id) {return getLevelProperty(id,"isSafe",false);}
-
 	public static boolean isStatic(String id) {return getLevelProperty(id,"isStatic",false);}
-
-	@Nullable
-	public static String tiles(String id) {
-		return getLevelProperty(id, "tiles",null);
-	}
-
-	@Nullable
-	public static String water(String id) {
-		return getLevelProperty(id, "water",null);
-	}
-
-	public static float waterSx(String id, float defaultValue) {
-		return getLevelProperty(id, "waterSx", defaultValue);
-	}
-
-	public static float waterSy(String id, float defaultValue) {
-		return getLevelProperty(id, "waterSy", defaultValue);
-	}
-
-	public static boolean noFogOfWar(String id) {
-		return getLevelProperty(id, "noFogOfWar", false);
-	}
-
-	@NonNull
-	public static String music(String id) {
-		return getLevelProperty(id, "music", Assets.TUNE);
-	}
 
 	public static Level.Feeling getLevelFeeling(String id) {
 		try {
@@ -389,10 +358,5 @@ public class DungeonGenerator {
 		mCurrentLevelId = next.levelId;
 		mCurrentLevelDepth = next.levelDepth;
 		mCurrentLevelKind = next.levelKind;
-	}
-
-
-	public static int getLevelDepthById(String levelId) {
-		return getLevelProperty(levelId,"depth",0);
 	}
 }
