@@ -1,3 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">우산카</string>
+    <string name="Ushanka_Info">멋있는 붉은 색 별이 달린 따뜻하고 포근한 우산카 모자입니다. 사악하고 냉혹한 던전의 악당을 물리치는 동무들의 참 좋은 동지입니다.</string>
+
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">흡혈귀의 해골</string>
     </resources>

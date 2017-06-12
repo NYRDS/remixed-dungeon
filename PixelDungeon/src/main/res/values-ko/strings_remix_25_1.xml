@@ -4,4 +4,7 @@
     <!-- STRINGS OF TomeOfMastery CLASS -->
     <string name="TomeOfMastery_WayAlreadyChosen">방향을 바꿀수가 없습니다!</string>
 
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">영혼을 부르는 자</string>
+    <string name="BlackSkullOfMastery_Info">고대의 유물로써, 죽은 자의 영혼을 모으기 위해 첫 세대의 강령술사들이 만들어냈습니다. 당신의 강령술 능력을 감지하여, 강력한 주문으로 봉인되어 있습니다. 하지만 이 주문은 아주 오래된 것이라, 쉽게 파괴할 수 있을 것입니다.</string>
     </resources>

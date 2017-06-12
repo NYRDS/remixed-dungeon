@@ -3,5 +3,11 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF GoldenSword -->
     <string name="GoldenSword_Name">금 칼</string>
+    <string name="GoldenSword_Info">보통 금과 같은 무른 금속들은 장식으로만 쓰입니다. 하지만 이 칼은 여러가지를 꽤나 잘 베어버릴 수 있습니다.</string>
+    <string name="GoldenSword_Gender">남성</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF GoldenStatue CLASS -->
+    <string name="GoldenStatue_Name">황금 상</string>
     <string name="RatKing_Name_Objective">쥐 대왕</string>
     </resources>

@@ -3,4 +3,9 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">거미갑옷</string>
+    <string name="SpiderArmor_Info">이 갑옷은 거미의 껍질과 이상한 옷감으로 만들어졌습니다. 놀랍게도 잘 작동하는 방적돌기가 있습니다. 갑옷에 충분한 압력을 주어 거미줄을 발사할 수 있고, 신발에 난 돌기는 거미줄에서 자유롭게 이동할 수 있게 합니다.</string>
+    <string name="SpiderArmor_Gender">여성</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">검은 해골</string>
     </resources>

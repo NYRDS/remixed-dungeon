@@ -1,3 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">유물은 동시에 2개까지 착용할 수 있습니다.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">예언자</string>
+    <string name="FortuneTellerNPC_Gender">여성</string>
     </resources>

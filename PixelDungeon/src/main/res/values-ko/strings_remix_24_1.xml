@@ -3,7 +3,10 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ArmoredStatue -->
     <string name="ArmoredStatue_Name">살아있는 석상</string>
+    <string name="ArmoredStatue_Gender">여성</string>
     <string name="ArmoredStatue_Name_Objective">살아있는 석상</string>
+    <string name="ArmoredStatue_Desc">당신은 이 조각상이 다른 조각상과 다르다고 생각할 것이다. 붉은 눈 뿐만 아니라 손에는 진짜 %s 이/가 들려 있기 때문이다.</string>
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndSaveSlotSelect_Delete_Yes">네. 지우겠습니다.</string>
