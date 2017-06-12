@@ -121,7 +121,7 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 				selectedMod = desc.name;
 				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
 				desc.needUpdate = false;
-				new DownloadTask(this).execute(desc.url, downloadTo);
+				new DownloadTask(this).executeOnExecutor(Game.instance().executor,desc.url, downloadTo);
 				return;
 			}
 		}
@@ -167,7 +167,7 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 					downloadProgress = null;
 				}
 				if (result) {
-					new UnzipTask(WndModSelect.this).execute(downloadTo);
+					new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);
 				} else {
 					Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 				}

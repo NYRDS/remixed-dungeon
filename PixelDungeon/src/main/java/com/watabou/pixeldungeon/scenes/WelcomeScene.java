@@ -117,7 +117,7 @@ public class WelcomeScene extends PixelScene {
 			protected void onClick() {
 				PixelDungeon.version(Game.versionCode);
 
-				if (Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 0) == 0) {
+				if (Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 1) == 0) {
 					Game.switchScene(AllowStatisticsCollectionScene.class);
 				} else {
 					Game.switchScene(TitleScene.class);
