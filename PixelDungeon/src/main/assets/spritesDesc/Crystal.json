@@ -17,7 +17,7 @@
       "looped" : false,
       "frames" : [2,3,4]
    },
-   "attack" : {
+   "zap" : {
       "fps" : 16,
       "looped" : false,
       "frames" : [2,3,4]
