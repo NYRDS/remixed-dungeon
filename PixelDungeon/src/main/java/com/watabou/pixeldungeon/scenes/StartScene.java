@@ -90,7 +90,6 @@ public class StartScene extends PixelScene {
 
 	private boolean huntressUnlocked;
 	private boolean elfUnlocked;
-	private boolean necromancerUnlocked;
 
 	private float width, height, bottom;
 
@@ -220,7 +219,6 @@ public class StartScene extends PixelScene {
 
 		huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
 		elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
-		necromancerUnlocked = Badges.isUnlocked(Badges.Badge.LICH_SLAIN) || (PixelDungeon.donated() >= 3);
 
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(Camera.main.width - btnExit.width(), 0);
@@ -289,11 +287,6 @@ public class StartScene extends PixelScene {
 
 			if (curShield.cl == HeroClass.ELF && !elfUnlocked) {
 				updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockElf));
-				return;
-			}
-
-			if (curShield.cl == HeroClass.NECROMANCER && !necromancerUnlocked) {
-				updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockNecromancer));
 				return;
 			}
 		}
