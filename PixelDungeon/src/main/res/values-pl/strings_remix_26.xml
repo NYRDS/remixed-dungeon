@@ -1,3 +1,84 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">Czapka Mikołaja</string>
+    <string name="SantaHat_Info">Nic tak nie wyraża nastroju Świąt Zlochowacenia, jak czerwona, jedwabna czapka Mikołaja, Władcy Podziemi!</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Czerwony nos i poroże</string>
+    <string name="Rudolph_Info">Cóż może być bardziej świątecznego od świecącego, czerwonego nosa? Czerwony nos i poroże, rzecz jasna!</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">kobold</string>
+    <string name="Kobold_Gender">męski</string>
+    <string name="Kobold_Name_Objective">kobold</string>
+    <string name="Kobold_Desc">Uznawane za mityczne stwory, przodkowie gnolli pospolitych, koboldy, zamieszkują głębokie i zimne jaskinie. Uważa się, że koboldzi lud opanował inżynierię i automatyzację na długo przed krasnoludami - jednak nie wiadomo czemu nagle zniknął przed wiekami...</string>
+
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">koboldzi kriomanta</string>
+    <string name="KoboldIcemancer_Gender">męski</string>
+    <string name="KoboldIcemancer_Name_Objective">koboldzi kriomanta</string>
+    <string name="KoboldIcemancer_Desc">Koboldzi kriomanci należeli do elity swojej społeczności. Na kastę kriomantów składali się wojownicy, magowie, a przede wszystkim - naukowcy. Starożytni kriomanci doprowadzili sztukę tkania lodu do perfekcji, tworząc skomplikowane, lodowe mechanizmy, które następnie wzmacniali za pomocą magii...</string>
+    <string name="KoboldIcemancer_Killed">1%s zabił ciebie lodowym kolcem...</string>
+
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">duch mrozu</string>
+    <string name="ColdSpirit_Gender">męski</string>
+    <string name="ColdSpirit_Name_Objective">duch mrozu</string>
+    <string name="ColdSpirit_Desc">Duchy mrozu są manifestacją zimna w jego najczystszej formie. Są zaledwie żywymi, bezmyślnymi, lodowymi skorupami, stworzonymi za pomocą magii, które za pomocą najprostszych instynktów i odruchów służą swoim twórcom.</string>
+
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">żywiołak lodu</string>
+    <string name="IceElemental_Gender">męski</string>
+    <string name="IceElemental_Name_Objective">żywiołak lodu</string>
+    <string name="IceElemental_Desc">Pośród wszystkich przywołańców, które istnieją w lochach, Żywiołaki Lodu być może nie są najwytrzymalszymi, ale należy je postrzegać jako jedne z najgroźniejszych. Ich ciała emanują chłodem, spowalniającym pobliskie ofiary.</string>
+
+    <!-- STRINGS OF IceGuardian CLASS -->
+    <string name="IceGuardian_Name">lodowy gwardzista</string>
+    <string name="IceGuardian_Gender">męski</string>
+    <string name="IceGuardian_Name_Objective">lodowy gwardzista</string>
+    <string name="IceGuardian_Desc">Lodowa Gwardia została stworzona przez starożytne koboldy w celu obrony i patrolowania jaskiń. Ich cała energia życiowa jest przechowywana w specjalnych rdzeniach, które pozwalają Lodowym Gwardzistom na odbudowanie swoich ciał po śmierci, o ile będą miały wystarczająco dużo mocy.</string>
+
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">uwięziony kobold</string>
+    <string name="CagedKobold_Gender">męski</string>
+    <string name="CagedKobold_Name_Objective">uwięziony kobold</string>
+    <string name="CagedKobold_Desc">Kobold zamknięty w klatce.</string>
+    <string name="CagedKobold_Intro">Hej... HEJ! Jesteś tym kolesiem od poszukiwania przygód? Pomóż mi koleżko, ci cholerni militaryści zamknęli mnie! Chcieli reaktywować starożytną broń, która pozwoliłaby im podbić ludzkich kolesi na powierzchni! Sprzeciwiłem się im, ponieważ było to zbyt niebezpieczne, a oni po prostu wyrzucili mnie z Rady prosto do tej klatki! Proszę, znajdź klucz do tego więzienia, a pomogę ci najlepiej jak tylko będę mógł.</string>
+    <string name="CagedKobold_Quest_End">Och dzięki, dzięki wielkie! Jak udało ci się znaleźć klucz? Ty... ty zniszczyłeś broń?! To niesamowite! Wiesz co, powiedziałem ci, że pomogę tobie i chyba wiem co będzie najlepszą przysługą. Pokręcę się za tobą przez chwile! * Uwięziony Kobold zamienił się w świecę</string>
+    <string name="CagedKobold_Message1">Proszę...</string>
+    <string name="CagedKobold_Message2">No dalej koleżko, musisz mi pomóc!</string>
+    <string name="CagedKobold_Message3">Nienawidzę absolutnie wszystkiego w tej klatce.</string>
+
+    <string name="Journal_Caged_Kobold">Uwięziony Kobold</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Ten gnoll został zamrożony żywcem. Prawdopodobnie tkwi tu tak już ładnych parę lat.</string>
+    <string name="IceCaves_TileHighGrass">Zamrożona wysoka trawa</string>
+    <string name="IceCaves_TileGrass">Zamrożona trawa</string>
+    <string name="IceCaves_TileDescHighGrass">Lodowe ostrza traw blokują widok.</string>
+    <string name="IceCaves_TileStatue">Zamrożony Gnoll</string>
+    <string name="IceCaves_TileDescStatue">Kolejny paskudny posąg... A nie, zaraz, to tylko zamrożony gnoll.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">świąteczny indyk</string>
+    <string name="ChristmasTurkey_Info">Najlepszym sposobem na obchodzenie Świąt Zlochowacenia, to solidny kęs pieczonego indyka. Możesz tym uhonorować pamięć o dniu, gdy potwory najechały powierzchnię, przyciągając poszukiwaczy przygód bohaterów z całego świata, napędzając przy tym turystykę i zyski z lokalnego handlu.</string>
+
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">lodowy klucz</string>
+    <string name="IceKey_Info">Klucz wykonany z lodu twardego niczym stal.</string>
+
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Kostur Lodowego Pocisku</string>
+    <string name="WandOfIcebolt_Info">Ten kostur wystrzeliwuje lodowy pocisk, który lekko rani cel. Może go spowolnić, lub nawet kompletnie zamrozić.</string>
+    <string name="WandOfIcebolt_Info1">Zabiłeś się swoim Kosturem Lodowego Pocisku...</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Pokonano lodowego gwardzistę</string>
+
+</resources>

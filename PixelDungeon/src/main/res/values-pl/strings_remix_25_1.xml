@@ -1,5 +1,78 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">Nie możesz odmienić swej ścieżki!</string>
+
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">Dawca Dusz</string>
+    <string name="BlackSkullOfMastery_Info">Ten starożytny artefakt został stworzony przez pierwszych nekromantów by zbierać dusze poległych. Po wyczuciu twoich nekromanckich talentów, przedmiot osłonił siebie potężnym zaklęciem. Jednakże czar pochodzi z zamierzchłych czasów, a jego prymitywna struktura może zostać z łatwością zniszczona.</string>
+    <string name="BlackSkullOfMastery_Title">Możesz przełamać zaklęcie. Albo możesz przekierować magiczną formułę w sposób, który umożliwi ci pochłonięcie mocy zarówno czaru, jak i artefaktu, zamieniając ciebie w Licza.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Stań się Liczem</string>
+    <string name="BlackSkullOfMastery_Necromancer">Przełam zaklęcie</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">_Licz_ to nekromanta, który osiągnął szczyt swoich możliwości. Balansując na granicy życia i śmierci, _Licz_ jest niezrównany w sztuce nekromancji, lecz jego zdolności bojowe są znacznie zredukowane.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Lub jeśli _przełamiesz zaklęcie_, będziesz mógł używać tego artefaktu w zwykły sposób.</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Czarny Czerep został przebudzony!</string>
+    <string name="BlackSkull_Ressurrect">Czarny Czerep ożywił martwe potwory, by ci służyły!</string>
+    <string name="BlackSkull_Deactivated">Moc Czarnego Czerepu zostaje ponownie uśpiona...</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Kościana Zbroja</string>
+    <string name="NecromancerArmor_Info">Ten pancerz umożliwi Nekromancie przyzwanie do 2-ch Trupiarzy, o koszcie 5 Dusz za każdego. Ci nieumarli słudzy będą podążać za swoim mistrzem i zaatakują jego wrogów. Trupiarze stają się silniejsi z każdym poziomem bohatera.</string>
     <string name="NecromancerArmor_NotNecromancer">Tylko nekromanci mogą używać tej zbroi!</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">Szata Nekromanty</string>
+    <string name="NecromancerRobe_Info">Ta szata umożliwi Nekromancie wezwanie Trupiarza kosztem 5-ciu Dusz. Trupiarze są nieumarłymi sługami, którzy rosną w siłę wraz ze swym mistrzem.</string>
+
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">Nekromanta</string>
+
+    <string name="HeroSubClass_NameLich">Licz</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Nekromanci zaczynają z 15 punktami życia.</item>
+        <item>Nekromanci używają specjalnego zasobu - Dusz, które używają do rzucania zaklęć. Każda śmierć istoty przyznaje 1 duszę.</item>
+        <item>Nekromanci zaczynają grę z unikalną Szatą Nekromanty.</item>
+        <item>Nekromanci zaczynają z Kościanym Kluczem poziomu 7-ego.</item>
+        <item>Mikstura Leczenia jest znana od początku.</item>
+    </string-array>
+
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">Trupiarz</string>
+    <string name="Deathling_Gender">męski</string>
+    <string name="Deathling_Name_Objective">Trupiarz</string>
+    <string name="Deathling_Desc">Trupiarz to umęczona dusza poległego bohatera, która miała pecha, że została przywołana przez nekromanckie moce innego awanturnika.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Nekromancja: osiągnięto limit przywołań (Obecne maksimum: 1%d)!</string>
+    <string name="Necromancy_NotEnoughSouls">Nie masz wystarczającej ilości Dusz by rzucić zaklęcie \"1%1$s\".</string>
+
+    <string name="Necromancy_SoulsCountLabel">Dusze</string>
+
+    <string name="Necromancer_ACSpecial">NEKROMANCJA</string>
+    <string name="Necromancy_ReincarnationName">Reinkarnacja</string>
+    <string name="Necromancy_ReincarnationTriggered">Twoja potęga opiera się śmierci! Ale utraciłeś wszelkie dusze i dobytek...</string>
+    <string name="Necromancy_SummonDeathlingName">Przyzwij Trupiarza</string>
+
+    <string name="Necromancy_BecameALich">Stajesz się Liczem! Twoja potęga rośnie, a ilość Dusz możliwych do złapania zostaje podwojona! Jednakże straciłeś 1 %1$d punktów Siły.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">By odblokować tę klasę postaci, zabij Licza dowolną klasą.</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Nekromancja</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">\"Ten duch wydaje się wierzgać w jego klątwie. Wygląda na to, że czegoś ode mnie chce. Jeśli użyję mojej nekromanckiej mocy, będę w stanie przekonać go, że wykonałem jego prośbę. Nie będę wtedy musiał marnować tutaj mojego czasu. Czy powinienem to uczynić?\"</string>
+    <string name="WndSadGhostNecro_Yes">Tak, podporządkuj sobie jego wolę.</string>
+    <string name="WndSadGhostNecro_No">Nie, pozwól jemu mówić.</string>
+    <string name="WndSadGhostNecro_Persuaded">Smutny Duch został zdominowany!</string>
 
     </resources>

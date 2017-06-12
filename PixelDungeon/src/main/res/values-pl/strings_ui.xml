@@ -7,7 +7,17 @@
   <string name="TitleScene_About">o Grze</string>
   <string name="TitleScene_InternalStorageLow">Masz za mało miejsca\n w Twojej pamięci\n Twoje postępy mogą zostać utracone!</string>
   <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon stworzony przez NYRDS, bazujący na kodzie źródłowym Pixel Dungeon, napisanym przez Watabou.</string>
+  <string name="AboutScene_Code">Kod:</string>
+  <string name="AboutScene_Graphics">Grafika:</string>
+  <string name="AboutScene_Music">Muzyka:</string>
+  <string name="AboutScene_Sound">Dźwięk:</string>
+  <string name="AboutScene_Thanks">Specjalne podziękowania:</string>
+  <string name="AboutScene_Email_Us">E-Mail:</string>
+  <string name="AboutScene_OurSite">Nasza strona internetowa:</string>
   <string name="AboutScene_Snd">Wyślij E-Mail</string>
+  <string name="AboutScene_Translation">Tłumaczenie wykonane przez:</string>
+  <string name="AboutScene_Translation_Names">(I honestly have no idea what this is)</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
   <string name="RankingsScene_Total">Do tej pory rozegrano gier:</string>
@@ -25,6 +35,11 @@
   <string name="StartScene_Unlock">By odblokować tę klasę postaci, pokonaj trzeciego bossa jakąkolwiek inną postacią</string>
   <string name="StartScene_UnlockElf">Żeby odblokować tę klasę postaci, zabij czwartego bossa jakąkolwiek inną postacią</string>
   <string name="StartScene_WinGame">Aby odblokować \"Wyzwania\", przejdź grę jakąkolwiek postacią.</string>
+  <string name="StartScene_DifficultySelect">Wybierz swe przeznaczenie</string>
+  <string name="StartScene_DifficultyEasy">Łatwy (z reklamami)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">Normalny z zapisem (i reklamami)</string>
+  <string name="StartScene_DifficultyNormal">Normalny</string>
+  <string name="StartScene_DifficultyExpert">Mistrzowski</string>
   <!--STRINGS OF InterLevelScene CLASS-->
   <string name="InterLevelScene_Descending">Zejście...</string>
   <string name="InterLevelScene_Ascending">Wejście...
@@ -55,5 +70,8 @@
   <string name="WndSettings_ExperementalFont">Nowa Czcionka</string>
   <string name="WndSettings_ClassicFont">Klasyczna Czcionka</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">Wybierz slot</string>
   <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">Wybierz tryb</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Gra przestała działać... \n Przepraszamy.\n Proszę, prześlij nam raport z błędu, dzięki czemu będziemy mogli go naprawić.</string>
 </resources>
