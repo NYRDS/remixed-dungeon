@@ -5,11 +5,11 @@ import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.AllowStatisticsCollectionScene;
 
-public class StaticsticsButton extends Button {
+public class StatisticsButton extends Button {
 
 	private Image image;
 
-	public StaticsticsButton() {
+	public StatisticsButton() {
 		super();
 		
 		width = image.width;
