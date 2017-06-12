@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            keyAlias 'testKey'
-            keyPassword '123456'
-            storeFile file('testKey/test.jks')
-            storePassword '123456'
+            keyAlias 'pixel dundeon playstore key'
+            keyPassword 'qwerty'
+            storeFile file('C:\\Users\\mike\\Desktop\\keys\\pixeldungeon')
+            storePassword 'qwerty666'
         }
     }
     compileSdkVersion 23
@@ -65,6 +65,7 @@ dependencies {
     compile 'com.android.support:support-v4'
     compile group: 'com.google.guava', name: 'guava', version: '20.0'
     compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+    compile group: 'org.luaj', name: 'luaj-jse', version: '3.0.1'
 
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
