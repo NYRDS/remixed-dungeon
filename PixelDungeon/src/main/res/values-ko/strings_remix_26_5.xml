@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">냉기 오라</string>
+
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenDagger CLASS -->
+    <string name="ElvenDagger_Name">엘프제 단검</string>
+    <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어져, 통상의 단검보다 훨씬 가볍다.</string>
+
+    </resources>
