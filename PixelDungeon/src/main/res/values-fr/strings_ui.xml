@@ -7,8 +7,16 @@
   <string name="TitleScene_About">A propos</string>
   <string name="TitleScene_InternalStorageLow">Pas assez de place\n dans l\'espace de stockage interne\n Votre progression peut être perdue !</string>
   <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon créé par NYRDS à partir de Pixel Dungeon Source de Watabou.</string>
+  <string name="AboutScene_Code">Code :</string>
+  <string name="AboutScene_Graphics">Graphismes : </string>
+  <string name="AboutScene_Music">Musique :</string>
+  <string name="AboutScene_Sound">Sons :</string>
+  <string name="AboutScene_Thanks">Remerciements spéciaux à : </string>
+  <string name="AboutScene_Email_Us">Contactez-nous :</string>
   <string name="AboutScene_OurSite">Notre site :</string>
   <string name="AboutScene_Snd">Envoyer un E-Mail</string>
+  <string name="AboutScene_Translation">Localisé par :</string>
   <string name="AboutScene_Translation_Names">Rémi Schneider &amp; Emmanuel Dempuré &amp; Bastien PIXEL&amp; Nikolay &amp; Clément Tetu</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Meilleures parties</string>
@@ -64,4 +72,5 @@
   <string name="WndSaveSlotSelect_SelectSlot">Choisissez un emplacement</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">Choisissez un mod</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Notre jeu s\'est planté... \n Désolé.\nVeuillez-nous envoyer un rapport de plantage pour nous aider à régler le problème.</string>
 </resources>

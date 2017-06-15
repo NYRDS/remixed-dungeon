@@ -1,14 +1,77 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">armure araignée</string>
+    <string name="SpiderArmor_Info">Cette armure est fabriquée avec d\'anciennes carcasses et un tissu étrange. Aussi surprenant soit-il, on dirait qu\'elle contient encore des filières fonctionnelles. En exerçant assez de pression sur une des plaques, celle-ci expulse une toile d\'araignée. Le dessous hérissé des bottes vous permet de marcher sur la toile librement.</string>
+    <string name="SpiderArmor_Gender">féminin</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">crâne noir</string>
+    <string name="BlackSkull_Info">Un petit crâne en obsidienne. C\'était une source de puissance nécropolienne, or après la défaite de la Liche, il semble qu\'il ait perdu ses pouvoirs. Mais en le tenant dans vos mains, une idée curieuse vous traverse l\'esprit : \"Il a faim\":</string>
+    <string name="BlackSkull_Gender">masculin</string>
+
+    <string name="BlackSkull_Name_Awakened">crâne noir réveillé</string>
+    <string name="BlackSkull_Info_Awakened">Le crâne vibre d\'une grande puissance que vous pouvez voir sortir de ses yeux creux. Alors que vous le tenez dans votre main, vous distinguez une voix terrifiante : \"La mort marche\".</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">éclat d\'âme</string>
+    <string name="SoulShard_Info">Il s\'agit d\'un éclat ramassé des restes de la Jarre des âmes. Il rayonne d\'une énergie mystique. Peut-être y a-t-il quelqu\'un qui serait intéressé par un tel objet.</string>
+    <string name="SoulShard_Gender">masculin</string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF DeathKnight CLASS -->
     <string name="DeathKnight_Name">Chevalier mort</string>
+    <string name="DeathKnight_Gender">masculine</string>
+    <string name="DeathKnight_Name_Objective">chevalier mort</string>
+    <string name="DeathKnight_Desc">Au premier abord, c\'est un guerrier puissant dans une grosse armure, mais son rictus squelettique le trahit : un Chevalier mort est la manifestation de l\'esprit d\'un chevalier ayant échoué à accomplir son serment. Et maudit, il devra éternellement arpenter les terres et chercher à laver son nom dans des batailles, massacrant les innocents, incapable de se souvenir qu\'il avait juré de les protéger.</string>
+
     <!-- STRINGS OF DreadKnight CLASS -->
     <string name="DreadKnight_Name">Chevalier Maudit</string>
+    <string name="DreadKnight_Gender">masculin</string>
+    <string name="DreadKnight_Name_Objective">cheval maudit</string>
+    <string name="DreadKnight_Desc">Un chevalier maudit est un ancien guerrier qui n\'a jamais été bon ou vertueux de toute son existence. Pour ses péchés, il a été condamné à errer éternellement dans un corps de mort-vivant disloqué. Et à chaque instant de cette vie de damné, il sera tourmenté par la douleur et la souffrance qu\'il a infligées à ses victimes.</string>
+
     <!-- STRINGS OF EnslavedSoul CLASS -->
     <string name="EnslavedSoul_Name">âme enchaînée</string>
+    <string name="EnslavedSoul_Gender">féminin</string>
+    <string name="EnslavedSoul_Name_Objective">âme enchaînée</string>
+    <string name="EnslavedSoul_Desc">Vous pouvez quasiment voir à travers cette apparition fantomatique. Bien que cela ressemble à un crâne, parfois, pendant une fraction de seconde, un visage apparaît à la place : un visage tourmenté rempli de souffrance.</string>
+
     <!-- STRINGS OF ExplodingSkull CLASS -->
     <string name="ExplodingSkull_Name">crâne explosif</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Name_Objective">crâne explosif</string>
+    <string name="ExplodingSkull_Desc">Ce crâne flottant et brûlant a l\'air extrêmement fragile. On dirait qu\'il est prêt à exploser à n\'importe quel moment. </string>
+
     <!-- STRINGS OF JarOfSouls CLASS -->
-    <string name="JarOfSouls_Name">vase des âmes</string>
-    </resources>
+    <string name="JarOfSouls_Name">jarre des âmes</string>
+    <string name="JarOfSouls_Gender">masculin</string>
+    <string name="JarOfSouls_Name_Objective">jarre des âmes</string>
+    <string name="JarOfSouls_Desc">Les yeux luisant du crâne peint sur cette vieille jarre, de même que l\'étrange énergie qui en émane, ne vous mettent pas à l\'aise. </string>
+
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">liche</string>
+    <string name="Lich_Gender">in</string>
+    <string name="Lich_Name_Objective">liche</string>
+    <string name="Lich_Desc">Le nécromancier a connu le trépas dans les tréfonds de la Nécropole, et alors que l\'énergie maléfique de cet endroit emplissait son corps, il a finit par se transformer en une Liche. Ce sorcier mort-vivant, marionnette sans volonté, est contrôlé par des forces malveillantes.</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">crâne runique</string>
+    <string name="RunicSkull_Gender">masculin</string>
+    <string name="RunicSkull_Name_Objective">crâne runique</string>
+    <string name="RunicSkull_Desc">En tant qu\'artefact, ce crâne ressemble un peu trop à un véritable crâne. Vous pouvez voir une lueur pâle l\'entourer. </string>
+
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">zombie</string>
+    <string name="Zombie_Gender">masculin</string>
+    <string name="Zombie_Name_Objective">zombie</string>
+    <string name="Zombie_Desc">Le donjon est un endroit dangereux dans lequel bien des aventuriers ont trépassé. Mais les plus infortunés d\'entre eux sont ceux qui sont morts dans la Nécropole. Ils sont désormais condamnés à errer dans ces couloirs sous la forme de corps pourrisants.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Intro2">Ah ! Un aventurier encore vivant. Incroyable ! Oh... Je vous prie de m\'excuser. Vous voyez, je suis moi-même nécromancier de métier. Et même si étudier les morts et la mort elle-même est mon gagne-pain, voir et revoir les mêmes choses finit par être lassant. De l\'autre côté, c\'est précisément pourquoi je suis ici. Les porte d\'une_Nécropole_, d\'une ancienne ville des morts, sont finalement apparues ici. En fait, nous nous tenons juste à l\'entrée. Et... vous savez quoi, prenez cette clé et entrez en premier. C\'est que vous aimez les aventures et ces trucs, non ? Je vous suis dans quelques instants, le temps que je me prépare.  </string>
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Liche tuée</string>
+
+</resources>

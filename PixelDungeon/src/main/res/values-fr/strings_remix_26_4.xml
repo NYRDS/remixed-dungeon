@@ -4,6 +4,22 @@
     <!-- STRINGS OF Artifact CLASS -->
     <string name="Artifact_Limit">Vous ne pouvez équiper que 2 artefacts en même temps</string>
 
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">diseuse de bonne aventure</string>
+    <string name="FortuneTellerNPC_Gender">féminin</string>
+    <string name="FortuneTellerNPC_Name_Objective">diseuse de bonne aventure</string>
+    <string name="FortuneTellerNPC_Desc">Cette femme porte une longue et brillante robe colorée. Elle a l\'air curieusement jeune pour quelqu\'un qui maîtrise la science arcanique des voyants. En vous rapprochant, vous pouvez l\'entendre marmonner pendant qu\'elle fixe sa boule de crystal. </string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Limit_Reached">Veuillez me pardonner, mais vous avez atteint votre limite actuelle. Mais vous pourrez de nouveau utiliser notre service à chaque fois que vous atteindrez un nouveau niveau de héros. </string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">Je peux révéler les secrets derrière vos possessions.\n Une identification vous coûtera %dpièces.</string>
+    <string name="WndFortuneTeller_No_Item">Faites attention, vous ne voulez quand même pas dépenser votre avoir pour rien ? Il n\'y a rien à identifier dans votre inventaire.</string>
+    <string name="WndFortuneTeller_Title">Diseuse de bonne aventure.</string>
+
     <!-- STRINGS OF Generic Button labels -->
     <string name="Wnd_Button_Yes">Oui</string>
     <string name="Wnd_Button_No">Non</string>
@@ -13,10 +29,14 @@
 
     <!-- STRINGS OF WndLibrary CLASS -->
     <string name="WndLibrary_Catalogue_Title">Bibliothèque</string>
+    <string name="WndLibrary_Catalogue_Instruction">Veuillez choisir une des catégories ci-dessous.</string>
     <string name="WndLibrary_Mobs_Btn">Monstres</string>
     <string name="WndLibrary_Items_Btn">Objets</string>
     <string name="WndLibrary_Codex_Btn">Histoires</string>
     <string name="WndLibrary_Levels_Btn">Donjon</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">Vous avez regardé %1$d parmi les %2$ddisponibles. Vous pourrez voir un film de plus à chaque nouveau niveau de héros que vous atteindrez. </string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
@@ -26,4 +46,8 @@
     <string name="town_table_fortune_name">Table</string>
     <string name="town_table_fortune_desc">Cette table est couverte avec de la soie blanche. Vous pouvez voir de nombreuses cartes de tarot posées dans un ordre particulier.</string>
 
-    </resources>
+    <string name="ConcreteBlock_Name">Lourd bloc de béton.</string>
+    <string name="ConcreteBlock_Description">Il semblerait que ce bloc exige %d points de force pour être poussé.</string>
+    <string name="Hero_AnotherTry">Vous êtes mort.\n Voulez-vous encore essayer une fois ?</string>
+
+</resources>

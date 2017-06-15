@@ -16,7 +16,7 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Le Crâne Noir est éveillé !</string>
-    <string name="BlackSkull_Ressurrect">Le Crâne Noir à crée ce monstre pour vous servir !</string>
+    <string name="BlackSkull_Ressurrect">Le Crâne Noir a crée ce monstre pour vous servir !</string>
     <string name="BlackSkull_Deactivated">Le Crâne Noir est inactif, encore une fois</string>
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
@@ -26,7 +26,7 @@
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">Robe du Nécromancien</string>
-    <string name="NecromancerRobe_Info">Cette Robe permet au Nécromancien d\'invoquer un Serviteur des Morts au prix de 5 âmes. Les Serviteurs des morts sont des esclaves morts-vivants dont les pouvoirs grandissent avec leur maître</string>
+    <string name="NecromancerRobe_Info">Cette Robe permet au Nécromancien d\'invoquer un Serviteur des Morts au prix de 5 âmes. Les Serviteurs des morts sont des esclaves morts-vivants dont les pouvoirs grandissent avec leur maître,</string>
 
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
@@ -37,12 +37,45 @@
     <string-array name="HeroClass_NecromancerPerks">
         <item>Les Nécromanciens commencent avec 15 points de vie.</item>
         <item>Les nécromanciens ont une ressource unique, les âmes, pour invoquer des sorts. Chaque créature tuée fait gagner 1 âme.</item>
-        <item>Les Nécromanciens commencent avec une Robe du Nécromancien</item>
-        <item>Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7</item>
+        <item>Les Nécromanciens commencent avec une Robe du Nécromancien.</item>
+        <item>Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7.</item>
         <item>Les Potions de soins sont identifiées dès le début.</item>
     </string-array>
 
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">Serviteur des Morts</string>
+    <string name="Deathling_Gender">masculin </string>
+    <string name="Deathling_Name_Objective">Serviteur des Morts</string>
+    <string name="Deathling_Desc">Un Serviteur des Morts est l\'âme d\'un héros trépassé, et suffisament malchanceuse pour être invoquée par les pouvoirs de nécromancien d\'un autre aventurier. </string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Nécromancie : limite d\'invocation atteinte (Max actuel: %d)! </string>
+    <string name="Necromancy_NotEnoughSouls">Vous n\'avez pas assez d\'âmes pour jeter un sort \"%1$s\".</string>
+
     <string name="Necromancy_SoulsCountLabel">Âmes</string>
 
-    <string name="WndSadGhostNecro_No">Non, laisse le s\'expliquer</string>
-    </resources>
+    <string name="Necromancer_ACSpecial">NECROMANCIE</string>
+    <string name="Necromancy_ReincarnationName">Réincarnation</string>
+    <string name="Necromancy_ReincarnationTriggered">Vos pouvoirs défient la mort ! Mais vous avez perdu toutes les âmes collectées et vos possessions. </string>
+    <string name="Necromancy_SummonDeathlingName">Invoquer un Serviteur des Morts </string>
+
+    <string name="Necromancy_BecameALich">You êtes désormais une Liche ! Vos pouvoirs grandissent et vous pouvez récolter deux fois plus d\'âmes ! Mais vous avez perdu %1$dpoints de force.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">Pour débloquer cette classe, tuez la Liche avec une autre.</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Nécromancie</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">Cet esprit à l\'air se débattre dans le sort qui le hante. Il semble vouloir quelque de vous. \"Si j\'utilise mes pouvoirs de nécromancier, je pourrai le persuader que j\'ai déjà fait ce qu\'il demande. Comme ça, je ne perdrai pas mon temps ici. Est-ce la chose à faire ?\"</string>
+    <string name="WndSadGhostNecro_Yes">Oui, soumettez-le à votre volonté.</string>
+    <string name="WndSadGhostNecro_No">Non, laissez-le s\'expliquer</string>
+    <string name="WndSadGhostNecro_Persuaded">Le fantôme triste a été asservi.</string>
+
+    <!-- Badges -->
+
+    <string name="WndSettings_UiScale">Taille de l\'UI</string>
+</resources>

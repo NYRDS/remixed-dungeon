@@ -1,3 +1,80 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">elficki łuk</string>
+    <string name="ElvenBow_Info">Wyjątkowy przykład elfickiego rzemiosła. Jest zdecydowanie efektywniejszy i celniejszy od zwykłego łuku drewnianego.</string>
+
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">szczurza skóra</string>
+    <string name="RatHide_Info">Mały, brudny kawałek mięsa i futra. Czy to w ogóle komuś może się przydać?</string>
+
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">szczurza zbroja</string>
+    <string name="RatArmor_Info">Skórzana zbroja wykonana ze szczurzej skóry. Nie ma na niej zarazków... Chyba.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">Lekarz Plagi</string>
+    <string name="PlagueDoctorNPC_Gender">męski</string>
+    <string name="PlagueDoctorNPC_Name_Objective">Lekarz Plagi</string>
+    <string name="PlagueDoctorNPC_Desc">Ten garbaty mężczyzna jest całkowicie pokryty skórą. Czuć od niego silną woń medykamentów... i czosnku?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Dasz wiarę?! Ci durnie wciąż nie zrozumieli jak niebezpiecznym miejscem są kanały! Zupełnie jakby straż i poszukiwacze przygód mieliby ochronić Miasto przed czymkolwiek. Ha! Żadna broń nie powstrzyma choroby przed rozprzestrzenieniem się. Ale muszę mieć dowód, pomożesz mi? Przynieś mi %d szczurzych skór, dzięki czemu będę mógł przeprowadzić dodatkowe testy.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Dasz wiarę?! Ci durnie wciąż nie zrozumieli jak niebezpiecznym miejscem są kanały! Zupełnie jakby straż i poszukiwacze przygód mieliby ochronić Miasto przed czymkolwiek. Ha! Żadna broń nie powstrzyma choroby przed rozprzestrzenieniem się. Ale muszę mieć dowód, pomożesz mi? Przynieś mi %d szczurzych skór, dzięki czemu będę mógł przeprowadzić dodatkowe testy.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Przynieś mi %d szczurzych skór.</string>
+    <string name="PlagueDoctorNPC_Quest_End">Ach, dzięki ci, mam nadzieję, że będą miały na sobie oznaki zarazy. Poprzednie okazy były absolutnie nieszkodliwe. Wykonałem to dla ciebie, kiedy czekałem na nowe próbki. Bywaj zdrów! W tym miejscu przyda ci się.</string>
+    <string name="PlagueDoctorNPC_After_Quest">Pokażę im, pokażę im wszystkim!</string>
+    <string name="Journal_PlagueDoctorNPC">Lekarz Plagi</string>
+
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">Mieszczanin</string>
+    <string name="TownsfolkMovieNPC_Gender">męski</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">Mieszczanin</string>
+    <string name="TownsfolkMovieNPC_Desc">Jeden z miejscowych. Mimo, że jest typowym mieszkańcem Miasta, jego ubiór wygląda na dosyć drogi.</string>
+    <string name="TownsfolkMovieNPC_Message">Czy słyszałeś o tej specjalnej usłudze, którą zapewnia \"Kino\"? Szkoda tylko, że proszą o jakiś egzotyk o nazwie \"Internet\", o którym nigdy nie słyszałem.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Name">Bibliotekarz</string>
+    <string name="LibrarianNPC_Gender">męski</string>
+    <string name="LibrarianNPC_Name_Objective">Bibliotekarz</string>
+    <string name="LibrarianNPC_Desc">Bardzo nieśmiała osoba, nosząca dziwaczny sweter i bardzo duże okulary.</string>
+    <string name="LibrarianNPC_Message_Not_Ready">Prze... przepraszam, bi-biblioteka nie jest otwarta... jeszcze.</string>
+
+
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">Mieszczanin</string>
+    <string name="TownsfolkSilentNPC_Gender">męski</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">Mieszczanin</string>
+    <string name="TownsfolkSilentNPC_Desc">Jeden z miejscowych. Mimo, że zdecydowanie wygląda jak mieszkaniec Miasta, jego ubiór wygląda drogo.</string>
+    <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>
+
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">Przepraszam bardzo, ale ten budynek jeszcze nie jest skończony!</string>
+
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">Bella</string>
+    <string name="BellaNPC_Gender">damski</string>
+    <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_Desc">Dziewczyna, która wygląda na dość dystyngowaną. Jej cały obraz mówi: \"Jestem dobra dla wszystkich\".</string>
+    <string name="BellaNPC_Message">Nie zajmuję się plebsem takim jak ty!</string>
+    <string name="BellaNPC_Amulet_M">Witaj przystojniaku. Co ty tutaj masz... ach, cóż za niesamowity amulet! A ty... ty jesteś ponad tym plebsem. Może przejdziemy się i omówimy naszą wspólną przyszłosć?</string>
+    <string name="BellaNPC_Amulet_F">Witaj kochana. Co ty tutaj masz... ach, cóż za niesamowity amulet! A ty... ty lśnisz znacznie jaśniej w porównaniu do reszty. Co powiesz na spacer i omówienie naszej wspólnej przyszłości?</string>
+    <string name="BellaNPC_Angry">Jak śmiesz... ty plebsie!</string>
+    <string name="BellaNPC_Yes_End_Game">Oczywiście (Zakończ grę)</string>
+    <string name="BellaNPC_No">Nie, nie z tobą.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">Przykro mi, nie możesz skorzystać z naszych usług. (Wymagane połączenie z Internetem)</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">Drzwi</string>
+    <string name="town_deco_common_door_desc">Dobrze wychowany poszukiwacz przygód nie nachodziłby nieznajomego bez zaproszenia.</string>
+
+    <string name="town_deco_dungeon_door_name">Wejście</string>
+    <string name="town_deco_dungeon_door_desc">Wejście do Lochu.</string>
+
+</resources>

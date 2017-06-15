@@ -128,6 +128,8 @@
   <string name="WndGame_menu">Menu Główne</string>
   <string name="WndGame_Exit">Wyjdź z Pixel Dungeon</string>
   <string name="WndGame_Return">Wróc do Gry</string>
+  <string name="WndGame_Save">Zapisz</string>
+  <string name="WndGame_Load">Wczytaj</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">Statystyki</string>
   <string name="WndHero_Buffs">Efekty</string>
@@ -178,7 +180,7 @@
   <string name="WndResurrect_Yes">Tak, będę walczyć!</string>
   <string name="WndResurrect_No">Nie, poddaję się</string>
   <!--STRINGS OF WndSadGhost CLASS-->
-  <string name="WndSadGhost_Rose">Tak ! Tak !!! To jest to! Proszę daj mi to! Możesz w nagrodę wziąć jeden z tych przedmiotów, może pomogą ci w podróży...</string>
+  <string name="WndSadGhost_Rose">Tak! Tak!!! To jest to! Proszę daj mi to! Możesz w nagrodę wziąć jeden z tych przedmiotów, może pomogą ci w podróży...</string>
   <string name="WndSadGhost_Rat">Tak! Paskudna kreatura jest zabita i mogę w końcu odpocząć... Proszę, weź jeden z tych przedmiotów, może przydadzą ci się w podróży...</string>
   <string name="WndSadGhost_Wepon">Broń ducha</string>
   <string name="WndSadGhost_Armor">Zbroja Ducha</string>
@@ -189,6 +191,7 @@
   <string name="WndStory_Caves">Jaskinie, które rozciągają się pod opuszczonym więzieniem są słabo zaludnione. Znajdują się za głęboko by być eksploatowanymi przez Miasto i są obfite w minerały zbyt małej wartości by zainteresować ich wydobyciem Krasnoludy. W przeszłości znajdował się tutaj punkt handlowy na drodze pomiędzy tymi dwiema nacjami, ale zniknął od izolacji Metropolii Krasnoludów. Teraz tylko wszędobylskie gnolle i podziemne zwierzęta kryją się tutaj.</string>
   <string name="WndStory_Metropolis">Metropolia Krasnoludów była kiedyś największym z krasnoludzkich państw-miast. W latach świetności, zmechanizowana armia krasnoludów skutecznie powstrzymała inwazję Prastarego Boga i jego armii demonów. Ale według legend, powracający wojownicy przywiedli ze sobą nasiona spaczenia, a ich zwycięstwo było początkiem końca podziemnego królestwa.</string>
   <string name="WndStory_Halls">W przeszłości te poziomy były przedmieściami Metropolii. Po kosztownym zwycięstwie w wojnie przeciwko Prastaremu Bogowi, krasnoludy były zbyt słabe by oczyścić je z demonicznego plugastwa. Ostatecznie demony zacisnęły swe szpony na tym miejscu i teraz nazywa się ono Demonicznymi Korytarzami. \n\nBardzo niewielu poszukiwaczy przygód dotarło aż tak daleko...</string>
+  <string name="WndStory_Spiders">Wiele, wiele lat temu znajdowała się tutaj bogata kopalnia, pełna magicznego kruszcu. Ale swego czasu żyły surowca wyczerpały się, a górnicy opuścili ogromną sieć podziemnych szybów i tuneli. Ostatecznie, miejsce to zostało zasiedlone przez pająki. Ale nawet te czyhające w mroku, niebezpieczne stworzenia nie mogły odstraszyć odważnych i szalonych, poszukujących skarbów starej kopalni, a wszystko przez fakt, że wartość zagrożenia maleje odwrotnie proporcjonalnie do intensywności plotek o magicznych artefaktach. Dawno temu zła wiedźma udała się do tuneli, uciekając przed sędziami. Ale przesądny lud nie odważył się wejść w mrok, więc zdecydowali się zaczekać. Ale o wiedźmie wszelki słuch zaginął. Może znalazła inną drogę wyjścia, prześlizgnęła się między strażnikami... albo została pogrzebana pod rojem stworów ciemności.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">WYPRZEDAŻ: %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">Kup za %dg</string>
@@ -319,12 +322,14 @@
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">pył trupa</string>
   <string name="CorpseDust_Info">Ta kulka trupiego pyłu nie różni się nadzwyczajnie od zwykłej kuli pyłu. W każdym razie, wiesz, że najlepiej pozbyć się tego najszybciej jak to tylko możliwe.</string>
+  <string name="CorpseDust_Info2">Prawdopodobnie ponieważ samo trzymanie sprawia, że jesteś trwożny i zezłoszczony.</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">ruda mrocznego złota</string>
   <string name="DarkGold_Info">Metal ten jest nazywany mrocznym nie ze względu na kolor (nie różni się od zwykłego złota), ale dlatego, że ulega stopieniu w świetle dnia, czyniąc go bezużytecznym na Powierzchni.</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">wysuszona róża</string>
   <string name="DriedRose_Info">Ta róża wyschła dawno temu, ale jakoś zachowała wszystkie płatki.</string>
+  <string name="DriedRose_Info2">I nie straciła swojego uroku. Jest tak śliczna, że pragniesz zatrzymać ją na zawsze.</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">żeton krasnoludów</string>
   <string name="DwarfToken_Info">Wiele krasnoludów i ich większe twory noszą te małe kawałki metalu z nieznanych przyczyn. Może to biżuteria, albo jakiś rodzaj identyfikatorów. Krasnoludy to dziwny lud.</string>
@@ -332,10 +337,12 @@
   <string name="Pickaxe_Name">Kilof</string>
   <string name="Pickaxe_Info">Jest to duże i wytrzymałe narzędzie do rozbijania skał. Może można tego używać jako broń.</string>
   <string name="Pickaxe_ACMine">WYDOBĄDŹ</string>
+  <string name="Pickaxe_Gender">damski</string>
   <string name="Pickaxe_NoVein">Nie ma w pobliżu żyły mrocznego złota do wydobycia</string>
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">Ogromna czaszka szczura</string>
   <string name="RatSkull_Info">Ta czaszka mogłaby być niezłym trofeum, ale zbyt mocno śmierdzi by powiesić ją na ścianie.</string>
+  <string name="RatSkull_Info2">Z drugiej strony, pokazuje, że właściciel jest w stanie zabijać szczury, nawet te największe i najsmrodliwsze.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <string name="ConfusionGas_Info">Chmura narkotycznego gazu tutaj się unosi.</string>

@@ -27,15 +27,23 @@
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Dynia</string>
-    <!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Pumpkin_Info">W czasach swojej świetności, Lud Dyni był dumnym i prosperującym narodem. Lecz gdy nadeszli ludzie, wszytko obróciło się w perzynę. Zdekapitowane, wydrążone głowy poległych dawno temu tubylców z plemień Dyń, po dziś dzień służą jako przypomnienie tych strasznych wydarzeń.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">Czapka śpiocha</string>
-    <!-- STRINGS OF WizardHat CLASS -->
+    <string name="Nightcap_Info">Podbój lochów w nocy musi być bardzo wyczerpującym zajęciem. Może przywdziejesz tę ciepłą i wygodną czapkę i zrelaksujesz się, a twe troski znikną!</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
     <string name="WizardHat_Name">Czapka czarodzieja</string>
+    <string name="WizardHat_Info">Przepiękny, jedwabny kapelusz, przyozdobiony gwiezdnymi ornamentami. W dawnych czasach, niektórzy wierzyli, że najwięksi czarodzieje przywdziewali specjalnie wykonane ubrania, które wzmacniały ich potęgę. To nakrycie głowy nie wzmacnia ciebie w żaden sposób, ale czujesz, że tak jest.</string>
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndHats_ListTitle">Lista akcesoriów</string>
     <string name="WndHats_SlotTitle">Założone</string>
     <string name="WndHats_NoConnectionMsg">Nie można się połączyć do Sklepu Play.</string>
+    <string name="WndHats_Purchased">Jasne!</string>
+
     <string name="WndHats_BackButton">Wróć</string>
     <string name="WndHats_BuyButton">Kup</string>
     <string name="WndHats_EquipButton">Załóż</string>

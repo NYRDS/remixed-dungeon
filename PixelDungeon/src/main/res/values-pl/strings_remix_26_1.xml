@@ -1,3 +1,126 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">Strażnik Miejski</string>
+    <string name="TownGuardNPC_Gender">męski</string>
+    <string name="TownGuardNPC_Name_Objective">Strażnik Miejski</string>
+    <string name="TownGuardNPC_Desc">Zwyczajny strażnik miejski.</string>
+    <string name="TownGuardNPC_Message1">Nie zatrzymuj się.</string>
+    <string name="TownGuardNPC_Message2">Dzięki takim poszukiwaczom przygód jak ty, tu na górze jest naprawdę spokojnie.</string>
+    <string name="TownGuardNPC_Message3">Myślisz, że mamy za dużo strażników w tym mieście? Cóż, to jedyna mieścina z ogromnym lochem, przejętym przez potwory, czyż nie?</string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">Mieszczanin</string>
+    <string name="TownsfolkNPC_Gender">męski</string>
+    <string name="TownsfolkNPC_Name_Objective">Mieszczanin</string>
+    <string name="TownsfolkNPC_Desc">Jeden z miejscowych. Pomimo, iż zdecydowanie wygląda na typowego mieszkańca Miasta, jego ubiór wygląda na drogi.</string>
+    <string name="TownsfolkNPC_Message1">Ah! Kolejny awanturnik, wybornie! Upewnij się, że przyniesiesz nam tyle kosztowności ile tylko zdołasz!</string>
+    <string name="TownsfolkNPC_Message2">Miasto stało się bogate dzięki temu lochowi, dzięki czemu wszyscy mieszkańcy mogą sobie pozwolić na wakacje gdziekolwiek sobie zażyczymy! Po fakcie jest to powód, dlaczego jest tutaj tak mało ludzi.</string>
+    <string name="TownsfolkNPC_Message3">Cóż za uroczy dzień.</string>
+    <string name="TownsfolkNPC_Message4">Mam nadzieję, że kanały nie zostaną zalane gdy nadejdzie wiosna. Nie potrzebujemy kolejnej plagi szczurów.</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">Kapłan</string>
+    <string name="HealerNPC_Gender">męski</string>
+    <string name="HealerNPC_Name_Objective">Kapłan</string>
+    <string name="HealerNPC_Desc">Starzec, który jakkolwiek wygląda na kogoś, kto mógłby wytwarzać kostury.</string>
+    <string name="HealerNPC_Message1">Darmowy opierunek dla każdego poszukiwacza przygód!</string>
+    <string name="HealerNPC_Message2">Wróć kiedy tylko będziesz głodny bądź schorowany!</string>
+    <string name="HealerNPC_Message3">Ciekawe czemu kościół nie pozwala nam nosić czapek... Jest tutaj naprawdę zimno.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">Pracownik</string>
+    <string name="ServiceManNPC_Gender">męski</string>
+    <string name="ServiceManNPC_Name_Objective">Pracownik</string>
+    <string name="ServiceManNPC_Desc">Zwykły pracownik jednego z miejscowych przybytków.</string>
+
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">Kupiec</string>
+    <string name="TownShopkeeper_Desc">Ta osoba jest typowym handlarzem. Możesz śmiało powiedzieć, że już zdołał ciebie wycenić.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">obejrzyj film</string>
+    <string name="WndMovieTheatre_No">wyjdź</string>
+    <string name="WndMovieTheatre_Bye">Wróć kiedy zechcesz, jesteś zawsze mile widziany!</string>
+    <string name="WndMovieTheatre_Instruction">Witamy w naszym kinie! Zapewniamy specjalne usługi, możesz obejrzeć film za darmo, a jeśli obejrzysz go do końca, otrzymasz %d złotych monet!</string>
+    <string name="WndMovieTheatre_Title">Kino</string>
+    <string name="WndMovieTheatre_Thank_You">Dziękujemy za udział!</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">Ulecz się - %d sztuk złota</string>
+    <string name="WndPriest_Instruction_m">Witaj synu, witaj w świętym kościele wielkiego Mikołaja, Władcy Podziemi! Niestety nie mogę ciebie wpuścić, gdyż budynek jest obecnie poddawany konserwacji, lecz jeśli szukasz pomocy, mogę ci zapewnić leczenie i pożywienie za %d złotych monet!</string>
+    <string name="WndPriest_Instruction_f">Witaj córo, witaj w świętym kościele wielkiego Mikołaja, Władcy Podziemi! Niestety nie mogę ciebie wpuścić, gdyż budynek jest obecnie poddawany konserwacji, lecz jeśli szukasz pomocy, mogę ci zapewnić leczenie i pożywienie za %d złotych monet!</string>
+    <string name="WndPriest_Title">Kapłan miejski</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">Dach</string>
+    <string name="town_deco_roof_desc">Zwykły dach wyłożony dachówką.</string>
+
+    <string name="town_deco_wall_name">Ściana</string>
+    <string name="town_deco_wall_desc">Zwykła ściana, zrobiona z drewnianych bali.</string>
+
+    <string name="town_deco_snow_name">Śnieg</string>
+    <string name="town_deco_snow_desc">Pomimo plotek o rzekomej popularności tego miejsca dla poszukiwaczy przygód, jest tutaj całkiem dużo śniegu, jak gdyby nikt nie postawił tutaj stopy.</string>
+
+    <string name="town_deco_cross_name">Krzyż</string>
+    <string name="town_deco_cross_desc">Solidny, srebrny krzyż, symbol miejscowego wyznania - \"Świadków Mikołaja, Władcy Podziemi\"</string>
+
+    <string name="town_deco_bell_name">Dzwon</string>
+    <string name="town_deco_bell_desc">Typowy dzwon kościelny. Wygląda na to, że nikt od dawna w niego nie bił i nigdzie nie widać jego liny.</string>
+
+    <string name="town_deco_bell_tower_name">Dzwonnica</string>
+    <string name="town_deco_bell_tower_desc">Zgodnie z tradycją dzwony kościelne są montowane w wysokich wieżach, dzięki czemu mogą zostać usłyszane z dalekich miejsc.</string>
+
+    <string name="town_deco_chimney_name">Komin</string>
+    <string name="town_deco_chimney_desc">Kamienny komin jest standardowym elementem wyposażenia domów, zbudowanych w zimnych rejonach.</string>
+
+    <string name="town_deco_window_name">Okno</string>
+    <string name="town_deco_window_desc">Zwyczajne, szklane okno, nic nadzwyczajnego.</string>
+
+    <string name="town_deco_door_name">Drzwi</string>
+    <string name="town_deco_door_desc">Proste, drewniane drzwi.</string>
+
+    <string name="town_deco_locked_door_name">Zamknięte drzwi</string>
+    <string name="town_deco_locked_door_desc">Cóż może kryć się za tymi drzwiami?</string>
+
+    <string name="town_deco_snowman_name">Bałwan</string>
+    <string name="town_deco_snowman_desc">Bałwan jest tradycyjną, miejską ozdobą na czas świąt, gdy miejscowi obchodzą \"Święto Zlochowacenia\", rocznicę dnia, gdy potwory najechały miasto.</string>
+
+    <string name="town_deco_tree_name">Drzewo</string>
+    <string name="town_deco_tree_desc">Dziwnie jest dostrzec żywe drzewo, tuż obok wejścia do lochu, wypełnionego śmiercią i potwornościami.</string>
+
+    <string name="town_deco_pathway_name">Ścieżka</string>
+    <string name="town_deco_pathway_desc">Ścieżka wydeptana w śniegu.</string>
+
+    <string name="town_deco_stone_wall_name">Kamienna ściana</string>
+    <string name="town_deco_stone_wall_desc">Jakkolwiek ta ściana zdaje się wydzielać ciepło i jest mokra w dotyku.</string>
+
+    <string name="town_deco_shop_sign_name">Szyld sklepu</string>
+    <string name="town_deco_shop_sign_desc">Wygląda na to, że w tym budynku mieści się sklep.</string>
+
+    <string name="town_deco_floor_name">Podłoga</string>
+    <string name="town_deco_floor_desc">Podłoga, wykonana z prostych, drewnianych desek. Czego dokładnie tu szukasz?</string>
+
+    <string name="town_deco_carpet_name">Dywan</string>
+    <string name="town_deco_carpet_desc">Luksusowy, czerwony dywan, zarezerwowany dla specjalnych gości.</string>
+
+    <string name="town_deco_movies_door_name">Drzwi</string>
+    <string name="town_deco_movies_door_desc">Te drzwi wyglądają na szczególnie porządnie wykonane. Prawdopodobnie prowadzą do niezwykłego miejsca.</string>
+
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">królewski</string>
+
+    <string name="WndDonate_royalDonate">królewska donacja</string>
+
+    <string name="WndDonate_royalDonateText">Nie chcę zabrzmieć dziwnie, ale gdy to robisz to dosłownie dajesz jedzenie deweloperom.</string>
+
+    <string name="WndDonate_royalDonateText2">Dodatkowo otrzymasz każdą z czapek ze sklepu premium, oraz każdą, która kiedykolwiek zostanie wydana!</string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">królewski</string>
+
+</resources>
