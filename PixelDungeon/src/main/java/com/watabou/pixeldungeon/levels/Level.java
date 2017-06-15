@@ -392,6 +392,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			viewDistance = DungeonGenerator.getLevelProperty(levelId,"viewDistance",viewDistance);
+			viewDistance = Math.min(viewDistance,ShadowCaster.MAX_DISTANCE);
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);
 			if (feeling == Feeling.UNDEFINED) {

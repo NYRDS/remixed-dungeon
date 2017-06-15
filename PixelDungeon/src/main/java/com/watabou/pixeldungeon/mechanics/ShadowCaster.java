@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 public final class ShadowCaster {
 
-	private static final int MAX_DISTANCE = 8;
+	public static final int MAX_DISTANCE = 8;
 	
 	private static int distance;
 	private static int limits[];
