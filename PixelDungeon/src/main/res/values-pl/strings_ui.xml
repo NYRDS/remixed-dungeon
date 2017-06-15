@@ -17,7 +17,7 @@
   <string name="AboutScene_OurSite">Nasza strona internetowa:</string>
   <string name="AboutScene_Snd">Wyślij E-Mail</string>
   <string name="AboutScene_Translation">Tłumaczenie wykonane przez:</string>
-  <string name="AboutScene_Translation_Names">(I honestly have no idea what this is)</string>
+  <string name="AboutScene_Translation_Names">Marek Piętka</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
   <string name="RankingsScene_Total">Do tej pory rozegrano gier:</string>
