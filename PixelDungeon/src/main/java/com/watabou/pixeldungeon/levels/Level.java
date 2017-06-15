@@ -198,6 +198,12 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	public int getViewDistance() {
+		viewDistance = DungeonGenerator.getLevelProperty(levelId,"viewDistance",viewDistance);
+		viewDistance = Math.min(viewDistance,ShadowCaster.MAX_DISTANCE);
+		return viewDistance;
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
@@ -220,7 +226,7 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 
-	public int viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : 8;
+	protected int viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : 8;
 
 	public boolean[] fieldOfView;
 
@@ -390,9 +396,6 @@ public abstract class Level implements Bundlable {
 			if (Random.Int(2) == 0) {
 				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
 			}
-
-			viewDistance = DungeonGenerator.getLevelProperty(levelId,"viewDistance",viewDistance);
-			viewDistance = Math.min(viewDistance,ShadowCaster.MAX_DISTANCE);
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);
 			if (feeling == Feeling.UNDEFINED) {
