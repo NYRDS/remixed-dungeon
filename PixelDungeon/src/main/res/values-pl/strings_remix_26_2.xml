@@ -1,3 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">Przepraszamy, film nie jest jeszcze gotowy - możesz spróbować ponownie za kilka minut.</string>
+    <string name="ServiceManNPC_Limit">Wybacz, ale każdy nowy poszukiwacz przygód może obejrzeć w sumie %d filmów.</string>
+    <string name="WndMovieTheatre_Sorry">Coś poszło nie tak, nie mogliśmy przyznać ci nagrody za obejrzenie filmu...</string>
+    <string name="WndMovieTheatre_Ok">Pomyślnie obejrzałeś film z nagrodą!</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Kostium Gnolla</string>
+    <string name="GnollCostume_Info">Niezwykle ciepły i puchaty kostium - ktokolwiek przywdzieje to przebranie, będzie wyglądał jak... ktoś, kto usiłuje imitować gnolla. Ale gnolle nie dadzą się nabrać i nadal będą chciały ciebie dorwać.</string>
+</resources>

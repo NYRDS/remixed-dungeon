@@ -74,7 +74,7 @@
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
   <string name="MeleeWeapon_Info1a">Ten %1$s to %2$s %3$d-ego tieru. Jest bronią białą.</string>
-  <string name="MeleeWeapon_Info1b">a</string>
+  <string name="MeleeWeapon_Info1b">(There is no such thing as translating \"a\" in Polish language)</string>
   <string name="MeleeWeapon_Info1c">ulepszony</string>
   <string name="MeleeWeapon_Info1d">zdegradowany</string>
   <string name="MeleeWeapon_Info2a">Zadaje średnie obrażenia o wartości %d punktów na uderzenie.</string>
@@ -160,7 +160,7 @@
   <string name="Boomerang_Gender">meski</string>
   <!--STRINGS OF CurareDart CLASS-->
   <string name="CurareDart_Name">trująca rzutka</string>
-  <string name="CurareDart_Info">Te małe, złe rzutki nie zadają dużo obrażeń, ale mogą sparaliżować cel, pozostawiając go bezbronnym i unieruchomionym na pewien czas.</string>
+  <string name="CurareDart_Info">Te małe, złowrogie rzutki nie zadają dużo obrażeń, ale mogą sparaliżować cel, pozostawiając go bezbronnym i unieruchomionym na pewien czas.</string>
   <string name="CurareDart_Gender">meski</string>
   <!--STRINGS OF Dart CLASS-->
   <string name="Dart_Name">rzutka</string>
@@ -183,8 +183,24 @@
   <string name="Tamahawk_Info">Ten toporek do rzucania nie jest aż tak ciężki, ale nadal potrzebuje sporej siły do użycia jego efektywnie.</string>
   <string name="Tamahawk_Gender">meski</string>
   <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">Kusarigama</string>
+  <string name="Kusarigama_Info">Ta broń składa się z kosy osadzonej na metalowym łańcuchu, z doczepionym do niego żelaznym ciężarkiem.</string>
+  <string name="Kusarigama_Gender">damski</string>
+  <string name="Kusarigama_Pull">PRZYCIĄGNIJ</string>
   <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">Miecz Chaosu</string>
+  <string name="ChaosSword_Info">Ostrze miecza zostało wykonane z energii chaosu i niekiedy lekko wibruje. Broń przechowuje ogromną potęgę, która pozwala przepołowić niemalże wszystko. Jednakże wymagana jest wielka siła, która pozwoli dzierżyć taką niezrównaną moc.</string>
+  <string name="ChaosSword_Gender">męski</string>
   <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">Łuk Chaosu</string>
+  <string name="ChaosBow_Info">Złowrogi łuk, przepełniony potęgą Chaosu. Każda wystrzelona z niego strzała, uderzy cząstką energii Chaosu w cel. Lecz jeśli spudłujesz...</string>
+  <string name="ChaosBow_Gender">męski</string>
   <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">Kostur Chaosu</string>
+  <string name="ChaosStaff_Info">Kostur nasycony potęgą Chaosu! Czegóż innego może pożądać (lub obawiać się) mag?</string>
+  <string name="ChaosStaff_Gender">męski</string>
   <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">Ostrze Ofiarne</string>
+  <string name="SacrificialSword_Info">Na pierwszy rzut oka, ten stary, pokryty patyną brązowy miecz wydaje się absolutnie bezużytecznym. Jednakże spoczywa w nim prastara moc, która może przemienić niemalże każdą istotę w pozbawionego wolnej woli sługusa. Musisz jednak odkryć jak zbudzić tę zapomnianą magię...</string>
+  <string name="SacrificialSword_Gender">męski</string>
 </resources>

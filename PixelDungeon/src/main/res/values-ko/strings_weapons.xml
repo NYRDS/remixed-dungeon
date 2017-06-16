@@ -194,4 +194,5 @@
   <!--STRINGS OF ChaosBow CLASS-->
   <!--STRINGS OF ChaosStaff CLASS-->
   <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">희생의 검</string>
 </resources>

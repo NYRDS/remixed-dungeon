@@ -33,7 +33,7 @@ public class Light extends FlavourBuff {
 		if (super.attachTo( target )) {
 			// When a level is loading, do nothing
 			if (Dungeon.level != null) {
-				target.viewDistance = Math.max( Dungeon.level.viewDistance, DISTANCE );
+				target.viewDistance = Math.max(Dungeon.level.getViewDistance(), DISTANCE );
 				Dungeon.observe();
 			}
 			return true;
@@ -44,7 +44,7 @@ public class Light extends FlavourBuff {
 	
 	@Override
 	public void detach() {
-		target.viewDistance = Dungeon.level.viewDistance;
+		target.viewDistance = Dungeon.level.getViewDistance();
 		Dungeon.observe();
 		super.detach();
 	}

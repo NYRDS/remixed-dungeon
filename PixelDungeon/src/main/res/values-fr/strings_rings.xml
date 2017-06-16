@@ -76,9 +76,22 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
   <string name="ChaosCrystal_Name_1">Cristal chaotique</string>
   <string name="ChaosCrystal_Name_2">Cristal du Chaos</string>
   <string name="ChaosCrystal_Info">Vous sentez des courants d\'énergie parcourir vos mains tandis que vous le portez.</string>
+  <string name="ChaosCrystal_Info_1">Une force chaotique circule à travers ce crystal. Il est peut-être utile à quelque chose.</string>
+  <string name="ChaosCrystal_Info_2">Voilà ! Maintenant vous savez que vous pouvez le fusionner avec une pièce de votre équipement, mais que se passera-t-il ensuite ?</string>
+  <string name="ChaosCrystal_Use">UTILISER</string>
+  <string name="ChaosCrystal_Fuse">FUSION</string>
+  <string name="ChaosCrystal_Prompt">Choisissez un endroit pour la Cible du Chaos</string>
+  <string name="ChaosCrystal_SelectForFuse">Choisissez un objet à fusionner avec le Crystal chaotique</string>
+  <string name="ChaosCrystal_ScrollFused">Le crystal a été absorbé par les runes inscrites sur le parchemin. C\'est maintenant un %s</string>
   <string name="ChaosCrystal_SwordFused">Le cristal à absorbé votre arme, et à pris la forme d\'une épée.</string>
   <string name="ChaosCrystal_BowFused">Le cristal à absorbé votre arme, et à pris la forme d\'un arc.</string>
   <string name="ChaosCrystal_StaffFused">Le cristal à absorbé votre arme, et à pris la forme d\'un bâton.</string>
+  <string name="CorpseDust_Buff">Bloodlust</string>
+  <string name="DriedRose_Buff">Charmant</string>
+  <string name="DriedRose_CursedBuff">Amoureux</string>
+  <string name="RatSkull_Buff">Ratier</string>
+  <string name="RatKingCrown_Buff">Ratitude</string>
   <!--STRINGS OF RatKingCrown CLASS-->
   <string name="RatKingCrown_Name">Couronne du Roi des rats</string>
+  <string name="RatKingCrown_Info">Couronne d\'or de sa Ratitude, symbole de Puissance infinirate</string>
 </resources>

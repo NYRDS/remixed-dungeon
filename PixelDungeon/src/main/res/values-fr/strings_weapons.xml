@@ -90,7 +90,7 @@
   <string name="MeleeWeapon_Info4a">Elle a été équilibrée pour la rendre plus rapide.</string>
   <string name="MeleeWeapon_Info4b">Elle a été équilibrée pour la rendre plus précise.</string>
   <string name="MeleeWeapon_Info5">Elle est enchantée.</string>
-  <string name="MeleeWeapon_Info6a">A cause de votre force insuffisante, la précision et la vitesse de vos attaques avec cette %s est diminuée.</string>
+  <string name="MeleeWeapon_Info6a">A cause de votre force insuffisante, la précision et la vitesse de vos attaques avec cette %s sont diminuées.</string>
   <string name="MeleeWeapon_Info6b">Grâce à votre excès de force, les dommages de vos attaques avec cette %s sont augmentés.</string>
   <string name="MeleeWeapon_Info7a">Vous gardez la %1$s prête à l\'emploi%2$s.</string>
   <string name="MeleeWeapon_Info7b">, et à cause de sa malédiction, vous ne pouvez vous en défaire</string>
@@ -109,7 +109,7 @@
   <string name="Glaive_Gender">féminin</string>
   <!--STRINGS OF Knuckles CLASS-->
   <string name="Knuckles_Name">poing américain</string>
-  <string name="Knuckles_Info">Un morceau de fer forgée pour le poing.</string>
+  <string name="Knuckles_Info">Un morceau de fer forgé s\'adaptant au poing.</string>
   <string name="Knuckles_Gender">masculin</string>
   <!--STRINGS OF Longsword CLASS-->
   <string name="Longsword_Name">épée longue</string>
@@ -148,7 +148,7 @@
   <string name="MissileWeapon_Missiles">Arme à distance</string>
   <string name="MissileWeapon_Yes">Oui, je sais ce que je fais</string>
   <string name="MissileWeapon_No">Non, j\'ai changé d\'avis</string>
-  <string name="MissileWeapon_Sure">Voulez vous vraiment vous en équiper en tant qu\'arme de mélée ?</string>
+  <string name="MissileWeapon_Sure">Voulez vous vraiment vous en équiper en tant qu\'arme de mêlée ?</string>
   <string name="MissileWeapon_Info1">
 Les dommages moyens de cette arme sont de %d points par coup.</string>
   <string name="MissileWeapon_Info2">A cause de votre manque de force, la précision et la vitesse de vos coups avec cette %s diminuent.</string>

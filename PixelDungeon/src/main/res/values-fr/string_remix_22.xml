@@ -9,7 +9,7 @@
   <string name="ShadowLord_Death">Nooooon...</string>
   <string name="AllowStatisticsCollectionScene_Title">Collection des statistiques d\'utilisation</string>
   <string name="AllowStatisticsCollectionScene_Request">Si vous le permettez, Remixed Pixel Dungeon collectera les statistiques d\'utilisation. Ces données vont être utilisées pour : 
-- repérer et corriger différents glitches (pour les erreurs fatales vous devrez envoyer un report)
+- repérer et corriger différents glitches (pour les erreurs fatales vous devrez envoyer un rapport)
 - des améliorations d\'équilibrage du jeu
 - corriger des problèmes de performances propres à l\'appareil utilisé
 - publier des statistiques amusantes de temps en temps

@@ -3,25 +3,75 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">Pajęczy pancerz </string>
+    <string name="SpiderArmor_Info">Ta zbroja została wykonana ze starych, pajęczych karapaksów i dziwnej tkaniny. Zaskakującym jest fakt, że pancerz nadal posiada działające kądziołki przędne, Jeżeli wywołasz wystarczająco duży nacisk na jednej z chitynowych płytek, wystrzeli pajęczą sieć. Kolczaste podeszwy pozwalają ci swobodnie przemierzać tę sieć.</string>
     <string name="SpiderArmor_Gender">kobiecy</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
-    <string name="BlackSkull_Name">Czarna czaszka</string>
-    <string name="BlackSkull_Info">Mała czaszka wykonana z obsydianu. Była źródłem mocy Necropolis, ale po pokonaniu Lich\'a, chyba straciła swoje właściwości. Kiedy ją trzymasz, z jakiegoś powodu przez twoją głowę przechodzi myśl: \"Chcę jeść\".</string>
-    <string name="BlackSkull_Gender">meski</string>
+    <string name="BlackSkull_Name">Czarny Czerep</string>
+    <string name="BlackSkull_Info">Niewielka, obsydianowa czaszka. Niegdyś była źródłem mocy Nekropolii, lecz po porażce Licza wygląda na to, że utraciła swoją moc. Jednakże gdy trzymasz ją w swych dłoniach, dziwna myśl przechodzi przez twój umysł: \"Łaknie strawy\".</string>
+    <string name="BlackSkull_Gender">męski</string>
+
+    <string name="BlackSkull_Name_Awakened">Przebudzony Czarny Czerep</string>
+    <string name="BlackSkull_Info_Awakened">Czaszka pulsuje mocą, która wylewa się z jej pustych oczodołów. Gdy ją trzymasz w ręce, możesz okazjonalnie dosłyszeć mroczny głos mówiący: \"Wyruszył orszak śmierci\".</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">Odłamek Duszy</string>
+    <string name="SoulShard_Info">To odłamek zebrany ze szczątków Słoja Dusz. Jarzy się mistyczną energią, być może jest tu ktoś zainteresowany taką rzeczą.</string>
+    <string name="SoulShard_Gender">męski</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF DeathKnight CLASS -->
-    <string name="DeathKnight_Name">Rycerz śmierci</string>
+    <string name="DeathKnight_Name">Rycerz Śmierci</string>
     <string name="DeathKnight_Gender">męska</string>
-    <string name="DeathKnight_Name_Objective">Rycerz śmierci</string>
+    <string name="DeathKnight_Name_Objective">Rycerz Śmierci</string>
+    <string name="DeathKnight_Desc">Na pierwszy rzut oka jest to potężny wojownik w ogromnej zbroi, lecz zauważasz, że jego głowa to pozbawiona skóry i mięśni czaszka, której usta ułożone są w złowrogi grymas. Rycerz Śmierci jest manifestacją przeklętego ducha rycerza, który zaniechał swych obowiązków. Klątwa skazuje go na wieczystą podróż przez świat żywych w celu oczyszczenia swego imienia w walce. Niestety jednak nie pamięta już, kogo poprzysiągł chronić, więc zabija także i niewinnych ludzi.</string>
+
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">Rycerz Grozy</string>
+    <string name="DreadKnight_Gender">męski</string>
+    <string name="DreadKnight_Name_Objective">Rycerz Grozy</string>
+    <string name="DreadKnight_Desc">Rycerz Grozy jest starożytnym wojownikiem, którego całe życie było zhańbione złem, którego notorycznie dokonywał. Za jego grzechy został przeklęty i skazany na nieżycie w połamanym nieumarłym ciele na wieczność. Każdy moment jego potępionego istnienia jest przepełniony cierpieniem, gniewem i strachem, który wywoływał w sercach swych ofiar.</string>
+
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">Zniewolona Dusza</string>
+    <string name="EnslavedSoul_Gender">damski</string>
+    <string name="EnslavedSoul_Name_Objective">Zniewolona Dusza</string>
+    <string name="EnslavedSoul_Desc">Jesteś niemalże przejrzeć przez jej widmowe ciało. Mimo iż wygląda jak czaszka, wydaje się, że przez ułamek sekundy pojawia się na niej twarz, pełna cierpienia i rozpaczy.</string>
+
     <!-- STRINGS OF ExplodingSkull CLASS -->
-    <string name="ExplodingSkull_Name">Wybuchająca czaszka</string>
-    <string name="ExplodingSkull_Name_Objective">Wybuchająca czaszka</string>
+    <string name="ExplodingSkull_Name">Wybuchająca Czaszka</string>
+    <string name="ExplodingSkull_Gender">męski</string>
+    <string name="ExplodingSkull_Name_Objective">Wybuchająca Czaszka</string>
+    <string name="ExplodingSkull_Desc">Ta lewitująca, płonąca czaszka sprawia wrażenie niezwykle kruchej, lecz wydaje się, że może eksplodować w każdej chwili.</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">Słój Dusz</string>
+    <string name="JarOfSouls_Gender">męski</string>
+    <string name="JarOfSouls_Name_Objective">Słój Dusz</string>
+    <string name="JarOfSouls_Desc">Świecące oczy czaszki ukazanej na tym starym słoju, podobnie jak dziwna energia, którą emituje sprawiają, że czujesz się nieswojo.</string>
+
     <!-- STRINGS OF Lich CLASS -->
-    <string name="Lich_Name">licz</string>
-    <string name="Lich_Name_Objective">licz</string>
+    <string name="Lich_Name">Licz</string>
+    <string name="Lich_Gender">męski</string>
+    <string name="Lich_Name_Objective">Licz</string>
+    <string name="Lich_Desc">Nekromanta spotkał swoją śmierć w trzewiach Nekropolii, a w miarę jak mroczna energia tego miejsca wtargnęła do jego ciała, w końcu przeobraził się w Licza - nieumarłego czarnoksiężnika, pozbawioną woli marionetkę, kontrolowaną przez nikczemne moce.</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">Runiczna Czaszka</string>
+    <string name="RunicSkull_Gender">męski</string>
+    <string name="RunicSkull_Name_Objective">Runiczna Czaszka</string>
+    <string name="RunicSkull_Desc">Jak na coś wykonanego sztucznie, ta czaszka przypomina prawdziwą nawet trochę za bardzo. Możesz dostrzec słabą aurę ją otaczającą.</string>
+
     <!-- STRINGS OF Zombie CLASS -->
-    <string name="Zombie_Name">zombie</string>
-    <string name="Zombie_Name_Objective">zombie</string>
-    </resources>
+    <string name="Zombie_Name">Ożywieniec</string>
+    <string name="Zombie_Gender">męski</string>
+    <string name="Zombie_Name_Objective">Ożywieniec</string>
+    <string name="Zombie_Desc">Loch to niebezpieczne miejsce i wielu awanturników dokonało tutaj swoich żywotów. Jednakże większość z tych pechowych, których spotkała śmierć w Nekropolii są zmuszeni do poruszania się po jej salach jako żywe, gnijące ścierwa.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Intro2">Ach! Awanturnik, który nie jest martwy. Niesamowite! Och, proszę o wybaczenie. Jak widzisz, sam jestem nekromantą. I mimo, że studiowaniem natury zmarłych i samej śmierci, zarabiam na życie, oglądanie tej samej rzeczy w kółko staje się potwornie nudne. Z drugiej strony jest to powód, dla którego tutaj jestem. Zdarzyło się coś spektakularnego... _Nekropolia_, starożytne miasto umarłych, w końcu otworzyła swoje podwoje. Po fakcie, stoimy tuż obok wejścia. I... wiesz co? Weź ten klucz i wejdź pierwszy, znaczy się - lubisz przygody i tego typu sprawy? Pójdę zaraz za tobą, po prostu muszę się przygotować.</string>
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Pokonano Licza</string>
+
+</resources>

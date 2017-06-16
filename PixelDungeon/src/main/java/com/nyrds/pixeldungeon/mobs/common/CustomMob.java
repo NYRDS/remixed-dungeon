@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -31,9 +32,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	private float attackDelay = 1;
 
 	private String mobClass = "Unknown";
-
-	private boolean wallWalker = false;
-	private boolean absoluteWalker = false;
 
 	private boolean canBePet = false;
 
@@ -143,6 +141,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			}
 
 			viewDistance = classDesc.optInt("viewDistance",viewDistance);
+			viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
 
 			walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
 

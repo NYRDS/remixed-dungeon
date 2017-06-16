@@ -1,5 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">마을 보초</string>
+    <string name="TownGuardNPC_Gender">남성</string>
+    <string name="TownGuardNPC_Name_Objective">마을 보초</string>
+    <string name="TownGuardNPC_Desc">평범한 마을 보초다.</string>
+    <string name="TownGuardNPC_Message1">비켜.</string>
+    <string name="town_deco_door_name">문</string>
+    <string name="town_deco_door_desc">평범힌 나무 문이다.</string>
+
+    <string name="town_deco_locked_door_name">잠긴 문</string>
     <string name="town_deco_snowman_name">눈사람</string>
     <string name="town_deco_tree_name">나무</string>
     <string name="town_deco_carpet_desc">호화로운 레드카펫이 특별한 손님을 위해 깔려있다.

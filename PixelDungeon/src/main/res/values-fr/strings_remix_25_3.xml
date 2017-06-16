@@ -1,3 +1,58 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Ouchanka </string>
+    <string name="Ushanka_Info">Chapeau ouchanka chaud et confortable décoré avec classe grâce à son étoile rouge. Le parfait compagnon pour pour un camarade luttant contre un dungeon diaboliquement froid.</string>
+
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">Crâne vampire</string>
+    <string name="VampireSkull_Info">Ce masque est fabriqué à partir d\'un crâne de vampire 100% naturel. En fait, c\'est un crâne de vampire... d\'un vampire à la tête bien grosse. Lugubre.</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Masque zombie</string>
+    <string name="ZombieMask_Info">N\'avez vous jamais eu envie de ressembler à un héros mort-vivant, qui a échoué dans ses quêtes inlassablement ? Et bien voici votre chance.</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">Bonbon</string>
+    <string name="Candy_Info">Ce bonbon est si joli et sent aussi si bon. Avez-vous vraiment besoin de le donner à quelqu\'un d\'autre ?</string>
+    <string name="Candy_Warning_1">Vous n\'auriez pas dû manger ce bonbon. Vous aviez promi de le donner à quelqu\'un. Mais il ne semble pas vous faire un effet, et votre faim est toujours là. C\'est juste un bonbon après tout. </string>
+    <string name="Candy_Warning_2">Là vous en avez vraiment trop avalés. Votre ventre vous fait mal puisque vous avez mangé trop de bonbons.</string>
+
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">Tarte au potiron</string>
+    <string name="PumpkinPie_Info">Une délicieuse tarte au potiron, comme votre mère en préparait de si bonnes.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">Tarte au potiron pourrie</string>
+    <string name="RottenPumpkinPie_Info">Peu importe combien cette tarte était bonne fraîche, aucun chance pour qu\'elle soit encore consommable.</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">Bougie de vision</string>
+    <string name="CandleOfMindVision_Info">Ça ressembe à une bougie normale, pas à quelque chose qu\'on trouverait dans un dangereux donjon. Bizarrement, elle est plutôt chaude, même si elle n\'a pas été allumée.</string>
+    <string name="CandleOfMindVision_Info_Lighted">La bougie s\'est allumée au moment où vous l\'avez sortie de votre sac à dos. La flame jette une pâle lumière pourpre, et en regardant à travers, vous pouvez voir les monstres qui vous entourent.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">La bougie s\'est consommée et ne jette plus de lumière quand vous la tenez. On dirait que vous ne pourrez plus l\'utiliser. </string>
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">Tonneau</string>
+    <string name="Barrel_Desc">On dirait un simple tonneau en bois. En vous rapprochant, vous pouvez distinguer une vague odeur de pétrole. Le tonneau a l\'air plutôt léger. Vous pouvez peut-être le pousser.</string>
+
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">Potiron</string>
+    <string name="Barrel_Pumpkin_Desc">C\'est étrange et sinistre de tomber sur une courge sculptée dans un donjon. Vous pouvez ressentir quelque chose de dangereux en l\'approchant. Mais vous pouvez toujours la repousser, ou bien ?</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">Epouvantail</string>
+    <string name="ScarecrowNPC_Gender">neutre</string>
+    <string name="ScarecrowNPC_Name_Objective">Epouvantail </string>
+    <string name="ScarecrowNPC_Desc">A n\'en pas douter, cet épouvantail observe chacun de vos mouvements. Ses yeux rouges et brillants vous transpercent, mais étonnament, vous ne vous sentez pas menacé.</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Hey, bonjour mon garçon, comment ça va ?\n J\'ai un truc qui va te plaire !\n\n Comme je te serais reconnaissant,\n si tu allais me trouver quelques bonbons !\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Hey, bonjour jeune fille, comment ça va ?\n J\'ai un truc qui va te plaire !\n\n Comme je te serais reconnaissant,\n si tu allais me trouver quelques bonbons !\n\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Cinq bonbons, c\'est tout ce dont j\'ai besoin.\n Oh, ta récompense sera si bonne !</string>
+    <string name="ScarecrowNPC_Quest_End">Oh joie, c\'est très bien !\n Pour ça, tu recevras de la vraie nourriture!</string>
+    <string name="Journal_ScarecrowNPC">Epouvantail</string>
+
+</resources>

@@ -3,6 +3,10 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
     <string name="SantaHat_Name">산타모자</string>
+    <string name="SantaHat_Info">심연의 왕 산타클로스의 붉은 실크 모자만큼 강렬한 인상의 모자도 더 없을 겁니다.</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">루돌프 사슴코와 사슴뿔</string>
     <string name="IceCaves_TileDescStatue">또 끔찍한 석상이군... 오 잠깐만 저거 얼어버린 놀이었군.</string>
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF WandOfShadowbolt CLASS -->
+    <string name="WandOfShadowbolt_Name">그림자화살의 완드</string>
+    <string name="WandOfShadowbolt_Info">이 완드는 새카맣고 사악한 에너지를 내뿜고 있다.</string>
+</resources>

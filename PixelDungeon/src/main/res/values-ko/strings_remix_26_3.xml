@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">엘프제 활</string>
+    <string name="ElvenBow_Info">엘프의 제조술을 보여주는 가장 좋은 예시입니다. 일반 나무 활보다 더 효과적이고 정확한 성능을 자랑합니다.</string>
+
     <!-- STRINGS OF RatHide CLASS -->
     <string name="RatHide_Name">쥐 가죽</string>
     <!-- STRINGS OF RatArmor CLASS -->

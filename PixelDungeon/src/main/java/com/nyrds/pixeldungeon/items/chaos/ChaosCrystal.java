@@ -78,7 +78,13 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		@Override
 		public void onSelect(Item item) {
 			if (item != null) {
-				item.removeItemFrom(getCurUser());
+
+				if (item.quantity() > 1) {
+					item.detach(getCurUser().belongings.backpack);
+				} else {
+					item.removeItemFrom(getCurUser());
+				}
+
 				removeItemFrom(getCurUser());
 
 				getCurUser().getSprite().operate(getCurUser().getPos());

@@ -3,4 +3,88 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
     <string name="SantaHat_Name">Bonnet de noël</string>
-    </resources>
+    <string name="SantaHat_Info">Rien n\'évoque plus un Donjonoël que ce soyeux chapeau rouge du Santa Dieu des profondeurs.</string>
+
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Nez rouge et bois</string>
+    <string name="Rudolph_Info">Y a-t-il quelque chose de plus festif qu\'un rez rouge brillant ? Et une paire de bois, bien sûr. </string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">kobold</string>
+    <string name="Kobold_Gender">masculin</string>
+    <string name="Kobold_Name_Objective">kobold</string>
+    <string name="Kobold_Desc">Les kobolds étaient considérés comme des êtres de légende. Ancêtre des gnolls communs, les kobolds vivent dans les caves profondes et froides. On dit que leur peuple a maîtrisé l\'ingénierie et la machinerie bien avant les nains. Toutefois, on ne sait pas pourquoi ils ont disparu il y a tant d\'années...</string>
+
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">kobold glacier</string>
+    <string name="KoboldIcemancer_Gender">masculin</string>
+    <string name="KoboldIcemancer_Name_Objective">kobold glacier</string>
+    <string name="KoboldIcemancer_Desc">Les kobolds glaciers formaient une élite dans leur société, en tant que guerriers, magiciens et avant tout scientifiques. Les anciens kobolds glaciers maîtrisaient l\'art de tailler la glace, créant ainsi des mécanismes avancés à partir de la glace, renforcés magiquement...</string>
+    <string name="KoboldIcemancer_Killed">L\'éclair glacé de %svous a tué...</string>
+
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">esprit froid</string>
+    <string name="ColdSpirit_Gender">masculin</string>
+    <string name="ColdSpirit_Name_Objective">esprit froid</string>
+    <string name="ColdSpirit_Desc">Un esprit froid est une manifestation du froid, sous sa forme la plus pure. C\'est une simple enveloppe, créée grâce à la magie, agissant suivant la volonté de son créatuer ou d\'instints et réflexes basiques. </string>
+
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">élémentaire de glace</string>
+    <string name="IceElemental_Gender">masculin</string>
+    <string name="IceElemental_Name_Objective">élémentaire de glace</string>
+    <string name="IceElemental_Desc">Parmi tous les élémentaux qui existent dans les donjons, ceux de glace ne sont peut-être pas les plus forts, mais ils peuvent facilement être vus comme appartenant aux plus dangereux. Leur corps irradie de froid, refroidissant leurs enemis. </string>
+
+    <!-- STRINGS OF IceGuardian CLASS -->
+    <string name="IceGuardian_Name">gardien de glace</string>
+    <string name="IceGuardian_Gender">masculine</string>
+    <string name="IceGuardian_Name_Objective">gardien de glace</string>
+    <string name="IceGuardian_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs caves. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
+
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">gardien de glace</string>
+    <string name="IceGuardianCore_Gender">masculin</string>
+    <string name="IceGuardianCore_Name_Objective">gardien de glace</string>
+    <string name="IceGuardianCore_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs caves. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
+
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">kobold en cage</string>
+    <string name="CagedKobold_Gender">masculin</string>
+    <string name="CagedKobold_Name_Objective">kobold en cage</string>
+    <string name="CagedKobold_Desc">Un kobold, dans une cage.</string>
+    <string name="CagedKobold_Intro">Hey... HEY ! Tu es dois être cet aventurier. Aide-moi à sortir ami, ces meutriers de militaristes m\'ont enfermé. Ils ont l\'intention de réactiver une ancienne arme pour conquérir le monde des hommes au-dessus ! Je me suis opposé parce que c\'est trop dangereux. Mais ils ont monté un conseil et m\'ont jeté dans cette cage. Trouve la clé de la cage s\'il te plaît. En échange, je t\'aiderai du mieux que je peux. </string>
+    <string name="CagedKobold_Quest_End">Oh, merci, vraiment ! Comment as-tu pu trouver la clé ? Tu as... détruit l\'arme ? C\'est incroyable ! Tu sais quoi, j\'ai dis que j\'allais t\'aider, et je crois savoir quel est le meilleur moyen. Je vais t\'accompagner un moment. * Le Kobold en cage s\'est transformé en une bougie</string>
+    <string name="CagedKobold_Message1">S\'il te plaît...</string>
+    <string name="CagedKobold_Message2">Tu dois m\'aider, mon pote</string>
+    <string name="CagedKobold_Message3">Cette cage me répugne complètement</string>
+
+    <string name="Journal_Caged_Kobold">Kobold en cage</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Ce gnoll a été gelé vivant. Cela fait probablement un moment qu\'il est là.</string>
+    <string name="IceCaves_TileHighGrass">Herbe haute gelée</string>
+    <string name="IceCaves_TileGrass">Herbe gelée</string>
+    <string name="IceCaves_TileDescHighGrass">Une végétation dense et gelée bloque la vue.</string>
+    <string name="IceCaves_TileStatue">Gnoll gelé.</string>
+    <string name="IceCaves_TileDescStatue">Et encore une autre statue bien laide... Attendez, c\'est un gnoll gelé.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">Dinde festive</string>
+    <string name="ChristmasTurkey_Info">La meilleur façon de célébrer le Donjonoël est une bonne bouchée de dinde rôtie. Vous pouvez participer, et honorer le jour où les monstres ont envahi le donjon en attirant aventuriers et héros de partout dans le monde, boostant ainsi le tourisme et profitant à toute sorte de commerces locaux.</string>
+
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">Clé de glace</string>
+    <string name="IceKey_Info">Cette clé a l\'air fabriquée en glace, mais elle est dure comme de l\'acier.</string>
+
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Baguette d\'éclair glacé</string>
+    <string name="WandOfIcebolt_Info">Cette baguette tire un missile de glace, infligeant des dégâts léger à la créature ciblée. Elle peut réussir à ralentir ou même geler sa cible. </string>
+    <string name="WandOfIcebolt_Info1">Vous vous êtes tué avec votre propre baguette d\'éclair glacé...</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Gardien de glace tué</string>
+
+</resources>

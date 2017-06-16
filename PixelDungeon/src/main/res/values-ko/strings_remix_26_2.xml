@@ -1,3 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">죄송합니다. 영상이 아직 준비되지 않았습니다. 몇 분 뒤에 다시 시도하십시오.</string>
+    <string name="ServiceManNPC_Limit">죄송합니다. 새 모험가들은 영상을 %d번 까지만 볼 수 있습니다.</string>
+    <string name="WndMovieTheatre_Sorry">뭔가가 잘못되어 영상의 보상을 받지 못했습니다.</string>
     </resources>
