@@ -8,10 +8,12 @@ import com.watabou.pixeldungeon.PixelDungeon;
 
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
@@ -21,6 +23,7 @@ public class ModdingMode {
 	public static final String REMIXED = "Remixed";
 
 	private static final Set<String> trustedMods = new HashSet<>();
+
 	static {
 		//trustedMods.add("PD Mini");
 		//trustedMods.add("Maze");
@@ -47,7 +50,7 @@ public class ModdingMode {
 	}
 
 	public static int activeModVersion() {
-		if(mActiveMod.equals(ModdingMode.REMIXED)) {
+		if (mActiveMod.equals(ModdingMode.REMIXED)) {
 			return PixelDungeon.version();
 		}
 
@@ -96,6 +99,29 @@ public class ModdingMode {
 		}
 		return null;
 	}
+
+	public static String getResource(String resName) {
+
+		StringBuilder resource = new StringBuilder();
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(getInputStream(resName)));
+
+		try {
+			String line = reader.readLine();
+
+			while (line != null) {
+				resource.append(line);
+				line = reader.readLine();
+			}
+			reader.close();
+
+		} catch (IOException e) {
+			EventCollector.logException(e, resName);
+		}
+
+		return resource.toString();
+	}
+
 
 	public static InputStream getInputStream(String resName) {
 		try {
