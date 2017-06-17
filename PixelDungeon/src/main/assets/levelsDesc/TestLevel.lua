@@ -5,16 +5,14 @@
 -- This fle is part of Remixed Pixel Dungeon
 --
 
-sys = luajava.bindClass('java.lang.System')
-
 function getJson()
-    local ModdingMode = luajava.bindClass('com.nyrds.android.util.ModdingMode')
     local filename
+
     if math.random() > 0.5 then
         filename = "levelsDesc/FortuneShop.json"
     else
-        filename = "levelsDesc/Town.json"
+        filename = "levelsDesc/Town_Library.json"
     end
 
-    return ModdingMode.getResource(filename)
+    return loadResource(filename)
 end

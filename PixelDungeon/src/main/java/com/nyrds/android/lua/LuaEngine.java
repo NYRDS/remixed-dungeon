@@ -14,10 +14,8 @@ import org.luaj.vm2.Globals;
 import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.OneArgFunction;
-import org.luaj.vm2.lib.PackageLib;
 import org.luaj.vm2.lib.ResourceFinder;
-import org.luaj.vm2.lib.jse.JseBaseLib;
-import org.luaj.vm2.lib.jse.LuajavaLib;
+import org.luaj.vm2.lib.jse.JsePlatform;
 
 import java.io.InputStream;
 
@@ -38,7 +36,15 @@ public class LuaEngine implements ResourceFinder {
 		}
 	}
 
+	private class resLoader extends OneArgFunction {
+		public LuaValue call(LuaValue x) {
+			return LuaValue.valueOf(ModdingMode.getResource(x.tojstring()));
+		}
+	}
+
 	public void reset(@Nullable String scriptFile) {
+		globals = JsePlatform.standardGlobals();
+/*
 		globals = new Globals();
         globals.load(new JseBaseLib());
         globals.load(new PackageLib());
@@ -48,9 +54,10 @@ public class LuaEngine implements ResourceFinder {
 		        return Class.forName(name, true, Thread.currentThread().getContextClassLoader());
 	        }
         });
-
+*/
 		globals.finder = this;
 		globals.set("log", new log());
+		globals.set("loadResource", new resLoader());
 
 		if(scriptFile==null) {
 			return;
