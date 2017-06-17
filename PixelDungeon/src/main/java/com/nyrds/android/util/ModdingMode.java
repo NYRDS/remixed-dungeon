@@ -27,8 +27,9 @@ public class ModdingMode {
 	static {
 		//trustedMods.add("PD Mini");
 		//trustedMods.add("Maze");
-		//trustedMods.add("The Fallen");
 		//trustedMods.add("D.U.N.G.E.O.N");
+		//trustedMods.add("The Fallen");
+		trustedMods.add("Fallen.Zero");
 	}
 
 	@NonNull
