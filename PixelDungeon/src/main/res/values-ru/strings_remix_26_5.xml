@@ -30,5 +30,5 @@
 
     <!-- STRINGS OF TrapHelper CLASS -->
     <string name="TrapWnd_Title">Ловушка</string>
-    <string name="TrapWnd_Step">Вы уверенны, что хотите наступить на это ловушку? Может статься, что вы умрёте.</string>
+    <string name="TrapWnd_Step">Вы уверенны, что хотите наступить на эту ловушку? Может статься, что вы умрёте.</string>
 </resources>
