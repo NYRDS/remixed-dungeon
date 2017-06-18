@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -65,6 +66,8 @@ public enum Rankings {
 		rec.mod			= PixelDungeon.activeMod();
 
 		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.getClass().getSimpleName(), resultDescription);
+
+		PlayGames.submitScores(Game.getDifficulty(), rec.score);
 
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now() );
 		try {
