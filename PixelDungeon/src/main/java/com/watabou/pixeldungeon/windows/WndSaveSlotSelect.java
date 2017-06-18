@@ -84,22 +84,25 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				buttons.add(btn);
 
 				if(BuildConfig.DEBUG && PlayGames.isConnected()) {
-					Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
-					SimpleButton syncBtn = new SimpleButton(Icons.get(icon)) {
-						protected void onClick() {
-							if (_saving) {
-								//TODO: to cloud
-							} else {
-								//TODO: from cloud
+
+					if(!_saving || !options[index].isEmpty()) {
+						Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
+						SimpleButton syncBtn = new SimpleButton(Icons.get(icon)) {
+							protected void onClick() {
+								if (_saving) {
+									//TODO: to cloud
+								} else {
+									//TODO: from cloud
+								}
 							}
-						}
-					};
+						};
 
-					syncBtn.setPos(xColumn, pos + BUTTON_HEIGHT / 2);
-					additionalMargin = syncBtn.width();
-					add(syncBtn);
+						syncBtn.setPos(xColumn, pos + BUTTON_HEIGHT / 2);
+						additionalMargin = syncBtn.width();
+						add(syncBtn);
 
-					xBtn = syncBtn.right() + GAP;
+						xBtn = syncBtn.right() + GAP;
+					}
 				}
 
 				if (!options[index].isEmpty()) {
