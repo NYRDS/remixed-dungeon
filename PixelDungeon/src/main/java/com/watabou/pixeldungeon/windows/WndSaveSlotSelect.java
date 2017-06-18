@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.PlayGames;
@@ -82,7 +83,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				};
 				buttons.add(btn);
 
-				if(PlayGames.isConnected()) {
+				if(BuildConfig.DEBUG && PlayGames.isConnected()) {
 					Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
 					SimpleButton syncBtn = new SimpleButton(Icons.get(icon)) {
 						protected void onClick() {
