@@ -141,7 +141,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static boolean haveSnapshot(String snapshotId) {
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
-		return result.await().getStatus().isSuccess();
+		return result.await(1,TimeUnit.SECONDS).getStatus().isSuccess();
 	}
 
 	public static boolean copyFileToCloud(String id) {
@@ -217,8 +217,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static boolean unpackSnapshotTo(String id, File dir) {
 		try {
-			Unzip.unzip(PlayGames.streamFromSnapshot("Progress"),
-					FileSystem.getInternalStorageFile("").getAbsolutePath());
+			Unzip.unzip(PlayGames.streamFromSnapshot(id), dir.getAbsolutePath());
 		} catch (IOException e) {
 			EventCollector.logException(e);
 			return false;
