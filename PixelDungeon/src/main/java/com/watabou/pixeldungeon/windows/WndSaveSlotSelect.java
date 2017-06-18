@@ -5,6 +5,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -69,7 +70,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				}
 
 				float additionalMargin = 0;
-				float x = GAP + j * (BUTTON_WIDTH + GAP);
+				float xColumn = GAP + j * (BUTTON_WIDTH + GAP);
+				float xBtn = xColumn;
 
 				final RedButton btn = new RedButton(options[index]) {
 					@Override
@@ -80,16 +82,24 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				};
 				buttons.add(btn);
 
-				SimpleButton syncBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_IN)) {
-					protected void onClick() {
-						// TODO: sync some saves?
-					}
-				};
+				if(PlayGames.isConnected()) {
+					Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
+					SimpleButton syncBtn = new SimpleButton(Icons.get(icon)) {
+						protected void onClick() {
+							if (_saving) {
+								//TODO: to cloud
+							} else {
+								//TODO: from cloud
+							}
+						}
+					};
 
-				syncBtn.setPos(x, pos + BUTTON_HEIGHT/2);
-				additionalMargin = syncBtn.width();
-				add(syncBtn);
+					syncBtn.setPos(xColumn, pos + BUTTON_HEIGHT / 2);
+					additionalMargin = syncBtn.width();
+					add(syncBtn);
 
+					xBtn = syncBtn.right() + GAP;
+				}
 
 				if (!options[index].isEmpty()) {
 					SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
@@ -110,12 +120,12 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 							GameScene.show(reallyDelete);
 						}
 					};
-					deleteBtn.setPos(x + BUTTON_WIDTH - deleteBtn.width() - GAP, pos);
-					additionalMargin = additionalMargin + deleteBtn.width() + GAP;
+					deleteBtn.setPos(xColumn + BUTTON_WIDTH - deleteBtn.width() - GAP, pos);
+					additionalMargin +=  deleteBtn.width() + GAP;
 					add(deleteBtn);
 				}
 
-				btn.setRect(syncBtn.right() + GAP, pos, BUTTON_WIDTH - additionalMargin - GAP*2, BUTTON_HEIGHT);
+				btn.setRect(xBtn, pos, BUTTON_WIDTH - additionalMargin - GAP*2, BUTTON_HEIGHT);
 				add(btn);
 			}
 			pos += BUTTON_HEIGHT + GAP;
