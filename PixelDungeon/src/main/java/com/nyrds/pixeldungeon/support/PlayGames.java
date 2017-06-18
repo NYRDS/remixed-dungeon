@@ -23,6 +23,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 
@@ -46,6 +47,7 @@ import static android.app.Activity.RESULT_OK;
 public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 	private static final int RC_SIGN_IN     = 42353;
 	private static final int RC_SHOW_BADGES = 67584;
+    private static final int RC_SHOW_LEADERBOARD = 96543;
 
 	private GoogleApiClient googleApiClient;
 	private Activity        activity;
@@ -276,6 +278,27 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			playGames.activity.startActivityForResult(
 					Games.Achievements.getAchievementsIntent(playGames.googleApiClient),
 					RC_SHOW_BADGES
+			);
+		}
+	}
+
+	static int[] boards = {R.string.leaderboard_easy_mode,
+							R.string.leaderboard_normal_with_saves,
+			                R.string.leaderboard_normal,
+			                R.string.leaderboard_expert};
+
+	public static void submitScores(int level,int scores) {
+		if(isConnected()) {
+			Games.Leaderboards.submitScore(playGames.googleApiClient, Game.getVar(boards[level]),
+					scores);
+		}
+	}
+
+	public static void showLeaderboard() {
+		if (isConnected()) {
+			playGames.activity.startActivityForResult(
+					Games.Leaderboards.getAllLeaderboardsIntent(playGames.googleApiClient),
+					RC_SHOW_LEADERBOARD
 			);
 		}
 	}

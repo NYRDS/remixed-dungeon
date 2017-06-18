@@ -78,6 +78,14 @@ class WndPlayGames extends Window {
 			}
 		});
 
+		addButton(new RedButton("Show leaderboard") {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				PlayGames.showLeaderboard();
+			}
+		});
+
 		if(BuildConfig.DEBUG) {
 
 			addButton(new RedButton("Local -> Cloud") {
