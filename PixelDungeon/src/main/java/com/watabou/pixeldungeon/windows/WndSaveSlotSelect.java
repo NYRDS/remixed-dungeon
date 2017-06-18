@@ -80,6 +80,17 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				};
 				buttons.add(btn);
 
+				SimpleButton syncBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_IN)) {
+					protected void onClick() {
+						// TODO: sync some saves?
+					}
+				};
+
+				syncBtn.setPos(x, pos + BUTTON_HEIGHT/2);
+				additionalMargin = syncBtn.width();
+				add(syncBtn);
+
+
 				if (!options[index].isEmpty()) {
 					SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 						protected void onClick() {
@@ -100,11 +111,11 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 						}
 					};
 					deleteBtn.setPos(x + BUTTON_WIDTH - deleteBtn.width() - GAP, pos);
-					additionalMargin = deleteBtn.width() + GAP;
+					additionalMargin = additionalMargin + deleteBtn.width() + GAP;
 					add(deleteBtn);
 				}
 
-				btn.setRect(x, pos, BUTTON_WIDTH - additionalMargin - GAP, BUTTON_HEIGHT);
+				btn.setRect(syncBtn.right() + GAP, pos, BUTTON_WIDTH - additionalMargin - GAP*2, BUTTON_HEIGHT);
 				add(btn);
 			}
 			pos += BUTTON_HEIGHT + GAP;
