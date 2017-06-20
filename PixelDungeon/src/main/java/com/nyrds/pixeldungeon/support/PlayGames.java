@@ -17,6 +17,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.games.snapshot.Snapshot;
+import com.google.android.gms.games.snapshot.SnapshotMetadata;
 import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.games.snapshot.Snapshots;
 import com.nyrds.android.util.FileSystem;
@@ -35,6 +36,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import static android.app.Activity.RESULT_OK;
@@ -53,6 +55,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	private Activity        activity;
 
 	private static PlayGames playGames;
+	private ArrayList<String> mSavedGamesNames;
 
 	private PlayGames(Activity ctx) {
 		activity = ctx;
@@ -140,8 +143,11 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static boolean haveSnapshot(String snapshotId) {
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
-		return result.await(1,TimeUnit.SECONDS).getStatus().isSuccess();
+		if(playGames.mSavedGamesNames==null) {
+			return false;
+		}
+
+		return playGames.mSavedGamesNames.contains(snapshotId);
 	}
 
 	public static boolean copyFileToCloud(String id) {
@@ -196,6 +202,11 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
 				if (result.getStatus().isSuccess()) {
 					Log.i("Play Games", "load ok!");
+
+					mSavedGamesNames = new ArrayList<>();
+					for (SnapshotMetadata m :result.getSnapshots()) {
+						mSavedGamesNames.add(m.getUniqueName());
+					}
 
 				} else {
 					Log.e("Play Games", "load " + result.getStatus().getStatusMessage());

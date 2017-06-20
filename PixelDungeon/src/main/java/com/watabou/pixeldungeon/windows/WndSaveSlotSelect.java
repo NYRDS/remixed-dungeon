@@ -91,7 +91,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 					if ((_saving && !options[index].isEmpty())
 							|| (!_saving
-							//&& PlayGames.haveSnapshot(snapshotId) // takes too much time :(
+							&& PlayGames.haveSnapshot(snapshotId)
 					)) {
 
 						Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
