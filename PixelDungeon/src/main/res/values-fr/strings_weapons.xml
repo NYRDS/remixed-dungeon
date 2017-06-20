@@ -190,14 +190,18 @@ Vous maintenez la %s prête à l\'emploi.</string>
   <string name="Kusarigama_Pull">TIRER</string>
   <!--STRINGS OF ChaosSword CLASS-->
   <string name="ChaosSword_Name">Epée du Chaos</string>
+  <string name="ChaosSword_Info">La lame de cette épée est faite de chaos pur et parfois vibre légèrement. Un grand pouvoir loge dans cette arme, qui peut couper en deux presque n\'importe quoi. Néanmoins, un habileté importante est requise pour maîtriser l\'énorme force de l\'arme.</string>
   <string name="ChaosSword_Gender">masculin</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">arc du chaos</string>
+  <string name="ChaosBow_Info">Un arc effrayant rempli du pouvoir du Chaos. Chaque flaque décochée avec cet arc portera un morceau d\'énergie chaotique à la cible. Mais si vous ratez... </string>
   <string name="ChaosBow_Gender">masculin</string>
   <!--STRINGS OF ChaosStaff CLASS-->
   <string name="ChaosStaff_Name">Baton du Chaos</string>
-  <string name="ChaosStaff_Info">un baton regorgeant du pouvoir du chaos! Les mages en rèvent-ils ou en ont peur ?</string>
+  <string name="ChaosStaff_Info">Un baton regorgeant du pouvoir du chaos! Les mages en rèvent-ils ou en ont peur ?</string>
   <string name="ChaosStaff_Gender">masculin</string>
   <!--STRINGS OF SacrificialSword CLASS-->
   <string name="SacrificialSword_Name">épée de sacrifice</string>
+  <string name="SacrificialSword_Info">Au premier regard, cette vieille épée en bronze, couverte de taches de patine, semble complètement inutile. Or une sorte de pouvoir ancien, archaïque, dort à l\'intérieur. Ce pouvoir peut transformer presque toute créature en un esclave dénué de volonté. Il faut juste trouver le bon moyen pour les réveiller... </string>
+  <string name="SacrificialSword_Gender">masculin</string>
 </resources>

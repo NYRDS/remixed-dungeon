@@ -89,6 +89,12 @@
     <string name="town_deco_snowman_name">Bonhomme de neige</string>
     <string name="town_deco_snowman_desc">Un bonhomme de neige est une décoration urbaine traditionnelle pour la saison des fêtes, lorsque les gens célèbrent le jour de \"Donjonoël\", celui où les monstres ont envahi le donjon.</string>
 
+    <string name="town_deco_tree_name">Arbre</string>
+    <string name="town_deco_tree_desc">C\'est un peu étrange de contempler un arbre vivant, juste à côté de l\'entrée du donjon rempli d\'horreurs et par la mort. </string>
+
+    <string name="town_deco_pathway_name">Chemin</string>
+    <string name="town_deco_pathway_desc">Un chemin creusé par les pas dans la neige.</string>
+
     <string name="town_deco_stone_wall_name">Mur en pierre</string>
     <string name="town_deco_stone_wall_desc">D\'une façon ou d\'une autre ce mur émet de la chaleur et a l\'air un peu mouillé.</string>
 
