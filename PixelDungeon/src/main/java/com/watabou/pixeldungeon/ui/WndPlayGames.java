@@ -28,7 +28,6 @@ import java.io.IOException;
 
 class WndPlayGames extends Window {
 
-	private static final String PROGRESS = "Progress";
 	private int y = GAP;
 
 	public WndPlayGames() {
@@ -96,7 +95,7 @@ class WndPlayGames extends Window {
 					Game.instance().executor.execute(new Runnable() {
 						@Override
 						public void run() {
-							boolean res = PlayGames.packFilesToSnapshot(PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+							boolean res = PlayGames.packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
 								@Override
 								public boolean accept(File pathname) {
 									String filename = pathname.getName();
@@ -131,7 +130,7 @@ class WndPlayGames extends Window {
 					Game.instance().executor.execute(new Runnable() {
 						@Override
 						public void run() {
-							showActionResult(PlayGames.unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile("")));
+							showActionResult(PlayGames.unpackSnapshotTo(PlayGames.PROGRESS, FileSystem.getInternalStorageFile("")));
 						}
 					});
 				}

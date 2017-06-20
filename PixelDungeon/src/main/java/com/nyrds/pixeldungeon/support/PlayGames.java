@@ -23,10 +23,13 @@ import com.google.android.gms.games.snapshot.Snapshots;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Unzip;
+import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.Rankings;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -47,15 +50,17 @@ import static android.app.Activity.RESULT_OK;
  */
 
 public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
-	private static final int RC_SIGN_IN     = 42353;
-	private static final int RC_SHOW_BADGES = 67584;
-    private static final int RC_SHOW_LEADERBOARD = 96543;
+	private static final int RC_SIGN_IN          = 42353;
+	private static final int RC_SHOW_BADGES      = 67584;
+	private static final int RC_SHOW_LEADERBOARD = 96543;
+
+	public static final String PROGRESS = "Progress";
 
 	private GoogleApiClient googleApiClient;
 	private Activity        activity;
 
-	private static PlayGames playGames;
-	private ArrayList<String> mSavedGamesNames;
+	private static PlayGames         playGames;
+	private        ArrayList<String> mSavedGamesNames;
 
 	private PlayGames(Activity ctx) {
 		activity = ctx;
@@ -109,9 +114,12 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static void writeToSnapshot(String snapshotId, byte[] content) {
 		Log.i("Play Games", "Streaming to " + snapshotId);
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, true);
-		Snapshot snapshot = result.await(3,TimeUnit.SECONDS).getSnapshot();
-		if(snapshot != null) {
+		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, true, Snapshots.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED);
+
+		Snapshots.OpenSnapshotResult openResult = result.await(3, TimeUnit.SECONDS);
+		Snapshot snapshot = openResult.getSnapshot();
+
+		if (snapshot != null) {
 			snapshot.getSnapshotContents().writeBytes(content);
 
 			PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
@@ -135,7 +143,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	public static byte[] readFromSnapshot(String snapshotId) throws IOException {
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
 		Snapshot snapshot = result.await(3, TimeUnit.SECONDS).getSnapshot();
-		if(snapshot!= null) {
+		if (snapshot != null) {
 			return snapshot.getSnapshotContents().readFully();
 		} else {
 			throw new IOException("snapshot timeout");
@@ -143,7 +151,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	public static boolean haveSnapshot(String snapshotId) {
-		if(playGames.mSavedGamesNames==null) {
+		if (playGames.mSavedGamesNames == null) {
 			return false;
 		}
 
@@ -204,9 +212,11 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 					Log.i("Play Games", "load ok!");
 
 					mSavedGamesNames = new ArrayList<>();
-					for (SnapshotMetadata m :result.getSnapshots()) {
+					for (SnapshotMetadata m : result.getSnapshots()) {
 						mSavedGamesNames.add(m.getUniqueName());
 					}
+
+					restoreProgress();
 
 				} else {
 					Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
@@ -283,6 +293,55 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		return false;
 	}
 
+	public static void backupProgress() {
+		if (!isConnected()) {
+			return;
+		}
+
+		Game.instance().executor.execute(new Runnable() {
+			@Override
+			public void run() {
+				PlayGames.packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+					@Override
+					public boolean accept(File pathname) {
+						String filename = pathname.getName();
+						if (filename.equals(Badges.BADGES_FILE)) {
+							return true;
+						}
+
+						if (filename.equals(Library.LIBRARY_FILE)) {
+							return true;
+						}
+
+						if (filename.equals(Rankings.RANKINGS_FILE)) {
+							return true;
+						}
+
+						if (filename.startsWith("game_") && filename.endsWith(".dat")) {
+							return true;
+						}
+						return false;
+					}
+				});
+
+			}
+		});
+	}
+
+	public static void restoreProgress() {
+		if (!isConnected()) {
+			return;
+		}
+
+		Game.instance().executor.execute(new Runnable() {
+			@Override
+			public void run() {
+				PlayGames.unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(""));
+			}
+		});
+	}
+
+
 	public static void showBadges() {
 		if (isConnected()) {
 			playGames.activity.startActivityForResult(
@@ -293,12 +352,12 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	static int[] boards = {R.string.leaderboard_easy_mode,
-							R.string.leaderboard_normal_with_saves,
-			                R.string.leaderboard_normal,
-			                R.string.leaderboard_expert};
+			R.string.leaderboard_normal_with_saves,
+			R.string.leaderboard_normal,
+			R.string.leaderboard_expert};
 
-	public static void submitScores(int level,int scores) {
-		if(isConnected()) {
+	public static void submitScores(int level, int scores) {
+		if (isConnected()) {
 			Games.Leaderboards.submitScore(playGames.googleApiClient, Game.getVar(boards[level]),
 					scores);
 		}

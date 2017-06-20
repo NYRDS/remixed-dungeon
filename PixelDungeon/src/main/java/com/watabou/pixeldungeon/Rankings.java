@@ -68,6 +68,7 @@ public enum Rankings {
 		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.getClass().getSimpleName(), resultDescription);
 
 		PlayGames.submitScores(Game.getDifficulty(), rec.score);
+		PlayGames.backupProgress();
 
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now() );
 		try {
