@@ -367,7 +367,6 @@ public class Ghost extends NPC {
 			defenseSkill = 5;
 			
 			exp = 0;
-			maxLvl = 5;	
 			
 			setState(WANDERING);
 			lootChance = 1;

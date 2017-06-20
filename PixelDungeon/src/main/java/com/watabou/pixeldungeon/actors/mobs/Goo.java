@@ -192,6 +192,7 @@ public class Goo extends Boss {
 
 	@Override
 	public boolean zap(@NonNull Char enemy) {
+		pumpedUp = false;
 		return true;
 	}
 }
