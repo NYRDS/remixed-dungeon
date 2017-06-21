@@ -7,6 +7,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -35,7 +36,7 @@ class WndPlayGames extends Window {
 		boolean playGamesConnected = PlayGames.isConnected();
 		resizeLimited(120);
 
-		Text listTitle = PixelScene.createMultiline("Google Play Games", GuiProperties.mediumTitleFontSize());
+		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndPlayGames_Title), GuiProperties.mediumTitleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(width - GAP * 2);
 		listTitle.measure();
@@ -46,14 +47,14 @@ class WndPlayGames extends Window {
 
 		y += listTitle.height() + GAP;
 
-		CheckBox usePlayGames = new CheckBox("use Google Play Games", playGamesConnected) {
+		CheckBox usePlayGames = new CheckBox(Game.getVar(R.string.WndPlayGames_Use), playGamesConnected) {
 			@Override
 			public void checked(boolean value) {
 				super.checked(value);
 
 				if (value) {
 					PlayGames.connect();
-					Game.scene().add(new WndMessage("Connecting to Google Play Games, please wait a bit"));
+					Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
 				} else {
 					PlayGames.disconnect();
 				}
@@ -69,7 +70,7 @@ class WndPlayGames extends Window {
 			return;
 		}
 
-		addButton(new RedButton("Show badges") {
+		addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Show_Badges)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -77,7 +78,7 @@ class WndPlayGames extends Window {
 			}
 		});
 
-		addButton(new RedButton("Show leaderboard") {
+		addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Show_Leaderboards)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -87,7 +88,7 @@ class WndPlayGames extends Window {
 
 		if(BuildConfig.DEBUG) {
 
-			addButton(new RedButton("Local -> Cloud") {
+			addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Sync_to_Cloud)) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -123,7 +124,7 @@ class WndPlayGames extends Window {
 				}
 			});
 
-			addButton(new RedButton("Cloud -> Local") {
+			addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Sync_to_Cloud)) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -174,9 +175,9 @@ class WndPlayGames extends Window {
 			@Override
 			public void run() {
 				if (res) {
-					Game.scene().add(new WndMessage("ok!"));
+					Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Show_Ok)));
 				} else {
-					Game.scene().add(new WndMessage("something went wrong..."));
+					Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Show_Error)));
 				}
 				hide();
 			}
