@@ -25,8 +25,6 @@ public class Quiver extends Bag {
 
 	{
 		image = ItemSpriteSheet.QUIVER_COMMON;
-		
-		size = 12;
 	}
 	
 	@Override

@@ -51,6 +51,12 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
+import com.watabou.pixeldungeon.items.bags.Keyring;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
+import com.watabou.pixeldungeon.items.bags.Quiver;
+import com.watabou.pixeldungeon.items.bags.ScrollHolder;
+import com.watabou.pixeldungeon.items.bags.SeedPouch;
+import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
@@ -150,14 +156,15 @@ public enum HeroClass {
 		hero.collect(new RingOfFrost().identify());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
-		hero.collect(new IceGuardianCoreModule());
+
+		hero.collect(new Keyring());
+		hero.collect(new PotionBelt());
+		hero.collect(new Quiver());
+		hero.collect(new ScrollHolder());
+		hero.collect(new SeedPouch());
+		hero.collect(new WandHolster());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
-		hero.collect(new Ankh());
-
-		hero.collect(new ChaosCrystal());
-		hero.collect(new ChaosCrystal());
-		hero.collect(new ChaosCrystal());
 
 		hero.ht(1000);
 		hero.hp(1000);

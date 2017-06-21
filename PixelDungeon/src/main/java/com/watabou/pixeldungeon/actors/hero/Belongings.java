@@ -320,4 +320,8 @@ public class Belongings implements Iterable<Item> {
 			}
 		}
 	}
+
+	public static int getBackpackSize(){
+		return BACKPACK_SIZE;
+	}
 }

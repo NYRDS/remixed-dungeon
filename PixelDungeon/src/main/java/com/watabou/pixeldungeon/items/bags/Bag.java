@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -43,7 +44,7 @@ public class Bag extends Item implements Iterable<Item> {
 	
 	public Char owner;
 	public ArrayList<Item> items = new ArrayList<>();
-	public int size = 1;
+	public int size = Belongings.getBackpackSize();
 		
 	@Override
 	public ArrayList<String> actions( Hero hero ) {

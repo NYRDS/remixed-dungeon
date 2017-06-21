@@ -8,8 +8,6 @@ public class PotionBelt extends Bag {
 
 	{
 		image = ItemSpriteSheet.BELT;
-		
-		size = 12;
 	}
 	
 	@Override

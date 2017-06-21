@@ -26,8 +26,6 @@ public class Keyring extends Bag {
 
 	{
 		image = ItemSpriteSheet.KEYRING;
-		
-		size = 12;
 	}
 	
 	@Override
