@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.debug.CandyOfDeath;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -163,6 +164,7 @@ public enum HeroClass {
 		hero.collect(new ScrollHolder());
 		hero.collect(new SeedPouch());
 		hero.collect(new WandHolster());
+		hero.collect(new CandyOfDeath());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 
