@@ -3,17 +3,17 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            keyAlias 'testKey'
-            keyPassword '123456'
-            storeFile file('testKey/test.jks')
-            storePassword '123456'
+            keyAlias 'pixel dundeon playstore key'
+            keyPassword 'qwerty'
+            storeFile file('C:\\Temp\\pixeldungeon')
+            storePassword 'qwerty666'
         }
     }
     buildToolsVersion '25.0.3'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 436
-        versionName "remix.26.6.fix.2"
+        versionCode 439
+        versionName "remix.27.beta.2"
 
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
     }
