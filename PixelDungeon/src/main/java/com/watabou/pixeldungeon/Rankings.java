@@ -62,7 +62,7 @@ public enum Rankings {
 		rec.win		    = winLevel  != gameOver.LOSE;
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();
-		rec.score	    = score(winLevel != gameOver.LOSE);
+		rec.score	    = score(winLevel);
 		rec.mod			= PixelDungeon.activeMod();
 
 		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.getClass().getSimpleName(), resultDescription);
@@ -116,8 +116,18 @@ public enum Rankings {
 		save();
 	}
 	
-	private int score( boolean win ) {
-		return (win ? 2 : 1) * ((Statistics.goldCollected + Dungeon.hero.lvl() * Statistics.deepestFloor * 100) + (Statistics.enemiesSlain * 25) + (Statistics.foodEaten * 111) + (Statistics.piranhasKilled * 666) + (java.lang.Integer.bitCount(Dungeon.challenges) * (win ? 5000 : 250)));
+	private int score(gameOver win ) {
+
+		double winC        = Math.pow(1.4f, win.ordinal());
+		double challengesC = Math.pow(1.3f, Integer.bitCount(Dungeon.challenges));
+		double difficultyC = Math.pow(1.4f, Game.getDifficulty());
+
+		return (int) (difficultyC * challengesC * winC * ( Statistics.goldCollected
+									+  Math.pow(1.45f,Dungeon.hero.lvl()) / Statistics.duration
+									+  Math.pow(1.55f,Statistics.deepestFloor) / Statistics.duration
+									+ (Statistics.enemiesSlain * 25)
+									+ (Statistics.foodEaten * 111)
+									+ (Statistics.piranhasKilled * 666)));
 	}
 	
 	private static final String RECORDS	= "records";
