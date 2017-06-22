@@ -67,7 +67,7 @@ public enum Rankings {
 
 		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.getClass().getSimpleName(), resultDescription);
 
-		if (ModdingMode.inMod()){
+		if (!ModdingMode.inMod()){
 			PlayGames.submitScores(Game.getDifficulty(), rec.score);
 			PlayGames.backupProgress();
 		}
@@ -117,7 +117,7 @@ public enum Rankings {
 	}
 	
 	private int score( boolean win ) {
-		return (Statistics.goldCollected + Dungeon.hero.lvl() * Statistics.deepestFloor * 100) * (win ? 2 : 1);
+		return (win ? 2 : 1) * ((Statistics.goldCollected + Dungeon.hero.lvl() * Statistics.deepestFloor * 100) + (Statistics.enemiesSlain * 25) + (Statistics.foodEaten * 111) + (Statistics.piranhasKilled * 666) + (java.lang.Integer.bitCount(Dungeon.challenges) * (win ? 5000 : 250)));
 	}
 	
 	private static final String RECORDS	= "records";
