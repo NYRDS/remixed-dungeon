@@ -28,7 +28,12 @@
 
     <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
     <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
-    
+
+    <!-- I needed that for testing-->
+    <!-- STRINGS OF CandyOfDeath CLASS -->
+    <string name="CandyOfDeath_Name">Карамелька смерти</string>
+    <string name="CandyOfDeath_Info">Когда, не мудурствуя лукаво, нужно умертвить героя здесь и сейчас.</string>
+
 <!--
 Google Play game services IDs.
 Save this file as res/values/games-ids.xml in your project.
