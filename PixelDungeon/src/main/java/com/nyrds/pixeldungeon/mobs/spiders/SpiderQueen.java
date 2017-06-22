@@ -24,7 +24,6 @@ public class SpiderQueen extends Boss {
 		defenseSkill = 18;
 		
 		exp = 11;
-		maxLvl = 21;
 
 		float dice = Random.Float();
 		if( dice < 0.33 ) {

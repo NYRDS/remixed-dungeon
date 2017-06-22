@@ -17,6 +17,7 @@ abstract public class Boss extends Mob {
 	public Boss() {
 		RESISTANCES.add(Death.class);
 		RESISTANCES.add(ScrollOfPsionicBlast.class);
+		maxLvl = 50;
 	}
 
 	@Override
