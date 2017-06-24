@@ -123,8 +123,7 @@ public enum Rankings {
 		double difficultyC = Math.pow(1.4f, Game.getDifficulty());
 
 		return (int) (difficultyC * challengesC * winC * ( Statistics.goldCollected
-									+ Math.pow(1.45f,Dungeon.hero.lvl())
-									+ Math.pow(1.55f,Statistics.deepestFloor)
+									+ (Dungeon.hero.lvl() * Statistics.deepestFloor * 100)
 									- Statistics.duration
 									+ (Statistics.enemiesSlain * 25)
 									+ (Statistics.foodEaten * 111)
