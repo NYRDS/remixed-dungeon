@@ -54,7 +54,25 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 			SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
 				@Override
 				protected void onClick() {
-					PlayGames.loadSnapshots();
+					final Window refreshing = new WndMessage("Please wait a bit...")  {
+						@Override
+						public void onBackPressed() {
+						}
+					};
+
+					Game.scene().add(refreshing);
+					PlayGames.loadSnapshots(new Runnable() {
+						@Override
+						public void run() {
+							Game.executeInGlThread(new Runnable() {
+								@Override
+								public void run() {
+									refreshing.hide();
+									refreshWindow();
+								}
+							});
+						}
+					});
 				}
 			};
 			refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
@@ -120,8 +138,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 								} else {
 									res = PlayGames.unpackSnapshotTo(snapshotId, slotDir);
 								}
-								WndSaveSlotSelect.this.hide();
-								GameScene.show(new WndSaveSlotSelect(_saving));
+								refreshWindow();
 								showActionResult(res);
 							}
 						};
@@ -182,6 +199,12 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 			btn.setPos(width / 2 - btn.width() / 2, height);
 			resize(width, (int) (height + btn.height()));
 		}
+	}
+
+
+	private void refreshWindow() {
+		WndSaveSlotSelect.this.hide();
+		GameScene.show(new WndSaveSlotSelect(saving));
 	}
 
 	private static boolean isSlotIndexUsed(int index) {

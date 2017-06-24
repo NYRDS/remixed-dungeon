@@ -206,10 +206,10 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	@Override
 	public void onConnected(@Nullable Bundle bundle) {
 		Log.i("Play Games", "onConnected");
-		loadSnapshots();
+		loadSnapshots(null);
 	}
 
-	public static void loadSnapshots(){
+	public static void loadSnapshots(@Nullable final Runnable doneCallback){
 		if(isConnected()) {
 			Games.Snapshots.load(playGames.googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
 				@Override
@@ -226,8 +226,11 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 					} else {
 						Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
 					}
+					if(doneCallback != null) {
+						doneCallback.run();
+					}
 				}
-			});
+			}, 3, TimeUnit.SECONDS);
 		}
 	}
 
