@@ -38,14 +38,5 @@ Save this file as res/values/games-ids.xml in your project.
    <string name="leaderboard_normal_with_saves"></string>
    <string name="leaderboard_normal"></string>
    <string name="leaderboard_expert"></string>
-
-   <!-- End current session if app sleeps for a period of time -->
-   <integer name="ga_sessionTimeout">300</integer>
-
-   <!-- Enable automatic Activity measurement -->
-   <bool name="ga_autoActivityTracking">true</bool>
-
-   <!--  The property id associated with this analytics tracker -->
-   <string name="ga_trackingId">"duumy id"</string>
-    
+   
 </resources>
