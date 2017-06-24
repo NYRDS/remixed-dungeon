@@ -56,7 +56,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static final String PROGRESS = "Progress";
 
-	private static boolean loadResult;
+	private static boolean loadResult = false;
 
 	private static GoogleApiClient googleApiClient;
 	private Activity        activity;
