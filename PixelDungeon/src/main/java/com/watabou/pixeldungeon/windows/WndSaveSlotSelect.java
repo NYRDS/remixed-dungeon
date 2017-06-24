@@ -86,8 +86,17 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				};
 				buttons.add(btn);
 
-				if (BuildConfig.DEBUG && PlayGames.isConnected()) {
+				if (PlayGames.isConnected()) {
 					final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.heroClass.toString();
+
+					SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
+						@Override
+						protected void onClick() {
+							PlayGames.loadSnaphots();
+						}
+					};
+					refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
+					add(refreshBtn);
 
 					if ((_saving && !options[index].isEmpty())
 							|| (!_saving

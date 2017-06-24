@@ -64,7 +64,8 @@ public enum Icons {
 	CHEST_ROYAL,
 	PLAY_GAMES,
 	BTN_SYNC_IN,
-	BTN_SYNC_OUT;
+	BTN_SYNC_OUT,
+	BTN_SYNC_REFRESH;
 
 	
 	public Image get() {
@@ -199,6 +200,9 @@ public enum Icons {
 			break;
 		case BTN_SYNC_OUT:
 			icon.frame( icon.texture.uvRect( 14, 85, 25, 96 ) );
+			break;
+		case BTN_SYNC_REFRESH:
+			icon.frame( icon.texture.uvRect( 1, 97, 12, 108 ) );
 			break;
 		}
 		return icon;

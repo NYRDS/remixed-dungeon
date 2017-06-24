@@ -56,11 +56,11 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static final String PROGRESS = "Progress";
 
-	private GoogleApiClient googleApiClient;
+	private static GoogleApiClient googleApiClient;
 	private Activity        activity;
 
 	private static PlayGames         playGames;
-	private        ArrayList<String> mSavedGamesNames;
+	private static ArrayList<String> mSavedGamesNames;
 
 	private PlayGames(Activity ctx) {
 		activity = ctx;
@@ -205,6 +205,10 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	@Override
 	public void onConnected(@Nullable Bundle bundle) {
 		Log.i("Play Games", "onConnected");
+		loadSnaphots();
+	}
+
+	public static void loadSnaphots(){
 		Games.Snapshots.load(googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
 			@Override
 			public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
