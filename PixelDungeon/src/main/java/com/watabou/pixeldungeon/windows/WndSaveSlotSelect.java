@@ -66,6 +66,20 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		final int columns = PixelDungeon.landscape() ? 3 : 2;
 		final int BUTTON_WIDTH = WIDTH / columns - GAP;
 
+		if (PlayGames.isConnected()) {
+			SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
+				@Override
+				protected void onClick() {
+					boolean res = PlayGames.loadSnaphots();
+					showActionResult(res);
+					WndSaveSlotSelect.this.hide();
+					GameScene.show(new WndSaveSlotSelect(_saving));
+				}
+			};
+			refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
+			add(refreshBtn);
+		}
+
 		for (int i = 0; i < options.length / columns + 1; i++) {
 			for (int j = 0; j < columns; j++) {
 				final int index = i * columns + j;
@@ -88,15 +102,6 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 				if (PlayGames.isConnected()) {
 					final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.heroClass.toString();
-
-					SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
-						@Override
-						protected void onClick() {
-							PlayGames.loadSnaphots();
-						}
-					};
-					refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
-					add(refreshBtn);
 
 					if ((_saving && !options[index].isEmpty())
 							|| (!_saving
@@ -259,9 +264,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 	private void showActionResult(final boolean res) {
 		if (res) {
-			Game.scene().add(new WndMessage("ok!"));
+			Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Show_Ok)));
 		} else {
-			Game.scene().add(new WndMessage("something went wrong..."));
+			Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Show_Error)));
 		}
 	}
 

@@ -56,6 +56,8 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static final String PROGRESS = "Progress";
 
+	private static boolean loadResult;
+
 	private static GoogleApiClient googleApiClient;
 	private Activity        activity;
 
@@ -208,7 +210,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		loadSnaphots();
 	}
 
-	public static void loadSnaphots(){
+	public static boolean loadSnaphots(){
 		Games.Snapshots.load(googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
 			@Override
 			public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
@@ -219,14 +221,15 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 					for (SnapshotMetadata m : result.getSnapshots()) {
 						mSavedGamesNames.add(m.getUniqueName());
 					}
-
 					restoreProgress();
-
+					loadResult = true;
 				} else {
+					loadResult = false;
 					Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
 				}
 			}
 		});
+		return loadResult;
 	}
 
 	public static boolean packFilesToSnapshot(String id, File dir, FileFilter filter) {
