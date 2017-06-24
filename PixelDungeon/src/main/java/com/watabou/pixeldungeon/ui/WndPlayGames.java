@@ -104,7 +104,7 @@ class WndPlayGames extends Window {
 										return true;
 									}
 
-									if (filename.equals(Library.LIBRARY_FILE)) {
+									if (filename.equals(Library.getLibraryFile())) {
 										return true;
 									}
 
