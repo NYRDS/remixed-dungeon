@@ -4,7 +4,6 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.PlayGames;
@@ -51,6 +50,18 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		tfTitle.measure();
 		add(tfTitle);
 
+		if(!_saving && PlayGames.isConnected()) {
+			SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
+				@Override
+				protected void onClick() {
+					PlayGames.loadSnapshots();
+				}
+			};
+			refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
+			add(refreshBtn);
+		}
+
+
 		Text tfMesage = PixelScene.createMultiline(windowText(), GuiProperties.regularFontSize());
 		tfMesage.maxWidth(maxW);
 		tfMesage.measure();
@@ -88,15 +99,6 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 				if (PlayGames.isConnected()) {
 					final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.heroClass.toString();
-
-					SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
-						@Override
-						protected void onClick() {
-							PlayGames.loadSnaphots();
-						}
-					};
-					refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
-					add(refreshBtn);
 
 					if ((_saving && !options[index].isEmpty())
 							|| (!_saving

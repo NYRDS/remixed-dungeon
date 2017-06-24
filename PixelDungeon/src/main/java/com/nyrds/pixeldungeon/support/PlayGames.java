@@ -56,11 +56,12 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static final String PROGRESS = "Progress";
 
-	private static GoogleApiClient googleApiClient;
-	private Activity        activity;
+	private GoogleApiClient   googleApiClient;
+	private Activity          activity;
+	private ArrayList<String> mSavedGamesNames;
 
-	private static PlayGames         playGames;
-	private static ArrayList<String> mSavedGamesNames;
+	private static PlayGames  playGames;
+
 
 	private PlayGames(Activity ctx) {
 		activity = ctx;
@@ -205,28 +206,29 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	@Override
 	public void onConnected(@Nullable Bundle bundle) {
 		Log.i("Play Games", "onConnected");
-		loadSnaphots();
+		loadSnapshots();
 	}
 
-	public static void loadSnaphots(){
-		Games.Snapshots.load(googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
-			@Override
-			public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
-				if (result.getStatus().isSuccess()) {
-					Log.i("Play Games", "load ok!");
+	public static void loadSnapshots(){
+		if(isConnected()) {
+			Games.Snapshots.load(playGames.googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
+				@Override
+				public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
+					if (result.getStatus().isSuccess()) {
+						Log.i("Play Games", "load ok!");
 
-					mSavedGamesNames = new ArrayList<>();
-					for (SnapshotMetadata m : result.getSnapshots()) {
-						mSavedGamesNames.add(m.getUniqueName());
+						playGames.mSavedGamesNames = new ArrayList<>();
+						for (SnapshotMetadata m : result.getSnapshots()) {
+							playGames.mSavedGamesNames.add(m.getUniqueName());
+						}
+
+						restoreProgress();
+					} else {
+						Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
 					}
-
-					restoreProgress();
-
-				} else {
-					Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
 				}
-			}
-		});
+			});
+		}
 	}
 
 	public static boolean packFilesToSnapshot(String id, File dir, FileFilter filter) {
