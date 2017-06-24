@@ -33,25 +33,5 @@
     <!-- STRINGS OF CandyOfDeath CLASS -->
     <string name="CandyOfDeath_Name">Карамелька смерти</string>
     <string name="CandyOfDeath_Info">Когда, не мудурствуя лукаво, нужно умертвить героя здесь и сейчас.</string>
-
-<!--
-Google Play game services IDs.
-Save this file as res/values/games-ids.xml in your project.
--->
-  <string name="achievement_boss_slain_1">CgkI4Ozr7bISEAIQIw</string>
-  <string name="achievement_boss_slain_2">CgkI4Ozr7bISEAIQJA</string>
-  <string name="achievement_boss_slain_3">CgkI4Ozr7bISEAIQJQ</string>
-  <string name="achievement_boss_slain_4">CgkI4Ozr7bISEAIQJg</string>
-  <string name="achievement_lich_slain">CgkI4Ozr7bISEAIQYw</string>
-  <string name="achievement_ice_guardian_slain">CgkI4Ozr7bISEAIQZA</string>
-  <string name="achievement_spider_queen_slain">CgkI4Ozr7bISEAIQZQ</string>
-  <string name="achievement_shadow_lord_slain">CgkI4Ozr7bISEAIQZg</string>
-  <string name="achievement_yog_slain">CgkI4Ozr7bISEAIQZw</string>
-
-
-   <string name="leaderboard_easy_mode">CgkI4Ozr7bISEAIQcQ</string>
-   <string name="leaderboard_normal_with_saves">CgkI4Ozr7bISEAIQcg</string>
-   <string name="leaderboard_normal">CgkI4Ozr7bISEAIQcw</string>
-   <string name="leaderboard_expert">CgkI4Ozr7bISEAIQdA</string>
     
 </resources>

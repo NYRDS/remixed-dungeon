@@ -19,4 +19,33 @@
     <string name="google_crash_reporting_api_key" translatable="false"></string>
     <string name="google_storage_bucket" translatable="false"></string>
 
+<!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+  <string name="achievement_boss_slain_1"></string>
+  <string name="achievement_boss_slain_2"></string>
+  <string name="achievement_boss_slain_3"></string>
+  <string name="achievement_boss_slain_4"></string>
+  <string name="achievement_lich_slain"></string>
+  <string name="achievement_ice_guardian_slain"></string>
+  <string name="achievement_spider_queen_slain"></string>
+  <string name="achievement_shadow_lord_slain"></string>
+  <string name="achievement_yog_slain"></string>
+
+
+   <string name="leaderboard_easy_mode"></string>
+   <string name="leaderboard_normal_with_saves"></string>
+   <string name="leaderboard_normal"></string>
+   <string name="leaderboard_expert"></string>
+
+   <!-- End current session if app sleeps for a period of time -->
+   <integer name="ga_sessionTimeout">300</integer>
+
+   <!-- Enable automatic Activity measurement -->
+   <bool name="ga_autoActivityTracking">true</bool>
+
+   <!--  The property id associated with this analytics tracker -->
+   <string name="ga_trackingId">"duumy id"</string>
+    
 </resources>
