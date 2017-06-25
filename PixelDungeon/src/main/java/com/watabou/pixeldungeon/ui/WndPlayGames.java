@@ -88,55 +88,6 @@ class WndPlayGames extends Window {
 
 		if(BuildConfig.DEBUG) {
 
-			addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Sync_to_Cloud)) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-
-					Game.instance().executor.execute(new Runnable() {
-						@Override
-						public void run() {
-							boolean res = PlayGames.packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
-								@Override
-								public boolean accept(File pathname) {
-									String filename = pathname.getName();
-									if (filename.equals(Badges.BADGES_FILE)) {
-										return true;
-									}
-
-									if (filename.equals(Library.getLibraryFile())) {
-										return true;
-									}
-
-									if (filename.equals(Rankings.RANKINGS_FILE)) {
-										return true;
-									}
-
-									if (filename.startsWith("game_") && filename.endsWith(".dat")) {
-										return true;
-									}
-									return false;
-								}
-							});
-							showActionResult(res);
-						}
-					});
-				}
-			});
-
-			addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Sync_to_Cloud)) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					Game.instance().executor.execute(new Runnable() {
-						@Override
-						public void run() {
-							showActionResult(PlayGames.unpackSnapshotTo(PlayGames.PROGRESS, FileSystem.getInternalStorageFile("")));
-						}
-					});
-				}
-			});
-
 			addButton(new RedButton("Zip Test") {
 				@Override
 				protected void onClick() {
