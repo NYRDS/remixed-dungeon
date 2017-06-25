@@ -7,8 +7,6 @@
     <string name="WndPlayGames_Connecting">Connecting to Google Play Games, please wait a bit</string>
     <string name="WndPlayGames_Show_Badges">Show badges</string>
     <string name="WndPlayGames_Show_Leaderboards">Show leaderboards</string>
-    <string name="WndPlayGames_Sync_to_Cloud">Local -> Cloud</string>
-    <string name="WndPlayGames_Sync_from_Cloud">Cloud -> Local</string>
 
     <string name="WndPlayGames_Show_Ok">Success!</string>
     <string name="WndPlayGames_Show_Error">Operation failed. Something went wrong...</string>
