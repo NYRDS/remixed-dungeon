@@ -324,6 +324,7 @@
         - Potions can now be upgraded with Scrolls of Upgrade. The upgraded and degraded potions can also be found in loot\n
         - Fixed chaos crystal issue that would deplete whole stack of empty scrolls when "fused" instead of 1\n
         - Fixed bug that made Goo unable to attack hero at certain distance after using "pump attack"\n
-        - Increased maxLevel attribute for loot and xp, that you can get from Fetid Rat and various bosses (So that unusually high level characters would still get their reward)\n
+        - Increased maxLevel attribute for Fetid Rat and various bosses (So that unusually high level characters would still get loot from those characters)\n
+        - New attribute for levels and mobs in player-created mods: "viewDistance" (Sets view distance in range of 1-8)\n
     </string>
 </resources>
