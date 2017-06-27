@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
-  <string name="ShadowLord_Name">Signore dell\'ombra</string>
-  <string name="ShadowLord_Gender">Maschile</string>
-  <string name="ShadowLord_Name_Objective">Signore dell\'ombra</string>
-  <string name="ShadowLord_Desc">Creatura formata da male puro e oscurità, in molti credono che egli sia il Vecchio Dio stesso considerando quanto è potente. Mentre altri presumono che egli non sia altro che un guardiano delle camere del Vecchio Dio.</string>
+  <string name="ShadowLord_Name">signore dell\' ombra</string>
+  <string name="ShadowLord_Gender">maschile</string>
+  <string name="ShadowLord_Name_Objective">Signore dell\' Ombra</string>
+  <string name="ShadowLord_Desc">Creatura formata da male puro e oscurità, in molti credono che egli sia il Vecchio Dio stesso considerando quanto è potente. Mentre altri presumono non sia altro che un guardiano delle camere del Vecchio Dio.</string>
   <string name="ShadowLord_Intro">Preparati!</string>
   <string name="ShadowLord_Death">Nooooo...</string>
-  <string name="AllowStatisticsCollectionScene_Title">raccolta di statistiche d\'utilizzo</string>
+  <string name="AllowStatisticsCollectionScene_Title">Raccolta statistiche d\'utilizzo</string>
   <string name="AllowStatisticsCollectionScene_Request">Se lo consentirai, Remixed Pixel Dungeon raccogierà le statistiche dell\'uso.
 Quei dati saranno usati per:\n
 - Individuare e fissare vari difetti minori (Per gli errori gravi ti verrà chiesto esplicitamente di inviare un rapporto.)\n
