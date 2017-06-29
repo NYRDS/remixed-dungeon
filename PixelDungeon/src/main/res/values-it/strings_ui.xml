@@ -7,19 +7,26 @@
   <string name="TitleScene_About">Circa</string>
   <string name="TitleScene_InternalStorageLow">Non abbastanza spazio\n nella memoria interna\n Il tuo progresso potrebbe andare perso!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Gioca Punteg Migilioro</string>
+  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon di NYRDS, basato sui sorgenti di Pixel Dungeon di Watabou.</string>
+  <string name="AboutScene_Code">Codice:</string>
+  <string name="AboutScene_Graphics">Grafica:</string>
+  <string name="AboutScene_Music">Musiche:</string>
+  <string name="AboutScene_Sound">Suoni:</string>
+  <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
+  <string name="AboutScene_Email_Us">Contattaci via e-mail:</string>
   <string name="AboutScene_OurSite">Nostro sito web:</string>
-  <string name="AboutScene_Snd">Spedici E-Mail</string>
+  <string name="AboutScene_Snd">Spedisci e-mail</string>
+  <string name="AboutScene_Translation">Tradotto da:</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Migliori Classificati</string>
   <string name="RankingsScene_Total">Partite totali giocate:</string>
-  <string name="RankingsScene_NoGames">Non sono state ancora giocate partite.</string>
+  <string name="RankingsScene_NoGames">Nessuna partita giocata fino ad ora.</string>
   <string name="RankingsScene_NoInfo">Nessuna informazione aggiuntiva</string>
   <!--STRINGS OF StartScene CLASS-->
   <string name="StartScene_Load">Carica partita</string>
   <string name="StartScene_New">Nuova partita</string>
   <string name="StartScene_Erase">Cancella la partita corrente</string>
-  <string name="StartScene_Depth">profondità: %1$d\nLivello: %2$d</string>
+  <string name="StartScene_Depth">Profondità: %1$d\nLivello: %2$d</string>
   <string name="StartScene_Really">Vuoi veramente iniziare una nuova partita?</string>
   <string name="StartScene_Warning">I progressi della tua partita corrente saranno cancellati.</string>
   <string name="StartScene_Yes">Si, inizia una nuova partita</string>
@@ -35,7 +42,7 @@
   <!--STRINGS OF InterLevelScene CLASS-->
   <string name="InterLevelScene_Descending">Scendendo...</string>
   <string name="InterLevelScene_Ascending">Salendo...</string>
-  <string name="InterLevelScene_Loading">Caricando...</string>
+  <string name="InterLevelScene_Loading">Caricamento...</string>
   <string name="InterLevelScene_Resurrecting">Risorgendo...</string>
   <string name="InterLevelScene_Returning">Ritornando...</string>
   <string name="InterLevelScene_Falling">Cadendo...</string>
@@ -47,21 +54,22 @@
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>
   <string name="WndSettings_ZoomDef">Zoom predefinito</string>
-  <string name="WndSettings_TextScaleDefault">font predefinito</string>
+  <string name="WndSettings_TextScaleDefault">Font predefinito</string>
   <string name="WndSettings_ScaleUp">Aumentare UI</string>
   <string name="WndSettings_Immersive">Modalità coinvolgente</string>
   <string name="WndSettings_Music">Musica</string>
   <string name="WndSettings_Sound">Suono FX</string>
   <string name="WndSettings_Brightness">Luminosità</string>
-  <string name="WndSettings_SwitchPort">passa a ritratto</string>
-  <string name="WndSettings_SwitchLand">Passa a paesaggio</string>
+  <string name="WndSettings_SwitchPort">Passa alla modalità ritratto</string>
+  <string name="WndSettings_SwitchLand">Passa alla modalità paesaggio</string>
   <string name="WndSettings_SelectLanguage">Seleziona Lingua</string>
   <string name="WndSettings_SecondQuickslot">Seconda posizione veloce</string>
   <string name="WndSettings_ThirdQuickslot">Terza posizione veloce</string>
   <string name="WndSettings_ExperementalFont">Nuovo Font</string>
   <string name="WndSettings_ClassicFont">Font Classica</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
-  <string name="WndSaveSlotSelect_SelectSlot">Seleziona Pozizione</string>
+  <string name="WndSaveSlotSelect_SelectSlot">Seleziona cartuccia</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">Seleziona modifica</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Il gioco è crashato...\nCi dispiace.\nPer favore inviaci la segnalazione dell\'errore per aiutarci a risolverlo.</string>
 </resources>

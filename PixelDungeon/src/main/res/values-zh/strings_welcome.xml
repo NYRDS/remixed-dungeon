@@ -3,93 +3,93 @@
   <string name="Welcome_Ok">棒極了！</string>
   <string name="Welcome_Title">歡迎！</string>
   <string name="Welcome_Text">
-混合的像素地牢是基于Watabou所制作的开源像素地牢的一个MOD。
+重鑄版像素地牢改編自Watabou製作的像素地牢開放原始碼的一個mod。
 
-这个MOD是为了给玩家们提供新的内容和体验而制作的。
+這個mod專為眾玩家提供新的内容和體驗而製作。
 
-我们这个MOD的另一个重要成分是使游戏支持多种语言。
+此外，本mod支持多國语言。
 
-我们的每一次更新都尽力让我们与玩家靠得更近。
+我們的每一次更新都盡力配合玩家的要求。
 
-也许有一天，你将会看到你的点子出现在这个游戏里……谢谢你们的创意=)
+也許有一天，您會看到你的建議在遊戲中出現……感謝您們獻上創意=)
 
-现在的版本是基于像素地牢1.7.2版和部分1.7.5版。
+現在的版本是改編自像素地牢1.7.2版和部分1.7.5版。
 
-和原版的差异：
-- 改变语言的选项
+和原版的差異：
+- 供改變語言的選項
 - 新的怪物和NPC
-- 毒气和烈焰能对更多物品造成影响了
-- 新的“食物”种类
-- 新物品和老物品的新特性
-- 现在可以吃种子了 = )
-- 新的职业：精灵</string>
+- 毒氣和烈焰能對更多物品造成影響
+- 新款「食物」
+- 新物品，以及為舊有物品添上新特性
+- 现在可以吃種子了 = )
+- 新的職業：精靈</string>
   <string name="Welcome_Text_19">
 remix.17：
-- 新的拟形怪种类
+- 新品種擬形怪
 remix.18：
 - 元素生物
 remix.19：
-- 多种蜘蛛
+- 多種蜘蛛
 - 蜘蛛巢穴
 - 蜘蛛女王</string>
   <string name="Welcome_Text_20">
 remix.20：
-- 新的稀有武器 - 锁镰
+- 新的稀有武器 - 鎖鎌
 - 新的稀有怪物
-- 能够存读档的游戏模式
-- 更多难以注意到的小玩意</string>
+- 在各種遊戲模式中都能存檔
+- 更多難以注意到的小玩意</string>
   <string name="Welcome_Text_20_1">
 remix.20.1：
-- 支配卷轴
-- 诅咒卷轴</string>
+- 支配卷軸
+- 詛咒卷軸</string>
   <string name="Welcome_Text_20_2">
 remix.21：
 - 稀有的混沌物品
-- 液火现在真的像是液体了</string>
+- 液火現在真的是液體</string>
   <string name="Welcome_Text_21_1">
 remix.21.1：
-- 简单模式(带广告)
-- 专家模式</string>
+- 簡單模式（有廣告）
+- 專家模式</string>
   <string name="Welcome_Text_21_2">
 remix.21.2：
-- 能够选择游戏MOD(只是现在植入的)(只适用于熟练的MOD制作者)</string>
+- 能夠選擇遊戲中其他mod（現在只限改skin)（僅適用於富經驗的mod製作者)</string>
   <string name="Welcome_Text_21_3">
 remix.21.3：
-- PD mini现在可以下载了(虽然没有完成但很有趣)
-- 改善下水道地区的贴图</string>
+- PD mini現在可以下載了（雖然尚未完成但饒有趣味）
+- 改善下水道地區的畫質</string>
   <string name="Welcome_Text_21_4">
 remix.21.4：
-- 新的稀有武器——牺牲之剑</string>
+- 新的稀有武器——噬命之劍</string>
   <string name="Welcome_Text_21_5">
 remix.21.5：
-- 旧物品的新特性</string>
+- 為舊有物品添上新特性</string>
   <string name="Welcome_Text_22">
 remix.22：
-- 新的隐藏BOSS</string>
+- 新的隱藏BOSS</string>
   <string name="Welcome_Text_23">
 remix.23：
-- 地牢现在有32层深了(而不是26层)
-- 隐藏的BOSS移到了25层
-- 更多的小BOSS会加入最终战中(Yog现在能从总共5个小BOSS中选择，而不是两个拳头)
-- 新的设置选项，27层-31层增加新怪物</string>
+- 地牢現在有32層深了(而不是26層)
+- 隱藏BOSS移到了25層
+- 更多的小BOSS會加入最終戰（Yog不再如以往只選２個拳頭，現在能從總共5個小BOSS中選擇）
+- 新的設定選項，第27-31層增加新怪物</string>
   <string name="Welcome_Text_23_1">
 remix.23.1：
-- 在27层有了新的NPC，任务和商店
-- 恶魔巢穴(27层-31层)有了新的怪物
-- 27层-32层的所有怪物和BOSS都增强了
+- 第27層有了新的NPC，任務和商店
+- 惡魔巢穴(第27-31層)有了新的怪物
+- 第27-32層的所有怪物和BOSS都增強了
   - 增加新的BOSS徽章
-  - 一些画面小细节的改进
-  - 修复了一些bug</string>
+  - 一些畫面小细節的改進
+  - 修復了一些bug</string>
   <string name="Welcome_Text_23_2">
 remix.23.：
-- 增加6阶武器和护甲
+- 增加6階武器和護甲
 - 增加弩
-- 增加混沌护甲</string>
+- 增加混沌護甲</string>
   <string name="Welcome_Text_24">
 remix.24：
-- 现在我们有帽子了！(时装)
-- 修复各种bug
-- 改善翻译</string>
+- 現在我們有帽子了！(時裝)
+- 修復各種bug
+- 改善翻譯</string>
   <string name="Welcome_Text_24_1">
 remix.24.1：
 --游戏--

@@ -30,7 +30,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
   <string name="ClothArmor_Desc">Cette armure légère offre une protection basique.</string>
   <!--STRINGS OF ElfArmor CLASS-->
   <string name="ElfArmor_Name">Manteau d\'elfe</string>
-  <string name="ElfArmor_Desc">Avec l\'aide de ce manteau, l\'elfe peut invoquer les forces de la nature lui-même. L\'herbe haute va pousser en un clin d\'oeil même à travers la pierre solide, immobilisant tous les ennemis en vue.</string>
+  <string name="ElfArmor_Desc">Avec l\'aide de ce manteau, l\'elfe peut invoquer les forces de la nature elle-même. L\'herbe haute va pousser en un clin d\'oeil même à travers la pierre solide, immobilisant tous les ennemis en vue.</string>
   <string name="ElfArmor_ACSpecial">APPEL DE LA NATURE</string>
   <string name="ElfArmor_NotElf">Seuls les elfes peuvent utiliser cette armure!</string>
   <!--STRINGS OF HuntressArmor CLASS-->

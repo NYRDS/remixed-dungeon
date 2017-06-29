@@ -24,7 +24,7 @@
   <string name="Bandit_Name">bandit fou</string>
   <string name="Bandit_Gender">mâle</string>
   <string name="Bandit_Name_Objective">bandit fou</string>
-  <string name="Bandit_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
+  <string name="Bandit_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant ces excursions si loin de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
   <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">chauve-souris vampire</string>
   <string name="Bat_Gender">mâle</string>
@@ -48,7 +48,7 @@
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">mâle</string>
   <string name="DM300_Name_Objective">DM-300</string>
-  <string name="DM300_Desc">Cette machine fut créée par les nains des siècles plus tôt. Puis les nains ont commencé à remplacer les machines par des golems, des élémentaires et même des démons. Cela a mené à la perte de leur civilisation. Le DM-300 et les autre machines étaient utilisés pour la construction, le minage, et dans certains cas, à la défense de la ville. </string>
+  <string name="DM300_Desc">Cette machine fut créée par les nains des siècles plus tôt. Puis les nains ont commencé à remplacer les machines par des golems, des élémentaires et même des démons. Cela a mené à la perte de leur civilisation. Le DM-300 et les autres machines étaient utilisés pour la construction, le minage, et dans certains cas, à la défense de la ville. </string>
   <string name="DM300_Info1">Le DM-300 se répare !</string>
   <string name="DM300_Info2">Echec de la mission. Extinction du système.</string>
   <string name="DM300_Info3">Personnel non autorisé détecté.</string>
@@ -72,13 +72,13 @@
   <string name="Golem_Name">golem</string>
   <string name="Golem_Gender">mâle</string>
   <string name="Golem_Name_Objective">golem</string>
-  <string name="Golem_Desc">Les nains ont essayé de combiner leurs connaissances en bricolage avec leur nouveaux pouvoirs engageant les pouvoirs des élémentaires. Ils utilisèrent les esprits de la terre comme \"âme\" pour les corps mécaniques des golems, qu\'ils pensaient être les plus dociles de tous. Malgré cela, la plus petite erreur dans le rituel pouvait déclencher un débordement.</string>
+  <string name="Golem_Desc">Les nains ont essayé de combiner leurs connaissances en mécanique avec leur nouveaux pouvoirs engageant les pouvoirs des élémentaires. Ils utilisèrent les esprits de la terre comme \"âmes\" pour les corps mécaniques des golems, qu\'ils pensaient être les plus dociles de tous. Malgré cela, la plus petite erreur dans le rituel pouvait déclencher un débordement.</string>
   <string name="Golem_Defense">bloqué</string>
   <!--STRINGS OF Goo CLASS-->
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">femelle</string>
   <string name="Goo_Name_Objective">Goo</string>
-  <string name="Goo_Desc">On ne sait pas grand chose du Goo. Il est même possible que ce ne soit pas une créature, mais plutôt un agglomérat de substances des égouts qui auraient gagné des rudiments de volonté propre.</string>
+  <string name="Goo_Desc">On ne sait pas grand chose du Goo. Il est même possible que ce ne soit pas une créature, mais plutôt un agglomérat de substances des égouts qui aurait gagné des rudiments de volonté propre. Quoi qu\'il en soit, c\'est de la magie noire qui est à l\'oeuvre ici</string>
   <string name="Goo_Info1">Le Goo se gonfle !</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP !</string>
@@ -106,7 +106,7 @@
   <string name="MimicPie_Name">mime</string>
   <string name="MimicPie_Gender">mâle</string>
   <string name="MimicPie_Name_Objective">mime</string>
-  <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celui-ci ressemble à une grosse pâte;</string>
+  <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celui-ci ressemble à une grosse pâte appétissante;</string>
   <!--STRINGS OF Monk CLASS-->
   <string name="Monk_Name">moine nain</string>
   <string name="Monk_Gender">mâle</string>
@@ -190,7 +190,7 @@
   <string name="Thief_Name">voleur fou</string>
   <string name="Thief_Gender">mâle</string>
   <string name="Thief_Name_Objective">voleur fou</string>
-  <string name="Thief_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
+  <string name="Thief_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant ces excursions si loin de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
   <string name="Thief_Stole">%1$s vous a volé votre %2$s !</string>
   <string name="Thief_Carries">
 Le %1$s transporte un %2$s. Volé visiblement.</string>
@@ -259,7 +259,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="WaterElemental_Name">élémentaire d\'eau</string>
   <string name="WaterElemental_Gender">masculin</string>
   <string name="WaterElemental_Name_Objective">élémentaire d\'eau</string>
-  <string name="WaterElemental_Desc">Les élémentaires d\'eau peuvent être trouvées à proximité de grosses masses d\'eau. Générallement ces vagues magiques se promènent.</string>
+  <string name="WaterElemental_Desc">Les élémentaires d\'eau peuvent être trouvés à proximité de grosses masses d\'eau. Générallement ces vagues magiques se promènent.</string>
   <!--STRINGS OF AirElemental CLASS-->
   <string name="AirElemental_Name">élémentaire d\'air</string>
   <string name="AirElemental_Gender">masculin</string>
