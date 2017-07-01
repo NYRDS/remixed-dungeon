@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
+  <string name="app_name">重鑄版像素地牢</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">在您之前，已經有許多英雄向地牢進發。有些人攜着財寶和魔法物品滿足載而歸，可是他們大部分人卻杳無音訊。
 
@@ -195,252 +195,254 @@
 是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
   <string name="WndStory_Prision">為了收納最具威脅的罪犯，此地下監獄於多年前建立。因為要逃出此地極之困難，起初大家都覺得此為上策，但不久之後從地底更深處散發出的黑暗瘴氣在獄中彌漫開去，令該處的罪犯和守衛喪失理智。監獄裏變成一片混亂。秩序、服從、法則、人性通通崩潰。於是城市封鎖了整個監獄，然而尚有些人仍然被鎖上，不能重見天日。</string>
   <string name="WndStory_Caves">這個從廢棄監獄延伸而下的洞穴，早已空無一人。對於地上城市，要開發它難若登天，加上洞內礦物少得可憐，矮人對其嗤之以鼻。曾幾何時，從都市起步到達矮人之都的路途上，有一個小型貿易點。但當矮人之都衰落後，只有無處不在的豺狼人和地下生物還在此地定居。</string>
-  <string name="WndStory_Metropolis">矮人都市曾经是最宏伟的矮人城邦。在其鼎盛时期矮人的机械化部队曾成功击退过古神及其恶魔军队的入侵。但是也有传闻说，凯旋而归的战士同时带来了腐坏的种子，矮人王国的胜利正是其毁灭的开端。</string>
-  <string name="WndStory_Halls">很久以前这片区域曾是矮人都市的郊区。在与古神的战争中取得惨胜的矮人已经无力掌控并清理这片地区。于是存活的恶魔逐渐巩固了对这里的控制，现在，这里被称作恶魔大厅。
+  <string name="WndStory_Metropolis">矮人都市曾經是最宏偉的矮人城邦。鼎盛時期的矮人們派遣的機械化部隊曾成功擊退過古神及其惡魔軍隊的入侵。但是也有傳聞說，凱旋而歸的戰士同時帶來了腐壞的種子，矮人王國的勝利正是其步向毀滅的開端。</string>
+  <string name="WndStory_Halls">很久以前，這片區域曾是矮人都市的郊區。在與古神的戰爭中取得慘勝的矮人已經無力掌控並清理惡魔餘黨。於是存活的爪牙漸漸鞏固了對這裏的控制。現在，這裏被稱為惡魔大廳。
 
-很少有冒险者能够深入到这种地方...</string>
-  <string name="WndStory_Spiders">许多年前，这是一个充满了魔法石的富裕矿山。但随着矿脉的枯竭，矿工们纷纷离去，留下了大量的坑道网络。最后这个地方被蜘蛛占领了。虽然这些危险的生物在黑暗中潜伏，但是这吓不倒一些疯狂而勇敢的寻宝者和冒险者们，因为传言里面的魔法神器的价值值得他们为之冒险。据说有一个为了逃避追捕的女巫进入了这个矿洞，追捕她的士兵由于畏惧黑暗而不敢靠近，只能派人在矿洞门口看守。结果到他们放弃后女巫也没出现。没准她找到另一个出口？亦或是趁看守不注意时跑了？或者...死在了矿洞深处，与蜘蛛们融为一体。</string>
+很少有冒險者能夠深入到這種地方...</string>
+  <string name="WndStory_Spiders">許多年前，這是一個充滿魔法石的礦山。但隨著礦脈的枯竭，礦工們紛紛離去，留下了大量的坑道網絡。最後這個地方更被蜘蛛佔領了。雖然這些危險的生物在黑暗中潛伏，但是這嚇不倒一些瘋狂而勇敢的尋寶者和冒險者們，對他們來說，冒險當中的風險當然跟某神秘魔法神器的傳言數掛勾，但說得上是神器，有誰庇抗拒？據說之前有一個為了逃避追捕的女巫進入了這個礦洞，追捕她的士兵由於畏懼黑暗而不敢靠近，只能派人在礦洞門口看守。結果到他們放棄後女巫也沒出現。也許她已找到另一個出口？抑或趁看守不注意時跑了？或者...她在礦洞深處的蜘蛛環抱下，創立自己不見天日的新天地。</string>
   <!--STRINGS OF WndTradeItem CLASS-->
-  <string name="WndTradeItem_Sale">出售%1$s-%2$dg</string>
-  <string name="WndTradeItem_Buy">以%dg买入</string>
-  <string name="WndTradeItem_Sell">以%dg卖出</string>
-  <string name="WndTradeItem_Sell1">以%dg卖出1个</string>
-  <string name="WndTradeItem_SellAll">以%dg卖出全部</string>
-  <string name="WndTradeItem_Cancel">算了</string>
-  <string name="WndTradeItem_Sold">你卖出了你的%1$s换来 %2$d金币</string>
-  <string name="WndTradeItem_Bought">你购买了%1$s花费%2$d金币</string>
+  <string name="WndTradeItem_Sale">出售：%1$s-%2$dg</string>
+  <string name="WndTradeItem_Buy">以%dg買入</string>
+  <string name="WndTradeItem_Sell">以%dg賣出</string>
+  <string name="WndTradeItem_Sell1">以%dg賣出1个</string>
+  <string name="WndTradeItem_SellAll">以%dg賣出全部</string>
+  <string name="WndTradeItem_Cancel">罷了</string>
+  <string name="WndTradeItem_Sold">您賣出了你的%1$s，並獲得 %2$d金幣</string>
+  <string name="WndTradeItem_Bought">您購買了%1$s花費%2$d金幣</string>
   <!--STRINGS OF WndWandmaker CLASS-->
-  <string name="WndWandmaker_Message">哦，我看到你的成功了！希望这没给你添太多麻烦。如我所承诺的，选择一个我的好法杖吧。</string>
-  <string name="WndWandmaker_Battle">战斗法杖</string>
-  <string name="WndWandmaker_NonBattle">辅助法杖</string>
-  <string name="WndWandmaker_Farawell">祝你好运，%s!</string>
+  <string name="WndWandmaker_Message">看，汝終於成功了！希望這沒給汝添太多麻煩。誠如吾諾的，您可選取吾其中一枝好法杖。</string>
+  <string name="WndWandmaker_Battle">戰鬥法杖
+</string>
+  <string name="WndWandmaker_NonBattle">輔助法杖
+</string>
+  <string name="WndWandmaker_Farawell">祝您好運，%s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
-  <string name="QuickSlot_SelectedItem">选择加入快速使用栏的物品。</string>
+  <string name="QuickSlot_SelectedItem">選取加入快速使用欄的物品</string>
   <!--STRINGS OF Item CLASS-->
-  <string name="Item_Name">smth</string>
-  <string name="Item_Info">smth</string>
+  <string name="Item_Name">鐵匠</string>
+  <string name="Item_Info">鐵匠</string>
   <string name="Item_ACDrop">扔下</string>
-  <string name="Item_ACThrow">投掷</string>
-  <string name="Item_PackFull">你的背包满了，没法装下%s</string>
-  <string name="Item_DirThrow">选择扔到的地点</string>
+  <string name="Item_ACThrow">投擲</string>
+  <string name="Item_PackFull">您的背包滿了，沒法裝下%s</string>
+  <string name="Item_DirThrow">選擇扔到的地點</string>
   <!--STRINGS OF EquipableItem CLASS-->
-  <string name="EquipableItem_ACEquip">装备</string>
+  <string name="EquipableItem_ACEquip">裝備</string>
   <string name="EquipableItem_ACUnequip">取下</string>
-  <string name="EquipableItem_Unequip">你不能取下被诅咒的%s！</string>
+  <string name="EquipableItem_Unequip">您不能取下被詛咒的%s！</string>
   <!--STRINGS OF Heap CLASS-->
-  <string name="Heap_Mimic">这是一个模仿者！</string>
+  <string name="Heap_Mimic">它是擬型怪！</string>
   <!--STRINGS OF Amulet CLASS-->
-  <string name="Amulet_Name">Yendor护符</string>
-  <string name="Amulet_ACEnd">结束游戏</string>
-  <string name="Amulet_Info">Yendor护身符是来自未知领域中最强大的且最著名的神器。据说它能够实现持有者的一切愿望，只要持有者具备足够的力量来\"说服\"它去做。</string>
+  <string name="Amulet_Name">Yendor護符</string>
+  <string name="Amulet_ACEnd">結束遊戲</string>
+  <string name="Amulet_Info">Yendor護身符是來自未知領域中最強大的且最著名的神器。據說它能夠實現持有者的一切願望，只要持有者具備足夠的力量來「說服」它去做。</string>
   <!--STRINGS OF Ankh CLASS-->
-  <string name="Ankh_Name">十字架</string>
-  <string name="Ankh_Info">这一古老的不朽的象征可以使你从死亡中复活。但会使你丢失所有未装备的道具。</string>
+  <string name="Ankh_Name">安卡</string>
+  <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
   <!--STRINGS OF ArmorKit CLASS-->
-  <string name="ArmorKit_Name">护甲升级包</string>
-  <string name="ArmorKit_ACAplly">同意</string>
-  <string name="ArmorKit_Info">使用这配件包里的工具和材料，任何人都能将任意防具打造成 \"史诗护甲\"，它会继承原护甲的所有属性，并依据职业为穿戴者提供一个特殊能力。完全无需裁缝、制皮或锻造技能。</string>
-  <string name="ArmorKit_SelectArmor">选择升级一件护甲</string>
-  <string name="ArmorKit_Upgraded">你将护甲升级包用以升级你的%s</string>
+  <string name="ArmorKit_Name">護甲升級包</string>
+  <string name="ArmorKit_ACAplly">添上</string>
+  <string name="ArmorKit_Info">使用這配件包裡的工具和材料，任何人都能將任意防具打造成 \"史詩護甲\"，它會繼承原護甲的所有屬性，並依據職業為穿戴者提供一個特殊能力。完全無需裁縫、製皮或打鐵。</string>
+  <string name="ArmorKit_SelectArmor">選擇升級一件護甲</string>
+  <string name="ArmorKit_Upgraded">您將護甲升級包用以提升您的%s</string>
   <!--STRINGS OF Dewdrop CLASS-->
   <string name="Dewdrop_Name">露珠</string>
-  <string name="Dewdrop_Info">一颗透亮的露珠。</string>
+  <string name="Dewdrop_Info">一顆透亮的露珠。</string>
   <!--STRINGS OF DewVial CLASS-->
   <string name="DewVial_Name">露珠瓶</string>
-  <string name="DewVial_ACDRINK">饮用</string>
-  <string name="DewVial_Info">你可以将额外的露水装入瓶中以供之后饮用。如果露水瓶满了，它会在你将死亡时消耗露珠救活你。</string>
-  <string name="DewVial_AutoDrink">空的露水瓶没法用来治疗伤口。</string>
-  <string name="DewVial_Collected">你将露水收集到了露水瓶里。</string>
-  <string name="DewVial_Full">你的露珠瓶满了！</string>
-  <string name="DewVial_Empty">你的露珠瓶空了！</string>
+  <string name="DewVial_ACDRINK">飲下</string>
+  <string name="DewVial_Info">您可以將額外的露水裝入瓶中以供之後飲用。如果露水瓶滿了，它會在你將死亡時消耗露珠救活您。</string>
+  <string name="DewVial_AutoDrink">空的露水瓶沒法用來治療傷口。</string>
+  <string name="DewVial_Collected">您將露水收集到了露水瓶裏。</string>
+  <string name="DewVial_Full">您的露珠瓶滿了！</string>
+  <string name="DewVial_Empty">您的露珠瓶空了！</string>
   <!--STRINGS OF Gold CLASS-->
-  <string name="Gold_Name">金币</string>
-  <string name="Gold_Collect">收集金币用于之后商店的购买。</string>
-  <string name="Gold_Info">一堆共计%d金币</string>
-  <string name="Gold_Info1">一点金币</string>
+  <string name="Gold_Name">金幣</string>
+  <string name="Gold_Collect">收集的金幣能在商店裏消費</string>
+  <string name="Gold_Info">一堆共計%d金幣</string>
+  <string name="Gold_Info1">一個金幣</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
-  <string name="KindOfWeapon_EquipCursed">你不由自主地握紧了你的%s</string>
+  <string name="KindOfWeapon_EquipCursed">您不由自主地握紧了您的%s</string>
   <!--STRINGS OF LloidsBeacon CLASS-->
-  <string name="LloidsBeacon_Name">lloyd的传送信标</string>
-  <string name="LloidsBeacon_ACSet">设置传送点</string>
-  <string name="LloidsBeacon_ACReturn">返回传送点</string>
-  <string name="LloidsBeacon_Info">Lloyd\'s传送信标是一个复杂的魔法装置，可以让你返回到过去的一个地方。</string>
-  <string name="LloidsBeacon_Preventing">某种强大的魔法力量阻止了你使用Lloyd\'s传送信标！</string>
-  <string name="LloidsBeacon_Creatures">附近的生物的干扰阻止了你使用Lloyd\'s传送信标！</string>
-  <string name="LloidsBeacon_Return">Lloyd\'s传送信标设置成功，现在你已经随时可以回来了。</string>
+  <string name="LloidsBeacon_Name">萊德傳送信標</string>
+  <string name="LloidsBeacon_ACSet">設置傳送點</string>
+  <string name="LloidsBeacon_ACReturn">返回傳送點</string>
+  <string name="LloidsBeacon_Info">萊德傳送信標是一個複雜的魔法裝置，可以讓您返回到過去的一個地方。</string>
+  <string name="LloidsBeacon_Preventing">某種強大的魔法力量阻止了您使用萊德傳送信標！</string>
+  <string name="LloidsBeacon_Creatures">附近的生物的精神干擾阻止了您使用萊德傳送信標！</string>
+  <string name="LloidsBeacon_Return">萊德傳送信標設置成功，現在您已經隨時可以回來了。</string>
   <string name="LloidsBeacon_Set">
-\n\n这个传送信标被设置在像素地牢的%d层的某个地方。</string>
+\n\n這個傳送信標被設置在像素地牢第%d層的某個地方。</string>
   <!--STRINGS OF Stylus CLASS-->
-  <string name="Stylus_Name">奥术刻笔</string>
-  <string name="Stylus_ACInscribe"> 镌刻</string>
-  <string name="Stylus_Info"> 这支奥术刻笔是由某种漆黑坚硬的石头制成的。你可以使用它来镌刻一个刻印或符文，但由于你的能力不足，你无法自己选择你所镌刻下的符文或刻印，刻笔会自己帮你决定。</string>
-  <string name="Stylus_SelectArmor">选择镌刻一件物品</string>
-  <string name="Stylus_Inscribed">你镌刻了%1$s在你的%2$s上</string>
+  <string name="Stylus_Name">奥術刻筆</string>
+  <string name="Stylus_ACInscribe">鐫刻</string>
+  <string name="Stylus_Info">這支奧術刻筆是由某種漆黑堅硬的石頭製成的。您可以使用它來鐫刻一個刻印或符文，但由於您的能力不足，您無法自己選擇您所鐫刻下的符文或刻印，刻筆會自己幫你決定。</string>
+  <string name="Stylus_SelectArmor">選擇鐫刻一件物品</string>
+  <string name="Stylus_Inscribed">您鐫刻了%1$s在您的%2$s上</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
-  <string name="TomeOfMastery_Name">精通之书</string>
-  <string name="TomeOfMastery_ACRead">阅读</string>
-  <string name="TomeOfMastery_Info">这本皮封典籍没多厚, 但是你隐约感觉到自己能从中学到不少东西. 不过记住: 阅读这本典籍需要一些时间。</string>
-  <string name="TomeOfMastery_Blinded">你在失明时无法阅读</string>
-  <string name="TomeOfMastery_Choose">你选择了%s的道路！</string>
+  <string name="TomeOfMastery_Name">精通之書</string>
+  <string name="TomeOfMastery_ACRead">閱讀</string>
+  <string name="TomeOfMastery_Info">這本皮封典籍不算厚, 但您隱約感覺到自己能從中獲益良多。 不過記住：要閱畢這本典籍需要一段相當長的時間。</string>
+  <string name="TomeOfMastery_Blinded">您在失明時無法閱讀 :o)</string>
+  <string name="TomeOfMastery_Choose">您選擇择了%s的道路！</string>
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">火把</string>
-  <string name="Torch_ACLight">点燃</string>
-  <string name="Torch_Info">这在没什么光线照明的恶魔大厅里是很好用的一件物品。</string>
+  <string name="Torch_ACLight">點燃</string>
+  <string name="Torch_Info">這在沒什麼光線照明的惡魔大廳裡是一件不可缺少的物品。</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">磨刀石</string>
-  <string name="Weightstone_ACApply">同意</string>
-  <string name="Weightstone_Info">使用磨刀石，你可以使你的近战武器攻速更快或者精确度更高。</string>
-  <string name="Weightstone_Select">选择一件武器来磨制</string>
-  <string name="Weightstone_Fast">你将你的%s磨得更快速了</string>
-  <string name="Weightstone_Accurate">你将你的%s磨得更精准了</string>
-  <string name="Weightstone_WndChoice">你希望怎么磨制这件%s?</string>
+  <string name="Weightstone_ACApply">使用</string>
+  <string name="Weightstone_Info">使用磨刀石能令您的近戰武器攻速更快或者更精確。</string>
+  <string name="Weightstone_Select">選擇一件武器來磨製</string>
+  <string name="Weightstone_Fast">經磨製後，您的%s拿上手變得更輕盈</string>
+  <string name="Weightstone_Accurate">經磨製後，您的%s感覺上能更精準了。</string>
+  <string name="Weightstone_WndChoice">您希望怎樣磨製這件%s?</string>
   <string name="Weightstone_WndSpeed">增加速度</string>
-  <string name="Weightstone_WndAccuracy">增加准度</string>
-  <string name="Weightstone_WndCancel">算了</string>
+  <string name="Weightstone_WndAccuracy">增加精準度</string>
+  <string name="Weightstone_WndCancel">罷了</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
-  <string name="Bag_ACOpen">打开</string>
+  <string name="Bag_ACOpen">打開</string>
   <!--STRINGS OF Keyring CLASS-->
-  <string name="Keyring_Name">钥匙环</string>
-  <string name="Keyring_Info">这是一个铜钥匙圈，它能让你将你的钥匙和其他物品分开存放。</string>
+  <string name="Keyring_Name">鑰匙環</string>
+  <string name="Keyring_Info">這是一個銅鑰匙圈，它能讓你將你的鑰匙和其他物品分開存放。</string>
   <!--STRINGS OF ScrollHolder CLASS-->
-  <string name="ScrollHolder_Name">卷轴筒</string>
-  <string name="ScrollHolder_Info">可以装入许多卷轴，并且可以防止它们被烧毁。</string>
+  <string name="ScrollHolder_Name">卷軸筒</string>
+  <string name="ScrollHolder_Info">您可以把許多捲軸裝入筒內，這可避免它們被燒毀。</string>
   <!--STRINGS OF SeedPouch CLASS-->
-  <string name="SeedPouch_Name">种子袋</string>
-  <string name="SeedPouch_Info">装种子的袋子，十分有用。</string>
+  <string name="SeedPouch_Name">種子袋</string>
+  <string name="SeedPouch_Info">裝種子的袋子，十分方便。</string>
   <!--STRINGS OF WandHolster CLASS-->
   <string name="WandHolster_Name">法杖套</string>
-  <string name="WandHolster_Info">这个法杖套是由一些有异国情调的动物皮革制成的，它可以装入许多%d法杖。</string>
+  <string name="WandHolster_Info">這個法杖套是由一些有異國情調的動物皮革製成的，它可以裝入許多%d法杖。</string>
   <!--STRINGS OF PotionBelt CLASS-->
-  <string name="PotionBelt_Info">可以装入许多药水，并且可以防止它们被冻坏。</string>
-  <string name="PotionBelt_Name">药水带</string>
+  <string name="PotionBelt_Info">您可以把許多藥水放在帶邊，以免凍鋒令他們破碎。</string>
+  <string name="PotionBelt_Name">藥水带</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
-  <string name="GoldenKey_Name">金钥匙</string>
-  <string name="GoldenKey_Info">这把金钥匙用于开启上锁的宝箱。</string>
+  <string name="GoldenKey_Name">金鑰匙</string>
+  <string name="GoldenKey_Info">這把金鑰匙的凹凸處分外精細，也許能解開某些寶箱的鎖？</string>
   <!--STRINGS OF IronKey CLASS-->
-  <string name="IronKey_Name">铁钥匙</string>
-  <string name="IronKey_Info">这把铁钥匙用于开启上锁的门。</string>
-  <string name="IronKey_FromDepth">%d层的铁钥匙</string>
+  <string name="IronKey_Name">鐵鑰匙</string>
+  <string name="IronKey_Info">這把鐵鑰匙的凹凸處精細不再；其繫索亦歷盡風霜，還能打開甚麼門嗎？</string>
+  <string name="IronKey_FromDepth">第%d層的鐵鑰匙</string>
   <!--STRINGS OF SkeletonKey CLASS-->
-  <string name="SkeletonKey_Name">骷髅钥匙</string>
-  <string name="SkeletonKey_Info">这把骷髅钥匙用于开启下一层的路。</string>
+  <string name="SkeletonKey_Name">骷髏鑰匙</string>
+  <string name="SkeletonKey_Info">此鑰匙看上來一本正經，它的頭型呈骷髏頭狀。可能能用它打開芋某些一本正經的門。</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
-  <string name="CorpseDust_Name">尸尘</string>
-  <string name="CorpseDust_Info">在外观上这团尸尘和普通灰尘差不多。而你却能够感受到其中潜伏着一股充满恶意的魔力。尽快脱手为好。</string>
-  <string name="CorpseDust_Info2">也许是因为带着它让你感到了焦虑和愤怒。</string>
+  <string name="CorpseDust_Name">屍塵</string>
+  <string name="CorpseDust_Info">在外觀上這團屍塵和普通灰塵球差不多。而您卻能夠感受到其中潛伏著一股充滿惡意的魔力。盡快脫手為上策。</string>
+  <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
   <!--STRINGS OF DarkGold CLASS-->
-  <string name="DarkGold_Name">暗金矿</string>
-  <string name="DarkGold_Info">这种金属名中的暗并非源于其色泽(它看起来和普通金子一样)，而是因为它会在阳光下熔化，令其在地表上毫无用处。</string>
+  <string name="DarkGold_Name">暗金礦</string>
+  <string name="DarkGold_Info">這種金屬名中的暗並非源於其色澤（它看起來和普通金子一樣），而是因為它會在陽光下熔化，在地表上毫無用處。</string>
   <!--STRINGS OF DriedRose CLASS-->
-  <string name="DriedRose_Name">枯干玫瑰</string>
-  <string name="DriedRose_Info">这玫瑰在很久以前就已经枯萎了，但它的花瓣却保留完好。</string>
-  <string name="DriedRose_Info2">这东西还没丧失它的魅力。这迷人得让你想永远留下它。</string>
+  <string name="DriedRose_Name">乾枯玫瑰</string>
+  <string name="DriedRose_Info">這玫瑰在很久以前就已經枯萎了，但不知為何它的花瓣卻保留完好。</string>
+  <string name="DriedRose_Info2">這東西還沒完全喪失它的魅力。這迷人得讓您想永遠留下它。</string>
   <!--STRINGS OF DwarfToken CLASS-->
-  <string name="DwarfToken_Name">矮人徽记</string>
-  <string name="DwarfToken_Info">很多矮人和他们的造物都携带着这种小块金属，理由不详。兴许它是装饰品或什么身份识别牌。 矮人都挺奇怪的。</string>
+  <string name="DwarfToken_Name">矮人徽記</string>
+  <string name="DwarfToken_Info">很多矮人和他們的造物都攜帶著這種小塊金屬，理由不詳。也許它是裝飾品或甚麼身份識別牌。矮人都挺奇怪的。</string>
   <!--STRINGS OF Pickaxe CLASS-->
-  <string name="Pickaxe_Name">铁镐</string>
-  <string name="Pickaxe_Info">这是件开石工具，没准可以当武器使用。</string>
-  <string name="Pickaxe_ACMine">挖矿</string>
-  <string name="Pickaxe_Gender">feminine</string>
-  <string name="Pickaxe_NoVein">周围没有暗金矿可挖</string>
+  <string name="Pickaxe_Name">鐵鎬</string>
+  <string name="Pickaxe_Info">這確是件大型且穩健的掘石工具，也可以當作武器使用。</string>
+  <string name="Pickaxe_ACMine">挖礦</string>
+  <string name="Pickaxe_Gender">女性的</string>
+  <string name="Pickaxe_NoVein">您周圍沒有暗金脈可挖</string>
   <!--STRINGS OF RatSkull CLASS-->
-  <string name="RatSkull_Name">巨大老鼠头骨</string>
-  <string name="RatSkull_Info">这看起来是个很好的战利品，但挂在墙上也太难闻了。</string>
-  <string name="RatSkull_Info2">另一方面，这表明它的所有者拥有杀死老鼠的能力，即使是这么大而难闻的。</string>
+  <string name="RatSkull_Name">巨大老鼠頭骨</string>
+  <string name="RatSkull_Info">這看起來是個很好的戰利品，但掛在牆上也太難聞了。</string>
+  <string name="RatSkull_Info2">另一方面，這展示它的擁有者殺鼠的能力，即使是這麼大且難聞的。</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
-  <string name="ConfusionGas_Info">具有混乱性质的气体飘在这里</string>
+  <string name="ConfusionGas_Info">迷幻氣體在該處飄浮著。</string>
   <!--STRINGS OF Fire CLASS-->
-  <string name="Fire_Info">这里着火了。</string>
+  <string name="Fire_Info">這裏起火了。</string>
   <!--STRINGS OF Foliage CLASS-->
-  <string name="Foliage_Info">幽光照耀在这片地下花园中。</string>
+  <string name="Foliage_Info">泛泛幽光劃破這片地下花園的陰沉氣氛。</string>
   <!--STRINGS OF ParalyticGas CLASS-->
-  <string name="ParalyticGas_Info">麻痹性质的气体飘在这里。</string>
+  <string name="ParalyticGas_Info">麻庳氣體在該處飄浮著。</string>
   <!--STRINGS OF ToxicGas CLASS-->
-  <string name="ToxicGas_Info">绿色的毒气在飘在这里。</string>
-  <string name="ToxicGas_Info1">你被吸入的毒气杀死了……</string>
+  <string name="ToxicGas_Info">綠色毒氣在該處飄浮著。</string>
+  <string name="ToxicGas_Info1">您被吸入的毒氣殺死了……</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
-  <string name="WaterOfAwareness_Info">知识的力量正在从这口井的水里涌出。饮下井中的水以揭示所有已装备物品的秘密。</string>
-  <string name="WaterOfAwareness_Procced">在你小酌一口时，你感觉到知识涌入了你的头脑。现在你对已装备的物品了如指掌。同时，你察觉到了这一层所有的道具，并且掌握了它们的秘密。</string>
+  <string name="WaterOfAwareness_Info">智慧的力量正從這口井的水里湧出。喝下井水能揭示所有已裝備物品的秘密。</string>
+  <string name="WaterOfAwareness_Procced">在您小酌一口時，您感覺到知識湧入了你的頭腦。現在您對已裝備的物品瞭如指掌。同時，您察覺到了這一層所有的道具，並且掌握了它們的秘密。</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
-  <string name="WaterOfHealth_Info">生命的力量正在从这口井的水里涌出。饮下井中的水以治疗你的伤口并填满你的肚子。</string>
-  <string name="WaterOfHealth_Procced">就在你小酌一口时，你感到你的伤口完全愈合了。</string>
+  <string name="WaterOfHealth_Info">生命的力量正從這口井的水里湧出。飲下井水能治療您的傷口並填滿您的肚子。</string>
+  <string name="WaterOfHealth_Procced">就在您小酌一口时，您感覺身上的傷口完全癒合了。</string>
   <!--STRINGS OF WaterOfTransmutation CLASS-->
-  <string name="WaterOfTransmutation_Info">变化的力量正在从这口井的水里涌出。扔进一个物品以将其转化为其他物品。</string>
+  <string name="WaterOfTransmutation_Info">變化的力量正在從這口井的水里湧出。扔進一件物品以將其轉化為其他物品。</string>
   <!--STRINGS OF Web CLASS-->
-  <string name="Web_Info">这儿盖满了粘腻的网。</string>
+  <string name="Web_Info">這兒蓋滿了粘膩的網。</string>
   <!--PACKAGE /actors/buffs-->
   <!--STRINGS OF Amok CLASS-->
-  <string name="Amok_Info">狂乱</string>
+  <string name="Amok_Info">狂亂</string>
   <!--STRINGS OF Barkskin CLASS-->
-  <string name="Barkskin_Info">树肤</string>
+  <string name="Barkskin_Info">樹膚</string>
   <!--STRINGS OF Bleeding CLASS-->
   <string name="Bleeding_Info">流血</string>
-  <string name="Bleeding_Death">你流血而死……</string>
+  <string name="Bleeding_Death">你流血過多而死……</string>
   <!--STRINGS OF Blindness CLASS-->
   <string name="Blindness_Info">目盲</string>
   <!--STRINGS OF Burning CLASS-->
-  <string name="Burning_Info">燃烧</string>
-  <string name="Burning_Burns">%s被烧掉了！</string>
-  <string name="Burning_Death">你燃烧殆尽了……</string>
+  <string name="Burning_Info">燃燒</string>
+  <string name="Burning_Burns">%s被燒掉了！</string>
+  <string name="Burning_Death">您燒殆盡了......</string>
   <!--STRINGS OF Charm CLASS-->
   <string name="Charm_Info">魅惑</string>
   <!--STRINGS OF Combo CLASS-->
-  <string name="Combo_Info">连击</string>
-  <string name="Combo_Combo">%d连击！</string>
+  <string name="Combo_Info">連擊</string>
+  <string name="Combo_Combo">%d連擊！</string>
   <!--STRINGS OF Cripple CLASS-->
-  <string name="Cripple_Info">残疾</string>
+  <string name="Cripple_Info">殘疾</string>
   <!--STRINGS OF Frost CLASS-->
-  <string name="Frost_Info">冰冻</string>
-  <string name="Frost_Shatter">寒冷冻结了%s！</string>
+  <string name="Frost_Info">冰凍</string>
+  <string name="Frost_Shatter">寒鋒使%s瓶碎了！</string>
   <!--STRINGS OF Fury CLASS-->
   <string name="Fury_Info">暴怒</string>
   <!--STRINGS OF GasesImmunity CLASS-->
-  <string name="GasesImmunity_Info">免疫气体</string>
+  <string name="GasesImmunity_Info">對氣體免疫</string>
   <!--STRINGS OF Hunger CLASS-->
   <string-array name="Hunger_Hungry">
-    <item>你饿了。</item>
-    <item>你饿了。</item>
-    <item>你饿了。</item>
+    <item>您餓了。</item>
+    <item>您餓了。</item>
+    <item>您餓了。</item>
   </string-array>
   <string-array name="Hunger_Starving">
-    <item>你饿到受不了了!</item>
-    <item>你饿到受不了了!</item>
-    <item>你饿到受不了了!</item>
+    <item>您餓到受不了了!</item>
+    <item>您餓到受不了了!</item>
+    <item>您餓到受不了了!</item>
   </string-array>
-  <string name="Hunger_Death">你饿死了……</string>
-  <string name="Hunger_Info1">饥饿</string>
-  <string name="Hunger_Info2">饥饿难耐</string>
+  <string name="Hunger_Death">您餓死了……</string>
+  <string name="Hunger_Info1">饑餓</string>
+  <string name="Hunger_Info2">饑餓難耐</string>
   <!--STRINGS OF Invisibility CLASS-->
-  <string name="Invisibility_Info">隐形</string>
+  <string name="Invisibility_Info">隐形隱形</string>
   <!--STRINGS OF Levitation CLASS-->
   <string name="Levitation_Info">漂浮</string>
   <!--STRINGS OF Light CLASS-->
   <string name="Light_Info">照明</string>
   <!--STRINGS OF MindVision CLASS-->
-  <string name="MindVision_Info">灵视</string>
+  <string name="MindVision_Info">靈視</string>
   <!--STRINGS OF Ooze CLASS-->
-  <string name="Ooze_Info">腐蚀污泥</string>
-  <string name="Ooze_Death">%s杀了你……</string>
+  <string name="Ooze_Info">腐蝕污泥</string>
+  <string name="Ooze_Death">%s殺了您……</string>
   <!--STRINGS OF Paralysis CLASS-->
   <string name="Paralysis_Info">麻痹</string>
   <!--STRINGS OF Poison CLASS-->
-  <string name="Poison_Info">剧毒</string>
-  <string name="Poison_Death">你被剧毒杀死了……</string>
+  <string name="Poison_Info">劇毒</string>
+  <string name="Poison_Death">您被劇毒殺死了……</string>
   <!--STRINGS OF Roots CLASS-->
-  <string name="Roots_Info">缠绕</string>
+  <string name="Roots_Info">纏繞</string>
   <!--STRINGS OF Shadows CLASS-->
   <string name="Shadows_Info">暗影融合</string>
   <!--STRINGS OF Slow CLASS-->
-  <string name="Slow_Info">缓速</string>
+  <string name="Slow_Info">緩速</string>
   <!--STRINGS OF SnipersMark CLASS-->
-  <string name="SnipersMark_Info">狙杀标记</string>
+  <string name="SnipersMark_Info">狙擊標記</string>
   <!--STRINGS OF Vertigo CLASS-->
-  <string name="Vertigo_Info">眩晕</string>
+  <string name="Vertigo_Info">眩暈</string>
   <!--STRINGS OF Weakness CLASS-->
   <string name="Weakness_Info">虚弱</string>
   <!--PACKAGE /actors/hero-->
@@ -451,6 +453,6 @@
   <string name="ItemSprite_Info1">掉落至%1$.1f %2$.1f</string>
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
-  <string name="Toolbar_Info1">你不知道那里有什么。</string>
-  <string name="Toolbar_Info2">选择检查一个区域</string>
+  <string name="Toolbar_Info1">您不知道那裏有甚麼。</string>
+  <string name="Toolbar_Info2">選擇檢查一個區域</string>
 </resources>
