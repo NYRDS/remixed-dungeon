@@ -937,18 +937,26 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean zap(@NonNull Char enemy) {
+
+		if(zapHit(enemy)) {
+			enemy.damage(damageRoll(), this);
+			return true;
+		}
+
+		return false;
+	}
+
+	public boolean zapHit(@NonNull Char enemy) {
 		if (enemy == DUMMY) {
 			EventCollector.logEvent(EventCollector.BUG, "zapping dummy enemy");
 			return false;
 		}
 
 		if (hit(this, enemy, true)) {
-			enemy.damage(damageRoll(), this);
 			return true;
 		} else {
 			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 			return false;
 		}
-
 	}
 }

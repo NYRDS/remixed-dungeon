@@ -9,5 +9,4 @@ import com.watabou.pixeldungeon.actors.Char;
 
 public interface IZapper {
 	boolean zap(Char enemy);
-	void onZapComplete();
 }
