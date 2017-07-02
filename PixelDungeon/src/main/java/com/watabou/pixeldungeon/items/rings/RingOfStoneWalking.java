@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class RingOfStoneWalking extends Artifact{
+public class RingOfStoneWalking extends Ring{
 
 	public RingOfStoneWalking() {
 		image = ItemSpriteSheet.RING_OF_STONE_WALKING;

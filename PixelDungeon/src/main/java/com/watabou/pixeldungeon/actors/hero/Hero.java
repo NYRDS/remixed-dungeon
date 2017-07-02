@@ -1193,10 +1193,13 @@ public class Hero extends Char {
 
 		int step = -1;
 
-		Buff wallWalkerBuff = buff(RingOfStoneWalking.StoneWalking.class);
-
 		Level level = Dungeon.level;
+		Buff wallWalkerBuff = null;
 
+		if(!level.isBossLevel()) {
+			wallWalkerBuff = buff(RingOfStoneWalking.StoneWalking.class);
+		}
+		
 		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
