@@ -118,7 +118,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		Log.i("Play Games", "Streaming to " + snapshotId);
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, true, Snapshots.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED);
 
-		Snapshots.OpenSnapshotResult openResult = result.await(3, TimeUnit.SECONDS);
+		Snapshots.OpenSnapshotResult openResult = result.await(5, TimeUnit.SECONDS);
 		Snapshot snapshot = openResult.getSnapshot();
 
 		if (openResult.getStatus().isSuccess() && snapshot != null) {
@@ -145,8 +145,11 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	public static byte[] readFromSnapshot(String snapshotId) throws IOException {
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(playGames.googleApiClient, snapshotId, false);
-		Snapshot snapshot = result.await(3, TimeUnit.SECONDS).getSnapshot();
-		if (snapshot != null) {
+
+		Snapshots.OpenSnapshotResult openResult = result.await(5, TimeUnit.SECONDS);
+		Snapshot snapshot = openResult.getSnapshot();
+
+		if (openResult.getStatus().isSuccess() && snapshot != null) {
 			return snapshot.getSnapshotContents().readFully();
 		} else {
 			throw new IOException("snapshot timeout");
