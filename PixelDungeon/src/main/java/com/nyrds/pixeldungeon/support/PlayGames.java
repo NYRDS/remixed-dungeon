@@ -17,6 +17,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.games.snapshot.Snapshot;
+import com.google.android.gms.games.snapshot.SnapshotContents;
 import com.google.android.gms.games.snapshot.SnapshotMetadata;
 import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.games.snapshot.Snapshots;
@@ -60,7 +61,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	private Activity          activity;
 	private ArrayList<String> mSavedGamesNames;
 
-	private static PlayGames  playGames;
+	private static PlayGames playGames;
 
 
 	private PlayGames(Activity ctx) {
@@ -120,8 +121,9 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		Snapshots.OpenSnapshotResult openResult = result.await(3, TimeUnit.SECONDS);
 		Snapshot snapshot = openResult.getSnapshot();
 
-		if (snapshot != null) {
-			snapshot.getSnapshotContents().writeBytes(content);
+		if (openResult.getStatus().isSuccess() && snapshot != null) {
+			SnapshotContents contents = snapshot.getSnapshotContents();
+			contents.writeBytes(content);
 
 			PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(playGames.googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
 			pendingResult.setResultCallback(new ResultCallback<Snapshots.CommitSnapshotResult>() {
@@ -209,8 +211,8 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		loadSnapshots(null);
 	}
 
-	public static void loadSnapshots(@Nullable final Runnable doneCallback){
-		if(isConnected()) {
+	public static void loadSnapshots(@Nullable final Runnable doneCallback) {
+		if (isConnected()) {
 			Games.Snapshots.load(playGames.googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
 				@Override
 				public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
@@ -226,7 +228,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 					} else {
 						Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
 					}
-					if(doneCallback != null) {
+					if (doneCallback != null) {
 						doneCallback.run();
 					}
 				}
