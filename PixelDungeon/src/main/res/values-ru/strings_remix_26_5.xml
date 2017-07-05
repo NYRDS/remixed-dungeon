@@ -9,11 +9,21 @@
     <!-- STRINGS OF ElvenDagger CLASS -->
     <string name="ElvenDagger_Name">эльфийский кинжал</string>
     <string name="ElvenDagger_Info">Это оружие выполнено из особого металлического сплава, что делает его легче по сравнению с обычным кинжалом.</string>
+    <string name="ElvenDagger_Gender">masculine</string>
+
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
     <string name="IceGuardianCoreModule_Name">Ядро Ледяного Стража</string>
+    <string name="IceGuardianCoreModule_Info">Это структура сделана из магического льда. Светящийся камень размещен внутри этого дивного изобретения. </string>
+
     <!-- STRINGS OF RingOfFrost CLASS -->
     <string name="RingOfFrost_Name">Кольцо Мороза</string>
+    <string name="RingOfFrost_Info">Кольцо вырезано из магического льда. Носитель защищен морозной аурой, замедляет и наносит урон атакующим существам. </string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">Панцирь Королевы Пауков</string>
+    <string name="SpiderQueenCarapace_Info">Осколок панциря Королевы Пауков. Внутри кусочек паучьей гланды, почти как живая. </string>
+
     <!-- STRINGS OF LibrarianNPC CLASS -->
     <string name="LibrarianNPC_Message_Instruction">З-здравствуйте. Добро пожаловать в библиотеку. Здесь вы можете найти информацию о самых разных диковинах, которые могут быть найдены в подземелье... н-на самом деле мы можем предоставить лишь те знания, которые нам принесли сами герои. Да... даже немного стыдно в этом признаваться. Но зато, с каждым вашим визитом, у нас будут появляться новые записи, я надеюсь...</string>
 
