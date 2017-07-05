@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.bags;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.rings.Ring;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Keyring extends Bag {
@@ -30,7 +31,7 @@ public class Keyring extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Key || item instanceof Ring;
+		return item instanceof Key || item instanceof Ring || item instanceof RingOfStoneWalking;
 	}
 	
 	@Override
