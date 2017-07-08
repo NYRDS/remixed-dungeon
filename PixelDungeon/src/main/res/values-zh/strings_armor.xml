@@ -2,27 +2,28 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">您的 %s 緊箍着您，令您感到疼痛！</string>
-  <string name="Armor_Identify">現在，您熟悉得能夠鑒定 %1$s 。它是 %2$s 。</string>
+  <string name="Armor_EquipCursed">你的%s緊緊的束縛著你，讓你疼痛無比！</string>
+  <string name="Armor_Identify">你現在已經熟悉了%1$s的性質，以致能夠自行鑒定它。這件裝備是%2$s</string>
   <string name="Armor_ToString">%1$s : %2$d</string>
-  <string name="Armor_Incompatible">屬性相異的魔法產生衝突，消除了這件護甲上的符文刻印！</string>
-  <string name="Armor_Info1">這件 %1$s 對每次受到的攻擊提供最高\" %2$d \"點的傷害減免。</string>
-  <string name="Armor_Info2">因為您的力量不足，所以你的移動速度和防禦能力相應下降。</string>
+  <string name="Armor_Incompatible">不同屬性的魔法產生了衝突，消除了這件護甲上的附魔效果！</string>
+  <string name="Armor_Info1">這件%1$s在每次受到傷害時可以抵擋%2$d點的傷害。</string>
+  <string name="Armor_Info2">
+因為你的力量不足，所以你的移動速度和防禦能力都下降了。</string>
   <string name="Armor_Info3">因為您的力量不足，穿上這件護甲會降低你的移動速度和防禦能力。</string>
   <string name="Armor_Info4">一般情况下 %1$s 對每次受到的攻擊提供最高 %2$d 點的傷害減免，並需要 %3$d 點力量才能穿上。</string>
   <string name="Armor_Info5">也許這件護甲對您來說太重了。</string>
-  <string name="Armor_Info6">它已被刻上符文。</string>
+  <string name="Armor_Info6">這件裝備已經被刻上符文。</string>
   <string name="Armor_Info7a">您正在裝備着 %1$s %2$s 。</string>
-  <string name="Armor_Info7b">，並且因為它被詛咒了，你無力把它脫下。</string>
-  <string name="Armor_Info8">您能感受到 %s 中潛伏着一股惡意的魔力。</string>
-  <string name="Armor_Glyph">符文刻印</string>
+  <string name="Armor_Info7b">，然而因為它被詛咒了，你沒辦法把它脫下來。</string>
+  <string name="Armor_Info8">您能感受到 %s 中潛伏著一股邪惡的魔力。</string>
+  <string name="Armor_Glyph">附魔刻印</string>
   <!--STRINGS OF ClassArmor CLASS-->
-  <string name="ClassArmor_Desc">这东西看起來真棒！</string>
-  <string name="ClassArmor_LowHealt">您的生命值太低了！</string>
-  <string name="ClassArmor_NotEquipped">你需要穿上这件护甲才能使用它的特殊能力！</string>
+  <string name="ClassArmor_Desc">這東西看起來太棒了！</string>
+  <string name="ClassArmor_LowHealt">你的生命值過低！</string>
+  <string name="ClassArmor_NotEquipped">你必須穿上這件防具才能使用它的特殊能力！</string>
   <!--STRINGS OF ClothArmor CLASS-->
   <string name="ClothArmor_Name">布甲</string>
-  <string name="ClothArmor_Desc">這件輕甲能夠提供基礎的保護。</string>
+  <string name="ClothArmor_Desc">這件輕甲能夠提供基礎的防護。</string>
   <!--STRINGS OF ElfArmor CLASS-->
   <string name="ElfArmor_Name">精靈披風</string>
   <string name="ElfArmor_Desc">在這件披風的幫助下，精靈可以召喚自然的力量。高密的草叢能在眨眼間長出並困住視野內的敵人。然而實際上是一塊塊大石阻擋著，使他們不能彈動。</string>
@@ -47,7 +48,7 @@
   <string name="MailArmor_Desc">由相扣的金屬環製成，既牢固又靈活的一套護甲。</string>
   <!--STRINGS OF PlateArmor CLASS-->
   <string name="PlateArmor_Name">板甲</string>
-  <string name="PlateArmor_Desc">巨大厚重的金屬板洽焊接而成，為那些能夠承受它驚人重量的冒險者提供無與倫比的保護。</string>
+  <string name="PlateArmor_Desc">這件裝備是由巨大厚重的金屬板焊接而成，讓能夠承受板甲驚人重量的冒險者提供無與倫比的防護。</string>
   <!--STRINGS OF RogueArmor CLASS-->
   <string name="RogueArmor_Name">盜賊外套</string>
   <string name="RogueArmor_Desc">盗賊穿着这件漆黑的外套，可以弄一個小把戲 —— 「煙霧爆彈」（雖然使用時並不會用上真的爆炸品）：他會使敵人暫時失去視覺，自己並會跳到一旁。</string>
@@ -56,7 +57,7 @@
   <string name="RogueArmor_Fov">您只能跳到你視野中內的一個空位</string>
   <string name="RogueArmor_Prompt">選擇您要躍到的位置</string>
   <!--STRINGS OF ScaleArmor CLASS-->
-  <string name="ScaleArmor_Name">鱗甲</string>
+  <string name="ScaleArmor_Name">鱗片護甲</string>
   <string name="ScaleArmor_Desc">相疊的金屬鱗片縫製在皮背心上，做出了一套靈活而有保護力的裝甲。</string>
   <!--STRINGS OF WarriorArmor CLASS-->
   <string name="WarriorArmor_Name">戰士装甲</string>
