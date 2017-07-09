@@ -1,32 +1,27 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class WndPortal extends Window {
+public class WndPortalWarning extends Window {
 
 	private static final int BTN_HEIGHT	= 18;
 	private static final int BTN_WIDTH	= 38;
 	private static final int WIDTH		= 100;
 	private static final int GAP		= 2;
 
-	private static final String TXT_TITLE = Game.getVar(R.string.WndPortal_Title);
-	private static final String TXT_INFO = Game.getVar(R.string.WndPortal_Info);
+	private static final String TXT_TITLE = Game.getVar(R.string.WndPortal_Warning_Title);
+	private static final String TXT_INFO = Game.getVar(R.string.WndPortal_Warning_Info);
 	private static final String BTN_YES = Game.getVar(R.string.Wnd_Button_Yes);
 	private static final String BTN_NO = Game.getVar(R.string.Wnd_Button_No);
 
-	public WndPortal() {
+	public WndPortalWarning() {
 		super();
 
 		//Title text
