@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title"></string>
+    <string name="WndPortal_Info"></string>
+    <string name="WndPlayGames_Show_Leaderboards"></string>
+
+    <string name="PortalGate_Activated"></string>
+    <string name="PortalGate_Used"></string>
+
+
+</resources>
