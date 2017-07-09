@@ -24,5 +24,8 @@
     {"kind":"TownsfolkSilentNPC","x":5,"y":21},
     {"kind":"TownsfolkMovieNPC","x":24,"y":19},
     {"kind":"TownsfolkNPC","x":19,"y":23}
+  ],
+  "objects" : [
+    {"kind":"PortalGate","x":10,"y":10}
   ]
 }
