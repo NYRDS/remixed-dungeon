@@ -31,13 +31,20 @@ public class PortalGate extends LevelObject {
 	@Override
 	public boolean interact(Hero hero) {
 
-		sprite.playAnim(4, true, new Callback() {
+		sprite.playAnim(6, false, new Callback() {
 			@Override
 			public void call() {
+				sprite.playAnim(6, true, new Callback() {
+					@Override
+					public void call() {
+
+
+					}
+				}, image() + 17,image() + 18,image() + 19);
 
 
 			}
-		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4);
+		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4, image() + 5, image() + 6, image() + 7, image() + 8, image() + 9, image() + 10, image() + 11, image() + 12, image() + 13, image() + 14, image() + 15, image() + 16);
 
 		return false;
 	}

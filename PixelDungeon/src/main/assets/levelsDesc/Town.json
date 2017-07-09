@@ -26,6 +26,6 @@
     {"kind":"TownsfolkNPC","x":19,"y":23}
   ],
   "objects" : [
-    {"kind":"PortalGate","x":10,"y":10}
+    {"kind":"PortalGate","x":16,"y":10}
   ]
 }
