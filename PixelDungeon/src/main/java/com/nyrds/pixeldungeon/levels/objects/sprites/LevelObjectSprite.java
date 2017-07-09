@@ -16,26 +16,15 @@ import com.watabou.utils.Random;
 
 public class LevelObjectSprite extends MovieClip implements Tweener.Listener, MovieClip.Listener {
 
-	private static final int SIZE = 16;
+	private TextureFilm frames;
+	private Callback    onAnimComplete;
+	private PointF      centerShift;
 
-	private static TextureFilm frames;
-	private        Callback    onAnimComplete;
-
-	public LevelObjectSprite() {
-
-		texture("levelObjects/objects.png");
-
-		if (frames == null) {
-			frames = new TextureFilm(texture, SIZE, SIZE);
-		}
-
-		origin.set(SIZE / 2, SIZE / 2);
-	}
+	public LevelObjectSprite() {}
 
 	public void move(int from, int to) {
-
 		if (getParent() != null) {
-			Tweener motion = new PosTweener(this, DungeonTilemap.tileToWorld(to), 0.1f);
+			Tweener motion = new PosTweener(this, DungeonTilemap.tileToWorld(to).offset(centerShift), 0.1f);
 			motion.listener = this;
 			getParent().add(motion);
 
@@ -66,13 +55,22 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	private void setLevelPos(int cell) {
 		PointF p = DungeonTilemap.tileToWorld(cell);
-		x = p.x;
-		y = p.y;
+		x = p.x + centerShift.x;
+		y = p.y + centerShift.y;
 	}
 
 	public void reset(LevelObject object) {
 		revive();
+
 		texture(object.texture());
+
+		int xs = object.getSpriteXS();
+		int ys = object.getSpriteYS();
+
+		frames = new TextureFilm(texture,xs , ys);
+		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2, -(ys-DungeonTilemap.SIZE) / 2);
+		origin.set(xs / 2, ys / 2);
+
 		reset(object.image());
 		alpha(1f);
 
@@ -110,6 +108,5 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 			onAnimComplete = null;
 		}
 	}
-
 
 }

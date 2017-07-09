@@ -1,12 +1,10 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.WndLibrary;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
@@ -33,7 +31,7 @@ public class PortalGate extends LevelObject {
 	@Override
 	public boolean interact(Hero hero) {
 
-		sprite.playAnim(10, false, new Callback() {
+		sprite.playAnim(4, true, new Callback() {
 			@Override
 			public void call() {
 
@@ -81,5 +79,15 @@ public class PortalGate extends LevelObject {
 	@Override
 	public String texture() {
 		return "levelObjects/portals.png";
+	}
+
+	@Override
+	public int getSpriteXS() {
+		return 32;
+	}
+
+	@Override
+	public int getSpriteYS() {
+		return 32;
 	}
 }
