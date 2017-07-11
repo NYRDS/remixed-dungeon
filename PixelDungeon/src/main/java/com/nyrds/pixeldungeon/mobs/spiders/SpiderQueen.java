@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.items.SpiderCharm;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Random;
 
 public class SpiderQueen extends Boss {
@@ -91,6 +92,7 @@ public class SpiderQueen extends Boss {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
+		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);
 	}
 }

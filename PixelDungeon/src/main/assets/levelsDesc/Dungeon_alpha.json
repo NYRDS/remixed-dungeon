@@ -65,7 +65,7 @@
 	  "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
    },
   "Graph":{
-    "0":[["town"],[]],
+    "0":[["ice5"],[]],
 
     "town_shop":[[],["town"],[1]],
     "movie_theater":[[],["town"],[2]],
@@ -110,17 +110,17 @@
       "7s":[["8s"],["6s"]],
       "8s":[["9s"],["7s"]],
       "9s":[["10s"],["8s"]],
-      "10s":[[],["9s"]],
+      "10s":[["6s"],["9s"]],
       "necro1":[["necro2"],["7"],[2]],
       "necro2":[["necro3"],["necro1"]],
       "necro3":[["necro4"],["necro2"]],
       "necro4":[["necro5"],["necro3"]],
-      "necro5":[[],["necro4"]],
+      "necro5":[["necro1"],["necro4"]],
       "ice1":[["ice2"],["14"],[2]],
       "ice2":[["ice3"],["ice1"]],
       "ice3":[["ice4"],["ice2"]],
       "ice4":[["ice5"],["ice3"]],
-      "ice5":[[],["ice4"]]
+      "ice5":[["ice1"],["ice4"]]
    },
    "Entrance":"0"
 }

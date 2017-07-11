@@ -96,7 +96,7 @@ public class NecroBossLevel extends Level {
 		
 		entrance = (TOP + HALL_HEIGHT + 2 + Random.Int( CHAMBER_HEIGHT - 1 )) * getWidth() + _Left() + (/*1 +*/ Random.Int( HALL_WIDTH-2 )); 
 		map[entrance] = Terrain.ENTRANCE;
-
+		map[getExit(0)] = Terrain.LOCKED_EXIT;
 		return true;
 	}
 	
