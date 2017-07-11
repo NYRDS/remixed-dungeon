@@ -70,6 +70,7 @@ public class IceCavesBossLevel extends Level {
 	protected boolean build() {
 
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY_SP );
+		Painter.fill( this, _Left(), TOP, HALL_WIDTH, TOP, Terrain.EMPTY );
 		Painter.fill( this, _Left(), HALL_HEIGHT, HALL_WIDTH, TOP, Terrain.EMPTY );
 		for (int i = 0; i < 10; i++) {
 			map[getRandomTerrainCell(Terrain.EMPTY_SP)] = Terrain.STATUE_SP;
@@ -82,7 +83,8 @@ public class IceCavesBossLevel extends Level {
 		
 		entrance = (TOP + HALL_HEIGHT + 2 + Random.Int( CHAMBER_HEIGHT - 1 )) * getWidth() + _Left() + (/*1 +*/ Random.Int( HALL_WIDTH-2 )); 
 		map[entrance] = Terrain.ENTRANCE;
-		
+		setExit((TOP - 1) * getWidth() + _Center(),0);
+		map[getExit(0)] = Terrain.LOCKED_EXIT;
 		return true;
 	}
 	
