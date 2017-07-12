@@ -1,0 +1,19 @@
+{
+   "width":7,
+   "height":6,
+   "map":[43,43, 4, 4, 4,43,43,
+           4, 4, 4, 1, 4, 4, 4,
+           4, 1, 1, 1, 1, 1, 4,
+           4, 1, 1, 1, 1, 1, 4,
+           4, 7, 1, 1, 1, 8, 4,
+           4, 4, 4, 4, 4, 4, 4
+         ],
+   "tiles":"tiles_portal.png",
+   "water":"water_portal.png",
+   "entrance":[1,4],
+   "exit":[5,4],
+   "objects" : [
+    {"kind":"PortalGate","x":3,"y":1}
+  ]
+
+}

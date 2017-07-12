@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.common.Library;
+import com.nyrds.pixeldungeon.levels.objects.PortalGate;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
@@ -26,7 +27,7 @@ public class WndPortal extends Window {
 	private static final String BTN_YES = Game.getVar(R.string.Wnd_Button_Yes);
 	private static final String BTN_NO = Game.getVar(R.string.Wnd_Button_No);
 
-	public WndPortal() {
+	public WndPortal(final PortalGate portal ) {
 		super();
 
 		//Title text
@@ -54,6 +55,7 @@ public class WndPortal extends Window {
 			protected void onClick() {
 				super.onClick();
 				hide();
+				portal.used = true;
 			}
 		};
 

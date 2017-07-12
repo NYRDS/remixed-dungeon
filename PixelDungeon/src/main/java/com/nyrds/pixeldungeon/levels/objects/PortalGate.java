@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.GameLog;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
@@ -21,7 +22,8 @@ import org.json.JSONObject;
 public class PortalGate extends LevelObject {
 
 	private boolean activated = false;
-	private boolean used = false;
+	private boolean animationRunning = false;
+	public boolean used = false;
 
 	private static final String TXT_USED = Game.getVar(R.string.PortalGate_Used);
 	private static final String TXT_ACTIVATED = Game.getVar(R.string.PortalGate_Activated);
@@ -40,11 +42,13 @@ public class PortalGate extends LevelObject {
 
 
 	private void playStartUpAnim(){
+		animationRunning = true;
 		sprite.playAnim(6, false, new Callback() {
 			@Override
 			public void call() {
 				playActiveLoop();
 				activated = true;
+				animationRunning = false;
 				GLog.w( TXT_ACTIVATED );
 			}
 		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4, image() + 5, image() + 6, image() + 7, image() + 8, image() + 9, image() + 10, image() + 11, image() + 12, image() + 13, image() + 14, image() + 15, image() + 16);
@@ -62,10 +66,13 @@ public class PortalGate extends LevelObject {
 	@Override
 	public boolean interact(Hero hero) {
 		if(!used){
-			if(!activated){
-				playStartUpAnim();
-			} else{
-				GameScene.show(new WndPortal());
+			if(!animationRunning){
+				if (!activated ){
+					playStartUpAnim();
+				} else {
+					GameScene.show(new WndPortal(this));
+
+				}
 			}
 		} else{
 			GLog.w( TXT_USED );
