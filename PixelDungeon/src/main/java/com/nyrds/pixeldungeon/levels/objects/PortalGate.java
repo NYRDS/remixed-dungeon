@@ -80,14 +80,17 @@ public class PortalGate extends LevelObject {
 		return false;
 	}
 
+	private static final String USED = "used";
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
+		used = bundle.optBoolean(USED, false);
 	}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle(bundle);
+		bundle.put(USED, used);
 	}
 
 	@Override
