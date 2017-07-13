@@ -26,7 +26,8 @@ public class PortalGate extends LevelObject {
 	private boolean activated = false;
 	private boolean animationRunning = false;
 	private boolean used = false;
-	private int uses = 1;
+	private boolean infiniteUses = false;
+	private int uses;
 
 	private static final String TXT_USED = Game.getVar(R.string.PortalGate_Used);
 	private static final String TXT_ACTIVATED = Game.getVar(R.string.PortalGate_Activated);
@@ -41,29 +42,11 @@ public class PortalGate extends LevelObject {
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
-	}
-
-
-	private void playStartUpAnim(){
-		animationRunning = true;
-		sprite.playAnim(6, false, new Callback() {
-			@Override
-			public void call() {
-				playActiveLoop();
-				activated = true;
-				animationRunning = false;
-				GLog.w( TXT_ACTIVATED );
-			}
-		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4, image() + 5, image() + 6, image() + 7, image() + 8, image() + 9, image() + 10, image() + 11, image() + 12, image() + 13, image() + 14, image() + 15, image() + 16);
-
-	}
-
-	private void playActiveLoop(){
-		sprite.playAnim(6, true, new Callback() {
-			@Override
-			public void call() {
-			}
-		}, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
+		if(obj.has("uses")){
+			uses = obj.optInt("uses", 1);
+		} else {
+			infiniteUses = true;
+		}
 	}
 
 	@Override
@@ -94,7 +77,7 @@ public class PortalGate extends LevelObject {
 	}
 
 	public void useUp(){
-		if (uses != -1){
+		if (infiniteUses == false){
 			uses = uses - 1;
 			if (uses == 0){
 				used = true;
@@ -153,5 +136,27 @@ public class PortalGate extends LevelObject {
 	@Override
 	public int getSpriteYS() {
 		return 32;
+	}
+
+	private void playStartUpAnim(){
+		animationRunning = true;
+		sprite.playAnim(6, false, new Callback() {
+			@Override
+			public void call() {
+				playActiveLoop();
+				activated = true;
+				animationRunning = false;
+				GLog.w( TXT_ACTIVATED );
+			}
+		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4, image() + 5, image() + 6, image() + 7, image() + 8, image() + 9, image() + 10, image() + 11, image() + 12, image() + 13, image() + 14, image() + 15, image() + 16);
+
+	}
+
+	private void playActiveLoop(){
+		sprite.playAnim(6, true, new Callback() {
+			@Override
+			public void call() {
+			}
+		}, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
 	}
 }
