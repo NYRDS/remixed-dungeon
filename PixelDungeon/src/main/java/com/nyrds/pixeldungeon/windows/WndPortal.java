@@ -4,9 +4,13 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.PortalGate;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
@@ -27,7 +31,7 @@ public class WndPortal extends Window {
 	private static final String BTN_YES = Game.getVar(R.string.Wnd_Button_Yes);
 	private static final String BTN_NO = Game.getVar(R.string.Wnd_Button_No);
 
-	public WndPortal(final PortalGate portal ) {
+	public WndPortal(final PortalGate portal, final Hero hero, final Position returnTo ) {
 		super();
 
 		//Title text
@@ -55,7 +59,12 @@ public class WndPortal extends Window {
 			protected void onClick() {
 				super.onClick();
 				hide();
-				portal.used = true;
+				portal.useUp();
+
+				hero.setPortalLevelCoordinates(Dungeon.currentPosition());
+				InterlevelScene.mode = InterlevelScene.Mode.RETURN;
+				InterlevelScene.returnTo = new Position(returnTo);
+				Game.switchScene( InterlevelScene.class );
 			}
 		};
 

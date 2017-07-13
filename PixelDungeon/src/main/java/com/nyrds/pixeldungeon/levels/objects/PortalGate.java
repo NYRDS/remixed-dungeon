@@ -1,8 +1,10 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.WndPortal;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
@@ -23,7 +25,8 @@ public class PortalGate extends LevelObject {
 
 	private boolean activated = false;
 	private boolean animationRunning = false;
-	public boolean used = false;
+	private boolean used = false;
+	private int uses = 1;
 
 	private static final String TXT_USED = Game.getVar(R.string.PortalGate_Used);
 	private static final String TXT_ACTIVATED = Game.getVar(R.string.PortalGate_Activated);
@@ -66,18 +69,38 @@ public class PortalGate extends LevelObject {
 	@Override
 	public boolean interact(Hero hero) {
 		if(!used){
-			if(!animationRunning){
-				if (!activated ){
-					playStartUpAnim();
-				} else {
-					GameScene.show(new WndPortal(this));
-
-				}
-			}
+			use(hero);
 		} else{
 			GLog.w( TXT_USED );
 		}
 		return false;
+	}
+
+	private void use(Hero hero){
+		if(!animationRunning){
+			if (!activated ){
+				playStartUpAnim();
+			} else {
+				if(Dungeon.level.levelId.equals("portal_shrine")){
+					if(hero.portalLevelPos != null){
+						GameScene.show(new WndPortal(this, hero, hero.portalLevelPos));
+					}
+				} else {
+					Position returnTo = new Position("PredesignedLevel", "portal_shrine", 0, 230);
+					GameScene.show(new WndPortal(this, hero, returnTo));
+				}
+			}
+		}
+	}
+
+	public void useUp(){
+		if (uses != -1){
+			uses = uses - 1;
+			if (uses == 0){
+				used = true;
+			}
+		}
+
 	}
 
 	private static final String USED = "used";

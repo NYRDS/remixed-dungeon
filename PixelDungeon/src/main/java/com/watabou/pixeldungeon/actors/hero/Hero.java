@@ -159,6 +159,7 @@ public class Hero extends Char {
 	private static final float TIME_TO_REST   = 1f;
 	private static final float TIME_TO_SEARCH = 2f;
 
+
 	public HeroClass    heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass  = HeroSubClass.NONE;
 
@@ -191,6 +192,8 @@ public class Hero extends Char {
 
 	public String levelKind;
 	public String levelId;
+
+	public Position portalLevelPos;
 
 	@NonNull
 	private ArrayList<Mob> visibleEnemies = new ArrayList<>();
@@ -1883,5 +1886,9 @@ public class Hero extends Char {
 			return true;
 		}
 		return false;
+	}
+
+	public void setPortalLevelCoordinates(Position position){
+		portalLevelPos = position;
 	}
 }
