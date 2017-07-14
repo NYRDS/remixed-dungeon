@@ -7,6 +7,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.GameLog;
@@ -51,7 +52,7 @@ public class PortalGate extends LevelObject {
 
 	@Override
 	public boolean interact(Hero hero) {
-		if(!used){
+		if(!used && hero.belongings.getItem(Amulet.class) == null){
 			use(hero);
 		} else{
 			GLog.w( TXT_USED );
@@ -140,7 +141,7 @@ public class PortalGate extends LevelObject {
 
 	private void playStartUpAnim(){
 		animationRunning = true;
-		sprite.playAnim(6, false, new Callback() {
+		sprite.playAnim(8, false, new Callback() {
 			@Override
 			public void call() {
 				playActiveLoop();
@@ -153,7 +154,7 @@ public class PortalGate extends LevelObject {
 	}
 
 	private void playActiveLoop(){
-		sprite.playAnim(6, true, new Callback() {
+		sprite.playAnim(8, true, new Callback() {
 			@Override
 			public void call() {
 			}
