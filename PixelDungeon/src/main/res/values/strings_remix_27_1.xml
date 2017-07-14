@@ -9,7 +9,7 @@
     <string name="WndPortal_Warning_Info">You haven\'t used portal on this level. After leaving you won\'t be able to use this portal again!\nAre you sure you want to leave?</string>
 
     <string name="PortalGate_Activated">The ancient portal has awaken!</string>
-    <string name="PortalGate_Used">This portal\'s power is depleted...</string>
+    <string name="PortalGate_Used">You touched the portal and... nothing happened.</string>
 
 
 </resources>
