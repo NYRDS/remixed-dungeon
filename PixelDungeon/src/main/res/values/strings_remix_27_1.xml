@@ -3,13 +3,11 @@
     <!-- Window descriptions -->
     <!-- STRINGS OF WndPlayGames CLASS -->
     <string name="WndPortal_Title">Portal</string>
-    <string name="WndPortal_Info">This portal will allow you to return to town. It seems quite unstable, it seems that it won\'t be active for to long.\nWould you like to use it?</string>
+    <string name="WndPortal_Info">This portal will allow you to return to town. It seems quite unstable, it probably won\'t be active for to long.\nWould you like to use it?</string>
 
     <string name="WndPortal_Warning_Title">Portal Warning!</string>
     <string name="WndPortal_Warning_Info">You haven\'t used portal on this level. After leaving you won\'t be able to use this portal again!\nAre you sure you want to leave?</string>
 
     <string name="PortalGate_Activated">The ancient portal has awaken!</string>
     <string name="PortalGate_Used">You touched the portal and... nothing happened.</string>
-
-
 </resources>

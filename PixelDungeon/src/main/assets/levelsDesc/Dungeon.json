@@ -39,7 +39,7 @@
       "ice4":{"kind":"IceCavesLevel", "depth":18,     "size":[32,32], "music":"ost_ice_caves.mp3"},
       "ice5":{"kind":"IceCavesBossLevel", "depth":19, "size":[32,32], "music":"ost_ice_caves.mp3"},
 
-      "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32],"feeling":"CHASM"},
+      "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
       "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
       "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
