@@ -4,59 +4,59 @@
   <!--STRINGS OF Blacksmith CLASS-->
   <string name="Blacksmith_Name">fabbro troll</string>
   <string name="Blacksmith_Desc">Questo fabbro troll si presenta come tutti i troll guardandolo : è alto e magro, la sua pelle assomiglia alla pietra sia a colori e alla consistenza. Il fabbro troll sa armeggiare con piccoli attrezzi in modo non proporzionale </string>
-  <string name="Blacksmith_Gold1">Hey umano!  Vuoi essere utile, eh? prendi il piccone e mina del _dark gold ore_, _15 pieces_ dovrebbe essere sufficiente. Cosa vuol dire, come sto andando pagare? Sei avido...\nOk, ok, non ho soldi per pagare, ma posso fare un po il fabbro \'per voi. Considerati fortunato, io sono l\'unico fabbro attorno.</string>
-  <string name="Blacksmith_Blood1">Hey umano!  Vuoi essere utile, eh? prendi il piccone e _uccidi il pipistrello_\',ho bisogno del suo sangue sulla testa. dovrebbe essere sufficiente. Cosa vuol dire, come sto andando pagare? Sei avido...\nOk, ok, non ho soldi per pagare, ma posso fare un po il fabbro \'per voi. Considerati fortunato, io sono l\'unico fabbro attorno.</string>
-  <string name="Blacksmith_Txt2">mi stai prendendo in giro?! dov\'è il mio piccone!?</string>
+  <string name="Blacksmith_Gold1">Hey umano!  Vuoi essere utile, eh? Prendi il piccone e mina del _dark gold ore_, _15 pieces_ dovrebbe essere sufficiente. Cosa vuol dire come ho intenzione di pagare? Sei avido...\nOk, ok, non ho soldi da darti, ma in cambio ti posso offrire i miei servigi per un po. Considerati fortunato, io sono l\'unico fabbro qui attorno.</string>
+  <string name="Blacksmith_Blood1">Hey umano!  Vuoi essere utile, eh? Prendi il piccone e _uccidi il pipistrello_\',ho bisogno del suo sangue sulla testa. dovrebbe essere sufficiente. Cosa vuol dire, come sto andando pagare? Sei avido...\nOk, ok, non ho soldi per pagare, ma posso fare un po il fabbro \'per voi. Considerati fortunato, io sono l\'unico fabbro attorno.</string>
+  <string name="Blacksmith_Txt2">Mi stai prendendo in giro?! Dov\'è il mio piccone!?</string>
   <string name="Blacksmith_Txt3">minerale di oro scuro. 15 pezzi. Scherzi a parte, è difficile?</string>
   <string name="Blacksmith_Txt4">Ho detto che ho bisogno del sangue di un pipistrello sulla zappa. Chop Chop!</string>
-  <string name="Blacksmith_Completed">Oh, sei tornato...Meglio tardi che mai.</string>
+  <string name="Blacksmith_Completed">Oh, sei tornato... Meglio tardi che mai.</string>
   <string name="Blacksmith_GetLost">Sono occupato. Sparisci!</string>
   <string name="Blacksmith_LooksBetter">%s sembra migliore ora</string>
-  <string name="Blacksmith_Verify1">selezione 2 differenti items, non lo stesso item due volte!</string>
-  <string name="Blacksmith_Verify2">selezione 2 items dello stesso tipo!</string>
+  <string name="Blacksmith_Verify1">Scegli 2 item diversi, non lo stesso due volte!</string>
+  <string name="Blacksmith_Verify2">Seleziona 2 item dello stesso tipo!</string>
   <string name="Blacksmith_Verify3">Ho bisogno di sapere con cosa sto lavorando, identificali prima!</string>
   <string name="Blacksmith_Verify4">Io non lavoro con oggetti maledetti!</string>
-  <string name="Blacksmith_Verify5">Si tratta di una giunca, la qualità è troppo povera!</string>
+  <string name="Blacksmith_Verify5">E\' spazzatura, la qualità è troppo bassa!</string>
   <string name="Blacksmith_Verify6">Non posso riforgiare questi items!</string>
   <!--STRINGS OF Ghost CLASS-->
   <string name="Ghost_Name">fantasma triste</string>
-  <string name="Ghost_Desc">Il fantasma è appena visibile. Si presenta come una macchia informe di luce debole con una faccia addolorante.</string>
-  <string name="Ghost_Rose1">Ciao avventuriero...una volta ero come te - forte e sicuro di me...e ora sono morto...ma non posso lasciare questo posto...Non fino a quando non avrò la mia _rosa appassita_...è molto importante per me... un mostro me lo ha rubato dal mio corpo...</string>
-  <string name="Ghost_Rose2">Perfavore....aiutami...trova la rosa...</string>
-  <string name="Ghost_Rat1">Ciao avventuriero...Una volta ero come te - forte e sicuro di me...E ora sono morto...Ma non posso lasciare questo posto...non finchè non avrò la mia vendetta...uccidi il _ratto puzzolente_,che ha preso la mia vita...</string>
-  <string name="Ghost_Rat2">Perfavore....aiutami....uccidi l\'abominio</string>
+  <string name="Ghost_Desc">Il fantasma è appena visibile. Si presenta come una macchia informe di luce fioca con una espressione addolorata.</string>
+  <string name="Ghost_Rose1">Ciao avventuriero... Una volta ero come te - forte e fiducioso... E ora sono morto... Ma non posso lasciare questo posto... Non finché non riavrò  la mia _rosa appassita_... E\' molto importante per me... Un mostro l\'ha rubata dal mio corpo...</string>
+  <string name="Ghost_Rose2">Ti prego.... Aiutami... Trova la rosa...</string>
+  <string name="Ghost_Rat1">Ciao avventuriero... Una volta ero come te - forte e fiducioso... E ora sono morto... Ma non posso lasciare questo posto... Non finché non avrò la mia vendetta... Uccidi il _ratto puzzolente_ che ha preso la mia vita...</string>
+  <string name="Ghost_Rat2">Ti prego.... Aiutami... Uccidi l\'abominio...</string>
   <string name="Ghost_Defense">eluso</string>
   <string name="FetidRat_Name">ratto puzzolente</string>
   <string name="FetidRat_Name_Objective">ratto puzzolente</string>
-  <string name="FetidRat_Gender">Femmina</string>
-  <string name="FetidRat_Desc">Questo topo marsupiale è molto più grande, di una forma regolare. Ed è circondato da una nuvola di gas puzzolente.</string>
+  <string name="FetidRat_Gender">femminile</string>
+  <string name="FetidRat_Desc">Questo topo marsupiale è molto più grande rispetto ad uno normale. Ed è circondato da una nuvola di gas puzzolente.</string>
   <!--STRINGS OF Hedgehog CLASS-->
   <string name="Hedgehog_Name">riccio</string>
   <string name="Hedgehog_Desc">Questo riccio sembra nervoso.</string>
-  <string name="Hedgehog_Info1">Sei alla ricerca dell\'orso?</string>
+  <string name="Hedgehog_Info1">Sei alla ricerca dell\'orso anche tu?</string>
   <string name="Hedgehog_Info2">Come il cavallo nella nebbia?</string>
-  <string name="Hedgehog_Info3">Sei come il tè con la marmellata di lamponi?</string>
+  <string name="Hedgehog_Info3">Ti piace il tè con la marmellata di lamponi?</string>
   <string name="Hedgehog_Info4">Prendi questa torta</string>
   <string name="Hedgehog_ImLate">Sono in ritardo, sono terribilmente in ritardo...</string>
   <!--STRINGS OF Imp CLASS-->
-  <string name="Imp_Name">diavoletto ambizioso</string>
-  <string name="Imp_Desc">i Diavoletti sono demoni minori. essi si distinguono per la loro forza e per il loro talento nella magia. Ma sono abbastanza intelligenti e socievoli, Molti folletti preferiscono vivere tra i non demoni.</string>
+  <string name="Imp_Name">folletto ambizioso</string>
+  <string name="Imp_Desc">I folletti sono demoni minori. Essi non si distinguono né per la loro forza né per il loro talento nella magia, tuttavia sono abbastanza intelligenti e socievoli. Molti folletti preferiscono vivere tra i non demoni.</string>
   <string name="Imp_Defense">eluso</string>
-  <string name="Imp_Golems1">Sei un avventuriero? Amo gli avventurieri! Si può sempre contare su di loro, se qualcosa deve essere ucciso. Ho ragione? Per una taglia, ovviamente ;)\nIn Nel mio caso questi sono i _golems_ ho bisogno di ucciderli. Vedete, ho intenzione di avviare una piccola impresa qui, ma questi golem stupidi sono un male per gli affari! E \'molto difficile negoziare con grumi di granito, accidenti a loro! Quindi, per favore, uccidili...diciamo _6 di them_ ed il premio è tuo</string>
-  <string name="Imp_Golems2">Come è il vostro safari golem?</string>
-  <string name="Imp_Monks1">Sei un avventuriero? Amo gli avventurieri! Si può sempre contare su di loro, se qualcosa deve essere ucciso. Ho ragione? Per una taglia, ovviamente ;)\nIn Nel mio caso questo è _monks_ hanno bisogno di ucciderlo. Vedete, ho intenzione di avviare una piccola impresa qui, ma questo pazzo non si compra nulla di esso e spaventa gli altri clienti. Quindi, per favore, uccidilo... diciamo _8 of them_ ed il premio è tuo.</string>
-  <string name="Imp_Monks2">Oh, sei ancora vivo! Sapevo che il kung-fu è più forte;) Basta non dimenticare di prendere gettoni questi monaci.</string>
+  <string name="Imp_Golems1">Sei un avventuriero? Amo gli avventurieri! Si può sempre contare su di loro se qualcosa deve essere ucciso. Ho ragione? Per una taglia, ovviamente ;)\nNel mio caso ho bisogno di te per uccidere i _golem_. Come vedi ho intenzione di avviare una piccola impresa proprio qui, ma questi stupidi golem fanno male agli affari! E \'molto difficile negoziare con dei blocchi di granito ambulanti, accidenti a loro! Quindi, per favore, uccidili... Facciamo così, _6 di loro_ ed il premio è tuo.</string>
+  <string name="Imp_Golems2">Come sta andando la caccia ai golem?</string>
+  <string name="Imp_Monks1">Sei un avventuriero? Amo gli avventurieri! Si può sempre contare su di loro, se qualcosa deve essere ucciso. Ho ragione? Per una taglia, ovviamente ;)\nNel mio caso ho bisogno di te per uccidere i _monaci_. Come vedi ho intenzione di avviare una piccola impresa proprio qui, ma quei pazzi non comprano nulla e spaventano gli altri clienti. Quindi, per favore, uccidili... Facciamo così, _8 di loro_ ed il premio è tuo.</string>
+  <string name="Imp_Monks2">Oh, sei ancora vivo! Sapevo che il tuo kung-fu era più forte;)  Non ti dimenticare di prendere i gettoni dai monaci.</string>
   <string name="Imp_Cya">Ci vediamo, %s!</string>
   <string name="Imp_Hey">Psst, %s!</string>
   <!--STRINGS OF ImpShopkeeper CLASS-->
   <string name="ImpShopkeeper_Name">diavoletto ambizioso</string>
-  <string name="ImpShopkeeper_Desc">i Diavoletti sono demoni minori. essi si distinguono per la loro forza e per il loro talento nella magia. Ma sono abbastanza intelligenti e socievoli, e molti dei folletti preferiscono vivere e fare business tra i non-demoni.</string>
-  <string name="ImpShopkeeper_Greetings">ciao, amico!</string>
+  <string name="ImpShopkeeper_Desc">I folletti sono demoni minori. Essi non si distinguono né per la loro forza né per il loro talento nella magia, tuttavia sono abbastanza intelligenti e socievoli. Molti di loro preferiscono vivere e commerciare con i non demoni.</string>
+  <string name="ImpShopkeeper_Greetings">Ciao, amico!</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">Immagine Riflessa </string>
   <string name="MirrorImage_Name_Objective">Immagine Riflessa </string>
   <string name="MirrorImage_Gender">mascolino</string>
-  <string name="MirrorImage_Desc">Questa illusione ha una stretta somiglianza con te, ma è più pallido e contrae un po\'.</string>
+  <string name="MirrorImage_Desc">Questa illusione ha una stretta somiglianza con te, ma è più pallida e si deforma un po\'.</string>
   <!--STRINGS OF RatKing CLASS-->
   <string name="RatKing_Name">re ratto</string>
   <string name="RatKing_Desc">Questo topo è un po \'più grande di un normale topo marsupiale e si indossa una piccola corona sulla sua testa.</string>

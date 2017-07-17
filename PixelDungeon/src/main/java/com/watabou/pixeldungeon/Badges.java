@@ -936,7 +936,7 @@ public class Badges {
 			return;
 		}
 
-		if (playGamesList.contains(badge)) {
+		if (playGamesList.contains(badge) && !ModdingMode.inMod()) {
 			Log.i("Badge", badge.name());
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
 			Log.i("Badge", achievementCode);

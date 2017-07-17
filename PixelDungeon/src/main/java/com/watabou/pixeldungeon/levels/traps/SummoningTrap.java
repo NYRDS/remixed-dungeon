@@ -53,17 +53,27 @@ public class SummoningTrap {
 		for (int i = 0; i < nMobs; ++i) {
 			int cell = level.getEmptyCellNextTo(pos);
 			if (level.cellValid(cell)) {
+				Mob mob = placeMob(level, cell);
 
-				Mob mob;
-				int nTry = 0;
-				do {
-					mob = Bestiary.mob();
-					nTry++;
-				} while (!mob.canSpawnAt(level, cell) && nTry < 10);
-
-				mob.setState(mob.WANDERING);
-				Actor.addDelayed(new DelayedMobSpawner(mob, cell), 0.1f);
+				if(mob!= null) {
+					mob.setState(mob.WANDERING);
+					Actor.addDelayed(new DelayedMobSpawner(mob, cell), 0.1f);
+				}
 			}
 		}
+	}
+
+	@Nullable
+	private static Mob placeMob(Level level, int cell) {
+		Mob mob;
+		int nTry = 0;
+		do {
+			mob = Bestiary.mob();
+			nTry++;
+			if(nTry > 10) {
+				return null;
+			}
+		} while (!mob.canSpawnAt(level, cell));
+		return mob;
 	}
 }

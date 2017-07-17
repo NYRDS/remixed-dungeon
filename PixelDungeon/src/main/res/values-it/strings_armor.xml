@@ -44,7 +44,7 @@
   <string name="LeatherArmor_Desc">Armatura fatta con pelle di mostro conciata. Non leggera quanto l\'armatura in stoffa ma fornisce una protezione migliore.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">tunica del mago</string>
-  <string name="MageArmor_Desc">Indossando questa splendida tunica, un mago può lanciare un incantesimo della terra bruciata: tutti i nemici nel campo visivo prenderanno fuoco e non saranno capaci di muoversi allo stesso tempo.</string>
+  <string name="MageArmor_Desc">Indossando questa splendida tunica, un mago può lanciare un incantesimo della terra bruciata: tutti i nemici nel campo visivo prenderanno fuoco e saranno impossibilitati a muoversi.</string>
   <string name="MageArmor_ACSpecial">TERRA BRUCIATA</string>
   <string name="MageArmor_NotMage">Solo i maghi possono usare quest\'armatura!</string>
   <!--STRINGS OF MailArmor CLASS-->

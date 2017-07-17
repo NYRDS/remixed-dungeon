@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import android.support.annotation.Nullable;
+
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
@@ -27,7 +29,6 @@ import com.watabou.pixeldungeon.effects.particles.LeafParticle;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
-import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.effects.particles.WoolParticle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.ColorMath;
@@ -37,14 +38,15 @@ import com.watabou.utils.Random;
 public class MagicMissile extends Emitter {
 
 	private static final float SPEED	= 200f;
-	
+
+	@Nullable
 	private Callback callback;
 	
 	private float sx;
 	private float sy;
 	private float time;
 	
-	public void reset( int from, int to, Callback callback ) {
+	public void reset( int from, int to, @Nullable Callback callback ) {
 		this.callback = callback;
 		
 		revive();
@@ -168,7 +170,9 @@ public class MagicMissile extends Emitter {
 			y += sy * d;
 			if ((time -= d) <= 0) {
 				on = false;
-				callback.call();
+				if(callback!= null) {
+					callback.call();
+				}
 			}
 		}
 	}

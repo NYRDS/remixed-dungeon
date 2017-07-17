@@ -48,13 +48,8 @@ public class Goo extends Boss {
 		exp = 9;
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
-		
-		float dice = Random.Float();
-		if( dice < 0.5 ) {
-			loot = new LloydsBeacon();
-		} else {
-			loot = new RingOfStoneWalking();
-		}
+
+		loot = new RingOfStoneWalking();
 		
 		lootChance = 0.8f;
 		
@@ -192,6 +187,7 @@ public class Goo extends Boss {
 
 	@Override
 	public boolean zap(@NonNull Char enemy) {
+		pumpedUp = false;
 		return true;
 	}
 }

@@ -140,10 +140,13 @@ public class SpiderLevel extends CommonLevel {
 		entrance = cell(ent.x, ent.y);
 		map[entrance] = Terrain.ENTRANCE;
 
-		if(Dungeon.depth != 10) {
-			Chamber ext = chambers.get(chambers.size() - 1);
-			setExit(cell(ext.x, ext.y),0);
+
+		Chamber ext = chambers.get(chambers.size() - 1);
+		setExit(cell(ext.x, ext.y), 0);
+		if (Dungeon.depth != 10){
 			map[getExit(0)] = Terrain.EXIT;
+		} else{
+			map[getExit(0)] = Terrain.LOCKED_EXIT;
 		}
 
 		setFeeling(Feeling.NONE);

@@ -81,8 +81,8 @@
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
     <string name="WandOfIcebolt_Name">Baguette d\'éclair glacé</string>
-    <string name="WandOfIcebolt_Info">Cette baguette tire un missile de glace, infligeant des dégâts léger à la créature ciblée. Elle peut réussir à ralentir ou même geler sa cible. </string>
-    <string name="WandOfIcebolt_Info1">Vous vous êtes tué avec votre propre baguette d\'éclair glacé...</string>
+    <string name="WandOfIcebolt_Info">Ce sceptre tire un missile de glace, infligeant des dégâts léger à la créature ciblée. Il peut réussir à ralentir ou même geler sa cible. </string>
+    <string name="WandOfIcebolt_Info1">Vous vous êtes tué avec votre propre sceptre d\'éclair glacé...</string>
 
     <!-- Badges -->
     <string name="Badges_Ice_Guardian_Slain">Gardien de glace tué</string>

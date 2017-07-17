@@ -5,5 +5,122 @@
     <string name="TownGuardNPC_Name">garde de la ville</string>
     <string name="TownGuardNPC_Gender">masculin</string>
     <string name="TownGuardNPC_Name_Objective">garde de la ville</string>
+    <string name="TownGuardNPC_Desc">Un garde ordinaire de la ville.</string>
     <string name="TownGuardNPC_Message1">Bougez d\'ici</string>
-    </resources>
+    <string name="TownGuardNPC_Message2">Grâce aux aventuriers comme vous, c\'est vraiment redevenu paisible ici.</string>
+    <string name="TownGuardNPC_Message3">Vous pensez qu\'il y a trop de gardes dans cette ville ? Et bien, ne serait-ce pas parce que c\'est l\'unique ville avec un donjon envahi par des monstres ? </string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">habitant</string>
+    <string name="TownsfolkNPC_Gender">masculin</string>
+    <string name="TownsfolkNPC_Name_Objective">habitant</string>
+    <string name="TownsfolkNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers.</string>
+    <string name="TownsfolkNPC_Message1">Ah ! Encore un aventurier, quel plaisir ! Assurez-vous de piller autant de choses que vous le pouvez !</string>
+    <string name="TownsfolkNPC_Message2">La ville est devenu si riche grâce au donjon que tous ses habitants peuvent se permettre de partir en vacances quand bon ça leur semble ! En fait, c\'est pourquoi il y a si peu de gens ici en ce moment.</string>
+    <string name="TownsfolkNPC_Message3">Quelle belle journée.</string>
+    <string name="TownsfolkNPC_Message4">J\'espère que les égouts ne vont pas à nouveau être inondés au moment du printemps. Nous n\'avons pas besoin d\'une autre invasion de rats.</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">prêtre de la ville</string>
+    <string name="HealerNPC_Gender">masculin</string>
+    <string name="HealerNPC_Name_Objective">prêtre de la ville</string>
+    <string name="HealerNPC_Desc">Un vieil homme, dont on pourrait penser qu\'il fabrique des baguettes magiques.</string>
+    <string name="HealerNPC_Message1">Soins gratuits pour chaque aventurier !</string>
+    <string name="HealerNPC_Message2">Revenez quand vous ne vous sentez pas bien ou que la faim vous tenaille ! </string>
+    <string name="HealerNPC_Message3">Je me demande bien pourquoi l\'église ne nous permet pas de porter des chapeaux... Il fait vraiment froid dehors. </string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">employé</string>
+    <string name="ServiceManNPC_Gender">masculin</string>
+    <string name="ServiceManNPC_Name_Objective">employé</string>
+    <string name="ServiceManNPC_Desc">Un travailleur normal d\'un établissement local.</string>
+
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">commerçant</string>
+    <string name="TownShopkeeper_Desc">Ce type est un commerçant typique. Vous devinez qu\'il sait déjà quel est votre prix. </string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">voir un film</string>
+    <string name="WndMovieTheatre_No">s\'en aller</string>
+    <string name="WndMovieTheatre_Bye">Revenez quand vous le voulez, nous serons ravis de vous revoir ! </string>
+    <string name="WndMovieTheatre_Instruction">Bienvenu dans notre salle de cinéma ! Nous offrons un service spécial, car vous pouvez voir un film gratuitement, et si vous le regardez jusqu\'au bout, vous recevrez une récompose de %dpièces !</string>
+    <string name="WndMovieTheatre_Title">Salle de cinéma</string>
+    <string name="WndMovieTheatre_Thank_You">Merci de votre participation !</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">soins - %dpièces</string>
+    <string name="WndPriest_Instruction_m">Soit le bienvenu mon fils à la sainte église du Grand Santa Seigneur des Profondeurs ! Malheureusement, il m\'est impossible de te laisser, car le bâtiment est en reconstruction. Mais si tu as besoin de te faire soigner et à manger, je peux t\'aider pour %dpièces d\'or. </string>
+    <string name="WndPriest_Instruction_f">Soit la bienvenue ma fille à la sainte église du Grand Santa Seigneur des Profondeurs ! Malheureusement, il m\'est impossible de te laisser, car le bâtiment est en reconstruction. Mais si tu as besoin de te faire soigner et à manger, je peux t\'aider pour %dpièces d\'or. </string>
+    <string name="WndPriest_Title">Prêtre de la ville</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">Toit</string>
+    <string name="town_deco_roof_desc">Une tuile simple du toit.</string>
+
+    <string name="town_deco_wall_name">Mur</string>
+    <string name="town_deco_wall_desc">Un mur simple en rondins.</string>
+
+    <string name="town_deco_snow_name">Neige</string>
+    <string name="town_deco_snow_desc">Malgré les rumeurs courant sur la popularité de cet endroit auprès des aventuiers, il y a un bon paquet de neige dans les environs, comme si jamais personne ne mettait les pieds dehors.</string>
+
+    <string name="town_deco_cross_name">Croix</string>
+    <string name="town_deco_cross_desc">Un croix argentée solide, symbole de la religion locale - \"Les Témoins de Santa Seigneur des Profondeurs\".</string>
+
+    <string name="town_deco_bell_name">Cloche</string>
+    <string name="town_deco_bell_desc">On dirait que personne n\'a plus fait sonner cette cloche typique depuis un moment. La corde est introuvable. </string>
+
+    <string name="town_deco_bell_tower_name">Clocher</string>
+    <string name="town_deco_bell_tower_desc">Traditionnellement, les cloche d\'une église sont installées dans de hauts clochers pour qu\'elles puissent être entendues de loin.</string>
+
+    <string name="town_deco_chimney_name">Cheminée</string>
+    <string name="town_deco_chimney_desc">Une cheminée en pierre accompagne d\'ordinaire les maisons construites dans les régions soumises à un climat rigoureux. </string>
+
+    <string name="town_deco_window_name">Fenêtre</string>
+    <string name="town_deco_window_desc">Fenêtre en verre classique, rien de particulier.</string>
+
+    <string name="town_deco_door_name">Porte</string>
+    <string name="town_deco_door_desc">Une simple porte en bois.</string>
+
+    <string name="town_deco_locked_door_name">Porté fermée.</string>
+    <string name="town_deco_locked_door_desc">Mais que peut bien dissimuler cette porte ?</string>
+
+    <string name="town_deco_snowman_name">Bonhomme de neige</string>
+    <string name="town_deco_snowman_desc">Un bonhomme de neige est une décoration urbaine traditionnelle pour la saison des fêtes, lorsque les gens célèbrent le jour de \"Donjonoël\", celui où les monstres ont envahi le donjon.</string>
+
+    <string name="town_deco_tree_name">Arbre</string>
+    <string name="town_deco_tree_desc">C\'est un peu étrange de contempler un arbre vivant, juste à côté de l\'entrée du donjon rempli d\'horreurs et par la mort. </string>
+
+    <string name="town_deco_pathway_name">Chemin</string>
+    <string name="town_deco_pathway_desc">Un chemin creusé par les pas dans la neige.</string>
+
+    <string name="town_deco_stone_wall_name">Mur en pierre</string>
+    <string name="town_deco_stone_wall_desc">D\'une façon ou d\'une autre ce mur émet de la chaleur et a l\'air un peu mouillé.</string>
+
+    <string name="town_deco_shop_sign_name">Pancarte </string>
+    <string name="town_deco_shop_sign_desc">On dirait qu\'il y a un magasin dans ce bâtiment.</string>
+
+    <string name="town_deco_floor_name">Sol</string>
+    <string name="town_deco_floor_desc">Le sol est fait de planches en bois simples. Qu\'êtes-vous vraiment en train de rechercher ?</string>
+
+    <string name="town_deco_carpet_name">Tapis</string>
+    <string name="town_deco_carpet_desc">Tapis rouge luxueux réservé aux invités spéciaux.</string>
+
+    <string name="town_deco_movies_door_name">Porte</string>
+    <string name="town_deco_movies_door_desc">Cette porte semble exceptionnellement bien faite. Elle doit probablement mener à quelque chose d\'extraordinaire. </string>
+
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">royal</string>
+
+    <string name="WndDonate_royalDonate">donation royale</string>
+
+    <string name="WndDonate_royalDonateText">Je ne voudrais pas donner l\'impression d\'être fou, mais de cette façon vous allez littéralement nourrir les développeurs. </string>
+
+    <string name="WndDonate_royalDonateText2">De plus, vous recevrez chacun des chapeaux de la boutique avec de l\'argent bien réel ! Ainsi que tous les chapeaux qui seront disponibles dans le futur. </string>
+
+    <!-- STRINGS OF WndPremiumSettings CLASS -->
+    <string name="WndPremiumSettings_royal">royal</string>
+
+</resources>

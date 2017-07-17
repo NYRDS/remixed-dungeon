@@ -248,7 +248,7 @@ public class DungeonGenerator {
 
 	public static Level.Feeling getLevelFeeling(String id) {
 		try {
-			String feeling = getLevelProperty(id, "feeling",Level.Feeling.NONE.name());
+			String feeling = getLevelProperty(id, "feeling",Level.Feeling.UNDEFINED.name());
 			return Level.Feeling.valueOf(feeling);
 		} catch (IllegalArgumentException e) {
 			return Level.Feeling.UNDEFINED;

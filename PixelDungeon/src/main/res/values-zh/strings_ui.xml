@@ -1,77 +1,77 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF TitleScene CLASS-->
-  <string name="TitleScene_Play">开始游戏</string>
+  <string name="TitleScene_Play">開始遊戲</string>
   <string name="TitleScene_Highscores">排行榜</string>
   <string name="TitleScene_Badges">成就</string>
-  <string name="TitleScene_About">关于</string>
-  <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，你的进度可能会丢失！</string>
+  <string name="TitleScene_About">關</string>
+  <string name="TitleScene_InternalStorageLow">手機內部存儲空間不足，您的進度可能會丟失！</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon是由NYRDS以Watabou的Pixel Dungeon源码为基础制作的。</string>
-  <string name="AboutScene_Code">源码:</string>
-  <string name="AboutScene_Graphics">图画:</string>
-  <string name="AboutScene_Music">音乐:</string>
-  <string name="AboutScene_Sound">音效:</string>
-  <string name="AboutScene_Thanks">特别感谢:</string>
-  <string name="AboutScene_Email_Us">E-Mail us:</string>
-  <string name="AboutScene_OurSite">我们的网址：</string>
-  <string name="AboutScene_Snd">发送邮件</string>
-  <string name="AboutScene_Translation">Localization by:</string>
+  <string name="AboutScene_Txt_Intro">重鑄版像素地牢是由NYRDS以Watabou的Pixel Dungeon源碼為基礎製作的。</string>
+  <string name="AboutScene_Code">源碼：</string>
+  <string name="AboutScene_Graphics">圖畫：</string>
+  <string name="AboutScene_Music">音樂：</string>
+  <string name="AboutScene_Sound">音效：</string>
+  <string name="AboutScene_Thanks">特別感謝：</string>
+  <string name="AboutScene_Email_Us">寄電郵予我們：</string>
+  <string name="AboutScene_OurSite">我們的網址：</string>
+  <string name="AboutScene_Snd">發送郵件</string>
+  <string name="AboutScene_Translation">本地化的功臣：</string>
   <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
   <!--STRINGS OF RankingsScene CLASS-->
-  <string name="RankingsScene_Title">最高纪录</string>
-  <string name="RankingsScene_Total">总游戏次数</string>
-  <string name="RankingsScene_NoGames">还没进行过游戏</string>
-  <string name="RankingsScene_NoInfo">没有其他信息</string>
+  <string name="RankingsScene_Title">最高紀錄</string>
+  <string name="RankingsScene_Total">總遊戲次數</string>
+  <string name="RankingsScene_NoGames">還沒進行過遊戲</string>
+  <string name="RankingsScene_NoInfo">沒有其他信息</string>
   <!--STRINGS OF StartScene CLASS-->
-  <string name="StartScene_Load">读取进度</string>
-  <string name="StartScene_New">新游戏</string>
-  <string name="StartScene_Erase">清除进度</string>
-  <string name="StartScene_Depth">层数：%1$d，等级: %2$d
+  <string name="StartScene_Load">讀取進度</string>
+  <string name="StartScene_New">新遊戲</string>
+  <string name="StartScene_Erase">清除進度</string>
+  <string name="StartScene_Depth">層數：%1$d，等級：%2$d
 </string>
-  <string name="StartScene_Really">确定要重新开始？</string>
-  <string name="StartScene_Warning"> 你当前的进度会被清除。</string>
-  <string name="StartScene_Yes">是的，重新开始</string>
-  <string name="StartScene_No">不，返回主菜单</string>
-  <string name="StartScene_Unlock">使用其他角色击败第3个boss来解锁这个角色</string>
-  <string name="StartScene_UnlockElf">使用其他角色击败第4个boss来解锁这个角色</string>
-  <string name="StartScene_WinGame">使用任意角色完成游戏来解锁“挑战”。</string>
-  <string name="StartScene_DifficultySelect">选择难度</string>
-  <string name="StartScene_DifficultyEasy">简单模式(有广告)</string>
-  <string name="StartScene_DifficultyNormalWithSaves">带存档的普通模式(有广告)</string>
+  <string name="StartScene_Really">確定要重新開始？</string>
+  <string name="StartScene_Warning">您當前的所有進度會被清除。</string>
+  <string name="StartScene_Yes">是的，重新開始</string>
+  <string name="StartScene_No">不，返回主目錄</string>
+  <string name="StartScene_Unlock">使用其他角色擊敗第3個boss來解鎖這個角色</string>
+  <string name="StartScene_UnlockElf">使用其他角色擊敗第3個boss來解鎖這個角色</string>
+  <string name="StartScene_WinGame">使用任意角色完成遊戲來解鎖「挑戰」。</string>
+  <string name="StartScene_DifficultySelect">選擇難度</string>
+  <string name="StartScene_DifficultyEasy">簡單模式(有廣告)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">帶存檔的普通模式(有廣告)</string>
   <string name="StartScene_DifficultyNormal">普通模式</string>
-  <string name="StartScene_DifficultyExpert">专家模式</string>
+  <string name="StartScene_DifficultyExpert">專家模式</string>
   <!--STRINGS OF InterLevelScene CLASS-->
-  <string name="InterLevelScene_Descending">下楼中...</string>
-  <string name="InterLevelScene_Ascending">上楼中...</string>
-  <string name="InterLevelScene_Loading">加载中...</string>
-  <string name="InterLevelScene_Resurrecting">复活中...</string>
+  <string name="InterLevelScene_Descending">下樓中...</string>
+  <string name="InterLevelScene_Ascending">上樓中...</string>
+  <string name="InterLevelScene_Loading">加載中...</string>
+  <string name="InterLevelScene_Resurrecting">復活中...</string>
   <string name="InterLevelScene_Returning">返回中...</string>
-  <string name="InterLevelScene_Falling">坠落中...</string>
-  <string name="InterLevelScene_FileNotFound">因为一些原因，存档没有找到……</string>
-  <string name="InterLevelScene_ErrorGeneric">发生错误了……</string>
+  <string name="InterLevelScene_Falling">墜落中...</string>
+  <string name="InterLevelScene_FileNotFound">因為一些原因，存檔沒有找到……</string>
+  <string name="InterLevelScene_ErrorGeneric">發生錯誤了……</string>
   <!--STRINGS OF SurfaceScene CLASS-->
-  <string name="SurfaceScene_GameOver">游戏结束</string>
+  <string name="SurfaceScene_GameOver">遊戲結束，人生苦短，及時行樂 :D</string>
   <!--STRINGS OF WndSettings CLASS-->
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>
   <string name="WndSettings_ZoomDef">默认缩放级别</string>
-  <string name="WndSettings_TextScaleDefault">默认字体大小</string>
+  <string name="WndSettings_TextScaleDefault">默認字體大小</string>
   <string name="WndSettings_ScaleUp">平滑界面</string>
   <string name="WndSettings_Immersive">沉浸模式</string>
-  <string name="WndSettings_Music">音乐</string>
+  <string name="WndSettings_Music">音樂</string>
   <string name="WndSettings_Sound">音效</string>
-  <string name="WndSettings_Brightness">明亮模式</string>
-  <string name="WndSettings_SwitchPort">转换为竖屏</string>
-  <string name="WndSettings_SwitchLand">转换为横屏</string>
-  <string name="WndSettings_SelectLanguage">选择语言</string>
-  <string name="WndSettings_SecondQuickslot">第二快捷栏</string>
-  <string name="WndSettings_ThirdQuickslot">第三快捷栏</string>
-  <string name="WndSettings_ExperementalFont">新字体</string>
-  <string name="WndSettings_ClassicFont">经典字体</string>
+  <string name="WndSettings_Brightness">光暗度</string>
+  <string name="WndSettings_SwitchPort">轉換至豎屏</string>
+  <string name="WndSettings_SwitchLand">轉換至橫屏</string>
+  <string name="WndSettings_SelectLanguage">選擇語言</string>
+  <string name="WndSettings_SecondQuickslot">第二快捷欄</string>
+  <string name="WndSettings_ThirdQuickslot">第三快捷欄</string>
+  <string name="WndSettings_ExperementalFont">新字體</string>
+  <string name="WndSettings_ClassicFont">經典字體</string>
   <!--STRINGS OF WndSaveSlotSelect CLASS-->
-  <string name="WndSaveSlotSelect_SelectSlot">选择空格</string>
+  <string name="WndSaveSlotSelect_SelectSlot">選擇空格</string>
   <!--STRINGS OF ModsButton CLASS-->
-  <string name="ModsButton_SelectMod">选择mod</string>
-  <string name="RemixedPixelDungeonApp_sendCrash">游戏崩了...\n 抱歉。\n请发送崩溃报告来帮助我们修复它。</string>
+  <string name="ModsButton_SelectMod">選擇mod</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">遊戲崩了...\n 抱歉。 \n請發送崩潰報告來讓我們更快修復它。</string>
 </resources>

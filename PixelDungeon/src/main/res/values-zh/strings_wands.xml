@@ -4,89 +4,89 @@
   <!--STRINGS OF Wand CLASS-->
   <string name="Wand_Name">%s法杖</string>
   <string name="Wand_ACZap">施放</string>
-  <string name="Wand_Wood">这根%s法杖摸上去很暖和。谁知道使用它会发生什么？</string>
-  <string name="Wand_Damage">当这根法杖用于近战时，它的平均伤害是%d。</string>
-  <string name="Wand_Weapon">你可以将这根法杖当近战武器使用。</string>
-  <string name="Wand_Fizzles">你的法杖滋滋作响：一定是没能量了</string>
-  <string name="Wand_SelfTarget">你不能瞄准你自己</string>
-  <string name="Wand_Prompt">选择要施放魔法的位置</string>
+  <string name="Wand_Wood">這根%s法杖摸上去很暖和。誰能知曉知使用它會發生甚麼事？</string>
+  <string name="Wand_Damage">當這根法杖用於近戰時，它的平均傷害為%d。</string>
+  <string name="Wand_Weapon">您可以將這根法杖當近戰武器使用。</string>
+  <string name="Wand_Fizzles">您的法杖滋滋作響：一定是沒能量了</string>
+  <string name="Wand_SelfTarget">你不能以自己為施法目標。</string>
+  <string name="Wand_Prompt">選擇要施放魔法的位置</string>
   <string-array name="Wand_Wood_Types">
-    <item>\"holly\"</item>
-    <item>\"yew\"</item>
-    <item>\"ebony\"</item>
-    <item>\"cherry\"</item>
-    <item>\"teak\"</item>
-    <item>\"rowan\"</item>
-    <item>\"willow\"</item>
-    <item>\"mahogany\"</item>
-    <item>\"bamboo\"</item>
-    <item>\"purpleheart\"</item>
-    <item>\"oak\"</item>
-    <item>\"birch\"</item>
+    <item>\"冬青\"</item>
+    <item>\"紅豆杉\"</item>
+    <item>\"烏木\"</item>
+    <item>\"櫻桃\"</item>
+    <item>\"柚木\"</item>
+    <item>\"花楸\"</item>
+    <item>\"柳\"</item>
+    <item>\"桃花心木\"</item>
+    <item>\"竹\"</item>
+    <item>\"紫心\"</item>
+    <item>\"橡木\"</item>
+    <item>\"樺木\"</item>
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
-  <string name="WandOfAmok_Name">狂乱法杖</string>
-  <string name="WandOfAmok_Info">这根法杖施放的紫色光芒会使目标狂乱并随机攻击它附近的生物。</string>
-  <string name="WandOfAmok_Info1">什么也没发生</string>
+  <string name="WandOfAmok_Name">狂亂法杖</string>
+  <string name="WandOfAmok_Info">這根法杖施放的紫色光芒會使目標陷入狂亂狀態，並隨機攻擊它附近的生物。</string>
+  <string name="WandOfAmok_Info1">甚麼事都沒有發生</string>
   <!--STRINGS OF WandOfAvalanche CLASS-->
   <string name="WandOfAvalanche_Name">落石法杖</string>
-  <string name="WandOfAvalanche_Info">当这根法杖释放的能量击中了墙壁(或者其他坚固的障碍物)时，它会造成岩石的崩塌，对那片区域的生物造成麻痹和伤害。</string>
-  <string name="WandOfAvalanche_Info1">你用你的落石法杖杀死了你...</string>
+  <string name="WandOfAvalanche_Info">當這根法杖釋放的能量擊中了牆壁 ( 或者其他堅固的障礙物 ) 時，它會造成岩石下塌，對那片區域的生物造成麻痺及傷害。</string>
+  <string name="WandOfAvalanche_Info1">您揮動了落石法杖，沒想到周邊的石頭砸死了您...</string>
   <!--STRINGS OF WandOfBlink CLASS-->
-  <string name="WandOfBlink_Name">闪烁法杖</string>
-  <string name="WandOfBlink_Info">这根法杖会让你传送至目标地点，生物和非生物障碍将会阻挡传送。</string>
+  <string name="WandOfBlink_Name">閃爍法杖</string>
+  <string name="WandOfBlink_Info">這根法杖會讓你傳送至目標地點，碰到生物和非生物障礙皆會令傳送中止。</string>
   <!--STRINGS OF WandOfDisintegration CLASS-->
-  <string name="WandOfDisintegration_Name">解离法杖</string>
-  <string name="WandOfDisintegration_Info">这根法杖释放的毁灭性射线会对路径上的所有生物造成伤害。其穿透的目标数越多，造成的伤害也就越大。</string>
+  <string name="WandOfDisintegration_Name">瓦解法杖</string>
+  <string name="WandOfDisintegration_Info">這根法杖釋放的毀滅性射線會對路徑上的所有生物造成傷害。其穿透的目標數愈多，造成的傷害則愈大。</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
   <string name="WandOfFirebolt_Name">火球法杖</string>
-  <string name="WandOfFirebolt_Info">这根法杖可以释放出爆裂性的火焰。它会使可燃的地形燃烧，对击中的生物造成伤害并点燃他们。</string>
-  <string name="WandOfFirebolt_Info1">你用你的火球法杖杀死了你...</string>
+  <string name="WandOfFirebolt_Info">這根法杖可以釋放出爆裂性的火焰。它會使可燃的地形燃燒，對擊中的生物造成傷害並點燃他們。</string>
+  <string name="WandOfFirebolt_Info1">您揮動了火球法杖，沒想到引火自焚...</string>
   <!--STRINGS OF WandOfFlock CLASS-->
   <string name="WandOfFlock_Name">羊群法杖</string>
-  <string name="WandOfFlock_Info">这根法杖可以用于召唤一群魔法绵羊来充当暂时存在且不可通过的障碍物。</string>
-  <string name="Sheep_Name">魔法绵羊</string>
-  <string name="Sheep_Name_Objective">魔法绵羊</string>
-  <string name="Sheep_Gender">feminine</string>
-  <string name="Sheep_Desc">这是一只魔法绵羊。为什么叫魔法绵羊？因为你没法杀死它。它只会站在那里直到魔法失效，在它消失前它只会站在那咀嚼并朝你翻白眼。</string>
+  <string name="WandOfFlock_Info">使用這根法杖可以召喚一群魔法綿羊來充當暫時存在且不可通的障礙物。</string>
+  <string name="Sheep_Name">魔法綿羊</string>
+  <string name="Sheep_Name_Objective">魔法綿羊</string>
+  <string name="Sheep_Gender">女性的</string>
+  <string name="Sheep_Desc">這是一隻魔法綿羊。為什麼叫魔法綿羊？因為你沒法殺死它。它只會站在那裡直到魔法失效，在它消失前，它只會站在這咀嚼反芻物，神情空洞。</string>
   <string-array name="WandOfFlock_SheepBaa">
-    <item>咩!</item>
-    <item>咩?</item>
-    <item>咩.</item>
+    <item>咩！</item>
+    <item>咩？</item>
+    <item>咩。</item>
     <item>咩...</item>
-    <item>呗...</item>
+    <item>唄...</item>
     <item>叭...</item>
   </string-array>
   <!--STRINGS OF WandOfLightning CLASS-->
-  <string name="WandOfLightning_Name">闪电法杖</string>
-  <string name="WandOfLightning_Info">这根法杖可以释放出致命的电弧，会对目标及其相邻的的数个生物造成伤害。</string>
-  <string name="WandOfLightning_Info1">你用你的闪电法杖杀死了你...</string>
+  <string name="WandOfLightning_Name">閃電法杖</string>
+  <string name="WandOfLightning_Info">這根法杖可以釋放出致命的電弧，會對目標及其相鄰的的數個生物造成傷害。</string>
+  <string name="WandOfLightning_Info1">您揮動了閃電法杖，沒想到自己也會觸電身亡...</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
-  <string name="WandOfMagicMissile_Name">魔弹法杖</string>
-  <string name="WandOfMagicMissile_Info">这根法杖可以发射具有魔法能量的飞弹，对目标生物造成中等的伤害。</string>
+  <string name="WandOfMagicMissile_Name">魔彈法杖</string>
+  <string name="WandOfMagicMissile_Info">這根法杖可以發射具有魔法能量的飛彈，對目標生物造成中級的傷害。</string>
   <string name="WandOfMagicMissile_ACDisenchant">褪魔</string>
-  <string name="WandOfMagicMissile_Info1">你用你的魔弹法杖杀死了你...</string>
-  <string name="WandOfMagicMissile_SelectWand">选择强化一根法杖</string>
-  <string name="WandOfMagicMissile_Desinchanted">你抽取了魔弹法杖的强化并将其转移到了你的%s上</string>
+  <string name="WandOfMagicMissile_Info1">您揮動了魔彈法杖，沒想到自己魔彈會撞牆反彈...</string>
+  <string name="WandOfMagicMissile_SelectWand">選擇強化一根法杖</string>
+  <string name="WandOfMagicMissile_Desinchanted">您抽取了魔彈法杖的強化，並將其轉移到了您的%s上</string>
   <!--STRINGS OF WandOfPoison CLASS-->
-  <string name="WandOfPoison_Name">剧毒法杖</string>
-  <string name="WandOfPoison_Info">这根法杖会对目标灌注致命的剧毒。生物会在剧毒作用下受到持续伤害直到效果结束。剧毒的持续回合会随着法杖等级而提升。</string>
-  <string name="WandOfPoison_Info1">什么也没发生</string>
+  <string name="WandOfPoison_Name">劇毒法杖</string>
+  <string name="WandOfPoison_Info">這根法杖會對目標灌注致命的劇毒。生物會在劇毒作用下受到持續傷害直到效果結束。劇毒的持續回合會隨著法杖等級而提升。</string>
+  <string name="WandOfPoison_Info1">甚麼事都沒有發生</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
   <string name="WandOfRegrowth_Name">再生法杖</string>
-  <string name="WandOfRegrowth_Info">“枯木逢春，循环永存”</string>
-  <string name="WandOfRegrowth_Info1">什么也没发生</string>
+  <string name="WandOfRegrowth_Info">“枯木逢春，始渡終，終啟始，永生永存！”</string>
+  <string name="WandOfRegrowth_Info1">甚麼事都沒有發生</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
-  <string name="WandOfSlowness_Name">缓速法杖</string>
-  <string name="WandOfSlowness_Info">这根法杖会使目标行动迟钝，从而降低其的移动和攻击速度，直到效果结束。</string>
-  <string name="WandOfSlowness_Info1">什么也没发生</string>
+  <string name="WandOfSlowness_Name">緩速法杖</string>
+  <string name="WandOfSlowness_Info">這根法杖會使目標行動遲鈍，從而降低其移動力及攻速，直到效果結束。</string>
+  <string name="WandOfSlowness_Info1">甚麼事都沒有發生</string>
   <!--STRINGS OF WandOfTelekinesis CLASS-->
-  <string name="WandOfTelekinesis_Name">念动法杖</string>
-  <string name="WandOfTelekinesis_Info">这根法杖释放的魔力波会对路径上的所有物体造成影响。陷阱会被触发，高草会被吹倒，门会被打开或者关闭，而怪物则会被击退。</string>
-  <string name="WandOfTelekinesis_YouNowHave">你用念动魔法将%s收入了你的背包</string>
+  <string name="WandOfTelekinesis_Name">念動法杖</string>
+  <string name="WandOfTelekinesis_Info">這根法杖釋放的魔力波會對路徑上的所有物體造成影響。陷阱會被觸發，高草會被吹倒，門會被打開或者關閉，而怪物則會被擊退。</string>
+  <string name="WandOfTelekinesis_YouNowHave">您用念動魔法將%s收入了您的背包</string>
   <!--STRINGS OF WandOfTeleportation CLASS-->
-  <string name="WandOfTeleportation_Name">传送法杖</string>
-  <string name="WandOfTeleportation_Info">这根法杖释放的冲击会将目标生物传送到当前层的随机位置。</string>
-  <string name="WandOfTeleportation_Info1">%1$s将%2$s传送到了其他地方</string>
-  <string name="WandOfTeleportation_Info2">什么也没发生</string>
+  <string name="WandOfTeleportation_Name">傳送法杖</string>
+  <string name="WandOfTeleportation_Info">這根法杖釋放的能量會將目標生物傳送到當前層的隨機位置。</string>
+  <string name="WandOfTeleportation_Info1">%1$s將%2$s傳送到了其他地方</string>
+  <string name="WandOfTeleportation_Info2">甚麼事都沒有發生</string>
 </resources>

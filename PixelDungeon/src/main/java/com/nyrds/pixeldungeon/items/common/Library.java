@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.CompositeTextureImage;
@@ -33,8 +34,8 @@ public class Library {
 
 	private static Map<String, Map<String, Integer>> mKnowledgeLevel;
 
-	public final static String LIBRARY_FILE = "library.json";
-	private static boolean     saveNeeded   = false;
+	private final static String  LIBRARY_FILE = "library.json";
+	private static       boolean saveNeeded   = false;
 
 	private static Gson gson = new Gson();
 
@@ -126,6 +127,14 @@ public class Library {
 			return new WndInfoMob(MobFactory.mobByName(clazz), getKnowledgeLevel(category, clazz));
 		}
 		throw new TrackedRuntimeException("unknown category: "+category);
+	}
+
+	public static String getLibraryFile() {
+		if(!ModdingMode.inMod()) {
+			return LIBRARY_FILE;
+		} else {
+			return ModdingMode.activeMod() + "_" + LIBRARY_FILE;
+		}
 	}
 
 	public static class EntryHeader {

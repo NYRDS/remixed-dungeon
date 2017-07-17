@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPlayGames_Use">Utiliser Google Play Games</string>
+    <string name="WndPlayGames_Connecting">Connexion à Google Play Games, veuillez attendre un peu</string>
+    <string name="WndPlayGames_Show_Badges">Affiche les badges</string>
+    <string name="WndPlayGames_Show_Leaderboards">Affiche le classement</string>
+
+    <string name="WndPlayGames_Show_Ok">Opération réussie !</string>
+    <string name="WndPlayGames_Show_Error">L\'opération a échoué. Quelque chose n\'a pas fonctionné...</string>
+
+</resources>

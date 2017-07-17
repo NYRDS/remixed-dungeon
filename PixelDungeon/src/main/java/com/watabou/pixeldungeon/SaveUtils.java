@@ -92,7 +92,7 @@ public class SaveUtils {
 		return false;
 	}
 
-	private static boolean isRelatedTo(String path,HeroClass cl) {
+	public static boolean isRelatedTo(String path,HeroClass cl) {
 		return ( path.endsWith(".dat") && hasClassTag(cl, path) ) || path.endsWith(gameFile(cl));
 	}
 

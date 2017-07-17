@@ -30,22 +30,17 @@ import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.ShamanSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Shaman extends Mob implements IZapper {
 
-	private static final float TIME_TO_ZAP = 2f;
-
 	private static final String TXT_LIGHTNING_KILLED = Game.getVar(R.string.Shaman_Killed);
 
 	private int fleeState = 0;
 
 	public Shaman() {
-		spriteClass = ShamanSprite.class;
-
 		hp(ht(18));
 		defenseSkill = 8;
 
@@ -108,9 +103,8 @@ public class Shaman extends Mob implements IZapper {
 
 	@Override
 	public boolean zap(@NonNull Char enemy) {
-
-		if (super.zap(enemy)) {
-			int dmg = damageRoll();
+		if (zapHit(enemy)) {
+			int dmg = damageRoll() * 2;
 			if (Dungeon.level.water[enemy.getPos()] && !enemy.flying) {
 				dmg *= 1.5f;
 			}

@@ -316,4 +316,15 @@
         - Fixed ranged attack proc issues for: Air Elemental, Crystal, Burning Fist, Psi-Spider and Amber Spider\n
         - Mage Armor (version for Warlock: WarlockArmor) and Candy are now available in mods\n
     </string>
+    <string name="Welcome_Text_27">
+        remix.27\n
+        - Game now uses following Google Play Games services: Achievements, Leaderboards and Cloud Saves\n
+        - Size of all containers has been increased, now it matches that of a main backpack\n
+        - Necromancer hero class is now available for every player from the very start\n
+        - Potions can now be upgraded with Scrolls of Upgrade. The upgraded and degraded potions can also be found in loot\n
+        - Fixed chaos crystal issue that would deplete whole stack of empty scrolls when "fused" instead of 1\n
+        - Fixed bug that made Goo unable to attack hero at certain distance after using "pump attack"\n
+        - Increased maxLevel attribute for Fetid Rat and various bosses (So that unusually high level characters would still get loot from those characters)\n
+        - New attribute for levels and mobs in player-created mods: "viewDistance" (Sets view distance in range of 1-8)\n
+    </string>
 </resources>

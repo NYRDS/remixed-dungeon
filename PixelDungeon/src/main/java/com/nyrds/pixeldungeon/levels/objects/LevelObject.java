@@ -124,4 +124,12 @@ public abstract class LevelObject implements Bundlable, Presser {
 	public boolean affectLevelObjects() {
 		return false;
 	}
+
+	public int getSpriteXS() {
+		return 16;
+	}
+
+	public int getSpriteYS() {
+		return 16;
+	}
 }

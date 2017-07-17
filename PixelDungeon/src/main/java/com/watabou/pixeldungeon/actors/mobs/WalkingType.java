@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 
 /**
  * Created by mike on 26.04.2017.
@@ -28,7 +29,13 @@ public enum WalkingType {
 	}
 
 	public boolean canSpawnAt(Level level,int cell) {
-		return passableCells(level)[cell];
+		switch (this) {
+			case NORMAL:
+			case ABSOLUTE:
+				return passableCells(level)[cell] || TerrainFlags.is(level.getTileType(cell),TerrainFlags.TRAP);
+			default:
+				return passableCells(level)[cell];
+		}
 	}
 
 	public int respawnCell(Level level) {

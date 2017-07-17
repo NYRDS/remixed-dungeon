@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPlayGames_Use">вкл. Google Play Games</string>
+    <string name="WndPlayGames_Connecting">Соединение с Google Play Games, пожалуйста подождите</string>
+    <string name="WndPlayGames_Show_Badges">Достижения</string>
+    <string name="WndPlayGames_Show_Leaderboards">Рекорды</string>
+
+    <string name="WndPlayGames_Show_Ok">Выполнено!</string>
+    <string name="WndPlayGames_Show_Error">Операция не удалась. Что-то пошло не так...</string>
+
+</resources>

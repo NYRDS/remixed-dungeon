@@ -2,20 +2,20 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">你现在对于你的%1$s足够熟悉以鉴定它。它是%2$s。</string>
-  <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
+  <string name="Weapon_Identify">您現在對於您的%1$s足夠熟悉以鑒定它。它是%2$s。</string>
+  <string name="Weapon_Incompatible">不同屬性魔法的衝突使得這把武器的附魔失去了效力！</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
-    <item>冷酷%s</item>
-    <item>冷酷%s</item>
-    <item>冷酷%s</item>
+    <item>殘酷%s</item>
+    <item>殘酷%s</item>
+    <item>殘酷%s</item>
   </string-array>
   <!--STRINGS OF Fire CLASS-->
   <string-array name="Fire_Name">
-    <item>炽烈%s</item>
-    <item>炽烈%s</item>
-    <item>炽烈%s</item>
+    <item>熾烈%s</item>
+    <item>熾烈%s</item>
+    <item>熾烈%s</item>
   </string-array>
   <!--STRINGS OF Horror CLASS-->
   <string-array name="Horror_Name">
@@ -25,27 +25,27 @@
   </string-array>
   <!--STRINGS OF Instability CLASS-->
   <string-array name="Instability_Name">
-    <item>紊乱%s</item>
-    <item>紊乱%s</item>
-    <item>紊乱%s</item>
+    <item>紊亂%s</item>
+    <item>紊亂%s</item>
+    <item>紊亂%s</item>
   </string-array>
   <!--STRINGS OF Leech CLASS-->
   <string-array name="Leech_Name">
-    <item>饮血%s</item>
-    <item>饮血%s</item>
-    <item>饮血%s</item>
+    <item>嗜血%s</item>
+    <item>嗜血%s</item>
+    <item>嗜血%s</item>
   </string-array>
   <!--STRINGS OF Luck CLASS-->
   <string-array name="Luck_Name">
-    <item>幸运%s</item>
-    <item>幸运%s</item>
-    <item>幸运%s</item>
+    <item>幸運%s</item>
+    <item>幸運%s</item>
+    <item>幸運%s</item>
   </string-array>
   <!--STRINGS OF Paralysis CLASS-->
   <string-array name="Paralysis_Name">
-    <item>重击%s</item>
-    <item>重击%s</item>
-    <item>重击%s</item>
+    <item>重擊%s</item>
+    <item>重擊%s</item>
+    <item>重擊%s</item>
   </string-array>
   <!--STRINGS OF Piercing CLASS-->
   <string-array name="Piercing_Name">
@@ -67,142 +67,141 @@
   </string-array>
   <!--STRINGS OF Swing CLASS-->
   <string-array name="Swing_Name">
-    <item>野蛮%s</item>
-    <item>野蛮%s</item>
-    <item>野蛮%s</item>
+    <item>野蠻%s</item>
+    <item>野蠻%s</item>
+    <item>野蠻%s</item>
   </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
-  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s的%3$d阶近战武器。</string>
+  <string name="MeleeWeapon_Info1a">這把%1$s是%2$s的%3$d階近戰武器。</string>
   <string name="MeleeWeapon_Info1b">一把</string>
-  <string name="MeleeWeapon_Info1c">一把升级过的</string>
-  <string name="MeleeWeapon_Info1d">一把负等级的</string>
-  <string name="MeleeWeapon_Info2a">它的平均伤害是%d点。</string>
-  <string name="MeleeWeapon_Info2b">一般情况下这把武器每次攻击能造成平均%1$d点的伤害，并需要 %2$d 点力量来装备。</string>
-  <string name="MeleeWeapon_Info2c">也许这把武器对你来说太重了。</string>
-  <string name="MeleeWeapon_Info3a">这是一把比较%s的武器。</string>
+  <string name="MeleeWeapon_Info1c">一把升级過的</string>
+  <string name="MeleeWeapon_Info1d">一把負等级的</string>
+  <string name="MeleeWeapon_Info2a">它的平均傷害為%d點。</string>
+  <string name="MeleeWeapon_Info2b">一般情况下這把武器每次攻擊能造成平均%1$d點的傷害，並需要 %2$d 點力量才能裝備。</string>
+  <string name="MeleeWeapon_Info2c">也許這把武器對您來說太重了。</string>
+  <string name="MeleeWeapon_Info3a">這是一把比較%s的武器。</string>
   <string name="MeleeWeapon_Info3b">快速</string>
-  <string name="MeleeWeapon_Info3c">缓慢</string>
-  <string name="MeleeWeapon_Info3d">并且</string>
+  <string name="MeleeWeapon_Info3c">緩慢</string>
+  <string name="MeleeWeapon_Info3d">並且</string>
   <string name="MeleeWeapon_Info3e">但是</string>
-  <string name="MeleeWeapon_Info3f">精准</string>
-  <string name="MeleeWeapon_Info3g">不太精准</string>
-  <string name="MeleeWeapon_Info4a">它被打磨得更快速了。</string>
-  <string name="MeleeWeapon_Info4b">它被打磨得更精准了。</string>
-  <string name="MeleeWeapon_Info5">它是附过魔的。</string>
-  <string name="MeleeWeapon_Info6a">
-因为你的力量不足，你在使用这把%s攻击时精准和速度会降低。</string>
-  <string name="MeleeWeapon_Info6b">因为你额外的力量，你在使用这把%s攻击时伤害增加了。</string>
-  <string name="MeleeWeapon_Info7a">你%2$s握着这把%1$s。</string>
-  <string name="MeleeWeapon_Info7b">，并且因为它被诅咒了，你无法放下它。</string>
-  <string name="MeleeWeapon_Info7c">你能感受到%s中潜伏着一股恶意的魔力。</string>
+  <string name="MeleeWeapon_Info3f">精準</string>
+  <string name="MeleeWeapon_Info3g">不太精準</string>
+  <string name="MeleeWeapon_Info4a">經打磨後，它更輕巧了。</string>
+  <string name="MeleeWeapon_Info4b">經打磨後，它變得更精準了。</string>
+  <string name="MeleeWeapon_Info5">它已被附魔。</string>
+  <string name="MeleeWeapon_Info6a">因為你的力量不足，您在使用這把%s攻擊時，精準度和攻速因而下降。</string>
+  <string name="MeleeWeapon_Info6b">因為您的力量已遠遠高過武器所需，您在使用這把%s攻擊時傷害會增加。</string>
+  <string name="MeleeWeapon_Info7a">您%2$s握着這把%1$s。</string>
+  <string name="MeleeWeapon_Info7b">，並且因為它被詛咒了，你無法把它放下。</string>
+  <string name="MeleeWeapon_Info7c">您能感受到%s中潛伏著一股惡意的魔力。</string>
   <!--STRINGS OF BattleAxe CLASS-->
-  <string name="BattleAxe_Name">战斧</string>
-  <string name="BattleAxe_Info">这把有着巨大钢制头部的战斧能将庞大的力量倾注在每次挥舞之中。</string>
-  <string name="BattleAxe_Gender">masculine</string>
+  <string name="BattleAxe_Name">戰斧</string>
+  <string name="BattleAxe_Info">這把有著巨大鋼製頭部的戰斧能將龐大的力量傾注在每次揮擊之中。</string>
+  <string name="BattleAxe_Gender">男性的</string>
   <!--STRINGS OF Dagger CLASS-->
   <string name="Dagger_Name">匕首</string>
-  <string name="Dagger_Info">一把木柄严重磨损的简易铁匕首。</string>
-  <string name="Dagger_Gender">masculine</string>
+  <string name="Dagger_Info">一把木柄嚴重磨損的普通鐵匕首。</string>
+  <string name="Dagger_Gender">男性</string>
   <!--STRINGS OF Glaive CLASS-->
-  <string name="Glaive_Name">剑刃戟</string>
-  <string name="Glaive_Info">一把在末端装有剑刃的长柄武器。</string>
-  <string name="Glaive_Gender">feminine</string>
+  <string name="Glaive_Name">關刀</string>
+  <string name="Glaive_Info">一把在末端嵌有劍刃的長柄武器。</string>
+  <string name="Glaive_Gender">女性</string>
   <!--STRINGS OF Knuckles CLASS-->
-  <string name="Knuckles_Name">指虎</string>
-  <string name="Knuckles_Info">一块专门塑成契合指节形状的铁片</string>
-  <string name="Knuckles_Gender">masculine</string>
+  <string name="Knuckles_Name">鐵蓮花</string>
+  <string name="Knuckles_Info">一塊專為切合指節輪廓的鐵片</string>
+  <string name="Knuckles_Gender">男性的</string>
   <!--STRINGS OF Longsword CLASS-->
-  <string name="Longsword_Name">长剑</string>
-  <string name="Longsword_Info">巨大刀刃，削铁如泥。</string>
-  <string name="Longsword_Gender">masculine</string>
+  <string name="Longsword_Name">長劍</string>
+  <string name="Longsword_Info">擎天巨刃，擊擊鏗鏘，削鐵如泥。</string>
+  <string name="Longsword_Gender">男性的</string>
   <!--STRINGS OF Mace CLASS-->
-  <string name="Mace_Name">硬头锤</string>
-  <string name="Mace_Info">铁头在上，伤害超群。</string>
-  <string name="Mace_Gender">feminine</string>
+  <string name="Mace_Name">硬頭錘</string>
+  <string name="Mace_Info">鐵頭在上，腦袋開花。</string>
+  <string name="Mace_Gender">女性的</string>
   <!--STRINGS OF Quarterstaff CLASS-->
-  <string name="Quarterstaff_Name">铁头棍</string>
-  <string name="Quarterstaff_Info">木制短棍，两头套铁。</string>
-  <string name="Quarterstaff_Gender">masculine</string>
+  <string name="Quarterstaff_Name">鐵頭棍</string>
+  <string name="Quarterstaff_Info">木製短棍，兩頭鑲鐵。</string>
+  <string name="Quarterstaff_Gender">男性的</string>
   <!--STRINGS OF ShortSword CLASS-->
-  <string name="ShortSword_Name">短剑</string>
-  <string name="ShortSword_Info">它确实十分短，只比匕首长那么几英寸。</string>
-  <string name="ShortSword_ACReforge">重铸</string>
-  <string name="ShortSword_Select">选择你要强化的武器</string>
-  <string name="ShortSword_Reforged">你将你的短剑重铸以升级你的%s</string>
-  <string name="ShortSword_NotBoomerang">你不能通过这个方式升级回旋镖</string>
-  <string name="ShortSword_Gender">masculine</string>
+  <string name="ShortSword_Name">短劍</string>
+  <string name="ShortSword_Info">它確實十分短，只比匕首長幾英寸。</string>
+  <string name="ShortSword_ACReforge">重鑄</string>
+  <string name="ShortSword_Select">選擇您要強化的武器</string>
+  <string name="ShortSword_Reforged">您將您的短劍重鑄以升級你的%s</string>
+  <string name="ShortSword_NotBoomerang">您不能以這個方式為回力鏢升級</string>
+  <string name="ShortSword_Gender">男性的</string>
   <!--STRINGS OF Spear CLASS-->
-  <string name="Spear_Name">长矛</string>
-  <string name="Spear_Info">这是一根装着锋锐铁刺的细长木杆。</string>
-  <string name="Spear_Gender">neuter</string>
+  <string name="Spear_Name">長矛</string>
+  <string name="Spear_Info">這是一根裝着鋒銳鐵戈的細幼木杖。</string>
+  <string name="Spear_Gender">中性的</string>
   <!--STRINGS OF Sword CLASS-->
-  <string name="Sword_Name">单手剑</string>
-  <string name="Sword_Info">这种锋利的刀刃可不会让你失望的。</string>
-  <string name="Sword_Gender">masculine</string>
+  <string name="Sword_Name">單手劍</string>
+  <string name="Sword_Info">此等鋒利的刀刃定不會讓您失望。</string>
+  <string name="Sword_Gender">男性的</string>
   <!--STRINGS OF WarHammer CLASS-->
-  <string name="WarHammer_Name">战锤</string>
-  <string name="WarHammer_Info">没有多少生物可以承受这种武器的碾压，但只有少数强者可以将其轻松使用。</string>
-  <string name="WarHammer_Gender">masculine</string>
+  <string name="WarHammer_Name">戰錘</string>
+  <string name="WarHammer_Info">沒有多少生物可以承受這種武器的碾壓，但只有少數強者才可以精通它。</string>
+  <string name="WarHammer_Gender">男性的</string>
   <!--PACKAGE /weapon/missiles-->
   <!--STRINGS OF MissileWeapon CLASS-->
-  <string name="MissileWeapon_Missiles">投掷武器</string>
-  <string name="MissileWeapon_Yes">是的，我知道我在做什么</string>
+  <string name="MissileWeapon_Missiles">投擲武器</string>
+  <string name="MissileWeapon_Yes">是的，我知道我在做什麼</string>
   <string name="MissileWeapon_No">不，我改主意了</string>
-  <string name="MissileWeapon_Sure">你确定要将其当做近战武器？</string>
+  <string name="MissileWeapon_Sure">您確定要將其用作近戰武器？</string>
   <string name="MissileWeapon_Info1">
-\n\n这件武器平均造成%d点伤害。</string>
-  <string name="MissileWeapon_Info2">因为你的力量不足，你在使用这把%s攻击时精准和速度会降低。</string>
-  <string name="MissileWeapon_Info3">因为你额外的力量，你在使用这把%s攻击时伤害增加了。</string>
+\n\n這件武器平均造成%d點傷害。</string>
+  <string name="MissileWeapon_Info2">因為你的力量不足，您在使用這把%s攻擊時，精準度和攻速因而下降。</string>
+  <string name="MissileWeapon_Info3">因為您的力量已遠遠高過武器所需，您在使用這把%s攻擊時傷害會增加。</string>
   <string name="MissileWeapon_Info4">
-\n\n你已经握着这件%s。</string>
+\n\n您已經握着這件%s。</string>
   <!--STRINGS OF Boomerang CLASS-->
-  <string name="Boomerang_Name"> 回旋镖</string>
-  <string name="Boomerang_Info">扔出，击中，回手，就是这样。</string>
-  <string name="Boomerang_Gender">masculine</string>
+  <string name="Boomerang_Name"> 回力鏢</string>
+  <string name="Boomerang_Info">扔出，命中，回手，就是這麼簡單。</string>
+  <string name="Boomerang_Gender">男性的</string>
   <!--STRINGS OF CurareDart CLASS-->
-  <string name="CurareDart_Name">麻痹飞镖</string>
-  <string name="CurareDart_Info">造成不了太大伤害，但能麻痹目标一会。</string>
-  <string name="CurareDart_Gender">masculine</string>
+  <string name="CurareDart_Name">麻痹飛鏢</string>
+  <string name="CurareDart_Info">這些提摩般邪惡的飛鏢傷害不大，但能把目標麻痺，剩它靜立無助一會。</string>
+  <string name="CurareDart_Gender">男性的</string>
   <!--STRINGS OF Dart CLASS-->
-  <string name="Dart_Name">飞镖</string>
-  <string name="Dart_Info">投掷它来伤害敌人。</string>
-  <string name="Dart_Gender">masculine</string>
+  <string name="Dart_Name">飛鏢</string>
+  <string name="Dart_Info">揮動手腕，翶擊長空，傷敵千里。</string>
+  <string name="Dart_Gender">男性的</string>
   <!--STRINGS OF IncendiaryDart CLASS-->
-  <string name="IncendiaryDart_Name">燃烧飞镖</string>
-  <string name="IncendiaryDart_Info">点燃目标。</string>
-  <string name="IncendiaryDart_Gender">masculine</string>
+  <string name="IncendiaryDart_Name">引燃飛鏢</string>
+  <string name="IncendiaryDart_Info">鏢頭牢牢插在敵人身上，而鏢身上的不穩定無機熔點低分子混合物（燃料）繼以起燃。</string>
+  <string name="IncendiaryDart_Gender">男性的</string>
   <!--STRINGS OF Javelin CLASS-->
-  <string name="Javelin_Name">标枪</string>
-  <string name="Javelin_Info">尖头破空。</string>
-  <string name="Javelin_Gender">neuter</string>
+  <string name="Javelin_Name">標槍</string>
+  <string name="Javelin_Info">經德國認證，槍頭能穩定俯前，直至擊中目標。</string>
+  <string name="Javelin_Gender">中性的</string>
   <!--STRINGS OF Shuriken CLASS-->
-  <string name="Shuriken_Name">手里剑</string>
-  <string name="Shuriken_Info">刀面锋利，投之迅速。</string>
-  <string name="Shuriken_Gender">masculine</string>
+  <string name="Shuriken_Name">手裏劍</string>
+  <string name="Shuriken_Info">星形鐵片，配上尖銳刀鋒，輕巧得來傷害又高，據說只有加 ‧ 藤鷹忍士才能完美駕馭此物。</string>
+  <string name="Shuriken_Gender">男性的</string>
   <!--STRINGS OF Tamahawk CLASS-->
-  <string name="Tamahawk_Name">飞斧</string>
-  <string name="Tamahawk_Info">看上去这飞斧并不重，但它依然需要足够的力量来有效使用。</string>
-  <string name="Tamahawk_Gender">masculine</string>
+  <string name="Tamahawk_Name">飛斧</string>
+  <string name="Tamahawk_Info">看上去這飛斧並不重，但它依然需要足夠的力量來能有效發揮作用。</string>
+  <string name="Tamahawk_Gender">男性的</string>
   <!--STRINGS OF Kusarigama CLASS-->
-  <string name="Kusarigama_Name">锤锁镰</string>
-  <string name="Kusarigama_Info">这件武器由镰刀，铁球，锁链三部分所构成，铁球和镰刀分别在锁链的两端。</string>
-  <string name="Kusarigama_Gender">feminine</string>
-  <string name="Kusarigama_Pull">拉住</string>
+  <string name="Kusarigama_Name">錘鎖鎌</string>
+  <string name="Kusarigama_Info">這件武器由鐮刀，鐵球，鎖鏈三部分所構成，鐵球和鐮刀分別在鎖鏈的兩端。</string>
+  <string name="Kusarigama_Gender">女性的</string>
+  <string name="Kusarigama_Pull">拉扯</string>
   <!--STRINGS OF ChaosSword CLASS-->
-  <string name="ChaosSword_Name">混沌剑</string>
-  <string name="ChaosSword_Info">混乱为刃，力量蕴内。刀身发颤，力能开山。唯有强者，方能使用。</string>
-  <string name="ChaosSword_Gender">masculine</string>
+  <string name="ChaosSword_Name">混沌劍</string>
+  <string name="ChaosSword_Info">混亂為刃，力量蘊內。刀身發顫，砍山分洪，力無不逮。唯有強者，方能使用。</string>
+  <string name="ChaosSword_Gender">男性的</string>
   <!--STRINGS OF ChaosBow CLASS-->
   <string name="ChaosBow_Name">混沌弓</string>
-  <string name="ChaosBow_Info">一把充斥着混沌之力的骇人魔弓，每一发从它这里射出的箭矢都会携带有一些混沌能量。可是一旦失手……</string>
-  <string name="ChaosBow_Gender">masculine</string>
+  <string name="ChaosBow_Info">一把充斥著混沌之力的駭人魔弓，每一發從它這裡射出的箭矢都會攜帶有一些混沌能量。但萬一失手……</string>
+  <string name="ChaosBow_Gender">男性的</string>
   <!--STRINGS OF ChaosStaff CLASS-->
   <string name="ChaosStaff_Name">混沌法杖</string>
-  <string name="ChaosStaff_Info">与混沌之力融合的法杖！这是令法师梦寐以求或敬而远之的。</string>
-  <string name="ChaosStaff_Gender">masculine</string>
+  <string name="ChaosStaff_Info">與混沌之力融合的法杖，不就是眾法師或敬或畏之物嗎？</string>
+  <string name="ChaosStaff_Gender">男性的</string>
   <!--STRINGS OF SacrificialSword CLASS-->
-  <string name="SacrificialSword_Name">献祭之剑</string>
-  <string name="SacrificialSword_Info">这把锈渍斑斑的老旧青铜剑看起来相当无用，可是你感到其中沉睡着某种古老的力量。这种力量能够将几乎任何生物变成无意识的奴隶，如果能找到唤醒它的方法的话……</string>
-  <string name="SacrificialSword_Gender">masculine</string>
+  <string name="SacrificialSword_Name">獻祭之劍</string>
+  <string name="SacrificialSword_Info">這把銹漬斑斑的老舊青銅劍看起來相當無用，可是您感到其中沉睡著某種古老的力量。這種力量能夠將幾乎任何生物變成無意識的奴隸，僅當您能找到喚醒它的方法的話……</string>
+  <string name="SacrificialSword_Gender">男性的</string>
 </resources>

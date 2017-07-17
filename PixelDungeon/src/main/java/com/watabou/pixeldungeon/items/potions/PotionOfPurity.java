@@ -110,7 +110,7 @@ public class PotionOfPurity extends UpgradablePotion{
 	@Override
 	protected void apply(Hero hero) {
 		GLog.w(TXT_NO_SMELL);
-		Buff.prolong(hero, GasesImmunity.class, GasesImmunity.DURATION);
+		Buff.prolong(hero, GasesImmunity.class, (float) (GasesImmunity.DURATION * qualityFactor()));
 		setKnown();
 	}
 

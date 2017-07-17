@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.debug.CandyOfDeath;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -51,6 +52,12 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
+import com.watabou.pixeldungeon.items.bags.Keyring;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
+import com.watabou.pixeldungeon.items.bags.Quiver;
+import com.watabou.pixeldungeon.items.bags.ScrollHolder;
+import com.watabou.pixeldungeon.items.bags.SeedPouch;
+import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
@@ -150,14 +157,16 @@ public enum HeroClass {
 		hero.collect(new RingOfFrost().identify());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
-		hero.collect(new IceGuardianCoreModule());
+
+		hero.collect(new Keyring());
+		hero.collect(new PotionBelt());
+		hero.collect(new Quiver());
+		hero.collect(new ScrollHolder());
+		hero.collect(new SeedPouch());
+		hero.collect(new WandHolster());
+		hero.collect(new CandyOfDeath());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
-		hero.collect(new Ankh());
-
-		hero.collect(new ChaosCrystal());
-		hero.collect(new ChaosCrystal());
-		hero.collect(new ChaosCrystal());
 
 		hero.ht(1000);
 		hero.hp(1000);

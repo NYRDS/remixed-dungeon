@@ -83,10 +83,10 @@
   <string name="Badges_Victory">Amuleto di Yendor ottenuto</string>
   <string name="Badges_VictoryAll">Amuleto di Yendor ottenuto da Guerriero, Mago, Furfante &amp; Cacciatrice</string>
   <string name="Badges_MasteryCombo">7-hit combo</string>
-  <string name="Badges_PotionsCooked1">3 porzioni cotte</string>
-  <string name="Badges_PotionsCooked2">6 porzioni cotte</string>
-  <string name="Badges_PotionsCooked3">9 porzioni cotte</string>
-  <string name="Badges_PotionsCooked4">12 porzioni cotte</string>
+  <string name="Badges_PotionsCooked1">3 pozioni create</string>
+  <string name="Badges_PotionsCooked2">6 pozioni create</string>
+  <string name="Badges_PotionsCooked3">9 pozioni create</string>
+  <string name="Badges_PotionsCooked4">12 pozioni create</string>
   <string name="Badges_NoMonsterSlain">Livello completato senza uccidere mostri</string>
   <string name="Badges_GrimWepon">Mostro ucciso da un\'arma Grim</string>
   <string name="Badges_Piranhas">6 piranha uccisi</string>

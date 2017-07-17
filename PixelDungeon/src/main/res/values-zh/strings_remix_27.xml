@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPlayGames_Use">使用 Google Play 遊戲</string>
+    <string name="WndPlayGames_Connecting">正在連線到 Google Play Games, 請閣下稍等...</string>
+    <string name="WndPlayGames_Show_Badges">查看徽章</string>
+    <string name="WndPlayGames_Show_Leaderboards">查看成績板</string>
+
+    <string name="WndPlayGames_Show_Ok">成功！</string>
+    <string name="WndPlayGames_Show_Error">運作失敗。某些地方出岔子了...</string>
+
+</resources>

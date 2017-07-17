@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -61,10 +62,15 @@ public enum Rankings {
 		rec.win		    = winLevel  != gameOver.LOSE;
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();
-		rec.score	    = score(winLevel != gameOver.LOSE);
+		rec.score	    = score(winLevel);
 		rec.mod			= PixelDungeon.activeMod();
 
 		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.getClass().getSimpleName(), resultDescription);
+
+		if (!ModdingMode.inMod()){
+			PlayGames.submitScores(Game.getDifficulty(), rec.score);
+			PlayGames.backupProgress();
+		}
 
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now() );
 		try {
@@ -110,8 +116,18 @@ public enum Rankings {
 		save();
 	}
 	
-	private int score( boolean win ) {
-		return (Statistics.goldCollected + Dungeon.hero.lvl() * Statistics.deepestFloor * 100) * (win ? 2 : 1);
+	private int score(gameOver win ) {
+
+		double winC        = Math.pow(1.4f, win.ordinal());
+		double challengesC = Math.pow(1.3f, Integer.bitCount(Dungeon.challenges));
+		double difficultyC = Math.pow(1.4f, Game.getDifficulty());
+
+		return (int) (difficultyC * challengesC * winC * ( Statistics.goldCollected
+									+ (Dungeon.hero.lvl() * Statistics.deepestFloor * 100)
+									- Statistics.duration
+									+ (Statistics.enemiesSlain * 25)
+									+ (Statistics.foodEaten * 111)
+									+ (Statistics.piranhasKilled * 666)));
 	}
 	
 	private static final String RECORDS	= "records";

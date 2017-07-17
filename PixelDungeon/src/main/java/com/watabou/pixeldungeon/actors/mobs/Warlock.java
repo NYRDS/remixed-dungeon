@@ -36,22 +36,17 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.WarlockSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-public class Warlock extends Mob implements Callback, IZapper {
-
-	private static final float TIME_TO_ZAP = 1f;
+public class Warlock extends Mob implements IZapper {
 
 	private static final String TXT_SHADOWBOLT_KILLED = Game
 			.getVar(R.string.Warlock_Killed);
 
 	public Warlock() {
-		spriteClass = WarlockSprite.class;
-
 		hp(ht(70));
 		defenseSkill = 18;
 
@@ -151,10 +146,5 @@ public class Warlock extends Mob implements Callback, IZapper {
 			return true;
 		}
 		return false;
-	}
-
-	@Override
-	public void call() {
-		next();
 	}
 }

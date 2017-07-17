@@ -2,53 +2,53 @@
 <resources>
   <!--PACKAGE /items/Wands-->
   <!--STRINGS OF Wand CLASS-->
-  <string name="Wand_Name">%s bacchetta</string>
+  <string name="Wand_Name">bacchetta di %s</string>
   <string name="Wand_ACZap">ZAP</string>
   <string name="Wand_Wood">Questo sottile %s bacchetta è calda al tatto. Chi sa che cosa farà quando viene utilizzata?</string>
-  <string name="Wand_Damage">Quando questa bacchetta è usata come arma da mischia, il suo danno medio è di %d punti per ogni colpo.</string>
-  <string name="Wand_Weapon">È possibile utilizzare questa bacchetta come arma da mischia.</string>
-  <string name="Wand_Fizzles">la bacchetta fizzles ; deve essere fuori oneri per ora</string>
-  <string name="Wand_SelfTarget">Non puoi Bersagliare te stesso</string>
-  <string name="Wand_Prompt">Scegliere la direzione di zapping</string>
+  <string name="Wand_Damage">Quando questa bacchetta viene usata come arma da mischia, il suo danno medio è di %d punti per colpo.</string>
+  <string name="Wand_Weapon">Puoi usare questa bacchetta come un arma da mischia.</string>
+  <string name="Wand_Fizzles">la bacchetta sfarfalla; dev\'essere finita l\'energia</string>
+  <string name="Wand_SelfTarget">Non ti puoi colpire da solo</string>
+  <string name="Wand_Prompt">Scegli la direzione dove colpire</string>
   <string-array name="Wand_Wood_Types">
-    <item>agrifoglio</item>
-    <item>tasso</item>
-    <item>ebano</item>
-    <item>ciliegia</item>
-    <item>tectona</item>
-    <item>sorbo</item>
-    <item>salice</item>
-    <item>mogano</item>
+    <item>Agrifoglio</item>
+    <item>Tasso</item>
+    <item>Ebano</item>
+    <item>Ciliegio</item>
+    <item>Tectona</item>
+    <item>Sorbo</item>
+    <item>Salice</item>
+    <item>Mogano</item>
     <item>Bambù</item>
-    <item>cuore viola</item>
-    <item>quercia</item>
-    <item>betulla</item>
+    <item>Amarante</item>
+    <item>Quercia</item>
+    <item>Betulla</item>
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
-  <string name="WandOfAmok_Name">Bacchetta della Furia</string>
-  <string name="WandOfAmok_Info">La luce viola di questa bacchetta farà impazzire le creature nelle sue vicinanze.</string>
-  <string name="WandOfAmok_Info1">non è successo nulla</string>
+  <string name="WandOfAmok_Name">Bacchetta della Follia</string>
+  <string name="WandOfAmok_Info">La luce viola di questa bacchetta farà impazzire il bersaglio che attaccherà creature a caso nelle sue vicinanze.</string>
+  <string name="WandOfAmok_Info1">non succede niente</string>
   <!--STRINGS OF WandOfAvalanche CLASS-->
   <string name="WandOfAvalanche_Name">Bacchetta della Valanga </string>
-  <string name="WandOfAvalanche_Info">Quando una scarica di questa bacchetta colpisce un muro (o qualsiasi altro ostacolo solido) provoca una valanga di pietre, danneggiando tutte le creature nella zona interessata.</string>
-  <string name="WandOfAvalanche_Info1">Hai ucciso te stesso con la bacchetta di Avalanche...</string>
+  <string name="WandOfAvalanche_Info">Quando una scarica di questa bacchetta colpisce un muro (o qualsiasi altro ostacolo solido) provoca una valanga di pietre, danneggiando e bloccando tutte le creature nella zona interessata.</string>
+  <string name="WandOfAvalanche_Info1">Ti sei ucciso da solo con la bacchetta della Valanga...</string>
   <!--STRINGS OF WandOfBlink CLASS-->
-  <string name="WandOfBlink_Name">Bacchetta di Blink</string>
-  <string name="WandOfBlink_Info">Questa bacchetta vi permetterà di teletrasportarsi nella direzione scelta. Le creature e ostacoli inanimati bloccheranno il teletrasporto.</string>
+  <string name="WandOfBlink_Name">Bacchetta del Teletrasporto</string>
+  <string name="WandOfBlink_Info">Questa bacchetta ti permette di teletrasportarti nella direzione scelta. Creature e ostacoli inanimati bloccheranno il teletrasporto.</string>
   <!--STRINGS OF WandOfDisintegration CLASS-->
-  <string name="WandOfDisintegration_Name">Bacchetta di Disintegrazione</string>
-  <string name="WandOfDisintegration_Info">Questa bacchetta emette un fascio di energia distruttiva, che penetra tutte le creature. più obiettivi colpisce, più danni che infliggerà a ciascuna di esse.</string>
+  <string name="WandOfDisintegration_Name">Bacchetta della Disintegrazione</string>
+  <string name="WandOfDisintegration_Info">Questa bacchetta emette un fascio di energia distruttiva, colpendo tutte le creature sulla sua strada. Più obiettivi colpisce più danni infligge a ciascuno di essi.</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
-  <string name="WandOfFirebolt_Name">Bacchetta di Firebolt</string>
-  <string name="WandOfFirebolt_Info">Questa bacchetta scatena esplosioni di fuoco magico . Essa nfiamma terreno infiammabile, danneggerà e brucerà una creatura.</string>
-  <string name="WandOfFirebolt_Info1">Hai ucciso te stesso con la bacchetta di Firebolt...</string>
+  <string name="WandOfFirebolt_Name">Bacchetta del Fuoco</string>
+  <string name="WandOfFirebolt_Info">Questa bacchetta scatena esplosioni di fuoco magico. Può incendiare terreni infiammabili e/o danneggiare e bruciare eventuali creature colpite.</string>
+  <string name="WandOfFirebolt_Info1">Ti sei ucciso da solo con la bacchetta del Fuoco...</string>
   <!--STRINGS OF WandOfFlock CLASS-->
-  <string name="WandOfFlock_Name">Bacchetta di Gregge</string>
-  <string name="WandOfFlock_Info">Un colpo di bacchetta ed evoca un gregge di pecore, creando un ostacolo impenetrabile temporaneo.</string>
+  <string name="WandOfFlock_Name">Bacchetta del Gregge</string>
+  <string name="WandOfFlock_Info">Questa bacchetta può evocare un gregge di pecore, creando temporaneamente un ostacolo impenetrabile.</string>
   <string name="Sheep_Name">pecora</string>
   <string name="Sheep_Name_Objective">pecora</string>
-  <string name="Sheep_Gender">Femmina</string>
-  <string name="Sheep_Desc">Questa è una pecora magica. Cosa c\'è di così magico su di esso? Non puoi ucciderlo. Starà lì fino a che non svanisce magicamente via, per tutto il tempo mastica l\'erba atterra con uno sguardo vuoto.</string>
+  <string name="Sheep_Gender">femminile</string>
+  <string name="Sheep_Desc">Questa è una pecora magica. Cos\'ha di così magico? Non la puoi uccidere. Starà lì per un po, fino a che non svanirà per magia. Impiegherà tutto il suo tempo a masticare l\'erba che trova.</string>
   <string-array name="WandOfFlock_SheepBaa">
     <item>Baa!</item>
     <item>Baa?</item>
@@ -59,14 +59,14 @@
   </string-array>
   <!--STRINGS OF WandOfLightning CLASS-->
   <string name="WandOfLightning_Name">Bacchetta del Fulmine</string>
-  <string name="WandOfLightning_Info">Questa bacchetta evoca archi mortali di energia elettrica, che si procurano danni a diverse creature vicino ad essa.</string>
-  <string name="WandOfLightning_Info1">Hai ucciso te stesso con la bacchetta di Lightning...</string>
+  <string name="WandOfLightning_Info">Questa bacchetta genera fasci mortali di elettricità, provocando danni a diverse creature vicine tra loro.</string>
+  <string name="WandOfLightning_Info1">Ti sei ucciso da solo con la bacchetta del Fulmine...</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
-  <string name="WandOfMagicMissile_Name">Bacchetta di Missile Magico</string>
-  <string name="WandOfMagicMissile_Info">Questa bacchetta lancia missili di pura energia magica, infliggendo danni moderati a una creatura bersagliata.</string>
+  <string name="WandOfMagicMissile_Name">Bacchetta del Missile Magico</string>
+  <string name="WandOfMagicMissile_Info">Questa bacchetta lancia missili di pura energia magica, infliggendo danni moderati alla creatura colpita.</string>
   <string name="WandOfMagicMissile_ACDisenchant">Disincanta</string>
-  <string name="WandOfMagicMissile_Info1">Hai ucciso te stesso con la bacchetta di Missile Magico</string>
-  <string name="WandOfMagicMissile_SelectWand">Seleziona una bacchetta che vuoi aggiornare</string>
+  <string name="WandOfMagicMissile_Info1">Ti sei ucciso da solo con la bacchetta del Missile Magico...</string>
+  <string name="WandOfMagicMissile_SelectWand">Seleziona una bacchetta da migliorare</string>
   <string name="WandOfMagicMissile_Desinchanted">Hai disincantato la bacchetta di missile magico ed hai usato la sua essenza per aggiornare %s</string>
   <!--STRINGS OF WandOfPoison CLASS-->
   <string name="WandOfPoison_Name">Bacchetta Di Veleno</string>

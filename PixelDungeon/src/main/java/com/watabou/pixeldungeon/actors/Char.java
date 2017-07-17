@@ -674,4 +674,8 @@ public abstract class Char extends Actor {
 	public boolean isMovable() {
 		return movable;
 	}
+
+	public WalkingType getWalkingType(){
+		return walkingType;
+	}
 }

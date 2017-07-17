@@ -37,7 +37,7 @@
   <string name="CommonArrow_Gender">féminin</string>
   <!--STRINGS OF FireArrow CLASS-->
   <string name="FireArrow_Name">flèche de feu</string>
-  <string name="FireArrow_Info">Cette flèche semble juste normale, excepté la tiède lumière rouge qui émane de sa tête.</string>
+  <string name="FireArrow_Info">Cette flèche ressemble tout à fait à une flèche normale, excepté la tiède lumière rouge qui émane de sa tête.</string>
   <string name="FireArrow_Gender">féminin</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">flèche empoisonnée</string>
@@ -49,6 +49,6 @@
   <string name="ParalysisArrow_Gender">féminin</string>
   <!--STRINGS OF FrostArrow CLASS-->
   <string name="FrostArrow_Name">flèche de froid</string>
-  <string name="FrostArrow_Info">Vous pouvez ressentir une aura glaçante émaner de la flèche</string>
+  <string name="FrostArrow_Info">Vous pouvez ressentir une aura glaçante émaner de la flèche.</string>
   <string name="FrostArrow_Gender">féminin</string>
 </resources>

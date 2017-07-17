@@ -1,10 +1,12 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -21,6 +23,8 @@ import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
+import java.io.File;
+import java.io.FileFilter;
 import java.util.ArrayList;
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
@@ -30,13 +34,13 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 	private String  slot;
 
 	public WndSaveSlotSelect(final boolean _saving) {
-		this(_saving,Game.getVar(R.string.WndSaveSlotSelect_SelectSlot));
+		this(_saving, Game.getVar(R.string.WndSaveSlotSelect_SelectSlot));
 	}
 
-	public WndSaveSlotSelect(final boolean _saving,String title) {
+	public WndSaveSlotSelect(final boolean _saving, String title) {
 		String options[] = slotInfos();
 
-		final int WIDTH =  WndHelper.getFullscreenWidth();
+		final int WIDTH = WndHelper.getFullscreenWidth();
 		final int maxW = WIDTH - GAP * 2;
 
 		Text tfTitle = PixelScene.createMultiline(title, GuiProperties.titleFontSize());
@@ -45,6 +49,36 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		tfTitle.maxWidth(maxW);
 		tfTitle.measure();
 		add(tfTitle);
+
+		if(!_saving && PlayGames.isConnected()) {
+			SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
+				@Override
+				protected void onClick() {
+					final Window refreshing = new WndMessage("Please wait a bit...")  {
+						@Override
+						public void onBackPressed() {
+						}
+					};
+
+					Game.scene().add(refreshing);
+					PlayGames.loadSnapshots(new Runnable() {
+						@Override
+						public void run() {
+							Game.executeInGlThread(new Runnable() {
+								@Override
+								public void run() {
+									refreshing.hide();
+									refreshWindow();
+								}
+							});
+						}
+					});
+				}
+			};
+			refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
+			add(refreshBtn);
+		}
+
 
 		Text tfMesage = PixelScene.createMultiline(windowText(), GuiProperties.regularFontSize());
 		tfMesage.maxWidth(maxW);
@@ -69,7 +103,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				}
 
 				float additionalMargin = 0;
-				float x = GAP + j * (BUTTON_WIDTH + GAP);
+				float xColumn = GAP + j * (BUTTON_WIDTH + GAP);
+				float xBtn = xColumn;
 
 				final RedButton btn = new RedButton(options[index]) {
 					@Override
@@ -80,6 +115,42 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				};
 				buttons.add(btn);
 
+				if (PlayGames.isConnected()) {
+					final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.heroClass.toString();
+
+					if ((_saving && !options[index].isEmpty())
+							|| (!_saving
+							&& PlayGames.haveSnapshot(snapshotId)
+					)) {
+
+						Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
+						SimpleButton syncBtn = new SimpleButton(Icons.get(icon)) {
+							protected void onClick() {
+								File slotDir = FileSystem.getInternalStorageFile(slotNameFromIndexAndMod(index));
+								boolean res;
+								if (_saving) {
+									res = PlayGames.packFilesToSnapshot(snapshotId, slotDir, new FileFilter() {
+										@Override
+										public boolean accept(File pathname) {
+											return SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.heroClass);
+										}
+									});
+								} else {
+									res = PlayGames.unpackSnapshotTo(snapshotId, slotDir);
+								}
+								refreshWindow();
+								showActionResult(res);
+							}
+						};
+
+						syncBtn.setPos(xColumn, pos + BUTTON_HEIGHT / 2);
+						additionalMargin = syncBtn.width();
+						add(syncBtn);
+
+						xBtn = syncBtn.right() + GAP;
+					}
+				}
+
 				if (!options[index].isEmpty()) {
 					SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 						protected void onClick() {
@@ -89,7 +160,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 									Game.getVar(R.string.WndSaveSlotSelect_Delete_No)) {
 								@Override
 								protected void onSelect(int index) {
-									if(index==0) {
+									if (index == 0) {
 										SaveUtils.deleteSaveFromSlot(slotNameFromIndexAndMod(slotIndex), Dungeon.heroClass);
 										WndSaveSlotSelect.this.hide();
 										GameScene.show(new WndSaveSlotSelect(_saving));
@@ -99,12 +170,12 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 							GameScene.show(reallyDelete);
 						}
 					};
-					deleteBtn.setPos(x + BUTTON_WIDTH - deleteBtn.width() - GAP, pos);
-					additionalMargin = deleteBtn.width() + GAP;
+					deleteBtn.setPos(xColumn + BUTTON_WIDTH - deleteBtn.width() - GAP, pos);
+					additionalMargin += deleteBtn.width() + GAP;
 					add(deleteBtn);
 				}
 
-				btn.setRect(x, pos, BUTTON_WIDTH - additionalMargin - GAP, BUTTON_HEIGHT);
+				btn.setRect(xBtn, pos, BUTTON_WIDTH - additionalMargin - GAP * 2, BUTTON_HEIGHT);
 				add(btn);
 			}
 			pos += BUTTON_HEIGHT + GAP;
@@ -128,6 +199,12 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 			btn.setPos(width / 2 - btn.width() / 2, height);
 			resize(width, (int) (height + btn.height()));
 		}
+	}
+
+
+	private void refreshWindow() {
+		WndSaveSlotSelect.this.hide();
+		GameScene.show(new WndSaveSlotSelect(saving));
 	}
 
 	private static boolean isSlotIndexUsed(int index) {
@@ -202,6 +279,14 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 			Ads.displaySaveAndLoadAd(returnTo);
 		} else {
 			returnToWork(true);
+		}
+	}
+
+	private void showActionResult(final boolean res) {
+		if (res) {
+			Game.scene().add(new WndMessage("ok!"));
+		} else {
+			Game.scene().add(new WndMessage("something went wrong..."));
 		}
 	}
 

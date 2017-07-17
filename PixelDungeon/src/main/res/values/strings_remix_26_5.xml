@@ -9,6 +9,7 @@
     <!-- STRINGS OF ElvenDagger CLASS -->
     <string name="ElvenDagger_Name">elven dagger</string>
     <string name="ElvenDagger_Info">This weapon is made of special metal alloy, making it a lot lighter compared to regular dagger.</string>
+    <string name="ElvenDagger_Gender">masculine</string>
 
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->

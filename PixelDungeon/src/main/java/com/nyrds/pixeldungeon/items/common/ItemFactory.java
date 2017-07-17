@@ -18,6 +18,7 @@ import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -386,6 +387,7 @@ public class ItemFactory {
 		registerItemClass(WarlockArmor.class);
 		registerItemClass(Candy.class);
 		registerItemClass(WandOfShadowbolt.class);
+		registerItemClass(PseudoAmulet.class);
 
 	}
 

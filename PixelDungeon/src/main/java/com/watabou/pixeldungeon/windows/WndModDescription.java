@@ -111,6 +111,10 @@ public class WndModDescription extends Window {
 	}
 
 	private static void switchSaves(String option, String prevMod) {
+		if(option.equals(prevMod)) {
+			return;
+		}
+
 		SaveUtils.copyAllClassesToSlot(prevMod);
 		SaveUtils.deleteGameAllClasses();
 		SaveUtils.copyAllClassesFromSlot(option);

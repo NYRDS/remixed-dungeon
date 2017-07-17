@@ -238,7 +238,8 @@ public class WndRanking extends WndTabbed {
 	
 	private class ItemsTab extends Group {
 		
-		private float pos;
+		private float posY;
+		private float posX;
 		
 		public ItemsTab() {
 			super();
@@ -273,10 +274,10 @@ public class WndRanking extends WndTabbed {
 		
 		private void addItem( Item item ) {
 			ItemButton slot = new ItemButton( item );
-			slot.setRect( 0, pos, width, ItemButton.HEIGHT );
+			slot.setRect( posX, posY, width, ItemButton.HEIGHT );
 			add( slot );
 			
-			pos += slot.height() + 1;
+			posY += slot.height() + 1;
 		}
 	}
 	

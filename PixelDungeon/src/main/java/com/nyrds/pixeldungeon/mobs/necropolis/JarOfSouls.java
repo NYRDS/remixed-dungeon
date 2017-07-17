@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -77,7 +79,12 @@ public class JarOfSouls extends UndeadMob {
 		return false;
 	}
 
-	public void PlayZap() {
+	private void PlayZap() {
 		getSprite().zap(getEnemy().getPos(), null);
+	}
+
+	@Override
+	public boolean zap(@NonNull Char enemy) {
+		return false;
 	}
 }
