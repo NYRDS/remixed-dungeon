@@ -13,7 +13,7 @@
    "entrance":[1,4],
    "exit":[5,4],
    "objects" : [
-    {"kind":"PortalGate","x":3,"y":1, "uses":1}
+    {"kind":"PortalGateSender","x":3,"y":1, "uses":1, "destination_levelKind":"PredesignedLevel", "destination_levelId":"portal_shrine", "destination_levelDepth":0, "destination_cellId":209}
   ]
 
 }

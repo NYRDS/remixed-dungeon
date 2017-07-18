@@ -19,19 +19,19 @@ import com.watabou.utils.Callback;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by mike on 01.07.2016.
- */
 public class PortalGate extends LevelObject {
 
-	private boolean activated = false;
-	private boolean animationRunning = false;
-	private boolean used = false;
-	private boolean infiniteUses = false;
-	private int uses;
+	protected Position returnTo;
 
-	private static final String TXT_USED = Game.getVar(R.string.PortalGate_Used);
-	private static final String TXT_ACTIVATED = Game.getVar(R.string.PortalGate_Activated);
+	protected boolean activated = false;
+	protected boolean animationRunning = false;
+	protected boolean used = false;
+	protected boolean infiniteUses = false;
+
+	protected int uses;
+
+	protected static final String TXT_USED = Game.getVar(R.string.PortalGate_Used);
+	protected static final String TXT_ACTIVATED = Game.getVar(R.string.PortalGate_Activated);
 
 	public PortalGate(){
 		super(-1);
@@ -48,33 +48,17 @@ public class PortalGate extends LevelObject {
 		} else {
 			infiniteUses = true;
 		}
+
+		if(obj.has("destination_levelKind") && obj.has("destination_levelId") && obj.has("destination_levelDepth") && obj.has("destination_cellId")){
+
+
+			returnTo = new Position(obj.optString("destination_levelKind" ,"SewerLevel"), obj.optString("destination_levelId" ,"1"), obj.optInt("destination_levelDepth" ,1), obj.optInt("destination_cellId" ,1));
+		}
 	}
 
 	@Override
 	public boolean interact(Hero hero) {
-		if(!used && hero.belongings.getItem(Amulet.class) == null){
-			use(hero);
-		} else{
-			GLog.w( TXT_USED );
-		}
 		return false;
-	}
-
-	private void use(Hero hero){
-		if(!animationRunning){
-			if (!activated ){
-				playStartUpAnim();
-			} else {
-				if(Dungeon.level.levelId.equals("portal_shrine")){
-					if(hero.portalLevelPos != null){
-						GameScene.show(new WndPortal(this, hero, hero.portalLevelPos));
-					}
-				} else {
-					Position returnTo = new Position("PredesignedLevel", "portal_shrine", 0, 230);
-					GameScene.show(new WndPortal(this, hero, returnTo));
-				}
-			}
-		}
 	}
 
 	public void useUp(){
@@ -111,12 +95,15 @@ public class PortalGate extends LevelObject {
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.LibraryBook_Description);
+		if(activated){
+			return Game.getVar(R.string.PortalGate_Desc_Activated);
+		}
+		return Game.getVar(R.string.PortalGate_Desc);
 	}
 
 	@Override
 	public String name() {
-		return Game.getVar(R.string.LibraryBook_Name);
+		return Game.getVar(R.string.PortalGate_Name);
 	}
 
 	@Override
@@ -139,7 +126,7 @@ public class PortalGate extends LevelObject {
 		return 32;
 	}
 
-	private void playStartUpAnim(){
+	protected void playStartUpAnim(){
 		animationRunning = true;
 		sprite.playAnim(8, false, new Callback() {
 			@Override
@@ -153,7 +140,7 @@ public class PortalGate extends LevelObject {
 
 	}
 
-	private void playActiveLoop(){
+	protected void playActiveLoop(){
 		sprite.playAnim(8, true, new Callback() {
 			@Override
 			public void call() {
