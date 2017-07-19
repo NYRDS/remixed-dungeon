@@ -67,7 +67,7 @@ public class PortalGate extends LevelObject {
 	public void useUp(){
 		if (infiniteUses == false){
 			uses = uses - 1;
-			if (uses == 0){
+			if (uses < 1){
 				used = true;
 			}
 		}
