@@ -2,21 +2,14 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.Position;
-import com.nyrds.pixeldungeon.windows.WndPortal;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.ui.GameLog;
-import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
