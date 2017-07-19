@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -44,15 +45,17 @@ public class PortalGate extends LevelObject {
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
 		if(obj.has("uses")){
-			uses = obj.optInt("uses", 1);
+			uses = obj.getInt("uses");
 		} else {
 			infiniteUses = true;
 		}
 
-		if(obj.has("destination_levelKind") && obj.has("destination_levelId") && obj.has("destination_levelDepth") && obj.has("destination_cellId")){
-
-
-			returnTo = new Position(obj.optString("destination_levelKind" ,"SewerLevel"), obj.optString("destination_levelId" ,"1"), obj.optInt("destination_levelDepth" ,1), obj.optInt("destination_cellId" ,1));
+		if(obj.has("position")){
+			JSONObject portalDesc = obj.getJSONObject("position");
+			returnTo = new Position(portalDesc.optString("levelKind", "Sewer"),
+					portalDesc.optString("levelId" ,"1"),
+					portalDesc.optInt("levelDepth" ,1),
+					portalDesc.optInt("cell" ,1));
 		}
 	}
 

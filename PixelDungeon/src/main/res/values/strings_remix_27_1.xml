@@ -11,8 +11,7 @@
 
     <string name="PortalGate_Name">Portal</string>
     <string name="PortalGate_Desc">Carvings on a surface of this portal is forming a peculiar pattern. It appears as if it\'s a giant tunnel leading into a distance. But looking at it from a side, it becomes obvious, that it\'s surface is almost flat.</string>
-    <string name="PortalGate_Desc_Activated">The portal is oozing some sort of glowing matter. It looks perfectly still, if not
-        9for ripples coming from it\'s center.</string>
+    <string name="PortalGate_Desc_Activated">The portal is oozing some sort of glowing matter. It looks perfectly still, if not for ripples coming from it\'s center.</string>
 
     <string name="PortalGate_Activated">The ancient portal has awaken!</string>
     <string name="PortalGate_Used">You touched the portal and... nothing happened.</string>

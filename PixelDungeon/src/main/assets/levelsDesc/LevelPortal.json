@@ -1,7 +1,7 @@
 {
    "width":7,
    "height":6,
-   "map":[43,43, 4, 4, 4,43,43,
+   "map":[ 4, 4, 4, 4, 4, 4, 4,
            4, 4, 4, 1, 4, 4, 4,
            4, 1, 1, 1, 1, 1, 4,
            4, 1, 1, 1, 1, 1, 4,
@@ -13,7 +13,15 @@
    "entrance":[1,4],
    "exit":[5,4],
    "objects" : [
-    {"kind":"PortalGateSender","x":3,"y":1, "uses":1, "destination_levelKind":"PredesignedLevel", "destination_levelId":"portal_shrine", "destination_levelDepth":0, "destination_cellId":209}
+    {"kind":"PortalGateSender","x":3,"y":1, "uses":1,
+      "position":
+      {
+        "levelKind":"PredesignedLevel",
+        "levelId":"portal_shrine",
+        "levelDepth":0,
+        "cell":209
+      }
+    }
   ]
 
 }
