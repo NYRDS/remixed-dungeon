@@ -45,9 +45,8 @@ public class PortalGate extends LevelObject {
 
 		if(obj.has("position")){
 			JSONObject portalDesc = obj.getJSONObject("position");
-			returnTo = new Position(portalDesc.optString("levelKind", "Sewer"),
+			returnTo = new Position(
 					portalDesc.optString("levelId" ,"1"),
-					portalDesc.optInt("levelDepth" ,1),
 					portalDesc.optInt("cell" ,1));
 		}
 	}

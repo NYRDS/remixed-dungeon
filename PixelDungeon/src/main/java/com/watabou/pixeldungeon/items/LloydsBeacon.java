@@ -45,23 +45,20 @@ public class LloydsBeacon extends Item {
 	private static final String TXT_INFO       = Game.getVar(R.string.LloidsBeacon_Info);
 	private static final String TXT_SET        = Game.getVar(R.string.LloidsBeacon_Set);
 
-	public static final float TIME_TO_USE = 1;
+	private static final float TIME_TO_USE = 1;
 
-	public static final String AC_SET		= Game.getVar(R.string.LloidsBeacon_ACSet);
-	public static final String AC_RETURN	= Game.getVar(R.string.LloidsBeacon_ACReturn);
+	private static final String AC_SET    = Game.getVar(R.string.LloidsBeacon_ACSet);
+	private static final String AC_RETURN = Game.getVar(R.string.LloidsBeacon_ACReturn);
 	
 	private Position returnTo;
 	
 	public LloydsBeacon() {
 		image = ItemSpriteSheet.BEACON;
 		returnTo = new Position();
-		returnTo.levelDepth = -1;	
+		returnTo.cellId = -1;
 		
 		name = Game.getVar(R.string.LloidsBeacon_Name);
 	}
-	
-	private static final String DEPTH	 = "depth";
-	private static final String POS		 = "pos";
 	
 	private static final String POSITION = "position";
 	
@@ -75,21 +72,14 @@ public class LloydsBeacon extends Item {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
-		
 		returnTo = (Position) bundle.get(POSITION);
-		if(returnTo == null) { //pre remix.19.0 code, remove in future
-			returnTo = new Position(DungeonGenerator.getEntryLevelKind(),
-									DungeonGenerator.getEntryLevel(),
-									bundle.getInt( DEPTH ),
-									bundle.getInt( POS ));
-		}
 	}
 	
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_SET );
-		if (returnTo.levelDepth != -1) {
+		if (returnTo.cellId != -1) {
 			actions.add( AC_RETURN );
 		}
 		return actions;
@@ -127,7 +117,7 @@ public class LloydsBeacon extends Item {
 			GLog.i( TXT_RETURN );
 			
 		} else if (action.equals(AC_RETURN)) {
-			if (returnTo.levelDepth == Dungeon.depth && returnTo.levelKind.equals(hero.levelKind)) {
+			if (returnTo.levelId.equals(Dungeon.level.levelId)) {
 				reset();
 				WandOfBlink.appear( hero, returnTo.cellId );
 				Dungeon.level.press( returnTo.cellId, hero );
@@ -146,7 +136,7 @@ public class LloydsBeacon extends Item {
 	}
 	
 	public void reset() {
-		returnTo.levelDepth = -1;
+		returnTo.cellId = -1;
 	}
 	
 	@Override
@@ -163,11 +153,11 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public Glowing glowing() {
-		return returnTo.levelDepth != -1 ? WHITE : null;
+		return returnTo.cellId != -1 ? WHITE : null;
 	}
 	
 	@Override
 	public String info() {
-		return TXT_INFO + (returnTo.levelDepth == -1 ? "" : Utils.format( TXT_SET, returnTo.levelDepth ) );
+		return TXT_INFO + (returnTo.cellId == -1 ? "" : Utils.format( TXT_SET, DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
 	}
 }

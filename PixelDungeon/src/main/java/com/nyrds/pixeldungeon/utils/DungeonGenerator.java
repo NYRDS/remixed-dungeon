@@ -153,7 +153,7 @@ public class DungeonGenerator {
 		try {
 
 			if (current.levelId.equals("unknown")) {
-				current.levelId = guessLevelId(current.levelKind, current.levelDepth);
+				current.levelId = "1";
 			}
 
 			JSONArray currentLevel = mGraph.getJSONArray(current.levelId);
@@ -190,9 +190,8 @@ public class DungeonGenerator {
 			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);
 
 			next.levelId = mCurrentLevelId;
-			mCurrentLevelDepth = next.levelDepth = nextLevelDesc.optInt("depth",0);
-			mCurrentLevelKind  = next.levelKind;
-			next.levelKind = nextLevelDesc.getString("kind");
+			mCurrentLevelDepth = nextLevelDesc.optInt("depth",0);
+			mCurrentLevelKind  = getLevelKind(next.levelId);
 
 			return next;
 		} catch (JSONException e) {
@@ -260,11 +259,10 @@ public class DungeonGenerator {
 	}
 
 	public static Level createLevel(Position pos) {
-		Class<? extends Level> levelClass = mLevelKindList.get(pos.levelKind);
+		Class<? extends Level> levelClass = mLevelKindList.get(getLevelKind(pos.levelId));
 
 		if (levelClass == null) {
-			GLog.w("Unknown level type: %s", pos.levelKind);
-			pos.levelKind = DEAD_END_LEVEL;
+			GLog.w("Unknown level type: %s", getLevelKind(pos.levelId));
 
 			return createLevel(pos);
 		}
@@ -341,6 +339,11 @@ public class DungeonGenerator {
 	}
 
 	@NonNull
+	public static String getLevelKind(String levelId) {
+		return getLevelProperty(levelId,"kind",DEAD_END_LEVEL);
+	}
+
+	@NonNull
 	public static String getCurrentLevelKind() {
 		return mCurrentLevelKind;
 	}
@@ -354,9 +357,13 @@ public class DungeonGenerator {
 		return mCurrentLevelDepth;
 	}
 
+	public static int getLevelDepth(String id) {
+		return getLevelProperty(mCurrentLevelId,"depth",0);
+	}
+
 	public static void loadingLevel(Position next) {
 		mCurrentLevelId = next.levelId;
-		mCurrentLevelDepth = next.levelDepth;
-		mCurrentLevelKind = next.levelKind;
+		mCurrentLevelDepth = getLevelDepth(mCurrentLevelId);
+		mCurrentLevelKind  = getLevelKind(mCurrentLevelId);
 	}
 }

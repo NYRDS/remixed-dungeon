@@ -177,7 +177,6 @@ public class Dungeon {
 
 		Dungeon.level = null;
 		updateStatistics();
-		GLog.toFile("creating level: %s %s %d", pos.levelId, pos.levelKind, pos.levelDepth);
 		Level level = DungeonGenerator.createLevel(pos);
 
 		Statistics.qualifiedForNoKilling = !level.isBossLevel();
@@ -363,7 +362,9 @@ public class Dungeon {
 
 		Position current = currentPosition();
 
-		String saveTo = SaveUtils.depthFileForSave(hero.heroClass, current.levelDepth, current.levelKind,
+		String saveTo = SaveUtils.depthFileForSave(hero.heroClass,
+				DungeonGenerator.getLevelDepth(current.levelId),
+				DungeonGenerator.getLevelKind(current.levelId),
 				current.levelId);
 
 		GLog.toFile("saving level: %s", saveTo);
@@ -523,7 +524,10 @@ public class Dungeon {
 
 		DungeonGenerator.loadingLevel(next);
 
-		String loadFrom = SaveUtils.depthFileForLoad(heroClass, next.levelDepth, next.levelKind, next.levelId);
+		String loadFrom = SaveUtils.depthFileForLoad(heroClass,
+				DungeonGenerator.getLevelDepth(next.levelId),
+				DungeonGenerator.getLevelKind(next.levelId),
+				next.levelId);
 
 		GLog.toFile("loading level: %s", loadFrom);
 
@@ -710,7 +714,7 @@ public class Dungeon {
 	}
 
 	public static Position currentPosition() {
-		return new Position(hero.levelKind, hero.levelId, depth, hero.getPos());
+		return new Position( hero.levelId, hero.getPos());
 	}
 
 	private static int difficulty;
