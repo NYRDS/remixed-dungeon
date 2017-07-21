@@ -11,7 +11,7 @@ function getJson()
     if math.random() > 0.5 then
         filename = "levelsDesc/FortuneShop.json"
     else
-        filename = "levelsDesc/Town_Library.json"
+        filename = "levelsDesc/LevelPortal.json"
     end
 
     return loadResource(filename)

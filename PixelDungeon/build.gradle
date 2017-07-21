@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            keyAlias 'pixel dundeon playstore key'
-            keyPassword 'qwerty'
-            storeFile file('C:\\Users\\mike\\Desktop\\keys\\pixeldungeon')
-            storePassword 'qwerty666'
+            keyAlias 'testKey'
+            keyPassword '123456'
+            storeFile file('testKey/test.jks')
+            storePassword '123456'
         }
     }
     buildToolsVersion '25.0.3'
