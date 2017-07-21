@@ -9,6 +9,8 @@
     <!-- STRINGS OF ElvenDagger CLASS -->
     <string name="ElvenDagger_Name">daga élfica</string>
     <string name="ElvenDagger_Info">Esta daga esta hecha con una aleación especial, por lo que es más ligera que una daga normal.</string>
+    <string name="ElvenDagger_Gender">masculino</string>
+
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
     <string name="IceGuardianCoreModule_Name">Núcleo del guardián de hielo</string>

@@ -9,6 +9,8 @@
     <!-- STRINGS OF ElvenDagger CLASS -->
     <string name="ElvenDagger_Name">矮人匕首</string>
     <string name="ElvenDagger_Info">此武器以特製合金製造，故它比一般匕首更輕。</string>
+    <string name="ElvenDagger_Gender">masculine</string>
+
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
     <string name="IceGuardianCoreModule_Name">冰霜守衛的核心裝置</string>
