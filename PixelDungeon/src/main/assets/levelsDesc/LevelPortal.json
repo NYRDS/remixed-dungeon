@@ -16,9 +16,7 @@
     {"kind":"PortalGateSender","x":3,"y":1, "uses":1,
       "position":
       {
-        "levelKind":"PredesignedLevel",
         "levelId":"portal_shrine",
-        "levelDepth":0,
         "cell":209
       }
     }
