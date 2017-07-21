@@ -30,7 +30,8 @@ public class LevelObjectsFactory {
 		registerObjectClass(Barrel.class);
 		registerObjectClass(ConcreteBlock.class);
 		registerObjectClass(LibraryBook.class);
-		registerObjectClass(PortalGate.class);
+		registerObjectClass(PortalGateSender.class);
+		registerObjectClass(PortalGateReceiver.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {

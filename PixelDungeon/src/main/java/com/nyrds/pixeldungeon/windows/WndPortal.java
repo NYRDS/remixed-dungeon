@@ -21,15 +21,19 @@ import java.util.Map;
 
 public class WndPortal extends Window {
 
-	private static final int BTN_HEIGHT	= 18;
-	private static final int BTN_WIDTH	= 38;
-	private static final int WIDTH		= 100;
-	private static final int GAP		= 2;
+	protected static final int BTN_HEIGHT	= 18;
+	protected static final int BTN_WIDTH	= 38;
+	protected static final int WIDTH		= 100;
+	protected static final int GAP		= 2;
 
-	private static final String TXT_TITLE = Game.getVar(R.string.WndPortal_Title);
-	private static final String TXT_INFO = Game.getVar(R.string.WndPortal_Info);
-	private static final String BTN_YES = Game.getVar(R.string.Wnd_Button_Yes);
-	private static final String BTN_NO = Game.getVar(R.string.Wnd_Button_No);
+	protected static final String TXT_TITLE = Game.getVar(R.string.WndPortal_Title);
+	protected final String TXT_INFO = getDesc();
+	protected static final String BTN_YES = Game.getVar(R.string.Wnd_Button_Yes);
+	protected static final String BTN_NO = Game.getVar(R.string.Wnd_Button_No);
+
+	protected String getDesc(){
+		return Game.getVar(R.string.WndPortal_Info);
+	}
 
 	public WndPortal(final PortalGate portal, final Hero hero, final Position returnTo ) {
 		super();

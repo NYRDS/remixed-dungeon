@@ -12,12 +12,12 @@
       "fortune_shop":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/FortuneShop.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
       "portal_shrine":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/PortalShrine.json", "isSafe":true},
 
-      "portal_room_lvl5":{"kind":"PredesignedLevel", "depth":5, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
-      "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
-      "portal_room_lvl15":{"kind":"PredesignedLevel", "depth":15, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
-      "portal_room_lvl20":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
-      "portal_room_lvl25":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
-      "portal_room_lvl31":{"kind":"PredesignedLevel", "depth":31, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
+      "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+      "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+      "portal_room_lvl15":{"kind":"PredesignedLevel", "depth":15, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+      "portal_room_lvl20":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+      "portal_room_lvl25":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+      "portal_room_lvl31":{"kind":"PredesignedLevel", "depth":31, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
 
       "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
 
@@ -39,7 +39,7 @@
       "ice4":{"kind":"IceCavesLevel", "depth":18,     "size":[32,32], "music":"ost_ice_caves.mp3"},
       "ice5":{"kind":"IceCavesBossLevel", "depth":19, "size":[32,32], "music":"ost_ice_caves.mp3"},
 
-      "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32],"feeling":"CHASM"},
+      "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
       "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
       "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
       "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
