@@ -339,8 +339,12 @@ public class DungeonGenerator {
 	}
 
 	@NonNull
-	public static String getLevelKind(String levelId) {
-		return getLevelProperty(levelId,"kind",DEAD_END_LEVEL);
+	public static String getLevelKind(String id) {
+		return getLevelProperty(id,"kind",DEAD_END_LEVEL);
+	}
+
+	public static int getLevelDepth(String id) {
+		return getLevelProperty(id,"depth",0);
 	}
 
 	@NonNull
@@ -355,10 +359,6 @@ public class DungeonGenerator {
 
 	public static int getCurrentLevelDepth() {
 		return mCurrentLevelDepth;
-	}
-
-	public static int getLevelDepth(String id) {
-		return getLevelProperty(mCurrentLevelId,"depth",0);
 	}
 
 	public static void loadingLevel(Position next) {

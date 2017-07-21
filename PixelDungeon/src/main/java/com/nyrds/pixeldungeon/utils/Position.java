@@ -10,11 +10,6 @@ public class Position implements Bundlable {
 	public String levelId;
 
 	@Deprecated
-	private String levelKind  = "DeadEndLevel";
-	@Deprecated
-	private int    levelDepth = -1;
-
-	@Deprecated
 	private static final String LEVEL_DEPTH = "levelDepth";
 	@Deprecated
 	private static final String LEVEL_KIND  = "levelKind";
@@ -36,12 +31,11 @@ public class Position implements Bundlable {
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
-
-		levelDepth = bundle.optInt(LEVEL_DEPTH,1);
-		levelKind  = bundle.optString(LEVEL_KIND,"SewerLevel");
+		int levelDepth = bundle.optInt(LEVEL_DEPTH, 1);
+		String levelKind = bundle.optString(LEVEL_KIND, "SewerLevel");
 
 		cellId     = bundle.getInt(CELL_ID);
-		levelId    = bundle.optString(LEVEL_ID, DungeonGenerator.guessLevelId(levelKind,levelDepth));
+		levelId    = bundle.optString(LEVEL_ID, DungeonGenerator.guessLevelId(levelKind, levelDepth));
 	}
 
 	@Override

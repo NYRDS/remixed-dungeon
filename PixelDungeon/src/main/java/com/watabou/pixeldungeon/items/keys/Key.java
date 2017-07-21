@@ -47,15 +47,16 @@ public class Key extends Item {
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( DEPTH,   depth );
+		//bundle.put( DEPTH,   depth );
 		bundle.put( LEVELID, levelId);
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		depth = bundle.getInt( DEPTH );
 		levelId = bundle.optString(LEVELID, DungeonGenerator.UNKNOWN);
+		depth = bundle.optInt( DEPTH,DungeonGenerator.getLevelDepth(levelId) );
+
 	}
 	
 	@Override
@@ -77,7 +78,7 @@ public class Key extends Item {
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 		levelId = itemDesc.optString("levelId",levelId);
-		depth   = DungeonGenerator.getLevelProperty(levelId,"depth",0);
+		depth   = DungeonGenerator.getLevelDepth(levelId);
 		depth   = itemDesc.optInt("depth",depth);
 	}
 }
