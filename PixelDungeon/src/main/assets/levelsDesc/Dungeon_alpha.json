@@ -10,7 +10,7 @@
     "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
     "town_shop":{"kind":"TownShopLevel", "depth":0, "size":[32,32], "isSafe":true, "music":"ost_town_1.mp3"},
     "fortune_shop":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/FortuneShop.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-    "portal_shrine":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/PortalShrine.json", "isSafe":true},
+    "portal_shrine":{"kind":"PredesignedLevel", "size":[24,24], "depth":0, "file":"levelsDesc/PortalShrine.json", "isSafe":true},
 
     "portal_room_lvl5":{"kind":"PredesignedLevel", "depth":5, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
     "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/LevelPortal.json", "noFogOfWar":true, "isSafe":true},
@@ -73,7 +73,7 @@
     "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
    },
   "Graph":{
-    "0":[["town"],[]],
+    "0":[["portal_room_lvl5"],[]],
 
     "town_shop":[[],["town"],[1]],
     "movie_theater":[[],["town"],[2]],

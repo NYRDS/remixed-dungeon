@@ -17,7 +17,8 @@
       "position":
       {
         "levelId":"portal_shrine",
-        "cell":209
+        "x":17,
+        "y":8
       }
     }
   ]
