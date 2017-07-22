@@ -243,6 +243,17 @@ public class DungeonGenerator {
 		return defaultValue;
 	}
 
+	public static JSONArray getLevelProperty(String id, String property) {
+
+		try {
+			JSONObject levelDesc = mLevels.getJSONObject(id);
+			return levelDesc.getJSONArray(property);
+		} catch (JSONException e) {
+			//EventCollector.logException(e);
+		}
+		return null;
+	}
+
 	public static boolean isStatic(String id) {return getLevelProperty(id,"isStatic",false);}
 
 	public static Level.Feeling getLevelFeeling(String id) {
