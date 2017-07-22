@@ -69,15 +69,18 @@ public class WndInfoCell extends Window {
 
 		Text info = PixelScene.createMultiline(GuiProperties.regularFontSize());
 		add( info );
-		
+
 		StringBuilder desc = new StringBuilder( level.tileDescByCell( cell ) );
-		
+
 		final char newLine = '\n';
 
 		if(obj != null) {
 			LevelObjectSprite sprite = new LevelObjectSprite();
 			sprite.reset(obj);
-			sprite.setPos(0,0);
+			float xs = obj.getSpriteXS();
+			float ys = obj.getSpriteYS();
+			sprite.setPos(-(xs - DungeonTilemap.SIZE) / 2, -(ys-DungeonTilemap.SIZE) / 2);
+			sprite.setScale(DungeonTilemap.SIZE/xs,DungeonTilemap.SIZE/ys);
 			add(sprite);
 
 			desc.append(newLine);
