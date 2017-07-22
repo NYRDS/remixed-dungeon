@@ -291,6 +291,9 @@ public class InterlevelScene extends PixelScene {
 		Dungeon.depth = DungeonGenerator.getLevelDepth(returnTo.levelId);
 		
 		Level level = Dungeon.loadLevel(returnTo);
+
+		returnTo.computeCell(level);
+
 		Dungeon.switchLevel(level, returnTo.cellId, returnTo.levelId);
 	}
 

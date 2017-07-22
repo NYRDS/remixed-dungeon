@@ -14,7 +14,7 @@
    "exit":[5,4],
    "objects" : [
     {"kind":"PortalGateSender","x":3,"y":1, "uses":1,
-      "position":
+      "target":
       {
         "levelId":"portal_shrine",
         "x":17,

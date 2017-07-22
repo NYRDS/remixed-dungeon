@@ -1,8 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -11,13 +9,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class PortalGate extends LevelObject {
-
-	protected Position returnTo;
 
 	protected boolean activated = false;
 	protected boolean animationRunning = false;
@@ -44,26 +39,6 @@ public class PortalGate extends LevelObject {
 		} else {
 			infiniteUses = true;
 		}
-
-		if(obj.has("position")){
-			JSONObject portalDesc = obj.getJSONObject("position");
-			String levelId = portalDesc.optString("levelId" ,"1");
-
-
-			//JSONArray levelSize = levelDesc.getJSONArray("size");
-			//xs = levelSize.optInt(0, 32);
-			//ys = levelSize.optInt(1, 32);
-
-			JSONArray levelSize = DungeonGenerator.getLevelProperty(levelId,"size");
-			int levelWidth = 32;
-			if (levelSize != null){
-				levelWidth = levelSize.optInt(0, 32);
-			}
-
-
-			int cell = portalDesc.optInt("x" ,1) + portalDesc.optInt("y" ,1) * levelWidth ;
-			returnTo = new Position(levelId, cell);
-		}
 	}
 
 	@Override
@@ -83,6 +58,7 @@ public class PortalGate extends LevelObject {
 
 	private static final String USED = "used";
 	private static final String INFINITE_USES = "infiniteUses";
+
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);

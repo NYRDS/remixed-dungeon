@@ -23,6 +23,8 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.Library;
+import com.nyrds.pixeldungeon.levels.IceCavesLevel;
+import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -154,7 +156,6 @@ public class Dungeon {
 
 		heroClass.initHero(hero);
 
-		hero.levelKind = DungeonGenerator.getEntryLevelKind();
 		hero.levelId = DungeonGenerator.getEntryLevel();
 
 		SaveUtils.deleteLevels(heroClass);
@@ -218,7 +219,7 @@ public class Dungeon {
 	}
 
 	public static boolean shopOnLevel() {
-		if (hero.levelKind.equals("NecroLevel") || hero.levelKind.equals("IceCavesLevel")) {
+		if (Dungeon.level instanceof NecroLevel || Dungeon.level instanceof IceCavesLevel) {
 			return false;
 		} else {
 			return depth == 6 || depth == 11 || depth == 16 || depth == 27;
@@ -243,7 +244,6 @@ public class Dungeon {
 		}
 
 		hero.setPos(pos);
-		hero.levelKind = level.levelKind();
 		hero.levelId = levelId;
 
 		if (!level.cellValid(hero.getPos())) {

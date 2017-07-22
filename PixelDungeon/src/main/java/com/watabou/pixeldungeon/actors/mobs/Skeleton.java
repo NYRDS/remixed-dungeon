@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.levels.NecroBossLevel;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
@@ -46,7 +47,7 @@ public class Skeleton extends UndeadMob {
 		exp = 5;
 		maxLvl = 10;
 
-		if (!Dungeon.hero.levelKind.equals("NecroBossLevel")) {
+		if (!(Dungeon.level instanceof NecroBossLevel)) {
 			if (Random.Int(5) == 0) {
 
 				Item loot = Generator.random(Generator.Category.WEAPON);
