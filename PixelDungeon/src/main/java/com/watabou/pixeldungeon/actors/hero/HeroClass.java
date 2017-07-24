@@ -22,6 +22,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.artifacts.BraceletOfDevour;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -64,6 +65,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
+import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -146,7 +148,6 @@ public enum HeroClass {
 		for (int i = 0; i < 100; i++) {
 			hero.collect(new ScrollOfMagicMapping().identify());
 			hero.collect(new PotionOfFrost().identify());
-			hero.collect(new BlankScroll().identify());
 			hero.collect(new ScrollOfUpgrade().identify());
 			hero.collect(new MysteryMeat());
 		}
@@ -154,7 +155,8 @@ public enum HeroClass {
 		Item ring = new WandOfShadowbolt().identify();
 		ring.cursed = true;
 		hero.collect(ring);
-		hero.collect(new RingOfFrost().identify());
+		hero.collect(new BraceletOfDevour());
+		hero.collect(new RingOfStoneWalking().identify());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
 

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.items.artifacts.BraceletOfDevour;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -100,7 +101,13 @@ public class Hunger extends Buff implements Hero.Doom {
 				}
 				
 				float delta = STEP - bonus;
-				
+
+				//TODO: I wonder if I want it anymore
+				//Buff devourBuff = hero.buff( BraceletOfDevour.BraceletOfDevourBuff.class );
+				//if (devourBuff != null) {
+				//	BraceletOfDevour.Devour(hero);
+				//}
+
 				if(PixelDungeon.realtime()) {
 					delta *= 0.3;
 				}
