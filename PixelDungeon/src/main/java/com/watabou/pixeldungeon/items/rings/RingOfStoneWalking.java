@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -24,6 +25,15 @@ public class RingOfStoneWalking extends Artifact{
 	}
 	
 	public class StoneWalking extends ArtifactBuff implements Hero.Doom{
+		@Override
+		public int icon() {
+			return BuffIndicator.STONEBLOOD;
+		}
+
+		@Override
+		public String toString() {
+			return Game.getVar(R.string.StoneBlood_Buff);
+		}
 
 		@Override
 		public void onDeath() {

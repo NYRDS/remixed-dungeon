@@ -15,4 +15,11 @@
 
     <string name="PortalGate_Activated">The ancient portal has awaken!</string>
     <string name="PortalGate_Used">You touched the portal and... nothing happened.</string>
+
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Devour</string>
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Stone blood</string>
 </resources>
