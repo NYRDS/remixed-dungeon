@@ -253,6 +253,7 @@ public class Hero extends Char {
 	private static final String DIFFICULTY = "difficulty";
 	private static final String PETS       = "pets";
 	private static final String SP         = "sp";
+	private static final String PORTAL_LEVEL_POS         = "portalLevelPos";
 
 	private void refreshPets() {
 		ArrayList<Mob> alivePets = new ArrayList<>();
@@ -296,6 +297,8 @@ public class Hero extends Char {
 		bundle.put(SP, getSoulPoints());
 
 		belongings.storeInBundle(bundle);
+		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
+
 	}
 
 	@Override
@@ -327,6 +330,8 @@ public class Hero extends Char {
 		belongings.restoreFromBundle(bundle);
 
 		gender = heroClass.getGender();
+
+		portalLevelPos = (Position) bundle.get(PORTAL_LEVEL_POS);
 	}
 
 	public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -523,6 +528,8 @@ public class Hero extends Char {
 	public boolean act() {
 
 		super.act();
+
+
 
 		if (paralysed) {
 
