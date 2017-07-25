@@ -2,36 +2,36 @@
 <resources>
     <!-- Items -->
     <!-- STRINGS OF BroadSword CLASS -->
-    <string name="Claymore_Name">kılıç </string>
-    <string name="Claymore_Info">bu iri kılıç herhangi birşeyi doğrayabilir</string>
+    <string name="Claymore_Name">Kılıç</string>
+    <string name="Claymore_Info">Bu devasa kılıç herşeyi kesebilecek gibi duruyor.</string>
     <string name="Claymore_Gender">kadınsı</string>
 
     <!-- STRINGS OF Halberd CLASS -->
     <string name="Halberd_Name">Teber</string>
-    <string name="Halberd_Info">Ucunda balta olan uzun bir sopa.</string>
+    <string name="Halberd_Info">Uzun bir sopa ve ucunda keskin bir balta olan bir silah.</string>
     <string name="Halberd_Gender">kadınsı</string>
 
     <!-- STRINGS OF WoodenCrossbow CLASS -->
-    <string name="WoodenCrossbow_Name">tahta yaylıtüfek</string>
-    <string name="WoodenCrossbow_Info">basit tahtadan yapılmış yaylıtüfek. görünüşe göre ok ateşlemek için dizayn edilmiş</string>
+    <string name="WoodenCrossbow_Name">Tahta arbalet</string>
+    <string name="WoodenCrossbow_Info">Tahtadan yapılma bir arbalet, görünüşe göre ok fırlatmak için yapılmış.</string>
     <string name="WoodenCrossbow_Gender">erkeksi</string>
 
     <!-- STRINGS OF CompositeCrossbow CLASS -->
-    <string name="CompositeCrossbow_Name">Bileşik yay</string>
-    <string name="CompositeCrossbow_Info">Bu yeniden yapılanmış yay ahşap yaya göre daha etkili bir silah</string>
+    <string name="CompositeCrossbow_Name">Bileşik arbalet</string>
+    <string name="CompositeCrossbow_Info">Bu güçlendirilmiş arbalet, tahtadan yapılmış olana göre daha etkili bir alet gibi gözüküyor.</string>
     <string name="CompositeCrossbow_Gender">erkeksi</string>
 
     <!-- STRINGS OF RubyCrossbow CLASS -->
-    <string name="RubyCrossbow_Name">yakut  yaylıtüfek</string>
-    <string name="RubyCrossbow_Info">Bu ölümcül silah cüce silah sanatının bir şaheseri.</string>
+    <string name="RubyCrossbow_Name">Yakut arbalet</string>
+    <string name="RubyCrossbow_Info">Bu ölümcül silah cüce mühendislerin bir şaheseri.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
 
     <!-- STRINGS OF GothicArmor CLASS -->
-    <string name="GothicArmor_Name">Gotik Zırh</string>
+    <string name="GothicArmor_Name">Gotik zırh</string>
     <string name="GothicArmor_Info">Bir gotik zırh , zırh sanatının doruk noktası.</string>
 
     <!-- STRINGS OF ChaosArmor CLASS -->
-    <string name="ChaosArmor_Name">Kaos Zırhı</string>
+    <string name="ChaosArmor_Name">Kaos zırhı</string>
     <string name="ChaosArmor_Info">Kan kırmızı metal parçalar , kırmızı zincirler ile birlikte dikilmiş. Dokunman ile birlikte kaotik bir enerji yayıyor</string>
 
     <!-- STRINGS OF ChaosCrystal CLASS -->

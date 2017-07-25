@@ -1,3 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPlayGames_Title">Google Play Oyunlar</string>
+    <string name="WndPlayGames_Use">Google Play Oyunlar\'ı kullan</string>
+    <string name="WndPlayGames_Connecting">Google Play Oyunlar\'a bağlanılıyor, lütfen biraz bekleyin</string>
+    <string name="WndPlayGames_Show_Badges">Rozetleri göster</string>
+    <string name="WndPlayGames_Show_Leaderboards">Yüksek skorları göster</string>
+
+    <string name="WndPlayGames_Show_Ok">Başarılı!</string>
+    <string name="WndPlayGames_Show_Error">Birşeyler ters gitti. İşlem başarısız...</string>
+
+</resources>

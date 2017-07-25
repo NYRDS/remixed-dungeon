@@ -5,8 +5,8 @@
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">senden önce  çok fazla kahraman zindana daldı. bazıları hazine ve sihirli ganimetlerle daha önce hiç duymadıkları ziynetlerle döndüler ama hiçbirisi yendor un kolyesini getiremedi . zindanın en derinlerinde \n\n bu karşılaşmaya kendini hazır hissediyorsun. en önemlisi kaderinin sana gülümsediğini hissediyorsun. kendi maceranı başlatmanın tam zamanı !</string>
   <!--STRINGS OF AmuletScene CLASS-->
-  <string name="AmuletScene_Exit">Buna bir gün diyelim</string>
-  <string name="AmuletScene_Stay">Henüz Bitirmedim </string>
+  <string name="AmuletScene_Exit">Bugünlük bu kadar yeter</string>
+  <string name="AmuletScene_Stay">Daha işim bitmedi</string>
   <string name="AmuletScene_Txt">Sonunda ellerinin arasında Yendor\'un Tılsımı. Gücünü kullanarak dünyayı ele geçirebilir ya da insanlara barış ve refahı yaşayabilirsin ya da her neyse. Sonuç olarak hayatın sonsuza dek değişecek ve bu oyun burada bitecek. Veya burada yalnız bir ölümlü olarak biraz daha kalabilirsin. </string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">pixel dungeonda %d seviyesine hoşgeldiniz !</string>
@@ -180,11 +180,11 @@
   <string name="WndResurrect_Yes">Evet, dövüşeceğim!</string>
   <string name="WndResurrect_No">Hayır, pes ediyorum</string>
   <!--STRINGS OF WndSadGhost CLASS-->
-  <string name="WndSadGhost_Rose">Evet! Evet!!! İşte bu! Lütfen hemen ver onu ! bu nesnelerden istediğin birini alabilirsin..</string>
+  <string name="WndSadGhost_Rose">Evet! Evet!!! İşte bu! Lütfen bana ver onu! Ayrıca bu nesnelerden istediğin birini alabilirsin, belki maceranda bir yardımı dokunur..</string>
   <string name="WndSadGhost_Rat">Evet ! O çirkin yaratık öldü artık dinlenebilirim... Maceranda yardımcı olacak bu nesnelerden birini seçebilirsin...</string>
   <string name="WndSadGhost_Wepon">Hayaletin silahı</string>
   <string name="WndSadGhost_Armor">Hayaletin zırhı</string>
-  <string name="WndSadGhost_Farewell">İyi yolculuklar!</string>
+  <string name="WndSadGhost_Farewell">Hoşçakal, maceracı!</string>
   <!--STRINGS OF WndStory CLASS-->
   <string name="WndStory_Sewers">Zindan burada şehrin altı boyunca uzanıyor. Üst seviyeler şehrin kanalizasyon sisteminin bir parçası. Şehrin bir parçası olarak bu seviyeler çok da tehlikeli değil. Kimse güvenli bir yer demiyor ancak burada şeytani güçlerle uğraşmak zorunda değilsin.</string>
   <string name="WndStory_Prision">Yıllar önce en tehlikeli suçlular için burada bir hapishane inşa edildir. Zamanında çok kaçması çok zor olduğu için akıllıca bir fikirdi. Ama sonra aşağılardan gelen kötücül bir hava sızıntısı mahkum ve gardiyanları çılgına çevirdi. Sonunda hapishane terkedildi, ama buralarda hala birkaç hükümlü kalmış olabilir</string>
@@ -198,13 +198,13 @@
   <string name="WndTradeItem_Sell">%dg altına sat</string>
   <string name="WndTradeItem_Sell1">Tekini %dg altına sat</string>
   <string name="WndTradeItem_SellAll">Tümünü %dg altına sat</string>
-  <string name="WndTradeItem_Cancel">Boş ver</string>
+  <string name="WndTradeItem_Cancel">Boşver</string>
   <string name="WndTradeItem_Sold">%2$dg altına %1$s sattın </string>
   <string name="WndTradeItem_Bought">%2$dg altına %1$s aldın</string>
   <!--STRINGS OF WndWandmaker CLASS-->
-  <string name="WndWandmaker_Message">oo, görüyorumki başarılı olmuşsun. Umarım çok fazla sorunla karşılaşmadın. Söz verdiğim gibi asalarımdan birini seçebilirsin.</string>
-  <string name="WndWandmaker_Battle">Savaş Asası</string>
-  <string name="WndWandmaker_NonBattle">Yararlı Asa</string>
+  <string name="WndWandmaker_Message">Oo, görüyorum ki başarılı olmuşsun! Umarım çok sıkıntılı geçmemiştir. Söz verdiğim gibi, yüksek kaliteli asalarımdan birini seçebilirsin.</string>
+  <string name="WndWandmaker_Battle">Savaş asası</string>
+  <string name="WndWandmaker_NonBattle">Yararlı asa</string>
   <string name="WndWandmaker_Farawell">Maceranda başarılar, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">Hızlı kullanım için bir nesne seçin</string>

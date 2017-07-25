@@ -4,9 +4,7 @@
   <string name="ShadowLord_Name">gölge tanrısı</string>
   <string name="ShadowLord_Gender">erkeksi</string>
   <string name="ShadowLord_Name_Objective">Gölge Tanrısı</string>
-  <string name="ShadowLord_Desc">Saf kötülük ve karanlıktan yapılmış olan yaratık... Ne kadar güçlü olduğu düşünüldüğünde, birçoğu onun Kadim Tanrı\' nın kendisi olduğuna inanır. Diğerleriyse onun, Kadim Tanrı\' nın odasının muhafızı olduğunu farz eder.
-
-saf kötülük ve karanlıktan yapılmış bir yaratık.inanışa göre tanrı ne kadar güçlü olduğunu göstermek için yaratmıştır.diğerleri bilmese de eski tanrı nın koruyucusudur</string>
+  <string name="ShadowLord_Desc">Saf kötülük ve karanlıktan yapılmış olan yaratık... Ne kadar güçlü olduğu düşünüldüğünde, birçoğu onun Kadim Tanrı\' nın kendisi olduğuna inanır. Diğerleriyse onun, Kadim Tanrı\' nın odasının muhafızı olduğunu farz eder.</string>
   <string name="ShadowLord_Intro">Kendini hazırla!</string>
   <string name="ShadowLord_Death">Hayıııır...</string>
   <string name="AllowStatisticsCollectionScene_Title">Kullanım istatistiği toplanması </string>
@@ -15,7 +13,7 @@ saf kötülük ve karanlıktan yapılmış bir yaratık.inanışa göre tanrı n
     - oyun dengesi iyileştirmelerinde,\n
     - cihaza özgü performans sorunlarının onarılmasında,\n
     - ara sıra eğlenceli istatistik gerçeklerin yayınlanmasında kullanılacaktır.\n
-Kararınızı herhangi bir zaman değiştirebilirsiniz ( başlık ekranındaki ayarlar ikonunu tıklayın ).</string>
+Kararınızı her zaman değiştirebilirsiniz (ana ekrandaki grafik ikonuna tıklayın).</string>
   <string name="AllowStatisticsCollectionScene_Allow">İzin ver</string>
   <string name="AllowStatisticsCollectionScene_Deny">Reddet</string>
   <string name="Darkness_Info">Görünüşe göre havada ebedi karanlık parçacıkları uçuşuyor</string>
