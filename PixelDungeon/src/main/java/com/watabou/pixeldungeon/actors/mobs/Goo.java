@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -49,8 +50,19 @@ public class Goo extends Boss {
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
 
-		loot = new RingOfStoneWalking();
-		
+
+		if (ModdingMode.inMod()){
+			float dice = Random.Float();
+			if( dice < 0.5 ) {
+				loot = new LloydsBeacon();
+			} else {
+				loot = new RingOfStoneWalking();
+			}
+		} else{
+			loot = new RingOfStoneWalking();
+		}
+
+
 		lootChance = 0.8f;
 		
 		RESISTANCES.add( ToxicGas.class );
