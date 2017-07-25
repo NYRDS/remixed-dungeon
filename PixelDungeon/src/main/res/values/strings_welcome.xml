@@ -327,4 +327,14 @@
         - Increased maxLevel attribute for Fetid Rat and various bosses (So that unusually high level characters would still get loot from those characters)\n
         - New attribute for levels and mobs in player-created mods: "viewDistance" (Sets view distance in range of 1-8)\n
     </string>
+    <string name="Welcome_Text_27_1">
+        remix.27.1\n
+        - Introducing Portal system\n
+        - After defeating one of main bosses you will encounter portal room. Portal will take you back to town. Those gates can only be used once\n
+        - Portal gate that\'s located in Town itself will always take you back to last used portal, if you did used it\n
+        - After defeating a boss of the secondary dungeon you can use skeleton key to open exit that leads to the first level of said dungeon\n
+        - Goo can no longer drop Lloyd\'s Beacon. This item is only available through mods\n
+        - Fixed summoning trap bug, that was causing Shades to be spawned on floor tiles\n
+        - Fixed \"pet\" statue bug, that flooded game log with unnecessary information\n
+    </string>
 </resources>
