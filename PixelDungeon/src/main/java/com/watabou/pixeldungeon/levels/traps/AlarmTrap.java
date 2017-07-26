@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.traps;
 
 import android.support.annotation.Nullable;
 
+import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -30,7 +31,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class AlarmTrap {
+public class AlarmTrap implements ITrigger {
 
 	// 0xDD3333
 	
@@ -48,5 +49,10 @@ public class AlarmTrap {
 		}
 		
 		Sample.INSTANCE.play( Assets.SND_ALERT );
+	}
+
+	@Override
+	public void doTrigger(int cell, Char ch) {
+		trigger(cell,ch);
 	}
 }

@@ -1642,33 +1642,35 @@ public class Hero extends Char {
 		}
 		int distance = 1 + positive + negative;
 
-		float level = intentional ? (2 * awareness - awareness * awareness) : awareness;
+		float searchLevel = intentional ? (2 * awareness - awareness * awareness) : awareness;
 		if (distance <= 0) {
-			level /= 2 - distance;
+			searchLevel /= 2 - distance;
 			distance = 1;
 		}
 
-		int cx = getPos() % Dungeon.level.getWidth();
-		int cy = getPos() / Dungeon.level.getWidth();
+		Level level = Dungeon.level;
+
+		int cx = getPos() % level.getWidth();
+		int cy = getPos() / level.getWidth();
 		int ax = cx - distance;
 		if (ax < 0) {
 			ax = 0;
 		}
 		int bx = cx + distance;
-		if (bx >= Dungeon.level.getWidth()) {
-			bx = Dungeon.level.getWidth() - 1;
+		if (bx >= level.getWidth()) {
+			bx = level.getWidth() - 1;
 		}
 		int ay = cy - distance;
 		if (ay < 0) {
 			ay = 0;
 		}
 		int by = cy + distance;
-		if (by >= Dungeon.level.getHeight()) {
-			by = Dungeon.level.getHeight() - 1;
+		if (by >= level.getHeight()) {
+			by = level.getHeight() - 1;
 		}
 
 		for (int y = ay; y <= by; y++) {
-			for (int x = ax, p = ax + y * Dungeon.level.getWidth(); x <= bx; x++, p++) {
+			for (int x = ax, p = ax + y * level.getWidth(); x <= bx; x++, p++) {
 
 				if (Dungeon.visible[p]) {
 
@@ -1676,14 +1678,24 @@ public class Hero extends Char {
 						getSprite().getParent().addToBack(new CheckedCell(p));
 					}
 
-					if (Dungeon.level.secret[p] && (intentional || Random.Float() < level)) {
 
-						int oldValue = Dungeon.level.map[p];
-						GameScene.discoverTile(p, oldValue);
-						Dungeon.level.set(p, Terrain.discover(oldValue));
-						GameScene.updateMap(p);
-						ScrollOfMagicMapping.discover(p);
-						smthFound = true;
+
+					if (intentional || Random.Float() < searchLevel) {
+
+						if(level.secret[p]) {
+							int oldValue = level.map[p];
+							GameScene.discoverTile(p, oldValue);
+							level.set(p, Terrain.discover(oldValue));
+							GameScene.updateMap(p);
+							ScrollOfMagicMapping.discover(p);
+							smthFound = true;
+						}
+
+						LevelObject obj = level.getLevelObject(p);
+						if(obj!=null && obj.secret()) {
+							obj.discover();
+							smthFound = true;
+						}
 					}
 				}
 			}
@@ -1693,7 +1705,7 @@ public class Hero extends Char {
 			getSprite().showStatus(CharSprite.DEFAULT, TXT_SEARCH);
 			getSprite().operate(getPos());
 			if (smthFound) {
-				spendAndNext(Random.Float() < level ? TIME_TO_SEARCH : TIME_TO_SEARCH * 2);
+				spendAndNext(Random.Float() < searchLevel ? TIME_TO_SEARCH : TIME_TO_SEARCH * 2);
 			} else {
 				spendAndNext(TIME_TO_SEARCH);
 			}

@@ -40,6 +40,12 @@ public abstract class LevelObject implements Bundlable, Presser {
 	public void poison(){}
 	public void bump() {}
 
+	public void discover() {}
+
+	public boolean secret() {
+		return false;
+	}
+
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		setPos(bundle.getInt( POS ));

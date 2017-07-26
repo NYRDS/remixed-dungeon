@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.traps;
 
 import android.support.annotation.Nullable;
 
+import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -27,7 +28,7 @@ import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.utils.Random;
 
-public class GrippingTrap {
+public class GrippingTrap implements ITrigger {
 	
 	public static void trigger( int pos, @Nullable Char c ) {
 		
@@ -39,6 +40,10 @@ public class GrippingTrap {
 		} else {
 			Wound.hit( pos );
 		}
-		
+	}
+
+	@Override
+	public void doTrigger(int cell, Char ch) {
+		trigger(cell,ch);
 	}
 }

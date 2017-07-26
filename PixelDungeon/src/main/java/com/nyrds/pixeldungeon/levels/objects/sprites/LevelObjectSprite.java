@@ -75,6 +75,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		alpha(1f);
 
 		setLevelPos(object.getPos());
+		setVisible(!object.secret());
 	}
 
 	public void reset(int image) {
@@ -84,7 +85,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	@Override
 	public void update() {
 		super.update();
-		setVisible(true);
+		//setVisible(true);
 		//setVisible(pos == -1 || Dungeon.visible[pos]);
 	}
 
