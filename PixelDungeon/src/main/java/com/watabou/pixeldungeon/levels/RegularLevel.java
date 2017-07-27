@@ -125,7 +125,7 @@ public abstract class RegularLevel extends CustomLevel {
 			}
 		}
 
-		if (Dungeon.shopOnLevel()) {
+		if (Dungeon.shopOnLevel(this)) {
 			Room shop = null;
 			for (Room r : roomEntrance.connected.keySet()) {
 				if (r.width() >= 5 && r.height() >= 5) {

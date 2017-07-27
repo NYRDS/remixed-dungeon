@@ -218,8 +218,8 @@ public class Dungeon {
 		}
 	}
 
-	public static boolean shopOnLevel() {
-		if (Dungeon.level instanceof NecroLevel || Dungeon.level instanceof IceCavesLevel) {
+	public static boolean shopOnLevel(Level level) {
+		if (level instanceof NecroLevel || level instanceof IceCavesLevel) {
 			return false;
 		} else {
 			return depth == 6 || depth == 11 || depth == 16 || depth == 27;
