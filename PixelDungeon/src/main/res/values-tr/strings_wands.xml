@@ -4,12 +4,12 @@
   <!--STRINGS OF Wand CLASS-->
   <string name="Wand_Name">%s  asa </string>
   <string name="Wand_ACZap">BUM</string>
-  <string name="Wand_Wood">Bu ince %s asası dokunduğunda sıcak.Kullandığında ne gibi bir etkisi olacağını kim bilebilir?</string>
-  <string name="Wand_Damage">bu asayı yakın mesafe silahı olarak kullandığın zaman her vuruşta %d hasar verir</string>
-  <string name="Wand_Weapon">bu asayı yakın mesafe silahı olarakta kullanabilirsin</string>
+  <string name="Wand_Wood">Bu ince %s asası eline sıcak bir his veriyor. Kullanıldığında ne etkisi olabileciğini kim bilebilir?</string>
+  <string name="Wand_Damage">Bu asa yakın mesafede kullanıldığında, ortalama hasarı vuruş başı %d puandır.</string>
+  <string name="Wand_Weapon">Bu asayı yakın mesafede de kullanabilirsin.</string>
   <string name="Wand_Fizzles">asanın şarjı bitti;</string>
-  <string name="Wand_SelfTarget">kendini hedef alamazsın.</string>
-  <string name="Wand_Prompt">asayı kullanmak için yer seç</string>
+  <string name="Wand_SelfTarget">Kendini hedef alamazsın.</string>
+  <string name="Wand_Prompt">Kullanılacak yönü seç</string>
   <string-array name="Wand_Wood_Types">
     <item>çobanpüsküllü</item>
     <item>porsukağacı</item>
@@ -30,8 +30,8 @@
   <string name="WandOfAmok_Info1">hiçbişi olmadı</string>
   <!--STRINGS OF WandOfAvalanche CLASS-->
   <string name="WandOfAvalanche_Name">Çığ Asası</string>
-  <string name="WandOfAvalanche_Info">Bu asanın gücün bir duvara yönelttiğinde taşlardan bir çığ oluşturur ve etrafdaki yaratıkları şaşırtır cve hasar verir.</string>
-  <string name="WandOfAvalanche_Info1">Çığ asası ile kendini öldürdün...</string>
+  <string name="WandOfAvalanche_Info">Bu asanın gücü bir duvara (veya herhangi bir katı engel) çarptığında taşlardan bir çığ oluşturur ve etraftaki yaratıklara çarparak hasar verir.</string>
+  <string name="WandOfAvalanche_Info1">Çığ asası ile kendi kendini öldürdün...</string>
   <!--STRINGS OF WandOfBlink CLASS-->
   <string name="WandOfBlink_Name">Gözkırpma Asası</string>
   <string name="WandOfBlink_Info">Bu asa seçtiği yöne ışınlanmanı sağlar. Yolundaki yaratık ve cansız nesneler ışınlanmanı engeller.</string>
@@ -39,7 +39,7 @@
   <string name="WandOfDisintegration_Name">Dağılma Asası</string>
   <string name="WandOfDisintegration_Info">Bu asa yokedici bir enerji ışını yayar. Bu enerji yolu üzerindeki tüm yaratıklara işler, ne kadar çok yaratık varsa verdiği hasar da o kadar artar.</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
-  <string name="WandOfFirebolt_Name">ateşoku asası </string>
+  <string name="WandOfFirebolt_Name">Ateştopu Asası</string>
   <string name="WandOfFirebolt_Info">Bu asa yakıcı sihirli bir ateş patlatır. Yanabilir arazide  yangın çıkartır ve dokunduğu yaratığı yakar ve hasar verir.</string>
   <string name="WandOfFirebolt_Info1">Ateş asası ile kendini öldürdün...</string>
   <!--STRINGS OF WandOfFlock CLASS-->
@@ -64,10 +64,10 @@
   <!--STRINGS OF WandOfMagicMissile CLASS-->
   <string name="WandOfMagicMissile_Name">Sihirli Ok Asası</string>
   <string name="WandOfMagicMissile_Info">Bu asa saf büyü enerjisinden oklar fırlatır. Bu oklar orta seviye hasar verir.</string>
-  <string name="WandOfMagicMissile_ACDisenchant">BÜYÜYÜBOZ</string>
+  <string name="WandOfMagicMissile_ACDisenchant">BÜYÜYÜ BOZ</string>
   <string name="WandOfMagicMissile_Info1">Kendi kendini Büyülü Füze Âsân ile öldürdün...</string>
   <string name="WandOfMagicMissile_SelectWand">Yükseltmek istediğin bir asa seç</string>
-  <string name="WandOfMagicMissile_Desinchanted">Büyülü Füze asasının büyüsünü bozdun ve özünü kendi %s yükseltmek için kullandın</string>
+  <string name="WandOfMagicMissile_Desinchanted">Büyülü Füze Asasının büyüsünü bozdun ve özünü kendi %s eşyanı yükseltmek için kullandın</string>
   <!--STRINGS OF WandOfPoison CLASS-->
   <string name="WandOfPoison_Name">Zehir Asası</string>
   <string name="WandOfPoison_Info">Bu asadan çıkan iğrenç zehirli uçlar hedefini ölümcül bir zehirle etkiler.Zehirlenen yaratık zehhrin etkisi boyunca acı çekerek zarar görür.Bu asanın seviyesinin arttırılması zehrin etki süresini uzatır.</string>
@@ -88,6 +88,6 @@
   <!--STRINGS OF WandOfTeleportation CLASS-->
   <string name="WandOfTeleportation_Name">Işınlanma Asası</string>
   <string name="WandOfTeleportation_Info">Bu asadan çıkan ışın hedefini rastgele bir yere ışınlar.</string>
-  <string name="WandOfTeleportation_Info1">%2$s rastgele bir yere ışınlandı</string>
+  <string name="WandOfTeleportation_Info1">%2$s, %1$s tarafından bir yere ışınlandı</string>
   <string name="WandOfTeleportation_Info2">hiç birşey olmadı</string>
 </resources>
