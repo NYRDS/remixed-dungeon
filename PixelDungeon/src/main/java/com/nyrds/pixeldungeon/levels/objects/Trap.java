@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -21,12 +22,17 @@ import org.json.JSONObject;
 /**
  * Created by mike on 01.07.2016.
  */
+
 public class Trap extends LevelObject {
 
 	private static final Class<? >[] traps = new Class<?>[]{ToxicTrap.class,FireTrap.class,ParalyticTrap.class,PoisonTrap.class,AlarmTrap.class,LightningTrap.class,GrippingTrap.class,SummoningTrap.class};
 
-	private String kind = "SummoningTrap";
+	@Packable
+	private String kind;
+	@Packable
 	private int targetCell;
+	@Packable
+	private int uses;
 
 
 	private boolean secret = true;
@@ -48,8 +54,11 @@ public class Trap extends LevelObject {
 	public boolean interact(Hero hero) {
 		discover();
 
-		if (((ITrigger)Util.byNameFromList(traps, kind)) != null) {
-			((ITrigger)Util.byNameFromList(traps, kind)).doTrigger(getPos(),hero);
+		if(uses != 0) {
+			uses--;
+			if (((ITrigger) Util.byNameFromList(traps, kind)) != null) {
+				((ITrigger) Util.byNameFromList(traps, kind)).doTrigger(getPos(), hero);
+			}
 		}
 
 		GLog.w("Aha!");
@@ -58,7 +67,17 @@ public class Trap extends LevelObject {
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
-		targetCell = getPos();
+
+		if(obj.has("target")) {
+			int x = obj.getInt("x");
+			int y = obj.getInt("y");
+			targetCell = level.cell(x, y);
+		} else {
+			targetCell = getPos();
+		}
+
+		kind = obj.optString("kind","none");
+		uses = obj.optInt("uses",1);
 	}
 
 	@Override

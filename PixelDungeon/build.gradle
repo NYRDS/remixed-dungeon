@@ -62,10 +62,9 @@ android {
 
 dependencies {
     compile 'ch.acra:acra:4.8.1@aar'
-    compile 'com.android.support:support-v4'
-    compile group: 'com.google.guava', name: 'guava', version: '20.0'
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
-
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.google.guava:guava:20.0'
+    compile 'com.google.code.gson:gson:2.7'
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
     //noinspection GradleDependency
@@ -74,16 +73,16 @@ dependencies {
     googlePlayRetroCompile 'com.google.android.gms:play-services-analytics:9.0.2'
     //noinspection GradleDependency
     googlePlayRetroCompile "com.google.android.gms:play-services-games:9.0.2"
-
     googlePlayCompile 'com.google.android.gms:play-services-ads:9.8.0'
     googlePlayCompile 'com.google.android.gms:play-services-base:9.8.0'
     googlePlayCompile 'com.google.android.gms:play-services-analytics:9.8.0'
     googlePlayCompile "com.google.android.gms:play-services-games:9.8.0"
-
-
     googlePlayCompile project(':cheetah-mobile-3.4.7')
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.1'
+
+    compile project(':annotation')
+    annotationProcessor project(':processor')
 }
 
 

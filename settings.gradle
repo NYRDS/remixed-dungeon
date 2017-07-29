@@ -1,1 +1,1 @@
-include ':PixelDungeon', ':cheetah-mobile-3.4.7', ':appodeal-1.15.8'
+include ':PixelDungeon', ':cheetah-mobile-3.4.7', ':appodeal-1.15.8', ':processor', ':annotation'
