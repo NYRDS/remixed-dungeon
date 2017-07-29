@@ -5,6 +5,8 @@ dependencies {
     compile project(path: ':annotation')
     compile 'com.google.auto.service:auto-service:1.0-rc2'
     compile 'com.google.guava:guava:20.0'
+    compile 'com.squareup:javapoet:1.9.0'
+    
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_7
