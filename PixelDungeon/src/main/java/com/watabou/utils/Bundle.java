@@ -119,6 +119,7 @@ public class Bundle {
 			if (cl != null) {
 				Bundlable object = (Bundlable)cl.newInstance();
 				object.restoreFromBundle( this );
+				BundleHelper.UnPack(object, this);
 				return object;
 			} else {
 				EventCollector.logEvent("Bundable.get unknown class ",clName);
