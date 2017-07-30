@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.watabou.pixeldungeon.Dungeon;
@@ -14,7 +15,7 @@ import org.json.JSONObject;
 
 public abstract class LevelObject implements Bundlable, Presser {
 
-	private static final String POS = "pos";
+	@Packable
 	private              int    pos = -1;
 	
 	public LevelObjectSprite sprite;
@@ -48,14 +49,12 @@ public abstract class LevelObject implements Bundlable, Presser {
 
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		setPos(bundle.getInt( POS ));
 	}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( POS, getPos());
 	}
-	
+
 	public boolean dontPack() {
 		return false;
 	}

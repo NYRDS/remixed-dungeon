@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
 import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
 import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -91,15 +90,6 @@ public class Trap extends LevelObject {
 		return secret;
 	}
 
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-	}
-
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
-	}
 
 	@Override
 	public String desc() {

@@ -20,6 +20,7 @@ package com.watabou.utils;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.json.JSONArray;
@@ -264,6 +265,7 @@ public class Bundle {
 				Bundle bundle = new Bundle();
 				bundle.put( CLASS_NAME, object.getClass().getName() );
 				object.storeInBundle( bundle );
+				BundleHelper.Pack(object, bundle);
 				data.put( key, bundle.data );
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException("key:"+key,e);
@@ -324,6 +326,7 @@ public class Bundle {
 				Bundle bundle = new Bundle();
 				bundle.put( CLASS_NAME, object.getClass().getName() );
 				object.storeInBundle( bundle );
+				BundleHelper.Pack(object, bundle);
 				array.put( bundle.data );
 			}
 		}
