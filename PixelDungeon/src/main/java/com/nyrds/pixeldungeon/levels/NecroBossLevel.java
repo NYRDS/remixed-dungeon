@@ -17,6 +17,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -180,6 +181,9 @@ public class NecroBossLevel extends Level {
 			return Game.getVar(R.string.Prison_TileWater);
 		case Terrain.HIGH_GRASS:
 			return Game.getVar(R.string.City_TileHighGrass);
+		case Terrain.UNLOCKED_EXIT:
+		case Terrain.LOCKED_EXIT:
+			return Game.getVar(R.string.PortalGate_Name);
 		default:
 			return super.tileName( tile );
 		}
@@ -190,6 +194,8 @@ public class NecroBossLevel extends Level {
 		switch (tile) {
 		case Terrain.BOOKSHELF:
 			return Game.getVar(R.string.Halls_TileDescBookshelf);
+		case Terrain.UNLOCKED_EXIT:
+			return Utils.format(Game.getVar(R.string.PortalExit_Desc), Game.getVar(R.string.PortalExit_Desc_Necropolis));
 		default:
 			return super.tileDesc( tile );
 		}

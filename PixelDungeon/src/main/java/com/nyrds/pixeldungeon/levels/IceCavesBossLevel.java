@@ -17,6 +17,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -201,6 +202,9 @@ public class IceCavesBossLevel extends Level {
 			case Terrain.STATUE:
 			case Terrain.STATUE_SP:
 				return Game.getVar(R.string.IceCaves_TileStatue);
+			case Terrain.UNLOCKED_EXIT:
+			case Terrain.LOCKED_EXIT:
+				return Game.getVar(R.string.PortalGate_Name);
 			default:
 				return super.tileName( tile );
 		}
@@ -222,11 +226,13 @@ public class IceCavesBossLevel extends Level {
 			case Terrain.STATUE:
 			case Terrain.STATUE_SP:
 				return Game.getVar(R.string.IceCaves_TileDescStatue);
+			case Terrain.UNLOCKED_EXIT:
+				return Utils.format(Game.getVar(R.string.PortalExit_Desc), Game.getVar(R.string.PortalExit_Desc_IceCaves));
 			default:
 				return super.tileDesc( tile );
 		}
 	}
-	
+
 	@Override
 	public void addVisuals( Scene scene ) {
 		IceCavesLevel.addVisuals( this, scene );
