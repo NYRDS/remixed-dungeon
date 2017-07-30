@@ -16,7 +16,7 @@ import org.json.JSONObject;
 public abstract class LevelObject implements Bundlable, Presser {
 
 	@Packable
-	private              int    pos = -1;
+	private  int    pos = -1;
 	
 	public LevelObjectSprite sprite;
 

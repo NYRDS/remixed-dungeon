@@ -33,7 +33,7 @@ public class Trap extends LevelObject {
 	@Packable
 	private int uses;
 
-
+	@Packable
 	private boolean secret = true;
 
 	public Trap(){
@@ -56,7 +56,7 @@ public class Trap extends LevelObject {
 		if(uses != 0) {
 			uses--;
 			if (((ITrigger) Util.byNameFromList(traps, kind)) != null) {
-				((ITrigger) Util.byNameFromList(traps, kind)).doTrigger(getPos(), hero);
+				((ITrigger) Util.byNameFromList(traps, kind)).doTrigger(targetCell, hero);
 			}
 		}
 

@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,16 +33,6 @@ public class LibraryBook extends LevelObject {
 		GameScene.show(new WndLibrary());
 
 		return false;
-	}
-
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-	}
-
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
 	}
 
 	@Override
