@@ -293,4 +293,25 @@ remix.26.1:\n
         - Corregidos los ataques a distancia procedentes de: Elemental de aire, Cristal, Puño ardiente, Psico-araña y Araña Ámbar\n
         - Armadura de Mago (versión del Brujo: WarlockArmor) y Dulce están disponibles en mods\n
     </string>
+  <string name="Welcome_Text_27">
+        remix.27\n
+        - El juego ahora usa servicios de Google Play Juegos: Logros, Clasificaciones y Guardado en la Nube\n
+        - La capacidad de todos los contenedores ha aumentado, ahora son iguales a la mochila principal\n
+        - El Nigromante ahora esta disponible para todos desde el inicio\n
+        - Las pociones ahora pueden ser mejoradas con el Pergamino de Mejora. Las pociones mejoradas o degradadas pueden ser encontradas como botín\n
+        - Corregido el error del Cristal del Caos que agotaba todos los pergaminos apilados al \"fusionarse\" en lugar de solo consumir 1\n
+        - Corregido el error que impedía a la Viscosidad atacar al héroe a cierta distancia después de su \"ataque bomba\"\n
+        - Incrementado el atributo \"maxLevel\"  para la Rata Fétida y varios jefes (Así personajes de nivel alto raramente obtendrán botín de estos)\n
+        - Nuevo atributo para niveles y criaturas creadas por el jugador en mods: \"viewDistance\" (El rango de distancia puede ser colocado entre 1-8)\n
+    </string>
+  <string name="Welcome_Text_27_1">
+        remix.27.1\n
+        - Introduciendo sistema de Portales\n
+        - Después de derrotar a un jefe principal encontrará una sala de portal. Los portales llevan al pueblo. Estos portales solo pueden usarse una vez\n
+        - El portal que encontrarás en el pueblo te llevará al ultimo portal, si lo usaste\n
+        - Después de derrotar a un jefe de una mazmorra secundaria puede utilizar la llave esqueleto para regresar al primer nivel de esa mazmorra\n
+        - Viscosidad no deja más la baliza de Lloyd. Este objeto solo esta disponible en mods\n
+        - Corregido el error de la trampa de invocaciones, que ocasionaba la invocación de sombres sobre el suelo\n
+        - Corregido el error de la estatua \"mascota\", que llenaba los registros del juego con información innecesaria\n
+    </string>
 </resources>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">Portal</string>
+    <string name="WndPortal_Info">Bu portal seni kasabaya geri gönderecek. Birazcık dengesiz gibi duruyor, uzun süre açık kalmayacak gibi.\nKullanmak ister misin?</string>
+    <string name="WndPortal_Info_Return">Bu portal seni zindana geri gönderecek. \nKullanmak ister misin?</string>
+
+    <string name="WndPortal_Warning_Title">Portal Uyarısı!</string>
+    <string name="PortalGate_Name">Portal</string>
+    <string name="PortalGate_Used">Portala dokundun ve... hiçbir şey olmadı.</string>
+
+    <string name="PortalExit_Desc_SpiderNest">Örümcek Zindanı</string>
+    <string name="PortalExit_Desc_Necropolis">Ölü Diyarı</string>
+    <string name="PortalExit_Desc_IceCaves">Buz Mağaraları</string>
+
+
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Obur</string>
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Delikanlı</string>
+</resources>
