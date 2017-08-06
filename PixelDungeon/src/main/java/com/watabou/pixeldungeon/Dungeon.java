@@ -180,7 +180,7 @@ public class Dungeon {
 		updateStatistics();
 		Level level = DungeonGenerator.createLevel(pos);
 
-		Statistics.qualifiedForNoKilling = !level.isBossLevel();
+		Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId,"isSafe",false);
 
 		return level;
 	}
