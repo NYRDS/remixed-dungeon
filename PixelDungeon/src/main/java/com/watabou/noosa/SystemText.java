@@ -270,10 +270,7 @@ public class SystemText extends Text {
 
 	private int drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
 
-		//float y = (fontHeight) * oversample - contourPaint.descent();
-		Paint.FontMetrics metrics = paint.getFontMetrics();
-		float y = (fontHeight) * oversample - metrics.bottom;
-		//float y = 0;
+		float y = (fontHeight) * oversample - textPaint.descent();
 
 		final int charsToDraw = codePoints.size();
 
@@ -384,7 +381,6 @@ public class SystemText extends Text {
 			}
 
 			fontHeight = (textPaint.descent() - textPaint.ascent())
-
 					/ oversample;
 			createText();
 		}

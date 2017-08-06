@@ -34,7 +34,7 @@ public class Trap extends LevelObject {
 	private int uses;
 
 	@Packable
-	private boolean secret = true;
+	private boolean secret = false;
 
 	public Trap(){
 		super(-1);
@@ -55,8 +55,9 @@ public class Trap extends LevelObject {
 
 		if(uses != 0) {
 			uses--;
-			if (((ITrigger) Util.byNameFromList(traps, kind)) != null) {
-				((ITrigger) Util.byNameFromList(traps, kind)).doTrigger(targetCell, hero);
+			ITrigger trigger = Util.byNameFromList(traps, kind);
+			if (trigger != null) {
+				trigger.doTrigger(targetCell, hero);
 			}
 		}
 
@@ -75,8 +76,9 @@ public class Trap extends LevelObject {
 			targetCell = getPos();
 		}
 
-		kind = obj.optString("kind","none");
-		uses = obj.optInt("uses",1);
+		kind   = obj.optString("kind","none");
+		uses   = obj.optInt("uses",1);
+		secret = obj.optBoolean("secret");
 	}
 
 	@Override
