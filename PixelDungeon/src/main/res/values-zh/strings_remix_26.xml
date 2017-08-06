@@ -2,22 +2,22 @@
 <resources>
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
-    <string name="SantaHat_Name">圣诞帽</string>
-    <string name="SantaHat_Info">没人能像圣诞老人那样把圣诞快乐说得那么好。</string>
+    <string name="SantaHat_Name">聖誕帽</string>
+    <string name="SantaHat_Info">誰說牢誕盛行深淵霸主Santa的紅絲帽？</string>
 
     <!-- STRINGS OF Rudolph CLASS -->
-    <string name="Rudolph_Name">鹿角帽带红鼻</string>
+    <string name="Rudolph_Name">鹿角帽加红鼻</string>
     <string name="Rudolph_Info">还有什么比红鼻子更喜庆的呢？包括鹿角，当然。</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF Kobold CLASS -->
     <string name="Kobold_Name">狗头人</string>
-    <string name="Kobold_Gender">masculine</string>
+    <string name="Kobold_Gender">男性的</string>
     <string name="Kobold_Name_Objective">狗头人</string>
     <string name="Kobold_Desc">狗头人被认为是一个传说。虽然它们和豺狼人有着同样的祖先，但是它们居住在冰霜洞穴中。同时它们也有很高的工程机械造诣。但没人知道为什么它们消失了这么多年...</string>
 
     <!-- STRINGS OF KoboldIcemancer CLASS -->
-    <string name="KoboldIcemancer_Name">狗头人冰结师</string>
+    <string name="KoboldIcemancer_Name">狗头人冰结</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Name_Objective">狗头人冰结师</string>
     <string name="KoboldIcemancer_Desc"> 狗头人冰结师是狗头人中的精英。它们既是战士，也是法师，更是科学家。冰结师们会用它们先进的理论和实践经验来加强它们的冰系魔法...</string>

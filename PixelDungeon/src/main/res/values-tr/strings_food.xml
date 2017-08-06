@@ -5,13 +5,13 @@
   <string name="Food_ACEat">YE</string>
   <string name="Food_Message">Bu yemek lezzetliydi!</string>
   <!--STRINGS OF Ration CLASS-->
-  <string name="Ration_Name">yemek porsiyonu</string>
+  <string name="Ration_Name">porsiyon</string>
   <string name="Ration_Info">Pek büyütülecek bişey değil: kuru et, biraz bisküvi falan filan.</string>
   <!--STRINGS OF ChargrilledMeat CLASS-->
   <string name="ChargrilledMeat_Name">kebap</string>
   <string name="ChargrilledMeat_Info">Ortalama bir biftek gibi görünüyor.</string>
   <!--STRINGS OF FrozenCarpaccio CLASS-->
-  <string name="FrozenCarpaccio_Name">donmuş carpaccio</string>
+  <string name="FrozenCarpaccio_Name">donmuş italyan mezesi</string>
   <string name="FrozenCarpaccio_Info">Donmuş et parçası. Yemenin tek yolu ince ince kesmek. Gurme değilim ama tadı enfes.</string>
   <string name="FrozenCarpaccio_Info1">Ellerinin görünmez olduğunu görüyorsun! Ya da göremiyorsun =D.</string>
   <string name="FrozenCarpaccio_Info2">Vücudunun sertleştiğini hissediyorsun!</string>
@@ -26,7 +26,7 @@
   <string name="MysteryMeat_Info4">Doydun.</string>
   <string name="MysteryMeat_Message">Bunun tadı... garipti.</string>
   <!--STRINGS OF RottenFood CLASS-->
-  <string name="RottenFood_Message">iğrenç!</string>
+  <string name="RottenFood_Message">ıyy iğrenç!</string>
   <!--STRINGS OF RottenMeat CLASS-->
   <string name="RottenMeat_Name">çürük et</string>
   <string name="RottenMeat_Info">çürük et parçası</string>

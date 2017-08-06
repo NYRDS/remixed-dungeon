@@ -14,9 +14,9 @@
     <string name="GoldenStatue_Desc">Buna inanmak güç, bu muhteşem heykel sadece dekorasyon değil.Bu zararlı yaratık hiç birşeyden habersiz maceracıları bekliyor. İlk bakışta bu silahın (_%s_) kolunun bir parçası olduğuna yemin edebilirsin.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
-    <string name="NecromancerNPC_Name">necromancer</string>
+    <string name="NecromancerNPC_Name">ruhçağıran</string>
     <string name="NecromancerNPC_Gender">erkeksi</string>
-    <string name="NecromancerNPC_Name_Objective">necromancer</string>
+    <string name="NecromancerNPC_Name_Objective">ruhçağıran</string>
     <string name="NecromancerNPC_Desc">Bu orta yaşlı adam sinirlenmiş ve aynı zamanda heyecanlı görünüyor.Kemik parçalarından yapılmış bir zırh giyiyor.</string>
     <string name="NecromancerNPC_Intro">Ah! Yaşayan bir maceracı. Olağanüstü. Özürlerimi sunarım. Gördüğün gibi bendeniz bir necromancer\'im. Ölüm üzerinde çalışmak benim yaşamk için yaptığım şey, aynı şeyleri sürekli görmek olağanüstü sıkıcı. Diğer taraftan benim burada bulunma sebebim bu.Hesaplamalarıma göre sadece birkaç hafta içince , bu zindanın bir yerlerinde çok muhteşem bir şey olacak. Bir Necropolis_, ölüler şehri burada kapılarını açacak. Daha fazla bir şey söyleyemiyorum, zaten yeterince vakit harcadım, hazır olmam lazım, _sonra tekrar gel_.</string>
     <string name="NecromancerNPC_Message1">birazcık daha zaman, biraz daha zaman...</string>
@@ -24,6 +24,6 @@
     <string name="NecromancerNPC_Message3">ölümün çağrısını duyabiliyorum</string>
     <string name="NecromancerNPC_Message4">Necropolis\'in içinde çok özel bir şey var.</string>
 
-    <string name="RatKing_Name_Objective">Fare Kral</string>
+    <string name="RatKing_Name_Objective">sıçan kral</string>
     <string name="RatKing_Gender">masculine</string>
 </resources>

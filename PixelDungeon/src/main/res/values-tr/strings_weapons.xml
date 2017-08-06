@@ -73,7 +73,7 @@
   </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
-  <string name="MeleeWeapon_Info1a">%1$s , %2$s tier-%3$d saldırı silahı.</string>
+  <string name="MeleeWeapon_Info1a">Bu %1$s, %2$s %3$d.seviye saldırı silahı.</string>
   <string name="MeleeWeapon_Info1b">bir</string>
   <string name="MeleeWeapon_Info1c">yükseltilmiş</string>
   <string name="MeleeWeapon_Info1d">indirgenmiş</string>
@@ -120,7 +120,7 @@
   <string name="Mace_Info">Bu silahın demir topuzu çok büyük hasarlar verir.</string>
   <string name="Mace_Gender">kadınsı</string>
   <!--STRINGS OF Quarterstaff CLASS-->
-  <string name="Quarterstaff_Name">Sopa</string>
+  <string name="Quarterstaff_Name">sopa</string>
   <string name="Quarterstaff_Info">Sert ağaçtan bu sopa iki ucunda demir parçalarla güçlendirilmiş.</string>
   <string name="Quarterstaff_Gender">erkeksi</string>
   <!--STRINGS OF ShortSword CLASS-->
@@ -134,7 +134,7 @@
   <!--STRINGS OF Spear CLASS-->
   <string name="Spear_Name">kargı</string>
   <string name="Spear_Info">Uzun bir sopanın ucunda keskin bıçak olan bir silah.</string>
-  <string name="Spear_Gender">neuter</string>
+  <string name="Spear_Gender">nötr</string>
   <!--STRINGS OF Sword CLASS-->
   <string name="Sword_Name">kılıç</string>
   <string name="Sword_Info">Keskin ağzı ile bu uzun çelik silah güven verici şekilde parlıyor.</string>
@@ -145,7 +145,7 @@
   <string name="WarHammer_Gender">erkeksi</string>
   <!--PACKAGE /weapon/missiles-->
   <!--STRINGS OF MissileWeapon CLASS-->
-  <string name="MissileWeapon_Missiles">Uzun mesafeli fırlatma silahı</string>
+  <string name="MissileWeapon_Missiles">Menzilli silah</string>
   <string name="MissileWeapon_Yes">Evet, ne yaptığımı biliyorum</string>
   <string name="MissileWeapon_No">Hayır, fikrimi değiştirdim</string>
   <string name="MissileWeapon_Sure">Saldırı silahı olarak kullanmak istediğine emin misin?</string>
@@ -172,7 +172,7 @@
   <!--STRINGS OF Javelin CLASS-->
   <string name="Javelin_Name">mızrak</string>
   <string name="Javelin_Info">Bu silah havada süzülmesi için tasarlanmış.</string>
-  <string name="Javelin_Gender">neuter</string>
+  <string name="Javelin_Gender">nötr</string>
   <!--STRINGS OF Shuriken CLASS-->
   <string name="Shuriken_Name">shuriken</string>
   <string name="Shuriken_Info">Yıldız şekilli bu silah hedef oldukça fazla zarar verebilir ve yüksek hızla kullanılabilir.</string>

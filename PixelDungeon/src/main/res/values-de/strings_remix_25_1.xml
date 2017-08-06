@@ -6,6 +6,7 @@
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">Der Seelenbringer</string>
+    <string name="BlackSkullOfMastery_Info">Ein uraltes Artefakt, erschaffen von den ersten Totenbeschwörern die die Seelen der Gefallenen sammelten. Es hat deine Totenbeschwörerischen Fähigkeiten wahrgenommen und sich mit einem starken Zauber geschützt. Da es ein alter zauber ist, ist er von primitiver Struktur, und ist einfach zu brechen. </string>
     <string name="BlackSkullOfMastery_Lich">Werde zum Lich</string>
     <string name="BlackSkullOfMastery_Necromancer">Unterbrich den Zauber</string>
     <!-- STRINGS OF BlackSkull CLASS -->

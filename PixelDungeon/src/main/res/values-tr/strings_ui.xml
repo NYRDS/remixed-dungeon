@@ -7,17 +7,17 @@
   <string name="TitleScene_About">Hakkında</string>
   <string name="TitleScene_InternalStorageLow">Dahili depolamada\n yeterli yer yok\n İlerlemen kaybolabilir!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Watabou tarafından yapılan Pixel Dungeon tabanlı NYRDS tarafından yapılan Remixed Pixel Dungeon</string>
+  <string name="AboutScene_Txt_Intro">Watabou\'nun Pixel Dungeon\'ı tabanlı NYRDS tarafından yapılan Remixed Pixel Dungeon</string>
   <string name="AboutScene_Code">Kodlama:</string>
   <string name="AboutScene_Graphics">Grafikler:</string>
   <string name="AboutScene_Music">Müzik:</string>
   <string name="AboutScene_Sound">Ses:</string>
   <string name="AboutScene_Thanks">Teşekkürler:</string>
   <string name="AboutScene_Email_Us">Bize ulaşın:</string>
-  <string name="AboutScene_OurSite">Websitemiz:</string>
+  <string name="AboutScene_OurSite">İnternet sitemiz:</string>
   <string name="AboutScene_Snd">E-Posta Gönder</string>
   <string name="AboutScene_Translation">Çevirmen:</string>
-  <string name="AboutScene_Translation_Names">null</string>
+  <string name="AboutScene_Translation_Names">Orrhan Yalçın</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Yüksek Skorlar</string>
   <string name="RankingsScene_Total">Toplam oynanan oyun:</string>
@@ -57,7 +57,7 @@
   <string name="WndSettings_ZoomDef">Varsayılan Yakınlaştırma</string>
   <string name="WndSettings_TextScaleDefault">Varsayılan yazı tipi</string>
   <string name="WndSettings_ScaleUp">Arayüz boyutu</string>
-  <string name="WndSettings_Immersive">Sürükleyici mod</string>
+  <string name="WndSettings_Immersive">Tam ekran modu</string>
   <string name="WndSettings_Music">Müzik</string>
   <string name="WndSettings_Sound">Ses Efektleri</string>
   <string name="WndSettings_Brightness">Parlaklık</string>
@@ -72,5 +72,5 @@
   <string name="WndSaveSlotSelect_SelectSlot">Yuva seç</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">Mod seç</string>
-  <string name="RemixedPixelDungeonApp_sendCrash">Oyun hatayla karşılaştı..\n Üzgünüz.\nYalvarıyoruz ki hata raporunu gönderin de düzeltelim.</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Oyun hatayla karşılaştı..\n Üzgünüz.\nHata raporunu göndererek düzeltmemize yardımcı olabilirsiniz.</string>
 </resources>

@@ -1,3 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF WandOfShadowbolt CLASS -->
+    <string name="WandOfShadowbolt_Name">şimşek gölgesi asası</string>
     </resources>
