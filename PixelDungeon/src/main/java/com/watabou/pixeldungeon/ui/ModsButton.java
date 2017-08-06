@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import android.Manifest;
+import android.os.Build;
 
 import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
@@ -107,7 +108,11 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 						modsCommon.delete();
 						String downloadTo = modsCommon.getAbsolutePath();
 
-						new DownloadTask(ModsButton.this).executeOnExecutor(Game.instance().executor,"https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
+						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+							new DownloadTask(ModsButton.this).executeOnExecutor(Game.instance().executor,"https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
+						}else {
+							new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
+						}
 					} else {
 						DownloadComplete("no internet", true);
 					}

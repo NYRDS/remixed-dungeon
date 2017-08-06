@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
+import android.os.Build;
+
 import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
@@ -121,7 +123,11 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 				selectedMod = desc.name;
 				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
 				desc.needUpdate = false;
-				new DownloadTask(this).executeOnExecutor(Game.instance().executor,desc.url, downloadTo);
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+					new DownloadTask(this).executeOnExecutor(Game.instance().executor,desc.url, downloadTo);
+				} else {
+					new DownloadTask(this).execute(desc.url, downloadTo);
+				}
 				return;
 			}
 		}
@@ -167,7 +173,11 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 					downloadProgress = null;
 				}
 				if (result) {
-					new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+						new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);
+					} else {
+						new UnzipTask(WndModSelect.this).execute(downloadTo);
+					}
 				} else {
 					Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 				}
