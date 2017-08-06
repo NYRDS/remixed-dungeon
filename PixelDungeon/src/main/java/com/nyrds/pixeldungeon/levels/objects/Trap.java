@@ -76,9 +76,9 @@ public class Trap extends LevelObject {
 			targetCell = getPos();
 		}
 
-		kind   = obj.optString("kind","none");
+		kind   = obj.optString("trapKind","none");
 		uses   = obj.optInt("uses",1);
-		secret = obj.optBoolean("secret");
+		secret = obj.optBoolean("secret",false);
 	}
 
 	@Override
