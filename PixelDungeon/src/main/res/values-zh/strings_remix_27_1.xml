@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">傳送門</string>
+    <string name="WndPortal_Info">此傳送門能帶您回到鎮上，但它看起來不太穩定，可能過了一段時間之後便不會運作。\n您要使用它嗎？</string>
+    <string name="WndPortal_Info_Return">此傳送門會帶您回到地牢中。\n您要使用它嗎？</string>
+
+    <string name="WndPortal_Warning_Title">警告！傳送門變得不穩定！</string>
+    <string name="WndPortal_Warning_Info">在此樓層中，您並沒有使用過傳送門。離開此層後，您將沒法再使用它！\n您確定要離開嗎？</string>
+
+    <string name="PortalGate_Name">傳送門</string>
+    <string name="PortalGate_Desc">傳送門表面雕有一串奇妙的圖樣。它看上去好像帶您跨越一大段距離，到達遙遠的某處。然而，從側面看的話，能十分明顯地看出那表面比紙更平。</string>
+    <string name="PortalGate_Desc_Activated">傳送門中散發出某種隱隱發光的物體。門本身不會移動，但漣漪卻一直在中央盪漾著。</string>
+
+    <string name="PortalGate_Activated">遠古傳送門已經甦醒！</string>
+    <string name="PortalGate_Used">您戰戰兢兢地伸出微顫的手，碰探眼前的傳送門... 可是，門沒有任何反應。</string>
+
+    <string name="PortalExit_Desc">此傳送門會引領您到%s的第一層。</string>
+    <string name="PortalExit_Desc_SpiderNest">蜘蛛巢穴</string>
+    <string name="PortalExit_Desc_Necropolis">死靈都市</string>
+    <string name="PortalExit_Desc_IceCaves">霜凍洞穴</string>
+
+
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">吞噬</string>
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">石中血</string>
+</resources>

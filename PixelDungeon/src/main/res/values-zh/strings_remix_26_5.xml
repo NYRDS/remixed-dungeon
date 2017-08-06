@@ -2,7 +2,8 @@
 <resources>
     <!-- Buffs -->
     <!-- STRINGS OF FrostAura CLASS -->
-    <string name="FrostAura_Buff">寒冰護罩</string>
+    <string name="FrostAura_Buff">寒冰護罩
+</string>
 
 
     <!-- Item descriptions -->

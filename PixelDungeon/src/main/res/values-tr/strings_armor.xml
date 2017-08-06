@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">%s acı bir şekilde vücudunu sıkıştırıyor</string>
+  <string name="Armor_EquipCursed">%sın acı bir şekilde vücudunu sıkıştırıyor</string>
   <string name="Armor_Identify">%1$s ile aşina olduğundan dolayı %2$s olduğunu anlıyorsun.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">Farklı büyü tipleri ile etkileşimin zırhtaki kabartmayı sildi!</string>
@@ -12,7 +12,7 @@
   <string name="Armor_Info3">
 \n\nYetersiz gücünden dolayı bu zırhı giymek hareket hızın ve savunma yeteneğini düşürecektir.</string>
   <string name="Armor_Info4">
-\n\nTipik %1$s alınan saldırı başı %2$d puanlık hasarı emer ve %3$d güç puanına ihtiyaç duyar.</string>
+\n\nÖzgün %1$s alınan saldırı başı %2$d puanlık hasarı emer ve %3$d güç puanına ihtiyaç duyar.</string>
   <string name="Armor_Info5">Muhtemelen bu zırh senin için çok ağır.</string>
   <string name="Armor_Info6">Bu kazınmış.</string>
   <string name="Armor_Info7a">
@@ -40,21 +40,21 @@
   <string name="HuntressArmor_NotHuntress">Sadece avcılar bu zırhı kullanabilir!</string>
   <!--STRINGS OF LeatherArmor CLASS-->
   <string name="LeatherArmor_Name">deri zırh</string>
-  <string name="LeatherArmor_Desc">Sertleştirilmiş canavar zırhından yapılmış zırh. Kumaş zırh kadar hafif değil fakat daha iyi koruma sağlar.</string>
+  <string name="LeatherArmor_Desc">Sertleştirilmiş canavar derisinden yapılmış zırh. Kumaş zırh kadar hafif değil fakat daha iyi koruma sağlar.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">büyücü kaftanı</string>
   <string name="MageArmor_Desc">Bu gösterişli kaftanı giyen bir büyücü, erimiş yeryüzü büyüsünü yapabilir: görüşündeki tüm düşmanları ateşe verir ve aynı zamanda hareket edemez hale getirir.</string>
-  <string name="MageArmor_ACSpecial">ERİMİŞ YERYÜZÜ</string>
+  <string name="MageArmor_ACSpecial">ERİMİŞ TOPRAK</string>
   <string name="MageArmor_NotMage">Sadece büyücüler bu zırhı kullanabilir!</string>
   <!--STRINGS OF MailArmor CLASS-->
   <string name="MailArmor_Name">metal örgü zırh</string>
   <string name="MailArmor_Desc">İç içe geçen metal bağlantılar esnek ve güçlü bir zırh ortaya çıkarmış.</string>
   <!--STRINGS OF PlateArmor CLASS-->
   <string name="PlateArmor_Name">plaka zırh</string>
-  <string name="PlateArmor_Desc">Devasa metal parçaları biraraya gelerek ağırlığının hakkını veren eşşiz bir zırh ortaya çıkarmış.</string>
+  <string name="PlateArmor_Desc">Devasa metal parçaları biraraya gelerek ağırlığının taşıyabilen delikanlılara hakkını veren eşşiz bir zırh ortaya çıkarmış.</string>
   <!--STRINGS OF RogueArmor CLASS-->
   <string name="RogueArmor_Name">casus kıyafeti</string>
-  <string name="RogueArmor_Desc">Bu kara kıyafeti giymek, bir casusun numarasını yapar, bu \"sis bombası\" adı verilen numara (gerçek patlayıcı kullanılmamakta): düşmanlarını kör eder ve ortamı terkeder.</string>
+  <string name="RogueArmor_Desc">Bu kara kıyafeti giyen bir casus, \"sis bombası\" (patlayıcı olmamasına rağmen) adındaki numarasını yapar; tüm düşmanlarını kör eder ve ortamdan uzaklaşır.</string>
   <string name="RogueArmor_ACSpecial">SİS BOMBASI</string>
   <string name="RogueArmor_NotRogue">Sadece casuslar bu zırhı kullanabilir!</string>
   <string name="RogueArmor_Fov">Sadece görüş alanındaki boş bir yere zıplayabilirsin</string>
@@ -86,7 +86,7 @@
   <!--STRINGS OF Potential CLASS-->
   <string name="Potential_Txt">Potansiyelliğin %sı</string>
   <!--STRINGS OF Stench CLASS-->
-  <string name="Stench_Txt">Kokuşmuş %sı</string>
+  <string name="Stench_Txt">Kokuşmuş %s</string>
   <!--STRINGS OF Viscosity CLASS-->
   <string name="Viscosity_Txt">Ayırıcılığın %sı</string>
   <string name="Viscosity_Status">%d gecikmeli</string>

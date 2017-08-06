@@ -2,10 +2,10 @@
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
-  <string name="Scroll_Name">\"%s\"卷轴</string>
-  <string name="Scroll_Info">这张羊皮纸上写满了难以破译的文字，并带有%s的符文标题。谁能知道高声吟唱它会发生什么？</string>
-  <string name="Scroll_ACRead">阅读</string>
-  <string name="Scroll_Blinded">你在失明时不能阅读</string>
+  <string name="Scroll_Name">\"%s\"卷軸</string>
+  <string name="Scroll_Info">這張羊皮紙上寫滿了難以破譯的文字，並帶有%s的符文。高聲朗誦它時不知會有甚麼神奇的事發生呢？</string>
+  <string name="Scroll_ACRead">閱讀</string>
+  <string name="Scroll_Blinded">您暫時失明，不能閱讀</string>
   <string-array name="Scroll_Runes">
     <item>KAUNAN</item>
     <item>SOWILO</item>
@@ -25,18 +25,18 @@
     <item>DAGAZ</item>
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
-  <string name="InventoryScroll_Title">选择一个物品</string>
-  <string name="InventoryScroll_Warning">你真的确认你要取消这张卷轴的使用吗？这将会浪费掉它的。</string>
-  <string name="InventoryScroll_Yes"> 是的，我十分确定</string>
+  <string name="InventoryScroll_Title">選擇一個物品</string>
+  <string name="InventoryScroll_Warning">您確定您要打斷此卷軸的法術嗎？反正它早晚也會被用掉。</string>
+  <string name="InventoryScroll_Yes"> 是的</string>
   <string name="InventoryScroll_No">不，我改主意了</string>
   <!--STRINGS OF BlankScroll CLASS-->
-  <string name="BlankScroll_Name">空白卷轴</string>
-  <string name="BlankScroll_Info">只是一张空白卷轴而已，或许你可以写点什么上去？</string>
-  <string name="BlankScroll_ReallyBlank">这张卷轴是空白的。</string>
+  <string name="BlankScroll_Name">空白卷軸</string>
+  <string name="BlankScroll_Info">只是一張空白卷軸而已，也許您可以寫此東西上去吧？</string>
+  <string name="BlankScroll_ReallyBlank">這張卷軸是空白的。</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
-  <string name="ScrollOfChallenge_Name">挑战卷轴</string>
-  <string name="ScrollOfChallenge_Info">当你大声吟诵时，这张卷轴将会释放出一声挑衅的咆哮，这声咆哮将会惊醒所有怪物并提醒他们阅读者的位置。</string>
-  <string name="ScrollOfChallenge_Info1">这个卷轴中发出的挑衅怒吼回荡在地牢中！</string>
+  <string name="ScrollOfChallenge_Name">挑戰卷軸</string>
+  <string name="ScrollOfChallenge_Info">當你大聲吟誦時，這張捲軸將會釋放出一聲挑釁的咆哮，這聲咆哮將會喚醒所有怪物並指示他們導向吟誦者之處。</string>
+  <string name="ScrollOfChallenge_Info1">捲軸發出的挑釁怒吼在地牢中迴盪！</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
   <string name="ScrollOfIdentify_Name">鉴定卷轴</string>
   <string name="ScrollOfIdentify_Info">永久的揭示一件物品的所有秘密。</string>

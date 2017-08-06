@@ -24,7 +24,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
@@ -133,7 +132,7 @@ public class Belongings implements Iterable<Item> {
 		IronKey.curDepthQuantity = 0;
 		
 		for (Item item : backpack) {
-			if (item instanceof IronKey && ((IronKey)item).depth == Dungeon.depth) {
+			if (item instanceof IronKey && ((IronKey)item).levelId.equals(DungeonGenerator.getCurrentLevelId())) {
 				IronKey.curDepthQuantity++;
 			}
 		}

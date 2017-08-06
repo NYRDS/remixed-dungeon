@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="Mods_CreatedBy">Tasarlayan:</string>
-  <string name="Mods_AuthorSite">Yazarın sitesi:</string>
-  <string name="Mods_AuthorEmail">Yazarın emaili:</string>
-  <string name="Mods_RestartRequired">Yeniden başlatma gerektirir</string>
+  <string name="Mods_CreatedBy">Yaratan:</string>
+  <string name="Mods_AuthorSite">Sahibinin sitesi:</string>
+  <string name="Mods_AuthorEmail">Sahibinin epostası:</string>
+  <string name="Mods_RestartRequired">Yeniden başlatma gerekiyor</string>
 </resources>

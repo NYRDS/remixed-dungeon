@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">Портал</string>
+    <string name="WndPortal_Info">Этот портал позволит тебе вернуться в город. Он выглядит не стабильным, Скорее всего на долго его не хватит.\nВоспользоваться порталом?</string>
+    <string name="WndPortal_Info_Return">Этот портал перенесёт тебя обратно в подземелье.\nВоспользоваться порталом?</string>
+    <string name="WndPortal_Warning_Title">Внимание Портал!</string>
+    <string name="WndPortal_Warning_Info">На этом этаже присутствует не использованный портал. Если ты уйдёшь, то у тебя больше не будет возможности им воспользоваться!\nТы правда хочешь пойти дальше?</string>
+
+    <string name="PortalGate_Name">Портал</string>
+    <string name="PortalGate_Desc">На поверхности этого портала вырезаны причудливые узоры. Создаётся впечатление что ты смотришь в уходящий в даль туннель. Но взглянув со стороны становится ясно, что поверхность почти полностью плоская.</string>
+    <string name="PortalGate_Desc_Activated">Из портала сочится светящаяся субстанция. Кажущуюся статичность этой массы разбавляет только проходящая по ней рябь.</string>
+    <string name="PortalGate_Activated">Древний портал проснулся!</string>
+    <string name="PortalGate_Used">Ты прикасаешься к порталу... и ничего не происходит.</string>
+
+    <string name="PortalExit_Desc">Этот портал перенесёт тебя ко входу в %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Паучье Логово</string>
+    <string name="PortalExit_Desc_Necropolis">Некрополь</string>
+    <string name="PortalExit_Desc_IceCaves">Ледяные Пещеры</string>
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Пожирание</string>
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Каменная Кровь</string>
+</resources>

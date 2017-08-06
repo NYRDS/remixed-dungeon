@@ -3,7 +3,7 @@
     <!-- Window descriptions -->
     <!-- STRINGS OF WndPlayGames CLASS -->
     <string name="WndPortal_Title">Portal</string>
-    <string name="WndPortal_Info">This portal will allow you to return to town. It seems quite unstable, it probably won\'t be active for to long.\nWould you like to use it?</string>
+    <string name="WndPortal_Info">This portal will allow you to return to town. It seems quite unstable, it probably won\'t be active for too long.\nWould you like to use it?</string>
     <string name="WndPortal_Info_Return">This portal will take you back to the dungeon.\nWould you like to use it?</string>
 
     <string name="WndPortal_Warning_Title">Portal Warning!</string>
@@ -15,6 +15,12 @@
 
     <string name="PortalGate_Activated">The ancient portal has awaken!</string>
     <string name="PortalGate_Used">You touched the portal and... nothing happened.</string>
+
+    <string name="PortalExit_Desc">This portal will take to the first level of the %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Spider Lair</string>
+    <string name="PortalExit_Desc_Necropolis">Necropolis</string>
+    <string name="PortalExit_Desc_IceCaves">Ice Caves</string>
+
 
     <!-- Buffs -->
     <!-- STRINGS OF Devour CLASS -->

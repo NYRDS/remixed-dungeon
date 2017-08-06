@@ -1,3 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">Donmuş Buhar</string>
+
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">M-merhaba. Kütüphaneye hoşgeldin. Burada zindanda bulunabilecek herşeyle ilgili bilgi bulabilirsin... aslında maceracılar tarafından keşfedilen bilgileri bulabilirsin sadece. Bu... birazcık utanç verici. Bu yüzden her ziyaretinizde, büyük ihtimalle okunacak yeni şeyler bulunabilir.</string>
+
+
+    <string name="LibraryBook_Description">Bu cilt gerçekten devasa. Maceracıların zindanda keşfettikleri hakkında tüm bilgileri içeriyor.</string>
+
+
     </resources>

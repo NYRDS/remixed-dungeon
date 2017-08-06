@@ -2,66 +2,65 @@
 <resources>
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
-    <string name="SantaHat_Name">noelbaba şapkası</string>
+    <string name="SantaHat_Name">Noel baba şapkası</string>
+    <string name="SantaHat_Info">Hiçbirşey Derinliklerin Efendisi Noel Baba\'nın ipeksi kırmızı şapkası gibi Dungeonmas(Zindan Yılbaşı) diyemez.</string>
+
     <!-- STRINGS OF Rudolph CLASS -->
-    <string name="Rudolph_Name">kırmızı burun ve antenler</string>
+    <string name="Rudolph_Name">Kırmızı burun ve boynuzlar</string>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF Kobold CLASS -->
-    <string name="Kobold_Name">Kobold</string>
+    <string name="Kobold_Name">cüce</string>
     <string name="Kobold_Gender">erkek</string>
-    <string name="Kobold_Name_Objective">Kobold</string>
-    <!-- STRINGS OF KoboldIcemancer CLASS -->
-    <string name="KoboldIcemancer_Name">Kobold Buzbüyücüsü</string>
+    <string name="Kobold_Name_Objective">cüce</string>
     <string name="KoboldIcemancer_Gender">erkek</string>
-    <string name="KoboldIcemancer_Name_Objective">Kobold Buzbüyücüsü</string>
-    <string name="KoboldIcemancer_Killed">%s\'nin buz oku seni öldürdü.</string>
-
     <!-- STRINGS OF ColdSpirit CLASS -->
-    <string name="ColdSpirit_Name">soğuk ruhu</string>
+    <string name="ColdSpirit_Name">soğuk ruh</string>
     <string name="ColdSpirit_Gender">erkek</string>
-    <string name="ColdSpirit_Name_Objective">soğuk ruhu</string>
-    <!-- STRINGS OF IceElemental CLASS -->
-    <string name="IceElemental_Name">buz elementi</string>
+    <string name="ColdSpirit_Name_Objective">soğuk ruh</string>
     <string name="IceElemental_Gender">erkek</string>
-    <string name="IceElemental_Name_Objective">buz elementi</string>
     <!-- STRINGS OF IceGuardian CLASS -->
-    <string name="IceGuardian_Name">buz gardiyanı </string>
+    <string name="IceGuardian_Name">buz gardiyanı</string>
     <string name="IceGuardian_Gender">erkek</string>
-    <string name="IceGuardian_Name_Objective">buz gardiyanı </string>
+    <string name="IceGuardian_Name_Objective">buz gardiyanı</string>
     <!-- STRINGS OF IceGuardianCore CLASS -->
-    <string name="IceGuardianCore_Name">buz gardiyanı </string>
+    <string name="IceGuardianCore_Name">buz gardiyanı</string>
     <string name="IceGuardianCore_Gender">erkek</string>
-    <string name="IceGuardianCore_Name_Objective">buz gardiyanı </string>
+    <string name="IceGuardianCore_Name_Objective">buz gardiyanı</string>
     <!-- STRINGS OF CagedKobold CLASS -->
-    <string name="CagedKobold_Name">Kafeslenmiş Kobold.</string>
+    <string name="CagedKobold_Name">kafeslenmiş cüce</string>
     <string name="CagedKobold_Gender">erkek</string>
-    <string name="CagedKobold_Name_Objective">Kafeslenmiş Kobold.</string>
-    <string name="CagedKobold_Desc">Kafesin İçinde Bir Kobold.</string>
-    <string name="CagedKobold_Message1">Lütfen....</string>
-    <string name="CagedKobold_Message2">bana yardım et ahbap </string>
-    <string name="CagedKobold_Message3">bu kafes hakkında herşeyden nefret ediyorum </string>
+    <string name="CagedKobold_Name_Objective">kafeslenmiş cüce</string>
+    <string name="CagedKobold_Desc">Kafeslenmiş, bir cüce.</string>
+    <string name="CagedKobold_Quest_End">Teşekkürler, çok çok teşekkürler! Anahtarı nasıl bulabildin? Silahı... silahımı mı yokettin?! Bu akıl almaz! Sana yardım edeceğimi söylemiştim, ve düşünüyorum ki bunun en iyi yolu; senle biraz takılmak. * Kafeslenmiş Kobold muma dönüştü</string>
+    <string name="CagedKobold_Message1">Lütfen...</string>
+    <string name="CagedKobold_Message2">Buradan kaçmamız lazım, güçlerimizi birleştirirsek kolayca çıkabilirim.</string>
+    <string name="CagedKobold_Message3">Bu kafesten tiskiniyorum</string>
 
-    <string name="Journal_Caged_Kobold">Kafeslenmiş Kobold.</string>
+    <string name="Journal_Caged_Kobold">Kafeslenmiş Cüce</string>
 
-    <string name="IceCaves_TileHighGrass">donmuş büyük ot </string>
-    <string name="IceCaves_TileGrass">donmuş ot</string>
-    <string name="IceCaves_TileStatue">Donmuş Gnoll.</string>
-    <string name="IceCaves_TileDescStatue">Bir Başka Korkunç Heykel... Bir Dakika Bu Donmuş Gnoll !</string>
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Bu gnoll canlı bir şekilde donmuş. Muhtemelen bir süredir de burada.</string>
+    <string name="IceCaves_TileHighGrass">Donmuş uzun çim</string>
+    <string name="IceCaves_TileGrass">Donmuş çim.</string>
+    <string name="IceCaves_TileDescHighGrass">Görüşü bir hayli engelleyen donmuş bitkiler.</string>
+    <string name="IceCaves_TileStatue">Donmuş Gnoll</string>
+    <string name="IceCaves_TileDescStatue">Bir başka berbat heykel daha... Dur lan bu donmuş bir gnoll.</string>
 
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festival hindisi</string>
     <!-- STRINGS OF IceKey CLASS -->
     <string name="IceKey_Name">buz anahtar</string>
-    <string name="IceKey_Info">bu anahtar buzdan yapılmış gibi,ama demir kadar sağlam</string>
+    <string name="IceKey_Info">Bu anahtar buzdan yapılmış gibi, ama çelik gibi sağlam.</string>
 
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
-    <string name="WandOfIcebolt_Name">buz oku asası </string>
-    <string name="WandOfIcebolt_Info">bu asa buzdan bir ok atar,hasar verir ve yavaşlatabilir. hatta düşmanı dondurabilir</string>
-    <string name="WandOfIcebolt_Info1">kendi buz oku asan ile kendini öldürdün </string>
+    <string name="WandOfIcebolt_Name">Buz Oku Asası</string>
+    <string name="WandOfIcebolt_Info">Bu asa hedef yaratığa hafif hasar veren buzul ok ateşler. Hedefi yavaşlatma hatta dondurma imkanı bile var.</string>
+    <string name="WandOfIcebolt_Info1">Buz Oku Asan ile kendini öldürdün...</string>
 
     <!-- Badges -->
-    <string name="Badges_Ice_Guardian_Slain">buz gardiyanı öldürdün</string>
+    <string name="Badges_Ice_Guardian_Slain">Buz gardiyanı kesildi</string>
 
 </resources>

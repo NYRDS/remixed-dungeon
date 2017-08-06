@@ -72,7 +72,7 @@ public class WndPortal extends Window {
 			}
 		};
 
-		btnYes.setRect((WIDTH / 2) - (BTN_WIDTH / 2) , BTN_HEIGHT / 2 + GAP * 2 + buttonY, BTN_WIDTH, BTN_HEIGHT);
+		btnYes.setRect(0, message.bottom() + GAP, WIDTH, BTN_HEIGHT);
 		add(btnYes);
 
 		buttonY = (int) btnYes.bottom()+ GAP;
@@ -86,7 +86,7 @@ public class WndPortal extends Window {
 			}
 		};
 
-		btnNo.setRect((WIDTH / 2) - (BTN_WIDTH / 2) , GAP * 2 + buttonY, BTN_WIDTH, BTN_HEIGHT);
+		btnNo.setRect(0, btnYes.bottom() + GAP, WIDTH, BTN_HEIGHT);
 		add(btnNo);
 
 		resize( WIDTH, (int) btnNo.bottom() + BTN_HEIGHT / 2);
