@@ -3,11 +3,16 @@ package com.nyrds.pixeldungeon.levels;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.utils.Bundle;
 
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.ByteArrayInputStream;
 
 /**
  * Created by mike on 13.11.2016.
@@ -24,7 +29,20 @@ public abstract class CustomLevel extends CommonLevel {
 	private final String DESC_FILE = "descFile";
 
 	protected void readDescFile(String descFile) {
-		mLevelDesc = JsonHelper.readJsonFromAsset(descFile);
+		if(descFile.endsWith(".json")) {
+			mLevelDesc = JsonHelper.readJsonFromAsset(descFile);
+			return;
+		}
+
+		if(descFile.endsWith(".lua")) {
+			LuaEngine.getEngine().runScriptFile(descFile);
+			String desc =  LuaEngine.getEngine().call("getJson");
+			try {
+				mLevelDesc = JsonHelper.readJsonFromStream(new ByteArrayInputStream(desc.getBytes()));
+			} catch (JSONException e) {
+				throw new TrackedRuntimeException(e);
+			}
+		}
 	}
 
 	@Override
