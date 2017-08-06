@@ -63,8 +63,9 @@ android {
 dependencies {
     compile 'ch.acra:acra:4.8.1@aar'
     compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.google.guava:guava:20.0'
     compile 'com.google.code.gson:gson:2.7'
+    compile 'org.luaj:luaj-jse:3.0.1'
+
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
     //noinspection GradleDependency
@@ -80,6 +81,8 @@ dependencies {
     googlePlayCompile project(':cheetah-mobile-3.4.7')
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.1'
+
+
 
     compile project(':annotation')
     annotationProcessor project(':processor')
