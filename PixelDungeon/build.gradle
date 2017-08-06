@@ -12,8 +12,8 @@ android {
     buildToolsVersion '25.0.3'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 441
-        versionName "remix.27"
+        versionCode 451
+        versionName "remix.27.1"
 
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
     }
