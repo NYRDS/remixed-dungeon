@@ -7,7 +7,7 @@
   <string name="Wand_Wood">Bu ince %s asası eline sıcak bir his veriyor. Kullanıldığında ne etkisi olabileciğini kim bilebilir?</string>
   <string name="Wand_Damage">Bu asa yakın mesafede kullanıldığında, ortalama hasarı vuruş başı %d puandır.</string>
   <string name="Wand_Weapon">Bu asayı yakın mesafede de kullanabilirsin.</string>
-  <string name="Wand_Fizzles">asanın şarjı bitti;</string>
+  <string name="Wand_Fizzles">asandan vızıltılar geliyor; şarjı bitmiş olmalı</string>
   <string name="Wand_SelfTarget">Kendini hedef alamazsın.</string>
   <string name="Wand_Prompt">Kullanılacak yönü seç</string>
   <string-array name="Wand_Wood_Types">
@@ -33,8 +33,8 @@
   <string name="WandOfAvalanche_Info">Bu asanın gücü bir duvara (veya herhangi bir katı engel) çarptığında taşlardan bir çığ oluşturur ve etraftaki yaratıklara çarparak hasar verir.</string>
   <string name="WandOfAvalanche_Info1">Çığ asası ile kendi kendini öldürdün...</string>
   <!--STRINGS OF WandOfBlink CLASS-->
-  <string name="WandOfBlink_Name">Gözkırpma Asası</string>
-  <string name="WandOfBlink_Info">Bu asa seçtiği yöne ışınlanmanı sağlar. Yolundaki yaratık ve cansız nesneler ışınlanmanı engeller.</string>
+  <string name="WandOfBlink_Name">Işınlanma Asası</string>
+  <string name="WandOfBlink_Info">Bu asa seçtiğin yöne ışınlanmanı sağlar. Yolundaki yaratık ve cansız nesneler ışınlanmanı engeller.</string>
   <!--STRINGS OF WandOfDisintegration CLASS-->
   <string name="WandOfDisintegration_Name">Dağılma Asası</string>
   <string name="WandOfDisintegration_Info">Bu asa yokedici bir enerji ışını yayar. Bu enerji yolu üzerindeki tüm yaratıklara işler, ne kadar çok yaratık varsa verdiği hasar da o kadar artar.</string>
@@ -71,15 +71,15 @@
   <!--STRINGS OF WandOfPoison CLASS-->
   <string name="WandOfPoison_Name">Zehir Asası</string>
   <string name="WandOfPoison_Info">Bu asadan çıkan iğrenç zehirli uçlar hedefini ölümcül bir zehirle etkiler.Zehirlenen yaratık zehhrin etkisi boyunca acı çekerek zarar görür.Bu asanın seviyesinin arttırılması zehrin etki süresini uzatır.</string>
-  <string name="WandOfPoison_Info1">hiç birşey olmadı</string>
+  <string name="WandOfPoison_Info1">hiçbir şey olmadı</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
   <string name="WandOfRegrowth_Name">Büyütme Asası</string>
   <string name="WandOfRegrowth_Info">Hayat sona erdiğince , yeni bir hayat her zaman büyür.Sonsuz döngü herzaman devam edecektir!</string>
-  <string name="WandOfRegrowth_Info1">hiç birşey olmadı</string>
+  <string name="WandOfRegrowth_Info1">hiçbir şey olmadı</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
   <string name="WandOfSlowness_Name">Yavaşlık Asası</string>
   <string name="WandOfSlowness_Info">Bu asa etki süresi boyunca hedeflenen yaratığın hızını yarıya indirir</string>
-  <string name="WandOfSlowness_Info1">hiç birşey olmadı</string>
+  <string name="WandOfSlowness_Info1">hiçbir şey olmadı</string>
   <!--STRINGS OF WandOfTelekinesis CLASS-->
   <string name="WandOfTelekinesis_Name">Telekinetik Asa</string>
   <string name="WandOfTelekinesis_Info">Bu asanın sihirli gücü yolu boyunca tüm tuzakları etkileyecek çalışmasını sağlar, yüksek çimleri ezer
@@ -89,5 +89,5 @@
   <string name="WandOfTeleportation_Name">Işınlanma Asası</string>
   <string name="WandOfTeleportation_Info">Bu asadan çıkan ışın hedefini rastgele bir yere ışınlar.</string>
   <string name="WandOfTeleportation_Info1">%2$s, %1$s tarafından bir yere ışınlandı</string>
-  <string name="WandOfTeleportation_Info2">hiç birşey olmadı</string>
+  <string name="WandOfTeleportation_Info2">hiçbir şey olmadı</string>
 </resources>

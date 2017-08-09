@@ -7,9 +7,16 @@
     <string name="WndPortal_Info_Return">Bu portal seni zindana geri gönderecek. \nKullanmak ister misin?</string>
 
     <string name="WndPortal_Warning_Title">Portal Uyarısı!</string>
+    <string name="WndPortal_Warning_Info">Bu seviyede portalı kullanmadın. Buradan ayrılırsan bu portalı bir daha kullanamayacaksın!\nAyrılmak istediğinden emin misin?</string>
+
     <string name="PortalGate_Name">Portal</string>
+    <string name="PortalGate_Desc">Portalın yüzeyindeki çizikler tuhaf bir şekil oluşturuyor. Sanki uzaklara giden dev bir tünel gibi. Ama yanından bakıldığında, neredeyse düz olduğu açıkça görülüyor.</string>
+    <string name="PortalGate_Desc_Activated">Portal parlak bir madde saçıyor. Merkezinden gelen dalgalanmalar olmasa bile, mükemmel bir şekilde hareketsiz görünüyor.</string>
+
+    <string name="PortalGate_Activated">Antik portal uyandı!</string>
     <string name="PortalGate_Used">Portala dokundun ve... hiçbir şey olmadı.</string>
 
+    <string name="PortalExit_Desc">Bu portal %snın ilk seviyesine götürecek</string>
     <string name="PortalExit_Desc_SpiderNest">Örümcek Zindanı</string>
     <string name="PortalExit_Desc_Necropolis">Ölü Diyarı</string>
     <string name="PortalExit_Desc_IceCaves">Buz Mağaraları</string>
