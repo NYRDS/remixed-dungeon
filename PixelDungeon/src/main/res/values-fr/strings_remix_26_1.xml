@@ -24,7 +24,7 @@
     <string name="HealerNPC_Name">prêtre de la ville</string>
     <string name="HealerNPC_Gender">masculin</string>
     <string name="HealerNPC_Name_Objective">prêtre de la ville</string>
-    <string name="HealerNPC_Desc">Un vieil homme, dont on pourrait penser qu\'il fabrique des baguettes magiques.</string>
+    <string name="HealerNPC_Desc">Un vieil homme, dont on pourrait penser qu\'il fabrique des sceptres magiques.</string>
     <string name="HealerNPC_Message1">Soins gratuits pour chaque aventurier !</string>
     <string name="HealerNPC_Message2">Revenez quand vous ne vous sentez pas bien ou que la faim vous tenaille ! </string>
     <string name="HealerNPC_Message3">Je me demande bien pourquoi l\'église ne nous permet pas de porter des chapeaux... Il fait vraiment froid dehors. </string>
@@ -33,7 +33,7 @@
     <string name="ServiceManNPC_Name">employé</string>
     <string name="ServiceManNPC_Gender">masculin</string>
     <string name="ServiceManNPC_Name_Objective">employé</string>
-    <string name="ServiceManNPC_Desc">Un travailleur normal d\'un établissement local.</string>
+    <string name="ServiceManNPC_Desc">Un employé classique d\'un établissement local.</string>
 
     <!-- STRINGS OF TownShopkeeper CLASS -->
     <string name="TownShopkeeper_Name">commerçant</string>
@@ -44,20 +44,20 @@
     <string name="WndMovieTheatre_Watch">voir un film</string>
     <string name="WndMovieTheatre_No">s\'en aller</string>
     <string name="WndMovieTheatre_Bye">Revenez quand vous le voulez, nous serons ravis de vous revoir ! </string>
-    <string name="WndMovieTheatre_Instruction">Bienvenu dans notre salle de cinéma ! Nous offrons un service spécial, car vous pouvez voir un film gratuitement, et si vous le regardez jusqu\'au bout, vous recevrez une récompose de %dpièces !</string>
+    <string name="WndMovieTheatre_Instruction">La bienvenue dans notre salle de cinéma ! Nous offrons un service spécial, car vous pouvez voir un film gratuitement, et si vous le regardez jusqu\'au bout, vous recevrez une récompense de %d pièces !</string>
     <string name="WndMovieTheatre_Title">Salle de cinéma</string>
     <string name="WndMovieTheatre_Thank_You">Merci de votre participation !</string>
 
     <!-- STRINGS OF WndPriest CLASS -->
-    <string name="WndPriest_Heal">soins - %dpièces</string>
-    <string name="WndPriest_Instruction_m">Soit le bienvenu mon fils à la sainte église du Grand Santa Seigneur des Profondeurs ! Malheureusement, il m\'est impossible de te laisser, car le bâtiment est en reconstruction. Mais si tu as besoin de te faire soigner et à manger, je peux t\'aider pour %dpièces d\'or. </string>
-    <string name="WndPriest_Instruction_f">Soit la bienvenue ma fille à la sainte église du Grand Santa Seigneur des Profondeurs ! Malheureusement, il m\'est impossible de te laisser, car le bâtiment est en reconstruction. Mais si tu as besoin de te faire soigner et à manger, je peux t\'aider pour %dpièces d\'or. </string>
+    <string name="WndPriest_Heal">soins - %d pièces</string>
+    <string name="WndPriest_Instruction_m">Soyez le bienvenu mon fils à la sainte église du Grand Santa Seigneur des Profondeurs ! Malheureusement, il m\'est impossible de vous laisser entrer, car le bâtiment est en reconstruction. Mais si vous avez besoin de soins et à manger, je peux vous aider pour %d pièces d\'or. </string>
+    <string name="WndPriest_Instruction_f">Soyez la bienvenue ma fille à la sainte église du Grand Santa Seigneur des Profondeurs ! Malheureusement, il m\'est impossible de vous laisser entrer, car le bâtiment est en reconstruction. Mais si vous avez besoin de soins et à manger, je peux vous aider pour %d pièces d\'or. </string>
     <string name="WndPriest_Title">Prêtre de la ville</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_roof_name">Toit</string>
-    <string name="town_deco_roof_desc">Une tuile simple du toit.</string>
+    <string name="town_deco_roof_desc">Une tuile ordinaire du toit.</string>
 
     <string name="town_deco_wall_name">Mur</string>
     <string name="town_deco_wall_desc">Un mur simple en rondins.</string>
@@ -66,19 +66,19 @@
     <string name="town_deco_snow_desc">Malgré les rumeurs courant sur la popularité de cet endroit auprès des aventuiers, il y a un bon paquet de neige dans les environs, comme si jamais personne ne mettait les pieds dehors.</string>
 
     <string name="town_deco_cross_name">Croix</string>
-    <string name="town_deco_cross_desc">Un croix argentée solide, symbole de la religion locale - \"Les Témoins de Santa Seigneur des Profondeurs\".</string>
+    <string name="town_deco_cross_desc">Une solide croix argentée, symbole de la religion locale - \"Les Témoins de Santa Seigneur des Profondeurs\".</string>
 
     <string name="town_deco_bell_name">Cloche</string>
     <string name="town_deco_bell_desc">On dirait que personne n\'a plus fait sonner cette cloche typique depuis un moment. La corde est introuvable. </string>
 
     <string name="town_deco_bell_tower_name">Clocher</string>
-    <string name="town_deco_bell_tower_desc">Traditionnellement, les cloche d\'une église sont installées dans de hauts clochers pour qu\'elles puissent être entendues de loin.</string>
+    <string name="town_deco_bell_tower_desc">Traditionnellement, les cloches d\'une église sont installées dans de hauts clochers pour qu\'elles puissent être entendues de loin.</string>
 
     <string name="town_deco_chimney_name">Cheminée</string>
     <string name="town_deco_chimney_desc">Une cheminée en pierre accompagne d\'ordinaire les maisons construites dans les régions soumises à un climat rigoureux. </string>
 
     <string name="town_deco_window_name">Fenêtre</string>
-    <string name="town_deco_window_desc">Fenêtre en verre classique, rien de particulier.</string>
+    <string name="town_deco_window_desc">Fenêtre standard en verre, rien de particulier.</string>
 
     <string name="town_deco_door_name">Porte</string>
     <string name="town_deco_door_desc">Une simple porte en bois.</string>
