@@ -59,8 +59,8 @@ public class LastLevel extends Level {
 		entrance = SIZE * getWidth() + SIZE / 2 + 1;
 		map[entrance] = Terrain.ENTRANCE;
 
-		setExit(entrance - getWidth() * SIZE,0);
-		map[getExit(0)] = Terrain.LOCKED_EXIT;
+		//setExit(entrance - getWidth() * SIZE,0);
+		//map[getExit(0)] = Terrain.LOCKED_EXIT;
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 		map[pedestal] = Terrain.PEDESTAL;
