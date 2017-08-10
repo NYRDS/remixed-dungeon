@@ -1,7 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenBow CLASS -->
+    <string name="ElvenBow_Name">arc d\'elf</string>
+    <string name="ElvenBow_Info">Un exemple exceptionnel de l\'artisanat des elfs. Cet arc est clairement plus efficace et précis qu\'un arc en bois classique.</string>
+
     <!-- STRINGS OF RatHide CLASS -->
     <string name="RatHide_Name">peau de rat</string>
+    <string name="RatHide_Info">Un petit morceau répugnant de chair et de poils. Est-ce que ça peut vraiment être utile à quelqu\'un ? </string>
+
     <!-- STRINGS OF RatArmor CLASS -->
     <string name="RatArmor_Name">Armure en rats</string>
     <string name="RatArmor_Info">Une armure cuir de rats. Ce n\'est probablement non contagieux</string>
@@ -11,19 +18,63 @@
     <string name="PlagueDoctorNPC_Name">médecin de la peste</string>
     <string name="PlagueDoctorNPC_Gender">masculin</string>
     <string name="PlagueDoctorNPC_Name_Objective">médecin de la peste</string>
+    <string name="PlagueDoctorNPC_Desc">Cet homme bossu est complètement recouvert de cuir. Il sent très fort les préparations médicinales et... l\'aïl ?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Rapportez moi %d peaux de rat.</string>
+    <string name="PlagueDoctorNPC_Quest_End">Ah, merci ! J\'espère que celles-ci contiennent une trace de la maladie. Mes précédents échantillons étaient tous inoffensifs. Je vous ai préparé ça en attendant votre retour. </string>
+    <string name="PlagueDoctorNPC_After_Quest">Je vais leur montrer, je vais leur montrer à tous !</string>
+    <string name="Journal_PlagueDoctorNPC">Médecin de la peste</string>
+
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">villageois</string>
+    <string name="TownsfolkMovieNPC_Gender">masculin</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">villageois</string>
+    <string name="TownsfolkMovieNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers. </string>
+    <string name="TownsfolkMovieNPC_Message">Est-ce que vous connaissez ce service spécial offert par la \"salle de cinéma\" ? Trop dommage qu\'un truc aussi étrange que l\'\"Internet\" soit nécessaire... Jamais entendu parler de ça.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Name">bibliothécaire</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
+    <string name="LibrarianNPC_Name_Objective">bibliothécaire</string>
+    <string name="LibrarianNPC_Desc">Quelqu\'un de très timide, portant un tricot mohair démesuré et des lunettes aux verres très épais.</string>
+    <string name="LibrarianNPC_Message_Not_Ready">Je... je suis désolé, la... la libraire n\'est pas ouverte... encore.</string>
+
+
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">villageois</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">villageois</string>
+    <string name="TownsfolkSilentNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers. </string>
     <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>
 
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">Navré, mais ce bâtiment n\'est pas encore prêt !</string>
+
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">Bella</string>
+    <string name="BellaNPC_Gender">féminin</string>
+    <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_Desc">Une fille tout à fait bon chic bon genre. Toute son apparence semble vous dire \"Je suis trop bien pour des gens comme toi\".</string>
+    <string name="BellaNPC_Message">Je ne porte aucun intérêt aux membres de la populace comme toi.</string>
+    <string name="BellaNPC_Amulet_M">Oh, salut beau mec, qu\'est-ce que tu portes là ? Ah, quelle merveilleuse amulette ! Toi... tu te hisses bien au-dessus de tous ces roturiers. Pourquoi ne pas faire quelques pas ensemble et parler de futur mutuel ?</string>
+    <string name="BellaNPC_Amulet_F">Oh, salut ma belle, qu\'est-ce que tu portes là ? Ah, quelle merveilleuse amulette ! Toi... tu est si resplendissante par rapport à tous ces roturiers. Pourquoi ne pas faire quelques pas ensemble et parler de futur mutuel ?</string>
+    <string name="BellaNPC_Angry">Comme oses-tu, membre de la plèbe !</string>
+    <string name="BellaNPC_Yes_End_Game">Bien sûr (Terminer la partie)</string>
     <string name="BellaNPC_No">Non, pas avec toi</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
-    <string name="ServiceManNPC_NoConnection">Je suis désolé, vous ne pouvez utiliser ce service maintenant. (La connection internet est requisse)</string>
+    <string name="ServiceManNPC_NoConnection">Je suis désolé, vous ne pouvez pas utiliser ce service pour le moment. (Une connection Internet est requise)</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_common_door_name">Porte</string>
+    <string name="town_deco_common_door_desc">Un aventurier bien éduqié ne devrait pas fouler une propriété privée sans permission.</string>
+
+    <string name="town_deco_dungeon_door_name">Entrée</string>
     <string name="town_deco_dungeon_door_desc">Entrée du donjon</string>
 
 </resources>

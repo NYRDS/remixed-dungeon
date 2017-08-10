@@ -3,5 +3,25 @@
     <!-- Window descriptions -->
     <!-- STRINGS OF WndPlayGames CLASS -->
     <string name="WndPortal_Title">Portal</string>
+    <string name="WndPortal_Info">Este portal te permite volver al pueblo. Parece muy inestable, posiblemente no dure mucho tiempo activo.\n¿Quieres usarlo?</string>
+    <string name="WndPortal_Info_Return">Este portal te llevará de nuevo a la mazmorra.\n¿Quieres usarlo?</string>
+
+    <string name="WndPortal_Warning_Title">¡Advertencia del Portal!</string>
+    <string name="WndPortal_Warning_Info">No has usado el portal de este nivel.¡Si sales, no podrás usar este portal!\n¿Seguro que quieres continuar?</string>
+
     <string name="PortalGate_Name">Portal</string>
-    </resources>
+    <string name="PortalGate_Desc">El tallado en la superficie de este portal tiene un patrón muy peculiar. Se ve como un túnel gigante que termina muy lejos de aquí. Pero mirándolo desde un lado, se puede ver que es casi plano en la superficie.</string>
+    <string name="PortalGate_Desc_Activated">El portal está expeliendo algún tipo de material brillante. Se vería perfectamente inmóvil, si no fuera por las ondas que están en el centro.</string>
+
+    <string name="PortalGate_Activated">¡El antiguo portal ha despertado!</string>
+    <string name="PortalGate_Used">Has tocado el portal y... no ha pasado nada.</string>
+
+    <string name="PortalExit_Desc">Este portal te llevará al primer nivel de la(s)%s .</string>
+    <string name="PortalExit_Desc_SpiderNest">Guarida Arácnida</string>
+    <string name="PortalExit_Desc_Necropolis">Necrópolis</string>
+    <string name="PortalExit_Desc_IceCaves">Cuevas de Hielo</string>
+
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Piedra Sangrienta</string>
+</resources>

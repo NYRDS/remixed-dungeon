@@ -1,3 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">Portail</string>
+    <string name="WndPortal_Info">Ce portail vous permettra de retourner en ville. Il a l\'air passablement instable, et pourrait ne pas être actif encore très longtemps.\nVoulez-vous l\'utiliser ?</string>
+    <string name="WndPortal_Info_Return">Ce portail vous ramènera dans le donjon.\nVoulez-vous l\'utiliser ?</string>
+
+    <string name="WndPortal_Warning_Title">Avertissement du portail !</string>
+    <string name="WndPortal_Warning_Info">Vous n\'avez pas utilisé le portail de ce niveau. Vous ne pourrez plus l\'employer si vous partez !\n Etes-vous sûr de vouloir partir ?</string>
+
+    <string name="PortalGate_Name">Portail</string>
+    <string name="PortalGate_Desc">Des gravures sur la surface de ce portail forment un motif étrange. On dirait qu\'un tunnel géant mène à quelque lieu lointain. Mais en regardant depuis le côté, vous constatez clairement que la surface du portal est en fait presque plate. </string>
+    <string name="PortalGate_Desc_Activated">Une sorte de matière lumineuse suinte du portail. Celui-ci semble immobile, si ce n\'était ces ondulations naissant du centre...</string>
+
+    <string name="PortalGate_Activated">L\'antique portail s\'est réveillé !</string>
+    <string name="PortalGate_Used">Vous touchez le portail et... rien ne se passe.</string>
+
+    <string name="PortalExit_Desc">Ce portail vous amènera au premier niveau de %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Antre des araignées</string>
+    <string name="PortalExit_Desc_Necropolis">Nécropole</string>
+    <string name="PortalExit_Desc_IceCaves">Caves glacées</string>
+
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Pierre de sang</string>
+</resources>
