@@ -9,6 +9,8 @@
     <!-- STRINGS OF ElvenDagger CLASS -->
     <string name="ElvenDagger_Name">Dague Elfique</string>
     <string name="ElvenDagger_Info">Cette arme est faite d\'un alliage spécial, la rendant plus légère qu\'une dague classique.</string>
+    <string name="ElvenDagger_Gender">masculin</string>
+
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
     <string name="IceGuardianCoreModule_Name">Cœur du Gardien de Glace</string>

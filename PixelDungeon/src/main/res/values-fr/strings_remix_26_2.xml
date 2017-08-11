@@ -2,7 +2,7 @@
 <resources>
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
-    <string name="ServiceManNPC_NotReady">Désolé, le film n\'est pas encore prêt, tu peux réessayer dans quelques minutes.</string>
+    <string name="ServiceManNPC_NotReady">Désolé, le film n\'est pas encore prêt, vous pouvez réessayer dans quelques minutes.</string>
     <string name="ServiceManNPC_Limit">Je suis navré, mais un nouvel aventurier ne peut voir que %d films au total.</string>
     <string name="WndMovieTheatre_Sorry">Quelque chose a cloché, nous n\'avons pas pu obtenir votre récompense de la vidéo...</string>
     <string name="WndMovieTheatre_Ok">Vous avez regardé une vidéo \"récompense\" avec succès !</string>

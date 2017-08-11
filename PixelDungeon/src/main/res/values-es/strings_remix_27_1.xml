@@ -22,6 +22,10 @@
     <string name="PortalExit_Desc_IceCaves">Cuevas de Hielo</string>
 
 
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Devorar</string>
+
     <!-- STRINGS OF StoneBlood CLASS -->
     <string name="StoneBlood_Buff">Piedra Sangrienta</string>
 </resources>
