@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
+import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -156,17 +157,10 @@ public enum HeroClass {
 		ring.cursed = true;
 		hero.collect(ring);
 		hero.collect(new BraceletOfDevour());
-		hero.collect(new RingOfStoneWalking().identify());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
 
-		hero.collect(new Keyring());
-		hero.collect(new PotionBelt());
-		hero.collect(new Quiver());
-		hero.collect(new ScrollHolder());
-		hero.collect(new SeedPouch());
-		hero.collect(new WandHolster());
-		hero.collect(new CandyOfDeath());
+		hero.collect(new LloydsBeacon());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 
