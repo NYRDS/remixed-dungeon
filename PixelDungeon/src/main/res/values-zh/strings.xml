@@ -7,11 +7,11 @@
 
 然而，從未有人成功取回Yendor護符——那個據說被藏在地牢深處的東西。
 
-您認為您已經準備好面對這個挑戰對這個挑戰了，更重要的是，你感覺到命運正向您投以一絲微笑。現在，是時候展開屬於您的冒險了！</string>
+您認為您已經準備好面對這個挑戰了，更重要的是，你感覺到命運正向您投以一絲微笑。現在，是時候展開屬於您的冒險了！</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">讓這一切結束吧</string>
   <string name="AmuletScene_Stay">我還有心願未了</string>
-  <string name="AmuletScene_Txt">您終於把它握在了手中——Yendor護符。通過它的力量，您可以征服世界，也可以為人們帶來和平與繁榮，或是其他任何事。無論如何，您的命運將永遠改變，遊戲也將要終結。或者，您也可以作為一個凡人再在這裏
+  <string name="AmuletScene_Txt">您終於把Yendor護符握在手中。通過它的力量，您可以征服世界，也可以為人們帶來和平與繁榮，或是其他任何事。無論如何，您的命運將永遠改變，遊戲也將要終結。或者，您也可以作為一個凡人再在這裏
 逗留一會。</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">歡迎來到像素地牢的%d層！</string>
@@ -35,11 +35,11 @@
     <item>%s殺了您...</item>
   </string-array>
   <string-array name="Char_Defeat">
-    <item>%1$s擊败了%2$s</item>
-    <item>%1$s擊败了%2$s</item>
-    <item>%1$s擊败了%2$s</item>
+    <item>%1$s擊敗了%2$s</item>
+    <item>%1$s擊敗了%2$s</item>
+    <item>%1$s擊敗了%2$s</item>
   </string-array>
-  <string name="Char_YouMissed">%1$s %2$s了你的攻擊</string>
+  <string name="Char_YouMissed">%1$s %2$s了您的攻擊</string>
   <string name="Char_SmbMissed">%1$s%2$s了%3$s 的攻擊</string>
   <string name="Char_OutParalysis">疼痛使%s的麻痺解除了</string>
   <string-array name="Char_StaDodged">
@@ -72,15 +72,15 @@
     <item>盡早鑒定藥水和卷軸。有備無患。</item>
     <item>饑餓不損皮毛，但饑腸轆轆時定必有切膚之痛。</item>
     <item>突襲有更大命中機會。比如說，您可以躲在門後，給下一個開門的敵人一個「小」驚喜。</item>
-    <item>别讓天狗落跑!</item>
+    <item>别讓天狗落跑！</item>
     <item>像素墟市。錢花得愈多，路走得愈長。</item>
     <item>當您被怪物連續攻擊時，試試躲到門後。</item>
     <item>若您同時被焚身和飄浮著，踏著水面對滅火沒大幫助。</item>
     <item>同時擁有多個復活十字架並沒有任何意義，因為您會在復活時會丢失所有道具。</item>
-    <item>危險! 重型機械可使你受傷，殘廢，甚至死亡!</item>
+    <item>危險! 重型機械可使您受傷，殘廢，甚至死亡!</item>
     <item>像素墟市。 地牢內的一片安全之地。</item>
     <item>升級附魔過的裝備會有毁壞附魔的可能。</item>
-    <item>你可以從嬗變之井裏獲得平時無法獲得的物品。</item>
+    <item>您可以從嬗變之井裏獲得平時無法獲得的物品。</item>
     <item>唯一替武器加上附魔的方法是使用武器升级卷軸。</item>
     <item>上朝覲見，嚴禁刀具!</item>
     <item>像素墟市。给予惡魔獵人最好的優惠!</item>
@@ -109,11 +109,11 @@
   <string name="Journal_Troll">巨魔鐵匠</string>
   <string name="Journal_Imp">野心勃勃的小鬼</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
-  <string name="WndBlacksmith_Prompt">好吧，說好交易要一諾千金，我可以把2件相同的物品合成為一件更好的。</string>
+  <string name="WndBlacksmith_Prompt">好吧，說好交易要一諾千金，我可以把2件相同的物品合成為一件更好質素的。</string>
   <string name="WndBlacksmith_Select">選擇一件物品重鑄</string>
   <string name="WndBlacksmith_Reforge">重鑄它們</string>
   <!--STRINGS OF WndCatalogus CLASS-->
-  <string name="WndCatalogus_Potions">藥水</string>
+  <string name="WndCatalogus_Potions">藥水瓶</string>
   <string name="WndCatalogus_Scrolls">卷軸</string>
   <string name="WndCatalogus_Title">目錄</string>
   <!--STRINGS OF WndChallenges CLASS-->
@@ -132,7 +132,7 @@
   <string name="WndGame_Start">開始新遊戲</string>
   <string name="WndGame_menu">主菜單</string>
   <string name="WndGame_Exit">關閉遊戲</string>
-  <string name="WndGame_Return">返回游戲</string>
+  <string name="WndGame_Return">返回遊戲</string>
   <string name="WndGame_Save">保存</string>
   <string name="WndGame_Load">讀取</string>
   <!--STRINGS OF WndHero CLASS-->
@@ -147,7 +147,7 @@
   <string name="WndHero_StaCatalogus">圖鑒</string>
   <string name="WndHero_StaJournal">遊記</string>
   <!--STRINGS OF WndImp CLASS-->
-  <string name="WndImp_Message">太好了，我的英雄！\n回報方面，我沒有金幣在手，但我有比金幣更好的東西。這個祖傳的戒指據說是我爺爺從一個陣亡的聖骑士指上摘下來，現在就给你了。</string>
+  <string name="WndImp_Message">太好了，我的英雄！\n回報方面，我沒有金幣在手，但我有比金幣更好的東西。這個祖傳的戒指據說是我爺爺從一個陣亡的聖騎士指上摘下來，現在送給您吧。</string>
   <string name="WndImp_Reward">收下戒指</string>
   <!--STRINGS OF WndInfoCell CLASS-->
   <string name="WndInfoCell_Nothing">那裏甚麼也沒有。</string>
@@ -157,10 +157,10 @@
   <string name="WndInfoItem_CrystalChest">水晶寶箱</string>
   <string name="WndInfoItem_Tomb">墳墓</string>
   <string name="WndInfoItem_Skeleton">骸骨</string>
-  <string name="WndInfoItem_WontKnow">直到你打開前，您不會知道裏面有甚麼！</string>
+  <string name="WndInfoItem_WontKnow">直至打開一刻，方曉裏面為何物！</string>
   <string name="WndInfoItem_NeedKey">您需要一把金鑰匙來打開它。</string>
   <string name="WndInfoItem_Inside">您能看到裏面有 %s，但是您需要一把金鑰匙才能打開這個寶箱。</string>
-  <string name="WndInfoItem_Owner">這座墳墓裏可能有一些有用的東西，但它的主人肯定不會讓你帶走它們。</string>
+  <string name="WndInfoItem_Owner">這座墳墓裏可能有一些有用的東西，但它的主人肯定不太歡迎您深入探究。</string>
   <string name="WndInfoItem_Remains">這是您的一個前輩所留下的。也許有甚麼貴重物品在裏面。</string>
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">探險日誌</string>
@@ -181,7 +181,7 @@
   <string name="WndRanking_StaAlchemy">製藥量</string>
   <string name="WndRanking_StaAnkhs">安卡耗用數</string>
   <!--STRINGS OF WndResurrect CLASS-->
-  <string name="WndResurrect_Message">您死了，但您有一次復活的機會，您願意接受嗎？</string>
+  <string name="WndResurrect_Message">您死了，但有一次復活的機會，您願意接受嗎？</string>
   <string name="WndResurrect_Yes">是的，我要繼續戰鬥！</string>
   <string name="WndResurrect_No"> 不，我放棄。</string>
   <!--STRINGS OF WndSadGhost CLASS-->
@@ -191,15 +191,14 @@
   <string name="WndSadGhost_Armor">幽靈的護甲</string>
   <string name="WndSadGhost_Farewell">冒險者，一路好走！</string>
   <!--STRINGS OF WndStory CLASS-->
-  <string name="WndStory_Sewers">這個地牢位於城市的正下方，較靠近地面的樓層是城市的下水道系統，因此不太危險。儘管如此，沒人會認為這裏
-是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
+  <string name="WndStory_Sewers">這個地牢位於城市的正下方，較靠近地面的樓層是城市的下水道系統，因此不太危險。儘管如此，沒人會認為這裏是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
   <string name="WndStory_Prision">為了收納最具威脅的罪犯，此地下監獄於多年前建立。因為要逃出此地極之困難，起初大家都覺得此為上策，但不久之後從地底更深處散發出的黑暗瘴氣在獄中彌漫開去，令該處的罪犯和守衛喪失理智。監獄裏變成一片混亂。秩序、服從、法則、人性通通崩潰。於是城市封鎖了整個監獄，然而尚有些人仍然被鎖上，不能重見天日。</string>
   <string name="WndStory_Caves">這個從廢棄監獄延伸而下的洞穴，早已空無一人。對於地上城市，要開發它難若登天，加上洞內礦物少得可憐，矮人對其嗤之以鼻。曾幾何時，從都市起步到達矮人之都的路途上，有一個小型貿易點。但當矮人之都衰落後，只有無處不在的豺狼人和地下生物還在此地定居。</string>
   <string name="WndStory_Metropolis">矮人都市曾經是最宏偉的矮人城邦。鼎盛時期的矮人們派遣的機械化部隊曾成功擊退過古神及其惡魔軍隊的入侵。但是也有傳聞說，凱旋而歸的戰士同時帶來了腐壞的種子，矮人王國的勝利正是其步向毀滅的開端。</string>
   <string name="WndStory_Halls">很久以前，這片區域曾是矮人都市的郊區。在與古神的戰爭中取得慘勝的矮人已經無力掌控並清理惡魔餘黨。於是存活的爪牙漸漸鞏固了對這裏的控制。現在，這裏被稱為惡魔大廳。
 
 很少有冒險者能夠深入到這種地方...</string>
-  <string name="WndStory_Spiders">許多年前，這是一個充滿魔法石的礦山。但隨著礦脈的枯竭，礦工們紛紛離去，留下了大量的坑道網絡。最後這個地方更被蜘蛛佔領了。雖然這些危險的生物在黑暗中潛伏，但是這嚇不倒一些瘋狂而勇敢的尋寶者和冒險者們，對他們來說，冒險當中的風險當然跟某神秘魔法神器的傳言數掛勾，但說得上是神器，有誰庇抗拒？據說之前有一個為了逃避追捕的女巫進入了這個礦洞，追捕她的士兵由於畏懼黑暗而不敢靠近，只能派人在礦洞門口看守。結果到他們放棄後女巫也沒出現。也許她已找到另一個出口？抑或趁看守不注意時跑了？或者...她在礦洞深處的蜘蛛環抱下，創立自己不見天日的新天地。</string>
+  <string name="WndStory_Spiders">許多年前，這是一個充滿魔法石的礦山。但隨著礦脈的枯竭，礦工們紛紛離去，留下了大量的坑道網絡。最後這個地方更被蜘蛛佔領了。雖然這些危險的生物在黑暗中潛伏，但是這嚇不倒一些瘋狂而勇敢的尋寶者和冒險者們，對他們來說，有關神秘魔法神器的傳言愈多，冒險其間的刺激自然愈多内。但說得上是神器，有誰能抗拒？據說之前有一個為了逃避追捕的女巫進入了這個礦洞，追捕她的士兵由於畏懼黑暗而不敢靠近，只能派人在礦洞門口看守。結果到他們放棄後女巫也沒出現。也許她已找到另一個出口？抑或趁看守不注意時跑了？或者...她在礦洞深處的蜘蛛環抱下，創立自己不見天日的新天地。</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">出售：%1$s-%2$dg</string>
   <string name="WndTradeItem_Buy">以%dg買入</string>
@@ -210,9 +209,8 @@
   <string name="WndTradeItem_Sold">您賣出了你的%1$s，並獲得 %2$d金幣</string>
   <string name="WndTradeItem_Bought">您購買了%1$s花費%2$d金幣</string>
   <!--STRINGS OF WndWandmaker CLASS-->
-  <string name="WndWandmaker_Message">看，汝終於成功了！希望這沒給汝添太多麻煩。誠如吾諾的，您可選取吾其中一枝好法杖。</string>
-  <string name="WndWandmaker_Battle">戰鬥法杖
-</string>
+  <string name="WndWandmaker_Message">終見汝成！望煩沒汝添。誠如吾諾，予君眾善杖擇一。</string>
+  <string name="WndWandmaker_Battle">戰鬥法杖</string>
   <string name="WndWandmaker_NonBattle">輔助法杖
 </string>
   <string name="WndWandmaker_Farawell">祝您好運，%s!</string>
@@ -224,7 +222,7 @@
   <string name="Item_ACDrop">扔下</string>
   <string name="Item_ACThrow">投擲</string>
   <string name="Item_PackFull">您的背包滿了，沒法裝下%s</string>
-  <string name="Item_DirThrow">選擇扔到的地點</string>
+  <string name="Item_DirThrow">選擇投擲目的地</string>
   <!--STRINGS OF EquipableItem CLASS-->
   <string name="EquipableItem_ACEquip">裝備</string>
   <string name="EquipableItem_ACUnequip">取下</string>
@@ -250,7 +248,7 @@
   <!--STRINGS OF DewVial CLASS-->
   <string name="DewVial_Name">露珠瓶</string>
   <string name="DewVial_ACDRINK">飲下</string>
-  <string name="DewVial_Info">您可以將額外的露水裝入瓶中以供之後飲用。如果露水瓶滿了，它會在你將死亡時消耗露珠救活您。</string>
+  <string name="DewVial_Info">您可以將額外的露水裝入瓶中以供之後飲用。如果露水瓶滿了，它會在您瀕死時消耗露珠救活您。</string>
   <string name="DewVial_AutoDrink">空的露水瓶沒法用來治療傷口。</string>
   <string name="DewVial_Collected">您將露水收集到了露水瓶裏。</string>
   <string name="DewVial_Full">您的露珠瓶滿了！</string>
@@ -261,12 +259,12 @@
   <string name="Gold_Info">一堆共計%d金幣</string>
   <string name="Gold_Info1">一個金幣</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
-  <string name="KindOfWeapon_EquipCursed">您不由自主地握紧了您的%s</string>
+  <string name="KindOfWeapon_EquipCursed">您不由自主地握緊了您的%s</string>
   <!--STRINGS OF LloidsBeacon CLASS-->
   <string name="LloidsBeacon_Name">萊德傳送信標</string>
   <string name="LloidsBeacon_ACSet">設置傳送點</string>
   <string name="LloidsBeacon_ACReturn">返回傳送點</string>
-  <string name="LloidsBeacon_Info">萊德傳送信標是一個複雜的魔法裝置，可以讓您返回到過去的一個地方。</string>
+  <string name="LloidsBeacon_Info">萊德傳送信標是一個複雜的魔法裝置，可以讓您返回到過往遊經之處。</string>
   <string name="LloidsBeacon_Preventing">某種強大的魔法力量阻止了您使用萊德傳送信標！</string>
   <string name="LloidsBeacon_Creatures">附近的生物的精神干擾阻止了您使用萊德傳送信標！</string>
   <string name="LloidsBeacon_Return">萊德傳送信標設置成功，現在您已經隨時可以回來了。</string>
@@ -287,7 +285,7 @@
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">火把</string>
   <string name="Torch_ACLight">點燃</string>
-  <string name="Torch_Info">這在沒什麼光線照明的惡魔大廳裡是一件不可缺少的物品。</string>
+  <string name="Torch_Info">這在沒什麼光線照明的惡魔大廳裏是一件不可缺少的物品。</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">磨刀石</string>
   <string name="Weightstone_ACApply">使用</string>
@@ -307,16 +305,16 @@
   <string name="Keyring_Info">這是一個銅鑰匙圈，它能讓你將你的鑰匙和其他物品分開存放。</string>
   <!--STRINGS OF ScrollHolder CLASS-->
   <string name="ScrollHolder_Name">卷軸筒</string>
-  <string name="ScrollHolder_Info">您可以把許多捲軸裝入筒內，這可避免它們被燒毀。</string>
+  <string name="ScrollHolder_Info">您可以把許多捲軸裝入筒內，以免它們被燒毀。</string>
   <!--STRINGS OF SeedPouch CLASS-->
   <string name="SeedPouch_Name">種子袋</string>
   <string name="SeedPouch_Info">裝種子的袋子，十分方便。</string>
   <!--STRINGS OF WandHolster CLASS-->
   <string name="WandHolster_Name">法杖套</string>
-  <string name="WandHolster_Info">這個法杖套是由一些有異國情調的動物皮革製成的，它可以裝入許多%d法杖。</string>
+  <string name="WandHolster_Info">這個法杖套是由一些有異國情調的動物皮革製成的，它可以裝入%d 枝法杖。</string>
   <!--STRINGS OF PotionBelt CLASS-->
-  <string name="PotionBelt_Info">您可以把許多藥水放在帶邊，以免凍鋒令他們破碎。</string>
-  <string name="PotionBelt_Name">藥水带</string>
+  <string name="PotionBelt_Info">您可以把許多藥水瓶放在帶邊，以免凍鋒令瓶身碎裂。</string>
+  <string name="PotionBelt_Name">藥水腰帶</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
   <string name="GoldenKey_Name">金鑰匙</string>
@@ -327,7 +325,7 @@
   <string name="IronKey_FromDepth">第%d層的鐵鑰匙</string>
   <!--STRINGS OF SkeletonKey CLASS-->
   <string name="SkeletonKey_Name">骷髏鑰匙</string>
-  <string name="SkeletonKey_Info">此鑰匙看上來一本正經，它的頭型呈骷髏頭狀。可能能用它打開芋某些一本正經的門。</string>
+  <string name="SkeletonKey_Info">此鑰匙看上來一本正經，它的頭型呈骷髏頭狀。可能能用它打開某些一本正經的門。</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">屍塵</string>
@@ -338,7 +336,7 @@
   <string name="DarkGold_Info">這種金屬名中的暗並非源於其色澤（它看起來和普通金子一樣），而是因為它會在陽光下熔化，在地表上毫無用處。</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">乾枯玫瑰</string>
-  <string name="DriedRose_Info">這玫瑰在很久以前就已經枯萎了，但不知為何它的花瓣卻保留完好。</string>
+  <string name="DriedRose_Info">這玫瑰在很久以前就已經枯萎了，但不知為何它的花瓣卻能完好地保留着。</string>
   <string name="DriedRose_Info2">這東西還沒完全喪失它的魅力。這迷人得讓您想永遠留下它。</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">矮人徽記</string>
@@ -352,7 +350,7 @@
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">巨大老鼠頭骨</string>
   <string name="RatSkull_Info">這看起來是個很好的戰利品，但掛在牆上也太難聞了。</string>
-  <string name="RatSkull_Info2">另一方面，這展示它的擁有者殺鼠的能力，即使是這麼大且難聞的。</string>
+  <string name="RatSkull_Info2">另一方面，擁有此物者可藉此炫耀其宰鼠的威風，哪怕該老鼠有多大﹑多難聞。</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <string name="ConfusionGas_Info">迷幻氣體在該處飄浮著。</string>
@@ -366,13 +364,13 @@
   <string name="ToxicGas_Info">綠色毒氣在該處飄浮著。</string>
   <string name="ToxicGas_Info1">您被吸入的毒氣殺死了……</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
-  <string name="WaterOfAwareness_Info">智慧的力量正從這口井的水里湧出。喝下井水能揭示所有已裝備物品的秘密。</string>
-  <string name="WaterOfAwareness_Procced">在您小酌一口時，您感覺到知識湧入了你的頭腦。現在您對已裝備的物品瞭如指掌。同時，您察覺到了這一層所有的道具，並且掌握了它們的秘密。</string>
+  <string name="WaterOfAwareness_Info">智慧的力量正從這口井的水裏湧出。喝下井水能揭示所有已裝備物品的秘密。</string>
+  <string name="WaterOfAwareness_Procced">在您小酌一口時，您感覺到知識湧入了您的頭腦。現在您對已裝備的物品瞭如指掌。同時，您察覺到了這一層所有的道具，並且掌握了它們的秘密。</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
   <string name="WaterOfHealth_Info">生命的力量正從這口井的水里湧出。飲下井水能治療您的傷口並填滿您的肚子。</string>
   <string name="WaterOfHealth_Procced">就在您小酌一口时，您感覺身上的傷口完全癒合了。</string>
   <!--STRINGS OF WaterOfTransmutation CLASS-->
-  <string name="WaterOfTransmutation_Info">變化的力量正在從這口井的水里湧出。扔進一件物品以將其轉化為其他物品。</string>
+  <string name="WaterOfTransmutation_Info">變化的力量正在從這口井的水裏湧出。扔進一件物品以將其轉化為其他物品。</string>
   <!--STRINGS OF Web CLASS-->
   <string name="Web_Info">這兒蓋滿了粘膩的網。</string>
   <!--PACKAGE /actors/buffs-->
@@ -388,7 +386,7 @@
   <!--STRINGS OF Burning CLASS-->
   <string name="Burning_Info">燃燒</string>
   <string name="Burning_Burns">%s被燒掉了！</string>
-  <string name="Burning_Death">您燒殆盡了......</string>
+  <string name="Burning_Death">您被燒成化灰了……</string>
   <!--STRINGS OF Charm CLASS-->
   <string name="Charm_Info">魅惑</string>
   <!--STRINGS OF Combo CLASS-->
@@ -398,7 +396,7 @@
   <string name="Cripple_Info">殘疾</string>
   <!--STRINGS OF Frost CLASS-->
   <string name="Frost_Info">冰凍</string>
-  <string name="Frost_Shatter">寒鋒使%s瓶碎了！</string>
+  <string name="Frost_Shatter">寒鋒令%s瓶碎裂了！</string>
   <!--STRINGS OF Fury CLASS-->
   <string name="Fury_Info">暴怒</string>
   <!--STRINGS OF GasesImmunity CLASS-->
@@ -416,7 +414,7 @@
   </string-array>
   <string name="Hunger_Death">您餓死了……</string>
   <string name="Hunger_Info1">饑餓</string>
-  <string name="Hunger_Info2">饑餓難耐</string>
+  <string name="Hunger_Info2">饑腸轆轆</string>
   <!--STRINGS OF Invisibility CLASS-->
   <string name="Invisibility_Info">隱形</string>
   <!--STRINGS OF Levitation CLASS-->
@@ -444,7 +442,7 @@
   <!--STRINGS OF Vertigo CLASS-->
   <string name="Vertigo_Info">眩暈</string>
   <!--STRINGS OF Weakness CLASS-->
-  <string name="Weakness_Info">虚弱</string>
+  <string name="Weakness_Info">虛弱</string>
   <!--PACKAGE /actors/hero-->
   <!--STRINGS OF Belongings CLASS-->
   <string name="Belongings_Name">背包</string>
