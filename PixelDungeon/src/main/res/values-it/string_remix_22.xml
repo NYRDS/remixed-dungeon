@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
-  <string name="ShadowLord_Name">signore dell\' ombra</string>
+  <string name="ShadowLord_Name">signore dell\'ombra</string>
   <string name="ShadowLord_Gender">maschile</string>
-  <string name="ShadowLord_Name_Objective">Signore dell\' Ombra</string>
-  <string name="ShadowLord_Desc">Questa creatura oscura è formata da pura malvagità, considerata la sua potenza molti sono portati a credere egli sia un vecchio Dio. Altri lo considerano semplicemente come un guardiano delle camere del vecchio Dio.</string>
+  <string name="ShadowLord_Name_Objective">Signore dell\'Ombra</string>
+  <string name="ShadowLord_Desc">Questa creatura oscura è formata da pura malvagità, considerata la sua potenza molti sono portati a credere che sia un vecchio Dio. Altri lo considerano semplicemente come un guardiano delle camere del vecchio Dio.</string>
   <string name="ShadowLord_Intro">Preparati!</string>
   <string name="ShadowLord_Death">Nooooo...</string>
   <string name="AllowStatisticsCollectionScene_Title">Raccolta delle statistiche d\'utilizzo</string>
-  <string name="AllowStatisticsCollectionScene_Request">Se lo consentirai, Remixed Pixel Dungeon raccogierà le statistiche dell\'uso.
+  <string name="AllowStatisticsCollectionScene_Request">Se lo consentirai, Remixed Pixel Dungeon raccoglierà le statistiche d\'uso.
 Questi dati saranno usati per:\n
-- Individuare e risolvere vari difetti minori (Per gli errori gravi ti sarà chiesto esplicitamente di inviare un rapporto.)\n
+- Individuare e risolvere vari difetti minori (per gli errori gravi ti sarà chiesto esplicitamente di inviare un rapporto)\n
 - Migliorare il bilanciamento del gioco\n
 - Risolvere problemi di prestazione con dispositivi specifici\n
 - Pubblicare di tanto in tanto divertenti fatti statistici\n
-Puoi cambiare la tua decisione quando vuoi (Clicca l\'icona dei grafici nella schermata del titolo)</string>
+Puoi cambiare la tua decisione quando vuoi (clicca l\'icona dei grafici nella schermata del titolo)</string>
   <string name="AllowStatisticsCollectionScene_Allow">Consenti </string>
   <string name="AllowStatisticsCollectionScene_Deny">Nega</string>
   <string name="Darkness_Info">Sembrerebbero dei frammenti di oscurità eterna fluttuanti nell\'aria</string>
