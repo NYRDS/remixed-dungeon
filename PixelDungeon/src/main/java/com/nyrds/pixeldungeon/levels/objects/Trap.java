@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.levels.traps.ParalyticTrap;
 import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
 import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
 import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,7 +23,15 @@ import org.json.JSONObject;
 
 public class Trap extends LevelObject {
 
-	private static final Class<? >[] traps = new Class<?>[]{ToxicTrap.class,FireTrap.class,ParalyticTrap.class,PoisonTrap.class,AlarmTrap.class,LightningTrap.class,GrippingTrap.class,SummoningTrap.class};
+	private static final Class<? >[] traps = new Class<?>[]{
+			ToxicTrap.class,
+			FireTrap.class,
+			ParalyticTrap.class,
+			PoisonTrap.class,
+			AlarmTrap.class,
+			LightningTrap.class,
+			GrippingTrap.class,
+			SummoningTrap.class};
 
 	@Packable
 	private String kind;
@@ -59,9 +66,12 @@ public class Trap extends LevelObject {
 			if (trigger != null) {
 				trigger.doTrigger(targetCell, hero);
 			}
+		} else {
+			sprite.reset(usedImage());
 		}
 
-		GLog.w("Aha!");
+
+
 		return super.interact(hero);
 	}
 
@@ -107,4 +117,6 @@ public class Trap extends LevelObject {
 	public int image() {
 		return 0;
 	}
+
+	public int usedImage() {return 1;}
 }

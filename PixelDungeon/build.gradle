@@ -82,8 +82,6 @@ dependencies {
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.1'
 
-
-
     compile project(':annotation')
     annotationProcessor project(':processor')
 }
