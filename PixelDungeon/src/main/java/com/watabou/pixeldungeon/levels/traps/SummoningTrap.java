@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.traps;
 
 import android.support.annotation.Nullable;
 
+import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -28,7 +29,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
-public class SummoningTrap {
+public class SummoningTrap implements ITrigger {
 
 	public static void trigger(int pos, @Nullable Char c) {
 
@@ -75,5 +76,10 @@ public class SummoningTrap {
 			}
 		} while (!mob.canSpawnAt(level, cell));
 		return mob;
+	}
+
+	@Override
+	public void doTrigger(int cell, Char ch) {
+		trigger(cell,ch);
 	}
 }

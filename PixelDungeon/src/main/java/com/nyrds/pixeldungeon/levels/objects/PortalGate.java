@@ -1,12 +1,12 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
 import org.json.JSONException;
@@ -14,11 +14,18 @@ import org.json.JSONObject;
 
 public class PortalGate extends LevelObject {
 
-	protected boolean activated = false;
+
 	protected boolean animationRunning = false;
+
+	protected boolean activated = false;
+
+	@Packable
 	protected boolean used = false;
+
+	@Packable
 	protected boolean infiniteUses = false;
 
+	@Packable
 	protected int uses;
 
 	protected static final String TXT_USED = Game.getVar(R.string.PortalGate_Used);
@@ -54,23 +61,6 @@ public class PortalGate extends LevelObject {
 			}
 		}
 
-	}
-
-	private static final String USED = "used";
-	private static final String INFINITE_USES = "infiniteUses";
-
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		used = bundle.optBoolean(USED, false);
-		infiniteUses =bundle.optBoolean(INFINITE_USES, false);
-	}
-
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
-		bundle.put(USED, used);
-		bundle.put(INFINITE_USES, infiniteUses);
 	}
 
 	@Override

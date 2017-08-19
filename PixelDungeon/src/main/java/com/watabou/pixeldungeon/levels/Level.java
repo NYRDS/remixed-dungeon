@@ -130,6 +130,7 @@ public abstract class Level implements Bundlable {
 		throw new TrackedRuntimeException(new Exception("no exit at this cell"));
 	}
 
+	@Nullable
 	public LevelObject getLevelObject(int pos) {
 		return objects.get(pos);
 	}

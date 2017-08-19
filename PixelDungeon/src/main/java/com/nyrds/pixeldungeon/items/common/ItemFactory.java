@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.items.common;
 
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
@@ -186,16 +184,21 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class ItemFactory {
 
-	static private BiMap<String, Class<? extends Item>> mItemsList = HashBiMap.create();
+	static private Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
+	static private Map<Class<? extends Item>,String>  mNamesList = new HashMap<>();
 	static {
 		initItemsMap();
 	}
 
 	private static void registerItemClass(Class<? extends Item> itemClass) {
 		mItemsList.put(itemClass.getSimpleName(), itemClass);
+		mNamesList.put(itemClass,itemClass.getSimpleName());
 	}
 
 
@@ -417,7 +420,8 @@ public class ItemFactory {
 	}
 
 	public static String itemNameByClass(Class<? extends Item> clazz) {
-		String ret = mItemsList.inverse().get(clazz);
+
+		String ret = mNamesList.get(clazz);
 		if(ret==null) {
 			EventCollector.logEvent("Unregistered entry",clazz.getCanonicalName());
 			ret = "ClothArmor";

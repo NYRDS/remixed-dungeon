@@ -32,6 +32,7 @@ public class LevelObjectsFactory {
 		registerObjectClass(LibraryBook.class);
 		registerObjectClass(PortalGateSender.class);
 		registerObjectClass(PortalGateReceiver.class);
+		registerObjectClass(Trap.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {

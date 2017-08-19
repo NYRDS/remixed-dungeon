@@ -41,16 +41,6 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-	}
-
-	@Override
 	public void burn() {
 
 		if (burned) {

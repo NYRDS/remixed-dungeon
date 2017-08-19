@@ -366,7 +366,7 @@ public class SystemText extends Text {
 	}
 
 	private float symbolWidth(String symbol) {
-		return textPaint.measureText(symbol) / oversample;
+		return contourPaint.measureText(symbol) / oversample;
 	}
 
 	public void measure() {

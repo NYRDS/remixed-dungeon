@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.traps;
 
 import android.support.annotation.Nullable;
 
+import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -33,7 +34,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-public class LightningTrap {
+public class LightningTrap implements ITrigger{
 
 	private static final String name = Game.getVar(R.string.LightningTrap_Name);
 	
@@ -72,5 +73,10 @@ public class LightningTrap {
 	
 	public static final Electricity LIGHTNING = new Electricity();
 	public static class Electricity {	
+	}
+
+	@Override
+	public void doTrigger(int cell, Char ch) {
+		trigger(cell,ch);
 	}
 }
