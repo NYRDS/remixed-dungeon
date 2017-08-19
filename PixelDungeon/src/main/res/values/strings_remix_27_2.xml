@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">Chaos Helmet</string>
+    <string name="ChaosHelmet_Info">Blood red helmet. A very symbol of a chaos warrior.</string>
+</resources>
