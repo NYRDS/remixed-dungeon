@@ -99,16 +99,16 @@
   <string name="Journal_Alchemy">Calderone alchemico</string>
   <string name="Journal_Garden">Giardino</string>
   <string name="Journal_Statue">Statua Animata</string>
-  <string name="Journal_Ghost">fantasma triste</string>
+  <string name="Journal_Ghost">Fantasma triste</string>
   <string name="Journal_Wandmaker">Vecchio fabbricante di bacchette</string>
-  <string name="Journal_Troll">fabbro troll</string>
-  <string name="Journal_Imp">diavoletto ambizioso</string>
+  <string name="Journal_Troll">Fabbro troll</string>
+  <string name="Journal_Imp">Diavoletto ambizioso</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
   <string name="WndBlacksmith_Prompt">OK, un\'accordo è un\'accordo, dato quello che posso fare per te: posso riforgiare 2 oggetti e trasformando in uno di qualità migliore.</string>
   <string name="WndBlacksmith_Select">Seleziona un oggetto da riforgiare</string>
   <string name="WndBlacksmith_Reforge">Riforgia</string>
   <!--STRINGS OF WndCatalogus CLASS-->
-  <string name="WndCatalogus_Potions">pozioni</string>
+  <string name="WndCatalogus_Potions">Pozioni</string>
   <string name="WndCatalogus_Scrolls">Pergamene</string>
   <string name="WndCatalogus_Title">Cataloghi</string>
   <!--STRINGS OF WndChallenges CLASS-->
@@ -123,7 +123,7 @@
   <!--STRINGS OF WndGame CLASS-->
   <string name="WndGame_Settings">Impostazioni</string>
   <string name="WndGame_Challenges">Sfide</string>
-  <string name="WndGame_Ranking">classifiche</string>
+  <string name="WndGame_Ranking">Classifiche</string>
   <string name="WndGame_Start">Inizia nuova partita</string>
   <string name="WndGame_menu">Menu principale </string>
   <string name="WndGame_Exit">Esci da Pixel Dungeon</string>
@@ -131,7 +131,7 @@
   <string name="WndGame_Save">Salva</string>
   <string name="WndGame_Load">Carica</string>
   <!--STRINGS OF WndHero CLASS-->
-  <string name="WndHero_Stats">stati</string>
+  <string name="WndHero_Stats">Statistiche</string>
   <string name="WndHero_Buffs">Buffs</string>
   <string name="WndHero_Exp">Esperienza</string>
   <string name="WndHero_Str">Forza</string>
@@ -153,7 +153,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="WndInfoItem_CrystalChest">Cassa in cristallo </string>
   <string name="WndInfoItem_Tomb">Tomba</string>
   <string name="WndInfoItem_Skeleton">resti scheletrici</string>
-  <string name="WndInfoItem_WontKnow">Non si sa cosa c\'è dentro fino a quando lo si apre!</string>
+  <string name="WndInfoItem_WontKnow">Non si sa cosa ci sia dentro fin quando non l\'aprirai!</string>
   <string name="WndInfoItem_NeedKey">Ma per aprirlo è necessaria una chiave d\'oro.</string>
   <string name="WndInfoItem_Inside">Si può vedere %s dentro, ma per aprire la cassa è necessaria una chiave d\'oro.</string>
   <string name="WndInfoItem_Owner">Questa antica tomba potrebbe contenere qualcosa di utile, ma il suo proprietario certamente avrà da ridire sulla cosa.</string>
@@ -162,9 +162,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="WndJournal_Title">Diario</string>
   <!--STRINGS OF WndRanking CLASS-->
   <string name="WndRanking_Error">Impossibile caricare ulteriori informazioni</string>
-  <string name="WndRanking_Stats">stati</string>
+  <string name="WndRanking_Stats">Statistiche</string>
   <string name="WndRanking_Items">Items</string>
-  <string name="WndRanking_Badges">emblemi</string>
+  <string name="WndRanking_Badges">Emblemi</string>
   <string name="WndRanking_StaTitle">Livello %1$d %2$s</string>
   <string name="WndRanking_StaChallenges">Sfide</string>
   <string name="WndRanking_StaHealth">Salute</string>
@@ -173,9 +173,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="WndRanking_StaDepth">Profondità massima</string>
   <string name="WndRanking_StaEnemies">Nemici uccisi</string>
   <string name="WndRanking_StaGold">Oro raccolto</string>
-  <string name="WndRanking_StaFood">cibo mangiato</string>
+  <string name="WndRanking_StaFood">Cibo mangiato</string>
   <string name="WndRanking_StaAlchemy">Pozioni cotte</string>
-  <string name="WndRanking_StaAnkhs">ankh Usato</string>
+  <string name="WndRanking_StaAnkhs">Ankh Usato</string>
   <!--STRINGS OF WndResurrect CLASS-->
   <string name="WndResurrect_Message">Sei morto, ma è stata data un\'altra possibilità di sconfiggere questo dungeon. Vuoi riprendere?</string>
   <string name="WndResurrect_Yes">Sì, mi batterò!</string>
@@ -196,8 +196,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">IN VENDITA: %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">Compra per %dg</string>
-  <string name="WndTradeItem_Sell">vendi per %dg</string>
-  <string name="WndTradeItem_Sell1">vendi 1 per %dg</string>
+  <string name="WndTradeItem_Sell">Vendi per %dg</string>
+  <string name="WndTradeItem_Sell1">Vendi 1 per %dg</string>
   <string name="WndTradeItem_SellAll">Vendi tutto per %dg</string>
   <string name="WndTradeItem_Cancel">Non importa</string>
   <string name="WndTradeItem_Sold">Hai venduto la tua %1$s per %2$dg</string>
@@ -205,7 +205,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <!--STRINGS OF WndWandmaker CLASS-->
   <string name="WndWandmaker_Message">Oh, vedo che hai avuto successo! Spero non ti abbia dato troppi problemi. Come promesso, puoi scegliere una delle mie bacchette di altissima qualità.</string>
   <string name="WndWandmaker_Battle">Bacchetta da battaglia</string>
-  <string name="WndWandmaker_NonBattle">bacchetta d\'utilità </string>
+  <string name="WndWandmaker_NonBattle">Bacchetta d\'utilità </string>
   <string name="WndWandmaker_Farawell">Buona fortuna nella vostra missione, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">Scegli un oggetto per il lancio rapido</string>
@@ -233,7 +233,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="ArmorKit_Name">Kit per armature</string>
   <string name="ArmorKit_ACAplly">APPLICA</string>
   <string name="ArmorKit_Info">Utilizzando questo kit di piccoli attrezzi e materiali chiunque può trasformare una qualunque armatura in un\' \"armatura epica\", che manterrà tutte le proprietà dell\'armatura originale, ma inoltre fornirà al suo indossatore un\'abilità speciale a seconda della classe. Non sono richieste abilità in sartoria, conciatura o metallurgia.</string>
-  <string name="ArmorKit_SelectArmor">seleziona l\'armatura d\'aggiornare</string>
+  <string name="ArmorKit_SelectArmor">Seleziona l\'armatura d\'aggiornare</string>
   <string name="ArmorKit_Upgraded">Hai utilizzato il Kit per armature per migliorare la tua %s</string>
   <!--STRINGS OF Dewdrop CLASS-->
   <string name="Dewdrop_Name">goccia di rugiada</string>
@@ -263,7 +263,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="LloidsBeacon_Return">Il faro di lloyd è stato impostato con successo nella tua posizione attuale, ora puoi tornare qui in qualunque momento.</string>
   <string name="LloidsBeacon_Set">/n/nQuesto faro è stato impostato da un\'altra parte nel livello %d di Pixel Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
-  <string name="Stylus_Name">Stilo arcano</string>
+  <string name="Stylus_Name">stilo arcano</string>
   <string name="Stylus_ACInscribe">INCIDI</string>
   <string name="Stylus_Info">Questo stilo arcano è fatto di una pietra scura e molto dura. Usandolo puoi inscrivere un glifo o una runa, ma non hai potere di scelta su quale sarà, sarà lo stilo a decidere per te.</string>
   <string name="Stylus_SelectArmor">Seleziona un oggetto su cui incidere</string>
@@ -296,13 +296,13 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="Keyring_Name">portachiavi</string>
   <string name="Keyring_Info">Questo è un portachiavi in rame, che ti permette di tenere tutte le tue chiavi separatamente dal resto dei tuoi averi.</string>
   <!--STRINGS OF ScrollHolder CLASS-->
-  <string name="ScrollHolder_Name">Porta pergamene</string>
+  <string name="ScrollHolder_Name">porta pergamene</string>
   <string name="ScrollHolder_Info">Puoi mettere un numero qualsiasi di pergamene in questo contenitore tubulare. Risparmia spazio nel tuo zaino e protegge le pergamene dal fuoco.</string>
   <!--STRINGS OF SeedPouch CLASS-->
   <string name="SeedPouch_Name">sacca dei semi</string>
   <string name="SeedPouch_Info">Questo piccolo contenitore in velluto ti permette di conservare un numero qualsiasi di semi al suo interno. Molto comodo.</string>
   <!--STRINGS OF WandHolster CLASS-->
-  <string name="WandHolster_Name">Custodia per bacchette</string>
+  <string name="WandHolster_Name">custodia per bacchette</string>
   <string name="WandHolster_Info">Questa sottile custodia è fatta di pelle di qualche animale esotico. Ti permette di trasportare compattamente fino a %d bacchette.</string>
   <!--STRINGS OF PotionBelt CLASS-->
   <string name="PotionBelt_Info">Questa resistente cinturone di pelle è capace di conservare tutte le tue pozioni proteggendole dall\'infrangersi a causa del gelo.</string>
