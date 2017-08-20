@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import android.util.Log;
-
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -229,7 +227,6 @@ public class InterlevelScene extends PixelScene {
 	}
 
 	private void descend() throws IOException {
-		Log.e("Inter","descend");
 		Actor.fixTime();
 		
 		if (Dungeon.hero == null) {
@@ -242,7 +239,7 @@ public class InterlevelScene extends PixelScene {
 			Dungeon.level.removePets();
 			Dungeon.saveLevel();
 		}
-		
+
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
 		Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
 		Level level = Dungeon.loadLevel(next);

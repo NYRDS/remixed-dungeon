@@ -19,9 +19,8 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
@@ -32,7 +31,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 	private Image image;
 	private Text  text;
 
-	private Text downloadProgress;
+	private WndMessage downloadProgress;
 
 	static private boolean needUpdate;
 
@@ -132,13 +131,11 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 			@Override
 			public void run() {
 				if (downloadProgress == null) {
-					downloadProgress = GameScene.createMultiline(GuiProperties.regularFontSize());
-					downloadProgress.maxWidth((int) TitleScene.MIN_WIDTH_P);
-					downloadProgress.setPos(0, 0);
+					downloadProgress = new WndMessage("");
 					Game.scene().add(downloadProgress);
 				}
 				if(!Game.isPaused()) {
-					downloadProgress.text(Utils.format("Downloading  %d%%", percent));
+					downloadProgress.setText(Utils.format("Downloading  %d%%", percent));
 				}
 			}
 		});
@@ -150,7 +147,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 			@Override
 			public void run() {
 				if (downloadProgress != null) {
-					Game.scene().remove(downloadProgress);
+					downloadProgress.hide();
 					downloadProgress = null;
 				}
 

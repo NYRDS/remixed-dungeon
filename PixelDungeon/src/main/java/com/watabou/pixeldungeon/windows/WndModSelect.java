@@ -16,7 +16,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -29,7 +28,7 @@ import java.util.Map;
 
 public class WndModSelect extends Window implements DownloadStateListener, UnzipStateListener {
 
-	private Text downloadProgress;
+	private WndMessage downloadProgress;
 
 	private String selectedMod;
 	private String downloadTo;
@@ -151,13 +150,11 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 			@Override
 			public void run() {
 				if (downloadProgress == null) {
-					downloadProgress = GameScene.createMultiline(GuiProperties.regularFontSize());
-					downloadProgress.maxWidth(width);
-					downloadProgress.setPos(0, 0);
+					downloadProgress = new WndMessage("");
 					Game.scene().add(downloadProgress);
 				}
 				if (!Game.isPaused()) {
-					downloadProgress.text(Utils.format("Downloading %s %d%%", selectedMod, percent));
+					downloadProgress.setText(Utils.format("Downloading %s %d%%", selectedMod, percent));
 				}
 			}
 		});
@@ -169,7 +166,7 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 			@Override
 			public void run() {
 				if (downloadProgress != null) {
-					Game.scene().remove(downloadProgress);
+					downloadProgress.hide();
 					downloadProgress = null;
 				}
 				if (result) {
