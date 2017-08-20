@@ -79,4 +79,15 @@ public class Util {
 		}
 		return null;
 	}
+
+	static public  int indexOf(Class<?>[] classList, @NonNull String name) {
+		int index = 0;
+		for (Class<?> clazz : classList) {
+			if (clazz.getSimpleName().equals(name)) {
+				return index;
+			}
+			++index;
+		}
+		return -1;
+	}
 }

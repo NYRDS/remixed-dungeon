@@ -17,8 +17,6 @@ import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Arrays;
-
 /**
  * Created by mike on 01.07.2016.
  */
@@ -34,16 +32,6 @@ public class Trap extends LevelObject {
 			LightningTrap.class,
 			SummoningTrap.class,
 			GrippingTrap.class};
-
-	private static final String[] trapsS = new String[]{
-			"ToxicTrap",
-			"FireTrap",
-			"ParalyticTrap",
-			"PoisonTrap",
-			"AlarmTrap",
-			"LightningTrap",
-			"SummoningTrap",
-			"GrippingTrap"};
 
 	@Packable
 	private String kind;
@@ -62,6 +50,7 @@ public class Trap extends LevelObject {
 	public Trap(int pos) {
 		super(pos);
 		imageIndex = 0;
+		textureFile = "levelObjects/traps.png";
 	}
 
 	@Override
@@ -126,14 +115,8 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
-	public String texture() {
-		return "levelObjects/traps.png";
-	}
-
-	@Override
 	public int image() {
-		int nKind = Arrays.asList(trapsS).indexOf(kind);
-
+		int nKind = Util.indexOf(traps, kind);
 		return nKind +1;
 	}
 
