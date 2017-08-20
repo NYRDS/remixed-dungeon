@@ -32,11 +32,12 @@ public class PortalGate extends LevelObject {
 	protected static final String TXT_ACTIVATED = Game.getVar(R.string.PortalGate_Activated);
 
 	public PortalGate(){
-		super(-1);
+		this(-1);
 	}
 
 	public PortalGate(int pos) {
 		super(pos);
+		textureFile = "levelObjects/portals.png";
 	}
 
 	@Override
@@ -88,11 +89,6 @@ public class PortalGate extends LevelObject {
 	@Override
 	public int image() {
 		return 0;
-	}
-
-	@Override
-	public String texture() {
-		return "levelObjects/portals.png";
 	}
 
 	@Override

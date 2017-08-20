@@ -44,11 +44,12 @@ public class Trap extends LevelObject {
 	private boolean secret = false;
 
 	public Trap(){
-		super(-1);
+		this(-1);
 	}
 
 	public Trap(int pos) {
 		super(pos);
+		imageIndex = 0;
 	}
 
 	@Override
@@ -69,8 +70,6 @@ public class Trap extends LevelObject {
 		} else {
 			sprite.reset(usedImage());
 		}
-
-
 
 		return super.interact(hero);
 	}
@@ -113,10 +112,5 @@ public class Trap extends LevelObject {
 		return "Trap";
 	}
 
-	@Override
-	public int image() {
-		return 0;
-	}
-
-	public int usedImage() {return 1;}
+	public int usedImage() {return image() + 1;}
 }
