@@ -23,21 +23,30 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndMessage extends Window {
-	
+
 	private static final int WIDTH = 120;
-	
-	public WndMessage( String text ) {
-		
+	private Text info;
+
+	public WndMessage(String text) {
+
 		super();
-		
-		Text info = PixelScene.createMultiline( text, GuiProperties.regularFontSize() );
+
+		info = PixelScene.createMultiline(text, GuiProperties.regularFontSize());
 		info.maxWidth(WIDTH - MARGIN * 2);
 		info.measure();
 		info.x = info.y = MARGIN;
-		add( info );
+		add(info);
 
-		resize( 
-			(int)info.width() + MARGIN * 2, 
-			(int)info.height() + MARGIN * 2 );
+		resize(
+				(int) info.width() + MARGIN * 2,
+				(int) info.height() + MARGIN * 2);
+	}
+
+	public void setText(String text) {
+		info.text(text);
+		info.measure();
+		resize(
+				(int) info.width() + MARGIN * 2,
+				(int) info.height() + MARGIN * 2);
 	}
 }

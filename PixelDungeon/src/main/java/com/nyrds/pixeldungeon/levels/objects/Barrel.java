@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
 import org.json.JSONException;
@@ -24,11 +23,12 @@ public class Barrel extends LevelObject {
 	private boolean burned = false;
 
 	public Barrel() {
-		super(-1);
+		this(-1);
 	}
 
 	public Barrel(int pos) {
 		super(pos);
+		textureFile = "levelObjects/barrels.png";
 	}
 
 	@Override
@@ -97,10 +97,5 @@ public class Barrel extends LevelObject {
 		} else {
 			return 8;
 		}
-	}
-
-	@Override
-	public String texture() {
-		return "levelObjects/barrels.png";
 	}
 }

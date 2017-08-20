@@ -17,6 +17,10 @@ public abstract class LevelObject implements Bundlable, Presser {
 
 	@Packable
 	private  int    pos = -1;
+
+
+	protected String textureFile = "levelObjects/objects.png";
+	protected int imageIndex = 0;
 	
 	public LevelObjectSprite sprite;
 
@@ -24,9 +28,14 @@ public abstract class LevelObject implements Bundlable, Presser {
 		this.pos = pos;
 	}
 
-	abstract public int image();
+	public int image() {
+		return imageIndex;
+	}
 
-	abstract void setupFromJson(Level level, JSONObject obj) throws JSONException;
+	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+		textureFile = obj.optString("textureFile", textureFile);
+		imageIndex  = obj.optInt("imageIndex", imageIndex);
+	}
 
 	public boolean interact(Hero hero ) {return true;}
 	public boolean stepOn(Char hero) {return true;}
@@ -77,7 +86,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 	public abstract String name();
 
 	public String texture(){
-		return "levelObjects/objects.png";
+		return textureFile;
 	}
 
 	public boolean pushable(Char hero) {

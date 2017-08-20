@@ -18,11 +18,12 @@ public class ConcreteBlock extends LevelObject {
 	int requiredStr = 10;
 
 	public ConcreteBlock() {
-		super(-1);
+		this(-1);
 	}
 
 	public ConcreteBlock(int pos) {
 		super(pos);
+		imageIndex = 8;
 	}
 
 	@Override
@@ -69,10 +70,4 @@ public class ConcreteBlock extends LevelObject {
 	public String name() {
 		return Game.getVar(R.string.ConcreteBlock_Name);
 	}
-
-	@Override
-	public int image() {
-		return 8;
-	}
-
 }

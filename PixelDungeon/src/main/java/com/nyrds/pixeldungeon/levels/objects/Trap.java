@@ -56,11 +56,12 @@ public class Trap extends LevelObject {
 	private boolean secret = false;
 
 	public Trap(){
-		super(-1);
+		this(-1);
 	}
 
 	public Trap(int pos) {
 		super(pos);
+		imageIndex = 0;
 	}
 
 	@Override
