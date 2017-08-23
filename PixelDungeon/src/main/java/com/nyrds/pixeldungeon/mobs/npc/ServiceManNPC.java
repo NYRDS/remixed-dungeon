@@ -19,8 +19,13 @@ public class ServiceManNPC extends ImmortalNPC {
 	private int filmsSeen = 0;
 	final private String FILMS_SEEN = "films_seen";
 	final private String LIMIT_REACHED = Utils.format(Game.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit());
+	private static final int BASIC_GOLD_REWARD = 150;
 
 	public ServiceManNPC() {
+	}
+
+	private int getReward(){
+		return BASIC_GOLD_REWARD + (filmsSeen / 5) * 50;
 	}
 
 	@Override
@@ -37,7 +42,7 @@ public class ServiceManNPC extends ImmortalNPC {
 
 	public void reward() {
 		filmsSeen++;
-		Dungeon.hero.collect(new Gold(150));
+		Dungeon.hero.collect(new Gold(getReward()));
 	}
 
 	@Override
@@ -55,7 +60,7 @@ public class ServiceManNPC extends ImmortalNPC {
 		}
 
 		if(RewardVideo.isReady()) {
-			GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit()));
+			GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit(), getReward()));
 		} else {
 			say(Game.getVar(R.string.ServiceManNPC_NotReady));
 		}
