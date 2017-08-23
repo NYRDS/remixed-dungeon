@@ -145,7 +145,7 @@ public class StringsManager {
 
 		if(!context.getResources().getConfiguration().locale.equals(userSelectedLocale)) {
 			if(BuildConfig.DEBUG){
-				GLog.i("Locale is fucked up! restoring");
+				GLog.i("Locale is messed up! Restoring");
 			}
 			config.locale = userSelectedLocale;
 			context.getResources().updateConfiguration(config,
