@@ -46,6 +46,7 @@ public class StatusPane extends Component {
 	private Emitter               blood;
 
 	private Image hp;
+	private Image sp;
 	private Image exp;
 	
 	private int lastLvl = -1;
@@ -110,6 +111,9 @@ public class StatusPane extends Component {
 
 		hp = new Image( Assets.HP_BAR );
 		add( hp );
+
+		sp = new Image( Assets.SP_BAR );
+		add( sp );
 		
 		exp = new Image( Assets.XP_BAR );
 		add( exp );
@@ -165,6 +169,9 @@ public class StatusPane extends Component {
 		hp.x = 30;
 		hp.y = 3;
 
+		sp.x = 30;
+		sp.y = 9;
+
 		level.x = PixelScene.align( 27.0f - level.width() / 2 );
 		level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
 
@@ -189,6 +196,7 @@ public class StatusPane extends Component {
 		super.update();
 		
 		float health = (float)hero.hp() / hero.ht();
+		float sPoints = (float)hero.getSoulPoints() / hero.getSoulPointsMax();
 
 		if (health == 0) {
 			avatar.tint( 0x000000, 0.6f );
@@ -202,6 +210,7 @@ public class StatusPane extends Component {
 		}
 
 		hp.Scale().x = health;
+		sp.Scale().x = sPoints;
 		exp.Scale().x = (width / exp.width) * hero.getExp() / hero.maxExp();
 		
 		if (hero.lvl() != lastLvl) {

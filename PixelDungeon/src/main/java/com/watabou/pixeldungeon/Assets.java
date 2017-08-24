@@ -40,6 +40,7 @@ public class Assets {
 
 	public static final String ICONS = "icons.png";
 	public static final String HP_BAR = "hp_bar.png";
+	public static final String SP_BAR = "sp_bar.png";
 	public static final String XP_BAR = "exp_bar.png";
 
 	public static final String AVATARS = "avatars.png";

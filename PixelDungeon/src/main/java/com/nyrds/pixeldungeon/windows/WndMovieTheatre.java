@@ -34,7 +34,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
 
-
 	private ServiceManNPC serviceMan;
 
 	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit, int goldReward) {
