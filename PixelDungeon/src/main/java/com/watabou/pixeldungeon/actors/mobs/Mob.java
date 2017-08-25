@@ -498,11 +498,13 @@ public abstract class Mob extends Char {
 		{
 			//TODO we should move this block out of Mob class
 			Hero hero = Dungeon.hero;
-			if (hero != null && hero.isAlive()) {
-				hero.accumulateSoulPoints();
-				for (Item item : hero.belongings) {
-					if (item instanceof BlackSkull && item.isEquipped(hero)) {
-						((BlackSkull) item).mobDied(this, hero);
+			if (hero.heroClass == HeroClass.NECROMANCER){
+				if (hero != null && hero.isAlive()) {
+					hero.accumulateSoulPoints();
+					for (Item item : hero.belongings) {
+						if (item instanceof BlackSkull && item.isEquipped(hero)) {
+							((BlackSkull) item).mobDied(this, hero);
+						}
 					}
 				}
 			}
