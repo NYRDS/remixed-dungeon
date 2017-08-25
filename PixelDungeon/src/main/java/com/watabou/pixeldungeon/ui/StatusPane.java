@@ -185,7 +185,7 @@ public class StatusPane extends Component {
 		
 		loot.setPos( width - loot.width(),  danger.bottom() + 2 );
 		
-		buffs.setPos( 32, 11 );
+		buffs.setPos( 35, 16 );
 		
 		btnMenu.setPos( width - btnMenu.width(), 1 );
 		btnHats.setPos( width - btnHats.width(), btnMenu.bottom() );
