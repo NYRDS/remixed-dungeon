@@ -98,6 +98,7 @@ public enum HeroClass {
 	private Abilities abilities;
 	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
 
+	private static boolean isSpellUser;
 
 	private static final String[] WAR_PERKS         = Game
 			.getVars(R.array.HeroClass_WarPerks);
@@ -230,6 +231,7 @@ public enum HeroClass {
 
 				hero.STR(classDesc.optInt("str", hero.STR()));
 				hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
+				isSpellUser(classDesc.optBoolean("isSpellUser", false));
 
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException(e);
@@ -327,5 +329,13 @@ public enum HeroClass {
 
 	Abilities getAbilities() {
 		return abilities;
+	}
+
+	public boolean isSpellUser(){
+		return isSpellUser;
+	}
+
+	public static void isSpellUser(boolean b){
+		isSpellUser = b;
 	}
 }

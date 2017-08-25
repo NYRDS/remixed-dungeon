@@ -88,6 +88,7 @@
 			"kind": "NecromancerRobe"
 		}],
         "hp":15,
-        "knownItems":[{"kind":"PotionOfHealing"}]
+        "knownItems":[{"kind":"PotionOfHealing"}],
+		"isSpellUser":true
 	}
 }

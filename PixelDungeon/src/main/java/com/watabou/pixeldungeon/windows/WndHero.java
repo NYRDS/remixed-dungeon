@@ -143,20 +143,22 @@ public class WndHero extends WndTabbed {
 			
 			pos = btnCatalogus.bottom() + GAP;
 
-			RedButton btnSpells = new RedButton( "Spells" ) {
-				@Override
-				protected void onClick() {
-					hide();
-					GameScene.show( new WndHeroSpells() );
-				}
-			};
-			btnSpells.setRect(
-					btnJournal.right() + 1, btnJournal.top(),
-					btnSpells.reqWidth() + 2, btnSpells.reqHeight() + 2 );
-			add( btnSpells );
+			if (hero.heroClass.isSpellUser()) {
+				RedButton btnSpells = new RedButton("Spells") {
+					@Override
+					protected void onClick() {
+						hide();
+						GameScene.show(new WndHeroSpells());
+					}
+				};
+				btnSpells.setRect(
+						btnJournal.right() + 1, btnJournal.top(),
+						btnSpells.reqWidth() + 2, btnSpells.reqHeight() + 2);
+				add(btnSpells);
 
-			pos = btnJournal.bottom() + GAP;
-			
+				pos = btnJournal.bottom() + GAP;
+			}
+
 			statSlot( TXT_STR, hero.effectiveSTR() );
 			statSlot( TXT_HEALTH, hero.hp() + "/" + hero.ht() );
 			if(hero.heroClass == HeroClass.NECROMANCER){
