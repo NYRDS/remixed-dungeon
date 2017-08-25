@@ -47,6 +47,8 @@ public class WndHero extends WndTabbed {
 	
 	private static final String TXT_STATS	= Game.getVar(R.string.WndHero_Stats);
 	private static final String TXT_BUFFS	= Game.getVar(R.string.WndHero_Buffs);
+	private static final String TXT_SPELLS	= Game.getVar(R.string.WndSpells_Title);
+
 	
 	private static final String TXT_EXP		= Game.getVar(R.string.WndHero_Exp);
 	private static final String TXT_STR		= Game.getVar(R.string.WndHero_Str);
@@ -144,7 +146,7 @@ public class WndHero extends WndTabbed {
 			pos = btnCatalogus.bottom() + GAP;
 
 			if (hero.heroClass.isSpellUser()) {
-				RedButton btnSpells = new RedButton("Spells") {
+				RedButton btnSpells = new RedButton(TXT_SPELLS) {
 					@Override
 					protected void onClick() {
 						hide();

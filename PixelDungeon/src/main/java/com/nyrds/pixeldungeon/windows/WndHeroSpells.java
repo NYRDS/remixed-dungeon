@@ -40,7 +40,7 @@ public class WndHeroSpells extends Window {
 
 	private static final int ITEM_HEIGHT = 18;
 
-	private static final String TXT_TITLE   = Game.getVar(R.string.WndCatalogus_Title);
+	private static final String TXT_TITLE   = Game.getVar(R.string.WndSpells_Title);
 
 	private Text       txtTitle;
 	private ScrollPane list;
