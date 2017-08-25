@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
@@ -141,6 +142,20 @@ public class WndHero extends WndTabbed {
 			add( btnJournal );
 			
 			pos = btnCatalogus.bottom() + GAP;
+
+			RedButton btnSpells = new RedButton( "Spells" ) {
+				@Override
+				protected void onClick() {
+					hide();
+					GameScene.show( new WndHeroSpells() );
+				}
+			};
+			btnSpells.setRect(
+					btnJournal.right() + 1, btnJournal.top(),
+					btnSpells.reqWidth() + 2, btnSpells.reqHeight() + 2 );
+			add( btnSpells );
+
+			pos = btnJournal.bottom() + GAP;
 			
 			statSlot( TXT_STR, hero.effectiveSTR() );
 			statSlot( TXT_HEALTH, hero.hp() + "/" + hero.ht() );

@@ -59,6 +59,8 @@ public class Necromancy {
 		return Utils.format(TXT_NOT_ENOUGH_SOULS, "Unknown spell!!!");
 	}
 
+	//TODO: Spells is down there. We need more spells
+
 	public static void summonDeathling(Item source){
 		Collection<Mob> pets = Dungeon.hero.getPets();
 		Hero hero = Dungeon.hero;
