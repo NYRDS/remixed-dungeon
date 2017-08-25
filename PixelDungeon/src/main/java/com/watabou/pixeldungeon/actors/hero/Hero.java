@@ -254,6 +254,7 @@ public class Hero extends Char {
 	private static final String PETS       = "pets";
 	private static final String SP         = "sp";
 	private static final String PORTAL_LEVEL_POS         = "portalLevelPos";
+	private static final String IS_SPELL_USER = "isspelluser";
 
 	private void refreshPets() {
 		ArrayList<Mob> alivePets = new ArrayList<>();
@@ -298,6 +299,7 @@ public class Hero extends Char {
 
 		belongings.storeInBundle(bundle);
 		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
+		bundle.put(IS_SPELL_USER, this.heroClass.isSpellUser());
 
 	}
 
@@ -332,6 +334,8 @@ public class Hero extends Char {
 		gender = heroClass.getGender();
 
 		portalLevelPos = (Position) bundle.get(PORTAL_LEVEL_POS);
+
+		this.heroClass.isSpellUser(bundle.optBoolean(IS_SPELL_USER, false));
 	}
 
 	public static void preview(GamesInProgress.Info info, Bundle bundle) {
