@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -20,7 +21,7 @@ import com.watabou.utils.Bundle;
 import java.util.Collection;
 import java.util.HashSet;
 
-public class NecromancerRobe extends UsableArmor {
+public class NecromancerRobe extends Armor {
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.Necromancer_ACSpecial);
@@ -28,16 +29,6 @@ public class NecromancerRobe extends UsableArmor {
 	public NecromancerRobe() {
 		super( 1 );
 		image = 23;
-	}
-
-	@Override
-	public String special() {
-		return AC_SPECIAL;
-	}
-
-	@Override
-	public void doSpecial() {
-		Necromancy.summonDeathling(this);
 	}
 
 	@Override

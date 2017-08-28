@@ -113,7 +113,7 @@ public class WndHero extends WndTabbed {
 		
 		public StatsTab() {
 			
-			Hero hero = Dungeon.hero; 
+			final Hero hero = Dungeon.hero;
 
 			Text title = PixelScene.createText( 
 				Utils.format( TXT_TITLE, hero.lvl(), hero.className() ).toUpperCase( Locale.ENGLISH ), GuiProperties.titleFontSize());
@@ -150,7 +150,7 @@ public class WndHero extends WndTabbed {
 					@Override
 					protected void onClick() {
 						hide();
-						GameScene.show(new WndHeroSpells());
+						GameScene.show(new WndHeroSpells(hero));
 					}
 				};
 				btnSpells.setRect(

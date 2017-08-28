@@ -36,7 +36,7 @@ public class NecromancerArmor extends ClassArmor {
 	
 	@Override
 	public void doSpecial() {
-		Necromancy.summonDeathling(this);
+		//TODO: Let's generate some souls
 	}
 	
 	@Override

@@ -98,7 +98,8 @@ public enum HeroClass {
 	private Abilities abilities;
 	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
 
-	private static boolean isSpellUser;
+	private boolean isSpellUser;
+	private String magicAffinity;
 
 	private static final String[] WAR_PERKS         = Game
 			.getVars(R.array.HeroClass_WarPerks);
@@ -231,7 +232,8 @@ public enum HeroClass {
 
 				hero.STR(classDesc.optInt("str", hero.STR()));
 				hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
-				isSpellUser(classDesc.optBoolean("isSpellUser", false));
+				hero.heroClass.isSpellUser(classDesc.optBoolean("isSpellUser", false));
+				hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
 
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException(e);
@@ -335,7 +337,15 @@ public enum HeroClass {
 		return isSpellUser;
 	}
 
-	public static void isSpellUser(boolean b){
+	public void isSpellUser(boolean b){
 		isSpellUser = b;
+	}
+
+	public String getMagicAffinity(){
+		return magicAffinity;
+	}
+
+	public void setMagicAffinity(String affinity){
+		magicAffinity = affinity;
 	}
 }

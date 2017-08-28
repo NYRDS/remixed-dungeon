@@ -20,12 +20,15 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.CatalogusListItem;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
@@ -38,8 +41,6 @@ import java.util.ArrayList;
 
 public class WndHeroSpells extends Window {
 
-	private static final int ITEM_HEIGHT = 18;
-
 	private static final String TXT_TITLE   = Game.getVar(R.string.WndSpells_Title);
 
 	private Text       txtTitle;
@@ -47,9 +48,7 @@ public class WndHeroSpells extends Window {
 
 	private ArrayList<CatalogusListItem> items = new ArrayList<>();
 
-	private static boolean showPotions = true;
-
-	public WndHeroSpells() {
+	public WndHeroSpells(Hero hero) {
 
 		super();
 
@@ -66,29 +65,10 @@ public class WndHeroSpells extends Window {
 
 		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 
-		updateList();
-	}
-
-	private void updateList() {
+		//String affinity = hero.heroClass.getMagicAffinity();
+		
 
 
-		items.clear();
-
-		Component content = list.content();
-		content.clear();
-		list.scrollTo(0, 0);
-
-		float pos = 0;
-		for (Class<? extends Item> itemClass : showPotions ? Potion.getKnown() : Scroll.getKnown()) {
-			CatalogusListItem item = new CatalogusListItem(itemClass);
-			item.setRect(0, pos, width, ITEM_HEIGHT);
-			content.add(item);
-			items.add(item);
-
-			pos += item.height();
-		}
-
-		content.setSize(width, pos);
 	}
 
 }

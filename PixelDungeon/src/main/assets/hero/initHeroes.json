@@ -89,6 +89,7 @@
 		}],
         "hp":15,
         "knownItems":[{"kind":"PotionOfHealing"}],
-		"isSpellUser":true
+		"isSpellUser":true,
+		"magicAffinity":"Necromancy"
 	}
 }
