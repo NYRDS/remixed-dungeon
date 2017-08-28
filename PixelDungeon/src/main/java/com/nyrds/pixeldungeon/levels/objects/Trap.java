@@ -23,7 +23,7 @@ import org.json.JSONObject;
 
 public class Trap extends LevelObject {
 
-	private static final Class<? >[] traps = new Class<?>[]{
+	private static final Class<?>[] traps = new Class<?>[]{
 			ToxicTrap.class,
 			FireTrap.class,
 			ParalyticTrap.class,
@@ -36,14 +36,17 @@ public class Trap extends LevelObject {
 	@Packable
 	private String kind;
 	@Packable
-	private int targetCell;
+	private int    targetCell;
 	@Packable
-	private int uses;
+	private int    uses;
+
+	@Packable
+	private boolean activatedByItem = false;
 
 	@Packable
 	private boolean secret = false;
 
-	public Trap(){
+	public Trap() {
 		this(-1);
 	}
 
@@ -59,10 +62,17 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
+	public void bump() {
+		if (activatedByItem) {
+			interact(null);
+		}
+	}
+
+	@Override
 	public boolean interact(Hero hero) {
 		discover();
 
-		if(uses != 0) {
+		if (uses != 0) {
 			uses--;
 			ITrigger trigger = Util.byNameFromList(traps, kind);
 			if (trigger != null) {
@@ -79,7 +89,7 @@ public class Trap extends LevelObject {
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
 
-		if(obj.has("target")) {
+		if (obj.has("target")) {
 			int x = obj.getInt("x");
 			int y = obj.getInt("y");
 			targetCell = level.cell(x, y);
@@ -87,9 +97,10 @@ public class Trap extends LevelObject {
 			targetCell = getPos();
 		}
 
-		kind   = obj.optString("trapKind","none");
-		uses   = obj.optInt("uses",1);
-		secret = obj.optBoolean("secret",false);
+		kind = obj.optString("trapKind", "none");
+		uses = obj.optInt("uses", 1);
+		secret = obj.optBoolean("secret", false);
+		activatedByItem = obj.optBoolean("activatedByItem", false);
 	}
 
 	@Override
@@ -117,8 +128,10 @@ public class Trap extends LevelObject {
 	@Override
 	public int image() {
 		int nKind = Util.indexOf(traps, kind);
-		return nKind +1;
+		return nKind + 1;
 	}
 
-	public int usedImage() {return 0;}
+	public int usedImage() {
+		return 0;
+	}
 }
