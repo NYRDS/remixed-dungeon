@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.Flavours;
+import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.CompositeTextureImage;
@@ -63,6 +64,7 @@ public class StatusPane extends Component {
 	
 	private MenuButton btnMenu;
 	private MenuButton btnHats;
+	private MenuButton btnSpells;
 
 	private Hero hero;
 
@@ -146,10 +148,17 @@ public class StatusPane extends Component {
 
 		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
 
+		btnSpells = new MenuButton(new Image(Assets.getStatus(), 2, 33, 12, 11), WndHeroSpells.class);
+
+		if (!hero.heroClass.isSpellUser()) {
+			btnSpells.enable(false);
+		}
+
 		if(!Flavours.haveHats()) {
 			btnHats.enable(false);
 		}
 
+		add(btnSpells);
 		add(btnHats);
 	}
 	
@@ -189,6 +198,7 @@ public class StatusPane extends Component {
 		
 		btnMenu.setPos( width - btnMenu.width(), 1 );
 		btnHats.setPos( width - btnHats.width(), btnMenu.bottom() );
+		btnSpells.setPos( 0, 31 );
 	}
 	
 	@Override
