@@ -5,8 +5,14 @@
     <string name="ChaosHelmet_Name">Chaos Helmet</string>
     <string name="ChaosHelmet_Info">Blood red helmet. A very symbol of a chaos warrior.</string>
 
+    <!-- Spells descriptions -->
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Info">Summons one Deathling.</string>
+
     <!-- Window descriptions -->
     <!-- STRINGS OF WndHeroSpells CLASS -->
     <string name="WndSpells_Title">Spells</string>
+    <string name="WndSpells_Info">Info</string>
+    <string name="WndSpells_Use">Use</string>
 
 </resources>
