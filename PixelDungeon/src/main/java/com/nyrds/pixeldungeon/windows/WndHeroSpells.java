@@ -103,6 +103,14 @@ public class WndHeroSpells extends Window {
 		add( btnInfo );
 
 
+		Text txtName;
+
+		txtName = PixelScene.createText(spell.name(), GuiProperties.titleFontSize());
+		txtName.measure();
+		txtName.x = btnCast.left() + MARGIN;
+		txtName.y = btnCast.bottom() + MARGIN;
+		add(txtName);
+
 		yPos = icon.bottom();
 	}
 
