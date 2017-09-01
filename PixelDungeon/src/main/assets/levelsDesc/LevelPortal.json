@@ -21,7 +21,13 @@
         "y":8
       }
     },
-     {"kind":"Trap","x":3,"y":3,"trapKind":"FireTrap"}
+     {"kind":"Trap","x":3,"y":3,"trapKind":"FireTrap",
+     "target":
+       {
+        "x":4,
+        "y":4
+       }
+     }
   ]
 
 }
