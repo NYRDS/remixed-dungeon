@@ -135,7 +135,7 @@ public class GameScene extends PixelScene {
 		resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
 		log.setRect(0, toolbar.top(), attack.left(), 0);
 		busy.x = 1;
-		busy.y = sb.bottom() + 1;
+		busy.y = sb.bottom() + 18;
 	}
 
 
@@ -322,7 +322,7 @@ public class GameScene extends PixelScene {
 		busy = new BusyIndicator();
 		busy.camera = uiCamera;
 		busy.x = 1;
-		busy.y = sb.bottom() + 1;
+		busy.y = sb.bottom() + 18;
 		add(busy);
 
 		sceneCreated = true;
