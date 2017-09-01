@@ -90,8 +90,9 @@ public class Trap extends LevelObject {
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
 
 		if (obj.has("target")) {
-			int x = obj.getInt("x");
-			int y = obj.getInt("y");
+			JSONObject targetDesc = obj.getJSONObject("target");
+			int x = targetDesc.getInt("x");
+			int y = targetDesc.getInt("y");
 			targetCell = level.cell(x, y);
 		} else {
 			targetCell = getPos();
