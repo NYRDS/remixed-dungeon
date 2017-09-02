@@ -19,7 +19,7 @@ import java.util.Collection;
 
 public class Necromancy {
 
-	private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.NecromancerRobe_PetLimitReached);
+
 
 	private static final String TXT_SUMMON_DEATHLING   = Game.getVar(R.string.Necromancy_SummonDeathlingName);
 	private static final String TXT_REINCARNATION   = Game.getVar(R.string.Necromancy_ReincarnationName);
@@ -29,9 +29,7 @@ public class Necromancy {
 
 
 
-	public static String getLimitWarning(int limit){
-		return Utils.format(TXT_MAXIMUM_PETS, limit);
-	}
+
 
 
 }

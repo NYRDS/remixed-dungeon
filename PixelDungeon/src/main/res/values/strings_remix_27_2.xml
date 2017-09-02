@@ -6,8 +6,12 @@
     <string name="ChaosHelmet_Info">Blood red helmet. A very symbol of a chaos warrior.</string>
 
     <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s: summon limit reached (Current max: %2$d)!</string>
+
+
     <!-- STRINGS OF SummonDeathling CLASS -->
     <string name="SummonDeathling_Info">Summons one Deathling.</string>
+
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndHeroSpells CLASS -->

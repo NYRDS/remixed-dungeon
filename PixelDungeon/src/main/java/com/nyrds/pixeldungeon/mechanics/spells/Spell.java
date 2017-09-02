@@ -35,10 +35,10 @@ public class Spell {
         desc = obj.optString("name", desc);
         textureFile = obj.optString("textureFile", textureFile);
         imageIndex  = obj.optInt("imageIndex", imageIndex);
-        magicAffinity = obj.optString("magicAffinity", magicAffinity);
+        magicAffinity = obj.optString("magicAffinity", getMagicAffinity());
         targetingType = obj.optString("targetingType", targetingType);
         textureResolution  = obj.optInt("textureResolution", textureResolution());
-        spellCost  = obj.optInt("spellCost", spellCost);
+        spellCost  = obj.optInt("spellCost", spellCost());
     }
 
     public void use(Hero hero){
