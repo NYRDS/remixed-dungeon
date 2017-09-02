@@ -22,9 +22,7 @@ import org.json.JSONObject;
 
 import java.util.Collection;
 
-public class SummonDeathling extends Spell {
-
-    private int limit = 1;
+public class SummonDeathling extends SummoningSpell {
 
     public SummonDeathling(){
         targetingType = SpellHelper.TARGET_NONE;
@@ -46,10 +44,6 @@ public class SummonDeathling extends Spell {
                 }
             }
 
-            if (n >= limit){
-                GLog.w( Necromancy.getLimitWarning(limit) );
-                return;
-            }
             int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
 
             Wound.hit(hero);
