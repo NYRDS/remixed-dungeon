@@ -7,10 +7,19 @@
 
     <!-- Spells descriptions -->
     <string name="Spells_SummonLimitReached">%1$s: summon limit reached (Current max: %2$d)!</string>
+    <string name="Spells_NotEnoughSP">You do not have enough sp to cast a \"%1$s\" spell.</string>
+    <string name="Spells_NotEnoughSP_Mage">You do not have enough sp to cast a \"%1$s\" spell.</string>
+    <string name="Spells_NotEnoughSP_Warrior">You do not have enough sp to cast a \"%1$s\" spell.</string>
+    <string name="Spells_NotEnoughSP_Rogue">You do not have enough sp to cast a \"%1$s\" spell.</string>
+    <string name="Spells_NotEnoughSP_Huntress">You do not have enough sp to cast a \"%1$s\" spell.</string>
 
 
     <!-- STRINGS OF SummonDeathling CLASS -->
     <string name="SummonDeathling_Info">Summons one Deathling.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">That mushroom tastes weird!</string>
 
 
     <!-- Window descriptions -->
