@@ -445,23 +445,18 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	protected static CellSelector.Listener zapper = new CellSelector.Listener() {
-
 		@Override
 		public void onSelect(Integer target) {
 
 			if (target != null) {
-
 				if (target == getCurUser().getPos()) {
 					GLog.i(TXT_SELF_TARGET);
 					return;
 				}
 
 				final Wand curWand = (Wand) Wand.curItem;
-				
 				final int cell = curWand.getDestinationCell(target);
-
 				getCurUser().getSprite().zap(cell);
-
 				curWand.wandEffect(cell);
 			}
 		}

@@ -4,8 +4,10 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.Deathling;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.effects.Wound;
@@ -23,36 +25,43 @@ public class SummoningSpell extends Spell {
     private int summonLimit = 1;
     private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.Spells_SummonLimitReached);
 
-
     @Override
-    public void use(Hero hero){
-        if(isSummoningLimitReached(hero)){
-            GLog.w( getLimitWarning(getSummonLimit()) );
-            return;
+    public boolean cast(Char chr){
+        if(!super.cast(chr)) {
+	        return false;
         }
-        if(!hero.spendSoulPoints(spellCost())){
-            GLog.w( notEnoughSouls(name) );
-            return;
+
+        if(chr instanceof Hero) {
+	        Hero hero = (Hero)chr;
+	        if (isSummoningLimitReached(hero)) {
+		        GLog.w(getLimitWarning(getSummonLimit()));
+		        return false;
+	        }
         }
-        cast(hero);
-    }
 
-    @Override
-    public void cast(Hero hero){
-        super.cast(hero);
+        int spawnPos = Dungeon.level.getEmptyCellNextTo(chr.getPos());
 
-        int spawnPos = Dungeon.level.getEmptyCellNextTo(hero.getPos());
-
-        Wound.hit(hero);
-        Buff.detach(hero, Sungrass.Health.class);
+        Wound.hit(chr);
+        Buff.detach(chr, Sungrass.Health.class);
 
         if (Dungeon.level.cellValid(spawnPos)) {
-            Mob pet = Mob.makePet(getSummonMob(), hero);
+	        Mob pet = getSummonMob();
+	        if(chr instanceof Hero) {
+		        Hero hero = (Hero)chr;
+		        pet = Mob.makePet(pet, hero);
+	        } else if(chr instanceof Mob) {
+		        Mob mob = (Mob) chr;
+		        pet.setFraction(mob.fraction());
+	        } else {
+		        pet.setFraction(Fraction.DUNGEON);
+	        }
             pet.setPos(spawnPos);
             Dungeon.level.spawnMob(pet);
         }
 
-        hero.spend(1/hero.speed());
+        chr.spend(1/chr.speed());
+
+	    return true;
     }
 
 

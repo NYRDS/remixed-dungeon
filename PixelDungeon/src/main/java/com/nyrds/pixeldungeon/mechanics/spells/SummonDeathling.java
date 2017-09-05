@@ -5,32 +5,22 @@ import com.nyrds.pixeldungeon.mobs.common.Deathling;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
+//This can be just config file
 public class SummonDeathling extends SummoningSpell {
 
-    public SummonDeathling(){
-        targetingType = SpellHelper.TARGET_NONE;
-        magicAffinity = SpellHelper.AFFINITIES[0];
-        name          = Game.getVar(R.string.Necromancy_SummonDeathlingName);
-        desc          = Game.getVar(R.string.SummonDeathling_Info);
-        imageIndex = 0;
-    }
+	public SummonDeathling() {
+		targetingType = SpellHelper.TARGET_NONE;
+		magicAffinity = SpellHelper.AFFINITY_NECROMANCY;
 
-    @Override
-    public Mob getSummonMob(){
-        return new Deathling();
-    }
+		name = Game.getVar(R.string.Necromancy_SummonDeathlingName);
+		desc = Game.getVar(R.string.SummonDeathling_Info);
+		imageIndex = 0;
+		textureResolution = 32;
+		textureFile = "spellsIcons/necromancy.png";
+	}
 
-    public int spellCost(){
-        return 5;
-    }
-
-    @Override
-    public String texture(){
-        return "spellsIcons/necromancy.png";
-    }
-
-    @Override
-    public int textureResolution(){
-        return 32;
-    }
+	@Override
+	public Mob getSummonMob() {
+		return new Deathling();
+	}
 }

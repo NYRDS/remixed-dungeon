@@ -6,7 +6,10 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -15,9 +18,10 @@ import org.json.JSONObject;
 
 public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Necromancy_NotEnoughSouls);
-    private int spellCost = 5;
+    protected int spellCost = 5;
 
     protected String targetingType;
+
     protected String magicAffinity;
 
     protected String textureFile = "spellsIcons/common.png";
@@ -41,16 +45,34 @@ public class Spell {
         spellCost  = obj.optInt("spellCost", spellCost());
     }
 
-    public void use(Hero hero){
-        if(!hero.spendSoulPoints(spellCost())){
-            GLog.w( notEnoughSouls(name) );
-            return;
-        }
-        cast(hero);
-    }
+	protected boolean cast(Char chr, int cell) {
+		return true;
+	}
 
-    protected void cast(Hero hero){
+    public boolean cast(final Char chr){
+	    if(chr instanceof Hero) {
+		    Hero hero = (Hero)chr;
+		    if (!hero.spendSoulPoints(spellCost())) {
+			    GLog.w(notEnoughSouls(name));
+			    return false;
+		    }
+	    }
 
+		if (targetingType.equals(SpellHelper.TARGET_CELL)) {
+			GameScene.selectCell(new CellSelector.Listener() {
+				@Override
+				public void onSelect(Integer cell) {
+					cast(chr, cell);
+				}
+
+				@Override
+				public String prompt() {
+					return "select cell to cast spell on";
+				}
+			});
+			return false;
+		}
+		return true;
     }
 
     public String name(){

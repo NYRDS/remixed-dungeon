@@ -19,7 +19,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
-import com.nyrds.pixeldungeon.mechanics.spells.SummonDeathling;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.CatalogusListItem;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
@@ -44,23 +43,18 @@ public class WndHeroSpells extends Window {
 
 	private static final int MARGIN = 2;
 
-	private Text       txtTitle;
-	private ScrollPane list;
-
-	private ArrayList<CatalogusListItem> items = new ArrayList<>();
-
 	public WndHeroSpells() {
 		super();
 
 		final Hero hero = Dungeon.hero;
 		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - MARGIN);
 
-		txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
+		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		txtTitle.measure();
 		add(txtTitle);
 
-		list = new ScrollableList(new Component());
+		ScrollPane list = new ScrollableList(new Component());
 
 		add(list);
 
@@ -70,7 +64,20 @@ public class WndHeroSpells extends Window {
 
 		float yPos = txtTitle.bottom() + MARGIN;
 
-		final Spell spell = new SummonDeathling();
+		ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
+		if(spells != null) {
+			for (String spell : spells) {
+				yPos = addSpell(spell, hero, yPos);
+			}
+		}
+	}
+
+	private float addSpell(String spellName ,final Hero hero,  float yPos) {
+
+		final Spell spell = SpellFactory.getSpellByName(spellName);
+		if(spell == null) {
+			return yPos;
+		}
 
 		Image icon = spell.image();
 
@@ -82,7 +89,7 @@ public class WndHeroSpells extends Window {
 			@Override
 			protected void onClick() {
 				hide();
-				spell.use(hero);
+				spell.cast(hero);
 			}
 		};
 		btnCast.setRect(
@@ -107,11 +114,10 @@ public class WndHeroSpells extends Window {
 
 		txtName = PixelScene.createText(spell.name(), GuiProperties.titleFontSize());
 		txtName.measure();
-		txtName.x = btnCast.left() + MARGIN;
-		txtName.y = btnCast.bottom() + MARGIN;
+		txtName.x = btnInfo.left() + MARGIN;
+		txtName.y = btnInfo.bottom() + MARGIN;
 		add(txtName);
 
-		yPos = icon.bottom();
+		return txtName.bottom() + MARGIN;
 	}
-
 }
