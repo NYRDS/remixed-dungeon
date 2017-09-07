@@ -27,16 +27,16 @@ public class SummoningSpell extends Spell {
 
     @Override
     public boolean cast(Char chr){
-        if(!super.cast(chr)) {
-	        return false;
+        if(chr instanceof Hero) {
+            Hero hero = (Hero)chr;
+            if (isSummoningLimitReached(hero)) {
+                GLog.w(getLimitWarning(getSummonLimit()));
+                return false;
+            }
         }
 
-        if(chr instanceof Hero) {
-	        Hero hero = (Hero)chr;
-	        if (isSummoningLimitReached(hero)) {
-		        GLog.w(getLimitWarning(getSummonLimit()));
-		        return false;
-	        }
+        if(!super.cast(chr)) {
+	        return false;
         }
 
         int spawnPos = Dungeon.level.getEmptyCellNextTo(chr.getPos());
