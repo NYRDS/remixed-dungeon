@@ -33,7 +33,9 @@
 		"quickslot":[{
 			"kind": "WandOfMagicMissile"
 		}],
-      "knownItems":[{"kind":"ScrollOfIdentify"}]
+		"knownItems":[{"kind":"ScrollOfIdentify"}],
+		"isSpellUser":true,
+		"magicAffinity":"Elemental"
 	},
 	"ROGUE": {
 		"ring1": {
