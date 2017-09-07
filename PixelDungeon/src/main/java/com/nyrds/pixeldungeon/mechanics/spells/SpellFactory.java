@@ -44,7 +44,7 @@ public class SpellFactory {
 
 	private static void initSpellsMap() {
 		registerSpellClass(SummonDeathling.class);
-		registerSpellClass(Fireball.class);
+		registerSpellClass(Ignite.class);
 	}
 
 	@Nullable
