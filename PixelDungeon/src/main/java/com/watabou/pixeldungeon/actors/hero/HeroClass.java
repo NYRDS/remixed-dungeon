@@ -33,6 +33,7 @@ import com.nyrds.pixeldungeon.items.common.debug.CandyOfDeath;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.pixeldungeon.items.guts.weapon.melee.TitanSword;
 import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
@@ -63,6 +64,8 @@ import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfMight;
+import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
@@ -99,7 +102,7 @@ public enum HeroClass {
 	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
 
 	private boolean isSpellUser;
-	private String magicAffinity;
+	private static String magicAffinity;
 
 	private static final String[] WAR_PERKS         = Game
 			.getVars(R.array.HeroClass_WarPerks);
@@ -150,14 +153,12 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		for (int i = 0; i < 100; i++) {
 			hero.collect(new ScrollOfMagicMapping().identify());
-			hero.collect(new PotionOfFrost().identify());
-			hero.collect(new ScrollOfUpgrade().identify());
+			hero.collect(new PotionOfStrength().identify());
+			hero.collect(new PotionOfMight().identify());
 			hero.collect(new MysteryMeat());
 		}
 
-		Item ring = new WandOfShadowbolt().identify();
-		ring.cursed = true;
-		hero.collect(ring);
+		hero.collect(new TitanSword().identify().upgrade(7));
 		hero.collect(new BraceletOfDevour());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
@@ -234,6 +235,7 @@ public enum HeroClass {
 				hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
 				hero.heroClass.isSpellUser(classDesc.optBoolean("isSpellUser", false));
 				hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
+				hero.setSoulPoints(classDesc.optInt("startingSp", 0));
 
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException(e);
@@ -311,13 +313,16 @@ public enum HeroClass {
 	}
 
 	private static final String CLASS = "class";
+	private static final String SPELL_AFFINITY = "affinity";
 
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(CLASS, toString());
+		bundle.put(SPELL_AFFINITY, getMagicAffinity());
 	}
 
 	public static HeroClass restoreFromBundle(Bundle bundle) {
 		String value = bundle.getString(CLASS);
+		setMagicAffinity(bundle.getString(SPELL_AFFINITY));
 		return value.length() > 0 ? valueOf(value) : ROGUE;
 	}
 
@@ -345,7 +350,7 @@ public enum HeroClass {
 		return magicAffinity;
 	}
 
-	public void setMagicAffinity(String affinity){
+	public static void setMagicAffinity(String affinity){
 		magicAffinity = affinity;
 	}
 }

@@ -34,8 +34,9 @@
 			"kind": "WandOfMagicMissile"
 		}],
 		"knownItems":[{"kind":"ScrollOfIdentify"}],
-		"isSpellUser":true,
-		"magicAffinity":"Elemental"
+		"isSpellUser": true,
+		"magicAffinity": "Elemental",
+		"startingSp": 20
 	},
 	"ROGUE": {
 		"ring1": {
@@ -91,7 +92,7 @@
 		}],
         "hp":15,
         "knownItems":[{"kind":"PotionOfHealing"}],
-		"isSpellUser":true,
-		"magicAffinity":"Necromancy"
+		"isSpellUser": true,
+		"magicAffinity": "Necromancy"
 	}
 }

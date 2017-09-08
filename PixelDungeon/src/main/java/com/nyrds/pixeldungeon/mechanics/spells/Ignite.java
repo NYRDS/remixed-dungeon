@@ -27,7 +27,7 @@ public class Ignite extends Spell{
 
 	Ignite() {
 		targetingType = SpellHelper.TARGET_CELL;
-		magicAffinity = SpellHelper.AFFINITY_NECROMANCY;
+		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
 		name          = "Ignite";
 		desc          = "Testing fireball";

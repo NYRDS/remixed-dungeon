@@ -1885,6 +1885,9 @@ public class Hero extends Char {
 		if (this.heroClass == HeroClass.NECROMANCER) {
 			return 25;
 		}
+		if (this.heroClass == HeroClass.MAGE) {
+			return 19 + this.lvl();
+		}
 		return 0;
 	}
 
@@ -1894,6 +1897,15 @@ public class Hero extends Char {
 		}
 		sp = Scrambler.scramble(Scrambler.descramble(sp) - cost);
 		return true;
+	}
+
+	public void setSoulPoints(int points){
+		if (points < getSoulPointsMax()){
+			sp = Scrambler.scramble(points);
+		} else {
+			sp = Scrambler.scramble(getSoulPointsMax());
+		}
+
 	}
 
 	@Override
