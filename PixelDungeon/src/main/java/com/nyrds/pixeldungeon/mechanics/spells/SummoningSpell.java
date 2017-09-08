@@ -59,7 +59,7 @@ public class SummoningSpell extends Spell {
             Dungeon.level.spawnMob(pet);
         }
 
-        chr.spend(1/chr.speed());
+        chr.spend(castTime/chr.speed());
 
 	    return true;
     }

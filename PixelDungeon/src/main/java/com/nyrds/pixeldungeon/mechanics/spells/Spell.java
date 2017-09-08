@@ -28,7 +28,7 @@ public class Spell {
     protected String textureFile = "spellsIcons/common.png";
     protected String name = "Spell";
     protected String desc = "Description";
-    protected int textureResolution = 16;
+    protected int textureResolution = 32;
 
     private SmartTexture icon = TextureCache.get(texture());
 
@@ -64,6 +64,7 @@ public class Spell {
 				@Override
 				public void onSelect(Integer cell) {
 					cast(chr, cell);
+                    chr.spend(castTime);
 				}
 
 				@Override
@@ -73,7 +74,7 @@ public class Spell {
 			});
 			return false;
 		}
-        chr.spend(castTime);
+
 		return true;
     }
 
