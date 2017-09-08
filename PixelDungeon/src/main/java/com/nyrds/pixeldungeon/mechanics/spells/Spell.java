@@ -19,6 +19,7 @@ import org.json.JSONObject;
 public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Necromancy_NotEnoughSouls);
     protected int spellCost = 5;
+    protected float castTime = 1f;
 
     protected String targetingType;
 
@@ -72,6 +73,7 @@ public class Spell {
 			});
 			return false;
 		}
+        chr.spend(castTime);
 		return true;
     }
 
