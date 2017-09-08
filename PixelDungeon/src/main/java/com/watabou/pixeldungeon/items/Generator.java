@@ -20,6 +20,8 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
+import com.nyrds.pixeldungeon.items.drinks.Drink;
+import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
 import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
@@ -154,7 +156,8 @@ public class Generator {
 		GOLD(50, Gold.class),
 		RANGED(2, Bow.class),
 		BULLETS(5, Arrow.class),
-		THROWABLE(0, MissileWeapon.class);
+		THROWABLE(0, MissileWeapon.class),
+		DRINK(25, Drink.class);
 
 		public Class<?>[] classes;
 		public float[]    probs;
@@ -287,6 +290,10 @@ public class Generator {
 				PumpkinPie.class,
 				ChristmasTurkey.class};
 		Category.FOOD.probs = new float[]{4, 1, 0, 0, 0};
+
+		Category.DRINK.classes = new Class<?>[]{
+				ManaPotion.class};
+		Category.DRINK.probs = new float[]{1};
 
 		Category.RING.classes = new Class<?>[]{
 				RingOfMending.class,

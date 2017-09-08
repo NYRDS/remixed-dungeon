@@ -18,10 +18,12 @@
     <string name="SummonDeathling_Info">Summons one Deathling.</string>
 
     <!-- Items descriptions -->
-
     <!-- STRINGS OF Drink CLASS -->
     <string name="Drink_ACDrink">DRINK</string>
     <string name="Drink_Message">That drink was refreshing!</string>
+
+    <string name="ManaPotion_Name">Mana Potion</string>
+    <string name="ManaPotion_Info">This potion will restore your spiritual energy.</string>
 
     <!-- STRINGS OF Mushroom CLASS -->
     <string name="Mushroom_Eat_Message">That mushroom tastes weird!</string>
