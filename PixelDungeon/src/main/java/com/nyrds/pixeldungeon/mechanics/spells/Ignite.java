@@ -32,10 +32,9 @@ public class Ignite extends Spell{
 		name          = "Ignite";
 		desc          = "Testing fireball";
 		imageIndex = 0;
-
-		textureFile = "spellsIcons/elemental.png";
 		spellCost = 1;
 	}
+
 
 	@Override
 	public boolean cast(Char chr, int cell){
@@ -60,5 +59,10 @@ public class Ignite extends Spell{
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public String texture(){
+		return "spellsIcons/elemental.png";
 	}
 }

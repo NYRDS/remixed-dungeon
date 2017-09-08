@@ -15,12 +15,17 @@ public class SummonDeathling extends SummoningSpell {
 		name = Game.getVar(R.string.Necromancy_SummonDeathlingName);
 		desc = Game.getVar(R.string.SummonDeathling_Info);
 		imageIndex = 0;
-		textureResolution = 32;
-		textureFile = "spellsIcons/necromancy.png";
+
+		castTime = 3f;
 	}
 
 	@Override
 	public Mob getSummonMob() {
 		return new Deathling();
+	}
+
+	@Override
+	public String texture(){
+		return "spellsIcons/necromancy.png";
 	}
 }
