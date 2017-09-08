@@ -29,6 +29,9 @@
 		"items": [{
 			"kind": "WandOfMagicMissile",
 			"identified": true
+		},
+		{
+			"kind": "ManaPotion"
 		}],
 		"quickslot":[{
 			"kind": "WandOfMagicMissile"

@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
+import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
 import com.nyrds.pixeldungeon.items.food.Candy;
 import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
@@ -391,6 +392,7 @@ public class ItemFactory {
 		registerItemClass(Candy.class);
 		registerItemClass(WandOfShadowbolt.class);
 		registerItemClass(PseudoAmulet.class);
+		registerItemClass(ManaPotion.class);
 
 	}
 
