@@ -65,6 +65,7 @@ import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
+import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
@@ -76,6 +77,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -155,7 +157,7 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping().identify());
 			hero.collect(new PotionOfStrength().identify());
 			hero.collect(new PotionOfMight().identify());
-			hero.collect(new MysteryMeat());
+			hero.collect(new PotionOfMindVision());
 		}
 
 		hero.collect(new TitanSword().identify().upgrade(7));
@@ -163,7 +165,7 @@ public enum HeroClass {
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
 
-		hero.collect(new LloydsBeacon());
+		hero.collect(new WandOfFirebolt().identify().upgrade(7));
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 
