@@ -53,6 +53,7 @@ public class Spell {
     public boolean cast(final Char chr){
 	    if(chr instanceof Hero) {
 		    Hero hero = (Hero)chr;
+
 		    if (!hero.spendSoulPoints(spellCost())) {
 			    GLog.w(notEnoughSouls(name));
 			    return false;
@@ -63,8 +64,7 @@ public class Spell {
 			GameScene.selectCell(new CellSelector.Listener() {
 				@Override
 				public void onSelect(Integer cell) {
-					cast(chr, cell);
-                    chr.spend(castTime);
+                    cast(chr, cell);
 				}
 
 				@Override
