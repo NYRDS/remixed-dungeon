@@ -73,9 +73,7 @@ public class BerserkArmor extends ClassArmor {
 				if (Actor.findChar( cell ) != null && cell != getCurUser().getPos()) {
 					cell = Ballistica.trace[Ballistica.distance - 2];
 				}
-				
-				getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
-				
+
 				getCurUser().checkIfFurious();
 				
 				Invisibility.dispel(getCurUser());

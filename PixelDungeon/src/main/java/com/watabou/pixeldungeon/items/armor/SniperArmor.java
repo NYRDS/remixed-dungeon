@@ -66,8 +66,6 @@ public class SniperArmor extends ClassArmor {
 			return;
 		}
 		
-		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
-		
 		getCurUser().getSprite().zap( getCurUser().getPos() );
 		getCurUser().busy();
 	}

@@ -81,9 +81,7 @@ public class HuntressArmor extends ClassArmor {
 			GLog.w( TXT_NO_ENEMIES );
 			return;
 		}
-		
-		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
-		
+
 		getCurUser().getSprite().zap( getCurUser().getPos() );
 		getCurUser().busy();
 	}

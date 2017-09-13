@@ -48,8 +48,6 @@ public class BattleMageArmor extends ClassArmor {
 			}
 		}
 		
-		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
-		
 		getCurUser().spend( Actor.TICK );
 		getCurUser().getSprite().operate( getCurUser().getPos() );
 		getCurUser().busy();

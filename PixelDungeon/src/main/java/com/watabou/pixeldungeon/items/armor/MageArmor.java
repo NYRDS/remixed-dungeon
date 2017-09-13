@@ -62,8 +62,6 @@ public class MageArmor extends ClassArmor {
 			}
 		}
 		
-		getCurUser().hp(getCurUser().hp() - (getCurUser().hp() / 3));
-		
 		getCurUser().spend( Actor.TICK );
 		getCurUser().getSprite().operate( getCurUser().getPos() );
 		getCurUser().busy();
