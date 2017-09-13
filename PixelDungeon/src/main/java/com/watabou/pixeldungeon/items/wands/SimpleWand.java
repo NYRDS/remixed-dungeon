@@ -10,8 +10,7 @@ public abstract class SimpleWand extends Wand {
 		WandOfAvalanche.class, 
 		WandOfDisintegration.class, 
 		WandOfFirebolt.class, 
-		WandOfLightning.class, 
-		WandOfMagicMissile.class, 
+		WandOfLightning.class,
 		WandOfPoison.class, 
 		WandOfRegrowth.class, 
 		WandOfSlowness.class};
