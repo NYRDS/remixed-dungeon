@@ -95,6 +95,7 @@ abstract public class ClassArmor extends Armor {
 			} else {
 				setCurUser(hero);
 				doSpecial();
+				hero.spendSoulPoints(hero.getSoulPointsMax()/3);
 			}
 			
 		} else {	
