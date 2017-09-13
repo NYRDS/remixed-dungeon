@@ -27,7 +27,7 @@ public class WarlockArmor extends ClassArmor {
 		hasCollar = true;
 		image = 13;
 		STR = 10;
-		DR = 9;
+		DR = 7;
 	}
 	
 	@Override
