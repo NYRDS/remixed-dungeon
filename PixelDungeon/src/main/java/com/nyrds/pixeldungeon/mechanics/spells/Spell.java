@@ -54,10 +54,10 @@ public class Spell {
 	    if(chr instanceof Hero) {
 		    Hero hero = (Hero)chr;
 
-		    if (!hero.spendSoulPoints(spellCost())) {
-			    GLog.w(notEnoughSouls(name));
-			    return false;
-		    }
+            if (!hero.enoughSP(spellCost())) {
+                GLog.w(notEnoughSouls(name));
+                return false;
+            }
 	    }
 
 		if (targetingType.equals(SpellHelper.TARGET_CELL)) {
@@ -76,6 +76,10 @@ public class Spell {
 		}
 
 		return true;
+    }
+
+    public void castCallback(Hero hero){
+        hero.spendSoulPoints(spellCost());
     }
 
     public String name(){

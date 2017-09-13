@@ -189,6 +189,7 @@ public class Hero extends Char {
 	private int lvl = Scrambler.scramble(1);
 	private int exp = Scrambler.scramble(0);
 	private int sp  = Scrambler.scramble(0);
+	private int maxSp  = Scrambler.scramble(0);
 
 	public String levelId;
 
@@ -253,6 +254,7 @@ public class Hero extends Char {
 	private static final String DIFFICULTY = "difficulty";
 	private static final String PETS       = "pets";
 	private static final String SP         = "sp";
+	private static final String MAX_SP     = "maxsp";
 	private static final String PORTAL_LEVEL_POS         = "portalLevelPos";
 	private static final String IS_SPELL_USER = "isspelluser";
 
@@ -296,6 +298,7 @@ public class Hero extends Char {
 
 		bundle.put(PETS, pets);
 		bundle.put(SP, getSoulPoints());
+		bundle.put(MAX_SP, getSoulPointsMax());
 
 		belongings.storeInBundle(bundle);
 		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
@@ -328,6 +331,7 @@ public class Hero extends Char {
 		}
 
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
+		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 0));
 
 		belongings.restoreFromBundle(bundle);
 
@@ -1492,7 +1496,7 @@ public class Hero extends Char {
 
 		if (ankh == null) {
 			if (this.subClass == HeroSubClass.LICH && this.getSoulPoints() == this.getSoulPointsMax()) {
-				this.spendSoulPoints(this.getSoulPointsMax());
+				this.setSoulPoints(0);
 				Dungeon.deleteGame(false);
 				GameScene.show(new WndResurrect(null, cause));
 			} else {
@@ -1879,33 +1883,34 @@ public class Hero extends Char {
 	}
 
 	public int getSoulPointsMax() {
-		if (this.subClass == HeroSubClass.LICH) {
-			return 50;
-		}
-		if (this.heroClass == HeroClass.NECROMANCER) {
-			return 25;
-		}
-		if (this.heroClass == HeroClass.MAGE) {
-			return 19 + this.lvl();
-		}
-		return 0;
+		return maxSp;
 	}
 
-	public boolean spendSoulPoints(int cost) {
-		if (cost > getSoulPoints()) {
+	public void spendSoulPoints(int cost) {
+		setSoulPoints(Scrambler.descramble(sp) - cost);
+	}
+
+	public boolean enoughSP(int cost){
+		if (getSoulPoints() < cost){
 			return false;
+		} else{
+			return true;
 		}
-		sp = Scrambler.scramble(Scrambler.descramble(sp) - cost);
-		return true;
 	}
 
 	public void setSoulPoints(int points){
+		if (points < 0){
+			sp = Scrambler.scramble(0);
+		}
 		if (points < getSoulPointsMax()){
 			sp = Scrambler.scramble(points);
 		} else {
 			sp = Scrambler.scramble(getSoulPointsMax());
 		}
+	}
 
+	public void setMaxSoulPoints(int points){
+		maxSp = Scrambler.scramble(points);
 	}
 
 	@Override

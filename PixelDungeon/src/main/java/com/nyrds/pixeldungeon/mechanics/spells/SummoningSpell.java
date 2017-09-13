@@ -49,6 +49,7 @@ public class SummoningSpell extends Spell {
 	        if(chr instanceof Hero) {
 		        Hero hero = (Hero)chr;
 		        pet = Mob.makePet(pet, hero);
+                castCallback(hero);
 	        } else if(chr instanceof Mob) {
 		        Mob mob = (Mob) chr;
 		        pet.setFraction(mob.fraction());

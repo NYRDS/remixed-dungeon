@@ -238,6 +238,7 @@ public enum HeroClass {
 				hero.heroClass.isSpellUser(classDesc.optBoolean("isSpellUser", false));
 				hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
 				hero.setSoulPoints(classDesc.optInt("startingSp", 0));
+				hero.setMaxSoulPoints(classDesc.optInt("maxSp", 0));
 
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException(e);

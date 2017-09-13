@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -34,6 +35,10 @@ public class Ignite extends Spell{
 	public boolean cast(Char chr, int cell){
 		if(Ballistica.cast(chr.getPos(), cell, false, true) == cell) {
 			GameScene.add( Blob.seed( cell, 5, Fire.class ) );
+			if(chr instanceof Hero) {
+				Hero hero = (Hero) chr;
+				castCallback(hero);
+			}
 			return true;
 		}
 		return false;
