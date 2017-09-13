@@ -26,6 +26,8 @@ public class BattleMageArmor extends ClassArmor {
 		name = Game.getVar(R.string.MageArmor_Name);
 		hasCollar = true;
 		image = 12;
+		STR = 10;
+		DR = 9;
 	}
 	
 	@Override

@@ -40,6 +40,8 @@ public class MageArmor extends ClassArmor {
 	
 	{
 		image = 11;
+		STR = 10;
+		DR = 9;
 	}
 	
 	@Override
