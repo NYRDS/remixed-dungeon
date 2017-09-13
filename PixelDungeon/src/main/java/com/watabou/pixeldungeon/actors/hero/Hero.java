@@ -1870,12 +1870,12 @@ public class Hero extends Char {
 	}
 
 	public void accumulateSoulPoints() {
-		int sp = Scrambler.descramble(this.sp);
-		sp = sp + 1;
-		if (sp > getSoulPointsMax()) {
-			sp = getSoulPointsMax();
+		int points = Scrambler.descramble(sp);
+		points = points + 1;
+		if (points > getSoulPointsMax()) {
+			points = getSoulPointsMax();
 		}
-		this.sp = Scrambler.scramble(sp);
+		setSoulPoints(points);
 	}
 
 	public int getSoulPoints() {
@@ -1883,7 +1883,7 @@ public class Hero extends Char {
 	}
 
 	public int getSoulPointsMax() {
-		return maxSp;
+		return Scrambler.descramble(maxSp);
 	}
 
 	public void spendSoulPoints(int cost) {

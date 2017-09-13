@@ -40,7 +40,7 @@
 		"isSpellUser": true,
 		"magicAffinity": "Elemental",
 		"startingSp": 20,
-		"maxSP": 20
+		"maxSp": 20
 	},
 	"ROGUE": {
 		"ring1": {
@@ -97,7 +97,7 @@
         "hp":15,
         "knownItems":[{"kind":"PotionOfHealing"}],
 		"startingSp": 0,
-		"maxSP": 25,
+		"maxSp": 25,
 		"isSpellUser": true,
 		"magicAffinity": "Necromancy"
 	}
