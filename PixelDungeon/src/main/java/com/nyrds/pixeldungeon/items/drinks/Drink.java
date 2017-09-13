@@ -16,8 +16,7 @@ abstract public class Drink extends Item {
 	public static final float TIME_TO_DRINK	= 1f;
 	
 	public static final String AC_DRINK = Game.getVar(R.string.Drink_ACDrink);
-	
-	public int mana			= 0;
+
 	public String message 	= Game.getVar(R.string.Drink_Message);
 	
 	{
@@ -31,35 +30,6 @@ abstract public class Drink extends Item {
 		return actions;
 	}
 
-	@Override
-	public void execute( Hero hero, String action ) {
-		if (action.equals( AC_DRINK )) {
-			detach( hero.belongings.backpack );
-			GLog.i( message );
-			
-			switch (hero.heroClass) {
-			case WARRIOR:
-				break;
-			case NECROMANCER:
-			case MAGE:
-				hero.setSoulPoints(hero.getSoulPoints() + mana);
-				break;
-			case ROGUE:
-			case HUNTRESS:
-			case ELF:
-				break;
-			}
-			
-			hero.getSprite().operate( hero.getPos() );
-			hero.busy();
-			SpellSprite.show( hero, SpellSprite.FOOD );
-			Sample.INSTANCE.play( Assets.SND_DRINK );
-			
-			hero.spend( TIME_TO_DRINK );
-		} else {
-			super.execute( hero, action );
-		}
-	}
 	
 	@Override
 	public boolean isUpgradable() {
