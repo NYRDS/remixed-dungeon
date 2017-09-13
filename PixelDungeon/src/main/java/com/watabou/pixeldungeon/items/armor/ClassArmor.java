@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
 	
-	private static final String TXT_LOW_HEALTH   = Game.getVar(R.string.ClassArmor_LowHealt);
+	private static final String TXT_LOW_MANA     = Game.getVar(R.string.ClassArmor_LowMana);
 	private static final String TXT_NOT_EQUIPPED = Game.getVar(R.string.ClassArmor_NotEquipped);
 	
 	{
@@ -78,7 +78,7 @@ abstract public class ClassArmor extends Armor {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if (hero.hp() >= 3 && isEquipped( hero )) {
+		if (hero.getSoulPoints() >= hero.getSoulPointsMax()/3 && isEquipped( hero )) {
 			actions.add( special() );
 		}
 		return actions;
@@ -88,8 +88,8 @@ abstract public class ClassArmor extends Armor {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(special())) {
 			
-			if (hero.hp() < 3) {
-				GLog.w( TXT_LOW_HEALTH );
+			if (hero.getSoulPoints() != 0 && hero.getSoulPoints() < hero.getSoulPointsMax()/3) {
+				GLog.w( TXT_LOW_MANA );
 			} else if (!isEquipped( hero )) {
 				GLog.w( TXT_NOT_EQUIPPED );
 			} else {
