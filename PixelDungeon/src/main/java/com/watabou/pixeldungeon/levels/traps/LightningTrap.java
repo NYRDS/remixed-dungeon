@@ -25,6 +25,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -41,6 +42,8 @@ public class LightningTrap implements ITrigger{
 	// 00x66CCEE
 	
 	public static void trigger( int pos, @Nullable Char ch ) {
+
+		ch = Actor.findChar(pos);
 		
 		if (ch != null) {
 			ch.damage( Math.max( 1, Random.Int( ch.hp() / 3, 2 * ch.hp() / 3 ) ), LIGHTNING );

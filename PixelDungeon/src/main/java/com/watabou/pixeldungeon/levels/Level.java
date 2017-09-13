@@ -1009,7 +1009,6 @@ public abstract class Level implements Bundlable {
 		if (presser.affectLevelObjects()) {
 			LevelObject levelObject = objects.get(cell);
 			if (levelObject != null) {
-
 				levelObject.bump();
 			}
 		}
