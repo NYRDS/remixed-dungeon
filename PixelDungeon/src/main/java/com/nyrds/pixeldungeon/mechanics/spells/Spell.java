@@ -64,7 +64,9 @@ public class Spell {
 			GameScene.selectCell(new CellSelector.Listener() {
 				@Override
 				public void onSelect(Integer cell) {
-                    cast(chr, cell);
+                    if (cell != null){
+                        cast(chr, cell);
+                    }
 				}
 
 				@Override
