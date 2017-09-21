@@ -53,7 +53,7 @@ public class WndHero extends WndTabbed {
 	private static final String TXT_EXP		= Game.getVar(R.string.WndHero_Exp);
 	private static final String TXT_STR		= Game.getVar(R.string.WndHero_Str);
 	private static final String TXT_HEALTH	= Game.getVar(R.string.WndHero_Health);
-	private static final String TXT_SOULS	= Game.getVar(R.string.Necromancy_SoulsCountLabel);
+	private static final String TXT_SOULS	= Game.getVar(R.string.Mana_Title);
 	private static final String TXT_GOLD	= Game.getVar(R.string.WndHero_Gold);
 	private static final String TXT_DEPTH	= Game.getVar(R.string.WndHero_Depth);
 	

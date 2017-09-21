@@ -17,7 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Spell {
-    private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Necromancy_NotEnoughSouls);
+    private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Spells_NotEnoughSP);
     protected int spellCost = 5;
     protected float castTime = 1f;
 
