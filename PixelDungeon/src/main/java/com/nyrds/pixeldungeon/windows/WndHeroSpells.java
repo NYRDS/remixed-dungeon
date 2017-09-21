@@ -118,6 +118,6 @@ public class WndHeroSpells extends Window {
 		txtName.y = btnInfo.bottom() + MARGIN;
 		add(txtName);
 
-		return txtName.bottom() + MARGIN;
+		return icon.bottom() + MARGIN;
 	}
 }
