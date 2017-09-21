@@ -72,6 +72,7 @@ public class BuffIndicator extends Component {
 	public static final int FROSTAURA   = 36;
 	public static final int STONEBLOOD  = 37;
 	public static final int DEVOUR   	= 38;
+	public static final int PAIN		= 39;
 
 	
 	public static final int SIZE	= 7;
