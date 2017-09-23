@@ -26,9 +26,10 @@ public class Spell {
     protected String magicAffinity;
 
     protected String textureFile = "spellsIcons/common.png";
-    protected String name = "Spell";
-    protected String desc = "Description";
     protected int textureResolution = 32;
+
+    protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
+    protected String desc = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
 
     private SmartTexture icon = TextureCache.get(texture());
 
@@ -116,5 +117,9 @@ public class Spell {
 
     public int textureResolution(){
         return textureResolution;
+    }
+
+    protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
+        return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
     }
 }

@@ -14,6 +14,14 @@
     <!-- STRINGS OF SummonDeathling CLASS -->
     <string name="SummonDeathling_Info">Summons one Deathling.</string>
 
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">Ignite</string>
+    <string name="Ignite_Info">Ignites selected cell.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">Freeze</string>
+    <string name="FreezeGlobe_Info">Freezes all characters in 3x3 area.</string>
+
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
     <string name="ClassArmor_LowMana">You don\'t have enough mana!</string>

@@ -12,10 +12,7 @@ public class SummonDeathling extends SummoningSpell {
 		targetingType = SpellHelper.TARGET_NONE;
 		magicAffinity = SpellHelper.AFFINITY_NECROMANCY;
 
-		name = Game.getVar(R.string.Necromancy_SummonDeathlingName);
-		desc = Game.getVar(R.string.SummonDeathling_Info);
 		imageIndex = 0;
-
 		castTime = 3f;
 	}
 
