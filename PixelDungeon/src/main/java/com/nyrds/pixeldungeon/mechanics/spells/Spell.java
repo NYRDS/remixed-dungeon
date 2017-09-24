@@ -20,6 +20,7 @@ public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Spells_NotEnoughSP);
     protected int spellCost = 5;
     protected float castTime = 1f;
+    protected float duration = 10f;
 
     protected String targetingType;
 
@@ -82,6 +83,10 @@ public class Spell {
     }
 
     public void castCallback(Hero hero){
+        hero.spend(castTime);
+        hero.busy();
+
+        hero.getSprite().operate(hero.getPos());
         hero.spendSoulPoints(spellCost());
     }
 
