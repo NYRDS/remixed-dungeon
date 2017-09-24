@@ -331,7 +331,7 @@ public class Hero extends Char {
 		}
 
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
-		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 0));
+		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 20));
 
 		belongings.restoreFromBundle(bundle);
 

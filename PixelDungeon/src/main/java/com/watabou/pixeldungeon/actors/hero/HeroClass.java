@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.debug.CandyOfDeath;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
+import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.TitanSword;
@@ -48,6 +49,7 @@ import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
@@ -160,12 +162,12 @@ public enum HeroClass {
 			hero.collect(new PotionOfMindVision());
 		}
 
-		hero.collect(new TitanSword().identify().upgrade(7));
-		hero.collect(new BraceletOfDevour());
+		hero.collect(new WarriorArmor().identify());
+		hero.collect(new TomeOfMastery());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
 
-		hero.collect(new WandOfFirebolt().identify().upgrade(7));
+		hero.collect(new ManaPotion());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 
@@ -237,7 +239,7 @@ public enum HeroClass {
 				hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
 				hero.heroClass.isSpellUser(classDesc.optBoolean("isSpellUser", false));
 				hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
-				hero.setMaxSoulPoints(classDesc.optInt("maxSp", 0));
+				hero.setMaxSoulPoints(classDesc.optInt("maxSp", 20));
 				hero.setSoulPoints(classDesc.optInt("startingSp", 0));
 
 
