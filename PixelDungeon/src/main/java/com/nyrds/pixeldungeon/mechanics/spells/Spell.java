@@ -54,39 +54,38 @@ public class Spell {
 
     public boolean cast(final Char chr){
 	    if(chr instanceof Hero) {
-		    Hero hero = (Hero)chr;
+		    final Hero hero = (Hero)chr;
 
             if (!hero.enoughSP(spellCost())) {
                 GLog.w(notEnoughSouls(name));
                 return false;
             }
-	    }
 
-		if (targetingType.equals(SpellHelper.TARGET_CELL)) {
-			GameScene.selectCell(new CellSelector.Listener() {
-				@Override
-				public void onSelect(Integer cell) {
-                    if (cell != null){
-                        cast(chr, cell);
+            if (targetingType.equals(SpellHelper.TARGET_CELL)) {
+                GameScene.selectCell(new CellSelector.Listener() {
+                    @Override
+                    public void onSelect(Integer cell) {
+                        if (cell != null){
+                            cast(chr, cell);
+
+                            hero.spend(castTime);
+                            hero.busy();
+                            hero.getSprite().zap(hero.getPos());
+                        }
                     }
-				}
 
-				@Override
-				public String prompt() {
-					return "select cell to cast spell on";
-				}
-			});
-			return false;
-		}
-
+                    @Override
+                    public String prompt() {
+                        return "select cell to cast spell on";
+                    }
+                });
+                return false;
+            }
+        }
 		return true;
     }
 
     public void castCallback(Hero hero){
-        hero.spend(castTime);
-        hero.busy();
-
-        hero.getSprite().operate(hero.getPos());
         hero.spendSoulPoints(spellCost());
     }
 
