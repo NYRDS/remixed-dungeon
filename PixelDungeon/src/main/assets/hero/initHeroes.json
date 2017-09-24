@@ -9,7 +9,8 @@
 			"quantity": 100
 		}],
         "str":10,
-        "hp":20
+        "hp":20,
+		"magicAffinity": "Common"
 	},
 	"non_expert": {
 		"items": [{
@@ -29,9 +30,6 @@
 		"items": [{
 			"kind": "WandOfMagicMissile",
 			"identified": true
-		},
-		{
-			"kind": "ManaPotion"
 		}],
 		"quickslot":[{
 			"kind": "WandOfMagicMissile"
