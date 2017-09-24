@@ -44,8 +44,11 @@ public class SpellFactory {
 
 	private static void initSpellsMap() {
 		registerSpellClass(SummonDeathling.class);
+
 		registerSpellClass(Ignite.class);
 		registerSpellClass(FreezeGlobe.class);
+
+		registerSpellClass(Light.class);
 	}
 
 	@Nullable
