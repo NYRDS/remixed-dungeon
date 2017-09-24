@@ -38,8 +38,6 @@ public class SpellFactory {
 		} catch (IllegalAccessException e) {
 			throw new TrackedRuntimeException(e);
 		}
-
-
 	}
 
 	private static void initSpellsMap() {
