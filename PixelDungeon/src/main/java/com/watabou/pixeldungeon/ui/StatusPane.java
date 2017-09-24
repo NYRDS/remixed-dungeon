@@ -150,10 +150,6 @@ public class StatusPane extends Component {
 
 		btnSpells = new MenuButton(new Image(Assets.getStatus(), 2, 33, 12, 11), WndHeroSpells.class);
 
-		if (!hero.heroClass.isSpellUser()) {
-			btnSpells.enable(false);
-		}
-
 		if(!Flavours.haveHats()) {
 			btnHats.enable(false);
 		}
