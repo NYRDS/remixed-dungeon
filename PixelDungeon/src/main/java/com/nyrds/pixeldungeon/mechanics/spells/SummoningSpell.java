@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.common.Deathling;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -9,8 +9,8 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.effects.Wound;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -22,8 +22,12 @@ import java.util.Collection;
  */
 public class SummoningSpell extends Spell {
 
-    private int summonLimit = 1;
+    protected int summonLimit = 1;
+
+
     private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.Spells_SummonLimitReached);
+
+	protected String mobKind = "Rat";
 
     @Override
     public boolean cast(Char chr){
@@ -39,12 +43,13 @@ public class SummoningSpell extends Spell {
 	        return false;
         }
 
-        int spawnPos = Dungeon.level.getEmptyCellNextTo(chr.getPos());
+	    Level level = Dungeon.level;
+        int spawnPos = level.getEmptyCellNextTo(chr.getPos());
 
         Wound.hit(chr);
         Buff.detach(chr, Sungrass.Health.class);
 
-        if (Dungeon.level.cellValid(spawnPos)) {
+        if (level.cellValid(spawnPos)) {
 	        Mob pet = getSummonMob();
 	        if(chr instanceof Hero) {
 		        Hero hero = (Hero)chr;
@@ -57,7 +62,7 @@ public class SummoningSpell extends Spell {
 		        pet.setFraction(Fraction.DUNGEON);
 	        }
             pet.setPos(spawnPos);
-            Dungeon.level.spawnMob(pet);
+            level.spawnMob(pet);
         }
 
 	    return true;
@@ -76,7 +81,7 @@ public class SummoningSpell extends Spell {
 
         int n = 0;
         for (Mob mob : pets) {
-            if (mob.isAlive() && mob instanceof Deathling) {
+            if (mob.isAlive() && mob.getMobClassName().equals(mobKind) ) {
                 n++;
             }
         }
@@ -89,7 +94,7 @@ public class SummoningSpell extends Spell {
     }
 
     public Mob getSummonMob(){
-        return new Rat();
+        return MobFactory.mobByName(mobKind);
     }
 
     public String getLimitWarning(int limit){
