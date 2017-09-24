@@ -1910,6 +1910,9 @@ public class Hero extends Char {
 	}
 
 	public void setMaxSoulPoints(int points){
+		if (points < 0){
+			points = 0;
+		}
 		maxSp = Scrambler.scramble(points);
 	}
 
