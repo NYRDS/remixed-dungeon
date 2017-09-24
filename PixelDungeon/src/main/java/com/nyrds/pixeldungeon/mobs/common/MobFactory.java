@@ -210,6 +210,8 @@ public class MobFactory {
 		registerMobClass(FortuneTellerNPC.class);
 		registerMobClass(CagedKobold.class);
 		registerMobClass(ArtificerNPC.class);
+
+		registerMobClass(Deathling.class);
 	}
 	
 	public static Mob mobRandom() {
