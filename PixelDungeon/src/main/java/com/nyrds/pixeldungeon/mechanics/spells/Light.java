@@ -22,7 +22,7 @@ public class Light extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_COMMON;
 
 		imageIndex = 0;
-		duration = 25;
+		duration = 80f;
 		spellCost = 1;
 	}
 
@@ -32,6 +32,7 @@ public class Light extends Spell{
 			if (chr != null && chr.isAlive()) {
 				if (chr instanceof Hero) {
 					Hero hero = (Hero) chr;
+
 					castCallback(hero);
 				}
 				Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, duration);
