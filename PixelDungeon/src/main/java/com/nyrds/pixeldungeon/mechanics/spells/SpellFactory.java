@@ -48,7 +48,7 @@ public class SpellFactory {
 		registerSpellClass(Ignite.class);
 		registerSpellClass(FreezeGlobe.class);
 
-		registerSpellClass(Light.class);
+		registerSpellClass(MagicTorch.class);
 	}
 
 	@Nullable

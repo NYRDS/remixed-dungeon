@@ -15,9 +15,9 @@ import com.watabou.pixeldungeon.scenes.GameScene;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class Light extends Spell{
+public class MagicTorch extends Spell{
 
-	Light() {
+	MagicTorch() {
 		targetingType = SpellHelper.TARGET_SELF;
 		magicAffinity = SpellHelper.AFFINITY_COMMON;
 
