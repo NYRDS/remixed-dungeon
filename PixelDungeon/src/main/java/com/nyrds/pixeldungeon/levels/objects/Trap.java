@@ -54,6 +54,7 @@ public class Trap extends LevelObject {
 		super(pos);
 		imageIndex = 0;
 		textureFile = "levelObjects/traps.png";
+		layer = -1;
 	}
 
 	@Override

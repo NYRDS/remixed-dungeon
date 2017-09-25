@@ -155,7 +155,7 @@ public abstract class Level implements Bundlable {
 			if(top == null) {
 				top = candidate;
 			} else {
-				if(candidate.getLayer() > top.getLayer()) {
+				if(candidate!= null && candidate.getLayer() > top.getLayer()) {
 					top = candidate;
 				}
 			}

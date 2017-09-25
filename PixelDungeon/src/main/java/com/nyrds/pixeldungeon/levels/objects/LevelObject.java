@@ -116,7 +116,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 			return false;
 		}
 
-		if (level.solid[nextCell] || level.getLevelObject(nextCell) != null) {
+		if (level.solid[nextCell] || level.getLevelObject(nextCell,layer) != null) {
 			return false;
 		} else {
 			setPos(nextCell);
