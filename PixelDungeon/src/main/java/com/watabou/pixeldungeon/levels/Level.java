@@ -587,7 +587,19 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());
-		//bundle.put(OBJECTS, objects.values());
+
+		ArrayList<LevelObject> objectsArray = new ArrayList<>();
+
+		for (int i = 0; i < objects.size(); i++) {
+			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
+			for (int j = 0; j < objectLayer.size(); j++) {
+				objectsArray.add(objectLayer.valueAt(j));
+			}
+		}
+
+
+		bundle.put(OBJECTS, objectsArray);
+
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
 
