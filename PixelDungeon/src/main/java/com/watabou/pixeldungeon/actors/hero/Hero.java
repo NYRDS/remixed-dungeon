@@ -187,6 +187,7 @@ public class Hero extends Char {
 	private float awareness;
 
 	private int lvl = Scrambler.scramble(1);
+	private int magicLvl = Scrambler.scramble(1);
 	private int exp = Scrambler.scramble(0);
 	private int sp  = Scrambler.scramble(0);
 	private int maxSp  = Scrambler.scramble(0);
@@ -245,18 +246,19 @@ public class Hero extends Char {
 		return Scrambler.descramble(STR);
 	}
 
-	private static final String ATTACK     = "attackSkill";
-	private static final String DEFENSE    = "defenseSkill";
-	private static final String STRENGTH   = "STR";
-	private static final String LEVEL      = "lvl";
-	private static final String EXPERIENCE = "exp";
-	private static final String LEVEL_ID   = "levelId";
-	private static final String DIFFICULTY = "difficulty";
-	private static final String PETS       = "pets";
-	private static final String SP         = "sp";
-	private static final String MAX_SP     = "maxsp";
-	private static final String PORTAL_LEVEL_POS         = "portalLevelPos";
-	private static final String IS_SPELL_USER = "isspelluser";
+	private static final String ATTACK     		= "attackSkill";
+	private static final String DEFENSE    		= "defenseSkill";
+	private static final String STRENGTH   		= "STR";
+	private static final String LEVEL      		= "lvl";
+	private static final String EXPERIENCE 		= "exp";
+	private static final String LEVEL_ID   		= "levelId";
+	private static final String DIFFICULTY 		= "difficulty";
+	private static final String PETS       		= "pets";
+	private static final String SP         		= "sp";
+	private static final String MAX_SP     		= "maxsp";
+	private static final String PORTAL_LEVEL_POS= "portalLevelPos";
+	private static final String IS_SPELL_USER	= "isspelluser";
+	private static final String MAGIC_LEVEL     = "magicLvl";
 
 	private void refreshPets() {
 		ArrayList<Mob> alivePets = new ArrayList<>();
@@ -303,6 +305,7 @@ public class Hero extends Char {
 		belongings.storeInBundle(bundle);
 		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
 		bundle.put(IS_SPELL_USER, this.heroClass.isSpellUser());
+		bundle.put(MAGIC_LEVEL, magicLvl());
 
 	}
 
@@ -340,6 +343,8 @@ public class Hero extends Char {
 		portalLevelPos = (Position) bundle.get(PORTAL_LEVEL_POS);
 
 		this.heroClass.isSpellUser(bundle.optBoolean(IS_SPELL_USER, false));
+
+		setMagicLvl(bundle.getInt(MAGIC_LEVEL));
 	}
 
 	public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -1929,5 +1934,17 @@ public class Hero extends Char {
 
 	public void setPortalLevelCoordinates(Position position){
 		portalLevelPos = position;
+	}
+
+	public int magicLvl() {
+		return Scrambler.descramble(magicLvl);
+	}
+
+	public void setMagicLvl(int level) {
+		magicLvl = Scrambler.scramble(level);
+	}
+
+	public void magicLvlUp() {
+		setMagicLvl(magicLvl() + 1);
 	}
 }

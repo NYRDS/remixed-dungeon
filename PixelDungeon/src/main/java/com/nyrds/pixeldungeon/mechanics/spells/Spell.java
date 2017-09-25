@@ -18,16 +18,18 @@ import org.json.JSONObject;
 
 public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Spells_NotEnoughSP);
+
+    protected int level = 1;
     protected int spellCost = 5;
+    protected int textureResolution = 32;
+
     protected float castTime = 1f;
     protected float duration = 10f;
 
     protected String targetingType;
-
     protected String magicAffinity;
 
     protected String textureFile = "spellsIcons/common.png";
-    protected int textureResolution = 32;
 
     protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
     protected String desc = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
@@ -46,6 +48,7 @@ public class Spell {
         targetingType = obj.optString("targetingType", targetingType);
         textureResolution  = obj.optInt("textureResolution", textureResolution());
         spellCost  = obj.optInt("spellCost", spellCost());
+        duration  = obj.optInt("duration", (int)duration);
     }
 
 	protected boolean cast(Char chr, int cell) {
@@ -125,5 +128,9 @@ public class Spell {
 
     protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
         return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+    }
+
+    public int level(){
+        return level;
     }
 }

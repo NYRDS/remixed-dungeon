@@ -67,6 +67,7 @@ public class WndHeroSpells extends Window {
 		ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
 		if(spells != null) {
 			for (String spell : spells) {
+
 				yPos = addSpell(spell, hero, yPos);
 			}
 		}
@@ -75,7 +76,7 @@ public class WndHeroSpells extends Window {
 	private float addSpell(String spellName ,final Hero hero,  float yPos) {
 
 		final Spell spell = SpellFactory.getSpellByName(spellName);
-		if(spell == null) {
+		if(spell == null || spell.level() > hero.magicLvl()) {
 			return yPos;
 		}
 
