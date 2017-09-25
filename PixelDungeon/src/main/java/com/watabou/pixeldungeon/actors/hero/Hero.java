@@ -1237,7 +1237,7 @@ public class Hero extends Char {
 					step = target;
 				}
 
-				LevelObject obj = level.objects.get(target);
+				LevelObject obj = level.getTopLevelObject(target);
 				if (obj != null && obj.pushable(this)) {
 					interrupt();
 					if (!obj.push(this)) {
@@ -1264,7 +1264,7 @@ public class Hero extends Char {
 
 			int oldPos = getPos();
 
-			LevelObject obj = level.objects.get(step);
+			LevelObject obj = level.getTopLevelObject(step);
 			if (obj != null) {
 
 				if (step == target) {

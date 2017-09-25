@@ -43,7 +43,7 @@ public class WndInfoCell extends Window {
 		super();
 		Level level = Dungeon.level;
 
-		LevelObject obj = level.objects.get(cell);
+		LevelObject obj = level.getTopLevelObject(cell);
 
 		int tile = level.getTileType(cell);
 		

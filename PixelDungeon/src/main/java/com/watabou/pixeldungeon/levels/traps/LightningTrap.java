@@ -44,7 +44,7 @@ public class LightningTrap implements ITrigger{
 	public static void trigger( int pos, @Nullable Char ch ) {
 
 		ch = Actor.findChar(pos);
-		
+
 		if (ch != null) {
 			ch.damage( Math.max( 1, Random.Int( ch.hp() / 3, 2 * ch.hp() / 3 ) ), LIGHTNING );
 			if (ch == Dungeon.hero) {

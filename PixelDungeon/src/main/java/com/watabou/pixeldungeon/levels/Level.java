@@ -132,7 +132,45 @@ public abstract class Level implements Bundlable {
 
 	@Nullable
 	public LevelObject getLevelObject(int pos) {
-		return objects.get(pos);
+		return getLevelObject(pos,0);
+	}
+
+	@Nullable
+	public LevelObject getLevelObject(int pos, int layer) {
+		SparseArray<LevelObject> objectsLayer = objects.get(layer);
+		if(objectsLayer == null) {
+			return null;
+		}
+		return objectsLayer.get(pos);
+	}
+
+	@Nullable
+	public LevelObject getTopLevelObject(int pos) {
+		LevelObject top = null;
+
+		for (int i = 0; i < objects.size(); i++) {
+			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
+
+			LevelObject candidate = objectLayer.get(pos);
+			if(top == null) {
+				top = candidate;
+			} else {
+				if(candidate.getLayer() > top.getLayer()) {
+					top = candidate;
+				}
+			}
+		}
+		return top;
+	}
+
+	public void putLevelObject(LevelObject levelObject) {
+		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
+		if(objectsLayer == null) {
+			objectsLayer = new SparseArray<>();
+			objects.put(levelObject.getLayer(),objectsLayer);
+		}
+
+		objectsLayer.put(levelObject.getPos(), levelObject);
 	}
 
 	public void onHeroDescend(int cell) {
@@ -200,8 +238,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getViewDistance() {
-		viewDistance = DungeonGenerator.getLevelProperty(levelId,"viewDistance",viewDistance);
-		viewDistance = Math.min(viewDistance,ShadowCaster.MAX_DISTANCE);
+		viewDistance = DungeonGenerator.getLevelProperty(levelId, "viewDistance", viewDistance);
+		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
 		return viewDistance;
 	}
 
@@ -253,11 +291,11 @@ public abstract class Level implements Bundlable {
 
 	public String levelId;
 
-	public  HashSet<Mob>                     mobs    = new HashSet<>();
-	public  Map<Class<? extends Blob>, Blob> blobs   = new HashMap<>();
-	public  SparseArray<Plant>               plants  = new SparseArray<>();
-	private SparseArray<Heap>                heaps   = new SparseArray<>();
-	public  SparseArray<LevelObject>         objects = new SparseArray<>();
+	public  HashSet<Mob>                            mobs    = new HashSet<>();
+	public  Map<Class<? extends Blob>, Blob>        blobs   = new HashMap<>();
+	public  SparseArray<Plant>                      plants  = new SparseArray<>();
+	private SparseArray<Heap>                       heaps   = new SparseArray<>();
+	public  SparseArray<SparseArray<LevelObject>>   objects = new SparseArray<>();
 
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -499,7 +537,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (LevelObject object : bundle.getCollection(OBJECTS, LevelObject.class)) {
-			objects.put(object.getPos(), object);
+			putLevelObject(object);
 		}
 
 		for (Mob mob : bundle.getCollection(MOBS, Mob.class)) {
@@ -549,7 +587,7 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(HEAPS, heaps.values());
 		bundle.put(PLANTS, plants.values());
-		bundle.put(OBJECTS, objects.values());
+		//bundle.put(OBJECTS, objects.values());
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
 
@@ -566,7 +604,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public String getTilesTex() {
-		String tiles = DungeonGenerator.getLevelProperty(levelId, "tiles",null);
+		String tiles = DungeonGenerator.getLevelProperty(levelId, "tiles", null);
 		if (tiles != null) {
 			return tiles;
 		}
@@ -593,7 +631,7 @@ public abstract class Level implements Bundlable {
 
 	@NonNull
 	public String getWaterTex() {
-		String water = DungeonGenerator.getLevelProperty(levelId, "water",null);
+		String water = DungeonGenerator.getLevelProperty(levelId, "water", null);
 		if (water != null) {
 			return water;
 		}
@@ -634,9 +672,9 @@ public abstract class Level implements Bundlable {
 
 	public void spawnMob(Mob mob, float delay) {
 
-		if(!cellValid(mob.getPos())) {
+		if (!cellValid(mob.getPos())) {
 			EventCollector.logException(new Exception(EventCollector.BUG),
-					String.format(Locale.ROOT,"trying to spawn: %s on invalid cell: %d", mob.getMobClassName(), mob.getPos()));
+					String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getMobClassName(), mob.getPos()));
 			return;
 		}
 		mobs.add(mob);
@@ -664,7 +702,7 @@ public abstract class Level implements Bundlable {
 
 		mob.setPos(pos);
 
-		if(!cellValid(pos)) {
+		if (!cellValid(pos)) {
 			return;
 		}
 
@@ -712,7 +750,7 @@ public abstract class Level implements Bundlable {
 		return randomRespawnCell(passable);
 	}
 
-	public int randomRespawnCell(boolean [] selectFrom) {
+	public int randomRespawnCell(boolean[] selectFrom) {
 
 		if (isBossLevel() || noFogOfWar()) {
 			return -1;
@@ -721,7 +759,7 @@ public abstract class Level implements Bundlable {
 		int counter = 0;
 		int cell;
 		do {
-			if(++counter>1000){
+			if (++counter > 1000) {
 				return -1;
 			}
 			cell = Random.Int(getLength());
@@ -883,7 +921,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (((map[cell] == Terrain.ALCHEMY) && !(item instanceof Plant.Seed))
-			||	(Actor.findChar(cell) instanceof NPC)) {
+				|| (Actor.findChar(cell) instanceof NPC)) {
 			int newCell = getEmptyCellNextTo(cell);
 			if (cellValid(newCell)) {
 				cell = newCell;
@@ -927,11 +965,11 @@ public abstract class Level implements Bundlable {
 
 	public void levelObjectMoved(LevelObject obj) {
 		remove(obj);
-		objects.put(obj.getPos(), obj);
+		putLevelObject(obj);
 	}
 
 	public void addLevelObject(LevelObject obj) {
-		objects.put(obj.getPos(), obj);
+		putLevelObject(obj);
 
 		if (GameScene.isSceneReady()) {
 			GameScene.add(obj);
@@ -953,10 +991,17 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void remove(LevelObject levelObject) {
-		int index = objects.indexOfValue(levelObject);
+
+		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
+
+		if(objectsLayer == null) {
+			return;
+		}
+
+		int index = objectsLayer.indexOfValue(levelObject);
 
 		if (index >= 0) {
-			objects.remove(objects.keyAt(index));
+			objectsLayer.remove(objectsLayer.keyAt(index));
 		}
 	}
 
@@ -1007,7 +1052,7 @@ public abstract class Level implements Bundlable {
 	public void itemPress(int cell, Presser presser) {
 
 		if (presser.affectLevelObjects()) {
-			LevelObject levelObject = objects.get(cell);
+			LevelObject levelObject = getLevelObject(cell);
 			if (levelObject != null) {
 				levelObject.bump();
 			}
@@ -1157,7 +1202,7 @@ public abstract class Level implements Bundlable {
 				Arrays.fill(fieldOfView, pos, pos + len, true);
 			}
 
-			int from = cell(ax,ay), to = cell(bx,by);
+			int from = cell(ax, ay), to = cell(bx, by);
 			for (; from < to; from++) {
 				fieldOfView[from] &= discoverable[from];
 			}
@@ -1545,8 +1590,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean isSafe() {
-		return DungeonGenerator.getLevelProperty(levelId,"isSafe",false);
+		return DungeonGenerator.getLevelProperty(levelId, "isSafe", false);
 	}
+
 	public boolean isStatic() {
 		return DungeonGenerator.isStatic(levelId);
 	}

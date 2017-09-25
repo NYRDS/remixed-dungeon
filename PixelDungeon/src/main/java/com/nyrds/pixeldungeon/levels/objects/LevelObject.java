@@ -16,8 +16,10 @@ import org.json.JSONObject;
 public abstract class LevelObject implements Bundlable, Presser {
 
 	@Packable
-	private  int    pos = -1;
+	private int pos = -1;
 
+	@Packable
+	protected int layer = 0;
 
 	protected String textureFile = "levelObjects/objects.png";
 	protected int imageIndex = 0;
@@ -146,4 +148,6 @@ public abstract class LevelObject implements Bundlable, Presser {
 	public int getSpriteYS() {
 		return 16;
 	}
+
+	public int getLayer() {return layer;}
 }
