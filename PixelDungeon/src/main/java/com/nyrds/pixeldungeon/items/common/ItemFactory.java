@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
+import com.nyrds.pixeldungeon.items.books.SpellBook;
 import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
 import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
@@ -202,8 +203,6 @@ public class ItemFactory {
 		mNamesList.put(itemClass,itemClass.getSimpleName());
 	}
 
-
-
 	private static void initItemsMap() {
 
 		registerItemClass(Amulet.class);
@@ -393,6 +392,7 @@ public class ItemFactory {
 		registerItemClass(WandOfShadowbolt.class);
 		registerItemClass(PseudoAmulet.class);
 		registerItemClass(ManaPotion.class);
+		registerItemClass(SpellBook.class);
 
 	}
 

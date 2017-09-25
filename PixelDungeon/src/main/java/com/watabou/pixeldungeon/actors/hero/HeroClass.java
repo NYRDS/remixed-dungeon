@@ -24,6 +24,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.BraceletOfDevour;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
+import com.nyrds.pixeldungeon.items.books.SpellBook;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
@@ -163,7 +164,7 @@ public enum HeroClass {
 		}
 
 		hero.collect(new WarriorArmor().identify());
-		hero.collect(new TomeOfMastery());
+		hero.collect(new SpellBook());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
 
