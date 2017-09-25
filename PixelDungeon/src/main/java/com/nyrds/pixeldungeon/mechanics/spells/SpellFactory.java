@@ -38,14 +38,15 @@ public class SpellFactory {
 		} catch (IllegalAccessException e) {
 			throw new TrackedRuntimeException(e);
 		}
-
-
 	}
 
 	private static void initSpellsMap() {
 		registerSpellClass(SummonDeathling.class);
+
 		registerSpellClass(Ignite.class);
 		registerSpellClass(FreezeGlobe.class);
+
+		registerSpellClass(MagicTorch.class);
 	}
 
 	@Nullable

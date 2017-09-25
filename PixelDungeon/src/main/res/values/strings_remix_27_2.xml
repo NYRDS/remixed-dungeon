@@ -12,6 +12,7 @@
 
 
     <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">Summon Deathling</string>
     <string name="SummonDeathling_Info">Summons one Deathling.</string>
 
     <!-- STRINGS OF Ignite CLASS -->

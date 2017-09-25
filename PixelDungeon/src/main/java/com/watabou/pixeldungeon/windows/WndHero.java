@@ -147,9 +147,8 @@ public class WndHero extends WndTabbed {
 
 			statSlot( TXT_STR, hero.effectiveSTR() );
 			statSlot( TXT_HEALTH, hero.hp() + "/" + hero.ht() );
-			if(hero.heroClass.isSpellUser()){
-				statSlot( TXT_SOULS, hero.getSoulPoints() + "/" + hero.getSoulPointsMax() );
-			}
+			statSlot( TXT_SOULS, hero.getSoulPoints() + "/" + hero.getSoulPointsMax() );
+
 			statSlot( TXT_EXP, hero.getExp() + "/" + hero.maxExp() );
 
 			pos += GAP;

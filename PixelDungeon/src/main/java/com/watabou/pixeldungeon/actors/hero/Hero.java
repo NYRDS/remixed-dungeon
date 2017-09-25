@@ -331,7 +331,7 @@ public class Hero extends Char {
 		}
 
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
-		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 0));
+		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 20));
 
 		belongings.restoreFromBundle(bundle);
 
@@ -1910,6 +1910,9 @@ public class Hero extends Char {
 	}
 
 	public void setMaxSoulPoints(int points){
+		if (points < 0){
+			points = 0;
+		}
 		maxSp = Scrambler.scramble(points);
 	}
 

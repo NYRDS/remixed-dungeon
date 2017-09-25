@@ -20,6 +20,7 @@ public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Spells_NotEnoughSP);
     protected int spellCost = 5;
     protected float castTime = 1f;
+    protected float duration = 10f;
 
     protected String targetingType;
 
@@ -53,31 +54,34 @@ public class Spell {
 
     public boolean cast(final Char chr){
 	    if(chr instanceof Hero) {
-		    Hero hero = (Hero)chr;
+		    final Hero hero = (Hero)chr;
 
             if (!hero.enoughSP(spellCost())) {
                 GLog.w(notEnoughSouls(name));
                 return false;
             }
-	    }
 
-		if (targetingType.equals(SpellHelper.TARGET_CELL)) {
-			GameScene.selectCell(new CellSelector.Listener() {
-				@Override
-				public void onSelect(Integer cell) {
-                    if (cell != null){
-                        cast(chr, cell);
+            if (targetingType.equals(SpellHelper.TARGET_CELL)) {
+                GameScene.selectCell(new CellSelector.Listener() {
+                    @Override
+                    public void onSelect(Integer cell) {
+                        if (cell != null){
+                            cast(chr, cell);
+
+                            hero.spend(castTime);
+                            hero.busy();
+                            hero.getSprite().zap(hero.getPos());
+                        }
                     }
-				}
 
-				@Override
-				public String prompt() {
-					return "select cell to cast spell on";
-				}
-			});
-			return false;
-		}
-
+                    @Override
+                    public String prompt() {
+                        return "select cell to cast spell on";
+                    }
+                });
+                return false;
+            }
+        }
 		return true;
     }
 

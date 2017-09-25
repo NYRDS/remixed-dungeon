@@ -37,6 +37,10 @@ public class SummoningSpell extends Spell {
                 GLog.w(getLimitWarning(getSummonLimit()));
                 return false;
             }
+
+            hero.spend(castTime);
+            hero.busy();
+            hero.getSprite().zap(hero.getPos());
         }
 
         if(!super.cast(chr)) {
@@ -64,8 +68,6 @@ public class SummoningSpell extends Spell {
             pet.setPos(spawnPos);
             level.spawnMob(pet);
         }
-
-        chr.spend(castTime/chr.speed());
 
 	    return true;
     }
