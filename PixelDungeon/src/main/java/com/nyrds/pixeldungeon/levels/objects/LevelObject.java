@@ -50,7 +50,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 	public void burn() {}
 	public void freeze() {}
 	public void poison(){}
-	public void bump() {}
+	public void bump(Presser presser) {}
 
 	public void discover() {}
 
@@ -119,11 +119,12 @@ public abstract class LevelObject implements Bundlable, Presser {
 		if (level.solid[nextCell] || level.getLevelObject(nextCell,layer) != null) {
 			return false;
 		} else {
-			setPos(nextCell);
 
 			if (level.objectPress(nextCell, this)) {
+				setPos(nextCell);
 				level.levelObjectMoved(this);
 			}
+
 		}
 
 		return true;

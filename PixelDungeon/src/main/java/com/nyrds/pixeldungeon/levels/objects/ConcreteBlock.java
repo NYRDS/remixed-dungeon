@@ -70,4 +70,9 @@ public class ConcreteBlock extends LevelObject {
 	public String name() {
 		return Game.getVar(R.string.ConcreteBlock_Name);
 	}
+
+	@Override
+	public boolean affectLevelObjects() {
+		return true;
+	}
 }

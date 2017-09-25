@@ -1052,9 +1052,9 @@ public abstract class Level implements Bundlable {
 	public void itemPress(int cell, Presser presser) {
 
 		if (presser.affectLevelObjects()) {
-			LevelObject levelObject = getLevelObject(cell);
+			LevelObject levelObject = getTopLevelObject(cell);
 			if (levelObject != null) {
-				levelObject.bump();
+				levelObject.bump(presser);
 			}
 		}
 		set(cell, Terrain.discover(map[cell]));

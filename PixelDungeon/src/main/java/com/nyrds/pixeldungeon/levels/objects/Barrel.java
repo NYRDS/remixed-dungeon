@@ -65,7 +65,7 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
-	public void bump() {
+	public void bump(Presser presser) {
 		burn();
 	}
 
@@ -91,11 +91,15 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public int image() {
-
 		if (ModdingMode.isHalloweenEvent()) {
 			return 0;
 		} else {
 			return 8;
 		}
+	}
+
+	@Override
+	public boolean affectLevelObjects() {
+		return true;
 	}
 }

@@ -380,7 +380,7 @@ public class SystemText extends Text {
 				text = "";
 			}
 
-			fontHeight = (textPaint.descent() - textPaint.ascent())
+			fontHeight = (contourPaint.descent() - contourPaint.ascent())
 					/ oversample;
 			createText();
 		}

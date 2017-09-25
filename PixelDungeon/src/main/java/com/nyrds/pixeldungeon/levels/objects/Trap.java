@@ -63,7 +63,12 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
-	public void bump() {
+	public void bump(Presser presser) {
+		if (presser instanceof LevelObject) {
+			interact(null);
+			return;
+		}
+
 		if (activatedByItem) {
 			interact(null);
 		}
