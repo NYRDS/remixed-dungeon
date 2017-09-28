@@ -19,7 +19,6 @@ abstract public class Book extends Item {
 
 	{
 		imageFile = "items/books.png";
-		image = 0;
 	}
 
 	@Override
