@@ -240,7 +240,7 @@ public enum HeroClass {
 				hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
 				hero.heroClass.isSpellUser(classDesc.optBoolean("isSpellUser", false));
 				hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
-				hero.setMaxSoulPoints(classDesc.optInt("maxSp", 20));
+				hero.setMaxSoulPoints(classDesc.optInt("maxSp", 10));
 				hero.setSoulPoints(classDesc.optInt("startingSp", 0));
 
 
