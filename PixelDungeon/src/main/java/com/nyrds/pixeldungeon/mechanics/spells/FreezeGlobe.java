@@ -23,9 +23,9 @@ public class FreezeGlobe extends Spell{
 		targetingType = SpellHelper.TARGET_CELL;
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
-		level = 2;
+		level = 4;
 		imageIndex = 1;
-		spellCost = 5;
+		spellCost = 15;
 	}
 
 	@Override

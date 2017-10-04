@@ -42,11 +42,18 @@ public class SpellFactory {
 
 	private static void initSpellsMap() {
 		registerSpellClass(SummonDeathling.class);
+		registerSpellClass(CausePainSpell.class);
+		//registerSpellClass(RaiseDead.class);
+		//registerSpellClass(Desecrate.class);
 
 		registerSpellClass(Ignite.class);
+		registerSpellClass(RootSpell.class);
+		registerSpellClass(WindGust.class);
 		registerSpellClass(FreezeGlobe.class);
 
 		registerSpellClass(MagicTorch.class);
+		//registerSpellClass(Heal.class);
+		//registerSpellClass(TownPortal.class);
 	}
 
 	@Nullable
