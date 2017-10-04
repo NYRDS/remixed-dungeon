@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="12" height="8" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="tiles0" tilewidth="16" tileheight="16" tilecount="64" columns="16">
+  <image source="../PixelDungeon/src/main/assets/tiles0.png" trans="000000" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="65" name="tiles_movie" tilewidth="16" tileheight="16" tilecount="256" columns="16">
+  <image source="../PixelDungeon/src/main/assets/tiles_movie.png" trans="000000" width="256" height="256"/>
+ </tileset>
+ <layer name="logic" width="12" height="8">
+  <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,
+5,2,2,2,5,5,5,5,2,2,2,5,
+5,2,2,2,5,5,5,5,2,2,2,5,
+5,5,2,2,5,5,5,5,2,2,2,5,
+5,8,2,2,2,2,2,2,2,2,2,5,
+5,5,2,2,2,2,2,2,2,2,2,5,
+5,2,2,2,2,2,2,2,2,2,2,5,
+5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+ </layer>
+ <layer name="base" width="12" height="8">
+  <data encoding="csv">
+67,67,67,67,67,67,67,67,67,67,67,67,
+67,66,66,66,67,65,65,67,66,66,66,67,
+67,66,66,66,67,65,65,67,66,66,66,67,
+67,67,66,66,66,81,81,66,66,66,66,67,
+67,67,66,66,66,66,66,66,66,66,66,67,
+67,67,66,66,66,66,66,66,66,66,66,67,
+67,66,66,66,66,66,66,66,66,66,66,67,
+67,67,67,67,67,67,67,67,67,67,67,67
+</data>
+ </layer>
+ <layer name="deco" width="12" height="8">
+  <data encoding="csv">
+100,100,100,100,100,98,99,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,
+100,100,100,100,100,65,65,100,100,100,100,100,
+100,100,100,100,82,83,83,84,100,100,100,100,
+100,68,100,100,66,66,66,66,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100
+</data>
+ </layer>
+</map>

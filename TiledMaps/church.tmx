@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="12" height="8" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="tiles0" tilewidth="16" tileheight="16" tilecount="64" columns="16">
+  <image source="../PixelDungeon/src/main/assets/tiles0.png" trans="000000" width="256" height="64"/>
+ </tileset>
+ <layer name="base" width="12" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="deco" width="12" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="logic" width="12" height="8" opacity="0.3">
+  <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,2,9,2,5,5,5,5,5,
+5,5,5,2,2,2,2,2,5,5,5,5,
+5,5,5,2,2,2,2,2,5,5,5,5,
+5,5,5,2,2,2,2,2,5,5,5,5,
+5,5,5,5,5,8,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+ </layer>
+</map>
