@@ -1,36 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
-  <string name="WndDonate_silver">白银</string>
-  <string name="WndDonate_gold">黄金</string>
-  <string name="WndDonate_ruby">红宝石</string>
-  <string name="WndDonate_donate">捐献：</string>
-  <string name="WndDonate_notConnected">无网络连接:(</string>
-  <string name="WndDonate_commonDonateText">混合的像素地牢——永远对所有人免费。
-但是，你能帮我们让这个游戏变得更好。
-除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
-  <string name="WndDonate_silverDonate">白银级捐献</string>
-  <string name="WndDonate_goldDonate">黄金级捐献</string>
-  <string name="WndDonate_rubyDonate">红宝石级捐献</string>
-  <string name="WndDonate_silverDonateText">任何捐献都将帮助这个游戏的开发者</string>
-  <string name="WndDonate_goldDonateText">感谢您的帮助！</string>
-  <string name="WndDonate_rubyDonateText">您的慷慨将会帮助我们改善混合的像素地牢！</string>
-  <string name="WndDonate_silverDonateText2">会使所有模式的广告失效并从一开始就解锁女猎手职业。</string>
-  <string name="WndDonate_goldDonateText2">从一开始就解锁精灵职业。</string>
+  <string name="WndDonate_silver">白銀</string>
+  <string name="WndDonate_gold">黃金</string>
+  <string name="WndDonate_ruby">紅寶石</string>
+  <string name="WndDonate_donate">捐獻：</string>
+  <string name="WndDonate_notConnected">無網絡連接 :(</string>
+  <string name="WndDonate_commonDonateText">重鑄版像素地牢——永遠對所有人免費。\n\n
+但是，您能協助我們令遊戲更臻完美。\n\n
+除了我們的衷心感謝以外，你還將獲得一些界面上的美化。</string>
+  <string name="WndDonate_silverDonate">白銀級捐獻</string>
+  <string name="WndDonate_goldDonate">黃金級捐獻</string>
+  <string name="WndDonate_rubyDonate">紅寶石級捐獻</string>
+  <string name="WndDonate_silverDonateText">任何捐獻皆作此遊戲之開發用途。</string>
+  <string name="WndDonate_goldDonateText">感謝您的幫助！</string>
+  <string name="WndDonate_rubyDonateText">您的慷慨解囊將有助我們繼續致力改善重鑄版像素地牢！</string>
+  <string name="WndDonate_silverDonateText2">且會使所有模式的廣告失效，並從一開始就解鎖女獵手職業。</string>
+  <string name="WndDonate_goldDonateText2">更從一開始就解鎖精靈職業。</string>
   <string name="WndDonate_rubyDonateText2" />
   <!--STRINGS OF WndPremiumSettings CLASS-->
-  <string name="WndPremiumSettings_std">标准</string>
-  <string name="WndPremiumSettings_silver">白银</string>
-  <string name="WndPremiumSettings_gold">黄金</string>
-  <string name="WndPremiumSettings_ruby">红宝石</string>
-  <string name="WndPremiumSettings_chrome">选择界面材质</string>
-  <string name="WndPremiumSettings_status">选择状态栏材质</string>
-  <string name="WndPremiumSettings_toolbar">选择工具栏材质</string>
-  <string name="WndPremiumSettings_banners">选择标题材质</string>
-  <string name="WndPremiumSettings_notAvailbale">这个选项暂时无法使用</string>
+  <string name="WndPremiumSettings_std">標準</string>
+  <string name="WndPremiumSettings_silver">白銀</string>
+  <string name="WndPremiumSettings_gold">黃金</string>
+  <string name="WndPremiumSettings_ruby">紅寶石</string>
+  <string name="WndPremiumSettings_chrome">選擇介面素材</string>
+  <string name="WndPremiumSettings_status">選擇狀態欄素材</string>
+  <string name="WndPremiumSettings_toolbar">選擇工具欄素材</string>
+  <string name="WndPremiumSettings_banners">選擇橫標素材</string>
+  <string name="WndPremiumSettings_notAvailbale">此選項暫未開放供選</string>
   <!--STRINGS OF DonateButton CLASS-->
-  <string name="DonateButton_pleaseDonate">请考虑捐献</string>
-  <string name="DonateButton_thanks">感谢您的支持！</string>
+  <string name="DonateButton_pleaseDonate">請考慮捐獻</string>
+  <string name="DonateButton_thanks">感謝您的支持！</string>
   <!--STRINGS OF WndSaveSlotSelect-->
   <string name="WndSaveSlotSelect_dontLike">不喜欢广告？进行捐献吧！广告会永远的消失。</string>
 </resources>

@@ -7,8 +7,13 @@
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">Der Seelenbringer</string>
     <string name="BlackSkullOfMastery_Info">Ein uraltes Artefakt, erschaffen von den ersten Totenbeschwörern die die Seelen der Gefallenen sammelten. Es hat deine Totenbeschwörerischen Fähigkeiten wahrgenommen und sich mit einem starken Zauber geschützt. Da es ein alter zauber ist, ist er von primitiver Struktur, und ist einfach zu brechen. </string>
+    <string name="BlackSkullOfMastery_Title">Du könntest den Zauberspruch kaputt machen. Oder du könntest die magische Formel so verändern, dass du die Vorzüge des Zauberspruches und des Artefakts genießen kannst, aber du dich in einen untoten Zauberer verwandelst. Gruselig, nicht?</string>
+
     <string name="BlackSkullOfMastery_Lich">Werde zum Lich</string>
     <string name="BlackSkullOfMastery_Necromancer">Unterbrich den Zauber</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">Der _Untote Zauberer_ ist ein Nekromant, der den Höhepunkt seiner Fähigkeiten erreicht hat. Existierend zwischen Leben und Tod, zeichnet sich der _Untote Zauberer_ durch Nekromantie aus, aber seine Fähigkeiten im Kampf sind echt nicht die Besten.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Oder wenn du den _Zauberspruch brichst_ kannst du das Artefakt normal Benützen.</string>
+
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">Der schwarze Schädel wurde erweckt!</string>
     <string name="BlackSkull_Ressurrect">Der schwarze Schädel hat die toten Monster erweckt um dir zu dienen!</string>
@@ -16,6 +21,7 @@
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Knochenrüstung</string>
+    <string name="NecromancerArmor_Info">Dieser Harnisch erlaubt es dem Nekromanten, bis zu 2 Untote mit einem Kosten von je 5 Seelen zu erschaffen, die dir folgen und Gegner angreifen werden. Umso höher sein Level ist, desto stärker sind auch deine \"Diener\"</string>
     <string name="NecromancerArmor_NotNecromancer">Nur Totenbeschwörer können diese Rüstung nutzen!</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
@@ -33,8 +39,20 @@
         <item>Heiltränke sind von Anfang an identifiziert.</item>
     </string-array>
 
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">Untoter</string>
     <string name="Deathling_Gender">Männlich</string>
+    <string name="Deathling_Name_Objective">Untoter</string>
     <string name="Necromancy_SoulsCountLabel">Seelen</string>
 
+    <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_ReincarnationName">Wiedergeburt</string>
-    </resources>
+    <string name="Necromancy_SummonDeathlingName">Erschaffe Untoten</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Nekromantie</string>
+
+    <!-- Badges -->
+
+    <string name="WndSettings_UiScale">Ui Ausmaß</string>
+</resources>

@@ -15,7 +15,9 @@
 	
 	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
-    <!-- STRINGS OF NekoEars CLASS -->
+    <string name="Fez_Info">Es ist ein Filzschmuck in Form eines Kegelstumpfes aus rotem Filz, an dessen Spitze eine Quaste befestigt ist. Und nein, es macht die Welt nicht dreidimensional.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">Neko Ohren</string>
     <string name="NekoEars_Info">Manchmal möchtest du all das Monsterblut und den Schmutz abwaschen und dich einfach niedlich und fluffig fühlen... oder du kannst niedliche Katzenohren tragen. Das wäre das Mindeste.</string>
 	
@@ -35,7 +37,10 @@
     <string name="WizardHat_Name">Zauberhut</string>
     <string name="WizardHat_Info">Ein schöner, seidener Hut, geschmückt mir Sternenornamenten. In früheren Zeiten glaubte man, dass die größten Zauberer speziell verzauberte Kleidung trugen, die ihre Macht vergrößerte. Aber der Hut steigert natürlich nicht deine magischen Fähigkeiten, es fühlt sich aber sicher so an.</string>
 
-    <string name="WndHats_SlotTitle">ausgerüstet</string>
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Zubehör-Liste</string>
+    <string name="WndHats_SlotTitle">Ausgerüstet</string>
     <string name="WndHats_NoConnectionMsg">Keine Verbindung zu Google Play möglich.</string>
     <string name="WndHats_Purchased">Ich hab es!</string>
 
@@ -43,4 +48,5 @@
     <string name="WndHats_BuyButton">Kaufen</string>
     <string name="WndHats_EquipButton">Rüste aus</string>
     <string name="WndHats_InfoButton">Untersuche</string>
-    </resources>
+    <string name="WndHats_UnequipButton">Ablegen</string>
+</resources>

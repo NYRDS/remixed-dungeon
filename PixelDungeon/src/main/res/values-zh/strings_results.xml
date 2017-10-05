@@ -10,8 +10,8 @@
   <string name="ResultDescriptions_Hunger">在第 %d 層餓死</string>
   <string name="ResultDescriptions_Poison">在第 %d 層死於劇毒</string>
   <string name="ResultDescriptions_Gas">在第 %d 層死於毒氣</string>
-  <string name="ResultDescriptions_Bleeding">在第 %d 層失血过過多而死</string>
-  <string name="ResultDescriptions_Ooze">在第 %d 層层被腐蝕汙泥殺死了</string>
+  <string name="ResultDescriptions_Bleeding">在第 %d 層失血過多而死</string>
+  <string name="ResultDescriptions_Ooze">在第 %d 層被腐蝕污泥殺死了</string>
   <string name="ResultDescriptions_Fall">在第 %d 層摔死</string>
   <string name="ResultDescriptions_Win">獲得Yendor護符</string>
   <string name="ResultDescriptions_Immured">在第%d層被囚禁於牆中</string>

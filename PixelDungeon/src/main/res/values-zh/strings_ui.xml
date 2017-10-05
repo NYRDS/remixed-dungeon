@@ -4,7 +4,7 @@
   <string name="TitleScene_Play">開始遊戲</string>
   <string name="TitleScene_Highscores">排行榜</string>
   <string name="TitleScene_Badges">成就</string>
-  <string name="TitleScene_About">關</string>
+  <string name="TitleScene_About">關於我們</string>
   <string name="TitleScene_InternalStorageLow">手機內部存儲空間不足，您的進度可能會丟失！</string>
   <!--STRINGS OF AboutScene CLASS-->
   <string name="AboutScene_Txt_Intro">重鑄版像素地牢是由NYRDS以Watabou的Pixel Dungeon源碼為基礎製作的。</string>

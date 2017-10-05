@@ -60,7 +60,7 @@
   <string name="ScaleArmor_Name">鱗片護甲</string>
   <string name="ScaleArmor_Desc">相疊的金屬鱗片縫製在皮背心上，做出了一套靈活而有保護力的裝甲。</string>
   <!--STRINGS OF WarriorArmor CLASS-->
-  <string name="WarriorArmor_Name">戰士装甲</string>
+  <string name="WarriorArmor_Name">戰士裝甲</string>
   <string name="WarriorArmor_Desc">雖然這套盔甲看起來很重，但它能讓一個戰士施展英勇跳躍至另一個位置，重擊地面擊並並擊暈周圍的敵人。</string>
   <string name="WarriorArmor_ACSpecial">英勇跳躍</string>
   <string name="WarriorArmor_NotWarrior">只有戰士能使用這件護甲！</string>

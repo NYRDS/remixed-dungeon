@@ -1,3 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NotReady">Die Leute machen gerade Pause, komm in ein paar Minuten zurück. Warum bekomme ich eigentlich nie eine Pause? Was? Spielregeln?</string>
+    <string name="ServiceManNPC_Limit">Jeder neue Abenteuer kann insgesamt nur 1%d Filme schauen.</string>
+    <string name="WndMovieTheatre_Sorry">Mann ist das peinlich... Wir können dich nicht auszahlen. Irgendwas ist schiefgelaufen.</string>
+    <string name="WndMovieTheatre_Ok">Du hast erfolgreich ein \"Belohnung\" Video angeschaut.</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF GnollCostume CLASS -->
+    <string name="GnollCostume_Name">Gnoll Kostüm</string>
     </resources>
