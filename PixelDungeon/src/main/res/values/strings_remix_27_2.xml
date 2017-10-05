@@ -19,9 +19,17 @@
     <string name="Ignite_Name">Ignite</string>
     <string name="Ignite_Info">Ignites selected cell.</string>
 
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">Root</string>
+    <string name="RootSpell_Info">Roots selected character.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">WindGust</string>
+    <string name="WindGust_Info">Blows a gust of wind into direction of a selected character.</string>
+
     <!-- STRINGS OF FreezeGlobe CLASS -->
     <string name="FreezeGlobe_Name">Freeze</string>
-    <string name="FreezeGlobe_Info">Freezes all characters in 3x3 area.</string>
+    <string name="FreezeGlobe_Info">Freezes selected character.</string>
 
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
