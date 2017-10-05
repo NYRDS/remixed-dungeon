@@ -57,6 +57,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 	public static final int NEGATIVE = 0xFF0000;
 	public static final int WARNING  = 0xFF8800;
 	public static final int NEUTRAL  = 0xFFFF00;
+	public static final int BLUE  = 0x0000FF;
 
 	private static final float MOVE_INTERVAL  = 0.1f;
 	private static final float FLASH_INTERVAL = 0.05f;
