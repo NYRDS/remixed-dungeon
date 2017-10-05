@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 abstract public class Book extends Item {
 
-	public static final float TIME_TO_READ	= 1f;
+	public static final float TIME_TO_READ	= 2f;
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
 
