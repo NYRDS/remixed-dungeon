@@ -28,7 +28,7 @@ public class RootSpell extends Spell{
 		level = 2;
 		imageIndex = 2;
 		duration = 10f;
-		spellCost = 5;
+		spellCost = 3;
 	}
 
 	@Override

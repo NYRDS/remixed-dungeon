@@ -22,7 +22,7 @@ public class WindGust extends Spell{
 
 		level = 3;
 		imageIndex = 3;
-		spellCost = 1;
+		spellCost = 2;
 	}
 
 	@Override

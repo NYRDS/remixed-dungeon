@@ -134,7 +134,7 @@ public class Spell {
         return level;
     }
 
-    public int getLevelModifier(Hero hero){
-        return hero.magicLvl() - level;
+    public int getLevelModifier(Char chr){
+        return chr.magicLvl() - level;
     }
 }

@@ -25,7 +25,7 @@ public class FreezeGlobe extends Spell{
 
 		level = 4;
 		imageIndex = 1;
-		spellCost = 15;
+		spellCost = 4;
 	}
 
 	@Override
@@ -35,29 +35,16 @@ public class FreezeGlobe extends Spell{
 		}
 		boolean triggered = false;
 		if(Ballistica.cast(chr.getPos(), cell, false, true) == cell) {
+			Char ch = Actor.findChar( cell );
+			if (ch != null) {
+				ch.getSprite().emitter().burst( SnowParticle.FACTORY, 5 );
+				ch.getSprite().burst( 0xFF99FFFF, 3 );
 
-			Level level = Dungeon.level;
-			int x = level.cellX(cell);
-			int y = level.cellY(cell);
-
-			for (int i = 0; i < 3; i++){
-				for (int j = 0; j < 3; j++){
-					int currentCell = level.cell(x - 1 + i, y - 1 + j);
-					if(Dungeon.level.cellValid(currentCell)) {
-						Char ch = Actor.findChar( currentCell );
-						if (ch != null) {
-							ch.getSprite().emitter().burst( SnowParticle.FACTORY, 5 );
-							ch.getSprite().burst( 0xFF99FFFF, 3 );
-
-							Buff.affect( ch, Frost.class, Frost.duration( ch ) );
-							Buff.affect( ch, Slow.class, Slow.duration( ch ) );
-							Sample.INSTANCE.play( Assets.SND_SHATTER );
-							triggered = true;
-						}
-					}
-				}
+				Buff.affect( ch, Frost.class, Frost.duration( ch ) );
+				Buff.affect( ch, Slow.class, Slow.duration( ch ) );
+				Sample.INSTANCE.play( Assets.SND_SHATTER );
+				triggered = true;
 			}
-
 			if(chr instanceof Hero && triggered) {
 				Hero hero = (Hero) chr;
 				castCallback(hero);

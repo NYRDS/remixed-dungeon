@@ -678,4 +678,8 @@ public abstract class Char extends Actor {
 	public WalkingType getWalkingType(){
 		return walkingType;
 	}
+
+	public int magicLvl() {
+		return 10;
+	}
 }
