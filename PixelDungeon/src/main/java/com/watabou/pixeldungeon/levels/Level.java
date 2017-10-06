@@ -1612,6 +1612,10 @@ public abstract class Level implements Bundlable {
 	}
 
 	private void reRollViewDistance(){
-		viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : Random.Int(3,8);
+		if (this.isSafe()){
+			viewDistance = 8;
+		} else {
+			viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : Random.Int(3,8);
+		}
 	}
 }
