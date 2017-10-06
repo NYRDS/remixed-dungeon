@@ -39,4 +39,9 @@ public class SpellBook extends Book {
 		getCurUser().busy();
 		hero.magicLvlUp();
 	}
+
+	@Override
+	public int price() {
+		return (int) ((isIdentified() ? 250 : 100));
+	}
 }

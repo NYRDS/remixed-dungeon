@@ -41,7 +41,7 @@ public class SpellFactory {
 
 	private static void initSpellsMap() {
 		registerSpellClass(SummonDeathling.class);
-		registerSpellClass(CausePainSpell.class);
+		//registerSpellClass(CausePainSpell.class);
 		//registerSpellClass(RaiseDead.class);
 		//registerSpellClass(Desecrate.class);
 
