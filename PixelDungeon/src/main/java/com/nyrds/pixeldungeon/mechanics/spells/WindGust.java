@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -10,7 +12,12 @@ import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
+import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
@@ -26,27 +33,29 @@ public class WindGust extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr, int cell){
-		if(Dungeon.level.cellValid(cell)) {
-			if(Ballistica.cast(chr.getPos(), cell, false, true) == cell) {
+	public boolean cast(Char chr, int cell) {
+		if (Dungeon.level.cellValid(cell)) {
+			Char ch;
+			boolean triggered = false;
 
-				Char ch = Actor.findChar( cell );
-				for (int i = 1; i < 3; i++) {
+			Ballistica.cast(chr.getPos(), cell, true, false);
+			for (int i = 1; i < 3; i++) {
+				int c = Ballistica.trace[i];
 
-					if (ch != null) {
-						int next = Ballistica.trace[i + 1];
-						if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next])
-								&& Actor.findChar(next) == null) {
-							ch.move(next);
-							ch.getSprite().move(ch.getPos(), next);
-							Dungeon.observe();
-						}
+				if ((ch = Actor.findChar(c)) != null) {
+					int next = Ballistica.trace[i + 1];
+					if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next])
+							&& Actor.findChar(next) == null) {
+						ch.move(next);
+						ch.getSprite().move(ch.getPos(), next);
+						Dungeon.observe();
+						triggered = true;
 					}
+				}
 
-					if (chr instanceof Hero) {
-						Hero hero = (Hero) chr;
-						castCallback(hero);
-					}
+				if (chr instanceof Hero && triggered) {
+					Hero hero = (Hero) chr;
+					castCallback(hero);
 					return true;
 				}
 			}
