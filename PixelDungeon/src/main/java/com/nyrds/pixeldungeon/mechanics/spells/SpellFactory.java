@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class SpellFactory {
 
 	static private Map<String, Class<? extends Spell>> mSpellsList = new HashMap<>();

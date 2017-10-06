@@ -80,10 +80,17 @@ public class WndHeroSpells extends Window {
 			return yPos;
 		}
 
+		Text txtName;
+
+		txtName = PixelScene.createText(spell.name(), GuiProperties.titleFontSize());
+		txtName.measure();
+		txtName.y = yPos;
+		add(txtName);
+
 		Image icon = spell.image();
 
 		icon.frame( spell.film.get( spell.imageIndex ) );
-		icon.y = yPos;
+		icon.y = txtName.bottom() + MARGIN;
 		add( icon );
 
 		RedButton btnCast = new RedButton( TXT_USE ) {
@@ -110,15 +117,13 @@ public class WndHeroSpells extends Window {
 				btnInfo.reqWidth() + 2, btnInfo.reqHeight() + 2 );
 		add( btnInfo );
 
+		Text txtCost;
 
-		Text txtName;
+		txtCost = PixelScene.createText( Game.getVar(R.string.Mana_Title) + ": " + spell.spellCost(), GuiProperties.titleFontSize());
+		txtCost.measure();
+		txtCost.y = icon.bottom() + MARGIN;
+		add(txtCost);
 
-		txtName = PixelScene.createText(spell.name(), GuiProperties.titleFontSize());
-		txtName.measure();
-		txtName.x = btnInfo.left() + MARGIN;
-		txtName.y = btnInfo.bottom() + MARGIN;
-		add(txtName);
-
-		return icon.bottom() + MARGIN;
+		return txtCost.bottom() + MARGIN;
 	}
 }
