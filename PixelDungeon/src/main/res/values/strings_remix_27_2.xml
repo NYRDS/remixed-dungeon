@@ -31,6 +31,10 @@
     <string name="FreezeGlobe_Name">Freeze</string>
     <string name="FreezeGlobe_Info">Freezes selected character.</string>
 
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Magic torch</string>
+    <string name="MagicTorch_Info">Spell that produces light for a short period of time.</string>
+
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
     <string name="ClassArmor_LowMana">You don\'t have enough mana!</string>
@@ -38,6 +42,10 @@
     <!-- STRINGS OF Drink CLASS -->
     <string name="Drink_ACDrink">DRINK</string>
     <string name="Drink_Message">That drink was refreshing!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="SpellBook_Name">Spell Book</string>
+    <string name="SpellBook_Info">This arcane tome holds ancient knowledge!</string>
 
     <!-- STRINGS OF ManaPotion CLASS -->
     <string name="ManaPotion_Name">Mana Potion</string>

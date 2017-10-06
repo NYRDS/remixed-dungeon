@@ -55,6 +55,7 @@ public class JarOfSouls extends UndeadMob {
 		if (Dungeon.level.cellValid(mobPos)) {
 			newMob.setPos(mobPos);
 			Actor.addDelayed(new Pushing(newMob, getPos(), newMob.getPos()), -1);
+			Dungeon.level.press(mobPos, newMob);
 		}
 		postpone(15);
 	}
