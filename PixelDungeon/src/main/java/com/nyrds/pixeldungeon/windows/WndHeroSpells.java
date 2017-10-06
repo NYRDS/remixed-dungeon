@@ -42,12 +42,13 @@ public class WndHeroSpells extends Window {
 	private static final String TXT_USE   = Game.getVar(R.string.WndSpells_Use);
 
 	private static final int MARGIN = 2;
+	private static final int WINDOW_MARGIN = 10;
 
 	public WndHeroSpells() {
 		super();
 
 		final Hero hero = Dungeon.hero;
-		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - MARGIN);
+		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
 
 		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
