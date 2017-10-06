@@ -34,13 +34,13 @@ public class WindGust extends Spell{
 					int next = Ballistica.trace[i + 1];
 					if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next])
 							&& Actor.findChar(next) == null) {
-						ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 );
-						ch.getSprite().burst( 0xFF99FFFF, 3 );
-
 						ch.move(next);
 						ch.getSprite().move(ch.getPos(), next);
 						Dungeon.observe();
 						triggered = true;
+
+						ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 );
+						ch.getSprite().burst( 0xFF99FFFF, 3 );
 						Sample.INSTANCE.play( Assets.SND_MELD );
 					}
 				}

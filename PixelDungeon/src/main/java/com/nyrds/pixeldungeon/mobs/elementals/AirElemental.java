@@ -97,9 +97,10 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 					ch.move(next);
 					ch.getSprite().move(ch.getPos(), next);
 					Dungeon.observe();
-					Sample.INSTANCE.play( Assets.SND_MELD );
+
 					ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 );
 					ch.getSprite().burst( 0xFF99FFFF, 3 );
+					Sample.INSTANCE.play( Assets.SND_MELD );
 				} else {
 					return damage * 2;
 				}
