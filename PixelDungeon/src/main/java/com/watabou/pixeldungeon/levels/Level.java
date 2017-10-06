@@ -473,6 +473,8 @@ public abstract class Level implements Bundlable {
 
 		createMobs();
 		createItems();
+
+		reRollViewDistance();
 	}
 
 	public void reset() {
@@ -1607,5 +1609,9 @@ public abstract class Level implements Bundlable {
 
 	public boolean isStatic() {
 		return DungeonGenerator.isStatic(levelId);
+	}
+
+	private void reRollViewDistance(){
+		viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : Random.Int(3,8);
 	}
 }

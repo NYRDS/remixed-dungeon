@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
@@ -73,6 +74,7 @@ public class TownShopLevel extends Level {
 			items.add( new OverpricedRation() );
 			items.add( new Dart(5).identify() );
 			items.add( new CommonArrow(25) );
+			items.add( new Torch().identify() );
 		}
 
 		items.add( new Keyring());
