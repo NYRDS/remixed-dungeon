@@ -4,11 +4,14 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -94,6 +97,9 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 					ch.move(next);
 					ch.getSprite().move(ch.getPos(), next);
 					Dungeon.observe();
+					Sample.INSTANCE.play( Assets.SND_MELD );
+					ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 );
+					ch.getSprite().burst( 0xFF99FFFF, 3 );
 				} else {
 					return damage * 2;
 				}

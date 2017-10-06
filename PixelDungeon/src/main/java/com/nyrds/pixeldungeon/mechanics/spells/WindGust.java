@@ -1,25 +1,13 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.Fire;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.effects.particles.EarthParticle;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class WindGust extends Spell{
 
@@ -46,10 +34,14 @@ public class WindGust extends Spell{
 					int next = Ballistica.trace[i + 1];
 					if ((Dungeon.level.passable[next] || Dungeon.level.avoid[next])
 							&& Actor.findChar(next) == null) {
+						ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 );
+						ch.getSprite().burst( 0xFF99FFFF, 3 );
+
 						ch.move(next);
 						ch.getSprite().move(ch.getPos(), next);
 						Dungeon.observe();
 						triggered = true;
+						Sample.INSTANCE.play( Assets.SND_MELD );
 					}
 				}
 
