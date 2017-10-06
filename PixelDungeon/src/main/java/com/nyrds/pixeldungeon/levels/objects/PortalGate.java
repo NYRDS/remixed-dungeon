@@ -4,7 +4,6 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
@@ -50,7 +49,7 @@ public class PortalGate extends LevelObject {
 	}
 
 	@Override
-	public boolean interact(Hero hero) {
+	public boolean interact(Char hero) {
 		return false;
 	}
 
