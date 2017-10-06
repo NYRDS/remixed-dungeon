@@ -58,7 +58,13 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
-	public boolean stepOn(Char hero) {
+	public boolean stepOn(Char chr) {
+		interact(chr);
+
+		if (chr instanceof Hero) {
+			Hero hero = (Hero)chr;
+			hero.interrupt();
+		}
 		return true;
 	}
 
@@ -75,7 +81,7 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
-	public boolean interact(Hero hero) {
+	public boolean interact(Char hero) {
 		discover();
 
 		if (uses != 0) {

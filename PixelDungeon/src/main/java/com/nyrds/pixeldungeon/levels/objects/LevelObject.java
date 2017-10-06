@@ -5,7 +5,6 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
@@ -39,7 +38,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 		imageIndex  = obj.optInt("imageIndex", imageIndex);
 	}
 
-	public boolean interact(Hero hero ) {return true;}
+	public boolean interact(Char hero ) {return true;}
 	public boolean stepOn(Char hero) {return true;}
 
 	protected void remove() {

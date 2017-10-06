@@ -200,13 +200,13 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <!--STRINGS OF Item CLASS-->
   <string name="Item_Name">etwas</string>
   <string name="Item_Info">etw.</string>
-  <string name="Item_ACDrop">ABLEGEN</string>
+  <string name="Item_ACDrop">FALLEN LASSEN</string>
   <string name="Item_ACThrow">WERFEN</string>
   <string name="Item_PackFull">Du hast keinen Platz mehr für %s</string>
   <string name="Item_DirThrow">Zielposition auswählen</string>
   <!--STRINGS OF EquipableItem CLASS-->
   <string name="EquipableItem_ACEquip">AUSRÜSTEN</string>
-  <string name="EquipableItem_ACUnequip">ABLEGEN</string>
+  <string name="EquipableItem_ACUnequip">AUSZIEHEN</string>
   <string name="EquipableItem_Unequip">Du kannst die verfluchte %s nicht entfernen!</string>
   <!--STRINGS OF Heap CLASS-->
   <string name="Heap_Mimic">Das ist ein Imitator!</string>
