@@ -81,6 +81,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
+import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -161,14 +162,16 @@ public enum HeroClass {
 			hero.collect(new PotionOfStrength().identify());
 			hero.collect(new PotionOfMight().identify());
 			hero.collect(new PotionOfMindVision());
+			hero.collect(new ManaPotion());
 		}
 
-		hero.collect(new WarriorArmor().identify());
+		hero.collect(new WandOfTelekinesis().identify());
+		hero.collect(new SpellBook());
+		hero.collect(new SpellBook());
+		hero.collect(new SpellBook());
 		hero.collect(new SpellBook());
 		hero.collect(new Spear().identify().upgrade(100));
 		hero.collect(new Sword().identify().upgrade(7));
-
-		hero.collect(new ManaPotion());
 
 		hero.collect(new PlateArmor().identify().upgrade(9));
 
