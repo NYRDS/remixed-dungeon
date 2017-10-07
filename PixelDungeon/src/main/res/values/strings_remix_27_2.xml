@@ -35,6 +35,7 @@
     <string name="MagicTorch_Name">Magic torch</string>
     <string name="MagicTorch_Info">Spell that produces light for a short period of time.</string>
 
+
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
     <string name="ClassArmor_LowMana">You don\'t have enough mana!</string>
@@ -53,6 +54,9 @@
 
     <!-- STRINGS OF Mushroom CLASS -->
     <string name="Mushroom_Eat_Message">That mushroom tastes weird!</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">It\'s an indispensable item in the dungeons, which are notorious for their poor ambient lighting.</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndHeroSpells CLASS -->

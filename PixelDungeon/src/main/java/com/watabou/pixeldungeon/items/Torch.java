@@ -39,7 +39,9 @@ public class Torch extends Item {
 		image = ItemSpriteSheet.TORCH;
 		
 		stackable = true;
-		
+
+		info = Game.getVar(R.string.Torch_Info2);
+
 		defaultAction = AC_LIGHT;
 	}
 	
