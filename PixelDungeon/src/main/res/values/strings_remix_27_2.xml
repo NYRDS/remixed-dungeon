@@ -8,6 +8,7 @@
     <!-- Spells descriptions -->
     <string name="Spells_SummonLimitReached">%1$s: summon limit reached (Current max: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
+    <string name="Mana_Cost">Mana Cost: </string>
     <string name="Spells_NotEnoughSP">You do not have enough mana to cast a \"%1$s\" spell.</string>
 
 
@@ -61,7 +62,6 @@
     <!-- Window descriptions -->
     <!-- STRINGS OF WndHeroSpells CLASS -->
     <string name="WndSpells_Title">Spells</string>
-    <string name="WndSpells_Info">Info</string>
-    <string name="WndSpells_Use">Use</string>
+    <string name="WndSpells_Level">Magic Level: </string>
 
 </resources>

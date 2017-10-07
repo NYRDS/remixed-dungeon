@@ -65,7 +65,9 @@ public enum Icons {
 	PLAY_GAMES,
 	BTN_SYNC_IN,
 	BTN_SYNC_OUT,
-	BTN_SYNC_REFRESH;
+	BTN_SYNC_REFRESH,
+	BTN_TARGET,
+	BTN_QUESTION;
 
 	
 	public Image get() {
@@ -203,6 +205,12 @@ public enum Icons {
 			break;
 		case BTN_SYNC_REFRESH:
 			icon.frame( icon.texture.uvRect( 1, 97, 12, 108 ) );
+			break;
+		case BTN_TARGET:
+			icon.frame( icon.texture.uvRect( 52, 62, 68, 77 ) );
+			break;
+		case BTN_QUESTION:
+			icon.frame( icon.texture.uvRect( 52, 78, 68, 93 ) );
 			break;
 		}
 		return icon;
