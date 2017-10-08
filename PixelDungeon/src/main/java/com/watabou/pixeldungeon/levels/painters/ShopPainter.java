@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.books.SpellBook;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -111,22 +112,22 @@ public class ShopPainter extends Painter {
 		case 6:
 			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
-			items.add( new PotionBelt() );
 			items.add( new Weightstone() );
+			items.add( new SpellBook().identify() );
 			break;
 			
 		case 11:
 			items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
 			items.add( new MailArmor().identify() );
-			items.add( new SeedPouch() );
 			items.add( new Quiver() );
+			items.add( new SpellBook().identify() );
 			break;
 			
 		case 16:
 			items.add( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
 			items.add( new ScaleArmor().identify() );
-			items.add( new ScrollHolder() );
 			items.add( new Weightstone() );
+			items.add( new SpellBook().identify() );
 			break;
 			
 		case 21:

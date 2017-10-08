@@ -42,6 +42,6 @@ public class SpellBook extends Book {
 
 	@Override
 	public int price() {
-		return (int) ((isIdentified() ? 250 : 100));
+		return 100;
 	}
 }

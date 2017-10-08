@@ -1,0 +1,19 @@
+{
+	"AffinityKindsUsed":[
+		{"kind":"common"},
+		{"kind":"elemental"},
+		{"kind":"necromancy"}
+	],
+	"common": [
+		{"kind":"MagicTorch","reqMagicLevel":1,"manaCost":5}
+	],
+	"elemental": [
+		{"kind":"WindGust","reqMagicLevel":1,"manaCost":1},
+		{"kind":"Ignite","reqMagicLevel":2,"manaCost":1},
+		{"kind":"RootSpell","reqMagicLevel":3,"manaCost":1},
+		{"kind":"FreezeGlobe","reqMagicLevel":4,"manaCost":1}
+	],
+	"necromancy": [
+		{"kind":"SummonDeathling","reqMagicLevel":1,"manaCost":5}
+	]
+}
