@@ -140,8 +140,12 @@ public class Trap extends LevelObject {
 
 	@Override
 	public int image() {
-		int nKind = Util.indexOf(traps, kind);
-		return nKind + 1;
+		if(uses>0) {
+			int nKind = Util.indexOf(traps, kind);
+			return nKind + 1;
+		} else {
+			return usedImage();
+		}
 	}
 
 	public int usedImage() {
