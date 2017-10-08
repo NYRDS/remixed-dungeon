@@ -55,7 +55,6 @@ public class WandOfTelekinesis extends Wand {
 
 		Char ch;
 		Heap heap = null;
-		LevelObject levelObject = null;
 
 		Level level = Dungeon.level;
 
@@ -112,7 +111,8 @@ public class WandOfTelekinesis extends Wand {
 				mapUpdated = true;
 			}
 
-			if(levelObject == null && ( levelObject = level.getLevelObject(c) )!=null) {
+			LevelObject levelObject = null;
+			if((levelObject = level.getTopLevelObject(c) )!=null) {
 				if(levelObject.pushable(getCurUser())) {
 					levelObject.push(getCurUser());
 				}
