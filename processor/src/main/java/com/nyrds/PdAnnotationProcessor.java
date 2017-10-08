@@ -31,7 +31,6 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
-
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
 		// for each javax.lang.model.element.Element annotated with the CustomAnnotation
 		for (Element element : roundEnvironment.getElementsAnnotatedWith(Packable.class)) {
@@ -79,7 +78,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 				packerBlock = packerBlock.toBuilder()
 						.addStatement("$T $L = $T.class.getDeclaredField($S)", Field.class,fieldName,TypeName.get(clazz.asType()),fieldName)
 						.addStatement("$L.setAccessible(true)",fieldName)
-						.addStatement("bundle.put($S,($T)$L.get(arg))", fieldName,TypeName.get(field.asType()), fieldName)
+						.addStatement("bundle.put($S,($T)$L.get(arg))", fieldName, TypeName.get(field.asType()), fieldName)
 						.build();
 
 				unpackerBlock = unpackerBlock.toBuilder()
@@ -103,7 +102,9 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 							.addStatement("$L.setFloat(arg,bundle.getFloat($S))", fieldName,fieldName)
 							.build();
 				}
-				if(fieldType.equals("String")) {
+
+
+				if(fieldType.equals("java.lang.String")) {
 					unpackerBlock = unpackerBlock.toBuilder()
 							.addStatement("$L.set(arg,bundle.getString($S))", fieldName,fieldName)
 							.build();
