@@ -125,7 +125,7 @@ public class PixelScene extends Scene {
 
 	public static float scale;
 
-	public static void chooseFont(float size) {
+	public static Font chooseFont(float size) {
 		scale = size / 14.f;
 
 		scale /= 1.8;
@@ -135,6 +135,8 @@ public class PixelScene extends Scene {
 		}
 
 		font = font25x;
+
+		return font;
 	}
 
 	public static Text createText(float size) {
@@ -146,10 +148,8 @@ public class PixelScene extends Scene {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(text, size, false);
 		}
-		
-		chooseFont(size);
 
-		Text result = Text.create(text, font);
+		Text result = Text.create(text, chooseFont(size));
 		result.Scale().set(scale);
 
 		return result;
@@ -164,10 +164,8 @@ public class PixelScene extends Scene {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(text, size, true);
 		}
-		
-		chooseFont(size);
 
-		Text result = Text.createMultiline(text, font);
+		Text result = Text.createMultiline(text, chooseFont(size));
 		result.Scale().set(scale);
 
 		return result;

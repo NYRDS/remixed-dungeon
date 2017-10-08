@@ -37,10 +37,6 @@ public class BitmapText extends Text {
 	
 	protected static char INVALID_CHAR = ' ';
 	
-	public BitmapText() {
-		this( "", null );
-	}
-	
 	public BitmapText( Font font ) {
 		this( "", font );
 	}
