@@ -25,6 +25,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -66,6 +67,7 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
+import com.watabou.utils.SparseArray;
 import com.watabou.utils.SystemTime;
 
 import java.io.FileInputStream;
@@ -633,6 +635,18 @@ public class Dungeon {
 		}
 	}
 
+	private static void markObjects() {
+		for (int i = 0; i < level.objects.size(); i++) {
+			SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
+			for(int j = 0; j < objectLayer.size();j++) {
+				LevelObject object = objectLayer.valueAt(j);
+				if(object.nonPassable()) {
+					passable[object.getPos()] = false;
+				}
+			}
+		}
+	}
+
 	private static void markActorsAsUnpassable(boolean[] visible) {
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
@@ -662,6 +676,8 @@ public class Dungeon {
 			markActorsAsUnpassableIgnoreFov();
 		}
 
+		markObjects();
+
 		return PathFinder.getStep(from, to, passable);
 
 	}
@@ -679,6 +695,8 @@ public class Dungeon {
 		} else {
 			markActorsAsUnpassableIgnoreFov();
 		}
+
+		markObjects();
 
 		passable[cur] = true;
 

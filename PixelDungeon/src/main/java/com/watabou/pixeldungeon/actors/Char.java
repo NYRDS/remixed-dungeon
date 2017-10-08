@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -70,7 +71,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public abstract class Char extends Actor {
+public abstract class Char extends Actor implements Presser{
 
 	private static final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
 	private static final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
@@ -675,11 +676,12 @@ public abstract class Char extends Actor {
 		return movable;
 	}
 
-	public WalkingType getWalkingType(){
-		return walkingType;
-	}
-
 	public int magicLvl() {
 		return 10;
+	}
+
+	@Override
+	public boolean affectLevelObjects() {
+		return true;
 	}
 }

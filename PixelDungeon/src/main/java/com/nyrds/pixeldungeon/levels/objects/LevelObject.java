@@ -40,6 +40,9 @@ public abstract class LevelObject implements Bundlable, Presser {
 
 	public boolean interact(Char hero ) {return true;}
 	public boolean stepOn(Char hero) {return true;}
+	public boolean nonPassable() {
+		return false;
+	}
 
 	protected void remove() {
 		Dungeon.level.remove(this);

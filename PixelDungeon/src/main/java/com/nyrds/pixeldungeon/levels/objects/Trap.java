@@ -4,6 +4,7 @@ import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.AlarmTrap;
 import com.watabou.pixeldungeon.levels.traps.FireTrap;
@@ -44,6 +45,9 @@ public class Trap extends LevelObject {
 	private boolean activatedByItem = false;
 
 	@Packable
+	private boolean activatedByMob = false;
+
+	@Packable
 	private boolean secret = false;
 
 	public Trap() {
@@ -71,6 +75,11 @@ public class Trap extends LevelObject {
 	@Override
 	public void bump(Presser presser) {
 		if (presser instanceof LevelObject) {
+			interact(null);
+			return;
+		}
+
+		if (presser instanceof Mob && activatedByMob) {
 			interact(null);
 			return;
 		}
@@ -114,6 +123,7 @@ public class Trap extends LevelObject {
 		uses = obj.optInt("uses", 1);
 		secret = obj.optBoolean("secret", false);
 		activatedByItem = obj.optBoolean("activatedByItem", false);
+		activatedByMob  = obj.optBoolean("activatedByMob", false);
 	}
 
 	@Override
@@ -148,7 +158,12 @@ public class Trap extends LevelObject {
 		}
 	}
 
-	public int usedImage() {
+	private int usedImage() {
 		return 0;
+	}
+
+	@Override
+	public boolean nonPassable() {
+		return true;
 	}
 }

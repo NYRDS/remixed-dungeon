@@ -1064,18 +1064,24 @@ public abstract class Level implements Bundlable {
 
 
 	public void itemPress(int cell, Presser presser) {
+		pressLevelObject(cell, presser);
+		set(cell, Terrain.discover(map[cell]));
+		charPress(cell, null);
+	}
 
+	private void pressLevelObject(int cell, Presser presser) {
 		if (presser.affectLevelObjects()) {
 			LevelObject levelObject = getTopLevelObject(cell);
 			if (levelObject != null) {
 				levelObject.bump(presser);
 			}
 		}
-		set(cell, Terrain.discover(map[cell]));
-		charPress(cell, null);
 	}
 
 	public void charPress(int cell, @Nullable Char actor) {
+		if(actor!= null) {
+			pressLevelObject(cell, actor);
+		}
 
 		switch (map[cell]) {
 			case Terrain.TOXIC_TRAP:

@@ -75,4 +75,9 @@ public class ConcreteBlock extends LevelObject {
 	public boolean affectLevelObjects() {
 		return true;
 	}
+
+	@Override
+	public boolean nonPassable() {
+		return true;
+	}
 }
