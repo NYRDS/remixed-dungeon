@@ -294,10 +294,16 @@ public abstract class RegularLevel extends CustomLevel {
 					} else {
 
 						int n = specials.size();
-						r.type = specials.get(Math.min(Random.Int(n), Random.Int(n)));
-						if (r.type == Type.WEAK_FLOOR) {
-							weakFloorCreated = true;
+						Type roomType = specials.get(Math.min(Random.Int(n), Random.Int(n)));
+
+						if (roomType == Type.WEAK_FLOOR) {
+							if(DungeonGenerator.exitCount(levelId) == 1) {
+								weakFloorCreated = true;
+							} else {
+								continue;
+							}
 						}
+						r.type = roomType;
 					}
 
 					Room.useType(r.type);
