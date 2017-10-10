@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.Scrambler;
@@ -74,7 +75,8 @@ public class Item implements Bundlable, Presser {
 	private static final   String AC_DROP  = Game.getVar(R.string.Item_ACDrop);
 	protected static final String AC_THROW = Game.getVar(R.string.Item_ACThrow);
 
-	public String defaultAction;
+	@NonNull
+	public String defaultAction = AC_THROW;
 
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);

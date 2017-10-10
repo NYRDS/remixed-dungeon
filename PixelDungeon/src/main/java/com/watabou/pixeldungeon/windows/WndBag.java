@@ -382,7 +382,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.FOR_SALE && (item.price() > 0) && (!item.isEquipped( Dungeon.hero ) || !item.cursed) ||
 						mode == Mode.UPGRADEABLE && item.isUpgradable() || 
 						mode == Mode.UNIDENTIFED && !item.isIdentified() ||
-						mode == Mode.QUICKSLOT && (item.defaultAction != null) ||
+						mode == Mode.QUICKSLOT ||
 						mode == Mode.WEAPON && (item instanceof MeleeWeapon || item instanceof Boomerang) ||
 						mode == Mode.ARMOR && (item instanceof Armor) ||
 						mode == Mode.WAND && (item instanceof Wand) ||
@@ -425,7 +425,7 @@ public class WndBag extends WndTabbed {
 		
 		@Override
 		protected boolean onLongClick() {
-			if (listener == null && item.defaultAction != null) {
+			if (listener == null) {
 				hide();
 				QuickSlot.selectItem(item instanceof Wand ? item : item.getClass(),0);
 				return true;

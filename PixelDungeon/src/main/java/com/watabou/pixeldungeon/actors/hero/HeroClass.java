@@ -22,35 +22,21 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.artifacts.BraceletOfDevour;
-import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.books.SpellBook;
-import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
-import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.common.debug.CandyOfDeath;
-import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
-import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.TitanSword;
-import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
-import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
-import com.watabou.pixeldungeon.items.LloydsBeacon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
@@ -58,29 +44,11 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.bags.Keyring;
-import com.watabou.pixeldungeon.items.bags.PotionBelt;
-import com.watabou.pixeldungeon.items.bags.Quiver;
-import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
-import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.Artifact;
-import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
-import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
-import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
@@ -107,8 +75,8 @@ public enum HeroClass {
 	private Abilities abilities;
 	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
 
-	private boolean isSpellUser;
-	private static String magicAffinity;
+	private        boolean isSpellUser;
+	private static String  magicAffinity;
 
 	private static final String[] WAR_PERKS         = Game
 			.getVars(R.array.HeroClass_WarPerks);
@@ -220,11 +188,10 @@ public enum HeroClass {
 					JSONArray quickslots = classDesc.getJSONArray("quickslot");
 					for (int i = 0; i < quickslots.length(); ++i) {
 						Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
-						if (item.defaultAction != null) {
-							if (hero.belongings.getItem(item.getClass()) != null) {
-								QuickSlot.selectItem(hero.belongings.getItem(item.getClass()), slot);
-								slot++;
-							}
+
+						if (hero.belongings.getItem(item.getClass()) != null) {
+							QuickSlot.selectItem(hero.belongings.getItem(item.getClass()), slot);
+							slot++;
 						}
 					}
 				}
@@ -260,7 +227,7 @@ public enum HeroClass {
 	private static void initCommon(Hero hero) {
 		QuickSlot.cleanStorage();
 		initForClass(hero, "common");
-		if(hero.getDifficulty() < 3 ) {
+		if (hero.getDifficulty() < 3) {
 			initForClass(hero, "non_expert");
 		}
 	}
@@ -322,7 +289,7 @@ public enum HeroClass {
 		return Utils.NEUTER;
 	}
 
-	private static final String CLASS = "class";
+	private static final String CLASS          = "class";
 	private static final String SPELL_AFFINITY = "affinity";
 
 	public void storeInBundle(Bundle bundle) {
@@ -348,19 +315,19 @@ public enum HeroClass {
 		return abilities;
 	}
 
-	public boolean isSpellUser(){
+	public boolean isSpellUser() {
 		return isSpellUser;
 	}
 
-	public void isSpellUser(boolean b){
+	public void isSpellUser(boolean b) {
 		isSpellUser = b;
 	}
 
-	public String getMagicAffinity(){
+	public String getMagicAffinity() {
 		return magicAffinity;
 	}
 
-	public static void setMagicAffinity(String affinity){
+	public static void setMagicAffinity(String affinity) {
 		magicAffinity = affinity;
 	}
 }
