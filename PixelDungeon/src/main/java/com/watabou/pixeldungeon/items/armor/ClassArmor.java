@@ -31,7 +31,7 @@ abstract public class ClassArmor extends Armor {
 	private static final String TXT_LOW_MANA     = Game.getVar(R.string.ClassArmor_LowMana);
 	private static final String TXT_NOT_EQUIPPED = Game.getVar(R.string.ClassArmor_NotEquipped);
 
-	public int specialCostModifier = 3;
+	private int specialCostModifier = 3;
 	
 	{
 		levelKnown = true;
@@ -62,14 +62,12 @@ abstract public class ClassArmor extends Armor {
 	
 	private static final String ARMOR_STR	= "STR";
 	private static final String ARMOR_DR	= "DR";
-	private static final String SPECIAL_COST_MODIFIER= "SPECIAL_COST_MODIFIER";
-	
+
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		bundle.put( ARMOR_STR, STR );
 		bundle.put( ARMOR_DR, DR );
-		bundle.put( SPECIAL_COST_MODIFIER, specialCostModifier );
 	}
 	
 	@Override
@@ -77,7 +75,6 @@ abstract public class ClassArmor extends Armor {
 		super.restoreFromBundle( bundle );
 		STR = bundle.getInt( ARMOR_STR );
 		DR = bundle.getInt( ARMOR_DR );
-		specialCostModifier = bundle.getInt( SPECIAL_COST_MODIFIER );
 	}
 	
 	@Override
