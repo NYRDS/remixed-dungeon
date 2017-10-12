@@ -45,13 +45,13 @@ public class SpellFactory {
 		//registerSpellClass(RaiseDead.class);
 		//registerSpellClass(Desecrate.class);
 
+		registerSpellClass(WindGust.class);
 		registerSpellClass(Ignite.class);
 		registerSpellClass(RootSpell.class);
-		registerSpellClass(WindGust.class);
 		registerSpellClass(FreezeGlobe.class);
 
 		registerSpellClass(MagicTorch.class);
-		//registerSpellClass(Heal.class);
+		registerSpellClass(Healing.class);
 		//registerSpellClass(TownPortal.class);
 	}
 
