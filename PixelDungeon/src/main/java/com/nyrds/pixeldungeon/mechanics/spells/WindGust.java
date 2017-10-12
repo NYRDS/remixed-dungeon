@@ -15,7 +15,7 @@ public class WindGust extends Spell{
 		targetingType = SpellHelper.TARGET_CELL;
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
-		level = 3;
+		level = 1;
 		imageIndex = 3;
 		spellCost = 2;
 	}
