@@ -1875,8 +1875,12 @@ public class Hero extends Char {
 	}
 
 	public void accumulateSoulPoints() {
+		accumulateSoulPoints(1);
+	}
+
+	public void accumulateSoulPoints(int n) {
 		int points = Scrambler.descramble(sp);
-		points = points + 1;
+		points = points + n;
 		if (points > getSoulPointsMax()) {
 			points = getSoulPointsMax();
 		}
