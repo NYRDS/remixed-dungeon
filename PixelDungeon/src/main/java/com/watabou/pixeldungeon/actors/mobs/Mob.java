@@ -24,6 +24,8 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
+import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -500,7 +502,12 @@ public abstract class Mob extends Char {
 			Hero hero = Dungeon.hero;
 			if (hero.heroClass == HeroClass.NECROMANCER){
 				if (hero != null && hero.isAlive()) {
-					hero.accumulateSoulPoints();
+					if(hero.belongings.armor instanceof NecromancerRobe){
+						hero.accumulateSoulPoints();
+					}
+					if(hero.belongings.armor instanceof NecromancerArmor){
+						hero.accumulateSoulPoints(2);
+					}
 					for (Item item : hero.belongings) {
 						if (item instanceof BlackSkull && item.isEquipped(hero)) {
 							((BlackSkull) item).mobDied(this, hero);
