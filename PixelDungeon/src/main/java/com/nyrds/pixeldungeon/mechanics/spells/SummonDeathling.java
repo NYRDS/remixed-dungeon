@@ -1,5 +1,8 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.utils.Utils;
+
 //This can be just config file
 public class SummonDeathling extends SummoningSpell {
 
@@ -12,6 +15,15 @@ public class SummonDeathling extends SummoningSpell {
 		castTime = 3f;
 	}
 
+	@Override
+	public int getSummonLimit(){
+		return Dungeon.hero.magicLvl();
+	}
+
+	@Override
+	public String desc(){
+		return Utils.format(desc, getSummonLimit());
+	}
 
 	@Override
 	public String texture(){

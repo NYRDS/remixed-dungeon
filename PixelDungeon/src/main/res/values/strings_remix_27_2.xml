@@ -14,7 +14,7 @@
 
     <!-- STRINGS OF SummonDeathling CLASS -->
     <string name="SummonDeathling_Name">Summon Deathling</string>
-    <string name="SummonDeathling_Info">Summons an undead follower. Deathling\'s hp and damage grows with hero level.</string>
+    <string name="SummonDeathling_Info">Summons an undead follower. Deathling\'s hp and damage grows with hero level. \n\nSummon limit: %1$d (+ 1 every Magic Level)</string>
 
     <!-- STRINGS OF Ignite CLASS -->
     <string name="Ignite_Name">Ignite</string>
@@ -60,7 +60,7 @@
     <string name="Mushroom_Eat_Message">That mushroom tastes weird!</string>
 
     <!-- STRINGS OF Torch CLASS -->
-    <string name="Torch_Info2">It\'s an indispensable item in the dungeons, which are notorious for their poor ambient lighting.</string>
+    <string name="Torch_Info2">It\'s an indispensable item in the dungeon, which is notorious for it\'s poor ambient lighting.</string>
 
     
     <!-- Window descriptions -->
