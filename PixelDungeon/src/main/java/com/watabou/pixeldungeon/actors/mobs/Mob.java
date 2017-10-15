@@ -508,11 +508,11 @@ public abstract class Mob extends Char {
 					if(hero.belongings.armor instanceof NecromancerArmor){
 						hero.accumulateSoulPoints(2);
 					}
-					for (Item item : hero.belongings) {
-						if (item instanceof BlackSkull && item.isEquipped(hero)) {
-							((BlackSkull) item).mobDied(this, hero);
-						}
-					}
+				}
+			}
+			for (Item item : hero.belongings) {
+				if (item instanceof BlackSkull && item.isEquipped(hero)) {
+					((BlackSkull) item).mobDied(this, hero);
 				}
 			}
 		}
