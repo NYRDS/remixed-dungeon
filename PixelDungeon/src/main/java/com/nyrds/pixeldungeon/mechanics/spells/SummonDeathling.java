@@ -17,7 +17,7 @@ public class SummonDeathling extends SummoningSpell {
 
 	@Override
 	public int getSummonLimit(){
-		return Dungeon.hero.magicLvl();
+		return 1 + getLevelModifier(Dungeon.hero);
 	}
 
 	@Override
