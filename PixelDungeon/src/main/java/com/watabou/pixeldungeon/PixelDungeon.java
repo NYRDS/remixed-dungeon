@@ -77,6 +77,10 @@ public class PixelDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.items.accessories.Nightcap.class,
 				"com.nyrds.pixeldungeon.items.accessories.SleepyHat");
+		// remix 27.2.beta
+		com.watabou.utils.Bundle.addAlias(
+				com.nyrds.pixeldungeon.items.books.TomeOfKnowledge.class,
+				"com.nyrds.pixeldungeon.items.books.SpellBook");
 	}
 
 	@Override

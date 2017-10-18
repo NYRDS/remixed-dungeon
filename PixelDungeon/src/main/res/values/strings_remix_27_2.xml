@@ -38,7 +38,7 @@
 
     <!-- STRINGS OF Healing CLASS -->
     <string name="Healing_Name">Healing</string>
-    <string name="Healing_Info">This sell is crucial for every adventurer. It will restore 1/3 of a maximum amount of caster\'s hp.</string>
+    <string name="Healing_Info">This spell is crucial for every adventurer. It will restore 1/3 of a maximum amount of caster\'s hp.</string>
 
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
@@ -49,8 +49,14 @@
     <string name="Drink_Message">That drink was refreshing!</string>
 
     <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">Tome of Knowledge</string>
+    <string name="TomeOfKnowledge_Info">This ancient tome is filled with arcane riddles and mysteries! It may be a hard read, but if you\'ll get through it, you\'ll definitely increase your magical powers.</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
     <string name="SpellBook_Name">Spell Book</string>
-    <string name="SpellBook_Info">This arcane tome holds ancient knowledge, it\'ll surely help you to rise your magical powers!</string>
+    <string name="SpellBook_Info">It looks more like a compilation of assorted pages that were sewed together, than an actual book. You might be able to make something out of it if you\'ll pay enough attention.</string>
+    <string name="SpellBook_Info_Identified">Within these pages you\'ve discovered a full text of a \"%1$s\" spell.\n\" %2$s \"</string>
+
 
     <!-- STRINGS OF ManaPotion CLASS -->
     <string name="ManaPotion_Name">Mana Potion</string>

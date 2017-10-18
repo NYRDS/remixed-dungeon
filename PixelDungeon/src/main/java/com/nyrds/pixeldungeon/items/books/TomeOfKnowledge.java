@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
-public class SpellBook extends Book {
+public class TomeOfKnowledge extends Book {
 
 	{
 		image = getImageIndex();
