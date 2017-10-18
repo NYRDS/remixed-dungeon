@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.items.books.SpellBook;
+import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -69,7 +69,7 @@ public class TownShopLevel extends Level {
 		items.add( new Knuckles().identify() );
 		items.add( new Sword().identify() );
 		items.add( new Quarterstaff().identify() );
-		items.add( new SpellBook().identify() );
+		items.add( new TomeOfKnowledge().identify() );
 
 		for (int i = 0; i <3; i++){
 			items.add( new OverpricedRation() );

@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.items.books.SpellBook;
+import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -36,10 +36,7 @@ import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.ScaleArmor;
-import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.Quiver;
-import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
@@ -113,21 +110,21 @@ public class ShopPainter extends Painter {
 			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
 			items.add( new Weightstone() );
-			items.add( new SpellBook().identify() );
+			items.add( new TomeOfKnowledge().identify() );
 			break;
 			
 		case 11:
 			items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
 			items.add( new MailArmor().identify() );
 			items.add( new Quiver() );
-			items.add( new SpellBook().identify() );
+			items.add( new TomeOfKnowledge().identify() );
 			break;
 			
 		case 16:
 			items.add( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
 			items.add( new ScaleArmor().identify() );
 			items.add( new Weightstone() );
-			items.add( new SpellBook().identify() );
+			items.add( new TomeOfKnowledge().identify() );
 			break;
 			
 		case 21:
