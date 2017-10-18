@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.items.drinks.Drink;
@@ -157,7 +158,8 @@ public class Generator {
 		RANGED(2, Bow.class),
 		BULLETS(5, Arrow.class),
 		THROWABLE(0, MissileWeapon.class),
-		DRINK(25, Drink.class);
+		DRINK(25, Drink.class),
+		UNIQUE(1, SpellBook.class);
 
 		public Class<?>[] classes;
 		public float[]    probs;
@@ -339,6 +341,9 @@ public class Generator {
 		};
 		Category.BULLETS.probs = new float[]{10, 2, 2, 2};
 
+		Category.UNIQUE.classes = new Class<?>[]{
+				SpellBook.class};
+		Category.UNIQUE.probs = new float[]{1};
 	}
 
 	public static void reset() {
