@@ -224,7 +224,7 @@ public class GameScene extends PixelScene {
 			EventCollector.logEvent(EventCollector.BUG, "bugged save", "mob.pos==-1");
 		}
 
-		Dungeon.level.mobs = filteredMobs;
+		level.mobs = filteredMobs;
 
 		for (Mob mob : level.mobs) {
 			if (Statistics.amuletObtained) {
@@ -302,7 +302,7 @@ public class GameScene extends PixelScene {
 			GLog.i(TXT_WELCOME, Dungeon.depth);
 			Sample.INSTANCE.play(Assets.SND_DESCEND);
 		}
-		switch (Dungeon.level.getFeeling()) {
+		switch (level.getFeeling()) {
 			case CHASM:
 				GLog.w(TXT_CHASM);
 				break;

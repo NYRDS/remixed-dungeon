@@ -542,12 +542,8 @@ public class Hero extends Char {
 
 		super.act();
 
-
-
 		if (paralysed) {
-
 			curAction = null;
-
 			spendAndNext(TICK);
 			return false;
 		}

@@ -21,6 +21,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.utils.Random;
 
 import org.json.JSONException;
@@ -73,7 +74,7 @@ public class Bestiary {
 		currentLevelId = idString;
 
 		if(Feelings!=null) {
-			String feeling = DungeonGenerator.getLevelFeeling(idString).name();
+			String feeling = Dungeon.level.getFeeling().name();
 			currentLevelFeelingBestiary = Feelings.optJSONObject(feeling);
 		}
 
