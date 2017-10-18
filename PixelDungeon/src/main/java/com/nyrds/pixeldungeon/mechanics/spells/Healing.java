@@ -20,7 +20,7 @@ public class Healing extends Spell{
 
 		level = 3;
 		imageIndex = 1;
-		spellCost = 5;
+		spellCost = 10;
 	}
 
 	@Override
