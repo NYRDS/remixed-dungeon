@@ -22,11 +22,13 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.books.SpellBook;
+import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
+import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
+import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -48,6 +50,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
@@ -127,14 +130,14 @@ public enum HeroClass {
 	private static void initDebug(Hero hero) {
 		for (int i = 0; i < 100; i++) {
 			hero.collect(new ScrollOfMagicMapping().identify());
-			hero.collect(new PotionOfStrength().identify());
-			hero.collect(new PotionOfMight().identify());
-			hero.collect(new PotionOfMindVision());
+			hero.collect(new ScrollOfIdentify().identify());
 			hero.collect(new ManaPotion());
 		}
 
-		hero.collect(new WandOfTelekinesis().identify());
-		hero.collect(new SpellBook());
+		hero.collect(new BlackSkull().identify());
+		hero.collect(new TomeOfKnowledge());
+		hero.collect(new TomeOfKnowledge());
+		hero.collect(new TomeOfKnowledge());
 		hero.collect(new SpellBook());
 		hero.collect(new SpellBook());
 		hero.collect(new SpellBook());
@@ -212,7 +215,6 @@ public enum HeroClass {
 				hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
 				hero.setMaxSoulPoints(classDesc.optInt("maxSp", 10));
 				hero.setSoulPoints(classDesc.optInt("startingSp", 0));
-
 
 			} catch (JSONException e) {
 				throw new TrackedRuntimeException(e);
