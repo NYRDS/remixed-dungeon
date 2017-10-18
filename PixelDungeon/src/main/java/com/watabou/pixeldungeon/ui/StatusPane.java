@@ -153,6 +153,9 @@ public class StatusPane extends Component {
 		if(!Flavours.haveHats()) {
 			btnHats.enable(false);
 		}
+		if (!hero.heroClass.isSpellUser()) {
+			btnSpells.enable(false);
+		}
 
 		add(btnSpells);
 		add(btnHats);
