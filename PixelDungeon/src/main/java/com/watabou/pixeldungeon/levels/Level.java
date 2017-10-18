@@ -265,7 +265,7 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 
-	protected int viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : 8;
+	protected int viewDistance = 6;
 
 	public boolean[] fieldOfView;
 
@@ -1621,7 +1621,7 @@ public abstract class Level implements Bundlable {
 		if (this.isSafe()){
 			viewDistance = 8;
 		} else {
-			viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 3 : Random.Int(3,8);
+			viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 2 : Random.Int(3,6);
 		}
 	}
 }
