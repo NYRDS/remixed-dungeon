@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -93,7 +94,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 			@Override
 			public void run() {
 
-				GameScene.doOnSceneSwitch = new Runnable() {
+				Dungeon.hero.doOnNextAction = new Runnable() {
 					@Override
 					public void run() {
 						GameScene.show(new WndMessage(TXT_THANK_YOU) {
@@ -112,8 +113,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 										Ads.displayEasyModeBanner();
 									}
 								}
-
-								GameScene.doOnSceneSwitch = null;
 							}
 						});
 					}
