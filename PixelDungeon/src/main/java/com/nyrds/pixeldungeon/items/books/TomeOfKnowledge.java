@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class TomeOfKnowledge extends Book {
@@ -43,5 +44,10 @@ public class TomeOfKnowledge extends Book {
 	@Override
 	public int price() {
 		return 100;
+	}
+
+	@Override
+	public Item burn(int cell){
+		return null;
 	}
 }

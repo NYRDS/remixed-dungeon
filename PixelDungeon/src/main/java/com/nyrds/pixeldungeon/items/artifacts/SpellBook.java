@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -64,5 +65,10 @@ public class SpellBook extends Artifact {
 			return  Utils.format(IDENTIFIED, spell().name(), spell().desc());
 		}
 		return super.desc();
+	}
+
+	@Override
+	public Item burn(int cell){
+		return null;
 	}
 }
