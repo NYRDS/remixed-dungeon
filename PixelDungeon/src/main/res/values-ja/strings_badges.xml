@@ -6,10 +6,10 @@
   <string name="Badges_Info1">バッジ承認: %s</string>
   <string name="Badges_Info2">新しいスーパーバッジ: %s</string>
   <string name="Badges_Info3">新しいバッジ: %s</string>
-  <string name="Badges_MonsterSlain1">敵を10倒した</string>
-  <string name="Badges_MonsterSlain2">敵を50倒した</string>
-  <string name="Badges_MonsterSlain3">敵を150倒した</string>
-  <string name="Badges_MonsterSlain4">敵を250倒した</string>
+  <string name="Badges_MonsterSlain1">敵を10体倒した</string>
+  <string name="Badges_MonsterSlain2">敵を50体倒した</string>
+  <string name="Badges_MonsterSlain3">敵を150体倒した</string>
+  <string name="Badges_MonsterSlain4">敵を250体倒した</string>
   <string name="Badges_GoldColleted1">100ゴールド集めた</string>
   <string name="Badges_GoldColleted2">500ゴールド集めた</string>
   <string name="Badges_GoldColleted3">2500ゴールド集めた</string>
@@ -30,7 +30,7 @@
   <string name="Badges_DeathFire">火災による死亡</string>
   <string name="Badges_DeathPoison">毒による死亡</string>
   <string name="Badges_DeathGas">毒ガスによる死亡</string>
-  <string name="Badges_DeathHunger">飢餓による死亡</string>
+  <string name="Badges_DeathHunger">飢え死に</string>
   <string name="Badges_DeathGlyph">グリフによる死亡</string>
   <string name="Badges_DeathFalling">落下による死亡</string>
   <string name="Badges_Yasd">火災、毒、毒ガス、飢餓による死亡</string>

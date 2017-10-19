@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
@@ -159,6 +160,8 @@ public class Hero extends Char {
 	private static final float TIME_TO_REST   = 1f;
 	private static final float TIME_TO_SEARCH = 2f;
 
+	@Nullable
+	public Runnable doOnNextAction;
 
 	public HeroClass    heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass  = HeroSubClass.NONE;
@@ -417,7 +420,7 @@ public class Hero extends Char {
 
 		if (frostAura != null && enemy.distance(this) < 2) {
 			int powerLevel = belongings.getItem(RingOfFrost.class).level();
-			if (enemy.isAlive() && enemy != null) {
+			if (enemy.isAlive()) {
 				Buff.affect(enemy, Slow.class, Slow.duration(enemy) / 5 + powerLevel);
 				if (Random.Int(100) < 10 + powerLevel) {
 					Buff.affect(enemy, Frost.class, Frost.duration(enemy) / 5 + powerLevel);
@@ -539,6 +542,13 @@ public class Hero extends Char {
 
 	@Override
 	public boolean act() {
+
+		if(doOnNextAction !=null) {
+			doOnNextAction.run();
+			doOnNextAction = null;
+			spendAndNext(TICK);
+			return false;
+		}
 
 		super.act();
 
