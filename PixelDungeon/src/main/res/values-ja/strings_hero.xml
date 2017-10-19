@@ -6,9 +6,9 @@
   <string name="Hero_Leave">Pixel Dungeonを出るのは容易ではありません。</string>
   <string name="Hero_LevelUp">レベルアップ！</string>
   <string name="Hero_NewLevel">レベル %d へようこそ！今のあなたはより健康的で集中しています。攻撃を当てることも攻撃をかわすことも容易です。</string>
-  <string name="Hero_YouNowHave">あなたは %s を手に入れた</string>
-  <string name="Hero_SomethingElse">何かがここにあります</string>
-  <string name="Hero_LockedChest">このチェストはロックされていて、あなたは合う鍵を持っていません</string>
+  <string name="Hero_YouNowHave">%s を手に入れた</string>
+  <string name="Hero_SomethingElse">まだ何かある</string>
+  <string name="Hero_LockedChest">箱には鍵がかかっているが、合う鍵を持っていない。</string>
   <string name="Hero_LockedDoor">あなたは合う鍵を持っていません</string>
   <string name="Hero_NoticedSmth">あなたは何かに気づいた</string>
   <string name="Hero_Wait">...</string>
@@ -16,15 +16,15 @@
   <string name="Hero_StaBurning">あなたに引火した！</string>
   <string name="Hero_StaParalysis">あなたは麻痺した！</string>
   <string name="Hero_StaPoison">あなたは毒を受けた！</string>
-  <string name="Hero_StaOoze">カウスティックウーズはあなたの肉を食べます。それを洗い流した！</string>
-  <string name="Hero_StaRoots">あなたは動けない！</string>
-  <string name="Hero_StaWeakness">あなたは弱体するのを感じた！</string>
-  <string name="Hero_StaBlindness">あなたは盲目した！</string>
+  <string name="Hero_StaOoze">侵食性の粘液は肉を溶かす。洗い流せ！</string>
+  <string name="Hero_StaRoots">動けない！</string>
+  <string name="Hero_StaWeakness">弱くなったように感じる</string>
+  <string name="Hero_StaBlindness">失明した！</string>
   <string name="Hero_StaFury">あなたは激怒した！</string>
   <string name="Hero_StaFurious">激怒</string>
   <string name="Hero_StaCharm">あなたは魅了された！</string>
   <string name="Hero_StaCripple">あなたは鈍化した！</string>
-  <string name="Hero_StaBleeding">あなたは出血した！</string>
+  <string name="Hero_StaBleeding">出血している！</string>
   <string name="Hero_StaVertigo">すべてはあなたの周りを回っている！</string>
   <!--STRINGS OF HeroClass CLASS-->
   <string name="HeroClass_War">ウォリアー</string>

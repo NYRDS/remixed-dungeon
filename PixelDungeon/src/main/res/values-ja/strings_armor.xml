@@ -13,7 +13,7 @@
 \n\nあなたの力が不足しているため、この鎧をつけていると速度と防御スキルが低下します。</string>
   <string name="Armor_Info4">
 \n\n一般的な %1$s は %2$d のダメージを防ぐ。 %3$d の力が必要です。</string>
-  <string name="Armor_Info5">あなたにとって、この鎧は重い。</string>
+  <string name="Armor_Info5">おそらくこの鎧は重すぎる。</string>
   <string name="Armor_Info6">それは刻まれている。</string>
   <string name="Armor_Info7a">
 \n\nあなたは %1$s%2$s を着ています。</string>
@@ -29,8 +29,8 @@
   <string name="ClothArmor_Name">布製の鎧</string>
   <string name="ClothArmor_Desc">この軽い鎧は普通の性能だ。</string>
   <!--STRINGS OF ElfArmor CLASS-->
-  <string name="ElfArmor_Name">エルヴンマント</string>
-  <string name="ElfArmor_Desc">このエルヴンマントの助けを借りて自然の力を召喚できます。高い草の成長意思のまたたきで、視界内のすべての敵を硬い石のように動けなくする。</string>
+  <string name="ElfArmor_Name">エルフのマント</string>
+  <string name="ElfArmor_Desc">このエルフのマントの助けを借りて自然の力を召喚できます。高い草の成長意思のまたたきで、視界内のすべての敵を硬い石のように動けなくする。</string>
   <string name="ElfArmor_ACSpecial">自然を呼び出す</string>
   <string name="ElfArmor_NotElf">エルフだけがこの鎧を使うことができます。</string>
   <!--STRINGS OF HuntressArmor CLASS-->
