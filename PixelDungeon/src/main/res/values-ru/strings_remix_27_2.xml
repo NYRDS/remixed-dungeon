@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">Шлем Хаоса</string>
+    <string name="ChaosHelmet_Info">Кроваво-красный шлем - неизменный атрибут воина хаоса.</string>
+
+
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s: лимит призыва достигнут (Текущий максимум: %2$d)!</string>
+    <string name="Mana_Title">Мана</string>
+    <string name="Mana_Cost">Нужно Маны: </string>
+    <string name="Spells_NotEnoughSP">Недостаточно маны для заклинания \"%1$s\".</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">Призывать Смертёныша</string>
+    <string name="SummonDeathling_Info">Призывает прислужника-нежить. Сила и стойкость Смертёныша растёт вместе с уровнем героя. \n\nЛимит призыва: %1$d(+1 каждый за Уровень Магии)</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">Возгорание</string>
+    <string name="Ignite_Info">Поджигает выбранную клетку. Можно использовать для поджигания травы, персонажей и объектов.</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">Корни</string>
+    <string name="RootSpell_Info">Опутывает выбранного персонажа, не позволяя тому двигаться в течении короткого промежутка времени.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">Порыв ветра</string>
+    <string name="WindGust_Info">Вызывает порыв ветра, что отталкивает выбранного персонажа назад.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">Заморозка</string>
+    <string name="FreezeGlobe_Info">Замораживает выбранного персонажа, лишая его возможности осуществлять какие-либо действия, на короткий промежуток времени.</string>
+
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Волшебный факел</string>
+    <string name="MagicTorch_Info">Заклинание, которое производит свет, озаряющий тёмные уровни подземелья.</string>
+
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">Исцеление</string>
+    <string name="Healing_Info">Незаменимое заклинание для каждого путешественника. Восстанавливает 1/3 от максимального запаса здоровья заклинателя.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">Недостаточно маны!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">ВЫПИТЬ</string>
+    <string name="Drink_Message">Этот напиток так освежает!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">Том Знаний</string>
+    <string name="TomeOfKnowledge_Info">Этот древний том наполнен тайными знаниями и загадками! Может это и не самое простое чтиво, но если ты его осилишь, оно обязательно повысит твои магические способности.</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">Книга Заклинаний</string>
+    <string name="SpellBook_Info">Это больше похоже на стопку случайных страниц, нежели на книгу. Но возможно ты сможешь что-то из неё вычленить, при должном внимании.</string>
+    <string name="SpellBook_Info_Identified">Среди этих страниц отыскался полный текст заклинания \"%1$s\".\n\"%2$s\"</string>
+
+
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">Зелье Маны</string>
+    <string name="ManaPotion_Info">Это зелье восстановит твою духовную энергию.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">У этого гриба странный вкус!</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">Это незаменимая вещь в подземелье, что славится своим скудным освещением.</string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">Заклинания</string>
+    <string name="WndSpells_Level">Уровень Магии: </string>
+
+</resources>
