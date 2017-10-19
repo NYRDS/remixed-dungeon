@@ -25,7 +25,7 @@
     <string name="RootSpell_Info">Roots selected character making it unable to move for short period of time.</string>
 
     <!-- STRINGS OF WindGust CLASS -->
-    <string name="WindGust_Name">WindGust</string>
+    <string name="WindGust_Name">Wind gust</string>
     <string name="WindGust_Info">Blows a gust of wind pushing selected character away.</string>
 
     <!-- STRINGS OF FreezeGlobe CLASS -->
