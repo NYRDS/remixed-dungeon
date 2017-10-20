@@ -21,7 +21,6 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
@@ -55,13 +54,12 @@ public class Bestiary {
 
 	public static Mob mob(Level level) {
 		try {
-			String idString = DungeonGenerator.getCurrentLevelId();
 
-			if(idString.equals(currentLevelId) && currentLevelBestiary != null) {
+			if(level.levelId.equals(currentLevelId) && currentLevelBestiary != null) {
 				return getMobFromCachedData();
 			}
 
-			cacheLevelData(idString, level);
+			cacheLevelData(level);
 
 			return getMobFromCachedData();
 
@@ -71,8 +69,8 @@ public class Bestiary {
 		return MobFactory.mobRandom();
 	}
 
-	private static void cacheLevelData(String idString, Level level) throws JSONException {
-		currentLevelId = idString;
+	private static void cacheLevelData(Level level) throws JSONException {
+		currentLevelId = level.levelId;
 
 		if(Feelings!=null) {
 			String feeling = level.getFeeling().name();
@@ -81,15 +79,15 @@ public class Bestiary {
 
 		JSONObject levelDesc = bestiaryData.getJSONObject(DungeonGenerator.getCurrentLevelKind());
 
-		if (!levelDesc.has(idString)) {
-			idString = Integer.toString(DungeonGenerator.getCurrentLevelDepth());
+		if (!levelDesc.has(currentLevelId)) {
+			currentLevelId = Integer.toString(DungeonGenerator.getCurrentLevelDepth());
 
-			if (!levelDesc.has(idString)) {
-				idString = "any";
+			if (!levelDesc.has(currentLevelId)) {
+				currentLevelId = "any";
 			}
 		}
 
-		currentLevelBestiary = levelDesc.getJSONObject(idString);
+		currentLevelBestiary = levelDesc.getJSONObject(currentLevelId);
 	}
 
 	private static Mob getMobFromCachedData() throws JSONException {
