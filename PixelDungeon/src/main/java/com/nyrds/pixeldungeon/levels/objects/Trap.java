@@ -164,6 +164,6 @@ public class Trap extends LevelObject {
 
 	@Override
 	public boolean nonPassable() {
-		return true;
+		return uses > 0;
 	}
 }
