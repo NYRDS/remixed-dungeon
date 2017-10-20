@@ -58,7 +58,11 @@ public class SpellFactory {
 	@Nullable
 	public static Spell getSpellByName(String name) {
 		try {
-			return mSpellsList.get(name).newInstance();
+			Class<? extends Spell> spellClass =  mSpellsList.get(name);
+			if (spellClass == null) {
+				throw new TrackedRuntimeException("Unregistered spell class "+name);
+			}
+			return spellClass.newInstance();
 		} catch (InstantiationException e) {
 			throw new TrackedRuntimeException(e);
 		} catch (IllegalAccessException e) {
