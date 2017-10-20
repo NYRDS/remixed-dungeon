@@ -183,7 +183,7 @@ public class SewerBossLevel extends RegularLevel {
 	
 	@Override
 	protected void createMobs() {
-		Mob mob = Bestiary.mob(  );
+		Mob mob = Bestiary.mob( this );
 
 		mob.setPos(getEmptyCellNextTo(getRoomExit().random(this)));
 		mobs.add( mob );

@@ -706,7 +706,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected Mob createMob() {
-		Mob mob = Bestiary.mob();
+		Mob mob = Bestiary.mob(this);
 		setMobSpawnPos(mob);
 		return mob;
 	}

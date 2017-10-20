@@ -172,7 +172,7 @@ public class CityBossLevel extends Level {
 			
 			enteredArena = true;
 			
-			Mob boss = Bestiary.mob();
+			Mob boss = Bestiary.mob(this);
 			boss.setState(boss.HUNTING);
 			do {
 				boss.setPos(Random.Int( getLength() ));

@@ -141,7 +141,7 @@ public class IceCavesBossLevel extends Level {
 			
 			enteredArena = true;
 			
-			Mob boss = Bestiary.mob();
+			Mob boss = Bestiary.mob(this);
 			Mob guard = new IceGuardian();
 
 			Mob mob = boss;

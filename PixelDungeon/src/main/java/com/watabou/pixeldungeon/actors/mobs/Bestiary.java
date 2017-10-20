@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 import org.json.JSONException;
@@ -52,7 +53,7 @@ public class Bestiary {
 	private static JSONObject currentLevelBestiary;
 	private static JSONObject currentLevelFeelingBestiary;
 
-	public static Mob mob() {
+	public static Mob mob(Level level) {
 		try {
 			String idString = DungeonGenerator.getCurrentLevelId();
 
@@ -60,7 +61,7 @@ public class Bestiary {
 				return getMobFromCachedData();
 			}
 
-			cacheLevelData(idString);
+			cacheLevelData(idString, level);
 
 			return getMobFromCachedData();
 
@@ -70,11 +71,11 @@ public class Bestiary {
 		return MobFactory.mobRandom();
 	}
 
-	private static void cacheLevelData(String idString) throws JSONException {
+	private static void cacheLevelData(String idString, Level level) throws JSONException {
 		currentLevelId = idString;
 
 		if(Feelings!=null) {
-			String feeling = Dungeon.level.getFeeling().name();
+			String feeling = level.getFeeling().name();
 			currentLevelFeelingBestiary = Feelings.optJSONObject(feeling);
 		}
 

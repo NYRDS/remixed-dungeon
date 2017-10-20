@@ -69,7 +69,7 @@ public class SummoningTrap implements ITrigger {
 		Mob mob;
 		int nTry = 0;
 		do {
-			mob = Bestiary.mob();
+			mob = Bestiary.mob(level);
 			nTry++;
 			if(nTry > 10) {
 				return null;
