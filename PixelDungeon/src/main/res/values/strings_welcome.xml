@@ -337,4 +337,31 @@
         - Fixed summoning trap bug, that was causing Shades to be spawned on floor tiles\n
         - Fixed \"pet\" statue bug, that flooded game log with unnecessary information\n
     </string>
+    <string name="Welcome_Text_27_2">
+        remix.27.2\n
+        --Game:\n
+        - Introducing spell system\n
+        - Mage and Necromancer gets natural spell affinities. Those heroes are able to cast unique spells with no need for special items\n
+        - Every character now posses a mana bar (including Necromancer)\n
+        - Necromancer is no longer passively restores mana points for killing his enemies. This effect is now applied to a Necromancer robe (+1 mana on kill) and Bone Armor (+2 mana on kill), instead of summoning ability those items previously possessed\n
+        - New hero attribute: Magic Level. The higher the Magic Level the more natural spells are unlocked for your hero and more powerful those spells might get\n
+        - New item: Mana Potion\n
+        - New item Tome of Knowledge.  An item that increases your Magic Level by 1\n
+        - New item Spell Book.  This equipable item will allow you to cast a single spell on cost of mana and unlike the scrolls, this item will not expire no matter how much you use it\n
+        - Class Armor is no longer requires health to cast it\'s special ability, it costs 1/3 of your maximum amount of mana instead\n
+        - The \“Wand of Magic Missiles\” are no longer lootable from Crystals\n
+        - From this point on, every level will have their \“view distance\” set randomly, so that player can encounter \“dark\” levels at every point of the game\n
+        - Torches are now available at beginning and can be commonly found throughout the game\n
+        - The \“safe\” (isSafe) levels are unaffected and will be always lit to a maximum extend\n
+        - Damage from burning is scales with dungeon depth now\n\n
+
+        --Vanity Items: \n
+        - New Hat: Chaos Helmet \n\n
+
+        --Mods: \n
+        - You can now add new attributes to your \“iniHeroes\” file: \“maxSP\” - sets a maximum amount of mana, that your character can posses. \“startingSp\” sets starting amount of mana for your character\n
+        - Hero initialization also takes the \“magicAffinity\” attribute, which can be set to: \“Elemental\”, \“Necromancy\” or \“Common\” (\“Common\” means that character can only use spells from the spell books)\n
+        - New game object in mods – Trap. Unlike regular in-game trap, this object can be adjusted in several ways. You can set: the number of activations (uses), the target cell on which the trap\'s effect should trigger(target), and whatever you can or cannot active the trap by throwing item at it (activatedByItem)\n
+    </string>
+
 </resources>
