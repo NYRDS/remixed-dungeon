@@ -33,7 +33,9 @@ public class PoisonTrap implements ITrigger {
 	// 0xBB66EE
 	
 	public static void trigger( int pos, @Nullable Char ch ) {
-		ch = Actor.findChar(pos);
+		if (ch == null){
+			ch = Actor.findChar(pos);
+		}
 		if (ch != null) {
 			Buff.affect( ch, Poison.class ).set( Poison.durationFactor( ch ) * (4 + Dungeon.depth / 2) );
 		}
