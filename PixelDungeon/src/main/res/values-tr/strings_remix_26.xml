@@ -12,7 +12,10 @@
     <string name="Kobold_Name">cüce</string>
     <string name="Kobold_Gender">erkek</string>
     <string name="Kobold_Name_Objective">cüce</string>
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">cüce buzbüyücüsü</string>
     <string name="KoboldIcemancer_Gender">erkek</string>
+    <string name="KoboldIcemancer_Name_Objective">cüce buzbüyücüsü</string>
     <!-- STRINGS OF ColdSpirit CLASS -->
     <string name="ColdSpirit_Name">soğuk ruh</string>
     <string name="ColdSpirit_Gender">erkek</string>

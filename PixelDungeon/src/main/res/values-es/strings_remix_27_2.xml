@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Antorcha mágica</string>
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">Curación</string>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">¡Mana insuficiente!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">BEBER</string>
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">Libro de Hechizo</string>
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">Poción de Mana</string>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">Hechizos</string>
+    <string name="WndSpells_Level">Nivel Mágico:</string>
+
+</resources>

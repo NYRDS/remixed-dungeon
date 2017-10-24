@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">Casque du Choas</string>
+    <string name="ChaosHelmet_Info">Casque couleur rouge sang. Le symbole incontestable d\'un guerrier du Chaos.</string>
+
+
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s : limite d\'invocation atteinte (Max actuel: %2$d) ! </string>
+    <string name="Mana_Title">Mana</string>
+    <string name="Mana_Cost">Coût Mana :</string>
+    <string name="Spells_NotEnoughSP">Vous manquez de mana pour lancer un sort \"%1$s\".</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">Invoquer un Serviteur des Morts </string>
+    <string name="SummonDeathling_Info">Invoquez un Serviteur des Morts. Ses HP et dégâts augmenteront en même temps que le niveau du héros.  \n\Limite d\'invocation : %1$d (+1 à chaque niveau magique)</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">Enflammer</string>
+    <string name="Ignite_Info">Enflamme la cellule sélectionnée. Peut s\'employer pour mettre le feux aux herbes, personnages et objets.</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">Enraciner</string>
+    <string name="RootSpell_Info">Enracine le personnage sélectionné et le rend incapable de se mouvoir pour un court intervalle de temps.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">Rafale de vent</string>
+    <string name="WindGust_Info">Fait souffler une rafale de vent en repoussant le personnage sélectionné.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">Geler</string>
+    <string name="FreezeGlobe_Info">Gèle le personnge sélectionné et le rend incapable de faire quoi que ce soit durant un court intervalle de temps.</string>
+
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Torche magique</string>
+    <string name="MagicTorch_Info">Sort qui produit une lumière illuminant les niveaux les plus sombres du donjon.</string>
+
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">Guérison</string>
+    <string name="Healing_Info">Ce sort est vital pour tout aventurier. Il rendra 1/3 des HP maximums de celui qui l\'utilise.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">Pas assez de mana !</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">BOIRE</string>
+    <string name="Drink_Message">Rafraîchissante, cette boisson ! </string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">Livre de la Connaissance</string>
+    <string name="TomeOfKnowledge_Info">Ce livre ancien est rempli d\'obscures énigmes et d\'histoire mystérieuses ! Il est peut-être difficile à lire, mais si vous arrivez à l\'achever, vous allez sans aucun doute augmenter vos pouvoirs magiques.</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">Livre des sorts</string>
+    <string name="SpellBook_Info">On dirait plus une compilation de feuilles qui ont été cousues ensemble qu\'un véritable livre. Vous pourrez éventuellement en tirer quelque chose si vous en prenez le temps. </string>
+    <string name="SpellBook_Info_Identified">Dans ces pages, vous aveu découvert le texte complet du sort \"%1$s\". \n\" %2$s\"</string>
+
+
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">Potion de mana</string>
+    <string name="ManaPotion_Info">Cette potion va régénerer votre énergie spirituelle.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">Quel goût insolite, ce champignon !</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">C\'est un accessoire indispensable dans le donjon, bien connu pour être mal éclairé. </string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">Sorts</string>
+    <string name="WndSpells_Level">Niveau magique :</string>
+
+</resources>

@@ -1,3 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">Портал</string>
+    <string name="WndPortal_Info">Цей портал дозволить тобі повернутися до міста. Він виглядає не стабільним. Скоріш за все його на довго не вистачить.\nСкористатися порталом?</string>
+    <string name="WndPortal_Info_Return">Цей портал перенесе тебе назад до підземелля.\nСкористатися порталом?</string>
+
+    <string name="WndPortal_Warning_Title">Попередження порталу!</string>
+    <string name="WndPortal_Warning_Info">На даному поверсі присутній не використаний портал. Якщо ти підеш, то більше не буде можливості скористатися ним!\nТи справді хочеш піти далі?</string>
+
+    <string name="PortalGate_Name">Портал</string>
+    <string name="PortalGate_Desc">На поверхні порталу вирізані дивакуваті узори.  Складається враження, що ти дивишся у тунель, що прямує в далечінь. Але зазирнувши зі сторони розумієш, що поверхня практично плоска.</string>
+    <string name="PortalGate_Desc_Activated">З порталу сочиться субстанція, що випромінює світло. Це виглядає прекрасно, як би не концентричні кола, що йдуть з центру.</string>
+
+    <string name="PortalGate_Activated">Древній портал прокинувся!</string>
+    <string name="PortalGate_Used">Ти торкнувся порталу і... нічого не трапилось.</string>
+
+    <string name="PortalExit_Desc">Цей портал перенесе тебе до входу у %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Павуче лігво</string>
+    <string name="PortalExit_Desc_Necropolis">Некрополіс</string>
+    <string name="PortalExit_Desc_IceCaves">Крижані печери</string>
+
+
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Поглинання</string>
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Кам\'яна кров</string>
+</resources>

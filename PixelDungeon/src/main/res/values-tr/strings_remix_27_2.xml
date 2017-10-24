@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">Kaos Kaskı</string>
+    <string name="ChaosHelmet_Info">Kan kırmızısı bir kask. Ve üzerinde kaos savaşçısının sembolü kazılı.</string>
+
+
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s: çağırma limiti doldu (Şuanki sınır: %2$d)!</string>
+    <string name="Mana_Title">Mana</string>
+    <string name="Mana_Cost">Gereken Mana:</string>
+    <string name="Spells_NotEnoughSP">%1$s büyüsünü kullanmak için yeterli manaya sahip değilsin.</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">Ölümsüzü Çağır</string>
+    <string name="SummonDeathling_Info">Ölümsüz bir dost çağırır. Ölümsüz\'ün can ve hasarı kahraman seviyesi ile gelişir. \n\nÇağırma sınırı: %1$d (Her büyü seviyesinde +1)</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">Tutuştur</string>
+    <string name="Ignite_Info">Seçilen hücreyi tutuşturur. Ot, karakter ve objeleri yakmak için kullanılabilir.</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">Kök</string>
+    <string name="RootSpell_Info">Seçilen karaktere kök salar, ve kısa süreliğine hareket edemez hale getirir.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">Bora</string>
+    <string name="WindGust_Info">Seçilen karakteri iten güçlü bir bora estirir.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">Dondur</string>
+    <string name="FreezeGlobe_Info">Seçilen karakteri dondurur, ve kısa süreliğine eylemsiz hale getirir.</string>
+
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Büyülü meşale</string>
+    <string name="MagicTorch_Info">Karanlık zindan bölümlerini aydınlatan bir ışık üretir.</string>
+
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">İyileştirme</string>
+    <string name="Healing_Info">Bu büyü her maceracı için mühimdir. Yapan kişinin toplam canının 1/3\'ünü doldurur.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">Yetersiz mana!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">İÇ</string>
+    <string name="Drink_Message">Bu içki bir harika dostum!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">Kadim Cilt</string>
+    <string name="TomeOfKnowledge_Info">Bu antik cilt esrarlı bilmeceler ve sırlarla dolu! Okuması zor olabilir, fakat okuduğunda büyü gücünün artacağından emin olabilirsin.</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">Büyü Kitabı</string>
+    <string name="SpellBook_Info">Bir kitap gibi değilde, çeşitli sayfalar birleştirilip derleme yapılmış haline benziyor. Eğer dikkatini yeterince verirsen, birşeyler öğrenebileceğini seziyorsun.</string>
+    <string name="SpellBook_Info_Identified">Sayfalara gözatarken \"%1$s\" büyüsüne dair açıklamalı metin buldun.\n\"%2$s\"</string>
+
+
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">Mana İksiri</string>
+    <string name="ManaPotion_Info">Bu iksir ruhsal enerjini yenileyecek.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">Bu mantarın tadı bi garip!</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">Bu zindanın olmazsa olmaz öğesidir, ortamı kötü aydınlattığı için adı çıkmış.</string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">Büyüler</string>
+    <string name="WndSpells_Level">Büyü Seviyesi</string>
+
+</resources>

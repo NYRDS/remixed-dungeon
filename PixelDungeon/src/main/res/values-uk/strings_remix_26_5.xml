@@ -1,5 +1,43 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">Морозна аура</string>
+
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenDagger CLASS -->
+    <string name="ElvenDagger_Name">ельфійський кинджал</string>
+    <string name="ElvenDagger_Info">Цю зброю виготовлено з особливого сплаву, що робить його легшим за звичайний кинджал.</string>
+    <string name="ElvenDagger_Gender">masculine</string>
+
+
+    <!-- STRINGS OF IceGuardianCoreModule CLASS -->
+    <string name="IceGuardianCoreModule_Name">Ядро крижаного старжа</string>
+    <string name="IceGuardianCoreModule_Info">Ця структура виготовлена з магічного льоду. В середині цієї дивної споруди розміщено камінь, що світиться.</string>
+
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">Перстень морозу</string>
+    <string name="RingOfFrost_Info">Перстень вирізано з магічного льоду. Носій персня захищений крижаною аурою, що сповільнює та наносить шкоду нападникам.</string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">Панцир Королеви Павуків</string>
+    <string name="SpiderQueenCarapace_Info">Уламок панциру Королеви павуків. В середині шматок павучої залози, виглядає ще живою.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">П-привіт. Ласкаво просимо до бібліотеки. Тут ви зможете знайти інформацію про різні дива, що можна знайти в підземеллі... Н-на справді ми можемо надати лише ті знання, які принесли нам самі герої. Н-на... навіть трохи соромно зізнатися. Проте, з кожним вашим візитом, ми матимемо нові записи, я на це сподіваюся...</string>
+
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF LibraryBook CLASS -->
+    <string name="LibraryBook_Name">Бібліотечна книга</string>
+    <string name="LibraryBook_Description">Цей том виглядає величезним. Він містить всі знання, що шукачі пригод винесли з підземелля.</string>
+
+
+    <!-- Wnd descriptions -->
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_moveTimeout">Обмеження ходу: %s</string>
+
     <!-- STRINGS OF TrapHelper CLASS -->
     <string name="TrapWnd_Title">Пастка</string>
     <string name="TrapWnd_Step">Ти впевнений що бажаєш увійти до пастки? Можеш загинути.</string>
