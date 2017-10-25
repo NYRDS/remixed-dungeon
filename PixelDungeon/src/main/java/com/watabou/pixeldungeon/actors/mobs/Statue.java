@@ -106,17 +106,7 @@ public class Statue extends Mob {
 	public int dr() {
 		return Dungeon.depth;
 	}
-	
-	@Override
-	public void damage( int dmg, Object src ) {
 
-		if (getState() == PASSIVE) {
-			setState(HUNTING);
-		}
-		
-		super.damage( dmg, src );
-	}
-	
 	@Override
 	public int attackProc(@NonNull Char enemy, int damage ) {
 		weapon.proc( this, enemy, damage );

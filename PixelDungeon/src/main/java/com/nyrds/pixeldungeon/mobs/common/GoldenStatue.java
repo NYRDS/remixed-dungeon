@@ -86,16 +86,6 @@ public class GoldenStatue extends Mob {
 	}
 
 	@Override
-	public void damage( int dmg, Object src ) {
-
-		if (getState() == PASSIVE) {
-			setState(HUNTING);
-		}
-
-		super.damage( dmg, src );
-	}
-
-	@Override
 	public int attackProc(@NonNull Char enemy, int damage ) {
 
 		if (Random.Int( 10 ) == 1) {

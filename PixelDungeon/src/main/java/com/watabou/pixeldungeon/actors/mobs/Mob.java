@@ -474,8 +474,10 @@ public abstract class Mob extends Char {
 
 		Terror.recover(this);
 
-		if (getState() == SLEEPING) {
-			setState(WANDERING);
+		AiState state = getState();
+
+		if (state == SLEEPING || state == PASSIVE) {
+			setState(HUNTING);
 		}
 		alerted = true;
 

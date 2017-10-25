@@ -92,15 +92,6 @@ public class ArmoredStatue extends Mob {
 	}
 
 	@Override
-	public void damage( int dmg, Object src ) {
-
-		if (getState() == PASSIVE) {
-			setState(HUNTING);
-		}
-		
-		super.damage( dmg, src );
-	}
-	@Override
 	public void beckon( int cell ) {
 	}
 	
