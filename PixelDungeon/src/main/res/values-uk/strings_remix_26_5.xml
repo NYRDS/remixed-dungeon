@@ -13,7 +13,7 @@
 
 
     <!-- STRINGS OF IceGuardianCoreModule CLASS -->
-    <string name="IceGuardianCoreModule_Name">Ядро крижаного старжа</string>
+    <string name="IceGuardianCoreModule_Name">Ядро крижаного стража</string>
     <string name="IceGuardianCoreModule_Info">Ця структура виготовлена з магічного льоду. В середині цієї дивної споруди розміщено камінь, що світиться.</string>
 
     <!-- STRINGS OF RingOfFrost CLASS -->

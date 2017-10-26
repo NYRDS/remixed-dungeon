@@ -33,7 +33,7 @@
   <string name="RingOfDetection_Info">이 반지를 착용시 검색에 턴을 소모하지 않고 함정과 비밀의 문을 발견할 수 있습니다. 역강화된 반지는 당신의 감각을 둔화시켜 함정과 비밀의 문을 찾기 위해 검색해도 발견하기 어렵게 만듭니다.</string>
   <!--STRINGS OF RingOfElements CLASS-->
   <string name="RingOfElements_Name">원소의 반지</string>
-  <string name="RingOfElements_Info">이 반지는 부정적인 효과의 지속시간을 감소시키고 화재, 전기, 가스등에 대한 저항력을 높여준다.</string>
+  <string name="RingOfElements_Info">이 반지는 부정적인 효과의 지속시간을 감소시키고 화염, 전격, 가스 등에 대한 저항력을 높여줍니다.</string>
   <!--STRINGS OF RingOfEvasion CLASS-->
   <string name="RingOfEvasion_Name">회피의 반지</string>
   <string name="RingOfEvasion_Info">이 반지는 적의 공격을 회피할 확률을 상승시켜 줍니다.</string>

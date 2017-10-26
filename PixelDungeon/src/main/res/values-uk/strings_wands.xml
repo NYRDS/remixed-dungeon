@@ -36,7 +36,7 @@
   <string name="WandOfBlink_Name">Паличка стрибку</string>
   <string name="WandOfBlink_Info">Паличка дозволить тобі пересуватися в просторі. Істоти та неживі предмети будуть заважати перенесенню.</string>
   <!--STRINGS OF WandOfDisintegration CLASS-->
-  <string name="WandOfDisintegration_Name">Паличка дезінтиграції</string>
+  <string name="WandOfDisintegration_Name">Паличка дезінтеграції</string>
   <string name="WandOfDisintegration_Info">Ця паличка генерує руйнівний промінь енергії, який проникає крізь всіх істот на своєму шляху. Чим більше цілей він пройде, тим більше шкоди завдасть кожній з них.</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
   <string name="WandOfFirebolt_Name">Паличка вогнеплюй</string>

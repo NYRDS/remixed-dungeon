@@ -18,7 +18,7 @@
   <string name="Armor_Info5">Скоріше за всього, ця броня занадто тяжка для тебе.</string>
   <string name="Armor_Info6">Вона зачарована.</string>
   <string name="Armor_Info7a">\n\nНа тобі зараз %1$s%2$s.</string>
-  <string name="Armor_Info7b"> , та тому що вона проклята, ти не можеш її зняти</string>
+  <string name="Armor_Info7b">, але через те, що вона проклята, ти не можеш її зняти</string>
   <string name="Armor_Info8">
 
 Ти можеш відчути злісну магію, приховану у %s.</string>
@@ -61,7 +61,7 @@
   <string name="RogueArmor_ACSpecial">ДИМОВА БОМБА</string>
   <string name="RogueArmor_NotRogue">Тільки крадії можуть використовувати цю броню!</string>
   <string name="RogueArmor_Fov">Ти можеш стрибнути тільки на порожнє місце в полі зору.</string>
-  <string name="RogueArmor_Prompt">Вибери місце для стрибку </string>
+  <string name="RogueArmor_Prompt">Вибери місце для стрибка</string>
   <!--STRINGS OF ScaleArmor CLASS-->
   <string name="ScaleArmor_Name">луската броня</string>
   <string name="ScaleArmor_Desc">Металеві луски, зшиті на шкіряному жилеті створюють гнучкі обладунки, що прекрасно захищають.</string>
@@ -70,12 +70,12 @@
   <string name="WarriorArmor_Desc">У той час як цей обладунок виглядає важким, він дозволяє виконувати воїну героїчний стрибок до цільового місця, при цьому оглушуючи всіх сусідніх ворогів  на місці приземлення.</string>
   <string name="WarriorArmor_ACSpecial">ГЕРОЇЧНИЙ СТРИБОК</string>
   <string name="WarriorArmor_NotWarrior">Тільки воїни можуть використовувати цю броню!</string>
-  <string name="WarriorArmor_Prompt">Вибери напрям для стрибку</string>
+  <string name="WarriorArmor_Prompt">Вибери напрям для стрибка</string>
   <!--PACKAGE /armor/Gyphs-->
   <!--STRINGS OF Affection CLASS-->
   <string name="Affection_Txt">%s пристрасті</string>
   <!--STRINGS OF AntiEntropy CLASS-->
-  <string name="AntiEntropy_Txt">%s анти-ентропії</string>
+  <string name="AntiEntropy_Txt">%s антиентропії</string>
   <!--STRINGS OF Bounce CLASS-->
   <string name="Bounce_Txt">%s пружності</string>
   <!--STRINGS OF Displacement CLASS-->

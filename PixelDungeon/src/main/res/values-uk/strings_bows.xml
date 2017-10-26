@@ -7,8 +7,8 @@
   <string name="WoodenBow_Info">Цей звичайний дерев\'яний лук зможе бути досить корисним, якщо в тебе будуть стріли.</string>
   <string name="WoodenBow_Gender">masculine</string>
   <!--STRINGS OF CompoundBow CLASS-->
-  <string name="CompoundBow_Name">блочний лук</string>
-  <string name="CompoundBow_Info">Стріли, запущені з блочного лука, дуже легко знаходять ціль і наносять значну шкоду, проте він не такий швидкий, як звичайний лук.</string>
+  <string name="CompoundBow_Name">блоковий лук</string>
+  <string name="CompoundBow_Info">Стріли, запущені з блокового лука, дуже легко знаходять ціль і наносять значну шкоду, проте він не такий швидкий, як звичайний лук.</string>
   <string name="CompoundBow_Gender">masculine</string>
   <!--STRINGS OF RubyBow CLASS-->
   <string name="RubyBow_Name">рубіновий лук</string>

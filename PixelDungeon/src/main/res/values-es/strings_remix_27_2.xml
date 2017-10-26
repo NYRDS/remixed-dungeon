@@ -1,19 +1,74 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">Casco del caos</string>
+    <string name="ChaosHelmet_Info">Un casco de color rojo sangre. Un gran símbolo de un guerreo del caos.</string>
+
+
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">¡%1$s: Límite de invocación alcanzado (Máximo actual: %2$d)!</string>
+    <string name="Mana_Title">Mana</string>
+    <string name="Mana_Cost">Costo de Mana:</string>
+    <string name="Spells_NotEnoughSP">No tienes la cantidad de mana necesaria para \"%1$s\".</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">Invocar Necrófago</string>
+    <string name="SummonDeathling_Info">Invocar a un seguidor no-muerto. La vida y daño del necrófago se incrementan con el nivel del héroe.\n\nLímite de Invocaciones: %1$d(+1 por cada Nivel Mágico)</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">Incendiar</string>
+    <string name="Ignite_Info">Incendia la ubicación seleccionada. Puede ser usado para quemar césped, personajes/enemigos y objetos.</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">Raíces</string>
+    <string name="RootSpell_Info">Raíces que sujetan a un personaje/enemigo y hacen imposible su movimiento por un corto tiempo.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">Ráfaga de viento</string>
+    <string name="WindGust_Info">Una ráfaga de viento que aleja al objetivo seleccionado.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">Congelar</string>
+    <string name="FreezeGlobe_Info">Congela al objetivo seleccionado, impidiendo su movimiento por un corto tiempo.</string>
+
     <!-- STRINGS OF MagicTorch CLASS -->
     <string name="MagicTorch_Name">Antorcha mágica</string>
+    <string name="MagicTorch_Info">Hechizo que produce luz para iluminar la oscuridad de la mazmorra.</string>
+
     <!-- STRINGS OF Healing CLASS -->
     <string name="Healing_Name">Curación</string>
+    <string name="Healing_Info">Este hechizo es vital para los aventureros. Restaura 1/3 del máximo de salud a quien lanza el hechizo.</string>
+
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
     <string name="ClassArmor_LowMana">¡Mana insuficiente!</string>
 
     <!-- STRINGS OF Drink CLASS -->
     <string name="Drink_ACDrink">BEBER</string>
+    <string name="Drink_Message">¡Una bebida refrescante!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">Tomo del Conocimiento</string>
+    <string name="TomeOfKnowledge_Info">¡Este antiguo tomo esta lleno de acertijos y arcanos misterios! Puede ser una lectura difícil, pero si consigues descifrarlo, tus poderes mágicos aumentaran.</string>
+
     <!-- STRINGS OF SpellBook CLASS -->
     <string name="SpellBook_Name">Libro de Hechizo</string>
+    <string name="SpellBook_Info">Tiene el aspecto de hojas aleatorias que fueron cocidas juntas en lugar de un verdadero libro. Es posible obtener provecho de el si se estudia lo suficiente.</string>
+    <string name="SpellBook_Info_Identified">Entre las paginas has descubierto un texto completo con el hechizo \"%1$s\"\n\"%2$s\"</string>
+
+
     <!-- STRINGS OF ManaPotion CLASS -->
     <string name="ManaPotion_Name">Poción de Mana</string>
+    <string name="ManaPotion_Info">Esta poción restablece tu energía espiritual.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">¡Ese hongo sabe extraño!</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">Es un objeto indispensable para la mazmorra, muy conocidos por su pobre iluminación.</string>
+
+    
     <!-- Window descriptions -->
     <!-- STRINGS OF WndHeroSpells CLASS -->
     <string name="WndSpells_Title">Hechizos</string>
