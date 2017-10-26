@@ -43,7 +43,7 @@ public class AppodealRewardVideo {
 					//Appodeal.setTesting(true);
 				}
 
-				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO|Appodeal.BANNER|Appodeal.INTERSTITIAL);
+				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 					@Override
 					public void onRewardedVideoLoaded() {
