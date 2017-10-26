@@ -1,9 +1,10 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 
 /**
@@ -23,14 +24,10 @@ public class MagicTorch extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr){
+	public boolean cast(@NonNull Char chr){
 		if (super.cast(chr)){
-			if (chr != null && chr.isAlive()) {
-				if (chr instanceof Hero) {
-					Hero hero = (Hero) chr;
-
-					castCallback(hero);
-				}
+			if (chr.isAlive()) {
+				castCallback(chr);
 				Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, duration);
 
 				Emitter emitter = chr.getSprite().centerEmitter();

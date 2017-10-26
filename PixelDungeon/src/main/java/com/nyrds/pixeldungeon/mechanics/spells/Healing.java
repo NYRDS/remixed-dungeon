@@ -1,11 +1,9 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import com.watabou.noosa.particles.Emitter;
+import android.support.annotation.NonNull;
+
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 
 /**
  * Created by mike on 05.09.2017.
@@ -24,17 +22,12 @@ public class Healing extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr){
+	public boolean cast(@NonNull Char chr){
 		if (super.cast(chr)){
-			if (chr != null && chr.isAlive()) {
-				if (chr instanceof Hero) {
-					Hero hero = (Hero) chr;
-
-					castCallback(hero);
-				}
+			if (chr.isAlive()) {
+				castCallback(chr);
 				chr.hp((int) Math.min(chr.ht(),chr.hp()+chr.ht()*0.3));
 				chr.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
-
 				return true;
 			}
 		}

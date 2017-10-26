@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 
@@ -34,10 +33,7 @@ public class CausePainSpell extends Spell{
 					Buff.affect(ch, Pain.class).set(getLevelModifier(chr), getLevelModifier(chr) * 5);
 					Sample.INSTANCE.play( Assets.SND_HIT );
 				}
-				if(chr instanceof Hero) {
-					Hero hero = (Hero) chr;
-					castCallback(hero);
-				}
+				castCallback(chr);
 				return true;
 			}
 		}

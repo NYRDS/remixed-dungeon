@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -55,7 +57,7 @@ public class Spell {
 		return true;
 	}
 
-    public boolean cast(final Char chr){
+    public boolean cast(@NonNull final Char chr){
 	    if(chr instanceof Hero) {
 		    final Hero hero = (Hero)chr;
 
@@ -88,8 +90,10 @@ public class Spell {
 		return true;
     }
 
-    public void castCallback(Hero hero){
-        hero.spendSoulPoints(spellCost());
+    public void castCallback(Char chr){
+    	if(chr instanceof Hero) {
+		    ((Hero)chr).spendSoulPoints(spellCost());
+	    }
     }
 
     public String name(){

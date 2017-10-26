@@ -1,23 +1,14 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
-import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class RootSpell extends Spell{
 
@@ -28,7 +19,7 @@ public class RootSpell extends Spell{
 		level = 2;
 		imageIndex = 2;
 		duration = 10f;
-		spellCost = 3;
+		spellCost = 2;
 	}
 
 	@Override
@@ -45,10 +36,7 @@ public class RootSpell extends Spell{
 					Sample.INSTANCE.play( Assets.SND_PUFF );
 				}
 
-				if(chr instanceof Hero) {
-					Hero hero = (Hero) chr;
-					castCallback(hero);
-				}
+				castCallback(chr);
 				return true;
 			}
 		}

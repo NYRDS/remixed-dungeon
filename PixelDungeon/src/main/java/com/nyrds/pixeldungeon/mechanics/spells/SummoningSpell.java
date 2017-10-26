@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
@@ -30,7 +32,7 @@ public class SummoningSpell extends Spell {
 	protected String mobKind = "Rat";
 
     @Override
-    public boolean cast(Char chr){
+    public boolean cast(@NonNull Char chr){
         if(chr instanceof Hero) {
             Hero hero = (Hero)chr;
             if (isSummoningLimitReached(hero)) {
@@ -68,7 +70,8 @@ public class SummoningSpell extends Spell {
             pet.setPos(spawnPos);
             level.spawnMob(pet);
         }
-
+        
+	    castCallback(chr);
 	    return true;
     }
 

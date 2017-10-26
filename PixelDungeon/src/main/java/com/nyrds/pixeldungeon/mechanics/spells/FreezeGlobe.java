@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 
@@ -40,9 +39,8 @@ public class FreezeGlobe extends Spell{
 				Sample.INSTANCE.play( Assets.SND_SHATTER );
 				triggered = true;
 			}
-			if(chr instanceof Hero && triggered) {
-				Hero hero = (Hero) chr;
-				castCallback(hero);
+			if(triggered) {
+				castCallback(chr);
 			}
 			return true;
 		}
