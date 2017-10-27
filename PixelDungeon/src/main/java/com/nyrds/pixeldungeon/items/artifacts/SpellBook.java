@@ -10,9 +10,9 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Random;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class SpellBook extends Artifact {
 
@@ -34,8 +34,7 @@ public class SpellBook extends Artifact {
 	public Spell spell(){
 		if(spell == null || spell.equals("")){
 			ArrayList<String> spells = SpellFactory.getSpellsByAffinity(SpellHelper.AFFINITY_COMMON);
-			int index = new Random().nextInt(spells.size());
-			spell(spells.get(index));
+			spell(Random.element(spells));
 		}
 		return SpellFactory.getSpellByName(spell);
 	}
