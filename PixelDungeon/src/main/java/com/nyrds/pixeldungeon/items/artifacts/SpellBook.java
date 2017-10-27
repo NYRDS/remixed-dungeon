@@ -32,7 +32,7 @@ public class SpellBook extends Artifact {
 	}
 
 	public Spell spell(){
-		if(spell == null){
+		if(spell == null && spell == ""){
 			ArrayList<String> spells = SpellFactory.getSpellsByAffinity(SpellHelper.AFFINITY_COMMON);
 			int index = new Random().nextInt(spells.size());
 			spell(spells.get(index));
