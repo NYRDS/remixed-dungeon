@@ -57,7 +57,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 		ScrollOfPsionicBlast.class,
 		ScrollOfMirrorImage.class,
 		ScrollOfDomination.class,
-		ScrollOfSummoning.class,
+		//ScrollOfSummoning.class,
 		ScrollOfCurse.class
 	};
 
@@ -74,7 +74,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 		ScrollOfPsionicBlast.class,
 		ScrollOfMirrorImage.class,
 		ScrollOfDomination.class,
-		ScrollOfSummoning.class,
+		//ScrollOfSummoning.class,
 		ScrollOfCurse.class
 	};
 

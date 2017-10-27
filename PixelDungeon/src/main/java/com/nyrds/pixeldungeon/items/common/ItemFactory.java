@@ -396,7 +396,7 @@ public class ItemFactory {
 		registerItemClass(ManaPotion.class);
 		registerItemClass(TomeOfKnowledge.class);
 		registerItemClass(SpellBook.class);
-		registerItemClass(ScrollOfSummoning.class);
+		//registerItemClass(ScrollOfSummoning.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {
