@@ -83,6 +83,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfSummoning;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -206,8 +207,9 @@ public class Generator {
 				ScrollOfMirrorImage.class,
 				BlankScroll.class,
 				ScrollOfDomination.class,
+				ScrollOfSummoning.class,
 				ScrollOfCurse.class};
-		Category.SCROLL.probs = new float[]{30, 10, 15, 0, 10, 15, 12, 8, 8, 0, 4, 6, 10, 8, 6};
+		Category.SCROLL.probs = new float[]{30, 10, 15, 0, 10, 15, 12, 8, 8, 0, 4, 6, 10, 8, 4, 6};
 
 		Category.POTION.classes = new Class<?>[]{
 				PotionOfHealing.class,

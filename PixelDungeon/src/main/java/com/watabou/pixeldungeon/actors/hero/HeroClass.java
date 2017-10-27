@@ -52,6 +52,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfSummoning;
 import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
@@ -132,10 +133,10 @@ public enum HeroClass {
 			hero.collect(new ScrollOfMagicMapping().identify());
 			hero.collect(new ScrollOfIdentify().identify());
 			hero.collect(new ManaPotion());
+			hero.collect(new ScrollOfSummoning());
 		}
 
 		hero.collect(new BlackSkull().identify());
-		hero.collect(new TomeOfKnowledge());
 		hero.collect(new TomeOfKnowledge());
 		hero.collect(new TomeOfKnowledge());
 		hero.collect(new SpellBook());
