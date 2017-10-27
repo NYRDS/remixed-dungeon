@@ -67,10 +67,11 @@ android {
 
 dependencies {
     compile 'ch.acra:acra:4.9.0@aar'
-    compile 'com.android.support:support-v4:27.0.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'org.luaj:luaj-jse:3.0.1'
 
+    //noinspection GradleDependency
+    googlePlayRetrocompile 'com.android.support:support-v4:25.0.0'
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
     //noinspection GradleDependency
@@ -88,6 +89,7 @@ dependencies {
     googlePlayCompile 'com.google.android.gms:play-services-base:10.2.1'
     googlePlayCompile 'com.google.android.gms:play-services-analytics:10.2.1'
     googlePlayCompile "com.google.android.gms:play-services-games:10.2.1"
+    googlePlaycompile 'com.android.support:support-v4:27.0.0'
 
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile fileTree(dir: 'lib/optional', include: '*.jar')
