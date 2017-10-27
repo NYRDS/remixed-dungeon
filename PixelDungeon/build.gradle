@@ -71,7 +71,7 @@ dependencies {
     compile 'org.luaj:luaj-jse:3.0.1'
 
     //noinspection GradleDependency
-    googlePlayRetrocompile 'com.android.support:support-v4:25.0.0'
+    googlePlayRetroСompile 'com.android.support:support-v4:25.0.0'
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
     //noinspection GradleDependency
