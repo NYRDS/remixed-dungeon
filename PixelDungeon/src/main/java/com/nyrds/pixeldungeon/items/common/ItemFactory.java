@@ -132,7 +132,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfSummoning;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -201,8 +200,12 @@ public class ItemFactory {
 	}
 
 	private static void registerItemClass(Class<? extends Item> itemClass) {
-		mItemsList.put(itemClass.getSimpleName(), itemClass);
-		mNamesList.put(itemClass,itemClass.getSimpleName());
+		registerItemClassByName(itemClass, itemClass.getSimpleName());
+	}
+
+	private static void registerItemClassByName(Class<? extends Item> itemClass, String name) {
+		mItemsList.put(name, itemClass);
+		mNamesList.put(itemClass,name);
 	}
 
 	private static void initItemsMap() {
@@ -373,15 +376,15 @@ public class ItemFactory {
 		registerItemClass(RatHide.class);
 		registerItemClass(BlackSkullOfMastery.class);
 		registerItemClass(CandleOfMindVision.class);
-
-		mItemsList.put("Rotberry.Seed", WandMaker.Rotberry.Seed.class);
-		mItemsList.put("Earthroot.Seed", Earthroot.Seed.class);
-		mItemsList.put("Firebloom.Seed", Firebloom.Seed.class);
-		mItemsList.put("Sungrass.Seed", Sungrass.Seed.class);
-		mItemsList.put("Dreamweed.Seed", Dreamweed.Seed.class);
-		mItemsList.put("Sorrowmoss.Seed", Sorrowmoss.Seed.class);
-		mItemsList.put("Icecap.Seed", Icecap.Seed.class);
-		mItemsList.put("Fadeleaf.Seed", Fadeleaf.Seed.class);
+		
+		registerItemClassByName(WandMaker.Rotberry.Seed.class,"Rotberry.Seed");
+		registerItemClassByName(Earthroot.Seed.class, "Earthroot.Seed");
+		registerItemClassByName(Firebloom.Seed.class, "Firebloom.Seed");
+		registerItemClassByName(Sungrass.Seed.class, "Sungrass.Seed");
+		registerItemClassByName(Dreamweed.Seed.class, "Dreamweed.Seed");
+		registerItemClassByName(Sorrowmoss.Seed.class, "Sorrowmoss.Seed");
+		registerItemClassByName(Icecap.Seed.class, "Icecap.Seed");
+		registerItemClassByName(Fadeleaf.Seed.class, "Fadeleaf.Seed");
 
 		registerItemClass(DwarfToken.class);
 		registerItemClass(RatArmor.class);
