@@ -386,7 +386,8 @@ public class Generator {
 					return ((Item) cat.classes[index].newInstance()).random();
 			}
 		} catch (Exception e) {
-			throw new TrackedRuntimeException("item generator", e);
+			EventCollector.logException(e, "bug: "+cat.name());
+			return new Gold(5);
 		}
 	}
 
