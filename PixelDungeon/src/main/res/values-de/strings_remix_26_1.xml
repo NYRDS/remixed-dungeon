@@ -3,12 +3,20 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">Stadtwache</string>
+    <string name="TownGuardNPC_Gender">Maskulin</string>
     <string name="TownGuardNPC_Name_Objective">Stadtwache</string>
     <string name="TownGuardNPC_Desc">Eine gewöhnliche Stadtwache.</string>
     <string name="TownGuardNPC_Message1">Geh weiter.</string>
+    <string name="TownGuardNPC_Message2">Dank euch Abenteurern ist es hier oben echt friedlich geworden.</string>
+    <string name="TownGuardNPC_Message3">Du glaubst es gibt hier viele Wachen? Nun, hier gibt es ja nur einen riesigen Dungeon unter der Stadt, hier MUSS es ja auch ohne Wachen RICHTIG sicher und ruhig sein.</string>
+
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">Stadtbewohner</string>
+    <string name="TownsfolkNPC_Gender">Maskulin</string>
     <string name="TownsfolkNPC_Name_Objective">Dorfbewohner</string>
+    <string name="TownsfolkNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
+    <string name="TownsfolkNPC_Message1">Ah, ein weiterer Abenteuer, wie schön. Schau zu, dass du den Dungeon so stark ausbeutest wie du kannst.</string>
+    <string name="TownsfolkNPC_Message2">Die Stadt wurde dank des Dungeons so reich, dass sich jeder in der Stadt leisten kann, Urlaub zu machen. Tatsächlich gibt es deshalb gerade so wenige Menschen hier.</string>
     <string name="TownsfolkNPC_Message3">Welch traumhafter Tag.</string>
     <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">Stadtpriester</string>

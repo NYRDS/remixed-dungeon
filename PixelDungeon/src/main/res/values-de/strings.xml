@@ -295,7 +295,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="IronKey_Name">Eisener Schlüssel</string>
   <string name="IronKey_FromDepth">Schlüssel von Tiefe %d</string>
   <!--STRINGS OF SkeletonKey CLASS-->
-  <string name="SkeletonKey_Name">Knochiger Schlüssel</string>
+  <string name="SkeletonKey_Name">Skelettschlüssel</string>
   <string name="SkeletonKey_Info">Dieser Schlüssel sieht seriös aus: Der Kopf ist wie ein Schädel geformt. Wahrscheinlich lässt sich damit eine seriöse Tür öffnen.</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->

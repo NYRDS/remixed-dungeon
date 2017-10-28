@@ -7,6 +7,23 @@
     <string name="RatHide_Name">Rattenhaut</string>
     <!-- STRINGS OF RatArmor CLASS -->
     <string name="RatArmor_Name">Rattenrüstung</string>
+    <string name="RatArmor_Info">Eine Lederrüstung aus Rattenhaut. Sie ist wahrscheinlich nicht Infektabel.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">Virendoktor</string>
+    <string name="PlagueDoctorNPC_Gender">Maskulin</string>
+    <string name="PlagueDoctorNPC_Name_Objective">Virendoktor</string>
+    <string name="PlagueDoctorNPC_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann. \ N
+</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann. \ N
+</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Bring mir%dRattenhäute.</string>
+    <string name="PlagueDoctorNPC_Quest_End">Ah, danke, ich hoffe, dass die eine Spur einer Krankheit haben werden. Frühere Beispiele waren absolut harmlos. Also habe ich das für Sie gemacht, während ich auf neue Proben gewartet habe.</string>
+    <string name="PlagueDoctorNPC_After_Quest">Ich werd\'s ihnen zeigen. Ihnen allen!</string>
+    <string name="Journal_PlagueDoctorNPC">Virendoktor</string>
+
     <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
     <string name="TownsfolkMovieNPC_Name">Dorfbewohner</string>
     <string name="TownsfolkMovieNPC_Gender">männlich</string>

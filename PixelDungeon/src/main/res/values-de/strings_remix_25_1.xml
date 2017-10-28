@@ -26,6 +26,8 @@
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">Robe des Totenbeschwörers</string>
+    <string name="NecromancerRobe_Info">Diese Robe wird Nekromanten erlauben, einen Untoten für 5 Seelen zu beschwören. Die Untoten sind  Diener, der neben seinem Meister stärker werden.</string>
+
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
     <string name="HeroClass_Necromancer">Totenbeschwörer</string>
@@ -34,6 +36,7 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Totenbeschwörer starten mit 15 Lebenspunkten.</item>
+        <item>Nekromanten haben eine exklusive Ressource \"Seelen\", die benutzt wird, um Zauber zu erzeugen. Der Tod eines jeden Mobs gewährt 1 Seele.</item>
         <item>Totenbeschwörer starten mit einer einzigartigen Totenbeschwörerrobe.</item>
         <item>Totenbeschwörer starten mit einem Level 7 Skelettschlüssel.</item>
         <item>Heiltränke sind von Anfang an identifiziert.</item>
@@ -43,14 +46,34 @@
     <string name="Deathling_Name">Untoter</string>
     <string name="Deathling_Gender">Männlich</string>
     <string name="Deathling_Name_Objective">Untoter</string>
+    <string name="Deathling_Desc">Der Untote ist die Seele eines Toten Helden, die genug Pech gehabt hat, um von einem Nekromanten beschwört zu werden.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Nekromantie: Beschwörungslimit erreicht (Momentanes Max.: %d)!</string>
+    <string name="Necromancy_NotEnoughSouls">Du hast nicht genug Seelen, um einen \"%1$s\" Zauberspruch zu beschwören.</string>
+
     <string name="Necromancy_SoulsCountLabel">Seelen</string>
 
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_ReincarnationName">Wiedergeburt</string>
+    <string name="Necromancy_ReincarnationTriggered">Deine Kräfte trotzen dem Tod! Aber du hast alle gesammelten Seelen und Besitztümer verloren.</string>
     <string name="Necromancy_SummonDeathlingName">Erschaffe Untoten</string>
+
+    <string name="Necromancy_BecameALich">Du bist zu einem Lich geworden! Deine Kraft wächst und deine Seelenkapazität hat sich verdoppelt! Aber du verlierst %1$d Stärkepunkte.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">Um diese Charakterklasse freizuschalten musst du den Lich mit irgendeiner anderen Klasse besiegen.</string>
 
     <!-- Window descriptions -->
     <string name="Necromancy_Title">Nekromantie</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">\"Dieser Geist scheint mit seinem Fluch zu kämpfen. Es scheint, dass er etwas von mir will. Wenn ich meine nekromantischen Kräfte benutze, werde ich ihn überreden können. Auf diese Weise werde ich meine Zeit hier nicht verschwenden müssen. Sollte ich so etwas tun?\"</string>
+    <string name="WndSadGhostNecro_Yes">Ja, zwing es deinen Willen auf.</string>
+    <string name="WndSadGhostNecro_No">Nein, lass es sprechen.</string>
+    <string name="WndSadGhostNecro_Persuaded">Der traurige Geist wurde dominiert!</string>
 
     <!-- Badges -->
 

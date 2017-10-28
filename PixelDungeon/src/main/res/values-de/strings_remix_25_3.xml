@@ -3,20 +3,52 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF Ushanka CLASS -->
     <string name="Ushanka_Name">Uschanka</string>
+    <string name="Ushanka_Info">Warmer und gemütlicher Ushanka Hut, dekoriert mit einem edlem rotem Stern. Ein perfekter Begleiter für einen Kameradenkampf gegen den bösen kalten Dungeon.</string>
+
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">Vampirschädel</string>
+    <string name="VampireSkull_Info">Diese Maske besteht aus einem natürlichen Vampirschädel. Tatsächlich ist es ein Vampirschädel ... Der Schädel eines großköpfigen Vampirs. Gruselig...</string>
+
     <!-- STRINGS OF ZombieMask CLASS -->
     <string name="ZombieMask_Name">Zombiemaske</string>
+    <string name="ZombieMask_Info">Wolltest du schon mal wie ein untoter Held aussehen, der an seiner Aufgabe wiederholt scheiterte? Nun, hier ist deine Chance.</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">Süßigkeiten</string>
+    <string name="Candy_Info">Diese Süßigkeiten sehen so gut aus und riechen so lecker. Willst du sie wirklich jemand anderes geben?</string>
+    <string name="Candy_Warning_1">Du hättest die Süßigkeiten nicht essen sollen. Du hast versprochen, es jemand anderes zu geben. Außerdem hat es dir nichts gebracht, dein Hunger bleibt, denn es sind ja nur Süßigkeiten.</string>
+    <string name="Candy_Warning_2">Jetzt hattest du wirklich zu viel. Dein Magen schmerzt, weil du so viele Süßigkeiten gegessen hast.</string>
+
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">Kürbiskuchen</string>
+    <string name="PumpkinPie_Info">Ein deliziöser Kürbiskuchen, so wie ihn deine Mutti immer gemacht hat.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">Verrotteter Kürbiskuchen</string>
+    <string name="RottenPumpkinPie_Info">Es ist egal wie gut es war, als es noch frisch war. Jetzt würde es keiner mehr essen.</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">Kerze der Visionen</string>
+    <string name="CandleOfMindVision_Info">Sieht aus wie eine normale Kerze, nicht etwas, das du in einem gefährlichen Verlies erwartest. Seltsamerweise ist es ziemlich warm, obwohl es nicht angezündet wurde.</string>
+    <string name="CandleOfMindVision_Info_Lighted">Die Kerze leuchtete in dem Moment auf, in dem du sie aus deinen Rucksack genommen hast. Die Flamme strahlt schwaches violettes Licht aus, und wenn du durch sie hindurch siehst, werden die Monster in deiner Nähe für dich sichtbar.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">Deine Kerze ist ausgebrannt und damit unbrauchbar.</string>
+
     <!-- Object descriptions -->
     <!-- STRINGS OF Barrel CLASS -->
     <string name="Barrel_Name">Fass</string>
+    <string name="Barrel_Desc">Sieht aus wie ein einfaches Holzfass. Wenn du näher kommst, kannst du einen Hauch Öl riechen. Das Fass scheint ziemlich leicht zu sein, du könntest es vielleicht schieben.</string>
+
     <!-- STRINGS OF Barrel_Pumpkin CLASS -->
     <string name="Barrel_Pumpkin_Name">Kürbis</string>
+    <string name="Barrel_Pumpkin_Desc">Es ist wirklich seltsam und gruselig, einen geschnitzten Kürbis im Kerker herumliegen zu sehen. Du kannst eine gewisse Gefahr spüren. Aber du kannst es immer wegschieben, oder?</string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ScarecrowNPC CLASS -->
     <string name="ScarecrowNPC_Name">Vogelscheuche</string>
     <string name="ScarecrowNPC_Gender">geschlechtslos</string>
     <string name="ScarecrowNPC_Name_Objective">Vogelscheuche</string>
+    <string name="ScarecrowNPC_Desc">Es gibt keinen Zweifel ... diese Vogelscheuche beobachtet jede deiner Bewegungen. Seine rot leuchtenden Augen durchbohren dich, aber überraschenderweise, fühlen Sie sich nicht bedroht.</string>
     <string name="Journal_ScarecrowNPC">Vogelscheuche</string>
 
 </resources>
