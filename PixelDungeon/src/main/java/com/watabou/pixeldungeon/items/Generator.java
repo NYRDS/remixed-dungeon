@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker.Rotberry;
@@ -143,6 +144,7 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
 
 import java.util.HashMap;
+import java.util.Locale;
 
 public class Generator {
 
@@ -351,6 +353,10 @@ public class Generator {
 
 	public static void reset() {
 		for (Category cat : Category.values()) {
+			if(cat.probs.length!=cat.classes.length) {
+				throw new TrackedRuntimeException(String.format(Locale.ROOT,"Category: %s %d items %d probs",cat.name(),cat.classes.length,cat.probs.length));
+			}
+
 			categoryProbs.put(cat, cat.prob);
 		}
 	}
@@ -361,7 +367,6 @@ public class Generator {
 
 	public static Item random(Category cat) {
 		try {
-
 			categoryProbs.put(cat, categoryProbs.get(cat) / 2);
 
 			switch (cat) {
@@ -370,10 +375,19 @@ public class Generator {
 				case WEAPON:
 					return randomWeapon();
 				default:
-					return ((Item) cat.classes[Random.chances(cat.probs)].newInstance()).random();
+					int index;
+					do {
+						index = Random.chances(cat.probs);
+						if(!(index<cat.classes.length)) {
+							EventCollector.logEvent("bug","bad index in category", cat.name());
+						}
+					}while(!(index<cat.classes.length));
+
+					return ((Item) cat.classes[index].newInstance()).random();
 			}
 		} catch (Exception e) {
-			throw new TrackedRuntimeException("item generator", e);
+			EventCollector.logException(e, "bug: "+cat.name());
+			return new Gold(5);
 		}
 	}
 
