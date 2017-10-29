@@ -79,7 +79,9 @@
     "any":{"Gnoll":1},
     "test_random":{"Swarm":0.01}
   },
-
+  "PredesignedLevel":{
+    "any":{"Rat":1}
+  },
   "Feelings":{
     "Chance":0.2,
     "CHASM":{"AirElemental":1},
