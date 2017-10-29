@@ -87,6 +87,6 @@
   <!--STRINGS OF WandOfTeleportation CLASS-->
   <string name="WandOfTeleportation_Name">Паличка перенесення</string>
   <string name="WandOfTeleportation_Info">Постріл з цієї палички може перенести вказану істоту у випадкове місце цього рівня, хоче воно того чи ні.</string>
-  <string name="WandOfTeleportation_Info1">%1$s кудись переносить %2$s</string>
+  <string name="WandOfTeleportation_Info1">%1$s переніс %2$s невідомо куди</string>
   <string name="WandOfTeleportation_Info2">нічого не трапилося</string>
 </resources>

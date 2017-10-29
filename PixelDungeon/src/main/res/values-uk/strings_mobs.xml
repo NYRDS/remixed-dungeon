@@ -4,7 +4,6 @@
   <!--STRINGS OF Mob CLASS-->
   <string name="Mob_Desc">Справжній опис буде пізніше!</string>
   <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
-  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
   <string name="Mob_StaSleepingStatus">%s спить</string>
   <string name="Mob_StaWanderingStatus">%s блукає</string>
   <string name="Mob_StaHuntingStatus">%s полює</string>
@@ -180,10 +179,10 @@
   <string name="Swarm_Desc">Смертоносний рій злобно дзижчить. Кожна не магічна атака розбиває рій на дві менші частини, кожна з яких не менш небезпечна ніж один цілий.</string>
   <string name="Swarm_Defense">ухилився</string>
   <!--STRINGS OF Tengu CLASS-->
-  <string name="Tengu_Name">Тенгу</string>
+  <string name="Tengu_Name">Тенґу</string>
   <string name="Tengu_Gender">masculine</string>
-  <string name="Tengu_Name_Objective">Тенгу</string>
-  <string name="Tengu_Desc">Тенгу - члени древнього клану вбивць. Вони відомі своїм уподобанням до пасток та сюрикенів.</string>
+  <string name="Tengu_Name_Objective">Тенґу</string>
+  <string name="Tengu_Desc">Тенґу - члени древнього клану вбивць. Вони відомі своїм уподобанням до пасток та сюрикенів.</string>
   <string name="Tengu_Info1">Нарешті, свобода...</string>
   <string name="Tengu_Info2">Попався, %s!</string>
   <!--STRINGS OF Thief CLASS-->
