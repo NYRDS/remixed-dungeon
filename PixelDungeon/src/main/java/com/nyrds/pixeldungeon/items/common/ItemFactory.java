@@ -132,6 +132,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfSummoning;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -399,7 +400,7 @@ public class ItemFactory {
 		registerItemClass(ManaPotion.class);
 		registerItemClass(TomeOfKnowledge.class);
 		registerItemClass(SpellBook.class);
-		//registerItemClass(ScrollOfSummoning.class);
+		registerItemClass(ScrollOfSummoning.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

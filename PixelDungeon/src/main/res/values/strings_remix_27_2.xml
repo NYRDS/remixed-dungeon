@@ -57,7 +57,6 @@
     <string name="SpellBook_Info">It looks more like a compilation of assorted pages that were sewed together, than an actual book. You might be able to make something out of it if you\'ll pay enough attention.</string>
     <string name="SpellBook_Info_Identified">Within these pages you\'ve discovered a full text of a \"%1$s\" spell.\n\" %2$s \"</string>
 
-
     <!-- STRINGS OF ManaPotion CLASS -->
     <string name="ManaPotion_Name">Mana Potion</string>
     <string name="ManaPotion_Info">This potion will restore your spiritual energy.</string>
@@ -68,6 +67,9 @@
     <!-- STRINGS OF Torch CLASS -->
     <string name="Torch_Info2">It\'s an indispensable item in the dungeon, which is notorious for it\'s poor ambient lighting.</string>
 
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Scroll of Summoning</string>
+    <string name="ScrollOfSummoning_Info">When read aloud, this scroll will summon one of the monsters from the current dungeon level. And if monsters will is weak enough it will become your servant</string>
     
     <!-- Window descriptions -->
     <!-- STRINGS OF WndHeroSpells CLASS -->
