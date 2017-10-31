@@ -253,7 +253,7 @@ public class Dungeon {
 		}
 
 		Light light = hero.buff(Light.class);
-		hero.viewDistance = light == null ? level.getViewDistance() : Math.max(Light.DISTANCE, level.getViewDistance());
+		hero.viewDistance = light == null ? level.getViewDistance() : Math.max(level.MIN_VIEW_DISTANCE + 1, level.getViewDistance());
 
 		Dungeon.level = level;
 	}

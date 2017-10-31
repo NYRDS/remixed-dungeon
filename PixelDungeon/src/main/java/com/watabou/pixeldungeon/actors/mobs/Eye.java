@@ -49,7 +49,7 @@ public class Eye extends Mob {
 		
 		hp(ht(100));
 		defenseSkill = 20;
-		viewDistance = Light.DISTANCE;
+		viewDistance = Dungeon.level.MIN_VIEW_DISTANCE + 1;
 		
 		exp = 13;
 		maxLvl = 25;
