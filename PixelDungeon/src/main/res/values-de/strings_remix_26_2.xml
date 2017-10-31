@@ -10,4 +10,5 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF GnollCostume CLASS -->
     <string name="GnollCostume_Name">Gnoll Kostüm</string>
-    </resources>
+    <string name="GnollCostume_Info">Ein unglaublich warmes und flauschiges Kostüm. Wer dieses Kostüm trägt, sieht aus wie... jemand, der versucht sich als Gnoll zu verkleiden. Aber Gnolle werden darauf nicht hereinfallen, sie werden dich trotzdem angreifen.</string>
+</resources>

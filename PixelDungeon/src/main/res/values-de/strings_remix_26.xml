@@ -70,6 +70,7 @@
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
     <string name="WandOfIcebolt_Name">Zauberstab des Eisballs</string>
+    <string name="WandOfIcebolt_Info">Dieser Stab schießt ein Eisprojektil, das einer Kreatur leichten Schaden zufügt. Das hat die Chance das Ziel zu verlangsamen oder sogar einzufrieren.</string>
     <string name="WandOfIcebolt_Info1">Du hast dich mit deinem eigenen Eisstab getötet...</string>
 
     <!-- Badges -->
