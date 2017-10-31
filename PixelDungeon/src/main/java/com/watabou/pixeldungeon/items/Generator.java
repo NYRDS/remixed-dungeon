@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
@@ -84,7 +86,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfSummoning;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -167,8 +168,12 @@ public class Generator {
 		public Class<?>[] classes;
 		public float[]    probs;
 
-		public float                 prob;
-		public Class<? extends Item> superClass;
+		public void addItemClass(Class<?> item, float prob) {
+
+		}
+
+		private float                 prob;
+		private Class<? extends Item> superClass;
 
 		Category(float prob, Class<? extends Item> superClass) {
 			this.prob = prob;
@@ -183,6 +188,24 @@ public class Generator {
 			}
 
 			return item instanceof Bag ? Integer.MAX_VALUE : Integer.MAX_VALUE - 1;
+		}
+
+		@NonNull
+		public Item random() {
+			int index;
+			do {
+				index = Random.chances(probs);
+				if (!(index < classes.length)) {
+					EventCollector.logEvent("bug", "bad index in category", name());
+				}
+			} while (!(index < classes.length));
+
+			try {
+				return ((Item) classes[index].newInstance()).random();
+			} catch (Exception e) {
+				EventCollector.logException(e, "bug: " + name());
+				return new Gold(5);
+			}
 		}
 	}
 
@@ -353,8 +376,8 @@ public class Generator {
 
 	public static void reset() {
 		for (Category cat : Category.values()) {
-			if(cat.probs.length!=cat.classes.length) {
-				throw new TrackedRuntimeException(String.format(Locale.ROOT,"Category: %s %d items %d probs",cat.name(),cat.classes.length,cat.probs.length));
+			if (cat.probs.length != cat.classes.length) {
+				throw new TrackedRuntimeException(String.format(Locale.ROOT, "Category: %s %d items %d probs", cat.name(), cat.classes.length, cat.probs.length));
 			}
 
 			categoryProbs.put(cat, cat.prob);
@@ -375,18 +398,10 @@ public class Generator {
 				case WEAPON:
 					return randomWeapon();
 				default:
-					int index;
-					do {
-						index = Random.chances(cat.probs);
-						if(!(index<cat.classes.length)) {
-							EventCollector.logEvent("bug","bad index in category", cat.name());
-						}
-					}while(!(index<cat.classes.length));
-
-					return ((Item) cat.classes[index].newInstance()).random();
+					return cat.random();
 			}
 		} catch (Exception e) {
-			EventCollector.logException(e, "bug: "+cat.name());
+			EventCollector.logException(e, "bug: " + cat.name());
 			return new Gold(5);
 		}
 	}
@@ -399,32 +414,26 @@ public class Generator {
 		}
 	}
 
-	public static Armor randomArmor() throws Exception {
+	private static Armor randomArmor() throws Exception {
 
 		int curStr = Hero.STARTING_STR + Dungeon.potionOfStrength;
 
 		Category cat = Category.ARMOR;
 
-		Armor a1 = (Armor) cat.classes[Random.chances(cat.probs)].newInstance();
-		Armor a2 = (Armor) cat.classes[Random.chances(cat.probs)].newInstance();
-
-		a1.random();
-		a2.random();
+		Armor a1 = (Armor) cat.random();
+		Armor a2 = (Armor) cat.random();
 
 		return Math.abs(curStr - a1.STR) < Math.abs(curStr - a2.STR) ? a1 : a2;
 	}
 
-	public static Weapon randomWeapon() throws Exception {
+	private static Weapon randomWeapon() throws Exception {
 
 		int curStr = Hero.STARTING_STR + Dungeon.potionOfStrength;
 
 		Category cat = Category.WEAPON;
 
-		Weapon w1 = (Weapon) cat.classes[Random.chances(cat.probs)].newInstance();
-		Weapon w2 = (Weapon) cat.classes[Random.chances(cat.probs)].newInstance();
-
-		w1.random();
-		w2.random();
+		Weapon w1 = (Weapon) cat.random();
+		Weapon w2 = (Weapon) cat.random();
 
 		return Math.abs(curStr - w1.STR) < Math.abs(curStr - w2.STR) ? w1 : w2;
 	}
