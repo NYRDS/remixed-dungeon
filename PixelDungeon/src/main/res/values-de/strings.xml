@@ -84,6 +84,14 @@
     <item>Der Text ist in dämonischer Sprache verfasst.</item>
   </string-array>
   <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>Auf Diät</item>
+    <item>Der Glaube ist meine Rüstung</item>
+    <item>Pharmakophobie</item>
+    <item>Unfruchtbare Erde</item>
+    <item>Schwarm Intelligenz</item>
+    <item>In die Dunkelheit</item>
+  </string-array>
   <!--STRINGS OF Journal CLASS-->
   <string name="Journal_WellHealt">Brunnen der Heilung</string>
   <string name="Journal_WellAwareness">Brunnen der Aufmerksamkeit</string>
@@ -194,6 +202,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <!--STRINGS OF WndWandmaker CLASS-->
   <string name="WndWandmaker_Message">Oh, wie ich sehe, warst du erfolgreich! Ich hoffe doch, dass dir das nicht viel Ärger gebracht hat. Aber ich halte mein versprechen: Du kannst einen meiner hoch qualitativen Zauberstäbe haben.</string>
   <string name="WndWandmaker_Battle">Kampf-Zauberstab</string>
+  <string name="WndWandmaker_NonBattle">Nützlicher Zauberstab</string>
   <string name="WndWandmaker_Farawell">Viel Glück bei deiner Quest, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">Wähle ein Item für den Schnellzugriff</string>
@@ -238,6 +247,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="Gold_Info">Ein Haufen von %d Goldmünzen.</string>
   <string name="Gold_Info1">Eine Goldmünze.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
+  <string name="KindOfWeapon_EquipCursed">Du zuckst zusammen, als du dein %s unfreiwillig festhälst.</string>
   <!--STRINGS OF LloidsBeacon CLASS-->
   <string name="LloidsBeacon_Name">Lloyds Leuchtfeuer</string>
   <string name="LloidsBeacon_ACSet">SETZEN</string>
@@ -253,6 +263,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Stylus_ACInscribe">BESCHRIFTEN</string>
   <string name="Stylus_Info">Dieser mysteriöse Stift wurde aus schwarzem, sehr harten Stein gemacht. Du kannst mit ihm eine Glyphe oder eine Rune schreiben, aber nicht bestimmen, welche es sein soll, da sie sich der Stift aussucht.</string>
   <string name="Stylus_SelectArmor">Wähle einen Gegenstand zum Beschriften</string>
+  <string name="Stylus_Inscribed">Du trägst in dein %2$s die %1$s ein.</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Buch der Meisterschaft</string>
   <string name="TomeOfMastery_ACRead">LESEN</string>
@@ -322,6 +333,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Ein Feuer wütet hier.</string>
   <!--STRINGS OF Foliage CLASS-->
+  <string name="Foliage_Info">Schäfte aus Licht durchstoßen die Düsternis des Untergrundgartens.</string>
   <!--STRINGS OF ParalyticGas CLASS-->
   <string name="ParalyticGas_Info">Eine Wolke paralysierendes Gas wirbelt hier. </string>
   <!--STRINGS OF ToxicGas CLASS-->
@@ -340,6 +352,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF Amok CLASS-->
   <string name="Amok_Info">Amok</string>
   <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">Zusäztliche Rüstung</string>
   <!--STRINGS OF Bleeding CLASS-->
   <string name="Bleeding_Info">Blutend</string>
   <string name="Bleeding_Death">Du bist verblutet</string>
@@ -364,6 +377,16 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF GasesImmunity CLASS-->
   <string name="GasesImmunity_Info">Immun gegen Gase</string>
   <!--STRINGS OF Hunger CLASS-->
+  <string-array name="Hunger_Hungry">
+    <item>Du bist Hungrig.</item>
+    <item>Du bist Hungrig</item>
+    <item>Du bist Hungrig</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>Du verhungerst!</item>
+    <item>Du verhungerst!</item>
+    <item>Du verhungerst!</item>
+  </string-array>
   <string name="Hunger_Death">Du bist verhungert...</string>
   <string name="Hunger_Info1">Hungrig</string>
   <string name="Hunger_Info2">Verhungernd</string>
@@ -400,6 +423,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Belongings_Name">Rucksack</string>
   <!--PACKAGE /sprites-->
   <!--STRINGS OF ItemSprite CLASS-->
+  <string name="ItemSprite_Info1">Falle zurseite: %1$.1f %2$.1f</string>
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
   <string name="Toolbar_Info1">Du weißt nicht, was dort ist.</string>

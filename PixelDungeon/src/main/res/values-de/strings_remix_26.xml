@@ -39,11 +39,40 @@
     <string name="IceGuardian_Name_Objective">Eiswächter</string>
     <!-- STRINGS OF IceGuardianCore CLASS -->
     <string name="IceGuardianCore_Name">Eiswächter</string>
+    <string name="IceGuardianCore_Gender">männlich</string>
     <string name="IceGuardianCore_Name_Objective">Eiswächter</string>
     <!-- STRINGS OF CagedKobold CLASS -->
     <string name="CagedKobold_Name">eingesperrter Kobold</string>
+    <string name="CagedKobold_Gender">männlich</string>
     <string name="CagedKobold_Name_Objective">eingesperrter Kobold</string>
     <string name="CagedKobold_Desc">Ein Kobold, in einem Käfig.</string>
     <string name="CagedKobold_Message1">Bitte...</string>
+    <string name="CagedKobold_Message3">Ich hasse diesen Käfig über alles</string>
+
+    <string name="Journal_Caged_Kobold">Eingesperrter Kobold</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Dieser Gnoll wurde lebend eingefroren. Er ist wahrscheinlich schon einel weile drin.</string>
+    <string name="IceCaves_TileHighGrass">Gefrorenes hohes Gras</string>
     <string name="IceCaves_TileGrass">gefrorenes Gras.</string>
-    </resources>
+    <string name="IceCaves_TileDescHighGrass">Dichte gefrorene Vegetation versperrt die Sicht.</string>
+    <string name="IceCaves_TileStatue">Gefrorener Gnoll</string>
+    <string name="IceCaves_TileDescStatue">Noch eine schreckliche Statue... Oh warte, das ist ein gefrorener Gnoll.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">Festlicher Truthahn</string>
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">Eis Schlüssel</string>
+    <string name="IceKey_Info">Es scheint, als ob der Schlüssel aus Eis ist, aber dennoch ist er so hart wie Stahl.</string>
+
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Zauberstab des Eisballs</string>
+    <string name="WandOfIcebolt_Info1">Du hast dich mit deinem eigenen Eisstab getötet...</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Eis Wächter erschlagen</string>
+
+</resources>

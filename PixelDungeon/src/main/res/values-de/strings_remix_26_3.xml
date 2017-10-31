@@ -32,21 +32,33 @@
     <string name="LibrarianNPC_Name">Bilbliothekar</string>
     <string name="LibrarianNPC_Gender">männlich</string>
     <string name="LibrarianNPC_Name_Objective">Bilbliothekar</string>
+    <string name="LibrarianNPC_Message_Not_Ready">Es... Es tut mir leid, d-die Bücherei h-hat momentan n-nicht... geöffnet.</string>
+
+
     <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
     <string name="TownsfolkSilentNPC_Name">Dorfbewohner</string>
+    <string name="TownsfolkSilentNPC_Gender">männlich</string>
     <string name="TownsfolkSilentNPC_Name_Objective">Dorfbewohner</string>
     <string name="TownsfolkSilentNPC_Message1">Hmpf!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
 
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">Tut mir leid, aber dieses Gebäude ist noch nicht fertig.</string>
+
     <!-- STRINGS OF BellaNPC CLASS -->
     <string name="BellaNPC_Name">Bella</string>
+    <string name="BellaNPC_Gender">weiblich</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_Desc">Ein sehr schick aussehendes Mädchen. Ihr ganzes Aussehen sagt dir: \"Ich bin zu gut für jeden.\"</string>
     <string name="BellaNPC_Angry">Wie kannst du es wagen...du Tölpel!</string>
+    <string name="BellaNPC_Yes_End_Game">Sicher (Beende das Spiel)</string>
     <string name="BellaNPC_No">Nein, nicht mit dir</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_common_door_name">Tür</string>
     <string name="town_deco_dungeon_door_name">Eingang</string>
-    </resources>
+    <string name="town_deco_dungeon_door_desc">Eingang in den Dungeon.</string>
+
+</resources>

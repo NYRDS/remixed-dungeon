@@ -3,8 +3,8 @@
   <!--STRINGS OF BadgesScene CLASS-->
   <string name="BadgesScene_Title">Deine Medallien</string>
   <!--STRINGS OF Badges CLASS-->
-  <string name="Badges_Info1">Medallie bestätigt: %s</string>
-  <string name="Badges_Info2">Neue Meta Medallie: %s</string>
+  <string name="Badges_Info1">Medallie erhalten: %s</string>
+  <string name="Badges_Info2">Neue Super Medallie: %s</string>
   <string name="Badges_Info3">Neue Medallie: %s</string>
   <string name="Badges_MonsterSlain1">10 Gegner getötet</string>
   <string name="Badges_MonsterSlain2">50 Gegner getötet</string>
@@ -51,7 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3. Boss besiegt durch Gladiator, Berserker, Hexenmeister, Kampfmagier, Freerunner, Assassine, Scharfschütze und Wächter</string>
+  <string name="Badges_BossSlain3All">3. Boss besiegt durch Gladiator, Berserker, Hexenmeister, Kampfmagier, Freirenner, Assassine, Scharfschütze und Wächter</string>
   <string name="Badges_RingHaggler">Ring des Schacherers erhalten</string>
   <string name="Badges_RingThorns">Dornenring erhalten</string>
   <string name="Badges_StrengthAttained1">13 Stärkepunkte erhalten</string>
@@ -82,7 +82,7 @@
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amulett von Yendor erhalten</string>
   <string name="Badges_VictoryAll">Amulett von Yendor mit Krieger, Magier, Schurke und Jägerin erhalten</string>
-  <string name="Badges_MasteryCombo">7er Combo</string>
+  <string name="Badges_MasteryCombo">7-Treffer Combo</string>
   <string name="Badges_PotionsCooked1">3 Tränke gebraut</string>
   <string name="Badges_PotionsCooked2">6 Tränke gebraut</string>
   <string name="Badges_PotionsCooked3">9 Tränke gebraut</string>

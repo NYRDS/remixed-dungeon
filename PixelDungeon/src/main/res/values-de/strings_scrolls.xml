@@ -44,38 +44,56 @@
   <string name="ScrollOfIdentify_Info1">Es ist ein(e) %s</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
   <string name="ScrollOfLullaby_Name">Schriftrolle des Schlaflieds</string>
+  <string name="ScrollOfLullaby_Info">Eine einschläfernde Melodie wird alle Kreaturen in deinem Sichtfeld in einen tiefen Schlaf versetzen, was dir die Chance gibt zu fliehen, oder einen Überraschungsangriff zu machen.</string>
   <string name="ScrollOfLullaby_Info1">Die Schriftrolle bringt eine beruhigende Melodie hervor.</string>
   <string name="ScrollOfLullaby_Info2">Die Schriftrolle bringt eine beruhigende Melodie hervor und die %s schlafen ein!</string>
   <string name="ScrollOfLullaby_Info3">Die Schriftrolle bringt eine beruhigende Melodie hervor und die Monster schlafen ein!</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
   <string name="ScrollOfMagicMapping_Name">Schriftrolle des magischen Vermessens</string>
+  <string name="ScrollOfMagicMapping_Info">Wenn dieser Spruch gelesen wird, wird ein Kristallklares Bild des Momentanen Levels in deinen Erinnerungen gespeichert, das dir alle Verborgenen Türen zeigt. Die Plätze der Gegenstände und der Kreaturen wird weiterhin verborgen bleiben.</string>
   <string name="ScrollOfMagicMapping_Layout">Du kennst jetzt den Levelaufbau.</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
   <string name="ScrollOfMirrorImage_Name">Schriftrolle der Doppelbilder</string>
+  <string name="ScrollOfMirrorImage_Info">Dieser Spruch wird Illusionen des Leser erschaffen, die seine Feinde jagen.</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
   <string name="ScrollOfPsionicBlast_Name">Schriftrolle der psychischen Zersprengung</string>
+  <string name="ScrollOfPsionicBlast_Info">Dieser Spruch enthält destruktive Energie, die psionisch kanalisiert werden kann um allen Kreaturen im Sichtfeld massiven Schaden zuzufügen. Ein Blitzlicht wird temporär jeden Betroffenen inklusive den Leser blenden.</string>
   <!--STRINGS OF ScrollOfRecharging CLASS-->
   <string name="ScrollOfRecharging_Name">Schriftrolle der Aufladung</string>
+  <string name="ScrollOfRecharging_Info">Die rohe Magische Energie, die in diesem Zettel gebunden ist, wird, wenn sie freigelassen wird, alle Stäbe des Leser wieder Aufladen.</string>
+  <string name="ScrollOfRecharging_Info1a">Eine Tentakel aus Energie geht durch deinen Rucksack und lädt deinen Stab auf.</string>
+  <string name="ScrollOfRecharging_Info1b">Eine Tentakel aus Energie geht durch deinen Rucksack und lädt deine Stäbe auf.</string>
+  <string name="ScrollOfRecharging_Info2">Eine Tentakel aus Energie geht durch deinen Rucksack, aber nichts passiert.</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
   <string name="ScrollOfRemoveCurse_Name">Schriftrolle der Fluchaufhebung</string>
+  <string name="ScrollOfRemoveCurse_Info">Die Kraft in diesem Zettel wird sofort alle bösen Verzauberungen von den Waffen, Rüstungen, Ringen und getragenen Gegenständen des Lesers entfernen, die ihn daran hindern könnten jene Gegenstände zu entfernen.</string>
+  <string name="ScrollOfRemoveCurse_Proced">Dein Rucksack glüht mit einem reinigendem Licht und eine böse Energie verschwindet.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Dein Rucksack glüht mit einem reinigendem Licht, aber nichts passiert.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
   <string name="ScrollOfTeleportation_Name">Schriftrolle des Teleportierens</string>
+  <string name="ScrollOfTeleportation_Info">Der Spruch auf diesem Zettel wird den Leser sofort an eine zufällige Position des momentanen Level Teleportieren. Das kann genutzt werden um in einer gefährlichen Situation zu entkommen, kann aber den unglücklichen Leser an einen viel gefährlicheren Ort bringen.</string>
+  <string name="ScrollOfTeleportation_Teleport">Innerhalb eines Augenblickes wurdest du an eine andere Stelle dieses Levels Teleportiert.</string>
   <string name="ScrollOfTeleportation_NoTeleport">Die starke magische Aura dieses Ortes hält dich davon dich zu telepotieren.</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
   <string name="ScrollOfTerror_Name">Schriftrolle der Angst</string>
+  <string name="ScrollOfTerror_Info">Ein roter Blitz wird alle Kreaturen in deinem Sichtfeld Terrorisieren und sie werden daraufhin versuchen zu Fliehen. Greifst du einen fliehenden Gegner an, wird der Effekt aufgehoben.</string>
   <string name="ScrollOfTerror_Info1">Die Schriftrolle erleuchtet in einem grellen Blitz aus rotem Licht</string>
   <string name="ScrollOfTerror_Info2">Die Schriftrolle erleuchtet in einem grellen Blitz aus rotem Licht und die %s flüchten!</string>
   <string name="ScrollOfTerror_Info3">Die Schriftrolle erleuchtet in einem grellen Blitz aus rotem Licht und die Monster flüchten!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">Schriftrolle des Verbesserns</string>
+  <string name="ScrollOfUpgrade_Info">Dieser Zettel wird einen einzelnen Gegenstand verbessern und erhöht dessen Qualität. Ein Stab wird stärker und kann öfters genutzt werden, eine Waffe wird mehr Schaden machen und trifft häufiger, eine Rüstung wird mehr Treffer abhalten und der Effekt eines Ringes wird verstärkt werden. Waffen und Rüstungen brauchen weniger Kraft um getragen zu werden und eventuelle Flüche werden gleich mit entfernt.</string>
   <string name="ScrollOfUpgrade_InvTitle">Wähle einen Gegenstand zum verbessern aus</string>
   <string name="ScrollOfUpgrade_LooksBetter">Dein/e %s sieht nun besser aus</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
   <string name="ScrollOfWeaponUpgrade_Name">Schriftrolle der Waffenverbesserung</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Dieser Zettel wird eine Nahkampfwaffe verbessern und erhöht die Qualität des Gegenstandes. Im Gegensatz zu dem normalen Spruch der Verbesserung, wird diese spezielle Version niemals eine Verzauberung auf der Waffe zerstören. Außerdem ist dieser Spruch in der Lage eine nicht Verzauberte Waffe mit einer zufälligen Verzauberung zu versehen.</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">Wähle eine Waffe die du verbessern möchtest</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">Dein/e %s sieht nun besser aus</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
   <string name="ScrollOfDomination_Name">Schriftrolle der Beherrschung</string>
+  <string name="ScrollOfDomination_Info">Dieser Spruch wird den Willen einer Kreatur in deinem Sichtfeld Binden. Diese Kreatur wird nun für dich Kämpfen, bis sie stirbt.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
   <string name="ScrollOfCurse_Name">Schriftrolle des Fluches</string>
+  <string name="ScrollOfCurse_Info">Dieser Spruch wurde speziell dazu entwickelt, um Diebe zu bestrafen, die dumm genug sind, um Magie zu benutzen, die sie nicht Verstehen können. Dieser Spruch ist komplett unnütz und für den normalen Abenteurer gefährlich, wird aber von Verkäufern gut Bezahlt.</string>
 </resources>

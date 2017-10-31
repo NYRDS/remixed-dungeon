@@ -3,7 +3,7 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">Stadtwache</string>
-    <string name="TownGuardNPC_Gender">Maskulin</string>
+    <string name="TownGuardNPC_Gender">männlich</string>
     <string name="TownGuardNPC_Name_Objective">Stadtwache</string>
     <string name="TownGuardNPC_Desc">Eine gewöhnliche Stadtwache.</string>
     <string name="TownGuardNPC_Message1">Geh weiter.</string>
@@ -18,36 +18,108 @@
     <string name="TownsfolkNPC_Message1">Ah, ein weiterer Abenteuer, wie schön. Schau zu, dass du den Dungeon so stark ausbeutest wie du kannst.</string>
     <string name="TownsfolkNPC_Message2">Die Stadt wurde dank des Dungeons so reich, dass sich jeder in der Stadt leisten kann, Urlaub zu machen. Tatsächlich gibt es deshalb gerade so wenige Menschen hier.</string>
     <string name="TownsfolkNPC_Message3">Welch traumhafter Tag.</string>
-    <!-- STRINGS OF HealerNPC CLASS -->
+    <string name="TownsfolkNPC_Message4">Ich hoffe, dass die Kanalisation im Frühling nicht überflutet wird. Wir brauchen keine weitere Rattenplage.</string>
+
+	<!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">Stadtpriester</string>
     <string name="HealerNPC_Gender">männlich</string>
     <string name="HealerNPC_Name_Objective">Stadtpriester</string>
+    <string name="HealerNPC_Desc">Ein alter Mann. Er sieht aus, wie jemand der Zauberstäbe herstellt.</string>
     <string name="HealerNPC_Message1">Kostenlose Behandlung für jeden Abenteurer.</string>
+    <string name="HealerNPC_Message2">Komm jederzeit wieder, wenn du krank oder hungrig bist.</string>
+    <string name="HealerNPC_Message3">Ich frage mich, warum die Kirche es uns verbietet Hüte zu tragen... Es ist wirklich kalt hier draußen.</string>
+
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Name">Angestellter</string>
     <string name="ServiceManNPC_Gender">männlich</string>
     <string name="ServiceManNPC_Name_Objective">Angestellter</string>
+    <string name="ServiceManNPC_Desc">Ein normaler Arbeiter in den lokalen Niederlassungen.</string>
+
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">Händler</string>
+    <string name="TownShopkeeper_Desc">Dieser Typ ist ein durchschnittlicher Händler. Man kann sagen, dass er immer weiß, wieviel etwas kostet.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">Schaue einen Film</string>
+    <string name="WndMovieTheatre_No">Verlassen</string>
     <string name="WndMovieTheatre_Bye">Komm jederzeit zurück, wir freuen uns auf dich!</string>
+    <string name="WndMovieTheatre_Instruction">Hallo und herzlich willkommen in unserem Film Theater! Wir bieten einen speziellen Service an. Du kannst hier kostenlos ein Video schauen und wenn du es zuende geschaut hast, erhältst du %d Münzen.</string>
     <string name="WndMovieTheatre_Title">Kino</string>
+    <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">Heilen -%d Gold</string>
+    <string name="WndPriest_Instruction_m">Willkommen mein Sohn. Willkommen in der heiligen Kirche vom großen Santa den Depht Lord! Momentan kannst du hier nicht durch, da die Kirche gerade restauriert wird. Aber wenn du Hilfe brauchst, kann ich deine Wunden versorgen und dir Essen geben für nur %d Münzen!</string>
+    <string name="WndPriest_Instruction_f">Willkommen meine Tochter. Willkommen in der heiligen Kirche des großen Santa der Depht Lord! Momentan kann ich dich nicht durchlassen, da die Kirche gerade restauriert wird. Aber wenn du Hilfe brauchst kann ich deine Wunden versorgen und dir etwas zu Essen geben für nur %d Münzen!</string>
     <string name="WndPriest_Title">Stadtpriester</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_roof_name">Dach</string>
+    <string name="town_deco_roof_desc">Ein einfaches Dachstück.</string>
+
     <string name="town_deco_wall_name">Mauer</string>
+    <string name="town_deco_wall_desc">Eine einfache Wand aus Holzstämmen.</string>
+
     <string name="town_deco_snow_name">Schnee</string>
+    <string name="town_deco_snow_desc">Es gibt böswilliges Gemunkel darüber, wie beliebt dieser Platz für Abenteurer ist. Es ist eine menge Schnee dort draußen, als ob niemand jemals draußen war.</string>
+
     <string name="town_deco_cross_name">Kreuz</string>
+    <string name="town_deco_cross_desc">Ein solides silbernes Kreuz, ein Symbol der lokalen Religion- \"Die Zeugen von Santa dem Herrn der Tiefe\".</string>
+
+    <string name="town_deco_bell_name">Glocke</string>
+    <string name="town_deco_bell_desc">Eine typische Kirchenglocke, die so scheint, als ob sie niemand für eine Weile geläutet hat, außerdem fehlt das Seil, womit man die Glocke läutet.</string>
+
     <string name="town_deco_bell_tower_name">Glockenturm</string>
+    <string name="town_deco_bell_tower_desc">Traditionelle Kirchenglocken sind in hohen Türmen eingebaut, so dass der Glockenschlag in einer sehr großen Reichweite zu hören ist.</string>
+
     <string name="town_deco_chimney_name">Kamin</string>
+    <string name="town_deco_chimney_desc">Steinschornsteine sind für gewöhnlich auf Häusern zu sehen, die in Regionen stehen, wo es sehr kalt ist.</string>
+
     <string name="town_deco_window_name">Fenster</string>
+    <string name="town_deco_window_desc">gewöhnliches Glasfenster, nichts besonderes.</string>
+
     <string name="town_deco_door_name">Tür</string>
     <string name="town_deco_door_desc">Eine einfache Holztür.</string>
 
     <string name="town_deco_locked_door_name">Verschlossene Tür</string>
+    <string name="town_deco_locked_door_desc">Was in dieser Welt könnte hinter dieser Tür sein?</string>
+
     <string name="town_deco_snowman_name">Schneemann</string>
+    <string name="town_deco_snowman_desc">Schneemänner sind eine Traditionelle Stadt Dekoration für die Ferienzeit, während die Leute \"Weihdungeon\" feiern, der Tag, als die Monster den Dungeon erobert haben.</string>
+
+    <string name="town_deco_tree_name">Baum</string>
+    <string name="town_deco_tree_desc">Es fühlt sich komisch an auf einen lebenden Baum zu schauen, direkt neben einem Eingang zum Dungeon, der voller Schrecken und Tod ist.</string>
+
+    <string name="town_deco_pathway_name">Pfad</string>
+    <string name="town_deco_pathway_desc">Ein Pfad in den Schnee getrampelt.</string>
+
+    <string name="town_deco_stone_wall_name">Steinwand</string>
+    <string name="town_deco_stone_wall_desc">Irgendwie strahlt diese Wand Hitze ab und scheint ein bisschen Nass zu sein.</string>
+
+    <string name="town_deco_shop_sign_name">Verkaufsschild</string>
+    <string name="town_deco_shop_sign_desc">Scheint so, als ob in dem Gebäude ein Laden ist.</string>
+
     <string name="town_deco_floor_name">Boden</string>
+    <string name="town_deco_floor_desc">Dieser Flur ist aus einfachen Holzplanken gemacht. Was genau suchst du hier?</string>
+
     <string name="town_deco_carpet_name">Teppich</string>
+    <string name="town_deco_carpet_desc">Luxuriöser roter Teppich, reserviert für einen speziellen Gast.</string>
+
     <string name="town_deco_movies_door_name">Tür</string>
+    <string name="town_deco_movies_door_desc">Diese Tür scheint ausnahmsweise hochqualitativ. Sie leitet einen möglicherweise zu etwas unglaublichen.</string>
+
+    <!-- STRINGS OF WndDonate CLASS -->
+
+    <string name="WndDonate_royal">königlich</string>
+
+    <string name="WndDonate_royalDonate">Königliche Spende</string>
+
+    <string name="WndDonate_royalDonateText">Ich will nicht komisch sein, aber wenn du es tust, fütterst du mich wörtlich.</string>
+
+    <string name="WndDonate_royalDonateText2">Zusätzlich wirst du jeden einzelnen Hut vom Echt-Geld-Laden erhalten! Und auch jeden einzelnen Hut den es noch geben wird.</string>
+
     <!-- STRINGS OF WndPremiumSettings CLASS -->
     <string name="WndPremiumSettings_royal">königlich</string>
 

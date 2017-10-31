@@ -54,14 +54,20 @@
     <string name="Lich_Name">Leiche</string>
     <string name="Lich_Gender">maskulin</string>
     <string name="Lich_Name_Objective">Leiche</string>
+    <string name="Lich_Desc">Der Nekromant hat sein Ende in den Tiefen der Nekropole gefunden und als die böse Energie dieses Platzes in seinen Körper gekrochen ist, hat er sich eventuell in den Lich verwandelt. Der Untote Hexer, eine willenlose Marionette, kontrolliert von boshaften Mächten.</string>
+
     <!-- STRINGS OF RunicSkull CLASS -->
     <string name="RunicSkull_Name">runischer Schädel</string>
     <string name="RunicSkull_Gender">maskulin</string>
     <string name="RunicSkull_Name_Objective">runischer Schädel</string>
+    <string name="RunicSkull_Desc">Für etwas gekünsteltes gemacht, sieht dieser Schädel ein bisschen zu Real aus. Du kannst ein schwaches glühen um den Schädel sehen.</string>
+
     <!-- STRINGS OF Zombie CLASS -->
     <string name="Zombie_Name">Zombie</string>
     <string name="Zombie_Gender">maskulin</string>
     <string name="Zombie_Name_Objective">Zombie</string>
+    <string name="Zombie_Desc">Der Dungeon ist ein gefährlicher Platz und viele Abenteurer haben ihr Verhängnis in diesem Platz gefunden. Aber die unglücklichsten haben ihr ende in der Nekropole gefunden, wo sie nun als verrottende Leiche herumwandern.</string>
+
     <!-- STRINGS OF NecromancerNPC CLASS -->
     <string name="NecromancerNPC_Intro2">Ah! Ein Abenteurer, der nicht tot ist. Hervorragend! Oh ... ich bitte um Verzeihung. Sie sehen, ich bin selbst ein Nekromant. Und auch wenn die Toten und selbst der Tod ist, was ich ein Leben lang studieren werde, sehen gleiche Sachen immer und immer wieder extrem langweilig aus. Auf der anderen Seite, das ist genau, warum ich hier bin. Etwas spektakuläres ist vor kurzem passiert. Ein _Necropolis_, eine alte Stadt der Toten hat endlich seine Türen geöffnet. In der Tat stehen wir direkt neben dem Eingang. Und ... Weißt du was, nimm diesen Schlüssel und geh zuerst, ich meine, du und Abenteuer und so? Und ich werde direkt hinter dir kommen, ich muss nur bereit werden.</string>
 

@@ -4,7 +4,20 @@
     <!-- STRINGS OF Artifact CLASS -->
     <string name="Artifact_Limit">Du kannst nur 2 Artifakte zur gleichen Zeit tragen.</string>
 
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">Wahrsager</string>
+    <string name="FortuneTellerNPC_Gender">weiblich</string>
     <string name="FortuneTellerNPC_Name_Objective">Wahrsager</string>
+    <string name="FortuneTellerNPC_Desc">Diese Frau trägt eine lange helle Robe. Sie sieht überraschend jung aus, für jemanden, der die Kunst des Wahrsagens gemeistert hat. Wenn man näher kommt, kann man sie murmeln höhren, währand sie in ihre Kristall-Kugel starrt.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Limit_Reached">Ich entschuldige mich, aber du hast das momentane Limit erreicht. Aber du solltest in der Lage sein unseren Service für jeden Helden Level den du erreichst zu nutzen.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">Ich kann Geheimnisse hinter Gegenständen enthüllen, wenn du es willst.\nEine Identifikation wird dich %d Münzen kosten.</string>
+    <string name="WndFortuneTeller_No_Item">Pass auf, du willst doch nicht dein Geld für nichts ausgeben, oder doch? Du hast keine unidentifizierten Gegenstände in deinem Inventar.</string>
     <string name="WndFortuneTeller_Title">Wahrsager.</string>
 
     <!-- STRINGS OF Generic Button labels -->
@@ -16,12 +29,25 @@
 
     <!-- STRINGS OF WndLibrary CLASS -->
     <string name="WndLibrary_Catalogue_Title">Bücherei</string>
+    <string name="WndLibrary_Catalogue_Instruction">Bitte Wähle eine der Kategorien unten.</string>
     <string name="WndLibrary_Mobs_Btn">Monster</string>
+    <string name="WndLibrary_Items_Btn">Gegenstände</string>
     <string name="WndLibrary_Codex_Btn">Geschichten</string>
+    <string name="WndLibrary_Levels_Btn">Dungeon</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">Du hast %1$d mal von %2$d geguckt. Du wirst zusätzliche Gelegenheiten um Filme zu gucken erhalten, für jeden neuen Helden Level.</string>
+
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_blue_carpet_name">Teppich</string>
     <string name="town_deco_blue_carpet_desc">Ein exquisierter Teppich, geschmückt mit lila Seide.</string>
 
     <string name="town_table_fortune_name">Tisch</string>
-    </resources>
+    <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
+
+    <string name="ConcreteBlock_Name">Schwerer handfester Block</string>
+    <string name="ConcreteBlock_Description">Sieht so aus, als ob dieser Block %d Stärkepunkte benötigt um ihn zu schieben.</string>
+    <string name="Hero_AnotherTry">Du bist gestorben.\n Willst du es erneut versuchen?</string>
+
+</resources>

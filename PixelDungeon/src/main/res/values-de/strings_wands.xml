@@ -49,25 +49,44 @@
   <string name="Sheep_Name_Objective">Schaf</string>
   <string name="Sheep_Gender">feminin</string>
   <string name="Sheep_Desc">Das ist ein magisches Schaf. Was daran so magisch ist? Du kannst es töten. Es wird dort stehen, bis es auf magische Weise hinvort scheidet, stets wiederkäuend mit leerem Blick.</string>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>Baa!</item>
+    <item>Baa?</item>
+    <item>Baa.</item>
+    <item>Baa...</item>
+    <item>Bee...</item>
+    <item>Ble...</item>
+  </string-array>
   <!--STRINGS OF WandOfLightning CLASS-->
   <string name="WandOfLightning_Name">Zauberstab des Blitzes</string>
+  <string name="WandOfLightning_Info">Dieser Stab projiziert tödliche Blitze, die gegnern Schaden zufügen, die nah beieinander stehen.</string>
+  <string name="WandOfLightning_Info1">Du hast dich mit deinem eigenen Blitzstab umgebracht...</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
   <string name="WandOfMagicMissile_Name">Zauberstab des Magischen Geschosses</string>
+  <string name="WandOfMagicMissile_Info">Dieser Stab schießt Projektile aus purer Magie, die gegnern moderaten Schaden zufügen.</string>
   <string name="WandOfMagicMissile_ACDisenchant">ENTZAUBERN</string>
+  <string name="WandOfMagicMissile_Info1">Du hast dich mit deinem eigenen Stab des Magischen Projektils umgebracht...</string>
   <string name="WandOfMagicMissile_SelectWand">Wähle einen Zauberstab den du verbessern möchtest</string>
+  <string name="WandOfMagicMissile_Desinchanted">Du entzauberst deinen Stab des Magischen Projektils und nutzt diese Essenz um deinen %s zu verbessern.</string>
   <!--STRINGS OF WandOfPoison CLASS-->
   <string name="WandOfPoison_Name">Zauberstab des Giftes</string>
+  <string name="WandOfPoison_Info">Ein Schuss dieses Stück Holzes wird das Ziel vergiften. Eine Kreatur, die vergiftet ist erhält durchgehend Schaden bis der Effekt endet. Die Dauer des Effektes erhöht sich mit dem Level des Stabes.</string>
   <string name="WandOfPoison_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
   <string name="WandOfRegrowth_Name">Zauberstab der Begrünung</string>
+  <string name="WandOfRegrowth_Info">Wenn Leben aufhört, fängt neues Leben an zu wachsen... Dieser Zirkel bleibt immer bestehen.</string>
   <string name="WandOfRegrowth_Info1">Es passierte nichts</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
   <string name="WandOfSlowness_Name">Zauberstab der Verlangsamung</string>
+  <string name="WandOfSlowness_Info">Dieser Stab zwingt eine Kreatur dazu, sich mit der halben Geschwindigkeit zu Bewegen und zu Attackieren, bis der Effekt endet.</string>
   <string name="WandOfSlowness_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfTelekinesis CLASS-->
   <string name="WandOfTelekinesis_Name">Zauberstab der Telekinese</string>
+  <string name="WandOfTelekinesis_Info">Wellen von Magischer Energie von diesem Stab werden alle Felder auf ihrem Weg beeinflussen. Dies löst Fallen aus, zerstört hohes Grass und Öffnet oder Schließt Türen. Sie stoßen auch Gegner zurück.</string>
   <string name="WandOfTelekinesis_YouNowHave">Du hast auf magische Weise %s in deinen Rucksack befördert</string>
   <!--STRINGS OF WandOfTeleportation CLASS-->
   <string name="WandOfTeleportation_Name">Zauberstab der Teleportation</string>
+  <string name="WandOfTeleportation_Info">Ein Schuss von diesem Stab wird eine Kreatur gegen ihren Willen an einen zufälligen Platz auf dem momentanen Level Teleportieren.</string>
+  <string name="WandOfTeleportation_Info1">%1$s hat %2$s irgedwohin Teleportiert.</string>
   <string name="WandOfTeleportation_Info2">Es passierte nichts</string>
 </resources>
