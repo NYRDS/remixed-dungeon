@@ -163,7 +163,7 @@ public class ShopPainter extends Painter {
 		}
 		
 		items.add( new PotionOfHealing() );
-		for (int i=0; i < 3; i++) {
+		for (int i=0; i < 2; i++) {
 			items.add( Generator.random( Generator.Category.POTION ) );
 		}
 		
