@@ -2,10 +2,22 @@
 <resources>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Herzlich willkommen!</string>
-  <string name="Welcome_Text">Remixed Pixel Dungeon ist eine Modifikation von Watabou\'s open source Pixel Dungeon.\n Dieses Projekt wurde erstellt um Spieler mit neuen Erfahrungen und Inhalten zu versorgen.\n Ein anderer, wichtiger Bestandteil unseres Projekt ist es, eine Mehrsprachenunterstützung für das Spiel zu entwickeln.\n Wir versuchen mit jedem Update so nahe wie möglich an unserer Community zu bleiben.\n Und falls Sie eines Tages sehen, dass ihre Idee in das Spiel übernommen wurde... Danke für ihre Kreativität =)\n Die aktuelle Version basiert auf Pixel Dungeon 1.7.2 und teilweise 1.7.5.\n Unterschiede zum Original: \n - Die Möglichkeit die Sprache zu ändern. (aktuell unterstützt: Englisch, Russisch)\n - Neues Monster und NPC\n - Giftiges Gas und Feuer können nun mit mehr Gegenständen interagieren\n - Neue Arten von «Nahrung»\n - Neue Gegenstände und neue Eigenschaften bei einigen alten Gegenständen\n - Samen können jetzt auch gegessen werden =)\n </string>
+  <string name="Welcome_Text">
+Remixed Pixel Dungeon ist eine Modifikation von Watabou\'s open source Pixel Dungeon.\n
+Dieses Projekt wurde erstellt um Spieler mit neuen Erfahrungen und Inhalten zu versorgen.\n
+Ein anderer, wichtiger Bestandteil unseres Projekt ist es, eine Mehrsprachenunterstützung für das Spiel zu entwickeln.\n
+Wir versuchen mit jedem Update so nahe wie möglich an unserer Community zu bleiben.\n Und falls Sie eines Tages sehen, dass ihre Idee in das Spiel übernommen wurde... Danke für ihre Kreativität =)\n
+Die aktuelle Version basiert auf Pixel Dungeon 1.7.2 und teilweise 1.7.5.\n
+Unterschiede zum Original: \n
+ - Die Möglichkeit die Sprache zu ändern. (aktuell unterstützt: Englisch, Russisch)\n
+ - Neues Monster und NPC\n
+ - Giftiges Gas und Feuer können nun mit mehr Gegenständen interagieren\n
+ - Neue Arten von «Nahrung»\n
+ - Neue Gegenstände und neue Eigenschaften bei einigen alten Gegenständen\n
+ - Samen können jetzt auch gegessen werden =)\n</string>
   <string name="Welcome_Text_19">
 remix.17:\n
--Neue Mimicart\n
+-Neue Mimikart\n
 remix.18:\n
 -Elementare\n
 remix.19\n
@@ -52,6 +64,14 @@ remix.22:\n
 - Größere Viefalt der Mini-bosse für einen finalen Kampf (anstatt zweier Fäuste, kann Yog jetzt aus insgesamt 5 Mini-bossen wählen)\n
 - Neue Szenerie und Monster für die Ebenen 27-31
 </string>
+  <string name="Welcome_Text_23_1">
+Remix.23.1:\n 
+- Es gibt einen neuen Laden, einen neuen NPC und eine neue Quest auf Ebene 27\n
+- Neue Monster für das Dämonennest (27-31)\n
+- Alle Monster und Bossgegner in den leveln 27-32 und ihre Fähigkeiten sind stärker geworden\n
+- Bessere Boss Errungenschaften\n
+- Einige visuelle Verbesserungen\n
+- Mehrere Bugs wurden behoben\n</string>
   <string name="Welcome_Text_23_2">
 remix.23.2:
 - Stufe 6 Waffen und Rüstungen hinzugefügt
@@ -62,4 +82,26 @@ remix.24:
 - Kopfbedeckungen hinzugefügt! (eigennützige Gegenstände)
 - Übersetzungen aktualisiert
 - einige Fehlerbehebungen</string>
+  <string name="Welcome_Text_24_1">
+remix.24.1:\n
+--Spiel--\n
+- Neuer Gegner: Gepanzerte Statue\n
+- Neue seltene Gegner: Spinnen Wächter (seltenheit vom Spinnenwächter) und Bernstein Spinne (seltenheit von der PSI-Spinne)\n
+- Spieler können jetzt Speicherdateien löschen\n
+- Verbesserte Optik für die Spinnenhöhle\n
+--Kostüme--\n
+- Der Kauf von neuen Gegenständen wählt diese automatisch aus\n
+- Neues Kostüm \"Piraten Verkleidung\"\n
+- Verbesserte Optik für Neko Ohren und Hasen Ohren\n</string>
+  <string name="Welcome_Text_26_3">
+remix.26.3\n
+- Stadt ist nun größer\n
+- Stadtladen verkauft jetzt mehr Gegenstände\n
+- Neue Aufgabe in der Stadt\n</string>
+  <string name="Welcome_Text_26_6">
+remix.26.6\n
+- neues einzigartiger Gegenstand: Zauberstab des Schattenballs\n
+- Der Kristall der vom Schattenherr erschafft wird, nutzt nun den Stab des Schattenballs anstelle der normalen Attacke. Die Chance diesen Stab zu erhalten ist 25%\n
+- Repariert Fernangriff Fehler für: Luft Element, Kristall, Brennende Faust, PSI-Spinne und Bernsteinspinne\n
+- Magier Rüstung (Version für Hexenmeister: Hexenmeister Rüstung) und Süßigkeit sind nun in Mods verwendbar\n</string>
 </resources>

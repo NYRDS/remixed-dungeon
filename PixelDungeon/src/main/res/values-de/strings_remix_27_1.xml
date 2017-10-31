@@ -1,3 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">Portal</string>
+    <string name="WndPortal_Info">Dieses Portal erlaubt es dir zur Stadt zurückzukehren. Es scheint, als ob es instabil ist und deshalb nicht sehr lang Aktiv sein kann.\nWillst du es wirklich verwenden?</string>
+    <string name="WndPortal_Info_Return">Dieses Portal bringt dich zurück zum Dungeon.\nWillst du es wirklich verwenden?</string>
+
+    <string name="WndPortal_Warning_Title">Portal Warnung!</string>
+    <string name="WndPortal_Warning_Info">Du hast das Portal auf diesem Level noch nicht verwendet. Nach dem verlassen wirst du nicht in der Lage sein es zu benutzen!\nWillst du diesen Level wirklich verlassen?</string>
+
+    <string name="PortalGate_Name">Portal</string>
+    <string name="PortalGate_Desc">Die Schnitzereien auf der Oberfläche des Portal formen seltsame Muster. Es scheint, als ob es ein gigantischer Tunnel ist, der weit weg führt. Aber wenn man von der Seite guckt, wird klar, dass die Oberfläche Glatt ist.</string>
+    <string name="PortalGate_Desc_Activated">Das Portal gibt eine glühende Masse ab. Sie sieht komplett still aus, wenn nicht gerade eine Welle vom Zentrum kommt.</string>
+
+    <string name="PortalGate_Activated">Das antike Portal ist erwacht!</string>
+    <string name="PortalGate_Used">Du berührst das Portal und... nichts passiert.</string>
+
+    <string name="PortalExit_Desc">Das Portal wird dich zum ersten Level des %s bringen.</string>
+    <string name="PortalExit_Desc_SpiderNest">Spinnenhöhle</string>
+    <string name="PortalExit_Desc_Necropolis">Nekropole</string>
+    <string name="PortalExit_Desc_IceCaves">Eis Höhle</string>
+
+
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Verschlingen</string>
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Steinblut</string>
+</resources>

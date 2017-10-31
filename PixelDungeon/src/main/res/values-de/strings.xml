@@ -84,6 +84,14 @@
     <item>Der Text ist in dämonischer Sprache verfasst.</item>
   </string-array>
   <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>Auf Diät</item>
+    <item>Der Glaube ist meine Rüstung</item>
+    <item>Pharmakophobie</item>
+    <item>Unfruchtbare Erde</item>
+    <item>Schwarm Intelligenz</item>
+    <item>In die Dunkelheit</item>
+  </string-array>
   <!--STRINGS OF Journal CLASS-->
   <string name="Journal_WellHealt">Brunnen der Heilung</string>
   <string name="Journal_WellAwareness">Brunnen der Aufmerksamkeit</string>
@@ -194,6 +202,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <!--STRINGS OF WndWandmaker CLASS-->
   <string name="WndWandmaker_Message">Oh, wie ich sehe, warst du erfolgreich! Ich hoffe doch, dass dir das nicht viel Ärger gebracht hat. Aber ich halte mein versprechen: Du kannst einen meiner hoch qualitativen Zauberstäbe haben.</string>
   <string name="WndWandmaker_Battle">Kampf-Zauberstab</string>
+  <string name="WndWandmaker_NonBattle">Nützlicher Zauberstab</string>
   <string name="WndWandmaker_Farawell">Viel Glück bei deiner Quest, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">Wähle ein Item für den Schnellzugriff</string>
@@ -213,6 +222,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <!--STRINGS OF Amulet CLASS-->
   <string name="Amulet_Name">Amulett von Yendor</string>
   <string name="Amulet_ACEnd">SPIEL BEENDEN</string>
+  <string name="Amulet_Info">Das Amulet von Yendor ist das stärkste bekannte Artefakt aus unbekannter Herkunft. Es wird gesagt, dass das Amulett in der Lage ist jeden Wunsch des Besitzers auszuführen, wenn der Besitzer stark genug um das Amulett davon zu überzeugen.</string>
   <!--STRINGS OF Ankh CLASS-->
   <string name="Ankh_Name">Ankh</string>
   <string name="Ankh_Info">Dieses antike Symbol der Unsterblichkeit gewährt dir die Fähigkeit, dich nach deinem Tod wiederzubeleben. Beim Wiederauferstehen gehen jedoch alle nicht-ausgestatteten Gegenstände verloren.</string>
@@ -238,6 +248,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="Gold_Info">Ein Haufen von %d Goldmünzen.</string>
   <string name="Gold_Info1">Eine Goldmünze.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
+  <string name="KindOfWeapon_EquipCursed">Du zuckst zusammen, als du dein %s unfreiwillig festhälst.</string>
   <!--STRINGS OF LloidsBeacon CLASS-->
   <string name="LloidsBeacon_Name">Lloyds Leuchtfeuer</string>
   <string name="LloidsBeacon_ACSet">SETZEN</string>
@@ -245,6 +256,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="LloidsBeacon_Info">Lloyds Leuchtfeuer ist ein kompliziertes magisches Gerät, das dir ermöglicht, zu einem Ort zurückzukehren, an dem du schon einmal warst.</string>
   <string name="LloidsBeacon_Preventing">Die starke magische Aura dieses Ortes hindert dich daran, Lloyds Leuchtfeuer zu benutzen.</string>
   <string name="LloidsBeacon_Creatures">Die übersinnliche Aura naher Kreaturen hindert dich daran, Lloyds Leuchtfeuer jetzt zu benutzen.</string>
+  <string name="LloidsBeacon_Return">Lloyd\'s Leutfeuer wurde mit Erfolg an deine momentane Stelle gesetzt, jetzt kannst du jederzeit hierher zurückkehren.</string>
   <string name="LloidsBeacon_Set">
 
 Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetzt.</string>
@@ -253,14 +265,17 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Stylus_ACInscribe">BESCHRIFTEN</string>
   <string name="Stylus_Info">Dieser mysteriöse Stift wurde aus schwarzem, sehr harten Stein gemacht. Du kannst mit ihm eine Glyphe oder eine Rune schreiben, aber nicht bestimmen, welche es sein soll, da sie sich der Stift aussucht.</string>
   <string name="Stylus_SelectArmor">Wähle einen Gegenstand zum Beschriften</string>
+  <string name="Stylus_Inscribed">Du trägst in dein %2$s die %1$s ein.</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Buch der Meisterschaft</string>
   <string name="TomeOfMastery_ACRead">LESEN</string>
+  <string name="TomeOfMastery_Info">Dieses getragene Lederbuch ist nicht sehr dick, aber du fühlst irgendwie, das du eine Menge davon erhalten kannst. Bedenke, dass es eine Weile dauert, bis du das Buch gelesen hast.</string>
   <string name="TomeOfMastery_Blinded">Du kannst nicht lesen, während du geblendet bist</string>
   <string name="TomeOfMastery_Choose">Du hast dich entschieden den Weg des %s einzuschlagen!</string>
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">Fackel</string>
   <string name="Torch_ACLight">ERLEUCHTEN</string>
+  <string name="Torch_Info">Dies ist ein unverzichtbarer Gegenstand in den Dämonen Hallen, der für seine schlechte Beleuchtung bekannt ist.</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">Gewichtsstein</string>
   <string name="Weightstone_ACApply">ANWENDEN</string>
@@ -280,12 +295,15 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Keyring_Info">Das ist ein Schlüsselbund aus Kupfer, der all deine Schlüssel seperat zusammenhält.</string>
   <!--STRINGS OF ScrollHolder CLASS-->
   <string name="ScrollHolder_Name">Schriftrollenhalter</string>
+  <string name="ScrollHolder_Info">Du kannst eine beliebige Anzahl an Schriftrollen in diesem röhrenförmigen Behälter aufbewahren. Es spart Platz und beschützt die Schriftrollen vor Feuer.</string>
   <!--STRINGS OF SeedPouch CLASS-->
   <string name="SeedPouch_Name">Samenbeutel</string>
   <string name="SeedPouch_Info">Dieser kleine Samtbeutel bewahrt alle deine Samen auf. Sehr praktisch.</string>
   <!--STRINGS OF WandHolster CLASS-->
   <string name="WandHolster_Name">Stabtasche</string>
+  <string name="WandHolster_Info">Dieser schmale Behälter ist aus Leder von einem exotischen Tier. Er erlaubt es dir %d Zauberstäbe zu tragen.</string>
   <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Info">Dieser starke Ledergürtel ist fähig alle deine Tränke zu halten, während es sie vor Schütteln und Frost schützt.</string>
   <string name="PotionBelt_Name">Trankgürtel</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
@@ -293,6 +311,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="GoldenKey_Info">Die Einkerbungen dieses goldenen Schlüssels sind klein und verworren. Vielleicht kann er ein Truhenschloss öffnen?</string>
   <!--STRINGS OF IronKey CLASS-->
   <string name="IronKey_Name">Eisener Schlüssel</string>
+  <string name="IronKey_Info">Die Kerben auf diesem antiken Eisenschlüssel sind stark beschädigt; die Lederkordel ist durchs Alter abgenutzt. Welche Tür wird es öffnen?</string>
   <string name="IronKey_FromDepth">Schlüssel von Tiefe %d</string>
   <!--STRINGS OF SkeletonKey CLASS-->
   <string name="SkeletonKey_Name">Skelettschlüssel</string>
@@ -300,15 +319,20 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">Leichenstaub</string>
+  <string name="CorpseDust_Info">Dieser Ball aus Leichenstaub unterscheidet sich äußerlich nicht von einem normalen Staubball. Warum auch immer, weißt du, dass du diesen Ball so schnell wie möglich loswerden solltest.</string>
+  <string name="CorpseDust_Info2">Vielleicht weil du es gerade hälst macht es dich Müde un Wütend.</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">Dunkles Golderz</string>
+  <string name="DarkGold_Info">Dieses Metall wird nicht wegen seiner Farbe dunkel genannt (Es unterscheidet sich nicht von normalem Gold), sondern weil es bei Tageslicht schmilzt, was es unnütz auf der Oberfläche macht.</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">getrocknete Rose</string>
   <string name="DriedRose_Info">Diese Rose ist schon sehr lange vertrocknet, trotzdem hat sie seltsamerweise noch alle Blüten.</string>
+  <string name="DriedRose_Info2">Und es hat seinen Charm nicht verloren. Es guckt so schön, dass du es fürimmer behalten willst.</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">Zwergenmünze</string>
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">Spitzhacke</string>
+  <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch alls Waffe genutzt werden.</string>
   <string name="Pickaxe_ACMine">ABBAUEN</string>
   <string name="Pickaxe_Gender">weiblich</string>
   <string name="Pickaxe_NoVein">Es gibt keine Goldader in der Nähe.</string>
@@ -322,6 +346,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Ein Feuer wütet hier.</string>
   <!--STRINGS OF Foliage CLASS-->
+  <string name="Foliage_Info">Schäfte aus Licht durchstoßen die Düsternis des Untergrundgartens.</string>
   <!--STRINGS OF ParalyticGas CLASS-->
   <string name="ParalyticGas_Info">Eine Wolke paralysierendes Gas wirbelt hier. </string>
   <!--STRINGS OF ToxicGas CLASS-->
@@ -329,6 +354,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="ToxicGas_Info1">Du bist gestorben weil du giftige Luft eingeatmet hast.</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
   <string name="WaterOfAwareness_Info">Die Kraft des Wissens strömt durch das Wasser dieses Brunnens. Nimm einen Schluck, um alle Geheimnisse über deine ausgerüsteten Gegenstände zu erfahren.</string>
+  <string name="WaterOfAwareness_Procced">Als du einen Schluck nimmst, fühlst du, dass Wissen in deinen Kopf fließt. Du weißt nun alles über deine ausgerüsteten Gegenstände. Außerdem spürst du alle Gegenstände auf diesem Level und kennst alle Geheimnisse.</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
   <string name="WaterOfHealth_Info">Die Kraft des Heilens strömt durch das Wasser dieses Brunnens. Nimm einen Schluck um dich komplett zu heilen und deinen Hunger zu stillen.</string>
   <string name="WaterOfHealth_Procced">Deine Wunden heilen vollständig.</string>
@@ -340,6 +366,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF Amok CLASS-->
   <string name="Amok_Info">Amok</string>
   <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">Zusäztliche Rüstung</string>
   <!--STRINGS OF Bleeding CLASS-->
   <string name="Bleeding_Info">Blutend</string>
   <string name="Bleeding_Death">Du bist verblutet</string>
@@ -364,6 +391,16 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF GasesImmunity CLASS-->
   <string name="GasesImmunity_Info">Immun gegen Gase</string>
   <!--STRINGS OF Hunger CLASS-->
+  <string-array name="Hunger_Hungry">
+    <item>Du bist Hungrig.</item>
+    <item>Du bist Hungrig</item>
+    <item>Du bist Hungrig</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>Du verhungerst!</item>
+    <item>Du verhungerst!</item>
+    <item>Du verhungerst!</item>
+  </string-array>
   <string name="Hunger_Death">Du bist verhungert...</string>
   <string name="Hunger_Info1">Hungrig</string>
   <string name="Hunger_Info2">Verhungernd</string>
@@ -400,6 +437,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Belongings_Name">Rucksack</string>
   <!--PACKAGE /sprites-->
   <!--STRINGS OF ItemSprite CLASS-->
+  <string name="ItemSprite_Info1">Falle zurseite: %1$.1f %2$.1f</string>
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
   <string name="Toolbar_Info1">Du weißt nicht, was dort ist.</string>

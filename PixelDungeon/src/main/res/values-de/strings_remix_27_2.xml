@@ -1,3 +1,77 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">Chaos Helm</string>
+    <string name="ChaosHelmet_Info">Ein Blutroter Helm. Das Symbol ein Chaos Kriegers.</string>
+
+
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s: Beschwörungslimit erreicht (momentanes maximum: %2$d)!</string>
+    <string name="Mana_Title">Mana</string>
+    <string name="Mana_Cost">Mana Kosten:</string>
+    <string name="Spells_NotEnoughSP">Du hast nicht genug Mana um einen \"%1$s\" Zauberspruch auszuführen.</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">Beschwöre einen Untoten</string>
+    <string name="SummonDeathling_Info">Beschwört einen Untoten, der dir folgt. Untoten LP und sein Schaden erhöht sich mit dem Helden Level. \n\nBeschwörungslimit: %1$d (+1 Jeden Magie Level)</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">Anzünden</string>
+    <string name="Ignite_Info">Zündet selektiertes Feld an. Kann benutzt werden um Gras, Charaktere und Objekte anzuzünden.</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">Festwachsen</string>
+    <string name="RootSpell_Info">Verwurzelt selektierten Chrakter und macht es ihm unmöglich für eine kurze weile sich zu Bewegen.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">Winstoß</string>
+    <string name="WindGust_Info">Bläst einen Windstoß gegen den selektierten Charakter und stößt in weg.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">Einfrieren</string>
+    <string name="FreezeGlobe_Info">Friert selektierten Charakter ein und macht es ihm für eine kurze Zeit unmöglich jedwede Aktion auszuführen.</string>
+
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Magische Fackel</string>
+    <string name="MagicTorch_Info">Ein Zauberspruch, der Licht produziert, um Dunkle Dungeon Level zu erhellen.</string>
+
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">Heilung</string>
+    <string name="Healing_Info">Dieser Spruch ist wichtig für jeden Abenteurer. Er wird den Leser um 1/3 der maximalen Leben Heilen.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">Nicht genügend Mana!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">TRINKEN</string>
+    <string name="Drink_Message">Dieses Getränk war erfrischend!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">Wälzer des Wissens</string>
+    <string name="TomeOfKnowledge_Info">Dieser alte Wälzer ist mit arkanen Rätseln und Mysterien gefüllt. Es mag hart sein ihn zu Lesen, aber wenn du ihn durch hast, werden deine magischen Kräfte definitiv gesteigert.</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">Zauberbuch</string>
+    <string name="SpellBook_Info">Es sieht mehr wie eine Zusammenstellung sortierter Seiten aus, die zusammengeheftet sind, als wie ein Buch. Du könntest in der Lage sein etwas draus zu machen, wenn du dich darauf konzentrierst.</string>
+    <string name="SpellBook_Info_Identified">In diesen Seiten hast du den kompletten Text eines \"%1$s\" Spruches gefunden.\n\" %2$s \"</string>
+
+
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">Mana Trank</string>
+    <string name="ManaPotion_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">Dieser Pilz hat komisch geschmeckt!</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">Dies ist ein unverzichtbarer Gegenstand in diesem Dungeon, der dafür bekannt ist, für seine schlechte Beleuchtung.</string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">Zaubersprüche</string>
+    <string name="WndSpells_Level">Magie Level:</string>
+
+</resources>

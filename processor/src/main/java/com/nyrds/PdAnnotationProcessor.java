@@ -32,9 +32,15 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
+		Map<Element, String>       defaultValues= new HashMap<>();
 		// for each javax.lang.model.element.Element annotated with the CustomAnnotation
 		for (Element element : roundEnvironment.getElementsAnnotatedWith(Packable.class)) {
 			Element parent = element.getEnclosingElement();
+
+			String defaultValue = element.getAnnotation(Packable.class).defaultValue();
+			if(!defaultValue.isEmpty()) {
+				defaultValues.put(element,defaultValue);
+			}
 
 			if(fieldsByClass.get(parent)==null) {
 				fieldsByClass.put(parent,new HashSet<Element>());
@@ -87,26 +93,38 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 						.build();
 
 				String fieldType = TypeName.get(field.asType()).toString();
+				String defaultValue = defaultValues.get(field);
 				if(fieldType.equals("int")) {
+					if(defaultValue==null || defaultValue.isEmpty()) {
+						defaultValue = "0";
+					}
 					unpackerBlock = unpackerBlock.toBuilder()
-							.addStatement("$L.setInt(arg,bundle.getInt($S))", fieldName,fieldName)
+							.addStatement("$L.setInt(arg,bundle.optInt($S,$L))", fieldName,fieldName,defaultValue)
 							.build();
 				}
 				if(fieldType.equals("boolean")) {
+					if(defaultValue==null || defaultValue.isEmpty()) {
+						defaultValue = "false";
+					}
 					unpackerBlock = unpackerBlock.toBuilder()
-							.addStatement("$L.setBoolean(arg,bundle.getBoolean($S))", fieldName,fieldName)
+							.addStatement("$L.setBoolean(arg,bundle.optBoolean($S,$L))", fieldName,fieldName,defaultValue)
 							.build();
 				}
 				if(fieldType.equals("float")) {
+					if(defaultValue==null || defaultValue.isEmpty()) {
+						defaultValue = "0.0f";
+					}
 					unpackerBlock = unpackerBlock.toBuilder()
-							.addStatement("$L.setFloat(arg,bundle.getFloat($S))", fieldName,fieldName)
+							.addStatement("$L.setFloat(arg,bundle.optFloat($S,$L))", fieldName,fieldName,defaultValue)
 							.build();
 				}
 
-
 				if(fieldType.equals("java.lang.String")) {
+					if(defaultValue==null || defaultValue.isEmpty()) {
+						defaultValue = "Unknown";
+					}
 					unpackerBlock = unpackerBlock.toBuilder()
-							.addStatement("$L.set(arg,bundle.getString($S))", fieldName,fieldName)
+							.addStatement("$L.set(arg,bundle.optString($S,$S))", fieldName,fieldName,defaultValue)
 							.build();
 				}
 			}

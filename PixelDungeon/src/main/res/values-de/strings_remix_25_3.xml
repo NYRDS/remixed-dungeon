@@ -49,6 +49,10 @@
     <string name="ScarecrowNPC_Gender">geschlechtslos</string>
     <string name="ScarecrowNPC_Name_Objective">Vogelscheuche</string>
     <string name="ScarecrowNPC_Desc">Es gibt keinen Zweifel ... diese Vogelscheuche beobachtet jede deiner Bewegungen. Seine rot leuchtenden Augen durchbohren dich, aber überraschenderweise, fühlen Sie sich nicht bedroht.</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Warum hallo kleiner Junge, wie machst du das?\n Ich habe etwas aufregendes für dich!\n\n Oh wie wundervoll ich doch wäre,\n wenn du jetzt gehstund einige Süßigkeiten für mich holst!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Warum hallo kleines Mädchen, wie machst du das?\n Ich habe etwas aufregendes für dich!\n\n Oh wie wundervoll ich doch wäre,\n wenn du jetzt gehstund einige Süßigkeiten für mich holst!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Fünf Süßigkeiten sind alles, was ich brauche.\n Oh und die Belohnung wird so süß sein!</string>
+    <string name="ScarecrowNPC_Quest_End">Wie lustig, wie gut!\n Für das kriegst du das eigentliche Essen!</string>
     <string name="Journal_ScarecrowNPC">Vogelscheuche</string>
 
 </resources>
