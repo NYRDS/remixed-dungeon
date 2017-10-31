@@ -89,9 +89,6 @@
 			"levelId": "7",
 			"depth": "7"
 		}],
-		"quickslot":[{
-			"kind": "NecromancerRobe"
-		}],
         "hp":15,
         "knownItems":[{"kind":"PotionOfHealing"}],
 		"startingSp": 0,
