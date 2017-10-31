@@ -11,4 +11,6 @@ import static java.lang.annotation.ElementType.FIELD;
 
 @Target(value = FIELD)
 public @interface Packable {
+	String defaultValue() default "";
 }
+
