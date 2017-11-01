@@ -31,7 +31,7 @@
   <string name="ClothArmor_Name">ткана броня</string>
   <string name="ClothArmor_Desc">Ця легка броня забезпечує невеликий захист.</string>
   <!--STRINGS OF ElfArmor CLASS-->
-  <string name="ElfArmor_Name">Ельфійська мантія</string>
+  <string name="ElfArmor_Name">Мантія Ельфів</string>
   <string name="ElfArmor_Desc">За допомогою цієї мантії ельф зможе викликати сили самої природи. Висока трава буде рости в мить, навіть через твердий камінь, зупиняючи всіх ворогів у полі зору.</string>
   <string name="ElfArmor_ACSpecial">КЛИЧ ПРИРОДИ</string>
   <string name="ElfArmor_NotElf">Тільки ельфи можуть використовувати цю броню!</string>
@@ -75,7 +75,7 @@
   <!--STRINGS OF Affection CLASS-->
   <string name="Affection_Txt">%s пристрасті</string>
   <!--STRINGS OF AntiEntropy CLASS-->
-  <string name="AntiEntropy_Txt">%s антиентропії</string>
+  <string name="AntiEntropy_Txt">%s анти-ентропії</string>
   <!--STRINGS OF Bounce CLASS-->
   <string name="Bounce_Txt">%s пружності</string>
   <!--STRINGS OF Displacement CLASS-->
