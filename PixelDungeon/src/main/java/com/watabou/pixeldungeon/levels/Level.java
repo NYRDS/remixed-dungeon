@@ -239,6 +239,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getViewDistance() {
+		if (viewDistance == 0){
+			viewDistance = rollViewDistance();
+		}
 		viewDistance = DungeonGenerator.getLevelProperty(levelId, "viewDistance", viewDistance);
 		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
 		return viewDistance;
@@ -482,10 +485,6 @@ public abstract class Level implements Bundlable {
 
 		createMobs();
 		createItems();
-
-		if (viewDistance == 0){
-			viewDistance = rollViewDistance();
-		}
 	}
 
 	public void reset() {
