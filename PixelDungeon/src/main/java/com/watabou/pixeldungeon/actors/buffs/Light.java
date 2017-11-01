@@ -26,14 +26,13 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 public class Light extends FlavourBuff {
 
 	public static final float DURATION	= 250f;
-	public static final int DISTANCE	= 4;
 	
 	@Override
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
 			// When a level is loading, do nothing
 			if (Dungeon.level != null) {
-				target.viewDistance = Math.max(Dungeon.level.getViewDistance(), DISTANCE );
+				target.viewDistance = Dungeon.level.getMaxViewDistance();
 				Dungeon.observe();
 			}
 			return true;

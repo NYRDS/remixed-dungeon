@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.levels;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -238,9 +239,16 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getViewDistance() {
+		if (viewDistance == 0){
+			viewDistance = rollViewDistance();
+		}
 		viewDistance = DungeonGenerator.getLevelProperty(levelId, "viewDistance", viewDistance);
 		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
 		return viewDistance;
+	}
+
+	public int getMaxViewDistance() {
+		return MAX_VIEW_DISTANCE;
 	}
 
 	public enum Feeling {
@@ -254,6 +262,9 @@ public abstract class Level implements Bundlable {
 	public static int[] NEIGHBOURS8;
 	public static int[] NEIGHBOURS9;
 
+	protected static final int MAX_VIEW_DISTANCE = 8;
+	public static final int MIN_VIEW_DISTANCE = 3;
+
 	private static final float TIME_TO_RESPAWN = 50;
 
 	private static final String TXT_HIDDEN_PLATE_CLICKS = Game
@@ -265,7 +276,8 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 
-	protected int viewDistance = 6;
+	@Packable
+	protected int viewDistance;
 
 	public boolean[] fieldOfView;
 
@@ -473,8 +485,6 @@ public abstract class Level implements Bundlable {
 
 		createMobs();
 		createItems();
-
-		reRollViewDistance();
 	}
 
 	public void reset() {
@@ -1617,11 +1627,11 @@ public abstract class Level implements Bundlable {
 		return DungeonGenerator.isStatic(levelId);
 	}
 
-	private void reRollViewDistance(){
+	private int rollViewDistance(){
 		if (this.isSafe()){
-			viewDistance = 8;
+			return 8;
 		} else {
-			viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 2 : Random.Int(3,6);
+			return Dungeon.isChallenged(Challenges.DARKNESS) ? 2 : Random.Int(3,8);
 		}
 	}
 }

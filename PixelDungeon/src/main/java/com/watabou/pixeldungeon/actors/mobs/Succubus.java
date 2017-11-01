@@ -48,7 +48,7 @@ public class Succubus extends Mob {
 
 		hp(ht(80));
 		defenseSkill = 25;
-		viewDistance = Light.DISTANCE;
+		viewDistance = Dungeon.level.MIN_VIEW_DISTANCE + 1;
 
 		exp = 12;
 		maxLvl = 25;

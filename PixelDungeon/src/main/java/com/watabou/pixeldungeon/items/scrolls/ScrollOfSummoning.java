@@ -14,7 +14,7 @@ public class ScrollOfSummoning extends Scroll {
 
 	@Override
 	protected void doRead() {
-		if(Dungeon.level.isBossLevel() || Dungeon.level instanceof PredesignedLevel){
+		if(Dungeon.level.isBossLevel()){
 			return;
 		}
 

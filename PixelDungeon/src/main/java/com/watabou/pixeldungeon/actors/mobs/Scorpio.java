@@ -38,7 +38,7 @@ public class Scorpio extends Mob implements IZapper {
 
 		hp(ht(95));
 		defenseSkill = 24;
-		viewDistance = Light.DISTANCE;
+		viewDistance = Dungeon.level.MIN_VIEW_DISTANCE + 1;
 		
 		exp = 14;
 		maxLvl = 25;
