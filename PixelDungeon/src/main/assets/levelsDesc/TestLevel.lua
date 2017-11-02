@@ -5,6 +5,13 @@
 -- This fle is part of Remixed Pixel Dungeon
 --
 
+sys = luajava.bindClass("java.lang.System")
+print ("Yea! binding works!", sys:currentTimeMillis() )
+
+Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
+
+print("Your class:",Dungeon.hero:className())
+
 function getJson()
     local filename
 
