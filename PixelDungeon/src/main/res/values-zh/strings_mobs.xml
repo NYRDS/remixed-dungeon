@@ -4,7 +4,6 @@
   <!--STRINGS OF Mob CLASS-->
   <string name="Mob_Desc">真正的说明即将到来！</string>
   <string name="Mob_Died">你听到有什么东西在远处死去了</string>
-  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
   <string name="Mob_StaSleepingStatus">这个%s正在睡觉</string>
   <string name="Mob_StaWanderingStatus">这个%s正在游荡</string>
   <string name="Mob_StaHuntingStatus">这个%s正在追猎</string>
