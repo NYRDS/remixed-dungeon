@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -126,7 +127,7 @@ public class PixelDungeon extends Game {
 		if (PixelDungeon.version() != Game.versionCode) {
 			switchScene(WelcomeScene.class);
 		}
-
+		LuaEngine l = LuaEngine.getEngine();
 	}
 
 	@Override

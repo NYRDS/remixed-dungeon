@@ -1,3 +1,77 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">Hełm Chaosu</string>
+    <string name="ChaosHelmet_Info">Krwiście czerwony hełm. Symbol każdego wojownika chaosu.</string>
+
+
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s : osiągnięty limit przyzwanych jednostek  (Maksymalna ilość %2$d)!</string>
+    <string name="Mana_Title">Mana</string>
+    <string name="Mana_Cost">Koszt Many:</string>
+    <string name="Spells_NotEnoughSP">Nie masz wystarczająco punktów many aby rzucić zaklęcie  \"%1$s\" .</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">Przyzwij nieumarłego</string>
+    <string name="SummonDeathling_Info">Przyzywa nieumarłego kompana.Życie nieumarłego oraz jego obrażenie rosną wraz z poziomem bohatera. \n\nLimit przywoływanych jednostek:%1$d(+ 1 na każdy poziom Magi )</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">Podpalenie</string>
+    <string name="Ignite_Info">Podpala zaznaczoną komórkę,Może być użyty do podpalania traw, postaci oraz obiektów</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">Oplecienie</string>
+    <string name="RootSpell_Info">Oplata wybraną postać, sprawia że nie może się poruszać przez krótki okres czasu.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">Powiew wiatru</string>
+    <string name="WindGust_Info">Tworzy podmuch który odpycha wybraną postać.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">Zamrożenie</string>
+    <string name="FreezeGlobe_Info">Zamraża wybraną postać, sprawia że nie może wykonywać żadnych akcji przez krótki okres czasu.</string>
+
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Magiczna pochodnia</string>
+    <string name="MagicTorch_Info">Zaklęcie które tworzy światło rozświetlające ciemne miejsca w lochu.</string>
+
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">Leczenie</string>
+    <string name="Healing_Info">To zaklęcie jest niezwykle istotne dla każdego podróżnika. Odnawia ono 1/3 życia rzucającego.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">Niewystarczająca ilość many!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">PIJ</string>
+    <string name="Drink_Message">Ten napój był orzeźwiający. </string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">Księga Wiedzy</string>
+    <string name="TomeOfKnowledge_Info">Ta tajemnicza księga wypełniona jest tajemniczymi zagadkami i tajemnicami !  Może i jest trudna do przeczytania, ale jeśli zdołasz ją przeczytać, na pewno zwiększysz swoją moc magiczną.</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">Księga zaklęć</string>
+    <string name="SpellBook_Info">Wygląda to bardziej na zbiór kartek zszytych ze sobą ,niż na książkę.  Być może coś z tego wykombinujesz jeśli dostatecznie się skupisz.</string>
+    <string name="SpellBook_Info_Identified">Pośród kartek odnalazłeś pełny tekst zaklęcia \"%1$s\".\n\" %2$s \"</string>
+
+
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">Mikstura Many</string>
+    <string name="ManaPotion_Info">Ta mikstura odnowi twoją duchową energię.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">Ten grzyb smakuje dziwnie!</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">Jest to nieodzowny przedmiot w Lochacg, które są znane ze swego słabego oświetlenia.</string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">Zaklęcia</string>
+    <string name="WndSpells_Level">Poziom Magi:</string>
+
+</resources>

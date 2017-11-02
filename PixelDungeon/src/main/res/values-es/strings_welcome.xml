@@ -314,4 +314,30 @@ remix.26.1:\n
         - Corregido el error de la trampa de invocaciones, que ocasionaba la invocación de sombres sobre el suelo\n
         - Corregido el error de la estatua \"mascota\", que llenaba los registros del juego con información innecesaria\n
     </string>
+  <string name="Welcome_Text_27_2">
+        remix.27.2\n
+        --Juego:\n
+        - Introducido sistema de hechizos\n
+        - Mago y Nigromante obtienen afinidad natural a los hechizos. Estos héroes pueden usar hechizos únicos sin necesitar objetos especiales\n
+        - Todos los personajes poseen ahora una barra de mana (incluido el Nigromante)\n
+        - El Nigromante no restaura de forma pasiva sus puntos de mana al matar enemigos. Este efecto fue aplicado a la Túnica de Nigromante (+1 de mana al matar) y a una Armadura de Huesos (+2 mana con al matar)\n
+        - Nuevo atributo de héroe: Nivel Mágico. Cuanto más alto sea el nivel mágico, más hechizos se desbloquean y más poderosos son dichos hechizos.\n
+        - Nuevo objeto: Poción de Mana\n
+        - Nuevo objeto: Tome del Conocimiento. Aumenta el nivel mágico en 1\n
+        - Nuevo objeto: Libro de Hechizo. Este objeto equipable te permite lanzar un único hechizo, gastando mana. A diferencia de los pergaminos, no se consume al usarlo\n
+        - Armadura de Clase no requiere consumir salud para activar su habilidad especial, ahora cuesta 1/3 del mana máximo\n
+        - La \“Varita de Misil Mágico\” ya no es dejado por los Cristales\n
+        - Desde esta versión, cada nivel tendrá su \“distancia de visión\” establecida aleatoriamente, el jugador podrá toparse con niveles \“oscuros\” en algunos puntos del juego\n
+        - Están disponibles Antorchas al principio y pueden ser encontradas fácilmente en todo el juego\n
+        - Los niveles \“seguros\” (isSafe) no se ven afectados por la distancia de visión y siempre se iluminaran al máximo\n
+        - Ahora el daño por quemaduras es proporcional con el nivel en que se encuentra\n\n
+
+        --Objetos de Vanidad: \n
+        - Nuevo Sombrero: Casco del Caos \n\n
+
+        --Mods: \n
+        - Ahora puede agregar un nuevo atributo a su archivo \“iniHeroes\”: \“maxSP\” - establece el máximo de mana acumulable, que el personaje puede poseer. \“startingSp\” establece la cantidad de mana con la que comienza el personaje\n
+        - La generación del héroe establece el atributo \“magicAffinity\”, el cual puede ser establecido como: \“Elemental\”, \“Necromancy\” o \“Common\” (\“Common\” - el personaje solo puede usar los hechizos de los Libros de Hechizos)\n
+        - Nuevo objeto en mods - Trampa. A diferencia de las trampas normales del juego, este tipo permite varios ajustes. Puede establecer: el número de activaciones (uses), la casilla objetivo en la que mostrara el efecto de la trampa (target), y que clase de objetos pueden o no activar la trampa arrojándolo sobre (activatedByItem)\n
+    </string>
 </resources>

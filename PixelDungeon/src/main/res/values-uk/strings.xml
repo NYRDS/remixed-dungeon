@@ -7,7 +7,7 @@
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">Мою справу тут зроблено.</string>
   <string name="AmuletScene_Stay">Я, мабуть, ще оглянуся навколо.</string>
-  <string name="AmuletScene_Txt">Нарешті він у твоїх руках, Амулет Йендора. Ти отримаєш могутність, яка дозволить підкорити всіх і вся, чи подаруєш людству мир та процвітання, чи щось схоже на це. У будь-якому разі, твоє життя зміниться назавжди, а гра на цьому закінчиться. З іншого боку, ти маєш можливість ще трохи побути жалюгідним смертним.</string>
+  <string name="AmuletScene_Txt">Нарешті він у твоїх руках, Амулет Ендора. Ти отримаєш могутність, яка дозволить підкорити всіх і вся, чи подаруєш людству мир та процвітання, чи щось схоже на це. У будь-якому разі, твоє життя зміниться назавжди, а гра на цьому закінчиться. З іншого боку, ти маєш можливість ще трохи побути жалюгідним смертним.</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">Ласкаво просимо на %d рівень Pixel Dungeon!</string>
   <string name="GameScene_WelcomeBack">З поверненням на %d рівень Pixel Dungeon!</string>
@@ -155,7 +155,7 @@
   <string name="WndInfoItem_WontKnow">Ти не дізнаєшся, що всередині, доки не відкриєш!</string>
   <string name="WndInfoItem_NeedKey">Але, щоб відкрити, тобі потрібен золотий ключ.</string>
   <string name="WndInfoItem_Inside">У середині ти бачиш предмет %s, але, щоб відкрити скриню, потрібен золотий ключ.</string>
-  <string name="WndInfoItem_Owner">У  цій старовинній гробниці може бути щось корисне, але власник навряд чи оцінить твій ентузіазм.</string>
+  <string name="WndInfoItem_Owner">У цій старовинній гробниці може бути щось корисне, але власник навряд чи оцінить твій ентузіазм.</string>
   <string name="WndInfoItem_Remains">Це усе що залишилося від твого попередника. Мабуть, варто обшукати на предмет цінностей.</string>
   <!--STRINGS OF WndJournal CLASS-->
   <string name="WndJournal_Title">Журнал</string>

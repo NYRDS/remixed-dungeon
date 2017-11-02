@@ -6,7 +6,7 @@
   <string name="Wand_ACZap">ВИСТРЕЛИТИ</string>
   <string name="Wand_Wood">Ця тоненька паличка %s тепла на дотик. Хто знає, що трапиться, якщо махнути нею.</string>
   <string name="Wand_Damage">Під час ближнього бою ця паличка нанесе %d одиниць шкоди.</string>
-  <string name="Wand_Weapon">Ти не можеш використовувати цю паличку в якості зброї ближнього бою.</string>
+  <string name="Wand_Weapon">Ти не можеш використовувати цю паличку як зброю ближнього бою.</string>
   <string name="Wand_Fizzles">твоя паличка потріскує; схоже закінчився магічний заряд</string>
   <string name="Wand_SelfTarget">Ти не можеш поцілити в себе</string>
   <string name="Wand_Prompt">Обери напрям для пострілу</string>
@@ -20,13 +20,13 @@
     <item>з верби</item>
     <item>з червоного дерева</item>
     <item>з бамбука</item>
-    <item>з амаранта</item>
+    <item>з амаранту</item>
     <item>з дуба</item>
     <item>з берези</item>
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
   <string name="WandOfAmok_Name">Паличка шаленості</string>
-  <string name="WandOfAmok_Info">Багрове світло з палички вимушує вказану істоту вести себе несамовито, без розбору нападаючи на всіх істот довкола.</string>
+  <string name="WandOfAmok_Info">Багрове світло з палички вимушує вказану істоту поводитись несамовито, без розбору нападаючи на всіх істот довкола.</string>
   <string name="WandOfAmok_Info1">нічого не трапилося</string>
   <!--STRINGS OF WandOfAvalanche CLASS-->
   <string name="WandOfAvalanche_Name">Паличка обвалу</string>

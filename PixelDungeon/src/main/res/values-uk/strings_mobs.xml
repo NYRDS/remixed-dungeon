@@ -71,22 +71,22 @@
   <string name="Golem_Name">голем</string>
   <string name="Golem_Gender">masculine</string>
   <string name="Golem_Name_Objective">голема</string>
-  <string name="Golem_Desc">Дворфи намагалися поєднати механізми зі ново-отриманими знаннями про природу стихій. Духи землі замінювали \"душу\" механічного каркаса голема, вважалось, що їх легше контролювати. Незважаючи на це, найдрібніша неточність в ритуалі могла призвести до нищівних наслідків.</string>
+  <string name="Golem_Desc">Дворфи намагалися поєднати механізми зі ново-отриманими знаннями про природу стихій. Духи землі замінювали \"душу\" механічного каркаса голема, вважалось, що їх легше контролювати. Попри це, найдрібніша неточність в ритуалі могла призвести до нищівних наслідків.</string>
   <string name="Golem_Defense">прикрився</string>
   <!--STRINGS OF Goo CLASS-->
   <string name="Goo_Name">Жижа</string>
   <string name="Goo_Gender">feminine</string>
   <string name="Goo_Name_Objective">Жижу</string>
-  <string name="Goo_Desc">Мало що відомо про Жижу. Скоріш за все, це навіть не істота, а згусток каналізаційної субстанції , в якій тільки-но зародилась свідомість. В будь-якому випадку тут не обійшлося без темної магії.</string>
+  <string name="Goo_Desc">Мало що відомо про Жижу. Скоріш за все, це навіть не істота, а згусток каналізаційної субстанції, в якій тільки-но зародилась свідомість. В будь-якому випадку тут не обійшлося без темної магії.</string>
   <string name="Goo_Info1">Жижа нагнічує себе!</string>
   <string name="Goo_Info2">хлюп... хлюп...</string>
   <string name="Goo_Info3">ХЛЮП-ХЛЮП!</string>
   <string name="Goo_StaInfo1">!!!</string>
   <!--STRINGS OF King CLASS-->
-  <string name="King_Name">Цар Дворфів</string>
+  <string name="King_Name">Король Дворфів</string>
   <string name="King_Gender">masculine</string>
-  <string name="King_Name_Objective">Царя Дворфів</string>
-  <string name="King_Desc">Останній король дворфів мав глибокі пізнання в областях життя та смерті. Він переконав придворну свиту прийняти участь в ритуалі, який обіцяв вічну молодість. В результаті її отримав лише сам король, отримавши армію нежиті в якості бонусу.</string>
+  <string name="King_Name_Objective">Короля Дворфів</string>
+  <string name="King_Desc">Останній король дворфів мав глибокі пізнання в областях життя та смерті. Він переконав придворну свиту взяти участь в ритуалі, який обіцяв вічну молодість. В результаті її отримав лише сам король, отримавши армію нежиті в якості бонусу.</string>
   <string name="King_Defense">відбився</string>
   <string name="King_Info1">Ти не можеш вбити мене, %s... Я... безсмертний...</string>
   <string name="King_Info2">Відродіться, слуги!</string>
@@ -117,7 +117,7 @@
   <string name="Piranha_Name">велика піранья</string>
   <string name="Piranha_Gender">feminine</string>
   <string name="Piranha_Name_Objective">велику піранью</string>
-  <string name="Piranha_Desc">Ці м\'ясоїдні рибки не є звичайними мешканцями підземелля, вони були спеціально виведені для захисту затоплених скрабниць.</string>
+  <string name="Piranha_Desc">Ці м\'ясоїдні рибки не є звичайними мешканцями підземелля, вони були спеціально виведені для захисту затоплених скарбниць.</string>
   <!--STRINGS OF Rat CLASS-->
   <string name="Rat_Name">сумчастий щур</string>
   <string name="Rat_Gender">masculine</string>
@@ -149,7 +149,7 @@
   <string name="Shielded_Gender">masculine</string>
   <string name="Shielded_Name_Objective">громилу-щитовика</string>
   <string name="Shielded_Defense">прикрився</string>
-  <string name="Shielded_Desc">Громили - найбільші, найсильніші та найвитриваліші з усіх гноллів. Маючи значні пошкодження, вони здатні впадати в лють, завдаючи значної шкоди супротивнику. Цей громила прикрився гіганстьким щитом!</string>
+  <string name="Shielded_Desc">Громили - найбільші, найсильніші та найвитриваліші з усіх гноллів. Маючи значні пошкодження, вони здатні впадати в лють, завдаючи значної шкоди супротивнику. Цей громила прикрився гігантським щитом!</string>
   <!--STRINGS OF Skeleton CLASS-->
   <string name="Skeleton_Name">скелет</string>
   <string name="Skeleton_Gender">masculine</string>
@@ -168,10 +168,10 @@
   <string name="Statue_Name_Objective">живу статую</string>
   <string name="Statue_Desc">Може здатися, що це просто ще одна звичайна статуя, але червоні очі, що виблискують в темряві, не приховують свої злі наміри. Хоча вона і зроблена з каменю, її _%s_ виглядає справжнім.</string>
   <!--STRINGS OF Succubus CLASS-->
-  <string name="Succubus_Name">суккуб</string>
+  <string name="Succubus_Name">сукуб</string>
   <string name="Succubus_Gender">femenine</string>
-  <string name="Succubus_Name_Objective">succubus</string>
-  <string name="Succubus_Desc">Сукуби - демони, які набувають подоби гарних (зазвичай в готичному стилі) дівчат. Використовуючи магію, суккуби причаровують героя, позбавляючи його здатності атакувати, доки чари не розвіються.</string>
+  <string name="Succubus_Name_Objective">сукуба</string>
+  <string name="Succubus_Desc">Сукуби - демони, які набувають подоби гарних (зазвичай в готичному стилі) дівчат. Використовуючи магію, сукуби причаровують героя, позбавляючи його здатності атакувати, доки чари не розвіються.</string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Name">рій мух</string>
   <string name="Swarm_Gender">masculine</string>
@@ -210,7 +210,7 @@
   <string name="Yog_Name_Objective">Йог-Джеву</string>
   <string name="Yog_Desc">Йог-Джева - старий бог, могутня сутність зі світу Хаосу. В давні часи древні дворфи ледь подолали його армію демонів, але вбити самого бога їм не вдалося. Вони заточили його глибині свого міста, переконані, що він занадто слабий, аби вирватися на волю.</string>
   <string name="Yog_Info1">...</string>
-  <string name="Yog_Info2">Сподіваюсь, мені це привидилось...</string>
+  <string name="Yog_Info2">Сподіваюсь, мені це привиділось...</string>
   <string name="RottingFist_Name">гнійний кулак</string>
   <string name="RottingFist_Gender">masculine</string>
   <string name="RottingFist_Name_Objective">гнійного кулака</string>

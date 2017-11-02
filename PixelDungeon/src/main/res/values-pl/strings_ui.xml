@@ -57,7 +57,7 @@
   <string name="WndSettings_ZoomOut">-</string>
   <string name="WndSettings_ZoomDef">Domyślne zbliżenie</string>
   <string name="WndSettings_TextScaleDefault">Domyślna czcionka</string>
-  <string name="WndSettings_ScaleUp">Skalowanie UI</string>
+  <string name="WndSettings_ScaleUp">Przeskaluj Interfejs</string>
   <string name="WndSettings_Immersive">Tryb immersyjny </string>
   <string name="WndSettings_Music">Muzyka</string>
   <string name="WndSettings_Sound">Odgłosy</string>

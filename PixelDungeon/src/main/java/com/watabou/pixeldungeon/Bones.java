@@ -129,4 +129,8 @@ public class Bones {
 			}
 		}
 	}
+
+	public static String getBonesFile() {
+		return BONES_FILE;
+	}
 }

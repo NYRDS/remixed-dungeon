@@ -12,7 +12,7 @@
   <string name="CompoundBow_Gender">masculine</string>
   <!--STRINGS OF RubyBow CLASS-->
   <string name="RubyBow_Name">рубіновий лук</string>
-  <string name="RubyBow_Info">Тільки найвеличніші стрільці можуть використовувати цей рубіновий лук. Майже всі стріли. випущені з цього лука проходять  ворога наскрізь, залишаючи величезні дірки в його тілі. Але як важко натягнути тятиву.</string>
+  <string name="RubyBow_Info">Тільки найвеличніші стрільці можуть використовувати цей рубіновий лук. Майже всі стріли. випущені з цього лука проходять ворога наскрізь, залишаючи величезні дірки в його тілі. Але як важко натягнути тятиву.</string>
   <string name="RubyBow_Gender">masculine</string>
   <!--STRINGS OF Quiver CLASS-->
   <string name="Quiver_Name">сагайдак</string>

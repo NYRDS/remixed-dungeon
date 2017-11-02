@@ -95,7 +95,7 @@ public class StartScene extends PixelScene {
 
 	private Text unlock;
 
-	private static ClassShield curShield;
+	private ClassShield curShield;
 
 	@Override
 	public void create() {

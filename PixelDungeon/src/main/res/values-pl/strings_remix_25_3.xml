@@ -5,24 +5,50 @@
     <string name="Ushanka_Name">Uszanka</string>
     <string name="Ushanka_Info">Ciepłe zimowe nakrycie głowy, udekorowane wielką czerwoną gwiazdą. Perfekcyjna dla towarzysza wędrującego przez zimne, złe lochy.</string>
 
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">Czaszka wampira</string>
+    <string name="VampireSkull_Info">Maska ta jest stworzona z pełni z naturalnych wampirzych czaszek. W sumie to wampirza czaszka... czaszka wielkogłowego wampira.  Straszne.</string>
+
     <!-- STRINGS OF ZombieMask CLASS -->
     <string name="ZombieMask_Name">Maska zombie</string>
+    <string name="ZombieMask_Info">Czy kiedykolwiek  marzyłeś aby wyglądać jak nieumarły bohater, który wciąż zawalał swoje zdania? Cóż o to twoja szansa.</string>
+
     <!-- Item descriptions -->
     <!-- STRINGS OF Candy CLASS -->
     <string name="Candy_Name">cukierek</string>
+    <string name="Candy_Info">Ten cukierek wygląda tak wspaniale i pachnie równie dobrze. Czy naprawdę musisz go komuś oddać ?</string>
+    <string name="Candy_Warning_1">Nie powinieneś jeść tego cukierka. Obiecałeś go dać komuś innemu. Nie wygląda aby działał na ciebie w jakikolwiek sposób, głód nie ustępuje, w końcu to cukierek.</string>
+    <string name="Candy_Warning_2">Dobra teraz to naprawdę przesadziłeś. Przez to że zjadeś tyle cukierków teraz boli cię brzuch.</string>
+
     <!-- STRINGS OF PumpkinPie CLASS -->
     <string name="PumpkinPie_Name">Dyniowe ciasto</string>
     <string name="PumpkinPie_Info">Pyszne ciasto dyniowe, prawie takie jak piekła mama...</string>
 
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">zgniłe ciasto dyniowe</string>
+    <string name="RottenPumpkinPie_Info">Nieważne jak dobrze to wyglądało kiedy było jeszcze świeże, nie ma mowy żeby wciąż było jadalne.</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">Świeczka Wizji</string>
+    <string name="CandleOfMindVision_Info">Wygląda jak zwykła świeczka, nie jest to coś co spodziewałbyś się znaleźć w tym niebezpiecznym lochu. O dziwo jest raczej ciepła, zważając na fakt że nawet nie została zapalona.</string>
+    <string name="CandleOfMindVision_Info_Lighted">Świeczka zapaliła się tuż po wyjęciu z plecaka. Ogień emituje słabe fioletowe światło, gdy przez nie spoglądasz pobliskie potworzy stają się dla ciebie widoczne.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">Świeczka się wypaliła, już się nie zapala kiedy ją trzymasz. Wygląda na to że nie możesz jej już używać.</string>
+
     <!-- Object descriptions -->
     <!-- STRINGS OF Barrel CLASS -->
     <string name="Barrel_Name">beczka</string>
+    <string name="Barrel_Desc">Wygląda jak zwykła drewniana beczka. Jednak gdy się do niej zbliżyłeś można poczuć słaby zapach oleju. Beczka zadaje się być raczej lekka, być może będziesz mógł ją popchnąć. </string>
+
     <!-- STRINGS OF Barrel_Pumpkin CLASS -->
     <string name="Barrel_Pumpkin_Name">dynia</string>
+    <string name="Barrel_Pumpkin_Desc">Wypełnia cię ciekawość i strach gdy dostrzegasz zdobioną dynię leżącą w podziemiach. Czujesz niebezpieczeństwo wydobywające się z tego czegoś. Ale zawsze możesz po prostu ją odepchnąć, prawda ? </string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ScarecrowNPC CLASS -->
     <string name="ScarecrowNPC_Name">strach na wróble</string>
+    <string name="ScarecrowNPC_Gender">neutralny</string>
     <string name="ScarecrowNPC_Name_Objective">strach na wróble</string>
+    <string name="ScarecrowNPC_Desc">Nie ma wątpliwości... ten strach śledzi każdy twój ruch, Jego świecące czerwone oczy przeszywają cię na wskroś, ale zaskakująco, nie czujesz się przerażony.</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Witaj chłopcze, jak się miewasz?\n
 Mam nadzieję, że się nie pogniewasz\n
 bo specjalną misję dla ciebie mam!\n

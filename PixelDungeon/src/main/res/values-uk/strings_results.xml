@@ -12,7 +12,7 @@
   <string name="ResultDescriptions_Gas">Загинув від токсичного газу на рівні %d</string>
   <string name="ResultDescriptions_Bleeding">Стік кров\'ю на рівні %d</string>
   <string name="ResultDescriptions_Ooze">Вбитий їдким слизом на рівні %d </string>
-  <string name="ResultDescriptions_Fall">Розбився насмерть на рівні %d</string>
+  <string name="ResultDescriptions_Fall">Розбився на рівні %d</string>
   <string name="ResultDescriptions_Win">Отримав амулет Ендора</string>
   <string name="ResultDescriptions_Immured">Замуровано в камені на рівні %d</string>
 </resources>

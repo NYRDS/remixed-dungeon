@@ -72,7 +72,7 @@
   <string name="HeroSubClass_NameGlad">гладіатор</string>
   <string name="HeroSubClass_DescGlad">Вдала атака ближнього бою дозволяє _Гладіатору_ почати серію комбо-ударів, на протязі яких кожне наступне вдале попадання наносить більше шкоди.</string>
   <string name="HeroSubClass_NameBers">берсеркер</string>
-  <string name="HeroSubClass_DescBers">Будучи сильно пораненим, _Берсеркер_ впадає в стан несамовитої люті, значно збільшуючи свої показники нанесення шкоди.</string>
+  <string name="HeroSubClass_DescBers">Будучі сильно пораненим, _Берсеркер_ впадає в стан несамовитої люті, значно збільшуючи свої показники нанесення шкоди.</string>
   <string name="HeroSubClass_NameWarL">чорнокнижник</string>
   <string name="HeroSubClass_DescWarL">Після вбивства ворога, _Чорнокнижник_ поглинає його душу, лікуючи себе та вгамовуючи голод.</string>
   <string name="HeroSubClass_NameBatM">бойовий маг</string>
@@ -84,7 +84,7 @@
   <string name="HeroSubClass_NameSnip">снайпер</string>
   <string name="HeroSubClass_DescSnip">_Снайпери_ здатні помітити вади у ворожій броні, практично ігноруючи її при використанні зброї дальнього бою.</string>
   <string name="HeroSubClass_NameWard">травниця</string>
-  <string name="HeroSubClass_DescWard">За рахунок своєї близькості до природи, _Травниця_ може ліпше збирати краплі роси та насіння з рослин. Також контакт з високою травою дає тимчасовий бонус до броні.</string>
+  <string name="HeroSubClass_DescWard">В наслідок своєї близькості до природи, _Травниця_ може ліпше збирати краплі роси та насіння з рослин. Також контакт з високою травою дає тимчасовий бонус до броні.</string>
   <string name="HeroSubClass_NameScout">слідопит</string>
   <string name="HeroSubClass_DescScout">Ельфійські _Слідопити_ майстри скритності. Витоптування високої трави  дає тимчасовий ефект невидимості. До того ж вони швидші за ельфів.</string>
   <string name="HeroSubClass_NameShaman">шаман</string>

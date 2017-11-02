@@ -1,3 +1,53 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF Artifact CLASS -->
+    <string name="Artifact_Limit">Możesz nosić tylko dwa artefakty naraz.</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF FortuneTellerNPC CLASS -->
+    <string name="FortuneTellerNPC_Name">Wróżbita</string>
+    <string name="FortuneTellerNPC_Gender">Niewiasta</string>
+    <string name="FortuneTellerNPC_Name_Objective">Wróżbita</string>
+    <string name="FortuneTellerNPC_Desc">Kobieta ta jest ubrana w długą,jasną, kolorową szatę. Wygląda zaskakująco młodo jak na kogoś kto opanował sztukę przepowiadania. Podchodząc bliżej słyszysz jej mamrotanie, podczas gdy spogląda w kryształową kulę.</string>
+
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Limit_Reached">Przepraszam, ale osiągnąłeś swój obecny limit. Ale będziesz mógł znów użyć naszych usług za każdy poziom bohatera jaki osiągniesz.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndFortuneTeller CLASS -->
+    <string name="WndFortuneTeller_Instruction">Mogę odkryć tajemnicę przedmiotów które posiadasz.\nJedna identyfikacja będzie cię kosztować%d monet.</string>
+    <string name="WndFortuneTeller_No_Item">Ostrożnie, raczej nie chcesz wydać całych pieniędzy na nic prawda? Nie posiadasz żadnych niezidentyfikowanych przedmiotów w swoim ekwipunku.</string>
+    <string name="WndFortuneTeller_Title">Wróżbita</string>
+
+    <!-- STRINGS OF Generic Button labels -->
+    <string name="Wnd_Button_Yes">Tak</string>
+    <string name="Wnd_Button_No">Nie</string>
+    <string name="Wnd_Button_Back">Powrót</string>
+    <string name="Wnd_Button_Cancel">Anuluj</string>
+    <string name="Wnd_Button_Close">Zamknij</string>
+
+    <!-- STRINGS OF WndLibrary CLASS -->
+    <string name="WndLibrary_Catalogue_Title">Biblioteka </string>
+    <string name="WndLibrary_Catalogue_Instruction">Proszę wybrać jedną z kategorii poniżej.</string>
+    <string name="WndLibrary_Mobs_Btn">Potwory</string>
+    <string name="WndLibrary_Items_Btn">Przedmioty</string>
+    <string name="WndLibrary_Codex_Btn">Opowieści </string>
+    <string name="WndLibrary_Levels_Btn">Lochy</string>
+
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Instruction_2">Obejrzałeś %1$d z %2$d dostępnych filmów.  Dostaniesz dodatkową okazję na obejrzenie filmu za każdy nowy poziom bohatera.</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_blue_carpet_name">Dywan</string>
+    <string name="town_deco_blue_carpet_desc">Wyrafinowany niebieski dywan, udekorowany fioletowym jedwabiem.</string>
+
+    <string name="town_table_fortune_name">Stół</string>
+    <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym okryciem. Możesz na nim dostrzec różnorakie karty tarota leżące w specyficznej kolejności. </string>
+
+    <string name="ConcreteBlock_Name">Ciężki betonowy blok</string>
+    <string name="ConcreteBlock_Description">Wygląda na to że ten blok wymaga %d punktów siły aby go popchnąć.</string>
+    <string name="Hero_AnotherTry">Nie żyjesz.\n Chcesz spróbować jeszcze raz?</string>
+
+</resources>

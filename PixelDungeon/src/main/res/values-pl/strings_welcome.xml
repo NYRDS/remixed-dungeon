@@ -1,6 +1,43 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+  <string name="Welcome_Ok">Dobra!</string>
   <string name="Welcome_Title">Witaj!</string>
   <string name="Welcome_Text">Remixed Pixel Dungeon to modyfikacja oryginalnego Pixel Dungeon stworzonego przez Watabou.\n Projekt ten został stworzony, by zapewnić graczom nowe doświadczenia i zawartość.\n Kolejną istotną częścią naszego projektu jest możliwość zmiany języka w grze.\n Z każdą aktualizacją staramy się zbliżyć do społeczności graczy.\n A jeśli kiedyś zobaczycie wasze pomysły wdrożone do gry, będzie to hołd dla waszej kreatywności! Polskie tłumaczenie: Daedron (tramer008@gmail.com) =)\n Obecna wersja jest bazowana na Pixel Dungeon 1.7.2 i częściowo 1.7.5.\n Co różni wersję Remixed od podstawowej: \n - Możliwość zmiany języka.\n - Nowe potwory oraz NPC - Toksyczny gaz i ogień mogą oddziaływać z większą ilością przedmiotów\n - Nowe rodzaje «jedzenia»\n - Nowe przedmioty i nowe właściwości starych przedmiotów\n - Można teraz jeść nasiona =)\n 
 -Elfy</string>
+  <string name="Welcome_Text_19">
+        remix.17:\n
+        - Nowa raza mimików\n
+        remix.18:\n
+        - Żywiłaki\n
+        remix.19:\n
+        - Pająki\n
+        - Pajęcze poziomy\n
+        - Królowa Pająków\n
+        </string>
+  <string name="Welcome_Text_20">
+        remix.20:\n
+        - Nowa rzadka broń - kusarigama\n
+        - Nowa rzadka kreatura\n
+        - Tryby gry z zapisem i wczytywaniem\n
+        - I dużo więcej mniej zauważalnych rzeczy\n
+        </string>
+  <string name="Welcome_Text_20_1">
+        remix.20.1:\n
+        - Zwój Dominacji\n
+        - Zwój Klątwy\n
+        </string>
+  <string name="Welcome_Text_20_2">
+        remix.21:\n
+        - Rzadkie przedmioty Chaosu\n
+        - Płynny płomień teraz naprawdę płynny \n
+        </string>
+  <string name="Welcome_Text_21_1">
+        remix.21.1:\n
+        - Łatwy tryb (z reklamami)\n
+        - Tryb Zaawansowany\n
+        </string>
+  <string name="Welcome_Text_21_2">
+        remix.21.2:\n
+        - Możliwość wybrania modów do gry (na razie tylko zmiana tekstur ) ( Tylko dla doświadczonych moderów) \n
+        </string>
 </resources>

@@ -75,7 +75,7 @@
   <string name="Halls_TileStatue">Стовп</string>
   <string name="Halls_TileDescWater">Це дуже схоже на лаву, але вона холодна і на дотик безпечна.</string>
   <string name="Halls_TileDescStatue">Стовп зроблено з черепів гуманоїдів. Щось неймовірне.</string>
-  <string name="Halls_TileDescBookshelf">Цю шафу заповнено книгами на мертвій мові.</string>
+  <string name="Halls_TileDescBookshelf">Цю шафу заповнено книгами, написані мертвою мовою.</string>
   <!--STRINGS OF LastLevel CLASS-->
   <string name="LastLevel_TileWater">Холодна лава</string>
   <string name="LastLevel_TileGrass">Вугле-мох</string>
