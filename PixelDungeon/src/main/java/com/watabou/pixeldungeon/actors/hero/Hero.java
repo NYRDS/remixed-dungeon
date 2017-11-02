@@ -542,14 +542,6 @@ public class Hero extends Char {
 
 	@Override
 	public boolean act() {
-
-		if(doOnNextAction !=null) {
-			doOnNextAction.run();
-			doOnNextAction = null;
-			spendAndNext(TICK);
-			return false;
-		}
-
 		super.act();
 
 		if (paralysed) {
@@ -1309,6 +1301,12 @@ public class Hero extends Char {
 	}
 
 	public boolean handle(int cell) {
+
+		if(doOnNextAction !=null) {
+			doOnNextAction.run();
+			doOnNextAction = null;
+			return false;
+		}
 
 		if (!Dungeon.level.cellValid(cell)) {
 			return false;
