@@ -93,7 +93,7 @@ public class SaveUtils {
 	}
 
 	public static boolean isRelatedTo(String path,HeroClass cl) {
-		return ( path.endsWith(".dat") && hasClassTag(cl, path) ) || path.endsWith(gameFile(cl));
+		return ( path.endsWith(".dat") && hasClassTag(cl, path) ) || path.endsWith(gameFile(cl)) || path.endsWith(Bones.getBonesFile());
 	}
 
 	public static void copyAllClassesToSlot(String slot) {
@@ -126,9 +126,6 @@ public class SaveUtils {
 
 				String from = FileSystem.getInternalStorageFile(slot + "/" + file).getAbsolutePath();
 				String to = FileSystem.getInternalStorageFile(file).getAbsolutePath();
-
-				GLog.toFile("restoring file: %s, (%s -> %s)", file, from, to);
-
 				FileSystem.copyFile(from, to);
 			}
 		}
@@ -144,7 +141,6 @@ public class SaveUtils {
 			for (File file : slotFiles) {
 				String path = file.getAbsolutePath();
 				if (isRelatedTo(path, cl)) {
-					GLog.toFile("deleting %s", path);
 					if(!file.delete()) {
 						GLog.toFile("Failed to delete file: %s !", path);
 					}
@@ -154,8 +150,6 @@ public class SaveUtils {
 	}
 
 	public static void copySaveToSlot(String slot, HeroClass cl) {
-		GLog.toFile("Saving: class :%s slot: %s", cl.toString(), slot);
-
 		deleteSaveFromSlot(slot, cl);
 
 		String[] files = Game.instance().fileList();
@@ -165,22 +159,17 @@ public class SaveUtils {
 				
 				String from = FileSystem.getInternalStorageFile(file).getAbsolutePath();
 				String to = FileSystem.getInternalStorageFile(slot + "/" + file).getAbsolutePath();
-				
-				GLog.toFile("storing file: %s, (%s -> %s)", file, from, to);
-				
+
 				FileSystem.copyFile(from,to);
 			}
 		}
 	}
 
 	public static void deleteLevels(HeroClass cl) {
-		GLog.toFile("Deleting levels: class :%s", cl.toString());
-		
 		String[] files = Game.instance().fileList();
 
 		for (String file : files) {
 			if (file.endsWith(".dat") && hasClassTag(cl, file)) {
-				GLog.toFile("deleting: %s", file);
 				if(!Game.instance().deleteFile(file)){
 					GLog.toFile("Failed to delete file: %s !", file);
 				}
@@ -190,7 +179,6 @@ public class SaveUtils {
 
 	public static void deleteGameFile(HeroClass cl) {
 		String gameFile = gameFile(cl);
-		GLog.toFile("Deleting gamefile: class :%s file: %s", cl.toString(), gameFile);
 		Game.instance().deleteFile(gameFile);
 	}
 
