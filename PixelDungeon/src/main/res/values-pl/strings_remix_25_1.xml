@@ -75,4 +75,7 @@
     <string name="WndSadGhostNecro_No">Nie, pozwól jemu mówić.</string>
     <string name="WndSadGhostNecro_Persuaded">Smutny Duch został zdominowany!</string>
 
-    </resources>
+    <!-- Badges -->
+
+    <string name="WndSettings_UiScale">Skalowanie interfejsu.</string>
+</resources>

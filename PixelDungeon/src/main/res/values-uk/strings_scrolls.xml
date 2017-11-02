@@ -44,7 +44,7 @@
   <string name="ScrollOfIdentify_Info1">Це %s</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
   <string name="ScrollOfLullaby_Name">Сувій колискової</string>
-  <string name="ScrollOfLullaby_Info">Колискова мелодія, що генерую свиток. заколихує всіх монстрів в полі зору, даючи можливість утекти чи нанести несподіваний удар.</string>
+  <string name="ScrollOfLullaby_Info">Колискова мелодія, що генерую свиток. заколихує всіх монстрів в полі зору, даючи можливість утекти чи завдати несподіваного удару.</string>
   <string name="ScrollOfLullaby_Info1">Сувій видає заспокійливу колискову.</string>
   <string name="ScrollOfLullaby_Info2">Сувій видає заспокійливу колискову і %s засинає!</string>
   <string name="ScrollOfLullaby_Info3">Сувій видає заспокійливу колискову і монстри засинають!</string>
@@ -61,9 +61,9 @@
   <!--STRINGS OF ScrollOfRecharging CLASS-->
   <string name="ScrollOfRecharging_Name">Сувій перезарядження</string>
   <string name="ScrollOfRecharging_Info">Сира магічна енергія, яка замкнена в сувої, миттєво відновить заряди магічних паличок власника сувою.</string>
-  <string name="ScrollOfRecharging_Info1a">потік сирої магічної енергій проминув по твоєму рюкзаку та перезарядив магічну паличку.</string>
-  <string name="ScrollOfRecharging_Info1b">потік сирої магічної енергій проминув по твоєму рюкзаку та перезарядив магічні палички.</string>
-  <string name="ScrollOfRecharging_Info2">потік сирої магічної енергій проминув по твоєму рюкзаку, але нічого не сталося.</string>
+  <string name="ScrollOfRecharging_Info1a">потік сирої магічної енергії проминув по твоєму рюкзаку та перезарядив магічну паличку.</string>
+  <string name="ScrollOfRecharging_Info1b">потік сирої магічної енергії проминув по твоєму рюкзаку та перезарядив магічні палички.</string>
+  <string name="ScrollOfRecharging_Info2">потік сирої магічної енергії проминув по твоєму рюкзаку, але нічого не сталося.</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
   <string name="ScrollOfRemoveCurse_Name">Сувій зняття прокляття</string>
   <string name="ScrollOfRemoveCurse_Info">Прочитавши цей сувій, ти прикличеш чарівну силу, яка вижене зі зброї, броні, кілець чи інших речей будь яке зло, дозволяючи користуватись цим предметами.</string>
@@ -82,7 +82,7 @@
   <string name="ScrollOfTerror_Info3">Сувій випускає спалах червоного світла і монстри тікають!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
   <string name="ScrollOfUpgrade_Name">Сувій покращення</string>
-  <string name="ScrollOfUpgrade_Info">Цей сувій покращує одну єдину річ, збільшуючи її якість. Сила та місткість палички зростає; зброя наносить більшої шкоди чи покращує влучність; броня отримує більший захист; можливості кілець зростуть. Зброя та броня потребуватимуть меншої сили для використання, а будь який предмет очищено.</string>
+  <string name="ScrollOfUpgrade_Info">Цей сувій покращує одну єдину річ, збільшуючи її якість. Сила та місткість палички зростає; зброя наносить більшої шкоди чи покращує влучність; броня отримує більший захист; можливості кілець зростуть. Зброя та броня потребуватимуть меншої сили для використання, а будь-який предмет очищено.</string>
   <string name="ScrollOfUpgrade_InvTitle">Обери предмет для покращення</string>
   <string name="ScrollOfUpgrade_LooksBetter">%s тепер дійсно виглядає краще</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->

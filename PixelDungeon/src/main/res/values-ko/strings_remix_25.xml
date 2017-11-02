@@ -8,4 +8,15 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">검은 해골</string>
+    <string name="BlackSkull_Info">작은 흑요석 해골입니다. 네크로폴리스의 힘의 원천이었지만, 리치가 쓰러진 후 모든 힘을 잃은것으로 보입니다. 하지만 손에 쥐고 있으면 이것이 굶주리고 있다는 이상한 생각이 스칩니다.</string>
+    <string name="BlackSkull_Gender">남성</string>
+
+    <string name="BlackSkull_Name_Awakened">깨어난 검은 해골</string>
+    <string name="SoulShard_Gender">남성</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">죽음의 기사</string>
+    <string name="DeathKnight_Gender">남성</string>
+    <string name="DeathKnight_Name_Objective">죽음의 기사</string>
     </resources>

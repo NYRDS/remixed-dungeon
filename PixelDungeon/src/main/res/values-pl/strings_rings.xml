@@ -66,7 +66,30 @@
   <string name="RingOfStoneWalking_Info">Ten pierścień jest zrobiony z ciemnego kamienia i wyglądałby zwyczajnie, gdyby nie kropla pulsującej krwi, która zastępuje klejnot.</string>
   <string name="RingOfStoneWalking_ImmuredInStone">Uwięziony w kamieniu. Na zawsze.</string>
   <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Pajęczy magnes</string>
   <string name="SpiderCharm_Info">Ta egzotyczna błyskotka otoczona jest aurą tajemnic. Kto wie, co może się przydarzyć temu, kto to założy? </string>
+  <string name="SpiderCharm_Use">UŻYJ</string>
   <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">Dziwny kryształ</string>
+  <string name="ChaosCrystal_Name_1">Chaotyczny kryształ</string>
+  <string name="ChaosCrystal_Name_2">Kryształ chaosu</string>
+  <string name="ChaosCrystal_Info">Kiedy go trzymasz czujesz przepływy energii biegnące po twoich dłoniach.</string>
+  <string name="ChaosCrystal_Info_1">Chaotyczne moce płyną przez ten kryształ. Być może będzie przydatny. </string>
+  <string name="ChaosCrystal_Info_2">TAK! Teraz już wiesz że możesz go połączyć z jednym ze swoich przedmiotów, ale co dalej ?</string>
+  <string name="ChaosCrystal_Use">UŻYJ</string>
+  <string name="ChaosCrystal_Fuse">POŁĄCZ</string>
+  <string name="ChaosCrystal_Prompt">Wybierz miejsce aby ustawić Maskę Chaosu</string>
+  <string name="ChaosCrystal_SelectForFuse">Wybierz przedmiot z którym połączy Kryształ Chaosu</string>
+  <string name="ChaosCrystal_ScrollFused">Kryształ pochłonięty przez runy zapisane na tym zwoju, teraz jest %s</string>
+  <string name="ChaosCrystal_SwordFused">Kryształ pochłoną twoją bron i przybrał formę Miecza</string>
+  <string name="ChaosCrystal_BowFused">Kryształ pochłoną twój łuk i przybrał formę Łuku</string>
+  <string name="ChaosCrystal_StaffFused">Kryształ pochłoną twoją różdżkę i przybrał formę Laski</string>
+  <string name="CorpseDust_Buff">Żądza krwi</string>
+  <string name="DriedRose_Buff">Czarujący</string>
+  <string name="DriedRose_CursedBuff">Zakochany</string>
+  <string name="RatSkull_Buff">Szczurzec</string>
+  <string name="RatKingCrown_Buff">Szczurowość</string>
   <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">Korona króla szczurów </string>
+  <string name="RatKingCrown_Info">Złota korona jego szczurowości, symbol wiecznej Mocy</string>
 </resources>

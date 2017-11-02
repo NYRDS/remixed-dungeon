@@ -16,13 +16,23 @@
   <string name="TreacherousSpirit_Name_Objective">무서운 영혼</string>
   <string name="TreacherousSpirit_Desc">이 흉측한 생물은 살아있는 어둠의 형상을 취하고 있다. 생기 없는 눈은 당신을 바라보고 있으며, 당신이 움직일 때 마다 박동하고 있다.</string>
   <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">고통의 영혼</string>
+  <string name="SpiritOfPain_Gender">남성</string>
+  <string name="SpiritOfPain_Name_Objective">고통의 영혼</string>
   <!--STRINGS OF SuspiciousRat CLASS-->
   <string name="SuspiciousRat_Name">수상한 쥐</string>
+  <string name="SuspiciousRat_Gender">여성</string>
   <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Gender">여성</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">놀 좀비가 부활했다!</string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">어둠의 심장</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
   <!--Badges-->
+  <string name="Badges_Yog_Slain">요그제바 처치</string>
+  <string name="Badges_ShadowLord_Slain">그림자 군주 처치</string>
+  <string name="Badges_SpiderQueen_Slain">거미 여왕 처치</string>
 </resources>

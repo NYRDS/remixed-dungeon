@@ -3,7 +3,7 @@
   <!--PACKAGE /items/rings-->
   <!--STRINGS OF Ring CLASS-->
   <string name="Ring_Name">перстень з %s</string>
-  <string name="Ring_Info">Це металічне кільце прикрашено %s, що переливається на світлі. Хто знає, який ефект воно може проявити, якщо одягти його?</string>
+  <string name="Ring_Info">Цей металічний перстень прикрашено %s, що переливається на світлі. Хто знає, який ефект він може проявити, якщо одягти його?</string>
   <string name="Ring_Identify">%1$s достатньо добре тобі відомий, аби ідентифікувати його. Це %2$s.</string>
   <string-array name="Ring_Gems">
     <item>діамантом</item>
@@ -30,7 +30,7 @@
   <string name="RingOfAccuracy_Info">Цей перстень покращить твій шанс попасти по ворогу.</string>
   <!--STRINGS OF RingOfDetection CLASS-->
   <string name="RingOfDetection_Name">Перстень виявлення</string>
-  <string name="RingOfDetection_Info">Це кільце дозволить тобі краще помічати приховане, таке як пастки та потаємні двері, не витрачаючи час на пошуки. Послаблений перстень навпаки, затьмарить твою пильність, ускладнюючи пошук секретів.</string>
+  <string name="RingOfDetection_Info">Цей перстень дозволить тобі краще помічати приховане, таке як пастки та потаємні двері, не витрачаючи час на пошуки. Послаблений перстень навпаки, затьмарить твою пильність, ускладнюючи пошук секретів.</string>
   <!--STRINGS OF RingOfElements CLASS-->
   <string name="RingOfElements_Name">Перстень стихій</string>
   <string name="RingOfElements_Info">Цей перстень забезпечує додатковим захистом від стихійних проявів сили, такі як вогонь, електрика, газу і т.п. Також він знижує час дії негативних ефектів.</string>
@@ -38,7 +38,7 @@
   <string name="RingOfEvasion_Name">Перстень ухиляння</string>
   <string name="RingOfEvasion_Info">Цей перстень збільшить твій шанс ухилитися від ворожої атаки.</string>
   <!--STRINGS OF RingOfHaggler CLASS-->
-  <string name="RingOfHaggler_Name">Перстень гендляра</string>
+  <string name="RingOfHaggler_Name">Перстень торговця</string>
   <string name="RingOfHaggler_Info">Цей перстень не має чарівних ефектів, проте воно показує всім торговцям, що перед ними член гільдії злодіїв. Як правило, вони готові надати знижку, аби не мати проблем із гільдією. Покращення даного персня не принесе додаткової користі.</string>
   <!--STRINGS OF RingOfHaste CLASS-->
   <string name="RingOfHaste_Name">Перстень поспіху</string>
@@ -51,7 +51,7 @@
   <string name="RingOfMending_Info">Цей перстень покращить регенеративні здібності володаря, дозволяючи швидше поновлювати здоров\'я. Послаблений перстень навпаки, погіршує і може повністю зупинити регенерацію.</string>
   <!--STRINGS OF RingOfPower CLASS-->
   <string name="RingOfPower_Name">Перстень сили</string>
-  <string name="RingOfPower_Info">Цей перстень посилює чарівні здатності палички володаря. Послаблене кільце має обернений ефект.</string>
+  <string name="RingOfPower_Info">Цей перстень посилює чарівні здатності палички володаря. Послаблений, має обернений ефект.</string>
   <!--STRINGS OF RingOfSatiety CLASS-->
   <string name="RingOfSatiety_Name">Перстень ситості</string>
   <string name="RingOfSatiety_Info">Носій персня може довше протриматись без їжі. Послаблений перстень посилює голод.</string>
